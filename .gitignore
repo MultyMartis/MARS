@@ -1,0 +1,51 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Environment and secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# Logs and temp
+*.log
+*.tmp
+*.temp
+~$*
+.cache/
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+out/
+target/
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Package manager / lock noise (uncomment if you prefer not to track)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# IDE and local tools
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.cursor/
+*.code-workspace
+
+# Coverage and test artifacts
+coverage/
+.nyc_output/
+htmlcov/
