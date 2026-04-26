@@ -1,0 +1,24 @@
+# MARS (Multi-Agent Runtime System) — Cursor project rules
+
+## Context
+Phase 1: Web-GPT documentation pack; **no shipped runtime in-repo** unless source files prove it.
+
+## Language
+- **User-facing answers and project documentation:** Russian when appropriate for the audience.
+- **Cursor prompts and agent instructions** may be English.
+
+## Truth and scope
+- **Do not** claim runtime, agents, storage adapters, RAG, or orchestration **exist** unless the repository contains evidence (real source/config).
+- **Always** distinguish:
+  1. **Documented architecture** — what is written in docs (`web-gpt-sources/`, README, design notes).
+  2. **Planned implementation** — future code/systems; not “done” by default.
+  3. **Legacy imported elements** — Web-GPT / imported material; not necessarily current product truth.
+- If a fact is not provable from repo or attached sources, answer with **SAFE UNKNOWN** (state what is unknown and what would verify it).
+
+## Edits and filesystem
+- **Work only** under `D:\AI MARS` for this project’s filesystem changes.
+- **Do not** delete or move files unless the user **explicitly** instructs.
+- **Do not** hand-edit **generated** or **build** outputs (e.g. `node_modules/`, `dist/`, `build/`, `out/`, compiled caches); change sources or regen if applicable.
+
+## After each task (when the user asked for a task)
+Report: **changed files**, **short summary**, **git status**, and any **UNKNOWN** / **SECURITY RISK** / **GIT CHECKPOINT NEEDED** signals.
