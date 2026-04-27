@@ -20,6 +20,13 @@
 
 Текущий пакет `web-gpt-sources` относится к **фазе 1**.
 
+---
+
+## Примечание: порядок этапов в репозитории MARS (governance)
+
+Таблицы фаз выше отражают **исторический** план Web-GPT (нумерация фаз 1–9). Для работ **в этом репозитории** порядок этапов **документации и контрактов** задаётся [`governance/master-build-map.md`](../governance/master-build-map.md).
+
+**Runtime Readiness Contracts** (этап **8.5** в master build map): контракты устойчивости исполнения, хранения состояния рантайма, модели сбоев, политики записи в память, checkpoint/resume, расширения threat model и recovery playbooks должны быть **зафиксированы в документации** до начала документации слоя **Tool** (этап **9** карты сборки) и до практической подготовки слоёв **Model / Runtime** в смысле этой карты. Перечень P0 и зависимости — в `governance/master-build-map.md` (Stage 8.5), `governance/dependency-map.md`, `governance/risk-register.md`.
 
 ---
 

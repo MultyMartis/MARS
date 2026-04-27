@@ -21,4 +21,6 @@ Phase 1: Web-GPT documentation pack; **no shipped runtime in-repo** unless sourc
 - **Do not** hand-edit **generated** or **build** outputs (e.g. `node_modules/`, `dist/`, `build/`, `out/`, compiled caches); change sources or regen if applicable.
 
 ## After each task (when the user asked for a task)
-Report: **changed files**, **short summary**, **git status**, and any **UNKNOWN** / **SECURITY RISK** / **GIT CHECKPOINT NEEDED** signals.
+Report: **changed files**, **short summary**, **git status**, and any **UNKNOWN** / **SECURITY RISK** signals.  
+**Git:** default = **no commit** and **no push**; **do not** suggest a checkpoint for routine doc/placeholder/small-tweak work.  
+**GIT CHECKPOINT NEEDED** = **rare, high-level** only (see `web-gpt-sources/04-workflows__git-rules.md`). **Do not** emit it as default; omit in normal work.

@@ -61,7 +61,7 @@
 
 ## Шаги
 
-1. **Task** — формулировка цели и контракта (`task-contract.md`).
+1. **Task** — формулировка цели и контракта (в репозитории: `workflows/task-contract-v0.md`; имя **`task-contract.md`** в legacy-пакете — **legacy source-pack reference, not current repository path**).
 2. **Context** — сбор контекста (память, реестр проекта, релевантные файлы).
 3. **Plan** — планировщик + при необходимости HITL.
 4. **Prompt** — финальный промпт для исполнителя (**Cursor: промпты на английском**, режим AGENT/ASK — см. правила).

@@ -10,10 +10,12 @@ Reserved for the **DevOps / Runtime** concerns of MARS: process model, workers, 
 
 Maps to the **DevOps / Runtime** layer: runtime processes, jobs, and operational shell around the other layers. It does **not** by itself implement orchestration (that is **Control Plane**) or business agents (**Agent** layer); it hosts execution and ops.
 
-## Status
+## Contracts vs implementation
 
-**Planned** — no executable runtime, workers, or deployment assets exist in this repository in this phase. Only this placeholder layout.
+- **Documentation** **contract:** [`execution-bridge-v0.md`](execution-bridge-v0.md) (**Execution** **Bridge** v0) is a **documented** contract in this folder (normative for **how** a bridge is described; **not** a claim of code). See also `architecture-map.md` for how repository paths map to documented MARS layers.
+- **Runtime** **implementation:** **No** executable **runtime**, workers, deployment assets, or bridge **code** in this repository in **Phase 1** — per `AGENTS.md` and the master build map **planned-implementation** stance.
 
 ## See also
 
 - `architecture-map.md` — how repository folders align with documented MARS layers.
+- `execution-bridge-v0.md` — Execution Bridge contract v0 (documentation only).

@@ -15,7 +15,8 @@
 - **No** manual edits to generated or build artifacts; ignore or regenerate via the proper pipeline.
 
 ## Commits
-- **Do not** create commits unless the user requests (checkpoint rules may ask for a signal instead).
+- **Default:** no commit and no push. **Do not** create commits unless the user explicitly requests.
+- **GIT CHECKPOINT NEEDED** is **not** default: use only for major milestones (see `web-gpt-sources/04-workflows__git-rules.md`). In typical tasks, **omit** it.
 
 ## Task closeout
-When a task is completed and reporting is required: list **changed files**, **summary**, **git status**, and **UNKNOWN** / **SECURITY RISK** / **GIT CHECKPOINT NEEDED** if applicable.
+When a task is completed and reporting is required: list **changed files**, **summary**, **git status**, and **UNKNOWN** / **SECURITY RISK** if applicable. **GIT CHECKPOINT NEEDED** only when criteria in the git-rules doc are met; otherwise do not suggest git.
