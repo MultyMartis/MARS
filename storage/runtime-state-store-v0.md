@@ -28,7 +28,7 @@ It is **distinct** from:
 | **`state`** | Current **task** and/or **run** **state** **consistent** **with** [../governance/state-model.md](../governance/state-model.md) **vocabulary** (e.g. task **T4** **executing**, run **executing**). |
 | **`checkpoints`** | **Ordered** **checkpoint** **records** allowing **resume** **when** **Checkpoint / Resume Protocol** (Stage 8.5 P0 **TBD**) **defines** **boundaries**. Each checkpoint **must** be **immutable** **once** **written** **(append)** — see **§6**. |
 | **`results`** | **Outputs** **linked** **to** **steps** **(result** **payloads**, **references** **to** **artifacts)** **compatible** **with** [../mars-runtime/execution-bridge-v0.md](../mars-runtime/execution-bridge-v0.md) **output** **contract**. |
-| **`errors`** | **Structured** **failure** **information** **(classification**, **message**, **signal** **codes** **where** **applicable)** **aligned** **with** **failure** **taxonomy** **when** **Failure** **Handling** **Model** (Stage **8.5** **P0** **TBD**) **exists**. |
+| **`errors`** | **Structured** **failure** **information** **(classification**, **message**, **signal** **codes** **where** **applicable)** **aligned** **with** **failure** **taxonomy** **as** **defined** **in** **[../workflows/failure-model-v0.md](../workflows/failure-model-v0.md)**. |
 
 Implementations **may** store **additional** fields (timestamps, executor id, trace ids) **without** violating v0 **if** **minimum** **facets** **remain** **available**.
 

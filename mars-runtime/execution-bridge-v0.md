@@ -13,7 +13,7 @@ The **Execution Bridge** is the **normative surface** where **intent** from the 
 **Boundary (documentation):**
 
 - **Upstream:** [../control-plane/contract.md](../control-plane/contract.md) — orchestration, routing, policy hooks.
-- **Downstream:** concrete **executors** (listed below). **Tools** (Stage 9) are **out of scope** for this v0 file except as a **future** attachment surface — see **§8**.
+- **Downstream:** concrete **executors** (listed below). **Tool Layer v0** is **documented** ([../tools/](../tools/)); **no** **runtime** tool **execution** or **invocation** **wire** is **in** **scope** here — relations to tools are **documentation-only** on this bridge — see **§8**.
 
 ---
 
@@ -73,7 +73,7 @@ Executor completion **must** be representable by the following **documentation**
 | Mode | Definition | Typical signal / outcome |
 |------|------------|---------------------------|
 | **Execution failure** | Executor returned **failure** **status** or **policy** denied the step (deterministic **FAIL** path). | **SECURITY RISK** if policy violation; otherwise step-level failure recorded; **STRUCTURE CHANGE** may follow if replan is required. |
-| **Timeout** | Step **did not** complete within **allowed** duration (**SAFE UNKNOWN:** limits are product/runtime — **not** fixed here). | Treat as **failure** **unless** policy defines **retry**/**resume** — coordinate with future **Failure Handling Model** (Stage 8.5 P0 **TBD**). |
+| **Timeout** | Step **did not** complete within **allowed** duration (**SAFE UNKNOWN:** limits are product/runtime — **not** fixed here). | Treat as **failure** **unless** **overridden** **per** [../workflows/failure-model-v0.md](../workflows/failure-model-v0.md) **and** **applicable** **policy**. |
 | **Unknown** | Outcome **cannot** be classified (lost callback, ambiguous API response, partial writes). | **UNKNOWN** or **SAFE UNKNOWN** with explicit **unknown** slice; **do not** assume success — **park** until resolved ([../governance/state-model.md](../governance/state-model.md) **T10** **parked** alignment). |
 
 ---
@@ -110,7 +110,7 @@ Human-in-the-loop is **expected** at least at:
 |----------|----------|
 | **Control Plane** | Bridge **consumes** orchestration **intent** (routes, policy hooks) and **returns** execution outcomes **into** the orchestration story — [../control-plane/contract.md](../control-plane/contract.md). |
 | **Workflows** | Bridge **steps** map to **workflow** stages and **task** lifecycle — [../workflows/workflow-v0.md](../workflows/workflow-v0.md), [../workflows/task-contract-v0.md](../workflows/task-contract-v0.md), [../workflows/execution-flow.md](../workflows/execution-flow.md). |
-| **Tools (future)** | **Stage 9** will define **tool** registry and permissions. Bridge v0 **does not** define tool invocation wire format; future docs **must** align **signals**, **guardrails**, and **executor** categories **without** contradicting this envelope. |
+| **Tool Layer (v0 docs)** | **Stage 9** **Tool Layer v0** is **documented** in [../tools/](../tools/) (registry, contracts, safety models). **No** **runtime** tool **execution** or **invocation** **implementation** is **claimed** in this file. Bridge v0 **does not** define tool invocation wire format; Tool Layer documentation **must** align **signals**, **guardrails**, and **executor** categories **without** contradicting this envelope. |
 | **Interfaces (Self-*)** | **Self-Describe** / **Self-Check** / **Self-Audit** **reflect** whether execution claims match **documented** contracts — [../interfaces/](../interfaces/). **Self-Heal** v0 ([../interfaces/self-heal-v0.md](../interfaces/self-heal-v0.md)) provides **plan-only** recovery **plans** that may reference **bridge** failures **without** executing fixes. |
 | **Runtime State Store** | Durable **execution** **state** (including checkpoint-friendly records) is defined in [../storage/runtime-state-store-v0.md](../storage/runtime-state-store-v0.md); bridge **inputs/outputs** **must** **map** to **store** **fields** **where** **persistence** **is** **required**. |
 
@@ -119,7 +119,7 @@ Human-in-the-loop is **expected** at least at:
 ## 9. SAFE UNKNOWN
 
 - Concrete **wire formats**, **RPC** schemas, **n8n** node IDs, **Cursor** internal APIs — **not** specified.
-- **Retry**, **idempotency keys**, **exact** **timeout** values — await **Failure Handling Model** and **Checkpoint / Resume Protocol** (Stage 8.5 P0 **TBD**).
+- **Retry**, **idempotency keys**, **exact** **timeout** values — **as defined in** [../workflows/failure-model-v0.md](../workflows/failure-model-v0.md). **Checkpoint / Resume Protocol** boundaries — **SAFE UNKNOWN:** **not** **specified** **in** **Execution** **Bridge** **v0** **(see** **workflow** **and** **storage** **contracts**).
 
 ---
 
