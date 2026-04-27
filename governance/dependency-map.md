@@ -275,6 +275,30 @@
 | `quality_metrics` | `cost_token_budget` | informs | **Cost**-**per**-**run** **(see** [../evaluation/quality-metrics-v0.md](../evaluation/quality-metrics-v0.md) **+** [../models/cost-token-budget-v0.md](../models/cost-token-budget-v0.md)**).** | **Financial** / **quota** **blind** **(documentation**). |
 | `mars` | `run_history` | requires | **End**-**to**-**end** **(see** [../observability/run-history-v0.md](../observability/run-history-v0.md)**) **. | **Unobservable** **executions** **(documentation**). |
 | `mars` | `audit_trail` | requires | **(see** [../observability/audit-trail-v0.md](../observability/audit-trail-v0.md)**) **. | **No** **reconstructable** **accountability** **(documentation**). |
+| `execution_queue` | `execution_bridge` | requires | Queue jobs carry dispatch intent and execution outputs aligned with [../mars-runtime/execution-bridge-v0.md](../mars-runtime/execution-bridge-v0.md). | Queue rows can drift from bridge semantics; execution handoffs become inconsistent. |
+| `execution_queue` | `runtime_state_store` | requires | Queue status transitions must map to durable runtime records in [../storage/runtime-state-store-v0.md](../storage/runtime-state-store-v0.md). | Lost, duplicate, or orphaned jobs with no durable traceability. |
+| `execution_queue` | `failure_model` | requires | Retry/dead-letter semantics depend on [../workflows/failure-model-v0.md](../workflows/failure-model-v0.md). | Unbounded retries or unsafe failure handling on paper. |
+| `execution_orchestrator` | `control_plane` | requires | Orchestrator coordination consumes policy/routing intent from [../control-plane/contract.md](../control-plane/contract.md). | Split orchestration semantics and inconsistent dispatch decisions. |
+| `execution_orchestrator` | `workflow_v0` | requires | Run progression aligns with [../workflows/workflow-v0.md](../workflows/workflow-v0.md). | Conflicting lifecycle semantics between workflow and orchestrator docs. |
+| `execution_orchestrator` | `execution_bridge` | requires | Dispatch must transit the bridge contract boundary. | Bypass paths and inconsistent execution boundaries. |
+| `execution_orchestrator` | `execution_queue` | requires | Scheduling is defined through queue contract semantics. | No coherent scheduling story; race/conflict risk in planned runtime. |
+| `execution_orchestrator` | `runtime_state_store` | informs | Coordination outcomes should be reflected in durable run state. | Orchestration state and persistence drift. |
+| `execution_orchestrator` | `tool_contract` | informs | Tool-related steps consume tool contract semantics without direct execution. | Ambiguous ownership of tool invocation boundaries. |
+| `execution_orchestrator` | `model_routing` | informs | Model decisions are orchestration inputs from [../models/model-routing-v0.md](../models/model-routing-v0.md). | Orchestrator ignores routing constraints or budgets. |
+| `execution_context` | `context_budget_policy` | requires | Context shape and bounded growth must follow [../models/context-budget-policy-v0.md](../models/context-budget-policy-v0.md). | Unbounded context growth and token/cost overload risk. |
+| `execution_context` | `memory_retrieval` | requires | `memory_refs` must align with [../memory/memory-retrieval-v0.md](../memory/memory-retrieval-v0.md). | Unsafe or policy-divergent memory inclusion in runs. |
+| `execution_context` | `runtime_state_store` | informs | Context snapshots/updates should map to durable state records. | Resume and replay narratives become inconsistent. |
+| `run_lifecycle` | `failure_model` | requires | Retry/fail/abort transitions are controlled by [../workflows/failure-model-v0.md](../workflows/failure-model-v0.md). | Illegal or unsafe state transitions in lifecycle docs. |
+| `run_lifecycle` | `execution_queue` | requires | Queue and run lifecycle must stay semantically aligned via `run_id` correlation and transition semantics, not 1:1 status mapping. | Divergent queue vs run lifecycle semantics. |
+| `run_lifecycle` | `runtime_state_store` | requires | Lifecycle transitions depend on durable state traces. | Run state becomes non-reconstructable after failures. |
+| `run_lifecycle` | `run_history` | informs | Lifecycle changes should be reflected in [../observability/run-history-v0.md](../observability/run-history-v0.md). | Missing operator-facing chronology. |
+| `run_lifecycle` | `event_model` | informs | Transition-level events align with [../observability/event-model-v0.md](../observability/event-model-v0.md). | Poor troubleshooting and unclear transition causes. |
+| `resource_quota` | `cost_token_budget` | requires | Quota outcomes align with [../models/cost-token-budget-v0.md](../models/cost-token-budget-v0.md). | Cost/token controls and runtime quotas conflict. |
+| `resource_quota` | `model_routing` | informs | Routing should consume quota state for safe model selection. | Model calls exceed planned concurrency/cost posture. |
+| `resource_quota` | `tool_contract` | informs | Tool call ceilings and outcomes align with tool invocation semantics. | Tool activity bypasses concurrency limits in design. |
+| `resource_quota` | `tool_execution_model` | informs | Execution sequencing/retries should respect per-run call caps. | Retry storms and overload risks in planned runtime. |
+| `resource_quota` | `run_history` | informs | Quota decisions should be observable in run-level telemetry narratives. | No traceability for allow/deny/escalation decisions. |
+| `resource_quota` | `event_model` | informs | Quota checks and outcomes should map to event-level logs. | Operational blind spots for concurrency control decisions. |
 
 *End of v0 table rows.*
 
@@ -311,6 +335,7 @@
 | 2026-04-27 | **Stage** **10** **Model** **Layer** **v0** — **`model_registry`**, **`model_policy`**, **`model_routing`**, **`context_budget_policy`**, **`cost_token_budget`** **rows**; **edges** **to** **`control_plane`**, **`security_guardrails`**, **`threat_model`**, **`memory_write_policy`**, **`risk_register`**, **`tool_contract`**, **`task_contract`**, **`failure_model`**, **`system_signals_dictionary`**, **`introspection_self_describe`**, **`project_registry`**, **`runtime_state_store`**, **`master_build_map`** **(see** **§4**). |
 | 2026-04-28 | **Stage** **11** **—** **`storage_architecture`**, **`artifact_management`**, **`memory_types`**, **`memory_retrieval`**, **`memory_lifecycle`**, **`rag_architecture`**, **`knowledge_freshness`** **(see** **§4).** |
 | 2026-04-28 | **Stage** **12** **(Observability** **/ ** **Evaluation) ** **—** **`run_history`**, **`event_model`**, **`tool_call_log`**, **`audit_trail`**, **`evals`**, **`release_gates`**, **`quality_metrics`** **(see** **§4) **. ** ** |
+| 2026-04-28 | **Stage 13** **Runtime / Execution Orchestration v0** — added `execution_queue`, `execution_orchestrator`, `execution_context`, `run_lifecycle`, `resource_quota` entities and edges to `execution_bridge`, `runtime_state_store`, `failure_model`, `tool_contract`, `tool_execution_model`, `model_routing`, `memory_retrieval`, `context_budget_policy`, `cost_token_budget`, `run_history`, `event_model`, and `control_plane` (documentation-only contracts). |
 
 ---
 

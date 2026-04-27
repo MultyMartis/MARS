@@ -57,7 +57,7 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | 10 | Model Layer / Provider Routing | Models |
 | 11 | Storage / Memory / RAG | Storage / RAG |
 | 12 | Observability / Evaluation | Observability |
-| 13 | Execution Bridge / Runtime Starter | Execution bridge |
+| 13 | Runtime / Execution Orchestration | Execution orchestration |
 | 14 | Runtime Implementation | Runtime |
 | 15 | External Integrations | Integrations |
 | 16 | Pilot Project | Pilot |
@@ -290,17 +290,17 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 
 ---
 
-## Stage 13 — Execution Bridge / Runtime Starter
+## Stage 13 — Runtime / Execution Orchestration
 
 | Field | Content |
 |-------|---------|
-| **Purpose** | **Bridge** from current **human-in-the-loop** execution (e.g. Web-GPT → Cursor) to future **automated** runtime; **starter** topology docs. |
-| **Related folders** | [execution-model.md](execution-model.md), [../mars-runtime/architecture-map.md](../mars-runtime/architecture-map.md), [../web-gpt-sources/11_interfaces_runtime.md](../web-gpt-sources/11_interfaces_runtime.md) |
-| **Status** | **done-docs** (concept), **planned-implementation** (bridge code, starters) |
-| **What exists now** | Execution model and repository **folder → layer** map; legacy runtime narrative. |
-| **What is missing** | Runnable bridge **repository layout** (scripts/services) — **none** in-repo as Phase 1 doc stance. |
-| **Next required action** | Define minimal **starter** checklist in `mars-runtime/` docs when Phase 2 opens; no code in map v0. **Documentation:** align **bridge** **artefacts** with **Stage 8.5** **Execution** **Bridge** **Contract** when that contract exists; keep [risk-register.md](risk-register.md) **runtime**-class rows current when the **bridge** story names **new** **hazards**. |
-| **Dependencies** | **Stage 8.5** (**Execution** **Bridge** **Contract** **documented** — **or** **explicit** **SAFE** **UNKNOWN** **with** **lifecycle** **flag** **only** if **map** **exception** **is** **approved**); Stages 4–7, 12 (what must be observable when bridge runs). |
+| **Purpose** | Define execution orchestration contracts for runtime planning: queueing, scheduling/coordination, run context, lifecycle, and resource/concurrency controls. |
+| **Related folders** | [../mars-runtime/](../mars-runtime/), [execution-model.md](execution-model.md), [../web-gpt-sources/11_interfaces_runtime.md](../web-gpt-sources/11_interfaces_runtime.md), [dependency-map.md](dependency-map.md), [risk-register.md](risk-register.md) |
+| **Status** | **partial-docs** (Stage 13 v0 contracts authored), **planned-implementation** (runtime engine/enforcement absent) |
+| **What exists now** | [../mars-runtime/execution-queue-v0.md](../mars-runtime/execution-queue-v0.md), [../mars-runtime/execution-orchestrator-v0.md](../mars-runtime/execution-orchestrator-v0.md), [../mars-runtime/execution-context-v0.md](../mars-runtime/execution-context-v0.md), [../mars-runtime/run-lifecycle-v0.md](../mars-runtime/run-lifecycle-v0.md), [../mars-runtime/resource-quota-v0.md](../mars-runtime/resource-quota-v0.md), plus existing [../mars-runtime/execution-bridge-v0.md](../mars-runtime/execution-bridge-v0.md) and [../mars-runtime/architecture-map.md](../mars-runtime/architecture-map.md) (documentation only). |
+| **What is missing** | Real queue implementation, scheduler, orchestrator runtime, concurrency control enforcement, and execution engine — none evidenced in-repo. |
+| **Next required action** | Keep Stage 13 docs aligned with Stage 8.5/9/10/11/12 contracts; if runtime code starts, run risk review and dependency-map updates in the same maintenance episode, while preserving no-runtime-claim honesty until evidence exists. |
+| **Dependencies** | Stage 8.5 (execution bridge, failure/state/recovery baseline), Stage 9 (tool contracts), Stage 10 (model routing and budgets), Stage 11 (state/memory context), Stage 12 (run/event observability), and control-plane/workflow contracts (Stages 4, 6). |
 
 ---
 
@@ -367,6 +367,7 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | 2026-04-27 | **Stage** **10** **partial-docs** — **[../models/model-registry-v0.md](../models/model-registry-v0.md)**, **[../models/model-policy-v0.md](../models/model-policy-v0.md)**, **[../models/model-routing-v0.md](../models/model-routing-v0.md)**, **[../models/context-budget-policy-v0.md](../models/context-budget-policy-v0.md)**, **[../models/cost-token-budget-v0.md](../models/cost-token-budget-v0.md)**, **[../models/README.md](../models/README.md)**; [dependency-map.md](dependency-map.md) **Model** **Layer** **entities**; [risk-register.md](risk-register.md) **RISK**-**V0**-**0021**–**0025**; **remaining:** **provider** **adapters**, **runtime** **router**, **secrets**/**config**, **cost** **telemetry**. |
 | 2026-04-28 | **Stage** **11** **partial-docs** — **storage**/**memory**/**RAG** **v0** **([../storage/storage-architecture-v0.md](../storage/storage-architecture-v0.md)**, **[../storage/artifact-management-v0.md](../storage/artifact-management-v0.md)**, **[../memory/memory-types-v0.md](../memory/memory-types-v0.md)**, **[../memory/memory-retrieval-v0.md](../memory/memory-retrieval-v0.md)**, **[../memory/memory-lifecycle-v0.md](../memory/memory-lifecycle-v0.md)**, **[../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md)**, **[../memory/knowledge-freshness-v0.md](../memory/knowledge-freshness-v0.md)**);** [dependency-map.md](dependency-map.md) **/** [risk-register.md](risk-register.md) **(RISK**-**V0**-**0026**–**0030);** **Stage** **11** **table** **updated** **(remaining** **work** **in** **map**).** |
 | 2026-04-28 | **Stage** **12** **partial-docs** **—** **observability** + **evaluation** **v0;** **(Run** **History,** **Event** **Model,** **Tool** **Call** **Log,** **Audit** **Trail,** **Evals,** **Release** **Gates,** **Quality** **Metrics) **(documentation) +** [dependency-map.md](dependency-map.md) / [risk-register.md](risk-register.md) **(RISK**-**V0**-**0031**–**0035) **(documentation) .** ** |
+| 2026-04-28 | **Stage 13 partial-docs** — Runtime / Execution Orchestration v0 contracts added: [../mars-runtime/execution-queue-v0.md](../mars-runtime/execution-queue-v0.md), [../mars-runtime/execution-orchestrator-v0.md](../mars-runtime/execution-orchestrator-v0.md), [../mars-runtime/execution-context-v0.md](../mars-runtime/execution-context-v0.md), [../mars-runtime/run-lifecycle-v0.md](../mars-runtime/run-lifecycle-v0.md), [../mars-runtime/resource-quota-v0.md](../mars-runtime/resource-quota-v0.md); dependency/risk updates applied; runtime implementation remains absent. |
 
 ---
 

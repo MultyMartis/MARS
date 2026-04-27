@@ -12,10 +12,20 @@ Maps to the **DevOps / Runtime** layer: runtime processes, jobs, and operational
 
 ## Contracts vs implementation
 
-- **Documentation** **contract:** [`execution-bridge-v0.md`](execution-bridge-v0.md) (**Execution** **Bridge** v0) is a **documented** contract in this folder (normative for **how** a bridge is described; **not** a claim of code). See also `architecture-map.md` for how repository paths map to documented MARS layers.
-- **Runtime** **implementation:** **No** executable **runtime**, workers, deployment assets, or bridge **code** in this repository in **Phase 1** — per `AGENTS.md` and the master build map **planned-implementation** stance.
+- **Documentation** **contracts:** this folder now contains the Stage 8.5 and Stage 13 runtime-facing contract set (see links below). These files are **normative documentation**, not runtime code.
+- **Runtime** **implementation:** **No** executable **runtime**, workers, deployment assets, queue/orchestrator services, or bridge **code** in this repository in **Phase 1** — per `AGENTS.md` and the master build map **planned-implementation** stance.
 
-## See also
+## Contract files in `mars-runtime/` (v0)
 
-- `architecture-map.md` — how repository folders align with documented MARS layers.
 - `execution-bridge-v0.md` — Execution Bridge contract v0 (documentation only).
+- `execution-queue-v0.md` — Execution Queue / Job System contract v0 (documentation only).
+- `execution-orchestrator-v0.md` — Execution Orchestrator contract v0 (documentation only).
+- `execution-context-v0.md` — Execution Context Model contract v0 (documentation only).
+- `run-lifecycle-v0.md` — Run Lifecycle Model contract v0 (documentation only).
+- `resource-quota-v0.md` — Resource / Concurrency Model contract v0 (documentation only).
+- `architecture-map.md` — repository-folder mapping to documented MARS layers.
+
+## Status note
+
+- This folder is **documentation only** in Phase 1.
+- No runtime implementation is claimed by the presence of these contracts.
