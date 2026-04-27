@@ -58,7 +58,7 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | 11 | Storage / Memory / RAG | Storage / RAG |
 | 12 | Observability / Evaluation | Observability |
 | 13 | Runtime / Execution Orchestration | Execution orchestration |
-| 14 | Runtime Implementation | Runtime |
+| 14 | Runtime Infrastructure / Deployment Model | Runtime |
 | 15 | External Integrations | Integrations |
 | 16 | Pilot Project | Pilot |
 
@@ -304,16 +304,16 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 
 ---
 
-## Stage 14 — Runtime Implementation
+## Stage 14 — Runtime Infrastructure / Deployment Model
 
 | Field | Content |
 |-------|---------|
-| **Purpose** | **Processes**, workers, queues, deployment — the **running** shell of MARS. |
+| **Purpose** | Runtime infrastructure/deployment modeling for where and how MARS should run (control/runtime/storage deployment posture), while preserving the no-runtime-implementation boundary. |
 | **Related folders** | [../mars-runtime/](../mars-runtime/) |
-| **Status** | **planned-docs** (placeholders), **planned-implementation** |
-| **What exists now** | `README.md`, `architecture-map.md` only. |
-| **What is missing** | All runtime **source**, config, IaC — **not** evidenced in repository. |
-| **Next required action** | Begin only after Stages 4, 6–8, 13 contracts are stable enough to avoid rework. **Prerequisite (documentation):** [Self-Heal v0](../interfaces/self-heal-v0.md) (**plan-only** recovery discipline for **runtime**-class **issues** / **risks**); [dependency-map.md](dependency-map.md) must include **runtime**-relevant **entities** and **edges** when they are **staged** (§5); **risk** **review** per [risk-register.md](risk-register.md) **§7.4** with **register** **rows** **updated**. |
+| **Status** | **partial-docs** (Stage 14 documentation set authored), **planned-implementation** |
+| **What exists now** | [../mars-runtime/environment-model-v0.md](../mars-runtime/environment-model-v0.md), [../mars-runtime/configuration-model-v0.md](../mars-runtime/configuration-model-v0.md), [../mars-runtime/secrets-management-v0.md](../mars-runtime/secrets-management-v0.md), [../storage/storage-backend-strategy-v0.md](../storage/storage-backend-strategy-v0.md), [../mars-runtime/integration-surfaces-v0.md](../mars-runtime/integration-surfaces-v0.md), [../mars-runtime/deployment-model-v0.md](../mars-runtime/deployment-model-v0.md), plus [../mars-runtime/README.md](../mars-runtime/README.md), [../storage/README.md](../storage/README.md), [../mars-runtime/architecture-map.md](../mars-runtime/architecture-map.md). |
+| **What is missing** | Real deployment/runtime implementation: runtime services, real deployment topology, secrets manager, infra setup, and executable execution environment — none evidenced in-repo. |
+| **Next required action** | Keep Stage 14 docs aligned with Stages 8/8.5/9/10/11/13 contracts and governance registries; only transition to implementation claims when evidence exists in-repo. **Prerequisite discipline remains:** [Self-Heal v0](../interfaces/self-heal-v0.md), [dependency-map.md](dependency-map.md) updates for new runtime entities/edges, and [risk-register.md](risk-register.md) updates per §7.4. |
 | **Dependencies** | Stages 4, 6, 8, **8.5**, 11–13; [Self-Heal v0](../interfaces/self-heal-v0.md) (documentation — **no** execution or auto-fix). |
 
 ---
@@ -323,12 +323,12 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | Field | Content |
 |-------|---------|
 | **Purpose** | **Third-party** systems, credentials, data flow, **integration** entity type per [universal-entity-operations.md](universal-entity-operations.md). |
-| **Related folders** | Spreads across [../web-gpt-sources/](../web-gpt-sources/) (e.g. migration, tools); future `integrations/` or per-integration docs **SAFE UNKNOWN** until created. |
-| **Status** | **partial-docs** (legacy + scattered references), **planned-docs** (central integration registry) |
-| **What exists now** | Imported migration and tool docs; **governance** entity type **integration**. |
-| **What is missing** | Single **integration catalog** in-repo; explicit **SAFE UNKNOWN** for live credentials and endpoints. |
-| **Next required action** | Add integration appendix or registry when first real integration is scoped. **Prerequisite (documentation):** [risk-register.md](risk-register.md) **§7.3** (**new** **external** **integration** **risk** **review**). |
-| **Dependencies** | Stages 8–11, 14 (where integrations attach in running system). |
+| **Related folders** | [../integrations/](../integrations/), [../web-gpt-sources/](../web-gpt-sources/), [dependency-map.md](dependency-map.md), [risk-register.md](risk-register.md) |
+| **Status** | **partial-docs** (Stage 15 integration contracts authored), **planned-implementation** |
+| **What exists now** | [../integrations/README.md](../integrations/README.md), [../integrations/integration-registry-v0.md](../integrations/integration-registry-v0.md), [../integrations/integration-contract-v0.md](../integrations/integration-contract-v0.md), [../integrations/data-exchange-model-v0.md](../integrations/data-exchange-model-v0.md), [../integrations/webhook-model-v0.md](../integrations/webhook-model-v0.md), [../integrations/integration-types-v0.md](../integrations/integration-types-v0.md), [../integrations/integration-security-v0.md](../integrations/integration-security-v0.md) — documentation only, no real connectors. |
+| **What is missing** | Real integrations, API connectors, webhook handlers, and auth systems (no runtime integration implementation evidenced in-repo). |
+| **Next required action** | Keep Stage 15 docs aligned with execution bridge/tool/security/memory/observability contracts and maintain dependency/risk rows in the same change set when integration scope changes. |
+| **Dependencies** | Stages 8, 8.5, 9, 11, 12, 14 (security baseline, bridge/tool contracts, memory policy, observability, runtime posture). |
 
 ---
 
@@ -368,6 +368,8 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | 2026-04-28 | **Stage** **11** **partial-docs** — **storage**/**memory**/**RAG** **v0** **([../storage/storage-architecture-v0.md](../storage/storage-architecture-v0.md)**, **[../storage/artifact-management-v0.md](../storage/artifact-management-v0.md)**, **[../memory/memory-types-v0.md](../memory/memory-types-v0.md)**, **[../memory/memory-retrieval-v0.md](../memory/memory-retrieval-v0.md)**, **[../memory/memory-lifecycle-v0.md](../memory/memory-lifecycle-v0.md)**, **[../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md)**, **[../memory/knowledge-freshness-v0.md](../memory/knowledge-freshness-v0.md)**);** [dependency-map.md](dependency-map.md) **/** [risk-register.md](risk-register.md) **(RISK**-**V0**-**0026**–**0030);** **Stage** **11** **table** **updated** **(remaining** **work** **in** **map**).** |
 | 2026-04-28 | **Stage** **12** **partial-docs** **—** **observability** + **evaluation** **v0;** **(Run** **History,** **Event** **Model,** **Tool** **Call** **Log,** **Audit** **Trail,** **Evals,** **Release** **Gates,** **Quality** **Metrics) **(documentation) +** [dependency-map.md](dependency-map.md) / [risk-register.md](risk-register.md) **(RISK**-**V0**-**0031**–**0035) **(documentation) .** ** |
 | 2026-04-28 | **Stage 13 partial-docs** — Runtime / Execution Orchestration v0 contracts added: [../mars-runtime/execution-queue-v0.md](../mars-runtime/execution-queue-v0.md), [../mars-runtime/execution-orchestrator-v0.md](../mars-runtime/execution-orchestrator-v0.md), [../mars-runtime/execution-context-v0.md](../mars-runtime/execution-context-v0.md), [../mars-runtime/run-lifecycle-v0.md](../mars-runtime/run-lifecycle-v0.md), [../mars-runtime/resource-quota-v0.md](../mars-runtime/resource-quota-v0.md); dependency/risk updates applied; runtime implementation remains absent. |
+| 2026-04-28 | **Stage 14 partial-docs** — Runtime Infrastructure / Deployment Model v0 documentation added: [../mars-runtime/environment-model-v0.md](../mars-runtime/environment-model-v0.md), [../mars-runtime/configuration-model-v0.md](../mars-runtime/configuration-model-v0.md), [../mars-runtime/secrets-management-v0.md](../mars-runtime/secrets-management-v0.md), [../storage/storage-backend-strategy-v0.md](../storage/storage-backend-strategy-v0.md), [../mars-runtime/integration-surfaces-v0.md](../mars-runtime/integration-surfaces-v0.md), [../mars-runtime/deployment-model-v0.md](../mars-runtime/deployment-model-v0.md); governance dependency/risk updates applied; no runtime implementation claimed. |
+| 2026-04-28 | **Stage 15 partial-docs** — Integrations Layer v0 documentation added: [../integrations/integration-registry-v0.md](../integrations/integration-registry-v0.md), [../integrations/integration-contract-v0.md](../integrations/integration-contract-v0.md), [../integrations/data-exchange-model-v0.md](../integrations/data-exchange-model-v0.md), [../integrations/webhook-model-v0.md](../integrations/webhook-model-v0.md), [../integrations/integration-types-v0.md](../integrations/integration-types-v0.md), [../integrations/integration-security-v0.md](../integrations/integration-security-v0.md), [../integrations/README.md](../integrations/README.md); no real integrations or auth/connectors implemented. |
 
 ---
 

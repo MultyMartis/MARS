@@ -23,6 +23,11 @@ Maps to the **DevOps / Runtime** layer: runtime processes, jobs, and operational
 - `execution-context-v0.md` — Execution Context Model contract v0 (documentation only).
 - `run-lifecycle-v0.md` — Run Lifecycle Model contract v0 (documentation only).
 - `resource-quota-v0.md` — Resource / Concurrency Model contract v0 (documentation only).
+- `environment-model-v0.md` — Environment separation model (local/staging/production), documentation only.
+- `configuration-model-v0.md` — Runtime configuration model by config domain, documentation only.
+- `secrets-management-v0.md` — Secrets/credentials handling posture, documentation only.
+- `integration-surfaces-v0.md` — Integration surface model and bridge-only routing rule, documentation only.
+- `deployment-model-v0.md` — Conceptual deployment layers (control/runtime/storage), documentation only.
 - `architecture-map.md` — repository-folder mapping to documented MARS layers.
 
 ## Status note

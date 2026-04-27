@@ -13,6 +13,7 @@ Reserved for **persistence**: operational DBs, vector stores, file/object storag
 | Document | Role |
 |----------|------|
 | [storage-architecture-v0.md](storage-architecture-v0.md) | Storage types, pluggable backends, relation to memory and runtime state |
+| [storage-backend-strategy-v0.md](storage-backend-strategy-v0.md) | Backend option strategy (Sheets / SQL / files / hybrid) and selection rules |
 | [artifact-management-v0.md](artifact-management-v0.md) | What counts as an artifact, minimum fields, rules vs memory and logs |
 | [runtime-state-store-v0.md](runtime-state-store-v0.md) | Execution-time durable state (Stage 8.5) |
 | [checkpoint-resume-protocol-v0.md](checkpoint-resume-protocol-v0.md) | Checkpoint/resume semantics (Stage 8.5) |

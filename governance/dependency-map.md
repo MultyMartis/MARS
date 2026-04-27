@@ -299,6 +299,41 @@
 | `resource_quota` | `tool_execution_model` | informs | Execution sequencing/retries should respect per-run call caps. | Retry storms and overload risks in planned runtime. |
 | `resource_quota` | `run_history` | informs | Quota decisions should be observable in run-level telemetry narratives. | No traceability for allow/deny/escalation decisions. |
 | `resource_quota` | `event_model` | informs | Quota checks and outcomes should map to event-level logs. | Operational blind spots for concurrency control decisions. |
+| `environment_model` | `security_guardrails` | requires | Environment posture must stay aligned with security/permissions contracts and approval expectations. | Unsafe environment assumptions and policy drift in runtime planning. |
+| `environment_model` | `approval_gates` | requires | Production-impact actions require explicit approval paths per gate model. | Direct high-risk production actions without documented HITL boundary. |
+| `environment_model` | `execution_bridge` | informs | Environment intent constrains bridge-dispatched execution behavior. | Bridge paths ignore environment risk differences. |
+| `configuration_model` | `agent_registry` | reads_from | Agent config domain maps to authoritative agent identities and role surfaces. | Orphan or inconsistent agent-scoped config semantics. |
+| `configuration_model` | `tool_registry` | reads_from | Tool config domain depends on registry-defined tool metadata and policy fields. | Tool config drift from authoritative catalog rows. |
+| `configuration_model` | `model_registry` | reads_from | Model config domain depends on model registry fields and lifecycle state. | Non-catalog model behavior assumptions in runtime docs. |
+| `configuration_model` | `environment_model` | requires | Environment separation influences effective configuration posture. | Ambiguous config behavior across local/staging/production. |
+| `secrets_management` | `threat_model` | requires | Secret-handling hazards and exfiltration classes align with threat model categories. | Secret exposure narrative disconnected from security SoT. |
+| `secrets_management` | `risk_register` | informs | Secret posture must map to explicit risk rows and residual risk tracking. | Credential leak risk remains implicit and unowned. |
+| `secrets_management` | `security_guardrails` | requires | Secret access assumptions must remain within permissions/guardrail boundaries. | Policy escape via undocumented credential access paths. |
+| `storage_backend_strategy` | `storage_architecture` | requires | Backend selection strategy is constrained by storage class architecture. | Backend choice contradicts storage SoT and adapter model. |
+| `storage_backend_strategy` | `memory_write_policy` | requires | Backend suitability must respect durable memory governance and write constraints. | Memory durability/compliance posture diverges from backend selection. |
+| `storage_backend_strategy` | `risk_register` | informs | Backend choice introduces data/compliance/runtime risks that need explicit tracking. | Incorrect backend assumptions remain undocumented hazards. |
+| `integration_surfaces` | `execution_bridge` | requires | All integration invocations must transit bridge boundary (no direct calls). | Dark integration paths bypass execution controls and traceability. |
+| `integration_surfaces` | `tool_contract` | requires | Integration invocation semantics align with tool contract envelope and safety posture. | Integration behavior diverges from tool-layer governance. |
+| `integration_surfaces` | `tool_safety_model` | requires | Integration classes inherit risk classification and approval posture from tool safety rules. | Unsafe integration execution without explicit risk class handling. |
+| `integration_registry` | `integration_contract` | requires | Registry rows must point to a stable contract envelope for integration invocation semantics. | Registry metadata drifts from executable integration interface assumptions. |
+| `integration_registry` | `tool_contract` | informs | Integration metadata aligns with tool-layer status, signals, risk, and approval posture. | Integration metadata contradicts tool invocation governance. |
+| `integration_registry` | `integration_security` | requires | Registry risk posture and approval flags align with integration security controls. | Unclassified integration exposure and unclear approval obligations. |
+| `integration_contract` | `execution_bridge` | requires | Integration invocations must transit execution bridge boundary (no direct call path). | Dark integration execution paths and missing traceability. |
+| `integration_contract` | `tool_contract` | requires | Integration I/O envelope follows tool-contract patterns for status, artifacts, and signals. | Inconsistent execution semantics between tools and integrations. |
+| `data_exchange_model` | `memory_write_policy` | requires | Integration-derived data must not write durable memory outside policy boundaries. | Ungoverned durable knowledge mutation via integration paths. |
+| `data_exchange_model` | `tool_validation_rules` | requires | Exchange payloads depend on validation rules before accept/dispatch. | Unvalidated data flow and higher injection or integrity risk. |
+| `webhook_model` | `event_model` | requires | Webhook inbound/outbound semantics map to canonical event model vocabulary. | Event/webhook semantics diverge and observability becomes ambiguous. |
+| `webhook_model` | `execution_bridge` | requires | Webhook-triggered execution remains constrained by bridge dispatch boundary. | Direct event execution bypassing controls and audit context. |
+| `integration_types` | `integration_registry` | informs | Category taxonomy constrains registry `type` and interoperability posture. | Ad-hoc or vendor-locked integration classification drift. |
+| `integration_types` | `integration_security` | informs | Category class influences baseline risk and control expectations. | Weak or inconsistent control posture by integration class. |
+| `integration_security` | `threat_model` | requires | Integration risk classes align with threat categories (exfiltration, injection, abuse). | Threat and integration security narratives contradict each other. |
+| `integration_security` | `risk_register` | informs | Security findings at integration boundary should produce explicit risk rows. | Integration hazards remain implicit and unowned in governance. |
+| `integration_security` | `approval_gates` | requires | High-risk integration actions must honor human approval gates. | External side effects proceed without required HITL review. |
+| `integration_security` | `event_model` | informs | Security-relevant integration outcomes should map to observability event semantics. | Security events become non-reconstructable in operational narratives. |
+| `deployment_model` | `control_plane` | informs | Control-plane layer is a first-class deployment concern in conceptual topology. | Deployment narrative omits orchestration/policy ownership layer. |
+| `deployment_model` | `execution_bridge` | informs | Runtime layer behavior depends on bridge-defined execution boundary. | Runtime/deployment split contradicts execution contract boundary. |
+| `deployment_model` | `runtime_state_store` | informs | Storage layer durability expectations align with runtime state persistence SoT. | No clear durable-state ownership in deployment narrative. |
+| `deployment_model` | `storage_architecture` | informs | Storage deployment layer should remain consistent with storage taxonomy/contracts. | Data layer assumptions drift from documented storage strategy. |
 
 *End of v0 table rows.*
 
@@ -336,6 +371,8 @@
 | 2026-04-28 | **Stage** **11** **—** **`storage_architecture`**, **`artifact_management`**, **`memory_types`**, **`memory_retrieval`**, **`memory_lifecycle`**, **`rag_architecture`**, **`knowledge_freshness`** **(see** **§4).** |
 | 2026-04-28 | **Stage** **12** **(Observability** **/ ** **Evaluation) ** **—** **`run_history`**, **`event_model`**, **`tool_call_log`**, **`audit_trail`**, **`evals`**, **`release_gates`**, **`quality_metrics`** **(see** **§4) **. ** ** |
 | 2026-04-28 | **Stage 13** **Runtime / Execution Orchestration v0** — added `execution_queue`, `execution_orchestrator`, `execution_context`, `run_lifecycle`, `resource_quota` entities and edges to `execution_bridge`, `runtime_state_store`, `failure_model`, `tool_contract`, `tool_execution_model`, `model_routing`, `memory_retrieval`, `context_budget_policy`, `cost_token_budget`, `run_history`, `event_model`, and `control_plane` (documentation-only contracts). |
+| 2026-04-28 | **Stage 14 Runtime Infrastructure / Deployment Model v0 (documentation only)** — added `environment_model`, `configuration_model`, `secrets_management`, `storage_backend_strategy`, `integration_surfaces`, `deployment_model` entities with edges to security (`security_guardrails`, `approval_gates`, `threat_model`), execution bridge, storage, tool/model registries and contracts, memory policy, and risk tracking. |
+| 2026-04-28 | **Stage 15 Integrations Layer v0 (documentation only)** — added `integration_registry`, `integration_contract`, `data_exchange_model`, `webhook_model`, `integration_types`, `integration_security` entities and edges to execution bridge, tool layer contracts, security/threat/risk governance, memory write policy, and observability event model. |
 
 ---
 
