@@ -9,7 +9,7 @@
 ## 1. Purpose
 
 - Prevent **unbounded** context growth that drives **cost**, **latency**, and **exfiltration** / **injection** surface ([../governance/risk-register.md](../governance/risk-register.md)).
-- Align **prompt assembly** with **memory** governance and **future** RAG contracts.
+- Align **prompt assembly** with **memory** governance and RAG **as defined in** [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md).
 - Give **Self-Describe / Introspection** a clear story: which **artefacts** are **safe** to **summarise** into model context vs which must remain **out-of-band** ([../interfaces/introspection-v0.md](../interfaces/introspection-v0.md)).
 
 **SAFE UNKNOWN:** Exact truncation algorithms, structured **pack** formats, and per-agent **prompt templates** are **not** specified in v0.
@@ -34,7 +34,7 @@ When policy, routing, and budgets allow, the following **may** be included **sub
 | **Task contract** | Core **scope_in**, objectives, constraints from [../workflows/task-contract-v0.md](../workflows/task-contract-v0.md). **Highest** priority. |
 | **Relevant registry entries** | **Minimal** slices (e.g. agent role summary, **tool_id** metadata) — not full governance dumps. |
 | **Selected memory** | Only chunks **approved** for read and consistent with [../memory/memory-write-policy-v0.md](../memory/memory-write-policy-v0.md) and task **data** class. |
-| **Selected RAG chunks** | **Future** Stage **11** narrative: retrieved text **must** pass the same **PII** / **secrecy** filters as memory; **SAFE UNKNOWN** until RAG SoT exists. |
+| **Selected RAG chunks** | Retrieved text **must** pass the same **PII** / **secrecy** filters as memory, **as defined in** [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md) **and** this policy (**documentation** **only**). |
 | **Tool results** | Sanitised per [../tools/tool-contract-v0.md](../tools/tool-contract-v0.md) and threat model; **large** outputs **summarise** or **truncate** with explicit **loss** markers. |
 
 ---
@@ -56,7 +56,7 @@ When policy, routing, and budgets allow, the following **may** be included **sub
 |-----------|------|
 | **Token budget** | Hard or soft caps on **input** / **output** tokens tied to **run** and **project** ([cost-token-budget-v0.md](cost-token-budget-v0.md)). |
 | **Source priority** | Ordering: **task contract** > **safety** / **policy** snippets > **selected memory** / **RAG** > **tool results** > **optional** introspection summaries. |
-| **Freshness** | Prefer **newer** evidence when duplicates exist; **expire** stale RAG **per** future retention SoT (**SAFE UNKNOWN** until RAG doc exists). |
+| **Freshness** | Prefer **newer** evidence when duplicates exist; **expire** stale RAG **per** [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md) **and** [../memory/knowledge-freshness-v0.md](../memory/knowledge-freshness-v0.md) (**documentation**). |
 | **Risk level** | **High**-**risk** tasks **tighten** inclusion (smaller **tool** raw dumps, **stricter** redaction). |
 
 ---
@@ -66,7 +66,7 @@ When policy, routing, and budgets allow, the following **may** be included **sub
 | Artefact | Relation |
 |----------|----------|
 | [../memory/memory-write-policy-v0.md](../memory/memory-write-policy-v0.md) | **Writes** to durable memory are **separate** from **prompt** assembly, but **both** must avoid **unapproved** PII and **secrets**. |
-| **Future RAG** | Retrieval **feeds** context **only** through **this** policy’s filters and **budgets**; Stage **11** docs **must** cross-link here. |
+| **RAG** ([rag-architecture-v0.md](../memory/rag-architecture-v0.md)) | Retrieval **feeds** context **only** through **this** policy’s filters and **budgets**; **cross-link** **required** between this file and [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md). |
 | [../interfaces/introspection-v0.md](../interfaces/introspection-v0.md) / Self-Describe | **Introspection** outputs for **operators** **must not** be **blindly** pasted into **user**-**facing** model context; **summaries** **only**, with **path** truth per [../AGENTS.md](../AGENTS.md). |
 | [model-routing-v0.md](model-routing-v0.md) | **context size** input; routing may switch models when **feasible** and **allowed**. |
 
@@ -76,7 +76,7 @@ When policy, routing, and budgets allow, the following **may** be included **sub
 
 | Date | Change |
 |------|--------|
-| 2026-04-27 | **Context Budget Policy v0** — allowed/forbidden sources, dimensions, relations to memory, future RAG, introspection. |
+| 2026-04-27 | **Context Budget Policy v0** — allowed/forbidden sources, dimensions, relations to memory, RAG ([rag-architecture-v0.md](../memory/rag-architecture-v0.md)), introspection. |
 
 ---
 

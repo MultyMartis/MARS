@@ -6,7 +6,7 @@ Reserved for **LLM and embedding** integration: providers, routing, adapters, fa
 
 ## Relation to MARS architecture
 
-Implements the **Model Layer** (documentation). Called by the **Control Plane** and **Agents**; may support RAG and retrieval **when** those features exist per documentation (cross-layer).
+Implements the **Model Layer** (documentation). Called by the **Control Plane** and **Agents**; RAG and retrieval semantics **as defined in** [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md) (cross-layer).
 
 ## Model Layer v0 contracts (Stage 10)
 
@@ -15,7 +15,7 @@ Implements the **Model Layer** (documentation). Called by the **Control Plane** 
 | [model-registry-v0.md](model-registry-v0.md) | Registry **fields**, **status** lifecycle, **planned-only** example rows (OpenRouter, OpenAI-compatible, local placeholder). |
 | [model-policy-v0.md](model-policy-v0.md) | Task → model rules, risk tiers, PII, **no default unrestricted model**, cross-refs to security / memory / risk register. |
 | [model-routing-v0.md](model-routing-v0.md) | Control-plane **routing inputs/outputs**, fallback rules (**documentation**; no implementation claim). |
-| [context-budget-policy-v0.md](context-budget-policy-v0.md) | What may / must not enter **context**; budget dimensions; memory / future RAG / introspection relations. |
+| [context-budget-policy-v0.md](context-budget-policy-v0.md) | What may / must not enter **context**; budget dimensions; memory / RAG ([rag-architecture-v0.md](../memory/rag-architecture-v0.md)) / introspection relations. |
 | [cost-token-budget-v0.md](cost-token-budget-v0.md) | Per-run / per-project **token** and **cost** budget **fields** and **outcomes** (`ALLOW`, `WARN`, `DENY`, **NEED HUMAN APPROVAL**). |
 
 ## Core dependencies (SoT)

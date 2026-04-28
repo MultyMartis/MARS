@@ -42,6 +42,8 @@ In short: **cognitive and planning** work may be prepared in one surface; **exec
 
 ## 4. Execution Bridge (concept)
 
+> **SoT note:** The **Execution Bridge** defined in this governance file is **conceptual** only. **Canonical** contract SoT: [../mars-runtime/execution-bridge-v0.md](../mars-runtime/execution-bridge-v0.md).
+
 An **Execution Bridge** is a **translation and handoff** layer between:
 
 - **MARS internal semantics** (task/workflow state, **signals**, **required_agents**, **Control Plane** decisions per contracts), and  
@@ -54,7 +56,7 @@ An **Execution Bridge** is a **translation and handoff** layer between:
 | **Identity** | Map **task id** / **correlation id** across systems for **traceability** (aligns with **lifecycle** / run-history **concepts**). |
 | **State handoff** | Pass enough context so the next hop knows **objective**, **scope**, **gates**, and **signals**; avoid silent **scope** expansion. |
 | **Policy** | Respect **HITL** and **SECURITY** stops even when the downstream runner is “fully automated.” |
-| **Failure** | Surface **UNKNOWN** / **STRUCTURE_CHANGE** as **escalation**, not silent retries, when contracts say so. |
+| **Failure** | Surface **UNKNOWN** / **STRUCTURE CHANGE** as **escalation**, not silent retries, when contracts say so. |
 
 **Examples of bridge *instances* (illustrative):** “MARS **task** record → n8n **webhook** payload”; “MARS plan step → **Cursor** prompt bundle”; “MARS **dispatch** → **runtime** worker.” **No** particular bridge is mandatory in v0 documentation.
 

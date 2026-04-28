@@ -49,3 +49,6 @@ env/
 coverage/
 .nyc_output/
 htmlcov/
+
+# Runtime generated state snapshots
+mars-runtime/state/runs/

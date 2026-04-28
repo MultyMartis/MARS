@@ -45,7 +45,7 @@ The **state model** unifies how **work** and **actor definitions** are described
 | T1 | T2 | **Planning** starts. |
 | T1 | T10 | Missing **required** binding (e.g. **UNKNOWN** **required_agent**). |
 | T2 | T3 | **Plan** **stable** for the next step. |
-| T2 | T10 | **STRUCTURE_CHANGE** / insoluble planning gap. |
+| T2 | T10 | **STRUCTURE CHANGE** / insoluble planning gap. |
 | T2 | T1 | **Re-scope** of **Task** (explicit **structure** **change**). |
 | T3 | T4 | **Dispatch** **issued** for step. |
 | T3 | T10 | Route **failure**; wait for **policy** / **HITL**. |
@@ -54,7 +54,7 @@ The **state model** unifies how **work** and **actor definitions** are described
 | T4 | T8 | **Fatal** **execute** or **policy** break. |
 | T4 | T10 | Gated **pause** (tool, approval). |
 | T5 | T6 | **Validation** **passes** (or pass-with-waiver per policy). |
-| T5 | T2 | **validate** **fails** → **replan** (**STRUCTURE_CHANGE**). |
+| T5 | T2 | **validate** **fails** → **replan** (**STRUCTURE CHANGE**). |
 | T5 | T8 | **Unrecoverable** **validation** / **security** stop. |
 | T6 | T7 | **Report** **emitted** and **acceptance_criteria** met. |
 | T6 | T8 | **Cannot** satisfy **report** / **release** constraints. |

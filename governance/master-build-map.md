@@ -197,12 +197,12 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 
 | Field | Content |
 |-------|---------|
-| **Purpose** | **Policies**, access rules, validation, PII, secrets, sandboxing — aligned with architecture docs. |
-| **Related folders** | [../security/](../security/), [../web-gpt-sources/09_security.md](../web-gpt-sources/09_security.md), [risk-register.md](risk-register.md) (**cross-cutting** **risk** **posture**) |
-| **Status** | **partial-docs** (README + legacy pack clear on **doc-only**; **MARS-native** security contract markdown still thin) |
-| **What exists now** | Security folder README (documented / planned stance); extensive **legacy imported** security architecture in `web-gpt-sources`; [risk-register.md](risk-register.md) v0 seed rows for **honesty**, **runtime** **enforcement** **gap**, **compliance** **TBD**. |
-| **What is missing** | MARS-native **contract** markdown that states **doc-only** vs **future controls** clearly; no policy engine in-repo. |
-| **Next required action** | Expand **MARS-native** security contract files under `security/` and cross-link **AGENTS.md** truth boundary where helpful; keep **Risk** **Register** **security**/**compliance** rows current when **guardrails** or **permissions** **evolve**. |
+| **Purpose** | **Policies**, access rules, validation, PII, secrets, sandboxing — aligned with architecture docs. **Documentation-only security contracts, no runtime enforcement** in Phase 1 ([../AGENTS.md](../AGENTS.md)). |
+| **Related folders** | [../security/](../security/) — **MARS-native** SoT: [guardrails-v0.md](../security/guardrails-v0.md), [permissions-v0.md](../security/permissions-v0.md), [approval-gates.md](../security/approval-gates.md), [threat-model-v0.md](../security/threat-model-v0.md); [../web-gpt-sources/09_security.md](../web-gpt-sources/09_security.md) (**legacy**); [risk-register.md](risk-register.md) (**cross-cutting** **risk** **posture**) |
+| **Status** | **partial-docs** — **MARS-native** security **contract** markdown present under `security/` as listed above; **documentation-only** (no in-repo policy engine or enforcement code). |
+| **What exists now** | [../security/README.md](../security/README.md); **SoT:** [guardrails-v0.md](../security/guardrails-v0.md), [permissions-v0.md](../security/permissions-v0.md), [approval-gates.md](../security/approval-gates.md), [threat-model-v0.md](../security/threat-model-v0.md); extensive **legacy imported** security architecture in `web-gpt-sources`; [risk-register.md](risk-register.md) v0 seed rows for **honesty**, **runtime** **enforcement** **gap**, **compliance** **TBD**. |
+| **What is missing** | **Runtime** enforcement, policy engine, and automated controls — **planned-implementation** / out of scope for Phase 1 doc-first repo unless evidenced elsewhere. |
+| **Next required action** | Keep **MARS-native** security SoT files aligned with **AGENTS.md** and **Risk** **Register** when **guardrails**, **permissions**, **approval** **gates**, or **threat** **model** evolve. |
 | **Dependencies** | **Stage 7.5** **gate passed** after **lifecycle-log** closure (**`evt-2026-0002`**); Stages 2, 4 (control plane policy hooks), 7 (interface entrypoints). |
 
 ---
