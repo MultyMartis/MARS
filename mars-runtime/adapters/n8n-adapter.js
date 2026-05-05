@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "http://localhost:5678/webhook/test";
+const WEBHOOK_URL = "https://n8n.ai-metacode.com/webhook/test";
 
 async function invokeTool({ task_id, payload, run_id }) {
   if (typeof fetch !== "function") {
