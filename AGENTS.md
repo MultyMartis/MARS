@@ -20,3 +20,4 @@
 
 ## Task closeout
 When a task is completed and reporting is required: list **changed files**, **summary**, **git status**, and **UNKNOWN** / **SECURITY RISK** if applicable. **GIT CHECKPOINT NEEDED** only when criteria in the git-rules doc are met; otherwise do not suggest git.
+Every task report must start with a clear top-level heading: **`# REPORT — <task/stage name>`**.

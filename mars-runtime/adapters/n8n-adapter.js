@@ -1,8 +1,8 @@
-const WEBHOOK_URL = process.env.N8N_WEBHOOK_URL;
+const { getConfig, validateConfig } = require("../runtime/config");
+const config = getConfig();
+validateConfig(config);
 
-if (!WEBHOOK_URL) {
-  throw new Error("N8N_WEBHOOK_URL is not set in environment");
-}
+const WEBHOOK_URL = config.webhookUrl;
 
 async function invokeTool({ task_id, payload, run_id }) {
   if (typeof fetch !== "function") {
