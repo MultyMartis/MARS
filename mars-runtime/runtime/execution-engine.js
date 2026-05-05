@@ -13,13 +13,40 @@ function createRunId() {
   return `run_${Date.now()}_${randomPart}`;
 }
 
-async function runTask(task) {
-  if (!process.env.N8N_WEBHOOK_URL) {
-    throw new Error("Missing N8N_WEBHOOK_URL");
+function validateTask(task) {
+  if (!task) {
+    throw new Error("Task is required");
   }
 
-  if (!task || !task.task_id || !task.type) {
-    throw new Error("Invalid task: task_id and type are required.");
+  if (!task.task_id) {
+    throw new Error("task_id is required");
+  }
+
+  if (!task.type) {
+    throw new Error("task type is required");
+  }
+
+  if (!task.payload || typeof task.payload !== "object") {
+    throw new Error("payload must be an object");
+  }
+
+  return true;
+}
+
+async function runTask(task) {
+  try {
+    validateTask(task);
+  } catch (error) {
+    return {
+      run_id: null,
+      status: "failed",
+      result: { error: error.message },
+      signals: ["UNKNOWN"],
+    };
+  }
+
+  if (!process.env.N8N_WEBHOOK_URL) {
+    throw new Error("Missing N8N_WEBHOOK_URL");
   }
 
   const workflow = WORKFLOWS[task.type];
