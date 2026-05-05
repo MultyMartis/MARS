@@ -14,6 +14,10 @@ function createRunId() {
 }
 
 async function runTask(task) {
+  if (!process.env.N8N_WEBHOOK_URL) {
+    throw new Error("Missing N8N_WEBHOOK_URL");
+  }
+
   if (!task || !task.task_id || !task.type) {
     throw new Error("Invalid task: task_id and type are required.");
   }

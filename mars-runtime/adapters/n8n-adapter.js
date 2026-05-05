@@ -1,4 +1,8 @@
-const WEBHOOK_URL = "https://n8n.ai-metacode.com/webhook/test";
+const WEBHOOK_URL = process.env.N8N_WEBHOOK_URL;
+
+if (!WEBHOOK_URL) {
+  throw new Error("N8N_WEBHOOK_URL is not set in environment");
+}
 
 async function invokeTool({ task_id, payload, run_id }) {
   if (typeof fetch !== "function") {
