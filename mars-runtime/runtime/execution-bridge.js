@@ -1,4 +1,5 @@
 const { invokeTool } = require("../adapters/n8n-adapter");
+const { validateTool } = require("./tool-registry");
 
 async function executeTask({ task, context, run_id }) {
   if (!task || !context || !run_id) {
@@ -10,9 +11,7 @@ async function executeTask({ task, context, run_id }) {
     throw new Error("Workflow does not define tool_id.");
   }
 
-  if (tool_id !== "n8n_webhook") {
-    throw new Error(`Unsupported tool_id: ${tool_id}`);
-  }
+  validateTool(tool_id);
 
   const toolResponse = await invokeTool({
     task_id: task.task_id,
