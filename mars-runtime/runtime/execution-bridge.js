@@ -1,5 +1,5 @@
 const { invokeTool } = require("../adapters/n8n-adapter");
-const { validateTool } = require("./tool-registry");
+const { validateTool, checkPermissions } = require("./tool-registry");
 
 async function executeTask({ task, context, run_id }) {
   if (!task || !context || !run_id) {
@@ -11,7 +11,8 @@ async function executeTask({ task, context, run_id }) {
     throw new Error("Workflow does not define tool_id.");
   }
 
-  validateTool(tool_id);
+  const tool = validateTool(tool_id);
+  checkPermissions(tool, context);
 
   const toolResponse = await invokeTool({
     task_id: task.task_id,

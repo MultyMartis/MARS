@@ -43,6 +43,7 @@ async function runTask(task) {
 
   const context = {
     workflow,
+    permissions: [], // minimal default
   };
 
   try {
