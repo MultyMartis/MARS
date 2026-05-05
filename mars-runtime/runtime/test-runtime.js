@@ -1,8 +1,28 @@
 const { runTask } = require("./execution-engine");
 
+function sanitize(result) {
+  if (!result || typeof result !== "object") return result;
+
+  const clean = {
+    run_id: result.run_id,
+    status: result.status,
+    signals: result.signals,
+  };
+
+  if (result.result?.error) {
+    clean.error = result.result.error;
+  }
+
+  if (result.status === "completed") {
+    clean.result = "OK";
+  }
+
+  return clean;
+}
+
 function log(title, data) {
   console.log(`\n=== ${title} ===`);
-  console.log(JSON.stringify(data, null, 2));
+  console.log(JSON.stringify(sanitize(data), null, 2));
 }
 
 async function testValidTask() {
