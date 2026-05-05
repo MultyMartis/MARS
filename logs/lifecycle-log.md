@@ -34,6 +34,7 @@ Each log entry **must** include:
 | evt-2026-0008 | 2026-04-28T12:00:00Z | governance | governance.stage_13_complete | **Stage 13** (Runtime / Execution Orchestration) documentation milestone recorded per `governance/master-build-map.md`; **documentation-only, no runtime implementation**. |
 | evt-2026-0009 | 2026-04-28T12:00:00Z | governance | governance.stage_14_complete | **Stage 14** (Runtime Infrastructure / Deployment Model) documentation milestone recorded per `governance/master-build-map.md`; **documentation-only, no runtime implementation**. |
 | evt-2026-0010 | 2026-04-28T12:00:00Z | governance | governance.stage_15_complete | **Stage 15** (External Integrations) documentation milestone recorded per `governance/master-build-map.md`; **documentation-only, no runtime implementation**. |
+| evt-2026-0011 | 2026-05-04T12:00:00Z | seo-content-agent | registry.updated | **SEO Content Agent** registered in `registry/project-registry.md` (`project_id` **seo-content-agent**, status **planned**); documentation pack added under `projects/seo-content-agent/` (architecture, workflows, prompts, schemas, roadmap); **no** runtime, n8n workflows, or credentials added. |
 
 ---
 

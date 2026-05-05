@@ -34,6 +34,7 @@ This directory is the **main local working copy** of the MARS project: design no
 |------|------|
 | `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map** |
 | `registry/` | **Project registry** and other registry-style anchors (`project-registry.md`) |
+| `projects/` | **Project documentation packs** (e.g. `projects/seo-content-agent/` — application specs; not MARS core runtime) |
 | `logs/` | **Lifecycle log** (documented lifecycle events, append-only discipline) |
 | `control-plane/` | Control plane contract and components (documentation) |
 | `agents/` | Agent registry, cards, factory/builder documentation |
@@ -51,4 +52,4 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ---
 
-*Last updated: 2026-04-27 (Stages 0–8.5 documentation complete; Stage 9 next; no runtime implementation in-repo).*
+*Last updated: 2026-05-04 (`projects/` documents application packs such as `projects/seo-content-agent/`; Stages 0–8.5 documentation complete; Stage 9 next per `governance/master-build-map.md`; no MARS core runtime implementation in-repo).*

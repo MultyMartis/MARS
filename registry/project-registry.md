@@ -27,6 +27,7 @@ Optional narrative columns may be added **only** if governance documents them; d
 | project_id | status | phase | related_entities | last_updated |
 |------------|--------|-------|------------------|--------------|
 | *example:* `mars-core` | planned | Phase 1 | *(none yet)* | 2026-04-27 |
+| `seo-content-agent` | planned | documentation / planned MVP | *(none yet)* | 2026-05-04 |
 
 *(Replace the example row or add rows as projects are formally registered.)*
 
