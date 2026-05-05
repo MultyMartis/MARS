@@ -33,6 +33,18 @@ function validateTask(task) {
   return true;
 }
 
+function validateWorkflow(task, workflow) {
+  if (!workflow) {
+    throw new Error(`No workflow found for task type: ${task.type}`);
+  }
+
+  if (!workflow.tool_id) {
+    throw new Error("Workflow must define tool_id");
+  }
+
+  return true;
+}
+
 async function runTask(task) {
   try {
     validateTask(task);
@@ -50,8 +62,16 @@ async function runTask(task) {
   }
 
   const workflow = WORKFLOWS[task.type];
-  if (!workflow) {
-    throw new Error(`No workflow found for task type: ${task.type}`);
+
+  try {
+    validateWorkflow(task, workflow);
+  } catch (error) {
+    return {
+      run_id: null,
+      status: "failed",
+      result: { error: error.message },
+      signals: ["UNKNOWN"],
+    };
   }
 
   const run_id = createRunId();

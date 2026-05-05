@@ -1,10 +1,11 @@
 const { getConfig, validateConfig } = require("../runtime/config");
-const config = getConfig();
-validateConfig(config);
-
-const WEBHOOK_URL = config.webhookUrl;
 
 async function invokeTool({ task_id, payload, run_id }) {
+  const config = getConfig();
+  validateConfig(config);
+
+  const WEBHOOK_URL = config.webhookUrl;
+
   if (typeof fetch !== "function") {
     throw new Error("Global fetch is not available. Use Node.js 18+ for MARS R1 runtime.");
   }
