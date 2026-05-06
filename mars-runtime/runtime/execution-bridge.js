@@ -1,4 +1,7 @@
-const { invokeTool } = require("../adapters/n8n-adapter");
+const { invokeTool: invokeN8nWebhook } = require("../adapters/n8n-adapter");
+const {
+  invokeTool: invokeSeoContentAgent,
+} = require("../adapters/seo-content-agent-adapter");
 const { validateTool, checkPermissions } = require("./tool-registry");
 
 async function executeTask({ task, context, run_id }) {
@@ -14,11 +17,22 @@ async function executeTask({ task, context, run_id }) {
   const tool = validateTool(tool_id);
   checkPermissions(tool, context);
 
-  const toolResponse = await invokeTool({
-    task_id: task.task_id,
-    payload: task.payload,
-    run_id,
-  });
+  let toolResponse;
+  if (tool_id === "n8n_webhook") {
+    toolResponse = await invokeN8nWebhook({
+      task_id: task.task_id,
+      payload: task.payload,
+      run_id,
+    });
+  } else if (tool_id === "seo_content_agent") {
+    toolResponse = await invokeSeoContentAgent({
+      task_id: task.task_id,
+      payload: task.payload,
+      run_id,
+    });
+  } else {
+    throw new Error(`No adapter registered for tool_id: ${tool_id}`);
+  }
 
   return {
     status: "completed",

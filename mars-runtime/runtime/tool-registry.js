@@ -6,6 +6,13 @@ const TOOLS = {
     risk_level: "low",
     required_permissions: [],
   },
+  seo_content_agent: {
+    id: "seo_content_agent",
+    type: "webhook",
+    enabled: true,
+    risk_level: "medium",
+    required_permissions: [],
+  },
 };
 
 function getTool(tool_id) {

@@ -51,6 +51,12 @@ The **SEO Content Agent** is an internal assistant for **SEO specialists**. It i
 2. **No secrets in-repo** — API keys, tokens, and client private data must never be committed here.
 3. **Honesty boundary** — Outlines and articles must not invent facts; see prompts and QA checklist for explicit rules.
 
+## Workflow exports hygiene
+
+- `workflow.json` is the sanitized n8n export for repository usage (no real secrets).
+- `raw/` stores local raw exports and is ignored by git.
+- All real secrets and credential material must be stored only in n8n credentials.
+
 ---
 
 *Project registry: `project_id` **seo-content-agent** in `registry/project-registry.md`. Last documentation pass: 2026-05-04.*

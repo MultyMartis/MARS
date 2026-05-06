@@ -6,6 +6,9 @@ const WORKFLOWS = {
   test_task: {
     tool_id: "n8n_webhook",
   },
+  seo_content_agent_task: {
+    tool_id: "seo_content_agent",
+  },
 };
 
 function createRunId() {
@@ -55,10 +58,6 @@ async function runTask(task) {
       result: { error: error.message },
       signals: ["UNKNOWN"],
     };
-  }
-
-  if (!process.env.N8N_WEBHOOK_URL) {
-    throw new Error("Missing N8N_WEBHOOK_URL");
   }
 
   const workflow = WORKFLOWS[task.type];
