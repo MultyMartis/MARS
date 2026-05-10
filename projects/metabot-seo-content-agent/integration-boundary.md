@@ -61,4 +61,13 @@ MetaBOT — SEO Content Agent is an **external multi-workflow AI system**, **not
 
 ---
 
+## 7. MARS posture (canonical integration knowledge)
+
+- **MARS must treat** MetaBOT — SEO Content Agent as an **external multi-workflow AI system** (Intake, Worker, Admin, and future File Export — as documented in this pack), **not** as a single interchangeable “tool” node in MARS diagrams or registries.
+- **MARS must not reduce** it to a simple tool shorthand: internal **n8n** orchestration, branching, locks, and Sheets-backed state remain **owned by the MetaBOT system** and live **outside** MARS core runtime ownership.
+- **Runtime adapters** in this repository (when present) may call **one stable entrypoint** (e.g. a webhook) for experiments or tests; that **does not** make MARS the owner of MetaBOT’s **internal** workflow graphs, credentials, or multi-workflow semantics.
+- **Authoritative execution truth** is always the **live n8n** configuration; this repository holds **sanitized** maps, contracts, and bridge notes only — **not** a claim of complete live integration or parity.
+
+---
+
 *See also [README.md](README.md) and [workflow-map.md](workflow-map.md).*

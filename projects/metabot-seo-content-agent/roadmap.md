@@ -2,6 +2,32 @@
 
 Documentation-only planning buckets. **No** implementation commitment in MARS repo.
 
+**Runtime architecture (v13):** [mega-map.md](mega-map.md).
+
+---
+
+## Runtime stability
+
+- **Robust `/get`** — устранение или диагностика **silent failures**, таймауты, явные ошибки пользователю.
+- **Robust reuse** — предсказуемое поведение `from:` / `--from` и согласованность с memory.
+- **Stale lock cleanup** — автоматическая или полуавтоматическая уборка просроченных lock и «мёртвых» pending (**сейчас не задокументировано** как надёжный механизм в репозитории).
+- **Update lock with real `task_id`** — связка lock ↔ реальный идентификатор задачи в Sheets для снижения рассинхрона с `seo_active_jobs`.
+
+---
+
+## Quality
+
+- **Centralized forbidden patterns** — единый каталог запрещённых формулировок для промптов и пост-проверок.
+- **Final enforcement after Text Repair** — жёсткая проверка после repair, чтобы не реинтродукция запрета.
+- **Synchronized single/run strict behavior** — одинаковая семантика strict между **single** и **run** ветками.
+
+---
+
+## Storage
+
+- **Future storage adapter abstraction** — слой абстракции над Sheets для смены бэкенда без переписывания всех workflow-контрактов.
+- **Possible PostgreSQL migration later** — потенциальный перенос операционного state/memory/jobs в Postgres (**план**, не обязательство).
+
 ---
 
 ## Near-term stabilization

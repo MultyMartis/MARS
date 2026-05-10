@@ -1,0 +1,47 @@
+// Paste into n8n Code node immediately after the MARS Webhook (POST /seo-content-agent).
+// Output feeds Execute Workflow → workflow that starts with Execute Workflow Trigger → Route Command.
+// Build task_raw compatible with "Route Command" (slash commands + Russian brief lines).
+
+const root = items[0].json;
+const body = root.body && typeof root.body === 'object' ? root.body : root;
+
+const meta = body.meta || {};
+const taskId = meta.task_id || body.task_id || '';
+const runId = meta.run_id || body.run_id || '';
+const action = String(body.action || 'outline').trim().toLowerCase();
+const payload = body.payload && typeof body.payload === 'object' ? body.payload : {};
+
+const cmd =
+  action === 'run'
+    ? '/run'
+    : action === 'outline'
+      ? '/outline'
+      : action === 'text'
+        ? '/text'
+        : action === 'seoqa'
+          ? '/seoqa'
+          : action === 'factcheck'
+            ? '/factcheck'
+            : action === 'get'
+              ? '/get'
+              : '/outline';
+
+const lines = [cmd];
+if (payload.page_type) lines.push(`Тип: ${payload.page_type}`);
+if (payload.topic) lines.push(`Тема: ${payload.topic}`);
+if (payload.keywords) lines.push(`Ключи: ${payload.keywords}`);
+if (payload.brief) lines.push(`Бриф: ${payload.brief}`);
+if (payload.language) lines.push(`Язык: ${payload.language}`);
+
+const task_raw = lines.join('\n');
+const chat_id = String(payload.chat_id || meta.chat_id || 'mars_bridge');
+
+return [
+  {
+    json: {
+      task_raw,
+      chat_id,
+      mars_meta: { task_id: taskId, run_id: runId, action },
+    },
+  },
+];

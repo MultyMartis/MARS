@@ -1,0 +1,1955 @@
+{
+  "name": "SEO Content Agent v10 STABLE",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "const route = $node['Route Command'].json;\nconst target = String(route.from_task_id || '').trim();\n\nlet found = null;\n\nfor (const item of items) {\n  const row = item.json || {};\n  if (String(row.task_id || '').trim() === target) {\n    found = row;\n    break;\n  }\n}\n\nreturn [{\n  json: {\n    ...(found || {}),\n    memory_found: Boolean(found),\n    from_task_id: target,\n    chat_id: route.chat_id,\n    route_task_id: route.task_id,\n    route_mode: route.mode,\n    route_task_raw: route.task_raw || ''\n  }\n}];"
+      },
+      "id": "3fe4dc5c-f417-4c7a-99af-bd0a6e35356d",
+      "name": "Find Memory Get Row1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11760,
+        24704
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const route = $node['Route Command'].json;\nconst target = String(route.from_task_id || '').trim();\n\nlet found = null;\n\nfor (const item of items) {\n  const row = item.json || {};\n  if (String(row.task_id || '').trim() === target) {\n    found = row;\n    break;\n  }\n}\n\nreturn [{\n  json: {\n    ...(found || {}),\n    memory_found: Boolean(found),\n    from_task_id: target,\n    chat_id: route.chat_id,\n    route_task_id: route.task_id,\n    route_mode: route.mode,\n    route_task_raw: route.task_raw || '',\n    route_task_input: route.task_input || ''\n  }\n}];"
+      },
+      "id": "1fb34ef5-9125-4503-91eb-d2311baff454",
+      "name": "Find Memory Reuse Row1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11760,
+        24896
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e76c0dba-0cdf-491b-a8c2-812bc9ad2f92",
+                    "leftValue": "={{ $json.route }}",
+                    "rightValue": "local",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "local"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "ee9e5cf3-c1cc-4803-9fc7-3052d1cd300a",
+                    "leftValue": "={{ $json.route }}",
+                    "rightValue": "single",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "single"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "f5a4f7a1-e1f7-4aa3-acbd-2c336242aeca",
+                    "leftValue": "={{ $json.route }}",
+                    "rightValue": "run",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "run"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "8b09f512-d94f-462d-a0ba-0f42d88b7073",
+                    "leftValue": "={{ $json.route }}",
+                    "rightValue": "get",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "get"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b0de89ed-fad4-4dbf-9478-9aaec3e713ab",
+                    "leftValue": "={{ $json.route }}",
+                    "rightValue": "reuse",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "reuse"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1447ec63-c5b6-4a84-9684-aef39456425e",
+      "name": "Switch Route",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        12064,
+        24176
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function splitMessage(text, maxLen = 3600) {\n  const chunks = [];\n  let rest = text;\n  while (rest.length > maxLen) {\n    let cut = rest.lastIndexOf('\\n\\n', maxLen);\n    if (cut < 1000) cut = rest.lastIndexOf('\\n', maxLen);\n    if (cut < 1000) cut = maxLen;\n    chunks.push(rest.slice(0, cut).trim());\n    rest = rest.slice(cut).trim();\n  }\n  if (rest) chunks.push(rest);\n  return chunks;\n}\n\nconst mode = $json.mode;\nconst isDemo = $json.is_demo;\nconst commandValid = $json.command_valid;\nconst taskId = $json.task_id;\n\nlet text = `Task ID: ${taskId}\\n\\n`;\n\nif (!commandValid) {\n  text += 'Команда не распознана.\\n\\n';\n  text += 'Используйте команды:\\n';\n  text += '- /run — полный pipeline: ТЗ → текст → SEO QA → factcheck\\n';\n  text += '- /outline — создать SEO-ТЗ\\n';\n  text += '- /text — написать SEO-текст по ТЗ\\n';\n  text += '- /seoqa — проверить текст по ТЗ\\n';\n  text += '- /factcheck — проверить факты в тексте\\n';\n  text += '- /get task_id — получить сохранённый результат\\n';\n  text += '- /text --from task_id — написать текст по сохранённому ТЗ/результату\\n';\n  text += '- /seoqa --from task_id — проверить сохранённый результат\\n';\n  text += '- /help — показать подсказку\\n';\n  text += '- /demo /run ... — демо без OpenRouter\\n';\n} else if (mode === 'help') {\n  text += 'SEO Content Agent\\n\\n';\n  text += '/run — полный pipeline: ТЗ → текст → SEO QA → factcheck.\\n';\n  text += '/run --strict — строгая проверка без додумывания требований.\\n';\n  text += '/run --no-factcheck — без этапа factcheck.\\n';\n  text += '/run --outline-only — только ТЗ.\\n';\n  text += '/run --text-only — ТЗ + текст без проверок.\\n';\n  text += '/outline — создать SEO-ТЗ по теме, ключам и брифу.\\n';\n  text += '/text — написать SEO-текст по готовому ТЗ.\\n';\n  text += '/seoqa — проверить текст по ТЗ.\\n';\n  text += '/factcheck — проверить факты и обещания.\\n';\n  text += '/get task_id — получить сохранённый результат из memory.\\n';\n  text += '/text --from task_id — написать текст по сохранённому ТЗ/результату.\\n';\n  text += '/seoqa --from task_id — проверить сохранённый результат.\\n\\n';\n  text += 'Демо-режим без OpenRouter:\\n';\n  text += '/demo /run\\n/demo /outline\\n/demo /text\\n/demo /seoqa\\n/demo /factcheck\\n\\n';\n  text += 'Пример:\\n/run\\nТип: страница услуги\\nТема: SEO-продвижение сайтов\\nКлючи: ...\\nБриф: ...';\n} else if (isDemo && mode === 'run') {\n  text += 'DEMO MODE — OpenRouter не вызывался, токены не потрачены.\\n\\n';\n  text += 'SEO Pipeline /run\\n\\n';\n  text += '=== 1. SEO ТЗ ===\\n';\n  text += 'H1: ДЕМО: SEO-продвижение сайта услуги\\n';\n  text += 'Разделы: состав услуги, этапы работ, FAQ, CTA.\\n\\n';\n  text += '=== 2. SEO Текст ===\\n';\n  text += '# ДЕМО: SEO-текст\\n\\n';\n  text += 'Это мок-текст полного pipeline без вызова OpenRouter.\\n\\n';\n  text += '=== 3. SEO QA ===\\n';\n  text += 'Вердикт: demo\\nОценка: 0\\n\\n';\n  text += '=== 4. Factcheck ===\\n';\n  text += 'Вердикт: demo\\nРискованные утверждения: демо-режим не проверяет реальные факты.\\n';\n} else if (isDemo && mode === 'outline') {\n  text += 'DEMO MODE — OpenRouter не вызывался, токены не потрачены.\\n\\n';\n  text += 'SEO ТЗ\\n\\n';\n  text += 'H1: ДЕМО: SEO-продвижение сайта услуги\\n\\n';\n  text += 'Title options:\\n1. ДЕМО: SEO-продвижение сайта — структура услуги\\n2. ДЕМО: SEO для сайта — аудит, структура, тексты\\n3. ДЕМО: SEO-продвижение — ТЗ для копирайтера\\n\\n';\n  text += 'Meta description:\\nДЕМО: пример meta description без вызова OpenRouter.\\n\\n';\n  text += 'Структура и ТЗ для копирайтера:\\n\\n';\n  text += '1. ДЕМО: Что входит в услугу\\nЦель: Показать состав работ без обещаний результата.\\nОбъём: 200-250\\nКлючи: SEO-продвижение, SEO сайта\\nСущности: SEO-аудит, семантика, структура сайта\\nЗаметки: Это мок-ответ. Использовать только для проверки маршрутизации и формата.\\n\\n';\n  text += 'QA: demo\\nРезюме QA: Демо-режим: AI не вызывался.\\n';\n} else if (isDemo && mode === 'text') {\n  text += 'DEMO MODE — OpenRouter не вызывался, токены не потрачены.\\n\\n';\n  text += 'SEO Текст\\n\\n';\n  text += '# ДЕМО: SEO-текст по ТЗ\\n\\n';\n  text += 'Это мок-текст для проверки режима /text. OpenRouter не вызывался, токены не потрачены.\\n\\n';\n  text += '## ДЕМО-раздел\\nТекст показывает формат выдачи и нарезку сообщений.\\n';\n  text += '\\nQA: demo\\nРезюме QA: Демо-режим: AI не вызывался.\\n';\n} else if (isDemo && mode === 'seoqa') {\n  text += 'DEMO MODE — OpenRouter не вызывался, токены не потрачены.\\n\\n';\n  text += 'SEO QA\\n\\n';\n  text += 'Вердикт: demo\\nОценка: 0\\n\\n';\n  text += 'Резюме:\\nДемо-проверка: AI не вызывался. Формат SEO QA работает.\\n\\n';\n  text += 'Проблемы:\\n1. Демо-режим не оценивает реальное качество текста.\\n\\n';\n  text += 'Что исправить:\\n1. Запустите без /demo для настоящей проверки.\\n';\n} else if (isDemo && mode === 'factcheck') {\n  text += 'DEMO MODE — OpenRouter не вызывался, токены не потрачены.\\n\\n';\n  text += 'Factcheck\\n\\n';\n  text += 'Вердикт: demo\\n\\n';\n  text += 'Резюме:\\nДемо-фактчек: AI не вызывался. Формат отчёта работает.\\n\\n';\n  text += 'Рискованные утверждения:\\n1. Демо-режим не проверяет факты.\\n';\n}\n\ntext += '\\n\\nФакты только из переданного брифа/ТЗ. Публикация после проверки человеком.';\n\nconst chunks = splitMessage(text);\nreturn chunks.map((chunk, index) => ({\n  json: {\n    chat_id: $json.chat_id,\n    telegram_text: chunks.length > 1 ? `[Часть ${index + 1}/${chunks.length}]\\n\\n${chunk}` : chunk,\n    chunk_index: index,\n    chunk_count: chunks.length,\n    full_output_text: text,\n    task_id: taskId,\n    mode: mode,\n    task_raw: $json.task_raw || $json.task_input || \"\"\n  }\n}));"
+      },
+      "id": "e035afa9-bcfb-49ad-b1f0-b3b24fcb506a",
+      "name": "Format Local Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12256,
+        23568
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ String($json.telegram_text || '').replace(/_/g, '-').replace(/\\*/g, '').replace(/`/g, \"'\") }}",
+        "additionalFields": {}
+      },
+      "id": "79ab877a-7170-4d0f-b52e-17e38a4b5a59",
+      "name": "Send Telegram Local",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        12480,
+        23504
+      ],
+      "webhookId": "a3358c99-35d2-4c36-abba-885ecb3646db",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "08640f32-9bcc-481c-a466-f5728fe296e7",
+      "name": "OpenRouter Single Mode",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        12560,
+        24000
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '{}';\n}\n\nfunction parseJsonLoose(value) {\n  if (typeof value !== 'string') return value || {};\n  let text = value.trim();\n  text = text.replace(/^```json\\s*/i, '').replace(/^```\\s*/i, '').replace(/```$/i, '').trim();\n  return JSON.parse(text);\n}\n\nfunction arr(v) { return Array.isArray(v) ? v : []; }\n\nfunction splitMessage(text, maxLen = 3600) {\n  const chunks = [];\n  let rest = text;\n  while (rest.length > maxLen) {\n    let cut = rest.lastIndexOf('\\n\\n', maxLen);\n    if (cut < 1000) cut = rest.lastIndexOf('\\n', maxLen);\n    if (cut < 1000) cut = maxLen;\n    chunks.push(rest.slice(0, cut).trim());\n    rest = rest.slice(cut).trim();\n  }\n  if (rest) chunks.push(rest);\n  return chunks;\n}\n\nfunction lineObjectList(list, fields) {\n  let out = '';\n  arr(list).forEach((item, i) => {\n    if (typeof item === 'string') out += `${i + 1}. ${item}\\n`;\n    else out += `${i + 1}. ${fields.map(f => item?.[f]).filter(Boolean).join(' — ') || JSON.stringify(item)}\\n`;\n  });\n  return out;\n}\n\nlet result = {};\ntry {\n  result = parseJsonLoose(extractContent($json));\n} catch (e) {\n  result = {\n    mode: $node['Route Command'].json.mode,\n    verdict: 'reject',\n    summary: 'Ошибка парсинга JSON от модели',\n    problems: [String(e.message || e)],\n    missing_data: []\n  };\n}\n\nconst route = $node['Route Command'].json;\nconst mode = result.mode || route.mode || 'outline';\nconst taskId = route.task_id;\nlet text = `Task ID: ${taskId}\\n\\n`;\n\nif (mode === 'outline') {\n  text += 'SEO ТЗ v9\\n\\n';\n  text += `H1: ${result.h1 || '-'}\\n\\n`;\n\n  if (arr(result.title_options).length) {\n    text += 'Title options:\\n';\n    arr(result.title_options).slice(0, 3).forEach((title, i) => text += `${i + 1}. ${title}\\n`);\n    text += '\\n';\n  }\n\n  if (result.meta_description) text += `Meta description:\\n${result.meta_description}\\n\\n`;\n\n  const tables = result.tables || {};\n  text += 'Таблицы:\\n';\n  text += `Required: ${tables.required === true ? 'да' : 'нет'}\\n`;\n  if (tables.decision_reason) text += `Причина: ${tables.decision_reason}\\n`;\n  if (arr(tables.table_ideas).length) {\n    text += 'Идеи таблиц:\\n';\n    text += lineObjectList(tables.table_ideas, ['title', 'purpose']);\n  }\n  text += '\\n';\n\n  text += 'Структура и ТЗ для копирайтера:\\n\\n';\n  arr(result.sections).slice(0, 25).forEach((s, i) => {\n    text += `${i + 1}. ${s.h2 || '-'}\\n`;\n    text += `Цель: ${s.goal || '-'}\\n`;\n    if (s.summary) text += `Summary: ${s.summary}\\n`;\n    text += `Объём: ${s.word_count || '-'}\\n`;\n    if (arr(s.keywords).length) text += `Ключи: ${arr(s.keywords).slice(0, 10).join(', ')}\\n`;\n    if (arr(s.entities).length) {\n      const ents = arr(s.entities).slice(0, 12).map(e => typeof e === 'string' ? e : `${e.name || '-'} (${e.priority || '-'})`);\n      text += `Сущности: ${ents.join(', ')}\\n`;\n    }\n    if (arr(s.visual_elements).length) text += `Визуальные элементы: ${arr(s.visual_elements).join(', ')}\\n`;\n    if (arr(s.key_takeaways).length) text += `Key takeaways: ${arr(s.key_takeaways).join('; ')}\\n`;\n    text += `Заметки: ${s.copywriter_notes || '-'}\\n\\n`;\n  });\n\n  if (arr(result.entity_connections).length) {\n    text += 'Entity connections:\\n';\n    text += lineObjectList(result.entity_connections, ['from', 'to', 'reason']);\n    text += '\\n';\n  }\n\n  if (arr(result.faq).length) {\n    text += 'FAQ:\\n';\n    arr(result.faq).slice(0, 10).forEach((item, i) => {\n      if (typeof item === 'string') text += `${i + 1}. ${item}\\n`;\n      else {\n        text += `${i + 1}. ${item.question || '-'}\\n`;\n        if (item.answer_goal) text += `   Цель ответа: ${item.answer_goal}\\n`;\n      }\n    });\n    text += '\\n';\n  }\n\n  if (result.cta) text += `CTA:\\n${result.cta}\\n\\n`;\n  if (result.qa) {\n    text += `QA: ${result.qa.verdict || '-'}\\n`;\n    if (result.qa.summary) text += `Резюме QA: ${result.qa.summary}\\n`;\n  }\n}\n\nif (mode === 'text') {\n  text += 'SEO Текст v9\\n\\n';\n  if (result.h1) text += `# ${result.h1}\\n\\n`;\n  text += result.content_markdown || '-';\n  text += `\\n\\nТаблицы использованы: ${result.tables_used === true ? 'да' : 'нет'}\\n`;\n  if (arr(result.entities_used).length) text += `Сущности использованы: ${arr(result.entities_used).join(', ')}\\n`;\n  if (result.qa) {\n    text += `\\nQA: ${result.qa.verdict || '-'}\\n`;\n    if (result.qa.summary) text += `Резюме QA: ${result.qa.summary}\\n`;\n  }\n}\n\nif (mode === 'seoqa') {\n  text += 'SEO QA v9\\n\\n';\n  text += `Вердикт: ${result.verdict || '-'}\\n`;\n  text += `Оценка: ${result.score ?? '-'}\\n`;\n  if (result.summary) text += `\\nРезюме:\\n${result.summary}\\n`;\n  if (arr(result.sections_coverage).length) {\n    text += '\\nПокрытие секций:\\n';\n    arr(result.sections_coverage).slice(0, 20).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (result.tables_check) text += `\\nПроверка таблиц:\\n${result.tables_check}\\n`;\n  if (result.entities_check) text += `\\nПроверка сущностей:\\n${result.entities_check}\\n`;\n  if (arr(result.problems).length) {\n    text += '\\nПроблемы:\\n';\n    arr(result.problems).slice(0, 20).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(result.fixes).length) {\n    text += '\\nЧто исправить:\\n';\n    arr(result.fixes).slice(0, 20).forEach((f, i) => text += `${i + 1}. ${typeof f === 'string' ? f : JSON.stringify(f)}\\n`);\n  }\n}\n\nif (mode === 'factcheck') {\n  text += 'Factcheck v9\\n\\n';\n  text += `Вердикт: ${result.verdict || '-'}\\n`;\n  if (result.summary) text += `\\nРезюме:\\n${result.summary}\\n`;\n  if (arr(result.risky_claims).length) {\n    text += '\\nРискованные утверждения:\\n';\n    arr(result.risky_claims).slice(0, 20).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(result.unsupported_claims).length) {\n    text += '\\nНе подтверждено:\\n';\n    arr(result.unsupported_claims).slice(0, 20).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(result.recommended_removals).length) {\n    text += '\\nЛучше убрать:\\n';\n    arr(result.recommended_removals).slice(0, 20).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n}\n\nif (arr(result.missing_data).length) {\n  text += '\\n\\nПробелы данных:\\n';\n  arr(result.missing_data).slice(0, 15).forEach((item) => text += `- ${item}\\n`);\n}\n\ntext += '\\n\\nФакты только из переданного брифа/ТЗ. Публикация после проверки человеком.';\n\nconst chunks = splitMessage(text);\nreturn chunks.map((chunk, index) => ({\n  json: {\n    chat_id: route.chat_id,\n    telegram_text: chunks.length > 1 ? `[Часть ${index + 1}/${chunks.length}]\\n\\n${chunk}` : chunk,\n    chunk_index: index,\n    chunk_count: chunks.length,\n    full_output_text: text,\n    task_id: taskId,\n    mode: mode,\n    task_raw: route.task_raw || route.task_input || ''\n  }\n}));"
+      },
+      "id": "08adf088-caa2-4661-b79c-09a5dd6cd46d",
+      "name": "Format Single Mode Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12784,
+        24000
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ String($json.telegram_text || '').replace(/_/g, '-').replace(/\\*/g, '').replace(/`/g, \"'\") }}",
+        "additionalFields": {}
+      },
+      "id": "ec636b25-7b39-4ef0-97ab-65db16dc71a9",
+      "name": "Send Telegram Single",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        13008,
+        23936
+      ],
+      "webhookId": "a3358c99-35d2-4c36-abba-885ecb3646db",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "eab24bec-7f02-4a60-bb94-4d064c77baa8",
+      "name": "Run Outline",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        11760,
+        24512
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '{}';\n}\nfunction parseJsonLoose(value) {\n  if (typeof value !== 'string') return value || {};\n  let text = value.trim();\n  text = text.replace(/^```json\\s*/i, '').replace(/^```\\s*/i, '').replace(/```$/i, '').trim();\n  return JSON.parse(text);\n}\nfunction safeParse(value, fallbackMode) {\n  try { return parseJsonLoose(value); }\n  catch (e) {\n    return {\n      mode: fallbackMode,\n      h1: '',\n      title_options: [],\n      meta_description: '',\n      sections: [],\n      tables: { required: false, decision_reason: 'Ошибка парсинга JSON от модели', table_ideas: [] },\n      entity_connections: [],\n      faq: [],\n      cta: '',\n      missing_data: ['Ошибка парсинга JSON от модели'],\n      internal_risks: [String(e.message || e)]\n    };\n  }\n}\n\nconst outline = safeParse(extractContent($json), 'outline');\nconst route = $node['Route Command'].json;\n\nreturn [{\n  json: {\n    chat_id: route.chat_id,\n    task_id: route.task_id,\n    task_raw: route.task_raw || '',\n    task_input: route.task_input,\n    flags: route.flags || {},\n    strict: !!route.strict,\n    no_factcheck: !!route.no_factcheck,\n    outline_only: !!route.outline_only,\n    text_only: !!route.text_only,\n    tables_policy: route.tables_policy || 'auto',\n    outline\n  }\n}];"
+      },
+      "id": "f7ccbab9-2963-4ef5-a8e7-9f2f6dd95645",
+      "name": "Run Extract Outline",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11984,
+        24512
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "eb8b432d-d61e-43f7-93b0-25255b159cf1",
+      "name": "Run Text",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        13264,
+        24656
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '{}';\n}\nfunction parseJsonLoose(value) {\n  if (typeof value !== 'string') return value || {};\n  let text = value.trim();\n  text = text.replace(/^```json\\s*/i, '').replace(/^```\\s*/i, '').replace(/```$/i, '').trim();\n  return JSON.parse(text);\n}\nfunction safeParse(value) {\n  try { return parseJsonLoose(value); }\n  catch (e) {\n    return {\n      mode: 'text',\n      h1: '',\n      content_markdown: '',\n      used_sections: [],\n      tables_used: false,\n      entities_used: [],\n      qa: { verdict: 'reject', summary: 'Ошибка парсинга JSON от модели', issues: [String(e.message || e)] },\n      missing_data: ['Ошибка парсинга JSON от модели']\n    };\n  }\n}\n\nconst prev = $node['Extract SEO Strategy v'].json;\nconst generated_text = safeParse(extractContent($json));\n\nreturn [{\n  json: {\n    chat_id: prev.chat_id,\n    task_id: prev.task_id,\n    task_raw: prev.task_raw || '',\n    task_input: prev.task_input,\n    flags: prev.flags || {},\n    strict: !!prev.strict,\n    no_factcheck: !!prev.no_factcheck,\n    outline_only: !!prev.outline_only,\n    text_only: !!prev.text_only,\n    tables_policy: prev.tables_policy || 'auto',\n    outline: prev.outline,\n    seo_strategy: prev.seo_strategy || {},\n    generated_text\n  }\n}];"
+      },
+      "id": "d3217e1b-d9b5-4fc8-83ad-1414a785b62b",
+      "name": "Run Extract Text",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13536,
+        24272
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "2573f0bd-1ec0-4a16-a4f9-2cedc0e1b249",
+      "name": "Run SEO QA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        13024,
+        24880
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '{}';\n}\nfunction parseJsonLoose(value) {\n  if (typeof value !== 'string') return value || {};\n  let text = value.trim();\n  text = text.replace(/^```json\\s*/i, '').replace(/^```\\s*/i, '').replace(/```$/i, '').trim();\n  return JSON.parse(text);\n}\nfunction safeParse(value) {\n  try { return parseJsonLoose(value); }\n  catch (e) {\n    return {\n      mode: 'seoqa',\n      verdict: 'reject',\n      score: 0,\n      summary: 'Ошибка парсинга JSON от модели',\n      sections_coverage: [],\n      tables_check: '',\n      entities_check: '',\n      problems: [String(e.message || e)],\n      fixes: ['Повторить генерацию или проверить OpenRouter response_format'],\n      unsupported_requirements_ignored: [],\n      missing_data: []\n    };\n  }\n}\n\nconst prev = $node['Compute Content Score'].json;\nconst seoqa = safeParse(extractContent($json));\n\nreturn [{\n  json: {\n    chat_id: prev.chat_id,\n    task_id: prev.task_id,\n    task_raw: prev.task_raw || '',\n    task_input: prev.task_input,\n    flags: prev.flags || {},\n    strict: !!prev.strict,\n    no_factcheck: !!prev.no_factcheck,\n    outline_only: !!prev.outline_only,\n    text_only: !!prev.text_only,\n    tables_policy: prev.tables_policy || 'auto',\n    outline: prev.outline,\n    seo_strategy: prev.seo_strategy || {},\n    generated_text: prev.generated_text,\n    content_score: prev.content_score || {},\n    seoqa\n  }\n}];"
+      },
+      "id": "8300a48b-3b42-4f83-8e1a-960e4cec1bec",
+      "name": "Run Extract SEO QA",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13248,
+        24880
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "a652c714-f3e0-4f70-aeef-7758cead31dd",
+      "name": "Run Factcheck",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        11936,
+        25264
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function arr(v) { return Array.isArray(v) ? v : []; }\n\nfunction splitMessage(text, maxLen = 3600) {\n  const chunks = [];\n  let rest = text;\n  while (rest.length > maxLen) {\n    let cut = rest.lastIndexOf('\\n\\n', maxLen);\n    if (cut < 1000) cut = rest.lastIndexOf('\\n', maxLen);\n    if (cut < 1000) cut = maxLen;\n    chunks.push(rest.slice(0, cut).trim());\n    rest = rest.slice(cut).trim();\n  }\n  if (rest) chunks.push(rest);\n  return chunks;\n}\n\nfunction objectLine(item, fields) {\n  if (typeof item === 'string') return item;\n  return fields.map(f => item?.[f]).filter(Boolean).join(' — ') || JSON.stringify(item);\n}\n\nconst outline = $json.outline || {};\nconst seoStrategy = $json.seo_strategy || {};\nconst generated = $json.generated_text || {};\nconst seoqa = $json.seoqa || ($json.text_only || $json.outline_only ? { verdict: 'skipped', score: '-', summary: 'Этап SEO QA пропущен флагом.' } : {});\nconst factcheck = $json.factcheck || ($json.no_factcheck || $json.text_only || $json.outline_only ? { verdict: 'skipped', summary: 'Этап factcheck пропущен флагом.' } : {});\nconst taskId = $json.task_id || '-';\nconst flags = $json.flags || {};\nconst tables = outline.tables || {};\n\nlet text = `Task ID: ${taskId}\\n\\n`;\ntext += 'SEO Pipeline /run — v10 STRATEGY\\n';\n\nconst activeFlags = Object.entries(flags)\n  .filter(([k,v]) => v === true && k !== 'from')\n  .map(([k]) => `--${k.replace('_','-')}`);\nif (activeFlags.length) text += `Флаги: ${activeFlags.join(', ')}\\n`;\ntext += `Таблицы: ${$json.tables_policy || flags.tables_policy || 'auto'}\\n\\n`;\n\ntext += '=== 1. SEO ТЗ ===\\n\\n';\ntext += `H1: ${outline.h1 || '-'}\\n\\n`;\n\nif (arr(outline.title_options).length) {\n  text += 'Title options:\\n';\n  arr(outline.title_options).slice(0, 3).forEach((title, i) => text += `${i + 1}. ${title}\\n`);\n  text += '\\n';\n}\n\nif (outline.meta_description) text += `Meta description:\\n${outline.meta_description}\\n\\n`;\n\ntext += 'Таблицы:\\n';\ntext += `Required: ${tables.required === true ? 'да' : 'нет'}\\n`;\nif (tables.decision_reason) text += `Причина: ${tables.decision_reason}\\n`;\nif (arr(tables.table_ideas).length) {\n  text += 'Идеи таблиц:\\n';\n  arr(tables.table_ideas).slice(0, 8).forEach((item, i) => text += `${i + 1}. ${objectLine(item, ['title', 'purpose'])}\\n`);\n}\ntext += '\\n';\n\ntext += 'Структура:\\n';\narr(outline.sections).slice(0, 20).forEach((s, i) => {\n  text += `${i + 1}. ${s.h2 || '-'} — ${s.word_count || '-'} слов\\n`;\n  if (s.summary) text += `   Summary: ${s.summary}\\n`;\n  if (arr(s.keywords).length) text += `   Ключи: ${arr(s.keywords).slice(0, 8).join(', ')}\\n`;\n  if (arr(s.entities).length) {\n    const ents = arr(s.entities).slice(0, 12).map(e => typeof e === 'string' ? e : `${e.name || '-'} (${e.priority || '-'})`);\n    text += `   Сущности: ${ents.join(', ')}\\n`;\n  }\n  if (arr(s.visual_elements).length) text += `   Визуал: ${arr(s.visual_elements).join(', ')}\\n`;\n  if (arr(s.key_takeaways).length) text += `   Выводы: ${arr(s.key_takeaways).join('; ')}\\n`;\n});\ntext += '\\n';\n\nif (arr(outline.entity_connections).length) {\n  text += 'Entity connections:\\n';\n  arr(outline.entity_connections).slice(0, 10).forEach((item, i) => text += `${i + 1}. ${objectLine(item, ['from', 'to', 'reason'])}\\n`);\n  text += '\\n';\n}\n\nif (arr(outline.faq).length) {\n  text += 'FAQ:\\n';\n  arr(outline.faq).slice(0, 8).forEach((item, i) => text += `${i + 1}. ${typeof item === 'string' ? item : (item.question || '-')}\\n`);\n  text += '\\n';\n}\nif (outline.cta) text += `CTA:\\n${typeof outline.cta === 'string' ? outline.cta : JSON.stringify(outline.cta)}\\n\\n`;\n\nif (seoStrategy && Object.keys(seoStrategy).length) {\n  text += '=== SEO Strategy v10 ===\\n\\n';\n  if (seoStrategy.page_intent) text += `Intent: ${seoStrategy.page_intent}\\n`;\n  if (seoStrategy.serp_pattern) text += `SERP pattern: ${seoStrategy.serp_pattern}\\n`;\n  if (seoStrategy.content_angle) text += `Content angle: ${seoStrategy.content_angle}\\n`;\n  if (seoStrategy.target_audience_focus) text += `Audience focus: ${seoStrategy.target_audience_focus}\\n`;\n  if (arr(seoStrategy.priority_blocks).length) {\n    text += 'Priority blocks:\\n';\n    arr(seoStrategy.priority_blocks).slice(0, 8).forEach((item, i) => text += `${i + 1}. ${typeof item === 'string' ? item : objectLine(item, ['name', 'reason'])}\\n`);\n  }\n  if (arr(seoStrategy.snippet_opportunities).length) {\n    text += 'Snippet opportunities:\\n';\n    arr(seoStrategy.snippet_opportunities).slice(0, 8).forEach((item, i) => text += `${i + 1}. ${typeof item === 'string' ? item : objectLine(item, ['type', 'block', 'reason'])}\\n`);\n  }\n  if (seoStrategy.table_strategy) {\n    text += `Table strategy: ${typeof seoStrategy.table_strategy === 'string' ? seoStrategy.table_strategy : JSON.stringify(seoStrategy.table_strategy)}\\n`;\n  }\n  if (arr(seoStrategy.risk_notes).length) {\n    text += 'Risk notes:\\n';\n    arr(seoStrategy.risk_notes).slice(0, 8).forEach((item, i) => text += `${i + 1}. ${typeof item === 'string' ? item : JSON.stringify(item)}\\n`);\n  }\n  text += '\\n';\n}\n\nif (!$json.outline_only) {\n  text += '=== 2. SEO Текст ===\\n\\n';\n  if (generated.h1) text += `# ${generated.h1}\\n\\n`;\n  text += `${generated.content_markdown || '-'}\\n\\n`;\n  text += `Таблицы использованы: ${generated.tables_used === true ? 'да' : 'нет'}\\n`;\n  if (arr(generated.entities_used).length) text += `Сущности использованы: ${arr(generated.entities_used).join(', ')}\\n`;\n  text += '\\n';\n}\n\nif (!$json.outline_only && !$json.text_only) {\n  text += '=== 3. SEO QA ===\\n\\n';\n  text += `Вердикт: ${seoqa.verdict || '-'}\\n`;\n  text += `Оценка: ${seoqa.score ?? '-'}\\n`;\n  if (seoqa.summary) text += `Резюме: ${seoqa.summary}\\n`;\n  if (seoqa.tables_check) text += `Проверка таблиц: ${seoqa.tables_check}\\n`;\n  if (seoqa.entities_check) text += `Проверка сущностей: ${seoqa.entities_check}\\n`;\n  if (arr(seoqa.sections_coverage).length) {\n    text += '\\nПокрытие секций:\\n';\n    arr(seoqa.sections_coverage).slice(0, 12).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(seoqa.problems).length) {\n    text += '\\nПроблемы:\\n';\n    arr(seoqa.problems).slice(0, 12).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(seoqa.fixes).length) {\n    text += '\\nЧто исправить:\\n';\n    arr(seoqa.fixes).slice(0, 12).forEach((f, i) => text += `${i + 1}. ${typeof f === 'string' ? f : JSON.stringify(f)}\\n`);\n  }\n  if (arr(seoqa.unsupported_requirements_ignored).length) {\n    text += '\\nПроигнорированные неподтверждённые требования:\\n';\n    arr(seoqa.unsupported_requirements_ignored).slice(0, 8).forEach((f, i) => text += `${i + 1}. ${typeof f === 'string' ? f : JSON.stringify(f)}\\n`);\n  }\n  text += '\\n';\n}\n\nif ($json.content_score) {\n  text += '\\nContent Score:\\n';\n  text += `Оценка: ${$json.content_score.score}/100\\n`;\n  text += `Вердикт: ${$json.content_score.verdict || '-'}\\n`;\n\n  if (Array.isArray($json.content_score.issues) && $json.content_score.issues.length) {\n    text += 'Ошибки score:\\n';\n    $json.content_score.issues.forEach((item, i) => {\n      text += `${i + 1}. ${item}\\n`;\n    });\n  }\n\n  if (Array.isArray($json.content_score.warnings) && $json.content_score.warnings.length) {\n    text += 'Предупреждения score:\\n';\n    $json.content_score.warnings.forEach((item, i) => {\n      text += `${i + 1}. ${item}\\n`;\n    });\n  }\n\n  text += '\\n';\n}\n\nif (!$json.outline_only && !$json.text_only) {\n  text += '=== 4. Factcheck ===\\n\\n';\n  text += `Вердикт: ${factcheck.verdict || '-'}\\n`;\n  if (factcheck.summary) text += `Резюме: ${factcheck.summary}\\n`;\n  if (arr(factcheck.risky_claims).length) {\n    text += '\\nРискованные утверждения:\\n';\n    arr(factcheck.risky_claims).slice(0, 12).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(factcheck.unsupported_claims).length) {\n    text += '\\nНе подтверждено:\\n';\n    arr(factcheck.unsupported_claims).slice(0, 12).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n  if (arr(factcheck.recommended_removals).length) {\n    text += '\\nЛучше убрать:\\n';\n    arr(factcheck.recommended_removals).slice(0, 12).forEach((p, i) => text += `${i + 1}. ${typeof p === 'string' ? p : JSON.stringify(p)}\\n`);\n  }\n}\n\nconst missing = [\n  ...arr(outline.missing_data),\n  ...arr(generated.missing_data),\n  ...arr(seoqa.missing_data),\n  ...arr(factcheck.missing_data)\n].filter(Boolean);\n\nif (missing.length) {\n  text += '\\n\\nПробелы данных:\\n';\n  [...new Set(missing)].slice(0, 20).forEach(item => text += `- ${item}\\n`);\n}\n\ntext += '\\n\\nФакты только из переданного брифа/ТЗ. Публикация после проверки человеком.';\n\nconst chunks = splitMessage(text);\nreturn chunks.map((chunk, index) => ({\n  json: {\n    chat_id: $json.chat_id,\n    telegram_text: chunks.length > 1 ? `[Часть ${index + 1}/${chunks.length}]\\n\\n${chunk}` : chunk,\n    chunk_index: index,\n    chunk_count: chunks.length,\n    full_output_text: text,\n    task_id: taskId,\n    mode: \"run\",\n    task_raw: $json.task_raw || $json.task_input || \"\"\n  }\n}));"
+      },
+      "id": "b5349c45-62b2-4148-a800-213bd5d4ee7d",
+      "name": "Format Run Pipeline",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12608,
+        25152
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ String($json.telegram_text || '').replace(/_/g, '-').replace(/\\*/g, '').replace(/`/g, \"'\") }}",
+        "additionalFields": {}
+      },
+      "id": "147f66d7-b322-41ce-8da0-823062ad3e74",
+      "name": "Send Telegram Run",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        12832,
+        25104
+      ],
+      "webhookId": "a3358c99-35d2-4c36-abba-885ecb3646db",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const first = items.find(item => Number(item.json.chunk_index || 0) === 0) || items[0];\nif (!first) return [];\n\nconst now = new Date().toISOString();\nconst j = first.json || {};\n\nreturn [{\n  json: {\n    timestamp: now,\n    task_id: j.task_id || '',\n    mode: j.mode || '',\n    chat_id: String(j.chat_id || ''),\n    input: String(j.task_raw || '').slice(0, 50000),\n    output: String(j.full_output_text || j.telegram_text || '').slice(0, 50000),\n    chunk_count: String(j.chunk_count || 1),\n    status: 'ok'\n  }\n}];"
+      },
+      "id": "98aff918-2284-4594-b235-c8aa06bfd9d6",
+      "name": "Prepare Memory Row Local",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12480,
+        23696
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "memory",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "timestamp",
+              "displayName": "timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "task_id",
+              "displayName": "task_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mode",
+              "displayName": "mode",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "chat_id",
+              "displayName": "chat_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "input",
+              "displayName": "input",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "output",
+              "displayName": "output",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "chunk_count",
+              "displayName": "chunk_count",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "0832b862-8c96-4b07-90c6-c62379682edb",
+      "name": "Append Memory Local",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        12704,
+        23696
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const first = items.find(item => Number(item.json.chunk_index || 0) === 0) || items[0];\nif (!first) return [];\n\nconst now = new Date().toISOString();\nconst j = first.json || {};\n\nreturn [{\n  json: {\n    timestamp: now,\n    task_id: j.task_id || '',\n    mode: j.mode || '',\n    chat_id: String(j.chat_id || ''),\n    input: String(j.task_raw || '').slice(0, 50000),\n    output: String(j.full_output_text || j.telegram_text || '').slice(0, 50000),\n    chunk_count: String(j.chunk_count || 1),\n    status: 'ok'\n  }\n}];"
+      },
+      "id": "f4df5ab0-b24b-42ce-8835-4e5fd3aa8107",
+      "name": "Prepare Memory Row Single",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13008,
+        24128
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "memory",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "task_id": "={{ $json.task_id }}",
+            "mode": "={{ $json.mode }}",
+            "chat_id": "={{ $json.chat_id }}",
+            "input": "={{ $json.input }}",
+            "output": "={{ $json.output }}",
+            "chunk_count": "={{ $json.chunk_count }}",
+            "status": "={{ $json.status }}"
+          },
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "id": "1db28951-80b4-44f2-aa2c-82695506a06c",
+      "name": "Append Memory Single",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        13232,
+        24128
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const first = items.find(item => Number(item.json.chunk_index || 0) === 0) || items[0];\nif (!first) return [];\n\nconst now = new Date().toISOString();\nconst j = first.json || {};\n\nreturn [{\n  json: {\n    timestamp: now,\n    task_id: j.task_id || '',\n    mode: j.mode || '',\n    chat_id: String(j.chat_id || ''),\n    input: String(j.task_raw || '').slice(0, 50000),\n    output: String(j.full_output_text || j.telegram_text || '').slice(0, 50000),\n    chunk_count: String(j.chunk_count || 1),\n    status: 'ok'\n  }\n}];"
+      },
+      "id": "9e86cd52-324c-43c9-8011-06d0836122ad",
+      "name": "Prepare Memory Row Run",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12832,
+        25296
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "memory",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "task_id": "={{ $json.task_id }}",
+            "mode": "={{ $json.mode }}",
+            "chat_id": "={{ $json.chat_id }}",
+            "input": "={{ $json.input }}",
+            "output": "={{ $json.output }}",
+            "chunk_count": "={{ $json.chunk_count }}",
+            "status": "={{ $json.status }}"
+          },
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "id": "35a89d26-47d7-4af1-9956-da798c84c170",
+      "name": "Append Memory Run",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        13056,
+        25296
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "f1247d00-ee7e-41dd-8467-15e27510cfaa",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [
+        11392,
+        24224
+      ],
+      "webhookId": "cba51af5-1271-4187-b77d-2efabd352dd6",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "task_raw",
+              "value": "={{ $json.message.text || '' }}"
+            },
+            {
+              "name": "chat_id",
+              "value": "={{ $json.message.chat.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1f05737a-d5f3-4ea1-92f4-fba98944e1b7",
+      "name": "Set Raw Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        11616,
+        24224
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = String($json.task_raw || '').trim();\nconst lower = raw.toLowerCase();\n\nlet isDemo = false;\nlet cleanText = raw;\n\nif (lower.startsWith('/demo')) {\n  isDemo = true;\n  cleanText = raw.replace(/^\\/demo\\s*/i, '').trim();\n}\n\nconst lowerClean = cleanText.toLowerCase();\n\nlet fromTaskId = null;\n\nif (lowerClean.startsWith('/get')) {\n  const parts = cleanText.split(/\\s+/);\n  fromTaskId = parts[1] ? parts[1].trim() : null;\n}\n\nconst fromMatch = cleanText.match(/--from\\s+([a-zA-Z0-9_-]+)/i);\nif (fromMatch) {\n  fromTaskId = fromMatch[1].trim();\n}\n\nfunction normalizeTablesPolicy(text) {\n  const lower = String(text || '').toLowerCase();\n\n  const cli = lower.match(/--tables\\s+(yes|no|auto|да|нет|по-необходимости|по_необходимости|по необходимости)/i);\n  if (cli) {\n    const v = cli[1].replace(/[_-]/g, ' ');\n    if (['yes', 'да'].includes(v)) return 'yes';\n    if (['no', 'нет'].includes(v)) return 'no';\n    return 'auto';\n  }\n\n  const ru = String(text || '').match(/таблиц[аы]?\\s*:\\s*([^\\n\\r]+)/i);\n  if (ru) {\n    const v = ru[1].trim().toLowerCase();\n    if (/^(да|yes|true|нужн|обяз)/i.test(v)) return 'yes';\n    if (/^(нет|no|false|не\\s+нужн|без)/i.test(v)) return 'no';\n    return 'auto';\n  }\n\n  return 'auto';\n}\n\nconst tablesPolicy = normalizeTablesPolicy(cleanText);\n\nconst flags = {\n  strict: /(^|\\s)--strict(\\s|$)/i.test(cleanText),\n  no_factcheck: /(^|\\s)--no-factcheck(\\s|$)/i.test(cleanText),\n  outline_only: /(^|\\s)--outline-only(\\s|$)/i.test(cleanText),\n  text_only: /(^|\\s)--text-only(\\s|$)/i.test(cleanText),\n  from: Boolean(fromTaskId),\n  tables_policy: tablesPolicy\n};\n\nlet mode = 'unknown';\n\nconst commandMatch = cleanText.match(/^\\/(run|get|outline|text|seoqa|factcheck|help)\\b/i);\n\nif (commandMatch) {\n  mode = commandMatch[1].toLowerCase();\n}\n\nconst commandValid = ['get', 'run', 'outline', 'text', 'seoqa', 'factcheck', 'help'].includes(mode);\n\nlet taskInput = cleanText\n  .replace(/^\\/get\\s*/i, '')\n  .replace(/^\\/run\\s*/i, '')\n  .replace(/^\\/outline\\s*/i, '')\n  .replace(/^\\/text\\s*/i, '')\n  .replace(/^\\/seoqa\\s*/i, '')\n  .replace(/^\\/factcheck\\s*/i, '')\n  .replace(/^\\/help\\s*/i, '')\n  .replace(/(^|\\s)--from\\s+[a-zA-Z0-9_-]+(\\s|$)/ig, ' ')\n  .replace(/(^|\\s)--strict(\\s|$)/ig, ' ')\n  .replace(/(^|\\s)--no-factcheck(\\s|$)/ig, ' ')\n  .replace(/(^|\\s)--outline-only(\\s|$)/ig, ' ')\n  .replace(/(^|\\s)--text-only(\\s|$)/ig, ' ')\n  .replace(/(^|\\s)--tables\\s+(yes|no|auto|да|нет|по-необходимости|по_необходимости|по необходимость|по необходимости)(\\s|$)/ig, ' ')\n  .replace(/\\s+/g, ' ')\n  .trim();\n\nif (flags.outline_only) flags.text_only = false;\n\nconst now = new Date();\nconst pad = (n) => String(n).padStart(2, '0');\nconst stamp = `${now.getUTCFullYear()}${pad(now.getUTCMonth() + 1)}${pad(now.getUTCDate())}${pad(now.getUTCHours())}${pad(now.getUTCMinutes())}${pad(now.getUTCSeconds())}`;\nconst rand = Math.random().toString(36).slice(2, 8);\nconst taskId = `seo${stamp}${rand}`;\n\nlet route = 'single';\n\nif (!commandValid || mode === 'help' || isDemo) route = 'local';\nif (mode === 'get' && commandValid && !isDemo) route = 'get';\nif (fromTaskId && ['text', 'seoqa', 'factcheck'].includes(mode) && commandValid && !isDemo) route = 'reuse';\nif (mode === 'run' && !isDemo && commandValid) route = 'run';\n\nreturn [{\n  json: {\n    chat_id: $json.chat_id,\n    task_raw: raw,\n    task_input: taskInput,\n    clean_text: cleanText,\n    mode,\n    is_demo: isDemo,\n    command_valid: commandValid,\n    route,\n    task_id: taskId,\n    from_task_id: fromTaskId,\n    flags,\n    strict: flags.strict,\n    no_factcheck: flags.no_factcheck,\n    outline_only: flags.outline_only,\n    text_only: flags.text_only,\n    tables_policy: tablesPolicy\n  }\n}];"
+      },
+      "id": "f0b1e7a9-3e0e-4d35-a29b-1a7e18d11cc2",
+      "name": "Route Command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11840,
+        24224
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "4709dba3-4019-401b-9418-554db1c18bc5",
+                    "leftValue": "={{ $json.outline_only }}",
+                    "rightValue": true,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "outline_only"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b9d77f44-88f4-4136-a6c6-feb7a60c91a6",
+                    "leftValue": "={{ $json.outline_only }}",
+                    "rightValue": false,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "false",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "continue"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5cf24224-452f-4aa8-b405-2354f892cf51",
+      "name": "Switch Run After Outline",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        12208,
+        24544
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "ebbce9f6-2e55-40c8-a151-4670c1e38e8f",
+                    "leftValue": "={{ $json.text_only }}",
+                    "rightValue": true,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "text_only"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "c51a9fce-b58e-4f90-8b99-1b554378e142",
+                    "leftValue": "={{ $json.text_only }}",
+                    "rightValue": false,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "false",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "continue"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1acf53d9-0ef0-455b-9ebd-c0d492091540",
+      "name": "Switch Run After Text",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        14080,
+        24656
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "74ecd5c3-dc69-4822-bbd1-3dffa43aa398",
+                    "leftValue": "={{ $json.no_factcheck }}",
+                    "rightValue": true,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "skip_factcheck"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3c387a49-f4bd-4259-bf12-990f3a80ab4c",
+                    "leftValue": "={{ $json.no_factcheck }}",
+                    "rightValue": false,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "false",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "factcheck"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "deb530bd-01f7-4973-8f5e-2cb183d05b87",
+      "name": "Switch Run Factcheck",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        13472,
+        24880
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '{}';\n}\n\nfunction parseJsonLoose(value) {\n  if (typeof value !== 'string') return value || {};\n  let text = value.trim();\n  text = text.replace(/^```json\\s*/i, '').replace(/^```\\s*/i, '').replace(/```$/i, '').trim();\n  return JSON.parse(text);\n}\n\nfunction safeParse(value) {\n  try {\n    return parseJsonLoose(value);\n  } catch (e) {\n    return {\n      mode: 'factcheck',\n      verdict: 'reject',\n      summary: 'Ошибка парсинга factcheck JSON',\n      risky_claims: [String(e.message || e)],\n      unsupported_claims: [],\n      recommended_removals: [],\n      missing_data: []\n    };\n  }\n}\n\nconst prev = $node['Run Extract SEO QA'].json;\nconst factcheck = safeParse(extractContent($json));\n\nif (typeof factcheck.verdict === 'string') {\n  factcheck.verdict = factcheck.verdict.replace(/-/g, '_');\n}\n\nreturn [{\n  json: {\n    chat_id: prev.chat_id,\n    task_id: prev.task_id,\n    task_raw: prev.task_raw || '',\n    task_input: prev.task_input,\n    flags: prev.flags || {},\n    strict: !!prev.strict,\n    no_factcheck: !!prev.no_factcheck,\n    outline_only: !!prev.outline_only,\n    text_only: !!prev.text_only,\n    tables_policy: prev.tables_policy || 'auto',\n    outline: prev.outline,\n    seo_strategy: prev.seo_strategy || {},\n    generated_text: prev.generated_text,\n    seoqa: prev.seoqa,\n    content_score: prev.content_score || {},\n    factcheck\n  }\n}];"
+      },
+      "id": "d74e3c02-68f0-47cf-88c4-03d61015fe5b",
+      "name": "Run Extract Factcheck",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12160,
+        25264
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "memory",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "c6abc7c8-bbaf-4f2d-b0ad-b58ebe79eb6a",
+      "name": "Lookup Memory Get",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        11536,
+        24704
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "function splitMessage(text, maxLen = 3600) {\n  const chunks = [];\n  let rest = text;\n  while (rest.length > maxLen) {\n    let cut = rest.lastIndexOf('\\n\\n', maxLen);\n    if (cut < 1000) cut = rest.lastIndexOf('\\n', maxLen);\n    if (cut < 1000) cut = maxLen;\n    chunks.push(rest.slice(0, cut).trim());\n    rest = rest.slice(cut).trim();\n  }\n  if (rest) chunks.push(rest);\n  return chunks;\n}\n\nconst fromId = $json.from_task_id || '';\nconst output = $json.output || '';\nconst input = $json.input || '';\nconst timestamp = $json.timestamp || '';\nconst mode = $json.mode || '';\n\nlet text = '';\n\nif (!fromId) {\n  text = 'Не указан task_id.\\n\\nПример:\\n/get seo202605041510361ofboo';\n} else if (!$json.memory_found || !output) {\n  text = `Task not found: ${fromId}\\n\\nПроверь task_id в листе memory.\\n\\nПодсказка: скопируй task_id строго из колонки task_id без пробелов.`;\n} else {\n  text += `Task ID: ${fromId}\\n`;\n  if (timestamp) text += `Дата: ${timestamp}\\n`;\n  if (mode) text += `Режим: ${mode}\\n`;\n  text += '\\n=== STORED INPUT ===\\n';\n  text += input ? input.slice(0, 3000) : '-';\n  text += '\\n\\n=== STORED OUTPUT ===\\n';\n  text += output;\n}\n\nconst chunks = splitMessage(text);\nreturn chunks.map((chunk, index) => ({\n  json: {\n    chat_id: $json.chat_id,\n    telegram_text: chunks.length > 1 ? `[Часть ${index + 1}/${chunks.length}]\\n\\n${chunk}` : chunk,\n    chunk_index: index,\n    chunk_count: chunks.length,\n    full_output_text: text,\n    task_id: $json.route_task_id,\n    mode: 'get',\n    task_raw: $json.route_task_raw || ''\n  }\n}));"
+      },
+      "id": "7accbb0f-f8f4-4988-9421-9a182229a329",
+      "name": "Format Memory Get",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11984,
+        24704
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ String($json.telegram_text || '').replace(/_/g, '-').replace(/\\*/g, '').replace(/`/g, \"'\") }}",
+        "additionalFields": {}
+      },
+      "id": "2d1e9290-44bd-4887-a260-bc570cf32557",
+      "name": "Send Telegram Memory Get",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        12208,
+        24736
+      ],
+      "webhookId": "a3358c99-35d2-4c36-abba-885ecb3646db",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "memory",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "1ca08a6d-9d9f-47d1-b53d-4ed9f4c0adf5",
+      "name": "Lookup Memory Reuse",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        11536,
+        24896
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const route = $node['Route Command'].json;\n\nconst restoredOutput = $json.output || '';\nconst restoredInput = $json.input || '';\nconst fromId = $json.from_task_id || route.from_task_id || '';\n\nlet taskInput = '';\n\nif (!fromId) {\n  taskInput = route.task_input || '';\n} else if (!$json.memory_found || !restoredOutput) {\n  taskInput = `MEMORY_LOOKUP_FAILED\\nTask not found: ${fromId}\\n\\nUser input:\\n${route.task_input || ''}`;\n} else {\n  taskInput = [\n    `MEMORY_FROM_TASK_ID: ${fromId}`,\n    '',\n    '=== STORED INPUT ===',\n    restoredInput || '-',\n    '',\n    '=== STORED OUTPUT ===',\n    restoredOutput,\n    '',\n    '=== CURRENT USER ADDITION ===',\n    route.task_input || '-'\n  ].join('\\n');\n}\n\nreturn [{\n  json: {\n    ...route,\n    task_input: taskInput,\n    restored_input: restoredInput,\n    restored_output: restoredOutput,\n    memory_found: Boolean($json.memory_found && restoredOutput),\n    from_task_id: fromId\n  }\n}];"
+      },
+      "id": "002c8330-d91b-4352-b625-7de60c6b8253",
+      "name": "Prepare Memory Reuse",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11984,
+        24896
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const route = $json;\n\nconst MODE_PROMPTS = {\n  outline: {\n    temperature: 0.25,\n    prompt: `Режим: outline.\n\nСоздай профессиональное SEO-ТЗ для копирайтера строго по входным данным.\n\nУчитывай параметр tables_policy:\n- yes / да / true → tables.required = true\n- no / нет / false → tables.required = false\n- auto / по необходимости / empty → реши сам и объясни в tables.decision_reason\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"outline\",\n  \"h1\": \"\",\n  \"title_options\": [],\n  \"meta_description\": \"\",\n  \"sections\": [\n    {\n      \"h2\": \"\",\n      \"goal\": \"\",\n      \"summary\": \"\",\n      \"word_count\": \"\",\n      \"keywords\": [],\n      \"entities\": [\n        { \"name\": \"\", \"priority\": 1 }\n      ],\n      \"copywriter_notes\": \"\",\n      \"visual_elements\": [],\n      \"key_takeaways\": []\n    }\n  ],\n  \"tables\": {\n    \"required\": false,\n    \"decision_reason\": \"\",\n    \"table_ideas\": []\n  },\n  \"entity_connections\": [],\n  \"faq\": [\n    {\n      \"question\": \"\",\n      \"answer_goal\": \"\"\n    }\n  ],\n  \"cta\": \"\",\n  \"qa\": {\n    \"verdict\": \"approved | approved_with_warnings | reject\",\n    \"summary\": \"\",\n    \"issues\": []\n  },\n  \"missing_data\": [],\n  \"internal_risks\": []\n}`\n  },\n  text: {\n    temperature: 0.35,\n    prompt: `Режим: text.\n\nНапиши готовый SEO-текст строго по переданному outline/ТЗ.\n\nТребования:\n- сохраняй структуру H1/H2/H3 из ТЗ;\n- раскрывай каждый section;\n- используй entities естественно, без переспама;\n- если outline.tables.required = true — вставь таблицу/таблицы в content_markdown;\n- если данных нет — не выдумывай, добавляй missing_data;\n- стиль: коммерческий SEO, ясно, без воды, без SEO-помойки;\n- запрещены неподтверждённые гарантии, сроки, рост продаж, рост заявок, 100%, быстро, сразу.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"text\",\n  \"h1\": \"\",\n  \"content_markdown\": \"\",\n  \"used_sections\": [],\n  \"tables_used\": false,\n  \"entities_used\": [],\n  \"qa\": {\n    \"verdict\": \"approved | approved_with_warnings | reject\",\n    \"summary\": \"\",\n    \"issues\": []\n  },\n  \"missing_data\": []\n}`\n  },\n  seoqa: {\n    temperature: 0.05,\n    prompt: `Режим: seoqa.\n\nПроверь текст только по переданному ТЗ/outline и исходному брифу.\n\nПроверяй:\n- соответствие структуре ТЗ;\n- полноту раскрытия sections;\n- таблицы, если outline.tables.required = true;\n- entities и приоритетные сущности;\n- естественность ключей;\n- отсутствие воды, переспама и неподтверждённых обещаний.\n\nНЕ проверяй и НЕ требуй то, чего нет в ТЗ/брифе.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"seoqa\",\n  \"verdict\": \"approved | approved_with_warnings | reject\",\n  \"score\": 0,\n  \"summary\": \"\",\n  \"sections_coverage\": [],\n  \"tables_check\": \"\",\n  \"entities_check\": \"\",\n  \"problems\": [],\n  \"fixes\": [],\n  \"unsupported_requirements_ignored\": [],\n  \"missing_data\": []\n}`\n  },\n  factcheck: {\n    temperature: 0.02,\n    prompt: `Режим: factcheck.\n\nПроверь только факты, обещания и рискованные формулировки.\n\nЖёстко отсекать:\n- гарантии;\n- сроки;\n- рост продаж;\n- рост заявок;\n- поток клиентов;\n- быстро / сразу / уже сегодня;\n- 100%;\n- стабильный результат;\n- лидерство;\n- опыт, кейсы, сертификаты, если не подтверждены входом.\n\nНе оценивай SEO, структуру и коммерческую силу.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"factcheck\",\n  \"verdict\": \"approved | approved_with_warnings | reject\",\n  \"summary\": \"\",\n  \"risky_claims\": [],\n  \"unsupported_claims\": [],\n  \"recommended_removals\": [],\n  \"missing_data\": []\n}`\n  }\n};\n\nconst mode = MODE_PROMPTS[route.mode] ? route.mode : 'outline';\nconst modeConfig = MODE_PROMPTS[mode];\n\nconst systemPrompt = `Ты — senior SEO Content Agent для production-процесса SEO-команды i-SEO.\n\nОбщие правила:\n- Пиши по-русски.\n- Верни только валидный JSON без markdown и без пояснений вне JSON.\n- Не выдумывай факты, цены, сроки, гарантии, опыт, кейсы, сертификаты, рост продаж, рост заявок, лидерство на рынке.\n- Используй только данные из входного брифа, ТЗ, outline и сохранённой memory.\n- Если данных не хватает — добавляй missing_data.\n- Коммерческий SEO-стиль: конкретно, полезно, без воды.\n- CTA только нейтральный: обсудить задачу, получить консультацию, запросить аудит.\n- Если есть риск неподтверждённого утверждения — смягчи или вынеси в missing_data/internal_risks.`;\n\nconst userPayload = {\n  task_id: route.task_id,\n  mode,\n  flags: route.flags || {},\n  strict: !!route.strict,\n  tables_policy: route.tables_policy || 'auto',\n  task_input: route.task_input || '',\n  task_raw: route.task_raw || '',\n  memory_found: !!route.memory_found,\n  from_task_id: route.from_task_id || ''\n};\n\nreturn [{\n  json: {\n    ...route,\n    mode,\n    openrouter_payload: {\n      model: route.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: `${modeConfig.prompt}\\n\\nВходные данные JSON:\\n${JSON.stringify(userPayload, null, 2)}` }\n      ],\n      temperature: modeConfig.temperature,\n      response_format: { type: 'json_object' }\n    }\n  }\n}];"
+      },
+      "id": "8ec98e37-8ad2-4bd0-bcbc-1b10fbddd2aa",
+      "name": "Build Single Payload v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12336,
+        24000
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const route = $json;\n\nconst tablesPolicy = route.tables_policy || 'auto';\n\nconst systemPrompt = `Ты — senior SEO-специалист и SEO-архитектор контента.\n\nЗадача: создать SEO-ТЗ / outline для копирайтера уровня middle+/senior.\n\nЖёсткие правила:\n- Только данные из брифа.\n- Не выдумывать факты, цены, сроки, гарантии, опыт, кейсы, сертификаты.\n- Не обещать рост продаж, рост заявок, рост позиций, рост трафика, рост конверсии.\n- Не использовать формулировки: \"повысит\", \"увеличит\", \"обеспечит\", \"гарантирует\", \"даст результат\", \"приведёт клиентов\", \"максимальный эффект\", \"быстро\", \"сразу\", \"уже сегодня\".\n- CTA только нейтральный: \"обсудить задачу\", \"запросить аудит\", \"получить консультацию\".\n- Если данных нет — missing_data.\n- Коммерческий SEO-стиль, без воды.\n\nДаже в outline запрещены причинно-следственные обещания:\n- влияет\n- помогает\n- улучшает\n- повышает\n- увеличивает\n- способствует\n- обеспечивает\n- приводит\n- даёт результат\n- эффективность\n- видимость\n- доверие\n- конверсия\n\nЗаменять на нейтральные формулировки:\n- проверяется в рамках аудита\n- используется для оценки\n- учитывается при анализе\n- даёт основу для рекомендаций\n- относится к проверяемым параметрам\n\nВерни только валидный JSON без markdown.`;\n\nconst userPrompt = `Создай SEO-ТЗ строго по входному брифу.\n\nПараметр tables_policy:\n- yes / да / true → tables.required = true\n- no / нет / false → tables.required = false\n- auto / по необходимости / empty → модель решает сама\n\nТекущий tables_policy: ${tablesPolicy}\n\nТребования к entities:\n- НЕ использовать общие слова вроде \"SEO\", \"сайт\", \"бизнес\", \"поисковые системы\" как основные сущности.\n- Использовать конкретные сущности: технический аудит, индексация, метатеги, структура URL, robots.txt, sitemap.xml, скорость загрузки, дубли страниц, внутренняя перелинковка, семантическое ядро, контент-анализ, коммерческие факторы.\n- На каждый блок: 5–10 entities.\n- priority от 1 до 10, где 10 — самая важная сущность.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"outline\",\n  \"h1\": \"\",\n  \"title_options\": [],\n  \"meta_description\": \"\",\n  \"sections\": [\n    {\n      \"h2\": \"\",\n      \"goal\": \"\",\n      \"summary\": \"\",\n      \"word_count\": \"\",\n      \"keywords\": [],\n      \"entities\": [\n        { \"name\": \"\", \"priority\": 10 }\n      ],\n      \"copywriter_notes\": \"\",\n      \"visual_elements\": [],\n      \"key_takeaways\": []\n    }\n  ],\n  \"tables\": {\n    \"required\": false,\n    \"decision_reason\": \"\",\n    \"table_ideas\": []\n  },\n  \"entity_connections\": [],\n  \"faq\": [\n    {\n      \"question\": \"\",\n      \"answer_goal\": \"\"\n    }\n  ],\n  \"cta\": \"\",\n  \"missing_data\": [],\n  \"internal_risks\": []\n}\n\nВход:\n${JSON.stringify({\n  task_id: route.task_id,\n  flags: route.flags || {},\n  strict: !!route.strict,\n  tables_policy: tablesPolicy,\n  input: route.task_input\n}, null, 2)}`;\n\nreturn [{\n  json: {\n    ...route,\n    openrouter_payload: {\n      model: route.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: userPrompt }\n      ],\n      temperature: 0.2,\n      response_format: { type: 'json_object' }\n    }\n  }\n}];"
+      },
+      "id": "a535fd02-cdeb-4bdf-aa52-c20b3458e396",
+      "name": "Build Outline Payload v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11536,
+        24512
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst systemPrompt = `Ты — коммерческий SEO-копирайтер уровня middle+/senior.\n\nЗадача: написать полноценный SEO-текст строго по outline с учётом SEO Strategy v10.\n\nГлавное:\n- Текст ОБЯЗАТЕЛЬНО должен быть написан.\n- Нельзя возвращать пустой текст, \"-\", заглушку или отказ.\n- Если данных мало — пиши нейтрально по имеющимся данным и добавь missing_data.\n\nЖёсткие правила:\n- Не добавлять факты, которых нет в outline, SEO Strategy или исходном брифе.\n- Не добавлять гарантии, сроки, кейсы, опыт, сертификаты, цены.\n- Не обещать рост продаж, рост заявок, рост позиций, рост трафика, рост конверсии.\n- Не использовать маркетинговые обещания результата.\n\nВ strict=true избегай слов:\n- влияет / влияют / влияние\n- помогает / помогают\n- улучшает / улучшают\n- повышает / повышают\n- увеличивает / увеличивают\n- способствует / способствуют\n- обеспечивает / обеспечивают\n- приводит / приводят\n- эффективность\n- видимость\n- доверие\n- конверсия\n\nНейтральные замены:\n- проверяется в рамках аудита\n- используется для оценки\n- учитывается при анализе\n- относится к проверяемым параметрам\n- фиксируется в итоговом отчёте\n- может быть отражено в рекомендациях\n\nКак использовать SEO Strategy:\n- учитывать page_intent, serp_pattern и content_angle;\n- раскрывать priority_blocks;\n- использовать snippet_opportunities через списки, таблицы, FAQ;\n- table_strategy использовать только если она не противоречит outline;\n- risk_notes использовать как ограничения.\n\nCTA:\n- только нейтральный: \"обсудить задачу\", \"запросить аудит\", \"получить консультацию\".\n\nЕсли outline.tables.required=true:\n- таблицы ОБЯЗАТЕЛЬНО должны быть внутри content_markdown.\n- tables_used=true.\n\nВерни только валидный JSON без markdown вне JSON.`;\n\nconst userPrompt = `Напиши готовый SEO-текст по outline и SEO Strategy v10.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"text\",\n  \"h1\": \"\",\n  \"content_markdown\": \"\",\n  \"used_sections\": [],\n  \"tables_used\": false,\n  \"entities_used\": [],\n  \"qa\": {\n    \"verdict\": \"approved | approved_with_warnings | reject\",\n    \"summary\": \"\",\n    \"issues\": []\n  },\n  \"missing_data\": []\n}\n\nВход:\n${JSON.stringify({\n  task_id: input.task_id,\n  strict: !!input.strict,\n  tables_required: input.outline?.tables?.required === true,\n  original_brief: input.task_input,\n  outline: input.outline,\n  seo_strategy: input.seo_strategy || {}\n}, null, 2)}`;\n\nreturn [{\n  json: {\n    ...input,\n    openrouter_payload: {\n      model: input.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: userPrompt }\n      ],\n      temperature: 0.35,\n      response_format: { type: 'json_object' }\n    }\n  }\n}];"
+      },
+      "id": "a7398e4f-07a7-4bc1-81bd-6f3f826d0567",
+      "name": "Build Text Payload v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13104,
+        24656
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst systemPrompt = `Ты — строгий SEO QA редактор production-уровня.\n\nПроверяй только соответствие текста исходному брифу, outline и SEO Strategy.\nНе придумывай требования, которых нет во входных данных.\n\nПроверяй:\n- соответствие структуре outline;\n- покрытие всех обязательных sections;\n- наличие FAQ, если FAQ есть в outline;\n- таблицы, если outline.tables.required=true;\n- соответствие таблиц table_ideas и table_strategy;\n- покрытие entities;\n- естественность ключевых слов;\n- структуру Markdown;\n- отсутствие воды и переспама;\n- неподтверждённые обещания;\n- forbidden_claim_markers.\n\nНЕ проверяй:\n- то, чего не было в брифе, outline или SEO Strategy;\n- коммерческую силу вне заданной стратегии;\n- фактологию глубже, чем требуется для SEO QA — это делает factcheck.\n\nForbidden claim markers:\n- влияет\n- влияют\n- влияние\n- влияющий\n- влияющая\n- влияющие\n- влияющих\n- помогает\n- помогают\n- улучшает\n- повышает\n- увеличивает\n- способствует\n- обеспечивает\n- приводит\n- привлекает\n- рост\n- эффективность\n- видимость\n- доверие\n- конверсия\n\nЕсли strict=true и такие слова есть в generated_text.content_markdown:\n- verdict НЕ может быть approved;\n- минимум approved_with_warnings;\n- обязательно добавь проблему в problems;\n- обязательно добавь исправление в fixes.\n\nЕсли outline.tables.required=true, но в тексте нет markdown-таблиц:\n- verdict НЕ может быть approved;\n- минимум approved_with_warnings.\n\nЕсли FAQ есть в outline, но в тексте нет FAQ:\n- score должен быть ниже 95;\n- добавь проблему и fix.\n\nВерни только валидный JSON без markdown.`;\n\nconst userPrompt = `Проверь SEO-текст по outline.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"seoqa\",\n  \"verdict\": \"approved | approved_with_warnings | reject\",\n  \"score\": 0,\n  \"summary\": \"\",\n  \"sections_coverage\": [],\n  \"tables_check\": \"\",\n  \"entities_check\": \"\",\n  \"problems\": [],\n  \"fixes\": [],\n  \"unsupported_requirements_ignored\": [],\n  \"missing_data\": []\n}\n\nВход:\n${JSON.stringify({\n  task_id: input.task_id,\n  strict: !!input.strict,\n  flags: input.flags || {},\n  tables_policy: input.tables_policy || 'auto',\n  original_brief: input.task_input,\n  outline: input.outline || {},\n  seo_strategy: input.seo_strategy || {},\n  content_score: input.content_score || {},\n  generated_text: input.generated_text || {}\n}, null, 2)}`;\n\nreturn [{\n  json: {\n    ...input,\n    openrouter_payload: {\n      model: input.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: userPrompt }\n      ],\n      temperature: 0.03,\n      response_format: { type: 'json_object' }\n    }\n  }\n}];"
+      },
+      "id": "2dcf1ec6-d4bc-4374-acd4-49efe5447dec",
+      "name": "Build SEOQA Payload v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12800,
+        24880
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst systemPrompt = `Ты — строгий фактчекер SEO-текстов в режиме SAFE CLAIMS.\n\nПроверяй только:\n- факты;\n- обещания;\n- причинно-следственные утверждения;\n- рискованные маркетинговые формулировки.\n\nНе оценивай:\n- SEO;\n- структуру;\n- таблицы;\n- коммерческую силу;\n- стиль, кроме рискованных обещаний.\n\nВ режиме strict=true:\n- любые причинно-следственные утверждения считать рискованными, если они не подтверждены входным брифом;\n- если утверждение звучит как результат или эффект — verdict не может быть approved;\n- минимум approved_with_warnings.\n\nЖёстко отсекать:\n- гарантии, кроме нейтральной фразы \"без гарантий\";\n- сроки;\n- рост продаж;\n- рост заявок;\n- рост позиций;\n- рост трафика;\n- рост конверсии;\n- поток клиентов;\n- быстро / сразу / уже сегодня;\n- 100%;\n- стабильный результат;\n- максимальный эффект;\n- лидерство;\n- опыт, кейсы, сертификаты, если не подтверждены входом.\n\nРискованные маркеры:\n- влияет\n- влияют\n- влияние\n- помогает\n- помогают\n- улучшает\n- повышает\n- увеличивает\n- способствует\n- обеспечивает\n- приводит\n- привлекает\n- эффективность\n- видимость\n- доверие\n- конверсия\n\nСчитать рискованными даже мягкие формулировки:\n- \"влияет на индексацию\";\n- \"влияет на пользовательский опыт\";\n- \"помогает выявить\";\n- \"помогает оценить\";\n- \"позволяет улучшить\";\n- \"даёт результат\";\n- \"повышает доверие\";\n- \"увеличивает видимость\";\n- \"способствует росту\".\n\nРазрешённые нейтральные формулировки:\n- \"проверяется\";\n- \"фиксируется\";\n- \"учитывается при анализе\";\n- \"относится к проверяемым параметрам\";\n- \"может быть отражено в отчёте\";\n- \"используется как проверяемый параметр\".\n\nЕсли формулировка спорная:\n- добавь её в risky_claims;\n- предложи нейтральную замену в recommended_removals.\n\nЕсли strict=true и найден хотя бы один рискованный маркер:\n- verdict = approved_with_warnings или reject.\n\nВерни только валидный JSON без markdown.`;\n\nconst userPrompt = `Проверь факты и обещания.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"factcheck\",\n  \"verdict\": \"approved | approved_with_warnings | reject\",\n  \"summary\": \"\",\n  \"risky_claims\": [],\n  \"unsupported_claims\": [],\n  \"recommended_removals\": [],\n  \"missing_data\": []\n}\n\nВход:\n${JSON.stringify({\n  task_id: input.task_id,\n  strict: !!input.strict,\n  original_brief: input.task_input,\n  outline: input.outline,\n  seo_strategy: input.seo_strategy || {},\n  content_score: input.content_score || {},\n  generated_text: input.generated_text,\n  seoqa: input.seoqa\n}, null, 2)}`;\n\nreturn [{\n  json: {\n    ...input,\n    openrouter_payload: {\n      model: input.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: userPrompt }\n      ],\n      temperature: 0,\n      response_format: { type: 'json_object' }\n    }\n  }\n}];"
+      },
+      "id": "550f9dae-3e06-4ad0-81e7-7e9a0cff4a70",
+      "name": "Build Factcheck Payload v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11712,
+        25264
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst strict = !!input.strict;\nconst content = String(input.generated_text?.content_markdown || '').toLowerCase();\n\nconst factcheck = input.factcheck || {\n  mode: 'factcheck',\n  verdict: 'approved',\n  summary: '',\n  risky_claims: [],\n  unsupported_claims: [],\n  recommended_removals: [],\n  missing_data: []\n};\n\nconst checks = [\n  { label: 'влияет', re: /(^|[^\\p{L}])влияет([^\\p{L}]|$)/u },\n  { label: 'влияют', re: /(^|[^\\p{L}])влияют([^\\p{L}]|$)/u },\n  { label: 'влияние', re: /(^|[^\\p{L}])влияние([^\\p{L}]|$)/u },\n  { label: 'помогает', re: /(^|[^\\p{L}])помогает([^\\p{L}]|$)/u },\n  { label: 'помогают', re: /(^|[^\\p{L}])помогают([^\\p{L}]|$)/u },\n  { label: 'улучшает', re: /(^|[^\\p{L}])улучшает([^\\p{L}]|$)/u },\n  { label: 'повышает', re: /(^|[^\\p{L}])повышает([^\\p{L}]|$)/u },\n  { label: 'увеличивает', re: /(^|[^\\p{L}])увеличивает([^\\p{L}]|$)/u },\n  { label: 'способствует', re: /(^|[^\\p{L}])способствует([^\\p{L}]|$)/u },\n  { label: 'обеспечивает', re: /(^|[^\\p{L}])обеспечивает([^\\p{L}]|$)/u },\n  { label: 'приводит', re: /(^|[^\\p{L}])приводит([^\\p{L}]|$)/u },\n  { label: 'рост продаж', re: /рост\\s+продаж/u },\n  { label: 'рост заявок', re: /рост\\s+заявок/u },\n  { label: 'рост позиций', re: /рост\\s+позиц/u },\n  { label: 'рост трафика', re: /рост\\s+трафик/u },\n  { label: 'рост конверсии', re: /рост\\s+конверс/u }\n];\n\nconst found = strict\n  ? checks.filter(item => item.re.test(content)).map(item => item.label)\n  : [];\n\nconst uniqueFound = [...new Set(found)];\n\nif (strict && uniqueFound.length) {\n  factcheck.verdict = 'approved_with_warnings';\n\n  factcheck.summary = [\n    factcheck.summary || '',\n    `Postcheck: в strict-режиме найдены потенциально обещающие или причинно-следственные формулировки: ${uniqueFound.join(', ')}.`\n  ].filter(Boolean).join('\\n');\n\n  factcheck.risky_claims = [\n    ...(Array.isArray(factcheck.risky_claims) ? factcheck.risky_claims : []),\n    ...uniqueFound.map(word => `Найден маркер рискованной формулировки: \"${word}\"`)\n  ];\n\n  factcheck.recommended_removals = [\n    ...(Array.isArray(factcheck.recommended_removals) ? factcheck.recommended_removals : []),\n    'Заменить причинно-следственные обещания на нейтральные формулировки: \"проверяется\", \"фиксируется\", \"учитывается при анализе\", \"относится к проверяемым параметрам\".'\n  ];\n}\n\nif (typeof factcheck.verdict === 'string') {\n  factcheck.verdict = factcheck.verdict.replace(/-/g, '_');\n}\n\nreturn [{\n  json: {\n    ...input,\n    factcheck\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12384,
+        25264
+      ],
+      "id": "b397125c-6bb1-4a3f-86d8-86ab3ac9b4fb",
+      "name": "Postcheck Strict Claims v"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst systemPrompt = `Ты — senior SEO strategist для production SEO-контента.\n\nЗадача: подготовить стратегический слой для текста на основе outline и брифа.\n\nПравила:\n- Не выдумывать факты, цены, сроки, гарантии, кейсы, опыт.\n- Не обещать рост позиций, трафика, продаж, заявок, доверия, видимости, эффективности и конверсии.\n- Если данных нет — добавлять missing_data.\n- Стратегия должна помогать писать текст лучше, но не добавлять новые факты.\n- Верни только валидный JSON без markdown.`;\n\nconst userPrompt = `Создай SEO Strategy v10.\n\nОбязательная JSON-схема:\n{\n  \"mode\": \"seo_strategy\",\n  \"page_intent\": \"commercial | informational | transactional | mixed\",\n  \"serp_pattern\": \"\",\n  \"content_angle\": \"\",\n  \"target_audience_focus\": \"\",\n  \"priority_blocks\": [],\n  \"snippet_opportunities\": [],\n  \"table_strategy\": {\n    \"required\": false,\n    \"recommended_tables\": []\n  },\n  \"faq_strategy\": [],\n  \"entity_focus\": [],\n  \"cta_strategy\": \"\",\n  \"risk_notes\": [],\n  \"missing_data\": []\n}\n\nВход:\n${JSON.stringify({\n  task_id: input.task_id,\n  strict: !!input.strict,\n  tables_policy: input.tables_policy || 'auto',\n  original_brief: input.task_input,\n  outline: input.outline\n}, null, 2)}`;\n\nreturn [{\n  json: {\n    ...input,\n    openrouter_payload: {\n      model: input.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: userPrompt }\n      ],\n      temperature: 0.15,\n      response_format: { type: 'json_object' }\n    }\n  }\n}];"
+      },
+      "id": "ffbdbb1a-a5b5-42fe-9fb4-0b5acff85d7c",
+      "name": "Build SEO Strategy Payload v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12432,
+        24656
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "dcaf570e-6b19-49cf-a0db-087b3e5b5a75",
+      "name": "Run SEO Strategy v",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        12656,
+        24656
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const prev = $node['Run Extract Outline'].json;\n\nfunction extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '{}';\n}\n\nfunction parseJsonLoose(value) {\n  if (typeof value !== 'string') return value || {};\n  let text = value.trim();\n  text = text.replace(/^```json\\s*/i, '').replace(/^```\\s*/i, '').replace(/```$/i, '').trim();\n  return JSON.parse(text);\n}\n\nlet seo_strategy;\n\ntry {\n  seo_strategy = parseJsonLoose(extractContent($json));\n} catch (e) {\n  seo_strategy = {\n    mode: 'seo_strategy',\n    page_intent: 'commercial',\n    serp_pattern: 'service_page',\n    content_angle: 'neutral expert explanation of service scope',\n    target_audience_focus: '',\n    priority_blocks: [],\n    snippet_opportunities: [],\n    table_strategy: {\n      required: prev.outline?.tables?.required === true,\n      recommended_tables: []\n    },\n    faq_strategy: [],\n    entity_focus: [],\n    cta_strategy: 'neutral consultation / discuss task',\n    risk_notes: ['SEO strategy parse failed'],\n    missing_data: []\n  };\n}\n\nreturn [{\n  json: {\n    ...prev,\n    seo_strategy\n  }\n}];"
+      },
+      "id": "b44b2850-ce3b-4389-8b37-c251505069df",
+      "name": "Extract SEO Strategy v",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12880,
+        24656
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst outline = input.outline || {};\nconst generated = input.generated_text || {};\nconst text = String(generated.content_markdown || '');\nconst lower = text.toLowerCase();\n\nfunction count(pattern) {\n  const m = text.match(pattern);\n  return m ? m.length : 0;\n}\n\nconst sections = Array.isArray(outline.sections) ? outline.sections : [];\nconst requiredTables = outline.tables?.required === true;\n\nconst h2Count = count(/^##\\s+/gm);\nconst tableRows = count(/^\\|.*\\|$/gm);\nconst hasTable = tableRows >= 3 || generated.tables_used === true;\n\nconst hasFaq = /(^|\\n)##\\s*(faq|часто задаваемые вопросы)/i.test(text) || /что входит|как проверяется|что такое/i.test(text);\nconst hasCta = /обсудить задачу|запросить аудит|получить консультацию|связаться|обсудить особенности/i.test(text);\n\nconst outlineEntities = [];\n\nfor (const section of sections) {\n  const entities = Array.isArray(section.entities) ? section.entities : [];\n  for (const entity of entities) {\n    if (typeof entity === 'string') {\n      outlineEntities.push(entity);\n    } else if (entity?.name) {\n      outlineEntities.push(entity.name);\n    }\n  }\n}\n\nconst uniqueEntities = [...new Set(outlineEntities.map(e => String(e).trim()).filter(Boolean))];\n\nconst usedEntities = uniqueEntities.filter(entity => {\n  return lower.includes(String(entity).toLowerCase());\n});\n\nconst riskChecks = [\n  { label: 'влияет', re: /(^|[^\\p{L}])влияет([^\\p{L}]|$)/u },\n  { label: 'влияют', re: /(^|[^\\p{L}])влияют([^\\p{L}]|$)/u },\n  { label: 'помогает', re: /(^|[^\\p{L}])помогает([^\\p{L}]|$)/u },\n  { label: 'помогают', re: /(^|[^\\p{L}])помогают([^\\p{L}]|$)/u },\n  { label: 'улучшает', re: /(^|[^\\p{L}])улучшает([^\\p{L}]|$)/u },\n  { label: 'повышает', re: /(^|[^\\p{L}])повышает([^\\p{L}]|$)/u },\n  { label: 'увеличивает', re: /(^|[^\\p{L}])увеличивает([^\\p{L}]|$)/u },\n  { label: 'обеспечивает', re: /(^|[^\\p{L}])обеспечивает([^\\p{L}]|$)/u },\n  { label: 'рост продаж', re: /рост\\s+продаж/u },\n  { label: 'рост заявок', re: /рост\\s+заявок/u },\n  { label: 'рост позиций', re: /рост\\s+позиц/u },\n  { label: 'рост трафика', re: /рост\\s+трафик/u },\n  { label: 'рост конверсии', re: /рост\\s+конверс/u }\n];\n\nconst riskMarkers = riskChecks\n  .filter(item => item.re.test(lower))\n  .map(item => item.label);\n\nconst issues = [];\nconst warnings = [];\n\nif (!text.trim() || text.trim() === '-') {\n  issues.push('Текст пустой или похож на заглушку.');\n}\n\nif (sections.length && h2Count < Math.min(sections.length, 2)) {\n  issues.push('Недостаточно H2-разделов относительно outline.');\n}\n\nif (requiredTables && !hasTable) {\n  issues.push('В outline tables.required=true, но таблицы не найдены.');\n}\n\nif (!hasFaq) {\n  warnings.push('FAQ не найден или выражен слабо.');\n}\n\nif (!hasCta) {\n  warnings.push('CTA не найден.');\n}\n\nif (uniqueEntities.length && usedEntities.length < Math.ceil(uniqueEntities.length * 0.6)) {\n  warnings.push('Покрытие сущностей ниже 60%.');\n}\n\nif (riskMarkers.length) {\n  warnings.push(`Найдены риск-маркеры: ${[...new Set(riskMarkers)].join(', ')}.`);\n}\n\nlet score = 100;\n\nscore -= issues.length * 20;\nscore -= warnings.length * 7;\n\nif (sections.length && h2Count >= Math.min(sections.length, 3)) score += 5;\nif (requiredTables && hasTable) score += 5;\nif (uniqueEntities.length && usedEntities.length >= Math.ceil(uniqueEntities.length * 0.75)) score += 5;\n\nscore = Math.max(0, Math.min(100, score));\n\nif (warnings.length && score > 89) {\n  score = 89;\n}\n\nif (issues.length && score > 69) {\n  score = 69;\n}\n\nreturn [{\n  json: {\n    ...input,\n    content_score: {\n      score,\n      verdict: score >= 85 ? 'good' : score >= 70 ? 'warning' : 'bad',\n      metrics: {\n        h2_count: h2Count,\n        table_rows: tableRows,\n        has_table: hasTable,\n        required_tables: requiredTables,\n        has_faq: hasFaq,\n        has_cta: hasCta,\n        entities_total: uniqueEntities.length,\n        entities_used: usedEntities.length,\n        risk_markers: [...new Set(riskMarkers)]\n      },\n      issues,\n      warnings\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13904,
+        24656
+      ],
+      "id": "f34a4dd1-822c-441c-bca8-f3185622cbec",
+      "name": "Compute Content Score"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nlet text = String(input.generated_text?.content_markdown || '');\n\nconst replacements = [\n  [/влияет/gi, 'учитывается при анализе'],\n  [/влияют/gi, 'учитываются при анализе'],\n  [/влияние/gi, 'учёт'],\n  [/влияющий/gi, 'учитываемый'],\n  [/влияющая/gi, 'учитываемая'],\n  [/влияющие/gi, 'учитываемые'],\n  [/влияющих/gi, 'учитываемых'],\n\n  [/помогает/gi, 'используется при анализе'],\n  [/помогают/gi, 'используются при анализе'],\n  [/улучшает/gi, 'рассматривается при анализе'],\n  [/повышает/gi, 'учитывается как параметр'],\n  [/увеличивает/gi, 'фиксируется как изменение'],\n  [/способствует/gi, 'относится к проверяемым параметрам'],\n  [/способствуют/gi, 'относятся к проверяемым параметрам'],\n  [/обеспечивает/gi, 'фиксируется как параметр'],\n  [/обеспечивают/gi, 'фиксируются как параметры'],\n\n  [/рост/gi, 'изменение показателей'],\n  [/эффективность/gi, 'оценка'],\n  [/конверсия/gi, 'показатели'],\n  [/доверие/gi, 'коммерческие элементы'],\n  [/оптимизация/gi, 'анализ и доработка'],\n  [/оптимизации/gi, 'анализа и доработки'],\n\n  [/используется понять/gi, 'используется для структурирования'],\n  [/используется оценить/gi, 'используется для оценки'],\n  [/используется при анализе оценить/gi, 'используется для оценки'],\n  [/используется для оценки оценить/gi, 'используется для оценки'],\n  [/используется при анализе систематизировать/gi, 'используется для систематизации'],\n  [/используется для оценки систематизировать/gi, 'используется для систематизации'],\n\n  [/missing-data/gi, '—']\n];\n\nfor (const [regex, replacement] of replacements) {\n  text = text.replace(regex, replacement);\n}\n\nreturn [{\n  json: {\n    ...input,\n    generated_text: {\n      ...input.generated_text,\n      content_markdown: text\n    },\n    auto_fix: {\n      applied: true,\n      version: 'v10-risk-cleaner-extended'\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13696,
+        24272
+      ],
+      "id": "83295a93-8823-4960-821f-e772b8c5438a",
+      "name": "Auto Fix Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst text = String(input.generated_text?.content_markdown || '');\n\nconst systemPrompt = `Ты — строгий редактор SEO-текстов.\n\nЗадача:\n— исправить ломаную грамматику после автозамен;\n— улучшить читаемость;\n— сохранить структуру Markdown;\n— сохранить смысл 1:1;\n— НЕ добавлять новые факты;\n— НЕ добавлять новые разделы;\n— НЕ менять таблицы по смыслу;\n— НЕ усиливать маркетинг;\n— НЕ добавлять обещания.\n\nСтрого запрещены слова:\n- влияет\n- влияют\n- влияние\n- влияющий\n- влияющая\n- влияющие\n- влияющих\n- помогает\n- помогают\n- улучшает\n- повышает\n- увеличивает\n- способствует\n- обеспечивает\n- приводит\n- рост продаж\n- рост заявок\n- рост позиций\n- рост трафика\n- рост конверсии\n\nОбязательные правки:\n— \"используется при анализе поисковым системам ориентироваться\" → \"используется при анализе структуры сайта\";\n— \"используется при анализе оценить\" → \"используется для оценки\";\n— \"используется при анализе понять\" → \"используется для анализа\";\n— \"используется для оценки оценить\" → \"используется для оценки\";\n— \"для оценки оценить\" → \"для оценки\";\n— \"для анализа анализировать\" → \"для анализа\";\n— \"проверка проверить\" → \"проверка\";\n— \"оценка оценить\" → \"оценка\";\n— \"анализ анализировать\" → \"анализ\";\n— \"используется для оценки систематизировать\" → \"используется для систематизации\";\n— \"используется при анализе систематизировать\" → \"используется для систематизации\";\n— \"Формат отчёта используется понять текущее состояние сайта\" → \"Формат отчёта используется для структурирования информации о текущем состоянии сайта\";\n— если конструкция грамматически невозможна, перепиши предложение полностью, сохраняя смысл.\n\nНе выхолащивай коммерческий смысл текста.\nСохраняй понятные формулировки для владельца сайта:\n— что проверяется;\n— что фиксируется в отчёте;\n— какие параметры видит клиент;\n— какие материалы можно передать разработчику или SEO-специалисту.\n\nВерни только исправленный Markdown-текст без комментариев.`;\n\nconst userPrompt = `Отредактируй текст:\n\n${text}`;\n\nreturn [{\n  json: {\n    ...input,\n    openrouter_payload: {\n      model: input.model || 'openai/gpt-4.1-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: userPrompt }\n      ],\n      temperature: 0.12\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13872,
+        24272
+      ],
+      "id": "19e343f0-6c84-4d5c-88c3-bb143d26e6fe",
+      "name": "Auto Polish Text"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{OPENROUTER_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.openrouter_payload) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "fcfc7542-9493-4715-be47-a61216657cfa",
+      "name": "Run Auto Polish Text",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        13568,
+        24480
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function extractContent(input) {\n  if (input.choices?.[0]?.message?.content) return input.choices[0].message.content;\n  if (input.body?.choices?.[0]?.message?.content) return input.body.choices[0].message.content;\n  return '';\n}\n\nfunction cleanupText(text) {\n  let out = String(text || '').trim();\n\n  out = out\n    .replace(/используется при анализе поисковым системам ориентироваться/gi, 'используется при анализе структуры сайта')\n    .replace(/используется при анализе оценить/gi, 'используется для оценки')\n    .replace(/используется при анализе понять/gi, 'используется для анализа')\n    .replace(/используется для оценки оценить/gi, 'используется для оценки')\n    .replace(/для оценки оценить/gi, 'для оценки')\n    .replace(/для анализа анализировать/gi, 'для анализа')\n    .replace(/проверка проверить/gi, 'проверка')\n    .replace(/оценка оценить/gi, 'оценка')\n    .replace(/анализ анализировать/gi, 'анализ')\n    .replace(/соответствует ожиданиям/gi, 'фиксируется в отчёте')\n    .replace(/важный элемент/gi, 'проверяемый элемент')\n    .replace(/важный параметр/gi, 'проверяемый параметр')\n    .replace(/для улучшения/gi, 'для дальнейшей работы')\n    .replace(/для повышения/gi, 'для дальнейшей работы');\n\n  return out;\n}\n\nconst prev = $node['Auto Polish Text'].json;\nconst originalText = String(prev.generated_text?.content_markdown || '').trim();\n\nlet polishedText = cleanupText(extractContent($json));\n\nif (!polishedText || polishedText.length < 50) {\n  polishedText = cleanupText(originalText);\n}\n\nreturn [{\n  json: {\n    ...prev,\n    generated_text: {\n      ...prev.generated_text,\n      content_markdown: polishedText\n    },\n    auto_polish: {\n      applied: true,\n      version: 'v10-openrouter-polish-extract'\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13792,
+        24464
+      ],
+      "id": "3d7c9db5-277d-41b0-9066-11840c54d38f",
+      "name": "Extract Auto Polish Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst generated = input.generated_text || {};\nlet text = String(generated.content_markdown || '').trim();\n\nconst outline = input.outline || {};\nconst faq = Array.isArray(outline.faq) ? outline.faq : [];\n\nconst hasFaq =\n  /(^|\\n)##\\s*(FAQ|Часто задаваемые вопросы)/i.test(text) ||\n  /(^|\\n)###\\s*(FAQ|Часто задаваемые вопросы)/i.test(text);\n\nfunction normalizeQuestion(item) {\n  if (typeof item === 'string') return item;\n  if (item && typeof item.question === 'string') return item.question;\n  return '';\n}\n\nfunction buildAnswer(question) {\n  const q = question.toLowerCase();\n\n  if (q.includes('техничес')) {\n    return 'В технический аудит входит проверка robots.txt, sitemap.xml, скорости загрузки, дублей страниц, структуры URL и параметров индексации.';\n  }\n\n  if (q.includes('метатег') || q.includes('url') || q.includes('структур')) {\n    return 'В рамках анализа проверяются title, description, h1 и структура URL. Результаты фиксируются в итоговом отчёте без обещаний результата.';\n  }\n\n  if (q.includes('коммерчес') || q.includes('контент') || q.includes('перелинков')) {\n    return 'При анализе учитываются семантическое ядро, структура контента, внутренняя перелинковка и коммерческие элементы страницы.';\n  }\n\n  if (q.includes('robots') || q.includes('sitemap')) {\n    return 'robots.txt и sitemap.xml проверяются как технические файлы, связанные с доступностью страниц для поисковых систем и структурой сайта.';\n  }\n\n  return 'Вопрос рассматривается в рамках SEO-аудита с фиксацией проверяемых параметров в итоговом отчёте.';\n}\n\nif (!hasFaq && faq.length) {\n  const faqText = faq\n    .map(normalizeQuestion)\n    .filter(Boolean)\n    .slice(0, 5)\n    .map(question => `${question}\\n\\n${buildAnswer(question)}`)\n    .join('\\n\\n');\n\n  if (faqText) {\n    text += `\\n\\n---\\n\\n## FAQ\\n\\n${faqText}`;\n  }\n}\n\nreturn [{\n  json: {\n    ...input,\n    generated_text: {\n      ...generated,\n      content_markdown: text\n    },\n    ensure_faq: {\n      applied: !hasFaq && faq.length > 0,\n      version: 'v10-faq-enforcer'\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13984,
+        24464
+      ],
+      "id": "20389d73-eb09-401a-9687-e177bcfd1e1a",
+      "name": "Ensure FAQ Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst generated = input.generated_text || {};\nlet text = String(generated.content_markdown || '').trim();\n\nconst isStrict = !!input.strict;\n\nfunction hasSection(title) {\n  const re = new RegExp(`(^|\\\\n)##\\\\s+${title}`, 'i');\n  return re.test(text);\n}\n\nfunction insertAfterH1(source, block) {\n  const lines = source.split('\\n');\n  const h1Index = lines.findIndex(line => /^#\\s+/.test(line.trim()));\n\n  if (h1Index === -1) {\n    return `${block}\\n\\n${source}`;\n  }\n\n  lines.splice(h1Index + 1, 0, '', block);\n  return lines.join('\\n');\n}\n\nfunction replaceFinalCta(source) {\n  const safeCta = `---\\n\\n## Обсудить SEO-аудит сайта\\n\\nОставьте заявку, чтобы обсудить задачу по сайту. Мы уточним вводные данные, состав проверки и формат отчёта.\\n\\nВ аудит можно включить техническую проверку, анализ индексации, структуры URL, метатегов, контента и коммерческих факторов.`;\n\n  const weakCtaPatterns = [\n    /Если вы хотите получить подробный отч[её]т[\\s\\S]*$/i,\n    /Если вы заинтересованы[\\s\\S]*$/i,\n    /Если требуется[\\s\\S]*$/i,\n    /Если у вас есть вопросы[\\s\\S]*$/i\n  ];\n\n  for (const pattern of weakCtaPatterns) {\n    if (pattern.test(source)) {\n      return source.replace(pattern, safeCta);\n    }\n  }\n\n  return `${source}\\n\\n${safeCta}`;\n}\n\nconst clientBlock = `## Что вы получаете после SEO-аудита\n\nПосле проверки формируется понятный список найденных проблем и параметров, которые требуют внимания.\n\nВ отчёт можно включить:\n\n— технические ошибки сайта;\n— проблемы индексации;\n— замечания по robots.txt и sitemap.xml;\n— анализ структуры URL;\n— проверку метатегов;\n— замечания по контенту;\n— анализ внутренней перелинковки;\n— рекомендации для SEO-специалиста или разработчика.\n\nФормат отчёта помогает понять текущее состояние сайта и подготовить план дальнейшей работы без обещаний сроков, позиций, трафика или заявок.`;\n\nif (!hasSection('Что вы получаете после SEO-аудита')) {\n  text = insertAfterH1(text, clientBlock);\n}\n\ntext = replaceFinalCta(text);\n\nconst replacements = [\n  {\n    from: /SEO-аудит сайта представляет собой комплексную проверку, направленную на оценку технического состояния и контентных аспектов ресурса\\./gi,\n    to: 'SEO-аудит сайта — это комплексная проверка технических, индексных, структурных и контентных параметров ресурса.'\n  },\n  {\n    from: /Основная задача аудита — выявить параметры, которые подлежат проверке и анализу для дальнейшего формирования рекомендаций\\./gi,\n    to: 'Задача аудита — зафиксировать проблемы, спорные зоны и параметры, которые нужно разобрать перед дальнейшей работой с сайтом.'\n  },\n  {\n    from: /Эти параметры используются для оценки и анализа сайта в рамках аудита\\./gi,\n    to: 'Эти параметры фиксируются в отчёте и помогают структурировать дальнейшие задачи по сайту.'\n  },\n  {\n    from: /Результаты SEO-аудита предоставляют основу для формирования рекомендаций по оптимизации сайта\\./gi,\n    to: 'Результаты SEO-аудита используются для подготовки списка рекомендаций и приоритетов дальнейшей работы.'\n  },\n  {\n    from: /Такой подход используется для оценки систематизировать информацию и определить направления для последующего анализа и работы с сайтом\\./gi,\n    to: 'Такой подход помогает систематизировать информацию и выделить направления для дальнейшего анализа сайта.'\n  },\n  {\n    from: /используется для оценки оценить/gi,\n    to: 'используется для оценки'\n  },\n  {\n    from: /используется при анализе систематизировать/gi,\n    to: 'используется для систематизации'\n  },\n  {\n    from: /используется для оценки систематизировать/gi,\n    to: 'используется для систематизации'\n  }\n];\n\nfor (const rule of replacements) {\n  text = text.replace(rule.from, rule.to);\n}\n\nif (isStrict) {\n  text = text\n    .replace(/влияет/gi, 'учитывается при анализе')\n    .replace(/влияют/gi, 'учитываются при анализе')\n    .replace(/помогает/gi, 'используется')\n    .replace(/помогают/gi, 'используются')\n    .replace(/способствует/gi, 'относится к проверяемым параметрам')\n    .replace(/способствуют/gi, 'относятся к проверяемым параметрам')\n    .replace(/повышает/gi, 'учитывается как параметр')\n    .replace(/улучшает/gi, 'рассматривается при анализе')\n    .replace(/увеличивает/gi, 'фиксируется как изменение')\n    .replace(/обеспечивает/gi, 'фиксируется как параметр');\n}\n\nreturn [{\n  json: {\n    ...input,\n    generated_text: {\n      ...generated,\n      content_markdown: text\n    },\n    commercial_layer: {\n      applied: true,\n      version: 'v10-safe-commercial-layer'\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13520,
+        24656
+      ],
+      "id": "2f4498fd-63f1-4179-b317-9428178694ca",
+      "name": "Commercial Layer Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json;\n\nconst generated = input.generated_text || {};\nlet text = String(generated.content_markdown || '').trim();\n\nconst replacements = [\n  [\n    /Формат отч[её]та используется понять текущее состояние сайта и подготовить план дальнейшей работы без обещаний сроков, позиций, трафика или заявок\\./gi,\n    'Формат отчёта используется для фиксации текущего состояния сайта и подготовки списка дальнейших задач без обещаний сроков, позиций, трафика или заявок.'\n  ],\n  [\n    /используется понять/gi,\n    'используется для анализа'\n  ],\n  [\n    /используется оценить/gi,\n    'используется для оценки'\n  ],\n  [\n    /используется при анализе оценить/gi,\n    'используется для оценки'\n  ],\n  [\n    /используется для оценки оценить/gi,\n    'используется для оценки'\n  ],\n  [\n    /позволяет получить системное представление/gi,\n    'даёт структурированное описание'\n  ],\n  [\n    /позволяет получить полное представление/gi,\n    'даёт структурированное описание'\n  ],\n  [\n    /является важной частью/gi,\n    'относится к основным частям'\n  ],\n  [\n    /важной частью/gi,\n    'основной частью'\n  ],\n  [\n    /важную роль/gi,\n    'относится к проверяемым параметрам'\n  ],\n  [\n    /играют важную роль/gi,\n    'относятся к проверяемым параметрам'\n  ],\n  [\n    /качества и релевантности/gi,\n    'качества и соответствия тематике'\n  ],\n  [\n    /для оценки релевантности/gi,\n    'для анализа соответствия тематике'\n  ],\n  [\n    /используется для оценки качества/gi,\n    'используется для анализа качества'\n  ],\n  [\n    /Контент-анализ используется для оценки качества и соответствия содержимого сайта его тематике и целям\\./gi,\n    'Контент-анализ используется для проверки качества и соответствия содержимого сайта его тематике и целям.'\n  ]\n];\n\nfor (const [from, to] of replacements) {\n  text = text.replace(from, to);\n}\n\nreturn [{\n  json: {\n    ...input,\n    generated_text: {\n      ...generated,\n      content_markdown: text\n    },\n    final_text_cleanup: {\n      applied: true,\n      version: 'v10-final-cleanup'\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13728,
+        24656
+      ],
+      "id": "24368f20-87a7-40cb-b4a1-b554fdd1f2bf",
+      "name": "Final Text Cleanup"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Format Run Pipeline": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Run",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Prepare Memory Row Run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Extract Outline": {
+      "main": [
+        [
+          {
+            "node": "Switch Run After Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Extract Text": {
+      "main": [
+        [
+          {
+            "node": "Auto Fix Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Extract SEO QA": {
+      "main": [
+        [
+          {
+            "node": "Switch Run Factcheck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Factcheck": {
+      "main": [
+        [
+          {
+            "node": "Run Extract Factcheck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Route": {
+      "main": [
+        [
+          {
+            "node": "Format Local Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build Single Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build Outline Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Lookup Memory Get",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Lookup Memory Reuse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Memory Get Row1": {
+      "main": [
+        [
+          {
+            "node": "Format Memory Get",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Memory Reuse Row1": {
+      "main": [
+        [
+          {
+            "node": "Prepare Memory Reuse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Local Response": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Local",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Prepare Memory Row Local",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Single Mode": {
+      "main": [
+        [
+          {
+            "node": "Format Single Mode Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Single Mode Message": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Single",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Prepare Memory Row Single",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Outline": {
+      "main": [
+        [
+          {
+            "node": "Run Extract Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Text": {
+      "main": [
+        [
+          {
+            "node": "Run Extract Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run SEO QA": {
+      "main": [
+        [
+          {
+            "node": "Run Extract SEO QA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Memory Row Local": {
+      "main": [
+        [
+          {
+            "node": "Append Memory Local",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Memory Row Single": {
+      "main": [
+        [
+          {
+            "node": "Append Memory Single",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Memory Row Run": {
+      "main": [
+        [
+          {
+            "node": "Append Memory Run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Raw Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Raw Input": {
+      "main": [
+        [
+          {
+            "node": "Route Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Command": {
+      "main": [
+        [
+          {
+            "node": "Switch Route",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Run After Outline": {
+      "main": [
+        [
+          {
+            "node": "Format Run Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build SEO Strategy Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Run After Text": {
+      "main": [
+        [
+          {
+            "node": "Format Run Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build SEOQA Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Run Factcheck": {
+      "main": [
+        [
+          {
+            "node": "Format Run Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build Factcheck Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Extract Factcheck": {
+      "main": [
+        [
+          {
+            "node": "Postcheck Strict Claims v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Memory Get": {
+      "main": [
+        [
+          {
+            "node": "Find Memory Get Row1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Memory Get": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Memory Get",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Memory Reuse": {
+      "main": [
+        [
+          {
+            "node": "Find Memory Reuse Row1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Memory Reuse": {
+      "main": [
+        [
+          {
+            "node": "Build Single Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Single Payload v": {
+      "main": [
+        [
+          {
+            "node": "OpenRouter Single Mode",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Outline Payload v": {
+      "main": [
+        [
+          {
+            "node": "Run Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Text Payload v": {
+      "main": [
+        [
+          {
+            "node": "Run Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build SEOQA Payload v": {
+      "main": [
+        [
+          {
+            "node": "Run SEO QA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Factcheck Payload v": {
+      "main": [
+        [
+          {
+            "node": "Run Factcheck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postcheck Strict Claims v": {
+      "main": [
+        [
+          {
+            "node": "Format Run Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build SEO Strategy Payload v": {
+      "main": [
+        [
+          {
+            "node": "Run SEO Strategy v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run SEO Strategy v": {
+      "main": [
+        [
+          {
+            "node": "Extract SEO Strategy v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract SEO Strategy v": {
+      "main": [
+        [
+          {
+            "node": "Build Text Payload v",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compute Content Score": {
+      "main": [
+        [
+          {
+            "node": "Switch Run After Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto Fix Text": {
+      "main": [
+        [
+          {
+            "node": "Auto Polish Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto Polish Text": {
+      "main": [
+        [
+          {
+            "node": "Run Auto Polish Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Auto Polish Text": {
+      "main": [
+        [
+          {
+            "node": "Extract Auto Polish Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Auto Polish Text": {
+      "main": [
+        [
+          {
+            "node": "Ensure FAQ Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ensure FAQ Text": {
+      "main": [
+        [
+          {
+            "node": "Commercial Layer Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Commercial Layer Text": {
+      "main": [
+        [
+          {
+            "node": "Final Text Cleanup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final Text Cleanup": {
+      "main": [
+        [
+          {
+            "node": "Compute Content Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "fd45d20b-4984-4998-9cd9-e042c7c18165",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "338c44ae516e4e0056c7ecc3277fc130c003243a1558caec17abe328f240ba66"
+  },
+  "id": "AR6QxGt8ZKH0xG2T",
+  "tags": [
+    {
+      "updatedAt": "2026-05-04T12:33:42.598Z",
+      "createdAt": "2026-05-04T12:33:42.598Z",
+      "id": "HjnGBeNXbAsrnAdC",
+      "name": "i-SEO"
+    },
+    {
+      "updatedAt": "2026-04-25T16:02:32.402Z",
+      "createdAt": "2026-04-25T16:02:32.402Z",
+      "id": "k50c1IixdJeXE3tp",
+      "name": "MetaBOT"
+    }
+  ]
+}

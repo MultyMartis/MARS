@@ -1,62 +1,23 @@
-# SEO Content Agent
+# SEO Content Agent — legacy folder
 
-**Status (fact):** This folder contains **documentation and roadmap only**. No runnable agent, n8n workflows, or production integrations are implemented here yet.
+**This folder is legacy.** The canonical MARS documentation pack for **MetaBOT — SEO Content Agent** is:
 
----
-
-## Purpose (plan)
-
-The **SEO Content Agent** is an internal assistant for **SEO specialists**. It is designed to run on **n8n**, expose a **Telegram** chat interface, and call models through **OpenRouter** to support the content lifecycle: briefs and outlines, article drafting from approved outlines, fact checking, SEO quality review, and (later) freshness analysis.
-
-**Fact:** The integration stack (Telegram bot, n8n instance, OpenRouter account, storage) is **not** defined in this repository beyond high-level intent. **SAFE UNKNOWN:** hosting, instance IDs, and operational runbooks.
+**[`projects/metabot-seo-content-agent/`](../metabot-seo-content-agent/)**
 
 ---
 
-## Target users
+## How to use this directory
 
-- **Internal SEO specialists** (in-house team members using the bot for daily work).
-
----
-
-## Main components (planned)
-
-| Layer | Role |
-|-------|------|
-| **Telegram** | Primary user interface (commands and message payloads). |
-| **n8n** | Automation engine; workflow orchestration (**not** authored in this repo yet). |
-| **OpenRouter** | Model gateway; routing policy in [model-routing.md](model-routing.md). |
-| **Storage** | **Phase 1 (plan):** Google Sheets and/or local files. **Later (plan):** PostgreSQL. **SAFE UNKNOWN:** final choice until MVP is built. |
+- **Do not add new documentation here.** Extend the canonical pack under `projects/metabot-seo-content-agent/` instead.
+- **Existing files are retained temporarily** for compatibility and migration (specs, early `workflow.json`, prompts, etc.).
+- **Runtime and integration references** (contracts, sanitized exports, bridge snippets) should **gradually move** to the canonical MetaBOT docs and subfolders (`exports/`, `integrations/`, `integration-contract-legacy.md`, …) as governance agrees.
 
 ---
 
-## Documentation index
+## Registry
 
-| File | Contents |
-|------|----------|
-| [roadmap.md](roadmap.md) | Phased delivery plan. |
-| [architecture.md](architecture.md) | High-level system and modules. |
-| [workflows.md](workflows.md) | `/outline`, `/text`, `/factcheck`, `/seoqa`, `/freshness`. |
-| [runtime-mvp-outline.md](runtime-mvp-outline.md) | MVP-1 `/outline` execution spec (n8n + Telegram; **plan**). |
-| [prompts.md](prompts.md) | Draft system prompts for AI steps. |
-| [data-schema.md](data-schema.md) | JSON shapes for tasks and artefacts. |
-| [telegram-commands.md](telegram-commands.md) | Command reference and Russian examples. |
-| [model-routing.md](model-routing.md) | Model roles, temperatures, fallbacks. |
-| [qa-checklist.md](qa-checklist.md) | Human and automated QA gates. |
+`project_id` **`seo-content-agent`** remains listed in [`registry/project-registry.md`](../../registry/project-registry.md) as the **legacy** row; canonical active documentation is **`metabot-seo-content-agent`**.
 
 ---
 
-## Warnings
-
-1. **No runtime implementation** — Do not assume any workflow, credential, or deployment exists because of this documentation.
-2. **No secrets in-repo** — API keys, tokens, and client private data must never be committed here.
-3. **Honesty boundary** — Outlines and articles must not invent facts; see prompts and QA checklist for explicit rules.
-
-## Workflow exports hygiene
-
-- `workflow.json` is the sanitized n8n export for repository usage (no real secrets).
-- `raw/` stores local raw exports and is ignored by git.
-- All real secrets and credential material must be stored only in n8n credentials.
-
----
-
-*Project registry: `project_id` **seo-content-agent** in `registry/project-registry.md`. Last documentation pass: 2026-05-04.*
+*For the documentation index of files still in this folder, see the filenames in this directory or the canonical README’s legacy pointers.*

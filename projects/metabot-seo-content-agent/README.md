@@ -5,6 +5,24 @@
 
 ---
 
+## Canonical project folder
+
+This folder is the canonical MARS documentation folder for MetaBOT SEO Content Agent.
+
+**Legacy folder:** [`projects/seo-content-agent/`](../seo-content-agent/) — remains only for older bridge/spec artifacts until migration is complete. **Do not** treat it as the documentation source of truth.
+
+**Canonical contents:**
+
+- external multi-workflow architecture
+- Intake / Worker / Admin documentation
+- roadmap and known issues
+- sanitized exports (under [`exports/`](exports/))
+- integration contracts (e.g. [`integration-contract-legacy.md`](integration-contract-legacy.md), [`integration-boundary.md`](integration-boundary.md))
+- bridge mapping notes (under [`integrations/`](integrations/))
+- migrated legacy doc snapshots (under [`legacy/`](legacy/))
+
+---
+
 ## What this project is
 
 **MetaBOT — SEO Content Agent** is an **external** system that orchestrates **multiple n8n workflows**, a **Telegram** control surface, **OpenRouter**-backed models, and **Google Sheets** for durable operational data. It generates and refines SEO-oriented content under locks, QA layers, and explicit task lifecycle semantics.
@@ -29,8 +47,9 @@ MARS stores **sanitized** descriptions, maps, and contracts only. **Secrets, tok
 
 | File | Purpose |
 |------|---------|
+| [mega-map.md](mega-map.md) | **Главный runtime mega-map** v13 (workflows, routes, locks, memory, quality, risks, SoT paths) |
 | [system-overview.md](system-overview.md) | Capabilities, components, non-goals |
-| [workflow-map.md](workflow-map.md) | Intake / Worker / Admin (+ future export) |
+| [workflow-map.md](workflow-map.md) | Intake / Worker / Admin (+ future export), route types, single vs run |
 | [intake-workflow.md](intake-workflow.md) | Intake responsibilities (**SAFE UNKNOWN** at node level) |
 | [worker-workflow.md](worker-workflow.md) | Worker responsibilities (**SAFE UNKNOWN** at node level) |
 | [admin-workflow.md](admin-workflow.md) | Admin / ops workflow |
@@ -49,12 +68,17 @@ MARS stores **sanitized** descriptions, maps, and contracts only. **Secrets, tok
 | [seo-specialist-user-guide.md](seo-specialist-user-guide.md) | Guide for SEO operators |
 | [lessons-learned.md](lessons-learned.md) | Design and operations lessons |
 | [integration-boundary.md](integration-boundary.md) | MARS vs n8n vs credentials (**normative**) |
+| [integration-contract-legacy.md](integration-contract-legacy.md) | Legacy MARS ↔ webhook payload contract (copied from early spec pack) |
+| [exports/workflow-sanitized-legacy.json](exports/workflow-sanitized-legacy.json) | Sanitized n8n export snapshot (legacy single-workflow line; **not** full Intake/Worker/Admin set) |
+| [integrations/n8n-mars-bridge-map-code.txt](integrations/n8n-mars-bridge-map-code.txt) | Bridge / mapping snippet for n8n (no secrets) |
+| [legacy/data-schema-legacy.md](legacy/data-schema-legacy.md) | Legacy JSON shapes doc (snapshot) |
 
 ---
 
 ## Related in-repo material
 
-- Earlier **spec-oriented** pack: [`../seo-content-agent/`](../seo-content-agent/) — may overlap in naming; **MetaBOT** docs here describe the **external multi-workflow** system as operated today. Reconcile discrepancies against **live n8n**, not against this repo alone.
+- **Legacy documentation / bridge pack:** [`../seo-content-agent/`](../seo-content-agent/) — **do not add new docs there**; canonical narrative lives here. Reconcile execution truth with **live n8n**.
+- **Raw workflow dumps (local, gitignored):** `projects/metabot-seo-content-agent/raw/` — optional local exports; **must not** be committed. Sanitized repo copies belong under [`exports/`](exports/). See [mega-map.md](mega-map.md) §10.
 
 ---
 

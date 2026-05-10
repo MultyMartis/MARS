@@ -27,12 +27,12 @@ Optional narrative columns may be added **only** if governance documents them; d
 | project_id | status | phase | related_entities | last_updated |
 |------------|--------|-------|------------------|--------------|
 | *example:* `mars-core` | planned | Phase 1 | *(none yet)* | 2026-04-27 |
-| `seo-content-agent` | planned | documentation / planned MVP | *(none yet)* | 2026-05-04 |
-| `metabot-seo-content-agent` | active | external multi-workflow AI system (n8n runtime); in-repo docs only | *(none yet)* | 2026-05-10 |
+| `seo-content-agent` | planned | **legacy** — early spec / single-tool bridge artifacts under `projects/seo-content-agent/`; **canonical** docs: `metabot-seo-content-agent` | *(none yet)* | 2026-05-04 |
+| `metabot-seo-content-agent` | active | **canonical** documentation pack — external multi-workflow AI system (n8n runtime); Intake / Worker / Admin (+ future File Export); in-repo docs only | *(none yet)* | 2026-05-10 |
 
 *(Replace the example row or add rows as projects are formally registered.)*
 
-**Note:** `seo-content-agent` is an earlier **spec-oriented** pack under `projects/seo-content-agent/`. **`metabot-seo-content-agent`** documents **MetaBOT — SEO Content Agent** as operated (Intake / Worker / Admin); reconcile overlaps against **live n8n**, not only markdown.
+**Note:** **`metabot-seo-content-agent`** (`projects/metabot-seo-content-agent/`) is the **canonical** MARS folder for **MetaBOT — SEO Content Agent** documentation, sanitized exports (`exports/`), and integration contracts. **`seo-content-agent`** (`projects/seo-content-agent/`) is **legacy** (early spec / bridge); **do not** add new docs there. Reconcile execution detail against **live n8n**, not only markdown.
 
 ---
 

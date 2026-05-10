@@ -34,7 +34,7 @@ This directory is the **main local working copy** of the MARS project: design no
 |------|------|
 | `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map** |
 | `registry/` | **Project registry** and other registry-style anchors (`project-registry.md`) |
-| `projects/` | **Project documentation packs** — e.g. `projects/seo-content-agent/` (spec-oriented), `projects/metabot-seo-content-agent/` (**MetaBOT** — **external multi-workflow AI system**, n8n runtime; not a simple tool adapter) |
+| `projects/` | **Project documentation packs** — e.g. `projects/metabot-seo-content-agent/` (**canonical** — **MetaBOT** SEO Content Agent, **external multi-workflow AI system**, n8n runtime; not a simple tool adapter); `projects/seo-content-agent/` (**legacy** — early spec / bridge; do not extend) |
 | `logs/` | **Lifecycle log** (documented lifecycle events, append-only discipline) |
 | `control-plane/` | Control plane contract and components (documentation) |
 | `agents/` | Agent registry, cards, factory/builder documentation |
@@ -52,4 +52,4 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ---
 
-*Last updated: 2026-05-10 (`projects/` includes `projects/metabot-seo-content-agent/` for MetaBOT SEO Content Agent — external multi-workflow system, docs only; Stages 0–8.5 documentation complete; Stage 9 next per `governance/master-build-map.md`; no MARS core runtime implementation in-repo).*
+*Last updated: 2026-05-11 (`projects/metabot-seo-content-agent/` is the **canonical** MetaBOT SEO Content Agent doc pack; `projects/seo-content-agent/` is **legacy**; Stages 0–8.5 documentation complete; Stage 9 next per `governance/master-build-map.md`; no MARS core runtime implementation in-repo).*
