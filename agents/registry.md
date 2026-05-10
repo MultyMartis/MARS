@@ -104,3 +104,13 @@ v0: **read-only** relationship in design — the registry is **not** self-modify
 - Control Plane and Agent Registry v0 are **separate** documents: **Control Plane** owns orchestration; **this registry** owns *who* the agents *are* on paper.
 
 **Document set:** `README.md`, `registry.md` (this file), `agent-card-template.md`.
+
+---
+
+## 8. Strategic project packs (cross-reference)
+
+| Pack | Relevance to registry |
+|------|------------------------|
+| [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | **Planned** factory agent roster; **Gulp Frontend Agent** and **Validator Agent** rows in §4 remain authoritative for catalog status — factory expands **documentation** only until cards and runtime evidence land. |
+
+**Honesty:** The Website Factory is **not** a single agent and **not** runtime-ready; see [../projects/mars-website-factory/safe-unknown-boundary.md](../projects/mars-website-factory/safe-unknown-boundary.md).

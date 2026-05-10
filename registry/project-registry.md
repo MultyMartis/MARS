@@ -29,6 +29,7 @@ Optional narrative columns may be added **only** if governance documents them; d
 | *example:* `mars-core` | planned | Phase 1 | *(none yet)* | 2026-04-27 |
 | `seo-content-agent` | planned | **legacy** — early spec / single-tool bridge artifacts under `projects/seo-content-agent/`; **canonical** docs: `metabot-seo-content-agent` | *(none yet)* | 2026-05-04 |
 | `metabot-seo-content-agent` | active | **canonical** documentation pack — external multi-workflow AI system (n8n runtime); Intake / Worker / Admin (+ future File Export); in-repo docs only | *(none yet)* | 2026-05-10 |
+| `mars-website-factory` | planned | **strategic** — documentation-first multi-agent **website production** direction (contracts, registries, workflows, QA, HITL); **not** runtime-ready; see `../projects/mars-website-factory/README.md` | Gulp Frontend Agent, Validator Agent (catalog only; see `../agents/registry.md`) | 2026-05-11 |
 
 *(Replace the example row or add rows as projects are formally registered.)*
 

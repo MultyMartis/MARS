@@ -1,0 +1,89 @@
+# MARS Website Factory — layer map
+
+**Status:** **planned** — design vocabulary for the factory. Layers are **not** separate deployed services unless future implementation proves otherwise.
+
+For each layer: **purpose**, **planned agents**, **expected artifacts**, **QA gates**, **SAFE UNKNOWN risks**.
+
+---
+
+## 1. Intake / Discovery
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | Capture client goals, constraints, brand inputs, compliance boundaries, and success metrics; normalize into factory-ready **scope** for downstream tasks. |
+| **Planned agents** | **Project Intake Agent**; **Site Type Classifier Agent** (may be one logical step or split). |
+| **Expected artifacts** | Intake brief, constraint list, stakeholder map, raw asset inventory (links), **SAFE UNKNOWN** flags where facts are missing. |
+| **QA gates** | Completeness check vs **Task** / workflow template; **Validator Agent** or human checklist on PII/secrets in pasted content; **NEED HUMAN APPROVAL** for ambiguous legal/compliance scope. |
+| **SAFE UNKNOWN risks** | Incomplete intake leading to fabricated strategy; unclear **site type** → wrong registry defaults. |
+
+---
+
+## 2. Strategic Layer
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | Positioning, messaging hierarchy, funnel assumptions, channel hints; feeds IA and page priorities. |
+| **Planned agents** | **Marketing Strategy Agent**; **SEO Strategy Agent** (parallel or sequential with explicit handoff contract). |
+| **Expected artifacts** | Strategy memo, keyword / topic hypotheses, competitive framing (evidence-cited or explicitly bounded **SAFE UNKNOWN**). |
+| **QA gates** | **Validator Agent**: claims without sources → **SAFE UNKNOWN**; brand alignment review; optional human sign-off before IA. |
+| **SAFE UNKNOWN risks** | SEO “facts” invented; strategy drift vs intake. |
+
+---
+
+## 3. Page Architecture Layer
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | Site map, templates, URL logic, content requirements per page, internal linking rules. |
+| **Planned agents** | **Information Architecture Agent**; **Page Blueprint Agent**. |
+| **Expected artifacts** | Sitemap (structured), page blueprint set (one per page), content block requirements, navigation model. |
+| **QA gates** | Consistency vs strategy; orphan pages; duplicate intent; **Validator** structural checks vs **Block Registry** (when it exists). |
+| **SAFE UNKNOWN risks** | Blueprints that assume CMS features not in static stack; scale of pages unbounded. |
+
+---
+
+## 4. Design Layer
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | UX structure, wireframes, visual design direction, design-system alignment. |
+| **Planned agents** | **UX Structure Agent**; **Wireframe Generator Agent**; **AI Designer Agent**; **Full Design Generator Agent** (may collapse to fewer cards in implementation). |
+| **Expected artifacts** | Wireframes, design specs / tokens reference, component-level notes, export manifests (format **TBD** — **SAFE UNKNOWN** for Figma vs markdown-only). |
+| **QA gates** | **Design QA Agent**; human approval before frontend handoff; accessibility heuristic pass (**planned**). |
+| **SAFE UNKNOWN risks** | Design artifacts not translatable to static sections; brand token drift. |
+
+---
+
+## 5. Production Layer
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | Implement approved design as **HTML / SCSS / JS** in a **Gulp-oriented** static pipeline (target profile per legacy docs); reusable sections; no manual `dist` edits. |
+| **Planned agents** | **Gulp Frontend Agent** (see `agents/registry.md` — **legacy-bridge** catalog entry). |
+| **Expected artifacts** | Source files under agreed tree, build output per policy, implementation report, diff summary. |
+| **QA gates** | **Frontend QA Agent**; build succeeds; **Validator** on secrets / unsafe patterns; responsive smoke criteria. |
+| **SAFE UNKNOWN risks** | Repo has **no** evidenced Gulp starter here — implementation environment is **external** to this doc pack; merge conflicts; global JS pollution. |
+
+---
+
+## 6. QA / Validation Layer
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | Cross-cutting quality: technical, design fidelity, SEO on-page, conversion heuristics; consolidation before release. |
+| **Planned agents** | **Frontend QA Agent**, **Design QA Agent**, **SEO QA Agent**, **Conversion QA Agent**; **Validator Agent** as **integration** for policy and task-contract alignment (`agents/registry.md`). |
+| **Expected artifacts** | QA report, issue list with severities, **signals** (`UNKNOWN`, **SAFE UNKNOWN**, **NEED HUMAN APPROVAL**, **STRUCTURE CHANGE**) per `workflows/execution-flow.md`. |
+| **QA gates** | Release blocked on open **P0**; human approval for public deploy. |
+| **SAFE UNKNOWN risks** | Automated QA depth **not** proven in MARS; overlap between Validator and specialist QA roles unless scoped in contracts. |
+
+---
+
+## 7. Supervisory Layer
+
+| Aspect | Content |
+|--------|---------|
+| **Purpose** | Orchestration semantics: bind **Tasks**, enforce **HITL**, route stages, merge state — aligns with **Control Plane** design (`control-plane/contract.md`) **when** a runtime exists; until then, **human** supervision. |
+| **Planned agents** | No separate “supervisor bot” required in v0 docs — **Control Plane** + human operator; optional **Documentation Agent** for pack maintenance. |
+| **Expected artifacts** | Run records (**planned**), lifecycle log entries, approved stage transitions. |
+| **QA gates** | **hitl_gates** on **Task** (`workflows/task-contract-v0.md`); escalation on **SECURITY RISK**. |
+| **SAFE UNKNOWN risks** | Assuming autonomous orchestration without runtime; unclear ownership between human PM and Control Plane. |

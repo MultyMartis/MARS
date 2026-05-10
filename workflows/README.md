@@ -24,3 +24,4 @@ MARS **Workflow layer**: how **tasks** move through the system — pipelines, gr
 ## See also
 
 - `../mars-runtime/architecture-map.md` — repository vs layers.
+- `../projects/mars-website-factory/workflow-map.md` — **strategic planned** Website Factory pipeline (intake → delivery), HITL, alignment with **execution-flow** (**not** a runnable workflow engine).
