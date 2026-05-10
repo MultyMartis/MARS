@@ -30,6 +30,7 @@ The **Capability Map** lists what MARS is **designed** to do (at the system leve
 | C12 | **Memory write governance** | **Memory Write Policy** v0 — who may write what, when; pairs with guardrails/permissions (Stage 8.5 P0; **documentation** only). | `../memory/memory-write-policy-v0.md`; [master-build-map.md](master-build-map.md) Stage 8.5; [dependency-map.md](dependency-map.md) `memory_write_policy` |
 | C13 | **Checkpoint / resume** | **Checkpoint / Resume Protocol** v0 over state and workflow boundaries; pairs with **Failure Handling Model** v0 (Stage 8.5 P0; **documentation** only). | `../storage/checkpoint-resume-protocol-v0.md`, `../workflows/failure-model-v0.md`; [master-build-map.md](master-build-map.md) Stage 8.5; [dependency-map.md](dependency-map.md) `checkpoint_resume_protocol`, `failure_model` |
 | C14 | **Threat review** | **Threat Model** v0 — MARS-native extension before Tool-layer documentation; feeds [risk-register.md](risk-register.md) (Stage 8.5 P0; **documentation** only). | `../security/threat-model-v0.md`; [master-build-map.md](master-build-map.md) Stage 8.5; [dependency-map.md](dependency-map.md) `threat_model` |
+| C15 | **External multi-workflow knowledge** | In-repo documentation for **external** orchestrated AI products (e.g. **MetaBOT — SEO Content Agent**: n8n + Telegram + OpenRouter + Sheets) so MARS remains an **orchestration knowledge layer** without owning that runtime. **Not** “single tool” or in-repo adapter unless evidenced. | [../projects/metabot-seo-content-agent/README.md](../projects/metabot-seo-content-agent/README.md), [../projects/metabot-seo-content-agent/integration-boundary.md](../projects/metabot-seo-content-agent/integration-boundary.md); [registry/project-registry.md](../registry/project-registry.md) `metabot-seo-content-agent` |
 
 **Implementation honesty:** A row in this table is **not** a claim of runnable code, services, or deployed agents.
 
@@ -48,6 +49,7 @@ Use this as a **logical** matrix for traceability. **Agents** and **tools** are 
 | C5 Policy & quality | **Validator** (e.g. legacy FlyCheck successor), security-oriented checks | `validate` stage, signals at all stages | Guardrail/tool policy (future) |
 | C6–C8 Cross-cutting | Varies by layer | Roadmap and migration **docs** | External systems per **System Boundaries** (see `system-boundaries.md`) |
 | C9–C14 Runtime readiness | **Validator** / **security**-oriented roles where gated; orchestration for dispatch | **Stage 8.5** P0 **documented** before **Stage 9** in [master-build-map.md](master-build-map.md); workflow **validate** / **log** | Stage 8.5 P0 contracts **documented** (`execution-bridge-v0`, `runtime-state-store-v0`, `failure-model-v0`, `checkpoint-resume-protocol-v0`, `memory-write-policy-v0`, `threat-model-v0`, `recovery-playbooks-v0`); runnable engines and Tool-layer catalogs remain **planned** / **SAFE UNKNOWN** per `../AGENTS.md` |
+| C15 External multi-workflow knowledge | *(no single MARS agent role)* — catalogued as **project** / **integration knowledge** | Pilot / Stage 16 project docs; cross-ref **integrations** posture when bridging | **n8n** (external) owns graphs; MARS holds **sanitized** maps/contracts only — see MetaBOT pack |
 
 **Rules:**
 
@@ -79,3 +81,4 @@ Use this as a **logical** matrix for traceability. **Agents** and **tools** are 
 |---------|------|--------|
 | v0 | 2026-04-27 | Initial governance capability map. |
 | v0 | 2026-04-27 | **C9–C14** — Stage **8.5** **P0** **runtime** **readiness** **documented**: **Evidence** column links to `../mars-runtime/execution-bridge-v0.md`, `../storage/runtime-state-store-v0.md`, `../workflows/failure-model-v0.md`, `../storage/checkpoint-resume-protocol-v0.md`, `../memory/memory-write-policy-v0.md`, `../security/threat-model-v0.md`, `../interfaces/recovery-playbooks-v0.md` (plus governance cross-refs); §3 matrix — P0 **documented**, not **TBD**. |
+| v0 | 2026-05-10 | **C15** — **External multi-workflow knowledge**: MetaBOT — SEO Content Agent documentation pack (`projects/metabot-seo-content-agent/`); **not** a simple tool; **n8n** = execution runtime; MARS = knowledge layer; §3 matrix row added. |

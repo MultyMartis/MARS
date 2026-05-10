@@ -21,3 +21,4 @@
 
 - **Identity** policies tie into **Security** and **Control Plane**; no `identity/` folder in this initial layout.
 - **Knowledge / RAG** in the documentation is a cross-cutting concern: planned bindings typically involve **Model**, **Memory**, and **Storage**; see `web-gpt-sources/08_storage_rag.md` and related docs.
+- **`projects/`** (repository root) holds **project documentation packs** for systems **outside** MARS core runtime — e.g. [**MetaBOT — SEO Content Agent**](../projects/metabot-seo-content-agent/README.md): **external multi-workflow AI system** (n8n owns execution); MARS stores architecture/contracts/knowledge only — see [integration-boundary.md](../projects/metabot-seo-content-agent/integration-boundary.md).

@@ -28,8 +28,11 @@ Optional narrative columns may be added **only** if governance documents them; d
 |------------|--------|-------|------------------|--------------|
 | *example:* `mars-core` | planned | Phase 1 | *(none yet)* | 2026-04-27 |
 | `seo-content-agent` | planned | documentation / planned MVP | *(none yet)* | 2026-05-04 |
+| `metabot-seo-content-agent` | active | external multi-workflow AI system (n8n runtime); in-repo docs only | *(none yet)* | 2026-05-10 |
 
 *(Replace the example row or add rows as projects are formally registered.)*
+
+**Note:** `seo-content-agent` is an earlier **spec-oriented** pack under `projects/seo-content-agent/`. **`metabot-seo-content-agent`** documents **MetaBOT — SEO Content Agent** as operated (Intake / Worker / Admin); reconcile overlaps against **live n8n**, not only markdown.
 
 ---
 
