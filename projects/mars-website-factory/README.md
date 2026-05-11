@@ -37,7 +37,7 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 
 Authoritative project row: [`../../registry/project-registry.md`](../../registry/project-registry.md).
 
-**Agent identities (2026-05-11):** stable planned **`agent_id`** rows for Website Factory roles live in [`../../agents/registry.md`](../../agents/registry.md) §4.1 — **agent cards** are **future** work. **SoT** for per-role descriptions (factory lanes, behaviour) remains **[`agent-map.md`](agent-map.md)** until cards exist.
+**Agent identities (2026-05-11):** stable planned **`agent_id`** rows for Website Factory roles live in [`../../agents/registry.md`](../../agents/registry.md) §4.1 — **agent cards** are **future** work. **SoT** for per-role descriptions (factory lanes, behaviour) remains **[`agent-map.md`](agent-map.md)** until cards exist. Factory **`entity_id`** rows for governance traceability: [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 (`mars_website_factory`, `website_factory_*`, `website_factory_workflow_v0`).
 
 ## Related MARS artifacts (existing)
 

@@ -2,7 +2,7 @@
 
 **Status:** **planned** unless an existing MARS file proves a role is **implemented** or **active** with in-repo runtime evidence. Per `AGENTS.md`, this repository’s **Phase 1** agent definitions are **documentation-only**.
 
-**Registry SoT:** [`../../agents/registry.md`](../../agents/registry.md) — **§4.1** lists planned **`agent_id`** rows (**no** agent cards yet). **This file** remains the **SoT** for **what each factory role does** in prose until cards are authored.
+**Registry SoT:** [`../../agents/registry.md`](../../agents/registry.md) — **§4.1** lists planned **`agent_id`** rows (**no** agent cards yet). **This file** remains the **SoT** for **what each factory role does** in prose until cards are authored. **Dependency map:** factory pack **`entity_id`** s in [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 — **documentation-only**, not a runtime graph.
 
 ## Legend
 
