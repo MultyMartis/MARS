@@ -6,8 +6,8 @@
 
 | # | Deliverable | Description |
 |---|-------------|-------------|
-| 1 | **Site Type Registry v0** | Markdown or structured table in this pack (or `registry/` if governance prefers) — initial `site_type_id` rows |
-| 2 | **Block Registry v0** | Initial `block_id` set aligned with static HTML feasibility |
+| 1 | **Site Type Registry v0** | **Done (doc):** [site-type-registry-v0.md](site-type-registry-v0.md) — initial `site_type_id` rows and field glossary (Markdown in this pack). |
+| 2 | **Block Registry v0** | **Done (doc):** [block-registry-v0.md](block-registry-v0.md) — initial `block_id` set, compatibility matrix, field glossary (Markdown); aligned with static HTML feasibility. |
 | 3 | **Website Factory workflow v0** | One **Task** / workflow narrative binding factory stages to `workflows/task-contract-v0.md` fields (`required_agents`, `hitl_gates`) |
 | 4 | **Gulp Frontend Agent card** | Full card using `agents/agent-card-template.md` — I/O, validation, limitations |
 | 5 | **Page Blueprint contract** | Schema for page-level block list, meta requirements, internal links |

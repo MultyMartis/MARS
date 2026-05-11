@@ -4,7 +4,9 @@
 
 ## Purpose
 
-Reserved for the **DevOps / Runtime** concerns of MARS: process model, workers, schedulers, queues, deployment topology, environment wiring — as **planned** in the target architecture (see `web-gpt-sources/02_architecture.md`). This folder is the **structural** anchor for “where the running system would live” once implementation begins.
+Reserved for the **DevOps / Runtime** concerns of MARS: process model, workers, schedulers, queues, deployment topology, environment wiring — as **planned** in the target architecture (see `web-gpt-sources/02_architecture.md`). This folder is the **structural** anchor for “where the running system would live” at full maturity.
+
+**Today**, `mars-runtime/` holds **both** the **v0 architecture contracts** (Stage 8.5 / Stage 13-facing markdown) **and** **minimal experimental R1** JavaScript (narrow demos under `adapters/`, `runtime/`). That R1 code does **not** constitute a shipped production runtime; a complete queue/orchestrator-backed system remains **planned** (see **Contracts vs implementation** below).
 
 ## Relation to MARS architecture
 
@@ -12,8 +14,9 @@ Maps to the **DevOps / Runtime** layer: runtime processes, jobs, and operational
 
 ## Contracts vs implementation
 
-- **Documentation** **contracts:** this folder now contains the Stage 8.5 and Stage 13 runtime-facing contract set (see links below). These files are **normative documentation**, not runtime code.
-- **Runtime** **implementation:** **No** executable **runtime**, workers, deployment assets, queue/orchestrator services, or bridge **code** in this repository in **Phase 1** — per `AGENTS.md` and the master build map **planned-implementation** stance.
+- **Documentation contracts:** this folder contains the Stage 8.5 and Stage 13 runtime-facing contract set (see links below). These files are **normative documentation**, not executable product runtime.
+- **Minimal R1 experimental code:** the same folder also holds **narrow** JavaScript experiments (e.g. under `adapters/`, `runtime/`) that exercise a **task → bridge → adapter → webhook** path. R1 is **limited**: it does **not** implement a full queue, orchestrator, concurrency manager, memory subsystem, or model routing layer. **Do not** treat R1 as a **production** MARS runtime.
+- **Full runtime:** a complete multi-agent runtime, workers, deployment assets, and production-grade queue/orchestrator services remain **planned** / **out-of-scope** for what R1 proves — per `AGENTS.md` and the master build map **planned-implementation** stance for the **whole** system.
 
 ## Contract files in `mars-runtime/` (v0)
 
@@ -32,5 +35,5 @@ Maps to the **DevOps / Runtime** layer: runtime processes, jobs, and operational
 
 ## Status note
 
-- This folder is **documentation only** in Phase 1.
-- No runtime implementation is claimed by the presence of these contracts.
+- Phase 1 remains **documentation-first** for MARS as a product: contracts here are the **primary** in-tree artefacts; R1 scripts are **experimental** and **non-production**.
+- The v0 contracts do **not** by themselves claim a shipped runtime; the **minimal R1** code does **not** replace or complete the **planned** full runtime (see above).

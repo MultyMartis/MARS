@@ -1,6 +1,6 @@
 # MARS Website Factory — planned registries (knowledge modules)
 
-**Status:** **planned** — no machine-readable registry files are asserted in this repository for these modules unless added in a future phase.
+**Status:** **mixed** — **[Site Type Registry v0](site-type-registry-v0.md)** is **in-repo** as Markdown. Other modules below remain **planned** as first-class files until their v0 deliverables land. **No** machine-enforced registry service is asserted.
 
 Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns**, **relation to agents/workflows**.
 
@@ -8,11 +8,13 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 
 ## 1. Site Type Registry
 
+**Delivered (v0):** [site-type-registry-v0.md](site-type-registry-v0.md) — normalized rows and field glossary (documentation only).
+
 | Aspect | Content |
 |--------|---------|
-| **Purpose** | Classify projects (e.g. landing, corporate, catalog-light, lead-gen) to pick default blocks, SEO patterns, and QA checklists. |
-| **Fields (suggested)** | `site_type_id`, `description`, `default_sitemap_template`, `allowed_block_categories`, `typical_cta_patterns`, `risk_notes` |
-| **Examples** | `lead_gen_service` — hero + trust + offer + FAQ; `event_landing` — schedule + speakers + register |
+| **Purpose** | Classify projects (e.g. landing, corporate, catalog, ecommerce, geo/SEO programs) to pick default blocks, SEO patterns, and QA checklists. |
+| **Fields (suggested)** | See v0 glossary; includes `site_type_id`, goals, monetization, SEO/CTA/trust/UX models, block **roles**, forbidden patterns, QA focus, HITL. |
+| **Examples** | v0 lists `landing`, `service_landing`, `promo_site`, `corporate_site`, `catalog_site`, `ecommerce`, `geo_landing`, `seo_landing`, `ai_visibility_page`, `hybrid_commercial`. |
 | **Anti-patterns** | One-size-fits-all blocks for every site type; unversioned “magic” defaults |
 | **Relations** | **Site Type Classifier Agent** reads/writes proposals; **Page Blueprint Agent** consumes; **workflow-map** intake → strategy |
 
@@ -20,13 +22,15 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 
 ## 2. Block Registry
 
+**Delivered (v0):** [block-registry-v0.md](block-registry-v0.md) — normalized rows (commercial / SEO / trust / UX / QA / compatibility), field glossary, and **no** machine schema asserted.
+
 | Aspect | Content |
 |--------|---------|
-| **Purpose** | Canonical list of **content/section blocks** (semantic name, props, allowed variants) for blueprints and frontend implementation. |
-| **Fields (suggested)** | `block_id`, `display_name`, `schema` (props), `responsive_notes`, `a11y_requirements`, `scss_module_hint`, `js_behavior` (data-attr contract) |
-| **Examples** | `hero_primary`, `feature_grid_3`, `testimonial_carousel`, `pricing_table_simple` |
-| **Anti-patterns** | Ad-hoc block names per page without IDs; props that cannot map to static HTML |
-| **Relations** | **Page Blueprint Agent** outputs block instances; **Gulp Frontend Agent** implements; **Validator** checks against registry |
+| **Purpose** | Canonical list of **content/section blocks** (`block_id`) for blueprints and frontend planning: roles, constraints, and site-type **compatibility** (documentation only). |
+| **Fields (v0)** | See v0 glossary; includes `block_id`, `category`, commercial/SEO/UX fields, `CTA_presence`, `dependencies`, `anti_patterns`, complexity hints, `compatible_site_types` / `incompatible_site_types`. Future artefacts may add `display_name`, props schema, `js_behavior` — **not** fixed in v0. |
+| **Examples** | v0 lists `hero`, `trust_block`, `services_grid`, `faq`, `cases`, `reviews`, `pricing`, `process_steps`, `contact_cta`, `calculator`, `comparison`, `geo_trust`, `catalog_grid`, `sticky_cta`, `lead_form`, `final_cta`. |
+| **Anti-patterns** | Ad-hoc block names per page without IDs; blocks incompatible with declared **`site_type_id`** without HITL |
+| **Relations** | Consumes **`site_type_id`** from [Site Type Registry v0](site-type-registry-v0.md); **Page Blueprint** (planned) outputs instances; **Gulp Frontend Agent** (planned) implements; **Validator** (planned) checks against registry |
 
 ---
 

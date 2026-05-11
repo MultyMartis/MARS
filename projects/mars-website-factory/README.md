@@ -15,7 +15,9 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [system-overview.md](system-overview.md) | Vision, boundaries, relation to MARS core |
 | [layer-map.md](layer-map.md) | Seven target layers, agents, artifacts, gates, risks |
 | [agent-map.md](agent-map.md) | Planned agent roles (registry alignment) |
-| [registries.md](registries.md) | Planned knowledge modules |
+| [registries.md](registries.md) | Planned knowledge modules; **delivered v0:** [site-type-registry-v0.md](site-type-registry-v0.md), [block-registry-v0.md](block-registry-v0.md) |
+| [site-type-registry-v0.md](site-type-registry-v0.md) | **Site Type Registry v0** — classification layer for strategy, SEO, UX, blocks, frontend, QA |
+| [block-registry-v0.md](block-registry-v0.md) | **Block Registry v0** — section semantics, compatibility with site types, orchestration-facing fields (documentation only) |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
 | [frontend-production-model.md](frontend-production-model.md) | Gulp-oriented production model (legacy-aligned) |
