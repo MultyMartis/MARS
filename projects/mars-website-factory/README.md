@@ -22,6 +22,7 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [design-handoff-contract-v0.md](design-handoff-contract-v0.md) | **Design Handoff Contract v0** — blueprint → visual production requirements (design layer); no automated Figma claim |
 | [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) | **Frontend Handoff Contract v0** — blueprint/design → static frontend production requirements (Gulp-oriented) |
 | [page-blueprint-qa-checklist-v0.md](page-blueprint-qa-checklist-v0.md) | **Page Blueprint QA Checklist v0** — blueprint-level validation categories and escalation |
+| [website-factory-workflow-v0.md](website-factory-workflow-v0.md) | **Website Factory Workflow v0** — canonical orchestration stages, artifact flow, QA/HITL escalation (**documentation only**) |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
 | [frontend-production-model.md](frontend-production-model.md) | Gulp-oriented production model (legacy-aligned) |
@@ -45,4 +46,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — design + frontend handoff contracts v0; page blueprint contract + QA checklist v0; documentation only.*
+*Last updated: 2026-05-11 — Website Factory Workflow v0; design + frontend handoff contracts v0; page blueprint contract + QA checklist v0; documentation only.*

@@ -1,5 +1,7 @@
 # MARS Website Factory — workflow map
 
+**Canonical orchestration chain (stages, contracts, escalation):** [website-factory-workflow-v0.md](website-factory-workflow-v0.md) — **Website Factory Workflow v0** (**documentation only**). This file remains the **diagram / HITL / execution-flow alignment** companion.
+
 ## Target high-level flow
 
 ```text
