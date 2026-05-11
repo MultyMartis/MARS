@@ -6,7 +6,7 @@
 |-------|------|--------|
 | **0** | Registration and architecture | This pack, registry row, cross-links to MARS contracts |
 | **1** | Registries and contracts | Site Type / Block registries v0; handoff contracts |
-| **2** | Agent cards and workflow specs | Factory agent cards; detailed workflow binding to `task-contract-v0` |
+| **2** | Agent cards and workflow specs | **v0 agent cards** and **Website Factory Workflow v0** are **done (doc)**; **remaining:** deeper field-level binding to `task-contract-v0`, richer prompt/runbook artifacts |
 | **3** | Prompt standards and QA gates | Prompt templates, checklists, signal vocabulary |
 | **4** | Cursor-based assisted production | Operational runbooks: human executes via Cursor per `execution-model.md` |
 | **5** | Runtime-assisted execution | Execution Bridge consumers, durable state (**if** MARS runtime exists) |

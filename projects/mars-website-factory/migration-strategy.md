@@ -27,4 +27,4 @@
 ## SAFE UNKNOWN
 
 - Deprecation of any legacy path inside `web-gpt-sources` — **not** decided here.
-- Whether **Gulp Frontend Agent** gets a full **agent card** file under `agents/` — **future** work ([implementation-phase-1.md](implementation-phase-1.md)).
+- **Gulp Frontend Agent** and other §4.1 factory roles have v0 cards under `agents/cards/` (see [implementation-phase-1.md](implementation-phase-1.md), [`../../agents/registry.md`](../../agents/registry.md) §4.1); **deeper** card fields and machine-consumable schemas remain **future** refinement.
