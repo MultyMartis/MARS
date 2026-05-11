@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Translate **strategy** and **page blueprints** into **experiential structure** and **visual specifications** suitable for **frontend handoff**. This layer is **documentation-first**; no claim of an automated design pipeline in MARS.
+Translate **strategy** and **page blueprints** into **experiential structure** and **visual specifications** suitable for **frontend handoff**. Authoring contract: **[Design Handoff Contract v0](design-handoff-contract-v0.md)**. This layer is **documentation-first**; no claim of an automated design pipeline in MARS.
 
 ## Sub-stages (planned agents)
 
@@ -18,7 +18,7 @@ Translate **strategy** and **page blueprints** into **experiential structure** a
 | Wireframes | Page-level structure before visual polish |
 | Design spec | Tokens, type, color, spacing, component states |
 | Asset list | Images, icons, fonts — with license notes |
-| Handoff bundle | What **frontend-production-model** needs (see [implementation-phase-1.md](implementation-phase-1.md) **Design artifact contract**) |
+| Handoff bundle | What **frontend-production-model** needs — bridge via [Design Handoff Contract v0](design-handoff-contract-v0.md) → [Frontend Handoff Contract v0](frontend-handoff-contract-v0.md) |
 
 ## QA
 

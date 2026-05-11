@@ -8,8 +8,8 @@ Intake
   → Information Architecture
   → Page Blueprint (see page-blueprint-contract-v0.md, page-blueprint-qa-checklist-v0.md)
   → Wireframe
-  → Design
-  → Frontend Production
+  → Design (handoff: design-handoff-contract-v0.md)
+  → Frontend Production (handoff: frontend-handoff-contract-v0.md)
   → QA
   → Human approval
   → Delivery

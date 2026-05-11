@@ -19,6 +19,8 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [site-type-registry-v0.md](site-type-registry-v0.md) | **Site Type Registry v0** — classification layer for strategy, SEO, UX, blocks, frontend, QA |
 | [block-registry-v0.md](block-registry-v0.md) | **Block Registry v0** — section semantics, compatibility with site types, orchestration-facing fields (documentation only) |
 | [page-blueprint-contract-v0.md](page-blueprint-contract-v0.md) | **Page Blueprint Contract v0** — normalized page orchestration fields (strategy → SEO → UX → design → frontend → QA) |
+| [design-handoff-contract-v0.md](design-handoff-contract-v0.md) | **Design Handoff Contract v0** — blueprint → visual production requirements (design layer); no automated Figma claim |
+| [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) | **Frontend Handoff Contract v0** — blueprint/design → static frontend production requirements (Gulp-oriented) |
 | [page-blueprint-qa-checklist-v0.md](page-blueprint-qa-checklist-v0.md) | **Page Blueprint QA Checklist v0** — blueprint-level validation categories and escalation |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
@@ -43,4 +45,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — page blueprint contract + QA checklist v0; documentation only.*
+*Last updated: 2026-05-11 — design + frontend handoff contracts v0; page blueprint contract + QA checklist v0; documentation only.*

@@ -11,8 +11,8 @@
 | 3 | **Website Factory workflow v0** | One **Task** / workflow narrative binding factory stages to `workflows/task-contract-v0.md` fields (`required_agents`, `hitl_gates`) |
 | 4 | **Gulp Frontend Agent card** | Full card using `agents/agent-card-template.md` — I/O, validation, limitations |
 | 5 | **Page Blueprint contract** | **Done (doc):** [page-blueprint-contract-v0.md](page-blueprint-contract-v0.md) — normalized page orchestration fields; human-readable (**no** strict JSON Schema in v0). |
-| 6 | **Design artifact contract** | Minimum fields for handoff to frontend (tokens, breakpoints, component list) |
-| 7 | **Frontend handoff contract** | What design must provide so **Gulp Frontend Agent** can implement without clarification loops |
+| 6 | **Design handoff contract** | **Done (doc):** [design-handoff-contract-v0.md](design-handoff-contract-v0.md) — blueprint → visual production requirements (tokens, sections, QA); **not** automated Figma |
+| 7 | **Frontend handoff contract** | **Done (doc):** [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) — blueprint/design → **Gulp**-oriented static production requirements |
 | 8 | **QA checklist v0** | **Done (doc, blueprint slice):** [page-blueprint-qa-checklist-v0.md](page-blueprint-qa-checklist-v0.md); broader lanes remain in [qa-validation-model.md](qa-validation-model.md). |
 
 ## Out of scope for phase 1

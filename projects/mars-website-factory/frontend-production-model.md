@@ -4,7 +4,7 @@
 
 The **Gulp Frontend Agent** is the **planned core production specialist** for turning approved designs into **static frontend** artifacts. In MARS **Agent Registry** it is listed as **legacy-bridge**: a **documented** specialist profile, **not** proof of Gulp code in this repository (`agents/registry.md`).
 
-Legacy **imported** profile (stack and rules) appears in **`web-gpt-sources/04_agents.md`** (Gulp Frontend Agent section): HTML, SCSS, JS; **Gulp**, **gulp-file-include**; optional jQuery and common libs; **source-first** — edit **`src`**, not manual **`dist`** edits.
+Legacy **imported** profile (stack and rules) appears in **`web-gpt-sources/04_agents.md`** (Gulp Frontend Agent section): HTML, SCSS, JS; **Gulp**, **gulp-file-include**; optional jQuery and common libs; **source-first** — edit **`src`**, not manual **`dist`** edits. Normalized requirements for a page build are described in **[Frontend Handoff Contract v0](frontend-handoff-contract-v0.md)** (documentation only).
 
 ## gulp-starter architecture (target shape)
 
