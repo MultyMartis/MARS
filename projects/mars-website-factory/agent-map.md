@@ -4,7 +4,7 @@
 
 **Registry SoT:** [`../../agents/registry.md`](../../agents/registry.md) — **§4.1** lists planned **`agent_id`** rows with links to **agent cards** (v0) under [`../../agents/cards/`](../../agents/cards/). **This file** remains the **SoT** for extended **what each factory role does** in prose; **cards** add contracts, I/O boundaries, QA, and escalation fields per [`../../agents/agent-card-template.md`](../../agents/agent-card-template.md) vocabulary. **Dependency map:** factory pack **`entity_id`** s in [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 — **documentation-only**, not a runtime graph.
 
-**Core pipeline cards (v0):** [`../../agents/cards/project-intake-agent-v0.md`](../../agents/cards/project-intake-agent-v0.md), [`../../agents/cards/site-type-classifier-agent-v0.md`](../../agents/cards/site-type-classifier-agent-v0.md), [`../../agents/cards/marketing-strategy-agent-v0.md`](../../agents/cards/marketing-strategy-agent-v0.md), [`../../agents/cards/seo-strategy-agent-v0.md`](../../agents/cards/seo-strategy-agent-v0.md), [`../../agents/cards/page-blueprint-agent-v0.md`](../../agents/cards/page-blueprint-agent-v0.md), [`../../agents/cards/gulp-frontend-agent-v0.md`](../../agents/cards/gulp-frontend-agent-v0.md), [`../../agents/cards/frontend-qa-agent-v0.md`](../../agents/cards/frontend-qa-agent-v0.md), [`../../agents/cards/validator-agent-integration-v0.md`](../../agents/cards/validator-agent-integration-v0.md).
+**Agent cards (v0):** one Markdown card per planned factory **`agent_id`** — paths in [`../../agents/registry.md`](../../agents/registry.md) §4.1; all files live under [`../../agents/cards/`](../../agents/cards/) (**documentation-only**; **not** runtime).
 
 ## Legend
 
@@ -47,4 +47,4 @@
 
 - **Gulp Frontend Agent** and **Validator Agent** appear in **`agents/registry.md`** with documented statuses.
 - Legacy **Gulp** profile text exists in **`web-gpt-sources/04_agents.md`** (embedded section).
-- **No** separate agent cards for factory-only roles were found under `agents/` at registration time — **SAFE UNKNOWN** whether cards will live in `agents/` or only in this pack until authored.
+- **Website Factory** planned roles have **v0 cards** under **`agents/cards/`** (see **`agents/registry.md`** §4.1) — **documentation-only**; **no** factory agent runtime evidenced in MARS core.

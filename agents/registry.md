@@ -74,7 +74,7 @@ Summaries only; each card is intended to be expanded in-repo using `agent-card-t
 
 ### 4.1 Website Factory planned agent identities (documentation-only)
 
-Stable **`agent_id`** rows for **MARS Website Factory** roles; **core pipeline agent cards** v0 live under [`cards/`](cards/) (documentation-only; **not** runtime). **Role descriptions** (factory behaviour, lanes) remain authoritative in [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) where cards defer to pack prose. The §4 summary row for **Gulp Frontend Agent** (**legacy-bridge**) remains the catalog shorthand; **`gulp_frontend_agent`** below is the **same role** under a stable **snake_case** id for registry / policy hooks.
+Stable **`agent_id`** rows for **MARS Website Factory** roles; **agent cards** v0 for all listed roles live under [`cards/`](cards/) (documentation-only; **not** runtime). **Role descriptions** (factory behaviour, lanes) remain authoritative in [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) where cards defer to pack prose. The §4 summary row for **Gulp Frontend Agent** (**legacy-bridge**) remains the catalog shorthand; **`gulp_frontend_agent`** below is the **same role** under a stable **snake_case** id for registry / policy hooks.
 
 | agent_id | display_name | status | parent_system | owner_layer | SoT | notes |
 |----------|--------------|--------|-----------------|-------------|-----|-------|
@@ -82,17 +82,17 @@ Stable **`agent_id`** rows for **MARS Website Factory** roles; **core pipeline a
 | `site_type_classifier_agent` | Site Type Classifier Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/site-type-classifier-agent-v0.md](cards/site-type-classifier-agent-v0.md) |
 | `marketing_strategy_agent` | Marketing Strategy Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/marketing-strategy-agent-v0.md](cards/marketing-strategy-agent-v0.md) |
 | `seo_strategy_agent` | SEO Strategy Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/seo-strategy-agent-v0.md](cards/seo-strategy-agent-v0.md) |
-| `information_architecture_agent` | Information Architecture Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
+| `information_architecture_agent` | Information Architecture Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/information-architecture-agent-v0.md](cards/information-architecture-agent-v0.md) |
 | `page_blueprint_agent` | Page Blueprint Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/page-blueprint-agent-v0.md](cards/page-blueprint-agent-v0.md) |
-| `ux_structure_agent` | UX Structure Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
-| `ai_designer_agent` | AI Designer Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
-| `wireframe_generator_agent` | Wireframe Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
-| `full_design_generator_agent` | Full Design Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
+| `ux_structure_agent` | UX Structure Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/ux-structure-agent-v0.md](cards/ux-structure-agent-v0.md) |
+| `ai_designer_agent` | AI Designer Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/ai-designer-agent-v0.md](cards/ai-designer-agent-v0.md) |
+| `wireframe_generator_agent` | Wireframe Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/wireframe-generator-agent-v0.md](cards/wireframe-generator-agent-v0.md) |
+| `full_design_generator_agent` | Full Design Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/full-design-generator-agent-v0.md](cards/full-design-generator-agent-v0.md) |
 | `gulp_frontend_agent` | Gulp Frontend Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/gulp-frontend-agent-v0.md](cards/gulp-frontend-agent-v0.md); aligns with §4 **Gulp Frontend Agent** (**legacy-bridge**) — same role, dual listing for **id** vs display name. |
 | `frontend_qa_agent` | Frontend QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/frontend-qa-agent-v0.md](cards/frontend-qa-agent-v0.md) |
-| `design_qa_agent` | Design QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
-| `seo_qa_agent` | SEO QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
-| `conversion_qa_agent` | Conversion QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Card not in core v0 set; **SAFE UNKNOWN** until authored. |
+| `design_qa_agent` | Design QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/design-qa-agent-v0.md](cards/design-qa-agent-v0.md) |
+| `seo_qa_agent` | SEO QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/seo-qa-agent-v0.md](cards/seo-qa-agent-v0.md) |
+| `conversion_qa_agent` | Conversion QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/conversion-qa-agent-v0.md](cards/conversion-qa-agent-v0.md) |
 | `validator_agent_integration` | Validator Agent (Website Factory integration) | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/validator-agent-integration-v0.md](cards/validator-agent-integration-v0.md); complements catalog **Validator Agent** (§4) for factory QA narrative — **not** a separate runtime. |
 
 ---
@@ -126,7 +126,7 @@ v0: **read-only** relationship in design — the registry is **not** self-modify
 - This directory has **no** source code; only Markdown contracts.
 - Control Plane and Agent Registry v0 are **separate** documents: **Control Plane** owns orchestration; **this registry** owns *who* the agents *are* on paper.
 
-**Document set:** `README.md`, `registry.md` (this file), `agent-card-template.md`, `cards/` (per-agent markdown cards; v0 includes Website Factory core pipeline).
+**Document set:** `README.md`, `registry.md` (this file), `agent-card-template.md`, `cards/` (per-agent markdown cards; v0 includes full **Website Factory** planned role set per §4.1).
 
 ---
 
@@ -134,6 +134,6 @@ v0: **read-only** relationship in design — the registry is **not** self-modify
 
 | Pack | Relevance to registry |
 |------|------------------------|
-| [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | **Planned** factory agent roster and **SoT** for per-role prose; **§4.1** lists stable **`agent_id`** rows with links to **core pipeline** cards in [`cards/`](cards/) (documentation-only). **Gulp Frontend Agent** / **Validator Agent** §4 summaries remain shorthand — factory remains **documentation-first** until runtime evidence lands. |
+| [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | **Planned** factory agent roster and **SoT** for per-role prose; **§4.1** lists stable **`agent_id`** rows with links to **v0 agent cards** in [`cards/`](cards/) (documentation-only). **Gulp Frontend Agent** / **Validator Agent** §4 summaries remain shorthand — factory remains **documentation-first** until runtime evidence lands. |
 
 **Honesty:** The Website Factory is **not** a single agent and **not** runtime-ready; see [../projects/mars-website-factory/safe-unknown-boundary.md](../projects/mars-website-factory/safe-unknown-boundary.md).
