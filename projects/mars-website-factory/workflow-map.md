@@ -2,6 +2,8 @@
 
 **Canonical orchestration chain (stages, contracts, escalation):** [website-factory-workflow-v0.md](website-factory-workflow-v0.md) — **Website Factory Workflow v0** (**documentation only**). This file remains the **diagram / HITL / execution-flow alignment** companion.
 
+**Artifact semantics (Phase 2 doc):** [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md) — normalized **artifact / payload** vocabulary layered on this flow; **not** executable schemas.
+
 ## Target high-level flow
 
 ```text

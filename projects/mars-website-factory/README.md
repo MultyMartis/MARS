@@ -23,6 +23,13 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) | **Frontend Handoff Contract v0** — blueprint/design → static frontend production requirements (Gulp-oriented) |
 | [page-blueprint-qa-checklist-v0.md](page-blueprint-qa-checklist-v0.md) | **Page Blueprint QA Checklist v0** — blueprint-level validation categories and escalation |
 | [website-factory-workflow-v0.md](website-factory-workflow-v0.md) | **Website Factory Workflow v0** — canonical orchestration stages, artifact flow, QA/HITL escalation (**documentation only**) |
+| [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md) | **Artifact Architecture Layer v0** — workflow vs artifact vs payload vs contract; orchestration/HITL/Validator alignment (**conceptual only**) |
+| [artifact-types-v0.md](artifact-types-v0.md) | **Artifact types v0** — lifecycle, mutability, HITL, QA ties per artifact class |
+| [page-objective-model-v0.md](page-objective-model-v0.md), [cta-semantics-v0.md](cta-semantics-v0.md), [trust-semantics-v0.md](trust-semantics-v0.md) | **Page objective, CTA, trust** — normalized semantics (no performance guarantees) |
+| [section-payload-model-v0.md](section-payload-model-v0.md) | **Section payload model v0** — per-section semantic fields (not implementation JSON) |
+| [seo-intent-model-v0.md](seo-intent-model-v0.md), [conversion-intent-model-v0.md](conversion-intent-model-v0.md) | **SEO / conversion intent** — intent dimensions and escalation triggers |
+| [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md) | **Frontend artifact model v0** — static build artifacts vs handoff/production docs |
+| [qa-result-payloads-v0.md](qa-result-payloads-v0.md) | **QA result payloads v0** — conceptual QA output fields and Validator relationship |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
 | [frontend-production-model.md](frontend-production-model.md) | Gulp-oriented production model (legacy-aligned) |
@@ -48,4 +55,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — Website Factory Workflow v0; full planned-role **agent cards** v0 under `agents/cards/` (see `agents/registry.md` §4.1); design + frontend handoff contracts v0; page blueprint contract + QA checklist v0; documentation only.*
+*Last updated: 2026-05-11 — Artifact Architecture Layer v0 (overview, types, objective/CTA/trust/section/SEO/conversion semantics, frontend artifacts, QA payloads); Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*
