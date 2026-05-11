@@ -35,6 +35,7 @@ Each log entry **must** include:
 | evt-2026-0009 | 2026-04-28T12:00:00Z | governance | governance.stage_14_complete | **Stage 14** (Runtime Infrastructure / Deployment Model) documentation milestone recorded per `governance/master-build-map.md`; **documentation-only, no runtime implementation**. |
 | evt-2026-0010 | 2026-04-28T12:00:00Z | governance | governance.stage_15_complete | **Stage 15** (External Integrations) documentation milestone recorded per `governance/master-build-map.md`; **documentation-only, no runtime implementation**. |
 | evt-2026-0011 | 2026-05-04T12:00:00Z | seo-content-agent | registry.updated | **SEO Content Agent** registered in `registry/project-registry.md` (`project_id` **seo-content-agent**, status **planned**); documentation pack added under `projects/seo-content-agent/` (architecture, workflows, prompts, schemas, roadmap); **no** runtime, n8n workflows, or credentials added. |
+| evt-2026-0012 | 2026-05-11T12:00:00Z | mars-website-factory | registry.updated | **Website Factory entity identity normalization:** planned Website Factory **`agent_id`** rows added to `agents/registry.md` §4.1; Website Factory v0 entities and **MetaBOT** documentation pack edges added to `governance/dependency-map.md` §4; **no** runtime implementation; **prepares** future Website Factory agent cards (cards **not** authored in this change). |
 
 ---
 

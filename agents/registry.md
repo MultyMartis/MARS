@@ -72,6 +72,29 @@ Summaries only; each card is intended to be expanded in-repo using `agent-card-t
 | **Coding Agent** | planned | Produces and edits code within policy and handoff from Control Plane. |
 | **Documentation Agent** | planned | Produces and maintains user-facing and internal documentation artifacts. |
 
+### 4.1 Website Factory planned agent identities (documentation-only)
+
+Stable **`agent_id`** rows for **MARS Website Factory** roles; **no** agent cards yet; **not** runtime implementation. **Role descriptions** (factory behaviour, lanes) remain authoritative in [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md). The §4 summary row for **Gulp Frontend Agent** (**legacy-bridge**) remains the catalog shorthand; **`gulp_frontend_agent`** below is the **same role** under a stable **snake_case** id for registry / policy hooks.
+
+| agent_id | display_name | status | parent_system | owner_layer | SoT | notes |
+|----------|--------------|--------|-----------------|-------------|-----|-------|
+| `project_intake_agent` | Project Intake Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `site_type_classifier_agent` | Site Type Classifier Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `marketing_strategy_agent` | Marketing Strategy Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `seo_strategy_agent` | SEO Strategy Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `information_architecture_agent` | Information Architecture Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `page_blueprint_agent` | Page Blueprint Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `ux_structure_agent` | UX Structure Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `ai_designer_agent` | AI Designer Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `wireframe_generator_agent` | Wireframe Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `full_design_generator_agent` | Full Design Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `gulp_frontend_agent` | Gulp Frontend Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet; aligns with §4 **Gulp Frontend Agent** (**legacy-bridge**) — same role, dual listing for **id** vs display name. |
+| `frontend_qa_agent` | Frontend QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `design_qa_agent` | Design QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `seo_qa_agent` | SEO QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `conversion_qa_agent` | Conversion QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet. |
+| `validator_agent_integration` | Validator Agent (Website Factory integration) | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | Agent card not created yet; complements catalog **Validator Agent** (§4) for factory QA narrative — **not** a separate runtime. |
+
 ---
 
 ## 5. Relation to Control Plane
@@ -111,6 +134,6 @@ v0: **read-only** relationship in design — the registry is **not** self-modify
 
 | Pack | Relevance to registry |
 |------|------------------------|
-| [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | **Planned** factory agent roster; **Gulp Frontend Agent** and **Validator Agent** rows in §4 remain authoritative for catalog status — factory expands **documentation** only until cards and runtime evidence land. |
+| [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | **Planned** factory agent roster and **SoT** for per-role descriptions; **§4.1** lists stable **`agent_id`** rows (planned, **no** cards yet). **Gulp Frontend Agent** / **Validator Agent** §4 summaries remain shorthand — factory expands **documentation** only until cards and runtime evidence land. |
 
 **Honesty:** The Website Factory is **not** a single agent and **not** runtime-ready; see [../projects/mars-website-factory/safe-unknown-boundary.md](../projects/mars-website-factory/safe-unknown-boundary.md).
