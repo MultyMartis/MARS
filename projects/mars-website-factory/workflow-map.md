@@ -4,6 +4,8 @@
 
 **Artifact semantics (Phase 2 doc):** [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md) — normalized **artifact / payload** vocabulary layered on this flow; **not** executable schemas.
 
+**Prompt standards (Phase 3 doc):** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md) — operational discipline for prompts, execution, reporting, HITL, SAFE UNKNOWN, artifact transfer, QA, and frontend; **not** a prompt engine, **not** a runtime. Each factory stage below maps to a **prompt boundary** per [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), executed in Cursor per [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), reported per [reporting-standard-v0.md](reporting-standard-v0.md).
+
 ## Target high-level flow
 
 ```text
@@ -38,10 +40,10 @@ The **legacy operational shorthand** “prompt → execute → report” remains
 
 ## Cursor execution model (Phase 1)
 
-Per `governance/execution-model.md`:
+Per `governance/execution-model.md` and [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md):
 
 - **Today**, filesystem work is performed in a **user-controlled** environment (e.g. **Cursor**), not by a MARS daemon.
-- Factory stages translate to **Cursor prompt bundles**: context window, **AGENT** vs **ASK** mode per project rules, explicit paths.
+- Factory stages translate to **Cursor prompt bundles**: context window, **AGENT** vs **ASK** mode per project rules, explicit paths, git safety, REPORT discipline.
 - **Execution Bridge** (`mars-runtime/execution-bridge-v0.md`) may **eventually** package handoffs; **no** Website Factory–specific wire format is defined yet (**SAFE UNKNOWN**).
 
 ## Future runtime integration

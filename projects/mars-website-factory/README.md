@@ -30,6 +30,16 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [seo-intent-model-v0.md](seo-intent-model-v0.md), [conversion-intent-model-v0.md](conversion-intent-model-v0.md) | **SEO / conversion intent** — intent dimensions and escalation triggers |
 | [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md) | **Frontend artifact model v0** — static build artifacts vs handoff/production docs |
 | [qa-result-payloads-v0.md](qa-result-payloads-v0.md) | **QA result payloads v0** — conceptual QA output fields and Validator relationship |
+| [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md) | **Prompt Standards Layer v0 — overview** (operational discipline; **not** a prompt engine) |
+| [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md) | **Prompt structure standard v0** — normalized sections, prompt variants (minimal / production / HITL / QA / frontend) |
+| [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md) | **Agent prompt behavior v0** — behavioral rules (no fabrication, escalation, artifact-first) |
+| [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md) | **Cursor execution standard v0** — prompt → execute → report loop, git safety, target folder / agent mode |
+| [reporting-standard-v0.md](reporting-standard-v0.md) | **Reporting standard v0** — REPORT format and lane variants (doc / frontend / QA / migration / validation) |
+| [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md) | **HITL prompt boundary v0** — mandatory gates, escalation triggers, “no fake autonomous approval” |
+| [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md) | **SAFE UNKNOWN prompt rules v0** — assumption discipline, fabrication forbidden, GOOD vs BAD examples |
+| [artifact-transfer-prompt-rules-v0.md](artifact-transfer-prompt-rules-v0.md) | **Artifact transfer prompt rules v0** — immutability, approval inheritance, revisions, QA inheritance |
+| [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md) | **QA prompt rules v0** — evidence-based QA, no fake approvals, blocker / waiver, Validator relationship |
+| [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) | **Frontend prompt discipline v0** — Gulp-oriented source-first rules, SCSS modularity, data-* JS, no `dist/` edits |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
 | [frontend-production-model.md](frontend-production-model.md) | Gulp-oriented production model (legacy-aligned) |
@@ -55,4 +65,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — Artifact Architecture Layer v0 (overview, types, objective/CTA/trust/section/SEO/conversion semantics, frontend artifacts, QA payloads); Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*
+*Last updated: 2026-05-11 — **Prompt Standards Layer v0** (overview, structure, agent behavior, Cursor execution, reporting, HITL boundary, SAFE UNKNOWN, artifact transfer, QA prompt rules, frontend prompt discipline; **documentation only — not a prompt engine, not a runtime**); previously: Artifact Architecture Layer v0 (overview, types, objective/CTA/trust/section/SEO/conversion semantics, frontend artifacts, QA payloads); Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*

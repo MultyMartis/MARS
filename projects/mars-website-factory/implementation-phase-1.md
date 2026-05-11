@@ -24,7 +24,22 @@
 | P2-3 | **SEO / conversion intent models** | **Done (doc):** [seo-intent-model-v0.md](seo-intent-model-v0.md), [conversion-intent-model-v0.md](conversion-intent-model-v0.md). |
 | P2-4 | **Frontend + QA payload concepts** | **Done (doc):** [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md). |
 
-**Remaining (not claimed done):** deeper field binding to `task-contract-v0` wire examples, prompt/runbook artifacts — **SAFE UNKNOWN** until authored.
+## Phase 3 (documentation) — prompt standards layer v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P3-1 | **Prompt standards overview** | **Done (doc):** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md) — purpose, philosophy, non-claims (operational interfaces, not AGI). |
+| P3-2 | **Prompt structure standard** | **Done (doc):** [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md) — canonical sections, prompt variants (minimal / production / HITL / QA / frontend), examples. |
+| P3-3 | **Agent prompt behavior** | **Done (doc):** [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md) — no fabrication, artifact-first, HITL escalation. |
+| P3-4 | **Cursor execution standard** | **Done (doc):** [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md) — target folder / agent mode / git safety / REPORT loop. |
+| P3-5 | **Reporting standard** | **Done (doc):** [reporting-standard-v0.md](reporting-standard-v0.md) — canonical REPORT and lane variants. |
+| P3-6 | **HITL prompt boundary** | **Done (doc):** [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md) — mandatory gates, no fake autonomous approval. |
+| P3-7 | **SAFE UNKNOWN prompt rules** | **Done (doc):** [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md) — assumption discipline, fabrication forbidden, GOOD vs BAD. |
+| P3-8 | **Artifact transfer prompt rules** | **Done (doc):** [artifact-transfer-prompt-rules-v0.md](artifact-transfer-prompt-rules-v0.md) — immutability, approval inheritance, revisions, QA inheritance. |
+| P3-9 | **QA prompt rules** | **Done (doc):** [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md) — evidence-based QA, no fake approvals, lane discipline. |
+| P3-10 | **Frontend prompt discipline** | **Done (doc):** [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) — Gulp-oriented source-first rules, SCSS modularity, data-* JS, no `dist/` edits. |
+
+**Remaining (not claimed done):** deeper field binding to `task-contract-v0` wire examples, runbook artifacts beyond prompt-standard prose, automated prompt/QA checks — **SAFE UNKNOWN** until authored.
 
 ## Out of scope for phase 1
 
