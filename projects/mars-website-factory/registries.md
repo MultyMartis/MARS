@@ -16,7 +16,7 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **Fields (suggested)** | See v0 glossary; includes `site_type_id`, goals, monetization, SEO/CTA/trust/UX models, block **roles**, forbidden patterns, QA focus, HITL. |
 | **Examples** | v0 lists `landing`, `service_landing`, `promo_site`, `corporate_site`, `catalog_site`, `ecommerce`, `geo_landing`, `seo_landing`, `ai_visibility_page`, `hybrid_commercial`. |
 | **Anti-patterns** | One-size-fits-all blocks for every site type; unversioned “magic” defaults |
-| **Relations** | **Site Type Classifier Agent** reads/writes proposals; **Page Blueprint Agent** consumes; **workflow-map** intake → strategy |
+| **Relations** | **Site Type Classifier Agent** reads/writes proposals; [Page Blueprint Contract v0](page-blueprint-contract-v0.md) consumes **`site_type_id`**; **workflow-map** intake → strategy |
 
 ---
 
@@ -30,7 +30,7 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **Fields (v0)** | See v0 glossary; includes `block_id`, `category`, commercial/SEO/UX fields, `CTA_presence`, `dependencies`, `anti_patterns`, complexity hints, `compatible_site_types` / `incompatible_site_types`. Future artefacts may add `display_name`, props schema, `js_behavior` — **not** fixed in v0. |
 | **Examples** | v0 lists `hero`, `trust_block`, `services_grid`, `faq`, `cases`, `reviews`, `pricing`, `process_steps`, `contact_cta`, `calculator`, `comparison`, `geo_trust`, `catalog_grid`, `sticky_cta`, `lead_form`, `final_cta`. |
 | **Anti-patterns** | Ad-hoc block names per page without IDs; blocks incompatible with declared **`site_type_id`** without HITL |
-| **Relations** | Consumes **`site_type_id`** from [Site Type Registry v0](site-type-registry-v0.md); **Page Blueprint** (planned) outputs instances; **Gulp Frontend Agent** (planned) implements; **Validator** (planned) checks against registry |
+| **Relations** | Consumes **`site_type_id`** from [Site Type Registry v0](site-type-registry-v0.md); [Page Blueprint Contract v0](page-blueprint-contract-v0.md) references **`block_id`** and ordering; [Page Blueprint QA Checklist v0](page-blueprint-qa-checklist-v0.md) validates compatibility; **Gulp Frontend Agent** (planned) implements; **Validator** (planned) checks against registry |
 
 ---
 

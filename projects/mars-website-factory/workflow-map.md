@@ -6,7 +6,7 @@
 Intake
   → Strategy
   → Information Architecture
-  → Page Blueprint
+  → Page Blueprint (see page-blueprint-contract-v0.md, page-blueprint-qa-checklist-v0.md)
   → Wireframe
   → Design
   → Frontend Production
@@ -53,7 +53,7 @@ Per `governance/execution-model.md`:
 Suggested **human approval** gates (refine per `security/approval-gates.md` and **Task** `hitl_gates`):
 
 1. After **Strategy** — brand/compliance sensitivity.
-2. After **Page Blueprint** — scope/size/cost.
+2. After **Page Blueprint** — scope/size/cost; validate against [Page Blueprint QA Checklist v0](page-blueprint-qa-checklist-v0.md) before approving handoff.
 3. After **Design** — before **Frontend Production**.
 4. After **QA** — before **Delivery** / public deploy.
 
