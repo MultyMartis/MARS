@@ -54,6 +54,18 @@
 | P4-9 | **QA gating semantics** | **Done (doc):** [qa-gating-semantics-v0.md](qa-gating-semantics-v0.md) — gate lifecycle, blocker / pass / fail / conditional / waiver / confidence / evidence / freeze / delivery blocking / HITL override. |
 | P4-10 | **Delivery lifecycle** | **Done (doc):** [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md) — candidate, pre-delivery validation, release approval, freeze, export package, deployment handoff, rollback, archive, post-delivery revision; no deployment automation claims. |
 
+## Phase 5 (documentation) — reference project layer v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P5-1 | **Reference project model** | **Done (doc):** [reference-project-model-v0.md](reference-project-model-v0.md) — project kinds, conceptual fields (`project_id`, `project_type`, scopes, states, policies); **SAFE UNKNOWN** for storage, persistence, DB, engines. |
+| P5-2 | **Reference artifact tree** | **Done (doc):** [reference-project-artifact-tree-v0.md](reference-project-artifact-tree-v0.md) — Intake→Delivery chain; lineage, inheritance, freeze, supersede vs revision; per-stage upstream/downstream/owner/QA/HITL. |
+| P5-3 | **Reference project lifecycle** | **Done (doc):** [reference-project-lifecycle-v0.md](reference-project-lifecycle-v0.md) — lifecycle states, entry/exit, blocking, invalidation, QA, HITL; **not** a persisted state machine. |
+| P5-4 | **Reference HITL governance** | **Done (doc):** [reference-project-hitl-governance-v0.md](reference-project-hitl-governance-v0.md) — normalized authorities; irreversible/conditional approvals; inheritance/invalidation; forbids self-approval, autonomous approval, fake delivery acceptance. |
+| P5-5 | **Reference QA matrix** | **Done (doc):** [reference-project-qa-matrix-v0.md](reference-project-qa-matrix-v0.md) — stage × QA table; waivers, inheritance, invalidation resets, SAFE UNKNOWN handling. |
+| P5-6 | **Reference delivery packages** | **Done (doc):** [reference-delivery-package-v0.md](reference-delivery-package-v0.md) — blueprint/design/frontend/QA/export/RC/delivery candidate package semantics. |
+| P5-7 | **Multi-page orchestration** | **Done (doc):** [multi-page-orchestration-v0.md](multi-page-orchestration-v0.md) — site graph semantics, clusters, linking, cannibalization, page vs site QA, cluster invalidation; **no** automation/orchestration-daemon claims. |
+
 **Remaining (not claimed done):** deeper field binding to `task-contract-v0` wire examples, runbook artifacts beyond layer prose, automated prompt / QA / lifecycle checks — **SAFE UNKNOWN** until authored.
 
 ## Out of scope for phase 1

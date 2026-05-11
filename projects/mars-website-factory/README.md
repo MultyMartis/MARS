@@ -50,12 +50,19 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [orchestration-signals-v0.md](orchestration-signals-v0.md) | **Orchestration signals v0** — signal source, propagation, escalation, resolution, lifecycle; tied to system signals dictionary |
 | [qa-gating-semantics-v0.md](qa-gating-semantics-v0.md) | **QA gating semantics v0** — gate lifecycle, blocker / pass / fail / conditional / waiver, freeze, delivery blocking, HITL override |
 | [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md) | **Delivery lifecycle v0** — candidate, pre-delivery validation, release approval, export package, handoff, rollback, archive, post-delivery revision |
+| [reference-project-model-v0.md](reference-project-model-v0.md) | **Reference Project Layer v0 — model** — reference / production / sandbox / migration / demo; conceptual fields; **SAFE UNKNOWN** for storage and engines |
+| [reference-project-artifact-tree-v0.md](reference-project-artifact-tree-v0.md) | **Reference Project Layer v0 — artifact tree** — Intake→Delivery lineage, inheritance, freeze, supersede vs revision, per-stage upstream/downstream/QA/HITL |
+| [reference-project-lifecycle-v0.md](reference-project-lifecycle-v0.md) | **Reference Project Layer v0 — lifecycle** — project states, entry/exit, blocking, invalidation, QA, HITL (**documentation only**, not a state engine) |
+| [reference-project-hitl-governance-v0.md](reference-project-hitl-governance-v0.md) | **Reference Project Layer v0 — HITL governance** — approval / rejection / freeze / reopen / waiver / escalation; forbids self-approval and fake delivery acceptance |
+| [reference-project-qa-matrix-v0.md](reference-project-qa-matrix-v0.md) | **Reference Project Layer v0 — QA matrix** — stage × required/blocking/optional/HITL QA; waivers, inheritance, invalidation resets |
+| [reference-delivery-package-v0.md](reference-delivery-package-v0.md) | **Reference Project Layer v0 — delivery packages** — blueprint/design/frontend/QA/export/RC/delivery candidate semantics |
+| [multi-page-orchestration-v0.md](multi-page-orchestration-v0.md) | **Reference Project Layer v0 — multi-page orchestration** — site graph, clusters, internal linking, cannibalization, page vs site QA (**no automation claims**) |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
 | [frontend-production-model.md](frontend-production-model.md) | Gulp-oriented production model (legacy-aligned) |
 | [design-layer-model.md](design-layer-model.md) | Design artifacts and agent boundaries |
 | [seo-marketing-layer.md](seo-marketing-layer.md) | SEO/marketing strategy and QA |
-| [roadmap.md](roadmap.md) | Phased evolution (0–6) |
+| [roadmap.md](roadmap.md) | Phased evolution (0–7) |
 | [migration-strategy.md](migration-strategy.md) | How this pack relates to legacy Web-GPT ideas and other projects |
 | [implementation-phase-1.md](implementation-phase-1.md) | First doc-only deliverables |
 | [safe-unknown-boundary.md](safe-unknown-boundary.md) | Honesty boundary — no false implementation claims |
@@ -75,4 +82,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — **Execution Semantics Layer v0** (overview, stage state, artifact state, approval, revision, regeneration, dependency invalidation, orchestration signals, QA gating, delivery lifecycle; **documentation only — not a runtime engine, not a scheduler, not a queue, not a workflow daemon, not an autonomous execution platform**); previously: Prompt Standards Layer v0 (overview, structure, agent behavior, Cursor execution, reporting, HITL boundary, SAFE UNKNOWN, artifact transfer, QA prompt rules, frontend prompt discipline; **documentation only — not a prompt engine, not a runtime**); Artifact Architecture Layer v0 (overview, types, objective/CTA/trust/section/SEO/conversion semantics, frontend artifacts, QA payloads); Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*
+*Last updated: 2026-05-12 — **Reference Project Layer v0** (reference project model, artifact tree, lifecycle, HITL governance, QA matrix, delivery packages, multi-page orchestration; **documentation only — not storage, not runtime persistence, not a project database, not an orchestration engine**); previously: 2026-05-11 — **Execution Semantics Layer v0** (overview, stage state, artifact state, approval, revision, regeneration, dependency invalidation, orchestration signals, QA gating, delivery lifecycle; **documentation only — not a runtime engine, not a scheduler, not a queue, not a workflow daemon, not an autonomous execution platform**); Prompt Standards Layer v0; Artifact Architecture Layer v0; Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*
