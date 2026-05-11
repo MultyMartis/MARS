@@ -37,7 +37,7 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 
 Authoritative project row: [`../../registry/project-registry.md`](../../registry/project-registry.md).
 
-**Agent identities (2026-05-11):** stable planned **`agent_id`** rows for Website Factory roles live in [`../../agents/registry.md`](../../agents/registry.md) §4.1 — **agent cards** are **future** work. **SoT** for per-role descriptions (factory lanes, behaviour) remains **[`agent-map.md`](agent-map.md)** until cards exist. Factory **`entity_id`** rows for governance traceability: [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 (`mars_website_factory`, `website_factory_*`, `website_factory_workflow_v0`).
+**Agent identities:** stable planned **`agent_id`** rows in [`../../agents/registry.md`](../../agents/registry.md) §4.1; **core pipeline agent cards** v0 in [`../../agents/cards/`](../../agents/cards/) (documentation-only, **not** runtime). **SoT** for extended per-role prose remains **[`agent-map.md`](agent-map.md)**. Factory **`entity_id`** rows: [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 (`mars_website_factory`, `website_factory_*`, `website_factory_workflow_v0`).
 
 ## Related MARS artifacts (existing)
 
@@ -48,4 +48,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — Website Factory Workflow v0; design + frontend handoff contracts v0; page blueprint contract + QA checklist v0; documentation only.*
+*Last updated: 2026-05-11 — Website Factory Workflow v0; core agent cards v0 under `agents/cards/`; design + frontend handoff contracts v0; page blueprint contract + QA checklist v0; documentation only.*

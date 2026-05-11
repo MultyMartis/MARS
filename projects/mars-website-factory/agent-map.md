@@ -2,7 +2,9 @@
 
 **Status:** **planned** unless an existing MARS file proves a role is **implemented** or **active** with in-repo runtime evidence. Per `AGENTS.md`, this repository’s **Phase 1** agent definitions are **documentation-only**.
 
-**Registry SoT:** [`../../agents/registry.md`](../../agents/registry.md) — **§4.1** lists planned **`agent_id`** rows (**no** agent cards yet). **This file** remains the **SoT** for **what each factory role does** in prose until cards are authored. **Dependency map:** factory pack **`entity_id`** s in [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 — **documentation-only**, not a runtime graph.
+**Registry SoT:** [`../../agents/registry.md`](../../agents/registry.md) — **§4.1** lists planned **`agent_id`** rows with links to **agent cards** (v0) under [`../../agents/cards/`](../../agents/cards/). **This file** remains the **SoT** for extended **what each factory role does** in prose; **cards** add contracts, I/O boundaries, QA, and escalation fields per [`../../agents/agent-card-template.md`](../../agents/agent-card-template.md) vocabulary. **Dependency map:** factory pack **`entity_id`** s in [`../../governance/dependency-map.md`](../../governance/dependency-map.md) §4 — **documentation-only**, not a runtime graph.
+
+**Core pipeline cards (v0):** [`../../agents/cards/project-intake-agent-v0.md`](../../agents/cards/project-intake-agent-v0.md), [`../../agents/cards/site-type-classifier-agent-v0.md`](../../agents/cards/site-type-classifier-agent-v0.md), [`../../agents/cards/marketing-strategy-agent-v0.md`](../../agents/cards/marketing-strategy-agent-v0.md), [`../../agents/cards/seo-strategy-agent-v0.md`](../../agents/cards/seo-strategy-agent-v0.md), [`../../agents/cards/page-blueprint-agent-v0.md`](../../agents/cards/page-blueprint-agent-v0.md), [`../../agents/cards/gulp-frontend-agent-v0.md`](../../agents/cards/gulp-frontend-agent-v0.md), [`../../agents/cards/frontend-qa-agent-v0.md`](../../agents/cards/frontend-qa-agent-v0.md), [`../../agents/cards/validator-agent-integration-v0.md`](../../agents/cards/validator-agent-integration-v0.md).
 
 ## Legend
 

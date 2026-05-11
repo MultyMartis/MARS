@@ -141,7 +141,7 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | **Purpose** | **Catalog** of agents and **factory** contract for creating agent **definitions** consistent with registry and governance. |
 | **Related folders** | [../agents/](../agents/) |
 | **Status** | **done-docs** |
-| **What exists now** | `registry.md`, `agent-card-template.md`, `agent-factory-v0.md`, `agent-builder-contract.md`, folder README. |
+| **What exists now** | `registry.md`, `agent-card-template.md`, `agent-factory-v0.md`, `agent-builder-contract.md`, folder README, [`../agents/cards/`](../agents/cards/) **Website Factory core pipeline** agent cards v0 (`*-agent-v0.md`, documentation-only). |
 | **What is missing** | **planned-implementation**: factory automation, runtime agent processes. |
 | **Next required action** | Keep registry rows aligned with **state-model** and **versioning-model** when roles change. |
 | **Dependencies** | Stages 2–4. |
