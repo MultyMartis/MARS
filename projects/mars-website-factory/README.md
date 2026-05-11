@@ -40,6 +40,16 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [artifact-transfer-prompt-rules-v0.md](artifact-transfer-prompt-rules-v0.md) | **Artifact transfer prompt rules v0** — immutability, approval inheritance, revisions, QA inheritance |
 | [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md) | **QA prompt rules v0** — evidence-based QA, no fake approvals, blocker / waiver, Validator relationship |
 | [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) | **Frontend prompt discipline v0** — Gulp-oriented source-first rules, SCSS modularity, data-* JS, no `dist/` edits |
+| [execution-semantics-overview-v0.md](execution-semantics-overview-v0.md) | **Execution Semantics Layer v0 — overview** — operational methodology for stage / artifact / approval / QA / delivery lifecycle; **not** a scheduler / queue / runtime |
+| [stage-state-model-v0.md](stage-state-model-v0.md) | **Stage state model v0** — conceptual states, transitions, ownership, freeze / reopen / invalidation |
+| [artifact-state-model-v0.md](artifact-state-model-v0.md) | **Artifact state model v0** — lifecycle, mutable/immutable regions, lineage, replacement philosophy, approval inheritance |
+| [approval-semantics-v0.md](approval-semantics-v0.md) | **Approval semantics v0** — scope, partial / conditional / inheritance / expiration / revocation; HITL-anchored |
+| [revision-semantics-v0.md](revision-semantics-v0.md) | **Revision semantics v0** — scope, lineage, ownership, impact, freeze breaking, QA reset, history |
+| [regeneration-semantics-v0.md](regeneration-semantics-v0.md) | **Regeneration semantics v0** — partial / full / safe / unsafe; boundaries; triggers; dependency-aware; HITL-anchored |
+| [dependency-invalidation-v0.md](dependency-invalidation-v0.md) | **Dependency invalidation v0** — upstream/downstream propagation across blueprint / design / SEO / frontend; partial rerun |
+| [orchestration-signals-v0.md](orchestration-signals-v0.md) | **Orchestration signals v0** — signal source, propagation, escalation, resolution, lifecycle; tied to system signals dictionary |
+| [qa-gating-semantics-v0.md](qa-gating-semantics-v0.md) | **QA gating semantics v0** — gate lifecycle, blocker / pass / fail / conditional / waiver, freeze, delivery blocking, HITL override |
+| [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md) | **Delivery lifecycle v0** — candidate, pre-delivery validation, release approval, export package, handoff, rollback, archive, post-delivery revision |
 | [workflow-map.md](workflow-map.md) | End-to-end flow, HITL, Cursor vs future runtime |
 | [qa-validation-model.md](qa-validation-model.md) | QA lanes and Validator integration |
 | [frontend-production-model.md](frontend-production-model.md) | Gulp-oriented production model (legacy-aligned) |
@@ -65,4 +75,4 @@ Authoritative project row: [`../../registry/project-registry.md`](../../registry
 
 ---
 
-*Last updated: 2026-05-11 — **Prompt Standards Layer v0** (overview, structure, agent behavior, Cursor execution, reporting, HITL boundary, SAFE UNKNOWN, artifact transfer, QA prompt rules, frontend prompt discipline; **documentation only — not a prompt engine, not a runtime**); previously: Artifact Architecture Layer v0 (overview, types, objective/CTA/trust/section/SEO/conversion semantics, frontend artifacts, QA payloads); Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*
+*Last updated: 2026-05-11 — **Execution Semantics Layer v0** (overview, stage state, artifact state, approval, revision, regeneration, dependency invalidation, orchestration signals, QA gating, delivery lifecycle; **documentation only — not a runtime engine, not a scheduler, not a queue, not a workflow daemon, not an autonomous execution platform**); previously: Prompt Standards Layer v0 (overview, structure, agent behavior, Cursor execution, reporting, HITL boundary, SAFE UNKNOWN, artifact transfer, QA prompt rules, frontend prompt discipline; **documentation only — not a prompt engine, not a runtime**); Artifact Architecture Layer v0 (overview, types, objective/CTA/trust/section/SEO/conversion semantics, frontend artifacts, QA payloads); Website Factory Workflow v0; agent cards v0; registries + handoff contracts + blueprint QA; documentation only.*

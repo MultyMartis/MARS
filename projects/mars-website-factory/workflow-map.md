@@ -6,6 +6,8 @@
 
 **Prompt standards (Phase 3 doc):** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md) — operational discipline for prompts, execution, reporting, HITL, SAFE UNKNOWN, artifact transfer, QA, and frontend; **not** a prompt engine, **not** a runtime. Each factory stage below maps to a **prompt boundary** per [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), executed in Cursor per [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), reported per [reporting-standard-v0.md](reporting-standard-v0.md).
 
+**Execution semantics (Phase 4 doc):** [execution-semantics-overview-v0.md](execution-semantics-overview-v0.md) — operational methodology for **lifecycle behavior** of stages, artifacts, approvals, QA gates, revisions, regenerations, invalidations, signals, and delivery. Each stage below has a **state** ([stage-state-model-v0.md](stage-state-model-v0.md)); its artifacts have **states** ([artifact-state-model-v0.md](artifact-state-model-v0.md)); HITL gates anchor approvals ([approval-semantics-v0.md](approval-semantics-v0.md)); changes propagate per [dependency-invalidation-v0.md](dependency-invalidation-v0.md); QA verdicts behave per [qa-gating-semantics-v0.md](qa-gating-semantics-v0.md); release flows through [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md). **Not** a runtime engine, **not** a scheduler, **not** a queue, **not** a workflow daemon, **not** an autonomous execution platform.
+
 ## Target high-level flow
 
 ```text
