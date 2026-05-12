@@ -55,10 +55,19 @@ mars-runtime/state/runs/
 projects/seo-content-agent/raw/
 projects/metabot-seo-content-agent/raw/
 
-# Local frontend workspaces (tracked placeholders only; see workspaces/README.md)
+# Local frontend workspaces (see workspaces/README.md)
 workspaces/*
 !workspaces/README.md
 !workspaces/triumph-manipulator-landing/
+# Triumph Manipulator Landing — explicit allow-list (everything else under this dir stays ignored)
 workspaces/triumph-manipulator-landing/*
 !workspaces/triumph-manipulator-landing/README.md
 !workspaces/triumph-manipulator-landing/.gitkeep
+!workspaces/triumph-manipulator-landing/.gitignore
+!workspaces/triumph-manipulator-landing/package.json
+!workspaces/triumph-manipulator-landing/package-lock.json
+!workspaces/triumph-manipulator-landing/gulpfile.js
+!workspaces/triumph-manipulator-landing/src/
+!workspaces/triumph-manipulator-landing/src/**
+!workspaces/triumph-manipulator-landing/dist/
+!workspaces/triumph-manipulator-landing/dist/**

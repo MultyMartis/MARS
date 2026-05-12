@@ -1,0 +1,8 @@
+@use '../utils/tokens' as tm;
+
+// Reference: projects/triumph-manipulator-landing/design/mockups/02.png
+.landing-strip-02 {
+    max-width: tm.$tm-container-max-width;
+    margin-inline: auto;
+    padding-inline: tm.$tm-container-inline-padding;
+}

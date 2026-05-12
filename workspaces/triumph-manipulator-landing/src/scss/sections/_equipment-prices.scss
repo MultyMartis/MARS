@@ -1,0 +1,412 @@
+@use '../utils/tokens' as tm;
+
+// Светлая секция «Техника и цены» (ref: design/mockups/02.png).
+.equipment-prices {
+    padding: tm.$tm-section-padding-mobile 0;
+    font-family: tm.$tm-font-display;
+    color: tm.$tm-color-text;
+    background: tm.$tm-color-white;
+}
+
+.equipment-prices__inner {
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-10;
+}
+
+.equipment-prices__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: tm.$tm-space-8 tm.$tm-space-10;
+}
+
+.equipment-prices__intro {
+    flex: 1 1 min(36rem, 100%);
+    max-width: min(44rem, 100%);
+}
+
+.equipment-prices__eyebrow {
+    margin: 0 0 tm.$tm-space-3;
+    font-size: tm.$tm-text-sm;
+    font-weight: tm.$tm-weight-extrabold;
+    line-height: tm.$tm-line-tight;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: tm.$tm-color-accent;
+}
+
+.equipment-prices__title {
+    margin: 0 0 tm.$tm-space-5;
+    font-size: clamp(28px, 3.4vw, 48px);
+    font-weight: tm.$tm-weight-black;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: tm.$tm-color-text;
+}
+
+.equipment-prices__title-line {
+    display: block;
+}
+
+.equipment-prices__title-line--rule {
+    position: relative;
+    width: fit-content;
+    padding-bottom: tm.$tm-space-4;
+}
+
+.equipment-prices__title-line--rule::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 6.5rem;
+    max-width: 100%;
+    height: 3px;
+    border-radius: 0;
+    background: tm.$tm-gradient-red;
+}
+
+.equipment-prices__lead {
+    margin: 0;
+    font-size: clamp(tm.$tm-text-sm, 1.6vw, tm.$tm-text-md);
+    line-height: tm.$tm-line-base;
+    color: rgba(10, 18, 32, 0.82);
+}
+
+.equipment-prices__cta {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: tm.$tm-space-3;
+    min-width: min(17.5rem, 100%);
+}
+
+.equipment-prices__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: tm.$tm-space-3;
+    min-height: 52px;
+    padding-inline: tm.$tm-space-6;
+    border-radius: 0;
+    box-shadow: tm.$tm-shadow-button;
+}
+
+.equipment-prices__cta-icon {
+    flex-shrink: 0;
+}
+
+.equipment-prices__cta-note {
+    margin: 0;
+    font-size: tm.$tm-text-xs;
+    line-height: 1.35;
+    color: tm.$tm-color-muted;
+    text-align: center;
+}
+
+.equipment-prices .btn.btn--accent {
+    border-radius: 0;
+}
+
+.equipment-prices__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: tm.$tm-space-6;
+    align-items: stretch;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid tm.$tm-color-border;
+    border-radius: 0;
+    background: tm.$tm-color-white;
+    overflow: hidden;
+}
+
+.price-card__media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: tm.$tm-color-light;
+}
+
+.price-card__badge {
+    position: absolute;
+    top: tm.$tm-space-4;
+    left: tm.$tm-space-4;
+    z-index: 1;
+    padding: tm.$tm-space-2 tm.$tm-space-3;
+    font-size: tm.$tm-text-xs;
+    font-weight: tm.$tm-weight-extrabold;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: tm.$tm-color-white;
+    background: tm.$tm-color-accent;
+    border-radius: 0;
+}
+
+.price-card__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 72% center;
+}
+
+.price-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-5;
+    padding: tm.$tm-space-6 tm.$tm-space-5 tm.$tm-space-4;
+    flex: 1 1 auto;
+}
+
+.price-card__title {
+    margin: 0;
+    font-size: clamp(1rem, 1.25vw, 1.125rem);
+    font-weight: tm.$tm-weight-extrabold;
+    line-height: tm.$tm-line-tight;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: tm.$tm-color-text;
+}
+
+.price-card__specs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: tm.$tm-space-3 tm.$tm-space-2;
+    margin: 0;
+}
+
+.price-card__spec {
+    margin: 0;
+}
+
+.price-card__spec-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: tm.$tm-space-2;
+    margin: 0;
+    text-align: center;
+}
+
+.price-card__spec-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(10, 18, 32, 0.38);
+}
+
+.price-card__spec-icon svg {
+    display: block;
+}
+
+.price-card__spec-label {
+    font-size: 0.6875rem;
+    font-weight: tm.$tm-weight-semibold;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(10, 18, 32, 0.55);
+}
+
+.price-card__spec-value {
+    font-size: tm.$tm-text-sm;
+    font-weight: tm.$tm-weight-extrabold;
+    line-height: 1.2;
+    color: tm.$tm-color-text;
+}
+
+.price-card__suitable {
+    display: flex;
+    align-items: flex-start;
+    gap: tm.$tm-space-3;
+    margin: 0;
+    padding-top: tm.$tm-space-2;
+    border-top: 1px solid rgba(10, 18, 32, 0.08);
+    font-size: tm.$tm-text-sm;
+    line-height: tm.$tm-line-base;
+    color: rgba(10, 18, 32, 0.88);
+}
+
+.price-card__suitable-icon {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    color: tm.$tm-color-accent;
+}
+
+.price-card__suitable-icon svg {
+    display: block;
+}
+
+.price-card__footer {
+    margin-top: auto;
+    padding: tm.$tm-space-5;
+    border-top: 1px solid rgba(10, 18, 32, 0.08);
+    background: tm.$tm-color-white;
+}
+
+.price-card__footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: tm.$tm-space-4;
+}
+
+.price-card__price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: tm.$tm-space-2 tm.$tm-space-3;
+    margin: 0;
+}
+
+.price-card__price-prefix {
+    font-size: tm.$tm-text-sm;
+    font-weight: tm.$tm-weight-semibold;
+    text-transform: lowercase;
+    color: tm.$tm-color-muted;
+}
+
+.price-card__price-value {
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: tm.$tm-weight-black;
+    letter-spacing: -0.02em;
+    color: tm.$tm-color-text;
+}
+
+.price-card__price-unit {
+    font-size: tm.$tm-text-sm;
+    font-weight: tm.$tm-weight-bold;
+    color: tm.$tm-color-text;
+}
+
+.price-card__order {
+    min-height: 48px;
+    padding-inline: tm.$tm-space-5;
+    font-size: tm.$tm-text-sm;
+    letter-spacing: 0.06em;
+}
+
+.price-card__order-note {
+    margin: tm.$tm-space-4 0 0;
+    font-size: tm.$tm-text-xs;
+    line-height: 1.4;
+    color: tm.$tm-color-muted;
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    .equipment-prices {
+        padding: tm.$tm-section-padding-tablet 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .equipment-prices {
+        padding: tm.$tm-section-padding-desktop 0;
+    }
+
+    .equipment-prices__cta {
+        align-items: flex-end;
+    }
+
+    .equipment-prices__cta-note {
+        text-align: right;
+    }
+}
+
+@media (max-width: 1199px) {
+    .equipment-prices__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .price-card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: min(28rem, 100%);
+        justify-self: center;
+    }
+
+    .price-card__specs {
+        gap: tm.$tm-space-3;
+    }
+}
+
+@media (max-width: 767px) {
+    .equipment-prices__header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .equipment-prices__cta {
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .equipment-prices__cta-btn {
+        width: 100%;
+    }
+
+    .equipment-prices__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card:nth-child(3) {
+        grid-column: auto;
+        max-width: none;
+        justify-self: stretch;
+    }
+
+    .price-card__footer-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .price-card__order {
+        width: 100%;
+    }
+
+    .price-card__order-note {
+        text-align: center;
+    }
+
+    .price-card__specs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 479px) {
+    .price-card__specs {
+        grid-template-columns: 1fr;
+        gap: tm.$tm-space-4;
+    }
+
+    .price-card__spec-inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .price-card__spec-icon {
+        margin-right: tm.$tm-space-2;
+    }
+
+    .price-card__spec-label {
+        flex: 1 1 auto;
+    }
+
+    .price-card__spec-value {
+        width: 100%;
+        padding-left: 2rem;
+    }
+}

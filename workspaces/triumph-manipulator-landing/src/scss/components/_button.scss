@@ -1,0 +1,61 @@
+@use '../utils/tokens' as tm;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 32px;
+    border: 0;
+    border-radius: tm.$tm-radius-sm;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-text-base;
+    font-weight: tm.$tm-weight-extrabold;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: tm.$tm-focus-ring;
+}
+
+.btn--primary,
+.btn--accent {
+    color: tm.$tm-color-white;
+    background: tm.$tm-gradient-red;
+    box-shadow: tm.$tm-shadow-button;
+}
+
+.btn--primary:hover,
+.btn--accent:hover {
+    transform: translateY(-1px);
+    box-shadow: tm.$tm-shadow-button-hover;
+    background: tm.$tm-gradient-red;
+    border-color: transparent;
+}
+
+.btn--outline {
+    color: tm.$tm-color-accent;
+    background: transparent;
+    border: 1px solid tm.$tm-color-accent;
+}
+
+.btn--outline:hover {
+    color: tm.$tm-color-white;
+    background: tm.$tm-color-accent;
+}
+
+// First screen CTAs: sharp rectangles (overrides base `.btn` 4px when both classes apply).
+.btn.btn--header,
+.btn.btn--hero {
+    border-radius: 0;
+}

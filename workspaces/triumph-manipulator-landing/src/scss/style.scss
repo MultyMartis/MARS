@@ -1,0 +1,18 @@
+@use 'base/reset';
+@use 'base/base';
+@use 'utils/variables';
+
+@use 'layout/header';
+@use 'layout/footer';
+
+@use 'sections/hero';
+@use 'sections/page-intro';
+@use 'sections/advantages';
+@use 'sections/contacts';
+@use 'sections/equipment-prices';
+@use 'sections/trust-reviews';
+@use 'sections/faq-cta-footer';
+
+@use 'components/button';
+@use 'components/breadcrumb';
+@use 'components/modal';

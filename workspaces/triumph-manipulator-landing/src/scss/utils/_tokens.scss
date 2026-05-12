@@ -1,0 +1,105 @@
+@use 'variables' as v;
+
+// Triumph clean design system — $tm-* semantic tokens (canonical for this landing).
+
+// --- Neutrals & surfaces ---
+$tm-color-dark: #050b16;
+$tm-color-dark-2: #07111f;
+$tm-color-dark-3: #0b1628;
+
+$tm-color-white: #ffffff;
+$tm-color-light: #f6f7f9;
+$tm-color-muted: #7b8494;
+$tm-color-text: #0a1220;
+$tm-color-text-light: #d8dde6;
+
+// --- Brand / accent ---
+$tm-color-accent: #e30621;
+$tm-color-accent-hover: #f01832;
+$tm-color-accent-dark: #b90018;
+
+// --- Semantic (existing names; values mapped to DS) ---
+$tm-color-ink: $tm-color-text-light;
+$tm-color-ink-muted: rgba(216, 221, 230, 0.78);
+$tm-color-surface: $tm-color-dark;
+$tm-color-surface-elevated: $tm-color-dark-2;
+
+$tm-color-whatsapp: #25d366;
+$tm-color-telegram: #27a7e7;
+$tm-color-max: #4f55ff;
+
+$tm-color-border: #d9dde5;
+$tm-color-border-dark: rgba(255, 255, 255, 0.16);
+
+// --- Typography ---
+$tm-font-display: 'Montserrat', Arial, sans-serif;
+$tm-weight-regular: 400;
+$tm-weight-medium: 500;
+$tm-weight-semibold: 600;
+$tm-weight-bold: 700;
+$tm-weight-extrabold: 800;
+$tm-weight-black: 900;
+
+$tm-h1-size: clamp(42px, 4.4vw, 72px);
+$tm-h1-line-height: 0.95;
+$tm-h1-letter-spacing: -0.04em;
+$tm-h1-weight: $tm-weight-black;
+
+$tm-text-lg: 22px;
+$tm-text-md: 18px;
+$tm-text-base: 16px;
+$tm-text-sm: 14px;
+$tm-text-xs: 12px;
+
+$tm-line-base: 1.45;
+$tm-line-tight: 1.15;
+
+// --- Radii (hero/header: use sm or 0 only; md+ reserved for cards/sections) ---
+$tm-radius-sm: 4px;
+$tm-radius-md: 8px;
+$tm-radius-lg: 12px;
+$tm-radius-xl: 18px;
+
+// --- Gradients & shadows ---
+$tm-gradient-red: linear-gradient(135deg, #f01832 0%, #d5001c 100%);
+$tm-gradient-hero-left:
+    linear-gradient(
+        90deg,
+        rgba(5, 8, 15, 0.96) 0%,
+        rgba(5, 8, 15, 0.88) 28%,
+        rgba(5, 8, 15, 0.42) 58%,
+        rgba(5, 8, 15, 0.12) 100%
+    );
+$tm-gradient-dark-section: linear-gradient(180deg, #07111f 0%, #040914 100%);
+
+$tm-shadow-button: 0 14px 30px rgba(227, 6, 33, 0.28);
+$tm-shadow-button-hover: 0 18px 36px rgba(227, 6, 33, 0.36);
+
+// --- Focus ---
+$tm-focus-ring: 0 0 0 2px #{$tm-color-surface}, 0 0 0 4px #{$tm-color-accent};
+
+// --- Layout ---
+$tm-header-offset: 5rem;
+
+$tm-hero-min-height: 36rem;
+$tm-hero-trust-break: 900px;
+
+$tm-container-max-width: v.$container-width;
+$tm-container-inline-padding: v.$container-padding;
+
+// --- Spacing scale (4px base, rem for fluid compatibility with existing rules) ---
+$tm-space-1: 0.25rem;
+$tm-space-2: 0.5rem;
+$tm-space-3: 0.75rem;
+$tm-space-4: 1rem;
+$tm-space-5: 1.25rem;
+$tm-space-6: 1.5rem;
+$tm-space-7: 1.75rem;
+$tm-space-8: 2rem;
+$tm-space-10: 2.5rem;
+$tm-space-12: 3rem;
+
+// --- Section rhythm (DS) ---
+$tm-section-padding-desktop: 96px;
+$tm-section-padding-tablet: 72px;
+$tm-section-padding-mobile: 56px;

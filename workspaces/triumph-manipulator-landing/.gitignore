@@ -1,0 +1,7 @@
+node_modules/
+# dist/ is tracked from repo root for this workspace (MARS checkpoint policy)
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

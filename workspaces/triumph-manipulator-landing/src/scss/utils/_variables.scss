@@ -1,0 +1,13 @@
+// Triumph clean design system — layout primitives (canonical breakpoints desktop-first).
+$bp-desktop: 1200px;
+$bp-tablet: 1024px;
+$bp-mobile: 768px;
+$bp-small: 480px;
+
+$container-width: 1540px;
+$container-padding-desktop: 72px;
+$container-padding-tablet: 32px;
+$container-padding-mobile: 16px;
+
+// Legacy name: strips/components still reference via tokens forward.
+$container-padding: $container-padding-desktop;

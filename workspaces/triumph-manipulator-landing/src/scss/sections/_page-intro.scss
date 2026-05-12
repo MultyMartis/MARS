@@ -1,0 +1,26 @@
+.page-intro {
+    padding: 36px 0 24px;
+}
+
+.page-intro__title {
+    margin: 0 0 12px;
+    font-size: 40px;
+    line-height: 1.15;
+}
+
+.page-intro__text {
+    margin: 0;
+    max-width: 760px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .page-intro__title {
+        font-size: 32px;
+    }
+
+    .page-intro__text {
+        font-size: 16px;
+    }
+}
