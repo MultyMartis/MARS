@@ -2,7 +2,7 @@
 
 **Scope:** **Documentation and contracts only** — **no** code generation mandate, **no** new runtime.
 
-**Numbering note:** Sections titled **Phase 5–8 (documentation)** below are **in-pack documentation milestone groups** (reference project layer, semantic relationship layer, artifact bus layer, validation runtime model). They **roll up to** [roadmap.md](roadmap.md) **Phase 4** (documentation maturity for execution semantics, reference/semantic/bus/validation docs). They **do not** mean [roadmap.md](roadmap.md) **Phase 5** (Cursor-assisted production) or **Phases 6–7** (runtime / automation) — those are **later** roadmap bands, not the section numbers used here.
+**Numbering note:** Sections titled **Phase 5–8 (documentation)** below are **in-pack documentation milestone groups** (reference project layer, semantic relationship layer, artifact bus layer, validation runtime model). They **roll up to** [roadmap.md](roadmap.md) **Phase 4** (documentation maturity for execution semantics, reference/semantic/bus/validation docs). They **do not** mean [roadmap.md](roadmap.md) **Phase 5** (Cursor-assisted production) or **Phases 6–7** (runtime / automation) — those are **later** roadmap bands, not the section numbers used here. Sections **Phase 9–10 (documentation)** (**first operational runbook v0**, **operational templates layer v0**) **roll up to** [roadmap.md](roadmap.md) **Phase 5** — still **documentation only**, **not** runtime.
 
 ## Proposed concrete deliverables
 
@@ -129,6 +129,17 @@
 | P9-7 | **Reference run failure & recovery** | **Done (doc):** [reference-run-failure-recovery-v0.md](reference-run-failure-recovery-v0.md) — partial failure, stage rollback, QA fail, stale artifacts, freeze break, delivery rollback, escalation; **no automatic rollback engine**. |
 | P9-8 | **Reference run reporting** | **Done (doc):** [reference-run-reporting-v0.md](reference-run-reporting-v0.md) — stage/QA/escalation/invalidation/delivery/freeze/revision reports aligned to [reporting-standard-v0.md](reporting-standard-v0.md). |
 | P9-9 | **Reference execution case #1 (Triumph Manipulator Landing)** | **Done (doc):** [reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md](reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md) + linked v0 artifacts — intake through delivery readiness as a **documented simulation**; **not** a built site, **not** runtime orchestration. |
+
+## Phase 10 (documentation) — operational templates layer v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P10-1 | **Operational templates overview** | **Done (doc):** [operational-template-overview-v0.md](operational-template-overview-v0.md) — definitions, relationships to workflow / artifact bus / execution semantics / reference runs / prompt standards / QA / HITL; **templates ≠ runtime automation**. |
+| P10-2 | **Reference + site-type templates** | **Done (doc):** [reference-project-template-v0.md](reference-project-template-v0.md), [service-landing-template-v0.md](service-landing-template-v0.md), [geo-landing-template-v0.md](geo-landing-template-v0.md), [catalog-project-template-v0.md](catalog-project-template-v0.md), [ai-visibility-template-v0.md](ai-visibility-template-v0.md), [multi-page-site-template-v0.md](multi-page-site-template-v0.md) — reusable shells; **no** ranking / LLM outcome / deploy guarantees where prohibited. |
+| P10-3 | **Delivery + review templates** | **Done (doc):** [frontend-delivery-template-v0.md](frontend-delivery-template-v0.md), [design-review-template-v0.md](design-review-template-v0.md), [qa-review-template-v0.md](qa-review-template-v0.md), [hitl-review-template-v0.md](hitl-review-template-v0.md), [revision-cycle-template-v0.md](revision-cycle-template-v0.md), [delivery-readiness-template-v0.md](delivery-readiness-template-v0.md) — Gulp-oriented frontend discipline, evidence-first QA, HITL without fake signatures, readiness without deployment claims. |
+| P10-4 | **Bootstrap + session templates** | **Done (doc):** [project-bootstrap-template-v0.md](project-bootstrap-template-v0.md), [operator-session-template-v0.md](operator-session-template-v0.md) — project start + Cursor session REPORT/git/artifact hygiene. |
+
+**Numbering note:** This **Phase 10** section is an **in-pack documentation milestone group** for operational templates; it **rolls up to** [roadmap.md](roadmap.md) **Phase 5** (Cursor-assisted production **documentation**) alongside the first operational runbook and reference execution case — **not** roadmap Phase 10 (Model layer in [master-build-map.md](../../governance/master-build-map.md)).
 
 ## Out of scope for phase 1
 
