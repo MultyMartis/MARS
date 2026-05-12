@@ -54,3 +54,11 @@ htmlcov/
 mars-runtime/state/runs/
 projects/seo-content-agent/raw/
 projects/metabot-seo-content-agent/raw/
+
+# Local frontend workspaces (tracked placeholders only; see workspaces/README.md)
+workspaces/*
+!workspaces/README.md
+!workspaces/triumph-manipulator-landing/
+workspaces/triumph-manipulator-landing/*
+!workspaces/triumph-manipulator-landing/README.md
+!workspaces/triumph-manipulator-landing/.gitkeep

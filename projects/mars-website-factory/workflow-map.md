@@ -6,6 +6,8 @@
 
 **Reference execution case #1 (documentation-first):** [reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md](reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md) — **Triumph / Manipulator Landing** end-to-end artifact chain (intake → strategy → IA → blueprint → handoffs → QA → validation → delivery readiness); **not** a production website build, **not** hidden automation.
 
+**Production project pack (initialized):** [../triumph-manipulator-landing/README.md](../triumph-manipulator-landing/README.md) — **Triumph / Manipulator Landing** governance folder, runbook, and Frontend Gulp Agent brief; local sources intended under [`../../workspaces/triumph-manipulator-landing/`](../../workspaces/triumph-manipulator-landing/) per project docs; **not** runtime, **not** deployed output by default.
+
 **Operational templates layer (documentation v0):** [operational-template-overview-v0.md](operational-template-overview-v0.md) — reusable Markdown **shells** for project types (service / geo / catalog / multi-page / AI visibility posture), delivery/review gates (design, QA, HITL, revision, delivery readiness), bootstrap, and operator sessions; **distills** workflow + runbook + QA/HITL + prompt discipline into **copyable structure**; **not** runtime automation, **not** executable workflows, **not** orchestration daemons or generated Task/json pipelines.
 
 **Artifact semantics (Phase 2 doc):** [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md) — normalized **artifact / payload** vocabulary layered on this flow; **not** executable schemas.

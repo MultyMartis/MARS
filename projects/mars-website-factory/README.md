@@ -8,6 +8,12 @@
 
 A **target architecture** for a **multi-agent, contract-driven** website production system: intake → strategy → IA → blueprints → wireframes → design → frontend production → QA → human approval → delivery. Execution in Phase 1 remains **human-supervised** and **prompt-driven** (see `../../governance/execution-model.md`).
 
+## Production project packs
+
+| Project | Pack |
+|---------|------|
+| Triumph Manipulator Landing | [`../triumph-manipulator-landing/README.md`](../triumph-manipulator-landing/README.md) — MARS project documentation + [`../../workspaces/triumph-manipulator-landing/`](../../workspaces/triumph-manipulator-landing/) local frontend workspace placeholder |
+
 ## Pack index
 
 | Document | Purpose |
