@@ -97,6 +97,8 @@
 | P7-9 | **Delivery bus semantics** | **Done (doc):** [delivery-bus-semantics-v0.md](delivery-bus-semantics-v0.md) — release/delivery candidate, packages, authorities; pairs with [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md); **not** CI/CD automation. |
 | P7-10 | **Transfer QA rules** | **Done (doc):** [artifact-transfer-qa-rules-v0.md](artifact-transfer-qa-rules-v0.md) — transfer-layer finding classes, severity, blocking, waivers, **SAFE UNKNOWN**. |
 
+**Placement:** factory-wide bus semantics vs stage stacks — [layer-map.md](layer-map.md) §8.
+
 ## Out of scope for phase 1
 
 - Gulp project scaffolding in this repo.

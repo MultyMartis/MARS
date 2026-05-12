@@ -31,6 +31,7 @@ The **Artifact Bus Layer v0** adds a **normalized vocabulary for artifact moveme
 | **Transfer invalidation** | Declaring that a previously valid **transfer** (or consumption assumption) is **no longer trustworthy** because upstream revision, semantic invalidation, or QA failure changed the basis; per [artifact-transfer-semantics-v0.md](artifact-transfer-semantics-v0.md) and [dependency-invalidation-v0.md](dependency-invalidation-v0.md). |
 | **Stale transfer** | A consumption or routing decision that **still references** an upstream revision, approval, QA verdict, or semantic state that has been **superseded, invalidated, or expired**. Must be **explicitly flagged** — never silent. |
 | **Orphan artifact** | An artifact (or envelope) whose **lineage parent** is missing, **superseded without consumer update**, or whose **declared dependencies** no longer resolve. Consumption is **blocked** until lineage is repaired or **SAFE UNKNOWN** is bounded with HITL. |
+| **Artifact state propagation** | **Declared** refresh of envelope / REPORT fields (e.g. **qa_state**, **semantic_state**, **approval_state**) so downstream readers see **current** upstream truth after a revision, invalidation, or QA outcome. This is **authoring discipline** and **traceable narrative** — **not** background synchronization, **not** pub/sub, **not** a hidden invalidation engine, **not** autonomous orchestration. |
 
 ---
 
@@ -89,3 +90,4 @@ The **Artifact Bus Layer v0** adds a **normalized vocabulary for artifact moveme
 | Date | Change |
 |------|--------|
 | 2026-05-12 | **v0** — initial Artifact Bus Layer overview (documentation only). |
+| 2026-05-12 | **v0** — **artifact state propagation** definition added; removed stray non-pack appendix from file tail. |

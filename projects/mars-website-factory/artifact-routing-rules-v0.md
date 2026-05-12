@@ -108,6 +108,13 @@ When upstream **semantic** or **structural** change invalidates downstream:
 |--------------------------|--------|
 | **Frontend QA fail** exposing blueprint contradiction | **Invalidates** trust in **Delivery Candidate** assembly for affected scope; route back to **S05–S11** minimum slice per [dependency-invalidation-v0.md](dependency-invalidation-v0.md); **Final Validation** and delivery **blocked** until new QA pass. |
 
+**Canonical shorthand (same meaning as the row above):**
+
+```text
+Frontend QA fail
+  → invalidates Delivery Candidate
+```
+
 Invalidation routes are **declared** in REPORT with **artifact_ids** + **revision_ids** affected.
 
 ---
@@ -176,3 +183,4 @@ Allowed **only** when all hold:
 | Date | Change |
 |------|--------|
 | 2026-05-12 | **v0** — initial routing rules (documentation only). |
+| 2026-05-12 | **v0** — explicit **Frontend QA fail → invalidates Delivery Candidate** shorthand block in §7. |

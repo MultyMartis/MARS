@@ -87,3 +87,9 @@ For each layer: **purpose**, **planned agents**, **expected artifacts**, **QA ga
 | **Expected artifacts** | Run records (**planned**), lifecycle log entries, approved stage transitions. |
 | **QA gates** | **hitl_gates** on **Task** (`workflows/task-contract-v0.md`); escalation on **SECURITY RISK**. |
 | **SAFE UNKNOWN risks** | Assuming autonomous orchestration without runtime; unclear ownership between human PM and Control Plane. |
+
+---
+
+## 8. Artifact Bus (cross-cutting documentation)
+
+The **Artifact Bus Layer v0** is **not** an eighth runtime pipeline — it is **shared semantics** for how logical artifacts are **enveloped, routed, transferred, published, consumed,** and **invalidated** across layers **1–7**, aligned with [website-factory-workflow-v0.md](website-factory-workflow-v0.md) and [execution-semantics-overview-v0.md](execution-semantics-overview-v0.md). SoT: [artifact-bus-overview-v0.md](artifact-bus-overview-v0.md) and linked bus docs in [README.md](README.md). **Documentation only** — **not** a queue, **not** an event engine, **not** Kafka/Rabbit-style transport, **not** async execution infrastructure, **not** hidden state sync.

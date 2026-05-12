@@ -4,7 +4,7 @@
 
 **Version:** v0.
 
-**Related:** [artifact-bus-overview-v0.md](artifact-bus-overview-v0.md), [artifact-routing-rules-v0.md](artifact-routing-rules-v0.md), [artifact-transfer-semantics-v0.md](artifact-transfer-semantics-v0.md), [artifact-publication-semantics-v0.md](artifact-publication-semantics-v0.md), [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md), [approval-semantics-v0.md](approval-semantics-v0.md), [reference-project-hitl-governance-v0.md](reference-project-hitl-governance-v0.md), [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md), [`../../AGENTS.md`](../../AGENTS.md).
+**Related:** [artifact-bus-overview-v0.md](artifact-bus-overview-v0.md), [artifact-routing-rules-v0.md](artifact-routing-rules-v0.md), [artifact-transfer-semantics-v0.md](artifact-transfer-semantics-v0.md), [artifact-publication-semantics-v0.md](artifact-publication-semantics-v0.md), [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md), [approval-semantics-v0.md](approval-semantics-v0.md), [reference-project-hitl-governance-v0.md](reference-project-hitl-governance-v0.md), [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md), [../../AGENTS.md](../../AGENTS.md).
 
 ---
 
@@ -98,3 +98,4 @@ Each violation is a **governance defect** — correct via **new REPORT**, **HITL
 | Date | Change |
 |------|--------|
 | 2026-05-12 | **v0** — initial artifact governance rules (documentation only). |
+| 2026-05-12 | **v0** — [AGENTS.md](../../AGENTS.md) related-link markdown repair. |
