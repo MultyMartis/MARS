@@ -68,7 +68,7 @@
 | P5-6 | **Reference delivery packages** | **Done (doc):** [reference-delivery-package-v0.md](reference-delivery-package-v0.md) — blueprint/design/frontend/QA/export/RC/delivery candidate package semantics. |
 | P5-7 | **Multi-page orchestration** | **Done (doc):** [multi-page-orchestration-v0.md](multi-page-orchestration-v0.md) — site graph semantics, clusters, linking, cannibalization, page vs site QA, cluster invalidation; **no** automation/orchestration-daemon claims. |
 
-**Remaining (not claimed done):** deeper field binding to `task-contract-v0` wire examples, runbook artifacts beyond layer prose, automated prompt / QA / lifecycle checks — **SAFE UNKNOWN** until authored.
+**Remaining (not claimed done):** deeper field binding to `task-contract-v0` wire examples, additional stage-sized prompt bundles beyond first operational v0, automated prompt / QA / lifecycle checks — **SAFE UNKNOWN** until authored.
 
 ## Phase 6 (documentation) — semantic relationship layer v0
 
@@ -115,6 +115,19 @@
 | P8-8 | **Validation escalation model** | **Done (doc):** [validation-escalation-model-v0.md](validation-escalation-model-v0.md) — triggers, authority, routing (documentation sense), freeze, signal mapping. |
 | P8-9 | **Validation consistency model** | **Done (doc):** [validation-consistency-model-v0.md](validation-consistency-model-v0.md) — cross-artifact/semantic/approval/QA/lineage/freeze/delivery consistency; contradictions; cascades. |
 | P8-10 | **Validation runtime boundary** | **Done (doc):** [validation-runtime-boundary-v0.md](validation-runtime-boundary-v0.md) — honesty list of non-deliverables (no engine, CI, background validation, Lighthouse/crawl, graph DB, persistence). |
+
+## Phase 9 (documentation) — first operational runbook v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P9-1 | **First operational runbook v0** | **Done (doc):** [first-operational-runbook-v0.md](first-operational-runbook-v0.md) — purpose, scope, philosophy, “run” definition, relationships to workflow v0 / HITL / Cursor / artifacts / Validator+QA; explicit non-runtime prohibitions. |
+| P9-2 | **Reference run sequence** | **Done (doc):** [reference-run-sequence-v0.md](reference-run-sequence-v0.md) — R01–R15 owner/inputs/outputs/artifacts/QA/HITL/freeze/invalidation/reporting per step. |
+| P9-3 | **Operator lane model** | **Done (doc):** [operator-lane-model-v0.md](operator-lane-model-v0.md) — strategy/SEO/UX/design/frontend/QA/HITL/Validator observer lanes; authority; global prohibitions (no self-approval, silent overrides, hidden revisions). |
+| P9-4 | **Human supervision model** | **Done (doc):** [human-supervision-model-v0.md](human-supervision-model-v0.md) — checkpoints cadence, approval/escalation/freeze/SAFE UNKNOWN supervision. |
+| P9-5 | **Project execution checkpoints** | **Done (doc):** [project-execution-checkpoints-v0.md](project-execution-checkpoints-v0.md) — C01–C08 evidence, blockers, rollback rules, waivers, reports. |
+| P9-6 | **Reference run artifact flow** | **Done (doc):** [reference-run-artifact-flow-v0.md](reference-run-artifact-flow-v0.md) — movement, lineage, freeze/revision/invalidation/QA propagation; diagram; SAFE UNKNOWN + blocked routes. |
+| P9-7 | **Reference run failure & recovery** | **Done (doc):** [reference-run-failure-recovery-v0.md](reference-run-failure-recovery-v0.md) — partial failure, stage rollback, QA fail, stale artifacts, freeze break, delivery rollback, escalation; **no automatic rollback engine**. |
+| P9-8 | **Reference run reporting** | **Done (doc):** [reference-run-reporting-v0.md](reference-run-reporting-v0.md) — stage/QA/escalation/invalidation/delivery/freeze/revision reports aligned to [reporting-standard-v0.md](reporting-standard-v0.md). |
 
 ## Out of scope for phase 1
 
