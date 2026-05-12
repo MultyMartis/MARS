@@ -99,6 +99,21 @@
 
 **Placement:** factory-wide bus semantics vs stage stacks — [layer-map.md](layer-map.md) §8.
 
+## Phase 8 (documentation) — validation runtime model v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P8-1 | **Validation runtime overview** | **Done (doc):** [validation-runtime-overview-v0.md](validation-runtime-overview-v0.md) — purpose, boundaries, layer connectivity, HITL/evidence philosophy, explicit prohibitions (no autonomous validator runtime, hidden engine, auto-repair/approval/waiver). |
+| P8-2 | **Validation lifecycle** | **Done (doc):** [validation-lifecycle-v0.md](validation-lifecycle-v0.md) — stages, transitions, forbidden transitions, revalidation, invalidation, freeze, dependency invalidation, HITL ownership. |
+| P8-3 | **Validator execution model** | **Done (doc):** [validator-execution-model-v0.md](validator-execution-model-v0.md) — conceptual inputs/outputs; no scheduler/queue/distributed runtime/workers; no deterministic LLM validation guarantee. |
+| P8-4 | **Validation evidence model** | **Done (doc):** [validation-evidence-model-v0.md](validation-evidence-model-v0.md) — evidence classes, confidence, provenance, freshness/stale, GOOD vs BAD examples. |
+| P8-5 | **Validation result semantics** | **Done (doc):** [validation-result-semantics-v0.md](validation-result-semantics-v0.md) — result fields, V0–V3 severity mapping, alignment with QA payloads. |
+| P8-6 | **Validation failure semantics** | **Done (doc):** [validation-failure-semantics-v0.md](validation-failure-semantics-v0.md) — failure kinds, propagation, invalidation, downstream impact, re-open logic. |
+| P8-7 | **Validation waiver semantics** | **Done (doc):** [validation-waiver-semantics-v0.md](validation-waiver-semantics-v0.md) — waiver types/authority; forbids silent/auto/implicit inheritance waivers. |
+| P8-8 | **Validation escalation model** | **Done (doc):** [validation-escalation-model-v0.md](validation-escalation-model-v0.md) — triggers, authority, routing (documentation sense), freeze, signal mapping. |
+| P8-9 | **Validation consistency model** | **Done (doc):** [validation-consistency-model-v0.md](validation-consistency-model-v0.md) — cross-artifact/semantic/approval/QA/lineage/freeze/delivery consistency; contradictions; cascades. |
+| P8-10 | **Validation runtime boundary** | **Done (doc):** [validation-runtime-boundary-v0.md](validation-runtime-boundary-v0.md) — honesty list of non-deliverables (no engine, CI, background validation, Lighthouse/crawl, graph DB, persistence). |
+
 ## Out of scope for phase 1
 
 - Gulp project scaffolding in this repo.
