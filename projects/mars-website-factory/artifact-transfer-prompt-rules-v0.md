@@ -4,7 +4,7 @@
 
 **Version:** v0.
 
-**Related:** [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md), [artifact-types-v0.md](artifact-types-v0.md), [website-factory-workflow-v0.md](website-factory-workflow-v0.md), [page-blueprint-contract-v0.md](page-blueprint-contract-v0.md), [design-handoff-contract-v0.md](design-handoff-contract-v0.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md).
+**Related:** [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md), [artifact-types-v0.md](artifact-types-v0.md), [website-factory-workflow-v0.md](website-factory-workflow-v0.md), [page-blueprint-contract-v0.md](page-blueprint-contract-v0.md), [design-handoff-contract-v0.md](design-handoff-contract-v0.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [artifact-bus-overview-v0.md](artifact-bus-overview-v0.md) (Artifact Bus Layer v0 — envelope/routing/transfer discipline; **documentation only**).
 
 ---
 

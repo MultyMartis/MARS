@@ -82,6 +82,21 @@
 | P6-8 | **Semantic freeze semantics** | **Done (doc):** [semantic-freeze-semantics-v0.md](semantic-freeze-semantics-v0.md) — freeze, reopen, supersede, rollback, HITL. |
 | P6-9 | **Semantic QA rules** | **Done (doc):** [semantic-qa-rules-v0.md](semantic-qa-rules-v0.md) — semantic QA scope, findings, evidence, waivers. |
 
+## Phase 7 (documentation) — artifact bus layer v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P7-1 | **Artifact bus overview** | **Done (doc):** [artifact-bus-overview-v0.md](artifact-bus-overview-v0.md) — bus philosophy, definitions, non-claims (no queue/event/runtime bus). |
+| P7-2 | **Envelope model** | **Done (doc):** [artifact-envelope-model-v0.md](artifact-envelope-model-v0.md) — minimum fields, immutable/mutable regions, supersede, stale/orphan. |
+| P7-3 | **Routing rules** | **Done (doc):** [artifact-routing-rules-v0.md](artifact-routing-rules-v0.md) — allowed/forbidden/partial/revision/rollback/invalidation/QA/delivery routes; authority; freeze. |
+| P7-4 | **Transfer semantics** | **Done (doc):** [artifact-transfer-semantics-v0.md](artifact-transfer-semantics-v0.md) — inheritance, invalidation, downgrade, freeze break, partial transfer. |
+| P7-5 | **Lineage semantics** | **Done (doc):** [artifact-lineage-semantics-v0.md](artifact-lineage-semantics-v0.md) — parent/child/sibling/supersede/rollback/branch/frozen; drift; invalidation; orphaning. |
+| P7-6 | **Publication semantics** | **Done (doc):** [artifact-publication-semantics-v0.md](artifact-publication-semantics-v0.md) — publication classes, authority, visibility, freeze, rollback. |
+| P7-7 | **Consumption rules** | **Done (doc):** [artifact-consumption-rules-v0.md](artifact-consumption-rules-v0.md) — consume/reject/invalidate/reopen/partial; authority; stale/orphan/invalid. |
+| P7-8 | **Artifact governance** | **Done (doc):** [artifact-governance-rules-v0.md](artifact-governance-rules-v0.md) — immutability, revision/rollback/freeze/delivery governance; explicit prohibitions. |
+| P7-9 | **Delivery bus semantics** | **Done (doc):** [delivery-bus-semantics-v0.md](delivery-bus-semantics-v0.md) — release/delivery candidate, packages, authorities; pairs with [delivery-lifecycle-v0.md](delivery-lifecycle-v0.md); **not** CI/CD automation. |
+| P7-10 | **Transfer QA rules** | **Done (doc):** [artifact-transfer-qa-rules-v0.md](artifact-transfer-qa-rules-v0.md) — transfer-layer finding classes, severity, blocking, waivers, **SAFE UNKNOWN**. |
+
 ## Out of scope for phase 1
 
 - Gulp project scaffolding in this repo.
