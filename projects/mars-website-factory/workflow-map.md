@@ -4,6 +4,8 @@
 
 **First operational runbook (human execution layer v0):** [first-operational-runbook-v0.md](first-operational-runbook-v0.md) — reference sequence **R01–R15**, operator lanes, checkpoints **C01–C08**, artifact flow, failure/recovery prose, reporting alignment; **not** a workflow engine, **not** background orchestration, **not** autonomous routing.
 
+**Reference execution case #1 (documentation-first):** [reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md](reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md) — **Triumph / Manipulator Landing** end-to-end artifact chain (intake → strategy → IA → blueprint → handoffs → QA → validation → delivery readiness); **not** a production website build, **not** hidden automation.
+
 **Artifact semantics (Phase 2 doc):** [artifact-architecture-overview-v0.md](artifact-architecture-overview-v0.md) — normalized **artifact / payload** vocabulary layered on this flow; **not** executable schemas.
 
 **Prompt standards (Phase 3 doc):** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md) — operational discipline for prompts, execution, reporting, HITL, SAFE UNKNOWN, artifact transfer, QA, and frontend; **not** a prompt engine, **not** a runtime. Each factory stage below maps to a **prompt boundary** per [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), executed in Cursor per [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), reported per [reporting-standard-v0.md](reporting-standard-v0.md).

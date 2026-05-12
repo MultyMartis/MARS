@@ -128,6 +128,7 @@
 | P9-6 | **Reference run artifact flow** | **Done (doc):** [reference-run-artifact-flow-v0.md](reference-run-artifact-flow-v0.md) — movement, lineage, freeze/revision/invalidation/QA propagation; diagram; SAFE UNKNOWN + blocked routes. |
 | P9-7 | **Reference run failure & recovery** | **Done (doc):** [reference-run-failure-recovery-v0.md](reference-run-failure-recovery-v0.md) — partial failure, stage rollback, QA fail, stale artifacts, freeze break, delivery rollback, escalation; **no automatic rollback engine**. |
 | P9-8 | **Reference run reporting** | **Done (doc):** [reference-run-reporting-v0.md](reference-run-reporting-v0.md) — stage/QA/escalation/invalidation/delivery/freeze/revision reports aligned to [reporting-standard-v0.md](reporting-standard-v0.md). |
+| P9-9 | **Reference execution case #1 (Triumph Manipulator Landing)** | **Done (doc):** [reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md](reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md) + linked v0 artifacts — intake through delivery readiness as a **documented simulation**; **not** a built site, **not** runtime orchestration. |
 
 ## Out of scope for phase 1
 
