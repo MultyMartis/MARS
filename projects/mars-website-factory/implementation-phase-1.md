@@ -68,6 +68,20 @@
 
 **Remaining (not claimed done):** deeper field binding to `task-contract-v0` wire examples, runbook artifacts beyond layer prose, automated prompt / QA / lifecycle checks — **SAFE UNKNOWN** until authored.
 
+## Phase 6 (documentation) — semantic relationship layer v0
+
+| # | Deliverable | Description |
+|---|-------------|-------------|
+| P6-1 | **Semantic relationship overview** | **Done (doc):** [semantic-relationship-overview-v0.md](semantic-relationship-overview-v0.md) — definitions, non-claims, alignment with adjacent layers. |
+| P6-2 | **Semantic object model** | **Done (doc):** [semantic-object-model-v0.md](semantic-object-model-v0.md) — canonical objects, ownership, lineage, supersede, drift. |
+| P6-3 | **Cross-artifact semantics** | **Done (doc):** [cross-artifact-semantics-v0.md](cross-artifact-semantics-v0.md) — Blueprint→Delivery; mismatch, drift, downgrade, freeze break. |
+| P6-4 | **Semantic dependency rules** | **Done (doc):** [semantic-dependency-rules-v0.md](semantic-dependency-rules-v0.md) — dependency kinds, severity, propagation scope, **SAFE UNKNOWN**. |
+| P6-5 | **Semantic inheritance** | **Done (doc):** [semantic-inheritance-v0.md](semantic-inheritance-v0.md) — site→component chain; overrides; **inheritance ≠ runtime propagation**. |
+| P6-6 | **Semantic consistency rules** | **Done (doc):** [semantic-consistency-rules-v0.md](semantic-consistency-rules-v0.md) — C0–C3, escalation, freeze break, delivery blocking. |
+| P6-7 | **Site semantic graph (conceptual)** | **Done (doc):** [site-semantic-graph-v0.md](site-semantic-graph-v0.md) — conceptual graph only; **not** a graph DB. |
+| P6-8 | **Semantic freeze semantics** | **Done (doc):** [semantic-freeze-semantics-v0.md](semantic-freeze-semantics-v0.md) — freeze, reopen, supersede, rollback, HITL. |
+| P6-9 | **Semantic QA rules** | **Done (doc):** [semantic-qa-rules-v0.md](semantic-qa-rules-v0.md) — semantic QA scope, findings, evidence, waivers. |
+
 ## Out of scope for phase 1
 
 - Gulp project scaffolding in this repo.
