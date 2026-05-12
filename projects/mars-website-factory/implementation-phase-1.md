@@ -2,6 +2,8 @@
 
 **Scope:** **Documentation and contracts only** — **no** code generation mandate, **no** new runtime.
 
+**Numbering note:** Sections titled **Phase 5–8 (documentation)** below are **in-pack documentation milestone groups** (reference project layer, semantic relationship layer, artifact bus layer, validation runtime model). They **roll up to** [roadmap.md](roadmap.md) **Phase 4** (documentation maturity for execution semantics, reference/semantic/bus/validation docs). They **do not** mean [roadmap.md](roadmap.md) **Phase 5** (Cursor-assisted production) or **Phases 6–7** (runtime / automation) — those are **later** roadmap bands, not the section numbers used here.
+
 ## Proposed concrete deliverables
 
 | # | Deliverable | Description |
