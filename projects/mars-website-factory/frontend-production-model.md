@@ -6,6 +6,8 @@ The **Gulp Frontend Agent** is the **planned core production specialist** for tu
 
 Legacy **imported** profile (stack and rules) appears in **`web-gpt-sources/04_agents.md`** (Gulp Frontend Agent section): HTML, SCSS, JS; **Gulp**, **gulp-file-include**; optional jQuery and common libs; **source-first** — edit **`src`**, not manual **`dist`** edits. Normalized requirements for a page build are described in **[Frontend Handoff Contract v0](frontend-handoff-contract-v0.md)** (documentation only).
 
+**Operational doc pack (MARS):** Cursor/human prompt patterns and guardrails for this role live under [`../../agents/frontend-gulp-agent/README.md`](../../agents/frontend-gulp-agent/README.md) — documentation only, **not** a bundled gulp-starter or runtime.
+
 ## gulp-starter architecture (target shape)
 
 **SAFE UNKNOWN:** The repository does **not** contain a folder or artifact explicitly named `gulp-starter` at registration time. The **target** architecture below is **aligned** with the legacy profile and common static starter patterns:

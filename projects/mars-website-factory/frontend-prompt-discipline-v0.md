@@ -4,7 +4,7 @@
 
 **Version:** v0.
 
-**Related:** [frontend-production-model.md](frontend-production-model.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [section-payload-model-v0.md](section-payload-model-v0.md), [block-registry-v0.md](block-registry-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md).
+**Related:** [frontend-production-model.md](frontend-production-model.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [section-payload-model-v0.md](section-payload-model-v0.md), [block-registry-v0.md](block-registry-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md), [`../../agents/frontend-gulp-agent/README.md`](../../agents/frontend-gulp-agent/README.md) (Gulp Frontend Agent operational doc pack).
 
 ---
 

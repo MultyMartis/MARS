@@ -16,6 +16,7 @@
 
 ## capability_links
 
+- [Frontend Gulp Agent — operational doc pack](../frontend-gulp-agent/README.md) — prompts, workflow, QA/reporting (`gulp_frontend_agent`; not a runnable starter)
 - [Frontend production model](../../projects/mars-website-factory/frontend-production-model.md)
 - [Frontend Handoff Contract v0](../../projects/mars-website-factory/frontend-handoff-contract-v0.md)
 - [Website Factory Workflow v0](../../projects/mars-website-factory/website-factory-workflow-v0.md) — Stages `WF_V0_S10_FRONTEND_HANDOFF`, `WF_V0_S11_FRONTEND_PRODUCTION`
