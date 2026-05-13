@@ -10,6 +10,8 @@
 
 The **execution model** answers: **who executes what, where, and in which order**—for **Phase 1 (documentation-first)** and for **future** automation. It complements `../workflows/execution-flow.md` (stages) by focusing on **hosts** and **bridges**.
 
+**Parallel chat discipline (one Cursor, multiple chats):** [parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md) — how humans keep **production execution** chats and **MARS core** chats from mixing paths, commits, and scopes.
+
 ---
 
 ## 2. How tasks are executed **today** (as documented): Web-GPT → Cursor

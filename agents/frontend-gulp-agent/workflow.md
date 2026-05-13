@@ -2,6 +2,8 @@
 
 Ordered flow for a **material** frontend implementation slice. Adjust step labels to match the operator session template when used inside a reference run.
 
+**Lane discipline (one Cursor, multiple chats):** treat this workflow as **Lane A — production execution** per [`../../governance/parallel-cursor-chat-work-mode-v0.md`](../../governance/parallel-cursor-chat-work-mode-v0.md); avoid governance/registry commits in the same session unless explicitly re-scoped.
+
 1. **Inspect frontend handoff** — Confirm `frontend_handoff_id`, `page_slug`, `section_map`, `partials_mapping`, `SCSS_mapping`, `JS_requirements`, `data_attribute_hooks`, `responsive_rules`, `QA_requirements`, `forbidden_patterns`, `HITL_required`, and `SAFE_UNKNOWN_notes` per [`frontend-handoff-contract-v0.md`](../../projects/mars-website-factory/frontend-handoff-contract-v0.md).
 2. **Inspect target repo** — Open the **external/local** project; verify actual `src/` root, include syntax, SCSS entry pattern, JS bundling, and npm scripts (**SAFE UNKNOWN** until verified).
 3. **Plan sections/components** — One prompt-friendly slice at a time (prefer one `block_id` / section per prompt per [`frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md)).

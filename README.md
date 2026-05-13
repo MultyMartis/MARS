@@ -32,7 +32,7 @@ This directory is the **main local working copy** of the MARS project: design no
 
 | Path | Role |
 |------|------|
-| `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map** |
+| `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map**; parallel chat lanes ([`governance/parallel-cursor-chat-work-mode-v0.md`](governance/parallel-cursor-chat-work-mode-v0.md)) |
 | `registry/` | **Project registry** and other registry-style anchors (`project-registry.md`) |
 | `projects/` | **Project documentation packs** — e.g. `projects/mars-website-factory/` (**strategic planned** — multi-agent **documentation-first** website production system; **not** runtime-ready); `projects/metabot-seo-content-agent/` (**canonical** — **MetaBOT** SEO Content Agent, **external multi-workflow AI system**, n8n runtime; not a simple tool adapter); `projects/seo-content-agent/` (**legacy** — early spec / bridge; do not extend) |
 | `logs/` | **Lifecycle log** (documented lifecycle events, append-only discipline) |
