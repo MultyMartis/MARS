@@ -35,22 +35,13 @@
     border-radius: 0;
 }
 
-.site-header__logo-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
+.site-header__logo-img {
+    display: block;
     height: 2rem;
-    border-radius: 0;
-    background: tm.$tm-gradient-red;
-    color: tm.$tm-color-white;
-    font-size: 1.125rem;
-    line-height: 1;
-}
-
-.site-header__brand-text {
-    font-size: 1rem;
-    letter-spacing: 0.06em;
+    width: auto;
+    max-width: 11rem;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .site-header__nav {
@@ -121,14 +112,13 @@
     height: 2rem;
     border-radius: 50%;
     color: tm.$tm-color-white;
+    background: transparent;
+    border: 0;
+    transition: background-color 0.15s ease;
 }
 
-.site-header__social-btn--wa {
-    background: tm.$tm-color-whatsapp;
-}
-
-.site-header__social-btn--tg {
-    background: tm.$tm-color-telegram;
+.site-header__social-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .site-header__social-btn:focus-visible {
@@ -136,8 +126,20 @@
     box-shadow: tm.$tm-focus-ring;
 }
 
-.site-header__social-svg {
+.site-header__social-img {
     display: block;
+    width: 1.0625rem;
+    height: 1.0625rem;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+// MAX glyph reads slightly smaller in the asset; nudge optical match to WA/TG
+.site-header__social-btn--max .site-header__social-img {
+    width: 1.125rem;
+    height: 1.125rem;
 }
 
 .btn--header {

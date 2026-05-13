@@ -19,11 +19,7 @@
                     <ul class="trust-benefits" role="list">
                         <li class="trust-benefit">
                             <span class="trust-benefit__icon" aria-hidden="true">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 17h16M4 17l1.5-7h13L20 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M7 10V8a2 2 0 012-2h6a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                                    <path d="M9 14h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>
+                                @@include('partials/components/icon.html', { "name": "fleet-truck", "classes": "icon icon--3xl" })
                             </span>
                             <div class="trust-benefit__body">
                                 <h3 class="trust-benefit__title">Свой автопарк</h3>
@@ -32,11 +28,7 @@
                         </li>
                         <li class="trust-benefit">
                             <span class="trust-benefit__icon" aria-hidden="true">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 11c-2 0-3.5-1.5-3.5-3.5S10 4 12 4s3.5 1.5 3.5 3.5S14 11 12 11z" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M6 20c.8-3.2 3.5-5 6-5s5.2 1.8 6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                    <path d="M15 7l2-2M14 5h4v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                @@include('partials/components/icon.html', { "name": "operator-badge", "classes": "icon icon--3xl" })
                             </span>
                             <div class="trust-benefit__body">
                                 <h3 class="trust-benefit__title">Опытные операторы</h3>
@@ -45,11 +37,7 @@
                         </li>
                         <li class="trust-benefit">
                             <span class="trust-benefit__icon" aria-hidden="true">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 4h10v16H7V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                                    <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                    <path d="M17 8l2-2v4h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                @@include('partials/components/icon.html', { "name": "document-verify", "classes": "icon icon--3xl" })
                             </span>
                             <div class="trust-benefit__body">
                                 <h3 class="trust-benefit__title">Без скрытых доплат</h3>
@@ -58,11 +46,7 @@
                         </li>
                         <li class="trust-benefit">
                             <span class="trust-benefit__icon" aria-hidden="true">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5h8v14H8V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                                    <path d="M10 9h4M10 12h4M10 15h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                    <path d="M6 7V5a1 1 0 011-1h10a1 1 0 011 1v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>
+                                @@include('partials/components/icon.html', { "name": "document-contract", "classes": "icon icon--3xl" })
                             </span>
                             <div class="trust-benefit__body">
                                 <h3 class="trust-benefit__title">Работаем с НДС</h3>
@@ -78,27 +62,31 @@
                             <div class="trust-panel__score-block">
                                 <p class="trust-panel__score" aria-label="Средняя оценка 4,9 из 5">4.9</p>
                                 <div class="trust-panel__stars" aria-hidden="true">
-                                    <span class="trust-panel__star">★</span>
-                                    <span class="trust-panel__star">★</span>
-                                    <span class="trust-panel__star">★</span>
-                                    <span class="trust-panel__star">★</span>
-                                    <span class="trust-panel__star">★</span>
+                                    @@include('partials/components/rating-stars-five.html', { "wrap": "trust-panel__star", "img": "trust-panel__star-img" })
                                 </div>
                             </div>
                             <div class="trust-panel__rating-center">
                                 <ul class="trust-panel__logos" aria-label="Источники рейтинга">
-                                    <li><span class="trust-panel__logo trust-panel__logo--yandex">Яндекс</span></li>
-                                    <li><span class="trust-panel__logo trust-panel__logo--avito">Avito</span></li>
-                                    <li><span class="trust-panel__logo trust-panel__logo--2gis">2ГИС</span></li>
+                                    <li>
+                                        <span class="trust-panel__logo trust-panel__logo--yandex">
+                                            <img class="trust-panel__logo-img trust-panel__logo-img--yandex" src="assets/img/reviews/yandex_logo.svg" alt="Яндекс" width="120" height="32" decoding="async" />
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="trust-panel__logo trust-panel__logo--avito">
+                                            <img class="trust-panel__logo-img trust-panel__logo-img--avito" src="assets/img/reviews/avito_logo.svg" alt="Avito" width="120" height="32" decoding="async" />
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="trust-panel__logo trust-panel__logo--2gis">2ГИС</span>
+                                    </li>
                                 </ul>
                                 <p class="trust-panel__rating-note">На основе отзывов клиентов</p>
                             </div>
                             <div class="trust-panel__rating-actions">
                                 <button class="btn btn--outline trust-panel__reviews-btn" type="button">
                                     <span>Смотреть отзывы</span>
-                                    <svg class="trust-panel__reviews-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                                    @@include('partials/components/icon.html', { "name": "arrow-right", "classes": "trust-panel__reviews-btn-icon icon icon--sm" })
                                 </button>
                             </div>
                         </div>
@@ -113,7 +101,7 @@
                                             <p class="trust-review-card__company">Крайинвест</p>
                                         </div>
                                         <div class="trust-review-card__stars" aria-hidden="true">
-                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                            @@include('partials/components/rating-stars-five.html', { "wrap": "trust-review-card__star", "img": "trust-review-card__star-img" })
                                         </div>
                                     </div>
                                     <blockquote class="trust-review-card__quote">
@@ -135,7 +123,7 @@
                                             <p class="trust-review-card__company">ООО «СтройГрад»</p>
                                         </div>
                                         <div class="trust-review-card__stars" aria-hidden="true">
-                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                            @@include('partials/components/rating-stars-five.html', { "wrap": "trust-review-card__star", "img": "trust-review-card__star-img" })
                                         </div>
                                     </div>
                                     <blockquote class="trust-review-card__quote">
@@ -157,7 +145,7 @@
                                             <p class="trust-review-card__company">Частный клиент</p>
                                         </div>
                                         <div class="trust-review-card__stars" aria-hidden="true">
-                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                            @@include('partials/components/rating-stars-five.html', { "wrap": "trust-review-card__star", "img": "trust-review-card__star-img" })
                                         </div>
                                     </div>
                                     <blockquote class="trust-review-card__quote">
@@ -174,10 +162,7 @@
 
                         <div class="trust-panel__placeholder">
                             <span class="trust-panel__placeholder-icon" aria-hidden="true">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                @@include('partials/components/icon.html', { "name": "shield-check", "classes": "icon icon--xl" })
                             </span>
                             <p class="trust-panel__placeholder-text">Здесь будут подключены отзывы с Яндекс, Авито и 2ГИС</p>
                         </div>
@@ -191,10 +176,7 @@
         <div class="container trust-stats__inner">
             <div class="trust-stats__item">
                 <span class="trust-stats__icon" aria-hidden="true">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                        <path d="M12 9.2l1.2 2.4 2.7.4-1.9 1.8.5 2.7-2.5-1.3-2.5 1.3.5-2.7-1.9-1.8 2.7-.4 1.2-2.4z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
-                    </svg>
+                    @@include('partials/components/icon.html', { "name": "stats-years", "classes": "icon icon--2xl" })
                 </span>
                 <p class="trust-stats__text">
                     <span class="trust-stats__value">10+ лет</span>
@@ -203,11 +185,7 @@
             </div>
             <div class="trust-stats__item">
                 <span class="trust-stats__icon" aria-hidden="true">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 4h10v16H7V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                        <path d="M7 8h10M10 2v4M14 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M10 13l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    @@include('partials/components/icon.html', { "name": "stats-orders", "classes": "icon icon--2xl" })
                 </span>
                 <p class="trust-stats__text">
                     <span class="trust-stats__value">1000+</span>
@@ -216,10 +194,7 @@
             </div>
             <div class="trust-stats__item">
                 <span class="trust-stats__icon" aria-hidden="true">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="13" r="7" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M12 10v4l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
+                    @@include('partials/components/icon.html', { "name": "stats-timer", "classes": "icon icon--2xl" })
                 </span>
                 <p class="trust-stats__text">
                     <span class="trust-stats__value">от 30 минут</span>
@@ -228,10 +203,7 @@
             </div>
             <div class="trust-stats__item">
                 <span class="trust-stats__icon" aria-hidden="true">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21s7-4.5 7-10a7 7 0 10-14 0c0 5.5 7 10 7 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                        <circle cx="12" cy="11" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
+                    @@include('partials/components/icon.html', { "name": "stats-map", "classes": "icon icon--2xl" })
                 </span>
                 <p class="trust-stats__text">
                     <span class="trust-stats__value">Краснодар и край</span>

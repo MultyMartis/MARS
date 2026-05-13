@@ -172,15 +172,22 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 
 .trust-panel__stars {
     display: flex;
-    gap: 0.2rem;
-    font-size: clamp(1.25rem, 2.2vw, 1.625rem);
-    line-height: 1;
-    letter-spacing: 0.02em;
-    color: tm.$tm-color-accent;
+    align-items: center;
+    gap: 0.15rem;
+    line-height: 0;
 }
 
 .trust-panel__star {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust-panel__star-img {
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+    object-fit: contain;
 }
 
 .trust-panel__rating-center {
@@ -205,41 +212,36 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 .trust-panel__logo {
     display: inline-flex;
     align-items: center;
-    font-size: clamp(1rem, 1.25vw, 1.1875rem);
-    font-weight: tm.$tm-weight-extrabold;
-    letter-spacing: 0.02em;
-    color: tm.$tm-color-text;
+    justify-content: center;
 }
 
-.trust-panel__logo--yandex {
-    font-weight: tm.$tm-weight-black;
+.trust-panel__logo-img {
+    display: block;
+    height: 1.625rem;
+    width: auto;
+    max-width: 6.5rem;
+    object-fit: contain;
 }
 
-.trust-panel__logo--avito {
-    position: relative;
-    padding-left: 2.35rem;
-    font-weight: tm.$tm-weight-bold;
-    text-transform: lowercase;
+.trust-panel__logo-img--yandex {
+    max-width: 5.5rem;
 }
 
-.trust-panel__logo--avito::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background: #97cf26;
-    box-shadow:
-        0.6rem 0 0 #ff6163,
-        1.2rem 0 0 #a169f7,
-        1.8rem 0 0 #00aaff;
+.trust-panel__logo-img--avito {
+    max-width: 5rem;
 }
 
 .trust-panel__logo--2gis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.625rem;
+    padding-inline: 0.125rem;
+    font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
     font-weight: tm.$tm-weight-extrabold;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: tm.$tm-color-text;
 }
 
 .trust-panel__rating-note {
@@ -332,10 +334,22 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 
 .trust-review-card__stars {
     display: flex;
-    gap: 0.1rem;
-    font-size: 1rem;
-    line-height: 1;
-    color: tm.$tm-color-accent;
+    align-items: center;
+    gap: 0.08rem;
+    line-height: 0;
+}
+
+.trust-review-card__star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust-review-card__star-img {
+    display: block;
+    width: 1.125rem;
+    height: 1.125rem;
+    object-fit: contain;
 }
 
 .trust-review-card__quote {

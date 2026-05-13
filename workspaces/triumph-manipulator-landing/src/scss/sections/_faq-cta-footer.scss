@@ -236,22 +236,24 @@
 }
 
 .cta-contact__feature {
-    position: relative;
-    padding-left: tm.$tm-space-5;
+    display: flex;
+    align-items: flex-start;
+    gap: tm.$tm-space-3;
     font-size: tm.$tm-text-sm;
     font-weight: tm.$tm-weight-semibold;
     line-height: tm.$tm-line-base;
     color: tm.$tm-color-ink;
 }
 
-.cta-contact__feature::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 0.5rem;
-    height: 0.5rem;
-    background: tm.$tm-color-accent;
+.cta-contact__feature-icon {
+    flex-shrink: 0;
+    margin-top: 0.12em;
+    color: tm.$tm-color-accent;
+}
+
+.cta-contact__feature-text {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .cta-contact__messengers {
@@ -264,6 +266,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: tm.$tm-space-3;
     min-height: 48px;
     padding: 0 tm.$tm-space-5;
     border-radius: 0;
@@ -295,6 +298,26 @@
 .cta-contact__messenger--phone {
     border-color: rgba(255, 255, 255, 0.35);
     background: rgba(255, 255, 255, 0.08);
+}
+
+.cta-contact__messenger--wa,
+.cta-contact__messenger--tg,
+.cta-contact__messenger--max {
+    justify-content: flex-start;
+}
+
+.cta-contact__messenger-icon {
+    flex-shrink: 0;
+    color: inherit;
+    opacity: 0.92;
+}
+
+.cta-contact__messenger-img {
+    display: block;
+    flex-shrink: 0;
+    width: 1.125rem;
+    height: 1.125rem;
+    object-fit: contain;
 }
 
 @media (max-width: v.$bp-small) {
@@ -366,10 +389,20 @@
 }
 
 .cta-contact__note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: tm.$tm-space-2;
     margin: 0;
     text-align: center;
     font-size: tm.$tm-text-sm;
     color: tm.$tm-color-muted;
+}
+
+.cta-contact__note-icon {
+    flex-shrink: 0;
+    color: tm.$tm-color-accent;
+    opacity: 0.95;
 }
 
 // --- Footer ---
@@ -439,23 +472,13 @@
     border-radius: tm.$tm-radius-sm;
 }
 
-.footer__logo-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
+.footer__logo-img {
+    display: block;
     height: 2.5rem;
-    font-weight: tm.$tm-weight-black;
-    font-size: tm.$tm-text-md;
-    color: tm.$tm-color-white;
-    background: tm.$tm-color-accent;
-    border-radius: 0;
-}
-
-.footer__brand-text {
-    font-weight: tm.$tm-weight-black;
-    letter-spacing: 0.14em;
-    font-size: tm.$tm-text-sm;
+    width: auto;
+    max-width: 12rem;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .footer__about {
@@ -560,8 +583,11 @@
     border-color: tm.$tm-color-max;
 }
 
-.footer__social-svg {
+.footer__social-img {
     display: block;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    object-fit: contain;
 }
 
 .footer__social-max {

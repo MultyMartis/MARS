@@ -9,6 +9,9 @@ const sourcemaps = require('gulp-sourcemaps');
 
 const { deleteAsync } = require('del');
 
+const fs = require('fs');
+const path = require('path');
+
 const rename = require('gulp-rename');
 const terser = require('gulp-terser');
 
@@ -147,6 +150,14 @@ function sprite() {
       svgSprite({
         shape: {
           transform: [],
+          id: {
+            generator: function (name) {
+              const base = String(name || '')
+                .replace(/\.svg$/i, '')
+                .replace(/\s+/g, '-');
+              return 'i-' + base;
+            },
+          },
         },
         svg: {
           xmlDeclaration: false,
@@ -164,25 +175,94 @@ function sprite() {
     .pipe(dest(paths.svg.dest));
 }
 
+const SPRITE_MARKER_START = '<!--SVG-SPRITE-START-->';
+const SPRITE_MARKER_END = '<!--SVG-SPRITE-END-->';
+
+function injectInlineSprite(done) {
+  const distDir = path.join(__dirname, paths.dist);
+  const spritePath = path.join(distDir, 'assets', 'img', 'sprite.svg');
+
+  if (!fs.existsSync(spritePath)) {
+    console.warn('[injectInlineSprite] sprite.svg missing, skipping');
+    return done();
+  }
+
+  const spriteRaw = fs.readFileSync(spritePath, 'utf8').trim();
+  if (!/^<svg\b[^>]*>/i.test(spriteRaw) || !/<\/svg>\s*$/i.test(spriteRaw)) {
+    console.warn('[injectInlineSprite] unexpected sprite.svg format, skipping');
+    return done();
+  }
+
+  const inner = spriteRaw
+    .replace(/^<svg\b[^>]*>/i, '')
+    .replace(/<\/svg>\s*$/i, '')
+    .trim();
+
+  const spriteBlock =
+    SPRITE_MARKER_START +
+    '\n' +
+    '<div class="svg-sprite" aria-hidden="true">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" aria-hidden="true" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden">' +
+    inner +
+    '</svg></div>\n' +
+    SPRITE_MARKER_END;
+
+  let htmlCount = 0;
+  if (!fs.existsSync(distDir)) {
+    return done();
+  }
+
+  const files = fs.readdirSync(distDir).filter((f) => f.endsWith('.html'));
+  const markerRegion = new RegExp(
+    SPRITE_MARKER_START.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') +
+      '[\\s\\S]*?' +
+      SPRITE_MARKER_END.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+    'g'
+  );
+
+  for (const file of files) {
+    const fp = path.join(distDir, file);
+    let html = fs.readFileSync(fp, 'utf8');
+    if (!/<body\b/i.test(html)) {
+      continue;
+    }
+
+    if (html.includes(SPRITE_MARKER_START)) {
+      html = html.replace(markerRegion, spriteBlock);
+    } else {
+      html = html.replace(/<body(\b[^>]*)>/i, '<body$1>\n' + spriteBlock + '\n');
+    }
+
+    fs.writeFileSync(fp, html, 'utf8');
+    htmlCount += 1;
+  }
+
+  if (htmlCount) {
+    console.log('[injectInlineSprite] updated', htmlCount, 'HTML file(s)');
+  }
+  done();
+}
+
 const build = series(
   cleanDist,
   parallel(html, styles, vendorCss, scripts, images, fonts, favicon),
-  sprite
+  sprite,
+  injectInlineSprite
 );
 
 function watcher() {
-  watch(paths.html.watch, html);
+  watch(paths.html.watch, series(html, injectInlineSprite));
   watch(paths.styles.watch, styles);
   watch(paths.vendorCss.watch, vendorCss);
   watch(paths.scripts.watch, scripts);
   watch(paths.images.watch, images);
   watch(paths.fonts.watch, fonts);
   watch(paths.favicon.watch, favicon);
-  watch(paths.svg.watch, sprite);
+  watch(paths.svg.watch, series(sprite, injectInlineSprite));
 }
 
 exports.clean = cleanDist;
-exports.sprite = sprite;
+exports.sprite = series(sprite, injectInlineSprite);
 exports.build = build;
 exports.default = build;
 exports.watch = series(build, watcher);
