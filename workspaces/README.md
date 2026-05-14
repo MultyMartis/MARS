@@ -8,4 +8,7 @@ Do **not** treat this tree as authoritative production source unless a project e
 
 | Project | Path |
 |---------|------|
-| Triumph Manipulator Landing | [`triumph-manipulator-landing/`](triumph-manipulator-landing/README.md) |
+| Triumph Manipulator Landing (V1) | [`triumph-manipulator-landing/`](triumph-manipulator-landing/README.md) |
+| Triumph Manipulator Landing V2 — active local frontend workspace | [`triumph-manipulator-landing-v2/`](triumph-manipulator-landing-v2/README.md) |
+
+**Triumph Landing:** operator path map (V2 vs frozen V1, design SoT vs implementation `src/`, generated `dist/`) — [`../projects/triumph-manipulator-landing/V2-CANONICAL-STATE.md`](../projects/triumph-manipulator-landing/V2-CANONICAL-STATE.md).
