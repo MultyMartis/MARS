@@ -1,0 +1,215 @@
+<section class="trust-reviews" id="doverie-i-otzyvy" aria-labelledby="trust-reviews-heading">
+    <div class="trust-reviews__light">
+        <div class="container trust-reviews__inner">
+            <div class="trust-reviews__layout">
+                <div class="trust-reviews__col trust-reviews__col--left">
+                    <header class="trust-reviews__header">
+                        <p class="trust-reviews__eyebrow">
+                            <span class="trust-reviews__eyebrow-rule" aria-hidden="true"></span>
+                            <span class="trust-reviews__eyebrow-text">ПОЧЕМУ НАМ ДОВЕРЯЮТ</span>
+                        </p>
+                        <h2 class="trust-reviews__title" id="trust-reviews-heading">
+                            Работаем с частными клиентами, строительными компаниями и бизнесом
+                        </h2>
+                        <p class="trust-reviews__lead">
+                            Подаём технику точно в срок, заранее согласовываем стоимость и подбираем манипулятор под конкретную задачу.
+                        </p>
+                    </header>
+
+                    <ul class="trust-benefits" role="list">
+                        <li class="trust-benefit">
+                            <span class="trust-benefit__icon" aria-hidden="true">
+                                @@include('partials/components/icon.html', { "name": "fleet-truck", "classes": "icon icon--3xl" })
+                            </span>
+                            <div class="trust-benefit__body">
+                                <h3 class="trust-benefit__title">Свой автопарк</h3>
+                                <p class="trust-benefit__text">Манипуляторы 5–10 тонн в исправном техническом состоянии.</p>
+                            </div>
+                        </li>
+                        <li class="trust-benefit">
+                            <span class="trust-benefit__icon" aria-hidden="true">
+                                @@include('partials/components/icon.html', { "name": "operator-badge", "classes": "icon icon--3xl" })
+                            </span>
+                            <div class="trust-benefit__body">
+                                <h3 class="trust-benefit__title">Опытные операторы</h3>
+                                <p class="trust-benefit__text">Работаем с тяжёлыми, негабаритными и сложными грузами.</p>
+                            </div>
+                        </li>
+                        <li class="trust-benefit">
+                            <span class="trust-benefit__icon" aria-hidden="true">
+                                @@include('partials/components/icon.html', { "name": "document-verify", "classes": "icon icon--3xl" })
+                            </span>
+                            <div class="trust-benefit__body">
+                                <h3 class="trust-benefit__title">Без скрытых доплат</h3>
+                                <p class="trust-benefit__text">Стоимость согласовывается заранее до выезда техники.</p>
+                            </div>
+                        </li>
+                        <li class="trust-benefit">
+                            <span class="trust-benefit__icon" aria-hidden="true">
+                                @@include('partials/components/icon.html', { "name": "document-contract", "classes": "icon icon--3xl" })
+                            </span>
+                            <div class="trust-benefit__body">
+                                <h3 class="trust-benefit__title">Работаем с НДС</h3>
+                                <p class="trust-benefit__text">Безналичный расчёт и закрывающие документы для бизнеса.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="trust-reviews__col trust-reviews__col--panel">
+                    <div class="trust-panel">
+                        <div class="trust-panel__rating-head">
+                            <div class="trust-panel__score-block">
+                                <p class="trust-panel__score" aria-label="Средняя оценка 4,9 из 5">4.9</p>
+                                <div class="trust-panel__stars" aria-hidden="true">
+                                    @@include('partials/components/rating-stars-five.html', { "wrap": "trust-panel__star", "img": "trust-panel__star-img" })
+                                </div>
+                            </div>
+                            <div class="trust-panel__rating-center">
+                                <ul class="trust-panel__logos" aria-label="Источники рейтинга">
+                                    <li>
+                                        <span class="trust-panel__logo trust-panel__logo--yandex">
+                                            <img class="trust-panel__logo-img trust-panel__logo-img--yandex" src="assets/img/reviews/yandex_logo.svg" alt="Яндекс" width="120" height="32" decoding="async" />
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="trust-panel__logo trust-panel__logo--avito">
+                                            <img class="trust-panel__logo-img trust-panel__logo-img--avito" src="assets/img/reviews/avito_logo.svg" alt="Avito" width="120" height="32" decoding="async" />
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="trust-panel__logo trust-panel__logo--2gis">2ГИС</span>
+                                    </li>
+                                </ul>
+                                <p class="trust-panel__rating-note">На основе отзывов клиентов</p>
+                            </div>
+                            <div class="trust-panel__rating-actions">
+                                <button class="btn btn--outline trust-panel__reviews-btn" type="button">
+                                    <span>Смотреть отзывы</span>
+                                    @@include('partials/components/icon.html', { "name": "arrow-right", "classes": "trust-panel__reviews-btn-icon icon icon--sm" })
+                                </button>
+                            </div>
+                        </div>
+
+                        <ul class="trust-review-list" role="list">
+                            <li>
+                                <article class="trust-review-card">
+                                    <div class="trust-review-card__top">
+                                        <span class="trust-review-card__avatar" aria-hidden="true">ИП</span>
+                                        <div class="trust-review-card__identity">
+                                            <p class="trust-review-card__name">Иван П.</p>
+                                            <p class="trust-review-card__company">Крайинвест</p>
+                                        </div>
+                                        <div class="trust-review-card__stars" aria-hidden="true">
+                                            @@include('partials/components/rating-stars-five.html', { "wrap": "trust-review-card__star", "img": "trust-review-card__star-img" })
+                                        </div>
+                                    </div>
+                                    <blockquote class="trust-review-card__quote">
+                                        <p>Спасибо за оперативную подачу манипулятора. Мастер своего дела.</p>
+                                    </blockquote>
+                                    <p class="trust-review-card__meta">
+                                        <span class="trust-review-card__source">Яндекс</span>
+                                        <span class="trust-review-card__sep">·</span>
+                                        <time datetime="2024-05-12">12 мая 2024</time>
+                                    </p>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="trust-review-card">
+                                    <div class="trust-review-card__top">
+                                        <span class="trust-review-card__avatar" aria-hidden="true">СК</span>
+                                        <div class="trust-review-card__identity">
+                                            <p class="trust-review-card__name">Светлана К.</p>
+                                            <p class="trust-review-card__company">ООО «СтройГрад»</p>
+                                        </div>
+                                        <div class="trust-review-card__stars" aria-hidden="true">
+                                            @@include('partials/components/rating-stars-five.html', { "wrap": "trust-review-card__star", "img": "trust-review-card__star-img" })
+                                        </div>
+                                    </div>
+                                    <blockquote class="trust-review-card__quote">
+                                        <p>Работаем с ТРИУМФ уже год. Техника всегда готова, операторы профессионалы.</p>
+                                    </blockquote>
+                                    <p class="trust-review-card__meta">
+                                        <span class="trust-review-card__source">Авито</span>
+                                        <span class="trust-review-card__sep">·</span>
+                                        <time datetime="2024-04-03">03 апреля 2024</time>
+                                    </p>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="trust-review-card">
+                                    <div class="trust-review-card__top">
+                                        <span class="trust-review-card__avatar" aria-hidden="true">АМ</span>
+                                        <div class="trust-review-card__identity">
+                                            <p class="trust-review-card__name">Алексей М.</p>
+                                            <p class="trust-review-card__company">Частный клиент</p>
+                                        </div>
+                                        <div class="trust-review-card__stars" aria-hidden="true">
+                                            @@include('partials/components/rating-stars-five.html', { "wrap": "trust-review-card__star", "img": "trust-review-card__star-img" })
+                                        </div>
+                                    </div>
+                                    <blockquote class="trust-review-card__quote">
+                                        <p>Очень удобно, заранее согласовали цену. Доставили груз быстро и без проблем.</p>
+                                    </blockquote>
+                                    <p class="trust-review-card__meta">
+                                        <span class="trust-review-card__source">2ГИС</span>
+                                        <span class="trust-review-card__sep">·</span>
+                                        <time datetime="2024-03-21">21 марта 2024</time>
+                                    </p>
+                                </article>
+                            </li>
+                        </ul>
+
+                        <div class="trust-panel__placeholder">
+                            <span class="trust-panel__placeholder-icon" aria-hidden="true">
+                                @@include('partials/components/icon.html', { "name": "shield-check", "classes": "icon icon--xl" })
+                            </span>
+                            <p class="trust-panel__placeholder-text">Здесь будут подключены отзывы с Яндекс, Авито и 2ГИС</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="trust-stats" aria-label="Показатели компании">
+        <div class="container trust-stats__inner">
+            <div class="trust-stats__item">
+                <span class="trust-stats__icon" aria-hidden="true">
+                    @@include('partials/components/icon.html', { "name": "stats-years", "classes": "icon icon--2xl" })
+                </span>
+                <p class="trust-stats__text">
+                    <span class="trust-stats__value">10+ лет</span>
+                    <span class="trust-stats__label">работы в грузоперевозках</span>
+                </p>
+            </div>
+            <div class="trust-stats__item">
+                <span class="trust-stats__icon" aria-hidden="true">
+                    @@include('partials/components/icon.html', { "name": "stats-orders", "classes": "icon icon--2xl" })
+                </span>
+                <p class="trust-stats__text">
+                    <span class="trust-stats__value">1000+</span>
+                    <span class="trust-stats__label">выполненных заказов</span>
+                </p>
+            </div>
+            <div class="trust-stats__item">
+                <span class="trust-stats__icon" aria-hidden="true">
+                    @@include('partials/components/icon.html', { "name": "stats-timer", "classes": "icon icon--2xl" })
+                </span>
+                <p class="trust-stats__text">
+                    <span class="trust-stats__value">от 30 минут</span>
+                    <span class="trust-stats__label">подача техники</span>
+                </p>
+            </div>
+            <div class="trust-stats__item">
+                <span class="trust-stats__icon" aria-hidden="true">
+                    @@include('partials/components/icon.html', { "name": "stats-map", "classes": "icon icon--2xl" })
+                </span>
+                <p class="trust-stats__text">
+                    <span class="trust-stats__value">Краснодар и край</span>
+                    <span class="trust-stats__label">работаем ежедневно</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

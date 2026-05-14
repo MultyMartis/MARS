@@ -1,0 +1,211 @@
+<section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container faq-section__inner">
+        <header class="faq-section__header">
+            <p class="faq-section__eyebrow">FAQ</p>
+            <h2 class="faq-section__title" id="faq-heading">Частые вопросы</h2>
+            <p class="faq-section__lead">
+                Собрали ответы на самые популярные вопросы по аренде манипулятора.
+            </p>
+        </header>
+
+        <div class="faq-section__grid">
+            <div class="faq-section__col">
+                <article class="faq-item faq-item--open">
+                    <h3 class="faq-item__question">
+                        <span class="faq-item__num" aria-hidden="true">01</span>
+                        <span class="faq-item__qtext">Сколько стоит аренда манипулятора?</span>
+                        <span class="faq-item__icon faq-item__icon--minus" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "minus", "classes": "icon icon--sm" })
+                        </span>
+                    </h3>
+                    <div class="faq-item__answer" id="faq-answer-1" role="region">
+                        <p>
+                            Стоимость зависит от типа техники, времени работы и расстояния. Точную цену рассчитываем заранее — без скрытых доплат.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3 class="faq-item__question">
+                        <span class="faq-item__num" aria-hidden="true">02</span>
+                        <span class="faq-item__qtext">Как быстро можете подать технику?</span>
+                        <span class="faq-item__icon faq-item__icon--plus" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "plus", "classes": "icon icon--sm" })
+                        </span>
+                    </h3>
+                    <div class="faq-item__answer" id="faq-answer-2" role="region" hidden>
+                        <p>
+                            Обычно организуем выезд в день обращения; при свободной машине — от 30 минут по Краснодару. Точное время согласуем при оформлении заявки.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3 class="faq-item__question">
+                        <span class="faq-item__num" aria-hidden="true">03</span>
+                        <span class="faq-item__qtext">Можно ли заказать манипулятор ночью?</span>
+                        <span class="faq-item__icon faq-item__icon--plus" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "plus", "classes": "icon icon--sm" })
+                        </span>
+                    </h3>
+                    <div class="faq-item__answer" id="faq-answer-3" role="region" hidden>
+                        <p>
+                            Да, принимаем заявки круглосуточно. Срочные выезды по возможности автопарка обсуждаем по телефону или в мессенджере.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="faq-section__col">
+                <article class="faq-item">
+                    <h3 class="faq-item__question">
+                        <span class="faq-item__num" aria-hidden="true">04</span>
+                        <span class="faq-item__qtext">Работаете ли с юридическими лицами?</span>
+                        <span class="faq-item__icon faq-item__icon--plus" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "plus", "classes": "icon icon--sm" })
+                        </span>
+                    </h3>
+                    <div class="faq-item__answer" id="faq-answer-4" role="region" hidden>
+                        <p>
+                            Да, работаем с юр. лицами: безналичный расчёт, НДС и закрывающие документы — по запросу.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3 class="faq-item__question">
+                        <span class="faq-item__num" aria-hidden="true">05</span>
+                        <span class="faq-item__qtext">Какие грузы перевозите?</span>
+                        <span class="faq-item__icon faq-item__icon--plus" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "plus", "classes": "icon icon--sm" })
+                        </span>
+                    </h3>
+                    <div class="faq-item__answer" id="faq-answer-5" role="region" hidden>
+                        <p>
+                            Стройматериалы, бытовки, контейнеры, оборудование, металлоконструкции, негабарит и тяжёлые грузы в пределах заявленной грузоподъёмности 5–10 тонн.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <h3 class="faq-item__question">
+                        <span class="faq-item__num" aria-hidden="true">06</span>
+                        <span class="faq-item__qtext">Можно ли заказать услуги по Краснодарскому краю?</span>
+                        <span class="faq-item__icon faq-item__icon--plus" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "plus", "classes": "icon icon--sm" })
+                        </span>
+                    </h3>
+                    <div class="faq-item__answer" id="faq-answer-6" role="region" hidden>
+                        <p>
+                            Да, выполняем подачу и работы по Краснодару и Краснодарскому краю — расстояние и логистику заложим в расчёт стоимости заранее.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-contact" id="kontakty" aria-labelledby="cta-contact-heading">
+    <div class="cta-contact__bg" aria-hidden="true">
+        <picture>
+            <source type="image/webp" srcset="assets/img/hero/hero-bg.webp">
+            <img
+                class="cta-contact__bg-image"
+                src="assets/img/hero/hero-bg.png"
+                width="1672"
+                height="941"
+                alt=""
+                loading="lazy"
+                decoding="async"
+            >
+        </picture>
+        <div class="cta-contact__bg-overlay"></div>
+    </div>
+
+    <div class="container cta-contact__inner">
+        <div class="cta-contact__layout">
+            <div class="cta-contact__content">
+                <h2 class="cta-contact__title" id="cta-contact-heading">Нужен манипулятор в Краснодаре?</h2>
+                <p class="cta-contact__lead">
+                    Подберём технику под ваш груз, рассчитаем стоимость и согласуем удобное время подачи.
+                </p>
+
+                <ul class="cta-contact__features" role="list">
+                    <li class="cta-contact__feature">
+                        @@include('partials/components/icon.html', { "name": "check-corner", "classes": "cta-contact__feature-icon icon icon--sm" })
+                        <span class="cta-contact__feature-text">Подача от 30 минут</span>
+                    </li>
+                    <li class="cta-contact__feature">
+                        @@include('partials/components/icon.html', { "name": "check-corner", "classes": "cta-contact__feature-icon icon icon--sm" })
+                        <span class="cta-contact__feature-text">Работаем по Краснодару и краю</span>
+                    </li>
+                    <li class="cta-contact__feature">
+                        @@include('partials/components/icon.html', { "name": "check-corner", "classes": "cta-contact__feature-icon icon icon--sm" })
+                        <span class="cta-contact__feature-text">НДС и закрывающие документы</span>
+                    </li>
+                    <li class="cta-contact__feature">
+                        @@include('partials/components/icon.html', { "name": "check-corner", "classes": "cta-contact__feature-icon icon icon--sm" })
+                        <span class="cta-contact__feature-text">Собственный автопарк техники</span>
+                    </li>
+                </ul>
+
+                <div class="cta-contact__messengers">
+                    <a class="cta-contact__messenger cta-contact__messenger--phone" href="tel:+79004658331">
+                        @@include('partials/components/icon.html', { "name": "phone", "classes": "cta-contact__messenger-icon icon icon--sm" })
+                        <span>+7 (900) 465-83-31</span>
+                    </a>
+                    <a
+                        class="cta-contact__messenger cta-contact__messenger--wa"
+                        href="https://wa.me/79004658331"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img class="cta-contact__messenger-img" src="assets/img/social/whatsapp.svg" alt="WhatsApp" width="18" height="18" decoding="async" />
+                        <span>WhatsApp</span>
+                    </a>
+                    <a
+                        class="cta-contact__messenger cta-contact__messenger--tg"
+                        href="https://t.me/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img class="cta-contact__messenger-img" src="assets/img/social/telegram.svg" alt="Telegram" width="18" height="18" decoding="async" />
+                        <span>Telegram</span>
+                    </a>
+                    <a
+                        class="cta-contact__messenger cta-contact__messenger--max"
+                        href="https://max.ru/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img class="cta-contact__messenger-img" src="assets/img/social/max.svg" alt="MAX" width="18" height="18" decoding="async" />
+                        <span>MAX</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta-contact__form-wrap">
+                <form class="cta-contact__form" action="#" method="post" novalidate>
+                    <div class="cta-contact__field">
+                        <label class="cta-contact__label" for="cta-name">Ваше имя</label>
+                        <input class="cta-contact__input" id="cta-name" name="name" type="text" autocomplete="name">
+                    </div>
+                    <div class="cta-contact__field">
+                        <label class="cta-contact__label" for="cta-phone">Телефон</label>
+                        <input class="cta-contact__input" id="cta-phone" name="phone" type="tel" autocomplete="tel">
+                    </div>
+                    <div class="cta-contact__field">
+                        <label class="cta-contact__label" for="cta-cargo">Что нужно перевезти?</label>
+                        <textarea class="cta-contact__textarea" id="cta-cargo" name="cargo" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn--accent cta-contact__submit" type="submit">Получить расчёт</button>
+                    <p class="cta-contact__note">
+                        @@include('partials/components/icon.html', { "name": "stats-timer", "classes": "cta-contact__note-icon icon icon--sm icon--inline" })
+                        <span>Перезвоним в течение 5 минут</span>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

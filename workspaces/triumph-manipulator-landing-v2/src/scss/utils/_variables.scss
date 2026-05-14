@@ -1,0 +1,20 @@
+// Triumph Landing V2 — layout primitives (desktop-first; ~1400px content column).
+$bp-desktop: 1200px;
+$bp-tablet: 1024px;
+$bp-mobile: 768px;
+$bp-small: 480px;
+
+// Single composition width (visual target ~1400–1440).
+$container-width: 1400px;
+$container-padding-desktop: 40px;
+$container-padding-tablet: 32px;
+$container-padding-mobile: 16px;
+
+$container-padding: $container-padding-desktop;
+
+// First screen (hero + header): wider track to match v2 mockup 01 (~1720 content).
+$container-wide-max-width: 1720px;
+$container-wide-padding-desktop: 56px;
+
+// Approximate block height for `calc(100vh - header)` on hero (keep in sync with header desktop rhythm).
+$site-header-block-height: 164px;

@@ -1,0 +1,38 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+.page-intro {
+    padding: tm.$tm-space-10 0 tm.$tm-space-8;
+}
+
+.page-intro__title {
+    margin: 0 0 tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-fs-h2;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 1;
+    letter-spacing: 0;
+    color: tm.$tm-color-ink;
+}
+
+.page-intro__text {
+    margin: 0;
+    max-width: 720px;
+    font-family: tm.$tm-font-main;
+    font-size: tm.$tm-fs-lead;
+    font-weight: tm.$tm-weight-regular;
+    line-height: tm.$tm-line-lead;
+    letter-spacing: 0;
+    color: tm.$tm-color-ink-muted;
+}
+
+@media (max-width: v.$bp-mobile) {
+    .page-intro__title {
+        font-size: tm.$tm-fs-h3;
+    }
+
+    .page-intro__text {
+        font-size: tm.$tm-fs-body;
+        line-height: tm.$tm-line-body;
+    }
+}

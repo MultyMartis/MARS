@@ -1,0 +1,159 @@
+<section class="tm-section tm-section--hero-conversion" aria-label="Главный экран: предложение и заявка">
+    <div class="tm-section--hero-conversion__fullbleed" aria-hidden="true">
+        <div class="tm-section--hero-conversion__photo">
+            <img
+                class="tm-section--hero-conversion__photo-img"
+                src="assets/img/hero/hero-manipulator-krasnodar.png"
+                width="1200"
+                height="800"
+                alt=""
+                decoding="async"
+                fetchpriority="high"
+            />
+            <div class="tm-section--hero-conversion__photo-scrim tm-section--hero-conversion__photo-scrim--base"></div>
+            <div class="tm-section--hero-conversion__photo-scrim tm-section--hero-conversion__photo-scrim--read-left"></div>
+            <div class="tm-section--hero-conversion__photo-scrim tm-section--hero-conversion__photo-scrim--read-right"></div>
+        </div>
+    </div>
+
+    <div class="tm-container tm-container--wide tm-section--hero-conversion__container">
+        <div class="tm-section--hero-conversion__shell">
+            <div class="tm-section--hero-conversion__copy">
+                <header class="tm-section--hero-conversion__intro">
+                    <p class="tm-eyebrow tm-eyebrow--hero-accent">
+                        <i class="fas fa-map-marker-alt tm-eyebrow__icon" aria-hidden="true"></i>
+                        Работаем по Краснодару и краю
+                    </p>
+                    <h1 class="tm-hero-h1">
+                        <span class="tm-hero-h1__line">Манипулятор</span>
+                        <span class="tm-hero-h1__line">5 т / стрела 3 т / 14 м</span>
+                        <span class="tm-hero-h1__line tm-hero-h1__line--accent">в Краснодаре</span>
+                    </h1>
+                    <div class="tm-section--hero-conversion__title-rule" aria-hidden="true"></div>
+                    <p class="tm-lead tm-section--hero-conversion__intro-lead">
+                        Подача, перевозка и разгрузка ЖБИ, оборудования, стройматериалов и бытовок одной техникой.
+                    </p>
+                </header>
+
+                <div class="tm-section--hero-conversion__price-band" role="group" aria-label="Стоимость и минимальный заказ">
+                    <span class="tm-section--hero-conversion__price-icon" aria-hidden="true">
+                        <i class="fas fa-tag"></i>
+                    </span>
+                    <div class="tm-section--hero-conversion__price-copy">
+                        <p class="tm-section--hero-conversion__price-main">
+                            Стоимость: <strong>от 3&nbsp;500&nbsp;₽</strong>
+                        </p>
+                        <p class="tm-section--hero-conversion__price-sub">Минимальный заказ — 2 часа</p>
+                    </div>
+                </div>
+
+                <div class="tm-section--hero-conversion__actions">
+                    <button class="btn btn--accent btn--hero" type="button">Получить расчёт</button>
+                    <a class="btn btn--outline-on-dark btn--hero" href="tel:+79385005010">
+                        <i class="fas fa-phone btn__icon-left" aria-hidden="true"></i>
+                        Позвонить
+                    </a>
+                </div>
+
+                <ul class="tm-section--hero-conversion__bullets" aria-label="Ключевые параметры">
+                    <li class="tm-section--hero-conversion__bullet">
+                        <i class="fas fa-arrows-alt-v tm-section--hero-conversion__bullet-icon" aria-hidden="true"></i>
+                        <span>14&nbsp;м вылет стрелы</span>
+                    </li>
+                    <li class="tm-section--hero-conversion__bullet">
+                        <i class="fas fa-truck tm-section--hero-conversion__bullet-icon" aria-hidden="true"></i>
+                        <span>5&nbsp;т борт</span>
+                    </li>
+                    <li class="tm-section--hero-conversion__bullet">
+                        <i class="fas fa-file-invoice tm-section--hero-conversion__bullet-icon" aria-hidden="true"></i>
+                        <span>Работа с НДС</span>
+                    </li>
+                    <li class="tm-section--hero-conversion__bullet">
+                        <i class="fas fa-map-marker-alt tm-section--hero-conversion__bullet-icon" aria-hidden="true"></i>
+                        <span>Краснодар и край</span>
+                    </li>
+                    <li class="tm-section--hero-conversion__bullet">
+                        <i class="fas fa-clock tm-section--hero-conversion__bullet-icon" aria-hidden="true"></i>
+                        <span>Минимум 2 часа</span>
+                    </li>
+                    <li class="tm-section--hero-conversion__bullet">
+                        <i class="fas fa-users tm-section--hero-conversion__bullet-icon" aria-hidden="true"></i>
+                        <span>Работа с физ.&nbsp;и юр.&nbsp;лицами</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tm-section--hero-conversion__visual">
+                <aside class="tm-section--hero-conversion__lead" aria-label="Форма расчёта стоимости">
+                    <form class="tm-hero-form" action="#" method="post">
+                        <h2 class="tm-hero-form__title">Рассчитайте стоимость</h2>
+                        <div class="tm-hero-form__field">
+                            <label class="tm-hero-form__label" for="hero-cargo">Что перевозим</label>
+                            <input
+                                class="tm-hero-form__input"
+                                id="hero-cargo"
+                                name="cargo"
+                                type="text"
+                                autocomplete="off"
+                                placeholder="Кратко опишите груз"
+                            />
+                        </div>
+                        <div class="tm-hero-form__field">
+                            <label class="tm-hero-form__label" for="hero-phone">Телефон</label>
+                            <input
+                                class="tm-hero-form__input"
+                                id="hero-phone"
+                                name="phone"
+                                type="tel"
+                                autocomplete="tel"
+                                placeholder="+7 (___) ___-__-__"
+                            />
+                        </div>
+                        <div class="tm-hero-form__field">
+                            <label class="tm-hero-form__label" for="hero-comment">Комментарий (необязательно)</label>
+                            <textarea
+                                class="tm-hero-form__textarea"
+                                id="hero-comment"
+                                name="comment"
+                                rows="3"
+                                placeholder="Адрес подачи, объём, пожелания по времени"
+                            ></textarea>
+                        </div>
+                        <button class="btn btn--accent tm-hero-form__submit" type="submit">Рассчитать стоимость</button>
+                        <p class="tm-hero-form__privacy">
+                            <i class="fas fa-lock tm-hero-form__privacy-icon" aria-hidden="true"></i>
+                            Ваши данные защищены и не передаются третьим лицам
+                        </p>
+                    </form>
+                </aside>
+            </div>
+        </div>
+
+        <div class="tm-section--hero-conversion__trust-strip" aria-label="Параметры работы и доверие">
+            <div class="tm-section--hero-conversion__trust-item">
+                <i class="fas fa-dolly tm-section--hero-conversion__trust-icon" aria-hidden="true"></i>
+                <span class="tm-section--hero-conversion__trust-label">14&nbsp;м вылет стрелы</span>
+            </div>
+            <div class="tm-section--hero-conversion__trust-item">
+                <i class="fas fa-truck tm-section--hero-conversion__trust-icon" aria-hidden="true"></i>
+                <span class="tm-section--hero-conversion__trust-label">5&nbsp;т борт</span>
+            </div>
+            <div class="tm-section--hero-conversion__trust-item">
+                <i class="fas fa-file-invoice tm-section--hero-conversion__trust-icon" aria-hidden="true"></i>
+                <span class="tm-section--hero-conversion__trust-label">Работа с НДС</span>
+            </div>
+            <div class="tm-section--hero-conversion__trust-item">
+                <i class="fas fa-map-marker-alt tm-section--hero-conversion__trust-icon" aria-hidden="true"></i>
+                <span class="tm-section--hero-conversion__trust-label">Краснодар и край</span>
+            </div>
+            <div class="tm-section--hero-conversion__trust-item">
+                <i class="fas fa-clock tm-section--hero-conversion__trust-icon" aria-hidden="true"></i>
+                <span class="tm-section--hero-conversion__trust-label">Минимум 2 часа</span>
+            </div>
+            <div class="tm-section--hero-conversion__trust-item">
+                <i class="fas fa-users tm-section--hero-conversion__trust-icon" aria-hidden="true"></i>
+                <span class="tm-section--hero-conversion__trust-label">Работа с физ.&nbsp;и юр.&nbsp;лицами</span>
+            </div>
+        </div>
+    </div>
+</section>

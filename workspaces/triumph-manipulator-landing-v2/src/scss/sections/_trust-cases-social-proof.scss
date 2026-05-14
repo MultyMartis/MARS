@@ -1,0 +1,77 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+// Screen 03 — cases, sidebar, footer CTA (light section).
+
+.tm-section--trust-cases {
+    background: tm.$tm-color-light;
+    color: tm.$tm-color-text;
+}
+
+.tm-section--trust-cases__section-head {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+    margin-bottom: tm.$tm-space-16;
+}
+
+.tm-section--trust-cases__section-head-main {
+    grid-column: span 8;
+    min-height: 96px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--trust-cases__section-head-aside {
+    grid-column: span 4;
+    min-height: 96px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--trust-cases__layout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+    margin-bottom: tm.$tm-space-16;
+}
+
+.tm-section--trust-cases__main {
+    grid-column: span 8;
+    min-width: 0;
+}
+
+.tm-section--trust-cases__case-list {
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-4;
+}
+
+.tm-section--trust-cases__case-stub {
+    min-height: 120px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--trust-cases__sidebar {
+    grid-column: span 4;
+    min-height: 280px;
+    padding: tm.$tm-space-6;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--trust-cases__footer-cta {
+    min-height: 72px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+@media (max-width: v.$bp-desktop) {
+    .tm-section--trust-cases__section-head-main,
+    .tm-section--trust-cases__section-head-aside,
+    .tm-section--trust-cases__main,
+    .tm-section--trust-cases__sidebar {
+        grid-column: span 12;
+    }
+}

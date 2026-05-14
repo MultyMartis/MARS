@@ -1,0 +1,197 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+:root {
+    color-scheme: dark;
+}
+
+html {
+    letter-spacing: 0;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: tm.$tm-color-surface;
+    color: tm.$tm-color-ink;
+    font-family: tm.$tm-font-main;
+    font-size: tm.$tm-fs-body;
+    font-weight: tm.$tm-weight-regular;
+    line-height: tm.$tm-line-body;
+    letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: tm.$tm-font-display;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+h1 {
+    font-size: tm.$tm-fs-h1;
+}
+
+h2 {
+    font-size: tm.$tm-fs-h2;
+}
+
+h3 {
+    font-size: tm.$tm-fs-h3;
+}
+
+@media (min-width: v.$bp-desktop) {
+    h1 {
+        font-size: tm.$tm-fs-h1-lg;
+    }
+}
+
+p {
+    margin: 0;
+    font-size: tm.$tm-fs-body;
+    line-height: tm.$tm-line-body;
+    letter-spacing: 0;
+}
+
+main {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+// --- Single container (alias `.container` for legacy starter pages) ---
+.tm-container,
+.container {
+    width: 100%;
+    max-width: v.$container-width;
+    margin-inline: auto;
+    padding-inline: v.$container-padding-desktop;
+}
+
+.tm-container.tm-container--wide {
+    max-width: v.$container-wide-max-width;
+    padding-inline: v.$container-wide-padding-desktop;
+}
+
+@media (max-width: v.$bp-tablet) {
+    .tm-container,
+    .container {
+        padding-inline: v.$container-padding-tablet;
+    }
+
+    .tm-container.tm-container--wide {
+        padding-inline: v.$container-padding-tablet;
+    }
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-container,
+    .container {
+        padding-inline: v.$container-padding-mobile;
+    }
+
+    .tm-container.tm-container--wide {
+        padding-inline: v.$container-padding-mobile;
+    }
+}
+
+// --- Section vertical rhythm ---
+.tm-section {
+    padding-block: tm.$tm-section-padding-desktop;
+    letter-spacing: 0;
+}
+
+@media (max-width: v.$bp-tablet) {
+    .tm-section {
+        padding-block: tm.$tm-section-padding-tablet;
+    }
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-section {
+        padding-block: tm.$tm-section-padding-mobile;
+    }
+}
+
+// --- Typography utilities (Montserrat / Roboto; px only) ---
+.tm-eyebrow {
+    margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-fs-caption;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: tm.$tm-color-ink-muted;
+}
+
+.tm-lead {
+    margin: 0;
+    font-family: tm.$tm-font-main;
+    font-size: tm.$tm-fs-lead;
+    font-weight: tm.$tm-weight-regular;
+    line-height: tm.$tm-line-lead;
+    letter-spacing: 0;
+    color: tm.$tm-color-ink-muted;
+}
+
+.tm-body {
+    font-family: tm.$tm-font-main;
+    font-size: tm.$tm-fs-body;
+    font-weight: tm.$tm-weight-regular;
+    line-height: tm.$tm-line-body;
+    letter-spacing: 0;
+}
+
+.tm-caption,
+.tm-legal {
+    font-family: tm.$tm-font-main;
+    font-size: tm.$tm-fs-caption;
+    font-weight: tm.$tm-weight-regular;
+    line-height: tm.$tm-line-caption;
+    letter-spacing: 0;
+}
+
+.tm-section-title {
+    margin: 0 0 tm.$tm-space-8;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-fs-h2;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 1;
+    letter-spacing: 0;
+    color: inherit;
+}
+
+.tm-section-title--tight {
+    margin-bottom: tm.$tm-space-6;
+}
+
+// 12-column grid helper
+.tm-grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-grid-12 {
+        grid-template-columns: 1fr;
+        gap: tm.$tm-space-6;
+    }
+}

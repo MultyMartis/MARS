@@ -1,0 +1,134 @@
+<section class="hero" id="o-kompanii" aria-labelledby="hero-heading">
+    <div class="hero__bg" aria-hidden="true">
+        <picture>
+            <source type="image/webp" srcset="assets/img/hero/hero-bg.webp">
+            <img
+                class="hero__bg-image"
+                src="assets/img/hero/hero-bg.png"
+                width="1672"
+                height="941"
+                alt=""
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+            >
+        </picture>
+        <div class="hero__bg-overlay"></div>
+    </div>
+
+    <div class="hero__shell">
+        <div class="container hero__layout">
+            <div class="hero__content">
+                <h1 class="hero__title" id="hero-heading">
+                    <span class="hero__title-line">Аренда</span>
+                    <span class="hero__title-line">манипулятора</span>
+                    <span class="hero__title-line hero__title-line--accent">в Краснодаре</span>
+                </h1>
+                <div class="hero__title-rule" aria-hidden="true"></div>
+                <p class="hero__lead">
+                    Перевозка и погрузка стройматериалов, бытовок, оборудования и тяжёлых грузов одной машиной.
+                    Оставьте заявку и получите расчёт стоимости.
+                </p>
+
+                <div class="hero__price" role="group" aria-label="Стоимость аренды">
+                    <span class="hero__price-prefix">от</span>
+                    <span class="hero__price-value">
+                        <span class="hero__price-amount">XXXX</span>
+                        <span class="hero__price-unit">₽/час</span>
+                    </span>
+                </div>
+
+                <div class="hero__cta-row">
+                    <button class="btn btn--accent btn--hero" type="button">
+                        Оставить заявку
+                    </button>
+                    <p class="hero__cta-note">
+                        Перезвоним через <span class="hero__cta-note-strong">5 минут!</span>
+                    </p>
+                </div>
+
+                <ul class="hero__features">
+                    <li class="hero-feature">
+                        <span class="hero-feature__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "weight-crane", "classes": "hero-feature__svg icon icon--lg" })
+                        </span>
+                        <span class="hero-feature__text">Грузоподъёмность 5–10 тонн</span>
+                    </li>
+                    <li class="hero-feature">
+                        <span class="hero-feature__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "document-verify", "classes": "hero-feature__svg icon icon--lg" })
+                        </span>
+                        <span class="hero-feature__text">Безналичный расчёт с НДС</span>
+                    </li>
+                    <li class="hero-feature">
+                        <span class="hero-feature__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "clock-delivery", "classes": "hero-feature__svg icon icon--lg" })
+                        </span>
+                        <span class="hero-feature__text">Подача техники от 30 минут</span>
+                    </li>
+                    <li class="hero-feature">
+                        <span class="hero-feature__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "route-truck", "classes": "hero-feature__svg icon icon--lg" })
+                        </span>
+                        <span class="hero-feature__text">Почасовая аренда и рейсы</span>
+                    </li>
+                    <li class="hero-feature">
+                        <span class="hero-feature__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "map-pin-ring", "classes": "hero-feature__svg icon icon--lg" })
+                        </span>
+                        <span class="hero-feature__text">Работа по Краснодару и краю</span>
+                    </li>
+                    <li class="hero-feature">
+                        <span class="hero-feature__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "manipulator-arm", "classes": "hero-feature__svg icon icon--lg" })
+                        </span>
+                        <span class="hero-feature__text">Перевозка и погрузка одной машиной</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="hero__trust">
+            <div class="container hero__trust-inner">
+                <ul class="hero-trust">
+                    <li class="hero-trust__item">
+                        <span class="hero-trust__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "clock-delivery", "classes": "icon icon--xl" })
+                        </span>
+                        <span class="hero-trust__text">
+                            <span class="hero-trust__line hero-trust__line--strong">Подача от 30 минут</span>
+                            <span class="hero-trust__line">по Краснодару</span>
+                        </span>
+                    </li>
+                    <li class="hero-trust__item">
+                        <span class="hero-trust__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "vat-balance", "classes": "icon icon--xl" })
+                        </span>
+                        <span class="hero-trust__text">
+                            <span class="hero-trust__line hero-trust__line--strong">Работаем с НДС</span>
+                            <span class="hero-trust__line">безналичный расчёт для юр. лиц</span>
+                        </span>
+                    </li>
+                    <li class="hero-trust__item">
+                        <span class="hero-trust__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "shield-check", "classes": "icon icon--xl" })
+                        </span>
+                        <span class="hero-trust__text">
+                            <span class="hero-trust__line hero-trust__line--strong">Свой автопарк</span>
+                            <span class="hero-trust__line">исправная техника, регулярное ТО</span>
+                        </span>
+                    </li>
+                    <li class="hero-trust__item">
+                        <span class="hero-trust__icon" aria-hidden="true">
+                            @@include('partials/components/icon.html', { "name": "operator-badge", "classes": "icon icon--xl" })
+                        </span>
+                        <span class="hero-trust__text">
+                            <span class="hero-trust__line hero-trust__line--strong">Опытные операторы</span>
+                            <span class="hero-trust__line">профессионалы, бережная работа с грузом</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

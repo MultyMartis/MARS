@@ -1,0 +1,361 @@
+@use '../utils/tokens' as tm;
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    min-height: max(tm.$tm-hero-min-height, calc(100svh - tm.$tm-header-offset));
+    padding: tm.$tm-space-6 0 0;
+    font-family: tm.$tm-font-main;
+    color: tm.$tm-color-ink;
+    background: tm.$tm-color-surface;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero__bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // Якорим композицию справа, чтобы манипулятор оставался в кадре (сверка с mockups/01.png).
+    object-position: 72% center;
+}
+
+.hero__bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: tm.$tm-gradient-hero-left;
+}
+
+.hero__shell {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: inherit;
+}
+
+.hero__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    align-items: start;
+    gap: tm.$tm-space-8 tm.$tm-space-10;
+    padding-bottom: tm.$tm-space-8;
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+.hero__content {
+    max-width: min(46rem, 100%);
+    width: 100%;
+}
+
+.hero__title {
+    margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-h1-size;
+    font-weight: tm.$tm-h1-weight;
+    line-height: tm.$tm-h1-line-height;
+    letter-spacing: tm.$tm-h1-letter-spacing;
+    text-transform: uppercase;
+}
+
+.hero__title-line {
+    display: block;
+}
+
+.hero__title-line--accent {
+    color: tm.$tm-color-accent;
+}
+
+.hero__title-rule {
+    width: 6.5rem;
+    height: 3px;
+    margin: 0 0 tm.$tm-space-6;
+    border-radius: 0;
+    background: tm.$tm-gradient-red;
+}
+
+.hero__lead {
+    margin: 0 0 tm.$tm-space-6;
+    max-width: min(40rem, 100%);
+    font-size: tm.$tm-text-md;
+    line-height: tm.$tm-line-base;
+    color: rgba(216, 221, 230, 0.92);
+}
+
+.hero__price {
+    display: inline-flex;
+    align-items: stretch;
+    gap: tm.$tm-space-3;
+    margin-bottom: tm.$tm-space-6;
+    padding: tm.$tm-space-2 tm.$tm-space-3;
+    border: 1px solid tm.$tm-color-border-dark;
+    border-radius: 0;
+}
+
+.hero__price-prefix {
+    align-self: center;
+    font-size: tm.$tm-text-sm;
+    text-transform: lowercase;
+    color: tm.$tm-color-ink-muted;
+}
+
+.hero__price-value {
+    display: inline-flex;
+    align-items: baseline;
+    gap: tm.$tm-space-2;
+    padding: tm.$tm-space-2 tm.$tm-space-4;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero__price-amount {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: tm.$tm-weight-extrabold;
+}
+
+.hero__price-unit {
+    font-size: 0.875rem;
+    font-weight: tm.$tm-weight-bold;
+    opacity: 0.9;
+}
+
+.hero__cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: tm.$tm-space-4 tm.$tm-space-6;
+    margin-bottom: tm.$tm-space-8;
+}
+
+.btn--hero {
+    min-height: 56px;
+    padding-inline: 32px;
+    font-size: tm.$tm-text-base;
+    font-weight: tm.$tm-weight-extrabold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.hero__cta-note {
+    margin: 0;
+    font-size: tm.$tm-text-md;
+    color: tm.$tm-color-ink-muted;
+}
+
+.hero__cta-note-strong {
+    font-weight: tm.$tm-weight-bold;
+    color: tm.$tm-color-accent;
+}
+
+.hero__features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: tm.$tm-space-4 tm.$tm-space-8;
+    max-width: min(44rem, 100%);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: tm.$tm-space-3;
+    font-size: 0.875rem;
+    line-height: tm.$tm-line-tight;
+    color: rgba(216, 221, 230, 0.82);
+}
+
+.hero-feature__icon {
+    flex-shrink: 0;
+    border-radius: 0;
+    color: tm.$tm-color-accent;
+}
+
+.hero-feature__svg {
+    display: block;
+}
+
+.hero__trust {
+    margin-top: auto;
+    padding: tm.$tm-space-6 0 tm.$tm-space-5;
+    background: rgba(5, 11, 22, 0.92);
+    border-top: 1px solid tm.$tm-color-border-dark;
+    border-radius: 0;
+}
+
+.hero__trust-inner {
+    max-width: 100%;
+}
+
+.hero-trust {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-trust__item {
+    display: flex;
+    align-items: flex-start;
+    gap: tm.$tm-space-4;
+    padding: tm.$tm-space-2 tm.$tm-space-6;
+    position: relative;
+    border-radius: 0;
+}
+
+.hero-trust__item:first-child {
+    padding-left: 0;
+}
+
+.hero-trust__item:last-child {
+    padding-right: 0;
+}
+
+@media (min-width: 1024px) {
+    .hero-trust__item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0.35rem;
+        bottom: 0.35rem;
+        width: 1px;
+        background: tm.$tm-color-border-dark;
+    }
+}
+
+.hero-trust__icon {
+    flex-shrink: 0;
+    color: tm.$tm-color-accent;
+}
+
+.hero-trust__icon svg {
+    display: block;
+}
+
+.hero-trust__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: tm.$tm-text-xs;
+    line-height: 1.3;
+    color: rgba(216, 221, 230, 0.62);
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.hero-trust__line--strong {
+    font-size: tm.$tm-text-sm;
+    font-weight: tm.$tm-weight-extrabold;
+    color: tm.$tm-color-ink;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 1023px) {
+    // На планшетах фон уже не делит экран пополам — усиливаем затемнение для читаемости.
+    .hero__bg-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 8, 15, 0.9) 0%,
+                rgba(5, 8, 15, 0.78) 52%,
+                rgba(5, 8, 15, 0.62) 100%
+            );
+    }
+
+    .hero__bg-image {
+        object-position: 65% center;
+    }
+
+    .hero-trust {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: tm.$tm-space-4 0;
+    }
+
+    .hero-trust__item {
+        padding: tm.$tm-space-3 tm.$tm-space-4;
+    }
+
+    .hero-trust__item:first-child,
+    .hero-trust__item:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .hero-trust__item:nth-child(2),
+    .hero-trust__item:nth-child(4) {
+        padding-right: 0;
+    }
+
+    .hero-trust__item:nth-child(odd)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0.25rem;
+        bottom: 0.25rem;
+        width: 1px;
+        background: tm.$tm-color-border-dark;
+    }
+
+    .hero-trust__item:nth-child(2)::after,
+    .hero-trust__item:nth-child(4)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding-top: tm.$tm-space-6;
+        min-height: calc(100svh - tm.$tm-header-offset);
+    }
+
+    .hero__bg-image {
+        object-position: 70% center;
+    }
+
+    .hero__features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-trust {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-trust__item {
+        padding: tm.$tm-space-3 0;
+    }
+
+    .hero-trust__item::after {
+        display: none !important;
+    }
+
+    .hero-trust__item:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+// Sprite icon optical scale (HTML `icon--*` classes unchanged).
+.hero-feature__svg.icon {
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.hero-trust__icon .icon {
+    width: clamp(2.4375rem, 3.12vw, 3.0875rem);
+    height: clamp(2.4375rem, 3.12vw, 3.0875rem);
+}

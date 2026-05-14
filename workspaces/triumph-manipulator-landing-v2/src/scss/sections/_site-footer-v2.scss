@@ -1,0 +1,58 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+// Screen 07 — commercial footer skeleton.
+
+.tm-footer--v2 {
+    background: tm.$tm-color-surface;
+    color: tm.$tm-color-ink;
+    letter-spacing: 0;
+}
+
+.tm-footer__top-bar {
+    border-bottom: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-dark-2;
+}
+
+.tm-footer__top-inner {
+    min-height: 48px;
+}
+
+.tm-footer__main {
+    padding-block: tm.$tm-section-padding-tablet;
+    border-bottom: 1px solid tm.$tm-color-border-dark;
+}
+
+.tm-footer__main-inner {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+}
+
+.tm-footer__col {
+    grid-column: span 4;
+    min-height: 120px;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-dark-3;
+}
+
+.tm-footer__bottom {
+    padding-block: tm.$tm-space-6;
+}
+
+.tm-footer__bottom-inner {
+    min-height: 40px;
+    border-top: 1px solid transparent;
+}
+
+@media (max-width: v.$bp-desktop) {
+    .tm-footer__col {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-footer__col {
+        grid-column: span 12;
+    }
+}

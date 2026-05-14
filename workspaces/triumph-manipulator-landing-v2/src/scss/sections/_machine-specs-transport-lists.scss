@@ -1,0 +1,96 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+// Screen 02 — media, specs, allow/deny, CTA column.
+
+.tm-section--machine-specs {
+    background: tm.$tm-color-dark-2;
+    color: tm.$tm-color-ink;
+}
+
+.tm-section--machine-specs__top {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+    margin-bottom: tm.$tm-space-16;
+}
+
+.tm-section--machine-specs__media {
+    grid-column: span 6;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: tm.$tm-color-dark-3;
+    border: 1px solid tm.$tm-color-border-dark;
+}
+
+.tm-section--machine-specs__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 11, 22, 0.35);
+    pointer-events: none;
+}
+
+.tm-section--machine-specs__specs {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-6;
+    min-width: 0;
+}
+
+.tm-section--machine-specs__header {
+    min-height: 120px;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-surface;
+}
+
+.tm-section--machine-specs__spec-list {
+    flex: 1;
+    min-height: 200px;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-surface;
+}
+
+.tm-section--machine-specs__bottom {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+    align-items: stretch;
+}
+
+.tm-section--machine-specs__card {
+    grid-column: span 4;
+    min-height: 200px;
+    padding: tm.$tm-space-6;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-surface;
+}
+
+.tm-section--machine-specs__cta-column {
+    grid-column: span 4;
+    min-height: 200px;
+    padding: tm.$tm-space-6;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-dark-3;
+}
+
+@media (max-width: v.$bp-desktop) {
+    .tm-section--machine-specs__media,
+    .tm-section--machine-specs__specs {
+        grid-column: span 12;
+    }
+
+    .tm-section--machine-specs__card,
+    .tm-section--machine-specs__cta-column {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-section--machine-specs__card,
+    .tm-section--machine-specs__cta-column {
+        grid-column: span 12;
+    }
+}

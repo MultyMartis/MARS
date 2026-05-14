@@ -1,0 +1,28 @@
+@use '../utils/tokens' as tm;
+
+.breadcrumb {
+    padding: tm.$tm-space-4 0;
+}
+
+.breadcrumb__list {
+    display: flex;
+    gap: tm.$tm-space-2;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+    content: '/';
+    margin-left: tm.$tm-space-2;
+    opacity: 0.5;
+}
+
+.breadcrumb__item {
+    font-family: tm.$tm-font-main;
+    font-size: tm.$tm-fs-small;
+    line-height: tm.$tm-line-small;
+    letter-spacing: 0;
+    opacity: 0.8;
+}

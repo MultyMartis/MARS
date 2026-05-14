@@ -1,0 +1,111 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+// Screen 06 — consultation + lead (light section).
+
+.tm-section--consultation-lead {
+    background: tm.$tm-color-light;
+    color: tm.$tm-color-text;
+}
+
+.tm-section--consultation-lead__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+    align-items: start;
+}
+
+.tm-section--consultation-lead__content {
+    grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-8;
+    min-width: 0;
+}
+
+.tm-section--consultation-lead__header {
+    min-height: 120px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--consultation-lead__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-4;
+}
+
+.tm-section--consultation-lead__bullet-stub {
+    height: 40px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--consultation-lead__notice {
+    min-height: 56px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--consultation-lead__facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: tm.$tm-space-4;
+}
+
+.tm-section--consultation-lead__fact-stub {
+    min-height: 72px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--consultation-lead__aside {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-6;
+    min-width: 0;
+}
+
+.tm-section--consultation-lead__form-card {
+    min-height: 320px;
+    padding: tm.$tm-space-6;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+.tm-section--consultation-lead__form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-4;
+}
+
+.tm-section--consultation-lead__input-stub {
+    height: 40px;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-light;
+}
+
+.tm-section--consultation-lead__phone-block {
+    min-height: 120px;
+    padding: tm.$tm-space-6;
+    border: 1px solid tm.$tm-color-border;
+    background: tm.$tm-color-white;
+}
+
+@media (max-width: v.$bp-desktop) {
+    .tm-section--consultation-lead__content,
+    .tm-section--consultation-lead__aside {
+        grid-column: span 12;
+    }
+
+    .tm-section--consultation-lead__facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-section--consultation-lead__facts {
+        grid-template-columns: 1fr;
+    }
+}

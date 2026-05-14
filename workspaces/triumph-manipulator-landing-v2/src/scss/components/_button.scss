@@ -1,0 +1,73 @@
+@use '../utils/tokens' as tm;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 tm.$tm-space-8;
+    border: 0;
+    border-radius: 0;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-fs-small;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: tm.$tm-focus-ring;
+}
+
+.btn--primary,
+.btn--accent {
+    color: tm.$tm-color-white;
+    background: tm.$tm-fill-accent;
+}
+
+.btn--primary:hover,
+.btn--accent:hover {
+    background: tm.$tm-fill-accent-hover;
+}
+
+.btn--outline {
+    color: tm.$tm-color-accent;
+    background: transparent;
+    border: 1px solid tm.$tm-color-accent;
+}
+
+.btn--outline:hover {
+    color: tm.$tm-color-white;
+    background: tm.$tm-color-accent;
+}
+
+.btn--outline-on-dark {
+    color: tm.$tm-color-white;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+}
+
+.btn--outline-on-dark:hover {
+    color: tm.$tm-color-white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.btn__icon-left {
+    margin-inline-end: tm.$tm-space-2;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.btn.btn--header,
+.btn.btn--hero {
+    border-radius: 0;
+}
+
+.btn--hero {
+    padding-inline: tm.$tm-space-6;
+}

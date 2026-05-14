@@ -1,0 +1,53 @@
+@use '../utils/tokens' as tm;
+@use '../utils/variables' as v;
+
+// Screen 05 — problem / solution matrix.
+
+.tm-section--problem-solution {
+    background: tm.$tm-color-dark-2;
+    color: tm.$tm-color-ink;
+}
+
+.tm-section--problem-solution__head {
+    min-height: 100px;
+    margin-bottom: tm.$tm-space-16;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-surface;
+}
+
+.tm-section--problem-solution__matrix {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: tm.$tm-grid-gap;
+    margin-bottom: tm.$tm-space-16;
+}
+
+.tm-section--problem-solution__col {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    gap: tm.$tm-space-4;
+    min-height: 240px;
+    padding: tm.$tm-space-6;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-surface;
+}
+
+.tm-section--problem-solution__row-stub {
+    flex: 0 0 auto;
+    height: 48px;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-dark-3;
+}
+
+.tm-section--problem-solution__footer-cta {
+    min-height: 72px;
+    border: 1px solid tm.$tm-color-border-dark;
+    background: tm.$tm-color-dark-3;
+}
+
+@media (max-width: v.$bp-mobile) {
+    .tm-section--problem-solution__col {
+        grid-column: span 12;
+    }
+}

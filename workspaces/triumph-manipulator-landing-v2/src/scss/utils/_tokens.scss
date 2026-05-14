@@ -1,0 +1,120 @@
+@use 'variables' as v;
+
+// Triumph design system — semantic tokens (V2 visual foundation; px + letter-spacing 0 + radius 0).
+
+// --- Neutrals & surfaces ---
+$tm-color-dark: #050b16;
+$tm-color-dark-2: #07111f;
+$tm-color-dark-3: #0b1628;
+
+$tm-color-white: #ffffff;
+$tm-color-light: #f6f7f9;
+$tm-color-muted: #7b8494;
+$tm-color-text: #0a1220;
+$tm-color-text-light: #d8dde6;
+
+// --- Brand / accent ---
+$tm-color-accent: #e30621;
+$tm-color-accent-hover: #f01832;
+$tm-color-accent-dark: #b90018;
+
+// --- Semantic ---
+$tm-color-ink: $tm-color-text-light;
+$tm-color-ink-muted: rgba(216, 221, 230, 0.78);
+$tm-color-surface: $tm-color-dark;
+$tm-color-surface-elevated: $tm-color-dark-2;
+
+$tm-color-whatsapp: #25d366;
+$tm-color-telegram: #27a7e7;
+$tm-color-max: #4f55ff;
+
+$tm-color-border: #d9dde5;
+$tm-color-border-dark: rgba(255, 255, 255, 0.16);
+
+// --- Typography (families + weights; sizes in px only) ---
+$tm-font-display: 'Montserrat', Arial, sans-serif;
+$tm-font-main: 'Roboto', Arial, sans-serif;
+$tm-weight-regular: 400;
+$tm-weight-medium: 500;
+// Legacy aliases (unused in V2 bundle modules; keep for optional partials).
+$tm-weight-semibold: 500;
+$tm-weight-bold: 500;
+$tm-weight-extrabold: 500;
+$tm-weight-black: 500;
+
+$tm-text-lg: 22px;
+$tm-text-md: 18px;
+$tm-text-base: 16px;
+$tm-text-sm: 14px;
+$tm-text-xs: 12px;
+
+$tm-line-base: 1.45;
+$tm-line-tight: 1;
+
+$tm-radius-sm: 0;
+$tm-radius-md: 0;
+$tm-radius-lg: 0;
+$tm-radius-xl: 0;
+
+$tm-gradient-red: linear-gradient(180deg, #{$tm-color-accent-hover} 0%, #{$tm-color-accent-dark} 100%);
+$tm-gradient-hero-left: none;
+$tm-gradient-dark-section: none;
+
+$tm-shadow-button: none;
+$tm-shadow-button-hover: none;
+
+// Scale (design system §8)
+$tm-fs-caption: 12px;
+$tm-fs-small: 14px;
+$tm-fs-body: 16px;
+$tm-fs-lead: 18px;
+$tm-fs-subtitle: 22px;
+$tm-fs-h3: 24px;
+$tm-fs-h2: 32px;
+$tm-fs-h1: 40px;
+$tm-fs-h1-lg: 48px;
+
+$tm-h1-size: $tm-fs-h1;
+$tm-h1-line-height: 1;
+$tm-h1-letter-spacing: 0;
+$tm-h1-weight: $tm-weight-medium;
+
+$tm-line-body: calc(#{$tm-fs-body} + 4px);
+$tm-line-lead: calc(#{$tm-fs-lead} + 4px);
+$tm-line-small: calc(#{$tm-fs-small} + 4px);
+$tm-line-caption: calc(#{$tm-fs-caption} + 4px);
+
+// --- Flat fills only (no decorative gradients on surfaces) ---
+$tm-fill-accent: $tm-color-accent;
+$tm-fill-accent-hover: $tm-color-accent-hover;
+
+// --- Focus ---
+$tm-focus-ring: 0 0 0 2px #{$tm-color-surface}, 0 0 0 4px #{$tm-color-accent};
+
+// --- Layout ---
+$tm-header-offset: 132px;
+
+$tm-container-max-width: v.$container-width;
+$tm-container-inline-padding: v.$container-padding-desktop;
+
+// --- Spacing scale (8px rhythm; px only) ---
+$tm-space-1: 4px;
+$tm-space-2: 8px;
+$tm-space-3: 12px;
+$tm-space-4: 16px;
+$tm-space-5: 20px;
+$tm-space-6: 24px;
+$tm-space-7: 28px;
+$tm-space-8: 32px;
+$tm-space-10: 40px;
+$tm-space-12: 48px;
+$tm-space-16: 64px;
+$tm-space-24: 96px;
+
+// --- Section rhythm ---
+$tm-section-padding-desktop: 96px;
+$tm-section-padding-tablet: 72px;
+$tm-section-padding-mobile: 56px;
+
+// --- Grid ---
+$tm-grid-gap: 24px;

@@ -1,0 +1,24 @@
+@use '../utils/tokens' as tm;
+
+.advantages {
+    padding: tm.$tm-space-12 0;
+}
+
+.advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: tm.$tm-space-4;
+}
+
+.advantages__item {
+    padding: tm.$tm-space-5;
+    border: 1px solid tm.$tm-color-border-dark;
+    border-radius: 0;
+    background: tm.$tm-color-dark-2;
+}
+
+@media (max-width: 900px) {
+    .advantages__list {
+        grid-template-columns: 1fr;
+    }
+}

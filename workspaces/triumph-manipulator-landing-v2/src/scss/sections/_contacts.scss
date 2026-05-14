@@ -1,0 +1,12 @@
+@use '../utils/tokens' as tm;
+
+.contacts {
+    padding: tm.$tm-space-12 0 tm.$tm-space-8;
+}
+
+.contacts__text {
+    margin: 0 0 tm.$tm-space-3;
+    font-size: tm.$tm-fs-body;
+    line-height: tm.$tm-line-body;
+    letter-spacing: 0;
+}

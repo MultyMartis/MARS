@@ -1,0 +1,17 @@
+@@include("partials/layout/head.html", {"lang":"en","title":"Service | Gulp Starter","description":"Service page example for internal starter layouts with semantic and reusable static markup.","robots":"index,follow","ogType":"website","twitterCard":"summary"})
+<body>
+    @@include("partials/layout/header.html")
+
+    <main>
+        @@include("partials/components/breadcrumb.html", {"current": "Service"})
+        @@include("partials/sections/page-intro.html", {"title": "Services", "text": "Starter-friendly page pattern for regular internal pages with clean semantic content."})
+
+        @@include("partials/sections/advantages.html")
+        @@include("partials/sections/contacts.html")
+    </main>
+
+    @@include("partials/layout/footer.html")
+    @@include("partials/components/modal.html", {"id": "demo-modal", "title": "Service Request", "text": "Use this modal as a basic request dialog."})
+    @@include("partials/layout/scripts.html")
+</body>
+</html>
