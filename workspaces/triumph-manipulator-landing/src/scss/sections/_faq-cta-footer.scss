@@ -4,7 +4,7 @@
 // --- FAQ (light section) ---
 .faq-section {
     padding-block: tm.$tm-section-padding-mobile;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-text;
     background: tm.$tm-color-light;
 }
@@ -33,6 +33,7 @@
 
 .faq-section__eyebrow {
     margin: 0 0 tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-text-sm;
     font-weight: tm.$tm-weight-bold;
     letter-spacing: 0.12em;
@@ -42,6 +43,7 @@
 
 .faq-section__title {
     margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
     font-size: clamp(1.75rem, 2.5vw, 2.25rem);
     font-weight: tm.$tm-weight-black;
     line-height: tm.$tm-line-tight;
@@ -144,7 +146,7 @@
     position: relative;
     isolation: isolate;
     padding-block: tm.$tm-section-padding-mobile;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-ink;
     overflow: hidden;
 }
@@ -205,6 +207,7 @@
 
 .cta-contact__title {
     margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
     font-size: clamp(1.75rem, 3vw, 2.75rem);
     font-weight: tm.$tm-weight-black;
     line-height: tm.$tm-line-tight;
@@ -407,7 +410,7 @@
 
 // --- Footer ---
 .footer {
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-ink-muted;
     background: linear-gradient(180deg, #050b16 0%, #02060f 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -450,6 +453,7 @@
 
 .footer__col-title {
     margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-text-sm;
     font-weight: tm.$tm-weight-extrabold;
     letter-spacing: 0.08em;
@@ -474,7 +478,7 @@
 
 .footer__logo-img {
     display: block;
-    height: 2.5rem;
+    height: 60px;
     width: auto;
     max-width: 12rem;
     object-fit: contain;
@@ -591,12 +595,14 @@
 }
 
 .footer__social-max {
+    font-family: tm.$tm-font-display;
     font-weight: tm.$tm-weight-black;
     font-size: tm.$tm-text-sm;
 }
 
 .footer__cta-title {
     margin: 0 0 tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-text-lg;
     font-weight: tm.$tm-weight-black;
     color: tm.$tm-color-white;
@@ -670,4 +676,24 @@
 
 .footer__legal-link:hover {
     border-bottom-color: tm.$tm-color-accent;
+}
+
+.faq-item__icon .icon {
+    width: 1.7875rem;
+    height: 1.7875rem;
+}
+
+.cta-contact__feature-icon.icon {
+    width: 1.7875rem;
+    height: 1.7875rem;
+}
+
+.cta-contact__messenger-icon.icon {
+    width: 1.7875rem;
+    height: 1.7875rem;
+}
+
+.cta-contact__note-icon.icon {
+    width: 1.3rem;
+    height: 1.3rem;
 }

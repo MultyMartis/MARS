@@ -46,9 +46,18 @@ body {
   margin: 0;
   background: #050b16;
   color: #d8dde6;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 main {
@@ -86,6 +95,7 @@ main {
 }
 .section-title {
   margin: 0 0 20px;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 32px;
 }
 
@@ -93,7 +103,7 @@ main {
   position: relative;
   z-index: 20;
   padding: 0.75rem 0;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #d8dde6;
   background: #050b16;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
@@ -105,13 +115,14 @@ main {
   justify-content: space-between;
   gap: 1.25rem 1.5rem;
   flex-wrap: wrap;
-  min-height: 3.25rem;
+  min-height: 3.75rem;
 }
 
 .site-header__brand {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 0.04em;
   color: #d8dde6;
@@ -126,7 +137,7 @@ main {
 
 .site-header__logo-img {
   display: block;
-  height: 2rem;
+  height: 60px;
   width: auto;
   max-width: 11rem;
   object-fit: contain;
@@ -263,9 +274,9 @@ main {
   isolation: isolate;
   display: flex;
   flex-direction: column;
-  min-height: max(36rem, 100svh - 5rem);
+  min-height: max(36rem, 100svh - 5.25rem);
   padding: 1.5rem 0 0;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #d8dde6;
   background: #050b16;
 }
@@ -320,6 +331,7 @@ main {
 
 .hero__title {
   margin: 0 0 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(42px, 4.4vw, 72px);
   font-weight: 900;
   line-height: 0.95;
@@ -561,7 +573,7 @@ main {
 @media (max-width: 767px) {
   .hero {
     padding-top: 1.5rem;
-    min-height: calc(100svh - 5rem);
+    min-height: calc(100svh - 5.25rem);
   }
   .hero__bg-image {
     object-position: 70% center;
@@ -582,12 +594,23 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+.hero-feature__svg.icon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.hero-trust__icon .icon {
+  width: clamp(2.4375rem, 3.12vw, 3.0875rem);
+  height: clamp(2.4375rem, 3.12vw, 3.0875rem);
+}
+
 .page-intro {
   padding: 36px 0 24px;
 }
 
 .page-intro__title {
   margin: 0 0 12px;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 40px;
   line-height: 1.15;
 }
@@ -596,6 +619,7 @@ main {
   margin: 0;
   max-width: 760px;
   color: rgba(255, 255, 255, 0.8);
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
 }
 
@@ -639,7 +663,7 @@ main {
 
 .equipment-prices {
   padding: 56px 0;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #0a1220;
   background: #ffffff;
 }
@@ -665,6 +689,7 @@ main {
 
 .equipment-prices__eyebrow {
   margin: 0 0 0.75rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 1.15;
@@ -675,6 +700,7 @@ main {
 
 .equipment-prices__title {
   margin: 0 0 1.25rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(28px, 3.4vw, 48px);
   font-weight: 900;
   line-height: 1.02;
@@ -777,6 +803,7 @@ main {
   left: 1rem;
   z-index: 1;
   padding: 0.5rem 0.75rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 12px;
   font-weight: 800;
   line-height: 1;
@@ -805,6 +832,7 @@ main {
 
 .price-card__title {
   margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(1rem, 1.25vw, 1.125rem);
   font-weight: 800;
   line-height: 1.15;
@@ -1023,13 +1051,28 @@ main {
   }
   .price-card__spec-value {
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 2.6rem;
   }
 }
+.price-card__spec-icon .icon {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+.price-card__suitable-icon .icon {
+  width: 1.7875rem;
+  height: 1.7875rem;
+}
+
+.equipment-prices__cta-icon.icon {
+  width: 1.7875rem;
+  height: 1.7875rem;
+}
+
 .trust-reviews {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #0a1220;
 }
 
@@ -1068,6 +1111,7 @@ main {
   align-items: center;
   gap: 0.75rem;
   margin: 0 0 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 1.15;
@@ -1087,6 +1131,7 @@ main {
 
 .trust-reviews__title {
   margin: 0 0 1.5rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(1.875rem, 3.15vw, 2.75rem);
   font-weight: 900;
   line-height: 1.1;
@@ -1139,6 +1184,7 @@ main {
 
 .trust-benefit__title {
   margin: 0 0 0.75rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
   font-weight: 800;
   line-height: 1.2;
@@ -1183,6 +1229,7 @@ main {
 
 .trust-panel__score {
   margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(3.25rem, 6.5vw, 4.75rem);
   font-weight: 900;
   line-height: 0.95;
@@ -1257,6 +1304,7 @@ main {
   justify-content: center;
   min-height: 1.625rem;
   padding-inline: 0.125rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -1581,15 +1629,39 @@ main {
     width: 100%;
   }
 }
+.trust-benefit__icon .icon {
+  width: 4.225rem;
+  height: 4.225rem;
+}
+
 @media (max-width: 479px) {
   .trust-benefit {
     flex-direction: column;
     align-items: flex-start;
   }
+  .trust-benefit__icon .icon {
+    width: 3.7375rem;
+    height: 3.7375rem;
+  }
 }
+.trust-stats__icon .icon {
+  width: 3.7375rem;
+  height: 3.7375rem;
+}
+
+.trust-panel__placeholder-icon .icon {
+  width: 2.7625rem;
+  height: 2.7625rem;
+}
+
+.trust-panel__reviews-btn-icon.icon {
+  width: 1.7875rem;
+  height: 1.7875rem;
+}
+
 .faq-section {
   padding-block: 56px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #0a1220;
   background: #f6f7f9;
 }
@@ -1616,6 +1688,7 @@ main {
 
 .faq-section__eyebrow {
   margin: 0 0 0.75rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1625,6 +1698,7 @@ main {
 
 .faq-section__title {
   margin: 0 0 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(1.75rem, 2.5vw, 2.25rem);
   font-weight: 900;
   line-height: 1.15;
@@ -1724,7 +1798,7 @@ main {
   position: relative;
   isolation: isolate;
   padding-block: 56px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #d8dde6;
   overflow: hidden;
 }
@@ -1780,6 +1854,7 @@ main {
 }
 .cta-contact__title {
   margin: 0 0 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.75rem);
   font-weight: 900;
   line-height: 1.15;
@@ -1976,7 +2051,7 @@ main {
 }
 
 .footer {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: rgba(216, 221, 230, 0.78);
   background: linear-gradient(180deg, #050b16 0%, #02060f 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -2015,6 +2090,7 @@ main {
 }
 .footer__col-title {
   margin: 0 0 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -2039,7 +2115,7 @@ main {
 
 .footer__logo-img {
   display: block;
-  height: 2.5rem;
+  height: 60px;
   width: auto;
   max-width: 12rem;
   object-fit: contain;
@@ -2153,12 +2229,14 @@ main {
 }
 
 .footer__social-max {
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900;
   font-size: 14px;
 }
 
 .footer__cta-title {
   margin: 0 0 0.75rem;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 22px;
   font-weight: 900;
   color: #ffffff;
@@ -2230,61 +2308,82 @@ main {
   border-bottom-color: #e30621;
 }
 
+.faq-item__icon .icon {
+  width: 1.7875rem;
+  height: 1.7875rem;
+}
+
+.cta-contact__feature-icon.icon {
+  width: 1.7875rem;
+  height: 1.7875rem;
+}
+
+.cta-contact__messenger-icon.icon {
+  width: 1.7875rem;
+  height: 1.7875rem;
+}
+
+.cta-contact__note-icon.icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
 .icon {
   display: block;
   flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.95rem;
+  height: 1.95rem;
   overflow: visible;
   color: inherit;
-  fill: none;
-  stroke: currentColor;
+  fill: currentColor;
+  stroke: none;
   pointer-events: none;
 }
 
 .icon use {
-  fill: none;
-  stroke: currentColor;
+  fill: currentColor;
+  stroke: none;
+  overflow: visible;
 }
 
 .icon--2xs {
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .icon--xs {
-  width: 1rem;
-  height: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .icon--sm {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 
 .icon--md {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.95rem;
+  height: 1.95rem;
 }
 
 .icon--lg {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2.275rem;
+  height: 2.275rem;
 }
 
 .icon--xl {
-  width: 2rem;
-  height: 2rem;
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 .icon--2xl {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
 .icon--3xl {
-  width: 3rem;
-  height: 3rem;
+  width: 3.9rem;
+  height: 3.9rem;
 }
 
 .icon--inline {

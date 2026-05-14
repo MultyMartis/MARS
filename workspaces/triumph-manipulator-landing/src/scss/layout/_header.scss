@@ -4,7 +4,7 @@
     position: relative;
     z-index: 20;
     padding: tm.$tm-space-3 0;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-ink;
     background: tm.$tm-color-surface;
     border-bottom: 1px solid tm.$tm-color-border-dark;
@@ -16,13 +16,14 @@
     justify-content: space-between;
     gap: tm.$tm-space-5 tm.$tm-space-6;
     flex-wrap: wrap;
-    min-height: 3.25rem;
+    min-height: 3.75rem;
 }
 
 .site-header__brand {
     display: inline-flex;
     align-items: center;
     gap: tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
     font-weight: tm.$tm-weight-extrabold;
     letter-spacing: 0.04em;
     color: tm.$tm-color-ink;
@@ -37,7 +38,7 @@
 
 .site-header__logo-img {
     display: block;
-    height: 2rem;
+    height: 60px;
     width: auto;
     max-width: 11rem;
     object-fit: contain;

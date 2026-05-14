@@ -7,7 +7,7 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 .trust-reviews {
     padding: 0;
     margin: 0;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-text;
 }
 
@@ -47,6 +47,7 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
     align-items: center;
     gap: tm.$tm-space-3;
     margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-text-sm;
     font-weight: tm.$tm-weight-extrabold;
     line-height: tm.$tm-line-tight;
@@ -66,6 +67,7 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 
 .trust-reviews__title {
     margin: 0 0 tm.$tm-space-6;
+    font-family: tm.$tm-font-display;
     font-size: clamp(1.875rem, 3.15vw, 2.75rem);
     font-weight: tm.$tm-weight-black;
     line-height: 1.1;
@@ -118,6 +120,7 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 
 .trust-benefit__title {
     margin: 0 0 tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
     font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
     font-weight: tm.$tm-weight-extrabold;
     line-height: 1.2;
@@ -163,6 +166,7 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
 
 .trust-panel__score {
     margin: 0;
+    font-family: tm.$tm-font-display;
     font-size: clamp(3.25rem, 6.5vw, 4.75rem);
     font-weight: tm.$tm-weight-black;
     line-height: 0.95;
@@ -237,6 +241,7 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
     justify-content: center;
     min-height: 1.625rem;
     padding-inline: 0.125rem;
+    font-family: tm.$tm-font-display;
     font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
     font-weight: tm.$tm-weight-extrabold;
     letter-spacing: 0.02em;
@@ -584,9 +589,34 @@ $trust-card-pad: 2rem; // 32px карточки преимуществ
     }
 }
 
+.trust-benefit__icon .icon {
+    width: 4.225rem;
+    height: 4.225rem;
+}
+
 @media (max-width: 479px) {
     .trust-benefit {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .trust-benefit__icon .icon {
+        width: 3.7375rem;
+        height: 3.7375rem;
+    }
+}
+
+.trust-stats__icon .icon {
+    width: 3.7375rem;
+    height: 3.7375rem;
+}
+
+.trust-panel__placeholder-icon .icon {
+    width: 2.7625rem;
+    height: 2.7625rem;
+}
+
+.trust-panel__reviews-btn-icon.icon {
+    width: 1.7875rem;
+    height: 1.7875rem;
 }

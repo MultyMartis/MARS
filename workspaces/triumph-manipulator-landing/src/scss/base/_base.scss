@@ -9,9 +9,18 @@ body {
     margin: 0;
     background: tm.$tm-color-surface;
     color: tm.$tm-color-ink;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     font-size: tm.$tm-text-base;
     line-height: tm.$tm-line-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: tm.$tm-font-display;
 }
 
 main {
@@ -51,5 +60,6 @@ main {
 
 .section-title {
     margin: 0 0 20px;
+    font-family: tm.$tm-font-display;
     font-size: 32px;
 }

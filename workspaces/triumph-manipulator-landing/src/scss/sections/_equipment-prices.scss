@@ -3,7 +3,7 @@
 // Светлая секция «Техника и цены» (ref: design/mockups/02.png).
 .equipment-prices {
     padding: tm.$tm-section-padding-mobile 0;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-text;
     background: tm.$tm-color-white;
 }
@@ -29,6 +29,7 @@
 
 .equipment-prices__eyebrow {
     margin: 0 0 tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-text-sm;
     font-weight: tm.$tm-weight-extrabold;
     line-height: tm.$tm-line-tight;
@@ -39,6 +40,7 @@
 
 .equipment-prices__title {
     margin: 0 0 tm.$tm-space-5;
+    font-family: tm.$tm-font-display;
     font-size: clamp(28px, 3.4vw, 48px);
     font-weight: tm.$tm-weight-black;
     line-height: 1.02;
@@ -141,6 +143,7 @@
     left: tm.$tm-space-4;
     z-index: 1;
     padding: tm.$tm-space-2 tm.$tm-space-3;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-text-xs;
     font-weight: tm.$tm-weight-extrabold;
     line-height: 1;
@@ -169,6 +172,7 @@
 
 .price-card__title {
     margin: 0;
+    font-family: tm.$tm-font-display;
     font-size: clamp(1rem, 1.25vw, 1.125rem);
     font-weight: tm.$tm-weight-extrabold;
     line-height: tm.$tm-line-tight;
@@ -407,6 +411,21 @@
 
     .price-card__spec-value {
         width: 100%;
-        padding-left: 2rem;
+        padding-left: 2.6rem;
     }
+}
+
+.price-card__spec-icon .icon {
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.price-card__suitable-icon .icon {
+    width: 1.7875rem;
+    height: 1.7875rem;
+}
+
+.equipment-prices__cta-icon.icon {
+    width: 1.7875rem;
+    height: 1.7875rem;
 }

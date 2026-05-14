@@ -1,9 +1,12 @@
+@use '../utils/tokens' as tm;
+
 .page-intro {
     padding: 36px 0 24px;
 }
 
 .page-intro__title {
     margin: 0 0 12px;
+    font-family: tm.$tm-font-display;
     font-size: 40px;
     line-height: 1.15;
 }
@@ -12,6 +15,7 @@
     margin: 0;
     max-width: 760px;
     color: rgba(255, 255, 255, 0.8);
+    font-family: tm.$tm-font-main;
     font-size: 18px;
 }
 

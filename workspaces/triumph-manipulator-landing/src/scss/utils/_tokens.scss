@@ -33,6 +33,7 @@ $tm-color-border-dark: rgba(255, 255, 255, 0.16);
 
 // --- Typography ---
 $tm-font-display: 'Montserrat', Arial, sans-serif;
+$tm-font-main: 'Roboto', Arial, sans-serif;
 $tm-weight-regular: 400;
 $tm-weight-medium: 500;
 $tm-weight-semibold: 600;
@@ -79,7 +80,7 @@ $tm-shadow-button-hover: 0 18px 36px rgba(227, 6, 33, 0.36);
 $tm-focus-ring: 0 0 0 2px #{$tm-color-surface}, 0 0 0 4px #{$tm-color-accent};
 
 // --- Layout ---
-$tm-header-offset: 5rem;
+$tm-header-offset: 5.25rem;
 
 $tm-hero-min-height: 36rem;
 $tm-hero-trust-break: 900px;

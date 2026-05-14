@@ -7,7 +7,7 @@
     flex-direction: column;
     min-height: max(tm.$tm-hero-min-height, calc(100svh - tm.$tm-header-offset));
     padding: tm.$tm-space-6 0 0;
-    font-family: tm.$tm-font-display;
+    font-family: tm.$tm-font-main;
     color: tm.$tm-color-ink;
     background: tm.$tm-color-surface;
 }
@@ -63,6 +63,7 @@
 
 .hero__title {
     margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
     font-size: tm.$tm-h1-size;
     font-weight: tm.$tm-h1-weight;
     line-height: tm.$tm-h1-line-height;
@@ -346,4 +347,15 @@
     .hero-trust__item:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
+}
+
+// Sprite icon optical scale (HTML `icon--*` classes unchanged).
+.hero-feature__svg.icon {
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.hero-trust__icon .icon {
+    width: clamp(2.4375rem, 3.12vw, 3.0875rem);
+    height: clamp(2.4375rem, 3.12vw, 3.0875rem);
 }
