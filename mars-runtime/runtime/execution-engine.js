@@ -1,3 +1,4 @@
+/* R1 experimental sketch: human-invoked task helper with static workflow rows — not a full MARS runtime, orchestrator, or control plane. */
 const crypto = require("crypto");
 const { executeTask } = require("./execution-bridge");
 const { saveRunState } = require("../state/runtime-state-store");

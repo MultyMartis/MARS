@@ -1,21 +1,22 @@
 # MARS Runtime (R1)
 
+**Posture:** experimental **manual** scripts only — **not** a MARS runtime product, **not** an orchestrator, **not** a control plane, **not** background or hidden execution.
+
 ## Current scope
 
-- Minimal runtime only
-- Execution Engine
-- Execution Bridge
-- n8n Adapter
-- Runtime Config
-- Tool Registry
-- Input / workflow validation
+- Narrow in-process **sketch**: validate task → static workflow map → adapter **dispatch** → optional JSON run snapshots
+- `execution-engine.js` — task/run helper (not a full “engine” product subsystem)
+- `execution-bridge.js` — adapter routing (not the full v0 Execution Bridge contract implementation)
+- n8n adapter (HTTP POST to **your** configured webhook)
+- SEO Content Agent adapter (separate env URL; external system owns behavior)
+- Runtime config + static tool registry (demo lookup, not repo-wide policy)
 - Smoke tests
 
 ## Requirements
 
 - Node.js 18+
-- Active n8n production webhook
-- N8N_WEBHOOK_URL environment variable
+- A reachable **operator-configured** n8n webhook URL you supply (**external** instance; “production” here means *your* live/stage n8n, **not** a shipped MARS runtime tier)
+- `N8N_WEBHOOK_URL` environment variable
 
 ## Environment
 

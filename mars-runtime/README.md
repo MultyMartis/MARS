@@ -6,11 +6,11 @@
 
 Reserved for the **DevOps / Runtime** concerns of MARS: process model, workers, schedulers, queues, deployment topology, environment wiring — as **planned** in the target architecture (see `web-gpt-sources/02_architecture.md`). This folder is the **structural** anchor for “where the running system would live” at full maturity.
 
-**Today**, `mars-runtime/` holds **both** the **v0 architecture contracts** (Stage 8.5 / Stage 13-facing markdown) **and** **minimal experimental R1** JavaScript (narrow demos under `adapters/`, `runtime/`). That R1 code does **not** constitute a shipped production runtime; a complete queue/orchestrator-backed system remains **planned** (see **Contracts vs implementation** below).
+**Today**, `mars-runtime/` holds **both** the **v0 architecture contracts** (Stage 8.5 / Stage 13-facing markdown) **and** **minimal experimental R1** JavaScript (narrow demos under `adapters/`, `runtime/`). R1 entrypoints are **human-invoked** only (manual `node …`); adapters call **operator-configured external** URLs (e.g. your n8n webhook), not services defined or hosted by this repository. That R1 code does **not** constitute a shipped production runtime, **does not** implement the **control plane** or **autonomous orchestration**, and **does not** replace contract-only folders (`control-plane/`, `workflows/`, …) with executable equivalents; a complete queue/orchestrator-backed system remains **planned** (see **Contracts vs implementation** below). Folder→layer **narrative** (non-authoritative): `architecture-map.md`.
 
 ## Relation to MARS architecture
 
-Maps to the **DevOps / Runtime** layer: runtime processes, jobs, and operational shell around the other layers. It does **not** by itself implement orchestration (that is **Control Plane**) or business agents (**Agent** layer); it hosts execution and ops.
+Maps to the **DevOps / Runtime** layer: at documented maturity, runtime processes, jobs, and operational shell around the other layers. It does **not** by itself implement orchestration (that is **Control Plane**) or business agents (**Agent** layer). **Today**, R1 does **not** provide a long-running host, scheduler, or service — only optional sketch scripts alongside the markdown contracts.
 
 ## Contracts vs implementation
 

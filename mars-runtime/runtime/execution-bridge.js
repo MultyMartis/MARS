@@ -1,3 +1,4 @@
+/* R1 experimental adapter dispatch only — not the full v0 Execution Bridge contract and not an orchestration runtime. */
 const { invokeTool: invokeN8nWebhook } = require("../adapters/n8n-adapter");
 const {
   invokeTool: invokeSeoContentAgent,
