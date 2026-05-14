@@ -1,6 +1,6 @@
 # Frontend section map — Triumph Manipulator Landing
 
-**Scope:** Mockup → `landing-strip-*` **continuity map** (starter / foundation layer). **Not** the authoritative list of partials wired into the **current active V2** homepage. Filesystem roles and today’s `index.html` composition: [`../V2-CANONICAL-STATE.md`](../V2-CANONICAL-STATE.md).
+**Scope:** Mockup → `landing-strip-*` **continuity map** (starter / foundation). **Not** the list of partials in today’s V2 homepage. Paths and `index.html`: [`../V2-CANONICAL-STATE.md`](../V2-CANONICAL-STATE.md).
 
 **Purpose:** map raster mockup order → Gulp starter **section partials** (foundation only; no final copy or pixel-perfect layout).  
 **Frontend workspace:** `workspaces/triumph-manipulator-landing/`

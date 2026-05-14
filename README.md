@@ -55,7 +55,7 @@ This directory is the **main local working copy** of the MARS project: design no
 | `observability/` | Observability placeholder and future contracts |
 | `evaluation/` | Evaluation placeholder and future contracts |
 | `mars-runtime/` | v0 **architecture contracts** (e.g. architecture map, **Execution Bridge v0**) **and** **minimal experimental R1** JavaScript (narrow task → bridge → adapter → webhook demo; **not** a full production runtime) |
-| `shared/` | **Controlled shared asset layer** for implementation-adjacent files (local workstation; **not** governance source of truth; **not** runtime). See [`shared/README.md`](shared/README.md); Font Awesome Pro usage: [`shared/assets/icon-libraries/fontawesome-pro-5.15.4-usage.md`](shared/assets/icon-libraries/fontawesome-pro-5.15.4-usage.md). **Licensing-sensitive** — selective, agreement-bound use only. |
+| `shared/` | **Shared local files** for frontends (e.g. Font Awesome checkout for icon reference on this machine; **not** governance, **not** `mars-runtime/`). See [`shared/README.md`](shared/README.md); usage note [`shared/assets/icon-libraries/fontawesome-pro-5.15.4-usage.md`](shared/assets/icon-libraries/fontawesome-pro-5.15.4-usage.md). **Licensing-sensitive** — selective, agreement-bound use; do not commit the whole vendor tree unless policy explicitly allows. |
 | `web-gpt-sources/` | Numbered topic Markdown files (system, architecture, core, agents, …) — **legacy imported** pack |
 
 ---

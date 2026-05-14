@@ -1,19 +1,19 @@
-# `shared/` — controlled shared asset layer
+# `shared/` — shared local files
 
-This directory holds **operator-approved, implementation-adjacent assets** kept in-repo for **local** frontend and factory-style work. It is **not** a scratch area, **not** a governance source of truth, and **not** part of the MARS runtime (`mars-runtime/`).
+This folder holds **local shared files** for frontends on this machine (for example a Font Awesome Pro checkout used for icon lookup). It is **not** a scratch dump, **not** governance truth, and **not** part of `mars-runtime/`.
 
 ## Classification
 
 | Statement | Meaning |
 |-----------|---------|
-| **Controlled layer** | Contents are intentional; do not treat the tree as disposable clutter or “vendor noise” to delete without an explicit task. |
-| **Local / shared dependency posture** | Assets are for **trusted workstations** and **deliberate** project wiring (e.g. icon name lookup, curated SVG export). They are **not** a substitute for project-level `src/` assets in shipped builds. |
+| **Controlled use** | Contents are intentional; do not delete paths here casually without a task. |
+| **Local / selective** | For **trusted workstations** and deliberate wiring (icon names, curated SVG export into a project `src/`). **Not** a substitute for normal project assets in shipped HTML. |
 | **Licensing-sensitive** | Third-party packs (e.g. Font Awesome Pro) remain subject to **your** license agreement. This README does **not** perform legal review and does **not** authorise redistribution beyond what **you** are entitled to do. |
 
 ## `shared/assets/` and `shared/assets/icon-libraries/`
 
-- **`shared/assets/`** — home for shared binary or vendor-adjacent material that multiple frontends or docs may reference under a single canonical path.
-- **`shared/assets/icon-libraries/`** — canonical checkout location for **Font Awesome Pro 5.15.4** (folder name: `Font Awesome Pro 5.15.4/`). That tree is an **intentional** icon source for **Website Factory** and landing work, **not** an accidental drop.
+- **`shared/assets/`** — shared binaries or vendor trees that several frontends may reference from one path.  
+- **`shared/assets/icon-libraries/`** — local checkout of **Font Awesome Pro 5.15.4** (folder name `Font Awesome Pro 5.15.4/`). **Intentional** icon reference for landing work; **not** an accidental drop.
 
 ## Intended usage
 

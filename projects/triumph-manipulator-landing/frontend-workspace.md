@@ -23,6 +23,6 @@ In this path, an operator may:
 
 ## Related
 
-- **Triumph V2 — filesystem roles (active workspace `triumph-manipulator-landing-v2/`, design vs `src` vs `dist`, shared icons):** [V2-CANONICAL-STATE.md](V2-CANONICAL-STATE.md)
+- **Triumph V2 (current layout):** folder paths and where to edit — [V2-CANONICAL-STATE.md](V2-CANONICAL-STATE.md) (`workspaces/triumph-manipulator-landing-v2/`, design pack, `dist/`, shared icons).
 - [frontend-agent-brief.md](frontend-agent-brief.md)
 - [website-factory-runbook.md](website-factory-runbook.md)

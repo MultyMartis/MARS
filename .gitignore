@@ -72,11 +72,12 @@ workspaces/triumph-manipulator-landing/*
 !workspaces/triumph-manipulator-landing/dist/
 !workspaces/triumph-manipulator-landing/dist/**
 
-# Triumph Manipulator Landing V2 — explicit allow-list (mirrors V1 policy)
+# Triumph Manipulator Landing V2 — explicit allow-list (source + workspace docs; dist is not allow-listed)
 !workspaces/triumph-manipulator-landing-v2/
 workspaces/triumph-manipulator-landing-v2/*
 !workspaces/triumph-manipulator-landing-v2/README.md
 !workspaces/triumph-manipulator-landing-v2/V2-HANDOFF.md
+!workspaces/triumph-manipulator-landing-v2/AGENTS.md
 !workspaces/triumph-manipulator-landing-v2/.gitkeep
 !workspaces/triumph-manipulator-landing-v2/.gitignore
 !workspaces/triumph-manipulator-landing-v2/package.json
@@ -84,5 +85,3 @@ workspaces/triumph-manipulator-landing-v2/*
 !workspaces/triumph-manipulator-landing-v2/gulpfile.js
 !workspaces/triumph-manipulator-landing-v2/src/
 !workspaces/triumph-manipulator-landing-v2/src/**
-!workspaces/triumph-manipulator-landing-v2/dist/
-!workspaces/triumph-manipulator-landing-v2/dist/**

@@ -1,0 +1,7 @@
+node_modules/
+# dist/ is Gulp build output — not a hand-editing source; keep out of source checkpoints (see root .gitignore).
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
