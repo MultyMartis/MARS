@@ -1,22 +1,46 @@
-# `tools` — Tool Layer v0 (documentation)
+# `tools/` — Operational helpers index (lightweight)
 
-## Purpose
+**Purpose:** Human-facing **index** of **experimental / pilot** operational helpers under `tools/`. This folder also holds **Tool Layer v0 design contracts** (markdown only); see [Related: Tool Layer v0](#related-tool-layer-v0-design-contracts) below.
 
-**Tool Layer** contracts: function-calling surfaces, registry semantics, execution alignment with the **Execution Bridge**, and safety / approval alignment with **Security** and **governance** signals. Cross-ref [../web-gpt-sources/02_architecture.md](../web-gpt-sources/02_architecture.md) and [../web-gpt-sources/07_tools_models.md](../web-gpt-sources/07_tools_models.md) for broader architecture context.
+**Critical scope statement:** The path `tools/` is **not** a MARS runtime platform, **not** a control plane, **not** orchestration, **not** governance enforcement, and **not** evidence of shipped operational automation. Executable scripts here are **local, explicit-invocation** aids unless a **separate** document proves otherwise.
 
-## Documents (v0)
+---
+
+## Operational helper pilots
+
+| Pilot | Path | Purpose | Status | Maturity (S6) | Posture |
+|-------|------|---------|--------|---------------|---------|
+| **PILOT 01** — Governance phrase scan | [`governance-scanner/`](governance-scanner/README.md) | Read-only substring hints on `.md` for drift-oriented triage | Experimental | Locally executable; human interpretation required | Manual; hints only |
+| **PILOT 03** — Markdown link hints | [`markdown-link-validator/`](markdown-link-validator/README.md) | Read-only relative local link / optional anchor hints | Experimental | Locally executable; human interpretation required | Manual; hints only |
+
+**Limitations (shared):** No negation or quote awareness; governance **definitions** of sensitive phrases can produce noise; output is **not** verdict, **not** SoT mutation, **not** CI gate unless you **separately** decide that in human process.
+
+**PILOT 03 specifics:** Link and reference-line parsing are heuristic; anchor slugs do not match all renderers; absolute-path and site-root links are largely skipped by design — [markdown-link-validator/README.md](markdown-link-validator/README.md).
+
+**Stabilization / lessons:** [helper-maturity-review.md](helper-maturity-review.md) · [helper-lessons-learned.md](helper-lessons-learned.md) · [helper-stabilization-rules.md](helper-stabilization-rules.md)
+
+---
+
+## Governance cross-references (S5–S7)
+
+- [operational-experiments-overview.md](../governance/operational-experiments-overview.md) — S7 narrow pilots framing  
+- [controlled-operationalization.md](../governance/controlled-operationalization.md) — S6 controlled helper evolution  
+- [tooling-escalation-warnings.md](../governance/tooling-escalation-warnings.md) — S5 drift signals (pseudo-runtime, hidden automation)  
+- [operationalization-maturity-levels.md](../governance/operationalization-maturity-levels.md) — S6 maturity vocabulary  
+- [experimental-tooling-status.md](../governance/experimental-tooling-status.md) — experimental vs runtime capability honesty  
+
+---
+
+## Related: Tool Layer v0 (design contracts)
+
+Markdown describing **planned** tool semantics, registry rows, and safety envelopes — **architecture / documentation** aligned with Web-GPT sources; **does not** assert an in-repo tool runtime. See [AGENTS.md](../AGENTS.md).
 
 | File | Role |
 |------|------|
-| [registry.md](registry.md) | **Tool Registry** — row schema (`tool_id`, permissions, risk, side effects, approval), lifecycle, **planned** examples. |
-| [tool-contract-v0.md](tool-contract-v0.md) | **Invocation envelope** — inputs/outputs, **signals**, failure-model and gate obligations. |
-| [tool-execution-model-v0.md](tool-execution-model-v0.md) | **Execution** — bridge mapping, sync/async, runtime state / checkpoint / resume / logging split. |
-| [tool-safety-model-v0.md](tool-safety-model-v0.md) | **Safety** — risk levels, **NEED HUMAN APPROVAL** / **SECURITY RISK** mapping, side-effect classes. |
+| [registry.md](registry.md) | Tool registry row schema, lifecycle, planned examples |
+| [tool-contract-v0.md](tool-contract-v0.md) | Invocation envelope, signals, failure model |
+| [tool-execution-model-v0.md](tool-execution-model-v0.md) | Bridge mapping narrative (design) |
+| [tool-safety-model-v0.md](tool-safety-model-v0.md) | Risk levels, approval alignment (design) |
+| [tool-agent-binding-v0.md](tool-agent-binding-v0.md), [tool-workflow-integration-v0.md](tool-workflow-integration-v0.md), [tool-permission-enforcement-v0.md](tool-permission-enforcement-v0.md), [tool-validation-rules-v0.md](tool-validation-rules-v0.md) | Stage 9.5 integration narrative (documentation) |
 
-## Relation to MARS architecture
-
-Tools are invoked from **agents** and **orchestration** under **permissions** and **approval gates**; they may touch **Runtime State Store** execution facets or **memory** only as described in the linked contracts — **not** implemented in this Phase 1 documentation repository.
-
-## Status
-
-**planned** — **documentation only** ([../AGENTS.md](../AGENTS.md): no in-repo tool runtime, MCP host, or enforcement engine unless separate evidence exists). **Stage 9** progress is reflected in [../governance/master-build-map.md](../governance/master-build-map.md).
+**Build map:** [governance/master-build-map.md](../governance/master-build-map.md).

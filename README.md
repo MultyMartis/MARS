@@ -22,17 +22,24 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ## Current phase
 
-**Phase 1 — documentation-first; Stages 0 through 8.5 complete**
+**Phase 1 — documentation-first** (see `governance/master-build-map.md`, `logs/lifecycle-log.md`, `AGENTS.md`).
 
-- **Status:** Stages **0–8.5** **documentation** (including **Runtime Readiness** **P0** **contracts**) is **complete** in this repository.  
-- **Next:** **Stage 9** (Tool registry / tool permissions) **per** `governance/master-build-map.md` — after any **project-agreed** **backup** of this tree.  
-- **Implementation:** There is **no** full production **MARS** runtime, services stack, or application platform evidenced here. **Minimal R1** experimental scripts under `mars-runtime/` prove only that **narrow** integration path; production orchestration, queues, concurrency, memory, and model routing remain **external** or **planned**. **Planned-implementation** for the **complete** system remains **future** work per `AGENTS.md`.
+| Kind | What it means here |
+|------|---------------------|
+| **Documented** | Markdown contracts and governance artefacts in-repo; normative **for documentation**, not proof of runnable product. |
+| **Planned** | Full multi-agent runtime, services, enforcement engines, and most adapters — **not** evidenced as shipped in this tree unless a path is cited. |
+| **Experimental R1** | Narrow JavaScript under `mars-runtime/` (task → bridge → adapter → webhook demos). **Not** a full MARS runtime; **not** production; **not** autonomous orchestration or an implemented control plane. |
+| **Operationally verified** | **Human-controlled** repo work (e.g. editor + local shell) per `governance/execution-model.md`. **Not** a claim that MARS core **automates** or **verifies** end-to-end product behaviour in-repo. |
+
+- **Documentation progression:** **Stage 7.5** consistency gate and **Stage 8.5** Runtime Readiness **P0** contracts are **closed** in governance (`logs/lifecycle-log.md` **evt-2026-0002**, **evt-2026-0003**). **Documentation milestones** for **Stages 9–15** are **recorded** in the lifecycle log (**evt-2026-0004**–**evt-2026-0010**); **per-stage** labels (**`partial-docs`**, **`near-complete-docs`**, residuals) stay **authoritative** in `governance/master-build-map.md` — those stages are **not** “fully implemented MARS.”  
+- **Next (governance / roadmap):** **Stage 16 — Pilot** remains **`planned-docs`** until a pilot is chartered in registry + lifecycle; until then, follow each stage’s **Next required action** and residual rows in `governance/master-build-map.md` (ongoing contract hygiene, risk/dependency updates when scope changes).  
+- **Implementation boundary:** There is **no** full production **MARS** runtime, services stack, or application platform evidenced here. **Minimal R1** code exercises only a **narrow** handoff path; queues, schedulers, durable MARS run state, and model routing remain **external** or **`planned-implementation`** per `AGENTS.md`.
 
 ## Repository layout
 
 | Path | Role |
 |------|------|
-| `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map**; parallel chat lanes ([`governance/parallel-cursor-chat-work-mode-v0.md`](governance/parallel-cursor-chat-work-mode-v0.md)) |
+| `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map**; [`governance/enforcement/`](governance/enforcement/README.md) (Phase S1 **documentation-only** review aids); parallel chat lanes ([`governance/parallel-cursor-chat-work-mode-v0.md`](governance/parallel-cursor-chat-work-mode-v0.md)) |
 | `registry/` | **Project registry** and other registry-style anchors (`project-registry.md`) |
 | `projects/` | **Project documentation packs** — e.g. `projects/mars-website-factory/` (**strategic planned** — multi-agent **documentation-first** website production system; **not** runtime-ready); `projects/metabot-seo-content-agent/` (**canonical** — **MetaBOT** SEO Content Agent, **external multi-workflow AI system**, n8n runtime; not a simple tool adapter); `projects/seo-content-agent/` (**legacy** — early spec / bridge; do not extend) |
 | `logs/` | **Lifecycle log** (documented lifecycle events, append-only discipline) |
@@ -52,4 +59,4 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ---
 
-*Last updated: 2026-05-11 (`projects/mars-website-factory/` — **strategic planned** Website Factory doc pack (**document-first**; **not** runtime-ready); **Site Type Registry v0** and **Block Registry v0** live as Markdown in that pack; `projects/metabot-seo-content-agent/` is the **canonical** MetaBOT SEO Content Agent doc pack; `projects/seo-content-agent/` is **legacy**; Stages 0–8.5 documentation complete; Stage 9 next per `governance/master-build-map.md`; **minimal R1** experiments under `mars-runtime/` only — **no** full MARS production runtime in-repo).*
+*Last updated: 2026-05-14 — **Phase S0 truth repair:** root README aligned with `logs/lifecycle-log.md` (Stages **9–15** documentation **milestones** recorded **2026-04-28**) and per-stage tables in `governance/master-build-map.md`; **`planned-docs` / `partial-docs` / `near-complete-docs`** semantics unchanged; **no** runtime-completion claim. Prior notes: `projects/mars-website-factory/` (**strategic planned**, doc-first); `projects/metabot-seo-content-agent/` (**canonical** MetaBOT pack); `projects/seo-content-agent/` (**legacy**); **minimal R1** under `mars-runtime/` only — **no** full MARS production runtime in-repo.*

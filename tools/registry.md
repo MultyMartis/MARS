@@ -77,6 +77,7 @@ proposed → validated → approved → active → deprecated
 | [tool-safety-model-v0.md](tool-safety-model-v0.md) | **risk_level**, **side_effects**, **approval_required** **normative** **interpretation**. |
 | [../agents/registry.md](../agents/registry.md) | **allowed_agents** **resolves** **against** **catalog** **rows** **(design)**. |
 | [../mars-runtime/execution-bridge-v0.md](../mars-runtime/execution-bridge-v0.md) | **Executor** **categories** **(API,** **Scripts,** **…)** **map** **to** **tool** **types** **at** **bridge** **handoff** **(see** [tool-execution-model-v0.md](tool-execution-model-v0.md)**)**. |
+| [../governance/runtime-registry-boundaries.md](../governance/runtime-registry-boundaries.md) | **Clarification:** this **governance** registry **≠** `mars-runtime/runtime/tool-registry.js` (**R1** demo keys) **≠** external MCP/n8n catalogs. |
 | [../governance/dependency-map.md](../governance/dependency-map.md) | **Entity** **`tool_registry`**. |
 
 ---

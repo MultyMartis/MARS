@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "experimental": "PILOT 03 — narrow operational helper; output is triage hints, not proof of link integrity.",
+  "markdownExtensions": [".md", ".markdown"],
+  "inferMarkdownExtension": true,
+  "excludeDirNames": [
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    "out",
+    ".next",
+    "coverage"
+  ],
+  "severityByIssueType": {
+    "missing_target_file": "high",
+    "missing_target_file_inferred_md": "high",
+    "missing_same_file_anchor": "medium",
+    "missing_cross_file_anchor": "medium",
+    "suspicious_fragment": "low"
+  },
+  "anchorCheck": {
+    "defaultEnabled": false,
+    "note": "Heading slugs use a simple heuristic (GitHub-like); unicode and HTML anchors may produce false positives or misses."
+  }
+}

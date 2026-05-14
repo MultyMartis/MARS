@@ -13,6 +13,13 @@
 2. **Build-order changes** — Any **material change** to the **ordered stages**, **dependency graph**, or **definition of “done”** for a stage **must** be recorded in **`logs/decision-log.md`** (when that file exists and is stable) **or** in **`logs/lifecycle-log.md`** with a clear **event_type** (e.g. `governance.build_map_revised`) and pointer to the governing markdown revision. **SAFE UNKNOWN:** `logs/decision-log.md` is **not** present in-repo as of map v0; use **`logs/lifecycle-log.md`** until a decision log is introduced.
 3. **Honesty** — Stages marked **planned-implementation** have **no** in-repo proof of runnable code unless another file explicitly lists evidence. Do not treat this map as an implementation certificate. **Clarification:** `mars-runtime/` may hold **minimal experimental R1** JavaScript (narrow integration demos only); that is **not** a full production MARS runtime and does **not** by itself evidence **planned-implementation** for the complete system (see [../mars-runtime/README.md](../mars-runtime/README.md)).
 4. **Consistency Fix gate** — **No progression** to **Stage 8** or **any later stage** until **all P0** issues from the **system audit** are **resolved** and the **system passes a re-check audit** (Stage **7.5** exit criteria).
+5. **Governance enforcement layer (Phase S1, documentation)** — Human review aids under [enforcement/](enforcement/README.md): drift checks, risky phrasing, terminology boundaries. **Does not** add runtime, CI gates, or autonomous governance.
+
+---
+
+## Documentation progression vs implementation (executive anchor)
+
+**Lifecycle log** (`logs/lifecycle-log.md`) records **documentation milestones** for **Stages 9–15** (**evt-2026-0004**–**evt-2026-0010**, **2026-04-28**). Those entries **do not** assert a shipped **MARS** **runtime**, in-repo **tool host**, live **integrations**, or **deployment**. **Per-stage** status, **residual** work, and labels such as **`partial-docs`**, **`near-complete-docs`**, and **`planned-docs`** in the **stage tables below** remain authoritative for “what is documented now” vs **`planned-implementation`**.
 
 ---
 
@@ -386,6 +393,7 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | 2026-05-12 | **Website Factory First Operational Runbook v0 (documentation):** human-driven reference execution hub ([first-operational-runbook-v0.md](../projects/mars-website-factory/first-operational-runbook-v0.md)) plus linked R01–R15 sequence, operator lanes, supervision model, checkpoints C01–C08, artifact flow, failure/recovery prose, reporting alignment — **not** a runtime engine, **not** automation, **not** background orchestration; **capability-map** C16 Evidence/workflows updated; pack **README** / **workflow-map** / **roadmap** / **implementation-phase-1** cross-linked. |
 | 2026-05-12 | **Website Factory Reference Execution Case #1 (documentation):** `projects/mars-website-factory/reference-cases/triumph-manipulator-landing/` — Triumph Manipulator Landing **documentation-first** simulated run (intake → delivery readiness + canonical REPORT); **not** a shipped website, **not** runtime orchestration; **capability-map** C16 changelog; pack **README** / **roadmap** / **implementation-phase-1** / **workflow-map** updated. |
 | 2026-05-13 | **Website Factory Operational Templates Layer v0 (documentation):** [operational-template-overview-v0.md](../projects/mars-website-factory/operational-template-overview-v0.md) + linked `*-template-v0.md` under `projects/mars-website-factory/` — reusable operational patterns; **not** automation, **not** executable workflows; **capability-map** C16 + Stage 16 “What exists now” aligned; pack **README** / **roadmap** / **implementation-phase-1** / **workflow-map** updated. |
+| 2026-05-14 | **Phase S0 — governance truth repair:** **Executive anchor** after **Authority** — lifecycle **Stages 9–15** **documentation milestones** vs **implementation**; root **README** alignment; [runtime-registry-boundaries.md](runtime-registry-boundaries.md); **mars-runtime** **architecture-map** / **README** boundary wording; Website Factory **OPERATIONAL-INDEX**; lifecycle **evt-2026-0015**. **No** runtime shipped. |
 
 ---
 

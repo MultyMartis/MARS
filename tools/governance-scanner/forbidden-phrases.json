@@ -1,0 +1,147 @@
+[
+  {
+    "phrase": "autonomous orchestration",
+    "severity": "high",
+    "category": "orchestration-drift"
+  },
+  {
+    "phrase": "self-healing runtime",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "automatic coordination",
+    "severity": "medium",
+    "category": "orchestration-drift"
+  },
+  {
+    "phrase": "invisible retries",
+    "severity": "high",
+    "category": "hidden-runtime"
+  },
+  {
+    "phrase": "autonomous workflow execution",
+    "severity": "high",
+    "category": "orchestration-drift"
+  },
+  {
+    "phrase": "self-managing runtime",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "hidden synchronization",
+    "severity": "high",
+    "category": "hidden-runtime"
+  },
+  {
+    "phrase": "fully autonomous",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "production orchestrator",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "orchestrates production",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "automatic agent coordination",
+    "severity": "high",
+    "category": "orchestration-drift"
+  },
+  {
+    "phrase": "self-healing production",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "enforces policy across the repository",
+    "severity": "high",
+    "category": "fake-automation"
+  },
+  {
+    "phrase": "implements the full control plane",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "autonomous retries",
+    "severity": "high",
+    "category": "fake-automation"
+  },
+  {
+    "phrase": "background loops",
+    "severity": "medium",
+    "category": "tooling-drift"
+  },
+  {
+    "phrase": "implicit orchestration",
+    "severity": "high",
+    "category": "orchestration-drift"
+  },
+  {
+    "phrase": "silent execution",
+    "severity": "medium",
+    "category": "hidden-runtime"
+  },
+  {
+    "phrase": "self-triggered actions",
+    "severity": "high",
+    "category": "fake-automation"
+  },
+  {
+    "phrase": "fully automated mars pipeline",
+    "severity": "high",
+    "category": "operationalization-drift"
+  },
+  {
+    "phrase": "hands-off validation",
+    "severity": "high",
+    "category": "operationalization-drift"
+  },
+  {
+    "phrase": "self-healing registry",
+    "severity": "high",
+    "category": "operationalization-drift"
+  },
+  {
+    "phrase": "background mars worker",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "orchestrator-lite",
+    "severity": "high",
+    "category": "operationalization-drift"
+  },
+  {
+    "phrase": "mini control plane",
+    "severity": "high",
+    "category": "operationalization-drift"
+  },
+  {
+    "phrase": "self-driving tasks",
+    "severity": "high",
+    "category": "operationalization-drift"
+  },
+  {
+    "phrase": "always-on mars",
+    "severity": "high",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "queue consumer",
+    "severity": "medium",
+    "category": "forbidden-runtime-claim"
+  },
+  {
+    "phrase": "daemon mode",
+    "severity": "medium",
+    "category": "forbidden-runtime-claim"
+  }
+]

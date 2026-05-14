@@ -10,6 +10,8 @@
 
 The **execution model** answers: **who executes what, where, and in which order**—for **Phase 1 (documentation-first)** and for **future** automation. It complements `../workflows/execution-flow.md` (stages) by focusing on **hosts** and **bridges**.
 
+**Phase S4 (governance semantics, not runtime):** [execution-contracts-overview.md](execution-contracts-overview.md) links **task envelope**, **REPORT**, **validation meaning**, **artifact lifecycle**, and **execution boundaries**—see also [task-envelope-standard.md](task-envelope-standard.md), [validation-chain-semantics.md](validation-chain-semantics.md), [execution-boundary-clarification.md](execution-boundary-clarification.md).
+
 **Parallel chat discipline (one Cursor, multiple chats):** [parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md) — how humans keep **production execution** chats and **MARS core** chats from mixing paths, commits, and scopes.
 
 ---
@@ -71,7 +73,7 @@ An **Execution Bridge** is a **translation and handoff** layer between:
 | Aspect | **Workflow/Control Plane (docs)** | **Web-GPT / Cursor (today)** |
 |--------|------------------------------------|-----------------------------|
 | **State store** | Spec’ed for **future** (State Manager in `../control-plane/components.md`) | **Editor** + human memory + chat history; no shared MARS DB. |
-| **Registry** | `../agents/registry.md` is **source of truth for roles** in design | **Human** must interpret cards when choosing behavior. |
+| **Registry** | `../agents/registry.md` is **source of truth for roles** in design | **Human** must interpret cards when choosing behavior. **Tool / runtime registry confusion:** see [runtime-registry-boundaries.md](runtime-registry-boundaries.md). |
 | **Logs** | **Planned** observability | Git history, local logs, optional IDE traces—**not** unified MARS run log. |
 
 ---
@@ -88,3 +90,4 @@ An **Execution Bridge** is a **translation and handoff** layer between:
 | Version | Date | Notes |
 |---------|------|--------|
 | v0 | 2026-04-27 | Initial execution model; Execution Bridge defined. |
+| v0 | 2026-05-14 | Phase S4 cross-links to execution-contracts overview and related governance semantics (documentation-only). |

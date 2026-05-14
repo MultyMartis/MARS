@@ -1,0 +1,102 @@
+{
+  "version": "0.1",
+  "description": "Heuristic registry-adjacent hints for human triage only. Not normative; expect false positives.",
+  "excludeDirNames": [
+    ".git",
+    "node_modules",
+    "dist",
+    "build",
+    "out",
+    ".next",
+    "coverage"
+  ],
+  "lineHints": [
+    {
+      "id": "registry-path-no-sot-cue",
+      "issueType": "missing_source_of_truth_hint",
+      "severity": "low",
+      "extensions": [".md"],
+      "pattern": "(agents/registry\\.md|tools/registry\\.md|registry/project-registry\\.md)",
+      "lineMustNotMatch": "(source-of-truth|registry-source-of-truth|\\bSoT\\b)",
+      "hint": "References a known registry path without an explicit SoT cue on the same line; may be fine if defined nearby."
+    },
+    {
+      "id": "strong-claim-missing-doc-status",
+      "issueType": "conflicting_status_wording",
+      "severity": "medium",
+      "extensions": [".md"],
+      "pattern": "\\b(production-ready|shipped runtime|fully autonomous|live platform)\\b",
+      "lineMustNotMatch": "\\b(documented|planned|experimental|\\bR1\\b|demo|pilot|not implemented|governance only)\\b",
+      "hint": "Strong operational wording without nearby documented/planned/experimental qualifier; verify against AGENTS.md honesty rules."
+    },
+    {
+      "id": "registry-sync-language",
+      "issueType": "possible_registry_ambiguity",
+      "severity": "low",
+      "extensions": [".md", ".js", ".json"],
+      "pattern": "\\b(registry sync|registry synchronization|auto-synced registry)\\b",
+      "hint": "Language suggests automated registry sync; MARS docs usually deny this—confirm intent and wording."
+    },
+    {
+      "id": "enforcement-engine-language",
+      "issueType": "possible_registry_ambiguity",
+      "severity": "medium",
+      "extensions": [".md", ".js", ".json"],
+      "pattern": "\\b(governance enforcement engine|policy engine|automated enforcement)\\b",
+      "hint": "May imply automated enforcement; governance packs describe human discipline unless clearly quoted/negated."
+    },
+    {
+      "id": "runtime-registry-without-boundary",
+      "issueType": "runtime_vs_governance_naming",
+      "severity": "low",
+      "extensions": [".md"],
+      "pattern": "(tool-registry\\.js|runtime/tool-registry)",
+      "lineMustNotMatch": "(R1|demo|experimental|boundary|≠|!=|not the)",
+      "hint": "Mentions runtime demo registry without an obvious boundary cue on the same line."
+    },
+    {
+      "id": "duplicate-safe-unknown-heading",
+      "issueType": "duplicated_canonical_wording",
+      "severity": "info",
+      "extensions": [".md"],
+      "flags": "mi",
+      "pattern": "^\\s*#{1,6}\\s+SAFE UNKNOWN\\s*$|^\\*\\*SAFE UNKNOWN\\*\\*\\s*$",
+      "hint": "Repeated SAFE UNKNOWN block heading in one file is reported per line; consolidate if accidental duplication."
+    }
+  ],
+  "fileHints": [
+    {
+      "id": "adapter-js-missing-experimental-token",
+      "issueType": "runtime_naming_context",
+      "severity": "info",
+      "extensions": [".js"],
+      "absPathMustContain": "mars-runtime/adapters",
+      "bodyMustNotMatch": "(experimental|\\bR1\\b|demo|pilot|PILOT)",
+      "hint": "Adapter JS under mars-runtime/adapters with no experimental/R1/demo/pilot token in file; tooling may still be valid—human review."
+    }
+  ],
+  "collectors": [
+    {
+      "id": "mars-tool-id-multi-file",
+      "issueType": "duplicate_identity_hint",
+      "severity": "low",
+      "extensions": [".md", ".js", ".json"],
+      "pattern": "`(mars\\.tool\\.[a-z0-9_.-]+)`",
+      "flags": "i",
+      "captureGroup": 1,
+      "minDistinctFiles": 2,
+      "hint": "Same mars.tool.* token appears across multiple files; check tools/registry.md vs examples vs runtime demo keys."
+    },
+    {
+      "id": "backtick-adapter-token-multi-file",
+      "issueType": "duplicate_identity_hint",
+      "severity": "info",
+      "extensions": [".md"],
+      "pattern": "`([a-z0-9][a-z0-9-]*-adapter)`",
+      "flags": "i",
+      "captureGroup": 1,
+      "minDistinctFiles": 2,
+      "hint": "Same *-adapter token in multiple docs; verify naming matches identity rules (adapter vs external system)."
+    }
+  ]
+}
