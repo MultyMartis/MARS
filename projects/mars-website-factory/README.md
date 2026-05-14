@@ -14,6 +14,8 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 |---------|------|
 | Triumph Manipulator Landing | [`../triumph-manipulator-landing/README.md`](../triumph-manipulator-landing/README.md) — MARS project documentation + [`../../workspaces/triumph-manipulator-landing/`](../../workspaces/triumph-manipulator-landing/) local frontend workspace placeholder |
 
+**Operational map (short):** [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) — canonical entry points by concern; **not** a duplicate of the full index below.
+
 ## Pack index
 
 | Document | Purpose |
