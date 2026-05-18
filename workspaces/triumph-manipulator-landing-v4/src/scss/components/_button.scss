@@ -1,0 +1,44 @@
+@use '../utils/tokens' as t;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 34px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-family: t.$font-display;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button--primary {
+    background: linear-gradient(135deg, t.$color-red 0%, #f21f36 100%);
+    box-shadow: t.$shadow-red;
+    color: t.$color-white;
+}
+
+.button--outline {
+    border-color: rgba(227, 6, 33, 0.55);
+    background: t.$color-white;
+    color: t.$color-red;
+}
+
+.button--sm {
+    min-height: 48px;
+    padding-inline: 28px;
+    font-size: 13px;
+}
+
+.button--arrow::after {
+    margin-left: 14px;
+    content: '->';
+}

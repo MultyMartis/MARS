@@ -1,0 +1,35 @@
+﻿$color-black: #05070b;
+$color-night: #07101d;
+$color-night-soft: #101929;
+$color-white: #ffffff;
+$color-paper: #f7f8fb;
+$color-card: #ffffff;
+$color-red: #e30621;
+$color-red-dark: #b30018;
+$color-text: #090f1b;
+$color-text-muted: rgba(9, 15, 27, 0.68);
+$color-text-dim: rgba(9, 15, 27, 0.48);
+$color-ink: #f7f9fc;
+$color-ink-muted: rgba(247, 249, 252, 0.72);
+$color-ink-dim: rgba(247, 249, 252, 0.52);
+$color-line-light: rgba(9, 15, 27, 0.12);
+$color-line-dark: rgba(255, 255, 255, 0.14);
+
+$font-display: 'Montserrat', Arial, sans-serif;
+$font-main: 'Roboto', Arial, sans-serif;
+
+$container: 1600px;
+$pad-desktop: 60px;
+$pad-tablet: 32px;
+$pad-mobile: 18px;
+
+$rhythm-upper: clamp(76px, 8vw, 126px);
+$rhythm-lower: clamp(54px, 6vw, 92px);
+$rhythm-compact: clamp(34px, 4vw, 56px);
+
+$icon-scale-normal: 1.5;
+$icon-scale-proof: 2;
+
+$shadow-card: 0 18px 48px rgba(9, 15, 27, 0.08);
+$shadow-dark: 0 24px 60px rgba(0, 0, 0, 0.28);
+$shadow-red: 0 16px 34px rgba(227, 6, 33, 0.34);

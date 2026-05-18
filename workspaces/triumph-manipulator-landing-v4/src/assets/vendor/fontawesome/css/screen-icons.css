@@ -1,0 +1,91 @@
+/*!
+ * Triumph V4 Font Awesome solid icon map.
+ * Source CSS/codepoints verified against shared/assets/icon-libraries/Font Awesome Pro 5.15.4/css/free.css.
+ * Webfonts generated from shared/assets/icon-libraries/Font Awesome Pro 5.15.4/webfonts/free-fa-solid-900.svg.
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src:
+    url("../webfonts/free-fa-solid-900.woff2") format("woff2"),
+    url("../webfonts/free-fa-solid-900.woff") format("woff");
+}
+
+.fa,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fa-arrows-alt-h::before {
+  content: "\f337";
+}
+
+.fa-business-time::before {
+  content: "\f64a";
+}
+
+.fa-clock::before {
+  content: "\f017";
+}
+
+.fa-file-invoice-dollar::before {
+  content: "\f571";
+}
+
+.fa-hard-hat::before {
+  content: "\f807";
+}
+
+.fa-id-badge::before {
+  content: "\f2c1";
+}
+
+.fa-map-marked-alt::before {
+  content: "\f5a0";
+}
+
+.fa-phone-alt::before {
+  content: "\f879";
+}
+
+.fa-route::before {
+  content: "\f4d7";
+}
+
+.fa-ruler-horizontal::before {
+  content: "\f547";
+}
+
+.fa-shipping-fast::before {
+  content: "\f48b";
+}
+
+.fa-tools::before {
+  content: "\f7d9";
+}
+
+.fa-truck-loading::before {
+  content: "\f4de";
+}
+
+.fa-truck-moving::before {
+  content: "\f4df";
+}
+
+.fa-wallet::before {
+  content: "\f555";
+}
+
+.fa-weight-hanging::before {
+  content: "\f5cd";
+}

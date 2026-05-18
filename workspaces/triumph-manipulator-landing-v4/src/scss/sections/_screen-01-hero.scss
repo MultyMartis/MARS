@@ -1,0 +1,218 @@
+@use '../utils/tokens' as t;
+
+.hero {
+    min-height: calc(100vh - 82px);
+    padding-top: clamp(54px, 6vw, 88px);
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 710px) 1fr;
+    align-items: start;
+    min-height: 650px;
+}
+
+.hero__content {
+    max-width: 710px;
+}
+
+.hero__title {
+    margin: 0;
+    font-family: t.$font-display;
+    font-size: clamp(48px, 5.8vw, 86px);
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.hero__title span {
+    display: block;
+    color: t.$color-red;
+}
+
+.hero__lead {
+    max-width: 570px;
+    margin: 30px 0 0;
+    color: t.$color-ink-muted;
+    font-size: clamp(18px, 1.6vw, 22px);
+}
+
+.hero__rate {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 56px;
+    margin-top: 28px;
+    padding: 0 20px;
+    border: 1px solid rgba(227, 6, 33, 0.78);
+    background: rgba(5, 7, 11, 0.54);
+}
+
+.hero__rate span {
+    color: t.$color-ink-dim;
+    font-size: 13px;
+}
+
+.hero__rate strong {
+    font-family: t.$font-display;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.hero__cta-row p {
+    margin: 0;
+    color: t.$color-ink-muted;
+    font-size: 14px;
+}
+
+.hero__cta-row strong {
+    color: t.$color-red;
+}
+
+.hero__features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 34px;
+    max-width: 720px;
+    margin: 34px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero__features li {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 14px;
+    color: t.$color-ink-muted;
+}
+
+.hero__features i,
+.hero-proof__item i {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border: 1px solid rgba(227, 6, 33, 0.28);
+    border-radius: 6px;
+    background: rgba(5, 7, 11, 0.18);
+    color: rgba(227, 6, 33, 0.74);
+    font-size: 17px * t.$icon-scale-normal;
+    line-height: 1;
+}
+
+.hero__visual-note {
+    min-height: 480px;
+}
+
+.hero-proof {
+    padding-top: clamp(28px, 4vw, 58px);
+    padding-bottom: clamp(28px, 3.4vw, 54px);
+}
+
+.hero-proof__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(5, 11, 22, 0.7);
+    box-shadow: t.$shadow-dark;
+}
+
+.hero-proof__item {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 0 20px;
+    padding: 28px 30px;
+    border-right: 1px solid t.$color-line-dark;
+}
+
+.hero-proof__item:last-child {
+    border-right: 0;
+}
+
+.hero-proof__item i {
+    grid-row: 1 / span 3;
+    width: 76px;
+    height: 76px;
+    border-color: rgba(227, 6, 33, 0.24);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.025);
+    color: rgba(227, 6, 33, 0.72);
+    font-size: 21px * t.$icon-scale-proof;
+}
+
+.hero-proof__item span,
+.hero-proof__item small {
+    color: t.$color-ink-dim;
+}
+
+.hero-proof__item strong {
+    color: t.$color-white;
+    font-family: t.$font-display;
+    font-size: 19px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+    .hero__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__visual-note {
+        display: none;
+    }
+
+    .hero-proof__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .hero {
+        min-height: 0;
+        padding-top: 54px;
+    }
+
+    .hero__inner {
+        min-height: 0;
+        padding-bottom: 52px;
+    }
+
+    .hero__title {
+        font-size: clamp(42px, 13vw, 58px);
+    }
+
+    .hero__cta-row,
+    .hero__features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__cta-row {
+        display: grid;
+    }
+
+    .hero-proof__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-proof__item {
+        grid-template-columns: 78px 1fr;
+        border-right: 0;
+        border-bottom: 1px solid t.$color-line-dark;
+    }
+
+    .hero-proof__item i {
+        width: 68px;
+        height: 68px;
+        font-size: 36px;
+    }
+}

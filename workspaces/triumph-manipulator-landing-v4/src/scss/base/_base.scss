@@ -1,0 +1,162 @@
+@use '../utils/tokens' as t;
+
+:root {
+    color-scheme: light;
+}
+
+body {
+    overflow-x: hidden;
+    background: t.$color-black;
+    color: t.$color-ink;
+    font-family: t.$font-main;
+    line-height: 1.45;
+}
+
+.section-shell {
+    width: min(100%, t.$container);
+    margin: 0 auto;
+    padding-inline: t.$pad-desktop;
+}
+
+.landing-main {
+    background: t.$color-paper;
+    color: t.$color-text;
+}
+
+.section-light {
+    background: t.$color-paper;
+}
+
+.section-light--upper {
+    padding-top: t.$rhythm-upper;
+}
+
+.section-light--lower {
+    padding-top: t.$rhythm-lower;
+}
+
+.section-heading {
+    margin-bottom: clamp(32px, 4vw, 58px);
+}
+
+.section-heading--split {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.section-heading--center {
+    max-width: 680px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.section-heading--center .section-eyebrow {
+    justify-content: center;
+}
+
+.section-heading__action {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: t.$color-text-dim;
+    font-size: 13px;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: t.$color-red;
+    font-family: t.$font-display;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.section-eyebrow::after {
+    width: 48px;
+    height: 3px;
+    content: '';
+    background: currentColor;
+}
+
+.section-title {
+    margin: 14px 0 0;
+    color: t.$color-text;
+    font-family: t.$font-display;
+    font-size: clamp(46px, 5.2vw, 82px);
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.section-lead {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: t.$color-text-muted;
+    font-size: clamp(17px, 1.5vw, 22px);
+    line-height: 1.45;
+}
+
+.first-screen {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(5, 7, 11, 0.99) 0%, rgba(5, 7, 11, 0.92) 32%, rgba(5, 7, 11, 0.58) 58%, rgba(5, 7, 11, 0.08) 100%),
+        linear-gradient(180deg, rgba(5, 7, 11, 0.8) 0%, rgba(5, 7, 11, 0.08) 42%, rgba(5, 7, 11, 0.98) 100%),
+        url('../img/hero/hero-bg-final.png') right top / auto 100% no-repeat,
+        t.$color-night;
+}
+
+.first-screen > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1180px) {
+    .section-heading--split {
+        display: grid;
+    }
+
+    .section-heading__action {
+        justify-items: start;
+    }
+}
+
+@media (max-width: 760px) {
+    .section-shell {
+        padding-inline: t.$pad-mobile;
+    }
+
+    .section-light--upper,
+    .section-light--lower {
+        padding-top: clamp(52px, 13vw, 74px);
+    }
+
+    .section-title {
+        font-size: clamp(38px, 12vw, 54px);
+    }
+
+    .first-screen {
+        min-height: auto;
+        background:
+            linear-gradient(90deg, rgba(5, 7, 11, 0.98) 0%, rgba(5, 7, 11, 0.9) 58%, rgba(5, 7, 11, 0.44) 100%),
+            linear-gradient(180deg, rgba(5, 7, 11, 0.8) 0%, rgba(5, 7, 11, 0.52) 54%, rgba(5, 7, 11, 1) 100%),
+            url('../img/hero/hero-bg-final.png') 64% top / auto 680px no-repeat,
+            t.$color-night;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+    .section-shell {
+        padding-inline: t.$pad-tablet;
+    }
+}
