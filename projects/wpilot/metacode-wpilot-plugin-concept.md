@@ -13,6 +13,17 @@ The plugin would expose controlled, authenticated, and logged operations so WPil
 
 This document describes a future concept. It is not evidence that a plugin, runtime bridge, autonomous admin layer, or production integration currently exists.
 
+## Strategic Target Hierarchy
+
+WPilot should not primarily evolve into a universal autonomous WordPress AI runtime.
+
+The preferred strategic direction is:
+
+1. **Primary target - Factory-native controlled sites.** WordPress sites created through MARS Website Factory with known stack, approved plugins/themes, structured block schemas, predictable layouts, known mutation zones, and Website Factory contracts.
+2. **Secondary target - legacy/external compatibility bridge.** Existing WordPress sites with unknown or mixed builders, themes, plugins, and historical content shape.
+
+This hierarchy affects safety posture. Factory-native sites may later support safer structured operations because the page/template/content contracts are known. Legacy/external sites remain refusal-first and dry-run-heavy because WPilot cannot assume layout, shortcode, theme, plugin, or content safety.
+
 ## MVP Status Labels
 
 - **CORE** - required for the DEV-only plugin MVP.
@@ -51,6 +62,19 @@ MetaCODE WPilot Plugin is not:
 The plugin would act as a narrow operational bridge between a managed WordPress site and WPilot documentation/workflows.
 
 Its role is to make site inspection and tightly scoped changes more reliable by exposing explicit operations with authentication, permission checks, backups, logs, and rollback paths. It should avoid broad administrative power and should preserve human approval as the final authority for risky writes.
+
+## Operational Modes
+
+WPilot has two strategic operating modes. These are planning labels and operator policy, not runtime mode switches.
+
+| Mode | Target | Automation posture | Mutation posture |
+|---|---|---|---|
+| **Mode A - Factory-native controlled sites** | WordPress sites produced from Website Factory contracts, approved templates, approved content pipeline, and known implementation zones. | More predictable inspection and dry-run planning may be possible after implementation evidence exists. | Structured content operations only, bounded by template/content schemas, backup, diff preview, and human approval. |
+| **Mode B - legacy/external sites** | Existing sites using WPBakery, The7, Elementor, unknown plugins/themes, legacy HTML, shortcode fragments, or unmanaged content history. | Refusal-first, read-only first, dry-run-heavy, conservative compatibility bridge. | Exact scoped edits only when safe; otherwise refuse and escalate. |
+
+Mode A is the long-term preferred target because Website Factory can define the stack and content boundaries before WordPress publication. Mode B exists to inspect and assist legacy/external sites without pretending they are structurally safe.
+
+WPBakery handling belongs to **Mode B legacy compatibility**. It is useful for current DEV/test validation and existing site support, but it is not the ideal long-term operational target for WPilot.
 
 ## MVP Filesystem Structure
 
@@ -101,6 +125,7 @@ No MVP file should act as a file manager, shell bridge, SQL console, code execut
 - Emergency kill switch.
 - No credentials, tokens, cookies, database dumps, or `wp-config.php` copies stored in this repository.
 - No plaintext token values in audit logs.
+- Operator-side token files, backups, and rollback snapshots belong only in ignored local operational storage described by `local-storage-policy.md`; they are not plugin source, source-pack content, or runtime proof.
 
 ## Authentication Model
 
@@ -123,6 +148,8 @@ Read-only operations may be allowed after authentication and plugin enablement.
 Write-like operations must remain scoped, logged, reversible, and operator-approved. Risky writes should require an approval token, dry-run preview, or equivalent human confirmation before execution.
 
 The plugin should not silently edit production content, update software, install code, bypass WordPress permissions, or expand its own privileges.
+
+For Factory-native Mode A, approval should be tied to Website Factory artifacts: approved page blueprint, approved template/content payload, approved SEO/content workflow, diff preview, and human-approved publishing decision. For legacy Mode B, approval is necessary but not sufficient; unclear structure, unsafe builder zones, raw HTML/script/style regions, or ambiguous matches must still be refused.
 
 ## Possible API Endpoints
 
@@ -219,6 +246,44 @@ The MVP parser should:
 - Treat raw HTML, encoded fragments, unknown shortcodes, theme wrappers, and deeply nested structures as **SAFE UNKNOWN** unless tested.
 - Avoid claiming full WPBakery rendering, design fidelity, or universal theme compatibility.
 
+WPBakery support is a **legacy compatibility strategy**, not the preferred future content model. Factory-native sites should prefer approved templates, structured block/content schemas, and known mutation zones instead of reverse-engineering historical shortcode content.
+
+## Factory-Native Structured Content Strategy
+
+For Website Factory-created WordPress sites, future WPilot integration should prefer structured operations over page-string mutation.
+
+Conceptual inputs may include:
+
+- approved Website Factory page blueprints;
+- approved page templates and template slots;
+- section payloads mapped to known block IDs;
+- approved SEO/content fields;
+- known mutation zones declared by the implementation pack;
+- human approval artifacts for publish/update decisions.
+
+Conceptual operations may include:
+
+- create or update a draft page from an approved template/content payload;
+- validate that a payload matches an approved template slot before write planning;
+- produce a dry-run diff between current WordPress draft content and approved Factory content;
+- publish only after human approval, rollback plan, and audit record are present.
+
+These are future integration directions only. This document does not claim that Website Factory currently exports WordPress-ready payloads or that WPilot can create, update, or publish pages.
+
+## Future Blog/Page Agent Integration Direction
+
+Future blog or page generation should integrate through Website Factory-style contracts, not direct autonomous CMS edits.
+
+The intended direction:
+
+- Blog/page content is generated as approved artifacts first, outside WordPress mutation.
+- Content is mapped to approved page templates and structured content slots.
+- SEO titles, descriptions, headings, internal links, schema candidates, and CTA intent are reviewed before WordPress handoff.
+- WPilot receives only human-approved draft/update instructions with explicit target, diff, rollback, and publish gate.
+- Publishing remains human-approved; WPilot should not self-approve, schedule, or silently publish generated content.
+
+Until a concrete Blog Agent card, content artifact contract, and WordPress publication contract exist, this remains **SAFE UNKNOWN**.
+
 ## Operational Boundaries
 
 - The plugin should be installed only by a human site owner or authorized administrator.
@@ -235,3 +300,4 @@ The MVP parser should:
 - Compatibility with specific themes, SEO plugins, cache layers, and security plugins is unknown until site-specific inspection.
 - Production safety is unknown until a real implementation has authentication, authorization, logging, rollback, and security review evidence.
 - Exact filesystem layout may change during implementation, but the MVP boundary must remain narrow and non-executing.
+- Factory-native WordPress export format, template-slot schema, content payload schema, publish approval artifact, and Blog Agent integration contract are not defined yet.

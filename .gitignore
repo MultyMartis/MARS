@@ -8,6 +8,10 @@ Desktop.ini
 .env.*
 !.env.example
 
+# Local-only operational storage (never commit/export)
+/backups/
+/local/
+
 # Logs and temp
 *.log
 *.tmp

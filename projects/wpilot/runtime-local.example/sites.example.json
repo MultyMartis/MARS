@@ -1,0 +1,17 @@
+{
+  "schema": "wpilot-runtime-local-sites-example-v0",
+  "classification": "example-only-no-real-secrets",
+  "sites": [
+    {
+      "site_alias": "dev-example",
+      "base_url": "https://dev.example.invalid",
+      "rest_namespace": "wpilot/v1",
+      "environment": "DEV/test only",
+      "token_ref": "D:\\AI MARS\\local\\tokens\\dev-example.wpilot-token.json",
+      "backup_root": "D:\\AI MARS\\backups\\wpilot\\dev-example\\",
+      "operator_owner": "human-operator",
+      "last_verified": "YYYY-MM-DD",
+      "notes": "Example metadata only. Do not store passwords, real tokens, cookies, or database credentials here."
+    }
+  ]
+}
