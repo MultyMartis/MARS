@@ -2,7 +2,7 @@
 
 **Purpose:** A **human-operated** continuity bundle for pasting into a **new** ChatGPT (or other) chat so the assistant inherits MARS discipline without inventing a runtime.
 
-**Philosophy:** **Evidence-first**, **documentation-first**, **governance-first**. This folder **summarizes** canonical sources in-repo; it does **not** replace reading `AGENTS.md`, `governance/`, or `projects/mars-website-factory/` when depth is needed.
+**Philosophy:** **Evidence-first**, **documentation-first**, **operational-first** (post–Cycle 8). **Historical note:** older paste bundles used “governance-first” — superseded by [mars-operational-evolution-state-after-cycles-1-8-v0.md](../../governance/mars-operational-evolution-state-after-cycles-1-8-v0.md). This folder **summarizes** canonical sources; prefer [mars-v2/](../mars-v2/) for new Web-GPT chats.
 
 ---
 

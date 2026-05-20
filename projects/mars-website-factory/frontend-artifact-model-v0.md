@@ -2,7 +2,7 @@
 
 **Status:** **documentation only** — conceptual **static frontend** deliverables aligned with [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) and [frontend-production-model.md](frontend-production-model.md). **Not** a claim that a repo contains a Gulp pipeline, **not** automated code generation.
 
-**Related:** [design-handoff-contract-v0.md](design-handoff-contract-v0.md), [block-registry-v0.md](block-registry-v0.md), [agent-map.md](agent-map.md) (**Gulp Frontend Agent** — legacy-bridge / planned).
+**Related:** [design-handoff-contract-v0.md](design-handoff-contract-v0.md), [block-registry-v0.md](block-registry-v0.md), [agent-map.md](agent-map.md) (**Gulp Frontend Agent** — `operational_doc_pack`).
 
 ---
 

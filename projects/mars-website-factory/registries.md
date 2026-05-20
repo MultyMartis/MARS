@@ -72,6 +72,8 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 
 ## 6. Frontend Production Rules
 
+**Delivered (v0):** [frontend-production-rules-v0.md](frontend-production-rules-v0.md) — compact operator rules (documentation only; **not** runtime enforcement).
+
 | Aspect | Content |
 |--------|---------|
 | **Purpose** | How **src** is structured, build commands, **forbidden** paths (`dist` manual edit), JS scope rules, include/partials conventions. |

@@ -1,6 +1,6 @@
 @use '../utils/tokens' as tm;
 
-// Светлая секция «Техника и цены» (ref: design/mockups/02.png).
+// Светлая секция «Техника и цены» (dev ref — legacy archive: projects/triumph-manipulator-landing/design/v1/02.png).
 .equipment-prices {
     padding: tm.$tm-section-padding-mobile 0;
     font-family: tm.$tm-font-main;

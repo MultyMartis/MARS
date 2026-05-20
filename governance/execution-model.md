@@ -12,6 +12,8 @@ The **execution model** answers: **who executes what, where, and in which order*
 
 **Phase S4 (governance semantics, not runtime):** [execution-contracts-overview.md](execution-contracts-overview.md) links **task envelope**, **REPORT**, **validation meaning**, **artifact lifecycle**, and **execution boundaries**—see also [task-envelope-standard.md](task-envelope-standard.md), [validation-chain-semantics.md](validation-chain-semantics.md), [execution-boundary-clarification.md](execution-boundary-clarification.md).
 
+**Agent input contracts (governance):** [agent-input-contracts.md](agent-input-contracts.md) — explicit per-role **inputs** / **outputs**, pre-flight validation, **SAFE UNKNOWN** on missing required context; **not** autonomous inter-agent calls or runtime enforcement.
+
 **Parallel chat discipline (one Cursor, multiple chats):** [parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md) — how humans keep **production execution** chats and **MARS core** chats from mixing paths, commits, and scopes.
 
 ---
@@ -91,3 +93,4 @@ An **Execution Bridge** is a **translation and handoff** layer between:
 |---------|------|--------|
 | v0 | 2026-04-27 | Initial execution model; Execution Bridge defined. |
 | v0 | 2026-05-14 | Phase S4 cross-links to execution-contracts overview and related governance semantics (documentation-only). |
+| v0 | 2026-05-16 | Agent input contracts cross-link (governance-only). |

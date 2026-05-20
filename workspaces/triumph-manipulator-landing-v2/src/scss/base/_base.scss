@@ -21,6 +21,12 @@ body {
     letter-spacing: 0;
 }
 
+@media (max-width: v.$bp-small) {
+    body {
+        min-width: 0;
+    }
+}
+
 h1,
 h2,
 h3,

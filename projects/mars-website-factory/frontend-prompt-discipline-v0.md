@@ -4,13 +4,13 @@
 
 **Version:** v0.
 
-**Related:** [frontend-production-model.md](frontend-production-model.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [section-payload-model-v0.md](section-payload-model-v0.md), [block-registry-v0.md](block-registry-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md), [`../../agents/frontend-gulp-agent/README.md`](../../agents/frontend-gulp-agent/README.md) (Gulp Frontend Agent operational doc pack).
+**Related:** [frontend-production-model.md](frontend-production-model.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [section-payload-model-v0.md](section-payload-model-v0.md), [block-registry-v0.md](block-registry-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md), [`../../agents/frontend-gulp-agent/README.md`](../../agents/frontend-gulp-agent/README.md) (Gulp Frontend Agent operational doc pack), [`../../agents/mars-forge/semantic-source-lock.md`](../../agents/mars-forge/semantic-source-lock.md) (when **MARS Forge** overlay applies).
 
 ---
 
 ## 1. Purpose
 
-Frontend production in the factory follows a **Gulp-oriented, source-first** static model ([frontend-production-model.md](frontend-production-model.md)). The **Gulp Frontend Agent** is **legacy-bridge** in the registry — a **documented** specialist profile, **not** in-repo code ([agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md)).
+Frontend production in the factory follows a **Gulp-oriented, source-first** static model ([frontend-production-model.md](frontend-production-model.md)). The **Gulp Frontend Agent** is **`operational_doc_pack`** in the registry — documentation-backed specialist pack, human + Cursor/Codex, **not** in-repo code or autonomous runtime ([agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md)).
 
 This document defines the **prompt discipline** that applies whenever a factory prompt instructs **frontend implementation work** — whether executed by a human in Cursor or, eventually, by a planned specialist agent.
 
@@ -55,6 +55,19 @@ A frontend execution prompt extends [prompt-structure-standard-v0.md](prompt-str
 | `QA_requirements` | Echoed from handoff. |
 | `SAFE_UNKNOWN_notes` | CI job name, exact build command, hosting target, etc. |
 | `reporting requirements` | Frontend implementation REPORT per [reporting-standard-v0.md](reporting-standard-v0.md) §4.2. |
+
+---
+
+## 3a. MARS Forge overlay — semantic source charter (when selected)
+
+When the operator routes work under **`mars_forge_frontend_agent`** (Forge discipline), frontend prompts **must additionally** satisfy the charter in [`../../agents/mars-forge/semantic-source-lock.md`](../../agents/mars-forge/semantic-source-lock.md) §1:
+
+- **Active design version** and **canonical visual source path**.
+- **Forbidden** design paths / versions.
+- **`shared-assets` path** (if used) — **assets only**, never structural SoT (see that doc §3).
+- **Workspace / target path** for implementation.
+
+If the prompt omits these, the executor stops and reports **SAFE UNKNOWN** rather than guessing from archives, old PDFs, or unstated mockup folders.
 
 ---
 
@@ -237,6 +250,7 @@ What it **does** claim:
 | Adding new `window.*` silently | Violates §7. | Declare in `SAFE_UNKNOWN_notes` or refactor to scoped module. |
 | Claiming “build green” without running it | Violates §13 / [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md). | Run build or emit SAFE UNKNOWN on build. |
 | “Tested in all browsers” without evidence | Fabrication. | Enumerate viewports actually tested or SAFE UNKNOWN. |
+| Implementing from archive / older `design/v*` screens when charter names another active path | Triumph-class **semantic drift** (wrong entity count, wrong section meaning). | State active path in prompt; obey [`mars-forge/semantic-source-lock.md`](../../agents/mars-forge/semantic-source-lock.md) §2–§3 §8 — **P0–P6** priority. |
 
 ---
 
@@ -245,3 +259,4 @@ What it **does** claim:
 | Date | Change |
 |------|--------|
 | 2026-05-11 | **v0** — initial frontend prompt discipline (documentation only). |
+| 2026-05-16 | **§3a** — Forge overlay semantic charter pointer; Related + anti-pattern for cross-version drift. |

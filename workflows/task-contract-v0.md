@@ -32,6 +32,8 @@ A **Task** is the **atomic unit of work** the **Control Plane** can schedule and
 
 **SAFE UNKNOWN** may appear as a field **value** only in **documentation** for undecided fields, or as a **runtime signal** in `signals` per policy — do not conflate "not filled" with a silent default.
 
+**Agent input contracts (governance):** When tasks bind to specific **agents**, refine **`inputs`** / **`outputs`** using explicit per-role contracts — [../governance/agent-input-contracts.md](../governance/agent-input-contracts.md), template [../templates/agent-input-contract-template.md](../templates/agent-input-contract-template.md). Task-level **`inputs`** remain the bundle for the work unit; agent contracts reduce **semantic ambiguity** and **silent assumptions**. **Not** agent-to-agent messaging.
+
 ---
 
 ## 3. Signals field (v0)
@@ -79,3 +81,12 @@ signals: [ "NEED HUMAN APPROVAL", "SECURITY RISK" ]
 ```
 
 This block is **documentation**; v0 does **not** require YAML/JSON in-repo.
+
+---
+
+## 6. Changelog (documentation)
+
+| Version | Date | Notes |
+|---------|------|--------|
+| v0 | (prior) | Initial task contract v0 (planned). |
+| v0 | 2026-05-16 | Cross-link to agent input contracts (governance); no schema change. |

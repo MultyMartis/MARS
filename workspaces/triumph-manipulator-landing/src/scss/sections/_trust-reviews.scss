@@ -1,6 +1,6 @@
 @use '../utils/tokens' as tm;
 
-// Секция «Доверие и отзывы» (ref: design/mockups/03.png). Геометрия: прямоугольники, радиус 0.
+// Секция «Доверие и отзывы» (dev ref — legacy archive: projects/triumph-manipulator-landing/design/v1/03.png). Геометрия: прямоугольники, радиус 0.
 $trust-layout-gap: clamp(3rem, 4.5vw, 4rem); // 48–64px между колонками
 $trust-card-pad: 2rem; // 32px карточки преимуществ
 

@@ -23,13 +23,15 @@
 
 **Registry row ≠ deployed system** — catalogs document intent; they do not prove running services.
 
+**Post–Cycle 8 posture (2026-05-19):** structural stabilization and survivability baseline **achieved**; governance baseline **frozen** in **maintenance mode**; primary effort is **operational-first** (ORCA, Factory, Triumph, external bridges). **Canonical ecosystem state:** [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md). Task routing: [mars-operational-evolution-transition-index-v0.md](mars-operational-evolution-transition-index-v0.md).
+
 ---
 
 ## Governance layer
 
 | Bucket | What exists |
 |--------|-------------|
-| **operational** | `governance/**` maintained as human-readable control docs; Phases S1–S7 and reality-audit semantics; [enforcement/](enforcement/README.md) checklists; parallel chat lanes ([parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md)); master build map as **roadmap documentation**. |
+| **operational** | `governance/**` maintained as human-readable control docs — **maintenance mode** post–Cycle 8 (freeze baseline, light hygiene); Phases S1–S7 and reality-audit semantics; [enforcement/](enforcement/README.md) checklists; parallel chat lanes ([parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md)); master build map as **roadmap documentation**. New governance waves require **explicit charter** — not default session work. |
 | **conceptual** | Execution contracts (S4), operationalization semantics (S5–S6), experiment framework (S7) — **semantics**, not engines. |
 | **future** | Automated governance validation, policy engine, certification product. |
 | **excluded** | Treating governance markdown as runtime enforcement or CI substitute without explicit external setup. |
@@ -177,6 +179,9 @@ Re-verify on each task — do not inherit from this file alone:
 
 ## Related stabilization
 
+- [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md) — **canonical** post–Cycles 1–8 ecosystem posture  
+- [mars-ecosystem-state-synchronization-review-v0.md](mars-ecosystem-state-synchronization-review-v0.md) — continuity / deprecated assumptions (sync pass)  
+- [mars-reality-index-v0.md](mars-reality-index-v0.md) — **compact** bucket-oriented reality (Phase 2; prefer for fast orientation)  
 - [canonical-terminology-registry.md](canonical-terminology-registry.md) — term-level rules  
 - [runtime-registry-boundaries.md](runtime-registry-boundaries.md) — registry illusion prevention  
 

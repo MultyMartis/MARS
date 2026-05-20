@@ -216,6 +216,21 @@ A row in `agents/registry.md`, `tools/registry.md`, `registry/project-registry.m
 
 ---
 
+### IdeaBox
+
+| Field | Value |
+|-------|-------|
+| **classification** | **OPERATIONAL** (human-operated filesystem discipline) |
+| **type (documentation)** | Filesystem-backed operational continuity workflow — capture of ideas, lightweight notes, anti-entropy hygiene |
+| **authority** | **Human-operated** — operator chooses paths, edits, merges, deletions; Cursor assists only when instructed |
+| **purpose** | Continuity across sessions, idea capture, operational memory hygiene — via explicit markdown, not implicit state |
+| **allowed usage** | Record notes under `continuity/**`; use protocols/templates as conventions; reference from governance as **optional** complement to REPORT/registry discipline |
+| **forbidden usage** | “IdeaBox remembers”; autonomous agent memory; hidden runtime state; automatic governance or registry mutation; orchestration or semantic-graph narratives tied to IdeaBox |
+| **evidence requirement** | Cited markdown paths under `continuity/`; chat markers (`/ideabox`, etc.) **≠** executed commands |
+| **operational status** | **OPERATIONAL** as **discipline + docs** only — **not** a shipped MARS subsystem |
+
+---
+
 ## Cross-references (no expansion)
 
 - [enforcement/terminology-boundaries.md](enforcement/terminology-boundaries.md) — lane hints  

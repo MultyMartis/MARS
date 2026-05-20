@@ -12,6 +12,8 @@ MARS v2 uses **multi-chat operational workflows**: role-separated chats, **lane 
 
 **Rule:** one chat must **not** become a universal operational space. A single thread that mixes governance, runtime research, Factory methodology, frontend delivery, design generation, and validation increases failure rate and corrupts source priority.
 
+**Post–Cycle 8:** default new chats to **operational delivery** (Factory / ORCA / Triumph / Frontend Production) — not **Governance** or **Validation** unless chartered. Governance chats are **maintenance mode**, not stabilization waves.
+
 | Anti-pattern | Risk |
 |--------------|------|
 | Universal super-chat | Conflicting instructions, wrong-lane edits |

@@ -17,13 +17,34 @@ All V2 design and frontend work must follow:
 | Document | Path |
 |----------|------|
 | Design system (canonical) | [`../../projects/triumph-manipulator-landing/design-system/triumph-manipulator-design-system.md`](../../projects/triumph-manipulator-landing/design-system/triumph-manipulator-design-system.md) |
-| V2 design and frontend rules (PDF) | [`../../projects/triumph-manipulator-landing/design/TRIUMPH LANDING V2 — DESIGN & FRONTEND RULES.pdf`](../../projects/triumph-manipulator-landing/design/TRIUMPH%20LANDING%20V2%20%E2%80%94%20DESIGN%20%26%20FRONTEND%20RULES.pdf) |
+| V2 visual mockups (**canonical**) | [`../../projects/triumph-manipulator-landing/design/v2/`](../../projects/triumph-manipulator-landing/design/v2/) |
+| V2 frontend source-of-truth + cleanup | [`../../projects/triumph-manipulator-landing/V2-FRONTEND-SOURCE-OF-TRUTH.md`](../../projects/triumph-manipulator-landing/V2-FRONTEND-SOURCE-OF-TRUTH.md), [`../../projects/triumph-manipulator-landing/V2-CLEANUP-DECISION-LOG.md`](../../projects/triumph-manipulator-landing/V2-CLEANUP-DECISION-LOG.md) |
+| Forge V2 production rules | [`../../projects/triumph-manipulator-landing/docs/TRIUMPH-FORGE-V2-FRONTEND-PRODUCTION-RULES.md`](../../projects/triumph-manipulator-landing/docs/TRIUMPH-FORGE-V2-FRONTEND-PRODUCTION-RULES.md) |
 
-Hard constraints from those sources (non-exhaustive checklist):
+**Retired:** the file `TRIUMPH LANDING V2 — DESIGN & FRONTEND RULES.pdf` was removed from `design/` — do not use. **`design/v1/`** is the archived V1 mockup tree — **not** a V2 implementation source (see [cleanup log](../../projects/triumph-manipulator-landing/V2-CLEANUP-DECISION-LOG.md) and [`design/README.md`](../../projects/triumph-manipulator-landing/design/README.md)).
+
+Hard constraints from the **design system** and **MD / pixel** sources (non-exhaustive checklist):
 
 - **No `border-radius`** (corners stay square).
 - **Typography:** Roboto for body text, Montserrat for headings.
 - **Icons:** **Font Awesome Pro 5.15.4** as the icon source — see repo [`../../shared/assets/icon-libraries/Font Awesome Pro 5.15.4/`](../../shared/assets/icon-libraries/Font%20Awesome%20Pro%205.15.4/). **No AI-drawn icons.**
+
+## NEXT IMPLEMENTATION RULE (V2 validation)
+
+**Physical implementation reset completed (2026-05-16):** homepage Screens 01–07 in `src/partials/sections/` and matching section SCSS files are clean rebuild-ready shells. Clean rebuild must start from Screen 01 using [`../../projects/triumph-manipulator-landing/design/v2/01.png`](../../projects/triumph-manipulator-landing/design/v2/01.png).
+
+The **next** frontend implementation cycle must **begin** at [`../../projects/triumph-manipulator-landing/design/v2/01.png`](../../projects/triumph-manipulator-landing/design/v2/01.png) and proceed **in file order** through `07.png`, **one screen per step**.
+
+| Rule | Statement |
+|------|-----------|
+| DOM / legacy wiring | **Do not** continue only from existing `index.html` or partial order — re-validate each section against the matching `design/v2/NN.png`. |
+| V1 archive | **Do not** use `design/v1/` as **semantic** source for V2. |
+| **`equipment-prices`** | **Not** on **`index.html`** (2026-05-16). **Validation only:** `src/pages/validation-equipment-prices.html` — see [equipment-prices-quarantine.md](../../projects/triumph-manipulator-landing/design/v2/validation/equipment-prices-quarantine.md). |
+| Copy / meaning | **Do not** invent copy; **do not** change section meaning without operator approval. |
+
+**Per screen:** (1) select `NN.png`, (2) extract section meaning + locked text, (3) confirm partial/SCSS or mark missing, (4) implement **only** that screen, (5) semantic QA, (6) responsive QA, (7) **freeze** before opening the next PNG.
+
+Authoritative wording: [`../../projects/triumph-manipulator-landing/V2-FRONTEND-SOURCE-OF-TRUTH.md`](../../projects/triumph-manipulator-landing/V2-FRONTEND-SOURCE-OF-TRUTH.md) — **NEXT IMPLEMENTATION RULE**.
 
 ## Project documentation
 

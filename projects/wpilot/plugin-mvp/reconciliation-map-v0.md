@@ -19,8 +19,8 @@ This map records what already exists for MetaCODE WPilot Plugin planning before 
 | `qa-checklist.md` | OPERATIONAL | Phase 1 QA gates for scope, access, backup, rollback, read-only inspection, safe tests, closeout. |
 | `beget-test-plan.md` | OPERATIONAL | Beget test sequence, stop conditions, evidence to record. |
 | `milestones.md` | PARTIALLY OPERATIONAL | Confirmed DEV/testing history: FTP operation, rollback, DEV indexing isolation, WPBakery structure inspection, scoped DB-assisted edit. |
-| `metacode-wpilot-plugin-concept.md` | PLANNED | Planned plugin concept, non-goals, goals, security principles, candidate REST endpoints, operational boundaries, SAFE UNKNOWN. |
-| `metacode-wpilot-plugin-mvp-roadmap.md` | PLANNED | Phased plugin roadmap from skeleton to read-only bridge, scoped writes, DEV isolation helper, production safety, future browser/admin layer. |
+| `metacode-wpilot-plugin-concept.md` | PLANNED | Planned plugin concept, strategic target hierarchy, Mode A Factory-native / Mode B legacy compatibility split, non-goals, goals, security principles, candidate REST endpoints, operational boundaries, SAFE UNKNOWN. |
+| `metacode-wpilot-plugin-mvp-roadmap.md` | PLANNED | Phased plugin roadmap from skeleton to read-only bridge, scoped writes, Factory-native structured draft pipeline direction, DEV isolation helper, production safety, future browser/admin layer, future Blog/Page integration. |
 | `templates/site-passport-template.md` | OPERATIONAL | Sanitized site facts, WordPress signals, access classes, backup facts, approved targets. |
 | `templates/change-request-template.md` | OPERATIONAL | Human-approved scoped change request with forbidden-action check. |
 | `templates/rollback-plan-template.md` | OPERATIONAL | Exact rollback planning template with backup confirmation, steps, verification, escalation. |
@@ -52,6 +52,21 @@ Already covered:
 
 - Plugin skeleton, read-only bridge, safe scoped writes, DEV isolation helper, production-safety hardening, optional future browser/admin layer.
 - Existing WPilot Phase 1 sequence: read-only inspection, access safety, backup, rollback, safe file-level test, test page copy/create, WPBakery/The7 inspection, child-theme CSS patch, database read-only awareness, QA/report.
+
+### Strategic Modes
+
+Canonical sources:
+
+- `metacode-wpilot-plugin-concept.md` for the strategic target hierarchy and mode definitions.
+- `metacode-wpilot-plugin-mvp-roadmap.md` for sequencing implications.
+- `../README.md` for the short operator-facing summary.
+
+Current reconciliation:
+
+- **Mode A - Factory-native controlled sites** is the primary long-term strategy: Website Factory-created WordPress with known stack, approved plugins/themes, approved templates, structured content payloads, known mutation zones, and human-approved publishing gates.
+- **Mode B - legacy/external compatibility** is the secondary strategy: WPBakery, The7, Elementor, unknown plugins/themes, legacy HTML/content shape, refusal-first inspection, dry-run-heavy validation, conservative mutation policy.
+- WPBakery handling belongs to Mode B compatibility. It remains useful for current DEV evidence and external site support, but it is not the ideal long-term WPilot target.
+- No document should recast WPilot as a universal autonomous WordPress AI runtime.
 
 ### Rollback Concepts
 
@@ -160,6 +175,7 @@ Needs stabilization:
 | Area | Overlap | Resolution |
 |---|---|---|
 | WPilot scope vs plugin scope | `phase-1-mvp.md` describes current human-operated WPilot Phase 1; plugin docs describe future bridge plugin. | Keep both. Treat `phase-1-mvp.md` as operational baseline and plugin docs as PLANNED extension. |
+| Strategic modes | README, concept, roadmap, and Website Factory pointers mention Factory-native vs legacy compatibility. | Keep `metacode-wpilot-plugin-concept.md` canonical for definitions; roadmap owns sequencing; README/Website Factory docs should only summarize and link. |
 | Rollback | `backup-rollback-rules.md`, roadmap Phase 2, rollback template all discuss rollback. | Keep `backup-rollback-rules.md` as canonical operational discipline; plugin docs should reference rollback-first writes and plugin-created page backups. |
 | Security baseline | `README.md`, `access-safety.md`, `boundaries.md`, plugin concept, roadmap. | Keep `access-safety.md` and `boundaries.md` canonical for WPilot-wide security; plugin docs carry plugin-specific enforcement. |
 | WPBakery notes | `milestones.md` records confirmed DEV evidence; plugin docs plan parser/replacement. | Keep `milestones.md` as evidence log; plugin docs must not overclaim parser completeness. |
@@ -183,6 +199,7 @@ No clearly abandoned WPilot plugin files were found under `projects/wpilot/**`.
 Superseded-by-context candidates:
 
 - Direct DB-assisted content replacement from `milestones.md` is historical DEV evidence, not a recommended plugin implementation path.
+- WPBakery/The7 compatibility as a primary strategic target is superseded by the Factory-native controlled-site strategy; keep it as legacy/external compatibility mode.
 - Browser/admin integration in roadmap Phase 5 is future EXPERIMENTAL, not part of MVP.
 - Any production use implied by later hardening phases is superseded by DEV-ONLY MVP scope until separate evidence and approval exist.
 
@@ -212,6 +229,8 @@ The existing docs are sufficient as the MVP planning pack after targeted edits t
 - State rollback-first writes and WordPress-API-based scoped replacement.
 - Clarify WPBakery parsing as shortcode-aware structural mapping, not a full renderer.
 - Add explicit exclusions: no unrestricted filesystem access, no code execution, no arbitrary SQL, no autonomous behavior.
+- Preserve the Mode A / Mode B strategic split and avoid duplicate architecture docs.
+- Keep Factory-native structured content, Blog Agent handoff, approved template pipeline, and human-approved publishing as future integration directions until contracts exist.
 
 ## SAFE UNKNOWN
 
@@ -222,4 +241,5 @@ The existing docs are sufficient as the MVP planning pack after targeted edits t
 - WPBakery parser reliability across real pages, themes, raw HTML blocks, nested shortcodes, and encoded content is unknown.
 - Compatibility with target WordPress/PHP versions, security plugins, cache plugins, SEO plugins, The7 variants, and hosting restrictions is unknown.
 - Production readiness remains unknown and cannot be claimed.
+- Factory-native WordPress template-slot schema, structured content payload format, Blog Agent contract, and human-approved publishing pipeline remain undefined.
 

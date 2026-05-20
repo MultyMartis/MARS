@@ -34,8 +34,16 @@
   content: "\f64a";
 }
 
+.fa-check::before {
+  content: "\f00c";
+}
+
 .fa-clock::before {
   content: "\f017";
+}
+
+.fa-clipboard-list::before {
+  content: "\f46d";
 }
 
 .fa-file-invoice-dollar::before {
@@ -72,6 +80,10 @@
 
 .fa-tools::before {
   content: "\f7d9";
+}
+
+.fa-times::before {
+  content: "\f00d";
 }
 
 .fa-truck-loading::before {

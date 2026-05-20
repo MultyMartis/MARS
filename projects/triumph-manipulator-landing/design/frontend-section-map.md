@@ -13,10 +13,10 @@ Starter rule: **lowercase kebab-case**; section partials live under `src/partial
 
 | Mockup | Section partial | SCSS module | Role |
 |--------|-----------------|-------------|------|
-| `design/mockups/01.png` | `partials/sections/landing-strip-01.html` | `_landing-strip-01.scss` | Placeholder block for artwork segment 1. |
-| `design/mockups/02.png` | `partials/sections/landing-strip-02.html` | `_landing-strip-02.scss` | Placeholder block for segment 2. |
-| `design/mockups/03.png` | `partials/sections/landing-strip-03.html` | `_landing-strip-03.scss` | Placeholder block for segment 3. |
-| `design/mockups/04.png` | `partials/sections/landing-strip-04.html` | `_landing-strip-04.scss` | Placeholder block for segment 4. |
+| `design/v1/01.png` | `partials/sections/landing-strip-01.html` | `_landing-strip-01.scss` | Placeholder block for artwork segment 1. |
+| `design/v1/02.png` | `partials/sections/landing-strip-02.html` | `_landing-strip-02.scss` | Placeholder block for segment 2. |
+| `design/v1/03.png` | `partials/sections/landing-strip-03.html` | `_landing-strip-03.scss` | Placeholder block for segment 3. |
+| `design/v1/04.png` | `partials/sections/landing-strip-04.html` | `_landing-strip-04.scss` | Placeholder block for segment 4. |
 
 ## Homepage entry
 
@@ -31,4 +31,4 @@ Starter rule: **lowercase kebab-case**; section partials live under `src/partial
 
 ## Assets
 
-- Mockups stay under **`projects/.../design/mockups/`** unless an explicit decision copies approved references into `src/img/` (not part of this task).
+- V1 strip mockup PNGs stay under **`projects/.../design/v1/`** unless an explicit decision copies approved references into `src/img/` (not part of this task). See [`design/README.md`](./README.md).

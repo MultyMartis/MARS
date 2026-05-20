@@ -83,9 +83,18 @@ Anything less is **high risk** for silent rework — not forbidden, but honest a
 | REPORT | Scoped snapshot for humans |
 | Governance / registry | Claim and identity survival |
 | Lifecycle log | Decision and milestone trail — not auto-sync |
+| **`continuity/` / IdeaBox** | Optional markdown captures — **human-maintained**; **not** cross-chat memory product |
 
 ---
 
-## 9. SAFE UNKNOWN
+## 9. IdeaBox / `continuity/` (optional filesystem workflow)
+
+**IdeaBox** is an optional **human-operated** workflow: structured markdown under `../continuity/` (see `../continuity/README.md`, protocols in `../continuity/protocols/`). Chat markers such as `/ideabox` are **operational conventions**, **not** runtime commands.
+
+**Explicit non-goals:** IdeaBox **does not** provide autonomous AI memory, hidden orchestration, semantic graph persistence, automatic governance mutation, or orchestration semantics. Markdown files remain SoT; `continuity/registry/master-index.md` is **manual navigation only**.
+
+---
+
+## 10. SAFE UNKNOWN
 
 If a migration package is incomplete, the correct output is **SAFE UNKNOWN** for missing verification — not inferred continuity.

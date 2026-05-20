@@ -1,0 +1,27 @@
+@use "../utils/tokens";
+
+.readiness-notice {
+  padding-block: clamp(64px, 12vw, 140px);
+}
+
+.readiness-notice__eyebrow {
+  margin: 0 0 12px;
+  color: tokens.$color-accent;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.readiness-notice__title {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(36px, 7vw, 72px);
+  line-height: 0.95;
+}
+
+.readiness-notice__text {
+  max-width: 640px;
+  margin: 24px 0 0;
+  color: tokens.$color-muted;
+  font-size: 18px;
+}

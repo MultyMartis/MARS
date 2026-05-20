@@ -501,7 +501,7 @@ Rows are **stable references** for: intake checklists, IA notes, blueprint table
 | **Page Blueprint contract** (planned) | Lists ordered **`block_id`** instances with **props** (future contract). |
 | **SEO Pattern Library** (planned) | Constrains headings/schema use **per** `SEO_value` and site type. |
 | **Commercial Pattern Library** (planned) | Constrains urgency/claims **near** **`pricing`**, **`final_cta`**, **`sticky_cta`**. |
-| **Frontend Production Rules** (planned) | Maps **`frontend_complexity`** to static build patterns ([frontend-production-model.md](frontend-production-model.md)). |
+| **Frontend Production Rules** | [frontend-production-rules-v0.md](frontend-production-rules-v0.md) — maps **`frontend_complexity`** to static build patterns ([frontend-production-model.md](frontend-production-model.md)). |
 
 **Orchestration input:** **`site_type_id`** shortlists blocks; **`block_id`** rows refine **QA**, **copy**, and **implementation** risk — always subject to **SAFE UNKNOWN** where project facts are missing.
 

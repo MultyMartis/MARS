@@ -31,6 +31,16 @@ The **AI Designer Agent** (planned; see [design-layer-model.md](design-layer-mod
 
 ---
 
+## Relation to Design Governance Layer / Canonical Design Implementation Pack
+
+After design approval (and ideally **before** or **during** frontend handoff authoring), operators may attach a **[Canonical Design Implementation Pack](canonical-implementation-pack-architecture.md)** ([Design Governance Layer](design-governance-layer.md)): versioned **`semantics/`** + **`implementation-pack/`** + **`validation/`** under **`projects/<project>/design/vN/`**, produced under human supervision by the **[Design Governance Agent](../../agents/design-governance-agent.md)** (**planned**).
+
+- This contract remains the **experiential/visual obligations** artifact; the pack narrows **interpretation drift** (section meaning, counts, CTAs, archive isolation) — **documentation-first**, **not** automatic enforcement.
+- The pack **must not** contradict the **Page Blueprint Contract v0** (commercial, SEO, legal, **`block_mapping`**) without **HITL** resolution.
+- **`exports/`** in the pack support QA; **canonical structure** remains in **`semantics/`** plus **`implementation-pack/`** per [canonical-implementation-pack-architecture.md §1](canonical-implementation-pack-architecture.md).
+
+---
+
 ## Relation to Wireframe Generator Agent and Full Design Generator Agent
 
 - **Wireframe Generator Agent** (planned) typically precedes or overlaps **full** visual lock: low-fidelity **`section_visual_map`** and **`responsive_behavior`** intent may originate there; this contract may **reference** wireframe artifact IDs in **SAFE_UNKNOWN_notes** until a wire ID field is standardized.

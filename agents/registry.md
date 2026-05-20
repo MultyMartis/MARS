@@ -26,6 +26,7 @@ The registry **does not** implement agents; it **describes** them. Executable ag
 |--------|---------|
 | **planned** | Role is **accepted in the catalog**; no implementation in-repo; design may change. |
 | **draft** | Card in active editing; not yet stable for routing or policy. |
+| **operational_doc_pack** | Documentation-backed operational specialist pack; **human + Cursor/Codex** execution; **not** autonomous runtime; **not** a deployed agent service. |
 | **legacy-bridge** | Maps a **legacy** or imported concept to a v0 MARS role; may carry transitional constraints. |
 | **active** | **Planned** state for a **supported** in-production or in-pilot implementation — **in v0 this remains documentation-only** until real code and ops prove *active*; do **not** mark *active* without that evidence. |
 | **deprecated** | Role is being phased out; new runs should not target it; migration path should be on the card. |
@@ -66,7 +67,8 @@ Summaries only; each card is intended to be expanded in-repo using `agent-card-t
 |------|----------------------|---------------|
 | **Agent Builder** | planned / legacy-bridge | Decomposes product intent into other agent definitions and card updates (successor to **Factory Engineer** idea). |
 | **Validator Agent** | planned / legacy-bridge | Validates outputs, policies, and structural constraints (aligns with **FlyCheck** legacy). |
-| **Gulp Frontend Agent** | legacy-bridge | Specialist for frontend/build pipelines; **remains a legacy specialist profile** in the catalog, not a claim of in-repo Gulp code. |
+| **Gulp Frontend Agent** | operational_doc_pack | Documentation-backed operational specialist pack (`agents/frontend-gulp-agent/`); human + Cursor/Codex execution — **not** autonomous runtime, **not** a deployed agent service. *Historical:* aligned with legacy Web-GPT import profile (**legacy-bridge** footnote only). |
+| **MARS Forge** | operational_doc_pack | Thin **overlay** specialist pack (`agents/mars-forge/`) on `gulp_frontend_agent` foundation; deterministic pipeline + freeze + **semantic source lock** — **not** autonomous runtime, **not** parallel Gulp SoT. |
 | **Memory Agent** | planned | Curates, retrieves, and summarizes **memory** surfaces for other agents. |
 | **Research Agent** | planned | Gathers, compares, and cites information from allowed sources. |
 | **Coding Agent** | planned | Produces and edits code within policy and handoff from Control Plane. |
@@ -74,7 +76,7 @@ Summaries only; each card is intended to be expanded in-repo using `agent-card-t
 
 ### 4.1 Website Factory planned agent identities (documentation-only)
 
-Stable **`agent_id`** rows for **MARS Website Factory** roles; **agent cards** v0 for all listed roles live under [`cards/`](cards/) (documentation-only; **not** runtime). **Role descriptions** (factory behaviour, lanes) remain authoritative in [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) where cards defer to pack prose. The §4 summary row for **Gulp Frontend Agent** (**legacy-bridge**) remains the catalog shorthand; **`gulp_frontend_agent`** below is the **same role** under a stable **snake_case** id for registry / policy hooks.
+Stable **`agent_id`** rows for **MARS Website Factory** roles; **agent cards** v0 for all listed roles live under [`cards/`](cards/) (documentation-only; **not** runtime). **Role descriptions** (factory behaviour, lanes) remain authoritative in [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) where cards defer to pack prose. The §4 summary row for **Gulp Frontend Agent** (**operational_doc_pack**) is the catalog shorthand; **`gulp_frontend_agent`** below is the **same role** under a stable **snake_case** id for registry / policy hooks.
 
 | agent_id | display_name | status | parent_system | owner_layer | SoT | notes |
 |----------|--------------|--------|-----------------|-------------|-----|-------|
@@ -88,7 +90,9 @@ Stable **`agent_id`** rows for **MARS Website Factory** roles; **agent cards** v
 | `ai_designer_agent` | AI Designer Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/ai-designer-agent-v0.md](cards/ai-designer-agent-v0.md) |
 | `wireframe_generator_agent` | Wireframe Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/wireframe-generator-agent-v0.md](cards/wireframe-generator-agent-v0.md) |
 | `full_design_generator_agent` | Full Design Generator Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/full-design-generator-agent-v0.md](cards/full-design-generator-agent-v0.md) |
-| `gulp_frontend_agent` | Gulp Frontend Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/gulp-frontend-agent-v0.md](cards/gulp-frontend-agent-v0.md); [frontend-gulp-agent/README.md](frontend-gulp-agent/README.md) (operational doc pack — **not** runtime). Aligns with §4 **Gulp Frontend Agent** (**legacy-bridge**) — same role, dual listing for **id** vs display name. |
+| `design_governance_agent` | Design Governance Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md); [design-governance-agent.md](design-governance-agent.md) — **implementation pack authoring** ([Design Governance Layer](../projects/mars-website-factory/design-governance-layer.md)) | [cards/design-governance-agent-v0.md](cards/design-governance-agent-v0.md). **Meaning:** human-supervised authoring of **`design/vN/semantics`**, **`implementation-pack`**, **`validation`** ([Canonical Design Implementation Pack architecture](../projects/mars-website-factory/canonical-implementation-pack-architecture.md)); **not** frontend code, **not** design comps, **not** autonomous runtime — see [design-governance-agent.md](design-governance-agent.md) §5 **agent input contract**. |
+| `gulp_frontend_agent` | Gulp Frontend Agent | operational_doc_pack | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/gulp-frontend-agent-v0.md](cards/gulp-frontend-agent-v0.md); [frontend-gulp-agent/README.md](frontend-gulp-agent/README.md). **Meaning:** documentation-backed operational specialist pack; human + Cursor/Codex execution — **not** autonomous runtime, **not** deployed agent service. *Historical:* legacy Web-GPT import profile (**legacy-bridge** alignment only). Same role as §4 **Gulp Frontend Agent** summary. **Canonical frontend foundation.** |
+| `mars_forge_frontend_agent` | MARS Forge | operational_doc_pack | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/mars-forge-frontend-agent-v0.md](cards/mars-forge-frontend-agent-v0.md); [mars-forge/README.md](mars-forge/README.md); [mars-forge/semantic-source-lock.md](mars-forge/semantic-source-lock.md). **Meaning:** thin **overlay** specialist — **inherits** `gulp_frontend_agent` ([frontend-gulp-agent/](frontend-gulp-agent/)); adds phased pipeline, anti-drift, freeze semantics, overlay QA sequencing, **semantic source lock**. Human + Cursor/Codex — **not** autonomous runtime, **not** parallel Gulp/workflow SoT, **not** pixel-perfect engine (v0). |
 | `frontend_qa_agent` | Frontend QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/frontend-qa-agent-v0.md](cards/frontend-qa-agent-v0.md) |
 | `design_qa_agent` | Design QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/design-qa-agent-v0.md](cards/design-qa-agent-v0.md) |
 | `seo_qa_agent` | SEO QA Agent | planned | mars_website_factory | Website Factory / Agent Layer | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | [cards/seo-qa-agent-v0.md](cards/seo-qa-agent-v0.md) |
@@ -115,7 +119,7 @@ v0: **read-only** relationship in design — the registry is **not** self-modify
 |---------------------|-------------|
 | **Factory Engineer** | **Agent Builder** (conceptual successor) |
 | **FlyCheck** | **Validator Agent** (conceptual successor) |
-| **Gulp Frontend Agent** | **Same** name, kept as **legacy specialist** profile; see card **limitations** and **status**; no automatic claim of implementation. |
+| **Gulp Frontend Agent** | **Same** name; **operational_doc_pack** in §4 / §4.1 — specialist doc pack + factory contracts; *historical* Web-GPT import was **legacy-bridge** alignment only; no automatic claim of in-repo Gulp implementation. |
 
 **SAFE UNKNOWN** for any other legacy name until mapped on a card.
 
@@ -135,5 +139,8 @@ v0: **read-only** relationship in design — the registry is **not** self-modify
 | Pack | Relevance to registry |
 |------|------------------------|
 | [../projects/mars-website-factory/agent-map.md](../projects/mars-website-factory/agent-map.md) | **Planned** factory agent roster and **SoT** for per-role prose; **§4.1** lists stable **`agent_id`** rows with links to **v0 agent cards** in [`cards/`](cards/) (documentation-only). **Gulp Frontend Agent** / **Validator Agent** §4 summaries remain shorthand — factory remains **documentation-first** until runtime evidence lands. |
+| [../projects/orca/README.md](../projects/orca/README.md) | **Operational** PPC toolkit — **no** agent rows required; project identity in [../registry/project-registry.md](../registry/project-registry.md) (`orca`). |
+| [../projects/wpilot/README.md](../projects/wpilot/README.md) | **Operational** WordPress admin pack — future agent candidates documented in pack only; project identity in [../registry/project-registry.md](../registry/project-registry.md) (`wpilot`). |
+| [../governance/ecosystem-topology-index.md](../governance/ecosystem-topology-index.md) | Compact ecosystem visibility — **not** a second agent registry. |
 
 **Honesty:** The Website Factory is **not** a single agent and **not** runtime-ready; see [../projects/mars-website-factory/safe-unknown-boundary.md](../projects/mars-website-factory/safe-unknown-boundary.md).

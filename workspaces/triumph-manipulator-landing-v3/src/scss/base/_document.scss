@@ -1,0 +1,33 @@
+@use "../utils/tokens";
+
+body {
+  min-width: 320px;
+  background: tokens.$color-bg;
+  color: tokens.$color-text;
+  font-family: tokens.$font-base;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(100% - (tokens.$container-pad * 2), tokens.$container-max);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 10;
+  transform: translateY(-160%);
+  padding: 8px 12px;
+  background: tokens.$color-text;
+  color: tokens.$color-surface;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

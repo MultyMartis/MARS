@@ -17,17 +17,18 @@ Include:
 
 ### 2. Load this pack (order)
 
-Use [README.md](README.md) load order:
+**Operational-first default (post–Cycle 8):**
 
 1. `00_MARS_v2_PROJECT_BEHAVIOR.md`  
-2. `01_MARS_v2_GOVERNANCE_CORE.md`  
-3. `02_MARS_v2_EXECUTION_MODEL.md`  
-4. `03_MARS_v2_REALITY_AND_BOUNDARIES.md`  
-5. `04_MARS_v2_WEBSITE_FACTORY_CONTEXT.md` (if Factory work)  
-6. `05_MARS_v2_RUNTIME_BOUNDARY.md`  
-7. `06_MARS_v2_BOOTSTRAP_AND_MIGRATION.md` (this file)
+2. `03_MARS_v2_REALITY_AND_BOUNDARIES.md`  
+3. `05_MARS_v2_RUNTIME_BOUNDARY.md`  
+4. `02_MARS_v2_EXECUTION_MODEL.md`  
+5. Open **one** in-repo lane index (Factory / ORCA OPERATIONAL-INDEX)  
+6. `04` / `07` / `01` only if the chartered task requires Factory context, multi-chat discipline, or governance maintenance  
 
-**Minimum truth bundle:** `00` + `03` + `05`.
+**Minimum truth bundle:** `00` + `03` + `05` — then **lane index**, not full pack scan.
+
+**Do not** load `01` + full governance catalog for routine delivery bootstrap.
 
 ### 3. Fresh repo evidence
 
@@ -92,6 +93,7 @@ Legacy folder: `web-gpt-sources/chat-migration/` — **HISTORICAL** aids.
 ## What the new chat must acknowledge
 
 - MARS = **governance-centered operational intelligence**; **documentation-first** Phase 1  
+- **Post–Cycle 8:** governance **maintenance mode**; **operational-first** default — `governance/mars-operational-evolution-state-after-cycles-1-8-v0.md`  
 - **HITL** for risky moves  
 - Triumph, Website Factory, MetaBOT = **different** canonical folders and execution owners  
 - Font Awesome Pro = **local licensed asset**, **EXCLUDED** from packs  
@@ -102,6 +104,8 @@ Legacy folder: `web-gpt-sources/chat-migration/` — **HISTORICAL** aids.
 - Prior chat committed or cleaned the tree  
 - `seo-content-agent/` is canonical (use **metabot** pack)  
 - Vendor/font trees cleared for commit without operator license confirmation  
+- Another **stabilization / Cycle 8** pass is required before delivery work  
+- **Governance-first** or **read-all-docs** startup is still the default  
 
 ---
 
@@ -111,10 +115,11 @@ If operator opens repo directly (not only Web-GPT):
 
 1. `README.md`  
 2. `AGENTS.md`  
-3. `governance/README.md` (task-scoped)  
-4. `governance/parallel-cursor-chat-work-mode-v0.md` (if multi-chat Cursor)  
+3. `governance/mars-operational-evolution-state-after-cycles-1-8-v0.md`  
+4. Lane `OPERATIONAL-INDEX.md` (Factory / ORCA / assigned pack)  
+5. `governance/parallel-cursor-chat-work-mode-v0.md` (if multi-chat Cursor)  
 
-Stop unless task needs deeper files.
+**Do not** start with `governance/README.md` full scan. Stop unless task needs deeper files.
 
 ---
 

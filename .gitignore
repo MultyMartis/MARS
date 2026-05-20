@@ -89,3 +89,27 @@ workspaces/triumph-manipulator-landing-v2/*
 !workspaces/triumph-manipulator-landing-v2/gulpfile.js
 !workspaces/triumph-manipulator-landing-v2/src/
 !workspaces/triumph-manipulator-landing-v2/src/**
+
+# Triumph Manipulator Landing V3 — explicit allow-list (source + workspace docs; dist is not allow-listed)
+!workspaces/triumph-manipulator-landing-v3/
+workspaces/triumph-manipulator-landing-v3/*
+!workspaces/triumph-manipulator-landing-v3/README.md
+!workspaces/triumph-manipulator-landing-v3/.gitignore
+!workspaces/triumph-manipulator-landing-v3/package.json
+!workspaces/triumph-manipulator-landing-v3/package-lock.json
+!workspaces/triumph-manipulator-landing-v3/gulpfile.js
+!workspaces/triumph-manipulator-landing-v3/docs/
+!workspaces/triumph-manipulator-landing-v3/docs/**
+!workspaces/triumph-manipulator-landing-v3/src/
+!workspaces/triumph-manipulator-landing-v3/src/**
+
+# Triumph Manipulator Landing V4 — explicit allow-list (source + workspace docs; dist is not allow-listed)
+!workspaces/triumph-manipulator-landing-v4/
+workspaces/triumph-manipulator-landing-v4/*
+!workspaces/triumph-manipulator-landing-v4/docs/
+!workspaces/triumph-manipulator-landing-v4/docs/**
+!workspaces/triumph-manipulator-landing-v4/src/
+!workspaces/triumph-manipulator-landing-v4/src/**
+
+# Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
+shared/assets/icon-libraries/

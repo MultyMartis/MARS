@@ -1,0 +1,228 @@
+{
+  "version": "commander-header-map-v0",
+  "template_file": "triumph-manipulator-commander-template-v0.xlsx",
+  "generated_at": "2026-05-19T20:44:33.534Z",
+  "disclaimer": "Template introspection artifact only. NOT import automation. Human review mandatory.",
+  "fields": {
+    "campaigns.campaign_type": {
+      "logical": "campaigns.campaign_type",
+      "sheet": "Тексты",
+      "region": "campaign_metadata_block",
+      "status": "verified",
+      "notes": "Key-value row above data table, not a column header",
+      "header": "Тип кампании:"
+    },
+    "campaigns.campaign_negatives": {
+      "logical": "campaigns.campaign_negatives",
+      "sheet": "Тексты",
+      "region": "campaign_metadata_block",
+      "status": "verified",
+      "notes": "Campaign-level minus phrases in metadata block",
+      "header": "Минус-фразы на кампанию:"
+    },
+    "campaigns.promotion_url": {
+      "logical": "campaigns.promotion_url",
+      "sheet": "Тексты",
+      "region": "campaign_metadata_block",
+      "status": "verified",
+      "notes": "Campaign promotion URL — may differ from per-ad Ссылка",
+      "header": "Объект продвижения:"
+    },
+    "groups.group_name": {
+      "logical": "groups.group_name",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Название группы",
+      "column": 5
+    },
+    "groups.group_id": {
+      "logical": "groups.group_id",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "ID группы",
+      "column": 4
+    },
+    "keywords.phrase": {
+      "logical": "keywords.phrase",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Фраза (с минус-словами)",
+      "column": 8
+    },
+    "keywords.phrase_id": {
+      "logical": "keywords.phrase_id",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "ID фразы",
+      "column": 7
+    },
+    "keywords.status": {
+      "logical": "keywords.status",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Статус фразы",
+      "column": 57
+    },
+    "keywords.match_type": {
+      "logical": "keywords.match_type",
+      "sheet": "Тексты",
+      "region": "unknown",
+      "status": "unsupported",
+      "notes": "No dedicated match-type column found — match may be encoded inside phrase text",
+      "safe_unknown": "No dedicated match-type column found — match may be encoded inside phrase text"
+    },
+    "ads.headline_1": {
+      "logical": "ads.headline_1",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Заголовок 1",
+      "column": 10
+    },
+    "ads.headline_2": {
+      "logical": "ads.headline_2",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Заголовок 2",
+      "column": 11
+    },
+    "ads.description": {
+      "logical": "ads.description",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Текст",
+      "column": 12
+    },
+    "ads.ad_id": {
+      "logical": "ads.ad_id",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "ID объявления",
+      "column": 9
+    },
+    "ads.landing_url": {
+      "logical": "ads.landing_url",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Ссылка",
+      "column": 48
+    },
+    "ads.display_url": {
+      "logical": "ads.display_url",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Отображаемая ссылка",
+      "column": 49
+    },
+    "ads.ad_status": {
+      "logical": "ads.ad_status",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Статус объявления",
+      "column": 56
+    },
+    "ads.ad_type": {
+      "logical": "ads.ad_type",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Тип объявления",
+      "column": 2
+    },
+    "extensions.fastlink_titles": {
+      "logical": "extensions.fastlink_titles",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Combined multi-value cell format — SAFE UNKNOWN for row expansion",
+      "header": "Заголовки быстрых ссылок",
+      "column": 58
+    },
+    "extensions.fastlink_descriptions": {
+      "logical": "extensions.fastlink_descriptions",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Combined multi-value cell format — SAFE UNKNOWN",
+      "header": "Описания быстрых ссылок",
+      "column": 59
+    },
+    "extensions.fastlink_urls": {
+      "logical": "extensions.fastlink_urls",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Combined multi-value cell format — SAFE UNKNOWN",
+      "header": "Адреса быстрых ссылок",
+      "column": 60
+    },
+    "extensions.callouts": {
+      "logical": "extensions.callouts",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Callouts as combined Уточнения column — not one-row-per-callout",
+      "header": "Уточнения",
+      "column": 67
+    },
+    "groups.group_negatives": {
+      "logical": "groups.group_negatives",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Минус-фразы на группу",
+      "column": 68
+    },
+    "geo.region": {
+      "logical": "geo.region",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": null,
+      "header": "Регион",
+      "column": 52
+    },
+    "campaigns.campaign_name": {
+      "logical": "campaigns.campaign_name",
+      "sheet": "Тексты",
+      "region": "unknown",
+      "status": "unsupported",
+      "notes": "No dedicated campaign name column in data table — SAFE UNKNOWN",
+      "safe_unknown": "No dedicated campaign name column in data table — SAFE UNKNOWN"
+    },
+    "campaigns.primary_region": {
+      "logical": "campaigns.primary_region",
+      "sheet": "Регионы",
+      "region": "reference_tree",
+      "status": "probable",
+      "notes": "Separate reference sheet — not a flat campaign column",
+      "header": "Регионы",
+      "safe_unknown": "Region reference tree — not a direct export column for campaigns.primary_region"
+    }
+  }
+}

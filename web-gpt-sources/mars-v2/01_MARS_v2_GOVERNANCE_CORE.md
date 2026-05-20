@@ -2,6 +2,8 @@
 
 **Status:** **CORE** — summarized from `governance/`; full text remains **REPO-ONLY**.
 
+**Post–Cycle 8:** governance baseline **frozen**; this file is for **maintenance / boundary** tasks — **not** the default first load for delivery chats. Start operational: `00` + `03` + `05` → pack OPERATIONAL-INDEX.
+
 ---
 
 ## What governance is

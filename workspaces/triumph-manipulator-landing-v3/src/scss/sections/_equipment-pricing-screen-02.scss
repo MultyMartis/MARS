@@ -1,0 +1,331 @@
+@use "../utils/tokens";
+
+.screen-02 {
+  position: relative;
+  z-index: 1;
+  margin-top: -1px;
+  padding-block: clamp(48px, 5vw, 70px) clamp(48px, 5.1vw, 74px);
+  background: tokens.$color-surface;
+  color: tokens.$color-text;
+}
+
+.screen-02__inner {
+  max-width: 1440px;
+}
+
+.screen-02__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 32px;
+}
+
+.screen-02__eyebrow {
+  margin: 0 0 12px;
+  color: tokens.$color-accent;
+  font-size: clamp(16px, 1.08vw, 19px);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.screen-02__title {
+  margin: 0;
+  color: #101621;
+  font-size: clamp(46px, 4.95vw, 72px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.screen-02__title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-top: 14px;
+  background: tokens.$color-accent;
+}
+
+.screen-02__intro {
+  max-width: 520px;
+  margin: 14px 0 0;
+  color: #333b47;
+  font-size: clamp(16px, 1.05vw, 19px);
+  line-height: 1.35;
+}
+
+.screen-02__estimate {
+  display: grid;
+  justify-items: end;
+  gap: 9px;
+  margin-top: 34px;
+}
+
+.screen-02__estimate-button,
+.screen-02-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: tokens.$color-accent;
+  color: tokens.$color-ink-inverse;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.screen-02__estimate-button {
+  min-height: 58px;
+  min-width: 238px;
+  gap: 14px;
+  padding: 0 24px;
+  font-size: 15px;
+}
+
+.screen-02__estimate span {
+  color: #8c94a0;
+  font-size: 13px;
+}
+
+.screen-02__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 1.8vw, 24px);
+  margin-top: clamp(28px, 3vw, 42px);
+}
+
+.screen-02-card {
+  overflow: hidden;
+  background: tokens.$color-surface;
+  border: 1px solid #d9dee6;
+  border-radius: 3px;
+}
+
+.screen-02-card__media {
+  position: relative;
+  min-height: 0;
+  aspect-ratio: 1.82 / 1;
+  background-image: url("../reconstruction/screen-02/screen-02-source.png");
+  background-repeat: no-repeat;
+  background-size: 332% auto;
+}
+
+.screen-02-card--five .screen-02-card__media {
+  background-position: 5% 45%;
+}
+
+.screen-02-card--seven .screen-02-card__media {
+  background-position: 50% 45%;
+}
+
+.screen-02-card--ten .screen-02-card__media {
+  background-position: 94% 45%;
+}
+
+.screen-02-card__badge {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  padding: 0 18px;
+  background: tokens.$color-accent;
+  color: tokens.$color-ink-inverse;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.screen-02-card__body {
+  padding: clamp(20px, 1.8vw, 26px);
+}
+
+.screen-02-card__title {
+  margin: 0;
+  color: #101621;
+  font-size: clamp(22px, 1.65vw, 29px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.screen-02-card__specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 0;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #dfe3ea;
+}
+
+.screen-02-card__spec {
+  min-width: 0;
+}
+
+.screen-02-card__spec dt {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #6f7785;
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+.screen-02-card__spec dd {
+  margin: 6px 0 0 32px;
+  color: #101621;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.screen-02-card__icon,
+.screen-02-card__fit-icon {
+  color: tokens.$color-accent;
+}
+
+.screen-02-card__icon {
+  font-size: 20px;
+}
+
+.screen-02-card__fit {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: start;
+  gap: 14px;
+  min-height: 56px;
+  margin: 20px 0 0;
+  color: #303945;
+  font-size: clamp(15px, 1vw, 17px);
+  line-height: 1.28;
+}
+
+.screen-02-card__fit-icon {
+  padding-top: 2px;
+  font-size: 22px;
+}
+
+.screen-02-card__footer {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(150px, 178px);
+  align-items: start;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.screen-02-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.screen-02-card__price span {
+  color: #6f7785;
+  font-size: 13px;
+}
+
+.screen-02-card__price strong {
+  color: #101621;
+  font-size: clamp(28px, 2.35vw, 38px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.screen-02-card__action {
+  display: grid;
+  gap: 10px;
+}
+
+.screen-02-card__button {
+  min-height: 54px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+
+.screen-02-card__action span {
+  color: #8c94a0;
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+@media (max-width: 1180px) {
+  .screen-02__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-02-card {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1fr);
+  }
+
+  .screen-02-card__media {
+    min-height: 100%;
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .screen-02__header {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-02__estimate {
+    justify-items: start;
+    margin-top: 0;
+  }
+
+  .screen-02-card {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-02-card__media {
+    aspect-ratio: 1.82 / 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .screen-02 {
+    padding-block: 42px 50px;
+  }
+
+  .screen-02__title {
+    font-size: clamp(39px, 11.6vw, 52px);
+  }
+
+  .screen-02__intro br {
+    display: none;
+  }
+
+  .screen-02__estimate-button {
+    width: 100%;
+  }
+
+  .screen-02-card__specs,
+  .screen-02-card__footer {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-02-card__spec dt {
+    grid-template-columns: 26px 1fr;
+    font-size: 12px;
+  }
+
+  .screen-02-card__spec dd {
+    margin-left: 34px;
+  }
+
+  .screen-02-card__price {
+    white-space: normal;
+  }
+}

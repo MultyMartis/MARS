@@ -1,0 +1,14 @@
+@use "../utils/tokens";
+
+.site-footer {
+  background: #030914;
+}
+
+.site-footer {
+  color: tokens.$color-ink-muted-inverse;
+}
+
+.site-footer {
+  padding-block: 24px;
+  border-top: 1px solid tokens.$color-line-inverse;
+}

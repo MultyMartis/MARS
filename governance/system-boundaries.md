@@ -21,6 +21,7 @@
 | **Repository layout** | Folders for memory, security, tools, **planned** code areas (`mars-runtime/`, etc.) as **design placeholders**—**inside** the repo, but **code may be absent** in Phase 1. |
 | **Governance** | This folder: capability/boundary/execution/state/versioning models, links to registries and roadmaps. |
 | **Operational discipline (human)** | Human-in-the-loop, Git rules as **documented** (e.g. `../web-gpt-sources/04-workflows__git-rules.md`); behavior follows team process, not an automated MARS service today. |
+| **Continuity / IdeaBox (optional)** | `../continuity/**` — **human-operated** markdown workflow for idea capture and session handoff hygiene; **filesystem-first** SoT; **not** autonomous agent memory, **not** runtime, **not** orchestration — see `../continuity/README.md`. |
 
 **Not implied:** that every folder contains **running** software. **Honesty** per `../README.md` and `../AGENTS.md`.
 
@@ -49,7 +50,7 @@ These are **typically external** to a “MARS runtime in a box” (which is **no
 |-------|------|------------------|
 | **MARS design (this repo)** | **Contracts**, terminology, **target** component responsibilities, **governance** rules for updating docs. | Production uptime, user machines, third-party TOS, cost of API calls. |
 | **Control Plane (design)** | **Planned** orchestration: task state, routing, dispatch **when** implemented. | Physical execution of tools on a developer PC unless a future runtime **defines** that process. |
-| **Agent layer (design)** | **Role** definitions, registry **as documentation**. | Guarantees that any **named** role exists as code in a given week. |
+| **Agent layer (design)** | **Role** definitions, registry **as documentation**; **agent input contracts** ([agent-input-contracts.md](agent-input-contracts.md)) as **human-maintained** I/O declarations. | Guarantees that any **named** role exists as code in a given week; **no** implied autonomous agent networking or contract enforcement service. |
 | **Operator / user** | Approvals, secrets, “run in Cursor” execution today, final **correctness** of changes to filesystem and Git. | Automated MARS **enforcement** without human review where policy demands HITL. |
 | **Web-GPT (legacy product context)** | In imported docs: prompts, packaging, **Web-GPT** rules. | MARS **repo** file layout beyond what the team has copied. |
 
@@ -69,3 +70,4 @@ These are **typically external** to a “MARS runtime in a box” (which is **no
 | Version | Date | Notes |
 |---------|------|--------|
 | v0 | 2026-04-27 | Initial system boundaries. |
+| v0 | 2026-05-16 | IdeaBox / `continuity/**`: optional human-operated markdown continuity workflow inside repo scope — not runtime or autonomous memory (`../continuity/README.md`). |

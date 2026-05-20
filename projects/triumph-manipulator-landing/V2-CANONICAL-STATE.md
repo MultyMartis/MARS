@@ -11,11 +11,20 @@ A short map of **where the V2 landing files live** in this repo: the normal Gulp
 | **`workspaces/triumph-manipulator-landing-v2/`** | **Current** Triumph layout — HTML/SCSS/JS under `src/`. Regular frontend workspace; not a separate architectural layer inside MARS. |
 | **`workspaces/triumph-manipulator-landing/`** | **Older / frozen** reference (tag **`triumph-manipulator-v1`** @ `309d81a`). Do not use for new V2 edits. |
 
+## 2.1 NEXT IMPLEMENTATION RULE (validation cycle)
+
+**Normative:** [V2-FRONTEND-SOURCE-OF-TRUTH.md](./V2-FRONTEND-SOURCE-OF-TRUTH.md) — **NEXT IMPLEMENTATION RULE**.
+
+- **Freeze state (2026-05-17):** the current rebuilt homepage Screens `01` through `07` are **READY FOR FREEZE WITH MINOR KNOWN DRIFT**. See [V2-FREEZE-STATE.md](./V2-FREEZE-STATE.md).
+- The clean rebuild cycle has completed for `projects/triumph-manipulator-landing/design/v2/01.png`, then `02.png` … `07.png`; future implementation work should be opened as a separate production phase, not as continued polish inside this freeze.
+- Do **not** use `design/v1/` as semantic source for V2; do **not** invent copy or change section meaning without operator approval.
+- **`equipment-prices`:** **not** on the V2 homepage `index.html`. Isolated on **`validation-equipment-prices.html`** (**EXPERIMENTAL / VALIDATION**) — see [design/v2/validation/equipment-prices-quarantine.md](./design/v2/validation/equipment-prices-quarantine.md) and [V2-CLEANUP-DECISION-LOG.md](./V2-CLEANUP-DECISION-LOG.md).
+
 ## 3. Design references
 
 | Path | Role |
 |------|------|
-| **`projects/triumph-manipulator-landing/design/`** | Mockups, PDF rules, design-side markdown next to the project pack. |
+| **`projects/triumph-manipulator-landing/design/`** | V2 **visual** exports under `design/v2/`; archived V1 slices under `design/v1/` are **not** V2 implementation sources. Folder roles: [`design/README.md`](./design/README.md); cleanup context: [V2-CLEANUP-DECISION-LOG.md](./V2-CLEANUP-DECISION-LOG.md). **Design version isolation:** [V2-FRONTEND-SOURCE-OF-TRUTH.md](./V2-FRONTEND-SOURCE-OF-TRUTH.md) §4. |
 | **`projects/triumph-manipulator-landing/design-system/triumph-manipulator-design-system.md`** | Written design system (linked from the V2 workspace README). |
 
 ## 4. Where to edit implementation
@@ -24,7 +33,9 @@ A short map of **where the V2 landing files live** in this repo: the normal Gulp
 |------|------|
 | **`workspaces/triumph-manipulator-landing-v2/src/`** | **Source** — pages, partials, SCSS, JS, images, SVG inputs, favicon. **Edit here**, not in **`dist/`**. |
 
-**Homepage partials (from `src/pages/index.html`):** `hero-conversion`, `machine-specs-transport-lists`, `trust-cases-social-proof`, `segments-applications-grid`, `problem-solution-matrix`, `consultation-lead-form`, `site-footer-v2` — not the older **`landing-strip-*`** chain as the main layout.
+**Homepage partials (from `workspaces/triumph-manipulator-landing-v2/src/pages/index.html`):** `hero-conversion`, `machine-specs-transport-lists`, `trust-cases-social-proof`, `segments-applications-grid`, `problem-solution-matrix`, `consultation-lead-form`, then `site-footer-v2` — canonical flow **`01.png`→`07.png`** via **`design/v2/`** (footer = `07`). **`equipment-prices`** is **not** in this chain; it exists only on **`validation-equipment-prices.html`**. **Next work:** separate production phases only; do not treat freeze handoff as continued rebuild polish.
+
+**Freeze summary:** current rebuilt landing is frozen for handoff as **READY FOR FREEZE WITH MINOR KNOWN DRIFT** after physical implementation reset, clean rebuild cycle, Font Awesome delivery / governance fixes, typography rhythm pass, CTA / form rhythm pass, vertical cadence pass, and final rendered visual QA. Known drift and future production phases are recorded in [V2-FREEZE-STATE.md](./V2-FREEZE-STATE.md).
 
 ## 5. Build output
 
@@ -70,7 +81,7 @@ More detail: [`shared/assets/icon-libraries/fontawesome-pro-5.15.4-usage.md`](..
 | Question | Answer |
 |----------|--------|
 | Where do I edit the live V2 page? | **`workspaces/triumph-manipulator-landing-v2/src/`** |
-| Where are mockups / PDF rules? | **`projects/triumph-manipulator-landing/design/`** (+ design-system doc) |
+| Where are mockups / rules? | **`projects/triumph-manipulator-landing/design/v2/`** (visual). Folder roles: [`design/README.md`](./design/README.md). Written rules: MD stack in project root + `docs/`. Retired PDF: see [V2-CLEANUP-DECISION-LOG.md](./V2-CLEANUP-DECISION-LOG.md). |
 | Where is Font Awesome Pro on disk? | **`shared/assets/icon-libraries/Font Awesome Pro 5.15.4/`** |
 | Where does `npm run build` write? | **`workspaces/.../dist/`** (regenerate locally) |
 | Is `shared/` random clutter? | **No** — see [`shared/README.md`](../../shared/README.md). |

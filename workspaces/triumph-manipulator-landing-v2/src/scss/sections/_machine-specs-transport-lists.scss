@@ -1,96 +1,391 @@
 @use '../utils/tokens' as tm;
 @use '../utils/variables' as v;
 
-// Screen 02 — media, specs, allow/deny, CTA column.
+// Screen 02 - one-machine technical showcase from design/v2/02.png.
 
 .tm-section--machine-specs {
-    background: tm.$tm-color-dark-2;
-    color: tm.$tm-color-ink;
+    min-width: 0;
+    overflow-x: clip;
+    color-scheme: light;
+    padding-block: tm.$tm-space-6;
+    background: #f7f8fa;
+    color: tm.$tm-color-text;
 }
 
-.tm-section--machine-specs__top {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: tm.$tm-grid-gap;
-    margin-bottom: tm.$tm-space-16;
-}
-
-.tm-section--machine-specs__media {
-    grid-column: span 6;
-    position: relative;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: tm.$tm-color-dark-3;
-    border: 1px solid tm.$tm-color-border-dark;
-}
-
-.tm-section--machine-specs__media::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(5, 11, 22, 0.35);
-    pointer-events: none;
-}
-
-.tm-section--machine-specs__specs {
-    grid-column: span 6;
-    display: flex;
-    flex-direction: column;
-    gap: tm.$tm-space-6;
+.tm-section--machine-specs__container {
     min-width: 0;
 }
 
-.tm-section--machine-specs__header {
-    min-height: 120px;
-    border: 1px solid tm.$tm-color-border-dark;
-    background: tm.$tm-color-surface;
-}
-
-.tm-section--machine-specs__spec-list {
-    flex: 1;
-    min-height: 200px;
-    border: 1px solid tm.$tm-color-border-dark;
-    background: tm.$tm-color-surface;
-}
-
-.tm-section--machine-specs__bottom {
+.machine-specs__top {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: tm.$tm-grid-gap;
+    grid-template-columns: minmax(0, 1.43fr) minmax(360px, 1fr);
+    align-items: start;
+    gap: tm.$tm-space-7;
+}
+
+.machine-specs__media {
+    margin: 0;
+    min-width: 0;
+    border: 1px solid rgba(10, 18, 32, 0.08);
+    background: tm.$tm-color-white;
+}
+
+.machine-specs__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.machine-specs__summary {
+    min-width: 0;
+    padding-block-start: tm.$tm-space-5;
+}
+
+.machine-specs__heading {
+    margin-block-end: tm.$tm-space-8;
+}
+
+.machine-specs__title {
+    margin: 0;
+    font-family: tm.$tm-font-display;
+    font-size: 40px;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 44px;
+    letter-spacing: 0;
+    color: #07111f;
+}
+
+.machine-specs__lead {
+    margin-block-start: tm.$tm-space-4;
+    max-width: 380px;
+    font-size: tm.$tm-fs-body;
+    line-height: tm.$tm-line-body;
+    color: #475061;
+}
+
+.machine-specs__list {
+    margin: 0;
+    padding: 0;
+}
+
+.machine-specs__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    align-items: center;
+    min-height: 48px;
+    gap: tm.$tm-space-4;
+    border-bottom: 1px solid rgba(10, 18, 32, 0.1);
+}
+
+.machine-specs__row:last-child {
+    border-bottom: 0;
+}
+
+.machine-specs__row dt {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: center;
+    gap: tm.$tm-space-3;
+    min-width: 0;
+    font-size: tm.$tm-fs-body;
+    line-height: tm.$tm-line-body;
+    color: #3b4350;
+}
+
+.machine-specs__row dt i {
+    width: 32px;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    color: #07111f;
+}
+
+.machine-specs__row dd {
+    margin: 0;
+    font-family: tm.$tm-font-display;
+    font-size: tm.$tm-fs-subtitle;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 26px;
+    white-space: nowrap;
+    color: #07111f;
+}
+
+.machine-specs__bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr) minmax(190px, 0.78fr);
     align-items: stretch;
+    gap: tm.$tm-space-4;
+    margin-block-start: tm.$tm-space-4;
 }
 
-.tm-section--machine-specs__card {
-    grid-column: span 4;
-    min-height: 200px;
-    padding: tm.$tm-space-6;
-    border: 1px solid tm.$tm-color-border-dark;
-    background: tm.$tm-color-surface;
+.machine-specs__card {
+    min-width: 0;
+    padding: tm.$tm-space-5 tm.$tm-space-6 tm.$tm-space-6;
+    border: 1px solid rgba(10, 18, 32, 0.1);
+    background: rgba(255, 255, 255, 0.7);
 }
 
-.tm-section--machine-specs__cta-column {
-    grid-column: span 4;
-    min-height: 200px;
-    padding: tm.$tm-space-6;
-    border: 1px solid tm.$tm-color-border-dark;
-    background: tm.$tm-color-dark-3;
+.machine-specs__card h3 {
+    margin: 0 0 tm.$tm-space-4;
+    font-family: tm.$tm-font-display;
+    font-size: 22px;
+    font-weight: tm.$tm-weight-medium;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #07111f;
 }
 
-@media (max-width: v.$bp-desktop) {
-    .tm-section--machine-specs__media,
-    .tm-section--machine-specs__specs {
-        grid-column: span 12;
+.machine-specs__transport-list {
+    display: grid;
+    gap: 0 tm.$tm-space-8;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.machine-specs__transport-list--allowed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.machine-specs__transport-list--denied {
+    grid-template-columns: 1fr;
+}
+
+.machine-specs__transport-list li {
+    display: grid;
+    grid-template-columns: 16px minmax(0, 1fr);
+    align-items: center;
+    gap: tm.$tm-space-3;
+    min-height: 33px;
+    border-bottom: 1px solid rgba(10, 18, 32, 0.09);
+    font-size: tm.$tm-fs-body;
+    line-height: tm.$tm-line-body;
+    color: #1b2431;
+}
+
+.machine-specs__transport-list li:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+.machine-specs__transport-list--denied li:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(10, 18, 32, 0.09);
+}
+
+.machine-specs__transport-list--denied li:last-child {
+    border-bottom: 0;
+}
+
+.machine-specs__transport-list i {
+    width: 16px;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+    color: tm.$tm-color-accent;
+}
+
+.machine-specs__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: tm.$tm-space-6 0 tm.$tm-space-5;
+    text-align: center;
+    background: transparent;
+}
+
+.machine-specs__cta > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-block-end: tm.$tm-space-4;
+    font-size: 30px;
+    line-height: 1;
+    color: #07111f;
+    background: rgba(10, 18, 32, 0.06);
+}
+
+.btn.machine-specs__cta-button {
+    width: 100%;
+    max-width: 200px;
+    height: 42px;
+    min-height: 42px;
+    padding-inline: tm.$tm-space-5;
+    font-size: tm.$tm-fs-body;
+    line-height: tm.$tm-line-body;
+}
+
+.machine-specs__cta p {
+    margin-block-start: tm.$tm-space-4;
+    max-width: 230px;
+    font-size: tm.$tm-fs-small;
+    line-height: tm.$tm-line-small;
+    color: #646d7a;
+}
+
+@media (max-width: v.$bp-tablet) {
+    .tm-section--machine-specs {
+        padding-block: tm.$tm-space-6;
     }
 
-    .tm-section--machine-specs__card,
-    .tm-section--machine-specs__cta-column {
-        grid-column: span 6;
+    .machine-specs__top {
+        grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.9fr);
+        gap: tm.$tm-space-6;
+    }
+
+    .machine-specs__summary {
+        padding-block-start: tm.$tm-space-2;
+    }
+
+    .machine-specs__title {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    .machine-specs__heading {
+        margin-block-end: tm.$tm-space-6;
+    }
+
+    .machine-specs__row {
+        min-height: 46px;
+    }
+
+    .machine-specs__row dt {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: tm.$tm-space-3;
+        font-size: tm.$tm-fs-small;
+        line-height: tm.$tm-line-small;
+    }
+
+    .machine-specs__row dt i {
+        width: 30px;
+        font-size: 20px;
+    }
+
+    .machine-specs__row dd {
+        font-size: tm.$tm-fs-lead;
+        line-height: tm.$tm-line-lead;
+    }
+
+    .machine-specs__bottom {
+        grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.95fr);
+    }
+
+    .machine-specs__cta {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 48px minmax(190px, 220px) minmax(0, 1fr);
+        justify-content: start;
+        align-items: center;
+        gap: tm.$tm-space-5;
+        padding: tm.$tm-space-5 tm.$tm-space-6;
+        border: 1px solid rgba(10, 18, 32, 0.1);
+        text-align: left;
+        background: rgba(255, 255, 255, 0.64);
+    }
+
+    .machine-specs__cta > i,
+    .machine-specs__cta p {
+        margin: 0;
+    }
+
+    .machine-specs__cta p {
+        max-width: none;
     }
 }
 
 @media (max-width: v.$bp-mobile) {
-    .tm-section--machine-specs__card,
-    .tm-section--machine-specs__cta-column {
-        grid-column: span 12;
+    .tm-section--machine-specs {
+        padding-block: tm.$tm-space-6;
+    }
+
+    .machine-specs__top,
+    .machine-specs__bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .machine-specs__top {
+        gap: tm.$tm-space-6;
+    }
+
+    .machine-specs__summary {
+        padding-block-start: 0;
+    }
+
+    .machine-specs__title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .machine-specs__lead {
+        margin-block-start: tm.$tm-space-3;
+    }
+
+    .machine-specs__heading {
+        margin-block-end: tm.$tm-space-5;
+    }
+
+    .machine-specs__row {
+        min-height: auto;
+        padding-block: tm.$tm-space-3;
+    }
+
+    .machine-specs__row dt {
+        grid-template-columns: 30px minmax(0, 1fr);
+    }
+
+    .machine-specs__bottom {
+        margin-block-start: tm.$tm-space-6;
+        gap: tm.$tm-space-4;
+    }
+
+    .machine-specs__card {
+        padding: tm.$tm-space-5 tm.$tm-space-4;
+    }
+
+    .machine-specs__transport-list--allowed {
+        grid-template-columns: 1fr;
+    }
+
+    .machine-specs__transport-list li:nth-last-child(-n + 2) {
+        border-bottom: 1px solid rgba(10, 18, 32, 0.09);
+    }
+
+    .machine-specs__transport-list li:last-child {
+        border-bottom: 0;
+    }
+
+    .machine-specs__cta {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: tm.$tm-space-6 tm.$tm-space-5;
+        text-align: center;
+    }
+
+    .btn.machine-specs__cta-button {
+        max-width: none;
+    }
+}
+
+@media (max-width: v.$bp-small) {
+    .machine-specs__title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .machine-specs__row {
+        grid-template-columns: 1fr;
+        gap: tm.$tm-space-2;
+    }
+
+    .machine-specs__row dd {
+        padding-inline-start: 42px;
+    }
+
+    .machine-specs__card h3 {
+        font-size: 20px;
+        line-height: 24px;
     }
 }

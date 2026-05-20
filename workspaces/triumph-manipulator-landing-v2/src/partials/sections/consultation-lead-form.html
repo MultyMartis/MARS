@@ -1,31 +1,92 @@
-<section class="tm-section tm-section--consultation-lead" id="kontakty" aria-label="Консультация и расчёт перед заказом">
+<section class="tm-section tm-section--consultation-lead" id="kontakty" data-screen="06" data-rebuild-status="clean-rebuild">
     <div class="tm-container tm-section--consultation-lead__container">
-        <div class="tm-section--consultation-lead__grid">
-            <div class="tm-section--consultation-lead__content">
-                <header class="tm-section--consultation-lead__header" aria-hidden="true"></header>
-                <div class="tm-section--consultation-lead__bullets">
-                    <div class="tm-section--consultation-lead__bullet-stub" aria-hidden="true"></div>
-                    <div class="tm-section--consultation-lead__bullet-stub" aria-hidden="true"></div>
-                    <div class="tm-section--consultation-lead__bullet-stub" aria-hidden="true"></div>
-                </div>
-                <div class="tm-section--consultation-lead__notice" role="note"></div>
-                <div class="tm-section--consultation-lead__facts">
-                    <div class="tm-section--consultation-lead__fact-stub" aria-hidden="true"></div>
-                    <div class="tm-section--consultation-lead__fact-stub" aria-hidden="true"></div>
-                    <div class="tm-section--consultation-lead__fact-stub" aria-hidden="true"></div>
-                </div>
-            </div>
-            <aside class="tm-section--consultation-lead__aside" aria-label="Форма и контакт по телефону">
-                <div class="tm-section--consultation-lead__form-card">
-                    <div class="tm-section--consultation-lead__form-inner">
-                        <div class="tm-section--consultation-lead__input-stub" aria-hidden="true"></div>
-                        <div class="tm-section--consultation-lead__input-stub" aria-hidden="true"></div>
-                        <div class="tm-section--consultation-lead__input-stub" aria-hidden="true"></div>
-                        <button class="btn btn--accent" type="button">Оставить заявку</button>
+        <div class="consultation-lead__layout">
+            <div class="consultation-lead__copy" aria-labelledby="consultation-lead-title">
+                <p class="consultation-lead__eyebrow">Консультация и расчёт</p>
+
+                <h2 class="consultation-lead__title" id="consultation-lead-title">
+                    Перед заказом<br />
+                    лучше сразу<br />
+                    уточнить задачу
+                </h2>
+
+                <div class="consultation-lead__rule" aria-hidden="true"></div>
+
+                <p class="consultation-lead__intro">Это помогает сразу понять:</p>
+
+                <ul class="consultation-lead__clarity-list" aria-label="Что уточняем перед подачей">
+                    <li>подходит ли манипулятор</li>
+                    <li>хватит ли вылета стрелы</li>
+                    <li>можно ли выполнить подачу</li>
+                    <li>нужен ли подъезд для техники</li>
+                </ul>
+
+                <div class="consultation-lead__warning">
+                    <i class="fal fa-exclamation-triangle consultation-lead__warning-icon" aria-hidden="true"></i>
+                    <div class="consultation-lead__warning-copy">
+                        <h3>Одна машина —</h3>
+                        <p>поэтому лучше заранее уточнить параметры задачи, чтобы избежать:</p>
+                        <ul>
+                            <li>лишних расходов</li>
+                            <li>неподходящей техники</li>
+                            <li>срыва подачи</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="tm-section--consultation-lead__phone-block" aria-hidden="true"></div>
-            </aside>
+            </div>
+
+            <ul class="consultation-lead__checklist" aria-label="Рабочие параметры">
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                    <span>5 т борт / 3 т стрела / 14 м вылет</span>
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                    <span>Работа по Краснодару и краю</span>
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                    <span>Физ. и юр. лица</span>
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                    <span>Работа с НДС</span>
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                    <span>Честно говорим<br />подходит ли задача</span>
+                </li>
+            </ul>
+
+            <form class="consultation-lead__form" action="#" method="post" aria-labelledby="consultation-lead-form-title">
+                <h3 class="consultation-lead__form-title" id="consultation-lead-form-title">Получить расчёт стоимости</h3>
+
+                <label class="consultation-lead__field">
+                    <span>Что перевозим</span>
+                    <input type="text" name="cargo" placeholder="Кратко опишите груз" autocomplete="off" />
+                </label>
+
+                <label class="consultation-lead__field">
+                    <span>Телефон</span>
+                    <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" />
+                </label>
+
+                <label class="consultation-lead__field">
+                    <span>Комментарий <small>(необязательно)</small></span>
+                    <textarea name="comment" placeholder="Параметры груза, особенности задачи, пожелания по подаче и т.д."></textarea>
+                </label>
+
+                <button class="consultation-lead__submit" type="submit">Получить расчёт</button>
+
+                <div class="consultation-lead__phone" aria-label="Можно позвонить">
+                    <i class="fas fa-phone-alt consultation-lead__phone-icon" aria-hidden="true"></i>
+                    <div>
+                        <p>Или позвоните:</p>
+                        <a href="tel:+79385005010">+7 (938) 500-50-10</a>
+                        <span>Ежедневно с 7:00 до 20:00</span>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>

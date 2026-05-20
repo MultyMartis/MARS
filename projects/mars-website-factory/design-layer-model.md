@@ -19,6 +19,7 @@ Translate **strategy** and **page blueprints** into **experiential structure** a
 | Design spec | Tokens, type, color, spacing, component states |
 | Asset list | Images, icons, fonts — with license notes |
 | Handoff bundle | What **frontend-production-model** needs — bridge via [Design Handoff Contract v0](design-handoff-contract-v0.md) → [Frontend Handoff Contract v0](frontend-handoff-contract-v0.md) |
+| **Canonical Design Implementation Pack** (recommended) | Versioned **`design/vN/`** tree: **`semantics/`**, **`implementation-pack/`**, **`validation/`**, plus **`exports/`** — governance **implementation law** between approved design and frontend handoff ([design-governance-layer.md](design-governance-layer.md), [canonical-implementation-pack-architecture.md](canonical-implementation-pack-architecture.md); **not** runtime) |
 
 ## QA
 

@@ -29,7 +29,8 @@
 | **AI Designer Agent** | Visual direction, tokens, component styling intent | **planned** |
 | **Wireframe Generator Agent** | Low-fidelity structure artifacts | **planned** |
 | **Full Design Generator Agent** | High-fidelity spec / export (**format TBD**) | **planned** |
-| **Gulp Frontend Agent** | HTML/SCSS/JS in **Gulp-oriented** static pipeline | **legacy-bridge** (per `agents/registry.md`; **not** a claim of in-repo Gulp code) |
+| **Design Governance Agent** | Canonical **Design Implementation Pack** (`design/vN/semantics`, `implementation-pack`, `validation`); bridges approved design → machine-readable frontend law | **planned** ([`../../agents/design-governance-agent.md`](../../agents/design-governance-agent.md), [`../../agents/cards/design-governance-agent-v0.md`](../../agents/cards/design-governance-agent-v0.md); [design-governance-layer.md](design-governance-layer.md); **not** runtime) |
+| **Gulp Frontend Agent** | HTML/SCSS/JS in **Gulp-oriented** static pipeline | **operational_doc_pack** (per `agents/registry.md`; doc pack — **not** autonomous runtime, **not** in-repo Gulp code) |
 | **Frontend QA Agent** | Build, markup, a11y heuristics, responsive checks | **planned** |
 | **Design QA Agent** | Fidelity vs approved design | **planned** |
 | **SEO QA Agent** | On-page SEO, metadata, heading hierarchy | **planned** |

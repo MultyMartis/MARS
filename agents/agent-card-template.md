@@ -33,12 +33,16 @@
 
 ## `inputs`
 
-<!-- Contract-level description: what it accepts. -->
+<!-- Contract-level description: what it accepts. For substantive required/optional/forbidden inputs, validation, quarantine: link or embed per ../templates/agent-input-contract-template.md and governance/agent-input-contracts.md. -->
 
 
 ## `outputs`
 
-<!-- Artifacts, messages, handoff payloads. -->
+<!-- Artifacts, messages, handoff payloads. Align outputs with any linked agent input contract (../templates/agent-input-contract-template.md). -->
+
+## `agent_input_contract` (recommended)
+
+<!-- Path or inline note to filled ../templates/agent-input-contract-template.md (or equivalent). Use SAFE UNKNOWN if not yet authored. -->
 
 
 ## `tools`

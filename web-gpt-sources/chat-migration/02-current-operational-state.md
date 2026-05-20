@@ -22,7 +22,7 @@ From `governance/parallel-cursor-chat-work-mode-v0.md` (**Parallel Cursor Chat W
 
 **Runtime (`mars-runtime/*`):** modified adapter and test files (e.g. `mars-runtime/adapters/seo-content-agent-adapter.js`, `mars-runtime/runtime/run-seo-content-agent-test.js`) — treat as **Runtime lane** leftovers until reverted, stashed, or explicitly committed under a **runtime-only** commit.
 
-**Production (`workspaces/*`, `projects/triumph-manipulator-landing/design/*`):** extensive **Triumph** landing changes under `workspaces/triumph-manipulator-landing/` (src, dist, svg, scss, partials); **untracked** design pack under `projects/triumph-manipulator-landing/design/` (assets, mockups, notes).
+**Production (`workspaces/*`, `projects/triumph-manipulator-landing/design/*`):** extensive **Triumph** landing changes under `workspaces/triumph-manipulator-landing/` (src, dist, svg, scss, partials); **untracked** design pack under `projects/triumph-manipulator-landing/design/` (`v1/`, `v2/`, `shared-assets/`, notes).
 
 **Legacy leftovers (`projects/seo-content-agent/integrations/*`):** e.g. untracked `projects/seo-content-agent/integrations/n8n-mars-bridge-map-code.txt` — **legacy** tree; canonical MetaBOT docs live under `projects/metabot-seo-content-agent/` per governance.
 

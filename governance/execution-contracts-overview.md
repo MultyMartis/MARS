@@ -21,6 +21,7 @@ Canonical lightweight shapes live in:
 - [validation-chain-semantics.md](validation-chain-semantics.md)  
 - [artifact-lifecycle-rules.md](artifact-lifecycle-rules.md)  
 - [execution-boundary-clarification.md](execution-boundary-clarification.md)
+- [agent-input-contracts.md](agent-input-contracts.md) — per-role **inputs** / **outputs** / validation / **SAFE UNKNOWN** posture (governance; not messaging or queues)
 
 ---
 
@@ -59,6 +60,7 @@ Canonical lightweight shapes live in:
 4. **HITL** remains primary for approval and ambiguity.  
 5. **Contracts** over implicit assumptions; **minimal** semantics over frameworks.  
 6. **Documentation-first** stays active; governance does not imply shipped automation.
+7. **Agent input contracts** — specialist roles declare **required**, **optional**, and **forbidden** inputs plus **quarantine** semantics before claiming completion; see [agent-input-contracts.md](agent-input-contracts.md).
 
 ---
 

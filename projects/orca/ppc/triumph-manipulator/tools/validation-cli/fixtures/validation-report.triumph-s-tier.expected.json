@@ -1,0 +1,1283 @@
+{
+  "schema_version": "v1",
+  "project_id": "triumph-manipulator-krd-search-s-tier-draft",
+  "validated_document_id": "triumph-manipulator-krd-search-s-tier-draft",
+  "validation_timestamp": "2026-05-20T12:00:00.000Z",
+  "validation_status": "failed",
+  "summary": {
+    "total_rules": 89,
+    "passed": 88,
+    "warned": 0,
+    "failed": 1,
+    "not_checked": 0,
+    "safe_unknown_count": 0,
+    "message": "ORCA Validation CLI Hardening v0.1 — 89 rule evaluations."
+  },
+  "rule_results": [
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=call, phrase=\"Позвонить\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=call.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=calculate, phrase=\"Получить расчёт\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=call.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=calculate, phrase=\"Запросить счёт\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=call.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "CM-02",
+      "rule_class": "commercial",
+      "severity": "info",
+      "status": "pass",
+      "message": "CTA clarity OK: primary_cta=call.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "LM-01",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "Landing continuation check not required for this group (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s01_5ton",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-01",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "Bytovka intent matches bytovka landing route (v0 heuristic).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s02_bytovka",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-01",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "Landing continuation check not required for this group (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s03_stroymaterialy",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-01",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "Landing continuation check not required for this group (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s04_yurlica",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-01",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "Landing continuation check not required for this group (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s05_6x6",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-02",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "No master/fallback mismatch for specific intent (v0.1).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s01_5ton",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-02",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "No master/fallback mismatch for specific intent (v0.1).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s02_bytovka",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-02",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "No master/fallback mismatch for specific intent (v0.1).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s03_stroymaterialy",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-02",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "No master/fallback mismatch for specific intent (v0.1).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s04_yurlica",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "LM-02",
+      "rule_class": "landing_mismatch",
+      "severity": "info",
+      "status": "pass",
+      "message": "No master/fallback mismatch for specific intent (v0.1).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s05_6x6",
+        "field_path": "landing_route"
+      }
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "Primary keyword present in headline_1: \"манипулятор 5 тонн краснодар\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "Primary keyword present in headline_1: \"манипулятор для бытовки\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "Primary keyword present in headline_1: \"перевозка бытовки краснодар\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "Primary keyword present in headline_1: \"манипулятор для стройматериалов\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "Primary keyword present in headline_1: \"манипулятор для юрлиц\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "error",
+      "status": "fail",
+      "message": "Primary keyword phrase not detected in headline_1: \"манипулятор безнал краснодар\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      },
+      "suggested_fix": "Include primary keyword phrase in headline_1 for Yandex relevance."
+    },
+    {
+      "rule_id": "SE-05",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "Primary keyword present in headline_1: \"манипулятор вездеход 6x6\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-07",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "SE-08",
+      "rule_class": "semantic",
+      "severity": "info",
+      "status": "pass",
+      "message": "No generic CTA blacklist phrases detected.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "cta_semantics"
+      }
+    },
+    {
+      "rule_id": "ST-01",
+      "rule_class": "structural",
+      "severity": "info",
+      "status": "pass",
+      "message": "Required top-level fields present; schema_version is v1.",
+      "entity_ref": {
+        "entity_kind": "document",
+        "entity_id": "triumph-manipulator-krd-search-s-tier-draft"
+      }
+    },
+    {
+      "rule_id": "ST-02",
+      "rule_class": "structural",
+      "severity": "info",
+      "status": "pass",
+      "message": "Campaign camp_triumph_search_s_tier_v1: search_only_scope is true.",
+      "entity_ref": {
+        "entity_kind": "campaign",
+        "entity_id": "camp_triumph_search_s_tier_v1"
+      }
+    },
+    {
+      "rule_id": "ST-02",
+      "rule_class": "structural",
+      "severity": "info",
+      "status": "pass",
+      "message": "Document search_only_scope is true.",
+      "entity_ref": {
+        "entity_kind": "document",
+        "entity_id": "triumph-manipulator-krd-search-s-tier-draft"
+      }
+    },
+    {
+      "rule_id": "SV-03",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate headline_1 within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s01_5ton"
+      }
+    },
+    {
+      "rule_id": "SV-03",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate headline_1 within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s02_bytovka"
+      }
+    },
+    {
+      "rule_id": "SV-03",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate headline_1 within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s03_stroymaterialy"
+      }
+    },
+    {
+      "rule_id": "SV-03",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate headline_1 within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s04_yurlica"
+      }
+    },
+    {
+      "rule_id": "SV-03",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate headline_1 within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s05_6x6"
+      }
+    },
+    {
+      "rule_id": "SV-04",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No mixed intent marker combination detected (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s01_5ton"
+      }
+    },
+    {
+      "rule_id": "SV-04",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No mixed intent marker combination detected (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s02_bytovka"
+      }
+    },
+    {
+      "rule_id": "SV-04",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No mixed intent marker combination detected (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s03_stroymaterialy"
+      }
+    },
+    {
+      "rule_id": "SV-04",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No mixed intent marker combination detected (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s04_yurlica"
+      }
+    },
+    {
+      "rule_id": "SV-04",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No mixed intent marker combination detected (v0).",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s05_6x6"
+      }
+    },
+    {
+      "rule_id": "SV-05",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate keyword phrases within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s01_5ton",
+        "field_path": "keyword_cluster.keywords"
+      }
+    },
+    {
+      "rule_id": "SV-05",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate keyword phrases within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s02_bytovka",
+        "field_path": "keyword_cluster.keywords"
+      }
+    },
+    {
+      "rule_id": "SV-05",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate keyword phrases within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s03_stroymaterialy",
+        "field_path": "keyword_cluster.keywords"
+      }
+    },
+    {
+      "rule_id": "SV-05",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate keyword phrases within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s04_yurlica",
+        "field_path": "keyword_cluster.keywords"
+      }
+    },
+    {
+      "rule_id": "SV-05",
+      "rule_class": "survivability",
+      "severity": "info",
+      "status": "pass",
+      "message": "No duplicate keyword phrases within group.",
+      "entity_ref": {
+        "entity_kind": "group",
+        "entity_id": "grp_s05_6x6",
+        "field_path": "keyword_cluster.keywords"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 31 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 23 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 30 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 31 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 21 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 22 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-01",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "headline_1 length 24 within limit 56.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "headline_1"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 69 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 67 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 68 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 69 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 66 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 63 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-02",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "description length 75 within limit 81.",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "description"
+      }
+    },
+    {
+      "rule_id": "SY-03",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Fastlink title present: \"Перевозка бытовок\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "fastlinks[0].title"
+      }
+    },
+    {
+      "rule_id": "SY-03",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Fastlink title present: \"Безнал для юрлиц\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "fastlinks[1].title"
+      }
+    },
+    {
+      "rule_id": "SY-03",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Fastlink title present: \"Манипулятор 5 т\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "fastlinks[0].title"
+      }
+    },
+    {
+      "rule_id": "SY-03",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Fastlink title present: \"Кирпич и блоки\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "fastlinks[0].title"
+      }
+    },
+    {
+      "rule_id": "SY-03",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Fastlink title present: \"Договор и счёт\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "fastlinks[0].title"
+      }
+    },
+    {
+      "rule_id": "SY-03",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Fastlink title present: \"Манипулятор 5 т\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "fastlinks[0].title"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Борт 5 т\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Стрела 14 м\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "callouts[1].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Без посредников\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s01_5ton_a1",
+        "field_path": "callouts[2].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Установка на объекте\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Борт 5 т\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a1",
+        "field_path": "callouts[1].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Работа по краю\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s02_bytovka_a2",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Паллеты и блоки\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Борт 5 т\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s03_stroy_a1",
+        "field_path": "callouts[1].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Безналичный расчёт\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"НДС\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a1",
+        "field_path": "callouts[1].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Договор\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Полный привод 6x6\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "callouts[0].text"
+      }
+    },
+    {
+      "rule_id": "SY-04",
+      "rule_class": "symbol",
+      "severity": "info",
+      "status": "pass",
+      "message": "Callout text present: \"Сложный заезд\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s05_6x6_a1",
+        "field_path": "callouts[1].text"
+      }
+    }
+  ],
+  "entity_results": [
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s01_5ton_a1",
+      "status": "pass",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-03",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s02_bytovka_a1",
+      "status": "pass",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-03",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s02_bytovka_a2",
+      "status": "pass",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s03_stroy_a1",
+      "status": "pass",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-03",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s04_b2b_a1",
+      "status": "pass",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-03",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s04_b2b_a2",
+      "status": "fail",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "ad",
+      "entity_id": "ad_s05_6x6_a1",
+      "status": "pass",
+      "rule_ids": [
+        "CM-02",
+        "SE-05",
+        "SE-07",
+        "SE-08",
+        "SY-01",
+        "SY-02",
+        "SY-03",
+        "SY-04"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "campaign",
+      "entity_id": "camp_triumph_search_s_tier_v1",
+      "status": "pass",
+      "rule_ids": [
+        "ST-02"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "group",
+      "entity_id": "grp_s01_5ton",
+      "status": "pass",
+      "rule_ids": [
+        "LM-01",
+        "LM-02",
+        "SV-03",
+        "SV-04",
+        "SV-05"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "group",
+      "entity_id": "grp_s02_bytovka",
+      "status": "pass",
+      "rule_ids": [
+        "LM-01",
+        "LM-02",
+        "SV-03",
+        "SV-04",
+        "SV-05"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "group",
+      "entity_id": "grp_s03_stroymaterialy",
+      "status": "pass",
+      "rule_ids": [
+        "LM-01",
+        "LM-02",
+        "SV-03",
+        "SV-04",
+        "SV-05"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "group",
+      "entity_id": "grp_s04_yurlica",
+      "status": "pass",
+      "rule_ids": [
+        "LM-01",
+        "LM-02",
+        "SV-03",
+        "SV-04",
+        "SV-05"
+      ],
+      "message": ""
+    },
+    {
+      "entity_kind": "group",
+      "entity_id": "grp_s05_6x6",
+      "status": "pass",
+      "rule_ids": [
+        "LM-01",
+        "LM-02",
+        "SV-03",
+        "SV-04",
+        "SV-05"
+      ],
+      "message": ""
+    }
+  ],
+  "blocking_errors": [
+    {
+      "rule_id": "SE-05",
+      "message": "Primary keyword phrase not detected in headline_1: \"манипулятор безнал краснодар\".",
+      "entity_ref": {
+        "entity_kind": "ad",
+        "entity_id": "ad_s04_b2b_a2",
+        "field_path": "keyword_alignment.phrase_in_headline_1"
+      },
+      "suggested_fix": "Include primary keyword phrase in headline_1 for Yandex relevance."
+    }
+  ],
+  "warnings": [],
+  "safe_unknown": [],
+  "human_review_required": true,
+  "export_allowed": false,
+  "meta": {
+    "validator_version": "orca-validation-cli-hardening-v0.1",
+    "ruleset_ref": "triumph-manipulator-validation-v0.1-subset",
+    "input_schema_valid": true,
+    "report_schema_valid": true,
+    "launch_allowed": null
+  }
+}

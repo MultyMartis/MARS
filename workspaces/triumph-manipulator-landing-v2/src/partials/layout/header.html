@@ -2,7 +2,6 @@
     <div class="tm-container tm-container--wide site-header__inner">
         <a class="site-header__brand" href="index.html">
             @@include('partials/components/brand-lockup-inner.html', { "logoClass": "site-header__logo-img" })
-            <span class="site-header__brand-tagline">Услуги манипулятора</span>
         </a>
 
         <nav class="site-header__nav" aria-label="Основная навигация">
@@ -10,7 +9,7 @@
                 <li><a class="site-header__link" href="index.html#o-mashine">О машине</a></li>
                 <li><a class="site-header__link" href="index.html#uslugi">Услуги</a></li>
                 <li><a class="site-header__link" href="index.html#keysy">Кейсы</a></li>
-                <li><a class="site-header__link" href="index.html#faq">FAQ</a></li>
+                <li><a class="site-header__link" href="index.html#problem-solution">FAQ</a></li>
                 <li><a class="site-header__link" href="index.html#kontakty">Контакты</a></li>
             </ul>
         </nav>
@@ -19,7 +18,7 @@
             <div class="site-header__contact">
                 <a class="site-header__phone-row" href="tel:+79385005010">
                     <span class="site-header__phone-icon" aria-hidden="true">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone-alt site-header__phone-fa"></i>
                     </span>
                     <span class="site-header__phone-num">+7 (938) 500-50-10</span>
                 </a>
@@ -34,7 +33,14 @@
                         rel="noopener noreferrer"
                         aria-label="Написать в WhatsApp"
                     >
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <img
+                            class="site-header__social-img"
+                            src="assets/img/social/whatsapp.svg"
+                            width="22"
+                            height="22"
+                            alt=""
+                            decoding="async"
+                        />
                     </a>
                 </li>
                 <li>
@@ -45,7 +51,14 @@
                         rel="noopener noreferrer"
                         aria-label="Написать в Telegram"
                     >
-                        <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+                        <img
+                            class="site-header__social-img"
+                            src="assets/img/social/telegram.svg"
+                            width="22"
+                            height="22"
+                            alt=""
+                            decoding="async"
+                        />
                     </a>
                 </li>
                 <li>

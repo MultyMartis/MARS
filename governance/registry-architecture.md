@@ -24,6 +24,7 @@ A Markdown table, JSON export, or JavaScript lookup object in this repo is **evi
 | **Documentation catalogs** | Long-form pack indexes (e.g. Website Factory pack tables, capability map) | **Navigation and scope** within that doc set | **Contextual** — authoritative **as catalogs of those docs**, not as substitute execution registries |
 | **Lifecycle / event registries** | `logs/lifecycle-log.md` (append-only events) | **What was recorded** as an event, with scope stated in the entry | **Event log**, not implementation truth — see [registry-source-of-truth.md](registry-source-of-truth.md) |
 | **Website Factory structures** | `projects/mars-website-factory/` registries and contracts (site types, blocks, workflows v0, …) | **Planned / documented** website-production semantics **inside that program** | **Documented architecture** for the Factory program; **not** MARS core runtime; **not** evidence of automation |
+| **Continuity / IdeaBox** | `continuity/**` (templates, protocols, optional manual index `continuity/registry/master-index.md`) | **Human-written** markdown notes for operational continuity within the repo | **Documentation catalog + discipline only** — markdown files are SoT; index is **navigation**, not a sync’d registry service; **not** runtime, **not** autonomous memory |
 
 ---
 

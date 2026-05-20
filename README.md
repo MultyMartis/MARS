@@ -2,6 +2,8 @@
 
 **Multi-Agent Runtime System**
 
+**Navigation (Tier 0–3):** honesty — this file + [`AGENTS.md`](AGENTS.md); **post–Cycle 8 posture** — [`governance/mars-operational-evolution-state-after-cycles-1-8-v0.md`](governance/mars-operational-evolution-state-after-cycles-1-8-v0.md) (governance **maintenance mode**, **operational-first** default); ecosystem question — **one** of [`governance/ecosystem-topology-index.md`](governance/ecosystem-topology-index.md) or [`governance/mars-reality-index-v0.md`](governance/mars-reality-index-v0.md); pack work — pack README → OPERATIONAL-INDEX **Core Run**. Model: [`governance/survivability-canonical-entrypoint-model-v0.md`](governance/survivability-canonical-entrypoint-model-v0.md).
+
 This directory is the **main local working copy** of the MARS project: design notes, the Phase 1 documentation pack, **v0 contracts and minimal experimental R1** JavaScript under [`mars-runtime/`](mars-runtime/), and **future** broader implementation as phases progress. The repository remains **primarily documentation-first**; R1 is narrow and **not** a full production runtime (see **Planned implementation** below).
 
 ## What this repository contains (by status)
@@ -37,11 +39,13 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ## Repository layout
 
+**Do not depth-first explore this table** — use [`governance/ecosystem-topology-index.md`](governance/ecosystem-topology-index.md) for entity placement, or a pack **OPERATIONAL-INDEX** **Core Run** for live work.
+
 | Path | Role |
 |------|------|
 | `governance/` | Boundaries, execution/state/versioning models, capability map, **master build map**; [`governance/enforcement/`](governance/enforcement/README.md) (Phase S1 **documentation-only** review aids); parallel chat lanes ([`governance/parallel-cursor-chat-work-mode-v0.md`](governance/parallel-cursor-chat-work-mode-v0.md)) |
 | `registry/` | **Project registry** and other registry-style anchors (`project-registry.md`) |
-| `projects/` | **Project documentation packs** — e.g. `projects/mars-website-factory/` (**strategic planned** — multi-agent **documentation-first** website production system; **not** runtime-ready); `projects/metabot-seo-content-agent/` (**canonical** — **MetaBOT** SEO Content Agent, **external multi-workflow AI system**, n8n runtime; not a simple tool adapter); `projects/seo-content-agent/` (**legacy** — early spec / bridge; do not extend) |
+| `projects/` | **Project / program packs** — e.g. `projects/mars-website-factory/` (**strategic planned**, doc-first website production); `projects/orca/` (**operational** PPC toolkit, runtime **excluded**); `projects/wpilot/` (**operational** WordPress admin discipline, External Systems lane, plugin **planned**); `projects/metabot-seo-content-agent/` (**canonical** MetaBOT pack, **external** n8n execution); `projects/seo-content-agent/` (**legacy** — do not extend). Compact map: [`governance/ecosystem-topology-index.md`](governance/ecosystem-topology-index.md) |
 | `logs/` | **Lifecycle log** (documented lifecycle events, append-only discipline) |
 | `control-plane/` | Control plane contract and components (documentation) |
 | `agents/` | Agent registry, cards, factory/builder documentation |
@@ -60,4 +64,4 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ---
 
-*Last updated: 2026-05-15 — **`shared/`** row and controlled asset-layer note added (see `shared/README.md`). Prior **2026-05-14** — **Phase S0 truth repair:** root README aligned with `logs/lifecycle-log.md` (Stages **9–15** documentation **milestones** recorded **2026-04-28**) and per-stage tables in `governance/master-build-map.md`; **`planned-docs` / `partial-docs` / `near-complete-docs`** semantics unchanged; **no** runtime-completion claim. Prior notes: `projects/mars-website-factory/` (**strategic planned**, doc-first); `projects/metabot-seo-content-agent/` (**canonical** MetaBOT pack); `projects/seo-content-agent/` (**legacy**); **minimal R1** under `mars-runtime/` only — **no** full MARS production runtime in-repo.*
+*Last updated: 2026-05-19 — **post–Cycle 8 ecosystem sync:** operational-first default, governance maintenance mode — [`governance/mars-operational-evolution-state-after-cycles-1-8-v0.md`](governance/mars-operational-evolution-state-after-cycles-1-8-v0.md). Prior **2026-05-15** — **`shared/`** row and controlled asset-layer note added (see `shared/README.md`). Prior **2026-05-14** — **Phase S0 truth repair:** root README aligned with `logs/lifecycle-log.md` (Stages **9–15** documentation **milestones** recorded **2026-04-28**) and per-stage tables in `governance/master-build-map.md`; **`planned-docs` / `partial-docs` / `near-complete-docs`** semantics unchanged; **no** runtime-completion claim. Prior notes: `projects/mars-website-factory/` (**strategic planned**, doc-first); `projects/metabot-seo-content-agent/` (**canonical** MetaBOT pack); `projects/seo-content-agent/` (**legacy**); **minimal R1** under `mars-runtime/` only — **no** full MARS production runtime in-repo.*

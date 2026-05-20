@@ -7,7 +7,7 @@
 ## Purpose
 
 - Converts an **approved blueprint** and **approved design direction** (see [Design Handoff Contract v0](design-handoff-contract-v0.md)) into **actionable frontend production requirements** for static implementation.
-- Prepares work for the **Gulp Frontend Agent** (documented as **legacy-bridge** / planned specialist; see [frontend-production-model.md](frontend-production-model.md), [agents/registry.md](../../agents/registry.md)) so HTML/SCSS/JS can be produced with fewer clarification loops.
+- Prepares work for the **Gulp Frontend Agent** (**`operational_doc_pack`**; see [frontend-production-model.md](frontend-production-model.md), [agents/registry.md](../../agents/registry.md)) so HTML/SCSS/JS can be produced with fewer clarification loops.
 - Aligns with **gulp-starter–style** static architecture: **`src`** partials, compiled output, modular SCSS, data-attribute hooks — as **target** shape ([frontend-production-model.md](frontend-production-model.md)); the repo does **not** assert a `gulp-starter` folder exists (**SAFE UNKNOWN** if absent).
 - Does **not** imply **CMS**, **server runtime**, **API-backed** pages, or **live** content integration in v0 — those are out of scope unless a separate integration contract exists.
 
@@ -19,6 +19,15 @@ The **Gulp Frontend Agent** consumes this handoff as **requirements**: **`sectio
 
 ---
 
+## Relation to Canonical Design Implementation Pack (governance)
+
+Where a **[Canonical Design Implementation Pack](canonical-implementation-pack-architecture.md)** exists for the active **`design/vN`** (see [design-governance-layer.md](design-governance-layer.md)), **`section_map`**, **`partials_mapping`**, **`responsive_rules`**, **`asset_requirements`**, and **`forbidden_patterns`** should stay **consistent** with that pack’s **`semantics/`** and **`implementation-pack/`** artifacts — **documentation-only** authority, filled and reviewed by humans.
+
+- Conflicts between this handoff and the pack → **HITL** resolution; record in **`SAFE_UNKNOWN_notes`** until closed.
+- Absence of a pack does **not** invalidate this contract; list **gaps** explicitly instead of inventing semantics.
+
+---
+
 ## Relation to Block Registry
 
 [Block Registry v0](block-registry-v0.md) supplies canonical **`block_id`** values. **`section_map`** and **`partials_mapping`** should reference **`block_id`** (and optional instance labels) consistently with the blueprint and design **`section_visual_map`**. Do **not** introduce new section semantics without a registry mapping or an explicit **SAFE_UNKNOWN_notes** record.
@@ -27,7 +36,7 @@ The **Gulp Frontend Agent** consumes this handoff as **requirements**: **`sectio
 
 ## Relation to Frontend Production Rules
 
-[Frontend Production Rules](registries.md#6-frontend-production-rules) (planned module in [registries.md](registries.md)) govern **src-first** workflow, **forbidden** manual **`dist`** edits, JS scope, and include conventions. This contract’s **`forbidden_patterns`**, **`performance_requirements`**, and **`integration_notes`** must stay **compatible** with those rules where they exist.
+[Frontend Production Rules v0](frontend-production-rules-v0.md) (see also [registries.md §6](registries.md#6-frontend-production-rules)) govern **src-first** workflow, **forbidden** manual **`dist`** edits, JS scope, and include conventions. This contract’s **`forbidden_patterns`**, **`performance_requirements`**, and **`integration_notes`** must stay **compatible** with those rules.
 
 ---
 
@@ -59,6 +68,8 @@ Prefer **`data-*`** hooks (e.g. **`data-component="accordion"`**) for behavior b
 ## No fake CMS claim
 
 This contract describes **static** page assembly and **build-time** includes. It does **not** claim WordPress, headless CMS, or preview webhooks unless **`integration_notes`** documents a **real** integration with owner and URL — otherwise state **SAFE UNKNOWN** or **`n/a`**.
+
+Future Factory-native WordPress publication through WPilot, if approved, must be documented as a separate integration target in **`integration_notes`**. The preferred handoff shape is approved templates, structured content slots, SEO/content fields, known mutation zones, dry-run diff, rollback notes, and human publish approval. Legacy builders such as WPBakery/The7/Elementor remain WPilot compatibility mode and must not be treated as the ideal Factory-native content model.
 
 ---
 

@@ -16,6 +16,7 @@
 | **Runbook** | Human **procedure** (e.g. Website Factory operator runbooks in `projects/mars-website-factory/`). | Runbook steps **imply** MARS core automation. |
 | **Agent** | **Role** in registry/cards (**documentation**); future dispatch target if runtime exists ([../execution-model.md](../execution-model.md)). | “Agent” = **LLM session** = **MARS agent instance** without context. |
 | **Operational template** | **Website Factory** (and similar packs): repeatable **human-operated** patterns — **project-scoped** templates. | MARS **core** operational guarantee. |
+| **IdeaBox / continuity** | Optional **`continuity/**`** markdown workflow for ideas and light operational notes — **human-maintained**, filesystem-first SoT; aligns with [../../continuity/README.md](../../continuity/README.md). | IdeaBox as AI memory engine, orchestration layer, runtime module, semantic graph, or autonomous planner. |
 | **Validator** | In Website Factory: **validation** roles/models over artifacts ([../../projects/mars-website-factory/validator-execution-model-v0.md](../../projects/mars-website-factory/validator-execution-model-v0.md)) — **documentation** for pilot process. | Repo-wide **automatic** validation engine. |
 | **Documentation layer** | Markdown contracts, maps, README honesty — **primary** Phase 1 deliverable. | Documentation **equals** shipped behaviour. |
 | **Experimental implementation** | Small in-tree code paths (R1) proving **narrow** integration shapes — **not** full stack. | Evidence of **one** file = **all** stages implemented. |

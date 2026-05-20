@@ -4,6 +4,8 @@
 
 **Purpose:** Keep **new operators** productive without **information overload**, **false runtime assumptions**, or **architecture shock**.
 
+**Post–Cycle 8 default:** **operational-first** — after Tier 0, jump to lane **OPERATIONAL-INDEX** unless the chartered task **is** governance maintenance. Ecosystem posture: [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md).
+
 ---
 
 ## 1. Minimum read set (new operator)
@@ -12,10 +14,15 @@ Read **in this order** before treating any other file as mandatory:
 
 1. [../README.md](../README.md) — what the repo is and is not.  
 2. [../AGENTS.md](../AGENTS.md) — honesty rules, **documented** vs **planned** vs **legacy imported**, **SAFE UNKNOWN**.  
-3. [governance/README.md](README.md) — map to governance addenda (pick **only** topics relevant to the task).  
-4. [parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md) — if work uses Cursor with **multiple chats** or mixed lanes.
+3. [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md) — post–Cycle 8 posture (maintenance mode, operational-first).  
+4. [survivability-canonical-entrypoint-model-v0.md](survivability-canonical-entrypoint-model-v0.md) — Tier 0–3 routing (**one** Tier 1 router per session; pack work → OPERATIONAL-INDEX **Core Run**).  
+5. [parallel-cursor-chat-work-mode-v0.md](parallel-cursor-chat-work-mode-v0.md) — if work uses Cursor with **multiple chats** or mixed lanes.
 
-**Stop after four** unless the task explicitly requires deeper files.
+**Stop after five** unless the task explicitly requires deeper files. Governance catalog: [README.md](README.md) — **one row** when needed, not a full read. **Do not** run stabilization or Cycle 8-scale validation as onboarding.
+
+**Phase 3 paths (lane-specific):** [survivability-onboarding-strategy-v0.md](survivability-onboarding-strategy-v0.md) — paths A–E (MARS core, Factory, Forge, runtime, external packs) without a large onboarding system.
+
+**Post-stress patterns (Phase 7):** [mars-survivability-patterns-hardening-v0.md](mars-survivability-patterns-hardening-v0.md) — reinforced catalogue of what already works; **not** new mandatory process.
 
 ---
 

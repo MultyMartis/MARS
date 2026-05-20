@@ -51,8 +51,58 @@ Runaway layering of architecture and parallel “future” stacks destroys survi
 
 Chat and editor sessions do **not** persist full reasoning. Rules for migration packages and **SAFE UNKNOWN**: [context-continuity-rules.md](context-continuity-rules.md).
 
+Optional **filesystem-first** capture for ideas and light operational notes lives under `../continuity/` (**IdeaBox**) — **human-operated** only; it **does not** replace governance SoT, lifecycle logs, or REPORT discipline and introduces **no** automated persistence ([continuity/README.md](../continuity/README.md)).
+
 ---
 
-## 6. SAFE UNKNOWN
+## 6. Survivability Phase 3 (complexity-stage maintenance)
+
+First lightweight **long-term survivability pass** (2026-05-19) — reviews and models only; **not** governance expansion or runtime implementation:
+
+| Artefact | Role |
+|----------|------|
+| [survivability-architecture-weight-review-v0.md](survivability-architecture-weight-review-v0.md) | Cognitive-load / navigation-cost map |
+| [survivability-onboarding-strategy-v0.md](survivability-onboarding-strategy-v0.md) | Shortest viable orientation paths (A–E) |
+| [survivability-canonical-entrypoint-model-v0.md](survivability-canonical-entrypoint-model-v0.md) | Tier 0–3 entry routing proposal |
+| [survivability-documentation-fatigue-review-v0.md](survivability-documentation-fatigue-review-v0.md) | Prestige / taxonomy / checklist fatigue |
+| [survivability-lightweight-maintenance-model-v0.md](survivability-lightweight-maintenance-model-v0.md) | Human-operated anti-entropy triggers |
+| [editorial-compression-pass-4-operator-fatigue-review-v0.md](editorial-compression-pass-4-operator-fatigue-review-v0.md) | First editorial compression pass — fatigue surfaces, dedupe map, hygiene |
+| [mars-consistency-survivability-pass-5-review-v0.md](mars-consistency-survivability-pass-5-review-v0.md) | Post–Pass 4 routing, stale-reference, survivability-flow, semantic, and durability audit |
+| [mars-ecosystem-stress-resilience-phase-6-review-v0.md](mars-ecosystem-stress-resilience-phase-6-review-v0.md) | First ecosystem-wide stress-test and resilience-validation (onboarding, routing, topology, operator overload, drift) |
+
+---
+
+## 7. Ecosystem hardening (Phase 7)
+
+First **post-stress** hardening pass (2026-05-19) — pattern reinforcement, routing discipline, gravity review, hygiene, scaling projection — **not** architecture redesign, **not** governance expansion, **not** runtime:
+
+| Artefact | Role |
+|----------|------|
+| [mars-survivability-patterns-hardening-v0.md](mars-survivability-patterns-hardening-v0.md) | Recommended survivability patterns (Tier 0–3, Core/Extended, ORCA live-first, indexes, Path A–E, AGENTS precedence) |
+| [mars-document-gravity-hardening-review-v0.md](mars-document-gravity-hardening-review-v0.md) | Highest gravity zones, collapse clusters, compression targets (Factory, ORCA, Forge, governance, web-gpt-sources) |
+| [mars-operational-hygiene-hardening-v0.md](mars-operational-hygiene-hardening-v0.md) | REPORT, lane, sync, onboarding, anti-drift habits — no process overload |
+| [mars-scaling-readiness-review-v0.md](mars-scaling-readiness-review-v0.md) | +3 / +5 / +10 system absorption; what breaks first; maintenance needs |
+
+---
+
+## 8. Operational evolution transition (post–Cycle 8)
+
+Governance moves from stabilization-heavy passes to **controlled operational evolution** — freeze baseline, maintenance mode, production-first priority:
+
+| Artefact | Role |
+|----------|------|
+| [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md) | **Canonical** ecosystem-state reference (post–Cycle 8) |
+| [mars-operational-evolution-transition-index-v0.md](mars-operational-evolution-transition-index-v0.md) | Pick-one hub for transition docs |
+| [mars-governance-baseline-freeze-v0.md](mars-governance-baseline-freeze-v0.md) | Frozen canonical patterns after Cycles 1–8 |
+| [mars-lightweight-maintenance-mode-v0.md](mars-lightweight-maintenance-mode-v0.md) | Post-freeze hygiene triggers |
+| [mars-operational-first-priority-v0.md](mars-operational-first-priority-v0.md) | ORCA / Factory / Triumph / external bridges primary |
+| [mars-future-system-entry-discipline-v0.md](mars-future-system-entry-discipline-v0.md) | Minimal gate for new major systems |
+| [mars-future-validation-cadence-v0.md](mars-future-validation-cadence-v0.md) | Rare targeted validation — not governance loops |
+
+**Not:** another governance wave, runtime implementation, or architecture redesign.
+
+---
+
+## 9. SAFE UNKNOWN
 
 Anything not recorded in an authoritative file (governance, registry row, contract, lifecycle note with clear scope) is **not** guaranteed to survive the next session. If migration or handoff evidence is missing, state **SAFE UNKNOWN** and what would verify it — per [AGENTS.md](../AGENTS.md).

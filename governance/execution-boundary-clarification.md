@@ -66,6 +66,7 @@ Per [execution-model.md](execution-model.md) and [AGENTS.md](../AGENTS.md):
 
 - Cursor is the **documented** IDE/agent layer for **filesystem** and **shell** work **in this repo**.  
 - Cursor **does not** replace governance SoT or lifecycle logs; it **implements** what humans instruct, subject to project rules.
+- **IdeaBox (`continuity/`):** markers like `/ideabox` are **documentation / discipline conventions** for structuring markdown captures (see `../continuity/protocols/ideabox-protocol-v1.md`). They are **not** runtime commands, **not** autonomous memory, **not** hidden orchestration, and **do not** mutate governance automatically.
 
 ---
 

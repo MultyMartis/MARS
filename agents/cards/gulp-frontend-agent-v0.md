@@ -1,6 +1,6 @@
 # Agent card — Gulp Frontend Agent (v0)
 
-**Documentation-first:** **planned** specialist role documented in MARS Agent Registry §4.1; catalog §4 also describes **legacy-bridge** alignment for the **Gulp Frontend** profile — **not** proof of Gulp code in this repository. This card is **governance/documentation only** — **not** an autonomous build/deploy agent, **not** a running service. Execution today is **human-guided Cursor implementation** per [frontend-production-model.md](../../projects/mars-website-factory/frontend-production-model.md) and `governance/execution-model.md`. **Future MARS runtime** integration is **planned only**.
+**Documentation-first:** **`operational_doc_pack`** — documentation-backed operational specialist pack in MARS Agent Registry §4 / §4.1; **not** proof of Gulp code in this repository, **not** autonomous runtime, **not** a deployed agent service. Execution is **human + Cursor/Codex** per [frontend-production-model.md](../../projects/mars-website-factory/frontend-production-model.md) and `governance/execution-model.md`. *Historical:* catalog once used **legacy-bridge** for the imported Web-GPT **Gulp Frontend** profile — alignment footnote only. **Future MARS runtime** integration remains **planned only** (no runtime claim).
 
 ---
 
@@ -8,7 +8,7 @@
 |--------|--------|
 | **agent_id** | `gulp_frontend_agent` |
 | **display_name** | Gulp Frontend Agent |
-| **status** | `planned` (registry §4.1; **legacy-bridge** alignment per `agents/registry.md` §4 summary + workflow narrative) |
+| **status** | `operational_doc_pack` (registry §4 / §4.1 — documentation-backed pack; human + Cursor/Codex; **not** autonomous runtime. *Historical:* **legacy-bridge** footnote for Web-GPT import profile.) |
 | **layer** | Website Factory / Agent Layer |
 | **parent_system** | `mars_website_factory` |
 
@@ -123,3 +123,4 @@
 | Date | Change |
 |------|--------|
 | 2026-05-11 | v0 card — aligned with frontend-production-model + frontend-handoff-contract-v0. |
+| 2026-05-15 | Status normalized to `operational_doc_pack` (registry §4 / §4.1); legacy-bridge as historical footnote only. |

@@ -135,7 +135,7 @@ function vendorFontawesome(done) {
     done();
     return;
   }
-  src(['css/all.min.css', 'webfonts/**/*'], { cwd: root, allowEmpty: true })
+  src(['css/all.min.css', 'webfonts/**/*'], { cwd: root, base: root, allowEmpty: true })
     .pipe(onError('FONTAWESOME'))
     .pipe(dest(paths.fontawesome.dest))
     .on('end', done);

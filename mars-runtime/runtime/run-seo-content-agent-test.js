@@ -5,8 +5,8 @@ async function main() {
     task_id: "seo_content_agent_test_001",
     type: "seo_content_agent_task",
     payload: {
+      action: "outline",
       topic: "SEO-аудит сайта",
-      mode: "brief",
       language: "ru",
     },
   };

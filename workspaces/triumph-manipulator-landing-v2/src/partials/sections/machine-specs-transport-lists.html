@@ -1,16 +1,94 @@
-<section class="tm-section tm-section--machine-specs" id="o-mashine" aria-label="Технические характеристики и ограничения по грузу">
+<section class="tm-section tm-section--machine-specs" id="o-mashine" data-screen="02" data-rebuild-status="rebuilt">
     <div class="tm-container tm-section--machine-specs__container">
-        <div class="tm-section--machine-specs__top">
-            <div class="tm-section--machine-specs__media" aria-label="Фотография техники"></div>
-            <div class="tm-section--machine-specs__specs">
-                <header class="tm-section--machine-specs__header"></header>
-                <div class="tm-section--machine-specs__spec-list"></div>
+        <div class="machine-specs__top">
+            <figure class="machine-specs__media" aria-label="Манипулятор Hino с крановой установкой UNIC">
+                <img
+                    src="assets/img/machine/screen-02-machine.png"
+                    alt="Манипулятор Hino с крановой установкой UNIC на строительной площадке"
+                    width="557"
+                    height="383"
+                    loading="lazy"
+                >
+            </figure>
+
+            <div class="machine-specs__summary">
+                <div class="machine-specs__heading">
+                    <h2 class="machine-specs__title">НАША МАШИНА</h2>
+                    <p class="machine-specs__lead">Одна конкретная техника для ваших задач.</p>
+                </div>
+
+                <dl class="machine-specs__list" aria-label="Параметры машины">
+                    <div class="machine-specs__row">
+                        <dt>
+                            <i class="fal fa-truck-loading" aria-hidden="true"></i>
+                            <span>Грузоподъёмность борта</span>
+                        </dt>
+                        <dd>5 т</dd>
+                    </div>
+                    <div class="machine-specs__row">
+                        <dt>
+                            <i class="fal fa-weight-hanging" aria-hidden="true"></i>
+                            <span>Грузоподъёмность стрелы</span>
+                        </dt>
+                        <dd>3 т</dd>
+                    </div>
+                    <div class="machine-specs__row">
+                        <dt>
+                            <i class="fal fa-ruler-combined" aria-hidden="true"></i>
+                            <span>Вылет стрелы</span>
+                        </dt>
+                        <dd>14 м</dd>
+                    </div>
+                    <div class="machine-specs__row">
+                        <dt>
+                            <i class="fal fa-truck" aria-hidden="true"></i>
+                            <span>Кузов</span>
+                        </dt>
+                        <dd>6.2 × 2.2 м</dd>
+                    </div>
+                    <div class="machine-specs__row">
+                        <dt>
+                            <i class="fal fa-clock" aria-hidden="true"></i>
+                            <span>Минимальный заказ</span>
+                        </dt>
+                        <dd>2 часа</dd>
+                    </div>
+                </dl>
             </div>
         </div>
-        <div class="tm-section--machine-specs__bottom">
-            <article class="tm-section--machine-specs__card tm-section--machine-specs__card--allow" aria-label="Что перевозим"></article>
-            <article class="tm-section--machine-specs__card tm-section--machine-specs__card--deny" aria-label="Что не перевозим"></article>
-            <aside class="tm-section--machine-specs__cta-column" aria-label="Призыв к расчёту"></aside>
+
+        <div class="machine-specs__bottom">
+            <section class="machine-specs__card machine-specs__card--transport" aria-labelledby="machine-specs-transport-title">
+                <h3 id="machine-specs-transport-title">ЧТО ПЕРЕВОЗИМ</h3>
+                <ul class="machine-specs__transport-list machine-specs__transport-list--allowed">
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Генераторы</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Плитка</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Трансформаторы</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Заборы</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>ЖБИ</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Ворота</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Кольца</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Кабельные катушки</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Кирпич</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Бытовки до допустимого веса</span></li>
+                </ul>
+            </section>
+
+            <section class="machine-specs__card machine-specs__card--limits" aria-labelledby="machine-specs-limits-title">
+                <h3 id="machine-specs-limits-title">ЧТО НЕ ПЕРЕВОЗИМ</h3>
+                <ul class="machine-specs__transport-list machine-specs__transport-list--denied">
+                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлый негабарит</span></li>
+                    <li><i class="fas fa-times" aria-hidden="true"></i><span>10+ тонн</span></li>
+                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Длинномеры</span></li>
+                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлые модульные здания</span></li>
+                </ul>
+            </section>
+
+            <aside class="machine-specs__cta" aria-label="Расчёт по параметрам задачи">
+                <i class="fal fa-clipboard-list" aria-hidden="true"></i>
+                <a class="btn btn--primary machine-specs__cta-button" href="#kontakty">ПОЛУЧИТЬ РАСЧЁТ</a>
+                <p>Быстрый расчёт стоимости по параметрам вашей задачи.</p>
+            </aside>
         </div>
     </div>
 </section>

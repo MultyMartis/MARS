@@ -1,0 +1,676 @@
+{
+  "schema_version": "v1",
+  "project_id": "triumph-manipulator-krd-search-s-tier-draft",
+  "project_name": "Триумф — Поиск — S-tier черновик v1",
+  "market": "yandex_direct_ru",
+  "geo": {
+    "primary_region": "Краснодар",
+    "geo_notes": "Операционная зона Triumph; межгород — отдельные группы при расширении."
+  },
+  "source_pack": "triumph-manipulator",
+  "search_only_scope": true,
+  "campaigns": [
+    {
+      "campaign_id": "camp_triumph_search_s_tier_v1",
+      "campaign_name": "Триумф — Поиск — S-tier (черновик)",
+      "campaign_type": "search",
+      "search_only_scope": true,
+      "geo": {
+        "primary_region": "Краснодар"
+      },
+      "strategy": {
+        "strategy_label": "manual_cpc",
+        "bid_intent": "Ручное управление ставками оператором в Direct",
+        "priority_tier": "S"
+      },
+      "schedule": {
+        "enabled": false,
+        "schedule_notes": "Расписание задаётся в Direct после импорта"
+      },
+      "device_adjustments": {
+        "desktop_modifier": null,
+        "tablet_modifier": null,
+        "mobile_modifier": null
+      },
+      "campaign_negatives": {
+        "keywords": [
+          "вакансии",
+          "работа",
+          "резюме",
+          "купить",
+          "ремонт",
+          "запчасти",
+          "эвакуатор",
+          "бесплатно",
+          "своими руками"
+        ],
+        "match_type_default": "phrase"
+      },
+      "intent_classification": "mixed_container",
+      "routing_role": "primary_search",
+      "groups": [
+        {
+          "group_id": "grp_s01_5ton",
+          "group_name": "01 — Манипулятор 5 тонн",
+          "semantic_intent": "Манипулятор 5 т — exact capability",
+          "intent_tier": "S",
+          "intent_type": "capability_exact",
+          "keyword_cluster": {
+            "intent_summary": "Пользователь ищет манипулятор с грузоподъёмностью около 5 т",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор 5 тонн краснодар",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор 5т",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "заказать манипулятор 5 тонн",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": ["3 тонны", "10 тонн", "аренда крана"],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "05-capability-5-ton",
+            "landing_type": "capability",
+            "final_url": "https://triumph-krd.ru/manipulyator-5t",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero и схема борта/стрелы должны соответствовать 5 т",
+            "routing_notes": "Blueprint: landing-pages/05-capability-5-ton.md",
+            "intent_continuity_ack": false
+          },
+          "ads": [
+            {
+              "ad_id": "ad_s01_5ton_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор 5 тонн в Краснодаре",
+              "headline_2": "Борт и стрела на объекте",
+              "description": "Манипулятор 5 т. Подача на объект. Без посредников. Расчёт по задаче.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "5t"
+              },
+              "landing_url": "https://triumph-krd.ru/manipulyator-5t",
+              "fastlinks": [
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://triumph-krd.ru/bytovka",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "Смежный use-case без смены основного intent"
+                },
+                {
+                  "title": "Безнал для юрлиц",
+                  "url": "https://triumph-krd.ru/yurlica",
+                  "intent_role": "B2B continuation для смешанных запросов"
+                }
+              ],
+              "callouts": [
+                { "text": "Борт 5 т", "intent_role": "capability_proof" },
+                { "text": "Стрела 14 м", "intent_role": "capability_proof" },
+                { "text": "Без посредников", "intent_role": "trust" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call",
+                "cta_phrase": "Позвонить",
+                "urgency_level": "medium"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор 5 тонн краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true,
+                "estimated_mobile_grade": "ok"
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор 5 тонн",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              },
+              "validation_notes": "Черновик — проверить длину полей перед экспортом"
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": "tonnage_5t",
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_s02_bytovka",
+          "group_name": "02 — Манипулятор для бытовки",
+          "semantic_intent": "Перевозка/установка бытовки — exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Запрос на манипулятор под задачу с бытовкой",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор для бытовки",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "перевозка бытовки краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": ["купить бытовку", "аренда бытовки"],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "02-use-case-bytovka",
+            "landing_type": "use_case",
+            "final_url": "https://triumph-krd.ru/bytovka",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero показывает бытовку и сценарий установки",
+            "intent_continuity_ack": false
+          },
+          "ads": [
+            {
+              "ad_id": "ad_s02_bytovka_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор для бытовки",
+              "headline_2": "Перевозка и установка",
+              "description": "Перевозка и установка бытовок. Борт 5 т. Выезд в Краснодаре и крае.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "bytovka"
+              },
+              "landing_url": "https://triumph-krd.ru/bytovka",
+              "fastlinks": [
+                {
+                  "title": "Манипулятор 5 т",
+                  "url": "https://triumph-krd.ru/manipulyator-5t",
+                  "intent_role": "capability_crosslink"
+                }
+              ],
+              "callouts": [
+                { "text": "Установка на объекте", "intent_role": "use_case_proof" },
+                { "text": "Борт 5 т", "intent_role": "capability_proof" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call",
+                "urgency_level": "high"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для бытовки",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для бытовки",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_s02_bytovka_a2",
+              "status": "draft",
+              "headline_1": "Перевозка бытовок в Краснодаре",
+              "headline_2": "Манипулятор на объекте",
+              "description": "Доставка и установка бытовки манипулятором. Расчёт по адресу и весу.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "bytovka"
+              },
+              "landing_url": "https://triumph-krd.ru/bytovka",
+              "fastlinks": [],
+              "callouts": [
+                { "text": "Работа по краю", "intent_role": "geo_trust" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "calculate",
+                "cta_phrase": "Получить расчёт"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "перевозка бытовки краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "перевозка бытовки",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "bytovka",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_s03_stroymaterialy",
+          "group_name": "03 — Манипулятор для стройматериалов",
+          "semantic_intent": "Доставка стройматериалов — exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Перевозка/разгрузка стройматериалов манипулятором",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор для стройматериалов",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "доставка стройматериалов манипулятор",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": ["оптом кирпич", "купить цемент"],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "03-use-case-stroymaterialy",
+            "landing_type": "use_case",
+            "final_url": "https://triumph-krd.ru/stroymaterialy",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Страница про груз: блоки, паллеты, доставку на объект",
+            "intent_continuity_ack": false
+          },
+          "ads": [
+            {
+              "ad_id": "ad_s03_stroy_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор для стройматериалов",
+              "headline_2": "Доставка на объект",
+              "description": "Перевозка блоков, паллет, металла. Манипулятор 5 т. Краснодар и край.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "stroy"
+              },
+              "landing_url": "https://triumph-krd.ru/stroymaterialy",
+              "fastlinks": [
+                {
+                  "title": "Кирпич и блоки",
+                  "url": "https://triumph-krd.ru/kirpich-bloki",
+                  "intent_role": "sub_use_case"
+                }
+              ],
+              "callouts": [
+                { "text": "Паллеты и блоки", "intent_role": "cargo_proof" },
+                { "text": "Борт 5 т", "intent_role": "capability_proof" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для стройматериалов",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для стройматериалов",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "low"
+          },
+          "use_case_classification": "stroymaterialy",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_s04_yurlica",
+          "group_name": "04 — Манипулятор для юрлиц",
+          "semantic_intent": "B2B — безнал, документы, объекты",
+          "intent_tier": "S",
+          "intent_type": "b2b",
+          "keyword_cluster": {
+            "intent_summary": "Юрлица ищут манипулятор с документами и безналом",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор для юрлиц",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор безнал краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": ["физлицо", "наличные"],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "06-b2b-yurlica",
+            "landing_type": "b2b",
+            "final_url": "https://triumph-krd.ru/yurlica",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "На странице: безнал, НДС, договор, объекты",
+            "intent_continuity_ack": false
+          },
+          "ads": [
+            {
+              "ad_id": "ad_s04_b2b_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор для юрлиц",
+              "headline_2": "Безнал и документы",
+              "description": "Работа с юрлицами. Безнал, НДС, договор. Выезд на стройку и склад.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "b2b"
+              },
+              "landing_url": "https://triumph-krd.ru/yurlica",
+              "fastlinks": [
+                {
+                  "title": "Договор и счёт",
+                  "url": "https://triumph-krd.ru/yurlica#docs",
+                  "intent_role": "b2b_trust"
+                }
+              ],
+              "callouts": [
+                { "text": "Безналичный расчёт", "intent_role": "b2b_proof" },
+                { "text": "НДС", "intent_role": "b2b_proof" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "calculate",
+                "cta_phrase": "Запросить счёт",
+                "b2b_friendly": true
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для юрлиц",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для юрлиц",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_s04_b2b_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор по безналу",
+              "headline_2": "Для организаций в Краснодаре",
+              "description": "Манипулятор для юрлиц. Закрывающие документы. Объекты и склады.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "b2b"
+              },
+              "landing_url": "https://triumph-krd.ru/yurlica",
+              "callouts": [
+                { "text": "Договор", "intent_role": "b2b_proof" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call",
+                "b2b_friendly": true
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор безнал краснодар",
+                "phrase_in_headline_1": false,
+                "phrase_in_description": true,
+                "alignment_notes": "Морфологический вариант безнал/юрлиц — проверить при валидации"
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор безнал",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              },
+              "validation_notes": "SE-05 risk: phrase_in_headline_1 false — ожидаем warn до правки"
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_s05_6x6",
+          "group_name": "05 — Манипулятор-вездеход 6x6",
+          "semantic_intent": "Вездеход 6×6 — capability + terrain",
+          "intent_tier": "S",
+          "intent_type": "capability_exact",
+          "keyword_cluster": {
+            "intent_summary": "Запрос на проходимость и шасси 6×6",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор вездеход 6x6",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор 6 на 6 краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": ["гусеничный", "автокран"],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "07-capability-6x6-vezdekhod",
+            "landing_type": "capability",
+            "final_url": "https://triumph-krd.ru/vezdekhod-6x6",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero и фото подтверждают 6×6 и вездеход",
+            "intent_continuity_ack": false
+          },
+          "ads": [
+            {
+              "ad_id": "ad_s05_6x6_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор-вездеход 6x6",
+              "headline_2": "Сложный заезд на объект",
+              "description": "Манипулятор 6×6 для сложного рельефа. Краснодар и край. Расчёт по маршруту.",
+              "display_url": {
+                "domain": "triumph-krd.ru",
+                "path_1": "6x6"
+              },
+              "landing_url": "https://triumph-krd.ru/vezdekhod-6x6",
+              "fastlinks": [
+                {
+                  "title": "Манипулятор 5 т",
+                  "url": "https://triumph-krd.ru/manipulyator-5t",
+                  "intent_role": "fallback_capability"
+                }
+              ],
+              "callouts": [
+                { "text": "Полный привод 6x6", "intent_role": "terrain_proof" },
+                { "text": "Сложный заезд", "intent_role": "use_case_proof" }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор вездеход 6x6",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор вездеход 6x6",
+                "highlight_planned_in": ["headline_1", "description"],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": "vezdekhod_6x6",
+          "draft_status": "draft"
+        }
+      ],
+      "notes": "Черновик S-tier: mixed_container на уровне кампании — при production рассмотреть split по routing_role."
+    }
+  ],
+  "global_negatives": {
+    "keywords": [
+      "вакансии",
+      "работа",
+      "резюме",
+      "купить манипулятор",
+      "ремонт",
+      "эвакуатор"
+    ],
+    "match_type_default": "phrase"
+  },
+  "landing_registry": [
+    {
+      "blueprint_id": "05-capability-5-ton",
+      "blueprint_path": "landing-pages/05-capability-5-ton.md",
+      "landing_type": "capability"
+    },
+    {
+      "blueprint_id": "02-use-case-bytovka",
+      "blueprint_path": "landing-pages/02-use-case-bytovka.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "03-use-case-stroymaterialy",
+      "blueprint_path": "landing-pages/03-use-case-stroymaterialy.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "06-b2b-yurlica",
+      "blueprint_path": "landing-pages/06-b2b-yurlica.md",
+      "landing_type": "b2b"
+    },
+    {
+      "blueprint_id": "07-capability-6x6-vezdekhod",
+      "blueprint_path": "landing-pages/07-capability-6x6-vezdekhod.md",
+      "landing_type": "capability"
+    }
+  ],
+  "validation_policy": {
+    "schema_ref": "validation-schema-v1.md",
+    "enabled_rule_classes": [
+      "structural",
+      "symbol",
+      "semantic",
+      "landing_mismatch",
+      "commercial",
+      "survivability",
+      "export_mapping"
+    ],
+    "block_export_on_fail": true,
+    "symbol_limits": {
+      "headline_1_max": 56,
+      "headline_2_max": 30,
+      "description_max": 81,
+      "fastlink_title_max": 30,
+      "callout_max": 25,
+      "display_path_segment_max": 20
+    },
+    "launch_ready_requires_human_approval": true
+  },
+  "export_policy": {
+    "transport": "direct_commander_excel",
+    "mapping_schema_ref": "export-mapping-schema-v1.md",
+    "requires_validation_pass": true,
+    "template_pack_ref": "assets/direct-commander-template/"
+  },
+  "human_review": {
+    "required": true,
+    "review_status": "not_started",
+    "reviewer_notes": "Phase 3 draft fixture — не для импорта и запуска без полной валидации и правок оператором.",
+    "approved_for_export": false,
+    "approved_for_commander_import": false,
+    "approved_for_launch": false
+  },
+  "meta": {
+    "created_by": "assisted",
+    "created_at": "2026-05-20T00:00:00Z",
+    "notes": "DRAFT ONLY — triumph-s-tier-draft-v1"
+  }
+}

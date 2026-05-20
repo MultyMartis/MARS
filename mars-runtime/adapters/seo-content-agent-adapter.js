@@ -6,6 +6,40 @@ function validateSeoAdapterConfig(config) {
   }
 }
 
+/** Map legacy/test payload.mode to contract action (see `projects/metabot-seo-content-agent/integration-contract-legacy.md`). */
+function resolveAction(payload) {
+  if (!payload || typeof payload !== "object") {
+    return "outline";
+  }
+  if (typeof payload.action === "string" && payload.action.trim()) {
+    return payload.action.trim().toLowerCase();
+  }
+  const mode = typeof payload.mode === "string" ? payload.mode.trim().toLowerCase() : "";
+  if (mode === "brief" || mode === "outline") return "outline";
+  if (["run", "text", "seoqa", "factcheck", "get"].includes(mode)) return mode;
+  return "outline";
+}
+
+function buildWebhookBody({ task_id, payload, run_id }) {
+  const p =
+    payload && typeof payload === "object" ? { ...payload } : {};
+  const action = resolveAction(p);
+  delete p.action;
+  delete p.mode;
+
+  return {
+    action,
+    payload: p,
+    meta: {
+      run_id,
+      task_id,
+      source: "mars",
+    },
+    task_id,
+    run_id,
+  };
+}
+
 async function invokeTool({ task_id, payload, run_id }) {
   const config = getConfig();
   validateSeoAdapterConfig(config);
@@ -21,11 +55,7 @@ async function invokeTool({ task_id, payload, run_id }) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      task_id,
-      payload,
-      run_id,
-    }),
+    body: JSON.stringify(buildWebhookBody({ task_id, payload, run_id })),
   });
 
   if (!response.ok) {

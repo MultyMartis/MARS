@@ -60,6 +60,10 @@
 
 ## gulp-frontend-agent.md
 
+> **HISTORICAL / LEGACY — do not extend as source of truth**
+>
+> This section is **historical** (imported Web-GPT profile, Russian prose). The **canonical** frontend implementation specialist pack is [`agents/frontend-gulp-agent/`](../../agents/frontend-gulp-agent/). **Canonical** Website Factory frontend methodology and contracts live under [`projects/mars-website-factory/`](../../projects/mars-website-factory/) — especially [`frontend-handoff-contract-v0.md`](../../projects/mars-website-factory/frontend-handoff-contract-v0.md), [`frontend-production-model.md`](../../projects/mars-website-factory/frontend-production-model.md), [`frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md), and [`frontend-production-rules-v0.md`](../../projects/mars-website-factory/frontend-production-rules-v0.md). Do **not** extend this legacy section as authoritative SoT for new work.
+
 # Gulp Frontend Agent (наследие → специалист MARS)
 
 ## Ценность для MARS

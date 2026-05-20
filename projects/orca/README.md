@@ -1,0 +1,81 @@
+# ORCA
+
+Operational Research & Campaign Architecture (ORCA) is a practical, human-supervised PPC operational toolkit for live review, campaign preparation, and evidence-aware decision support inside the MARS ecosystem.
+
+ORCA helps operators run fast PPC review loops: mobile SERP review, landing mismatch detection, CTA review, semantic cleanliness review, aggregator pressure review, mobile friction analysis, and short operational reporting before any human platform action.
+
+## What ORCA Is
+
+- Human-supervised PPC operational toolkit.
+- Live operational copilot for PPC review sessions.
+- Practical review framework for SERP, landing, semantic, CTA, and mobile checks.
+- Documentation-first operating model for repeatable campaign preparation and QA.
+
+## What ORCA Is Not
+
+- Not an autonomous PPC optimizer.
+- Not a bidding engine.
+- Not a runtime.
+- Not an orchestration system.
+- Not an AI ad manager.
+- Not a campaign launch tool.
+
+## Phase 1 Scope
+
+Phase 1 defines the minimum documentation needed to operate ORCA manually with AI assistance:
+
+- PPC project intake.
+- SERP and competitor research.
+- Semantic collection and clustering.
+- Campaign and ad group architecture.
+- Ad copy drafting.
+- Direct Commander style export package preparation.
+- QA gates before platform use.
+
+All outputs require human review before use in Yandex.Direct, Google Ads, or any other advertising system.
+
+## Document Map
+
+Start here for operator navigation:
+
+- `OPERATIONAL-INDEX.md` - **live-first** entry point for fast PPC sessions (default).
+- `operator-entrypoints-v1.md` - **task-shaped** starts (new project, pilot) — **not** live-session default.
+- `live-pilot/` - live review session shape and stop rules.
+- `starter-core/` - smallest useful set of live review paths.
+- `current-state-v1.md` - concise current-state map, exclusions, risks, and next step.
+- `operator-entrypoints-v1.md` - where to start by operator task.
+- `doc-map-v1.md` - compact map of ORCA documentation layers.
+
+Core documentation:
+
+- `system-overview.md` - ORCA purpose, layers, supervision, and boundaries.
+- `phase-1-architecture.md` - minimal viable Phase 1 architecture and excluded areas.
+- `agents/` - role definitions for human-supervised ORCA subagents.
+- `workflows/` - documented workflows for research, semantics, generation, export, and QA.
+- `contracts/` - input and output contracts for handoffs between workflow steps.
+- `research/` - SERP, competitor, and review analysis methodology.
+- `semantic/` - intent, clustering, geo modifier, negative keyword, and semantic quality rules.
+- `qa/` - PPC semantic, campaign structure, landing match, and ad relevance QA.
+- `methodology/` - PPC research, campaign architecture, intent, offer, and landing methodology.
+- `patterns/` - reusable local-service, SERP, offer, and aggregator pattern references.
+- `pilot-cases/` - pilot templates, execution flow, and bounded pilot case records.
+- `observations/` - observation model, normalization, SERP, semantic, landing, and regional rules.
+- `intelligence/` - documented market pressure, local intent, trust, aggregator, and maturity models.
+- `evidence/` - evidence discipline, strength, traceability, reliability, and human validation rules.
+- `evolution/` - market, SERP, commercial pattern, seasonal, and regional distortion tracking.
+- `contradictions/` - contradiction tracking, volatility, conflicting observation, and unstable pattern rules.
+- `confidence/` - confidence governance, update, decay, repeatability, and reliability models.
+- `live-observations/` - manual live observation workflows, methods, checklists, templates, and examples.
+- `heuristics/` - human-supervised strategic heuristics and evidence requirements.
+- `heuristic-mapping/` - evidence-to-heuristic traceability and revision discipline.
+- `review/` - operational, methodology, evidence, heuristic, pilot, drift, and anti-mythology review.
+- `reports/` - lightweight live-session and MVP usefulness report templates.
+- `governance/` - local ORCA boundaries, SAFE UNKNOWN, anti-bloat, and live-review rules.
+
+SAFE UNKNOWN: no separate `evidence-records/` layer is present in this tree at the time of this README update.
+
+## Current Status
+
+Documentation-first, Phase 1 draft with a live-first starter core for human-supervised PPC operational review.
+
+No ORCA runtime, autonomous campaign manager, bidding automation, optimization engine, or production orchestration exists in this pack.

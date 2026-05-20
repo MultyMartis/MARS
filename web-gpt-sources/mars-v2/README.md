@@ -3,6 +3,8 @@
 **Status:** **CORE** — compact consolidated pack for a **new** Web-GPT project named **MARS v2**.  
 **Classification:** governance-centered operational intelligence system for AI-assisted production.
 
+**Post–Cycle 8 (2026-05-19):** governance baseline **frozen** (maintenance mode); bootstrap is **operational-first** — see repo [mars-operational-evolution-state-after-cycles-1-8-v0.md](../../governance/mars-operational-evolution-state-after-cycles-1-8-v0.md).
+
 ---
 
 ## Purpose
@@ -15,10 +17,12 @@ This folder is a **controlled documentation import** for external Web-GPT (or si
 
 ## Load order (recommended)
 
+**Default posture:** operational-first — `00` + `03` + `05`, then lane OPERATIONAL-INDEX in repo; load `01` only for governance-maintenance tasks.
+
 | # | File | Role |
 |---|------|------|
 | 1 | [00_MARS_v2_PROJECT_BEHAVIOR.md](00_MARS_v2_PROJECT_BEHAVIOR.md) | How Web-GPT must behave |
-| 2 | [01_MARS_v2_GOVERNANCE_CORE.md](01_MARS_v2_GOVERNANCE_CORE.md) | S0–S7 stack, registry, anti-drift |
+| 2 | [01_MARS_v2_GOVERNANCE_CORE.md](01_MARS_v2_GOVERNANCE_CORE.md) | S0–S7 stack, registry, anti-drift (**on demand** post–Cycle 8) |
 | 3 | [02_MARS_v2_EXECUTION_MODEL.md](02_MARS_v2_EXECUTION_MODEL.md) | Web-GPT → Cursor/Codex → REPORT loop |
 | 4 | [03_MARS_v2_REALITY_AND_BOUNDARIES.md](03_MARS_v2_REALITY_AND_BOUNDARIES.md) | Evidence, mythology, forbidden claims |
 | 5 | [04_MARS_v2_WEBSITE_FACTORY_CONTEXT.md](04_MARS_v2_WEBSITE_FACTORY_CONTEXT.md) | Factory methodology (doc-first) |
@@ -38,6 +42,7 @@ These files are **governance references in the repo**, not duplicated source-pac
 
 - `governance/canonical-terminology-registry.md` — canonical high-risk terminology, anti-mythology vocabulary, evidence requirements.
 - `governance/current-operational-state-v1.md` — canonical visibility map of what actually exists today.
+- `governance/mars-operational-evolution-state-after-cycles-1-8-v0.md` — **canonical** post–Cycles 1–8 ecosystem posture (maintenance + operational-first).
 
 ---
 
@@ -82,4 +87,4 @@ These files are **governance references in the repo**, not duplicated source-pac
 - **Agent rules in IDE:** `AGENTS.md`, `.cursorrules`
 - **Root orientation:** `README.md`
 
-*Pack created: 2026-05-15 — documentation consolidation task; no runtime or governance file edits.*
+*Pack created: 2026-05-15; post–Cycle 8 bootstrap sync: 2026-05-19 — operational-first default; governance maintenance mode pointer.*

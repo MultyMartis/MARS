@@ -1,7 +1,7 @@
 @use '../utils/tokens' as tm;
 
 // Legacy continuity section — not primary active V2 homepage structure.
-// Reference: projects/triumph-manipulator-landing/design/mockups/04.png
+// Reference (legacy V1 strip archive): projects/triumph-manipulator-landing/design/v1/04.png
 .landing-strip-04 {
     max-width: tm.$tm-container-max-width;
     margin-inline: auto;

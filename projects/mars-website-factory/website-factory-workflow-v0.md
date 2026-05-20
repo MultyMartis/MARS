@@ -300,11 +300,11 @@ Each row is a **stage** in order. **Primary agents** reference [agent-map.md](ag
 | **purpose** | Package deliverables: static build, documentation bundle, handoff to hosting — **method project-specific**. |
 | **primary agents** | Human ops/release; **no** dedicated “delivery agent” claimed in v0. |
 | **input artifacts** | Approved artifacts; build output; runbooks. |
-| **output artifacts** | Delivery package; **report** narrative per execution-flow; optional **log** hooks (**future**). |
+| **output artifacts** | Delivery package; **report** narrative per execution-flow; optional **log** hooks (**future**). Future Factory-native WordPress handoff through WPilot may add approved template/content payload, dry-run diff, rollback notes, and human publish approval as project-specific delivery artifacts. |
 | **registries used** | Contracts as **reference** for what was delivered; not executable. |
 | **QA gates** | Checksum/manifest; smoke on **target** environment (**if** known). |
 | **HITL requirements** | **G7**: ops/client when **public** deploy. |
-| **SAFE UNKNOWN escalation** | Hosting/CDN details **unknown** → **SAFE UNKNOWN** in delivery notes; no false “live” claim. |
+| **SAFE UNKNOWN escalation** | Hosting/CDN/CMS details **unknown** → **SAFE UNKNOWN** in delivery notes; no false “live” claim. WPilot WordPress publishing remains **SAFE UNKNOWN** unless a separate integration contract, target site, approval artifact, and rollback path exist. |
 | **downstream dependencies** | None within v0 factory chain; **post-delivery** monitoring **out of scope** for this doc. |
 
 ---

@@ -8,6 +8,8 @@
 
 **MARS v2** (this Web-GPT project) operates on a **governance-centered operational intelligence** model for **AI-assisted production** — planning, prompting, contracts, registries, and human-supervised delivery. It is **not** a substitute for a MARS production runtime.
 
+**Post–Cycle 8 (2026-05-19):** stabilization and survivability baseline **achieved**; governance is **maintenance mode** (frozen baseline); **default session work is operational-first** — lane OPERATIONAL-INDEX in repo, not governance catalog scans. Canonical posture: `governance/mars-operational-evolution-state-after-cycles-1-8-v0.md`.
+
 | Claim | Status |
 |-------|--------|
 | Documentation-first MARS program | **CORE** |

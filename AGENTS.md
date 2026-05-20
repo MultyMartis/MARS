@@ -9,6 +9,8 @@
 3. **SAFE UNKNOWN** — If evidence is missing, say so clearly; do not fill gaps with assumptions.
 4. **Locale** — Prefer **Russian** for user-facing explanations and project-facing docs when appropriate. Cursor/agent prompts may remain **English**.
 
+**Post–Cycle 8 ecosystem state (2026-05-19):** Cycles 1–8 complete — structural stabilization and survivability baseline **achieved**; governance **frozen** in **maintenance mode**; default work is **operational-first** (lane OPERATIONAL-INDEX, REPORT, HITL). **Canonical reference:** [governance/mars-operational-evolution-state-after-cycles-1-8-v0.md](governance/mars-operational-evolution-state-after-cycles-1-8-v0.md). **Do not** default to governance expansion or full-catalog reads; new governance waves require **explicit human charter**.
+
 **Governance enforcement (documentation):** Human-readable anti-drift aids live under `governance/enforcement/` (check catalog, forbidden-claim cues, terminology boundaries, optional future validation strategy). **Not** automated enforcement, **not** a policy engine, **not** runtime code.
 
 **Registry and identity discipline (documentation):** Phase S2 hygiene under `governance/` — [registry-architecture.md](governance/registry-architecture.md), [registry-source-of-truth.md](governance/registry-source-of-truth.md), [identity-and-naming-rules.md](governance/identity-and-naming-rules.md), [external-system-boundaries.md](governance/external-system-boundaries.md). Human-maintained clarity only; **no** registry engine, **no** sync, **no** runtime identity product claimed.
