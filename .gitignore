@@ -111,5 +111,13 @@ workspaces/triumph-manipulator-landing-v4/*
 !workspaces/triumph-manipulator-landing-v4/src/
 !workspaces/triumph-manipulator-landing-v4/src/**
 
+# Website Factory — canonical reference + client template (clone survivability; node_modules/dist still global-ignored)
+!workspaces/website-factory-reference-v1/
+workspaces/website-factory-reference-v1/*
+!workspaces/website-factory-reference-v1/**
+!workspaces/_template-client-v1/
+workspaces/_template-client-v1/*
+!workspaces/_template-client-v1/**
+
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/

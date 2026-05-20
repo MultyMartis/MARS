@@ -1,0 +1,25 @@
+<section class="wf-section wf-section--lead-form" id="lead-form" data-section data-block-id="lead_form">
+  <div class="wf-container">
+    <header class="wf-lead-form__header">
+      <h2 class="wf-lead-form__title">Lead form block</h2>
+      <p class="wf-lead-form__intro">HTML5 validation, submit lock, mock AJAX — swap <code>data-form-endpoint</code> for production.</p>
+    </header>
+    <form class="wf-form" data-module="form" data-form-id="lead-main" novalidate>
+      <div class="wf-form__status" role="status" aria-live="polite" hidden></div>
+      <div class="wf-field" data-field="name">
+        <label class="wf-field__label" for="lead-name">Name <span aria-hidden="true">*</span></label>
+        <input class="wf-field__control" id="lead-name" name="name" type="text" autocomplete="name" required
+               aria-describedby="lead-name-error">
+        <p class="wf-field__error" id="lead-name-error" role="alert" hidden></p>
+      </div>
+      <div class="wf-field" data-field="phone">
+        <label class="wf-field__label" for="lead-phone">Phone <span aria-hidden="true">*</span></label>
+        <input class="wf-field__control" id="lead-phone" name="phone" type="tel" autocomplete="tel" required
+               aria-describedby="lead-phone-help lead-phone-error">
+        <p class="wf-field__help" id="lead-phone-help">Demo only — no PII leaves the browser.</p>
+        <p class="wf-field__error" id="lead-phone-error" role="alert" hidden></p>
+      </div>
+      <button type="submit" class="wf-form__submit">Send request</button>
+    </form>
+  </div>
+</section>

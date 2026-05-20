@@ -1,0 +1,61 @@
+// Import order is contractual — foundations before sections (do not reorder casually).
+
+@use 'foundations/tokens';
+@use 'foundations/layers';
+@use 'foundations/breakpoints';
+@use 'foundations/motion';
+@use 'foundations/utilities';
+@use 'foundations/forms';
+@use 'foundations/modal';
+
+@use 'sections/hero';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: tokens.$font-family-base;
+  font-size: tokens.$font-size-body;
+  line-height: tokens.$line-height-body;
+  color: tokens.$color-text;
+  background: tokens.$color-surface;
+  overflow-x: hidden;
+}
+
+main {
+  min-width: 0;
+}
+
+.wf-site-header {
+  position: sticky;
+  top: 0;
+  z-index: layers.$z-header;
+  padding: tokens.$space-4 0;
+  background: tokens.$color-surface;
+  border-bottom: 1px solid tokens.$color-border;
+  box-shadow: tokens.$shadow-sm;
+}
+
+.wf-site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wf-site-header__logo {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: tokens.$font-weight-bold;
+}
+
+.wf-site-footer {
+  padding: tokens.$space-6 0;
+  background: tokens.$color-neutral-900;
+  color: tokens.$color-neutral-200;
+  font-size: 0.875rem;
+  text-align: center;
+}

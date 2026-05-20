@@ -1,0 +1,78 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/layers' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-section--hero {
+  position: relative;
+  padding-block: $section-gap-l;
+  background: linear-gradient(135deg, $color-brand 0%, #0a3d42 100%);
+  color: $color-white;
+  overflow: hidden;
+
+  @include down($bp-md) {
+    padding-block: $section-gap-m;
+  }
+
+  .wf-hero__inner {
+    position: relative;
+    z-index: $z-base + 1;
+    display: grid;
+    gap: $space-5;
+    max-width: 640px;
+
+    @include up($bp-md) {
+      gap: $space-6;
+    }
+  }
+
+  .wf-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: $z-overlay-readability;
+    background: $overlay-dark-25;
+    pointer-events: none;
+  }
+
+  .wf-hero__title {
+    margin: 0;
+    font-size: $font-size-h1;
+    line-height: 1.2;
+    font-weight: $font-weight-bold;
+  }
+
+  .wf-hero__lead {
+    margin: 0;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 36ch;
+  }
+
+  .wf-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-4;
+  }
+
+  .wf-hero__cta {
+    min-height: 44px;
+    padding: $space-3 $space-6;
+    font-size: $font-size-body;
+    font-weight: $font-weight-medium;
+    color: $color-brand;
+    background: $color-white;
+    border: none;
+    border-radius: $radius-md;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid $color-white;
+      outline-offset: 2px;
+    }
+
+    &--secondary {
+      color: $color-white;
+      background: transparent;
+      border: 1px solid rgba($color-white, 0.6);
+    }
+  }
+}

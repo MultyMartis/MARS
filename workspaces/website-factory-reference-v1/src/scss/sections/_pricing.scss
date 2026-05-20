@@ -1,0 +1,264 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// Extracted from triumph-manipulator-landing-v2 equipment-prices (card + spec row structure).
+// Replaces Wave 4 synthetic SaaS tier cards. Neutralized: copy, images, RUB rates, icon includes.
+
+.wf-section--pricing {
+  padding-block: $section-gap-l;
+  background: $color-surface;
+  min-width: 0;
+  overflow-x: clip;
+
+  .wf-pricing__inner {
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+  }
+
+  .wf-pricing__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $space-6 $space-7;
+  }
+
+  .wf-pricing__intro {
+    flex: 1 1 min(36rem, 100%);
+    max-width: 44rem;
+  }
+
+  .wf-pricing__eyebrow {
+    margin: 0 0 $space-3;
+    font-size: 0.875rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-pricing__title {
+    margin: 0 0 $space-5;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.1;
+  }
+
+  .wf-pricing__title-line {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .wf-pricing__title-line--rule {
+    position: relative;
+    width: fit-content;
+    padding-bottom: $space-4;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 6rem;
+      max-width: 100%;
+      height: 3px;
+      background: $color-brand;
+      border-radius: $radius-sm;
+    }
+  }
+
+  .wf-pricing__lead {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+
+  .wf-pricing__header-cta {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    min-width: min(17rem, 100%);
+  }
+
+  .wf-pricing__estimate-btn {
+    min-height: 44px;
+    padding: $space-3 $space-5;
+    font-weight: $font-weight-medium;
+    color: $color-white;
+    background: $color-cta-primary;
+    border: none;
+    border-radius: $radius-md;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-cta-primary-hover;
+    }
+  }
+
+  .wf-pricing__estimate-note {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+  }
+
+  .wf-pricing__cards {
+    display: grid;
+    gap: $space-6;
+
+    @include up($bp-md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+    }
+  }
+
+  .wf-pricing__card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: $color-surface-alt;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    overflow: hidden;
+
+    &--featured {
+      border-color: $color-brand;
+      box-shadow: $shadow-md;
+    }
+  }
+
+  .wf-pricing__media {
+    position: relative;
+    min-height: 10rem;
+    background: linear-gradient(145deg, $color-neutral-200 0%, $color-neutral-100 100%);
+  }
+
+  .wf-pricing__badge {
+    position: absolute;
+    top: $space-4;
+    left: $space-4;
+    padding: $space-2 $space-3;
+    font-size: 0.75rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: $color-surface;
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+  }
+
+  .wf-pricing__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    padding: $space-5 $space-6;
+    flex: 1;
+  }
+
+  .wf-pricing__plan {
+    margin: 0;
+    font-size: $font-size-h3;
+  }
+
+  .wf-pricing__specs {
+    margin: 0;
+    display: grid;
+    gap: $space-3;
+  }
+
+  .wf-pricing__spec {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: $space-2 $space-4;
+    align-items: baseline;
+    padding-bottom: $space-3;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    dt {
+      margin: 0;
+      font-size: 0.875rem;
+      color: $color-text-muted;
+    }
+
+    dd {
+      margin: 0;
+      font-weight: $font-weight-medium;
+      text-align: right;
+    }
+  }
+
+  .wf-pricing__fit {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: $color-text-muted;
+    line-height: 1.5;
+  }
+
+  .wf-pricing__footer {
+    padding: $space-5 $space-6 $space-6;
+    border-top: 1px solid $color-border;
+    background: $color-surface;
+  }
+
+  .wf-pricing__price {
+    margin: 0 0 $space-4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: $space-2;
+  }
+
+  .wf-pricing__price-value {
+    font-size: 1.75rem;
+    font-weight: $font-weight-bold;
+  }
+
+  .wf-pricing__price-prefix,
+  .wf-pricing__price-unit {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+
+  .wf-pricing__order {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: $space-3 $space-5;
+    font-weight: $font-weight-medium;
+    text-align: center;
+    text-decoration: none;
+    color: $color-brand;
+    background: transparent;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &--primary {
+      color: $color-white;
+      background: $color-cta-primary;
+      border-color: transparent;
+
+      &:hover {
+        background: $color-cta-primary-hover;
+      }
+    }
+  }
+
+  .wf-pricing__order-note {
+    margin: $space-3 0 0;
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+    line-height: 1.4;
+  }
+
+  @include down($bp-md) {
+    .wf-pricing__card--featured {
+      order: -1;
+    }
+  }
+}

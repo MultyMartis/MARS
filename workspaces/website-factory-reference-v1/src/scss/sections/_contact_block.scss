@@ -1,0 +1,78 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-section--contact {
+  padding-block: $section-gap-l;
+  background: $color-surface;
+
+  .wf-contact__inner {
+    display: grid;
+    gap: $space-6;
+
+    @include up($bp-md) {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  .wf-contact__title {
+    margin: 0 0 $space-3;
+    font-size: $font-size-h2;
+  }
+
+  .wf-contact__text {
+    margin: 0 0 $space-5;
+    color: $color-text-muted;
+    max-width: 40ch;
+  }
+
+  .wf-contact__list {
+    margin: 0 0 $space-5;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+  }
+
+  .wf-contact__link {
+    font-size: 1.125rem;
+    font-weight: $font-weight-medium;
+    color: $color-brand;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-brand;
+      outline-offset: 2px;
+    }
+  }
+
+  .wf-contact__hours {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: $color-text-muted;
+  }
+
+  .wf-contact__map-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: $space-6;
+    background: $color-surface-alt;
+    border: 1px dashed $color-border;
+    border-radius: $radius-lg;
+    color: $color-text-muted;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+
+    &:hover {
+      border-color: $color-brand;
+      color: $color-brand;
+    }
+  }
+}

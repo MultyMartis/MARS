@@ -1,0 +1,93 @@
+@use 'tokens' as *;
+@use 'layers' as *;
+@use 'motion' as *;
+@use 'breakpoints' as *;
+
+.wf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-4;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: $z-modal-backdrop;
+    background: $overlay-dark-55;
+    @include transition-standard(opacity);
+  }
+
+  &__dialog {
+    position: relative;
+    z-index: $z-modal;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow: auto;
+    padding: $space-6;
+    background: $color-surface;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    @include transition-standard((opacity, transform));
+  }
+
+  &:not([hidden]) .wf-modal__dialog {
+    animation: wf-modal-in $duration-base $ease-out forwards;
+  }
+
+  &__close {
+    position: absolute;
+    top: $space-4;
+    right: $space-4;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: $color-text-muted;
+
+    &:focus-visible {
+      outline: 2px solid $color-cta-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 $space-5;
+    padding-right: $space-8;
+    font-size: $font-size-h2;
+  }
+}
+
+@keyframes wf-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.is-modal-open {
+  overflow: hidden;
+}
+
+@include down($bp-md) {
+  .wf-modal__dialog {
+    max-width: none;
+    margin-inline: $space-2;
+    padding: $space-5;
+  }
+}

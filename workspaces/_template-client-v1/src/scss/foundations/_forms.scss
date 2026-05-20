@@ -1,0 +1,115 @@
+@use 'tokens' as *;
+@use 'motion' as *;
+
+.wf-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+  max-width: 480px;
+
+  &__status {
+    min-height: 1.5rem;
+    font-size: 0.9375rem;
+
+    &:not([hidden]) {
+      padding: $space-3;
+      border-radius: $radius-md;
+    }
+  }
+
+  &.is-loading .wf-form__submit {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  &.is-success .wf-form__status {
+    background: rgba($color-success, 0.1);
+    color: $color-success;
+  }
+
+  &.is-error .wf-form__status {
+    background: rgba($color-error, 0.08);
+    color: $color-error;
+  }
+}
+
+.wf-field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  &__label {
+    font-size: 0.9375rem;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+  }
+
+  &__control {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    padding: $space-3 $space-4;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    background: $color-surface;
+    min-height: 44px;
+
+    &:focus {
+      outline: 2px solid $color-cta-primary;
+      outline-offset: 2px;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cta-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  &__help {
+    margin: 0;
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    min-height: 1.25rem;
+  }
+
+  &__error {
+    margin: 0;
+    font-size: 0.875rem;
+    color: $color-error;
+    min-height: 1.25rem;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &.has-error .wf-field__control {
+    border-color: $color-error;
+  }
+}
+
+.wf-form__submit {
+  align-self: flex-start;
+  min-width: 140px;
+  min-height: 44px;
+  padding: $space-3 $space-6;
+  font-size: $font-size-body;
+  font-weight: $font-weight-medium;
+  color: $color-white;
+  background: $color-cta-primary;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  @include transition-standard(opacity);
+
+  &:hover {
+    background: $color-cta-primary-hover;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

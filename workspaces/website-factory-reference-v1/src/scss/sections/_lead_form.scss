@@ -1,0 +1,21 @@
+@use '../foundations/tokens' as *;
+
+.wf-section--lead-form {
+  background: $color-surface-alt;
+
+  .wf-lead-form__header {
+    margin-bottom: $space-6;
+    max-width: 520px;
+  }
+
+  .wf-lead-form__title {
+    margin: 0 0 $space-3;
+    font-size: $font-size-h2;
+    color: $color-text;
+  }
+
+  .wf-lead-form__intro {
+    margin: 0;
+    color: $color-text-muted;
+  }
+}

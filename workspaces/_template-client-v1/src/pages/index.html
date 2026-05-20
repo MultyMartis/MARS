@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client landing — bootstrap</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main">
+    @@include('../partials/sections/hero.html')
+    <!-- SECTION PLACEHOLDER: add @@include for each block_id from handoff -->
+    <!-- Example: @@include('../partials/sections/pricing.html') -->
+  </main>
+  @@include('../partials/layout/footer.html')
+  @@include('../partials/layout/modal_callback.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

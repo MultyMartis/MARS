@@ -1,0 +1,16 @@
+{
+  "name": "client-workspace-template",
+  "private": true,
+  "description": "MARS Website Factory — minimal client workspace starter (Wave 5). Rename slug in package.json after copy.",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.0"
+  }
+}

@@ -1,0 +1,67 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/layers' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-section--hero {
+  position: relative;
+  padding-block: $section-gap-l;
+  background: linear-gradient(135deg, $color-surface-alt 0%, $color-surface 100%);
+
+  .wf-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: $z-overlay-readability;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.04) 100%);
+  }
+
+  .wf-hero__inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .wf-hero__title {
+    margin: 0 0 $space-4;
+    font-size: $font-size-h1;
+  }
+
+  .wf-hero__lead {
+    margin: 0 auto $space-6;
+    max-width: 42ch;
+    color: $color-text-muted;
+  }
+
+  .wf-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+    justify-content: center;
+  }
+
+  .wf-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: $space-3 $space-5;
+    border: 0;
+    border-radius: $radius-md;
+    font: inherit;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    cursor: pointer;
+    background: $color-cta-primary;
+    color: $color-white;
+
+    &:hover {
+      background: $color-cta-primary-hover;
+    }
+
+    &--secondary {
+      background: transparent;
+      color: $color-text;
+      border: 1px solid $color-border;
+    }
+  }
+}
