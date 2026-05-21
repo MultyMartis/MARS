@@ -46,6 +46,15 @@
       "header": "ID группы",
       "column": 4
     },
+    "groups.group_number": {
+      "logical": "groups.group_number",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Distinct per ORCA group — required for multi-group Commander import (v0.1 feedback fix)",
+      "header": "Номер группы",
+      "column": 6
+    },
     "keywords.phrase": {
       "logical": "keywords.phrase",
       "sheet": "Тексты",
@@ -149,9 +158,36 @@
       "sheet": "Тексты",
       "region": "data_table",
       "status": "verified",
-      "notes": null,
+      "notes": "Search-only export v0.5 writes «Текстово-графическое»; cols 64–66 cleared to avoid image/creative popup",
       "header": "Тип объявления",
       "column": 2
+    },
+    "ads.image": {
+      "logical": "ads.image",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Col BL — cleared on rows 16+ for search-only export (v0.4)",
+      "header": "Изображение",
+      "column": 64
+    },
+    "ads.creative": {
+      "logical": "ads.creative",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Cleared on rows 16+ for search-only export (v0.4)",
+      "header": "Креатив",
+      "column": 65
+    },
+    "ads.creative_moderation_status": {
+      "logical": "ads.creative_moderation_status",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Cleared on rows 16+ for search-only export (v0.4)",
+      "header": "Статус модерации креатива",
+      "column": 66
     },
     "extensions.fastlink_titles": {
       "logical": "extensions.fastlink_titles",
@@ -203,7 +239,7 @@
       "sheet": "Тексты",
       "region": "data_table",
       "status": "verified",
-      "notes": null,
+      "notes": "Single parent label «Краснодарский край» on all export rows — v0.6 (operator direct.xlsx)",
       "header": "Регион",
       "column": 52
     },

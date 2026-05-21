@@ -125,13 +125,19 @@ RULES:
 ```
 INPUT: group semantic_intent + landing_availability from intake
 
+PRODUCTION HOST (v0.2+): https://manipulator-triumph.ru
+Use SEO slugs from landing-routing-schema-v1.md (e.g. /manipulyator-5-tonn/, /perevozka-bytovok/).
+
+Display paths (ads, separate pass): short Commander paths in display_url.path_1 — NOT the same as final_url slug length; see ad-generation Prompt C v0.3.
+
 OUTPUT: landing_route per group:
 - blueprint_id (from landing-pages/)
-- final_url (only if confirmed; else SAFE UNKNOWN blocks export later)
+- final_url (only if confirmed on production host; else SAFE UNKNOWN blocks export later)
 - routing_type: exact_fit | master_fallback
 - continuation_note: how ad intent continues on page
 
 RULE: master_fallback is WARN-level risk — flag in meta.notes, not silent default.
+RULE: Do not use deprecated placeholder hosts (e.g. triumph-krd.ru) in new drafts.
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 **Status:** Local human-operated transport prototype · **NOT** production exporter.
 
-**Fidelity phases:** Template introspection — [template-analysis-report.md](template-analysis-report.md) · Template-fill export — [template-fill-notes-v0.md](template-fill-notes-v0.md) · **Sheet1 ZIP patch** — [sheet1-patch-notes-v0.md](sheet1-patch-notes-v0.md) · **Template cleanup + new entity mode** — [template-cleanup-rules-v0.md](template-cleanup-rules-v0.md) · XLSX integrity — [xlsx-integrity-notes-v0.md](xlsx-integrity-notes-v0.md) · OOXML forensics — [ooxml-diff-report-v0.md](ooxml-diff-report-v0.md) · **NOT** import automation.
+**Fidelity phases:** Template introspection — [template-analysis-report.md](template-analysis-report.md) · Template-fill export — [template-fill-notes-v0.md](template-fill-notes-v0.md) · **Sheet1 ZIP patch** — [sheet1-patch-notes-v0.md](sheet1-patch-notes-v0.md) · **Template cleanup + new entity mode** — [template-cleanup-rules-v0.md](template-cleanup-rules-v0.md) · **Import feedback fix v0.1** — [import-feedback-fixes-v0.1.md](import-feedback-fixes-v0.1.md) · **Safe sheet1 row removal v0** — [safe-row-removal-notes-v0.md](safe-row-removal-notes-v0.md) · **Import refinement v0.4** — [image-cleanup-notes-v0.4.md](image-cleanup-notes-v0.4.md) · [geo-routing-notes-v0.4.md](geo-routing-notes-v0.4.md) · [transport-symbol-normalization-v0.4.md](transport-symbol-normalization-v0.4.md) · **Ad type literal v0.5** — [ad-type-literal-fix-v0.5.md](ad-type-literal-fix-v0.5.md) · **Region fix v0.6** — [commander-region-fix-v0.6.md](commander-region-fix-v0.6.md) · XLSX integrity — [xlsx-integrity-notes-v0.md](xlsx-integrity-notes-v0.md) · OOXML forensics — [ooxml-diff-report-v0.md](ooxml-diff-report-v0.md) · **NOT** import automation.
 
 ## Purpose
 
@@ -88,6 +88,30 @@ node sheet1-patch-export.js \
 ```
 
 Output: `output/triumph-sheet1-patch-draft.xlsx`. See [sample-sheet1-patch-run.md](sample-sheet1-patch-run.md). **NOT** ExcelJS full rewrite · Commander compatibility **experimental**.
+
+**Import feedback fix v0.1** (post-import refinement — group numbers, autotarget, metadata, stale-row mask):
+
+```bash
+npm run export:sheet1-patch:feedback
+```
+
+Output: `output/triumph-sheet1-patch-feedback-v0.1.xlsx`. See [sample-feedback-fix-run.md](sample-feedback-fix-run.md), [commander-import-observations-v0.md](commander-import-observations-v0.md).
+
+**Safe sheet1 row removal v0** (default — removes stale template data rows 31+):
+
+```bash
+npm run export:sheet1-patch:row-clean
+```
+
+Output: `output/triumph-sheet1-patch-row-clean-v0.xlsx`. See [sample-row-removal-run.md](sample-row-removal-run.md). Legacy neutralization: `--no-row-removal`.
+
+**Display URL + sitelink routing v0.3** (short Commander display paths; slug-aligned fastlinks):
+
+```bash
+npm run export:sheet1-patch:v0.3
+```
+
+Output: `output/triumph-sheet1-patch-display-url-routing-v0.3.xlsx`. See [display-url-routing-v0.3-notes.md](display-url-routing-v0.3-notes.md), [sample-display-url-routing-run.md](sample-display-url-routing-run.md).
 
 ## Expected inputs
 

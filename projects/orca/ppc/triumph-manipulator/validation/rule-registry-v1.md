@@ -222,8 +222,14 @@
 | SY-08 | Excessive punctuation | warn | ad |
 | SY-09 | Whitespace hygiene | warn | ad |
 | SY-10 | Required text fields non-empty | error | ad |
-| SY-11 | Extension counts within max | error | ad |
+| SY-11 | Fastlink count target 8 / min 6 warn | error/warn | ad |
 | SY-12 | Display domain vs landing host | warn | ad |
+| SY-13 | Fastlink URL format | error | ad |
+| SY-14 | Duplicate fastlink title/URL | error | ad |
+| SY-15 | Fastlink description length | error | ad |
+| SY-16 | Fastlink title required when URL set | error | ad |
+| SY-17 | Commander display path format (no domain/slash) | error | ad |
+| SY-18 | Display path length warn >18 / error >20 | warn/error | ad |
 
 Full entries: [symbol-validation-rules-v1.md](symbol-validation-rules-v1.md).
 
@@ -285,6 +291,8 @@ Full entries: [landing-continuity-rules-v1.md](landing-continuity-rules-v1.md).
 | CM-07 | Search intent continuation | error | ad |
 | CM-08 | Operational clarity | warn | ad |
 | CM-09 | Payment claims match route | warn | ad |
+| CM-10 | Fastlink SERP footprint (target 8) | warn | ad |
+| CM-11 | Fastlink routing via production slugs | error/warn | ad, group |
 
 Full entries: [commercial-validation-rules-v1.md](commercial-validation-rules-v1.md).
 

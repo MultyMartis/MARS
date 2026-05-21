@@ -35,7 +35,22 @@ const {
   compareIndexes,
 } = require("./ooxml-forensics");
 
-const EXPORTER_LABEL = "ORCA Sheet1 Patch Export — Cleanup + New Entity Mode v0";
+const EXPORTER_LABEL = "ORCA Commander Region Import Fix v0.6";
+const DEFAULT_IMPORT_REFINED_OUTPUT = path.join(
+  __dirname,
+  "output",
+  "triumph-sheet1-patch-import-refined-v0.4.xlsx"
+);
+const DEFAULT_ROW_CLEAN_OUTPUT = path.join(
+  __dirname,
+  "output",
+  "triumph-sheet1-patch-row-clean-v0.xlsx"
+);
+const DEFAULT_FEEDBACK_OUTPUT = path.join(
+  __dirname,
+  "output",
+  "triumph-sheet1-patch-feedback-v0.1.xlsx"
+);
 const DEFAULT_TEMPLATE = path.resolve(
   __dirname,
   "../../assets/direct-commander-template/triumph-manipulator-commander-template-v0.xlsx"
@@ -62,6 +77,7 @@ function parseCliFlags(args) {
   const flags = {
     newCampaignMode: true,
     enableCleanup: true,
+    rowRemovalMode: true,
     preserveCommanderIds: false,
   };
   const positional = [];
@@ -80,6 +96,10 @@ function parseCliFlags(args) {
       flags.newCampaignMode = false;
       continue;
     }
+    if (arg === "--no-row-removal" || arg === "--keep-template-tail") {
+      flags.rowRemovalMode = false;
+      continue;
+    }
     positional.push(arg);
   }
 
@@ -91,9 +111,11 @@ function usage() {
     `Usage: node sheet1-patch-export.js <orca-ppc-document.json> <validation-report.json> [output.xlsx] [flags]\n\n` +
       `Flags:\n` +
       `  --preserve-commander-ids   Keep template Commander IDs (disables new-campaign mode)\n` +
-      `  --no-cleanup               Skip stale-row neutralization (rows after export block)\n` +
-      `  --no-new-campaign-mode     Do not clear entity ID columns on exported rows\n\n` +
-      `Default: new-campaign mode ON, stale-row cleanup ON.\n` +
+      `  --no-cleanup               Skip stale-row neutralization when row removal is off\n` +
+      `  --no-new-campaign-mode     Do not clear entity ID columns on exported rows\n` +
+      `  --no-row-removal           Keep template tail rows (neutralize only; legacy)\n` +
+      `  --keep-template-tail       Alias for --no-row-removal\n\n` +
+      `Default: new-campaign mode ON, row removal ON (removes stale data rows after export block).\n` +
       `ZIP-level patch — ONLY sheet1.xml modified.\n` +
       `NOT production-safe · NOT Commander import automation · Human review required.`
   );
@@ -151,6 +173,7 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
   const skipForensics = options.skipForensics === true;
   const newCampaignMode = options.newCampaignMode !== false;
   const enableCleanup = options.enableCleanup !== false;
+  const rowRemovalMode = options.rowRemovalMode !== false;
 
   if (!fs.existsSync(templatePath)) {
     throw new Sheet1PatchError("TEMPLATE_NOT_FOUND", `Commander template not found: ${templatePath}`);
@@ -169,6 +192,7 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
   const writableColumns = resolveWritableCleanupColumns(headerMapData);
   const allowedColumns = buildAllowedColumnSet(columns);
   const fillRows = mapped.templateFillRows || [];
+  const metadataPatches = mapped.metadataPatches || {};
 
   if (!fillRows.length) {
     throw new Sheet1PatchError(
@@ -178,19 +202,25 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
   }
 
   const sheet1Original = readZipEntryUtf8(templatePath, "xl/worksheets/sheet1.xml");
-  const { sheetXml: patchedSheet1, rowsPatched, cellStats, cleanupStats } = patchSheet1DataRows(
-    sheet1Original,
-    fillRows,
-    columns,
-    {
-      dataStartRow: DATA_START_ROW,
-      headerMapFields: headerMapData,
-      newCampaignMode,
-      enableCleanup,
-      entityIdColumns,
-      writableColumns,
-    }
-  );
+  const {
+    sheetXml: patchedSheet1,
+    rowsPatched,
+    cellStats,
+    cleanupStats,
+    metadataStats,
+    rowRemovalStats,
+    lastExportRow,
+  } = patchSheet1DataRows(sheet1Original, fillRows, columns, {
+    dataStartRow: DATA_START_ROW,
+    headerMapFields: headerMapData,
+    newCampaignMode,
+    enableCleanup,
+    rowRemovalMode,
+    entityIdColumns,
+    writableColumns,
+    metadataPatches,
+    enableMetadata: true,
+  });
 
   const zipResult = patchSheet1InWorkbook(templatePath, outputPath, patchedSheet1);
   const preserve = verifyPreservedEntries(templatePath, outputPath);
@@ -281,10 +311,15 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
     dataStartRow: DATA_START_ROW,
     rowsWritten: fillRows.length,
     rowsPatched,
+    lastExportRow,
     cellStats,
     cleanupStats,
+    metadataStats,
+    rowRemovalStats,
+    metadataPatches,
     newCampaignMode,
     enableCleanup,
+    rowRemovalMode,
     entityIdColumns,
     templateSource: templatePath,
     templateUnmodified: true,
@@ -315,7 +350,7 @@ async function main() {
 
   const docPath = path.resolve(docArg);
   const reportPath = path.resolve(reportArg);
-  const outputPath = path.resolve(outArg || DEFAULT_CLEANUP_OUTPUT);
+  const outputPath = path.resolve(outArg || DEFAULT_IMPORT_REFINED_OUTPUT);
 
   try {
     const document = loadJson(docPath, "PPC document");
@@ -333,6 +368,7 @@ async function main() {
     const result = await runSheet1PatchExport(mapped, outputPath, {
       newCampaignMode: flags.newCampaignMode,
       enableCleanup: flags.enableCleanup,
+      rowRemovalMode: flags.rowRemovalMode,
     });
 
     console.log(`\n--- ${EXPORTER_LABEL} — SUCCESS ---`);
@@ -342,20 +378,34 @@ async function main() {
     console.log(`Mode:      ${result.mode}`);
     console.log(`Rows patched (sheet1.xml): ${result.rowsPatched}`);
     console.log(`New campaign mode: ${result.newCampaignMode}`);
-    console.log(`Stale-row cleanup: ${result.enableCleanup}`);
+    console.log(`Row removal mode: ${result.rowRemovalMode}`);
+    console.log(`Stale-row neutralization: ${result.enableCleanup && !result.rowRemovalMode}`);
+    if (result.lastExportRow) {
+      console.log(`Last export row: ${result.lastExportRow}`);
+    }
+    if (result.metadataStats?.patchedKeys?.length) {
+      console.log(`Metadata patched: ${result.metadataStats.patchedKeys.join(", ")}`);
+    }
     if (result.cleanupStats) {
       const cs = result.cleanupStats;
       console.log(`Entity ID columns cleared (exported rows): ${cs.idCellsCleared} cells / ${cs.rowsIdCleared} rows`);
-      console.log(
-        `Stale rows neutralized: ${cs.rowsNeutralized} (from row ${cs.firstStaleRow}, template data rows: ${cs.totalDataRowsInTemplate})`
-      );
-      if (cs.neutralizedRowNumbers?.length) {
-        const preview = cs.neutralizedRowNumbers.slice(0, 5).join(", ");
-        const tail =
-          cs.neutralizedRowNumbers.length > 5
-            ? ` … +${cs.neutralizedRowNumbers.length - 5} more`
-            : "";
-        console.log(`  neutralized row nums: ${preview}${tail}`);
+      if (result.rowRemovalMode) {
+        console.log(
+          `Stale rows removed: ${cs.rowsRemoved} (rows ${cs.firstStaleRow || "?"}–${cs.removedRowNumbers?.length ? Math.max(...cs.removedRowNumbers) : "?"})`
+        );
+        if (cs.dimension?.updated) {
+          console.log(`Dimension: ${cs.dimension.dimensionBefore} → ${cs.dimension.dimensionAfter}`);
+        } else if (cs.dimension?.safeUnknown) {
+          console.log(`Dimension: unchanged (${cs.dimension.reason || "SAFE UNKNOWN"})`);
+        }
+        console.log(`Sheet1 rows after removal: ${cs.maxRowAfter} (max)`);
+      } else if (cs.rowsNeutralized) {
+        console.log(
+          `Stale rows neutralized: ${cs.rowsNeutralized} (from row ${cs.firstStaleRow}, masked cells: ${cs.cellsMaskedOnStaleRows || 0})`
+        );
+      }
+      if (result.cellStats?.autotargetSuppressed) {
+        console.log(`Autotarget phrases suppressed: ${result.cellStats.autotargetSuppressed}`);
       }
     }
     console.log(`Template source unmodified: ${result.templateUnmodified}`);
@@ -416,6 +466,9 @@ module.exports = {
   Sheet1PatchError,
   DEFAULT_OUTPUT,
   DEFAULT_CLEANUP_OUTPUT,
+  DEFAULT_FEEDBACK_OUTPUT,
+  DEFAULT_ROW_CLEAN_OUTPUT,
+  DEFAULT_IMPORT_REFINED_OUTPUT,
   DEFAULT_TEMPLATE,
   ENTITY_ID_LOGICAL_KEYS,
 };

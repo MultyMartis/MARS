@@ -153,6 +153,45 @@
 
 ---
 
+## CM-10 — Fastlink SERP footprint (v0.2 doctrine)
+
+| Field | Value |
+|-------|-------|
+| **rule_id** | CM-10 |
+| **title** | Fastlinks support commercial footprint (target 8) |
+| **severity** | warn if < 6; error if decorative-only set |
+| **target_entity** | ad (`fastlinks[]`) |
+| **purpose** | ORCA Triumph pack uses **max fastlinks** for CTR and intent reinforcement — not minimal 2–4 links |
+| **failure_examples** | Only «Главная» + «Контакты»; 2 links on launch-ready S-tier ad |
+| **validation_logic_summary** | Require ≥ 1 capability or use-case link matching group; warn if `len(fastlinks) < 6`; prefer 8 diversified links from production route table |
+| **recommended_operator_action** | Add links: перевозка бытовок, 5 т, юрлица, безнал, стройматериалы, срочный выезд, цены, geo (Краснодар) — see prompts |
+
+**Strategy notes:**
+
+- **SERP footprint** — each sitelink is an additional qualified entry point in the auction snippet.  
+- **CTR doctrine** — secondary intents (B2B, geo, pricing) capture users not ready to click primary H1.  
+- **Mobile visibility** — more short titles increase scannable extension block height on mobile SERP.  
+- **Trust/capability** — links must remain truthful (CM-02); cross-links need `intent_role` per LM-09.
+
+---
+
+## CM-11 — Fastlink routing discipline (v0.3)
+
+| Field | Value |
+|-------|-------|
+| **rule_id** | CM-11 |
+| **title** | Fastlinks reinforce group intent via real landing slugs |
+| **severity** | error if off-slug or root-placeholder spam; **warn** if < 1 primary-route link |
+| **target_entity** | ad (`fastlinks[]`) + group (`landing_route`) |
+| **purpose** | Sitelinks support landing architecture — not random pages |
+| **failure_examples** | Five links to `/`; unrelated slug; no link to group `final_url` slug |
+| **validation_logic_summary** | Extract slug from `final_url`; require ≥1 fastlink to same slug (primary). Cross-links must use production slug table. Warn if >1 link to generic root `/`. Error if duplicate URL (SY-14). |
+| **recommended_operator_action** | Primary slug first; add capability/use-case/B2B crosslinks from [landing-routing-schema-v1.md](../schema/landing-routing-schema-v1.md) |
+
+**Diversity doctrine (v0.3):** Per ad — unique URLs; mix capability, use-case, B2B, trust; avoid 3+ links to identical slug unless intentional (discouraged).
+
+---
+
 ## Registry cross-reference
 
 [rule-registry-v1.md](rule-registry-v1.md)

@@ -10,6 +10,13 @@
     "export:template-fill": "node export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json --template-fill",
     "export:sheet1-patch": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-draft.xlsx",
     "export:sheet1-patch:cleanup": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json",
+    "export:sheet1-patch:feedback": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-feedback-v0.1.xlsx",
+    "export:sheet1-patch:v0.2": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-domain-fastlinks-v0.2.xlsx",
+    "export:sheet1-patch:row-clean": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-row-clean-v0.xlsx",
+    "export:sheet1-patch:v0.3": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-display-url-routing-v0.3.xlsx",
+    "export:sheet1-patch:v0.4": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-import-refined-v0.4.xlsx",
+    "export:sheet1-patch:v0.5": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-ad-type-v0.5.xlsx",
+    "export:sheet1-patch:v0.6": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-region-v0.6.xlsx",
     "forensics:ooxml": "node ooxml-forensics.js",
     "template:analyze": "node template-reader.js"
   },

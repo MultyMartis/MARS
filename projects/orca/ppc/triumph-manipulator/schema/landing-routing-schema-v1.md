@@ -170,7 +170,38 @@ Before `intent_continuity_ack: true`:
 
 ---
 
+## Production domain (v0.2 — operator-confirmed)
+
+**Canonical host:** `https://manipulator-triumph.ru`  
+**Policy:** SEO-safe slugs; trailing slash on path segments below is **recommended** but not enforced by exporter.
+
+| Route role | `final_url` (production) | Typical `blueprint_id` |
+|------------|--------------------------|-------------------------|
+| Master hot | `https://manipulator-triumph.ru/` | `01-master-hot-general` |
+| 5 t capability | `https://manipulator-triumph.ru/manipulyator-5-tonn/` | `05-capability-5-ton` |
+| Бытовка use-case | `https://manipulator-triumph.ru/perevozka-bytovok/` | `02-use-case-bytovka` |
+| B2B / юрлица | `https://manipulator-triumph.ru/manipulyator-dlya-yurlic/` | `06-b2b-yurlica` |
+| Вездеход 6×6 | `https://manipulator-triumph.ru/manipulyator-vezdehod/` | `07-capability-6x6-vezdekhod` |
+| Стройматериалы | `https://manipulator-triumph.ru/dostavka-stroymaterialov/` | `03-use-case-stroymaterialy` |
+
+**Display URL vs landing URL (v0.3):**
+
+| Field | Role | Example |
+|-------|------|---------|
+| `landing_url` / `landing_route.final_url` | Full HTTPS click target | `https://manipulator-triumph.ru/manipulyator-5-tonn/` |
+| `display_url.path_1` | Short **Commander display path** (CTR artifact) | `manip-5-tonn` |
+| `display_url.domain` | Document host coherence (SY-12) | `manipulator-triumph.ru` |
+
+**Commander transport:** Exporter writes **path only** to col 49 — no domain, no slash (SY-17). Max **20** chars, `[a-z0-9-]` (SY-18). UTF-8 source → deterministic ASCII normalization.
+
+**Sitelink routing:** `fastlinks[].url` must use slugs from production table above — reinforces group intent; duplicate URLs per ad = validation error (SY-14, CM-11).
+
+**Deprecated placeholder:** `triumph-krd.ru` — replace in fixtures and drafts; validation SY-12 warns on host mismatch.
+
+---
+
 ## SAFE UNKNOWN
 
-- Live URL inventory for Triumph production site — maintain outside schema or in operator config.  
-- UTM / tracking parameter standard — not defined in v1.
+- Future URL revisions (pricing page, `/tarify/`, regional subpaths) — confirm with site operator before changing `final_url` registry.  
+- UTM / tracking parameter standard — not defined in v1.  
+- Whether Commander normalizes trailing slashes on import — **human-verify** per import session.

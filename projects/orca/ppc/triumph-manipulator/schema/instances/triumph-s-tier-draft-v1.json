@@ -84,7 +84,7 @@
           "landing_route": {
             "blueprint_id": "05-capability-5-ton",
             "landing_type": "capability",
-            "final_url": "https://triumph-krd.ru/manipulyator-5t",
+            "final_url": "https://manipulator-triumph.ru/manipulyator-5-tonn/",
             "fallback_allowed": false,
             "intent_continuity_rule": "Hero и схема борта/стрелы должны соответствовать 5 т",
             "routing_notes": "Blueprint: landing-pages/05-capability-5-ton.md",
@@ -98,22 +98,16 @@
               "headline_2": "Борт и стрела на объекте",
               "description": "Манипулятор 5 т. Подача на объект. Без посредников. Расчёт по задаче.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "5t"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "manip-5-tonn"
               },
-              "landing_url": "https://triumph-krd.ru/manipulyator-5t",
+              "landing_url": "https://manipulator-triumph.ru/manipulyator-5-tonn/",
               "fastlinks": [
-                {
-                  "title": "Перевозка бытовок",
-                  "url": "https://triumph-krd.ru/bytovka",
-                  "description_1": "Установка на объекте",
-                  "intent_role": "Смежный use-case без смены основного intent"
-                },
-                {
-                  "title": "Безнал для юрлиц",
-                  "url": "https://triumph-krd.ru/yurlica",
-                  "intent_role": "B2B continuation для смешанных запросов"
-                }
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "primary_capability" },
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "use_case_crosslink" },
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "use_case_crosslink" },
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Договор и НДС", "intent_role": "b2b_crosslink" },
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Сложный заезд", "intent_role": "capability_crosslink" }
               ],
               "callouts": [
                 { "text": "Борт 5 т", "intent_role": "capability_proof" },
@@ -186,7 +180,7 @@
           "landing_route": {
             "blueprint_id": "02-use-case-bytovka",
             "landing_type": "use_case",
-            "final_url": "https://triumph-krd.ru/bytovka",
+            "final_url": "https://manipulator-triumph.ru/perevozka-bytovok/",
             "fallback_allowed": false,
             "intent_continuity_rule": "Hero показывает бытовку и сценарий установки",
             "intent_continuity_ack": false
@@ -199,16 +193,16 @@
               "headline_2": "Перевозка и установка",
               "description": "Перевозка и установка бытовок. Борт 5 т. Выезд в Краснодаре и крае.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "bytovka"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "perevozka-byt"
               },
-              "landing_url": "https://triumph-krd.ru/bytovka",
+              "landing_url": "https://manipulator-triumph.ru/perevozka-bytovok/",
               "fastlinks": [
-                {
-                  "title": "Манипулятор 5 т",
-                  "url": "https://triumph-krd.ru/manipulyator-5t",
-                  "intent_role": "capability_crosslink"
-                }
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "primary_use_case" },
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "capability_crosslink" },
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "use_case_crosslink" },
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Договор и НДС", "intent_role": "b2b_crosslink" },
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Сложный заезд", "intent_role": "capability_crosslink" }
               ],
               "callouts": [
                 { "text": "Установка на объекте", "intent_role": "use_case_proof" },
@@ -241,11 +235,17 @@
               "headline_2": "Манипулятор на объекте",
               "description": "Доставка и установка бытовки манипулятором. Расчёт по адресу и весу.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "bytovka"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "perevozka-byt"
               },
-              "landing_url": "https://triumph-krd.ru/bytovka",
-              "fastlinks": [],
+              "landing_url": "https://manipulator-triumph.ru/perevozka-bytovok/",
+              "fastlinks": [
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "primary_use_case" },
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "capability_crosslink" },
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "use_case_crosslink" },
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Безнал и документы", "intent_role": "b2b_crosslink" },
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Сложный заезд", "intent_role": "capability_crosslink" }
+              ],
               "callouts": [
                 { "text": "Работа по краю", "intent_role": "geo_trust" }
               ],
@@ -312,7 +312,7 @@
           "landing_route": {
             "blueprint_id": "03-use-case-stroymaterialy",
             "landing_type": "use_case",
-            "final_url": "https://triumph-krd.ru/stroymaterialy",
+            "final_url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/",
             "fallback_allowed": false,
             "intent_continuity_rule": "Страница про груз: блоки, паллеты, доставку на объект",
             "intent_continuity_ack": false
@@ -325,16 +325,16 @@
               "headline_2": "Доставка на объект",
               "description": "Перевозка блоков, паллет, металла. Манипулятор 5 т. Краснодар и край.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "stroy"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "dostavka-stroy"
               },
-              "landing_url": "https://triumph-krd.ru/stroymaterialy",
+              "landing_url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/",
               "fastlinks": [
-                {
-                  "title": "Кирпич и блоки",
-                  "url": "https://triumph-krd.ru/kirpich-bloki",
-                  "intent_role": "sub_use_case"
-                }
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "primary_use_case" },
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "capability_crosslink" },
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "use_case_crosslink" },
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Договор и НДС", "intent_role": "b2b_crosslink" },
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Сложный заезд", "intent_role": "capability_crosslink" }
               ],
               "callouts": [
                 { "text": "Паллеты и блоки", "intent_role": "cargo_proof" },
@@ -402,7 +402,7 @@
           "landing_route": {
             "blueprint_id": "06-b2b-yurlica",
             "landing_type": "b2b",
-            "final_url": "https://triumph-krd.ru/yurlica",
+            "final_url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/",
             "fallback_allowed": false,
             "intent_continuity_rule": "На странице: безнал, НДС, договор, объекты",
             "intent_continuity_ack": false
@@ -415,16 +415,16 @@
               "headline_2": "Безнал и документы",
               "description": "Работа с юрлицами. Безнал, НДС, договор. Выезд на стройку и склад.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "b2b"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "manip-dlya-b2b"
               },
-              "landing_url": "https://triumph-krd.ru/yurlica",
+              "landing_url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/",
               "fastlinks": [
-                {
-                  "title": "Договор и счёт",
-                  "url": "https://triumph-krd.ru/yurlica#docs",
-                  "intent_role": "b2b_trust"
-                }
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Договор и НДС", "intent_role": "primary_b2b" },
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "capability_crosslink" },
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "use_case_crosslink" },
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "use_case_crosslink" },
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Сложный заезд", "intent_role": "capability_crosslink" }
               ],
               "callouts": [
                 { "text": "Безналичный расчёт", "intent_role": "b2b_proof" },
@@ -458,10 +458,17 @@
               "headline_2": "Для организаций в Краснодаре",
               "description": "Манипулятор для юрлиц. Закрывающие документы. Объекты и склады.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "b2b"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "manip-dlya-b2b"
               },
-              "landing_url": "https://triumph-krd.ru/yurlica",
+              "landing_url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/",
+              "fastlinks": [
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Безнал и документы", "intent_role": "primary_b2b" },
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "capability_crosslink" },
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "use_case_crosslink" },
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "use_case_crosslink" },
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Сложный заезд", "intent_role": "capability_crosslink" }
+              ],
               "callouts": [
                 { "text": "Договор", "intent_role": "b2b_proof" }
               ],
@@ -530,7 +537,7 @@
           "landing_route": {
             "blueprint_id": "07-capability-6x6-vezdekhod",
             "landing_type": "capability",
-            "final_url": "https://triumph-krd.ru/vezdekhod-6x6",
+            "final_url": "https://manipulator-triumph.ru/manipulyator-vezdehod/",
             "fallback_allowed": false,
             "intent_continuity_rule": "Hero и фото подтверждают 6×6 и вездеход",
             "intent_continuity_ack": false
@@ -543,16 +550,16 @@
               "headline_2": "Сложный заезд на объект",
               "description": "Манипулятор 6×6 для сложного рельефа. Краснодар и край. Расчёт по маршруту.",
               "display_url": {
-                "domain": "triumph-krd.ru",
-                "path_1": "6x6"
+                "domain": "manipulator-triumph.ru",
+                "path_1": "vezdehod-6x6"
               },
-              "landing_url": "https://triumph-krd.ru/vezdekhod-6x6",
+              "landing_url": "https://manipulator-triumph.ru/manipulyator-vezdehod/",
               "fastlinks": [
-                {
-                  "title": "Манипулятор 5 т",
-                  "url": "https://triumph-krd.ru/manipulyator-5t",
-                  "intent_role": "fallback_capability"
-                }
+                { "title": "Манипулятор-вездеход", "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/", "description_1": "Полный привод 6x6", "intent_role": "primary_capability" },
+                { "title": "Манипулятор 5 тонн", "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/", "description_1": "Борт и стрела", "intent_role": "capability_crosslink" },
+                { "title": "Перевозка бытовок", "url": "https://manipulator-triumph.ru/perevozka-bytovok/", "description_1": "Установка на объекте", "intent_role": "use_case_crosslink" },
+                { "title": "Доставка стройматериалов", "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/", "description_1": "Паллеты и блоки", "intent_role": "use_case_crosslink" },
+                { "title": "Для юрлиц", "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/", "description_1": "Договор и НДС", "intent_role": "b2b_crosslink" }
               ],
               "callouts": [
                 { "text": "Полный привод 6x6", "intent_role": "terrain_proof" },
@@ -671,6 +678,6 @@
   "meta": {
     "created_by": "assisted",
     "created_at": "2026-05-20T00:00:00Z",
-    "notes": "DRAFT ONLY — triumph-s-tier-draft-v1"
+    "notes": "DRAFT ONLY — triumph-s-tier-draft-v1 · v0.3 display URL paths + sitelink routing discipline"
   }
 }

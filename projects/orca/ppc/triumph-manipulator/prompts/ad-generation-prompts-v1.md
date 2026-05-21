@@ -12,7 +12,8 @@ Per group, emit `ads[]` items conforming to `orca-ppc-document-v1.schema.json` a
 
 - `headline_1`, `headline_2` (optional)
 - `description`
-- `display_url_path` / path fields as schema requires
+- `display_url.path_1` — short Commander display path (≤ 20, `[a-z0-9-]`, no domain/slash)
+- `landing_url` — full HTTPS landing (separate from display path)
 - `fastlinks[]`, `callouts[]`
 - `alignment` metadata (primary phrase, intent continuation)
 - `status`: `draft` | `active` (default **draft** until human review)
@@ -85,16 +86,30 @@ Output: JSON array of ad objects.
 
 ---
 
-## Prompt C — Fastlinks
+## Prompt C — Fastlinks + display path (v0.3)
 
 ```
-Generate 2–4 fastlinks that qualify intent (capability, use-case, geo, B2B).
+DISPLAY PATH (Commander col 49 — NOT landing URL):
+- path_1 only: short kebab path, max 20 chars, [a-z0-9-]
+- Examples: manip-5-tonn, perevozka-byt, dostavka-stroy, manip-dlya-b2b, vezdehod-6x6
+- BAD: manipulator-triumph.ru/slug, slashes, Cyrillic in path_1
 
-GOOD: "Манипулятор 5 т", "Перевозка бытовок", "Безналичный расчёт"
-BAD: "Главная", "О компании", "Наши услуги"
+FASTLINKS — up to 8 transport slots; target unique production slugs (host: manipulator-triumph.ru):
+- /manipulyator-5-tonn/
+- /perevozka-bytovok/
+- /manipulyator-dlya-yurlic/
+- /dostavka-stroymaterialov/
+- /manipulyator-vezdehod/
 
-Output: fastlinks[] only as JSON.
-Each link text must respect symbol limits.
+Per group: FIRST fastlink URL must match group landing_route.final_url slug.
+Diversify: capability + use-case + B2B + trust — unique URL per slot.
+
+GOOD (5-ton group): primary 5-ton + bytovka + stroy + yurlic + vezdehod slugs
+BAD: same URL 3+ times; root / as filler; duplicate «юрлиц» + «безнал» → same URL
+
+Output: { "display_url": { "domain": "...", "path_1": "..." }, "fastlinks": [...] }
+Each fastlink: title ≤ 30, description_1 ≤ 60, absolute https URL, intent_role.
+No duplicate title OR URL within the ad.
 ```
 
 ---

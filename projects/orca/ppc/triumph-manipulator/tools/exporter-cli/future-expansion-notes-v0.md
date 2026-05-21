@@ -18,9 +18,24 @@
 
 **v0 done (template cleanup + new entity mode):** stale-row neutralization (clear writable cells, no row delete), `new_campaign_mode` clears Commander ID columns on export rows. See [template-cleanup-rules-v0.md](template-cleanup-rules-v0.md), [new-entity-mode-notes-v0.md](new-entity-mode-notes-v0.md), [sample-cleanup-run.md](sample-cleanup-run.md).
 
+**v0.1 done (Commander import feedback fix):** distinct `group_number`, group name normalization, autotarget phrase suppression, metadata block patch (rows 7–12), empty status export, stale-row transport mask (`-`). See [import-feedback-fixes-v0.1.md](import-feedback-fixes-v0.1.md), [commander-import-observations-v0.md](commander-import-observations-v0.md), [sample-feedback-fix-run.md](sample-feedback-fix-run.md).
+
+**v0.2 done (domain + max fastlinks):** production host `manipulator-triumph.ru`, SEO slug routing in schema/fixture, 8-fastlink ORCA doctrine in validation/prompts, `normalizeFastlinksForTransport()` in mapping.js. See [domain-fastlinks-v0.2-notes.md](domain-fastlinks-v0.2-notes.md).
+
+**v0.3 done (display URL + sitelink routing):** Commander short display path transport (no domain/slash), `normalizeDisplayPathForTransport()`, fastlink URL dedupe + production slug discipline, fixture display paths + diversified sitelinks. See [display-url-routing-v0.3-notes.md](display-url-routing-v0.3-notes.md), [sample-display-url-routing-run.md](sample-display-url-routing-run.md).
+
+**v0.4 done (import refinement):** Image/creative column cleanup (64–66), geo col 52 for all export rows, `normalizeTransportText()` (×→x), search-only ad type mask (`-`). See [image-cleanup-notes-v0.4.md](image-cleanup-notes-v0.4.md), [geo-routing-notes-v0.4.md](geo-routing-notes-v0.4.md), [transport-symbol-normalization-v0.4.md](transport-symbol-normalization-v0.4.md), [sample-import-refined-v0.4-run.md](sample-import-refined-v0.4-run.md).
+
+**v0.5 done (ad type literal):** col 2 «Тип объявления» = **Текстово-графическое** on export rows; image/creative cleanup preserved. See [ad-type-literal-fix-v0.5.md](ad-type-literal-fix-v0.5.md), [sample-ad-type-v0.5-run.md](sample-ad-type-v0.5-run.md).
+
+**v0.6 done (region import fix):** col 52 = single label **Краснодарский край** (no multi-line city); operator `direct.xlsx` evidence. See [commander-region-fix-v0.6.md](commander-region-fix-v0.6.md), [sample-region-v0.6-run.md](sample-region-v0.6-run.md).
+
+**v0 done (safe sheet1 data row removal):** physical removal of stale template data rows after `lastExportRow`, dimension update when deterministic, merge-cell safety check. Default `rowRemovalMode: true`; `--no-row-removal` for legacy neutralization. See [safe-row-removal-notes-v0.md](safe-row-removal-notes-v0.md), [sample-row-removal-run.md](sample-row-removal-run.md).
+
 **Future (not implemented):**
 
-- True XML row deletion with regression packs (v0 clears cells only — see [template-cleanup-rules-v0.md](template-cleanup-rules-v0.md))  
+- Conditional formatting / ignoredErrors audit after row removal  
+- True XML row deletion with golden-byte regression packs beyond triumph fixture  
 - Row virtualization for sparse templates  
 - Import-safe ID generation (local deterministic IDs — **not** Direct API)  
 - Commander roundtrip reconciliation packs  
