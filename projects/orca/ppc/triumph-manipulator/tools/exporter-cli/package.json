@@ -17,6 +17,7 @@
     "export:sheet1-patch:v0.4": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-import-refined-v0.4.xlsx",
     "export:sheet1-patch:v0.5": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-ad-type-v0.5.xlsx",
     "export:sheet1-patch:v0.6": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-region-v0.6.xlsx",
+    "export:sheet1-patch:full-cycle-v1": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../validation-cli/output/validation-report.output.json output/triumph-sheet1-patch-full-cycle-v1.xlsx",
     "forensics:ooxml": "node ooxml-forensics.js",
     "template:analyze": "node template-reader.js"
   },
