@@ -1,0 +1,51 @@
+﻿$brand-dark: #090c27;
+$brand-red: #e1002d;
+$brand-dark-rgb: 9, 12, 39;
+$brand-red-rgb: 225, 0, 45;
+
+$color-black: $brand-dark;
+$color-night: $brand-dark;
+$color-night-soft: #0d1135;
+$color-white: #ffffff;
+$color-paper: #f7f8fb;
+$color-card: #ffffff;
+$color-red: $brand-red;
+$color-red-dark: #a80024;
+$color-red-light: #ff2647;
+$color-text: #090f1b;
+$color-text-muted: rgba(9, 15, 27, 0.68);
+$color-text-dim: rgba(9, 15, 27, 0.48);
+$color-ink: #f7f9fc;
+$color-ink-muted: rgba(247, 249, 252, 0.72);
+$color-ink-dim: rgba(247, 249, 252, 0.52);
+$color-line-light: rgba(9, 15, 27, 0.12);
+$color-line-dark: rgba(255, 255, 255, 0.14);
+
+$font-display: 'Montserrat', Arial, sans-serif;
+$font-main: 'Roboto', Arial, sans-serif;
+
+$container: 1600px;
+$pad-desktop: 60px;
+$pad-tablet: 32px;
+$pad-mobile: 18px;
+
+$rhythm-upper: clamp(76px, 8vw, 126px);
+$rhythm-lower: clamp(54px, 6vw, 92px);
+$rhythm-compact: clamp(34px, 4vw, 56px);
+
+$icon-scale-normal: 1.5;
+$icon-scale-proof: 2;
+
+// Shared section H2 (desktop 72px; mobile scales down in section-heading mixin)
+$section-h2-font-size: 72px;
+$section-h2-font-size-mobile: clamp(28px, 8.2vw, 44px);
+$section-h2-font-size-mobile-narrow: clamp(24px, 6.8vw, 32px);
+
+$radius-none: 0;
+$radius-block: 0;
+$radius-control: 0;
+$radius-pill: 0;
+
+$shadow-card: 0 18px 48px rgba(9, 15, 27, 0.08);
+$shadow-dark: 0 24px 60px rgba($brand-dark, 0.28);
+$shadow-red: 0 16px 34px rgba($brand-red, 0.34);

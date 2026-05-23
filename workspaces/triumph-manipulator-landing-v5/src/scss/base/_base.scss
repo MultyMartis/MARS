@@ -1,0 +1,175 @@
+@use '../utils/tokens' as t;
+@use '../utils/container' as c;
+@use '../utils/section-headings' as headings;
+
+:root {
+    color-scheme: light;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: manual;
+    background: t.$color-black;
+    color: t.$color-ink;
+    font-family: t.$font-main;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.section-shell {
+    @include c.page-container;
+    @include c.page-container-padding-responsive;
+}
+
+.landing-main {
+    background: t.$color-paper;
+    color: t.$color-text;
+}
+
+.section-light {
+    background: t.$color-paper;
+}
+
+.section-light--upper {
+    padding-top: t.$rhythm-upper;
+}
+
+.section-light--lower {
+    padding-top: t.$rhythm-lower;
+}
+
+.section-heading {
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: clamp(32px, 4vw, 58px);
+}
+
+.section-heading--split {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.section-heading--center {
+    width: 100%;
+    max-width: min(680px, 100%);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.section-heading--center .section-eyebrow {
+    justify-content: center;
+}
+
+.section-heading__action {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: t.$color-text-dim;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: t.$color-red;
+    font-family: t.$font-display;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.section-eyebrow::after {
+    width: 48px;
+    height: 3px;
+    content: '';
+    background: currentColor;
+}
+
+.section-title {
+    margin: 14px 0 0;
+    max-width: 100%;
+    min-width: 0;
+    color: t.$color-text;
+    font-family: t.$font-display;
+    @include headings.section-h2-mobile;
+    font-weight: 600;
+    letter-spacing: -0.055em;
+    text-wrap: pretty;
+    text-transform: uppercase;
+}
+
+.section-lead {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: t.$color-text-muted;
+    font-size: clamp(17px, 1.5vw, 22px);
+    line-height: 26px;
+}
+
+.first-screen {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(9, 12, 39, 0.99) 0%, rgba(9, 12, 39, 0.92) 32%, rgba(9, 12, 39, 0.58) 58%, rgba(9, 12, 39, 0.08) 100%),
+        linear-gradient(180deg, rgba(9, 12, 39, 0.8) 0%, rgba(9, 12, 39, 0.08) 42%, rgba(9, 12, 39, 0.98) 100%),
+        url('../img/hero/hero-bg-final.jpg') right top / auto 100% no-repeat,
+        t.$color-night;
+}
+
+// Hero/content below header; header keeps its own layer (drawer/overlay above hero).
+.first-screen > *:not(.first-screen__bg):not(.first-screen__overlay):not(.site-header) {
+    position: relative;
+    z-index: 1;
+}
+
+.first-screen > .site-header {
+    position: relative;
+    z-index: 120;
+    isolation: isolate;
+}
+
+body.site-header-menu-open .first-screen > .hero {
+    pointer-events: none;
+}
+
+body.site-header-menu-open .first-screen > .site-header {
+    pointer-events: auto;
+}
+
+@media (max-width: 1180px) {
+    .section-heading--split {
+        display: grid;
+    }
+
+    .section-heading__action {
+        justify-items: start;
+    }
+}
+
+@media (max-width: 760px) {
+    .section-light--upper,
+    .section-light--lower {
+        padding-top: clamp(52px, 13vw, 74px);
+    }
+
+    .first-screen {
+        min-height: auto;
+        background:
+            linear-gradient(90deg, rgba(9, 12, 39, 0.98) 0%, rgba(9, 12, 39, 0.9) 58%, rgba(9, 12, 39, 0.44) 100%),
+            linear-gradient(180deg, rgba(9, 12, 39, 0.8) 0%, rgba(9, 12, 39, 0.52) 54%, rgba(9, 12, 39, 1) 100%),
+            url('../img/hero/hero-bg-final.jpg') 64% top / auto 680px no-repeat,
+            t.$color-night;
+    }
+}
+

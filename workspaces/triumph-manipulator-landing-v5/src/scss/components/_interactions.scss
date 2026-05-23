@@ -1,0 +1,281 @@
+@use '../utils/tokens' as t;
+
+$motion-fast: 180ms;
+$motion-base: 200ms;
+$motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+@mixin motion-safe {
+    @media (prefers-reduced-motion: no-preference) {
+        @content;
+    }
+}
+
+@mixin hover-lift {
+    @include motion-safe {
+        transition:
+            transform $motion-base $motion-ease,
+            box-shadow $motion-base $motion-ease,
+            background-color $motion-fast ease,
+            color $motion-fast ease,
+            border-color $motion-fast ease,
+            opacity $motion-fast ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition:
+            background-color $motion-fast ease,
+            color $motion-fast ease,
+            border-color $motion-fast ease,
+            opacity $motion-fast ease;
+    }
+}
+
+.site-header__nav-link {
+    @include hover-lift;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+        left: 0;
+        height: 1px;
+        background: rgba(225, 0, 45, 0.85);
+        content: '';
+        opacity: 0;
+        transform: scaleX(0.55);
+        transform-origin: center;
+    }
+
+    &:hover,
+    &:focus-visible {
+        color: t.$color-white;
+    }
+
+    @include motion-safe {
+        &::after {
+            transition:
+                opacity $motion-base $motion-ease,
+                transform $motion-base $motion-ease;
+        }
+
+        &:hover::after,
+        &:focus-visible::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+}
+
+.site-header__phone,
+.site-header__drawer-phone {
+    @include hover-lift;
+
+    &:hover,
+    &:focus-visible {
+        color: #fff;
+        opacity: 0.92;
+    }
+}
+
+.site-header__messenger {
+    @include hover-lift;
+
+    &:hover,
+    &:focus-visible {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    @include motion-safe {
+        &:hover img,
+        &:focus-visible img {
+            transform: translateY(-1px) scale(1.03);
+        }
+    }
+
+    img {
+        @include motion-safe {
+            transition: transform $motion-base $motion-ease;
+        }
+    }
+}
+
+.site-header__cta,
+.site-header__drawer-cta {
+    @include hover-lift;
+
+    &:hover,
+    &:focus-visible {
+        background: t.$color-red-light;
+        box-shadow: t.$shadow-red;
+    }
+
+    @include motion-safe {
+        &:hover,
+        &:focus-visible {
+            transform: translateY(-1px);
+        }
+    }
+}
+
+.site-header__burger,
+.site-header__drawer-close {
+    @include hover-lift;
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.08);
+    }
+}
+
+.site-header__burger-line {
+    @include motion-safe {
+        transition:
+            transform $motion-base $motion-ease,
+            opacity $motion-fast ease;
+    }
+}
+
+.site-header__overlay {
+    @include motion-safe {
+        transition:
+            opacity 0.3s ease,
+            visibility 0s linear 0.3s;
+    }
+}
+
+.site-header__overlay--visible {
+    @include motion-safe {
+        transition:
+            opacity 0.3s ease,
+            visibility 0s;
+    }
+}
+
+.site-header__drawer {
+    @include motion-safe {
+        transition:
+            transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.3s ease,
+            visibility 0s linear 0.3s;
+    }
+}
+
+body.site-header-menu-open .site-header__drawer {
+    @include motion-safe {
+        transition:
+            transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.3s ease,
+            visibility 0s;
+    }
+}
+
+.site-header__drawer-link {
+    @include hover-lift;
+
+    &:hover,
+    &:focus-visible {
+        transform: translateX(2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        &:hover,
+        &:focus-visible {
+            transform: none;
+        }
+    }
+}
+
+.button {
+    @media (prefers-reduced-motion: reduce) {
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+.button--primary:hover,
+.button--outline:hover {
+    @include motion-safe {
+        box-shadow: 0 14px 30px rgba(9, 15, 27, 0.14);
+    }
+}
+
+.machine-transport__card,
+.proof-strip__item,
+.machine-showcase__media {
+    @include hover-lift;
+}
+
+.machine-transport__card {
+    @include motion-safe {
+        &:hover,
+        &:focus-within {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 36px rgba(9, 15, 27, 0.1);
+        }
+    }
+}
+
+.proof-strip__item {
+    @include motion-safe {
+        &:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        &:hover i {
+            transform: translateY(-1px);
+        }
+    }
+
+    i {
+        @include motion-safe {
+            transition: transform $motion-base $motion-ease;
+        }
+    }
+}
+
+.machine-showcase__media {
+    @include motion-safe {
+        &:hover {
+            box-shadow: 0 24px 58px rgba(9, 15, 27, 0.14);
+        }
+    }
+}
+
+.contact-form .button:hover,
+.hero-form .button:hover {
+    @include motion-safe {
+        transform: translateY(-1px);
+    }
+}
+
+.site-modal__close {
+    @include hover-lift;
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    @include motion-safe {
+        &:hover,
+        &:focus-visible {
+            transform: translateY(-1px);
+        }
+    }
+}
+
+.site-form__input {
+    @include motion-safe {
+        transition:
+            border-color $motion-fast ease,
+            box-shadow $motion-fast ease,
+            background-color $motion-fast ease;
+    }
+}
+
+.site-form__submit[disabled] {
+    cursor: wait;
+}

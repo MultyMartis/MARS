@@ -1,0 +1,217 @@
+@use '../utils/tokens' as t;
+
+.landing-footer {
+    padding-block: clamp(30px, 3.5vw, 48px) 20px;
+    border-top: 1px solid t.$color-line-dark;
+    background: t.$color-night;
+    color: t.$color-ink;
+}
+
+.landing-footer__top {
+    display: grid;
+    grid-template-columns: minmax(240px, 1.2fr) minmax(150px, 0.7fr) minmax(190px, 0.9fr) minmax(180px, 0.8fr);
+    gap: clamp(22px, 3vw, 42px);
+    align-items: start;
+}
+
+.landing-footer__brand img {
+    width: clamp(138px, 12vw, 166px);
+    height: auto;
+}
+
+.landing-footer p,
+.landing-footer a,
+.landing-footer span,
+.landing-footer small {
+    color: t.$color-ink-muted;
+}
+
+.landing-footer h2 {
+    margin: 0 0 12px;
+    color: t.$color-white;
+    font-family: t.$font-display;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.landing-footer__brand p {
+    max-width: 320px;
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.landing-footer__brand small {
+    display: block;
+    max-width: 300px;
+    margin-top: 8px;
+    color: t.$color-ink-dim;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.landing-footer__nav,
+.landing-footer__contacts,
+.landing-footer__legal {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    min-width: 0;
+    padding-left: clamp(16px, 2vw, 28px);
+    border-left: 1px solid t.$color-line-dark;
+    font-style: normal;
+}
+
+.landing-footer__nav a,
+.landing-footer__contacts a,
+.landing-footer__legal a {
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.landing-footer__nav a:hover,
+.landing-footer__contacts a:hover,
+.landing-footer__legal a:hover {
+    color: t.$color-white;
+}
+
+.landing-footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.landing-footer__social a {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.landing-footer__social img {
+    width: 22px;
+    height: 22px;
+}
+
+.landing-footer__bottom {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) auto;
+    gap: 16px 28px;
+    align-items: center;
+    margin-top: clamp(22px, 3vw, 34px);
+    padding-top: 18px;
+    border-top: 1px solid t.$color-line-dark;
+}
+
+.landing-footer__requisites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 100%;
+}
+
+.landing-footer__requisites small {
+    color: t.$color-ink-dim;
+    font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+    .landing-footer__top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .landing-footer {
+        padding-block: 32px 22px;
+    }
+
+    .landing-footer__top,
+    .landing-footer__bottom {
+        grid-template-columns: 1fr;
+        min-width: 0;
+    }
+
+    .landing-footer__top {
+        gap: 26px;
+    }
+
+    .landing-footer__brand p,
+    .landing-footer__brand small {
+        max-width: 100%;
+    }
+
+    .landing-footer__nav,
+    .landing-footer__contacts,
+    .landing-footer__legal {
+        padding-left: 0;
+        border-left: 0;
+        gap: 10px;
+    }
+
+    .landing-footer__nav a,
+    .landing-footer__contacts a,
+    .landing-footer__legal a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .landing-footer__bottom {
+        gap: 14px;
+        align-items: start;
+        margin-top: 28px;
+        padding-top: 18px;
+    }
+
+    .landing-footer__requisites {
+        justify-content: flex-start;
+        gap: 8px 12px;
+    }
+
+    .landing-footer__requisites small {
+        overflow-wrap: anywhere;
+    }
+}
+
+.pws_copyright__wrap {
+    position: relative;
+    margin-top: 14px;
+    padding: 0 clamp(16px, 4vw, 28px) 6px;
+    text-align: center;
+}
+
+.pws_copyright {
+    position: relative;
+    display: inline-block;
+    color: #878f9c !important;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none !important;
+}
+
+.pws_copyright:hover {
+    position: relative;
+    color: #00bdf0 !important;
+    text-decoration: none !important;
+}
+
+@media (max-width: 760px) {
+    .pws_copyright__wrap {
+        margin-top: 12px;
+        padding-inline: 16px;
+    }
+
+    .pws_copyright {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
