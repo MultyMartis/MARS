@@ -6,6 +6,7 @@
 **Purpose:** Formalize a deterministic typography rhythm model for Website Factory landing production so headings, paragraphs, CTAs, and supporting text keep a readable cadence across a page instead of drifting through arbitrary line-height math.
 
 **Forge checklist:** [`../../agents/mars-forge/rhythm-governance-checklist.md`](../../agents/mars-forge/rhythm-governance-checklist.md).  
+**Related word-splitting layer:** [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) — **authority** for RU landings; complements rhythm, not a substitute. **RU QA preset:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).  
 **Related visual layer:** [visual-reconciliation-layer.md](visual-reconciliation-layer.md).  
 **Related vertical layer:** [vertical-rhythm-governance.md](vertical-rhythm-governance.md).
 
@@ -62,6 +63,8 @@ Heading cadence governs the ladder between `h1`, `h2`, `h3`, card titles, eyebro
 - Whether line-height follows the preferred model or a named approved exception.
 - Whether heading blocks keep comparable title → subtitle → body spacing across landing sections.
 - Whether mobile heading reductions preserve hierarchy without producing crowded wraps.
+- **Headline overflow (C-05):** if a heading clips or overflows, fix with layout (container width, `min-width: 0`, scale/steps) — **not** with `word-break`, `overflow-wrap: anywhere`, or global `break-word` on UI. See word-splitting authority.
+- **Orphan short lines (C-04):** avoid fixing widows with `white-space: nowrap`, `&nbsp;` chains between every word, or forced word fragmentation — use selective RU ties and cadence per [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
 
 ### 3.2 Paragraph cadence
 

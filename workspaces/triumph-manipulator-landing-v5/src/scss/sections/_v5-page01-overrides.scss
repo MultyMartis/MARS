@@ -33,7 +33,7 @@
     font-size: clamp(28px, 3.6vw, 50px);
     font-weight: 600;
     line-height: 1.12;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
     text-transform: uppercase;
@@ -41,7 +41,7 @@
     span {
         color: t.$brand-red;
         white-space: normal;
-        overflow-wrap: break-word;
+        overflow-wrap: normal;
     }
 }
 
@@ -107,7 +107,7 @@ body[data-page-type^='ppc-'] .machine-transport__card--denied .machine-transport
     font-size: 22px;
     font-weight: 600;
     line-height: 26px;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     text-wrap: pretty;
 }
 
@@ -183,7 +183,7 @@ body[data-page-type^='ppc-'] {
     }
 
     .contact-cta h2 {
-        overflow-wrap: break-word;
+        overflow-wrap: normal;
         text-wrap: pretty;
     }
 
@@ -212,7 +212,7 @@ body[data-page-type^='ppc-'] {
     .proof-strip__item strong,
     .proof-strip__item span {
         min-width: 0;
-        overflow-wrap: break-word;
+        overflow-wrap: normal;
         word-break: normal;
         hyphens: manual;
     }
@@ -223,7 +223,7 @@ body[data-page-type^='ppc-'] {
     }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
     body[data-page-type^='ppc-'] .machine-transport {
         grid-template-columns: minmax(0, 1fr);
         align-items: start;
@@ -240,12 +240,13 @@ body[data-page-type^='ppc-'] {
             font-size: clamp(28px, 7.6vw, 36px);
             line-height: 1.12;
             max-width: 100%;
-            overflow-wrap: break-word;
+            overflow-wrap: normal;
             text-wrap: pretty;
         }
 
         .machine-showcase__specs dd {
             white-space: normal;
+            overflow-wrap: normal;
         }
 
         .machine-showcase__cta {
@@ -272,7 +273,7 @@ body[data-page-type^='ppc-'] {
 
         .machine-transport__card {
             max-width: 100%;
-            overflow-wrap: break-word;
+            overflow-wrap: normal;
         }
 
         .machine-transport__list {
@@ -280,7 +281,7 @@ body[data-page-type^='ppc-'] {
         }
 
         .machine-transport__list li {
-            overflow-wrap: break-word;
+            overflow-wrap: normal;
         }
 
         .machine-transport__card--denied .machine-transport__list {
@@ -317,7 +318,11 @@ body[data-page-type^='ppc-'] {
 
         .button {
             max-width: 100%;
-            overflow-wrap: anywhere;
+            min-width: 0;
+            white-space: normal;
+            text-align: center;
+            overflow-wrap: normal;
+            text-wrap: balance;
         }
 
         .proof-strip__item {

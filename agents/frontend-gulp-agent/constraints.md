@@ -15,6 +15,7 @@ Normative guardrails for anyone operating under this pack (human or Cursor).
 | **No fake QA pass** | QA results must reflect checks actually performed. |
 | **No asset invention** | Do not fabricate image/font URLs; use handoff paths or **SAFE UNKNOWN**. |
 | **No design guessing** | If copy, spacing, or breakpoint intent is missing, mark **SAFE UNKNOWN** — do not invent brand-critical details. |
+| **RU typography authority** | Russian commercial landings: overflow/word-break policy per [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md); QA widths per [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md). |
 
 ---
 

@@ -381,7 +381,96 @@ async function mockSubmitHandler(form, payload) {
     throw new Error('mock_submit_failed');
   }
 
-  return { ok: true, payload };
+  return { ok: true, payload, mode: 'mock' };
+}
+
+/**
+ * @param {HTMLFormElement} form
+ * @returns {string}
+ */
+function resolveFormEndpoint(form) {
+  return form.getAttribute('data-form-endpoint') || DEFAULT_FORM_ENDPOINT;
+}
+
+/**
+ * @returns {boolean}
+ */
+function isFileProtocolPreview() {
+  return window.location.protocol === 'file:';
+}
+
+/**
+ * @param {Response} response
+ * @returns {Promise<Record<string, unknown> | null>}
+ */
+async function parseJsonResponse(response) {
+  const contentType = response.headers.get('content-type') || '';
+
+  if (!contentType.includes('application/json')) {
+    return null;
+  }
+
+  try {
+    const data = await response.json();
+    return data && typeof data === 'object' ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * @param {HTMLFormElement} form
+ * @param {Record<string, string>} payload
+ */
+async function productionSubmitHandler(form, payload) {
+  if (isFileProtocolPreview()) {
+    return mockSubmitHandler(form, payload);
+  }
+
+  const endpoint = resolveFormEndpoint(form);
+  const formData = new FormData();
+
+  Object.entries(payload).forEach(([key, value]) => {
+    formData.append(key, value);
+  });
+
+  let response;
+
+  try {
+    response = await fetch(endpoint, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+      credentials: 'same-origin',
+    });
+  } catch {
+    const error = new Error('form_endpoint_unavailable');
+    error.userMessage =
+      'Сервер формы недоступен. Откройте страницу через HTTP или позвоните нам.';
+    throw error;
+  }
+
+  const data = await parseJsonResponse(response);
+
+  if (!response.ok) {
+    const error = new Error('form_submit_failed');
+    error.userMessage =
+      (data && typeof data.message === 'string' && data.message) ||
+      'Не удалось отправить заявку. Позвоните нам или попробуйте ещё раз.';
+    throw error;
+  }
+
+  if (data && data.success === false) {
+    const error = new Error('form_submit_failed');
+    error.userMessage =
+      (typeof data.message === 'string' && data.message) ||
+      'Не удалось отправить заявку. Позвоните нам или попробуйте ещё раз.';
+    throw error;
+  }
+
+  return { ok: true, payload, data, mode: 'production' };
 }
 
 /**
@@ -389,13 +478,13 @@ async function mockSubmitHandler(form, payload) {
  * @param {Record<string, string>} payload
  */
 async function runSubmitHandler(form, payload) {
-  const handler = form.getAttribute('data-form-handler') || 'mock';
+  const handler = form.getAttribute('data-form-handler');
 
   if (handler === 'mock') {
     return mockSubmitHandler(form, payload);
   }
 
-  throw new Error(`Unknown form handler: ${handler}`);
+  return productionSubmitHandler(form, payload);
 }
 
 /**
@@ -527,6 +616,7 @@ function initForm(form) {
     } catch (error) {
       setFormState(form, 'error');
       const errorMessage =
+        (error && typeof error.userMessage === 'string' && error.userMessage) ||
         form.getAttribute('data-form-error') ||
         'Не удалось отправить заявку. Позвоните нам или попробуйте ещё раз.';
       showFormStatus(form, 'error', errorMessage);

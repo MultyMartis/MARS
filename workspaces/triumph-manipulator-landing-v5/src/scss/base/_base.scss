@@ -6,11 +6,14 @@
     color-scheme: light;
 }
 
+html,
 body {
-    overflow-x: hidden;
-    overflow-wrap: break-word;
     word-break: normal;
     hyphens: manual;
+}
+
+body {
+    overflow-x: hidden;
     background: t.$color-black;
     color: t.$color-ink;
     font-family: t.$font-main;

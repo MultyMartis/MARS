@@ -30,7 +30,7 @@
     border-radius: 0;
     background: t.$color-card;
     box-shadow: 0 12px 28px rgba(9, 15, 27, 0.08);
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
 }
 
 .faq-item__body {
@@ -54,7 +54,7 @@
     cursor: pointer;
     font-weight: 600;
     list-style: none;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
 }
@@ -85,10 +85,10 @@
 .faq-item__body p {
     margin: 0;
     max-width: 100%;
-    padding: 6px 28px 30px;
+    padding: 8px 28px 30px;
     color: t.$color-text-muted;
     font-size: clamp(17px, 2.2vw, 19px);
-    line-height: calc(1em * 1.35);
+    line-height: calc(1em + 4px);
     overflow-wrap: break-word;
     word-break: normal;
     hyphens: manual;
@@ -101,10 +101,27 @@
 
     .faq-item summary {
         padding: 20px 22px;
+        gap: 10px 14px;
     }
 
     .faq-item__body p {
-        padding: 4px 22px 26px;
+        padding: 6px 22px 26px;
         font-size: 17px;
+        line-height: calc(1em + 4px);
+    }
+}
+
+@media (max-width: 420px) {
+    .faq-item summary {
+        padding: 18px 18px;
+        gap: 10px 12px;
+        font-size: clamp(15px, 4.2vw, 17px);
+        line-height: calc(1em + 4px);
+    }
+
+    .faq-item__body p {
+        padding: 4px 18px 22px;
+        font-size: 16px;
+        line-height: calc(1em + 4px);
     }
 }

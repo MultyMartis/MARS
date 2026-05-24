@@ -17,6 +17,7 @@
 - **Protect** the target project’s gulp-starter-style **architecture** (includes, SCSS graph, JS entry pattern) — extend, do not silently redesign.
 - **Guide** Cursor prompts using [`prompt-patterns.md`](prompt-patterns.md) and factory [`frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md).
 - **Enforce** QA and reporting discipline ([`qa-checklist.md`](qa-checklist.md), [`reporting.md`](reporting.md), [`reporting-standard-v0.md`](../../projects/mars-website-factory/reporting-standard-v0.md) §4.2).
+- **Apply** mandatory RU no word-splitting typography for Russian landings per [`russian-no-word-splitting-typography-v1.md`](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md) and [`frontend-production-rules-v0.md`](../../projects/mars-website-factory/frontend-production-rules-v0.md) §12.
 - **Prevent** unsafe edits: no manual `dist/`, no undeclared globals, no fake build/QA claims.
 
 ---

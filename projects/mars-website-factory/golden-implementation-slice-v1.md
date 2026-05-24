@@ -3,7 +3,9 @@
 **Status:** canonical reference for Website Factory frontend implementation quality.  
 **Workspace:** [workspaces/website-factory-reference-v1/](../../workspaces/website-factory-reference-v1/).
 
-**Not:** a client deliverable; **not** Triumph production proof.
+**Not:** a client deliverable; **not** Triumph production proof. **Not** typography/overflow authority — see [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
+
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
 
 **Wave 5:** `faq` block added via real extraction — [operational-examples/wave5-extraction-report-faq-v1.md](operational-examples/wave5-extraction-report-faq-v1.md). Client starter: [workspaces/_template-client-v1/](../../workspaces/_template-client-v1/).
 
@@ -50,7 +52,7 @@ npm install
 npm run build
 ```
 
-Open `dist/index.html` — exercise: modal, form, sticky after scroll, pricing CTA, contact links, 375px QA ([reference-workspace-qa-flow-v1.md](reference-workspace-qa-flow-v1.md)).
+Open `dist/index.html` — exercise: modal, form, sticky after scroll, pricing CTA, contact links, 375px QA ([reference-workspace-qa-flow-v1.md](reference-workspace-qa-flow-v1.md)). **Supplementary generic responsive validation only.** **For RU commercial landings use:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
 
 Record outcome in REPORT; **SAFE UNKNOWN** if npm unavailable.
 

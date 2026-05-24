@@ -8,7 +8,8 @@ It is not merely “make it fit,” “stack blocks,” “remove overflow,” o
 
 **Companion documents:** [mobile-composition-preservation.md](mobile-composition-preservation.md), [responsive-collapse-taxonomy.md](responsive-collapse-taxonomy.md).  
 **Related layers:** [source-interpretation-governance.md](source-interpretation-governance.md), [source-confidence-model.md](source-confidence-model.md), [source-ambiguity-taxonomy.md](source-ambiguity-taxonomy.md), [design-intent-transfer-governance.md](design-intent-transfer-governance.md), [visual-reconciliation-layer.md](visual-reconciliation-layer.md), [compositional-structure-awareness.md](compositional-structure-awareness.md), [canonical-vertical-cadence-system.md](canonical-vertical-cadence-system.md), [design-system-intent-governance.md](design-system-intent-governance.md), [design-token-intelligence-governance.md](design-token-intelligence-governance.md), [implementation-reliability-governance.md](implementation-reliability-governance.md), [content-density-governance.md](content-density-governance.md), [interaction-intent-governance.md](interaction-intent-governance.md), [state-behavioral-consistency-governance.md](state-behavioral-consistency-governance.md), [accessibility-intent-governance.md](accessibility-intent-governance.md).  
-**Forge checklist:** [`../../agents/mars-forge/responsive-intent-checklist.md`](../../agents/mars-forge/responsive-intent-checklist.md).
+**Forge checklist:** [`../../agents/mars-forge/responsive-intent-checklist.md`](../../agents/mars-forge/responsive-intent-checklist.md).  
+**RU commercial landings:** canonical QA widths — [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); typography/overflow authority — [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md). Generic breakpoint lists elsewhere are **supplementary**.
 
 ---
 

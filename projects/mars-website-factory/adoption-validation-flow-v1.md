@@ -5,6 +5,8 @@
 
 **Not:** certification, **not** automated validator product.
 
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 ---
 
 ## Outcome labels
@@ -66,6 +68,9 @@ Skip if bootstrap-only (hero only).
 
 ## 5. Responsive validation
 
+**Supplementary generic responsive validation only** (375 / 768 / desktop).  
+**For RU commercial landings use:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 - [ ] 375px — no horizontal scroll  
 - [ ] 768px — grids intentional  
 - [ ] Desktop — container centered  
@@ -95,13 +100,16 @@ Template: [golden-report-examples-v1.md](operational-examples/golden-report-exam
 
 ## Compact checklist (copy to REPORT)
 
+**RU commercial:** adoption-ready / Frontend QA **PASS is not complete** without `RU TYPOGRAPHY / NO WORD-SPLITTING` verification per [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 ```markdown
 ## Adoption validation (v1)
 - Foundation copy: PASS | FAIL
 - Build: PASS | FAIL | SAFE UNKNOWN
 - Section replacement: PASS | N/A | FAIL
 - Lifecycle: PASS | FAIL
-- Responsive 375/768/desktop: PASS | partial | SAFE UNKNOWN
+- Responsive 375/768/desktop: PASS | partial | SAFE UNKNOWN (supplementary generic only)
+- RU TYPOGRAPHY / NO WORD-SPLITTING: PASS | partial | FAIL | SAFE UNKNOWN | N/A (non-RU)
 - REPORT complete: PASS | FAIL
 - **Verdict:** Adoption-ready | Blocked — <reason>
 ```

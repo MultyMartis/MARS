@@ -1,0 +1,166 @@
+# V5 Production Hardening Batch A Report
+
+**Date:** 2026-05-24  
+**Baseline:** `f86dd59` — `checkpoint: add Triumph landing v5 baseline`  
+**Scope:** Batch A only (fonts, hero CLS, forms prep, messenger placeholders, robots gate)  
+**Built page:** `src/pages/index.html` → `dist/index.html` (zakaz / page-01)
+
+---
+
+## Scope
+
+| Allowed | Done |
+|---------|------|
+| `workspaces/triumph-manipulator-landing-v5/src/` | Yes |
+| `workspaces/triumph-manipulator-landing-v5/reports/` | Yes |
+| `package.json` / `gulpfile.js` (if needed for build) | Not required |
+
+| Forbidden | Status |
+|-----------|--------|
+| V4, ORCA, governance, survivability | Not touched |
+| `dist/` manual edits | Not touched (Gulp rebuild only) |
+| Redesign / layout / sections | Not touched |
+| commit / push | Not done |
+
+---
+
+## Survivability preflight
+
+| Check | Result |
+|-------|--------|
+| `f86dd59` in history | **PASS** |
+| `git diff f86dd59 -- workspaces/triumph-manipulator-landing-v5/src/` before edits | **Empty** (clean vs baseline) |
+| V5 changes after Batch A | 9 modified `src/` files + this report + prior audit (untracked) |
+| Unrelated repo drift | **Present** — not modified |
+| Risk class | **MEDIUM** (scoped R1 writes in V5 `src/`) |
+
+---
+
+## Font changes
+
+| Item | Action |
+|------|--------|
+| Google Fonts (`fonts.googleapis.com`, `fonts.gstatic.com`) | **Removed** from `head-v5-page01.html` |
+| `src/fonts/` | **Empty** — no woff2 files in repo |
+| Self-host `@font-face` | **Not added** (no font files; no download) |
+| CSS stack | `_tokens.scss`: `$font-display` / `$font-main` → `"Montserrat", "Roboto", Arial, sans-serif` |
+| CDN | **None** added |
+
+**SAFE UNKNOWN:** Operator must supply licensed Montserrat/Roboto woff2 into `src/fonts/` and wire `@font-face` + optional preload in a future batch if brand typography must match Google-loaded weights exactly.
+
+---
+
+## Hero dimension changes
+
+| Location | Before | After |
+|----------|--------|-------|
+| `src/pages/index.html` — `.first-screen__bg-media` | `width="1920" height="1080"` | `width="2560" height="1440"` |
+
+Matches `hero-bg-final.jpg` intrinsic size (2560×1440). No CSS/layout changes.
+
+---
+
+## Form handler changes
+
+| Item | Detail |
+|------|--------|
+| Backend on disk | `backend/api/forms/send.php` exists locally (gitignored; not in `f86dd59` tree) |
+| PHP | **Not modified** |
+| Forms wired (active page only) | `zakaz/screen-01-hero.html`, `zakaz/final-contact-cta.html`, `callback-modal.html` |
+| HTML | `data-form-endpoint="/backend/api/forms/send.php"` (removed default `data-form-handler="mock"`) |
+| `form.js` | Production POST via `fetch` + `FormData`; `data-form-handler="mock"` still forces mock |
+| `file://` preview | Auto **mock** submit when `location.protocol === 'file:'` (forms keep working) |
+| HTTP without backend | Graceful error message via `error.userMessage` |
+
+Other `v5-ppc/*` slug partials still carry `data-form-handler="mock"` — not built into `index.html`; out of Batch A page scope.
+
+---
+
+## Messenger placeholders
+
+| Channel | Before | After |
+|---------|--------|-------|
+| MAX | `href="#contacts"` (some locations) | `href="#contacts"` + `data-link-todo="max-url-required"` |
+| Telegram | `https://t.me/` (fake) | `href="#contacts"` + `data-link-todo="telegram-url-required"` |
+| WhatsApp / phone | Real URLs | **Unchanged** |
+
+**Files updated (active page path):** `header-v5-page01.html`, `v5-page01/landing-footer.html`, `v5-ppc/zakaz/final-contact-cta.html`, `callback-modal.html` (MAX reach link).
+
+**Operator action required:** Provide real MAX and Telegram URLs; replace `href` and remove `data-link-todo` when confirmed.
+
+---
+
+## Robots gate
+
+| Item | Status |
+|------|--------|
+| Current meta | `noindex,nofollow` via `index.html` include — **unchanged** |
+| Production gate | **Before public deployment:** remove `noindex,nofollow` from robots meta (human-operated release step) |
+
+---
+
+## Build validation
+
+```
+cd workspaces/triumph-manipulator-landing-v5
+npm run build
+```
+
+| Check | Result |
+|-------|--------|
+| Build | **PASS** (2026-05-24) |
+| No Google Fonts in `dist/index.html` | **PASS** |
+| Hero `width="2560" height="1440"` in dist | **PASS** |
+| No `https://t.me/` in dist | **PASS** |
+| `data-link-todo` placeholders present | **PASS** |
+| `data-form-endpoint="/backend/api/forms/send.php"` on forms | **PASS** |
+| No absolute `/assets/` in dist HTML | **PASS** |
+| `noindex,nofollow` retained | **PASS** |
+
+---
+
+## Files changed
+
+| File |
+|------|
+| `src/partials/layout/head-v5-page01.html` |
+| `src/pages/index.html` |
+| `src/scss/utils/_tokens.scss` |
+| `src/js/form.js` |
+| `src/partials/layout/header-v5-page01.html` |
+| `src/partials/sections/v5-page01/landing-footer.html` |
+| `src/partials/sections/v5-ppc/zakaz/final-contact-cta.html` |
+| `src/partials/sections/v5-ppc/zakaz/screen-01-hero.html` |
+| `src/partials/components/callback-modal.html` |
+| `reports/v5-production-hardening-batch-a-report-v1.md` (this file) |
+
+`dist/` regenerated by build (gitignored).
+
+---
+
+## SAFE UNKNOWN
+
+1. **Self-hosted Montserrat/Roboto files** — not in repo; system fallback stack active until operator adds fonts.
+2. **Backend deploy** — `backend/` gitignored; production SMTP/hosting not verified in this pass.
+3. **Live form POST** — requires HTTP server + deployed `send.php`; not tested against real mail in Batch A.
+4. **Browser matrix** — no automated visual regression; human QA required (see below).
+5. **Other PPC slug partials** — still contain legacy `https://t.me/` and `data-form-handler="mock"`; not in current build output.
+
+---
+
+## Browser QA required
+
+Open:
+
+`file:///C:/AI%20MARS/workspaces/triumph-manipulator-landing-v5/dist/index.html`
+
+Verify:
+
+- Hero visually unchanged
+- Forms open/submit in preview (mock path on `file://`)
+- Submit error copy is readable if tested over HTTP without backend
+- Fonts acceptable on fallback stack (Arial/sans until self-host)
+- Messenger links do not open fake Telegram URL; MAX/Telegram scroll to `#contacts` until operator URLs supplied
+- WhatsApp/phone still work
+
+**No commit. No push.**

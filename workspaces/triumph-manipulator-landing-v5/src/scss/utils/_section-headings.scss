@@ -11,6 +11,10 @@
         font-size: clamp(26px, 7.4vw, 36px);
     }
 
+    @media (max-width: 375px) {
+        font-size: clamp(24px, 7vw, 32px);
+    }
+
     @media (max-width: 360px) {
         font-size: t.$section-h2-font-size-mobile-narrow;
     }
@@ -22,12 +26,16 @@
     @media (max-width: 760px) {
         line-height: 1.14;
     }
+
+    @media (max-width: 420px) {
+        line-height: 1.12;
+    }
 }
 
 @mixin section-h2-overflow-safe {
     max-width: 100%;
     min-width: 0;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
 }

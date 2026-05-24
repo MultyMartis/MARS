@@ -162,7 +162,7 @@
     .landing-footer__contacts a,
     .landing-footer__legal a {
         max-width: 100%;
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
     }
 
     .landing-footer__bottom {
@@ -178,7 +178,7 @@
     }
 
     .landing-footer__requisites small {
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
     }
 }
 

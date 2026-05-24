@@ -31,6 +31,9 @@
     letter-spacing: -0.045em;
     @include headings.section-h2-mobile;
     line-height: 1.1;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: manual;
     text-wrap: pretty;
 }
 
@@ -192,7 +195,7 @@
     .contact-cta__content > p {
         margin-top: 16px;
         font-size: 17px;
-        line-height: 22px;
+        line-height: calc(1em + 4px);
     }
 
     .contact-cta__facts {

@@ -31,6 +31,7 @@ Rules apply to **target project source** (external/local gulp-starter or equival
 ## Layout and UX
 
 - **Responsive discipline:** mobile-first unless handoff specifies otherwise; honor **`responsive_rules`** and design breakpoints.
+- **Russian no word-splitting (mandatory for RU landings):** **Authority** [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md); **QA preset** [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md). No mid-word breaks; fix overflow via layout before word-breaking CSS; do not duplicate full rules here.
 - **Accessibility basics:** focus order, visible focus, accordion `aria-expanded` / `aria-controls`, form errors with appropriate roles when specified.
 - **Assets discipline:** paths under agreed asset roots; lazy-loading rules per handoff; no invented CDN URLs.
 

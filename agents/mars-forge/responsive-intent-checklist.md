@@ -31,6 +31,7 @@ This checklist extends Forge G1 / pre-freeze QA. It does not replace overflow, t
 - [ ] **CTA collapse checked** — primary / secondary / helper CTA hierarchy survives without mobile CTA screaming or burying.
 - [ ] **Visual weight checked** — cards, surfaces, icons, badges, media, and CTAs do not flatten into equal emphasis.
 - [ ] **Operational readability checked** — line length, tap zones, density, and scan path support real mobile use, not only compactness.
+- [ ] **RU no word-splitting checked** — [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md) (mandatory for RU commercial); authority [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md). Generic responsive widths elsewhere are supplementary.
 - [ ] **Responsive drift typed** — any failure uses [`responsive-collapse-taxonomy.md`](../../projects/mars-website-factory/responsive-collapse-taxonomy.md).
 
 ---

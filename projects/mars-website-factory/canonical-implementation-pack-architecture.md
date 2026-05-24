@@ -164,6 +164,7 @@ Before marking design **frozen** for build:
 ### 4.3 Semantic & responsive QA
 
 - **Semantic QA** validates **meaning** and **counts**; **Responsive QA** validates **layout** against rules without breaking semantic order.
+- **Russian commercial landings:** typography/overflow QA — [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md); viewport preset — [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
 
 ### 4.4 Quarantine rules
 

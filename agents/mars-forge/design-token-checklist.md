@@ -8,6 +8,7 @@
 - [Design Token Intelligence Governance](../../projects/mars-website-factory/design-token-intelligence-governance.md)
 - [Token Semantic Layer Model](../../projects/mars-website-factory/token-semantic-layer-model.md)
 - [Token Drift Taxonomy](../../projects/mars-website-factory/token-drift-taxonomy.md)
+- [RU landing QA preset](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md) — when responsive/token QA on **Russian commercial** landings
 
 Use this checklist during Forge QA / pre-freeze when tokens, variables, theme values, local overrides, responsive values, state values, or design-system consistency are in scope.
 

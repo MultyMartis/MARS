@@ -6,6 +6,8 @@
 
 **Not:** automated tier enforcement, **not** a scoring engine, **not** governance expansion.
 
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 ---
 
 ## Tier model
@@ -61,7 +63,9 @@ All from [implementation-extraction-discipline-v1.md](implementation-extraction-
 
 ## Responsive requirements
 
-- Spot-check **375 / 768 / desktop** before tier ≥ validated  
+**Supplementary generic responsive validation only** — spot-check **375 / 768 / desktop** before tier ≥ validated.  
+**For RU commercial landings use:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) + `RU TYPOGRAPHY / NO WORD-SPLITTING` REPORT line.
+
 - Primary CTA visible at 375 for conversion blocks  
 - No mandatory horizontal scroll for core content  
 - Record gaps as **SAFE UNKNOWN** in extraction REPORT

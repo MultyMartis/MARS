@@ -6,6 +6,8 @@
 
 **Related:** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md), [`../../AGENTS.md`](../../AGENTS.md).
 
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md). Frontend/QA REPORT **PASS is not complete** without `RU TYPOGRAPHY / NO WORD-SPLITTING` verification.
+
 ---
 
 ## 1. Purpose
@@ -89,10 +91,12 @@ Used for: frontend source-first edits per [frontend-prompt-discipline-v0.md](fro
 Required:
 
 - Created files, Updated files (under `src/...`), Artifact changes (frontend handoff anchor), Verification results (`gulp build` outcome if run; viewport spot-check if performed), SAFE UNKNOWN (CI, hosting, exact build command), Git status, Runtime exclusions, Push status.
+- **RU commercial landings:** `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN` per [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
 
 Forbidden:
 
 - Hand-edits to `dist/`.
+- RU commercial landing QA **PASS** without RU typography / no word-splitting verification.
 - Claims of CI green without evidence ([safe-unknown-boundary.md](safe-unknown-boundary.md)).
 - Claims of deploy.
 
@@ -103,10 +107,12 @@ Used for: QA prompts ([qa-prompt-rules-v0.md](qa-prompt-rules-v0.md)).
 Required:
 
 - Subject artifact_id, Lane (Design / SEO / Conversion / Frontend / Validator), Categories, Findings (per [qa-result-payloads-v0.md](qa-result-payloads-v0.md) field vocabulary), Severity rollup, HITL flags, SAFE UNKNOWN list, Recommendation (pass / fail / conditional), Verification results.
+- **RU commercial Frontend QA:** `RU TYPOGRAPHY / NO WORD-SPLITTING` line required for **pass** recommendation.
 
 Forbidden:
 
 - Auto-waiver of blockers (waivers require HITL).
+- Frontend QA **pass** on RU commercial landings without RU typography verification.
 - Severity inflation/deflation without evidence.
 - “Pass with reservations” without enumerated findings.
 

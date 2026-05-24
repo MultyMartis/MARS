@@ -6,6 +6,8 @@
 
 **Related:** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [artifact-transfer-prompt-rules-v0.md](artifact-transfer-prompt-rules-v0.md), [website-factory-workflow-v0.md](website-factory-workflow-v0.md), [`../../workflows/task-contract-v0.md`](../../workflows/task-contract-v0.md).
 
+**RU commercial landings:** Frontend QA prompts must route to [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 ---
 
 ## 1. Purpose
@@ -320,6 +322,7 @@ escalation rules:
 reporting requirements:
   QA report with categories, evidence, severity, waiver flags,
   HITL required flag, SAFE UNKNOWN list, no fake pass.
+  RU commercial: RU TYPOGRAPHY / NO WORD-SPLITTING line per ru-landing-qa-preset-v1.md.
 ```
 
 ### 4.5 Frontend execution prompt — section partial
@@ -355,7 +358,8 @@ artifacts out:
   - HTML partial, SCSS partial, scoped JS hook
 
 QA expectations:
-  - Frontend QA lane: build, semantics, a11y, responsive (375 / 768 / 1280)
+  - Frontend QA lane: build, semantics, a11y, responsive (375 / 768 / 1280 — supplementary generic only)
+  - RU commercial: ru-landing-qa-preset-v1.md mandatory
 
 escalation rules:
   - unsupported framework requirement -> STRUCTURE CHANGE

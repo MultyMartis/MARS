@@ -6,6 +6,8 @@
 
 **Related:** [frontend-production-model.md](frontend-production-model.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [section-payload-model-v0.md](section-payload-model-v0.md), [block-registry-v0.md](block-registry-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md), [`../../agents/frontend-gulp-agent/README.md`](../../agents/frontend-gulp-agent/README.md) (Gulp Frontend Agent operational doc pack), [`../../agents/mars-forge/semantic-source-lock.md`](../../agents/mars-forge/semantic-source-lock.md) (when **MARS Forge** overlay applies).
 
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); typography authority [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
+
 ---
 
 ## 1. Purpose
@@ -187,7 +189,8 @@ Rules:
 
 - **Mobile-first** per design tokens.
 - **Breakpoints** documented in the handoff `responsive_rules` field.
-- **QA viewports** typically 375 / 768 / 1280 (project-adjustable) per Frontend QA lane ([qa-prompt-rules-v0.md](qa-prompt-rules-v0.md) §11.4).
+- **QA viewports** typically 375 / 768 / 1280 (project-adjustable) per Frontend QA lane ([qa-prompt-rules-v0.md](qa-prompt-rules-v0.md) §11.4) — **supplementary generic responsive validation only.**
+- **RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) (mandatory widths + typography checks).
 - **Sticky / off-canvas** behaviors clearly bounded by viewport range.
 - **Print styles** out of scope by default; require explicit prompt.
 
@@ -199,7 +202,7 @@ Frontend prompts produce artifacts that face **Frontend QA** (S12). The executio
 
 - **Build success** — local `gulp build` (or agreed task) result captured in the REPORT;
 - **Markup semantics** — single H1, landmark elements, heading order;
-- **Responsive spot-checks** — viewports per project;
+- **Responsive spot-checks** — viewports per project; **RU commercial:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) + `RU TYPOGRAPHY / NO WORD-SPLITTING` REPORT line;
 - **Link / asset paths** — relative paths resolve in the build output;
 - **A11y heuristics** — focus management, ARIA labels for interactive elements, color contrast intent;
 - **Performance heuristics** — LCP element discipline, lazy below-fold assets, deferred non-critical JS;

@@ -20,16 +20,24 @@
 
 ## Compact pass (~15 min)
 
-**Source:** [reference-workspace-qa-flow-v1.md](reference-workspace-qa-flow-v1.md) (unchanged checklist).
+**Checklist body:** [reference-workspace-qa-flow-v1.md](reference-workspace-qa-flow-v1.md).
+
+**Russian commercial landings (mandatory):** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) — all preset widths + typography checks. Authority: [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
 
 ```text
-npm run build → open dist → 375 / 768 / desktop → modal → form → sticky (if any) → overflow/z-index spot
+npm run build → open dist → RU preset widths (if RU commercial) → modal → form → sticky (if any) → overflow/z-index spot → supplementary 375/768/desktop (reference flow)
 ```
 
-REPORT line:
+REPORT lines:
 
 ```text
 Verification: operational QA entry v1 → reference-workspace-qa-flow v1 — PASS | partial | SAFE UNKNOWN
+```
+
+For **Russian commercial landings**, also:
+
+```text
+RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOWN (widths not tested)
 ```
 
 ---
@@ -84,4 +92,4 @@ Lite / Standard / extraction / swap formats.
 - [page-blueprint-qa-checklist-v0.md](page-blueprint-qa-checklist-v0.md) — blueprinting tasks only  
 - Governance drift taxonomies — Tier 3
 
-*Wave 5 — one QA entry surface.*
+*Wave 5 — one QA entry surface; RU typography stabilized 2026-05-24.*

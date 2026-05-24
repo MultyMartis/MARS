@@ -18,6 +18,8 @@ This directory is the **MARS Frontend Gulp Agent operational documentation pack*
 - [`../../projects/mars-website-factory/frontend-production-model.md`](../../projects/mars-website-factory/frontend-production-model.md)
 - [`../../projects/mars-website-factory/frontend-handoff-contract-v0.md`](../../projects/mars-website-factory/frontend-handoff-contract-v0.md)
 - [`../../projects/mars-website-factory/frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md)
+- [`../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md`](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md) — RU typography **authority**
+- [`../../projects/mars-website-factory/ru-landing-qa-preset-v1.md`](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md) — RU commercial landing QA preset
 - [`../../projects/mars-website-factory/first-operational-runbook-v0.md`](../../projects/mars-website-factory/first-operational-runbook-v0.md)
 - [`../../projects/mars-website-factory/operator-session-template-v0.md`](../../projects/mars-website-factory/operator-session-template-v0.md)
 

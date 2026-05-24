@@ -12,6 +12,8 @@
 | [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) | Per-page requirements and forbidden patterns |
 | [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) | Cursor prompt law for Stage 11 |
 | [font-awesome-governance-layer.md](font-awesome-governance-layer.md) | Lightweight Font Awesome semantics, style consistency, and icon drift discipline |
+| [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) | **Authority** — RU no word-splitting CSS + selective `&nbsp;` typography |
+| [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | **Canonical** RU commercial landing QA widths + checks |
 
 **Registry index:** [registries.md §6](registries.md#6-frontend-production-rules).
 
@@ -96,6 +98,22 @@ Before closing a frontend session:
 - **Gulp Frontend Agent** is an **`operational_doc_pack`** — not proof of in-repo Gulp runtime, not autonomous deployment, not a MARS orchestration product.
 - Future automated mapping to Tool Layer → **planned only**; must still respect source-first and handoff contracts.
 
+## 12. Russian no word-splitting typography (mandatory for RU landings)
+
+**Authority:** [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) — full forbidden CSS, protected selectors, selective `&nbsp;` ties, overflow policy. **Do not** duplicate rules here.
+
+**RU QA preset:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) — mandatory widths and checks for **Russian commercial landings**; generic responsive QA lists are supplementary only.
+
+**Operator summary:** Russian words must not break inside the word; fix overflow with layout (`min-width: 0`, containers, grid) before word-breaking CSS; no `&nbsp;` chains between every heading word.
+
+**REPORT line:**
+
+```text
+RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOWN (widths not tested)
+```
+
+**Reference case (signal only, not copy source):** [`workspaces/triumph-manipulator-landing-v5/reports/v5-typography-no-word-splitting-pass-2-report-v1.md`](../../workspaces/triumph-manipulator-landing-v5/reports/v5-typography-no-word-splitting-pass-2-report-v1.md).
+
 ---
 
 ## Changelog
@@ -104,3 +122,5 @@ Before closing a frontend session:
 |------|--------|
 | 2026-05-15 | v0 — consolidation doc (Phase C); satisfies [registries.md §6](registries.md#6-frontend-production-rules). |
 | 2026-05-16 | Added Font Awesome governance pointer and compact icon discipline rules. |
+| 2026-05-24 | §12 — Russian no word-splitting typography (mandatory); links Triumph V5 reference case. |
+| 2026-05-24 | §12 stabilization — authority lock + [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); rule prose not duplicated. |

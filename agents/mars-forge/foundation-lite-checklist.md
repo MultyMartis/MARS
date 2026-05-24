@@ -4,6 +4,8 @@
 **QA routing (Wave 5):** [operational-qa-entry-v1.md](../../projects/mars-website-factory/operational-qa-entry-v1.md) — default session entry.  
 **Not:** full Forge catalog; **not** governance expansion.
 
+**RU commercial landings:** RU typography governance is **always in scope** — do not skip typography validation because of Lite flow. Use [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md); authority [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md).
+
 **Reference:** [website-factory-reference-v1](../../workspaces/website-factory-reference-v1/) · [foundation-systems/README.md](../../projects/mars-website-factory/foundation-systems/README.md).
 
 Record failures as **`FOUNDATION FINDINGS`** in REPORT (max 5 bullets).
@@ -14,7 +16,7 @@ Record failures as **`FOUNDATION FINDINGS`** in REPORT (max 5 bullets).
 
 - [ ] **Tokens:** section SCSS uses semantic tokens / variables — no stray `#hex` or raw `24px` for spacing rhythm without reason.
 - [ ] **Z-index:** no literal `z-index: 999` (or similar) in section files — use `_layers.scss` tokens.
-- [ ] **Overflow:** 375px spot check — no new horizontal scroll on touched page.
+- [ ] **Overflow:** 375px spot check — no new horizontal scroll on touched page. **Supplementary generic responsive validation only.** **RU commercial:** run [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md).
 - [ ] **Lifecycle:** `data-module` nodes have single owner; `destroySection` (or equivalent) planned before partial swap; no duplicate submit/modal bind after re-init.
 - [ ] **Replacement:** section root keeps `data-section` + `data-block-id`; global `foundations/*` change called out as Critical in REPORT.
 - [ ] **Modal:** openers use `button[type=button]` + `data-modal-open`; ESC/body lock not broken by slice.
@@ -24,6 +26,6 @@ Record failures as **`FOUNDATION FINDINGS`** in REPORT (max 5 bullets).
 
 ## Lite scope rule
 
-If none of the above apply (copy-only, no hooks/foundations), **skip** this checklist — do not run for trivia.
+If none of the above apply (copy-only, no hooks/foundations), **skip** this checklist — do not run for trivia. **Exception:** **RU commercial landings** — RU typography / no word-splitting validation remains mandatory via [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md).
 
 *Wave 3 — Forge Lite foundation surface.*

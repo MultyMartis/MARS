@@ -6,6 +6,8 @@
 
 **Related:** [qa-validation-model.md](qa-validation-model.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md), [page-blueprint-qa-checklist-v0.md](page-blueprint-qa-checklist-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md).
 
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); typography authority [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
+
 ---
 
 ## 1. Purpose
@@ -212,7 +214,8 @@ Each lane:
 - Subject: frontend source + built static pages.
 - Compares against: [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md) (QA_requirements, accessibility, performance heuristic), [frontend-production-model.md](frontend-production-model.md), [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md).
 - Findings: build outcome, markup semantics, viewport spot-check, link/asset paths, JS scope.
-- Forbidden: hand-patching `dist/`; claiming CI green without evidence; claiming deploy.
+- **RU commercial landings:** run [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); REPORT must include `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN`.
+- Forbidden: hand-patching `dist/`; claiming CI green without evidence; claiming deploy; RU commercial Frontend QA PASS without RU typography verification.
 
 ---
 

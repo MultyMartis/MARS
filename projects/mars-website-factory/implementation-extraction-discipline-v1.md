@@ -6,6 +6,8 @@
 
 **Not:** automated extraction tooling.
 
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 ---
 
 ## When a block is reusable
@@ -19,7 +21,7 @@ Promote to reference / Factory library only if **all** pass:
 | **Survivability** | `data-section` + destroy/init safe (or static-only with no leaked listeners) |
 | **Token hygiene** | No hardcoded client brand in SCSS — uses foundation tokens |
 | **Content neutral** | Copy is placeholder/demo — no client PII, trademarks, fake metrics |
-| **Responsive** | 375 / 768 / desktop checked — no mandatory horizontal scroll |
+| **Responsive** | 375 / 768 / desktop checked — supplementary generic only; **RU commercial:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) — no mandatory horizontal scroll |
 | **Forge compatible** | Fits Gulp partial + scoped SCSS + optional `data-module` |
 | **Conversion ownership** | Primary CTA path documented per conversion-blocks-v2 |
 
@@ -117,7 +119,8 @@ If any fail → keep in **project workspace only**; log gap in REPORT.
 - Source: <workspace slug> — block_id `pricing` (structure only)
 - Neutralized: copy, logos, endpoint
 - Added to reference: partial + scss + (js if any)
-- Checks: 375/768/desktop PASS | SAFE UNKNOWN
+- Checks: 375/768/desktop PASS | SAFE UNKNOWN (supplementary generic only)
+- RU commercial: RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN | N/A
 - Not promoted: <reason if declined>
 ```
 

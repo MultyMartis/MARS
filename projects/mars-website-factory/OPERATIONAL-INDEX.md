@@ -29,7 +29,7 @@
 
 - **[operational-consolidation-map-v1.md](operational-consolidation-map-v1.md)** — **Wave 6 single routing layer** (blocks, extraction, QA, freeze, pilot).
 - **[onboarding-flow-v1.md](onboarding-flow-v1.md)** — **Wave 4–5 ordered path** (new operator / workspace / task).
-- **[operational-qa-entry-v1.md](operational-qa-entry-v1.md)** — **Wave 5 single QA surface** (default after build).
+- **[operational-qa-entry-v1.md](operational-qa-entry-v1.md)** — **Wave 5 single QA surface** (default after build). **RU commercial:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
 - **[frontend-operator-quickstart-v1.md](frontend-operator-quickstart-v1.md)** — frontend SoT, workspace, Forge Lite, forbidden paths.
 - **[README.md](README.md)** — pack identity, honesty boundary, **Pack index** (full list; search / archival — not default session read).
 
@@ -86,7 +86,7 @@ Open a **domain row** only when Core Run or a contract citation requires it.
 | **Design token intelligence** | [design-token-intelligence-governance.md](design-token-intelligence-governance.md), [token-semantic-layer-model.md](token-semantic-layer-model.md), [token-drift-taxonomy.md](token-drift-taxonomy.md) |
 | **Implementation reliability** | [implementation-reliability-governance.md](implementation-reliability-governance.md), [frontend-stability-model.md](frontend-stability-model.md), [implementation-drift-taxonomy.md](implementation-drift-taxonomy.md) |
 | **Visual intent (human read)** | [visual-reconciliation-layer.md](visual-reconciliation-layer.md), [visual-drift-taxonomy.md](visual-drift-taxonomy.md) |
-| **Cadence / rhythm** | [canonical-vertical-cadence-system.md](canonical-vertical-cadence-system.md), [cadence-tier-model.md](cadence-tier-model.md), [typography-rhythm-governance.md](typography-rhythm-governance.md), [vertical-rhythm-governance.md](vertical-rhythm-governance.md) |
+| **Cadence / rhythm** | [canonical-vertical-cadence-system.md](canonical-vertical-cadence-system.md), [cadence-tier-model.md](cadence-tier-model.md), [typography-rhythm-governance.md](typography-rhythm-governance.md), [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md), [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md), [vertical-rhythm-governance.md](vertical-rhythm-governance.md) |
 | **Responsive intent** | [responsive-intent-governance.md](responsive-intent-governance.md), [mobile-composition-preservation.md](mobile-composition-preservation.md), [responsive-collapse-taxonomy.md](responsive-collapse-taxonomy.md) |
 | **Icon semantics / FA** | [font-awesome-governance-layer.md](font-awesome-governance-layer.md) |
 | **Composition vs DOM** | [compositional-structure-awareness.md](compositional-structure-awareness.md), [composition-drift-taxonomy.md](composition-drift-taxonomy.md) |

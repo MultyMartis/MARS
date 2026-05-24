@@ -9,7 +9,8 @@ Use after **source** edits in the **target** gulp-starter (or equivalent) projec
 
 ## Layout and responsive
 
-- [ ] **Responsive check:** spot widths from handoff **`responsive_rules`** (e.g. 375 / 768 / 1280) or project default list.
+- [ ] **Responsive check:** spot widths from handoff **`responsive_rules`** (e.g. 375 / 768 / 1280) — **supplementary** unless project is non-RU.
+- [ ] **RU typography / no word-splitting (RU commercial — mandatory):** run [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md); authority [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md). REPORT: `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN`.
 - [ ] **Overflow check:** horizontal scroll, sticky/fixed elements not clipping tap targets.
 
 ## Markup and accessibility

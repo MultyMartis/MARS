@@ -71,7 +71,7 @@
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.1;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
     text-wrap: pretty;
@@ -119,7 +119,7 @@
     min-width: 0;
     color: rgba(9, 15, 27, 0.76);
     font-size: clamp(17px, 1.18vw, 19px);
-    line-height: 23px;
+    line-height: calc(1em + 4px);
 }
 
 .machine-showcase__specs i {
@@ -136,9 +136,15 @@
     font-family: t.$font-display;
     font-size: clamp(26px, 2.45vw, 38px);
     font-weight: 600;
-    line-height: 42px;
+    line-height: calc(1em + 4px);
     min-width: 0;
-    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+@media (min-width: 761px) {
+    .machine-showcase__specs dd {
+        white-space: nowrap;
+    }
 }
 
 .machine-transport {
@@ -292,10 +298,10 @@
         min-width: 0;
         font-size: clamp(24px, 6.8vw, 34px);
         line-height: 1.14;
-        overflow-wrap: break-word;
+        overflow-wrap: normal;
 
         span {
-            overflow-wrap: break-word;
+            overflow-wrap: normal;
         }
     }
 
@@ -308,7 +314,7 @@
 
     .machine-showcase__specs dd {
         white-space: normal;
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
     }
 
     .machine-showcase {

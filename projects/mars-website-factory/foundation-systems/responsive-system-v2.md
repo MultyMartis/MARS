@@ -4,6 +4,8 @@
 
 **Default posture:** **mobile-first** (`min-width` media queries) per [frontend-production-rules-v0.md](../frontend-production-rules-v0.md).
 
+**RU commercial landings:** QA widths and typography checks are **authoritative** in [ru-landing-qa-preset-v1.md](../ru-landing-qa-preset-v1.md). Generic viewport lists (e.g. 375 / 768 / 1280) in handoff or visual regression docs are **supplementary** only.
+
 ---
 
 ## 1. Canonical breakpoints
@@ -94,7 +96,7 @@ Prefer `clamp()` for hero H1; use discrete steps for nav/footer.
 | Check | Rule |
 |-------|------|
 | Images | `max-width: 100%`, `height: auto` on content images |
-| Long words | `overflow-wrap: anywhere` on narrow columns |
+| Long words / unbroken strings | `overflow-wrap: break-word` on **long body copy only** (paragraphs, FAQ bodies, legal) — **not** on body default, headings, or UI. **Forbidden:** `anywhere`, `break-all`, global body `break-word`. See [russian-no-word-splitting-typography-v1.md](../russian-no-word-splitting-typography-v1.md). |
 | Flex children | `min-width: 0` on flex items with text |
 | Fixed widths | Forbidden on `.container` children unless handoff |
 | 100vw hacks | Account for scrollbar — prefer `100%` on section wrapper |
@@ -105,7 +107,8 @@ Prefer `clamp()` for hero H1; use discrete steps for nav/footer.
 
 Before freeze after replace:
 
-- 375px and 768px: no horizontal scroll on touched page
+- **RU commercial:** run [ru-landing-qa-preset-v1.md](../ru-landing-qa-preset-v1.md) widths (supersedes generic two-width spot-check for typography).
+- 375px and 768px (supplementary): no horizontal scroll on touched page
 - Primary CTA still visible or one scroll max (judgment — document)
 - Adjacent section gaps unchanged unless charter says so
 - `data-*` hooks still match JS module selectors

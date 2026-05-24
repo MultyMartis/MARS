@@ -6,6 +6,7 @@
 **Website Factory layers:**
 
 - [Typography Rhythm Governance](../../projects/mars-website-factory/typography-rhythm-governance.md)
+- [Russian No Word-Splitting Typography v1](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md)
 - [Vertical Rhythm Governance](../../projects/mars-website-factory/vertical-rhythm-governance.md)
 - [Canonical Vertical Cadence System](../../projects/mars-website-factory/canonical-vertical-cadence-system.md)
 - [Cadence Tier Model](../../projects/mars-website-factory/cadence-tier-model.md)
@@ -32,6 +33,7 @@ Use this checklist during Forge QA / pre-freeze when a section or screen slice h
 - [ ] Heading scale descends predictably from hero to supporting sections.
 - [ ] Section title → subtitle → body spacing is consistent with source / pack.
 - [ ] Heading wraps at mobile widths preserve readability and hierarchy.
+- [ ] **No mid-word splits (RU):** run [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md); authority [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md).
 - [ ] Similar section roles do not use unrelated heading cadence unless source clearly requires it.
 - [ ] Visual reconciliation confirms headings read with intended emphasis, not merely correct tags.
 
@@ -122,7 +124,20 @@ Disposition:
 
 ---
 
-## 10. Not Claimed
+## 10. Word-splitting / RU typography checks
+
+**Authority:** [russian-no-word-splitting-typography-v1.md](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md) — full CSS/HTML rules; **do not** duplicate here.  
+**QA preset:** [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md) — mandatory widths and checks for Russian commercial landings.
+
+- [ ] Preset widths run; no mid-word splits; no horizontal overflow; headings/CTA/FAQ/forms per preset.
+- [ ] No forbidden overflow CSS on UI (see authority — `anywhere`, `break-all`, global body `break-word`, UI `break-word`).
+- [ ] Orphan/headline fixes: layout and selective ties only — no `nowrap` / `&nbsp;` chains / word fragmentation (typography-rhythm C-04/C-05).
+
+Include: `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN`.
+
+---
+
+## 11. Not Claimed
 
 - No automatic line-height linting.
 - No automatic spacing token enforcement.

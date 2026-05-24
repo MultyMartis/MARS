@@ -81,6 +81,8 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **Examples** | “Edit `src` only”; “no new global `window.*` without review”; BEM or agreed naming |
 | **Anti-patterns** | Framework lock-in contradicting static profile without decision record; global pollution |
 | **Relations** | **Gulp Frontend Agent**; **Frontend QA Agent**; **Validator** for secrets and dangerous patterns |
+| **RU typography (authority)** | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) |
+| **RU landing QA preset** | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) — mandatory widths for Russian commercial landings |
 
 ---
 

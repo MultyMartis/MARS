@@ -5,6 +5,7 @@ Reusable **shapes** for frontend work. Replace `<TARGET_ROOT>`, `<HANDOFF_ID>`, 
 **Common footer for every pattern (append):**
 
 - End with `# REPORT — <task>` per [`reporting.md`](reporting.md).
+- For **RU commercial** landings include: `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN` per [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md).
 - State **git status** after edits; **Push status:** `not requested` unless told otherwise.
 - List **Runtime exclusions** if any paths were intentionally untouched.
 

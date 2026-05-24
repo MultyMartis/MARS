@@ -32,7 +32,7 @@
 
 **Cadence layer (human-supervised, pre-freeze):** [`cadence-governance-checklist.md`](cadence-governance-checklist.md) — inter-screen spacing as narrative pacing; cadence continuity, transition pacing, density stacks, footer closure, mobile cadence survivability; record `CADENCE FINDINGS`.
 
-**Rhythm layer (human-supervised, pre-freeze):** [`rhythm-governance-checklist.md`](rhythm-governance-checklist.md) — typography cadence, section spacing, density continuity, CTA/mobile/dark-light transition rhythm; record `RHYTHM FINDINGS`.
+**Rhythm layer (human-supervised, pre-freeze):** [`rhythm-governance-checklist.md`](rhythm-governance-checklist.md) — typography cadence, **RU no word-splitting**, section spacing, density continuity, CTA/mobile/dark-light transition rhythm; record `RHYTHM FINDINGS`.
 
 **Transition continuity / footer context / iconography / overlay focal layer (human-supervised, bootstrap and pre-freeze):** Website Factory governance for system-owned rhythm, same-background collapse, different-background reset rhythm, commercial continuity spacing, footer role classification, Font Awesome startup readiness, semantic iconography, operational icon selection, overlay balance, and focal-region survivability; record `TRANSITION CONTINUITY FINDINGS`, `FOOTER CONTEXT FINDINGS`, `ICONOGRAPHY FINDINGS`, `OVERLAY BALANCE FINDINGS`, and `FOCAL-POINT FINDINGS`.
 

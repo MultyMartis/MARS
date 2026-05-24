@@ -49,10 +49,16 @@ Record gaps as **HARDENING FINDINGS** in REPORT (max 8 bullets).
 
 ## Overflow edge cases
 
+Overflow fixes on **RU landings** **must** follow [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md). Spot-check widths: [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+
 - `body { overflow-x: hidden }` is not a substitute for fixing wide children.  
 - Cards/grids: `min-width: 0` on flex/grid children.  
 - Modal open: verify no double scrollbar (body lock).  
-- Long unbroken strings: `overflow-wrap: anywhere` on user content regions.
+- Long unbroken strings (URLs, hashes, user paste): `overflow-wrap: break-word` **only** on long body-copy regions — **not** on `body`, headings, buttons, nav, cards, or CTA.
+
+**Forbidden (RU and UI):** `overflow-wrap: anywhere`, `word-break: break-word`, `word-break: break-all`, global `break-word` on `body`, layout fixes through word fragmentation.
+
+**Preferred:** layout/grid fixes, `min-width: 0`, container adjustments, selective body-copy wrapping only (per authority).
 
 ---
 

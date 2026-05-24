@@ -4,7 +4,7 @@
 **Standard:** [reporting-standard-v0.md](../reporting-standard-v0.md).  
 **Modes:** [forge-operational-modes-v1.md](../../agents/mars-forge/forge-operational-modes-v1.md).
 
-**Not:** real session logs; **not** evidence of a specific run.
+**Not:** real session logs; **not** evidence of a specific run. Viewport examples (375 / 768 / desktop) are **supplementary generic responsive validation only**. **For RU commercial landings use:** [ru-landing-qa-preset-v1.md](../ru-landing-qa-preset-v1.md).
 
 ---
 

@@ -27,7 +27,9 @@ Catch layout regressions after section swap, token change, or migration — with
 
 ## Breakpoint capture discipline
 
-Capture **three widths** minimum per slice:
+**RU commercial landings:** typography and overflow QA widths are **authoritative** in [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md). The three-width table below is a **supplementary** screenshot minimum for layout regression — not a substitute for the RU preset.
+
+Capture **three widths** minimum per slice (supplementary):
 
 | Viewport | Width | Required states |
 |----------|-------|-----------------|

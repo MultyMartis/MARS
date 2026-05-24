@@ -27,7 +27,7 @@
 |--------|-----------|---------------------------|
 | **Tokens** | SCSS variables/maps: color, type, space, radius, shadow, z-index — semantic names (`$cta-primary`, not `$blue-2`) | Align [token-semantic-layer-model.md](token-semantic-layer-model.md); single `_tokens.scss` entry |
 | **Spacing** | Cadence tiers XS–XL for **inter-section**; internal section spacing via component scale | [cadence-tier-model.md](cadence-tier-model.md) |
-| **Typography** | `line-height = font-size + 4px` rhythm preference; heading scale locked in implementation pack | [typography-rhythm-governance.md](typography-rhythm-governance.md) |
+| **Typography** | `line-height = font-size + 4px` rhythm preference; heading scale locked in implementation pack | [typography-rhythm-governance.md](typography-rhythm-governance.md); RU word-splitting — [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) |
 | **Responsive** | Mobile-first breakpoints from handoff; collapse taxonomy for QA | [responsive-intent-governance.md](responsive-intent-governance.md) |
 | **Forms** | Field groups, labels, validation states, error summary, keyboard order — **state classes** not inline style | Blueprint phase 2 — shared `_forms.scss` + `data-form` module |
 | **Modals** | Focus trap, scroll lock, `aria-modal`, restore focus, ESC close — one `data-modal` controller | Blueprint phase 2 — no duplicate modal JS per page |

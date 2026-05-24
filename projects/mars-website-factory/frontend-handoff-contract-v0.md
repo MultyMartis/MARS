@@ -133,7 +133,7 @@ Each frontend handoff is a **logical document** (one instance per page or canoni
 | **SEO_markup_requirements** | Title/description copy slots match blueprint; FAQ schema only if FAQ partial renders full Q&A text. |
 | **integration_notes** | Placeholder GA4 `data-analytics` attributes; **no** CMS — content is static includes. |
 | **forbidden_patterns** | No hand patches under `dist/`; no new `window.*` without tech lead note in **SAFE_UNKNOWN_notes** if experimental. |
-| **QA_requirements** | `gulp build` clean; link checker on internal anchors; spot-check 375 / 768 / 1280; tel: links valid. |
+| **QA_requirements** | `gulp build` clean; link checker on internal anchors; spot-check 375 / 768 / 1280 (supplementary); **RU commercial** → [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) + [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md); tel: links valid. |
 | **HITL_required** | `selective` — legal copy in form footer. |
 | **SAFE_UNKNOWN_notes** | Exact repo path for `gulp-starter` clone **unknown** in this monorepo; CI job name **TBD**. |
 

@@ -9,7 +9,7 @@ Ordered flow for a **material** frontend implementation slice. Adjust step label
 3. **Plan sections/components** — One prompt-friendly slice at a time (prefer one `block_id` / section per prompt per [`frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md)).
 4. **Implement source files** — Edit only allowed paths under the project’s source tree; match handoff order and naming.
 5. **Run build** — If the repo provides a build script and the prompt scope includes verification, run it and capture **honest** outcome (log excerpt or exit code).
-6. **Run QA** — Apply [`qa-checklist.md`](qa-checklist.md); record pass/fail/partial with evidence.
+6. **Run QA** — Apply [`qa-checklist.md`](qa-checklist.md); for **RU commercial** landings run [ru-landing-qa-preset-v1.md](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md); record pass/fail/partial with evidence.
 7. **Report** — Emit a REPORT per [`reporting.md`](reporting.md) and factory [`reporting-standard-v0.md`](../../projects/mars-website-factory/reporting-standard-v0.md) §4.2.
 8. **HITL review** — Pause when handoff **`HITL_required`** or findings demand sign-off (legal copy, a11y risk, structural change).
 9. **Checkpoint** — Git commit / merge checkpoint **only** if policy and HITL approve; never silent commit or `git add .` (see [`constraints.md`](constraints.md)).
