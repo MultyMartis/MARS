@@ -124,6 +124,21 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 **Intake drop zone:** `incoming/orca/<project-id>-raw-pack/` (see intake architecture).
 
+## ORCA Route Family Freeze v1
+
+**Triumph Manipulator** — production semantic route family frozen 2026-05-28 (12/12 packs, pre-implementation rollout). **Not** launch approval, **not** runtime.
+
+| Doc | Role |
+|-----|------|
+| [freeze/route-family-freeze-v1/ORCA-ROUTE-FAMILY-FREEZE-v1.md](freeze/route-family-freeze-v1/ORCA-ROUTE-FAMILY-FREEZE-v1.md) | Main freeze — family complete, differentiation, pack format, ORCA ↔ Factory |
+| [freeze/route-family-freeze-v1/ROUTE-FAMILY-INDEX-v1.md](freeze/route-family-freeze-v1/ROUTE-FAMILY-INDEX-v1.md) | Per-route table (semantic class, tone, trust, CTA, Factory/mobile/calibration) |
+| [freeze/route-family-freeze-v1/ROLLUP-STATUS-v1.md](freeze/route-family-freeze-v1/ROLLUP-STATUS-v1.md) | READY vs PENDING rollup |
+| [freeze/route-family-freeze-v1/SURVIVABILITY-CHECKPOINT-v1.md](freeze/route-family-freeze-v1/SURVIVABILITY-CHECKPOINT-v1.md) | Git/backup checkpoint — label `orca-route-family-freeze-v1` |
+| [freeze/route-family-freeze-v1/FACTORY-HANDOFF-STATE-v1.md](freeze/route-family-freeze-v1/FACTORY-HANDOFF-STATE-v1.md) | Factory vs ORCA roles at handoff |
+| [freeze/route-family-freeze-v1/KNOWN-OPEN-ITEMS-v1.md](freeze/route-family-freeze-v1/KNOWN-OPEN-ITEMS-v1.md) | Open items + SAFE UNKNOWN register |
+
+**Coordination (live):** [coordination/remaining-routes-status-matrix-v1.md](coordination/remaining-routes-status-matrix-v1.md) · [coordination/route-priority-roadmap-v1.md](coordination/route-priority-roadmap-v1.md)
+
 ## Project operational packs
 
 - `ppc/triumph-manipulator/` - Triumph Manipulator search PPC pack (doctrine, intent tiers, landing blueprints, Commander export foundation). Start: `ppc/triumph-manipulator/OPERATIONAL-INDEX.md`. Relationship to Intelligence Foundation: [ppc/triumph-manipulator/TRIUMPH-RELATIONSHIP-TO-INTELLIGENCE-v0.md](ppc/triumph-manipulator/TRIUMPH-RELATIONSHIP-TO-INTELLIGENCE-v0.md).
