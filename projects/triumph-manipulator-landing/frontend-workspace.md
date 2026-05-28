@@ -2,9 +2,13 @@
 
 ## Recommended local path
 
-**`C:\AI MARS\workspaces\triumph-manipulator-landing\`**
+**`C:\AI MARS\workspaces\triumph-manipulator-landing-v6\`** (active rollout base, 2026-05-28)
+
+Historical: `workspaces/triumph-manipulator-landing-v5/` (mailer MVP freeze), `workspaces/triumph-manipulator-landing/` (V1 legacy).
 
 This directory is the **local working area** for frontend implementation. It is intentionally **not** the MARS documentation pack under `projects/triumph-manipulator-landing/`.
+
+**Canonical rules:** [`TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](TRIUMPH-V6-CURRENT-FRONTEND-RULES.md)
 
 ## Intended use (later)
 

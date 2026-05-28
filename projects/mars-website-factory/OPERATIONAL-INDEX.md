@@ -29,7 +29,7 @@
 
 - **[operational-consolidation-map-v1.md](operational-consolidation-map-v1.md)** — **Wave 6 single routing layer** (blocks, extraction, QA, freeze, pilot).
 - **[onboarding-flow-v1.md](onboarding-flow-v1.md)** — **Wave 4–5 ordered path** (new operator / workspace / task).
-- **[operational-qa-entry-v1.md](operational-qa-entry-v1.md)** — **Wave 5 single QA surface** (default after build). **RU commercial:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md).
+- **[operational-qa-entry-v1.md](operational-qa-entry-v1.md)** — **Wave 5 single QA surface** (default after build). **RU commercial:** [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md). **Anti-drift invariants:** [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md).
 - **[frontend-operator-quickstart-v1.md](frontend-operator-quickstart-v1.md)** — frontend SoT, workspace, Forge Lite, forbidden paths.
 - **[README.md](README.md)** — pack identity, honesty boundary, **Pack index** (full list; search / archival — not default session read).
 
@@ -45,6 +45,7 @@ Open **one row** below unless the task explicitly needs Extended governance.
 | **Workflow / human run** | [first-operational-runbook-v0.md](first-operational-runbook-v0.md) → [website-factory-workflow-v0.md](website-factory-workflow-v0.md), [workflow-map.md](workflow-map.md) |
 | **Design → implementation law** | [design-governance-layer.md](design-governance-layer.md), [canonical-implementation-pack-architecture.md](canonical-implementation-pack-architecture.md) |
 | **Frontend & Forge** | **See [Frontend & Forge](#frontend--forge-canonical-once)** — Gulp foundation + Forge overlay + factory contracts |
+| **Triumph Manipulator (active client)** | [`projects/triumph-manipulator-landing/TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](../triumph-manipulator-landing/TRIUMPH-V6-CURRENT-FRONTEND-RULES.md) · workspace `workspaces/triumph-manipulator-landing-v6/` · rollout [`V6-PAGE-ROLLOUT-PLAN.md`](../triumph-manipulator-landing/V6-PAGE-ROLLOUT-PLAN.md) |
 | **Foundation systems (Wave 2)** | [foundation-systems/README.md](foundation-systems/README.md) — tokens → conversion blocks; use when implementing shared SCSS/JS |
 | **Reference workspace (Wave 3–6)** | [workspaces/website-factory-reference-v1/](../../workspaces/website-factory-reference-v1/) — foundations + 9 blocks; [golden-implementation-slice-v1.md](golden-implementation-slice-v1.md); library [curated-library-index-v1.md](curated-library-index-v1.md) |
 | **Wave 4–6 adoption, QA, freeze** | [_template-client-v1](../../workspaces/_template-client-v1/) · [pilot-adoption-flow-v1.md](pilot-adoption-flow-v1.md) · [freeze-discipline-v1.md](freeze-discipline-v1.md) · [operational-qa-entry-v1.md](operational-qa-entry-v1.md) · [adoption-validation-flow-v1.md](adoption-validation-flow-v1.md) · [registry-sync-discipline-v1.md](registry-sync-discipline-v1.md) |
@@ -62,7 +63,7 @@ Open **one row** below unless the task explicitly needs Extended governance.
 | Layer | Start here |
 |-------|------------|
 | **Gulp foundation** | [agents/frontend-gulp-agent/README.md](../../agents/frontend-gulp-agent/README.md) → [workflow.md](../../agents/frontend-gulp-agent/workflow.md) |
-| **Factory contracts** | [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-production-model.md](frontend-production-model.md), [frontend-production-rules-v0.md](frontend-production-rules-v0.md), [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) |
+| **Factory contracts** | [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-production-model.md](frontend-production-model.md), [frontend-production-rules-v0.md](frontend-production-rules-v0.md), [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md), [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) |
 | **Forge overlay** | [forge-operational-modes-v1.md](../../agents/mars-forge/forge-operational-modes-v1.md) (**Lite default**) → [AGENT.md](../../agents/mars-forge/AGENT.md), [workflow.md](../../agents/mars-forge/workflow.md), [qa-checklist.md](../../agents/mars-forge/qa-checklist.md) |
 
 **Extended frontend governance** (source interpretation, tokens, cadence, responsive, visual/composition): [Extended reference](#extended--deep-reference) below — Forge specialist checklists are indexed in [agents/mars-forge/README.md](../../agents/mars-forge/README.md), not duplicated here.
@@ -84,7 +85,7 @@ Open a **domain row** only when Core Run or a contract citation requires it.
 | **Source interpretation** | [source-interpretation-governance.md](source-interpretation-governance.md), [source-confidence-model.md](source-confidence-model.md), [source-ambiguity-taxonomy.md](source-ambiguity-taxonomy.md) |
 | **Design system intent** | [design-system-intent-governance.md](design-system-intent-governance.md), [ui-weight-distribution-model.md](ui-weight-distribution-model.md), [cta-philosophy-governance.md](cta-philosophy-governance.md) |
 | **Design token intelligence** | [design-token-intelligence-governance.md](design-token-intelligence-governance.md), [token-semantic-layer-model.md](token-semantic-layer-model.md), [token-drift-taxonomy.md](token-drift-taxonomy.md) |
-| **Implementation reliability** | [implementation-reliability-governance.md](implementation-reliability-governance.md), [frontend-stability-model.md](frontend-stability-model.md), [implementation-drift-taxonomy.md](implementation-drift-taxonomy.md) |
+| **Implementation reliability** | [implementation-reliability-governance.md](implementation-reliability-governance.md), [frontend-stability-model.md](frontend-stability-model.md), [implementation-drift-taxonomy.md](implementation-drift-taxonomy.md), [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) |
 | **Visual intent (human read)** | [visual-reconciliation-layer.md](visual-reconciliation-layer.md), [visual-drift-taxonomy.md](visual-drift-taxonomy.md) |
 | **Cadence / rhythm** | [canonical-vertical-cadence-system.md](canonical-vertical-cadence-system.md), [cadence-tier-model.md](cadence-tier-model.md), [typography-rhythm-governance.md](typography-rhythm-governance.md), [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md), [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md), [vertical-rhythm-governance.md](vertical-rhythm-governance.md) |
 | **Responsive intent** | [responsive-intent-governance.md](responsive-intent-governance.md), [mobile-composition-preservation.md](mobile-composition-preservation.md), [responsive-collapse-taxonomy.md](responsive-collapse-taxonomy.md) |
@@ -161,4 +162,4 @@ Open a **domain row** only when Core Run or a contract citation requires it.
 
 ---
 
-*Last updated: 2026-05-21 — Wave 6 production consolidation: quality tiers, curated library, freeze + registry sync, pilot flow, pricing re-extract + cases extract, consolidation map.*
+*Last updated: 2026-05-24 — Triumph V5 incident lessons: [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) (breakpoints, FAQ, build/dist).*

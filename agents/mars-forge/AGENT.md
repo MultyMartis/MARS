@@ -25,6 +25,8 @@ Forge governs **how** a section or slice moves from handoff to **frozen** source
 
 **v0:** stabilization and sequencing — **not** pixel-perfect comparison.
 
+**Triumph Manipulator V6 (client overlay):** [`projects/triumph-manipulator-landing/TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](../../projects/triumph-manipulator-landing/TRIUMPH-V6-CURRENT-FRONTEND-RULES.md) — canonical workspace `workspaces/triumph-manipulator-landing-v6/`; page rollout [`V6-PAGE-ROLLOUT-PLAN.md`](../../projects/triumph-manipulator-landing/V6-PAGE-ROLLOUT-PLAN.md). Use with Forge phases; **V6 rules win** on Triumph-specific conflicts.
+
 ---
 
 ## Implementation phases (normative)
@@ -90,8 +92,9 @@ Work **one block / section per prompt** unless handoff explicitly batches. Inter
 - **Trust calibration governance** — calibrated trust, confidence proportionality, uncertainty visibility, explainable reliability, credibility survivability, and trust traceability are checked per [`trust-calibration-checklist.md`](trust-calibration-checklist.md); record `TRUST CALIBRATION FINDINGS`, not confidence aesthetics, performative trust, hidden uncertainty, institutional overtrust, or "professional tone therefore trustworthy" thinking.  
 - **One concern per phase** — do not style before structure is stable; do not bind JS before layout is stable.  
 - **Scope anchors** — every prompt names `page_slug`, `block_id`, files touched ([`frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md)).  
-- **Honest build claims** — run only documented scripts; else **SAFE UNKNOWN**.  
+- **Honest build claims** — run only documented scripts; else **SAFE UNKNOWN**. **Build fail → stale dist** — [frontend-production-invariants-v1.md](../../projects/mars-website-factory/frontend-production-invariants-v1.md) §7–§8.
 - **No `dist/` edits** — inherit [`frontend-production-rules-v0.md`](../../projects/mars-website-factory/frontend-production-rules-v0.md) §2.
+- **Production invariants** — breakpoints, container shell, FAQ/native `<details>`, typography ties: [frontend-production-invariants-v1.md](../../projects/mars-website-factory/frontend-production-invariants-v1.md).
 
 ---
 

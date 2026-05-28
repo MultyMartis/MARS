@@ -1,0 +1,222 @@
+@use '../utils/tokens' as t;
+@use '../utils/layers' as z;
+
+$modal-z: z.$z-modal;
+$motion-fast: 180ms;
+$motion-base: 300ms;
+$motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+@mixin motion-modal {
+    @media (prefers-reduced-motion: no-preference) {
+        @content;
+    }
+}
+
+body.site-modal-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.site-modal {
+    position: fixed;
+    inset: 0;
+    z-index: $modal-z;
+    display: grid;
+    place-items: center;
+    padding: clamp(16px, 4vw, 32px);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    @include motion-modal {
+        transition:
+            opacity $motion-base $motion-ease,
+            visibility 0s linear $motion-base;
+    }
+
+    &[hidden]:not(.site-modal--open) {
+        display: none;
+    }
+
+    &.site-modal--open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+
+        @include motion-modal {
+            transition:
+                opacity $motion-base $motion-ease,
+                visibility 0s;
+        }
+    }
+}
+
+.site-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 12, 39, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    @include motion-modal {
+        transition: opacity $motion-base $motion-ease;
+    }
+
+    .site-modal:not(.site-modal--open) & {
+        opacity: 0;
+    }
+
+    .site-modal.site-modal--open & {
+        opacity: 1;
+    }
+}
+
+.site-modal__dialog {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 440px);
+    max-height: min(92vh, 720px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0;
+    background: linear-gradient(165deg, rgba(13, 17, 53, 0.98) 0%, rgba(9, 12, 39, 0.98) 100%);
+    box-shadow: t.$shadow-dark;
+    color: t.$color-ink;
+
+    @include motion-modal {
+        transition:
+            transform $motion-base $motion-ease,
+            opacity $motion-base $motion-ease;
+    }
+
+    .site-modal:not(.site-modal--open) & {
+        opacity: 0;
+        transform: translateY(10px) scale(0.985);
+    }
+
+    .site-modal.site-modal--open & {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .site-modal:not(.site-modal--open) &,
+        .site-modal.site-modal--open & {
+            transform: none;
+        }
+    }
+}
+
+.site-modal__close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.04);
+    color: t.$color-white;
+    cursor: pointer;
+
+    @include motion-modal {
+        transition:
+            background-color $motion-fast ease,
+            border-color $motion-fast ease,
+            transform $motion-base $motion-ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.1);
+        outline: none;
+    }
+
+    span {
+        position: relative;
+        width: 16px;
+        height: 16px;
+    }
+
+    span::before,
+    span::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        content: '';
+    }
+
+    span::before {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    span::after {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+.site-modal__dialog--callback {
+    padding: 50px;
+}
+
+.site-modal__dialog--phone {
+    width: min(100%, 520px);
+}
+
+.site-phone-modal {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    text-align: center;
+}
+
+.site-phone-modal__title {
+    margin: 0;
+    color: t.$color-white;
+    font-family: t.$font-display;
+    font-size: clamp(22px, 2vw, 28px);
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.site-phone-modal__number {
+    color: t.$color-white;
+    font-family: t.$font-display;
+    font-size: clamp(26px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.02;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .site-modal__dialog,
+    .site-modal__dialog--callback {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 390px) {
+    .site-modal {
+        padding: 12px;
+        align-items: end;
+    }
+
+    .site-modal__dialog {
+        width: 100%;
+        max-height: 92vh;
+        border-radius: 0;
+        padding: 10px;
+    }
+}

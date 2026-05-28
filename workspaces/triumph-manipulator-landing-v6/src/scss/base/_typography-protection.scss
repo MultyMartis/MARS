@@ -1,0 +1,66 @@
+// V5 typography pass 2 — no word splitting on headings / UI chrome.
+// overflow-wrap: break-word is allowed only on long body copy (see bottom).
+
+h1,
+h2,
+h3,
+h4,
+.section-title,
+.hero__title,
+.hero__title span,
+.machine-showcase__title,
+.machine-transport__heading,
+.machine-transport__heading span,
+.trust__title,
+.review-panel__title,
+.faq__title,
+.contact-cta h2 {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: manual;
+}
+
+.button,
+.site-header a,
+.hero__specs li,
+.hero__cargo-card,
+.hero__cargo-action,
+.machine-showcase__specs dt,
+.machine-showcase__specs dd,
+.machine-transport__list li,
+.faq-item summary,
+.site-form label,
+.site-form__consent-text,
+.proof-strip__item,
+.landing-footer a {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: manual;
+}
+
+// Long paragraph / body copy — break-word allowed (not mid-word with word-break: normal)
+p,
+.section-lead,
+.hero__lead,
+.hero-form__lead,
+.hero-form__note,
+.machine-showcase__lead,
+.machine-showcase__ops,
+.machine-showcase__micro,
+.machine-transport__note,
+.contact-cta__content > p,
+.contact-form__note,
+.faq-item__body p,
+.trust-card p,
+.review-panel__subtitle,
+.pricing-factors__anchor,
+.pricing-factors__intro,
+.pricing-factors__notes li,
+.order-steps__item p,
+.order-steps__card p,
+.site-form__lead,
+.site-form__note {
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: manual;
+}

@@ -1,0 +1,73 @@
+@use '../utils/tokens' as t;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-height: 58px;
+    min-width: 0;
+    padding: 0 34px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-family: t.$font-display;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: calc(1em + 4px);
+    text-transform: uppercase;
+    transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1), background-color 180ms ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .button:hover {
+        transform: translateY(-1px);
+    }
+}
+
+.button--primary {
+    background: linear-gradient(135deg, t.$color-red 0%, t.$color-red-light 100%);
+    box-shadow: t.$shadow-red;
+    color: t.$color-white;
+}
+
+.button--outline {
+    border-color: rgba(t.$brand-red, 0.55);
+    background: t.$color-white;
+    color: t.$color-red;
+}
+
+.button--sm {
+    min-height: 48px;
+    padding-inline: 28px;
+    font-size: 13px;
+}
+
+.button--arrow::after {
+    margin-left: 14px;
+    content: '->';
+}
+
+@media (max-width: 760px) {
+    .button {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: manual;
+        padding-inline: clamp(18px, 4.5vw, 28px);
+    }
+}
+
+@media (max-width: 420px) {
+    .button {
+        font-size: 13px;
+        line-height: calc(1em + 4px);
+    }
+
+    .button--sm {
+        font-size: 12px;
+        line-height: calc(1em + 4px);
+    }
+}

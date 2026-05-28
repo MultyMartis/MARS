@@ -20,12 +20,15 @@ This directory is the **MARS Frontend Gulp Agent operational documentation pack*
 - [`../../projects/mars-website-factory/frontend-prompt-discipline-v0.md`](../../projects/mars-website-factory/frontend-prompt-discipline-v0.md)
 - [`../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md`](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md) — RU typography **authority**
 - [`../../projects/mars-website-factory/ru-landing-qa-preset-v1.md`](../../projects/mars-website-factory/ru-landing-qa-preset-v1.md) — RU commercial landing QA preset
+- [`../../projects/mars-website-factory/frontend-production-invariants-v1.md`](../../projects/mars-website-factory/frontend-production-invariants-v1.md) — anti-drift rules (breakpoints, FAQ, build/dist)
 - [`../../projects/mars-website-factory/first-operational-runbook-v0.md`](../../projects/mars-website-factory/first-operational-runbook-v0.md)
 - [`../../projects/mars-website-factory/operator-session-template-v0.md`](../../projects/mars-website-factory/operator-session-template-v0.md)
 
 **Governance — agent input contracts:** [`../../governance/agent-input-contracts.md`](../../governance/agent-input-contracts.md); template [`../../templates/agent-input-contract-template.md`](../../templates/agent-input-contract-template.md) — explicit I/O and **SAFE UNKNOWN** posture per role (documentation only).
 
 **Pack index:** start with [`AGENT.md`](AGENT.md), then [`workflow.md`](workflow.md), [`constraints.md`](constraints.md), [`frontend-rules.md`](frontend-rules.md), [`handoff-rules.md`](handoff-rules.md), [`prompt-patterns.md`](prompt-patterns.md), [`qa-checklist.md`](qa-checklist.md), [`reporting.md`](reporting.md).
+
+**Triumph Manipulator (client-specific, V6):** [`projects/triumph-manipulator-landing/TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](../../projects/triumph-manipulator-landing/TRIUMPH-V6-CURRENT-FRONTEND-RULES.md) — overrides generic pack rules for `workspaces/triumph-manipulator-landing-v6/` when in conflict.
 
 **Canonical foundation map (governance):** [`../../governance/frontend-legacy-and-foundation-map-v0.md`](../../governance/frontend-legacy-and-foundation-map-v0.md) — historical imports, non-SoT layers. **MARS Forge overlay:** [`../mars-forge/README.md`](../mars-forge/README.md) — inherits this pack; does not replace it. **Forge semantic source lock:** [`../mars-forge/semantic-source-lock.md`](../mars-forge/semantic-source-lock.md) — use when Forge discipline is selected (foundation unchanged if Forge is unused).
 

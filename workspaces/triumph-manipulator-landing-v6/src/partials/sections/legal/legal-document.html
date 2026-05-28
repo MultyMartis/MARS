@@ -1,0 +1,36 @@
+<main class="legal-page" id="main">
+
+    @@include("partials/sections/legal/legal-header.html")
+
+    <article class="legal-document section-shell">
+
+        <h1 class="legal-document__title">@@documentTitle</h1>
+
+        <p class="legal-document__updated">@@updatedLabel</p>
+
+
+
+        @@include("partials/sections/legal/legal-nav.html", {"active": "@@activeSlug"})
+
+
+
+        <div class="legal-document__placeholder" role="note">
+
+            <p>Текст документа будет добавлен перед публикацией.</p>
+
+        </div>
+
+
+
+        <div class="legal-document__actions">
+
+            <a class="button button--outline" href="/manipulyator-5-tonn/">Вернуться на&nbsp;лендинг</a>
+
+        </div>
+
+    </article>
+
+    @@include("partials/sections/legal/landing-footer-legal.html")
+
+</main>
+

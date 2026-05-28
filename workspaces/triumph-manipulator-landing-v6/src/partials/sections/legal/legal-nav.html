@@ -1,0 +1,12 @@
+<nav class="legal-nav" aria-label="Юридические документы">
+
+    <a href="/privacy-policy/" @@if (context.active === 'privacy-policy') {class="is-active" aria-current="page"}>Политика конфиденциальности</a>
+
+    <a href="/user-agreement/" @@if (context.active === 'user-agreement') {class="is-active" aria-current="page"}>Пользовательское соглашение</a>
+
+    <a href="/consent-personal-data/" @@if (context.active === 'consent-personal-data') {class="is-active" aria-current="page"}>Согласие на&nbsp;обработку данных</a>
+
+    <a href="/cookies/" @@if (context.active === 'cookies') {class="is-active" aria-current="page"}>Cookies</a>
+
+</nav>
+

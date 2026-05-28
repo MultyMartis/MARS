@@ -123,6 +123,18 @@ workspaces/triumph-manipulator-landing-v5/*
 !workspaces/triumph-manipulator-landing-v5/reports/
 !workspaces/triumph-manipulator-landing-v5/reports/**
 
+# Triumph Manipulator Landing V6 — explicit allow-list (multi-page rollout base; dist/node_modules not tracked)
+!workspaces/triumph-manipulator-landing-v6/
+workspaces/triumph-manipulator-landing-v6/*
+!workspaces/triumph-manipulator-landing-v6/README.md
+!workspaces/triumph-manipulator-landing-v6/package.json
+!workspaces/triumph-manipulator-landing-v6/package-lock.json
+!workspaces/triumph-manipulator-landing-v6/gulpfile.js
+!workspaces/triumph-manipulator-landing-v6/src/
+!workspaces/triumph-manipulator-landing-v6/src/**
+!workspaces/triumph-manipulator-landing-v6/reports/
+!workspaces/triumph-manipulator-landing-v6/reports/**
+
 # Website Factory — canonical reference + client template (clone survivability; node_modules/dist still global-ignored)
 !workspaces/website-factory-reference-v1/
 workspaces/website-factory-reference-v1/*

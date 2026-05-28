@@ -1,0 +1,21 @@
+<div
+    class="site-modal"
+    id="@@id"
+    data-modal
+    data-modal-id="@@id"
+    aria-hidden="true"
+    hidden
+>
+    <div class="site-modal__overlay" data-modal-close tabindex="-1" aria-hidden="true"></div>
+    <div
+        class="site-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="@@id-title"
+    >
+        <button class="site-modal__close" type="button" data-modal-close aria-label="Закрыть">
+            <span aria-hidden="true"></span>
+        </button>
+        @@content
+    </div>
+</div>
