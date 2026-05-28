@@ -24,7 +24,6 @@
             data-form
             data-form-id="@@prefix-callback"
             data-form-name="Обратный звонок"
-            data-form-endpoint="/backend/api/forms/send.php"
             data-form-success="Спасибо! Заявка принята — скоро перезвоним и уточним детали."
             aria-label="Форма обратного звонка"
         >
@@ -38,7 +37,7 @@
             </div>
 
             <h2 class="site-form__title" id="modal-callback-title" data-modal-dynamic-title data-modal-title-default="Обратный звонок">Обратный звонок</h2>
-            <p class="site-form__lead">Оставьте имя и&nbsp;телефон — перезвоним и&nbsp;уточним задачу.</p>
+            <p class="site-form__lead">Оставьте имя и телефон — перезвоним и уточним: тип груза · адрес подачи · возможность работы · ориентировочную стоимость.</p>
 
             <div class="site-form__field" data-form-field-wrap>
                 <label class="site-form__label" for="callback-name">
@@ -78,8 +77,6 @@
 
             <button class="button button--primary site-form__submit" type="submit">Перезвоните мне</button>
 
-            <p class="site-form__note">Перезвоним и&nbsp;уточним: тип груза · адрес подачи · возможность работы · ориентировочную стоимость.</p>
-
             <div class="site-form__field site-form__field--consent" data-form-field-wrap>
                 <label class="site-form__consent">
                     <input
@@ -109,5 +106,31 @@
 
             <div class="site-form__status" data-form-status role="status" aria-live="polite" hidden></div>
         </form>
+    </div>
+</div>
+
+<div
+    class="site-modal"
+    id="modal-phone"
+    data-modal
+    data-modal-id="modal-phone"
+    aria-hidden="true"
+    hidden
+>
+    <div class="site-modal__overlay" data-modal-close tabindex="-1" aria-hidden="true"></div>
+    <div
+        class="site-modal__dialog site-modal__dialog--phone"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-phone-title"
+    >
+        <button class="site-modal__close" type="button" data-modal-close aria-label="Закрыть">
+            <span aria-hidden="true"></span>
+        </button>
+
+        <div class="site-phone-modal">
+            <h2 class="site-phone-modal__title" id="modal-phone-title">Позвонить</h2>
+            <a class="site-phone-modal__number" href="tel:+79004658331">+7 (900) 465-83-31</a>
+        </div>
     </div>
 </div>

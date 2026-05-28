@@ -27,9 +27,12 @@
     margin: 18px 0 0;
     color: t.$color-text;
     font-family: t.$font-display;
-    @include headings.section-h2-mobile;
+    font-size: 52px;
+    @include headings.section-h2-line-height;
+    @include headings.section-h2-overflow-safe;
     font-weight: 600;
     letter-spacing: -0.045em;
+    text-wrap: balance;
 }
 
 .trust-cards {
@@ -171,6 +174,16 @@
     background: rgba(255, 255, 255, 0.62);
     color: t.$color-text-dim;
     text-align: center;
+}
+
+@media (max-width: 1490px) {
+    .trust__title {
+        max-width: min(760px, 100%);
+        margin: 18px 0 0;
+        color: #090f1b;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 42px;
+    }
 }
 
 @media (max-width: 1180px) {

@@ -14,7 +14,7 @@ Ship a **service-oriented commercial landing** with **geo/commercial hybrid** in
 
 ## Frontend target
 
-- Static **Gulp-oriented** frontend produced under **`D:\AI MARS\workspaces\triumph-manipulator-landing\`** (sources), with build output **outside** MARS commit scope unless explicitly approved.
+- Static **Gulp-oriented** frontend produced under **`C:\AI MARS\workspaces\triumph-manipulator-landing\`** (sources), with build output **outside** MARS commit scope unless explicitly approved.
 - Sections implemented incrementally; **source-first** (HTML/SCSS/JS as per starter conventions once introduced).
 
 ## Constraints

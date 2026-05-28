@@ -99,7 +99,7 @@ body[data-page-type^='ppc-'] .machine-transport__card--denied .machine-transport
 
 .contact-form .contact-form__title,
 .contact-form h3.contact-form__title {
-    margin: 0 0 18px;
+    margin: 0;
     max-width: 100%;
     min-width: 0;
     color: t.$brand-dark;
@@ -150,11 +150,17 @@ body[data-page-type^='ppc-'] .machine-transport__card--denied .machine-transport
     }
 }
 
-.contact-form__note {
-    margin: 14px 0 0;
+.contact-form .contact-form__note {
+    margin: 0;
     color: t.$color-ink-dim;
     font-size: 13px;
     line-height: 17px;
+    text-align: left;
+}
+
+.contact-form__title + .contact-form__note {
+    margin-top: -8px;
+    margin-bottom: 2px;
 }
 
 .contact-form__call {
@@ -184,10 +190,14 @@ body[data-page-type^='ppc-'] {
 
     .contact-cta h2 {
         overflow-wrap: normal;
-        text-wrap: pretty;
+        text-wrap: balance;
     }
 
     .faq__grid,
+    .faq__list,
+    .faq__split,
+    .faq__split-main,
+    .faq__split-aside,
     .faq-item,
     .faq-item summary,
     .faq-item__body,
@@ -204,13 +214,17 @@ body[data-page-type^='ppc-'] {
         min-width: 0;
     }
 
-    .proof-strip__grid,
+    .proof-strip__layout,
+    .proof-strip__stack,
     .proof-strip__item {
         min-width: 0;
     }
 
     .proof-strip__item strong,
-    .proof-strip__item span {
+    .proof-strip__item span,
+    .proof-strip__lead,
+    .proof-strip__sub,
+    .proof-strip__desc {
         min-width: 0;
         overflow-wrap: normal;
         word-break: normal;
@@ -293,6 +307,9 @@ body[data-page-type^='ppc-'] {
         }
 
         .order-steps__grid,
+        .order-steps__flow,
+        .pricing-factors__layout,
+        .pricing-factors__panel,
         .pricing-factors__list,
         .trust__grid,
         .contact-cta__grid {
@@ -329,12 +346,12 @@ body[data-page-type^='ppc-'] {
             padding-inline: clamp(18px, 4.5vw, 28px);
         }
 
-        .proof-strip__logos {
+        .proof-strip__platforms {
             max-width: 100%;
         }
 
-        .proof-strip__logos img {
-            max-width: min(72px, 32vw);
+        .proof-strip__platforms img {
+            max-width: min(72px, 38vw);
         }
     }
 }

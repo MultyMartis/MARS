@@ -79,7 +79,7 @@ body.site-modal-open {
     overflow: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    padding: clamp(22px, 3vw, 30px);
+    padding: 50px;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 0;
     background: linear-gradient(165deg, rgba(13, 17, 53, 0.98) 0%, rgba(9, 12, 39, 0.98) 100%);
@@ -112,13 +112,13 @@ body.site-modal-open {
 
 .site-modal__close {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 3px;
+    right: 3px;
     z-index: 2;
     display: grid;
     place-items: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 0;
     background: rgba(255, 255, 255, 0.04);
@@ -166,7 +166,45 @@ body.site-modal-open {
 }
 
 .site-modal__dialog--callback {
-    padding-top: clamp(28px, 3.4vw, 36px);
+    padding: 50px;
+}
+
+.site-modal__dialog--phone {
+    width: min(100%, 520px);
+}
+
+.site-phone-modal {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    text-align: center;
+}
+
+.site-phone-modal__title {
+    margin: 0;
+    color: t.$color-white;
+    font-family: t.$font-display;
+    font-size: clamp(22px, 2vw, 28px);
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.site-phone-modal__number {
+    color: t.$color-white;
+    font-family: t.$font-display;
+    font-size: clamp(26px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.02;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .site-modal__dialog,
+    .site-modal__dialog--callback {
+        padding: 30px;
+    }
 }
 
 @media (max-width: 390px) {
@@ -179,5 +217,6 @@ body.site-modal-open {
         width: 100%;
         max-height: 92vh;
         border-radius: 0;
+        padding: 10px;
     }
 }

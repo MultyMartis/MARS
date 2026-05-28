@@ -4,6 +4,7 @@
     padding-bottom: t.$rhythm-lower;
 }
 
+// Legacy card grid (other V5 partials still on flat grid markup)
 .order-steps__grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -39,6 +40,9 @@
     font-size: clamp(18px, 1.6vw, 22px);
     font-weight: 600;
     line-height: 26px;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: pretty;
 }
 
 .order-steps__item p {
@@ -56,13 +60,236 @@
     margin-top: clamp(32px, 4vw, 48px);
 }
 
-@media (max-width: 980px) {
-    .order-steps__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+// Process-flow variant (zakaz / main index)
+.order-steps--process {
+    .order-steps__flow {
+        position: relative;
+        margin: clamp(28px, 3.2vw, 40px) 0 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .order-steps__step {
+        margin: 0;
+        min-width: 0;
+    }
+
+    .order-steps__track {
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .order-steps__num {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid rgba(225, 0, 45, 0.35);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+        background: t.$color-card;
+        color: t.$brand-red;
+        font-family: t.$font-display;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .order-steps__connector {
+        position: relative;
+        background: linear-gradient(90deg, rgba(225, 0, 45, 0.68) 0%, rgba(225, 0, 45, 0.18) 100%);
+    }
+
+    .order-steps__connector::after {
+        position: absolute;
+        top: 50%;
+        right: -1px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid rgba(225, 0, 45, 0.4);
+        border-right: 2px solid rgba(225, 0, 45, 0.4);
+        transform: translateY(-50%) rotate(45deg);
+        content: '';
+    }
+
+    .order-steps__card {
+        position: relative;
+        display: grid;
+        gap: 10px;
+        min-width: 0;
+        padding: clamp(18px, 1.8vw, 24px);
+        border: 1px solid rgba(9, 15, 27, 0.08);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.95) 100%);
+    }
+
+    .order-steps__card i {
+        display: grid;
+        width: 52px;
+        height: 52px;
+        place-items: center;
+        border: 1px solid rgba(225, 0, 45, 0.22);
+        color: rgba(225, 0, 45, 0.78);
+        font-size: 20px;
+    }
+
+    .order-steps__title {
+        margin: 0;
+        color: t.$color-text;
+        font-family: t.$font-display;
+        font-size: clamp(18px, 1.5vw, 21px);
+        font-weight: 600;
+        line-height: 1.25;
+        overflow-wrap: normal;
+        word-break: normal;
+        text-wrap: pretty;
+    }
+
+    .order-steps__card p {
+        margin: 0;
+        color: t.$color-text-muted;
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .order-steps__step--first .order-steps__card,
+    .order-steps__step--last .order-steps__card {
+        border-color: rgba(225, 0, 45, 0.2);
+    }
+
+    .order-steps__step--first .order-steps__num,
+    .order-steps__step--last .order-steps__num {
+        border-color: rgba(225, 0, 45, 0.55);
+        background: rgba(225, 0, 45, 0.06);
+    }
+
+    .order-steps__cta {
+        max-width: 980px;
+        margin-inline: auto;
+        padding-top: clamp(8px, 1.2vw, 16px);
+        border-top: 1px solid t.$color-line-light;
     }
 }
 
-@media (max-width: 760px) {
+@media (min-width: 1025px) {
+    .order-steps--process .order-steps__flow {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0 16px;
+        align-items: stretch;
+    }
+
+    .order-steps--process .order-steps__step {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .order-steps--process .order-steps__track {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        min-height: 42px;
+    }
+
+    .order-steps--process .order-steps__connector {
+        flex: 1 1 auto;
+        height: 2px;
+        margin-inline: 10px 6px;
+    }
+
+    .order-steps--process .order-steps__card {
+        flex: 1 1 auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .order-steps__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .order-steps--process .order-steps__flow {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 620px;
+        margin-inline: auto;
+    }
+
+    .order-steps--process .order-steps__step {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px 16px;
+        align-items: start;
+        padding-bottom: 20px;
+    }
+
+    .order-steps--process .order-steps__step:last-child {
+        padding-bottom: 0;
+    }
+
+    .order-steps--process .order-steps__track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 42px;
+        min-height: 100%;
+    }
+
+    .order-steps--process .order-steps__connector {
+        width: 2px;
+        flex: 1 1 auto;
+        min-height: 22px;
+        margin-top: 8px;
+        background: linear-gradient(180deg, rgba(225, 0, 45, 0.68) 0%, rgba(225, 0, 45, 0.18) 100%);
+    }
+
+    .order-steps--process .order-steps__connector::after {
+        top: auto;
+        right: auto;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%) rotate(135deg);
+    }
+
+    .order-steps--process .order-steps__card {
+        padding: 18px 18px 20px;
+    }
+
+    .order-steps--process .order-steps__card::before {
+        position: absolute;
+        top: 26px;
+        left: -16px;
+        width: 16px;
+        height: 1px;
+        background: rgba(225, 0, 45, 0.3);
+        content: '';
+    }
+
+    .order-steps--process .order-steps__card i {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    .order-steps--process .order-steps__title {
+        font-size: 18px;
+        line-height: 1.28;
+    }
+
+    .order-steps--process .order-steps__cta {
+        margin-top: 28px;
+        padding-top: 20px;
+    }
+
+    .order-steps--process .order-steps__cta .button {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
     .order-steps__grid {
         grid-template-columns: 1fr;
         gap: 16px;

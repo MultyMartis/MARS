@@ -1,0 +1,750 @@
+@use '../utils/tokens' as t;
+
+// Zakaz index: industrial ops-panel for machine parameters + tasks grid
+body[data-page-type='ppc-zakaz-manip'] {
+    .machine-showcase--ops-panel {
+        align-items: stretch;
+        gap: clamp(28px, 3.4vw, 52px);
+    }
+
+    .machine-showcase__intro {
+        max-width: 580px;
+    }
+
+    .machine-showcase__intro .machine-showcase__title {
+        margin-top: 12px;
+    }
+
+    .machine-showcase__intro .machine-showcase__lead {
+        margin-top: clamp(16px, 1.6vw, 22px);
+        max-width: 540px;
+        line-height: 1.45;
+    }
+
+    .machine-showcase__media--index-baseline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(360px, 44vw, 580px);
+        padding: 0;
+        border: 1px solid rgba(9, 15, 27, 0.18);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 246, 249, 0.92) 100%);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.9) inset,
+            0 18px 42px rgba(9, 15, 27, 0.08);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+
+    .machine-showcase__spec-panel {
+        display: grid;
+        gap: 0;
+        margin-top: clamp(22px, 2.4vw, 32px);
+        padding: clamp(18px, 2vw, 28px) clamp(20px, 2.2vw, 32px);
+        border: 1px solid rgba(9, 15, 27, 0.16);
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 12px 32px rgba(9, 15, 27, 0.045);
+    }
+
+    .machine-showcase__specs {
+        margin: 0;
+    }
+
+    .machine-showcase__spec-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: clamp(16px, 2vw, 28px);
+        min-height: clamp(58px, 5.2vw, 72px);
+        padding-block: clamp(10px, 1vw, 14px);
+        border-bottom-color: rgba(9, 15, 27, 0.12);
+    }
+
+    .machine-showcase__specs dt {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 14px;
+        color: rgba(9, 15, 27, 0.62);
+        font-size: clamp(15px, 1.05vw, 17px);
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        line-height: 1.35;
+        text-transform: uppercase;
+    }
+
+    .machine-showcase__specs i {
+        width: 36px;
+        font-size: 19px * t.$icon-scale-normal;
+    }
+
+    .machine-showcase__specs dd {
+        align-self: center;
+        color: t.$color-text;
+        font-size: clamp(28px, 2.6vw, 40px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        text-align: right;
+    }
+
+    .machine-showcase__ops {
+        max-width: none;
+        margin: clamp(18px, 2vw, 24px) 0 0;
+        padding-top: clamp(16px, 1.6vw, 20px);
+        border-top: 1px solid rgba(9, 15, 27, 0.1);
+        color: rgba(9, 15, 27, 0.72);
+        font-size: clamp(16px, 1.2vw, 18px);
+        line-height: 1.5;
+    }
+
+    .machine-showcase__action {
+        display: grid;
+        gap: 10px;
+        margin-top: clamp(18px, 2vw, 24px);
+        padding-top: clamp(16px, 1.8vw, 20px);
+        border-top: 1px solid rgba(9, 15, 27, 0.14);
+    }
+
+    .machine-showcase__cta {
+        margin-top: 0;
+    }
+
+    .machine-showcase__cta .button {
+        min-width: min(100%, 280px);
+    }
+
+    .machine-showcase__micro {
+        max-width: none;
+        margin: 0;
+        padding-left: 2px;
+        color: rgba(9, 15, 27, 0.52);
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .machine-transport--ops-grid {
+        grid-template-columns: minmax(0, 1.36fr) minmax(360px, 0.98fr);
+        align-items: stretch;
+        gap: clamp(20px, 2.1vw, 28px);
+        margin-top: clamp(26px, 2.8vw, 34px);
+    }
+
+    .machine-transport__utility-stack {
+        display: grid;
+        grid-template-rows: auto auto;
+        align-content: start;
+        gap: clamp(16px, 1.7vw, 20px);
+        min-width: 0;
+    }
+
+    .machine-transport__eyebrow,
+    .machine-transport__note-label,
+    .machine-transport__item-kicker {
+        color: rgba(9, 15, 27, 0.54);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    .machine-transport__eyebrow {
+        margin: 0 0 12px;
+    }
+
+    .machine-transport--ops-grid .machine-transport__card,
+    .machine-transport--ops-grid .machine-transport__cta {
+        position: relative;
+        min-width: 0;
+        border-color: rgba(9, 15, 27, 0.16);
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 28px rgba(9, 15, 27, 0.05);
+    }
+
+    .machine-transport--ops-grid .machine-transport__card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    .machine-transport--ops-grid .machine-transport__card--allowed {
+        padding: clamp(26px, 2.6vw, 38px);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(246, 248, 250, 0.96) 100%);
+    }
+
+    .machine-transport--ops-grid .machine-transport__card--allowed::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 4px;
+        background: linear-gradient(90deg, rgba(t.$brand-red, 0.94) 0%, rgba(t.$brand-red, 0.32) 66%, transparent 100%);
+        content: '';
+    }
+
+    .machine-transport--ops-grid .machine-transport__heading {
+        max-width: 13.6ch;
+        margin-bottom: clamp(18px, 1.7vw, 24px);
+        letter-spacing: -0.02em;
+    }
+
+    .machine-transport--ops-grid .machine-transport__card h3 {
+        margin: 0 0 clamp(12px, 1.3vw, 16px);
+        color: t.$color-text;
+        font-size: clamp(21px, 1.75vw, 26px);
+        line-height: 1.14;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list {
+        margin: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 clamp(14px, 1.6vw, 20px);
+        flex: 1 1 auto;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed li {
+        position: relative;
+        grid-template-columns: 42px minmax(0, 1fr);
+        align-items: start;
+        gap: 30px;
+        min-height: 0;
+        padding: 20px 0 20px;
+        border-bottom: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed li::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 70px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(9, 15, 27, 0.1) 0%, rgba(9, 15, 27, 0.05) 78%, rgba(9, 15, 27, 0) 100%);
+        content: '';
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed li:nth-child(-n + 2) {
+        padding-top: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed li:last-child {
+        padding-bottom: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed li:last-child::after {
+        display: none;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--allowed i {
+        display: grid;
+        place-items: center;
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        border: 1px solid rgba(t.$brand-red, 0.22);
+        background: linear-gradient(180deg, rgba(t.$brand-red, 0.085) 0%, rgba(t.$brand-red, 0.045) 100%);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.82) inset,
+            0 10px 18px rgba(t.$brand-red, 0.08);
+        color: t.$color-red;
+        font-size: 14px;
+    }
+
+    .machine-transport__item-copy {
+        display: grid;
+        gap: 4px;
+        min-width: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__item-kicker {
+        color: rgba(9, 15, 27, 0.48);
+    }
+
+    .machine-transport__item-text {
+        max-width: 170px;
+        color: t.$color-text;
+        font-size: clamp(16px, 1.08vw, 18px);
+        font-weight: 550;
+        line-height: 1.3;
+    }
+
+    .machine-transport__note-block {
+        display: grid;
+        gap: 8px;
+        margin-top: clamp(18px, 1.7vw, 22px);
+        padding-top: clamp(14px, 1.5vw, 18px);
+        border-top: 1px solid rgba(9, 15, 27, 0.1);
+    }
+
+    .machine-transport--ops-grid .machine-transport__note {
+        max-width: 48ch;
+        margin: 0;
+        color: rgba(9, 15, 27, 0.68);
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .machine-transport--ops-grid .machine-transport__card--denied {
+        padding: clamp(20px, 1.9vw, 26px);
+        background: linear-gradient(180deg, rgba(250, 250, 251, 0.96) 0%, rgba(244, 246, 248, 0.94) 100%);
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--denied {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--denied li {
+        grid-template-columns: 10px minmax(0, 1fr);
+        align-items: start;
+        gap: 15px;
+        min-height: 0;
+        padding: 10px 0;
+        border-bottom-color: rgba(9, 15, 27, 0.07);
+        color: rgba(9, 15, 27, 0.78);
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--denied li:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .machine-transport--ops-grid .machine-transport__list--denied i {
+        width: 15px;
+        padding-top: 3px;
+        color: #e30f39;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .machine-transport--ops-grid .machine-transport__cta {
+        display: grid;
+        align-content: start;
+        justify-items: stretch;
+        gap: 14px;
+        min-height: auto;
+        padding: clamp(20px, 2vw, 26px);
+        border-color: rgba(9, 15, 27, 0.18);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 247, 249, 0.95) 100%);
+        text-align: left;
+    }
+
+    .machine-transport--ops-grid .machine-transport__cta .machine-transport__eyebrow {
+        max-width: none;
+        margin: 0;
+    }
+
+    .machine-transport__cta-head {
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+    }
+
+    .machine-transport__cta-head > i {
+        display: grid;
+        place-items: center;
+        width: 46px;
+        height: 46px;
+        margin: 0;
+        border: 1px solid rgba(9, 15, 27, 0.12);
+        background: rgba(9, 15, 27, 0.03);
+        color: rgba(9, 15, 27, 0.72);
+        font-size: 18px * t.$icon-scale-normal;
+        line-height: 1;
+    }
+
+    .machine-transport__cta-copy {
+        display: grid;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    .machine-transport__cta-title {
+        margin: 0;
+        color: t.$color-text;
+        font-family: t.$font-display;
+        font-size: clamp(20px, 1.55vw, 24px);
+        font-weight: 600;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+
+    .machine-transport--ops-grid .machine-transport__cta .machine-transport__cta-text {
+        margin: 0;
+        color: rgba(9, 15, 27, 0.68);
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .machine-transport__cta-actions {
+        display: grid;
+        gap: 30px;
+        margin-top: clamp(2px, 0.6vw, 8px);
+        padding: 10%;
+        border: 1px solid rgb(250, 31, 66);
+        background: linear-gradient(180deg, rgba(9, 15, 27, 0.012) 0%, rgba(9, 15, 27, 0.01) 100%);
+    }
+
+    .machine-transport__cta-points {
+        display: grid;
+        gap: 7px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .machine-transport__cta-points li {
+        display: grid;
+        grid-template-columns: 9px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        color: rgba(9, 15, 27, 0.68);
+        font-size: 12px;
+        font-weight: 650;
+        letter-spacing: 0.08em;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+
+    .machine-transport__cta-points li::before {
+        display: block;
+        width: 6px;
+        height: 6px;
+        margin-top: 5px;
+        border-radius: 50%;
+        background: rgba(t.$brand-red, 0.78);
+        content: '';
+    }
+
+    .machine-transport--ops-grid .machine-transport__cta .button {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-showcase--ops-panel {
+            grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+            gap: clamp(32px, 3.6vw, 56px);
+        }
+
+        .machine-showcase__summary {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 0;
+        }
+
+        .machine-showcase__media--index-baseline {
+            min-height: clamp(420px, 46vw, 620px);
+        }
+
+        .machine-showcase__spec-panel {
+            margin-top: clamp(26px, 2.6vw, 34px);
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1320px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-transport--ops-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .machine-transport__utility-stack {
+            width: 100%;
+            gap: 18px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__card--denied,
+        .machine-transport--ops-grid .machine-transport__cta {
+            width: 100%;
+            max-width: none;
+        }
+
+        .machine-transport--ops-grid .machine-transport__heading {
+            max-width: 15ch;
+        }
+
+        .machine-transport--ops-grid .machine-transport__card--allowed,
+        .machine-transport--ops-grid .machine-transport__card--denied,
+        .machine-transport--ops-grid .machine-transport__cta {
+            padding: 22px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-showcase--ops-panel {
+            gap: 24px;
+        }
+
+        .machine-showcase__media--index-baseline {
+            min-height: clamp(260px, 44vw, 380px);
+            padding: 12px;
+        }
+
+        .machine-showcase__media--index-baseline img {
+            width: 108%;
+            max-width: none;
+        }
+
+        .machine-showcase__specs dd {
+            font-size: clamp(24px, 5.4vw, 32px);
+        }
+
+        .machine-showcase__ops {
+            margin-top: 16px;
+            padding-top: 14px;
+            font-size: 15px;
+            line-height: 1.45;
+        }
+
+        .machine-showcase__action {
+            margin-top: 16px;
+            padding-top: 16px;
+        }
+
+        .machine-showcase__cta .button {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .machine-transport--ops-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .machine-transport__utility-stack {
+            gap: 18px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__heading {
+            max-width: none;
+            margin-bottom: 18px;
+            font-size: clamp(30px, 5vw, 38px);
+        }
+
+        .machine-transport--ops-grid .machine-transport__card--allowed,
+        .machine-transport--ops-grid .machine-transport__card--denied,
+        .machine-transport--ops-grid .machine-transport__cta {
+            padding: 24px 22px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:nth-child(-n + 2) {
+            padding-top: 14px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:first-child {
+            padding-top: 0;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:last-child::after {
+            display: none;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed {
+            gap: 0;
+        }
+
+        .machine-transport--ops-grid .machine-transport__cta {
+            min-height: auto;
+        }
+
+        .machine-transport__cta-actions {
+            padding: 14px 16px 16px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-showcase__media--index-baseline {
+            min-height: clamp(240px, 58vw, 340px);
+            padding: 10px;
+        }
+
+        .machine-showcase__media--index-baseline img {
+            width: 112%;
+        }
+
+        .machine-showcase__spec-row {
+            min-height: auto;
+            padding-block: 14px;
+        }
+
+        .machine-showcase__specs dt {
+            text-transform: none;
+            font-weight: 400;
+        }
+
+        .machine-showcase__specs dd {
+            text-align: left;
+        }
+
+        .machine-showcase__action {
+            gap: 10px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__card--allowed,
+        .machine-transport--ops-grid .machine-transport__card--denied,
+        .machine-transport--ops-grid .machine-transport__cta {
+            padding: 20px 18px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__heading {
+            font-size: clamp(26px, 7vw, 32px);
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li {
+            grid-template-columns: 38px minmax(0, 1fr);
+            gap: 12px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li::after {
+            left: 50px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed i {
+            width: 38px;
+            height: 38px;
+            font-size: 13px;
+        }
+
+        .machine-transport__cta-head {
+            grid-template-columns: 40px minmax(0, 1fr);
+            gap: 10px;
+        }
+
+        .machine-transport__cta-head > i {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-showcase__spec-row {
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
+
+        .machine-showcase__specs dd {
+            padding-left: 50px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-transport--ops-grid .machine-transport__heading {
+            max-width: none;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed {
+            grid-template-columns: 1fr;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:nth-child(-n + 2) {
+            padding-top: 16px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:first-child {
+            padding-top: 0;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .machine-transport--ops-grid .machine-transport__card--allowed,
+        .machine-transport--ops-grid .machine-transport__card--denied,
+        .machine-transport--ops-grid .machine-transport__cta {
+            padding: 22px 20px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__list--allowed li::after {
+            left: 57px;
+        }
+
+        .machine-transport__cta-actions {
+            gap: 12px;
+            padding: 14px 15px 15px;
+        }
+
+        .machine-transport__cta-head {
+            grid-template-columns: 42px minmax(0, 1fr);
+        }
+
+        .machine-transport__cta-head > i {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-showcase__media--index-baseline {
+            min-height: clamp(220px, 72vw, 320px);
+            padding: 8px;
+        }
+
+        .machine-showcase__media--index-baseline img {
+            width: 114%;
+        }
+
+        .machine-transport--ops-grid .machine-transport__card--allowed,
+        .machine-transport--ops-grid .machine-transport__card--denied,
+        .machine-transport--ops-grid .machine-transport__cta {
+            padding: 18px 16px;
+        }
+
+        .machine-transport--ops-grid .machine-transport__heading {
+            margin-bottom: 16px;
+            font-size: clamp(24px, 8vw, 30px);
+        }
+
+        .machine-transport__cta-title {
+            font-size: clamp(19px, 5.6vw, 22px);
+        }
+
+        .machine-transport__cta-actions {
+            padding: 12px 13px 14px;
+        }
+    }
+}
+
+@media (max-width: 1490px) {
+    body[data-page-type='ppc-zakaz-manip'] {
+        .machine-transport--ops-grid .machine-transport__heading {
+            max-width: 90%;
+            font-size: 30px;
+        }
+    }
+}

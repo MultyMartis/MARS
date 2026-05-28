@@ -2,7 +2,7 @@
 
 ## Recommended local path
 
-**`D:\AI MARS\workspaces\triumph-manipulator-landing\`**
+**`C:\AI MARS\workspaces\triumph-manipulator-landing\`**
 
 This directory is the **local working area** for frontend implementation. It is intentionally **not** the MARS documentation pack under `projects/triumph-manipulator-landing/`.
 

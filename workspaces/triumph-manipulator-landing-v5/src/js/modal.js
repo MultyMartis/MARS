@@ -3,6 +3,7 @@ const OPEN_CLASS = 'site-modal--open';
 const BODY_LOCK_CLASS = 'site-modal-open';
 const HEADER_MENU_BODY_LOCK_CLASS = 'site-header-menu-open';
 const DYNAMIC_TITLE_SELECTOR = '[data-modal-dynamic-title]';
+const DESKTOP_MODAL_QUERY = '(min-width: 1025px)';
 
 /** @type {HTMLElement | null} */
 let activeModal = null;
@@ -293,6 +294,33 @@ function bindModalTriggers(root) {
   });
 }
 
+/**
+ * @param {HTMLElement} root
+ */
+function bindDesktopOnlyModalTriggers(root) {
+  root.querySelectorAll('[data-desktop-modal-open]').forEach((trigger) => {
+    if (!(trigger instanceof HTMLElement) || trigger.dataset.desktopModalTriggerBound === 'true') {
+      return;
+    }
+
+    trigger.dataset.desktopModalTriggerBound = 'true';
+    trigger.addEventListener('click', (event) => {
+      if (!window.matchMedia(DESKTOP_MODAL_QUERY).matches) {
+        return;
+      }
+
+      const modalId = trigger.getAttribute('data-desktop-modal-open');
+      const modal = resolveModal(modalId);
+      if (!modal) {
+        return;
+      }
+
+      event.preventDefault();
+      openModal(modal);
+    });
+  });
+}
+
 function bindGlobalHandlers() {
   if (keydownHandler) {
     return;
@@ -321,6 +349,7 @@ function bindGlobalHandlers() {
 function initModals(root = document) {
   if (root === document && document.documentElement.getAttribute(MODAL_ROOT_INIT) === 'true') {
     bindModalTriggers(root);
+    bindDesktopOnlyModalTriggers(root);
     return;
   }
 
@@ -352,6 +381,7 @@ function initModals(root = document) {
   });
 
   bindModalTriggers(root);
+  bindDesktopOnlyModalTriggers(root);
 }
 
 /**

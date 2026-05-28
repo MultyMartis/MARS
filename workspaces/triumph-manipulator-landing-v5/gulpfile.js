@@ -52,6 +52,11 @@ const paths = {
     watch: 'src/fonts/**/*.{woff,woff2}',
     dest: 'dist/assets/fonts/',
   },
+  backend: {
+    src: 'backend/**/*.php',
+    watch: 'backend/**/*.php',
+    dest: 'dist/',
+  },
 };
 
 function onError(title) {
@@ -65,7 +70,9 @@ function onError(title) {
 }
 
 async function cleanDist() {
-  await deleteAsync([paths.dist]);
+  // Delete dist contents, not the folder — avoids EBUSY on Windows when dist/index.html
+  // is open in a browser or editor (rmdir on dist itself fails while a file is locked).
+  await deleteAsync([`${paths.dist}/**/*`], { force: true });
 }
 
 function assetPrefixForHtmlRelative(relativePath) {
@@ -141,7 +148,11 @@ function fonts() {
   return src(paths.fonts.src, { buffer: true, encoding: false, allowEmpty: true }).pipe(dest(paths.fonts.dest));
 }
 
-const build = series(cleanDist, parallel(html, styles, scripts, images, favicon, vendorFontawesome, fonts));
+function backend() {
+  return src(paths.backend.src, { base: 'backend', allowEmpty: true }).pipe(dest(path.join(paths.dist, 'backend')));
+}
+
+const build = series(cleanDist, parallel(html, styles, scripts, images, favicon, vendorFontawesome, fonts, backend));
 
 function watcher() {
   watch(paths.html.watch, html);
@@ -151,6 +162,7 @@ function watcher() {
   watch(paths.favicon.watch, favicon);
   watch(paths.vendorFontawesome.watch, vendorFontawesome);
   watch(paths.fonts.watch, fonts);
+  watch(paths.backend.watch, backend);
 }
 
 exports.clean = cleanDist;

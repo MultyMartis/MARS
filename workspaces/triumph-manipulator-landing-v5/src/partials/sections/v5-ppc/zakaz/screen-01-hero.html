@@ -23,7 +23,6 @@
                     data-form-id="zakaz-hero-quote"
                     data-page-type="ppc-zakaz-manip"
                     data-form-name="Рассчитать стоимость"
-                    data-form-endpoint="/backend/api/forms/send.php"
                     data-cta-source="zakaz-hero-inline"
                     data-form-success="Спасибо! Заявка принята — скоро перезвоним и уточним детали."
                     aria-label="Форма расчёта стоимости"
@@ -57,12 +56,13 @@
                         <span class="site-form__error" data-form-error hidden>Подтвердите согласие на&nbsp;обработку данных</span>
                     </div>
 
-                    <a class="hero-form__call button button--outline" href="tel:+79004658331">Позвонить</a>
+                    <a class="hero-form__call button button--outline" href="tel:+79004658331" data-desktop-modal-open="modal-phone">Позвонить</a>
                 </form>
             </aside>
         </div>
 
-        <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
+        <div class="hero__lower">
+            <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
             <div class="hero-proof__grid">
                 <div class="hero-proof__item">
                     <i class="fas fa-shipping-fast" aria-hidden="true"></i>
@@ -83,39 +83,52 @@
             </div>
         </aside>
 
-        <ul class="hero__cargo" aria-label="Типовые грузы">
+        <div class="hero__cargo-block">
+            <ul class="hero__cargo" aria-label="Типовые грузы">
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="zakaz-hero-cargo-bytovki">
-                    <i class="fas fa-truck-moving" aria-hidden="true"></i><span>Бытовки</span>
+                    <i class="fas fa-truck-moving" aria-hidden="true"></i>
+                    <span>Бытовки</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="zakaz-hero-cargo-fbs">
-                    <i class="fas fa-weight-hanging" aria-hidden="true"></i><span>ФБС</span>
+                    <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                    <span>ФБС</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="zakaz-hero-cargo-kirpich">
-                    <i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Кирпич</span>
+                    <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                    <span>Кирпич</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="zakaz-hero-cargo-armatura">
-                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i><span>Арматура</span>
+                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i>
+                    <span>Арматура</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="zakaz-hero-cargo-oborudovanie">
-                    <i class="fas fa-tools" aria-hidden="true"></i><span>Оборудование</span>
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <span>Оборудование</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="zakaz-hero-cargo-konteinery">
-                    <i class="fas fa-shipping-fast" aria-hidden="true"></i><span>Контейнеры</span>
+                    <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                    <span>Контейнеры</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
-        </ul>
-
-        <p class="hero__notice"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Не&nbsp;работаем&nbsp;с&nbsp;эвакуацией&nbsp;легковых&nbsp;автомобилей&nbsp;и&nbsp;мелкими&nbsp;бытовыми&nbsp;перевозками.</span></p>
+            </ul>
+        </div>
+        </div>
     </div>
 </section>

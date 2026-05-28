@@ -3,6 +3,10 @@
 @mixin section-h2-font-size {
     font-size: t.$section-h2-font-size;
 
+    @media (max-width: 1180px) {
+        font-size: clamp(40px, 5.2vw, 64px);
+    }
+
     @media (max-width: 760px) {
         font-size: t.$section-h2-font-size-mobile;
     }
@@ -21,7 +25,11 @@
 }
 
 @mixin section-h2-line-height {
-    line-height: 1.1;
+    line-height: 1.08;
+
+    @media (max-width: 1180px) {
+        line-height: 1.1;
+    }
 
     @media (max-width: 760px) {
         line-height: 1.14;
@@ -38,6 +46,7 @@
     overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
+    text-wrap: balance;
 }
 
 @mixin section-h2-mobile {

@@ -7,9 +7,78 @@
     padding-block: clamp(58px, 6vw, 94px);
     background:
         linear-gradient(90deg, rgba(9, 12, 39, 0.98) 0%, rgba(9, 12, 39, 0.88) 52%, rgba(9, 12, 39, 0.5) 100%),
-        url('../img/reconstruction/v1-04-contact-truck.png') right center / auto 88% no-repeat,
         t.$color-night;
     color: t.$color-ink;
+}
+
+.contact-cta--embedded {
+    display: grid;
+    gap: clamp(20px, 3vw, 28px);
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    color: t.$color-text;
+}
+
+.contact-cta--embedded h2 {
+    color: t.$color-text;
+}
+
+.contact-cta--embedded .contact-cta__channels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-cta--embedded .contact-cta__content > p {
+    max-width: none;
+    margin: 18px 0 0;
+    color: t.$color-text-muted;
+    font-size: clamp(17px, 2.2vw, 20px);
+    line-height: calc(1em + 4px);
+}
+
+.contact-cta--embedded .contact-cta__channels a {
+    color: t.$color-text;
+}
+
+.contact-cta--embedded .contact-cta__channels i {
+    border-color: rgba(225, 0, 45, 0.22);
+    background: rgba(9, 15, 27, 0.04);
+    color: rgba(225, 0, 45, 0.78);
+}
+
+.contact-cta--embedded .contact-cta__channels small {
+    color: t.$color-text-dim;
+}
+
+.contact-cta--embedded .contact-form {
+    border: 1px solid rgba(9, 15, 27, 0.08);
+    box-shadow: 0 12px 28px rgba(9, 15, 27, 0.08);
+}
+
+.faq--split-cta .faq__split-aside.contact-cta--embedded {
+    width: 100%;
+}
+
+@media (min-width: 1025px) {
+    .faq--split-cta .contact-cta--embedded {
+        align-content: start;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__content,
+    .faq--split-cta .contact-cta--embedded .contact-cta__content > p {
+        max-width: none;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-form {
+        width: 100%;
+        max-width: 100%;
+        justify-self: stretch;
+    }
 }
 
 .contact-cta__grid {
@@ -34,7 +103,7 @@
     overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
-    text-wrap: pretty;
+    text-wrap: balance;
 }
 
 .contact-cta__content > p {
@@ -167,32 +236,114 @@
     text-align: center;
 }
 
-@media (max-width: 980px) {
-    .contact-cta {
+@media (max-width: 1024px) {
+    .contact-cta:not(.contact-cta--embedded) {
         background:
             linear-gradient(90deg, rgba(9, 12, 39, 0.98) 0%, rgba(9, 12, 39, 0.9) 100%),
             t.$color-night;
     }
 
-    .contact-cta__grid {
+    .contact-cta:not(.contact-cta--embedded) .contact-cta__grid {
         grid-template-columns: 1fr;
+    }
+
+    .faq--split-cta .contact-cta--embedded,
+    #contacts.contact-cta--embedded {
+        gap: clamp(22px, 4vw, 28px);
+        padding: 0;
+        overflow: visible;
+        background: transparent;
+        color: t.$color-text;
+    }
+
+    .faq--split-cta .contact-cta--embedded h2,
+    #contacts.contact-cta--embedded h2 {
+        color: t.$color-text;
+        line-height: 1.12;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__content,
+    #contacts.contact-cta--embedded .contact-cta__content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__content > p,
+    #contacts.contact-cta--embedded .contact-cta__content > p {
+        margin-top: 16px;
+        color: t.$color-text-muted;
+        font-size: clamp(17px, 2.2vw, 20px);
+        line-height: calc(1em + 4px);
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__channels,
+    #contacts.contact-cta--embedded .contact-cta__channels {
+        display: grid;
+        gap: 14px;
+        margin: 22px 0 0;
+        padding: 0;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__channels a,
+    #contacts.contact-cta--embedded .contact-cta__channels a {
+        color: t.$color-text;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__channels small,
+    #contacts.contact-cta--embedded .contact-cta__channels small {
+        color: t.$color-text-dim;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-form,
+    #contacts.contact-cta--embedded .contact-form {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: clamp(20px, 3.6vw, 24px);
+        gap: 12px;
+        border-color: rgba(9, 15, 27, 0.07);
+        box-shadow: 0 8px 20px rgba(9, 15, 27, 0.06);
+        justify-self: stretch;
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 760px) {
-    .contact-cta {
+    .contact-cta:not(.contact-cta--embedded) {
         padding-block: clamp(44px, 11vw, 64px);
     }
 
-    .contact-cta__grid {
+    .faq--split-cta .contact-cta--embedded,
+    #contacts.contact-cta--embedded {
+        gap: 24px;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__content > p,
+    #contacts.contact-cta--embedded .contact-cta__content > p {
+        font-size: 17px;
+        line-height: calc(1em + 4px);
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-cta__channels,
+    #contacts.contact-cta--embedded .contact-cta__channels {
+        margin-top: 20px;
+    }
+
+    .faq--split-cta .contact-cta--embedded .contact-form,
+    #contacts.contact-cta--embedded .contact-form {
+        padding: 18px 16px;
+        gap: 10px;
+    }
+
+    .contact-cta:not(.contact-cta--embedded) .contact-cta__grid {
         gap: 28px;
     }
 
-    .contact-cta h2 {
+    .contact-cta:not(.contact-cta--embedded) h2 {
         line-height: 1.12;
     }
 
-    .contact-cta__content > p {
+    .contact-cta:not(.contact-cta--embedded) .contact-cta__content > p {
         margin-top: 16px;
         font-size: 17px;
         line-height: calc(1em + 4px);
@@ -204,7 +355,7 @@
         margin-top: 24px;
     }
 
-    .contact-cta__channels {
+    .contact-cta:not(.contact-cta--embedded) .contact-cta__channels {
         display: grid;
         gap: 12px;
         margin-top: 28px;

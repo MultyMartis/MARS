@@ -5,12 +5,66 @@
     padding-bottom: t.$rhythm-compact;
 }
 
+.faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 560px;
+    min-width: 0;
+}
+
+.faq--split-cta {
+    padding-bottom: clamp(58px, 6vw, 94px);
+}
+
+.faq--split-cta > .section-shell {
+    min-width: 0;
+}
+
+.faq--split-cta .faq__split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(40px, 4.5vw, 72px);
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.faq--split-cta .faq__split-main {
+    min-width: 0;
+}
+
+.faq--split-cta .faq__list,
+.faq--split-cta .section-heading {
+    max-width: none;
+}
+
+.faq--split-cta .section-heading {
+    position: relative;
+    top: -30px;
+    margin-inline: 0;
+    margin-bottom: clamp(24px, 3vw, 40px);
+    text-align: left;
+}
+
+.faq--split-cta .section-heading .section-eyebrow {
+    justify-content: flex-start;
+}
+
+.faq--split-cta .faq__split-aside {
+    min-width: 0;
+}
+
 .faq__title {
+    max-width: 300px !important;
     margin: 12px 0 0;
     font-family: t.$font-display;
     @include headings.section-h2-mobile;
     font-weight: 600;
     letter-spacing: -0.045em;
+    text-wrap: balance;
 }
 
 .faq__grid {
@@ -35,13 +89,11 @@
 
 .faq-item__body {
     min-width: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+    display: none;
+}
 
-    @media (prefers-reduced-motion: reduce) {
-        transition: none;
-    }
+.faq-item[open] .faq-item__body {
+    display: block;
 }
 
 .faq-item summary {
@@ -57,6 +109,11 @@
     overflow-wrap: normal;
     word-break: normal;
     hyphens: manual;
+    text-wrap: pretty;
+}
+
+.faq-item summary span {
+    white-space: nowrap;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -94,6 +151,50 @@
     hyphens: manual;
 }
 
+@media (max-width: 1024px) {
+    .faq--split-cta {
+        padding-bottom: clamp(54px, 8vw, 72px);
+    }
+
+    .faq--split-cta .faq__split {
+        grid-template-columns: 1fr;
+        gap: clamp(36px, 6vw, 52px);
+    }
+
+    .faq--split-cta .faq__split-main {
+        order: 1;
+    }
+
+    .faq--split-cta .section-heading {
+        margin-bottom: clamp(20px, 4vw, 28px);
+    }
+
+    .faq--split-cta .faq__list {
+        gap: 16px;
+        max-width: none;
+    }
+
+    .faq-item summary {
+        padding: 20px 22px;
+        gap: 10px 14px;
+    }
+
+    .faq-item__body p {
+        padding: 6px 22px 24px;
+        font-size: 16px;
+    }
+
+    .faq--split-cta .faq__split-aside {
+        order: 2;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        padding-top: clamp(28px, 5vw, 36px);
+        border-top: 1px solid rgba(9, 15, 27, 0.08);
+    }
+}
+
 @media (max-width: 860px) {
     .faq__grid {
         grid-template-columns: 1fr;
@@ -112,6 +213,14 @@
 }
 
 @media (max-width: 420px) {
+    .faq--split-cta .faq__split {
+        gap: 32px;
+    }
+
+    .faq--split-cta .faq__list {
+        gap: 14px;
+    }
+
     .faq-item summary {
         padding: 18px 18px;
         gap: 10px 12px;

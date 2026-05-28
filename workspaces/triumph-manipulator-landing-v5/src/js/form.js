@@ -1,7 +1,7 @@
 const FORM_SELECTOR = '[data-form]';
 const FORM_ROOT_INIT = 'data-form-system';
 const PHONE_DIGITS_MIN = 10;
-const DEFAULT_FORM_ENDPOINT = '/backend/api/forms/send.php';
+const DEFAULT_FORM_ENDPOINT = 'backend/send-lead.php';
 
 /**
  * @param {HTMLFormElement} form
@@ -38,6 +38,8 @@ function ensureHiddenFields(form) {
 
   const fieldNames = [
     'page_url',
+    'page_title',
+    'page_referrer',
     'page_type',
     'form_id',
     'form_name',
@@ -45,6 +47,7 @@ function ensureHiddenFields(form) {
     'timestamp',
     'form_started_at',
     'company_url',
+    'landing_id',
   ];
 
   fieldNames.forEach((name) => {
@@ -80,10 +83,19 @@ function populateHiddenFields(form) {
   };
 
   setValue('page_url', window.location.href);
+  setValue('page_title', document.title || '');
+  setValue('page_referrer', document.referrer || '');
   setValue('page_type', form.getAttribute('data-page-type') || document.body.dataset.pageType || 'landing');
   setValue('form_id', form.getAttribute('data-form-id') || form.id || 'form');
   setValue('form_name', form.getAttribute('data-form-name') || form.getAttribute('aria-label') || 'form');
   setValue('cta_source', form.getAttribute('data-cta-source') || '');
+  setValue(
+    'landing_id',
+    document.body.dataset.landingId ||
+      document.body.dataset.pageType ||
+      form.getAttribute('data-page-type') ||
+      'triumph-v5'
+  );
 
   const startedAtInput = container.querySelector('[data-form-field="form_started_at"]');
   if (startedAtInput instanceof HTMLInputElement && !startedAtInput.value) {
@@ -462,7 +474,7 @@ async function productionSubmitHandler(form, payload) {
     throw error;
   }
 
-  if (data && data.success === false) {
+  if (data && (data.ok === false || data.success === false)) {
     const error = new Error('form_submit_failed');
     error.userMessage =
       (typeof data.message === 'string' && data.message) ||
@@ -604,11 +616,13 @@ function initForm(form) {
     const payload = collectPayload(form);
 
     try {
-      await runSubmitHandler(form, payload);
+      const submitResult = await runSubmitHandler(form, payload);
       setFormState(form, 'success');
       applySuccessLock(form);
       const successMessage =
-        form.getAttribute('data-form-success') || 'Заявка принята. Перезвоним в ближайшее время.';
+        (typeof submitResult?.data?.message === 'string' && submitResult.data.message) ||
+        form.getAttribute('data-form-success') ||
+        'Заявка принята. Перезвоним в ближайшее время.';
       showFormStatus(form, 'success', successMessage);
       form.reset();
       populateHiddenFields(form);

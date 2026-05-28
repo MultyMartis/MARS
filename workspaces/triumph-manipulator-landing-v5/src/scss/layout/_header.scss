@@ -2,9 +2,9 @@
 @use '../utils/container' as c;
 @use '../utils/layers' as z;
 
-$header-nav-break: 1240px;
+$header-nav-break: 1490px;
 $header-nav-compact: 1380px;
-$header-mobile: 760px;
+$header-drawer-mid: 810px;
 
 .site-header {
     position: relative;
@@ -26,7 +26,7 @@ $header-mobile: 760px;
 
 .site-header__brand {
     flex-shrink: 0;
-    width: clamp(132px, 10vw, 164px);
+    width: clamp(132px, 10vw, 204px);
 }
 
 .site-header__brand img {
@@ -52,6 +52,8 @@ $header-mobile: 760px;
     flex-shrink: 0;
     min-width: 0;
     padding-block: 6px;
+    color: #fff;
+    font-size: 20px;
     line-height: calc(1em + 4px);
     overflow-wrap: normal;
     word-break: normal;
@@ -69,8 +71,8 @@ $header-mobile: 760px;
 .site-header__phone {
     min-width: 0;
     color: t.$color-white;
-    font-size: clamp(13px, 0.95vw, 15px);
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
     line-height: calc(1em + 4px);
     overflow-wrap: normal;
     word-break: normal;
@@ -108,7 +110,7 @@ $header-mobile: 760px;
     font-family: t.$font-display;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: normal;
     line-height: calc(1em + 4px);
     text-transform: uppercase;
     text-align: center;
@@ -334,6 +336,23 @@ body.site-header-menu-open .site-header__drawer {
     color: t.$color-white;
 }
 
+.site-header__drawer-mid {
+    display: none;
+    gap: 16px;
+    margin: 22px 0 0;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header__drawer-mid .site-header__drawer-social {
+    display: flex;
+    gap: 8px;
+}
+
+.site-header__drawer-mid .site-header__drawer-cta {
+    width: 100%;
+}
+
 .site-header__drawer-notes {
     display: grid;
     gap: 10px;
@@ -418,7 +437,7 @@ body.site-header-menu-open .site-header__drawer {
     .site-header__actions {
         flex-wrap: wrap;
         justify-content: flex-end;
-        max-width: min(100%, 420px);
+        max-width: none;
     }
 
     .site-header__cta {
@@ -426,17 +445,26 @@ body.site-header-menu-open .site-header__drawer {
     }
 }
 
-@media (max-width: $header-mobile) {
+@media (max-width: $header-drawer-mid) {
     .site-header__inner {
         gap: 12px;
     }
 
-    .site-header__phone,
+    .site-header__messengers,
     .site-header__cta {
         display: none;
     }
 
-    .site-header__messengers {
+    .site-header__drawer-notes {
+        display: none;
+    }
+
+    .site-header__drawer-mid {
+        display: grid;
+    }
+
+    .site-header__drawer-contact .site-header__drawer-social,
+    .site-header__drawer-contact .site-header__drawer-cta {
         display: none;
     }
 }

@@ -107,8 +107,13 @@ body {
     @include headings.section-h2-mobile;
     font-weight: 600;
     letter-spacing: -0.055em;
-    text-wrap: pretty;
+    text-wrap: balance;
     text-transform: uppercase;
+}
+
+.section-heading--center .section-title {
+    max-width: min(920px, 100%);
+    margin-inline: auto;
 }
 
 .section-lead {
