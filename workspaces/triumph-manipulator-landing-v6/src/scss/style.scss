@@ -10,6 +10,10 @@
 @use 'components/modal';
 @use 'components/forms';
 
+// V6 index import map (2026-05-28 canonicalization):
+// - screen-02-prices → machine-showcase base layout (legacy filename; active on index)
+// - final-contact-cta → .contact-cta / .contact-cta--embedded (FAQ inline contact; not standalone partial)
+// - legal-pages → reserved for future legal routes (no legal page HTML in build yet)
 @use 'sections/screen-01-hero';
 @use 'sections/screen-02-prices';
 @use 'sections/screen-03-trust-reviews';

@@ -9,6 +9,7 @@ Purpose: track which routes are admitted into canonical route-scoped CSS, and fl
 | zakaz | `ppc-zakaz-manip` | Canonical baseline | `_v5-machine-showcase.scss` explicit route scope groups; shared `body[data-page-type^='ppc-']` groups | Source-of-truth baseline route |
 | 5-tonn | `ppc-5-tonn` | Admitted (calibration) | `_v5-machine-showcase.scss` explicit route scope groups for ops-grid/showcase blocks | Added after calibration mismatch |
 | bytovki | `ppc-bytovki` | Admitted | `_v5-machine-showcase.scss` explicit route scope groups for `machine-showcase--ops-panel` and `machine-transport--ops-grid` (all responsive groups) | Added during second calibration rollout; no global scope broadening |
+| konteynery | `ppc-konteynery` | admitted | `_v5-machine-showcase.scss` grouped route scope selectors for `machine-showcase--ops-panel` + `machine-transport--ops-grid` across base and responsive blocks | Added during V6 konteynery rollout; no global scope broadening |
 
 ## Current explicit route-scoped selector groups (audit)
 

@@ -1,38 +1,91 @@
 <section class="prices section-light" id="tasks" aria-labelledby="tasks-title">
     <div class="section-shell">
-        <div class="machine-transport">
-            <section class="machine-transport__card machine-transport__card--allowed" aria-labelledby="machine-allowed-title">
-                <h2 class="machine-transport__heading" id="tasks-title">Какие&nbsp;контейнеры&nbsp;перевозим</h2>
-                <ul class="machine-transport__list">
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Контейнеры</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Блок-контейнеры</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Строительные&nbsp;контейнеры</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Хозблоки</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Складские&nbsp;контейнеры</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Тяжёлые&nbsp;грузы&nbsp;в&nbsp;рамках&nbsp;5&nbsp;т&nbsp;/&nbsp;3&nbsp;т</span></li>
+        <div class="machine-transport machine-transport--ops-grid">
+            <section class="machine-transport__card machine-transport__card--allowed" aria-labelledby="tasks-title">
+                <p class="machine-transport__eyebrow">Что выполняем по контейнерным заявкам</p>
+                <h2 class="machine-transport__heading" id="tasks-title">Контейнерные задачи, с&nbsp;которыми работаем</h2>
+                <ul class="machine-transport__list machine-transport__list--allowed">
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Перевозка</span>
+                            <span class="machine-transport__item-text">Перевозка контейнеров по&nbsp;Краснодару и&nbsp;краю</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Стройобъекты</span>
+                            <span class="machine-transport__item-text">Доставка контейнера на&nbsp;строительный объект</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Склад</span>
+                            <span class="machine-transport__item-text">Перевозка складского контейнера</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Стрела</span>
+                            <span class="machine-transport__item-text">Погрузка и&nbsp;разгрузка контейнера стрелой</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Территория</span>
+                            <span class="machine-transport__item-text">Перемещение контейнера по&nbsp;территории объекта</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Подача</span>
+                            <span class="machine-transport__item-text">Доставка контейнера на&nbsp;участок, базу или склад</span>
+                        </div>
+                    </li>
                 </ul>
-                <p class="machine-transport__note">Перед подачей уточняем параметры груза, адрес подачи, условия подъезда и&nbsp;особенности разгрузки.</p>
+                <div class="machine-transport__note-block">
+                    <span class="machine-transport__note-label">Важно перед подачей</span>
+                    <p class="machine-transport__note">Для точного расчета заранее уточняем тип контейнера, вес, размеры, адрес подачи, подъезд и&nbsp;точку разгрузки.</p>
+                </div>
             </section>
 
-            <section class="machine-transport__card machine-transport__card--denied" aria-labelledby="machine-denied-title">
-                <h3 id="machine-denied-title">Что не&nbsp;перевозим</h3>
-                <ul class="machine-transport__list">
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Легковые автомобили и&nbsp;эвакуация транспорта</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы сверх параметров машины (борт / стрела)</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Негабарит вне возможностей техники</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Мелкие бытовые перевозки вне профиля</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлый негабарит</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы 10+&nbsp;тонн</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Длинномеры</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлые модульные здания</span></li>
-                </ul>
-            </section>
+            <div class="machine-transport__utility-stack">
+                <section class="machine-transport__card machine-transport__card--denied" aria-labelledby="machine-denied-title">
+                    <p class="machine-transport__eyebrow">Ограничения по заявкам</p>
+                    <h3 id="machine-denied-title">Что не перевозим</h3>
+                    <ul class="machine-transport__list machine-transport__list--denied">
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Контейнеры вне параметров машины</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Перевозка при неизвестном весе без уточнения</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Негабаритные задачи без предварительного согласования</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Опасные грузы</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Эвакуация автомобилей</span></li>
+                    </ul>
+                </section>
 
-            <aside class="machine-transport__cta" aria-label="Расчёт по параметрам задачи">
-                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                <a class="button button--primary button--sm" href="#contacts" data-modal-open="modal-callback" data-cta-source="konteynery-tasks-quote">Получить расчёт</a>
-                <p>Быстрый расчёт стоимости по&nbsp;параметрам вашей задачи.</p>
-            </aside>
+                <aside class="machine-transport__cta" aria-label="Расчёт по параметрам задачи">
+                    <p class="machine-transport__eyebrow">Нужен расчет под вашу задачу</p>
+                    <div class="machine-transport__cta-head">
+                        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                        <div class="machine-transport__cta-copy">
+                            <h3 class="machine-transport__cta-title">Уточним возможность перевозки контейнера до&nbsp;выезда</h3>
+                            <p class="machine-transport__cta-text">Оставьте заявку или позвоните: проверим параметры контейнера и&nbsp;условия разгрузки, после этого дадим расчет.</p>
+                        </div>
+                    </div>
+                    <div class="machine-transport__cta-actions">
+                        <ul class="machine-transport__cta-points" aria-label="Что уточняем перед расчётом">
+                            <li>Проверяем соответствие параметрам машины</li>
+                            <li>Согласуем подачу и&nbsp;место разгрузки</li>
+                            <li>Считаем стоимость до&nbsp;выезда</li>
+                        </ul>
+                        <a class="button button--primary button--sm" href="#contacts" data-modal-open="modal-callback" data-cta-source="konteynery-tasks-quote">Рассчитать стоимость</a>
+                    </div>
+                </aside>
+            </div>
         </div>
     </div>
 </section>
