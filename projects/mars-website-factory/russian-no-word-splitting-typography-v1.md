@@ -98,12 +98,15 @@ Apply **selective** non-breaking ties — not wholesale `&nbsp;` chains.
 |---------|---------|
 | Short prepositions / conjunctions with following word | `в&nbsp;Краснодаре`, `и&nbsp;краю`, `по&nbsp;России` |
 | Number + unit | `5&nbsp;т`, `3&nbsp;т`, `14&nbsp;м`, `2&nbsp;часа` |
+| Abbreviation / service fragment | `и&nbsp;т.д.` |
 | Brand / product name integrity when source requires | project-specific; document in handoff |
 | Em dash / quoted fragments | use proper RU punctuation; tie only where orphan prevention is intentional |
 
 ### 2.2 Do not tie
 
 - Every word in a heading — use **normal spaces** between words; tie only high-value orphans.
+- **Long semantic word pairs** in adaptive headings — e.g. `заказать&nbsp;манипулятор`, `Нужно заказать&nbsp;манипулятор?` (**forbidden**).
+- Chains of `&nbsp;` used as a **layout fix** — prefer container width, font-size, `text-wrap: balance` ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §6).
 - Meta tags, `alt`, JSON-LD, `href`, `src`, `data-*`, and other technical attributes — **plain text only**, no HTML entities for typography.
 - User-generated or CMS-fed strings unless a dedicated content pipeline owns RU typography.
 
@@ -154,3 +157,4 @@ Documented lessons from Triumph V5 — **not** automated detection:
 |------|--------|
 | 2026-05-24 | v1 — integrated from Triumph V5 production fix; mandatory RU no word-splitting + selective typography ties |
 | 2026-05-24 | §3 defers QA widths/checks to [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) (stabilization pass) |
+| 2026-05-24 | §2.1–§2.2 — forbidden long-word `&nbsp;` ties + layout-fix chains; link [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) |

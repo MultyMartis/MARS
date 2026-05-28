@@ -14,6 +14,7 @@
 | [font-awesome-governance-layer.md](font-awesome-governance-layer.md) | Lightweight Font Awesome semantics, style consistency, and icon drift discipline |
 | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) | **Authority** — RU no word-splitting CSS + selective `&nbsp;` typography |
 | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | **Canonical** RU commercial landing QA widths + checks |
+| [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) | **Anti-drift** — breakpoints, container, FAQ, build/dist, Windows EBUSY |
 
 **Registry index:** [registries.md §6](registries.md#6-frontend-production-rules).
 
@@ -65,6 +66,8 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 
 - **Mobile-first** unless handoff **`responsive_rules`** say otherwise; honor design tokens and frozen breakpoints.
 - Prefer **min-width** media queries; document non-default **max-width** usage in **SAFE_UNKNOWN_notes**.
+- **Do not invent local breakpoints** — use project-defined tokens/handoff only ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §1).
+- **Triumph V5 / current V5 lane:** desktop `1025px+`; tablet/mobile `max-width: 1024px`. **Forbidden drift:** ad-hoc `980`/`981` unless project explicitly defines them.
 - Spot-check key viewports before REPORT; automated Lighthouse/CI → **SAFE UNKNOWN** unless project defines jobs.
 
 ## 8. Section / component structure discipline
@@ -88,6 +91,8 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 Before closing a frontend session:
 
 - Run the project’s **build** command when available; do **not** claim green build without evidence.
+- **Build failure → stale dist:** if build fails, assume `dist/` is stale; do **not** claim browser-visible changes until build succeeds and compiled output is verified ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §7).
+- **Windows EBUSY:** prefer deleting dist **contents** over removing the dist root; report file locks clearly ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §8).
 - Use pack [`qa-checklist.md`](../../agents/frontend-gulp-agent/qa-checklist.md) + handoff **`QA_requirements`**.
 - REPORT per [reporting-standard-v0.md](reporting-standard-v0.md) §4.2 — list **source** paths, not `dist/` fixes.
 - Record **SAFE UNKNOWN** for missing CI, scripts, or hosting.
@@ -114,6 +119,18 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 
 **Reference case (signal only, not copy source):** [`workspaces/triumph-manipulator-landing-v5/reports/v5-typography-no-word-splitting-pass-2-report-v1.md`](../../workspaces/triumph-manipulator-landing-v5/reports/v5-typography-no-word-splitting-pass-2-report-v1.md).
 
+## 13. Production invariants (FAQ, container, native details)
+
+**Authority:** [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) — full rules; **do not** duplicate here.
+
+**Operator summary:**
+
+- Split layouts (FAQ+CTA, 50/50) stay inside **section-shell** / content container.
+- Decorative dividers must not break symmetric column geometry — use pseudo-elements or absolute positioning.
+- Native `<details>`: **`open` attribute is SoT**; no hybrid JS `max-height` accordion on the same panel.
+- FAQ: avoid two-column CSS Grid when answers expand; QA open/close/single-open/neighbor-stretch/keyboard/mobile stack.
+- Reusable V5 prompt block → [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) §3b.
+
 ---
 
 ## Changelog
@@ -124,3 +141,4 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 | 2026-05-16 | Added Font Awesome governance pointer and compact icon discipline rules. |
 | 2026-05-24 | §12 — Russian no word-splitting typography (mandatory); links Triumph V5 reference case. |
 | 2026-05-24 | §12 stabilization — authority lock + [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); rule prose not duplicated. |
+| 2026-05-24 | §7/§10/§13 — Triumph V5 incident lessons; [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md). |

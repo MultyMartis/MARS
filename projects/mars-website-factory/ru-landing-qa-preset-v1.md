@@ -27,6 +27,7 @@ Use DevTools device toolbar at each width unless project handoff documents a sup
 | Headings readable | Multi-line headings wrap at spaces / intentional ties only |
 | CTA / buttons readable | Labels intact; min tap targets per project a11y |
 | FAQ summaries stable | `summary` / accordion titles do not fragment words |
+| FAQ interaction | Open · close · single-open · **no neighbor stretch** · no viewport jump · keyboard · mobile stack ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §5) |
 | Forms stable | Labels, inputs, validation regions readable; no layout jump breaking focus |
 | Mobile header stable | Sticky header does not obscure primary H1 on load; nav usable |
 
@@ -53,3 +54,4 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 | Date | Change |
 |------|--------|
 | 2026-05-24 | v1 — canonical RU commercial landing QA preset (stabilization pass) |
+| 2026-05-24 | FAQ interaction row — Triumph V5 neighbor-stretch / accordion QA |

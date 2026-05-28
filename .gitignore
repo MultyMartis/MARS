@@ -134,6 +134,12 @@ workspaces/triumph-manipulator-landing-v6/*
 !workspaces/triumph-manipulator-landing-v6/src/**
 !workspaces/triumph-manipulator-landing-v6/reports/
 !workspaces/triumph-manipulator-landing-v6/reports/**
+!workspaces/triumph-manipulator-landing-v6/backend/
+!workspaces/triumph-manipulator-landing-v6/backend/**
+!workspaces/triumph-manipulator-landing-v6/docs/
+!workspaces/triumph-manipulator-landing-v6/docs/**
+!workspaces/triumph-manipulator-landing-v6/tools/
+!workspaces/triumph-manipulator-landing-v6/tools/**
 
 # Website Factory — canonical reference + client template (clone survivability; node_modules/dist still global-ignored)
 !workspaces/website-factory-reference-v1/

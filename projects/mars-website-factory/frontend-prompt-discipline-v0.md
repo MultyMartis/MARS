@@ -6,7 +6,7 @@
 
 **Related:** [frontend-production-model.md](frontend-production-model.md), [frontend-handoff-contract-v0.md](frontend-handoff-contract-v0.md), [frontend-artifact-model-v0.md](frontend-artifact-model-v0.md), [section-payload-model-v0.md](section-payload-model-v0.md), [block-registry-v0.md](block-registry-v0.md), [prompt-structure-standard-v0.md](prompt-structure-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [reporting-standard-v0.md](reporting-standard-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [agent-map.md](agent-map.md), [`../../agents/registry.md`](../../agents/registry.md), [`../../agents/frontend-gulp-agent/README.md`](../../agents/frontend-gulp-agent/README.md) (Gulp Frontend Agent operational doc pack), [`../../agents/mars-forge/semantic-source-lock.md`](../../agents/mars-forge/semantic-source-lock.md) (when **MARS Forge** overlay applies).
 
-**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); typography authority [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
+**RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); typography authority [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md). **Anti-drift invariants:** [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md).
 
 ---
 
@@ -70,6 +70,27 @@ When the operator routes work under **`mars_forge_frontend_agent`** (Forge disci
 - **Workspace / target path** for implementation.
 
 If the prompt omits these, the executor stops and reports **SAFE UNKNOWN** rather than guessing from archives, old PDFs, or unstated mockup folders.
+
+---
+
+## 3b. V5 / frontend prompt invariant block (reusable)
+
+When scope is Triumph V5 lane or similar Gulp static frontend work, paste into `constraints` or `forbidden_patterns`:
+
+```text
+Project invariants:
+- Main breakpoint: 1024/1025.
+- Do not invent 980/981 breakpoints.
+- Desktop: 1025px+.
+- Tablet/mobile: max-width 1024px.
+- Keep split layouts inside existing section-shell/content container.
+- Do not use &nbsp; between long words in headings.
+- For native <details>, open is the single source of truth.
+- If build fails, dist is stale; do not claim success.
+- Do not touch forms unless explicitly requested.
+```
+
+Full rule prose: [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md).
 
 ---
 
@@ -263,3 +284,4 @@ What it **does** claim:
 |------|--------|
 | 2026-05-11 | **v0** — initial frontend prompt discipline (documentation only). |
 | 2026-05-16 | **§3a** — Forge overlay semantic charter pointer; Related + anti-pattern for cross-version drift. |
+| 2026-05-24 | **§3b** — reusable V5/frontend prompt invariant block; link [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md). |
