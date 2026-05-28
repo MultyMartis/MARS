@@ -1,0 +1,92 @@
+{
+  "pack_id": "triumph-manipulyator-5-tonn-v0",
+  "pack_version": "v0.1",
+  "pack_type": "capability",
+  "project_ref": "triumph-manipulator-krasnodar",
+  "route_slug": "manipulyator-5-tonn",
+  "canonical_url": "https://manipulator-triumph.ru/manipulyator-5-tonn/",
+  "locale": "ru-RU",
+  "artifact_state": "approved",
+  "content_mode": "MODE_1",
+  "semantic_lock": "active",
+  "created_at": "2026-05-27",
+  "updated_at": "2026-05-27",
+  "author_operator": "human-operator",
+  "source_artifacts": [
+    "projects/orca/ppc/triumph-manipulator/landing-pages/05-capability-5-ton.md",
+    "projects/orca/ppc/triumph-manipulator/handoff/triumph-manipulator-v5-page-01-manipulyator-5-tonn-handoff.md"
+  ],
+  "approval_gates": {
+    "approved_for_factory": true,
+    "approved_for_client_export": false,
+    "approved_for_ads": false,
+    "approved_for_launch": false
+  },
+  "ppc_continuity": {
+    "campaign_ref": "triumph-s-tier-draft-v1",
+    "group_id": "grp_fc01_5ton",
+    "group_label": "01 — Манипулятор 5 тонн",
+    "display_path": "manip-5-tonn",
+    "primary_intents": [
+      "манипулятор 5 тонн краснодар",
+      "заказать манипулятор 5 тонн",
+      "манипулятор борт 5 тонн"
+    ],
+    "ad_headline_1": "Манипулятор 5 тонн в Краснодаре",
+    "ad_headline_2": "Борт 5 т, стрела 3 т",
+    "ad_description": "Манипулятор 5 т, вылет 14 м. Подача на объект. Расчёт по задаче.",
+    "callouts": ["Борт 5 т", "Вылет 14 м", "Без посредников"],
+    "intent_continuity_rule": "Hero и схема борта/стрелы — 5 т, стрела 3 т, вылет 14 м"
+  },
+  "seo_continuity": {
+    "document_title": "Манипулятор 5 тонн в Краснодаре | Триумф",
+    "meta_description": "Манипулятор 5 т: борт 5 т, стрела 3 т, вылет 14 м. Подача в Краснодаре и краю. Расчёт стоимости по задаче.",
+    "h1": "Манипулятор 5 тонн в Краснодаре",
+    "robots_default": "noindex,nofollow"
+  },
+  "positioning_locks": [
+    "one_machine_only",
+    "no_fleet_framing",
+    "specs_5t_3t_14m_6.2x2.2_2h",
+    "price_by_task_no_fake_hourly"
+  ],
+  "safe_unknowns": [
+    {
+      "field": "hourly_rate_rub",
+      "note": "Do not publish until operator confirms"
+    },
+    {
+      "field": "production_phone_nap",
+      "note": "tel:+79004658331 in handoff — verify before launch"
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "hero",
+      "section_order": 1,
+      "section_title": "Hero",
+      "section_purpose": "Instant capability intent continuation from ad click",
+      "ppc_continuity": "H1 + bullets match ad headlines and callouts",
+      "seo_continuity": "Single H1 with 5 тонн + Краснодар",
+      "copy_blocks": [
+        {
+          "block_id": "h1",
+          "block_type": "headline",
+          "text": "Манипулятор 5 тонн в Краснодаре",
+          "locked": true
+        }
+      ],
+      "cta": {
+        "primary_label": "Рассчитать стоимость",
+        "primary_target": "#contacts",
+        "secondary_label": "Позвонить",
+        "secondary_target": "tel:+79004658331"
+      },
+      "proof_elements": [],
+      "semantic_locks": ["h1_wording", "spec_bullets"],
+      "safe_unknown": [],
+      "frontend_notes": "Single machine visual; no fleet collage",
+      "factory_implementation_notes": "workspaces/triumph-manipulator-landing-v4 screen-01-hero.html"
+    }
+  ]
+}

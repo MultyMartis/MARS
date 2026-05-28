@@ -1,0 +1,17 @@
+{
+  "name": "@orca/docx-pilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Human-triggered ORCA content pack → DOCX export pilot (local helper only)",
+  "type": "commonjs",
+  "scripts": {
+    "export": "node scripts/export-content-pack-docx.js",
+    "export:pilot": "node scripts/export-content-pack-docx.js ../../examples/triumph-manipulyator-5-tonn-pack-v0.md output/triumph-manipulyator-5-tonn-pack-v1.docx"
+  },
+  "dependencies": {
+    "docx": "^9.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

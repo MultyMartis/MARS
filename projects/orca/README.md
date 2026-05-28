@@ -39,6 +39,9 @@ All outputs require human review before use in Yandex.Direct, Google Ads, or any
 Start here for operator navigation:
 
 - `OPERATIONAL-INDEX.md` - **live-first** entry point for fast PPC sessions (default).
+- **ORCA Intelligence Foundation v0** — intake, project contracts, evidence, campaign modes, artifacts, research, Factory bridge. Index section: [OPERATIONAL-INDEX.md § ORCA Intelligence Foundation v0](OPERATIONAL-INDEX.md#orca-intelligence-foundation-v0). Principles: [orca-operational-principles-v0.md](orca-operational-principles-v0.md).
+- **Incoming intake** — raw packs: `incoming/orca/<project-id>-raw-pack/`; architecture: [intake/orca-universal-intake-architecture-v0.md](intake/orca-universal-intake-architecture-v0.md).
+- **Campaign modes** — [campaign-modes/orca-campaign-mode-architecture-v0.md](campaign-modes/orca-campaign-mode-architecture-v0.md).
 - `operator-entrypoints-v1.md` - **task-shaped** starts (new project, pilot) — **not** live-session default.
 - `live-pilot/` - live review session shape and stop rules.
 - `starter-core/` - smallest useful set of live review paths.
