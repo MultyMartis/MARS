@@ -5,6 +5,7 @@
 - `5-tonn`
 - `bytovki`
 - `konteynery`
+- `oborudovanie`
 
 ## 2) What stabilized
 
@@ -25,6 +26,9 @@
 
 ## 4) Operational lessons learned
 
+- Wrong-workspace incident during `oborudovanie` rollout was caught before freeze; work was recovered in V6 and V5 was restored clean for this scope.
+- Font Awesome icon subset discipline: semantically correct classes may be missing from `screen-icons.css`; verify subset membership before choosing route icons (discovered during `oborudovanie` icon correction).
+- Future route pages must confirm every `fas fa-*` class exists in `src/assets/vendor/fontawesome/css/screen-icons.css` before rollout freeze.
 - Copy-first rollout reduces structural noise in route adaptation.
 - Structure-first adaptation is required before cosmetic polishing.
 - STOP-gates prevented unsafe continuation under partial parity.
@@ -37,6 +41,7 @@
 - Maturity level: **stabilized calibration checkpoint**.
 - Evidence basis: successful build, route marker parity on active set, and scoped CSS admission for target PPC bodies.
 - Open constraints before next route:
-  - keep normalized fixed-title checks active for `index`, `5-tonn`, and new routes;
+  - keep normalized fixed-title checks active for `index`, `5-tonn`, `oborudovanie`, and new routes;
   - keep legacy endpoint exclusion (`backend/api/forms/send.php`) in build pipeline and verify authority of `backend/send-lead.php` during rollout QA;
+  - run icon subset QA gate (`screen-icons.css` membership) before choosing route icons;
   - perform full browser visual QA pass as mandatory HITL gate.

@@ -47,6 +47,13 @@ Use this checklist before every new rollout route.
 - [ ] `dist/{route}.html` exists.
 - [ ] `dist/index.html` still exists.
 
+## 6A) Route icon QA gate
+
+- [ ] Verify every icon class used on the route exists in `src/assets/vendor/fontawesome/css/screen-icons.css`.
+- [ ] Do not assume a Font Awesome class exists just because it is semantically correct.
+- [ ] If a class is missing from the subset, choose the closest available icon from the current subset.
+- [ ] Do not add external icon assets during route rollout.
+
 ## 7) Marker checks
 
 - [ ] `hero__cargo-action`.

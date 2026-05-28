@@ -10,13 +10,14 @@ Purpose: track which routes are admitted into canonical route-scoped CSS, and fl
 | 5-tonn | `ppc-5-tonn` | Admitted (calibration) | `_v5-machine-showcase.scss` explicit route scope groups for ops-grid/showcase blocks | Added after calibration mismatch |
 | bytovki | `ppc-bytovki` | Admitted | `_v5-machine-showcase.scss` explicit route scope groups for `machine-showcase--ops-panel` and `machine-transport--ops-grid` (all responsive groups) | Added during second calibration rollout; no global scope broadening |
 | konteynery | `ppc-konteynery` | admitted | `_v5-machine-showcase.scss` grouped route scope selectors for `machine-showcase--ops-panel` + `machine-transport--ops-grid` across base and responsive blocks | Added during V6 konteynery rollout; no global scope broadening |
+| oborudovanie | `ppc-oborudovanie` | admitted | `_v5-machine-showcase.scss` grouped route scope selectors for `machine-showcase--ops-panel` + `machine-transport--ops-grid` (9 selector groups, same pattern as konteynery) | Added during V6 oborudovanie rollout after wrong-workspace recovery; no global scope broadening |
 
 ## Current explicit route-scoped selector groups (audit)
 
 From current V6 SCSS audit in `workspaces/triumph-manipulator-landing-v6/src/scss/sections/`:
 
 - `_v5-machine-showcase.scss` contains explicit grouped scopes:
-  - `body[data-page-type='ppc-zakaz-manip'], body[data-page-type='ppc-5-tonn'], body[data-page-type='ppc-bytovki'] { ... }`
+  - `body[data-page-type='ppc-zakaz-manip'], body[data-page-type='ppc-5-tonn'], body[data-page-type='ppc-bytovki'], body[data-page-type='ppc-konteynery'], body[data-page-type='ppc-oborudovanie'] { ... }`
   - Repeated for machine-showcase / machine-transport responsive and section variants.
 - Shared selectors with `body[data-page-type^='ppc-']` exist in:
   - `_v5-hero-extensions.scss`
