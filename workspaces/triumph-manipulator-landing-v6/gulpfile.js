@@ -149,7 +149,9 @@ function fonts() {
 }
 
 function backend() {
-  return src(paths.backend.src, { base: 'backend', allowEmpty: true }).pipe(dest(path.join(paths.dist, 'backend')));
+  return src([paths.backend.src, '!backend/api/forms/send.php'], { base: 'backend', allowEmpty: true }).pipe(
+    dest(path.join(paths.dist, 'backend'))
+  );
 }
 
 const build = series(cleanDist, parallel(html, styles, scripts, images, favicon, vendorFontawesome, fonts, backend));

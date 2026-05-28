@@ -37,6 +37,7 @@ Use this checklist before every new rollout route.
 - [ ] No standalone `final-contact-cta` include.
 - [ ] No ORCA/internal English operational wording in production copy.
 - [ ] No changed fixed titles: `Что не перевозим`, `Частые вопросы`.
+- [ ] Fixed-title verification normalizes HTML entities/nbsp: treat `Что не перевозим` and `Что не&nbsp;перевозим` as equivalent canonical forms (same principle for `Частые вопросы` if entity encoding appears).
 - [ ] No duplicate `#contacts`.
 - [ ] No mock form handlers.
 
