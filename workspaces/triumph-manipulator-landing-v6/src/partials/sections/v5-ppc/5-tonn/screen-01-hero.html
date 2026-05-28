@@ -1,16 +1,16 @@
-<section class="hero hero--v5" id="hero" aria-labelledby="hero-title">
+﻿<section class="hero hero--v5" id="hero" aria-labelledby="hero-title">
     <div class="hero__shell">
         <div class="hero__main">
             <div class="hero__content">
-                <h1 class="hero__title" id="hero-title">Манипулятор&nbsp;5&nbsp;тонн <span>в&nbsp;Краснодаре</span></h1>
-                <p class="hero__lead">Перевозка&nbsp;стройматериалов,&nbsp;бытовок,&nbsp;оборудования&nbsp;и&nbsp;тяжёлых&nbsp;грузов&nbsp;одной&nbsp;машиной.&nbsp;Подача&nbsp;по&nbsp;Краснодару&nbsp;и&nbsp;краю.&nbsp;Без&nbsp;посредников.</p>
+                <h1 class="hero__title" id="hero-title">Манипулятор 5 тонн <span>в&nbsp;Краснодаре</span></h1>
+                <p class="hero__lead">Перевозка стройматериалов, бытовок, оборудования и&nbsp;тяжёлых грузов манипулятором&nbsp;5&nbsp;т. Подача по&nbsp;Краснодару и&nbsp;краю. Без&nbsp;посредников.</p>
 
                 <ul class="hero__specs" aria-label="Параметры манипулятора">
-                    <li><i class="fas fa-truck-moving" aria-hidden="true"></i><span>Борт — 5&nbsp;т</span></li>
-                    <li><i class="fas fa-truck-loading" aria-hidden="true"></i><span>Стрела — 3&nbsp;т</span></li>
-                    <li><i class="fas fa-arrows-alt-h" aria-hidden="true"></i><span>Вылет стрелы — 14&nbsp;м</span></li>
-                    <li><i class="fas fa-ruler-horizontal" aria-hidden="true"></i><span>Кузов — 6.2 × 2.2&nbsp;м</span></li>
-                    <li><i class="fas fa-clock" aria-hidden="true"></i><span>Минимальный заказ — 2&nbsp;часа</span></li>
+                    <li><i class="fas fa-truck-moving" aria-hidden="true"></i><span>Борт - 5&nbsp;т</span></li>
+                    <li><i class="fas fa-truck-loading" aria-hidden="true"></i><span>Стрела - 3&nbsp;т</span></li>
+                    <li><i class="fas fa-arrows-alt-h" aria-hidden="true"></i><span>Вылет стрелы - 14&nbsp;м</span></li>
+                    <li><i class="fas fa-ruler-horizontal" aria-hidden="true"></i><span>Кузов - 6.2 x 2.2&nbsp;м</span></li>
+                    <li><i class="fas fa-clock" aria-hidden="true"></i><span>Минимальный заказ - 2&nbsp;часа</span></li>
                 </ul>
             </div>
 
@@ -20,12 +20,12 @@
                     action="#"
                     method="post"
                     data-form
-                    data-form-id="5tonn-hero-quote"
+                    data-form-id="5-tonn-hero-quote"
                     data-page-type="ppc-5-tonn"
                     data-form-name="Рассчитать стоимость"
-                    data-cta-source="5tonn-hero-inline"
-                    data-form-success="Спасибо! Заявка принята — скоро перезвоним и уточним детали."
-                    aria-label="Форма расчёта стоимости"
+                    data-cta-source="5-tonn-hero-inline"
+                    data-form-success="Спасибо! Заявка принята - скоро перезвоним и уточним детали."
+                    aria-label="Форма расчета стоимости"
                 >
                     <h2 class="hero-form__title">Рассчитать стоимость</h2>
                     <p class="hero-form__lead">Оставьте имя и&nbsp;телефон — перезвоним и&nbsp;уточним задачу.</p>
@@ -56,12 +56,13 @@
                         <span class="site-form__error" data-form-error hidden>Подтвердите согласие на&nbsp;обработку данных</span>
                     </div>
 
-                    <a class="hero-form__call button button--outline" href="tel:+79004658331">Позвонить</a>
+                    <a class="hero-form__call button button--outline" href="tel:+79004658331" data-desktop-modal-open="modal-phone">Позвонить</a>
                 </form>
             </aside>
         </div>
 
-        <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
+        <div class="hero__lower">
+            <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
             <div class="hero-proof__grid">
                 <div class="hero-proof__item">
                     <i class="fas fa-shipping-fast" aria-hidden="true"></i>
@@ -82,39 +83,52 @@
             </div>
         </aside>
 
-        <ul class="hero__cargo" aria-label="Типовые грузы">
+        <div class="hero__cargo-block">
+            <ul class="hero__cargo" aria-label="Типовые грузы">
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5tonn-hero-cargo-bytovki">
-                    <i class="fas fa-truck-moving" aria-hidden="true"></i><span>Бытовки</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5-tonn-hero-cargo-bytovki">
+                    <i class="fas fa-truck-moving" aria-hidden="true"></i>
+                    <span>Бытовки</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5tonn-hero-cargo-fbs">
-                    <i class="fas fa-weight-hanging" aria-hidden="true"></i><span>ФБС</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5-tonn-hero-cargo-fbs">
+                    <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                    <span>ФБС</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5tonn-hero-cargo-kirpich">
-                    <i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Кирпич</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5-tonn-hero-cargo-kirpich">
+                    <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                    <span>Кирпич</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5tonn-hero-cargo-armatura">
-                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i><span>Арматура</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5-tonn-hero-cargo-armatura">
+                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i>
+                    <span>Арматура</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5tonn-hero-cargo-oborudovanie">
-                    <i class="fas fa-tools" aria-hidden="true"></i><span>Оборудование</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5-tonn-hero-cargo-oborudovanie">
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <span>Оборудование</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5tonn-hero-cargo-konteinery">
-                    <i class="fas fa-shipping-fast" aria-hidden="true"></i><span>Контейнеры</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="5-tonn-hero-cargo-konteinery">
+                    <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                    <span>Контейнеры</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
-        </ul>
-
-        <p class="hero__notice"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Уточним&nbsp;тип&nbsp;груза,&nbsp;примерный&nbsp;вес&nbsp;и&nbsp;условия&nbsp;погрузки&nbsp;и&nbsp;разгрузки.&nbsp;Не&nbsp;работаем&nbsp;с&nbsp;эвакуацией&nbsp;легковых&nbsp;автомобилей.</span></p>
+            </ul>
+        </div>
+        </div>
     </div>
 </section>

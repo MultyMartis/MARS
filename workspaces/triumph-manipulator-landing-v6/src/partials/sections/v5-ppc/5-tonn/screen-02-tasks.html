@@ -1,39 +1,101 @@
-<section class="prices section-light" id="tasks" aria-labelledby="tasks-title">
+﻿<section class="prices section-light" id="tasks" aria-labelledby="tasks-title">
     <div class="section-shell">
-        <div class="machine-transport">
-            <section class="machine-transport__card machine-transport__card--allowed" aria-labelledby="machine-allowed-title">
-                <h2 class="machine-transport__heading" id="tasks-title">Для&nbsp;каких&nbsp;задач&nbsp;подходит&nbsp;манипулятор</h2>
-                <ul class="machine-transport__list">
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Перевозка&nbsp;бытовок</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Доставка&nbsp;стройматериалов</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Перевозка&nbsp;ФБС&nbsp;и&nbsp;ЖБИ</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Доставка&nbsp;арматуры</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Перевозка&nbsp;оборудования</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Работа&nbsp;на&nbsp;строительных&nbsp;объектах</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Разгрузка&nbsp;тяжёлых&nbsp;грузов&nbsp;в&nbsp;рамках&nbsp;5&nbsp;т&nbsp;/&nbsp;3&nbsp;т</span></li>
+        <div class="machine-transport machine-transport--ops-grid">
+            <section class="machine-transport__card machine-transport__card--allowed" aria-labelledby="tasks-title">
+                <p class="machine-transport__eyebrow">Операционные сценарии</p>
+                <h2 class="machine-transport__heading" id="tasks-title">Для&nbsp;каких задач подходит манипулятор</h2>
+                <ul class="machine-transport__list machine-transport__list--allowed">
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Бытовые модули</span>
+                            <span class="machine-transport__item-text">Перевозка бытовок</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Материалы</span>
+                            <span class="machine-transport__item-text">Доставка стройматериалов</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">ЖБИ</span>
+                            <span class="machine-transport__item-text">Перевозка ФБС и&nbsp;ЖБИ</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Металл</span>
+                            <span class="machine-transport__item-text">Доставка арматуры</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Оснащение</span>
+                            <span class="machine-transport__item-text">Перевозка оборудования</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Стройплощадка</span>
+                            <span class="machine-transport__item-text">Работа на&nbsp;строительных объектах</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Разгрузка</span>
+                            <span class="machine-transport__item-text">Разгрузка тяжёлых грузов в&nbsp;рамках 5&nbsp;т&nbsp;/&nbsp;3&nbsp;т</span>
+                        </div>
+                    </li>
                 </ul>
-                <p class="machine-transport__note">Перед подачей уточняем параметры груза, адрес подачи, условия подъезда и&nbsp;особенности разгрузки.</p>
+                <div class="machine-transport__note-block">
+                    <span class="machine-transport__note-label">Перед подачей</span>
+                    <p class="machine-transport__note">Уточняем параметры груза, адрес подачи, условия подъезда и&nbsp;особенности разгрузки.</p>
+                </div>
             </section>
 
-            <section class="machine-transport__card machine-transport__card--denied" aria-labelledby="machine-denied-title">
-                <h3 id="machine-denied-title">Что не&nbsp;перевозим</h3>
-                <ul class="machine-transport__list">
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Легковые автомобили и&nbsp;эвакуация транспорта</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы сверх параметров машины (борт / стрела)</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Негабарит вне возможностей техники</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Мелкие бытовые перевозки вне профиля</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлый негабарит</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы 10+&nbsp;тонн</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Длинномеры</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлые модульные здания</span></li>
-                </ul>
-            </section>
+            <div class="machine-transport__utility-stack">
+                <section class="machine-transport__card machine-transport__card--denied" aria-labelledby="machine-denied-title">
+                    <p class="machine-transport__eyebrow">Операционные ограничения</p>
+                    <h3 id="machine-denied-title">Что не&nbsp;перевозим</h3>
+                    <ul class="machine-transport__list machine-transport__list--denied">
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Легковые автомобили и&nbsp;эвакуация транспорта</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы сверх параметров машины (борт / стрела)</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Негабарит вне возможностей техники</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Мелкие бытовые перевозки вне профиля</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлый негабарит</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы 10+&nbsp;тонн</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Длинномеры</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлые модульные здания</span></li>
+                    </ul>
+                </section>
 
-            <aside class="machine-transport__cta" aria-label="Расчёт по параметрам задачи">
-                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                <a class="button button--primary button--sm" href="#contacts" data-modal-open="modal-callback" data-cta-source="5tonn-tasks-quote">Получить расчёт</a>
-                <p>Быстрый расчёт стоимости по&nbsp;параметрам вашей задачи.</p>
-            </aside>
+                <aside class="machine-transport__cta" aria-label="Расчёт по параметрам задачи">
+                    <p class="machine-transport__eyebrow">Диспетчерская подача</p>
+                    <div class="machine-transport__cta-head">
+                        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                        <div class="machine-transport__cta-copy">
+                            <h3 class="machine-transport__cta-title">Получить расчёт по параметрам задачи</h3>
+                            <p class="machine-transport__cta-text">Сверяем массу и&nbsp;габариты груза, адрес подачи и&nbsp;условия разгрузки перед расчётом.</p>
+                        </div>
+                    </div>
+                    <div class="machine-transport__cta-actions">
+                        <ul class="machine-transport__cta-points" aria-label="Что уточняем перед расчётом">
+                            <li>Масса и&nbsp;габариты</li>
+                            <li>Адрес подачи</li>
+                            <li>Подъезд и&nbsp;разгрузка</li>
+                        </ul>
+                        <a class="button button--primary button--sm" href="#contacts" data-modal-open="modal-callback" data-cta-source="5-tonn-tasks-quote">Получить расчёт</a>
+                    </div>
+                </aside>
+            </div>
         </div>
     </div>
 </section>

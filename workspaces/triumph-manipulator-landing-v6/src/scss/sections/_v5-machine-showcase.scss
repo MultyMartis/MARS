@@ -1,7 +1,8 @@
 @use '../utils/tokens' as t;
 
 // Zakaz index: industrial ops-panel for machine parameters + tasks grid
-body[data-page-type='ppc-zakaz-manip'] {
+body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
     .machine-showcase--ops-panel {
         align-items: stretch;
         gap: clamp(28px, 3.4vw, 52px);
@@ -432,7 +433,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (min-width: 1025px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-showcase--ops-panel {
             grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
             gap: clamp(32px, 3.6vw, 56px);
@@ -456,7 +458,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (min-width: 1025px) and (max-width: 1320px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-transport--ops-grid {
             grid-template-columns: 1fr;
             gap: 18px;
@@ -486,7 +489,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (max-width: 1024px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-showcase--ops-panel {
             gap: 24px;
         }
@@ -581,7 +585,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (max-width: 760px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-showcase__media--index-baseline {
             min-height: clamp(240px, 58vw, 340px);
             padding: 10px;
@@ -647,7 +652,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (max-width: 520px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-showcase__spec-row {
             grid-template-columns: 1fr;
             gap: 6px;
@@ -660,7 +666,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (max-width: 640px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-transport--ops-grid .machine-transport__heading {
             max-width: none;
         }
@@ -709,7 +716,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (max-width: 520px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-showcase__media--index-baseline {
             min-height: clamp(220px, 72vw, 320px);
             padding: 8px;
@@ -741,7 +749,8 @@ body[data-page-type='ppc-zakaz-manip'] {
 }
 
 @media (max-width: 1490px) {
-    body[data-page-type='ppc-zakaz-manip'] {
+    body[data-page-type='ppc-zakaz-manip'],
+    body[data-page-type='ppc-5-tonn'] {
         .machine-transport--ops-grid .machine-transport__heading {
             max-width: 90%;
             font-size: 30px;

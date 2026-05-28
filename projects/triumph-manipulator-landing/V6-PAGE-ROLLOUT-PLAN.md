@@ -1,6 +1,7 @@
 # Triumph V6 — page rollout plan
 
 **Status:** preparation (2026-05-28). **Do not** batch-build all pages in one session.
+**Safety lock:** canonical V6 baseline is frozen for rollout work per [`V6-PRODUCTION-BASELINE-LOCK.md`](V6-PRODUCTION-BASELINE-LOCK.md) unless explicit user override.
 
 ## Base page
 
@@ -57,6 +58,17 @@ Aligned to ORCA [`landing-pages/INDEX.md`](../orca/ppc/triumph-manipulator/landi
 | **First pilot** | Complete **one** non-zakaz page end-to-end before starting a second |
 | **Second pilot** | Complete **one more** page; compare drift vs zakaz markers |
 | **Batch unlock** | Only after **2** pilots pass HITL — optional batch for remaining pages (still one REPORT per page recommended) |
+
+---
+
+## 5-tonn calibration lessons (mandatory for next pages)
+
+- 5-tonn exposed a repeatable failure mode: HTML parity can pass while CSS scope parity is still broken.
+- Next pages must pass `V6-ROUTE-ROLLOUT-CHECKLIST.md` before rollout is considered complete.
+- Existing target-route scaffold partials must not be reused as adaptation base.
+- Route rollout starts by copying canonical `v5-ppc/zakaz/` partials, then adapting content.
+- CSS scope admission is mandatory for every new route when canonical styles are route-scoped.
+- First two routes remain calibration gates before batch rhythm resumes.
 
 ---
 
