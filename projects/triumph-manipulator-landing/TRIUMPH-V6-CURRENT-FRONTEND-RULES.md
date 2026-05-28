@@ -213,3 +213,19 @@ Implement rollout pages by **replacing content** inside these patterns — not b
   - `data-form-handler="mock"` is forbidden in production markup.
   - `backend/api/forms/send.php` is forbidden.
   - Form IDs and CTA sources must be route-specific.
+
+---
+
+## V6 ROUTE IMAGE POLICY
+
+1. `machine-showcase__media--index-baseline` is a route-specific asset layer.
+2. During rollout/calibration, temporary reuse of canonical baseline image is allowed.
+3. After all rollout pages are created, execute a dedicated image mapping pass.
+4. Image mapping pass responsibilities:
+   - route -> semantic image mapping
+   - correct image asset assignment
+   - alt text verification
+   - sizing consistency
+   - mobile QA
+5. Image replacement is NOT part of structural rollout calibration.
+6. Do not block rollout waiting for perfect route image assignment.

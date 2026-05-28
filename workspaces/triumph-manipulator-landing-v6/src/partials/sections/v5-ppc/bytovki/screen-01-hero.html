@@ -2,8 +2,8 @@
     <div class="hero__shell">
         <div class="hero__main">
             <div class="hero__content">
-                <h1 class="hero__title" id="hero-title">Перевозка&nbsp;бытовок <span>манипулятором&nbsp;в&nbsp;Краснодаре</span></h1>
-                <p class="hero__lead">Перевозка&nbsp;бытовок&nbsp;и&nbsp;вагончиков&nbsp;манипулятором&nbsp;5&nbsp;т&nbsp;по&nbsp;Краснодару&nbsp;и&nbsp;краю.&nbsp;Погрузка&nbsp;и&nbsp;подача&nbsp;одной&nbsp;техникой.</p>
+                <h1 class="hero__title" id="hero-title">Перевозка бытовок манипулятором <span>в&nbsp;Краснодаре и&nbsp;крае</span></h1>
+                <p class="hero__lead">Аккуратно перевозим и&nbsp;устанавливаем бытовки, вагончики и&nbsp;модули на&nbsp;участках с&nbsp;разными условиями подъезда. Погрузка, маршрут, установка и&nbsp;размещение под задачу.</p>
 
                 <ul class="hero__specs" aria-label="Параметры манипулятора">
                     <li><i class="fas fa-truck-moving" aria-hidden="true"></i><span>Борт — 5&nbsp;т</span></li>
@@ -38,7 +38,7 @@
                         <input type="tel" name="phone" placeholder="Телефон" autocomplete="tel" required>
                     </label>
                     <button class="button button--primary" type="submit">Рассчитать стоимость</button>
-                    <p class="hero-form__note">Перезвоним и&nbsp;уточним: тип груза · адрес подачи · возможность работы · ориентировочную стоимость.</p>
+                    <p class="hero-form__note">Рассчитаем по&nbsp;маршруту, условиям подъезда и&nbsp;установке.</p>
 
                     <div class="site-form__field site-form__field--consent" data-form-field-wrap>
                         <label class="site-form__consent">
@@ -56,60 +56,79 @@
                         <span class="site-form__error" data-form-error hidden>Подтвердите согласие на&nbsp;обработку данных</span>
                     </div>
 
-                    <a class="hero-form__call button button--outline" href="tel:+79004658331">Позвонить</a>
+                    <a class="hero-form__call button button--outline" href="tel:+79004658331" data-desktop-modal-open="modal-phone">Позвонить и согласовать задачу</a>
                 </form>
             </aside>
         </div>
 
-        <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
+        <div class="hero__lower">
+            <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
             <div class="hero-proof__grid">
                 <div class="hero-proof__item">
-                    <i class="fas fa-shipping-fast" aria-hidden="true"></i>
-                    <span class="hero-proof__label">От&nbsp;30&nbsp;минут</span>
+                    <i class="fas fa-route" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Маршрут и&nbsp;подъезд до&nbsp;подачи</span>
                 </div>
                 <div class="hero-proof__item">
-                    <i class="fas fa-business-time" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Минимальный заказ</span>
+                    <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Схема погрузки и&nbsp;разгрузки</span>
                 </div>
                 <div class="hero-proof__item">
-                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Опытные водители</span>
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Установка и&nbsp;размещение на&nbsp;участке</span>
                 </div>
                 <div class="hero-proof__item">
-                    <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Для&nbsp;юрлиц&nbsp;—&nbsp;безнал</span>
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Без&nbsp;посредников и&nbsp;подмены техники</span>
                 </div>
             </div>
         </aside>
 
-        <ul class="hero__cargo" aria-label="Типовые грузы">
+        <div class="hero__cargo-block">
+            <ul class="hero__cargo" aria-label="Типовые задачи">
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-bytovki">
-                    <i class="fas fa-truck-moving" aria-hidden="true"></i><span>Бытовки</span>
+                    <i class="fas fa-truck-moving" aria-hidden="true"></i>
+                    <span>Бытовки</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
                 <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-vagonchiki">
-                    <i class="fas fa-home" aria-hidden="true"></i><span>Вагончики</span>
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Вагончики</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-hozbloki">
-                    <i class="fas fa-warehouse" aria-hidden="true"></i><span>Хозблоки</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-moduli">
+                    <i class="fas fa-warehouse" aria-hidden="true"></i>
+                    <span>Модули</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-posty">
-                    <i class="fas fa-shield-alt" aria-hidden="true"></i><span>Посты&nbsp;охраны</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-ustanovka">
+                    <i class="fas fa-dolly" aria-hidden="true"></i>
+                    <span>Установка</span>
+                    <span class="hero__cargo-action">Согласовать задачу &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-blok">
-                    <i class="fas fa-box" aria-hidden="true"></i><span>Блок-контейнеры</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-razmeshchenie">
+                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                    <span>Размещение</span>
+                    <span class="hero__cargo-action">Согласовать задачу &gt;</span>
                 </button>
             </li>
-        </ul>
-
-        <p class="hero__notice"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Уточним&nbsp;размеры&nbsp;бытовки,&nbsp;адрес&nbsp;подачи&nbsp;и&nbsp;возможность&nbsp;погрузки&nbsp;и&nbsp;разгрузки.</span></p>
+            <li>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="bytovki-hero-cargo-razgruzka">
+                    <i class="fas fa-truck-loading" aria-hidden="true"></i>
+                    <span>Погрузка/разгрузка</span>
+                    <span class="hero__cargo-action">Согласовать задачу &gt;</span>
+                </button>
+            </li>
+            </ul>
+        </div>
+        </div>
     </div>
 </section>

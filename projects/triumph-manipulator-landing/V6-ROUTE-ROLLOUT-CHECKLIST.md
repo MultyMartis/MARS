@@ -65,6 +65,22 @@ Use this checklist before every new rollout route.
 - [ ] 560.
 - [ ] 390.
 
+## 8A) ROUTE IMAGE QA
+
+- [ ] Temporary baseline image allowed during rollout.
+- [ ] Route-specific image required during image mapping pass.
+- [ ] Verify `machine-showcase__media--index-baseline`.
+- [ ] Verify alt text.
+- [ ] Verify no stretched/cropped image behavior.
+
+## 8B) POST-BUILD STRUCTURAL PARITY
+
+- [ ] Compare route visually against canonical zakaz.
+- [ ] Confirm no legacy layout drift.
+- [ ] Confirm tasks cluster parity.
+- [ ] Confirm proof-strip parity.
+- [ ] Confirm FAQ/contact parity.
+
 ## 9) Calibration report
 
 - [ ] What held.

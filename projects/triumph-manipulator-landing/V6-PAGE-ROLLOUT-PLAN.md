@@ -70,6 +70,18 @@ Aligned to ORCA [`landing-pages/INDEX.md`](../orca/ppc/triumph-manipulator/landi
 - CSS scope admission is mandatory for every new route when canonical styles are route-scoped.
 - First two routes remain calibration gates before batch rhythm resumes.
 
+## Rollout maturity note (post-bytovki)
+
+- Current calibration maturity improved after bytovki:
+  - lower regression count
+  - successful CSS scope admission discipline
+  - canonical parity discipline holding
+  - fewer post-build structural corrections
+- Keep operational caution:
+  - first routes remain calibration-sensitive
+  - visual QA is still mandatory
+  - CSS scope admission remains a high-risk area
+
 ---
 
 ## Explicitly out of scope (this plan)
