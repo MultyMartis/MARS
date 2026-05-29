@@ -139,6 +139,23 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 **Coordination (live):** [coordination/remaining-routes-status-matrix-v1.md](coordination/remaining-routes-status-matrix-v1.md) · [coordination/route-priority-roadmap-v1.md](coordination/route-priority-roadmap-v1.md)
 
+## ORCA PPC Exporter Production Baseline v1
+
+**Triumph Manipulator Search PPC** — production export baseline frozen 2026-05-29 (ORCA → JSON → Exporter v1.2 → XLSX → Commander → Human QA). **Not** launch, **not** ad/copy/URL edits, **not** runtime.
+
+| Doc | Role |
+|-----|------|
+| [freeze/ppc-exporter-production-baseline-v1/PPC-EXPORTER-PRODUCTION-BASELINE-v1.md](freeze/ppc-exporter-production-baseline-v1/PPC-EXPORTER-PRODUCTION-BASELINE-v1.md) | Main freeze — pipeline, SoT hierarchy, export READY gates |
+| [freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md](freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md) | Commander Search Manual Bids Template SoT (`template-v1.xlsx`) |
+| [freeze/ppc-exporter-production-baseline-v1/EXPORTER-V1.2-APPROVAL-v1.md](freeze/ppc-exporter-production-baseline-v1/EXPORTER-V1.2-APPROVAL-v1.md) | Exporter transport split v1.2 approval |
+| [freeze/ppc-exporter-production-baseline-v1/BID-MANAGEMENT-RULES-v1.md](freeze/ppc-exporter-production-baseline-v1/BID-MANAGEMENT-RULES-v1.md) | Default bid range 400–600 ₽ · within-group spread 10–90 ₽ |
+| [freeze/ppc-exporter-production-baseline-v1/CROSS-NEGATIVE-RULES-v1.md](freeze/ppc-exporter-production-baseline-v1/CROSS-NEGATIVE-RULES-v1.md) | Route-family cross-negative matrix — mandatory pre-export |
+| [freeze/ppc-exporter-production-baseline-v1/COMMANDER-HYGIENE-AUDIT-v1.md](freeze/ppc-exporter-production-baseline-v1/COMMANDER-HYGIENE-AUDIT-v1.md) | Pre-export READY hygiene checklist |
+| [freeze/ppc-exporter-production-baseline-v1/COMMANDER-CALIBRATION-FINDINGS-v1.md](freeze/ppc-exporter-production-baseline-v1/COMMANDER-CALIBRATION-FINDINGS-v1.md) | Human calibration findings from full cycle |
+| [freeze/ppc-exporter-production-baseline-v1/GIT-CHECKPOINT-v1.md](freeze/ppc-exporter-production-baseline-v1/GIT-CHECKPOINT-v1.md) | Git checkpoint — label `orca-ppc-exporter-production-baseline-v1` |
+
+**Template asset:** `ppc/triumph-manipulator/assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx`
+
 ## Project operational packs
 
 - `ppc/triumph-manipulator/` - Triumph Manipulator search PPC pack (doctrine, intent tiers, landing blueprints, Commander export foundation). Start: `ppc/triumph-manipulator/OPERATIONAL-INDEX.md`. Relationship to Intelligence Foundation: [ppc/triumph-manipulator/TRIUMPH-RELATIONSHIP-TO-INTELLIGENCE-v0.md](ppc/triumph-manipulator/TRIUMPH-RELATIONSHIP-TO-INTELLIGENCE-v0.md).

@@ -51,6 +51,7 @@ Open **one row** unless the task explicitly needs Extended.
 | **Safe sheet1 data row removal v0** | [tools/exporter-cli/safe-row-removal-notes-v0.md](tools/exporter-cli/safe-row-removal-notes-v0.md) — remove stale rows 31+ · dimension update · [sample-row-removal-run.md](tools/exporter-cli/sample-row-removal-run.md) · **not** auto-import |
 | **Commander import refinement v0.4** | [tools/exporter-cli/image-cleanup-notes-v0.4.md](tools/exporter-cli/image-cleanup-notes-v0.4.md) · [geo-routing-notes-v0.4.md](tools/exporter-cli/geo-routing-notes-v0.4.md) · [transport-symbol-normalization-v0.4.md](tools/exporter-cli/transport-symbol-normalization-v0.4.md) · [sample-import-refined-v0.4-run.md](tools/exporter-cli/sample-import-refined-v0.4-run.md) · **not** auto-import |
 | **Ad type literal fix v0.5** | [tools/exporter-cli/ad-type-literal-fix-v0.5.md](tools/exporter-cli/ad-type-literal-fix-v0.5.md) — col 2 «Текстово-графическое» · [sample-ad-type-v0.5-run.md](tools/exporter-cli/sample-ad-type-v0.5-run.md) · **not** auto-import |
+| **Production export baseline v1** | [freeze/ppc-exporter-production-baseline-v1/PPC-EXPORTER-PRODUCTION-BASELINE-v1.md](../../freeze/ppc-exporter-production-baseline-v1/PPC-EXPORTER-PRODUCTION-BASELINE-v1.md) — Exporter v1.2 · template v1 SoT · bid/cross-negative/hygiene rules · **not** launch |
 
 ---
 
@@ -143,7 +144,7 @@ Full index: [landing-pages/INDEX.md](landing-pages/INDEX.md)
 | Path | Role |
 |------|------|
 | [export/](export/) | Commander foundation + future hooks |
-| [assets/direct-commander-template/](assets/direct-commander-template/) | Reference Excel — **not** SoT |
+| [assets/direct-commander-template/](assets/direct-commander-template/) | Commander template v1 — **transport SoT** (see [freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md](../../freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md)) |
 
 ---
 

@@ -1,7 +1,8 @@
 # Commander Template Contract v1
 
 **Role:** Contract between ORCA exporter and the reference Excel asset.  
-**Asset:** [triumph-manipulator-commander-template-v0.xlsx](../assets/direct-commander-template/triumph-manipulator-commander-template-v0.xlsx)  
+**Asset (production):** [triumph-manipulator-commander-template-v1.xlsx](../assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx)  
+**Freeze SoT:** [freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md](../../freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md)  
 **README:** [assets/direct-commander-template/README.md](../assets/direct-commander-template/README.md)
 
 ---
@@ -38,8 +39,9 @@ Excel produced by export is a **snapshot for import**, not the campaign system o
 | Field | Value |
 |-------|-------|
 | **template_id** | `triumph-manipulator-commander-template` |
-| **template_revision** | `v0` |
-| **filename** | `triumph-manipulator-commander-template-v0.xlsx` |
+| **template_revision** | `v1` (production baseline 2026-05-29) |
+| **filename** | `triumph-manipulator-commander-template-v1.xlsx` |
+| **legacy_filename** | `triumph-manipulator-commander-template-v0.xlsx` — reference only |
 | **exporter_mapping_rev** | `entity-to-commander-mapping-v1` |
 
 Exporter config must pin `template_id` + `template_revision`. Mismatch → `UNSUPPORTED_TEMPLATE_REVISION`.
