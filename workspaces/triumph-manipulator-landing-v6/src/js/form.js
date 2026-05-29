@@ -2,6 +2,14 @@ const FORM_SELECTOR = '[data-form]';
 const FORM_ROOT_INIT = 'data-form-system';
 const PHONE_DIGITS_MIN = 10;
 const DEFAULT_FORM_ENDPOINT = 'backend/send-lead.php';
+const SITE_CONFIG_ENDPOINT = 'backend/site-config.php';
+const METRIKA_COUNTER_ID = 109490539;
+const METRIKA_GOAL_NAME = 'form-lead';
+
+/** @type {Promise<{ recaptchaSiteKey: string }> | null} */
+let siteConfigPromise = null;
+/** @type {Promise<void> | null} */
+let recaptchaScriptPromise = null;
 
 /**
  * @param {HTMLFormElement} form
@@ -47,6 +55,7 @@ function ensureHiddenFields(form) {
     'timestamp',
     'form_started_at',
     'company_url',
+    'g-recaptcha-response',
     'landing_id',
   ];
 
@@ -365,6 +374,131 @@ function resetFormUi(form) {
 }
 
 /**
+ * Fire Yandex Metrika lead goal after confirmed backend success only.
+ */
+function trackLeadGoal() {
+  try {
+    if (typeof window.ym === 'function') {
+      window.ym(METRIKA_COUNTER_ID, 'reachGoal', METRIKA_GOAL_NAME);
+    }
+  } catch {
+    // Metrika blocked or unavailable — must not affect form UX.
+  }
+}
+
+/**
+ * @returns {Promise<{ recaptchaSiteKey: string }>}
+ */
+async function loadSiteConfig() {
+  if (isFileProtocolPreview()) {
+    return { recaptchaSiteKey: '' };
+  }
+
+  if (!siteConfigPromise) {
+    siteConfigPromise = fetch(SITE_CONFIG_ENDPOINT, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+      credentials: 'same-origin',
+    })
+      .then(async (response) => {
+        if (!response.ok) {
+          return { recaptchaSiteKey: '' };
+        }
+
+        const data = await response.json().catch(() => null);
+
+        if (!data || typeof data !== 'object') {
+          return { recaptchaSiteKey: '' };
+        }
+
+        const key = typeof data.recaptchaSiteKey === 'string' ? data.recaptchaSiteKey.trim() : '';
+
+        return { recaptchaSiteKey: key };
+      })
+      .catch(() => ({ recaptchaSiteKey: '' }));
+  }
+
+  return siteConfigPromise;
+}
+
+/**
+ * @param {string} siteKey
+ * @returns {Promise<void>}
+ */
+function loadRecaptchaScript(siteKey) {
+  if (!siteKey || recaptchaScriptPromise) {
+    return recaptchaScriptPromise || Promise.resolve();
+  }
+
+  recaptchaScriptPromise = new Promise((resolve, reject) => {
+    if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.execute === 'function') {
+      resolve();
+      return;
+    }
+
+    const existing = document.querySelector('script[data-recaptcha-loader="true"]');
+    if (existing) {
+      existing.addEventListener('load', () => resolve(), { once: true });
+      existing.addEventListener('error', () => reject(new Error('recaptcha_script_failed')), { once: true });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
+    script.async = true;
+    script.defer = true;
+    script.dataset.recaptchaLoader = 'true';
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('recaptcha_script_failed'));
+    document.head.appendChild(script);
+  });
+
+  return recaptchaScriptPromise;
+}
+
+/**
+ * @param {HTMLFormElement} form
+ * @param {FormData} formData
+ */
+async function appendRecaptchaToken(form, formData) {
+  const handler = form.getAttribute('data-form-handler');
+
+  if (handler === 'mock' || isFileProtocolPreview()) {
+    return;
+  }
+
+  const { recaptchaSiteKey } = await loadSiteConfig();
+
+  if (!recaptchaSiteKey || recaptchaSiteKey === 'PASTE_SITE_KEY_HERE') {
+    return;
+  }
+
+  try {
+    await loadRecaptchaScript(recaptchaSiteKey);
+
+    if (typeof window.grecaptcha === 'undefined' || typeof window.grecaptcha.execute !== 'function') {
+      return;
+    }
+
+    await new Promise((resolve) => {
+      window.grecaptcha.ready(resolve);
+    });
+
+    const token = await window.grecaptcha.execute(recaptchaSiteKey, { action: 'submit' });
+
+    if (typeof token === 'string' && token) {
+      formData.set('g-recaptcha-response', token);
+      const hidden = form.querySelector('[data-form-field="g-recaptcha-response"]');
+      if (hidden instanceof HTMLInputElement) {
+        hidden.value = token;
+      }
+    }
+  } catch {
+    // If reCAPTCHA fails client-side, backend policy decides; do not block UI here.
+  }
+}
+
+/**
  * @param {HTMLFormElement} form
  */
 function collectPayload(form) {
@@ -445,6 +579,8 @@ async function productionSubmitHandler(form, payload) {
   Object.entries(payload).forEach(([key, value]) => {
     formData.append(key, value);
   });
+
+  await appendRecaptchaToken(form, formData);
 
   let response;
 
@@ -577,6 +713,7 @@ function initForm(form) {
   populateHiddenFields(form);
   bindFormFields(form);
   bindConsentLinks(form);
+  loadSiteConfig();
 
   const submitButton = form.querySelector('[type="submit"]');
   let submitLock = false;
@@ -624,6 +761,9 @@ function initForm(form) {
         form.getAttribute('data-form-success') ||
         'Заявка принята. Перезвоним в ближайшее время.';
       showFormStatus(form, 'success', successMessage);
+      if (submitResult?.mode === 'production') {
+        trackLeadGoal();
+      }
       form.reset();
       populateHiddenFields(form);
       form.dispatchEvent(new CustomEvent('site-form:success', { detail: { payload }, bubbles: true }));

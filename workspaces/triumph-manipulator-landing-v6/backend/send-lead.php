@@ -6,7 +6,10 @@ declare(strict_types=1);
  * POST only, JSON responses, no secrets in repo.
  */
 
-const LEAD_RECIPIENT = 'client.leads@polygon-ws.ru';
+const LEAD_RECIPIENTS = [
+    'client.leads@polygon-ws.ru',
+    'opergt@gktriumph.ru',
+];
 const SUBJECT_PREFIX = '[ТРИУМФ] Новая заявка';
 const ACCENT_COLOR = '#e1002d';
 const EMAIL_MAX_WIDTH = '600px';
@@ -25,6 +28,7 @@ const META_FIELDS = [
     'form_started_at',
     'landing_id',
     'company_url',
+    'g-recaptcha-response',
     'consent',
 ];
 
@@ -35,6 +39,9 @@ const FIELD_LABELS = [
     'message' => 'Сообщение',
     'comment' => 'Комментарий',
 ];
+
+require_once __DIR__ . '/lib/config-loader.php';
+require_once __DIR__ . '/lib/recaptcha.php';
 
 ini_set('display_errors', '0');
 error_reporting(E_ALL);
@@ -50,6 +57,13 @@ $input = collectInput();
 
 if (honeypotTriggered($input)) {
     jsonResponse(true, 'Заявка отправлена');
+}
+
+$config = triumph_load_config();
+$recaptchaToken = trim((string) ($input['g-recaptcha-response'] ?? ''));
+
+if (!triumph_verify_recaptcha($recaptchaToken, $config)) {
+    jsonResponse(false, 'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.', 422);
 }
 
 $phone = sanitizeField((string) ($input['phone'] ?? ''));
@@ -584,7 +598,9 @@ function sendMail(string $subject, string $htmlBody, string $textBody, array $in
         . chunk_split(base64_encode($htmlBody))
         . "--{$boundary}--";
 
-    return @mail(LEAD_RECIPIENT, $encodedSubject, $body, implode("\r\n", $headers));
+    $recipients = implode(', ', LEAD_RECIPIENTS);
+
+    return @mail($recipients, $encodedSubject, $body, implode("\r\n", $headers));
 }
 
 function buildFromAddress(): string

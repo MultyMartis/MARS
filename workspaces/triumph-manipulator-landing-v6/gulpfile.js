@@ -57,6 +57,11 @@ const paths = {
     watch: 'backend/**/*.php',
     dest: 'dist/',
   },
+  staticRoot: {
+    src: ['src/robots.txt', 'src/sitemap.xml'],
+    watch: ['src/robots.txt', 'src/sitemap.xml'],
+    dest: 'dist/',
+  },
 };
 
 function onError(title) {
@@ -149,12 +154,25 @@ function fonts() {
 }
 
 function backend() {
-  return src([paths.backend.src, '!backend/api/forms/send.php'], { base: 'backend', allowEmpty: true }).pipe(
-    dest(path.join(paths.dist, 'backend'))
-  );
+  return src(
+    [
+      paths.backend.src,
+      'backend/config.local.php.example',
+      '!backend/api/forms/send.php',
+      '!backend/config.local.php',
+    ],
+    { base: 'backend', allowEmpty: true }
+  ).pipe(dest(path.join(paths.dist, 'backend')));
 }
 
-const build = series(cleanDist, parallel(html, styles, scripts, images, favicon, vendorFontawesome, fonts, backend));
+function staticRoot() {
+  return src(paths.staticRoot.src, { allowEmpty: true }).pipe(dest(paths.staticRoot.dest));
+}
+
+const build = series(
+  cleanDist,
+  parallel(html, styles, scripts, images, favicon, vendorFontawesome, fonts, backend, staticRoot)
+);
 
 function watcher() {
   watch(paths.html.watch, html);
@@ -165,6 +183,7 @@ function watcher() {
   watch(paths.vendorFontawesome.watch, vendorFontawesome);
   watch(paths.fonts.watch, fonts);
   watch(paths.backend.watch, backend);
+  watch(paths.staticRoot.watch, staticRoot);
 }
 
 exports.clean = cleanDist;
