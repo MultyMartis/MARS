@@ -45,13 +45,19 @@ const DISPLAY_URL_MAX_CHARS = 20;
 const DISPLAY_URL_WARN_CHARS = 18;
 const DISPLAY_URL_ALLOWED_RE = /^[a-z0-9-]+$/;
 
-/** Production landing slugs for fastlink routing discipline (v0.3). */
+/** Production landing slugs for fastlink routing discipline (canonical .html paths). */
 const PRODUCTION_LANDING_SLUGS = Object.freeze([
-  "manipulyator-5-tonn",
-  "perevozka-bytovok",
-  "dostavka-stroymaterialov",
-  "manipulyator-dlya-yurlic",
-  "manipulyator-vezdehod",
+  "5-tonn.html",
+  "bytovki.html",
+  "stroymaterialy.html",
+  "yurlic.html",
+  "vezdehod.html",
+  "oborudovanie.html",
+  "konteynery.html",
+  "armatura.html",
+  "kirpich-bloki.html",
+  "fbs-zhbi.html",
+  "kray.html",
 ]);
 
 const CYRILLIC_TRANSLIT_MAP = Object.freeze({

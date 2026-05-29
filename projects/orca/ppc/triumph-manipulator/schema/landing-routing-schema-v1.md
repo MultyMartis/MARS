@@ -173,22 +173,28 @@ Before `intent_continuity_ack: true`:
 ## Production domain (v0.2 — operator-confirmed)
 
 **Canonical host:** `https://manipulator-triumph.ru`  
-**Policy:** SEO-safe slugs; trailing slash on path segments below is **recommended** but not enforced by exporter.
+**Policy:** Production click targets use **canonical `.html` paths** (operator-confirmed 2026-05-29). Legacy trailing-slash slug paths are **deprecated** in export layer.
 
 | Route role | `final_url` (production) | Typical `blueprint_id` |
 |------------|--------------------------|-------------------------|
 | Master hot | `https://manipulator-triumph.ru/` | `01-master-hot-general` |
-| 5 t capability | `https://manipulator-triumph.ru/manipulyator-5-tonn/` | `05-capability-5-ton` |
-| Бытовка use-case | `https://manipulator-triumph.ru/perevozka-bytovok/` | `02-use-case-bytovka` |
-| B2B / юрлица | `https://manipulator-triumph.ru/manipulyator-dlya-yurlic/` | `06-b2b-yurlica` |
-| Вездеход 6×6 | `https://manipulator-triumph.ru/manipulyator-vezdehod/` | `07-capability-6x6-vezdekhod` |
-| Стройматериалы | `https://manipulator-triumph.ru/dostavka-stroymaterialov/` | `03-use-case-stroymaterialy` |
+| 5 t capability | `https://manipulator-triumph.ru/5-tonn.html` | `05-capability-5-ton` |
+| Бытовка use-case | `https://manipulator-triumph.ru/bytovki.html` | `02-use-case-bytovka` |
+| B2B / юрлица | `https://manipulator-triumph.ru/yurlic.html` | `06-b2b-yurlica` |
+| Вездеход 6×6 | `https://manipulator-triumph.ru/vezdehod.html` | `07-capability-6x6-vezdekhod` |
+| Стройматериалы | `https://manipulator-triumph.ru/stroymaterialy.html` | `03-use-case-stroymaterialy` |
+| Оборудование | `https://manipulator-triumph.ru/oborudovanie.html` | `04-use-case-oborudovanie` |
+| Контейнеры | `https://manipulator-triumph.ru/konteynery.html` | `10-use-case-konteynery` |
+| Арматура | `https://manipulator-triumph.ru/armatura.html` | `11-use-case-armatura` |
+| Кирпич/блоки | `https://manipulator-triumph.ru/kirpich-bloki.html` | `12-use-case-kirpich-bloki` |
+| ФБС / ЖБИ | `https://manipulator-triumph.ru/fbs-zhbi.html` | `09-use-case-fbs-zhb` |
+| Край (geo) | `https://manipulator-triumph.ru/kray.html` | `08-intercity-krai` |
 
 **Display URL vs landing URL (v0.3):**
 
 | Field | Role | Example |
 |-------|------|---------|
-| `landing_url` / `landing_route.final_url` | Full HTTPS click target | `https://manipulator-triumph.ru/manipulyator-5-tonn/` |
+| `landing_url` / `landing_route.final_url` | Full HTTPS click target | `https://manipulator-triumph.ru/5-tonn.html` |
 | `display_url.path_1` | Short **Commander display path** (CTR artifact) | `manip-5-tonn` |
 | `display_url.domain` | Document host coherence (SY-12) | `manipulator-triumph.ru` |
 
