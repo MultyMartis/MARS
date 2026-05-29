@@ -8,8 +8,9 @@
 - `konteynery`
 - `oborudovanie`
 - `fbs-zhbi`
+- `kirpich-bloki`
 
-**Note:** Pre-final-rollout-wave freeze created.
+**Note:** `kirpich-bloki` accepted freeze (2026-05-29); snapshot `snap-20260528-triumph-v6-kirpich-bloki-accepted`.
 
 ## 2) What stabilized
 

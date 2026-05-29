@@ -1,38 +1,91 @@
 <section class="prices section-light" id="tasks" aria-labelledby="tasks-title">
     <div class="section-shell">
-        <div class="machine-transport">
-            <section class="machine-transport__card machine-transport__card--allowed" aria-labelledby="machine-allowed-title">
-                <h2 class="machine-transport__heading" id="tasks-title">Какие&nbsp;материалы&nbsp;доставляем</h2>
-                <ul class="machine-transport__list">
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Кирпич</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Газоблок&nbsp;и&nbsp;пеноблок</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Строительные&nbsp;блоки</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Паллеты&nbsp;с&nbsp;материалами</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Плитка&nbsp;и&nbsp;блоки</span></li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i><span>Подача&nbsp;на&nbsp;строительный&nbsp;объект</span></li>
+        <div class="machine-transport machine-transport--ops-grid">
+            <section class="machine-transport__card machine-transport__card--allowed" aria-labelledby="tasks-title">
+                <p class="machine-transport__eyebrow">Что выполняем по заявкам на кирпич и блоки</p>
+                <h2 class="machine-transport__heading" id="tasks-title">Задачи по доставке стройматериалов на&nbsp;объекты</h2>
+                <ul class="machine-transport__list machine-transport__list--allowed">
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Объект</span>
+                            <span class="machine-transport__item-text">Доставка кирпича на&nbsp;строительный объект</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Блоки</span>
+                            <span class="machine-transport__item-text">Перевозка блоков по&nbsp;Краснодару и&nbsp;краю</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Стройка</span>
+                            <span class="machine-transport__item-text">Доставка стройматериалов</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Стрела</span>
+                            <span class="machine-transport__item-text">Разгрузка паллет стрелой</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Подача</span>
+                            <span class="machine-transport__item-text">Подача материалов на&nbsp;объект</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <div class="machine-transport__item-copy">
+                            <span class="machine-transport__item-kicker">Грузы</span>
+                            <span class="machine-transport__item-text">Перевозка строительных грузов</span>
+                        </div>
+                    </li>
                 </ul>
-                <p class="machine-transport__note">Перед подачей уточняем параметры груза, адрес подачи, условия подъезда и&nbsp;особенности разгрузки.</p>
+                <div class="machine-transport__note-block">
+                    <span class="machine-transport__note-label">Важно перед подачей</span>
+                    <p class="machine-transport__note">Для точного расчета заранее уточняем тип и&nbsp;объем стройматериалов, вес, адреса, условия подъезда и&nbsp;точку разгрузки на&nbsp;объекте.</p>
+                </div>
             </section>
 
-            <section class="machine-transport__card machine-transport__card--denied" aria-labelledby="machine-denied-title">
-                <h3 id="machine-denied-title">Что не&nbsp;перевозим</h3>
-                <ul class="machine-transport__list">
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Легковые автомобили и&nbsp;эвакуация транспорта</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы сверх параметров машины (борт / стрела)</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Негабарит вне возможностей техники</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Мелкие бытовые перевозки вне профиля</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлый негабарит</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы 10+&nbsp;тонн</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Длинномеры</span></li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i><span>Тяжёлые модульные здания</span></li>
-                </ul>
-            </section>
+            <div class="machine-transport__utility-stack">
+                <section class="machine-transport__card machine-transport__card--denied" aria-labelledby="machine-denied-title">
+                    <p class="machine-transport__eyebrow">Ограничения по заявкам</p>
+                    <h3 id="machine-denied-title">Что не перевозим</h3>
+                    <ul class="machine-transport__list machine-transport__list--denied">
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы с&nbsp;неизвестным весом</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Негабарит без предварительного согласования</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Грузы вне параметров машины</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Опасные грузы</span></li>
+                        <li><i class="fas fa-times" aria-hidden="true"></i><span>Эвакуация техники</span></li>
+                    </ul>
+                </section>
 
-            <aside class="machine-transport__cta" aria-label="Расчёт по параметрам задачи">
-                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                <a class="button button--primary button--sm" href="#contacts" data-modal-open="modal-callback" data-cta-source="kirpich-tasks-quote">Получить расчёт</a>
-                <p>Быстрый расчёт стоимости по&nbsp;параметрам вашей задачи.</p>
-            </aside>
+                <aside class="machine-transport__cta" aria-label="Расчёт по параметрам задачи">
+                    <p class="machine-transport__eyebrow">Нужен расчет по кирпичу и блокам</p>
+                    <div class="machine-transport__cta-head">
+                        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                        <div class="machine-transport__cta-copy">
+                            <h3 class="machine-transport__cta-title">Проверим параметры и&nbsp;подтвердим подачу манипулятора</h3>
+                            <p class="machine-transport__cta-text">Оставьте заявку или позвоните: уточним параметры груза и&nbsp;условия на&nbsp;объекте, после этого дадим расчет стоимости до&nbsp;выезда.</p>
+                        </div>
+                    </div>
+                    <div class="machine-transport__cta-actions">
+                        <ul class="machine-transport__cta-points" aria-label="Что уточняем перед расчётом">
+                            <li>Проверяем соответствие параметрам машины</li>
+                            <li>Согласуем время подачи на&nbsp;объект</li>
+                            <li>Рассчитываем стоимость до&nbsp;выезда</li>
+                        </ul>
+                        <a class="button button--primary button--sm" href="#contacts" data-modal-open="modal-callback" data-cta-source="kirpich-bloki-tasks-quote" data-modal-title="Рассчитаем доставку кирпича и блоков">Рассчитать стоимость</a>
+                    </div>
+                </aside>
+            </div>
         </div>
     </div>
 </section>
