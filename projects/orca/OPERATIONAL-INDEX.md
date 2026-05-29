@@ -122,6 +122,16 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)
 
+## ORCA Landing Readiness Layer v1
+
+Source-agnostic landing verification between Semantic and PPC — deployed copy and URL truth before export. **Not** runtime. **Not** Website Factory dependency. Battle source: [freeze/battle-pilot-triumph-search-v1/ORCA-LESSONS-LEARNED-v1.md](freeze/battle-pilot-triumph-search-v1/ORCA-LESSONS-LEARNED-v1.md).
+
+| Doc | Role |
+|-----|------|
+| [intelligence/landing-readiness-layer-v1.md](intelligence/landing-readiness-layer-v1.md) | Layer architecture — problem, position, source-agnostic philosophy |
+| [intelligence/landing-ready-contract-v1.md](intelligence/landing-ready-contract-v1.md) | Landing Ready Contract — URL, copy, CTA, PPC alignment, readiness gate |
+| [intelligence/final-website-copy-pack-v1.md](intelligence/final-website-copy-pack-v1.md) | Final Website Copy Pack artifact — semantic pack ≠ deployed copy |
+
 **Intake drop zone:** `incoming/orca/<project-id>-raw-pack/` (see intake architecture).
 
 ## ORCA Route Family Freeze v1
