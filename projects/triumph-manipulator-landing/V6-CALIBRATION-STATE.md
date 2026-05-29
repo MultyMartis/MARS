@@ -1,5 +1,18 @@
 # V6 calibration state
 
+**Last updated:** 2026-05-29 — route family freeze
+
+## Phase status
+
+| Phase | Status |
+|-------|--------|
+| Route family | **COMPLETED** — all 12 routes accepted and frozen |
+| Rollout phase | **COMPLETED** — see [`V6-ROUTE-FAMILY-FREEZE.md`](V6-ROUTE-FAMILY-FREEZE.md) |
+| Route creation phase | **CLOSED** — no new routes without explicit charter |
+| Next phase | **QA and stabilization** (mobile/desktop QA, image mapping, deploy QA, production freeze) |
+
+---
+
 ## 1) Successful calibration routes
 
 - `index`
@@ -8,9 +21,16 @@
 - `konteynery`
 - `oborudovanie`
 - `fbs-zhbi`
+- `armatura`
 - `kirpich-bloki`
+- `stroymaterialy`
+- `vezdehod`
+- `yurlic`
+- `kray`
 
-**Note:** `kirpich-bloki` accepted freeze (2026-05-29); snapshot `snap-20260528-triumph-v6-kirpich-bloki-accepted`.
+**Note:** Route family freeze (2026-05-29); snapshot `snap-20260528-triumph-v6-route-family-freeze`.
+
+---
 
 ## 2) What stabilized
 
@@ -21,13 +41,19 @@
 - No scaffold reuse policy respected for calibrated rollout routes.
 - ORCA wording filtering kept within approved operational framing.
 - Rollout QA gates enforced before freeze checkpoint.
+- Full route family (12 pages) builds clean with unified marker contract.
+
+---
 
 ## 3) Remaining high-risk areas
 
-- Scoped selector admission remains sensitive to future route additions.
-- Future route drift risk if copy/markup parity gates are bypassed.
+- Scoped selector admission remains sensitive to future route additions (route creation now closed).
 - Image mapping remains deferred and can introduce perception drift.
-- Browser visual QA remains human-in-the-loop mandatory.
+- Browser visual QA remains human-in-the-loop mandatory — **not yet performed post-final-wave**.
+- MAX/Telegram messenger URLs still placeholder — production wiring pending.
+- Orphan `final-contact-cta.html` partials create maintenance confusion if accidentally re-wired.
+
+---
 
 ## 4) Operational lessons learned
 
@@ -40,13 +66,18 @@
 - HTML parity alone is insufficient without CSS scope parity.
 - Fixed-title QA must normalize entity variants (` ` and `&nbsp;`) before exact comparison; `Что не перевозим` and `Что не&nbsp;перевозим` are parity-equivalent forms.
 - Legacy endpoint hygiene should be enforced at build-copy level: keep `backend/send-lead.php` authoritative and exclude `backend/api/forms/send.php` from `dist` to prevent false-positive route checks.
+- Final-wave routes (`armatura`, `stroymaterialy`, `vezdehod`, `yurlic`, `kray`) completed without reopening index or earlier accepted routes.
+
+---
 
 ## 5) Current rollout maturity assessment
 
-- Maturity level: **stabilized calibration checkpoint**.
-- Evidence basis: successful build, route marker parity on active set, and scoped CSS admission for target PPC bodies.
-- Open constraints before next route:
-  - keep normalized fixed-title checks active for `index`, `5-tonn`, `oborudovanie`, and new routes;
-  - keep legacy endpoint exclusion (`backend/api/forms/send.php`) in build pipeline and verify authority of `backend/send-lead.php` during rollout QA;
-  - run icon subset QA gate (`screen-icons.css` membership) before choosing route icons;
-  - perform full browser visual QA pass as mandatory HITL gate.
+- Maturity level: **route family frozen — QA phase entry**.
+- Evidence basis: successful build on all 12 routes, dist marker parity, mailer endpoint hygiene, snapshot `snap-20260528-triumph-v6-route-family-freeze`.
+- Open constraints before production freeze:
+  - complete mobile and desktop HITL visual QA on all 12 routes;
+  - complete image mapping pass;
+  - wire MAX/Telegram production URLs;
+  - run deploy QA on target hosting;
+  - keep legacy endpoint exclusion (`backend/api/forms/send.php`) in build pipeline;
+  - perform production freeze only after QA backlog cleared (see `V6-ROUTE-FAMILY-FREEZE.md` Section E).

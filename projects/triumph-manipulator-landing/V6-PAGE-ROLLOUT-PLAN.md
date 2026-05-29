@@ -1,7 +1,8 @@
 # Triumph V6 — page rollout plan
 
-**Status:** preparation (2026-05-28). **Do not** batch-build all pages in one session.
+**Status:** ROUTE ROLLOUT PHASE **COMPLETE** (2026-05-29). Route family frozen — QA phase next.
 **Safety lock:** canonical V6 baseline is frozen for rollout work per [`V6-PRODUCTION-BASELINE-LOCK.md`](V6-PRODUCTION-BASELINE-LOCK.md) unless explicit user override.
+**Freeze reference:** [`V6-ROUTE-FAMILY-FREEZE.md`](V6-ROUTE-FAMILY-FREEZE.md)
 
 ## Base page
 
@@ -17,25 +18,38 @@ This page is **production-stable** (mailer MVP). All rollout pages copy its **st
 
 ---
 
-## Remaining pages (11)
+## Route rollout phase — COMPLETE
 
-Aligned to ORCA [`landing-pages/INDEX.md`](../orca/ppc/triumph-manipulator/landing-pages/INDEX.md). **Homepage / master hot** may share zakaz baseline or need a dedicated route — confirm URL map before implementation.
+All 11 non-index rollout pages plus index baseline are **accepted and frozen**.
 
-| # | ORCA blueprint | Suggested slug / scaffold | Status |
-|---|----------------|---------------------------|--------|
-| 1 | `02-use-case-bytovka.md` | `v5-ppc/bytovki/` | Scaffold only — rollout pending |
-| 2 | `03-use-case-stroymaterialy.md` | `v5-ppc/stroymaterialy/` | Scaffold only |
-| 3 | `04-use-case-oborudovanie.md` | `v5-ppc/oborudovanie/` | Scaffold only |
-| 4 | `05-capability-5-ton.md` | `v5-ppc/5-tonn/` | Scaffold only |
-| 5 | `06-b2b-yurlica.md` | `v5-ppc/yurlic/` | Scaffold only |
-| 6 | `07-capability-6x6-vezdekhod.md` | `v5-ppc/vezdehod/` | Scaffold only |
-| 7 | `08-intercity-krai.md` | `v5-ppc/kray/` | Scaffold only |
-| 8 | `09-use-case-fbs-zhb.md` | `v5-ppc/fbs-zhbi/` | Scaffold only |
-| 9 | `10-use-case-konteynery.md` | `v5-ppc/konteynery/` | Scaffold only |
-| 10 | `11-use-case-armatura.md` | `v5-ppc/armatura/` | Scaffold only |
-| 11 | `12-use-case-kirpich-bloki.md` | `v5-ppc/kirpich-bloki/` | Scaffold only |
+| # | ORCA blueprint | Slug / scaffold | Status |
+|---|----------------|-------------------|--------|
+| — | `01-master-hot-general.md` (index / zakaz) | `v5-ppc/zakaz/` | **FROZEN** |
+| 1 | `02-use-case-bytovka.md` | `v5-ppc/bytovki/` | **FROZEN** |
+| 2 | `03-use-case-stroymaterialy.md` | `v5-ppc/stroymaterialy/` | **FROZEN** |
+| 3 | `04-use-case-oborudovanie.md` | `v5-ppc/oborudovanie/` | **FROZEN** |
+| 4 | `05-capability-5-ton.md` | `v5-ppc/5-tonn/` | **FROZEN** |
+| 5 | `06-b2b-yurlica.md` | `v5-ppc/yurlic/` | **FROZEN** |
+| 6 | `07-capability-6x6-vezdekhod.md` | `v5-ppc/vezdehod/` | **FROZEN** |
+| 7 | `08-intercity-krai.md` | `v5-ppc/kray/` | **FROZEN** |
+| 8 | `09-use-case-fbs-zhb.md` | `v5-ppc/fbs-zhbi/` | **FROZEN** |
+| 9 | `10-use-case-konteynery.md` | `v5-ppc/konteynery/` | **FROZEN** |
+| 10 | `11-use-case-armatura.md` | `v5-ppc/armatura/` | **FROZEN** |
+| 11 | `12-use-case-kirpich-bloki.md` | `v5-ppc/kirpich-bloki/` | **FROZEN** |
 
-**Note:** `01-master-hot-general.md` (homepage) is **not** in the 11 above; treat as separate charter when homepage is in scope.
+**Route creation phase:** CLOSED. No new routes without explicit charter.
+
+---
+
+## Remaining work (post-rollout / QA phase)
+
+| Task | Status |
+|------|--------|
+| Image mapping pass | Pending |
+| Mobile QA | Pending |
+| Desktop QA | Pending |
+| Deploy QA | Pending |
+| Production freeze | Pending — after QA backlog |
 
 ---
 
@@ -49,15 +63,18 @@ Aligned to ORCA [`landing-pages/INDEX.md`](../orca/ppc/triumph-manipulator/landi
 6. **QA** — per rules §G in [`TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](TRIUMPH-V6-CURRENT-FRONTEND-RULES.md)  
 7. **REPORT** — files, build, viewport notes, SAFE UNKNOWN  
 
+*Steps 1–6 complete for all routes. Step 7 (full HITL QA REPORT) remains for QA phase.*
+
 ---
 
 ## Pilot gate
 
-| Gate | Rule |
-|------|------|
-| **First pilot** | Complete **one** non-zakaz page end-to-end before starting a second |
-| **Second pilot** | Complete **one more** page; compare drift vs zakaz markers |
-| **Batch unlock** | Only after **2** pilots pass HITL — optional batch for remaining pages (still one REPORT per page recommended) |
+| Gate | Rule | Result |
+|------|------|--------|
+| **First pilot** | Complete **one** non-zakaz page end-to-end before starting a second | **PASS** (`5-tonn`, `bytovki`) |
+| **Second pilot** | Complete **one more** page; compare drift vs zakaz markers | **PASS** |
+| **Batch unlock** | Only after **2** pilots pass HITL | **PASS** — full family complete |
+| **Route family freeze** | All 12 routes dist-verified + snapshot | **PASS** (2026-05-29) |
 
 ---
 
@@ -77,16 +94,13 @@ Aligned to ORCA [`landing-pages/INDEX.md`](../orca/ppc/triumph-manipulator/landi
   - successful CSS scope admission discipline
   - canonical parity discipline holding
   - fewer post-build structural corrections
-- Keep operational caution:
-  - first routes remain calibration-sensitive
-  - visual QA is still mandatory
-  - CSS scope admission remains a high-risk area
+- Route family freeze (2026-05-29) confirms full-family marker parity and mailer hygiene.
 
 ---
 
 ## Explicitly out of scope (this plan)
 
-- Creating all 11 HTML pages in one agent session  
+- Creating new route pages (route creation phase closed)  
 - Visual redesign, new section types, or breakpoint regime change  
 - Production deploy / DNS / ad URL verification (SAFE UNKNOWN until operator confirms)
 
@@ -94,6 +108,9 @@ Aligned to ORCA [`landing-pages/INDEX.md`](../orca/ppc/triumph-manipulator/landi
 
 ## Related
 
+- Route family freeze: [`V6-ROUTE-FAMILY-FREEZE.md`](V6-ROUTE-FAMILY-FREEZE.md)
+- Calibration state: [`V6-CALIBRATION-STATE.md`](V6-CALIBRATION-STATE.md)
 - V6 workspace README: `workspaces/triumph-manipulator-landing-v6/README.md`  
 - V5 snapshot: `workspaces/_snapshots/snap-20260528-triumph-v5-mailer-mvp-final-stable/`  
+- V6 route family snapshot: `workspaces/_snapshots/snap-20260528-triumph-v6-route-family-freeze/`  
 - Deprecated rules index: [`V6-RULES-DEPRECATION-INDEX.md`](V6-RULES-DEPRECATION-INDEX.md)
