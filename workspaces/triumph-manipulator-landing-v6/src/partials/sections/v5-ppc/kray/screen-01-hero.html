@@ -2,14 +2,14 @@
     <div class="hero__shell">
         <div class="hero__main">
             <div class="hero__content">
-                <h1 class="hero__title" id="hero-title">Манипулятор&nbsp;по&nbsp;Краснодарскому&nbsp;краю <span>подача&nbsp;и&nbsp;перевозки</span></h1>
-                <p class="hero__lead">Перевозка&nbsp;бытовок,&nbsp;стройматериалов,&nbsp;оборудования&nbsp;и&nbsp;тяжёлых&nbsp;грузов&nbsp;по&nbsp;Краснодару&nbsp;и&nbsp;Краснодарскому&nbsp;краю.</p>
+                <h1 class="hero__title" id="hero-title">Манипулятор по&nbsp;Краснодарскому&nbsp;краю</h1>
+                <p class="hero__lead">Выезжаем на&nbsp;объекты по&nbsp;Краснодарскому краю: доставляем и&nbsp;подаём грузы на&nbsp;стройплощадки, базы и&nbsp;удалённые точки — в&nbsp;том числе за&nbsp;пределами города. Маршрут, подъезд и&nbsp;параметры груза согласуем до&nbsp;выезда.</p>
 
                 <ul class="hero__specs" aria-label="Параметры манипулятора">
                     <li><i class="fas fa-truck-moving" aria-hidden="true"></i><span>Борт — 5&nbsp;т</span></li>
                     <li><i class="fas fa-truck-loading" aria-hidden="true"></i><span>Стрела — 3&nbsp;т</span></li>
                     <li><i class="fas fa-arrows-alt-h" aria-hidden="true"></i><span>Вылет стрелы — 14&nbsp;м</span></li>
-                    <li><i class="fas fa-map-marked-alt" aria-hidden="true"></i><span>Работаем по&nbsp;краю</span></li>
+                    <li><i class="fas fa-ruler-horizontal" aria-hidden="true"></i><span>Кузов — 6.2 × 2.2&nbsp;м</span></li>
                     <li><i class="fas fa-clock" aria-hidden="true"></i><span>Минимальный заказ — 2&nbsp;часа</span></li>
                 </ul>
             </div>
@@ -22,13 +22,13 @@
                     data-form
                     data-form-id="kray-hero-quote"
                     data-page-type="ppc-kray"
-                    data-form-name="Рассчитать стоимость"
+                    data-form-name="Рассчитать выезд"
                     data-cta-source="kray-hero-inline"
                     data-form-success="Спасибо! Заявка принята — скоро перезвоним и уточним детали."
-                    aria-label="Форма расчёта стоимости"
+                    aria-label="Форма расчёта выезда"
                 >
-                    <h2 class="hero-form__title">Рассчитать стоимость</h2>
-                    <p class="hero-form__lead">Оставьте имя и&nbsp;телефон — перезвоним и&nbsp;уточним задачу.</p>
+                    <h2 class="hero-form__title">Рассчитать выезд</h2>
+                    <p class="hero-form__lead">Оставьте контакты — уточним маршрут, объект и&nbsp;условия подачи.</p>
                     <label>
                         <span>Имя</span>
                         <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
@@ -37,8 +37,8 @@
                         <span>Телефон</span>
                         <input type="tel" name="phone" placeholder="Телефон" autocomplete="tel" required>
                     </label>
-                    <button class="button button--primary" type="submit">Рассчитать стоимость</button>
-                    <p class="hero-form__note">Перезвоним и&nbsp;уточним: тип груза · адрес подачи · возможность работы · ориентировочную стоимость.</p>
+                    <button class="button button--primary" type="submit">Рассчитать выезд</button>
+                    <p class="hero-form__note">Перезвоним: маршрут · груз · возможность работы · расчёт до&nbsp;выезда.</p>
 
                     <div class="site-form__field site-form__field--consent" data-form-field-wrap>
                         <label class="site-form__consent">
@@ -56,60 +56,79 @@
                         <span class="site-form__error" data-form-error hidden>Подтвердите согласие на&nbsp;обработку данных</span>
                     </div>
 
-                    <a class="hero-form__call button button--outline" href="tel:+79004658331">Позвонить</a>
+                    <a class="hero-form__call button button--outline" href="tel:+79004658331" data-desktop-modal-open="modal-phone">Позвонить</a>
                 </form>
             </aside>
         </div>
 
-        <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
+        <div class="hero__lower">
+            <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
             <div class="hero-proof__grid">
                 <div class="hero-proof__item">
                     <i class="fas fa-shipping-fast" aria-hidden="true"></i>
-                    <span class="hero-proof__label">От&nbsp;30&nbsp;минут</span>
+                    <span class="hero-proof__label">Работа по&nbsp;Краснодарскому краю</span>
                 </div>
                 <div class="hero-proof__item">
-                    <i class="fas fa-business-time" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Минимальный заказ</span>
-                </div>
-                <div class="hero-proof__item">
-                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Опытные водители</span>
+                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Выезд на&nbsp;объекты</span>
                 </div>
                 <div class="hero-proof__item">
                     <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Для&nbsp;юрлиц&nbsp;—&nbsp;безнал</span>
+                    <span class="hero-proof__label">Расчёт до&nbsp;выезда</span>
+                </div>
+                <div class="hero-proof__item">
+                    <i class="fas fa-business-time" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Параметры машины: 5&nbsp;т / 3&nbsp;т / 14&nbsp;м</span>
                 </div>
             </div>
         </aside>
 
-        <ul class="hero__cargo" aria-label="Типовые грузы">
+        <div class="hero__cargo-block">
+            <ul class="hero__cargo" aria-label="Типовые перевозки по краю">
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-mezhgorod">
-                    <i class="fas fa-route" aria-hidden="true"></i><span>Межгород</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-stroymat" data-modal-title="Рассчитать выезд по маршруту">
+                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
+                    <span>Стройматериалы</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-stroy">
-                    <i class="fas fa-hard-hat" aria-hidden="true"></i><span>Стройобъекты</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-bytovki" data-modal-title="Рассчитать выезд по маршруту">
+                    <i class="fas fa-box" aria-hidden="true"></i>
+                    <span>Бытовки</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-bytovki">
-                    <i class="fas fa-truck-moving" aria-hidden="true"></i><span>Бытовки</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-konteynery" data-modal-title="Рассчитать выезд по маршруту">
+                    <i class="fas fa-dolly" aria-hidden="true"></i>
+                    <span>Контейнеры</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-oborud">
-                    <i class="fas fa-tools" aria-hidden="true"></i><span>Оборудование</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-oborud" data-modal-title="Рассчитать выезд по маршруту">
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <span>Оборудование</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-materialy">
-                    <i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Стройматериалы</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-objekty" data-modal-title="Рассчитать выезд по маршруту">
+                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                    <span>Объекты по&nbsp;краю</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
-        </ul>
-
-        <p class="hero__notice"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Уточним&nbsp;маршрут,&nbsp;адрес&nbsp;подачи,&nbsp;тип&nbsp;груза&nbsp;и&nbsp;условия&nbsp;разгрузки.</span></p>
+            <li>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="kray-hero-cargo-mezhgorod" data-modal-title="Рассчитать выезд по маршруту">
+                    <i class="fas fa-route" aria-hidden="true"></i>
+                    <span>Межгород</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
+                </button>
+            </li>
+            </ul>
+        </div>
+        </div>
     </div>
 </section>

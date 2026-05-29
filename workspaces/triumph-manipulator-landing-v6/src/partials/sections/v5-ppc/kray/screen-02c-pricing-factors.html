@@ -1,24 +1,45 @@
-<section class="pricing-factors section-light" id="pricing" aria-labelledby="pricing-title">
+<section class="pricing-factors pricing-factors--system section-light" id="pricing" aria-labelledby="pricing-title">
     <div class="section-shell">
         <div class="section-heading section-heading--center">
-            <p class="section-eyebrow">Стоимость</p>
-            <h2 class="section-title" id="pricing-title">Стоимость&nbsp;перевозки&nbsp;по&nbsp;краю</h2>
-            <p class="section-lead">Точную цену рассчитываем по&nbsp;вашей задаче заранее — без скрытых доплат после выезда.</p>
+            <p class="section-eyebrow">Расчёт стоимости по&nbsp;маршруту</p>
+            <h2 class="section-title" id="pricing-title">Стоимость выезда по&nbsp;краю рассчитываем до&nbsp;подачи техники</h2>
         </div>
 
-        <ul class="pricing-factors__list" aria-label="Факторы стоимости">
-            <li><i class="fas fa-box" aria-hidden="true"></i><span>Тип и&nbsp;вес груза</span></li>
-            <li><i class="fas fa-route" aria-hidden="true"></i><span>Расстояние и&nbsp;маршрут</span></li>
-            <li><i class="fas fa-clock" aria-hidden="true"></i><span>Время работы (минимум 2&nbsp;часа)</span></li>
-            <li><i class="fas fa-dolly" aria-hidden="true"></i><span>Сложность погрузки и&nbsp;разгрузки</span></li>
-            <li><i class="fas fa-weight-hanging" aria-hidden="true"></i><span>Необходимость работы стрелой</span></li>
-            <li><i class="fas fa-road" aria-hidden="true"></i><span>Условия подъезда на&nbsp;объект</span></li>
-        </ul>
+        <div class="pricing-factors__layout">
+            <aside class="pricing-factors__aside">
+                <p class="pricing-factors__intro">Итоговая сумма зависит от&nbsp;расстояния, маршрута, условий подъезда на&nbsp;объекте, времени работы, разгрузки и&nbsp;параметров груза — без публичных «фиксированных» ставок без данных по&nbsp;заявке.</p>
 
-        <p class="pricing-factors__anchor">Стоимость зависит от&nbsp;задачи, а&nbsp;не от&nbsp;«самой низкой цены в&nbsp;интернете». Согласуем сумму до&nbsp;подачи техники.</p>
+                <ul class="pricing-factors__notes" aria-label="Условия расчёта">
+                    <li>
+                        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                        <span>Публичную фиксированную цену не&nbsp;указываем без уточнения маршрута и&nbsp;задачи</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span>Точный расчёт даём после получения адресов, расстояния, параметров груза и&nbsp;условий подъезда</span>
+                    </li>
+                </ul>
 
-        <div class="pricing-factors__cta">
-            <a class="button button--primary" href="#contacts" data-modal-open="modal-callback" data-cta-source="kray-pricing-primary">Рассчитать стоимость</a>
+                <span class="pricing-factors__accent" aria-hidden="true"></span>
+
+                <p class="pricing-factors__anchor">Сумму согласуем до&nbsp;выезда — после проверки маршрута, груза и&nbsp;условий на&nbsp;объекте.</p>
+
+                <div class="pricing-factors__cta">
+                    <a class="button button--primary" href="#contacts" data-modal-open="modal-callback" data-cta-source="kray-pricing-primary" data-modal-title="Рассчитать выезд по маршруту">Отправить маршрут и&nbsp;параметры груза для расчёта</a>
+                </div>
+            </aside>
+
+            <div class="pricing-factors__panel">
+                <p class="pricing-factors__panel-label">Что влияет на&nbsp;стоимость</p>
+                <ul class="pricing-factors__list" aria-label="Факторы стоимости">
+                    <li><i class="fas fa-route" aria-hidden="true"></i><span>Расстояние и&nbsp;маршрут</span></li>
+                    <li><i class="fas fa-road" aria-hidden="true"></i><span>Условия подъезда в&nbsp;точке подачи и&nbsp;разгрузки</span></li>
+                    <li><i class="fas fa-clock" aria-hidden="true"></i><span>Время работы и&nbsp;ожидания</span></li>
+                    <li><i class="fas fa-truck-loading" aria-hidden="true"></i><span>Разгрузка и&nbsp;объём работы стрелой</span></li>
+                    <li><i class="fas fa-weight-hanging" aria-hidden="true"></i><span>Тип, вес и&nbsp;габариты груза</span></li>
+                    <li><i class="fas fa-shipping-fast" aria-hidden="true"></i><span>Межгородской участок маршрута</span></li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>

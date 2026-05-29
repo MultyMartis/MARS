@@ -2,8 +2,8 @@
     <div class="hero__shell">
         <div class="hero__main">
             <div class="hero__content">
-                <h1 class="hero__title" id="hero-title">Перевозка&nbsp;ФБС&nbsp;и&nbsp;ЖБИ <span>манипулятором&nbsp;в&nbsp;Краснодаре</span></h1>
-                <p class="hero__lead">Доставка&nbsp;ФБС,&nbsp;ЖБИ,&nbsp;бетонных&nbsp;колец&nbsp;и&nbsp;тяжёлых&nbsp;строительных&nbsp;грузов&nbsp;манипулятором&nbsp;5&nbsp;т&nbsp;по&nbsp;Краснодару&nbsp;и&nbsp;краю.</p>
+                <h1 class="hero__title" id="hero-title">Перевозка ФБС и&nbsp;ЖБИ манипулятором <span>в&nbsp;Краснодаре</span></h1>
+                <p class="hero__lead">Доставляем ФБС, ЖБИ, бетонные блоки и&nbsp;плиты на&nbsp;строительные объекты с&nbsp;погрузкой, перевозкой и&nbsp;разгрузкой одной машиной. До&nbsp;выезда уточняем параметры груза и&nbsp;заранее даем расчет.</p>
 
                 <ul class="hero__specs" aria-label="Параметры манипулятора">
                     <li><i class="fas fa-truck-moving" aria-hidden="true"></i><span>Борт — 5&nbsp;т</span></li>
@@ -20,15 +20,15 @@
                     action="#"
                     method="post"
                     data-form
-                    data-form-id="fbs-hero-quote"
+                    data-form-id="fbs-zhbi-hero-quote"
                     data-page-type="ppc-fbs-zhbi"
                     data-form-name="Рассчитать стоимость"
-                    data-cta-source="fbs-hero-inline"
+                    data-cta-source="fbs-zhbi-hero-inline"
                     data-form-success="Спасибо! Заявка принята — скоро перезвоним и уточним детали."
                     aria-label="Форма расчёта стоимости"
                 >
-                    <h2 class="hero-form__title">Рассчитать стоимость</h2>
-                    <p class="hero-form__lead">Оставьте имя и&nbsp;телефон — перезвоним и&nbsp;уточним задачу.</p>
+                    <h2 class="hero-form__title">Оставьте имя и&nbsp;телефон</h2>
+                    <p class="hero-form__lead">Перезвоним, уточним груз и&nbsp;условия на&nbsp;объекте.</p>
                     <label>
                         <span>Имя</span>
                         <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
@@ -38,7 +38,7 @@
                         <input type="tel" name="phone" placeholder="Телефон" autocomplete="tel" required>
                     </label>
                     <button class="button button--primary" type="submit">Рассчитать стоимость</button>
-                    <p class="hero-form__note">Перезвоним и&nbsp;уточним: тип груза · адрес подачи · возможность работы · ориентировочную стоимость.</p>
+                    <p class="hero-form__note">Точный расчет делаем после уточнения параметров груза и&nbsp;маршрута.</p>
 
                     <div class="site-form__field site-form__field--consent" data-form-field-wrap>
                         <label class="site-form__consent">
@@ -56,60 +56,79 @@
                         <span class="site-form__error" data-form-error hidden>Подтвердите согласие на&nbsp;обработку данных</span>
                     </div>
 
-                    <a class="hero-form__call button button--outline" href="tel:+79004658331">Позвонить</a>
+                    <a class="hero-form__call button button--outline" href="tel:+79004658331" data-desktop-modal-open="modal-phone">Позвонить</a>
                 </form>
             </aside>
         </div>
 
-        <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
+        <div class="hero__lower">
+            <aside class="hero-proof hero-proof--v5" aria-label="Преимущества подачи">
             <div class="hero-proof__grid">
                 <div class="hero-proof__item">
                     <i class="fas fa-shipping-fast" aria-hidden="true"></i>
-                    <span class="hero-proof__label">От&nbsp;30&nbsp;минут</span>
-                </div>
-                <div class="hero-proof__item">
-                    <i class="fas fa-business-time" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Минимальный заказ</span>
-                </div>
-                <div class="hero-proof__item">
-                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Опытные водители</span>
+                    <span class="hero-proof__label">Работаем по&nbsp;Краснодару и&nbsp;Краснодарскому краю</span>
                 </div>
                 <div class="hero-proof__item">
                     <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
-                    <span class="hero-proof__label">Для&nbsp;юрлиц&nbsp;—&nbsp;безнал</span>
+                    <span class="hero-proof__label">Расчет стоимости до&nbsp;выезда по&nbsp;параметрам заявки</span>
+                </div>
+                <div class="hero-proof__item">
+                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Перевозим тяжелые строительные грузы в&nbsp;рамках параметров машины</span>
+                </div>
+                <div class="hero-proof__item">
+                    <i class="fas fa-business-time" aria-hidden="true"></i>
+                    <span class="hero-proof__label">Понятные характеристики техники: 5&nbsp;т / 3&nbsp;т / 14&nbsp;м</span>
                 </div>
             </div>
         </aside>
 
-        <ul class="hero__cargo" aria-label="Типовые грузы">
+        <div class="hero__cargo-block">
+            <ul class="hero__cargo" aria-label="Типовые строительные грузы">
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-hero-cargo-fbs">
-                    <i class="fas fa-weight-hanging" aria-hidden="true"></i><span>ФБС</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-zhbi-hero-cargo-fbs" data-modal-title="Рассчитаем перевозку ФБС и&nbsp;ЖБИ">
+                    <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                    <span>ФБС</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-hero-cargo-zhb">
-                    <i class="fas fa-layer-group" aria-hidden="true"></i><span>ЖБИ</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-zhbi-hero-cargo-zhbi" data-modal-title="Рассчитаем перевозку ФБС и&nbsp;ЖБИ">
+                    <i class="fas fa-truck-loading" aria-hidden="true"></i>
+                    <span>ЖБИ</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-hero-cargo-kolca">
-                    <i class="fas fa-circle" aria-hidden="true"></i><span>Кольца</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-zhbi-hero-cargo-bloki" data-modal-title="Рассчитаем перевозку ФБС и&nbsp;ЖБИ">
+                    <i class="fas fa-box" aria-hidden="true"></i>
+                    <span>Бетонные блоки</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-hero-cargo-bloki">
-                    <i class="fas fa-cubes" aria-hidden="true"></i><span>Блоки</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-zhbi-hero-cargo-plity" data-modal-title="Рассчитаем перевозку ФБС и&nbsp;ЖБИ">
+                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i>
+                    <span>Плиты</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
             <li>
-                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-hero-cargo-plity">
-                    <i class="fas fa-th" aria-hidden="true"></i><span>Плиты</span>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-zhbi-hero-cargo-stroymat" data-modal-title="Рассчитаем перевозку ФБС и&nbsp;ЖБИ">
+                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
+                    <span>Строительные материалы</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
                 </button>
             </li>
-        </ul>
-
-        <p class="hero__notice"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Уточним&nbsp;тип&nbsp;элемента,&nbsp;вес,&nbsp;адрес&nbsp;и&nbsp;условия&nbsp;разгрузки&nbsp;на&nbsp;объекте.</span></p>
+            <li>
+                <button type="button" class="hero__cargo-card" data-modal-open="modal-callback" data-cta-source="fbs-zhbi-hero-cargo-tyazhelye" data-modal-title="Рассчитаем перевозку ФБС и&nbsp;ЖБИ">
+                    <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                    <span>Тяжелые грузы</span>
+                    <span class="hero__cargo-action">Заказать перевозку &gt;</span>
+                </button>
+            </li>
+            </ul>
+        </div>
+        </div>
     </div>
 </section>

@@ -1,0 +1,35 @@
+@@include("partials/layout/head-v5-page01.html", {"lang":"ru","title":"Перевозка&nbsp;арматуры&nbsp;манипулятором&nbsp;в&nbsp;Краснодаре&nbsp;|&nbsp;Триумф","description":"Доставка&nbsp;арматуры&nbsp;и&nbsp;металлопроката&nbsp;манипулятором&nbsp;в&nbsp;Краснодаре&nbsp;и&nbsp;крае:&nbsp;борт&nbsp;5&nbsp;т,&nbsp;стрела&nbsp;3&nbsp;т,&nbsp;вылет&nbsp;14&nbsp;м.&nbsp;Расчет&nbsp;до&nbsp;выезда.","robots":"noindex,nofollow","ogType":"website"})
+<body id="top" data-page-type="ppc-armatura" data-landing-id="armatura">
+    <div class="first-screen" aria-label="Первый экран">
+        <div class="first-screen__bg" aria-hidden="true">
+            <img
+                class="first-screen__bg-media"
+                src="/assets/img/hero/hero-bg-final.jpg"
+                alt=""
+                width="2560"
+                height="1440"
+                decoding="async"
+                fetchpriority="high"
+            >
+        </div>
+        <div class="first-screen__overlay" aria-hidden="true"></div>
+        @@include("partials/layout/header-v5-page01.html", {"prefix": "armatura"})
+        @@include("partials/sections/v5-ppc/armatura/screen-01-hero.html")
+    </div>
+
+    <main class="landing-main" id="main">
+        @@include("partials/sections/v5-ppc/armatura/screen-02-specs.html")
+        @@include("partials/sections/v5-ppc/armatura/screen-02-tasks.html")
+        @@include("partials/sections/v5-ppc/armatura/screen-02b-order-steps.html")
+        @@include("partials/sections/v5-ppc/armatura/screen-02c-pricing-factors.html")
+        @@include("partials/sections/v5-page01/screen-03-trust-reviews.html")
+        @@include("partials/sections/v5-page01/screen-03b-b2b.html")
+        @@include("partials/sections/v5-page01/dark-proof-strip.html")
+        @@include("partials/sections/v5-ppc/armatura/screen-04-faq.html")
+    </main>
+
+    @@include("partials/sections/v5-page01/landing-footer.html")
+    @@include("partials/components/callback-modal.html", {"prefix": "armatura"})
+    @@include("partials/layout/scripts-v5-page01.html")
+</body>
+</html>

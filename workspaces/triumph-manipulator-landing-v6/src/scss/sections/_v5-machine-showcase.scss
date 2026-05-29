@@ -8,7 +8,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
     .machine-showcase--ops-panel {
         align-items: stretch;
         gap: clamp(28px, 3.4vw, 52px);
@@ -446,7 +450,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-showcase--ops-panel {
             grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
             gap: clamp(32px, 3.6vw, 56px);
@@ -477,7 +485,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-transport--ops-grid {
             grid-template-columns: 1fr;
             gap: 18px;
@@ -514,7 +526,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-showcase--ops-panel {
             gap: 24px;
         }
@@ -616,7 +632,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-showcase__media--index-baseline {
             min-height: clamp(240px, 58vw, 340px);
             padding: 10px;
@@ -689,7 +709,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-showcase__spec-row {
             grid-template-columns: 1fr;
             gap: 6px;
@@ -709,7 +733,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-transport--ops-grid .machine-transport__heading {
             max-width: none;
         }
@@ -765,7 +793,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-showcase__media--index-baseline {
             min-height: clamp(220px, 72vw, 320px);
             padding: 8px;
@@ -804,7 +836,11 @@ body[data-page-type='ppc-zakaz-manip'],
     body[data-page-type='ppc-oborudovanie'],
     body[data-page-type='ppc-fbs-zhbi'],
     body[data-page-type='ppc-armatura'],
-    body[data-page-type='ppc-kirpich-bloki'] {
+    body[data-page-type='ppc-kirpich-bloki'],
+    body[data-page-type='ppc-stroymaterialy'],
+    body[data-page-type='ppc-vezdehod'],
+    body[data-page-type='ppc-yurlic'],
+    body[data-page-type='ppc-kray'] {
         .machine-transport--ops-grid .machine-transport__heading {
             max-width: 90%;
             font-size: 30px;

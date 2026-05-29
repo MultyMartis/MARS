@@ -1,36 +1,59 @@
-<section class="order-steps section-light" id="order" aria-labelledby="order-title">
+<section class="order-steps order-steps--process section-light" id="order" aria-labelledby="order-title">
     <div class="section-shell">
         <div class="section-heading section-heading--center">
             <p class="section-eyebrow">Как заказать</p>
-            <h2 class="section-title" id="order-title">Как&nbsp;заказать&nbsp;манипулятор&nbsp;по&nbsp;краю</h2>
+            <h2 class="section-title" id="order-title">Как заказать выезд манипулятора по&nbsp;краю</h2>
         </div>
 
-        <ol class="order-steps__grid" aria-label="Шаги заказа">
-            <li class="order-steps__item">
-                <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                <strong>1. Свяжитесь с&nbsp;нами</strong>
-                <p>Позвоните или оставьте имя и&nbsp;телефон в&nbsp;форме.</p>
+        <ol class="order-steps__flow" aria-label="Шаги заказа">
+            <li class="order-steps__step order-steps__step--first">
+                <div class="order-steps__track" aria-hidden="true">
+                    <span class="order-steps__num">1</span>
+                    <span class="order-steps__connector"></span>
+                </div>
+                <div class="order-steps__card">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    <h3 class="order-steps__title">Позвоните или оставьте заявку</h3>
+                    <p>Принимаем заявку по&nbsp;телефону и&nbsp;через форму, чтобы перейти к&nbsp;расчёту выезда по&nbsp;маршруту.</p>
+                </div>
             </li>
-            <li class="order-steps__item">
-                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                <strong>2. Опишите задачу</strong>
-                <p>Тип груза, примерный вес, адрес подачи и&nbsp;разгрузки.</p>
+            <li class="order-steps__step">
+                <div class="order-steps__track" aria-hidden="true">
+                    <span class="order-steps__num">2</span>
+                    <span class="order-steps__connector"></span>
+                </div>
+                <div class="order-steps__card">
+                    <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                    <h3 class="order-steps__title">Собираем данные по&nbsp;перевозке</h3>
+                    <p>Уточняем адреса подачи и&nbsp;разгрузки, расстояние, тип груза, примерный вес, условия подъезда и&nbsp;требования к&nbsp;разгрузке на&nbsp;объекте.</p>
+                </div>
             </li>
-            <li class="order-steps__item">
-                <i class="fas fa-handshake" aria-hidden="true"></i>
-                <strong>3. Согласуем условия</strong>
-                <p>Подходит ли машина, ориентировочная стоимость и&nbsp;время подачи <strong>до выезда</strong>.</p>
+            <li class="order-steps__step">
+                <div class="order-steps__track" aria-hidden="true">
+                    <span class="order-steps__num">3</span>
+                    <span class="order-steps__connector"></span>
+                </div>
+                <div class="order-steps__card">
+                    <i class="fas fa-handshake" aria-hidden="true"></i>
+                    <h3 class="order-steps__title">Согласуем возможность работы до&nbsp;выезда</h3>
+                    <p>Проверяем маршрут, соответствие груза параметрам машины, время подачи и&nbsp;фиксируем расчёт до&nbsp;выезда техники.</p>
+                </div>
             </li>
-            <li class="order-steps__item">
-                <i class="fas fa-truck-loading" aria-hidden="true"></i>
-                <strong>4. Подача на&nbsp;объект</strong>
-                <p>Работа по&nbsp;согласованным параметрам, минимальный заказ 2&nbsp;часа.</p>
+            <li class="order-steps__step order-steps__step--last">
+                <div class="order-steps__track" aria-hidden="true">
+                    <span class="order-steps__num">4</span>
+                </div>
+                <div class="order-steps__card">
+                    <i class="fas fa-truck-loading" aria-hidden="true"></i>
+                    <h3 class="order-steps__title">Подача, доставка и&nbsp;разгрузка</h3>
+                    <p>Подаём манипулятор по&nbsp;согласованному маршруту, доставляем груз и&nbsp;выполняем разгрузку стрелой в&nbsp;точке работы.</p>
+                </div>
             </li>
         </ol>
 
         <div class="order-steps__cta">
             <a class="button button--primary" href="tel:+79004658331">Позвонить</a>
-            <a class="button button--outline" href="#contacts" data-modal-open="modal-callback" data-cta-source="kray-order-steps-quote">Рассчитать стоимость</a>
+            <a class="button button--outline" href="#contacts" data-modal-open="modal-callback" data-cta-source="kray-order-steps-quote" data-modal-title="Рассчитать выезд по маршруту">Рассчитать выезд</a>
         </div>
     </div>
 </section>
