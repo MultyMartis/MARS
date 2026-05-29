@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mars.local/orca/ppc/triumph-manipulator/validation-report-v1.schema.json",
+  "title": "ORCA PPC Validation Report v1",
+  "description": "Output artifact from a future validation engine run. Contract only — no validator implementation implied.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "validated_document_id",
+    "validation_timestamp",
+    "validation_status",
+    "summary",
+    "rule_results",
+    "entity_results",
+    "blocking_errors",
+    "warnings",
+    "safe_unknown",
+    "human_review_required",
+    "export_allowed"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "v1"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "validated_document_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to source PPC document project_id or file id."
+    },
+    "validation_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": ["passed", "failed", "passed_with_warnings", "incomplete"]
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    },
+    "rule_results": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/rule_result" }
+    },
+    "entity_results": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/entity_result" }
+    },
+    "blocking_errors": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding_ref" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding_ref" }
+    },
+    "safe_unknown": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/safe_unknown_item" }
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "description": "True when document cannot proceed without human sign-off."
+    },
+    "export_allowed": {
+      "type": "boolean",
+      "description": "False when blocking errors exist or policy blocks export."
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "validator_version": { "type": "string" },
+        "ruleset_ref": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total_rules", "passed", "warned", "failed", "not_checked", "safe_unknown_count"],
+      "properties": {
+        "total_rules": { "type": "integer", "minimum": 0 },
+        "passed": { "type": "integer", "minimum": 0 },
+        "warned": { "type": "integer", "minimum": 0 },
+        "failed": { "type": "integer", "minimum": 0 },
+        "not_checked": { "type": "integer", "minimum": 0 },
+        "safe_unknown_count": { "type": "integer", "minimum": 0 },
+        "message": { "type": "string" }
+      }
+    },
+    "entity_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "entity_kind": {
+          "type": "string",
+          "enum": ["document", "campaign", "group", "ad", "landing_route", "keyword"]
+        },
+        "entity_id": { "type": "string" },
+        "field_path": { "type": "string" }
+      }
+    },
+    "rule_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule_id",
+        "rule_class",
+        "severity",
+        "status",
+        "message"
+      ],
+      "properties": {
+        "rule_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Rule identifier from validation-schema-v1.md, e.g. SE-05, SY-01."
+        },
+        "rule_class": {
+          "type": "string",
+          "enum": [
+            "structural",
+            "symbol",
+            "semantic",
+            "landing_mismatch",
+            "commercial",
+            "survivability",
+            "export_mapping"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["error", "warn", "info"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pass", "warn", "fail", "not_checked", "safe_unknown"]
+        },
+        "entity_ref": { "$ref": "#/$defs/entity_ref" },
+        "message": { "type": "string", "minLength": 1 },
+        "suggested_fix": { "type": "string" }
+      }
+    },
+    "entity_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_kind", "entity_id", "status"],
+      "properties": {
+        "entity_kind": {
+          "type": "string",
+          "enum": ["campaign", "group", "ad"]
+        },
+        "entity_id": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": ["pass", "warn", "fail", "not_checked"]
+        },
+        "rule_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "message": { "type": "string" }
+      }
+    },
+    "finding_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "message"],
+      "properties": {
+        "rule_id": { "type": "string" },
+        "entity_ref": { "$ref": "#/$defs/entity_ref" },
+        "message": { "type": "string" },
+        "suggested_fix": { "type": "string" }
+      }
+    },
+    "safe_unknown_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic", "message"],
+      "properties": {
+        "topic": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 },
+        "rule_id": { "type": "string" },
+        "entity_ref": { "$ref": "#/$defs/entity_ref" }
+      }
+    }
+  }
+}

@@ -156,23 +156,6 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 **Template asset:** `ppc/triumph-manipulator/assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx`
 
-## ORCA Battle Pilot Triumph Search v1
-
-**Triumph Manipulator Search PPC** — first real Commander import battle milestone frozen 2026-05-30 (ORCA → JSON → Exporter v1.4 → XLSX → Direct Commander → Human QA). **Not** launch approval, **not** runtime.
-
-| Doc | Role |
-|-----|------|
-| [freeze/battle-pilot-triumph-search-v1/README.md](freeze/battle-pilot-triumph-search-v1/README.md) | Main battle freeze — outcome, artifact map, backups |
-| [freeze/battle-pilot-triumph-search-v1/BATTLE-PILOT-SUMMARY-v1.md](freeze/battle-pilot-triumph-search-v1/BATTLE-PILOT-SUMMARY-v1.md) | Battle timeline, confirmed systems, gaps |
-| [freeze/battle-pilot-triumph-search-v1/COMMANDER-IMPORT-FINDINGS-v1.md](freeze/battle-pilot-triumph-search-v1/COMMANDER-IMPORT-FINDINGS-v1.md) | Real Commander import observations |
-| [freeze/battle-pilot-triumph-search-v1/CAMPAIGN-SETTINGS-LAYER-v1.md](freeze/battle-pilot-triumph-search-v1/CAMPAIGN-SETTINGS-LAYER-v1.md) | XLSX transport vs post-import UI setup |
-| [freeze/battle-pilot-triumph-search-v1/ORCA-LESSONS-LEARNED-v1.md](freeze/battle-pilot-triumph-search-v1/ORCA-LESSONS-LEARNED-v1.md) | Deep post-battle analysis (10 areas) |
-| [freeze/battle-pilot-triumph-search-v1/ORCA-UPGRADE-BACKLOG-v1.md](freeze/battle-pilot-triumph-search-v1/ORCA-UPGRADE-BACKLOG-v1.md) | P0/P1/P2 upgrade backlog |
-| [freeze/battle-pilot-triumph-search-v1/NEXT-CHAT-MIGRATION-PROMPT-v1.md](freeze/battle-pilot-triumph-search-v1/NEXT-CHAT-MIGRATION-PROMPT-v1.md) | Migration prompt — «ORCA Upgrade After Battle Test» |
-| [freeze/battle-pilot-triumph-search-v1/STABLE-BACKUP-MANIFEST-v1.md](freeze/battle-pilot-triumph-search-v1/STABLE-BACKUP-MANIFEST-v1.md) | Backup locations, reproduction, restore |
-
-**Stable backups:** [archive/stable-orca-after-triumph-battle-v1/](archive/stable-orca-after-triumph-battle-v1/) · [ppc/triumph-manipulator/archive/stable-search-rk-after-commander-import-v1/](ppc/triumph-manipulator/archive/stable-search-rk-after-commander-import-v1/)
-
 ## Project operational packs
 
 - `ppc/triumph-manipulator/` - Triumph Manipulator search PPC pack (doctrine, intent tiers, landing blueprints, Commander export foundation). Start: `ppc/triumph-manipulator/OPERATIONAL-INDEX.md`. Relationship to Intelligence Foundation: [ppc/triumph-manipulator/TRIUMPH-RELATIONSHIP-TO-INTELLIGENCE-v0.md](ppc/triumph-manipulator/TRIUMPH-RELATIONSHIP-TO-INTELLIGENCE-v0.md).

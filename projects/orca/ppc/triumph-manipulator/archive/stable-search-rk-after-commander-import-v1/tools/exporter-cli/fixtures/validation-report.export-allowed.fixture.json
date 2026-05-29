@@ -1,0 +1,30 @@
+{
+  "schema_version": "v1",
+  "project_id": "triumph-manipulator-krd-search-s-tier-draft",
+  "validated_document_id": "triumph-manipulator-krd-search-s-tier-draft",
+  "validation_timestamp": "2026-05-20T14:00:00.000Z",
+  "validation_status": "passed",
+  "summary": {
+    "total_rules": 89,
+    "passed": 89,
+    "warned": 0,
+    "failed": 0,
+    "not_checked": 0,
+    "safe_unknown_count": 0,
+    "message": "Fixture for exporter-cli success path — operator testing only."
+  },
+  "rule_results": [],
+  "entity_results": [],
+  "blocking_errors": [],
+  "warnings": [],
+  "safe_unknown": [],
+  "human_review_required": false,
+  "export_allowed": true,
+  "meta": {
+    "validator_version": "fixture-export-allowed",
+    "ruleset_ref": "exporter-cli-test-fixture",
+    "input_schema_valid": true,
+    "report_schema_valid": true,
+    "launch_allowed": null
+  }
+}

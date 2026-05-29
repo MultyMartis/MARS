@@ -1,0 +1,638 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mars.local/orca/ppc/triumph-manipulator/orca-ppc-document-v1.schema.json",
+  "title": "ORCA PPC Document v1",
+  "description": "Structured PPC project document for Triumph Manipulator search-only campaigns. Documentation contract only — no runtime implied.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "project_name",
+    "market",
+    "geo",
+    "source_pack",
+    "search_only_scope",
+    "campaigns",
+    "global_negatives",
+    "landing_registry",
+    "validation_policy",
+    "export_policy",
+    "human_review"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "v1",
+      "description": "Document schema version literal."
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9][a-z0-9._-]*$",
+      "description": "Stable internal project identifier."
+    },
+    "project_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable project label."
+    },
+    "market": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Market label, e.g. yandex_direct_ru."
+    },
+    "geo": {
+      "$ref": "#/$defs/geo_block"
+    },
+    "source_pack": {
+      "type": "string",
+      "const": "triumph-manipulator",
+      "description": "Originating ORCA operational pack."
+    },
+    "search_only_scope": {
+      "type": "boolean",
+      "const": true,
+      "description": "Root envelope: search-only; no RSYA/retargeting/master."
+    },
+    "campaigns": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/campaign" }
+    },
+    "global_negatives": {
+      "$ref": "#/$defs/negative_list"
+    },
+    "landing_registry": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/landing_registry_entry" },
+      "description": "Optional index of blueprint IDs used in this document."
+    },
+    "validation_policy": {
+      "$ref": "#/$defs/validation_policy"
+    },
+    "export_policy": {
+      "$ref": "#/$defs/export_policy"
+    },
+    "human_review": {
+      "$ref": "#/$defs/human_review"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "created_by": { "type": "string", "enum": ["human", "assisted", "import"] },
+        "created_at": { "type": "string", "format": "date-time" },
+        "last_modified_at": { "type": "string", "format": "date-time" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "geo_block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_region"],
+      "properties": {
+        "primary_region": { "type": "string", "minLength": 1 },
+        "region_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "geo_notes": { "type": "string" }
+      }
+    },
+    "negative_list": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["keywords"],
+      "properties": {
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "match_type_default": {
+          "type": "string",
+          "enum": ["exact", "phrase", "broad"],
+          "default": "phrase"
+        },
+        "conditional": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["keyword", "reason"],
+            "properties": {
+              "keyword": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "strategy_block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy_label"],
+      "properties": {
+        "strategy_label": { "type": "string", "minLength": 1 },
+        "bid_intent": { "type": "string" },
+        "budget_intent": { "type": "string" },
+        "priority_tier": { "type": "string", "enum": ["S", "A", "B", "X"] }
+      }
+    },
+    "schedule_block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "schedule_notes": { "type": "string" }
+      }
+    },
+    "device_adjustments": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "desktop_modifier": { "type": ["number", "null"] },
+        "tablet_modifier": { "type": ["number", "null"] },
+        "mobile_modifier": { "type": ["number", "null"] }
+      }
+    },
+    "campaign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "campaign_id",
+        "campaign_name",
+        "campaign_type",
+        "search_only_scope",
+        "geo",
+        "strategy",
+        "campaign_negatives",
+        "intent_classification",
+        "routing_role",
+        "groups"
+      ],
+      "properties": {
+        "campaign_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "campaign_name": { "type": "string", "minLength": 1 },
+        "campaign_type": {
+          "type": "string",
+          "enum": ["search"]
+        },
+        "search_only_scope": {
+          "type": "boolean",
+          "const": true
+        },
+        "geo": { "$ref": "#/$defs/geo_block" },
+        "strategy": { "$ref": "#/$defs/strategy_block" },
+        "schedule": { "$ref": "#/$defs/schedule_block" },
+        "device_adjustments": { "$ref": "#/$defs/device_adjustments" },
+        "campaign_negatives": { "$ref": "#/$defs/negative_list" },
+        "intent_classification": {
+          "type": "string",
+          "enum": [
+            "hot_general",
+            "use_case",
+            "capability",
+            "b2b",
+            "intercity",
+            "mixed_container"
+          ]
+        },
+        "routing_role": {
+          "type": "string",
+          "enum": [
+            "primary_search",
+            "capability_split",
+            "b2b_split",
+            "use_case_split",
+            "intercity_split",
+            "experimental"
+          ]
+        },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/group" }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "keyword": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phrase", "match_policy", "status"],
+      "properties": {
+        "phrase": { "type": "string", "minLength": 1 },
+        "match_policy": {
+          "type": "string",
+          "enum": ["exact", "phrase", "broad"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "paused", "draft"]
+        },
+        "notes": { "type": "string" },
+        "is_primary": { "type": "boolean" }
+      }
+    },
+    "keyword_cluster": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["intent_summary", "keywords"],
+      "properties": {
+        "intent_summary": { "type": "string", "minLength": 1 },
+        "keywords": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/keyword" }
+        },
+        "cluster_rules_ack": { "type": "boolean" }
+      }
+    },
+    "landing_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "blueprint_id",
+        "landing_type",
+        "final_url",
+        "fallback_allowed",
+        "intent_continuity_rule"
+      ],
+      "properties": {
+        "blueprint_id": {
+          "type": "string",
+          "enum": [
+            "01-master-hot-general",
+            "02-use-case-bytovka",
+            "03-use-case-stroymaterialy",
+            "04-use-case-oborudovanie",
+            "05-capability-5-ton",
+            "06-b2b-yurlica",
+            "07-capability-6x6-vezdekhod",
+            "08-intercity-krai",
+            "09-use-case-fbs-zhb",
+            "10-use-case-konteynery",
+            "11-use-case-armatura",
+            "12-use-case-kirpich-bloki"
+          ]
+        },
+        "landing_type": {
+          "type": "string",
+          "enum": ["master_hot", "use_case", "capability", "b2b", "intercity", "fallback"]
+        },
+        "final_url": { "type": "string", "format": "uri" },
+        "fallback_allowed": { "type": "boolean" },
+        "intent_continuity_rule": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable rule: ad intent must continue on blueprint hero/CTA."
+        },
+        "routing_notes": { "type": "string" },
+        "intent_continuity_ack": { "type": "boolean" },
+        "blueprint_path": { "type": "string" }
+      }
+    },
+    "intent_purity_markers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "single_intent_confirmed",
+        "reject_list_checked",
+        "no_employment_intent",
+        "no_purchase_asset_intent",
+        "no_repair_intent",
+        "cross_intent_risk"
+      ],
+      "properties": {
+        "single_intent_confirmed": { "type": "boolean" },
+        "reject_list_checked": { "type": "boolean" },
+        "no_employment_intent": { "type": "boolean" },
+        "no_purchase_asset_intent": { "type": "boolean" },
+        "no_repair_intent": { "type": "boolean" },
+        "cross_intent_risk": {
+          "type": "string",
+          "enum": ["none", "low", "high"]
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "group_id",
+        "group_name",
+        "semantic_intent",
+        "keyword_cluster",
+        "group_negatives",
+        "landing_route",
+        "ads",
+        "intent_purity_markers"
+      ],
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "group_name": { "type": "string", "minLength": 1 },
+        "semantic_intent": { "type": "string", "minLength": 1 },
+        "intent_tier": {
+          "type": "string",
+          "enum": ["S", "A", "B", "X"]
+        },
+        "intent_type": {
+          "type": "string",
+          "enum": [
+            "capability_exact",
+            "use_case_exact",
+            "b2b",
+            "intercity",
+            "hot_general"
+          ]
+        },
+        "keyword_cluster": { "$ref": "#/$defs/keyword_cluster" },
+        "group_negatives": { "$ref": "#/$defs/negative_list" },
+        "landing_route": { "$ref": "#/$defs/landing_route" },
+        "ads": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/ad" }
+        },
+        "intent_purity_markers": { "$ref": "#/$defs/intent_purity_markers" },
+        "use_case_classification": {
+          "type": ["string", "null"],
+          "enum": [
+            null,
+            "bytovka",
+            "stroymaterialy",
+            "oborudovanie",
+            "fbs_zhb",
+            "konteynery",
+            "armatura",
+            "kirpich_bloki",
+            "other_use_case"
+          ]
+        },
+        "capability_classification": {
+          "type": ["string", "null"],
+          "enum": [
+            null,
+            "tonnage_5t",
+            "vezdekhod_6x6",
+            "boom_reach",
+            "brand_chassis",
+            "other_capability"
+          ]
+        },
+        "draft_status": {
+          "type": "string",
+          "enum": ["draft", "review", "approved_for_export"]
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "display_url": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain"],
+      "properties": {
+        "domain": { "type": "string", "minLength": 1 },
+        "path_1": { "type": "string", "maxLength": 20 },
+        "path_2": { "type": "string", "maxLength": 20 }
+      }
+    },
+    "fastlink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "intent_role"],
+      "properties": {
+        "title": { "type": "string", "maxLength": 30 },
+        "url": { "type": "string", "format": "uri" },
+        "description_1": { "type": "string" },
+        "description_2": { "type": "string" },
+        "intent_role": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Why this fastlink continues group intent."
+        }
+      }
+    },
+    "callout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "intent_role"],
+      "properties": {
+        "text": { "type": "string", "maxLength": 25 },
+        "intent_role": { "type": "string", "minLength": 1 }
+      }
+    },
+    "cta_semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_cta"],
+      "properties": {
+        "primary_cta": {
+          "type": "string",
+          "enum": ["call", "calculate", "order", "whatsapp"]
+        },
+        "cta_phrase": { "type": "string" },
+        "urgency_level": { "type": "string", "enum": ["high", "medium", "low"] },
+        "b2b_friendly": { "type": "boolean" }
+      }
+    },
+    "keyword_alignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_keyword", "phrase_in_headline_1", "phrase_in_description"],
+      "properties": {
+        "primary_keyword": { "type": "string", "minLength": 1 },
+        "phrase_in_headline_1": { "type": "boolean" },
+        "phrase_in_description": { "type": "boolean" },
+        "phrase_in_fastlink": { "type": "boolean" },
+        "alignment_notes": { "type": "string" }
+      }
+    },
+    "mobile_first_readability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "h1_line_break_ok",
+        "no_stuffed_keywords",
+        "description_scannable"
+      ],
+      "properties": {
+        "h1_line_break_ok": { "type": "boolean" },
+        "no_stuffed_keywords": { "type": "boolean" },
+        "description_scannable": { "type": "boolean" },
+        "estimated_mobile_grade": {
+          "type": "string",
+          "enum": ["ok", "review", "fail"]
+        }
+      }
+    },
+    "yandex_bold_highlight": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_query", "highlight_planned_in", "continuation_ok"],
+      "properties": {
+        "target_query": { "type": "string", "minLength": 1 },
+        "highlight_planned_in": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["headline_1", "headline_2", "description", "fastlinks"]
+          },
+          "minItems": 1
+        },
+        "continuation_ok": { "type": "boolean" }
+      }
+    },
+    "ad": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ad_id",
+        "status",
+        "headline_1",
+        "description",
+        "display_url",
+        "landing_url",
+        "cta_semantics",
+        "keyword_alignment",
+        "mobile_first_readability",
+        "yandex_bold_highlight"
+      ],
+      "properties": {
+        "ad_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "active", "paused"]
+        },
+        "headline_1": { "type": "string", "maxLength": 56 },
+        "headline_2": { "type": "string", "maxLength": 30 },
+        "description": { "type": "string", "maxLength": 81 },
+        "display_url": { "$ref": "#/$defs/display_url" },
+        "landing_url": { "type": "string", "format": "uri" },
+        "fastlinks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/fastlink" }
+        },
+        "callouts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/callout" }
+        },
+        "cta_semantics": { "$ref": "#/$defs/cta_semantics" },
+        "keyword_alignment": { "$ref": "#/$defs/keyword_alignment" },
+        "mobile_first_readability": { "$ref": "#/$defs/mobile_first_readability" },
+        "yandex_bold_highlight": { "$ref": "#/$defs/yandex_bold_highlight" },
+        "validation_notes": { "type": "string" }
+      }
+    },
+    "landing_registry_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blueprint_id"],
+      "properties": {
+        "blueprint_id": { "type": "string" },
+        "blueprint_path": { "type": "string" },
+        "landing_type": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "validation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled_rule_classes", "block_export_on_fail"],
+      "properties": {
+        "schema_ref": {
+          "type": "string",
+          "const": "validation-schema-v1.md"
+        },
+        "enabled_rule_classes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "structural",
+              "symbol",
+              "semantic",
+              "landing_mismatch",
+              "commercial",
+              "survivability",
+              "export_mapping"
+            ]
+          }
+        },
+        "block_export_on_fail": { "type": "boolean" },
+        "symbol_limits": {
+          "type": "object",
+          "properties": {
+            "headline_1_max": { "type": "integer", "const": 56 },
+            "headline_2_max": { "type": "integer", "const": 30 },
+            "description_max": { "type": "integer", "const": 81 },
+            "fastlink_title_max": { "type": "integer", "const": 30 },
+            "callout_max": { "type": "integer", "const": 25 },
+            "display_path_segment_max": { "type": "integer", "const": 20 }
+          }
+        },
+        "launch_ready_requires_human_approval": { "type": "boolean" }
+      }
+    },
+    "export_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["transport", "requires_validation_pass"],
+      "properties": {
+        "transport": {
+          "type": "string",
+          "const": "direct_commander_excel",
+          "description": "Excel is transport only — not source of truth."
+        },
+        "mapping_schema_ref": {
+          "type": "string",
+          "const": "export-mapping-schema-v1.md"
+        },
+        "requires_validation_pass": { "type": "boolean" },
+        "template_pack_ref": {
+          "type": "string",
+          "default": "assets/direct-commander-template/"
+        }
+      }
+    },
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "review_status",
+        "approved_for_export",
+        "approved_for_commander_import",
+        "approved_for_launch"
+      ],
+      "properties": {
+        "required": { "type": "boolean" },
+        "review_status": {
+          "type": "string",
+          "enum": ["not_started", "in_review", "changes_requested", "approved"]
+        },
+        "reviewer_notes": { "type": "string" },
+        "approved_for_export": { "type": "boolean" },
+        "approved_for_commander_import": { "type": "boolean" },
+        "approved_for_launch": { "type": "boolean" }
+      }
+    }
+  }
+}

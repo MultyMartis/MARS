@@ -1,0 +1,66 @@
+{
+  "version": "ooxml-comparison-v0",
+  "generatedAt": "2026-05-20T12:26:54.493Z",
+  "templateFile": "C:\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v0.xlsx",
+  "generatedFile": "C:\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-draft.xlsx",
+  "comparison": {
+    "onlyInTemplate": [],
+    "onlyInGenerated": [],
+    "sizeDeltasTop": [
+      {
+        "path": "xl/worksheets/sheet1.xml",
+        "templateBytes": 934922,
+        "generatedBytes": 929800,
+        "deltaBytes": -5122
+      }
+    ],
+    "worksheetComparison": [
+      {
+        "path": "xl/worksheets/sheet1.xml",
+        "dimensionTemplate": "A6:BZ133",
+        "dimensionGenerated": "A6:BZ133",
+        "dimensionChanged": false,
+        "cellCountTemplate": 9402,
+        "cellCountGenerated": 9402,
+        "cellCountDelta": 0,
+        "rowCountTemplate": 128,
+        "rowCountGenerated": 128,
+        "inlineStringCellsTemplate": 7868,
+        "sharedStringCellsGenerated": 0,
+        "ignoredErrorsTemplate": 2,
+        "ignoredErrorsGenerated": 2
+      },
+      {
+        "path": "xl/worksheets/sheet2.xml",
+        "dimensionTemplate": "A3:G17461",
+        "dimensionGenerated": "A3:G17461",
+        "dimensionChanged": false,
+        "cellCountTemplate": 102170,
+        "cellCountGenerated": 102170,
+        "cellCountDelta": 0,
+        "rowCountTemplate": 17344,
+        "rowCountGenerated": 17344,
+        "inlineStringCellsTemplate": 102170,
+        "sharedStringCellsGenerated": 0,
+        "ignoredErrorsTemplate": 2,
+        "ignoredErrorsGenerated": 2
+      },
+      {
+        "path": "xl/worksheets/sheet3.xml",
+        "dimensionTemplate": "A2:E32",
+        "dimensionGenerated": "A2:E32",
+        "dimensionChanged": false,
+        "cellCountTemplate": 155,
+        "cellCountGenerated": 155,
+        "cellCountDelta": 0,
+        "rowCountTemplate": 31,
+        "rowCountGenerated": 31,
+        "inlineStringCellsTemplate": 155,
+        "sharedStringCellsGenerated": 0,
+        "ignoredErrorsTemplate": 2,
+        "ignoredErrorsGenerated": 2
+      }
+    ],
+    "sharedStringsAdded": false
+  }
+}

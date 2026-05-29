@@ -1,0 +1,40 @@
+{
+  "name": "@orca/triumph-exporter-cli-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ORCA Exporter Prototype v0 — human-operated local transport CLI, NOT a runtime or service.",
+  "main": "export.js",
+  "scripts": {
+    "export": "node export.js",
+    "export:sample": "node export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../../tools/validation-cli/output/validation-report.output.json",
+    "export:template-fill": "node export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json --template-fill",
+    "export:sheet1-patch": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-draft.xlsx",
+    "export:sheet1-patch:cleanup": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json",
+    "export:sheet1-patch:feedback": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-feedback-v0.1.xlsx",
+    "export:sheet1-patch:v0.2": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-domain-fastlinks-v0.2.xlsx",
+    "export:sheet1-patch:row-clean": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-row-clean-v0.xlsx",
+    "export:sheet1-patch:v0.3": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-display-url-routing-v0.3.xlsx",
+    "export:sheet1-patch:v0.4": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-import-refined-v0.4.xlsx",
+    "export:sheet1-patch:v0.5": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-ad-type-v0.5.xlsx",
+    "export:sheet1-patch:v0.6": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json fixtures/validation-report.export-allowed.fixture.json output/triumph-sheet1-patch-region-v0.6.xlsx",
+    "export:sheet1-patch:full-cycle-v1": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../validation-cli/output/validation-report.output.json output/triumph-sheet1-patch-full-cycle-v1.xlsx",
+    "export:sheet1-patch:full-cycle-v1.1": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../validation-cli/output/validation-report.output.json output/triumph-sheet1-patch-full-cycle-v1.1.xlsx",
+    "export:sheet1-patch:full-cycle-v1.2": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../validation-cli/output/validation-report.output.json output/triumph-sheet1-patch-full-cycle-v1.2.xlsx",
+    "export:sheet1-patch:launch-ready-v1.3": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../validation-cli/output/validation-report.output.json output/triumph-sheet1-patch-launch-ready-v1.3.xlsx",
+    "export:sheet1-patch:launch-ready-v1.4": "node sheet1-patch-export.js ../../schema/instances/triumph-s-tier-draft-v1.json ../validation-cli/output/validation-report.output.json output/triumph-sheet1-patch-launch-ready-v1.4.xlsx",
+    "validate:no-duplicate-ads-v1.2": "node _validate-no-duplicate-ads-v1.js output/triumph-sheet1-patch-full-cycle-v1.2.xlsx",
+    "validate:launch-ready-v1.3": "node _validate-launch-ready-v1.3.js output/triumph-sheet1-patch-launch-ready-v1.3.xlsx",
+    "validate:launch-ready-v1.4": "node _validate-launch-ready-v1.4.js output/triumph-sheet1-patch-launch-ready-v1.4.xlsx",
+    "audit:template-diff": "node _template-diff-audit.js",
+    "forensics:ooxml": "node ooxml-forensics.js",
+    "template:analyze": "node template-reader.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "exceljs": "^4.4.0"
+  }
+}

@@ -1,0 +1,2678 @@
+{
+  "schema_version": "v1",
+  "project_id": "triumph-manipulator-krd-search-full-cycle-v1",
+  "project_name": "Триумф — Поиск — Full Cycle v1",
+  "market": "yandex_direct_ru",
+  "geo": {
+    "primary_region": "Краснодар",
+    "geo_notes": "Операционная зона: Краснодар и Краснодарский край. Экспорт региона: Краснодарский край."
+  },
+  "source_pack": "triumph-manipulator",
+  "search_only_scope": true,
+  "campaigns": [
+    {
+      "campaign_id": "camp_triumph_search_full_cycle_v1",
+      "campaign_name": "Триумф — Поиск — Full Cycle v1",
+      "campaign_type": "search",
+      "search_only_scope": true,
+      "geo": {
+        "primary_region": "Краснодар",
+        "region_ids": [
+          "Краснодарский край"
+        ],
+        "geo_notes": "Direct import: Краснодарский край"
+      },
+      "strategy": {
+        "strategy_label": "manual_cpc",
+        "bid_intent": "Ручное управление ставками оператором в Direct",
+        "priority_tier": "S"
+      },
+      "schedule": {
+        "enabled": false,
+        "schedule_notes": "Расписание задаётся в Direct после импорта"
+      },
+      "device_adjustments": {
+        "desktop_modifier": null,
+        "tablet_modifier": null,
+        "mobile_modifier": null
+      },
+      "campaign_negatives": {
+        "keywords": [
+          "вакансии",
+          "работа",
+          "резюме",
+          "купить",
+          "ремонт",
+          "запчасти",
+          "эвакуатор",
+          "бесплатно",
+          "своими руками"
+        ],
+        "match_type_default": "phrase"
+      },
+      "intent_classification": "mixed_container",
+      "routing_role": "primary_search",
+      "groups": [
+        {
+          "group_id": "grp_fc01_5ton",
+          "group_name": "01 — Манипулятор 5 тонн",
+          "semantic_intent": "Манипулятор 5 т - exact capability",
+          "intent_tier": "S",
+          "intent_type": "capability_exact",
+          "keyword_cluster": {
+            "intent_summary": "Запрос на манипулятор 5 т с подачей в Краснодаре и крае",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор 5 тонн краснодар",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор 5т краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "заказать манипулятор 5 тонн",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор борт 5 тонн",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор стрела 3 тонны",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "аренда манипулятора 5 тонн",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "3 тонны",
+              "10 тонн",
+              "автокран",
+              "эвакуатор"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "05-capability-5-ton",
+            "landing_type": "capability",
+            "final_url": "https://manipulator-triumph.ru/5-tonn.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero и схема борта/стрелы - 5 т, вылет 14 м",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/05-capability-5-ton.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc01_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор 5 тонн в Краснодаре",
+              "headline_2": "Борт 5 т, стрела 3 т",
+              "description": "Манипулятор 5 т, вылет 14 м. Подача на объект. Расчёт по задаче.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "manip-5-tonn"
+              },
+              "landing_url": "https://manipulator-triumph.ru/5-tonn.html",
+              "fastlinks": [
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "primary_capability"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                },
+                {
+                  "text": "Вылет 14 м",
+                  "intent_role": "capability_proof"
+                },
+                {
+                  "text": "Без посредников",
+                  "intent_role": "trust"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор 5 тонн краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор 5 тонн краснодар",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc01_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор 5т - подача на объект",
+              "headline_2": "Краснодар и край",
+              "description": "Заказать манипулятор 5 т. Стрела 3 т. Звонок и расчёт по адресу.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "manip-5-tonn"
+              },
+              "landing_url": "https://manipulator-triumph.ru/5-tonn.html",
+              "fastlinks": [
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "primary_capability"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "calculate",
+                "cta_phrase": "Получить расчёт"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор 5т краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор 5т",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": "tonnage_5t",
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc02_bytovka",
+          "group_name": "02 — Перевозка бытовок",
+          "semantic_intent": "Перевозка и установка бытовок - exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Манипулятор под перевозку и установку бытовки",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор для бытовки",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "перевозка бытовки краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка бытовки манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "установка бытовки манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка бытовок краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "купить бытовку",
+              "аренда бытовки"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "02-use-case-bytovka",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/bytovki.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - бытовка и сценарий установки",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/02-use-case-bytovka.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc02_a1",
+              "status": "draft",
+              "headline_1": "Перевозка бытовок в Краснодаре",
+              "headline_2": "Установка манипулятором",
+              "description": "Перевозка и установка бытовок. Борт 5 т. Выезд в крае.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "bytovki"
+              },
+              "landing_url": "https://manipulator-triumph.ru/bytovki.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Установка на объекте",
+                  "intent_role": "use_case_proof"
+                },
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "перевозка бытовок краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "перевозка бытовок краснодар",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc02_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор для бытовки",
+              "headline_2": "Подача и установка",
+              "description": "Манипулятор для бытовки. Расчёт по адресу и весу. Краснодар.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "bytovki"
+              },
+              "landing_url": "https://manipulator-triumph.ru/bytovki.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для бытовки",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для бытовки",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "bytovka",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc03_stroymaterialy",
+          "group_name": "03 — Доставка стройматериалов",
+          "semantic_intent": "Доставка стройматериалов - exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Перевозка и разгрузка стройматериалов манипулятором",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор для стройматериалов",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "доставка стройматериалов манипулятор",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка стройматериалов краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка блоков манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор для паллет",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "оптом кирпич",
+              "купить цемент"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "03-use-case-stroymaterialy",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/stroymaterialy.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Страница про груз: блоки, паллеты, подача на объект",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/03-use-case-stroymaterialy.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc03_a1",
+              "status": "draft",
+              "headline_1": "Доставка стройматериалов манипулятором",
+              "headline_2": "Манипулятор 5 т",
+              "description": "Паллеты и блоки на объект. Краснодар и край. Расчёт по задаче.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "stroymaterialy"
+              },
+              "landing_url": "https://manipulator-triumph.ru/stroymaterialy.html",
+              "fastlinks": [
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Кирпич и блоки",
+                  "url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+                  "description_1": "Подача на объект",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Паллеты и блоки",
+                  "intent_role": "cargo_proof"
+                },
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "доставка стройматериалов манипулятор",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "доставка стройматериалов манипулятор",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "low"
+          },
+          "use_case_classification": "stroymaterialy",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc04_yurlica",
+          "group_name": "04 — Манипулятор для юрлиц",
+          "semantic_intent": "B2B - безнал, документы, объекты",
+          "intent_tier": "S",
+          "intent_type": "b2b",
+          "keyword_cluster": {
+            "intent_summary": "Юрлица ищут манипулятор с документами и безналом",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор для юрлиц",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор безнал краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор с ндс краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "аренда манипулятора по договору",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "физлицо",
+              "наличные"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "06-b2b-yurlica",
+            "landing_type": "b2b",
+            "final_url": "https://manipulator-triumph.ru/yurlic.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "На странице: безнал, НДС, договор",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/06-b2b-yurlica.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc04_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор для юрлиц",
+              "headline_2": "Безнал и документы",
+              "description": "Манипулятор для юрлиц. Безнал, НДС, договор. Выезд на объект.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "dlya-yurlic"
+              },
+              "landing_url": "https://manipulator-triumph.ru/yurlic.html",
+              "fastlinks": [
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "primary_b2b"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Безналичный расчёт",
+                  "intent_role": "b2b_proof"
+                },
+                {
+                  "text": "НДС",
+                  "intent_role": "b2b_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "calculate",
+                "cta_phrase": "Запросить счёт",
+                "b2b_friendly": true
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для юрлиц",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для юрлиц",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc04_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор безнал краснодар",
+              "headline_2": "Для организаций",
+              "description": "Манипулятор безнал в Краснодаре. Закрывающие документы. Объекты.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "dlya-yurlic"
+              },
+              "landing_url": "https://manipulator-triumph.ru/yurlic.html",
+              "fastlinks": [
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "primary_b2b"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "call",
+                "b2b_friendly": true
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор безнал краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор безнал краснодар",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc05_6x6",
+          "group_name": "05 — Манипулятор-вездеход 6x6",
+          "semantic_intent": "Вездеход 6x6 - capability и сложный заезд",
+          "intent_tier": "S",
+          "intent_type": "capability_exact",
+          "keyword_cluster": {
+            "intent_summary": "Запрос на проходимость и шасси 6x6",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор вездеход 6x6",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор 6 на 6 краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор полный привод",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор на грунт",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "вездеход манипулятор краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "гусеничный",
+              "автокран"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "07-capability-6x6-vezdekhod",
+            "landing_type": "capability",
+            "final_url": "https://manipulator-triumph.ru/vezdehod.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero подтверждает 6x6 и вездеход",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/07-capability-6x6-vezdekhod.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc05_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор-вездеход 6x6",
+              "headline_2": "Сложный заезд",
+              "description": "Манипулятор 6x6 для сложного рельефа. Краснодар и край. Расчёт маршрута.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "vezdehod-6x6"
+              },
+              "landing_url": "https://manipulator-triumph.ru/vezdehod.html",
+              "fastlinks": [
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "primary_capability"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Полный привод 6x6",
+                  "intent_role": "terrain_proof"
+                },
+                {
+                  "text": "Сложный заезд",
+                  "intent_role": "use_case_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор вездеход 6x6",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор вездеход 6x6",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": "vezdekhod_6x6",
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc06_oborudovanie",
+          "group_name": "06 — Перевозка оборудования",
+          "semantic_intent": "Перевозка оборудования и станков - exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Промышленное и тяжёлое оборудование манипулятором",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "перевозка оборудования манипулятором",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "перевозка станков манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор для оборудования",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка оборудования манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка станка краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "ремонт станка",
+              "купить станок"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "04-use-case-oborudovanie",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/oborudovanie.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - оборудование, станки, подача",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/04-use-case-oborudovanie.md · slug planned"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc06_a1",
+              "status": "draft",
+              "headline_1": "Перевозка оборудования",
+              "headline_2": "Манипулятор 5 т",
+              "description": "Перевозка оборудования манипулятором. Станки и агрегаты. Краснодар.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "oborudovanie"
+              },
+              "landing_url": "https://manipulator-triumph.ru/oborudovanie.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Станки и агрегаты",
+                  "intent_role": "use_case_proof"
+                },
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "перевозка оборудования манипулятором",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "перевозка оборудования манипулятором",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc06_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор для оборудования",
+              "headline_2": "Подача на объект",
+              "description": "Манипулятор для оборудования. Расчёт по габаритам. Краснодар и край.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "oborudovanie"
+              },
+              "landing_url": "https://manipulator-triumph.ru/oborudovanie.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для оборудования",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для оборудования",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "oborudovanie",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc07_konteynery",
+          "group_name": "07 — Перевозка контейнеров",
+          "semantic_intent": "Перевозка контейнеров - exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Контейнеры и блок-контейнеры манипулятором",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "перевозка контейнера манипулятором",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "доставка контейнера манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор для контейнера",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка блок-контейнера",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка контейнера краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "морской фрахт",
+              "купить контейнер"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "10-use-case-konteynery",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/konteynery.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - контейнерный сценарий",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/10-use-case-konteynery.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc07_a1",
+              "status": "draft",
+              "headline_1": "Перевозка контейнера",
+              "headline_2": "Манипулятором в Краснодаре",
+              "description": "Перевозка контейнера манипулятором. Блок-контейнеры. Расчёт по задаче.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "konteynery"
+              },
+              "landing_url": "https://manipulator-triumph.ru/konteynery.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Блок-контейнеры",
+                  "intent_role": "use_case_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "перевозка контейнера манипулятором",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "перевозка контейнера манипулятором",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "konteynery",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc08_armatura",
+          "group_name": "08 — Перевозка арматуры",
+          "semantic_intent": "Перевозка арматуры и металла - exact use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Арматура, металлоконструкции, длинномер",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "перевозка арматуры манипулятором",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "доставка арматуры манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор для металлоконструкций",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка металлоконструкций краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка арматуры краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "купить арматуру",
+              "металлопрокат оптом"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "11-use-case-armatura",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/armatura.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - металл и арматура",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/11-use-case-armatura.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc08_a1",
+              "status": "draft",
+              "headline_1": "Перевозка арматуры",
+              "headline_2": "Манипулятор 5 т",
+              "description": "Перевозка арматуры манипулятором. Металл и длинномер. Краснодар.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "armatura"
+              },
+              "landing_url": "https://manipulator-triumph.ru/armatura.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Металл и длинномер",
+                  "intent_role": "use_case_proof"
+                },
+                {
+                  "text": "Вылет 14 м",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "перевозка арматуры манипулятором",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "перевозка арматуры манипулятором",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc08_a2",
+              "status": "draft",
+              "headline_1": "Доставка арматуры краснодар",
+              "headline_2": "Манипулятор на объект",
+              "description": "Доставка арматуры манипулятором. Подача на стройку. Расчёт по тоннажу.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "armatura"
+              },
+              "landing_url": "https://manipulator-triumph.ru/armatura.html",
+              "fastlinks": [
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Кирпич и блоки",
+                  "url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+                  "description_1": "Подача на объект",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "доставка арматуры краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "доставка арматуры краснодар",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "armatura",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc09_kirpich",
+          "group_name": "09 — Доставка кирпича и блоков",
+          "semantic_intent": "Доставка кирпича и строительных блоков",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "Кирпич, блоки, паллеты на объект",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "доставка кирпича манипулятором",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "перевозка кирпича краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор для кирпича",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка газоблока манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка блоков манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "купить кирпич",
+              "оптом блоки"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "12-use-case-kirpich-bloki",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - кирпич и блоки",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/12-use-case-kirpich-bloki.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc09_a1",
+              "status": "draft",
+              "headline_1": "Доставка кирпича манипулятором",
+              "headline_2": "Блоки на объект",
+              "description": "Доставка кирпича и блоков. Манипулятор 5 т. Краснодар и край.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "kirpich-bloki"
+              },
+              "landing_url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+              "fastlinks": [
+                {
+                  "title": "Кирпич и блоки",
+                  "url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+                  "description_1": "Подача на объект",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Кирпич и блоки",
+                  "intent_role": "cargo_proof"
+                },
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "доставка кирпича манипулятором",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "доставка кирпича манипулятором",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "kirpich_bloki",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc10_fbs",
+          "group_name": "10 — ФБС и ЖБИ",
+          "semantic_intent": "Перевозка ФБС и ЖБИ - heavy use-case",
+          "intent_tier": "S",
+          "intent_type": "use_case_exact",
+          "keyword_cluster": {
+            "intent_summary": "ФБС, ЖБИ, кольца и тяжёлые элементы",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "перевозка фбс манипулятором",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "доставка фбс манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор для жби",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка жби краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка колец манипулятором",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка бетонных блоков",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "купить фбс",
+              "завод жби"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "09-use-case-fbs-zhb",
+            "landing_type": "use_case",
+            "final_url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - тяжёлые стройэлементы",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/09-use-case-fbs-zhb.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc10_a1",
+              "status": "draft",
+              "headline_1": "Перевозка ФБС манипулятором",
+              "headline_2": "ЖБИ и кольца",
+              "description": "Перевозка ФБС и ЖБИ. Манипулятор 5 т. Краснодар. Расчёт по весу.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "fbs-zhbi"
+              },
+              "landing_url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+              "fastlinks": [
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Кирпич и блоки",
+                  "url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+                  "description_1": "Подача на объект",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "ФБС и ЖБИ",
+                  "intent_role": "use_case_proof"
+                },
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "перевозка фбс манипулятором",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "перевозка фбс манипулятором",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc10_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор для ЖБИ",
+              "headline_2": "Подача на стройку",
+              "description": "Манипулятор для ЖБИ в Краснодаре. Тяжёлые элементы. Звонок и расчёт.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "fbs-zhbi"
+              },
+              "landing_url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+              "fastlinks": [
+                {
+                  "title": "ФБС и ЖБИ",
+                  "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
+                  "description_1": "Тяжёлые элементы",
+                  "intent_role": "primary_use_case"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка арматуры",
+                  "url": "https://manipulator-triumph.ru/armatura.html",
+                  "description_1": "Металл и длинномер",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Кирпич и блоки",
+                  "url": "https://manipulator-triumph.ru/kirpich-bloki.html",
+                  "description_1": "Подача на объект",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор для жби",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор для жби",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": "fbs_zhb",
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc11_kray",
+          "group_name": "11 — Манипулятор по Краснодарскому краю",
+          "semantic_intent": "Intercity / regional - по краю, межгород, выезд",
+          "intent_tier": "S",
+          "intent_type": "intercity",
+          "keyword_cluster": {
+            "intent_summary": "Подача и перевозки по Краснодарскому краю, межгород, районы",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "манипулятор по краснодарскому краю",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "манипулятор межгород краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "заказать манипулятор по краю",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор краснодарский край",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "перевозка манипулятором по краю",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "доставка манипулятором по краю",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "москва",
+              "спб",
+              "автокран",
+              "эвакуатор"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "08-intercity-krai",
+            "landing_type": "intercity",
+            "final_url": "https://manipulator-triumph.ru/kray.html",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - выезды по краю, межгород, согласование маршрута",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/08-intercity-krai.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc11_a1",
+              "status": "draft",
+              "headline_1": "Манипулятор по Краснодарскому краю",
+              "headline_2": "Межгород и выезд",
+              "description": "Подача и перевозки по краю. Согласуем маршрут. Звонок и расчёт.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "kray"
+              },
+              "landing_url": "https://manipulator-triumph.ru/kray.html",
+              "fastlinks": [
+                {
+                  "title": "По Краснодарскому краю",
+                  "url": "https://manipulator-triumph.ru/kray.html",
+                  "description_1": "Межгород и районы",
+                  "intent_role": "primary_intercity"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Перевозка контейнеров",
+                  "url": "https://manipulator-triumph.ru/konteynery.html",
+                  "description_1": "Блок-контейнеры",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "По краю",
+                  "intent_role": "geo_proof"
+                },
+                {
+                  "text": "Межгород",
+                  "intent_role": "geo_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор по краснодарскому краю",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор по краснодарскому краю",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc11_a2",
+              "status": "draft",
+              "headline_1": "Манипулятор межгород по краю",
+              "headline_2": "Районы и населённые пункты",
+              "description": "Выезд по Краснодарскому краю. Манипулятор 5 т. Расчёт по адресу.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "kray"
+              },
+              "landing_url": "https://manipulator-triumph.ru/kray.html",
+              "fastlinks": [
+                {
+                  "title": "По Краснодарскому краю",
+                  "url": "https://manipulator-triumph.ru/kray.html",
+                  "description_1": "Межгород и районы",
+                  "intent_role": "primary_intercity"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                }
+              ],
+              "callouts": [],
+              "cta_semantics": {
+                "primary_cta": "call"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "манипулятор межгород краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "манипулятор межгород краснодар",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "none"
+          },
+          "use_case_classification": null,
+          "capability_classification": null,
+          "draft_status": "draft"
+        },
+        {
+          "group_id": "grp_fc12_zakaz",
+          "group_name": "12 — Заказать манипулятор",
+          "semantic_intent": "Master hot - заказать, вызвать, цена, аренда",
+          "intent_tier": "S",
+          "intent_type": "hot_general",
+          "keyword_cluster": {
+            "intent_summary": "Горячий коммерческий intent - заказ, вызов, цена, аренда",
+            "cluster_rules_ack": true,
+            "keywords": [
+              {
+                "phrase": "заказать манипулятор",
+                "match_policy": "phrase",
+                "status": "active",
+                "is_primary": true
+              },
+              {
+                "phrase": "вызвать манипулятор краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор цена краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "аренда манипулятора краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "манипулятор краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "услуги манипулятора краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              },
+              {
+                "phrase": "кран-манипулятор краснодар",
+                "match_policy": "phrase",
+                "status": "active"
+              }
+            ]
+          },
+          "group_negatives": {
+            "keywords": [
+              "купить манипулятор",
+              "вакансии",
+              "работа",
+              "ремонт",
+              "запчасти"
+            ],
+            "match_type_default": "phrase"
+          },
+          "landing_route": {
+            "blueprint_id": "01-master-hot-general",
+            "landing_type": "master_hot",
+            "final_url": "https://manipulator-triumph.ru/",
+            "fallback_allowed": false,
+            "intent_continuity_rule": "Hero - заказ, подача, квалификация задачи",
+            "intent_continuity_ack": false,
+            "routing_notes": "landing-pages/01-master-hot-general.md"
+          },
+          "ads": [
+            {
+              "ad_id": "ad_fc12_a1",
+              "status": "draft",
+              "headline_1": "Заказать манипулятор в Краснодаре",
+              "headline_2": "Подача на объект",
+              "description": "Заказать манипулятор. Борт 5 т, стрела 3 т. Звонок и расчёт цены.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "zakaz-manip"
+              },
+              "landing_url": "https://manipulator-triumph.ru/",
+              "fastlinks": [
+                {
+                  "title": "Заказать манипулятор",
+                  "url": "https://manipulator-triumph.ru/",
+                  "description_1": "Подача и расчёт",
+                  "intent_role": "primary_master_hot"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "По Краснодарскому краю",
+                  "url": "https://manipulator-triumph.ru/kray.html",
+                  "description_1": "Межгород и выезд",
+                  "intent_role": "intercity_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Перевозка оборудования",
+                  "url": "https://manipulator-triumph.ru/oborudovanie.html",
+                  "description_1": "Станки и агрегаты",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Звонок и расчёт",
+                  "intent_role": "commercial_cta"
+                },
+                {
+                  "text": "Борт 5 т",
+                  "intent_role": "capability_proof"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call",
+                "cta_phrase": "Заказать по телефону"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "заказать манипулятор",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "заказать манипулятор",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            },
+            {
+              "ad_id": "ad_fc12_a2",
+              "status": "draft",
+              "headline_1": "Аренда манипулятора Краснодар",
+              "headline_2": "Цена по задаче",
+              "description": "Аренда манипулятора в Краснодаре. Вызов и расчёт. Борт 5 т, стрела 3 т.",
+              "display_url": {
+                "domain": "manipulator-triumph.ru",
+                "path_1": "zakaz-manip"
+              },
+              "landing_url": "https://manipulator-triumph.ru/",
+              "fastlinks": [
+                {
+                  "title": "Заказать манипулятор",
+                  "url": "https://manipulator-triumph.ru/",
+                  "description_1": "Подача и расчёт",
+                  "intent_role": "primary_master_hot"
+                },
+                {
+                  "title": "Манипулятор 5 тонн",
+                  "url": "https://manipulator-triumph.ru/5-tonn.html",
+                  "description_1": "Борт 5 т, стрела 3 т",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "По Краснодарскому краю",
+                  "url": "https://manipulator-triumph.ru/kray.html",
+                  "description_1": "Межгород и выезд",
+                  "intent_role": "intercity_crosslink"
+                },
+                {
+                  "title": "Перевозка бытовок",
+                  "url": "https://manipulator-triumph.ru/bytovki.html",
+                  "description_1": "Установка на объекте",
+                  "intent_role": "use_case_crosslink"
+                },
+                {
+                  "title": "Для юрлиц",
+                  "url": "https://manipulator-triumph.ru/yurlic.html",
+                  "description_1": "Безнал и НДС",
+                  "intent_role": "b2b_crosslink"
+                },
+                {
+                  "title": "Манипулятор-вездеход",
+                  "url": "https://manipulator-triumph.ru/vezdehod.html",
+                  "description_1": "Полный привод 6x6",
+                  "intent_role": "capability_crosslink"
+                },
+                {
+                  "title": "Доставка стройматериалов",
+                  "url": "https://manipulator-triumph.ru/stroymaterialy.html",
+                  "description_1": "Паллеты и блоки",
+                  "intent_role": "use_case_crosslink"
+                }
+              ],
+              "callouts": [
+                {
+                  "text": "Расчёт по задаче",
+                  "intent_role": "commercial_cta"
+                }
+              ],
+              "cta_semantics": {
+                "primary_cta": "call",
+                "cta_phrase": "Узнать цену"
+              },
+              "keyword_alignment": {
+                "primary_keyword": "аренда манипулятора краснодар",
+                "phrase_in_headline_1": true,
+                "phrase_in_description": true
+              },
+              "mobile_first_readability": {
+                "h1_line_break_ok": true,
+                "no_stuffed_keywords": true,
+                "description_scannable": true
+              },
+              "yandex_bold_highlight": {
+                "target_query": "аренда манипулятора краснодар",
+                "highlight_planned_in": [
+                  "headline_1",
+                  "description"
+                ],
+                "continuation_ok": true
+              }
+            }
+          ],
+          "intent_purity_markers": {
+            "single_intent_confirmed": true,
+            "reject_list_checked": true,
+            "no_employment_intent": true,
+            "no_purchase_asset_intent": true,
+            "no_repair_intent": true,
+            "cross_intent_risk": "low"
+          },
+          "use_case_classification": null,
+          "capability_classification": null,
+          "draft_status": "draft"
+        }
+      ],
+      "notes": "Full cycle v1.1: 12 S-tier intent groups. Search-only. HITL before Commander import."
+    }
+  ],
+  "global_negatives": {
+    "keywords": [
+      "вакансии",
+      "работа",
+      "резюме",
+      "купить манипулятор",
+      "ремонт",
+      "эвакуатор"
+    ],
+    "match_type_default": "phrase"
+  },
+  "landing_registry": [
+    {
+      "blueprint_id": "05-capability-5-ton",
+      "blueprint_path": "landing-pages/05-capability-5-ton.md",
+      "landing_type": "capability"
+    },
+    {
+      "blueprint_id": "02-use-case-bytovka",
+      "blueprint_path": "landing-pages/02-use-case-bytovka.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "03-use-case-stroymaterialy",
+      "blueprint_path": "landing-pages/03-use-case-stroymaterialy.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "06-b2b-yurlica",
+      "blueprint_path": "landing-pages/06-b2b-yurlica.md",
+      "landing_type": "b2b"
+    },
+    {
+      "blueprint_id": "07-capability-6x6-vezdekhod",
+      "blueprint_path": "landing-pages/07-capability-6x6-vezdekhod.md",
+      "landing_type": "capability"
+    },
+    {
+      "blueprint_id": "04-use-case-oborudovanie",
+      "blueprint_path": "landing-pages/04-use-case-oborudovanie.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "10-use-case-konteynery",
+      "blueprint_path": "landing-pages/10-use-case-konteynery.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "11-use-case-armatura",
+      "blueprint_path": "landing-pages/11-use-case-armatura.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "12-use-case-kirpich-bloki",
+      "blueprint_path": "landing-pages/12-use-case-kirpich-bloki.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "09-use-case-fbs-zhb",
+      "blueprint_path": "landing-pages/09-use-case-fbs-zhb.md",
+      "landing_type": "use_case"
+    },
+    {
+      "blueprint_id": "08-intercity-krai",
+      "blueprint_path": "landing-pages/08-intercity-krai.md",
+      "landing_type": "intercity"
+    },
+    {
+      "blueprint_id": "01-master-hot-general",
+      "blueprint_path": "landing-pages/01-master-hot-general.md",
+      "landing_type": "master_hot"
+    }
+  ],
+  "validation_policy": {
+    "schema_ref": "validation-schema-v1.md",
+    "enabled_rule_classes": [
+      "structural",
+      "symbol",
+      "semantic",
+      "landing_mismatch",
+      "commercial",
+      "survivability",
+      "export_mapping"
+    ],
+    "block_export_on_fail": true,
+    "symbol_limits": {
+      "headline_1_max": 56,
+      "headline_2_max": 30,
+      "description_max": 81,
+      "fastlink_title_max": 30,
+      "callout_max": 25,
+      "display_path_segment_max": 20
+    },
+    "launch_ready_requires_human_approval": true
+  },
+  "export_policy": {
+    "transport": "direct_commander_excel",
+    "mapping_schema_ref": "export-mapping-schema-v1.md",
+    "requires_validation_pass": true,
+    "template_pack_ref": "assets/direct-commander-template/"
+  },
+  "human_review": {
+    "required": true,
+    "review_status": "not_started",
+    "reviewer_notes": "Full cycle v1 draft — валидация и экспорт локально; импорт только после HITL.",
+    "approved_for_export": false,
+    "approved_for_commander_import": false,
+    "approved_for_launch": false
+  },
+  "meta": {
+    "created_by": "assisted",
+    "created_at": "2026-05-21T12:00:00.000Z",
+    "notes": "full-cycle-v1.1 · 12 groups · production slugs manipulator-triumph.ru"
+  }
+}

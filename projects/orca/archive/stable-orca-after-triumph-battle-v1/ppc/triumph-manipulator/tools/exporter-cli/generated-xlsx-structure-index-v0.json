@@ -1,0 +1,230 @@
+{
+  "version": "xlsx-structure-index-v0",
+  "label": "template-fill-draft",
+  "sourceFile": "C:\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-draft.xlsx",
+  "generatedAt": "2026-05-20T12:26:49.501Z",
+  "zipEntryCount": 11,
+  "totalUncompressedBytes": 5275884,
+  "entries": [
+    {
+      "path": "_rels/.rels",
+      "uncompressedBytes": 588,
+      "compressedBytes": 231,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "[Content_Types].xml",
+      "uncompressedBytes": 2210,
+      "compressedBytes": 498,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "docProps/app.xml",
+      "uncompressedBytes": 666,
+      "compressedBytes": 353,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "docProps/core.xml",
+      "uncompressedBytes": 346,
+      "compressedBytes": 209,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "xl/_rels/workbook.xml.rels",
+      "uncompressedBytes": 839,
+      "compressedBytes": 231,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "xl/styles.xml",
+      "uncompressedBytes": 1199,
+      "compressedBytes": 532,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "xl/theme/theme1.xml",
+      "uncompressedBytes": 7646,
+      "compressedBytes": 1565,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "xl/workbook.xml",
+      "uncompressedBytes": 464,
+      "compressedBytes": 293,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "xl/worksheets/sheet1.xml",
+      "uncompressedBytes": 929800,
+      "compressedBytes": 51123,
+      "lastWriteTimeUtc": "2026-05-20T12:26:20.0000000+00:00"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml",
+      "uncompressedBytes": 4325781,
+      "compressedBytes": 397365,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    },
+    {
+      "path": "xl/worksheets/sheet3.xml",
+      "uncompressedBytes": 6345,
+      "compressedBytes": 1255,
+      "lastWriteTimeUtc": "2026-05-19T14:25:44.0000000+00:00"
+    }
+  ],
+  "criticalParts": {
+    "[Content_Types].xml": {
+      "present": true,
+      "bytes": 2210
+    },
+    "xl/workbook.xml": {
+      "present": true,
+      "bytes": 464
+    },
+    "xl/_rels/workbook.xml.rels": {
+      "present": true,
+      "bytes": 839
+    },
+    "xl/styles.xml": {
+      "present": true,
+      "bytes": 1199
+    },
+    "xl/sharedStrings.xml": {
+      "present": false,
+      "bytes": 0
+    },
+    "_rels/.rels": {
+      "present": true,
+      "bytes": 588
+    },
+    "docProps/core.xml": {
+      "present": true,
+      "bytes": 346
+    },
+    "docProps/app.xml": {
+      "present": true,
+      "bytes": 666
+    }
+  },
+  "worksheets": [
+    {
+      "path": "xl/worksheets/sheet1.xml",
+      "uncompressedBytes": 929800,
+      "dimensionRef": "A6:BZ133",
+      "rowElementCount": 128,
+      "cellElementCount": 9402,
+      "inlineStringCells": 7868,
+      "sharedStringCells": 0,
+      "markers": {
+        "mergeCell": 40,
+        "dataValidation": 0,
+        "conditionalFormatting": 0,
+        "hyperlinks": 0,
+        "ignoredErrors": 2,
+        "extLst": 0,
+        "sheetPr": 0,
+        "sheetViews": 2,
+        "cols": 0,
+        "sheetData": 2
+      },
+      "xmlHead": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> <worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><dimension ref=\"A6:BZ133\"/><sheetViews><sheetView workbookViewId=\"0\"/></sheetViews><sheetData><row r=\"6\"><c r=\"A6\" t=\"str\"><v>ÐÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ ÑÐµÐºÑÑÐ¾Ð²ÑÑ Ð±Ð»Ð¾ÐºÐ¾Ð² Ð´Ð»Ñ ÐºÐ°Ð¼Ð¿Ð°Ð½Ð¸Ð¸</v></c></row><row r=\"7\"><c r=\"A7\" t=\"str\"><v></v></c><c r=\"B7\" t…"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml",
+      "uncompressedBytes": 4325781,
+      "dimensionRef": "A3:G17461",
+      "rowElementCount": 17344,
+      "cellElementCount": 102170,
+      "inlineStringCells": 102170,
+      "sharedStringCells": 0,
+      "markers": {
+        "mergeCell": 0,
+        "dataValidation": 0,
+        "conditionalFormatting": 0,
+        "hyperlinks": 0,
+        "ignoredErrors": 2,
+        "extLst": 0,
+        "sheetPr": 0,
+        "sheetViews": 2,
+        "cols": 0,
+        "sheetData": 2
+      },
+      "xmlHead": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> <worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><dimension ref=\"A3:G17461\"/><sheetViews><sheetView workbookViewId=\"0\"/></sheetViews><sheetData><row r=\"3\"><c r=\"A3\" t=\"str\"><v></v></c><c r=\"B3\" t=\"str\"><v>Ð ÐµÐ³Ð¸Ð¾Ð½Ñ</v></c><c r=\"C3\" t=\"str\"><v></v></c><c r=\"D3\" t=\"str\"><v></v></c><c r=\"E3\" t=\"str\"><v></v></c><c r…"
+    },
+    {
+      "path": "xl/worksheets/sheet3.xml",
+      "uncompressedBytes": 6345,
+      "dimensionRef": "A2:E32",
+      "rowElementCount": 31,
+      "cellElementCount": 155,
+      "inlineStringCells": 155,
+      "sharedStringCells": 0,
+      "markers": {
+        "mergeCell": 3,
+        "dataValidation": 0,
+        "conditionalFormatting": 0,
+        "hyperlinks": 0,
+        "ignoredErrors": 2,
+        "extLst": 0,
+        "sheetPr": 0,
+        "sheetViews": 2,
+        "cols": 2,
+        "sheetData": 2
+      },
+      "xmlHead": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> <worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><dimension ref=\"A2:E32\"/><sheetViews><sheetView workbookViewId=\"0\"/></sheetViews><cols><col min=\"1\" max=\"1\" customWidth=\"1\" width=\"8.7109375\"/><col min=\"2\" max=\"2\" customWidth=\"1\" width=\"30.7109375\"/></cols><sheetData><row r=\"2\"><c r=\"A2\" t=\"str\"><v></v></c><c r=\"B2\" t…"
+    }
+  ],
+  "xmlValidation": [
+    {
+      "path": "docProps/app.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "docProps/core.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "xl/styles.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "xl/theme/theme1.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "xl/workbook.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "xl/worksheets/sheet1.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "xl/worksheets/sheet3.xml",
+      "parseOk": true,
+      "error": null
+    },
+    {
+      "path": "[Content_Types].xml",
+      "parseOk": true,
+      "error": null
+    }
+  ],
+  "xmlValidationSummary": {
+    "total": 9,
+    "parseOk": 9,
+    "parseFailed": 0
+  }
+}

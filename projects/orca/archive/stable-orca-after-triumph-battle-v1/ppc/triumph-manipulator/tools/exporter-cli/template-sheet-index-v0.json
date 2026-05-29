@@ -1,0 +1,238 @@
+{
+  "version": "template-sheet-index-v0",
+  "template_file": "triumph-manipulator-commander-template-v0.xlsx",
+  "template_path_relative": "../../assets/direct-commander-template/triumph-manipulator-commander-template-v0.xlsx",
+  "analyzed_at": "2026-05-19T20:44:33.536Z",
+  "sheet_count": 3,
+  "disclaimer": "Structural index from local template read. NOT proof of Commander import compatibility.",
+  "sheets": [
+    {
+      "name": "Тексты",
+      "rowCount": 133,
+      "columnCount": 120,
+      "entityRegion": "combined_text_blocks",
+      "firstNonEmptyRows": [
+        6,
+        7,
+        8
+      ],
+      "primaryHeaderRow": 14,
+      "primaryHeaderCount": 78,
+      "dataStartRow": 15,
+      "campaignMetadataLabels": [
+        "Тип кампании:",
+        "Места показа:",
+        "№ заказа:",
+        "Валюта:",
+        "Минус-фразы на кампанию:",
+        "Оптимизировать текст объявлений под запрос:",
+        "Объект продвижения:",
+        "https://gruzotaxi-triumph.ru/",
+        "Организация из Яндекс Бизнеса:",
+        "Номер телефона:"
+      ],
+      "probableHeaderRows": [
+        {
+          "row": 14,
+          "score": 272,
+          "nonEmptyCount": 78,
+          "preview": [
+            "Доп. объявление группы",
+            "Тип объявления",
+            "Мобильное объявление",
+            "ID группы",
+            "Название группы",
+            "Номер группы",
+            "ID фразы",
+            "Фраза (с минус-словами)",
+            "ID объявления",
+            "Заголовок 1",
+            "Заголовок 2",
+            "Текст"
+          ]
+        },
+        {
+          "row": 15,
+          "score": 310,
+          "nonEmptyCount": 78,
+          "preview": [
+            "Доп. объявление группы",
+            "Тип объявления",
+            "Мобильное объявление",
+            "ID группы",
+            "Название группы",
+            "Номер группы",
+            "ID фразы",
+            "Фраза (с минус-словами)",
+            "ID объявления",
+            "Заголовок 1",
+            "Заголовок 2",
+            "Текст"
+          ]
+        },
+        {
+          "row": 16,
+          "score": 85,
+          "nonEmptyCount": 22,
+          "preview": [
+            "-",
+            "Текстово-графическое",
+            "-",
+            "5741811865",
+            "Грузотакси - Заказать (ТОП)",
+            "1",
+            "205741811865",
+            "---autotargeting",
+            "тут до 56 символов. ЭТО объявление ДЛЯ ИИ",
+            "до 30 символов",
+            "до 81 символа",
+            "https://site-link-need-setup.ru"
+          ]
+        },
+        {
+          "row": 17,
+          "score": 82,
+          "nonEmptyCount": 21,
+          "preview": [
+            "-",
+            "Текстово-графическое",
+            "-",
+            "5741811865",
+            "Грузотакси - Заказать (ТОП)",
+            "1",
+            "56958398497",
+            "грузотакси краснодар -заказывать -заказ",
+            "тут до 56 символов. ЭТО объявление ДЛЯ ИИ",
+            "до 30 символов",
+            "до 81 символа",
+            "https://site-link-need-setup.ru"
+          ]
+        },
+        {
+          "row": 18,
+          "score": 82,
+          "nonEmptyCount": 21,
+          "preview": [
+            "-",
+            "Текстово-графическое",
+            "-",
+            "5741811865",
+            "Грузотакси - Заказать (ТОП)",
+            "1",
+            "56958398498",
+            "заказать грузотакси краснодар",
+            "тут до 56 символов. ЭТО объявление ДЛЯ ИИ",
+            "до 30 символов",
+            "до 81 символа",
+            "https://site-link-need-setup.ru"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Регионы",
+      "rowCount": 17461,
+      "columnCount": 120,
+      "entityRegion": "geo_reference_tree",
+      "firstNonEmptyRows": [
+        3,
+        5,
+        6
+      ],
+      "primaryHeaderRow": null,
+      "primaryHeaderCount": 0,
+      "dataStartRow": null,
+      "campaignMetadataLabels": [],
+      "probableHeaderRows": []
+    },
+    {
+      "name": "Словарь значений полей",
+      "rowCount": 32,
+      "columnCount": 120,
+      "entityRegion": "reference_or_dictionary",
+      "firstNonEmptyRows": [
+        2,
+        3,
+        4
+      ],
+      "primaryHeaderRow": 3,
+      "primaryHeaderCount": 3,
+      "dataStartRow": null,
+      "campaignMetadataLabels": [],
+      "probableHeaderRows": [
+        {
+          "row": 3,
+          "score": 12,
+          "nonEmptyCount": 3,
+          "preview": [
+            "Текстово-графическая кампания",
+            "Android",
+            "iOS"
+          ]
+        },
+        {
+          "row": 5,
+          "score": 12,
+          "nonEmptyCount": 3,
+          "preview": [
+            "Единая перфоманс-кампания",
+            "1.1",
+            "2.0"
+          ]
+        },
+        {
+          "row": 7,
+          "score": 12,
+          "nonEmptyCount": 3,
+          "preview": [
+            "Тип объявления",
+            "1.6",
+            "3.1"
+          ]
+        },
+        {
+          "row": 8,
+          "score": 12,
+          "nonEmptyCount": 3,
+          "preview": [
+            "Текстово-графическое",
+            "2.0",
+            "4.0"
+          ]
+        },
+        {
+          "row": 9,
+          "score": 12,
+          "nonEmptyCount": 3,
+          "preview": [
+            "Графическое",
+            "2.1",
+            "4.1"
+          ]
+        }
+      ]
+    }
+  ],
+  "fidelity_notes": {
+    "prototype_sheet_model": [
+      "campaigns",
+      "groups",
+      "keywords",
+      "ads",
+      "extensions"
+    ],
+    "template_sheet_model": [
+      "Тексты",
+      "Регионы",
+      "Словарь значений полей"
+    ],
+    "structural_mismatch": "Template uses single combined Тексты sheet; prototype uses five logical sheets",
+    "safe_unknown": [
+      "Hidden workbook logic",
+      "Formatting and merged cells",
+      "Combined fastlink/callout cell encoding",
+      "Match type column absence",
+      "Campaign name column absence in data table"
+    ]
+  }
+}
