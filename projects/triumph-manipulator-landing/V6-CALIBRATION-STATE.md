@@ -2,10 +2,14 @@
 
 ## 1) Successful calibration routes
 
+- `index`
 - `5-tonn`
 - `bytovki`
 - `konteynery`
 - `oborudovanie`
+- `fbs-zhbi`
+
+**Note:** Pre-final-rollout-wave freeze created.
 
 ## 2) What stabilized
 
