@@ -29,7 +29,6 @@
     max-width: 100%;
     min-width: 0;
     color: t.$brand-dark;
-    font-family: t.$font-display;
     font-size: clamp(28px, 3.6vw, 50px);
     font-weight: 600;
     line-height: 1.12;
@@ -68,7 +67,6 @@ body[data-page-type^='ppc-'] .machine-transport__card--denied .machine-transport
 .review-panel__title {
     margin: 28px 0 0;
     color: t.$color-text;
-    font-family: t.$font-display;
     @include headings.section-h2-mobile;
     font-weight: 600;
     letter-spacing: -0.045em;
@@ -103,7 +101,6 @@ body[data-page-type^='ppc-'] .machine-transport__card--denied .machine-transport
     max-width: 100%;
     min-width: 0;
     color: t.$brand-dark;
-    font-family: t.$font-display;
     font-size: 22px;
     font-weight: 600;
     line-height: 26px;

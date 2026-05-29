@@ -83,7 +83,6 @@ body {
     gap: 12px;
     margin: 0;
     color: t.$color-red;
-    font-family: t.$font-display;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -103,7 +102,6 @@ body {
     max-width: 100%;
     min-width: 0;
     color: t.$color-text;
-    font-family: t.$font-display;
     @include headings.section-h2-mobile;
     font-weight: 600;
     letter-spacing: -0.055em;

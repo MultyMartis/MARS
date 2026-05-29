@@ -107,7 +107,6 @@ $header-drawer-mid: 810px;
     padding-inline: clamp(16px, 1.5vw, 22px);
     background: t.$color-red;
     color: t.$color-white;
-    font-family: t.$font-display;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: normal;
@@ -268,7 +267,6 @@ body.site-header-menu-open .site-header__drawer {
 
 .site-header__drawer-label {
     color: t.$color-white;
-    font-family: t.$font-display;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -390,7 +388,6 @@ body.site-header-menu-open .site-header__drawer {
 
 .site-header__drawer-phone {
     color: t.$color-white;
-    font-family: t.$font-display;
     font-size: 22px;
     font-weight: 600;
     line-height: 26px;
@@ -408,7 +405,6 @@ body.site-header-menu-open .site-header__drawer {
     min-height: 52px;
     background: t.$color-red;
     color: t.$color-white;
-    font-family: t.$font-display;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.02em;

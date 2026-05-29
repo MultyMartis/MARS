@@ -320,4 +320,62 @@ function initHashCleanup() {
   }
 }
 
+/**
+ * @param {MouseEvent} event
+ * @param {HTMLAnchorElement} anchor
+ * @returns {boolean}
+ */
+function handleSectionNavigation(event, anchor) {
+  if (!isInternalSectionLink(anchor)) {
+    return false;
+  }
+
+  const href = anchor.getAttribute('href');
+  const target = href ? resolveScrollTarget(href) : null;
+
+  if (!target) {
+    return false;
+  }
+
+  event.preventDefault();
+
+  stripHashFromUrl();
+  scrollToSectionTarget(target);
+  return true;
+}
+
+/**
+ * @param {NodeListOf<Element> | Element[]} links
+ */
+function bindSectionNavLinks(links) {
+  links.forEach((link) => {
+    if (link.dataset.sectionNavInit === 'true') {
+      return;
+    }
+
+    link.dataset.sectionNavInit = 'true';
+    link.addEventListener('click', (event) => {
+      if (link instanceof HTMLAnchorElement) {
+        handleSectionNavigation(event, link);
+      }
+    });
+  });
+}
+
+/**
+ * Smooth in-page section navigation for footer anchors (same behavior as header nav).
+ */
+function initLandingFooterNav() {
+  const footerNavs = document.querySelectorAll('.landing-footer__nav');
+
+  footerNavs.forEach((nav) => {
+    if (!(nav instanceof HTMLElement) || nav.dataset.footerNavInit === 'true') {
+      return;
+    }
+
+    nav.dataset.footerNavInit = 'true';
+    bindSectionNavLinks(nav.querySelectorAll('a[href^="#"]'));
+  });
+}
+
 initHashCleanup();

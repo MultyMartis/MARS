@@ -1,4 +1,4 @@
-﻿@use '../utils/tokens' as t;
+@use '../utils/tokens' as t;
 
 // Zakaz index: industrial ops-panel for machine parameters + tasks grid
 body[data-page-type='ppc-zakaz-manip'],
@@ -382,7 +382,6 @@ body[data-page-type='ppc-zakaz-manip'],
     .machine-transport__cta-title {
         margin: 0;
         color: t.$color-text;
-        font-family: t.$font-display;
         font-size: clamp(20px, 1.55vw, 24px);
         font-weight: 600;
         line-height: 1.14;

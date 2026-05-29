@@ -36,7 +36,6 @@
 
 .order-steps__item strong {
     color: t.$color-text;
-    font-family: t.$font-display;
     font-size: clamp(18px, 1.6vw, 22px);
     font-weight: 600;
     line-height: 26px;
@@ -88,7 +87,6 @@
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
         background: t.$color-card;
         color: t.$brand-red;
-        font-family: t.$font-display;
         font-size: 17px;
         font-weight: 700;
         line-height: 1;
@@ -134,7 +132,6 @@
     .order-steps__title {
         margin: 0;
         color: t.$color-text;
-        font-family: t.$font-display;
         font-size: clamp(18px, 1.5vw, 21px);
         font-weight: 600;
         line-height: 1.25;

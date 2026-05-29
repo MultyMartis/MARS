@@ -215,8 +215,6 @@
 
 .proof-strip__item strong {
 
-    font-family: t.$font-display;
-
     font-size: clamp(28px, 3.2vw, 42px);
 
     font-weight: 600;
@@ -278,8 +276,6 @@
     margin: 0;
 
     color: t.$color-ink;
-
-    font-family: t.$font-display;
 
     font-size: clamp(20px, 2.1vw, 28px);
 

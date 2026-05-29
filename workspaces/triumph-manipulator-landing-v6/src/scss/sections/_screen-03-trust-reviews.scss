@@ -26,7 +26,6 @@
     max-width: min(760px, 100%);
     margin: 18px 0 0;
     color: t.$color-text;
-    font-family: t.$font-display;
     font-size: 52px;
     @include headings.section-h2-line-height;
     @include headings.section-h2-overflow-safe;
@@ -62,7 +61,6 @@
 
 .trust-card h3 {
     margin: 0;
-    font-family: t.$font-display;
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -90,7 +88,6 @@
 
 .review-panel__rating strong {
     display: block;
-    font-family: t.$font-display;
     font-size: clamp(58px, 6vw, 88px);
     font-weight: 600;
     line-height: 1;
@@ -181,7 +178,6 @@
         max-width: min(760px, 100%);
         margin: 18px 0 0;
         color: #090f1b;
-        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
         font-size: 42px;
     }
 }

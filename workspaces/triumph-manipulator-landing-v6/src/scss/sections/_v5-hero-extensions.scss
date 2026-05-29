@@ -192,7 +192,6 @@ body[data-page-type^='ppc-'] .first-screen__overlay {
     margin: 0;
     max-width: 100%;
     min-width: 0;
-    font-family: t.$font-display;
     font-size: clamp(20px, 1.8vw, 24px);
     font-weight: 600;
     line-height: 28px;
@@ -329,11 +328,18 @@ body[data-page-type^='ppc-'] .first-screen__overlay {
     flex: 1 1 auto;
     min-width: 0;
     color: t.$color-white;
-    font-family: t.$font-display;
     font-size: clamp(14px, 1.15vw, 17px);
     font-weight: 600;
     line-height: 21px;
     text-transform: uppercase;
+}
+
+@media (min-width: 761px) {
+    .hero--v5 .hero-proof__label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
 }
 
 .hero--v5 .hero__cargo {
@@ -343,6 +349,18 @@ body[data-page-type^='ppc-'] .first-screen__overlay {
     margin-top: 0;
     padding: 0;
     list-style: none;
+}
+
+.hero--v5 .hero__cargo--5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.hero--v5 .hero__cargo--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hero--v5 .hero__cargo--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .hero--v5 .hero__cargo li {
@@ -485,6 +503,13 @@ body[data-page-type^='ppc-'] .first-screen__overlay {
     }
 }
 
+@media (min-width: 1025px) and (max-width: 1510px) {
+    .hero--v5 .hero__cargo-card {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
 @media (min-width: 761px) and (max-width: 1180px) {
     .hero--v5 .hero__title {
         font-size: clamp(34px, 5.2vw, 58px);
@@ -511,6 +536,10 @@ body[data-page-type^='ppc-'] .first-screen__overlay {
 
     .hero--v5 .hero__cargo {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hero--v5 .hero__cargo--4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

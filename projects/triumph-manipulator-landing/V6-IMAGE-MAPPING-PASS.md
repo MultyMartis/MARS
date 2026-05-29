@@ -1,112 +1,206 @@
-# V6 Image Mapping Pass — Inventory
+# V6 Image Mapping Pass v1
 
-**Status:** Inventory only — **no markup edits in this pass**  
+**Status:** Applied — second-screen mapping complete  
 **Workspace:** `workspaces/triumph-manipulator-landing-v6`  
-**Search roots:** `src/img/`, `src/assets/` (vendor only), `design/` (empty in workspace)  
-**Date:** 2026-05-29
+**Checkpoint:** `dc05c47` — checkpoint triumph v6 route source reality  
+**Date:** 2026-05-29  
+**Scope:** Image references only — no copy, layout, CSS, or route structure changes
 
 ---
 
-## Asset library summary
+## Phase 1 — Image inventory
 
-### Hero (`src/img/hero/`)
+### Asset roots
 
-| File | Notes |
-|------|--------|
-| `hero-bg-final.jpg` | **Current** first-screen image on all 12 routes (page shell `<img>`) |
-| `hero-bg-final.png` | Alternate format; not referenced in page HTML |
-| `_base.scss` | CSS fallback `background-image: url('../img/hero/hero-bg-final.jpg')` on `.hero--v5` |
+| Root | Contents |
+|------|----------|
+| `src/img/hero/` | `hero-bg-final.jpg` (active hero on all 12 routes), `hero-bg-final.png` (unused in HTML) |
+| `src/img/v5/second-screen/` | 14 route/test portraits (see table below) |
+| `src/img/reconstruction/` | Legacy PNGs — not wired in v6 PPC routes |
+| `src/assets/` | Font Awesome vendor only |
+| `design/` | Empty in workspace — **SAFE UNKNOWN** |
 
-### Reconstruction / legacy (`src/img/reconstruction/`)
+### Second-screen library (`src/img/v5/second-screen/`)
 
-| File | Possible use |
-|------|----------------|
-| `v1-02-manipulator-5t.png` | 5-tonn semantic hero candidate |
-| `v1-02-manipulator-7t.png` | UNKNOWN route fit |
-| `v1-02-manipulator-10t.png` | UNKNOWN route fit |
-| `v1-04-contact-truck.png` | Contact / CTA strip (not first-screen) |
-| `v2-02-machine.png` | Legacy v4 second-screen (not used in v6 PPC routes) |
-
-### Second screen — dedicated v5 set (`src/img/v5/second-screen/`)
-
-| File | Semantic slug |
-|------|----------------|
-| `second-screen-index-baseline.jpg` | Generic / fallback |
-| `second-screen-zakaz.jpg` | index (`zakaz` prefix) |
+| File | Route slug |
+|------|------------|
+| `second-screen-zakaz.jpg` | index |
 | `second-screen-5-tonn.jpg` | 5-tonn |
 | `second-screen-bytovki.jpg` | bytovki |
 | `second-screen-konteynery.jpg` | konteynery |
-| `second-screen-oborudovanie.jpg` | oborudovanie ✓ wired |
+| `second-screen-oborudovanie.jpg` | oborudovanie |
 | `second-screen-fbs-zhbi.jpg` | fbs-zhbi |
 | `second-screen-armatura.jpg` | armatura |
 | `second-screen-kirpich-bloki.jpg` | kirpich-bloki |
 | `second-screen-stroymaterialy.jpg` | stroymaterialy |
-| `second-screen-vezdehod.jpg` | vezdehod ✓ wired |
-| `second-screen-yurlic.jpg` | yurlic ✓ wired |
-| `second-screen-kray.jpg` | kray ✓ wired |
-| `second-screen-test-01.jpg` | v5-page01 test only (not in accepted 12) |
+| `second-screen-vezdehod.jpg` | vezdehod |
+| `second-screen-yurlic.jpg` | yurlic |
+| `second-screen-kray.jpg` | kray |
+| `second-screen-index-baseline.jpg` | Generic fallback — **no longer referenced in 12 routes** |
+| `second-screen-test-01.jpg` | v5-page01 test only (outside accepted 12) |
 
-### `src/assets/`
+### Per-route inventory (pre-pass → post-pass)
 
-Font Awesome vendor only — no route imagery.
+| Route | Current hero image | Current second-screen (before) | Available route-specific images | Recommended image | Confidence |
+|-------|-------------------|-------------------------------|--------------------------------|-------------------|------------|
+| index | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-zakaz.jpg` | `second-screen-zakaz.jpg` | High |
+| 5-tonn | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-5-tonn.jpg` | `second-screen-5-tonn.jpg` | High |
+| bytovki | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-bytovki.jpg` | `second-screen-bytovki.jpg` | High |
+| konteynery | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-konteynery.jpg` | `second-screen-konteynery.jpg` | High |
+| oborudovanie | `hero-bg-final.jpg` | `second-screen-oborudovanie.jpg` ✓ | `second-screen-oborudovanie.jpg` | KEEP | High |
+| fbs-zhbi | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-fbs-zhbi.jpg` | `second-screen-fbs-zhbi.jpg` | High |
+| armatura | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-armatura.jpg` | `second-screen-armatura.jpg` | High |
+| kirpich-bloki | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-kirpich-bloki.jpg` | `second-screen-kirpich-bloki.jpg` | High |
+| stroymaterialy | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-stroymaterialy.jpg` | `second-screen-stroymaterialy.jpg` | High |
+| vezdehod | `hero-bg-final.jpg` | `second-screen-vezdehod.jpg` ✓ | `second-screen-vezdehod.jpg` | KEEP | High |
+| yurlic | `hero-bg-final.jpg` | `second-screen-yurlic.jpg` ✓ | `second-screen-yurlic.jpg` | KEEP | High |
+| kray | `hero-bg-final.jpg` | `second-screen-kray.jpg` ✓ | `second-screen-kray.jpg` | KEEP | High |
 
-### `design/`
-
-No files in workspace — **SAFE UNKNOWN** for external design drops.
-
----
-
-## Per-route inventory
-
-Legend — **Alt:** `empty` = `alt=""` on decorative hero bg; `ok` = meaningful alt on second-screen `<img>`; `gap` = missing or generic.
-
-| Route | Page file | Current hero image | Current second-screen image | Expected semantic image (if obvious) | Alt text status | Action needed |
-|-------|-----------|-------------------|------------------------------|--------------------------------------|-----------------|---------------|
-| **index** | `src/pages/index.html` | `/assets/img/hero/hero-bg-final.jpg` (page shell) | `second-screen-index-baseline.jpg` via `v5-ppc/zakaz/screen-02-specs.html` | Hero: generic OK or `hero-bg-final`; 2nd: `second-screen-zakaz.jpg` | Hero: `empty` (decorative); 2nd: `ok` | Map 2nd screen to `second-screen-zakaz.jpg`; optional hero route variant later |
-| **5-tonn** | `src/pages/5-tonn.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-5-tonn.jpg`; hero optional `v1-02-manipulator-5t.png` | Hero: `empty`; 2nd: `ok` (route-specific alt) | Wire `second-screen-5-tonn.jpg` |
-| **bytovki** | `src/pages/bytovki.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-bytovki.jpg` | Hero: `empty`; 2nd: `ok` | Wire `second-screen-bytovki.jpg` |
-| **konteynery** | `src/pages/konteynery.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-konteynery.jpg` | Hero: `empty`; 2nd: `ok` | Wire `second-screen-konteynery.jpg` |
-| **oborudovanie** | `src/pages/oborudovanie.html` | `hero-bg-final.jpg` | `second-screen-oborudovanie.jpg` ✓ | Already aligned | Hero: `empty`; 2nd: `ok` | **None** (2nd screen); optional hero differentiation |
-| **fbs-zhbi** | `src/pages/fbs-zhbi.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-fbs-zhbi.jpg` | Hero: `empty`; 2nd: `ok` | Wire `second-screen-fbs-zhbi.jpg` |
-| **armatura** | `src/pages/armatura.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-armatura.jpg` | Hero: `empty`; 2nd: `ok` | Wire `second-screen-armatura.jpg` |
-| **kirpich-bloki** | `src/pages/kirpich-bloki.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-kirpich-bloki.jpg` | Hero: `empty`; 2nd: `ok` | Wire `second-screen-kirpich-bloki.jpg` |
-| **stroymaterialy** | `src/pages/stroymaterialy.html` | `hero-bg-final.jpg` | `second-screen-index-baseline.jpg` | `second-screen-stroymaterialy.jpg` | Hero: `empty`; 2nd: `ok` | Wire `second-screen-stroymaterialy.jpg` |
-| **vezdehod** | `src/pages/vezdehod.html` | `hero-bg-final.jpg` | `second-screen-vezdehod.jpg` ✓ | Already aligned | Hero: `empty`; 2nd: `ok` | **None** (2nd screen); optional hero 6×6 asset if added |
-| **yurlic** | `src/pages/yurlic.html` | `hero-bg-final.jpg` | `second-screen-yurlic.jpg` ✓ | Already aligned | Hero: `empty`; 2nd: `ok` | **None** (2nd screen) |
-| **kray** | `src/pages/kray.html` | `hero-bg-final.jpg` | `second-screen-kray.jpg` ✓ | Already aligned | Hero: `empty`; 2nd: `ok` | **None** (2nd screen) |
-
-### Partial paths (second screen)
-
-| Route | Second-screen partial |
-|-------|------------------------|
-| index | `partials/sections/v5-ppc/zakaz/screen-02-specs.html` |
-| 5-tonn | `partials/sections/v5-ppc/5-tonn/screen-02-specs.html` |
-| bytovki | `partials/sections/v5-ppc/bytovki/screen-02-specs.html` |
-| konteynery | `partials/sections/v5-ppc/konteynery/screen-02-specs.html` |
-| oborudovanie | `partials/sections/v5-ppc/oborudovanie/screen-02-specs.html` |
-| fbs-zhbi | `partials/sections/v5-ppc/fbs-zhbi/screen-02-specs.html` |
-| armatura | `partials/sections/v5-ppc/armatura/screen-02-specs.html` |
-| kirpich-bloki | `partials/sections/v5-ppc/kirpich-bloki/screen-02-specs.html` |
-| stroymaterialy | `partials/sections/v5-ppc/stroymaterialy/screen-02-specs.html` |
-| vezdehod | `partials/sections/v5-ppc/vezdehod/screen-02-specs.html` |
-| yurlic | `partials/sections/v5-ppc/yurlic/screen-02-specs.html` |
-| kray | `partials/sections/v5-ppc/kray/screen-02-specs.html` |
-
-Hero content partials (`screen-01-hero.html`) contain **no** `<img>` — hero visual is page-level `first-screen__bg-media` only.
+Hero partials (`screen-01-hero.html`) contain no `<img>` — hero visual is page-level `first-screen__bg-media` only.
 
 ---
 
-## Mapping pass scope (next step, not this commit)
+## Phase 2 — Mapping decisions
 
-1. Update `src` in `screen-02-specs.html` only (9 routes on baseline → dedicated file).
-2. Rebuild; verify dist copies under `dist/assets/img/v5/second-screen/`.
-3. Visual QA per route (mobile + desktop crop).
-4. Hero per-route assets — **deferred** unless design supplies 12 variants; shared `hero-bg-final.jpg` is acceptable interim per freeze.
+| Route | Second screen | Hero | Reason |
+|-------|---------------|------|--------|
+| index | **REPLACE** → `second-screen-zakaz.jpg` | **KEEP** `hero-bg-final.jpg` | Dedicated zakaz asset exists; semantics match index |
+| 5-tonn | **REPLACE** → `second-screen-5-tonn.jpg` | **KEEP** | Dedicated 5-tonn asset exists |
+| bytovki | **REPLACE** → `second-screen-bytovki.jpg` | **KEEP** | Dedicated bytovki asset exists |
+| konteynery | **REPLACE** → `second-screen-konteynery.jpg` | **KEEP** | Dedicated konteynery asset exists |
+| oborudovanie | **KEEP** | **KEEP** | Already mapped |
+| fbs-zhbi | **REPLACE** → `second-screen-fbs-zhbi.jpg` | **KEEP** | Dedicated FBS/ЖБИ asset exists |
+| armatura | **REPLACE** → `second-screen-armatura.jpg` | **KEEP** | Dedicated armatura asset exists |
+| kirpich-bloki | **REPLACE** → `second-screen-kirpich-bloki.jpg` | **KEEP** | Dedicated kirpich-bloki asset exists |
+| stroymaterialy | **REPLACE** → `second-screen-stroymaterialy.jpg` | **KEEP** | Dedicated stroymaterialy asset exists |
+| vezdehod | **KEEP** | **KEEP** | Already mapped |
+| yurlic | **KEEP** | **KEEP** | Already mapped |
+| kray | **KEEP** | **KEEP** | Already mapped |
+
+Hero per-route differentiation **deferred** — no dedicated hero set in `src/img/hero/` beyond shared `hero-bg-final.jpg`. Reconstruction PNGs not wired (legacy / unverified semantics).
 
 ---
 
-## Do not touch
+## Phase 3 — Applied changes
 
-- Orphan `final-contact-cta.html` partials (all routes).
-- `dist/` manual edits.
-- Route copy / structure.
+### Mapping log
+
+| Route | Old image | New image | Reason | Status |
+|-------|-----------|-----------|--------|--------|
+| index | `second-screen-index-baseline.jpg` | `second-screen-zakaz.jpg` | Route-specific zakaz portrait available | **Applied** |
+| 5-tonn | `second-screen-index-baseline.jpg` | `second-screen-5-tonn.jpg` | Route-specific 5-tonn portrait available | **Applied** |
+| bytovki | `second-screen-index-baseline.jpg` | `second-screen-bytovki.jpg` | Route-specific bytovki portrait available | **Applied** |
+| konteynery | `second-screen-index-baseline.jpg` | `second-screen-konteynery.jpg` | Route-specific konteynery portrait available | **Applied** |
+| oborudovanie | `second-screen-oborudovanie.jpg` | *(unchanged)* | Already correct | **KEEP** |
+| fbs-zhbi | `second-screen-index-baseline.jpg` | `second-screen-fbs-zhbi.jpg` | Route-specific FBS/ЖБИ portrait available | **Applied** |
+| armatura | `second-screen-index-baseline.jpg` | `second-screen-armatura.jpg` | Route-specific armatura portrait available | **Applied** |
+| kirpich-bloki | `second-screen-index-baseline.jpg` | `second-screen-kirpich-bloki.jpg` | Route-specific kirpich-bloki portrait available | **Applied** |
+| stroymaterialy | `second-screen-index-baseline.jpg` | `second-screen-stroymaterialy.jpg` | Route-specific stroymaterialy portrait available | **Applied** |
+| vezdehod | `second-screen-vezdehod.jpg` | *(unchanged)* | Already correct | **KEEP** |
+| yurlic | `second-screen-yurlic.jpg` | *(unchanged)* | Already correct | **KEEP** |
+| kray | `second-screen-kray.jpg` | *(unchanged)* | Already correct | **KEEP** |
+
+All routes: hero **KEEP** `/assets/img/hero/hero-bg-final.jpg` (page shell).
+
+### Files changed
+
+| File | Change |
+|------|--------|
+| `src/partials/sections/v5-ppc/zakaz/screen-02-specs.html` | `src` → `second-screen-zakaz.jpg` |
+| `src/partials/sections/v5-ppc/5-tonn/screen-02-specs.html` | `src` → `second-screen-5-tonn.jpg` |
+| `src/partials/sections/v5-ppc/bytovki/screen-02-specs.html` | `src` → `second-screen-bytovki.jpg` |
+| `src/partials/sections/v5-ppc/konteynery/screen-02-specs.html` | `src` → `second-screen-konteynery.jpg` |
+| `src/partials/sections/v5-ppc/fbs-zhbi/screen-02-specs.html` | `src` → `second-screen-fbs-zhbi.jpg` |
+| `src/partials/sections/v5-ppc/armatura/screen-02-specs.html` | `src` → `second-screen-armatura.jpg` |
+| `src/partials/sections/v5-ppc/kirpich-bloki/screen-02-specs.html` | `src` → `second-screen-kirpich-bloki.jpg` |
+| `src/partials/sections/v5-ppc/stroymaterialy/screen-02-specs.html` | `src` → `second-screen-stroymaterialy.jpg` |
+
+---
+
+## Phase 4 — ALT QA
+
+Audited all 12 `screen-02-specs.html` second-screen `<img alt="...">` values.
+
+| Route | Alt text | Action |
+|-------|----------|--------|
+| index | Манипулятор 5 т на объекте в Краснодаре | **KEEP** — route-specific, commercial |
+| 5-tonn | Манипулятор 5 тонн с крановой установкой на объекте в Краснодаре | **KEEP** |
+| bytovki | Манипулятор при перевозке бытовки в Краснодаре | **KEEP** |
+| konteynery | Манипулятор перевозит контейнер и разгружает его стрелой на площадке в Краснодаре | **KEEP** |
+| oborudovanie | Манипулятор аккуратно перевозит оборудование… | **KEEP** |
+| fbs-zhbi | Манипулятор доставляет ФБС и ЖБИ… | **KEEP** |
+| armatura | Манипулятор доставляет арматуру… | **KEEP** |
+| kirpich-bloki | Манипулятор доставляет кирпич и блоки… | **KEEP** |
+| stroymaterialy | Манипулятор доставляет стройматериалы… | **KEEP** |
+| vezdehod | Манипулятор-вездеход 6×6 на строительном объекте… | **KEEP** |
+| yurlic | Манипулятор на строительном объекте… для организации | **KEEP** |
+| kray | Манипулятор на маршруте по Краснодарскому краю… | **KEEP** |
+
+No generic alts found (`Image`, `Photo`, `Truck`). **No alt edits required.**
+
+Hero bg uses `alt=""` (decorative) — unchanged per scope.
+
+---
+
+## Phase 5 — Build verification
+
+```text
+npm run build  →  exit 0  (gulp build, 2026-05-29)
+```
+
+All 14 second-screen JPGs present in `dist/assets/img/v5/second-screen/`.  
+No `second-screen-index-baseline.jpg` references in built HTML.
+
+---
+
+## Phase 6 — Route verification
+
+| Check | Result |
+|-------|--------|
+| 12 routes exist in `dist/` | **PASS** — index, 5-tonn, bytovki, konteynery, oborudovanie, fbs-zhbi, armatura, kirpich-bloki, stroymaterialy, vezdehod, yurlic, kray |
+| One `id="contacts"` per route | **PASS** — count = 1 on each HTML file |
+| No `.hero__notice` | **PASS** — none in dist |
+| No mock handlers | **PASS** — none in dist html/js |
+| No `send.php` references | **PASS** — none in dist |
+
+Dist second-screen slug per route: zakaz, 5-tonn, bytovki, konteynery, oborudovanie, fbs-zhbi, armatura, kirpich-bloki, stroymaterialy, vezdehod, yurlic, kray — all route-specific.
+
+---
+
+## Remaining unmapped routes
+
+| Layer | Status |
+|-------|--------|
+| Second screen (12 routes) | **Fully mapped** — no route still on baseline |
+| Hero (12 routes) | **Shared** `hero-bg-final.jpg` on all — intentional KEEP; no per-route hero library |
+| `second-screen-index-baseline.jpg` | Orphan asset (still copied to dist, unused in markup) |
+| `src/img/reconstruction/*.png` | Not mapped — legacy candidates, semantics unverified |
+| `design/` | Empty — external design drops unknown |
+
+---
+
+## Regression risks
+
+1. **Crop / focal point** — route-specific portraits may crop differently under `_screen-02-prices.scss` cover rules on mobile vs desktop; human visual QA recommended.
+2. **Hero homogeneity** — all routes still share one hero photo; acceptable per freeze but weak route differentiation on first screen.
+3. **Orphan baseline asset** — `second-screen-index-baseline.jpg` remains in bundle until explicitly pruned (out of scope).
+
+---
+
+## SAFE UNKNOWN
+
+- **`design/`** — no files in workspace; cannot confirm external design inventory.
+- **Visual QA** — pixel-level crop/focal review not performed in this pass (build + reference audit only).
+- **Reconstruction PNGs** — `v1-02-manipulator-5t.png` may suit 5-tonn hero but not wired; 7t/10t route fit unknown.
+- **Hero per-route pass** — deferred until dedicated hero assets supplied or approved from reconstruction set.
+
+---
+
+## Do not touch (unchanged)
+
+- Route copy, headings, SEO, forms, CTA, FAQ
+- CSS architecture, layout, spacing, route structure, mailer
+- Orphan `final-contact-cta.html` partials
+- Manual `dist/` edits (regenerated via build)
+
+**NO COMMIT. NO PUSH.**

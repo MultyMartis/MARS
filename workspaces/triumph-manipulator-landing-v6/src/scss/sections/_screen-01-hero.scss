@@ -18,7 +18,6 @@
 
 .hero__title {
     margin: 0;
-    font-family: t.$font-display;
     font-size: clamp(48px, 5.8vw, 86px);
     font-weight: 600;
     letter-spacing: -0.055em;
@@ -57,7 +56,6 @@
 }
 
 .hero__rate strong {
-    font-family: t.$font-display;
     font-size: 27px;
     font-weight: 600;
     line-height: 31px;
@@ -160,7 +158,6 @@
 
 .hero-proof__item strong {
     color: t.$color-white;
-    font-family: t.$font-display;
     font-size: 19px;
     font-weight: 600;
     line-height: 23px;

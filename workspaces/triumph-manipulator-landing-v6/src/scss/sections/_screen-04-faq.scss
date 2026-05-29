@@ -60,7 +60,6 @@
 .faq__title {
     max-width: 300px !important;
     margin: 12px 0 0;
-    font-family: t.$font-display;
     @include headings.section-h2-mobile;
     font-weight: 600;
     letter-spacing: -0.045em;
@@ -135,7 +134,6 @@
 .faq-item summary span {
     flex-shrink: 0;
     color: t.$color-red;
-    font-family: t.$font-display;
     font-weight: 600;
 }
 
