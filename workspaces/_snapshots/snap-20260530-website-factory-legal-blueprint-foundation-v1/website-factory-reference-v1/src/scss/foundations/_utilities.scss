@@ -1,0 +1,52 @@
+@use 'tokens' as *;
+@use 'breakpoints' as *;
+
+.wf-container {
+  @include container;
+}
+
+.wf-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@include down($bp-md) {
+  .wf-hide-mobile {
+    display: none !important;
+  }
+}
+
+// Section shell — shared by all conversion blocks
+.wf-section {
+  padding-block: $section-gap-m;
+
+  @include down($bp-md) {
+    padding-block: $section-gap-s;
+  }
+
+  &--gap-l {
+    padding-block: $section-gap-l;
+
+    @include down($bp-md) {
+      padding-block: $section-gap-m;
+    }
+  }
+}
+
+// Anti-overflow baseline
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.wf-section img {
+  display: block;
+}

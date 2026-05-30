@@ -1,0 +1,76 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/layers' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-hero-sentinel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.wf-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $z-sticky-cta;
+  padding: $space-3 0;
+  background: $color-surface;
+  border-top: 1px solid $color-border;
+  box-shadow: $shadow-lg;
+  transform: translateY(100%);
+  transition: transform 0.2s ease, visibility 0.2s ease;
+
+  &:not([hidden]) {
+    transform: translateY(0);
+  }
+
+  &[aria-hidden='false'] {
+    transform: translateY(0);
+  }
+
+  .wf-sticky-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-4;
+  }
+
+  .wf-sticky-cta__text {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: $font-weight-medium;
+  }
+
+  .wf-sticky-cta__btn {
+    flex-shrink: 0;
+    min-height: 44px;
+    padding: $space-3 $space-5;
+    font-weight: $font-weight-medium;
+    color: $color-white;
+    background: $color-cta-primary;
+    border: none;
+    border-radius: $radius-md;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-cta-primary-hover;
+    }
+  }
+
+  @include down($bp-md) {
+    .wf-sticky-cta__inner {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+
+    .wf-sticky-cta__btn {
+      width: 100%;
+    }
+  }
+}

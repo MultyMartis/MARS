@@ -1,0 +1,63 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-section--cta-band {
+  background: $color-brand;
+  color: $color-white;
+  text-align: center;
+
+  .wf-cta-band__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-5;
+  }
+
+  .wf-cta-band__title {
+    margin: 0;
+    font-size: $font-size-h2;
+  }
+
+  .wf-cta-band__text {
+    margin: 0;
+    max-width: 42ch;
+    opacity: 0.9;
+  }
+
+  .wf-cta-band__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-4;
+    width: 100%;
+  }
+
+  .wf-cta-band__btn {
+    min-height: 44px;
+    min-width: 160px;
+    padding: $space-3 $space-6;
+    font-size: $font-size-body;
+    font-weight: $font-weight-medium;
+    border-radius: $radius-md;
+    cursor: pointer;
+    border: none;
+
+    &--primary {
+      background: $color-white;
+      color: $color-brand;
+    }
+
+    &--ghost {
+      background: transparent;
+      color: $color-white;
+      border: 1px solid rgba($color-white, 0.7);
+    }
+  }
+
+  @include down($bp-md) {
+    .wf-cta-band__btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}

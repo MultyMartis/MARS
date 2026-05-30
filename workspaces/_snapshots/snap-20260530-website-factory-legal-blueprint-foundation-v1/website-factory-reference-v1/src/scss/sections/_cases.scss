@@ -1,0 +1,125 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// Extracted from triumph-manipulator-landing-v2 trust-cases-social-proof (case list only).
+// Not extracted: correspondence bubbles, FA icons, legal aside, client photos, geo/legal rows.
+
+.wf-section--cases {
+  padding-block: $section-gap-l;
+  background: $color-surface-alt;
+
+  .wf-cases__header {
+    max-width: 40rem;
+    margin-bottom: $space-7;
+  }
+
+  .wf-cases__eyebrow {
+    margin: 0 0 $space-3;
+    font-size: 0.875rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-cases__title {
+    margin: 0 0 $space-4;
+    font-size: $font-size-h2;
+  }
+
+  .wf-cases__lead {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+
+  .wf-cases__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+  }
+
+  .wf-cases__item {
+    display: grid;
+    gap: $space-5;
+    min-width: 0;
+    padding: $space-5;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-sm;
+
+    @include up($bp-md) {
+      grid-template-columns: min(12rem, 32%) 1fr;
+      align-items: start;
+      gap: $space-6;
+      padding: $space-6;
+    }
+  }
+
+  .wf-cases__media {
+    min-height: 8rem;
+    border-radius: $radius-md;
+    background: linear-gradient(160deg, $color-neutral-200 0%, $color-neutral-100 100%);
+  }
+
+  .wf-cases__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    min-width: 0;
+  }
+
+  .wf-cases__tag {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-cases__item-title {
+    margin: 0;
+    font-size: $font-size-h3;
+  }
+
+  .wf-cases__text {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+
+  .wf-cases__meta {
+    margin: $space-2 0 0;
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+
+  .wf-cases__meta-label {
+    font-weight: $font-weight-medium;
+    color: $color-text;
+  }
+
+  .wf-cases__cta {
+    margin-top: $space-7;
+    text-align: center;
+  }
+
+  .wf-cases__cta-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: $space-3 $space-6;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    color: $color-brand;
+    border: 1px solid $color-brand;
+    border-radius: $radius-md;
+
+    &:hover {
+      background: $color-surface;
+    }
+  }
+}
