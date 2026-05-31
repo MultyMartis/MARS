@@ -2,15 +2,11 @@
 declare(strict_types=1);
 
 /**
- * Triumph V5 landing — lead form mailer (PHP mail()).
+ * Triumph V5 landing — lead form mailer (PHP mail() or SMTP).
  * POST only, JSON responses, no secrets in repo.
  */
 
-const LEAD_RECIPIENTS = [
-    'client.leads@polygon-ws.ru',
-    'opergt@gktriumph.ru',
-];
-const SUBJECT_PREFIX = '[ТРИУМФ] Новая заявка';
+const SUBJECT_LINE = 'Заявка на МАНИПУЛЯТОР';
 const ACCENT_COLOR = '#e1002d';
 const EMAIL_MAX_WIDTH = '600px';
 const MAX_FIELD_LENGTH = 500;
@@ -42,6 +38,7 @@ const FIELD_LABELS = [
 
 require_once __DIR__ . '/lib/config-loader.php';
 require_once __DIR__ . '/lib/recaptcha.php';
+require_once __DIR__ . '/lib/smtp-mailer.php';
 
 ini_set('display_errors', '0');
 error_reporting(E_ALL);
@@ -63,7 +60,20 @@ $config = triumph_load_config();
 $recaptchaToken = trim((string) ($input['g-recaptcha-response'] ?? ''));
 
 if (!triumph_verify_recaptcha($recaptchaToken, $config)) {
-    jsonResponse(false, 'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.', 422);
+    $debugExtra = null;
+    if (!empty($config['recaptcha_debug_public_error'])) {
+        $codes = triumph_recaptcha_last_error_codes();
+        if ($codes !== []) {
+            $debugExtra = ['recaptchaError' => implode(', ', $codes)];
+        }
+    }
+
+    jsonResponse(
+        false,
+        'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.',
+        422,
+        $debugExtra
+    );
 }
 
 $phone = sanitizeField((string) ($input['phone'] ?? ''));
@@ -208,18 +218,9 @@ function buildTechnicalContext(): array
  */
 function buildSubject(string $phone, array $meta): string
 {
-    $source = sanitizeField($meta['cta_source'] ?? $meta['form_id'] ?? '');
-    $phoneLabel = formatPhoneForDisplay($phone);
+    unset($phone, $meta);
 
-    $subject = SUBJECT_PREFIX;
-    if ($phoneLabel !== '') {
-        $subject .= ' — ' . $phoneLabel;
-    }
-    if ($source !== '') {
-        $subject .= ' — ' . $source;
-    }
-
-    return $subject;
+    return SUBJECT_LINE;
 }
 
 function formatPhoneForDisplay(string $phone): string
@@ -573,13 +574,14 @@ function e(string $value): string
  */
 function sendMail(string $subject, string $htmlBody, string $textBody, array $input): bool
 {
-    $fromAddress = buildFromAddress();
+    $config = triumph_load_config();
+    $fromAddress = buildFromAddress($config);
+    $fromName = sanitizeField((string) ($config['from_name'] ?? ''));
     $boundary = 'b_' . bin2hex(random_bytes(8));
 
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: multipart/alternative; boundary="' . $boundary . '"',
-        'From: ' . $fromAddress,
     ];
 
     $replyTo = resolveReplyTo($input);
@@ -598,17 +600,88 @@ function sendMail(string $subject, string $htmlBody, string $textBody, array $in
         . chunk_split(base64_encode($htmlBody))
         . "--{$boundary}--";
 
-    $recipients = implode(', ', LEAD_RECIPIENTS);
+    $recipients = resolveLeadRecipients($config);
+    if ($recipients === []) {
+        return false;
+    }
 
-    return @mail($recipients, $encodedSubject, $body, implode("\r\n", $headers));
+    if (!empty($config['use_smtp'])) {
+        /** @var array<string, mixed> $smtpConfig */
+        $smtpConfig = is_array($config['smtp'] ?? null) ? $config['smtp'] : [];
+
+        return triumph_smtp_send_message(
+            $smtpConfig,
+            $recipients,
+            $fromAddress,
+            $fromName,
+            $encodedSubject,
+            $headers,
+            $body
+        );
+    }
+
+    $headers[] = 'From: ' . formatFromHeader($fromAddress, $fromName);
+
+    return @mail(implode(', ', $recipients), $encodedSubject, $body, implode("\r\n", $headers));
 }
 
-function buildFromAddress(): string
+/**
+ * @param array<string, mixed> $config
+ * @return list<string>
+ */
+function resolveLeadRecipients(array $config): array
 {
+    $recipients = [];
+
+    if (isset($config['recipients']) && is_array($config['recipients'])) {
+        foreach ($config['recipients'] as $recipient) {
+            if (!is_string($recipient)) {
+                continue;
+            }
+
+            $email = stripHeaderInjection(trim($recipient));
+            if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $recipients[] = $email;
+            }
+        }
+    }
+
+    if ($recipients !== []) {
+        return array_values(array_unique($recipients));
+    }
+
+    $fallback = stripHeaderInjection(trim((string) ($config['recipient'] ?? '')));
+    if ($fallback !== '' && filter_var($fallback, FILTER_VALIDATE_EMAIL)) {
+        return [$fallback];
+    }
+
+    return [];
+}
+
+/**
+ * @param array<string, mixed> $config
+ */
+function buildFromAddress(array $config): string
+{
+    $configured = stripHeaderInjection(trim((string) ($config['from_address'] ?? '')));
+    if ($configured !== '' && filter_var($configured, FILTER_VALIDATE_EMAIL)) {
+        return $configured;
+    }
+
     $host = sanitizeField((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? 'localhost'));
     $host = preg_replace('/[^a-zA-Z0-9.\-]/', '', $host) ?? 'localhost';
+    $localPart = sanitizeField((string) ($config['from_local_part'] ?? 'noreply'));
 
-    return 'noreply@' . $host;
+    return $localPart . '@' . $host;
+}
+
+function formatFromHeader(string $fromAddress, string $fromName): string
+{
+    if ($fromName === '') {
+        return $fromAddress;
+    }
+
+    return '=?UTF-8?B?' . base64_encode($fromName) . '?= <' . $fromAddress . '>';
 }
 
 /**
@@ -654,15 +727,22 @@ function getClientIp(): string
     return 'unknown';
 }
 
-function jsonResponse(bool $ok, string $message, int $status = 200): void
+function jsonResponse(bool $ok, string $message, int $status = 200, ?array $extra = null): void
 {
     http_response_code($status);
-    echo json_encode(
-        [
-            'ok' => $ok,
-            'message' => $message,
-        ],
-        JSON_UNESCAPED_UNICODE
-    );
+    $payload = [
+        'ok' => $ok,
+        'message' => $message,
+    ];
+
+    if ($extra !== null) {
+        foreach ($extra as $key => $value) {
+            if (is_string($key) && is_string($value)) {
+                $payload[$key] = $value;
+            }
+        }
+    }
+
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE);
     exit;
 }

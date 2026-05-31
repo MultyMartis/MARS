@@ -501,6 +501,10 @@ body[data-page-type^='ppc-'] .first-screen__overlay {
         font-size: clamp(38px, 4.4vw, 72px);
         line-height: 1.08;
     }
+
+    .hero--v5 .hero__cargo-action {
+        max-width: none;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1510px) {
