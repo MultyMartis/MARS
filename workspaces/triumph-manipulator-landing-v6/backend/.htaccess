@@ -1,0 +1,18 @@
+# Triumph V6 — block direct HTTP access to secrets and internal PHP (Apache).
+# PHP includes (lib/, config/) still work via require; only browser GET/POST to these paths is denied.
+
+<FilesMatch "^(config\.local\.php|config\.php|recaptcha-debug\.php)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^lib/ - [F,L]
+    RewriteRule ^config/ - [F,L]
+</IfModule>

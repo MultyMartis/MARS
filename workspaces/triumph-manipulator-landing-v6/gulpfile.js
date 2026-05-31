@@ -157,6 +157,7 @@ function backend() {
   return src(
     [
       paths.backend.src,
+      'backend/.htaccess',
       'backend/config.local.php.example',
       '!backend/api/forms/send.php',
       '!backend/config.local.php',
