@@ -1,0 +1,47 @@
+{
+  "schema_version": "0",
+  "description": "Deterministic competitor discovery rules — Phase 2 SERP-derived (v0.2a)",
+  "top_n": 10,
+  "min_distinct_queries_for_repeated_domain": 2,
+  "rules_enabled": [
+    "rule_serp_organic_top_n",
+    "rule_repeated_domain",
+    "rule_multi_surface",
+    "rule_aggregator_domain",
+    "rule_marketplace_domain"
+  ],
+  "exclusion_rules": [
+    "exclude_search_engine",
+    "exclude_no_url_no_name",
+    "exclude_duplicate_entity"
+  ],
+  "exclude_search_engine_domains": [
+    "google.com",
+    "www.google.com",
+    "google.ru",
+    "yandex.ru",
+    "www.yandex.ru",
+    "ya.ru",
+    "bing.com",
+    "duckduckgo.com",
+    "mail.ru",
+    "go.mail.ru"
+  ],
+  "aggregator_domains": [
+    "uslugi.yandex.ru",
+    "yandex.ru",
+    "2gis.ru",
+    "profi.ru",
+    "avito.ru"
+  ],
+  "marketplace_domains": [
+    "avito.ru",
+    "ozon.ru",
+    "wildberries.ru",
+    "youla.ru"
+  ],
+  "informational_domains": [
+    "wikipedia.org",
+    "ru.wikipedia.org"
+  ]
+}

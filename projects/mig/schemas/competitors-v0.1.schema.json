@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:competitors-v0.1",
+  "title": "MIG Competitor Observations v0.1",
+  "description": "Competitor Object and section wrapper per mig-competitor-discovery-contract-v0",
+  "type": "object",
+  "required": ["section_id", "schema_version", "discovery_pass_at", "discovery_phase", "query_set_ref", "competitors", "section_evidence_grade", "section_coverage"],
+  "properties": {
+    "section_id": { "const": "competitor_observations" },
+    "schema_version": { "const": "0" },
+    "discovery_pass_at": { "type": "string", "format": "date-time" },
+    "discovery_phase": { "const": 2 },
+    "query_set_ref": { "type": "string" },
+    "competitors": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/competitor_object" }
+    },
+    "excluded_surfaces": { "type": "array", "items": { "type": "string" } },
+    "section_evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+    "section_coverage": { "enum": ["complete", "partial", "minimal", "unknown"] },
+    "discovery_notes": { "type": "string" },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } },
+    "discovery_mode": { "enum": ["single", "multi_query"] },
+    "discovery_coverage": {
+      "type": "object",
+      "required": [
+        "queries_declared",
+        "queries_executed",
+        "queries_missing",
+        "query_coverage"
+      ],
+      "properties": {
+        "queries_declared": { "type": "array", "items": { "type": "string" } },
+        "queries_executed": { "type": "array", "items": { "type": "string" } },
+        "queries_missing": { "type": "array", "items": { "type": "string" } },
+        "query_coverage": { "enum": ["full", "partial", "none"] },
+        "surface_coverage": { "type": "object" }
+      }
+    }
+  },
+  "definitions": {
+    "competitor_object": {
+      "type": "object",
+      "required": [
+        "competitor_id",
+        "display_name",
+        "surface_types",
+        "discovery_sources",
+        "first_seen_query",
+        "queries_seen",
+        "discovery_rules_fired",
+        "discovery_strength",
+        "region",
+        "evidence",
+        "evidence_grade",
+        "capture_time"
+      ],
+      "properties": {
+        "competitor_id": { "type": "string" },
+        "display_name": { "type": "string" },
+        "primary_domain": { "type": ["string", "null"] },
+        "domains_observed": { "type": "array", "items": { "type": "string" } },
+        "surface_types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "serp_organic",
+              "serp_paid",
+              "local_pack",
+              "directory_listing",
+              "marketplace_listing",
+              "aggregator",
+              "brand_entity",
+              "informational_surface",
+              "manual_seed"
+            ]
+          },
+          "minItems": 1
+        },
+        "discovery_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["source_kind", "artifact_ref", "observed_at"],
+            "properties": {
+              "source_kind": {
+                "enum": [
+                  "serp_organic",
+                  "serp_paid",
+                  "local_pack",
+                  "aggregator_list",
+                  "marketplace_list",
+                  "manual_seed"
+                ]
+              },
+              "artifact_ref": { "type": "string" },
+              "source_label": { "type": "string" },
+              "observed_at": { "type": "string", "format": "date-time" }
+            }
+          }
+        },
+        "first_seen_query": { "type": "string" },
+        "queries_seen": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "discovery_rules_fired": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "discovery_strength": { "enum": ["single", "repeated", "multi_surface"] },
+        "region": { "type": "string" },
+        "city": { "type": ["string", "null"] },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["source_type", "artifact_ref", "observed_at", "grade"],
+            "properties": {
+              "evidence_id": { "type": "string" },
+              "source_type": {
+                "enum": ["human", "serp_provider", "snapshot", "filesystem_artifact", "unknown"]
+              },
+              "artifact_ref": { "type": "string" },
+              "observed_at": { "type": "string", "format": "date-time" },
+              "grade": { "enum": ["A", "B", "C", "D", "X"] },
+              "surface_detail": { "type": "object" },
+              "snapshot_ref": { "type": "string" }
+            }
+          }
+        },
+        "evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+        "capture_time": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "listing_refs": { "type": "array" },
+        "manual_seed": { "type": "boolean" },
+        "seed_only": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "safe_unknown": { "type": "array", "items": { "type": "string" } },
+        "query_ids_seen": { "type": "array", "items": { "type": "string" } },
+        "recurrence": {
+          "type": "object",
+          "required": ["distinct_query_count", "query_ids"],
+          "properties": {
+            "distinct_query_count": { "type": "integer", "minimum": 2 },
+            "query_ids": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}

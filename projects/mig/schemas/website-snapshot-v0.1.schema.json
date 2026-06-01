@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:website-snapshot-v0.1",
+  "title": "MIG Website Snapshot v0.1",
+  "description": "Per-URL website capture object per mig-website-acquisition-architecture-v1",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "session_id",
+    "domain",
+    "requested_url",
+    "final_url",
+    "page_role",
+    "capture_time",
+    "status",
+    "acquisition_method",
+    "render_status",
+    "headings",
+    "contacts",
+    "offers",
+    "pricing_signals",
+    "cta_elements",
+    "forms",
+    "links",
+    "trust_signals_visible",
+    "artifact_refs",
+    "evidence_grade"
+  ],
+  "properties": {
+    "snapshot_id": { "type": "string" },
+    "session_id": { "type": "string" },
+    "competitor_id": { "type": ["string", "null"] },
+    "domain": { "type": "string" },
+    "requested_url": { "type": "string" },
+    "final_url": { "type": "string" },
+    "page_role": {
+      "enum": [
+        "homepage",
+        "serp_landing",
+        "contact",
+        "pricing",
+        "service",
+        "category",
+        "landing",
+        "operator_seed",
+        "unknown"
+      ]
+    },
+    "capture_time": { "type": "string", "format": "date-time" },
+    "status": {
+      "enum": ["success", "failed", "blocked", "timeout", "empty", "skipped", "render_required"]
+    },
+    "acquisition_method": {
+      "enum": ["http_get", "http_get_dom", "playwright", "manual_import", "fixture"]
+    },
+    "http_status": { "type": ["integer", "null"] },
+    "redirect_chain": { "type": "array", "items": { "type": "string" } },
+    "content_type": { "type": ["string", "null"] },
+    "charset": { "type": ["string", "null"] },
+    "render_status": {
+      "enum": ["static_ok", "static_empty", "js_shell", "unknown"]
+    },
+    "fetch_duration_ms": { "type": ["number", "null"] },
+    "title": { "type": ["string", "null"] },
+    "meta_description": { "type": ["string", "null"] },
+    "canonical_url": { "type": ["string", "null"] },
+    "lang": { "type": ["string", "null"] },
+    "headings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["level", "text", "order"],
+        "properties": {
+          "level": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "text": { "type": "string" },
+          "order": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "contacts": {
+      "type": "object",
+      "required": ["phones", "emails", "addresses", "messengers"],
+      "properties": {
+        "phones": { "type": "array", "items": { "type": "string" } },
+        "emails": { "type": "array", "items": { "type": "string" } },
+        "addresses": { "type": "array", "items": { "type": "string" } },
+        "messengers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "handle"],
+            "properties": {
+              "type": { "type": "string" },
+              "handle": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text"],
+        "properties": {
+          "text": { "type": "string" },
+          "context": { "type": "string" },
+          "source_selector_hint": { "type": "string" }
+        }
+      }
+    },
+    "pricing_signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text"],
+        "properties": {
+          "text": { "type": "string" },
+          "currency_hint": { "type": "string" },
+          "context": { "type": "string" }
+        }
+      }
+    },
+    "cta_elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text"],
+        "properties": {
+          "text": { "type": "string" },
+          "href": { "type": ["string", "null"] },
+          "element_type": { "enum": ["link", "button", "input"] },
+          "position_hint": { "enum": ["header", "hero", "footer", "unknown"] }
+        }
+      }
+    },
+    "forms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fields"],
+        "properties": {
+          "form_id": { "type": ["string", "null"] },
+          "action": { "type": ["string", "null"] },
+          "method": { "type": ["string", "null"] },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": ["string", "null"] },
+                "type": { "type": ["string", "null"] },
+                "label": { "type": ["string", "null"] },
+                "required": { "type": "boolean" }
+              }
+            }
+          },
+          "visible_purpose": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "required": ["internal", "external"],
+      "properties": {
+        "internal": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["href", "text"],
+            "properties": {
+              "href": { "type": "string" },
+              "text": { "type": "string" }
+            }
+          }
+        },
+        "external": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["href", "text"],
+            "properties": {
+              "href": { "type": "string" },
+              "text": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "trust_signals_visible": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text"],
+        "properties": {
+          "text": { "type": "string" },
+          "context": { "type": "string" }
+        }
+      }
+    },
+    "visible_text_excerpt": { "type": ["string", "null"] },
+    "artifact_refs": { "type": "object", "additionalProperties": { "type": "string" } },
+    "evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } },
+    "acquisition_notes": { "type": "string" }
+  }
+}

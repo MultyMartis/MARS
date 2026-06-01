@@ -1,0 +1,41 @@
+{
+  "niche": "manipulator rental",
+  "region": "Krasnodar Krai",
+  "city": "Krasnodar",
+  "business_type": "local_service",
+  "seed_queries": [
+    "аренда манипулятора Кrasnodar"
+  ],
+  "search_engine": "yandex",
+  "device": "mobile",
+  "operator_id": "op-test-002",
+  "manual_serp": {
+    "query": "аренда манипулятора красnodar",
+    "search_engine": "yandex",
+    "region": "Krasnodar Krai",
+    "city": "Krasnodar",
+    "device": "mobile",
+    "localization": "ru, city-level",
+    "timestamp": "2026-05-30T10:00:00+03:00",
+    "serp_type": "local commercial",
+    "ads_blocks": {
+      "top_count": 3,
+      "bottom_count": 0,
+      "visible_patterns": ["price from", "same-day delivery"]
+    },
+    "maps_local_pack": "dominant",
+    "aggregators": ["Yandex Services"],
+    "marketplaces": [],
+    "review_signals": ["map ratings visible"],
+    "offer_patterns": ["urgent service", "fixed price"],
+    "cta_patterns": ["call now", "request quote"],
+    "landing_observations": ["local service landing pages"],
+    "organic_results": [
+      {
+        "title": "Example Manipulator Co",
+        "url": "https://example.local/manipulator"
+      }
+    ],
+    "safe_unknown": ["exact ad positions not verified"]
+  }
+}

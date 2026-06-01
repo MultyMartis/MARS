@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:landing-observations-v0.1",
+  "title": "MIG Landing Observations Session Index v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "session_id",
+    "generated_at",
+    "analysis_phase",
+    "upstream_artifacts",
+    "landings",
+    "session_coverage",
+    "section_evidence_grade"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "session_id": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "analysis_phase": { "const": "landing_analysis_v1" },
+    "upstream_artifacts": {
+      "type": "object",
+      "required": ["website_snapshots"],
+      "properties": {
+        "website_snapshots": { "type": "string" },
+        "competitors": { "type": "string" }
+      }
+    },
+    "landings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["landing_id", "snapshot_id", "domain", "final_url", "page_type", "evidence_grade"],
+        "properties": {
+          "landing_id": { "type": "string" },
+          "snapshot_id": { "type": "string" },
+          "competitor_id": { "type": ["string", "null"] },
+          "domain": { "type": "string" },
+          "final_url": { "type": "string" },
+          "page_type": { "type": "string" },
+          "evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+          "artifact_ref": { "type": "string" },
+          "block_count": { "type": "integer" },
+          "offer_count": { "type": "integer" },
+          "cta_count": { "type": "integer" },
+          "trust_count": { "type": "integer" }
+        }
+      }
+    },
+    "session_coverage": { "enum": ["complete", "partial", "minimal", "unknown"] },
+    "section_evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } }
+  }
+}

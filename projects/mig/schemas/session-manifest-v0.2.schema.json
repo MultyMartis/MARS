@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:session-manifest-v0.2",
+  "title": "MIG Session Manifest v0.2",
+  "description": "Runtime Assembly manifest. v0.2 is additive over v0.1: missing pass blocks imply skipped; missing pack.pack_state implies draft when research_pack.draft.md exists.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "session_id",
+    "request_id",
+    "created_at",
+    "updated_at",
+    "status",
+    "stage",
+    "phase",
+    "operator_id",
+    "request_type",
+    "capture_profile",
+    "scope",
+    "queries",
+    "artifacts",
+    "coverage",
+    "errors",
+    "safe_unknown",
+    "runtime_metadata",
+    "pass_status",
+    "approval"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.2" },
+    "session_id": { "type": "string", "pattern": "^mig-[0-9]{8}-[a-f0-9]{6}$" },
+    "request_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["running", "complete", "partial", "failed"] },
+    "stage": {
+      "enum": [
+        "intake_complete",
+        "acquiring_serp",
+        "serp_complete",
+        "discovering_competitors",
+        "competitors_complete",
+        "acquiring_sites",
+        "sites_complete",
+        "analyzing_landings",
+        "landings_complete",
+        "assembling_pack",
+        "draft_complete",
+        "partial_complete",
+        "failed",
+        "handoff_complete"
+      ]
+    },
+    "phase": {
+      "enum": [
+        "intake",
+        "search",
+        "competitors",
+        "websites",
+        "landings",
+        "keywords",
+        "deep_research",
+        "pack",
+        "approval",
+        "handoff"
+      ]
+    },
+    "runtime_profile": { "type": "string" },
+    "operator_id": { "type": "string", "minLength": 1 },
+    "request_type": { "type": "string" },
+    "capture_profile": {
+      "type": "object",
+      "properties": {
+        "multi_query": { "type": "boolean" },
+        "website_pass": { "type": "boolean" },
+        "landing_pass": { "type": "boolean" },
+        "keyword_pass": { "type": "boolean" },
+        "deep_research_pass": { "type": "boolean" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["niche", "region", "business_type", "search_engine", "device"],
+      "properties": {
+        "niche": { "type": "string" },
+        "region": { "type": "string" },
+        "city": { "type": ["string", "null"] },
+        "business_type": { "type": "string" },
+        "search_engine": { "type": "string" },
+        "device": { "type": "string" }
+      }
+    },
+    "queries": {
+      "type": "object",
+      "required": ["seed_queries", "query_used"],
+      "properties": {
+        "seed_queries": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "query_used": { "type": "string" },
+        "query_set": { "type": "array", "items": { "type": "string" } },
+        "queries_executed": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "serp": { "type": "object" },
+    "competitor_discovery": { "type": "object" },
+    "website_acquisition": { "type": "object" },
+    "landing_analysis": { "type": "object" },
+    "keyword_intelligence": { "type": "object" },
+    "deep_research": { "type": "object" },
+    "pack": {
+      "type": "object",
+      "properties": {
+        "pack_state": {
+          "enum": ["pending", "draft", "review", "approved", "published", "consumed", "archived", "failed"]
+        },
+        "mig_phase": { "enum": ["1", "2", "3", "4"] },
+        "draft_file": { "type": ["string", "null"] },
+        "approved_file": { "type": ["string", "null"] },
+        "approved_by": { "type": ["string", "null"] },
+        "approved_at": { "type": ["string", "null"] },
+        "published_at": { "type": ["string", "null"] },
+        "consumed_at": { "type": ["string", "null"] }
+      }
+    },
+    "artifacts": { "type": "object" },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "session_grade": { "type": "string" },
+        "phases_completed": { "type": "array", "items": { "type": "string" } },
+        "phases_skipped": { "type": "array", "items": { "type": "string" } },
+        "phases_failed": { "type": "array", "items": { "type": "string" } },
+        "partial": { "type": "boolean" }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "pass", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "pass": { "type": "string" },
+          "message": { "type": "string" },
+          "recoverable": { "type": "boolean" }
+        }
+      }
+    },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } },
+    "runtime_metadata": { "type": "object" },
+    "pass_status": { "type": "object" },
+    "approval": {
+      "type": "object",
+      "properties": {
+        "pack_state": { "type": "string" },
+        "approved_by": { "type": ["string", "null"] },
+        "approved_at": { "type": ["string", "null"] }
+      }
+    },
+    "mig_phase": { "enum": ["1", "2", "3", "4"] }
+  }
+}

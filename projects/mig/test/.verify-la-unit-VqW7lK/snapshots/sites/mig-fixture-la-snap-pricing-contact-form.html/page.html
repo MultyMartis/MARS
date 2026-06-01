@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Манипулятор-Сервис — аренда в Краснодаре</title>
+  <meta name="description" content="Аренда манипулятора и автокрана в Краснодаре. Цены от 3500 руб/час.">
+</head>
+<body>
+  <header>
+    <h1>Аренда манипулятора в Краснодаре</h1>
+    <a href="tel:+78612345678">+7 (861) 234-56-78</a>
+    <a href="mailto:info@manipulator-krd.example">info@manipulator-krd.example</a>
+  </header>
+  <main>
+    <h2>Услуги</h2>
+    <h3>Манипулятор 5 тонн</h3>
+    <p>Цена от 3500 ₽/час. Минимальный заказ 4 часа.</p>
+    <p>Более 10 лет на рынке. Гарантия качества работ.</p>
+    <a href="/order" class="btn">Оставить заявку</a>
+    <form id="lead-form" action="/api/lead" method="post">
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" name="phone" placeholder="+7" required>
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </main>
+  <footer>
+    <address>г. Краснодар, ул. Примерная, 1</address>
+    <a href="https://t.me/manipulator_krd">Telegram</a>
+  </footer>
+</body>
+</html>

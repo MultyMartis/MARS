@@ -1,0 +1,493 @@
+{
+  "landing_id": "mig-20260601-watest-la001",
+  "snapshot_id": "mig-20260601-watest-ws001",
+  "session_id": "mig-20260601-watest",
+  "competitor_id": "mig-20260601-watest-c001",
+  "domain": "manipulator-krd.example",
+  "final_url": "https://manipulator-krd.example/",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-01T13:27:56.168Z",
+  "visible_blocks": [
+    {
+      "block_id": "mig-20260601-watest-la001-b001",
+      "block_type": "hero",
+      "order": 0,
+      "heading_text": "Аренда манипулятора в Краснодаре",
+      "content_summary": "Аренда манипулятора в Краснодаре",
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/headings/0",
+        "html_anchor": null,
+        "verbatim_text": "Аренда манипулятора в Краснодаре",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la001-b002",
+      "block_type": "offer_block",
+      "order": 1,
+      "heading_text": "Аренда манипулятора в Краснодаре",
+      "content_summary": "Аренда манипулятора в Краснодаре; Услуги",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/offers",
+        "html_anchor": null,
+        "verbatim_text": "Аренда манипулятора в Краснодаре",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la001-b003",
+      "block_type": "pricing_block",
+      "order": 2,
+      "heading_text": null,
+      "content_summary": "Манипулятор-Сервис — аренда в Краснодаре Аренда манипулятора в Краснодаре +7 (861) 234-56-78 info@manipulator-krd.example Услуги Манипулятор 5 тонн Цена от 3500 ₽/час.",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/pricing_signals",
+        "html_anchor": null,
+        "verbatim_text": "Манипулятор-Сервис — аренда в Краснодаре Аренда манипулятора в Краснодаре +7 (861) 234-56-78 info@manipulator-krd.example Услуги Манипулятор 5 тонн Цена от 3500 ₽/час.",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la001-b004",
+      "block_type": "contacts",
+      "order": 3,
+      "heading_text": null,
+      "content_summary": "+78612345678; +7 (861) 234-56-78; info@manipulator-krd.example; г. Краснодар, ул. Примерная, 1",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "html_anchor": null,
+        "verbatim_text": "+78612345678",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la001-b005",
+      "block_type": "lead_form",
+      "order": 4,
+      "heading_text": null,
+      "content_summary": "2 fields",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/forms/0",
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la001-b006",
+      "block_type": "messenger_cta",
+      "order": 5,
+      "heading_text": "telegram: manipulator_krd",
+      "content_summary": null,
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "manipulator_krd",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "mig-20260601-watest-la001-of001",
+      "text": "Аренда манипулятора в Краснодаре",
+      "offer_surface": "heading",
+      "block_id": "mig-20260601-watest-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "Аренда манипулятора в Краснодаре",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260601-watest-la001-of002",
+      "text": "Услуги",
+      "offer_surface": "heading",
+      "block_id": "mig-20260601-watest-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "Услуги",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260601-watest-la001-of003",
+      "text": "Манипулятор 5 тонн",
+      "offer_surface": "heading",
+      "block_id": "mig-20260601-watest-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/headings/2",
+        "html_anchor": null,
+        "verbatim_text": "Манипулятор 5 тонн",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "cta_patterns": [
+    {
+      "cta_id": "mig-20260601-watest-la001-cta001",
+      "cta_type": "lead_form",
+      "label_text": "Lead form",
+      "target_href": "/api/lead",
+      "element_type": "input",
+      "position_band": "body",
+      "form_id": "mig-20260601-watest-la001-fm001",
+      "block_id": "mig-20260601-watest-la001-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/forms",
+        "html_anchor": null,
+        "verbatim_text": "form",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la001-cta002",
+      "cta_type": "phone",
+      "label_text": "+78612345678",
+      "target_href": "tel:+78612345678",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78612345678",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la001-cta003",
+      "cta_type": "phone",
+      "label_text": "+7 (861) 234-56-78",
+      "target_href": "tel:+7(861)234-56-78",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (861) 234-56-78",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la001-cta004",
+      "cta_type": "messenger",
+      "label_text": "telegram: manipulator_krd",
+      "target_href": null,
+      "element_type": "link",
+      "position_band": "footer",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "manipulator_krd",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la001-cta005",
+      "cta_type": "external_link",
+      "label_text": "Оставить заявку",
+      "target_href": "https://manipulator-krd.example/order",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Оставить заявку",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la001-cta006",
+      "cta_type": "generic_action",
+      "label_text": "Отправить заявку",
+      "target_href": null,
+      "element_type": "button",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/cta_elements/1",
+        "html_anchor": null,
+        "verbatim_text": "Отправить заявку",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "pricing_patterns": [
+    {
+      "pricing_id": "mig-20260601-watest-la001-pr001",
+      "text": "Манипулятор-Сервис — аренда в Краснодаре Аренда манипулятора в Краснодаре +7 (861) 234-56-78 info@manipulator-krd.example Услуги Манипулятор 5 тонн Цена от 3500 ₽/час.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260601-watest-la001-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Манипулятор-Сервис — аренда в Краснодаре Аренда манипулятора в Краснодаре +7 (861) 234-56-78 info@manipulator-krd.example Услуги Манипулятор 5 тонн Цена от 3500 ₽/час.",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "trust_patterns": [
+    {
+      "trust_id": "mig-20260601-watest-la001-tr001",
+      "trust_type": "statistics",
+      "text": "Минимальный заказ 4 часа.",
+      "numeric_value": 4,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Минимальный заказ 4 часа.",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260601-watest-la001-tr002",
+      "trust_type": "experience_claim",
+      "text": "Более 10 лет на рынке.",
+      "numeric_value": 10,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Более 10 лет на рынке.",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260601-watest-la001-tr003",
+      "trust_type": "guarantee",
+      "text": "Гарантия качества работ.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Гарантия качества работ.",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "contact_patterns": [
+    {
+      "contact_id": "mig-20260601-watest-la001-co001",
+      "contact_type": "phone",
+      "value": "+78612345678",
+      "block_id": "mig-20260601-watest-la001-b004",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78612345678",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la001-co002",
+      "contact_type": "phone",
+      "value": "+7 (861) 234-56-78",
+      "block_id": "mig-20260601-watest-la001-b004",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (861) 234-56-78",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la001-co003",
+      "contact_type": "email",
+      "value": "info@manipulator-krd.example",
+      "block_id": "mig-20260601-watest-la001-b004",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/emails",
+        "html_anchor": null,
+        "verbatim_text": "info@manipulator-krd.example",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la001-co004",
+      "contact_type": "address",
+      "value": "г. Краснодар, ул. Примерная, 1",
+      "block_id": "mig-20260601-watest-la001-b004",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/addresses",
+        "html_anchor": null,
+        "verbatim_text": "г. Краснодар, ул. Примерная, 1",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la001-co005",
+      "contact_type": "messenger",
+      "value": "telegram:manipulator_krd",
+      "block_id": "mig-20260601-watest-la001-b004",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "manipulator_krd",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "form_patterns": [
+    {
+      "form_id": "mig-20260601-watest-la001-fm001",
+      "action": "/api/lead",
+      "method": "post",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "label": "Имя",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "label": "Телефон",
+          "required": true
+        }
+      ],
+      "visible_purpose": null,
+      "cta_type": "lead_form",
+      "block_id": "mig-20260601-watest-la001-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/forms/0",
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "page_patterns": [
+    {
+      "pattern_id": "pricing_table_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "phone_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "+78612345678",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "messenger_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "multi_cta_same_intent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "2 CTA elements visible",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260601-watest-ws001",
+    "capture_time": "2026-06-01T13:27:56.160Z",
+    "analysis_mode": "snapshot_and_html"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260601-watest-la001/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260601-watest-ws001/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260601-watest-ws001/page.html"
+  },
+  "evidence_grade": "B"
+}

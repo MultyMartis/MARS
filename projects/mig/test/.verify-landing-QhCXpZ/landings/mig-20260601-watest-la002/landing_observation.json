@@ -1,0 +1,276 @@
+{
+  "landing_id": "mig-20260601-watest-la002",
+  "snapshot_id": "mig-20260601-watest-ws002",
+  "session_id": "mig-20260601-watest",
+  "competitor_id": "mig-20260601-watest-c002",
+  "domain": "kran-logistik.example",
+  "final_url": "https://kran-logistik.example/uslugi",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-01T13:27:56.168Z",
+  "visible_blocks": [
+    {
+      "block_id": "mig-20260601-watest-la002-b001",
+      "block_type": "hero",
+      "order": 0,
+      "heading_text": "Контакты",
+      "content_summary": "Контакты",
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/headings/0",
+        "html_anchor": null,
+        "verbatim_text": "Контакты",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la002-b002",
+      "block_type": "offer_block",
+      "order": 1,
+      "heading_text": "Контакты",
+      "content_summary": "Контакты",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/offers",
+        "html_anchor": null,
+        "verbatim_text": "Контакты",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la002-b003",
+      "block_type": "contacts",
+      "order": 2,
+      "heading_text": "Контакты",
+      "content_summary": "88005551212; 8 800 555-12-12; office@kran-logistik.example",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "html_anchor": null,
+        "verbatim_text": "Контакты",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260601-watest-la002-b004",
+      "block_type": "messenger_cta",
+      "order": 3,
+      "heading_text": "whatsapp: 79001234567",
+      "content_summary": null,
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "79001234567",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "mig-20260601-watest-la002-of001",
+      "text": "Контакты",
+      "offer_surface": "heading",
+      "block_id": "mig-20260601-watest-la002-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "Контакты",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "cta_patterns": [
+    {
+      "cta_id": "mig-20260601-watest-la002-cta001",
+      "cta_type": "phone",
+      "label_text": "88005551212",
+      "target_href": "tel:88005551212",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la002-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "88005551212",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la002-cta002",
+      "cta_type": "phone",
+      "label_text": "8 800 555-12-12",
+      "target_href": "tel:8800555-12-12",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la002-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "8 800 555-12-12",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la002-cta003",
+      "cta_type": "messenger",
+      "label_text": "whatsapp: 79001234567",
+      "target_href": null,
+      "element_type": "link",
+      "position_band": "footer",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la002-b004",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "79001234567",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260601-watest-la002-cta004",
+      "cta_type": "phone",
+      "label_text": "Позвонить",
+      "target_href": "tel:88005551212",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260601-watest-la002-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Позвонить",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "pricing_patterns": [],
+  "trust_patterns": [],
+  "contact_patterns": [
+    {
+      "contact_id": "mig-20260601-watest-la002-co001",
+      "contact_type": "phone",
+      "value": "88005551212",
+      "block_id": "mig-20260601-watest-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "88005551212",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la002-co002",
+      "contact_type": "phone",
+      "value": "8 800 555-12-12",
+      "block_id": "mig-20260601-watest-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "8 800 555-12-12",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la002-co003",
+      "contact_type": "email",
+      "value": "office@kran-logistik.example",
+      "block_id": "mig-20260601-watest-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/emails",
+        "html_anchor": null,
+        "verbatim_text": "office@kran-logistik.example",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260601-watest-la002-co004",
+      "contact_type": "messenger",
+      "value": "whatsapp:79001234567",
+      "block_id": "mig-20260601-watest-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "79001234567",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "form_patterns": [],
+  "page_patterns": [
+    {
+      "pattern_id": "phone_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "88005551212",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "messenger_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "single_primary_cta",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Позвонить",
+        "capture_time": "2026-06-01T13:27:56.160Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260601-watest-ws002",
+    "capture_time": "2026-06-01T13:27:56.160Z",
+    "analysis_mode": "snapshot_and_html"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260601-watest-la002/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260601-watest-ws002/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260601-watest-ws002/page.html"
+  },
+  "evidence_grade": "B"
+}

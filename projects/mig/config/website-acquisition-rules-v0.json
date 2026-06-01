@@ -1,0 +1,61 @@
+{
+  "schema_version": "0",
+  "description": "MIG Website Acquisition MVP rules — homepage only, no crawl",
+  "url_cap_default": 5,
+  "url_cap_hard_max": 10,
+  "fetch_timeout_ms": 30000,
+  "max_redirects": 5,
+  "inter_request_delay_ms": 0,
+  "skip_surface_types": ["aggregator", "informational_surface"],
+  "homepage_path": "/",
+  "heading_cap": 50,
+  "links_cap_per_kind": 200,
+  "pack_projection_caps": {
+    "offers": 5,
+    "cta_elements": 5,
+    "pricing_signals": 5,
+    "headings": 10,
+    "trust_signals": 5
+  },
+  "trust_phrase_patterns": [
+    "отзыв",
+    "рейтинг",
+    "гарант",
+    "лиценз",
+    "сертификат",
+    "iso",
+    "опыт работы",
+    "лет на рынке",
+    "довольных клиентов",
+    "reviews",
+    "rating",
+    "warranty",
+    "certified"
+  ],
+  "pricing_patterns": [
+    "\\d+[\\s.,]?\\d*\\s*(₽|руб\\.?|RUB)",
+    "от\\s+\\d+",
+    "цена",
+    "стоимость",
+    "прайс",
+    "\\$\\d+",
+    "€\\d+"
+  ],
+  "cta_button_patterns": [
+    "заказать",
+    "оставить заявку",
+    "получить расчет",
+    "получить расчёт",
+    "узнать цену",
+    "позвонить",
+    "связаться",
+    "отправить",
+    "купить",
+    "оформить",
+    "записаться",
+    "call",
+    "contact",
+    "get quote",
+    "order now"
+  ]
+}

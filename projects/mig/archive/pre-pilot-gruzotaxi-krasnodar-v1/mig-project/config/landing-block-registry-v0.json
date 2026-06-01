@@ -1,0 +1,87 @@
+{
+  "schema_version": "0",
+  "description": "MIG Landing Analysis MVP block registry — deterministic detection only",
+  "content_summary_max_chars": 200,
+  "page_pattern": {
+    "long_scroll_heading_threshold": 4,
+    "faq_heading_patterns": ["faq", "вопрос", "ответ", "частые вопросы"],
+    "review_heading_patterns": ["отзыв", "review", "рейтинг", "о нас говорят"],
+    "pricing_heading_patterns": ["цен", "прайс", "стоимость", "тариф", "price"],
+    "contact_heading_patterns": ["контакт", "связ", "contact", "адрес"],
+    "offer_heading_patterns": ["услуг", "сервис", "аренд", "доставк", "каталог"]
+  },
+  "blocks": {
+    "hero": {
+      "detection_method": "heading_heuristic",
+      "rules": {
+        "requires_h1": true,
+        "landmark_tags": ["header", "main"]
+      }
+    },
+    "offer_block": {
+      "detection_method": "snapshot_field_map",
+      "rules": {
+        "min_offers": 1,
+        "heading_level_max": 3,
+        "heading_text_patterns": ["услуг", "сервис", "аренд", "доставк", "каталог", "направлен"]
+      }
+    },
+    "pricing_block": {
+      "detection_method": "snapshot_field_map",
+      "rules": {
+        "min_pricing_signals": 1,
+        "heading_text_patterns": ["цен", "прайс", "стоимость", "тариф", "price"]
+      }
+    },
+    "faq": {
+      "detection_method": "heading_heuristic",
+      "rules": {
+        "heading_patterns": ["faq", "вопрос", "ответ", "частые вопросы"]
+      }
+    },
+    "reviews": {
+      "detection_method": "heading_heuristic",
+      "rules": {
+        "heading_patterns": ["отзыв", "review", "рейтинг", "о нас говорят"],
+        "body_patterns": ["★", "⭐", "отзывов", "reviews"]
+      }
+    },
+    "contacts": {
+      "detection_method": "snapshot_field_map",
+      "rules": {
+        "min_phones_or_emails_or_addresses": 1,
+        "heading_patterns": ["контакт", "связ", "contact", "адрес"]
+      }
+    },
+    "lead_form": {
+      "detection_method": "snapshot_field_map",
+      "rules": {
+        "min_forms": 1,
+        "min_fields": 2
+      }
+    },
+    "messenger_cta": {
+      "detection_method": "snapshot_field_map",
+      "rules": {
+        "messenger_types": ["telegram", "whatsapp", "viber"],
+        "href_patterns": ["t.me/", "wa.me/", "viber://"]
+      }
+    }
+  },
+  "trust_classification": {
+    "review_snippet": ["отзыв", "review", "рейтинг"],
+    "rating_display": ["★", "⭐", "4.", "5.", "из 5"],
+    "guarantee": ["гарант", "возврат", "warranty"],
+    "experience_claim": ["лет на рынке", "с 19", "с 20", "опыт работы", "на рынке"],
+    "statistics": ["клиент", "проект", "заказ", "выполн", "\\d+\\+"],
+    "certificate": ["iso", "лиценз", "сертификат", "certificate"],
+    "legal_entity": ["инн", "огрн", "ип ", "ооо "],
+    "partner_badge": ["партнер", "partner", "банк"],
+    "case_reference": ["кейс", "портфолио", "наши работы", "клиенты"]
+  },
+  "cta_classification": {
+    "callback_request": ["перезвон", "заказать звонок", "обратный звонок", "callback"],
+    "messenger_href": ["t.me/", "wa.me/", "viber://", "telegram", "whatsapp"],
+    "phone_href_prefix": "tel:"
+  }
+}

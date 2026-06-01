@@ -1,0 +1,243 @@
+{
+  "name": "MIG — Research Session v0.1",
+  "nodes": [
+    {
+      "id": "webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "mig/research-session/v0.1",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "validate",
+      "name": "Validate Intake",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const path = require('path');\nconst libRoot = 'C:/AI MARS/projects/mig/lib/session-spine';\nconst { validateIntake } = require(path.join(libRoot, 'validate-intake.js'));\n\nconst root = $input.first().json;\nconst body = root.body && typeof root.body === 'object' ? root.body : root;\n\nlet validated;\ntry {\n  validated = validateIntake(body);\n} catch (err) {\n  return [{\n    json: {\n      status: 'error',\n      code: err.code || 'VALIDATION_ERROR',\n      message: err.message,\n      details: err.details || null,\n    },\n  }];\n}\n\nreturn [{ json: { validated, status: 'ok' } }];"
+      }
+    },
+    {
+      "id": "manifest",
+      "name": "Create Manifest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const path = require('path');\nconst libRoot = 'C:/AI MARS/projects/mig/lib/session-spine';\nconst { createInitialManifest } = require(path.join(libRoot, 'create-manifest.js'));\n\nconst item = $input.first().json;\nif (item.status === 'error') {\n  return [{ json: item }];\n}\n\nconst manifest = createInitialManifest(item.validated);\nreturn [{ json: { ...item, manifest } }];"
+      }
+    },
+    {
+      "id": "folder",
+      "name": "Create Session Folder",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const fs = require('fs');\nconst path = require('path');\nconst libRoot = 'C:/AI MARS/projects/mig/lib/session-spine';\nconst { getSessionDir } = require(path.join(libRoot, 'paths.js'));\n\nconst item = $input.first().json;\nif (item.status === 'error') {\n  return [{ json: item }];\n}\n\nconst sessionDir = getSessionDir(item.validated.session_id);\nfs.mkdirSync(sessionDir, { recursive: true });\n\nreturn [{\n  json: {\n    ...item,\n    session_dir: sessionDir,\n    folder_created: true,\n  },\n}];"
+      }
+    },
+    {
+      "id": "serpInput",
+      "name": "SERP Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const item = $input.first().json;\nif (item.status === 'error') {\n  return [{ json: item }];\n}\n\nconst validated = item.validated;\nlet serp_branch = 'fallback';\nlet serp_raw = null;\n\nif (validated.manual_serp && typeof validated.manual_serp === 'object') {\n  serp_branch = 'manual';\n  serp_raw = validated.manual_serp;\n} else if (\n  validated.serp_provider_response &&\n  typeof validated.serp_provider_response === 'object'\n) {\n  serp_branch = 'provider';\n  serp_raw = validated.serp_provider_response;\n}\n\nreturn [{\n  json: {\n    ...item,\n    serp_branch,\n    serp_raw,\n  },\n}];"
+      }
+    },
+    {
+      "id": "normalize",
+      "name": "Normalize SERP",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const path = require('path');\nconst libRoot = 'C:/AI MARS/projects/mig/lib/session-spine';\nconst { pickSerpSource, normalizeSerp } = require(path.join(libRoot, 'normalize-serp.js'));\n\nconst item = $input.first().json;\nif (item.status === 'error') {\n  return [{ json: item }];\n}\n\nconst source = pickSerpSource(item.validated);\nconst serp_result = normalizeSerp(item.validated, source);\n\nreturn [{\n  json: {\n    ...item,\n    serp_result,\n    serp_mode: serp_result.source_mode,\n  },\n}];"
+      }
+    },
+    {
+      "id": "pack",
+      "name": "Research Pack Draft",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const path = require('path');\nconst libRoot = 'C:/AI MARS/projects/mig/lib/session-spine';\nconst { buildResearchPackDraft } = require(path.join(libRoot, 'build-research-pack.js'));\n\nconst item = $input.first().json;\nif (item.status === 'error') {\n  return [{ json: item }];\n}\n\nconst research_pack_draft = buildResearchPackDraft(item.manifest, item.serp_result);\n\nreturn [{\n  json: {\n    ...item,\n    research_pack_draft,\n  },\n}];"
+      }
+    },
+    {
+      "id": "finalize",
+      "name": "Finalize Manifest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const fs = require('fs');\nconst path = require('path');\nconst libRoot = 'C:/AI MARS/projects/mig/lib/session-spine';\nconst { finalizeManifest } = require(path.join(libRoot, 'create-manifest.js'));\nconst { writeArtifacts } = require(path.join(libRoot, 'write-artifacts.js'));\n\nconst item = $input.first().json;\nif (item.status === 'error') {\n  return [{ json: item }];\n}\n\nconst final_manifest = finalizeManifest(item.manifest, {\n  mode: item.serp_result.source_mode,\n  captured_at: item.serp_result.captured_at,\n  safe_unknown: item.serp_result.safe_unknown,\n});\n\nconst written = writeArtifacts(\n  item.validated.session_id,\n  final_manifest,\n  item.serp_result,\n  item.research_pack_draft\n);\n\nreturn [{\n  json: {\n    status: 'ok',\n    session_id: item.validated.session_id,\n    folder_path: written.session_dir,\n    stage: final_manifest.stage,\n    serp_mode: item.serp_result.source_mode,\n    files: written.files,\n  },\n}];"
+      }
+    },
+    {
+      "id": "respond",
+      "name": "Return Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1920,
+        300
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { status: $json.status, session_id: $json.session_id, folder_path: $json.folder_path, stage: $json.stage } }}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate Intake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Intake": {
+      "main": [
+        [
+          {
+            "node": "Create Manifest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Manifest": {
+      "main": [
+        [
+          {
+            "node": "Create Session Folder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Session Folder": {
+      "main": [
+        [
+          {
+            "node": "SERP Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SERP Input": {
+      "main": [
+        [
+          {
+            "node": "Normalize SERP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize SERP": {
+      "main": [
+        [
+          {
+            "node": "Research Pack Draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Pack Draft": {
+      "main": [
+        [
+          {
+            "node": "Finalize Manifest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finalize Manifest": {
+      "main": [
+        [
+          {
+            "node": "Return Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "mig"
+    },
+    {
+      "name": "v0.1"
+    }
+  ],
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "mig-session-spine-v0.1"
+  }
+}

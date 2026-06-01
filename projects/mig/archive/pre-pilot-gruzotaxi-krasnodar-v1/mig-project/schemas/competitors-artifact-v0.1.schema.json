@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:competitors-artifact-v0.1",
+  "title": "MIG Competitors Artifact v0.1",
+  "description": "Session-level competitors.json envelope; competitor_observations matches competitors-v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "session_id",
+    "generated_at",
+    "discovery_phase",
+    "competitor_observations"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "session_id": { "type": "string", "pattern": "^mig-[0-9]{8}-[a-f0-9]{6}$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "discovery_phase": { "const": 2 },
+    "discovery_mode": { "enum": ["single", "multi_query"] },
+    "competitor_observations": {
+      "type": "object",
+      "description": "Section wrapper per mig:competitors-v0.1 (competitors-v0.1.schema.json)"
+    }
+  }
+}

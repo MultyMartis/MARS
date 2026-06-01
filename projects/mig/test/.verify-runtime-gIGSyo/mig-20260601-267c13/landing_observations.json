@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260601-267c13",
+  "generated_at": "2026-06-01T16:24:09.368Z",
+  "analysis_phase": "landing_analysis_v1",
+  "upstream_artifacts": {
+    "website_snapshots": "website_snapshots.json",
+    "competitors": "competitors.json"
+  },
+  "landings": [
+    {
+      "landing_id": "mig-20260601-267c13-la001",
+      "snapshot_id": "mig-20260601-267c13-ws001",
+      "competitor_id": "mig-20260601-267c13-c001",
+      "domain": "manipulator-krd.ru",
+      "final_url": "https://manipulator-krd.ru/",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260601-267c13-la001/landing_observation.json",
+      "block_count": 6,
+      "offer_count": 3,
+      "cta_count": 6,
+      "trust_count": 3
+    },
+    {
+      "landing_id": "mig-20260601-267c13-la002",
+      "snapshot_id": "mig-20260601-267c13-ws002",
+      "competitor_id": "mig-20260601-267c13-c002",
+      "domain": "kran-logistik.ru",
+      "final_url": "https://kran-logistik.ru/uslugi",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260601-267c13-la002/landing_observation.json",
+      "block_count": 4,
+      "offer_count": 1,
+      "cta_count": 4,
+      "trust_count": 0
+    }
+  ],
+  "session_coverage": "complete",
+  "section_evidence_grade": "B",
+  "safe_unknown": []
+}

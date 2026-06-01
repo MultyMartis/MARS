@@ -1,0 +1,28 @@
+{
+  "schema_version": "0",
+  "request_id": "req-20260601-orca-demo",
+  "request_type": "serp_capture",
+  "scope": {
+    "niche": "industrial equipment rental",
+    "region": "Krasnodar Krai",
+    "city": "Krasnodar",
+    "business_type": "local_service",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "queries": {
+    "seed_queries": ["аренда манипулятора Краснодар"]
+  },
+  "operator_id": "orca-operator-demo",
+  "created_at": "2026-06-01T12:00:00.000Z",
+  "source": {
+    "adapter": "task_file",
+    "adapter_version": "0.1",
+    "transport_ref": "incoming/mig/requests/request-req-20260601-orca-demo.json"
+  },
+  "downstream_context": {
+    "submitter": "orca",
+    "orca_project_id": "triumph-manipulator-krasnodar",
+    "intent": "R1 groundtruth before R2 — human drops this file; adapter unchanged"
+  }
+}

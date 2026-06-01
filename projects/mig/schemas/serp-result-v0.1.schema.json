@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:serp-result-v0.1",
+  "title": "MIG Normalized SERP Result v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "session_id",
+    "captured_at",
+    "source_mode",
+    "search_engine",
+    "region",
+    "device",
+    "query",
+    "serp_type",
+    "safe_unknown"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "session_id": { "type": "string" },
+    "captured_at": { "type": "string", "format": "date-time" },
+    "source_mode": { "enum": ["manual", "provider", "fallback"] },
+    "search_engine": { "type": "string" },
+    "region": { "type": "string" },
+    "city": { "type": ["string", "null"] },
+    "device": { "type": "string" },
+    "localization": { "type": ["string", "null"] },
+    "query": { "type": "string" },
+    "serp_type": { "type": "string" },
+    "ads_blocks": { "type": "object" },
+    "maps_local_pack": { "type": "string" },
+    "aggregators": { "type": "array", "items": { "type": "string" } },
+    "marketplaces": { "type": "array", "items": { "type": "string" } },
+    "review_signals": { "type": "array", "items": { "type": "string" } },
+    "offer_patterns": { "type": "array", "items": { "type": "string" } },
+    "cta_patterns": { "type": "array", "items": { "type": "string" } },
+    "landing_observations": { "type": "array", "items": { "type": "string" } },
+    "organic_results": { "type": "array" },
+    "provider_meta": { "type": ["object", "null"] },
+    "safe_unknown": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+  }
+}

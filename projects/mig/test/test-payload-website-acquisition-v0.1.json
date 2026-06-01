@@ -1,0 +1,147 @@
+{
+  "description": "Golden payload for MIG Website Acquisition MVP verification (fixture fetch)",
+  "session_id": "mig-20260601-watest",
+  "competitors_artifact": {
+    "schema_version": "0.1",
+    "session_id": "mig-20260601-watest",
+    "generated_at": "2026-06-01T12:00:00.000Z",
+    "discovery_phase": 2,
+    "competitor_observations": {
+      "section_id": "competitor_observations",
+      "schema_version": "0",
+      "discovery_pass_at": "2026-06-01T12:00:00.000Z",
+      "discovery_phase": 2,
+      "query_set_ref": "аренда манипулятора Краснодар",
+      "competitors": [
+        {
+          "competitor_id": "mig-20260601-watest-c001",
+          "display_name": "Манипулятор-Сервис Краснодар",
+          "primary_domain": "manipulator-krd.example",
+          "surface_types": ["serp_organic"],
+          "discovery_sources": [
+            {
+              "source_kind": "serp_organic",
+              "artifact_ref": "serp_result",
+              "observed_at": "2026-06-01T12:00:00.000Z"
+            }
+          ],
+          "first_seen_query": "аренда манипулятора Краснодар",
+          "queries_seen": ["аренда манипулятора Краснодар"],
+          "discovery_rules_fired": ["rule_serp_organic_top_n"],
+          "discovery_strength": "single",
+          "region": "Krasnodar Krai",
+          "evidence": [
+            {
+              "source_type": "human",
+              "artifact_ref": "serp_result",
+              "observed_at": "2026-06-01T12:00:00.000Z",
+              "grade": "B",
+              "surface_detail": {
+                "position": 2,
+                "url": "https://manipulator-krd.example/",
+                "title": "Манипулятор-Сервис Краснодар"
+              }
+            }
+          ],
+          "evidence_grade": "B",
+          "capture_time": "2026-06-01T12:00:00.000Z"
+        },
+        {
+          "competitor_id": "mig-20260601-watest-c002",
+          "display_name": "Кран-Логистик",
+          "primary_domain": "kran-logistik.example",
+          "surface_types": ["serp_organic"],
+          "discovery_sources": [
+            {
+              "source_kind": "serp_organic",
+              "artifact_ref": "serp_result",
+              "observed_at": "2026-06-01T12:00:00.000Z"
+            }
+          ],
+          "first_seen_query": "аренда манипулятора Краснодар",
+          "queries_seen": ["аренда манипулятора Краснодар"],
+          "discovery_rules_fired": ["rule_serp_organic_top_n"],
+          "discovery_strength": "single",
+          "region": "Krasnodar Krai",
+          "evidence": [
+            {
+              "source_type": "human",
+              "artifact_ref": "serp_result",
+              "observed_at": "2026-06-01T12:00:00.000Z",
+              "grade": "B",
+              "surface_detail": {
+                "position": 3,
+                "url": "https://kran-logistik.example/uslugi",
+                "title": "Кран-Логистик"
+              }
+            }
+          ],
+          "evidence_grade": "B",
+          "capture_time": "2026-06-01T12:00:00.000Z"
+        },
+        {
+          "competitor_id": "mig-20260601-watest-c003",
+          "display_name": "2ГИС — манипуляторы",
+          "primary_domain": "2gis.ru",
+          "surface_types": ["serp_organic", "aggregator"],
+          "discovery_sources": [
+            {
+              "source_kind": "serp_organic",
+              "artifact_ref": "serp_result",
+              "observed_at": "2026-06-01T12:00:00.000Z"
+            }
+          ],
+          "first_seen_query": "аренда манипулятора Краснодар",
+          "queries_seen": ["аренда манипулятора Краснодар"],
+          "discovery_rules_fired": ["rule_serp_organic_top_n", "rule_aggregator_domain"],
+          "discovery_strength": "single",
+          "region": "Krasnodar Krai",
+          "evidence": [
+            {
+              "source_type": "human",
+              "artifact_ref": "serp_result",
+              "observed_at": "2026-06-01T12:00:00.000Z",
+              "grade": "B",
+              "surface_detail": {
+                "position": 5,
+                "url": "https://2gis.ru/krasnodar/search/manipulator",
+                "title": "2ГИС"
+              }
+            }
+          ],
+          "evidence_grade": "B",
+          "capture_time": "2026-06-01T12:00:00.000Z"
+        }
+      ],
+      "section_evidence_grade": "B",
+      "section_coverage": "complete"
+    }
+  },
+  "serp_result": {
+    "schema_version": "0.1",
+    "session_id": "mig-20260601-watest",
+    "captured_at": "2026-06-01T12:00:00.000Z",
+    "source_mode": "manual",
+    "search_engine": "yandex",
+    "region": "Krasnodar Krai",
+    "city": "Krasnodar",
+    "device": "mobile",
+    "query": "аренда манипулятора Краснодар",
+    "serp_type": "local commercial",
+    "organic_results": [],
+    "safe_unknown": []
+  },
+  "fixture_map": {
+    "https://manipulator-krd.example/": "pricing-contact-form.html",
+    "https://kran-logistik.example/uslugi": "contact-only.html"
+  },
+  "expectations": {
+    "planned_urls": 2,
+    "skipped_aggregators": 1,
+    "min_snapshots": 2,
+    "min_phones": 2,
+    "min_forms": 1,
+    "min_pricing_signals": 1,
+    "min_cta_elements": 1
+  }
+}

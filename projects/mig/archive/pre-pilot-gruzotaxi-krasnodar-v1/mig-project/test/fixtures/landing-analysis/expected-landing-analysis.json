@@ -1,0 +1,24 @@
+{
+  "pricing-contact-form.html": {
+    "min_blocks": 4,
+    "required_block_types": ["hero", "offer_block", "lead_form", "contacts"],
+    "min_offers": 2,
+    "min_cta_patterns": 2,
+    "min_trust_patterns": 1,
+    "min_pricing_patterns": 1,
+    "min_form_patterns": 1,
+    "page_type": "homepage"
+  },
+  "contact-only.html": {
+    "min_blocks": 1,
+    "required_block_types": ["contacts"],
+    "min_offers": 0,
+    "min_cta_patterns": 1,
+    "page_type": "contact_focus"
+  },
+  "js-shell.html": {
+    "min_blocks": 0,
+    "min_offers": 0,
+    "render_status": "js_shell"
+  }
+}

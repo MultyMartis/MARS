@@ -1,0 +1,141 @@
+{
+  "snapshot_id": "mig-20260601-watest-ws001",
+  "session_id": "mig-20260601-watest",
+  "competitor_id": "mig-20260601-watest-c001",
+  "domain": "manipulator-krd.example",
+  "requested_url": "https://manipulator-krd.example/",
+  "final_url": "https://manipulator-krd.example/",
+  "page_role": "homepage",
+  "capture_time": "2026-06-01T13:27:56.160Z",
+  "status": "success",
+  "acquisition_method": "http_get_dom",
+  "http_status": 200,
+  "redirect_chain": [],
+  "content_type": "text/html; charset=utf-8",
+  "charset": null,
+  "render_status": "static_ok",
+  "fetch_duration_ms": 1,
+  "title": "Манипулятор-Сервис — аренда в Краснодаре",
+  "meta_description": "Аренда манипулятора и автокрана в Краснодаре. Цены от 3500 руб/час.",
+  "canonical_url": null,
+  "lang": "ru",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Аренда манипулятора в Краснодаре",
+      "order": 0
+    },
+    {
+      "level": 2,
+      "text": "Услуги",
+      "order": 1
+    },
+    {
+      "level": 3,
+      "text": "Манипулятор 5 тонн",
+      "order": 2
+    }
+  ],
+  "contacts": {
+    "phones": [
+      "+78612345678",
+      "+7 (861) 234-56-78"
+    ],
+    "emails": [
+      "info@manipulator-krd.example"
+    ],
+    "addresses": [
+      "г. Краснодар, ул. Примерная, 1"
+    ],
+    "messengers": [
+      {
+        "type": "telegram",
+        "handle": "manipulator_krd"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "text": "Аренда манипулятора в Краснодаре",
+      "context": "h1"
+    },
+    {
+      "text": "Услуги",
+      "context": "h2"
+    }
+  ],
+  "pricing_signals": [
+    {
+      "text": "Манипулятор-Сервис — аренда в Краснодаре Аренда манипулятора в Краснодаре +7 (861) 234-56-78 info@manipulator-krd.example Услуги Манипулятор 5 тонн Цена от 3500 ₽/час.",
+      "currency_hint": "RUB",
+      "context": null
+    }
+  ],
+  "cta_elements": [
+    {
+      "text": "Оставить заявку",
+      "href": "https://manipulator-krd.example/order",
+      "element_type": "link",
+      "position_hint": "unknown"
+    },
+    {
+      "text": "Отправить заявку",
+      "href": null,
+      "element_type": "button",
+      "position_hint": "unknown"
+    }
+  ],
+  "forms": [
+    {
+      "form_id": "lead-form",
+      "action": "/api/lead",
+      "method": "post",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "label": "Имя",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "label": "Телефон",
+          "required": true
+        }
+      ],
+      "visible_purpose": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "mailto:info@manipulator-krd.example",
+        "text": "info@manipulator-krd.example"
+      },
+      {
+        "href": "https://manipulator-krd.example/order",
+        "text": "Оставить заявку"
+      }
+    ],
+    "external": [
+      {
+        "href": "tel:+78612345678",
+        "text": "+7 (861) 234-56-78"
+      },
+      {
+        "href": "https://t.me/manipulator_krd",
+        "text": "Telegram"
+      }
+    ]
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": "Манипулятор-Сервис — аренда в Краснодаре Аренда манипулятора в Краснодаре +7 (861) 234-56-78 info@manipulator-krd.example Услуги Манипулятор 5 тонн Цена от 3500 ₽/час. Минимальный заказ 4 часа. Более 10 лет на рынке. Гарантия качества работ. Оставить заявку Имя Телефон Отправить заявку г. Краснодар, ул. Примерная, 1 Telegram",
+  "artifact_refs": {
+    "website_snapshot": "snapshots/sites/mig-20260601-watest-ws001/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260601-watest-ws001/page.html",
+    "headers": "snapshots/sites/mig-20260601-watest-ws001/headers.json"
+  },
+  "evidence_grade": "B",
+  "safe_unknown": []
+}

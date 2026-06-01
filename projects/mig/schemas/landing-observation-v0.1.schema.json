@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:landing-observation-v0.1",
+  "title": "MIG Landing Observation v0.1",
+  "description": "Per-snapshot structured landing observation per mig-landing-analysis-architecture-v1",
+  "type": "object",
+  "required": [
+    "landing_id",
+    "snapshot_id",
+    "session_id",
+    "domain",
+    "final_url",
+    "page_role",
+    "page_type",
+    "analyzed_at",
+    "visible_blocks",
+    "offers",
+    "cta_patterns",
+    "pricing_patterns",
+    "trust_patterns",
+    "contact_patterns",
+    "form_patterns",
+    "page_patterns",
+    "evidence",
+    "artifact_refs",
+    "evidence_grade"
+  ],
+  "properties": {
+    "landing_id": { "type": "string" },
+    "snapshot_id": { "type": "string" },
+    "session_id": { "type": "string" },
+    "competitor_id": { "type": ["string", "null"] },
+    "domain": { "type": "string" },
+    "final_url": { "type": "string" },
+    "page_role": { "type": "string" },
+    "page_type": {
+      "enum": [
+        "homepage",
+        "serp_landing",
+        "service_landing",
+        "catalog_entry",
+        "campaign_landing",
+        "contact_focus",
+        "unknown"
+      ]
+    },
+    "analyzed_at": { "type": "string", "format": "date-time" },
+    "visible_blocks": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/visible_block" }
+    },
+    "offers": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/offer" }
+    },
+    "cta_patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/cta_pattern" }
+    },
+    "pricing_patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/pricing_pattern" }
+    },
+    "trust_patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/trust_pattern" }
+    },
+    "contact_patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/contact_pattern" }
+    },
+    "form_patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/form_pattern" }
+    },
+    "page_patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/page_pattern" }
+    },
+    "evidence": { "type": "object" },
+    "artifact_refs": { "type": "object", "additionalProperties": { "type": "string" } },
+    "evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } },
+    "analysis_notes": { "type": "string" }
+  },
+  "definitions": {
+    "evidence_item": {
+      "type": "object",
+      "required": ["source", "capture_time"],
+      "properties": {
+        "source": { "enum": ["website_snapshot", "page_html", "manual_annotation"] },
+        "snapshot_field": { "type": "string" },
+        "html_anchor": { "type": "object" },
+        "verbatim_text": { "type": "string" },
+        "capture_time": { "type": "string" },
+        "ambiguity": { "enum": ["none", "low", "high"] }
+      }
+    },
+    "visible_block": {
+      "type": "object",
+      "required": ["block_id", "block_type", "order", "detection_method", "evidence"],
+      "properties": {
+        "block_id": { "type": "string" },
+        "block_type": { "type": "string" },
+        "order": { "type": "integer" },
+        "heading_text": { "type": "string" },
+        "content_summary": { "type": "string" },
+        "child_observation_refs": { "type": "array", "items": { "type": "string" } },
+        "detection_method": {
+          "enum": ["heading_heuristic", "dom_landmark", "snapshot_field_map", "unknown"]
+        },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "offer": {
+      "type": "object",
+      "required": ["offer_id", "text", "evidence"],
+      "properties": {
+        "offer_id": { "type": "string" },
+        "text": { "type": "string" },
+        "offer_surface": {
+          "enum": ["heading", "list_item", "card_title", "button_label", "unknown"]
+        },
+        "block_id": { "type": "string" },
+        "pricing_ref": { "type": "string" },
+        "ambiguity": { "enum": ["none", "multi_interpretation"] },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "cta_pattern": {
+      "type": "object",
+      "required": ["cta_id", "cta_type", "label_text", "evidence"],
+      "properties": {
+        "cta_id": { "type": "string" },
+        "cta_type": {
+          "enum": [
+            "lead_form",
+            "phone",
+            "messenger",
+            "callback_request",
+            "external_link",
+            "anchor_scroll",
+            "generic_action",
+            "multi_step"
+          ]
+        },
+        "label_text": { "type": "string" },
+        "target_href": { "type": ["string", "null"] },
+        "element_type": { "enum": ["link", "button", "input"] },
+        "position_band": {
+          "enum": ["header", "hero", "body", "footer", "floating", "unknown"]
+        },
+        "form_id": { "type": "string" },
+        "block_id": { "type": "string" },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "pricing_pattern": {
+      "type": "object",
+      "required": ["pricing_id", "text", "evidence"],
+      "properties": {
+        "pricing_id": { "type": "string" },
+        "text": { "type": "string" },
+        "currency_hint": { "type": ["string", "null"] },
+        "block_id": { "type": "string" },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "trust_pattern": {
+      "type": "object",
+      "required": ["trust_id", "trust_type", "text", "evidence"],
+      "properties": {
+        "trust_id": { "type": "string" },
+        "trust_type": {
+          "enum": [
+            "review_snippet",
+            "rating_display",
+            "case_reference",
+            "guarantee",
+            "certificate",
+            "experience_claim",
+            "statistics",
+            "partner_badge",
+            "legal_entity"
+          ]
+        },
+        "text": { "type": "string" },
+        "numeric_value": { "type": ["number", "null"] },
+        "block_id": { "type": "string" },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "contact_pattern": {
+      "type": "object",
+      "required": ["contact_id", "contact_type", "value", "evidence"],
+      "properties": {
+        "contact_id": { "type": "string" },
+        "contact_type": {
+          "enum": ["phone", "email", "messenger", "address", "unknown"]
+        },
+        "value": { "type": "string" },
+        "block_id": { "type": "string" },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "form_pattern": {
+      "type": "object",
+      "required": ["form_id", "fields", "cta_type", "evidence"],
+      "properties": {
+        "form_id": { "type": "string" },
+        "action": { "type": ["string", "null"] },
+        "method": { "type": ["string", "null"] },
+        "fields": { "type": "array" },
+        "visible_purpose": { "type": ["string", "null"] },
+        "cta_type": { "const": "lead_form" },
+        "block_id": { "type": "string" },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    },
+    "page_pattern": {
+      "type": "object",
+      "required": ["pattern_id", "evidence"],
+      "properties": {
+        "pattern_id": { "type": "string" },
+        "evidence": { "$ref": "#/definitions/evidence_item" }
+      }
+    }
+  }
+}

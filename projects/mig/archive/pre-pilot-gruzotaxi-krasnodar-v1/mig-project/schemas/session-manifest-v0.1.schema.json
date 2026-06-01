@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:session-manifest-v0.1",
+  "title": "MIG Session Manifest v0.1",
+  "type": "object",
+  "required": ["schema_version", "session_id", "created_at", "stage", "operator_id", "scope", "queries", "artifacts"],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "session_id": { "type": "string", "pattern": "^mig-[0-9]{8}-[a-f0-9]{6}$" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "stage": { "enum": ["intake_complete", "draft_complete"] },
+    "operator_id": { "type": "string", "minLength": 1 },
+    "scope": {
+      "type": "object",
+      "required": ["niche", "region", "business_type", "search_engine", "device"],
+      "properties": {
+        "niche": { "type": "string" },
+        "region": { "type": "string" },
+        "city": { "type": ["string", "null"] },
+        "business_type": { "type": "string" },
+        "search_engine": { "type": "string" },
+        "device": { "type": "string" }
+      }
+    },
+    "queries": {
+      "type": "object",
+      "required": ["seed_queries", "query_used"],
+      "properties": {
+        "seed_queries": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "query_used": { "type": "string" }
+      }
+    },
+    "serp": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": ["string", "null"], "enum": ["manual", "provider", "fallback", null] },
+        "captured_at": { "type": ["string", "null"] },
+        "result_file": { "const": "serp_result.json" }
+      }
+    },
+    "mig_phase": { "enum": ["1", "2", "3", "4"] },
+    "artifacts": {
+      "type": "object",
+      "required": ["session_manifest", "serp_result", "research_pack_draft"],
+      "properties": {
+        "session_manifest": { "const": "session_manifest.json" },
+        "serp_result": { "const": "serp_result.json" },
+        "competitors": { "const": "competitors.json" },
+        "research_pack_draft": { "const": "research_pack.draft.md" }
+      }
+    },
+    "competitor_discovery": {
+      "type": "object",
+      "required": ["status", "competitor_count", "generated_at", "artifact_file"],
+      "properties": {
+        "status": { "enum": ["complete", "empty", "skipped"] },
+        "competitor_count": { "type": "integer", "minimum": 0 },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "discovery_pass_at": { "type": "string", "format": "date-time" },
+        "artifact_file": { "const": "competitors.json" }
+      }
+    },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } }
+  }
+}

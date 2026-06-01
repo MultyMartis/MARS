@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mig:website-snapshots-v0.1",
+  "title": "MIG Website Snapshots Session Index v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "session_id",
+    "generated_at",
+    "acquisition_phase",
+    "url_plan",
+    "snapshots",
+    "session_coverage",
+    "section_evidence_grade"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "session_id": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "acquisition_phase": { "const": 3 },
+    "url_plan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["snapshot_id", "requested_url", "page_role"],
+        "properties": {
+          "snapshot_id": { "type": "string" },
+          "competitor_id": { "type": ["string", "null"] },
+          "requested_url": { "type": "string" },
+          "page_role": { "type": "string" },
+          "skip_reason": { "type": "string" }
+        }
+      }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": { "$ref": "website-snapshot-v0.1.schema.json" }
+    },
+    "session_coverage": { "enum": ["complete", "partial", "minimal", "unknown"] },
+    "section_evidence_grade": { "enum": ["A", "B", "C", "D", "X"] },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } }
+  }
+}

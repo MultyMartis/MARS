@@ -1,0 +1,205 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260601-a1b2c3",
+  "generated_at": "2026-06-01T16:24:16.060Z",
+  "discovery_phase": 2,
+  "competitor_observations": {
+    "section_id": "competitor_observations",
+    "schema_version": "0",
+    "discovery_pass_at": "2026-06-01T16:24:16.060Z",
+    "discovery_phase": 2,
+    "query_set_ref": "аренда манипулятора Краснодар",
+    "competitors": [
+      {
+        "competitor_id": "mig-20260601-a1b2c3-c001",
+        "display_name": "Манипулятор-Сервис Краснодар",
+        "primary_domain": "manipulator-krd.ru",
+        "domains_observed": [
+          "manipulator-krd.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z"
+          }
+        ],
+        "first_seen_query": "аренда манипулятора Краснодар",
+        "queries_seen": [
+          "аренда манипулятора Краснодар"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n"
+        ],
+        "discovery_strength": "single",
+        "region": "Krasnodar Krai",
+        "city": "Krasnodar",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260601-a1b2c3-c001-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z",
+            "grade": "B",
+            "surface_detail": {
+              "position": 2,
+              "url": "https://manipulator-krd.ru/",
+              "title": "Манипулятор-Сервис Краснодар",
+              "snippet": "Аренда манипулятора в Краснодаре"
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-01T10:00:00.000Z"
+      },
+      {
+        "competitor_id": "mig-20260601-a1b2c3-c002",
+        "display_name": "Кран-Логистик",
+        "primary_domain": "kran-logistik.ru",
+        "domains_observed": [
+          "kran-logistik.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z"
+          }
+        ],
+        "first_seen_query": "аренда манипулятора Краснодар",
+        "queries_seen": [
+          "аренда манипулятора Краснодар"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n"
+        ],
+        "discovery_strength": "single",
+        "region": "Krasnodar Krai",
+        "city": "Krasnodar",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260601-a1b2c3-c002-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z",
+            "grade": "B",
+            "surface_detail": {
+              "position": 3,
+              "url": "https://kran-logistik.ru/uslugi",
+              "title": "Кран-Логистик",
+              "snippet": null
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-01T10:00:00.000Z"
+      },
+      {
+        "competitor_id": "mig-20260601-a1b2c3-c003",
+        "display_name": "Авито — аренда спецтехники",
+        "primary_domain": "avito.ru",
+        "domains_observed": [
+          "avito.ru"
+        ],
+        "surface_types": [
+          "serp_organic",
+          "aggregator",
+          "marketplace_listing"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z"
+          }
+        ],
+        "first_seen_query": "аренда манипулятора Краснодар",
+        "queries_seen": [
+          "аренда манипулятора Краснодар"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_aggregator_domain",
+          "rule_marketplace_domain",
+          "rule_multi_surface"
+        ],
+        "discovery_strength": "multi_surface",
+        "region": "Krasnodar Krai",
+        "city": "Krasnodar",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260601-a1b2c3-c003-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z",
+            "grade": "B",
+            "surface_detail": {
+              "position": 4,
+              "url": "https://www.avito.ru/krasnodar/spetstehnika",
+              "title": "Авито — аренда спецтехники",
+              "snippet": null
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-01T10:00:00.000Z"
+      },
+      {
+        "competitor_id": "mig-20260601-a1b2c3-c004",
+        "display_name": "2ГИС — манипуляторы",
+        "primary_domain": "2gis.ru",
+        "domains_observed": [
+          "2gis.ru"
+        ],
+        "surface_types": [
+          "serp_organic",
+          "aggregator"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z"
+          }
+        ],
+        "first_seen_query": "аренда манипулятора Краснодар",
+        "queries_seen": [
+          "аренда манипулятора Краснодар"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_aggregator_domain",
+          "rule_multi_surface"
+        ],
+        "discovery_strength": "multi_surface",
+        "region": "Krasnodar Krai",
+        "city": "Krasnodar",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260601-a1b2c3-c004-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_result",
+            "observed_at": "2026-06-01T10:00:00.000Z",
+            "grade": "B",
+            "surface_detail": {
+              "position": 5,
+              "url": "https://2gis.ru/krasnodar/search/manipulator",
+              "title": "2ГИС — манипуляторы",
+              "snippet": null
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-01T10:00:00.000Z"
+      }
+    ],
+    "section_evidence_grade": "B",
+    "section_coverage": "complete"
+  }
+}

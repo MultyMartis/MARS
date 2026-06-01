@@ -1,0 +1,202 @@
+{
+  "description": "Golden multi-query SERP bundle for MIG Multi-Query Discovery v0.3 verification",
+  "session_id": "mig-20260601-mqtest",
+  "serp_index": {
+    "schema_version": "0.1",
+    "session_id": "mig-20260601-mqtest",
+    "aggregation_model": "per_query_files",
+    "queries_declared": ["q01", "q02", "q03"],
+    "queries_executed": ["q01", "q02", "q03"],
+    "query_set": [
+      {
+        "query_id": "q01",
+        "query_text": "аренда манипулятора Краснодар",
+        "role": "primary",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q02",
+        "query_text": "услуги автокрана Краснодар",
+        "role": "supporting",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q03",
+        "query_text": "манипулятор в аренду краснодар",
+        "role": "wording_variant",
+        "execution_status": "captured"
+      }
+    ],
+    "entries": [
+      {
+        "query_id": "q01",
+        "query_text": "аренда манипулятора Краснодар",
+        "role": "primary",
+        "artifact_path": "serp_results/q01.json",
+        "captured_at": "2026-06-01T11:00:00.000Z",
+        "source_mode": "manual",
+        "status": "captured"
+      },
+      {
+        "query_id": "q02",
+        "query_text": "услуги автокрана Краснодар",
+        "role": "supporting",
+        "artifact_path": "serp_results/q02.json",
+        "captured_at": "2026-06-01T11:05:00.000Z",
+        "source_mode": "manual",
+        "status": "captured"
+      },
+      {
+        "query_id": "q03",
+        "query_text": "манипулятор в аренду краснодар",
+        "role": "wording_variant",
+        "artifact_path": "serp_results/q03.json",
+        "captured_at": "2026-06-01T11:10:00.000Z",
+        "source_mode": "manual",
+        "status": "captured"
+      }
+    ],
+    "capture_metadata": {
+      "indexed_at": "2026-06-01T11:15:00.000Z",
+      "operator_id": "verify-multi-query"
+    }
+  },
+  "serp_results": {
+    "q01": {
+      "schema_version": "0.1",
+      "session_id": "mig-20260601-mqtest",
+      "query_id": "q01",
+      "captured_at": "2026-06-01T11:00:00.000Z",
+      "source_mode": "manual",
+      "search_engine": "yandex",
+      "region": "Krasnodar Krai",
+      "city": "Krasnodar",
+      "device": "mobile",
+      "query": "аренда манипулятора Краснодар",
+      "serp_type": "local commercial",
+      "ads_blocks": { "top_count": 1, "bottom_count": 0, "visible_patterns": [] },
+      "maps_local_pack": "present",
+      "aggregators": [],
+      "marketplaces": [],
+      "review_signals": [],
+      "offer_patterns": [],
+      "cta_patterns": [],
+      "landing_observations": [],
+      "organic_results": [
+        {
+          "position": 1,
+          "title": "Yandex Search",
+          "url": "https://yandex.ru/search/?text=manipulator"
+        },
+        {
+          "position": 2,
+          "title": "Манипулятор-Сервис Краснодар",
+          "url": "https://manipulator-krd.ru/",
+          "snippet": "Аренда манипулятора"
+        },
+        {
+          "position": 3,
+          "title": "Кран-Логистик",
+          "url": "https://kran-logistik.ru/uslugi"
+        },
+        {
+          "position": 4,
+          "title": "Авито — спецтехника",
+          "url": "https://www.avito.ru/krasnodar/spetstehnika"
+        }
+      ],
+      "safe_unknown": ["fixture q01"]
+    },
+    "q02": {
+      "schema_version": "0.1",
+      "session_id": "mig-20260601-mqtest",
+      "query_id": "q02",
+      "captured_at": "2026-06-01T11:05:00.000Z",
+      "source_mode": "manual",
+      "search_engine": "yandex",
+      "region": "Krasnodar Krai",
+      "city": "Krasnodar",
+      "device": "mobile",
+      "query": "услуги автокрана Краснодар",
+      "serp_type": "local commercial",
+      "ads_blocks": { "top_count": 0, "bottom_count": 0, "visible_patterns": [] },
+      "maps_local_pack": "absent",
+      "aggregators": [],
+      "marketplaces": [],
+      "review_signals": [],
+      "offer_patterns": [],
+      "cta_patterns": [],
+      "landing_observations": [],
+      "organic_results": [
+        {
+          "position": 1,
+          "title": "Манипулятор-Сервис Краснодар",
+          "url": "https://manipulator-krd.ru/price"
+        },
+        {
+          "position": 2,
+          "title": "Автокран Юг",
+          "url": "https://avtokran-yug.ru/"
+        },
+        {
+          "position": 3,
+          "title": "2ГИС — автокраны",
+          "url": "https://2gis.ru/krasnodar/search/avtokran"
+        }
+      ],
+      "safe_unknown": ["fixture q02"]
+    },
+    "q03": {
+      "schema_version": "0.1",
+      "session_id": "mig-20260601-mqtest",
+      "query_id": "q03",
+      "captured_at": "2026-06-01T11:10:00.000Z",
+      "source_mode": "manual",
+      "search_engine": "yandex",
+      "region": "Krasnodar Krai",
+      "city": "Krasnodar",
+      "device": "mobile",
+      "query": "манипулятор в аренду краснодар",
+      "serp_type": "local commercial",
+      "ads_blocks": { "top_count": 0, "bottom_count": 0, "visible_patterns": [] },
+      "maps_local_pack": "absent",
+      "aggregators": [],
+      "marketplaces": [],
+      "review_signals": [],
+      "offer_patterns": [],
+      "cta_patterns": [],
+      "landing_observations": [],
+      "organic_results": [
+        {
+          "position": 2,
+          "title": "Манипулятор-Сервис",
+          "url": "https://manipulator-krd.ru/rent"
+        },
+        {
+          "position": 3,
+          "title": "СпецТех Кубань",
+          "url": "https://specteh-kuban.ru/manipulator"
+        },
+        {
+          "position": 11,
+          "title": "Ниже top-N — skip",
+          "url": "https://below-top-n.example/"
+        }
+      ],
+      "safe_unknown": ["fixture q03"]
+    }
+  },
+  "expectations": {
+    "min_competitors": 5,
+    "query_coverage": "full",
+    "repeated_domains": ["manipulator-krd.ru"],
+    "rules_expected": [
+      "rule_serp_organic_top_n",
+      "rule_repeated_domain",
+      "rule_marketplace_domain",
+      "rule_aggregator_domain",
+      "rule_multi_surface"
+    ],
+    "excluded_domains": ["yandex.ru"]
+  }
+}
