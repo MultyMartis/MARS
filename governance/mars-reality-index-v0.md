@@ -29,12 +29,13 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **Runtime research** | — | ✓ R1 JS | ✓ contracts | — | — | ✓ maps |
 | **MetaBOT** | ✓ ops docs | R1 adapter | boundaries | ✓ **n8n** | legacy tree | exports |
 | **ORCA** | ✓ PPC toolkit | pilots | heuristics | ✓ ad/SERP UI | — | ✓ pack |
-| **WPilot** | ✓ admin discipline | — | plugin bridge | ✓ WP/host | — | ✓ Phase 1 MVP |
+| **WPilot** | ✓ admin discipline | ✓ DEV plugin source (in-repo) | plugin bridge (production) | ✓ WP/host | — | ✓ Phase 1 MVP |
 | **MIG** | ✓ acquisition discipline | ✓ v0.1 spine | ✓ R1 boundary | ✓ n8n/self-host runtime lane | — | ✓ contracts + pack |
 | **OCPilot** | ✓ OpenCart bridge discipline | — | ✓ sibling/family model | ✓ hosting/FTP/PMA | — | ✓ Phase 0+ |
 | **EAR Runtime** | — | ✓ R1 foundation code | ✓ acquisition helpers architecture alignment | ✓ connector targets (future) | — | ✓ engineering program docs |
 | **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
 | **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
+| **HomeGateway v4.ai** | — | — | ✓ personal operational cockpit concept (static-first) | — | — | ✓ draft/planning docs |
 | **GitGuard** | — | — | ✓ name only | **UNKNOWN** | — | entity-model example |
 | **Continuity / IdeaBox** | ✓ capture | — | protocols | — | — | ✓ not `project_id` |
 | **Triumph** | ✓ pack + workspace | V3 charter | reference case | hosting TBD | V2 drift refs | ✓ not deployed |
@@ -152,13 +153,27 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | Bucket | Reality |
 |--------|---------|
 | **operational** | Phase 1 MVP docs: backup/rollback discipline, QA templates, operator sequences. |
-| **conceptual** | Plugin concept + MVP roadmap — **planned** bridge to Factory-native WordPress. |
+| **experimental** | In-repo DEV plugin source exists under `projects/wpilot/plugin/metacode-wpilot/` (repository evidence only; runtime ownership remains external). |
+| **conceptual** | Plugin bridge production model and Factory-native bridge maturity remain planned. |
 | **external** | WordPress admin, Beget/hosting, DB awareness — **outside** repo. |
-| **documentation-only** | Entire `projects/wpilot/` until plugin source appears in-tree. |
+| **documentation-only** | Phase 1 operations, boundaries, and plugin-MVP governance docs remain canonical discipline layers. |
 
 **Not:** deploy bot, autonomous CMS agent, MARS runtime.
 
 **SoT:** [../projects/wpilot/README.md](../projects/wpilot/README.md) · [../projects/wpilot/plugin-mvp/reconciliation-map-v0.md](../projects/wpilot/plugin-mvp/reconciliation-map-v0.md)
+
+---
+
+## HomeGateway v4.ai
+
+| Bucket | Reality |
+|--------|---------|
+| **conceptual** | Personal Operational Cockpit model and ecosystem surface-layer role are defined at planning level. |
+| **documentation-only** | `projects/homegateway-v4-ai/` is currently draft/planning documentation with static-first framing. |
+
+**Not:** MARS runtime, control plane, autonomous agent, or deployed backend integration layer.
+
+**SoT:** [../projects/homegateway-v4-ai/README.md](../projects/homegateway-v4-ai/README.md) · [../projects/homegateway-v4-ai/OPERATIONAL-INDEX.md](../projects/homegateway-v4-ai/OPERATIONAL-INDEX.md)
 
 ---
 

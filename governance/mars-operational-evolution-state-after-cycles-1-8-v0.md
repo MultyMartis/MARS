@@ -64,7 +64,7 @@ Ranked **intent** (not deployment proof):
 2. **MARS Website Factory** — [../projects/mars-website-factory/OPERATIONAL-INDEX.md](../projects/mars-website-factory/OPERATIONAL-INDEX.md)  
 3. **Triumph programme** — project pack + workspace lane  
 4. **MetaBOT** — external n8n; MARS docs + boundaries only  
-5. **WPilot** — documented bridge boundary  
+5. **WPilot** — operational docs + DEV plugin source in-repo (production bridge still planned/external)  
 6. **New major systems** — [mars-future-system-entry-discipline-v0.md](mars-future-system-entry-discipline-v0.md)
 
 **Supporting (bounded):** MARS Forge overlay, `mars-runtime/` R1 experiments, continuity/IdeaBox capture.

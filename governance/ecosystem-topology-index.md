@@ -157,9 +157,9 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | Human-supervised **WordPress administration** operational system (Phase 1 MVP docs + **planned** plugin bridge docs). External Systems lane. |
-| **What it is NOT** | Autonomous WP admin, MARS runtime, deploy bot, or production bridge (plugin is **planned** documentation only). |
-| **Operational status** | **Operational** (Phase 1 documentation discipline); plugin MVP **planned**. |
+| **What it is** | Human-supervised **WordPress administration** operational system (Phase 1 MVP docs + DEV plugin source in-repo + planned production bridge). External Systems lane. |
+| **What it is NOT** | Autonomous WP admin, MARS runtime, deploy bot, or proven production bridge ownership from repo evidence alone. |
+| **Operational status** | **Operational** (Phase 1 documentation discipline); in-repo plugin source = **experimental / repo-only implementation evidence**; production bridge remains planned. |
 | **Canonical path** | [../projects/wpilot/README.md](../projects/wpilot/README.md); registry `wpilot`; plugin reconciliation [../projects/wpilot/plugin-mvp/reconciliation-map-v0.md](../projects/wpilot/plugin-mvp/reconciliation-map-v0.md). |
 | **Relationship role** | **Future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. |
 
@@ -222,6 +222,18 @@ AGENTS.md (honesty)
 | **Operational status** | **Foundation complete** — implementation and agent cards **not started** (`planned` registry band). |
 | **Canonical path** | [../projects/nova/README.md](../projects/nova/README.md), [NOVA-FOUNDATION-STATUS-v1.md](../projects/nova/NOVA-FOUNDATION-STATUS-v1.md); registry `nova`. |
 | **Relationship role** | **Methodology parallel** to Website Factory for mobile domain; no OPERATIONAL-INDEX yet — README + foundation status suffice at current scale. |
+
+---
+
+### HomeGateway v4.ai
+
+| | |
+|--|--|
+| **What it is** | Documentation-first **Personal Operational Cockpit** pack (private web surface layer) with static-first planning posture. |
+| **What it is NOT** | MARS runtime/control plane, autonomous system, deployed backend integration layer, or execution owner of MARS/n8n/Telegram systems. |
+| **Operational status** | **Planned / draft** project posture; artifacts are conceptual + documentation-only at current evidence level. |
+| **Canonical path** | [../projects/homegateway-v4-ai/README.md](../projects/homegateway-v4-ai/README.md), [../projects/homegateway-v4-ai/OPERATIONAL-INDEX.md](../projects/homegateway-v4-ai/OPERATIONAL-INDEX.md); registry `homegateway-v4-ai`. |
+| **Relationship role** | Ecosystem **surface layer** for operator visibility and quick actions; does not replace ORCA/WPilot/MetaBOT/MARS governance boundaries. |
 
 ---
 
