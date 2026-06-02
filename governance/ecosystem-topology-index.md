@@ -137,7 +137,7 @@ AGENTS.md (honesty)
 | **What it is NOT** | Autonomous bidding, scheduling, validator daemon, or MARS runtime component. |
 | **Operational status** | **Operational** (documentation / human workflow); **runtime excluded**. |
 | **Canonical path** | [../projects/orca/README.md](../projects/orca/README.md), [OPERATIONAL-INDEX.md](../projects/orca/OPERATIONAL-INDEX.md); registry `orca`. |
-| **Relationship role** | **Mostly self-contained** program pack under `projects/`; uses MARS governance honesty, not MARS execution engine. |
+| **Relationship role** | **Interpretation layer** for PPC decisions: consumes human-approved MIG groundtruth where used, can hand off validated strategy/semantic outputs to Website Factory when that lane is selected, and remains operable without Factory on existing-client landing sources. |
 
 ---
 

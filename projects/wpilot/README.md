@@ -34,6 +34,15 @@ Strategic direction: WPilot's preferred long-term target is **Factory-native Wor
 
 WPBakery/The7 handling belongs to Mode B compatibility. It is valuable for the current DEV/testing baseline and existing site support, but it is not the ideal long-term WPilot target.
 
+## Ecosystem Relationships (canonical visibility)
+
+| System | Relationship |
+|--------|--------------|
+| **MARS Website Factory** | Planned upstream source for Factory-native WordPress payloads and controlled publishing handoffs (future direction, not runtime claim). |
+| **OCPilot** | **Sibling** in CMS/Ecommerce Pilots family; shared safety/access patterns only, no parent-child ownership. |
+| **EAR Runtime** | Future provider candidate for published acquisition snapshots; relationship is planned and bounded by separate charters. |
+| **ORCA** | Strategy/semantic upstream context when WordPress implementation is part of broader marketing workflow; no ORCA runtime ownership of WPilot. |
+
 ## Phase 1 Document Map
 
 - [phase-1-mvp.md](phase-1-mvp.md) - MVP scope and workflow sequence.
@@ -41,7 +50,7 @@ WPBakery/The7 handling belongs to Mode B compatibility. It is valuable for the c
 - [beget-test-plan.md](beget-test-plan.md) - Beget-hosted test-site run plan.
 - [backup-rollback-rules.md](backup-rollback-rules.md) - backup confirmation and rollback discipline.
 - [access-safety.md](access-safety.md) - credential and access handling rules.
-- [local-storage-policy.md](local-storage-policy.md) - local-only `D:\AI MARS\backups\` and `D:\AI MARS\local\` policy, token handoff workflow, rollback snapshot storage, and no-secret-in-git rules.
+- [local-storage-policy.md](local-storage-policy.md) - local-only `C:\AI MARS\backups\` and `C:\AI MARS\local\` policy, token handoff workflow, rollback snapshot storage, and no-secret-in-git rules.
 - [qa-checklist.md](qa-checklist.md) - Phase 1 QA gates.
 - [reports/test-report-template.md](reports/test-report-template.md) - operator report template.
 - [templates/site-passport-template.md](templates/site-passport-template.md) - sanitized site facts template.
@@ -61,7 +70,7 @@ The plugin MVP planning pack is documentation only. It does not prove a WordPres
 - No secrets in repo.
 - No credentials, passwords, tokens, cookies, SSH keys, API keys, or hosting panel secrets.
 - No `wp-config.php` copies or database dumps.
-- No committed `D:\AI MARS\local\` or `D:\AI MARS\backups\` contents; those folders are local-only operational support if created on an operator machine.
+- No committed `C:\AI MARS\local\` or `C:\AI MARS\backups\` contents; those folders are local-only operational support if created on an operator machine.
 - No destructive SQL.
 - No live production changes in MVP.
 - No plugin or theme updates in MVP.

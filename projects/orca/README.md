@@ -82,3 +82,12 @@ SAFE UNKNOWN: no separate `evidence-records/` layer is present in this tree at t
 Documentation-first, Phase 1 draft with a live-first starter core for human-supervised PPC operational review.
 
 No ORCA runtime, autonomous campaign manager, bidding automation, optimization engine, or production orchestration exists in this pack.
+
+## Ecosystem Relationships (canonical visibility)
+
+| System | Relationship |
+|--------|--------------|
+| **MIG** | Upstream acquisition lane. ORCA consumes **human-approved** market groundtruth handoffs; ORCA does not claim MIG acquisition ownership. |
+| **Website Factory** | Optional downstream implementation lane. ORCA can produce strategy/semantic handoff artifacts, but ORCA remains operable without Factory when source is an existing client site. |
+| **WPilot / OCPilot** | External implementation systems. No direct ORCA runtime ownership; relationships are boundary and handoff-oriented. |
+| **MARS governance / survivability** | ORCA consumes honesty, boundary, and safe-execution discipline; governance does not execute ORCA workflows. |

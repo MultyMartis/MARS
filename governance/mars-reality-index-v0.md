@@ -30,6 +30,11 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **MetaBOT** | ✓ ops docs | R1 adapter | boundaries | ✓ **n8n** | legacy tree | exports |
 | **ORCA** | ✓ PPC toolkit | pilots | heuristics | ✓ ad/SERP UI | — | ✓ pack |
 | **WPilot** | ✓ admin discipline | — | plugin bridge | ✓ WP/host | — | ✓ Phase 1 MVP |
+| **MIG** | ✓ acquisition discipline | ✓ v0.1 spine | ✓ R1 boundary | ✓ n8n/self-host runtime lane | — | ✓ contracts + pack |
+| **OCPilot** | ✓ OpenCart bridge discipline | — | ✓ sibling/family model | ✓ hosting/FTP/PMA | — | ✓ Phase 0+ |
+| **EAR Runtime** | — | ✓ R1 foundation code | ✓ acquisition helpers architecture alignment | ✓ connector targets (future) | — | ✓ engineering program docs |
+| **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
+| **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
 | **GitGuard** | — | — | ✓ name only | **UNKNOWN** | — | entity-model example |
 | **Continuity / IdeaBox** | ✓ capture | — | protocols | — | — | ✓ not `project_id` |
 | **Triumph** | ✓ pack + workspace | V3 charter | reference case | hosting TBD | V2 drift refs | ✓ not deployed |
@@ -154,6 +159,79 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 **Not:** deploy bot, autonomous CMS agent, MARS runtime.
 
 **SoT:** [../projects/wpilot/README.md](../projects/wpilot/README.md) · [../projects/wpilot/plugin-mvp/reconciliation-map-v0.md](../projects/wpilot/plugin-mvp/reconciliation-map-v0.md)
+
+---
+
+## MIG
+
+| Bucket | Reality |
+|--------|---------|
+| **operational** | Human-supervised market groundtruth acquisition discipline (R1 intent) with explicit MIG → ORCA handoff contract and approval gate. |
+| **experimental** | v0.1 session spine (Node.js + n8n export) implemented as narrow runtime slice. |
+| **conceptual** | Full acquisition lifecycle beyond v0.1 remains planned. |
+| **external** | Self-hosted n8n/runtime environment and providers remain external execution surfaces. |
+| **documentation-only** | Contracts, boundaries, runbooks, and architecture docs are canonical in-repo visibility. |
+
+**Not:** ORCA interpretation engine, Website Factory blueprint generator, CMS implementation lane, or autonomous handoff runtime.
+
+**SoT:** [../projects/mig/README.md](../projects/mig/README.md) · [../projects/mig/OPERATIONAL-INDEX.md](../projects/mig/OPERATIONAL-INDEX.md) · [../projects/mig/contracts/mig-orca-handoff-contract-v0.md](../projects/mig/contracts/mig-orca-handoff-contract-v0.md)
+
+---
+
+## OCPilot
+
+| Bucket | Reality |
+|--------|---------|
+| **operational** | Human-supervised OpenCart/ocStore operational discipline (audit, baselines, controlled change planning). |
+| **conceptual** | Family/sibling model with WPilot and EAR-enabled intake patterns remains architecture-led. |
+| **external** | Live OpenCart hosting, FTP/PMA/admin, and credentials remain outside MARS ownership. |
+| **documentation-only** | Phase 0+ pack and run artifacts define process truth; runtime is not claimed. |
+
+**Not:** WPilot child, autonomous ecommerce admin runtime, or EAR implementation owner.
+
+**SoT:** [../projects/ocpilot/README.md](../projects/ocpilot/README.md) · [../projects/ocpilot/OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md)
+
+---
+
+## EAR Runtime
+
+| Bucket | Reality |
+|--------|---------|
+| **experimental** | R1 foundation skeleton + config loader only under `projects/ear-runtime/runtime/`. |
+| **conceptual** | Engineering roadmap (R1–R5), consumer boundaries, and architecture conformance model. |
+| **documentation-only** | Program charters, non-goals, and transition decisions define visibility; no live connector/runtime proof. |
+
+**Not:** EAR Architecture authority layer, OCPilot/WPilot consumer logic, or production acquisition runtime.
+
+**SoT:** [../projects/ear-runtime/README.md](../projects/ear-runtime/README.md) · [../projects/ear-runtime/EAR-RUNTIME-STATE.md](../projects/ear-runtime/EAR-RUNTIME-STATE.md)
+
+---
+
+## MARS Survivability
+
+| Bucket | Reality |
+|--------|---------|
+| **operational** | Human-operated survivability and safe-execution discipline with protocols, guardrails, drills, and checklists. |
+| **experimental** | Human-invoked validator/helpers exist as tooling aids, not autonomous enforcement. |
+| **conceptual** | GitGuard evolution remains design-contract direction until a dedicated project pack exists. |
+| **documentation-only** | Contracts and protocols are normative docs, not policy engine code. |
+
+**Not:** Replacement for governance survivability spine, ORCA/Factory execution runtime, or automated sandbox.
+
+**SoT:** [../projects/mars-survivability/README.md](../projects/mars-survivability/README.md) · [../projects/mars-survivability/OPERATIONAL-INDEX.md](../projects/mars-survivability/OPERATIONAL-INDEX.md)
+
+---
+
+## NOVA
+
+| Bucket | Reality |
+|--------|---------|
+| **conceptual** | Mobile/PWA production methodology foundation (RBM v1 complete) as Website Factory counterpart. |
+| **documentation-only** | Foundation artifacts and status docs only; implementation and agent cards not started. |
+
+**Not:** Runtime, orchestration product, or active operational system implementation.
+
+**SoT:** [../projects/nova/README.md](../projects/nova/README.md) · [../projects/nova/NOVA-FOUNDATION-STATUS-v1.md](../projects/nova/NOVA-FOUNDATION-STATUS-v1.md)
 
 ---
 
