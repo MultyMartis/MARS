@@ -1,7 +1,8 @@
 # NOVA — Mobile Application Factory
 
 **Lane:** B · External Systems  
-**Foundation status:** Complete (v1) · **Implementation:** Not started
+**Foundation status:** Complete (v1) · **Implementation:** Not started  
+**Registry:** `nova` — [registry/project-registry.md](../../registry/project-registry.md)
 
 ---
 

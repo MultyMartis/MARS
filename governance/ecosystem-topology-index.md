@@ -2,7 +2,7 @@
 
 **Status:** **documented** — compact canonical visibility layer.  
 **Version:** v0 (Structural Stabilization Phase 1).  
-**Date:** 2026-05-19.  
+**Date:** 2026-06-02 (entity sync pass v1 — post-cycle8 systems visibility).  
 **Supersedes:** nothing — **navigation aid** only; does not override `AGENTS.md`, registries, or pack READMEs.
 
 **Not:** an ontology, semantic graph, registry engine, or runtime map.
@@ -162,6 +162,66 @@ AGENTS.md (honesty)
 | **Operational status** | **Operational** (Phase 1 documentation discipline); plugin MVP **planned**. |
 | **Canonical path** | [../projects/wpilot/README.md](../projects/wpilot/README.md); registry `wpilot`; plugin reconciliation [../projects/wpilot/plugin-mvp/reconciliation-map-v0.md](../projects/wpilot/plugin-mvp/reconciliation-map-v0.md). |
 | **Relationship role** | **Future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. |
+
+---
+
+### MIG (Market Intelligence Groundtruth)
+
+| | |
+|--|--|
+| **What it is** | **R1** market groundtruth research acquisition layer — session manifests, evidence grading, handoff packs; **narrow v0.1** session spine (Node.js + n8n export) in-repo. |
+| **What it is NOT** | Production orchestration, autonomous ORCA handoff, full SERP/competitor pipeline (mostly **planned**), or MARS core runtime. |
+| **Operational status** | **Operational** (human-supervised acquisition); v0.1 tooling **experimental**; production n8n deployment **not proven**. |
+| **Canonical path** | [../projects/mig/README.md](../projects/mig/README.md), [OPERATIONAL-INDEX.md](../projects/mig/OPERATIONAL-INDEX.md); registry `mig`. |
+| **Relationship role** | **MIG acquires reality; ORCA interprets reality** — human-only handoff per mig-orca contract; upstream of PPC interpretation, not campaign engine. |
+
+---
+
+### OCPilot
+
+| | |
+|--|--|
+| **What it is** | Human-supervised **OpenCart / ocStore** operational pack (External Systems lane): read-only audit, baselines, site passport, controlled-change discipline. CMS/Ecommerce Pilots family **sibling** to WPilot. |
+| **What it is NOT** | WPilot child, MARS runtime, autonomous OpenCart admin, deploy bot, or in-repo plugin/runtime proof. |
+| **Operational status** | **Operational** (Phase 0+ documentation baseline); live site access **external**. |
+| **Canonical path** | [../projects/ocpilot/README.md](../projects/ocpilot/README.md), [OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md); registry `ocpilot`. |
+| **Relationship role** | **Future** ecommerce CMS bridge; may consume **EAR Runtime** snapshots when chartered; shares external-access patterns with WPilot — **not** WPilot-owned. |
+
+---
+
+### EAR Runtime
+
+| | |
+|--|--|
+| **What it is** | **Engineering project** for Mode 2 acquisition helpers (connectors, evidence, snapshots) — separate from frozen EAR Architecture in `shared/external-access-runtime/`. |
+| **What it is NOT** | EAR Architecture normative layer, `mars-runtime/` control plane, live SFTP/production acquisition, or OCPilot site analysis. |
+| **Operational status** | **Engineering started** — R1 skeleton + config loader only; connector **not started**; human R1 approval **pending**. |
+| **Canonical path** | [../projects/ear-runtime/README.md](../projects/ear-runtime/README.md), [OPERATIONAL-INDEX.md](../projects/ear-runtime/OPERATIONAL-INDEX.md), [EAR-RUNTIME-STATE.md](../projects/ear-runtime/EAR-RUNTIME-STATE.md); registry `ear-runtime`. |
+| **Relationship role** | Implements chartered helpers **conforming** to EAR Architecture; publishes snapshots for OCPilot / future WPilot — **consumers do not own acquisition mechanics**. |
+
+---
+
+### MARS Survivability
+
+| | |
+|--|--|
+| **What it is** | Operational **safety domain** pack: destructive-ops policy, safe execution layer, Cursor guardrails, protected zones, human-invoked validator/helpers, drill reports. |
+| **What it is NOT** | Automated policy engine, CI substitute, GitGuard product, or replacement for `governance/operational-survivability.md` or `AGENTS.md`. |
+| **Operational status** | **Operational** (documentation + human-invoked tools); enforcement is **human-operated**. |
+| **Canonical path** | [../projects/mars-survivability/README.md](../projects/mars-survivability/README.md), [OPERATIONAL-INDEX.md](../projects/mars-survivability/OPERATIONAL-INDEX.md); registry `mars-survivability`. |
+| **Relationship role** | **Extends** post–Cycle 8 survivability discipline across Factory, agents, and git workflows; GitGuard remains **design contract** until separate pack exists. |
+
+---
+
+### NOVA (Mobile Application Factory)
+
+| | |
+|--|--|
+| **What it is** | Documentation-first **mobile / PWA production methodology** (RBM foundation v1) — vocabulary counterpart to Website Factory. |
+| **What it is NOT** | Runtime, agent engine, orchestration product, governance system, or implemented factory. |
+| **Operational status** | **Foundation complete** — implementation and agent cards **not started** (`planned` registry band). |
+| **Canonical path** | [../projects/nova/README.md](../projects/nova/README.md), [NOVA-FOUNDATION-STATUS-v1.md](../projects/nova/NOVA-FOUNDATION-STATUS-v1.md); registry `nova`. |
+| **Relationship role** | **Methodology parallel** to Website Factory for mobile domain; no OPERATIONAL-INDEX yet — README + foundation status suffice at current scale. |
 
 ---
 
