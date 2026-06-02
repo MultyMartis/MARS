@@ -2,7 +2,9 @@
 
 ## Purpose
 
-Reserved for **persistence**: operational DBs, vector stores, file/object storage, audit and state — the **Storage Layer** in `web-gpt-sources/02_architecture.md` and `08_storage_rag.md`. Knowledge/RAG in the docs often **uses** this layer together with **Model** and **Memory**; RAG contract detail lives under `memory/` (see [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md)) and [../governance/dependency-map.md](../governance/dependency-map.md).
+Reserved for **persistence**: operational DBs, vector stores, file/object storage, audit and state — the **Storage Layer** in `web-gpt-sources/02_architecture.md` and `08_storage_rag.md`.
+
+**Disambiguation:** This folder holds **architecture documentation** (contracts v0). It is **not** the operator bulk path **`C:\AI MARS STORAGE`** on disk. Physical layout: [../governance/mars-infrastructure-reality-v1.md](../governance/mars-infrastructure-reality-v1.md). Knowledge/RAG in the docs often **uses** this layer together with **Model** and **Memory**; RAG contract detail lives under `memory/` (see [../memory/rag-architecture-v0.md](../memory/rag-architecture-v0.md)) and [../governance/dependency-map.md](../governance/dependency-map.md).
 
 ## Status
 

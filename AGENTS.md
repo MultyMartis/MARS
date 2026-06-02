@@ -28,7 +28,8 @@
 **Reality audit framework (documentation):** Cross-cutting **human-operated** review semantics under `governance/` — start [reality-audit-framework.md](governance/reality-audit-framework.md); [reality-audit-questions.md](governance/reality-audit-questions.md), [operational-friction-semantics.md](governance/operational-friction-semantics.md), [deprecation-and-pruning-semantics.md](governance/deprecation-and-pruning-semantics.md), [governance-usefulness-review.md](governance/governance-usefulness-review.md), [reality-vs-mythology-warnings.md](governance/reality-vs-mythology-warnings.md). Supports **operational reality**, usefulness, friction, and drift reflection — **not** governance certification, **not** runtime validation, **not** telemetry or monitoring products.
 
 ## File operations
-- Constrain filesystem work to **`D:\AI MARS`** for MARS work.
+- Constrain filesystem work to **`C:\AI MARS`** for MARS work (canonical workspace root).
+- **Bulk storage** for large out-of-git artefacts: **`C:\AI MARS STORAGE`** — supporting layer only; **not** a second repository or parallel workspace root. See [governance/mars-infrastructure-reality-v1.md](governance/mars-infrastructure-reality-v1.md).
 - **No** delete or move without explicit user instruction.
 - **No** manual edits to generated or build artifacts; ignore or regenerate via the proper pipeline.
 

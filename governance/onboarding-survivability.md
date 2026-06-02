@@ -44,6 +44,7 @@ Read **in this order** before treating any other file as mandatory:
 - [registry-architecture.md](registry-architecture.md), [registry-source-of-truth.md](registry-source-of-truth.md) — when touching registries or identity.  
 - [enforcement/README.md](enforcement/README.md) — anti-drift cues for **writers**.  
 - [operational-survivability.md](operational-survivability.md), [documentation-entropy-rules.md](documentation-entropy-rules.md) — when adding or reorganizing docs.
+- [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md) — when tasks touch bulk paths, baselines, or external storage (repo `storage/` vs `C:\AI MARS STORAGE`).
 
 ---
 

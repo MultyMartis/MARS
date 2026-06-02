@@ -6,6 +6,15 @@
 
 This directory is the **main local working copy** of the MARS project: design notes, the Phase 1 documentation pack, **v0 contracts and minimal experimental R1** JavaScript under [`mars-runtime/`](mars-runtime/), and **future** broader implementation as phases progress. The repository remains **primarily documentation-first**; R1 is narrow and **not** a full production runtime (see **Planned implementation** below).
 
+## Operator infrastructure (physical)
+
+| Layer | Path | Role |
+|-------|------|------|
+| **Workspace root** | `C:\AI MARS` | This git repository — governance, projects, workspaces, docs. |
+| **Bulk storage** | `C:\AI MARS STORAGE` | Out-of-git bulk (baselines, archives, snapshots). **Not** a second repo or MARS instance. |
+
+Canonical reference: [`governance/mars-infrastructure-reality-v1.md`](governance/mars-infrastructure-reality-v1.md). In-repo [`storage/`](storage/) is **documentation** for the architecture Storage Layer — not the physical `C:\AI MARS STORAGE` path.
+
 ## What this repository contains (by status)
 
 ### Documented architecture
