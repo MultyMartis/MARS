@@ -1,0 +1,18 @@
+# Safe example 01 — scoped single-file replace (sandbox documentation only)
+# Do NOT execute as automation. Use with validator CLI for operational testing.
+
+COMMAND:
+  # Human reviews before any run — example text only
+  # Replace one file under mars-survivability tools when scope lock lists exact path
+
+SCOPE:
+  projects/mars-survivability/tools/validator/validator-architecture-v1.md
+
+RISK_CLASS:
+  LOW
+
+EXPECTED_DECISION:
+  ALLOW or NEED_HUMAN (if write verb detected in command string)
+
+NOTES:
+  Operator must still confirm scope lock and risk class per preflight checklist.

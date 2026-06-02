@@ -151,3 +151,8 @@ workspaces/_template-client-v1/*
 
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/
+
+# OCPilot promoted vendor baseline trees — local comparison cache only (see projects/ocpilot/git-storage-policy.md)
+projects/ocpilot/baselines/*/files/*
+!projects/ocpilot/baselines/*/files/.gitkeep
+projects/ocpilot/incoming/baselines/*.zip

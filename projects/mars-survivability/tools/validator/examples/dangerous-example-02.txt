@@ -1,0 +1,16 @@
+# Dangerous example 02 — repo cleanup language (sandbox documentation only)
+
+COMMAND:
+  cleanup repo and delete everything unused in workspaces
+
+SCOPE:
+  (missing — intentional unsafe case)
+
+RISK_CLASS:
+  HIGH
+
+EXPECTED_DECISION:
+  DENY
+
+NOTES:
+  Matches DK-02, CL-01, missing scope SR-01. Deny-first philosophy applies.

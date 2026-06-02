@@ -47,7 +47,7 @@ Details: `06_MARS_v2_BOOTSTRAP_AND_MIGRATION.md`.
 
 ## What this pack is
 
-- High-signal **operational bootstrap** for Web-GPT chats on `D:\AI MARS`.
+- High-signal **operational bootstrap** for Web-GPT chats on `C:\AI MARS`.
 - Honesty, routing, survivability, execution discipline — **distilled**, not a repo mirror.
 
 ## What this pack is not
@@ -66,7 +66,7 @@ Vendor trees (Font Awesome Pro), `dist/`, `mars-runtime/**/*.js`, Triumph `works
 
 ## Repo anchor
 
-- **Working copy:** `D:\AI MARS`
+- **Working copy:** `C:\AI MARS`
 - **IDE rules:** `AGENTS.md`, `.cursorrules`
 - **Canonical post–Cycle 8 state (repo):** `governance/mars-operational-evolution-state-after-cycles-1-8-v0.md`
 

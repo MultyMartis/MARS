@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARS Rollback Map v1",
+  "description": "Human-maintained rollback plan structure. Not executed by tooling automatically.",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "rollbackId",
+    "timestamp",
+    "operator",
+    "trigger",
+    "severity",
+    "snapshotLinkage",
+    "restoreOrdering",
+    "pathConsistency"
+  ],
+  "properties": {
+    "rollbackId": {
+      "type": "string",
+      "pattern": "^rollback-\\d{8}-[a-z0-9-]+$",
+      "description": "Unique id e.g. rollback-20260524-triumph-header"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC when plan was authored or executed"
+    },
+    "operator": {
+      "type": "string",
+      "description": "Human handle who owns the rollback"
+    },
+    "trigger": {
+      "type": "string",
+      "description": "Why rollback is considered (scope escape, build break, incident)"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["INFO", "WARNING", "HIGH", "CRITICAL"]
+    },
+    "snapshotLinkage": {
+      "type": "object",
+      "required": ["snapshotId", "manifestPath"],
+      "properties": {
+        "snapshotId": {
+          "type": "string",
+          "pattern": "^snap-\\d{8}-\\d{6}-"
+        },
+        "manifestPath": {
+          "type": "string",
+          "description": "Relative path to SNAPSHOT-MANIFEST.md"
+        },
+        "snapshotVerified": {
+          "type": "boolean",
+          "description": "Operator ran snapshot-integrity-checker"
+        },
+        "manifestCrossValidated": {
+          "type": "boolean",
+          "description": "Operator ran manifest-cross-validator"
+        }
+      }
+    },
+    "quarantineReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "reason": { "type": "string" },
+          "movedAt": { "type": "string", "format": "date-time" }
+        }
+      },
+      "description": "Optional quarantine paths if contamination suspected"
+    },
+    "restoreOrdering": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Ordered human steps — selective copy sequence"
+    },
+    "pathConsistency": {
+      "type": "object",
+      "required": ["sourceWorkspace", "targetWorkspace"],
+      "properties": {
+        "sourceWorkspace": { "type": "string" },
+        "targetWorkspace": { "type": "string" },
+        "allowedPaths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "forbiddenPaths": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "partialRollbackRisks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "rollbackNotRecommended": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, document why quarantine/analysis preferred"
+    },
+    "logPaths": {
+      "type": "object",
+      "properties": {
+        "rollbackHistory": { "type": "string" },
+        "incident": { "type": "string" },
+        "survivability": { "type": "string" }
+      }
+    },
+    "safeUnknown": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

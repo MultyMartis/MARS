@@ -23,7 +23,7 @@
 
 ## 3. MARS is the orchestration *knowledge* layer (here)
 
-Inside **`D:\AI MARS`**, MARS’s role is to hold:
+Inside **`C:\AI MARS`**, MARS’s role is to hold:
 
 - **Architecture narrative** — multi-workflow mental model, lifecycle, locks, QA.
 - **Contracts at documentation level** — command vocabulary, state names, integration *posture* (not live endpoints).

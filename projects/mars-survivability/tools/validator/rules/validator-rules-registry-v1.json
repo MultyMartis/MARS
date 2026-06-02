@@ -1,0 +1,499 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARS Survivability Validator Rules Registry v1",
+  "version": "1.0.0",
+  "status": "documented",
+  "description": "Human-maintained pattern registry for scoped-operation-validator-v1.mjs. Not automated enforcement.",
+  "meta": {
+    "lane": "B",
+    "phase": "G2",
+    "implements": [
+      "projects/mars-survivability/contracts/destructive-operations-policy-v1.md",
+      "projects/mars-survivability/registries/protected-zones-registry-v1.md",
+      "projects/mars-survivability/registries/enforcement-rules-registry-v1.md"
+    ],
+    "maintainer_note": "Update when protected-zones or enforcement registry changes. Validator does not auto-sync."
+  },
+  "decision_precedence": ["DENY", "NEED_HUMAN", "ALLOW"],
+  "forbidden_commands": [
+    {
+      "id": "FC-01",
+      "pattern": "rm\\s+-rf",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Recursive Unix delete (F-01)"
+    },
+    {
+      "id": "FC-02",
+      "pattern": "Remove-Item\\s+.*-Recurse",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "PowerShell recursive delete (F-01, F-11)"
+    },
+    {
+      "id": "FC-03",
+      "pattern": "rd\\s+/s",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Windows recursive directory remove"
+    },
+    {
+      "id": "FC-04",
+      "pattern": "git\\s+clean",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "git clean forbidden for AGENT (F-05)"
+    },
+    {
+      "id": "FC-05",
+      "pattern": "git\\s+reset\\s+--hard",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "git reset --hard forbidden for AGENT (F-06)"
+    },
+    {
+      "id": "FC-06",
+      "pattern": "git\\s+push\\s+.*--force",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Force push (F-07)"
+    },
+    {
+      "id": "FC-07",
+      "pattern": "git\\s+push\\s+-f\\b",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Force push shorthand (F-07)"
+    },
+    {
+      "id": "FC-08",
+      "pattern": "del\\s+\\*\\.\\*",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Wildcard mass delete (F-03)"
+    },
+    {
+      "id": "FC-09",
+      "pattern": "Remove-Item\\s+\\*\\s+-Recurse",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "PowerShell wildcard recursive delete (F-03)"
+    },
+    {
+      "id": "FC-10",
+      "pattern": "git\\s+checkout\\s+--\\s+\\.",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Mass git restore at cwd — confirm path list"
+    }
+  ],
+  "dangerous_patterns": [
+    {
+      "id": "DP-01",
+      "pattern": "-Recurse|-rf|/s\\b|/q\\b",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Recursive delete flag detected"
+    },
+    {
+      "id": "DP-02",
+      "pattern": "format\\s+[a-z]:",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Drive format — catastrophic"
+    },
+    {
+      "id": "DP-03",
+      "pattern": "git\\s+stash\\s+pop",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Stash pop can affect many files"
+    },
+    {
+      "id": "DP-04",
+      "pattern": "git\\s+checkout\\s+--",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Tracked file restore — confirm single path"
+    },
+    {
+      "id": "DP-05",
+      "pattern": "git\\s+(add|commit|push|merge|rebase)",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Git mutation requires explicit user request"
+    }
+  ],
+  "protected_paths": [
+    {
+      "id": "PZ-00",
+      "prefix": "governance/",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-01",
+      "prefix": "registry/",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-02",
+      "prefix": "AGENTS.md",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-03",
+      "prefix": ".cursorrules",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-04",
+      "prefix": "web-gpt-sources/",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-05",
+      "prefix": "security/",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-06",
+      "prefix": "memory/",
+      "zone": "P0",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-07",
+      "prefix": "projects/mars-survivability/",
+      "zone": "P1",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-08",
+      "prefix": "projects/",
+      "zone": "P1",
+      "tier": "HIGH",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-09",
+      "prefix": "workspaces/_snapshots/",
+      "zone": "Q",
+      "tier": "CRITICAL",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-10",
+      "prefix": "workspaces/_quarantine/",
+      "zone": "Q",
+      "tier": "HIGH",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-11",
+      "prefix": "workspaces/_recovery/",
+      "zone": "Q",
+      "tier": "HIGH",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-12",
+      "prefix": "workspaces/triumph-manipulator-landing-v4/",
+      "zone": "P2",
+      "tier": "MEDIUM",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-13",
+      "prefix": "workspaces/triumph-manipulator-landing-v5/",
+      "zone": "P2",
+      "tier": "MEDIUM",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-14",
+      "prefix": "workspaces/",
+      "zone": "P2",
+      "tier": "MEDIUM",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-15",
+      "prefix": "workspaces/_sandbox/",
+      "zone": "Q",
+      "tier": "LOW",
+      "write_decision": "ALLOW",
+      "delete_decision": "NEED_HUMAN"
+    },
+    {
+      "id": "PZ-16",
+      "prefix": "shared/assets/",
+      "zone": "P2",
+      "tier": "MEDIUM",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    },
+    {
+      "id": "PZ-17",
+      "prefix": "logs/",
+      "zone": "P1-adjacent",
+      "tier": "HIGH",
+      "write_decision": "NEED_HUMAN",
+      "delete_decision": "DENY"
+    }
+  ],
+  "dangerous_keywords": [
+    {
+      "id": "DK-01",
+      "term": "wipe",
+      "decision": "DENY",
+      "reason": "Wipe language implies mass destruction"
+    },
+    {
+      "id": "DK-02",
+      "term": "delete everything",
+      "decision": "DENY",
+      "reason": "Unscoped mass delete intent"
+    },
+    {
+      "id": "DK-03",
+      "term": "start fresh",
+      "decision": "NEED_HUMAN",
+      "reason": "Recovery language — quarantine path required"
+    },
+    {
+      "id": "DK-04",
+      "term": "start over",
+      "decision": "NEED_HUMAN",
+      "reason": "Recovery language"
+    },
+    {
+      "id": "DK-05",
+      "term": "rebuild from scratch",
+      "decision": "NEED_HUMAN",
+      "reason": "Workspace rebuild risk (F-10)"
+    }
+  ],
+  "cleanup_language": [
+    {
+      "id": "CL-01",
+      "pattern": "cleanup\\s+repo",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Repo-wide cleanup without scope lock"
+    },
+    {
+      "id": "CL-02",
+      "pattern": "clean\\s+up\\s+(the\\s+)?(repo|repository|workspace)",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Workspace/repo cleanup language"
+    },
+    {
+      "id": "CL-03",
+      "pattern": "remove\\s+unused",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Heuristic unused-file deletion (F-12)"
+    },
+    {
+      "id": "CL-04",
+      "pattern": "prune\\s+(governance|registry)",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Governance prune without charter (F-14)"
+    },
+    {
+      "id": "CL-05",
+      "pattern": "delete\\s+node_modules",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Prefer regen pipeline; task may forbid"
+    }
+  ],
+  "recursive_patterns": [
+    {
+      "id": "RP-01",
+      "pattern": "-Recurse",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "PowerShell recursion"
+    },
+    {
+      "id": "RP-02",
+      "pattern": "\\s-rf\\b",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Unix -rf"
+    },
+    {
+      "id": "RP-03",
+      "pattern": "rd\\s+/s\\s+/q",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Windows silent recursive delete"
+    },
+    {
+      "id": "RP-04",
+      "pattern": "Get-ChildItem.*\\|.*Remove-Item",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Pipeline mass delete"
+    }
+  ],
+  "mass_replace_patterns": [
+    {
+      "id": "MR-01",
+      "pattern": "search.?replace|mass.?replace|replace.?all",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Mass replace requires glob lock (F-08)"
+    },
+    {
+      "id": "MR-02",
+      "pattern": "sed\\s+-i",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "In-place sed — confirm path glob"
+    },
+    {
+      "id": "MR-03",
+      "pattern": "powershell.*-replace.*\\*",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Wildcard replace risk"
+    }
+  ],
+  "workspace_delete_patterns": [
+    {
+      "id": "WD-01",
+      "pattern": "recreate\\s+workspace",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Delete-recreate recovery forbidden (F-10)"
+    },
+    {
+      "id": "WD-02",
+      "pattern": "delete\\s+workspace",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Workspace deletion"
+    },
+    {
+      "id": "WD-03",
+      "pattern": "remove\\s+workspace",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Workspace removal"
+    },
+    {
+      "id": "WD-04",
+      "pattern": "workspaces/\\*",
+      "flags": "i",
+      "decision": "NEED_HUMAN",
+      "reason": "Cross-workspace glob"
+    }
+  ],
+  "git_danger_patterns": [
+    {
+      "id": "GD-01",
+      "pattern": "git\\s+clean",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "git clean"
+    },
+    {
+      "id": "GD-02",
+      "pattern": "git\\s+reset\\s+--hard",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "hard reset"
+    },
+    {
+      "id": "GD-03",
+      "pattern": "git\\s+filter-branch|git\\s+filter-repo",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "History rewrite"
+    },
+    {
+      "id": "GD-04",
+      "pattern": "git\\s+push\\s+.*force",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "force push"
+    }
+  ],
+  "read_only_safe_patterns": [
+    {
+      "id": "RS-01",
+      "pattern": "^git\\s+(status|diff|log)\\b",
+      "flags": "i",
+      "decision": "ALLOW",
+      "reason": "Read-only git inspection"
+    },
+    {
+      "id": "RS-02",
+      "pattern": "^(Get-Content|cat|type|head|tail|rg|grep)\\b",
+      "flags": "i",
+      "decision": "ALLOW",
+      "reason": "Read-only file inspection"
+    },
+    {
+      "id": "RS-03",
+      "pattern": "read-only|audit",
+      "flags": "i",
+      "decision": "ALLOW",
+      "reason": "Declared read-only intent in command text"
+    }
+  ],
+  "scope_rules": {
+    "repo_root_markers": ["C:\\AI MARS", "C:/AI MARS", "."],
+    "missing_scope_on_write": "NEED_HUMAN",
+    "workspace_wide_without_path": "NEED_HUMAN",
+    "write_verbs": [
+      "write",
+      "set-content",
+      "out-file",
+      "mv",
+      "move",
+      "rename",
+      "copy",
+      "cp",
+      "remove-item",
+      "del",
+      "rm",
+      "npm",
+      "gulp",
+      "npx"
+    ]
+  }
+}

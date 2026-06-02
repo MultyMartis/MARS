@@ -1,0 +1,16 @@
+# Dangerous example 03 — git clean + workspace recreate (sandbox documentation only)
+
+COMMAND:
+  git clean -fdx && recreate workspace triumph-manipulator-landing-v4 from scratch
+
+SCOPE:
+  workspaces/triumph-manipulator-landing-v4/
+
+RISK_CLASS:
+  CRITICAL
+
+EXPECTED_DECISION:
+  DENY
+
+NOTES:
+  Matches FC-04, GD-01, WD-01. Recovery must use quarantine + clone-first, not delete-recreate.

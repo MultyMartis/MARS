@@ -1,0 +1,72 @@
+{
+  "rollbackId": "rollback-20260524-d02-d01-drill-restore",
+  "timestamp": "2026-05-24T19:18:00Z",
+  "operator": "cursor-agent-d02-drill",
+  "trigger": "D-02 manual restore drill — recover from D-01 intentional drift simulation",
+  "severity": "INFO",
+  "snapshotLinkage": {
+    "snapshotId": "snap-20260524-012224-d01-drill",
+    "manifestPath": "workspaces/_snapshots/snap-20260524-012224-d01-drill/SNAPSHOT-MANIFEST.md",
+    "snapshotVerified": true,
+    "manifestCrossValidated": true
+  },
+  "quarantineReferences": [
+    {
+      "path": "workspaces/_quarantine/d01-survivability-drill-drifted/",
+      "reason": "Drifted D-01 sandbox moved before restore — preserves 3 mutated files + suspicious-spread.md",
+      "movedAt": "2026-05-24T19:12:00Z"
+    }
+  ],
+  "restoreOrdering": [
+    "1. Halt AGENT on drifted workspace path",
+    "2. Run pre-restore analysis — compare sandbox vs snapshot vs manifest",
+    "3. Move drifted workspace to quarantine (do not delete)",
+    "4. Verify snapshot manifest id snap-20260524-012224-d01-drill",
+    "5. Create new target workspace workspaces/_sandbox/d01-survivability-drill-restored/",
+    "6. Manual copy: snapshot/sample-project/src/app.js → restored/.../app.js",
+    "7. Manual copy: snapshot/sample-project/src/styles.css → restored/.../styles.css",
+    "8. Manual copy: snapshot/sample-project/config/settings.json → restored/.../settings.json",
+    "9. Manual copy: snapshot/sample-project/docs/overview.md → restored/.../overview.md",
+    "10. Handle unm mirrored index.html from quarantine if needed (SAFE UNKNOWN)",
+    "11. Do NOT copy docs/suspicious-spread.md",
+    "12. Hash/diff verify restored vs snapshot",
+    "13. Run snapshot-integrity-checker and manifest-cross-validator",
+    "14. Log restore in logs/rollback-history/",
+    "15. Retain quarantine until recovery status = restored"
+  ],
+  "pathConsistency": {
+    "sourceWorkspace": "workspaces/_snapshots/snap-20260524-012224-d01-drill/sample-project/",
+    "targetWorkspace": "workspaces/_sandbox/d01-survivability-drill-restored/sample-project/",
+    "allowedPaths": [
+      "workspaces/_sandbox/d01-survivability-drill-restored/sample-project/src/app.js",
+      "workspaces/_sandbox/d01-survivability-drill-restored/sample-project/src/styles.css",
+      "workspaces/_sandbox/d01-survivability-drill-restored/sample-project/config/settings.json",
+      "workspaces/_sandbox/d01-survivability-drill-restored/sample-project/docs/overview.md",
+      "workspaces/_sandbox/d01-survivability-drill-restored/sample-project/src/index.html"
+    ],
+    "forbiddenPaths": [
+      "workspaces/triumph-manipulator-landing-v4/",
+      "workspaces/triumph-manipulator-landing-v5/",
+      "governance/",
+      "workspaces/_quarantine/d01-survivability-drill-drifted/docs/suspicious-spread.md"
+    ]
+  },
+  "partialRollbackRisks": [
+    "Snapshot is partial mirror — index.html not in snapshot; restore relied on quarantine copy",
+    "Manifest workspace path points to original sandbox, not restored path",
+    "No git baseline for untracked drill files",
+    "Selective copy may miss files if operator skips manifest review"
+  ],
+  "rollbackNotRecommended": false,
+  "logPaths": {
+    "rollbackHistory": "logs/rollback-history/d02-pre-restore-analysis.md",
+    "incident": null,
+    "survivability": "logs/survivability/d02-restore-drill-summary.md"
+  },
+  "safeUnknown": [
+    "Git HEAD at snapshot time — not captured",
+    "index.html baseline verification — only quarantine copy available",
+    "Long-term quarantine retention policy for drill artifacts",
+    "Whether restored workspace should replace original sandbox path in production-like scenarios"
+  ]
+}

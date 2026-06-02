@@ -1,0 +1,13 @@
+# Scope analyzer examples (documentation only — do not auto-run)
+
+# SAFE — single scoped file under survivability tools
+projects/mars-survivability/tools/helpers/snapshot-helper-v1.mjs
+
+# RISKY — production workspace src without narrow lock
+workspaces/triumph-manipulator-landing-v4/src/
+
+# CROSS-WORKSPACE — multiple workspace roots
+workspaces/triumph-manipulator-landing-v4/, workspaces/triumph-manipulator-landing-v5/
+
+# PROTECTED-ZONE-HIT — governance
+governance/operational-survivability.md

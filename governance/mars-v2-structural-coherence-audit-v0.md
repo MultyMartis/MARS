@@ -273,7 +273,7 @@ The strongest risk here is confusing external n8n execution truth with MARS in-r
 | MARS Forge pack | `agents/mars-forge/README.md`, `agents/registry.md` §4.1 | Some governance docs still say pack/card do not exist yet. |
 | Onboarding | Governance has `onboarding-survivability.md`; mandatory target folder is absent | Top-level onboarding domain exists conceptually only. |
 | Triumph workspace variants | `workspaces/triumph-manipulator-landing`, `-v2`, `-v3`, `-v4` | Registry has one project id; version/workspace authority map is not central. |
-| Raw/local operational folders | WPilot docs mention `D:\AI MARS\backups\` and `D:\AI MARS\local\` as local-only | Not repo canonical, but could be mistaken as hidden system if present locally. |
+| Raw/local operational folders | WPilot docs mention `C:\AI MARS\backups\` and `C:\AI MARS\local\` as local-only | Not repo canonical, but could be mistaken as hidden system if present locally. |
 | Image artifacts | `MARS MAP.png`, `mermaid-diagram.png` in git status | Relationship to canonical topology docs is unclear. |
 
 ---

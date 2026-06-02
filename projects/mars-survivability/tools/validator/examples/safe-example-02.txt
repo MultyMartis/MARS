@@ -1,0 +1,16 @@
+# Safe example 02 — read-only audit (sandbox documentation only)
+
+COMMAND:
+  git status
+
+SCOPE:
+  (none — read-only git inspection)
+
+RISK_CLASS:
+  SAFE
+
+EXPECTED_DECISION:
+  ALLOW
+
+NOTES:
+  git diff and git log are similarly classified as read-only in registry RS-01.

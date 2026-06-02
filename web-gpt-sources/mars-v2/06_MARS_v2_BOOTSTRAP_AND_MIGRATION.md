@@ -10,7 +10,7 @@
 
 Include:
 
-- Repo: **`D:\AI MARS`**
+- Repo: **`C:\AI MARS`**
 - Mode: **AGENT** or advisory per user
 - Rules: `AGENTS.md` honesty; **SAFE UNKNOWN**; Russian for user-facing text if requested
 - Git: **no** stage/commit/push unless explicit order; never `git add .`

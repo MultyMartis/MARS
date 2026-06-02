@@ -6,7 +6,7 @@
 
 ## Quick startup (new Web-GPT chat)
 
-1. **Charter:** repo `D:\AI MARS`; honesty + SAFE UNKNOWN; git only on explicit order.  
+1. **Charter:** repo `C:\AI MARS`; honesty + SAFE UNKNOWN; git only on explicit order.  
 2. **Pack minimum:** `00` → `03` → `05` → `08` (once).  
 3. **Evidence:** user pastes `git status --short -uall` before tree claims.  
 4. **Lane:** declare A / B / Runtime + allowed/forbidden paths.  

@@ -8,7 +8,7 @@ Use this **exact order** when starting a **new** ChatGPT (or external) chat that
 
 Send a short **charter** message, for example:
 
-- Repo: **MARS** at `D:\AI MARS`.  
+- Repo: **MARS** at `C:\AI MARS`.  
 - Mode: **AGENT** or **advisory** per user.  
 - Rules: **AGENTS.md** honesty — no runtime claims without file evidence; **SAFE UNKNOWN** for gaps; prefer **Russian** for user-facing text if user wants.  
 - Git: **no commit/push/stage** unless user explicitly orders; never `git add .`.

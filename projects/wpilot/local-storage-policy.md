@@ -9,14 +9,14 @@
 
 WPilot local operational storage is unified under the MARS repository working root:
 
-`D:\AI MARS`
+`C:\AI MARS`
 
 This replaces the older separate local-root concept for WPilot operator workflows.
 
 The target local-only structure is:
 
 ```text
-D:\AI MARS
+C:\AI MARS
 ├─ backups/
 │  ├─ wpilot/
 │  ├─ github/
@@ -48,7 +48,7 @@ Only sanitized examples may live in tracked documentation paths, such as:
 
 Per-site WPilot tokens may be stored only in local operator storage:
 
-- `D:\AI MARS\local\tokens\`
+- `C:\AI MARS\local\tokens\`
 
 Rules:
 
@@ -63,7 +63,7 @@ Rules:
 
 Local site connection metadata may be stored under:
 
-- `D:\AI MARS\local\sites\`
+- `C:\AI MARS\local\sites\`
 
 Allowed local fields:
 
@@ -92,12 +92,12 @@ Disallowed local fields for tracked docs:
 
 Operator-managed WPilot backups may be staged under:
 
-- `D:\AI MARS\backups\wpilot\`
+- `C:\AI MARS\backups\wpilot\`
 
 Recommended local layout:
 
 ```text
-D:\AI MARS\backups\wpilot\
+C:\AI MARS\backups\wpilot\
 ├─ site-alias\
 │  ├─ yyyy-mm-dd-hhmm-pre-change\
 │  ├─ yyyy-mm-dd-hhmm-post-change\
@@ -115,7 +115,7 @@ Rules:
 
 Rollback snapshots may be stored under:
 
-- `D:\AI MARS\backups\wpilot\<site-alias>\rollback-snapshots\`
+- `C:\AI MARS\backups\wpilot\<site-alias>\rollback-snapshots\`
 
 Rollback snapshots should be scoped to the approved target where possible:
 
@@ -161,8 +161,8 @@ If a required token is missing:
 
 Never commit:
 
-- `D:\AI MARS\local\`
-- `D:\AI MARS\backups\`
+- `C:\AI MARS\local\`
+- `C:\AI MARS\backups\`
 - real token files;
 - `.env` files;
 - WordPress credentials;

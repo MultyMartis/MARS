@@ -6,7 +6,7 @@
 
 ## What MARS is
 
-**MARS** (Multi-Agent Runtime System) is a **documentation-first, human-supervised** program for AI-assisted production: planning, contracts, registries, prompts, and delivery discipline on `D:\AI MARS`.
+**MARS** (Multi-Agent Runtime System) is a **documentation-first, human-supervised** program for AI-assisted production: planning, contracts, registries, prompts, and delivery discipline on `C:\AI MARS`.
 
 **Post–Cycle 8:** structural stabilization **complete**; survivability baseline **achieved**; governance **frozen** (maintenance mode). **Default work = operational delivery**, not governance expansion.
 
@@ -69,7 +69,7 @@ Wrong-lane work: stop and escalate — do not fix forward with broad edits.
 | User-facing explanations | **Russian** when appropriate |
 | Cursor/Codex prompts | **English** OK |
 
-- Work under **`D:\AI MARS`** only.
+- Work under **`C:\AI MARS`** only.
 - **No** delete/move without explicit instruction.
 - **No** hand-edits to `dist/`, `node_modules/`, generated output.
 - **Git:** no stage/commit/push unless user explicitly orders; never `git add .` without order.

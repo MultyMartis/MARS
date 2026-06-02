@@ -77,7 +77,7 @@ Web-GPT (plan, package, prompt)
 
 ## Filesystem rules
 
-- Constrain MARS work to **`D:\AI MARS`**.
+- Constrain MARS work to **`C:\AI MARS`**.
 - **No** delete or move without explicit user instruction.
 - **No** hand-edits to generated/build outputs (`dist/`, `node_modules/`, etc.).
 - **Do not** treat Triumph V2 workspace source as MARS core.

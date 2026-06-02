@@ -45,4 +45,4 @@
 - **Operational** means prompts, REPORTs, explicit paths, and HITL — not background jobs.  
 - **No staging** of this pack is implied; treat as documentation until the user asks otherwise.
 
-**Canonical repo root:** `D:\AI MARS` (Windows path as used in project rules).
+**Canonical repo root:** `C:\AI MARS` (Windows path as used in project rules).

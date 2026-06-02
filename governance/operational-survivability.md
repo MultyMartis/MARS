@@ -103,6 +103,20 @@ Governance moves from stabilization-heavy passes to **controlled operational evo
 
 ---
 
-## 9. SAFE UNKNOWN
+## 9. Operational survivability pack (Lane B)
+
+Incident-informed **human-operated** survivability contracts, protocols, helpers, and drills live under **`projects/mars-survivability/`** — **not** runtime enforcement.
+
+| Entry | Role |
+|-------|------|
+| [projects/mars-survivability/OPERATIONAL-INDEX.md](../projects/mars-survivability/OPERATIONAL-INDEX.md) | **Start here** for G0–G4 ops, drills, validator, rollback |
+| [projects/mars-survivability/QUICKSTART.md](../projects/mars-survivability/QUICKSTART.md) | Practical operator flows (pre-agent, snapshot, rollback, emergency) |
+| [projects/mars-survivability/README.md](../projects/mars-survivability/README.md) | Domain purpose and structure |
+
+This pack **extends** Phase S3 governance above; it does **not** replace [AGENTS.md](../AGENTS.md) or imply automated GitGuard deployment.
+
+---
+
+## 10. SAFE UNKNOWN
 
 Anything not recorded in an authoritative file (governance, registry row, contract, lifecycle note with clear scope) is **not** guaranteed to survive the next session. If migration or handoff evidence is missing, state **SAFE UNKNOWN** and what would verify it — per [AGENTS.md](../AGENTS.md).

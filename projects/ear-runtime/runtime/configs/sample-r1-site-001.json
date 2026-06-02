@@ -1,0 +1,27 @@
+{
+  "site_id": "SITE-001",
+  "pilot_id": "PILOT-001",
+  "track": "connected",
+  "mode": "mode_2",
+  "connector": "sftp_readonly",
+  "environment": "TEST",
+  "snapshot_target": "level_1",
+  "credential_ref": "SAFE_UNKNOWN_EXTERNAL_REF",
+  "remote_root": "SAFE_UNKNOWN_REMOTE_ROOT",
+  "allowed_paths": [],
+  "excluded_paths": [
+    "image/cache/",
+    "system/storage/cache/",
+    "system/storage/logs/",
+    "system/storage/session/",
+    "system/storage/upload/",
+    "tmp/",
+    "temp/",
+    "backup/",
+    "backups/",
+    ".git/",
+    "*.log"
+  ],
+  "output_root": "SAFE_UNKNOWN_EXTERNAL_OUTPUT_ROOT",
+  "dry_run": true
+}

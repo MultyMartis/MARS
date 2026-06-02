@@ -4,7 +4,7 @@
 
 ## Git safety (summary)
 
-- Work only under agreed repo root (`D:\AI MARS` per project rules).  
+- Work only under agreed repo root (`C:\AI MARS` per project rules).  
 - **Default:** no commit, no push (`AGENTS.md`).  
 - **Never:** `git add .`, `git add -A`, `git commit -a` (`governance/parallel-cursor-chat-work-mode-v0.md`).  
 - **Always:** explicit paths; `git diff --cached --name-only` before commit; **single lane** per commit.  

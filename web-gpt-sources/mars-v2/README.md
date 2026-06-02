@@ -11,7 +11,7 @@
 
 This folder is a **controlled documentation import** for external Web-GPT (or similar) chats. It distills repo truth from `AGENTS.md`, `governance/`, `projects/mars-website-factory/`, `mars-runtime/` boundaries, `tools/`, and migration notes — **without** copying the full repository or implying shipped automation.
 
-**Use when:** starting or resetting a MARS v2 chat; onboarding an operator; anchoring honesty before planning or prompting Cursor/Codex work on `D:\AI MARS`.
+**Use when:** starting or resetting a MARS v2 chat; onboarding an operator; anchoring honesty before planning or prompting Cursor/Codex work on `C:\AI MARS`.
 
 ---
 
@@ -83,7 +83,7 @@ These files are **governance references in the repo**, not duplicated source-pac
 
 ## Repo anchor
 
-- **Working copy:** `D:\AI MARS`
+- **Working copy:** `C:\AI MARS`
 - **Agent rules in IDE:** `AGENTS.md`, `.cursorrules`
 - **Root orientation:** `README.md`
 

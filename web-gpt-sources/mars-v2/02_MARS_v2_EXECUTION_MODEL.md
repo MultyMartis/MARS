@@ -9,7 +9,7 @@
 ```
 Task / envelope (intent, scope, lane, constraints)
     → Prompt (Web-GPT packages; human approves)
-    → Execute (Cursor / Codex on D:\AI MARS)
+    → Execute (Cursor / Codex on C:\AI MARS)
     → REPORT (closure: files, summary, git, UNKNOWN)
     → Validation (human meaning — who, what scope; not auto-orchestrator)
 ```

@@ -6,7 +6,7 @@
 
 ## 1. PURPOSE
 
-MARS v2 uses **multi-chat operational workflows**: role-separated chats, **lane isolation**, and **human-supervised orchestration**. Web-GPT plans and packages; Cursor/Codex executes on `D:\AI MARS`; the operator approves scope, git, and lane choice.
+MARS v2 uses **multi-chat operational workflows**: role-separated chats, **lane isolation**, and **human-supervised orchestration**. Web-GPT plans and packages; Cursor/Codex executes on `C:\AI MARS`; the operator approves scope, git, and lane choice.
 
 **Goal:** reduce **operational entropy** — prompt drift, markdown breakage, lane contamination, context collapse, and mythology leakage into execution.
 
@@ -56,7 +56,7 @@ Every operational chat should declare **CHAT TYPE** at start (or in each task en
 
 ## 3. LANE SYSTEM
 
-**Lanes** separate filesystem and commit risk in one repo (`D:\AI MARS`).
+**Lanes** separate filesystem and commit risk in one repo (`C:\AI MARS`).
 
 | Lane | Name | Typical scope |
 |------|------|----------------|
@@ -133,7 +133,7 @@ When instructions conflict, resolve in this order (highest wins):
 **Outside copy block (metadata — not pasted into agent body):**
 
 📁 Target folder:
-D:\AI MARS
+C:\AI MARS
 
 🤖 Режим агента:
 AGENT

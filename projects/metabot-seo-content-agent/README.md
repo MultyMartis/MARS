@@ -37,7 +37,7 @@ This folder is the canonical MARS documentation folder for MetaBOT SEO Content A
 |--------|------|
 | **n8n** | **Execution runtime** — owns workflow graphs, triggers, credentials, and live orchestration. |
 | **MetaBOT (external)** | **Product system** — Intake / Worker / Admin workflows, Telegram UX, Sheets-backed state. |
-| **This repository (`D:\AI MARS`)** | **Architecture / contracts / knowledge** — documentation packs, integration boundaries, and governance alignment. **MARS does not execute MetaBOT workflows.** |
+| **This repository (`C:\AI MARS`)** | **Architecture / contracts / knowledge** — documentation packs, integration boundaries, and governance alignment. **MARS does not execute MetaBOT workflows.** |
 
 MARS stores **sanitized** descriptions, maps, and contracts only. **Secrets, tokens, and workflow JSON** live **outside** this repo (typically in n8n and chat provider configuration). See [integration-boundary.md](integration-boundary.md).
 
