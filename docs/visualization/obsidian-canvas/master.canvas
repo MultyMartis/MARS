@@ -1,0 +1,187 @@
+{
+  "nodes": [
+    {
+      "id": "n-mars-root",
+      "type": "text",
+      "text": "# MARS Ecosystem\n\nDocumentation-first multi-program workspace.\n\nSoT: `AGENTS.md`",
+      "x": 400,
+      "y": -40,
+      "width": 320,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "n-layer-governance",
+      "type": "text",
+      "text": "## Governance Layer\n\n`governance/`\n\nSpine, boundaries, survivability S1–S7.\n**Maintenance mode** post–Cycle 8.",
+      "x": 0,
+      "y": 140,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-layer-registry",
+      "type": "text",
+      "text": "## Registry Layer\n\n`registry/`, `agents/registry.md`, `tools/registry.md`\n\nProject / agent / tool identity rows.",
+      "x": 340,
+      "y": 140,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-layer-core-contract",
+      "type": "text",
+      "text": "## Core Contract Layer\n\n`control-plane/`, `workflows/`, `interfaces/`, `security/`, `tools/`, `models/`, `storage/`, `memory/`, `observability/`, `evaluation/`, `integrations/`, `mars-runtime/`",
+      "x": 680,
+      "y": 140,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "n-layer-program",
+      "type": "text",
+      "text": "## Program Layer\n\n`projects/*`\n\nORCA, Website Factory, WPilot, MIG, …",
+      "x": 0,
+      "y": 320,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-layer-agent",
+      "type": "text",
+      "text": "## Agent Layer\n\n`agents/*`\n\nCards, Gulp foundation, Forge overlay.",
+      "x": 340,
+      "y": 320,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-layer-execution",
+      "type": "text",
+      "text": "## Execution Layer\n\n`workspaces/*`, human + Cursor sessions.\n\n**Not** MARS orchestration SoT.",
+      "x": 680,
+      "y": 320,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-layer-infrastructure",
+      "type": "text",
+      "text": "## Infrastructure Layer\n\n`C:\\AI MARS` (repo root)\n`C:\\AI MARS STORAGE` (bulk)\n\nSee `infrastructure.canvas`.",
+      "x": 170,
+      "y": 500,
+      "width": 300,
+      "height": 110
+    },
+    {
+      "id": "n-layer-external",
+      "type": "text",
+      "text": "## External Systems Layer\n\nn8n (MetaBOT), WordPress, hosting, Telegram, Sheets.\n\nExecution truth **outside** repo.",
+      "x": 520,
+      "y": 500,
+      "width": 300,
+      "height": 110
+    },
+    {
+      "id": "n-layer-archive",
+      "type": "text",
+      "text": "## Archive Layer\n\n`archive/`, `web-gpt-sources/`, lifecycle candidates.\n\nSee `archive.canvas`.",
+      "x": 860,
+      "y": 500,
+      "width": 280,
+      "height": 100
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-root-gov",
+      "fromNode": "n-mars-root",
+      "fromSide": "bottom",
+      "toNode": "n-layer-governance",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "spine"
+    },
+    {
+      "id": "e-gov-reg",
+      "fromNode": "n-layer-governance",
+      "fromSide": "right",
+      "toNode": "n-layer-registry",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "precedence"
+    },
+    {
+      "id": "e-reg-core",
+      "fromNode": "n-layer-registry",
+      "fromSide": "right",
+      "toNode": "n-layer-core-contract",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "contracts"
+    },
+    {
+      "id": "e-gov-prog",
+      "fromNode": "n-layer-governance",
+      "fromSide": "bottom",
+      "toNode": "n-layer-program",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "charter"
+    },
+    {
+      "id": "e-prog-agent",
+      "fromNode": "n-layer-program",
+      "fromSide": "right",
+      "toNode": "n-layer-agent",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "agent packs"
+    },
+    {
+      "id": "e-agent-exec",
+      "fromNode": "n-layer-agent",
+      "fromSide": "right",
+      "toNode": "n-layer-execution",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "implements in"
+    },
+    {
+      "id": "e-exec-infra",
+      "fromNode": "n-layer-execution",
+      "fromSide": "bottom",
+      "toNode": "n-layer-infrastructure",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "runs on"
+    },
+    {
+      "id": "e-prog-external",
+      "fromNode": "n-layer-program",
+      "fromSide": "bottom",
+      "toNode": "n-layer-external",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "integrates"
+    },
+    {
+      "id": "e-gov-archive",
+      "fromNode": "n-layer-governance",
+      "fromSide": "bottom",
+      "toNode": "n-layer-archive",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "historical"
+    },
+    {
+      "id": "e-infra-ext",
+      "fromNode": "n-layer-infrastructure",
+      "fromSide": "right",
+      "toNode": "n-layer-external",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "hosts / paths"
+    }
+  ]
+}

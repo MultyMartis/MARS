@@ -1,0 +1,222 @@
+{
+  "nodes": [
+    {
+      "id": "n-prog-hub",
+      "type": "text",
+      "text": "# MARS Programs\n\nCross-program relationships (doc-first).\n\nOpen `programs.canvas` from `master.canvas`.",
+      "x": 380,
+      "y": -20,
+      "width": 300,
+      "height": 100,
+      "color": "6"
+    },
+    {
+      "id": "n-prog-orca",
+      "type": "text",
+      "text": "## ORCA\n\n\nPPC operational toolkit\n`projects/orca/`",
+      "x": 40,
+      "y": 80,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-factory",
+      "type": "text",
+      "text": "## Website Factory\n\n\nMethodology + contracts\n`projects/mars-website-factory/`",
+      "x": 360,
+      "y": 80,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-wpilot",
+      "type": "text",
+      "text": "## WPilot\n\n\nWordPress admin (External)\n`projects/wpilot/`",
+      "x": 680,
+      "y": 80,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-ocpilot",
+      "type": "text",
+      "text": "## OCPilot\n\n\nOpenCart bridge (External)\n`projects/ocpilot/`",
+      "x": 40,
+      "y": 230,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-mig",
+      "type": "text",
+      "text": "## MIG\n\n\nMarket groundtruth R1\n`projects/mig/`",
+      "x": 360,
+      "y": 230,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-metabot",
+      "type": "text",
+      "text": "## MetaBOT\n\n\nSEO Content Agent (n8n external)\n`projects/metabot-seo-content-agent/`",
+      "x": 680,
+      "y": 230,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-ear",
+      "type": "text",
+      "text": "## EAR Runtime\n\n\nMode 2 acquisition helpers\n`projects/ear-runtime/`",
+      "x": 40,
+      "y": 380,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-nova",
+      "type": "text",
+      "text": "## NOVA\n\n\nMobile factory foundation\n`projects/nova/`",
+      "x": 360,
+      "y": 380,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-homegateway",
+      "type": "text",
+      "text": "## HomeGateway v4.ai\n\n\nPersonal operational cockpit\n`projects/homegateway-v4-ai/`",
+      "x": 680,
+      "y": 380,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-survivability",
+      "type": "text",
+      "text": "## MARS Survivability\n\n\nSafe execution pack\n`projects/mars-survivability/`",
+      "x": 40,
+      "y": 530,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-triumph",
+      "type": "text",
+      "text": "## Triumph\n\n\nReference / production pack\n`projects/triumph-manipulator-landing/`",
+      "x": 360,
+      "y": 530,
+      "width": 280,
+      "height": 120
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-hub-factory",
+      "fromNode": "n-prog-hub",
+      "fromSide": "bottom",
+      "toNode": "n-prog-factory",
+      "toSide": "top",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-mig-orca",
+      "fromNode": "n-prog-mig",
+      "fromSide": "right",
+      "toNode": "n-prog-orca",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "human handoff"
+    },
+    {
+      "id": "e-orca-factory",
+      "fromNode": "n-prog-orca",
+      "fromSide": "right",
+      "toNode": "n-prog-factory",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "optional strategy / semantic"
+    },
+    {
+      "id": "e-factory-triumph",
+      "fromNode": "n-prog-factory",
+      "fromSide": "right",
+      "toNode": "n-prog-triumph",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "reference case"
+    },
+    {
+      "id": "e-orca-triumph",
+      "fromNode": "n-prog-orca",
+      "fromSide": "right",
+      "toNode": "n-prog-triumph",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PPC + landing QA"
+    },
+    {
+      "id": "e-factory-wpilot",
+      "fromNode": "n-prog-factory",
+      "fromSide": "right",
+      "toNode": "n-prog-wpilot",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "planned WP bridge"
+    },
+    {
+      "id": "e-ocpilot-ear",
+      "fromNode": "n-prog-ocpilot",
+      "fromSide": "right",
+      "toNode": "n-prog-ear",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "snapshots (future)"
+    },
+    {
+      "id": "e-wpilot-ocpilot",
+      "fromNode": "n-prog-wpilot",
+      "fromSide": "right",
+      "toNode": "n-prog-ocpilot",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "CMS pilot family"
+    },
+    {
+      "id": "e-metabot-factory",
+      "fromNode": "n-prog-metabot",
+      "fromSide": "right",
+      "toNode": "n-prog-factory",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "content lane (external)"
+    },
+    {
+      "id": "e-surv-all",
+      "fromNode": "n-prog-survivability",
+      "fromSide": "left",
+      "toNode": "n-prog-hub",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "guardrails"
+    },
+    {
+      "id": "e-nova-factory",
+      "fromNode": "n-prog-nova",
+      "fromSide": "right",
+      "toNode": "n-prog-factory",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "methodology parallel"
+    },
+    {
+      "id": "e-homegateway-hub",
+      "fromNode": "n-prog-homegateway",
+      "fromSide": "top",
+      "toNode": "n-prog-hub",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "surface layer"
+    }
+  ]
+}

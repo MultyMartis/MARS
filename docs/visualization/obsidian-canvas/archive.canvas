@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "n-arch-title",
+      "type": "text",
+      "text": "# MARS Lifecycle Placement\n\nVisualization buckets — not automated enforcement.",
+      "x": 300,
+      "y": -60,
+      "width": 400,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "n-cat-active",
+      "type": "group",
+      "label": "ACTIVE",
+      "x": 40,
+      "y": 80,
+      "width": 220,
+      "height": 220,
+      "color": "1"
+    },
+    {
+      "id": "n-cat-operational",
+      "type": "group",
+      "label": "OPERATIONAL",
+      "x": 280,
+      "y": 80,
+      "width": 220,
+      "height": 220,
+      "color": "4"
+    },
+    {
+      "id": "n-cat-experimental",
+      "type": "group",
+      "label": "EXPERIMENTAL",
+      "x": 520,
+      "y": 80,
+      "width": 220,
+      "height": 220,
+      "color": "3"
+    },
+    {
+      "id": "n-cat-planned",
+      "type": "group",
+      "label": "PLANNED",
+      "x": 760,
+      "y": 80,
+      "width": 220,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n-cat-frozen",
+      "type": "group",
+      "label": "FROZEN",
+      "x": 200,
+      "y": 380,
+      "width": 220,
+      "height": 220,
+      "color": "6"
+    },
+    {
+      "id": "n-cat-retired",
+      "type": "group",
+      "label": "RETIRED",
+      "x": 520,
+      "y": 380,
+      "width": 220,
+      "height": 220,
+      "color": "2"
+    },
+    {
+      "id": "n-cat-archive-cand",
+      "type": "group",
+      "label": "ARCHIVE CANDIDATE",
+      "x": 760,
+      "y": 380,
+      "width": 220,
+      "height": 220,
+      "color": "1"
+    },
+    {
+      "id": "n-ent-orca",
+      "type": "text",
+      "text": "ORCA",
+      "x": 60,
+      "y": 150,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-mig",
+      "type": "text",
+      "text": "MIG",
+      "x": 60,
+      "y": 210,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-wpilot",
+      "type": "text",
+      "text": "WPilot",
+      "x": 60,
+      "y": 270,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-metabot",
+      "type": "text",
+      "text": "MetaBOT (docs)",
+      "x": 160,
+      "y": 150,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-factory",
+      "type": "text",
+      "text": "Website Factory methodology",
+      "x": 300,
+      "y": 150,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-forge",
+      "type": "text",
+      "text": "MARS Forge overlay",
+      "x": 300,
+      "y": 210,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-gulp",
+      "type": "text",
+      "text": "frontend-gulp-agent",
+      "x": 300,
+      "y": 270,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-surv",
+      "type": "text",
+      "text": "mars-survivability",
+      "x": 400,
+      "y": 150,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-continuity",
+      "type": "text",
+      "text": "continuity / IdeaBox",
+      "x": 400,
+      "y": 210,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-r1",
+      "type": "text",
+      "text": "mars-runtime R1 JS",
+      "x": 540,
+      "y": 150,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-ear",
+      "type": "text",
+      "text": "EAR Runtime R1 skeleton",
+      "x": 540,
+      "y": 210,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-wp-plugin",
+      "type": "text",
+      "text": "WPilot DEV plugin source",
+      "x": 540,
+      "y": 270,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-nova",
+      "type": "text",
+      "text": "NOVA foundation",
+      "x": 780,
+      "y": 150,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-homegateway",
+      "type": "text",
+      "text": "HomeGateway v4.ai",
+      "x": 780,
+      "y": 210,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-triumph-reg",
+      "type": "text",
+      "text": "triumph-manipulator-landing (registry planned)",
+      "x": 780,
+      "y": 270,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-gov-freeze",
+      "type": "text",
+      "text": "Governance post–Cycle 8 freeze",
+      "x": 220,
+      "y": 450,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-ear-arch",
+      "type": "text",
+      "text": "EAR Architecture (`shared/external-access-runtime/`)",
+      "x": 220,
+      "y": 520,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-orca-freeze",
+      "type": "text",
+      "text": "ORCA freeze packs (e.g. PPC export v1.3)",
+      "x": 320,
+      "y": 450,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-seo-legacy",
+      "type": "text",
+      "text": "seo-content-agent (legacy)",
+      "x": 540,
+      "y": 450,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-orca-lrl-arch",
+      "type": "text",
+      "text": "archive/orca-lrl-foundation-v1",
+      "x": 540,
+      "y": 520,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-lifecycle-log",
+      "type": "text",
+      "text": "Lifecycle Log (`logs/lifecycle-log.md`)",
+      "x": 780,
+      "y": 450,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-web-gpt",
+      "type": "text",
+      "text": "web-gpt-sources/",
+      "x": 780,
+      "y": 510,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "n-ent-chat-mig",
+      "type": "text",
+      "text": "chat-migration imports",
+      "x": 780,
+      "y": 570,
+      "width": 180,
+      "height": 50
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-title-active",
+      "fromNode": "n-arch-title",
+      "fromSide": "bottom",
+      "toNode": "n-cat-active",
+      "toSide": "top",
+      "toEnd": "arrow"
+    }
+  ]
+}

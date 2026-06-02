@@ -1,0 +1,236 @@
+{
+  "nodes": [
+    {
+      "id": "n-wf-root",
+      "type": "text",
+      "text": "# Website Factory\n\n`projects/mars-website-factory/`\n\nStrategic planned · methodology operational",
+      "x": 360,
+      "y": 0,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "n-wf-core",
+      "type": "text",
+      "text": "## Core\n\nOPERATIONAL-INDEX, workflow, runbook, handoff law",
+      "x": 0,
+      "y": 160,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-extended",
+      "type": "text",
+      "text": "## Extended\n\nLayer map, artifact bus, semantic vocabulary",
+      "x": 340,
+      "y": 160,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-forge",
+      "type": "text",
+      "text": "## Forge\n\n`agents/mars-forge/` overlay on Gulp foundation",
+      "x": 680,
+      "y": 160,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-gulp",
+      "type": "text",
+      "text": "## Frontend Gulp Agent\n\n`agents/frontend-gulp-agent/` — canonical SoT",
+      "x": 0,
+      "y": 320,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-ref-ws",
+      "type": "text",
+      "text": "## Reference Workspace\n\n`workspaces/website-factory-reference-v1/`",
+      "x": 340,
+      "y": 320,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-client-tpl",
+      "type": "text",
+      "text": "## Client Template\n\n`workspaces/_template-client-v1/`",
+      "x": 680,
+      "y": 320,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-prod-cases",
+      "type": "text",
+      "text": "## Production Cases\n\nTriumph, reference-cases/",
+      "x": 0,
+      "y": 480,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-qa",
+      "type": "text",
+      "text": "## QA Layers\n\nValidator, HITL, operational-qa-entry",
+      "x": 340,
+      "y": 480,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-design",
+      "type": "text",
+      "text": "## Design Layers\n\nSemantics, implementation-pack, design governance",
+      "x": 680,
+      "y": 480,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-build",
+      "type": "text",
+      "text": "## Build Layers\n\nGulp src → dist (workspace execution)",
+      "x": 340,
+      "y": 640,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-triumph",
+      "type": "text",
+      "text": "## Triumph\n\n`triumph-manipulator-landing` + workspaces v5/v6",
+      "x": 0,
+      "y": 640,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-wf-isbd-note",
+      "type": "text",
+      "text": "## ISBD\n\n**SAFE UNKNOWN** — no `ISBD` execution case found in repo at export time.\n\nAdd node when case is registered.",
+      "x": 680,
+      "y": 640,
+      "width": 280,
+      "height": 110,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-wf-root-core",
+      "fromNode": "n-wf-root",
+      "fromSide": "right",
+      "toNode": "n-wf-core",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-root-ext",
+      "fromNode": "n-wf-root",
+      "fromSide": "right",
+      "toNode": "n-wf-extended",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-root-forge",
+      "fromNode": "n-wf-root",
+      "fromSide": "right",
+      "toNode": "n-wf-forge",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-core-gulp",
+      "fromNode": "n-wf-core",
+      "fromSide": "right",
+      "toNode": "n-wf-gulp",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "foundation"
+    },
+    {
+      "id": "e-wf-forge-gulp",
+      "fromNode": "n-wf-forge",
+      "fromSide": "right",
+      "toNode": "n-wf-gulp",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "overlays"
+    },
+    {
+      "id": "e-wf-gulp-build",
+      "fromNode": "n-wf-gulp",
+      "fromSide": "right",
+      "toNode": "n-wf-build",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "implements"
+    },
+    {
+      "id": "e-wf-ref-build",
+      "fromNode": "n-wf-ref-ws",
+      "fromSide": "right",
+      "toNode": "n-wf-build",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-tpl-build",
+      "fromNode": "n-wf-client-tpl",
+      "fromSide": "right",
+      "toNode": "n-wf-build",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "adoption"
+    },
+    {
+      "id": "e-wf-design-build",
+      "fromNode": "n-wf-design",
+      "fromSide": "right",
+      "toNode": "n-wf-build",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "handoff"
+    },
+    {
+      "id": "e-wf-qa-build",
+      "fromNode": "n-wf-qa",
+      "fromSide": "right",
+      "toNode": "n-wf-build",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "gates"
+    },
+    {
+      "id": "e-wf-prod-triumph",
+      "fromNode": "n-wf-prod-cases",
+      "fromSide": "right",
+      "toNode": "n-wf-triumph",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-triumph-qa",
+      "fromNode": "n-wf-triumph",
+      "fromSide": "right",
+      "toNode": "n-wf-qa",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "calibration"
+    },
+    {
+      "id": "e-wf-ext-qa",
+      "fromNode": "n-wf-extended",
+      "fromSide": "right",
+      "toNode": "n-wf-qa",
+      "toSide": "left",
+      "toEnd": "arrow"
+    }
+  ]
+}

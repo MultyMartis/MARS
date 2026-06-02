@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "n-orca-root",
+      "type": "text",
+      "text": "# ORCA\n\nHuman-supervised PPC toolkit\n`projects/orca/`",
+      "x": 40,
+      "y": 200,
+      "width": 260,
+      "height": 100,
+      "color": "3"
+    },
+    {
+      "id": "n-orca-fast",
+      "type": "text",
+      "text": "## Fast Path\n\n`fast-path/` — default session entry",
+      "x": 380,
+      "y": 40,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-orca-review",
+      "type": "text",
+      "text": "## Review\n\nStarter Core, assembly areas, live session reports",
+      "x": 380,
+      "y": 200,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-orca-ppc",
+      "type": "text",
+      "text": "## PPC\n\nCampaign QA, content packs, Triumph PPC instances",
+      "x": 380,
+      "y": 360,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-orca-triumph",
+      "type": "text",
+      "text": "## Triumph\n\nKrasnodar landing QA, route registry, exports",
+      "x": 720,
+      "y": 120,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-orca-validate",
+      "type": "text",
+      "text": "## Validation / Freeze\n\n`freeze/`, URL registry sync, cross-negative QA",
+      "x": 720,
+      "y": 280,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-orca-mig",
+      "type": "text",
+      "text": "## MIG Handoff\n\nHuman-only groundtruth consumption\n`contracts/mig-orca-*`",
+      "x": 720,
+      "y": 440,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-orca-factory",
+      "type": "text",
+      "text": "## Factory Handoff\n\nOptional semantic / landing handoff artifacts",
+      "x": 720,
+      "y": 600,
+      "width": 280,
+      "height": 100
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-orca-fast",
+      "fromNode": "n-orca-root",
+      "fromSide": "right",
+      "toNode": "n-orca-fast",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "default"
+    },
+    {
+      "id": "e-orca-review",
+      "fromNode": "n-orca-root",
+      "fromSide": "right",
+      "toNode": "n-orca-review",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-orca-ppc",
+      "fromNode": "n-orca-root",
+      "fromSide": "right",
+      "toNode": "n-orca-ppc",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-orca-triumph",
+      "fromNode": "n-orca-ppc",
+      "fromSide": "right",
+      "toNode": "n-orca-triumph",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-orca-validate",
+      "fromNode": "n-orca-review",
+      "fromSide": "right",
+      "toNode": "n-orca-validate",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "before platform work"
+    },
+    {
+      "id": "e-orca-mig",
+      "fromNode": "n-orca-mig",
+      "fromSide": "left",
+      "toNode": "n-orca-root",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "upstream"
+    },
+    {
+      "id": "e-orca-factory",
+      "fromNode": "n-orca-validate",
+      "fromSide": "right",
+      "toNode": "n-orca-factory",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "optional downstream"
+    },
+    {
+      "id": "e-orca-factory-triumph",
+      "fromNode": "n-orca-factory",
+      "fromSide": "right",
+      "toNode": "n-orca-triumph",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "landing implementation"
+    }
+  ]
+}

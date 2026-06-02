@@ -1,0 +1,208 @@
+{
+  "nodes": [
+    {
+      "id": "n-inf-brain",
+      "type": "text",
+      "text": "# Active Brain\n\n`C:\\AI MARS`\n\nGit workspace root — governance, projects, workspaces, docs.",
+      "x": 40,
+      "y": 80,
+      "width": 320,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "n-inf-storage-root",
+      "type": "text",
+      "text": "# Storage Layer\n\n`C:\\AI MARS STORAGE`\n\nBulk out-of-git — **not** a second repo.",
+      "x": 480,
+      "y": 80,
+      "width": 320,
+      "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "n-inf-repo",
+      "type": "text",
+      "text": "## repository\n\nSingle MARS git working copy",
+      "x": 40,
+      "y": 260,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-logs",
+      "type": "text",
+      "text": "## logs\n\n`logs/` lifecycle, survivability, infrastructure",
+      "x": 40,
+      "y": 400,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-workspaces",
+      "type": "text",
+      "text": "## workspaces\n\nLane A execution loci (`workspaces/*`)",
+      "x": 40,
+      "y": 540,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-archive-cand",
+      "type": "text",
+      "text": "## archive candidates\n\n`archive/`, heavy imports, migration residue",
+      "x": 40,
+      "y": 680,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-storage-repo",
+      "type": "text",
+      "text": "## repository (bulk)\n\nPromoted baselines, snapshots per system registry",
+      "x": 480,
+      "y": 260,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-storage-logs",
+      "type": "text",
+      "text": "## logs (bulk)\n\nDrill exports, large run evidence (when used)",
+      "x": 480,
+      "y": 400,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-storage-ws",
+      "type": "text",
+      "text": "## workspaces (bulk)\n\nSite archives, temp extracts",
+      "x": 480,
+      "y": 540,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-storage-arch",
+      "type": "text",
+      "text": "## archive candidates\n\nCold paths (operator-defined)",
+      "x": 480,
+      "y": 680,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "n-inf-external",
+      "type": "text",
+      "text": "## external systems\n\nn8n · WordPress/Beget · OpenCart hosting · Telegram",
+      "x": 260,
+      "y": 840,
+      "width": 360,
+      "height": 100
+    },
+    {
+      "id": "n-inf-doc-storage",
+      "type": "text",
+      "text": "## In-repo `storage/` docs\n\nArchitecture contracts only — **not** `C:\\AI MARS STORAGE`",
+      "x": 260,
+      "y": 980,
+      "width": 360,
+      "height": 90,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-brain-repo",
+      "fromNode": "n-inf-brain",
+      "fromSide": "right",
+      "toNode": "n-inf-repo",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-brain-logs",
+      "fromNode": "n-inf-brain",
+      "fromSide": "right",
+      "toNode": "n-inf-logs",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-brain-ws",
+      "fromNode": "n-inf-brain",
+      "fromSide": "right",
+      "toNode": "n-inf-workspaces",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-brain-arch",
+      "fromNode": "n-inf-brain",
+      "fromSide": "right",
+      "toNode": "n-inf-archive-cand",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-storage-repo",
+      "fromNode": "n-inf-storage-root",
+      "fromSide": "right",
+      "toNode": "n-inf-storage-repo",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-storage-logs",
+      "fromNode": "n-inf-storage-root",
+      "fromSide": "right",
+      "toNode": "n-inf-storage-logs",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-storage-ws",
+      "fromNode": "n-inf-storage-root",
+      "fromSide": "right",
+      "toNode": "n-inf-storage-ws",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-storage-arch",
+      "fromNode": "n-inf-storage-root",
+      "fromSide": "right",
+      "toNode": "n-inf-storage-arch",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-brain-storage",
+      "fromNode": "n-inf-brain",
+      "fromSide": "right",
+      "toNode": "n-inf-storage-root",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "metadata ↔ bulk"
+    },
+    {
+      "id": "e-ws-ext",
+      "fromNode": "n-inf-workspaces",
+      "fromSide": "bottom",
+      "toNode": "n-inf-external",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "deploy target"
+    },
+    {
+      "id": "e-brain-doc",
+      "fromNode": "n-inf-brain",
+      "fromSide": "bottom",
+      "toNode": "n-inf-doc-storage",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "disambiguate"
+    }
+  ]
+}
