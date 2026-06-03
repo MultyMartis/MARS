@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1",
+  "description": "MIG Pilot #1 seed query set — unoptimized, not clustered. For charter and future multi-query expansion only.",
+  "pilot": {
+    "client_project": "Триумф",
+    "market": "Грузотакси",
+    "region": "Краснодар",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "primary_query_for_mvp": "грузотакси Краснодар",
+  "seed_queries": [
+    "грузотакси Краснодар",
+    "грузовое такси Краснодар",
+    "заказать грузотакси Краснодар",
+    "грузоперевозки Краснодар",
+    "перевозка мебели Краснодар",
+    "газель Краснодар грузоперевозки",
+    "вызов газели Краснодар",
+    "грузоперевозки по Краснодару",
+    "перевозка холодильника Краснодар",
+    "недорогое грузотакси Краснодар",
+    "грузотакси цена Краснодар",
+    "переезд квартира Краснодар газель"
+  ],
+  "query_intent_notes": {
+    "head_commercial": [
+      "грузотакси Краснодар",
+      "грузовое такси Краснодар",
+      "заказать грузотакси Краснодар"
+    ],
+    "category_broad": [
+      "грузоперевозки Краснодар",
+      "грузоперевозки по Краснодару"
+    ],
+    "use_case": [
+      "перевозка мебели Краснодар",
+      "перевозка холодильника Краснодар",
+      "переезд квартира Краснодар газель"
+    ],
+    "vehicle_specific": [
+      "газель Краснодар грузоперевозки",
+      "вызов газели Краснодар"
+    ],
+    "price_modifier": [
+      "недорогое грузотакси Краснодар",
+      "грузотакси цена Краснодар"
+    ]
+  },
+  "operator_rules": [
+    "Do not reorder for SEO optimization in this pilot prep phase",
+    "Do not cluster or dedupe automatically",
+    "Pilot MVP executes first seed only unless multi_query charter is enabled later",
+    "Additional seeds may be captured in follow-up sessions"
+  ],
+  "research_repository_context": "No dedicated грузотакси Краснодар research pack in repo. Triumph client artifacts exist for manipulator niche only — not authoritative for this market."
+}
