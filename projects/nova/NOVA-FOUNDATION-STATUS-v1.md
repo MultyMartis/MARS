@@ -1,8 +1,8 @@
 # NOVA Foundation Status v1
 
 **Lane:** B · External Systems  
-**Snapshot date:** 2026-05-31  
-**Status:** Foundation complete · Implementation not started
+**Snapshot date:** 2026-06-04  
+**Status:** Foundation complete · Reality Root recovered · Repository backed · Implementation not started
 
 ---
 
@@ -48,9 +48,9 @@ All layers are **documentation-first design artifacts**. None constitute runtime
 
 | # | Artifact | Expected path | In-repo |
 |---|----------|---------------|---------|
-| 1 | NOVA Production Model v1 | `foundation/NOVA-PRODUCTION-MODEL-v1.md` | **Not committed** |
-| 2 | NOVA Mobile Product Taxonomy v1 | `foundation/NOVA-MOBILE-PRODUCT-TAXONOMY-v1.md` | **Not committed** |
-| 3 | NOVA Product Class Registry v1 | `foundation/NOVA-PRODUCT-CLASS-REGISTRY-v1.md` | **Not committed** |
+| 1 | NOVA Production Model v1 | `foundation/NOVA-PRODUCTION-MODEL-v1.md` | Yes (recovered 2026-06-04) |
+| 2 | NOVA Mobile Product Taxonomy v1 | `foundation/NOVA-MOBILE-PRODUCT-TAXONOMY-v1.md` | Yes (recovered 2026-06-04) |
+| 3 | NOVA Product Class Registry v1 | `foundation/NOVA-PRODUCT-CLASS-REGISTRY-v1.md` | Yes (recovered 2026-06-04) |
 | 4 | NOVA Mobile Product Lifecycle Model v1 | `foundation/NOVA-MOBILE-PRODUCT-LIFECYCLE-MODEL-v1.md` | Yes |
 | 5 | NOVA Decision Reality Model v1 | `foundation/NOVA-DECISION-REALITY-MODEL-v1.md` | Yes |
 | 6 | NOVA Contract Reality Model v1 | `foundation/NOVA-CONTRACT-REALITY-MODEL-v1.md` | Yes |
@@ -60,7 +60,7 @@ All layers are **documentation-first design artifacts**. None constitute runtime
 | 10 | NOVA Agent Reality Model v1 | `foundation/NOVA-AGENT-REALITY-MODEL-v1.md` | Yes |
 | 11 | NOVA Automation Reality Model v1 | `foundation/NOVA-AUTOMATION-REALITY-MODEL-v1.md` | Yes |
 
-Artifacts 1–3 are **conceptually approved** (prior design sessions) and referenced consistently by artifacts 4–11. Committed evidence covers the full RBM descent from Lifecycle through Automation.
+Artifacts 1–3 were **recovered from Cursor transcripts** and promoted to repository evidence on 2026-06-04 (Recovery Pass v1). All eleven foundation artifacts are now present under `foundation/` and referenced consistently across the RBM chain.
 
 ---
 
@@ -76,7 +76,7 @@ The NOVA RBM vocabulary chain is **complete at v1**:
 
 ## Known limitations
 
-1. **Three Reality-layer markdown files not committed** — Production Model, Taxonomy, and Product Class Registry exist as approved design sessions but are absent from `projects/nova/foundation/`. Cross-references in committed artifacts assume their content.
+1. **Downstream cross-reference wording** — artifacts 4–11 still reference «prior design sessions» for parent Reality artifacts; optional sync pass, not blocking Agent Cards Charter.
 2. **No Agent Cards** — agent reality vocabulary exists; agent card specification and core agent set do not.
 3. **No workflow execution binding** — Workflow Reality Model defines domains; Production Model P0–P12 execution binding is planned, not designed in implementation form.
 4. **No pilot or production path** — no first product, no validation review, no operational standards.
@@ -88,7 +88,7 @@ The NOVA RBM vocabulary chain is **complete at v1**:
 
 | Topic | Status |
 |-------|--------|
-| Exact content of uncommitted Production Model / Taxonomy / Registry files | **UNKNOWN** — not provable from repo; would verify by human commit of prior-session artifacts |
+| Production Model / Taxonomy / Registry content fidelity vs original design sessions | **Recovered** — promoted from transcripts `06ecf323`, `15bc9485`, `34bc9bde`; git checkpoint `NOVA Reality Root Recovery v1` |
 | MASTER CORE registration outcome | **UNKNOWN** — depends on MASTER CORE CHAT review |
 | Timeline for Phase 1 (Implementation Descent) | **UNKNOWN** — not scheduled |
 | First product pilot selection | **UNKNOWN** |
@@ -100,6 +100,7 @@ The NOVA RBM vocabulary chain is **complete at v1**:
 | Area | State |
 |------|-------|
 | Foundation ontology (RBM v1) | Complete (design-only) |
+| Foundation repository evidence | Complete — 11/11 artifacts under `foundation/` |
 | Closeout documentation | This snapshot |
 | Agent Cards Charter v1 | Next planned artifact — not started |
 | Runtime / tooling / deployment | Not started |
@@ -113,8 +114,8 @@ The NOVA RBM vocabulary chain is **complete at v1**:
 **Ready for:**
 
 - MASTER CORE registration (documentation package)
-- Phase 1 charter work starting with Agent Cards Charter v1
-- Stable git checkpoint before implementation descent
+- **Agent Cards Charter v1** — next approved activity
+- Implementation descent (after Agent Cards Charter)
 
 **Not ready for:**
 
@@ -122,8 +123,8 @@ The NOVA RBM vocabulary chain is **complete at v1**:
 - Skipping Agent Cards layer into implementation
 - Production delivery without pilot and validation phases
 
-**Pre-implementation follow-up (recommended, not blocking closeout):** commit the three prior-session Reality artifacts to `foundation/` to align repo evidence with approved artifact list.
+**Pre-implementation follow-up (optional, not blocking):** cross-reference pass to replace «prior design sessions» wording in downstream artifacts 4–11.
 
 ---
 
-*Official current-state snapshot — NOVA Foundation v1 closeout.*
+*Official current-state snapshot — NOVA Foundation v1 · Reality Root checkpoint.*
