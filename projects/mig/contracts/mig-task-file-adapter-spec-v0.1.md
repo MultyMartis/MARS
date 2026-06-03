@@ -97,7 +97,7 @@ v0.1 adapter **collapses** acceptance and binding into one `runMigSession()` cal
 | Validation | `VALIDATION_ERROR` | → `failed/` | error sidecar + `details[]` |
 | Filename mismatch | `FILENAME_MISMATCH` | → `failed/` | error sidecar |
 | Duplicate `request_id` | `DUPLICATE_REQUEST` | → `failed/` | error sidecar + registry entry |
-| Unsupported type | `VALIDATION_ERROR` | → `failed/` | only `serp_capture` in v0.1 |
+| Unsupported type | `VALIDATION_ERROR` | → `failed/` | only `serp_capture` and `groundtruth_run` in v0.1 |
 | Spine failure | `VALIDATION_ERROR` / `RUNTIME_SESSION_FAILED` | → `failed/` | error sidecar |
 | Filesystem error | `ADAPTER_ERROR` | best-effort | stderr JSON |
 
@@ -124,6 +124,15 @@ v0.1 adapter **collapses** acceptance and binding into one `runMigSession()` cal
 
 - Canonical Research Request JSON (`schema_version: "0"`) **or** legacy flat (spine fields).
 - Written by submitter; adapter never mutates source in `requests/` except move.
+
+### Supported `request_type` values (v0.1)
+
+| Type | Adapter | Runtime MVP |
+|------|---------|-------------|
+| `serp_capture` | **Accepted** | Single-query SERP capture → draft pack |
+| `groundtruth_run` | **Accepted** | Website + landing passes when `capture_profile` requires |
+
+Other contract types (`pack_retrieval`, `session_resume`, `competitor_discovery`, …) remain **unsupported** by the Task File Adapter in v0.1 → `VALIDATION_ERROR`.
 
 ### Session folder
 

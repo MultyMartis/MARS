@@ -3,7 +3,7 @@
 const crypto = require("crypto");
 
 const ADAPTER_VERSION = "0.1";
-const SUPPORTED_V0_TYPES = new Set(["serp_capture"]);
+const SUPPORTED_V0_TYPES = new Set(["serp_capture", "groundtruth_run"]);
 
 function generateRequestId(now = new Date()) {
   const date = now.toISOString().slice(0, 10).replace(/-/g, "");
