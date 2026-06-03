@@ -56,3 +56,7 @@ Use this model when adding or classifying new MARS documentation packs. It compl
 - [external-system-boundaries.md](external-system-boundaries.md)
 - [adapter-and-bridge-boundaries.md](adapter-and-bridge-boundaries.md)
 - [registry-architecture.md](registry-architecture.md)
+- [mars-reality-index-v0.md](mars-reality-index-v0.md) — operational vs conceptual buckets (GitGuard row)
+- [operational-survivability.md](operational-survivability.md) — survivability discipline spine
+- [../projects/mars-survivability/registries/gitguard-system-entry-v1.md](../projects/mars-survivability/registries/gitguard-system-entry-v1.md) — **GitGuard** **REGISTERED** Repository Survivability Layer via `mars-survivability` (**not** `projects/gitguard/`, **not** `project_id` row)
+- [../logs/cleanup/actions/gitguard-registration-v1.md](../logs/cleanup/actions/gitguard-registration-v1.md) — Wave 2B registration evidence

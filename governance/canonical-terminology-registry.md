@@ -216,15 +216,30 @@ A row in `agents/registry.md`, `tools/registry.md`, `registry/project-registry.m
 
 ---
 
+### GitGuard
+
+| Field | Value |
+|-------|-------|
+| **classification** | **REGISTERED** cross-cutting survivability concept (**OPERATIONAL** human-operated implementation) |
+| **type (documentation)** | **Repository Survivability Layer** — advisory framework under `projects/mars-survivability/` |
+| **authority** | Human operator; human-invoked validator/helpers |
+| **purpose** | Checkpoint, freeze, rollback, baseline visibility; backup intelligence; release traceability — **not** autonomous enforcement |
+| **allowed usage** | Pre-destructive checks; snapshot discipline; rollback map maintenance; cross-link to lifecycle/releases |
+| **forbidden usage** | Autonomous backup product; `project_id` without charter; `projects/gitguard/` pack implied as shipped; replacement for git hosting |
+| **evidence requirement** | [../projects/mars-survivability/registries/gitguard-system-entry-v1.md](../projects/mars-survivability/registries/gitguard-system-entry-v1.md); [../logs/cleanup/actions/gitguard-registration-v1.md](../logs/cleanup/actions/gitguard-registration-v1.md) |
+| **operational status** | **REGISTERED** Wave 2B — **not** separate registry row |
+
+---
+
 ### IdeaBox
 
 | Field | Value |
 |-------|-------|
 | **classification** | **OPERATIONAL** (human-operated filesystem discipline) |
-| **type (documentation)** | Filesystem-backed operational continuity workflow — capture of ideas, lightweight notes, anti-entropy hygiene |
+| **type (documentation)** | **Incubation Layer** (optional) — filesystem-backed continuity workflow; use when idea exists but implementation is deferred |
 | **authority** | **Human-operated** — operator chooses paths, edits, merges, deletions; Cursor assists only when instructed |
 | **purpose** | Continuity across sessions, idea capture, operational memory hygiene — via explicit markdown, not implicit state |
-| **allowed usage** | Record notes under `continuity/**`; use protocols/templates as conventions; reference from governance as **optional** complement to REPORT/registry discipline |
+| **allowed usage** | Record notes under `continuity/**`; use protocols/templates as conventions; reference as **optional** incubation — **direct** program/governance creation remains valid |
 | **forbidden usage** | “IdeaBox remembers”; autonomous agent memory; hidden runtime state; automatic governance or registry mutation; orchestration or semantic-graph narratives tied to IdeaBox |
 | **evidence requirement** | Cited markdown paths under `continuity/`; chat markers (`/ideabox`, etc.) **≠** executed commands |
 | **operational status** | **OPERATIONAL** as **discipline + docs** only — **not** a shipped MARS subsystem |

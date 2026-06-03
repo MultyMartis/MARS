@@ -36,8 +36,9 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
 | **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
 | **HomeGateway v4.ai** | — | — | ✓ personal operational cockpit concept (static-first) | — | — | ✓ draft/planning docs |
-| **GitGuard** | — | — | ✓ name only | **UNKNOWN** | — | entity-model example |
-| **Continuity / IdeaBox** | ✓ capture | — | protocols | — | — | ✓ not `project_id` |
+| **GitGuard** | ✓ advisory + helpers | — | ✓ entity-model name | — | — | ✓ mars-survivability pack |
+| **Continuity / IdeaBox** | ✓ incubation (optional) | — | protocols | — | — | ✓ not `project_id` |
+| **Incoming** | ✓ active staging | — | hybrid placement | ✓ bulk (post-triage) | — | ✓ intake charter |
 | **Triumph** | ✓ pack + workspace | V3 charter | reference case | hosting TBD | V2 drift refs | ✓ not deployed |
 
 ---
@@ -254,10 +255,12 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **conceptual** | Example **Program / Operational System** name in [system-entity-model.md](system-entity-model.md). |
-| **documentation-only** | Taxonomy placeholder only. |
+| **operational** | **REGISTERED** **Repository Survivability Layer** — advisory + human-invoked helpers under [../projects/mars-survivability/](../projects/mars-survivability/) (G0–G4 documented; no autonomous product). |
+| **conceptual** | Example **Program / Operational System** name in [system-entity-model.md](system-entity-model.md) — **implemented** via survivability pack, not separate `projects/gitguard/`. |
 
-**Not:** registered project, live pack, or MARS integration — **SAFE UNKNOWN** until `projects/gitguard/` + registry row exist.
+**Not:** `project_id` row, `projects/gitguard/` pack, or autonomous Backup/Checkpoint/Rollback product.
+
+**SoT:** [../projects/mars-survivability/registries/gitguard-system-entry-v1.md](../projects/mars-survivability/registries/gitguard-system-entry-v1.md) · [../registry/project-registry.md](../registry/project-registry.md) (cross-cutting REGISTERED) · [ecosystem-topology-index.md](ecosystem-topology-index.md) § GitGuard · [../logs/cleanup/actions/gitguard-registration-v1.md](../logs/cleanup/actions/gitguard-registration-v1.md)
 
 ---
 
@@ -265,12 +268,25 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **operational** | Human-operated capture under `continuity/`; manual [master-index.md](../continuity/registry/master-index.md). |
+| **operational** | **Incubation Layer** (optional) — human-operated capture under `continuity/`; manual [master-index.md](../continuity/registry/master-index.md). |
 | **documentation-only** | Protocols markdown — **not** persisted memory product. |
 
-**Not:** `project_id` row; autonomous memory; semantic graph; governance auto-mutation.
+**Not:** `project_id` row; mandatory entry path; autonomous memory; semantic graph; governance auto-mutation.
 
-**SoT:** [../continuity/README.md](../continuity/README.md) · [context-continuity-rules.md](context-continuity-rules.md)
+**SoT:** [../continuity/README.md](../continuity/README.md) · [context-continuity-rules.md](context-continuity-rules.md) · [../logs/cleanup/actions/ideabox-alignment-v1.md](../logs/cleanup/actions/ideabox-alignment-v1.md)
+
+---
+
+## Incoming (ecosystem intake)
+
+| Bucket | Reality |
+|--------|---------|
+| **operational** | **Active Incoming** in Active Brain — `incoming/mig/` operational; other subfolders = triage/stub/historical. |
+| **external** | **Historical Bulk** toward Storage Layer / Cold Brain **after** operator triage — **not** moved in Wave 2B. |
+
+**Not:** registry row, runtime pipeline, or trusted SoT.
+
+**SoT:** [../incoming/README.md](../incoming/README.md) · [ecosystem-topology-index.md](ecosystem-topology-index.md) § Incoming · [../logs/cleanup/actions/incoming-hybrid-alignment-v1.md](../logs/cleanup/actions/incoming-hybrid-alignment-v1.md)
 
 ---
 

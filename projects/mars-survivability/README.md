@@ -70,7 +70,7 @@ It **extends** them with incident-informed contracts, protocols, registries, and
 
 ## GitGuard posture
 
-**GitGuard** is named in [governance/system-entity-model.md](../../governance/system-entity-model.md) but has **no** `projects/gitguard/` pack in-repo ([governance/mars-reality-index-v0.md](../../governance/mars-reality-index-v0.md)). Evolution direction is specified in [contracts/gitguard-survivability-evolution-v1.md](contracts/gitguard-survivability-evolution-v1.md) as **design contract only**.
+**GitGuard** is **REGISTERED** (Wave 2B) as **Repository Survivability Layer** — implemented in this pack ([gitguard-system-entry-v1.md](registries/gitguard-system-entry-v1.md)); **no** `projects/gitguard/` pack or separate `project_id`. Evolution: [contracts/gitguard-survivability-evolution-v1.md](contracts/gitguard-survivability-evolution-v1.md). Registration evidence: [logs/cleanup/actions/gitguard-registration-v1.md](../../logs/cleanup/actions/gitguard-registration-v1.md).
 
 ---
 

@@ -2,6 +2,15 @@
 
 **Normative role:** This file is the **single source of truth** for **documented lifecycle events** in the MARS repository: a human- and tool-maintained **append-only** log. New information is added by **appending** new rows at the end of the event table. **Do not** delete or rewrite past rows except where repository policy explicitly allows correction of non-factual errors (e.g. typos), and if so, record a follow-up **event_type** explaining the correction.
 
+**Operating model (Wave 2B):**
+
+| Mode | Purpose |
+|------|---------|
+| **Key Event History** (default) | Material registry, governance, and stage changes — append `event_id` rows |
+| **Lifecycle Tracking Mode** (optional) | Long-running human operations needing a durable temporal trail in this file — operator choice |
+
+**Normal work** (task REPORTs, routine cleanup evidence, program notes) **does not** require a lifecycle row. **Long operations** (e.g. multi-session stabilization) **may** use Lifecycle Tracking Mode. Distinct from `logs/cleanup/` (audit) and `logs/releases/` (publication). Evidence: [logs/cleanup/actions/lifecycle-alignment-v1.md](cleanup/actions/lifecycle-alignment-v1.md).
+
 **Version:** v0 (schema stable unless superseded by a governance revision).
 
 ---
@@ -40,6 +49,11 @@ Each log entry **must** include:
 | evt-2026-0014 | 2026-05-11T20:00:00Z | mars-website-factory | registry.updated | **Website Factory design / UX / QA agent cards v0** (documentation-only checkpoint): added IA, UX Structure, AI Designer, Wireframe Generator, Full Design Generator, Design QA, SEO QA, and Conversion QA cards under `agents/cards/`; updated `agents/registry.md` §4.1, `projects/mars-website-factory/agent-map.md`, `projects/mars-website-factory/README.md`, and `governance/master-build-map.md` for cross-references; **no** runtime implementation or autonomy claims; **excluded** from commit scope: `mars-runtime/adapters/seo-content-agent-adapter.js`, `mars-runtime/runtime/run-seo-content-agent-test.js`, `projects/seo-content-agent/integrations/`. |
 | evt-2026-0015 | 2026-05-14T00:00:00Z | governance | governance.doc_truth_repair | **Phase S0 — truth repair (documentation, governance + tools only):** root `README.md` aligned with this lifecycle log (Stages **9–15** documentation **milestones** already recorded **2026-04-28**) and `governance/master-build-map.md` per-phase tables; executive anchor clarified in master build map; added `governance/runtime-registry-boundaries.md`; `governance/enforcement/` (Phase S1 **documentation-only** aids); governance **S2–S7** semantics and reality-audit framework docs; operational helper pilots and helper stabilization/review under `tools/`; **no** full runtime shipped, **no** control-plane or orchestration implementation claims, **no** workspaces changes. |
 | evt-2026-0016 | 2026-05-19T20:00:00Z | governance | governance.structural_stabilization_phase_2 | **Structural Stabilization Phase 2 (documentation only):** added `governance/mars-reality-index-v0.md`, `lifecycle-synchronization-review-v0.md`, `website-factory-navigation-compression-strategy-v0.md`, `runtime-mythology-pressure-review-v0.md`, `cross-system-clarity-review-v0.md`; lifecycle/registry gap findings recorded for human backfill; **no** Factory rewrite, **no** runtime implementation, **no** governance expansion beyond stabilization artefacts. |
+| evt-2026-0017 | 2026-05-10T12:00:00Z | metabot-seo-content-agent | registry.updated | Canonical MetaBOT documentation pack registered **active** in `registry/project-registry.md`; external n8n execution; legacy `seo-content-agent` superseded for new docs; **no** runtime added in-repo. Timestamp aligned to registry row date (approximate session time — see `logs/cleanup/actions/lifecycle-backfill-review-v1.md`). |
+| evt-2026-0018 | 2026-05-13T12:00:00Z | triumph-manipulator-landing | registry.updated | Triumph project pack + workspace placeholder registered **planned**; Website Factory reference case linkage; **not** deployed site. Timestamp aligned to registry row date (approximate session time — see `logs/cleanup/actions/lifecycle-backfill-review-v1.md`). |
+| evt-2026-0019 | 2026-05-18T12:00:00Z | orca | registry.updated | ORCA registered **active** as human-supervised PPC operational toolkit; runtime **excluded** per registry boundaries. Timestamp aligned to registry row date (approximate session time — see `logs/cleanup/actions/lifecycle-backfill-review-v1.md`). |
+| evt-2026-0020 | 2026-05-19T12:00:00Z | wpilot | registry.updated | WPilot registered **active** (External Systems lane); Phase 1 MVP documentation; plugin bridge **planned**; **not** MARS runtime. Timestamp aligned to registry row date (approximate session time — see `logs/cleanup/actions/lifecycle-backfill-review-v1.md`). |
+| evt-2026-0021 | 2026-05-19T18:00:00Z | governance | governance.structural_stabilization_phase_1 | Phase 1 stabilization documentation pass (topology index, Factory navigation compression review, Forge transition notes, external-systems relationship map, structural coherence audit) — **documentation only**; per `governance/lifecycle-synchronization-review-v0.md` backlog. Timestamp approximate — exact operator session time **SAFE UNKNOWN**. |
 
 ---
 

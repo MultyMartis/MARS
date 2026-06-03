@@ -103,9 +103,27 @@
     {
       "id": "n-prog-triumph",
       "type": "text",
-      "text": "## Triumph\n\n\nReference / production pack\n`projects/triumph-manipulator-landing/`",
+      "text": "## Triumph\n\n\nClient program pack + Factory execution case\n`projects/triumph-manipulator-landing/`",
       "x": 360,
       "y": 530,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-gitguard",
+      "type": "text",
+      "text": "## GitGuard\n\n\n**REGISTERED** · Repository Survivability Layer\nEntry: `mars-survivability/registries/gitguard-system-entry-v1.md`\n**Not** `projects/gitguard/` · **no** `project_id`",
+      "x": 680,
+      "y": 530,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-ideabox",
+      "type": "text",
+      "text": "## IdeaBox\n\n\n**Incubation Layer** (optional)\n`continuity/` — human-maintained",
+      "x": 40,
+      "y": 680,
       "width": 280,
       "height": 120
     }
@@ -217,6 +235,15 @@
       "toSide": "bottom",
       "toEnd": "arrow",
       "label": "surface layer"
+    },
+    {
+      "id": "e-surv-gitguard",
+      "fromNode": "n-prog-survivability",
+      "fromSide": "right",
+      "toNode": "n-prog-gitguard",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "REGISTERED entry"
     }
   ]
 }

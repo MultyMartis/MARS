@@ -3,29 +3,49 @@
     {
       "id": "n-inf-brain",
       "type": "text",
-      "text": "# Active Brain\n\n`C:\\AI MARS`\n\nGit workspace root — governance, projects, workspaces, docs.",
+      "text": "# Active Brain\n\n`C:\\AI MARS`\n\nGit workspace root — governance, projects, workspaces, docs.\nIncludes **Active Incoming** (`incoming/`).",
       "x": 40,
       "y": 80,
       "width": 320,
-      "height": 120,
+      "height": 130,
       "color": "6"
     },
     {
       "id": "n-inf-storage-root",
       "type": "text",
-      "text": "# Storage Layer\n\n`C:\\AI MARS STORAGE`\n\nBulk out-of-git — **not** a second repo.",
+      "text": "# Storage Layer\n\n`C:\\AI MARS STORAGE`\n\nBulk out-of-git — **not** a second repo.\n**Historical Bulk** after operator triage.",
       "x": 480,
       "y": 80,
       "width": 320,
-      "height": 120,
+      "height": 130,
       "color": "2"
+    },
+    {
+      "id": "n-inf-incoming-active",
+      "type": "text",
+      "text": "## Active Incoming\n\n`incoming/` — untrusted staging in Active Brain\nHybrid model · operator triage",
+      "x": 40,
+      "y": 240,
+      "width": 280,
+      "height": 100,
+      "color": "5"
+    },
+    {
+      "id": "n-inf-incoming-bulk",
+      "type": "text",
+      "text": "## Historical Bulk\n\nRetired raw packs in Storage Layer\n**After** triage sign-off — not default in `incoming/`",
+      "x": 480,
+      "y": 240,
+      "width": 280,
+      "height": 100,
+      "color": "5"
     },
     {
       "id": "n-inf-repo",
       "type": "text",
       "text": "## repository\n\nSingle MARS git working copy",
       "x": 40,
-      "y": 260,
+      "y": 380,
       "width": 280,
       "height": 100
     },
@@ -34,7 +54,7 @@
       "type": "text",
       "text": "## logs\n\n`logs/` lifecycle, survivability, infrastructure",
       "x": 40,
-      "y": 400,
+      "y": 520,
       "width": 280,
       "height": 100
     },
@@ -43,16 +63,16 @@
       "type": "text",
       "text": "## workspaces\n\nLane A execution loci (`workspaces/*`)",
       "x": 40,
-      "y": 540,
+      "y": 660,
       "width": 280,
       "height": 100
     },
     {
       "id": "n-inf-archive-cand",
       "type": "text",
-      "text": "## archive candidates\n\n`archive/`, heavy imports, migration residue",
+      "text": "## archive\n\n`archive/` retired trees (not `incoming/`)",
       "x": 40,
-      "y": 680,
+      "y": 800,
       "width": 280,
       "height": 100
     },
@@ -61,7 +81,7 @@
       "type": "text",
       "text": "## repository (bulk)\n\nPromoted baselines, snapshots per system registry",
       "x": 480,
-      "y": 260,
+      "y": 380,
       "width": 280,
       "height": 100
     },
@@ -70,7 +90,7 @@
       "type": "text",
       "text": "## logs (bulk)\n\nDrill exports, large run evidence (when used)",
       "x": 480,
-      "y": 400,
+      "y": 520,
       "width": 280,
       "height": 100
     },
@@ -79,16 +99,16 @@
       "type": "text",
       "text": "## workspaces (bulk)\n\nSite archives, temp extracts",
       "x": 480,
-      "y": 540,
+      "y": 660,
       "width": 280,
       "height": 100
     },
     {
       "id": "n-inf-storage-arch",
       "type": "text",
-      "text": "## archive candidates\n\nCold paths (operator-defined)",
+      "text": "## archive (bulk)\n\nCold paths (operator-defined)",
       "x": 480,
-      "y": 680,
+      "y": 800,
       "width": 280,
       "height": 100
     },
@@ -97,7 +117,7 @@
       "type": "text",
       "text": "## external systems\n\nn8n · WordPress/Beget · OpenCart hosting · Telegram",
       "x": 260,
-      "y": 840,
+      "y": 960,
       "width": 360,
       "height": 100
     },
@@ -106,13 +126,50 @@
       "type": "text",
       "text": "## In-repo `storage/` docs\n\nArchitecture contracts only — **not** `C:\\AI MARS STORAGE`",
       "x": 260,
-      "y": 980,
+      "y": 1100,
       "width": 360,
       "height": 90,
       "color": "5"
+    },
+    {
+      "id": "n-inf-obs-flow-group",
+      "type": "group",
+      "label": "OBSERVED INFORMATION FLOW — NOT runtime · NOT architecture",
+      "x": 40,
+      "y": 1220,
+      "width": 760,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "n-inf-obs-flow",
+      "type": "text",
+      "text": "Incoming → IdeaBox → Program/Project → GitGuard → Lifecycle Log → Registry → Archive\n\nDocumentation observation only — steps may be skipped.",
+      "x": 60,
+      "y": 1250,
+      "width": 720,
+      "height": 70
     }
   ],
   "edges": [
+    {
+      "id": "e-incoming-brain",
+      "fromNode": "n-inf-incoming-active",
+      "fromSide": "top",
+      "toNode": "n-inf-brain",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "staging"
+    },
+    {
+      "id": "e-bulk-storage",
+      "fromNode": "n-inf-incoming-bulk",
+      "fromSide": "top",
+      "toNode": "n-inf-storage-root",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "retirement"
+    },
     {
       "id": "e-brain-repo",
       "fromNode": "n-inf-brain",

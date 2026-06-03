@@ -36,7 +36,8 @@ AGENTS.md (honesty)
   └─ projects/*         ← program / project packs
   └─ agents/*           ← operational doc packs + planned cards
   └─ mars-runtime/      ← contracts + narrow R1 experiments
-  └─ continuity/        ← IdeaBox (human discipline)
+  └─ continuity/        ← IdeaBox (optional incubation)
+  └─ incoming/        ← ecosystem intake (hybrid — Active Brain staging)
   └─ workspaces/      ← local execution locus (not SoT)
   └─ web-gpt-sources/   ← legacy import (not live layout truth)
 ```
@@ -77,7 +78,7 @@ AGENTS.md (honesty)
 | **What it is NOT** | Runtime-ready factory engine, autonomous site builder, or in-repo deployment platform. |
 | **Operational status** | **Strategic planned** — methodology **operational** for human/Cursor work; execution engine **excluded**. |
 | **Canonical path** | [../projects/mars-website-factory/README.md](../projects/mars-website-factory/README.md); navigation [OPERATIONAL-INDEX.md](../projects/mars-website-factory/OPERATIONAL-INDEX.md); registry `mars-website-factory`. |
-| **Relationship role** | **Upstream contracts** for frontend handoff, agent ids (§4.1), and reference cases; consumes governance; points to WPilot as **future** WordPress bridge. |
+| **Relationship role** | **Upstream contracts** for frontend handoff, agent ids (§4.1), and reference cases; consumes governance; points to WPilot as **future** WordPress bridge. **Execution cases:** [execution-cases-registry-v1.md](../projects/mars-website-factory/execution-cases-registry-v1.md) (Triumph, ISBD). |
 
 ---
 
@@ -145,11 +146,11 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | **Named example** of a Program / Operational System in [system-entity-model.md](system-entity-model.md) — **no** `projects/gitguard/` pack observed in-repo at Phase 1 stabilization. |
-| **What it is NOT** | A registered MARS project, runtime module, or evidenced subsystem in this tree. |
-| **Operational status** | **SAFE UNKNOWN** at registry level — treat as **conceptual / future** until a pack and registry row exist. |
-| **Canonical path** | Entity model example only; **no** canonical project path yet. |
-| **Relationship role** | **Placeholder taxonomy** — do not cite as live ecosystem member without evidence. |
+| **What it is** | **REGISTERED** **Repository Survivability Layer** — survivability advisory framework (checkpoint/freeze/rollback/baseline visibility, backup intelligence, release traceability) implemented under [../projects/mars-survivability/](../projects/mars-survivability/); also a **Program / Operational System** example name in [system-entity-model.md](system-entity-model.md). |
+| **What it is NOT** | A `project_id` row, `projects/gitguard/` pack, autonomous backup service, or replacement for `GIT CHECKPOINT NEEDED` process signals ([system-signals-dictionary.md](system-signals-dictionary.md)). |
+| **Operational status** | **REGISTERED** cross-cutting (Wave 2B) — **operational (human-operated)** via `mars-survivability`; **no** separate `project_id`. |
+| **Canonical path** | [../projects/mars-survivability/registries/gitguard-system-entry-v1.md](../projects/mars-survivability/registries/gitguard-system-entry-v1.md); registry note [../registry/project-registry.md](../registry/project-registry.md); reality: [mars-reality-index-v0.md](mars-reality-index-v0.md) § GitGuard. |
+| **Relationship role** | **Extends** post–Cycle 8 survivability discipline; complements [operational-survivability.md](operational-survivability.md) and program `mars-survivability` — **not** a parallel runtime. Evidence: [../logs/cleanup/actions/gitguard-registration-v1.md](../logs/cleanup/actions/gitguard-registration-v1.md). |
 
 ---
 
@@ -209,7 +210,7 @@ AGENTS.md (honesty)
 | **What it is NOT** | Automated policy engine, CI substitute, GitGuard product, or replacement for `governance/operational-survivability.md` or `AGENTS.md`. |
 | **Operational status** | **Operational** (documentation + human-invoked tools); enforcement is **human-operated**. |
 | **Canonical path** | [../projects/mars-survivability/README.md](../projects/mars-survivability/README.md), [OPERATIONAL-INDEX.md](../projects/mars-survivability/OPERATIONAL-INDEX.md); registry `mars-survivability`. |
-| **Relationship role** | **Extends** post–Cycle 8 survivability discipline across Factory, agents, and git workflows; GitGuard remains **design contract** until separate pack exists. |
+| **Relationship role** | **Extends** post–Cycle 8 survivability discipline across Factory, agents, and git workflows; **implements** registered **GitGuard** direction (see § GitGuard — no `projects/gitguard/` pack). |
 
 ---
 
@@ -231,7 +232,7 @@ AGENTS.md (honesty)
 |--|--|
 | **What it is** | Documentation-first **Personal Operational Cockpit** pack (private web surface layer) with static-first planning posture. |
 | **What it is NOT** | MARS runtime/control plane, autonomous system, deployed backend integration layer, or execution owner of MARS/n8n/Telegram systems. |
-| **Operational status** | **Planned / draft** project posture; artifacts are conceptual + documentation-only at current evidence level. |
+| **Operational status** | **Planned** program (`planned` registry) + **operational documentation pack** + **UI prototype workspace** (`workspaces/homegateway-v4-ai/v1/`) — **not** deployed product or active control plane. |
 | **Canonical path** | [../projects/homegateway-v4-ai/README.md](../projects/homegateway-v4-ai/README.md), [../projects/homegateway-v4-ai/OPERATIONAL-INDEX.md](../projects/homegateway-v4-ai/OPERATIONAL-INDEX.md); registry `homegateway-v4-ai`. |
 | **Relationship role** | Ecosystem **surface layer** for operator visibility and quick actions; does not replace ORCA/WPilot/MetaBOT/MARS governance boundaries. |
 
@@ -241,11 +242,23 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | Filesystem-backed **human-operated** continuity workflow — ideas, lightweight protocols, manual index. |
-| **What it is NOT** | Autonomous memory, semantic graph, orchestration, or governance auto-mutation. |
-| **Operational status** | **Operational** (discipline). |
-| **Canonical path** | [../continuity/README.md](../continuity/README.md); manual index [../continuity/registry/master-index.md](../continuity/registry/master-index.md); **not** a `project_id` row. |
-| **Relationship role** | **Optional** anti-entropy complement to governance [context-continuity-rules.md](context-continuity-rules.md). |
+| **What it is** | Filesystem-backed **human-operated** **Incubation Layer** (optional) — ideas, discoveries, decisions; lightweight protocols, manual index. |
+| **What it is NOT** | Autonomous memory, semantic graph, orchestration, mandatory entry path, or governance auto-mutation. |
+| **Operational status** | **Operational** (discipline) — use when idea exists but implementation is deferred; **direct** program/governance creation remains valid. |
+| **Canonical path** | [../continuity/README.md](../continuity/README.md); manual index [../continuity/registry/master-index.md](../continuity/registry/master-index.md); **not** a `project_id` row. Evidence: [../logs/cleanup/actions/ideabox-alignment-v1.md](../logs/cleanup/actions/ideabox-alignment-v1.md). |
+| **Relationship role** | **Optional** incubation complement to [context-continuity-rules.md](context-continuity-rules.md); distinct from [../incoming/README.md](../incoming/README.md) (untrusted external drops). |
+
+---
+
+### Incoming (ecosystem intake)
+
+| | |
+|--|--|
+| **What it is** | Root **`incoming/`** quarantine and transport for **untrusted** external material before human promotion — **Hybrid model:** **Active Incoming** stays in Active Brain; **Historical Bulk** retires to Storage Layer after triage (operator-gated). |
+| **What it is NOT** | Registry row, runtime pipeline, long-term bulk store, or `archive/` substitute. |
+| **Operational status** | **Operational** staging (e.g. `incoming/mig/`); baseline checkpoint **excludes** `incoming/**` by design. |
+| **Canonical path** | [../incoming/README.md](../incoming/README.md); program-scoped zones e.g. `projects/ocpilot/incoming/`. |
+| **Relationship role** | **Upstream** of program packs in observed information flow — see [../logs/cleanup/discoveries/observed-information-flow-v1.md](../logs/cleanup/discoveries/observed-information-flow-v1.md). Evidence: [../logs/cleanup/actions/incoming-hybrid-alignment-v1.md](../logs/cleanup/actions/incoming-hybrid-alignment-v1.md). |
 
 ---
 
@@ -283,7 +296,8 @@ AGENTS.md (honesty)
 | Governance precedence? | [registry-source-of-truth.md](registry-source-of-truth.md) |
 | “What runs today?” honesty? | [AGENTS.md](../AGENTS.md), [execution-model.md](execution-model.md) |
 | Pack-local navigation? | Each `projects/*/README.md` or `OPERATIONAL-INDEX.md` |
-| Lifecycle events? | [../logs/lifecycle-log.md](../logs/lifecycle-log.md) (events, not implementation proof) |
+| Lifecycle events? | [../logs/lifecycle-log.md](../logs/lifecycle-log.md) — **Key Event History**; optional **Lifecycle Tracking Mode** for long ops (not mandatory for normal work) |
+| Observed information flow? | [../logs/cleanup/discoveries/observed-information-flow-v1.md](../logs/cleanup/discoveries/observed-information-flow-v1.md) — **not** a subsystem |
 
 ---
 

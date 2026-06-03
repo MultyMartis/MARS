@@ -67,7 +67,7 @@
     {
       "id": "n-wf-prod-cases",
       "type": "text",
-      "text": "## Production Cases\n\nTriumph, reference-cases/",
+      "text": "## Production / Execution Cases\n\nTriumph (#1) · ISBD (#2)\n`execution-cases-registry-v1.md`",
       "x": 0,
       "y": 480,
       "width": 280,
@@ -103,16 +103,16 @@
     {
       "id": "n-wf-triumph",
       "type": "text",
-      "text": "## Triumph\n\n`triumph-manipulator-landing` + workspaces v5/v6",
+      "text": "## Triumph (execution case #1)\n\nClient delivery + reference simulation\nCanonical ws: `workspaces/triumph-manipulator-landing-v6/`",
       "x": 0,
       "y": 640,
       "width": 280,
-      "height": 100
+      "height": 110
     },
     {
       "id": "n-wf-isbd-note",
       "type": "text",
-      "text": "## ISBD\n\n**SAFE UNKNOWN** — no `ISBD` execution case found in repo at export time.\n\nAdd node when case is registered.",
+      "text": "## ISBD Care Landing\n\n**Execution case #2** · `isbd-care-landing`\n\n- Workspace: `workspaces/isbd-care-landing/`\n- Registry: `projects/mars-website-factory/execution-cases-registry-v1.md`\n\n**Not** Program / System / Initiative.",
       "x": 680,
       "y": 640,
       "width": 280,
@@ -212,6 +212,14 @@
       "fromNode": "n-wf-prod-cases",
       "fromSide": "right",
       "toNode": "n-wf-triumph",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-prod-isbd",
+      "fromNode": "n-wf-prod-cases",
+      "fromSide": "right",
+      "toNode": "n-wf-isbd-note",
       "toSide": "left",
       "toEnd": "arrow"
     },

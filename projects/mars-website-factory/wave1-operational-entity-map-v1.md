@@ -52,7 +52,8 @@ Read this map when a term is ambiguous. **One sentence per entity** — open lin
 | **operational pack** | Bounded doc set for one concern (agent pack, checklist cluster). | **Read selectively** — not full catalog per session. |
 | **blueprint** | **Page orchestration** artifact — blocks, order, constraints for a route. | **Upstream** of handoff. |
 | **handoff** | **Frontend Handoff Contract** instance — files, breakpoints, `block_id`, freeze target. | **Downstream** of blueprint/design. |
-| **reference case** | **Documented example run** (e.g. Triumph) — lessons, **not** production proof. | **Informs** mode selection; **not** live site SoT. |
+| **reference case** | **Documented example run** (e.g. Triumph doc simulation) — lessons, **not** production proof. | **Informs** mode selection; **not** live site SoT. |
+| **execution case** | **Registered client delivery** under Factory lane (e.g. `isbd-care-landing`) — live workspace + freeze. | SoT: [execution-cases-registry-v1.md](execution-cases-registry-v1.md); **not** default `project_id`. |
 | **checklist** | Human **verification list** (foundation QA, Forge overlay, page QA). | **Mode-dependent** mandatory set — see Forge modes. |
 | **runbook** | **Ordered operator steps** for a recurring task (first run, workflow). | **Core Run** entry for process. |
 

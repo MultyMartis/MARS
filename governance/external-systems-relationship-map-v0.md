@@ -91,10 +91,10 @@
 
 | Dimension | Detail |
 |-----------|--------|
-| **Operational ownership** | **SAFE UNKNOWN** — no `projects/gitguard/` pack in repo. |
-| **MARS relationship** | **Example entity name** in [system-entity-model.md](system-entity-model.md) only. |
-| **External / conceptual** | Treat as **future specialist system** until documented pack + registry row exist. |
-| **Not MARS core runtime** | Do not imply live integration or MARS ownership without evidence. |
+| **Operational ownership** | **Human operator** + [../projects/mars-survivability/](../projects/mars-survivability/) pack (human-invoked validator/helpers). |
+| **MARS relationship** | **REGISTERED** **Repository Survivability Layer** (Wave 2B) — cross-cutting in [../registry/project-registry.md](../registry/project-registry.md); **no** `project_id` row; **no** `projects/gitguard/` pack. |
+| **External / conceptual** | Checkpoint/rollback **signals** and release evidence cross-link governance; **not** external SaaS product. |
+| **Not MARS core runtime** | Advisory + CLI aids only; G3+ hooks **planned**. SoT: [../projects/mars-survivability/registries/gitguard-system-entry-v1.md](../projects/mars-survivability/registries/gitguard-system-entry-v1.md). |
 
 ---
 

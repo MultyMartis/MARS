@@ -89,7 +89,7 @@ Anything less is **high risk** for silent rework — not forbidden, but honest a
 
 ## 9. IdeaBox / `continuity/` (optional filesystem workflow)
 
-**IdeaBox** is an optional **human-operated** workflow: structured markdown under `../continuity/` (see `../continuity/README.md`, protocols in `../continuity/protocols/`). Chat markers such as `/ideabox` are **operational conventions**, **not** runtime commands.
+**IdeaBox** is an optional **human-operated** **Incubation Layer**: structured markdown under `../continuity/` (see `../continuity/README.md`, protocols in `../continuity/protocols/`). Use when an **idea exists but implementation is deferred**; **direct** creation under `projects/*` or governance remains valid. Chat markers such as `/ideabox` are **operational conventions**, **not** runtime commands. Wave 2B: [../logs/cleanup/actions/ideabox-alignment-v1.md](../logs/cleanup/actions/ideabox-alignment-v1.md).
 
 **Explicit non-goals:** IdeaBox **does not** provide autonomous AI memory, hidden orchestration, semantic graph persistence, automatic governance mutation, or orchestration semantics. Markdown files remain SoT; `continuity/registry/master-index.md` is **manual navigation only**.
 

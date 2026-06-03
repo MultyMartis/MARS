@@ -1,7 +1,8 @@
 # GitGuard System Entry (v1)
 
-**Status:** **documented** — registry entry and positioning for the **GitGuard** survivability concept.  
-**Not:** runtime product, `projects/gitguard/` pack, CLI, Cursor hook, or automated enforcement engine.
+**Status:** **documented** — **REGISTERED** (Wave 2B, 2026-06-03) **Repository Survivability Layer** entry.  
+**Registration:** cross-cutting in [project-registry.md](../../../registry/project-registry.md) — **no** `project_id` row. Evidence: [gitguard-registration-v1.md](../../../logs/cleanup/actions/gitguard-registration-v1.md).  
+**Not:** runtime product, `projects/gitguard/` pack, autonomous service, Cursor hook (G3+ **planned**), or automated enforcement engine.
 
 **Evolution contract:** [gitguard-survivability-evolution-v1.md](../contracts/gitguard-survivability-evolution-v1.md)  
 **Reality index:** [mars-reality-index-v0.md](../../../governance/mars-reality-index-v0.md)  

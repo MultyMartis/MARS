@@ -6,11 +6,14 @@ Visualization-only export of the MARS ecosystem as native [JSON Canvas](https://
 
 **Canonical sources used at export time:**
 
-- [`governance/ecosystem-topology-index.md`](../../governance/ecosystem-topology-index.md)
-- [`governance/mars-reality-index-v0.md`](../../governance/mars-reality-index-v0.md)
-- [`governance/mars-v2-structural-coherence-audit-v0.md`](../../governance/mars-v2-structural-coherence-audit-v0.md)
-- [`governance/mars-infrastructure-reality-v1.md`](../../governance/mars-infrastructure-reality-v1.md)
-- [`registry/project-registry.md`](../../registry/project-registry.md)
+- [`governance/ecosystem-topology-index.md`](../../../governance/ecosystem-topology-index.md)
+- [`governance/mars-reality-index-v0.md`](../../../governance/mars-reality-index-v0.md)
+- [`governance/mars-infrastructure-reality-v1.md`](../../../governance/mars-infrastructure-reality-v1.md)
+- [`registry/project-registry.md`](../../../registry/project-registry.md)
+- [`projects/mars-website-factory/execution-cases-registry-v1.md`](../../../projects/mars-website-factory/execution-cases-registry-v1.md)
+- [`projects/mars-survivability/registries/gitguard-system-entry-v1.md`](../../../projects/mars-survivability/registries/gitguard-system-entry-v1.md)
+- [`incoming/README.md`](../../../incoming/README.md)
+- [`logs/cleanup/discoveries/observed-information-flow-v1.md`](../../../logs/cleanup/discoveries/observed-information-flow-v1.md)
 - Pack `OPERATIONAL-INDEX.md` files (ORCA, Website Factory)
 
 **Note:** The in-repo artifact titled **REPORT — MARS Ecosystem Visualization Pack v1** was **not found** at export time; placement follows the sources above. Regenerate when that report exists.
@@ -22,11 +25,11 @@ Visualization-only export of the MARS ecosystem as native [JSON Canvas](https://
 | File | Purpose |
 |------|---------|
 | [`master.canvas`](master.canvas) | Top-level nine-layer MARS map (governance → archive) |
-| [`programs.canvas`](programs.canvas) | Program/project packs and cross-program relationships |
-| [`website-factory.canvas`](website-factory.canvas) | Website Factory internal layers, Triumph, ISBD placeholder |
+| [`programs.canvas`](programs.canvas) | Program packs; **GitGuard** (REGISTERED); **IdeaBox** (optional incubation) |
+| [`website-factory.canvas`](website-factory.canvas) | Factory layers; Triumph + ISBD **execution cases** (not programs) |
 | [`orca.canvas`](orca.canvas) | ORCA lanes: Fast Path, review, PPC, freeze, handoffs |
-| [`infrastructure.canvas`](infrastructure.canvas) | `C:\AI MARS` (Active Brain) vs `C:\AI MARS STORAGE` |
-| [`archive.canvas`](archive.canvas) | Lifecycle visualization buckets (ACTIVE … ARCHIVE CANDIDATE) |
+| [`infrastructure.canvas`](infrastructure.canvas) | Active Brain ↔ Storage; **Incoming hybrid**; observed-flow note (labelled) |
+| [`archive.canvas`](archive.canvas) | Lifecycle visualization buckets; Lifecycle Log **KEEP** in OPERATIONAL |
 
 ---
 
@@ -56,4 +59,6 @@ Visualization-only export of the MARS ecosystem as native [JSON Canvas](https://
 
 - Generator: [`_generate_pack.py`](_generate_pack.py) (optional; safe to delete from vault copies if you only consume `.canvas` files).
 
-*Export pack v1 — 2026-06-02.*
+**Refresh:** MARS Visual Brain Refresh 2026-06 — evidence under `logs/visualization/`.
+
+*Export pack v1 — refreshed 2026-06-03 (post–Cleanup Program).*
