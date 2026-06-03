@@ -11,14 +11,13 @@
 
 ## 1. Purpose
 
-The Task File Adapter is the **first production intake path** for MIG. Any submitter drops a JSON file; a human-supervised processor normalizes it to a **canonical Research Request**, runs the **v0.1 Session Spine**, and records linkage in the inbox registry.
+The Task File Adapter is the **first production intake path** for MIG. Any submitter drops a JSON file; a human-supervised processor normalizes it to a **canonical Research Request**, runs **`runMigSession` (Runtime MVP)**, and records linkage in the inbox registry.
 
 ```text
 request file (transport)
     → normalize → validate
     → Research Request (canonical)
-    → spine flat map
-    → Session Spine
+    → runMigSession (Runtime MVP)
     → projects/mig/sessions/{session_id}/
     → completed + outcome sidecar + registry
 ```
@@ -34,8 +33,8 @@ request file (transport)
 | Validate schema | Adapter | Canonical contract + filename ↔ `request_id` |
 | Normalize | Adapter | Canonical or legacy flat → Research Request; `source.adapter=task_file` |
 | Claim file | Adapter | Move to `processing/` |
-| Run spine | Adapter | `canonicalToSpineFlat()` → `runSessionSpine()` |
-| Write outputs | Session Spine | `session_manifest.json`, `serp_result.json`, `research_pack.draft.md` |
+| Run runtime | Adapter | Canonical Research Request → `runMigSession()` |
+| Write outputs | Runtime MVP | `session_manifest.json` **v0.2**, `serp_result.json`, `competitors.json`, `research_pack.draft.md` |
 | Terminal move | Adapter | `completed/` or `failed/` + sidecar |
 | Manifest / registry | Adapter | `incoming/mig/registry/request-index.json` |
 
@@ -75,7 +74,7 @@ request file (transport)
 
 `draft` → `submitted` → `validated` → `accepted` → `session_bound` → `executing` → `completed`
 
-v0.1 adapter **collapses** acceptance and binding into one spine call (spine-compat per Research Request contract §10).
+v0.1 adapter **collapses** acceptance and binding into one `runMigSession()` call (Runtime MVP per Research Request contract §10).
 
 ### Operational states (filesystem)
 
@@ -99,7 +98,7 @@ v0.1 adapter **collapses** acceptance and binding into one spine call (spine-com
 | Filename mismatch | `FILENAME_MISMATCH` | → `failed/` | error sidecar |
 | Duplicate `request_id` | `DUPLICATE_REQUEST` | → `failed/` | error sidecar + registry entry |
 | Unsupported type | `VALIDATION_ERROR` | → `failed/` | only `serp_capture` in v0.1 |
-| Spine failure | `VALIDATION_ERROR` / `SESSION_SPINE_ERROR` | → `failed/` | error sidecar |
+| Spine failure | `VALIDATION_ERROR` / `RUNTIME_SESSION_FAILED` | → `failed/` | error sidecar |
 | Filesystem error | `ADAPTER_ERROR` | best-effort | stderr JSON |
 
 **No automatic retry** in v0.1 — operator fixes file or clears registry entry under human charter, then re-drops.
@@ -115,7 +114,7 @@ v0.1 adapter **collapses** acceptance and binding into one spine call (spine-com
 | C. n8n webhook + helper | Build Later |
 | D. Hybrid | **Target** — A now; B on VPS when operator schedules |
 
-**Rationale:** Session spine is already Node.js; MARS repo work is human-supervised; Windows-friendly; matches OCPilot/ORCA **drop + human gate** pattern without requiring always-on watcher.
+**Rationale:** Runtime MVP is already Node.js; MARS repo work is human-supervised; Windows-friendly; matches OCPilot/ORCA **drop + human gate** pattern without requiring always-on watcher.
 
 ---
 

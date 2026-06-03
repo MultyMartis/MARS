@@ -133,7 +133,7 @@ Transport adapter (Task File · CLI · future Bridge · future n8n Intake)
         ↓
 Research Request validation (canonical contract)
         ↓
-runMigSession (Runtime MVP) OR legacy runSessionSpine (v0.1 adapter path)
+runMigSession (Runtime MVP — canonical intake path)
         ↓
 {MIG_SESSION_ROOT}/{session_id}/  artifacts + session_manifest.json v0.2
         ↓
@@ -144,7 +144,7 @@ ORCA handoff (human)
 
 | Executor | Invokes | When |
 |----------|---------|------|
-| **Task File Adapter** | `runSessionSpine` (v0.1 path) | Drop zone + `run-task-file-adapter.ps1` |
+| **Task File Adapter** | `runMigSession` | Drop zone + `run-task-file-adapter.ps1` |
 | **`run-mig-session.js`** | Full Runtime MVP | Verify script, direct CLI, future Worker |
 | **n8n MIG Worker (design)** | `require(runMigSession)` or HTTP to local helper | Phase 2 async sessions |
 | **Cursor agent** | Supervised CLI only | Dev/fixture — **not** production scheduler |
@@ -449,7 +449,7 @@ draft → review → approved → published → consumed → archived
 |------|----------|
 | End-to-end Runtime MVP (`runMigSession`) | `lib/runtime/run-mig-session.js`; `verify-runtime-mvp-v0.mjs` |
 | Manifest v0.2 schema | `schemas/session-manifest-v0.2.schema.json` |
-| Task File drop zone + registry | `incoming/mig/`; smoke entry in `request-index.json` |
+| Task File drop zone + registry | `incoming/mig/`; adapter → `runMigSession`; verify: `verify-adapter-runtime-or09.mjs` |
 | Session storage on repo disk | `MIG_SESSION_ROOT` default in env.example |
 | Draft pack generation | Runtime MVP test folders |
 | Operator workflow **as procedure** | This doc + existing pack/ORCA contracts |
@@ -459,7 +459,7 @@ draft → review → approved → published → consumed → archived
 
 | Item | Gap |
 |------|-----|
-| Task File Adapter → `runMigSession` | Adapter still uses v0.1 spine |
+| Task File Adapter → `runMigSession` | **Implemented (OR-09)** — adapter uses Runtime MVP |
 | Approval state machine automation | Manifest transitions manual |
 | `handoff/` bundle generator | Design only |
 | MARS Bridge → Research Request adapter | Stub workflow only |

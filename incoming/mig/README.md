@@ -15,7 +15,7 @@
 | Path | Operational state | Meaning |
 |------|-------------------|---------|
 | `requests/` | `received` | Drop new `request-<request_id>.json` here |
-| `processing/` | `processing` | Adapter claimed file; spine running |
+| `processing/` | `processing` | Adapter claimed file; Runtime MVP running |
 | `completed/` | `completed` | Terminal success + `*.outcome.json` sidecar |
 | `failed/` | `failed` / `rejected` | Terminal failure + `*.error.json` sidecar |
 | `archive/` | `archived` | Operator-retained copies after review |
@@ -39,9 +39,9 @@
 requests/request-<id>.json
         ↓  (normalize → validate)
 processing/request-<id>.json
-        ↓  (session spine)
+        ↓  (runMigSession — Runtime MVP)
 projects/mig/sessions/{session_id}/
-        ↓
+        ↓  session_manifest.json v0.2 + research_pack.draft.md
 completed/request-<id>.json + request-<id>.outcome.json
 ```
 

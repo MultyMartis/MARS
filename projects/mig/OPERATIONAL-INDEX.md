@@ -20,7 +20,7 @@
 | 5 | **Environment** | [config/env.example](config/env.example) — `MIG_SESSION_ROOT`, `MIG_LIB_ROOT` |
 | 6 | **Evidence Review** | [system-overview.md](system-overview.md); [boundaries.md](boundaries.md) |
 | 7 | **Research Request (intake SoT)** | [contracts/mig-research-request-contract-v0.md](contracts/mig-research-request-contract-v0.md) |
-| 8 | **Task File Adapter (v0.1 intake)** | [contracts/mig-task-file-adapter-spec-v0.1.md](contracts/mig-task-file-adapter-spec-v0.1.md); drop zone [../../incoming/mig/README.md](../../incoming/mig/README.md); run [tools/run-task-file-adapter.ps1](tools/run-task-file-adapter.ps1) |
+| 8 | **Task File Adapter (intake)** | [contracts/mig-task-file-adapter-spec-v0.1.md](contracts/mig-task-file-adapter-spec-v0.1.md); drop zone [../../incoming/mig/README.md](../../incoming/mig/README.md); run [tools/run-task-file-adapter.ps1](tools/run-task-file-adapter.ps1); verify [tools/verify-adapter-runtime-or09.mjs](tools/verify-adapter-runtime-or09.mjs) |
 | 9 | **Research Pack (output SoT)** | [contracts/mig-research-pack-contract-v0.md](contracts/mig-research-pack-contract-v0.md) |
 | 10 | **Competitor Discovery (Phase 2 design)** | [contracts/mig-competitor-discovery-contract-v0.md](contracts/mig-competitor-discovery-contract-v0.md) |
 | 10b | **Multi-Query Discovery (v0.3 design)** | [contracts/mig-multi-query-discovery-design-v0.md](contracts/mig-multi-query-discovery-design-v0.md) |

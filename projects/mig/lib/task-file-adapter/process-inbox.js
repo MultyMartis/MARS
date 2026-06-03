@@ -3,14 +3,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const { runSessionSpine } = require("../session-spine/run-session-spine");
+const { runMigSession } = require("../runtime/run-mig-session");
 const {
   getMigInboxRoot,
   inboxSubdir,
   getRegistryPath,
   isProcessableRequestFilename,
 } = require("./paths");
-const { normalizeFromFile, canonicalToSpineFlat } = require("./normalize-request");
+const { normalizeFromFile } = require("./normalize-request");
 const { validateCanonicalRequest } = require("./validate-canonical");
 
 function readJson(filePath) {
@@ -103,7 +103,25 @@ function failRequest(filePath, request, err, registry) {
   return { request_id: requestId, status: "failed", error: payload };
 }
 
-function completeRequest(filePath, request, spineResult, registry) {
+function buildSessionFilesMap(sessionDir, runtimeResult) {
+  const files = {
+    session_manifest: path.join(sessionDir, "session_manifest.json"),
+    serp_result: path.join(sessionDir, "serp_result.json"),
+    research_pack_draft: path.join(sessionDir, "research_pack.draft.md"),
+  };
+  if (runtimeResult.artifacts?.competitors) {
+    files.competitors = path.join(sessionDir, "competitors.json");
+  }
+  if (runtimeResult.artifacts?.website_snapshots) {
+    files.website_snapshots = path.join(sessionDir, "website_snapshots.json");
+  }
+  if (runtimeResult.artifacts?.landing_observations) {
+    files.landing_observations = path.join(sessionDir, "landing_observations.json");
+  }
+  return files;
+}
+
+function completeRequest(filePath, request, sessionResult, registry) {
   const completedDir = inboxSubdir("completed");
   const basename = path.basename(filePath);
   const dest = path.join(completedDir, basename);
@@ -116,13 +134,13 @@ function completeRequest(filePath, request, spineResult, registry) {
     request_id: request.request_id,
     status: "completed",
     request_type: request.request_type,
-    session_id: spineResult.session_id,
-    folder_path: spineResult.folder_path,
-    stage: spineResult.stage,
-    serp_mode: spineResult.serp_mode,
+    session_id: sessionResult.session_id,
+    folder_path: sessionResult.folder_path,
+    stage: sessionResult.stage,
+    serp_mode: sessionResult.serp_mode,
     completed_at: new Date().toISOString(),
     transport_ref: request.source.transport_ref,
-    files: spineResult.files,
+    files: sessionResult.files,
   };
 
   writeJson(outcomeSidecar, outcome);
@@ -130,17 +148,17 @@ function completeRequest(filePath, request, spineResult, registry) {
   const completedRequest = {
     ...request,
     status: "completed",
-    session_id: spineResult.session_id,
+    session_id: sessionResult.session_id,
   };
   writeJson(path.join(completedDir, `${request.request_id}.canonical.json`), completedRequest);
 
   registry.entries[request.request_id] = {
     request_id: request.request_id,
     status: "completed",
-    session_id: spineResult.session_id,
+    session_id: sessionResult.session_id,
     transport_ref: request.source.transport_ref,
     processed_at: outcome.completed_at,
-    folder_path: spineResult.folder_path,
+    folder_path: sessionResult.folder_path,
     error: null,
   };
   saveRegistry(registry);
@@ -148,7 +166,7 @@ function completeRequest(filePath, request, spineResult, registry) {
   return outcome;
 }
 
-function processOneFile(filePath, registry, options = {}) {
+async function processOneFile(filePath, registry, options = {}) {
   const transportRef = path.relative(options.repoRoot || getMigInboxRoot(), filePath).replace(/\\/g, "/");
   const basename = path.basename(filePath);
   let request = null;
@@ -190,13 +208,35 @@ function processOneFile(filePath, registry, options = {}) {
     saveRegistry(registry);
 
     request.status = "executing";
-    const spineBody = canonicalToSpineFlat(request);
-    const spineResult = runSessionSpine(spineBody);
+    const runtimeOptions = {};
+    if (options.session_root) {
+      runtimeOptions.session_root = options.session_root;
+    }
+    if (options.session_id) {
+      runtimeOptions.session_id = options.session_id;
+    }
+    const runtimeResult = await runMigSession(request, runtimeOptions);
+
+    if (runtimeResult.status === "error") {
+      const firstError = runtimeResult.errors?.[0];
+      const err = new Error(firstError?.message || "Runtime session failed");
+      err.code = firstError?.code || "RUNTIME_SESSION_FAILED";
+      err.details = runtimeResult;
+      throw err;
+    }
+
+    const sessionResult = {
+      session_id: runtimeResult.session_id,
+      folder_path: runtimeResult.folder_path,
+      stage: runtimeResult.stage,
+      serp_mode: runtimeResult.serp_mode,
+      files: buildSessionFilesMap(runtimeResult.folder_path, runtimeResult),
+    };
 
     request.status = "completed";
-    request.session_id = spineResult.session_id;
+    request.session_id = sessionResult.session_id;
 
-    return completeRequest(processingPath, request, spineResult, registry);
+    return completeRequest(processingPath, request, sessionResult, registry);
   } catch (err) {
     const failPath = fs.existsSync(path.join(inboxSubdir("processing"), basename))
       ? path.join(inboxSubdir("processing"), basename)
@@ -217,13 +257,13 @@ function listInboxFiles() {
     .sort();
 }
 
-function processInbox(options = {}) {
+async function processInbox(options = {}) {
   const registry = loadRegistry();
   const files = listInboxFiles();
   const results = [];
 
   for (const filePath of files) {
-    results.push(processOneFile(filePath, registry, options));
+    results.push(await processOneFile(filePath, registry, options));
   }
 
   return {
@@ -244,7 +284,7 @@ async function main() {
   }
 
   try {
-    const summary = processInbox();
+    const summary = await processInbox();
     process.stdout.write(`${JSON.stringify(summary, null, 2)}\n`);
     const failed = summary.results.filter((r) => r.status === "failed");
     if (failed.length > 0) {
@@ -259,7 +299,12 @@ async function main() {
 }
 
 if (require.main === module) {
-  main();
+  main().catch((err) => {
+    process.stderr.write(
+      `${JSON.stringify({ status: "error", message: err.message, code: err.code }, null, 2)}\n`
+    );
+    process.exit(1);
+  });
 }
 
 module.exports = {
