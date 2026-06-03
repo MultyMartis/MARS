@@ -10,7 +10,7 @@ Canonical object per [mig-research-request-contract-v0.md](../../../../projects/
 |-------|---------------|---------|
 | `schema_version` | `"0"` | Contract major version |
 | `request_id` | `triumph-gruzotaxi-krasnodar-v1` | Stable intake id; must match inbox filename `request-<request_id>.json` |
-| `request_type` | `groundtruth_run` | Full groundtruth pipeline: SERP → competitors → optional website/landing → draft pack |
+| `request_type` | `groundtruth_run` | Full groundtruth pipeline: SERP → competitors → optional website/landing → draft pack. **Accepted** by Task File Adapter v0.1 (OR-10) — do not substitute `serp_capture`. |
 | `scope.niche` | `Грузотакси` | Market vertical |
 | `scope.region` | `Краснодар` | Geographic scope |
 | `scope.business_type` | `local_service` | Local service business model |

@@ -2,7 +2,7 @@
 
 **Pilot:** Триумф / Грузотакси / Краснодар  
 **Mode:** human-supervised  
-**Adapter path:** Task File → `runMigSession` (OR-09)
+**Adapter path:** Task File → `runMigSession` (OR-09, `groundtruth_run` validation OR-10)
 
 ---
 
@@ -53,6 +53,7 @@ cd "C:\AI MARS"
 .\projects\mig\tools\run-task-file-adapter.ps1
 ```
 
+- [ ] `request_type` remains `groundtruth_run` (no `serp_capture` workaround — OR-10)
 - [ ] File moved: `requests/` → `processing/` → `completed/` or `failed/`
 - [ ] Outcome sidecar present: `completed/request-triumph-gruzotaxi-krasnodar-v1.outcome.json`
 - [ ] Registry updated: `incoming/mig/registry/request-index.json`
@@ -118,13 +119,8 @@ Deliver to ORCA operator via agreed human channel (no automated pipeline in v0).
 
 ---
 
-## Known adapter constraint (verify before run)
+## Adapter validation (OR-10)
 
-As of package authoring, Task File Adapter validation accepts `request_type: serp_capture` only ([validate-canonical.js](../../../../projects/mig/lib/task-file-adapter/validate-canonical.js)). `runMigSession` supports `groundtruth_run`.
+Task File Adapter v0.1 accepts `request_type: groundtruth_run` alongside `serp_capture` ([validate-canonical.js](../../../../projects/mig/lib/task-file-adapter/validate-canonical.js), [mig-task-file-adapter-spec-v0.1.md](../../../../projects/mig/contracts/mig-task-file-adapter-spec-v0.1.md) §8).
 
-**Before Phase 4:** confirm whether validation was extended for pilot. If not:
-
-- Interim: set `request_type` to `serp_capture` with identical `capture_profile` and `manual_serp`, **or**
-- Extend `SUPPORTED_V0_TYPES` to include `groundtruth_run` (implementation task — out of scope for this prep package).
-
-Document chosen path in session notes.
+**Before Phase 4:** keep `groundtruth_run` in the inbox request. Do **not** downgrade to `serp_capture` — that workaround is obsolete after OR-10.

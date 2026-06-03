@@ -27,23 +27,42 @@ This folder holds the canonical Research Request template, seed query set, opera
 
 ---
 
+## Canonical pilot flow
+
+```text
+groundtruth_run  (Research Request)
+      ↓
+manual_serp      (operator capture — before inbox drop)
+      ↓
+Task File Adapter
+      ↓
+runMigSession
+      ↓
+Research Pack    (research_pack.draft.md → human approval)
+```
+
+`request_type: groundtruth_run` passes adapter validation (OR-10). Do not use the obsolete `serp_capture` + identical `capture_profile` workaround.
+
+---
+
 ## Execution entry point (when ready)
 
-1. Complete manual SERP capture per checklist.
-2. Insert `manual_serp` into the Research Request (or attach per adapter discipline).
-3. Copy request to production inbox:
+1. Confirm template uses `request_type: groundtruth_run` ([request-triumph-gruzotaxi-krasnodar-v1.json](request-triumph-gruzotaxi-krasnodar-v1.json)).
+2. Complete manual SERP capture per checklist.
+3. Insert `manual_serp` into the Research Request (or attach per adapter discipline).
+4. Copy request to production inbox:
 
    ```text
    incoming/mig/requests/request-triumph-gruzotaxi-krasnodar-v1.json
    ```
 
-4. Run adapter (human-supervised):
+5. Run adapter (human-supervised):
 
    ```powershell
    .\projects\mig\tools\run-task-file-adapter.ps1
    ```
 
-5. Follow [pilot-execution-checklist.md](pilot-execution-checklist.md).
+6. Follow [pilot-execution-checklist.md](pilot-execution-checklist.md).
 
 ---
 

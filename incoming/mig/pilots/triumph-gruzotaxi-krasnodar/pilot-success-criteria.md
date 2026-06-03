@@ -1,6 +1,6 @@
 # Pilot Success Criteria — MIG Pilot #1
 
-Measurable outcomes derived from Runtime MVP verification, Task File Adapter OR-09, and contract discipline. **No invented KPIs.**
+Measurable outcomes derived from Runtime MVP verification, Task File Adapter (OR-09 intake, OR-10 `groundtruth_run` validation), and contract discipline. **No invented KPIs.**
 
 ---
 
@@ -8,6 +8,7 @@ Measurable outcomes derived from Runtime MVP verification, Task File Adapter OR-
 
 | Criterion | Pass condition | Source |
 |-----------|----------------|--------|
+| Request type accepted | Inbox request keeps `request_type: groundtruth_run`; adapter does not emit `VALIDATION_ERROR` for type | OR-10 + adapter spec §8 |
 | Adapter completes | Request in `incoming/mig/completed/` with `*.outcome.json` status `completed` | Task File Adapter spec |
 | No critical runtime failure | Outcome not in `failed/`; manifest `status` not terminal `failed` | `runMigSession` lifecycle |
 | Session bound | `session_id` assigned; folder under `projects/mig/sessions/` | OR-09 verification |

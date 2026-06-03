@@ -95,9 +95,10 @@ incoming/mig/pilots/triumph-gruzotaxi-krasnodar/evidence/serp-<YYYYMMDD>/
 ## 6. Insert into Research Request
 
 1. Open [request-triumph-gruzotaxi-krasnodar-v1.json](request-triumph-gruzotaxi-krasnodar-v1.json).
-2. Add top-level `"manual_serp": { ... }` object.
-3. Save copy as inbox file: `incoming/mig/requests/request-triumph-gruzotaxi-krasnodar-v1.json`.
-4. Keep evidence screenshots **outside** the JSON file (paths in `capture-notes.md`).
+2. Confirm `request_type` is `groundtruth_run` (unchanged).
+3. Add top-level `"manual_serp": { ... }` object.
+4. Save copy as inbox file: `incoming/mig/requests/request-triumph-gruzotaxi-krasnodar-v1.json`.
+5. Keep evidence screenshots **outside** the JSON file (paths in `capture-notes.md`).
 
 ---
 
