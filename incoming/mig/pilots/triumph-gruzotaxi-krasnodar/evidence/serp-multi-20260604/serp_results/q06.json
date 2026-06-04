@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260604-mqgt01",
+  "query_id": "q06",
+  "captured_at": "2026-06-04T13:41:48.946Z",
+  "source_mode": "manual",
+  "search_engine": "yandex",
+  "region": "Краснодар",
+  "city": "Краснодар",
+  "device": "mobile",
+  "localization": "ru, city-level (Yandex lr=35)",
+  "query": "квартирный переезд Краснодар",
+  "serp_type": "mixed",
+  "ads_blocks": {
+    "top_count": 0,
+    "bottom_count": null,
+    "visible_patterns": []
+  },
+  "maps_local_pack": "absent",
+  "aggregators": [],
+  "marketplaces": [],
+  "review_signals": [],
+  "offer_patterns": [],
+  "cta_patterns": [],
+  "landing_observations": [],
+  "organic_results": [],
+  "safe_unknown": [
+    "Yandex captcha suspected — organic list may be incomplete",
+    "Promo/yabs hrefs resolved via visible Path line where possible; unresolved yabs-only rows omitted from organic_results",
+    "Automated normalization — human screenshot review recommended"
+  ],
+  "capture_evidence_ref": "evidence/serp-multi-20260604/captures/q06/"
+}

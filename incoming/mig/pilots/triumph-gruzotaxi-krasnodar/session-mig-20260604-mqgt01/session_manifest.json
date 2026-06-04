@@ -1,0 +1,151 @@
+{
+  "schema_version": "0.2",
+  "session_id": "mig-20260604-mqgt01",
+  "created_at": "2026-06-04T15:32:42.054Z",
+  "operator_id": "multi-query-groundtruth-pilot",
+  "mig_phase": "2",
+  "scope": {
+    "niche": "Грузотакси",
+    "region": "Краснодар",
+    "city": "Краснодар",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "queries": {
+    "seed_queries": [
+      "грузотакси Краснодар",
+      "грузовое такси Краснодар",
+      "газель Краснодар",
+      "грузоперевозки Краснодар",
+      "перевозка мебели Краснодар",
+      "квартирный переезд Краснодар",
+      "вызов газели Краснодар",
+      "газель с грузчиками Краснодар",
+      "грузовое такси с грузчиками Краснодар",
+      "грузоперевозки по Краснодару",
+      "заказать газель Краснодар"
+    ],
+    "query_used": "грузотакси Краснодар",
+    "query_set": [
+      {
+        "query_id": "q01",
+        "query_text": "грузотакси Краснодар",
+        "role": "primary",
+        "intent": "head commercial — core service + geo",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q02",
+        "query_text": "грузовое такси Краснодар",
+        "role": "wording_variant",
+        "intent": "synonym phrasing, same commercial hire intent",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q03",
+        "query_text": "газель Краснодар",
+        "role": "supporting",
+        "intent": "vehicle-class hire (gazelle) in market",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q04",
+        "query_text": "грузоперевозки Краснодар",
+        "role": "category_broad",
+        "intent": "category-level freight transport",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q05",
+        "query_text": "перевозка мебели Краснодар",
+        "role": "supporting",
+        "intent": "furniture move — direct commercial use case",
+        "execution_status": "failed"
+      },
+      {
+        "query_id": "q06",
+        "query_text": "квартирный переезд Краснодар",
+        "role": "supporting",
+        "intent": "apartment move — direct commercial use case",
+        "execution_status": "failed"
+      },
+      {
+        "query_id": "q07",
+        "query_text": "вызов газели Краснодар",
+        "role": "commercial_variant",
+        "intent": "transactional dispatch wording",
+        "execution_status": "failed"
+      },
+      {
+        "query_id": "q08",
+        "query_text": "газель с грузчиками Краснодар",
+        "role": "supporting",
+        "intent": "vehicle + labor bundle",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q09",
+        "query_text": "грузовое такси с грузчиками Краснодар",
+        "role": "supporting",
+        "intent": "service + labor bundle",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q10",
+        "query_text": "грузоперевозки по Краснодару",
+        "role": "geo_variant",
+        "intent": "geo-qualified category (city scope)",
+        "execution_status": "captured"
+      },
+      {
+        "query_id": "q11",
+        "query_text": "заказать газель Краснодар",
+        "role": "commercial_variant",
+        "intent": "order/dispatch transactional",
+        "execution_status": "captured"
+      }
+    ],
+    "queries_declared": [
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q05",
+      "q06",
+      "q07",
+      "q08",
+      "q09",
+      "q10",
+      "q11"
+    ],
+    "queries_executed": [
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q08",
+      "q09",
+      "q10",
+      "q11"
+    ]
+  },
+  "capture_profile": {
+    "serp_pass": true,
+    "competitor_discovery": true,
+    "website_pass": false,
+    "landing_pass": false,
+    "keyword_pass": false,
+    "deep_research_pass": false
+  },
+  "artifacts": {
+    "serp_index": "serp_index.json",
+    "serp_results_dir": "serp_results/",
+    "competitors": "competitors.json"
+  },
+  "competitor_discovery": {
+    "discovery_mode": "multi_query",
+    "query_coverage": "partial",
+    "competitor_count": 22
+  },
+  "status": "draft"
+}
