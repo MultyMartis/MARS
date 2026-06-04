@@ -135,7 +135,9 @@
     "website_pass": true,
     "landing_pass": true,
     "keyword_pass": false,
-    "deep_research_pass": false
+    "deep_research_pass": false,
+    "site_surface_discovery": true,
+    "multi_page_acquisition": true
   },
   "artifacts": {
     "serp_index": "serp_index.json",
@@ -143,7 +145,15 @@
     "competitors": "competitors.json",
     "market_leader_shortlist": "market-leader-shortlist.json",
     "entity_classification": "entity-classification-proposal.md",
-    "comparison_matrix": "market-leader-comparison-matrix.md"
+    "comparison_matrix": "market-leader-comparison-matrix.md",
+    "site_acquisition_scope": "site-acquisition-scope.json",
+    "site_surface_discovery": "site-surface-discovery.json",
+    "site_acquisition_plans": "site-acquisition-plans.json",
+    "site_pages_index": "site-pages-index.json",
+    "site_patterns": "site-patterns.json",
+    "site_structure_summaries": "site-structure-summaries.json",
+    "site_cross_domain_comparison": "site-cross-domain-comparison.json",
+    "multi_page_report": "REPORT-multi-page-market-leader-pass.md"
   },
   "competitor_discovery": {
     "discovery_mode": "multi_query",

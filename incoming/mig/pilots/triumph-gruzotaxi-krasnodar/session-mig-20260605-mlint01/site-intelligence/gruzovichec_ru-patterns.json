@@ -1,0 +1,920 @@
+{
+  "domain": "gruzovichec.ru",
+  "patterns": [
+    {
+      "pattern_type": "SERVICE_PATTERN",
+      "service_pages_count": 3,
+      "headings_observed": [
+        {
+          "text": "Дачные грузоперевозки",
+          "page_url": "https://gruzovichec.ru/dachnie-perevozki",
+          "snapshot_id": "mig-20260605-mlint01-sp003"
+        },
+        {
+          "text": "Квартирный переезд от 399 руб",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "VIP квартирный переезд",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Услуги грузчиков в Пензе от 299 руб",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Тариф 1: 1 человек - 299 руб/час.",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        }
+      ],
+      "repeated_headings": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp003",
+        "mig-20260605-mlint01-sp004",
+        "mig-20260605-mlint01-sp005"
+      ]
+    },
+    {
+      "pattern_type": "PRICING_PATTERN",
+      "pricing_pages_count": 6,
+      "signals_observed": [
+        {
+          "text": "Груз такси от 690 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 1499 руб .",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 300 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 740 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 699 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 1400 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 1400 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 780 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "от 13,9 руб/км.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "Дачные перевозки в Пензе от 670 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/dachnie-perevozki",
+          "snapshot_id": "mig-20260605-mlint01-sp003"
+        },
+        {
+          "text": "Квартирный переезд в Пензе от 399 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "8 (8412) 21-11-21 6 советов переезжающим Размер файла: 219.06 кб 6 бесплатных советов переезжающим, которых вы незнали Скачать Квартирный переезд от 399 руб Вы собираетесь переезжать?",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Услуги Газели на 1 час и 2 грузчика на 2 часа стоят 1550 руб!",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Закажите предварительный расчёт стоимости  Так же вам могут понадобиться услуги Муж на час Мелкий домашний ремонт, Сборка мебели, Помощ по дому, Повесим Гардину Цена: 300 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Подробнее Сборка, разборка мебели Цена: от 499 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Подробнее Квартирный переезд Цена: 670 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Подробнее Перевозка холодильника Цена: от 670 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "8 (8412) 21-11-21 Услуги грузчиков в Пензе от 299 руб Компания «Грузовичок» предоставляет услуги грузчиков в Пензе и Пензенской области.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Стоимость услуг: от 299 руб./час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Стоимость услуги: от 299 руб./час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Стоимость услуги: от 299 руб./час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Стоимость услуги: от 299 руб./час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Стоимость услуги: от 299 руб./час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Стоимость услуги: от 299 руб./час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Позвоните по телефону: +7 (902) 200-01-17 — наши специалисты оперативно проконсультируют вас и помогут рассчитать стоимость услуг.",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Тариф 1: 1 человек - 299 руб/час.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Закажите предварительный расчёт стоимости Так же вам могут понадобиться услуги Муж на час Мелкий домашний ремонт, Сборка мебели, Помощ по дому, Повесим Гардину Цена: 300 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Подробнее Сборка, разборка мебели Цена: от 499 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Подробнее Квартирный переезд Цена: 670 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Подробнее Перевозка холодильника Цена: от 670 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Чтобы мы могли предоставить вам наиболее точную стоимость, заполните форму ниже.",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/forma-predrasscheta",
+          "snapshot_id": "mig-20260605-mlint01-sp008"
+        },
+        {
+          "text": "Груз такси от 690 руб.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp009"
+        },
+        {
+          "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp009"
+        },
+        {
+          "text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+          "currency_hint": null,
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp009"
+        },
+        {
+          "text": "от 1499 руб .",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp009"
+        }
+      ],
+      "repeated_signals": [
+        {
+          "text": "стоимость услуги: от 299 руб./час.",
+          "count": 5
+        },
+        {
+          "text": "от 1400 руб.",
+          "count": 4
+        },
+        {
+          "text": "в стоимость включены аренда \"газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+          "count": 2
+        },
+        {
+          "text": "вывоз мусора, перевозка сыпучих материалов подробнее услуги вывоз мусора в стоимость включена аренда транспорта для вывоза мусора (мешками).",
+          "count": 2
+        },
+        {
+          "text": "груз такси от 690 руб.",
+          "count": 2
+        },
+        {
+          "text": "закажите предварительный расчёт стоимости так же вам могут понадобиться услуги муж на час мелкий домашний ремонт, сборка мебели, помощ по дому, повесим гардину цена: 300 руб.",
+          "count": 2
+        },
+        {
+          "text": "наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+          "count": 2
+        },
+        {
+          "text": "оперативная доставка – от 20 минут до пункта назначения грузовое такси «грузовичок» известно своей оперативной работой.",
+          "count": 2
+        },
+        {
+          "text": "от 13,9 руб/км.",
+          "count": 2
+        },
+        {
+          "text": "от 1499 руб .",
+          "count": 2
+        },
+        {
+          "text": "от 300 руб.",
+          "count": 2
+        },
+        {
+          "text": "от 699 руб.",
+          "count": 2
+        },
+        {
+          "text": "от 740 руб.",
+          "count": 2
+        },
+        {
+          "text": "от 780 руб.",
+          "count": 2
+        },
+        {
+          "text": "пенза , проспект строителей 39в zakaz@gruzovichec.ru 8 (8412) 21-11-21 срочный вызов газели от 690 руб!",
+          "count": 2
+        },
+        {
+          "text": "подробнее квартирный переезд цена: 670 руб.",
+          "count": 2
+        },
+        {
+          "text": "подробнее перевозка холодильника цена: от 670 руб.",
+          "count": 2
+        },
+        {
+          "text": "подробнее сборка, разборка мебели цена: от 499 руб.",
+          "count": 2
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp002",
+        "mig-20260605-mlint01-sp003",
+        "mig-20260605-mlint01-sp004",
+        "mig-20260605-mlint01-sp005",
+        "mig-20260605-mlint01-sp008",
+        "mig-20260605-mlint01-sp009"
+      ]
+    },
+    {
+      "pattern_type": "CTA_PATTERN",
+      "cta_count_total": 10,
+      "ctas_observed": [
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/dachnie-perevozki",
+          "snapshot_id": "mig-20260605-mlint01-sp003"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/contacti",
+          "snapshot_id": "mig-20260605-mlint01-sp006"
+        },
+        {
+          "text": "Получить расчет ",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/corporate#=Qs-hB=660a9567143a5461ab673e99",
+          "page_url": "https://gruzovichec.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp007"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp007"
+        },
+        {
+          "text": "Отправить",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://gruzovichec.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp007"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "page_url": "https://gruzovichec.ru/forma-predrasscheta",
+          "snapshot_id": "mig-20260605-mlint01-sp008"
+        },
+        {
+          "text": "Отправить на предварительный расчет",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://gruzovichec.ru/forma-predrasscheta",
+          "snapshot_id": "mig-20260605-mlint01-sp008"
+        }
+      ],
+      "repeated_cta_text": [
+        {
+          "text": "оставить заявку",
+          "count": 7
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp002",
+        "mig-20260605-mlint01-sp003",
+        "mig-20260605-mlint01-sp004",
+        "mig-20260605-mlint01-sp005",
+        "mig-20260605-mlint01-sp006",
+        "mig-20260605-mlint01-sp007",
+        "mig-20260605-mlint01-sp008",
+        "mig-20260605-mlint01-sp009"
+      ]
+    },
+    {
+      "pattern_type": "TRUST_PATTERN",
+      "trust_signals_total": 0,
+      "signals_observed": [],
+      "repeated_signals": [],
+      "evidence_refs": []
+    },
+    {
+      "pattern_type": "LEAD_CAPTURE_PATTERN",
+      "forms_observed": [
+        {
+          "form_id": null,
+          "action": "/api/feedBack",
+          "method": "post",
+          "field_count": 2,
+          "page_url": "https://gruzovichec.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp007"
+        },
+        {
+          "form_id": null,
+          "action": "/api/feedBack",
+          "method": "post",
+          "field_count": 3,
+          "page_url": "https://gruzovichec.ru/forma-predrasscheta",
+          "snapshot_id": "mig-20260605-mlint01-sp008"
+        }
+      ],
+      "unique_phones": [
+        "88412211121",
+        "8(8412)21-11-21",
+        "+7 (902) 200-01-17"
+      ],
+      "messengers_observed": [
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/dachnie-perevozki",
+          "snapshot_id": "mig-20260605-mlint01-sp003"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "snapshot_id": "mig-20260605-mlint01-sp004"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/gruzchici",
+          "snapshot_id": "mig-20260605-mlint01-sp005"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/contacti",
+          "snapshot_id": "mig-20260605-mlint01-sp006"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/contacti",
+          "snapshot_id": "mig-20260605-mlint01-sp006"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp007"
+        },
+        {
+          "type": "telegram",
+          "handle": "Gruzovoe_taxi_gruzovochkof_bot",
+          "page_url": "https://gruzovichec.ru/forma-predrasscheta",
+          "snapshot_id": "mig-20260605-mlint01-sp008"
+        }
+      ],
+      "repeated_messengers": [
+        {
+          "text": "telegram:Gruzovoe_taxi_gruzovochkof_bot",
+          "count": 9
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp002",
+        "mig-20260605-mlint01-sp003",
+        "mig-20260605-mlint01-sp004",
+        "mig-20260605-mlint01-sp005",
+        "mig-20260605-mlint01-sp006",
+        "mig-20260605-mlint01-sp007",
+        "mig-20260605-mlint01-sp008",
+        "mig-20260605-mlint01-sp009"
+      ]
+    },
+    {
+      "pattern_type": "NAVIGATION_PATTERN",
+      "homepage_nav_links": [
+        {
+          "href": "mailto:zakaz@gruzovichec.ru",
+          "text": "zakaz@gruzovichec.ru",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/index",
+          "text": "https://gruzovichec.ru/index",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovoe_taxi",
+          "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "text": "ПОЛУЧИТЬ ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/corporate",
+          "text": "Юридическим лицам>>",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel",
+          "text": "https://gruzovichec.ru/gruzovaia-gazel",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzchici",
+          "text": "https://gruzovichec.ru/gruzchici",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "text": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "text": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/kamaz",
+          "text": "https://gruzovichec.ru/kamaz",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/vivoz-musora",
+          "text": "https://gruzovichec.ru/vivoz-musora",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "text": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/kvartirni-pereezd",
+          "text": "https://gruzovichec.ru/kvartirni-pereezd",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "text": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/pierievozka-miebieli",
+          "text": "https://gruzovichec.ru/pierievozka-miebieli",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/dachnie-perevozki",
+          "text": "https://gruzovichec.ru/dachnie-perevozki",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/o-kompanii",
+          "text": "О нас",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/novosti",
+          "text": "Новости",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/contacti",
+          "text": "Контакты",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/vakansii",
+          "text": "Вакансии",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/otzivi",
+          "text": "Отзывы",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzoperevozki-v-penze",
+          "text": "Грузовое такси",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/spectehnika_v_penze",
+          "text": "Спецтехника",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/manipulator",
+          "text": "Манипуляторы",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/drugie_uslugi",
+          "text": "Другие услуги",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/pereezd-voennyh",
+          "text": "Военный переезд",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/mejgorod",
+          "text": "Перевозки межгород",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/__user_agreement",
+          "text": "Пользовательское соглашение",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        },
+        {
+          "href": "https://gruzovichec.ru/__privacy_policy",
+          "text": "Политика конфиденциальности",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp002"
+        }
+      ],
+      "classified_candidates": [
+        {
+          "href": "https://gruzovichec.ru/index",
+          "text": "https://gruzovichec.ru/index",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovoe_taxi",
+          "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/forma-predrasscheta",
+          "text": "ПОЛУЧИТЬ ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/corporate",
+          "text": "Юридическим лицам>>",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel",
+          "text": "https://gruzovichec.ru/gruzovaia-gazel",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzchici",
+          "text": "https://gruzovichec.ru/gruzchici",
+          "priority_group": "LOADERS",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "text": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "text": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/kamaz",
+          "text": "https://gruzovichec.ru/kamaz",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/vivoz-musora",
+          "text": "https://gruzovichec.ru/vivoz-musora",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "text": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/kvartirni-pereezd",
+          "text": "https://gruzovichec.ru/kvartirni-pereezd",
+          "priority_group": "MOVING",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "text": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "priority_group": "MOVING",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/pierievozka-miebieli",
+          "text": "https://gruzovichec.ru/pierievozka-miebieli",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/dachnie-perevozki",
+          "text": "https://gruzovichec.ru/dachnie-perevozki",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/o-kompanii",
+          "text": "О нас",
+          "priority_group": "CONTACTS",
+          "page_role": "contact"
+        },
+        {
+          "href": "https://gruzovichec.ru/contacti",
+          "text": "Контакты",
+          "priority_group": "CONTACTS",
+          "page_role": "contact"
+        },
+        {
+          "href": "https://gruzovichec.ru/otzivi",
+          "text": "Отзывы",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzoperevozki-v-penze",
+          "text": "Грузовое такси",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/spectehnika_v_penze",
+          "text": "Спецтехника",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/manipulator",
+          "text": "Манипуляторы",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://gruzovichec.ru/drugie_uslugi",
+          "text": "Другие услуги",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/pereezd-voennyh",
+          "text": "Военный переезд",
+          "priority_group": "MOVING",
+          "page_role": "service"
+        },
+        {
+          "href": "https://gruzovichec.ru/mejgorod",
+          "text": "Перевозки межгород",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp002"
+      ]
+    }
+  ],
+  "generated_at": "2026-06-04T19:35:09.128Z"
+}

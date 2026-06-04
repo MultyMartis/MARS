@@ -1,0 +1,286 @@
+{
+  "snapshot_id": "mig-20260605-mlint01-sp007",
+  "session_id": "mig-20260605-mlint01",
+  "competitor_id": "mig-20260604-mqgt01-c002",
+  "domain": "gruzovichec.ru",
+  "requested_url": "https://gruzovichec.ru/corporate",
+  "final_url": "https://gruzovichec.ru/corporate",
+  "page_role": "unknown",
+  "capture_time": "2026-06-04T19:33:12.147Z",
+  "status": "success",
+  "acquisition_method": "http_get_dom",
+  "http_status": 200,
+  "redirect_chain": [],
+  "content_type": "text/html; charset=utf-8",
+  "charset": null,
+  "render_status": "static_ok",
+  "fetch_duration_ms": 452,
+  "title": "Грузоперевозки для юридических лиц и корпоративных клиентов в Пензе",
+  "meta_description": "Услуги компании \"ГРУЗОВИЧОК\" для юридических лиц и корпоративных клиентов. Персональный менеджер, работаем без НДС.",
+  "canonical_url": null,
+  "lang": "ru",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Логистика для Вашего бизнеса",
+      "order": 0
+    },
+    {
+      "level": 2,
+      "text": "Посмотрите реальные отзывы о нашей компании на Яндекс картах",
+      "order": 1
+    },
+    {
+      "level": 2,
+      "text": "Контроль за автопарком через приложение",
+      "order": 2
+    }
+  ],
+  "contacts": {
+    "phones": [
+      "88412211121",
+      "8(8412)21-11-21"
+    ],
+    "emails": [
+      "zakaz@gruzovichec.ru"
+    ],
+    "addresses": [],
+    "messengers": [
+      {
+        "type": "telegram",
+        "handle": "Gruzovoe_taxi_gruzovochkof_bot"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "text": "Логистика для Вашего бизнеса",
+      "context": "h1"
+    },
+    {
+      "text": "Посмотрите реальные отзывы о нашей компании на Яндекс картах",
+      "context": "h2"
+    },
+    {
+      "text": "Контроль за автопарком через приложение",
+      "context": "h2"
+    }
+  ],
+  "pricing_signals": [],
+  "cta_elements": [
+    {
+      "text": "Получить расчет ",
+      "href": "https://gruzovichec.ru/corporate#=Qs-hB=660a9567143a5461ab673e99",
+      "element_type": "link",
+      "position_hint": "unknown"
+    },
+    {
+      "text": "Оставить заявку",
+      "href": "https://gruzovichec.ru/forma-predrasscheta",
+      "element_type": "link",
+      "position_hint": "unknown"
+    },
+    {
+      "text": "Отправить",
+      "href": null,
+      "element_type": "button",
+      "position_hint": "unknown"
+    }
+  ],
+  "forms": [
+    {
+      "form_id": null,
+      "action": "/api/feedBack",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_id",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "inputs.field3",
+          "type": "text",
+          "label": "+7 123 45 77",
+          "required": true
+        }
+      ],
+      "visible_purpose": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "mailto:zakaz@gruzovichec.ru",
+        "text": "zakaz@gruzovichec.ru"
+      },
+      {
+        "href": "https://gruzovichec.ru/index",
+        "text": "https://gruzovichec.ru/index"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzovaia-gazel",
+        "text": "https://gruzovichec.ru/gruzovaia-gazel"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+        "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+        "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzchici",
+        "text": "https://gruzovichec.ru/gruzchici"
+      },
+      {
+        "href": "https://gruzovichec.ru/o-kompanii",
+        "text": "О нас"
+      },
+      {
+        "href": "https://gruzovichec.ru/novosti",
+        "text": "Новости"
+      },
+      {
+        "href": "https://gruzovichec.ru/contacti",
+        "text": "Контакты"
+      },
+      {
+        "href": "https://gruzovichec.ru/vakansii",
+        "text": "Вакансии"
+      },
+      {
+        "href": "https://gruzovichec.ru/otzivi",
+        "text": "Отзывы"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzoperevozki-v-penze",
+        "text": "Грузовое такси"
+      },
+      {
+        "href": "https://gruzovichec.ru/spectehnika_v_penze",
+        "text": "Спецтехника"
+      },
+      {
+        "href": "https://gruzovichec.ru/manipulator",
+        "text": "Манипуляторы"
+      },
+      {
+        "href": "https://gruzovichec.ru/drugie_uslugi",
+        "text": "Другие услуги"
+      },
+      {
+        "href": "https://gruzovichec.ru/corporate",
+        "text": "Юр. лицам"
+      },
+      {
+        "href": "https://gruzovichec.ru/kvartirni-pereezd",
+        "text": "Квартирный переезд"
+      },
+      {
+        "href": "https://gruzovichec.ru/ofisnie-pereezdi",
+        "text": "Офисный переезд"
+      },
+      {
+        "href": "https://gruzovichec.ru/dachnie-perevozki",
+        "text": "Дачные перевозки"
+      },
+      {
+        "href": "https://gruzovichec.ru/perevozka-stroimaterialov",
+        "text": "Перевозка стройматериалов"
+      },
+      {
+        "href": "https://gruzovichec.ru/temperaturnie-perevozki",
+        "text": "Температурные перевозки"
+      },
+      {
+        "href": "https://gruzovichec.ru/pereezd-voennyh",
+        "text": "Военный переезд"
+      },
+      {
+        "href": "https://gruzovichec.ru/mejgorod",
+        "text": "Перевозки межгород"
+      },
+      {
+        "href": "https://gruzovichec.ru/forma-predrasscheta",
+        "text": "Оставить заявку"
+      },
+      {
+        "href": "https://gruzovichec.ru/__user_agreement",
+        "text": "Пользовательское соглашение"
+      },
+      {
+        "href": "https://gruzovichec.ru/__privacy_policy",
+        "text": "Политика конфиденциальности"
+      }
+    ],
+    "external": [
+      {
+        "href": "https://saratov.gruzovichec.ru/",
+        "text": "Саратов"
+      },
+      {
+        "href": "https://samara.gruzovichec.ru/",
+        "text": "Самара"
+      },
+      {
+        "href": "https://tlt.gruzovichec.ru/",
+        "text": "Тольятти"
+      },
+      {
+        "href": "https://krasnodar.gruzovichec.ru/",
+        "text": "Краснодар"
+      },
+      {
+        "href": "https://novorossiysk.gruzovichec.ru/",
+        "text": "Новороссийск"
+      },
+      {
+        "href": "tel:88412211121",
+        "text": "тел.  8 (8412) 21-11-21"
+      },
+      {
+        "href": "https://yandex.ru/maps/org/gruzovichkof/228026355682/?ll=44.899123%2C53.223273&amp;z=15",
+        "text": "Яндекс картах"
+      },
+      {
+        "href": "https://www.google.ru/maps/place/%D0%93%D1%80%D1%83%D0%B7+%D1%82%D0%B0%D0%BA%D1%81%D0%B8+%22%D0%93%D0%A0%D0%A3%D0%97%D0%9E%D0%92%D0%98%D0%A7%D0%9E%D0%9A%22+%D0%B8+%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8+%D0%B3%D1%80%D1%83%D0%B7%D1%87%D0%B8%D0%BA%D0%BE%D0%B2+%D0%B2+%D0%9F%D0%B5%D0%BD%D0%B7%D0%B5+%D0%B8+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8/@53.227296,44.9966773,13z/data=!4m8!1m2!2m1!1z0LPRgNGD0Lcg0YLQsNC60YHQuA!3m4!1s0x0:0xc6ed9da21f69179a!8m2!3d53.1739038!4d45.0020063?dcr=0",
+        "text": "GOOGLE"
+      },
+      {
+        "href": "https://vk.com/gruzovichok58",
+        "text": "https://vk.com/gruzovichok58"
+      },
+      {
+        "href": "https://t.me/Gruzovoe_taxi_gruzovochkof_bot",
+        "text": "https://t.me/Gruzovoe_taxi_gruzovochkof_bot"
+      },
+      {
+        "href": "https://dzen.ru/gruzovichkof_penza",
+        "text": "https://dzen.ru/gruzovichkof_penza"
+      },
+      {
+        "href": "tel:8(8412)21-11-21",
+        "text": "8 (8412) 21-11-21"
+      },
+      {
+        "href": "https://ukit.com/ru?utm_source=ukit_new_copyright",
+        "text": "https://ukit.com/ru?utm_source=ukit_new_copyright"
+      }
+    ]
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": "Грузоперевозки для юридических лиц и корпоративных клиентов в Пензе window.developmentMode = false; span.selectOption {display:none!important;} .top-social-bar {float:right!important;} @media (min-width: 768px){ .pull-right {width:30%!important;} .pull-left {width: 70%!important;} #body header .contact-bar .ul-w-contacts li {padding: 15px 6px 5px 0px!important;} } @media (max-width: 768px){ .pull-right {width:39%!important;} .pull-left {width: 61%!important;} span.selected, a.selected {width:101",
+  "artifact_refs": {
+    "website_snapshot": "site-pages/mig-20260605-mlint01-sp007/website_snapshot.json",
+    "page_html": "site-pages/mig-20260605-mlint01-sp007/page.html",
+    "headers": "site-pages/mig-20260605-mlint01-sp007/headers.json"
+  },
+  "evidence_grade": "B",
+  "safe_unknown": [],
+  "priority_group": "UNCLASSIFIED",
+  "selection_reason": "fill_to_cap_unclassified",
+  "homepage_snapshot_ref": null
+}

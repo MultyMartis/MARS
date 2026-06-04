@@ -406,4 +406,5 @@ module.exports = {
   extractPageFacts,
   detectRenderStatus,
   stripTags,
+  extractLinks,
 };

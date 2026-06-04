@@ -1,0 +1,393 @@
+{
+  "domain": "gruzotaxi-triumph.ru",
+  "patterns": [
+    {
+      "pattern_type": "SERVICE_PATTERN",
+      "service_pages_count": 0,
+      "headings_observed": [],
+      "repeated_headings": [],
+      "evidence_refs": []
+    },
+    {
+      "pattern_type": "PRICING_PATTERN",
+      "pricing_pages_count": 1,
+      "signals_observed": [
+        {
+          "text": "Фиксированная цена - известна Вам сразу и не изменится.",
+          "currency_hint": null,
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+          "currency_hint": null,
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+          "currency_hint": "RUB",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+          "currency_hint": null,
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        }
+      ],
+      "repeated_signals": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp001"
+      ]
+    },
+    {
+      "pattern_type": "CTA_PATTERN",
+      "cta_count_total": 3,
+      "ctas_observed": [
+        {
+          "text": "Заказать звонок",
+          "element_type": "link",
+          "href": "https://gruzotaxi-triumph.ru/#",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "text": "Заказать",
+          "element_type": "link",
+          "href": "https://gruzotaxi-triumph.ru/#",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "text": "Можно ли оформить предварительный заказ?",
+          "element_type": "link",
+          "href": "https://gruzotaxi-triumph.ru/#%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bb%d0%b8-%d0%be%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d0%b0%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        }
+      ],
+      "repeated_cta_text": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp001"
+      ]
+    },
+    {
+      "pattern_type": "TRUST_PATTERN",
+      "trust_signals_total": 0,
+      "signals_observed": [],
+      "repeated_signals": [],
+      "evidence_refs": []
+    },
+    {
+      "pattern_type": "LEAD_CAPTURE_PATTERN",
+      "forms_observed": [
+        {
+          "form_id": null,
+          "action": "/#wpcf7-f271-p2-o2",
+          "method": "post",
+          "field_count": 15,
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "form_id": null,
+          "action": "/#wpcf7-f272-o1",
+          "method": "post",
+          "field_count": 15,
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        }
+      ],
+      "unique_phones": [
+        "+79189912991",
+        "+78619912991",
+        "82784248306",
+        "81977685845",
+        "81892626158",
+        "82483858797"
+      ],
+      "messengers_observed": [
+        {
+          "type": "telegram",
+          "handle": "gruzotaxi_triumph",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "type": "telegram",
+          "handle": "gruzotaxi_triumph",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        }
+      ],
+      "repeated_messengers": [
+        {
+          "text": "telegram:gruzotaxi_triumph",
+          "count": 2
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp001"
+      ]
+    },
+    {
+      "pattern_type": "NAVIGATION_PATTERN",
+      "homepage_nav_links": [
+        {
+          "href": "https://gruzotaxi-triumph.ru/",
+          "text": "https://gruzotaxi-triumph.ru/",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-1.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-1.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-2.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-2.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-3.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-3.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-4.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-4.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-5.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-5.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-6.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-6.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-7.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-7.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/consent-personal-data/",
+          "text": "Согласием на обработку персональных данных",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/privacy-policy/",
+          "text": "Политикой конфиденциальности",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/bumaga_mini.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/bumaga_mini.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/kelebek_02.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/kelebek_02.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_02.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_02.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_03.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_03.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/07/lemana_pro__min.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/07/lemana_pro__min.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_05.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_05.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_08.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_08.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_09.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_09.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_10.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_10.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_11.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_11.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_12.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_12.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_13.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_13.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_14.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_14.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_15.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_15.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_19.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_19.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_20.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_20.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_21.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_21.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/askona__line.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/askona__line.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/boxx__line.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/boxx__line.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/santekh-onl.png",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/santekh-onl.png",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/perv_mebel__land-1.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/perv_mebel__land-1.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/11/nuvola_250-1.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/11/nuvola_250-1.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%B0%D0%BD%D0%B3%D0%B0%D0%B6%D0%B5%D0%BC%D0%B5%D0%BD%D1%82__01.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%B0%D0%BD%D0%B3%D0%B0%D0%B6%D0%B5%D0%BC%D0%B5%D0%BD%D1%82__01.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%82__01.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%82__01.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87__01.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87__01.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/11/SV-%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C-min.jpg",
+          "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/11/SV-%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C-min.jpg",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/user-agreement/",
+          "text": "Пользовательское соглашение",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/cookie-files-policy/",
+          "text": "Cookie файлы",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "href": "https://gruzotaxi-triumph.ru/other-documents/",
+          "text": "Иные документы",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        }
+      ],
+      "classified_candidates": [
+        {
+          "href": "https://gruzotaxi-triumph.ru/",
+          "text": "https://gruzotaxi-triumph.ru/",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp001"
+      ]
+    }
+  ],
+  "generated_at": "2026-06-04T19:30:07.470Z"
+}

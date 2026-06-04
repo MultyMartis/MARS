@@ -1,0 +1,790 @@
+{
+  "session_id": "mig-20260605-mlint01",
+  "plans": [
+    {
+      "domain": "gruzotaxi-triumph.ru",
+      "homepage_url": "https://gruzotaxi-triumph.ru/",
+      "pages_min": 3,
+      "pages_max": 8,
+      "selected_count": 1,
+      "selected": [
+        {
+          "url": "https://gruzotaxi-triumph.ru/",
+          "href_normalized": "https://gruzotaxi-triumph.ru/",
+          "priority_group": "HOME",
+          "page_role": "homepage",
+          "selection_reason": "homepage_seed",
+          "anchor_text": null
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "domain": "gruzovichec.ru",
+      "homepage_url": "https://gruzovichec.ru/",
+      "pages_min": 3,
+      "pages_max": 8,
+      "selected_count": 8,
+      "selected": [
+        {
+          "url": "https://gruzovichec.ru/",
+          "href_normalized": "https://gruzovichec.ru/",
+          "priority_group": "HOME",
+          "page_role": "homepage",
+          "selection_reason": "homepage_seed",
+          "anchor_text": null
+        },
+        {
+          "url": "https://gruzovichec.ru/dachnie-perevozki",
+          "href_normalized": "https://gruzovichec.ru/dachnie-perevozki",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "selection_reason": "priority_group:SERVICE",
+          "anchor_text": "https://gruzovichec.ru/dachnie-perevozki",
+          "classification_basis": [
+            "path"
+          ]
+        },
+        {
+          "url": "https://gruzovichec.ru/kvartirni-pereezd",
+          "href_normalized": "https://gruzovichec.ru/kvartirni-pereezd",
+          "priority_group": "MOVING",
+          "page_role": "service",
+          "selection_reason": "priority_group:MOVING",
+          "anchor_text": "https://gruzovichec.ru/kvartirni-pereezd",
+          "classification_basis": [
+            "path"
+          ]
+        },
+        {
+          "url": "https://gruzovichec.ru/gruzchici",
+          "href_normalized": "https://gruzovichec.ru/gruzchici",
+          "priority_group": "LOADERS",
+          "page_role": "service",
+          "selection_reason": "priority_group:LOADERS",
+          "anchor_text": "https://gruzovichec.ru/gruzchici",
+          "classification_basis": [
+            "path"
+          ]
+        },
+        {
+          "url": "https://gruzovichec.ru/contacti",
+          "href_normalized": "https://gruzovichec.ru/contacti",
+          "priority_group": "CONTACTS",
+          "page_role": "contact",
+          "selection_reason": "priority_group:CONTACTS",
+          "anchor_text": "Контакты",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://gruzovichec.ru/corporate",
+          "href_normalized": "https://gruzovichec.ru/corporate",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Юридическим лицам>>"
+        },
+        {
+          "url": "https://gruzovichec.ru/forma-predrasscheta",
+          "href_normalized": "https://gruzovichec.ru/forma-predrasscheta",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "ПОЛУЧИТЬ ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ"
+        },
+        {
+          "url": "https://gruzovichec.ru/index",
+          "href_normalized": "https://gruzovichec.ru/index",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "https://gruzovichec.ru/index"
+        }
+      ],
+      "skipped": [
+        {
+          "href": "https://gruzovichec.ru/kamaz",
+          "href_normalized": "https://gruzovichec.ru/kamaz",
+          "anchor_text": "https://gruzovichec.ru/kamaz",
+          "pathname": "/kamaz",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/manipulator",
+          "href_normalized": "https://gruzovichec.ru/manipulator",
+          "anchor_text": "Манипуляторы",
+          "pathname": "/manipulator",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/otzivi",
+          "href_normalized": "https://gruzovichec.ru/otzivi",
+          "anchor_text": "Отзывы",
+          "pathname": "/otzivi",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/pierievozka-miebieli",
+          "href_normalized": "https://gruzovichec.ru/pierievozka-miebieli",
+          "anchor_text": "https://gruzovichec.ru/pierievozka-miebieli",
+          "pathname": "/pierievozka-miebieli",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/spectehnika_v_penze",
+          "href_normalized": "https://gruzovichec.ru/spectehnika_v_penze",
+          "anchor_text": "Спецтехника",
+          "pathname": "/spectehnika_v_penze",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/vivoz-musora",
+          "href_normalized": "https://gruzovichec.ru/vivoz-musora",
+          "anchor_text": "https://gruzovichec.ru/vivoz-musora",
+          "pathname": "/vivoz-musora",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovoe_taxi",
+          "href_normalized": "https://gruzovichec.ru/gruzovoe_taxi",
+          "anchor_text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+          "pathname": "/gruzovoe_taxi",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel",
+          "href_normalized": "https://gruzovichec.ru/gruzovaia-gazel",
+          "anchor_text": "https://gruzovichec.ru/gruzovaia-gazel",
+          "pathname": "/gruzovaia-gazel",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "href_normalized": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "anchor_text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+          "pathname": "/gruzovaia-gazel-do-1-5-t-v-u",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "href_normalized": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "anchor_text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+          "pathname": "/gruzovaia-gazel-do-1-5-t-v-%d0%be",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "href_normalized": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "anchor_text": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+          "pathname": "/gruzovaia-avto-do-3-t",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "href_normalized": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "anchor_text": "https://gruzovichec.ru/temperaturnie-perevozki",
+          "pathname": "/temperaturnie-perevozki",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "href_normalized": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "anchor_text": "https://gruzovichec.ru/perevozka-stroimaterialov",
+          "pathname": "/perevozka-stroimaterialov",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "href_normalized": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "anchor_text": "https://gruzovichec.ru/ofisnie-pereezdi",
+          "pathname": "/ofisnie-pereezdi",
+          "priority_group": "MOVING",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/o-kompanii",
+          "href_normalized": "https://gruzovichec.ru/o-kompanii",
+          "anchor_text": "О нас",
+          "pathname": "/o-kompanii",
+          "priority_group": "CONTACTS",
+          "page_role": "contact",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/gruzoperevozki-v-penze",
+          "href_normalized": "https://gruzovichec.ru/gruzoperevozki-v-penze",
+          "anchor_text": "Грузовое такси",
+          "pathname": "/gruzoperevozki-v-penze",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/drugie_uslugi",
+          "href_normalized": "https://gruzovichec.ru/drugie_uslugi",
+          "anchor_text": "Другие услуги",
+          "pathname": "/drugie_uslugi",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "anchor"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/pereezd-voennyh",
+          "href_normalized": "https://gruzovichec.ru/pereezd-voennyh",
+          "anchor_text": "Военный переезд",
+          "pathname": "/pereezd-voennyh",
+          "priority_group": "MOVING",
+          "page_role": "service",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://gruzovichec.ru/mejgorod",
+          "href_normalized": "https://gruzovichec.ru/mejgorod",
+          "anchor_text": "Перевозки межгород",
+          "pathname": "/mejgorod",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "anchor"
+          ],
+          "reason": "cap_reached"
+        }
+      ]
+    },
+    {
+      "domain": "krasnodar.gruzovichkof.ru",
+      "homepage_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+      "pages_min": 3,
+      "pages_max": 8,
+      "selected_count": 7,
+      "selected": [
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+          "priority_group": "HOME",
+          "page_role": "homepage",
+          "selection_reason": "homepage_seed",
+          "anchor_text": null
+        },
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "selection_reason": "priority_group:SERVICE",
+          "anchor_text": "Грузоперевозки",
+          "classification_basis": [
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/kontakty",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/kontakty",
+          "priority_group": "CONTACTS",
+          "page_role": "contact",
+          "selection_reason": "priority_group:CONTACTS",
+          "anchor_text": "Контакты",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/faq",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/faq",
+          "priority_group": "FAQ",
+          "page_role": "faq",
+          "selection_reason": "priority_group:FAQ",
+          "anchor_text": "Частые вопросы",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/akcii",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/akcii",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Акции"
+        },
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/investoram",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/investoram",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Информация для инвесторов"
+        },
+        {
+          "url": "https://krasnodar.gruzovichkof.ru/otzyvy",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/otzyvy",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Отзывы"
+        }
+      ],
+      "skipped": [
+        {
+          "href": "https://krasnodar.gruzovichkof.ru/services",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/services",
+          "anchor_text": "Услуги",
+          "pathname": "/services",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ],
+          "reason": "lower_priority"
+        },
+        {
+          "href": "https://krasnodar.gruzovichkof.ru/o-kompanii",
+          "href_normalized": "https://krasnodar.gruzovichkof.ru/o-kompanii",
+          "anchor_text": "О сервисе",
+          "pathname": "/o-kompanii",
+          "priority_group": "CONTACTS",
+          "page_role": "contact",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "lower_priority"
+        }
+      ]
+    },
+    {
+      "domain": "krasnodar.taximaxim.ru",
+      "homepage_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+      "pages_min": 3,
+      "pages_max": 8,
+      "selected_count": 8,
+      "selected": [
+        {
+          "url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/gruzovie-perevozki",
+          "priority_group": "HOME",
+          "page_role": "homepage",
+          "selection_reason": "homepage_seed",
+          "anchor_text": null
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/cargo/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/cargo",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "selection_reason": "priority_group:SERVICE",
+          "anchor_text": "Грузоперевозки",
+          "classification_basis": [
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/contacts/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/contacts",
+          "priority_group": "CONTACTS",
+          "page_role": "contact",
+          "selection_reason": "priority_group:CONTACTS",
+          "anchor_text": "Контакты",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/app/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/app",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Приложение для заказа"
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/courier/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/courier",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Курьерам"
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/delivery/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/delivery",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Доставка"
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/driver/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/driver",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Водителям"
+        },
+        {
+          "url": "https://krasnodar.taximaxim.ru/en/site/page/?slug=gruzovie-perevozki",
+          "href_normalized": "https://krasnodar.taximaxim.ru/en/site/page?slug=gruzovie-perevozki",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "English"
+        }
+      ],
+      "skipped": [
+        {
+          "href": "https://krasnodar.taximaxim.ru/insurance/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/insurance",
+          "anchor_text": "Страхование",
+          "pathname": "/insurance",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/partner/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/partner",
+          "anchor_text": "Партнерам",
+          "pathname": "/partner",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/site/advertising/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/site/advertising",
+          "anchor_text": "Данные рекламодателя",
+          "pathname": "/site/advertising",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/site/licensors/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/site/licensors",
+          "anchor_text": "Партнеры",
+          "pathname": "/site/licensors",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "href_normalized": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "anchor_text": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "pathname": "/zakazi-taksi-onlajn",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "path"
+          ],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/taxi/",
+          "href_normalized": "https://krasnodar.taximaxim.ru/taxi",
+          "anchor_text": "Такси для бизнеса",
+          "pathname": "/taxi",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "classification_basis": [
+            "anchor"
+          ],
+          "reason": "cap_reached"
+        }
+      ]
+    },
+    {
+      "domain": "city-mobil.ru",
+      "homepage_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+      "pages_min": 3,
+      "pages_max": 8,
+      "selected_count": 8,
+      "selected": [
+        {
+          "url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "href_normalized": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "priority_group": "HOME",
+          "page_role": "homepage",
+          "selection_reason": "homepage_seed",
+          "anchor_text": null
+        },
+        {
+          "url": "https://city-mobil.ru/corporate",
+          "href_normalized": "https://city-mobil.ru/corporate",
+          "priority_group": "SERVICE",
+          "page_role": "service",
+          "selection_reason": "priority_group:SERVICE",
+          "anchor_text": "Корпоративное такси",
+          "classification_basis": [
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://city-mobil.ru/tariffs",
+          "href_normalized": "https://city-mobil.ru/tariffs",
+          "priority_group": "PRICING",
+          "page_role": "pricing",
+          "selection_reason": "priority_group:PRICING",
+          "anchor_text": "Тарифы",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://city-mobil.ru/contacts",
+          "href_normalized": "https://city-mobil.ru/contacts",
+          "priority_group": "CONTACTS",
+          "page_role": "contact",
+          "selection_reason": "priority_group:CONTACTS",
+          "anchor_text": "Контакты",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://city-mobil.ru/faq",
+          "href_normalized": "https://city-mobil.ru/faq",
+          "priority_group": "FAQ",
+          "page_role": "faq",
+          "selection_reason": "priority_group:FAQ",
+          "anchor_text": "Поддержка и FAQ",
+          "classification_basis": [
+            "path",
+            "anchor"
+          ]
+        },
+        {
+          "url": "https://city-mobil.ru/",
+          "href_normalized": "https://city-mobil.ru/",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "https://city-mobil.ru/"
+        },
+        {
+          "url": "https://city-mobil.ru/branding",
+          "href_normalized": "https://city-mobil.ru/branding",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "Брендирование"
+        },
+        {
+          "url": "https://city-mobil.ru/company",
+          "href_normalized": "https://city-mobil.ru/company",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "selection_reason": "fill_to_cap_unclassified",
+          "anchor_text": "История компании"
+        }
+      ],
+      "skipped": [
+        {
+          "href": "https://city-mobil.ru/delivery-b2b",
+          "href_normalized": "https://city-mobil.ru/delivery-b2b",
+          "anchor_text": "Доставка для бизнеса",
+          "pathname": "/delivery-b2b",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/driver",
+          "href_normalized": "https://city-mobil.ru/driver",
+          "anchor_text": "База знаний",
+          "pathname": "/driver",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/driver/standards/cars",
+          "href_normalized": "https://city-mobil.ru/driver/standards/cars",
+          "anchor_text": "Классы автомобилей",
+          "pathname": "/driver/standards/cars",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/drivers",
+          "href_normalized": "https://city-mobil.ru/drivers",
+          "anchor_text": "Стать водителем",
+          "pathname": "/drivers",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/leasing",
+          "href_normalized": "https://city-mobil.ru/leasing",
+          "anchor_text": "Лизинг",
+          "pathname": "/leasing",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/loyalty",
+          "href_normalized": "https://city-mobil.ru/loyalty",
+          "anchor_text": "Кешбэк программы лояльности",
+          "pathname": "/loyalty",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/otzyvy",
+          "href_normalized": "https://city-mobil.ru/otzyvy",
+          "anchor_text": "Отзывы",
+          "pathname": "/otzyvy",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/partner-list",
+          "href_normalized": "https://city-mobil.ru/partner-list",
+          "anchor_text": "Список партнеров",
+          "pathname": "/partner-list",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/partners",
+          "href_normalized": "https://city-mobil.ru/partners",
+          "anchor_text": "Стать партнером",
+          "pathname": "/partners",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/svoe-avto",
+          "href_normalized": "https://city-mobil.ru/svoe-avto",
+          "anchor_text": "Получить автомобиль",
+          "pathname": "/svoe-avto",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/team",
+          "href_normalized": "https://city-mobil.ru/team",
+          "anchor_text": "Команда",
+          "pathname": "/team",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        },
+        {
+          "href": "https://city-mobil.ru/uslugi-evakuatora",
+          "href_normalized": "https://city-mobil.ru/uslugi-evakuatora",
+          "anchor_text": "Вызвать эвакуатор",
+          "pathname": "/uslugi-evakuatora",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown",
+          "classification_basis": [],
+          "reason": "cap_reached"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-04T19:35:35.494Z"
+}

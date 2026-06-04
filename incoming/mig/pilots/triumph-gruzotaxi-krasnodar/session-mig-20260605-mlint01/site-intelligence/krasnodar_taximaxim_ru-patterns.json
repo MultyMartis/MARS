@@ -1,0 +1,446 @@
+{
+  "domain": "krasnodar.taximaxim.ru",
+  "patterns": [
+    {
+      "pattern_type": "SERVICE_PATTERN",
+      "service_pages_count": 1,
+      "headings_observed": [
+        {
+          "text": "Заказ грузоперевозок и услуг грузчиков в сервисе «Максим»",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Как работает грузовое такси для переездов и доставки мебели в городе  Краснодар",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Грузоперевозки для любых задач",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Выберите подходящий тариф для перевозки грузов",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Междугородние перевозки",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Почему нас выбирают",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Грузоперевозки для бизнеса",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Вопросы и ответы",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        }
+      ],
+      "repeated_headings": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp018"
+      ]
+    },
+    {
+      "pattern_type": "PRICING_PATTERN",
+      "pricing_pages_count": 3,
+      "signals_observed": [
+        {
+          "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+          "currency_hint": null,
+          "page_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "text": "9 ФЗ от 27.07.2006 № 152 «О персональных данных» Вопросы и ответы Как создать заказ в приложении «Максим» Откройте вкладку «Грузовые» и выберите подходящий тариф.",
+          "currency_hint": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Итоговая цена складывается из стоимости перевозки и помощи с погрузкой-разгрузкой.",
+          "currency_hint": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Как узнать стоимость?",
+          "currency_hint": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "В приложении можно посмотреть описание тарифа, где указана минимальная цена заказа, стоимость часа и километра.",
+          "currency_hint": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Да, минимальную стоимость можно узнать в приложении «Максим».",
+          "currency_hint": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "1 = 1 руб Акция действует с 23.08.2017 до 31.12.2026.",
+          "currency_hint": "RUB",
+          "page_url": "https://krasnodar.taximaxim.ru/app/",
+          "snapshot_id": "mig-20260605-mlint01-sp020"
+        }
+      ],
+      "repeated_signals": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp017",
+        "mig-20260605-mlint01-sp018",
+        "mig-20260605-mlint01-sp020"
+      ]
+    },
+    {
+      "pattern_type": "CTA_PATTERN",
+      "cta_count_total": 6,
+      "ctas_observed": [
+        {
+          "text": "Заказать",
+          "element_type": "link",
+          "href": "https://maxim.onelink.me/pQOT?pid=taximaximrucargo&amp;c=rusite&amp;deep_link_value=maximzakazru%3A%2F%2F&amp;deep_link_sub1=app%3Faction%3Dtariff%26category%3DTRUCK&amp;af_dp=maximzakazru%3A%2F%2Fapp%3Faction%3Dtariff%26category%3DTRUCK&amp;af_web_dp=https%3A%2F%2Forder.taximaxim.ru%2Fru%2F%3Futm_source%3Dtaximaximrucargo&amp;af_force_deeplink=true",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "«Заказать»",
+          "element_type": "link",
+          "href": "https://maxim.onelink.me/pQOT?pid=taximaximrucargo&amp;c=rusite&amp;deep_link_value=maximzakazru%3A%2F%2F&amp;deep_link_sub1=app%3Faction%3Dtariff%26category%3DTRUCK&amp;af_dp=maximzakazru%3A%2F%2Fapp%3Faction%3Dtariff%26category%3DTRUCK&amp;af_web_dp=https%3A%2F%2Forder.taximaxim.ru%2Fru%2F%3Futm_source%3Dtaximaximrucargo&amp;af_force_deeplink=true",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Отправить",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Как заказать услуги грузчиков и автомобиль для перевозки вещей?",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "В какое время оформить заказ?",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "text": "Contact Us",
+          "element_type": "link",
+          "href": "https://krasnodar.taximaxim.ru/en/site/contacts/",
+          "page_url": "https://krasnodar.taximaxim.ru/en/site/page/?slug=gruzovie-perevozki",
+          "snapshot_id": "mig-20260605-mlint01-sp024"
+        }
+      ],
+      "repeated_cta_text": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp017",
+        "mig-20260605-mlint01-sp018",
+        "mig-20260605-mlint01-sp019",
+        "mig-20260605-mlint01-sp020",
+        "mig-20260605-mlint01-sp021",
+        "mig-20260605-mlint01-sp022",
+        "mig-20260605-mlint01-sp023",
+        "mig-20260605-mlint01-sp024"
+      ]
+    },
+    {
+      "pattern_type": "TRUST_PATTERN",
+      "trust_signals_total": 0,
+      "signals_observed": [],
+      "repeated_signals": [],
+      "evidence_refs": []
+    },
+    {
+      "pattern_type": "LEAD_CAPTURE_PATTERN",
+      "forms_observed": [
+        {
+          "form_id": "taxi-details-form",
+          "action": "https://krasnodar.taximaxim.ru/site/details/",
+          "method": "post",
+          "field_count": 5,
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        }
+      ],
+      "unique_phones": [
+        "+78619999999",
+        "+78619444440",
+        "+7 861 944-44-40"
+      ],
+      "messengers_observed": [
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/cargo/",
+          "snapshot_id": "mig-20260605-mlint01-sp018"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/contacts/",
+          "snapshot_id": "mig-20260605-mlint01-sp019"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/app/",
+          "snapshot_id": "mig-20260605-mlint01-sp020"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/courier/",
+          "snapshot_id": "mig-20260605-mlint01-sp021"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/delivery/",
+          "snapshot_id": "mig-20260605-mlint01-sp022"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/driver/",
+          "snapshot_id": "mig-20260605-mlint01-sp023"
+        },
+        {
+          "type": "telegram",
+          "handle": "taximaxim",
+          "page_url": "https://krasnodar.taximaxim.ru/en/site/page/?slug=gruzovie-perevozki",
+          "snapshot_id": "mig-20260605-mlint01-sp024"
+        }
+      ],
+      "repeated_messengers": [
+        {
+          "text": "telegram:taximaxim",
+          "count": 8
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp017",
+        "mig-20260605-mlint01-sp018",
+        "mig-20260605-mlint01-sp019",
+        "mig-20260605-mlint01-sp024"
+      ]
+    },
+    {
+      "pattern_type": "NAVIGATION_PATTERN",
+      "homepage_nav_links": [
+        {
+          "href": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "text": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/app/",
+          "text": "Приложение для заказа",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/delivery/",
+          "text": "Доставка",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/cargo/",
+          "text": "Грузоперевозки",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/taxi/",
+          "text": "Такси для бизнеса",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/insurance/",
+          "text": "Страхование",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/driver/",
+          "text": "Водителям",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/courier/",
+          "text": "Курьерам",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/vacancy/",
+          "text": "Вакансии",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/partner/",
+          "text": "Партнерам",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/blog/",
+          "text": "Блог",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/contacts/",
+          "text": "Контакты",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/en/site/page/?slug=gruzovie-perevozki",
+          "text": "English",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+          "text": "Русский",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/site/licensors/",
+          "text": "Партнеры",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/site/advertising/",
+          "text": "Данные рекламодателя",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp017"
+        }
+      ],
+      "classified_candidates": [
+        {
+          "href": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "text": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/app/",
+          "text": "Приложение для заказа",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/delivery/",
+          "text": "Доставка",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/cargo/",
+          "text": "Грузоперевозки",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/taxi/",
+          "text": "Такси для бизнеса",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/insurance/",
+          "text": "Страхование",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/driver/",
+          "text": "Водителям",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/courier/",
+          "text": "Курьерам",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/partner/",
+          "text": "Партнерам",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/contacts/",
+          "text": "Контакты",
+          "priority_group": "CONTACTS",
+          "page_role": "contact"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/en/site/page/?slug=gruzovie-perevozki",
+          "text": "English",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+          "text": "Русский",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/site/licensors/",
+          "text": "Партнеры",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://krasnodar.taximaxim.ru/site/advertising/",
+          "text": "Данные рекламодателя",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp017"
+      ]
+    }
+  ],
+  "generated_at": "2026-06-04T19:35:26.601Z"
+}

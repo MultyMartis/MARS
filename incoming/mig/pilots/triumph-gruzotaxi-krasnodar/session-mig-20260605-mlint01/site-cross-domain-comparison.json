@@ -1,0 +1,101 @@
+{
+  "domains_compared": [
+    "gruzotaxi-triumph.ru",
+    "gruzovichec.ru",
+    "krasnodar.gruzovichkof.ru",
+    "krasnodar.taximaxim.ru",
+    "city-mobil.ru"
+  ],
+  "common_patterns": {
+    "repeated_cta_across_domains": [],
+    "all_domains_captured": false
+  },
+  "unique_patterns": [],
+  "service_coverage_differences": [
+    {
+      "domain": "gruzotaxi-triumph.ru",
+      "service_pages": 0,
+      "pages_captured": 1
+    },
+    {
+      "domain": "gruzovichec.ru",
+      "service_pages": 3,
+      "pages_captured": 8
+    },
+    {
+      "domain": "krasnodar.gruzovichkof.ru",
+      "service_pages": 1,
+      "pages_captured": 7
+    },
+    {
+      "domain": "krasnodar.taximaxim.ru",
+      "service_pages": 1,
+      "pages_captured": 8
+    },
+    {
+      "domain": "city-mobil.ru",
+      "service_pages": 1,
+      "pages_captured": 8
+    }
+  ],
+  "lead_capture_differences": [
+    {
+      "domain": "gruzotaxi-triumph.ru",
+      "lead_pages": 1,
+      "forms": 2,
+      "unique_phones": 6
+    },
+    {
+      "domain": "gruzovichec.ru",
+      "lead_pages": 8,
+      "forms": 2,
+      "unique_phones": 3
+    },
+    {
+      "domain": "krasnodar.gruzovichkof.ru",
+      "lead_pages": 7,
+      "forms": 8,
+      "unique_phones": 17
+    },
+    {
+      "domain": "krasnodar.taximaxim.ru",
+      "lead_pages": 8,
+      "forms": 1,
+      "unique_phones": 3
+    },
+    {
+      "domain": "city-mobil.ru",
+      "lead_pages": 1,
+      "forms": 0,
+      "unique_phones": 20
+    }
+  ],
+  "pricing_visibility_differences": [
+    {
+      "domain": "gruzotaxi-triumph.ru",
+      "pricing_pages": 0,
+      "repeated_pricing_count": 0
+    },
+    {
+      "domain": "gruzovichec.ru",
+      "pricing_pages": 0,
+      "repeated_pricing_count": 18
+    },
+    {
+      "domain": "krasnodar.gruzovichkof.ru",
+      "pricing_pages": 0,
+      "repeated_pricing_count": 1
+    },
+    {
+      "domain": "krasnodar.taximaxim.ru",
+      "pricing_pages": 0,
+      "repeated_pricing_count": 0
+    },
+    {
+      "domain": "city-mobil.ru",
+      "pricing_pages": 1,
+      "repeated_pricing_count": 0
+    }
+  ],
+  "generated_at": "2026-06-04T19:35:35.496Z"
+}

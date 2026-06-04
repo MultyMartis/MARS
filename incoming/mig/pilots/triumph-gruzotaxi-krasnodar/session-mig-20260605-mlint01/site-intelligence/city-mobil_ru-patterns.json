@@ -1,0 +1,667 @@
+{
+  "domain": "city-mobil.ru",
+  "patterns": [
+    {
+      "pattern_type": "SERVICE_PATTERN",
+      "service_pages_count": 1,
+      "headings_observed": [
+        {
+          "text": "Корпоративное такси на все случаи жизни",
+          "page_url": "https://city-mobil.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp026"
+        }
+      ],
+      "repeated_headings": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp026"
+      ]
+    },
+    {
+      "pattern_type": "PRICING_PATTERN",
+      "pricing_pages_count": 4,
+      "signals_observed": [
+        {
+          "text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "text": "Какая цена на грузоперевозку?",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "text": "При оформлении такой заявки указывается предварительная стоимость поездки/доставки, фактическая стоимость указывается по окончании поездки/доставки и может отличаться от предварительной.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "В стартовую стоимость включено фиксированное количество минут и/или километров, в случае превышения указанного количества, расчет стоимости услуг осуществляется согласно тарифам.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "Стартовая стоимость и все тарифы указаны без учета повышающего коэффициента.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "В случае если в дополнительных условиях предусмотрена доплата за длинную поездку, то такая доплата может взиматься при поездке/доставке продолжительностью от 7 минут.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "Стоимость рассчитывается исходя из времени и километража пути водителя до пункта отправления.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "Стоимость услуги при заказе по телефону уточняйте у Службы Поддержки.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "Вы самостоятельно можете изменить конечный адрес, стоимость изменится в расчете на текущий коэффициент.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/faq",
+          "snapshot_id": "mig-20260605-mlint01-sp029"
+        },
+        {
+          "text": "В противном случае водитель имеет право отказаться от поездки, а стоимость подачи спишется.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/faq",
+          "snapshot_id": "mig-20260605-mlint01-sp029"
+        },
+        {
+          "text": "После нескольких секунд ожидания заказ падает в открытый доступ внутри сервиса, где каждый водитель сможет увидеть полную информацию о заказе: точку «А», «точку Б» и полную стоимость заказа.",
+          "currency_hint": null,
+          "page_url": "https://city-mobil.ru/company",
+          "snapshot_id": "mig-20260605-mlint01-sp032"
+        }
+      ],
+      "repeated_signals": [],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp025",
+        "mig-20260605-mlint01-sp027",
+        "mig-20260605-mlint01-sp029",
+        "mig-20260605-mlint01-sp032"
+      ]
+    },
+    {
+      "pattern_type": "CTA_PATTERN",
+      "cta_count_total": 20,
+      "ctas_observed": [
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "text": "Заказать в приложении",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "text": "Заказать в приложении",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "text": "Оставить заявку",
+          "element_type": "link",
+          "href": "https://corporate.city-mobil.ru/register/contract?utm_product=taxi",
+          "page_url": "https://city-mobil.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp026"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp026"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp026"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/contacts",
+          "snapshot_id": "mig-20260605-mlint01-sp028"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/contacts",
+          "snapshot_id": "mig-20260605-mlint01-sp028"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/faq",
+          "snapshot_id": "mig-20260605-mlint01-sp029"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/faq",
+          "snapshot_id": "mig-20260605-mlint01-sp029"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp030"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp030"
+        },
+        {
+          "text": "Заказать в приложении",
+          "element_type": "button",
+          "href": null,
+          "page_url": "https://city-mobil.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp030"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/branding",
+          "snapshot_id": "mig-20260605-mlint01-sp031"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/branding",
+          "snapshot_id": "mig-20260605-mlint01-sp031"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/company",
+          "snapshot_id": "mig-20260605-mlint01-sp032"
+        },
+        {
+          "text": "Заказать грузоперевозку",
+          "element_type": "link",
+          "href": "https://gruz-taxi.city-mobil.ru/?city=",
+          "page_url": "https://city-mobil.ru/company",
+          "snapshot_id": "mig-20260605-mlint01-sp032"
+        }
+      ],
+      "repeated_cta_text": [
+        {
+          "text": "заказать грузоперевозку",
+          "count": 16
+        },
+        {
+          "text": "заказать в приложении",
+          "count": 3
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp025",
+        "mig-20260605-mlint01-sp026",
+        "mig-20260605-mlint01-sp027",
+        "mig-20260605-mlint01-sp028",
+        "mig-20260605-mlint01-sp029",
+        "mig-20260605-mlint01-sp030",
+        "mig-20260605-mlint01-sp031",
+        "mig-20260605-mlint01-sp032"
+      ]
+    },
+    {
+      "pattern_type": "TRUST_PATTERN",
+      "trust_signals_total": 0,
+      "signals_observed": [],
+      "repeated_signals": [],
+      "evidence_refs": []
+    },
+    {
+      "pattern_type": "LEAD_CAPTURE_PATTERN",
+      "forms_observed": [],
+      "unique_phones": [
+        "+7 495 222-22-22",
+        "+7 495-120-00-00",
+        "+7 (495) 222-22-22",
+        "+7 958 400-22-22",
+        "+7 (845) 269-44-46",
+        "+7 (800) 600-78-18",
+        "+7 (848)244 40-00",
+        "+7 994 500-10-10",
+        "+7 (848) 244-40-00",
+        "+7 (958) 400-22-22",
+        "+7 (842) 250-60-60",
+        "+7 842 274-01-01",
+        "+7 (846) 244-44-44",
+        "+7 938 699-55-22",
+        "+7 (812) 404-44-44",
+        "+7 812 405-05-05",
+        "+7 958 596-44-44",
+        "+7 (831) 423-33-33",
+        "+7 991 899-89-98",
+        "+7 (345) 257-77-77"
+      ],
+      "messengers_observed": [
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp026"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/corporate",
+          "snapshot_id": "mig-20260605-mlint01-sp026"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/tariffs/economy",
+          "snapshot_id": "mig-20260605-mlint01-sp027"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/contacts",
+          "snapshot_id": "mig-20260605-mlint01-sp028"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/contacts",
+          "snapshot_id": "mig-20260605-mlint01-sp028"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/faq",
+          "snapshot_id": "mig-20260605-mlint01-sp029"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/faq",
+          "snapshot_id": "mig-20260605-mlint01-sp029"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp030"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp030"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilfordrivers",
+          "page_url": "https://city-mobil.ru/branding",
+          "snapshot_id": "mig-20260605-mlint01-sp031"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilfordrivers",
+          "page_url": "https://city-mobil.ru/branding",
+          "snapshot_id": "mig-20260605-mlint01-sp031"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/company",
+          "snapshot_id": "mig-20260605-mlint01-sp032"
+        },
+        {
+          "type": "telegram",
+          "handle": "citymobilpr",
+          "page_url": "https://city-mobil.ru/company",
+          "snapshot_id": "mig-20260605-mlint01-sp032"
+        }
+      ],
+      "repeated_messengers": [
+        {
+          "text": "telegram:citymobilpr",
+          "count": 14
+        },
+        {
+          "text": "telegram:citymobilfordrivers",
+          "count": 2
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp025",
+        "mig-20260605-mlint01-sp026",
+        "mig-20260605-mlint01-sp027",
+        "mig-20260605-mlint01-sp028",
+        "mig-20260605-mlint01-sp029",
+        "mig-20260605-mlint01-sp030",
+        "mig-20260605-mlint01-sp031",
+        "mig-20260605-mlint01-sp032"
+      ]
+    },
+    {
+      "pattern_type": "NAVIGATION_PATTERN",
+      "homepage_nav_links": [
+        {
+          "href": "https://city-mobil.ru/",
+          "text": "https://city-mobil.ru/",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/uslugi-evakuatora",
+          "text": "Вызвать эвакуатор",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/tariffs",
+          "text": "Тарифы",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/loyalty",
+          "text": "Кешбэк программы лояльности",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/faq",
+          "text": "Поддержка и FAQ",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/drivers",
+          "text": "Стать водителем",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/branding",
+          "text": "Брендирование",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/svoe-avto",
+          "text": "Получить автомобиль",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/driver",
+          "text": "База знаний",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/driver/standards/cars",
+          "text": "Классы автомобилей",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/corporate",
+          "text": "Корпоративное такси",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/delivery-b2b",
+          "text": "Доставка для бизнеса",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/partners",
+          "text": "Стать партнером",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/partner-list",
+          "text": "Список партнеров",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/leasing",
+          "text": "Лизинг",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/company",
+          "text": "История компании",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/team",
+          "text": "Команда",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/career",
+          "text": "Карьера",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/news",
+          "text": "Новости",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/otzyvy",
+          "text": "Отзывы",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        },
+        {
+          "href": "https://city-mobil.ru/contacts",
+          "text": "Контакты",
+          "source": "homepage_internal_links",
+          "snapshot_id": "mig-20260605-mlint01-sp025"
+        }
+      ],
+      "classified_candidates": [
+        {
+          "href": "https://city-mobil.ru/",
+          "text": "https://city-mobil.ru/",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/uslugi-evakuatora",
+          "text": "Вызвать эвакуатор",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/tariffs",
+          "text": "Тарифы",
+          "priority_group": "PRICING",
+          "page_role": "pricing"
+        },
+        {
+          "href": "https://city-mobil.ru/loyalty",
+          "text": "Кешбэк программы лояльности",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/faq",
+          "text": "Поддержка и FAQ",
+          "priority_group": "FAQ",
+          "page_role": "faq"
+        },
+        {
+          "href": "https://city-mobil.ru/drivers",
+          "text": "Стать водителем",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/branding",
+          "text": "Брендирование",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/svoe-avto",
+          "text": "Получить автомобиль",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/driver",
+          "text": "База знаний",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/driver/standards/cars",
+          "text": "Классы автомобилей",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/corporate",
+          "text": "Корпоративное такси",
+          "priority_group": "SERVICE",
+          "page_role": "service"
+        },
+        {
+          "href": "https://city-mobil.ru/delivery-b2b",
+          "text": "Доставка для бизнеса",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/partners",
+          "text": "Стать партнером",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/partner-list",
+          "text": "Список партнеров",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/leasing",
+          "text": "Лизинг",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/company",
+          "text": "История компании",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/team",
+          "text": "Команда",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/otzyvy",
+          "text": "Отзывы",
+          "priority_group": "UNCLASSIFIED",
+          "page_role": "unknown"
+        },
+        {
+          "href": "https://city-mobil.ru/contacts",
+          "text": "Контакты",
+          "priority_group": "CONTACTS",
+          "page_role": "contact"
+        }
+      ],
+      "evidence_refs": [
+        "mig-20260605-mlint01-sp025"
+      ]
+    }
+  ],
+  "generated_at": "2026-06-04T19:35:35.491Z"
+}

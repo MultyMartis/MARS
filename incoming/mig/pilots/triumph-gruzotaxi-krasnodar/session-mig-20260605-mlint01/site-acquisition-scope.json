@@ -1,0 +1,36 @@
+{
+  "schema_version": "0",
+  "session_id": "mig-20260605-mlint01",
+  "generated_at": "2026-06-04T19:30:07.457Z",
+  "purpose": "controlled_multi_page_acquisition",
+  "rules_ref": "projects/mig/config/site-surface-discovery-rules-v0.json",
+  "constraints": {
+    "no_full_site_crawl": true,
+    "pages_per_domain_min": 3,
+    "pages_per_domain_max": 10,
+    "discovery_source": "homepage_internal_links_only"
+  },
+  "priority_groups": [
+    "HOME",
+    "SERVICE",
+    "PRICING",
+    "MOVING",
+    "LOADERS",
+    "CONTACTS",
+    "FAQ"
+  ],
+  "ignore_categories": [
+    "blog",
+    "news",
+    "privacy",
+    "legal",
+    "vacancies",
+    "technical (wp-content, feeds, assets)"
+  ],
+  "selection_algorithm": [
+    "1. Always include homepage seed from prior single-page pass",
+    "2. For each priority group (SERVICE, PRICING, MOVING, LOADERS, CONTACTS, FAQ), pick first matching link by pathname sort",
+    "3. Fill remaining cap with unclassified internal links",
+    "4. Stop at pages_per_domain_max (10); ensure at least pages_per_domain_min (3) when candidates exist"
+  ]
+}

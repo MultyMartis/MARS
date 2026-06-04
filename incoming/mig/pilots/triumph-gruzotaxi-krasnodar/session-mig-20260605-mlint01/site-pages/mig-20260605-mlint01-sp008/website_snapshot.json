@@ -1,0 +1,272 @@
+{
+  "snapshot_id": "mig-20260605-mlint01-sp008",
+  "session_id": "mig-20260605-mlint01",
+  "competitor_id": "mig-20260604-mqgt01-c002",
+  "domain": "gruzovichec.ru",
+  "requested_url": "https://gruzovichec.ru/forma-predrasscheta",
+  "final_url": "https://gruzovichec.ru/forma-predrasscheta",
+  "page_role": "unknown",
+  "capture_time": "2026-06-04T19:33:55.872Z",
+  "status": "success",
+  "acquisition_method": "http_get_dom",
+  "http_status": 200,
+  "redirect_chain": [],
+  "content_type": "text/html; charset=utf-8",
+  "charset": null,
+  "render_status": "static_ok",
+  "fetch_duration_ms": 540,
+  "title": "Форма предварительного расчёта",
+  "meta_description": "Грузовичок Пенза предлагает услуги грузового такси. Заполните форму для предварительного расчета стоимости перевозки. Укажите маршрут, груз и количество грузчиков.",
+  "canonical_url": null,
+  "lang": "ru",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Расчет стоимости услуг",
+      "order": 0
+    },
+    {
+      "level": 2,
+      "text": "Как получить предварительный расчет?",
+      "order": 1
+    },
+    {
+      "level": 2,
+      "text": "Что будет дальше?",
+      "order": 2
+    }
+  ],
+  "contacts": {
+    "phones": [
+      "88412211121",
+      "8(8412)21-11-21"
+    ],
+    "emails": [
+      "zakaz@gruzovichec.ru"
+    ],
+    "addresses": [],
+    "messengers": [
+      {
+        "type": "telegram",
+        "handle": "Gruzovoe_taxi_gruzovochkof_bot"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "text": "Расчет стоимости услуг",
+      "context": "h1"
+    },
+    {
+      "text": "Как получить предварительный расчет?",
+      "context": "h2"
+    },
+    {
+      "text": "Что будет дальше?",
+      "context": "h2"
+    }
+  ],
+  "pricing_signals": [
+    {
+      "text": "Чтобы мы могли предоставить вам наиболее точную стоимость, заполните форму ниже.",
+      "currency_hint": null,
+      "context": null
+    }
+  ],
+  "cta_elements": [
+    {
+      "text": "Оставить заявку",
+      "href": "https://gruzovichec.ru/forma-predrasscheta",
+      "element_type": "link",
+      "position_hint": "unknown"
+    },
+    {
+      "text": "Отправить на предварительный расчет",
+      "href": null,
+      "element_type": "button",
+      "position_hint": "unknown"
+    }
+  ],
+  "forms": [
+    {
+      "form_id": null,
+      "action": "/api/feedBack",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_id",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "inputs.field3",
+          "type": "text",
+          "label": "+7 123 45 77",
+          "required": true
+        },
+        {
+          "name": "inputs.field4",
+          "type": "text",
+          "label": "Ваше сообщение",
+          "required": true
+        }
+      ],
+      "visible_purpose": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "mailto:zakaz@gruzovichec.ru",
+        "text": "zakaz@gruzovichec.ru"
+      },
+      {
+        "href": "https://gruzovichec.ru/index",
+        "text": "https://gruzovichec.ru/index"
+      },
+      {
+        "href": "https://gruzovichec.ru/o-kompanii",
+        "text": "О нас"
+      },
+      {
+        "href": "https://gruzovichec.ru/novosti",
+        "text": "Новости"
+      },
+      {
+        "href": "https://gruzovichec.ru/contacti",
+        "text": "Контакты"
+      },
+      {
+        "href": "https://gruzovichec.ru/vakansii",
+        "text": "Вакансии"
+      },
+      {
+        "href": "https://gruzovichec.ru/otzivi",
+        "text": "Отзывы"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzchici",
+        "text": "Грузчики"
+      },
+      {
+        "href": "https://gruzovichec.ru/gruzoperevozki-v-penze",
+        "text": "Грузовое такси"
+      },
+      {
+        "href": "https://gruzovichec.ru/spectehnika_v_penze",
+        "text": "Спецтехника"
+      },
+      {
+        "href": "https://gruzovichec.ru/manipulator",
+        "text": "Манипуляторы"
+      },
+      {
+        "href": "https://gruzovichec.ru/drugie_uslugi",
+        "text": "Другие услуги"
+      },
+      {
+        "href": "https://gruzovichec.ru/corporate",
+        "text": "Юр. лицам"
+      },
+      {
+        "href": "https://gruzovichec.ru/kvartirni-pereezd",
+        "text": "Квартирный переезд"
+      },
+      {
+        "href": "https://gruzovichec.ru/ofisnie-pereezdi",
+        "text": "Офисный переезд"
+      },
+      {
+        "href": "https://gruzovichec.ru/dachnie-perevozki",
+        "text": "Дачные перевозки"
+      },
+      {
+        "href": "https://gruzovichec.ru/perevozka-stroimaterialov",
+        "text": "Перевозка стройматериалов"
+      },
+      {
+        "href": "https://gruzovichec.ru/temperaturnie-perevozki",
+        "text": "Температурные перевозки"
+      },
+      {
+        "href": "https://gruzovichec.ru/pereezd-voennyh",
+        "text": "Военный переезд"
+      },
+      {
+        "href": "https://gruzovichec.ru/mejgorod",
+        "text": "Перевозки межгород"
+      },
+      {
+        "href": "https://gruzovichec.ru/forma-predrasscheta",
+        "text": "Оставить заявку"
+      },
+      {
+        "href": "https://gruzovichec.ru/__user_agreement",
+        "text": "Пользовательское соглашение"
+      },
+      {
+        "href": "https://gruzovichec.ru/__privacy_policy",
+        "text": "Политика конфиденциальности"
+      }
+    ],
+    "external": [
+      {
+        "href": "https://saratov.gruzovichec.ru/",
+        "text": "Саратов"
+      },
+      {
+        "href": "https://samara.gruzovichec.ru/",
+        "text": "Самара"
+      },
+      {
+        "href": "https://tlt.gruzovichec.ru/",
+        "text": "Тольятти"
+      },
+      {
+        "href": "https://krasnodar.gruzovichec.ru/",
+        "text": "Краснодар"
+      },
+      {
+        "href": "https://novorossiysk.gruzovichec.ru/",
+        "text": "Новороссийск"
+      },
+      {
+        "href": "tel:88412211121",
+        "text": "тел.  8 (8412) 21-11-21"
+      },
+      {
+        "href": "https://vk.com/gruzovichok58",
+        "text": "https://vk.com/gruzovichok58"
+      },
+      {
+        "href": "https://t.me/Gruzovoe_taxi_gruzovochkof_bot",
+        "text": "https://t.me/Gruzovoe_taxi_gruzovochkof_bot"
+      },
+      {
+        "href": "https://dzen.ru/gruzovichkof_penza",
+        "text": "https://dzen.ru/gruzovichkof_penza"
+      },
+      {
+        "href": "tel:8(8412)21-11-21",
+        "text": "8 (8412) 21-11-21"
+      },
+      {
+        "href": "https://ukit.com/ru?utm_source=ukit_new_copyright",
+        "text": "https://ukit.com/ru?utm_source=ukit_new_copyright"
+      }
+    ]
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": "Форма предварительного расчёта window.developmentMode = false; span.selectOption {display:none!important;} .top-social-bar {float:right!important;} @media (min-width: 768px){ .pull-right {width:30%!important;} .pull-left {width: 70%!important;} #body header .contact-bar .ul-w-contacts li {padding: 15px 6px 5px 0px!important;} } @media (max-width: 768px){ .pull-right {width:39%!important;} .pull-left {width: 61%!important;} span.selected, a.selected {width:101px!important;} } div.selectBox { posi",
+  "artifact_refs": {
+    "website_snapshot": "site-pages/mig-20260605-mlint01-sp008/website_snapshot.json",
+    "page_html": "site-pages/mig-20260605-mlint01-sp008/page.html",
+    "headers": "site-pages/mig-20260605-mlint01-sp008/headers.json"
+  },
+  "evidence_grade": "B",
+  "safe_unknown": [],
+  "priority_group": "UNCLASSIFIED",
+  "selection_reason": "fill_to_cap_unclassified",
+  "homepage_snapshot_ref": null
+}

@@ -1,0 +1,77 @@
+{
+  "domain": "gruzotaxi-triumph.ru",
+  "purpose": "site_structure_observation",
+  "pages_captured": [
+    {
+      "snapshot_id": "mig-20260605-mlint01-sp001",
+      "url": "https://gruzotaxi-triumph.ru/",
+      "page_role": "homepage",
+      "priority_group": "HOME",
+      "status": "success",
+      "title": "Грузовое такси «ТРИУМФ»"
+    }
+  ],
+  "business_structure_observations": {
+    "services_observed": [],
+    "offers_repeated": [],
+    "pricing_repeated": [],
+    "cta_repeated": [],
+    "trust_repeated": [],
+    "lead_capture": {
+      "forms_count": 2,
+      "unique_phones": [
+        "+79189912991",
+        "+78619912991",
+        "82784248306",
+        "81977685845",
+        "81892626158",
+        "82483858797"
+      ],
+      "messengers": [
+        {
+          "type": "telegram",
+          "handle": "gruzotaxi_triumph",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        },
+        {
+          "type": "telegram",
+          "handle": "gruzotaxi_triumph",
+          "page_url": "https://gruzotaxi-triumph.ru/",
+          "snapshot_id": "mig-20260605-mlint01-sp001"
+        }
+      ]
+    },
+    "landing_like_pages": [
+      {
+        "url": "https://gruzotaxi-triumph.ru/",
+        "title": "Грузовое такси «ТРИУМФ»",
+        "snapshot_id": "mig-20260605-mlint01-sp001"
+      }
+    ]
+  },
+  "acquisition_plan_ref": {
+    "domain": "gruzotaxi-triumph.ru",
+    "homepage_url": "https://gruzotaxi-triumph.ru/",
+    "pages_min": 3,
+    "pages_max": 8,
+    "selected_count": 1,
+    "selected": [
+      {
+        "url": "https://gruzotaxi-triumph.ru/",
+        "href_normalized": "https://gruzotaxi-triumph.ru/",
+        "priority_group": "HOME",
+        "page_role": "homepage",
+        "selection_reason": "homepage_seed",
+        "anchor_text": null
+      }
+    ],
+    "skipped": []
+  },
+  "discovery_ref": {
+    "candidates_count": 1,
+    "ignored_count": 38
+  },
+  "safe_unknown": [],
+  "generated_at": "2026-06-04T19:30:07.470Z"
+}
