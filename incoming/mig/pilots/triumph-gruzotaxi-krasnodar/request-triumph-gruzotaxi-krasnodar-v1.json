@@ -1,5 +1,5 @@
 {
-  "description": "MIG Pilot #1 — Триумф / Грузотакси / Краснодар. Preparation template: insert manual_serp after SERP capture before inbox drop.",
+  "description": "MIG Pilot #1 — ready-to-run request with manual_serp (Phase 1 SERP capture complete). Not placed in inbox.",
   "schema_version": "0",
   "request_id": "triumph-gruzotaxi-krasnodar-v1",
   "request_type": "groundtruth_run",
@@ -49,6 +49,177 @@
     "market": "Грузотакси",
     "region": "Краснодар",
     "operator_mode": "human-supervised",
-    "notes": "Primary execution query = first seed_queries element (Runtime MVP v0.1). manual_serp required before adapter run."
+    "notes": "manual_serp captured 2026-06-04. Drop to incoming/mig/requests/ to execute adapter."
+  },
+  "manual_serp": {
+    "query": "грузотакси краснодар",
+    "search_engine": "yandex",
+    "region": "Краснодар",
+    "city": "Краснодар",
+    "device": "mobile",
+    "localization": "ru, city-level (Yandex lr=35)",
+    "timestamp": "2026-06-04T04:06:19.766Z",
+    "serp_type": "local commercial",
+    "ads_blocks": {
+      "top_count": 3,
+      "bottom_count": 2,
+      "visible_patterns": [
+        "Промо",
+        "от N ₽",
+        "подача за 20 минут",
+        "грузчики в комплекте",
+        "фиксированные цены",
+        "заказать от 759 р",
+        "заказ газели от 539 руб",
+        "разгрузка 850 ₽"
+      ]
+    },
+    "maps_local_pack": "absent",
+    "aggregators": [
+      "Авито",
+      "Яндекс Услуги",
+      "Profi.ru",
+      "Яндекс Карты"
+    ],
+    "marketplaces": [
+      "Авито"
+    ],
+    "review_signals": [
+      "рейтинг 4.7 на Яндекс Услугах (167 исполнителей)",
+      "336 объявлений на Авито",
+      "рейтинг 2.4 у промо Грузовичок (29 отзывов)",
+      "рейтинг 5.0 у приложения Яндекс Go в промо"
+    ],
+    "offer_patterns": [
+      "от 539 руб",
+      "от 759 р",
+      "850 ₽ разгрузка",
+      "подача за 20 минут",
+      "переезды под ключ"
+    ],
+    "cta_patterns": [
+      "заказать",
+      "рассчёт стоимости",
+      "скачать",
+      "телефон +7"
+    ],
+    "landing_observations": [
+      "promo blocks dominate above-the-fold",
+      "aggregators rank before most standalone service sites"
+    ],
+    "organic_results": [
+      {
+        "position": 1,
+        "title": "Грузотакси Краснодар по низким ценам. Быстрая подача. Переезды «под ключ». Без переплат",
+        "url": "https://gruzotaxi-triumph.ru/",
+        "surface_type": "ad",
+        "snippet": "Промо · gruzotaxi-triumph.ru · услуги грузотакси, грузчики, фиксированные цены"
+      },
+      {
+        "position": 2,
+        "title": "Тариф \"Грузовой\" от Яндекс Доставки! Заказать от 759 р.!",
+        "url": "https://apps.apple.com/ru/app/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-go/id472650686",
+        "surface_type": "ad",
+        "snippet": "Промо · приложение Яндекс Go · грузы до 4 тонн"
+      },
+      {
+        "position": 3,
+        "title": "Грузовое такси в Краснодаре от компании «Грузовичок». Заказ газели от 539 руб",
+        "url": "https://krasnodar.gruzovichec.ru/",
+        "surface_type": "ad",
+        "snippet": "Промо · krasnodar.gruzovichec.ru · грузовое такси по выгодной цене"
+      },
+      {
+        "position": 4,
+        "title": "грузотакси в Краснодаре - цены и отзывы | Услуги на Авито | Поиск специалистов",
+        "url": "https://m.avito.ru/krasnodar/predlozheniya_uslug?q=%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8",
+        "surface_type": "aggregator",
+        "snippet": "336 объявлений об услугах по грузотакси в Краснодаре"
+      },
+      {
+        "position": 5,
+        "title": "Грузотакси в Краснодаре: 167 грузоперевозчиков со средним рейтингом 4.7 с отзывами и ценами на Яндекс Услугах.",
+        "url": "https://uslugi.yandex.ru/35-krasnodar/category?text=%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8",
+        "surface_type": "aggregator",
+        "snippet": "Яндекс Услуги — каталог исполнителей"
+      },
+      {
+        "position": 6,
+        "title": "Грузовое такси с грузчиками в Краснодаре — заказать на Яндекс Доставке",
+        "url": "https://dostavka.yandex.ru/cargo-taxi/krasnodar/",
+        "surface_type": "aggregator",
+        "snippet": "Платформа Яндекс Доставка — тариф грузовой"
+      },
+      {
+        "position": 7,
+        "title": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim",
+        "url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+        "surface_type": "organic",
+        "snippet": "TaxiMaxim — грузоперевозки в Краснодаре"
+      },
+      {
+        "position": 8,
+        "title": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+        "url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+        "surface_type": "organic",
+        "snippet": "krasnodar.gruzovichkof.ru — сервис грузотакси"
+      },
+      {
+        "position": 9,
+        "title": "Цена на такси, номер телефона: тариф Грузовой, Краснодар | Яндекс.Такси",
+        "url": "https://taxi.yandex.ru/krasnodar/tariff/cargo/",
+        "surface_type": "organic",
+        "snippet": "Страница тарифа Грузовой Яндекс.Такси"
+      },
+      {
+        "position": 10,
+        "title": "Грузовое такси в Краснодаре на карте рядом со мной: цены, адреса, время работы, отзывы — Яндекс Карты",
+        "url": "https://yandex.ru/maps/35/krasnodar/search/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%82%D0%B0%D0%BA%D1%81%D0%B8/",
+        "surface_type": "local_pack",
+        "snippet": "Поиск организаций на Яндекс Картах"
+      },
+      {
+        "position": 11,
+        "title": "Услуги грузотакси в Краснодаре — 181 специалист",
+        "url": "https://profi.ru/geo-ksdr/raznoe/gruzotaksi/",
+        "surface_type": "aggregator",
+        "snippet": "Profi.ru — каталог специалистов"
+      },
+      {
+        "position": 12,
+        "title": "Грузовое такси в Краснодаре | Заказать недорогое грузотакси",
+        "url": "https://dostavista.ru/krd/gruzovoe-taksi",
+        "surface_type": "organic",
+        "snippet": "dostavista.ru — сервис грузового такси"
+      },
+      {
+        "position": 13,
+        "title": "Заказать грузовое такси в городе Краснодар – Ситимобил",
+        "url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+        "surface_type": "organic",
+        "snippet": "city-mobil.ru — грузовое такси"
+      },
+      {
+        "position": 14,
+        "title": "Грузотакси Краснодар по низким ценам. Быстрая подача",
+        "url": "https://gruzotaxi-triumph.ru/",
+        "surface_type": "ad",
+        "snippet": "Промо · повтор блока gruzotaxi-triumph.ru ниже по выдаче"
+      },
+      {
+        "position": 15,
+        "title": "Разгрузка в Краснодаре. 850 ₽",
+        "url": "https://yabs.yandex.ru/count/WluejI_zOoVX2La20uKN08CgfBxMbd029s1Ee8fFW4k1E06zwTUanOk0zm82EeeNkdAd2VJvNExisNxdpdTzxNpzZjSRxd1pgHrzslXJAeNcpkZpERMZKQYDsxaqbpvp7C_jQ18GzORGzMhqWrIbGQMH97HKDJggOKH3Q4OGZYKa6RMGZAMXf2KIIqWZaAXLew8aAXADkeh3QaMo7esmOSC6TWTCsNHXxMxPCa2f_F0dGem53nXq74qWyl7nyV4fqM4gKaQYe80cT07X3uuKm0NXILu1MX2U72b02y8Jl0Aq83mnKe0MX2Tt1MX1U5Aa02q8Jy05Q45OmgG0BGXB_WhGWh34hm0j24l41MX1MBAa06q7syMShmd37kO7VdAfd2wDEIwK3s7c1w_d5dhWikZngPzGkvOnH0CAZJwXqcdK-RoZqkZKUUTrTFgCFkyyEeNYK6SkjIN0mSRuw3RHWoBdH7ZZdQ42nuFheqZXsit-uXf25yK7pkSR9XKsktS2k07iDt17_7bv-nZ5Mx2q6lQcU0kMLiCMPp2905pQgQRiQRPhLfuyV2zO3E0BX2Tv0MmTq6ht2D2ym0LUC7keFR2zxstDp6jXQyBjhgg30xOOiR233gjGlha2fc1kyj2Zi4taeIM670EbOy5CkeuL8_OnkeSn9v1ZI3MBY0z_C5qeh1tCH3uCl4qzhpU_AffS5StT_qO72iy_x2UTV3yuWY3w_p8WTlAz38YTV6u4aav_ftSf_Miz8ztPptf6kZEcMO0ePjdxEUwwhkkqUQbtBZpo-RWIwVtpSINIs-MTBtknoBL3J_PoJ18P_PZsO0E897a2zb_lfEDf2HwJauwd9NXUwxr2j7IPGkSbBmmPg0V7fWmXfulNPjBAprR0M1fWMo5G7VnvyUOCODOBfy0h3jEy2X3xbjiXnBFtLIdhKz5b6-Pforu504RTGcZZ8feYypV6YszksrS6LTzjMSv0adoYoPF72GIs2DtD8i43_G6SflmuBHgRAabxevcOgi8N~2",
+        "surface_type": "ad",
+        "snippet": "Промо · destination domain not visible in Path line at capture; href is yabs redirect"
+      }
+    ],
+    "safe_unknown": [
+      "personalization unknown — headless Playwright session without Yandex login",
+      "exact ad click URLs are yabs.yandex.ru redirects; Path display domains recorded where visible",
+      "bottom ad position 15 destination URL not resolved from visible SERP text",
+      "no inline map carousel observed; maps_local_pack marked absent; Яндекс Карты ranks as organic/local_pack link",
+      "organic position numbering includes ads above fold; ambiguity if MIG expects organic-only numbering"
+    ]
   }
 }
