@@ -1,0 +1,2410 @@
+{
+  "schema_version": "0.2",
+  "analysis_phase": "landing_analysis_v2",
+  "landing_id": "mig-20260605-mlint01-la002",
+  "snapshot_id": "mig-20260605-mlint01-ws002",
+  "session_id": "mig-20260605-mlint01",
+  "competitor_id": "mig-20260605-mlint01-c002",
+  "domain": "gruzovichec.ru",
+  "final_url": "https://gruzovichec.ru/",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-04T18:59:34.012Z",
+  "observations": [
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs001",
+      "family": "PRICING",
+      "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "sub_type": "visible_price_line",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs002",
+      "family": "OFFERS",
+      "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+      "category": "fleet",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs003",
+      "family": "OFFERS",
+      "text": "Грузоперевозки по Пензе и Пензенской области ",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers/2",
+        "html_anchor": null,
+        "verbatim_text": "Грузоперевозки по Пензе и Пензенской области ",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs004",
+      "family": "OFFERS",
+      "text": "Через мобильное приложение цена ниже на 5-10%",
+      "category": "app_channel",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/headings/2",
+        "html_anchor": null,
+        "verbatim_text": "Через мобильное приложение цена ниже на 5-10%",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs005",
+      "family": "PRICING",
+      "text": "Груз такси от 690 руб.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Груз такси от 690 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs006",
+      "family": "PRICING",
+      "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/1",
+        "html_anchor": null,
+        "verbatim_text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs007",
+      "family": "PRICING",
+      "text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/2",
+        "html_anchor": null,
+        "verbatim_text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs008",
+      "family": "PRICING",
+      "text": "от 1499 руб .",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/3",
+        "html_anchor": null,
+        "verbatim_text": "от 1499 руб .",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs009",
+      "family": "PRICING",
+      "text": "от 300 руб.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/4",
+        "html_anchor": null,
+        "verbatim_text": "от 300 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs010",
+      "family": "PRICING",
+      "text": "от 740 руб.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/5",
+        "html_anchor": null,
+        "verbatim_text": "от 740 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs011",
+      "family": "PRICING",
+      "text": "от 699 руб.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/6",
+        "html_anchor": null,
+        "verbatim_text": "от 699 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs012",
+      "family": "PRICING",
+      "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/7",
+        "html_anchor": null,
+        "verbatim_text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs013",
+      "family": "PRICING",
+      "text": "от 1400 руб.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/8",
+        "html_anchor": null,
+        "verbatim_text": "от 1400 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs014",
+      "family": "PRICING",
+      "text": "от 780 руб.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/10",
+        "html_anchor": null,
+        "verbatim_text": "от 780 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs015",
+      "family": "PRICING",
+      "text": "от 13,9 руб/км.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/11",
+        "html_anchor": null,
+        "verbatim_text": "от 13,9 руб/км.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs016",
+      "family": "PRICING",
+      "text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/12",
+        "html_anchor": null,
+        "verbatim_text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs017",
+      "family": "PRICING",
+      "text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/13",
+        "html_anchor": null,
+        "verbatim_text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs018",
+      "family": "CTA",
+      "text": "88412211121 → tel:88412211121",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs019",
+      "family": "CTA",
+      "text": "8(8412)21-11-21 → tel:8(8412)21-11-21",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "8(8412)21-11-21",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs020",
+      "family": "CTA",
+      "text": "telegram: Gruzovoe_taxi_gruzovochkof_bot",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-mlint01-la002-b007",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs021",
+      "family": "CTA",
+      "text": "Оставить заявку → https://gruzovichec.ru/forma-predrasscheta",
+      "sub_type": "external_link",
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Оставить заявку",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs022",
+      "family": "CONTACT_MODEL",
+      "text": "phone: 88412211121",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs023",
+      "family": "CONTACT_MODEL",
+      "text": "phone: 8(8412)21-11-21",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "8(8412)21-11-21",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs024",
+      "family": "CONTACT_MODEL",
+      "text": "email: zakaz@gruzovichec.ru",
+      "sub_type": "email",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/emails",
+        "html_anchor": null,
+        "verbatim_text": "zakaz@gruzovichec.ru",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs025",
+      "family": "CONTACT_MODEL",
+      "text": "messenger: telegram:Gruzovoe_taxi_gruzovochkof_bot",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs026",
+      "family": "TRUST",
+      "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "sub_type": "fleet_size",
+      "numeric_value": 39,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs027",
+      "family": "TRUST",
+      "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+      "sub_type": "fleet_size",
+      "numeric_value": 2,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs028",
+      "family": "TRUST",
+      "text": "Включены аренда \"Газели\" на 1 час и услуги одного грузчика на 2 часа.",
+      "sub_type": "fleet_size",
+      "numeric_value": 1,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Включены аренда \"Газели\" на 1 час и услуги одного грузчика на 2 часа.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs029",
+      "family": "TRUST",
+      "text": "Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту.",
+      "sub_type": "experience_claim",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs030",
+      "family": "TRUST",
+      "text": "Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели.",
+      "sub_type": "fleet_size",
+      "numeric_value": 20,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs031",
+      "family": "TRUST",
+      "text": "Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков.",
+      "sub_type": "fleet_size",
+      "numeric_value": 100,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs032",
+      "family": "TRUST",
+      "text": "Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок.",
+      "sub_type": "experience_claim",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs033",
+      "family": "TRUST",
+      "text": "Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза.",
+      "sub_type": "guarantee",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs034",
+      "family": "TRUST",
+      "text": "Обратная связь и поддержка клиентов Мы ценим наших клиентов и всегда рады отзывам, предложениям и вопросам.",
+      "sub_type": "review_snippet",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Обратная связь и поддержка клиентов Мы ценим наших клиентов и всегда рады отзывам, предложениям и вопросам.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs035",
+      "family": "TRUST",
+      "text": "Оставьте ваш отзыв на сайте, и это поможет нам стать ещё лучше.",
+      "sub_type": "review_snippet",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Оставьте ваш отзыв на сайте, и это поможет нам стать ещё лучше.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs036",
+      "family": "MARKETING_PATTERNS",
+      "text": "4 heading bands",
+      "sub_type": "long_scroll_sections",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "4 heading bands",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs037",
+      "family": "MARKETING_PATTERNS",
+      "text": "faq block detected",
+      "sub_type": "faq_section_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "faq block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs038",
+      "family": "MARKETING_PATTERNS",
+      "text": "reviews block detected",
+      "sub_type": "review_widget_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "reviews block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs039",
+      "family": "MARKETING_PATTERNS",
+      "text": "pricing block detected",
+      "sub_type": "pricing_table_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs040",
+      "family": "MARKETING_PATTERNS",
+      "text": "88412211121",
+      "sub_type": "phone_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs041",
+      "family": "MARKETING_PATTERNS",
+      "text": "messenger CTA visible",
+      "sub_type": "messenger_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la002-obs042",
+      "family": "MARKETING_PATTERNS",
+      "text": "Оставить заявку",
+      "sub_type": "single_primary_cta",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Оставить заявку",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "observation_summary": {
+    "families_present": [
+      "PRICING",
+      "OFFERS",
+      "CTA",
+      "CONTACT_MODEL",
+      "TRUST",
+      "MARKETING_PATTERNS"
+    ],
+    "families_unknown": [
+      "LEAD_CAPTURE",
+      "SOCIAL_PROOF",
+      "DELIVERY_PROMISE",
+      "SERVICE_COVERAGE"
+    ],
+    "top_signals": [
+      {
+        "family": "PRICING",
+        "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "observation_id": "mig-20260605-mlint01-la002-obs001",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+        "observation_id": "mig-20260605-mlint01-la002-obs002",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Грузоперевозки по Пензе и Пензенской области ",
+        "observation_id": "mig-20260605-mlint01-la002-obs003",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Через мобильное приложение цена ниже на 5-10%",
+        "observation_id": "mig-20260605-mlint01-la002-obs004",
+        "confidence": "B"
+      },
+      {
+        "family": "PRICING",
+        "text": "Груз такси от 690 руб.",
+        "observation_id": "mig-20260605-mlint01-la002-obs005",
+        "confidence": "B"
+      }
+    ]
+  },
+  "_processing": {
+    "excluded_offers": []
+  },
+  "_legacy": {
+    "visible_blocks": [
+      {
+        "block_id": "mig-20260605-mlint01-la002-b001",
+        "block_type": "hero",
+        "order": 0,
+        "heading_text": "Грузоперевозки по Пензе и Пензенской области ",
+        "content_summary": "Грузоперевозки по Пензе и Пензенской области",
+        "detection_method": "heading_heuristic",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/headings/3",
+          "html_anchor": null,
+          "verbatim_text": "Грузоперевозки по Пензе и Пензенской области ",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la002-b002",
+        "block_type": "offer_block",
+        "order": 1,
+        "heading_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "content_summary": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!; В АВТОПАРКЕ БОЛЕЕ 100 МАШИН; Грузоперевозки по Пензе и Пензенской области",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/offers",
+          "html_anchor": null,
+          "verbatim_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "block_type": "pricing_block",
+        "order": 2,
+        "heading_text": "Через мобильное приложение цена ниже на 5-10%",
+        "content_summary": "Груз такси от 690 руб.; Пенза , Проспект строителей 39в zakaz@gruzovichec.ru 8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!; Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусор…",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals",
+          "html_anchor": null,
+          "verbatim_text": "Груз такси от 690 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la002-b004",
+        "block_type": "faq",
+        "order": 3,
+        "heading_text": "FAQ section (pattern)",
+        "content_summary": null,
+        "detection_method": "dom_landmark",
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": null,
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la002-b005",
+        "block_type": "reviews",
+        "order": 4,
+        "heading_text": null,
+        "content_summary": null,
+        "detection_method": "dom_landmark",
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "review markers in body",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la002-b006",
+        "block_type": "contacts",
+        "order": 5,
+        "heading_text": null,
+        "content_summary": "88412211121; 8(8412)21-11-21; zakaz@gruzovichec.ru",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts",
+          "html_anchor": null,
+          "verbatim_text": "88412211121",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la002-b007",
+        "block_type": "messenger_cta",
+        "order": 6,
+        "heading_text": "telegram: Gruzovoe_taxi_gruzovochkof_bot",
+        "content_summary": null,
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "offers": [
+      {
+        "offer_id": "mig-20260605-mlint01-la002-of001",
+        "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-mlint01-la002-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/offers/0",
+          "html_anchor": null,
+          "verbatim_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-mlint01-la002-of002",
+        "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-mlint01-la002-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/offers/1",
+          "html_anchor": null,
+          "verbatim_text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-mlint01-la002-of003",
+        "text": "Грузоперевозки по Пензе и Пензенской области ",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-mlint01-la002-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/offers/2",
+          "html_anchor": null,
+          "verbatim_text": "Грузоперевозки по Пензе и Пензенской области ",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-mlint01-la002-of004",
+        "text": "Через мобильное приложение цена ниже на 5-10%",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-mlint01-la002-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/headings/2",
+          "html_anchor": null,
+          "verbatim_text": "Через мобильное приложение цена ниже на 5-10%",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "cta_patterns": [
+      {
+        "cta_id": "mig-20260605-mlint01-la002-cta001",
+        "cta_type": "phone",
+        "label_text": "88412211121",
+        "target_href": "tel:88412211121",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la002-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "88412211121",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la002-cta002",
+        "cta_type": "phone",
+        "label_text": "8(8412)21-11-21",
+        "target_href": "tel:8(8412)21-11-21",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la002-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "8(8412)21-11-21",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la002-cta003",
+        "cta_type": "messenger",
+        "label_text": "telegram: Gruzovoe_taxi_gruzovochkof_bot",
+        "target_href": null,
+        "element_type": "link",
+        "position_band": "footer",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la002-b007",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la002-cta004",
+        "cta_type": "external_link",
+        "label_text": "Оставить заявку",
+        "target_href": "https://gruzovichec.ru/forma-predrasscheta",
+        "element_type": "link",
+        "position_band": "unknown",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la002-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/cta_elements/0",
+          "html_anchor": null,
+          "verbatim_text": "Оставить заявку",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "pricing_patterns": [
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr001",
+        "text": "Груз такси от 690 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/0",
+          "html_anchor": null,
+          "verbatim_text": "Груз такси от 690 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr002",
+        "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/1",
+          "html_anchor": null,
+          "verbatim_text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr003",
+        "text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+        "currency_hint": null,
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/2",
+          "html_anchor": null,
+          "verbatim_text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr004",
+        "text": "от 1499 руб .",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/3",
+          "html_anchor": null,
+          "verbatim_text": "от 1499 руб .",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr005",
+        "text": "от 300 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/4",
+          "html_anchor": null,
+          "verbatim_text": "от 300 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr006",
+        "text": "от 740 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/5",
+          "html_anchor": null,
+          "verbatim_text": "от 740 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr007",
+        "text": "от 699 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/6",
+          "html_anchor": null,
+          "verbatim_text": "от 699 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr008",
+        "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+        "currency_hint": null,
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/7",
+          "html_anchor": null,
+          "verbatim_text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr009",
+        "text": "от 1400 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/8",
+          "html_anchor": null,
+          "verbatim_text": "от 1400 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr010",
+        "text": "от 1400 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/9",
+          "html_anchor": null,
+          "verbatim_text": "от 1400 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr011",
+        "text": "от 780 руб.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/10",
+          "html_anchor": null,
+          "verbatim_text": "от 780 руб.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr012",
+        "text": "от 13,9 руб/км.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/11",
+          "html_anchor": null,
+          "verbatim_text": "от 13,9 руб/км.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr013",
+        "text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+        "currency_hint": null,
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/12",
+          "html_anchor": null,
+          "verbatim_text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la002-pr014",
+        "text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+        "currency_hint": null,
+        "block_id": "mig-20260605-mlint01-la002-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/pricing_signals/13",
+          "html_anchor": null,
+          "verbatim_text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "trust_patterns": [
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr001",
+        "trust_type": "fleet_size",
+        "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "numeric_value": 39,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr002",
+        "trust_type": "fleet_size",
+        "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+        "numeric_value": 2,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr003",
+        "trust_type": "fleet_size",
+        "text": "Включены аренда \"Газели\" на 1 час и услуги одного грузчика на 2 часа.",
+        "numeric_value": 1,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Включены аренда \"Газели\" на 1 час и услуги одного грузчика на 2 часа.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr004",
+        "trust_type": "experience_claim",
+        "text": "Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr005",
+        "trust_type": "fleet_size",
+        "text": "Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели.",
+        "numeric_value": 20,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr006",
+        "trust_type": "fleet_size",
+        "text": "Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков.",
+        "numeric_value": 100,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr007",
+        "trust_type": "experience_claim",
+        "text": "Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr008",
+        "trust_type": "guarantee",
+        "text": "Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr009",
+        "trust_type": "review_snippet",
+        "text": "Обратная связь и поддержка клиентов Мы ценим наших клиентов и всегда рады отзывам, предложениям и вопросам.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Обратная связь и поддержка клиентов Мы ценим наших клиентов и всегда рады отзывам, предложениям и вопросам.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la002-tr010",
+        "trust_type": "review_snippet",
+        "text": "Оставьте ваш отзыв на сайте, и это поможет нам стать ещё лучше.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Оставьте ваш отзыв на сайте, и это поможет нам стать ещё лучше.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "contact_patterns": [
+      {
+        "contact_id": "mig-20260605-mlint01-la002-co001",
+        "contact_type": "phone",
+        "value": "88412211121",
+        "block_id": "mig-20260605-mlint01-la002-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "88412211121",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la002-co002",
+        "contact_type": "phone",
+        "value": "8(8412)21-11-21",
+        "block_id": "mig-20260605-mlint01-la002-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "8(8412)21-11-21",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la002-co003",
+        "contact_type": "email",
+        "value": "zakaz@gruzovichec.ru",
+        "block_id": "mig-20260605-mlint01-la002-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/emails",
+          "html_anchor": null,
+          "verbatim_text": "zakaz@gruzovichec.ru",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la002-co004",
+        "contact_type": "messenger",
+        "value": "telegram:Gruzovoe_taxi_gruzovochkof_bot",
+        "block_id": "mig-20260605-mlint01-la002-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "form_patterns": [],
+    "page_patterns": [
+      {
+        "pattern_id": "long_scroll_sections",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "4 heading bands",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "faq_section_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "faq block detected",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "review_widget_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "reviews block detected",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "pricing_table_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "pricing block detected",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "phone_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "88412211121",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "messenger_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "messenger CTA visible",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "single_primary_cta",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws002",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Оставить заявку",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ]
+  },
+  "visible_blocks": [
+    {
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "block_type": "hero",
+      "order": 0,
+      "heading_text": "Грузоперевозки по Пензе и Пензенской области ",
+      "content_summary": "Грузоперевозки по Пензе и Пензенской области",
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/headings/3",
+        "html_anchor": null,
+        "verbatim_text": "Грузоперевозки по Пензе и Пензенской области ",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "block_type": "offer_block",
+      "order": 1,
+      "heading_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "content_summary": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!; В АВТОПАРКЕ БОЛЕЕ 100 МАШИН; Грузоперевозки по Пензе и Пензенской области",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers",
+        "html_anchor": null,
+        "verbatim_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "block_type": "pricing_block",
+      "order": 2,
+      "heading_text": "Через мобильное приложение цена ниже на 5-10%",
+      "content_summary": "Груз такси от 690 руб.; Пенза , Проспект строителей 39в zakaz@gruzovichec.ru 8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!; Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусор…",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals",
+        "html_anchor": null,
+        "verbatim_text": "Груз такси от 690 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la002-b004",
+      "block_type": "faq",
+      "order": 3,
+      "heading_text": "FAQ section (pattern)",
+      "content_summary": null,
+      "detection_method": "dom_landmark",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la002-b005",
+      "block_type": "reviews",
+      "order": 4,
+      "heading_text": null,
+      "content_summary": null,
+      "detection_method": "dom_landmark",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "review markers in body",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "block_type": "contacts",
+      "order": 5,
+      "heading_text": null,
+      "content_summary": "88412211121; 8(8412)21-11-21; zakaz@gruzovichec.ru",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts",
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la002-b007",
+      "block_type": "messenger_cta",
+      "order": 6,
+      "heading_text": "telegram: Gruzovoe_taxi_gruzovochkof_bot",
+      "content_summary": null,
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "mig-20260605-mlint01-la002-of001",
+      "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-mlint01-la002-of002",
+      "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-mlint01-la002-of003",
+      "text": "Грузоперевозки по Пензе и Пензенской области ",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/offers/2",
+        "html_anchor": null,
+        "verbatim_text": "Грузоперевозки по Пензе и Пензенской области ",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-mlint01-la002-of004",
+      "text": "Через мобильное приложение цена ниже на 5-10%",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la002-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/headings/2",
+        "html_anchor": null,
+        "verbatim_text": "Через мобильное приложение цена ниже на 5-10%",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "cta_patterns": [
+    {
+      "cta_id": "mig-20260605-mlint01-la002-cta001",
+      "cta_type": "phone",
+      "label_text": "88412211121",
+      "target_href": "tel:88412211121",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la002-cta002",
+      "cta_type": "phone",
+      "label_text": "8(8412)21-11-21",
+      "target_href": "tel:8(8412)21-11-21",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "8(8412)21-11-21",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la002-cta003",
+      "cta_type": "messenger",
+      "label_text": "telegram: Gruzovoe_taxi_gruzovochkof_bot",
+      "target_href": null,
+      "element_type": "link",
+      "position_band": "footer",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la002-b007",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la002-cta004",
+      "cta_type": "external_link",
+      "label_text": "Оставить заявку",
+      "target_href": "https://gruzovichec.ru/forma-predrasscheta",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la002-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Оставить заявку",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "pricing_patterns": [
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr001",
+      "text": "Груз такси от 690 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Груз такси от 690 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr002",
+      "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/1",
+        "html_anchor": null,
+        "verbatim_text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr003",
+      "text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+      "currency_hint": null,
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/2",
+        "html_anchor": null,
+        "verbatim_text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr004",
+      "text": "от 1499 руб .",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/3",
+        "html_anchor": null,
+        "verbatim_text": "от 1499 руб .",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr005",
+      "text": "от 300 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/4",
+        "html_anchor": null,
+        "verbatim_text": "от 300 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr006",
+      "text": "от 740 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/5",
+        "html_anchor": null,
+        "verbatim_text": "от 740 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr007",
+      "text": "от 699 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/6",
+        "html_anchor": null,
+        "verbatim_text": "от 699 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr008",
+      "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+      "currency_hint": null,
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/7",
+        "html_anchor": null,
+        "verbatim_text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr009",
+      "text": "от 1400 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/8",
+        "html_anchor": null,
+        "verbatim_text": "от 1400 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr010",
+      "text": "от 1400 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/9",
+        "html_anchor": null,
+        "verbatim_text": "от 1400 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr011",
+      "text": "от 780 руб.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/10",
+        "html_anchor": null,
+        "verbatim_text": "от 780 руб.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr012",
+      "text": "от 13,9 руб/км.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/11",
+        "html_anchor": null,
+        "verbatim_text": "от 13,9 руб/км.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr013",
+      "text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+      "currency_hint": null,
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/12",
+        "html_anchor": null,
+        "verbatim_text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la002-pr014",
+      "text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+      "currency_hint": null,
+      "block_id": "mig-20260605-mlint01-la002-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/pricing_signals/13",
+        "html_anchor": null,
+        "verbatim_text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "trust_patterns": [
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr001",
+      "trust_type": "fleet_size",
+      "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+      "numeric_value": 39,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr002",
+      "trust_type": "fleet_size",
+      "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+      "numeric_value": 2,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr003",
+      "trust_type": "fleet_size",
+      "text": "Включены аренда \"Газели\" на 1 час и услуги одного грузчика на 2 часа.",
+      "numeric_value": 1,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Включены аренда \"Газели\" на 1 час и услуги одного грузчика на 2 часа.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr004",
+      "trust_type": "experience_claim",
+      "text": "Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr005",
+      "trust_type": "fleet_size",
+      "text": "Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели.",
+      "numeric_value": 20,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr006",
+      "trust_type": "fleet_size",
+      "text": "Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков.",
+      "numeric_value": 100,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr007",
+      "trust_type": "experience_claim",
+      "text": "Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr008",
+      "trust_type": "guarantee",
+      "text": "Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr009",
+      "trust_type": "review_snippet",
+      "text": "Обратная связь и поддержка клиентов Мы ценим наших клиентов и всегда рады отзывам, предложениям и вопросам.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Обратная связь и поддержка клиентов Мы ценим наших клиентов и всегда рады отзывам, предложениям и вопросам.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la002-tr010",
+      "trust_type": "review_snippet",
+      "text": "Оставьте ваш отзыв на сайте, и это поможет нам стать ещё лучше.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Оставьте ваш отзыв на сайте, и это поможет нам стать ещё лучше.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "contact_patterns": [
+    {
+      "contact_id": "mig-20260605-mlint01-la002-co001",
+      "contact_type": "phone",
+      "value": "88412211121",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la002-co002",
+      "contact_type": "phone",
+      "value": "8(8412)21-11-21",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "8(8412)21-11-21",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la002-co003",
+      "contact_type": "email",
+      "value": "zakaz@gruzovichec.ru",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/emails",
+        "html_anchor": null,
+        "verbatim_text": "zakaz@gruzovichec.ru",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la002-co004",
+      "contact_type": "messenger",
+      "value": "telegram:Gruzovoe_taxi_gruzovochkof_bot",
+      "block_id": "mig-20260605-mlint01-la002-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "Gruzovoe_taxi_gruzovochkof_bot",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "form_patterns": [],
+  "page_patterns": [
+    {
+      "pattern_id": "long_scroll_sections",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "4 heading bands",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "faq_section_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "faq block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "review_widget_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "reviews block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "pricing_table_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "phone_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "88412211121",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "messenger_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "single_primary_cta",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws002",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Оставить заявку",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260605-mlint01-ws002",
+    "capture_time": "2026-06-04T18:43:39.324Z",
+    "analysis_mode": "snapshot_and_html"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260605-mlint01-la002/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260605-mlint01-ws002/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260605-mlint01-ws002/page.html"
+  },
+  "evidence_grade": "B"
+}

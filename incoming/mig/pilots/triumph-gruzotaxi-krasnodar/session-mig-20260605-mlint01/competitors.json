@@ -1,0 +1,762 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260605-mlint01",
+  "generated_at": "2026-06-04T18:59:11.112Z",
+  "discovery_phase": 2,
+  "competitor_observations": {
+    "section_id": "competitor_observations",
+    "schema_version": "0",
+    "discovery_pass_at": "2026-06-04T15:32:42.049Z",
+    "discovery_phase": 2,
+    "discovery_mode": "multi_query",
+    "query_set_ref": "грузотакси Краснодар | грузовое такси Краснодар | газель Краснодар | грузоперевозки Краснодар | перевозка мебели Краснодар | квартирный переезд Краснодар | вызов газели Краснодар | газель с грузчиками Краснодар | грузовое такси с грузчиками Краснодар | грузоперевозки по Краснодару | заказать газель Краснодар",
+    "discovery_coverage": {
+      "queries_declared": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q08",
+        "q09",
+        "q10",
+        "q11"
+      ],
+      "queries_executed": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q08",
+        "q09",
+        "q10",
+        "q11"
+      ],
+      "queries_missing": [
+        "q05",
+        "q06",
+        "q07"
+      ],
+      "query_coverage": "partial"
+    },
+    "competitors": [
+      {
+        "competitor_id": "mig-20260605-mlint01-c001",
+        "display_name": "Грузовое такси в Краснодаре. Быстрая подача. Переезды «под ключ». Без переплат",
+        "primary_domain": "gruzotaxi-triumph.ru",
+        "domains_observed": [
+          "gruzotaxi-triumph.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "query_id": "q01"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "query_id": "q02"
+          }
+        ],
+        "first_seen_query": "грузотакси Краснодар",
+        "queries_seen": [
+          "грузотакси Краснодар",
+          "грузовое такси Краснодар"
+        ],
+        "query_ids_seen": [
+          "q01",
+          "q02"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_repeated_domain"
+        ],
+        "discovery_strength": "repeated",
+        "region": "Краснодар",
+        "city": "Краснодар",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260604-mqgt01-c001-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q01",
+              "query_text": "грузотакси Краснодар",
+              "position": 1,
+              "url": "https://gruzotaxi-triumph.ru/",
+              "title": "Грузовое такси в Краснодаре. Быстрая подача. Переезды «под ключ». Без переплат",
+              "snippet": "gruzotaxi-triumph.ru › заказ-грузовое-такси…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c001-e02",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q01",
+              "query_text": "грузотакси Краснодар",
+              "position": 2,
+              "url": "https://gruzotaxi-triumph.ru/",
+              "title": "Пассажирское место по городу - бесплатно!",
+              "snippet": "gruzotaxi-triumph.ru›Пассажирское место по городу - бесплатно"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c001-e03",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q02",
+              "query_text": "грузовое такси Краснодар",
+              "position": 1,
+              "url": "https://gruzotaxi-triumph.ru/",
+              "title": "Грузовое такси в Краснодаре по низким ценам. Переезды «под ключ». Без переплат",
+              "snippet": "gruzotaxi-triumph.ru › заказ-грузовое-такси…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c001-e04",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q02",
+              "query_text": "грузовое такси Краснодар",
+              "position": 2,
+              "url": "https://gruzotaxi-triumph.ru/",
+              "title": "Пассажирское место по городу - бесплатно!",
+              "snippet": "gruzotaxi-triumph.ru›Пассажирское место по городу - бесплатно"
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-04T13:09:53.586Z",
+        "updated_at": "2026-06-04T14:05:07.127Z",
+        "recurrence": {
+          "distinct_query_count": 2,
+          "query_ids": [
+            "q01",
+            "q02"
+          ]
+        }
+      },
+      {
+        "competitor_id": "mig-20260605-mlint01-c002",
+        "display_name": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+        "primary_domain": "gruzovichec.ru",
+        "domains_observed": [
+          "gruzovichec.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "query_id": "q01"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "query_id": "q02"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q03.json",
+            "observed_at": "2026-06-04T14:05:16.701Z",
+            "query_id": "q03"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q08.json",
+            "observed_at": "2026-06-04T13:49:22.218Z",
+            "query_id": "q08"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "query_id": "q09"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q11.json",
+            "observed_at": "2026-06-04T15:32:04.371Z",
+            "query_id": "q11"
+          }
+        ],
+        "first_seen_query": "грузотакси Краснодар",
+        "queries_seen": [
+          "грузотакси Краснодар",
+          "грузовое такси Краснодар",
+          "газель Краснодар",
+          "газель с грузчиками Краснодар",
+          "грузовое такси с грузчиками Краснодар",
+          "заказать газель Краснодар"
+        ],
+        "query_ids_seen": [
+          "q01",
+          "q02",
+          "q03",
+          "q08",
+          "q09",
+          "q11"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_repeated_domain"
+        ],
+        "discovery_strength": "repeated",
+        "region": "Краснодар",
+        "city": "Краснодар",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260604-mqgt01-c002-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q01",
+              "query_text": "грузотакси Краснодар",
+              "position": 4,
+              "url": "https://gruzovichec.ru/",
+              "title": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+              "snippet": "krasnodar.gruzovichec.ru › грузоперевозки…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c002-e02",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q02",
+              "query_text": "грузовое такси Краснодар",
+              "position": 5,
+              "url": "https://gruzovichec.ru/",
+              "title": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+              "snippet": "krasnodar.gruzovichec.ru › грузоперевозки…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c002-e03",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q03.json",
+            "observed_at": "2026-06-04T14:05:16.701Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q03",
+              "query_text": "газель Краснодар",
+              "position": 1,
+              "url": "https://gruzovichec.ru/",
+              "title": "Грузовое такси «Грузовичок» — газель в Краснодаре 24 часа. Срочный вызов газели 539 руб",
+              "snippet": "krasnodar.gruzovichec.ru › Грузовое-Такси…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c002-e04",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q08.json",
+            "observed_at": "2026-06-04T13:49:22.218Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q08",
+              "query_text": "газель с грузчиками Краснодар",
+              "position": 4,
+              "url": "https://gruzovichec.ru/",
+              "title": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+              "snippet": "krasnodar.gruzovichec.ru › Грузовое-Такси…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c002-e05",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q09",
+              "query_text": "грузовое такси с грузчиками Краснодар",
+              "position": 1,
+              "url": "https://gruzovichec.ru/",
+              "title": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+              "snippet": "krasnodar.gruzovichec.ru › грузоперевозки…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c002-e06",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q11.json",
+            "observed_at": "2026-06-04T15:32:04.371Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q11",
+              "query_text": "заказать газель Краснодар",
+              "position": 3,
+              "url": "https://gruzovichec.ru/",
+              "title": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+              "snippet": "krasnodar.gruzovichec.ru › грузоперевозки…"
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-04T13:09:53.586Z",
+        "updated_at": "2026-06-04T15:32:04.371Z",
+        "recurrence": {
+          "distinct_query_count": 6,
+          "query_ids": [
+            "q01",
+            "q02",
+            "q03",
+            "q08",
+            "q09",
+            "q11"
+          ]
+        }
+      },
+      {
+        "competitor_id": "mig-20260605-mlint01-c003",
+        "display_name": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+        "primary_domain": "krasnodar.gruzovichkof.ru",
+        "domains_observed": [
+          "krasnodar.gruzovichkof.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "query_id": "q01"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "query_id": "q02"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q04.json",
+            "observed_at": "2026-06-04T14:05:25.492Z",
+            "query_id": "q04"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q08.json",
+            "observed_at": "2026-06-04T13:49:22.218Z",
+            "query_id": "q08"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "query_id": "q09"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q10.json",
+            "observed_at": "2026-06-04T13:56:55.066Z",
+            "query_id": "q10"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q11.json",
+            "observed_at": "2026-06-04T15:32:04.371Z",
+            "query_id": "q11"
+          }
+        ],
+        "first_seen_query": "грузотакси Краснодар",
+        "queries_seen": [
+          "грузотакси Краснодар",
+          "грузовое такси Краснодар",
+          "грузоперевозки Краснодар",
+          "газель с грузчиками Краснодар",
+          "грузовое такси с грузчиками Краснодар",
+          "грузоперевозки по Краснодару",
+          "заказать газель Краснодар"
+        ],
+        "query_ids_seen": [
+          "q01",
+          "q02",
+          "q04",
+          "q08",
+          "q09",
+          "q10",
+          "q11"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_repeated_domain"
+        ],
+        "discovery_strength": "repeated",
+        "region": "Краснодар",
+        "city": "Краснодар",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q01",
+              "query_text": "грузотакси Краснодар",
+              "position": 8,
+              "url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+              "title": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru›Услуги›Грузовое такси в Краснодаре"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e02",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q02.json",
+            "observed_at": "2026-06-04T14:05:07.127Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q02",
+              "query_text": "грузовое такси Краснодар",
+              "position": 9,
+              "url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+              "title": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru›Услуги›Грузовое такси в Краснодаре"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e03",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q04.json",
+            "observed_at": "2026-06-04T14:05:25.492Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q04",
+              "query_text": "грузоперевозки Краснодар",
+              "position": 6,
+              "url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+              "title": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru›Услуги›Грузовое такси в Краснодаре"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e04",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q08.json",
+            "observed_at": "2026-06-04T13:49:22.218Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q08",
+              "query_text": "газель с грузчиками Краснодар",
+              "position": 5,
+              "url": "https://krasnodar.gruzovichkof.ru/",
+              "title": "Грузоперевозки в Краснодаре и Краснодарском крае «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e05",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q09",
+              "query_text": "грузовое такси с грузчиками Краснодар",
+              "position": 5,
+              "url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+              "title": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru›Услуги›Грузовое такси в Краснодаре"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e06",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q10.json",
+            "observed_at": "2026-06-04T13:56:55.066Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q10",
+              "query_text": "грузоперевозки по Краснодару",
+              "position": 5,
+              "url": "https://krasnodar.gruzovichkof.ru/",
+              "title": "Грузоперевозки в Краснодаре и Краснодарском крае «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c006-e07",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q11.json",
+            "observed_at": "2026-06-04T15:32:04.371Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q11",
+              "query_text": "заказать газель Краснодар",
+              "position": 10,
+              "url": "https://krasnodar.gruzovichkof.ru/",
+              "title": "Грузоперевозки в Краснодаре и Краснодарском крае «Грузовичкоф»",
+              "snippet": "krasnodar.gruzovichkof.ru"
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-04T13:09:53.586Z",
+        "updated_at": "2026-06-04T15:32:04.371Z",
+        "recurrence": {
+          "distinct_query_count": 7,
+          "query_ids": [
+            "q01",
+            "q02",
+            "q04",
+            "q08",
+            "q09",
+            "q10",
+            "q11"
+          ]
+        }
+      },
+      {
+        "competitor_id": "mig-20260605-mlint01-c004",
+        "display_name": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim",
+        "primary_domain": "krasnodar.taximaxim.ru",
+        "domains_observed": [
+          "krasnodar.taximaxim.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "query_id": "q01"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "query_id": "q09"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q10.json",
+            "observed_at": "2026-06-04T13:56:55.066Z",
+            "query_id": "q10"
+          }
+        ],
+        "first_seen_query": "грузотакси Краснодар",
+        "queries_seen": [
+          "грузотакси Краснодар",
+          "грузовое такси с грузчиками Краснодар",
+          "грузоперевозки по Краснодару"
+        ],
+        "query_ids_seen": [
+          "q01",
+          "q09",
+          "q10"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_repeated_domain"
+        ],
+        "discovery_strength": "repeated",
+        "region": "Краснодар",
+        "city": "Краснодар",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260604-mqgt01-c008-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q01.json",
+            "observed_at": "2026-06-04T13:09:53.586Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q01",
+              "query_text": "грузотакси Краснодар",
+              "position": 10,
+              "url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+              "title": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim",
+              "snippet": "krasnodar.taximaxim.ru › gruzovie-…"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c008-e02",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q09",
+              "query_text": "грузовое такси с грузчиками Краснодар",
+              "position": 6,
+              "url": "https://krasnodar.taximaxim.ru/cargo/",
+              "title": "Заказ грузоперевозок и услуг грузчиков в сервисе «Максим»",
+              "snippet": "krasnodar.taximaxim.ru›Заказ такси›Грузоперевозки"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c008-e03",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q10.json",
+            "observed_at": "2026-06-04T13:56:55.066Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q10",
+              "query_text": "грузоперевозки по Краснодару",
+              "position": 9,
+              "url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+              "title": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim",
+              "snippet": "krasnodar.taximaxim.ru › gruzovie-…"
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-04T13:09:53.586Z",
+        "updated_at": "2026-06-04T15:31:52.651Z",
+        "recurrence": {
+          "distinct_query_count": 3,
+          "query_ids": [
+            "q01",
+            "q09",
+            "q10"
+          ]
+        }
+      },
+      {
+        "competitor_id": "mig-20260605-mlint01-c005",
+        "display_name": "Заказать грузовое такси в городе Краснодар – Ситимобил",
+        "primary_domain": "city-mobil.ru",
+        "domains_observed": [
+          "city-mobil.ru"
+        ],
+        "surface_types": [
+          "serp_organic"
+        ],
+        "discovery_sources": [
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q04.json",
+            "observed_at": "2026-06-04T14:05:25.492Z",
+            "query_id": "q04"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "query_id": "q09"
+          },
+          {
+            "source_kind": "serp_organic",
+            "artifact_ref": "serp_results/q10.json",
+            "observed_at": "2026-06-04T13:56:55.066Z",
+            "query_id": "q10"
+          }
+        ],
+        "first_seen_query": "грузоперевозки Краснодар",
+        "queries_seen": [
+          "грузоперевозки Краснодар",
+          "грузовое такси с грузчиками Краснодар",
+          "грузоперевозки по Краснодару"
+        ],
+        "query_ids_seen": [
+          "q04",
+          "q09",
+          "q10"
+        ],
+        "discovery_rules_fired": [
+          "rule_serp_organic_top_n",
+          "rule_repeated_domain"
+        ],
+        "discovery_strength": "repeated",
+        "region": "Краснодар",
+        "city": "Краснодар",
+        "evidence": [
+          {
+            "evidence_id": "mig-20260604-mqgt01-c019-e01",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q04.json",
+            "observed_at": "2026-06-04T14:05:25.492Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q04",
+              "query_text": "грузоперевозки Краснодар",
+              "position": 10,
+              "url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+              "title": "Заказать грузовое такси в городе Краснодар – Ситимобил",
+              "snippet": "city-mobil.ru › krasnodar/gruz-taxi"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c019-e02",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q09.json",
+            "observed_at": "2026-06-04T15:31:52.651Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q09",
+              "query_text": "грузовое такси с грузчиками Краснодар",
+              "position": 9,
+              "url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+              "title": "Заказать грузовое такси в городе Краснодар – Ситимобил",
+              "snippet": "city-mobil.ru › krasnodar/gruz-taxi"
+            }
+          },
+          {
+            "evidence_id": "mig-20260604-mqgt01-c019-e03",
+            "source_type": "human",
+            "artifact_ref": "serp_results/q10.json",
+            "observed_at": "2026-06-04T13:56:55.066Z",
+            "grade": "B",
+            "surface_detail": {
+              "query_id": "q10",
+              "query_text": "грузоперевозки по Краснодару",
+              "position": 8,
+              "url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+              "title": "Заказать грузовое такси в городе Краснодар – Ситимобил",
+              "snippet": "city-mobil.ru › krasnodar/gruz-taxi"
+            }
+          }
+        ],
+        "evidence_grade": "B",
+        "capture_time": "2026-06-04T13:56:55.066Z",
+        "updated_at": "2026-06-04T15:31:52.651Z",
+        "recurrence": {
+          "distinct_query_count": 3,
+          "query_ids": [
+            "q04",
+            "q09",
+            "q10"
+          ]
+        }
+      }
+    ],
+    "section_evidence_grade": "B",
+    "section_coverage": "partial",
+    "safe_unknown": [
+      "Queries not captured: q05, q06, q07"
+    ]
+  },
+  "discovery_mode": "multi_query"
+}

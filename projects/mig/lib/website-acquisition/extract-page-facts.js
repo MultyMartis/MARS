@@ -348,6 +348,10 @@ function emptyContacts() {
  * Extract observable page facts from HTML (deterministic, no AI).
  */
 function extractPageFacts(html, baseUrl, options = {}) {
+  const MAX_HTML_CHARS = options.max_html_chars ?? 350000;
+  if (html && html.length > MAX_HTML_CHARS) {
+    html = html.slice(0, MAX_HTML_CHARS);
+  }
   const rules = options.rules || loadRules(options.rulesPath);
   const renderStatus = detectRenderStatus(html);
   const headings = extractHeadings(html, rules.heading_cap || 50);

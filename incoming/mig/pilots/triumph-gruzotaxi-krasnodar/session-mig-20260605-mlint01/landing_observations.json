@@ -1,0 +1,335 @@
+{
+  "schema_version": "0.2",
+  "session_id": "mig-20260605-mlint01",
+  "generated_at": "2026-06-04T18:59:34.012Z",
+  "analysis_phase": "landing_analysis_v2",
+  "upstream_artifacts": {
+    "website_snapshots": "website_snapshots.json",
+    "competitors": "competitors.json"
+  },
+  "landings": [
+    {
+      "landing_id": "mig-20260605-mlint01-la001",
+      "snapshot_id": "mig-20260605-mlint01-ws001",
+      "competitor_id": "mig-20260605-mlint01-c001",
+      "domain": "gruzotaxi-triumph.ru",
+      "final_url": "https://gruzotaxi-triumph.ru/",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260605-mlint01-la001/landing_observation.json",
+      "observation_summary": {
+        "families_present": [
+          "OFFERS",
+          "PRICING",
+          "CTA",
+          "LEAD_CAPTURE",
+          "CONTACT_MODEL",
+          "SOCIAL_PROOF",
+          "TRUST",
+          "MARKETING_PATTERNS"
+        ],
+        "families_unknown": [
+          "DELIVERY_PROMISE",
+          "SERVICE_COVERAGE"
+        ],
+        "top_signals": [
+          {
+            "family": "OFFERS",
+            "text": "Грузовое такси в Краснодаре",
+            "observation_id": "mig-20260605-mlint01-la001-obs001",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+            "observation_id": "mig-20260605-mlint01-la001-obs002",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Заказать Грузовое такси",
+            "observation_id": "mig-20260605-mlint01-la001-obs003",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Есть ли грузчики?",
+            "observation_id": "mig-20260605-mlint01-la001-obs004",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Можно ли оформить предварительный заказ?",
+            "observation_id": "mig-20260605-mlint01-la001-obs005",
+            "confidence": "B"
+          }
+        ]
+      },
+      "_derived": {
+        "block_count": 8,
+        "offer_count": 7,
+        "cta_count": 12,
+        "trust_count": 4
+      }
+    },
+    {
+      "landing_id": "mig-20260605-mlint01-la002",
+      "snapshot_id": "mig-20260605-mlint01-ws002",
+      "competitor_id": "mig-20260605-mlint01-c002",
+      "domain": "gruzovichec.ru",
+      "final_url": "https://gruzovichec.ru/",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260605-mlint01-la002/landing_observation.json",
+      "observation_summary": {
+        "families_present": [
+          "PRICING",
+          "OFFERS",
+          "CTA",
+          "CONTACT_MODEL",
+          "TRUST",
+          "MARKETING_PATTERNS"
+        ],
+        "families_unknown": [
+          "LEAD_CAPTURE",
+          "SOCIAL_PROOF",
+          "DELIVERY_PROMISE",
+          "SERVICE_COVERAGE"
+        ],
+        "top_signals": [
+          {
+            "family": "PRICING",
+            "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+            "observation_id": "mig-20260605-mlint01-la002-obs001",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+            "observation_id": "mig-20260605-mlint01-la002-obs002",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Грузоперевозки по Пензе и Пензенской области ",
+            "observation_id": "mig-20260605-mlint01-la002-obs003",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Через мобильное приложение цена ниже на 5-10%",
+            "observation_id": "mig-20260605-mlint01-la002-obs004",
+            "confidence": "B"
+          },
+          {
+            "family": "PRICING",
+            "text": "Груз такси от 690 руб.",
+            "observation_id": "mig-20260605-mlint01-la002-obs005",
+            "confidence": "B"
+          }
+        ]
+      },
+      "_derived": {
+        "block_count": 7,
+        "offer_count": 4,
+        "cta_count": 4,
+        "trust_count": 10
+      }
+    },
+    {
+      "landing_id": "mig-20260605-mlint01-la003",
+      "snapshot_id": "mig-20260605-mlint01-ws003",
+      "competitor_id": "mig-20260605-mlint01-c003",
+      "domain": "krasnodar.gruzovichkof.ru",
+      "final_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260605-mlint01-la003/landing_observation.json",
+      "observation_summary": {
+        "families_present": [
+          "OFFERS",
+          "DELIVERY_PROMISE",
+          "PRICING",
+          "CTA",
+          "CONTACT_MODEL",
+          "TRUST",
+          "MARKETING_PATTERNS"
+        ],
+        "families_unknown": [
+          "LEAD_CAPTURE",
+          "SOCIAL_PROOF",
+          "SERVICE_COVERAGE"
+        ],
+        "top_signals": [
+          {
+            "family": "OFFERS",
+            "text": "Грузовое такси в Краснодаре",
+            "observation_id": "mig-20260605-mlint01-la003-obs001",
+            "confidence": "B"
+          },
+          {
+            "family": "DELIVERY_PROMISE",
+            "text": "Вызвать грузовое такси в Краснодаре — подача за 15 минут!",
+            "observation_id": "mig-20260605-mlint01-la003-obs002",
+            "confidence": "B"
+          },
+          {
+            "family": "PRICING",
+            "text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактны…",
+            "observation_id": "mig-20260605-mlint01-la003-obs003",
+            "confidence": "B"
+          },
+          {
+            "family": "CTA",
+            "text": "88003336747 → tel:88003336747",
+            "observation_id": "mig-20260605-mlint01-la003-obs004",
+            "confidence": "B"
+          },
+          {
+            "family": "CTA",
+            "text": "84090392982 → tel:84090392982",
+            "observation_id": "mig-20260605-mlint01-la003-obs005",
+            "confidence": "B"
+          }
+        ]
+      },
+      "_derived": {
+        "block_count": 5,
+        "offer_count": 2,
+        "cta_count": 4,
+        "trust_count": 2
+      }
+    },
+    {
+      "landing_id": "mig-20260605-mlint01-la004",
+      "snapshot_id": "mig-20260605-mlint01-ws004",
+      "competitor_id": "mig-20260605-mlint01-c004",
+      "domain": "krasnodar.taximaxim.ru",
+      "final_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260605-mlint01-la004/landing_observation.json",
+      "observation_summary": {
+        "families_present": [
+          "OFFERS",
+          "PRICING",
+          "CTA",
+          "CONTACT_MODEL",
+          "MARKETING_PATTERNS"
+        ],
+        "families_unknown": [
+          "TRUST",
+          "LEAD_CAPTURE",
+          "SOCIAL_PROOF",
+          "DELIVERY_PROMISE",
+          "SERVICE_COVERAGE"
+        ],
+        "top_signals": [
+          {
+            "family": "OFFERS",
+            "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+            "observation_id": "mig-20260605-mlint01-la004-obs001",
+            "confidence": "B"
+          },
+          {
+            "family": "PRICING",
+            "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+            "observation_id": "mig-20260605-mlint01-la004-obs002",
+            "confidence": "B"
+          },
+          {
+            "family": "CTA",
+            "text": "+78619999999 → tel:+78619999999",
+            "observation_id": "mig-20260605-mlint01-la004-obs003",
+            "confidence": "B"
+          },
+          {
+            "family": "CTA",
+            "text": "telegram: taximaxim",
+            "observation_id": "mig-20260605-mlint01-la004-obs004",
+            "confidence": "B"
+          },
+          {
+            "family": "CONTACT_MODEL",
+            "text": "phone: +78619999999",
+            "observation_id": "mig-20260605-mlint01-la004-obs005",
+            "confidence": "B"
+          }
+        ]
+      },
+      "_derived": {
+        "block_count": 3,
+        "offer_count": 1,
+        "cta_count": 2,
+        "trust_count": 0
+      }
+    },
+    {
+      "landing_id": "mig-20260605-mlint01-la005",
+      "snapshot_id": "mig-20260605-mlint01-ws005",
+      "competitor_id": "mig-20260605-mlint01-c005",
+      "domain": "city-mobil.ru",
+      "final_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+      "page_type": "homepage",
+      "evidence_grade": "B",
+      "artifact_ref": "landings/mig-20260605-mlint01-la005/landing_observation.json",
+      "observation_summary": {
+        "families_present": [
+          "OFFERS",
+          "PRICING",
+          "CTA",
+          "CONTACT_MODEL",
+          "TRUST",
+          "MARKETING_PATTERNS"
+        ],
+        "families_unknown": [
+          "LEAD_CAPTURE",
+          "SOCIAL_PROOF",
+          "DELIVERY_PROMISE",
+          "SERVICE_COVERAGE"
+        ],
+        "top_signals": [
+          {
+            "family": "OFFERS",
+            "text": "В чем плюсы?",
+            "observation_id": "mig-20260605-mlint01-la005-obs001",
+            "confidence": "B"
+          },
+          {
+            "family": "OFFERS",
+            "text": "Удобнее через приложение",
+            "observation_id": "mig-20260605-mlint01-la005-obs002",
+            "confidence": "B"
+          },
+          {
+            "family": "PRICING",
+            "text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+            "observation_id": "mig-20260605-mlint01-la005-obs003",
+            "confidence": "B"
+          },
+          {
+            "family": "PRICING",
+            "text": "Какая цена на грузоперевозку?",
+            "observation_id": "mig-20260605-mlint01-la005-obs004",
+            "confidence": "B"
+          },
+          {
+            "family": "CTA",
+            "text": "+7 495 222-22-22 → tel:+7495222-22-22",
+            "observation_id": "mig-20260605-mlint01-la005-obs005",
+            "confidence": "B"
+          }
+        ]
+      },
+      "_derived": {
+        "block_count": 6,
+        "offer_count": 2,
+        "cta_count": 23,
+        "trust_count": 4
+      }
+    }
+  ],
+  "session_coverage": "complete",
+  "section_evidence_grade": "B",
+  "safe_unknown": []
+}

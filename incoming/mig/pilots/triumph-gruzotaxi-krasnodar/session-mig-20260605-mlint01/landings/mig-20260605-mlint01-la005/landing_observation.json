@@ -1,0 +1,3245 @@
+{
+  "schema_version": "0.2",
+  "analysis_phase": "landing_analysis_v2",
+  "landing_id": "mig-20260605-mlint01-la005",
+  "snapshot_id": "mig-20260605-mlint01-ws005",
+  "session_id": "mig-20260605-mlint01",
+  "competitor_id": "mig-20260605-mlint01-c005",
+  "domain": "city-mobil.ru",
+  "final_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-04T18:59:34.012Z",
+  "observations": [
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs001",
+      "family": "OFFERS",
+      "text": "В чем плюсы?",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la005-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "В чем плюсы?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs002",
+      "family": "OFFERS",
+      "text": "Удобнее через приложение",
+      "category": "convenience",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la005-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "Удобнее через приложение",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs003",
+      "family": "PRICING",
+      "text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-mlint01-la005-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs004",
+      "family": "PRICING",
+      "text": "Какая цена на грузоперевозку?",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-mlint01-la005-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/pricing_signals/1",
+        "html_anchor": null,
+        "verbatim_text": "Какая цена на грузоперевозку?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs005",
+      "family": "CTA",
+      "text": "+7 495 222-22-22 → tel:+7495222-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs006",
+      "family": "CTA",
+      "text": "+7 495-120-00-00 → tel:+7495-120-00-00",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495-120-00-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs007",
+      "family": "CTA",
+      "text": "+7 (495) 222-22-22 → tel:+7(495)222-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (495) 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs008",
+      "family": "CTA",
+      "text": "+7 958 400-22-22 → tel:+7958400-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs009",
+      "family": "CTA",
+      "text": "+7 (845) 269-44-46 → tel:+7(845)269-44-46",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (845) 269-44-46",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs010",
+      "family": "CTA",
+      "text": "+7 (800) 600-78-18 → tel:+7(800)600-78-18",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (800) 600-78-18",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs011",
+      "family": "CTA",
+      "text": "+7 (848)244 40-00 → tel:+7(848)24440-00",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848)244 40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs012",
+      "family": "CTA",
+      "text": "+7 994 500-10-10 → tel:+7994500-10-10",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 994 500-10-10",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs013",
+      "family": "CTA",
+      "text": "+7 (848) 244-40-00 → tel:+7(848)244-40-00",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848) 244-40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs014",
+      "family": "CTA",
+      "text": "+7 (958) 400-22-22 → tel:+7(958)400-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (958) 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs015",
+      "family": "CTA",
+      "text": "+7 (842) 250-60-60 → tel:+7(842)250-60-60",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (842) 250-60-60",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs016",
+      "family": "CTA",
+      "text": "+7 842 274-01-01 → tel:+7842274-01-01",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 842 274-01-01",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs017",
+      "family": "CTA",
+      "text": "+7 (846) 244-44-44 → tel:+7(846)244-44-44",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (846) 244-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs018",
+      "family": "CTA",
+      "text": "+7 938 699-55-22 → tel:+7938699-55-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 938 699-55-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs019",
+      "family": "CTA",
+      "text": "+7 (812) 404-44-44 → tel:+7(812)404-44-44",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (812) 404-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs020",
+      "family": "CTA",
+      "text": "+7 812 405-05-05 → tel:+7812405-05-05",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 812 405-05-05",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs021",
+      "family": "CTA",
+      "text": "+7 958 596-44-44 → tel:+7958596-44-44",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 596-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs022",
+      "family": "CTA",
+      "text": "+7 (831) 423-33-33 → tel:+7(831)423-33-33",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (831) 423-33-33",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs023",
+      "family": "CTA",
+      "text": "+7 991 899-89-98 → tel:+7991899-89-98",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 991 899-89-98",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs024",
+      "family": "CTA",
+      "text": "+7 (345) 257-77-77 → tel:+7(345)257-77-77",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (345) 257-77-77",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs025",
+      "family": "CTA",
+      "text": "telegram: citymobilpr",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-mlint01-la005-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "citymobilpr",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs026",
+      "family": "CTA",
+      "text": "Заказать грузоперевозку → https://gruz-taxi.city-mobil.ru/?city=",
+      "sub_type": "external_link",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Заказать грузоперевозку",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs027",
+      "family": "CTA",
+      "text": "Заказать в приложении",
+      "sub_type": "generic_action",
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/cta_elements/2",
+        "html_anchor": null,
+        "verbatim_text": "Заказать в приложении",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs028",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 495 222-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs029",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 495-120-00-00",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495-120-00-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs030",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (495) 222-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (495) 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs031",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 958 400-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs032",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (845) 269-44-46",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (845) 269-44-46",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs033",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (800) 600-78-18",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (800) 600-78-18",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs034",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (848)244 40-00",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848)244 40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs035",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 994 500-10-10",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 994 500-10-10",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs036",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (848) 244-40-00",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848) 244-40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs037",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (958) 400-22-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (958) 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs038",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (842) 250-60-60",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (842) 250-60-60",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs039",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 842 274-01-01",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 842 274-01-01",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs040",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (846) 244-44-44",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (846) 244-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs041",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 938 699-55-22",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 938 699-55-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs042",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (812) 404-44-44",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (812) 404-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs043",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 812 405-05-05",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 812 405-05-05",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs044",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 958 596-44-44",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 596-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs045",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (831) 423-33-33",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (831) 423-33-33",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs046",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 991 899-89-98",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 991 899-89-98",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs047",
+      "family": "CONTACT_MODEL",
+      "text": "phone: +7 (345) 257-77-77",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (345) 257-77-77",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs048",
+      "family": "CONTACT_MODEL",
+      "text": "messenger: telegram:citymobilpr",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "citymobilpr",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs049",
+      "family": "TRUST",
+      "text": "Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас!",
+      "sub_type": "fleet_size",
+      "numeric_value": 700,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs050",
+      "family": "TRUST",
+      "text": "Грузчики могут поднять коробку или мебель весом до 20 кг, поэтому с вашим холодильником или стиральной машиной не возникнет проблем.",
+      "sub_type": "fleet_size",
+      "numeric_value": 20,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Грузчики могут поднять коробку или мебель весом до 20 кг, поэтому с вашим холодильником или стиральной машиной не возникнет проблем.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs051",
+      "family": "TRUST",
+      "text": "**Citymobil Sans - Студия Contrast Foundry, https://contrastfoundry.com ***Google Play и логотип Google Play являются товарными знаками корпорации Google LLC.",
+      "sub_type": "legal_entity",
+      "platform": "google",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "**Citymobil Sans - Студия Contrast Foundry, https://contrastfoundry.com ***Google Play и логотип Google Play являются товарными знаками корпорации Google LLC.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs052",
+      "family": "TRUST",
+      "text": "Ситимобил — информационный сервис заказа транспортных и иных услуг, оказываемых партнерами.",
+      "sub_type": "partner_badge",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Ситимобил — информационный сервис заказа транспортных и иных услуг, оказываемых партнерами.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs053",
+      "family": "MARKETING_PATTERNS",
+      "text": "faq block detected",
+      "sub_type": "faq_section_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "faq block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs054",
+      "family": "MARKETING_PATTERNS",
+      "text": "pricing block detected",
+      "sub_type": "pricing_table_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs055",
+      "family": "MARKETING_PATTERNS",
+      "text": "+7 495 222-22-22",
+      "sub_type": "phone_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs056",
+      "family": "MARKETING_PATTERNS",
+      "text": "messenger CTA visible",
+      "sub_type": "messenger_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la005-obs057",
+      "family": "MARKETING_PATTERNS",
+      "text": "4 CTA elements visible",
+      "sub_type": "multi_cta_same_intent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "4 CTA elements visible",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "observation_summary": {
+    "families_present": [
+      "OFFERS",
+      "PRICING",
+      "CTA",
+      "CONTACT_MODEL",
+      "TRUST",
+      "MARKETING_PATTERNS"
+    ],
+    "families_unknown": [
+      "LEAD_CAPTURE",
+      "SOCIAL_PROOF",
+      "DELIVERY_PROMISE",
+      "SERVICE_COVERAGE"
+    ],
+    "top_signals": [
+      {
+        "family": "OFFERS",
+        "text": "В чем плюсы?",
+        "observation_id": "mig-20260605-mlint01-la005-obs001",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Удобнее через приложение",
+        "observation_id": "mig-20260605-mlint01-la005-obs002",
+        "confidence": "B"
+      },
+      {
+        "family": "PRICING",
+        "text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+        "observation_id": "mig-20260605-mlint01-la005-obs003",
+        "confidence": "B"
+      },
+      {
+        "family": "PRICING",
+        "text": "Какая цена на грузоперевозку?",
+        "observation_id": "mig-20260605-mlint01-la005-obs004",
+        "confidence": "B"
+      },
+      {
+        "family": "CTA",
+        "text": "+7 495 222-22-22 → tel:+7495222-22-22",
+        "observation_id": "mig-20260605-mlint01-la005-obs005",
+        "confidence": "B"
+      }
+    ]
+  },
+  "_processing": {
+    "excluded_offers": []
+  },
+  "_legacy": {
+    "visible_blocks": [
+      {
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "block_type": "hero",
+        "order": 0,
+        "heading_text": "В чем плюсы?",
+        "content_summary": "В чем плюсы?",
+        "detection_method": "heading_heuristic",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/headings/0",
+          "html_anchor": null,
+          "verbatim_text": "В чем плюсы?",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la005-b002",
+        "block_type": "offer_block",
+        "order": 1,
+        "heading_text": "В чем плюсы?",
+        "content_summary": "В чем плюсы?; Удобнее через приложение",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/offers",
+          "html_anchor": null,
+          "verbatim_text": "В чем плюсы?",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la005-b003",
+        "block_type": "pricing_block",
+        "order": 2,
+        "heading_text": null,
+        "content_summary": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?; Какая цена на грузоперевозку?",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/pricing_signals",
+          "html_anchor": null,
+          "verbatim_text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la005-b004",
+        "block_type": "faq",
+        "order": 3,
+        "heading_text": "FAQ section (pattern)",
+        "content_summary": null,
+        "detection_method": "dom_landmark",
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": null,
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "block_type": "contacts",
+        "order": 4,
+        "heading_text": null,
+        "content_summary": "+7 495 222-22-22; +7 495-120-00-00; +7 (495) 222-22-22; +7 958 400-22-22; +7 (845) 269-44-46; +7 (800) 600-78-18; +7 (848)244 40-00; +7 994 500-10-10; +7 (848) 244-40-00; +7 (958) 400-22-22; +7 (842) …",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts",
+          "html_anchor": null,
+          "verbatim_text": "+7 495 222-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-mlint01-la005-b006",
+        "block_type": "messenger_cta",
+        "order": 5,
+        "heading_text": "telegram: citymobilpr",
+        "content_summary": null,
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "citymobilpr",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "offers": [
+      {
+        "offer_id": "mig-20260605-mlint01-la005-of001",
+        "text": "В чем плюсы?",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-mlint01-la005-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/offers/0",
+          "html_anchor": null,
+          "verbatim_text": "В чем плюсы?",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-mlint01-la005-of002",
+        "text": "Удобнее через приложение",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-mlint01-la005-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/offers/1",
+          "html_anchor": null,
+          "verbatim_text": "Удобнее через приложение",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "cta_patterns": [
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta001",
+        "cta_type": "phone",
+        "label_text": "+7 495 222-22-22",
+        "target_href": "tel:+7495222-22-22",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 495 222-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta002",
+        "cta_type": "phone",
+        "label_text": "+7 495-120-00-00",
+        "target_href": "tel:+7495-120-00-00",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 495-120-00-00",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta003",
+        "cta_type": "phone",
+        "label_text": "+7 (495) 222-22-22",
+        "target_href": "tel:+7(495)222-22-22",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (495) 222-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta004",
+        "cta_type": "phone",
+        "label_text": "+7 958 400-22-22",
+        "target_href": "tel:+7958400-22-22",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 958 400-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta005",
+        "cta_type": "phone",
+        "label_text": "+7 (845) 269-44-46",
+        "target_href": "tel:+7(845)269-44-46",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (845) 269-44-46",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta006",
+        "cta_type": "phone",
+        "label_text": "+7 (800) 600-78-18",
+        "target_href": "tel:+7(800)600-78-18",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (800) 600-78-18",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta007",
+        "cta_type": "phone",
+        "label_text": "+7 (848)244 40-00",
+        "target_href": "tel:+7(848)24440-00",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (848)244 40-00",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta008",
+        "cta_type": "phone",
+        "label_text": "+7 994 500-10-10",
+        "target_href": "tel:+7994500-10-10",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 994 500-10-10",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta009",
+        "cta_type": "phone",
+        "label_text": "+7 (848) 244-40-00",
+        "target_href": "tel:+7(848)244-40-00",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (848) 244-40-00",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta010",
+        "cta_type": "phone",
+        "label_text": "+7 (958) 400-22-22",
+        "target_href": "tel:+7(958)400-22-22",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (958) 400-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta011",
+        "cta_type": "phone",
+        "label_text": "+7 (842) 250-60-60",
+        "target_href": "tel:+7(842)250-60-60",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (842) 250-60-60",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta012",
+        "cta_type": "phone",
+        "label_text": "+7 842 274-01-01",
+        "target_href": "tel:+7842274-01-01",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 842 274-01-01",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta013",
+        "cta_type": "phone",
+        "label_text": "+7 (846) 244-44-44",
+        "target_href": "tel:+7(846)244-44-44",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (846) 244-44-44",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta014",
+        "cta_type": "phone",
+        "label_text": "+7 938 699-55-22",
+        "target_href": "tel:+7938699-55-22",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 938 699-55-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta015",
+        "cta_type": "phone",
+        "label_text": "+7 (812) 404-44-44",
+        "target_href": "tel:+7(812)404-44-44",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (812) 404-44-44",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta016",
+        "cta_type": "phone",
+        "label_text": "+7 812 405-05-05",
+        "target_href": "tel:+7812405-05-05",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 812 405-05-05",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta017",
+        "cta_type": "phone",
+        "label_text": "+7 958 596-44-44",
+        "target_href": "tel:+7958596-44-44",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 958 596-44-44",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta018",
+        "cta_type": "phone",
+        "label_text": "+7 (831) 423-33-33",
+        "target_href": "tel:+7(831)423-33-33",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (831) 423-33-33",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta019",
+        "cta_type": "phone",
+        "label_text": "+7 991 899-89-98",
+        "target_href": "tel:+7991899-89-98",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 991 899-89-98",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta020",
+        "cta_type": "phone",
+        "label_text": "+7 (345) 257-77-77",
+        "target_href": "tel:+7(345)257-77-77",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (345) 257-77-77",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta021",
+        "cta_type": "messenger",
+        "label_text": "telegram: citymobilpr",
+        "target_href": null,
+        "element_type": "link",
+        "position_band": "footer",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "citymobilpr",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta023",
+        "cta_type": "external_link",
+        "label_text": "Заказать грузоперевозку",
+        "target_href": "https://gruz-taxi.city-mobil.ru/?city=",
+        "element_type": "link",
+        "position_band": "unknown",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/cta_elements/0",
+          "html_anchor": null,
+          "verbatim_text": "Заказать грузоперевозку",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-mlint01-la005-cta025",
+        "cta_type": "generic_action",
+        "label_text": "Заказать в приложении",
+        "target_href": null,
+        "element_type": "button",
+        "position_band": "unknown",
+        "form_id": null,
+        "block_id": "mig-20260605-mlint01-la005-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/cta_elements/2",
+          "html_anchor": null,
+          "verbatim_text": "Заказать в приложении",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "pricing_patterns": [
+      {
+        "pricing_id": "mig-20260605-mlint01-la005-pr001",
+        "text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+        "currency_hint": null,
+        "block_id": "mig-20260605-mlint01-la005-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/pricing_signals/0",
+          "html_anchor": null,
+          "verbatim_text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-mlint01-la005-pr002",
+        "text": "Какая цена на грузоперевозку?",
+        "currency_hint": null,
+        "block_id": "mig-20260605-mlint01-la005-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/pricing_signals/1",
+          "html_anchor": null,
+          "verbatim_text": "Какая цена на грузоперевозку?",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "trust_patterns": [
+      {
+        "trust_id": "mig-20260605-mlint01-la005-tr001",
+        "trust_type": "fleet_size",
+        "text": "Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас!",
+        "numeric_value": 700,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас!",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la005-tr002",
+        "trust_type": "fleet_size",
+        "text": "Грузчики могут поднять коробку или мебель весом до 20 кг, поэтому с вашим холодильником или стиральной машиной не возникнет проблем.",
+        "numeric_value": 20,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Грузчики могут поднять коробку или мебель весом до 20 кг, поэтому с вашим холодильником или стиральной машиной не возникнет проблем.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la005-tr003",
+        "trust_type": "legal_entity",
+        "text": "**Citymobil Sans - Студия Contrast Foundry, https://contrastfoundry.com ***Google Play и логотип Google Play являются товарными знаками корпорации Google LLC.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "**Citymobil Sans - Студия Contrast Foundry, https://contrastfoundry.com ***Google Play и логотип Google Play являются товарными знаками корпорации Google LLC.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-mlint01-la005-tr004",
+        "trust_type": "partner_badge",
+        "text": "Ситимобил — информационный сервис заказа транспортных и иных услуг, оказываемых партнерами.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Ситимобил — информационный сервис заказа транспортных и иных услуг, оказываемых партнерами.",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "contact_patterns": [
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co001",
+        "contact_type": "phone",
+        "value": "+7 495 222-22-22",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 495 222-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co002",
+        "contact_type": "phone",
+        "value": "+7 495-120-00-00",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 495-120-00-00",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co003",
+        "contact_type": "phone",
+        "value": "+7 (495) 222-22-22",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (495) 222-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co004",
+        "contact_type": "phone",
+        "value": "+7 958 400-22-22",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 958 400-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co005",
+        "contact_type": "phone",
+        "value": "+7 (845) 269-44-46",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (845) 269-44-46",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co006",
+        "contact_type": "phone",
+        "value": "+7 (800) 600-78-18",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (800) 600-78-18",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co007",
+        "contact_type": "phone",
+        "value": "+7 (848)244 40-00",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (848)244 40-00",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co008",
+        "contact_type": "phone",
+        "value": "+7 994 500-10-10",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 994 500-10-10",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co009",
+        "contact_type": "phone",
+        "value": "+7 (848) 244-40-00",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (848) 244-40-00",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co010",
+        "contact_type": "phone",
+        "value": "+7 (958) 400-22-22",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (958) 400-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co011",
+        "contact_type": "phone",
+        "value": "+7 (842) 250-60-60",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (842) 250-60-60",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co012",
+        "contact_type": "phone",
+        "value": "+7 842 274-01-01",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 842 274-01-01",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co013",
+        "contact_type": "phone",
+        "value": "+7 (846) 244-44-44",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (846) 244-44-44",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co014",
+        "contact_type": "phone",
+        "value": "+7 938 699-55-22",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 938 699-55-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co015",
+        "contact_type": "phone",
+        "value": "+7 (812) 404-44-44",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (812) 404-44-44",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co016",
+        "contact_type": "phone",
+        "value": "+7 812 405-05-05",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 812 405-05-05",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co017",
+        "contact_type": "phone",
+        "value": "+7 958 596-44-44",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 958 596-44-44",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co018",
+        "contact_type": "phone",
+        "value": "+7 (831) 423-33-33",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (831) 423-33-33",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co019",
+        "contact_type": "phone",
+        "value": "+7 991 899-89-98",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 991 899-89-98",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co020",
+        "contact_type": "phone",
+        "value": "+7 (345) 257-77-77",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+7 (345) 257-77-77",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co021",
+        "contact_type": "messenger",
+        "value": "telegram:citymobilpr",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "citymobilpr",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-mlint01-la005-co022",
+        "contact_type": "messenger",
+        "value": "telegram:citymobilpr",
+        "block_id": "mig-20260605-mlint01-la005-b005",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "citymobilpr",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "form_patterns": [],
+    "page_patterns": [
+      {
+        "pattern_id": "faq_section_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "faq block detected",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "pricing_table_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "pricing block detected",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "phone_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "+7 495 222-22-22",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "messenger_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "messenger CTA visible",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "multi_cta_same_intent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-mlint01-ws005",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "4 CTA elements visible",
+          "capture_time": "2026-06-04T18:43:39.324Z",
+          "ambiguity": "none"
+        }
+      }
+    ]
+  },
+  "visible_blocks": [
+    {
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "block_type": "hero",
+      "order": 0,
+      "heading_text": "В чем плюсы?",
+      "content_summary": "В чем плюсы?",
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/headings/0",
+        "html_anchor": null,
+        "verbatim_text": "В чем плюсы?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la005-b002",
+      "block_type": "offer_block",
+      "order": 1,
+      "heading_text": "В чем плюсы?",
+      "content_summary": "В чем плюсы?; Удобнее через приложение",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/offers",
+        "html_anchor": null,
+        "verbatim_text": "В чем плюсы?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la005-b003",
+      "block_type": "pricing_block",
+      "order": 2,
+      "heading_text": null,
+      "content_summary": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?; Какая цена на грузоперевозку?",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/pricing_signals",
+        "html_anchor": null,
+        "verbatim_text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la005-b004",
+      "block_type": "faq",
+      "order": 3,
+      "heading_text": "FAQ section (pattern)",
+      "content_summary": null,
+      "detection_method": "dom_landmark",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "block_type": "contacts",
+      "order": 4,
+      "heading_text": null,
+      "content_summary": "+7 495 222-22-22; +7 495-120-00-00; +7 (495) 222-22-22; +7 958 400-22-22; +7 (845) 269-44-46; +7 (800) 600-78-18; +7 (848)244 40-00; +7 994 500-10-10; +7 (848) 244-40-00; +7 (958) 400-22-22; +7 (842) …",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts",
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-mlint01-la005-b006",
+      "block_type": "messenger_cta",
+      "order": 5,
+      "heading_text": "telegram: citymobilpr",
+      "content_summary": null,
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "citymobilpr",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "mig-20260605-mlint01-la005-of001",
+      "text": "В чем плюсы?",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la005-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "В чем плюсы?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-mlint01-la005-of002",
+      "text": "Удобнее через приложение",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-mlint01-la005-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "Удобнее через приложение",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "cta_patterns": [
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta001",
+      "cta_type": "phone",
+      "label_text": "+7 495 222-22-22",
+      "target_href": "tel:+7495222-22-22",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta002",
+      "cta_type": "phone",
+      "label_text": "+7 495-120-00-00",
+      "target_href": "tel:+7495-120-00-00",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495-120-00-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta003",
+      "cta_type": "phone",
+      "label_text": "+7 (495) 222-22-22",
+      "target_href": "tel:+7(495)222-22-22",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (495) 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta004",
+      "cta_type": "phone",
+      "label_text": "+7 958 400-22-22",
+      "target_href": "tel:+7958400-22-22",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta005",
+      "cta_type": "phone",
+      "label_text": "+7 (845) 269-44-46",
+      "target_href": "tel:+7(845)269-44-46",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (845) 269-44-46",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta006",
+      "cta_type": "phone",
+      "label_text": "+7 (800) 600-78-18",
+      "target_href": "tel:+7(800)600-78-18",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (800) 600-78-18",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta007",
+      "cta_type": "phone",
+      "label_text": "+7 (848)244 40-00",
+      "target_href": "tel:+7(848)24440-00",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848)244 40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta008",
+      "cta_type": "phone",
+      "label_text": "+7 994 500-10-10",
+      "target_href": "tel:+7994500-10-10",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 994 500-10-10",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta009",
+      "cta_type": "phone",
+      "label_text": "+7 (848) 244-40-00",
+      "target_href": "tel:+7(848)244-40-00",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848) 244-40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta010",
+      "cta_type": "phone",
+      "label_text": "+7 (958) 400-22-22",
+      "target_href": "tel:+7(958)400-22-22",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (958) 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta011",
+      "cta_type": "phone",
+      "label_text": "+7 (842) 250-60-60",
+      "target_href": "tel:+7(842)250-60-60",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (842) 250-60-60",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta012",
+      "cta_type": "phone",
+      "label_text": "+7 842 274-01-01",
+      "target_href": "tel:+7842274-01-01",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 842 274-01-01",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta013",
+      "cta_type": "phone",
+      "label_text": "+7 (846) 244-44-44",
+      "target_href": "tel:+7(846)244-44-44",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (846) 244-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta014",
+      "cta_type": "phone",
+      "label_text": "+7 938 699-55-22",
+      "target_href": "tel:+7938699-55-22",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 938 699-55-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta015",
+      "cta_type": "phone",
+      "label_text": "+7 (812) 404-44-44",
+      "target_href": "tel:+7(812)404-44-44",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (812) 404-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta016",
+      "cta_type": "phone",
+      "label_text": "+7 812 405-05-05",
+      "target_href": "tel:+7812405-05-05",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 812 405-05-05",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta017",
+      "cta_type": "phone",
+      "label_text": "+7 958 596-44-44",
+      "target_href": "tel:+7958596-44-44",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 596-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta018",
+      "cta_type": "phone",
+      "label_text": "+7 (831) 423-33-33",
+      "target_href": "tel:+7(831)423-33-33",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (831) 423-33-33",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta019",
+      "cta_type": "phone",
+      "label_text": "+7 991 899-89-98",
+      "target_href": "tel:+7991899-89-98",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 991 899-89-98",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta020",
+      "cta_type": "phone",
+      "label_text": "+7 (345) 257-77-77",
+      "target_href": "tel:+7(345)257-77-77",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (345) 257-77-77",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta021",
+      "cta_type": "messenger",
+      "label_text": "telegram: citymobilpr",
+      "target_href": null,
+      "element_type": "link",
+      "position_band": "footer",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "citymobilpr",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta023",
+      "cta_type": "external_link",
+      "label_text": "Заказать грузоперевозку",
+      "target_href": "https://gruz-taxi.city-mobil.ru/?city=",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Заказать грузоперевозку",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-mlint01-la005-cta025",
+      "cta_type": "generic_action",
+      "label_text": "Заказать в приложении",
+      "target_href": null,
+      "element_type": "button",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260605-mlint01-la005-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/cta_elements/2",
+        "html_anchor": null,
+        "verbatim_text": "Заказать в приложении",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "pricing_patterns": [
+    {
+      "pricing_id": "mig-20260605-mlint01-la005-pr001",
+      "text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+      "currency_hint": null,
+      "block_id": "mig-20260605-mlint01-la005-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Цена за перевозку указана сразу на экране Ответы на ваши вопросы Как сделать заказ грузового такси?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-mlint01-la005-pr002",
+      "text": "Какая цена на грузоперевозку?",
+      "currency_hint": null,
+      "block_id": "mig-20260605-mlint01-la005-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/pricing_signals/1",
+        "html_anchor": null,
+        "verbatim_text": "Какая цена на грузоперевозку?",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "trust_patterns": [
+    {
+      "trust_id": "mig-20260605-mlint01-la005-tr001",
+      "trust_type": "fleet_size",
+      "text": "Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас!",
+      "numeric_value": 700,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас!",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la005-tr002",
+      "trust_type": "fleet_size",
+      "text": "Грузчики могут поднять коробку или мебель весом до 20 кг, поэтому с вашим холодильником или стиральной машиной не возникнет проблем.",
+      "numeric_value": 20,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Грузчики могут поднять коробку или мебель весом до 20 кг, поэтому с вашим холодильником или стиральной машиной не возникнет проблем.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la005-tr003",
+      "trust_type": "legal_entity",
+      "text": "**Citymobil Sans - Студия Contrast Foundry, https://contrastfoundry.com ***Google Play и логотип Google Play являются товарными знаками корпорации Google LLC.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "**Citymobil Sans - Студия Contrast Foundry, https://contrastfoundry.com ***Google Play и логотип Google Play являются товарными знаками корпорации Google LLC.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-mlint01-la005-tr004",
+      "trust_type": "partner_badge",
+      "text": "Ситимобил — информационный сервис заказа транспортных и иных услуг, оказываемых партнерами.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Ситимобил — информационный сервис заказа транспортных и иных услуг, оказываемых партнерами.",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "contact_patterns": [
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co001",
+      "contact_type": "phone",
+      "value": "+7 495 222-22-22",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co002",
+      "contact_type": "phone",
+      "value": "+7 495-120-00-00",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 495-120-00-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co003",
+      "contact_type": "phone",
+      "value": "+7 (495) 222-22-22",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (495) 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co004",
+      "contact_type": "phone",
+      "value": "+7 958 400-22-22",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co005",
+      "contact_type": "phone",
+      "value": "+7 (845) 269-44-46",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (845) 269-44-46",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co006",
+      "contact_type": "phone",
+      "value": "+7 (800) 600-78-18",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (800) 600-78-18",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co007",
+      "contact_type": "phone",
+      "value": "+7 (848)244 40-00",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848)244 40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co008",
+      "contact_type": "phone",
+      "value": "+7 994 500-10-10",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 994 500-10-10",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co009",
+      "contact_type": "phone",
+      "value": "+7 (848) 244-40-00",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (848) 244-40-00",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co010",
+      "contact_type": "phone",
+      "value": "+7 (958) 400-22-22",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (958) 400-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co011",
+      "contact_type": "phone",
+      "value": "+7 (842) 250-60-60",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (842) 250-60-60",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co012",
+      "contact_type": "phone",
+      "value": "+7 842 274-01-01",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 842 274-01-01",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co013",
+      "contact_type": "phone",
+      "value": "+7 (846) 244-44-44",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (846) 244-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co014",
+      "contact_type": "phone",
+      "value": "+7 938 699-55-22",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 938 699-55-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co015",
+      "contact_type": "phone",
+      "value": "+7 (812) 404-44-44",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (812) 404-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co016",
+      "contact_type": "phone",
+      "value": "+7 812 405-05-05",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 812 405-05-05",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co017",
+      "contact_type": "phone",
+      "value": "+7 958 596-44-44",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 958 596-44-44",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co018",
+      "contact_type": "phone",
+      "value": "+7 (831) 423-33-33",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (831) 423-33-33",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co019",
+      "contact_type": "phone",
+      "value": "+7 991 899-89-98",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 991 899-89-98",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co020",
+      "contact_type": "phone",
+      "value": "+7 (345) 257-77-77",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+7 (345) 257-77-77",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co021",
+      "contact_type": "messenger",
+      "value": "telegram:citymobilpr",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "citymobilpr",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-mlint01-la005-co022",
+      "contact_type": "messenger",
+      "value": "telegram:citymobilpr",
+      "block_id": "mig-20260605-mlint01-la005-b005",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "citymobilpr",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "form_patterns": [],
+  "page_patterns": [
+    {
+      "pattern_id": "faq_section_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "faq block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "pricing_table_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "phone_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "+7 495 222-22-22",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "messenger_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "multi_cta_same_intent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-mlint01-ws005",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "4 CTA elements visible",
+        "capture_time": "2026-06-04T18:43:39.324Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260605-mlint01-ws005",
+    "capture_time": "2026-06-04T18:43:39.324Z",
+    "analysis_mode": "snapshot_and_html"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260605-mlint01-la005/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260605-mlint01-ws005/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260605-mlint01-ws005/page.html"
+  },
+  "evidence_grade": "B"
+}

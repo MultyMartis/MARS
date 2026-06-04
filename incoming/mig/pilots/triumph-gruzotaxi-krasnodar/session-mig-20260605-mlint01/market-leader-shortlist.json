@@ -1,0 +1,84 @@
+{
+  "session_id": "mig-20260605-mlint01",
+  "source_session": "mig-20260604-mqgt01",
+  "generated_at": "2026-06-04T18:59:11.110Z",
+  "criteria": {
+    "include": "SERVICE_BRAND with rule_repeated_domain",
+    "exclude": "AGGREGATOR, MARKETPLACE, DIRECTORY domains per task brief"
+  },
+  "domains": [
+    "gruzotaxi-triumph.ru",
+    "gruzovichec.ru",
+    "krasnodar.gruzovichkof.ru",
+    "krasnodar.taximaxim.ru",
+    "city-mobil.ru"
+  ],
+  "competitors": [
+    {
+      "competitor_id": "mig-20260604-mqgt01-c001",
+      "domain": "gruzotaxi-triumph.ru",
+      "display_name": "Грузовое такси в Краснодаре. Быстрая подача. Переезды «под ключ». Без переплат",
+      "distinct_queries": 2,
+      "query_ids": [
+        "q01",
+        "q02"
+      ],
+      "evidence_count": 4
+    },
+    {
+      "competitor_id": "mig-20260604-mqgt01-c002",
+      "domain": "gruzovichec.ru",
+      "display_name": "Грузовое такси ГРУЗОВИЧОК Краснодар, от 539 руб!",
+      "distinct_queries": 6,
+      "query_ids": [
+        "q01",
+        "q02",
+        "q03",
+        "q08",
+        "q09",
+        "q11"
+      ],
+      "evidence_count": 6
+    },
+    {
+      "competitor_id": "mig-20260604-mqgt01-c006",
+      "domain": "krasnodar.gruzovichkof.ru",
+      "display_name": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+      "distinct_queries": 7,
+      "query_ids": [
+        "q01",
+        "q02",
+        "q04",
+        "q08",
+        "q09",
+        "q10",
+        "q11"
+      ],
+      "evidence_count": 7
+    },
+    {
+      "competitor_id": "mig-20260604-mqgt01-c008",
+      "domain": "krasnodar.taximaxim.ru",
+      "display_name": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim",
+      "distinct_queries": 3,
+      "query_ids": [
+        "q01",
+        "q09",
+        "q10"
+      ],
+      "evidence_count": 3
+    },
+    {
+      "competitor_id": "mig-20260604-mqgt01-c019",
+      "domain": "city-mobil.ru",
+      "display_name": "Заказать грузовое такси в городе Краснодар – Ситимобил",
+      "distinct_queries": 3,
+      "query_ids": [
+        "q04",
+        "q09",
+        "q10"
+      ],
+      "evidence_count": 3
+    }
+  ]
+}
