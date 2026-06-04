@@ -53,6 +53,16 @@ function validateLandingObservation(obs) {
   assert(obs.landing_id, "landing_id required");
   assert(obs.snapshot_id, "snapshot_id required");
   assert(obs.page_type, "page_type required");
+  if (obs.analysis_phase === "landing_analysis_v2") {
+    assert(obs.schema_version === "0.2", "detail schema_version 0.2");
+    assert(Array.isArray(obs.observations), "observations[] required for v2");
+    assert(obs.observation_summary, "observation_summary required for v2");
+    for (const o of obs.observations) {
+      assert(o.observation_id && o.family && o.text !== undefined, "observation shape");
+      assert(/^(A|B|C|X)$/.test(o.confidence), "observation confidence A|B|C|X");
+      assert(o.evidence, "observation evidence required");
+    }
+  }
   assert(Array.isArray(obs.visible_blocks), "visible_blocks required");
   assert(Array.isArray(obs.offers), "offers required");
   assert(Array.isArray(obs.cta_patterns), "cta_patterns required");
@@ -69,10 +79,19 @@ function validateLandingObservation(obs) {
 }
 
 function validateLandingIndex(index) {
-  assert(index.schema_version === "0.1", "index schema_version");
-  assert(index.analysis_phase === "landing_analysis_v1", "analysis_phase");
+  assert(index.schema_version === "0.1" || index.schema_version === "0.2", "index schema_version");
+  assert(
+    index.analysis_phase === "landing_analysis_v1" || index.analysis_phase === "landing_analysis_v2",
+    "analysis_phase"
+  );
   assert(Array.isArray(index.landings), "landings array required");
   assert(index.section_evidence_grade, "section_evidence_grade required");
+  if (index.analysis_phase === "landing_analysis_v2") {
+    for (const row of index.landings) {
+      assert(row.observation_summary, "observation_summary per landing");
+      assert(row._derived, "_derived debug counts");
+    }
+  }
 }
 
 function runUnitFixtureChecks() {
@@ -294,8 +313,14 @@ async function main() {
     mig_phase: "3",
   });
 
-  assert(packWithLanding.includes("## Landing observations (structured)"), "pack landing section");
-  assert(packWithLanding.includes("## Offer observations"), "pack offers from landing");
+  const packIsV2 = landingPass.index.analysis_phase === "landing_analysis_v2";
+  if (packIsV2) {
+    assert(packWithLanding.includes("## Landing intelligence —"), "pack v2 intelligence card");
+    assert(packWithLanding.includes("### Value & offers"), "pack v2 offers section");
+  } else {
+    assert(packWithLanding.includes("## Landing observations (structured)"), "pack landing section");
+    assert(packWithLanding.includes("## Offer observations"), "pack offers from landing");
+  }
   assert(packWithLanding.includes("landing_observations.json"), "pack registry landing_observations");
   assert(!packWithLanding.includes("legacy snapshot projection used"), "should not use legacy when landing exists");
 

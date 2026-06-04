@@ -33,29 +33,48 @@ function buildLandingObservationsIndex(sessionId, landings, options = {}) {
     sessionSafeUnknown.push("One or more landings have structural page_type unknown");
   }
 
+  const isV2 = landings.some((l) => l.analysis_phase === "landing_analysis_v2");
+
   return {
-    schema_version: "0.1",
+    schema_version: isV2 ? "0.2" : "0.1",
     session_id: sessionId,
     generated_at: generatedAt,
-    analysis_phase: "landing_analysis_v1",
+    analysis_phase: isV2 ? "landing_analysis_v2" : "landing_analysis_v1",
     upstream_artifacts: {
       website_snapshots: options.website_snapshots_file || "website_snapshots.json",
       competitors: options.competitors_file || "competitors.json",
     },
-    landings: landings.map((l) => ({
-      landing_id: l.landing_id,
-      snapshot_id: l.snapshot_id,
-      competitor_id: l.competitor_id,
-      domain: l.domain,
-      final_url: l.final_url,
-      page_type: l.page_type,
-      evidence_grade: l.evidence_grade,
-      artifact_ref: `landings/${l.landing_id}/landing_observation.json`,
-      block_count: l.visible_blocks?.length ?? 0,
-      offer_count: l.offers?.length ?? 0,
-      cta_count: l.cta_patterns?.length ?? 0,
-      trust_count: l.trust_patterns?.length ?? 0,
-    })),
+    landings: landings.map((l) => {
+      const row = {
+        landing_id: l.landing_id,
+        snapshot_id: l.snapshot_id,
+        competitor_id: l.competitor_id,
+        domain: l.domain,
+        final_url: l.final_url,
+        page_type: l.page_type,
+        evidence_grade: l.evidence_grade,
+        artifact_ref: `landings/${l.landing_id}/landing_observation.json`,
+      };
+      if (isV2) {
+        row.observation_summary = l.observation_summary || {
+          families_present: [],
+          families_unknown: [],
+          top_signals: [],
+        };
+        row._derived = {
+          block_count: l.visible_blocks?.length ?? 0,
+          offer_count: l.offers?.length ?? 0,
+          cta_count: l.cta_patterns?.length ?? 0,
+          trust_count: l.trust_patterns?.length ?? 0,
+        };
+      } else {
+        row.block_count = l.visible_blocks?.length ?? 0;
+        row.offer_count = l.offers?.length ?? 0;
+        row.cta_count = l.cta_patterns?.length ?? 0;
+        row.trust_count = l.trust_patterns?.length ?? 0;
+      }
+      return row;
+    }),
     session_coverage: sessionCoverage,
     section_evidence_grade: worstGrade(grades),
     safe_unknown: sessionSafeUnknown,

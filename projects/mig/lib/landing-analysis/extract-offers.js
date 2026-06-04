@@ -1,6 +1,7 @@
 "use strict";
 
 const { offerIdFor, makeEvidence, uniqueByKey } = require("./utils");
+const { isNavNoise } = require("./nav-noise-filter");
 
 function findBlockByType(blocks, blockType) {
   return blocks.find((b) => b.block_type === blockType) || null;
@@ -36,7 +37,7 @@ function extractOffers(snapshot, options = {}) {
 
   function pushOffer(text, surface, snapshotField, pricingRef) {
     const key = text.toLowerCase().trim();
-    if (!text || seen.has(key)) {
+    if (!text || seen.has(key) || isNavNoise(text)) {
       return;
     }
     seen.add(key);

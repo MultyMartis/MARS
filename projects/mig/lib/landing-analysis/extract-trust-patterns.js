@@ -2,26 +2,17 @@
 
 const { stripTags } = require("../website-acquisition/extract-page-facts");
 const { trustIdFor, makeEvidence, uniqueByKey } = require("./utils");
+const {
+  classifyTrustSubtypeV2,
+  splitTrustLines,
+  isTrustBoilerplate,
+  MAX_TRUST_LINE_CHARS,
+} = require("./trust-subtype-v2");
 
 function classifyTrustText(text, registry) {
-  const lower = text.toLowerCase();
-  const rules = registry.trust_classification || {};
-
-  for (const [trustType, patterns] of Object.entries(rules)) {
-    for (const pattern of patterns) {
-      const isRegex = pattern.startsWith("\\");
-      if (isRegex) {
-        try {
-          if (new RegExp(pattern, "i").test(text)) {
-            return trustType;
-          }
-        } catch {
-          /* skip invalid */
-        }
-      } else if (lower.includes(pattern.toLowerCase())) {
-        return trustType;
-      }
-    }
+  const v2 = classifyTrustSubtypeV2(text, registry);
+  if (v2) {
+    return v2;
   }
   return "review_snippet";
 }
@@ -51,27 +42,40 @@ function extractTrustPatterns(snapshot, options = {}) {
 
   for (let i = 0; i < (snapshot.trust_signals_visible || []).length; i += 1) {
     const signal = snapshot.trust_signals_visible[i];
-    const trustType = classifyTrustText(signal.text, registry);
-    patterns.push({
-      trust_id: trustIdFor(landingId, seq),
-      trust_type: trustType,
-      text: signal.text,
-      numeric_value: parseNumericValue(signal.text),
-      block_id: findBlockForType(blocks, ["reviews", "hero"])?.block_id || null,
-      evidence: makeEvidence(snapshot, {
-        snapshot_field: `/trust_signals_visible/${i}`,
-        verbatim_text: signal.text,
-        ambiguity: trustType === "rating_display" ? "high" : "none",
-      }),
-    });
-    seq += 1;
+    const lines =
+      signal.text && signal.text.length > MAX_TRUST_LINE_CHARS
+        ? splitTrustLines(signal.text)
+        : [signal.text];
+
+    for (const line of lines) {
+      if (!line) {
+        continue;
+      }
+      const trustType = classifyTrustText(line, registry);
+      if (!trustType || trustType === "statistics") {
+        continue;
+      }
+      patterns.push({
+        trust_id: trustIdFor(landingId, seq),
+        trust_type: trustType,
+        text: line,
+        numeric_value: parseNumericValue(line),
+        block_id: findBlockForType(blocks, ["reviews", "hero"])?.block_id || null,
+        evidence: makeEvidence(snapshot, {
+          snapshot_field: `/trust_signals_visible/${i}`,
+          verbatim_text: line,
+          ambiguity: trustType === "rating_display" ? "high" : "none",
+        }),
+      });
+      seq += 1;
+    }
   }
 
   if (options.html) {
     const text = stripTags(options.html);
     const sentences = text.split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter(Boolean);
     for (const sentence of sentences) {
-      if (sentence.length > 200) {
+      if (sentence.length > MAX_TRUST_LINE_CHARS || isTrustBoilerplate(sentence)) {
         continue;
       }
       const trustType = classifyTrustText(sentence, registry);

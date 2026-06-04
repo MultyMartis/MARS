@@ -4,6 +4,7 @@ const {
   discoverFromSerp,
   formatCompetitorObservationsMarkdown,
 } = require("../competitor-discovery/discover-from-serp");
+const { formatLandingObservationBlocksV2 } = require("./format-landing-intelligence-v2");
 
 function bulletList(items) {
   if (!Array.isArray(items) || items.length === 0) {
@@ -569,7 +570,9 @@ function buildResearchPackDraft(manifest, serpResult, options = {}) {
     formatRecurrenceSummary(competitorSection),
     ...(hasLandingAnalysis
       ? [
-          formatLandingObservationBlocks(landingIndex, options.website_acquisition_rules),
+          landingIndex.analysis_phase === "landing_analysis_v2"
+            ? formatLandingObservationBlocksV2(landingIndex)
+            : formatLandingObservationBlocks(landingIndex, options.website_acquisition_rules),
           "",
         ]
       : hasWebsiteCapture

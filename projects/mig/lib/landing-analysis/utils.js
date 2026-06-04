@@ -28,8 +28,10 @@ function worstGrade(grades) {
 }
 
 function makeEvidence(snapshot, options = {}) {
+  const source = options.source || "website_snapshot";
   return {
-    source: options.source || "website_snapshot",
+    source,
+    snapshot_id: options.snapshot_id || snapshot.snapshot_id || null,
     snapshot_field: options.snapshot_field || null,
     html_anchor: options.html_anchor || null,
     verbatim_text: options.verbatim_text || null,

@@ -21,6 +21,7 @@ const {
   writeLandingObservationsIndex,
   landingArtifactRefs,
 } = require("./write-landing-observations");
+const { buildObservationsV2 } = require("./build-observations-v2");
 
 function inferPageType(snapshot, blocks, formPatterns) {
   const role = snapshot.page_role || "unknown";
@@ -253,7 +254,26 @@ function analyzeSnapshot(snapshot, sessionDir, options = {}) {
     page_html: snapshot.artifact_refs?.page_html || null,
   };
 
+  const legacyDetail = {
+    landing_id: landingId,
+    visible_blocks,
+    offers,
+    cta_patterns,
+    pricing_patterns,
+    trust_patterns,
+    contact_patterns,
+    form_patterns,
+    page_patterns,
+  };
+
+  const v2Built = buildObservationsV2(legacyDetail, snapshot, {
+    registry,
+    navNoiseConfigPath: options.navNoiseConfigPath,
+  });
+
   return {
+    schema_version: "0.2",
+    analysis_phase: "landing_analysis_v2",
     landing_id: landingId,
     snapshot_id: snapshot.snapshot_id,
     session_id: snapshot.session_id,
@@ -263,6 +283,19 @@ function analyzeSnapshot(snapshot, sessionDir, options = {}) {
     page_role: snapshot.page_role,
     page_type,
     analyzed_at: analyzedAt,
+    observations: v2Built.observations,
+    observation_summary: v2Built.observation_summary,
+    _processing: v2Built._processing,
+    _legacy: {
+      visible_blocks,
+      offers,
+      cta_patterns,
+      pricing_patterns,
+      trust_patterns,
+      contact_patterns,
+      form_patterns,
+      page_patterns,
+    },
     visible_blocks,
     offers,
     cta_patterns,

@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.2",
+  "description": "Rules-only nav-noise exclusions for OFFERS family (Landing Analysis v2). No LLM.",
+  "excluded_reason": "nav_noise",
+  "exact_matches_normalized": [
+    "отзывы о нас",
+    "вопросы и ответы",
+    "о компании",
+    "контакты",
+    "мы в социальных сетях",
+    "faq",
+    "частые вопросы"
+  ],
+  "prefix_matches_normalized": [
+    "контакты ",
+    "о компании "
+  ],
+  "notes": [
+    "FAQ section labels without promotional clause are excluded from OFFERS.",
+    "Excluded strings may appear under MARKETING_PATTERNS when structural rules fire.",
+    "Audit trail: landing_observation._processing.excluded_offers[]"
+  ]
+}
