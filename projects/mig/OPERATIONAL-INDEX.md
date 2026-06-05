@@ -37,6 +37,7 @@
 | 11 | **MIG → ORCA Handoff** | [contracts/mig-orca-handoff-contract-v0.md](contracts/mig-orca-handoff-contract-v0.md) |
 | 12 | **Reporting** | [reports/REPORT-TEMPLATE.md](reports/REPORT-TEMPLATE.md) |
 | 12b | **MVP Validation Freeze (v1)** | [reports/MIG-MVP-VALIDATION-FREEZE-v1.md](reports/MIG-MVP-VALIDATION-FREEZE-v1.md) |
+| 12c | **Phase 2 Keyword Surface Charter (v1)** | [reports/MIG-PHASE2-KEYWORD-SURFACE-CHARTER-v1.md](reports/MIG-PHASE2-KEYWORD-SURFACE-CHARTER-v1.md) |
 | 13 | **Data Acquisition Architecture (v1)** | [reports/REPORT-mig-data-acquisition-architecture-v1.md](reports/REPORT-mig-data-acquisition-architecture-v1.md) |
 | 14 | **Reality Acquisition Model (report)** | [reports/REPORT-mig-reality-acquisition-model-v1.md](reports/REPORT-mig-reality-acquisition-model-v1.md) |
 
