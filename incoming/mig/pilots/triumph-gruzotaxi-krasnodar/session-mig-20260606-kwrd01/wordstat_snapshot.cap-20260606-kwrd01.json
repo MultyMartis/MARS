@@ -1,0 +1,128 @@
+{
+  "schema_stub_version": "keyword-snapshot-stub-v1",
+  "session_id": "mig-20260606-kwrd01",
+  "capture_id": "cap-20260606-kwrd01",
+  "snapshot_type": "wordstat",
+  "import_method": "manual_export",
+  "provider_label": "yandex_wordstat",
+  "region_label": "Краснодар",
+  "period": "unknown",
+  "exported_at": "2026-06-06",
+  "captured_at": "2026-06-06T18:00:00Z",
+  "operator_id": "manual-wordstat-pilot-operator",
+  "source_file_ref": "wordstat-export-manual-2026-06-06.md",
+  "column_mapping": {
+    "Query": "phrase",
+    "Frequency": "frequency"
+  },
+  "session_safe_unknown": [
+    "Wordstat period label not recorded in operator export — period_scope unknown until UI period declared",
+    "Export format is operator-authored markdown table, not native CSV/XLSX — columns mapped manually per MAP manual path"
+  ],
+  "evidence_grade": "provider",
+  "rows": [
+    {
+      "row_id": "WS-01",
+      "query_id": "q01",
+      "phrase": "грузотакси краснодар",
+      "region": "Краснодар",
+      "frequency": 108,
+      "raw_columns": { "Query": "грузотакси краснодар", "Frequency": "108" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-02",
+      "query_id": "q02",
+      "phrase": "грузовое такси краснодар",
+      "region": "Краснодар",
+      "frequency": 599,
+      "raw_columns": { "Query": "грузовое такси краснодар", "Frequency": "599" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-03",
+      "query_id": "q03",
+      "phrase": "газель краснодар",
+      "region": "Краснодар",
+      "frequency": 2696,
+      "raw_columns": { "Query": "газель краснодар", "Frequency": "2696" },
+      "safe_unknown": [
+        "Operator note: mixed intent observed (vehicle purchase, driver jobs, repair, cargo transportation) — raw frequency preserved, no correction applied"
+      ]
+    },
+    {
+      "row_id": "WS-04",
+      "query_id": "q04",
+      "phrase": "грузоперевозки краснодар",
+      "region": "Краснодар",
+      "frequency": 1059,
+      "raw_columns": { "Query": "грузоперевозки краснодар", "Frequency": "1059" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-05",
+      "query_id": "q05",
+      "phrase": "перевозка мебели краснодар",
+      "region": "Краснодар",
+      "frequency": 84,
+      "raw_columns": { "Query": "перевозка мебели краснодар", "Frequency": "84" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-06",
+      "query_id": "q06",
+      "phrase": "квартирный переезд краснодар",
+      "region": "Краснодар",
+      "frequency": 34,
+      "raw_columns": { "Query": "квартирный переезд краснодар", "Frequency": "34" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-07",
+      "query_id": "q07",
+      "phrase": "вызов газели краснодар",
+      "region": "Краснодар",
+      "frequency": 0,
+      "raw_columns": { "Query": "вызов газели краснодар", "Frequency": "0" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-08",
+      "query_id": "q08",
+      "phrase": "газель с грузчиком краснодар",
+      "region": "Краснодар",
+      "frequency": 7,
+      "raw_columns": { "Query": "газель с грузчиком краснодар", "Frequency": "7" },
+      "safe_unknown": [
+        "Export phrase uses singular «грузчиком»; approved query q08 is «газель с грузчиками Краснодар» — export wording preserved verbatim"
+      ]
+    },
+    {
+      "row_id": "WS-09",
+      "query_id": "q09",
+      "phrase": "грузовое такси с грузчиками краснодар",
+      "region": "Краснодар",
+      "frequency": 16,
+      "raw_columns": { "Query": "грузовое такси с грузчиками краснодар", "Frequency": "16" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-10",
+      "query_id": "q10",
+      "phrase": "грузоперевозки по краснодару",
+      "region": "Краснодар",
+      "frequency": 159,
+      "raw_columns": { "Query": "грузоперевозки по краснодару", "Frequency": "159" },
+      "safe_unknown": []
+    },
+    {
+      "row_id": "WS-11",
+      "query_id": "q11",
+      "phrase": "заказать газель краснодар",
+      "region": "Краснодар",
+      "frequency": 21,
+      "raw_columns": { "Query": "заказать газель краснодар", "Frequency": "21" },
+      "safe_unknown": []
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "schema_stub_version": "keyword-observation-stub-v1",
+  "session_id": "mig-20260606-kwrd01",
+  "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json",
+  "observed_at": "2026-06-06T18:00:00Z",
+  "observations": [
+    {
+      "observation_id": "obs-kwrd01-q01",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-01",
+      "query_id": "q01",
+      "phrase": "грузотакси краснодар",
+      "phrase_normalized": "грузотакси краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 108 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q02",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-02",
+      "query_id": "q02",
+      "phrase": "грузовое такси краснодар",
+      "phrase_normalized": "грузовое такси краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 599 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q03",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-03",
+      "query_id": "q03",
+      "phrase": "газель краснодар",
+      "phrase_normalized": "газель краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 2696 },
+      "safe_unknown": [
+        "Operator note: mixed intent observed — raw frequency preserved"
+      ],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q04",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-04",
+      "query_id": "q04",
+      "phrase": "грузоперевозки краснодар",
+      "phrase_normalized": "грузоперевозки краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 1059 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q05",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-05",
+      "query_id": "q05",
+      "phrase": "перевозка мебели краснодар",
+      "phrase_normalized": "перевозка мебели краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 84 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q06",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-06",
+      "query_id": "q06",
+      "phrase": "квартирный переезд краснодар",
+      "phrase_normalized": "квартирный переезд краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 34 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q07",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-07",
+      "query_id": "q07",
+      "phrase": "вызов газели краснодар",
+      "phrase_normalized": "вызов газели краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 0 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q08",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-08",
+      "query_id": "q08",
+      "phrase": "газель с грузчиком краснодар",
+      "phrase_normalized": "газель с грузчиком краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 7 },
+      "safe_unknown": [
+        "Export phrase wording differs from approved q08"
+      ],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q09",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-09",
+      "query_id": "q09",
+      "phrase": "грузовое такси с грузчиками краснодар",
+      "phrase_normalized": "грузовое такси с грузчиками краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 16 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q10",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-10",
+      "query_id": "q10",
+      "phrase": "грузоперевозки по краснодару",
+      "phrase_normalized": "грузоперевозки по краснодару",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 159 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    },
+    {
+      "observation_id": "obs-kwrd01-q11",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json#WS-11",
+      "query_id": "q11",
+      "phrase": "заказать газель краснодар",
+      "phrase_normalized": "заказать газель краснодар",
+      "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+      "region_scope": { "value": "Краснодар", "status": "declared" },
+      "period_scope": { "value": "unknown", "status": "unknown" },
+      "numeric_preview": { "freq": 21 },
+      "safe_unknown": [],
+      "observed_at": "2026-06-06T18:00:00Z"
+    }
+  ]
+}

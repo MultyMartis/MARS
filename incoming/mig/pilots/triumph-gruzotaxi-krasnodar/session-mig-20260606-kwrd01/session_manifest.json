@@ -1,0 +1,78 @@
+{
+  "schema_version": "0.2",
+  "session_id": "mig-20260606-kwrd01",
+  "created_at": "2026-06-06T18:00:00Z",
+  "operator_id": "manual-wordstat-pilot-operator",
+  "mig_phase": "3a",
+  "session_kind": "keyword_demand",
+  "logical_parent_session": "mig-20260604-mqgt01",
+  "scope": {
+    "niche": "Грузотакси",
+    "region": "Краснодар",
+    "city": "Краснодар",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "queries": {
+    "query_set_ref": "../multi-query-market-query-set-v1.json",
+    "queries_declared": [
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q05",
+      "q06",
+      "q07",
+      "q08",
+      "q09",
+      "q10",
+      "q11"
+    ],
+    "queries_wordstat_captured": [
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q05",
+      "q06",
+      "q07",
+      "q08",
+      "q09",
+      "q10",
+      "q11"
+    ]
+  },
+  "capture_profile": {
+    "serp_pass": false,
+    "competitor_discovery": false,
+    "website_pass": false,
+    "landing_pass": false,
+    "keyword_pass": true,
+    "deep_research_pass": false
+  },
+  "keyword_pass_status": "completed",
+  "keyword_pass_started_at": "2026-06-06T18:00:00Z",
+  "keyword_pass_completed_at": "2026-06-06T18:00:00Z",
+  "keyword_pass_operator_id": "manual-wordstat-pilot-operator",
+  "keyword_provider_path": "manual_wordstat_export",
+  "keyword_artifacts": {
+    "source_file_ref": "wordstat-export-manual-2026-06-06.md",
+    "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json",
+    "observations_ref": "keyword_observations.json",
+    "registry_ref": "keyword_registry.json",
+    "review_record_ref": "keyword_review.md"
+  },
+  "keyword_pass_safe_unknown": [
+    "Wordstat period label not recorded in operator export — period_scope unknown on all registry objects",
+    "q08 export phrase «газель с грузчиком краснодар» differs from approved q08 «газель с грузчиками Краснодар» — export wording preserved verbatim",
+    "q03 operator note: mixed intent (vehicle purchase, jobs, repair, transportation) — frequency not decomposed",
+    "Cross-layer divergence: Wordstat captured q05–q07; Phase 1 SERP session mig-20260604-mqgt01 execution_status failed for q05–q07 — demand and SERP layers independent per KS-06, not merged"
+  ],
+  "artifacts": {
+    "wordstat_export": "wordstat-export-manual-2026-06-06.md",
+    "wordstat_snapshot": "wordstat_snapshot.cap-20260606-kwrd01.json",
+    "keyword_registry": "keyword_registry.json",
+    "keyword_review": "keyword_review.md"
+  },
+  "status": "draft"
+}

@@ -1,0 +1,913 @@
+{
+  "registry_id": "kr-mig-20260606-kwrd01-v1",
+  "session_id": "mig-20260606-kwrd01",
+  "revision": 1,
+  "registry_state": "frozen",
+  "keywords": [
+    {
+      "keyword_id": "kw-kwrd01-q01",
+      "query_id": "q01",
+      "approved_query_text": "грузотакси Краснодар",
+      "phrase": "грузотакси краснодар",
+      "phrase_normalized": "грузотакси краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-01",
+            "query_id": "q01",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-01"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 108,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-01",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-01"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-01"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q01: «грузотакси Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q02",
+      "query_id": "q02",
+      "approved_query_text": "грузовое такси Краснодар",
+      "phrase": "грузовое такси краснодар",
+      "phrase_normalized": "грузовое такси краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-02",
+            "query_id": "q02",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-02"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 599,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-02",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-02"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-02"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q02: «грузовое такси Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q03",
+      "query_id": "q03",
+      "approved_query_text": "газель Краснодар",
+      "phrase": "газель краснодар",
+      "phrase_normalized": "газель краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-03",
+            "query_id": "q03",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-03"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": [
+            "Operator note: mixed intent observed (vehicle purchase, driver jobs, repair, cargo transportation) — raw frequency preserved, no correction applied"
+          ]
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 2696,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-03",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-03"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-03"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Operator note: mixed intent observed (vehicle purchase, driver jobs, repair, cargo transportation) — raw frequency preserved, no correction applied",
+        "Export phrase casing/wording differs from approved q03: «газель Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q04",
+      "query_id": "q04",
+      "approved_query_text": "грузоперевозки Краснодар",
+      "phrase": "грузоперевозки краснодар",
+      "phrase_normalized": "грузоперевозки краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-04",
+            "query_id": "q04",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-04"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 1059,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-04",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-04"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-04"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q04: «грузоперевозки Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q05",
+      "query_id": "q05",
+      "approved_query_text": "перевозка мебели Краснодар",
+      "phrase": "перевозка мебели краснодар",
+      "phrase_normalized": "перевозка мебели краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-05",
+            "query_id": "q05",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-05"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 84,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-05",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-05"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-05"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q05: «перевозка мебели Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q06",
+      "query_id": "q06",
+      "approved_query_text": "квартирный переезд Краснодар",
+      "phrase": "квартирный переезд краснодар",
+      "phrase_normalized": "квартирный переезд краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-06",
+            "query_id": "q06",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-06"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 34,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-06",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-06"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-06"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q06: «квартирный переезд Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q07",
+      "query_id": "q07",
+      "approved_query_text": "вызов газели Краснодар",
+      "phrase": "вызов газели краснодар",
+      "phrase_normalized": "вызов газели краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-07",
+            "query_id": "q07",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-07"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 0,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-07",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-07"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-07"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q07: «вызов газели Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q08",
+      "query_id": "q08",
+      "approved_query_text": "газель с грузчиками Краснодар",
+      "phrase": "газель с грузчиком краснодар",
+      "phrase_normalized": "газель с грузчиком краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-08",
+            "query_id": "q08",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-08"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": [
+            "Export phrase uses singular «грузчиком»; approved query q08 is «газель с грузчиками Краснодар» — export wording preserved verbatim"
+          ]
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 7,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-08",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-08"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-08"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase uses singular «грузчиком»; approved query q08 is «газель с грузчиками Краснодар» — export wording preserved verbatim"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q09",
+      "query_id": "q09",
+      "approved_query_text": "грузовое такси с грузчиками Краснодар",
+      "phrase": "грузовое такси с грузчиками краснодар",
+      "phrase_normalized": "грузовое такси с грузчиками краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-09",
+            "query_id": "q09",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-09"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 16,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-09",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-09"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-09"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q09: «грузовое такси с грузчиками Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q10",
+      "query_id": "q10",
+      "approved_query_text": "грузоперевозки по Краснодару",
+      "phrase": "грузоперевозки по краснодару",
+      "phrase_normalized": "грузоперевозки по краснодару",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-10",
+            "query_id": "q10",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-10"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 159,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-10",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-10"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-10"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    },
+    {
+      "keyword_id": "kw-kwrd01-q11",
+      "query_id": "q11",
+      "approved_query_text": "заказать газель Краснодар",
+      "phrase": "заказать газель краснодар",
+      "phrase_normalized": "заказать газель краснодар",
+      "session_id": "mig-20260606-kwrd01",
+      "source_type": "future_wordstat",
+      "provenance_records": [
+        {
+          "provenance_id": "KS-PROV-FUTURE-WORDSTAT",
+          "capture_time": "2026-06-06T18:00:00Z",
+          "host_context": {
+            "capture_id": "cap-20260606-kwrd01",
+            "row": "WS-11",
+            "query_id": "q11",
+            "source_file_ref": "wordstat-export-manual-2026-06-06.md"
+          },
+          "import_method": "manual_export",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-11"
+          ],
+          "evidence_grade": "provider",
+          "safe_unknown": []
+        }
+      ],
+      "region_scope": {
+        "value": "Краснодар",
+        "status": "declared"
+      },
+      "period_scope": {
+        "value": "unknown",
+        "status": "unknown"
+      },
+      "locale": "ru-RU",
+      "engine": "yandex",
+      "modifier_tags": [],
+      "intent_shape_flags": [
+        {
+          "signal_id": "KS-INT-UNKNOWN",
+          "confidence": "unknown",
+          "evidence_basis": [
+            "no automated enrichment in pilot"
+          ]
+        }
+      ],
+      "numeric_slots": {
+        "freq": {
+          "status": "known",
+          "value": 21,
+          "period": "unknown",
+          "provider_ref": "wordstat-export-manual-2026-06-06.md#WS-11",
+          "evidence_refs": [
+            "wordstat_snapshot.cap-20260606-kwrd01.json#WS-11"
+          ],
+          "safe_unknown": [
+            "Wordstat period label not recorded in export"
+          ]
+        },
+        "trend": {
+          "status": "not_captured",
+          "safe_unknown": []
+        },
+        "share": {
+          "status": "not_captured",
+          "safe_unknown": []
+        }
+      },
+      "evidence_refs": [
+        "wordstat_snapshot.cap-20260606-kwrd01.json#WS-11"
+      ],
+      "evidence_grade": "provider",
+      "safe_unknown": [
+        "Export phrase casing/wording differs from approved q11: «заказать газель Краснодар»"
+      ],
+      "registry_state": "registered",
+      "capture_time": "2026-06-06T18:00:00Z"
+    }
+  ],
+  "collections": [
+    {
+      "collection_id": "col-wordstat-batch-001",
+      "kind": "wordstat_batch",
+      "capture_id": "cap-20260606-kwrd01",
+      "source_file_ref": "wordstat-export-manual-2026-06-06.md",
+      "snapshot_ref": "wordstat_snapshot.cap-20260606-kwrd01.json",
+      "query_ids": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q08",
+        "q09",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "collection_id": "col-seed-ref-mqgt01",
+      "kind": "seed_batch",
+      "reference_session_id": "mig-20260604-mqgt01",
+      "note": "Reference only — no merge with provider rows per PCR-09 / KO-04"
+    }
+  ],
+  "stats": {
+    "total": 11,
+    "by_source_type": {
+      "future_wordstat": 11
+    },
+    "by_registry_state": {
+      "registered": 11
+    },
+    "provider_conflict_count": 0
+  },
+  "session_safe_unknown": [
+    "Wordstat period label not recorded in operator export",
+    "q08 export phrase wording differs from approved query set (singular vs plural грузчик)",
+    "Cross-layer divergence: Wordstat captured q05–q07; Phase 1 SERP session mig-20260604-mqgt01 execution_status failed for q05–q07 — demand and SERP layers independent per KS-06, not merged"
+  ],
+  "capture_time": "2026-06-06T18:00:00Z"
+}
