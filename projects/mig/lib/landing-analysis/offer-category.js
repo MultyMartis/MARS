@@ -44,12 +44,10 @@ function classifyOfferCategory(text) {
   return "unknown";
 }
 
+const { hasDeliveryTimeTokens: hasDeliveryPromiseTokens } = require("./delivery-promise-rules");
+
 function hasDeliveryTimeTokens(text) {
-  if (!text) {
-    return false;
-  }
-  const lower = text.toLowerCase();
-  return /(?:минут|24\s*\/\s*7|24\/7|круглосуточ|срочн|подач)/i.test(lower);
+  return hasDeliveryPromiseTokens(text);
 }
 
 function hasPriceTokens(text) {

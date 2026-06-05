@@ -1,6 +1,7 @@
 "use strict";
 
 const { obsByFamilies } = require("./format-landing-intelligence-v2");
+const { derivePhonePresenceModel, formatPhonePresenceSummary } = require("../landing-analysis/phone-presence-model");
 
 const MATRIX_CAPS = {
   primary_offer: 3,
@@ -31,38 +32,30 @@ function pickPricingTexts(observations, cap) {
   return chosen.map((o) => o.text).filter(Boolean);
 }
 
-function formatMessenger(m) {
-  if (typeof m === "string") {
-    return m;
+function formatContactModel(snap, observations) {
+  const fromObs = obsByFamilies(observations, ["CONTACT_MODEL"]);
+  const contactModelObs = fromObs.find((o) => o.sub_type === "contact_model");
+  const phonePresentObs = fromObs.find((o) => o.sub_type === "phone_presence");
+  const phoneProminentObs = fromObs.find((o) => o.sub_type === "phone_prominence");
+
+  if (contactModelObs || phonePresentObs || phoneProminentObs) {
+    return [
+      phonePresentObs?.text || "phone_present: false",
+      phoneProminentObs?.text || "phone_prominent: false",
+      contactModelObs?.text || "contact_model: SAFE UNKNOWN",
+    ].join("; ");
   }
-  if (m && typeof m === "object") {
-    const type = m.type || "msg";
-    const handle = m.handle || m.url || "";
-    return handle ? `${type}:${handle}` : type;
-  }
-  return String(m);
+
+  const model = derivePhonePresenceModel(snap || {}, { page_patterns: [] });
+  return formatPhonePresenceSummary(model);
 }
 
-function formatContactModel(snap, observations) {
-  const contacts = snap?.contacts || {};
-  const parts = [];
-
-  if (contacts.phones?.length) {
-    parts.push(`phones: ${contacts.phones.slice(0, 2).join(", ")}`);
+function formatGeoAwareness(observations) {
+  const geo = obsByFamilies(observations, ["GEO_AWARENESS"]).filter((o) => o.sub_type === "geo_mismatch");
+  if (!geo.length) {
+    return "none observed";
   }
-  if (contacts.emails?.length) {
-    parts.push(`emails: ${contacts.emails.slice(0, 1).join(", ")}`);
-  }
-  if (contacts.messengers?.length) {
-    parts.push(`messengers: ${contacts.messengers.map(formatMessenger).slice(0, 2).join(", ")}`);
-  }
-
-  if (parts.length) {
-    return parts.join("; ");
-  }
-
-  const contactObs = pickTexts(observations, ["CONTACT_MODEL"], 3);
-  return contactObs.length ? contactObs.join("; ") : "SAFE UNKNOWN";
+  return geo.map((o) => o.text).join("; ");
 }
 
 function formatLeadCapture(observations, snap) {
@@ -126,11 +119,10 @@ function buildComparisonMatrix(landingIndex, websiteIndex) {
 
     let topOffers = pickTexts(observations, ["OFFERS"], MATRIX_CAPS.primary_offer);
     let pricing = pickPricingTexts(observations, MATRIX_CAPS.pricing_signals);
-    let delivery = pickTexts(
-      observations,
-      ["DELIVERY_PROMISE", "SERVICE_COVERAGE"],
-      MATRIX_CAPS.delivery_promise
-    );
+    let delivery = pickTexts(observations, ["DELIVERY_PROMISE"], MATRIX_CAPS.delivery_promise);
+    if (!delivery.length) {
+      delivery = pickTexts(observations, ["SERVICE_COVERAGE"], MATRIX_CAPS.delivery_promise);
+    }
     let trust = pickTexts(observations, ["TRUST", "SOCIAL_PROOF"], MATRIX_CAPS.trust_signals);
 
     if (!observations.length) {
@@ -159,6 +151,7 @@ function buildComparisonMatrix(landingIndex, websiteIndex) {
       trust_signals: joinOrUnknown(trust),
       lead_capture_model: formatLeadCapture(observations, snap),
       contact_model: formatContactModel(snap, observations),
+      geo_awareness: formatGeoAwareness(observations),
       page_structure: pageStructure || "SAFE UNKNOWN",
       evidence_refs: collectEvidenceRefs(detail || landing, snap),
       families_present: (obs.families_present || []).join(", "),
@@ -178,6 +171,7 @@ function comparisonMatrixMarkdown(rows) {
     "Trust Signals",
     "Lead Capture Model",
     "Contact Model",
+    "Geo Awareness",
     "Page Structure",
     "Evidence References",
   ];
@@ -198,6 +192,7 @@ function comparisonMatrixMarkdown(rows) {
           r.trust_signals.replace(/\|/g, "\\|").slice(0, 80),
           r.lead_capture_model.replace(/\|/g, "\\|").slice(0, 80),
           r.contact_model.replace(/\|/g, "\\|").slice(0, 80),
+          (r.geo_awareness || "none observed").replace(/\|/g, "\\|").slice(0, 80),
           r.page_structure.replace(/\|/g, "\\|").slice(0, 100),
           r.evidence_refs,
         ].join(" | ") +

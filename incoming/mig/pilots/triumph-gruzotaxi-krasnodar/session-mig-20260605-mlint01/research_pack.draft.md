@@ -6,7 +6,7 @@
 |-------|-------|
 | Session ID | mig-20260605-mlint01 |
 | Stage | draft |
-| Created | 2026-06-04T18:43:39.315Z |
+| Created | 2026-06-04T18:59:11.171Z |
 | Operator | market-leader-intelligence-pass |
 | Niche | Грузотакси |
 | Region | Краснодар |
@@ -149,7 +149,7 @@ Query coverage note: entities from missing queries (q05, q06, q07) are not repre
 ## Landing analysis summary
 
 Landings analyzed: **5** · skipped/low capture: **0**
-Observation families with data (session total): **32** · family slots without data: **18**
+Observation families with data (session total): **35** · family slots without data: **20**
 
 Count-only index fields removed from operator view — see per-landing intelligence cards.
 
@@ -177,35 +177,34 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 ### Delivery & coverage
 
-- SAFE UNKNOWN — no delivery or coverage lines
+- Автомобиль будет подан, через 20 минут или быстрее! · `time_promise` · conf **C** · ev `page_html`
+
+### Geo awareness
+
+- none observed
 
 ### Trust & social proof
 
-- Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее! · `rating_display` · conf **C** · ev `page_html`
+- Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов · `rating_display` · conf **C** · ev `page_html`
 - от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг. · `fleet_size` · conf **C** · ev `page_html`
 - Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов. · `legal_entity` · conf **C** · ev `page_html`
 - Ниже представлены избранные и новые отзывы с нашего профиля на Авито. · `review_snippet` · conf **C** · ev `page_html`
 
 ### Contact & CTA
 
+- email: opergt@gktriumph.ru · `email` · conf **B** · ev `/contacts/emails`
+- messenger: telegram:gruzotaxi_triumph · `messenger` · conf **B** · ev `/contacts/messengers`
+- phone_present: true · `phone_presence` · conf **X** · ev `/contacts/phones`
+- phone_prominent: true · `phone_prominence` · conf **X** · ev `/page_patterns/phone_prominent`
+- contact_model: mixed · `contact_model` · conf **X** · ev `/contacts`
 - Lead form → /#wpcf7-f271-p2-o2 · `lead_form` · conf **B** · ev `/forms`
 - Lead form → /#wpcf7-f272-o1 · `lead_form` · conf **B** · ev `/forms`
-- +79189912991 → tel:+79189912991 · `phone` · conf **B** · ev `/contacts/phones`
-- +78619912991 → tel:+78619912991 · `phone` · conf **B** · ev `/contacts/phones`
-- 82784248306 → tel:82784248306 · `phone` · conf **B** · ev `/contacts/phones`
-- 81977685845 → tel:81977685845 · `phone` · conf **B** · ev `/contacts/phones`
-- 81892626158 → tel:81892626158 · `phone` · conf **B** · ev `/contacts/phones`
-- 82483858797 → tel:82483858797 · `phone` · conf **B** · ev `/contacts/phones`
+- Phone CTA → tel:[present] · `phone` · conf **B** · ev `/contacts/phones`
 - telegram: gruzotaxi_triumph · `messenger` · conf **B** · ev `/contacts/messengers`
 - Заказать звонок → https://gruzotaxi-triumph.ru/# · `callback_request` · conf **B** · ev `/cta_elements/0`
 - Заказать → https://gruzotaxi-triumph.ru/# · `external_link` · conf **B** · ev `/cta_elements/1`
 - Можно ли оформить предварительный заказ? → https://gruzotaxi-triumph.ru/#%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bb%d0%b8-%d0%be%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d0%b0%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0 · `external_link` · conf **B** · ev `/cta_elements/2`
 - Form: _wpcf7, _wpcf7_version, _wpcf7_locale, _wpcf7_unit_tag, _wpcf7_container_post, _wpcf7_posted_data_hash · `lead_form` · conf **X** · ev `/forms/0`
-- phone: +79189912991 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: +78619912991 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: 82784248306 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: 81977685845 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: 81892626158 · `phone` · conf **B** · ev `/contacts/phones`
 
 ### Page structure
 
@@ -217,8 +216,8 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 ### SAFE UNKNOWN
 
-- DELIVERY_PROMISE: no observations classified
 - SERVICE_COVERAGE: no observations classified
+- GEO_AWARENESS: no observations classified
 
 ## Landing intelligence — gruzovichec.ru
 
@@ -241,15 +240,21 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 ### Delivery & coverage
 
-- SAFE UNKNOWN — no delivery or coverage lines
+- Оперативная доставка – от 20 минут до пункта назначения · `time_promise` · conf **B** · ev `/pricing_signals/13`
+- Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели. · `time_promise` · conf **C** · ev `page_html`
+- Срочная подача машины за 20 минут, доставка 24&#47;7. · `time_promise` · conf **B** · ev `/meta_description`
+
+### Geo awareness
+
+- research_target: Краснодар; observed: пензе · `geo_mismatch` · conf **B** · ev `/title`
 
 ### Trust & social proof
 
-- Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ! · `fleet_size` · conf **C** · ev `page_html`
+- Пенза , Проспект строителей 39в zakaz@gruzovichec.ru 8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ! · `fleet_size` · conf **C** · ev `page_html`
 - В стоимость включены аренда "Газели" на 2 часа и услуги одного грузчика на 2 часа. · `fleet_size` · conf **C** · ev `page_html`
 - Включены аренда "Газели" на 1 час и услуги одного грузчика на 2 часа. · `fleet_size` · conf **C** · ev `page_html`
 - Наша компания занимает лидирующие позиции на рынке, благодаря высокому уровню обслуживания и многолетнему опыту. · `experience_claim` · conf **C** · ev `page_html`
-- Грузовое такси «Грузовичок» – это: Быстрая доставка: Наши машины всегда в вашем распоряжении, и мы гарантируем, что приедем всего за 20 минут, независимо от времени суток или дня недели. · `fleet_size` · conf **C** · ev `page_html`
+- Грузовое такси «Грузовичок» – это: Быстрая доставка: · `fleet_size` · conf **C** · ev `page_html`
 - Наш автопарк и возможности В нашем распоряжении более 100 единиц грузового транспорта различной грузоподъёмности – от лёгких машин до мощных грузовиков. · `fleet_size` · conf **C** · ev `page_html`
 - Мы гордимся нашими кадрами, которые: Имеют большой опыт работы в сфере грузоперевозок. · `experience_claim` · conf **C** · ev `page_html`
 - Поэтому мы гарантируем, что каждая перевозка проходит аккуратно и надёжно, независимо от типа груза. · `guarantee` · conf **C** · ev `page_html`
@@ -258,14 +263,14 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 ### Contact & CTA
 
-- 88412211121 → tel:88412211121 · `phone` · conf **B** · ev `/contacts/phones`
-- 8(8412)21-11-21 → tel:8(8412)21-11-21 · `phone` · conf **B** · ev `/contacts/phones`
-- telegram: Gruzovoe_taxi_gruzovochkof_bot · `messenger` · conf **B** · ev `/contacts/messengers`
-- Оставить заявку → https://gruzovichec.ru/forma-predrasscheta · `external_link` · conf **B** · ev `/cta_elements/0`
-- phone: 88412211121 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: 8(8412)21-11-21 · `phone` · conf **B** · ev `/contacts/phones`
 - email: zakaz@gruzovichec.ru · `email` · conf **B** · ev `/contacts/emails`
 - messenger: telegram:Gruzovoe_taxi_gruzovochkof_bot · `messenger` · conf **B** · ev `/contacts/messengers`
+- phone_present: true · `phone_presence` · conf **X** · ev `/contacts/phones`
+- phone_prominent: true · `phone_prominence` · conf **X** · ev `/page_patterns/phone_prominent`
+- contact_model: mixed · `contact_model` · conf **X** · ev `/contacts`
+- Phone CTA → tel:[present] · `phone` · conf **B** · ev `/contacts/phones`
+- telegram: Gruzovoe_taxi_gruzovochkof_bot · `messenger` · conf **B** · ev `/contacts/messengers`
+- Оставить заявку → https://gruzovichec.ru/forma-predrasscheta · `external_link` · conf **B** · ev `/cta_elements/0`
 
 ### Page structure
 
@@ -279,7 +284,6 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 - LEAD_CAPTURE: no observations classified
 - SOCIAL_PROOF: no observations classified
-- DELIVERY_PROMISE: no observations classified
 - SERVICE_COVERAGE: no observations classified
 
 ## Landing intelligence — krasnodar.gruzovichkof.ru
@@ -298,6 +302,10 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 - Вызвать грузовое такси в Краснодаре — подача за 15 минут! · `time_promise` · conf **B** · ev `/offers/1`
 
+### Geo awareness
+
+- none observed
+
 ### Trust & social proof
 
 - Общая грузоподъемность машин этой категории не превышает 1,5 т. · `fleet_size` · conf **C** · ev `page_html`
@@ -305,17 +313,15 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 ### Contact & CTA
 
-- 88003336747 → tel:88003336747 · `phone` · conf **B** · ev `/contacts/phones`
-- 84090392982 → tel:84090392982 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (861) 205-25-08 → tel:+7(861)205-25-08 · `phone` · conf **B** · ev `/contacts/phones`
-- Заказать звонок · `callback_request` · conf **B** · ev `/cta_elements/0`
-- phone: 88003336747 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: 84090392982 · `phone` · conf **B** · ev `/contacts/phones`
-- phone: +7 (861) 205-25-08 · `phone` · conf **B** · ev `/contacts/phones`
 - email: zakaz@gruzovichkof.ru · `email` · conf **B** · ev `/contacts/emails`
 - email: zakaz-krasnodar@gruzovichkof.ru · `email` · conf **B** · ev `/contacts/emails`
 - email: reklama@gruzovichkof.ru · `email` · conf **B** · ev `/contacts/emails`
 - email: help@gruzovichkof.ru · `email` · conf **B** · ev `/contacts/emails`
+- phone_present: true · `phone_presence` · conf **X** · ev `/contacts/phones`
+- phone_prominent: true · `phone_prominence` · conf **X** · ev `/page_patterns/phone_prominent`
+- contact_model: mixed · `contact_model` · conf **X** · ev `/contacts`
+- Phone CTA → tel:[present] · `phone` · conf **B** · ev `/contacts/phones`
+- Заказать звонок · `callback_request` · conf **B** · ev `/cta_elements/0`
 
 ### Page structure
 
@@ -330,6 +336,7 @@ Count-only index fields removed from operator view — see per-landing intellige
 - LEAD_CAPTURE: no observations classified
 - SOCIAL_PROOF: no observations classified
 - SERVICE_COVERAGE: no observations classified
+- GEO_AWARENESS: no observations classified
 
 ## Landing intelligence — krasnodar.taximaxim.ru
 
@@ -347,16 +354,22 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 - SAFE UNKNOWN — no delivery or coverage lines
 
+### Geo awareness
+
+- none observed
+
 ### Trust & social proof
 
 - SAFE UNKNOWN — trust not extracted
 
 ### Contact & CTA
 
-- +78619999999 → tel:+78619999999 · `phone` · conf **B** · ev `/contacts/phones`
-- telegram: taximaxim · `messenger` · conf **B** · ev `/contacts/messengers`
-- phone: +78619999999 · `phone` · conf **B** · ev `/contacts/phones`
 - messenger: telegram:taximaxim · `messenger` · conf **B** · ev `/contacts/messengers`
+- phone_present: true · `phone_presence` · conf **X** · ev `/contacts/phones`
+- phone_prominent: true · `phone_prominence` · conf **X** · ev `/page_patterns/phone_prominent`
+- contact_model: mixed · `contact_model` · conf **X** · ev `/contacts`
+- Phone CTA → tel:[present] · `phone` · conf **B** · ev `/contacts/phones`
+- telegram: taximaxim · `messenger` · conf **B** · ev `/contacts/messengers`
 
 ### Page structure
 
@@ -372,6 +385,7 @@ Count-only index fields removed from operator view — see per-landing intellige
 - SOCIAL_PROOF: no observations classified
 - DELIVERY_PROMISE: no observations classified
 - SERVICE_COVERAGE: no observations classified
+- GEO_AWARENESS: no observations classified
 
 ## Landing intelligence — city-mobil.ru
 
@@ -391,6 +405,10 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 - SAFE UNKNOWN — no delivery or coverage lines
 
+### Geo awareness
+
+- none observed
+
 ### Trust & social proof
 
 - Подойдет для: небольшие грузы перевозка личных вещей 700кг малый переезд Заказать в приложении Грузчики помогут Не нужно носить вещи в машину самостоятельно - наши грузчики сделают это за Вас! · `fleet_size` · conf **C** · ev `page_html`
@@ -400,24 +418,14 @@ Count-only index fields removed from operator view — see per-landing intellige
 
 ### Contact & CTA
 
-- +7 495 222-22-22 → tel:+7495222-22-22 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 495-120-00-00 → tel:+7495-120-00-00 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (495) 222-22-22 → tel:+7(495)222-22-22 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 958 400-22-22 → tel:+7958400-22-22 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (845) 269-44-46 → tel:+7(845)269-44-46 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (800) 600-78-18 → tel:+7(800)600-78-18 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (848)244 40-00 → tel:+7(848)24440-00 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 994 500-10-10 → tel:+7994500-10-10 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (848) 244-40-00 → tel:+7(848)244-40-00 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (958) 400-22-22 → tel:+7(958)400-22-22 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (842) 250-60-60 → tel:+7(842)250-60-60 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 842 274-01-01 → tel:+7842274-01-01 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (846) 244-44-44 → tel:+7(846)244-44-44 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 938 699-55-22 → tel:+7938699-55-22 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (812) 404-44-44 → tel:+7(812)404-44-44 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 812 405-05-05 → tel:+7812405-05-05 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 958 596-44-44 → tel:+7958596-44-44 · `phone` · conf **B** · ev `/contacts/phones`
-- +7 (831) 423-33-33 → tel:+7(831)423-33-33 · `phone` · conf **B** · ev `/contacts/phones`
+- messenger: telegram:citymobilpr · `messenger` · conf **B** · ev `/contacts/messengers`
+- phone_present: true · `phone_presence` · conf **X** · ev `/contacts/phones`
+- phone_prominent: true · `phone_prominence` · conf **X** · ev `/page_patterns/phone_prominent`
+- contact_model: mixed · `contact_model` · conf **X** · ev `/contacts`
+- Phone CTA → tel:[present] · `phone` · conf **B** · ev `/contacts/phones`
+- telegram: citymobilpr · `messenger` · conf **B** · ev `/contacts/messengers`
+- Заказать грузоперевозку → https://gruz-taxi.city-mobil.ru/?city= · `external_link` · conf **B** · ev `/cta_elements/0`
+- Заказать в приложении · `generic_action` · conf **B** · ev `/cta_elements/2`
 
 ### Page structure
 
@@ -433,6 +441,7 @@ Count-only index fields removed from operator view — see per-landing intellige
 - SOCIAL_PROOF: no observations classified
 - DELIVERY_PROMISE: no observations classified
 - SERVICE_COVERAGE: no observations classified
+- GEO_AWARENESS: no observations classified
 
 
 ## Artifact Registry

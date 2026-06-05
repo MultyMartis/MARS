@@ -70,13 +70,16 @@ function formatLandingIntelligenceCard(obs) {
   lines.push(...(pricing.length ? pricing.map(formatObsLine) : ["- SAFE UNKNOWN — no visible pricing lines"]));
 
   lines.push("", "### Delivery & coverage", "");
-  const delivery = capList(
-    obsByFamilies(observations, ["DELIVERY_PROMISE", "SERVICE_COVERAGE"]),
-    PACK_CAPS.DELIVERY_PROMISE + PACK_CAPS.SERVICE_COVERAGE
-  );
+  const deliveryOnly = capList(obsByFamilies(observations, ["DELIVERY_PROMISE"]), PACK_CAPS.DELIVERY_PROMISE);
+  const coverageOnly = capList(obsByFamilies(observations, ["SERVICE_COVERAGE"]), PACK_CAPS.SERVICE_COVERAGE);
+  const delivery = [...deliveryOnly, ...coverageOnly];
   lines.push(
     ...(delivery.length ? delivery.map(formatObsLine) : ["- SAFE UNKNOWN — no delivery or coverage lines"])
   );
+
+  lines.push("", "### Geo awareness", "");
+  const geo = capList(obsByFamilies(observations, ["GEO_AWARENESS"]), 4);
+  lines.push(...(geo.length ? geo.map(formatObsLine) : ["- none observed"]));
 
   lines.push("", "### Trust & social proof", "");
   const trust = capList(
@@ -86,10 +89,13 @@ function formatLandingIntelligenceCard(obs) {
   lines.push(...(trust.length ? trust.map(formatObsLine) : ["- SAFE UNKNOWN — trust not extracted"]));
 
   lines.push("", "### Contact & CTA", "");
-  const contactCta = capList(
-    obsByFamilies(observations, ["CONTACT_MODEL", "CTA", "LEAD_CAPTURE"]),
-    PACK_CAPS.CTA + PACK_CAPS.LEAD_CAPTURE + PACK_CAPS.CONTACT_MODEL
+  const contactModel = obsByFamilies(observations, ["CONTACT_MODEL"]).filter((o) =>
+    ["phone_presence", "phone_prominence", "contact_model", "email", "messenger", "address"].includes(o.sub_type)
   );
+  const contactCta = [
+    ...contactModel,
+    ...capList(obsByFamilies(observations, ["CTA", "LEAD_CAPTURE"]), PACK_CAPS.CTA + PACK_CAPS.LEAD_CAPTURE),
+  ];
   lines.push(...(contactCta.length ? contactCta.map(formatObsLine) : ["- SAFE UNKNOWN — contact/CTA not resolved"]));
 
   lines.push("", "### Page structure", "");

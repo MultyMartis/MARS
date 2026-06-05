@@ -1,7 +1,7 @@
 {
   "schema_version": "0.2",
   "session_id": "mig-20260605-mlint01",
-  "generated_at": "2026-06-04T18:59:34.012Z",
+  "generated_at": "2026-06-05T16:27:13.104Z",
   "analysis_phase": "landing_analysis_v2",
   "upstream_artifacts": {
     "website_snapshots": "website_snapshots.json",
@@ -24,13 +24,14 @@
           "CTA",
           "LEAD_CAPTURE",
           "CONTACT_MODEL",
+          "DELIVERY_PROMISE",
           "SOCIAL_PROOF",
           "TRUST",
           "MARKETING_PATTERNS"
         ],
         "families_unknown": [
-          "DELIVERY_PROMISE",
-          "SERVICE_COVERAGE"
+          "SERVICE_COVERAGE",
+          "GEO_AWARENESS"
         ],
         "top_signals": [
           {
@@ -85,15 +86,16 @@
         "families_present": [
           "PRICING",
           "OFFERS",
+          "DELIVERY_PROMISE",
           "CTA",
           "CONTACT_MODEL",
           "TRUST",
-          "MARKETING_PATTERNS"
+          "MARKETING_PATTERNS",
+          "GEO_AWARENESS"
         ],
         "families_unknown": [
           "LEAD_CAPTURE",
           "SOCIAL_PROOF",
-          "DELIVERY_PROMISE",
           "SERVICE_COVERAGE"
         ],
         "top_signals": [
@@ -158,7 +160,8 @@
         "families_unknown": [
           "LEAD_CAPTURE",
           "SOCIAL_PROOF",
-          "SERVICE_COVERAGE"
+          "SERVICE_COVERAGE",
+          "GEO_AWARENESS"
         ],
         "top_signals": [
           {
@@ -181,13 +184,13 @@
           },
           {
             "family": "CTA",
-            "text": "88003336747 → tel:88003336747",
+            "text": "Phone CTA → tel:[present]",
             "observation_id": "mig-20260605-mlint01-la003-obs004",
             "confidence": "B"
           },
           {
             "family": "CTA",
-            "text": "84090392982 → tel:84090392982",
+            "text": "Заказать звонок",
             "observation_id": "mig-20260605-mlint01-la003-obs005",
             "confidence": "B"
           }
@@ -222,7 +225,8 @@
           "LEAD_CAPTURE",
           "SOCIAL_PROOF",
           "DELIVERY_PROMISE",
-          "SERVICE_COVERAGE"
+          "SERVICE_COVERAGE",
+          "GEO_AWARENESS"
         ],
         "top_signals": [
           {
@@ -239,7 +243,7 @@
           },
           {
             "family": "CTA",
-            "text": "+78619999999 → tel:+78619999999",
+            "text": "Phone CTA → tel:[present]",
             "observation_id": "mig-20260605-mlint01-la004-obs003",
             "confidence": "B"
           },
@@ -251,7 +255,7 @@
           },
           {
             "family": "CONTACT_MODEL",
-            "text": "phone: +78619999999",
+            "text": "messenger: telegram:taximaxim",
             "observation_id": "mig-20260605-mlint01-la004-obs005",
             "confidence": "B"
           }
@@ -286,7 +290,8 @@
           "LEAD_CAPTURE",
           "SOCIAL_PROOF",
           "DELIVERY_PROMISE",
-          "SERVICE_COVERAGE"
+          "SERVICE_COVERAGE",
+          "GEO_AWARENESS"
         ],
         "top_signals": [
           {
@@ -315,7 +320,7 @@
           },
           {
             "family": "CTA",
-            "text": "+7 495 222-22-22 → tel:+7495222-22-22",
+            "text": "Phone CTA → tel:[present]",
             "observation_id": "mig-20260605-mlint01-la005-obs005",
             "confidence": "B"
           }

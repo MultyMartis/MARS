@@ -8,6 +8,12 @@ const {
   hasServiceCoverageTokens,
 } = require("./offer-category");
 const {
+  extractDeliveryPromiseSegments,
+  stripDeliveryPromiseSegments,
+} = require("./delivery-promise-rules");
+const { derivePhonePresenceModel } = require("./phone-presence-model");
+const { detectGeoMismatchSignals } = require("./geo-awareness");
+const {
   classifyTrustSubtypeV2,
   splitTrustLines,
   detectPlatform,
@@ -143,6 +149,18 @@ function buildObservationsV2(detail, snapshot, options = {}) {
   }
 
   for (const pricing of detail.pricing_patterns || []) {
+    if (hasDeliveryTimeTokens(pricing.text)) {
+      for (const seg of extractDeliveryPromiseSegments(pricing.text)) {
+        pushObservation({
+          family: "DELIVERY_PROMISE",
+          text: seg,
+          sub_type: "time_promise",
+          block_id: pricing.block_id,
+          evidence: pricing.evidence,
+        });
+      }
+      continue;
+    }
     pushObservation({
       family: "PRICING",
       text: pricing.text,
@@ -153,10 +171,12 @@ function buildObservationsV2(detail, snapshot, options = {}) {
   }
 
   for (const cta of detail.cta_patterns || []) {
-    const label = cta.label_text || "CTA";
+    const isPhoneCta = cta.cta_type === "phone";
+    const label = isPhoneCta ? "Phone CTA" : cta.label_text || "CTA";
+    const target = isPhoneCta ? "tel:[present]" : cta.target_href;
     pushObservation({
       family: "CTA",
-      text: cta.target_href ? `${label} → ${cta.target_href}` : label,
+      text: target ? `${label} → ${target}` : label,
       sub_type: cta.cta_type,
       block_id: cta.block_id,
       evidence: cta.evidence,
@@ -178,6 +198,9 @@ function buildObservationsV2(detail, snapshot, options = {}) {
   }
 
   for (const contact of detail.contact_patterns || []) {
+    if (contact.contact_type === "phone") {
+      continue;
+    }
     pushObservation({
       family: "CONTACT_MODEL",
       text: `${contact.contact_type}: ${contact.value}`,
@@ -186,6 +209,40 @@ function buildObservationsV2(detail, snapshot, options = {}) {
       evidence: contact.evidence,
     });
   }
+
+  const phoneModel = derivePhonePresenceModel(snapshot, detail);
+  if (phoneModel.phone_present) {
+    pushObservation({
+      family: "CONTACT_MODEL",
+      text: "phone_present: true",
+      sub_type: "phone_presence",
+      evidence: enrichEvidence(snapshot, {
+        source: "website_snapshot",
+        snapshot_field: "/contacts/phones",
+        verbatim_text: null,
+      }),
+    });
+  }
+  pushObservation({
+    family: "CONTACT_MODEL",
+    text: `phone_prominent: ${phoneModel.phone_prominent}`,
+    sub_type: "phone_prominence",
+    evidence: enrichEvidence(snapshot, {
+      source: "website_snapshot",
+      snapshot_field: phoneModel.phone_prominent ? "/page_patterns/phone_prominent" : "/contacts/phones",
+      verbatim_text: null,
+    }),
+  });
+  pushObservation({
+    family: "CONTACT_MODEL",
+    text: `contact_model: ${phoneModel.contact_model}`,
+    sub_type: "contact_model",
+    evidence: enrichEvidence(snapshot, {
+      source: "website_snapshot",
+      snapshot_field: "/contacts",
+      verbatim_text: null,
+    }),
+  });
 
   const registry = options.registry || {};
   for (const trust of detail.trust_patterns || []) {
@@ -198,12 +255,28 @@ function buildObservationsV2(detail, snapshot, options = {}) {
       if (!line) {
         continue;
       }
-      const subType = classifyTrustSubtypeV2(line, registry) || trust.trust_type;
+
+      for (const deliverySeg of extractDeliveryPromiseSegments(line)) {
+        pushObservation({
+          family: "DELIVERY_PROMISE",
+          text: deliverySeg,
+          sub_type: "time_promise",
+          block_id: trust.block_id,
+          evidence: trust.evidence,
+        });
+      }
+
+      const trustLine = stripDeliveryPromiseSegments(line);
+      if (!trustLine) {
+        continue;
+      }
+
+      const subType = classifyTrustSubtypeV2(trustLine, registry) || trust.trust_type;
       if (!subType || subType === "statistics") {
         continue;
       }
-      const platform = detectPlatform(line);
-      const nums = parseRatingNumbers(line);
+      const platform = detectPlatform(trustLine);
+      const nums = parseRatingNumbers(trustLine);
       const family =
         (subType === "rating_display" || subType === "review_snippet") && platform
           ? "SOCIAL_PROOF"
@@ -211,7 +284,7 @@ function buildObservationsV2(detail, snapshot, options = {}) {
 
       pushObservation({
         family,
-        text: line,
+        text: trustLine,
         sub_type: subType,
         platform: platform || undefined,
         numeric_value: nums.numeric_value ?? trust.numeric_value ?? undefined,
@@ -237,6 +310,37 @@ function buildObservationsV2(detail, snapshot, options = {}) {
     });
   }
 
+  const researchScope = options.researchScope || {};
+  for (const field of [
+    { text: snapshot.meta_description, snapshot_field: "/meta_description" },
+    { text: snapshot.title, snapshot_field: "/title" },
+  ]) {
+    if (!field.text) {
+      continue;
+    }
+    for (const seg of extractDeliveryPromiseSegments(field.text)) {
+      pushObservation({
+        family: "DELIVERY_PROMISE",
+        text: seg,
+        sub_type: "time_promise",
+        evidence: enrichEvidence(snapshot, {
+          source: "website_snapshot",
+          snapshot_field: field.snapshot_field,
+          verbatim_text: field.text,
+        }),
+      });
+    }
+  }
+
+  for (const geo of detectGeoMismatchSignals(snapshot, researchScope)) {
+    pushObservation({
+      family: geo.family,
+      text: geo.text,
+      sub_type: geo.sub_type,
+      evidence: enrichEvidence(snapshot, geo.evidence),
+    });
+  }
+
   const familiesPresent = [...new Set(observations.map((o) => o.family))];
   const allFamilies = [
     "OFFERS",
@@ -249,6 +353,7 @@ function buildObservationsV2(detail, snapshot, options = {}) {
     "DELIVERY_PROMISE",
     "SERVICE_COVERAGE",
     "MARKETING_PATTERNS",
+    "GEO_AWARENESS",
   ];
   const familiesUnknown = allFamilies.filter((f) => !familiesPresent.includes(f));
 

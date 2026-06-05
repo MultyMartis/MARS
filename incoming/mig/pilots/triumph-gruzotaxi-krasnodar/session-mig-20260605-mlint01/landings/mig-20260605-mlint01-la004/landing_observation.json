@@ -9,7 +9,7 @@
   "final_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
   "page_role": "homepage",
   "page_type": "homepage",
-  "analyzed_at": "2026-06-04T18:59:34.012Z",
+  "analyzed_at": "2026-06-05T16:27:13.104Z",
   "observations": [
     {
       "observation_id": "mig-20260605-mlint01-la004-obs001",
@@ -25,7 +25,7 @@
         "snapshot_field": "/pricing_signals/0",
         "html_anchor": null,
         "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -43,14 +43,14 @@
         "snapshot_field": "/pricing_signals/0",
         "html_anchor": null,
         "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
       "observation_id": "mig-20260605-mlint01-la004-obs003",
       "family": "CTA",
-      "text": "+78619999999 → tel:+78619999999",
+      "text": "Phone CTA → tel:[present]",
       "sub_type": "phone",
       "block_id": "mig-20260605-mlint01-la004-b002",
       "confidence": "B",
@@ -61,7 +61,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -79,30 +79,12 @@
         "snapshot_field": "/contacts/messengers",
         "html_anchor": null,
         "verbatim_text": "taximaxim",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
       "observation_id": "mig-20260605-mlint01-la004-obs005",
-      "family": "CONTACT_MODEL",
-      "text": "phone: +78619999999",
-      "sub_type": "phone",
-      "block_id": "mig-20260605-mlint01-la004-b002",
-      "confidence": "B",
-      "ambiguity": "none",
-      "evidence": {
-        "source": "website_snapshot",
-        "snapshot_id": "mig-20260605-mlint01-ws004",
-        "snapshot_field": "/contacts/phones",
-        "html_anchor": null,
-        "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
-        "ambiguity": "none"
-      }
-    },
-    {
-      "observation_id": "mig-20260605-mlint01-la004-obs006",
       "family": "CONTACT_MODEL",
       "text": "messenger: telegram:taximaxim",
       "sub_type": "messenger",
@@ -115,12 +97,54 @@
         "snapshot_field": "/contacts/messengers",
         "html_anchor": null,
         "verbatim_text": "taximaxim",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
+      "observation_id": "mig-20260605-mlint01-la004-obs006",
+      "family": "CONTACT_MODEL",
+      "text": "phone_present: true",
+      "sub_type": "phone_presence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-mlint01-ws004"
+      }
+    },
+    {
       "observation_id": "mig-20260605-mlint01-la004-obs007",
+      "family": "CONTACT_MODEL",
+      "text": "phone_prominent: true",
+      "sub_type": "phone_prominence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/page_patterns/phone_prominent",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-mlint01-ws004"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la004-obs008",
+      "family": "CONTACT_MODEL",
+      "text": "contact_model: mixed",
+      "sub_type": "contact_model",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-mlint01-ws004"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la004-obs009",
       "family": "MARKETING_PATTERNS",
       "text": "pricing block detected",
       "sub_type": "pricing_table_visible",
@@ -132,14 +156,14 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "pricing block detected",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la004-obs008",
+      "observation_id": "mig-20260605-mlint01-la004-obs010",
       "family": "MARKETING_PATTERNS",
-      "text": "+78619999999",
+      "text": "phone visible in contacts",
       "sub_type": "phone_prominent",
       "confidence": "C",
       "ambiguity": "none",
@@ -148,13 +172,13 @@
         "snapshot_id": "mig-20260605-mlint01-ws004",
         "snapshot_field": null,
         "html_anchor": null,
-        "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la004-obs009",
+      "observation_id": "mig-20260605-mlint01-la004-obs011",
       "family": "MARKETING_PATTERNS",
       "text": "messenger CTA visible",
       "sub_type": "messenger_prominent",
@@ -166,7 +190,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "messenger CTA visible",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -184,7 +208,8 @@
       "LEAD_CAPTURE",
       "SOCIAL_PROOF",
       "DELIVERY_PROMISE",
-      "SERVICE_COVERAGE"
+      "SERVICE_COVERAGE",
+      "GEO_AWARENESS"
     ],
     "top_signals": [
       {
@@ -201,7 +226,7 @@
       },
       {
         "family": "CTA",
-        "text": "+78619999999 → tel:+78619999999",
+        "text": "Phone CTA → tel:[present]",
         "observation_id": "mig-20260605-mlint01-la004-obs003",
         "confidence": "B"
       },
@@ -213,7 +238,7 @@
       },
       {
         "family": "CONTACT_MODEL",
-        "text": "phone: +78619999999",
+        "text": "messenger: telegram:taximaxim",
         "observation_id": "mig-20260605-mlint01-la004-obs005",
         "confidence": "B"
       }
@@ -237,7 +262,7 @@
           "snapshot_field": "/pricing_signals",
           "html_anchor": null,
           "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -254,7 +279,7 @@
           "snapshot_field": "/contacts",
           "html_anchor": null,
           "verbatim_text": "+78619999999",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -271,7 +296,7 @@
           "snapshot_field": "/contacts/messengers",
           "html_anchor": null,
           "verbatim_text": "taximaxim",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -290,7 +315,7 @@
           "snapshot_field": "/pricing_signals/0",
           "html_anchor": null,
           "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -311,7 +336,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "+78619999999",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -330,7 +355,7 @@
           "snapshot_field": "/contacts/messengers",
           "html_anchor": null,
           "verbatim_text": "taximaxim",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -347,7 +372,7 @@
           "snapshot_field": "/pricing_signals/0",
           "html_anchor": null,
           "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -365,7 +390,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "+78619999999",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -380,7 +405,7 @@
           "snapshot_field": "/contacts/messengers",
           "html_anchor": null,
           "verbatim_text": "taximaxim",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -395,7 +420,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "pricing block detected",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -406,8 +431,8 @@
           "snapshot_id": "mig-20260605-mlint01-ws004",
           "snapshot_field": null,
           "html_anchor": null,
-          "verbatim_text": "+78619999999",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "verbatim_text": "phone visible in contacts",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -419,7 +444,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "messenger CTA visible",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -439,7 +464,7 @@
         "snapshot_field": "/pricing_signals",
         "html_anchor": null,
         "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -456,7 +481,7 @@
         "snapshot_field": "/contacts",
         "html_anchor": null,
         "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -473,7 +498,7 @@
         "snapshot_field": "/contacts/messengers",
         "html_anchor": null,
         "verbatim_text": "taximaxim",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -492,7 +517,7 @@
         "snapshot_field": "/pricing_signals/0",
         "html_anchor": null,
         "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -513,7 +538,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -532,7 +557,7 @@
         "snapshot_field": "/contacts/messengers",
         "html_anchor": null,
         "verbatim_text": "taximaxim",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -549,7 +574,7 @@
         "snapshot_field": "/pricing_signals/0",
         "html_anchor": null,
         "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -567,7 +592,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -582,7 +607,7 @@
         "snapshot_field": "/contacts/messengers",
         "html_anchor": null,
         "verbatim_text": "taximaxim",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -597,7 +622,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "pricing block detected",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -608,8 +633,8 @@
         "snapshot_id": "mig-20260605-mlint01-ws004",
         "snapshot_field": null,
         "html_anchor": null,
-        "verbatim_text": "+78619999999",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -621,14 +646,14 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "messenger CTA visible",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
   ],
   "evidence": {
     "primary_snapshot_id": "mig-20260605-mlint01-ws004",
-    "capture_time": "2026-06-04T18:43:39.324Z",
+    "capture_time": "2026-06-04T18:51:22.341Z",
     "analysis_mode": "snapshot_and_html"
   },
   "artifact_refs": {

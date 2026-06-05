@@ -192,7 +192,7 @@ function extractPagePatterns(snapshot, blocks, registry) {
     addPattern("pricing_table_visible", "pricing block detected");
   }
   if ((snapshot.contacts?.phones?.length || 0) > 0) {
-    addPattern("phone_prominent", snapshot.contacts.phones[0]);
+    addPattern("phone_prominent", "phone visible in contacts");
   }
   if (blocks.some((b) => b.block_type === "messenger_cta")) {
     addPattern("messenger_prominent", "messenger CTA visible");
@@ -269,6 +269,7 @@ function analyzeSnapshot(snapshot, sessionDir, options = {}) {
   const v2Built = buildObservationsV2(legacyDetail, snapshot, {
     registry,
     navNoiseConfigPath: options.navNoiseConfigPath,
+    researchScope: options.researchScope || {},
   });
 
   return {
@@ -323,6 +324,7 @@ function runLandingPass(sessionDir, options = {}) {
   const sessionId = websiteIndex.session_id;
   const analyzedAt = options.analyzed_at || new Date().toISOString();
   const registry = options.registry || loadBlockRegistry(options.registryPath);
+  const researchScope = options.researchScope || options.scope || {};
 
   const landings = [];
   let seq = 1;
@@ -337,6 +339,7 @@ function runLandingPass(sessionDir, options = {}) {
       analyzed_at: analyzedAt,
       registry,
       registryPath: options.registryPath,
+      researchScope,
     });
     writeLandingObservation(sessionDir, observation);
     landings.push(observation);

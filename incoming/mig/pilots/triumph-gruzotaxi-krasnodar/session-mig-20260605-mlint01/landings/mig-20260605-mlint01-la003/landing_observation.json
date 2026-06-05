@@ -9,7 +9,7 @@
   "final_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
   "page_role": "homepage",
   "page_type": "homepage",
-  "analyzed_at": "2026-06-04T18:59:34.012Z",
+  "analyzed_at": "2026-06-05T16:27:13.104Z",
   "observations": [
     {
       "observation_id": "mig-20260605-mlint01-la003-obs001",
@@ -26,7 +26,7 @@
         "snapshot_field": "/offers/0",
         "html_anchor": null,
         "verbatim_text": "Грузовое такси в Краснодаре",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -44,7 +44,7 @@
         "snapshot_field": "/offers/1",
         "html_anchor": null,
         "verbatim_text": "Вызвать грузовое такси в Краснодаре — подача за 15 минут!",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -62,14 +62,14 @@
         "snapshot_field": "/pricing_signals/0",
         "html_anchor": null,
         "verbatim_text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактный центр.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
       "observation_id": "mig-20260605-mlint01-la003-obs004",
       "family": "CTA",
-      "text": "88003336747 → tel:88003336747",
+      "text": "Phone CTA → tel:[present]",
       "sub_type": "phone",
       "block_id": "mig-20260605-mlint01-la003-b001",
       "confidence": "B",
@@ -80,48 +80,12 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
       "observation_id": "mig-20260605-mlint01-la003-obs005",
-      "family": "CTA",
-      "text": "84090392982 → tel:84090392982",
-      "sub_type": "phone",
-      "block_id": "mig-20260605-mlint01-la003-b001",
-      "confidence": "B",
-      "ambiguity": "none",
-      "evidence": {
-        "source": "website_snapshot",
-        "snapshot_id": "mig-20260605-mlint01-ws003",
-        "snapshot_field": "/contacts/phones",
-        "html_anchor": null,
-        "verbatim_text": "84090392982",
-        "capture_time": "2026-06-04T18:43:39.324Z",
-        "ambiguity": "none"
-      }
-    },
-    {
-      "observation_id": "mig-20260605-mlint01-la003-obs006",
-      "family": "CTA",
-      "text": "+7 (861) 205-25-08 → tel:+7(861)205-25-08",
-      "sub_type": "phone",
-      "block_id": "mig-20260605-mlint01-la003-b001",
-      "confidence": "B",
-      "ambiguity": "none",
-      "evidence": {
-        "source": "website_snapshot",
-        "snapshot_id": "mig-20260605-mlint01-ws003",
-        "snapshot_field": "/contacts/phones",
-        "html_anchor": null,
-        "verbatim_text": "+7 (861) 205-25-08",
-        "capture_time": "2026-06-04T18:43:39.324Z",
-        "ambiguity": "none"
-      }
-    },
-    {
-      "observation_id": "mig-20260605-mlint01-la003-obs007",
       "family": "CTA",
       "text": "Заказать звонок",
       "sub_type": "callback_request",
@@ -134,66 +98,12 @@
         "snapshot_field": "/cta_elements/0",
         "html_anchor": null,
         "verbatim_text": "Заказать звонок",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs008",
-      "family": "CONTACT_MODEL",
-      "text": "phone: 88003336747",
-      "sub_type": "phone",
-      "block_id": "mig-20260605-mlint01-la003-b005",
-      "confidence": "B",
-      "ambiguity": "none",
-      "evidence": {
-        "source": "website_snapshot",
-        "snapshot_id": "mig-20260605-mlint01-ws003",
-        "snapshot_field": "/contacts/phones",
-        "html_anchor": null,
-        "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
-        "ambiguity": "none"
-      }
-    },
-    {
-      "observation_id": "mig-20260605-mlint01-la003-obs009",
-      "family": "CONTACT_MODEL",
-      "text": "phone: 84090392982",
-      "sub_type": "phone",
-      "block_id": "mig-20260605-mlint01-la003-b005",
-      "confidence": "B",
-      "ambiguity": "none",
-      "evidence": {
-        "source": "website_snapshot",
-        "snapshot_id": "mig-20260605-mlint01-ws003",
-        "snapshot_field": "/contacts/phones",
-        "html_anchor": null,
-        "verbatim_text": "84090392982",
-        "capture_time": "2026-06-04T18:43:39.324Z",
-        "ambiguity": "none"
-      }
-    },
-    {
-      "observation_id": "mig-20260605-mlint01-la003-obs010",
-      "family": "CONTACT_MODEL",
-      "text": "phone: +7 (861) 205-25-08",
-      "sub_type": "phone",
-      "block_id": "mig-20260605-mlint01-la003-b005",
-      "confidence": "B",
-      "ambiguity": "none",
-      "evidence": {
-        "source": "website_snapshot",
-        "snapshot_id": "mig-20260605-mlint01-ws003",
-        "snapshot_field": "/contacts/phones",
-        "html_anchor": null,
-        "verbatim_text": "+7 (861) 205-25-08",
-        "capture_time": "2026-06-04T18:43:39.324Z",
-        "ambiguity": "none"
-      }
-    },
-    {
-      "observation_id": "mig-20260605-mlint01-la003-obs011",
+      "observation_id": "mig-20260605-mlint01-la003-obs006",
       "family": "CONTACT_MODEL",
       "text": "email: zakaz@gruzovichkof.ru",
       "sub_type": "email",
@@ -206,12 +116,12 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "zakaz@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs012",
+      "observation_id": "mig-20260605-mlint01-la003-obs007",
       "family": "CONTACT_MODEL",
       "text": "email: zakaz-krasnodar@gruzovichkof.ru",
       "sub_type": "email",
@@ -224,12 +134,12 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "zakaz-krasnodar@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs013",
+      "observation_id": "mig-20260605-mlint01-la003-obs008",
       "family": "CONTACT_MODEL",
       "text": "email: reklama@gruzovichkof.ru",
       "sub_type": "email",
@@ -242,12 +152,12 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "reklama@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs014",
+      "observation_id": "mig-20260605-mlint01-la003-obs009",
       "family": "CONTACT_MODEL",
       "text": "email: help@gruzovichkof.ru",
       "sub_type": "email",
@@ -260,12 +170,54 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "help@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs015",
+      "observation_id": "mig-20260605-mlint01-la003-obs010",
+      "family": "CONTACT_MODEL",
+      "text": "phone_present: true",
+      "sub_type": "phone_presence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-mlint01-ws003"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la003-obs011",
+      "family": "CONTACT_MODEL",
+      "text": "phone_prominent: true",
+      "sub_type": "phone_prominence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/page_patterns/phone_prominent",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-mlint01-ws003"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la003-obs012",
+      "family": "CONTACT_MODEL",
+      "text": "contact_model: mixed",
+      "sub_type": "contact_model",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-mlint01-ws003"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-mlint01-la003-obs013",
       "family": "TRUST",
       "text": "Общая грузоподъемность машин этой категории не превышает 1,5 т.",
       "sub_type": "fleet_size",
@@ -278,12 +230,12 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "Общая грузоподъемность машин этой категории не превышает 1,5 т.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs016",
+      "observation_id": "mig-20260605-mlint01-la003-obs014",
       "family": "TRUST",
       "text": "При этом мы гарантируем квалифицированный сервис, оперативное обслуживание и работу в полном соответствии со всеми пожеланиями заказчика.",
       "sub_type": "guarantee",
@@ -295,12 +247,12 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "При этом мы гарантируем квалифицированный сервис, оперативное обслуживание и работу в полном соответствии со всеми пожеланиями заказчика.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs017",
+      "observation_id": "mig-20260605-mlint01-la003-obs015",
       "family": "MARKETING_PATTERNS",
       "text": "faq block detected",
       "sub_type": "faq_section_visible",
@@ -312,12 +264,12 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "faq block detected",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs018",
+      "observation_id": "mig-20260605-mlint01-la003-obs016",
       "family": "MARKETING_PATTERNS",
       "text": "pricing block detected",
       "sub_type": "pricing_table_visible",
@@ -329,14 +281,14 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "pricing block detected",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs019",
+      "observation_id": "mig-20260605-mlint01-la003-obs017",
       "family": "MARKETING_PATTERNS",
-      "text": "88003336747",
+      "text": "phone visible in contacts",
       "sub_type": "phone_prominent",
       "confidence": "C",
       "ambiguity": "none",
@@ -345,13 +297,13 @@
         "snapshot_id": "mig-20260605-mlint01-ws003",
         "snapshot_field": null,
         "html_anchor": null,
-        "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
     {
-      "observation_id": "mig-20260605-mlint01-la003-obs020",
+      "observation_id": "mig-20260605-mlint01-la003-obs018",
       "family": "MARKETING_PATTERNS",
       "text": "2 CTA elements visible",
       "sub_type": "multi_cta_same_intent",
@@ -363,7 +315,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "2 CTA elements visible",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -381,7 +333,8 @@
     "families_unknown": [
       "LEAD_CAPTURE",
       "SOCIAL_PROOF",
-      "SERVICE_COVERAGE"
+      "SERVICE_COVERAGE",
+      "GEO_AWARENESS"
     ],
     "top_signals": [
       {
@@ -404,13 +357,13 @@
       },
       {
         "family": "CTA",
-        "text": "88003336747 → tel:88003336747",
+        "text": "Phone CTA → tel:[present]",
         "observation_id": "mig-20260605-mlint01-la003-obs004",
         "confidence": "B"
       },
       {
         "family": "CTA",
-        "text": "84090392982 → tel:84090392982",
+        "text": "Заказать звонок",
         "observation_id": "mig-20260605-mlint01-la003-obs005",
         "confidence": "B"
       }
@@ -434,7 +387,7 @@
           "snapshot_field": "/headings/0",
           "html_anchor": null,
           "verbatim_text": "Грузовое такси в Краснодаре",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -451,7 +404,7 @@
           "snapshot_field": "/offers",
           "html_anchor": null,
           "verbatim_text": "Грузовое такси в Краснодаре",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -468,7 +421,7 @@
           "snapshot_field": "/pricing_signals",
           "html_anchor": null,
           "verbatim_text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактный центр.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -485,7 +438,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": null,
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -502,7 +455,7 @@
           "snapshot_field": "/contacts",
           "html_anchor": null,
           "verbatim_text": "88003336747",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -521,7 +474,7 @@
           "snapshot_field": "/offers/0",
           "html_anchor": null,
           "verbatim_text": "Грузовое такси в Краснодаре",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -538,7 +491,7 @@
           "snapshot_field": "/offers/1",
           "html_anchor": null,
           "verbatim_text": "Вызвать грузовое такси в Краснодаре — подача за 15 минут!",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -559,7 +512,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "88003336747",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -578,7 +531,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "84090392982",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -597,7 +550,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "+7 (861) 205-25-08",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -616,7 +569,7 @@
           "snapshot_field": "/cta_elements/0",
           "html_anchor": null,
           "verbatim_text": "Заказать звонок",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -633,7 +586,7 @@
           "snapshot_field": "/pricing_signals/0",
           "html_anchor": null,
           "verbatim_text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактный центр.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -651,7 +604,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "Общая грузоподъемность машин этой категории не превышает 1,5 т.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -667,7 +620,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "При этом мы гарантируем квалифицированный сервис, оперативное обслуживание и работу в полном соответствии со всеми пожеланиями заказчика.",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -684,7 +637,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "88003336747",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -699,7 +652,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "84090392982",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -714,7 +667,7 @@
           "snapshot_field": "/contacts/phones",
           "html_anchor": null,
           "verbatim_text": "+7 (861) 205-25-08",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -729,7 +682,7 @@
           "snapshot_field": "/contacts/emails",
           "html_anchor": null,
           "verbatim_text": "zakaz@gruzovichkof.ru",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -744,7 +697,7 @@
           "snapshot_field": "/contacts/emails",
           "html_anchor": null,
           "verbatim_text": "zakaz-krasnodar@gruzovichkof.ru",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -759,7 +712,7 @@
           "snapshot_field": "/contacts/emails",
           "html_anchor": null,
           "verbatim_text": "reklama@gruzovichkof.ru",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -774,7 +727,7 @@
           "snapshot_field": "/contacts/emails",
           "html_anchor": null,
           "verbatim_text": "help@gruzovichkof.ru",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -789,7 +742,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "faq block detected",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -801,7 +754,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "pricing block detected",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -812,8 +765,8 @@
           "snapshot_id": "mig-20260605-mlint01-ws003",
           "snapshot_field": null,
           "html_anchor": null,
-          "verbatim_text": "88003336747",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "verbatim_text": "phone visible in contacts",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       },
@@ -825,7 +778,7 @@
           "snapshot_field": null,
           "html_anchor": null,
           "verbatim_text": "2 CTA elements visible",
-          "capture_time": "2026-06-04T18:43:39.324Z",
+          "capture_time": "2026-06-04T18:51:22.341Z",
           "ambiguity": "none"
         }
       }
@@ -845,7 +798,7 @@
         "snapshot_field": "/headings/0",
         "html_anchor": null,
         "verbatim_text": "Грузовое такси в Краснодаре",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -862,7 +815,7 @@
         "snapshot_field": "/offers",
         "html_anchor": null,
         "verbatim_text": "Грузовое такси в Краснодаре",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -879,7 +832,7 @@
         "snapshot_field": "/pricing_signals",
         "html_anchor": null,
         "verbatim_text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактный центр.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -896,7 +849,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": null,
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -913,7 +866,7 @@
         "snapshot_field": "/contacts",
         "html_anchor": null,
         "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -932,7 +885,7 @@
         "snapshot_field": "/offers/0",
         "html_anchor": null,
         "verbatim_text": "Грузовое такси в Краснодаре",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -949,7 +902,7 @@
         "snapshot_field": "/offers/1",
         "html_anchor": null,
         "verbatim_text": "Вызвать грузовое такси в Краснодаре — подача за 15 минут!",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -970,7 +923,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -989,7 +942,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "84090392982",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1008,7 +961,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "+7 (861) 205-25-08",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1027,7 +980,7 @@
         "snapshot_field": "/cta_elements/0",
         "html_anchor": null,
         "verbatim_text": "Заказать звонок",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -1044,7 +997,7 @@
         "snapshot_field": "/pricing_signals/0",
         "html_anchor": null,
         "verbatim_text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактный центр.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -1062,7 +1015,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "Общая грузоподъемность машин этой категории не превышает 1,5 т.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1078,7 +1031,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "При этом мы гарантируем квалифицированный сервис, оперативное обслуживание и работу в полном соответствии со всеми пожеланиями заказчика.",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -1095,7 +1048,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1110,7 +1063,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "84090392982",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1125,7 +1078,7 @@
         "snapshot_field": "/contacts/phones",
         "html_anchor": null,
         "verbatim_text": "+7 (861) 205-25-08",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1140,7 +1093,7 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "zakaz@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1155,7 +1108,7 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "zakaz-krasnodar@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1170,7 +1123,7 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "reklama@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1185,7 +1138,7 @@
         "snapshot_field": "/contacts/emails",
         "html_anchor": null,
         "verbatim_text": "help@gruzovichkof.ru",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
@@ -1200,7 +1153,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "faq block detected",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1212,7 +1165,7 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "pricing block detected",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1223,8 +1176,8 @@
         "snapshot_id": "mig-20260605-mlint01-ws003",
         "snapshot_field": null,
         "html_anchor": null,
-        "verbatim_text": "88003336747",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     },
@@ -1236,14 +1189,14 @@
         "snapshot_field": null,
         "html_anchor": null,
         "verbatim_text": "2 CTA elements visible",
-        "capture_time": "2026-06-04T18:43:39.324Z",
+        "capture_time": "2026-06-04T18:51:22.341Z",
         "ambiguity": "none"
       }
     }
   ],
   "evidence": {
     "primary_snapshot_id": "mig-20260605-mlint01-ws003",
-    "capture_time": "2026-06-04T18:43:39.324Z",
+    "capture_time": "2026-06-04T18:51:22.341Z",
     "analysis_mode": "snapshot_and_html"
   },
   "artifact_refs": {

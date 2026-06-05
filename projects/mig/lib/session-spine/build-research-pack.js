@@ -392,24 +392,17 @@ function formatWebsiteObservationBlocks(websiteIndex, rules = {}) {
   );
 
   const contacts = [];
-  const phones = new Set();
-  const emails = new Set();
+  const phonePresent = new Set();
   for (const snap of snapshots) {
-    for (const phone of snap.contacts?.phones || []) {
-      phones.add(phone);
-    }
-    for (const email of snap.contacts?.emails || []) {
-      emails.add(email);
+    const phones = snap.contacts?.phones || [];
+    if (phones.length) {
+      phonePresent.add(snap.domain || snap.snapshot_id || "unknown");
     }
   }
-  if (phones.size || emails.size) {
-    contacts.push("### Contacts (session dedupe)", "");
-    for (const phone of phones) {
-      contacts.push(`- Phone: ${phone}`);
-    }
-    for (const email of emails) {
-      contacts.push(`- Email: ${email}`);
-    }
+  if (phonePresent.size) {
+    contacts.push("### Contact model (session dedupe — no raw phone numbers)", "");
+    contacts.push(`- phone_present: true (${phonePresent.size} domain(s) with tel capture in raw snapshots)`);
+    contacts.push("- Raw phone values: see `website_snapshots.json` / `snapshots/sites/*/website_snapshot.json` only");
     contacts.push("");
   }
 
