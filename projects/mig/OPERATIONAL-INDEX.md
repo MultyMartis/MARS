@@ -7,6 +7,8 @@
 
 **Pre-pilot checkpoint (2026-06-01):** Freeze `pre-pilot-gruzotaxi-krasnodar-v1` — baseline before first real pilot (**грузотакси Краснодар / проект Триумф**). **Pilot #1 executed** — session `mig-20260604-61b585` (see `incoming/mig/completed/request-triumph-gruzotaxi-krasnodar-v1.outcome.json`). Archive: [archive/pre-pilot-gruzotaxi-krasnodar-v1/README.md](archive/pre-pilot-gruzotaxi-krasnodar-v1/README.md).
 
+**MVP validation freeze (2026-06-05):** [reports/MIG-MVP-VALIDATION-FREEZE-v1.md](reports/MIG-MVP-VALIDATION-FREEZE-v1.md) — proven capabilities on **Грузотакси / Краснодар** (sessions `61b585`, `mqgt01`, `mlint01`, `gtrgt01`). Pilot evidence: [../../incoming/mig/pilots/triumph-gruzotaxi-krasnodar/](../../incoming/mig/pilots/triumph-gruzotaxi-krasnodar/).
+
 ---
 
 ## Core Run
@@ -34,6 +36,7 @@
 | 10i | **Reality Acquisition Model (v1)** | [contracts/MIG-REALITY-ACQUISITION-MODEL-v1.md](contracts/MIG-REALITY-ACQUISITION-MODEL-v1.md) — R1–R4 trust stack, Human Review Mode, `evidence/review.md` |
 | 11 | **MIG → ORCA Handoff** | [contracts/mig-orca-handoff-contract-v0.md](contracts/mig-orca-handoff-contract-v0.md) |
 | 12 | **Reporting** | [reports/REPORT-TEMPLATE.md](reports/REPORT-TEMPLATE.md) |
+| 12b | **MVP Validation Freeze (v1)** | [reports/MIG-MVP-VALIDATION-FREEZE-v1.md](reports/MIG-MVP-VALIDATION-FREEZE-v1.md) |
 | 13 | **Data Acquisition Architecture (v1)** | [reports/REPORT-mig-data-acquisition-architecture-v1.md](reports/REPORT-mig-data-acquisition-architecture-v1.md) |
 | 14 | **Reality Acquisition Model (report)** | [reports/REPORT-mig-reality-acquisition-model-v1.md](reports/REPORT-mig-reality-acquisition-model-v1.md) |
 
