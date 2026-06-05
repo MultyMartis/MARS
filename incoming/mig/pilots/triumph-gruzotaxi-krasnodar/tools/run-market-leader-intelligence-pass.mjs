@@ -39,6 +39,10 @@ const { runWebsitePass } = require(join(MIG_ROOT, "lib", "website-acquisition", 
 const { runLandingPass } = require(join(MIG_ROOT, "lib", "landing-analysis", "run-landing-pass.js"));
 const { enrichLandingIndexWithDetail } = require(join(MIG_ROOT, "lib", "runtime", "load-landing-detail.js"));
 const { buildResearchPackDraft } = require(join(MIG_ROOT, "lib", "session-spine", "build-research-pack.js"));
+const {
+  buildComparisonMatrix,
+  comparisonMatrixMarkdown,
+} = require(join(MIG_ROOT, "lib", "session-spine", "build-comparison-matrix.js"));
 const { loadRules } = require(join(MIG_ROOT, "lib", "website-acquisition", "build-url-plan.js"));
 
 function loadJson(p) {
@@ -157,110 +161,6 @@ function remapCompetitorIds(competitorsArtifact, shortlist) {
   return idMap;
 }
 
-function buildComparisonMatrix(landingIndex, websiteIndex, competitorsArtifact) {
-  const rows = [];
-  for (const landing of landingIndex.landings || []) {
-    const snap = (websiteIndex.snapshots || []).find((s) => s.snapshot_id === landing.snapshot_id);
-    const obs = landing.observation_summary || {};
-    const families = obs.families_present || [];
-    const topOffers = (obs.top_signals || [])
-      .filter((s) => s.family === "OFFERS")
-      .map((s) => s.text)
-      .slice(0, 3);
-    const pricing = (obs.top_signals || [])
-      .filter((s) => s.family === "PRICING")
-      .map((s) => s.text)
-      .slice(0, 3);
-    const delivery = (obs.top_signals || [])
-      .filter((s) => s.family === "DELIVERY_PROMISE")
-      .map((s) => s.text)
-      .slice(0, 2);
-    const trust = (obs.top_signals || [])
-      .filter((s) => ["TRUST", "SOCIAL_PROOF"].includes(s.family))
-      .map((s) => s.text)
-      .slice(0, 3);
-    const leadCapture = (obs.top_signals || [])
-      .filter((s) => ["CTA", "LEAD_CAPTURE"].includes(s.family))
-      .map((s) => s.text)
-      .slice(0, 3);
-    const contacts = snap?.contacts || {};
-    const messengerLabels = (contacts.messengers || [])
-      .map((m) => (typeof m === "object" ? `${m.type || "msg"}:${m.handle || ""}` : String(m)))
-      .slice(0, 2);
-    const contactModel = [
-      contacts.phones?.length ? `phones: ${contacts.phones.slice(0, 2).join(", ")}` : null,
-      contacts.emails?.length ? `emails: ${contacts.emails.slice(0, 1).join(", ")}` : null,
-      contacts.messengers?.length ? `messengers: ${messengerLabels.join(", ")}` : null,
-    ]
-      .filter(Boolean)
-      .join("; ") || "SAFE UNKNOWN";
-    const pageStructure = (snap?.headings || [])
-      .slice(0, 6)
-      .map((h) => h.text || h)
-      .join(" → ");
-
-    rows.push({
-      domain: landing.domain,
-      primary_offer: topOffers.join("; ") || "SAFE UNKNOWN",
-      pricing_signals: pricing.join("; ") || "SAFE UNKNOWN",
-      delivery_promise: delivery.join("; ") || "SAFE UNKNOWN",
-      trust_signals: trust.join("; ") || "SAFE UNKNOWN",
-      lead_capture_model: leadCapture.join("; ") || (snap?.forms?.length ? "form present" : "SAFE UNKNOWN"),
-      contact_model: contactModel,
-      page_structure: pageStructure || "SAFE UNKNOWN",
-      evidence_refs: [
-        landing.artifact_ref,
-        snap?.artifact_refs?.website_snapshot,
-        snap?.artifact_refs?.page_html,
-      ]
-        .filter(Boolean)
-        .join(", "),
-      families_present: families.join(", "),
-      acquisition_status: snap?.status || "SAFE UNKNOWN",
-    });
-  }
-  return rows;
-}
-
-function comparisonMarkdown(rows) {
-  const headers = [
-    "Domain",
-    "Primary Offer",
-    "Pricing Signals",
-    "Delivery Promise",
-    "Trust Signals",
-    "Lead Capture Model",
-    "Contact Model",
-    "Page Structure",
-    "Evidence References",
-  ];
-  const lines = [
-    "# Market leader comparison matrix",
-    "",
-    "Facts only — no strategic conclusions.",
-    "",
-    "| " + headers.join(" | ") + " |",
-    "| " + headers.map(() => "---").join(" | ") + " |",
-    ...rows.map((r) =>
-      "| " +
-        [
-          r.domain,
-          r.primary_offer.replace(/\|/g, "\\|").slice(0, 120),
-          r.pricing_signals.replace(/\|/g, "\\|").slice(0, 100),
-          r.delivery_promise.replace(/\|/g, "\\|").slice(0, 80),
-          r.trust_signals.replace(/\|/g, "\\|").slice(0, 80),
-          r.lead_capture_model.replace(/\|/g, "\\|").slice(0, 80),
-          r.contact_model.replace(/\|/g, "\\|").slice(0, 80),
-          r.page_structure.replace(/\|/g, "\\|").slice(0, 100),
-          r.evidence_refs,
-        ].join(" | ") +
-        " |"
-    ),
-    "",
-  ];
-  return lines.join("\n");
-}
-
 async function main() {
   if (!existsSync(SOURCE_DIR)) {
     throw new Error(`Source session not found: ${SOURCE_DIR}`);
@@ -347,10 +247,10 @@ async function main() {
   });
   writeFileSync(join(SESSION_DIR, "research_pack.draft.md"), pack, "utf8");
 
-  const comparisonRows = buildComparisonMatrix(landingIndex, websiteResult.index, filteredCompetitors);
+  const comparisonRows = buildComparisonMatrix(landingIndex, websiteResult.index);
   writeFileSync(
     join(SESSION_DIR, "market-leader-comparison-matrix.md"),
-    comparisonMarkdown(comparisonRows),
+    comparisonMatrixMarkdown(comparisonRows),
     "utf8"
   );
   writeFileSync(

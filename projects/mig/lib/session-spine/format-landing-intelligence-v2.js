@@ -162,6 +162,7 @@ function formatLandingObservationBlocksV2(landingIndex) {
 
 module.exports = {
   PACK_CAPS,
+  obsByFamilies,
   formatLandingIntelligenceCard,
   formatLandingAnalysisSummaryV2,
   formatLandingObservationBlocksV2,
