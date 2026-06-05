@@ -1,0 +1,2885 @@
+{
+  "schema_version": "0.2",
+  "analysis_phase": "landing_analysis_v2",
+  "landing_id": "mig-20260605-gtrgt01-la001",
+  "snapshot_id": "mig-20260605-gtrgt01-ws001",
+  "session_id": "mig-20260605-gtrgt01",
+  "competitor_id": "mig-20260605-gtrgt01-c001",
+  "domain": "gruzotaxi-triumph.ru",
+  "final_url": "https://gruzotaxi-triumph.ru/",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-05T16:38:28.833Z",
+  "observations": [
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs001",
+      "family": "OFFERS",
+      "text": "Грузовое такси в Краснодаре",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "Грузовое такси в Краснодаре",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs002",
+      "family": "OFFERS",
+      "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "Цены на ГРУЗОВОЕ ТАКСИ",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs003",
+      "family": "OFFERS",
+      "text": "Заказать Грузовое такси",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers/6",
+        "html_anchor": null,
+        "verbatim_text": "Заказать Грузовое такси",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs004",
+      "family": "OFFERS",
+      "text": "Есть ли грузчики?",
+      "category": "scope",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/4",
+        "html_anchor": null,
+        "verbatim_text": "Есть ли грузчики?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs005",
+      "family": "OFFERS",
+      "text": "Можно ли оформить предварительный заказ?",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/5",
+        "html_anchor": null,
+        "verbatim_text": "Можно ли оформить предварительный заказ?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs006",
+      "family": "OFFERS",
+      "text": "На каких автомобилях перевозят грузовые вещи?",
+      "category": "unknown",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/6",
+        "html_anchor": null,
+        "verbatim_text": "На каких автомобилях перевозят грузовые вещи?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs007",
+      "family": "OFFERS",
+      "text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+      "category": "b2b",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/7",
+        "html_anchor": null,
+        "verbatim_text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs008",
+      "family": "PRICING",
+      "text": "Фиксированная цена - известна Вам сразу и не изменится.",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Фиксированная цена - известна Вам сразу и не изменится.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs009",
+      "family": "PRICING",
+      "text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/1",
+        "html_anchor": null,
+        "verbatim_text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs010",
+      "family": "PRICING",
+      "text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/2",
+        "html_anchor": null,
+        "verbatim_text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs011",
+      "family": "PRICING",
+      "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+      "sub_type": "priced_line",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/3",
+        "html_anchor": null,
+        "verbatim_text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs012",
+      "family": "PRICING",
+      "text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/4",
+        "html_anchor": null,
+        "verbatim_text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs013",
+      "family": "CTA",
+      "text": "Lead form → /#wpcf7-f271-p2-o2",
+      "sub_type": "lead_form",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms",
+        "html_anchor": null,
+        "verbatim_text": "form",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs014",
+      "family": "CTA",
+      "text": "Lead form → /#wpcf7-f272-o1",
+      "sub_type": "lead_form",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms",
+        "html_anchor": null,
+        "verbatim_text": "form",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs015",
+      "family": "CTA",
+      "text": "Phone CTA → tel:[present]",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+79189912991",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs016",
+      "family": "CTA",
+      "text": "telegram: gruzotaxi_triumph",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-gtrgt01-la001-b008",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "gruzotaxi_triumph",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs017",
+      "family": "CTA",
+      "text": "Заказать звонок → https://gruzotaxi-triumph.ru/#",
+      "sub_type": "callback_request",
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Заказать звонок",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs018",
+      "family": "CTA",
+      "text": "Заказать → https://gruzotaxi-triumph.ru/#",
+      "sub_type": "external_link",
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/cta_elements/1",
+        "html_anchor": null,
+        "verbatim_text": "Заказать",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs019",
+      "family": "CTA",
+      "text": "Можно ли оформить предварительный заказ? → https://gruzotaxi-triumph.ru/#%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bb%d0%b8-%d0%be%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d0%b0%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0",
+      "sub_type": "external_link",
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/cta_elements/2",
+        "html_anchor": null,
+        "verbatim_text": "Можно ли оформить предварительный заказ?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs020",
+      "family": "LEAD_CAPTURE",
+      "text": "Form: _wpcf7, _wpcf7_version, _wpcf7_locale, _wpcf7_unit_tag, _wpcf7_container_post, _wpcf7_posted_data_hash",
+      "sub_type": "lead_form",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms/0",
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs021",
+      "family": "CONTACT_MODEL",
+      "text": "email: opergt@gktriumph.ru",
+      "sub_type": "email",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/emails",
+        "html_anchor": null,
+        "verbatim_text": "opergt@gktriumph.ru",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs022",
+      "family": "CONTACT_MODEL",
+      "text": "messenger: telegram:gruzotaxi_triumph",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "gruzotaxi_triumph",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs023",
+      "family": "CONTACT_MODEL",
+      "text": "phone_present: true",
+      "sub_type": "phone_presence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws001"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs024",
+      "family": "CONTACT_MODEL",
+      "text": "phone_prominent: true",
+      "sub_type": "phone_prominence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/page_patterns/phone_prominent",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws001"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs025",
+      "family": "CONTACT_MODEL",
+      "text": "contact_model: mixed",
+      "sub_type": "contact_model",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws001"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs026",
+      "family": "DELIVERY_PROMISE",
+      "text": "Автомобиль будет подан, через 20 минут или быстрее!",
+      "sub_type": "time_promise",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее!",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs027",
+      "family": "SOCIAL_PROOF",
+      "text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов",
+      "sub_type": "rating_display",
+      "platform": "yandex",
+      "numeric_value": 5,
+      "numeric_secondary": 129,
+      "numeric_unit": "ratings_count",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее!",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs028",
+      "family": "TRUST",
+      "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+      "sub_type": "fleet_size",
+      "numeric_value": 1260,
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs029",
+      "family": "TRUST",
+      "text": "Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов.",
+      "sub_type": "legal_entity",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs030",
+      "family": "SOCIAL_PROOF",
+      "text": "Ниже представлены избранные и новые отзывы с нашего профиля на Авито.",
+      "sub_type": "review_snippet",
+      "platform": "avito",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Ниже представлены избранные и новые отзывы с нашего профиля на Авито.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs031",
+      "family": "MARKETING_PATTERNS",
+      "text": "11 heading bands",
+      "sub_type": "long_scroll_sections",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "11 heading bands",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs032",
+      "family": "MARKETING_PATTERNS",
+      "text": "faq block detected",
+      "sub_type": "faq_section_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "faq block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs033",
+      "family": "MARKETING_PATTERNS",
+      "text": "reviews block detected",
+      "sub_type": "review_widget_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "reviews block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs034",
+      "family": "MARKETING_PATTERNS",
+      "text": "pricing block detected",
+      "sub_type": "pricing_table_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs035",
+      "family": "MARKETING_PATTERNS",
+      "text": "phone visible in contacts",
+      "sub_type": "phone_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs036",
+      "family": "MARKETING_PATTERNS",
+      "text": "messenger CTA visible",
+      "sub_type": "messenger_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la001-obs037",
+      "family": "MARKETING_PATTERNS",
+      "text": "3 CTA elements visible",
+      "sub_type": "multi_cta_same_intent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "3 CTA elements visible",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "observation_summary": {
+    "families_present": [
+      "OFFERS",
+      "PRICING",
+      "CTA",
+      "LEAD_CAPTURE",
+      "CONTACT_MODEL",
+      "DELIVERY_PROMISE",
+      "SOCIAL_PROOF",
+      "TRUST",
+      "MARKETING_PATTERNS"
+    ],
+    "families_unknown": [
+      "SERVICE_COVERAGE",
+      "GEO_AWARENESS"
+    ],
+    "top_signals": [
+      {
+        "family": "OFFERS",
+        "text": "Грузовое такси в Краснодаре",
+        "observation_id": "mig-20260605-gtrgt01-la001-obs001",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+        "observation_id": "mig-20260605-gtrgt01-la001-obs002",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Заказать Грузовое такси",
+        "observation_id": "mig-20260605-gtrgt01-la001-obs003",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Есть ли грузчики?",
+        "observation_id": "mig-20260605-gtrgt01-la001-obs004",
+        "confidence": "B"
+      },
+      {
+        "family": "OFFERS",
+        "text": "Можно ли оформить предварительный заказ?",
+        "observation_id": "mig-20260605-gtrgt01-la001-obs005",
+        "confidence": "B"
+      }
+    ]
+  },
+  "_processing": {
+    "excluded_offers": []
+  },
+  "_legacy": {
+    "visible_blocks": [
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "block_type": "hero",
+        "order": 0,
+        "heading_text": "Грузовое такси в Краснодаре",
+        "content_summary": "Грузовое такси в Краснодаре",
+        "detection_method": "heading_heuristic",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/headings/0",
+          "html_anchor": null,
+          "verbatim_text": "Грузовое такси в Краснодаре",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "block_type": "offer_block",
+        "order": 1,
+        "heading_text": "Грузовое такси в Краснодаре",
+        "content_summary": "Грузовое такси в Краснодаре; Цены на ГРУЗОВОЕ ТАКСИ; Отзывы о нас; Вопросы и ответы; О Компании; Контакты службы «ГРУЗОТАКСИ»; Заказать Грузовое такси",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/offers",
+          "html_anchor": null,
+          "verbatim_text": "Грузовое такси в Краснодаре",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b003",
+        "block_type": "pricing_block",
+        "order": 2,
+        "heading_text": "Цены на ГРУЗОВОЕ ТАКСИ",
+        "content_summary": "Фиксированная цена - известна Вам сразу и не изменится.; С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.; от 960 ₽/час Оптимальный вариант по цене и скорости Выбрат…",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/pricing_signals",
+          "html_anchor": null,
+          "verbatim_text": "Фиксированная цена - известна Вам сразу и не изменится.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b004",
+        "block_type": "faq",
+        "order": 3,
+        "heading_text": "Вопросы и ответы",
+        "content_summary": null,
+        "detection_method": "heading_heuristic",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/headings/3",
+          "html_anchor": null,
+          "verbatim_text": "Вопросы и ответы",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b005",
+        "block_type": "reviews",
+        "order": 4,
+        "heading_text": "Отзывы о нас",
+        "content_summary": null,
+        "detection_method": "heading_heuristic",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Отзывы о нас",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "block_type": "contacts",
+        "order": 5,
+        "heading_text": "Контакты службы «ГРУЗОТАКСИ»",
+        "content_summary": "+79189912991; +78619912991; 82784248306; 81977685845; 81892626158; 82483858797; opergt@gktriumph.ru",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts",
+          "html_anchor": null,
+          "verbatim_text": "Контакты службы «ГРУЗОТАКСИ»",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b007",
+        "block_type": "lead_form",
+        "order": 6,
+        "heading_text": null,
+        "content_summary": "15 fields",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/forms/0",
+          "html_anchor": null,
+          "verbatim_text": null,
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la001-b008",
+        "block_type": "messenger_cta",
+        "order": 7,
+        "heading_text": "telegram: gruzotaxi_triumph",
+        "content_summary": null,
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "gruzotaxi_triumph",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "offers": [
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of001",
+        "text": "Грузовое такси в Краснодаре",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/offers/0",
+          "html_anchor": null,
+          "verbatim_text": "Грузовое такси в Краснодаре",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of002",
+        "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/offers/1",
+          "html_anchor": null,
+          "verbatim_text": "Цены на ГРУЗОВОЕ ТАКСИ",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of003",
+        "text": "Заказать Грузовое такси",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/offers/6",
+          "html_anchor": null,
+          "verbatim_text": "Заказать Грузовое такси",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of004",
+        "text": "Есть ли грузчики?",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/headings/4",
+          "html_anchor": null,
+          "verbatim_text": "Есть ли грузчики?",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of005",
+        "text": "Можно ли оформить предварительный заказ?",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/headings/5",
+          "html_anchor": null,
+          "verbatim_text": "Можно ли оформить предварительный заказ?",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of006",
+        "text": "На каких автомобилях перевозят грузовые вещи?",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/headings/6",
+          "html_anchor": null,
+          "verbatim_text": "На каких автомобилях перевозят грузовые вещи?",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "offer_id": "mig-20260605-gtrgt01-la001-of007",
+        "text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+        "offer_surface": "heading",
+        "block_id": "mig-20260605-gtrgt01-la001-b002",
+        "pricing_ref": null,
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/headings/7",
+          "html_anchor": null,
+          "verbatim_text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "cta_patterns": [
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta001",
+        "cta_type": "lead_form",
+        "label_text": "Lead form",
+        "target_href": "/#wpcf7-f271-p2-o2",
+        "element_type": "input",
+        "position_band": "body",
+        "form_id": "mig-20260605-gtrgt01-la001-fm001",
+        "block_id": "mig-20260605-gtrgt01-la001-b007",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/forms",
+          "html_anchor": null,
+          "verbatim_text": "form",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta002",
+        "cta_type": "lead_form",
+        "label_text": "Lead form",
+        "target_href": "/#wpcf7-f272-o1",
+        "element_type": "input",
+        "position_band": "body",
+        "form_id": "mig-20260605-gtrgt01-la001-fm002",
+        "block_id": "mig-20260605-gtrgt01-la001-b007",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/forms",
+          "html_anchor": null,
+          "verbatim_text": "form",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta003",
+        "cta_type": "phone",
+        "label_text": "+79189912991",
+        "target_href": "tel:+79189912991",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+79189912991",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta004",
+        "cta_type": "phone",
+        "label_text": "+78619912991",
+        "target_href": "tel:+78619912991",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+78619912991",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta005",
+        "cta_type": "phone",
+        "label_text": "82784248306",
+        "target_href": "tel:82784248306",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "82784248306",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta006",
+        "cta_type": "phone",
+        "label_text": "81977685845",
+        "target_href": "tel:81977685845",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "81977685845",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta007",
+        "cta_type": "phone",
+        "label_text": "81892626158",
+        "target_href": "tel:81892626158",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "81892626158",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta008",
+        "cta_type": "phone",
+        "label_text": "82483858797",
+        "target_href": "tel:82483858797",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "82483858797",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta009",
+        "cta_type": "messenger",
+        "label_text": "telegram: gruzotaxi_triumph",
+        "target_href": null,
+        "element_type": "link",
+        "position_band": "footer",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b008",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "gruzotaxi_triumph",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta011",
+        "cta_type": "callback_request",
+        "label_text": "Заказать звонок",
+        "target_href": "https://gruzotaxi-triumph.ru/#",
+        "element_type": "link",
+        "position_band": "unknown",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/cta_elements/0",
+          "html_anchor": null,
+          "verbatim_text": "Заказать звонок",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta012",
+        "cta_type": "external_link",
+        "label_text": "Заказать",
+        "target_href": "https://gruzotaxi-triumph.ru/#",
+        "element_type": "link",
+        "position_band": "unknown",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/cta_elements/1",
+          "html_anchor": null,
+          "verbatim_text": "Заказать",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la001-cta013",
+        "cta_type": "external_link",
+        "label_text": "Можно ли оформить предварительный заказ?",
+        "target_href": "https://gruzotaxi-triumph.ru/#%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bb%d0%b8-%d0%be%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d0%b0%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0",
+        "element_type": "link",
+        "position_band": "unknown",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/cta_elements/2",
+          "html_anchor": null,
+          "verbatim_text": "Можно ли оформить предварительный заказ?",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "pricing_patterns": [
+      {
+        "pricing_id": "mig-20260605-gtrgt01-la001-pr001",
+        "text": "Фиксированная цена - известна Вам сразу и не изменится.",
+        "currency_hint": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/pricing_signals/0",
+          "html_anchor": null,
+          "verbatim_text": "Фиксированная цена - известна Вам сразу и не изменится.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-gtrgt01-la001-pr002",
+        "text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+        "currency_hint": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/pricing_signals/1",
+          "html_anchor": null,
+          "verbatim_text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-gtrgt01-la001-pr003",
+        "text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-gtrgt01-la001-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/pricing_signals/2",
+          "html_anchor": null,
+          "verbatim_text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-gtrgt01-la001-pr004",
+        "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+        "currency_hint": "RUB",
+        "block_id": "mig-20260605-gtrgt01-la001-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/pricing_signals/3",
+          "html_anchor": null,
+          "verbatim_text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pricing_id": "mig-20260605-gtrgt01-la001-pr005",
+        "text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+        "currency_hint": null,
+        "block_id": "mig-20260605-gtrgt01-la001-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/pricing_signals/4",
+          "html_anchor": null,
+          "verbatim_text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "trust_patterns": [
+      {
+        "trust_id": "mig-20260605-gtrgt01-la001-tr001",
+        "trust_type": "rating_display",
+        "text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее!",
+        "numeric_value": 5129,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее!",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-gtrgt01-la001-tr002",
+        "trust_type": "fleet_size",
+        "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+        "numeric_value": 1260,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-gtrgt01-la001-tr003",
+        "trust_type": "legal_entity",
+        "text": "Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "trust_id": "mig-20260605-gtrgt01-la001-tr004",
+        "trust_type": "review_snippet",
+        "text": "Ниже представлены избранные и новые отзывы с нашего профиля на Авито.",
+        "numeric_value": null,
+        "block_id": null,
+        "evidence": {
+          "source": "page_html",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "Ниже представлены избранные и новые отзывы с нашего профиля на Авито.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "contact_patterns": [
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co001",
+        "contact_type": "phone",
+        "value": "+79189912991",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+79189912991",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co002",
+        "contact_type": "phone",
+        "value": "+78619912991",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+78619912991",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co003",
+        "contact_type": "phone",
+        "value": "82784248306",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "82784248306",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co004",
+        "contact_type": "phone",
+        "value": "81977685845",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "81977685845",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co005",
+        "contact_type": "phone",
+        "value": "81892626158",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "81892626158",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co006",
+        "contact_type": "phone",
+        "value": "82483858797",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "82483858797",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co007",
+        "contact_type": "email",
+        "value": "opergt@gktriumph.ru",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/emails",
+          "html_anchor": null,
+          "verbatim_text": "opergt@gktriumph.ru",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co008",
+        "contact_type": "messenger",
+        "value": "telegram:gruzotaxi_triumph",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "gruzotaxi_triumph",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la001-co009",
+        "contact_type": "messenger",
+        "value": "telegram:gruzotaxi_triumph",
+        "block_id": "mig-20260605-gtrgt01-la001-b006",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "gruzotaxi_triumph",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "form_patterns": [
+      {
+        "form_id": "mig-20260605-gtrgt01-la001-fm001",
+        "action": "/#wpcf7-f271-p2-o2",
+        "method": "post",
+        "fields": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "cf-name-02-imsc",
+            "type": "text",
+            "label": "Имя Отчество",
+            "required": true
+          },
+          {
+            "name": "cf-tel-02-imsc",
+            "type": "tel",
+            "label": "+7(___)___-__-__",
+            "required": true
+          },
+          {
+            "name": "honeypot-55-time-start",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "honeypot-55-time-check",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "honeypot-55",
+            "type": "text",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": null,
+            "type": "submit",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "acceptance-685",
+            "type": "checkbox",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": null,
+            "type": "hidden",
+            "label": null,
+            "required": false
+          }
+        ],
+        "visible_purpose": null,
+        "cta_type": "lead_form",
+        "block_id": "mig-20260605-gtrgt01-la001-b007",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/forms/0",
+          "html_anchor": null,
+          "verbatim_text": null,
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "form_id": "mig-20260605-gtrgt01-la001-fm002",
+        "action": "/#wpcf7-f272-o1",
+        "method": "post",
+        "fields": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "cf-name-06-imsc",
+            "type": "text",
+            "label": "Имя, Отчество",
+            "required": true
+          },
+          {
+            "name": "cf-tel-06-imsc",
+            "type": "tel",
+            "label": "+7 (___) ___-__-__",
+            "required": true
+          },
+          {
+            "name": "honeypot-813-time-start",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "honeypot-813-time-check",
+            "type": "hidden",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "honeypot-813",
+            "type": "text",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": null,
+            "type": "submit",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": "acceptance-248",
+            "type": "checkbox",
+            "label": null,
+            "required": false
+          },
+          {
+            "name": null,
+            "type": "hidden",
+            "label": null,
+            "required": false
+          }
+        ],
+        "visible_purpose": null,
+        "cta_type": "lead_form",
+        "block_id": "mig-20260605-gtrgt01-la001-b007",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": "/forms/1",
+          "html_anchor": null,
+          "verbatim_text": null,
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "page_patterns": [
+      {
+        "pattern_id": "long_scroll_sections",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "11 heading bands",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "faq_section_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "faq block detected",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "review_widget_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "reviews block detected",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "pricing_table_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "pricing block detected",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "phone_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "phone visible in contacts",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "messenger_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "messenger CTA visible",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "multi_cta_same_intent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws001",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "3 CTA elements visible",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ]
+  },
+  "visible_blocks": [
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "block_type": "hero",
+      "order": 0,
+      "heading_text": "Грузовое такси в Краснодаре",
+      "content_summary": "Грузовое такси в Краснодаре",
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/0",
+        "html_anchor": null,
+        "verbatim_text": "Грузовое такси в Краснодаре",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "block_type": "offer_block",
+      "order": 1,
+      "heading_text": "Грузовое такси в Краснодаре",
+      "content_summary": "Грузовое такси в Краснодаре; Цены на ГРУЗОВОЕ ТАКСИ; Отзывы о нас; Вопросы и ответы; О Компании; Контакты службы «ГРУЗОТАКСИ»; Заказать Грузовое такси",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers",
+        "html_anchor": null,
+        "verbatim_text": "Грузовое такси в Краснодаре",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "block_type": "pricing_block",
+      "order": 2,
+      "heading_text": "Цены на ГРУЗОВОЕ ТАКСИ",
+      "content_summary": "Фиксированная цена - известна Вам сразу и не изменится.; С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.; от 960 ₽/час Оптимальный вариант по цене и скорости Выбрат…",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals",
+        "html_anchor": null,
+        "verbatim_text": "Фиксированная цена - известна Вам сразу и не изменится.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b004",
+      "block_type": "faq",
+      "order": 3,
+      "heading_text": "Вопросы и ответы",
+      "content_summary": null,
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/3",
+        "html_anchor": null,
+        "verbatim_text": "Вопросы и ответы",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b005",
+      "block_type": "reviews",
+      "order": 4,
+      "heading_text": "Отзывы о нас",
+      "content_summary": null,
+      "detection_method": "heading_heuristic",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Отзывы о нас",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "block_type": "contacts",
+      "order": 5,
+      "heading_text": "Контакты службы «ГРУЗОТАКСИ»",
+      "content_summary": "+79189912991; +78619912991; 82784248306; 81977685845; 81892626158; 82483858797; opergt@gktriumph.ru",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts",
+        "html_anchor": null,
+        "verbatim_text": "Контакты службы «ГРУЗОТАКСИ»",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "block_type": "lead_form",
+      "order": 6,
+      "heading_text": null,
+      "content_summary": "15 fields",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms/0",
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la001-b008",
+      "block_type": "messenger_cta",
+      "order": 7,
+      "heading_text": "telegram: gruzotaxi_triumph",
+      "content_summary": null,
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "gruzotaxi_triumph",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of001",
+      "text": "Грузовое такси в Краснодаре",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers/0",
+        "html_anchor": null,
+        "verbatim_text": "Грузовое такси в Краснодаре",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of002",
+      "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers/1",
+        "html_anchor": null,
+        "verbatim_text": "Цены на ГРУЗОВОЕ ТАКСИ",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of003",
+      "text": "Заказать Грузовое такси",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/offers/6",
+        "html_anchor": null,
+        "verbatim_text": "Заказать Грузовое такси",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of004",
+      "text": "Есть ли грузчики?",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/4",
+        "html_anchor": null,
+        "verbatim_text": "Есть ли грузчики?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of005",
+      "text": "Можно ли оформить предварительный заказ?",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/5",
+        "html_anchor": null,
+        "verbatim_text": "Можно ли оформить предварительный заказ?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of006",
+      "text": "На каких автомобилях перевозят грузовые вещи?",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/6",
+        "html_anchor": null,
+        "verbatim_text": "На каких автомобилях перевозят грузовые вещи?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "offer_id": "mig-20260605-gtrgt01-la001-of007",
+      "text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+      "offer_surface": "heading",
+      "block_id": "mig-20260605-gtrgt01-la001-b002",
+      "pricing_ref": null,
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/headings/7",
+        "html_anchor": null,
+        "verbatim_text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "cta_patterns": [
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta001",
+      "cta_type": "lead_form",
+      "label_text": "Lead form",
+      "target_href": "/#wpcf7-f271-p2-o2",
+      "element_type": "input",
+      "position_band": "body",
+      "form_id": "mig-20260605-gtrgt01-la001-fm001",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms",
+        "html_anchor": null,
+        "verbatim_text": "form",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta002",
+      "cta_type": "lead_form",
+      "label_text": "Lead form",
+      "target_href": "/#wpcf7-f272-o1",
+      "element_type": "input",
+      "position_band": "body",
+      "form_id": "mig-20260605-gtrgt01-la001-fm002",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms",
+        "html_anchor": null,
+        "verbatim_text": "form",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta003",
+      "cta_type": "phone",
+      "label_text": "+79189912991",
+      "target_href": "tel:+79189912991",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+79189912991",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta004",
+      "cta_type": "phone",
+      "label_text": "+78619912991",
+      "target_href": "tel:+78619912991",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78619912991",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta005",
+      "cta_type": "phone",
+      "label_text": "82784248306",
+      "target_href": "tel:82784248306",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "82784248306",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta006",
+      "cta_type": "phone",
+      "label_text": "81977685845",
+      "target_href": "tel:81977685845",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "81977685845",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta007",
+      "cta_type": "phone",
+      "label_text": "81892626158",
+      "target_href": "tel:81892626158",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "81892626158",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta008",
+      "cta_type": "phone",
+      "label_text": "82483858797",
+      "target_href": "tel:82483858797",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "82483858797",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta009",
+      "cta_type": "messenger",
+      "label_text": "telegram: gruzotaxi_triumph",
+      "target_href": null,
+      "element_type": "link",
+      "position_band": "footer",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b008",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "gruzotaxi_triumph",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta011",
+      "cta_type": "callback_request",
+      "label_text": "Заказать звонок",
+      "target_href": "https://gruzotaxi-triumph.ru/#",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/cta_elements/0",
+        "html_anchor": null,
+        "verbatim_text": "Заказать звонок",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta012",
+      "cta_type": "external_link",
+      "label_text": "Заказать",
+      "target_href": "https://gruzotaxi-triumph.ru/#",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/cta_elements/1",
+        "html_anchor": null,
+        "verbatim_text": "Заказать",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la001-cta013",
+      "cta_type": "external_link",
+      "label_text": "Можно ли оформить предварительный заказ?",
+      "target_href": "https://gruzotaxi-triumph.ru/#%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bb%d0%b8-%d0%be%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d0%b0%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0",
+      "element_type": "link",
+      "position_band": "unknown",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/cta_elements/2",
+        "html_anchor": null,
+        "verbatim_text": "Можно ли оформить предварительный заказ?",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "pricing_patterns": [
+    {
+      "pricing_id": "mig-20260605-gtrgt01-la001-pr001",
+      "text": "Фиксированная цена - известна Вам сразу и не изменится.",
+      "currency_hint": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Фиксированная цена - известна Вам сразу и не изменится.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-gtrgt01-la001-pr002",
+      "text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+      "currency_hint": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/1",
+        "html_anchor": null,
+        "verbatim_text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-gtrgt01-la001-pr003",
+      "text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/2",
+        "html_anchor": null,
+        "verbatim_text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-gtrgt01-la001-pr004",
+      "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+      "currency_hint": "RUB",
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/3",
+        "html_anchor": null,
+        "verbatim_text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pricing_id": "mig-20260605-gtrgt01-la001-pr005",
+      "text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+      "currency_hint": null,
+      "block_id": "mig-20260605-gtrgt01-la001-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/pricing_signals/4",
+        "html_anchor": null,
+        "verbatim_text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "trust_patterns": [
+    {
+      "trust_id": "mig-20260605-gtrgt01-la001-tr001",
+      "trust_type": "rating_display",
+      "text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее!",
+      "numeric_value": 5129,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Рейтинг в Яндексе 5 129+ оценок Рейтинг в Авито 4,8 222+ отзывов Автомобиль будет подан, через 20 минут или быстрее!",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-gtrgt01-la001-tr002",
+      "trust_type": "fleet_size",
+      "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+      "numeric_value": 1260,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-gtrgt01-la001-tr003",
+      "trust_type": "legal_entity",
+      "text": "Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Подходит для: длинномерных и тяжёлых грузов Для перевозки стройматериалов, длинных конструкций, оборудования и тяжёлых грузов.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "trust_id": "mig-20260605-gtrgt01-la001-tr004",
+      "trust_type": "review_snippet",
+      "text": "Ниже представлены избранные и новые отзывы с нашего профиля на Авито.",
+      "numeric_value": null,
+      "block_id": null,
+      "evidence": {
+        "source": "page_html",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "Ниже представлены избранные и новые отзывы с нашего профиля на Авито.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "contact_patterns": [
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co001",
+      "contact_type": "phone",
+      "value": "+79189912991",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+79189912991",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co002",
+      "contact_type": "phone",
+      "value": "+78619912991",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78619912991",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co003",
+      "contact_type": "phone",
+      "value": "82784248306",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "82784248306",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co004",
+      "contact_type": "phone",
+      "value": "81977685845",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "81977685845",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co005",
+      "contact_type": "phone",
+      "value": "81892626158",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "81892626158",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co006",
+      "contact_type": "phone",
+      "value": "82483858797",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "82483858797",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co007",
+      "contact_type": "email",
+      "value": "opergt@gktriumph.ru",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/emails",
+        "html_anchor": null,
+        "verbatim_text": "opergt@gktriumph.ru",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co008",
+      "contact_type": "messenger",
+      "value": "telegram:gruzotaxi_triumph",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "gruzotaxi_triumph",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la001-co009",
+      "contact_type": "messenger",
+      "value": "telegram:gruzotaxi_triumph",
+      "block_id": "mig-20260605-gtrgt01-la001-b006",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "gruzotaxi_triumph",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "form_patterns": [
+    {
+      "form_id": "mig-20260605-gtrgt01-la001-fm001",
+      "action": "/#wpcf7-f271-p2-o2",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_wpcf7",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_version",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_locale",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_unit_tag",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_container_post",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_posted_data_hash",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_recaptcha_response",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "cf-name-02-imsc",
+          "type": "text",
+          "label": "Имя Отчество",
+          "required": true
+        },
+        {
+          "name": "cf-tel-02-imsc",
+          "type": "tel",
+          "label": "+7(___)___-__-__",
+          "required": true
+        },
+        {
+          "name": "honeypot-55-time-start",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "honeypot-55-time-check",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "honeypot-55",
+          "type": "text",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": null,
+          "type": "submit",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "acceptance-685",
+          "type": "checkbox",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": null,
+          "type": "hidden",
+          "label": null,
+          "required": false
+        }
+      ],
+      "visible_purpose": null,
+      "cta_type": "lead_form",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms/0",
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "form_id": "mig-20260605-gtrgt01-la001-fm002",
+      "action": "/#wpcf7-f272-o1",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_wpcf7",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_version",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_locale",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_unit_tag",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_container_post",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_posted_data_hash",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "_wpcf7_recaptcha_response",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "cf-name-06-imsc",
+          "type": "text",
+          "label": "Имя, Отчество",
+          "required": true
+        },
+        {
+          "name": "cf-tel-06-imsc",
+          "type": "tel",
+          "label": "+7 (___) ___-__-__",
+          "required": true
+        },
+        {
+          "name": "honeypot-813-time-start",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "honeypot-813-time-check",
+          "type": "hidden",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "honeypot-813",
+          "type": "text",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": null,
+          "type": "submit",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": "acceptance-248",
+          "type": "checkbox",
+          "label": null,
+          "required": false
+        },
+        {
+          "name": null,
+          "type": "hidden",
+          "label": null,
+          "required": false
+        }
+      ],
+      "visible_purpose": null,
+      "cta_type": "lead_form",
+      "block_id": "mig-20260605-gtrgt01-la001-b007",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": "/forms/1",
+        "html_anchor": null,
+        "verbatim_text": null,
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "page_patterns": [
+    {
+      "pattern_id": "long_scroll_sections",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "11 heading bands",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "faq_section_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "faq block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "review_widget_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "reviews block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "pricing_table_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "phone_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "messenger_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "multi_cta_same_intent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws001",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "3 CTA elements visible",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260605-gtrgt01-ws001",
+    "capture_time": "2026-06-05T16:38:00.927Z",
+    "analysis_mode": "snapshot_and_html"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260605-gtrgt01-la001/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws001/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws001/page.html"
+  },
+  "evidence_grade": "B"
+}

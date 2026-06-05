@@ -1,0 +1,125 @@
+{
+  "schema_version": "0.2",
+  "analysis_phase": "landing_analysis_v2",
+  "landing_id": "mig-20260605-gtrgt01-la005",
+  "snapshot_id": "mig-20260605-gtrgt01-ws005",
+  "session_id": "mig-20260605-gtrgt01",
+  "competitor_id": "mig-20260605-gtrgt01-c005",
+  "domain": "city-mobil.ru",
+  "final_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-05T16:38:28.833Z",
+  "observations": [
+    {
+      "observation_id": "mig-20260605-gtrgt01-la005-obs001",
+      "family": "CONTACT_MODEL",
+      "text": "phone_prominent: false",
+      "sub_type": "phone_prominence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws005"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la005-obs002",
+      "family": "CONTACT_MODEL",
+      "text": "contact_model: SAFE UNKNOWN",
+      "sub_type": "contact_model",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws005"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la005-obs003",
+      "family": "OFFERS",
+      "text": "SAFE UNKNOWN — no offer strings in snapshot",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": null,
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws005"
+      },
+      "status": "safe_unknown",
+      "reason": "no_marketing_offer_strings_after_nav_filter"
+    }
+  ],
+  "observation_summary": {
+    "families_present": [
+      "CONTACT_MODEL"
+    ],
+    "families_unknown": [
+      "OFFERS",
+      "PRICING",
+      "CTA",
+      "TRUST",
+      "LEAD_CAPTURE",
+      "SOCIAL_PROOF",
+      "DELIVERY_PROMISE",
+      "SERVICE_COVERAGE",
+      "MARKETING_PATTERNS",
+      "GEO_AWARENESS"
+    ],
+    "top_signals": [
+      {
+        "family": "CONTACT_MODEL",
+        "text": "phone_prominent: false",
+        "observation_id": "mig-20260605-gtrgt01-la005-obs001",
+        "confidence": "X"
+      },
+      {
+        "family": "CONTACT_MODEL",
+        "text": "contact_model: SAFE UNKNOWN",
+        "observation_id": "mig-20260605-gtrgt01-la005-obs002",
+        "confidence": "X"
+      }
+    ]
+  },
+  "_processing": {
+    "excluded_offers": []
+  },
+  "_legacy": {
+    "visible_blocks": [],
+    "offers": [],
+    "cta_patterns": [],
+    "pricing_patterns": [],
+    "trust_patterns": [],
+    "contact_patterns": [],
+    "form_patterns": [],
+    "page_patterns": []
+  },
+  "visible_blocks": [],
+  "offers": [],
+  "cta_patterns": [],
+  "pricing_patterns": [],
+  "trust_patterns": [],
+  "contact_patterns": [],
+  "form_patterns": [],
+  "page_patterns": [],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260605-gtrgt01-ws005",
+    "capture_time": "2026-06-05T16:38:00.927Z",
+    "analysis_mode": "snapshot_only"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260605-gtrgt01-la005/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws005/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws005/page.html"
+  },
+  "evidence_grade": "X",
+  "safe_unknown": [
+    "Fetch error: timeout",
+    "Hero block omitted — no h1 in snapshot headings"
+  ]
+}

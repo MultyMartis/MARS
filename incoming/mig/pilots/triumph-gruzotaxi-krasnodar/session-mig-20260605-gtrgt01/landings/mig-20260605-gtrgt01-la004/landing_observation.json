@@ -1,0 +1,668 @@
+{
+  "schema_version": "0.2",
+  "analysis_phase": "landing_analysis_v2",
+  "landing_id": "mig-20260605-gtrgt01-la004",
+  "snapshot_id": "mig-20260605-gtrgt01-ws004",
+  "session_id": "mig-20260605-gtrgt01",
+  "competitor_id": "mig-20260605-gtrgt01-c004",
+  "domain": "krasnodar.taximaxim.ru",
+  "final_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+  "page_role": "homepage",
+  "page_type": "homepage",
+  "analyzed_at": "2026-06-05T16:38:28.833Z",
+  "observations": [
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs001",
+      "family": "OFFERS",
+      "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+      "category": "convenience",
+      "offer_surface": "unknown",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs002",
+      "family": "PRICING",
+      "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+      "sub_type": "price_blob",
+      "block_id": "mig-20260605-gtrgt01-la004-b001",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs003",
+      "family": "CTA",
+      "text": "Phone CTA → tel:[present]",
+      "sub_type": "phone",
+      "block_id": "mig-20260605-gtrgt01-la004-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78619999999",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs004",
+      "family": "CTA",
+      "text": "telegram: taximaxim",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-gtrgt01-la004-b003",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "taximaxim",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs005",
+      "family": "CONTACT_MODEL",
+      "text": "messenger: telegram:taximaxim",
+      "sub_type": "messenger",
+      "block_id": "mig-20260605-gtrgt01-la004-b002",
+      "confidence": "B",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "taximaxim",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs006",
+      "family": "CONTACT_MODEL",
+      "text": "phone_present: true",
+      "sub_type": "phone_presence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts/phones",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws004"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs007",
+      "family": "CONTACT_MODEL",
+      "text": "phone_prominent: true",
+      "sub_type": "phone_prominence",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/page_patterns/phone_prominent",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws004"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs008",
+      "family": "CONTACT_MODEL",
+      "text": "contact_model: mixed",
+      "sub_type": "contact_model",
+      "confidence": "X",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_field": "/contacts",
+        "verbatim_text": null,
+        "snapshot_id": "mig-20260605-gtrgt01-ws004"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs009",
+      "family": "MARKETING_PATTERNS",
+      "text": "pricing block detected",
+      "sub_type": "pricing_table_visible",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs010",
+      "family": "MARKETING_PATTERNS",
+      "text": "phone visible in contacts",
+      "sub_type": "phone_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "observation_id": "mig-20260605-gtrgt01-la004-obs011",
+      "family": "MARKETING_PATTERNS",
+      "text": "messenger CTA visible",
+      "sub_type": "messenger_prominent",
+      "confidence": "C",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "observation_summary": {
+    "families_present": [
+      "OFFERS",
+      "PRICING",
+      "CTA",
+      "CONTACT_MODEL",
+      "MARKETING_PATTERNS"
+    ],
+    "families_unknown": [
+      "TRUST",
+      "LEAD_CAPTURE",
+      "SOCIAL_PROOF",
+      "DELIVERY_PROMISE",
+      "SERVICE_COVERAGE",
+      "GEO_AWARENESS"
+    ],
+    "top_signals": [
+      {
+        "family": "OFFERS",
+        "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "observation_id": "mig-20260605-gtrgt01-la004-obs001",
+        "confidence": "B"
+      },
+      {
+        "family": "PRICING",
+        "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "observation_id": "mig-20260605-gtrgt01-la004-obs002",
+        "confidence": "B"
+      },
+      {
+        "family": "CTA",
+        "text": "Phone CTA → tel:[present]",
+        "observation_id": "mig-20260605-gtrgt01-la004-obs003",
+        "confidence": "B"
+      },
+      {
+        "family": "CTA",
+        "text": "telegram: taximaxim",
+        "observation_id": "mig-20260605-gtrgt01-la004-obs004",
+        "confidence": "B"
+      },
+      {
+        "family": "CONTACT_MODEL",
+        "text": "messenger: telegram:taximaxim",
+        "observation_id": "mig-20260605-gtrgt01-la004-obs005",
+        "confidence": "B"
+      }
+    ]
+  },
+  "_processing": {
+    "excluded_offers": []
+  },
+  "_legacy": {
+    "visible_blocks": [
+      {
+        "block_id": "mig-20260605-gtrgt01-la004-b001",
+        "block_type": "pricing_block",
+        "order": 0,
+        "heading_text": null,
+        "content_summary": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/pricing_signals",
+          "html_anchor": null,
+          "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la004-b002",
+        "block_type": "contacts",
+        "order": 1,
+        "heading_text": null,
+        "content_summary": "+78619999999",
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/contacts",
+          "html_anchor": null,
+          "verbatim_text": "+78619999999",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "block_id": "mig-20260605-gtrgt01-la004-b003",
+        "block_type": "messenger_cta",
+        "order": 2,
+        "heading_text": "telegram: taximaxim",
+        "content_summary": null,
+        "detection_method": "snapshot_field_map",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "taximaxim",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "offers": [
+      {
+        "offer_id": "mig-20260605-gtrgt01-la004-of001",
+        "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "offer_surface": "unknown",
+        "block_id": null,
+        "pricing_ref": "mig-20260605-gtrgt01-la004-pr001",
+        "ambiguity": "none",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/pricing_signals/0",
+          "html_anchor": null,
+          "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "cta_patterns": [
+      {
+        "cta_id": "mig-20260605-gtrgt01-la004-cta001",
+        "cta_type": "phone",
+        "label_text": "+78619999999",
+        "target_href": "tel:+78619999999",
+        "element_type": "link",
+        "position_band": "header",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la004-b002",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+78619999999",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "cta_id": "mig-20260605-gtrgt01-la004-cta002",
+        "cta_type": "messenger",
+        "label_text": "telegram: taximaxim",
+        "target_href": null,
+        "element_type": "link",
+        "position_band": "footer",
+        "form_id": null,
+        "block_id": "mig-20260605-gtrgt01-la004-b003",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "taximaxim",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "pricing_patterns": [
+      {
+        "pricing_id": "mig-20260605-gtrgt01-la004-pr001",
+        "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "currency_hint": null,
+        "block_id": "mig-20260605-gtrgt01-la004-b001",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/pricing_signals/0",
+          "html_anchor": null,
+          "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "trust_patterns": [],
+    "contact_patterns": [
+      {
+        "contact_id": "mig-20260605-gtrgt01-la004-co001",
+        "contact_type": "phone",
+        "value": "+78619999999",
+        "block_id": "mig-20260605-gtrgt01-la004-b002",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/contacts/phones",
+          "html_anchor": null,
+          "verbatim_text": "+78619999999",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "contact_id": "mig-20260605-gtrgt01-la004-co002",
+        "contact_type": "messenger",
+        "value": "telegram:taximaxim",
+        "block_id": "mig-20260605-gtrgt01-la004-b002",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": "/contacts/messengers",
+          "html_anchor": null,
+          "verbatim_text": "taximaxim",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ],
+    "form_patterns": [],
+    "page_patterns": [
+      {
+        "pattern_id": "pricing_table_visible",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "pricing block detected",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "phone_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "phone visible in contacts",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      },
+      {
+        "pattern_id": "messenger_prominent",
+        "evidence": {
+          "source": "website_snapshot",
+          "snapshot_id": "mig-20260605-gtrgt01-ws004",
+          "snapshot_field": null,
+          "html_anchor": null,
+          "verbatim_text": "messenger CTA visible",
+          "capture_time": "2026-06-05T16:38:00.927Z",
+          "ambiguity": "none"
+        }
+      }
+    ]
+  },
+  "visible_blocks": [
+    {
+      "block_id": "mig-20260605-gtrgt01-la004-b001",
+      "block_type": "pricing_block",
+      "order": 0,
+      "heading_text": null,
+      "content_summary": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/pricing_signals",
+        "html_anchor": null,
+        "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la004-b002",
+      "block_type": "contacts",
+      "order": 1,
+      "heading_text": null,
+      "content_summary": "+78619999999",
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts",
+        "html_anchor": null,
+        "verbatim_text": "+78619999999",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "block_id": "mig-20260605-gtrgt01-la004-b003",
+      "block_type": "messenger_cta",
+      "order": 2,
+      "heading_text": "telegram: taximaxim",
+      "content_summary": null,
+      "detection_method": "snapshot_field_map",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "taximaxim",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "mig-20260605-gtrgt01-la004-of001",
+      "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+      "offer_surface": "unknown",
+      "block_id": null,
+      "pricing_ref": "mig-20260605-gtrgt01-la004-pr001",
+      "ambiguity": "none",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "cta_patterns": [
+    {
+      "cta_id": "mig-20260605-gtrgt01-la004-cta001",
+      "cta_type": "phone",
+      "label_text": "+78619999999",
+      "target_href": "tel:+78619999999",
+      "element_type": "link",
+      "position_band": "header",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la004-b002",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78619999999",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "cta_id": "mig-20260605-gtrgt01-la004-cta002",
+      "cta_type": "messenger",
+      "label_text": "telegram: taximaxim",
+      "target_href": null,
+      "element_type": "link",
+      "position_band": "footer",
+      "form_id": null,
+      "block_id": "mig-20260605-gtrgt01-la004-b003",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "taximaxim",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "pricing_patterns": [
+    {
+      "pricing_id": "mig-20260605-gtrgt01-la004-pr001",
+      "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+      "currency_hint": null,
+      "block_id": "mig-20260605-gtrgt01-la004-b001",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/pricing_signals/0",
+        "html_anchor": null,
+        "verbatim_text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "trust_patterns": [],
+  "contact_patterns": [
+    {
+      "contact_id": "mig-20260605-gtrgt01-la004-co001",
+      "contact_type": "phone",
+      "value": "+78619999999",
+      "block_id": "mig-20260605-gtrgt01-la004-b002",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/phones",
+        "html_anchor": null,
+        "verbatim_text": "+78619999999",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "contact_id": "mig-20260605-gtrgt01-la004-co002",
+      "contact_type": "messenger",
+      "value": "telegram:taximaxim",
+      "block_id": "mig-20260605-gtrgt01-la004-b002",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": "/contacts/messengers",
+        "html_anchor": null,
+        "verbatim_text": "taximaxim",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "form_patterns": [],
+  "page_patterns": [
+    {
+      "pattern_id": "pricing_table_visible",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "pricing block detected",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "phone_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "phone visible in contacts",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    },
+    {
+      "pattern_id": "messenger_prominent",
+      "evidence": {
+        "source": "website_snapshot",
+        "snapshot_id": "mig-20260605-gtrgt01-ws004",
+        "snapshot_field": null,
+        "html_anchor": null,
+        "verbatim_text": "messenger CTA visible",
+        "capture_time": "2026-06-05T16:38:00.927Z",
+        "ambiguity": "none"
+      }
+    }
+  ],
+  "evidence": {
+    "primary_snapshot_id": "mig-20260605-gtrgt01-ws004",
+    "capture_time": "2026-06-05T16:38:00.927Z",
+    "analysis_mode": "snapshot_and_html"
+  },
+  "artifact_refs": {
+    "landing_observation": "landings/mig-20260605-gtrgt01-la004/landing_observation.json",
+    "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws004/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws004/page.html"
+  },
+  "evidence_grade": "B",
+  "safe_unknown": [
+    "Hero block omitted — no h1 in snapshot headings"
+  ]
+}

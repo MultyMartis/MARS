@@ -1,0 +1,1326 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260605-gtrgt01",
+  "generated_at": "2026-06-05T16:38:00.927Z",
+  "acquisition_phase": 3,
+  "url_plan": [
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws001",
+      "competitor_id": "mig-20260605-gtrgt01-c001",
+      "requested_url": "https://gruzotaxi-triumph.ru/",
+      "page_role": "homepage"
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws002",
+      "competitor_id": "mig-20260605-gtrgt01-c002",
+      "requested_url": "https://gruzovichec.ru/",
+      "page_role": "homepage"
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws003",
+      "competitor_id": "mig-20260605-gtrgt01-c003",
+      "requested_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+      "page_role": "homepage"
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws004",
+      "competitor_id": "mig-20260605-gtrgt01-c004",
+      "requested_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+      "page_role": "homepage"
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws005",
+      "competitor_id": "mig-20260605-gtrgt01-c005",
+      "requested_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+      "page_role": "homepage"
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws001",
+      "session_id": "mig-20260605-gtrgt01",
+      "competitor_id": "mig-20260605-gtrgt01-c001",
+      "domain": "gruzotaxi-triumph.ru",
+      "requested_url": "https://gruzotaxi-triumph.ru/",
+      "final_url": "https://gruzotaxi-triumph.ru/",
+      "page_role": "homepage",
+      "capture_time": "2026-06-05T16:38:00.927Z",
+      "status": "success",
+      "acquisition_method": "http_get_dom",
+      "http_status": 200,
+      "redirect_chain": [],
+      "content_type": "text/html; charset=UTF-8",
+      "charset": null,
+      "render_status": "static_ok",
+      "fetch_duration_ms": 1416,
+      "title": "Грузовое такси «ТРИУМФ»",
+      "meta_description": "Заказать ГРУЗОТАКСИ в Краснодаре. Квартирные переезды и грузоперевозки любого масштаба. Свой автопарк. Грузчики и сборщики.",
+      "canonical_url": "https://gruzotaxi-triumph.ru/",
+      "lang": "ru-RU",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Грузовое такси в Краснодаре",
+          "order": 0
+        },
+        {
+          "level": 2,
+          "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+          "order": 1
+        },
+        {
+          "level": 2,
+          "text": "Отзывы о нас",
+          "order": 2
+        },
+        {
+          "level": 2,
+          "text": "Вопросы и ответы",
+          "order": 3
+        },
+        {
+          "level": 3,
+          "text": "Есть ли грузчики?",
+          "order": 4
+        },
+        {
+          "level": 3,
+          "text": "Можно ли оформить предварительный заказ?",
+          "order": 5
+        },
+        {
+          "level": 3,
+          "text": "На каких автомобилях перевозят грузовые вещи?",
+          "order": 6
+        },
+        {
+          "level": 3,
+          "text": "Есть ли постоянное сотрудничество с юридическими лицами?",
+          "order": 7
+        },
+        {
+          "level": 2,
+          "text": "О Компании",
+          "order": 8
+        },
+        {
+          "level": 2,
+          "text": "Контакты службы «ГРУЗОТАКСИ»",
+          "order": 9
+        },
+        {
+          "level": 1,
+          "text": "Заказать Грузовое такси",
+          "order": 10
+        }
+      ],
+      "contacts": {
+        "phones": [
+          "+79189912991",
+          "+78619912991",
+          "82784248306",
+          "81977685845",
+          "81892626158",
+          "82483858797"
+        ],
+        "emails": [
+          "opergt@gktriumph.ru"
+        ],
+        "addresses": [],
+        "messengers": [
+          {
+            "type": "telegram",
+            "handle": "gruzotaxi_triumph"
+          },
+          {
+            "type": "telegram",
+            "handle": "gruzotaxi_triumph"
+          }
+        ]
+      },
+      "offers": [
+        {
+          "text": "Грузовое такси в Краснодаре",
+          "context": "h1"
+        },
+        {
+          "text": "Цены на ГРУЗОВОЕ ТАКСИ",
+          "context": "h2"
+        },
+        {
+          "text": "Отзывы о нас",
+          "context": "h2"
+        },
+        {
+          "text": "Вопросы и ответы",
+          "context": "h2"
+        },
+        {
+          "text": "О Компании",
+          "context": "h2"
+        },
+        {
+          "text": "Контакты службы «ГРУЗОТАКСИ»",
+          "context": "h2"
+        },
+        {
+          "text": "Заказать Грузовое такси",
+          "context": "h1"
+        }
+      ],
+      "pricing_signals": [
+        {
+          "text": "Фиксированная цена - известна Вам сразу и не изменится.",
+          "currency_hint": null,
+          "context": null
+        },
+        {
+          "text": "С Вами свяжется специалист, сориентирует по услугам и рассчитает стоимость поездки.",
+          "currency_hint": null,
+          "context": null
+        },
+        {
+          "text": "от 960 ₽/час Оптимальный вариант по цене и скорости Выбрать этот вариант Рассчитаем точную стоимость за 1 минуту Выгодно при переезде Большой кузов 380*180*180 см.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 1260 ₽/час Экономия за счёт одного рейса Выбрать этот вариант Подберём машину под объём груза Для сложных задач Негабарит от 5 метров от 1600 кг.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "Для перевозки мы используем автомобили с разным типом кузова (фургон, тент, рефрижератор) и грузоподъёмностью (от 5 кг до 20 тонн).",
+          "currency_hint": null,
+          "context": null
+        }
+      ],
+      "cta_elements": [
+        {
+          "text": "Заказать звонок",
+          "href": "https://gruzotaxi-triumph.ru/#",
+          "element_type": "link",
+          "position_hint": "unknown"
+        },
+        {
+          "text": "Заказать",
+          "href": "https://gruzotaxi-triumph.ru/#",
+          "element_type": "link",
+          "position_hint": "unknown"
+        },
+        {
+          "text": "Можно ли оформить предварительный заказ?",
+          "href": "https://gruzotaxi-triumph.ru/#%d0%bc%d0%be%d0%b6%d0%bd%d0%be-%d0%bb%d0%b8-%d0%be%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d0%b0%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0",
+          "element_type": "link",
+          "position_hint": "unknown"
+        }
+      ],
+      "forms": [
+        {
+          "form_id": null,
+          "action": "/#wpcf7-f271-p2-o2",
+          "method": "post",
+          "fields": [
+            {
+              "name": "_wpcf7",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_version",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_locale",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_unit_tag",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_container_post",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_posted_data_hash",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_recaptcha_response",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "cf-name-02-imsc",
+              "type": "text",
+              "label": "Имя Отчество",
+              "required": true
+            },
+            {
+              "name": "cf-tel-02-imsc",
+              "type": "tel",
+              "label": "+7(___)___-__-__",
+              "required": true
+            },
+            {
+              "name": "honeypot-55-time-start",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "honeypot-55-time-check",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "honeypot-55",
+              "type": "text",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": null,
+              "type": "submit",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "acceptance-685",
+              "type": "checkbox",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": null,
+              "type": "hidden",
+              "label": null,
+              "required": false
+            }
+          ],
+          "visible_purpose": null
+        },
+        {
+          "form_id": null,
+          "action": "/#wpcf7-f272-o1",
+          "method": "post",
+          "fields": [
+            {
+              "name": "_wpcf7",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_version",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_locale",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_unit_tag",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_container_post",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_posted_data_hash",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "_wpcf7_recaptcha_response",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "cf-name-06-imsc",
+              "type": "text",
+              "label": "Имя, Отчество",
+              "required": true
+            },
+            {
+              "name": "cf-tel-06-imsc",
+              "type": "tel",
+              "label": "+7 (___) ___-__-__",
+              "required": true
+            },
+            {
+              "name": "honeypot-813-time-start",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "honeypot-813-time-check",
+              "type": "hidden",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "honeypot-813",
+              "type": "text",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": null,
+              "type": "submit",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": "acceptance-248",
+              "type": "checkbox",
+              "label": null,
+              "required": false
+            },
+            {
+              "name": null,
+              "type": "hidden",
+              "label": null,
+              "required": false
+            }
+          ],
+          "visible_purpose": null
+        }
+      ],
+      "links": {
+        "internal": [
+          {
+            "href": "https://gruzotaxi-triumph.ru/",
+            "text": "https://gruzotaxi-triumph.ru/"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-1.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-1.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-2.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-2.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-3.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-3.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-4.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-4.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-5.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-5.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-6.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-6.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-7.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2026/03/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D0%A2%D1%80%D0%B8%D1%83%D0%BC%D1%84-7.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/consent-personal-data/",
+            "text": "Согласием на обработку персональных данных"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/privacy-policy/",
+            "text": "Политикой конфиденциальности"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/bumaga_mini.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/bumaga_mini.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/kelebek_02.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/kelebek_02.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_02.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_02.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_03.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_03.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/07/lemana_pro__min.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/07/lemana_pro__min.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_05.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_05.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_08.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_08.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_09.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_09.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_10.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_10.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_11.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_11.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_12.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_12.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_13.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_13.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_14.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_14.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_15.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_15.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_19.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_19.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_20.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_20.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_21.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/they_trust__logo_21.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/askona__line.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/askona__line.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/boxx__line.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/01/boxx__line.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/santekh-onl.png",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/santekh-onl.png"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/perv_mebel__land-1.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/09/perv_mebel__land-1.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/11/nuvola_250-1.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2024/11/nuvola_250-1.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%B0%D0%BD%D0%B3%D0%B0%D0%B6%D0%B5%D0%BC%D0%B5%D0%BD%D1%82__01.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%B0%D0%BD%D0%B3%D0%B0%D0%B6%D0%B5%D0%BC%D0%B5%D0%BD%D1%82__01.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%82__01.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%82__01.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87__01.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/08/%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87__01.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/11/SV-%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C-min.jpg",
+            "text": "https://gruzotaxi-triumph.ru/wp-content/uploads/2025/11/SV-%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C-min.jpg"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/user-agreement/",
+            "text": "Пользовательское соглашение"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/cookie-files-policy/",
+            "text": "Cookie файлы"
+          },
+          {
+            "href": "https://gruzotaxi-triumph.ru/other-documents/",
+            "text": "Иные документы"
+          }
+        ],
+        "external": [
+          {
+            "href": "https://max.ru/u/f9LHodD0cOI8NplZUAfTNT7cDN89_7GhazWQy0u9B3AbC0ktxFkC6JWVPm0",
+            "text": "MAX"
+          },
+          {
+            "href": "https://wa.me/+79189912991",
+            "text": "WhatsApp"
+          },
+          {
+            "href": "https://t.me/gruzotaxi_triumph",
+            "text": "Telegram"
+          },
+          {
+            "href": "tel:+79189912991",
+            "text": "+7 (918) 991-2-991"
+          },
+          {
+            "href": "tel:+78619912991",
+            "text": "8 (861) 991-2-991"
+          },
+          {
+            "href": "mailto:opergt@gktriumph.ru",
+            "text": "opergt@gktriumph.ru"
+          },
+          {
+            "href": "https://vk.com/gruzotaxi_triumph",
+            "text": "Группа ВКонтакте"
+          },
+          {
+            "href": "https://yandex.ru/maps/org/triumf/29500847237/",
+            "text": "Наш рейтинг в Яндексе"
+          },
+          {
+            "href": "https://www.avito.ru/brands/i271627206/",
+            "text": "Наш рейтинг в Авито"
+          },
+          {
+            "href": "https://polygon-ws.ru/",
+            "text": "Web Studio Polygon"
+          }
+        ]
+      },
+      "trust_signals_visible": [],
+      "visible_text_excerpt": "Грузовое такси «ТРИУМФ» {\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://gruzotaxi-triumph.ru/#organization\",\"name\":\"\\u041e\\u041e\\u041e \\u00ab\\u0422\\u0420\\u0418\\u0423\\u041c\\u0424\\u00bb\"},{\"@type\":\"WebSite\",\"@id\":\"https://gruzotaxi-triumph.ru/#website\",\"url\":\"https://gruzotaxi-triumph.ru\",\"name\":\"\\u0422\\u0440\\u0438\\u0443\\u043c\\u0444 \\u0421\\u0435\\u0440\\u0432\\u0438\\u0441\",\"publisher\":{\"@id\":\"https://gruzotaxi-triumph.ru/#organization\"},\"inLanguage\":\"ru-RU\",\"potentia",
+      "artifact_refs": {
+        "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws001/website_snapshot.json",
+        "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws001/page.html",
+        "headers": "snapshots/sites/mig-20260605-gtrgt01-ws001/headers.json"
+      },
+      "evidence_grade": "B",
+      "safe_unknown": []
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws002",
+      "session_id": "mig-20260605-gtrgt01",
+      "competitor_id": "mig-20260605-gtrgt01-c002",
+      "domain": "gruzovichec.ru",
+      "requested_url": "https://gruzovichec.ru/",
+      "final_url": "https://gruzovichec.ru/",
+      "page_role": "homepage",
+      "capture_time": "2026-06-05T16:38:00.927Z",
+      "status": "success",
+      "acquisition_method": "http_get_dom",
+      "http_status": 200,
+      "redirect_chain": [],
+      "content_type": "text/html; charset=utf-8",
+      "charset": null,
+      "render_status": "static_ok",
+      "fetch_duration_ms": 494,
+      "title": "Груз такси от 690 руб. в Пензе 🚚 | Заказать грузоперевозки 24&#47;7 – \"Грузовичок\"",
+      "meta_description": "Груз такси и грузоперевозки в Пензе и области 🚛. Срочная подача машины за 20 минут, доставка 24&#47;7. Надёжные водители, профессиональные грузчики. Закажите перевозку быстро и безопасно!",
+      "canonical_url": null,
+      "lang": "ru",
+      "headings": [
+        {
+          "level": 2,
+          "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "order": 0
+        },
+        {
+          "level": 2,
+          "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+          "order": 1
+        },
+        {
+          "level": 3,
+          "text": "Через мобильное приложение цена ниже на 5-10%",
+          "order": 2
+        },
+        {
+          "level": 1,
+          "text": "Грузоперевозки по Пензе и Пензенской области ",
+          "order": 3
+        }
+      ],
+      "contacts": {
+        "phones": [
+          "88412211121"
+        ],
+        "emails": [
+          "zakaz@gruzovichec.ru"
+        ],
+        "addresses": [],
+        "messengers": []
+      },
+      "offers": [
+        {
+          "text": "СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "context": "h2"
+        },
+        {
+          "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН",
+          "context": "h2"
+        },
+        {
+          "text": "Грузоперевозки по Пензе и Пензенской области ",
+          "context": "h1"
+        }
+      ],
+      "pricing_signals": [
+        {
+          "text": "Груз такси от 690 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "Пенза ,  Проспект строителей 39в zakaz@gruzovichec.ru  8 (8412) 21-11-21 СРОЧНЫЙ ВЫЗОВ ГАЗЕЛИ ОТ 690 РУБ!",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "Вывоз мусора, перевозка сыпучих материалов Подробнее Услуги Вывоз мусора В стоимость включена аренда транспорта для вывоза мусора (мешками).",
+          "currency_hint": null,
+          "context": null
+        },
+        {
+          "text": "от 1499 руб .",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 300 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 740 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 699 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "В стоимость включены аренда \"Газели\" на 2 часа и услуги одного грузчика на 2 часа.",
+          "currency_hint": null,
+          "context": null
+        },
+        {
+          "text": "от 1400 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 1400 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 780 руб.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "от 13,9 руб/км.",
+          "currency_hint": "RUB",
+          "context": null
+        },
+        {
+          "text": "Наши автомобили с грузоподъёмностью от 0,5 до 5 тонн идеально подходят для самых разных задач.",
+          "currency_hint": null,
+          "context": null
+        },
+        {
+          "text": "Оперативная доставка – от 20 минут до пункта назначения Грузовое такси «Грузовичок» известно своей оперативной работой.",
+          "currency_hint": null,
+          "context": null
+        }
+      ],
+      "cta_elements": [],
+      "forms": [],
+      "links": {
+        "internal": [
+          {
+            "href": "mailto:zakaz@gruzovichec.ru",
+            "text": "zakaz@gruzovichec.ru"
+          },
+          {
+            "href": "https://gruzovichec.ru/index",
+            "text": "https://gruzovichec.ru/index"
+          },
+          {
+            "href": "https://gruzovichec.ru/gruzovoe_taxi",
+            "text": "В АВТОПАРКЕ БОЛЕЕ 100 МАШИН"
+          },
+          {
+            "href": "https://gruzovichec.ru/forma-predrasscheta",
+            "text": "ПОЛУЧИТЬ ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ"
+          },
+          {
+            "href": "https://gruzovichec.ru/corporate",
+            "text": "Юридическим лицам>>"
+          },
+          {
+            "href": "https://gruzovichec.ru/gruzovaia-gazel",
+            "text": "https://gruzovichec.ru/gruzovaia-gazel"
+          },
+          {
+            "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u",
+            "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-u"
+          },
+          {
+            "href": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE",
+            "text": "https://gruzovichec.ru/gruzovaia-gazel-do-1-5-t-v-%D0%BE"
+          },
+          {
+            "href": "https://gruzovichec.ru/gruzchici",
+            "text": "https://gruzovichec.ru/gruzchici"
+          },
+          {
+            "href": "https://gruzovichec.ru/gruzovaia-avto-do-3-t",
+            "text": "https://gruzovichec.ru/gruzovaia-avto-do-3-t"
+          },
+          {
+            "href": "https://gruzovichec.ru/temperaturnie-perevozki",
+            "text": "https://gruzovichec.ru/temperaturnie-perevozki"
+          },
+          {
+            "href": "https://gruzovichec.ru/kamaz",
+            "text": "https://gruzovichec.ru/kamaz"
+          },
+          {
+            "href": "https://gruzovichec.ru/vivoz-musora",
+            "text": "https://gruzovichec.ru/vivoz-musora"
+          },
+          {
+            "href": "https://gruzovichec.ru/perevozka-stroimaterialov",
+            "text": "https://gruzovichec.ru/perevozka-stroimaterialov"
+          },
+          {
+            "href": "https://gruzovichec.ru/kvartirni-pereezd",
+            "text": "https://gruzovichec.ru/kvartirni-pereezd"
+          },
+          {
+            "href": "https://gruzovichec.ru/ofisnie-pereezdi",
+            "text": "https://gruzovichec.ru/ofisnie-pereezdi"
+          },
+          {
+            "href": "https://gruzovichec.ru/pierievozka-miebieli",
+            "text": "https://gruzovichec.ru/pierievozka-miebieli"
+          },
+          {
+            "href": "https://gruzovichec.ru/dachnie-perevozki",
+            "text": "https://gruzovichec.ru/dachnie-perevozki"
+          }
+        ],
+        "external": [
+          {
+            "href": "https://saratov.gruzovichec.ru/",
+            "text": "Саратов"
+          },
+          {
+            "href": "https://samara.gruzovichec.ru/",
+            "text": "Самара"
+          },
+          {
+            "href": "https://tlt.gruzovichec.ru/",
+            "text": "Тольятти"
+          },
+          {
+            "href": "https://krasnodar.gruzovichec.ru/",
+            "text": "Краснодар"
+          },
+          {
+            "href": "https://novorossiysk.gruzovichec.ru/",
+            "text": "Новороссийск"
+          },
+          {
+            "href": "tel:88412211121",
+            "text": " 8 (8412) 21-11-21"
+          },
+          {
+            "href": "http://play.google.com/store/apps/details?id=ru.gruzovichkof.android&amp;hl=ru&amp;gl=US&amp;utm_source=sait_gruzovichec&amp;utm_medium=knopka",
+            "text": "http://play.google.com/store/apps/details?id=ru.gruzovichkof.android&amp;hl=ru&amp;gl=US&amp;utm_source=sait_gruzovichec&amp;utm_medium=knopka"
+          },
+          {
+            "href": "https://apps.apple.com/ru/app/%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%BE%D1%84-%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8/id1569049766?utm_source=gruzovichec&amp;utm_medium=cpc&amp;utm_campaign=knopka",
+            "text": "https://apps.apple.com/ru/app/%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%BE%D1%84-%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8/id1569049766?utm_source=gruzovichec&amp;utm_medium=cpc&amp;utm_campaign=knopka"
+          }
+        ]
+      },
+      "trust_signals_visible": [],
+      "visible_text_excerpt": "Груз такси от 690 руб. в Пензе 🚚 | Заказать грузоперевозки 24&#47;7 – \"Грузовичок\" window.developmentMode = false; span.selectOption {display:none!important;} .top-social-bar {float:right!important;} @media (min-width: 768px){ .pull-right {width:30%!important;} .pull-left {width: 70%!important;} #body header .contact-bar .ul-w-contacts li {padding: 15px 6px 5px 0px!important;} } @media (max-width: 768px){ .pull-right {width:39%!important;} .pull-left {width: 61%!important;} span.selected, a.sel",
+      "artifact_refs": {
+        "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws002/website_snapshot.json",
+        "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws002/page.html",
+        "headers": "snapshots/sites/mig-20260605-gtrgt01-ws002/headers.json"
+      },
+      "evidence_grade": "B",
+      "safe_unknown": []
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws003",
+      "session_id": "mig-20260605-gtrgt01",
+      "competitor_id": "mig-20260605-gtrgt01-c003",
+      "domain": "krasnodar.gruzovichkof.ru",
+      "requested_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+      "final_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+      "page_role": "homepage",
+      "capture_time": "2026-06-05T16:38:00.927Z",
+      "status": "success",
+      "acquisition_method": "http_get_dom",
+      "http_status": 200,
+      "redirect_chain": [],
+      "content_type": "text/html; charset=utf-8",
+      "charset": null,
+      "render_status": "static_ok",
+      "fetch_duration_ms": 787,
+      "title": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф»",
+      "meta_description": "Хотите заказать грузотакси с грузчиками по доступной цене? Недорогое грузовое такси в Краснодаре. Дешевые тарифы только в 🚛 «Грузовичкоф»",
+      "canonical_url": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+      "lang": null,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Грузовое такси в Краснодаре",
+          "order": 0
+        },
+        {
+          "level": 2,
+          "text": "Вызвать грузовое такси в Краснодаре — подача за 15 минут!",
+          "order": 1
+        }
+      ],
+      "contacts": {
+        "phones": [
+          "88003336747",
+          "84090392982",
+          "+7 (861) 205-25-08"
+        ],
+        "emails": [
+          "zakaz@gruzovichkof.ru",
+          "zakaz-krasnodar@gruzovichkof.ru",
+          "reklama@gruzovichkof.ru",
+          "help@gruzovichkof.ru"
+        ],
+        "addresses": [],
+        "messengers": []
+      },
+      "offers": [
+        {
+          "text": "Грузовое такси в Краснодаре",
+          "context": "h1"
+        },
+        {
+          "text": "Вызвать грузовое такси в Краснодаре — подача за 15 минут!",
+          "context": "h2"
+        }
+      ],
+      "pricing_signals": [
+        {
+          "text": "Рассчитать актуальную стоимость заказа Вы можете на сайте или в мобильном приложении, а также обратившись в контактный центр.",
+          "currency_hint": null,
+          "context": null
+        }
+      ],
+      "cta_elements": [
+        {
+          "text": "Заказать звонок",
+          "href": null,
+          "element_type": "button",
+          "position_hint": "unknown"
+        },
+        {
+          "text": "Заказать звонок",
+          "href": null,
+          "element_type": "button",
+          "position_hint": "unknown"
+        }
+      ],
+      "forms": [
+        {
+          "form_id": null,
+          "action": null,
+          "method": "get",
+          "fields": [],
+          "visible_purpose": null
+        }
+      ],
+      "links": {
+        "internal": [
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/",
+            "text": "Грузоперевозки"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/services",
+            "text": "Услуги"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/gruzovoe-taksi",
+            "text": "Грузовое такси в Краснодаре"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/o-kompanii",
+            "text": "О сервисе"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/akcii",
+            "text": "Акции"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/kontakty",
+            "text": "Контакты"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/faq",
+            "text": "Частые вопросы"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/otzyvy",
+            "text": "Отзывы"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/docs/community_charter2020.pdf",
+            "text": "Устав"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/investoram",
+            "text": "Информация для инвесторов"
+          },
+          {
+            "href": "https://krasnodar.gruzovichkof.ru/sitemap",
+            "text": "Карта сайта"
+          }
+        ],
+        "external": [
+          {
+            "href": "https://taxovichkof.ru/",
+            "text": "Таксовичкоф Перевозка пассажиров с автопарком 10 000 автомобилей"
+          },
+          {
+            "href": "https://gruzovichkof-xxl.ru/",
+            "text": "Грузовичкоф XXL Грузовое такси по средним и крупнотоннажным грузам"
+          },
+          {
+            "href": "https://franchise.gruzovichkof.ru/",
+            "text": "Грузовичкоф Франшиза Предлагаем надежный, сильный и полностью готовый бизнес"
+          },
+          {
+            "href": "https://play.google.com/store/apps/details?id=ru.gruzovichkof.android&amp;hl=ru",
+            "text": "https://play.google.com/store/apps/details?id=ru.gruzovichkof.android&amp;hl=ru"
+          },
+          {
+            "href": "https://apps.apple.com/ru/app/%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%BE%D1%84-%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8/id1569049766",
+            "text": "https://apps.apple.com/ru/app/%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%BE%D1%84-%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B7%D0%BA%D0%B8/id1569049766"
+          },
+          {
+            "href": "https://appgallery.huawei.com/#/app/C103155403",
+            "text": "https://appgallery.huawei.com/#/app/C103155403"
+          },
+          {
+            "href": "https://www.e-disclosure.ru/portal/company.aspx?id=37850",
+            "text": "https://www.e-disclosure.ru/portal/company.aspx?id=37850"
+          },
+          {
+            "href": "https://fileshare.gruzovichkof.ru/uploads/file-301-1628263317052.pdf",
+            "text": "https://fileshare.gruzovichkof.ru/uploads/file-301-1628263317052.pdf"
+          },
+          {
+            "href": "https://legal.gruzovichkof.ru/?city=13&amp;doc=privacy_policy",
+            "text": "Политика обработки персональных данных"
+          },
+          {
+            "href": "https://legal.gruzovichkof.ru/",
+            "text": "Правовая информация"
+          },
+          {
+            "href": "https://sk.ru/",
+            "text": "https://sk.ru/"
+          }
+        ]
+      },
+      "trust_signals_visible": [],
+      "visible_text_excerpt": "Грузовое такси в Краснодаре. Заказать недорогое грузотакси | «Грузовичкоф» html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:var(--mui-palette-text-primary);font-family:'Geometria','Geometria Fallback',Arial;font-weight:400;font-size:1rem;line-height:1.5;background-color:var(--mui-palette-background-default);}@media print{body{backgro",
+      "artifact_refs": {
+        "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws003/website_snapshot.json",
+        "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws003/page.html",
+        "headers": "snapshots/sites/mig-20260605-gtrgt01-ws003/headers.json"
+      },
+      "evidence_grade": "B",
+      "safe_unknown": []
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws004",
+      "session_id": "mig-20260605-gtrgt01",
+      "competitor_id": "mig-20260605-gtrgt01-c004",
+      "domain": "krasnodar.taximaxim.ru",
+      "requested_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+      "final_url": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+      "page_role": "homepage",
+      "capture_time": "2026-06-05T16:38:00.927Z",
+      "status": "success",
+      "acquisition_method": "http_get_dom",
+      "http_status": 200,
+      "redirect_chain": [],
+      "content_type": "text/html; charset=UTF-8",
+      "charset": null,
+      "render_status": "static_ok",
+      "fetch_duration_ms": 781,
+      "title": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim",
+      "meta_description": "Заказать перевозку, доставку и отправку мелкого груза до 1500 килограмм. Заказать услугу грузоперевозки через приложение, когда вам будет удобно по времени.",
+      "canonical_url": null,
+      "lang": "ru",
+      "headings": [],
+      "contacts": {
+        "phones": [
+          "+78619999999"
+        ],
+        "emails": [],
+        "addresses": [],
+        "messengers": [
+          {
+            "type": "telegram",
+            "handle": "taximaxim"
+          }
+        ]
+      },
+      "offers": [],
+      "pricing_signals": [
+        {
+          "text": "Когда водитель выполнит заказ, окончательная стоимость появится на экране приложения.",
+          "currency_hint": null,
+          "context": null
+        }
+      ],
+      "cta_elements": [],
+      "forms": [],
+      "links": {
+        "internal": [
+          {
+            "href": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn",
+            "text": "https://krasnodar.taximaxim.ru/zakazi-taksi-onlajn"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/app/",
+            "text": "Приложение для заказа"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/delivery/",
+            "text": "Доставка"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/cargo/",
+            "text": "Грузоперевозки"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/taxi/",
+            "text": "Такси для бизнеса"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/insurance/",
+            "text": "Страхование"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/driver/",
+            "text": "Водителям"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/courier/",
+            "text": "Курьерам"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/vacancy/",
+            "text": "Вакансии"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/partner/",
+            "text": "Партнерам"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/blog/",
+            "text": "Блог"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/contacts/",
+            "text": "Контакты"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/en/site/page/?slug=gruzovie-perevozki",
+            "text": "English"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/gruzovie-perevozki/",
+            "text": "Русский"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/site/licensors/",
+            "text": "Партнеры"
+          },
+          {
+            "href": "https://krasnodar.taximaxim.ru/site/advertising/",
+            "text": "Данные рекламодателя"
+          }
+        ],
+        "external": [
+          {
+            "href": "https://taxsee.pro/?app=maxim&amp;intl=ru&amp;b=692&amp;utm_content=taximaxim&amp;utm_source=taximaxim",
+            "text": "Работай с сервисом"
+          },
+          {
+            "href": "https://client.taximaxim.ru/ru/?country=ru",
+            "text": "Кабинет клиента"
+          },
+          {
+            "href": "https://driver.taxsee.pro/ru",
+            "text": "Кабинет водителя"
+          },
+          {
+            "href": "tel:+78619999999",
+            "text": "(861) 999-99-99"
+          },
+          {
+            "href": "https://maximru-ios.onelink.me/ttKs?af_r=https%3A%2F%2Fapps.apple.com%2Fapp%2Fmaxim-ru-%25D0%25B7%25D0%25B0%25D0%25BA%25D0%25B0%25D0%25B7-%25D1%2582%25D0%25B0%25D0%25BA%25D1%2581%25D0%25B8-%25D0%25B2-%25D1%2580%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D0%25B8%2Fid6752884875%3Fpt%3D119057982%26ct%3Dtaximaxim_site%26mt%3D8&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true",
+            "text": "https://maximru-ios.onelink.me/ttKs?af_r=https%3A%2F%2Fapps.apple.com%2Fapp%2Fmaxim-ru-%25D0%25B7%25D0%25B0%25D0%25BA%25D0%25B0%25D0%25B7-%25D1%2582%25D0%25B0%25D0%25BA%25D1%2581%25D0%25B8-%25D0%25B2-%25D1%2580%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D0%25B8%2Fid6752884875%3Fpt%3D119057982%26ct%3Dtaximaxim_site%26mt%3D8&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true"
+          },
+          {
+            "href": "https://maximru-android.onelink.me/LIU9?af_r=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.maxim.internal%26referrer%3Dutm_source%253Dtaximaxim%2526utm_medium%253Dsite&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true",
+            "text": "https://maximru-android.onelink.me/LIU9?af_r=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.maxim.internal%26referrer%3Dutm_source%253Dtaximaxim%2526utm_medium%253Dsite&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true"
+          },
+          {
+            "href": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fappgallery.cloud.huawei.com%2Fmarketshare%2Fapp%2FC100093035&amp;af_r=https%3A%2F%2Fappgallery.cloud.huawei.com%2Fmarketshare%2Fapp%2FC100093035&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true",
+            "text": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fappgallery.cloud.huawei.com%2Fmarketshare%2Fapp%2FC100093035&amp;af_r=https%3A%2F%2Fappgallery.cloud.huawei.com%2Fmarketshare%2Fapp%2FC100093035&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true"
+          },
+          {
+            "href": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fgalaxystore.samsung.com%2Fdetail%2Fcom.taxsee.taxsee&amp;af_r=https%3A%2F%2Fgalaxystore.samsung.com%2Fdetail%2Fcom.taxsee.taxsee&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true",
+            "text": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fgalaxystore.samsung.com%2Fdetail%2Fcom.taxsee.taxsee&amp;af_r=https%3A%2F%2Fgalaxystore.samsung.com%2Fdetail%2Fcom.taxsee.taxsee&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true"
+          },
+          {
+            "href": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fglobal.app.mi.com%2Fdetails%3Fid%3Dcom.taxsee.taxsee&amp;af_r=https%3A%2F%2Fglobal.app.mi.com%2Fdetails%3Fid%3Dcom.taxsee.taxsee&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true",
+            "text": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fglobal.app.mi.com%2Fdetails%3Fid%3Dcom.taxsee.taxsee&amp;af_r=https%3A%2F%2Fglobal.app.mi.com%2Fdetails%3Fid%3Dcom.taxsee.taxsee&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true"
+          },
+          {
+            "href": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fapps.rustore.ru%2Fapp%2Fcom.taxsee.taxsee&amp;af_r=https%3A%2F%2Fapps.rustore.ru%2Fapp%2Fcom.taxsee.taxsee&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true",
+            "text": "https://maxim-android.onelink.me/ezSa?af_web_dp=https%3A%2F%2Fapps.rustore.ru%2Fapp%2Fcom.taxsee.taxsee&amp;af_r=https%3A%2F%2Fapps.rustore.ru%2Fapp%2Fcom.taxsee.taxsee&amp;c=main&amp;pid=taximaxim_site&amp;is_retargeting=true"
+          },
+          {
+            "href": "https://taximaxim.ru/",
+            "text": "на сайте"
+          },
+          {
+            "href": "https://t.me/taximaxim",
+            "text": "https://t.me/taximaxim"
+          },
+          {
+            "href": "https://vk.com/taximaxim",
+            "text": "https://vk.com/taximaxim"
+          },
+          {
+            "href": "https://ok.ru/taximaxim",
+            "text": "https://ok.ru/taximaxim"
+          },
+          {
+            "href": "https://legal.taximaxim.ru/?country=RU&amp;city=692&amp;intl=ru&amp;ref=https%3A%2F%2Fkrasnodar.taximaxim.ru%2Fgruzovie-perevozki%2F",
+            "text": "Правовая информация"
+          },
+          {
+            "href": "https://bunkermedia.ru/",
+            "text": "«БункерМедиа»"
+          },
+          {
+            "href": "https://legal.taximaxim.ru/privacy/?country=RU&amp;city=692&amp;intl=ru&amp;ref=https%3A%2F%2Fkrasnodar.taximaxim.ru%2Fgruzovie-perevozki%2F",
+            "text": "Подробнее"
+          }
+        ]
+      },
+      "trust_signals_visible": [],
+      "visible_text_excerpt": "Заказать Услугу Грузоперевозки до 1.5т | TaxiMaxim (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K3BC4KQ'); {\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\"",
+      "artifact_refs": {
+        "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws004/website_snapshot.json",
+        "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws004/page.html",
+        "headers": "snapshots/sites/mig-20260605-gtrgt01-ws004/headers.json"
+      },
+      "evidence_grade": "B",
+      "safe_unknown": []
+    },
+    {
+      "snapshot_id": "mig-20260605-gtrgt01-ws005",
+      "session_id": "mig-20260605-gtrgt01",
+      "competitor_id": "mig-20260605-gtrgt01-c005",
+      "domain": "city-mobil.ru",
+      "requested_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+      "final_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+      "page_role": "homepage",
+      "capture_time": "2026-06-05T16:38:00.927Z",
+      "status": "timeout",
+      "acquisition_method": "http_get_dom",
+      "http_status": null,
+      "redirect_chain": [],
+      "content_type": null,
+      "charset": null,
+      "render_status": "unknown",
+      "fetch_duration_ms": 20007,
+      "title": null,
+      "meta_description": null,
+      "canonical_url": null,
+      "lang": null,
+      "headings": [],
+      "contacts": {
+        "phones": [],
+        "emails": [],
+        "addresses": [],
+        "messengers": []
+      },
+      "offers": [],
+      "pricing_signals": [],
+      "cta_elements": [],
+      "forms": [],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "trust_signals_visible": [],
+      "visible_text_excerpt": null,
+      "artifact_refs": {
+        "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws005/website_snapshot.json",
+        "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws005/page.html",
+        "headers": "snapshots/sites/mig-20260605-gtrgt01-ws005/headers.json"
+      },
+      "evidence_grade": "X",
+      "safe_unknown": [
+        "Fetch error: timeout"
+      ]
+    }
+  ],
+  "session_coverage": "partial",
+  "section_evidence_grade": "X",
+  "safe_unknown": []
+}

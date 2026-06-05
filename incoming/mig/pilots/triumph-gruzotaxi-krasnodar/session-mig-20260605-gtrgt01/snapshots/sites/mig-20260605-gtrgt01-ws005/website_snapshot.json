@@ -1,0 +1,48 @@
+{
+  "snapshot_id": "mig-20260605-gtrgt01-ws005",
+  "session_id": "mig-20260605-gtrgt01",
+  "competitor_id": "mig-20260605-gtrgt01-c005",
+  "domain": "city-mobil.ru",
+  "requested_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+  "final_url": "https://city-mobil.ru/krasnodar/gruz-taxi",
+  "page_role": "homepage",
+  "capture_time": "2026-06-05T16:38:00.927Z",
+  "status": "timeout",
+  "acquisition_method": "http_get_dom",
+  "http_status": null,
+  "redirect_chain": [],
+  "content_type": null,
+  "charset": null,
+  "render_status": "unknown",
+  "fetch_duration_ms": 20007,
+  "title": null,
+  "meta_description": null,
+  "canonical_url": null,
+  "lang": null,
+  "headings": [],
+  "contacts": {
+    "phones": [],
+    "emails": [],
+    "addresses": [],
+    "messengers": []
+  },
+  "offers": [],
+  "pricing_signals": [],
+  "cta_elements": [],
+  "forms": [],
+  "links": {
+    "internal": [],
+    "external": []
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": null,
+  "artifact_refs": {
+    "website_snapshot": "snapshots/sites/mig-20260605-gtrgt01-ws005/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260605-gtrgt01-ws005/page.html",
+    "headers": "snapshots/sites/mig-20260605-gtrgt01-ws005/headers.json"
+  },
+  "evidence_grade": "X",
+  "safe_unknown": [
+    "Fetch error: timeout"
+  ]
+}
