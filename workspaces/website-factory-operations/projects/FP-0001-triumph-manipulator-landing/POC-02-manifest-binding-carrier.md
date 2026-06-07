@@ -4,6 +4,7 @@
 **Record plane:** RT-G04 substrate — content owned by RT-G10  
 **Scope:** Project (LOC-HOME)  
 **Created:** 2026-06-07  
+**Last refreshed:** 2026-06-07 — MVP certification remediation (F-03)
 
 ---
 
@@ -34,10 +35,25 @@ Binding carrier for Manifest content classes (MOC-*). **Carrier existence ≠ co
 
 ---
 
+## Co-located substrate indexes (same LOC-HOME)
+
+| Class | Carrier | Status |
+|-------|---------|--------|
+| POC-03 | [POC-03-state-index.md](POC-03-state-index.md) | **present** — populated (Wave 3) |
+| POC-04 | [POC-04-gate-index.md](POC-04-gate-index.md) | **present** — populated (0 rows) |
+| POC-05 | [POC-05-handoff-index.md](POC-05-handoff-index.md) | **present** — populated (0 rows) |
+| POC-06 | [POC-06-declarations/](POC-06-declarations/) | **present** — 2 records (Wave 3) |
+| POC-07 | [POC-07-ledger.md](POC-07-ledger.md) | **present** — 2 entries (Wave 3) |
+| POC-08 | [POC-08-closure.md](POC-08-closure.md) | **present** — partial closure (Wave 3) |
+| POC-10 | [POC-10-audit.md](POC-10-audit.md) | **present** — Wave 3 |
+
+---
+
 ## Separation discipline
 
-- Manifest facet **must not** embed live POC-04/POC-05 gate or handoff indexes (MT-01).
-- Tracking index scaffold POC-03…POC-05 **present** — empty shells; POC-06…POC-07 deferred Wave 3.
+- Manifest facet **must not** embed live POC-04/POC-05 gate or handoff index rows (MT-01).
+- Tracking indexes POC-03…POC-05 **present** at same LOC-HOME — populated per Wave 3 Playbook 04/05 execution.
+- POC-06…POC-08, POC-10 **present** — Wave 3 operational population complete on pilot FP-0001.
 
 ---
 

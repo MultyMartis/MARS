@@ -21,8 +21,8 @@
 
 | Substrate class | Binding |
 |-----------------|---------|
-| POC-01 identity shell | [../../../../projects/FP-0001-triumph-manipulator-landing/POC-01-identity.md](../../../../projects/FP-0001-triumph-manipulator-landing/POC-01-identity.md) |
-| MOC-02 logical identity | [../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-02-identity.md](../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-02-identity.md) |
+| POC-01 identity shell | [../../../projects/FP-0001-triumph-manipulator-landing/POC-01-identity.md](../../../projects/FP-0001-triumph-manipulator-landing/POC-01-identity.md) |
+| MOC-02 logical identity | [../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-02-identity.md](../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-02-identity.md) |
 | LOC-HOME | `projects/FP-0001-triumph-manipulator-landing/` |
 
 ---

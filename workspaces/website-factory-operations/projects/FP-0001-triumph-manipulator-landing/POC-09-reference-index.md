@@ -3,6 +3,7 @@
 **Class:** POC-09  
 **Record plane:** RT-G04 Persistence Substrate  
 **Created:** 2026-06-07  
+**Last refreshed:** 2026-06-07 — MVP certification remediation (F-02)
 
 ---
 
@@ -27,15 +28,15 @@ Declared targets for MOC-08 topology map.
 
 | Role | Target locus | Materialization |
 |------|--------------|-----------------|
-| state_index | [POC-03-state-index.md](POC-03-state-index.md) | **present** — empty shell |
-| gate_outcome_index | [POC-04-gate-index.md](POC-04-gate-index.md) | **present** — empty shell |
-| handoff_event_index | [POC-05-handoff-index.md](POC-05-handoff-index.md) | **present** — empty shell |
+| state_index | [POC-03-state-index.md](POC-03-state-index.md) | **present** — populated (Wave 3) |
+| gate_outcome_index | [POC-04-gate-index.md](POC-04-gate-index.md) | **present** — populated (0 rows) |
+| handoff_event_index | [POC-05-handoff-index.md](POC-05-handoff-index.md) | **present** — populated (0 rows) |
 | surface_read | [surface/SOC-01-read-convergence-point.md](surface/SOC-01-read-convergence-point.md) | **present** — Wave 2 |
 | portfolio_registry | [../../POC-02-registry-facet/ROC-01-catalog-aggregate.md](../../POC-02-registry-facet/ROC-01-catalog-aggregate.md) | **present** — Wave 2 |
-| declaration_records | `POC-06-declarations/` *(planned)* | Wave 3 — Playbook 04 |
-| progression_ledger | `POC-07-ledger.md` *(planned)* | Wave 3 — Playbook 04 |
-| closure_metadata | `POC-08-closure.md` *(planned)* | Wave 3 — Playbook 05 |
-| audit_recency | `POC-10-audit.md` *(planned)* | Wave 3 — Playbook 04 |
+| declaration_records | [POC-06-declarations/](POC-06-declarations/) | **present** — 2 records (Wave 3) |
+| progression_ledger | [POC-07-ledger.md](POC-07-ledger.md) | **present** — 2 entries (Wave 3) |
+| closure_metadata | [POC-08-closure.md](POC-08-closure.md) | **present** — partial closure (Wave 3) |
+| audit_recency | [POC-10-audit.md](POC-10-audit.md) | **present** — Wave 3 |
 
 ---
 

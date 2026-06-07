@@ -26,10 +26,10 @@ Echoes MOC-03…MOC-05 summary categories — **not** full manifest bodies or or
 
 | MOC source | Locator |
 |------------|---------|
-| MOC-03 scope | [../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-03-scope.md](../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-03-scope.md) |
-| MOC-04 endpoint | [../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-04-endpoint.md](../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-04-endpoint.md) |
-| MOC-05 applicability | [../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-05-applicability.md](../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-05-applicability.md) |
-| MOC-06 classification | [../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-06-classification.md](../../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-06-classification.md) |
+| MOC-03 scope | [../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-03-scope.md](../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-03-scope.md) |
+| MOC-04 endpoint | [../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-04-endpoint.md](../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-04-endpoint.md) |
+| MOC-05 applicability | [../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-05-applicability.md](../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-05-applicability.md) |
+| MOC-06 classification | [../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-06-classification.md](../../../projects/FP-0001-triumph-manipulator-landing/manifest/MOC-06-classification.md) |
 
 ---
 

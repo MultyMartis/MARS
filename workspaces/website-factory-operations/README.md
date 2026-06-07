@@ -36,11 +36,11 @@ Bounded Factory Source-of-Truth filesystem root. All Factory structured records 
 
 ## Wave inventory
 
-| Wave | Scope | Status |
-|------|-------|--------|
-| Wave 1 | RT-G04 substrate + RT-G10 manifest (FP-0001) | **complete** — C2, C3 |
-| Wave 2 | RT-G05 registry + RT-G04 index scaffold + RT-G12 surface | **complete** — C4, C5 scaffold |
-| Wave 3 | Playbook 03↔04→05 population, POC-06/07/08/10 | **complete** — C6, C7 |
+| Wave | Scope | Status | Execution record |
+|------|-------|--------|------------------|
+| Wave 1 | RT-G04 substrate + RT-G10 manifest (FP-0001) | **complete** — C2, C3 | [WAVE-1-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md](WAVE-1-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md) |
+| Wave 2 | RT-G05 registry + RT-G04 index scaffold + RT-G12 surface | **complete** — C4, C5 scaffold | [WAVE-2-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md](WAVE-2-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md) |
+| Wave 3 | Playbook 03↔04→05 population, POC-06/07/08/10 | **complete** — C6, C7 | [WAVE-3-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md](WAVE-3-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md) |
 
 **Pilot closure:** FP-0001 — **FACTORY_TRACK_CLOSED_PARTIAL** (D-W3-01). See [WAVE-3-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md](WAVE-3-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md).
 
