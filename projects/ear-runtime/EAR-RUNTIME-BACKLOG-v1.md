@@ -2,7 +2,7 @@
 
 **Type:** Runtime project backlog index — **references** authoritative definitions  
 **Date:** 2026-06-02  
-**Program:** EAR Runtime Program v1 — **NOT STARTED**
+**Program:** EAR Runtime Program v1 — **STARTED** (see [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md))
 
 ---
 
@@ -53,13 +53,13 @@ Full dependency notes: [architecture backlog § Dependency overview](../../share
 
 Update these in [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md) when charter/implementation progresses:
 
-| ID | Runtime status (foundation) | Implementation location |
+| ID | Runtime status (engineering) | Implementation location |
 |----|----------------------------|-------------------------|
-| R1 | **NOT STARTED** | `runtime/` (future) |
-| R2 | **NOT STARTED** | `runtime/` (future) |
-| R3 | **NOT STARTED** | `runtime/` (future) |
-| R4 | **NOT STARTED** | `runtime/` (future) |
-| R5 | **NOT STARTED** | `runtime/` (future) |
+| R1 | **FOUNDATION IN PROGRESS** — R1.1–R1.7 **DONE**; R1.8A–D **DONE** (charter); persistence **NOT IMPLEMENTED**; connector **SKELETON ONLY** | `runtime/` |
+| R2 | **NOT STARTED** | `runtime/` |
+| R3 | **NOT STARTED** | `runtime/` |
+| R4 | **NOT STARTED** | `runtime/` |
+| R5 | **NOT STARTED** | `runtime/` |
 
 ---
 
@@ -84,4 +84,4 @@ When R1+ implementation exists, add a **runtime traceability** subsection to [EA
 
 ## Truth statement
 
-This index was created at **Runtime project foundation**. **No** backlog item is implemented.
+This index tracks runtime program status. **R1.1/R1.2 foundation code exists** (skeleton CLI, config loader) — not a connector. See [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md).

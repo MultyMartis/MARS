@@ -33,17 +33,18 @@ Prevent EAR Runtime from expanding into consumer products, deployment automation
 
 ---
 
-## Technology non-goals (v1 foundation — not pre-decided in charter)
+## Technology non-goals (v1 — stack decided at Engineering Charter)
 
-Until **EAR Runtime v1 Engineering Charter** approves stack:
+Engineering Charter **APPROVED** 2026-06-02 — Python, CLI-first, human-operated. See [ENGINEERING-CHARTER-v1.md](ENGINEERING-CHARTER-v1.md), [R1-IMPLEMENTATION-DECISIONS-v1.md](R1-IMPLEMENTATION-DECISIONS-v1.md).
 
 | Item | Status |
 |------|--------|
-| Language (Python, Node, Go, etc.) | **SAFE UNKNOWN** at foundation |
-| Packaging (CLI vs library) | **SAFE UNKNOWN** |
-| Test framework | **SAFE UNKNOWN** |
+| Primary language | **Python** — decided |
+| Packaging (CLI vs library) | **CLI-first** — decided; packaging details **PARTIAL** |
+| Python minor version pin | **PARTIAL** — charter cites 3.12+ in R1 Implementation Charter; not enforced in repo |
+| Test framework | **SAFE UNKNOWN** — [R1-TEST-STRATEGY-v1.md](R1-TEST-STRATEGY-v1.md) defines tiers only |
 
-Foundation explicitly excludes **any** implementation artefact.
+Foundation code (R1.1/R1.2) exists under `runtime/` — **foundation only**, no connector.
 
 ---
 

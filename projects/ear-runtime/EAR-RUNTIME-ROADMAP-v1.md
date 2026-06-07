@@ -2,7 +2,7 @@
 
 **Type:** Engineering roadmap — **no** implementation commitments or dates  
 **Date:** 2026-06-02  
-**Program:** EAR Runtime Program v1 — **NOT STARTED**  
+**Program:** EAR Runtime Program v1 — **STARTED**  
 **Backlog authority:** [shared/external-access-runtime/EAR-RUNTIME-BACKLOG-v1.md](../../shared/external-access-runtime/EAR-RUNTIME-BACKLOG-v1.md)
 
 ---
@@ -26,11 +26,12 @@ Foundation (DONE — 2026-06-02)
   Project placement · charter · scope · decision record
         │
         ▼
-Phase 0 — Engineering Charter (NEXT — human)
-  EAR Runtime v1 Engineering Charter approved
+Phase 0 — Engineering Charter (DONE — 2026-06-02)
+  EAR Runtime v1 Engineering Charter approved · Program STARTED
         │
         ▼
-Phase 1 — R1 SFTP Read-Only Connector
+Phase 1 — R1 SFTP Read-Only Connector (IN PROGRESS — foundation only)
+  R1.1 DONE · R1.2 DONE · R1.3 next
         │
         ▼
 Phase 2 — R2 Evidence Package Generator
@@ -53,14 +54,13 @@ Horizon — WPilot / additional connectors (NOT v1 — architecture roadmap)
 
 ---
 
-## Phase 0 — Engineering Charter (not started)
+## Phase 0 — Engineering Charter (done)
 
 | Item | Target |
 |------|--------|
 | **Deliverable** | Human-approved **EAR Runtime v1 Engineering Charter** |
-| **Enables** | Any code under `runtime/` |
-| **Sources** | [EAR-NEXT-STAGE-v1.md](../../shared/external-access-runtime/freeze/EAR-RUNTIME-TRANSITION-v1/EAR-NEXT-STAGE-v1.md), [EAR-RUNTIME-HANDOFF-v1.md](../../shared/external-access-runtime/freeze/EAR-RUNTIME-TRANSITION-v1/EAR-RUNTIME-HANDOFF-v1.md) |
-| **Success** | [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md) marks Program **STARTED** |
+| **Status** | **DONE** — 2026-06-02 |
+| **Success** | [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md) marks Program **STARTED** — **satisfied** |
 
 ---
 

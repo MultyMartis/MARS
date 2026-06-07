@@ -10,34 +10,9 @@ import re
 from pathlib import Path
 from typing import Any
 
-REQUIRED_FIELDS: tuple[str, ...] = (
-    "site_id",
-    "pilot_id",
-    "track",
-    "mode",
-    "connector",
-    "environment",
-    "snapshot_target",
-    "credential_ref",
-    "remote_root",
-    "allowed_paths",
-    "excluded_paths",
-    "output_root",
-    "dry_run",
-)
-
-FORBIDDEN_ENUMS: dict[str, str] = {
-    "connector": "sftp_readonly",
-    "mode": "mode_2",
-    "track": "connected",
-    "snapshot_target": "level_1",
-}
-
-PATH_FIELDS: tuple[str, ...] = (
-    "remote_root",
-    "output_root",
-    "allowed_paths",
-    "excluded_paths",
+from shared.connector_contract import (
+    find_enum_violations,
+    find_missing_required_fields,
 )
 
 PASSWORD_LIKE_PATTERNS: tuple[re.Pattern[str], ...] = (
@@ -95,22 +70,17 @@ def load_config(config_path: str | Path) -> dict[str, Any]:
 
 
 def _validate_required_fields(data: dict[str, Any]) -> None:
-    missing = [field for field in REQUIRED_FIELDS if field not in data]
+    missing = find_missing_required_fields(data)
     if missing:
         raise ConfigValidationError(
-            f"Missing required field(s): {', '.join(sorted(missing))}"
+            f"Missing required field(s): {', '.join(missing)}"
         )
 
 
 def _validate_enums(data: dict[str, Any]) -> None:
-    for field, expected in FORBIDDEN_ENUMS.items():
-        value = data[field]
-        if not isinstance(value, str):
-            raise ConfigValidationError(f"{field} must be a string")
-        if value != expected:
-            raise ConfigValidationError(
-                f"{field} must equal {expected!r} (got {value!r})"
-            )
+    violations = find_enum_violations(data)
+    if violations:
+        raise ConfigValidationError(violations[0])
 
 
 def _validate_dry_run(data: dict[str, Any]) -> None:

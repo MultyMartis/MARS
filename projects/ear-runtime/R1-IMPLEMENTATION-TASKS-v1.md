@@ -9,6 +9,22 @@
 
 ---
 
+## Reconciliation (PC-07 — 2026-06-04)
+
+**Authoritative execution order:** [R1-AUTHORITATIVE-SEQUENCE-v1.md](R1-AUTHORITATIVE-SEQUENCE-v1.md) — supersedes this file’s § Task overview for **what was executed** and **what is next**.
+
+| Topic | This file (2026-06-02) | Authoritative (executed) |
+|-------|------------------------|---------------------------|
+| **R1.8** | Failures / logging | **Persistence Model** — see R1.8D kickoff charter |
+| **R1.7** | Evidence package writer | **Snapshot Package Model** (executed) |
+| **R1.3–R1.6** | SFTP test, listing, exclusion, manifest, evidence | Skeleton + mock models R1.3–R1.7 (partial vs full legacy tasks) |
+| **R1.8A–D** | Not listed | Architecture sub-phases **DONE** before R1.8 |
+| **Next** | Table below is **historical** | **R1.8 Persistence Model** |
+
+Legacy task **R1.8 Failures / logging** is deferred under label **R1.8L** — do not confuse with **R1.8 Persistence Model**. Historical task text below is **not renamed**.
+
+---
+
 ## Task overview
 
 | ID | Name | Depends on | Live SFTP |
@@ -241,4 +257,4 @@ R1 implementation is **complete** when R1.1–R1.10 acceptance criteria pass and
 
 ## Truth statement
 
-This document defines tasks only. **No** code exists. **No** task has been executed.
+This document is the **2026-06-02 original task catalog** (historical). **Execution authority:** [R1-AUTHORITATIVE-SEQUENCE-v1.md](R1-AUTHORITATIVE-SEQUENCE-v1.md) and [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md). R1.1–R1.7 foundation/mock code **exists** under `runtime/`; R1.8 Persistence Model **not started**; legacy R1.8–R1.10 rows **deferred** per authoritative sequence.

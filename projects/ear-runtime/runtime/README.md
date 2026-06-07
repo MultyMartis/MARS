@@ -28,10 +28,11 @@ Local, human-operated runtime for External Access Runtime (EAR) acquisition work
 
 | Field | Value |
 |-------|-------|
-| **Implemented** | **NONE** |
-| **Execution** | **NOT AUTHORIZED** |
+| **Implemented** | **PARTIAL** — R1.1–R1.8 mock pipeline; R2.1 contract evidence model (no wiring) |
+| **Execution** | **NOT AUTHORIZED** (live acquisition) |
 | **Live access** | **FORBIDDEN** |
 | **Runtime Skeleton** | **CREATED** (R1.1) |
+| **R2.1 Evidence Package Model** | **IMPLEMENTED** — [R2.1-EVIDENCE-PACKAGE-MODEL-v1.md](../R2.1-EVIDENCE-PACKAGE-MODEL-v1.md); `shared/evidence_package_models.py` |
 
 ---
 
@@ -43,7 +44,7 @@ Local, human-operated runtime for External Access Runtime (EAR) acquisition work
 | `connectors/` | Future R1 connector implementations |
 | `builders/` | Future R2/R3 evidence and snapshot builders |
 | `validators/` | Future R5 validation helpers |
-| `shared/` | Future cross-cutting runtime utilities |
+| `shared/` | Config, listing, manifest, R1.6 evidence skeleton, **R2.1** `evidence_package_models.py`, snapshot models |
 | `requirements.txt` | Dependency manifest — comment-only at skeleton |
 
 ---
