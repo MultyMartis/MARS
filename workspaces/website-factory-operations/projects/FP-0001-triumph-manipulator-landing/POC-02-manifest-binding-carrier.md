@@ -11,7 +11,7 @@
 
 Binding carrier for Manifest content classes (MOC-*). **Carrier existence ≠ content authority.** Each MOC class has a **separate physical carrier** per COL-02 class separation.
 
-**Registry facet (POC-02(r)):** not materialized — deferred to Wave 2 (RT-G05).
+**Registry facet (POC-02(r)):** portfolio scope at [../../POC-02-registry-facet/](../../POC-02-registry-facet/) — Wave 2 bound (RT-G05).
 
 ---
 
@@ -37,7 +37,7 @@ Binding carrier for Manifest content classes (MOC-*). **Carrier existence ≠ co
 ## Separation discipline
 
 - Manifest facet **must not** embed live POC-04/POC-05 gate or handoff indexes (MT-01).
-- Tracking indexes POC-03…POC-07 **deferred** to Wave 2 — separate record classes when created.
+- Tracking index scaffold POC-03…POC-05 **present** — empty shells; POC-06…POC-07 deferred Wave 3.
 
 ---
 

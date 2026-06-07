@@ -28,6 +28,8 @@ From this locus you can reach minimum understanding categories without monorepo 
 | Enrollment bind | [MOC-10-enrollment.md](MOC-10-enrollment.md) |
 | ATLAS & external refs | [MOC-12-external-refs.md](MOC-12-external-refs.md) |
 | Substrate identity shell | [../POC-01-identity.md](../POC-01-identity.md) |
+| Surface read path | [../surface/SOC-01-read-convergence-point.md](../surface/SOC-01-read-convergence-point.md) |
+| Portfolio catalog | [../../../POC-02-registry-facet/ROC-01-catalog-aggregate.md](../../../POC-02-registry-facet/ROC-01-catalog-aggregate.md) |
 | External workspace | `projects/triumph-manipulator-landing/` |
 
 ---
@@ -43,8 +45,8 @@ Hosted within [POC-02 manifest facet](../POC-02-manifest-binding-carrier.md) at 
 | Capability | Status |
 |------------|--------|
 | C3 Manifest persistence | **bound** — MRDY categories present |
-| C4 Registry visibility | **not yet** — Wave 2 |
-| C5 Surface visibility | **not yet** — Wave 2 |
+| C4 Registry visibility | **bound** — ROC-01, REG-0001 |
+| C5 Surface visibility | **bound** — SOC-01…08 scaffold |
 | C6/C7 Tracking & closure | **not yet** — Wave 3 |
 
 ---

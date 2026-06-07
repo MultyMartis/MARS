@@ -23,7 +23,7 @@
 |---------|-------|-----------|
 | Factory Project identity | **FP-0001** | Factory — this record |
 | ATLAS structural project | PRJ-0008 | ATLAS — ref in MOC-12 only |
-| Registry entry ID | *not assigned* | Wave 2 — ROC-03 when enrolled |
+| Registry entry ID | **REG-0001** | ROC-03 — distinct from FP-0001 |
 
 **Rule:** MOC-02 logical identity **≠** `atlas_project_ref` (ES-03, TG-ATLAS-01).
 

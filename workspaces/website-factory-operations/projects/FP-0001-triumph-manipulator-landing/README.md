@@ -8,7 +8,11 @@
 
 ## Start here
 
-**Entry anchor:** [manifest/MOC-01-entry-anchor.md](manifest/MOC-01-entry-anchor.md)
+| Layer | Entry |
+|-------|-------|
+| Manifest | [manifest/MOC-01-entry-anchor.md](manifest/MOC-01-entry-anchor.md) |
+| Surface read | [surface/SOC-01-read-convergence-point.md](surface/SOC-01-read-convergence-point.md) |
+| Registry (portfolio) | [../../POC-02-registry-facet/ROC-01-catalog-aggregate.md](../../POC-02-registry-facet/ROC-01-catalog-aggregate.md) |
 
 ---
 
@@ -18,8 +22,12 @@
 |-------|---------|
 | POC-01 Identity | [POC-01-identity.md](POC-01-identity.md) |
 | POC-02 Manifest facet | [POC-02-manifest-binding-carrier.md](POC-02-manifest-binding-carrier.md) |
+| POC-03 State index | [POC-03-state-index.md](POC-03-state-index.md) |
+| POC-04 Gate index | [POC-04-gate-index.md](POC-04-gate-index.md) |
+| POC-05 Handoff index | [POC-05-handoff-index.md](POC-05-handoff-index.md) |
 | POC-09 Reference index | [POC-09-reference-index.md](POC-09-reference-index.md) |
 | MOC-* (manifest content) | [manifest/](manifest/) |
+| SOC-* (surface read bind) | [surface/](surface/) |
 
 ---
 

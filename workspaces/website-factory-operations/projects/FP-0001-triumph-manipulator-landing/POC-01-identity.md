@@ -34,6 +34,8 @@
 |-------|------|-------|
 | Playbook 01 manifest-enrolled | 2026-06-07 | Doctrinal — attested in MOC-10 |
 | Physical manifest bind | 2026-06-07 | Wave 1 bootstrap |
+| Playbook 02 registry-enrolled | 2026-06-07 | Doctrinal — attested in ROC-09 |
+| Physical catalog bind | 2026-06-07 | Wave 2 — REG-0001 |
 
 ---
 

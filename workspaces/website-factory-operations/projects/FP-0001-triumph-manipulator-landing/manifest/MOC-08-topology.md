@@ -14,9 +14,9 @@ Declares **where** authoritative truths live. **Never embeds bodies** (MOC-RULE-
 
 | Zone role | Target locus | Materialization | Authority |
 |-----------|--------------|-----------------|-----------|
-| active_state | `../POC-03-state-index.md` | Wave 2 scaffold | Playbook 04 |
-| gate_outcomes | `../POC-04-gate-index.md` | Wave 2 scaffold | Playbook 04 |
-| handoff_events | `../POC-05-handoff-index.md` | Wave 2 scaffold | Playbook 04 |
+| active_state | [../POC-03-state-index.md](../POC-03-state-index.md) | **present** — empty shell | Playbook 04 |
+| gate_outcomes | [../POC-04-gate-index.md](../POC-04-gate-index.md) | **present** — empty shell | Playbook 04 |
+| handoff_events | [../POC-05-handoff-index.md](../POC-05-handoff-index.md) | **present** — empty shell | Playbook 04 |
 | declarations | `../POC-06-declarations/` | Wave 3 | Playbook 04 |
 | progression_ledger | `../POC-07-ledger.md` | Wave 3 | Playbook 04 |
 | closure | `../POC-08-closure.md` | Wave 3 | Playbook 05 |
@@ -38,11 +38,18 @@ Declares **where** authoritative truths live. **Never embeds bodies** (MOC-RULE-
 | entry_anchor | [MOC-01-entry-anchor.md](MOC-01-entry-anchor.md) |
 | binding_carrier | [../POC-02-manifest-binding-carrier.md](../POC-02-manifest-binding-carrier.md) |
 
-### Registry (portfolio scope — Wave 2)
+### Registry (portfolio scope)
 
 | Zone role | Target |
 |-----------|--------|
-| portfolio_catalog | `../../POC-02-registry-facet/` *(planned Wave 2)* |
+| portfolio_catalog | [../../../POC-02-registry-facet/](../../../POC-02-registry-facet/) |
+| catalog_aggregate | [../../../POC-02-registry-facet/ROC-01-catalog-aggregate.md](../../../POC-02-registry-facet/ROC-01-catalog-aggregate.md) |
+
+### Surface read bind (per-project)
+
+| Zone role | Target |
+|-----------|--------|
+| read_convergence | [../surface/SOC-01-read-convergence-point.md](../surface/SOC-01-read-convergence-point.md) |
 
 ---
 

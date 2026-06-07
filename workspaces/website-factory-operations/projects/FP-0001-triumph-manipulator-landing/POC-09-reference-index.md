@@ -23,13 +23,15 @@ Locator + role label only. **Never embeds external bodies** (RR-01…RR-04, P8).
 
 ## Topology index loci (substrate targets)
 
-Declared targets for MOC-08 topology map. **Loci declared; bodies deferred to Wave 2** where noted.
+Declared targets for MOC-08 topology map.
 
 | Role | Target locus | Materialization |
 |------|--------------|-----------------|
-| state_index | `POC-03-state-index.md` *(planned)* | Wave 2 — index scaffold |
-| gate_outcome_index | `POC-04-gate-index.md` *(planned)* | Wave 2 — index scaffold |
-| handoff_event_index | `POC-05-handoff-index.md` *(planned)* | Wave 2 — index scaffold |
+| state_index | [POC-03-state-index.md](POC-03-state-index.md) | **present** — empty shell |
+| gate_outcome_index | [POC-04-gate-index.md](POC-04-gate-index.md) | **present** — empty shell |
+| handoff_event_index | [POC-05-handoff-index.md](POC-05-handoff-index.md) | **present** — empty shell |
+| surface_read | [surface/SOC-01-read-convergence-point.md](surface/SOC-01-read-convergence-point.md) | **present** — Wave 2 |
+| portfolio_registry | [../../POC-02-registry-facet/ROC-01-catalog-aggregate.md](../../POC-02-registry-facet/ROC-01-catalog-aggregate.md) | **present** — Wave 2 |
 | declaration_records | `POC-06-declarations/` *(planned)* | Wave 3 — Playbook 04 |
 | progression_ledger | `POC-07-ledger.md` *(planned)* | Wave 3 — Playbook 04 |
 | closure_metadata | `POC-08-closure.md` *(planned)* | Wave 3 — Playbook 05 |
