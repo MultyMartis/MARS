@@ -96,9 +96,12 @@
 | **Mock E2E Flow** | **IMPLEMENTED** — [EAR-MOCK-E2E-FLOW-v1.md](EAR-MOCK-E2E-FLOW-v1.md) |
 | **Mock E2E Readiness Review** | **DONE** — [EAR-MOCK-E2E-READINESS-REVIEW-v1.md](EAR-MOCK-E2E-READINESS-REVIEW-v1.md) ([EAR-MOCK-E2E-READINESS-DECISION-v1.md](EAR-MOCK-E2E-READINESS-DECISION-v1.md) **READY FOR SITE-001 DRY-RUN PLANNING WITH NOTES**) |
 | **EAR Stable Baseline 2026-06** | **FROZEN** — [EAR-STABLE-BASELINE-2026-06.md](EAR-STABLE-BASELINE-2026-06.md) — pre-live foundation freeze |
-| **SITE-001 dry-run planning** | **AUTHORIZED** — planning artefacts only; live execution **NOT AUTHORIZED** |
-| **Current focus** | SITE-001 dry-run plan authoring; negative-path E2E fixtures |
-| **Next** | Optional `--mock-e2e` CLI; Store placement mock adapter; real R5 assessors + R4 Store adapter (human gates) |
+| **SITE-001 Dry Run Plan** | **DONE** — [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) — operator procedure; planning complete |
+| **Execution Authorization Review** | **DONE** — [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md) ([EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) **AUTHORIZED WITH NOTES**) |
+| **SITE-001 dry-run execution (HG-0)** | **AUTHORIZED WITH NOTES** — mock/in-memory path only; human sign-off pending |
+| **SITE-001 dry-run executed** | **NO** — 0 operator dry runs completed |
+| **Current focus** | SITE-001 Dry Run operator rehearsal per plan §4 |
+| **Next** | Execute dry run; Dry Run Completion Review; optional `--mock-e2e` CLI; real R5 assessors + R4 Store adapter (human gates); HG-4 live pilot input review after dry run |
 
 ---
 
@@ -238,6 +241,9 @@
 | 130 | [EAR-MOCK-E2E-READINESS-REVIEW-v1.md](EAR-MOCK-E2E-READINESS-REVIEW-v1.md) | Mock E2E readiness review (**DONE**, no implementation) |
 | 131 | [EAR-MOCK-E2E-READINESS-DECISION-v1.md](EAR-MOCK-E2E-READINESS-DECISION-v1.md) | Mock E2E gate — **READY FOR SITE-001 DRY-RUN PLANNING WITH NOTES** |
 | 132 | [EAR-STABLE-BASELINE-2026-06.md](EAR-STABLE-BASELINE-2026-06.md) | **Stable baseline freeze** — pre-live architecture + runtime foundation; Mock E2E PASS ≠ live readiness |
+| 133 | [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) | **SITE-001 Dry Run Plan** — operator procedure; mock/in-memory only |
+| 134 | [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md) | Execution Authorization Review (**DONE**, no implementation) |
+| 135 | [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) | HG-0 gate — **AUTHORIZED WITH NOTES** for dry-run execution |
 
 **Before any implementation:** read architecture freeze [shared/external-access-runtime/freeze/EAR-RUNTIME-TRANSITION-v1/](../../shared/external-access-runtime/freeze/EAR-RUNTIME-TRANSITION-v1/) and [EAR-RUNTIME-BOUNDARY-v1.md](../../shared/external-access-runtime/EAR-RUNTIME-BOUNDARY-v1.md).
 
@@ -327,7 +333,9 @@ Runtime project index: [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md)
 | **R4.8 Publish Boundary Review** | **DONE** — [R4.8-PUBLISH-BOUNDARY-REVIEW-v1.md](R4.8-PUBLISH-BOUNDARY-REVIEW-v1.md) |
 | **R4 Readiness Review** | **DONE** — [R4-READINESS-REVIEW-v1.md](R4-READINESS-REVIEW-v1.md) |
 | **Mock E2E Readiness Review** | **DONE** — [EAR-MOCK-E2E-READINESS-REVIEW-v1.md](EAR-MOCK-E2E-READINESS-REVIEW-v1.md) (**READY FOR SITE-001 DRY-RUN PLANNING WITH NOTES**) |
-| **Next** | SITE-001 dry-run plan; negative-path E2E fixtures; real R5 assessors; R4 Store adapter (human gates) |
+| **SITE-001 Dry Run Plan** | **DONE** — [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) |
+| **Execution Authorization Review** | **DONE** — [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md) (**AUTHORIZED WITH NOTES**) |
+| **Next** | SITE-001 Dry Run execution; Dry Run Completion Review; HG-4 live pilot input review |
 
 ---
 

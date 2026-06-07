@@ -1,7 +1,7 @@
 # EAR Runtime State
 
 **Type:** Honest program status — update on charter or implementation milestones  
-**Last updated:** 2026-06-07 (EAR Stable Baseline 2026-06 freeze)
+**Last updated:** 2026-06-07 (Execution Authorization Review — SITE-001 dry-run execution gate)
 
 ---
 
@@ -101,7 +101,11 @@
 | **Mock E2E Flow** | **IMPLEMENTED** — [EAR-MOCK-E2E-FLOW-v1.md](EAR-MOCK-E2E-FLOW-v1.md); `ear_mock_e2e_engine.py`; in-memory only |
 | **Mock E2E Readiness Review** | **COMPLETE** — [EAR-MOCK-E2E-READINESS-REVIEW-v1.md](EAR-MOCK-E2E-READINESS-REVIEW-v1.md); [EAR-MOCK-E2E-READINESS-DECISION-v1.md](EAR-MOCK-E2E-READINESS-DECISION-v1.md) (**READY FOR SITE-001 DRY-RUN PLANNING WITH NOTES**) |
 | **EAR Stable Baseline 2026-06** | **FROZEN** — [EAR-STABLE-BASELINE-2026-06.md](EAR-STABLE-BASELINE-2026-06.md) — pre-live foundation freeze; Mock E2E PASS ≠ live readiness |
-| **SITE-001 dry-run planning** | **AUTHORIZED** — planning artefacts only; **not** live execution |
+| **SITE-001 Dry Run Plan** | **DONE** — [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) — planning artefact only |
+| **SITE-001 dry-run planning** | **COMPLETE** — plan published |
+| **Execution Authorization Review** | **COMPLETE** — [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md); [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) (**AUTHORIZED WITH NOTES**) |
+| **SITE-001 dry-run execution (HG-0)** | **AUTHORIZED WITH NOTES** — mock/in-memory path only; human sign-off pending on decision |
+| **SITE-001 dry-run executed** | **NO** — 0 operator dry runs completed |
 | **Config loader** | **CREATED** |
 | **Connection Layer** | **CREATED** |
 | **Listing Model** | **CREATED** |
@@ -151,6 +155,7 @@
 | R1 Implementation Readiness Review | **YES** | [R1-IMPLEMENTATION-READINESS-REVIEW-v1.md](R1-IMPLEMENTATION-READINESS-REVIEW-v1.md) — **CONDITIONAL GO** 2026-06-02 |
 | R1 Implementation Charter | **YES** | [R1-IMPLEMENTATION-CHARTER-v1.md](R1-IMPLEMENTATION-CHARTER-v1.md) — **IMPLEMENTATION CHARTERED** 2026-06-02; human approval pending |
 | R1 Implementation human approval | **NO** (R1.1/R1.2 executed under implicit pass — reconciled) | [R1-IMPLEMENTATION-DECISION-v1.md](R1-IMPLEMENTATION-DECISION-v1.md); [R1-GATE-RECONCILIATION-v1.md](R1-GATE-RECONCILIATION-v1.md) |
+| **SITE-001 Dry Run Execution Authorization (HG-0)** | **YES WITH NOTES** | [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) — mock/in-memory only; **≠** live pilot |
 | PILOT-001 Execution Authorization | **NO** | Architecture: Execution **NOT AUTHORIZED** |
 
 **Program STARTED when:** human-approved Engineering Charter exists, references freeze, names ≥1 backlog item in scope, and this file is updated. **Satisfied 2026-06-02.**
@@ -367,3 +372,5 @@ Runtime pilot artefacts folder: [pilots/](pilots/) — empty at engineering char
 | 2026-06-07 | Mock E2E Flow v1 — **DONE**; [EAR-MOCK-E2E-FLOW-v1.md](EAR-MOCK-E2E-FLOW-v1.md); `ear_mock_e2e_engine.py`; Config → Evidence → Snapshot → Validate → Publish in-memory; verification **PASS** on `sample-r1-site-001.json`; no network, no Store writes |
 | 2026-06-07 | Mock E2E Readiness Review v1 — **DONE**; [EAR-MOCK-E2E-READINESS-REVIEW-v1.md](EAR-MOCK-E2E-READINESS-REVIEW-v1.md); [EAR-MOCK-E2E-READINESS-DECISION-v1.md](EAR-MOCK-E2E-READINESS-DECISION-v1.md) — **READY FOR SITE-001 DRY-RUN PLANNING WITH NOTES**; PILOT-001 execution **NOT AUTHORIZED** |
 | 2026-06-07 | EAR Stable Baseline 2026-06 — **FROZEN**; [EAR-STABLE-BASELINE-2026-06.md](EAR-STABLE-BASELINE-2026-06.md) — architecture + runtime foundation freeze point; Mock E2E PASS ≠ live readiness; next phase SITE-001 dry-run planning |
+| 2026-06-07 | SITE-001 Dry Run Plan v1 — **DONE**; [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) — operator procedure plan; mock/in-memory path only; dry-run execution **NOT AUTHORIZED** at plan publication; PILOT-001 **NOT AUTHORIZED** |
+| 2026-06-07 | Execution Authorization Review v1 — **DONE**; [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md); [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) — **AUTHORIZED WITH NOTES** for SITE-001 dry-run execution (HG-0); mock/in-memory only; PILOT-001 **NOT AUTHORIZED**; next **SITE-001 Dry Run (operator rehearsal)** |
