@@ -58,4 +58,14 @@ Populated per [WEBSITE-FACTORY-ATLAS-ADOPTION-STATEMENT-v1.md](../../../../websi
 
 ---
 
-*Category 7 locators. Closure ref to POC-08 optional — not present at Wave 1.*
+## Factory closure ref
+
+| Field | Value |
+|-------|-------|
+| factory_closure_ref | [../POC-08-closure.md](../POC-08-closure.md) |
+| closure_class | Partial — FACTORY_TRACK_CLOSED_PARTIAL |
+| atlas_ownership | **unchanged** — refs above preserved |
+
+---
+
+*Category 7 locators. ATLAS refs are pointers only — no population writes.*

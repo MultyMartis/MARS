@@ -4,7 +4,7 @@
 **Record plane:** RT-G04 Persistence Substrate  
 **LOC-HOME:** `projects/FP-0001-triumph-manipulator-landing/`  
 **Created:** 2026-06-07  
-**Wave:** 2 — index scaffold only  
+**Wave:** 3 — populated posture (no handoff events in MVP partial path)  
 
 ---
 
@@ -12,9 +12,10 @@
 
 | Field | Value |
 |-------|-------|
-| index_status | **empty shell** — Wave 2 scaffold |
+| index_status | **populated** — no handoff event rows |
 | handoff_event_count | **0** |
-| write_authority | Playbook 04 only — **no Wave 2 population** |
+| mvp_path_note | No handoff declarations in minimum valid partial-closure path at NEW_PROJECT |
+| write_authority | Playbook 04 only |
 
 ---
 
@@ -22,7 +23,7 @@
 
 | Event ID | Type | Date | Package ref |
 |----------|------|------|-------------|
-| — | — | — | *empty — no handoff events at Wave 2* |
+| — | — | — | *no handoff events — honest MVP partial path* |
 
 ---
 
@@ -32,4 +33,4 @@ Records **events and refs**, not handoff payloads. Surface read layer **must not
 
 ---
 
-*Empty shell only. No handoff history at Wave 2 gate.*
+*Populated index with zero rows — valid for partial closure at intake boundary without fabricated handoff history.*

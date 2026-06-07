@@ -4,7 +4,7 @@
 **Record plane:** RT-G04 Persistence Substrate  
 **LOC-HOME:** `projects/FP-0001-triumph-manipulator-landing/`  
 **Created:** 2026-06-07  
-**Wave:** 2 — index scaffold only  
+**Wave:** 3 — populated via Playbook 04  
 
 ---
 
@@ -12,23 +12,26 @@
 
 | Field | Value |
 |-------|-------|
-| index_status | **empty shell** — Wave 2 scaffold |
+| index_status | **populated** |
 | active_state_category | **NEW_PROJECT** |
-| lifecycle_segment | *not populated* |
+| lifecycle_segment | **LC-00** — intake |
+| factory_track_status | **FACTORY_TRACK_CLOSED_PARTIAL** |
 | invalid_active_flag | **no** |
-| write_authority | Playbook 04 only — **no Wave 2 population** |
+| halt_flag | **no** |
+| suspension_flag | **no** |
+| write_authority | Playbook 04 only |
 
 ---
 
 ## Active state instance
 
-*No Playbook 04 declarations yet. Empty-allowed signal valid at NEW_PROJECT (W2-SCOPE-02).*
-
 | Field | Value |
 |-------|-------|
-| active_state_code | **NEW_PROJECT** *(orientation from MOC-04 — not authoritative until Playbook 04)* |
-| declared_by | *none — Wave 3* |
-| last_declaration_ref | *none* |
+| active_state_code | **NEW_PROJECT** |
+| declared_by | Factory program operator |
+| last_declaration_ref | [DEC-0002](POC-06-declarations/DEC-0002-closure-declaration-partial.md) |
+| closure_record_ref | [POC-08-closure.md](POC-08-closure.md) |
+| closure_declaration_ref | [DEC-0002](POC-06-declarations/DEC-0002-closure-declaration-partial.md) |
 
 ---
 
@@ -36,14 +39,16 @@
 
 | Event | Date | State | Declaration ref |
 |-------|------|-------|-----------------|
-| — | — | — | *empty — no history at Wave 2* |
+| Wave 2 scaffold | 2026-06-07 | NEW_PROJECT | *empty shell — orientation only* |
+| LED-0001 | 2026-06-07 | NEW_PROJECT | [DEC-0001](POC-06-declarations/DEC-0001-lifecycle-interpretation-mvp-readiness.md) |
+| LED-0002 | 2026-06-07 | NEW_PROJECT + FACTORY_TRACK_CLOSED_PARTIAL | [DEC-0002](POC-06-declarations/DEC-0002-closure-declaration-partial.md) |
 
 ---
 
 ## Manifest alignment note
 
-MOC-04 declares intake_state_category **NEW_PROJECT**. POC-03 authoritative active state **awaits** first Playbook 04 act (Wave 3).
+MOC-04 partial endpoint **NEW_PROJECT** acknowledged per D-W3-01. Active state **not** progressed through LC-13 chain — partial closure at MVP demonstration boundary only.
 
 ---
 
-*Empty shell only. Playbook 04 owns mutations. No tracking history at Wave 2 gate.*
+*Authoritative active state. Last Playbook 04 act wins (INT-03). No fabricated progression history.*

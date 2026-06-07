@@ -14,13 +14,13 @@ Declares **where** authoritative truths live. **Never embeds bodies** (MOC-RULE-
 
 | Zone role | Target locus | Materialization | Authority |
 |-----------|--------------|-----------------|-----------|
-| active_state | [../POC-03-state-index.md](../POC-03-state-index.md) | **present** — empty shell | Playbook 04 |
-| gate_outcomes | [../POC-04-gate-index.md](../POC-04-gate-index.md) | **present** — empty shell | Playbook 04 |
-| handoff_events | [../POC-05-handoff-index.md](../POC-05-handoff-index.md) | **present** — empty shell | Playbook 04 |
-| declarations | `../POC-06-declarations/` | Wave 3 | Playbook 04 |
-| progression_ledger | `../POC-07-ledger.md` | Wave 3 | Playbook 04 |
-| closure | `../POC-08-closure.md` | Wave 3 | Playbook 05 |
-| audit_recency | `../POC-10-audit.md` | Wave 3 | Playbook 04 |
+| active_state | [../POC-03-state-index.md](../POC-03-state-index.md) | **present** — populated | Playbook 04 |
+| gate_outcomes | [../POC-04-gate-index.md](../POC-04-gate-index.md) | **present** — populated (0 rows) | Playbook 04 |
+| handoff_events | [../POC-05-handoff-index.md](../POC-05-handoff-index.md) | **present** — populated (0 rows) | Playbook 04 |
+| declarations | [../POC-06-declarations/](../POC-06-declarations/) | **present** — 2 records | Playbook 04 |
+| progression_ledger | [../POC-07-ledger.md](../POC-07-ledger.md) | **present** — 2 entries | Playbook 04 |
+| closure | [../POC-08-closure.md](../POC-08-closure.md) | **present** — partial | Playbook 05 |
+| audit_recency | [../POC-10-audit.md](../POC-10-audit.md) | **present** | Playbook 04 |
 
 *Targets declared per OBL-M-SUB-04 — empty/non-existent loci valid at NEW_PROJECT.*
 

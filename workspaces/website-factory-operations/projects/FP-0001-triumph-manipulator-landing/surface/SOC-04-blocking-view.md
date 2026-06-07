@@ -3,7 +3,7 @@
 **Class:** SOC-04  
 **Record plane:** RT-G12 Tracking Surface  
 **Question:** What is blocked?  
-**Created:** 2026-06-07  
+**Refreshed:** 2026-06-07 — Wave 3  
 
 ---
 
@@ -11,10 +11,11 @@
 
 | Field | Value |
 |-------|-------|
-| open_gate_blockers | **none** *(empty index)* |
-| open_handoff_blockers | **none** *(empty index)* |
+| open_gate_blockers | **none** — 0 gate outcomes indexed |
+| open_handoff_blockers | **none** — 0 handoff events indexed |
 | halt_active | **no** |
-| eligibility_snapshot | **eligible for first Playbook 04 declaration** *(derived — no gates recorded)* |
+| factory_track_closed | **yes** — FACTORY_TRACK_CLOSED_PARTIAL |
+| forward_progression_eligible | **no** — partial closure; not suspended |
 
 ---
 
@@ -22,15 +23,16 @@
 
 | Source | Locator | Status |
 |--------|---------|--------|
-| POC-03 | [../POC-03-state-index.md](../POC-03-state-index.md) | NEW_PROJECT — no halt |
-| POC-04 | [../POC-04-gate-index.md](../POC-04-gate-index.md) | empty — 0 outcomes |
-| POC-05 | [../POC-05-handoff-index.md](../POC-05-handoff-index.md) | empty — 0 events |
+| POC-03 | [../POC-03-state-index.md](../POC-03-state-index.md) | FACTORY_TRACK_CLOSED_PARTIAL |
+| POC-04 | [../POC-04-gate-index.md](../POC-04-gate-index.md) | 0 outcomes |
+| POC-05 | [../POC-05-handoff-index.md](../POC-05-handoff-index.md) | 0 events |
+| POC-08 | [../POC-08-closure.md](../POC-08-closure.md) | partial closure |
 
 ---
 
-## Empty-allowed signal
+## Interpretation note
 
-No blocking rows at Wave 2 — **valid** at NEW_PROJECT with empty indexes. Blocking depth increases after Playbook 04 population (Wave 3).
+No gate/handoff blockers indexed. Factory track **closed partial** — forward progression declarations **deferred** by closure class, not by open blocker.
 
 ---
 

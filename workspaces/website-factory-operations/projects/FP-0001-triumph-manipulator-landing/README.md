@@ -25,6 +25,10 @@
 | POC-03 State index | [POC-03-state-index.md](POC-03-state-index.md) |
 | POC-04 Gate index | [POC-04-gate-index.md](POC-04-gate-index.md) |
 | POC-05 Handoff index | [POC-05-handoff-index.md](POC-05-handoff-index.md) |
+| POC-06 Declarations | [POC-06-declarations/](POC-06-declarations/) |
+| POC-07 Progression ledger | [POC-07-ledger.md](POC-07-ledger.md) |
+| POC-08 Closure | [POC-08-closure.md](POC-08-closure.md) |
+| POC-10 Audit recency | [POC-10-audit.md](POC-10-audit.md) |
 | POC-09 Reference index | [POC-09-reference-index.md](POC-09-reference-index.md) |
 | MOC-* (manifest content) | [manifest/](manifest/) |
 | SOC-* (surface read bind) | [surface/](surface/) |
@@ -40,6 +44,16 @@
 | atlas_website_ref | WEB-0009 |
 
 Full refs: [manifest/MOC-12-external-refs.md](manifest/MOC-12-external-refs.md)
+
+---
+
+## Wave 3 status
+
+| Field | Value |
+|-------|-------|
+| factory_track_status | **FACTORY_TRACK_CLOSED_PARTIAL** |
+| closure_class | Partial — D-W3-01 |
+| capabilities | C6, C7 **proven** |
 
 ---
 

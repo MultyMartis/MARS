@@ -4,7 +4,7 @@
 **Path:** `workspaces/website-factory-operations/`  
 **Authority:** RT-G04 Physical Artifact Specification v1 (DF-03)  
 **Created:** 2026-06-07  
-**Wave:** 1 complete — Wave 2 complete (C4 + C5 scaffold)  
+**Wave:** 1 complete — Wave 2 complete — Wave 3 complete (C2–C7 proven on FP-0001)  
 
 ---
 
@@ -40,9 +40,9 @@ Bounded Factory Source-of-Truth filesystem root. All Factory structured records 
 |------|-------|--------|
 | Wave 1 | RT-G04 substrate + RT-G10 manifest (FP-0001) | **complete** — C2, C3 |
 | Wave 2 | RT-G05 registry + RT-G04 index scaffold + RT-G12 surface | **complete** — C4, C5 scaffold |
-| Wave 3 | Playbook 04/05 population, POC-06/07/08/10 | **not started** — C6, C7 |
+| Wave 3 | Playbook 03↔04→05 population, POC-06/07/08/10 | **complete** — C6, C7 |
 
-**Deferred (Wave 3+):** POC-06, POC-07, POC-08, POC-10 population; Playbook 04/05 acts.
+**Pilot closure:** FP-0001 — **FACTORY_TRACK_CLOSED_PARTIAL** (D-W3-01). See [WAVE-3-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md](WAVE-3-PHYSICAL-ARTIFACT-CREATION-EXECUTION-v1.md).
 
 ---
 

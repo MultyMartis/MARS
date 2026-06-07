@@ -36,7 +36,9 @@
 | Physical manifest bind | 2026-06-07 | Wave 1 bootstrap |
 | Playbook 02 registry-enrolled | 2026-06-07 | Doctrinal — attested in ROC-09 |
 | Physical catalog bind | 2026-06-07 | Wave 2 — REG-0001 |
+| Playbook 04 declaration population | 2026-06-07 | Wave 3 — DEC-0001, DEC-0002 |
+| Playbook 05 partial closure | 2026-06-07 | Wave 3 — POC-08 FACTORY_TRACK_CLOSED_PARTIAL |
 
 ---
 
-*Identity shell only. Manifest categories → MOC-*. Tracking state → POC-03…07 (Wave 2+).*
+*Identity shell only. Manifest categories → MOC-*. Tracking state → POC-03…10. Closure → POC-08.*

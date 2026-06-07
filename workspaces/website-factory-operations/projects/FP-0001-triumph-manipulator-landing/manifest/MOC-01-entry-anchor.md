@@ -40,14 +40,15 @@ Hosted within [POC-02 manifest facet](../POC-02-manifest-binding-carrier.md) at 
 
 ---
 
-## Wave 1 posture
+## Capability posture (post Wave 3)
 
 | Capability | Status |
 |------------|--------|
 | C3 Manifest persistence | **bound** — MRDY categories present |
 | C4 Registry visibility | **bound** — ROC-01, REG-0001 |
-| C5 Surface visibility | **bound** — SOC-01…08 scaffold |
-| C6/C7 Tracking & closure | **not yet** — Wave 3 |
+| C5 Surface visibility | **bound** — SOC-01…08 with declaration depth |
+| C6 Manual declarations | **proven** — Playbook 04 population |
+| C7 Closure persistence | **proven** — POC-08 partial closure |
 
 ---
 

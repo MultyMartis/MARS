@@ -41,13 +41,13 @@ Compose from bound POC/MOC data — **no second live gate/handoff SoT** (SOC-RUL
 
 ---
 
-## Wave 2 posture
+## Wave 3 posture
 
 | Capability | Status |
 |------------|--------|
-| C5 Tracking visibility scaffold | **bound** — eight questions answerable with empty-allowed signals |
-| C6 Manual declarations | **not yet** — Wave 3 |
-| C7 Closure persistence | **not yet** — Wave 3 |
+| C5 Tracking visibility | **bound** — eight questions answerable with declaration depth |
+| C6 Manual declarations | **proven** — POC-06/07, populated POC-03…05, POC-10 |
+| C7 Closure persistence | **proven** — POC-08 partial closure (FACTORY_TRACK_CLOSED_PARTIAL) |
 
 ---
 

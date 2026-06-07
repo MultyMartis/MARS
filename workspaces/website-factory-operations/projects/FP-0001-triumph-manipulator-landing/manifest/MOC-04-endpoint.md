@@ -12,7 +12,9 @@
 |-------|-------|
 | declared_endpoint_category | **factory_terminal_closure** |
 | endpoint_description | Factory Project reaches Playbook 05 closure with persisted POC-08 metadata |
-| partial_endpoint_acknowledged | **no** — full Factory chain is default intent |
+| partial_endpoint_acknowledged | **yes** — D-W3-01 PARTIAL CLOSURE authorized for MVP |
+| mvp_partial_endpoint_state | **NEW_PROJECT** |
+| mvp_partial_endpoint_rationale | Factory MVP demonstrates C6/C7 at enrollment-complete boundary — not full LC-13 |
 
 ---
 
@@ -31,9 +33,11 @@
 | Category | Value |
 |----------|-------|
 | intake_state_category | **NEW_PROJECT** |
-| progression_authority | Playbook 04 declarations (not yet started — Wave 3) |
+| factory_track_status | **FACTORY_TRACK_CLOSED_PARTIAL** |
+| closure_record | [../POC-08-closure.md](../POC-08-closure.md) |
+| progression_authority | Playbook 04 — partial closure complete for MVP scope |
 
-*Live state truth will reside in POC-03 when index scaffold exists (Wave 2).*
+*Live state truth in POC-03. Partial closure — not LC-13 COMPLETE.*
 
 ---
 

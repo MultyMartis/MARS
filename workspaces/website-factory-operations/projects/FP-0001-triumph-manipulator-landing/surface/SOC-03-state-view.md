@@ -3,7 +3,7 @@
 **Class:** SOC-03  
 **Record plane:** RT-G12 Tracking Surface  
 **Question:** Where is it now?  
-**Created:** 2026-06-07  
+**Refreshed:** 2026-06-07 — Wave 3  
 
 ---
 
@@ -11,11 +11,13 @@
 
 | Field | Value | Authority |
 |-------|-------|-----------|
-| active_state_signal | **NEW_PROJECT** | POC-03 *(empty shell — empty-allowed)* |
-| lifecycle_segment | *not declared* | POC-03 — awaiting Playbook 04 |
-| halt_flag | **no** | POC-03 — no halt declared |
-| suspension_flag | **no** | POC-03 — no suspension declared |
+| active_state_signal | **NEW_PROJECT** | POC-03 |
+| lifecycle_segment | **LC-00** — intake | POC-03 |
+| factory_track_status | **FACTORY_TRACK_CLOSED_PARTIAL** | POC-03 |
+| halt_flag | **no** | POC-03 |
+| suspension_flag | **no** | POC-03 |
 | invalid_active_flag | **no** | POC-03 |
+| closure_persisted | **yes** — partial | POC-08 |
 
 ---
 
@@ -23,14 +25,15 @@
 
 | Source | Locator | Status |
 |--------|---------|--------|
-| POC-03 state index | [../POC-03-state-index.md](../POC-03-state-index.md) | empty shell — NEW_PROJECT posture |
-| MOC-04 endpoint orientation | [../manifest/MOC-04-endpoint.md](../manifest/MOC-04-endpoint.md) | intake NEW_PROJECT noted |
+| POC-03 state index | [../POC-03-state-index.md](../POC-03-state-index.md) | populated |
+| POC-08 closure | [../POC-08-closure.md](../POC-08-closure.md) | partial closure persisted |
+| MOC-04 endpoint | [../manifest/MOC-04-endpoint.md](../manifest/MOC-04-endpoint.md) | partial endpoint NEW_PROJECT |
 
 ---
 
-## Empty-allowed signal (W2-SCOPE-02)
+## Interpretation note
 
-At Wave 2 gate, POC-03 is an **empty shell**. Orientation category **NEW_PROJECT** is visible from scaffold posture — authoritative active state **awaits** Playbook 04 (Wave 3).
+Active state remains **NEW_PROJECT** — Factory track closed partial per D-W3-01. **Not** `COMPLETE`. **Not** LC-13 terminal.
 
 ---
 

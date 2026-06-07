@@ -4,7 +4,7 @@
 **Record plane:** RT-G04 Persistence Substrate  
 **LOC-HOME:** `projects/FP-0001-triumph-manipulator-landing/`  
 **Created:** 2026-06-07  
-**Wave:** 2 — index scaffold only  
+**Wave:** 3 — populated posture (no gate events in MVP partial path)  
 
 ---
 
@@ -12,9 +12,10 @@
 
 | Field | Value |
 |-------|-------|
-| index_status | **empty shell** — Wave 2 scaffold |
+| index_status | **populated** — no gate outcome rows |
 | gate_outcome_count | **0** |
-| write_authority | Playbook 04 only — **no Wave 2 population** |
+| mvp_path_note | No gate declarations in minimum valid partial-closure path at NEW_PROJECT |
+| write_authority | Playbook 04 only |
 
 ---
 
@@ -22,7 +23,7 @@
 
 | Gate ID | Outcome | Date | Declaration ref |
 |---------|---------|------|-----------------|
-| — | — | — | *empty — no gate outcomes at Wave 2* |
+| — | — | — | *no gate outcomes — honest MVP partial path* |
 
 ---
 
@@ -32,4 +33,4 @@ Records **outcomes** (PASS/FAIL/BLOCKED observed), not gate criteria definitions
 
 ---
 
-*Empty shell only. No gate history at Wave 2 gate.*
+*Populated index with zero rows — valid for partial closure at intake boundary without fabricated gate history.*
