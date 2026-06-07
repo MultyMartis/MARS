@@ -149,6 +149,10 @@ workspaces/website-factory-reference-v1/*
 workspaces/_template-client-v1/*
 !workspaces/_template-client-v1/**
 
+# Website Factory — authorized operational records zone (DF-03; Factory SoT)
+!workspaces/website-factory-operations/
+!workspaces/website-factory-operations/**
+
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/
 

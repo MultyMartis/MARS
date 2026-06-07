@@ -1,0 +1,52 @@
+# MOC-01 — Manifest Entry Anchor
+
+**Class:** MOC-01  
+**Record plane:** RT-G10 Manifest  
+**Factory Project:** FP-0001  
+**Status:** **START HERE** — canonical per-project entry anchor (MRDY-06, C3)  
+
+---
+
+## Operator orientation
+
+This is the **single canonical entry anchor** for Factory Project **FP-0001 — Triumph Manipulator Landing**.
+
+From this locus you can reach minimum understanding categories without monorepo archaeology.
+
+---
+
+## Quick navigation
+
+| Need | Go to |
+|------|-------|
+| Factory identity | [MOC-02-identity.md](MOC-02-identity.md) |
+| Production scope | [MOC-03-scope.md](MOC-03-scope.md) |
+| Lifecycle endpoint | [MOC-04-endpoint.md](MOC-04-endpoint.md) |
+| Applicability doctrine | [MOC-05-applicability.md](MOC-05-applicability.md) |
+| Site classification | [MOC-06-classification.md](MOC-06-classification.md) |
+| Topology map | [MOC-08-topology.md](MOC-08-topology.md) |
+| Enrollment bind | [MOC-10-enrollment.md](MOC-10-enrollment.md) |
+| ATLAS & external refs | [MOC-12-external-refs.md](MOC-12-external-refs.md) |
+| Substrate identity shell | [../POC-01-identity.md](../POC-01-identity.md) |
+| External workspace | `projects/triumph-manipulator-landing/` |
+
+---
+
+## Manifest binding carrier
+
+Hosted within [POC-02 manifest facet](../POC-02-manifest-binding-carrier.md) at LOC-HOME `projects/FP-0001-triumph-manipulator-landing/`.
+
+---
+
+## Wave 1 posture
+
+| Capability | Status |
+|------------|--------|
+| C3 Manifest persistence | **bound** — MRDY categories present |
+| C4 Registry visibility | **not yet** — Wave 2 |
+| C5 Surface visibility | **not yet** — Wave 2 |
+| C6/C7 Tracking & closure | **not yet** — Wave 3 |
+
+---
+
+*Exactly one MOC-01 per Factory Project identity (MOC-RULE-01).*
