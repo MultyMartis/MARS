@@ -20,7 +20,11 @@
 | [models/](models/README.md) | Model layer patterns |
 | [seo-url/](seo-url/README.md) | SEO URL / routing behavior |
 
----
+### Active inspection rules
+
+| Document | Scope |
+|----------|-------|
+| [OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md](OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md) | Controller + DB meta generator audit — SITE-001, BZPM, future OpenCart sites |
 
 ## Relation to baselines
 

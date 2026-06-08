@@ -48,6 +48,28 @@
 
 | 4.99 | **SITE-001 Audit Charter** | **DONE** | [sites/site-001/AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md), [sites/site-001/materials/INTAKE-COMPLETE.md](sites/site-001/materials/INTAKE-COMPLETE.md), [intake-readiness-review.md](intake-readiness-review.md) |
 
+| 4.100 | **SITE-001 Phase 1 — Brand Replacement Authorization** | **DONE** (decision: **NOT AUTHORIZED** — superseded for planning by Run 4.101) | [sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-REVIEW-v1.md](sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-REVIEW-v1.md), [sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-DECISION-v1.md](sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.101 | **SITE-001 W1 Pre-Execution Package** | **DONE** (authorization: **AUTHORIZED WITH NOTES**; W1A gates closed 2026-06-08) | [sites/site-001/reports/SITE-001-W1-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W1-WRITE-CHARTER-v1.md), [sites/site-001/reports/SITE-001-W1-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W1-CHANGE-REQUEST-v1.md), [sites/site-001/reports/SITE-001-W1-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W1-ROLLBACK-PLAN-v1.md), [sites/site-001/reports/SITE-001-W1-BACKUP-PROCEDURE-v1.md](sites/site-001/reports/SITE-001-W1-BACKUP-PROCEDURE-v1.md), [sites/site-001/reports/SITE-001-W1-EXECUTION-AUTHORIZATION-v1.md](sites/site-001/reports/SITE-001-W1-EXECUTION-AUTHORIZATION-v1.md), [sites/site-001/reports/SITE-001-W1-EXECUTION-PACK-v1.md](sites/site-001/reports/SITE-001-W1-EXECUTION-PACK-v1.md), [sites/site-001/reports/SITE-001-W1A-EXECUTION-SPEC-v1.md](sites/site-001/reports/SITE-001-W1A-EXECUTION-SPEC-v1.md), [sites/site-001/reports/SITE-001-W1A-AUTHORIZATION-REVIEW-v1.md](sites/site-001/reports/SITE-001-W1A-AUTHORIZATION-REVIEW-v1.md), [sites/site-001/project-access-brief.md](sites/site-001/project-access-brief.md) |
+
+| 4.102 | **SITE-001 W1A — Store Settings Execution** | **DONE** (2026-06-08; verdict: **PASS WITH NOTES**) | [sites/site-001/reports/SITE-001-W1A-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1A-EXECUTION-v1.md), [sites/site-001/reports/SITE-001-W1A-DECISION-v1.md](sites/site-001/reports/SITE-001-W1A-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.103 | **SITE-001 W1A — Post-Execution Audit** | **DONE** (2026-06-08; verdict: **PASS**) | [sites/site-001/reports/SITE-001-W1A-POST-AUDIT-v1.md](sites/site-001/reports/SITE-001-W1A-POST-AUDIT-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.104 | **SITE-001 W1B — Theme Branding Discovery** | **DONE** (2026-06-08; authorization: **AUTHORIZED WITH NOTES**) | [sites/site-001/reports/SITE-001-W1B-THEME-BRANDING-MAP-v1.md](sites/site-001/reports/SITE-001-W1B-THEME-BRANDING-MAP-v1.md), [sites/site-001/reports/SITE-001-W1B-AUTHORIZATION-REVIEW-v1.md](sites/site-001/reports/SITE-001-W1B-AUTHORIZATION-REVIEW-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.105 | **SITE-001 W1B–W1D — Theme + Controller + Logo Execution** | **DONE** (2026-06-08) | [SITE-001-W1B-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1B-EXECUTION-v1.md), [SITE-001-W1C-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1C-EXECUTION-v1.md), [SITE-001-W1D-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1D-EXECUTION-v1.md) |
+
+| 4.106 | **SITE-001 W1F — Legacy Remediation (C1/B/A)** | **DONE** (2026-06-08; all **PASS WITH NOTES**) | [SITE-001-W1F-LEGACY-SWEEP-v1.md](sites/site-001/reports/SITE-001-W1F-LEGACY-SWEEP-v1.md), [SITE-001-W1F-C1-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1F-C1-EXECUTION-v1.md), [SITE-001-W1F-B-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1F-B-EXECUTION-v1.md), [SITE-001-W1F-A-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1F-A-EXECUTION-v1.md) |
+
+| 4.107 | **SITE-001 Phase 1 — Stable Snapshot + Final Audit** | **DONE** (2026-06-09; interim decision: **PHASE 1 COMPLETE WITH NOTES**) | [SITE-001-PHASE1-STABLE-SNAPSHOT-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-SNAPSHOT-v1.md), [SITE-001-PHASE1-FINAL-AUDIT-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-AUDIT-v1.md), [SITE-001-PHASE1-FINAL-AUDIT-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-AUDIT-DECISION-v1.md), [OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md](knowledge/OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.108 | **SITE-001 W1G — SEO DB Cleanup** | **DONE** (2026-06-09; verdict: **PASS WITH NOTES**) | [SITE-001-W1G-SEO-DB-CLEANUP-v1.md](sites/site-001/reports/SITE-001-W1G-SEO-DB-CLEANUP-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.109 | **SITE-001 Phase 1 — Final Acceptance** | **DONE** (2026-06-09; decision: **PHASE 1 ACCEPTED WITH NOTES**) | [SITE-001-PHASE1-FINAL-ACCEPTANCE-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-ACCEPTANCE-v1.md), [SITE-001-PHASE1-FINAL-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.110 | **SITE-001 Phase 1 — Stable Checkpoint** | **DONE** (2026-06-09; decision: **APPROVED**; status: **ACTIVE**) | [SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md), [SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |
@@ -61,6 +83,8 @@
 **Rule:** Runs **1** through **4.99** marked DONE. Run **5** initialization **done**; execution **paused** pending **External Access Runtime (EAR)** direction — not downgrading readiness.
 
 **First project site:** SITE-001 (`sites/site-001/`) — **READY FOR AUDIT** (unchanged); intake closed Run 4.99. **[AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md)** authorizes read-only Run 5. Run 5 allowed **YES** per [intake-readiness-review.md](intake-readiness-review.md). Run 5 **not executing** until artifact acquisition path defined ([freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md)).
+
+**Phase 1 (SITE-001):** Run **4.100** — initial authorization review (2026-06-07) **NOT AUTHORIZED**. Run **4.101** — W1 pre-execution package **complete** (2026-06-08). Runs **4.102–4.106** — W1A through W1F-A execution **complete** on TEST (2026-06-08). Run **4.107** — Phase 1 stable snapshot + interim final audit **complete** (2026-06-09). Run **4.108** — W1G DB SEO cleanup **complete** (2026-06-09). Run **4.109** — Phase 1 final acceptance **complete** (2026-06-09): decision **[PHASE 1 ACCEPTED WITH NOTES](sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md)**; 13/13 public URLs legacy-clean. Run **4.110** — Phase 1 stable checkpoint **ACTIVE** (2026-06-09): decision **[APPROVED](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md)**; official recovery point before Phase 2. Deferred W1F-D/E (SMTP, `anketa.php`, `backup_yml`). Next: **W1F-D** → **W1F-E** or Phase 2 planning. Program state: [OCPILOT-STATE.md](OCPILOT-STATE.md).
 
 ### Operational lesson (Run 5 initialization)
 
@@ -83,6 +107,103 @@
 ---
 
 
+
+---
+
+## Run 4.110 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md) — official Phase 1 stable checkpoint; recovery point before Phase 2; 13/13 verification summary; rollback + deferred inventory
+- [sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md) — decision **APPROVED**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — Phase 1 Stable Checkpoint marked **ACTIVE**
+- Recommended git tag: `site-001-phase1-stable-2026-06`
+
+**Site modification:** **None** — documentation only.
+
+---
+
+## Run 4.109 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-PHASE1-FINAL-ACCEPTANCE-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-ACCEPTANCE-v1.md) — final acceptance package; 13-URL verification matrix; deferred inventory; production blockers
+- [sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md) — decision **PHASE 1 ACCEPTED WITH NOTES**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — program state updated
+
+**Site modification:** **None** — read-only HTTP verification + documentation only.
+
+---
+
+## Run 4.108 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W1G-SEO-DB-CLEANUP-v1.md](sites/site-001/reports/SITE-001-W1G-SEO-DB-CLEANUP-v1.md) — 206 DB rows updated; `/auto/` remediated; admin `product_form.twig` JS default fixed
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W1G marked **DONE**
+
+**Site modification:** W1G wave only (TEST DB + one admin template) — documented in W1G report; not part of Run 4.109 acceptance run.
+
+---
+
+## Run 4.107 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-PHASE1-STABLE-SNAPSHOT-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-SNAPSHOT-v1.md) — Phase 1 stable checkpoint; waves W1A–W1F-A; rollback + backup status
+- [sites/site-001/reports/SITE-001-PHASE1-FINAL-AUDIT-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-AUDIT-v1.md) — read-only HTTP audit of 14 URLs; controller meta generator table
+- [sites/site-001/reports/SITE-001-PHASE1-FINAL-AUDIT-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-FINAL-AUDIT-DECISION-v1.md) — decision **PHASE 1 COMPLETE WITH NOTES**
+- [knowledge/OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md](knowledge/OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md) — OCPilot inspection rule for controller/DB meta generators
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — program state updated
+
+**Site modification:** **None** — read-only HTTP audit + documentation only.
+
+---
+
+## Run 4.104 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W1B-THEME-BRANDING-MAP-v1.md](sites/site-001/reports/SITE-001-W1B-THEME-BRANDING-MAP-v1.md) — W1B theme inventory; replacement map; 7–10 files estimated; risk assessment
+- [sites/site-001/reports/SITE-001-W1B-AUTHORIZATION-REVIEW-v1.md](sites/site-001/reports/SITE-001-W1B-AUTHORIZATION-REVIEW-v1.md) — verdict **AUTHORIZED WITH NOTES**; C-04 WhatsApp conditional
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W1B discovery marked **DONE**
+
+**Site modification:** **None** — FTP read-only scan + HTTP spot-check on TEST.
+
+---
+
+## Run 4.103 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W1A-POST-AUDIT-v1.md](sites/site-001/reports/SITE-001-W1A-POST-AUDIT-v1.md) — W1A post-audit: 6 fields Unicode-checked; verdict **PASS**; no corrections
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W1A post-audit marked **DONE**
+
+**Site modification:** **None** — read-only verification on TEST admin.
+
+---
+
+## Run 4.102 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W1A-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W1A-EXECUTION-v1.md) — W1A execution report (before/after, cache, verification)
+- [sites/site-001/reports/SITE-001-W1A-DECISION-v1.md](sites/site-001/reports/SITE-001-W1A-DECISION-v1.md) — verdict **PASS WITH NOTES**; rollback **NO**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W1A marked **DONE**
+
+**Site modification:** TEST only — admin Store Settings (`setting/setting`); 6 fields. No production. No commit.
+
+---
+
+## Run 4.101 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W1-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W1-WRITE-CHARTER-v1.md) — TEST-only write charter; waves W1A–W1F; approval chain
+- [sites/site-001/reports/SITE-001-W1-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W1-CHANGE-REQUEST-v1.md) — CR-SITE-001-W1-2026-06-08 — **READY FOR EXECUTION**
+- [sites/site-001/reports/SITE-001-W1-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W1-ROLLBACK-PLAN-v1.md) — rollback tiers T1/T2/T3
+- [sites/site-001/reports/SITE-001-W1-BACKUP-PROCEDURE-v1.md](sites/site-001/reports/SITE-001-W1-BACKUP-PROCEDURE-v1.md) — pre-W1A backup checklist
+- [sites/site-001/reports/SITE-001-W1-EXECUTION-AUTHORIZATION-v1.md](sites/site-001/reports/SITE-001-W1-EXECUTION-AUTHORIZATION-v1.md) — **AUTHORIZED WITH NOTES**; C-08 **SATISFIED**
+- [sites/site-001/reports/SITE-001-W1A-EXECUTION-SPEC-v1.md](sites/site-001/reports/SITE-001-W1A-EXECUTION-SPEC-v1.md) — W1A Store Settings execution table
+- [sites/site-001/reports/SITE-001-W1A-AUTHORIZATION-REVIEW-v1.md](sites/site-001/reports/SITE-001-W1A-AUTHORIZATION-REVIEW-v1.md) — W1A **AUTHORIZED WITH NOTES**
+- [sites/site-001/project-access-brief.md](sites/site-001/project-access-brief.md) — TEST write flags **YES**; approver **Андрей**; **PRODUCTION WRITES FORBIDDEN**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — program state updated
+
+**No site modification.** Documentation only.
+
+---
+
+## Run 4.100 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-REVIEW-v1.md](sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-REVIEW-v1.md) — Phase 1 readiness review; pre-execution checklist; incremental wave plan
+- [sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-DECISION-v1.md](sites/site-001/reports/SITE-001-CHANGE-AUTHORIZATION-DECISION-v1.md) — decision **NOT AUTHORIZED** for immediate brand replacement execution on TEST
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — program state updated for SITE-001 Phase 1 gate
+
+**No site modification.** No FTP, admin writes, or deployment. Review and planning only.
 
 ---
 

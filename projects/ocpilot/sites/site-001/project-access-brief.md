@@ -1,8 +1,8 @@
 # Project Access Brief
 
 **Site ID:** SITE-001  
-**Status:** **INTAKE IN PROGRESS** — identity/version recorded, access and backup gates pending before Run 5  
-**Run:** 4.5 — repository-only intake completion update
+**Status:** **W1 WRITE CHARTER ACTIVE** — TEST-only supervised writes authorized; **PRODUCTION WRITES FORBIDDEN**  
+**Run:** 4.101 — W1A pre-execution authorization package (2026-06-08)
 
 **Do not record:** passwords, tokens, credentials, secret URLs, or live `config.php` values.
 
@@ -61,16 +61,28 @@ This file may only contain references such as:
 
 ## Operation Permissions
 
+**Scope:** **SITE-001 TEST ONLY** — `https://sibcar.new-site.space/`
+
+**Write approver (HITL):** **Андрей**
+
 - [x] Read-only file inspection allowed
 - [x] Read-only DB inspection allowed
 - [x] Admin panel read-only inspection allowed
-- [ ] File edits allowed
-- [ ] DB edits allowed
+- [x] File edits allowed *(TEST only)*
+- [x] DB edits allowed *(TEST only)*
 - [ ] Product import allowed
-- [ ] Theme edits allowed
+- [x] Theme edits allowed *(TEST only)*
 - [ ] Controller/model edits allowed
 
-Write permissions require: backup confirmed, rollback path confirmed, operator approval.
+| Permission | TEST | Notes |
+|------------|------|-------|
+| **Admin writes** | **YES** | W1A Store Settings and subsequent admin waves |
+| **Theme writes** | **YES** | W1B+; FTP/SFTP on TEST only |
+| **File writes** | **YES** | TEST filesystem only |
+
+**PRODUCTION WRITES FORBIDDEN** — no edits on production host, DNS, or live domain without separate authorization.
+
+Write permissions require: backup confirmed, rollback path confirmed, operator approval — **satisfied for W1A** (2026-06-08).
 
 ---
 
@@ -78,18 +90,19 @@ Write permissions require: backup confirmed, rollback path confirmed, operator a
 
 | Field | Value |
 |-------|-------|
-| File backup status | YES |
-| Database backup status | YES |
+| File backup status | **YES** — operator confirmed 2026-06-08 |
+| Database backup status | **YES** — operator confirmed 2026-06-08 |
 | Backup location | Beget backup system |
-| Backup date | 31.05.2026 |
+| Backup date | **2026-06-08** (pre-W1A; supersedes 2026-05-31 planning reference) |
+| Backup verification status | **Operator-confirmed** — files + database backup created; archive filenames not recorded |
 | Restore method | Beget restore |
-| SAFE UNKNOWN | No backup facts supplied in Run 4 |
+| SAFE UNKNOWN | Credential storage locations for access channels; independent restore drill |
 
 ---
 
 ## Allowed Operations
 
-None chartered. Run 5 not approved.
+Supervised W1 brand replacement on **TEST** per [reports/SITE-001-W1-WRITE-CHARTER-v1.md](reports/SITE-001-W1-WRITE-CHARTER-v1.md). Current wave authorization: **W1A** — [reports/SITE-001-W1A-AUTHORIZATION-REVIEW-v1.md](reports/SITE-001-W1A-AUTHORIZATION-REVIEW-v1.md).
 
 ---
 
@@ -98,14 +111,12 @@ None chartered. Run 5 not approved.
 Default forbidden (see [templates/project-access-brief-template.md](../../templates/project-access-brief-template.md)):
 
 - Destructive SQL
-- Live production edits without approval
+- **Live production edits** — **PRODUCTION WRITES FORBIDDEN**
 - Credential commits
 - `config.php` exposure
 - Mass delete/move
 - Blind import
 - Controller edits without rollback
-
-Until intake completes: **all** FTP, PMA, admin, and site modification operations forbidden.
 
 ---
 
@@ -114,16 +125,15 @@ Until intake completes: **all** FTP, PMA, admin, and site modification operation
 - [x] Site identity known
 - [x] Version known
 - [x] Baseline selected
-- [ ] Access inventory complete
-- [ ] Backup status known
+- [ ] Access inventory complete (credential locations)
+- [x] Backup status known
 - [ ] Read-only scope approved
 - [x] SAFE UNKNOWN recorded
 
 | Gate | Value |
 |------|-------|
-| **Run 5 allowed** | **NO** |
-
-Operator must complete this brief and satisfy [intake-readiness-review.md](../../intake-readiness-review.md) before setting **YES**.
+| **Run 5 allowed** | **YES** *(read-only audit — execution paused)* |
+| **W1 writes allowed (TEST)** | **YES** — approver **Андрей**; charter active |
 
 ---
 
@@ -171,16 +181,16 @@ Priority:
 
 Current Phase:
 
-* [ ] INTAKE
+* [x] INTAKE
 * [ ] AUDIT
 * [ ] PLANNING
-* [ ] EXECUTION
+* [x] EXECUTION
 * [ ] QA
 * [ ] FROZEN
 
 Current State:
 
-INTAKE
+W1 WRITE CHARTER ACTIVE — W1A authorized on TEST; **PRODUCTION WRITES FORBIDDEN**
 
 ---
 
@@ -188,24 +198,24 @@ INTAKE
 
 Environment Type:
 
-* [ ] TEST
+* [x] TEST
 * [ ] DEV
 * [ ] STAGING
 * [ ] PROD
 
 May OCPilot perform write operations here?
 
-* [ ] YES
+* [x] YES *(TEST only — SITE-001 TEST ONLY)*
 * [ ] NO
 
 If YES:
 
 Required conditions:
 
-* Backup confirmed
-* Rollback confirmed
-* Operator approval confirmed
+* [x] Backup confirmed *(2026-06-08 — operator)*
+* [x] Rollback confirmed
+* [x] Operator approval confirmed *(approver: Андрей)*
 
 Notes:
 
-SAFE UNKNOWN
+**PRODUCTION WRITES FORBIDDEN.** Writes limited to TEST URL and W1 charter scope.
