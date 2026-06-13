@@ -10,15 +10,17 @@
 
 **Связанные документы:** [ARCHITECTURE-FOUNDATION-v1.md](ARCHITECTURE-FOUNDATION-v1.md), [WEBSITE-FACTORY-FOUNDATION-CHECKPOINT-v1.md](WEBSITE-FACTORY-FOUNDATION-CHECKPOINT-v1.md), [WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md](WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md)
 
+**Post-freeze acceptance (не меняет freeze scope):** SEO v2 **ACCEPTED** 2026-06-01; Design → Content → Generation → Production QA → Runtime v1 **ACCEPTED** 2026-06-04; Factory Engine + post-Engine doctrine **COMPLETE** (documentation) — [WEBSITE-FACTORY-GOVERNANCE-SYNCHRONIZATION-PASS-v1.md](WEBSITE-FACTORY-GOVERNANCE-SYNCHRONIZATION-PASS-v1.md). **Status register (live):** [WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md](WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md) — overrides any historical «NOT QUEUED» Engine lines in this freeze doc.
+
 ---
 
 ## 1. Purpose
 
 Официальный freeze checkpoint для **завершённой** Website Factory Foundation v1.
 
-Документ фиксирует архитектурную базу **до** переключения фокуса на Triumph Manipulator landing improvements и **до** старта SITE-TYPE-SEO-MAPPING-v2.
+Документ фиксирует архитектурную базу Foundation v1 на дату freeze (Registry → Page Block Validation) и post-freeze acceptances через 2026-06-04. Операционные статусы слоёв — только в [WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md](WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md).
 
-**Checkpoint only** — без новой архитектуры, реестров, mappings, SEO, Design System или расширения validation.
+**Checkpoint only** — без новой архитектуры, реестров, mappings, Design System или расширения validation beyond documented hygiene.
 
 ---
 
@@ -38,7 +40,7 @@
 | **Block vocabulary** | Production-ready (Core) | 29 `block_id`, SITE-TYPE-BLOCK-MATRIX-v2 |
 | **Validation semantics** | Production-ready (manual) | Page Block Validation v1 — documentation-only |
 | **Legal baseline** | Frozen / pilot-validated | Legal Pack v1 + Triumph V6 Phase 2 |
-| **SEO depth** | Shallow (v1) | SITE-TYPE-SEO-MAPPING-v1 — successor v2 **QUEUED** |
+| **SEO depth** | Production-ready (Core 5, documentation) | [seo-architecture/](seo-architecture/) — v2 **ACCEPTED** 2026-06-01; v1 hints superseded |
 | **Design binding** | Partial / reference only | Reference workspace LANDING subset |
 | **Automation** | Not implemented | VALIDATION-GAPS, BLUEPRINT-GAPS, BLOCK-GAPS |
 
@@ -65,9 +67,13 @@
 
 | Область | Статус |
 |---------|--------|
-| SEO Mapping v2 | **QUEUED** — not started |
-| Design System Mapping | **QUEUED** |
-| Content / Generation contracts | **NOT STARTED** |
+| SEO Architecture Layer v2 | **ACCEPTED** (2026-06-01) — see §5 |
+| Design System Mapping v1 | **ACCEPTED** (2026-06-04) — post-freeze |
+| Content Contracts / Content Validation v1 | **ACCEPTED** (2026-06-04) — post-freeze |
+| Generation Contracts v1 | **ACCEPTED** (2026-06-04) — post-freeze |
+| Production QA Architecture v1 | **ACCEPTED** (2026-06-04) — post-freeze |
+| Factory Runtime Architecture v1 | **ACCEPTED** (2026-06-04) — post-freeze |
+| Factory Engine Architecture v1 | **NOT QUEUED** — charter required |
 | Runtime validator CLI / CI gates | **FUTURE** |
 | Extended Type Blueprints | **NOT STARTED** |
 | Legal Pack modifications | **FORBIDDEN** — FROZEN |
@@ -87,6 +93,13 @@
 | **Block Registry Alignment v1** | **ACCEPTED** | [block-registry/BLOCK-REGISTRY-v1.md](block-registry/BLOCK-REGISTRY-v1.md) |
 | **Page Block Validation v1** | **ACCEPTED** | [page-block-validation/PAGE-BLOCK-VALIDATION-SYSTEM-v1.md](page-block-validation/PAGE-BLOCK-VALIDATION-SYSTEM-v1.md) |
 | **Architecture Foundation v1** | **ACCEPTED** | [ARCHITECTURE-FOUNDATION-v1.md](ARCHITECTURE-FOUNDATION-v1.md) |
+| **SEO Architecture Layer v2** | **ACCEPTED** (post-freeze, 2026-06-01) | [seo-architecture/SEO-ARCHITECTURE-SYSTEM-v2.md](seo-architecture/SEO-ARCHITECTURE-SYSTEM-v2.md) |
+| **Design System Mapping v1** | **ACCEPTED** (post-freeze, 2026-06-04) | [design-system/DESIGN-SYSTEM-MAPPING-v1.md](design-system/DESIGN-SYSTEM-MAPPING-v1.md) |
+| **Content Contracts v1** | **ACCEPTED** (post-freeze, 2026-06-04) | [content-contracts/CONTENT-SYSTEM-v1.md](content-contracts/CONTENT-SYSTEM-v1.md) |
+| **Content Validation v1** | **ACCEPTED** (post-freeze, 2026-06-04) | [content-validation/CONTENT-VALIDATION-SYSTEM-v1.md](content-validation/CONTENT-VALIDATION-SYSTEM-v1.md) |
+| **Generation Contracts v1** | **ACCEPTED** (post-freeze, 2026-06-04) | [generation-contracts/GENERATION-SYSTEM-v1.md](generation-contracts/GENERATION-SYSTEM-v1.md) |
+| **Production QA Architecture v1** | **ACCEPTED** (post-freeze, 2026-06-04) | [production-qa/PRODUCTION-QA-SYSTEM-v1.md](production-qa/PRODUCTION-QA-SYSTEM-v1.md) |
+| **Factory Runtime Architecture v1** | **ACCEPTED** (post-freeze, 2026-06-04) | [runtime-architecture/RUNTIME-ARCHITECTURE-SYSTEM-v1.md](runtime-architecture/RUNTIME-ARCHITECTURE-SYSTEM-v1.md) |
 
 ---
 
@@ -115,7 +128,7 @@
 
 | Workstream | Status |
 |------------|--------|
-| Website Factory active workstream | **NONE** |
+| Website Factory next charter target | **Factory Engine Architecture v1** — **NOT QUEUED** (per [WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md](WEBSITE-FACTORY-NEXT-PRIORITIES-v1.md)) |
 
 Operator focus may shift to Triumph Manipulator landing improvements — **outside** Website Factory foundation scope.
 
@@ -123,10 +136,7 @@ Operator focus may shift to Triumph Manipulator landing improvements — **outsi
 
 | Workstream | Status |
 |------------|--------|
-| **SITE-TYPE-SEO-MAPPING-v2** | **QUEUED** — next approved workstream; **not started** |
-| **DESIGN SYSTEM MAPPING** | **QUEUED** — after SEO v2 |
-| **CONTENT CONTRACTS** | **NOT STARTED** — charter required |
-| **GENERATION CONTRACTS** | **NOT STARTED** — charter required |
+| **Factory Engine Architecture v1** | **NOT QUEUED** — charter required ([runtime-architecture/RUNTIME-GAPS-v1.md](runtime-architecture/RUNTIME-GAPS-v1.md) RT-G09) |
 
 ---
 
@@ -172,11 +182,13 @@ Block Registry
     ↓
 Page Block Validation
     ↓
-Future SEO Layer          ← QUEUED (SITE-TYPE-SEO-MAPPING-v2)
+SEO Layer (accepted)           ← [seo-architecture/](seo-architecture/) (2026-06-01)
+        ↓
+Design → Content → Generation → Production QA → Runtime (accepted 2026-06-04)
+        ↓
+Factory Engine Architecture    ← NOT QUEUED
     ↓
-Future Design Layer       ← QUEUED (Design System Mapping)
-    ↓
-Future Frontend Layer     ← implementation + partial contracts
+Frontend Layer                 ← implementation + partial contracts
 ```
 
 | Layer | Location | Responsibility |
@@ -186,9 +198,10 @@ Future Frontend Layer     ← implementation + partial contracts
 | Page Architecture | [page-architecture/](page-architecture/) | Контракт страницы: `page_type`, required/forbidden blocks |
 | Block Registry | [block-registry/](block-registry/) | Канонические `block_id`, категории, матрицы |
 | Page Block Validation | [page-block-validation/](page-block-validation/) | PASS/FAIL semantics, severity, failure library |
-| Future SEO Layer | [registry/SITE-TYPE-SEO-MAPPING-v1.md](registry/SITE-TYPE-SEO-MAPPING-v1.md) → v2 | Per-site-type SEO architecture — **QUEUED** |
-| Future Design Layer | external + future mapping | Tokens/components ↔ site types ↔ blocks — **QUEUED** |
-| Future Frontend Layer | reference `src/`, client workspaces | HTML/partials/SCSS/JS — per project charter |
+| SEO Layer | [seo-architecture/SEO-ARCHITECTURE-SYSTEM-v2.md](seo-architecture/SEO-ARCHITECTURE-SYSTEM-v2.md) | **ACCEPTED** (2026-06-01); v1 hints: [registry/SITE-TYPE-SEO-MAPPING-v1.md](registry/SITE-TYPE-SEO-MAPPING-v1.md) superseded |
+| Design Layer | [design-system/](design-system/) | **ACCEPTED** (2026-06-04) |
+| Content / Generation / Production QA / Runtime | respective dirs | **ACCEPTED** (2026-06-04) — see §5 |
+| Frontend Layer | reference `src/`, client workspaces | HTML/partials/SCSS/JS — per project charter |
 
 **Dependency rule:** upstream слой не переписывается downstream workstream без operator charter.
 
@@ -210,8 +223,9 @@ Validation: Footer Rule, Consent Rule, canonical URLs, zero forbidden placeholde
 
 - Legal Pack v1 — **FROZEN** (2026-05-30)
 - Architectural foundation chain — **FROZEN** (2026-06-01)
-- Active Website Factory workstream — **NONE**
-- Next approved workstream — **SITE-TYPE-SEO-MAPPING-v2** — **QUEUED, not started**
+- SEO Architecture Layer v2 — **ACCEPTED** (2026-06-01)
+- Post-freeze documentation stack — **ACCEPTED** (2026-06-04)
+- Next charter target — **Factory Engine Architecture v1** — **NOT QUEUED**
 
 ---
 
@@ -219,10 +233,9 @@ Validation: Footer Rule, Consent Rule, canonical URLs, zero forbidden placeholde
 
 | Topic | Status |
 |-------|--------|
-| Exact calendar for SEO Mapping v2 delivery | **not scheduled** |
+| Factory Engine Architecture v1 calendar | **not scheduled** |
 | Triumph production deploy authorization | **UNKNOWN** |
 | CI automation for legal placeholder / block validation | **FUTURE** — no implementation proof in-repo |
-| Operator decision on `STICKY_CTA` vs `CTA` canonical merge | **pending** optional pass — non-blocking |
 | Whether Extended Type Blueprints precede or follow Design Mapping | **requires charter** if scope changes |
 
 ---

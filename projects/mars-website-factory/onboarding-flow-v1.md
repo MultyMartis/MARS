@@ -29,6 +29,8 @@
 | 2 | Copy `scss/foundations/` + `js/core/` from reference (if not using template) | [foundation-adoption-charter-v1.md](foundation-adoption-charter-v1.md) |
 | 3 | Edit `_tokens.scss` brand only | [foundation-adoption-rules-v1.md](foundation-adoption-rules-v1.md) |
 | 4 | Copy layout partials pattern (header/footer/modal) | reference `partials/layout/` |
+| 4b | **Greenfield:** Production Standards Draft → DESIGN → FRONTEND MAPPING QA → Production Standards Approval → Shell → Visual Foundation → Design Calibration → Foundation QA **before** first commercial page | [production-standards-governance-v1.md](production-standards-governance-v1.md) · [design-source-to-frontend-mapping-governance-v1.md](design-source-to-frontend-mapping-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) · [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) · [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) |
+| 4c | **Page closure:** after Home/inner page production — Design Completeness → Frontend Design QA Matrix → Pixel Fidelity → Production PASS | [frontend-design-completeness-governance-v1.md](frontend-design-completeness-governance-v1.md) · [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.2–§6 |
 | 5 | Add first section: `hero` partial + scss | [golden-implementation-slice-v1.md](golden-implementation-slice-v1.md) |
 | 6 | `npm run build` | REPORT evidence |
 | 7 | QA + adoption validation | [operational-qa-entry-v1.md](operational-qa-entry-v1.md) → [adoption-validation-flow-v1.md](adoption-validation-flow-v1.md) |

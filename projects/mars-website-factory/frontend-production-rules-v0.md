@@ -15,8 +15,20 @@
 | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) | **Authority** — RU no word-splitting CSS + selective `&nbsp;` typography |
 | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | **Canonical** RU commercial landing QA widths + checks |
 | [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) | **Anti-drift** — breakpoints, container, FAQ, build/dist, Windows EBUSY |
+| [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) | **Inter-section spacing** — same/diff background, mobile, project mapping |
+| [production-standards-governance-v1.md](production-standards-governance-v1.md) | **Standards gate** — Draft + Approval before Shell |
+| [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) | **Start gate** — Production Standards + shell + UI demo before Home |
+| [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) | **Foundation Demo Page** — mandatory composition before Home |
+| [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) | **Calibration gate** — token/visual review before Foundation QA |
+| [frontend-rules/WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) | **Foundation** — mandatory section/container grid discipline (SITE-001 promoted) |
+| [frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) | **Foundation** — mandatory inner-zone layout discipline (SITE-001 Layout Review promoted) |
+| [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) | **Precision** — spacing scales, typography px + line-height, no arbitrary values, normalization |
+| [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md) | **Layout patterns** — mandatory pattern selection before multi-section production |
+| [design-source-to-frontend-mapping-governance-v1.md](design-source-to-frontend-mapping-governance-v1.md) | **Design mapping** — multi-source extraction, layout chain, Mapping QA before Approval |
 
 **Registry index:** [registries.md §6](registries.md#6-frontend-production-rules).
+
+**Authority order (mandatory):** [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) — Project Production Standards → Approved Operator Laws (OL-01–OL-07) → Factory Governance → Layout Pattern Library → Industry Best Practice → Agent Preference. **Agent Preference never overrides ranks 1–5.**
 
 ---
 
@@ -64,7 +76,7 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 
 ## 7. Responsive breakpoint discipline
 
-- **Mobile-first** unless handoff **`responsive_rules`** say otherwise; honor design tokens and frozen breakpoints.
+- **Responsive base strategy** comes from **Project Production Standards (rank 1)** — e.g. desktop-first or mobile-first. **Do not** default to industry mobile-first when project SSOT states otherwise ([frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md)). Honor design tokens and frozen breakpoints from handoff / standards.
 - Prefer **min-width** media queries; document non-default **max-width** usage in **SAFE_UNKNOWN_notes**.
 - **Do not invent local breakpoints** — use project-defined tokens/handoff only ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §1).
 - **Triumph V5 / current V5 lane:** desktop `1025px+`; tablet/mobile `max-width: 1024px`. **Forbidden drift:** ad-hoc `980`/`981` unless project explicitly defines them.
@@ -131,6 +143,85 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 - FAQ: avoid two-column CSS Grid when answers expand; QA open/close/single-open/neighbor-stretch/keyboard/mobile stack.
 - Reusable V5 prompt block → [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) §3b.
 
+## 14. Section spacing and shell-first start (mandatory gates)
+
+**Authority (do not duplicate):**
+
+| Topic | Document |
+|-------|----------|
+| Production Standards Draft + Approval | [production-standards-governance-v1.md](production-standards-governance-v1.md) |
+| Inter-section spacing tokens, same/diff background | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) |
+| Foundation before Home; Foundation Demo Page composition | [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) |
+| Design Calibration before Foundation QA | [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) |
+| Foundation QA (consolidated gate) | [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) |
+| Shell-first start sequence | [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) |
+| Cadence methodology (tiers XS–XL) | [vertical-rhythm-governance.md](vertical-rhythm-governance.md), [cadence-tier-model.md](cadence-tier-model.md) |
+
+**Operator summary:**
+
+- Map section spacing in **Project Production Standards** before page production; complete **Draft → Approval** per [production-standards-governance-v1.md](production-standards-governance-v1.md) before Shell.
+- Do **not** start Home page if Visual Foundation + Design Calibration + Foundation QA REPORT is missing.
+- If operator requests Home first → execute shell-first protocol; cite [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md).
+
+## 15. WF Grid Discipline (mandatory — all Factory frontend)
+
+**Authority:** [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) — full rules; **do not** duplicate here.
+
+**Operator summary:**
+
+- `<section>` / `<nav>` / `<header>` / `<footer>` = section shell; inner `div` = container width authority (WF-GRID-001).
+- One page = one grid contract (`--container-max`, `--container-pad`) — no silent per-section drift (WF-GRID-002).
+- Local `max-width` / `padding-inline` / `margin-inline` outside container → `/* WF-GRID-EXCEPTION */` comment (WF-GRID-003).
+- Full-bleed backgrounds on section; content still inside container (WF-GRID-004).
+- Frontend QA: header / hero / sections / footer alignment before visual PASS (WF-GRID-005).
+
+**REPORT line:**
+
+```text
+WF GRID DISCIPLINE — PASS | FAIL (list sections) | SAFE UNKNOWN (widths not tested)
+```
+
+**Promotion:** SITE-001 WF-V3 — [WF-GRID-DISCIPLINE-PROMOTION-v1.md](../../workspaces/website-factory-reference-v1/reports/WF-GRID-DISCIPLINE-PROMOTION-v1.md).
+
+## 16. WF Layout Discipline (mandatory — all Factory frontend)
+
+**Authority:** [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) — full rules; **do not** duplicate here. Complements §15 (Container Layer).
+
+**Operator summary:**
+
+- Container Layer (WF-GRID) and Layout Layer (WF-LAYOUT) are separate authorities (WF-LAYOUT-001).
+- Hero splits: fr/minmax authority — no default `%` tracks (WF-LAYOUT-002, WF-LAYOUT-007).
+- Card grids: documented `N` at desktop (WF-LAYOUT-003); trust strip L5 grid (WF-LAYOUT-004); finance L4/L3 (WF-LAYOUT-005).
+- Responsive collapse documented per zone before production freeze (WF-LAYOUT-006).
+- New layout models require authority review before freeze (WF-LAYOUT-008).
+
+**REPORT line:**
+
+```text
+WF LAYOUT DISCIPLINE — PASS | FAIL (list zones) | SAFE UNKNOWN (collapse not tested)
+```
+
+**Promotion:** SITE-001 WF-V3 Layout Review — [WF-LAYOUT-DISCIPLINE-PROMOTION-v1.md](../../workspaces/website-factory-reference-v1/reports/WF-LAYOUT-DISCIPLINE-PROMOTION-v1.md).
+
+## 17. Frontend Precision Governance (mandatory — all Factory frontend)
+
+**Authority:** [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) — full rules; **do not** duplicate here.
+
+**Operator summary:**
+
+- **Spacing:** gap scale `5/10/20/30/40/50/70`; margin/padding `5/10/15/20/25/30/40/50/70/90` — map design px to nearest approved value; no invented `64px`, `72px`, `80px` unless project SSOT token.
+- **Typography:** font-size in **px**; default **`line-height = font-size + 4px`** — mandatory pre-flight + calibration ([typography-rhythm-governance.md](typography-rhythm-governance.md)).
+- **No word breaking:** `letter-spacing`, `word-break`, `overflow-wrap: break-word`, `hyphens: auto` forbidden without operator approval — see §12.
+- **RU HTML typography:** visible RU copy typographed in HTML — see §12 authority.
+- **Layout:** pick documented patterns — [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md); no default `%` grid splits (WF-LAYOUT-007).
+
+**REPORT lines:**
+
+```text
+TYPOGRAPHY PRECISION (line-height = font-size + 4px) — PASS | partial (list) | FAIL | N/A (project exceptions documented)
+LAYOUT PATTERN LIBRARY — PASS | partial (list LP-*) | NOT READY | N/A (foundation only)
+```
+
 ---
 
 ## Changelog
@@ -142,3 +233,10 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 | 2026-05-24 | §12 — Russian no word-splitting typography (mandatory); links Triumph V5 reference case. |
 | 2026-05-24 | §12 stabilization — authority lock + [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md); rule prose not duplicated. |
 | 2026-05-24 | §7/§10/§13 — Triumph V5 incident lessons; [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md). |
+| 2026-06-13 | §14 — section spacing + shell-first start protocol (FP-0002 audit). |
+| 2026-06-13 | §15 — WF Grid Discipline foundation authority (SITE-001 WF-V3 promotion). |
+| 2026-06-13 | §16 — WF Layout Discipline foundation authority (SITE-001 WF-V3 Layout Review promotion). |
+| 2026-06-13 | §14 — Visual Foundation Contract + Design Calibration stage (Evolution Pack v1). |
+| 2026-06-13 | §14 — [production-standards-governance-v1.md](production-standards-governance-v1.md) Draft + Approval gate (Production Standards Governance Pack). |
+| 2026-06-13 | §17 — Frontend Precision Governance Pack ([frontend-precision-governance-v1.md](frontend-precision-governance-v1.md), [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md)). |
+| 2026-06-13 | Authority order pointer + §7 responsive base from Project Production Standards ([frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md)). |

@@ -36,6 +36,8 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
 | **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
 | **HomeGateway v4.ai** | — | — | ✓ personal operational cockpit concept (static-first) | — | — | ✓ draft/planning docs |
+| **ATLAS** | ✓ population discipline | — | ✓ registry intent | — | — | ✓ foundation + population docs |
+| **OPS** | ✓ back-office discipline | ✓ WF-01/WF-02 pilots | — | — | — | ✓ foundation + workflows |
 | **GitGuard** | ✓ advisory + helpers | — | ✓ entity-model name | — | — | ✓ mars-survivability pack |
 | **Continuity / IdeaBox** | ✓ incubation (optional) | — | protocols | — | — | ✓ not `project_id` |
 | **Incoming** | ✓ active staging | — | hybrid placement | ✓ bulk (post-triage) | — | ✓ intake charter |
@@ -248,6 +250,32 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 **Not:** Runtime, orchestration product, or active operational system implementation.
 
 **SoT:** [../projects/nova/README.md](../projects/nova/README.md) · [../projects/nova/NOVA-FOUNDATION-STATUS-v1.md](../projects/nova/NOVA-FOUNDATION-STATUS-v1.md)
+
+---
+
+## ATLAS
+
+| Bucket | Reality |
+|--------|---------|
+| **operational** | Human-maintained **Business Reality Registry** under `projects/atlas/`: foundation complete; **documentation-layer population** Waves 1–6B + Agreement metadata layers **complete** (attestation registers under `population/`); consumer contracts for MIG, ORCA, Factory, WPilot, OCPilot, HomeGateway. |
+| **documentation-only** | Normative foundation + population evidence — **no** persistence engine, APIs, CRM/ERP, or automated enforcement. |
+
+**Not:** Runtime, storage product, MARS `project_id` SoT replacement, ORCA/MIG artifact owner, orchestration, or proof that all consumers bind ATLAS ids in daily work.
+
+**SoT:** [../projects/atlas/foundation/ATLAS-REALITY-MODEL-v1.md](../projects/atlas/foundation/ATLAS-REALITY-MODEL-v1.md) · [OPERATIONAL-INDEX.md](../projects/atlas/OPERATIONAL-INDEX.md) · registry `atlas` (**planned**) · [../logs/atlas/atlas-registration-v1.md](../logs/atlas/atlas-registration-v1.md)
+
+---
+
+## OPS
+
+| Bucket | Reality |
+|--------|---------|
+| **operational** | Human-supervised business operations discipline: reporting, document, approval, deadline, follow-up, and coordination workflows under `projects/ops/`; WF-01 and WF-02 **live binding pilots PARTIAL** (2026-06-10); alignment passes **documented**. |
+| **documentation-only** | Foundation, data model, workflow architecture (WF-01–WF-06), mission layer, and registration evidence — **no** in-repo execution engine. |
+
+**Not:** Runtime, infrastructure, authority domain, CRM/ERP, ATLAS implementation, orchestration, or automated evidence pull from MetaBOT/ORCA/MIG/WPilot/OCPilot.
+
+**SoT:** [../projects/ops/README.md](../projects/ops/README.md) · [OPERATIONAL-INDEX.md](../projects/ops/OPERATIONAL-INDEX.md) · registry `ops` (**planned**) · [../logs/ops/ops-registration-v1.md](../logs/ops/ops-registration-v1.md)
 
 ---
 

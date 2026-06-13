@@ -5,7 +5,7 @@
 **Статус:** канонические правила использования Blueprint System  
 **Не является:** runtime enforcement, CI gate, orchestration
 
-**Связь:** [BLUEPRINT-SYSTEM-v1.md](BLUEPRINT-SYSTEM-v1.md), [SITE-TYPE-IMPLEMENTATION-RULES-v1.md](../registry/SITE-TYPE-IMPLEMENTATION-RULES-v1.md)
+**Связь:** [BLUEPRINT-SYSTEM-v1.md](BLUEPRINT-SYSTEM-v1.md), [SITE-TYPE-IMPLEMENTATION-RULES-v1.md](../registry/SITE-TYPE-IMPLEMENTATION-RULES-v1.md), [frontend-rules/WF-GRID-DISCIPLINE-v1.md](../frontend-rules/WF-GRID-DISCIPLINE-v1.md), [frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md](../frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md)
 
 ---
 
@@ -86,7 +86,7 @@ Frontend (reference patterns + project build)
 | **Optional blocks** | Subset selection documented in project IA |
 | **Excluded blocks** | **Forbidden** — triggers reclassification review |
 | **Reference partials** | LANDING golden pattern: `workspaces/website-factory-reference-v1/src/partials/sections/` |
-| **Block Mapping** | Cross-check [SITE-TYPE-BLOCK-MAPPING-v1.md](../registry/SITE-TYPE-BLOCK-MAPPING-v1.md) |
+| **Block Mapping** | Cross-check [BLUEPRINT-BLOCK-MAPPING-v1.md](../block-registry/BLUEPRINT-BLOCK-MAPPING-v1.md), [BLOCK-REGISTRY-v1.md](../block-registry/BLOCK-REGISTRY-v1.md); role hints: [SITE-TYPE-BLOCK-MAPPING-v1.md](../registry/SITE-TYPE-BLOCK-MAPPING-v1.md) (superseded) |
 
 ---
 
@@ -109,6 +109,8 @@ Frontend (reference patterns + project build)
 | **No scope creep** | Do not add cart to CATALOG frontend without ECOMMERCE reclassification |
 | **Legal footer** | [LEGAL-IMPLEMENTATION-RULES.md](../legal/LEGAL-IMPLEMENTATION-RULES.md) — independent of Blueprint generation |
 | **QA** | RU landing QA preset for LANDING: `projects/mars-website-factory/ru-landing-qa-preset-v1.md` |
+| **Grid discipline** | Mandatory section/container split — [WF-GRID-DISCIPLINE-v1.md](../frontend-rules/WF-GRID-DISCIPLINE-v1.md) (all page types) |
+| **Layout discipline** | Mandatory inner-zone authority — [WF-LAYOUT-DISCIPLINE-v1.md](../frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) (hero, cards, trust, finance, collapse) |
 
 ---
 

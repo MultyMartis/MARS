@@ -43,6 +43,26 @@ Intake
 
 This is a **target** pipeline for **documentation and future orchestration** — not evidence of an automated engine in this repo.
 
+## Frontend page QA sub-chain (greenfield / page closure)
+
+After **Frontend Production** produces a page or slice (post–Foundation QA and Home work), **Production PASS** requires the documented gate chain — **not** compact operational QA alone:
+
+```text
+Page / block production
+        ↓
+Design Completeness Audit
+        ↓
+Frontend Design QA Matrix (full)
+        ↓
+Pixel Fidelity Audit
+        ↓
+Production PASS
+```
+
+**Foundation path (pre–Home):** Production Standards Draft → Mapping QA → Approval → Shell → Visual Foundation → Design Calibration → Foundation QA — [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md).
+
+**Reporting rollup:** [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5–§6 · **Production PASS authority:** [operational-qa-entry-v1.md](operational-qa-entry-v1.md) § Production PASS authority.
+
 ## Prompt → execute → report
 
 MARS **Workflow layer** documents a richer chain: `prompt` → `task` → `plan` → `route` → `execute` → `validate` → `report` → `log` (`workflows/execution-flow.md`). The **Website Factory** aligns each factory stage with that model:

@@ -30,6 +30,7 @@ Use DevTools device toolbar at each width unless project handoff documents a sup
 | FAQ interaction | Open · close · single-open · **no neighbor stretch** · no viewport jump · keyboard · mobile stack ([frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §5) |
 | Forms stable | Labels, inputs, validation regions readable; no layout jump breaking focus |
 | Mobile header stable | Sticky header does not obscure primary H1 on load; nav usable |
+| Grid alignment (WF-GRID-005) | Header, hero, major sections, footer inner edges align to same container grid — [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) |
 
 Overflow fixes on RU landings **must** follow [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) — prefer layout/grid, `min-width: 0`, and container adjustments before any word-breaking CSS.
 
@@ -55,3 +56,4 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 |------|--------|
 | 2026-05-24 | v1 — canonical RU commercial landing QA preset (stabilization pass) |
 | 2026-05-24 | FAQ interaction row — Triumph V5 neighbor-stretch / accordion QA |
+| 2026-06-13 | Grid alignment row — WF-GRID-005 (SITE-001 WF-V3 promotion) |

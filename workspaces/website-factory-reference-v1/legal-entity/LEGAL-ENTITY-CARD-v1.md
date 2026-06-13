@@ -20,7 +20,39 @@
 
 **Правило:** Card создаётся **до** Legal Input Sheet. Input Sheet **потребляет** card, не выполняет discovery напрямую.
 
+**ATLAS boundary:** Legal Entity Card — **production-support artifact** для legal production workflow. ATLAS остаётся **canonical owner** business identity (`ORG-*`). Card **не** заменяет ATLAS Organization registry.
+
 **Шаблон заполнения:** [LEGAL-ENTITY-CARD-TEMPLATE-v1.md](LEGAL-ENTITY-CARD-TEMPLATE-v1.md)
+
+---
+
+## ATLAS crosswalk (Legal Entity Card ↔ Counterparty Card)
+
+Per [WEBSITE-FACTORY-ATLAS-ADOPTION-STATEMENT-v1.md](../WEBSITE-FACTORY-ATLAS-ADOPTION-STATEMENT-v1.md) RC-02:
+
+```text
+Counterparty Card (ATLAS evidence)
+       │ propose / attest
+       ▼
+ORG-* (ATLAS canonical) ◀──ref── Legal Entity Card (Factory production)
+       │
+       └── LEC holds production fields for templates; ORG-* wins on identity conflict
+```
+
+| Artifact | Authority | Role |
+|----------|-----------|------|
+| **ATLAS Counterparty Card** | Evidence only — not canonical | Supports Organization proposal → `ORG-*` |
+| **ATLAS Organization (`ORG-*`)** | Canonical business identity | Wins on identity conflict with LEC |
+| **Legal Entity Card** | Production SoT for **legal workflow only** | Templates, Input Sheet, footer — not business registry |
+
+**Rules:**
+
+| ID | Rule |
+|----|------|
+| **LEC-ATLAS-01** | LEC **must not** be treated as canonical business registry entry |
+| **LEC-ATLAS-02** | When `ORG-*` is attested → LEC **SHOULD** cite `atlas_org_ref` |
+| **LEC-ATLAS-03** | When Counterparty Card exists → LEC **SHOULD** cite `counterparty_evidence_ref` (pointer only) |
+| **LEC-ATLAS-04** | On conflict between LEC org fields and attested `ORG-*` → **ORG-* wins**; LEC updated for production copy |
 
 ---
 
@@ -33,6 +65,8 @@
 | `workspace_path` | string | Recommended | Путь к client workspace |
 | `created_at` | date | Required | Дата создания card |
 | `updated_at` | date | Recommended | Последнее обновление |
+| `atlas_org_ref` | string | Recommended when attested | Ref to ATLAS `ORG-*` — canonical org identity; **not** a second registry |
+| `counterparty_evidence_ref` | string | Optional | Pointer to ATLAS Counterparty Card evidence artifact |
 
 ---
 

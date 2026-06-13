@@ -1,0 +1,226 @@
+﻿{
+    "layers":  [
+                   {
+                       "layer":  "legal",
+                       "file_count":  21,
+                       "files":  [
+                                     "legal/consent-personal-data-template.md",
+                                     "legal/cookie-files-policy-template.md",
+                                     "legal/LEGAL-GENERATION-CONTRACT-v1.md",
+                                     "legal/LEGAL-GENERATION-WORKFLOW-v1.md",
+                                     "legal/LEGAL-IMPLEMENTATION-RULES.md",
+                                     "legal/LEGAL-INPUT-INSTRUCTIONS-v1.md",
+                                     "legal/LEGAL-INPUT-SHEET-TEMPLATE-v1.md",
+                                     "legal/LEGAL-INPUT-SHEET-v1.md",
+                                     "legal/LEGAL-PACK-ARCHITECTURE-v1.md",
+                                     "legal/LEGAL-PACK-v1-FREEZE.md",
+                                     "legal/LEGAL-TEMPLATE-HARDENING-v1.1.md",
+                                     "legal/LEGAL-TEMPLATE-REVIEW-v1.md",
+                                     "legal/LEGAL-VARIABLE-REGISTRY.md",
+                                     "legal/privacy-policy-template.md",
+                                     "legal/SITE-TYPE-LEGAL-MAPPING-v2.md",
+                                     "legal/user-agreement-template.md",
+                                     "legal/examples/TRIUMPH-LEGAL-INPUT-SAMPLE-v1.md",
+                                     "legal/pilots/TRIUMPH-LEGAL-GAP-REPORT-v1.md",
+                                     "legal/pilots/TRIUMPH-LEGAL-PILOT-EXECUTION-v1.md",
+                                     "legal/pilots/TRIUMPH-LEGAL-PILOT-PLAN-v1.md",
+                                     "legal/reports/legal-template-cleanup-report-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "legal-entity",
+                       "file_count":  8,
+                       "files":  [
+                                     "legal-entity/LEGAL-ENTITY-CARD-TEMPLATE-v1.md",
+                                     "legal-entity/LEGAL-ENTITY-CARD-v1.md",
+                                     "legal-entity/LEGAL-ENTITY-DISCOVERY-RULES-v1.md",
+                                     "legal-entity/LEGAL-ENTITY-EXTRACTION-GUIDE-v1.md",
+                                     "legal-entity/LEGAL-ENTITY-INPUT-STANDARD-v1.md",
+                                     "legal-entity/LEGAL-ENTITY-VALIDATION-RULES-v1.md",
+                                     "legal-entity/LEGAL-ENTITY-WORKFLOW-v1.md",
+                                     "legal-entity/TRIUMPH-LEGAL-ENTITY-LESSON-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "registry",
+                       "file_count":  6,
+                       "files":  [
+                                     "registry/SITE-TYPE-BLOCK-MAPPING-v1.md",
+                                     "registry/SITE-TYPE-IMPLEMENTATION-RULES-v1.md",
+                                     "registry/SITE-TYPE-LEGAL-MAPPING-v1.md",
+                                     "registry/SITE-TYPE-MATRIX-v1.md",
+                                     "registry/SITE-TYPE-REGISTRY-v1.md",
+                                     "registry/SITE-TYPE-SEO-MAPPING-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "blueprints",
+                       "file_count":  10,
+                       "files":  [
+                                     "blueprints/BLUEPRINT-COMPARISON-MATRIX-v1.md",
+                                     "blueprints/BLUEPRINT-CONTRACT-v1.md",
+                                     "blueprints/BLUEPRINT-GAPS-v1.md",
+                                     "blueprints/BLUEPRINT-IMPLEMENTATION-RULES-v1.md",
+                                     "blueprints/BLUEPRINT-SYSTEM-v1.md",
+                                     "blueprints/CATALOG-BLUEPRINT-v1.md",
+                                     "blueprints/CORPORATE-BLUEPRINT-v1.md",
+                                     "blueprints/ECOMMERCE-BLUEPRINT-v1.md",
+                                     "blueprints/LANDING-BLUEPRINT-v1.md",
+                                     "blueprints/PROMO-BLUEPRINT-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "page-architecture",
+                       "file_count":  9,
+                       "files":  [
+                                     "page-architecture/CORE-PAGE-ARCHITECTURES-v1.md",
+                                     "page-architecture/LEGAL-PAGE-CONTRACT-v1.md",
+                                     "page-architecture/PAGE-ARCHITECTURE-SYSTEM-v1.md",
+                                     "page-architecture/PAGE-CONTRACT-v1.md",
+                                     "page-architecture/PAGE-DEPENDENCY-RULES-v1.md",
+                                     "page-architecture/PAGE-GAPS-v1.md",
+                                     "page-architecture/PAGE-IMPLEMENTATION-RULES-v1.md",
+                                     "page-architecture/PAGE-TYPE-REGISTRY-v1.md",
+                                     "page-architecture/SITE-TYPE-PAGE-MATRIX-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "block-registry",
+                       "file_count":  14,
+                       "files":  [
+                                     "block-registry/BLOCK-CATEGORIES-v1.md",
+                                     "block-registry/BLOCK-CATEGORY-SYSTEM-v1.md",
+                                     "block-registry/BLOCK-CONTRACT-v1.md",
+                                     "block-registry/BLOCK-CONVERSION-ROLES-v1.md",
+                                     "block-registry/BLOCK-DEPENDENCY-RULES-v1.md",
+                                     "block-registry/BLOCK-GAPS-v1.md",
+                                     "block-registry/BLOCK-IMPLEMENTATION-RULES-v1.md",
+                                     "block-registry/BLOCK-REGISTRY-AUDIT-v1.md",
+                                     "block-registry/BLOCK-REGISTRY-GAPS-v1.md",
+                                     "block-registry/BLOCK-REGISTRY-v1.md",
+                                     "block-registry/BLUEPRINT-BLOCK-MAPPING-v1.md",
+                                     "block-registry/CORE-BLOCK-LIBRARY-v1.md",
+                                     "block-registry/PAGE-BLOCK-MAPPING-v1.md",
+                                     "block-registry/SITE-TYPE-BLOCK-MATRIX-v2.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "page-block-validation",
+                       "file_count":  9,
+                       "files":  [
+                                     "page-block-validation/BLUEPRINT-VALIDATION-MATRIX-v1.md",
+                                     "page-block-validation/PAGE-BLOCK-VALIDATION-RULES-v1.md",
+                                     "page-block-validation/PAGE-BLOCK-VALIDATION-SYSTEM-v1.md",
+                                     "page-block-validation/PAGE-TYPE-VALIDATION-MATRIX-v1.md",
+                                     "page-block-validation/VALIDATION-CONTRACT-v1.md",
+                                     "page-block-validation/VALIDATION-FAILURE-LIBRARY-v1.md",
+                                     "page-block-validation/VALIDATION-GAPS-v1.md",
+                                     "page-block-validation/VALIDATION-ROADMAP-v1.md",
+                                     "page-block-validation/VALIDATION-SEVERITY-SYSTEM-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "seo-architecture",
+                       "file_count":  8,
+                       "files":  [
+                                     "seo-architecture/PAGE-SEO-CONTRACT-v1.md",
+                                     "seo-architecture/SEARCH-INTENT-MODEL-v1.md",
+                                     "seo-architecture/SEO-ARCHITECTURE-GAPS-v1.md",
+                                     "seo-architecture/SEO-ARCHITECTURE-MATRIX-v1.md",
+                                     "seo-architecture/SEO-ARCHITECTURE-SYSTEM-v2.md",
+                                     "seo-architecture/SEO-IMPLEMENTATION-RULES-v1.md",
+                                     "seo-architecture/SEO-STRATEGY-CONTRACT-v1.md",
+                                     "seo-architecture/SITE-TYPE-SEO-MAPPING-v2.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "design-system",
+                       "file_count":  8,
+                       "files":  [
+                                     "design-system/BLOCK-VISUAL-MAPPING-v1.md",
+                                     "design-system/DESIGN-SYSTEM-GAPS-v1.md",
+                                     "design-system/DESIGN-SYSTEM-MAPPING-v1.md",
+                                     "design-system/DESIGN-SYSTEM-RULES-v1.md",
+                                     "design-system/PAGE-TYPE-DESIGN-MAPPING-v1.md",
+                                     "design-system/SITE-TYPE-DESIGN-MAPPING-v1.md",
+                                     "design-system/VISUAL-PATTERN-CONTRACT-v1.md",
+                                     "design-system/VISUAL-PATTERN-REGISTRY-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "content-contracts",
+                       "file_count":  8,
+                       "files":  [
+                                     "content-contracts/BLOCK-CONTENT-CONTRACTS-v1.md",
+                                     "content-contracts/CONTENT-CONTRACT-v1.md",
+                                     "content-contracts/CONTENT-GAPS-v1.md",
+                                     "content-contracts/CONTENT-RULES-v1.md",
+                                     "content-contracts/CONTENT-SIGNAL-REGISTRY-v1.md",
+                                     "content-contracts/CONTENT-SYSTEM-v1.md",
+                                     "content-contracts/PAGE-CONTENT-CONTRACTS-v1.md",
+                                     "content-contracts/SITE-TYPE-CONTENT-MAPPING-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "content-validation",
+                       "file_count":  8,
+                       "files":  [
+                                     "content-validation/CONTENT-FAILURE-LIBRARY-v1.md",
+                                     "content-validation/CONTENT-SEVERITY-SYSTEM-v1.md",
+                                     "content-validation/CONTENT-SIGNAL-VALIDATION-MATRIX-v1.md",
+                                     "content-validation/CONTENT-VALIDATION-CONTRACT-v1.md",
+                                     "content-validation/CONTENT-VALIDATION-GAPS-v1.md",
+                                     "content-validation/CONTENT-VALIDATION-ROADMAP-v1.md",
+                                     "content-validation/CONTENT-VALIDATION-RULES-v1.md",
+                                     "content-validation/CONTENT-VALIDATION-SYSTEM-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "generation-contracts",
+                       "file_count":  8,
+                       "files":  [
+                                     "generation-contracts/GENERATION-CONTRACT-v1.md",
+                                     "generation-contracts/GENERATION-FAILURE-LIBRARY-v1.md",
+                                     "generation-contracts/GENERATION-GAPS-v1.md",
+                                     "generation-contracts/GENERATION-GATES-v1.md",
+                                     "generation-contracts/GENERATION-INPUTS-v1.md",
+                                     "generation-contracts/GENERATION-LIFECYCLE-v1.md",
+                                     "generation-contracts/GENERATION-OUTPUTS-v1.md",
+                                     "generation-contracts/GENERATION-SYSTEM-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "production-qa",
+                       "file_count":  9,
+                       "files":  [
+                                     "production-qa/PRODUCTION-QA-CHECKLIST-v1.md",
+                                     "production-qa/PRODUCTION-QA-CONTRACT-v1.md",
+                                     "production-qa/PRODUCTION-QA-FAILURE-LIBRARY-v1.md",
+                                     "production-qa/PRODUCTION-QA-GAPS-v1.md",
+                                     "production-qa/PRODUCTION-QA-GATES-v1.md",
+                                     "production-qa/PRODUCTION-QA-MATRIX-v1.md",
+                                     "production-qa/PRODUCTION-QA-ROADMAP-v1.md",
+                                     "production-qa/PRODUCTION-QA-SEVERITY-SYSTEM-v1.md",
+                                     "production-qa/PRODUCTION-QA-SYSTEM-v1.md"
+                                 ]
+                   },
+                   {
+                       "layer":  "runtime-architecture",
+                       "file_count":  9,
+                       "files":  [
+                                     "runtime-architecture/PROJECT-LIFECYCLE-v1.md",
+                                     "runtime-architecture/PROJECT-STATE-MODEL-v1.md",
+                                     "runtime-architecture/RUNTIME-ARCHITECTURE-SYSTEM-v1.md",
+                                     "runtime-architecture/RUNTIME-FAILURE-LIBRARY-v1.md",
+                                     "runtime-architecture/RUNTIME-GAPS-v1.md",
+                                     "runtime-architecture/RUNTIME-GATES-v1.md",
+                                     "runtime-architecture/RUNTIME-HANDOFFS-v1.md",
+                                     "runtime-architecture/RUNTIME-ROADMAP-v1.md",
+                                     "runtime-architecture/STATE-TRANSITION-RULES-v1.md"
+                                 ]
+                   }
+               ],
+    "snapshot_id":  "runtime-foundation-v1",
+    "snapshot_date":  "2026-06-01",
+    "base_path":  "workspaces/website-factory-reference-v1"
+}

@@ -5,7 +5,7 @@
 **Статус:** канонические правила использования Block Registry  
 **Не является:** runtime enforcement, CI gate, block generator, design tool
 
-**Связь:** [../blueprints/BLUEPRINT-IMPLEMENTATION-RULES-v1.md](../blueprints/BLUEPRINT-IMPLEMENTATION-RULES-v1.md), [BLOCK-REGISTRY-v1.md](BLOCK-REGISTRY-v1.md)
+**Связь:** [../blueprints/BLUEPRINT-IMPLEMENTATION-RULES-v1.md](../blueprints/BLUEPRINT-IMPLEMENTATION-RULES-v1.md), [BLOCK-REGISTRY-v1.md](BLOCK-REGISTRY-v1.md), [../frontend-rules/WF-GRID-DISCIPLINE-v1.md](../frontend-rules/WF-GRID-DISCIPLINE-v1.md)
 
 ---
 
@@ -100,6 +100,7 @@ Frontend (reference partials + project build)
 | **Reference workspace** | LANDING golden pattern — partial mapping in CORE-BLOCK-LIBRARY |
 | **Legal independent** | Legal pages from Legal Pack v1 FROZEN — not from Block Registry |
 | **No SEO content here** | SEO after Blueprint; blocks inform IA only |
+| **Grid discipline** | Block partials must not assign container width to `<section>` — [WF-GRID-DISCIPLINE-v1.md](../frontend-rules/WF-GRID-DISCIPLINE-v1.md) |
 
 ---
 

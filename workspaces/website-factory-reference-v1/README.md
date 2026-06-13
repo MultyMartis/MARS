@@ -8,7 +8,7 @@
 
 **Standards:** [foundation-systems/README.md](../../projects/mars-website-factory/foundation-systems/README.md).
 
-
+**Foundation frontend rules:** [frontend-rules/WF-GRID-DISCIPLINE-v1.md](frontend-rules/WF-GRID-DISCIPLINE-v1.md) — **MANDATORY** section/container grid discipline (promoted from SITE-001 WF-V3).
 
 ---
 

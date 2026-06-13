@@ -23,9 +23,13 @@
 
 ## What is SoT
 
+**Authority order (read first for conflicts):** [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) — (1) Project Production Standards → (2) Approved Operator Laws → (3) Factory Governance → (4) Layout Pattern Library → (5) Industry Best Practice → (6) Agent Preference.
+
 | Topic | Source of truth |
 |-------|-----------------|
+| **Decision hierarchy** | [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) |
 | Build rules (src, dist, includes) | [frontend-production-rules-v0.md](frontend-production-rules-v0.md) + [agents/frontend-gulp-agent/](../frontend-gulp-agent/) |
+| Operator Laws (spacing, layout, type) | [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) §3 (OL-01–OL-07); detail in [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) |
 | Page scope | Frontend handoff instance + active design `vN` |
 | Phases / freeze | [agents/mars-forge/AGENT.md](../../agents/mars-forge/AGENT.md) + [forge-operational-modes-v1.md](../../agents/mars-forge/forge-operational-modes-v1.md) |
 | Session outcome | **REPORT** in repo — not chat |
@@ -56,11 +60,12 @@
 
 ## Minimal operational flow
 
+0. **Greenfield site** — Production Standards Draft → Mapping QA → Approval → Shell → Visual Foundation → Design Calibration → Foundation QA before Home ([production-standards-governance-v1.md](production-standards-governance-v1.md) · [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md)). **Layout law:** [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) · [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md). **Precision law:** [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md).
 1. **Charter** — state `page_slug`, `block_id`, workspace path, active design version.
 2. **Mode** — Lite (default) → Standard (section) → Critical (freeze/source/delivery).
 3. **Read** — handoff + foundation workflow step for current phase only.
 4. **Implement** — `src/` only; scoped partials; no silent structure invention.
-5. **Validate** — build or SAFE UNKNOWN; mode-appropriate checklists.
+5. **Validate** — build or SAFE UNKNOWN; mode-appropriate checklists. **Page Production PASS:** Design Completeness → Frontend Design QA Matrix → Pixel Fidelity → [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §6.
 6. **Report** — `# REPORT — …` per [reporting-standard-v0.md](reporting-standard-v0.md): scope, files, findings, freeze state.
 7. **Freeze** — Standard+ when PASS; unfreeze needs reason — [section-replacement-contract-v1.md](section-replacement-contract-v1.md).
 
@@ -103,6 +108,9 @@
 
 | Task | Doc |
 |------|-----|
+| Greenfield foundation sequence | [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) · [production-standards-governance-v1.md](production-standards-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) · [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) · [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) · [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) |
+| WF-GRID / WF-LAYOUT layout law | [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) · [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) · [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md) |
+| Design Completeness + Production PASS | [frontend-design-completeness-governance-v1.md](frontend-design-completeness-governance-v1.md) · [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) · [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) |
 | Replace / swap section | [section-replacement-contract-v1.md](section-replacement-contract-v1.md) |
 | Topology | [wave1-operational-topology-v1.md](wave1-operational-topology-v1.md) |
 | Shared tokens/forms/modals/JS | [foundation-systems/README.md](foundation-systems/README.md) (Wave 2) |

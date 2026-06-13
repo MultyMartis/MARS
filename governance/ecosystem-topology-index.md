@@ -78,7 +78,7 @@ AGENTS.md (honesty)
 | **What it is NOT** | Runtime-ready factory engine, autonomous site builder, or in-repo deployment platform. |
 | **Operational status** | **Strategic planned** — methodology **operational** for human/Cursor work; execution engine **excluded**. |
 | **Canonical path** | [../projects/mars-website-factory/README.md](../projects/mars-website-factory/README.md); navigation [OPERATIONAL-INDEX.md](../projects/mars-website-factory/OPERATIONAL-INDEX.md); registry `mars-website-factory`. |
-| **Relationship role** | **Upstream contracts** for frontend handoff, agent ids (§4.1), and reference cases; consumes governance; points to WPilot as **future** WordPress bridge. **Execution cases:** [execution-cases-registry-v1.md](../projects/mars-website-factory/execution-cases-registry-v1.md) (Triumph, ISBD). |
+| **Relationship role** | **Upstream contracts** for frontend handoff, agent ids (§4.1), and reference cases; consumes governance; points to WPilot as **future** WordPress bridge. **Execution cases:** [execution-cases-registry-v1.md](../projects/mars-website-factory/execution-cases-registry-v1.md) (Triumph, ISBD, BZPM). **Physical records:** [../workspaces/website-factory-operations/](../workspaces/website-factory-operations/) LOC-ZONE (see § Website Factory LOC-ZONE). |
 
 ---
 
@@ -186,7 +186,19 @@ AGENTS.md (honesty)
 | **What it is NOT** | WPilot child, MARS runtime, autonomous OpenCart admin, deploy bot, or in-repo plugin/runtime proof. |
 | **Operational status** | **Operational** (Phase 0+ documentation baseline); live site access **external**. |
 | **Canonical path** | [../projects/ocpilot/README.md](../projects/ocpilot/README.md), [OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md); registry `ocpilot`. |
-| **Relationship role** | **Future** ecommerce CMS bridge; may consume **EAR Runtime** snapshots when chartered; shares external-access patterns with WPilot — **not** WPilot-owned. |
+| **Relationship role** | **Future** ecommerce CMS bridge; may consume **EAR Runtime** snapshots when chartered; shares external-access patterns with WPilot — **not** WPilot-owned. **Sites:** site-001 (Triumph-related operational context) and **site-002 (ЗПМ)** registered in OCPilot local registry (`evt-2026-0023`) — not separate `project_id` rows. |
+
+---
+
+### Website Factory LOC-ZONE (`website-factory-operations/`)
+
+| | |
+|--|--|
+| **What it is** | **LOC-ZONE** — Authorized Records filesystem root for Factory structured records (RT-G04/RT-G05 physical artifact plane). Portfolio catalog ROC-01; pilot **FP-0001** (REG-0001) Waves 1–3 **complete**; **FP-0002** (Shpigovsky) material present — **not** ROC-01 enrolled (visibility only). Internal agent seed **AG-WP-001** (Forge WordPress) lives under `internal-agent-seeds/`. |
+| **What it is NOT** | Second Factory methodology SoT (doctrine stays in `website-factory-reference-v1/`); `project_id` row; runtime or automation product; replacement for `execution-cases-registry-v1.md`. |
+| **Operational status** | **Operational** (human-maintained records) — Waves 1–3 complete on FP-0001; FP-0002 foundation active. |
+| **Canonical path** | [../workspaces/website-factory-operations/README.md](../workspaces/website-factory-operations/README.md); catalog [ROC-01-catalog-aggregate.md](../workspaces/website-factory-operations/POC-02-registry-facet/ROC-01-catalog-aggregate.md). |
+| **Relationship role** | **Physical artifact plane** for Factory operations; **ATLAS-aware** (FP-0001/FP-0002 bind ORG/PRJ/WEB ids where attested); complements `projects/mars-website-factory/` methodology pack and `projects/website-factory/` BZPM execution case tree. |
 
 ---
 
@@ -223,6 +235,30 @@ AGENTS.md (honesty)
 | **Operational status** | **Foundation complete** — implementation and agent cards **not started** (`planned` registry band). |
 | **Canonical path** | [../projects/nova/README.md](../projects/nova/README.md), [NOVA-FOUNDATION-STATUS-v1.md](../projects/nova/NOVA-FOUNDATION-STATUS-v1.md); registry `nova`. |
 | **Relationship role** | **Methodology parallel** to Website Factory for mobile domain; no OPERATIONAL-INDEX yet — README + foundation status suffice at current scale. |
+
+---
+
+### ATLAS (Business Reality Registry)
+
+| | |
+|--|--|
+| **What it is** | **Cross-Cutting Registry Infrastructure** — documentation-first **Business Reality Registry** (canonical business entity identity intent: organizations, people, structural projects, websites, domains, relationships). Phase 1 **foundation complete** under `projects/atlas/foundation/`. |
+| **What it is NOT** | Runtime, storage engine, CRM/ERP/finance, PM/tasks, ORCA/MIG operational artifacts, MARS `project_id` registry (`registry/project-registry.md` remains separate), agent orchestration, or automated enforcement. |
+| **Operational status** | **REGISTERED** (`planned` registry band) — foundation **complete**; **documentation-layer population** Waves 1–6B + Agreement layers **complete** (human-attested registers under `population/`); persistence engine and APIs **not started**. |
+| **Canonical path** | [../projects/atlas/foundation/ATLAS-REALITY-MODEL-v1.md](../projects/atlas/foundation/ATLAS-REALITY-MODEL-v1.md), [ATLAS-BOUNDARIES-v1.md](../projects/atlas/foundation/ATLAS-BOUNDARIES-v1.md); [OPERATIONAL-INDEX.md](../projects/atlas/OPERATIONAL-INDEX.md); registry `atlas`. Evidence: [../logs/atlas/atlas-registration-v1.md](../logs/atlas/atlas-registration-v1.md). |
+| **Relationship role** | **Business-reality SoT intent** for ecosystem consumers (read-only contract); **consumes** operator attestation only — **does not** subsume program packs, market groundtruth (MIG), or PPC interpretation (ORCA). **Consumed by** OPS (reporting bindings). |
+
+---
+
+### OPS (Business Operations Domain)
+
+| | |
+|--|--|
+| **What it is** | **Business Operations Domain** — documentation-first, **human-supervised** operational back-office pack: reporting workflows, document workflows, approvals, deadlines, follow-ups, operational coordination. Foundation through WF-01 pilot and alignment **complete** under `projects/ops/`. |
+| **What it is NOT** | Runtime, orchestration, CRM/ERP/accounting, legal authority, business-reality registry, central ecosystem authority, or autonomous operator. |
+| **Operational status** | **REGISTERED** (`planned` registry band) — foundation **complete**; WF-01 and WF-02 **live binding pilots PARTIAL** (2026-06-10); implementation engine **not started**. |
+| **Canonical path** | [../projects/ops/README.md](../projects/ops/README.md), [OPERATIONAL-INDEX.md](../projects/ops/OPERATIONAL-INDEX.md); registry `ops`. Evidence: [../logs/ops/ops-registration-v1.md](../logs/ops/ops-registration-v1.md). Visual: `programs.canvas` (Awareness Alignment 2026-06). |
+| **Relationship role** | **Consumes** [ATLAS](#atlas-business-reality-registry) (business identity, when available). **May later surface through** HomeGateway, NOVA. **May consume operator-attested evidence from** MetaBOT, ORCA, MIG, WPilot, OCPilot — **does not** own those lanes. **Not** authority over ATLAS, MARS core, or external runtimes. |
 
 ---
 

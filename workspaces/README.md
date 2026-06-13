@@ -12,6 +12,7 @@ Do **not** treat this tree as authoritative production source unless a project e
 | Triumph Manipulator Landing V2 — active local frontend workspace | [`triumph-manipulator-landing-v2/`](triumph-manipulator-landing-v2/README.md) |
 | Website Factory reference (Wave 3–6) | [`website-factory-reference-v1/`](website-factory-reference-v1/README.md) — **git-tracked** canonical `src/` |
 | Website Factory client template (Wave 5) | [`_template-client-v1/`](_template-client-v1/README.md) — **git-tracked** minimal starter |
+| Website Factory **LOC-ZONE** (Authorized Records) | [`website-factory-operations/`](website-factory-operations/README.md) — Factory physical artifact plane; ROC-01 catalog; FP-0001 pilot closed partial; FP-0002 visibility |
 
 **Triumph:** V2 vs frozen V1, where to edit vs where mockups live — [`../projects/triumph-manipulator-landing/V2-CANONICAL-STATE.md`](../projects/triumph-manipulator-landing/V2-CANONICAL-STATE.md).
 

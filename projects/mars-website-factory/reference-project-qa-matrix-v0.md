@@ -65,8 +65,27 @@ When evidence is missing (analytics, legal text, third-party behavior):
 
 ---
 
-## 6. Changelog
+## 6. Scope disambiguation (governance boundary)
+
+**This document (Reference Project QA Matrix v0)** governs **which QA posture applies at each Factory lifecycle stage** (Intake through Delivery) for **reference-project runbooks** — Required / Blocking / Optional / HITL columns. It is **not** a design-to-implementation fidelity checklist.
+
+| Question | Use this doc (v0) | Use instead |
+|----------|-------------------|-------------|
+| Must Strategy QA block IA if hypotheses contradict intake? | **Yes** — §1 matrix row | — |
+| Does hero spacing match Figma within Factory precision law? | **No** | [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) |
+| Is foundation demo page ready before Home? | **No** | [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) |
+| Is page entity inventory complete before fidelity QA? | **No** | [frontend-design-completeness-governance-v1.md](frontend-design-completeness-governance-v1.md) |
+| What REPORT shape closes Production PASS? | **No** | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) |
+
+**Naming rule:** **«QA Matrix»** without qualifier in **frontend production** context means [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md). **«Reference Project QA Matrix»** means **this file**.
+
+**Frontend fidelity peer:** [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) — **site-level** stage × lane matrix is **complementary**; do not substitute for DQ domains or Production PASS.
+
+---
+
+## 7. Changelog
 
 | Version | Date | Notes |
 |---------|------|--------|
 | v0 | 2026-05-12 | Initial **Reference Project QA Matrix v0**. |
+| v0.1 | 2026-06-13 | §6 scope disambiguation — Foundation Finalization Pack. |

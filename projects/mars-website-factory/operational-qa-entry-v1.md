@@ -15,6 +15,15 @@
 | Adoption bootstrap | § **Adoption validation** |
 | Visual slice / swap / migration | § **Visual regression** |
 | REPORT shape | § **REPORT examples** |
+| **Frontend Production Sign-off** | § **Production PASS authority** below |
+
+---
+
+## Production PASS authority
+
+When closing a **full Frontend Production Sign-off** (page/slice Production PASS, not compact operational pass), use **[frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md)** for gate verdict vocabulary and **PRODUCTION VERDICT** rollup.
+
+Compact pass (§ below) remains the default after build — it is **not** Production PASS authority.
 
 ---
 

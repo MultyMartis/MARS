@@ -19,6 +19,7 @@
 | 5 | JS lifecycle | [js-lifecycle-system-v2.md](js-lifecycle-system-v2.md) | `js/core/lifecycle.js`, `data-module` contract |
 | 6 | Interaction / motion | [interaction-motion-system-v2.md](interaction-motion-system-v2.md) | motion tokens + allowed/forbidden patterns |
 | 7 | Conversion blocks | [conversion-blocks-v2.md](conversion-blocks-v2.md) | partial + SCSS + hook normalization per `block_id` |
+| 8 | Grid discipline | [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) | section/container markup + one page grid contract |
 
 **Wave 3–4 reference implementation:** [workspaces/website-factory-reference-v1/](../../workspaces/website-factory-reference-v1/) (7 blocks) · golden slice [golden-implementation-slice-v1.md](../golden-implementation-slice-v1.md). **Wave 4 adoption:** [foundation-adoption-charter-v1.md](../foundation-adoption-charter-v1.md) · [onboarding-flow-v1.md](../onboarding-flow-v1.md).
 

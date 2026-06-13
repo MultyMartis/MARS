@@ -4,7 +4,7 @@
 
 **Version:** v0.
 
-**Related:** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md), [`../../AGENTS.md`](../../AGENTS.md).
+**Related:** [prompt-standards-overview-v0.md](prompt-standards-overview-v0.md), [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md), [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md), [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md), [qa-prompt-rules-v0.md](qa-prompt-rules-v0.md), [qa-result-payloads-v0.md](qa-result-payloads-v0.md), [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) — **Frontend QA extension** (Production Verdict rollup, gate vocabulary for Design Completeness / QA Matrix / Pixel Fidelity), [`../../AGENTS.md`](../../AGENTS.md).
 
 **RU commercial landings:** use [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md). Frontend/QA REPORT **PASS is not complete** without `RU TYPOGRAPHY / NO WORD-SPLITTING` verification.
 

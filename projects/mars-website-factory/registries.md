@@ -83,6 +83,22 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **Relations** | **Gulp Frontend Agent**; **Frontend QA Agent**; **Validator** for secrets and dangerous patterns |
 | **RU typography (authority)** | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) |
 | **RU landing QA preset** | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) — mandatory widths for Russian commercial landings |
+| **Section spacing (operational)** | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) |
+| **Shell-first start gate** | [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) |
+| **Production Standards governance** | [production-standards-governance-v1.md](production-standards-governance-v1.md) |
+| **Visual Foundation Contract** | [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) |
+| **Design Calibration stage** | [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) |
+| **Precision governance** | [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) — spacing scales, line-height law, normalization |
+| **Frontend authority order** | [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) — canonical decision hierarchy; Approved Operator Laws OL-01–OL-07 |
+| **Layout pattern requirement** | [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md) |
+| **Design source → frontend mapping** | [design-source-to-frontend-mapping-governance-v1.md](design-source-to-frontend-mapping-governance-v1.md) — multi-source extraction, layout chain, Mapping QA gate |
+| **WF-GRID discipline (container layer)** | [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) — section ≠ container; page grid contract |
+| **WF-LAYOUT discipline (inner zones)** | [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) — hero/card/trust zones; fr/minmax authority |
+| **Foundation QA (pre–Home gate)** | [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) — consolidated checklist; shell-first Phase 5 |
+| **Design completeness** | [frontend-design-completeness-governance-v1.md](frontend-design-completeness-governance-v1.md) — entity presence audit before fidelity QA |
+| **Frontend Design QA Matrix** | [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) — DQ-01–DQ-12 fidelity domains; Production PASS gate |
+| **Pixel fidelity audit** | [pixel-fidelity-audit-rules-v1.md](pixel-fidelity-audit-rules-v1.md) — numeric variance rules per PF-* domain |
+| **Frontend QA reporting** | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) — Production Verdict rollup; gate vocabulary |
 
 ---
 

@@ -7,7 +7,7 @@
 
 **Reference signal (lessons only — not copy source):** Triumph V5 FAQ/CTA/build incidents in `workspaces/triumph-manipulator-landing-v5/reports/`.
 
-**Related:** [frontend-production-rules-v0.md](frontend-production-rules-v0.md) · [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) · [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) · [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) · [terminal-survivability-governance.md](terminal-survivability-governance.md)
+**Related:** [frontend-production-rules-v0.md](frontend-production-rules-v0.md) · [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) · [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) · [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) · [terminal-survivability-governance.md](terminal-survivability-governance.md) · [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) · [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md)
 
 ---
 
@@ -30,6 +30,8 @@ When handoff and project tokens disagree, stop and report **SAFE UNKNOWN** — d
 | **Split layouts inside shell** | 50/50, FAQ+CTA, and other column splits must live inside the canonical **content container** / **section-shell** unless the prompt explicitly requests full-bleed. |
 | **50/50 meaning** | “50/50” means **50/50 inside the content shell**, not viewport-wide columns that bypass max-width. |
 | **No shell bypass** | Do not break out of `section-shell` / container width system to “fix” alignment — adjust grid/flex **within** the shell. |
+| **Section ≠ container** | Do not put container width class on `<section>` / `<nav>` — see [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) (WF-GRID-001). |
+| **No default % hero splits** | Inner-zone hero/card/trust/finance layout follows [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) — fr/minmax authority; `%` only via documented exception (WF-LAYOUT-007). |
 
 ---
 

@@ -67,7 +67,7 @@
     {
       "id": "n-wf-prod-cases",
       "type": "text",
-      "text": "## Production / Execution Cases\n\nTriumph (#1) · ISBD (#2)\n`execution-cases-registry-v1.md`",
+      "text": "## Production / Execution Cases\n\nTriumph (#1) · ISBD (#2) · BZPM (#3)\n`execution-cases-registry-v1.md`",
       "x": 0,
       "y": 480,
       "width": 280,
@@ -118,6 +118,26 @@
       "width": 280,
       "height": 110,
       "color": "1"
+    },
+    {
+      "id": "n-wf-bzpm-note",
+      "type": "text",
+      "text": "## BZPM Catalog Redesign\n\n**Execution case #3** · `bzpm-catalog-redesign`\n\n- Tree: `projects/website-factory/execution-cases/bzpm-catalog-redesign/`\n- Research phase complete; workspace SAFE UNKNOWN",
+      "x": 0,
+      "y": 800,
+      "width": 280,
+      "height": 110,
+      "color": "1"
+    },
+    {
+      "id": "n-wf-loc-zone",
+      "type": "text",
+      "text": "## Factory LOC-ZONE\n\n`workspaces/website-factory-operations/`\n\nAuthorized Records · ROC-01 · FP-0001 pilot\nDoctrine: `website-factory-reference-v1/`",
+      "x": 340,
+      "y": 800,
+      "width": 300,
+      "height": 110,
+      "color": "4"
     }
   ],
   "edges": [
@@ -222,6 +242,32 @@
       "toNode": "n-wf-isbd-note",
       "toSide": "left",
       "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-prod-bzpm",
+      "fromNode": "n-wf-prod-cases",
+      "fromSide": "right",
+      "toNode": "n-wf-bzpm-note",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e-wf-root-loc",
+      "fromNode": "n-wf-root",
+      "fromSide": "bottom",
+      "toNode": "n-wf-loc-zone",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "physical records"
+    },
+    {
+      "id": "e-wf-loc-ref",
+      "fromNode": "n-wf-loc-zone",
+      "fromSide": "top",
+      "toNode": "n-wf-ref-ws",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "doctrine split"
     },
     {
       "id": "e-wf-triumph-qa",
