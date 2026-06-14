@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-06-09  
-**Evidence cutoff:** 2026-06-09  
+**Last updated:** 2026-06-14  
+**Evidence cutoff:** 2026-06-14 (SITE-002 stable live manual compact checkpoint)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -11,10 +11,33 @@
 
 | Item | State |
 |------|--------|
-| OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.110** **DONE**; Run **5** initialized, **paused** |
+| OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Current SITE-001 focus | Phase 1 — **ACCEPTED WITH NOTES**; **Phase 1 Stable Checkpoint ACTIVE** (2026-06-09); recovery point before Phase 2; next: **W1F-D** + **W1F-E** or Phase 2 planning |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT** (2026-06-14) |
+| Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
+| Current SITE-002 focus | **STABLE LIVE CHECKPOINT** `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; live hosting + Beget global backup = rollback source; next tasks require targeted live-file capture |
+
+---
+
+## SITE-002 — current state
+
+| Field | Value |
+|-------|--------|
+| Site ID | SITE-002 |
+| Environment | **TEST** — `https://zpm.new-site.space/` |
+| Platform (operator-recorded) | ocStore / OpenCart |
+| Version | **SAFE UNKNOWN** |
+| Baseline | **`SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`** — **STABLE LIVE CHECKPOINT** |
+| Registry | Active project site (PDP / Catalog UX work in progress) |
+| Run 5 | **NO** — not applicable to current operational lane |
+| Writes | **NO** for this checkpoint run — metadata only |
+| Rollback source | **Beget global backup + operator live state** |
+| External secrets | External storage only — not in repo |
+
+**Checkpoint evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md)
+
+**Registration evidence:** [sites/site-002/reports/SITE-002-REGISTRATION-v1.md](sites/site-002/reports/SITE-002-REGISTRATION-v1.md) · [logs/ocpilot/site-002-registration-v1.md](../../logs/ocpilot/site-002-registration-v1.md)
 
 ---
 
@@ -57,6 +80,275 @@
 | [sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md) | Phase 1 stable checkpoint — **ACTIVE** 2026-06-09 |
 | [sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md) | Checkpoint decision — **APPROVED** |
 | [knowledge/OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md](knowledge/OCPILOT-RULE-CONTROLLER-META-GENERATORS-v1.md) | Controller meta inspection rule — **ACTIVE** |
+| [sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DISCOVERY-v1.md) | W2 visual/UI discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md) | W2 discovery gate — **DISCOVERY COMPLETE** |
+| [sites/site-001/reports/SITE-001-W2-VISUAL-SPECIFICATION-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-SPECIFICATION-v1.md) | W2.1 visual specification — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W2-IMPLEMENTATION-ROADMAP-v1.md](sites/site-001/reports/SITE-001-W2-IMPLEMENTATION-ROADMAP-v1.md) | W2.1 W3 roadmap — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W2-DECISION-v1.md](sites/site-001/reports/SITE-001-W2-DECISION-v1.md) | W2.1 gate — **READY FOR PHASE 2 IMPLEMENTATION** |
+| [sites/site-001/reports/SITE-001-W2-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W2-WRITE-CHARTER-v1.md) | Phase 2 write charter — **ACTIVE** (2026-06-09) |
+| [sites/site-001/reports/SITE-001-W2-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W2-CHANGE-REQUEST-v1.md) | Phase 2 CR — CR-SITE-001-W3C-2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3C-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3C-DISCOVERY-v1.md) | W3-C discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3C-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3C-EXECUTION-v1.md) | W3-C execution — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3C-DECISION-v1.md](sites/site-001/reports/SITE-001-W3C-DECISION-v1.md) | W3-C decision — **PASS WITH NOTES** |
+| [sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md) | W3-C rollback instance |
+| [sites/site-001/reports/SITE-001-W3C-ROLLBACK-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-EXECUTION-v1.md) | W3-C T1 rollback — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3C-ROLLBACK-DECISION-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-DECISION-v1.md) | W3-C rollback verdict — **PASS** |
+| [sites/site-001/reports/SITE-001-W3V-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3V-WRITE-CHARTER-v1.md) | W3-V write charter — **ACTIVE** |
+| [sites/site-001/reports/SITE-001-W3V-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W3V-CHANGE-REQUEST-v1.md) | W3-V CR — CR-SITE-001-W3V-2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3V-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3V-ROLLBACK-PLAN-v1.md) | W3-V rollback instance |
+| [sites/site-001/reports/SITE-001-W3V-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3V-DISCOVERY-v1.md) | W3-V discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3V-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3V-EXECUTION-v1.md) | W3-V execution — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3V-DECISION-v1.md](sites/site-001/reports/SITE-001-W3V-DECISION-v1.md) | W3-V decision — **PASS WITH NOTES** |
+| [sites/site-001/reports/SITE-001-W3UX-DENSITY-AUDIT-v1.md](sites/site-001/reports/SITE-001-W3UX-DENSITY-AUDIT-v1.md) | W3-UX density audit — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3UX-DENSITY-DECISION-v1.md](sites/site-001/reports/SITE-001-W3UX-DENSITY-DECISION-v1.md) | W3-UX discovery gate — **DISCOVERY COMPLETE** |
+| [sites/site-001/reports/SITE-001-W3UX-C1-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-WRITE-CHARTER-v1.md) | W3UX-C1 write charter — **ACTIVE** |
+| [sites/site-001/reports/SITE-001-W3UX-C1-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-CHANGE-REQUEST-v1.md) | W3UX-C1 CR — CR-SITE-001-W3UX-C1-2026-06 |
+| [sites/site-001/reports/SITE-001-W3UX-C1-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-DISCOVERY-v1.md) | W3UX-C1 discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3UX-C1-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-EXECUTION-v1.md) | W3UX-C1 execution — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3UX-C1-DECISION-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-DECISION-v1.md) | W3UX-C1 decision — **PASS WITH NOTES** |
+| [sites/site-001/reports/SITE-001-W3V2-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3V2-WRITE-CHARTER-v1.md) | W3V2 write charter — **ACTIVE** |
+| [sites/site-001/reports/SITE-001-W3V2-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W3V2-CHANGE-REQUEST-v1.md) | W3V2 CR — CR-SITE-001-W3V2-2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3V2-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3V2-ROLLBACK-PLAN-v1.md) | W3V2 rollback instance |
+| [sites/site-001/reports/SITE-001-W3V2-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3V2-DISCOVERY-v1.md) | W3V2 discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3V2-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3V2-EXECUTION-v1.md) | W3V2 execution — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3V2-DECISION-v1.md](sites/site-001/reports/SITE-001-W3V2-DECISION-v1.md) | W3V2 decision — **PASS WITH NOTES** |
+| [sites/site-001/reports/SITE-001-W3VIS-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3VIS-01-DISCOVERY-v1.md) | W3VIS-01 discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3VIS-01-DECISION-v1.md](sites/site-001/reports/SITE-001-W3VIS-01-DECISION-v1.md) | W3VIS-01 gate — **DISCOVERY COMPLETE** |
+| [sites/site-001/reports/SITE-001-W3VIS-01A-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3VIS-01A-EXECUTION-v1.md) | W3VIS-01A execution — **DONE** then **ROLLED BACK** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3VIS-01B-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3VIS-01B-EXECUTION-v1.md) | W3VIS-01B execution — **DONE** then **ROLLED BACK** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-EXECUTION-v1.md) | W3VIS T1 rollback — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-DECISION-v1.md](sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-DECISION-v1.md) | W3VIS rollback verdict — **PASS** |
+| [sites/site-001/reports/SITE-001-W3COLOR-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3COLOR-01-DISCOVERY-v1.md) | W3COLOR-01 discovery — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md) | W3ATMOSPHERE-01A visual preview — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md) | Website Factory design direction «Graphite Salon» — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-IMPLEMENTATION-BRIEF-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-IMPLEMENTATION-BRIEF-v1.md) | Website Factory OCPilot brief — W3WF-01 — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DECISION-v1.md) | Website Factory decision — **READY FOR OCPILOT IMPLEMENTATION** (superseded by Concept Workshop) |
+| [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md) | Website Factory concept workshop — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md) | Website Factory concept decision — **Concept B selected** |
+| [sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-BLUEPRINT-v1.md](sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-BLUEPRINT-v1.md) | W5 first impression blueprint — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-DECISION-v1.md](sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-DECISION-v1.md) | W5 blueprint decision — **APPROVED**; 3→7/10 **YES** |
+| [sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-EXECUTION-v1.md) | W5-A header shell — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-DECISION-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-DECISION-v1.md) | W5-A decision — **PASS WITH NOTES**; HITL **PENDING** |
+| [sites/site-001/reports/SITE-001-W5A-STABILIZATION-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-EXECUTION-v1.md) | W5-A-S stabilization — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W5A-STABILIZATION-DECISION-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-DECISION-v1.md) | W5-A-S decision — **PASS WITH NOTES**; W5-A COMPLETE **NO** |
+| [sites/site-001/reports/SITE-001-W5-STABLE-BACKUP-v1.md](sites/site-001/reports/SITE-001-W5-STABLE-BACKUP-v1.md) | W5 pre-W5-C stable backup — **DONE** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-W5C-USED-PDP-COMMERCIAL-STAGE-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-COMMERCIAL-STAGE-DESIGN-PLAN-v1.md) | W5-C design plan — **DONE** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-W5C-USED-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-EXECUTION-v1.md) | W5-C execution — **DONE** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-W5C-USED-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-DECISION-v1.md) | W5-C decision — **PASS WITH NOTES**; HITL **PENDING** |
+| [sites/site-001/reports/SITE-001-WF-V2-GAP-ANALYSIS-v1.md](sites/site-001/reports/SITE-001-WF-V2-GAP-ANALYSIS-v1.md) | WF V2 gap analysis — **DONE** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-WF-V2-IMPLEMENTATION-PLAN-v1.md](sites/site-001/reports/SITE-001-WF-V2-IMPLEMENTATION-PLAN-v1.md) | WF V2 implementation plan — **APPROVED** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-WFV2-W1-HEADER-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-EXECUTION-v1.md) | WF-V2-W1 hybrid header — **DONE** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-WFV2-W1-HEADER-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-DECISION-v1.md) | WF-V2-W1 decision — **PASS WITH NOTES**; HITL **PENDING** |
+| [sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) | WF-V2-W2 flat used PDP — **DONE** 2026-06-10 |
+| [sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md) | WF-V2-W2 decision — **PASS WITH NOTES**; HITL **PENDING** |
+| [sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-MAP-v1.md](sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-MAP-v1.md) | W3WF-01 visual impact map — **DONE** 2026-06-09 |
+| [sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-DECISION-v1.md](sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-DECISION-v1.md) | W3WF-01 visual impact decision — **READY FOR W3WF-01 IMPLEMENTATION** |
+| [sites/site-001/reports/SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md](sites/site-001/reports/SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md) | Visual change failure audit — **DONE** 2026-06-09 — **mixed cause**; CSS live on TEST |
+
+### SITE-001 Visual Change Failure Audit (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — read-only technical audit; **no site modifications** |
+| Report | [SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md](sites/site-001/reports/SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md) |
+| Verdict | **Mixed cause** — CSS **is loaded and applied** on TEST; operator perception gap = **changes too weak** (incremental W3-V→W3V2→W3ATMOSPHERE) + **expectation mismatch**; secondary: **browser cache risk** (`max-age=604800`) |
+| Ruled out | Wrong CSS file · CSS not loaded · post-main override · extra CSS after theme · global selector failure on catalog |
+| Operator directive | **STOP** new design / atmosphere CSS until hard-refresh verification + expectation workshop |
+| W3WF-01 | **ON HOLD** — superseded by Concept Workshop; do not implement |
+| Evidence (local) | `.recovery-temp/site-001-visual-failure-audit*.py` outputs |
+
+### SITE-001 W3WF-01 — visual impact map (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — documentation only; **no site modifications** |
+| Purpose | Pre-execution operator preview — what W3WF-01 will look like vs **current TEST** (W3ATMOSPHERE active) |
+| Decision | **READY FOR W3WF-01 IMPLEMENTATION** — perceptual delta **LOW–MEDIUM** vs live TEST; finishing/consolidation wave |
+| Honest verdict | W3ATMOSPHERE already delivered ~70–80% «Graphite Salon»; W3WF-01 = `--wf-*` governance + legacy purge + patchy-zone closure |
+| Operator risk | **MEDIUM–HIGH** «это опять косметика» if expectation = second transformation |
+| Next | **ON HOLD** — blocked by Visual Change Failure Audit until operator expectation reset |
+
+### SITE-001 W5 — First Impression Blueprint (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — documentation only; **no site modifications** |
+| Design owner | **Website Factory** |
+| Blueprint | [SITE-001-W5-FIRST-IMPRESSION-BLUEPRINT-v1.md](sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-BLUEPRINT-v1.md) — architecture for header · homepage · used PDP |
+| Decision | [SITE-001-W5-FIRST-IMPRESSION-DECISION-v1.md](sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-DECISION-v1.md) — **BLUEPRINT APPROVED** |
+| Final verdict | Concept B can move **3/10 → 7/10+** without full redesign — **YES** |
+| Operator HITL | **PENDING** — confirm or override blueprint |
+| Implementation | **STOPPED** — no OCPilot writes until W5 implementation charter |
+| Phases (planning) | W5-A header shell · W5-B homepage showroom · W5-C magazine PDP · W5-D integration HITL |
+| Rejected in blueprint | CSS-only waves · atmosphere tokens · W4.1 sticky continuation |
+| Preserve | W3UX-C1 density · Phase 1 branding · W4 `w4-used-*` wrappers (re-group in W5-C) |
+
+### SITE-001 W5-A — Header Shell Recomposition (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** on TEST — header DOM regroup + W5-A CSS block |
+| Charter | [SITE-001-W5A-HEADER-SHELL-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-WRITE-CHARTER-v1.md) |
+| Execution | [SITE-001-W5A-HEADER-SHELL-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-EXECUTION-v1.md) |
+| Decision | [SITE-001-W5A-HEADER-SHELL-DECISION-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-DECISION-v1.md) — **PASS WITH NOTES** |
+| Backup | `pre-w5a-header-shell-20260609-2251` |
+| QA | `sites/site-001/qa/w5a-header-shell-screenshots/` |
+| Verify | **8/8 PASS** · W4 markers preserved · sticky removed |
+| Operator HITL | **PENDING** — confirm visual acceptance after W5-A-S |
+| Next | W5-B homepage showroom — **NOT AUTHORIZED** until W5-A operator COMPLETE |
+
+### SITE-001 W5-A-S — Header Shell Stabilization (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** on TEST — promo fix · dropdown recovery · nav density · responsive audits |
+| Charter | [SITE-001-W5A-STABILIZATION-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-WRITE-CHARTER-v1.md) |
+| Execution | [SITE-001-W5A-STABILIZATION-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-EXECUTION-v1.md) |
+| Decision | [SITE-001-W5A-STABILIZATION-DECISION-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-DECISION-v1.md) — **PASS WITH NOTES** |
+| Backup | `pre-w5a-stabilization-20260609-2325` |
+| QA | `sites/site-001/qa/w5a-stabilization-screenshots/` |
+| Verify | **8/8 PASS** · interactions **PASS** · responsive 1920–768 **PASS** |
+| W5-A COMPLETE | **NO** — operator HITL criterion 5 **PENDING** |
+| Next | Operator W5-A sign-off → W5-B charter |
+
+### SITE-001 Website Factory — Concept Workshop (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — documentation only; **no site modifications** |
+| Design owner | **Website Factory** (visual director / UX strategist) |
+| Implementation owner | **OCPilot** — execution only; design invention **FORBIDDEN** |
+| Workshop | [SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md) — 3 concepts (A/B/C) |
+| Decision | [SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md) — **Concept B «Современный Дилер 2026»** |
+| Operator HITL | **PENDING** — confirm or override Concept B (superseded by W5 blueprint HITL) |
+| Implementation | **STOPPED** — no OCPilot writes until W5 implementation charter |
+| 3-second test | Concept B **PASS** (modern dealership); baseline **3/10** → target **7/10** |
+| Rejected | Concept A (too incremental) · Concept C (brand mismatch) · sticky header · W3WF-01 atmosphere |
+| Scope | Header · homepage first screen · used PDP first screen only |
+| Preserve | W3UX-C1 density · Phase 1 branding · W4 twig wrappers (re-skin in B) |
+
+### SITE-001 Website Factory — design direction «Graphite Salon» (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **SUPERSEDED** for first-impression scope by Concept Workshop |
+| Prior direction | **«Graphite Salon»** — [SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md) |
+| Prior decision | **READY FOR OCPILOT IMPLEMENTATION** → **ON HOLD** |
+| W3WF-01 | **ON HOLD** — do not implement |
+| Note | Atmosphere tokens may inform future waves; not first-impression driver |
+
+### SITE-001 W3ATMOSPHERE — atmosphere refresh (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — **PASS WITH NOTES** (2026-06-09) |
+| Discovery | [SITE-001-W3COLOR-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3COLOR-01-DISCOVERY-v1.md) — **DONE** |
+| Visual preview | [SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md) — **DONE** |
+| Execution | [SITE-001-W3ATMOSPHERE-01-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-EXECUTION-v1.md) — **DONE** |
+| Decision | [SITE-001-W3ATMOSPHERE-01-DECISION-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-DECISION-v1.md) — **PASS WITH NOTES** |
+| Scope | Site-wide atmosphere — canvas, header/footer shell, card language, forms, depth — CSS-only |
+| Backup | `pre-w3atmosphere-01-20260609-1156` (external storage) |
+| Superseded for design authority | Website Factory «Graphite Salon» — W3WF-01 consolidates |
+| Preserve on write | W3UX-C1 `.used_catalog` density · W3-V · Phase 1 checkpoint · no PDP hero/CTA hierarchy |
+| Expected user-visible change | **YES** — ~6/10 sitewide; catalog/footer/header strongest |
+
+### SITE-001 W3VIS-01A / W3VIS-01B (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **ROLLED BACK** — T1 restore 2026-06-09 (operator: task drift — PDP hero hierarchy not requested) |
+| Original execution | W3VIS-01A **DONE** · W3VIS-01B **DONE** 2026-06-09 on TEST |
+| Scope (reverted) | PDP hero surface system (01A) · commercial hierarchy / CTA order (01B) — CSS-only |
+| Rollback verdict | **PASS** — 9/9 URLs verified post-restore |
+| Backup used | `pre-w3vis-01a-20260609-0517` (external storage) — removes both 01A and 01B blocks |
+| W3UX-C1 | **PRESERVED** — marker confirmed live post-rollback |
+| Evidence (local) | `.recovery-temp/site-001-w3vis-rollback-result.json` |
+
+### SITE-001 W3VIS-01 Visual Hierarchy & Surface System (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DISCOVERY DONE** — reference only; execution direction superseded by Global Palette Refresh |
+| Scope | Hierarchy failures · surface levels · PDP hero · CTA tiers · catalog/home analysis |
+| Verdict | **DISCOVERY COMPLETE** — W3VIS-01A/01B execution **ROLLED BACK** |
+| Evidence (local) | `.recovery-temp/site-001-w3vis-01-probe.json` |
+
+### SITE-001 W3V2 Visual Identity Refresh (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — CSS-only visual identity layer on TEST |
+| Scope | Color tokens, depth, cards, buttons, header/footer visuals, forms |
+| Verdict | **PASS WITH NOTES** — operator browser sign-off **PENDING** |
+| Verification | **7/7** URLs PASS · live CSS W3V2 block confirmed |
+| Backup | `pre-w3v2-20260609-0451` (external storage) |
+| Evidence (local) | `.recovery-temp/site-001-w3v2-result.json` · `sites/site-001/qa/w3v2-screenshots/` |
+| Structural changes | **NONE** · W3UX-C1 density **preserved** |
+
+### SITE-001 W3UX-C1 Used Catalog Card Density (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — CSS-only density optimization on TEST |
+| Scope | `.used_catalog` — used catalog cards on `/cars/` route family only |
+| Verdict | **PASS WITH NOTES** — desktop/tablet −24%; mobile +7% (N-W3UX-C1-02) |
+| Verification | **5/5** URLs PASS · live CSS W3UX-C1 block confirmed |
+| Backup | `pre-w3ux-c1-20260609-0416` (external storage) |
+| Evidence (local) | `.recovery-temp/site-001-w3ux-c1-result.json` · `sites/site-001/qa/w3ux-c1-screenshots/` |
+| Structural changes | **NONE** |
+
+### SITE-001 W3-UX Density Discovery (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — discovery only; no site modifications |
+| Scope | Catalog/card/PDP/homepage density audit — spacing & hierarchy |
+| Verdict | **DISCOVERY COMPLETE** — ready for W3-UX execution charter |
+| Root cause | Visual density / hierarchy — not W3-V colors/radius/shadows |
+| Evidence (local) | `.recovery-temp/site-001-w3ux-density-probe.json` |
+| Implementation | **NOT AUTHORIZED** (superseded by W3UX-C1 execution) |
+
+### SITE-001 W3-V Visual Layer Refresh (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — CSS-only visual refresh on TEST |
+| Scope | `css/main.css` + `css/media.css` — tokens, buttons, forms, cards, shadows, hierarchy |
+| Verdict | **PASS WITH NOTES** — operator browser sign-off **PENDING** |
+| Verification | **7/7** URLs PASS · live CSS W3-V block confirmed |
+| Backup | `pre-w3v-20260609-0327` (external storage) |
+| Evidence (local) | `.recovery-temp/site-001-w3v-result.json` |
+| Structural changes | **NONE** — lesson from W3-C rollback applied |
+
+### SITE-001 W3-C Footer Reduction (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **ROLLED BACK** — T1 restore 2026-06-09 (operator: visual direction not accepted) |
+| Original execution | **DONE** 2026-06-09 — first Phase 2 write on TEST; verdict was **PASS WITH NOTES** |
+| Scope (reverted) | Footer spacing compression · legal `<details>` collapse · catalog link density |
+| Rollback verdict | **PASS** — 7/7 URLs verified post-restore |
+| Backup | `pre-w3c-20260609-0259` (external storage) — used for T1 restore |
+| Evidence (local) | `.recovery-temp/site-001-w3c-rollback-result.json` |
+
+### SITE-001 W2.1 Visual Specification (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **COMPLETE** — documentation only |
+| Scope | Visual spec · W3-A…F roadmap · implementation gate |
+| Verdict | **READY FOR PHASE 2 IMPLEMENTATION** — W3 execution **NOT AUTHORIZED** until Phase 2 write charter |
+| Recommended first write | **W2-PRE** (CSS tokens) → **W3-A** (catalog) |
+
+### SITE-001 W2 Visual Refresh Discovery (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **COMPLETE** — read-only |
+| Scope | Theme map · CSS inventory · visual audit · component registry · technical risks · readiness |
+| Verdict | **READY FOR PHASE 2 PLANNING** — execution **NOT AUTHORIZED** |
+| Evidence (local) | `.recovery-temp/site-001-w2-visual-discovery.json` |
+| Recommended first write wave | **W2-COLORS** — CSS `:root` tokens on TEST (after operator charter) |
 
 ### SITE-001 Phase 1 Stable Checkpoint
 
@@ -122,7 +414,33 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | Phase 1 final acceptance | **DONE** — 2026-06-09 — **ACCEPTED WITH NOTES** |
 | Phase 1 stable checkpoint | **ACTIVE** — 2026-06-09 — decision **APPROVED** |
 | W1F-D / W1F-E | **NOT AUTHORIZED** |
+| Phase 2 write charter | **ACTIVE** — W3UX-C1 charter [SITE-001-W3UX-C1-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-WRITE-CHARTER-v1.md) |
+| W3-V execution | **DONE** — 2026-06-09 — **PASS WITH NOTES** |
+| W3-UX density discovery | **DONE** — 2026-06-09 — **DISCOVERY COMPLETE** |
+| W3UX-C1 execution | **DONE** — 2026-06-09 — **PASS WITH NOTES** |
+| W3UX-C2…QA | **NOT AUTHORIZED** |
+| W3-C execution | **ROLLED BACK** — 2026-06-09 — T1 restore **PASS** |
+| W3WF-01 Visual Impact Map | **DONE** — decision **READY** (implementation **ON HOLD** per audit 4.127) |
+| W4 Used PDP slice | **DONE** — 2026-06-09 — **PASS WITH NOTES** — operator visual HITL **PENDING** |
+| W4.1 Header & Hero Authority | **DONE** — 2026-06-09 — **PASS WITH NOTES** — visual proof pack **DONE** — operator HITL **READY** |
 | Production deployment | **NOT AUTHORIZED** |
+
+---
+
+### SITE-001 W4.1 — Header & Hero Authority (2026-06-09)
+
+| Field | Value |
+|-------|--------|
+| Status | **DONE** — **PASS WITH NOTES** (2026-06-09) |
+| Design plan | [SITE-001-W4-1-HEADER-HERO-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DESIGN-PLAN-v1.md) — **DONE** |
+| Stable backup | [SITE-001-W4-STABLE-BACKUP-v1.md](sites/site-001/reports/SITE-001-W4-STABLE-BACKUP-v1.md) · `pre-w4-1-stable-20260609-1506` |
+| Execution | [SITE-001-W4-1-HEADER-HERO-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-EXECUTION-v1.md) — **DONE** |
+| Decision | [SITE-001-W4-1-HEADER-HERO-DECISION-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DECISION-v1.md) — **PASS WITH NOTES** |
+| Scope | Header shell, red discipline, promo strip, used PDP top — twig classes + CSS |
+| Verification | **9/9** URLs PASS · W4 Used PDP **preserved** |
+| Evidence (local) | `.recovery-temp/site-001-w4-1-result.json` · `qa/w4-1-header-hero-screenshots/` |
+| Visual proof pack | [SITE-001-W4-1-VISUAL-PROOF-PACK-v1.md](sites/site-001/reports/SITE-001-W4-1-VISUAL-PROOF-PACK-v1.md) — **DONE** — verdict **PARTIAL SUCCESS** |
+| Rollback | T1 from `pre-w4-1-stable-20260609-1506` |
 
 ---
 
@@ -176,5 +494,24 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-09 | **UPDATED** — Phase 1 stable snapshot + final audit; decision **COMPLETE WITH NOTES**; controller meta generator rule **ACTIVE** |
 | 2026-06-09 | **UPDATED** — W1G DB SEO **DONE**; Phase 1 final acceptance; decision **ACCEPTED WITH NOTES** |
 | 2026-06-09 | **UPDATED** — Phase 1 stable checkpoint **ACTIVE**; Run **4.110**; decision **APPROVED** |
+| 2026-06-09 | **UPDATED** — W2 Visual Refresh Discovery **COMPLETE**; Run **4.111**; decision **DISCOVERY COMPLETE** |
+| 2026-06-09 | **UPDATED** — W2.1 Visual Specification **COMPLETE**; Run **4.112**; decision **READY FOR PHASE 2 IMPLEMENTATION** |
+| 2026-06-09 | **UPDATED** — SITE-002 (ЗПМ) **REGISTERED**; Run **4.113**; status **AWAITING INTAKE**; external secrets placeholders prepared |
+| 2026-06-09 | **UPDATED** — W3-C T1 rollback **DONE** on TEST; Run **4.115**; verdict **PASS**; site restored to pre-W3C baseline |
+| 2026-06-09 | **UPDATED** — W3-V Visual Layer Refresh **DONE** on TEST; Run **4.116**; CSS-only; verdict **PASS WITH NOTES**; backup `pre-w3v-20260609-0327` |
+| 2026-06-09 | **UPDATED** — W3UX-C1 Used Catalog Card Density **DONE** on TEST; Run **4.118**; CSS-only `.used_catalog`; verdict **PASS WITH NOTES**; backup `pre-w3ux-c1-20260609-0416` |
+| 2026-06-09 | **UPDATED** — W3COLOR-01 discovery **DONE**; W3ATMOSPHERE-01A visual preview **DONE**; verdict **READY FOR W3ATMOSPHERE-01 EXECUTION** (charter not authorized) |
+| 2026-06-09 | **UPDATED** — W3ATMOSPHERE-01 execution **DONE**; verdict **PASS WITH NOTES** |
+| 2026-06-09 | **UPDATED** — Website Factory Design Direction Pack **DONE**; direction «Graphite Salon»; decision **READY FOR OCPILOT IMPLEMENTATION**; next wave **W3WF-01** |
+| 2026-06-09 | **UPDATED** — W3WF-01 Visual Impact Map **DONE**; decision **READY FOR W3WF-01 IMPLEMENTATION** (LOW–MEDIUM delta vs current TEST) |
+| 2026-06-09 | **UPDATED** — W4 Used PDP Structural Visual Slice **DONE** on TEST; verdict **PASS WITH NOTES**; backup `pre-w4-20260609`; W3 cosmetic waves **STOPPED** for PDP |
+| 2026-06-09 | **UPDATED** — W4.1 stable backup **DONE** (`pre-w4-1-stable-20260609-1506`); W4.1 Header & Hero Authority **DONE** on TEST; verdict **PASS WITH NOTES**; backup active as rollback baseline |
+| 2026-06-09 | **UPDATED** — W4.1 Visual Proof Pack **DONE**; operator verdict **PARTIAL SUCCESS** (promo strip YES; homepage NO; header MAYBE) |
+| 2026-06-09 | **UPDATED** — Website Factory Concept Workshop **DONE**; **Concept B — Modern Dealer** selected; implementation **STOPPED**; Graphite Salon / W3WF-01 superseded for first impression; sticky header **REJECTED** |
+| 2026-06-09 | **UPDATED** — W5 First Impression Blueprint **DONE**; decision **APPROVED**; 3→7/10 without full redesign **YES**; phases W5-A…D defined; operator HITL **PENDING** |
+| 2026-06-09 | **UPDATED** — W5-A Header Shell Recomposition **DONE** on TEST; 8/8 verify **PASS**; sticky removed; backup `pre-w5a-header-shell-20260609-2251`; operator visual HITL **PENDING** |
+| 2026-06-09 | **UPDATED** — W5-A-S Stabilization Pass **DONE** on TEST; promo/dropdown/density/responsive fixes; backup `pre-w5a-stabilization-20260609-2325`; stabilization **PASS WITH NOTES**; W5-A operator COMPLETE **NO** (HITL **PENDING**) |
+
+| 2026-06-14 | **UPDATED** — SITE-002 stable live manual compact checkpoint **REGISTERED**; Run **4.138**; baseline `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; status **STABLE LIVE CHECKPOINT**; rollback = Beget global backup + operator live state; metadata-only — no FTP/file capture |
 
 *OCPilot State — documentation only; no runtime claimed.*

@@ -70,6 +70,56 @@
 
 | 4.110 | **SITE-001 Phase 1 — Stable Checkpoint** | **DONE** (2026-06-09; decision: **APPROVED**; status: **ACTIVE**) | [SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-v1.md), [SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
+| 4.111 | **SITE-001 W2 — Visual Refresh Discovery** | **DONE** (2026-06-09; decision: **DISCOVERY COMPLETE**) | [SITE-001-W2-VISUAL-REFRESH-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DISCOVERY-v1.md), [SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.112 | **SITE-001 W2.1 — Visual Refresh Specification** | **DONE** (2026-06-09; decision: **READY FOR PHASE 2 IMPLEMENTATION**) | [SITE-001-W2-VISUAL-SPECIFICATION-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-SPECIFICATION-v1.md), [SITE-001-W2-IMPLEMENTATION-ROADMAP-v1.md](sites/site-001/reports/SITE-001-W2-IMPLEMENTATION-ROADMAP-v1.md), [SITE-001-W2-DECISION-v1.md](sites/site-001/reports/SITE-001-W2-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.113 | **SITE-002 Registration — ЗПМ (BZPM)** | **DONE** (2026-06-09; status: **AWAITING INTAKE**) | [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/project-access-brief.md](sites/site-002/project-access-brief.md), [sites/site-002/reports/SITE-002-REGISTRATION-v1.md](sites/site-002/reports/SITE-002-REGISTRATION-v1.md), [project-site-registry.md](project-site-registry.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.114 | **SITE-001 W3-C — Footer Reduction** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**; **ROLLED BACK** Run 4.115) | [SITE-001-W3C-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3C-DISCOVERY-v1.md), [SITE-001-W3C-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3C-EXECUTION-v1.md), [SITE-001-W3C-DECISION-v1.md](sites/site-001/reports/SITE-001-W3C-DECISION-v1.md), [SITE-001-W2-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W2-WRITE-CHARTER-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.115 | **SITE-001 W3-C — T1 Rollback** | **DONE** (2026-06-09; decision: **PASS**) | [SITE-001-W3C-ROLLBACK-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-EXECUTION-v1.md), [SITE-001-W3C-ROLLBACK-DECISION-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-DECISION-v1.md), [SITE-001-W3C-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.116 | **SITE-001 W3-V — Visual Layer Refresh** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**) | [SITE-001-W3V-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3V-DISCOVERY-v1.md), [SITE-001-W3V-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3V-EXECUTION-v1.md), [SITE-001-W3V-DECISION-v1.md](sites/site-001/reports/SITE-001-W3V-DECISION-v1.md), [SITE-001-W3V-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3V-WRITE-CHARTER-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.117 | **SITE-001 W3-UX — Density & Visual Effectiveness Discovery** | **DONE** (2026-06-09; decision: **DISCOVERY COMPLETE**) | [SITE-001-W3UX-DENSITY-AUDIT-v1.md](sites/site-001/reports/SITE-001-W3UX-DENSITY-AUDIT-v1.md), [SITE-001-W3UX-DENSITY-DECISION-v1.md](sites/site-001/reports/SITE-001-W3UX-DENSITY-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.118 | **SITE-001 W3UX-C1 — Used Catalog Card Density** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**) | [SITE-001-W3UX-C1-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-DISCOVERY-v1.md), [SITE-001-W3UX-C1-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-EXECUTION-v1.md), [SITE-001-W3UX-C1-DECISION-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-DECISION-v1.md), [SITE-001-W3UX-C1-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-WRITE-CHARTER-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.119 | **SITE-001 W3V2 — Visual Identity Refresh** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**) | [SITE-001-W3V2-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3V2-DISCOVERY-v1.md), [SITE-001-W3V2-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3V2-EXECUTION-v1.md), [SITE-001-W3V2-DECISION-v1.md](sites/site-001/reports/SITE-001-W3V2-DECISION-v1.md), [SITE-001-W3V2-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3V2-WRITE-CHARTER-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.120 | **SITE-001 W3VIS-01 — Visual Hierarchy & Surface System Discovery** | **DONE** (2026-06-09; decision: **DISCOVERY COMPLETE**) | [SITE-001-W3VIS-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3VIS-01-DISCOVERY-v1.md), [SITE-001-W3VIS-01-DECISION-v1.md](sites/site-001/reports/SITE-001-W3VIS-01-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.121 | **SITE-001 W3VIS — T1 Rollback (01A + 01B)** | **DONE** (2026-06-09; decision: **PASS**) | [SITE-001-W3VIS-ROLLBACK-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-EXECUTION-v1.md), [SITE-001-W3VIS-ROLLBACK-DECISION-v1.md](sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.122 | **SITE-001 W3COLOR-01 — Global Palette & Atmosphere Discovery** | **DONE** (2026-06-09; decision: **DISCOVERY COMPLETE**) | [SITE-001-W3COLOR-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3COLOR-01-DISCOVERY-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.123 | **SITE-001 W3ATMOSPHERE-01A — Visual Preview** | **DONE** (2026-06-09; decision: **READY FOR W3ATMOSPHERE-01 EXECUTION**) | [SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.124 | **SITE-001 W3ATMOSPHERE-01 — Global Atmosphere Refresh** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**) | [SITE-001-W3ATMOSPHERE-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-DISCOVERY-v1.md), [SITE-001-W3ATMOSPHERE-01-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-EXECUTION-v1.md), [SITE-001-W3ATMOSPHERE-01-DECISION-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-DECISION-v1.md), [SITE-001-W3ATMOSPHERE-01-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-WRITE-CHARTER-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.125 | **SITE-001 Website Factory — Design Direction Pack** | **DONE** (2026-06-09; decision: **READY FOR OCPILOT IMPLEMENTATION**) | [SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md), [SITE-001-WEBSITE-FACTORY-IMPLEMENTATION-BRIEF-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-IMPLEMENTATION-BRIEF-v1.md), [SITE-001-WEBSITE-FACTORY-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.126 | **SITE-001 W3WF-01 — Visual Impact Map** | **DONE** (2026-06-09; decision: **READY FOR W3WF-01 IMPLEMENTATION**) | [SITE-001-W3WF-01-VISUAL-IMPACT-MAP-v1.md](sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-MAP-v1.md), [SITE-001-W3WF-01-VISUAL-IMPACT-DECISION-v1.md](sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.127 | **SITE-001 Visual Change Failure Audit** | **DONE** (2026-06-09; verdict: **mixed cause** — CSS live on TEST; **STOP** new design) | [SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md](sites/site-001/reports/SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.128 | **SITE-001 W4 — Used PDP Structural Visual Slice** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**) | [SITE-001-W4-USED-PDP-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-DESIGN-PLAN-v1.md), [SITE-001-W4-USED-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-EXECUTION-v1.md), [SITE-001-W4-USED-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-DECISION-v1.md), [SITE-001-W4-USED-PDP-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-WRITE-CHARTER-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.129 | **SITE-001 W4 Stable Backup + W4.1 Header & Hero Authority** | **DONE** (2026-06-09; decision: **PASS WITH NOTES**) | [SITE-001-W4-STABLE-BACKUP-v1.md](sites/site-001/reports/SITE-001-W4-STABLE-BACKUP-v1.md), [SITE-001-W4-1-HEADER-HERO-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DESIGN-PLAN-v1.md), [SITE-001-W4-1-HEADER-HERO-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-EXECUTION-v1.md), [SITE-001-W4-1-HEADER-HERO-DECISION-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.130 | **SITE-001 W4.1 — Visual Proof Pack** | **DONE** (2026-06-09; verdict: **PARTIAL SUCCESS**) | [SITE-001-W4-1-VISUAL-PROOF-PACK-v1.md](sites/site-001/reports/SITE-001-W4-1-VISUAL-PROOF-PACK-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.131 | **SITE-001 Website Factory — Concept Workshop** | **DONE** (2026-06-09; decision: **Concept B — Modern Dealer**; implementation **STOPPED**) | [SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md), [SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.135 | **SITE-001 W5 Stable Backup + W5-C Used PDP Commercial Stage** | **DONE** (2026-06-10; decision: **PASS WITH NOTES**) | [SITE-001-W5-STABLE-BACKUP-v1.md](sites/site-001/reports/SITE-001-W5-STABLE-BACKUP-v1.md), [SITE-001-W5C-USED-PDP-COMMERCIAL-STAGE-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-COMMERCIAL-STAGE-DESIGN-PLAN-v1.md), [SITE-001-W5C-USED-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-EXECUTION-v1.md), [SITE-001-W5C-USED-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.136 | **SITE-001 WF-V2-W1 — Hybrid Header System** | **DONE** (2026-06-10; decision: **PASS WITH NOTES**) | [SITE-001-WF-V2-GAP-ANALYSIS-v1.md](sites/site-001/reports/SITE-001-WF-V2-GAP-ANALYSIS-v1.md), [SITE-001-WF-V2-IMPLEMENTATION-PLAN-v1.md](sites/site-001/reports/SITE-001-WF-V2-IMPLEMENTATION-PLAN-v1.md), [SITE-001-WFV2-W1-HEADER-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-EXECUTION-v1.md), [SITE-001-WFV2-W1-HEADER-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.137 | **SITE-001 WF-V2-W2 — Flat Used PDP Stage** | **DONE** (2026-06-10; decision: **PASS WITH NOTES**) | [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md), [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.138 | **SITE-002 — Stable Live Manual Compact Checkpoint** | **DONE** (2026-06-14; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md), [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |
@@ -82,9 +132,258 @@
 
 **Rule:** Runs **1** through **4.99** marked DONE. Run **5** initialization **done**; execution **paused** pending **External Access Runtime (EAR)** direction — not downgrading readiness.
 
-**First project site:** SITE-001 (`sites/site-001/`) — **READY FOR AUDIT** (unchanged); intake closed Run 4.99. **[AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md)** authorizes read-only Run 5. Run 5 allowed **YES** per [intake-readiness-review.md](intake-readiness-review.md). Run 5 **not executing** until artifact acquisition path defined ([freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md)).
+---
 
-**Phase 1 (SITE-001):** Run **4.100** — initial authorization review (2026-06-07) **NOT AUTHORIZED**. Run **4.101** — W1 pre-execution package **complete** (2026-06-08). Runs **4.102–4.106** — W1A through W1F-A execution **complete** on TEST (2026-06-08). Run **4.107** — Phase 1 stable snapshot + interim final audit **complete** (2026-06-09). Run **4.108** — W1G DB SEO cleanup **complete** (2026-06-09). Run **4.109** — Phase 1 final acceptance **complete** (2026-06-09): decision **[PHASE 1 ACCEPTED WITH NOTES](sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md)**; 13/13 public URLs legacy-clean. Run **4.110** — Phase 1 stable checkpoint **ACTIVE** (2026-06-09): decision **[APPROVED](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md)**; official recovery point before Phase 2. Deferred W1F-D/E (SMTP, `anketa.php`, `backup_yml`). Next: **W1F-D** → **W1F-E** or Phase 2 planning. Program state: [OCPILOT-STATE.md](OCPILOT-STATE.md).
+## Run 4.128 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W4-USED-PDP-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-DESIGN-PLAN-v1.md) — block grouping, preserved elements, CSS goals, visual change matrix
+- [sites/site-001/reports/SITE-001-W4-USED-PDP-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-WRITE-CHARTER-v1.md) · [SITE-001-W4-USED-PDP-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-CHANGE-REQUEST-v1.md) · [SITE-001-W4-USED-PDP-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-W4-USED-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-EXECUTION-v1.md) · [SITE-001-W4-USED-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-W4-USED-PDP-DECISION-v1.md) — execution cycle
+- Backup `pre-w4-20260609` — `product.twig`, `main.css`, `media.css`
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W4 marked **DONE** · W3 cosmetic waves **STOPPED** for PDP
+
+**Site modification:** TEST only — `product.twig` wrapper grouping + scoped W4 CSS. No PHP/JS/DB. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Operator takeaway:** Open [target used PDP](https://sibcar.new-site.space/audi-a1-2012-s-probegom-149-000-km-799) with hard refresh. Hero should read as single showroom card; trust strip is light (not dark nav clone). Visual HITL screenshots **PENDING**.
+
+**Next gate:** Operator rates used PDP visual impact (target ≥7/10) → accept W4 or T1 rollback.
+
+---
+
+## Run 4.135 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W5-STABLE-BACKUP-v1.md](sites/site-001/reports/SITE-001-W5-STABLE-BACKUP-v1.md) — pre-W5-C stable checkpoint
+- [sites/site-001/reports/SITE-001-W5C-USED-PDP-COMMERCIAL-STAGE-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-COMMERCIAL-STAGE-DESIGN-PLAN-v1.md) — commercial stage architecture; safety **SAFE**
+- [sites/site-001/reports/SITE-001-W5C-USED-PDP-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-WRITE-CHARTER-v1.md) · [SITE-001-W5C-USED-PDP-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-CHANGE-REQUEST-v1.md) · [SITE-001-W5C-USED-PDP-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-W5C-USED-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-EXECUTION-v1.md) · [SITE-001-W5C-USED-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-W5C-USED-PDP-DECISION-v1.md) — execution cycle
+- Backup `pre-w5c-commercial-stage-20260610-0002` — header (backup only), product.twig, main.css, media.css
+- Screenshots — `sites/site-001/qa/w5c-used-pdp-commercial-stage-screenshots/` (before/after × 6 desktop + 2 mobile)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W5-C **DONE** on TEST; operator visual HITL **PENDING**
+
+**Site modification:** TEST only — `product.twig` commercial stage wrappers + W5-C CSS block. No PHP/JS/DB. No footer edit. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Operator takeaway:** Hard-refresh [target used PDP](https://sibcar.new-site.space/audi-a1-2012-s-probegom-149-000-km-799) — hero + trust should read as one offer deck; price 52px anchor; modals light on «Купить в кредит». Compare before/after screenshots. Rate ≥7/10 or T1 rollback.
+
+**Next gate:** Operator W5-C visual HITL → accept or T1 rollback from `pre-w5c-commercial-stage-20260610-0002`.
+
+---
+
+## Run 4.138 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) — metadata-only stable checkpoint definition
+- [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) — registration report
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md) — updated state and working rules
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — SITE-002 **STABLE LIVE CHECKPOINT**
+
+**Site modification:** **NONE** — metadata/docs only. No FTP. No deploy. No file capture.
+
+**Rollback source:** Beget global backup + operator live state on hosting.
+
+**Next gate:** Before next SITE-002 task — live-capture only the specific files in scope.
+
+---
+
+## Run 4.137 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-WRITE-CHARTER-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-CHANGE-REQUEST-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md) — execution cycle
+- Backup `pre-wfv2-w2-flat-pdp-20260610-0304` — product.twig, main.css, media.css
+- Screenshots — `sites/site-001/qa/wfv2-w2-flat-pdp-screenshots/` (before/after × 7 desktop + 2 mobile crops)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — WF-V2-W2 **DONE** on TEST; operator visual HITL **PENDING**
+
+**Site modification:** TEST only — `wfv2-flat-pdp` twig hook + WF-V2-W2 subtractive CSS block. No PHP/JS/DB. No header/footer/home/catalog. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Operator takeaway:** Hard-refresh [used PDP](https://sibcar.new-site.space/audi-a1-2012-s-probegom-149-000-km-799) — fewer boxes/borders; price 56px anchor; trust as single band; specs/equipment as flat grids. Compare before/after screenshots. If change not obvious → T1 rollback.
+
+**Next gate:** Operator WF-V2-W2 visual HITL → accept or T1 rollback from `pre-wfv2-w2-flat-pdp-20260610-0304` → then authorize WF-V2-W3.
+
+---
+
+## Run 4.136 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-WF-V2-GAP-ANALYSIS-v1.md](sites/site-001/reports/SITE-001-WF-V2-GAP-ANALYSIS-v1.md) · [SITE-001-WF-V2-IMPLEMENTATION-PLAN-v1.md](sites/site-001/reports/SITE-001-WF-V2-IMPLEMENTATION-PLAN-v1.md) — planning inputs
+- [sites/site-001/reports/SITE-001-WFV2-W1-HEADER-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-WRITE-CHARTER-v1.md) · [SITE-001-WFV2-W1-HEADER-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-CHANGE-REQUEST-v1.md) · [SITE-001-WFV2-W1-HEADER-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-WFV2-W1-HEADER-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-EXECUTION-v1.md) · [SITE-001-WFV2-W1-HEADER-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W1-HEADER-DECISION-v1.md) — execution cycle
+- Backup `pre-wfv2-w1-header-20260610-0216` — header.twig, main.css, media.css
+- Screenshots — `sites/site-001/qa/wfv2-w1-header-screenshots/` (before/after × 4 pages × desktop/mobile)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — WF-V2-W1 **DONE** on TEST; operator visual HITL **PENDING**
+
+**Site modification:** TEST only — hybrid header twig + WF-V2-W1 CSS block. No PHP/JS/DB. No product.twig. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Operator takeaway:** Hard-refresh [homepage](https://sibcar.new-site.space/) — light contact rail, dark primary band, light promo strip. Phone/WhatsApp only in top rail. Original logo visible. Compare before/after screenshots vs concept mock `01`.
+
+**Next gate:** Operator WF-V2-W1 visual HITL → accept or T1 rollback from `pre-wfv2-w1-header-20260610-0216` → then authorize WF-V2-W2.
+
+---
+
+## Run 4.134 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W5A-STABILIZATION-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-WRITE-CHARTER-v1.md) · [SITE-001-W5A-STABILIZATION-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-CHANGE-REQUEST-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-W5A-STABILIZATION-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-EXECUTION-v1.md) · [SITE-001-W5A-STABILIZATION-DECISION-v1.md](sites/site-001/reports/SITE-001-W5A-STABILIZATION-DECISION-v1.md) — stabilization cycle
+- Backup `pre-w5a-stabilization-20260609-2325` — `header.twig`, `main.css`, `media.css`
+- Screenshots — `sites/site-001/qa/w5a-stabilization-screenshots/` (before/after × 3 pages × desktop/mobile)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W5-A-S **DONE** on TEST; W5-A operator COMPLETE **NO** (HITL **PENDING**)
+
+**Site modification:** TEST only — nav «Ещё» grouping + W5-A-S CSS block. No PHP/JS/DB. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Operator takeaway:** Hard-refresh [used catalog](https://sibcar.new-site.space/cars/) — promo strip should sit flush below header (no overlap). Hover «Услуги» and «Ещё» at 1280px. Compare before/after screenshots. If visual **PASS** → mark W5-A **COMPLETE** and authorize W5-B.
+
+**Next gate:** Operator W5-A visual HITL → accept or T1 rollback from `pre-w5a-stabilization-20260609-2325` → then authorize W5-B.
+
+---
+
+## Run 4.133 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-WRITE-CHARTER-v1.md) · [SITE-001-W5A-HEADER-SHELL-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-CHANGE-REQUEST-v1.md) · [SITE-001-W5A-HEADER-SHELL-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-EXECUTION-v1.md) · [SITE-001-W5A-HEADER-SHELL-DECISION-v1.md](sites/site-001/reports/SITE-001-W5A-HEADER-SHELL-DECISION-v1.md) — execution cycle
+- Backup `pre-w5a-header-shell-20260609-2251` — `header.twig`, `main.css`, `media.css`
+- Screenshots — `sites/site-001/qa/w5a-header-shell-screenshots/` (before/after × 4 pages × desktop/mobile)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W5-A **DONE** on TEST; operator visual HITL **PENDING**
+
+**Site modification:** TEST only — `header.twig` DOM regroup + W5-A CSS block. No PHP/JS/DB. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Operator takeaway:** Hard-refresh [homepage](https://sibcar.new-site.space/) and [used catalog](https://sibcar.new-site.space/cars/). Header should read as **one dealer shell** (contact rail + primary band + inset promo) — not three competing bands. Sticky **gone**. Rate 3-second test; if subtle → T1 rollback per charter.
+
+**Next gate:** Operator W5-A visual HITL → accept or T1 rollback → then authorize W5-B.
+
+---
+
+## Run 4.132 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-BLUEPRINT-v1.md](sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-BLUEPRINT-v1.md) — Concept B architecture: current-state analysis · header/homepage/PDP blueprints · ASCII wireframes · visual impact map · W5-A…D phases · 3-second test
+- [sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-DECISION-v1.md](sites/site-001/reports/SITE-001-W5-FIRST-IMPRESSION-DECISION-v1.md) — blueprint **APPROVED**; 3→7/10 without full redesign **YES**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W5 blueprint **DONE**; operator HITL **PENDING**
+
+**Site modification:** **NONE** — design blueprint only. No FTP · No CSS · No Twig · No DB.
+
+**Operator takeaway:** Review six blueprint sections; confirm architecture or override. Implementation phases: W5-A header shell → W5-B homepage → W5-C magazine PDP → W5-D integration HITL. No OCPilot writes until W5 implementation charter.
+
+**Next gate:** Operator sign-off on blueprint → authorize W5 implementation charter (separate task).
+
+---
+
+## Run 4.131 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-WORKSHOP-v1.md) — 3 visual concepts (A Regional Pro · B Modern Dealer · C Premium Showroom); 3-second test; scope header + homepage + used PDP first screen
+- [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-CONCEPT-DECISION-v1.md) — **Concept B selected**; A/C rejected; Graphite Salon / W3WF-01 superseded for first impression
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — implementation **STOPPED**; operator HITL **PENDING**
+
+**Site modification:** **NONE** — design workshop only. No FTP · No CSS · No Twig · No DB.
+
+**Operator takeaway:** Review three concepts; confirm Concept B or override. Sticky header direction **rejected**. No OCPilot writes until W5 First Impression charter.
+
+**Next gate:** Operator sign-off on Concept B → Website Factory drafts W5 implementation charter (separate task).
+
+---
+
+## Run 4.130 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W4-1-VISUAL-PROOF-PACK-v1.md](sites/site-001/reports/SITE-001-W4-1-VISUAL-PROOF-PACK-v1.md) — 7 desktop before/after pairs + header/promo/PDP hero crops; scoring; verdict **PARTIAL SUCCESS**
+- Screenshots — `sites/site-001/qa/w4-1-header-hero-screenshots/` (16 full) + `crops/` (header, promo, PDP hero)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W4.1 visual proof **DONE** · operator HITL **READY**
+
+**Site modification:** **NONE** — read-only analysis of existing QA captures.
+
+**Operator takeaway:** Promo strip (red → graphite CAPS) **YES** without A/B on used PDP + `/cars/`. Header polish **MAYBE**. Homepage first screen **NO**. Accept W4.1 or T1 rollback from `pre-w4-1-stable-20260609-1506`.
+
+---
+
+## Run 4.129 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W4-STABLE-BACKUP-v1.md](sites/site-001/reports/SITE-001-W4-STABLE-BACKUP-v1.md) — stable checkpoint `pre-w4-1-stable-20260609-1506` before W4.1
+- [sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DESIGN-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DESIGN-PLAN-v1.md) · [SITE-001-W4-1-HEADER-HERO-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-WRITE-CHARTER-v1.md) · [SITE-001-W4-1-HEADER-HERO-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-CHANGE-REQUEST-v1.md) · [SITE-001-W4-1-HEADER-HERO-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-EXECUTION-v1.md) · [SITE-001-W4-1-HEADER-HERO-DECISION-v1.md](sites/site-001/reports/SITE-001-W4-1-HEADER-HERO-DECISION-v1.md) — execution cycle
+- Backup `pre-w4-1-stable-20260609-1506` — 5 files (header, footer, product, main.css, media.css)
+- Screenshots — `sites/site-001/qa/w4-1-header-hero-screenshots/` (16 before/after PNG)
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W4.1 marked **DONE** · stable backup **ACTIVE**
+
+**Site modification:** TEST only — header/product twig classes + W4.1 CSS block. W4 Used PDP **preserved**. No footer edit. No commit. No push. Production **NOT AUTHORIZED**.
+
+**Next gate:** ~~Operator rates first-screen visual impact~~ → superseded by Run **4.130** visual proof pack.
+
+---
+
+## Run 4.127 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md](sites/site-001/reports/SITE-001-VISUAL-CHANGE-FAILURE-AUDIT-v1.md) — read-only live HTTP audit: CSS load order, markers, selector hit/miss, cascade, cache, root cause
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — audit gate recorded; **new design / atmosphere CSS STOPPED**
+
+**Site modification:** **NONE** — HTTP fetch + documentation only.
+
+**Root cause:** **mixed cause** — W3ATMOSPHERE/W3V2 CSS **is on TEST and wins cascade**; operator sees no change primarily because deltas are **too weak** (incremental waves) + **expectation mismatch**; secondary **browser cache** risk (`max-age=604800`).
+
+**Operator takeaway:** Hard-refresh `https://sibcar.new-site.space/` and compare QA before/after screenshots. Do **not** start new design waves until expectation workshop. W3WF-01 **ON HOLD**.
+
+**Next gate:** Operator verification → choose audit §8 path C1 (W3WF consolidation) or C2 (structural charter).
+
+---
+
+## Run 4.126 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-MAP-v1.md](sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-MAP-v1.md) — 10-zone before/after vs **current TEST** (W3ATMOSPHERE active); reality check; design risk assessment
+- [sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-DECISION-v1.md](sites/site-001/reports/SITE-001-W3WF-01-VISUAL-IMPACT-DECISION-v1.md) — decision **READY FOR W3WF-01 IMPLEMENTATION**; honest LOW–MEDIUM perceptual delta vs live TEST
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3WF-01 visual impact gate recorded
+
+**Site modification:** **NONE** — visual planning only. No FTP · No CSS · No Twig · No DB.
+
+**Operator takeaway:** W3ATMOSPHERE already delivered ~70–80% «Graphite Salon»; W3WF-01 = consolidation + legacy purge, not second transformation.
+
+**Next OCPilot wave:** Operator preview sign-off → W3WF-01 charter + CR + backup + CSS execution.
+
+---
+
+## Run 4.125 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DESIGN-DIRECTION-v1.md) — design diagnosis; single direction «Graphite Salon»; palette/surfaces/depth/header/footer/forms/catalog/PDP widgets
+- [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-IMPLEMENTATION-BRIEF-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-IMPLEMENTATION-BRIEF-v1.md) — OCPilot CSS rules; allowed/forbidden properties; W3WF-01 phases A–J; 10-point acceptance checklist
+- [sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DECISION-v1.md](sites/site-001/reports/SITE-001-WEBSITE-FACTORY-DECISION-v1.md) — decision **READY FOR OCPILOT IMPLEMENTATION**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — Website Factory design owner recorded; next wave **W3WF-01**
+
+**Site modification:** **NONE** — design direction and planning only. No FTP · No CSS · No Twig · No DB.
+
+**Next OCPilot wave:** **W3WF-01** — charter + CR + backup + CSS-only implementation per implementation brief.
+
+---
+
+## Run 4.124 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-WRITE-CHARTER-v1.md) · [SITE-001-W3ATMOSPHERE-01-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-CHANGE-REQUEST-v1.md) · [SITE-001-W3ATMOSPHERE-01-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-ROLLBACK-PLAN-v1.md) — pre-write package
+- [sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-DISCOVERY-v1.md) · [SITE-001-W3ATMOSPHERE-01-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-EXECUTION-v1.md) · [SITE-001-W3ATMOSPHERE-01-DECISION-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01-DECISION-v1.md) — execution cycle
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3ATMOSPHERE-01 marked **DONE** · decision **PASS WITH NOTES**
+- Backup: `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\backups\pre-w3atmosphere-01-20260609-1156\`
+- Screenshots: `sites/site-001/qa/w3atmosphere-01-screenshots/` (24 files: before/after × desktop/tablet/mobile × 4 pages)
+
+**Site modification:** **TEST ONLY** — `css/main.css` + `css/media.css` via FTP; caches cleared.
+
+**Evidence (local):** `.recovery-temp/site-001-w3atmosphere-01-result.json`
+
+---
+
+## Run 4.123 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md](sites/site-001/reports/SITE-001-W3ATMOSPHERE-01A-VISUAL-PREVIEW-v1.md) — 8-zone before/after preview; top 10 visible / not-changed lists; invisible-improvement risk; decision **READY FOR W3ATMOSPHERE-01 EXECUTION**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3ATMOSPHERE preview marked **DONE**
+
+**Site modification:** **NONE** — preview only; no FTP, CSS, Twig, cache, or admin.
+
+---
+
+## Run 4.122 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3COLOR-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3COLOR-01-DISCOVERY-v1.md) — palette/surface/depth inventory; `--w3color-*` token proposal; top 20 visual problems
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3COLOR-01 discovery marked **DONE**
+
+**Site modification:** **NONE** — read-only HTTP probe + live CSS fetch.
+
+**Evidence (local):** `.recovery-temp/site-001-w3color-01-probe.json`
+
+---
+
+**First project site:** SITE-001 (`sites/site-001/`) — **READY FOR AUDIT** (unchanged); intake closed Run 4.99.
+
+**Second project site:** SITE-002 (`sites/site-002/`) — **STABLE LIVE CHECKPOINT** (Run **4.138** — 2026-06-14); TEST `zpm.new-site.space`; active baseline `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; rollback = **Beget global backup + operator live state**; metadata-only checkpoint — no site files captured. Prior repo `backups/stable-*` folders are historical. Next tasks: targeted live-file capture before edits. [baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md).
+
+**Phase 1 (SITE-001):** Run **4.100** — initial authorization review (2026-06-07) **NOT AUTHORIZED**. Run **4.101** — W1 pre-execution package **complete** (2026-06-08). Runs **4.102–4.106** — W1A through W1F-A execution **complete** on TEST (2026-06-08). Run **4.107** — Phase 1 stable snapshot + interim final audit **complete** (2026-06-09). Run **4.108** — W1G DB SEO cleanup **complete** (2026-06-09). Run **4.109** — Phase 1 final acceptance **complete** (2026-06-09): decision **[PHASE 1 ACCEPTED WITH NOTES](sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md)**; 13/13 public URLs legacy-clean. Run **4.110** — Phase 1 stable checkpoint **ACTIVE** (2026-06-09): decision **[APPROVED](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md)**; official recovery point before Phase 2. Run **4.111** — W2 Visual Refresh Discovery **complete** (2026-06-09): decision **[DISCOVERY COMPLETE](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md)**. Run **4.112** — W2.1 Visual Refresh Specification **complete** (2026-06-09): decision **[READY FOR PHASE 2 IMPLEMENTATION](sites/site-001/reports/SITE-001-W2-DECISION-v1.md)**; W3 execution **NOT AUTHORIZED** until Phase 2 write charter. Deferred W1F-D/E (SMTP, `anketa.php`, `backup_yml`). Next: Phase 2 write charter + authorization or **W1F-D** → **W1F-E**. Program state: [OCPILOT-STATE.md](OCPILOT-STATE.md).
 
 ### Operational lesson (Run 5 initialization)
 
@@ -107,6 +406,123 @@
 ---
 
 
+
+---
+
+---
+
+---
+
+---
+
+## Run 4.121 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-EXECUTION-v1.md) — T1 restore `css/main.css` + `css/media.css` from `pre-w3vis-01a-20260609-0517`; cache clear; 9/9 verification
+- [sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-DECISION-v1.md](sites/site-001/reports/SITE-001-W3VIS-ROLLBACK-DECISION-v1.md) — decision **PASS** · W3VIS-01A/01B inactive · next: **Global Palette Refresh**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3VIS rollback marked **DONE** · Global Palette Refresh **PLANNED**
+
+**Site modification:** W3VIS rollback on TEST — `css/main.css`, `css/media.css` only — removes W3VIS-01A + W3VIS-01B blocks; W3UX-C1 **preserved**.
+
+**Backup used:** `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\backups\pre-w3vis-01a-20260609-0517\`
+
+**Evidence (local):** `.recovery-temp/site-001-w3vis-rollback-result.json`
+
+---
+
+## Run 4.120 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3VIS-01-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3VIS-01-DISCOVERY-v1.md) — hierarchy audit HF-01–HF-20 · surface map · PDP/catalog/home analysis
+- [sites/site-001/reports/SITE-001-W3VIS-01-DECISION-v1.md](sites/site-001/reports/SITE-001-W3VIS-01-DECISION-v1.md) — decision **DISCOVERY COMPLETE** · top 10 impact changes · execution order
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3VIS-01 marked **DISCOVERY DONE**
+
+**Site modification:** **NONE** — discovery only; superseded for execution by Global Palette Refresh direction.
+
+**Evidence (local):** `.recovery-temp/site-001-w3vis-01-probe.json`
+
+---
+
+## Run 4.118 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3UX-C1-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-WRITE-CHARTER-v1.md) — W3UX-C1 write charter — **ACTIVE** (CSS-only, `.used_catalog`)
+- [sites/site-001/reports/SITE-001-W3UX-C1-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-CHANGE-REQUEST-v1.md) — CR-SITE-001-W3UX-C1-2026-06
+- [sites/site-001/reports/SITE-001-W3UX-C1-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-DISCOVERY-v1.md) — selector map U-01–U-11
+- [sites/site-001/reports/SITE-001-W3UX-C1-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-EXECUTION-v1.md) — FTP upload, cache clear, 5/5 verification, −24% desktop card height
+- [sites/site-001/reports/SITE-001-W3UX-C1-DECISION-v1.md](sites/site-001/reports/SITE-001-W3UX-C1-DECISION-v1.md) — decision **PASS WITH NOTES**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3UX-C1 marked **DONE**
+
+**Site modification:** W3UX-C1 wave on TEST — `css/main.css`, `css/media.css` only — `.used_catalog` scoped density block.
+
+**Backup:** `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\backups\pre-w3ux-c1-20260609-0416\`
+
+**Screenshots:** `sites/site-001/qa/w3ux-c1-screenshots/` (before/after desktop, tablet, mobile)
+
+---
+
+## Run 4.116 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3V-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W3V-WRITE-CHARTER-v1.md) — W3-V Phase 2 write charter — **ACTIVE** (CSS-only)
+- [sites/site-001/reports/SITE-001-W3V-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W3V-CHANGE-REQUEST-v1.md) — CR-SITE-001-W3V-2026-06-09
+- [sites/site-001/reports/SITE-001-W3V-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3V-ROLLBACK-PLAN-v1.md) — T1 rollback instance (2 CSS files)
+- [sites/site-001/reports/SITE-001-W3V-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3V-DISCOVERY-v1.md) — CSS inventory + visual baseline
+- [sites/site-001/reports/SITE-001-W3V-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3V-EXECUTION-v1.md) — FTP upload, cache clear, 7/7 verification
+- [sites/site-001/reports/SITE-001-W3V-DECISION-v1.md](sites/site-001/reports/SITE-001-W3V-DECISION-v1.md) — decision **PASS WITH NOTES**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3-V marked **DONE**
+
+**Site modification:** W3-V wave on TEST — `css/main.css`, `css/media.css` only — **no twig/markup changes**.
+
+**Backup:** `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\backups\pre-w3v-20260609-0327\`
+
+---
+
+## Run 4.115 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W3C-ROLLBACK-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-EXECUTION-v1.md) — T1 restore from `pre-w3c-20260609-0259`, cache clear, 7/7 verification
+- [sites/site-001/reports/SITE-001-W3C-ROLLBACK-DECISION-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-DECISION-v1.md) — decision **PASS**
+- [sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md) — T1 procedure instance
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3-C marked **ROLLED BACK**
+
+**Site modification:** T1 rollback on TEST — restored `footer.twig`, `main.css`, `media.css` to pre-W3C state.
+
+**Rollback source:** `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\backups\pre-w3c-20260609-0259\`
+
+**Operator reason:** Visual direction not accepted. Beget global backup **not used**.
+
+---
+
+## Run 4.114 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W2-WRITE-CHARTER-v1.md](sites/site-001/reports/SITE-001-W2-WRITE-CHARTER-v1.md) — Phase 2 write charter — **ACTIVE**
+- [sites/site-001/reports/SITE-001-W2-CHANGE-REQUEST-v1.md](sites/site-001/reports/SITE-001-W2-CHANGE-REQUEST-v1.md) — CR-SITE-001-W3C-2026-06-09
+- [sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md](sites/site-001/reports/SITE-001-W3C-ROLLBACK-PLAN-v1.md) — W3-C rollback instance
+- [sites/site-001/reports/SITE-001-W3C-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W3C-DISCOVERY-v1.md) — footer inventory + height baseline
+- [sites/site-001/reports/SITE-001-W3C-EXECUTION-v1.md](sites/site-001/reports/SITE-001-W3C-EXECUTION-v1.md) — FTP upload, cache clear, 7/7 verification
+- [sites/site-001/reports/SITE-001-W3C-DECISION-v1.md](sites/site-001/reports/SITE-001-W3C-DECISION-v1.md) — decision **PASS WITH NOTES** — **superseded on TEST by Run 4.115 rollback**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W3-C execution recorded; later **ROLLED BACK** (Run 4.115)
+
+**Site modification:** W3-C wave on TEST — `footer.twig`, `main.css`, `media.css` — **reverted** Run 4.115.
+
+**Backup:** `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\backups\pre-w3c-20260609-0259\`
+
+---
+
+## Run 4.112 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W2-VISUAL-SPECIFICATION-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-SPECIFICATION-v1.md) — Phase 2 visual goals, design tokens, component rules, footer/catalog/PDP strategies
+- [sites/site-001/reports/SITE-001-W2-IMPLEMENTATION-ROADMAP-v1.md](sites/site-001/reports/SITE-001-W2-IMPLEMENTATION-ROADMAP-v1.md) — W3-A…F execution sequence with risk/rollback/UX impact
+- [sites/site-001/reports/SITE-001-W2-DECISION-v1.md](sites/site-001/reports/SITE-001-W2-DECISION-v1.md) — decision **READY FOR PHASE 2 IMPLEMENTATION**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W2.1 specification marked **COMPLETE**
+
+**Site modification:** **None** — documentation only.
+
+---
+
+## Run 4.111 deliverables (summary)
+
+- [sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DISCOVERY-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DISCOVERY-v1.md) — W2A–W2F theme/CSS/component/risk/readiness discovery
+- [sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md) — decision **DISCOVERY COMPLETE**
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — W2 discovery marked **COMPLETE**
+
+**Site modification:** **None** — FTP read-only + HTTP fetch on TEST.
 
 ---
 
