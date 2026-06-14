@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Slug:** site-002  
 **Status:** **STABLE LIVE CHECKPOINT** — active metadata baseline; live hosting is source-of-truth  
-**Run:** 4.138 — Stable Live Manual Compact Checkpoint (2026-06-14)
+**Run:** 4.139 — Stable Live PDP V5.1 Checkpoint (2026-06-14)
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
 
@@ -45,13 +45,14 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` |
+| Name | `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14` |
 | Status | **STABLE LIVE CHECKPOINT** |
-| Baseline doc | [baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) |
-| Report | [reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) |
+| Supersedes | `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` (historical) |
+| Active passes | PDP V5.1 (specs collapse, scroll UX, scroll offset) · Category V2.3.1 · operator manual polish |
 | Rollback source | Beget global backup + operator live state |
 
-Live TEST storefront after operator manual PDP/Category/CSS/Twig edits is **source-of-truth**. This checkpoint does **not** contain site files.
+Live TEST storefront after PDP V5.1 passes and operator manual CSS/Twig edits is **source-of-truth**. This checkpoint does **not** contain site files.
 
 ---
 

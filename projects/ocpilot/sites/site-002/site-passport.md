@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
 **Status:** **STABLE LIVE CHECKPOINT**  
-**Run:** 4.138 — Stable Live Manual Compact Checkpoint (2026-06-14)
+**Run:** 4.139 — Stable Live PDP V5.1 Checkpoint (2026-06-14)
 
 ---
 
@@ -14,16 +14,16 @@
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
 | **Version** | SAFE UNKNOWN |
-| **Baseline Match** | `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` |
+| **Baseline Match** | `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14` |
 | **Hosting** | SAFE UNKNOWN |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
 | **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
 | **Current Status** | **STABLE LIVE CHECKPOINT** |
-| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) |
+| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) |
 | **Rollback source** | Beget global backup + operator live state |
-| **Notes** | TEST площадка PDP / Catalog UX. Live hosting — source-of-truth after operator manual edits (PDP + Category + CSS/Twig). Checkpoint is metadata-only; no site files in repo. Registry: [project-site-registry.md](../../project-site-registry.md). |
+| **Notes** | TEST площадка PDP / Catalog UX. Live hosting — source-of-truth after PDP V5.1 (specs collapse, scroll UX, scroll offset), Category V2.3.1, and operator manual polish. Checkpoint is metadata-only; no site files in repo. Registry: [project-site-registry.md](../../project-site-registry.md). |
 
 ---
 
@@ -54,10 +54,11 @@
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` |
-| Registered | 2026-06-14 17:45:27 |
+| Name | `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14` |
+| Registered | 2026-06-14 21:00:00 |
 | Type | Metadata-only — live source-of-truth |
-| Report | [reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) |
+| Supersedes | `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` (historical) |
+| Active passes | PDP V5.1 (specs collapse, scroll UX, scroll offset) · Category V2.3.1 · operator manual polish |
 
 ## Next work rule
 

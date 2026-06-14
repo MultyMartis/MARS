@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-14  
-**Evidence cutoff:** 2026-06-14 (SITE-002 stable live manual compact checkpoint)  
+**Evidence cutoff:** 2026-06-14 (SITE-002 stable live PDP V5.1 checkpoint)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT** (2026-06-14) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **STABLE LIVE CHECKPOINT** `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; live hosting + Beget global backup = rollback source; next tasks require targeted live-file capture |
+| Current SITE-002 focus | **STABLE LIVE CHECKPOINT** `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`; PDP V5.1 + Category V2.3.1 active on live; Beget global backup + operator live state = rollback source; next tasks require targeted live-file capture |
 
 ---
 
@@ -28,14 +28,17 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`** — **STABLE LIVE CHECKPOINT** |
-| Registry | Active project site (PDP / Catalog UX work in progress) |
+| Baseline | **`SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`** — **STABLE LIVE CHECKPOINT** |
+| Registry | Active project site (PDP V5.1 + Category V2.3.1 on live) |
+| Active passes | PDP V5.1 specs collapse · scroll UX · scroll offset · Category V2.3.1 · operator manual polish |
 | Run 5 | **NO** — not applicable to current operational lane |
 | Writes | **NO** for this checkpoint run — metadata only |
 | Rollback source | **Beget global backup + operator live state** |
 | External secrets | External storage only — not in repo |
 
-**Checkpoint evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md)
+**Checkpoint evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) · [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md)
+
+**Prior checkpoint (historical):** [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md)
 
 **Registration evidence:** [sites/site-002/reports/SITE-002-REGISTRATION-v1.md](sites/site-002/reports/SITE-002-REGISTRATION-v1.md) · [logs/ocpilot/site-002-registration-v1.md](../../logs/ocpilot/site-002-registration-v1.md)
 
