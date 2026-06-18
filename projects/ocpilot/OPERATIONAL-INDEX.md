@@ -120,7 +120,9 @@
 
 | 4.138 | **SITE-002 — Stable Live Manual Compact Checkpoint** | **DONE** (2026-06-14; status: **STABLE LIVE CHECKPOINT** — superseded by 4.139 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md), [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
-| 4.139 | **SITE-002 — Stable Live PDP V5.1 Checkpoint** | **DONE** (2026-06-14; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+| 4.139 | **SITE-002 — Stable Live PDP V5.1 Checkpoint** | **DONE** (2026-06-14; status: **STABLE LIVE CHECKPOINT** — superseded by 4.140 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.140 | **SITE-002 — Stable Live M9.8 UX Polish Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
@@ -170,6 +172,24 @@
 
 ---
 
+## Run 4.140 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md) — metadata-only stable checkpoint after M9.8.1/2/5 + operator manual PLP polish
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) — updated active baseline and stable state
+- [OCPILOT-STATE.md](OCPILOT-STATE.md) — SITE-002 **STABLE LIVE CHECKPOINT** (M9.8 UX Polish 01)
+
+**Site modification:** **NONE** — metadata/docs only. No FTP. No deploy. No file capture.
+
+**Active live state:** M9.8.1 PDP Gallery Compact · M9.8.2 PDP Lightbox Constraints · M9.8.5 Products Per Page Selector · operator PLP/filter/breakpoint/CSS/Twig polish.
+
+**Rollback source:** Beget full backup + current live TEST + file-level pass backups.
+
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`.
+
+**Next gate:** Before next SITE-002 task — live-capture only the specific files in scope.
+
+---
+
 ## Run 4.139 deliverables (summary)
 
 - [sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) — metadata-only stable checkpoint after PDP V5.1 scroll offset polish
@@ -182,7 +202,7 @@
 
 **Rollback source:** Beget global backup + operator live state on hosting.
 
-**Supersedes for live truth:** `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`.
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` — **superseded by 4.140**.
 
 **Next gate:** Before next SITE-002 task — live-capture only the specific files in scope.
 
@@ -401,7 +421,7 @@
 
 **First project site:** SITE-001 (`sites/site-001/`) — **READY FOR AUDIT** (unchanged); intake closed Run 4.99.
 
-**Second project site:** SITE-002 (`sites/site-002/`) — **STABLE LIVE CHECKPOINT** (Run **4.139** — 2026-06-14); TEST `zpm.new-site.space`; active baseline `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`; PDP V5.1 + Category V2.3.1 active on live; rollback = **Beget global backup + operator live state**; metadata-only checkpoint — no site files captured. Prior repo `backups/stable-*` folders and `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14` are historical. Next tasks: targeted live-file capture before edits. [baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) · [SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md).
+**Second project site:** SITE-002 (`sites/site-002/`) — **STABLE TEST CHECKPOINT M9.7E HOMEPAGE COMPLETE** (2026-06-15); TEST `zpm.new-site.space`; active baseline `SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE`; QA **33/33 PASS**; rollback = baseline files + category WebP + Beget global backup. CRO backlog: [REPORT-BZPM-CATALOG-IMPROVEMENT-BACKLOG.md](sites/site-002/reports/REPORT-BZPM-CATALOG-IMPROVEMENT-BACKLOG.md). [SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md).
 
 **Phase 1 (SITE-001):** Run **4.100** — initial authorization review (2026-06-07) **NOT AUTHORIZED**. Run **4.101** — W1 pre-execution package **complete** (2026-06-08). Runs **4.102–4.106** — W1A through W1F-A execution **complete** on TEST (2026-06-08). Run **4.107** — Phase 1 stable snapshot + interim final audit **complete** (2026-06-09). Run **4.108** — W1G DB SEO cleanup **complete** (2026-06-09). Run **4.109** — Phase 1 final acceptance **complete** (2026-06-09): decision **[PHASE 1 ACCEPTED WITH NOTES](sites/site-001/reports/SITE-001-PHASE1-FINAL-DECISION-v1.md)**; 13/13 public URLs legacy-clean. Run **4.110** — Phase 1 stable checkpoint **ACTIVE** (2026-06-09): decision **[APPROVED](sites/site-001/reports/SITE-001-PHASE1-STABLE-CHECKPOINT-DECISION-v1.md)**; official recovery point before Phase 2. Run **4.111** — W2 Visual Refresh Discovery **complete** (2026-06-09): decision **[DISCOVERY COMPLETE](sites/site-001/reports/SITE-001-W2-VISUAL-REFRESH-DECISION-v1.md)**. Run **4.112** — W2.1 Visual Refresh Specification **complete** (2026-06-09): decision **[READY FOR PHASE 2 IMPLEMENTATION](sites/site-001/reports/SITE-001-W2-DECISION-v1.md)**; W3 execution **NOT AUTHORIZED** until Phase 2 write charter. Deferred W1F-D/E (SMTP, `anketa.php`, `backup_yml`). Next: Phase 2 write charter + authorization or **W1F-D** → **W1F-E**. Program state: [OCPILOT-STATE.md](OCPILOT-STATE.md).
 

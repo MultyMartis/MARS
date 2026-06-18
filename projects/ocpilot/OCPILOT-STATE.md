@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-06-14  
-**Evidence cutoff:** 2026-06-14 (SITE-002 stable live PDP V5.1 checkpoint)  
+**Last updated:** 2026-06-19  
+**Evidence cutoff:** 2026-06-19 (SITE-002 stable live checkpoint — M9.8 UX Polish 01 after manual PLP polish)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,9 +14,9 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT** (2026-06-14) |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.8 UX POLISH 01** (2026-06-19) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **STABLE LIVE CHECKPOINT** `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`; PDP V5.1 + Category V2.3.1 active on live; Beget global backup + operator live state = rollback source; next tasks require targeted live-file capture |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` — **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL**; M9.8.1 · M9.8.2 · M9.8.5 + operator PLP polish **complete**; active stage **M9.8 UX Polish Pack** (remaining); EC-01 filter sidebar (branch 80) — only open bug |
 
 ---
 
@@ -28,17 +28,25 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`** — **STABLE LIVE CHECKPOINT** |
-| Registry | Active project site (PDP V5.1 + Category V2.3.1 on live) |
-| Active passes | PDP V5.1 specs collapse · scroll UX · scroll offset · Category V2.3.1 · operator manual polish |
+| Baseline | **`SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`** — **STABLE LIVE CHECKPOINT** (metadata-only; live TEST after M9.8 passes + operator manual PLP polish) |
+| Authority policy | **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
+| Registry | Active project site — M7.1 through M9.7 + Manual UI + M9.8.1/2/5 + operator PLP polish **complete** on TEST |
+| Completed | M7.1 Launch Mode · M8 Cleanup · M9 Filter Profiles · M9.5 Hub Mode · M9.7 Images · M9.7 Megamenu Cleanup · Homepage Neutral Branches · Manual UI Refinement · M9.8.1 PDP Gallery Compact · M9.8.2 PDP Lightbox Constraints · M9.8.5 Products Per Page Selector · Operator PLP/filter/breakpoint/CSS/Twig polish |
+| Active stage | **M9.8 UX Polish Pack** — remaining M9.8 items · EC-01 fix |
+| Open bug | **EC-01** — filter sidebar empty subcategories on branch 80 (Моечные ванны) — M9.8.7 |
+| Next planned | Remaining M9.8 tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) · **M10** not authorized |
 | Run 5 | **NO** — not applicable to current operational lane |
-| Writes | **NO** for this checkpoint run — metadata only |
-| Rollback source | **Beget global backup + operator live state** |
+| Writes (this checkpoint) | **NO** — documentation only |
+| Rollback source | Beget full backup + current live TEST + file-level pass backups |
 | External secrets | External storage only — not in repo |
 
-**Checkpoint evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) · [sites/site-002/SITE-002-WORKING-RULES.md](sites/site-002/SITE-002-WORKING-RULES.md)
+**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
 
-**Prior checkpoint (historical):** [sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md) · [sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md](sites/site-002/reports/SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14.md)
+**State freeze report:** [sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md)
+
+**CRO backlog (input to M9.8):** [sites/site-002/reports/REPORT-BZPM-CATALOG-IMPROVEMENT-BACKLOG.md](sites/site-002/reports/REPORT-BZPM-CATALOG-IMPROVEMENT-BACKLOG.md)
+
+**Prior checkpoint (historical):** [sites/site-002/reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md](sites/site-002/reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md) · [sites/site-002/reports/SITE-002-STABLE-M9-COMPLETE.md](sites/site-002/reports/SITE-002-STABLE-M9-COMPLETE.md)
 
 **Registration evidence:** [sites/site-002/reports/SITE-002-REGISTRATION-v1.md](sites/site-002/reports/SITE-002-REGISTRATION-v1.md) · [logs/ocpilot/site-002-registration-v1.md](../../logs/ocpilot/site-002-registration-v1.md)
 
@@ -516,5 +524,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-09 | **UPDATED** — W5-A-S Stabilization Pass **DONE** on TEST; promo/dropdown/density/responsive fixes; backup `pre-w5a-stabilization-20260609-2325`; stabilization **PASS WITH NOTES**; W5-A operator COMPLETE **NO** (HITL **PENDING**) |
 
 | 2026-06-14 | **UPDATED** — SITE-002 stable live manual compact checkpoint **REGISTERED**; Run **4.138**; baseline `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; status **STABLE LIVE CHECKPOINT**; rollback = Beget global backup + operator live state; metadata-only — no FTP/file capture |
+| 2026-06-17 | **UPDATED** — SITE-002 authority freeze → `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI`; **MANUAL UI REFINEMENTS ARE CANONICAL**; active stage **M9.8 UX Polish Pack**; [REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md) |
+| 2026-06-19 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.140**; baseline `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`; status **STABLE LIVE CHECKPOINT**; M9.8.1 · M9.8.2 · M9.8.5 + operator PLP polish complete; rollback = Beget full backup + live TEST + file-level pass backups; metadata-only — no FTP/file capture |
 
 *OCPilot State — documentation only; no runtime claimed.*
