@@ -124,6 +124,8 @@
 
 | 4.140 | **SITE-002 — Stable Live M9.8 UX Polish Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
+| 4.141 | **SITE-002 — M9.8.9 Minor Fixes Pack #1 Registration** | **DONE** (2026-06-19; status: **ACTIVE WORK PACKAGE**) | [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md), [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |
@@ -169,6 +171,22 @@
 **Operator takeaway:** Hard-refresh [target used PDP](https://sibcar.new-site.space/audi-a1-2012-s-probegom-149-000-km-799) — hero + trust should read as one offer deck; price 52px anchor; modals light on «Купить в кредит». Compare before/after screenshots. Rate ≥7/10 or T1 rollback.
 
 **Next gate:** Operator W5-C visual HITL → accept or T1 rollback from `pre-w5c-commercial-stage-20260610-0002`.
+
+---
+
+## Run 4.141 deliverables (summary)
+
+- [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md) — M9.8.9 pack registration (8 tasks)
+- [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) — § M9.8.9 active work package
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — active stage → M9.8.9
+
+**Site modification:** **NONE** — documentation only. No FTP. No deploy.
+
+**Authority unchanged:** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`
+
+**Next recommended task:** **M9.8.9-06** Filter Bug Investigation (ACTIVE NEXT / AUDIT FIRST)
+
+**Next gate:** Audit-only charter for M9.8.9-06 before any live filter fix.
 
 ---
 
