@@ -250,7 +250,13 @@
 
 ## 18. Git Result
 
-*(Populated after selective commit and push.)*
+| Field | Value |
+|-------|-------|
+| **Commit hash** | `0f8f77f` |
+| **Commit message** | `foundry: complete WF-R01.3.3 breadcrumbs reference` |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` (`4ce1cd9..0f8f77f`) |
+| **Files committed** | 9 — partial, SCSS, host page, main.scss, BLOCK-GAPS, CORE-BLOCK-LIBRARY, roadmap, OPERATIONAL-INDEX, REPORT |
+| **No foreign lane confirmation** | **Confirmed** — staged diff contained only Wave S2 paths |
 
 ---
 
