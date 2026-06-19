@@ -1,0 +1,83 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-breadcrumbs {
+  min-width: 0;
+  padding-block: $space-3;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: $color-text-muted;
+}
+
+.wf-breadcrumbs__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: $space-2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.wf-breadcrumbs__item {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: $space-2;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.wf-breadcrumbs__separator {
+  flex-shrink: 0;
+  color: $color-neutral-500;
+  user-select: none;
+}
+
+.wf-breadcrumbs__link {
+  display: inline-block;
+  max-width: 12rem;
+  color: $color-text-muted;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    color: $color-brand;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-brand;
+    outline-offset: 2px;
+    border-radius: $radius-sm;
+  }
+}
+
+.wf-breadcrumbs__current {
+  display: inline-block;
+  max-width: 14rem;
+  color: $color-text;
+  font-weight: $font-weight-medium;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@include down($bp-md) {
+  .wf-breadcrumbs__list {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .wf-breadcrumbs__link,
+  .wf-breadcrumbs__current {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

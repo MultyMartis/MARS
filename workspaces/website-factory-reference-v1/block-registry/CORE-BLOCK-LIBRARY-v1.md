@@ -393,6 +393,28 @@ Tier A structural blocks — F3 Block → Structural Subtype. Reference partials
 | **Site type compatibility** | LANDING — · PROMO ○ · CATALOG ● · ECOMMERCE ● · CORPORATE ○ |
 | **Reference** | **PENDING** — WF-R01.3.4 W4 |
 
+### Tier B layout-components (F3 — no `block_id` row)
+
+Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-factory/wf-r01-2-structural-blocks-charter-v1.md) and [wf-r01-3-3-structural-shell-references-charter-v1.md](../../../projects/mars-website-factory/wf-r01-3-3-structural-shell-references-charter-v1.md). Identity in BLOCK-GAPS §2; RPC via layout-component accounting (WF-R01.3.3 §14).
+
+#### BREADCRUMBS
+
+| Aspect | Detail |
+|--------|--------|
+| **Purpose** | Contextual hierarchy trail — L2 navigation depth |
+| **Typical placement** | After HEADER_NAV; before page intro / MAIN lead |
+| **Conversion value** | System — orientation; not commercial CTA |
+| **Site type compatibility** | LANDING — · CATEGORY ● · PRODUCT ● · ABOUT ● · others R/POL |
+| **Reference** | `components/breadcrumbs.html` — **PARTIAL** (WF-R01.3.3 Wave S2) |
+
+#### PAGINATION
+
+| Aspect | Detail |
+|--------|--------|
+| **Purpose** | List-surface paging — L2 navigation depth |
+| **Typical placement** | After PRODUCT_GRID on PLP / archive surfaces |
+| **Reference** | **PENDING** — WF-R01.3.3 Wave S3 |
+
 ---
 
 ## Reference workspace coverage
