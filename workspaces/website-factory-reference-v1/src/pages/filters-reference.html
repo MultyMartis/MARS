@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Filters partial host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-filters-reference-main">
+    <div class="wf-filters-reference-main__inner">
+      <h1>Filters reference host</h1>
+      <p>Bounded build host for the Tier A FILTERS structural block partial. Not a page-type scaffold.</p>
+
+      <div class="wf-filters-reference__layout" data-section>
+        <div class="wf-filters-reference__toolbar">
+          <button
+            type="button"
+            class="wf-filters-reference__trigger"
+            data-filters-open
+            aria-expanded="false"
+            aria-controls="wf-filters-panel"
+          >
+            Filters
+          </button>
+        </div>
+
+        <div class="wf-filters-reference__content">
+          @@include('../partials/components/filters.html')
+
+          <div class="wf-filters-reference__results" aria-hidden="true">
+            <p>Result set preview — neutral listing context placeholder. No catalog grid, product cards, or search.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

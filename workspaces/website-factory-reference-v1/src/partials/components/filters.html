@@ -1,0 +1,203 @@
+<aside
+  class="wf-filters"
+  data-block-id="filters"
+  data-module="filters"
+  id="wf-filters-panel"
+  aria-label="Product filters"
+>
+  <div class="wf-filters__backdrop" data-filters-backdrop hidden aria-hidden="true"></div>
+
+  <div
+    class="wf-filters__panel"
+    role="dialog"
+    aria-modal="false"
+    aria-labelledby="wf-filters-heading"
+  >
+    <header class="wf-filters__header">
+      <h2 class="wf-filters__heading" id="wf-filters-heading">Filters</h2>
+      <p class="wf-filters__summary" data-filters-summary aria-live="polite">
+        <span class="wf-filters__summary-count" data-filters-count>1</span>
+        <span class="wf-filters__summary-label">selected</span>
+      </p>
+      <button
+        type="button"
+        class="wf-filters__close"
+        data-filters-close
+        aria-label="Close filters"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </header>
+
+    <form class="wf-filters__form" action="#" method="get" data-filters-form novalidate>
+      <details class="wf-filters__group" open>
+        <summary class="wf-filters__group-summary">Category</summary>
+        <fieldset class="wf-filters__fieldset">
+          <legend class="wf-visually-hidden">Category</legend>
+          <ul class="wf-filters__options" role="list">
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="checkbox"
+                  name="category"
+                  value="option-a"
+                  checked
+                />
+                <span class="wf-filters__label-text">Option A (12)</span>
+              </label>
+            </li>
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="checkbox"
+                  name="category"
+                  value="option-b"
+                />
+                <span class="wf-filters__label-text">Option B (8)</span>
+              </label>
+            </li>
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="checkbox"
+                  name="category"
+                  value="option-c"
+                />
+                <span class="wf-filters__label-text">Option C (5)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </details>
+
+      <details class="wf-filters__group" open>
+        <summary class="wf-filters__group-summary">Availability</summary>
+        <fieldset class="wf-filters__fieldset">
+          <legend class="wf-visually-hidden">Availability</legend>
+          <ul class="wf-filters__options" role="list">
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="radio"
+                  name="availability"
+                  value="all"
+                  checked
+                />
+                <span class="wf-filters__label-text">All items (25)</span>
+              </label>
+            </li>
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="radio"
+                  name="availability"
+                  value="in-stock"
+                />
+                <span class="wf-filters__label-text">In stock (18)</span>
+              </label>
+            </li>
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="radio"
+                  name="availability"
+                  value="made-to-order"
+                />
+                <span class="wf-filters__label-text">Made to order (7)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </details>
+
+      <details class="wf-filters__group">
+        <summary class="wf-filters__group-summary">Material</summary>
+        <fieldset class="wf-filters__fieldset">
+          <legend class="wf-visually-hidden">Material</legend>
+          <ul class="wf-filters__options" role="list">
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="checkbox"
+                  name="material"
+                  value="steel"
+                />
+                <span class="wf-filters__label-text">Steel (6)</span>
+              </label>
+            </li>
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="checkbox"
+                  name="material"
+                  value="aluminum"
+                />
+                <span class="wf-filters__label-text">Aluminum (4)</span>
+              </label>
+            </li>
+            <li class="wf-filters__option">
+              <label class="wf-filters__label">
+                <input
+                  class="wf-filters__input"
+                  type="checkbox"
+                  name="material"
+                  value="composite"
+                />
+                <span class="wf-filters__label-text">Composite (3)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </details>
+
+      <details class="wf-filters__group" open>
+        <summary class="wf-filters__group-summary">Price</summary>
+        <fieldset class="wf-filters__fieldset">
+          <legend class="wf-visually-hidden">Price range</legend>
+          <div class="wf-filters__range">
+            <label class="wf-filters__range-field">
+              <span class="wf-filters__range-label">Minimum price</span>
+              <input
+                class="wf-filters__range-input"
+                type="number"
+                name="price_min"
+                min="0"
+                step="1"
+                inputmode="numeric"
+                placeholder="0"
+                aria-label="Minimum price"
+              />
+            </label>
+            <span class="wf-filters__range-separator" aria-hidden="true">to</span>
+            <label class="wf-filters__range-field">
+              <span class="wf-filters__range-label">Maximum price</span>
+              <input
+                class="wf-filters__range-input"
+                type="number"
+                name="price_max"
+                min="0"
+                step="1"
+                inputmode="numeric"
+                placeholder="1000"
+                aria-label="Maximum price"
+              />
+            </label>
+          </div>
+        </fieldset>
+      </details>
+
+      <div class="wf-filters__actions">
+        <button class="wf-filters__apply" type="submit">Apply filters</button>
+        <button class="wf-filters__reset" type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</aside>

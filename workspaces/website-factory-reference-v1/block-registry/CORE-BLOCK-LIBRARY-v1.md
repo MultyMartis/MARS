@@ -381,7 +381,7 @@ Tier A structural blocks — F3 Block → Structural Subtype. Reference partials
 | **Typical placement** | PLP sidebar or toolbar — before `PRODUCT_GRID` |
 | **Conversion value** | Informational — discovery refinement |
 | **Site type compatibility** | LANDING — · PROMO — · CATALOG ● · ECOMMERCE ● · CORPORATE ○ (subtree) |
-| **Reference** | **PENDING** — WF-R01.3.4 W4 |
+| **Reference** | `components/filters.html` — **PARTIAL** (WF-R01.3.4 Wave C2) |
 
 ### SEARCH
 
@@ -433,7 +433,8 @@ Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-fa
 | FAQ | faq.html | ✓ |
 | CASES | cases.html | ✓ |
 | HEADER_NAV | header-nav.html | ✓ |
-| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, FILTERS, SEARCH, … | — | **Not implemented** — registry-only v1.1 |
+| FILTERS | filters.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C2) |
+| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, SEARCH, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 
