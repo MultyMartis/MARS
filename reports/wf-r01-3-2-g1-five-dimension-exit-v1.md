@@ -266,9 +266,9 @@ All mandatory G1 criteria from [wf-r01-3-2-landing-completion-charter-v1.md](../
 
 | Item | Detail |
 |------|--------|
-| **Commit hash** | *(recorded at commit time)* |
+| **Commit hash** | `10f2443` |
 | **Commit message** | `foundry: close WF-R01.3.2 gate G1` |
-| **Push result** | *(recorded at push time)* |
+| **Push result** | **Success** — `origin/mars/post-cycle8-live-tests` (`3b9eabf..10f2443`) |
 | **Files committed** | G1 scope only — see §17–18 |
 | **No foreign lane confirmation** | Selective add — no `git add .` |
 
