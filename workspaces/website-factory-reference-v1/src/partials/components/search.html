@@ -1,0 +1,69 @@
+<div
+  class="wf-search wf-search--@@variation"
+  @@if (blockId) { data-block-id="@@blockId" }
+  data-module="search"
+  data-demo-variation="@@variation"
+  @@if (instanceId) { id="@@instanceId" }
+>
+  @@if (variation === 'compact') {
+  <button
+    type="button"
+    class="wf-search__mobile-trigger"
+    data-search-open
+    aria-expanded="false"
+    @@if (instanceId) { aria-controls="@@instanceId-surface" }
+  >
+    <span class="wf-search__mobile-trigger-label">Search</span>
+  </button>
+  }
+
+  <div
+    class="wf-search__surface"
+    data-search-surface
+    @@if (instanceId) { id="@@instanceId-surface" }
+  >
+    <form class="wf-search__form" role="search" action="#" method="get" data-search-form novalidate>
+      <label class="wf-search__label wf-visually-hidden" for="@@inputId">Search products</label>
+      <div class="wf-search__field">
+        <input
+          class="wf-search__input"
+          id="@@inputId"
+          name="query"
+          type="search"
+          placeholder="Search"
+          autocomplete="off"
+          required
+          data-search-input
+        />
+        <button
+          type="button"
+          class="wf-search__clear"
+          data-search-clear
+          hidden
+          aria-label="Clear search"
+        >
+          Clear search
+        </button>
+        <button class="wf-search__submit" type="submit" aria-label="Search">
+          <span class="wf-search__submit-icon" aria-hidden="true"></span>
+          <span class="wf-search__submit-text">Search</span>
+        </button>
+      </div>
+    </form>
+
+    @@if (variation === 'compact') {
+    <button
+      type="button"
+      class="wf-search__close"
+      data-search-close
+      aria-label="Close search"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    }
+  </div>
+
+  @@if (variation === 'compact') {
+  <div class="wf-search__backdrop" data-search-backdrop hidden aria-hidden="true"></div>
+  }
+</div>

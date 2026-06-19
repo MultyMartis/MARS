@@ -13,6 +13,7 @@ const paths = {
     'src/js/sections/sticky_cta.js',
     'src/js/sections/header_nav.js',
     'src/js/components/filters.js',
+    'src/js/components/search.js',
     'src/js/main.js'
   ]
 };

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Search partial host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-search-reference-main">
+    <div class="wf-search-reference-main__inner">
+      <h1>Search reference host</h1>
+      <p class="wf-search-reference__intro">
+        Bounded build host for the Tier A SEARCH structural block partial. Not a page-type scaffold,
+        not a search results page, and not catalog grid integration.
+      </p>
+
+      <div class="wf-search-reference__showcase" data-section>
+        <h2 class="wf-search-reference__showcase-title">Compact utility variation</h2>
+        <p class="wf-search-reference__showcase-note">
+          Intended for HEADER_NAV utility placement. Mobile uses presentation-only open/close panel chrome.
+        </p>
+        <div class="wf-search-reference__utility-frame">
+          @@include('../partials/components/search.html', {
+            "variation": "compact",
+            "blockId": "search",
+            "instanceId": "wf-search-compact",
+            "inputId": "wf-search-input-compact"
+          })
+        </div>
+      </div>
+
+      <div class="wf-search-reference__showcase" data-section>
+        <h2 class="wf-search-reference__showcase-title">Expanded contextual variation</h2>
+        <p class="wf-search-reference__showcase-note">
+          Intended for catalog or main contextual placement. Same component contract; no separate block identity.
+        </p>
+        <div class="wf-search-reference__context-frame">
+          @@include('../partials/components/search.html', {
+            "variation": "expanded",
+            "blockId": "",
+            "instanceId": "wf-search-expanded",
+            "inputId": "wf-search-input-expanded"
+          })
+        </div>
+      </div>
+
+      <p class="wf-search-reference__status" aria-live="polite">Enter a search query.</p>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/components/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

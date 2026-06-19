@@ -33,7 +33,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | Trust vs TESTIMONIALS split | **IMPLEMENTED** | `testimonials.html` + narrowed `trust.html` — WF-R01.3.2 Wave A3 |
 | Modal callback | **NOT block_id** | `modal_callback.html` in layout — recommend future `CALLBACK_MODAL` or CTA variant |
 | Breadcrumbs | **NOT block_id** · **PARTIAL** | Tier B layout-component; `components/breadcrumbs.html` — WF-R01.3.3 Wave S2; required in CATALOG/ECOMMERCE Blueprints |
-| Filters / search UI | **PARTIAL** | `FILTERS` — `components/filters.html` **PARTIAL** (WF-R01.3.4 Wave C2); `SEARCH` block_id — WF-R01.2 Gate 2; partial **OPEN** → WF-R01.3.4 Wave C3 |
+| Filters / search UI | **PARTIAL** | `FILTERS` — `components/filters.html` **PARTIAL** (WF-R01.3.4 Wave C2); `SEARCH` — `components/search.html` **PARTIAL** (WF-R01.3.4 Wave C3) |
 | Header / primary nav | **IMPLEMENTED** | `header-nav.html` — WF-R01.3.2 Wave C2 |
 | Pagination | **NOT block_id** · **PARTIAL** | Tier B layout-component; `components/pagination.html` — WF-R01.3.3 Wave S3; PLP requirement |
 | Add-to-cart (PDP micro-block) | **NOT separate id** | Part of PRODUCT_CARD on ECOMMERCE |

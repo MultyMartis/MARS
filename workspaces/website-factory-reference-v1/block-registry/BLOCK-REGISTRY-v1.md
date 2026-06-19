@@ -484,9 +484,9 @@ Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01
 | **required_or_optional** | Contextual |
 | **dependencies** | **recommends** `HEADER_NAV` (typical placement); **recommends** `PRODUCT_GRID` on results pages; soft pair with `FILTERS` on catalog surfaces |
 | **exclusions** | **Forbidden** as primary conversion surface on LANDING; **Forbidden** duplication of `CATEGORIES` tree navigation semantics |
-| **notes** | `maturity: common` (RV-01); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; RV-01 flags Search Results as Missing page type — R01.3.4 scaffold; `reference_partial: PENDING — WF-R01.3` |
+| **notes** | `maturity: common` (RV-01); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; RV-01 flags Search Results as Missing page type — R01.3.4 scaffold; `reference_partial: PARTIAL — WF-R01.3.4 Wave C3` |
 
-**Reference partial:** **PENDING** — WF-R01.3.4 W4
+**Reference partial:** `components/search.html` — **PARTIAL** (WF-R01.3.4 Wave C3)
 
 ---
 
@@ -629,7 +629,7 @@ Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01
 | Core site types only in matrix v2 | LANDING, PROMO, CATALOG, ECOMMERCE, CORPORATE |
 | No blocks for SAAS / WEB_APPLICATION / MARKETPLACE | **Confirmed** — Extended types out of Core Library v1 |
 | Block count | **32** canonical `block_id` entries (29 Core + 3 structural Tier A) |
-| Structural Tier A (WF-R01.2) | `HEADER_NAV` **PARTIAL** (WF-R01.3.2 Wave C2); `FILTERS` **PARTIAL** (WF-R01.3.4 Wave C2); `SEARCH` — registry row **COMPLETE**; partial **PENDING** WF-R01.3.4 Wave C3 |
+| Structural Tier A (WF-R01.2) | `HEADER_NAV` **PARTIAL** (WF-R01.3.2 Wave C2); `FILTERS` **PARTIAL** (WF-R01.3.4 Wave C2); `SEARCH` **PARTIAL** (WF-R01.3.4 Wave C3); registry rows **COMPLETE** |
 | Blueprint alignment | [BLUEPRINT-BLOCK-MAPPING-v1.md](BLUEPRINT-BLOCK-MAPPING-v1.md) |
 | Page alignment | [PAGE-BLOCK-MAPPING-v1.md](PAGE-BLOCK-MAPPING-v1.md) |
 | Contract compliance | [BLOCK-CONTRACT-v1.md](BLOCK-CONTRACT-v1.md) |

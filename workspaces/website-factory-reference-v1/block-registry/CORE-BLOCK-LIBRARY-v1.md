@@ -391,7 +391,7 @@ Tier A structural blocks — F3 Block → Structural Subtype. Reference partials
 | **Typical placement** | Header utility; `/search/` results host |
 | **Conversion value** | Informational — catalog findability |
 | **Site type compatibility** | LANDING — · PROMO ○ · CATALOG ● · ECOMMERCE ● · CORPORATE ○ |
-| **Reference** | **PENDING** — WF-R01.3.4 W4 |
+| **Reference** | `components/search.html` — **PARTIAL** (WF-R01.3.4 Wave C3) |
 
 ### Tier B layout-components (F3 — no `block_id` row)
 
@@ -434,7 +434,8 @@ Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-fa
 | CASES | cases.html | ✓ |
 | HEADER_NAV | header-nav.html | ✓ |
 | FILTERS | filters.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C2) |
-| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, SEARCH, … | — | **Not implemented** — registry-only v1.1 |
+| SEARCH | search.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C3) |
+| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 

@@ -207,4 +207,4 @@ Open a **domain row** only when Core Run or a contract citation requires it.
 
 ---
 
-*Last updated: 2026-06-19 — WF-R01.3.4 Wave **C2 COMPLETE**; `components/filters.html` reference partial **BUILT**; [wf-r01-3-4-wave-c2-filters-v1.md](../../reports/wf-r01-3-4-wave-c2-filters-v1.md); Gate **G1 — CLOSED**; RC **32/32** · RPC **18/32** · RSC **1/10; 1/1 LANDING** · SC **LANDING PASS** · PC **1/1**; G2 **NOT ACTIVE**; next: **WF-R01.3.4 Wave C3 — SEARCH Reference Partial**.*
+*Last updated: 2026-06-19 — WF-R01.3.4 Wave **C3 COMPLETE**; `components/search.html` reference partial **BUILT**; [wf-r01-3-4-wave-c3-search-v1.md](../../reports/wf-r01-3-4-wave-c3-search-v1.md); Gate **G1 — CLOSED**; RC **32/32** · RPC **19/32** · RSC **1/10; 1/1 LANDING** · SC **LANDING PASS** · PC **1/1**; G2 **NOT ACTIVE**; next: **WF-R01.3.4 Wave C4A — CATEGORIES and CATEGORY_GRID Reference Binding**.*
