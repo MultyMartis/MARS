@@ -269,10 +269,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Commit hash** | *(populated after selective commit)* |
+| **Commit hash** | `72e7978` |
 | **Commit message** | `foundry: complete WF-R01.3.3 pagination reference` |
-| **Push result** | *(populated after push)* |
-| **Files committed** | Wave S3 selective paths only |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` (`a313167..72e7978`) |
+| **Files committed** | 9 — partial, SCSS, host page, main.scss, BLOCK-GAPS, CORE-BLOCK-LIBRARY, roadmap, OPERATIONAL-INDEX, REPORT |
 | **No foreign lane confirmation** | **Confirmed** — staged diff reviewed before commit |
 
 ---
