@@ -1,6 +1,6 @@
 # Website Factory — Block Registry v1
 
-**Версия:** v1  
+**Версия:** v1.1 *(WF-R01.2 Gate 2 — additive structural slice)*  
 **Область:** `workspaces/website-factory-reference-v1/block-registry/`  
 **Статус:** **канонический Block Registry** Website Factory — Block Registry Alignment v1 — **documentation only**  
 **Не является:** runtime, CMS schema, component library, автоматическая валидация, design generation, frontend implementation
@@ -32,7 +32,7 @@ Site Type → Blueprint → Pages → Blocks → Design → Frontend
 | [../blueprints/BLUEPRINT-SYSTEM-v1.md](../blueprints/BLUEPRINT-SYSTEM-v1.md) | Blueprints |
 | [../registry/SITE-TYPE-BLOCK-MAPPING-v1.md](../registry/SITE-TYPE-BLOCK-MAPPING-v1.md) | Predecessor mapping (superseded for `block_id` by this registry) |
 
-**Reference implementation (partial):** `workspaces/website-factory-reference-v1/src/partials/sections/` — hero, social_proof, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases.
+**Reference implementation (partial):** `workspaces/website-factory-reference-v1/src/partials/sections/` — hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases.
 
 **Предшественник (не канон v1):** `projects/mars-website-factory/block-registry-v0.md` — snake_case IDs, v0 site types; **не смешивать** без charter.
 
@@ -94,7 +94,7 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | recommends `HERO` above |
 | **exclusions** | — |
 
-**Reference partial:** inline / hero-adjacent (not separate partial in reference workspace)
+**Reference partial:** `benefits.html` (T1+ — WF-R01.3.2 Wave A1)
 
 ---
 
@@ -177,7 +177,7 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **conversion_role** | INFORMATIONAL |
 | **allowed_site_types** | CATALOG, ECOMMERCE, CORPORATE (subtree) |
 | **required_or_optional** | Required (CATALOG, ECOMMERCE PLP) |
-| **dependencies** | requires `CATEGORIES`; recommends filters (GAP — not separate block_id) |
+| **dependencies** | **requires** `CATEGORIES`; **recommends** `FILTERS` when filterable PLP |
 | **exclusions** | LANDING, PROMO |
 
 ---
@@ -230,6 +230,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | recommends `HERO`, `BENEFITS` before |
 | **exclusions** | — |
 
+**Reference partial:** `process.html` (T1+ — WF-R01.3.2 Wave A2)
+
 ---
 
 ### CASES
@@ -264,7 +266,7 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | authentic content required — HITL |
 | **exclusions** | — |
 
-**Reference partial:** overlaps `social_proof.html` (logos/metrics variant → `TRUST`)
+**Reference partial:** `testimonials.html` — **PARTIAL** (WF-R01.3.2 Wave A3)
 
 ---
 
@@ -300,7 +302,7 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | — |
 | **exclusions** | — |
 
-**Reference partial:** `social_proof.html`
+**Reference partial:** `trust.html` — **PARTIAL, narrowed** (WF-R01.3.2 Wave A3; metrics/logos/badges only)
 
 ---
 
@@ -421,6 +423,70 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **exclusions** | — |
 
 **Reference partial:** `contact_block.html`
+
+---
+
+## Structural Block Registry (WF-R01.2 Gate 2)
+
+Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-factory/wf-r01-2-structural-blocks-charter-v1.md).
+
+### HEADER_NAV
+
+| Поле | Значение |
+|------|----------|
+| **block_id** | `HEADER_NAV` |
+| **block_name** | Header / primary navigation |
+| **primary_category** | NAVIGATION |
+| **purpose** | Global shell navigation: brand anchor, primary menu, utility slots (account/cart/phone/language), mobile drawer — persistent across route groups; enables orientation and IA traversal without carrying page narrative |
+| **conversion_role** | SYSTEM |
+| **allowed_site_types** | PROMO, CATALOG, ECOMMERCE, CORPORATE; LANDING — contextual minimal (matrix override) |
+| **allowed_page_types** | HOME_PAGE, LANDING_PAGE, SERVICE_PAGE, CATEGORY_PAGE, PRODUCT_PAGE, ABOUT_PAGE, CONTACT_PAGE, FAQ_PAGE, REVIEWS_PAGE, LEGAL_PAGE |
+| **required_or_optional** | Contextual |
+| **dependencies** | **recommends** `FOOTER`, `LEGAL_LINKS`; **requires** Blueprint global shell zone; **requires** [layout-shell-governance.md](../../../projects/mars-website-factory/layout-shell-governance.md) — HEADER ≠ HERO |
+| **exclusions** | **Forbidden** absorption of `HERO` content; **Forbidden** separate ids: `MEGA_MENU`, `MOBILE_NAV_DRAWER`, `UTILITY_NAV`, `SKIP_LINK` — variants/composition in notes |
+| **notes** | `maturity: standard` (RV-01 Core); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; `mega_menu: variant` (not separate block_id); `utility_nav: composition` (cart icon ≠ `CART` page block); WF-R01.1 role `nav_mega_or_primary` → this id; `reference_partial: PENDING — WF-R01.3` |
+
+**Reference partial:** **PENDING** — WF-R01.3.2/3.3
+
+---
+
+### FILTERS
+
+| Поле | Значение |
+|------|----------|
+| **block_id** | `FILTERS` |
+| **block_name** | Filters / refinement controls |
+| **primary_category** | NAVIGATION |
+| **purpose** | Faceted and refinement controls on PLP/list surfaces — control surface operating on inventory views; distinct from `PRODUCT_GRID` result surface |
+| **conversion_role** | INFORMATIONAL |
+| **allowed_site_types** | CATALOG, ECOMMERCE; CORPORATE — catalog subtree only; **excluded** LANDING, PROMO |
+| **allowed_page_types** | CATEGORY_PAGE (primary); HOME_PAGE when catalog hub exposes filterable grid |
+| **required_or_optional** | Contextual |
+| **dependencies** | **requires** `PRODUCT_GRID` or list context on page; **recommends** `CATEGORIES`; **recommends** `HEADER_NAV` (shell); sort order = sub-variant in notes (`SORT_CONTROLS` forbidden as id) |
+| **exclusions** | **Forbidden** on LANDING, PROMO; **Forbidden** merge into `PRODUCT_GRID` markup; **Forbidden** separate `SORT_CONTROLS`, `FACET_CHIPS`, `RESULTS_META` ids |
+| **notes** | `maturity: common` (RV-01 context-dependent Core); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; faceted SEO URL behavior → WF-R01.5 FUTURE; `reference_partial: PENDING — WF-R01.3` |
+
+**Reference partial:** **PENDING** — WF-R01.3.4 W4
+
+---
+
+### SEARCH
+
+| Поле | Значение |
+|------|----------|
+| **block_id** | `SEARCH` |
+| **block_name** | Site / catalog search |
+| **primary_category** | NAVIGATION |
+| **purpose** | Query entry (header field, overlay, or dedicated surface), suggestions, and routing to results — discovery primitive for large IA and catalog findability |
+| **conversion_role** | INFORMATIONAL |
+| **allowed_site_types** | CATALOG, ECOMMERCE (obligatory); PROMO, CORPORATE (recommended); LANDING — forbidden/default off |
+| **allowed_page_types** | Global shell (all multi-page types above); results host — `SEARCH_RESULTS_PAGE` glossary/planned; until page_type row exists, document `/search/` route in Blueprint notes |
+| **required_or_optional** | Contextual |
+| **dependencies** | **recommends** `HEADER_NAV` (typical placement); **recommends** `PRODUCT_GRID` on results pages; soft pair with `FILTERS` on catalog surfaces |
+| **exclusions** | **Forbidden** as primary conversion surface on LANDING; **Forbidden** duplication of `CATEGORIES` tree navigation semantics |
+| **notes** | `maturity: common` (RV-01); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; RV-01 flags Search Results as Missing page type — R01.3.4 scaffold; `reference_partial: PENDING — WF-R01.3` |
+
+**Reference partial:** **PENDING** — WF-R01.3.4 W4
 
 ---
 
@@ -558,7 +624,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 |-------|--------|
 | Core site types only in matrix v2 | LANDING, PROMO, CATALOG, ECOMMERCE, CORPORATE |
 | No blocks for SAAS / WEB_APPLICATION / MARKETPLACE | **Confirmed** — Extended types out of Core Library v1 |
-| Block count | 29 canonical `block_id` entries |
+| Block count | **32** canonical `block_id` entries (29 Core + 3 structural Tier A) |
+| Structural Tier A (WF-R01.2) | `HEADER_NAV`, `FILTERS`, `SEARCH` — registry rows **COMPLETE**; partials **PENDING** WF-R01.3 |
 | Blueprint alignment | [BLUEPRINT-BLOCK-MAPPING-v1.md](BLUEPRINT-BLOCK-MAPPING-v1.md) |
 | Page alignment | [PAGE-BLOCK-MAPPING-v1.md](PAGE-BLOCK-MAPPING-v1.md) |
 | Contract compliance | [BLOCK-CONTRACT-v1.md](BLOCK-CONTRACT-v1.md) |
@@ -568,9 +635,9 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 ## SAFE UNKNOWN
 
 - JSON Schema export for blocks — **not defined**
-- Header/nav as canonical `block_id` — **GAP** — see [BLOCK-GAPS-v1.md](BLOCK-GAPS-v1.md)
+- Header/nav, filters, search registry rows — **CLOSED** (WF-R01.2 Gate 2); reference partials — **OPEN** → WF-R01.3
 - Automated sync with reference partial filenames — **manual** mapping only
 
 ---
 
-*Registry version: v1. Canonical location: `workspaces/website-factory-reference-v1/block-registry/`.*
+*Registry version: v1.1 (WF-R01.2 Gate 2 structural slice). Canonical location: `workspaces/website-factory-reference-v1/block-registry/`.*

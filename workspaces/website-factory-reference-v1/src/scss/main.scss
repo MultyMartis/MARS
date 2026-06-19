@@ -9,11 +9,14 @@
 @use 'foundations/modal';
 
 @use 'sections/hero';
+@use 'sections/benefits';
+@use 'sections/process';
 @use 'sections/lead_form';
 @use 'sections/cta_band';
 @use 'sections/pricing';
 @use 'sections/cases';
-@use 'sections/social_proof';
+@use 'sections/testimonials';
+@use 'sections/trust';
 @use 'sections/contact_block';
 @use 'sections/faq';
 @use 'sections/sticky_cta';

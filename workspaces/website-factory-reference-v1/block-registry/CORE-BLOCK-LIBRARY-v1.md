@@ -47,6 +47,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Immediately below hero on single-page stacks |
 | **Conversion value** | Medium — supports decision before form/CTA |
 | **Site type compatibility** | LANDING ● · PROMO ○ · CATALOG — · ECOMMERCE — · CORPORATE ○ |
+| **Reference** | `benefits.html` |
 
 ---
 
@@ -136,6 +137,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Mid-stack after benefits |
 | **Conversion value** | Medium — reduces uncertainty |
 | **Site type compatibility** | LANDING ● · PROMO ○ · CATALOG — · ECOMMERCE — · CORPORATE ○ |
+| **Reference** | `process.html` |
 
 ---
 
@@ -159,6 +161,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Near trust zone or PDP |
 | **Conversion value** | Medium–high trust |
 | **Site type compatibility** | LANDING ○ · PROMO ○ · CATALOG ○ · ECOMMERCE ○ · CORPORATE ○ |
+| **Reference** | `testimonials.html` — **PARTIAL** |
 
 ---
 
@@ -181,7 +184,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | After value props; before FAQ/form |
 | **Conversion value** | Medium — risk reduction |
 | **Site type compatibility** | LANDING ● · PROMO ○ · CATALOG ○ · ECOMMERCE ○ · CORPORATE ● |
-| **Reference** | `social_proof.html` |
+| **Reference** | `trust.html` — **PARTIAL, narrowed** |
 
 ---
 
@@ -354,19 +357,58 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 
 ---
 
+## Structural Layer (WF-R01.2 Gate 2)
+
+Tier A structural blocks — F3 Block → Structural Subtype. Reference partials **PENDING** WF-R01.3.
+
+### HEADER_NAV
+
+| Aspect | Detail |
+|--------|--------|
+| **Purpose** | Global shell navigation — brand, menu, utilities, mobile drawer |
+| **Typical placement** | Global shell zone — all multi-page routes |
+| **Conversion value** | System — orientation and IA traversal |
+| **Site type compatibility** | LANDING ○ (minimal) · PROMO ● · CATALOG ● · ECOMMERCE ● · CORPORATE ● |
+| **Reference** | **PENDING** — WF-R01.3.2/3.3 |
+
+### FILTERS
+
+| Aspect | Detail |
+|--------|--------|
+| **Purpose** | Faceted/refinement controls on PLP |
+| **Typical placement** | PLP sidebar or toolbar — before `PRODUCT_GRID` |
+| **Conversion value** | Informational — discovery refinement |
+| **Site type compatibility** | LANDING — · PROMO — · CATALOG ● · ECOMMERCE ● · CORPORATE ○ (subtree) |
+| **Reference** | **PENDING** — WF-R01.3.4 W4 |
+
+### SEARCH
+
+| Aspect | Detail |
+|--------|--------|
+| **Purpose** | Site/catalog query entry and results routing |
+| **Typical placement** | Header utility; `/search/` results host |
+| **Conversion value** | Informational — catalog findability |
+| **Site type compatibility** | LANDING — · PROMO ○ · CATALOG ● · ECOMMERCE ● · CORPORATE ○ |
+| **Reference** | **PENDING** — WF-R01.3.4 W4 |
+
+---
+
 ## Reference workspace coverage
 
 | block_id | Implemented partial | Status |
 |----------|---------------------|--------|
 | HERO | hero.html | ✓ |
-| TRUST | social_proof.html | ✓ |
+| BENEFITS | benefits.html | ✓ |
+| PROCESS | process.html | ✓ |
+| TRUST | trust.html | ✓ |
+| TESTIMONIALS | testimonials.html | ✓ |
 | PRICING | pricing.html | ✓ |
 | LEAD_FORM | lead_form.html | ✓ |
 | CTA | cta_band.html, sticky_cta.html | ✓ |
 | CONTACTS | contact_block.html | ✓ |
 | FAQ | faq.html | ✓ |
 | CASES | cases.html | ✓ |
-| BENEFITS, PROCESS, SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, … | — | **Not implemented** — registry-only v1 |
+| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, HEADER_NAV, FILTERS, SEARCH, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 
@@ -379,4 +421,4 @@ Modal callback: layout partial `modal_callback.html` — **not** separate block_
 
 ---
 
-*Core library version: v1.*
+*Core library version: v1.1 (WF-R01.2 Gate 2 structural slice).*

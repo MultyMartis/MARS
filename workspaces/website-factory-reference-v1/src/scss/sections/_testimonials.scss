@@ -1,0 +1,125 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// Extracted from triumph-manipulator-landing-v6 review-panel / review-list (TESTIMONIALS only).
+// Not extracted: platform logos, client brands, personal data, trust metrics strip.
+
+.wf-section--testimonials {
+  padding-block: $section-gap-m;
+  background: $color-surface;
+
+  .wf-testimonials__header {
+    max-width: 40rem;
+    margin-bottom: $space-7;
+  }
+
+  .wf-testimonials__eyebrow {
+    margin: 0 0 $space-3;
+    font-size: 0.875rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-testimonials__title {
+    margin: 0 0 $space-4;
+    font-size: $font-size-h2;
+  }
+
+  .wf-testimonials__lead {
+    margin: 0;
+    color: $color-text-muted;
+    max-width: 52ch;
+  }
+
+  .wf-testimonials__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-5;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include down($bp-lg) {
+      grid-template-columns: 1fr;
+      gap: $space-4;
+    }
+  }
+
+  .wf-testimonials__card {
+    display: flex;
+    gap: $space-4;
+    height: 100%;
+    padding: $space-5;
+    background: $color-surface-alt;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+  }
+
+  .wf-testimonials__avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+    color: $color-brand;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+  }
+
+  .wf-testimonials__body {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+  }
+
+  .wf-testimonials__meta {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+  }
+
+  .wf-testimonials__author {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+  }
+
+  .wf-testimonials__role {
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+  }
+
+  .wf-testimonials__quote {
+    margin: 0;
+    flex: 1;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: $color-text;
+  }
+
+  .wf-testimonials__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-3;
+    margin-top: auto;
+  }
+
+  .wf-testimonials__rating {
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    color: $color-brand;
+  }
+
+  .wf-testimonials__source {
+    font-size: 0.75rem;
+    color: $color-text-muted;
+  }
+}

@@ -1,26 +1,38 @@
 @use '../foundations/tokens' as *;
 @use '../foundations/breakpoints' as *;
 
-.wf-section--social-proof {
-  padding-block: $section-gap-m;
+// Narrowed TRUST block — logos, metrics, badges only (formerly social_proof.html).
 
-  .wf-proof__header {
+.wf-section--trust {
+  padding-block: $section-gap-m;
+  background: $color-surface-alt;
+
+  .wf-trust__header {
     text-align: center;
     margin-bottom: $space-6;
   }
 
-  .wf-proof__title {
+  .wf-trust__eyebrow {
+    margin: 0 0 $space-3;
+    font-size: 0.875rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-trust__title {
     margin: 0 0 $space-3;
     font-size: $font-size-h2;
   }
 
-  .wf-proof__intro {
+  .wf-trust__intro {
     margin: 0 auto;
     max-width: 40ch;
     color: $color-text-muted;
   }
 
-  .wf-proof__metrics {
+  .wf-trust__metrics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $space-4;
@@ -33,23 +45,23 @@
     }
   }
 
-  .wf-proof__metric-value {
+  .wf-trust__metric-value {
     display: block;
     font-size: 1.75rem;
     font-weight: $font-weight-bold;
     color: $color-brand;
   }
 
-  .wf-proof__metric-label {
+  .wf-trust__metric-label {
     font-size: 0.875rem;
     color: $color-text-muted;
   }
 
-  .wf-proof__logos {
+  .wf-trust__logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $space-4;
-    margin: 0;
+    margin: 0 0 $space-6;
     padding: 0;
     list-style: none;
 
@@ -58,22 +70,42 @@
     }
   }
 
-  .wf-proof__logo {
+  .wf-trust__logo {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 56px;
     padding: $space-4;
-    background: $color-surface-alt;
+    background: $color-surface;
     border-radius: $radius-md;
     border: 1px solid $color-border;
   }
 
-  .wf-proof__logo-text {
+  .wf-trust__logo-text {
     font-size: 0.875rem;
     font-weight: $font-weight-medium;
     color: $color-text-muted;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+  }
+
+  .wf-trust__badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-3;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wf-trust__badge {
+    padding: $space-2 $space-4;
+    font-size: 0.8125rem;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-pill;
   }
 }

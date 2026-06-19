@@ -30,11 +30,11 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 |-----|--------|-------|
 | Hero variants (brand vs conversion vs catalog) | **NOT IN REGISTRY** | Single `HERO` block_id |
 | CTA variants (band vs sticky vs inline) | **PARTIAL** | One `CTA` id; reference has band + sticky partials |
-| Trust vs TESTIMONIALS split | **DOCUMENTED** | Reference `social_proof.html` maps to TRUST; testimonials overlap |
+| Trust vs TESTIMONIALS split | **IMPLEMENTED** | `testimonials.html` + narrowed `trust.html` — WF-R01.3.2 Wave A3 |
 | Modal callback | **NOT block_id** | `modal_callback.html` in layout — recommend future `CALLBACK_MODAL` or CTA variant |
 | Breadcrumbs | **NOT block_id** | Required in CATALOG/ECOMMERCE Blueprints |
-| Filters / search UI | **NOT block_id** | Required on PLP — future `FILTERS`, `SEARCH` |
-| Header / primary nav | **NOT block_id** | Required globally — future `HEADER_NAV` |
+| Filters / search UI | **REGISTRY CLOSED** | `FILTERS`, `SEARCH` block_id — WF-R01.2 Gate 2; partials **OPEN** → WF-R01.3 |
+| Header / primary nav | **REGISTRY CLOSED** | `HEADER_NAV` block_id — WF-R01.2 Gate 2; partial **OPEN** → WF-R01.3 |
 | Pagination | **NOT block_id** | PLP requirement |
 | Add-to-cart (PDP micro-block) | **NOT separate id** | Part of PRODUCT_CARD on ECOMMERCE |
 | Order confirmation | **NOT block_id** | Post-checkout page block |
@@ -46,7 +46,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| Reference SCSS coverage | **PARTIAL** | hero, social_proof, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases only |
+| Reference SCSS coverage | **PARTIAL** | hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases |
 | Motion / interaction per block | **NOT DEFINED** | `_motion.scss` exists; no block binding |
 | Dark/light theme per block | **NOT DEFINED** | |
 
@@ -68,7 +68,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| HTML partial contract per block_id | **PARTIAL** | 9 section partials; 17 blocks without partial |
+| HTML partial contract per block_id | **PARTIAL** | 11 section partials; 16 blocks without partial |
 | Props / content slots schema | **NOT DEFINED** | v0 noted SAFE UNKNOWN |
 | Form field schemas (LEAD_FORM vs CHECKOUT) | **NOT DEFINED** | Consent Rule HTML only for consent |
 | Accessibility checklist per block | **NOT DEFINED** | |
@@ -103,13 +103,14 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | block_id | Reference partial | Gap |
 |----------|-------------------|-----|
-| BENEFITS | — | Not implemented |
-| PROCESS | — | Not implemented |
+| BENEFITS | `benefits.html` | **Implemented** — WF-R01.3.2 Wave A1 |
+| PROCESS | `process.html` | **Implemented** — WF-R01.3.2 Wave A2 |
 | SERVICES | — | Not implemented |
 | CATEGORIES | — | Not implemented |
 | PRODUCT_GRID | — | Not implemented |
 | PRODUCT_CARD | — | Not implemented |
-| TESTIMONIALS | overlaps TRUST | Split not in code |
+| TESTIMONIALS | `testimonials.html` | **Implemented** — WF-R01.3.2 Wave A3 |
+| TRUST | `trust.html` | **Implemented, narrowed** — WF-R01.3.2 Wave A3 |
 | CERTIFICATES | — | Not implemented |
 | TEAM | — | Not implemented |
 | ABOUT | — | Not implemented |
@@ -141,7 +142,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 |----------|------|------------|
 | 1 | Update SITE-TYPE-BLOCK-MAPPING-v1 → v2 pointer | **DONE** — Hygiene Pass v1 (2026-06-01) |
 | 2 | DESIGN SYSTEM MAPPING (Priority 4) | Design |
-| 3 | Header/nav + filters as block_id charter | Registry v1.1 |
+| 3 | Header/nav + filters as block_id charter | **DONE** — WF-R01.2 Gate 2 (2026-06-19) |
 | 4 | Partial implementation roadmap for catalog/commerce blocks | Frontend — **separate charter** |
 | 5 | JSON Schema export | Tooling — S5 boundary |
 
