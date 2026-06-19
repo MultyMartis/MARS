@@ -22,7 +22,8 @@
 | **Test URL** | https://zpm.new-site.space/ |
 | **Current Status** | **STABLE LIVE CHECKPOINT — M9.8.9 FILTER RECOVERY 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§10 Operator Manual JS Refinements](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#10-operator-manual-js-refinements) |
+| **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
 | **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL**. Post-reset catalog ~594 SKU; filters and price index recovered (06D–06M). Open: EC-01 (M9.8.7). M10 not authorized. |
 
@@ -33,7 +34,7 @@
 | Rule | Value |
 |------|-------|
 | **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
-| **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, and UX edits on live TEST override older M9.x deploy snapshots |
+| **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
 | **Conflict resolution** | If any documentation contradicts current TEST state, **source of truth** = live TEST on https://zpm.new-site.space/ as registered in this checkpoint |
@@ -51,7 +52,7 @@
 | Supersedes (live truth) | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` |
 | Recovery scope | Product reset · fresh 1C import · price index · filter hotfixes (06H, 06J, 06M) |
 | Completed M9.8 passes | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
-| Operator manual passes | PLP / filter / breakpoint / CSS / Twig polish |
+| Operator manual passes | PLP / filter / breakpoint / CSS / Twig polish · **JS refinements (04B)** — filter scroll offset 0, sticky header trigger |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Open bugs | **EC-01** — filter sidebar empty subcategories on branch 80 (M9.8.7) |
 | Next planned | Remaining M9.8.9 tasks per roadmap · deferred M9.8.3/4/6/8 · **M10** — not authorized |

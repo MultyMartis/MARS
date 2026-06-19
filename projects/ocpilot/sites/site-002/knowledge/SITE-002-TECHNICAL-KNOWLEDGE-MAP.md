@@ -18,7 +18,7 @@
 |---|--------|------|
 | 1 | **Live TEST** (`zpm.new-site.space`) | Authoritative runtime state |
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
-| 3 | **Manual UI / CSS / Twig refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
+| 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
 | 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
 
@@ -30,7 +30,9 @@
 
 ### Manual UI refinements are canonical
 
-Operator manual CSS, Twig, and UX edits on live TEST are the **visual authority**. Repo work copies (`*-work/`), prior STABLE folders, and `.pre-*.bak` from earlier passes are **historical** unless refreshed by live FTP capture.
+Operator manual CSS, Twig, JS, and UX edits on live TEST are the **visual and behavioural authority**. Repo work copies (`*-work/`), prior STABLE folders, and `.pre-*.bak` from earlier passes are **historical** unless refreshed by live FTP capture.
+
+See also **§10 Operator Manual JS Refinements** (post M9.8.9-04A operator polish).
 
 ### Conflict resolution
 
@@ -443,7 +445,48 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 
 ---
 
-## 10. Operational Rules
+## 10. Operator Manual JS Refinements
+
+**Registered:** M9.8.9-04B (2026-06-19) — operator manual edits on live TEST **after** M9.8.9-04A deploy pass.
+
+**Policy:** Manual JS refinements on live TEST are **canonical**. Repo work copies, pass reports (including 04A), and deploy snapshots describe **historical** deploy state unless refreshed by live capture.
+
+### Filter scroll offset
+
+| Item | M9.8.9-04A report | Live canonical (post operator edit) |
+|------|-------------------|-------------------------------------|
+| `scrollToCategorySection()` offset | `15px` (fixed) | **`0`** |
+| Location | `assets/js/main.js` | same |
+
+Operator set offset to **0** on live. Treat **0** as authoritative for filter/AJAX scroll-to-category behaviour.
+
+**Prior pass evidence (historical):** [SITE-002-M9.8.9-04A-FILTER-SCROLL-OFFSET-TUNING.md](../reports/SITE-002-M9.8.9-04A-FILTER-SCROLL-OFFSET-TUNING.md)
+
+### Sticky header trigger
+
+Operator manually adjusted the sticky header appearance threshold in `assets/js/main.js` on live TEST.
+
+| Item | Status |
+|------|--------|
+| File | `assets/js/main.js` |
+| Change type | Manual threshold tweak (sticky header show/hide) |
+| Exact value | **SAFE UNKNOWN** — not captured in repo at registration time |
+| Canonical | Live TEST behaviour |
+
+### Pre-task rule (header / filter JS)
+
+Before **any** JS task touching header sticky behaviour or catalog filter scroll:
+
+1. **Verify live** `assets/js/main.js` on TEST (FTP capture or operator confirmation) — do not assume 04A report values.
+2. Confirm current `scrollToCategorySection()` offset (canonical: **0**).
+3. Confirm sticky header trigger matches live UX; document exact threshold if captured.
+4. Treat operator manual JS as override over pass reports and work copies.
+
+**Registration report:** [SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](../reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md)
+
+---
+
+## 11. Operational Rules
 
 ### PRE-TASK RULE (mandatory)
 
@@ -490,4 +533,4 @@ Before **any** SITE-002 task:
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-19.*
+*Documentation only — no runtime claimed. Last updated: 2026-06-19 (M9.8.9-04B operator manual JS refinements).*
