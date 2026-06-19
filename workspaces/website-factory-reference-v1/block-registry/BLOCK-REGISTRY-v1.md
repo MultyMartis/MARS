@@ -146,6 +146,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | requires IA category tree from Blueprint |
 | **exclusions** | LANDING, PROMO (without reclassification) |
 
+**Reference partial:** `components/categories.html` — **PARTIAL** (WF-R01.3.4 Wave C4A)
+
 ---
 
 ### CATEGORY_GRID
@@ -163,6 +165,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | **requires** `CATEGORIES` taxonomy from Blueprint |
 | **exclusions** | LANDING, PROMO |
 | **notes** | Distinct from `CATEGORIES` nav/tree; v1 mapping "Category grid" from SITE-TYPE-BLOCK-MAPPING-v1 resolves here |
+
+**Reference partial:** `components/category-grid.html` — **PARTIAL** (WF-R01.3.4 Wave C4A)
 
 ---
 

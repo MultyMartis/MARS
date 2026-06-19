@@ -27,6 +27,8 @@
 @use 'components/pagination';
 @use 'components/filters';
 @use 'components/search';
+@use 'components/categories';
+@use 'components/category-grid';
 
 // --- Base document ---
 *,

@@ -1,0 +1,116 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-category-grid {
+  min-width: 0;
+}
+
+.wf-category-grid__title {
+  margin: 0 0 $space-5;
+  font-size: $font-size-h2;
+  line-height: 1.25;
+}
+
+.wf-category-grid__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wf-category-grid__item {
+  min-width: 0;
+}
+
+.wf-category-grid__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-surface;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: rgba($color-brand, 0.35);
+    box-shadow: $shadow-md;
+  }
+
+  &:focus-within {
+    border-color: $color-brand;
+    box-shadow: $shadow-md;
+  }
+}
+
+.wf-category-grid__media {
+  flex: 0 0 auto;
+  aspect-ratio: 4 / 3;
+  background:
+    linear-gradient(135deg, $color-surface-alt 0%, $color-neutral-200 100%);
+  border-bottom: 1px solid $color-border;
+}
+
+.wf-category-grid__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: $space-2;
+  min-width: 0;
+  padding: $space-4;
+}
+
+.wf-category-grid__name {
+  margin: 0;
+  font-size: $font-size-h3;
+  line-height: 1.3;
+}
+
+.wf-category-grid__link {
+  display: inline;
+  color: $color-text;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-brand;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-brand;
+    outline-offset: 2px;
+    border-radius: $radius-sm;
+  }
+}
+
+.wf-category-grid__description {
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: $color-text-muted;
+}
+
+.wf-category-grid__count {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: $color-text-muted;
+}
+
+@include up($bp-sm) {
+  .wf-category-grid__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include up($bp-lg) {
+  .wf-category-grid__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: $space-5;
+  }
+}

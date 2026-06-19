@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Categories and category grid partial host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-category-references-main">
+    <div class="wf-category-references-main__inner">
+      <h1>Categories and category grid reference host</h1>
+      <p class="wf-category-references__intro">
+        Bounded build host for CATEGORIES navigation and CATEGORY_GRID collection partials.
+        Not a page-type scaffold, not a catalog root, and not catalog grid integration.
+      </p>
+
+      <div class="wf-category-references__showcase" data-section>
+        <h2 class="wf-category-references__showcase-title">Category navigation</h2>
+        <p class="wf-category-references__showcase-note">
+          Taxonomy discovery surface — inline chip-style links with optional item counts.
+        </p>
+        @@include('../partials/components/categories.html')
+      </div>
+
+      <div class="wf-category-references__showcase" data-section>
+        <h2 class="wf-category-references__showcase-title">Category tile grid</h2>
+        <p class="wf-category-references__showcase-note">
+          Visual category collection — repeated internal cards without a separate block identity.
+        </p>
+        @@include('../partials/components/category-grid.html')
+      </div>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

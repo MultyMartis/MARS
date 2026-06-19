@@ -81,6 +81,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Catalog home; mega-menu; PLP breadcrumbs context |
 | **Conversion value** | Medium — discovery path |
 | **Site type compatibility** | LANDING — · PROMO — · CATALOG ● · ECOMMERCE ● · CORPORATE ○ |
+| **Reference** | `components/categories.html` — **PARTIAL** (WF-R01.3.4 Wave C4A) |
 
 ---
 
@@ -92,6 +93,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | HOME_PAGE below hero on CATALOG/ECOMMERCE |
 | **Conversion value** | Medium — taxonomy discovery |
 | **Site type compatibility** | LANDING — · PROMO — · CATALOG ○ · ECOMMERCE ○ · CORPORATE ○ |
+| **Reference** | `components/category-grid.html` — **PARTIAL** (WF-R01.3.4 Wave C4A) |
 
 ---
 
@@ -435,7 +437,9 @@ Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-fa
 | HEADER_NAV | header-nav.html | ✓ |
 | FILTERS | filters.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C2) |
 | SEARCH | search.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C3) |
-| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, … | — | **Not implemented** — registry-only v1.1 |
+| CATEGORIES | categories.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4A) |
+| CATEGORY_GRID | category-grid.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4A) |
+| SERVICES, FEATURES, PRODUCT_GRID, PRODUCT_CARD, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 
