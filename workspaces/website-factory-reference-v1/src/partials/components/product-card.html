@@ -1,0 +1,63 @@
+<article
+  class="wf-product-card wf-product-card--@@variation"
+  @@if (blockId) { data-block-id="@@blockId" }
+  @@if (demoVariation) { data-demo-variation="@@demoVariation" }
+>
+  <div class="wf-product-card__media-wrap">
+    @@if (variation !== 'no-media') {
+    <a class="wf-product-card__media" href="#" aria-label="View @@title details">
+      <span class="wf-product-card__media-placeholder" aria-hidden="true"></span>
+    </a>
+    } @@else {
+    <div class="wf-product-card__media wf-product-card__media--missing" aria-hidden="true">
+      <span class="wf-product-card__media-placeholder wf-product-card__media-placeholder--missing">No image</span>
+    </div>
+    }
+  </div>
+
+  <div class="wf-product-card__body">
+    <p class="wf-product-card__eyebrow">@@model</p>
+
+    <h3 class="wf-product-card__title">
+      <a class="wf-product-card__title-link" href="#">@@title</a>
+    </h3>
+
+    <dl class="wf-product-card__specs">
+      <div class="wf-product-card__spec">
+        <dt>Capacity</dt>
+        <dd>@@specCapacity</dd>
+      </div>
+      <div class="wf-product-card__spec">
+        <dt>Power</dt>
+        <dd>@@specPower</dd>
+      </div>
+      <div class="wf-product-card__spec">
+        <dt>Material</dt>
+        <dd>@@specMaterial</dd>
+      </div>
+    </dl>
+
+    <div class="wf-product-card__commercial">
+      @@if (variation === 'request-price' || variation === 'made-to-order') {
+      <p class="wf-product-card__price wf-product-card__price--request">
+        <span class="wf-product-card__price-label">Commercial state</span>
+        <span class="wf-product-card__price-value">Request price</span>
+      </p>
+      } @@else {
+      <p class="wf-product-card__price">
+        <span class="wf-product-card__price-label">Price</span>
+        <span class="wf-product-card__price-value">@@price</span>
+      </p>
+      }
+
+      <p class="wf-product-card__availability wf-product-card__availability--@@availabilityState">
+        <span class="wf-product-card__availability-label">Availability</span>
+        <span class="wf-product-card__availability-value">@@availability</span>
+      </p>
+    </div>
+
+    <div class="wf-product-card__action">
+      <a class="wf-product-card__action-link" href="#">@@actionLabel</a>
+    </div>
+  </div>
+</article>

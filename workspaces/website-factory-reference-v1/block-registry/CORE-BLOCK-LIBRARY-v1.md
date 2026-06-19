@@ -105,6 +105,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Category pages; search results |
 | **Conversion value** | Medium — browse → PDP |
 | **Site type compatibility** | LANDING — · PROMO — · CATALOG ● · ECOMMERCE ● · CORPORATE ○ |
+| **Reference** | `components/product-grid.html` — **PARTIAL** (WF-R01.3.4 Wave C4B) |
 
 ---
 
@@ -116,6 +117,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Inside PRODUCT_GRID; PDP main column |
 | **Conversion value** | High on PDP — RFQ or add-to-cart |
 | **Site type compatibility** | LANDING — · PROMO — · CATALOG ● · ECOMMERCE ● · CORPORATE ○ |
+| **Reference** | `components/product-card.html` — **PARTIAL** (WF-R01.3.4 Wave C4B) |
 
 ---
 
@@ -439,7 +441,9 @@ Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-fa
 | SEARCH | search.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C3) |
 | CATEGORIES | categories.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4A) |
 | CATEGORY_GRID | category-grid.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4A) |
-| SERVICES, FEATURES, PRODUCT_GRID, PRODUCT_CARD, … | — | **Not implemented** — registry-only v1.1 |
+| PRODUCT_GRID | product-grid.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4B) |
+| PRODUCT_CARD | product-card.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4B) |
+| SERVICES, FEATURES, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 

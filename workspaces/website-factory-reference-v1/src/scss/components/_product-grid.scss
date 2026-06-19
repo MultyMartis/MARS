@@ -1,0 +1,60 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-product-grid {
+  min-width: 0;
+}
+
+.wf-product-grid__title {
+  margin: 0 0 $space-5;
+  font-size: $font-size-h2;
+  line-height: 1.25;
+}
+
+.wf-product-grid__empty {
+  margin: 0 0 $space-4;
+  padding: $space-5;
+  border: 1px dashed $color-border;
+  border-radius: $radius-lg;
+  text-align: center;
+  color: $color-text-muted;
+  background: $color-surface-alt;
+}
+
+.wf-product-grid__empty--hidden {
+  display: none;
+}
+
+.wf-product-grid__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wf-product-grid__item {
+  min-width: 0;
+  display: flex;
+}
+
+.wf-product-grid[data-layout='grid'] .wf-product-grid__list {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+@include up($bp-sm) {
+  .wf-product-grid__list {
+    gap: $space-5;
+  }
+
+  .wf-product-grid[data-layout='grid'] .wf-product-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  }
+}
+
+@include up($bp-lg) {
+  .wf-product-grid[data-layout='grid'] .wf-product-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+}

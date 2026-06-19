@@ -35,6 +35,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | Breadcrumbs | **NOT block_id** · **PARTIAL** | Tier B layout-component; `components/breadcrumbs.html` — WF-R01.3.3 Wave S2; required in CATALOG/ECOMMERCE Blueprints |
 | Filters / search UI | **PARTIAL** | `FILTERS` — `components/filters.html` **PARTIAL** (WF-R01.3.4 Wave C2); `SEARCH` — `components/search.html` **PARTIAL** (WF-R01.3.4 Wave C3) |
 | Category navigation / tile grid | **PARTIAL** | `CATEGORIES` — `components/categories.html` **PARTIAL** (WF-R01.3.4 Wave C4A); `CATEGORY_GRID` — `components/category-grid.html` **PARTIAL** (WF-R01.3.4 Wave C4A) |
+| Product grid / card | **PARTIAL** | `PRODUCT_GRID` — `components/product-grid.html` **PARTIAL** (WF-R01.3.4 Wave C4B); `PRODUCT_CARD` — `components/product-card.html` **PARTIAL** (WF-R01.3.4 Wave C4B) |
 | Header / primary nav | **IMPLEMENTED** | `header-nav.html` — WF-R01.3.2 Wave C2 |
 | Pagination | **NOT block_id** · **PARTIAL** | Tier B layout-component; `components/pagination.html` — WF-R01.3.3 Wave S3; PLP requirement |
 | Add-to-cart (PDP micro-block) | **NOT separate id** | Part of PRODUCT_CARD on ECOMMERCE |
@@ -95,6 +96,8 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | Cross-layer alignment (page ↔ block) | **DOCUMENTED** | [BLOCK-REGISTRY-GAPS-v1.md](BLOCK-REGISTRY-GAPS-v1.md) |
 | FEATURES, REVIEWS | **ADDED** | Registry alignment 2026-05-31; no reference partials |
 | CATEGORY_GRID | **PARTIAL** | `components/category-grid.html` — WF-R01.3.4 Wave C4A |
+| PRODUCT_GRID | **PARTIAL** | `components/product-grid.html` — WF-R01.3.4 Wave C4B |
+| PRODUCT_CARD | **PARTIAL** | `components/product-card.html` — WF-R01.3.4 Wave C4B |
 | SITE-TYPE-SEO-MAPPING block awareness | **WEAK** | SEO v2 priority queued |
 | ECOMMERCE Legal Extension blocks | **FUTURE** | E1–E4 not in Core Pack v1 |
 | Extended Type block libraries | **NOT STARTED** | SAAS, WEB_APPLICATION, MARKETPLACE |
@@ -110,8 +113,8 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | SERVICES | — | Not implemented |
 | CATEGORIES | `components/categories.html` | **PARTIAL** — WF-R01.3.4 Wave C4A |
 | CATEGORY_GRID | `components/category-grid.html` | **PARTIAL** — WF-R01.3.4 Wave C4A |
-| PRODUCT_GRID | — | Not implemented |
-| PRODUCT_CARD | — | Not implemented |
+| PRODUCT_GRID | `components/product-grid.html` | **PARTIAL** — WF-R01.3.4 Wave C4B |
+| PRODUCT_CARD | `components/product-card.html` | **PARTIAL** — WF-R01.3.4 Wave C4B |
 | TESTIMONIALS | `testimonials.html` | **Implemented** — WF-R01.3.2 Wave A3 |
 | TRUST | `trust.html` | **Implemented, narrowed** — WF-R01.3.2 Wave A3 |
 | CERTIFICATES | — | Not implemented |

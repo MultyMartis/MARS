@@ -1,0 +1,96 @@
+<section
+  class="wf-product-grid"
+  data-block-id="product_grid"
+  data-layout="grid"
+  aria-labelledby="product-grid-title"
+>
+  <h2 class="wf-product-grid__title" id="product-grid-title">Products</h2>
+
+  <!-- Empty-state slot: render when result set is zero — no separate block identity -->
+  <p class="wf-product-grid__empty wf-product-grid__empty--hidden" hidden>
+    No products match the current view.
+  </p>
+
+  <ul class="wf-product-grid__list">
+    <li class="wf-product-grid__item">
+      @@include('./product-card.html', {
+        "blockId": "product_card",
+        "demoVariation": "",
+        "variation": "fixed-price",
+        "model": "Model 100",
+        "title": "Compact Preparation Unit",
+        "specCapacity": "20 L bowl",
+        "specPower": "1.1 kW",
+        "specMaterial": "Stainless steel",
+        "price": "€1,240",
+        "availabilityState": "available",
+        "availability": "In stock",
+        "actionLabel": "View details"
+      })
+    </li>
+    <li class="wf-product-grid__item">
+      @@include('./product-card.html', {
+        "blockId": "",
+        "demoVariation": "request-price",
+        "variation": "request-price",
+        "model": "Model 220",
+        "title": "Modular Storage Rack",
+        "specCapacity": "4 shelves",
+        "specPower": "—",
+        "specMaterial": "Powder-coated steel",
+        "price": "",
+        "availabilityState": "available",
+        "availability": "Available to order",
+        "actionLabel": "Request information"
+      })
+    </li>
+    <li class="wf-product-grid__item">
+      @@include('./product-card.html', {
+        "blockId": "",
+        "demoVariation": "made-to-order",
+        "variation": "made-to-order",
+        "model": "Model 450",
+        "title": "Custom Fabrication Line",
+        "specCapacity": "Project-based",
+        "specPower": "Configurable",
+        "specMaterial": "Mixed metals",
+        "price": "",
+        "availabilityState": "made-to-order",
+        "availability": "Made to order",
+        "actionLabel": "Request information"
+      })
+    </li>
+    <li class="wf-product-grid__item">
+      @@include('./product-card.html', {
+        "blockId": "",
+        "demoVariation": "long-title",
+        "variation": "fixed-price",
+        "model": "Model 310-XL",
+        "title": "Heavy-Duty Conveyor Preparation Station with Extended Naming for Layout Stress Testing",
+        "specCapacity": "120 kg load",
+        "specPower": "2.4 kW",
+        "specMaterial": "Reinforced alloy",
+        "price": "€3,890",
+        "availabilityState": "available",
+        "availability": "In stock",
+        "actionLabel": "View details"
+      })
+    </li>
+    <li class="wf-product-grid__item">
+      @@include('./product-card.html', {
+        "blockId": "",
+        "demoVariation": "no-media",
+        "variation": "no-media",
+        "model": "Model 015",
+        "title": "Replacement Filter Kit",
+        "specCapacity": "Standard fit",
+        "specPower": "—",
+        "specMaterial": "Composite mesh",
+        "price": "€48",
+        "availabilityState": "available",
+        "availability": "In stock",
+        "actionLabel": "View details"
+      })
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Product grid and product card partial host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-product-references-main">
+    <div class="wf-product-references-main__inner">
+      <h1>Product grid and product card reference host</h1>
+      <p class="wf-product-references__intro">
+        Bounded build host for PRODUCT_GRID collection layout and PRODUCT_CARD repeated item partials.
+        Not a page-type scaffold, not a PLP corridor, and not catalog composition integration.
+      </p>
+
+      <div class="wf-product-references__showcase" data-section>
+        <h2 class="wf-product-references__showcase-title">Product result grid</h2>
+        <p class="wf-product-references__showcase-note">
+          Collection container — repeated product cards with neutral demonstration states.
+          First card carries the canonical PRODUCT_CARD hook; additional cards use data-demo-variation only.
+        </p>
+        @@include('../partials/components/product-grid.html')
+      </div>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

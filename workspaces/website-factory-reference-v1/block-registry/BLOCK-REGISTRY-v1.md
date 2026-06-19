@@ -184,6 +184,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | **requires** `CATEGORIES`; **recommends** `FILTERS` when filterable PLP |
 | **exclusions** | LANDING, PROMO |
 
+**Reference partial:** `components/product-grid.html` — **PARTIAL** (WF-R01.3.4 Wave C4B)
+
 ---
 
 ### PRODUCT_CARD
@@ -199,6 +201,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **required_or_optional** | Required (PDP/PLP) |
 | **dependencies** | requires `PRODUCT_GRID` or `CATEGORIES` structure |
 | **exclusions** | LANDING, PROMO |
+
+**Reference partial:** `components/product-card.html` — **PARTIAL** (WF-R01.3.4 Wave C4B)
 
 ---
 
