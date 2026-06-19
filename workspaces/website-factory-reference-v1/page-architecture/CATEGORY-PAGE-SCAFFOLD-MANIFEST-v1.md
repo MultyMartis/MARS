@@ -25,7 +25,7 @@
 | **Global RSC denominator** | **10** primary page types (PAGE-TYPE-REGISTRY-v1 Core minimum set) |
 | **Global RSC numerator (post-C5)** | **2** — `LANDING_PAGE` + `CATEGORY_PAGE` |
 | **CATALOG corridor RSC** | **1/1** for PLP scaffold |
-| **Commit binding** | PENDING COMMIT BINDING |
+| **Commit binding** | `6267c8b` — `foundry: complete WF-R01.3.4 category page scaffold` |
 
 ---
 

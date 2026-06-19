@@ -398,9 +398,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit hash** | PENDING — see post-commit update |
-| **Metadata commit hash** | Not required if manifest binding updated in main commit |
-| **Commit messages** | `foundry: complete WF-R01.3.4 category page scaffold` |
+| **Main commit hash** | `6267c8b` |
+| **Metadata commit hash** | See binding commit below |
+| **Commit messages** | `foundry: complete WF-R01.3.4 category page scaffold` · `foundry: bind WF-R01.3.4 category scaffold evidence` |
 | **Push result** | PENDING |
 | **Files committed** | Wave C5 selective paths only |
 | **No foreign lane confirmation** | Verified before commit |
