@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-19  
-**Evidence cutoff:** 2026-06-19 (SITE-002 stable live checkpoint — M9.8 UX Polish 01 after manual PLP polish)  
+**Evidence cutoff:** 2026-06-19 (SITE-002 stable live checkpoint — M9.8.9 Filter Recovery 01 after product reset, 1C import, filter hotfixes)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,9 +14,9 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.8 UX POLISH 01** (2026-06-19) |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.8.9 FILTER RECOVERY 01** (2026-06-19) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` — **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL**; M9.8.1 · M9.8.2 · M9.8.5 + operator PLP polish **complete**; active work package **M9.8.9 Minor Fixes Pack #1**; **next task M9.8.9-06** (filter bug audit); EC-01 (M9.8.7) remains open |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` — product reset + fresh 1C import + filter recovery **complete**; filters/price index **working**; Knowledge Map registered; active work package **M9.8.9 Minor Fixes Pack #1** (remaining tasks); EC-01 (M9.8.7) remains open |
 
 ---
 
@@ -28,19 +28,20 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`** — **STABLE LIVE CHECKPOINT** (metadata-only; live TEST after M9.8 passes + operator manual PLP polish) |
+| Baseline | **`SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`** — **STABLE LIVE CHECKPOINT** (metadata-only; post product reset, 1C import, filter recovery) |
+| Knowledge map | [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Authority policy | **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
-| Registry | Active project site — M7.1 through M9.7 + Manual UI + M9.8.1/2/5 + operator PLP polish **complete** on TEST |
-| Completed | M7.1 Launch Mode · M8 Cleanup · M9 Filter Profiles · M9.5 Hub Mode · M9.7 Images · M9.7 Megamenu Cleanup · Homepage Neutral Branches · Manual UI Refinement · M9.8.1 PDP Gallery Compact · M9.8.2 PDP Lightbox Constraints · M9.8.5 Products Per Page Selector · Operator PLP/filter/breakpoint/CSS/Twig polish |
-| Active stage | **M9.8.9 Minor Fixes Pack #1** — 8 tasks registered (2026-06-19) |
-| Open bugs | **EC-01** — filter sidebar empty subcategories on branch 80 (Моечные ванны) — M9.8.7 · **M9.8.9-06** — filter broken on «Столы»; price slider handle coupling (audit first) |
-| Next planned | **M9.8.9-06** Filter Bug Investigation (ACTIVE NEXT) · remaining M9.8.9 tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) · deferred M9.8.3/4/6/8 · **M10** not authorized |
+| Registry | Active project site — M7.1 through M9.8.5 + filter recovery wave **complete** on TEST |
+| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** |
+| Active stage | **M9.8.9 Minor Fixes Pack #1** — remaining tasks per roadmap (2026-06-19) |
+| Open bugs | **EC-01** — filter sidebar empty subcategories on branch 80 (Моечные ванны) — M9.8.7 |
+| Next planned | Remaining M9.8.9 tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) · deferred M9.8.3/4/6/8 · **M10** not authorized |
 | Run 5 | **NO** — not applicable to current operational lane |
 | Writes (this checkpoint) | **NO** — documentation only |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 | External secrets | External storage only — not in repo |
 
-**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
+**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
 
 **State freeze report:** [sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md)
 

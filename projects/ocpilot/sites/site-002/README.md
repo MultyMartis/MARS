@@ -2,9 +2,9 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
-**Status:** **STABLE LIVE CHECKPOINT — M9.8 UX POLISH 01** (2026-06-19)  
-**Run:** Stable live checkpoint after M9.8 deploy passes + operator manual PLP polish  
-**Active stage:** **M9.8.9 Minor Fixes Pack #1** (next active work package)
+**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 FILTER RECOVERY 01** (2026-06-19)  
+**Run:** Stable checkpoint after product reset, fresh 1C import, filter recovery  
+**Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap)
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
 
@@ -22,8 +22,9 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
 | **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual authority |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | **Conflict resolution** | If docs contradict current TEST → source of truth = live TEST on https://zpm.new-site.space/ |
 
 ---
@@ -33,6 +34,7 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 | Subfolder | Use |
 |-----------|-----|
 | `baselines/` | Stable checkpoint definitions (metadata; may not include site files) |
+| `knowledge/` | Persistent technical knowledge map and architecture reference |
 | `materials/` | Source materials from operator (sanitized briefs, path lists, screenshots without secrets) |
 | `audits/` | General audit outputs |
 | `opencart-analysis/` | OpenCart version, core structure, theme layout findings |
@@ -56,42 +58,37 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` |
-| Status | **STABLE LIVE CHECKPOINT** — live TEST after M9.8 passes + operator manual PLP polish |
-| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md) |
-| Completed M9.8 | M9.8.1 PDP Gallery Compact · M9.8.2 PDP Lightbox Constraints · M9.8.5 Products Per Page Selector |
-| Operator manual | PLP Grid Density · PLP Compact · Filter Compact · Breakpoint Polish · Manual CSS · Manual Twig |
-| Open bugs | EC-01 — filter sidebar empty subcategories on branch 80 (M9.8.7) · M9.8.9-06 — filter on «Столы» + price slider (audit first) |
-| Roadmap | [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) — **M9.8.9 Minor Fixes Pack #1** |
-| Next planned | **M9.8.9-06** Filter Bug Investigation (ACTIVE NEXT) · remaining M9.8.9 tasks · deferred M9.8.3/4/6/8 · **M10** not authorized |
-| Registration | [reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md) |
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| Status | **STABLE LIVE CHECKPOINT** — post product reset, 1C import, filter recovery |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
+| Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
+| Recovery | Product reset · 1C import · price index (06D/06F) · filters (06H/06J/06M) |
+| Completed M9.8 | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
+| Operator manual | PLP / filter / breakpoint / CSS / Twig polish |
+| Open bugs | EC-01 — filter sidebar empty subcategories on branch 80 (M9.8.7) |
+| Roadmap | [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md) |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 
 ### Prior checkpoints (historical)
 
 | Field | Value |
 |-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md) |
+| Scope | M9.8.1/2/5 + operator PLP polish — superseded for live truth |
+
+| Field | Value |
+|-------|--------|
 | Name | `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14` |
 | Baseline doc | [baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md) |
-| Scope | PDP V5.1 · Category V2.3.1 — superseded for live truth |
+| Scope | PDP V5.1 · Category V2.3.1 — historical |
 
 | Field | Value |
 |-------|--------|
 | Name | `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI` |
 | Report | [reports/SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI.md](reports/SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI.md) |
 | Scope | File baseline — historical file rollback only |
-
-| Field | Value |
-|-------|--------|
-| Name | `SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE` |
-| Report | [reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md](reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md) |
-| Scope | Historical — homepage 5-branch deploy capture |
-
-| Field | Value |
-|-------|--------|
-| Name | `SITE-002-STABLE-M9-COMPLETE-20260615` |
-| Report | [reports/SITE-002-STABLE-M9-COMPLETE.md](reports/SITE-002-STABLE-M9-COMPLETE.md) |
-| Scope | Pre-M9.7D / pre-manual UI |
 
 ---
 
@@ -127,5 +124,6 @@ Metadata stays in this repo tree; large archives stay external.
 ## Rules
 
 - No secrets. No live credentials.
+- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work.
 - No site modifications, FTP, phpMyAdmin, or admin panel actions until chartered runs.
 - Do not invent URLs, hosting, or client names beyond operator-supplied registration facts.

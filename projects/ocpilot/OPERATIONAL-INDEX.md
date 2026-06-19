@@ -122,9 +122,11 @@
 
 | 4.139 | **SITE-002 — Stable Live PDP V5.1 Checkpoint** | **DONE** (2026-06-14; status: **STABLE LIVE CHECKPOINT** — superseded by 4.140 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
-| 4.140 | **SITE-002 — Stable Live M9.8 UX Polish Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+| 4.140 | **SITE-002 — Stable Live M9.8 UX Polish Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT** — superseded by 4.142 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 4.141 | **SITE-002 — M9.8.9 Minor Fixes Pack #1 Registration** | **DONE** (2026-06-19; status: **ACTIVE WORK PACKAGE**) | [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md), [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.142 | **SITE-002 — Stable Live M9.8.9 Filter Recovery Checkpoint + Technical Knowledge Map** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
@@ -174,6 +176,23 @@
 
 ---
 
+## Run 4.142 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) — metadata-only stable checkpoint after product reset, 1C import, filter recovery
+- [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — persistent technical knowledge map (1C, pricing, price index, filters, overlays, PDP, catalog)
+- [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md) — registration report
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.8.9 Filter Recovery 01
+
+**Site modification:** **NONE** — documentation only. No FTP. No deploy.
+
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
+
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`
+
+**PRE-TASK RULE:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work.
+
+---
+
 ## Run 4.141 deliverables (summary)
 
 - [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md) — M9.8.9 pack registration (8 tasks)
@@ -182,9 +201,9 @@
 
 **Site modification:** **NONE** — documentation only. No FTP. No deploy.
 
-**Authority unchanged:** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`
+**Authority unchanged at 4.141:** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` — **superseded by 4.142**
 
-**Next recommended task:** **M9.8.9-06** Filter Bug Investigation (ACTIVE NEXT / AUDIT FIRST)
+**Next recommended task at 4.141:** **M9.8.9-06** Filter Bug Investigation — **resolved** by filter recovery wave; see 4.142
 
 **Next gate:** Audit-only charter for M9.8.9-06 before any live filter fix.
 
