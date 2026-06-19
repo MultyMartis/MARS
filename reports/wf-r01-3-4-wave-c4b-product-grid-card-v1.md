@@ -365,11 +365,11 @@ REFERENCE BINDING BUILT
 
 | Field | Value |
 |-------|-------|
-| **Commit hash** | *(populated after selective commit)* |
+| **Commit hash** | `09735f9` |
 | **Commit message** | `foundry: complete WF-R01.3.4 product references` |
-| **Push result** | *(populated after push)* |
-| **Files committed** | Wave C4B selective paths only |
-| **No foreign lane confirmation** | **Pending commit verification** |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` (`f1ce535..09735f9`) |
+| **Files committed** | 12 Wave C4B paths (see §9–§10) |
+| **No foreign lane confirmation** | **Confirmed** — staged diff contained only C4B scope |
 
 ---
 
