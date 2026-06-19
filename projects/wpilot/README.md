@@ -2,7 +2,8 @@
 
 **Classification:** Program / Operational System.
 **Chat type:** External Systems.
-**Status:** documented Phase 1 base; **proven runtime v0.3.0-RC5 on DEV** (2026-06-19 release freeze).
+**Status:** **ACTIVE** — registry band; documented program pack in active reference use.
+**Lifecycle:** [WPILOT-LIFECYCLE-STATE.md](WPILOT-LIFECYCLE-STATE.md) · **Reference Implementation** — first proven CMS Pilot runtime reference in MARS; **v0.3.0-RC5** proven on DEV; RC5 development focus **closed** (2026-06-19).
 **Model reference:** [System Entity Model](../../governance/system-entity-model.md).
 
 WPilot is a human-supervised AI-assisted WordPress administration system for testing whether a Cursor/operator workflow can safely inspect and make tightly scoped changes on a Beget-hosted test WordPress site.
@@ -13,18 +14,22 @@ Strategic direction: WPilot's preferred long-term target is **Factory-native Wor
 
 | Field | Value |
 |-------|-------|
+| **Status** | **ACTIVE** |
+| **Lifecycle state** | **Reference Implementation** |
+| **Final state (RC5)** | [WPILOT-FINAL-STATE-RC5.md](WPILOT-FINAL-STATE-RC5.md) |
+| **Authority** | `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19` |
 | **Plugin version** | `0.3.0` (schema `0.2.0`) |
 | **Release candidate** | `v0.3.0-RC5` — live on DEV |
 | **Runtime maturity** | Proven content writes + authenticated REST bridge |
 | **Environment** | DEV only — `https://dev.gktriumph.ru` |
 | **Proven REST path** | inspect → backup → scoped-replace → validate → rollback |
 | **Connection proof** | Authenticated REST, connection tracking, admin Last Successful Connection / Last Endpoint |
-| **Release freeze** | [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
+| **Maintenance policy** | [WPILOT-MAINTENANCE-POLICY-v1.md](WPILOT-MAINTENANCE-POLICY-v1.md) |
+| **Sprint 3** | **HOLD** — explicit charter only |
 | **RC5 spec** | [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) |
-| **Core freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
-| **First write milestone** | [milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) |
+| **Milestones** | [MILESTONE-001](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) · [MILESTONE-002 RC5 Finalization](milestones/WPILOT-MILESTONE-002-RC5-FINALIZATION.md) |
 
-Plugin source: `plugin/metacode-wpilot/`. Evidence reports under `reports/wpilot-runtime-*-sprint*.md`. Not production. Not autonomous.
+Plugin source: `plugin/metacode-wpilot/`. Use as **reference runtime**, **architectural template**, and **validation source** for future CMS Pilots — not as active MVP development target. Not production. Not autonomous.
 
 ## MARS Token Standard
 
@@ -119,18 +124,24 @@ Canonical document: [WPILOT-CORE-ARCHITECTURE-REVIEW-v1.md](WPILOT-CORE-ARCHITEC
 
 Canonical document: [runtime-contracts/WPILOT-RUNTIME-CONTRACTS-v1.md](runtime-contracts/WPILOT-RUNTIME-CONTRACTS-v1.md)
 
-## State Freeze & Milestones
+## State Freeze, Lifecycle & Milestones
 
-- [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) — **RC5 release freeze** (UX-01…BUGFIX-02, connection proof).
+- [WPILOT-FINAL-STATE-RC5.md](WPILOT-FINAL-STATE-RC5.md) — **RC5 final state** (Reference Implementation).
+- [WPILOT-LIFECYCLE-STATE.md](WPILOT-LIFECYCLE-STATE.md) — lifecycle state definitions.
+- [WPILOT-MAINTENANCE-POLICY-v1.md](WPILOT-MAINTENANCE-POLICY-v1.md) — post-RC5 maintenance policy.
+- [WPILOT-AUTHORITY-STATE-RC5.md](WPILOT-AUTHORITY-STATE-RC5.md) — authority registration.
+- [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) — RC5 release freeze.
 - [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) — live RC5 specification on DEV.
-- [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) — Core Model + runtime sprint freeze (2026-06-19).
+- [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) — Core Model + runtime sprint freeze.
 - [milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) — first proven plugin REST write path.
-- [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-2026-06-v1.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-2026-06-v1.md) — cross-system visibility notes (OCPilot, Factory, ATLAS).
+- [milestones/WPILOT-MILESTONE-002-RC5-FINALIZATION.md](milestones/WPILOT-MILESTONE-002-RC5-FINALIZATION.md) — RC5 finalization (**COMPLETE**).
+- [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md) — RC5 ecosystem sync.
+- [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) — WPilot navigation index.
 
 ## What WPilot Is
 
 - A documentation-first operational system under `projects/`.
-- A safe Phase 1 MVP for Beget-hosted WordPress test-site work.
+- The **first proven CMS Pilot runtime reference implementation** in MARS (RC5 on DEV).
 - A human-supervised workflow pack for inspection, backup confirmation, rollback planning, low-risk file-level tests, WP admin copy/create tests, WPBakery/The7 structure inspection, child theme CSS patch tests, QA, and reporting.
 - A future bridge candidate for Website Factory-approved WordPress drafts, templates, structured content payloads, and human-approved publishing workflows.
 - An External Systems lane because WordPress, Beget, hosting panels, databases, plugins, themes, and admin dashboards remain outside MARS ownership.

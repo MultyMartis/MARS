@@ -3,7 +3,37 @@
 **Classification:** Planned WordPress bridge plugin roadmap.
 **Chat type:** External Systems.
 **Active lane:** B.
-**Status:** PLANNED roadmap only; no plugin implementation in this repository.
+**Status:** PLANNED roadmap — **not auto-activated**; WPilot is **Reference Implementation** (RC5 closed). Sprint 3 requires explicit HITL charter per [WPILOT-MAINTENANCE-POLICY-v1.md](WPILOT-MAINTENANCE-POLICY-v1.md).
+
+## Current Phase Status (2026-06-19)
+
+| Field | Value |
+|-------|-------|
+| **Current phase** | Reference Implementation — RC5 Finalized |
+| **Authority State** | `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19` |
+| **Commit** | `648632acbdd42703427fd76a0cb1fd8d88641dcc` |
+| **Release candidate** | `v0.3.0-RC5` (live on DEV) |
+| **Runtime maturity** | `proven_content_writes` + `proven_connection_runtime` |
+| **Environment** | DEV only — `https://dev.gktriumph.ru` |
+| **Sprint 3** | **HOLD** |
+| **Next allowed phase** | Explicit HITL charter only |
+
+### Completed milestones (this cycle)
+
+| Package | Status |
+|---------|--------|
+| Phase 0 — Plugin skeleton | **PROVEN** on DEV (admin, token, enable/disable) |
+| Phase 1 — Read-only bridge | **PROVEN** on DEV |
+| Phase 2 — Safe scoped writes | **PROVEN** on DEV (`scoped-replace` on `page.post_content`) |
+| UX-01 / UX-02 | **Complete** |
+| OPS-01 / OPS-02 | **Complete** |
+| BUGFIX-01 / BUGFIX-02 | **Complete** |
+| RC5 connection proof | **Complete** |
+| TEST-01 clean ZIP install | **PARTIAL** — not blocker for RC5 live proof |
+
+**Canonical RC5 spec:** [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md)  
+**Navigation:** [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md)  
+**Ecosystem sync:** [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md)
 
 ## Goal
 

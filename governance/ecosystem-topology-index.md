@@ -158,11 +158,11 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | Human-supervised **WordPress administration** operational system (Phase 1 MVP docs + DEV plugin source in-repo + planned production bridge). External Systems lane. |
-| **What it is NOT** | Autonomous WP admin, MARS runtime, deploy bot, or proven production bridge ownership from repo evidence alone. |
-| **Operational status** | **Operational** (Phase 1 documentation discipline); in-repo plugin source = **experimental / repo-only implementation evidence**; production bridge remains planned. |
-| **Canonical path** | [../projects/wpilot/README.md](../projects/wpilot/README.md); registry `wpilot`; plugin reconciliation [../projects/wpilot/plugin-mvp/reconciliation-map-v0.md](../projects/wpilot/plugin-mvp/reconciliation-map-v0.md). |
-| **Relationship role** | **Future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. |
+| **What it is** | **First proven CMS Pilot runtime reference implementation** in MARS — human-supervised WordPress administration (Phase 1 docs + DEV plugin `metacode-wpilot` v0.3.0-RC5 proven on DEV). External Systems lane. |
+| **What it is NOT** | Autonomous WP admin, MARS runtime, deploy bot, production bridge, active MVP development target, or Sprint 3 authorization from RC5 freeze alone. |
+| **Operational status** | **Reference Implementation** — `proven_content_writes` + `proven_connection_runtime` on DEV (`https://dev.gktriumph.ru`); human-supervised only. Authority: `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`; commit `648632acbdd42703427fd76a0cb1fd8d88641dcc`. RC5 development focus **closed**. Sprint 3 **HOLD**. |
+| **Canonical path** | [../projects/wpilot/WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md); [../projects/wpilot/OPERATIONAL-INDEX.md](../projects/wpilot/OPERATIONAL-INDEX.md); [../projects/wpilot/README.md](../projects/wpilot/README.md); registry `wpilot`; RC5 [../projects/wpilot/WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](../projects/wpilot/WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md). |
+| **Relationship role** | **Reference runtime** and **validation source** for CMS Pilot family; **future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. Token storage: `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` (local-only; no value in repo). |
 
 ---
 

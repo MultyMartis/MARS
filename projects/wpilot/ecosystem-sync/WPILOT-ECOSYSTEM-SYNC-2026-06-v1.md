@@ -4,6 +4,8 @@
 **Date:** 2026-06-19  
 **Trigger:** WPilot v0.3.0 state freeze — first proven plugin REST write path on DEV.
 
+**Superseded for RC5 connection runtime by:** [WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md) (2026-06-19 ecosystem sync pass).
+
 **Scope:** Notes for sibling systems. **Does not modify** OCPilot, Website Factory, ATLAS, or any external codebase.
 
 ---
@@ -20,8 +22,11 @@
 |-------|-------|
 | Version | `0.3.0` / schema `0.2.0` |
 | Environment | DEV only |
-| Maturity | Proven content writes on DEV via plugin REST |
+| Maturity | Proven content writes + proven connection runtime on DEV |
+| **Runtime maturity (RC5)** | `proven_content_writes` + `proven_connection_runtime` |
+| **Authority State** | `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19` |
 | State freeze | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](../WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
+| RC5 sync | [WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md) |
 
 ---
 

@@ -29,7 +29,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **Runtime research** | — | ✓ R1 JS | ✓ contracts | — | — | ✓ maps |
 | **MetaBOT** | ✓ ops docs | R1 adapter | boundaries | ✓ **n8n** | legacy tree | exports |
 | **ORCA** | ✓ PPC toolkit | pilots | heuristics | ✓ ad/SERP UI | — | ✓ pack |
-| **WPilot** | ✓ admin discipline | ✓ DEV plugin source (in-repo) | plugin bridge (production) | ✓ WP/host | — | ✓ Phase 1 MVP |
+| **WPilot** | ✓ reference DEV runtime (RC5) | — | production bridge; Sprint 3 (charter-gated) | ✓ WP/host | — | ✓ reference docs + maintenance policy |
 | **MIG** | ✓ acquisition discipline | ✓ v0.1 spine | ✓ R1 boundary | ✓ n8n/self-host runtime lane | — | ✓ contracts + pack |
 | **OCPilot** | ✓ OpenCart bridge discipline | — | ✓ sibling/family model | ✓ hosting/FTP/PMA | — | ✓ Phase 0+ |
 | **EAR Runtime** | — | ✓ R1 foundation code | ✓ acquisition helpers architecture alignment | ✓ connector targets (future) | — | ✓ engineering program docs |
@@ -155,15 +155,19 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **operational** | Phase 1 MVP docs: backup/rollback discipline, QA templates, operator sequences. |
-| **experimental** | In-repo DEV plugin source exists under `projects/wpilot/plugin/metacode-wpilot/` (repository evidence only; runtime ownership remains external). |
-| **conceptual** | Plugin bridge production model and Factory-native bridge maturity remain planned. |
-| **external** | WordPress admin, Beget/hosting, DB awareness — **outside** repo. |
-| **documentation-only** | Phase 1 operations, boundaries, and plugin-MVP governance docs remain canonical discipline layers. |
+| **operational** | **Reference Implementation** on DEV — `v0.3.0-RC5` proven: content writes + authenticated REST connection tracking; authority `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`; commit `648632acbdd42703427fd76a0cb1fd8d88641dcc`. RC5 development focus **closed**; maintenance reference. Sprint 3 **HOLD**. |
+| **experimental** | In-repo plugin source under `projects/wpilot/plugin/metacode-wpilot/` (frozen baseline); live runtime on Beget DEV — external execution truth. |
+| **conceptual** | Production bridge, Factory Mode A pipeline, Sprint 3 expansion — planned; require explicit HITL charter. |
+| **external** | WordPress admin, Beget/hosting, live plugin on DEV — **outside** repo ownership. |
+| **documentation-only** | Phase 1 operations, boundaries, final state, lifecycle, maintenance policy, RC5 ecosystem sync. |
 
-**Not:** deploy bot, autonomous CMS agent, MARS runtime.
+**Not:** deploy bot, autonomous CMS agent, MARS runtime, production deployment claim, active MVP development target.
 
-**SoT:** [../projects/wpilot/README.md](../projects/wpilot/README.md) · [../projects/wpilot/plugin-mvp/reconciliation-map-v0.md](../projects/wpilot/plugin-mvp/reconciliation-map-v0.md)
+**Runtime maturity:** `proven_content_writes` + `proven_connection_runtime` (DEV only).
+
+**Lifecycle:** Reference Implementation.
+
+**SoT:** [../projects/wpilot/WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md) · [../projects/wpilot/WPILOT-AUTHORITY-STATE-RC5.md](../projects/wpilot/WPILOT-AUTHORITY-STATE-RC5.md) · [../projects/wpilot/OPERATIONAL-INDEX.md](../projects/wpilot/OPERATIONAL-INDEX.md) · [../projects/wpilot/WPILOT-MAINTENANCE-POLICY-v1.md](../projects/wpilot/WPILOT-MAINTENANCE-POLICY-v1.md)
 
 ---
 

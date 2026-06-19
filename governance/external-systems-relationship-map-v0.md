@@ -78,12 +78,14 @@
 | Dimension | Detail |
 |-----------|--------|
 | **Operational ownership** | **Human operator** on designated test WordPress / Beget environment. |
-| **MARS relationship** | Pack `projects/wpilot/`; registry `wpilot`; **future** Factory-native WordPress bridge (**planned**). |
+| **MARS relationship** | Pack `projects/wpilot/`; registry `wpilot`; **Reference Implementation** — first proven CMS Pilot runtime in MARS; **future** Factory-native WordPress bridge (**planned**). |
+| **Authority** | `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`; commit `648632acbdd42703427fd76a0cb1fd8d88641dcc`; Sprint 3 **HOLD**. |
 | **External** | WordPress admin, FTP/SFTP, hosting panel, DB (read-only awareness in MVP), Beget. |
-| **Conceptual in-repo** | Plugin concept + MVP roadmap — **no** plugin source in tree at stabilization. |
-| **Operational in-repo** | Phase 1 MVP sequence, backup/rollback, QA templates, local-only `backups/` / `local/` policy (machine paths — **not** repo SoT). |
-| **Not MARS core runtime** | Not deploy bot; not autonomous CMS agent. |
+| **In-repo runtime** | Plugin source `projects/wpilot/plugin/metacode-wpilot/` v0.3.0-RC5 — proven on DEV; RC5 freeze active. |
+| **Operational in-repo** | Reference docs, proven capabilities register, maintenance policy, backup/rollback discipline, QA templates, local-only `backups/` / `local/` policy (machine paths — **not** repo SoT). |
+| **Not MARS core runtime** | Not deploy bot; not autonomous CMS agent; not active MVP development target. |
 | **Modes** | **Mode A** Factory-native (target) vs **Mode B** legacy/WPBakery compatibility — see plugin concept doc. |
+| **Canonical SoT** | [../projects/wpilot/WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md) |
 
 ---
 
