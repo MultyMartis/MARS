@@ -13,6 +13,50 @@
 | **6** | Runtime-assisted execution | Execution Bridge consumers, durable state (**if** MARS runtime exists) |
 | **7** | Production automation experiments | Higher automation **only** with governance, evals, and risk review |
 
+## Factory architecture items (WF-Axx)
+
+**Documentation-only** — not runtime. Distinct from phase table above.
+
+| ID | Name | Status | Notes |
+|----|------|--------|-------|
+| **WF-A01** | Production Modes Contract | **Complete (Pass 01)** | [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md) · [reports/website-factory-production-modes-implementation-pass-01.md](../reports/website-factory-production-modes-implementation-pass-01.md) |
+| **WF-A02** | Validation Architecture | **Complete (Pass 01 + Pass 02)** | [website-factory-validation-architecture-charter-v1.md](website-factory-validation-architecture-charter-v1.md) · [website-factory-vl3-domains-charter-v1.md](website-factory-vl3-domains-charter-v1.md) · [reports/website-factory-validation-architecture-implementation-pass-01.md](../reports/website-factory-validation-architecture-implementation-pass-01.md) · [reports/website-factory-vl3-domains-implementation-pass-01.md](../reports/website-factory-vl3-domains-implementation-pass-01.md) |
+| **Research Canon (RV-01–03)** | Foundry research snapshots | **Published** | [rv-01-production-vocabulary.md](../../research/foundry/rv-01-production-vocabulary.md) · [rv-02-website-production-systems.md](../../research/foundry/rv-02-website-production-systems.md) · [rv-03-pixel-factory.md](../../research/foundry/rv-03-pixel-factory.md) · immutable inputs to Vocabulary Canon; integration [wf-r01-0-research-canon-integration-design-v1.md](../../reports/wf-r01-0-research-canon-integration-design-v1.md) · **not** registry STATUS |
+| **Foundry Vocabulary Canon** | Vocabulary authority layer (F1–F6) | **ACCEPTED** | [foundry-vocabulary-canon-charter-v1.md](foundry-vocabulary-canon-charter-v1.md) · six vocabulary families, constraint graph, REG-VOC-* rules; authority between Research (RV-01–03) and Registry; [foundry-vocabulary-canon-charter-pass-v1.md](../../reports/foundry-vocabulary-canon-charter-pass-v1.md) · **not** runtime · **not** registry rows |
+| **WF-R01** | Registry Expansion Program | **CHARTERED** | [wf-r01-registry-expansion-program-charter-v1.md](../../reports/wf-r01-registry-expansion-program-charter-v1.md) · scope [foundry-registry-expansion-program-design-v1.md](../../reports/foundry-registry-expansion-program-design-v1.md) · authority [wf-r01-program-authority-pass-v1.md](../../reports/wf-r01-program-authority-pass-v1.md) · subprograms — see table below · **documentation + controlled reference expansion**; **not** runtime; R01.2 Gate 2 **COMPLETE** (RC **32/32**) |
+| **WF-A03** | Pixel Factory Expansion | **DEFERRED** | Vision Layer, Visual Diff, Pixel QA Runtime, Screenshot Engine, Agent Runtime — **forbidden** until WF-A01 **and** WF-A02 complete |
+
+### WF-R01 subprograms
+
+| ID | Name | Status | Notes |
+|----|------|--------|-------|
+| **R01.0** | Research Canon Integration | **COMPLETE** (design exit) | [wf-r01-0-research-canon-integration-design-v1.md](../../reports/wf-r01-0-research-canon-integration-design-v1.md); exit via Vocabulary Canon **ACCEPTED** |
+| **R01.1** | v0 → v1 Operational Binding | **ACCEPTED** | [wf-r01-1-v0-v1-binding-charter-v1.md](../../reports/wf-r01-1-v0-v1-binding-charter-v1.md); B1 satisfied; B3–B8 implementation **pending** |
+| **R01.2** | Structural Blocks Layer | **COMPLETE** (Gate 2 closed) | [wf-r01-2-structural-blocks-charter-v1.md](wf-r01-2-structural-blocks-charter-v1.md); Gate 2 **COMPLETE** — RC **32/32**; [wf-r01-2-gate-2-execution-pass-v1.md](../../reports/wf-r01-2-gate-2-execution-pass-v1.md) |
+| **R01.3** | Reference Implementation Expansion | **DESIGN** | [wf-r01-3-reference-expansion-program-design-v1.md](../../reports/wf-r01-3-reference-expansion-program-design-v1.md); sibling tracks R01.3.3–R01.3.5 remain design |
+| **R01.3.2** | LANDING Completion Wave | **ACCEPTED / ACTIVE** | [wf-r01-3-2-landing-completion-charter-v1.md](wf-r01-3-2-landing-completion-charter-v1.md); Wave A1 BENEFITS **COMPLETE** (RPC **10/32**); Wave A2 PROCESS **COMPLETE** (RPC **11/32**); **Current Gate = G0**; next: Wave A3 TESTIMONIALS + TRUST split |
+| **R01.3.1** | Coverage Model & Metrics | **ACCEPTED** | [wf-r01-3-1-coverage-model-charter-v1.md](wf-r01-3-1-coverage-model-charter-v1.md); normative RC/RPC/RSC/SC/PC + G0–G4 gates; preferred RPC denominator **9/32** |
+| **R01.3.0** | Coverage Baseline Snapshot (G0) | **Published milestone** | [wf-r01-3-0-coverage-baseline-snapshot-v1.md](../../reports/wf-r01-3-0-coverage-baseline-snapshot-v1.md); **G0 Baseline** — RC **29/32**, RPC **9/32** (~28%); registry completeness **≠** buildability |
+| **R01.4** | Commercial Pattern Library v0 | **DESIGN** | Scope in [foundry-registry-expansion-program-design-v1.md](../../reports/foundry-registry-expansion-program-design-v1.md) § R01.4 |
+| **R01.5** | SEO Content Pattern Slice | **DESIGN** | Scope in program design § R01.5 |
+| **R01.6** | Blueprint & Registry Hygiene Pass | **DESIGN** | Scope in program design § R01.6 |
+| **R01.7** | Template-Art Multi-Site-Type Charter | **DESIGN** | Scope in program design § R01.7; depends on R01.2 + R01.3 minimum gates |
+| **R01.8** | Execution Case → Registry Vocabulary Feed | **DESIGN** | Scope in program design § R01.8 |
+| **R01.X** | Metrics, Gates & Roadmap Registration | **Partial** | Parent program registered; subprogram table in this roadmap |
+
+### WF-A03 deferred marker
+
+| Field | Value |
+|-------|-------|
+| **Status** | **DEFERRED** |
+| **Basis** | AI Website Factory Research (external); [reports/website-factory-architecture-alignment-v1.md](../reports/website-factory-architecture-alignment-v1.md); [reports/website-factory-production-modes-architecture-v1.md](../reports/website-factory-production-modes-architecture-v1.md); [reports/FP-0002-STRESS-TEST-FORENSIC-v1.md](../reports/FP-0002-STRESS-TEST-FORENSIC-v1.md) |
+| **Start condition** | **WF-A01** complete **AND** **WF-A02** complete |
+| **Recommended precondition** | **WF-R01.3.1 G2** (RPC ≥ 20/32 + catalog scaffold + structural T1+) **or** explicit operator waiver — see [wf-r01-3-1-coverage-model-charter-v1.md](wf-r01-3-1-coverage-model-charter-v1.md) · [wf-r01-registry-expansion-program-charter-v1.md](../../reports/wf-r01-registry-expansion-program-charter-v1.md) · [foundry-registry-expansion-program-design-v1.md](../../reports/foundry-registry-expansion-program-design-v1.md) |
+| **Auto-start** | **Forbidden** — WF-A03 **must not** launch automatically |
+| **Operator reminder (after WF-A02)** | Before starting WF-A03: run a **separate Web-GPT Research Pass** — refresh external research; do not rely on stale chat memory |
+
+**Explicit non-goals for WF-A03 until chartered:** Vision Layer · Visual Diff Layer · Pixel QA Runtime · Screenshot Engine · Agent Runtime.
+
 ## Dependency honesty
 
 Phases **6–7** depend on MARS **planned-implementation** items (runtime, tools, observability) evidenced only when they exist per `AGENTS.md`.
@@ -34,3 +78,13 @@ Phases **6–7** depend on MARS **planned-implementation** items (runtime, tools
 | 2026-05-12 | **First Operational Runbook v0:** [first-operational-runbook-v0.md](first-operational-runbook-v0.md) + linked companion docs — human-supervised operational methodology; **not** runtime, **not** automation, **not** hidden orchestration. |
 | 2026-05-12 | **Reference Execution Case #1 (Triumph Manipulator Landing):** [reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md](reference-cases/triumph-manipulator-landing/reference-case-overview-v0.md) + companion artifacts — first full **documentation-first** Website Factory execution case; **not** production website, **not** autonomous execution. |
 | 2026-05-13 | **Operational Templates Layer v0:** [operational-template-overview-v0.md](operational-template-overview-v0.md) + linked `*-template-v0.md` — reusable doc shells (project types, reviews, delivery, session hygiene); **not** runtime automation, **not** executable workflows; **README** / **workflow-map** / **implementation-phase-1** / **governance** (capability-map C16, master-build-map Stage 16) cross-linked. |
+| 2026-06-17 | **WF-A01 Production Modes Contract (Pass 01):** charter, intake gate, LOC-ZONE passport fields, QA router, BUILT/VERIFIED/PRODUCTION PASS taxonomy; **WF-A03** deferred with operator reminder rule. |
+| 2026-06-17 | **WF-A02 Validation Architecture (Pass 01):** validation charter (VL0–VL6), signals, evidence model, false-green closure, mode matrix, LOC-ZONE lifecycle fields; **WF-A03** remains **DEFERRED**. |
+| 2026-06-18 | **WF-A02 Validation Architecture (Pass 02 — VL3 Domains):** VL3 domains charter (VL3a–VL3f), failure registry (GL-/IR-/AI-/TL-/VO-/AD-), FP-0002 mapping, VL2→VL3→VL4 flow contract; **WF-A03** remains **DEFERRED**. |
+| 2026-06-19 | **WF-R01 Registry Expansion Program (Charter Pass):** program **CHARTERED** — [wf-r01-registry-expansion-program-charter-v1.md](../../reports/wf-r01-registry-expansion-program-charter-v1.md); scope [foundry-registry-expansion-program-design-v1.md](../../reports/foundry-registry-expansion-program-design-v1.md); [wf-r01-charter-pass-implementation-v1.md](../../reports/wf-r01-charter-pass-implementation-v1.md); **no** registry content changes; **no** WF-R01.2; **WF-A03** remains **DEFERRED** (recommended WF-R01 Gate 2+ precondition added). |
+| 2026-06-19 | **Foundry Vocabulary Canon Charter (Pass):** [foundry-vocabulary-canon-charter-v1.md](foundry-vocabulary-canon-charter-v1.md) **ACCEPTED** — six vocabulary families, constraint graph, REG-VOC-* registry rules; authority layer between Research (RV-01–03) and Registry; [foundry-vocabulary-canon-charter-pass-v1.md](../reports/foundry-vocabulary-canon-charter-pass-v1.md); **no** registry rows; **no** new IDs; WF-R01.0 exit criterion satisfied. |
+| 2026-06-19 | **WF-R01.2 Structural Blocks Layer (Charter Pass):** [wf-r01-2-structural-blocks-charter-v1.md](wf-r01-2-structural-blocks-charter-v1.md) **ACCEPTED** — Structural Blocks = F3 subtype; Tier A/B/C disposition; Gate 1 complete; [wf-r01-2-structural-blocks-charter-pass-v1.md](../reports/wf-r01-2-structural-blocks-charter-pass-v1.md); **no** registry rows; **no** new IDs; Gate 2 (registry v1.1 rows) **not started**. |
+| 2026-06-19 | **WF-R01.3.1 Coverage Model (Charter Pass):** [wf-r01-3-1-coverage-model-charter-v1.md](wf-r01-3-1-coverage-model-charter-v1.md) **ACCEPTED** — five-dimension RC/RPC/RSC/SC/PC; G0–G4 gates; preferred RPC denominator **9/32**; [wf-r01-3-1-coverage-model-charter-pass-v1.md](../reports/wf-r01-3-1-coverage-model-charter-pass-v1.md); parent R01.3 remains **DESIGN**. |
+| 2026-06-19 | **WF-R01.3.0 Coverage Baseline Snapshot (G0 milestone):** [wf-r01-3-0-coverage-baseline-snapshot-v1.md](../reports/wf-r01-3-0-coverage-baseline-snapshot-v1.md) — official **G0 Baseline** under R01.3; RC **29/32**, RPC **9/32** (~28%); registry completeness **≠** buildability. |
+| 2026-06-19 | **WF-R01 Roadmap Alignment Pass:** Research Canon (RV-01–03) registered; Foundry Vocabulary Canon as **ACCEPTED** architecture row; WF-R01 subprogram table (R01.0–R01.8, R01.3.0, R01.3.1); WF-A03 precondition aligned to **G2**; [wf-r01-roadmap-alignment-pass-v1.md](../reports/wf-r01-roadmap-alignment-pass-v1.md). |
+| 2026-06-19 | **WF-R01.3.2 Landing Completion — Wave A1/A2 reconciliation:** R01.2 Gate 2 **COMPLETE** (RC **32/32**); WF-R01.3.2 **ACCEPTED / ACTIVE**; Wave A1 BENEFITS **COMPLETE** (RPC **9/32 → 10/32**); Wave A2 PROCESS **COMPLETE** (RPC **10/32 → 11/32**); **Current Gate = G0**; next Wave A3 TESTIMONIALS + TRUST split. |

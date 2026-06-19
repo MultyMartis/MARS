@@ -1,0 +1,91 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// Extracted from triumph-manipulator-landing-v2 advantages.html (3-column outcome grid).
+// Not extracted: client brand tokens, hero-adjacent hero-proof strip (Triumph v6), ISBD raster assets.
+
+.wf-section--benefits {
+  padding-block: $section-gap-l;
+  background: $color-surface;
+
+  .wf-benefits__header {
+    max-width: 40rem;
+    margin-bottom: $space-7;
+  }
+
+  .wf-benefits__eyebrow {
+    margin: 0 0 $space-3;
+    font-size: 0.875rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-benefits__title {
+    margin: 0 0 $space-4;
+    font-size: $font-size-h2;
+  }
+
+  .wf-benefits__lead {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+
+  .wf-benefits__grid {
+    display: grid;
+    gap: $space-5;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include up($bp-md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: $space-6;
+    }
+  }
+
+  .wf-benefits__item {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    min-width: 0;
+    padding: $space-5;
+    background: $color-surface-alt;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-sm;
+
+    @include up($bp-md) {
+      padding: $space-6;
+    }
+  }
+
+  .wf-benefits__icon {
+    flex: 0 0 auto;
+    width: 3rem;
+    height: 3rem;
+    border-radius: $radius-md;
+    background: linear-gradient(145deg, $color-brand 0%, $color-brand-hover 100%);
+    opacity: 0.92;
+  }
+
+  .wf-benefits__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    min-width: 0;
+  }
+
+  .wf-benefits__item-title {
+    margin: 0;
+    font-size: $font-size-h3;
+  }
+
+  .wf-benefits__text {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+}

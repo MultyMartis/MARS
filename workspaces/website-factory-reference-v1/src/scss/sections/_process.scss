@@ -1,0 +1,214 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// Extracted from triumph-manipulator-landing-v6 order-steps--process (VF_PROCESS_STEP_TIMELINE).
+// Not extracted: Font Awesome icons, Triumph brand tokens, scroll_process_timeline (F4 pattern), inline CTAs.
+
+.wf-section--process {
+  padding-block: $section-gap-l;
+  background: $color-surface-alt;
+
+  .wf-process__header {
+    max-width: 40rem;
+    margin-bottom: $space-7;
+  }
+
+  .wf-process__eyebrow {
+    margin: 0 0 $space-3;
+    font-size: 0.875rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  .wf-process__title {
+    margin: 0 0 $space-4;
+    font-size: $font-size-h2;
+  }
+
+  .wf-process__lead {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+
+  .wf-process__flow {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wf-process__step {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .wf-process__track {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .wf-process__num {
+    display: grid;
+    width: 2.625rem;
+    height: 2.625rem;
+    place-items: center;
+    border: 1px solid rgba($color-brand, 0.35);
+    border-radius: $radius-md;
+    background: $color-surface;
+    color: $color-brand;
+    font-size: 1.0625rem;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+  }
+
+  .wf-process__connector {
+    position: relative;
+    background: linear-gradient(90deg, rgba($color-brand, 0.68) 0%, rgba($color-brand, 0.18) 100%);
+  }
+
+  .wf-process__connector::after {
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid rgba($color-brand, 0.4);
+    border-right: 2px solid rgba($color-brand, 0.4);
+    transform: translateY(-50%) rotate(45deg);
+    content: '';
+  }
+
+  .wf-process__card {
+    position: relative;
+    display: grid;
+    gap: $space-3;
+    min-width: 0;
+    padding: $space-5;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    background: $color-surface;
+    box-shadow: $shadow-sm;
+  }
+
+  .wf-process__icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: $radius-md;
+    background: linear-gradient(145deg, rgba($color-brand, 0.14) 0%, rgba($color-brand, 0.06) 100%);
+    border: 1px solid rgba($color-brand, 0.22);
+  }
+
+  .wf-process__step-title {
+    margin: 0;
+    font-size: $font-size-h3;
+    line-height: 1.25;
+  }
+
+  .wf-process__text {
+    margin: 0;
+    color: $color-text-muted;
+    line-height: 1.55;
+  }
+
+  .wf-process__step--first .wf-process__card,
+  .wf-process__step--last .wf-process__card {
+    border-color: rgba($color-brand, 0.22);
+  }
+
+  .wf-process__step--first .wf-process__num,
+  .wf-process__step--last .wf-process__num {
+    border-color: rgba($color-brand, 0.55);
+    background: rgba($color-brand, 0.06);
+  }
+
+  @include up($bp-lg) {
+    .wf-process__flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0 $space-4;
+      align-items: stretch;
+    }
+
+    .wf-process__step {
+      display: flex;
+      flex-direction: column;
+      gap: $space-3;
+    }
+
+    .wf-process__track {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 2.625rem;
+    }
+
+    .wf-process__connector {
+      flex: 1 1 auto;
+      height: 2px;
+      margin-inline: $space-3 $space-2;
+    }
+
+    .wf-process__card {
+      flex: 1 1 auto;
+      height: 100%;
+    }
+  }
+
+  @include down($bp-lg) {
+    .wf-process__flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 38.75rem;
+      margin-inline: auto;
+    }
+
+    .wf-process__step {
+      display: grid;
+      grid-template-columns: 2.625rem minmax(0, 1fr);
+      gap: $space-3 $space-4;
+      align-items: start;
+      padding-bottom: $space-5;
+    }
+
+    .wf-process__step:last-child {
+      padding-bottom: 0;
+    }
+
+    .wf-process__track {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2.625rem;
+      min-height: 100%;
+    }
+
+    .wf-process__connector {
+      width: 2px;
+      flex: 1 1 auto;
+      min-height: 22px;
+      margin-top: $space-2;
+      background: linear-gradient(180deg, rgba($color-brand, 0.68) 0%, rgba($color-brand, 0.18) 100%);
+    }
+
+    .wf-process__connector::after {
+      top: auto;
+      right: auto;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%) rotate(135deg);
+    }
+
+    .wf-process__card::before {
+      position: absolute;
+      top: 1.625rem;
+      left: -$space-4;
+      width: $space-4;
+      height: 1px;
+      background: rgba($color-brand, 0.3);
+      content: '';
+    }
+  }
+}
