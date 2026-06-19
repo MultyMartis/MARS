@@ -413,7 +413,7 @@ Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-fa
 |--------|--------|
 | **Purpose** | List-surface paging — L2 navigation depth |
 | **Typical placement** | After PRODUCT_GRID on PLP / archive surfaces |
-| **Reference** | **PENDING** — WF-R01.3.3 Wave S3 |
+| **Reference** | `components/pagination.html` — **PARTIAL** (WF-R01.3.3 Wave S3) |
 
 ---
 

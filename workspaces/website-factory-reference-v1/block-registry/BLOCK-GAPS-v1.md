@@ -35,7 +35,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | Breadcrumbs | **NOT block_id** · **PARTIAL** | Tier B layout-component; `components/breadcrumbs.html` — WF-R01.3.3 Wave S2; required in CATALOG/ECOMMERCE Blueprints |
 | Filters / search UI | **REGISTRY CLOSED** | `FILTERS`, `SEARCH` block_id — WF-R01.2 Gate 2; partials **OPEN** → WF-R01.3 |
 | Header / primary nav | **IMPLEMENTED** | `header-nav.html` — WF-R01.3.2 Wave C2 |
-| Pagination | **NOT block_id** | PLP requirement |
+| Pagination | **NOT block_id** · **PARTIAL** | Tier B layout-component; `components/pagination.html` — WF-R01.3.3 Wave S3; PLP requirement |
 | Add-to-cart (PDP micro-block) | **NOT separate id** | Part of PRODUCT_CARD on ECOMMERCE |
 | Order confirmation | **NOT block_id** | Post-checkout page block |
 | Blog / news teaser | **NOT block_id** | PROMO optional page type |
@@ -46,7 +46,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| Reference SCSS coverage | **PARTIAL** | hero, header-nav, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links, breadcrumbs |
+| Reference SCSS coverage | **PARTIAL** | hero, header-nav, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links, breadcrumbs, pagination |
 | Motion / interaction per block | **NOT DEFINED** | `_motion.scss` exists; no block binding |
 | Dark/light theme per block | **NOT DEFINED** | |
 
@@ -68,7 +68,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| HTML partial contract per block_id | **PARTIAL** | 14 section partials + 2 compositional components (`legal-links`, `breadcrumbs` Tier B); 13 blocks without partial |
+| HTML partial contract per block_id | **PARTIAL** | 14 section partials + 3 compositional components (`legal-links`, `breadcrumbs`, `pagination` Tier B); 13 blocks without partial |
 | Props / content slots schema | **NOT DEFINED** | v0 noted SAFE UNKNOWN |
 | Form field schemas (LEAD_FORM vs CHECKOUT) | **NOT DEFINED** | Consent Rule HTML only for consent |
 | Accessibility checklist per block | **NOT DEFINED** | |

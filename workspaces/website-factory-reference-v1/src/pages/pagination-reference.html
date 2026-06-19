@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Pagination partial host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-pagination-reference-main">
+    <div class="wf-pagination-reference-main__inner">
+      <h1>Pagination reference host</h1>
+      <p>Bounded build host for the Tier B PAGINATION layout-component partial. Not a page-type scaffold.</p>
+      <div class="wf-pagination-reference-main__listing" aria-hidden="true">
+        <p>Neutral listing context placeholder — no catalog grid, filters, or product cards.</p>
+      </div>
+      @@include('../partials/components/pagination.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
