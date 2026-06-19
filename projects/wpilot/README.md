@@ -2,12 +2,111 @@
 
 **Classification:** Program / Operational System.
 **Chat type:** External Systems.
-**Status:** documented Phase 1 base.
+**Status:** documented Phase 1 base; **proven runtime v0.3.0 on DEV** (2026-06-19 freeze).
 **Model reference:** [System Entity Model](../../governance/system-entity-model.md).
 
 WPilot is a human-supervised AI-assisted WordPress administration system for testing whether a Cursor/operator workflow can safely inspect and make tightly scoped changes on a Beget-hosted test WordPress site.
 
 Strategic direction: WPilot's preferred long-term target is **Factory-native WordPress** created through MARS Website Factory contracts. Legacy/external WordPress support remains a secondary compatibility bridge for existing sites with unknown builders, themes, plugins, and content shape.
+
+## Current Runtime Status
+
+| Field | Value |
+|-------|-------|
+| **Plugin version** | `0.3.0` (schema `0.2.0`) |
+| **Runtime maturity** | Proven content writes on DEV |
+| **Environment** | DEV only — `https://dev.gktriumph.ru` |
+| **Proven REST path** | inspect → backup → scoped-replace → validate → rollback |
+| **State freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
+| **First write milestone** | [milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) |
+
+Plugin source: `plugin/metacode-wpilot/`. Evidence reports under `reports/wpilot-runtime-*-sprint*.md`. Not production. Not autonomous.
+
+## Mission Charter
+
+Official positioning for WPilot: a **Personal WordPress Operations Platform** for the owner (Andrey / MetaCODE), human-supervised, backup-first, and integrated with MARS — not a public SaaS or autonomous WordPress administrator by default. Commercialization and public distribution are optional and not required for mission fulfillment.
+
+Canonical document: [WPILOT-MISSION-v1.md](WPILOT-MISSION-v1.md)
+
+## Core Model
+
+Документированный policy stack WPilot v1 (сверху вниз по зависимости):
+
+Mission → Operations Manifest → Risk Classes → ChangeSet → Rollback → Target Registry
+
+Каждый слой отвечает на свой вопрос: зачем (Mission), что делать (Operations), насколько опасно (Risk), как выполняется run (ChangeSet), как откатывать (Rollback), на какие сущности можно воздействовать (Target Registry). Логическая модель; не доказательство runtime.
+
+## Operations Manifest
+
+Первый формальный слой операций WPilot: типизированные `operation_id`, категории (Inspection / Draft / Apply / Recovery), жизненный цикл, scope rules и список forbidden operations. Логическая модель; не доказательство реализации в плагине или runtime.
+
+Canonical document: [WPILOT-OPERATIONS-MANIFEST-v1.md](WPILOT-OPERATIONS-MANIFEST-v1.md)
+
+## Risk Classes
+
+Формальный policy-слой риска для операций WPilot: шкала R0–R5 (Read Only → Forbidden), ожидания по approval, backup, validation и rollback. Дополняет Operations Manifest ответом на вопрос «насколько опасна операция»; не описывает реализацию в плагине или runtime.
+
+Canonical document: [WPILOT-RISK-CLASSES-v1.md](WPILOT-RISK-CLASSES-v1.md)
+
+## ChangeSets
+
+Основная единица изменения в WPilot: контейнер, через который выполняются операции (не напрямую). ChangeSet фиксирует цель, риск, approval, backup, apply, validation, rollback и evidence trail. Логическая модель; не доказательство БД, API или runtime.
+
+Canonical document: [WPILOT-CHANGESET-v1.md](WPILOT-CHANGESET-v1.md)
+
+## Rollback
+
+Policy-слой отката WPilot: что считается rollback, когда он обязателен, допустимые источники восстановления, validation after rollback, evidence и связь с ChangeSet и Risk Classes. Логическая модель; не доказательство runtime или plugin implementation.
+
+Canonical document: [WPILOT-ROLLBACK-v1.md](WPILOT-ROLLBACK-v1.md)
+
+## Target Registry
+
+Канонический реестр целей WPilot: на какие сущности (page, post, shortcode, menu, header, footer и др.) могут воздействовать операции. Определяет `target_type` / `target_id` для ChangeSets, scope rules Manifest, rollback scope и будущих bindings. Policy/documentation layer; не доказательство plugin API или runtime.
+
+Canonical document: [WPILOT-TARGET-REGISTRY-v1.md](WPILOT-TARGET-REGISTRY-v1.md)
+
+## Operation Bindings
+
+Официальный policy-слой связей между `operation_id`, допустимыми targets, `risk_class` и требованиями approval / backup / validation / rollback. Связывает Operations Manifest, Target Registry, Risk Classes, ChangeSet и Rollback expectations. Policy layer only; не endpoint map, не API contract, не plugin implementation.
+
+Canonical document: [WPILOT-OPERATION-BINDINGS-v1.md](WPILOT-OPERATION-BINDINGS-v1.md)
+
+## Proven Capabilities
+
+Evidence-слой: только **подтверждённые** возможности WPilot по completed DEV work, reports, validation и recovery artifacts. Не roadmap, не policy, не forecast.
+
+Canonical document: [WPILOT-PROVEN-CAPABILITIES-v1.md](WPILOT-PROVEN-CAPABILITIES-v1.md)
+
+## Site Snapshot Model
+
+Каноническая модель состояния WordPress-сайта: структурированное описание site identity, structure, content, configuration и environment для inspection, validation, ChangeSet planning и rollback planning. Snapshot ≠ backup; логический state layer, не runtime и не API.
+
+Canonical document: [WPILOT-SITE-SNAPSHOT-MODEL-v1.md](WPILOT-SITE-SNAPSHOT-MODEL-v1.md)
+
+## Diff Model
+
+Каноническая модель сравнения и описания различий между состояниями сайта: delta-записи (added, removed, modified, moved, unknown), уровни diff, severity, источники сравнения (snapshot, live, backup, operator verified). Diff ≠ backup, Diff ≠ snapshot; логический change layer между state capture и ChangeSet / validation / rollback planning. Не runtime и не execution engine.
+
+Canonical document: [WPILOT-DIFF-MODEL-v1.md](WPILOT-DIFF-MODEL-v1.md)
+
+## Core Architecture Review
+
+Аудит Core Model v1 (2026-06-19): полнота архитектуры, матрица ответственности слоёв, циклические зависимости, терминология, canonical sources, избыточность, alignment Proven Capabilities, runtime readiness, стабильность модели и рекомендация **A — Stop Core Modeling, move to Runtime Contracts**. Документация only; без изменений кода, roadmap или runtime.
+
+Canonical document: [WPILOT-CORE-ARCHITECTURE-REVIEW-v1.md](WPILOT-CORE-ARCHITECTURE-REVIEW-v1.md)
+
+## Runtime Contracts
+
+Мост Core Model v1 → реализация плагина: runtime boundary, ChangeSet/Snapshot/Diff в исполнении, операции, backup, минимальная DB, REST surface, mapping Proven Capabilities, конфликты и рекомендация следующего этапа (**Runtime Prototype**). Не Core Layer; не меняет Mission/Charter.
+
+Canonical document: [runtime-contracts/WPILOT-RUNTIME-CONTRACTS-v1.md](runtime-contracts/WPILOT-RUNTIME-CONTRACTS-v1.md)
+
+## State Freeze & Milestones
+
+- [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) — canonical runtime freeze (2026-06-19).
+- [milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) — first proven plugin REST write path.
+- [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-2026-06-v1.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-2026-06-v1.md) — cross-system visibility notes (OCPilot, Factory, ATLAS).
 
 ## What WPilot Is
 

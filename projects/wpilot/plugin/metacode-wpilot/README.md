@@ -1,13 +1,15 @@
 # MetaCODE WPilot
 
-MetaCODE WPilot is a DEV/test WordPress plugin foundation for a read-only WPilot bridge.
+MetaCODE WPilot is a DEV/test WordPress plugin foundation for the WPilot bridge: read-only inspection plus backup/rollback recovery for page `post_content`.
 
 ## Phase
 
 - Phase 0: installable plugin skeleton, activation/deactivation, admin settings, disabled-by-default bridge state, token generation foundation.
 - Phase 1: authenticated read-only REST endpoints under `wpilot/v1`.
+- Sprint 1 (v0.2.0): plugin-owned backup storage, audit log, `POST /pages/{id}/backups`, `POST /pages/{id}/rollback`.
+- Sprint 2 (v0.3.0): `POST /pages/{id}/scoped-replace` execute for `apply_content_change` (exact once, page `post_content` only).
 
-No write endpoints are implemented in this phase.
+No arbitrary SQL, filesystem writes, or production scope in this phase.
 
 ## Install
 
@@ -38,7 +40,11 @@ Only the token hash is stored in WordPress options.
 - `GET /wp-json/wpilot/v1/pages/{id}`
 - `GET /wp-json/wpilot/v1/pages/{id}/structure`
 - `GET /wp-json/wpilot/v1/indexing-state`
+- `POST /wp-json/wpilot/v1/pages/{id}/replace-text/dry-run` (requires write_enabled)
+- `POST /wp-json/wpilot/v1/pages/{id}/backups`
+- `POST /wp-json/wpilot/v1/pages/{id}/scoped-replace` (requires write_enabled)
+- `POST /wp-json/wpilot/v1/pages/{id}/rollback` (requires write_enabled)
 
 ## Safety Boundaries
 
-This plugin does not implement write operations, arbitrary SQL, filesystem management, code execution, plugin/theme/core modification, browser automation, background jobs, or autonomous behavior.
+This plugin does not implement arbitrary SQL, filesystem management, code execution, plugin/theme/core modification, browser automation, background jobs, or autonomous behavior.

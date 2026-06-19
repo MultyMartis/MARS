@@ -94,6 +94,97 @@ class WPilot_Auth {
 	}
 
 	/**
+	 * Validate backup-create access: bridge, DEV, token, and schema.
+	 *
+	 * @param WP_REST_Request $request REST request.
+	 * @return true|WP_REST_Response
+	 */
+	public static function require_backup_access( WP_REST_Request $request ) {
+		$options = WPilot_Settings::get_options();
+		$meta    = WPilot_Request_Context::response_meta( $request, self::endpoint_name( $request ), 'checking' );
+
+		$readiness = WPilot_Environment::operational_readiness( $options, $meta );
+		if ( true !== $readiness ) {
+			return $readiness;
+		}
+
+		if ( ! WPilot_Schema::is_valid() ) {
+			return WPilot_Response::error(
+				'INVALID_CONFIG',
+				'Plugin storage schema is not ready.',
+				$meta,
+				503,
+				array(
+					'stage'              => 'storage',
+					'mutation_performed' => false,
+					'rollback_available' => false,
+				)
+			);
+		}
+
+		if ( empty( $options['token_hash'] ) ) {
+			return WPilot_Errors::token_revoked( $meta );
+		}
+
+		$token = self::get_request_token( $request );
+
+		if ( '' === $token ) {
+			return WPilot_Errors::auth_missing( $meta );
+		}
+
+		if ( ! wp_check_password( $token, $options['token_hash'] ) ) {
+			return WPilot_Errors::auth_invalid( $meta );
+		}
+
+		$options['last_token_used_at'] = current_time( 'mysql', true );
+		WPilot_Settings::update_options( $options );
+
+		return true;
+	}
+
+	/**
+	 * Validate rollback access: backup access plus write readiness.
+	 *
+	 * @param WP_REST_Request $request REST request.
+	 * @return true|WP_REST_Response
+	 */
+	public static function require_rollback_access( WP_REST_Request $request ) {
+		$guard = self::require_backup_access( $request );
+		if ( true !== $guard ) {
+			return $guard;
+		}
+
+		$options = WPilot_Settings::get_options();
+		$meta    = WPilot_Request_Context::response_meta( $request, self::endpoint_name( $request ), 'checking' );
+
+		if ( empty( $options['write_enabled'] ) ) {
+			return WPilot_Response::error(
+				'WRITE_DISABLED',
+				'Rollback is gated by write readiness. Enable write mode in DEV before using this endpoint.',
+				$meta,
+				403,
+				array(
+					'stage'              => 'state',
+					'mutation_performed' => false,
+					'rollback_available' => true,
+				)
+			);
+		}
+
+		return true;
+	}
+
+	/**
+	 * Validate scoped-replace access: rollback access plus approval gate in handler.
+	 *
+	 * @param WP_REST_Request $request REST request.
+	 * @return true|WP_REST_Response
+	 */
+	public static function require_scoped_replace_access( WP_REST_Request $request ) {
+		return self::require_rollback_access( $request );
+	}
+
+	/**
 	 * Extract token from the documented header.
 	 *
 	 * @param WP_REST_Request $request REST request.

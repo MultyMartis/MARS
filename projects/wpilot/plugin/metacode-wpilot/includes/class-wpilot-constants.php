@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class WPilot_Constants {
-	const VERSION        = '0.1.0';
-	const SCHEMA_VERSION = '0.1.0';
+	const VERSION        = '0.3.0';
+	const SCHEMA_VERSION = '0.2.0';
 
 	const PLUGIN_SLUG = 'metacode-wpilot';
 	const TEXT_DOMAIN = 'metacode-wpilot';

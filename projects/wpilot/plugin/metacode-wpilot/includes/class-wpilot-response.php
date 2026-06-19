@@ -18,15 +18,18 @@ class WPilot_Response {
 	 * @param int   $status HTTP status.
 	 * @return WP_REST_Response
 	 */
-	public static function success( array $data = array(), array $meta = array(), $status = 200 ) {
-		$response = new WP_REST_Response(
-			array(
-				'ok'   => true,
-				'data' => $data,
-				'meta' => $meta,
-			),
-			$status
+	public static function success( array $data = array(), array $meta = array(), $status = 200, $operation_id = '' ) {
+		$payload = array(
+			'ok'   => true,
+			'data' => $data,
+			'meta' => $meta,
 		);
+
+		if ( is_string( $operation_id ) && '' !== $operation_id ) {
+			$payload['operation_id'] = $operation_id;
+		}
+
+		$response = new WP_REST_Response( $payload, $status );
 
 		return self::with_safe_headers( $response );
 	}
@@ -41,7 +44,7 @@ class WPilot_Response {
 	 * @param array  $details Optional deterministic error details.
 	 * @return WP_REST_Response
 	 */
-	public static function error( $code, $message, array $meta = array(), $status = 403, array $details = array() ) {
+	public static function error( $code, $message, array $meta = array(), $status = 403, array $details = array(), $operation_id = '' ) {
 		$error = array_merge(
 			array(
 				'code'    => (string) $code,
@@ -50,14 +53,17 @@ class WPilot_Response {
 			$details
 		);
 
-		$response = new WP_REST_Response(
-			array(
-				'ok'    => false,
-				'error' => $error,
-				'meta'  => $meta,
-			),
-			$status
+		$payload = array(
+			'ok'    => false,
+			'error' => $error,
+			'meta'  => $meta,
 		);
+
+		if ( is_string( $operation_id ) && '' !== $operation_id ) {
+			$payload['operation_id'] = $operation_id;
+		}
+
+		$response = new WP_REST_Response( $payload, $status );
 
 		return self::with_safe_headers( $response );
 	}

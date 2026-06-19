@@ -52,6 +52,8 @@ class WPilot_Settings {
 		$options['schema_version']     = WPILOT_SCHEMA_VERSION;
 
 		update_option( self::OPTION_NAME, self::sanitize_options( $options ), false );
+
+		WPilot_Schema::install_or_upgrade();
 	}
 
 	/**

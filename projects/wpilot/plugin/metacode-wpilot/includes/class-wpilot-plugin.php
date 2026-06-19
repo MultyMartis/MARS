@@ -55,6 +55,8 @@ class WPilot_Plugin {
 	 * @return void
 	 */
 	public function init() {
+		WPilot_Schema::maybe_upgrade();
+
 		add_action( 'admin_menu', array( $this->admin_page, 'register_menu' ) );
 		add_action( 'rest_api_init', array( $this->rest_controller, 'register_routes' ) );
 	}

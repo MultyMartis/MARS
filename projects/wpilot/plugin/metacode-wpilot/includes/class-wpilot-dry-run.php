@@ -27,6 +27,87 @@ class WPilot_Dry_Run {
 	);
 
 	/**
+	 * Validate an exact replacement for execute path without mutating content.
+	 *
+	 * @param int    $page_id Page ID.
+	 * @param string $find Exact source text.
+	 * @param string $replace Replacement text.
+	 * @return array|WP_Error
+	 */
+	public function validate_exact_replacement( $page_id, $find, $replace ) {
+		$page_id = absint( $page_id );
+		$find    = is_string( $find ) ? $find : '';
+		$replace = is_string( $replace ) ? $replace : '';
+
+		if ( '' === $find ) {
+			return new WP_Error( 'INVALID_REQUEST', 'search is required and must be a non-empty string.' );
+		}
+
+		if ( strlen( $find ) > self::MAX_VALUE_BYTES || strlen( $replace ) > self::MAX_VALUE_BYTES ) {
+			return new WP_Error( 'CONTENT_TOO_LARGE', 'search or replace exceeds the scoped replace value limit.' );
+		}
+
+		if ( ! $this->is_valid_utf8( $find ) || ! $this->is_valid_utf8( $replace ) ) {
+			return new WP_Error( 'INVALID_REQUEST', 'search and replace must be safe UTF-8 strings.' );
+		}
+
+		if ( false !== strpos( $replace, '[' ) || false !== strpos( $replace, ']' ) ) {
+			return new WP_Error( 'UNSAFE_WPBAKERY_ZONE', 'Replacement text must not introduce shortcode-like syntax.' );
+		}
+
+		if ( preg_match( '/<\s*(script|style)\b/i', $replace ) ) {
+			return new WP_Error( 'UNSAFE_CONTENT_TYPE', 'Replacement text must not introduce script or style content.' );
+		}
+
+		$post = get_post( $page_id );
+		if ( ! $this->is_supported_page( $post ) ) {
+			return new WP_Error( 'TARGET_NOT_FOUND', 'Target page was not found.' );
+		}
+
+		$content = $this->safe_content( $post );
+		if ( null === $content ) {
+			return new WP_Error( 'UNSAFE_CONTENT_TYPE', 'Target content is not safe UTF-8 content for scoped replace.' );
+		}
+
+		if ( strlen( $content ) > self::MAX_CONTENT_BYTES ) {
+			return new WP_Error( 'CONTENT_TOO_LARGE', 'Target content exceeds the scoped replace scan limit.' );
+		}
+
+		$positions = $this->exact_positions( $content, $find );
+		$count     = count( $positions );
+
+		if ( 0 === $count ) {
+			return new WP_Error( 'ZERO_MATCHES', 'Source text does not appear in current content.' );
+		}
+
+		if ( 1 < $count ) {
+			return new WP_Error( 'MULTIPLE_MATCHES', 'Source text appears more than once.' );
+		}
+
+		$wpbakery = $this->validate_wpbakery_zone( $content, $positions[0], strlen( $find ), $replace, array() );
+		if ( $wpbakery instanceof WP_REST_Response ) {
+			$data = $wpbakery->get_data();
+			$code = is_array( $data ) && isset( $data['error']['code'] ) ? (string) $data['error']['code'] : 'SAFE_UNKNOWN';
+			$msg  = is_array( $data ) && isset( $data['error']['message'] ) ? (string) $data['error']['message'] : 'Scoped replace validation refused.';
+
+			return new WP_Error( $code, $msg );
+		}
+
+		return array(
+			'page_id'                 => (int) $post->ID,
+			'match_count'             => 1,
+			'content_checksum_before' => $this->checksum( $content ),
+			'find_checksum'           => $this->checksum( $find ),
+			'replace_checksum'        => $this->checksum( $replace ),
+			'wpbakery'                => array(
+				'has_wpbakery' => WPilot_WPBakery_Detector::has_wpbakery( $content ),
+				'safe_zone'    => true,
+				'warnings'     => $wpbakery['warnings'],
+			),
+		);
+	}
+
+	/**
 	 * Analyze an exact replacement without mutating content.
 	 *
 	 * @param int             $page_id Page ID.
@@ -222,7 +303,10 @@ class WPilot_Dry_Run {
 	 * @return array
 	 */
 	private function shortcode_tag_ranges( $content ) {
-		return $this->regex_ranges( '/\[(?:\/)?[A-Za-z0-9_:-]+(?:\s[^\]]*)?\]/', $content );
+		$opening = $this->regex_ranges( '/\[(?:\/)?[A-Za-z0-9_:-]+/', $content );
+		$closing = $this->regex_ranges( '/\[\/[A-Za-z0-9_:-]+\]/', $content );
+
+		return array_merge( $opening, $closing );
 	}
 
 	/**
@@ -232,7 +316,10 @@ class WPilot_Dry_Run {
 	 * @return array
 	 */
 	private function raw_shortcode_ranges( $content ) {
-		return $this->regex_ranges( '/\[vc_raw_(?:html|js)(?:\s[^\]]*)?\].*?\[\/vc_raw_(?:html|js)\]/is', $content );
+		$opening = $this->regex_ranges( '/\[vc_raw_(?:html|js)(?:\s[^\]]*)?\]/', $content );
+		$closing = $this->regex_ranges( '/\[\/vc_raw_(?:html|js)\]/', $content );
+
+		return array_merge( $opening, $closing );
 	}
 
 	/**
