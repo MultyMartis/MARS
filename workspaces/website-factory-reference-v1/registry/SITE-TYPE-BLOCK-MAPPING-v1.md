@@ -4,7 +4,7 @@
 **Область:** `workspaces/website-factory-reference-v1/registry/`  
 **Связь:** [SITE-TYPE-REGISTRY-v1.md](SITE-TYPE-REGISTRY-v1.md)
 
-**Reference blocks (implemented):** `workspaces/website-factory-reference-v1/src/partials/sections/` — hero, social_proof, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases.
+**Reference blocks (implemented):** `workspaces/website-factory-reference-v1/src/partials/sections/` — hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer.
 
 **Статус:** documentation only — block **roles** for planning (narrative labels).
 

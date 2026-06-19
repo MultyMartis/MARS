@@ -32,7 +32,7 @@ Site Type → Blueprint → Pages → Blocks → Design → Frontend
 | [../blueprints/BLUEPRINT-SYSTEM-v1.md](../blueprints/BLUEPRINT-SYSTEM-v1.md) | Blueprints |
 | [../registry/SITE-TYPE-BLOCK-MAPPING-v1.md](../registry/SITE-TYPE-BLOCK-MAPPING-v1.md) | Predecessor mapping (superseded for `block_id` by this registry) |
 
-**Reference implementation (partial):** `workspaces/website-factory-reference-v1/src/partials/sections/` — hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases.
+**Reference implementation (partial):** `workspaces/website-factory-reference-v1/src/partials/sections/` — hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer.
 
 **Предшественник (не канон v1):** `projects/mars-website-factory/block-registry-v0.md` — snake_case IDs, v0 site types; **не смешивать** без charter.
 
@@ -615,6 +615,8 @@ Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01
 | **required_or_optional** | Required |
 | **dependencies** | **requires** `LEGAL_LINKS` in production |
 | **exclusions** | App-only screens without marketing shell |
+
+**Reference partial:** `footer.html` — **PARTIAL** (WF-R01.3.2 Wave B1)
 
 ---
 

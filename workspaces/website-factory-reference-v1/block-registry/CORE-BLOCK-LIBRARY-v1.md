@@ -354,6 +354,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Page bottom — all marketing pages |
 | **Conversion value** | System — NAP + legal |
 | **Site type compatibility** | All Core ● |
+| **Reference** | `footer.html` — **PARTIAL** (WF-R01.3.2 Wave B1) |
 
 ---
 

@@ -20,6 +20,7 @@
 @use 'sections/contact_block';
 @use 'sections/faq';
 @use 'sections/sticky_cta';
+@use 'sections/footer';
 
 // --- Base document ---
 *,
@@ -64,10 +65,3 @@ main {
   font-weight: tokens.$font-weight-bold;
 }
 
-.wf-site-footer {
-  padding: tokens.$space-6 0;
-  background: tokens.$color-neutral-900;
-  color: tokens.$color-neutral-200;
-  font-size: 0.875rem;
-  text-align: center;
-}

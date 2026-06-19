@@ -72,17 +72,18 @@
 | 1 | Hero | `hero` |
 | 2 | Benefits (value props) | inline / hero-adjacent |
 | 3 | Process (how it works) | — |
-| 4 | Social proof / Trust | `social_proof` |
-| 5 | FAQ | `faq` |
-| 6 | Lead form | `lead_form` |
-| 7 | CTA band | `cta_band` |
-| 8 | Contact block | `contact_block` |
-| 9 | Sticky CTA (mobile) | `sticky_cta` |
-| 10 | Legal footer | `footer` |
+| 4 | Testimonials | `testimonials` |
+| 5 | Trust (metrics / logos) | `trust` |
+| 6 | FAQ | `faq` |
+| 7 | Lead form | `lead_form` |
+| 8 | CTA band | `cta_band` |
+| 9 | Contact block | `contact_block` |
+| 10 | Sticky CTA (mobile) | `sticky_cta` |
+| 11 | Footer shell | `footer` |
 
 **Layout:** Header (minimal) · Modal callback hook (recommended wiring)
 
-**Typical stack:** Hero → Benefits → Process → Social proof → FAQ → Lead form → CTA band → Contact → Sticky CTA
+**Typical stack:** Hero → Benefits → Process → Testimonials → Trust → FAQ → Lead form → CTA band → Contact → Footer
 
 ---
 
