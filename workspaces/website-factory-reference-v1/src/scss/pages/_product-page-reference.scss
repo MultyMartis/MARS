@@ -1,0 +1,232 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// --- PRODUCT_PAGE scaffold layout (page-level only) ---
+
+.wf-product-page__inner {
+  padding-block: $space-6;
+}
+
+.wf-product-page__identity {
+  margin-block-start: $space-5;
+  max-width: 48rem;
+}
+
+.wf-product-page__eyebrow {
+  margin: 0 0 $space-2;
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wf-product-page__title {
+  margin: 0 0 $space-3;
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+.wf-product-page__summary {
+  margin: 0 0 $space-4;
+  color: $color-text-muted;
+  line-height: $line-height-body;
+}
+
+.wf-product-page__availability {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.wf-product-page__availability-label {
+  color: $color-text-muted;
+}
+
+.wf-product-page__availability-value {
+  font-weight: $font-weight-medium;
+  color: $color-text;
+}
+
+.wf-product-page__core {
+  display: grid;
+  gap: $space-6;
+  margin-block-start: $space-6;
+
+  @include up($bp-lg) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+    align-items: start;
+  }
+}
+
+.wf-product-page__section-title {
+  margin: 0 0 $space-4;
+  font-size: 1.125rem;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+.wf-product-page__media-primary {
+  aspect-ratio: 4 / 3;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface-alt;
+  overflow: hidden;
+}
+
+.wf-product-page__media-placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, $color-surface-alt 0%, $color-border 100%);
+}
+
+.wf-product-page__media-thumbs {
+  display: flex;
+  gap: $space-3;
+  margin: $space-4 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wf-product-page__media-thumb {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface-alt;
+}
+
+.wf-product-page__commercial {
+  padding: $space-5;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface;
+}
+
+.wf-product-page__reference {
+  margin: 0 0 $space-3;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}
+
+.wf-product-page__price {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  margin: 0 0 $space-3;
+}
+
+.wf-product-page__price-label {
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}
+
+.wf-product-page__price-value {
+  font-size: 1.375rem;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+.wf-product-page__commercial-availability {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin: 0 0 $space-4;
+  font-size: 0.9375rem;
+}
+
+.wf-product-page__commercial-availability-label {
+  color: $color-text-muted;
+}
+
+.wf-product-page__commercial-availability-value {
+  font-weight: $font-weight-medium;
+  color: $color-text;
+}
+
+.wf-product-page__commercial-note {
+  margin: 0 0 $space-5;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+  line-height: 1.45;
+}
+
+.wf-product-page__primary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: $space-3 $space-5;
+  border-radius: $radius-md;
+  background: $color-cta-primary;
+  color: $color-white;
+  font-size: 0.9375rem;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+
+  &:hover {
+    background: $color-cta-primary-hover;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-brand;
+    outline-offset: 2px;
+  }
+}
+
+.wf-product-page__specifications,
+.wf-product-page__description {
+  margin-block-start: $space-7;
+}
+
+.wf-product-page__spec-list {
+  display: grid;
+  gap: $space-3;
+  margin: 0;
+}
+
+.wf-product-page__spec {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr);
+  gap: $space-3;
+  padding-block: $space-2;
+  border-bottom: 1px solid $color-border;
+
+  dt {
+    margin: 0;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+  }
+
+  dd {
+    margin: 0;
+    color: $color-text;
+  }
+}
+
+.wf-product-page__description p {
+  margin: 0 0 $space-4;
+  color: $color-text-muted;
+  line-height: $line-height-body;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.wf-product-page .wf-section--lead-form,
+.wf-product-page .wf-section--trust {
+  margin-block-start: $space-7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-product-page__primary-cta {
+    transition: none;
+  }
+}

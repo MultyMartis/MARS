@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Product page scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference scaffold for PRODUCT_PAGE — minimal PDP mode with neutral demonstration content.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-product-page">
+    <div class="wf-product-page__inner wf-container">
+      @@include('../partials/components/breadcrumbs.html')
+
+      <header class="wf-product-page__identity">
+        <p class="wf-product-page__eyebrow">Product model A</p>
+        <h1 class="wf-product-page__title">Reference product name</h1>
+        <p class="wf-product-page__summary">
+          Neutral product summary for the reference PDP scaffold. One primary commercial state and
+          scaffold-owned detail regions only — no cart, variants, or live catalog binding.
+        </p>
+        <p class="wf-product-page__availability">
+          <span class="wf-product-page__availability-label">Availability</span>
+          <span class="wf-product-page__availability-value">Available</span>
+        </p>
+      </header>
+
+      <div class="wf-product-page__core">
+        <section class="wf-product-page__media" aria-labelledby="wf-product-media-title">
+          <h2 class="wf-product-page__section-title" id="wf-product-media-title">Product media</h2>
+          <div class="wf-product-page__media-primary">
+            <span class="wf-product-page__media-placeholder" aria-hidden="true"></span>
+            <span class="wf-visually-hidden">Neutral media placeholder — no gallery runtime</span>
+          </div>
+          <ul class="wf-product-page__media-thumbs" aria-label="Media thumbnails (static placeholders)">
+            <li><span class="wf-product-page__media-thumb" aria-hidden="true"></span></li>
+            <li><span class="wf-product-page__media-thumb" aria-hidden="true"></span></li>
+            <li><span class="wf-product-page__media-thumb" aria-hidden="true"></span></li>
+          </ul>
+        </section>
+
+        <section class="wf-product-page__commercial" aria-labelledby="wf-product-commercial-title">
+          <h2 class="wf-product-page__section-title" id="wf-product-commercial-title">Commercial summary</h2>
+          <p class="wf-product-page__reference">Reference 100</p>
+          <p class="wf-product-page__price">
+            <span class="wf-product-page__price-label">Commercial state</span>
+            <span class="wf-product-page__price-value">Request price</span>
+          </p>
+          <p class="wf-product-page__commercial-availability">
+            <span class="wf-product-page__commercial-availability-label">Availability</span>
+            <span class="wf-product-page__commercial-availability-value">Available</span>
+          </p>
+          <p class="wf-product-page__commercial-note">
+            Presentation-only commercial zone. No cart, quantity, variants, or backend pricing.
+          </p>
+          <a class="wf-product-page__primary-cta" href="#lead-form">Request information</a>
+        </section>
+      </div>
+
+      <section class="wf-product-page__specifications" aria-labelledby="wf-product-specs-title">
+        <h2 class="wf-product-page__section-title" id="wf-product-specs-title">Specifications</h2>
+        <dl class="wf-product-page__spec-list">
+          <div class="wf-product-page__spec">
+            <dt>Material</dt>
+            <dd>Stainless steel</dd>
+          </div>
+          <div class="wf-product-page__spec">
+            <dt>Dimensions</dt>
+            <dd>1200 × 600 × 850 mm</dd>
+          </div>
+          <div class="wf-product-page__spec">
+            <dt>Capacity</dt>
+            <dd>40 L per cycle</dd>
+          </div>
+          <div class="wf-product-page__spec">
+            <dt>Power</dt>
+            <dd>3.5 kW</dd>
+          </div>
+          <div class="wf-product-page__spec">
+            <dt>Weight</dt>
+            <dd>85 kg</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="wf-product-page__description" aria-labelledby="wf-product-description-title">
+        <h2 class="wf-product-page__section-title" id="wf-product-description-title">Description</h2>
+        <p>
+          Neutral reference description for a catalog product detail page. The scaffold documents
+          semantic content regions without tabs, accordion runtime, or CMS-bound copy.
+        </p>
+        <p>
+          Use this zone for long-form product narrative in production implementations. This reference
+          keeps two short paragraphs to validate heading hierarchy and readable text flow only.
+        </p>
+      </section>
+
+      @@include('../partials/sections/lead_form.html')
+      @@include('../partials/sections/trust.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
