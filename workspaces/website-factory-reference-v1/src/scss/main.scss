@@ -8,6 +8,7 @@
 @use 'foundations/forms';
 @use 'foundations/modal';
 
+@use 'sections/header-nav';
 @use 'sections/hero';
 @use 'sections/benefits';
 @use 'sections/process';
@@ -42,27 +43,5 @@ body {
 
 main {
   min-width: 0;
-}
-
-.wf-site-header {
-  position: sticky;
-  top: 0;
-  z-index: layers.$z-header;
-  padding: tokens.$space-4 0;
-  background: tokens.$color-surface;
-  border-bottom: 1px solid tokens.$color-border;
-  box-shadow: tokens.$shadow-sm;
-}
-
-.wf-site-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wf-site-header__logo {
-  margin: 0;
-  font-size: 1.125rem;
-  font-weight: tokens.$font-weight-bold;
 }
 

@@ -371,7 +371,7 @@ Tier A structural blocks — F3 Block → Structural Subtype. Reference partials
 | **Typical placement** | Global shell zone — all multi-page routes |
 | **Conversion value** | System — orientation and IA traversal |
 | **Site type compatibility** | LANDING ○ (minimal) · PROMO ● · CATALOG ● · ECOMMERCE ● · CORPORATE ● |
-| **Reference** | **PENDING** — WF-R01.3.2/3.3 |
+| **Reference** | `sections/header-nav.html` — **PARTIAL** (WF-R01.3.2 Wave C2) |
 
 ### FILTERS
 
@@ -410,7 +410,8 @@ Tier A structural blocks — F3 Block → Structural Subtype. Reference partials
 | CONTACTS | contact_block.html | ✓ |
 | FAQ | faq.html | ✓ |
 | CASES | cases.html | ✓ |
-| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, HEADER_NAV, FILTERS, SEARCH, … | — | **Not implemented** — registry-only v1.1 |
+| HEADER_NAV | header-nav.html | ✓ |
+| SERVICES, FEATURES, CATEGORIES, CATEGORY_GRID, FILTERS, SEARCH, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 

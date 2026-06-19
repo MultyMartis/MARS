@@ -444,9 +444,9 @@ Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01
 | **required_or_optional** | Contextual |
 | **dependencies** | **recommends** `FOOTER`, `LEGAL_LINKS`; **requires** Blueprint global shell zone; **requires** [layout-shell-governance.md](../../../projects/mars-website-factory/layout-shell-governance.md) — HEADER ≠ HERO |
 | **exclusions** | **Forbidden** absorption of `HERO` content; **Forbidden** separate ids: `MEGA_MENU`, `MOBILE_NAV_DRAWER`, `UTILITY_NAV`, `SKIP_LINK` — variants/composition in notes |
-| **notes** | `maturity: standard` (RV-01 Core); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; `mega_menu: variant` (not separate block_id); `utility_nav: composition` (cart icon ≠ `CART` page block); WF-R01.1 role `nav_mega_or_primary` → this id; `reference_partial: PENDING — WF-R01.3` |
+| **notes** | `maturity: standard` (RV-01 Core); `context_dependent: true`; `structural_subtype: true`; `vocabulary_source: WF-R01.2 ACCEPTED charter`; `mega_menu: variant` (not separate block_id); `utility_nav: composition` (cart icon ≠ `CART` page block); WF-R01.1 role `nav_mega_or_primary` → this id; `reference_partial: sections/header-nav.html` |
 
-**Reference partial:** **PENDING** — WF-R01.3.2/3.3
+**Reference partial:** `sections/header-nav.html` — **PARTIAL** (WF-R01.3.2 Wave C2)
 
 ---
 
@@ -629,7 +629,7 @@ Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01
 | Core site types only in matrix v2 | LANDING, PROMO, CATALOG, ECOMMERCE, CORPORATE |
 | No blocks for SAAS / WEB_APPLICATION / MARKETPLACE | **Confirmed** — Extended types out of Core Library v1 |
 | Block count | **32** canonical `block_id` entries (29 Core + 3 structural Tier A) |
-| Structural Tier A (WF-R01.2) | `HEADER_NAV`, `FILTERS`, `SEARCH` — registry rows **COMPLETE**; partials **PENDING** WF-R01.3 |
+| Structural Tier A (WF-R01.2) | `HEADER_NAV` **PARTIAL** (Wave C2); `FILTERS`, `SEARCH` — registry rows **COMPLETE**; partials **PENDING** WF-R01.3.4 |
 | Blueprint alignment | [BLUEPRINT-BLOCK-MAPPING-v1.md](BLUEPRINT-BLOCK-MAPPING-v1.md) |
 | Page alignment | [PAGE-BLOCK-MAPPING-v1.md](PAGE-BLOCK-MAPPING-v1.md) |
 | Contract compliance | [BLOCK-CONTRACT-v1.md](BLOCK-CONTRACT-v1.md) |

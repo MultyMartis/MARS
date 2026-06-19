@@ -1,0 +1,229 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+@use '../foundations/layers' as layers;
+@use '../foundations/motion' as motion;
+
+.wf-header-nav {
+  position: sticky;
+  top: 0;
+  z-index: layers.$z-header;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+.wf-header-nav__bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: $space-4;
+  min-height: 64px;
+}
+
+.wf-header-nav__brand {
+  flex-shrink: 0;
+  color: $color-text;
+  font-size: 1.125rem;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.wf-header-nav__brand-text {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.wf-header-nav__nav {
+  display: none;
+  justify-self: center;
+  min-width: 0;
+}
+
+.wf-header-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2 $space-5;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wf-header-nav__link {
+  display: inline-block;
+  padding-block: $space-2;
+  color: $color-text-muted;
+  font-size: 0.9375rem;
+  font-weight: $font-weight-medium;
+  line-height: 1.4;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-text;
+  }
+}
+
+.wf-header-nav__actions {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $space-3;
+  min-width: 0;
+}
+
+.wf-header-nav__contact {
+  color: $color-text-muted;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 12rem;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-text;
+  }
+}
+
+.wf-header-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding-inline: $space-4;
+  border: 0;
+  border-radius: $radius-sm;
+  background: $color-cta-primary;
+  color: $color-white;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-cta-primary-hover;
+  }
+}
+
+.wf-header-nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface-alt;
+  color: $color-text;
+  cursor: pointer;
+  justify-self: end;
+}
+
+.wf-header-nav__toggle-box {
+  display: grid;
+  gap: 5px;
+  width: 20px;
+}
+
+.wf-header-nav__toggle-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform-origin: center;
+  transition: transform motion.$duration-fast motion.$ease-standard,
+    opacity motion.$duration-fast motion.$ease-standard;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.wf-header-nav--menu-open .wf-header-nav__toggle-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.wf-header-nav--menu-open .wf-header-nav__toggle-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.6);
+}
+
+.wf-header-nav--menu-open .wf-header-nav__toggle-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.wf-header-nav__mobile {
+  border-top: 1px solid $color-border;
+  background: $color-surface-alt;
+}
+
+.wf-header-nav__mobile-nav {
+  padding-block: $space-3;
+}
+
+.wf-header-nav__mobile-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wf-header-nav__mobile-link {
+  display: block;
+  padding: $space-3 $container-pad-mobile;
+  color: $color-text;
+  font-size: 1rem;
+  font-weight: $font-weight-medium;
+  line-height: 1.4;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba($color-brand, 0.06);
+    color: $color-brand;
+  }
+}
+
+.wf-header-nav__brand:focus-visible,
+.wf-header-nav__link:focus-visible,
+.wf-header-nav__contact:focus-visible,
+.wf-header-nav__cta:focus-visible,
+.wf-header-nav__toggle:focus-visible,
+.wf-header-nav__mobile-link:focus-visible {
+  outline: 2px solid $color-brand;
+  outline-offset: 2px;
+}
+
+@include up($bp-lg) {
+  .wf-header-nav__bar {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: $space-5;
+  }
+
+  .wf-header-nav__nav {
+    display: block;
+  }
+
+  .wf-header-nav__actions {
+    display: flex;
+  }
+
+  .wf-header-nav__toggle {
+    display: none;
+  }
+
+  .wf-header-nav__mobile {
+    display: none !important;
+  }
+}
