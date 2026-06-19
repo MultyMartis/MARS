@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Category page scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference scaffold for CATEGORY_PAGE — product-listing PLP mode with neutral demonstration content.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-category-page">
+    <div class="wf-category-page__inner wf-container">
+      @@include('../partials/components/breadcrumbs.html')
+
+      <header class="wf-category-page__identity">
+        <h1 class="wf-category-page__title">Category name</h1>
+        <p class="wf-category-page__intro">
+          Neutral category introduction for the reference PLP scaffold. Browse sibling categories,
+          refine the view with presentation-only filters, or search the catalog surface.
+        </p>
+      </header>
+
+      @@include('../partials/components/categories.html')
+
+      @@include('../partials/components/search.html', {
+        "variation": "expanded",
+        "blockId": "search",
+        "instanceId": "wf-category-search",
+        "inputId": "wf-category-search-input"
+      })
+
+      <div class="wf-category-page__catalog">
+        <div class="wf-category-page__toolbar">
+          <button
+            type="button"
+            class="wf-category-page__filters-trigger"
+            data-filters-open
+            aria-expanded="false"
+            aria-controls="wf-filters-panel"
+          >
+            Filters
+          </button>
+        </div>
+
+        <div class="wf-category-page__layout">
+          @@include('../partials/components/filters.html')
+
+          <div class="wf-category-page__results">
+            <div class="wf-category-page__result-context" aria-live="polite">
+              <p class="wf-category-page__result-count">Showing 25 products in current view</p>
+              <p class="wf-category-page__result-note">Search and filters are presentation-only references. They do not control the neutral result set in this scaffold.</p>
+            </div>
+
+            @@include('../partials/components/product-grid.html')
+            @@include('../partials/components/pagination.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/components/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
