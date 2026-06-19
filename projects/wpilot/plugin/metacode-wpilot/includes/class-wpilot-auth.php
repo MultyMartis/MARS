@@ -27,22 +27,16 @@ class WPilot_Auth {
 			return $readiness;
 		}
 
-		if ( empty( $options['token_hash'] ) ) {
-			return WPilot_Errors::token_revoked( $meta );
+		$token_check = self::validate_token_credentials( $options, $request, $meta );
+		if ( true !== $token_check ) {
+			return $token_check;
 		}
 
-		$token = self::get_request_token( $request );
-
-		if ( '' === $token ) {
-			return WPilot_Errors::auth_missing( $meta );
-		}
-
-		if ( ! wp_check_password( $token, $options['token_hash'] ) ) {
-			return WPilot_Errors::auth_invalid( $meta );
-		}
-
-		$options['last_token_used_at'] = current_time( 'mysql', true );
-		WPilot_Settings::update_options( $options );
+		WPilot_Settings::update_options(
+			array(
+				'last_token_used_at' => current_time( 'mysql', true ),
+			)
+		);
 
 		return true;
 	}
@@ -62,18 +56,9 @@ class WPilot_Auth {
 			return $readiness;
 		}
 
-		if ( empty( $options['token_hash'] ) ) {
-			return WPilot_Errors::token_revoked( $meta );
-		}
-
-		$token = self::get_request_token( $request );
-
-		if ( '' === $token ) {
-			return WPilot_Errors::auth_missing( $meta );
-		}
-
-		if ( ! wp_check_password( $token, $options['token_hash'] ) ) {
-			return WPilot_Errors::auth_invalid( $meta );
+		$token_check = self::validate_token_credentials( $options, $request, $meta );
+		if ( true !== $token_check ) {
+			return $token_check;
 		}
 
 		if ( empty( $options['write_enabled'] ) ) {
@@ -122,22 +107,16 @@ class WPilot_Auth {
 			);
 		}
 
-		if ( empty( $options['token_hash'] ) ) {
-			return WPilot_Errors::token_revoked( $meta );
+		$token_check = self::validate_token_credentials( $options, $request, $meta );
+		if ( true !== $token_check ) {
+			return $token_check;
 		}
 
-		$token = self::get_request_token( $request );
-
-		if ( '' === $token ) {
-			return WPilot_Errors::auth_missing( $meta );
-		}
-
-		if ( ! wp_check_password( $token, $options['token_hash'] ) ) {
-			return WPilot_Errors::auth_invalid( $meta );
-		}
-
-		$options['last_token_used_at'] = current_time( 'mysql', true );
-		WPilot_Settings::update_options( $options );
+		WPilot_Settings::update_options(
+			array(
+				'last_token_used_at' => current_time( 'mysql', true ),
+			)
+		);
 
 		return true;
 	}
@@ -182,6 +161,56 @@ class WPilot_Auth {
 	 */
 	public static function require_scoped_replace_access( WP_REST_Request $request ) {
 		return self::require_rollback_access( $request );
+	}
+
+	/**
+	 * Validate token credentials and record connection diagnostics.
+	 *
+	 * @param array           $options Plugin options snapshot.
+	 * @param WP_REST_Request $request REST request.
+	 * @param array           $meta Response metadata.
+	 * @return true|WP_REST_Response
+	 */
+	private static function validate_token_credentials( array $options, WP_REST_Request $request, array $meta ) {
+		if ( empty( $options['token_hash'] ) ) {
+			WPilot_Connection_Tracker::record_auth_failure( WPilot_Errors::TOKEN_REVOKED );
+			return WPilot_Errors::token_revoked( $meta );
+		}
+
+		$token = self::get_request_token( $request );
+
+		if ( '' === $token ) {
+			WPilot_Connection_Tracker::record_auth_failure( WPilot_Errors::AUTH_MISSING );
+			return WPilot_Errors::auth_missing( $meta );
+		}
+
+		if ( ! wp_check_password( $token, $options['token_hash'] ) ) {
+			WPilot_Connection_Tracker::record_auth_failure( WPilot_Errors::AUTH_INVALID );
+			return WPilot_Errors::auth_invalid( $meta );
+		}
+
+		WPilot_Connection_Tracker::record_success( self::connection_endpoint_label( $request ) );
+
+		return true;
+	}
+
+	/**
+	 * Compact REST path label for connection diagnostics.
+	 *
+	 * Examples: site-info, plugins, pages, themes, pages/42/structure.
+	 *
+	 * @param WP_REST_Request $request REST request.
+	 * @return string
+	 */
+	private static function connection_endpoint_label( WP_REST_Request $request ) {
+		$route  = trim( (string) $request->get_route(), '/' );
+		$prefix = WPilot_Constants::REST_NAMESPACE . '/';
+
+		if ( 0 === strpos( $route, $prefix ) ) {
+			$route = substr( $route, strlen( $prefix ) );
+		}
+
+		return WPilot_Connection_Tracker::sanitize_endpoint_label( $route );
 	}
 
 	/**

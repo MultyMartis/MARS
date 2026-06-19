@@ -1,0 +1,498 @@
+# Copyright (C) 2026 MetaCODE
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MetaCODE WPilot 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-19 18:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/class-wpilot-admin-page.php
+msgid "MetaCODE WPilot"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Permission denied."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "DEV/test only. Do not enable this bridge on production."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"WPilot v0.3.0 provides a proven DEV runtime with authenticated inspection, "
+"pre-apply analysis, scoped content mutation, backup, validation, rollback, "
+"and audit trail. Browser automation, background jobs, and autonomous "
+"behavior are not part of this plugin."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Runtime Status"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Proven Operations"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Safety Features"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Generated token. Copy it now; it will not be shown again."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Generating or rotating a token invalidates the previous operational "
+"credential. Store the plaintext only in approved local operator secret "
+"storage."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Current State"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Plugin state"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Bridge enabled"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "DEV/test confirmed"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Write enabled"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Emergency disabled"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Token status"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Created at UTC: %s"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "REST namespace"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Production prohibition:"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"If this WordPress site is production or production-like, leave the bridge "
+"disabled and do not generate a token."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Bridge Control"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "I confirm this is a DEV/test WordPress site, not production."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Enable authenticated REST bridge."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Enable write readiness for dry-run analysis and proven content mutation "
+"endpoints."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Save Bridge State"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Token Control"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Token generation is allowed only after DEV/test confirmation and bridge "
+"enablement. Rotating a token replaces the previous credential; plaintext is "
+"shown once."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Generate / Rotate Token"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Revoke Token"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Emergency Control"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Emergency disable immediately turns the bridge off. Clearing emergency state"
+" does not re-enable the bridge."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Emergency Disable"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Clear Emergency Disable"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "REST Endpoints"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Except for ping, endpoints require the documented token header and may "
+"expose site metadata, plugin/theme names, page lists, and raw page content "
+"for the requested DEV page."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Raw-content notice:"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"The page detail endpoint returns raw post content for inspection. Use only "
+"on approved DEV content and avoid business-sensitive pages."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Read Endpoints"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Analysis Endpoint"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Pre-apply dry-run analyzes one exact scoped replacement without mutating "
+"content. Proven write endpoints create backups, audit records, and support "
+"rollback."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Proven Write Endpoints"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Version"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Schema Version"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Status"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Environment"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Runtime Maturity"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Runtime Surface"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Write Endpoints"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Namespace"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Write endpoint count includes pre-apply dry-run analysis and proven "
+"mutation/recovery routes."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Milestone 001"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Title"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Date"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Milestone ID"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Bridge settings saved."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Enable the bridge and confirm DEV/test use before generating a token."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Token generated. Plaintext is shown once below."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Token revoked."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Emergency disable is active."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Emergency disable cleared. Bridge remains disabled."
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Inspect"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Backup"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Apply Content Change"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Validate"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Rollback"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Audit Trail"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Checksum Validation"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Backup Before Apply"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Rollback Available"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "Human Approval Required"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "First Proven Runtime Write Path"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "enabled (dry-run analysis and proven write endpoints)"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "disabled"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "enabled"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "confirmed"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "not confirmed"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "yes — all data endpoints refuse until cleared"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "no"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "not generated"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "generated"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Auth header for MARS operators:"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Bridge"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Connection"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid ""
+"Connection diagnostics store safe metadata only. Tokens, headers, payloads, "
+"and secrets are never persisted."
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Current Safety State"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "DEV Confirmation"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Diagnostics"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Endpoints"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Endpoints Count"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "failed"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last endpoint"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last failure"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last Failure"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last Failure Reason"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last MARS Connection"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last Milestone"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last successful connection"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Failure reason"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last Success"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Last token use (UTC)"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "MARS Connection Diagnostics"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "never"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Overview"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Proven Operations Count"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Runtime"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Safety"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Schema"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Schema valid option"
+msgstr ""
+
+#: admin/class-wpilot-admin-ui-model.php
+msgid "success"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Summary"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Token created at UTC"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Token revoked at UTC"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "WPilot sections"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "Write Readiness"
+msgstr ""
+
+#: admin/class-wpilot-admin-page.php
+msgid "yes"
+msgstr ""

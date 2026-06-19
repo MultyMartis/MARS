@@ -1,7 +1,17 @@
 {
-  "schema": "wpilot-runtime-local-tokens-example-v0",
+  "schema": "wpilot-runtime-local-tokens-example-v1",
   "classification": "example-only-no-real-secrets",
-  "tokens": [
+  "canonical_storage_root": "C:\\AI MARS\\local\\tokens\\",
+  "auth_header": "X-WPilot-Token",
+  "sites": [
+    {
+      "site_alias": "dev-gktriumph",
+      "site_url": "https://dev.gktriumph.ru",
+      "token_file": "C:\\AI MARS\\local\\tokens\\wpilot-dev-gktriumph.token",
+      "token_file_format": "plaintext-single-line",
+      "environment": "DEV/test only",
+      "status": "example-metadata-only"
+    },
     {
       "site_alias": "dev-example",
       "token_label": "wpilot-dev-readonly",

@@ -29,6 +29,12 @@ class WPilot_Settings {
 			'schema_version'       => WPILOT_SCHEMA_VERSION,
 			'token_revoked_at'     => '',
 			'last_token_used_at'   => '',
+			'last_connection_status'           => 'never',
+			'last_connection_success_at'       => '',
+			'last_authorized_connection_at'    => '',
+			'last_authorized_endpoint'         => '',
+			'last_connection_failure_at'       => '',
+			'last_connection_failure_reason'   => '',
 			'last_safety_error'    => '',
 			'allowed_post_types'   => array( 'page' ),
 			'retention_days'       => 30,
@@ -190,10 +196,32 @@ class WPilot_Settings {
 			'schema_version'       => sanitize_text_field( $options['schema_version'] ),
 			'token_revoked_at'     => sanitize_text_field( $options['token_revoked_at'] ),
 			'last_token_used_at'   => sanitize_text_field( $options['last_token_used_at'] ),
+			'last_connection_status'           => self::sanitize_connection_status( $options['last_connection_status'] ),
+			'last_connection_success_at'       => sanitize_text_field( $options['last_connection_success_at'] ),
+			'last_authorized_connection_at'      => sanitize_text_field( $options['last_authorized_connection_at'] ),
+			'last_authorized_endpoint'           => WPilot_Connection_Tracker::sanitize_endpoint_label( $options['last_authorized_endpoint'] ),
+			'last_connection_failure_at'       => sanitize_text_field( $options['last_connection_failure_at'] ),
+			'last_connection_failure_reason'   => sanitize_text_field( $options['last_connection_failure_reason'] ),
 			'last_safety_error'    => sanitize_text_field( $options['last_safety_error'] ),
 			'allowed_post_types'   => array( 'page' ),
 			'retention_days'       => absint( $options['retention_days'] ),
 			'backup_retention_max' => absint( $options['backup_retention_max'] ),
 		);
+	}
+
+	/**
+	 * Normalize persisted connection status values.
+	 *
+	 * @param string $status Raw status value.
+	 * @return string
+	 */
+	private static function sanitize_connection_status( $status ) {
+		$allowed = array(
+			WPilot_Connection_Tracker::STATUS_NEVER,
+			WPilot_Connection_Tracker::STATUS_SUCCESS,
+			WPilot_Connection_Tracker::STATUS_FAILED,
+		);
+
+		return in_array( $status, $allowed, true ) ? $status : WPilot_Connection_Tracker::STATUS_NEVER;
 	}
 }

@@ -2,7 +2,7 @@
 
 **Classification:** Program / Operational System.
 **Chat type:** External Systems.
-**Status:** documented Phase 1 base; **proven runtime v0.3.0 on DEV** (2026-06-19 freeze).
+**Status:** documented Phase 1 base; **proven runtime v0.3.0-RC5 on DEV** (2026-06-19 release freeze).
 **Model reference:** [System Entity Model](../../governance/system-entity-model.md).
 
 WPilot is a human-supervised AI-assisted WordPress administration system for testing whether a Cursor/operator workflow can safely inspect and make tightly scoped changes on a Beget-hosted test WordPress site.
@@ -14,13 +14,30 @@ Strategic direction: WPilot's preferred long-term target is **Factory-native Wor
 | Field | Value |
 |-------|-------|
 | **Plugin version** | `0.3.0` (schema `0.2.0`) |
-| **Runtime maturity** | Proven content writes on DEV |
+| **Release candidate** | `v0.3.0-RC5` — live on DEV |
+| **Runtime maturity** | Proven content writes + authenticated REST bridge |
 | **Environment** | DEV only — `https://dev.gktriumph.ru` |
 | **Proven REST path** | inspect → backup → scoped-replace → validate → rollback |
-| **State freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
+| **Connection proof** | Authenticated REST, connection tracking, admin Last Successful Connection / Last Endpoint |
+| **Release freeze** | [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
+| **RC5 spec** | [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) |
+| **Core freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
 | **First write milestone** | [milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) |
 
 Plugin source: `plugin/metacode-wpilot/`. Evidence reports under `reports/wpilot-runtime-*-sprint*.md`. Not production. Not autonomous.
+
+## MARS Token Standard
+
+Operator token storage for WPilot REST auth is local-only under the MARS workspace:
+
+| Field | Value |
+|-------|-------|
+| **Storage root** | `C:\AI MARS\local\tokens\` |
+| **DEV token file** | `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
+| **Auth header** | `X-WPilot-Token` |
+| **DEV site** | `https://dev.gktriumph.ru` |
+
+Canonical policy: [local-storage-policy.md](local-storage-policy.md). Token values must never appear in git, reports, or chat transcripts intended for the repository.
 
 ## Mission Charter
 
@@ -104,7 +121,9 @@ Canonical document: [runtime-contracts/WPILOT-RUNTIME-CONTRACTS-v1.md](runtime-c
 
 ## State Freeze & Milestones
 
-- [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) — canonical runtime freeze (2026-06-19).
+- [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) — **RC5 release freeze** (UX-01…BUGFIX-02, connection proof).
+- [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) — live RC5 specification on DEV.
+- [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) — Core Model + runtime sprint freeze (2026-06-19).
 - [milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md](milestones/WPILOT-MILESTONE-001-FIRST-PROVEN-WRITE-PATH.md) — first proven plugin REST write path.
 - [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-2026-06-v1.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-2026-06-v1.md) — cross-system visibility notes (OCPilot, Factory, ATLAS).
 
@@ -184,5 +203,5 @@ Until then, they are candidate roles only, not running agents.
 ## SAFE UNKNOWN
 
 - Exact Beget panel permissions, WordPress admin roles, FTP/SFTP access, and database visibility are unknown until the operator provides verified external evidence.
-- The target site theme, child theme state, WPBakery usage, plugin list, and backup tooling are unknown until read-only inspection.
+- The target site theme, child theme state, WPBakery usage, plugin list, and backup tooling on **new** sites are unknown until REST inspection — DEV baseline (`dev.gktriumph.ru`) is proven for RC5.
 - Production safety is unknown unless the operator confirms the environment is a test site.

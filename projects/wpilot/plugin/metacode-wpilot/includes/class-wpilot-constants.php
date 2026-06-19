@@ -13,6 +13,18 @@ class WPilot_Constants {
 	const VERSION        = '0.3.0';
 	const SCHEMA_VERSION = '0.2.0';
 
+	const RUNTIME_MATURITY = 'proven_content_writes';
+	const RUNTIME_STATUS   = 'ACTIVE';
+	const ENVIRONMENT      = 'DEV';
+
+	const MILESTONE_001_ID     = 'WPILOT-MILESTONE-001';
+	const MILESTONE_001_TITLE  = 'First Proven Runtime Write Path';
+	const MILESTONE_001_DATE   = '2026-06-19';
+	const MILESTONE_001_STATUS = 'PROVEN';
+
+	const READ_ENDPOINT_COUNT  = 8;
+	const WRITE_ENDPOINT_COUNT = 4;
+
 	const PLUGIN_SLUG = 'metacode-wpilot';
 	const TEXT_DOMAIN = 'metacode-wpilot';
 	const DEV_LABEL   = 'DEV/test';

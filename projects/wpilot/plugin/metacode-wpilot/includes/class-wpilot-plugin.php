@@ -57,6 +57,12 @@ class WPilot_Plugin {
 	public function init() {
 		WPilot_Schema::maybe_upgrade();
 
+		load_plugin_textdomain(
+			WPilot_Constants::TEXT_DOMAIN,
+			false,
+			dirname( plugin_basename( WPILOT_PLUGIN_FILE ) ) . '/languages'
+		);
+
 		add_action( 'admin_menu', array( $this->admin_page, 'register_menu' ) );
 		add_action( 'rest_api_init', array( $this->rest_controller, 'register_routes' ) );
 	}

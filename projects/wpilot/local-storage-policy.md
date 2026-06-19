@@ -50,6 +50,21 @@ Per-site WPilot tokens may be stored only in local operator storage:
 
 - `C:\AI MARS\local\tokens\`
 
+### MARS Token Standard (canonical)
+
+| Field | Value |
+|-------|-------|
+| **Canonical storage root** | `C:\AI MARS\local\tokens\` |
+| **Canonical DEV token file** | `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
+| **Site alias** | `dev-gktriumph` |
+| **REST auth header** | `X-WPilot-Token` |
+| **Current DEV site** | `https://dev.gktriumph.ru` |
+| **Registration sync** | 2026-06-19 — [reports/wpilot-token-registration-sync-report.md](reports/wpilot-token-registration-sync-report.md) |
+
+This file is the **single canonical operator token source** for DEV REST auth. Runtime docs, contracts, runbooks, and release-candidate specs must reference this path — not sprint evidence copies.
+
+Token files contain **plaintext token only** (single value per file). Do not commit token files, copy token values into reports, or store tokens in the WordPress database beyond the hashed credential.
+
 Rules:
 
 - Store plaintext tokens only if the operator explicitly accepts local-machine risk.
@@ -138,6 +153,17 @@ When Cursor or an operator needs to use a WPilot token:
 6. After the run, the operator decides whether to revoke, rotate, or keep the token.
 
 Example safe handoff:
+
+```text
+site_alias: dev-gktriumph
+token_file: C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token
+auth_header: X-WPilot-Token
+site_url: https://dev.gktriumph.ru
+operation: read-only site inspection
+environment: DEV/test confirmed by operator
+```
+
+Legacy reference-name form (still valid for metadata-only docs):
 
 ```text
 site_alias: dev-example

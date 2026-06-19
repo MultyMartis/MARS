@@ -1,7 +1,7 @@
 # WPilot Proven Capabilities v1
 
 **Classification:** Evidence layer — documented proof of executed capabilities only.  
-**Status:** v1 evidence register — updated 2026-06-19 (Runtime Proof + Prototype Sprints 1–2).  
+**Status:** v1 evidence register — updated 2026-06-19 (RC5 release freeze: UX-01…BUGFIX-02 + connection proof).  
 **Site scope:** `https://dev.gktriumph.ru` (DEV/test only, human-supervised).  
 **Related:** [WPILOT-MISSION-v1.md](WPILOT-MISSION-v1.md), [WPILOT-OPERATIONS-MANIFEST-v1.md](WPILOT-OPERATIONS-MANIFEST-v1.md), [WPILOT-OPERATION-BINDINGS-v1.md](WPILOT-OPERATION-BINDINGS-v1.md), [local-storage-policy.md](local-storage-policy.md), [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md)
 
@@ -16,7 +16,7 @@
 | Source type | Examples |
 |-------------|----------|
 | Completed DEV work | Footer, contacts, cargo-scroll tasks on `dev.gktriumph.ru` |
-| In-repo reports | [wpilot-v0.1-dev-operational-release.md](reports/wpilot-v0.1-dev-operational-release.md), [wpilot-operational-milestone-v0.1.md](reports/wpilot-operational-milestone-v0.1.md), [page-read-debug-analysis-v0.md](reports/page-read-debug-analysis-v0.md), [wpilot-runtime-proof-sprint-report.md](reports/wpilot-runtime-proof-sprint-report.md), [wpilot-runtime-prototype-sprint-1-report.md](reports/wpilot-runtime-prototype-sprint-1-report.md), [wpilot-runtime-prototype-sprint-2-report.md](reports/wpilot-runtime-prototype-sprint-2-report.md) |
+| In-repo reports | [wpilot-v0.1-dev-operational-release.md](reports/wpilot-v0.1-dev-operational-release.md), [wpilot-operational-milestone-v0.1.md](reports/wpilot-operational-milestone-v0.1.md), [page-read-debug-analysis-v0.md](reports/page-read-debug-analysis-v0.md), [wpilot-runtime-proof-sprint-report.md](reports/wpilot-runtime-proof-sprint-report.md), [wpilot-runtime-prototype-sprint-1-report.md](reports/wpilot-runtime-prototype-sprint-1-report.md), [wpilot-runtime-prototype-sprint-2-report.md](reports/wpilot-runtime-prototype-sprint-2-report.md), [wpilot-ux-01-report.md](reports/wpilot-ux-01-report.md), [wpilot-ux-02-report.md](reports/wpilot-ux-02-report.md), [wpilot-rc3-connection-proof.md](reports/wpilot-rc3-connection-proof.md), [wpilot-rc4-connection-verification.md](reports/wpilot-rc4-connection-verification.md), [wpilot-bugfix-01-report.md](reports/wpilot-bugfix-01-report.md), [wpilot-bugfix-02-rc5-report.md](reports/wpilot-bugfix-02-rc5-report.md), [wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
 | Cross-project lesson | [css-multicol-masonry-browser-compatibility-lesson-v1.md](../mars-website-factory/css-multicol-masonry-browser-compatibility-lesson-v1.md) |
 | Operator evidence (local-only) | `C:\AI MARS STORAGE\wpilot\backups\dev.gktriumph.ru\` — apply/backup/validation JSON, HTML snapshots (not in git; see [local-storage-policy.md](local-storage-policy.md)) |
 
@@ -80,6 +80,39 @@ Capability считается **proven** только если одноврем�
 | ✓ WPBakery-safe plugin recovery | Full `post_content` restore; shortcode integrity | Runtime Proof Sprint page 38; Sprint 2 pages 38, 954 |
 
 **Scope limit (not overstated):** proven write primitive is **scoped exact-once replace on `page.post_content` only**. Not menu, widget, CSS, footer endpoint, or regex/mass replace.
+
+---
+
+## Proven Operator Admin Capabilities (UX-01 + UX-02)
+
+Подтверждено на DEV с RC5 (admin UI + operator review):
+
+| Capability | Evidence |
+|------------|----------|
+| ✓ Admin UI aligned with v0.3.0 proven runtime (no read-only-only bridge claims in project admin copy) | [wpilot-ux-01-report.md](reports/wpilot-ux-01-report.md) |
+| ✓ Runtime maturity, proven operations, endpoint inventory panels | UX-01 `WPilot_Admin_UI_Model` |
+| ✓ Top-level **MetaCODE WPilot** menu + tabbed dashboard (Overview · Runtime · Connection · Endpoints · Safety · Diagnostics) | [wpilot-ux-02-report.md](reports/wpilot-ux-02-report.md) |
+| ✓ Compact operator Overview (Runtime / Connection / Safety / Summary) | UX-02 report §3–4 |
+| ✓ Russian localization (`ru_RU` PO/MO) | UX-01 + UX-02 i18n compile |
+| ✓ Connection tab — Last Successful Connection, Last Endpoint, status labels | RC5 operator-confirmed; BUGFIX-01/02 reports |
+
+---
+
+## Proven MARS Connection Capabilities (RC4 + RC5)
+
+Подтверждено live на `dev.gktriumph.ru` с MARS local token:
+
+| Capability | Evidence |
+|------------|----------|
+| ✓ Authenticated REST bridge (`X-WPilot-Token`) | [wpilot-rc3-connection-proof.md](reports/wpilot-rc3-connection-proof.md); RC5 freeze |
+| ✓ MARS ↔ WPilot token handoff from `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` | [local-storage-policy.md](local-storage-policy.md); RC5 freeze |
+| ✓ Connection tracker — independent success/failure metadata | [wpilot-bugfix-01-report.md](reports/wpilot-bugfix-01-report.md) |
+| ✓ `last_authorized_connection_at` persists after authenticated requests | RC4 verification; RC5 operator-confirmed |
+| ✓ `last_authorized_endpoint` persists (compact route label) | RC4 verification; RC5 operator-confirmed |
+| ✓ BUGFIX-02 — metadata not erased by stale options write | [wpilot-bugfix-02-rc5-report.md](reports/wpilot-bugfix-02-rc5-report.md); RC5 operator-confirmed |
+| ✓ Admin displays populated Last Successful Connection and Last Endpoint | RC5 operator-confirmed |
+
+**Not stored in connection tracker:** token, headers, payloads, request bodies.
 
 ---
 
@@ -178,6 +211,7 @@ Targets from [Target Registry](WPILOT-TARGET-REGISTRY-v1.md) **without** suffici
 | **Operations** | `restore_backup` as distinct operation; `apply_shortcode_change` / `apply_footer_change` / `apply_css_change` via **plugin REST**; regex or mass replace; menu/widget/CSS plugin writes |
 | **Environments** | production execution; multisite |
 | **Execution model** | autonomous execution without human supervision |
+| **Clean ZIP install** | disposable-instance clean install (TEST-01 **PARTIAL** — RC5 live on DEV is separate evidence) |
 | **Configuration** | plugin configuration management; taxonomy management; user management; comment management |
 | **Draft layer** | formal `draft_*` ChangeSet lifecycle as automated product (dry-run proven; full draft workflow engine — not) |
 | **OCPilot parity** | OpenCart / OCPilot operations (WordPress evidence ≠ OCPilot evidence) |
@@ -229,14 +263,16 @@ Targets from [Target Registry](WPILOT-TARGET-REGISTRY-v1.md) **without** suffici
 |--------|------:|
 | **Proven inspection capabilities** | 11 |
 | **Proven plugin REST runtime capabilities** | 9 |
+| **Proven operator admin capabilities** | 6 |
+| **Proven MARS connection capabilities** | 7 |
 | **Proven content modification capabilities** | 6 |
 | **Proven style modification capabilities** | 5 |
 | **Proven change management capabilities** | 5 |
 | **Proven security & safety capabilities** | 7 |
 | **Proven workflow capabilities** | 4 |
-| **Total proven capabilities** | **47** |
+| **Total proven capabilities** | **60** |
 | **Proven targets** | **6** |
-| **Not yet proven (listed areas / items)** | **17** |
+| **Not yet proven (listed areas / items)** | **18** |
 
 ---
 

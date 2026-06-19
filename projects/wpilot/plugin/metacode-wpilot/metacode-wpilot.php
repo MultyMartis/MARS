@@ -7,6 +7,7 @@
  * Author: MetaCODE
  * License: GPL-2.0-or-later
  * Text Domain: metacode-wpilot
+ * Domain Path: /languages
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,6 +26,7 @@ define( 'WPILOT_REST_NAMESPACE', WPilot_Constants::REST_NAMESPACE );
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-response.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-errors.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-settings.php';
+require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-connection-tracker.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-environment.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-request-context.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-auth.php';
@@ -39,6 +41,7 @@ require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-backup-service.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-rollback-service.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-scoped-replace-service.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-rest-controller.php';
+require_once WPILOT_PLUGIN_DIR . 'admin/class-wpilot-admin-ui-model.php';
 require_once WPILOT_PLUGIN_DIR . 'admin/class-wpilot-admin-page.php';
 require_once WPILOT_PLUGIN_DIR . 'includes/class-wpilot-plugin.php';
 
