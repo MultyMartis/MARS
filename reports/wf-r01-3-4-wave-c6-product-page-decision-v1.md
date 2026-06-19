@@ -411,9 +411,9 @@ MINIMAL PRODUCT_PAGE SCAFFOLD AUTHORIZED
 | Field | Value |
 |-------|-------|
 | **Main commit hash** | `c8a661d` |
-| **Metadata commit hash** | See binding commit below |
-| **Commit messages** | `foundry: complete WF-R01.3.4 product page scaffold` |
-| **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` @ `c8a661d` |
+| **Metadata commit hash** | `4c03c6d` |
+| **Commit messages** | `foundry: complete WF-R01.3.4 product page scaffold` · `foundry: bind WF-R01.3.4 product page scaffold evidence` |
+| **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` @ `4c03c6d` |
 | **Files committed** | Wave C6 selective paths only |
 | **C5 cosmetic drift excluded** | Verified — restored before C6 |
 | **No foreign lane confirmation** | Verified before commit |
