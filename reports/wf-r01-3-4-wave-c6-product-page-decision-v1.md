@@ -410,10 +410,10 @@ MINIMAL PRODUCT_PAGE SCAFFOLD AUTHORIZED
 
 | Field | Value |
 |-------|-------|
-| **Main commit hash** | Pending |
-| **Metadata commit hash** | N/A |
+| **Main commit hash** | `c8a661d` |
+| **Metadata commit hash** | See binding commit below |
 | **Commit messages** | `foundry: complete WF-R01.3.4 product page scaffold` |
-| **Push result** | Pending |
+| **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` @ `c8a661d` |
 | **Files committed** | Wave C6 selective paths only |
 | **C5 cosmetic drift excluded** | Verified — restored before C6 |
 | **No foreign lane confirmation** | Verified before commit |

@@ -25,7 +25,7 @@
 | **Global RSC denominator** | **10** primary page types (PAGE-TYPE-REGISTRY-v1 Core minimum set) |
 | **Global RSC numerator (post-C6)** | **3** — `LANDING_PAGE` + `CATEGORY_PAGE` + `PRODUCT_PAGE` |
 | **CATALOG corridor RSC** | **2/3** scaffolds — CATEGORY_PAGE + PRODUCT_PAGE (SEARCH_RESULTS_PAGE deferred) |
-| **Commit binding** | Pending Wave C6 commit |
+| **Commit binding** | `c8a661d` — `foundry: complete WF-R01.3.4 product page scaffold` |
 
 ---
 
@@ -220,6 +220,6 @@ CSS-only media placeholders — no production images.
 
 ## Commit binding
 
-Pending — Wave C6 selective commit: `foundry: complete WF-R01.3.4 product page scaffold`
+`c8a661d` — `foundry: complete WF-R01.3.4 product page scaffold`
 
-*Manifest version: v1 · Wave C6.*
+*Manifest version: v1 · Wave C6 · commit `c8a661d`.*
