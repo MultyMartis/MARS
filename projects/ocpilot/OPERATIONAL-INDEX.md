@@ -126,7 +126,9 @@
 
 | 4.141 | **SITE-002 — M9.8.9 Minor Fixes Pack #1 Registration** | **DONE** (2026-06-19; status: **ACTIVE WORK PACKAGE**) | [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md), [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
-| 4.142 | **SITE-002 — Stable Live M9.8.9 Filter Recovery Checkpoint + Technical Knowledge Map** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+| 4.142 | **SITE-002 — Stable Live M9.8.9 Filter Recovery Checkpoint + Technical Knowledge Map** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT** — superseded by 4.143 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.143 | **SITE-002 — Stable Live M9.8.9 Filter UX Complete Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
@@ -176,6 +178,23 @@
 
 ---
 
+## Run 4.143 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) — metadata-only stable checkpoint after filter recovery + filter UX polish
+- [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §7 Filter Architecture, §8 Live Files With Business Logic, PRE-TASK rule update
+- [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md) — registration report
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.8.9 Filter UX Complete 01
+
+**Site modification:** **NONE** — documentation only. No FTP. No deploy.
+
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
+
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
+
+**PRE-TASK RULE:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work; domain-specific rule for filter/catalog/1C/price/PLP in Knowledge Map §13.
+
+---
+
 ## Run 4.142 deliverables (summary)
 
 - [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) — metadata-only stable checkpoint after product reset, 1C import, filter recovery
@@ -185,7 +204,7 @@
 
 **Site modification:** **NONE** — documentation only. No FTP. No deploy.
 
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` — **superseded by 4.143**
 
 **Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`
 

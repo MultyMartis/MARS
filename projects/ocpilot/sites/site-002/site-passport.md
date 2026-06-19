@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 FILTER RECOVERY 01**  
-**Run:** Stable live checkpoint after product reset, fresh 1C import, filter recovery (2026-06-19)
+**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 FILTER UX COMPLETE 01**  
+**Run:** Stable live checkpoint after filter recovery + filter UX polish (2026-06-19)
 
 ---
 
@@ -14,18 +14,18 @@
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
 | **Version** | SAFE UNKNOWN |
-| **Baseline Match** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| **Baseline Match** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
 | **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
-| **Current Status** | **STABLE LIVE CHECKPOINT — M9.8.9 FILTER RECOVERY 01** |
-| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§10 Operator Manual JS Refinements](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#10-operator-manual-js-refinements) |
+| **Current Status** | **STABLE LIVE CHECKPOINT — M9.8.9 FILTER UX COMPLETE 01** |
+| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
-| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG REFINEMENTS ARE CANONICAL**. Post-reset catalog ~594 SKU; filters and price index recovered (06D–06M). Open: EC-01 (M9.8.7). M10 not authorized. |
+| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. Filter recovery (06D–06M) + filter UX (04–08A) + tooltips (01) complete. EC-01 mitigated by subcategories hide (07). M10 not authorized. |
 
 ---
 
@@ -33,7 +33,7 @@
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
@@ -46,23 +46,31 @@
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
 | Registered | 2026-06-19 |
 | Type | Metadata-only stable live checkpoint (operator attestation + pass QA) |
-| Supersedes (live truth) | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` |
-| Recovery scope | Product reset · fresh 1C import · price index · filter hotfixes (06H, 06J, 06M) |
+| Supersedes (live truth) | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| Recovery scope | Product reset · fresh 1C import · price index · filter hotfixes (06D–06M) |
+| Filter UX scope | Scroll (04/04B) · hide subcategories (07) · group reset (08/08A) |
+| Other UX | Wishlist/compare smart tooltips (01) |
 | Completed M9.8 passes | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
-| Operator manual passes | PLP / filter / breakpoint / CSS / Twig polish · **JS refinements (04B)** — filter scroll offset 0, sticky header trigger |
+| Operator manual passes | PLP / filter / breakpoint / CSS / Twig polish · **JS refinements (04B)** |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
-| Open bugs | **EC-01** — filter sidebar empty subcategories on branch 80 (M9.8.7) |
+| Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | Remaining M9.8.9 tasks per roadmap · deferred M9.8.3/4/6/8 · **M10** — not authorized |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md) |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md) |
 
-**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md)
+**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md)
 
 ---
 
 ## Prior checkpoints (historical)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| Doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
+| Scope | Filter recovery — superseded for live truth |
 
 | Field | Value |
 |-------|--------|
@@ -120,7 +128,8 @@
 - Operator manual PLP / filter / breakpoint / CSS / Twig polish
 - **Product reset + fresh 1C import**
 - **Price index recovery (06D, 06F)**
-- **Filter hotfixes (06H, 06J, 06M)**
+- **Filter UX polish (04, 04A, 04B, 07, 08, 08A)**
+- **Wishlist / Compare smart tooltips (01)**
 
 ### Активный этап
 
@@ -137,9 +146,10 @@ M9.8.3 Homepage Hero · M9.8.4 PLP Density · M9.8.6 UltraWide · M9.8.7 EC-01 �
 Before next SITE-002 change:
 
 1. Read [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md)
-2. Use `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` as authority
-3. Live-capture any files touched before deploy
-4. **Do not** start M10 without operator charter
+2. Use `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` as authority
+3. For filter / catalog / 1C / price / PLP — follow Knowledge Map §13 domain-specific PRE-TASK rule
+4. Live-capture any files touched before deploy
+5. **Do not** start M10 without operator charter
 
 Rollback = Beget full backup → current live TEST → file-level pass backups.
 

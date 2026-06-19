@@ -2,8 +2,8 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
-**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 FILTER RECOVERY 01** (2026-06-19)  
-**Run:** Stable checkpoint after product reset, fresh 1C import, filter recovery  
+**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 FILTER UX COMPLETE 01** (2026-06-19)  
+**Run:** Stable checkpoint after filter recovery + filter UX polish complete  
 **Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap)
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
@@ -22,10 +22,10 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
 | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual and behavioural authority |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
-| **Operator manual JS (04B)** | [knowledge §10](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#10-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic) |
+| **Operator manual JS (04B)** | [knowledge §12](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#12-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Conflict resolution** | If docs contradict current TEST → source of truth = live TEST on https://zpm.new-site.space/ |
 
 ---
@@ -59,19 +59,27 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
-| Status | **STABLE LIVE CHECKPOINT** — post product reset, 1C import, filter recovery |
-| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
+| Status | **STABLE LIVE CHECKPOINT** — filter recovery + filter UX polish complete |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Recovery | Product reset · 1C import · price index (06D/06F) · filters (06H/06J/06M) |
+| Filter UX | Scroll (04/04B) · hide subcategories (07) · group reset (08/08A) |
+| Other UX | Wishlist/compare smart tooltips (01) |
 | Completed M9.8 | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
 | Operator manual | PLP / filter / breakpoint / CSS / Twig polish · JS refinements (04B) |
-| Open bugs | EC-01 — filter sidebar empty subcategories on branch 80 (M9.8.7) |
+| Open bugs | EC-01 — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Roadmap | [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md) |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md) |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 
 ### Prior checkpoints (historical)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01` |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
+| Scope | Filter recovery — superseded for live truth |
 
 | Field | Value |
 |-------|--------|
@@ -125,6 +133,6 @@ Metadata stays in this repo tree; large archives stay external.
 ## Rules
 
 - No secrets. No live credentials.
-- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work.
+- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work; for filter/catalog/1C/price/PLP — follow domain-specific rule in Knowledge Map §13.
 - No site modifications, FTP, phpMyAdmin, or admin panel actions until chartered runs.
 - Do not invent URLs, hosting, or client names beyond operator-supplied registration facts.

@@ -2,11 +2,11 @@
 
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`  
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`  
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
-**Evidence cutoff:** M9.8.9 filter recovery wave (06C–06M), product reset, fresh 1C import.
+**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04, 04A, 04B, 07, 08, 08A) + M9.8.9-01 tooltips.
 
 ---
 
@@ -20,19 +20,19 @@
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
 | 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md) |
+| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
 
 ### Current stable state
 
-- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
-- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`
-- **Post-recovery:** clean product reset → fresh 1C import → price index recovery → filter hotfixes (06H, 06J, 06M)
+- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
+- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
+- **Post-recovery + UX:** filter recovery (06D–06M) → filter UX polish (04–08A) → wishlist/compare tooltips (01)
 
 ### Manual UI refinements are canonical
 
 Operator manual CSS, Twig, JS, and UX edits on live TEST are the **visual and behavioural authority**. Repo work copies (`*-work/`), prior STABLE folders, and `.pre-*.bak` from earlier passes are **historical** unless refreshed by live FTP capture.
 
-See also **§10 Operator Manual JS Refinements** (post M9.8.9-04A operator polish).
+See also **§12 Operator Manual JS Refinements** (post M9.8.9-04A/04B operator polish).
 
 ### Conflict resolution
 
@@ -318,7 +318,115 @@ Isolated `attr[51][]` URL works. Sidebar form also sends price params → before
 
 ---
 
-## 7. Overlay System
+## 7. Filter Architecture
+
+End-to-end PLP filter behaviour on live TEST (post M9.8.9 filter recovery + UX wave).
+
+### Filter sidebar
+
+| Layer | Location | Role |
+|-------|----------|------|
+| **Template** | `catalog/view/theme/default/template/sections/filterssidebar.twig` | Renders `[data-filters]` / `[data-filters-form]`; attribute groups `.flt__group`; price/LWH ranges; switches; global reset footer |
+| **Mobile shell** | Same twig + `style.css` | `[data-filter-sidebar]`, open/close hooks, `.category__sidebar__overlay` |
+| **Controller data** | `catalog/controller/product/category.php` | Builds `filter_groups`, `filter_subcategories`, price range, `filter_custom` from query |
+| **Profiles** | `system/library/zpm/filter_profiles/*.php` | Per-branch attribute visibility and sort weights |
+
+**Hidden subcategories policy (M9.8.9-07):** Sidebar block `<!-- SUBCATEGORIES -->` gated by `{% if false and filter_subcategories %}` — **UI only**. Controller, `filter_custom['s']`, and SQL `product_to_category` IN clause remain intact for restore.
+
+### AJAX flow
+
+```
+User change (checkbox / range / switch / group reset / global reset)
+  → syncChoiceClasses(root)          — visual .active on labels; group-reset disabled state (08A)
+  → updateBrowserUrl(form)           — serialize form → query param `filters` (+ preserve sort/limit)
+  → debounced updateProducts(root)   — fetch full category URL
+  → parse HTML → replace .category__grid + .pagination
+  → scrollToCategorySection()        — offset 0 (04B canonical)
+```
+
+Filter state is **not** a separate API — vanilla JS fetches the full PLP page and swaps grid fragments.
+
+### `syncChoiceClasses(root)`
+
+- Scoped to filter root `[data-filters]`
+- Toggles `.active` on `.flt__check` labels from `:checked` on `.flt__check-input`
+- Calls `updateGroupResetVisibility(root)` (08/08A) — `disabled` + `.is-active` on `[data-filter-group-reset]` per attribute group
+- Invoked on init, checkbox change, group reset, global reset
+
+### `updateBrowserUrl(form)`
+
+- Reads `[data-filters-form]` fields into semicolon-separated `filters` payload (PHP `parse_str` compatible)
+- Updates `history.replaceState` / URL without full navigation
+- Preserves non-filter query params (`sort`, `order`, `limit`, `page`)
+- Triggers debounced `updateProducts` via change handlers on checks and ranges
+
+### `updateProducts(root)`
+
+- `fetch(location.href)` — full category page
+- Replaces `.category__grid` and `.pagination` from response
+- Calls `scrollToCategorySection()` — targets category section anchor, **not** `grid.scrollIntoView` (04)
+- Re-inits pagination AJAX handlers on new DOM
+
+### Group reset (08 / 08A)
+
+| Item | Behaviour |
+|------|-----------|
+| Scope | Attribute checkbox groups only (not price, LWH, switches, subcategories) |
+| Trigger | `[data-filter-group-reset]` inside `.flt__group-body` (08A position) |
+| Action | Uncheck panel inputs; remove `.active`; `syncChoiceClasses` → `updateBrowserUrl` |
+| Visibility | Button always rendered; `disabled` when no selection; `.is-active` when group has checks |
+
+### Global reset
+
+- Footer control clears all checks, ranges to min/max, switches, search inputs
+- Resets URL to pathname; calls `updateProducts(root)`
+
+### Numeric attributes
+
+Attributes with **empty** `filter_name` render as `attr[47][]`, `attr[51][]` (numeric keys). SQL branch (06J): `pa.attribute_id = (int)$slug` instead of `ad.filter_name = '{slug}'`.
+
+### Effective price logic
+
+PLP filter/sort/count uses `oc_product_price_index` with expression:
+
+```sql
+IF(ppi.special IS NOT NULL AND ppi.special > 0, ppi.special, ppi.price)
+```
+
+**Not** `IFNULL(special, price)` — special=0 after offers import must fall back to base price (06M).
+
+### Price index dependency
+
+| Operation | Index touch |
+|-----------|-------------|
+| Catalog import (`1c`) | **No** automatic refresh |
+| Offers import (`1c_offers`) | `refreshPriceIndex(product_id)` per updated SKU (06F) |
+| `getCategoryPriceRange()` | Reads index; excludes `effective_price <= 0` (06H) |
+| `getProducts()` price filter/sort | Reads index effective price (06M) |
+
+Bulk catch-up: `reindex_prices.php` at site root (manual, not cron).
+
+**Evidence:** [SITE-002-M9.8.9-08-FILTER-GROUP-RESET-FORENSIC.md](../reports/SITE-002-M9.8.9-08-FILTER-GROUP-RESET-FORENSIC.md) · [SITE-002-M9.8.9-07-REMOVE-SUBCATEGORIES-FILTER-BLOCK.md](../reports/SITE-002-M9.8.9-07-REMOVE-SUBCATEGORIES-FILTER-BLOCK.md)
+
+---
+
+## 8. Live Files With Business Logic
+
+Canonical live paths on TEST — capture before any deploy in these areas.
+
+| File | Why it matters |
+|------|----------------|
+| `catalog/model/catalog/product.php` | **Filter SQL core** — `getProducts()`, `getTotalProducts()`, `getCategoryPriceRange()`; numeric attribute branch (06J); effective price expression (06M); zero-price exclusion (06H); `refreshPriceIndex()` / `getProductForIndex()` |
+| `catalog/controller/common/import_1C_offers.php` | **1C offers pipeline** — updates `oc_product.price` + `quantity`; calls `refreshPriceIndex()` after each product (06F); price index stays in sync with offers XML |
+| `catalog/view/theme/default/template/sections/filterssidebar.twig` | **Filter sidebar markup** — form structure, attribute groups, group-reset buttons (08/08A), subcategories hide gate (07), price/LWH ranges, global reset |
+| `assets/js/main.js` | **Filter client orchestration** — `syncChoiceClasses`, `updateBrowserUrl`, `updateProducts`, `scrollToCategorySection` (04/04B), `initGroupReset` (08/08A), wishlist/compare tooltips (01), global filter reset |
+| `assets/css/style.css` | **Filter + PLP presentation** — sidebar layout, `.flt__group-reset` states (08A), mobile filter shell, category grid density (operator polish), overlay coordination |
+
+**Rule:** Repo `*-work/` copies and `backups/*.pre-*` are deploy artefacts — **live TEST** is authority unless freshly captured.
+
+---
+
+## 9. Overlay System
 
 ### Global page overlay
 
@@ -377,7 +485,7 @@ Sidebar is `aria-hidden="true"` until opened; uses popup close button pattern (`
 
 ---
 
-## 8. PDP Architecture
+## 10. PDP Architecture
 
 ### Gallery (M9.8.1 — PDP Gallery Compact)
 
@@ -409,7 +517,7 @@ Uses `getProduct()` — **not** `oc_product_price_index`. Zero price → «По 
 
 ---
 
-## 9. Catalog Architecture
+## 11. Catalog Architecture
 
 ### Products Per Page (M9.8.5)
 
@@ -445,7 +553,7 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 
 ---
 
-## 10. Operator Manual JS Refinements
+## 12. Operator Manual JS Refinements
 
 **Registered:** M9.8.9-04B (2026-06-19) — operator manual edits on live TEST **after** M9.8.9-04A deploy pass.
 
@@ -486,17 +594,26 @@ Before **any** JS task touching header sticky behaviour or catalog filter scroll
 
 ---
 
-## 11. Operational Rules
+## 13. Operational Rules
 
-### PRE-TASK RULE (mandatory)
+### PRE-TASK RULE (mandatory — all SITE-002 tasks)
 
 Before **any** SITE-002 task:
 
 1. **Read** this Technical Knowledge Map
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md)
 3. **Verify Authority State** matches checkpoint name
 4. **Check Active Roadmap Stage** — [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md)
 5. **Only then** perform audit or changes
+
+### PRE-TASK RULE UPDATE (domain-specific)
+
+Before **any** task touching **filters**, **catalog**, **1C import**, **price**, or **PLP**:
+
+1. **Read** this Technical Knowledge Map — especially **§5 Price Index**, **§6 Filter System**, **§7 Filter Architecture**, **§8 Live Files With Business Logic**
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md)
+3. **Live-capture** the specific business-logic files in scope (`product.php`, `import_1C_offers.php`, `filterssidebar.twig`, `main.js`, `style.css`) before deploy
+4. Test isolated URL params **and** sidebar form submit; test `only_with_price` + attribute combos; verify price range min ≠ 0 when zero-price SKUs exist
 
 ### Deploy rules (summary)
 
@@ -533,4 +650,4 @@ Before **any** SITE-002 task:
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-19 (M9.8.9-04B operator manual JS refinements).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-19 (M9.8.9 Filter UX Complete checkpoint — §7 Filter Architecture, §8 Live Files, PRE-TASK rule update).*
