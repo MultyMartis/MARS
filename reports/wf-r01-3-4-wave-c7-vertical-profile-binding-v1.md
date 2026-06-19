@@ -409,9 +409,9 @@ PC: LANDING 1/1 · CATALOG corridor 1/1 — unchanged
 
 | Field | Value |
 |-------|-------|
-| **Commit hash** | `4319329` |
+| **Commit hash** | `4fe8aa7` |
 | **Commit message** | `foundry: publish WF-R01.3.4 vertical profiles` |
-| **Push result** | *(see push step)* |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `4fe8aa7` (no force) |
 | **Files committed** | Six selective paths only |
 | **No foreign lane confirmation** | Verified — staged diff contained no foreign WIP |
 
