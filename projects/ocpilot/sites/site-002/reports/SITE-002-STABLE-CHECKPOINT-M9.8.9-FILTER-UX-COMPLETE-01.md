@@ -116,8 +116,8 @@
 
 | Item | Value |
 |------|--------|
-| Commit | *(filled after commit)* |
-| Push | *(filled after push)* |
+| Commit | `31ba69c` |
+| Push | **done** |
 | Scope | Documentation only — no live files |
 
 ---
