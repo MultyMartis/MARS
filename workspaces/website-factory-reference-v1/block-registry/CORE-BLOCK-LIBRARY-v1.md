@@ -343,6 +343,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Inside FOOTER |
 | **Conversion value** | Compliance — not commercial |
 | **Site type compatibility** | All Core ● (production) |
+| **Reference** | `components/legal-links.html` — **PARTIAL** (WF-R01.3.2 Wave B2) |
 
 ---
 

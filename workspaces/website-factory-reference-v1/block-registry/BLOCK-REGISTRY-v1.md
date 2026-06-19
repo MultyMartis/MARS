@@ -600,6 +600,8 @@ Tier A structural blocks — F3 Block → Structural Subtype. Authority: [wf-r01
 | **dependencies** | **requires** Legal Pack v1 (FROZEN) |
 | **exclusions** | — |
 
+**Reference partial:** `components/legal-links.html` — **PARTIAL** (WF-R01.3.2 Wave B2)
+
 ---
 
 ### FOOTER

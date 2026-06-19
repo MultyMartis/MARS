@@ -46,7 +46,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| Reference SCSS coverage | **PARTIAL** | hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer |
+| Reference SCSS coverage | **PARTIAL** | hero, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links |
 | Motion / interaction per block | **NOT DEFINED** | `_motion.scss` exists; no block binding |
 | Dark/light theme per block | **NOT DEFINED** | |
 
@@ -68,7 +68,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| HTML partial contract per block_id | **PARTIAL** | 12 section partials; 15 blocks without partial |
+| HTML partial contract per block_id | **PARTIAL** | 13 section partials + 1 compositional component (`legal-links`); 14 blocks without partial |
 | Props / content slots schema | **NOT DEFINED** | v0 noted SAFE UNKNOWN |
 | Form field schemas (LEAD_FORM vs CHECKOUT) | **NOT DEFINED** | Consent Rule HTML only for consent |
 | Accessibility checklist per block | **NOT DEFINED** | |
@@ -120,7 +120,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | PAYMENT | — | Not implemented |
 | CHECKOUT | — | Not implemented |
 | CART | — | Not implemented |
-| LEGAL_LINKS | in footer (implicit) | No isolated partial |
+| LEGAL_LINKS | `components/legal-links.html` | **PARTIAL** — WF-R01.3.2 Wave B2 |
 | FOOTER | `footer.html` | **PARTIAL** — WF-R01.3.2 Wave B1 |
 
 ---

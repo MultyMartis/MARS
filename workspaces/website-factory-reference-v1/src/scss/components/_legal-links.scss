@@ -1,0 +1,51 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+.wf-legal-links {
+  min-width: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.wf-legal-links__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2 $space-4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: flex-start;
+
+  @include up($bp-md) {
+    justify-content: flex-end;
+  }
+}
+
+.wf-legal-links__item {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.wf-legal-links__link {
+  display: inline-block;
+  max-width: 100%;
+  color: $color-neutral-500;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    color: $color-neutral-200;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-white;
+    outline-offset: 2px;
+  }
+}
+
+@include down($bp-md) {
+  .wf-legal-links__list {
+    gap: $space-2 $space-3;
+  }
+}
