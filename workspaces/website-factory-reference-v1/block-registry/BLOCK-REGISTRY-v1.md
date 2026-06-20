@@ -130,6 +130,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | recommends `CASES`, `PROCESS` |
 | **exclusions** | Catalog-scale PLP (use CATALOG blocks) |
 
+**Reference partial:** `components/services.html` — **PARTIAL** (WF-R01.3 G2-R1 W3-B)
+
 ---
 
 ### CATEGORIES

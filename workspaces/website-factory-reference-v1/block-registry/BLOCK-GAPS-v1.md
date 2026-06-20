@@ -48,7 +48,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| Reference SCSS coverage | **PARTIAL** | hero, header-nav, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links, breadcrumbs, pagination, filters, search, categories, category-grid |
+| Reference SCSS coverage | **PARTIAL** | hero, header-nav, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links, breadcrumbs, pagination, filters, search, categories, category-grid, services |
 | Motion / interaction per block | **NOT DEFINED** | `_motion.scss` exists; no block binding |
 | Dark/light theme per block | **NOT DEFINED** | |
 
@@ -110,7 +110,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 |----------|-------------------|-----|
 | BENEFITS | `benefits.html` | **Implemented** — WF-R01.3.2 Wave A1 |
 | PROCESS | `process.html` | **Implemented** — WF-R01.3.2 Wave A2 |
-| SERVICES | — | Not implemented |
+| SERVICES | `components/services.html` | **PARTIAL** — WF-R01.3 G2-R1 W3-B |
 | CATEGORIES | `components/categories.html` | **PARTIAL** — WF-R01.3.4 Wave C4A |
 | CATEGORY_GRID | `components/category-grid.html` | **PARTIAL** — WF-R01.3.4 Wave C4A |
 | PRODUCT_GRID | `components/product-grid.html` | **PARTIAL** — WF-R01.3.4 Wave C4B |

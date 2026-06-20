@@ -70,6 +70,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | Home hub; `/services/` index |
 | **Conversion value** | Medium — discovery → service page conversion |
 | **Site type compatibility** | LANDING — · PROMO ● · CATALOG — · ECOMMERCE — · CORPORATE ● |
+| **Reference** | `components/services.html` — **PARTIAL** (WF-R01.3 G2-R1 W3-B) |
 
 ---
 
@@ -443,7 +444,8 @@ Per [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-fa
 | CATEGORY_GRID | category-grid.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4A) |
 | PRODUCT_GRID | product-grid.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4B) |
 | PRODUCT_CARD | product-card.html | ✓ **PARTIAL** (WF-R01.3.4 Wave C4B) |
-| SERVICES, FEATURES, … | — | **Not implemented** — registry-only v1.1 |
+| SERVICES | services.html | ✓ **PARTIAL** (WF-R01.3 G2-R1 W3-B) |
+| FEATURES, … | — | **Not implemented** — registry-only v1.1 |
 
 Modal callback: layout partial `modal_callback.html` — **not** separate block_id in v1 (see GAPS).
 
