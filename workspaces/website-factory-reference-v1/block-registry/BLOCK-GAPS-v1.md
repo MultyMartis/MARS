@@ -48,7 +48,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 
 | Gap | Status | Notes |
 |-----|--------|-------|
-| Reference SCSS coverage | **PARTIAL** | hero, header-nav, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links, breadcrumbs, pagination, filters, search, categories, category-grid, services |
+| Reference SCSS coverage | **PARTIAL** | hero, header-nav, benefits, process, testimonials, trust, pricing, lead_form, cta_band, contact_block, sticky_cta, faq, cases, footer, legal-links, breadcrumbs, pagination, filters, search, categories, category-grid, services, team |
 | Motion / interaction per block | **NOT DEFINED** | `_motion.scss` exists; no block binding |
 | Dark/light theme per block | **NOT DEFINED** | |
 
@@ -118,7 +118,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | TESTIMONIALS | `testimonials.html` | **Implemented** — WF-R01.3.2 Wave A3 |
 | TRUST | `trust.html` | **Implemented, narrowed** — WF-R01.3.2 Wave A3 |
 | CERTIFICATES | — | Not implemented |
-| TEAM | — | Not implemented |
+| TEAM | `components/team.html` | **PARTIAL** — WF-R01.3 G2-R1 W3-C |
 | ABOUT | — | Not implemented |
 | MAP | — | Not implemented |
 | PARTNERS | — | Not implemented |

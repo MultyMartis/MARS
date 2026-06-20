@@ -207,4 +207,4 @@ Open a **domain row** only when Core Run or a contract citation requires it.
 
 ---
 
-*Last updated: 2026-06-21 — WF-R01.3 G2-R1 W3-B **COMPLETE**; SERVICES **PARTIAL / T1+**; bounded host `promo-block-references.html`; Gate **G2 — CHARTERED** · **READY WITH BLOCKERS** · **NOT EVALUATED / NOT PASSED / NOT CLOSED**; RC **32/32** · RPC **24/32** · RSC **3/10** · SC **LANDING PASS · CATALOG PARTIAL** · PC **1/1 LANDING · 1/1 CATALOG corridor** — RSC/SC/PC **UNCHANGED**; G2-R1 **IN PROGRESS** (TEAM · ABOUT open); next: **WF-R01.3 G2-R1 W3-C — TEAM Reference Partial**.*
+*Last updated: 2026-06-21 — WF-R01.3 G2-R1 W3-C **COMPLETE**; TEAM **PARTIAL / T1+**; bounded host `promo-block-references.html` extended (SERVICES → TEAM); Gate **G2 — CHARTERED** · **READY WITH BLOCKERS** · **NOT EVALUATED / NOT PASSED / NOT CLOSED**; RC **32/32** · RPC **25/32** · RSC **3/10** · SC **LANDING PASS · CATALOG PARTIAL** · PC **1/1 LANDING · 1/1 CATALOG corridor** — RSC/SC/PC **UNCHANGED**; G2-R1 **IN PROGRESS** (ABOUT open); next: **WF-R01.3 G2-R1 W3-D — ABOUT Reference Partial**.*

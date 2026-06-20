@@ -346,6 +346,8 @@ Per-site-type stance — [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v
 | **dependencies** | often on `ABOUT` page |
 | **exclusions** | — |
 
+**Reference partial:** `components/team.html` — **PARTIAL** (WF-R01.3 G2-R1 W3-C)
+
 ---
 
 ### ABOUT
