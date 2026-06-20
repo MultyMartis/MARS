@@ -325,10 +325,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit hash** | *(pending commit)* |
-| **Metadata commit** | *(if required for report binding)* |
+| **Main commit hash** | `4733f13` |
+| **Metadata commit** | *(none required — hash populated pre-push)* |
 | **Commit message** | `foundry: complete G2-R1 TEAM reference` |
-| **Push result** | *(pending push)* |
+| **Push result** | **SUCCESS** — `4daff4b..4733f13` → `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | 10 paths per selective scope |
 | **No foreign lane confirmation** | **PASS** — staged set matches W3-C scope |
 
