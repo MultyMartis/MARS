@@ -385,7 +385,13 @@ G2-R3 / WF-R01.6 reconciliation before retest.
 
 ## 26. Git Result
 
-*Populated after selective commit.*
+| Item | Detail |
+|------|--------|
+| **Commit hash** | `f3b7a79` |
+| **Commit message** | `foundry: accept WF-R01.3 G2 formal gate charter` |
+| **Push result** | `origin/mars/post-cycle8-live-tests` updated `541e9fd..f3b7a79` |
+| **Files committed** | `projects/mars-website-factory/wf-r01-3-g2-formal-gate-pass-charter-v1.md` · `reports/wf-r01-3-g2-formal-gate-pass-charter-pass-v1.md` · `projects/mars-website-factory/roadmap.md` · `projects/mars-website-factory/OPERATIONAL-INDEX.md` |
+| **No foreign lane confirmation** | **Confirmed** — staged scope = 4 files only |
 
 ---
 
