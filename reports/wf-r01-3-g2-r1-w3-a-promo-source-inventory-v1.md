@@ -374,7 +374,13 @@ W3-B IMPLEMENTATION AUTHORIZED
 
 ## 27. Git Result
 
-*(Populated after selective commit and push.)*
+| Field | Value |
+|-------|-------|
+| **Commit hash** | `57903e6` |
+| **Commit message** | `foundry: publish G2-R1 W3 promo source inventory` |
+| **Push result** | **Success** — `9567b64..57903e6` → `origin/mars/post-cycle8-live-tests` |
+| **Files committed** | 4 — inventory v1, W3-A REPORT, roadmap, OPERATIONAL-INDEX |
+| **No foreign lane confirmation** | **Confirmed** — staged diff contained documentation only; no `src/`, block-registry, or recovery paths |
 
 ---
 
