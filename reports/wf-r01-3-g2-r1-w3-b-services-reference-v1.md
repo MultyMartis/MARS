@@ -323,12 +323,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit hash** | *(populated after commit — see below)* |
+| **Main commit hash** | `458e1dc` |
 | **Metadata commit** | **None** |
 | **Commit message** | `foundry: complete G2-R1 SERVICES reference` |
-| **Push result** | *(populated after push)* |
+| **Push result** | **SUCCESS** — `984a56a..458e1dc` → `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | 10 paths per selective scope |
-| **No foreign lane confirmation** | **Pending pre-commit staged review** |
+| **No foreign lane confirmation** | **PASS** — staged set matched W3-B scope exactly |
 
 **Selective commit paths:**
 
