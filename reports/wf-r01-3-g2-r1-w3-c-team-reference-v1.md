@@ -326,7 +326,7 @@
 | Field | Value |
 |-------|-------|
 | **Main commit hash** | `4733f13` |
-| **Metadata commit** | *(none required — hash populated pre-push)* |
+| **Metadata commit** | `eb960da` — docs: populate W3-C report git result section |
 | **Commit message** | `foundry: complete G2-R1 TEAM reference` |
 | **Push result** | **SUCCESS** — `4daff4b..4733f13` → `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | 10 paths per selective scope |
