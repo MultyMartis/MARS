@@ -297,9 +297,9 @@ Executes only after operator supplies concrete real pilot input.
 
 | Field | Value |
 |-------|-------|
-| **Commit** | *(populated after commit)* |
+| **Commit** | `6838701` — `foundry: publish Website Factory pilot readiness contract` |
 | **Branch** | `mars/post-cycle8-live-tests` |
-| **Push** | *(populated after push)* |
+| **Push** | **SUCCESS** — `03941f7..6838701` |
 | **Files committed** | 6 — contract · intake · matrix · report · roadmap · OPERATIONAL-INDEX |
 | **Foreign WIP** | **Excluded** |
 | **Force push** | **Not used** |
