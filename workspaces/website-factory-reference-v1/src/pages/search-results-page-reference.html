@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Search results page scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference scaffold for SEARCH_RESULTS_PAGE — query-driven results host with neutral demonstration content.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-search-results-page">
+    <div class="wf-search-results-page__inner wf-container">
+      @@include('../partials/components/breadcrumbs.html', {
+        "trail": "shallow",
+        "currentLabel": "Search results"
+      })
+
+      <section
+        class="wf-search-results-page__identity"
+        aria-labelledby="search-results-page-title"
+      >
+        <p class="wf-search-results-page__eyebrow">
+          Search
+        </p>
+
+        <h1
+          class="wf-search-results-page__title"
+          id="search-results-page-title"
+        >
+          Search results for “sample query”
+        </h1>
+      </section>
+
+      @@include('../partials/components/search.html', {
+        "variation": "expanded",
+        "blockId": "search",
+        "instanceId": "wf-search-results-search",
+        "inputId": "wf-search-results-input"
+      })
+
+      <p class="wf-search-results-page__summary">
+        12 results found
+      </p>
+
+      <div class="wf-search-results-page__sort">
+        <label for="search-results-sort">
+          Sort results
+        </label>
+
+        <select id="search-results-sort" name="sort">
+          <option>Relevance</option>
+          <option>Name</option>
+          <option>Newest</option>
+        </select>
+      </div>
+
+      <div class="wf-search-results-page__catalog">
+        <div class="wf-search-results-page__toolbar">
+          <button
+            type="button"
+            class="wf-search-results-page__filters-trigger"
+            data-filters-open
+            aria-expanded="false"
+            aria-controls="wf-filters-panel"
+          >
+            Filters
+          </button>
+        </div>
+
+        <div class="wf-search-results-page__layout">
+          @@include('../partials/components/filters.html')
+
+          <div class="wf-search-results-page__results">
+            @@include('../partials/components/product-grid.html')
+            @@include('../partials/components/pagination.html')
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="wf-search-results-page__empty"
+        aria-labelledby="search-results-empty-title"
+        hidden
+      >
+        <h2 id="search-results-empty-title">
+          No results found
+        </h2>
+
+        <p>
+          Try another fictional query or review the available reference categories.
+        </p>
+      </section>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/components/filters.js"></script>
+  <script src="js/components/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
