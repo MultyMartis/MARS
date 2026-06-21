@@ -337,12 +337,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit hash** | *(pending post-push update)* |
-| **Metadata commit** | *(if applicable)* |
+| **Main commit hash** | `775f627` |
+| **Metadata commit** | *(none in W3-D)* |
 | **Commit message** | `foundry: complete G2-R1 ABOUT reference` |
-| **Push result** | *(pending)* |
+| **Push result** | **SUCCESS** — pushed to `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | 10 W3-D paths (see §25) |
-| **No foreign lane confirmation** | **Pending staged review** |
+| **No foreign lane confirmation** | **Confirmed** — staged set matched W3-D scope exactly |
 
 ---
 
