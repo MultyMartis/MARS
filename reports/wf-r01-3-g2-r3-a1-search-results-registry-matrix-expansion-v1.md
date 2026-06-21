@@ -328,7 +328,13 @@ Coverage Model already listed `SEARCH_RESULTS_PAGE` in CATALOG minimum scaffolds
 
 ## 24. Git Result
 
-*(Populated after commit)*
+| Field | Value |
+|-------|-------|
+| **Main commit** | `430f9e1` |
+| **Commit message** | `foundry: register SEARCH_RESULTS_PAGE authority` |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` |
+| **Files committed** | 10 — A1 artefact · addenda · report · Registry · matrices · roadmap · OPERATIONAL-INDEX |
+| **No foreign lane** | **Confirmed** — staged scope matched selective list only |
 
 ---
 
