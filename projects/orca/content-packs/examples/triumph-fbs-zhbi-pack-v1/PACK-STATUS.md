@@ -2,7 +2,7 @@
 
 route_id: fbs-zhbi
 route_folder: fbs-zhbi
-url: https://manipulator-triumph.ru/perevozka-fbs-zhbi/
+url: https://manipulator-triumph.ru/fbs-zhbi.html
 display_path: fbs-zhbi
 content_coverage: true
 production_copy_ready: true

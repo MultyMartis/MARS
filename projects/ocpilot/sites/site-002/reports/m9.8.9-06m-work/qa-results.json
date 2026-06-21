@@ -1,0 +1,233 @@
+{
+  "task": "M9.8.9-06M",
+  "run_at": "2026-06-19T10:05:27.843349+00:00",
+  "categories": [
+    {
+      "id": "stoly",
+      "name": "Столы",
+      "category_id": 301,
+      "checks": {
+        "attr_filter": {
+          "filter": "attr[51][]=Без полки",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+          "product_cards": 15,
+          "pass": true
+        },
+        "only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1",
+          "product_cards": 15,
+          "pass": true
+        },
+        "sort_price_asc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?sort=p.price&order=ASC",
+          "product_cards": 14,
+          "prices_sample": [
+            5480.0,
+            5605.0,
+            5616.0,
+            5687.0,
+            5688.0,
+            5693.0,
+            5766.0,
+            5852.0
+          ],
+          "monotonic": true,
+          "pass": true
+        },
+        "sort_price_desc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?sort=p.price&order=DESC",
+          "product_cards": 15,
+          "prices_sample": [
+            79010.0,
+            75915.0,
+            75915.0,
+            72630.0,
+            72630.0,
+            72562.0,
+            71428.0,
+            71428.0
+          ],
+          "monotonic": true,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "podtovarniki",
+      "name": "Подтоварники и подставки",
+      "category_id": 322,
+      "checks": {
+        "attr_filter": {
+          "filter": "attr[51][]=600х400х300",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+          "product_cards": 1,
+          "pass": true
+        },
+        "only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=only_with_price=1",
+          "product_cards": 11,
+          "pass": true
+        },
+        "sort_price_asc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?sort=p.price&order=ASC",
+          "product_cards": 11,
+          "prices_sample": [
+            5151.0,
+            5449.0,
+            5579.0,
+            6294.0,
+            6426.0,
+            7068.0,
+            7813.0,
+            27593.0
+          ],
+          "monotonic": true,
+          "pass": true
+        },
+        "sort_price_desc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?sort=p.price&order=DESC",
+          "product_cards": 11,
+          "prices_sample": [
+            28636.0,
+            27593.0,
+            7813.0,
+            7068.0,
+            6426.0,
+            6294.0,
+            5579.0,
+            5449.0
+          ],
+          "monotonic": true,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "telezhki",
+      "name": "Тележки сервировочные",
+      "category_id": 326,
+      "checks": {
+        "attr_filter": {
+          "filter": "N/A (no attr sidebar — baseline only)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+          "product_cards": 3,
+          "pass": true,
+          "note": "baseline — no attribute sidebar on category"
+        },
+        "only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=only_with_price=1",
+          "product_cards": 3,
+          "pass": true
+        },
+        "sort_price_asc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?sort=p.price&order=ASC",
+          "product_cards": 3,
+          "prices_sample": [
+            13526.0,
+            16047.0
+          ],
+          "monotonic": true,
+          "pass": true
+        },
+        "sort_price_desc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?sort=p.price&order=DESC",
+          "product_cards": 3,
+          "prices_sample": [
+            13526.0,
+            12416.0
+          ],
+          "monotonic": true,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "moechnye",
+      "name": "Моечные ванны",
+      "category_id": 80,
+      "checks": {
+        "attr_filter": {
+          "filter": "attr[shell-size][]=1100х500х400",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=1100%D1%85500%D1%85400",
+          "product_cards": 2,
+          "pass": true
+        },
+        "only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=only_with_price=1",
+          "product_cards": 15,
+          "pass": true
+        },
+        "sort_price_asc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?sort=p.price&order=ASC",
+          "product_cards": 11,
+          "prices_sample": [
+            8132.0,
+            8406.0,
+            8532.0,
+            8663.0,
+            9460.0,
+            10028.0,
+            10259.0,
+            10288.0
+          ],
+          "monotonic": true,
+          "pass": true
+        },
+        "sort_price_desc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?sort=p.price&order=DESC",
+          "product_cards": 15,
+          "prices_sample": [
+            66258.0,
+            50767.0,
+            50053.0,
+            46635.0,
+            44208.0,
+            43895.0,
+            43895.0,
+            42688.0
+          ],
+          "monotonic": true,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "zonty",
+      "name": "Зонты вытяжные",
+      "category_id": 207,
+      "checks": {
+        "attr_filter": {
+          "filter": "attr[construction][]=разборная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=attr[construction][]=%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F",
+          "product_cards": 0,
+          "pass": false
+        },
+        "only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=only_with_price=1",
+          "product_cards": 1,
+          "pass": true
+        },
+        "sort_price_asc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?sort=p.price&order=ASC",
+          "product_cards": 1,
+          "prices_sample": [],
+          "monotonic": null,
+          "pass": true
+        },
+        "sort_price_desc": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?sort=p.price&order=DESC",
+          "product_cards": 1,
+          "prices_sample": [],
+          "monotonic": null,
+          "pass": true
+        }
+      },
+      "pass": false
+    }
+  ],
+  "all_pass": false
+}

@@ -1,6 +1,6 @@
 # Frontend Lessons v1 — Website Factory
 
-**Source workspace:** `triumph-manipulator-landing-v5`  
+**Source workspace (lessons era):** `triumph-manipulator-landing-v5` — **canonical edit surface today:** `triumph-manipulator-landing-v6`  
 **Cross-ref:** `projects/mars-website-factory/frontend-production-invariants-v1.md`
 
 ## Lessons learned (encode in ORCA → Factory bridge)

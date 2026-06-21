@@ -1,0 +1,107 @@
+<!-- OFFCANVAS SEACH -->
+<div class="zpm-mmenu" id="zpmMobileMenu" data-mobile-menu hidden aria-hidden="true">
+  <!-- КЛИК ПО ЭТОЙ ПОДЛОЖКЕ ЗАКРОЕТ  -->
+  <div class="zpm-mmenu__overlay" data-menu-close tabindex="-1" aria-hidden="true"></div>
+
+  <div class="zpm-mmenu__panel" role="dialog" aria-modal="true" aria-label="Меню">
+    <div class="zpm-mmenu__panel--inner">
+
+    <div class="zpm-mmenu__head">
+      Меню
+    </div>
+
+    <div class="zpm-mmenu__meta">
+      <a class="zpm-mmenu__phone-ofcanvas" href="tel:+73852721890" data-city-field="phone_link">
+        <span data-city-field="phone_text">8 (3852) 72-18-90</span>
+      </a>
+
+    </div>
+
+    <nav class="zpm-mmenu__nav" aria-label="Меню сайта">
+      <ul class="zpm-mmenu__list">
+        <!-- CATALOG (accordion) -->
+        <!-- <li class="zpm-mmenu__item zpm-mmenu__item--has-sub" data-mmenu-item>
+          <div class="zpm-mmenu__row">
+            <a class="zpm-mmenu__link" href="/catalog.html">Каталог</a>
+
+            <button
+              type="button"
+              class="zpm-mmenu__toggle"
+              data-mmenu-subtoggle
+              aria-label="Развернуть подкатегории"
+              aria-expanded="false"
+              aria-controls="mmenuCatalogSub"
+            >
+              <span class="zpm-mmenu__toggle-ico" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="zpm-mmenu__subwrap" aria-hidden="true">
+            <div class="zpm-mmenu__subinner">
+              <ul class="zpm-mmenu__sublist" id="mmenuCatalogSub">
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Нейтральное оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Хлебопекарное оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Кофейное оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Электромеханическое оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Торговое оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Упаковочное оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Тепловое оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Холодильное оборудование</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Запчасти</a></li>
+                <li class="zpm-mmenu__subitem"><a class="zpm-mmenu__sublink" href="#">Посуда и инвентарь</a></li>
+              </ul>
+            </div>
+          </div>
+        </li> -->
+
+        <!-- other links -->
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/katalog">Каталог</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/custom-equipment">Оборудование на заказ</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/payment-methods">Оплата</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/delivery">Доставка</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/dealers">Дилерам</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/guarantee">Гарантия</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/about">О компании</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/blog/news">Новости</a></li>
+        <li class="zpm-mmenu__item"><a class="zpm-mmenu__link" href="/contact">Контакты</a></li>
+
+
+
+
+
+      </ul>
+    </nav>
+    </div>
+
+    <div class="zpm-mmenu__bottom-panel">
+      <button
+        type="button"
+        class="btn btn_dark btn--primary"
+        data-fancybox
+        data-src="#zpmFbCallback"
+        data-zpm-fb-mode="2"
+      >
+        <span>Заказать звонок</span>
+      </button>
+
+      <!-- <button
+        type="button"
+        class="btn"
+        data-fancybox
+        data-src="#zpmFbQuestion"
+        data-zpm-fb-mode="2"
+      >
+        <span>Задать вопрос</span>
+      </button> -->
+
+      <button type="button" class="zpm-mmenu__place zpm-city-trigger btn" data-city-open aria-label="Выбрать город">
+        <span>Ваш город</span>
+      </button>
+    </div>
+
+    <button class="zpm-mmenu__close" type="button" data-menu-close aria-label="Закрыть меню" title="Закрыть меню">
+      <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__close"></use></svg>
+    </button>
+
+  </div>
+</div>

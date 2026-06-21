@@ -1,0 +1,22 @@
+{
+  "task": "M9.8.9-10",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01",
+  "stamp": "20260621-125817",
+  "phase": "post-deploy",
+  "files": [
+    {
+      "remote_path": "catalog/controller/product/category.php",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-10-work\\live-capture\\catalog__controller__product__category.php",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.php.pre-m9.8.9-10-page-intro-description.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-10-work\\catalog__controller__product__category.php.patched",
+      "sha256_pre": "7e5221b7df4f6e45782d7d2786b92ffe2ce0b0d8219e4e44c396650f9af424e6",
+      "sha256_patched": "05bf86805989471c411a27d07fdc7bd5216a090b0592c5e4407d8aedd0040db2",
+      "size_pre": 23442,
+      "size_patched": 23067,
+      "verify_sha256": "05bf86805989471c411a27d07fdc7bd5216a090b0592c5e4407d8aedd0040db2",
+      "deploy_ok": true
+    }
+  ],
+  "twig_cache_cleared": [],
+  "all_deploy_ok": true
+}

@@ -1,0 +1,1168 @@
+{
+  "homeTopLevelBlocks": [
+    {
+      "type": "FRAME",
+      "name": "1 - Главный экран",
+      "size": {
+        "w": 1440,
+        "h": 929
+      },
+      "childCount": 3,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "2 - Дом - вступление",
+      "size": {
+        "w": 1437,
+        "h": 1260
+      },
+      "childCount": 1,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "3- Услуги",
+      "size": {
+        "w": 1437,
+        "h": 1022
+      },
+      "childCount": 7,
+      "layoutMode": null,
+      "stackMode": "VERTICAL"
+    },
+    {
+      "type": "FRAME",
+      "name": "Нас выбирают",
+      "size": {
+        "w": 1437,
+        "h": 2114
+      },
+      "childCount": 1,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "Отзывы",
+      "size": {
+        "w": 1435,
+        "h": 429
+      },
+      "childCount": 6,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "С чего начать",
+      "size": {
+        "w": 1441,
+        "h": 1781
+      },
+      "childCount": 7,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "Программа центра",
+      "size": {
+        "w": 1437,
+        "h": 1563
+      },
+      "childCount": 2,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "Генотипирование",
+      "size": {
+        "w": 1440,
+        "h": 879
+      },
+      "childCount": 1,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "преимущества",
+      "size": {
+        "w": 1437,
+        "h": 1294
+      },
+      "childCount": 3,
+      "layoutMode": null,
+      "stackMode": "VERTICAL"
+    },
+    {
+      "type": "FRAME",
+      "name": "Слово спецу",
+      "size": {
+        "w": 1440,
+        "h": 511
+      },
+      "childCount": 6,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "FRAME",
+      "name": "Видео ",
+      "size": {
+        "w": 1437,
+        "h": 550
+      },
+      "childCount": 3,
+      "layoutMode": null,
+      "stackMode": "VERTICAL"
+    },
+    {
+      "type": "FRAME",
+      "name": "Специаисты",
+      "size": {
+        "w": 1437,
+        "h": 561
+      },
+      "childCount": 7,
+      "layoutMode": null,
+      "stackMode": "VERTICAL"
+    },
+    {
+      "type": "FRAME",
+      "name": "Статьи",
+      "size": {
+        "w": 1440,
+        "h": 511
+      },
+      "childCount": 2,
+      "layoutMode": null,
+      "stackMode": "VERTICAL"
+    },
+    {
+      "type": "FRAME",
+      "name": "faq",
+      "size": {
+        "w": 1440,
+        "h": 1517
+      },
+      "childCount": 3,
+      "layoutMode": null,
+      "stackMode": null
+    },
+    {
+      "type": "INSTANCE",
+      "name": "Подвал",
+      "size": {
+        "w": 1440,
+        "h": 488
+      },
+      "childCount": 0,
+      "layoutMode": null,
+      "stackMode": "VERTICAL"
+    }
+  ],
+  "homeTextSampleCount": 0,
+  "homeTextSamples": [],
+  "layoutModes": {
+    "stack:HORIZONTAL": 1647,
+    "stack:VERTICAL": 1532
+  },
+  "symbolCount": 76,
+  "uniqueSymbolNames": [
+    "Кнопка",
+    "search",
+    "Пункт",
+    "Property 1=Default",
+    "Property 1=адаптив",
+    "Ес",
+    "Property 1=моби",
+    "Property 1=Раскрыт",
+    "Property 1=Variant3",
+    "percent",
+    "Стрелка",
+    "Плей",
+    "play",
+    "Property 1=Variant2",
+    "Property 1=Variant4",
+    "Property 1=Variant5",
+    "Property 1=Variant6",
+    "Property 1=видео-отзыв",
+    "Property 1=со стороннего сайта",
+    "Property 1=из социальных сетей",
+    "Property 1=с сайта",
+    "Property 1=из соц.сетей",
+    "Property 1=2гис",
+    "Property 1=яндекс",
+    "Property 1=зоон",
+    "Property 1=Гугл",
+    "рейтинг",
+    "Property 1=скрытый",
+    "Важно ",
+    "Цифра",
+    "Поле ввода",
+    "mail",
+    "Подвал",
+    "Property 1=неактивный, Устройство=Деск",
+    "Property 1=показать ещё, Устройство=Деск",
+    "Property 1=активный, Устройство=Деск",
+    "Property 1=неактивный, Устройство=адаптив",
+    "Property 1=активный, Устройство=адаптив",
+    "Property 1=показать ещё, Устройство=адаптив",
+    "Frame 3600"
+  ],
+  "instanceCount": 954,
+  "instanceSample": [
+    {
+      "name": "Пункт",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 17
+      }
+    },
+    {
+      "name": "Пункт",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 17
+      }
+    },
+    {
+      "name": "Пункт",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 17
+      }
+    },
+    {
+      "name": "Пункт",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 17
+      }
+    },
+    {
+      "name": "Кнопка",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 8
+      }
+    },
+    {
+      "name": "Кнопка",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 8
+      }
+    },
+    {
+      "name": "Кнопка",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 8
+      }
+    },
+    {
+      "name": "Маркированный список 6",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 36
+      }
+    },
+    {
+      "name": "Маркированный список 3",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 36
+      }
+    },
+    {
+      "name": "Маркированный список 4",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 36
+      }
+    },
+    {
+      "name": "Маркированный список 5",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 36
+      }
+    },
+    {
+      "name": "Запись маленькая",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 50
+      }
+    },
+    {
+      "name": "percent",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 173
+      }
+    },
+    {
+      "name": "percent",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 173
+      }
+    },
+    {
+      "name": "Плей",
+      "symbolId": {
+        "sessionID": 1,
+        "localID": 227
+      }
+    }
+  ],
+  "variables": [
+    {
+      "name": "Color text"
+    },
+    {
+      "name": "Backgrounds/Primary"
+    },
+    {
+      "name": "Red blank"
+    },
+    {
+      "name": "white"
+    },
+    {
+      "name": "Back1"
+    },
+    {
+      "name": "Back2"
+    },
+    {
+      "name": "100"
+    },
+    {
+      "name": "40"
+    },
+    {
+      "name": "80"
+    },
+    {
+      "name": "Color / Primary 1"
+    },
+    {
+      "name": "60"
+    },
+    {
+      "name": "white"
+    },
+    {
+      "name": "red"
+    },
+    {
+      "name": "Scale 03"
+    },
+    {
+      "name": "Body/Size Medium"
+    },
+    {
+      "name": "100"
+    }
+  ],
+  "variableSets": [
+    "Variable collection",
+    "Colors",
+    "Variable collection",
+    "Variable collection",
+    "Variable collection",
+    "Typography Primitives",
+    "Typography"
+  ],
+  "internalCanvasChildren": [
+    {
+      "type": "TEXT",
+      "name": "Текст 14",
+      "size": {
+        "w": 53,
+        "h": 20
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Primary 1",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "white",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Variable collection",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Color text",
+      "size": null
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Primary 2",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Кнопка",
+      "size": {
+        "w": 334,
+        "h": 53
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "100",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "search",
+      "size": {
+        "w": 24,
+        "h": 24
+      }
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Colors",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Backgrounds/Primary",
+      "size": null
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 18 с отступами",
+      "size": {
+        "w": 98,
+        "h": 27
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Пункт",
+      "size": {
+        "w": 6,
+        "h": 22
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "80",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 18",
+      "size": {
+        "w": 68,
+        "h": 25
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Адаптив/Текст 16",
+      "size": {
+        "w": 61,
+        "h": 22
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Маркированный список",
+      "size": {
+        "w": 520,
+        "h": 110
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "#FFFFFF",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Ес",
+      "size": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Red blank",
+      "size": null
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Обводка темнее",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Маркированный список 2",
+      "size": {
+        "w": 946,
+        "h": 226
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Градиент легкий",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 16",
+      "size": {
+        "w": 61,
+        "h": 22
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Адаптив/Текст 15",
+      "size": {
+        "w": 57,
+        "h": 22
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Запись маленькая",
+      "size": {
+        "w": 910,
+        "h": 558
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Раскрытие информации",
+      "size": {
+        "w": 910,
+        "h": 2583
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Пункт услуги",
+      "size": {
+        "w": 390,
+        "h": 142
+      }
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Variable collection",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "white",
+      "size": null
+    },
+    {
+      "type": "SYMBOL",
+      "name": "percent",
+      "size": {
+        "w": 16,
+        "h": 16
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "40",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Услуга",
+      "size": {
+        "w": 403,
+        "h": 912
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Стрелка",
+      "size": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "80",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 18",
+      "size": {
+        "w": 63,
+        "h": 25
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "4 icons",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Обводка",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "2",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "White",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Плей",
+      "size": {
+        "w": 54,
+        "h": 54
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Light",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "White",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "1",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Текст 100",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "play",
+      "size": {
+        "w": 24,
+        "h": 24
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Иконки для отзывов",
+      "size": {
+        "w": 180,
+        "h": 980
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "тэг отзыва",
+      "size": {
+        "w": 254,
+        "h": 221
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "BG",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Иконки для отзывов",
+      "size": {
+        "w": 110,
+        "h": 560
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Рейтинг",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "рейтинг",
+      "size": {
+        "w": 24,
+        "h": 24
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Текст 60",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 15 med",
+      "size": {
+        "w": 58,
+        "h": 20
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Текст 80",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 15 рег",
+      "size": {
+        "w": 55,
+        "h": 20
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Primary темный",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Розовый",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "тэг отзыва",
+      "size": {
+        "w": 254,
+        "h": 204
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "отзыв",
+      "size": {
+        "w": 609,
+        "h": 1425
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 17",
+      "size": {
+        "w": 64,
+        "h": 25
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Важно ",
+      "size": {
+        "w": 1170,
+        "h": 135
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Цифра",
+      "size": {
+        "w": 70,
+        "h": 70
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "этап",
+      "size": {
+        "w": 910,
+        "h": 686
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "этап",
+      "size": {
+        "w": 320,
+        "h": 780
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Текст 17 с отступом",
+      "size": {
+        "w": 94,
+        "h": 25
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Врач",
+      "size": {
+        "w": 410,
+        "h": 1238
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Акция",
+      "size": {
+        "w": 410,
+        "h": 1178
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Расскрытие вопроса",
+      "size": {
+        "w": 910,
+        "h": 568
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Вопрос скрыт",
+      "size": {
+        "w": 910,
+        "h": 212
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "White",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Поле ввода",
+      "size": {
+        "w": 302,
+        "h": 77
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Текст 20",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Back1",
+      "size": null
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "Primary 1",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "mail",
+      "size": {
+        "w": 24,
+        "h": 24
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Подвал",
+      "size": {
+        "w": 1440,
+        "h": 509
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Тэг",
+      "size": {
+        "w": 463,
+        "h": 257
+      }
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Back2",
+      "size": null
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Variable collection",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "100",
+      "size": null
+    },
+    {
+      "type": "TEXT",
+      "name": "Н20",
+      "size": {
+        "w": 73,
+        "h": 26
+      }
+    },
+    {
+      "type": "VARIABLE",
+      "name": "40",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "80",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Color / Primary 1",
+      "size": null
+    },
+    {
+      "type": "TEXT",
+      "name": "Адаптив/Н18",
+      "size": {
+        "w": 66,
+        "h": 23
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Статья",
+      "size": {
+        "w": 410,
+        "h": 1236
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "color/white",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Variable collection",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "60",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "white",
+      "size": null
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "color/primary",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "ROUNDED_RECTANGLE",
+      "name": "color/black",
+      "size": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "1440/h5",
+      "size": {
+        "w": 58,
+        "h": 22
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Frame 3600",
+      "size": {
+        "w": 370,
+        "h": 22
+      }
+    },
+    {
+      "type": "VARIABLE",
+      "name": "red",
+      "size": null
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Typography Primitives",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Scale 03",
+      "size": null
+    },
+    {
+      "type": "VARIABLE_SET",
+      "name": "Typography",
+      "size": null
+    },
+    {
+      "type": "VARIABLE",
+      "name": "Body/Size Medium",
+      "size": null
+    },
+    {
+      "type": "TEXT",
+      "name": "Адаптив/16 с отступами",
+      "size": {
+        "w": 91,
+        "h": 24
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "Важно  моби",
+      "size": {
+        "w": 320,
+        "h": 259
+      }
+    },
+    {
+      "type": "FRAME",
+      "name": "Раскрытие информации адаптив",
+      "size": {
+        "w": 910,
+        "h": 2583
+      }
+    },
+    {
+      "type": "TEXT",
+      "name": "Адаптив/Текст 15 с отступом",
+      "size": {
+        "w": 87,
+        "h": 22
+      }
+    },
+    {
+      "type": "SYMBOL",
+      "name": "пагинация адаптив",
+      "size": {
+        "w": 298,
+        "h": 34
+      }
+    },
+    {
+      "type": "VARIABLE",
+      "name": "100",
+      "size": null
+    }
+  ],
+  "groupsCount": 0,
+  "sectionsCount": 0
+}

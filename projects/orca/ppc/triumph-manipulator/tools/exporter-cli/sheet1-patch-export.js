@@ -35,7 +35,7 @@ const {
   compareIndexes,
 } = require("./ooxml-forensics");
 
-const EXPORTER_LABEL = "ORCA Commander Region Import Fix v0.6";
+const EXPORTER_LABEL = "ORCA Commander Transport Split v1.4";
 const DEFAULT_IMPORT_REFINED_OUTPUT = path.join(
   __dirname,
   "output",
@@ -53,7 +53,7 @@ const DEFAULT_FEEDBACK_OUTPUT = path.join(
 );
 const DEFAULT_TEMPLATE = path.resolve(
   __dirname,
-  "../../assets/direct-commander-template/triumph-manipulator-commander-template-v0.xlsx"
+  "../../assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx"
 );
 const DEFAULT_OUTPUT = path.join(__dirname, "output", "triumph-sheet1-patch-draft.xlsx");
 const DEFAULT_CLEANUP_OUTPUT = path.join(
@@ -250,6 +250,7 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
 
   let integrity = { ok: true, code: "INTEGRITY_SKIPPED", message: "Integrity check skipped" };
   if (!skipIntegrity) {
+    const hasSplitTransport = fillRows.some((r) => r.transport_row_type);
     integrity = await runIntegrityCheck(outputPath, {
       sheetName: SHEET_NAME,
       dataStartRow: DATA_START_ROW,
@@ -257,6 +258,7 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
       mappedColumns: allowedColumns,
       columnsByKey: columns,
       probeLogicalKeys: ["groups.group_name", "keywords.phrase", "ads.headline_1"],
+      probeLogicalKeysMode: hasSplitTransport ? "any-row" : "first-row",
     });
 
     if (!integrity.ok) {

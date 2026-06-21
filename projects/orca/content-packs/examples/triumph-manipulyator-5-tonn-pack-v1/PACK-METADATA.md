@@ -7,8 +7,8 @@ pack_type: capability
 project_ref: triumph-manipulator-krasnodar
 route_id: manipulyator-5-tonn
 route_folder: 5-tonn
-route_slug: /manipulyator-5-tonn/
-canonical_url: https://manipulator-triumph.ru/manipulyator-5-tonn/
+route_slug: /5-tonn.html
+canonical_url: https://manipulator-triumph.ru/5-tonn.html
 display_path: manip-5-tonn
 data_page_type: ppc-5-tonn
 locale: ru-RU

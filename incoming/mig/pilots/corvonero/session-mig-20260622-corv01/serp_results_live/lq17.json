@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "lq17",
+  "stage": "mig_research_stage_2",
+  "captured_at": "2026-06-22T14:00:00.000Z",
+  "collection_date": "2026-06-22",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "region_lr": 65,
+  "city": "Новосибирск",
+  "device": "mobile",
+  "source_mode": "bounded_web_search_stage2",
+  "evidence_grade": "C",
+  "acquisition_limitations": [
+    "Direct Yandex HTTP fetch blocked by captcha (af-004) — not R1/R2 live SERP",
+    "Results from bounded web search synthesis; ad blocks and exact rank order not verified",
+    "Personalization and logged-in state: SAFE UNKNOWN",
+    "Maps/local pack visibility: partial — Yandex Maps org pages may appear in synthesis only"
+  ],
+  "separated_from": "serp_results/ (Stage 1 bounded capture q01-q09)",
+  "query": "маркировка в 1С Новосибирск",
+  "query_group": "labeling",
+  "research_label": "regulated-labeling",
+  "serp_type": "mixed_commercial",
+  "ads_blocks": {
+    "top_count": "SAFE UNKNOWN",
+    "bottom_count": "SAFE UNKNOWN",
+    "visible_patterns": []
+  },
+  "maps_local_pack": "not_observed",
+  "aggregators": [],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "AB OnlineKassa — маркировка Новосибирск",
+      "url": "https://novosibirsk.ab-onlinekassa.ru/markirovka/",
+      "surface_type": "commercial_service",
+      "player_scope": "labeling_specialist"
+    },
+    {
+      "position": 2,
+      "title": "Vigyana — маркировка в прайсе",
+      "url": "https://vigyana.ru/uslugi/1s-programmirovanie/",
+      "surface_type": "commercial_service",
+      "player_scope": "local_company"
+    },
+    {
+      "position": 3,
+      "title": "Мой бизнес НСО — Честный знак FAQ",
+      "url": "https://mbnso.ru/support/voprosy-po-rabote-v-sisteme-chestnyy-znak/",
+      "surface_type": "informational_official",
+      "player_scope": "non_competitor"
+    }
+  ],
+  "commercial_signal": "moderate",
+  "noise_signal": "moderate_informational"
+}

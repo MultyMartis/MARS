@@ -1,6 +1,6 @@
 # Website Factory — Block Dependency Rules v1
 
-**Версия:** v1  
+**Версия:** v1.1 *(WF-R01.2 Gate 2 — structural rules additive)*  
 **Область:** `workspaces/website-factory-reference-v1/block-registry/`  
 **Статус:** документированные связи между блоками — **documentation only**  
 **Связь:** [BLOCK-REGISTRY-v1.md](BLOCK-REGISTRY-v1.md), [../legal/LEGAL-PACK-v1-FREEZE.md](../legal/LEGAL-PACK-v1-FREEZE.md)
@@ -58,6 +58,7 @@ Dependency rules описывают **hard** (обязательные) и **sof
 | Block | Dependency | Rule |
 |-------|------------|------|
 | `PRODUCT_GRID` | **requires** `CATEGORIES` (tree or PLP route) | Grid привязан к category URL |
+| `PRODUCT_GRID` | **recommends** `FILTERS` | When filterable PLP — control surface vs result surface |
 | `CATEGORY_GRID` | **requires** `CATEGORIES` taxonomy | Tile grid without tree — invalid |
 | `CATEGORIES` | **recommends** breadcrumbs | Blueprint CATALOG — global nav context |
 | `PRODUCT_CARD` | **requires** `PRODUCT_PAGE` context on PDP | Card без PDP route — orphan on marketing pages |
@@ -79,6 +80,48 @@ Dependency rules описывают **hard** (обязательные) и **sof
 | `MAP` | `CONTACTS` | NAP + geo consistency |
 | `CERTIFICATES` | `TRUST` | Layered proof |
 | `CTA` | prior `INFORMATIONAL` blocks | Avoid premature ask |
+| `PRODUCT_GRID` | `FILTERS` | Filterable PLP — WF-R01.2 Gate 2 closure |
+
+---
+
+## Structural block dependencies (WF-R01.2 Gate 2)
+
+Authority: [wf-r01-2-structural-blocks-charter-v1.md](../../../projects/mars-website-factory/wf-r01-2-structural-blocks-charter-v1.md).
+
+### Hard dependencies
+
+| Block | Dependency | Rule |
+|-------|------------|------|
+| `FILTERS` | **requires** `PRODUCT_GRID` or list context | Filters without inventory view — invalid PLP |
+| `HEADER_NAV` | **requires** Blueprint global shell zone | Shell block without blueprint zone — architectural error |
+
+### Soft dependencies
+
+| Block | recommends | Rationale |
+|-------|------------|-----------|
+| `HEADER_NAV` | `FOOTER`, `LEGAL_LINKS` | Production shell pair |
+| `FILTERS` | `CATEGORIES`, `HEADER_NAV` | Taxonomy + shell context |
+| `SEARCH` | `HEADER_NAV` | Typical header placement |
+| `SEARCH` | `PRODUCT_GRID` on results page | Results list surface |
+| `SEARCH` | `FILTERS` (soft pair) | Catalog discovery refinement |
+
+### Exclusion dependencies (structural)
+
+| Block A | excludes (with) | Consequence |
+|---------|-----------------|-------------|
+| `HEADER_NAV` | `HERO` content absorption | HEADER ≠ HERO — [layout-shell-governance.md](../../../projects/mars-website-factory/layout-shell-governance.md) |
+| `FILTERS` | `LANDING`, `PROMO` site types | Catalog discovery only |
+| `FILTERS` | merge into `PRODUCT_GRID` markup | Separate control vs result surfaces |
+| `SEARCH` | primary conversion on `LANDING` | Discovery primitive — not LANDING primary CTA |
+| `MEGA_MENU`, `MOBILE_NAV_DRAWER`, `UTILITY_NAV` | separate `block_id` | HEADER_NAV variants/composition only |
+
+### Catalog surface ordering (constraint graph)
+
+```text
+HEADER_NAV → [BREADCRUMBS layout] → [page intro] → FILTERS → PRODUCT_GRID → [PAGINATION layout] → FOOTER
+```
+
+BREADCRUMBS and PAGINATION — layout-component policy (Tier B); not Gate 2 `block_id` rows.
 
 ---
 
@@ -145,4 +188,4 @@ DELIVERY (parallel info)
 
 ---
 
-*Dependency rules version: v1.*
+*Dependency rules version: v1.1 (WF-R01.2 Gate 2 structural slice).*

@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "description": "MIG Task File Adapter — request_id to session linkage",
+  "updated_at": "2026-06-03T19:59:19.088Z",
+  "entries": {
+    "req-or10-verify01": {
+      "request_id": "req-or10-verify01",
+      "status": "completed",
+      "session_id": "mig-20260603-458830",
+      "transport_ref": "incoming/mig/requests/request-req-or10-verify01.json",
+      "processed_at": "2026-06-03T19:59:19.087Z",
+      "folder_path": "C:\\AI MARS\\projects\\mig\\test\\.verify-adapter-or10-sDOyYK\\sessions\\mig-20260603-458830",
+      "error": null
+    }
+  }
+}

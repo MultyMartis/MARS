@@ -1,7 +1,7 @@
 # EAR Runtime State
 
 **Type:** Honest program status — update on charter or implementation milestones  
-**Last updated:** 2026-06-07 (Execution Authorization Review — SITE-001 dry-run execution gate)
+**Last updated:** 2026-06-07 (SITE-001 Dry Run execution — mock/in-memory operator rehearsal complete)
 
 ---
 
@@ -105,7 +105,7 @@
 | **SITE-001 dry-run planning** | **COMPLETE** — plan published |
 | **Execution Authorization Review** | **COMPLETE** — [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md); [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) (**AUTHORIZED WITH NOTES**) |
 | **SITE-001 dry-run execution (HG-0)** | **AUTHORIZED WITH NOTES** — mock/in-memory path only; human sign-off pending on decision |
-| **SITE-001 dry-run executed** | **NO** — 0 operator dry runs completed |
+| **SITE-001 dry-run executed** | **YES** — 1 operator dry run completed — [SITE-001-DRY-RUN-EXECUTION-v1.md](SITE-001-DRY-RUN-EXECUTION-v1.md); [SITE-001-DRY-RUN-DECISION-v1.md](SITE-001-DRY-RUN-DECISION-v1.md) (**PASS WITH NOTES**) |
 | **Config loader** | **CREATED** |
 | **Connection Layer** | **CREATED** |
 | **Listing Model** | **CREATED** |
@@ -374,3 +374,4 @@ Runtime pilot artefacts folder: [pilots/](pilots/) — empty at engineering char
 | 2026-06-07 | EAR Stable Baseline 2026-06 — **FROZEN**; [EAR-STABLE-BASELINE-2026-06.md](EAR-STABLE-BASELINE-2026-06.md) — architecture + runtime foundation freeze point; Mock E2E PASS ≠ live readiness; next phase SITE-001 dry-run planning |
 | 2026-06-07 | SITE-001 Dry Run Plan v1 — **DONE**; [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) — operator procedure plan; mock/in-memory path only; dry-run execution **NOT AUTHORIZED** at plan publication; PILOT-001 **NOT AUTHORIZED** |
 | 2026-06-07 | Execution Authorization Review v1 — **DONE**; [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md); [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) — **AUTHORIZED WITH NOTES** for SITE-001 dry-run execution (HG-0); mock/in-memory only; PILOT-001 **NOT AUTHORIZED**; next **SITE-001 Dry Run (operator rehearsal)** |
+| 2026-06-07 | SITE-001 Dry Run execution v1 — **DONE**; [SITE-001-DRY-RUN-EXECUTION-v1.md](SITE-001-DRY-RUN-EXECUTION-v1.md); [SITE-001-DRY-RUN-DECISION-v1.md](SITE-001-DRY-RUN-DECISION-v1.md) — **PASS WITH NOTES**; mock/in-memory only; HG-1/HG-2 recorded; PILOT-001 **NOT AUTHORIZED**; next **HG-4 Execution Authorization Review** |

@@ -81,9 +81,25 @@ Unstaged WIP in working tree is **allowed** (~590 entries at publication) — ba
 
 ---
 
+## Post-cleanup ecosystem alignment
+
+| Field | Value |
+|-------|--------|
+| **Checkpoint** | `aafacf8df52d2441bfa2e0f7abc9af9ade7ad7c8` |
+| **Label** | `post-cleanup-ecosystem-alignment-2026-06` |
+| **Evidence** | `logs/releases/post-cleanup-ecosystem-alignment-2026-06.md` (commit `38e7b64` docs evidence) |
+
+**Scope (appended to baseline, not a new product version):** Cleanup Program closeout; Visual Brain Refresh (canvas pack); GitGuard REGISTERED; IdeaBox optional Incubation Layer; Incoming hybrid model; Lifecycle Log KEEP; ISBD execution case; Triumph v6 canonical workspace.
+
+**Clarification:** This alignment **does not** supersede `45518bb`, **does not** create MARS v3, and **does not** change runtime boundary rules in `10_RUNTIME_BOUNDARY_RULES.md`.
+
+---
+
 ## Web-GPT pack relationship
 
 This folder (`mars-v2-stable-baseline-2026-06/`) is the **upload-facing** distillate of the published baseline. Use `WEB-GPT-SOURCE-PACK-INDEX.md` for human upload order.
+
+Post-cleanup cosmetic refresh (2026-06): same folder — see `web-gpt-sources/REPORT-WEB-GPT-PACK-COSMETIC-REFRESH-2026-06.md`.
 
 ---
 

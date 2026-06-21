@@ -1,0 +1,25 @@
+{
+  "task": "M9.8.9-06M",
+  "authority": "SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01",
+  "basis": [
+    "M9.8.9-06K",
+    "M9.8.9-06L"
+  ],
+  "stamp": "20260619-100258",
+  "remote_path": "catalog/model/catalog/product.php",
+  "phase": "pre-deploy",
+  "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06m-work\\live-capture\\catalog__model__catalog__product.php",
+  "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\product.php.pre-m9.8.9-06m-effective-price.bak",
+  "sha256": "2e3faeed496d9b48dcce7c7d13ba4659536a7ac732ca88504cfe24b162584d9f",
+  "size": 59528,
+  "patch": {
+    "old": "IFNULL(ppi.special, ppi.price)",
+    "new": "IF(ppi.special IS NOT NULL AND ppi.special > 0, ppi.special, ppi.price)",
+    "replacements": 3,
+    "locations": [
+      "getProducts() $effective_price",
+      "getProducts() ORDER BY p.price",
+      "getTotalProducts() $effective_price"
+    ]
+  }
+}

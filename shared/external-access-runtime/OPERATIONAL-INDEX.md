@@ -25,7 +25,7 @@
 | Program | Status | Next |
 |---------|--------|------|
 | **EAR Architecture Program** | **COMPLETE** (frozen 2026-06-01) | Amendments only via explicit Architecture Amendment Charter |
-| **EAR Runtime Program** | **NOT STARTED** | **EAR Runtime v1 Engineering Charter** — engineering home: [projects/ear-runtime/](../../projects/ear-runtime/OPERATIONAL-INDEX.md) · entry: [freeze/EAR-RUNTIME-TRANSITION-v1/EAR-NEXT-STAGE-v1.md](freeze/EAR-RUNTIME-TRANSITION-v1/EAR-NEXT-STAGE-v1.md) |
+| **EAR Runtime Program** | **STARTED** | R1.3 Connection Layer Skeleton — [projects/ear-runtime/](../../projects/ear-runtime/OPERATIONAL-INDEX.md) · state: [EAR-RUNTIME-STATE.md](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) |
 
 
 
@@ -207,7 +207,7 @@
 
 | **—** | **Architecture freeze** | **DONE** | Runtime Program — Engineering Charter |
 
-| **—** | **EAR Runtime Program** | **NOT STARTED** | [projects/ear-runtime/](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) · [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md) |
+| **—** | **EAR Runtime Program** | **STARTED** | [projects/ear-runtime/](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) · R1.3 next · [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md) |
 
 
 

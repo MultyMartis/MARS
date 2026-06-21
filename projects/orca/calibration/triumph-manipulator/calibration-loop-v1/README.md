@@ -22,11 +22,11 @@
 | PPC instance | `projects/orca/ppc/triumph-manipulator/schema/instances/triumph-s-tier-draft-v1.json` → `grp_fc12_zakaz` |
 | Content pack (cousin) | `projects/orca/content-packs/examples/triumph-manipulyator-5-tonn-pack-v0.md` |
 | Handoff | **NONE for zakaz** — 5-ton handoff used as structural pattern only |
-| Factory as-built | `workspaces/triumph-manipulator-landing-v5/src/pages/index.html` |
-| Hero partial | `workspaces/triumph-manipulator-landing-v5/src/partials/sections/v5-ppc/zakaz/screen-01-hero.html` |
-| Hero SCSS | `workspaces/triumph-manipulator-landing-v5/src/scss/sections/_v5-hero-extensions.scss` |
+| Factory as-built (canonical v6) | `workspaces/triumph-manipulator-landing-v6/src/pages/index.html` |
+| Hero partial | `workspaces/triumph-manipulator-landing-v6/src/partials/sections/v5-ppc/zakaz/screen-01-hero.html` |
+| Hero SCSS | `workspaces/triumph-manipulator-landing-v6/src/scss/sections/_v5-hero-extensions.scss` |
 | Legacy anti-pattern | `workspaces/triumph-manipulator-landing-v4/src/partials/sections/screen-01-hero.html` |
-| Factory QA reports | `workspaces/triumph-manipulator-landing-v5/reports/v5-baseline-audit-v1.md`, `v5-production-hardening-audit-v1.md` |
+| Factory QA reports (v5 era, historical) | `workspaces/triumph-manipulator-landing-v5/reports/v5-baseline-audit-v1.md`, `v5-production-hardening-audit-v1.md` |
 
 ## Loop questions (answered in subfolders)
 

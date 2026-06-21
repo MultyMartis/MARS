@@ -1,0 +1,55 @@
+{
+  "task": "M9 Phase 2 Sink profile QA",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space",
+  "executed_at_utc": "2026-06-14T19:53:23.350004+00:00",
+  "summary": {
+    "pass": 7,
+    "fail": 0,
+    "unknown": 0
+  },
+  "checks": [
+    {
+      "id": "QA-01",
+      "path": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "status": "pass",
+      "detail": "Моечные ванны PLP (SEO URL) status=200 primary=8/8 secondary_section=True profile_layout=True secondary_markers=['Дополнительные параметры', 'Отверстие под смеситель', 'Конструкция борта', 'Ножки', 'Конструкция'] hidden_hits=[]"
+    },
+    {
+      "id": "QA-02",
+      "path": "/index.php?route=product/category&path=80",
+      "status": "pass",
+      "detail": "Моечные ванны PLP (path=80) status=200 primary=8/8 secondary_section=True profile_layout=True secondary_markers=['Дополнительные параметры', 'Отверстие под смеситель', 'Конструкция борта', 'Ножки', 'Конструкция'] hidden_hits=[]"
+    },
+    {
+      "id": "QA-03",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/",
+      "status": "pass",
+      "detail": "Столы PLP regression (profile 301) status=200 primary=10/10 secondary_section=True hidden_hits=[]"
+    },
+    {
+      "id": "QA-04",
+      "path": "/index.php?route=product/category&path=301",
+      "status": "pass",
+      "detail": "Столы PLP regression (path=301) status=200 primary=10/10 secondary_section=True hidden_hits=[]"
+    },
+    {
+      "id": "QA-05",
+      "path": "/katalog/nejtralnoe-oborudovanie",
+      "status": "pass",
+      "detail": "Neutral hub status=200"
+    },
+    {
+      "id": "QA-06",
+      "path": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "status": "pass",
+      "detail": "PDP status=200"
+    },
+    {
+      "id": "QA-07",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": "pass",
+      "detail": "PDP status=200"
+    }
+  ]
+}

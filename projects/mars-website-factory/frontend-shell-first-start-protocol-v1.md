@@ -14,6 +14,10 @@
 | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) | Section spacing tokens required in Production Standards |
 | [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) | Mandatory Foundation Demo Page composition |
 | [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) | Token/visual review before Foundation QA |
+| [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) | Compiled CSS + Operator Law enforcement |
+| [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) | Operator Visual Review gate after every visual stage |
+| [layout-spec-law-v1.md](layout-spec-law-v1.md) | **Layout Spec Gate** — composition spec before HTML/CSS; operator APPROVED |
+| [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md) | **Clean Shell baseline** — HEADER/MAIN/FOOTER NOT STARTED only; before Layout Spec |
 | [layout-shell-governance.md](layout-shell-governance.md) | HEADER != HERO; shell ownership |
 | [frontend-production-rules-v0.md](frontend-production-rules-v0.md) | Source-first, build discipline |
 | [website-factory-workflow-v0.md](website-factory-workflow-v0.md) | S10 Handoff → S11 Production |
@@ -33,6 +37,10 @@ Factory workflows historically allowed operators to request **«сверстат
 - **Desktop-first base** verification before mobile shell pass
 
 **Gap identified (FP-0002 audit 2026-06-13):** Factory had **layout-shell-governance** and **cadence** methodology but **no mandatory start sequence** that forces Production Standards + foundation before Home page.
+
+**Gap identified (FP-0002 header failure 2026-06-14):** Agent could receive Visual SSOT and implement Header from **internal composition interpretation** without a mandatory **Layout Spec** — closed by [layout-spec-law-v1.md](layout-spec-law-v1.md).
+
+**Gap identified (FP-0002 RESET V3 2026-06-14):** Rich gulp-starter / foundation demo residue invited agent reuse before Layout Spec — closed by [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md).
 
 ---
 
@@ -73,6 +81,29 @@ When Website Factory receives a frontend production request:
 
 **Rule:** If operator asks for Home page first → **redirect to Phase 1–3**; cite this protocol. Draft alone does **not** unlock Shell — **Mapping QA PASS** and **Approval PASS** required.
 
+### Phase 0.5 — Clean Shell gate (before Layout Spec)
+
+**Authority:** [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md)
+
+| # | Deliverable | Blocks Layout Spec if missing |
+|---|-------------|-------------------------------|
+| 0.5.1 | Workspace on **Canonical Clean Shell v1** — `desktop-shell.html` with NOT STARTED markers only | **Yes** |
+| 0.5.2 | No forbidden starter residue (header html, ui-demo, tokens, buttons, hero, etc.) | **Yes** |
+
+**Rule:** Boring screen = correct. **AGENT HAS NOT STARTED INVENTING.**
+
+### Phase 0.6 — Layout Spec gate (before shell HTML)
+
+**Authority:** [layout-spec-law-v1.md](layout-spec-law-v1.md)
+
+| # | Deliverable | Blocks shell HTML if missing |
+|---|-------------|------------------------------|
+| 0.6.1 | **Layout Spec — Header** | **Yes** |
+| 0.6.2 | **Layout Spec — Footer** | **Yes** |
+| 0.6.3 | Operator decision **APPROVED** on each spec | **Yes** |
+
+**Rule:** **Forbidden** path: `Visual SSOT → Header/Footer HTML/CSS`. Agent **must stop** after Layout Spec until operator **APPROVED**.
+
 ### Phase 1 — Base shell (not Home)
 
 | # | Step | Output |
@@ -88,15 +119,16 @@ When Website Factory receives a frontend production request:
 | 2.1 | Global reset, base, typography tokens | `src/scss/base/` |
 | 2.2 | Default content styles (lists, links, quotes, tables) | `src/scss/base/` or `components/` |
 | 2.3 | Header + footer styles (desktop) | `src/scss/layout/` |
-| 2.4 | Logo, favicon, core assets wired | `src/img/`, `src/favicon/` |
+| 2.4 | Logo, favicon, core assets wired | `src/img/`, `src/favicon/` — logo selection per [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md) when FIG has multi-brand candidates |
 
 ### Phase 3 — Desktop verification
 
 | # | Step | Evidence |
 |---|------|----------|
 | 3.1 | Build succeeds | `npm run build` log in REPORT |
-| 3.2 | Desktop QA: shell + demo page at ≥1024px | REPORT § QA |
+| 3.2 | Desktop QA: shell + demo page at ≥1024px | REPORT § QA + **OPERATOR VISUAL REVIEW** §5.7 |
 | 3.3 | Production Standards spot-check (radius, type, spacing samples visible on demo page) | Lead ack or REPORT |
+| 3.4 | **STOP** — operator visual review required before Phase 4 | [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) §5 — agent must request: «Откройте страницу. Проверьте результат. Требуется решение оператора.» |
 
 ### Phase 4 — Mobile shell pass
 
@@ -112,8 +144,10 @@ When Website Factory receives a frontend production request:
 | # | Step | Authority |
 |---|------|-----------|
 | 4b.1 | Token spot-check on Foundation Demo Page vs Production Standards | [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) §5 |
-| 4b.2 | Lead acknowledgment — `DESIGN CALIBRATION — PASS \| partial \| FAIL` | §6–7 |
-| 4b.3 | Correction loop if FAIL — no Home work until PASS or approved partial | §7 |
+| 4b.2 | **COMPILED CSS SPOT-CHECK** on `dist/*.css` + Operator Law compliance | Calibration §5.7 · Enforcement Pack EG-02 |
+| 4b.3 | Lead acknowledgment — `DESIGN CALIBRATION — PASS \| PASS WITH NOTES \| FAIL` | §6–7 |
+| 4b.4 | Correction loop if FAIL — no Home work until PASS or approved partial | §7 |
+| 4b.5 | **OPERATOR VISUAL REVIEW** — Design Calibration close | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.7 · **DESIGN CALIBRATION PASS ≠ OPERATOR APPROVAL** |
 
 ### Phase 5 — Foundation QA gate
 
@@ -124,11 +158,13 @@ When Website Factory receives a frontend production request:
 | 5.1 | Visual Foundation Contract complete ([frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) §3) |
 | 5.2 | Design Calibration PASS recorded |
 | 5.3 | No Home page sections implemented yet |
-| 5.4 | `# REPORT — <project> foundation QA` filed per [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.1 |
+| 5.4 | Enforcement gates: Operator Law, Compiled CSS, Inline Style, Authority Conflict, **ROOT COMPLIANCE** | [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) §6.13–6.17 |
+| 5.5 | `# REPORT — <project> foundation QA` filed per [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.1 + §5.4 + §5.7 |
+| 5.6 | **OPERATOR VISUAL REVIEW** — **OPERATOR VISUAL ACCEPT — ACCEPT** on foundation demo URL | [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) · **FOUNDATION QA PASS ≠ OPERATOR APPROVAL** |
 
 ### Phase 6 — Page production (Home and others)
 
-Only after Phase 5 PASS or Lead waiver:
+Only after Phase 5 technical PASS **and** Phase 5.6 **OPERATOR VISUAL ACCEPT — ACCEPT** (or Lead waiver):
 
 - Home page (PG-001)
 - Inner pages per Page Inventory / handoff
@@ -167,7 +203,10 @@ Minimum demo blocks on the foundation page (legacy summary — do not treat as n
 | Missing Production Standards Draft | **STOP** — start Draft per [production-standards-governance-v1.md](production-standards-governance-v1.md) |
 | Draft exists, not approved | **STOP** — route to Lead for Approval; no Shell |
 | Missing section spacing tokens | **STOP** — map [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) |
-| Existing foundation REPORT + approved standards | May proceed to requested page |
+| Workspace not on Clean Shell (starter demo, ui-demo, chrome visible) | **STOP** — [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md) |
+| Header/Footer HTML requested; Layout Spec missing or not APPROVED | **STOP** — [layout-spec-law-v1.md](layout-spec-law-v1.md) |
+| Existing foundation REPORT + approved standards | May proceed to requested page **only if** **OPERATOR VISUAL ACCEPT — ACCEPT** recorded for foundation close |
+| Agent closes visual stage without operator page review request | **STOP** — workflow violation per [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) §12 |
 
 ---
 
@@ -199,3 +238,7 @@ Minimum demo blocks on the foundation page (legacy summary — do not treat as n
 | 2026-06-13 | v1.1 — Evolution Pack: stage chain, Design Calibration phase, Visual Foundation Contract pointer. |
 | 2026-06-13 | v1.2 — Production Standards Governance Pack: Draft + Approval split; Phase 0 aligned to [production-standards-governance-v1.md](production-standards-governance-v1.md). |
 | 2026-06-13 | v1.3 — [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) pointer in Related. |
+| 2026-06-14 | v1.4 — Enforcement Pack v1: Phase 4b compiled CSS spot-check; Phase 5 enforcement + ROOT COMPLIANCE. |
+| 2026-06-14 | v1.5 — Operator Visual Approval Law: Phase 3.4 / 4b.5 / 5.6 operator visual review gates. |
+| 2026-06-14 | v1.6 — Layout Spec Law: Phase 0.6 gate before shell HTML; [layout-spec-law-v1.md](layout-spec-law-v1.md). |
+| 2026-06-14 | v1.7 — Canonical Clean Shell v1: Phase 0.5 gate; [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md). |

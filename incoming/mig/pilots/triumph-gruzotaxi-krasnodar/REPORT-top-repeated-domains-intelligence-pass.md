@@ -7,10 +7,10 @@ Entity classification from `mig-20260604-mqgt01` competitor-frequency-table and 
 | Type | Count | Examples |
 | --- | --- | --- |
 | SERVICE_BRAND | 5 | gruzovichec.ru, krasnodar.gruzovichkof.ru, gruzotaxi-triumph.ru |
-| AGGREGATOR | 5 | uslugi.yandex.ru, dostavka.yandex.ru, profi.ru, taxi.yandex.ru, 2gis.ru |
-| MARKETPLACE | 4 | m.avito.ru, youla.ru, auto.ru, auto.drom.ru |
+| AGGREGATOR | 2 | uslugi.yandex.ru, dostavka.yandex.ru, profi.ru |
+| MARKETPLACE | 7 | m.avito.ru, youla.ru, auto.ru |
 | DIRECTORY | 1 | 2gis.ru |
-| PLATFORM | 1 | dostavista.ru |
+| PLATFORM | 3 | dostavista.ru, taxi.yandex.ru, dostavka.yandex.ru |
 | CLIENT | 4 | perivoz.ru, krasnodar.bystraya-logistika.ru |
 
 Full table: `session-mig-20260605-mlint01/entity-classification-proposal.md`
@@ -84,14 +84,6 @@ Analysis phase: `landing_analysis_v2` (schema 0.2)
 
 See `session-mig-20260605-mlint01/market-leader-comparison-matrix.md`
 
-| Domain | Primary Offer | Pricing Signals | Delivery Promise | Lead Capture |
-| --- | --- | --- | --- | --- |
-| gruzotaxi-triumph.ru | Грузовое такси в Краснодаре; переезды | от 960 ₽/час; от 1260 ₽/час (page) | SAFE UNKNOWN | 2 forms; tel CTAs |
-| gruzovichec.ru | Fleet 100+; app discount 5–10% | от 690 руб. | SAFE UNKNOWN | tel only |
-| krasnodar.gruzovichkof.ru | Грузовое такси в Краснодаре | quote via site/app/call center | подача за 15 минут | tel + callback form |
-| krasnodar.taximaxim.ru | app dynamic pricing | post-trip price on app screen | SAFE UNKNOWN | tel + Telegram |
-| city-mobil.ru | app-first cargo taxi | price on screen before order | SAFE UNKNOWN | tel; app CTAs |
-
 ## New Groundtruth
 
 Session `mig-20260605-mlint01` — separate from `mig-20260604-61b585` and `mig-20260604-mqgt01`.
@@ -131,7 +123,6 @@ Session `mig-20260605-mlint01` — separate from `mig-20260604-61b585` and `mig-
 - Human personalization / logged-in SERP variants
 - Conversion performance, ad spend, fleet size — not observable from acquisition pass
 - Whether SERP snippet prices match live page prices at capture time
-- gruzovichec.ru homepage capture showed Penza geo content (884 area code, «Пенза» in offers) — regional redirect or default city not verified from acquisition alone
 
 ## Readiness Assessment
 
@@ -147,4 +138,4 @@ Human review of captured HTML under `session-mig-20260605-mlint01/snapshots/site
 
 ---
 
-*Generated 2026-06-04T18:59:34.269Z · Lane A · session mig-20260605-mlint01*
+*Generated 2026-06-04T19:07:24.553Z · Lane A · session mig-20260605-mlint01*

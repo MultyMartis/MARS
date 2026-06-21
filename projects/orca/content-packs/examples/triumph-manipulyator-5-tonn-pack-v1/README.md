@@ -6,7 +6,7 @@ Production-ready ORCA semantic pack для capability-маршрута: `Ман�
 
 Пакет фиксирует канонический semantic + visual + factory contract для Website Factory battle work по странице:
 
-- URL: `https://manipulator-triumph.ru/manipulyator-5-tonn/`
+- URL: `https://manipulator-triumph.ru/5-tonn.html`
 - Route ID: `manipulyator-5-tonn`
 - Data page type: `ppc-5-tonn`
 - Display path: `manip-5-tonn`

@@ -1,8 +1,8 @@
 # Landing State Summary v1 — Master Hot (zakaz)
 
-**As-built source:** `workspaces/triumph-manipulator-landing-v5/`  
-**Page:** `src/pages/index.html` → `dist/index.html`  
-**Date:** 2026-05-28 (repo snapshot)
+**As-built source (canonical):** `workspaces/triumph-manipulator-landing-v6/`  
+**Page:** `src/pages/index.html` → `dist/index.html` (zakaz master hot)  
+**Date:** 2026-06-03 (Wave 1A alignment — calibration index retargeted from v5)
 
 ## Identity
 

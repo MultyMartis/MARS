@@ -1,0 +1,244 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "capture_pass": "stage_2_live_bounded",
+  "generated_at": "2026-06-22T14:00:00.000Z",
+  "captured_at": "2026-06-22T14:00:00.000Z",
+  "collection_date": "2026-06-22",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "region_lr": 65,
+  "city": "Новосибирск",
+  "device": "mobile",
+  "source_mode": "bounded_web_search_stage2",
+  "evidence_grade": "C",
+  "acquisition_limitations": [
+    "Direct Yandex HTTP fetch blocked by captcha (af-004) — not R1/R2 live SERP",
+    "Results from bounded web search synthesis; ad blocks and exact rank order not verified",
+    "Personalization and logged-in state: SAFE UNKNOWN",
+    "Maps/local pack visibility: partial — Yandex Maps org pages may appear in synthesis only"
+  ],
+  "separated_from": "serp_results/ (Stage 1 bounded capture q01-q09)",
+  "query_count": 27,
+  "queries": [
+    {
+      "query_id": "lq01",
+      "query_text": "программист 1С Новосибирск",
+      "query_group": "broad_services",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq01.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq02",
+      "query_text": "услуги программиста 1С Новосибирск",
+      "query_group": "broad_services",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq02.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq03",
+      "query_text": "доработка 1С Новосибирск",
+      "query_group": "broad_services",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq03.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq04",
+      "query_text": "сопровождение 1С Новосибирск",
+      "query_group": "broad_services",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq04.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq05",
+      "query_text": "срочно программист 1С Новосибирск",
+      "query_group": "urgent_troubleshooting",
+      "research_label": "urgent",
+      "artifact": "serp_results_live/lq05.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq06",
+      "query_text": "1С не работает Новосибирск",
+      "query_group": "urgent_troubleshooting",
+      "research_label": "urgent",
+      "artifact": "serp_results_live/lq06.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq07",
+      "query_text": "исправить ошибку 1С Новосибирск",
+      "query_group": "urgent_troubleshooting",
+      "research_label": "urgent",
+      "artifact": "serp_results_live/lq07.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq08",
+      "query_text": "восстановить работу 1С Новосибирск",
+      "query_group": "urgent_troubleshooting",
+      "research_label": "urgent",
+      "artifact": "serp_results_live/lq08.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq09",
+      "query_text": "доработка отчёта 1С Новосибирск",
+      "query_group": "reports_modifications",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq09.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq10",
+      "query_text": "доработка печатной формы 1С Новосибирск",
+      "query_group": "reports_modifications",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq10.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq11",
+      "query_text": "настройка отчёта 1С Новосибирск",
+      "query_group": "reports_modifications",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq11.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq12",
+      "query_text": "доработка РМК 1С Новосибирск",
+      "query_group": "reports_modifications",
+      "research_label": "commercial",
+      "artifact": "serp_results_live/lq12.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq13",
+      "query_text": "интеграция 1С с сайтом Новосибирск",
+      "query_group": "integrations",
+      "research_label": "integration",
+      "artifact": "serp_results_live/lq13.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq14",
+      "query_text": "интеграция 1С Битрикс Новосибирск",
+      "query_group": "integrations",
+      "research_label": "integration",
+      "artifact": "serp_results_live/lq14.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq15",
+      "query_text": "интеграция 1С с кассой Новосибирск",
+      "query_group": "integrations",
+      "research_label": "integration",
+      "artifact": "serp_results_live/lq15.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq16",
+      "query_text": "обмен 1С с сайтом Новосибирск",
+      "query_group": "integrations",
+      "research_label": "integration",
+      "artifact": "serp_results_live/lq16.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq17",
+      "query_text": "маркировка в 1С Новосибирск",
+      "query_group": "labeling",
+      "research_label": "regulated-labeling",
+      "artifact": "serp_results_live/lq17.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq18",
+      "query_text": "настройка маркировки в 1С Новосибирск",
+      "query_group": "labeling",
+      "research_label": "regulated-labeling",
+      "artifact": "serp_results_live/lq18.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq19",
+      "query_text": "Честный знак 1С Новосибирск",
+      "query_group": "labeling",
+      "research_label": "regulated-labeling",
+      "artifact": "serp_results_live/lq19.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq20",
+      "query_text": "подключение Честного знака к 1С",
+      "query_group": "labeling",
+      "research_label": "regulated-labeling",
+      "artifact": "serp_results_live/lq20.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq21",
+      "query_text": "настройка ТС ПИОТ",
+      "query_group": "labeling",
+      "research_label": "regulated-labeling",
+      "artifact": "serp_results_live/lq21.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq22",
+      "query_text": "ТС ПИОТ 1С",
+      "query_group": "labeling",
+      "research_label": "regulated-labeling",
+      "artifact": "serp_results_live/lq22.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq23",
+      "query_text": "маркировка пива 1С",
+      "query_group": "product_labeling",
+      "research_label": "product-specific",
+      "artifact": "serp_results_live/lq23.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq24",
+      "query_text": "маркировка воды 1С",
+      "query_group": "product_labeling",
+      "research_label": "product-specific",
+      "artifact": "serp_results_live/lq24.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq25",
+      "query_text": "маркировка лекарств 1С",
+      "query_group": "product_labeling",
+      "research_label": "product-specific",
+      "artifact": "serp_results_live/lq25.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq26",
+      "query_text": "маркировка автозапчастей 1С",
+      "query_group": "product_labeling",
+      "research_label": "product-specific",
+      "artifact": "serp_results_live/lq26.json",
+      "evidence_grade": "C"
+    },
+    {
+      "query_id": "lq27",
+      "query_text": "маркировка строительных материалов 1С",
+      "query_group": "product_labeling",
+      "research_label": "product-specific",
+      "artifact": "serp_results_live/lq27.json",
+      "evidence_grade": "C"
+    }
+  ],
+  "acquisition_failure_refs": [
+    "af-004"
+  ]
+}

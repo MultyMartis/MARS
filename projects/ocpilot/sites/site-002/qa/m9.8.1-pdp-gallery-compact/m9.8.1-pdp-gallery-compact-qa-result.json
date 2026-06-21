@@ -1,0 +1,218 @@
+{
+  "task": "m9.8.1-pdp-gallery-compact",
+  "timestamp": "2026-06-17T22:29:33",
+  "base": "https://zpm.new-site.space",
+  "asset_checks": {
+    "css_row_at_1025": true,
+    "js_vertical_direction": true,
+    "js_horizontal_direction": true,
+    "js_mq_reinit": true,
+    "js_thumbs_link_preserved": true
+  },
+  "multi_image": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850"
+  },
+  "single_image": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-standart/stoly-standart-700-s-polkoy-reshetkoy/stol-proizvodstvennyy-spb-s-6-7-600h700h850",
+    "screenshots": {
+      "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\single_desktop_1440.png"
+    },
+    "metrics": {
+      "flexDirection": "row",
+      "flexFlow": "row nowrap",
+      "hasThumbs": false,
+      "thumbsWidth": null,
+      "thumbsDirection": null,
+      "mainWidth": "318.328px",
+      "overflowX": false,
+      "thumbCount": 0,
+      "activeThumb": false,
+      "fancyboxLinks": 1,
+      "jsErrors": []
+    },
+    "checks": {
+      "no_thumbs_rail": true,
+      "gallery_present": true,
+      "fancybox_hooks": true,
+      "no_overflow": true
+    }
+  },
+  "viewports": {
+    "multi_desktop_1920": {
+      "screenshots": {
+        "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1920.png",
+        "after_next": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1920_after_next.png"
+      },
+      "metrics": {
+        "flexDirection": "row",
+        "flexFlow": "row nowrap",
+        "hasThumbs": true,
+        "thumbsWidth": "76px",
+        "thumbsDirection": "vertical",
+        "mainWidth": "317.328px",
+        "overflowX": false,
+        "thumbCount": 5,
+        "activeThumb": true,
+        "fancyboxLinks": 5,
+        "jsErrors": [],
+        "activeThumbAfterNext": true
+      },
+      "checks": {
+        "row_layout": true,
+        "thumbs_vertical": true,
+        "no_overflow": true,
+        "has_thumbs": true,
+        "fancybox_hooks": true
+      }
+    },
+    "multi_desktop_1440": {
+      "screenshots": {
+        "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1440.png",
+        "after_next": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1440_after_next.png"
+      },
+      "metrics": {
+        "flexDirection": "row",
+        "flexFlow": "row nowrap",
+        "hasThumbs": true,
+        "thumbsWidth": "76px",
+        "thumbsDirection": "vertical",
+        "mainWidth": "232.328px",
+        "overflowX": false,
+        "thumbCount": 5,
+        "activeThumb": true,
+        "fancyboxLinks": 5,
+        "jsErrors": [],
+        "activeThumbAfterNext": true
+      },
+      "checks": {
+        "row_layout": true,
+        "thumbs_vertical": true,
+        "no_overflow": true,
+        "has_thumbs": true,
+        "fancybox_hooks": true
+      }
+    },
+    "multi_desktop_1366": {
+      "screenshots": {
+        "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1366.png",
+        "after_next": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1366_after_next.png"
+      },
+      "metrics": {
+        "flexDirection": "row",
+        "flexFlow": "row nowrap",
+        "hasThumbs": true,
+        "thumbsWidth": "76px",
+        "thumbsDirection": "vertical",
+        "mainWidth": "224px",
+        "overflowX": false,
+        "thumbCount": 5,
+        "activeThumb": true,
+        "fancyboxLinks": 5,
+        "jsErrors": [],
+        "activeThumbAfterNext": true
+      },
+      "checks": {
+        "row_layout": true,
+        "thumbs_vertical": true,
+        "no_overflow": true,
+        "has_thumbs": true,
+        "fancybox_hooks": true
+      }
+    },
+    "multi_desktop_1280": {
+      "screenshots": {
+        "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1280.png",
+        "after_next": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_desktop_1280_after_next.png"
+      },
+      "metrics": {
+        "flexDirection": "row",
+        "flexFlow": "row nowrap",
+        "hasThumbs": true,
+        "thumbsWidth": "76px",
+        "thumbsDirection": "vertical",
+        "mainWidth": "224px",
+        "overflowX": false,
+        "thumbCount": 5,
+        "activeThumb": true,
+        "fancyboxLinks": 5,
+        "jsErrors": [],
+        "activeThumbAfterNext": true
+      },
+      "checks": {
+        "row_layout": true,
+        "thumbs_vertical": true,
+        "no_overflow": true,
+        "has_thumbs": true,
+        "fancybox_hooks": true
+      }
+    },
+    "multi_mobile_768": {
+      "screenshots": {
+        "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_mobile_768.png",
+        "after_next": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_mobile_768_after_next.png"
+      },
+      "metrics": {
+        "flexDirection": "column",
+        "flexFlow": "column nowrap",
+        "hasThumbs": true,
+        "thumbsWidth": "713px",
+        "thumbsDirection": "horizontal",
+        "mainWidth": "713px",
+        "overflowX": false,
+        "thumbCount": 5,
+        "activeThumb": true,
+        "fancyboxLinks": 5,
+        "jsErrors": [],
+        "activeThumbAfterNext": true
+      },
+      "checks": {
+        "row_layout": true,
+        "thumbs_vertical": true,
+        "no_overflow": true,
+        "has_thumbs": true,
+        "fancybox_hooks": true
+      }
+    },
+    "multi_mobile_390": {
+      "screenshots": {
+        "gallery": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_mobile_390.png",
+        "after_next": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.8.1-pdp-gallery-compact\\screenshots\\multi_mobile_390_after_next.png"
+      },
+      "metrics": {
+        "flexDirection": "column",
+        "flexFlow": "column nowrap",
+        "hasThumbs": true,
+        "thumbsWidth": "335px",
+        "thumbsDirection": "horizontal",
+        "mainWidth": "335px",
+        "overflowX": false,
+        "thumbCount": 5,
+        "activeThumb": true,
+        "fancyboxLinks": 5,
+        "jsErrors": [],
+        "activeThumbAfterNext": true
+      },
+      "checks": {
+        "row_layout": true,
+        "thumbs_vertical": true,
+        "no_overflow": true,
+        "has_thumbs": true,
+        "fancybox_hooks": true
+      }
+    }
+  },
+  "category_regression": {
+    "has_view_switcher": true,
+    "page_loads": true
+  },
+  "qa_summary": {
+    "assets_ok": true,
+    "desktop_row_layout": true,
+    "mobile_column_layout": true,
+    "desktop_thumbs_vertical": true,
+    "mobile_thumbs_horizontal": true,
+    "no_horizontal_overflow": true,
+    "single_image_ok": true,
+    "category_ok": true
+  }
+}

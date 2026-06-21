@@ -304,7 +304,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Commit hash** | *(populated after selective commit)* |
+| **Commit hash** | `e4fac5b` |
 | **Commit message** | `foundry: complete WF-R01.3.4 filters reference` |
 | **Push result** | *(populated after push)* |
 | **Files committed** | Wave C2 selective paths only |

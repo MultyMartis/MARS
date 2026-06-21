@@ -1,0 +1,52 @@
+{
+  "baseline_name": "SITE-002-STABLE-PDP-V4-2026-06-10",
+  "site_id": "SITE-002",
+  "environment": "https://zpm.new-site.space/",
+  "mode": "read-only-capture",
+  "captured_at": "2026-06-09T19:56:33.279606+00:00",
+  "backup_dir": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10",
+  "files": [
+    {
+      "remote_path": "catalog/view/theme/default/template/product/producthero.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10\\catalog\\view\\theme\\default\\template\\product\\producthero.twig",
+      "size": 12067,
+      "sha256": "ea1226986460fdbe2ae7a1f6c653f225ef49f515d519ffbd1ee45da036c86b69",
+      "captured_at": "2026-06-09T19:56:33.279606+00:00"
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/product/producttabs.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10\\catalog\\view\\theme\\default\\template\\product\\producttabs.twig",
+      "size": 4582,
+      "sha256": "a2e1d402d9f595bf21a16be73cc381c9c12964588030b1b9deb08253d1b66f6b",
+      "captured_at": "2026-06-09T19:56:33.279606+00:00"
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/common/header.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10\\catalog\\view\\theme\\default\\template\\common\\header.twig",
+      "size": 14322,
+      "sha256": "08b4de7cba99485a56457bb7c5452b8cb2a6dbf627997318377b02e0139d896b",
+      "captured_at": "2026-06-09T19:56:33.279606+00:00"
+    },
+    {
+      "remote_path": "catalog/controller/product/product.php",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10\\catalog\\controller\\product\\product.php",
+      "size": 30560,
+      "sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+      "captured_at": "2026-06-09T19:56:33.279606+00:00"
+    },
+    {
+      "remote_path": "assets/css/style.css",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10\\assets\\css\\style.css",
+      "size": 263979,
+      "sha256": "084c402af786bd817c46657d56dcc085cf7706174db3e62dd6638d2a111c83b2",
+      "captured_at": "2026-06-09T19:56:33.279606+00:00"
+    },
+    {
+      "remote_path": "config.php",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-pdp-v4-2026-06-10\\config.php",
+      "size": 1907,
+      "sha256": "d7c23de76416c4a837fd862dec532768d8f1bd7799b306fb68c686616e4d3626",
+      "captured_at": "2026-06-09T19:56:33.279606+00:00"
+    }
+  ]
+}

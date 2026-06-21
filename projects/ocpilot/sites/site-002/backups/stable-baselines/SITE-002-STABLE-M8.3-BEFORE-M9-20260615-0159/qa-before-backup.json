@@ -1,0 +1,169 @@
+{
+  "generated_at_utc": "2026-06-14T18:59:47.668449+00:00",
+  "test_url": "https://zpm.new-site.space",
+  "checks": [
+    {
+      "id": "QA-PHP",
+      "status": "pass",
+      "detail": "No PHP error markers on home",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-home",
+      "status": "pass",
+      "detail": "home: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-katalog",
+      "status": "pass",
+      "detail": "katalog: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-neutral_hub",
+      "status": "pass",
+      "detail": "neutral_hub: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-stoly",
+      "status": "pass",
+      "detail": "stoly: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-reference_pdp",
+      "status": "pass",
+      "detail": "reference_pdp: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-MEGAMENU",
+      "status": "pass",
+      "detail": "Megamenu single neutral root",
+      "evidence": {
+        "roots": [
+          "Нейтральное оборудование"
+        ]
+      }
+    },
+    {
+      "id": "QA-FOOTER",
+      "status": "pass",
+      "detail": "Footer catalog links show only neutral paths",
+      "evidence": {
+        "links": [
+          "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+          "/custom-equipment/",
+          "/payment-methods",
+          "/delivery",
+          "/dealers",
+          "/guarantee",
+          "/about",
+          "/blog/news",
+          "/contact"
+        ]
+      }
+    },
+    {
+      "id": "QA-FILTER-STOLY",
+      "status": "pass",
+      "detail": "Stoly PLP filter clean (no TEST/packaging/service attrs)",
+      "evidence": {}
+    },
+    {
+      "id": "QA-PDP",
+      "status": "pass",
+      "detail": "Reference PDP opens (HTTP 200)",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-vanny",
+      "status": "pass",
+      "detail": "moechnye-vanny: HTTP 200 (canonical slug)",
+      "evidence": {}
+    },
+    {
+      "id": "QA-FILTER-VANNY",
+      "status": "pass",
+      "detail": "Moechnye vanny PLP filter clean",
+      "evidence": {}
+    },
+    {
+      "id": "QA-URL-NOTE",
+      "status": "pass",
+      "detail": "Task URL /vanny-moechnye/ is stale (404); live slug /moechnye-vanny/ verified",
+      "evidence": {
+        "requested": "/katalog/nejtralnoe-oborudovanie/vanny-moechnye/",
+        "canonical": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/"
+      }
+    }
+  ],
+  "summary": {
+    "pass": 13,
+    "fail": 0,
+    "warn": 0
+  },
+  "pages": {
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/",
+      "error": null,
+      "megamenu_roots": [
+        "Нейтральное оборудование"
+      ],
+      "footer_catalog_links": [
+        "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+        "/custom-equipment/",
+        "/payment-methods",
+        "/delivery",
+        "/dealers",
+        "/guarantee",
+        "/about",
+        "/blog/news",
+        "/contact"
+      ]
+    },
+    "katalog": {
+      "url": "https://zpm.new-site.space/katalog",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "neutral_hub": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "stoly": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "vanny": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny",
+      "error": null,
+      "note": "User URL vanny-moechnye/ returns 404; canonical slug is moechnye-vanny/"
+    },
+    "reference_pdp": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    }
+  }
+}

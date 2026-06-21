@@ -1,0 +1,36 @@
+{
+  "task": "M9.7E homepage neutral branch cards",
+  "environment": "TEST",
+  "test_url": "https://zpm.new-site.space/",
+  "deployed_at_utc": "20260614-224916",
+  "pre_backup": [
+    {
+      "remote": "catalog/controller/common/home.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7e-homepage-neutral-branches-work\\backups\\pre-deploy-20260614-224916__catalog__controller__common__home.php",
+      "sha256": "8bdf16d6ee30078d541518bfc23fd39683f2676cf6cc44a1413440fa47d16a00",
+      "bytes": 3709
+    },
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7e-homepage-neutral-branches-work\\backups\\pre-deploy-20260614-224916__system__library__zpm__category_visibility.php",
+      "sha256": "da5d81e94e4eba574b94ddb894907d3a0362574906b8248fb1bde4605028cb74",
+      "bytes": 5543
+    }
+  ],
+  "files": [
+    {
+      "remote": "catalog/controller/common/home.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7e-homepage-neutral-branches-work\\patch\\catalog\\controller\\common\\home.php",
+      "sha256": "3f2719160e06263545361fc30b3aad2c918d00b990bf4355e86af7e1b397a46c",
+      "bytes": 3843
+    },
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7e-homepage-neutral-branches-work\\patch\\system\\library\\zpm\\category_visibility.php",
+      "sha256": "584697342daa16f7c3cc5ddc54471aad223e3ebe687e2c79d680e315bf6ce068",
+      "bytes": 7143
+    }
+  ],
+  "twig_cache_cleared": [],
+  "twig_cache_errors": []
+}

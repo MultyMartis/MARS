@@ -1,7 +1,9 @@
 # Factory Implementation Observations v1
 
+**Canonical workspace today:** `workspaces/triumph-manipulator-landing-v6/` — see [triumph-workspace-authority-map-v1.md](../../../../triumph-manipulator-landing/triumph-workspace-authority-map-v1.md). Body below describes **historical v4→v5 path** as observed during calibration authoring.
+
 **Bridge doc:** `projects/orca/intelligence/orca-factory-bridge-index-v0.md`  
-**Validated precedent cited there:** 5-ton handoff → v4 workspace — **zakaz actually on v5**.
+**Validated precedent cited there:** 5-ton handoff → v4 workspace — **zakaz actually on v5** (superseded by v6 for new work).
 
 ## Implementation path (as observed)
 

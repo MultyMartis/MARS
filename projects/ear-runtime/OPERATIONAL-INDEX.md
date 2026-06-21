@@ -99,9 +99,9 @@
 | **SITE-001 Dry Run Plan** | **DONE** — [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) — operator procedure; planning complete |
 | **Execution Authorization Review** | **DONE** — [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md) ([EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) **AUTHORIZED WITH NOTES**) |
 | **SITE-001 dry-run execution (HG-0)** | **AUTHORIZED WITH NOTES** — mock/in-memory path only; human sign-off pending |
-| **SITE-001 dry-run executed** | **NO** — 0 operator dry runs completed |
-| **Current focus** | SITE-001 Dry Run operator rehearsal per plan §4 |
-| **Next** | Execute dry run; Dry Run Completion Review; optional `--mock-e2e` CLI; real R5 assessors + R4 Store adapter (human gates); HG-4 live pilot input review after dry run |
+| **SITE-001 dry-run executed** | **YES** — 1 run — [SITE-001-DRY-RUN-EXECUTION-v1.md](SITE-001-DRY-RUN-EXECUTION-v1.md) ([SITE-001-DRY-RUN-DECISION-v1.md](SITE-001-DRY-RUN-DECISION-v1.md) **PASS WITH NOTES**) |
+| **Current focus** | HG-4 Execution Authorization Review input — dry-run record complete |
+| **Next** | HG-4 live pilot input review; optional `--mock-e2e` CLI; real R5 assessors + R4 Store adapter (human gates); PILOT-001 Execution Authorization (explicit human YES required) |
 
 ---
 
@@ -244,6 +244,8 @@
 | 133 | [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) | **SITE-001 Dry Run Plan** — operator procedure; mock/in-memory only |
 | 134 | [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md) | Execution Authorization Review (**DONE**, no implementation) |
 | 135 | [EXECUTION-AUTHORIZATION-DECISION-v1.md](EXECUTION-AUTHORIZATION-DECISION-v1.md) | HG-0 gate — **AUTHORIZED WITH NOTES** for dry-run execution |
+| 136 | [SITE-001-DRY-RUN-EXECUTION-v1.md](SITE-001-DRY-RUN-EXECUTION-v1.md) | **SITE-001 Dry Run execution record** — mock/in-memory operator rehearsal (**DONE**) |
+| 137 | [SITE-001-DRY-RUN-DECISION-v1.md](SITE-001-DRY-RUN-DECISION-v1.md) | Dry Run gate — **PASS WITH NOTES**; PILOT-001 **NOT AUTHORIZED** |
 
 **Before any implementation:** read architecture freeze [shared/external-access-runtime/freeze/EAR-RUNTIME-TRANSITION-v1/](../../shared/external-access-runtime/freeze/EAR-RUNTIME-TRANSITION-v1/) and [EAR-RUNTIME-BOUNDARY-v1.md](../../shared/external-access-runtime/EAR-RUNTIME-BOUNDARY-v1.md).
 
@@ -335,7 +337,7 @@ Runtime project index: [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md)
 | **Mock E2E Readiness Review** | **DONE** — [EAR-MOCK-E2E-READINESS-REVIEW-v1.md](EAR-MOCK-E2E-READINESS-REVIEW-v1.md) (**READY FOR SITE-001 DRY-RUN PLANNING WITH NOTES**) |
 | **SITE-001 Dry Run Plan** | **DONE** — [SITE-001-DRY-RUN-PLAN-v1.md](SITE-001-DRY-RUN-PLAN-v1.md) |
 | **Execution Authorization Review** | **DONE** — [EXECUTION-AUTHORIZATION-REVIEW-v1.md](EXECUTION-AUTHORIZATION-REVIEW-v1.md) (**AUTHORIZED WITH NOTES**) |
-| **Next** | SITE-001 Dry Run execution; Dry Run Completion Review; HG-4 live pilot input review |
+| **Next** | HG-4 Execution Authorization Review; PILOT-001 gate (explicit human YES); real R5 assessors + R4 Store adapter |
 
 ---
 

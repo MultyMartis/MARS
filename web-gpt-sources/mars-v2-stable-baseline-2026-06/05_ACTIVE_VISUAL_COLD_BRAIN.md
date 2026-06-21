@@ -40,6 +40,8 @@ All MARS agent filesystem scope defaults here. Checkpoint `45518bb` is the autho
 
 **Canvases:** `master`, `programs`, `website-factory`, `orca`, `infrastructure`, `archive`.
 
+**Post-alignment entities (2026-06-13):** `programs.canvas` includes **OPS** (→ ATLAS edge); **ATLAS** population note; `website-factory.canvas` includes **BZPM** (#3) and **LOC-ZONE** pointer. Regenerate: `docs/visualization/obsidian-canvas/_generate_pack.py`.
+
 **Is not:** registry sync engine, governance auto-update, or proof that every KC folder is populated.
 
 **Opening order (Obsidian):** `master.canvas` → `programs.canvas` → lane-specific canvas.

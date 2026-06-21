@@ -10,7 +10,9 @@ Per-site workspaces for OpenCart dealership / client projects.
 4. Follow [project-sites-workflow.md](../project-sites-workflow.md).
 5. Fill [site-passport.md](site-001/site-passport.md) per [site-passport-standard.md](../site-passport-standard.md).
 
-**First site (Run 4):** [site-001/](site-001/) — SITE-001, **AWAITING INTAKE**.
+**First site (Run 4):** [site-001/](site-001/) — SITE-001.
+
+**Second site (Run 4.113):** [site-002/](site-002/) — SITE-002 (ЗПМ), **AWAITING INTAKE**.
 
 ## Analysis zones (OpenCart-specific)
 

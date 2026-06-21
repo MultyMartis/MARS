@@ -1,16 +1,17 @@
 {
-  "registry_version": "v0",
+  "registry_version": "v1",
   "project_id": "triumph-manipulator-krasnodar",
   "domain": "https://manipulator-triumph.ru",
+  "url_registry_sync": "projects/orca/freeze/url-registry-sync-v1/",
   "validated_search_pack": "projects/orca/ppc/triumph-manipulator",
   "full_cycle_reference": "projects/orca/ppc/triumph-manipulator/runs/full-cycle-v1.1/campaign-structure-v1.1.md",
-  "operator_note": "Landing URL is click target. display_path is Yandex visible path — not substituted into url.",
+  "operator_note": "Landing URL is click target. display_path is Yandex visible path — not substituted into url. Canonical paths synced 2026-05-29 (orca-url-registry-sync-preflight-v1).",
   "routes": [
     {
       "route_id": "manipulyator-5-tonn",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/manipulyator-5-tonn/",
-      "url": "https://manipulator-triumph.ru/manipulyator-5-tonn/",
+      "slug": "/5-tonn.html",
+      "url": "https://manipulator-triumph.ru/5-tonn.html",
       "page_type": "capability",
       "intent_group": "S-tier-capability-5t",
       "campaign_group": "01",
@@ -23,13 +24,13 @@
       "source_blueprint": "projects/orca/ppc/triumph-manipulator/landing-pages/05-capability-5-ton.md",
       "website_factory_page": "workspaces/triumph-manipulator-landing-v4/dist/manipulyator-5-tonn/",
       "ppc_export_usage": "triumph-s-tier-draft-v1:grp_fc01_5ton",
-      "SAFE UNKNOWN": "Live production deploy not verified in repo"
+      "SAFE UNKNOWN": "website_factory_page still references v4 dist slug; live .html URL not HTTP-verified"
     },
     {
       "route_id": "perevozka-bytovok",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/perevozka-bytovok/",
-      "url": "https://manipulator-triumph.ru/perevozka-bytovok/",
+      "slug": "/bytovki.html",
+      "url": "https://manipulator-triumph.ru/bytovki.html",
       "page_type": "use-case",
       "intent_group": "use-case-bytovka",
       "campaign_group": "02",
@@ -47,8 +48,8 @@
     {
       "route_id": "dostavka-stroymaterialov",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/dostavka-stroymaterialov/",
-      "url": "https://manipulator-triumph.ru/dostavka-stroymaterialov/",
+      "slug": "/stroymaterialy.html",
+      "url": "https://manipulator-triumph.ru/stroymaterialy.html",
       "page_type": "use-case",
       "intent_group": "use-case-stroymaterialy",
       "campaign_group": "03",
@@ -66,8 +67,8 @@
     {
       "route_id": "manipulyator-dlya-yurlic",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/manipulyator-dlya-yurlic/",
-      "url": "https://manipulator-triumph.ru/manipulyator-dlya-yurlic/",
+      "slug": "/yurlic.html",
+      "url": "https://manipulator-triumph.ru/yurlic.html",
       "page_type": "b2b",
       "intent_group": "b2b-yurlica",
       "campaign_group": "04",
@@ -85,8 +86,8 @@
     {
       "route_id": "manipulyator-vezdehod",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/manipulyator-vezdehod/",
-      "url": "https://manipulator-triumph.ru/manipulyator-vezdehod/",
+      "slug": "/vezdehod.html",
+      "url": "https://manipulator-triumph.ru/vezdehod.html",
       "page_type": "capability",
       "intent_group": "capability-6x6-vezdekhod",
       "campaign_group": "05",
@@ -104,8 +105,8 @@
     {
       "route_id": "perevozka-oborudovaniya",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/perevozka-oborudovaniya/",
-      "url": "https://manipulator-triumph.ru/perevozka-oborudovaniya/",
+      "slug": "/oborudovanie.html",
+      "url": "https://manipulator-triumph.ru/oborudovanie.html",
       "page_type": "use-case",
       "intent_group": "use-case-oborudovanie",
       "campaign_group": "06",
@@ -123,8 +124,8 @@
     {
       "route_id": "perevozka-konteynerov",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/perevozka-konteynerov/",
-      "url": "https://manipulator-triumph.ru/perevozka-konteynerov/",
+      "slug": "/konteynery.html",
+      "url": "https://manipulator-triumph.ru/konteynery.html",
       "page_type": "use-case",
       "intent_group": "use-case-konteynery",
       "campaign_group": "07",
@@ -142,8 +143,8 @@
     {
       "route_id": "perevozka-armatury",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/perevozka-armatury/",
-      "url": "https://manipulator-triumph.ru/perevozka-armatury/",
+      "slug": "/armatura.html",
+      "url": "https://manipulator-triumph.ru/armatura.html",
       "page_type": "use-case",
       "intent_group": "use-case-armatura",
       "campaign_group": "08",
@@ -161,8 +162,8 @@
     {
       "route_id": "dostavka-kirpicha-blokov",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/dostavka-kirpicha-blokov/",
-      "url": "https://manipulator-triumph.ru/dostavka-kirpicha-blokov/",
+      "slug": "/kirpich-bloki.html",
+      "url": "https://manipulator-triumph.ru/kirpich-bloki.html",
       "page_type": "use-case",
       "intent_group": "use-case-kirpich-bloki",
       "campaign_group": "09",
@@ -180,8 +181,8 @@
     {
       "route_id": "fbs-zhbi",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/perevozka-fbs-zhbi/",
-      "url": "https://manipulator-triumph.ru/perevozka-fbs-zhbi/",
+      "slug": "/fbs-zhbi.html",
+      "url": "https://manipulator-triumph.ru/fbs-zhbi.html",
       "page_type": "use-case",
       "intent_group": "use-case-fbs-zhbi",
       "campaign_group": "10",
@@ -194,13 +195,13 @@
       "source_blueprint": "projects/orca/ppc/triumph-manipulator/landing-pages/09-use-case-fbs-zhb.md",
       "website_factory_page": null,
       "ppc_export_usage": "triumph-s-tier-draft-v1:group-10",
-      "SAFE UNKNOWN": "route_id alias fbs-zhbi; validated export slug is /perevozka-fbs-zhbi/ not /fbs-zhbi/"
+      "SAFE UNKNOWN": "PPC JSON instance still carries legacy /perevozka-fbs-zhbi/ until export refresh"
     },
     {
       "route_id": "manipulyator-krasnodarskiy-kray",
       "project_id": "triumph-manipulator-krasnodar",
-      "slug": "/manipulyator-krasnodarskiy-kray/",
-      "url": "https://manipulator-triumph.ru/manipulyator-krasnodarskiy-kray/",
+      "slug": "/kray.html",
+      "url": "https://manipulator-triumph.ru/kray.html",
       "page_type": "geo",
       "intent_group": "intercity-krai",
       "campaign_group": "11",
@@ -232,7 +233,7 @@
       "source_blueprint": "projects/orca/ppc/triumph-manipulator/landing-pages/01-master-hot-general.md",
       "website_factory_page": "workspaces/triumph-manipulator-landing-v4/dist/",
       "ppc_export_usage": "triumph-s-tier-draft-v1:group-12",
-      "SAFE UNKNOWN": "route_id zakazat-manipulyator; validated Full Cycle v1.1 landing is homepage /. Homepage PPC fit not verified live"
+      "SAFE UNKNOWN": "Homepage PPC fit not verified live"
     }
   ]
 }

@@ -23,6 +23,7 @@ Before strategy work, capture **at minimum**:
 
 | Topic | Status (known / SAFE UNKNOWN) |
 |-------|--------------------------------|
+| **Production mode** (`PIXEL_PERFECT` \| `TEMPLATE_ART`) | **Mandatory** — undeclared → **STOP** per [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md) |
 | Business model & offer | |
 | Audience / geography | |
 | Compliance constraints (claims, industries) | |

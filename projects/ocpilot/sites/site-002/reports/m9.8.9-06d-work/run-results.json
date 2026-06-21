@@ -1,0 +1,89 @@
+{
+  "task": "M9.8.9-06D",
+  "timestamp": "2026-06-19T05:31:27.515812+00:00",
+  "authority": "SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01",
+  "errors": [],
+  "backup": {
+    "manifest": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06d-work\\manifest-20260619-123127.json",
+    "files": [
+      "catalog/model/catalog/product.php",
+      "catalog/controller/common/import_1C_offers.php",
+      "admin/model/catalog/product.php",
+      "reindex_prices.php"
+    ]
+  },
+  "products_to_process": 418,
+  "product_ids_sample": [
+    2786,
+    2787,
+    2788,
+    2789,
+    2790
+  ],
+  "coverage_before": [
+    {
+      "active_products": "419",
+      "indexed_products": "1",
+      "coverage_pct": "0.24"
+    }
+  ],
+  "price_range_db_before": [
+    {
+      "min_price": "51280.5000",
+      "max_price": "51280.5000"
+    }
+  ],
+  "plp_before": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+    "fetched_at": "2026-06-19T05:31:46.085188+00:00",
+    "placeholder_from": 51280,
+    "degenerate": true
+  },
+  "rebuild_method": {
+    "mechanism": "refreshPriceIndex(product_id) via admin/model/catalog/product.php",
+    "pattern": "adapted from live reindex_prices.php",
+    "remote_script": "reindex_prices_301_m98906d.php",
+    "direct_sql_insert": false
+  },
+  "rebuild_counts": {
+    "ok": 418,
+    "fail": 0
+  },
+  "rebuild_output_tail": "sing ID: 3136... OK\nProcessing ID: 3137... OK\nProcessing ID: 3138... OK\nProcessing ID: 3139... OK\nProcessing ID: 3140... OK\nProcessing ID: 3141... OK\nProcessing ID: 3142... OK\nProcessing ID: 3143... OK\nProcessing ID: 3144... OK\nProcessing ID: 3145... OK\nProcessing ID: 3146... OK\nProcessing ID: 3147... OK\nProcessing ID: 3148... OK\nProcessing ID: 3149... OK\nProcessing ID: 3150... OK\nProcessing ID: 3151... OK\nProcessing ID: 3152... OK\nProcessing ID: 3153... OK\nProcessing ID: 3154... OK\nProcessing ID: 3155... OK\nProcessing ID: 3156... OK\nProcessing ID: 3157... OK\nProcessing ID: 3158... OK\nProcessing ID: 3159... OK\nProcessing ID: 3160... OK\nProcessing ID: 3161... OK\nProcessing ID: 3162... OK\nProcessing ID: 3163... OK\nProcessing ID: 3164... OK\nProcessing ID: 3165... OK\nProcessing ID: 3166... OK\nProcessing ID: 3167... OK\nProcessing ID: 3168... OK\nProcessing ID: 3169... OK\nProcessing ID: 3170... OK\nProcessing ID: 3171... OK\nProcessing ID: 3172... OK\nProcessing ID: 3173... OK\nProcessing ID: 3174... OK\nProcessing ID: 3175... OK\nProcessing ID: 3176... OK\nProcessing ID: 3177... OK\nProcessing ID: 3178... OK\nProcessing ID: 3179... OK\nProcessing ID: 3180... OK\nProcessing ID: 3181... OK\nProcessing ID: 3182... OK\nProcessing ID: 3183... OK\nProcessing ID: 3184... OK\nProcessing ID: 3185... OK\nProcessing ID: 3186... OK\nProcessing ID: 3187... OK\nProcessing ID: 3188... OK\nProcessing ID: 3189... OK\nProcessing ID: 3190... OK\nProcessing ID: 3191... OK\nProcessing ID: 3192... OK\nProcessing ID: 3193... OK\nProcessing ID: 3194... OK\nProcessing ID: 3195... OK\nProcessing ID: 3196... OK\nProcessing ID: 3197... OK\nProcessing ID: 3198... OK\nProcessing ID: 3199... OK\nProcessing ID: 3200... OK\nProcessing ID: 3201... OK\nProcessing ID: 3202... OK\nProcessing ID: 3203... OK\nProcessing ID: 3208... OK\nProcessing ID: 3209... OK\nProcessing ID: 3210... OK\nProcessing ID: 3211... OK\nProcessing ID: 3212... OK\nProcessing ID: 3214... OK\nProcessing ID: 3215... OK\nProcessing ID: 3216... OK\n--- Done ---\nOK: 418, FAIL: 0\n",
+  "remote_script_removed": true,
+  "rebuild_executed": true,
+  "coverage_after": [
+    {
+      "active_products": "419",
+      "indexed_products": "419",
+      "coverage_pct": "100.00"
+    }
+  ],
+  "price_range_db_after": [
+    {
+      "min_price": "5405.0000",
+      "max_price": "72630.0000"
+    }
+  ],
+  "plp_after": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+    "fetched_at": "2026-06-19T05:32:00.385536+00:00",
+    "placeholder_from": 5405,
+    "degenerate": true
+  },
+  "slider_verification": {
+    "before_degenerate": true,
+    "after_degenerate": true,
+    "before_range": [
+      null,
+      null
+    ],
+    "after_range": [
+      null,
+      null
+    ],
+    "range_span_before": 0,
+    "range_span_after": 0,
+    "right_thumb_no_longer_collapsed": false
+  }
+}

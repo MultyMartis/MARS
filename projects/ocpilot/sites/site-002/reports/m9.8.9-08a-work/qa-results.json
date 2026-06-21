@@ -1,0 +1,152 @@
+{
+  "task": "M9.8.9-08A",
+  "run_at": "2026-06-19T13:52:02.256614+00:00",
+  "categories": [
+    {
+      "id": "stoly",
+      "name": "Столы",
+      "category_id": 301,
+      "checks": {
+        "reset_buttons_in_body": {
+          "pass": true,
+          "reset_buttons": 12
+        },
+        "always_visible_not_hidden": {
+          "pass": true,
+          "hidden": 0
+        },
+        "baseline_disabled_markup": {
+          "pass": true,
+          "disabled_buttons": 12,
+          "total": 12,
+          "note": "all groups without selection should render disabled"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "attr_filter_works": {
+          "filter": "attr[51][]=Без полки",
+          "product_cards": 15,
+          "pass": true
+        },
+        "selected_group_has_reset": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+          "checked_inputs": 1,
+          "reset_buttons": 12,
+          "pass": true,
+          "note": "SSR may render all disabled; JS enables active group on init"
+        },
+        "multi_group_reset_markup": {
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "moechnye",
+      "name": "Моечные ванны",
+      "category_id": 80,
+      "checks": {
+        "reset_buttons_in_body": {
+          "pass": true,
+          "reset_buttons": 12
+        },
+        "always_visible_not_hidden": {
+          "pass": true,
+          "hidden": 0
+        },
+        "baseline_disabled_markup": {
+          "pass": true,
+          "disabled_buttons": 12,
+          "total": 12,
+          "note": "all groups without selection should render disabled"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "attr_filter_works": {
+          "filter": "attr[shell-size][]=1100х500х400",
+          "product_cards": 2,
+          "pass": true
+        },
+        "selected_group_has_reset": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=1100%D1%85500%D1%85400",
+          "checked_inputs": 1,
+          "reset_buttons": 12,
+          "pass": true,
+          "note": "SSR may render all disabled; JS enables active group on init"
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "podtovarniki",
+      "name": "Подтоварники и подставки",
+      "category_id": 322,
+      "checks": {
+        "reset_buttons_in_body": {
+          "pass": true,
+          "reset_buttons": 12
+        },
+        "always_visible_not_hidden": {
+          "pass": true,
+          "hidden": 0
+        },
+        "baseline_disabled_markup": {
+          "pass": true,
+          "disabled_buttons": 12,
+          "total": 12,
+          "note": "all groups without selection should render disabled"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "attr_filter_works": {
+          "filter": "attr[51][]=600х400х300",
+          "product_cards": 1,
+          "pass": true
+        },
+        "selected_group_has_reset": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+          "checked_inputs": 1,
+          "reset_buttons": 12,
+          "pass": true,
+          "note": "SSR may render all disabled; JS enables active group on init"
+        }
+      },
+      "pass": true
+    }
+  ],
+  "global_checks": {
+    "no_headbar": {
+      "pass": true,
+      "note": "08A removes headbar wrapper; reset lives in group body"
+    },
+    "no_hidden_reset": {
+      "pass": true,
+      "hidden_count": 0
+    },
+    "js_disabled_active_logic": {
+      "pass": true
+    },
+    "css_active_accent": {
+      "pass": true
+    },
+    "distinct_selector": {
+      "pass": true
+    },
+    "reset_in_body": {
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

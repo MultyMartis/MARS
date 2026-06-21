@@ -1,0 +1,232 @@
+{
+  "started_at": "2026-06-19T08:32:12.991927+00:00",
+  "steps": [
+    {
+      "phase": "A",
+      "table": "oc_coupon_product",
+      "sql": "DELETE FROM oc_coupon_product",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "A",
+      "table": "oc_customer_wishlist",
+      "sql": "DELETE FROM oc_customer_wishlist",
+      "rows_before": "27",
+      "rows_after": "0",
+      "rows_deleted": "27",
+      "error": null
+    },
+    {
+      "phase": "A",
+      "table": "oc_cart",
+      "sql": "DELETE FROM oc_cart",
+      "rows_before": "16",
+      "rows_after": "0",
+      "rows_deleted": "16",
+      "error": null
+    },
+    {
+      "phase": "A",
+      "table": "oc_googleshopping_product",
+      "sql": "DELETE FROM oc_googleshopping_product",
+      "rows_before": "1",
+      "rows_after": "0",
+      "rows_deleted": "1",
+      "error": null
+    },
+    {
+      "phase": "A",
+      "table": "oc_googleshopping_product_status",
+      "sql": "DELETE FROM oc_googleshopping_product_status",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "A",
+      "table": "oc_googleshopping_product_target",
+      "sql": "DELETE FROM oc_googleshopping_product_target",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "B",
+      "table": "oc_product_price_index",
+      "sql": "DELETE FROM oc_product_price_index",
+      "rows_before": "1977",
+      "rows_after": "0",
+      "rows_deleted": "1977",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_attribute",
+      "sql": "DELETE FROM oc_product_attribute",
+      "rows_before": "10175",
+      "rows_after": "0",
+      "rows_deleted": "10175",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_description",
+      "sql": "DELETE FROM oc_product_description",
+      "rows_before": "3134",
+      "rows_after": "0",
+      "rows_deleted": "3134",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_discount",
+      "sql": "DELETE FROM oc_product_discount",
+      "rows_before": "1",
+      "rows_after": "0",
+      "rows_deleted": "1",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_filter",
+      "sql": "DELETE FROM oc_product_filter",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_image",
+      "sql": "DELETE FROM oc_product_image",
+      "rows_before": "6",
+      "rows_after": "0",
+      "rows_deleted": "6",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_option_value",
+      "sql": "DELETE FROM oc_product_option_value",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_option",
+      "sql": "DELETE FROM oc_product_option",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_related",
+      "sql": "DELETE FROM oc_product_related",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_reward",
+      "sql": "DELETE FROM oc_product_reward",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_special",
+      "sql": "DELETE FROM oc_product_special",
+      "rows_before": "2",
+      "rows_after": "0",
+      "rows_deleted": "2",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_category",
+      "sql": "DELETE FROM oc_product_to_category",
+      "rows_before": "3134",
+      "rows_after": "0",
+      "rows_deleted": "3134",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_download",
+      "sql": "DELETE FROM oc_product_to_download",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_layout",
+      "sql": "DELETE FROM oc_product_to_layout",
+      "rows_before": "57",
+      "rows_after": "0",
+      "rows_deleted": "57",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_store",
+      "sql": "DELETE FROM oc_product_to_store",
+      "rows_before": "3134",
+      "rows_after": "0",
+      "rows_deleted": "3134",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_recurring",
+      "sql": "DELETE FROM oc_product_recurring",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "C",
+      "table": "oc_review",
+      "sql": "DELETE FROM oc_review",
+      "rows_before": "0",
+      "rows_after": "0",
+      "rows_deleted": "0",
+      "error": null
+    },
+    {
+      "phase": "D",
+      "table": "oc_seo_url (product)",
+      "sql": "DELETE FROM oc_seo_url WHERE query LIKE 'product_id=%'",
+      "rows_before": "3134",
+      "rows_after": "0",
+      "rows_deleted": "3134",
+      "error": null
+    },
+    {
+      "phase": "E",
+      "table": "oc_product",
+      "sql": "DELETE FROM oc_product",
+      "rows_before": "3134",
+      "rows_after": "0",
+      "rows_deleted": "3134",
+      "error": null
+    }
+  ],
+  "errors": [],
+  "completed_at": "2026-06-19T08:33:37.792505+00:00"
+}

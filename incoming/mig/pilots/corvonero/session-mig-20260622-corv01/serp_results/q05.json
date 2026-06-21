@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q05",
+  "captured_at": "2026-06-22T12:39:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "city": "Новосибирск",
+  "device": "mobile",
+  "query": "интеграция 1С с сайтом Новосибирск",
+  "serp_type": "commercial_web_studios",
+  "organic_results": [
+    { "position": 1, "title": "Интеграция 1с и сайта на 1С-Битрикс в Новосибирске | Студия ЯЛ", "url": "https://www.yalstudio.ru/razrabotka/integratsiya-1s/", "surface_type": "organic", "snippet": "Студия ЯЛ — от 20 000 р", "player_scope": "local_web_studio" },
+    { "position": 2, "title": "Интеграция сайта с 1С в Новосибирске под ключ", "url": "https://www.directline.pro/razrabotka/integratsiya-sayta-s-1c/", "surface_type": "organic", "snippet": "Direct Line — веб-студия", "player_scope": "local_web_studio" },
+    { "position": 3, "title": "Интеграция 1С с сайтом Битрикс — Studio Expert", "url": "https://novosibirsk.studio-expert.ru/services/integration_1c/", "surface_type": "organic", "snippet": "Novosibirsk Studio Expert", "player_scope": "local_web_studio" },
+    { "position": 4, "title": "Интеграция сайта с «1С» в Новосибирске", "url": "https://nvsb.saweb.ru/integratsiya-sajta-s-1s", "surface_type": "organic", "snippet": "SAWeb — от 20 000 руб", "player_scope": "local_web_studio" },
+    { "position": 5, "title": "Интеграция с 1С — Digital Agency ST", "url": "https://novosibirsk.seotemple.ru/price/crm/", "surface_type": "organic", "snippet": "От 50 000 ₽ интеграция 1С", "player_scope": "local_agency" }
+  ],
+  "commercial_signal": "strong",
+  "noise_signal": "low",
+  "cluster_note": "Integration SERP skews to web studios / Bitrix integrators rather than pure 1C programmers"
+}

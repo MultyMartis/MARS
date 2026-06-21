@@ -15,6 +15,7 @@
 | delivery_model | Website Factory production case — static/custom frontend |
 | scope_tier | **single-page landing** with supporting legal pages as applicable |
 | operator_assignment | Factory program operator (single-operator MVP) |
+| factory.production_mode | **TEMPLATE_ART** (declared 2026-06-17 — WF-A01 retroactive; foundation adoption + block registry — not FIG pixel contract) |
 
 ---
 

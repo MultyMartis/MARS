@@ -2,7 +2,7 @@
 
 route_id: manipulyator-vezdehod
 route_folder: vezdehod
-url: https://manipulator-triumph.ru/manipulyator-vezdehod/
+url: https://manipulator-triumph.ru/vezdehod.html
 display_path: vezdehod-6x6
 content_coverage: true
 production_copy_ready: true

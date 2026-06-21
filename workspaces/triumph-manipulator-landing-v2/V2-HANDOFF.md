@@ -4,19 +4,19 @@
 
 | Role | Path |
 |------|------|
-| **V2 frontend workspace (this tree)** | `D:\AI MARS\workspaces\triumph-manipulator-landing-v2` |
-| **V1 workspace (locked — do not edit)** | `D:\AI MARS\workspaces\triumph-manipulator-landing` |
+| **V2 frontend workspace (this tree)** | `C:\AI MARS\workspaces\triumph-manipulator-landing-v2` |
+| **V1 workspace (locked — do not edit)** | `C:\AI MARS\workspaces\triumph-manipulator-landing` |
 | **V1 git tag** | `triumph-manipulator-v1` @ `309d81a` |
-| **Project docs / design repo area** | `D:\AI MARS\projects\triumph-manipulator-landing` |
+| **Project docs / design repo area** | `C:\AI MARS\projects\triumph-manipulator-landing` |
 
 ## Mandatory rules files
 
 | Document | Path |
 |----------|------|
-| Design system (canonical MD) | `D:\AI MARS\projects\triumph-manipulator-landing\design-system\triumph-manipulator-design-system.md` |
-| Design folder map (v1 / v2 / shared-assets; isolation rules) | `D:\AI MARS\projects\triumph-manipulator-landing\design\README.md` |
-| V2 frontend source of truth + matrices | `D:\AI MARS\projects\triumph-manipulator-landing\V2-FRONTEND-SOURCE-OF-TRUTH.md` (see §4 Design version isolation), `V2-SECTION-SOURCE-MATRIX.md`, `V2-VISUAL-SOURCE-MATRIX.md` |
-| Forge V2 production rules | `D:\AI MARS\projects\triumph-manipulator-landing\docs\TRIUMPH-FORGE-V2-FRONTEND-PRODUCTION-RULES.md` |
+| Design system (canonical MD) | `C:\AI MARS\projects\triumph-manipulator-landing\design-system\triumph-manipulator-design-system.md` |
+| Design folder map (v1 / v2 / shared-assets; isolation rules) | `C:\AI MARS\projects\triumph-manipulator-landing\design\README.md` |
+| V2 frontend source of truth + matrices | `C:\AI MARS\projects\triumph-manipulator-landing\V2-FRONTEND-SOURCE-OF-TRUTH.md` (see §4 Design version isolation), `V2-SECTION-SOURCE-MATRIX.md`, `V2-VISUAL-SOURCE-MATRIX.md` |
+| Forge V2 production rules | `C:\AI MARS\projects\triumph-manipulator-landing\docs\TRIUMPH-FORGE-V2-FRONTEND-PRODUCTION-RULES.md` |
 
 **Retired:** `TRIUMPH LANDING V2 — DESIGN & FRONTEND RULES.pdf` was removed from `design/` — do not cite as authority ([`V2-CLEANUP-DECISION-LOG.md`](../../projects/triumph-manipulator-landing/V2-CLEANUP-DECISION-LOG.md)).
 
@@ -24,17 +24,17 @@
 
 | Purpose | Path |
 |---------|------|
-| Design working notes, `mockups-index.md` (V1 slice index), section map, versioned PNG exports (`v1/`, `v2/`) | `D:\AI MARS\projects\triumph-manipulator-landing\design\` |
-| Shared reusable visuals (brand, hero, icons, reviews, social) | `D:\AI MARS\projects\triumph-manipulator-landing\design\shared-assets\` |
-| Workspace-local design drop (if used) | `D:\AI MARS\workspaces\triumph-manipulator-landing-v2\src\assets\design\` |
-| **Font Awesome Pro 5.15.4** (icon source of truth) | `D:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4\` |
+| Design working notes, `mockups-index.md` (V1 slice index), section map, versioned PNG exports (`v1/`, `v2/`) | `C:\AI MARS\projects\triumph-manipulator-landing\design\` |
+| Shared reusable visuals (brand, hero, icons, reviews, social) | `C:\AI MARS\projects\triumph-manipulator-landing\design\shared-assets\` |
+| Workspace-local design drop (if used) | `C:\AI MARS\workspaces\triumph-manipulator-landing-v2\src\assets\design\` |
+| **Font Awesome Pro 5.15.4** (icon source of truth) | `C:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4\` |
 
 ## Build commands
 
 Run from the V2 workspace root:
 
 ```bash
-cd "D:\AI MARS\workspaces\triumph-manipulator-landing-v2"
+cd "C:\AI MARS\workspaces\triumph-manipulator-landing-v2"
 npm install
 npm run build
 ```

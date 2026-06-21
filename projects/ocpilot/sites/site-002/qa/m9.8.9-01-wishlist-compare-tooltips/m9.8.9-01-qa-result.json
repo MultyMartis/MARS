@@ -1,0 +1,166 @@
+{
+  "task": "M9.8.9-01",
+  "pages": [
+    {
+      "label": "PLP Столы",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/",
+      "initial": {
+        "fav_title": "Добавить в избранное",
+        "fav_active": false,
+        "compare_title": "Добавить к сравнению",
+        "compare_active": false,
+        "copy_present": true,
+        "main_js_has_titles": false
+      },
+      "fav_add": {
+        "selector": "[data-fav-toggle]",
+        "state": {
+          "title": "Удалить из избранного",
+          "active": true,
+          "is_tip": true,
+          "is_remove": false,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "fav_remove": {
+        "selector": "[data-fav-toggle]",
+        "state": {
+          "title": "Добавить в избранное",
+          "active": false,
+          "is_tip": true,
+          "is_remove": true,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "compare_add": {
+        "selector": "[data-compare-toggle]",
+        "state": {
+          "title": "Удалить из сравнения",
+          "active": true,
+          "is_tip": true,
+          "is_remove": false,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "compare_remove": {
+        "selector": "[data-compare-toggle]",
+        "state": {
+          "title": "Добавить к сравнению",
+          "active": false,
+          "is_tip": true,
+          "is_remove": true,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "tip_dedup": {
+        "pass": true,
+        "fav_tip_initial": true,
+        "compare_tip_before": false,
+        "fav_tip_after_compare_click": false,
+        "compare_tip_after": true
+      },
+      "copy_article": {
+        "pass": true,
+        "body_text": "Артикул скопирован!",
+        "is_tip": true
+      },
+      "pass": true
+    },
+    {
+      "label": "PLP Моечные ванны",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnoe-oborudovanie/moechnye-vanny/",
+      "pass": false,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-fav-toggle]\").first\n"
+    },
+    {
+      "label": "PDP",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "initial": {
+        "fav_title": "Добавить в избранное",
+        "fav_active": false,
+        "compare_title": "Добавить к сравнению",
+        "compare_active": false,
+        "copy_present": true,
+        "main_js_has_titles": false
+      },
+      "fav_add": {
+        "selector": "[data-fav-toggle]",
+        "state": {
+          "title": "Удалить из избранного",
+          "active": true,
+          "is_tip": true,
+          "is_remove": false,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "fav_remove": {
+        "selector": "[data-fav-toggle]",
+        "state": {
+          "title": "Добавить в избранное",
+          "active": false,
+          "is_tip": true,
+          "is_remove": true,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "compare_add": {
+        "selector": "[data-compare-toggle]",
+        "state": {
+          "title": "Удалить из сравнения",
+          "active": true,
+          "is_tip": true,
+          "is_remove": false,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "compare_remove": {
+        "selector": "[data-compare-toggle]",
+        "state": {
+          "title": "Добавить к сравнению",
+          "active": false,
+          "is_tip": true,
+          "is_remove": true,
+          "others_with_tip": 0
+        },
+        "title_ok": true,
+        "active_ok": true,
+        "pass": true
+      },
+      "tip_dedup": {
+        "pass": true,
+        "fav_tip_initial": true,
+        "compare_tip_before": false,
+        "fav_tip_after_compare_click": false,
+        "compare_tip_after": true
+      },
+      "copy_article": {
+        "pass": true,
+        "body_text": "Артикул скопирован!",
+        "is_tip": true
+      },
+      "pass": true
+    }
+  ],
+  "pass": false
+}

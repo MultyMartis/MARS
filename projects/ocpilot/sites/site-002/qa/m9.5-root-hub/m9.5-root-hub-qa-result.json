@@ -1,0 +1,108 @@
+{
+  "task": "M9.5 Neutral Root Hub",
+  "site": "SITE-002",
+  "base_url": "https://zpm.new-site.space",
+  "run_at_utc": "2026-06-14T20:33:00.646055+00:00",
+  "summary": {
+    "passed": 19,
+    "failed": 0,
+    "total": 19
+  },
+  "checks": [
+    {
+      "id": "QA-01",
+      "status": "pass",
+      "detail": "Neutral hub HTTP 200"
+    },
+    {
+      "id": "QA-02",
+      "status": "pass",
+      "detail": "php_markers=[]"
+    },
+    {
+      "id": "QA-03",
+      "status": "pass",
+      "detail": "category--hub present"
+    },
+    {
+      "id": "QA-04",
+      "status": "pass",
+      "detail": "filter sidebar absent on hub"
+    },
+    {
+      "id": "QA-05",
+      "status": "pass",
+      "detail": "mobile filter btn absent"
+    },
+    {
+      "id": "QA-06",
+      "status": "pass",
+      "detail": "no product grid on hub"
+    },
+    {
+      "id": "QA-07",
+      "status": "pass",
+      "detail": "no pagination on hub"
+    },
+    {
+      "id": "QA-08",
+      "status": "pass",
+      "detail": "no subcategory chips on hub"
+    },
+    {
+      "id": "QA-09",
+      "status": "pass",
+      "detail": "hub_cards=5 (expected 5)"
+    },
+    {
+      "id": "QA-10",
+      "status": "pass",
+      "detail": "all 5 branch titles present"
+    },
+    {
+      "id": "QA-11",
+      "status": "pass",
+      "detail": "empty_branch_card_slugs=[]"
+    },
+    {
+      "id": "QA-12",
+      "status": "pass",
+      "detail": "pageintro description present"
+    },
+    {
+      "id": "QA-13",
+      "status": "pass",
+      "detail": "cert=True dealers=True"
+    },
+    {
+      "id": "QA-14",
+      "status": "pass",
+      "detail": "card_hrefs=['https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly', 'https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny', 'https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki', 'https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye', 'https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye']"
+    },
+    {
+      "id": "QA-BR-301",
+      "status": "pass",
+      "detail": "301 profile primary_hits=10"
+    },
+    {
+      "id": "QA-BR-80",
+      "status": "pass",
+      "detail": "80 profile primary_hits=8"
+    },
+    {
+      "id": "QA-BR-322",
+      "status": "pass",
+      "detail": "branch 322 PLP OK (grid+filter)"
+    },
+    {
+      "id": "QA-BR-207",
+      "status": "pass",
+      "detail": "branch 207 PLP OK (grid+filter)"
+    },
+    {
+      "id": "QA-BR-326",
+      "status": "pass",
+      "detail": "branch 326 PLP OK (grid+filter)"
+    }
+  ]
+}

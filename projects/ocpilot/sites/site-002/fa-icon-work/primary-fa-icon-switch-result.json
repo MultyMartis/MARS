@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-06-09T00:00:00+00:00",
+  "wave": "primary-fa-icon-switch",
+  "backup_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-primary-fa-icon-switch.bak",
+  "changed_file": "catalog/view/theme/default/template/product/producthero.twig",
+  "local_changed_file": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\fa-icon-work\\producthero.twig",
+  "style_css_unchanged": true,
+  "style_css_sha256": "0a6e8d4e2035ba12a2095966213a6d5669260203a806efd62ab00c876c405ef6",
+  "qa": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+    "php_ok": true,
+    "icons": {
+      "Длина": "fal fa-ruler-horizontal",
+      "Ширина": "fal fa-arrows-alt-h",
+      "Высота": "fal fa-arrows-alt-v",
+      "Масса": "fas fa-weight-hanging"
+    },
+    "all_icons_ok": true,
+    "cart_intact": true,
+    "qty_intact": true,
+    "wishlist_intact": true,
+    "compare_intact": true,
+    "fancybox_intact": true,
+    "gallery_intact": true
+  },
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\primary-fa-icon-switch\\spkb-18-7-vl5-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\primary-fa-icon-switch\\spkb-18-7-vl5-hero-mobile.png"
+  },
+  "rollback": {
+    "restore_from": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-primary-fa-icon-switch.bak",
+    "remote_path": "catalog/view/theme/default/template/product/producthero.twig",
+    "note": "FTP upload backup twig, then clear OC template cache"
+  }
+}

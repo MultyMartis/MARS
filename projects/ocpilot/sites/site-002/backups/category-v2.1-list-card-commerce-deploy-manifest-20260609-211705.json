@@ -1,0 +1,32 @@
+{
+  "pass": "CATEGORY-V2.1-LIST-CARD-COMMERCE-PASS",
+  "site_id": "SITE-002",
+  "deployed_at": "2026-06-09T21:17:14.544888+00:00",
+  "files": {
+    "product_results.php": {
+      "remote_path": "catalog/controller/product/product_results.php",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.1-list-card-commerce-work\\product_results.php",
+      "size": 6046,
+      "sha256": "64c46c39852f9711e22e2bf4f83d70f0055b66d8ed5223845df08567c91374f7"
+    },
+    "productcard.twig": {
+      "remote_path": "catalog/view/theme/default/template/product/productcard.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.1-list-card-commerce-work\\productcard.twig",
+      "size": 4968,
+      "sha256": "3a55b97535d614bb5fafb4699ecd5c6cd4e001d4aacb2b6856cd86fbc9742c78"
+    },
+    "style.css": {
+      "remote_path": "assets/css/style.css",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.1-list-card-commerce-work\\style.css",
+      "size": 273172,
+      "sha256": "cac2cd10fb63f4a33a597ff5b626f615e99a397c7e02a15b2f1ecc911a119737"
+    }
+  },
+  "rollback_files": {
+    "product_results.php": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\product_results.php.pre-list-card-commerce-pass.bak",
+    "productcard.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\productcard.twig.pre-list-card-commerce-pass.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-list-card-commerce-pass.bak"
+  },
+  "template_cache_cleared": 0,
+  "template_cache_errors": []
+}

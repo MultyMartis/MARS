@@ -141,6 +141,13 @@ function buildGeoRegionForTransport(_geo) {
 /** Search-only export: Commander dictionary literal for col 2 «Тип объявления». */
 const SEARCH_ONLY_AD_TYPE_TRANSPORT = "Текстово-графическое";
 
+const { assignBidsForGroup } = require("./bid-assignment-v1.3");
+const {
+  buildCrossNegativesForGroup,
+  formatNegativesForCommander,
+} = require("./cross-negative-matrix-v1.4");
+const { buildTemplateFidelityMetadataPatches } = require("./template-campaign-metadata-v1.4");
+
 function mapMatchPolicy(policy) {
   return MATCH_POLICY_MAP[policy] || policy || "";
 }
@@ -350,49 +357,25 @@ function formatCampaignNegativesForTransport(keywords) {
 }
 
 /**
- * Campaign metadata block values for sheet1 rows 7–12 (verified cell positions).
- * NOT semantic campaign editing — transport normalization only.
+ * Campaign metadata block values for sheet1 rows 7–12 (template v1 SoT).
+ * NOT semantic campaign editing — template fidelity transport only.
  */
 function buildCampaignMetadataPatches(document) {
-  const campaign = (document.campaigns || [])[0];
-  if (!campaign) return {};
-
-  const patches = {};
-  const campaignType = campaign.campaign_type || "search";
-  if (CAMPAIGN_TYPE_COMMANDER_MAP[campaignType]) {
-    patches["campaigns.campaign_type"] = CAMPAIGN_TYPE_COMMANDER_MAP[campaignType];
-  }
-
-  const negatives = campaign.campaign_negatives?.keywords;
-  if (negatives?.length) {
-    patches["campaigns.campaign_negatives"] = formatCampaignNegativesForTransport(negatives);
-  }
-
-  let promotionUrl = "";
-  for (const group of campaign.groups || []) {
-    const url = group.landing_route?.final_url;
-    if (url) {
-      promotionUrl = collapseWhitespace(url);
-      break;
-    }
-    for (const ad of group.ads || []) {
-      if (ad.landing_url) {
-        promotionUrl = collapseWhitespace(ad.landing_url);
-        break;
-      }
-    }
-    if (promotionUrl) break;
-  }
-  if (promotionUrl) {
-    patches["campaigns.promotion_url"] = promotionUrl;
-  }
-
-  return patches;
+  return buildTemplateFidelityMetadataPatches(document, {
+    formatCampaignNegativesForTransport,
+  });
 }
 
+/** Commander transport row kinds (sheet1 «Тексты») — v1.2 split model. */
+const TRANSPORT_ROW_AD = "ad";
+const TRANSPORT_ROW_KEYWORD = "keyword";
+
+/** Col 1 «Доп. объявление группы» — second+ ad in same group. */
+const GROUP_ADDITIONAL_AD_MARKER = "+";
+
 /**
- * Flat Commander "Тексты" rows: stable keyword×ad combinations per group.
- * v0.1: import-feedback normalization (group names, autotarget, status, group numbers).
+ * Flat Commander "Тексты" rows: separate ad rows and keyword rows per group (v1.2).
+ * NOT keyword×ad Cartesian product — Commander imports each text row as ad OR phrase.
  */
 function mapTemplateFillRows(document) {
   const fillRows = [];
@@ -434,15 +417,18 @@ function mapTemplateFillRows(document) {
         (k) => `${k.phrase || ""}\0${k.match_policy || ""}`
       );
 
+      const doctrineNegatives = (group.group_negatives && group.group_negatives.keywords) || [];
+      const crossNegatives = buildCrossNegativesForGroup(groupId, doctrineNegatives);
+      const groupNegativesTransport = formatNegativesForCommander(crossNegatives);
+      const phraseBids = assignBidsForGroup(keywords);
+
       const ads = stableSort(group.ads || [], (a) => String(a.ad_id || ""));
 
-      const kwList = keywords.length ? keywords : [null];
-      const adList = ads.length ? ads : [null];
-
-      for (const ad of adList) {
-        const display = (ad && ad.display_url) || {};
-        const fastlinks = ad ? normalizeFastlinksForTransport(ad.fastlinks) : [];
-        const callouts = ad ? stableSort(ad.callouts || [], (c) => c.text || "") : [];
+      for (let adIndex = 0; adIndex < ads.length; adIndex++) {
+        const ad = ads[adIndex];
+        const display = ad.display_url || {};
+        const fastlinks = normalizeFastlinksForTransport(ad.fastlinks);
+        const callouts = stableSort(ad.callouts || [], (c) => c.text || "");
 
         const fastlinkTitles = fastlinks
           .map((f) => normalizeTransportText(f.title || ""))
@@ -458,36 +444,71 @@ function mapTemplateFillRows(document) {
           .filter(Boolean)
           .join(TEMPLATE_FILL_JOIN);
 
-        for (const kw of kwList) {
-          const phrase = kw
-            ? normalizeTransportText(normalizePhraseForTransport(kw.phrase || ""))
-            : "";
-          const rowKey = `fill:${campaignId}:${groupId}:${ad ? ad.ad_id : ""}:${phrase}`;
+        const adId = ad.ad_id || "";
+        const rowKey = `fill:ad:${campaignId}:${groupId}:${adId}`;
 
-          fillRows.push({
-            row_key: rowKey,
-            campaign_id: campaignId,
-            campaign_name: campaignName,
-            group_id: groupId,
-            group_name: groupName,
-            group_number: groupNumber,
-            phrase,
-            keyword_status: kw ? mapKeywordStatus(kw.status) : "",
-            headline_1: ad ? normalizeTransportText(ad.headline_1 || "") : "",
-            headline_2: ad ? normalizeTransportText(ad.headline_2 || "") : "",
-            description: ad ? normalizeTransportText(ad.description || "") : "",
-            geo_region: campaignGeoRegion,
-            ad_type_transport: SEARCH_ONLY_AD_TYPE_TRANSPORT,
-            landing_url: ad ? collapseWhitespace(ad.landing_url || "") : "",
-            display_url: ad ? buildDisplayUrl(display) : "",
-            ad_status: ad ? mapAdStatus(ad.status) : "",
-            ad_id: ad ? ad.ad_id || "" : "",
-            fastlink_titles: fastlinkTitles,
-            fastlink_descriptions: fastlinkDescriptions,
-            fastlink_urls: fastlinkUrls,
-            callouts: calloutText,
-          });
-        }
+        fillRows.push({
+          row_key: rowKey,
+          transport_row_type: TRANSPORT_ROW_AD,
+          campaign_id: campaignId,
+          campaign_name: campaignName,
+          group_id: groupId,
+          group_name: groupName,
+          group_number: groupNumber,
+          group_additional_ad:
+            adIndex > 0 ? GROUP_ADDITIONAL_AD_MARKER : "",
+          phrase: "",
+          keyword_status: "",
+          headline_1: normalizeTransportText(ad.headline_1 || ""),
+          headline_2: normalizeTransportText(ad.headline_2 || ""),
+          description: normalizeTransportText(ad.description || ""),
+          geo_region: campaignGeoRegion,
+          ad_type_transport: SEARCH_ONLY_AD_TYPE_TRANSPORT,
+          landing_url: collapseWhitespace(ad.landing_url || ""),
+          display_url: buildDisplayUrl(display),
+          ad_status: mapAdStatus(ad.status),
+          ad_id: adId,
+          fastlink_titles: fastlinkTitles,
+          fastlink_descriptions: fastlinkDescriptions,
+          fastlink_urls: fastlinkUrls,
+          callouts: calloutText,
+          group_negatives: adIndex === 0 ? groupNegativesTransport : "",
+        });
+      }
+
+      for (const kw of keywords) {
+        const phrase = normalizeTransportText(normalizePhraseForTransport(kw.phrase || ""));
+        if (!phrase) continue;
+
+        const rowKey = `fill:kw:${campaignId}:${groupId}:${phrase}`;
+
+        fillRows.push({
+          row_key: rowKey,
+          transport_row_type: TRANSPORT_ROW_KEYWORD,
+          campaign_id: campaignId,
+          campaign_name: campaignName,
+          group_id: groupId,
+          group_name: groupName,
+          group_number: groupNumber,
+          group_additional_ad: "",
+          phrase,
+          keyword_status: mapKeywordStatus(kw.status),
+          headline_1: "",
+          headline_2: "",
+          description: "",
+          geo_region: campaignGeoRegion,
+          ad_type_transport: "",
+          landing_url: "",
+          display_url: "",
+          ad_status: "",
+          ad_id: "",
+          fastlink_titles: "",
+          fastlink_descriptions: "",
+          fastlink_urls: "",
+          callouts: "",
+          group_negatives: "",
+          phrase_bid: phraseBids.get(kw.phrase) ?? phraseBids.get(phrase) ?? "",
+        });
       }
     }
   }
@@ -663,7 +684,7 @@ function mapDocument(document) {
     meta: {
       document_id: document.project_id || "",
       schema_version: document.schema_version || "",
-      exporter_version: "orca-exporter-cli-region-fix-v0.6",
+      exporter_version: "orca-exporter-cli-transport-split-v1.4",
       generated_at: new Date().toISOString(),
     },
     campaigns: campaignRows,
@@ -687,6 +708,9 @@ function mapDocument(document) {
 module.exports = {
   mapDocument,
   mapTemplateFillRows,
+  TRANSPORT_ROW_AD,
+  TRANSPORT_ROW_KEYWORD,
+  GROUP_ADDITIONAL_AD_MARKER,
   buildDisplayUrl,
   normalizeDisplayPathForTransport,
   buildCampaignMetadataPatches,

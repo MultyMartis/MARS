@@ -1,0 +1,177 @@
+{
+  "task": "M9.8.9-04A",
+  "run_at": "2026-06-19T11:50:20.247331+00:00",
+  "categories": [
+    {
+      "id": "stoly",
+      "name": "Столы",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "desktop": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 245,
+        "offset_ok": true,
+        "ajax_cards_before": 15,
+        "ajax_cards_after": 15,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "mobile": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 195,
+        "offset_ok": true,
+        "ajax_cards_before": 15,
+        "ajax_cards_after": 15,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "moechnye",
+      "name": "Моечные ванны",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "desktop": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 245,
+        "offset_ok": true,
+        "ajax_cards_before": 15,
+        "ajax_cards_after": 15,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "mobile": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 195,
+        "offset_ok": true,
+        "ajax_cards_before": 15,
+        "ajax_cards_after": 15,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "podtovarniki",
+      "name": "Подтоварники",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "desktop": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 245,
+        "offset_ok": true,
+        "ajax_cards_before": 11,
+        "ajax_cards_after": 11,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "mobile": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 255,
+        "offset_ok": true,
+        "ajax_cards_before": 11,
+        "ajax_cards_after": 11,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "telezhki",
+      "name": "Тележки",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+      "desktop": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 245,
+        "offset_ok": true,
+        "ajax_cards_before": 3,
+        "ajax_cards_after": 2,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "mobile": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expected_top": 15,
+        "tolerance": 10,
+        "section_found": true,
+        "section_top_after": 15,
+        "scroll_y_after": 223,
+        "offset_ok": true,
+        "ajax_cards_before": 3,
+        "ajax_cards_after": 2,
+        "ajax_ok": true,
+        "js_errors": [],
+        "pass": true
+      },
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "liveMainJs": {
+    "url": "https://zpm.new-site.space/assets/js/main.js?v=qa-20260619185021",
+    "size": 189789,
+    "has_scrollToCategorySection": true,
+    "has_getPageScrollOffset": true,
+    "has_offset_15": true,
+    "no_getPageScrollOffset_in_scrollTo": true,
+    "no_grid_scrollIntoView_in_updateProducts": true
+  },
+  "qa_pass": true
+}

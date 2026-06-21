@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.2",
+  "session_id": "mig-20260604-aabbcc",
+  "request_id": "req-or09-verify01",
+  "created_at": "2026-06-04T10:00:00.000Z",
+  "updated_at": "2026-06-03T18:48:15.223Z",
+  "status": "complete",
+  "stage": "draft_complete",
+  "phase": "pack",
+  "runtime_profile": "serp_capture",
+  "operator_id": "op-or09-verify",
+  "request_type": "serp_capture",
+  "capture_profile": {
+    "multi_query": false,
+    "website_pass": false,
+    "landing_pass": false,
+    "keyword_pass": false,
+    "deep_research_pass": false
+  },
+  "scope": {
+    "niche": "manipulator rental",
+    "region": "Krasnodar Krai",
+    "city": "Krasnodar",
+    "business_type": "local_service",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "queries": {
+    "seed_queries": [
+      "аренда манипулятора Краснодар"
+    ],
+    "query_used": "аренда манипулятора Краснодар",
+    "query_set": [],
+    "queries_executed": []
+  },
+  "serp": {
+    "mode": "manual",
+    "captured_at": "2026-06-04T10:00:00.000Z",
+    "result_file": "serp_result.json",
+    "discovery_mode": "single"
+  },
+  "competitor_discovery": {
+    "status": "complete",
+    "competitor_count": 3,
+    "discovery_mode": "single",
+    "query_coverage": "complete",
+    "generated_at": "2026-06-03T18:48:15.215Z",
+    "artifact_file": "competitors.json",
+    "discovery_pass_at": "2026-06-03T18:48:15.215Z"
+  },
+  "website_acquisition": {
+    "status": "skipped",
+    "snapshots_planned": 0,
+    "snapshots_success": 0,
+    "artifact_file": "website_snapshots.json"
+  },
+  "landing_analysis": {
+    "status": "skipped",
+    "landings_analyzed": 0,
+    "artifact_file": "landing_observations.json"
+  },
+  "keyword_intelligence": {
+    "status": "skipped",
+    "artifact_file": "keyword_registry.json"
+  },
+  "deep_research": {
+    "status": "skipped",
+    "artifact_file": "research_findings.json"
+  },
+  "pack": {
+    "pack_state": "draft",
+    "mig_phase": "2",
+    "draft_file": "research_pack.draft.md",
+    "approved_file": null,
+    "approved_by": null,
+    "approved_at": null,
+    "published_at": null,
+    "consumed_at": null
+  },
+  "artifacts": {
+    "session_manifest": "session_manifest.json",
+    "serp_result": "serp_result.json",
+    "serp_index": null,
+    "competitors": "competitors.json",
+    "website_snapshots": null,
+    "landing_observations": null,
+    "keyword_registry": null,
+    "research_findings": null,
+    "research_pack_draft": "research_pack.draft.md"
+  },
+  "coverage": {
+    "session_grade": "D",
+    "phases_completed": [
+      "intake",
+      "search",
+      "competitors"
+    ],
+    "phases_skipped": [
+      "websites",
+      "landings",
+      "keywords",
+      "deep_research"
+    ],
+    "phases_failed": [],
+    "partial": false
+  },
+  "errors": [],
+  "safe_unknown": [
+    "fixture-only manual SERP for OR-09 verification",
+    "Website acquisition skipped by capture_profile",
+    "Landing Analysis skipped by capture_profile"
+  ],
+  "runtime_metadata": {
+    "spine_version": "0.2",
+    "orchestrator": "mig_runtime_mvp",
+    "last_pass": "pack",
+    "n8n_execution_id": null
+  },
+  "pass_status": {
+    "intake": "complete",
+    "search": "complete",
+    "competitors": "complete",
+    "websites": "skipped",
+    "landings": "skipped",
+    "keywords": "skipped",
+    "deep_research": "skipped",
+    "pack": "complete"
+  },
+  "approval": {
+    "pack_state": "draft",
+    "approved_by": null,
+    "approved_at": null
+  },
+  "mig_phase": "2"
+}

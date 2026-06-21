@@ -18,6 +18,8 @@
 | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) | Spacing token verification |
 | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) | RU projects — typography law check |
 | [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) | Spacing scale + mandatory line-height pre-flight |
+| [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) | Compiled CSS + Operator Law enforcement gates |
+| [frontend-failure-attribution-model-v1.md](frontend-failure-attribution-model-v1.md) | §5.7 is first Expected Capture Point for compiled CSS / OL spacing escapes |
 
 **Registry:** [registries.md §6](registries.md#6-frontend-production-rules).
 
@@ -61,6 +63,8 @@ Design Completeness → Frontend Design QA Matrix (full) → Pixel Fidelity → 
 ## 2. Goal
 
 Confirm that **implemented CSS/HTML on the Foundation Demo Page** faithfully expresses **approved Production Standards** — typography scale, color roles, radius tiers, spacing tokens, control heights, and section spacing samples — before multi-section Home complexity makes drift expensive to fix.
+
+**Enforcement obligation (Enforcement Pack v1):** Calibration must verify **compiled output** (`dist/*.css`, rendered demo URL), not source SCSS alone. **COMPILED CSS SPOT-CHECK** (§5.7) is mandatory.
 
 **Success criterion:** Lead can sign calibration with confidence that remaining work is **page composition**, not **token renegotiation**.
 
@@ -107,6 +111,8 @@ For RU commercial projects add:
 RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial | FAIL | SAFE UNKNOWN
 TYPOGRAPHY PRECISION (line-height = font-size + 4px) — PASS | partial (list) | FAIL | N/A (project exceptions documented)
 LAYOUT PATTERN LIBRARY — PASS | partial (list LP-*) | NOT READY | N/A (foundation only)
+COMPILED CSS SPOT-CHECK — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
+OPERATOR LAW COMPLIANCE — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
 ```
 
 ---
@@ -170,6 +176,28 @@ Perform on **Foundation Demo Page** (+ shell header/footer as visible on same UR
 | Footer desktop structure | Column layout per standards |
 | Mobile shell (if mobile pass claimed) | Header/footer/stack at ≤ mobile breakpoint |
 
+### 5.7 Compiled CSS spot-check (mandatory)
+
+**Authority:** [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) §3.2 — subset of **Compiled CSS Compliance Audit**.
+
+Calibration **cannot** PASS on source SCSS review alone. After green build:
+
+| Check | Method |
+|-------|--------|
+| **Build artifact freshness** | `npm run build` succeeded; inspect **`dist/*.css`** |
+| **Gap / margin / padding on demo selectors** | Parse compiled CSS for demo page + global partials — values must match OL-01 or project SSOT with Exception Registry when rank-1 overrides OL |
+| **Cross-check source** | Trace violating rules to `src/scss/**` — fix at source, not `dist/` |
+| **Rendered spot-check** | DevTools computed styles on Foundation Demo URL confirm compiled rules apply |
+
+**REPORT lines (mandatory at calibration close):**
+
+```text
+COMPILED CSS SPOT-CHECK — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
+OPERATOR LAW COMPLIANCE — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
+```
+
+**FAIL trigger:** Any OL-01 spacing violation in compiled CSS without valid Exception Registry record — even if source SCSS appeared compliant on skim review.
+
 ---
 
 ## 6. PASS criteria
@@ -184,6 +212,8 @@ Perform on **Foundation Demo Page** (+ shell header/footer as visible on same UR
 | P-04 | **No Home blocks** present on foundation page or in premature page files |
 | P-05 | **Lead acknowledgment** recorded (name/date in REPORT or signed checklist) |
 | P-06 | **Build green** at time of calibration (or explicit SAFE UNKNOWN with rebuild before Foundation QA) |
+| P-07 | **COMPILED CSS SPOT-CHECK — PASS** or **WAIVED** with complete Exception Registry | §5.7 |
+| P-08 | **OPERATOR LAW COMPLIANCE — PASS** or **WAIVED** with complete Exception Registry | §5.7 |
 
 **Partial PASS:** Allowed only with **written exception list** and Lead ack; each exception must cite standards clause and waiver reason. Foundation QA may still FAIL if exceptions exceed project policy.
 
@@ -204,6 +234,8 @@ Perform on **Foundation Demo Page** (+ shell header/footer as visible on same UR
 | F-07 | Build broken / dist stale with no evidence | Rebuild; recalibrate |
 | F-08 | Calibration skipped — Foundation QA attempted without OUT-01 | **STOP** — complete calibration first |
 | F-09 | Standards doc not approved | Return to [production-standards-governance-v1.md](production-standards-governance-v1.md) Approval gate |
+| F-10 | Calibration PASS claimed from source SCSS only — no `dist/*.css` review | Re-run §5.7; **FAIL** until compiled CSS inspected |
+| F-11 | Compiled CSS OL violation without Exception Registry | Record exception or fix source — [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) §6 |
 
 **Fail loop:** Fix → rebuild → re-calibrate → record new PASS in REPORT.
 
@@ -238,3 +270,4 @@ Perform on **Foundation Demo Page** (+ shell header/footer as visible on same UR
 | 2026-06-13 | v1 — Design Calibration stage formalized; Evolution Pack v1. |
 | 2026-06-13 | v1.1 — Stage chain: Production Standards Draft → Approval ([production-standards-governance-v1.md](production-standards-governance-v1.md)). |
 | 2026-06-13 | v1.2 — Precision Governance: line-height pre-flight, spacing scale check, REPORT lines. |
+| 2026-06-14 | v1.3 — Enforcement Pack v1: mandatory COMPILED CSS SPOT-CHECK §5.7; Operator Law lines; compiled-output obligation. |

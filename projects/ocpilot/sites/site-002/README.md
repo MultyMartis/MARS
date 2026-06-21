@@ -4,7 +4,7 @@
 **Slug:** site-002  
 **Status:** **STABLE LIVE CHECKPOINT — M9.8.9 CATALOG UX COMPLETE 01** (2026-06-21)  
 **Run:** Stable checkpoint after catalog UX cluster completion  
-**Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap)
+**Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap) · **Corporate Pages Program** **OPEN** — Research **COMPLETE** · IA **READY** · Copy system **REGISTERED**
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
 
@@ -73,6 +73,7 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 | Operator manual | PLP / filter / breakpoint / CSS / Twig polish · JS refinements (04B) · Commercial Trust polish |
 | Open bugs | EC-01 — mitigated by subcategories hide (07) |
 | Roadmap | [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) |
+| Corporate Pages Program | [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Copy standard](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md) · [PAGE-COPY index](copy/) |
 | Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 

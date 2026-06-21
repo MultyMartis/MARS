@@ -1,0 +1,197 @@
+{
+  "schema_version": "1",
+  "artifact_id": "corvonero-seed-query-matrix-v1",
+  "project_ref": "PRJ-0013",
+  "request_id": "corvonero-yandex-direct-v1",
+  "created_at": "2026-06-22T12:00:00.000Z",
+  "geography_primary": {
+    "city": "Новосибирск",
+    "region": "Новосибирская область"
+  },
+  "purpose": "Research seed queries — not ad groups, not ORCA clusters",
+  "clusters": {
+    "A_broad_commercial_1c_help": {
+      "label": "Broad commercial 1C help",
+      "core_queries": [
+        "программист 1С Новосибирск",
+        "услуги программиста 1С Новосибирск",
+        "доработка 1С Новосибирск",
+        "настройка 1С Новосибирск",
+        "сопровождение 1С Новосибирск",
+        "программа 1С не работает",
+        "исправить ошибку 1С",
+        "обновление доработанной 1С"
+      ],
+      "variant_axes": {
+        "geo": ["без гео", "Новосибирск", "Новосибирская область"],
+        "modifiers": ["заказать", "услуги", "цена", "стоимость", "специалист", "программист", "настройка"]
+      },
+      "selected_variants": [
+        "программист 1С",
+        "программист 1С Новосибирск",
+        "услуги программиста 1С Новосибирск",
+        "заказать программиста 1С Новосибирск",
+        "программист 1С цена Новосибирск",
+        "сопровождение 1С",
+        "сопровождение 1С Новосибирск",
+        "доработка 1С Новосибирск",
+        "настройка 1С Новосибирск",
+        "программа 1С не работает",
+        "исправить ошибку 1С",
+        "обновление доработанной 1С"
+      ]
+    },
+    "B_reports_and_forms": {
+      "label": "Reports and forms",
+      "core_queries": [
+        "доработка отчёта 1С",
+        "настроить отчёт в 1С",
+        "доработка печатной формы 1С",
+        "расчёт себестоимости в 1С",
+        "платёжный календарь в 1С",
+        "планирование закупок в 1С",
+        "доработка РМК 1С"
+      ],
+      "selected_variants": [
+        "доработка отчёта 1С",
+        "доработка отчёта 1С Новосибирск",
+        "настроить отчёт в 1С",
+        "доработка печатной формы 1С",
+        "доработка печатной формы 1С услуги",
+        "расчёт себестоимости в 1С",
+        "платёжный календарь в 1С",
+        "планирование закупок в 1С",
+        "доработка РМК 1С",
+        "доработка РМК 1С настройка"
+      ]
+    },
+    "C_integrations": {
+      "label": "Integrations",
+      "core_queries": [
+        "интеграция 1С с сайтом",
+        "интеграция 1С Битрикс",
+        "интеграция 1С с кассой",
+        "настройка синхронизации 1С",
+        "обмен 1С с сайтом",
+        "обмен 1С Битрикс"
+      ],
+      "selected_variants": [
+        "интеграция 1С с сайтом",
+        "интеграция 1С с сайтом Новосибирск",
+        "интеграция 1С Битрикс",
+        "интеграция 1С с Битрикс Новосибирск",
+        "интеграция 1С с кассой",
+        "настройка синхронизации 1С",
+        "обмен 1С с сайтом",
+        "обмен 1С Битрикс"
+      ]
+    },
+    "D_labeling_honest_sign": {
+      "label": "Labeling / Честный знак",
+      "core_queries": [
+        "маркировка в 1С",
+        "настройка маркировки в 1С",
+        "подключение маркировки в 1С",
+        "внедрение маркировки в 1С",
+        "интеграция маркировки в 1С",
+        "Честный знак 1С",
+        "настройка Честного знака в 1С",
+        "ТС ПИОТ настройка",
+        "ТС ПИОТ 1С"
+      ],
+      "selected_variants": [
+        "маркировка в 1С",
+        "настройка маркировки в 1С",
+        "подключение маркировки в 1С",
+        "внедрение маркировки в 1С",
+        "интеграция маркировки в 1С",
+        "Честный знак 1С",
+        "Честный знак 1С настройка Новосибирск",
+        "настройка Честного знака в 1С",
+        "ТС ПИОТ настройка",
+        "ТС ПИОТ 1С",
+        "ТС ПИОТ 1С настройка"
+      ]
+    },
+    "E_product_specific_labeling": {
+      "label": "Product-specific labeling (research-only — not commercially validated)",
+      "research_queries": [
+        "маркировка напитков 1С",
+        "маркировка воды 1С",
+        "маркировка пива 1С",
+        "маркировка алкоголя 1С",
+        "маркировка косметики 1С",
+        "маркировка лекарств 1С",
+        "маркировка бытовой химии 1С",
+        "маркировка автозапчастей 1С",
+        "маркировка масел 1С",
+        "маркировка техники 1С",
+        "маркировка строительных материалов 1С"
+      ],
+      "commercial_status": "research_hypothesis_only"
+    }
+  },
+  "stage_1_execution_subset": [
+    { "query_id": "q01", "query_text": "программист 1С Новосибирск", "cluster": "A_broad_commercial_1c_help", "role": "primary_head_commercial" },
+    { "query_id": "q02", "query_text": "сопровождение 1С Новосибирск", "cluster": "A_broad_commercial_1c_help", "role": "support_retainer" },
+    { "query_id": "q03", "query_text": "программа 1С не работает", "cluster": "A_broad_commercial_1c_help", "role": "urgent_troubleshooting" },
+    { "query_id": "q04", "query_text": "доработка отчёта 1С", "cluster": "B_reports_and_forms", "role": "modification_narrow" },
+    { "query_id": "q05", "query_text": "интеграция 1С с сайтом Новосибирск", "cluster": "C_integrations", "role": "integration_commercial" },
+    { "query_id": "q06", "query_text": "интеграция 1С Битрикс", "cluster": "C_integrations", "role": "integration_bitrix" },
+    { "query_id": "q07", "query_text": "Честный знак 1С настройка", "cluster": "D_labeling_honest_sign", "role": "labeling_head" },
+    { "query_id": "q08", "query_text": "маркировка в 1С Новосибирск", "cluster": "D_labeling_honest_sign", "role": "labeling_geo" },
+    { "query_id": "q09", "query_text": "ТС ПИОТ 1С настройка", "cluster": "D_labeling_honest_sign", "role": "ts_piot" }
+  ],
+  "notes": [
+    "Variant combinations limited to natural phrasing; no synthetic long-tail permutations.",
+    "Cluster E queries deferred from Stage 1 SERP pass — product-level demand not validated in this stage.",
+    "Not ad groups; not keyword registry; not Wordstat volumes."
+  ],
+  "stage_2_expansion": {
+    "updated_at": "2026-06-22",
+    "research_labels": {
+      "commercial": "Broad paid-service intent — programmer, support, modification with hire/price signals",
+      "mixed": "Commercial + informational results blended",
+      "informational-heavy": "How-to, regulatory, vendor blogs dominate",
+      "urgent": "Failure/troubleshooting/sрочно — high vacancy or DIY noise risk",
+      "integration": "Site/Bitrix/kassa/sync — often web-studio players",
+      "regulated-labeling": "Честный знак, TS PIOT, marking in 1C",
+      "product-specific": "Cluster E product nouns — hypothesis only",
+      "geo-sensitive": "Local pack/geo path matters — Novosibirsk modifier recommended",
+      "low-confidence": "Artificial modifier stacks or unverified phrasing"
+    },
+    "geo_mandatory_queries": [
+      "программист 1С Новосибирск",
+      "услуги программиста 1С Новосибирск",
+      "сопровождение 1С Новосибирск",
+      "срочно программист 1С Новосибирск",
+      "1С не работает Новосибирск",
+      "маркировка в 1С Новосибирск"
+    ],
+    "natural_without_geo": [
+      "доработка отчёта 1С",
+      "доработка печатной формы 1С",
+      "интеграция 1С Битрикс",
+      "обновление доработанной 1С",
+      "Честный знак 1С",
+      "ТС ПИОТ 1С"
+    ],
+    "natural_price_order_modifiers": [
+      "программист 1С цена",
+      "программист 1С стоимость",
+      "сопровождение 1С стоимость",
+      "доработка 1С заказать",
+      "услуги программиста 1С"
+    ],
+    "artificial_or_irrelevant_combinations": [
+      "маркировка масел 1С Новосибирск цена заказать",
+      "ТС ПИОТ 1С срочно Новосибирск недорого",
+      "программист 1С ERP УНФ КА БП все конфигурации"
+    ],
+    "stage_2_live_serp_subset": {
+      "index_ref": "session-mig-20260622-corv01/serp_live_index.json",
+      "query_ids": ["lq01", "lq02", "lq03", "lq04", "lq05", "lq06", "lq07", "lq08", "lq09", "lq10", "lq11", "lq12", "lq13", "lq14", "lq15", "lq16", "lq17", "lq18", "lq19", "lq20", "lq21", "lq22", "lq23", "lq24", "lq25", "lq26", "lq27"],
+      "count": 27
+    }
+  }
+}

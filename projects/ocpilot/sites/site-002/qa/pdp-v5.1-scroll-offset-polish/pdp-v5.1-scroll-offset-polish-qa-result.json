@@ -1,0 +1,44 @@
+{
+  "liveMainJs": {
+    "url": "https://zpm.new-site.space/assets/js/main.js?v=qa-20260614205810",
+    "size": 185285,
+    "has_window_scrollTo_offset": true,
+    "has_scrollIntoView_in_fn": false,
+    "has_scrollToProductContentMain": true
+  },
+  "desktop": {
+    "label": "desktop-1440",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "expected_top": 140,
+    "tolerance": 15,
+    "expand_top": 139.8,
+    "collapse_top": 139.8,
+    "expand_ok": true,
+    "collapse_ok": true,
+    "toggle_before": "Смотреть все характеристики",
+    "toggle_after_expand": "Скрыть характеристики",
+    "toggle_after_collapse": "Смотреть все характеристики",
+    "pass": true
+  },
+  "mobile": {
+    "label": "mobile-390",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "expected_top": 100,
+    "tolerance": 15,
+    "expand_top": 99.6,
+    "collapse_top": 99.6,
+    "expand_ok": true,
+    "collapse_ok": true,
+    "toggle_before": "Смотреть все характеристики",
+    "toggle_after_expand": "Скрыть характеристики",
+    "toggle_after_collapse": "Смотреть все характеристики",
+    "pass": true
+  },
+  "qa_pass": true
+}

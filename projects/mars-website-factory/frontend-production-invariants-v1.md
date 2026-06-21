@@ -3,11 +3,11 @@
 **Status:** **documented** — compact **anti-drift** rules from Triumph Manipulator V5 FAQ + CTA + build/debug incidents.  
 **Not:** runtime enforcement, automated lint, or project-specific handoff replacement.
 
-**Purpose:** Stop repeat failures in responsive breakpoints, container geometry, native FAQ state, typography ties, build verification, and Windows dist locks.
+**Purpose:** Stop repeat failures in responsive breakpoints, container geometry, native FAQ state, CSS multicol browser compatibility, typography ties, build verification, and Windows dist locks.
 
-**Reference signal (lessons only — not copy source):** Triumph V5 FAQ/CTA/build incidents in `workspaces/triumph-manipulator-landing-v5/reports/`.
+**Reference signal (lessons only — not copy source):** Triumph V5 FAQ/CTA/build incidents in `workspaces/triumph-manipulator-landing-v5/reports/`; WPilot footer multicol incident on dev.gktriumph.ru — [css-multicol-masonry-browser-compatibility-lesson-v1.md](css-multicol-masonry-browser-compatibility-lesson-v1.md).
 
-**Related:** [frontend-production-rules-v0.md](frontend-production-rules-v0.md) · [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) · [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) · [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) · [terminal-survivability-governance.md](terminal-survivability-governance.md) · [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) · [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md)
+**Related:** [frontend-production-rules-v0.md](frontend-production-rules-v0.md) · [frontend-prompt-discipline-v0.md](frontend-prompt-discipline-v0.md) · [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) · [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) · [terminal-survivability-governance.md](terminal-survivability-governance.md) · [css-multicol-masonry-browser-compatibility-lesson-v1.md](css-multicol-masonry-browser-compatibility-lesson-v1.md) · [scroll-process-timeline-pattern-v1.md](scroll-process-timeline-pattern-v1.md) · [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) · [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md)
 
 ---
 
@@ -82,7 +82,22 @@ For headings under width pressure: prefer **container width**, **font-size**, an
 
 ---
 
-## 7. Build verification / stale dist
+## 7. CSS multicol masonry — Chrome / Firefox compatibility
+
+**Authority (full lesson):** [css-multicol-masonry-browser-compatibility-lesson-v1.md](css-multicol-masonry-browser-compatibility-lesson-v1.md)
+
+| Rule | Detail |
+|------|--------|
+| **Separate engine QA** | CSS `columns` / `column-count` masonry-style groupings must be checked in **Chrome desktop**, **Firefox desktop**, and **mobile Chromium** — not one engine only. |
+| **Firefox ≠ Chrome proof** | Do **not** treat Firefox-correct layout as proof for Chrome. |
+| **Group wrapper display** | Prefer **`display: block`** on column group wrappers with `break-inside: avoid` (+ `-webkit-column-break-inside`, `page-break-inside`). |
+| **Avoid inline-block default** | Do **not** default to **`display: inline-block`** on multicol group wrappers without verified cross-browser reason. |
+
+**Scope:** Website Factory static frontends, MARS Forge, WPilot footer edits, legacy WordPress/The7/WPBakery footers, any footer/link-cloud multicol layout.
+
+---
+
+## 8. Build verification / stale dist
 
 | Rule | Detail |
 |------|--------|
@@ -95,7 +110,7 @@ Inherits [frontend-production-rules-v0.md](frontend-production-rules-v0.md) §1�
 
 ---
 
-## 8. Windows build survivability
+## 9. Windows build survivability
 
 | Rule | Detail |
 |------|--------|
@@ -107,7 +122,24 @@ See also [terminal-survivability-governance.md](terminal-survivability-governanc
 
 ---
 
-## 9. Reusable prompt invariant block (V5 / frontend tasks)
+## 10. Scroll Process Timeline — approved commercial interaction pattern
+
+**Authority (full pattern):** [scroll-process-timeline-pattern-v1.md](scroll-process-timeline-pattern-v1.md)  
+**Registry:** [registries.md](registries.md) §3 — `pattern_id`: `scroll_process_timeline` · token: `WF-SCROLL-PROCESS-TIMELINE`
+
+| Rule | Detail |
+|------|--------|
+| **User-controlled motion** | Scroll-driven progress only — **no** autoplay, loops, or decorative motion without user scroll |
+| **Track-relative movement** | Vehicle/progress moves relative to **track width**, not element `translateX(100%)` self-width |
+| **Zero start** | `setProgress(0)` on load — no mid-route jump on large viewports |
+| **Scoped implementation** | Scoped CSS/JS; no theme or cross-page leakage; WPBakery Raw HTML allowed when scoped |
+| **Reverse scroll** | Scroll-up must decrease progress — progress line and vehicle stay synchronized |
+
+Full QA checklist and Triumph case study: [scroll-process-timeline-pattern-v1.md](scroll-process-timeline-pattern-v1.md).
+
+---
+
+## 11. Reusable prompt invariant block (V5 / frontend tasks)
 
 Paste into Cursor frontend execution prompts when scope is V5 lane or Triumph-class Gulp static work:
 
@@ -132,6 +164,8 @@ Canonical copy also lives in [frontend-prompt-discipline-v0.md](frontend-prompt-
 
 ```text
 FRONTEND INVARIANTS — PASS | partial (list) | FAIL | SAFE UNKNOWN
+CSS MULTICOL MASONRY BROWSER QA — PASS (Chrome + Firefox + mobile Chromium) | partial (list) | FAIL | N/A | SAFE UNKNOWN
+SCROLL PROCESS TIMELINE — PASS | partial (list) | FAIL | N/A | SAFE UNKNOWN
 BUILD / DIST — PASS (command + exit 0) | FAIL | STALE (build not run or failed)
 ```
 
@@ -142,3 +176,5 @@ BUILD / DIST — PASS (command + exit 0) | FAIL | STALE (build not run or failed
 | Date | Change |
 |------|--------|
 | 2026-05-24 | v1 — Triumph V5 FAQ/CTA/build incident lessons; responsive, container, FAQ, build, Windows dist rules |
+| 2026-06-17 | §7 — CSS multicol masonry Chrome/Firefox compatibility; link to [css-multicol-masonry-browser-compatibility-lesson-v1.md](css-multicol-masonry-browser-compatibility-lesson-v1.md) |
+| 2026-06-18 | §10 — Scroll Process Timeline approved commercial interaction pattern; link to [scroll-process-timeline-pattern-v1.md](scroll-process-timeline-pattern-v1.md) |

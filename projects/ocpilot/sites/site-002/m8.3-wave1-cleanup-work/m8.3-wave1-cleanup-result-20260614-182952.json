@@ -1,0 +1,51 @@
+{
+  "cleanup_utc": "2026-06-14T18:30:01.742365+00:00",
+  "environment": "https://zpm.new-site.space/",
+  "backup_file": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m8.3-wave1-cleanup-work\\backups\\m8.3-wave1-pre-cleanup-20260614-182952.json",
+  "steps": [
+    {
+      "id": "1.1",
+      "action": "HIDE product 3071",
+      "result": {
+        "affected": "1",
+        "html_snip": "<!DOCTYPE HTML><html lang='en' dir='ltr'><head><meta charset=\"utf-8\" /><meta name=\"referrer\" content=\"no-referrer\" /><meta name=\"robots\" content=\"noindex,nofollow\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"stylesheet\" type=\"text/css\" href=\"./themes/pmahomme/jquery/jquery-ui.css\""
+      }
+    },
+    {
+      "id": "1.2",
+      "action": "DELETE TEST values on 3071",
+      "result": {
+        "affected": "6",
+        "html_snip": "<!DOCTYPE HTML><html lang='en' dir='ltr'><head><meta charset=\"utf-8\" /><meta name=\"referrer\" content=\"no-referrer\" /><meta name=\"robots\" content=\"noindex,nofollow\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"stylesheet\" type=\"text/css\" href=\"./themes/pmahomme/jquery/jquery-ui.css\""
+      }
+    },
+    {
+      "id": "1.3a",
+      "action": "DELETE oc_attribute_description",
+      "result": {
+        "affected": "7",
+        "html_snip": "<!DOCTYPE HTML><html lang='en' dir='ltr'><head><meta charset=\"utf-8\" /><meta name=\"referrer\" content=\"no-referrer\" /><meta name=\"robots\" content=\"noindex,nofollow\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"stylesheet\" type=\"text/css\" href=\"./themes/pmahomme/jquery/jquery-ui.css\""
+      }
+    },
+    {
+      "id": "1.3b",
+      "action": "DELETE oc_attribute defs",
+      "result": {
+        "affected": "7",
+        "html_snip": "<!DOCTYPE HTML><html lang='en' dir='ltr'><head><meta charset=\"utf-8\" /><meta name=\"referrer\" content=\"no-referrer\" /><meta name=\"robots\" content=\"noindex,nofollow\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\" /><link rel=\"stylesheet\" type=\"text/css\" href=\"./themes/pmahomme/jquery/jquery-ui.css\""
+      }
+    }
+  ],
+  "verify": {
+    "product_3071_status": [],
+    "remaining_test_values": [],
+    "remaining_test_defs": [],
+    "attr_110_preserved": [
+      {
+        "attribute_id": "110",
+        "name": "Тип покрытия",
+        "value_rows": "1"
+      }
+    ]
+  }
+}

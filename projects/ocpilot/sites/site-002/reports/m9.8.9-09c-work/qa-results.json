@@ -1,0 +1,34 @@
+{
+  "scenarios": {
+    "plain_limit_hrefs_no_filters": true,
+    "filtered_limit_hrefs_have_filters": true,
+    "combo_limit_hrefs_preserve_filters_sort_page": true,
+    "plain_hrefs_sample": [
+      "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=15",
+      "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=25"
+    ],
+    "filtered_hrefs_sample": [
+      "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?filters=only_with_price=1&amp;limit=15",
+      "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?filters=only_with_price=1&amp;limit=25"
+    ],
+    "combo_hrefs_sample": [
+      "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?sort=p.price&amp;order=ASC&amp;filters=only_with_price=1&amp;limit=15",
+      "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?sort=p.price&amp;order=ASC&amp;filters=only_with_price=1&amp;limit=25"
+    ]
+  },
+  "live_js": {
+    "has_initCategoryLimitMenu": true,
+    "has_limit_outerHTML_refresh": true,
+    "has_updateProducts_limit_block": true,
+    "has_delegated_limit_doc_click": true
+  },
+  "all_automated_pass": true,
+  "browser_qa_required": [
+    "Q1 filter → limit 50 — URL keeps filters= + limit=50",
+    "Q2 attr filter → limit 50 — filters preserved",
+    "Q3 limit=50 → filter → sort → page 2 — all params preserved",
+    "Q4 limit dropdown opens after filter AJAX",
+    "Q5 active limit label correct after filter AJAX",
+    "Q6 pagination still works after filter AJAX"
+  ]
+}

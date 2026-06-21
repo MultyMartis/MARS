@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "r1q03",
+  "capture_pass": "r1_human_browser_attempt",
+  "captured_at": "2026-06-22T16:00:00.000Z",
+  "collection_date": "2026-06-22",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "region_lr": 65,
+  "device": "mobile",
+  "query": "доработка 1С Новосибирск",
+  "r1_capture_status": "failed_captcha",
+  "evidence_grade": "C",
+  "grade_upgrade_attempted": false,
+  "acquisition_failure": "af-004",
+  "acquisition_limitations": [
+    "Direct Yandex HTTP fetch returned captcha — not R1 human browser capture",
+    "No SERP screenshots saved",
+    "Personalization state: SAFE UNKNOWN"
+  ],
+  "fallback_reference": {
+    "artifact": "serp_results_live/lq03.json",
+    "evidence_grade": "C",
+    "source_mode": "bounded_web_search_stage2",
+    "note": "Fallback only — does not upgrade R1 grade"
+  },
+  "ads_blocks": "SAFE UNKNOWN",
+  "maps_local_pack": "SAFE UNKNOWN",
+  "screenshot_refs": []
+}

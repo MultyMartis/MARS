@@ -2,7 +2,7 @@
 
 **Status:** **CORE** — canonical upload pack for external Web-GPT after official **MARS v2 Stable Baseline 2026-06** publication.  
 **Publication:** commit `45518bb` · checkpoint `mars-v2-stable-baseline-2026-06` · evidence `c2876cf`  
-**Post-cleanup refresh:** 2026-06-03 — same pack folder (no new version); aligns GitGuard, IdeaBox, Incoming, Lifecycle, ISBD with Wave 1–2B. See `web-gpt-sources/REPORT-WEB-GPT-PACK-REFRESH-2026-06.md`.  
+**Post-cleanup refresh:** 2026-06-03 — same pack folder (no new version); aligns GitGuard, IdeaBox, Incoming, Lifecycle, ISBD with Wave 1–2B. Prior refresh: `REPORT-WEB-GPT-PACK-REFRESH-2026-06.md`. Cosmetic + KC sync pass: `REPORT-WEB-GPT-PACK-COSMETIC-REFRESH-2026-06.md` (checkpoint `aafacf8` / evidence `38e7b64`). **Awareness alignment pass:** 2026-06-13 — ATLAS, OPS, BZPM, Factory LOC-ZONE, Triumph v6 note; evidence `logs/alignment/mars-awareness-alignment-pass-2026-06.md`.  
 **Path:** `web-gpt-sources/mars-v2-stable-baseline-2026-06/` — **10 topic files + this README**
 
 ---

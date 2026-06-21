@@ -1,0 +1,46 @@
+{
+  "task": "M9.8.9-08",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01",
+  "stamp": "20260619-132212",
+  "phase": "post-deploy",
+  "files": [
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08-work\\live-capture\\catalog__view__theme__default__template__sections__filterssidebar.twig",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\filterssidebar.twig.pre-m9.8.9-08-filter-group-reset.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08-work\\catalog__view__theme__default__template__sections__filterssidebar.twig.patched",
+      "sha256_pre": "fbec1b5309852f94ffd0210772df296a36590c4977c2b1b79eea8a0b661f9482",
+      "sha256_patched": "e9e462188305bf0c0543fe6ca2a6591d18bce98dbd996e1b2689eac41c127d7d",
+      "size_pre": 18633,
+      "size_patched": 19290,
+      "verify_sha256": "e9e462188305bf0c0543fe6ca2a6591d18bce98dbd996e1b2689eac41c127d7d",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "assets/js/main.js",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08-work\\live-capture\\assets__js__main.js",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-08-filter-group-reset.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08-work\\assets__js__main.js.patched",
+      "sha256_pre": "6ad3aa524679f4d873289a52b0c20379fed9b6b095747a5ed963f6948257addc",
+      "sha256_patched": "9f0b40d9254592754b22d310e427725b0380a70ed27bae6683bdc8c6a142a51b",
+      "size_pre": 199972,
+      "size_patched": 201248,
+      "verify_sha256": "9f0b40d9254592754b22d310e427725b0380a70ed27bae6683bdc8c6a142a51b",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "assets/css/style.css",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08-work\\live-capture\\assets__css__style.css",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.9-08-filter-group-reset.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08-work\\assets__css__style.css.patched",
+      "sha256_pre": "461c10da865c6d4bdf82ee20cecd5c60d967307b926c8772ebb4a9961ddbcf84",
+      "sha256_patched": "511bf1f35535aac51e5f40df6ac9f77dbab80230cc34be3c9a0ef2f0ed6ccbd6",
+      "size_pre": 285532,
+      "size_patched": 286183,
+      "verify_sha256": "511bf1f35535aac51e5f40df6ac9f77dbab80230cc34be3c9a0ef2f0ed6ccbd6",
+      "deploy_ok": true
+    }
+  ],
+  "twig_cache_cleared": [],
+  "all_deploy_ok": true
+}

@@ -28,6 +28,7 @@ Turn Wave 2–3 foundation + reference slice into a **repeatable production star
 ## New client workspace (operator workflow)
 
 ```text
+0. Production mode — declare TEMPLATE_ART (typical) or PIXEL_PERFECT if design SSOT exists — [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md)
 1. Charter     — client slug, workspace path, site_type_id, block list
 2. Scaffold    — Gulp/include layout matching reference (pages, partials, scss, js)
 3. Copy layer  — scss/foundations/* + js/core/* from reference (wholesale)

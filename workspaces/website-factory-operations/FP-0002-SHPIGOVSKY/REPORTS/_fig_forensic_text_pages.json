@@ -1,0 +1,494 @@
+{
+  "textKeys": [
+    "guid",
+    "phase",
+    "parentIndex",
+    "type",
+    "name",
+    "isPublishable",
+    "key",
+    "styleType",
+    "version",
+    "userFacingVersion",
+    "publishID",
+    "fontSize",
+    "textAlignVertical",
+    "lineHeight",
+    "fontName",
+    "textData",
+    "derivedTextData",
+    "fontVariantCommonLigatures",
+    "fontVariantContextualLigatures",
+    "letterSpacing",
+    "fontVersion",
+    "textUserLayoutVersion",
+    "fontVariations",
+    "textBidiVersion",
+    "visible",
+    "locked",
+    "opacity",
+    "size",
+    "transform",
+    "strokeWeight",
+    "strokeAlign",
+    "strokeJoin",
+    "fillPaints",
+    "autoRename",
+    "textTracking",
+    "textAutoResize"
+  ],
+  "textTotal": 1983,
+  "withChars": 0,
+  "withDerived": 1983,
+  "textFieldSample": [
+    {
+      "name": "Текст 14",
+      "textData": true,
+      "derived": true
+    },
+    {
+      "name": "Записаться на консультацию",
+      "textData": true,
+      "derived": true
+    },
+    {
+      "name": "Текст 18 с отступами",
+      "textData": true,
+      "derived": true
+    }
+  ],
+  "homeTextsCount": 101,
+  "homeTextSamples": [
+    {
+      "name": "Москва",
+      "chars": "",
+      "keys": [
+        "styleIdForText",
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "Московская область",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "пн-пт 08:00-18:00, сб 08:00-22:00",
+      "chars": "",
+      "keys": [
+        "styleIdForText",
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "режим работы",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "8 (800) 777-02-05",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "Лечение и профилактика",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "Генотипирование",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "Специалисты",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "О центре",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    },
+    {
+      "name": "Отзывы",
+      "chars": "",
+      "keys": [
+        "textAlignVertical",
+        "textData",
+        "derivedTextData",
+        "fontVariantContextualLigatures",
+        "textUserLayoutVersion",
+        "textExplicitLayoutVersion",
+        "textBidiVersion",
+        "textTracking",
+        "textAutoResize"
+      ]
+    }
+  ],
+  "pageTable": [
+    {
+      "idx": 1,
+      "name": "Главная страница",
+      "w": 1437,
+      "h": 16809,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 2,
+      "name": "Услуги хаб",
+      "w": 1437,
+      "h": 11999,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 3,
+      "name": "Услуга конечная",
+      "w": 1437,
+      "h": 13313,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 4,
+      "name": "О центре",
+      "w": 1437,
+      "h": 12830,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 5,
+      "name": "Блог хаб",
+      "w": 1437,
+      "h": 5031,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 6,
+      "name": "Правовая инфа",
+      "w": 1437,
+      "h": 3151,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 7,
+      "name": "Отзывы",
+      "w": 1437,
+      "h": 5155,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 8,
+      "name": "Контакты",
+      "w": 1437,
+      "h": 4505,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 9,
+      "name": "404",
+      "w": 1437,
+      "h": 1900,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 10,
+      "name": "Статья",
+      "w": 1437,
+      "h": 11861,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 11,
+      "name": "Услуга подраздел",
+      "w": 1437,
+      "h": 13675,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 12,
+      "name": "Главная страница - моб",
+      "w": 380,
+      "h": 22883,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 13,
+      "name": "Услуги хаб - моб",
+      "w": 380,
+      "h": 17611,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 14,
+      "name": "Услуга конечная - моб",
+      "w": 380,
+      "h": 18136,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 15,
+      "name": "О центре - моб",
+      "w": 390,
+      "h": 16586,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 16,
+      "name": "Блог хаб - моб",
+      "w": 380,
+      "h": 8678,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 17,
+      "name": "Правовая инфа - моб",
+      "w": 380,
+      "h": 5035,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 18,
+      "name": "Отзывы - моб",
+      "w": 380,
+      "h": 6902,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 19,
+      "name": "Контакты - моб",
+      "w": 380,
+      "h": 4827,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 20,
+      "name": "404 - моб",
+      "w": 380,
+      "h": 1734,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 21,
+      "name": "Статья - моб",
+      "w": 380,
+      "h": 17833,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 22,
+      "name": "Услуга подраздел - моб",
+      "w": 380,
+      "h": 18101,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 23,
+      "name": "2 - Дом - вступление",
+      "w": 1437,
+      "h": 1262,
+      "viewport": "desktop"
+    },
+    {
+      "idx": 24,
+      "name": "Дом вступление",
+      "w": 380,
+      "h": 4429,
+      "viewport": "mobile"
+    },
+    {
+      "idx": 25,
+      "name": "1 - Главный экран",
+      "w": 1440,
+      "h": 929,
+      "viewport": "desktop"
+    }
+  ],
+  "nestedCounts": [
+    {
+      "name": "Главная страница",
+      "nestedFrames": 175
+    },
+    {
+      "name": "Услуги хаб",
+      "nestedFrames": 174
+    },
+    {
+      "name": "Услуга конечная",
+      "nestedFrames": 169
+    },
+    {
+      "name": "О центре",
+      "nestedFrames": 163
+    },
+    {
+      "name": "Блог хаб",
+      "nestedFrames": 58
+    },
+    {
+      "name": "Правовая инфа",
+      "nestedFrames": 34
+    },
+    {
+      "name": "Отзывы",
+      "nestedFrames": 54
+    },
+    {
+      "name": "Контакты",
+      "nestedFrames": 80
+    },
+    {
+      "name": "404",
+      "nestedFrames": 37
+    },
+    {
+      "name": "Статья",
+      "nestedFrames": 118
+    },
+    {
+      "name": "Услуга подраздел",
+      "nestedFrames": 197
+    },
+    {
+      "name": "Главная страница - моб",
+      "nestedFrames": 280
+    },
+    {
+      "name": "Услуги хаб - моб",
+      "nestedFrames": 182
+    },
+    {
+      "name": "Услуга конечная - моб",
+      "nestedFrames": 182
+    },
+    {
+      "name": "О центре - моб",
+      "nestedFrames": 208
+    },
+    {
+      "name": "Блог хаб - моб",
+      "nestedFrames": 59
+    },
+    {
+      "name": "Правовая инфа - моб",
+      "nestedFrames": 56
+    },
+    {
+      "name": "Отзывы - моб",
+      "nestedFrames": 70
+    },
+    {
+      "name": "Контакты - моб",
+      "nestedFrames": 91
+    },
+    {
+      "name": "404 - моб",
+      "nestedFrames": 48
+    },
+    {
+      "name": "Статья - моб",
+      "nestedFrames": 140
+    },
+    {
+      "name": "Услуга подраздел - моб",
+      "nestedFrames": 196
+    },
+    {
+      "name": "2 - Дом - вступление",
+      "nestedFrames": 22
+    },
+    {
+      "name": "Дом вступление",
+      "nestedFrames": 90
+    },
+    {
+      "name": "1 - Главный экран",
+      "nestedFrames": 18
+    }
+  ]
+}

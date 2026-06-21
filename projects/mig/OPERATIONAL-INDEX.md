@@ -68,4 +68,6 @@
 
 Ecosystem rule (Groundtruth Owner R1): [../../shared/contracts/groundtruth-ownership-rule-v1.md](../../shared/contracts/groundtruth-ownership-rule-v1.md)
 
+ATLAS context binding (RC-01 pointers — no ownership transfer): [../../shared/contracts/atlas-context-binding-rule-v1.md](../../shared/contracts/atlas-context-binding-rule-v1.md)
+
 Full matrix: [boundaries.md](boundaries.md)

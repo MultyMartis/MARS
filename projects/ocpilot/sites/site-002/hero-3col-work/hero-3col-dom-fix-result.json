@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-06-09T05:01:25.273987+00:00",
+  "wave": "hero-3col-dom-fix",
+  "deployed": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css"
+  },
+  "backups": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-3col-dom-fix.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-3col-dom-fix.bak"
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa": {
+    "sp_p_18_6": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/stol-proizvodstvennyy-sp-p-18-6-1800h600h850",
+      "php_ok": true,
+      "dom": {
+        "grid_direct_children_count": 3,
+        "grid_direct_children_classes": [
+          "product-hero__col--media",
+          "product-hero__col--info",
+          "product-hero__col--commerce"
+        ],
+        "three_col_layout_ok": true,
+        "no_legacy_grid_items_as_direct": false,
+        "media_in_col_media": true,
+        "identity_in_col_info": true,
+        "specs_in_col_info": true,
+        "other_in_col_commerce": true,
+        "commerce_in_col_commerce": true
+      },
+      "has_identity": true,
+      "has_commerce": true,
+      "has_media": true,
+      "specs_blocks": 2,
+      "gallery_slides": 1,
+      "has_thumbs": false,
+      "cart_btn": true,
+      "qty": true,
+      "wishlist": true,
+      "compare": true,
+      "fancybox": true,
+      "request_btn": false,
+      "super_atts_visible": true
+    },
+    "spkb_multi": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "php_ok": true,
+      "dom": {
+        "grid_direct_children_count": 3,
+        "grid_direct_children_classes": [
+          "product-hero__col--media",
+          "product-hero__col--info",
+          "product-hero__col--commerce"
+        ],
+        "three_col_layout_ok": true,
+        "no_legacy_grid_items_as_direct": false,
+        "media_in_col_media": true,
+        "identity_in_col_info": true,
+        "specs_in_col_info": true,
+        "other_in_col_commerce": true,
+        "commerce_in_col_commerce": true
+      },
+      "has_identity": true,
+      "has_commerce": true,
+      "has_media": true,
+      "specs_blocks": 2,
+      "gallery_slides": 1,
+      "has_thumbs": false,
+      "cart_btn": true,
+      "qty": true,
+      "wishlist": true,
+      "compare": true,
+      "fancybox": true,
+      "request_btn": false,
+      "super_atts_visible": true
+    },
+    "vmc_request": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "php_ok": true,
+      "dom": {
+        "grid_direct_children_count": 3,
+        "grid_direct_children_classes": [
+          "product-hero__col--media",
+          "product-hero__col--info",
+          "product-hero__col--commerce"
+        ],
+        "three_col_layout_ok": true,
+        "no_legacy_grid_items_as_direct": false,
+        "media_in_col_media": true,
+        "identity_in_col_info": true,
+        "specs_in_col_info": true,
+        "other_in_col_commerce": true,
+        "commerce_in_col_commerce": true
+      },
+      "has_identity": true,
+      "has_commerce": true,
+      "has_media": true,
+      "specs_blocks": 2,
+      "gallery_slides": 1,
+      "has_thumbs": false,
+      "cart_btn": true,
+      "qty": true,
+      "wishlist": true,
+      "compare": true,
+      "fancybox": true,
+      "request_btn": false,
+      "super_atts_visible": true
+    }
+  },
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\hero-3col-dom-fix\\sp-p-18-6-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\hero-3col-dom-fix\\sp-p-18-6-hero-mobile.png"
+  },
+  "overflow": {
+    "desktop_1440": false,
+    "mobile_390": true
+  },
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-3col-dom-fix.bak -> catalog/view/theme/default/template/product/producthero.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-3col-dom-fix.bak -> assets/css/style.css",
+    "Clear system/storage/cache/template/"
+  ]
+}

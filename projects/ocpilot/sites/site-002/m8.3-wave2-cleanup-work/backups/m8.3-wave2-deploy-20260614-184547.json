@@ -1,0 +1,35 @@
+{
+  "task": "M8.3 Wave 2 Packaging & Service filter visibility",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "deployed_at_utc": "20260614-184547",
+  "pre_backup": [
+    {
+      "remote": "system/library/zpm/attribute_filter_visibility.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m8.3-wave2-cleanup-work\\backups\\pre-m8.3-wave2-catalog__model__catalog__product.php",
+      "sha256": "210046e82e6026743f683567c37a1ff4c884dad85715fbd73d1c5f7d23cba799",
+      "bytes": 57587
+    }
+  ],
+  "files": [
+    {
+      "remote": "system/library/zpm/attribute_filter_visibility.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m8.3-wave2-cleanup-work\\patch\\system\\library\\zpm\\attribute_filter_visibility.php",
+      "sha256": "99bb35e0bb1ca3888a97f84d0afe46d9357372aa3c54bd0098b578b848af3e00",
+      "bytes": 1724
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m8.3-wave2-cleanup-work\\patch\\catalog\\model\\catalog\\product.php",
+      "sha256": "afb59aa8c09e5780d391d2e22e2f09ec3c46d9c8434a05e4963e78efc8a51c0b",
+      "bytes": 58071
+    }
+  ],
+  "attribute_cache_cleared": 0,
+  "attribute_cache_errors": []
+}

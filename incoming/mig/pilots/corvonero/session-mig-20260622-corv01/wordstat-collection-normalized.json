@@ -1,0 +1,3673 @@
+{
+  "schema_version": "1",
+  "artifact_id": "corvonero-wordstat-collection-normalized-v1",
+  "session_id": "mig-20260622-corv01",
+  "matrix_ref": "corvonero-wordstat-collection-matrix-v1.json",
+  "generated_at": "2026-06-21T20:21:25.054Z",
+  "status": "pass_a_complete",
+  "collection_policy": {
+    "pass_a": "COMPLETE",
+    "pass_b": "NOT_STARTED"
+  },
+  "query_count": 20,
+  "pass_a_collected_semantic_evidence": 18,
+  "pass_a_frequencies_recorded": 2399,
+  "pass_b_collected_count": 0,
+  "records": [
+    {
+      "query_id": "ws-p1-001",
+      "exact_phrase": "программист 1С",
+      "pass_a": {
+        "operator_syntax": "программист 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-001-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx",
+        "source_hash": "84464761e9b8d59105766d828bc63cb6730f02dc71e4c081e9a813940a948a96",
+        "row_count": 589
+      },
+      "operator_syntax": "программист 1С",
+      "match_mode": "broad_unquoted",
+      "region": "все регионы / all Russia",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 19682,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_recorded_ui_total_not_ingested",
+      "nationwide_reference": null,
+      "nationwide_status": "semantic_discovery_only_not_demand",
+      "relevant_variants": [
+        "программист 1с",
+        "программист 1с обучение",
+        "курсы программист 1с",
+        "программист 1с с нуля",
+        "программист 1с удаленно",
+        "программист 1с обучение с нуля",
+        "программист 1с зарплата",
+        "программист 1с москва",
+        "программист 1с стажер",
+        "собеседование 1с программиста",
+        "сколько программистов 1с",
+        "часа программиста 1с",
+        "программист 1с без опыта",
+        "вопрос программисту 1с",
+        "1с программист 2026",
+        "программист разработчик 1с",
+        "услуги программиста 1с",
+        "стажировка 1с программист",
+        "задание программисту 1с",
+        "стал программистом 1с"
+      ],
+      "irrelevant_variants": [
+        "программист 1с вакансии",
+        "программист 1с обучение",
+        "работа программист 1с",
+        "курсы программист 1с",
+        "программист 1с с нуля",
+        "программист 1с удаленно",
+        "программист 1с обучение с нуля",
+        "программист 1с зарплата",
+        "программист 1с удаленно вакансии",
+        "программист 1с вакансии москва",
+        "1с программист стажер вакансии",
+        "вакансия программист 1с без опыта",
+        "резюме программист 1с",
+        "сколько зарабатывает программист 1с",
+        "курсы программист 1с с нуля",
+        "работа программистом 1с удаленно",
+        "программист 1с бесплатное обучение",
+        "форум 1с программистов",
+        "программист 1с средняя зарплата",
+        "вакансия программист 1с работа"
+      ],
+      "related_queries": [
+        {
+          "phrase": "программист 1с",
+          "observed_frequency": 19682,
+          "source_row": 2
+        },
+        {
+          "phrase": "программист 1с вакансии",
+          "observed_frequency": 4092,
+          "source_row": 3
+        },
+        {
+          "phrase": "программист 1с обучение",
+          "observed_frequency": 1467,
+          "source_row": 4
+        },
+        {
+          "phrase": "работа программист 1с",
+          "observed_frequency": 1321,
+          "source_row": 5
+        },
+        {
+          "phrase": "курсы программист 1с",
+          "observed_frequency": 1000,
+          "source_row": 6
+        },
+        {
+          "phrase": "программист 1с с нуля",
+          "observed_frequency": 796,
+          "source_row": 7
+        },
+        {
+          "phrase": "программист 1с удаленно",
+          "observed_frequency": 623,
+          "source_row": 8
+        },
+        {
+          "phrase": "программист 1с обучение с нуля",
+          "observed_frequency": 535,
+          "source_row": 9
+        },
+        {
+          "phrase": "программист 1с зарплата",
+          "observed_frequency": 514,
+          "source_row": 10
+        },
+        {
+          "phrase": "программист 1с москва",
+          "observed_frequency": 420,
+          "source_row": 11
+        },
+        {
+          "phrase": "программист 1с стажер",
+          "observed_frequency": 412,
+          "source_row": 12
+        },
+        {
+          "phrase": "программист 1с удаленно вакансии",
+          "observed_frequency": 390,
+          "source_row": 13
+        },
+        {
+          "phrase": "собеседование 1с программиста",
+          "observed_frequency": 385,
+          "source_row": 14
+        },
+        {
+          "phrase": "сколько программистов 1с",
+          "observed_frequency": 377,
+          "source_row": 15
+        },
+        {
+          "phrase": "часа программиста 1с",
+          "observed_frequency": 342,
+          "source_row": 16
+        },
+        {
+          "phrase": "программист 1с без опыта",
+          "observed_frequency": 329,
+          "source_row": 17
+        },
+        {
+          "phrase": "вопрос программисту 1с",
+          "observed_frequency": 319,
+          "source_row": 18
+        },
+        {
+          "phrase": "1с программист 2026",
+          "observed_frequency": 291,
+          "source_row": 19
+        },
+        {
+          "phrase": "программист разработчик 1с",
+          "observed_frequency": 278,
+          "source_row": 20
+        },
+        {
+          "phrase": "услуги программиста 1с",
+          "observed_frequency": 251,
+          "source_row": 21
+        },
+        {
+          "phrase": "стажировка 1с программист",
+          "observed_frequency": 246,
+          "source_row": 22
+        },
+        {
+          "phrase": "задание программисту 1с",
+          "observed_frequency": 239,
+          "source_row": 23
+        },
+        {
+          "phrase": "стал программистом 1с",
+          "observed_frequency": 227,
+          "source_row": 24
+        },
+        {
+          "phrase": "программист 1с вакансии москва",
+          "observed_frequency": 227,
+          "source_row": 25
+        },
+        {
+          "phrase": "стоимость 1с программисты",
+          "observed_frequency": 216,
+          "source_row": 26
+        },
+        {
+          "phrase": "программист 1с hh",
+          "observed_frequency": 212,
+          "source_row": 27
+        },
+        {
+          "phrase": "программист 1с бесплатно",
+          "observed_frequency": 212,
+          "source_row": 28
+        },
+        {
+          "phrase": "1с программист стажер вакансии",
+          "observed_frequency": 202,
+          "source_row": 29
+        },
+        {
+          "phrase": "программисты 1с спб",
+          "observed_frequency": 193,
+          "source_row": 30
+        },
+        {
+          "phrase": "вакансия программист 1с без опыта",
+          "observed_frequency": 191,
+          "source_row": 31
+        },
+        {
+          "phrase": "нужен программист 1с",
+          "observed_frequency": 185,
+          "source_row": 32
+        },
+        {
+          "phrase": "резюме программист 1с",
+          "observed_frequency": 183,
+          "source_row": 33
+        },
+        {
+          "phrase": "найти программиста 1с",
+          "observed_frequency": 182,
+          "source_row": 34
+        },
+        {
+          "phrase": "работать программистом 1с",
+          "observed_frequency": 180,
+          "source_row": 35
+        },
+        {
+          "phrase": "задачи 1с программиста",
+          "observed_frequency": 176,
+          "source_row": 36
+        },
+        {
+          "phrase": "вопросы на собеседовании 1с программист",
+          "observed_frequency": 172,
+          "source_row": 37
+        },
+        {
+          "phrase": "программист 1с предприятие",
+          "observed_frequency": 172,
+          "source_row": 38
+        },
+        {
+          "phrase": "часа работы программиста 1с",
+          "observed_frequency": 164,
+          "source_row": 39
+        },
+        {
+          "phrase": "часы работы программиста 1с",
+          "observed_frequency": 164,
+          "source_row": 40
+        },
+        {
+          "phrase": "стоимость часа 1с программиста",
+          "observed_frequency": 164,
+          "source_row": 41
+        },
+        {
+          "phrase": "программа программист 1с",
+          "observed_frequency": 162,
+          "source_row": 42
+        },
+        {
+          "phrase": "программист аналитик 1с",
+          "observed_frequency": 160,
+          "source_row": 43
+        },
+        {
+          "phrase": "отзыв программисту 1с",
+          "observed_frequency": 152,
+          "source_row": 44
+        },
+        {
+          "phrase": "как стать программистом 1с",
+          "observed_frequency": 146,
+          "source_row": 45
+        },
+        {
+          "phrase": "сколько зарабатывает программист 1с",
+          "observed_frequency": 134,
+          "source_row": 46
+        },
+        {
+          "phrase": "курсы программист 1с с нуля",
+          "observed_frequency": 129,
+          "source_row": 47
+        },
+        {
+          "phrase": "технические задания программистам 1с",
+          "observed_frequency": 128,
+          "source_row": 48
+        },
+        {
+          "phrase": "1с для начинающих программистов",
+          "observed_frequency": 128,
+          "source_row": 49
+        },
+        {
+          "phrase": "работа программистом 1с удаленно",
+          "observed_frequency": 126,
+          "source_row": 50
+        },
+        {
+          "phrase": "учиться на программиста 1с",
+          "observed_frequency": 124,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [
+        "vacancy",
+        "training",
+        "salary",
+        "remote_work",
+        "services"
+      ],
+      "screenshot_ref": "evidence/wordstat/screenshots/ws-p1-001-programmist-1c.jpg",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "pass_b_status": "NOT_STARTED",
+      "cluster": "A_broad_commercial",
+      "collection_priority": 1
+    },
+    {
+      "query_id": "ws-p1-002",
+      "exact_phrase": "программист 1С Новосибирск",
+      "operator_syntax": "\"программист 1С Новосибирск\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 251,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_applicable",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "услуги программиста 1с",
+        "стоимость услуг 1с программиста",
+        "услуги 1с программиста цены",
+        "авито 1с программист услуги",
+        "стоимость услуг программиста 1с в час"
+      ],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "услуги программиста 1с",
+          "observed_frequency": 251,
+          "source_row": 2
+        },
+        {
+          "phrase": "стоимость услуг 1с программиста",
+          "observed_frequency": 27,
+          "source_row": 3
+        },
+        {
+          "phrase": "услуги 1с программиста цены",
+          "observed_frequency": 23,
+          "source_row": 4
+        },
+        {
+          "phrase": "авито 1с программист услуги",
+          "observed_frequency": 17,
+          "source_row": 5
+        },
+        {
+          "phrase": "стоимость услуг программиста 1с в час",
+          "observed_frequency": 12,
+          "source_row": 6
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "A_broad_commercial",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "программист 1С Новосибирск",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-002-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+        "source_hash": "a6b8227bf5f70893222f6a91519ad5efa8e5a9a72610d054f581a536979859ec",
+        "row_count": 5
+      }
+    },
+    {
+      "query_id": "ws-p1-003",
+      "exact_phrase": "сопровождение 1С",
+      "operator_syntax": "\"сопровождение 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 4344,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "сопровождение 1с",
+        "услуги по сопровождению 1с",
+        "сопровождение 1с предприятие",
+        "программное сопровождение 1с",
+        "сопровождение продуктов 1с",
+        "сопровождения программы 1с",
+        "сопровождение системы 1с",
+        "сопровождение 1с бухгалтерия",
+        "сопровождение программных продуктов 1с",
+        "казначейское сопровождение в 1с",
+        "договор сопровождения 1с",
+        "центр сопровождения 1с",
+        "технологическое сопровождение 1с",
+        "сопровождение 1с окпд",
+        "информационно технологическое сопровождение 1с",
+        "сопровождение 1с 8",
+        "сопровождение 1с итс",
+        "оказание услуг по сопровождению 1с",
+        "техническое сопровождение 1с",
+        "окпд 2 сопровождение 1с"
+      ],
+      "irrelevant_variants": [
+        "сопровождение 1с зарплата",
+        "сопровождение 1с вакансии",
+        "сопровождение 1с обучение",
+        "удаленное сопровождение 1с",
+        "курсы сопровождения 1с",
+        "сопровождение 1с зарплата и кадры",
+        "асп центр сопровождения 1с екатеринбург вакансии",
+        "вакансии 1с программист на сопровождение минск"
+      ],
+      "related_queries": [
+        {
+          "phrase": "сопровождение 1с",
+          "observed_frequency": 4344,
+          "source_row": 2
+        },
+        {
+          "phrase": "услуги по сопровождению 1с",
+          "observed_frequency": 504,
+          "source_row": 3
+        },
+        {
+          "phrase": "сопровождение 1с предприятие",
+          "observed_frequency": 480,
+          "source_row": 4
+        },
+        {
+          "phrase": "программное сопровождение 1с",
+          "observed_frequency": 377,
+          "source_row": 5
+        },
+        {
+          "phrase": "сопровождение продуктов 1с",
+          "observed_frequency": 360,
+          "source_row": 6
+        },
+        {
+          "phrase": "сопровождения программы 1с",
+          "observed_frequency": 356,
+          "source_row": 7
+        },
+        {
+          "phrase": "сопровождение системы 1с",
+          "observed_frequency": 350,
+          "source_row": 8
+        },
+        {
+          "phrase": "сопровождение 1с бухгалтерия",
+          "observed_frequency": 317,
+          "source_row": 9
+        },
+        {
+          "phrase": "сопровождение программных продуктов 1с",
+          "observed_frequency": 294,
+          "source_row": 10
+        },
+        {
+          "phrase": "казначейское сопровождение в 1с",
+          "observed_frequency": 289,
+          "source_row": 11
+        },
+        {
+          "phrase": "договор сопровождения 1с",
+          "observed_frequency": 288,
+          "source_row": 12
+        },
+        {
+          "phrase": "центр сопровождения 1с",
+          "observed_frequency": 281,
+          "source_row": 13
+        },
+        {
+          "phrase": "технологическое сопровождение 1с",
+          "observed_frequency": 251,
+          "source_row": 14
+        },
+        {
+          "phrase": "сопровождение 1с окпд",
+          "observed_frequency": 228,
+          "source_row": 15
+        },
+        {
+          "phrase": "информационно технологическое сопровождение 1с",
+          "observed_frequency": 219,
+          "source_row": 16
+        },
+        {
+          "phrase": "сопровождение 1с 8",
+          "observed_frequency": 212,
+          "source_row": 17
+        },
+        {
+          "phrase": "сопровождение 1с итс",
+          "observed_frequency": 210,
+          "source_row": 18
+        },
+        {
+          "phrase": "оказание услуг по сопровождению 1с",
+          "observed_frequency": 203,
+          "source_row": 19
+        },
+        {
+          "phrase": "техническое сопровождение 1с",
+          "observed_frequency": 184,
+          "source_row": 20
+        },
+        {
+          "phrase": "окпд 2 сопровождение 1с",
+          "observed_frequency": 183,
+          "source_row": 21
+        },
+        {
+          "phrase": "работа сопровождение 1с",
+          "observed_frequency": 176,
+          "source_row": 22
+        },
+        {
+          "phrase": "сопровождение учета в 1с",
+          "observed_frequency": 175,
+          "source_row": 23
+        },
+        {
+          "phrase": "сопровождение 1с екатеринбург",
+          "observed_frequency": 165,
+          "source_row": 24
+        },
+        {
+          "phrase": "информационное сопровождение 1с",
+          "observed_frequency": 162,
+          "source_row": 25
+        },
+        {
+          "phrase": "услуг по сопровождению программного продукта 1с",
+          "observed_frequency": 152,
+          "source_row": 26
+        },
+        {
+          "phrase": "асп сопровождение 1с",
+          "observed_frequency": 141,
+          "source_row": 27
+        },
+        {
+          "phrase": "сопровождение 1с 8.3",
+          "observed_frequency": 141,
+          "source_row": 28
+        },
+        {
+          "phrase": "сопровождение системы 1с предприятие",
+          "observed_frequency": 138,
+          "source_row": 29
+        },
+        {
+          "phrase": "центр сопровождения 1с екатеринбург",
+          "observed_frequency": 138,
+          "source_row": 30
+        },
+        {
+          "phrase": "асп центр сопровождения 1с",
+          "observed_frequency": 137,
+          "source_row": 31
+        },
+        {
+          "phrase": "1с база сопровождение",
+          "observed_frequency": 136,
+          "source_row": 32
+        },
+        {
+          "phrase": "поддержка сопровождение 1с",
+          "observed_frequency": 136,
+          "source_row": 33
+        },
+        {
+          "phrase": "специалист по сопровождению 1с",
+          "observed_frequency": 133,
+          "source_row": 34
+        },
+        {
+          "phrase": "внедрение и сопровождение 1с",
+          "observed_frequency": 130,
+          "source_row": 35
+        },
+        {
+          "phrase": "сопровождение программного продукта 1с предприятие",
+          "observed_frequency": 130,
+          "source_row": 36
+        },
+        {
+          "phrase": "сопровождение пользователей 1с",
+          "observed_frequency": 127,
+          "source_row": 37
+        },
+        {
+          "phrase": "асп сопровождение 1с екатеринбург",
+          "observed_frequency": 126,
+          "source_row": 38
+        },
+        {
+          "phrase": "1с компания сопровождение",
+          "observed_frequency": 123,
+          "source_row": 39
+        },
+        {
+          "phrase": "1с сопровождение цены",
+          "observed_frequency": 121,
+          "source_row": 40
+        },
+        {
+          "phrase": "асп центр сопровождения 1с екатеринбург",
+          "observed_frequency": 121,
+          "source_row": 41
+        },
+        {
+          "phrase": "услуги по сопровождению 1с предприятие",
+          "observed_frequency": 115,
+          "source_row": 42
+        },
+        {
+          "phrase": "сопровождение 1с стоимость",
+          "observed_frequency": 114,
+          "source_row": 43
+        },
+        {
+          "phrase": "сервис 1с сопровождение",
+          "observed_frequency": 112,
+          "source_row": 44
+        },
+        {
+          "phrase": "сопровождение 1с предприятие 8",
+          "observed_frequency": 111,
+          "source_row": 45
+        },
+        {
+          "phrase": "сопровождение 1с 1",
+          "observed_frequency": 103,
+          "source_row": 46
+        },
+        {
+          "phrase": "сопровождение 1с организации",
+          "observed_frequency": 100,
+          "source_row": 47
+        },
+        {
+          "phrase": "сопровождение 1с erp",
+          "observed_frequency": 96,
+          "source_row": 48
+        },
+        {
+          "phrase": "сопровождение информационной системы 1с",
+          "observed_frequency": 90,
+          "source_row": 49
+        },
+        {
+          "phrase": "фирмы сопровождение 1с",
+          "observed_frequency": 87,
+          "source_row": 50
+        },
+        {
+          "phrase": "сопровождение 1с тарифы",
+          "observed_frequency": 82,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "A_support",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "сопровождение 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-003-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+        "source_hash": "75c0904d824787cffe9b4dee3e266d0cdc752ba182e94d253b391b2aec6f2d96",
+        "row_count": 177
+      }
+    },
+    {
+      "query_id": "ws-p1-004",
+      "exact_phrase": "доработка 1С",
+      "operator_syntax": "\"доработка 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 3386,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "доработка 1с",
+        "доработка конфигурации 1с",
+        "доработка расширений 1с",
+        "учет доработки 1с",
+        "1с доработка отчетов",
+        "услуги доработки 1с",
+        "примеры доработки 1с",
+        "доработки программы 1с",
+        "доработка 1с ут",
+        "доработки 1с бухгалтерии",
+        "доработка 1с системы",
+        "обмен 1с доработка",
+        "доработка модулей 1с",
+        "1с бп доработка",
+        "доработки 1с erp",
+        "доработки 1с документооборот",
+        "доработка базы 1с",
+        "типовые доработки 1с",
+        "доработка 1с унф",
+        "1с фреш доработки"
+      ],
+      "irrelevant_variants": [
+        "0504402 доработка скачать для 1с згу"
+      ],
+      "related_queries": [
+        {
+          "phrase": "доработка 1с",
+          "observed_frequency": 3386,
+          "source_row": 2
+        },
+        {
+          "phrase": "доработка конфигурации 1с",
+          "observed_frequency": 243,
+          "source_row": 3
+        },
+        {
+          "phrase": "доработка расширений 1с",
+          "observed_frequency": 150,
+          "source_row": 4
+        },
+        {
+          "phrase": "учет доработки 1с",
+          "observed_frequency": 147,
+          "source_row": 5
+        },
+        {
+          "phrase": "1с доработка отчетов",
+          "observed_frequency": 146,
+          "source_row": 6
+        },
+        {
+          "phrase": "услуги доработки 1с",
+          "observed_frequency": 138,
+          "source_row": 7
+        },
+        {
+          "phrase": "примеры доработки 1с",
+          "observed_frequency": 120,
+          "source_row": 8
+        },
+        {
+          "phrase": "доработки программы 1с",
+          "observed_frequency": 114,
+          "source_row": 9
+        },
+        {
+          "phrase": "доработка 1с ут",
+          "observed_frequency": 106,
+          "source_row": 10
+        },
+        {
+          "phrase": "доработки 1с бухгалтерии",
+          "observed_frequency": 106,
+          "source_row": 11
+        },
+        {
+          "phrase": "доработка 1с системы",
+          "observed_frequency": 106,
+          "source_row": 12
+        },
+        {
+          "phrase": "обмен 1с доработка",
+          "observed_frequency": 105,
+          "source_row": 13
+        },
+        {
+          "phrase": "доработка модулей 1с",
+          "observed_frequency": 103,
+          "source_row": 14
+        },
+        {
+          "phrase": "1с бп доработка",
+          "observed_frequency": 95,
+          "source_row": 15
+        },
+        {
+          "phrase": "доработки 1с erp",
+          "observed_frequency": 93,
+          "source_row": 16
+        },
+        {
+          "phrase": "доработки 1с документооборот",
+          "observed_frequency": 92,
+          "source_row": 17
+        },
+        {
+          "phrase": "доработка базы 1с",
+          "observed_frequency": 91,
+          "source_row": 18
+        },
+        {
+          "phrase": "типовые доработки 1с",
+          "observed_frequency": 90,
+          "source_row": 19
+        },
+        {
+          "phrase": "доработка 1с унф",
+          "observed_frequency": 84,
+          "source_row": 20
+        },
+        {
+          "phrase": "1с фреш доработки",
+          "observed_frequency": 83,
+          "source_row": 21
+        },
+        {
+          "phrase": "настройка 1с доработка 1с",
+          "observed_frequency": 81,
+          "source_row": 22
+        },
+        {
+          "phrase": "разработка доработка 1с",
+          "observed_frequency": 80,
+          "source_row": 23
+        },
+        {
+          "phrase": "доработки 1с зуп",
+          "observed_frequency": 79,
+          "source_row": 24
+        },
+        {
+          "phrase": "1с ерп доработка",
+          "observed_frequency": 76,
+          "source_row": 25
+        },
+        {
+          "phrase": "доработка 1с 8.3",
+          "observed_frequency": 75,
+          "source_row": 26
+        },
+        {
+          "phrase": "1с доработка цены",
+          "observed_frequency": 72,
+          "source_row": 27
+        },
+        {
+          "phrase": "договор доработка 1с",
+          "observed_frequency": 71,
+          "source_row": 28
+        },
+        {
+          "phrase": "тестирование доработок 1с",
+          "observed_frequency": 66,
+          "source_row": 29
+        },
+        {
+          "phrase": "доработка 1с стоимость",
+          "observed_frequency": 62,
+          "source_row": 30
+        },
+        {
+          "phrase": "техническое на доработку 1с",
+          "observed_frequency": 62,
+          "source_row": 31
+        },
+        {
+          "phrase": "доработка 1с предприятия",
+          "observed_frequency": 59,
+          "source_row": 32
+        },
+        {
+          "phrase": "тз на доработку 1с",
+          "observed_frequency": 57,
+          "source_row": 33
+        },
+        {
+          "phrase": "доработка типовой конфигурации 1с",
+          "observed_frequency": 54,
+          "source_row": 34
+        },
+        {
+          "phrase": "1с доработка печатной формы",
+          "observed_frequency": 53,
+          "source_row": 35
+        },
+        {
+          "phrase": "программист 1с доработка",
+          "observed_frequency": 51,
+          "source_row": 36
+        },
+        {
+          "phrase": "1с диадок доработка",
+          "observed_frequency": 51,
+          "source_row": 37
+        },
+        {
+          "phrase": "задания на доработку 1с",
+          "observed_frequency": 50,
+          "source_row": 38
+        },
+        {
+          "phrase": "доработка функционала 1с",
+          "observed_frequency": 50,
+          "source_row": 39
+        },
+        {
+          "phrase": "техническое задание на доработку 1с",
+          "observed_frequency": 45,
+          "source_row": 40
+        },
+        {
+          "phrase": "доработка внедрение 1с",
+          "observed_frequency": 45,
+          "source_row": 41
+        },
+        {
+          "phrase": "1с эдо доработка",
+          "observed_frequency": 44,
+          "source_row": 42
+        },
+        {
+          "phrase": "доработка 1с 8",
+          "observed_frequency": 43,
+          "source_row": 43
+        },
+        {
+          "phrase": "1с кабинет сотрудника доработка",
+          "observed_frequency": 40,
+          "source_row": 44
+        },
+        {
+          "phrase": "доработка 1с битрикс",
+          "observed_frequency": 39,
+          "source_row": 45
+        },
+        {
+          "phrase": "список доработок 1с",
+          "observed_frequency": 38,
+          "source_row": 46
+        },
+        {
+          "phrase": "готовые доработки 1с",
+          "observed_frequency": 36,
+          "source_row": 47
+        },
+        {
+          "phrase": "сопровождение и доработка 1с",
+          "observed_frequency": 34,
+          "source_row": 48
+        },
+        {
+          "phrase": "1с заказы доработка",
+          "observed_frequency": 33,
+          "source_row": 49
+        },
+        {
+          "phrase": "поддержка и доработка 1с",
+          "observed_frequency": 29,
+          "source_row": 50
+        },
+        {
+          "phrase": "доработка 1с нма",
+          "observed_frequency": 28,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "A_modification",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "доработка 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-004-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+        "source_hash": "4e0afa9bc3a63e62ff8e042ea83013783fc2f7199658cd544bc561dee3b4f65a",
+        "row_count": 83
+      }
+    },
+    {
+      "query_id": "ws-p1-005",
+      "exact_phrase": "интеграция 1С с сайтом",
+      "operator_syntax": "\"интеграция 1С с сайтом\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 491,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "интеграция сайта с 1с",
+        "битрикс сайт интеграция с 1с",
+        "управление сайтом интеграция с 1с",
+        "битрикс управление сайтом интеграция с 1с",
+        "как настроить интеграцию 1с с сайтом",
+        "1с унф интеграция с сайтом",
+        "1с настройка интеграции с сайтом",
+        "обмена с сайтом 1с интеграция",
+        "интеграция сайта с 1с по api",
+        "сайт личного кабинета интеграция с 1с"
+      ],
+      "irrelevant_variants": [
+        "как настроить интеграцию 1с с сайтом"
+      ],
+      "related_queries": [
+        {
+          "phrase": "интеграция сайта с 1с",
+          "observed_frequency": 491,
+          "source_row": 2
+        },
+        {
+          "phrase": "битрикс сайт интеграция с 1с",
+          "observed_frequency": 108,
+          "source_row": 3
+        },
+        {
+          "phrase": "управление сайтом интеграция с 1с",
+          "observed_frequency": 53,
+          "source_row": 4
+        },
+        {
+          "phrase": "битрикс управление сайтом интеграция с 1с",
+          "observed_frequency": 40,
+          "source_row": 5
+        },
+        {
+          "phrase": "как настроить интеграцию 1с с сайтом",
+          "observed_frequency": 31,
+          "source_row": 6
+        },
+        {
+          "phrase": "1с унф интеграция с сайтом",
+          "observed_frequency": 24,
+          "source_row": 7
+        },
+        {
+          "phrase": "1с настройка интеграции с сайтом",
+          "observed_frequency": 23,
+          "source_row": 8
+        },
+        {
+          "phrase": "обмена с сайтом 1с интеграция",
+          "observed_frequency": 16,
+          "source_row": 9
+        },
+        {
+          "phrase": "интеграция сайта с 1с по api",
+          "observed_frequency": 14,
+          "source_row": 10
+        },
+        {
+          "phrase": "сайт личного кабинета интеграция с 1с",
+          "observed_frequency": 8,
+          "source_row": 11
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "C_integrations",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "интеграция 1С с сайтом",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-005-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+        "source_hash": "a89f26ac2bc56e5ffff283dc3de275778edfb709fecded6dc34882354426ba71",
+        "row_count": 10
+      }
+    },
+    {
+      "query_id": "ws-p1-006",
+      "exact_phrase": "интеграция 1С Битрикс",
+      "operator_syntax": "\"интеграция 1С Битрикс\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 619,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "битрикс интеграция с 1с",
+        "интеграция 1с и битрикс 24",
+        "интеграция сайта 1с битрикс",
+        "модули интеграции 1с битрикс",
+        "1с унф битрикс интеграция",
+        "интеграция 1с бухгалтерия битрикс",
+        "битрикс управление сайтом интеграция с 1с",
+        "интеграция битрикс 1с ут",
+        "1с битрикс документооборот интеграция",
+        "настройка интеграции 1с и битрикс",
+        "битрикс 24 модуль интеграции с 1с",
+        "битрикс интернет магазины интеграцией 1с",
+        "интеграция битрикс 1с erp",
+        "интеграция битрикс 1с фреш",
+        "интеграция 1с бухгалтерия и битрикс 24",
+        "интеграция 1с битрикс магазина с 1с",
+        "интеграция 1с битрикс и битрикс24",
+        "интеграция битрикс и 1с управление торговлей",
+        "интеграция 1с документооборот и битрикс 24",
+        "скачать 1с битрикс интеграция"
+      ],
+      "irrelevant_variants": [
+        "скачать 1с битрикс интеграция",
+        "битрикс интеграция с 1с инструкция",
+        "интеграция битрикс 24 и 1с бухгалтерия видео"
+      ],
+      "related_queries": [
+        {
+          "phrase": "битрикс интеграция с 1с",
+          "observed_frequency": 619,
+          "source_row": 2
+        },
+        {
+          "phrase": "интеграция 1с и битрикс 24",
+          "observed_frequency": 263,
+          "source_row": 3
+        },
+        {
+          "phrase": "интеграция сайта 1с битрикс",
+          "observed_frequency": 181,
+          "source_row": 4
+        },
+        {
+          "phrase": "модули интеграции 1с битрикс",
+          "observed_frequency": 78,
+          "source_row": 5
+        },
+        {
+          "phrase": "1с унф битрикс интеграция",
+          "observed_frequency": 57,
+          "source_row": 6
+        },
+        {
+          "phrase": "интеграция 1с бухгалтерия битрикс",
+          "observed_frequency": 56,
+          "source_row": 7
+        },
+        {
+          "phrase": "битрикс управление сайтом интеграция с 1с",
+          "observed_frequency": 40,
+          "source_row": 8
+        },
+        {
+          "phrase": "интеграция битрикс 1с ут",
+          "observed_frequency": 36,
+          "source_row": 9
+        },
+        {
+          "phrase": "1с битрикс документооборот интеграция",
+          "observed_frequency": 31,
+          "source_row": 10
+        },
+        {
+          "phrase": "настройка интеграции 1с и битрикс",
+          "observed_frequency": 29,
+          "source_row": 11
+        },
+        {
+          "phrase": "битрикс 24 модуль интеграции с 1с",
+          "observed_frequency": 29,
+          "source_row": 12
+        },
+        {
+          "phrase": "битрикс интернет магазины интеграцией 1с",
+          "observed_frequency": 27,
+          "source_row": 13
+        },
+        {
+          "phrase": "интеграция битрикс 1с erp",
+          "observed_frequency": 23,
+          "source_row": 14
+        },
+        {
+          "phrase": "интеграция битрикс 1с фреш",
+          "observed_frequency": 23,
+          "source_row": 15
+        },
+        {
+          "phrase": "интеграция 1с бухгалтерия и битрикс 24",
+          "observed_frequency": 21,
+          "source_row": 16
+        },
+        {
+          "phrase": "интеграция 1с битрикс магазина с 1с",
+          "observed_frequency": 19,
+          "source_row": 17
+        },
+        {
+          "phrase": "интеграция 1с битрикс и битрикс24",
+          "observed_frequency": 17,
+          "source_row": 18
+        },
+        {
+          "phrase": "интеграция битрикс и 1с управление торговлей",
+          "observed_frequency": 16,
+          "source_row": 19
+        },
+        {
+          "phrase": "интеграция 1с документооборот и битрикс 24",
+          "observed_frequency": 13,
+          "source_row": 20
+        },
+        {
+          "phrase": "скачать 1с битрикс интеграция",
+          "observed_frequency": 13,
+          "source_row": 21
+        },
+        {
+          "phrase": "интеграция 1с унф и битрикс 24",
+          "observed_frequency": 10,
+          "source_row": 22
+        },
+        {
+          "phrase": "интеграция сбис и 1с битрикс",
+          "observed_frequency": 10,
+          "source_row": 23
+        },
+        {
+          "phrase": "битрикс интеграция с 1с инструкция",
+          "observed_frequency": 9,
+          "source_row": 24
+        },
+        {
+          "phrase": "интеграция 1с erp и битрикс 24",
+          "observed_frequency": 9,
+          "source_row": 25
+        },
+        {
+          "phrase": "битрикс 24 настройка интеграции 1с",
+          "observed_frequency": 9,
+          "source_row": 26
+        },
+        {
+          "phrase": "интеграция битрикс 24 и 1с бухгалтерия видео",
+          "observed_frequency": 9,
+          "source_row": 27
+        },
+        {
+          "phrase": "интеграция честного знака и сайта 1с битрикс",
+          "observed_frequency": 8,
+          "source_row": 28
+        },
+        {
+          "phrase": "интеграция битрикс 24 и 1с ут",
+          "observed_frequency": 8,
+          "source_row": 29
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "C_integrations",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "интеграция 1С Битрикс",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-006-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+        "source_hash": "c49fd2c76a72012c806bec57930b658d7e38dc2370828f1fb872daaed48129b4",
+        "row_count": 28
+      }
+    },
+    {
+      "query_id": "ws-p1-007",
+      "exact_phrase": "маркировка в 1С",
+      "operator_syntax": "\"маркировка в 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 14346,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "маркировка в 1с",
+        "код маркировки в 1с",
+        "маркировка товаров в 1с",
+        "маркировка честный знак в 1с",
+        "маркировка в 1с ут",
+        "маркировка в 1с бухгалтерия",
+        "маркировка в 1с розница",
+        "коды маркировки честный знак в 1с",
+        "проверка маркировки в 1с",
+        "настройка маркировки в 1с",
+        "маркировка в 1с унф",
+        "проверка кодов маркировки в 1с",
+        "маркировка номенклатуры в 1с",
+        "как добавить маркировку в 1с",
+        "вид маркировки в 1с",
+        "как загрузить маркировку в 1с",
+        "коды маркировки в упд 1с",
+        "маркировка продукции в 1с",
+        "настроить маркировку в 1с",
+        "коды маркировки в 1с бухгалтерия"
+      ],
+      "irrelevant_variants": [
+        "маркировка в 1с инструкция",
+        "как настроить маркировку в 1с бухгалтерия",
+        "как настроить маркировку в 1с розница",
+        "как настроить маркировку в 1с ут",
+        "маркировка в 1с с нуля",
+        "как настроить маркировку в 1с розница 3.0"
+      ],
+      "related_queries": [
+        {
+          "phrase": "маркировка в 1с",
+          "observed_frequency": 14346,
+          "source_row": 2
+        },
+        {
+          "phrase": "код маркировки в 1с",
+          "observed_frequency": 6607,
+          "source_row": 3
+        },
+        {
+          "phrase": "маркировка товаров в 1с",
+          "observed_frequency": 2186,
+          "source_row": 4
+        },
+        {
+          "phrase": "маркировка честный знак в 1с",
+          "observed_frequency": 1805,
+          "source_row": 5
+        },
+        {
+          "phrase": "маркировка в 1с ут",
+          "observed_frequency": 1376,
+          "source_row": 6
+        },
+        {
+          "phrase": "маркировка в 1с бухгалтерия",
+          "observed_frequency": 902,
+          "source_row": 7
+        },
+        {
+          "phrase": "маркировка в 1с розница",
+          "observed_frequency": 890,
+          "source_row": 8
+        },
+        {
+          "phrase": "коды маркировки честный знак в 1с",
+          "observed_frequency": 811,
+          "source_row": 9
+        },
+        {
+          "phrase": "проверка маркировки в 1с",
+          "observed_frequency": 738,
+          "source_row": 10
+        },
+        {
+          "phrase": "настройка маркировки в 1с",
+          "observed_frequency": 728,
+          "source_row": 11
+        },
+        {
+          "phrase": "маркировка в 1с унф",
+          "observed_frequency": 719,
+          "source_row": 12
+        },
+        {
+          "phrase": "проверка кодов маркировки в 1с",
+          "observed_frequency": 552,
+          "source_row": 13
+        },
+        {
+          "phrase": "маркировка номенклатуры в 1с",
+          "observed_frequency": 503,
+          "source_row": 14
+        },
+        {
+          "phrase": "как добавить маркировку в 1с",
+          "observed_frequency": 444,
+          "source_row": 15
+        },
+        {
+          "phrase": "вид маркировки в 1с",
+          "observed_frequency": 418,
+          "source_row": 16
+        },
+        {
+          "phrase": "как загрузить маркировку в 1с",
+          "observed_frequency": 397,
+          "source_row": 17
+        },
+        {
+          "phrase": "коды маркировки в упд 1с",
+          "observed_frequency": 394,
+          "source_row": 18
+        },
+        {
+          "phrase": "маркировка продукции в 1с",
+          "observed_frequency": 358,
+          "source_row": 19
+        },
+        {
+          "phrase": "настроить маркировку в 1с",
+          "observed_frequency": 345,
+          "source_row": 20
+        },
+        {
+          "phrase": "коды маркировки в 1с бухгалтерия",
+          "observed_frequency": 334,
+          "source_row": 21
+        },
+        {
+          "phrase": "маркировка в 1с эдо",
+          "observed_frequency": 330,
+          "source_row": 22
+        },
+        {
+          "phrase": "маркировка остатков в 1с",
+          "observed_frequency": 328,
+          "source_row": 23
+        },
+        {
+          "phrase": "как загрузить коды маркировки в 1с",
+          "observed_frequency": 317,
+          "source_row": 24
+        },
+        {
+          "phrase": "работа с маркировкой в 1с",
+          "observed_frequency": 314,
+          "source_row": 25
+        },
+        {
+          "phrase": "маркировка товаров в 1с честный знак",
+          "observed_frequency": 311,
+          "source_row": 26
+        },
+        {
+          "phrase": "маркировка товаров в 1с ут",
+          "observed_frequency": 281,
+          "source_row": 27
+        },
+        {
+          "phrase": "1с маркировка ввод в оборот",
+          "observed_frequency": 278,
+          "source_row": 28
+        },
+        {
+          "phrase": "маркировка в 1с erp",
+          "observed_frequency": 271,
+          "source_row": 29
+        },
+        {
+          "phrase": "маркировка в 1с 8.3",
+          "observed_frequency": 268,
+          "source_row": 30
+        },
+        {
+          "phrase": "маркировка в 1с ут 11.5",
+          "observed_frequency": 257,
+          "source_row": 31
+        },
+        {
+          "phrase": "заказ кодов маркировки в 1с",
+          "observed_frequency": 253,
+          "source_row": 32
+        },
+        {
+          "phrase": "маркировка в 1с торговля",
+          "observed_frequency": 247,
+          "source_row": 33
+        },
+        {
+          "phrase": "контур маркировка в 1с",
+          "observed_frequency": 236,
+          "source_row": 34
+        },
+        {
+          "phrase": "учет маркировки в 1с",
+          "observed_frequency": 224,
+          "source_row": 35
+        },
+        {
+          "phrase": "маркировка масел в 1с",
+          "observed_frequency": 218,
+          "source_row": 36
+        },
+        {
+          "phrase": "упд с маркировкой в 1с",
+          "observed_frequency": 213,
+          "source_row": 37
+        },
+        {
+          "phrase": "маркировка чз в 1с",
+          "observed_frequency": 211,
+          "source_row": 38
+        },
+        {
+          "phrase": "эмиссия кодов маркировки в 1с",
+          "observed_frequency": 209,
+          "source_row": 39
+        },
+        {
+          "phrase": "маркировка в 1с ут 11",
+          "observed_frequency": 204,
+          "source_row": 40
+        },
+        {
+          "phrase": "как ввести маркировку в 1с",
+          "observed_frequency": 202,
+          "source_row": 41
+        },
+        {
+          "phrase": "как добавить коды маркировки в 1с",
+          "observed_frequency": 202,
+          "source_row": 42
+        },
+        {
+          "phrase": "загрузка маркировки в 1с",
+          "observed_frequency": 187,
+          "source_row": 43
+        },
+        {
+          "phrase": "1с ввод в оборот кодов маркировки",
+          "observed_frequency": 186,
+          "source_row": 44
+        },
+        {
+          "phrase": "1с маркировка в чеке",
+          "observed_frequency": 186,
+          "source_row": 45
+        },
+        {
+          "phrase": "агрегация в 1с маркировка",
+          "observed_frequency": 183,
+          "source_row": 46
+        },
+        {
+          "phrase": "сбис маркировка в 1с",
+          "observed_frequency": 178,
+          "source_row": 47
+        },
+        {
+          "phrase": "маркировка товаров в 1с бухгалтерия",
+          "observed_frequency": 178,
+          "source_row": 48
+        },
+        {
+          "phrase": "1с криптохвост в маркировке",
+          "observed_frequency": 177,
+          "source_row": 49
+        },
+        {
+          "phrase": "маркировка в программах 1с",
+          "observed_frequency": 168,
+          "source_row": 50
+        },
+        {
+          "phrase": "как проверить маркировку в 1с",
+          "observed_frequency": 166,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "D_labeling",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "маркировка в 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-007-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+        "source_hash": "e726ffa948c71eb1cb6bd97f487533d57b6ffe0f8ef1efdf1fff59b76f9a719a",
+        "row_count": 196
+      }
+    },
+    {
+      "query_id": "ws-p1-008",
+      "exact_phrase": "Честный знак 1С",
+      "operator_syntax": "\"Честный знак 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 11125,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "честный знак в 1с",
+        "честный знак модуль 1с",
+        "маркировка честный знак в 1с",
+        "1с бухгалтерия честный знак",
+        "1с унф честный знак",
+        "настройка честного знака в 1с",
+        "честный знак через 1с",
+        "коды маркировки честный знак в 1с",
+        "интеграция 1с и честный знак",
+        "честный знак в 1с ут",
+        "1с 8.3 честный знак",
+        "1с номенклатура честный знак",
+        "1с торговля честный знак",
+        "лм честный знак 1с",
+        "1с erp честный знак",
+        "как работает честный знак в 1с",
+        "как настроить честный знак в 1с",
+        "настройка модуля честный знак 1с",
+        "маркировка товара честный знак 1с",
+        "настройка локального модуля честный знак 1с"
+      ],
+      "irrelevant_variants": [
+        "как настроить честный знак в 1с",
+        "курсы 1с честный знак",
+        "как настроить честный знак в 1с бухгалтерия",
+        "как настроить интеграцию 1с и честный знак",
+        "интеграция 1с и честный знак инструкция",
+        "обучение честный знак в 1с",
+        "честный знак в 1с розница как настроить",
+        "как настроить честный знак в 1с ут",
+        "честный знак 1с бухгалтерия 8 как настроить",
+        "локальный модуль честный знак 1с скачать",
+        "как настроить честный знак в 1с 11.5",
+        "выгрузка чек лист 1с честный знак инструкция"
+      ],
+      "related_queries": [
+        {
+          "phrase": "честный знак в 1с",
+          "observed_frequency": 11125,
+          "source_row": 2
+        },
+        {
+          "phrase": "честный знак модуль 1с",
+          "observed_frequency": 1907,
+          "source_row": 3
+        },
+        {
+          "phrase": "маркировка честный знак в 1с",
+          "observed_frequency": 1805,
+          "source_row": 4
+        },
+        {
+          "phrase": "1с бухгалтерия честный знак",
+          "observed_frequency": 1479,
+          "source_row": 5
+        },
+        {
+          "phrase": "1с унф честный знак",
+          "observed_frequency": 1007,
+          "source_row": 6
+        },
+        {
+          "phrase": "настройка честного знака в 1с",
+          "observed_frequency": 826,
+          "source_row": 7
+        },
+        {
+          "phrase": "честный знак через 1с",
+          "observed_frequency": 815,
+          "source_row": 8
+        },
+        {
+          "phrase": "коды маркировки честный знак в 1с",
+          "observed_frequency": 811,
+          "source_row": 9
+        },
+        {
+          "phrase": "интеграция 1с и честный знак",
+          "observed_frequency": 799,
+          "source_row": 10
+        },
+        {
+          "phrase": "честный знак в 1с ут",
+          "observed_frequency": 794,
+          "source_row": 11
+        },
+        {
+          "phrase": "1с 8.3 честный знак",
+          "observed_frequency": 586,
+          "source_row": 12
+        },
+        {
+          "phrase": "работа с честным знаком в 1с",
+          "observed_frequency": 515,
+          "source_row": 13
+        },
+        {
+          "phrase": "1с номенклатура честный знак",
+          "observed_frequency": 446,
+          "source_row": 14
+        },
+        {
+          "phrase": "1с торговля честный знак",
+          "observed_frequency": 445,
+          "source_row": 15
+        },
+        {
+          "phrase": "лм честный знак 1с",
+          "observed_frequency": 437,
+          "source_row": 16
+        },
+        {
+          "phrase": "1с erp честный знак",
+          "observed_frequency": 422,
+          "source_row": 17
+        },
+        {
+          "phrase": "как работает честный знак в 1с",
+          "observed_frequency": 411,
+          "source_row": 18
+        },
+        {
+          "phrase": "как настроить честный знак в 1с",
+          "observed_frequency": 410,
+          "source_row": 19
+        },
+        {
+          "phrase": "настройка модуля честный знак 1с",
+          "observed_frequency": 372,
+          "source_row": 20
+        },
+        {
+          "phrase": "маркировка товара честный знак 1с",
+          "observed_frequency": 368,
+          "source_row": 21
+        },
+        {
+          "phrase": "настройка локального модуля честный знак 1с",
+          "observed_frequency": 351,
+          "source_row": 22
+        },
+        {
+          "phrase": "подключение лм честный знак 1с",
+          "observed_frequency": 343,
+          "source_row": 23
+        },
+        {
+          "phrase": "1с ут честный знак настройка",
+          "observed_frequency": 340,
+          "source_row": 24
+        },
+        {
+          "phrase": "честный знак как загрузить в 1с",
+          "observed_frequency": 328,
+          "source_row": 25
+        },
+        {
+          "phrase": "честный знак 1с упаковка",
+          "observed_frequency": 327,
+          "source_row": 26
+        },
+        {
+          "phrase": "настройка 1с розница честный знак",
+          "observed_frequency": 326,
+          "source_row": 27
+        },
+        {
+          "phrase": "честный знак учет 1с",
+          "observed_frequency": 323,
+          "source_row": 28
+        },
+        {
+          "phrase": "настройка подключения лм честный знак 1с",
+          "observed_frequency": 316,
+          "source_row": 29
+        },
+        {
+          "phrase": "система честный знак в 1с",
+          "observed_frequency": 306,
+          "source_row": 30
+        },
+        {
+          "phrase": "локальный модуль честный знак 1с розница",
+          "observed_frequency": 288,
+          "source_row": 31
+        },
+        {
+          "phrase": "программа 1с честный знак",
+          "observed_frequency": 275,
+          "source_row": 32
+        },
+        {
+          "phrase": "где в 1с честный знак",
+          "observed_frequency": 269,
+          "source_row": 33
+        },
+        {
+          "phrase": "честный знак без 1с",
+          "observed_frequency": 254,
+          "source_row": 34
+        },
+        {
+          "phrase": "1с 8 честный знак",
+          "observed_frequency": 253,
+          "source_row": 35
+        },
+        {
+          "phrase": "токен авторизации честный знак 1с",
+          "observed_frequency": 243,
+          "source_row": 36
+        },
+        {
+          "phrase": "суз честный знак 1с",
+          "observed_frequency": 236,
+          "source_row": 37
+        },
+        {
+          "phrase": "1с ут 11 честный знак",
+          "observed_frequency": 235,
+          "source_row": 38
+        },
+        {
+          "phrase": "честный знак в 1с бухгалтерия 8.3",
+          "observed_frequency": 228,
+          "source_row": 39
+        },
+        {
+          "phrase": "честный знак в 1с ут 11.5",
+          "observed_frequency": 217,
+          "source_row": 40
+        },
+        {
+          "phrase": "как добавить честный знак в 1с",
+          "observed_frequency": 208,
+          "source_row": 41
+        },
+        {
+          "phrase": "контур честный знак 1с",
+          "observed_frequency": 205,
+          "source_row": 42
+        },
+        {
+          "phrase": "1с этикетка честный знак",
+          "observed_frequency": 201,
+          "source_row": 43
+        },
+        {
+          "phrase": "обмен с честным знаком 1с",
+          "observed_frequency": 198,
+          "source_row": 44
+        },
+        {
+          "phrase": "пиот честный знак 1с",
+          "observed_frequency": 197,
+          "source_row": 45
+        },
+        {
+          "phrase": "подключение честного знака в 1с",
+          "observed_frequency": 193,
+          "source_row": 46
+        },
+        {
+          "phrase": "вывод из оборота честный знак 1с",
+          "observed_frequency": 190,
+          "source_row": 47
+        },
+        {
+          "phrase": "честный знак 1с предприятие",
+          "observed_frequency": 169,
+          "source_row": 48
+        },
+        {
+          "phrase": "api честный знак 1с",
+          "observed_frequency": 159,
+          "source_row": 49
+        },
+        {
+          "phrase": "ввод в оборот честный знак 1с",
+          "observed_frequency": 158,
+          "source_row": 50
+        },
+        {
+          "phrase": "агрегация честный знак в 1с",
+          "observed_frequency": 156,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "D_labeling",
+      "collection_priority": 1,
+      "pass_a": {
+        "operator_syntax": "Честный знак 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-008-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+        "source_hash": "f3feb6a59fb5efa3353f517e8e5b3f2effb0bd39e212caf0a5294c8d024ae232",
+        "row_count": 250
+      }
+    },
+    {
+      "query_id": "ws-p2-001",
+      "exact_phrase": "доработка отчёта 1С",
+      "operator_syntax": "\"доработка отчёта 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 146,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "1с доработка отчетов",
+        "1с доработка отчета движение денежных средств"
+      ],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "1с доработка отчетов",
+          "observed_frequency": 146,
+          "source_row": 2
+        },
+        {
+          "phrase": "1с доработка отчета движение денежных средств",
+          "observed_frequency": 14,
+          "source_row": 3
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "B_reports",
+      "collection_priority": 2,
+      "pass_a": {
+        "operator_syntax": "доработка отчёта 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-001-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+        "source_hash": "8b45b9cb31b54a30bce4e87394e065732fb8027d07ce2077c127dc885f532634",
+        "row_count": 2
+      }
+    },
+    {
+      "query_id": "ws-p2-002",
+      "exact_phrase": "доработка печатной формы 1С",
+      "operator_syntax": "\"доработка печатной формы 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 20147,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "печатные формы 1с",
+        "1с внешняя печатная форма",
+        "печатные формы 1с 8.3",
+        "1с макеты печатных форм",
+        "1с печатные формы документов",
+        "печатная форма счета 1с",
+        "1с печатная форма упд",
+        "печатные формы 1с зуп",
+        "добавить печатную форму в 1с",
+        "внешние печатные формы 1с 8.3",
+        "печатная форма 1с ут",
+        "1с печатная форма печать",
+        "1с вывести печатную форму",
+        "как изменить печатную форму в 1с",
+        "1с унф печатные формы",
+        "как сделать печатную форму в 1с",
+        "создание печатной формы 1с",
+        "параметры печатных форм 1с",
+        "1с программно печатную форму",
+        "1с 8 печатная форма"
+      ],
+      "irrelevant_variants": [
+        "скачать печатную форму 1с",
+        "как настроить печатную форму в 1с",
+        "1с внешняя печатная форма скачать",
+        "1с печатная форма с нуля",
+        "скачать бесплатно 1с печатные формы",
+        "создание печатной формы с нуля 1с",
+        "скачать печатные формы 1с 8.3",
+        "внешняя печатная форма 1с 8.3 скачать",
+        "внешняя печатная форма 1с скачать бесплатно",
+        "внешняя печатная форма 1с с нуля",
+        "как настроить печатные формы в 1с 8.3",
+        "1с печатная форма счет скачать",
+        "1с внешняя печатная форма упд скачать",
+        "1с бухгалтерия внешние печатные формы скачать",
+        "печатные формы 1с 7.7 скачать",
+        "курс 1с печатной форме",
+        "внешняя печатная форма 1с 3.0 скачать",
+        "создание печатных форм 1с инструкция",
+        "макеты печатных форм 1с скачать",
+        "1с укд печатная форма скачать"
+      ],
+      "related_queries": [
+        {
+          "phrase": "печатные формы 1с",
+          "observed_frequency": 20147,
+          "source_row": 2
+        },
+        {
+          "phrase": "1с внешняя печатная форма",
+          "observed_frequency": 3497,
+          "source_row": 3
+        },
+        {
+          "phrase": "печатные формы 1с 8.3",
+          "observed_frequency": 2727,
+          "source_row": 4
+        },
+        {
+          "phrase": "1с макеты печатных форм",
+          "observed_frequency": 2191,
+          "source_row": 5
+        },
+        {
+          "phrase": "1с печатные формы документов",
+          "observed_frequency": 1984,
+          "source_row": 6
+        },
+        {
+          "phrase": "печатная форма счета 1с",
+          "observed_frequency": 1365,
+          "source_row": 7
+        },
+        {
+          "phrase": "1с печатная форма упд",
+          "observed_frequency": 1251,
+          "source_row": 8
+        },
+        {
+          "phrase": "печатные формы 1с зуп",
+          "observed_frequency": 1135,
+          "source_row": 9
+        },
+        {
+          "phrase": "добавить печатную форму в 1с",
+          "observed_frequency": 995,
+          "source_row": 10
+        },
+        {
+          "phrase": "внешние печатные формы 1с 8.3",
+          "observed_frequency": 917,
+          "source_row": 11
+        },
+        {
+          "phrase": "печатная форма 1с ут",
+          "observed_frequency": 807,
+          "source_row": 12
+        },
+        {
+          "phrase": "1с печатная форма печать",
+          "observed_frequency": 803,
+          "source_row": 13
+        },
+        {
+          "phrase": "1с вывести печатную форму",
+          "observed_frequency": 749,
+          "source_row": 14
+        },
+        {
+          "phrase": "как изменить печатную форму в 1с",
+          "observed_frequency": 656,
+          "source_row": 15
+        },
+        {
+          "phrase": "1с унф печатные формы",
+          "observed_frequency": 587,
+          "source_row": 16
+        },
+        {
+          "phrase": "как сделать печатную форму в 1с",
+          "observed_frequency": 537,
+          "source_row": 17
+        },
+        {
+          "phrase": "создание печатной формы 1с",
+          "observed_frequency": 530,
+          "source_row": 18
+        },
+        {
+          "phrase": "параметры печатных форм 1с",
+          "observed_frequency": 515,
+          "source_row": 19
+        },
+        {
+          "phrase": "1с программно печатную форму",
+          "observed_frequency": 499,
+          "source_row": 20
+        },
+        {
+          "phrase": "1с 8 печатная форма",
+          "observed_frequency": 488,
+          "source_row": 21
+        },
+        {
+          "phrase": "где в 1с печатные формы",
+          "observed_frequency": 475,
+          "source_row": 22
+        },
+        {
+          "phrase": "1с печатная форма договора",
+          "observed_frequency": 466,
+          "source_row": 23
+        },
+        {
+          "phrase": "скачать печатную форму 1с",
+          "observed_frequency": 463,
+          "source_row": 24
+        },
+        {
+          "phrase": "обработки печатная форма 1с",
+          "observed_frequency": 460,
+          "source_row": 25
+        },
+        {
+          "phrase": "печатная форма отчета 1с",
+          "observed_frequency": 440,
+          "source_row": 26
+        },
+        {
+          "phrase": "1с печатная форма недоступна",
+          "observed_frequency": 405,
+          "source_row": 27
+        },
+        {
+          "phrase": "настройка печатных форм в 1с",
+          "observed_frequency": 398,
+          "source_row": 28
+        },
+        {
+          "phrase": "как настроить печатную форму в 1с",
+          "observed_frequency": 394,
+          "source_row": 29
+        },
+        {
+          "phrase": "печатные формы 1с бп",
+          "observed_frequency": 377,
+          "source_row": 30
+        },
+        {
+          "phrase": "1с печатная форма счет на оплату",
+          "observed_frequency": 370,
+          "source_row": 31
+        },
+        {
+          "phrase": "печатные формы 1с конфигуратор",
+          "observed_frequency": 352,
+          "source_row": 32
+        },
+        {
+          "phrase": "1с печатная форма акта",
+          "observed_frequency": 351,
+          "source_row": 33
+        },
+        {
+          "phrase": "1с изменение печатной формы",
+          "observed_frequency": 342,
+          "source_row": 34
+        },
+        {
+          "phrase": "макет печатной формы в 1с 8.3",
+          "observed_frequency": 336,
+          "source_row": 35
+        },
+        {
+          "phrase": "страница печатной формы 1с",
+          "observed_frequency": 335,
+          "source_row": 36
+        },
+        {
+          "phrase": "реквизиты печатных форм в 1с",
+          "observed_frequency": 330,
+          "source_row": 37
+        },
+        {
+          "phrase": "1с erp печатные формы",
+          "observed_frequency": 315,
+          "source_row": 38
+        },
+        {
+          "phrase": "1с предприятие печатные формы",
+          "observed_frequency": 311,
+          "source_row": 39
+        },
+        {
+          "phrase": "внешняя печатная форма документа 1с",
+          "observed_frequency": 310,
+          "source_row": 40
+        },
+        {
+          "phrase": "вывод печатных форм 1с",
+          "observed_frequency": 291,
+          "source_row": 41
+        },
+        {
+          "phrase": "подписи в печатной форме 1с",
+          "observed_frequency": 282,
+          "source_row": 42
+        },
+        {
+          "phrase": "1с печать внешней печатной формы",
+          "observed_frequency": 280,
+          "source_row": 43
+        },
+        {
+          "phrase": "изменить печатную форму 1с 8.3",
+          "observed_frequency": 278,
+          "source_row": 44
+        },
+        {
+          "phrase": "печатная форма 1с 3.0",
+          "observed_frequency": 270,
+          "source_row": 45
+        },
+        {
+          "phrase": "1с файл печатной формы",
+          "observed_frequency": 265,
+          "source_row": 46
+        },
+        {
+          "phrase": "1с как убрать печатные формы",
+          "observed_frequency": 264,
+          "source_row": 47
+        },
+        {
+          "phrase": "1с редактирование печатных форм",
+          "observed_frequency": 264,
+          "source_row": 48
+        },
+        {
+          "phrase": "1с внешняя печатная форма скачать",
+          "observed_frequency": 258,
+          "source_row": 49
+        },
+        {
+          "phrase": "1с печатная форма word",
+          "observed_frequency": 258,
+          "source_row": 50
+        },
+        {
+          "phrase": "печатная форма счета 1с 8.3",
+          "observed_frequency": 258,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "B_forms",
+      "collection_priority": 2,
+      "pass_a": {
+        "operator_syntax": "доработка печатной формы 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-002-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+        "source_hash": "a2ce8003160dcd46c505e1b9f6b2d9691f2f7d81bddd9a6810b3858800e2bc8c",
+        "row_count": 542
+      }
+    },
+    {
+      "query_id": "ws-p2-003",
+      "exact_phrase": "доработка РМК 1С",
+      "operator_syntax": "\"доработка РМК 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": null,
+      "primary_frequency_status": "no_result_not_zero",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [],
+      "irrelevant_variants": [],
+      "related_queries": [],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_operator_report",
+      "acquisition_limitations": [
+        "af-006: Wordstat requires authenticated Yandex operator session with geo UI — not available in Cursor agent environment"
+      ],
+      "cluster": "B_rmk",
+      "collection_priority": 2,
+      "pass_a": {
+        "status": "no_result_for_entered_formulation",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-003-no-result-evidence.json",
+        "row_count": 0
+      }
+    },
+    {
+      "query_id": "ws-p2-004",
+      "exact_phrase": "настройка синхронизации 1С",
+      "operator_syntax": "\"настройка синхронизации 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 18625,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "настройка синхронизации 1с",
+        "1с зуп настройка синхронизации",
+        "1с настройка синхронизации данных",
+        "настройки синхронизации 1с 8.3",
+        "1с бухгалтерия настройка синхронизации",
+        "настройка синхронизации 1с зуп и бп",
+        "1с рмк синхронизация",
+        "1с фреш настройка синхронизации",
+        "1с ут настройка синхронизации",
+        "настройка синхронизации 1с 8.3 бухгалтерия",
+        "настройка синхронизации между зуп и 1с",
+        "настройка синхронизации 1с зуп и бух",
+        "1с унф настройка синхронизации",
+        "настройки синхронизации данных 1с 8.3",
+        "настройки синхронизации зуп и 1с бухгалтерия",
+        "настройка синхронизации 1с розница",
+        "настройки синхронизации данных 1с 8.3 зуп",
+        "настройка синхронизации зуп фреш и 1с",
+        "настройка синхронизации 1с ут и бп",
+        "1с рмк настройка синхронизации"
+      ],
+      "irrelevant_variants": [
+        "1с синхронизация бухгалтерия зарплата",
+        "как настроить синхронизацию зуп и 1с",
+        "синхронизация зарплаты в 1с 8.3",
+        "как настроить синхронизацию 1с 8.3 зуп",
+        "1с синхронизация отражение зарплаты в бухучете",
+        "1с фреш как настроить синхронизацию",
+        "как настроить синхронизацию данных 1с",
+        "синхронизация зарплаты из зуп в 1с",
+        "как настроить синхронизацию между базами 1с",
+        "как настроить синхронизацию 1с через яндекс диск",
+        "как настроить синхронизацию 1с бух и зуп",
+        "как настроить синхронизацию сбис и 1с",
+        "сценарии синхронизации данных 1с как настроить"
+      ],
+      "related_queries": [
+        {
+          "phrase": "синхронизация 1с",
+          "observed_frequency": 18625,
+          "source_row": 2
+        },
+        {
+          "phrase": "1с бухгалтерия синхронизация",
+          "observed_frequency": 4100,
+          "source_row": 3
+        },
+        {
+          "phrase": "синхронизация 1с 8.3",
+          "observed_frequency": 2611,
+          "source_row": 4
+        },
+        {
+          "phrase": "настройка синхронизации 1с",
+          "observed_frequency": 2237,
+          "source_row": 5
+        },
+        {
+          "phrase": "1с бп синхронизация",
+          "observed_frequency": 1929,
+          "source_row": 6
+        },
+        {
+          "phrase": "1с бухгалтерия 8.3 синхронизация",
+          "observed_frequency": 1783,
+          "source_row": 7
+        },
+        {
+          "phrase": "1с 8.3 зуп синхронизация",
+          "observed_frequency": 1661,
+          "source_row": 8
+        },
+        {
+          "phrase": "1с настроить синхронизацию",
+          "observed_frequency": 1570,
+          "source_row": 9
+        },
+        {
+          "phrase": "синхронизация между 1с",
+          "observed_frequency": 1301,
+          "source_row": 10
+        },
+        {
+          "phrase": "синхронизация 1с ут",
+          "observed_frequency": 1222,
+          "source_row": 11
+        },
+        {
+          "phrase": "синхронизация зуп и 1с бухгалтерия 8.3",
+          "observed_frequency": 1071,
+          "source_row": 12
+        },
+        {
+          "phrase": "1с унф синхронизация",
+          "observed_frequency": 1062,
+          "source_row": 13
+        },
+        {
+          "phrase": "синхронизация данных в 1с",
+          "observed_frequency": 1037,
+          "source_row": 14
+        },
+        {
+          "phrase": "синхронизация баз 1с",
+          "observed_frequency": 1010,
+          "source_row": 15
+        },
+        {
+          "phrase": "синхронизация документов 1с",
+          "observed_frequency": 925,
+          "source_row": 16
+        },
+        {
+          "phrase": "1с бух синхронизация",
+          "observed_frequency": 738,
+          "source_row": 17
+        },
+        {
+          "phrase": "1с розница синхронизация",
+          "observed_frequency": 683,
+          "source_row": 18
+        },
+        {
+          "phrase": "1с синхронизация зуп бп",
+          "observed_frequency": 673,
+          "source_row": 19
+        },
+        {
+          "phrase": "1с зуп настройка синхронизации",
+          "observed_frequency": 668,
+          "source_row": 20
+        },
+        {
+          "phrase": "1с сделать синхронизацию",
+          "observed_frequency": 659,
+          "source_row": 21
+        },
+        {
+          "phrase": "синхронизация из зуп в 1с",
+          "observed_frequency": 627,
+          "source_row": 22
+        },
+        {
+          "phrase": "ошибки синхронизации 1с",
+          "observed_frequency": 570,
+          "source_row": 23
+        },
+        {
+          "phrase": "синхронизация между 1с зуп",
+          "observed_frequency": 487,
+          "source_row": 24
+        },
+        {
+          "phrase": "1с ут бп синхронизация",
+          "observed_frequency": 465,
+          "source_row": 25
+        },
+        {
+          "phrase": "синхронизация данных 1с 8.3",
+          "observed_frequency": 449,
+          "source_row": 26
+        },
+        {
+          "phrase": "1с 8 синхронизация",
+          "observed_frequency": 442,
+          "source_row": 27
+        },
+        {
+          "phrase": "1с синхронизация 3.0",
+          "observed_frequency": 436,
+          "source_row": 28
+        },
+        {
+          "phrase": "синхронизация данных 1с бухгалтерия",
+          "observed_frequency": 412,
+          "source_row": 29
+        },
+        {
+          "phrase": "1с синхронизация бухгалтерия зарплата",
+          "observed_frequency": 386,
+          "source_row": 30
+        },
+        {
+          "phrase": "1с настройка синхронизации данных",
+          "observed_frequency": 378,
+          "source_row": 31
+        },
+        {
+          "phrase": "настроить синхронизацию 1с 8.3",
+          "observed_frequency": 375,
+          "source_row": 32
+        },
+        {
+          "phrase": "1с правила синхронизации",
+          "observed_frequency": 353,
+          "source_row": 33
+        },
+        {
+          "phrase": "синхронизация из 1с зуп в 1с бухгалтерия",
+          "observed_frequency": 349,
+          "source_row": 34
+        },
+        {
+          "phrase": "настройки синхронизации 1с 8.3",
+          "observed_frequency": 343,
+          "source_row": 35
+        },
+        {
+          "phrase": "файл синхронизации 1с",
+          "observed_frequency": 340,
+          "source_row": 36
+        },
+        {
+          "phrase": "как настроить синхронизацию зуп и 1с",
+          "observed_frequency": 336,
+          "source_row": 37
+        },
+        {
+          "phrase": "синхронизация 1с битрикс",
+          "observed_frequency": 330,
+          "source_row": 38
+        },
+        {
+          "phrase": "1с бух и зуп синхронизация",
+          "observed_frequency": 315,
+          "source_row": 39
+        },
+        {
+          "phrase": "синхронизация между базами 1с",
+          "observed_frequency": 313,
+          "source_row": 40
+        },
+        {
+          "phrase": "синхронизация 1с касса",
+          "observed_frequency": 299,
+          "source_row": 41
+        },
+        {
+          "phrase": "синхронизация программ 1с",
+          "observed_frequency": 295,
+          "source_row": 42
+        },
+        {
+          "phrase": "1с бухгалтерия настройка синхронизации",
+          "observed_frequency": 295,
+          "source_row": 43
+        },
+        {
+          "phrase": "синхронизация 1с бгу",
+          "observed_frequency": 274,
+          "source_row": 44
+        },
+        {
+          "phrase": "1с синхронизация сотрудников",
+          "observed_frequency": 265,
+          "source_row": 45
+        },
+        {
+          "phrase": "1с синхронизация между бухгалтериями",
+          "observed_frequency": 263,
+          "source_row": 46
+        },
+        {
+          "phrase": "1с синхронизация erp erp",
+          "observed_frequency": 262,
+          "source_row": 47
+        },
+        {
+          "phrase": "синхронизация зарплаты в 1с 8.3",
+          "observed_frequency": 261,
+          "source_row": 48
+        },
+        {
+          "phrase": "как настроить синхронизацию 1с 8.3 зуп",
+          "observed_frequency": 259,
+          "source_row": 49
+        },
+        {
+          "phrase": "1с универсальная синхронизация",
+          "observed_frequency": 255,
+          "source_row": 50
+        },
+        {
+          "phrase": "настройка синхронизации 1с зуп и бп",
+          "observed_frequency": 250,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "C_integrations",
+      "collection_priority": 2,
+      "pass_a": {
+        "operator_syntax": "настройка синхронизации 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-004-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+        "source_hash": "6971f418af26674efc551767164784d3278d5c5e4d82c6c92cd1eaa9b92d717b",
+        "row_count": 384
+      }
+    },
+    {
+      "query_id": "ws-p2-005",
+      "exact_phrase": "обновление доработанной 1С",
+      "operator_syntax": "\"обновление доработанной 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 26,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "обновление доработанных конфигураций 1с",
+          "observed_frequency": 26,
+          "source_row": 2
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "A_support",
+      "collection_priority": 2,
+      "pass_a": {
+        "operator_syntax": "обновление доработанной 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-005-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+        "source_hash": "6aeb9123a86bd38b02c2d791d8ee64054a1357105e1b72105e902d120eef4673",
+        "row_count": 1
+      }
+    },
+    {
+      "query_id": "ws-p2-006",
+      "exact_phrase": "срочно программист 1С",
+      "operator_syntax": "\"срочно программист 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": null,
+      "primary_frequency_status": "no_result_not_zero",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [],
+      "irrelevant_variants": [],
+      "related_queries": [],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_operator_report",
+      "acquisition_limitations": [
+        "af-006: Wordstat requires authenticated Yandex operator session with geo UI — not available in Cursor agent environment"
+      ],
+      "cluster": "A_urgent",
+      "collection_priority": 2,
+      "pass_a": {
+        "status": "no_result_for_entered_formulation",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-006-no-result-evidence.json",
+        "row_count": 0
+      }
+    },
+    {
+      "query_id": "ws-p2-007",
+      "exact_phrase": "1С не работает",
+      "operator_syntax": "\"1С не работает\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 312,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "программа 1с не работает",
+          "observed_frequency": 312,
+          "source_row": 2
+        },
+        {
+          "phrase": "почему не работает программа 1с",
+          "observed_frequency": 45,
+          "source_row": 3
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "A_urgent",
+      "collection_priority": 2,
+      "pass_a": {
+        "operator_syntax": "1С не работает",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-007-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+        "source_hash": "e58373e588b52d3176937bc228ffe94e9714dfdc601c5990773c9cdb5d3fb52d",
+        "row_count": 2
+      }
+    },
+    {
+      "query_id": "ws-p3-001",
+      "exact_phrase": "маркировка пива 1С",
+      "operator_syntax": "\"маркировка пива 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 89,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_applicable",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "1с маркировка пива"
+      ],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "1с маркировка пива",
+          "observed_frequency": 89,
+          "source_row": 2
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "E_product_labeling",
+      "collection_priority": 3,
+      "pass_a": {
+        "operator_syntax": "маркировка пива 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-001-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+        "source_hash": "d053c057c0f90d82fd8893c160c9563851e08ccd0efe981be382b3ea55b78e35",
+        "row_count": 1
+      }
+    },
+    {
+      "query_id": "ws-p3-002",
+      "exact_phrase": "маркировка воды 1С",
+      "operator_syntax": "\"маркировка воды 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 58,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_applicable",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "1с маркировка воды"
+      ],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "1с маркировка воды",
+          "observed_frequency": 58,
+          "source_row": 2
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "E_product_labeling",
+      "collection_priority": 3,
+      "pass_a": {
+        "operator_syntax": "маркировка воды 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-002-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+        "source_hash": "41d35b769456c1cd9f65b43e0b9bd1a1296be36c1862e205f49297cd2aac54c5",
+        "row_count": 1
+      }
+    },
+    {
+      "query_id": "ws-p3-003",
+      "exact_phrase": "маркировка лекарств 1С",
+      "operator_syntax": "\"маркировка лекарств 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 1555,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_applicable",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "маркировка лекарств",
+        "честный знак маркировка лекарств",
+        "маркировка лекарств личный кабинет",
+        "маркировка лекарств честный знак личный кабинет",
+        "код маркировки лекарства",
+        "маркировка лекарств препаратов",
+        "обязательной маркировки лекарств",
+        "маркировка упаковки лекарств",
+        "систему маркировки лекарств",
+        "знак маркировки на лекарствах",
+        "исмет маркировка лекарств",
+        "маркировка лекарств аптека",
+        "маркировка лекарств проверить",
+        "лекарства подлежащие маркировке",
+        "маркировка лекарств средств",
+        "маркировка лекарства с какого",
+        "проверка маркировки лекарств",
+        "лекарство без маркировки",
+        "маркировка лекарств срок",
+        "маркировка лекарств ру"
+      ],
+      "irrelevant_variants": [
+        "что такое sgtin в маркировке лекарств",
+        "что такое прямой акцепт при маркировке лекарств",
+        "что такое кизы в маркировке на лекарства",
+        "что такое производная маркировка лекарств"
+      ],
+      "related_queries": [
+        {
+          "phrase": "маркировка лекарств",
+          "observed_frequency": 1555,
+          "source_row": 2
+        },
+        {
+          "phrase": "честный знак маркировка лекарств",
+          "observed_frequency": 363,
+          "source_row": 3
+        },
+        {
+          "phrase": "маркировка лекарств личный кабинет",
+          "observed_frequency": 182,
+          "source_row": 4
+        },
+        {
+          "phrase": "маркировка лекарств честный знак личный кабинет",
+          "observed_frequency": 175,
+          "source_row": 5
+        },
+        {
+          "phrase": "код маркировки лекарства",
+          "observed_frequency": 136,
+          "source_row": 6
+        },
+        {
+          "phrase": "маркировка лекарств препаратов",
+          "observed_frequency": 93,
+          "source_row": 7
+        },
+        {
+          "phrase": "обязательной маркировки лекарств",
+          "observed_frequency": 86,
+          "source_row": 8
+        },
+        {
+          "phrase": "маркировка упаковки лекарств",
+          "observed_frequency": 81,
+          "source_row": 9
+        },
+        {
+          "phrase": "систему маркировки лекарств",
+          "observed_frequency": 73,
+          "source_row": 10
+        },
+        {
+          "phrase": "знак маркировки на лекарствах",
+          "observed_frequency": 71,
+          "source_row": 11
+        },
+        {
+          "phrase": "исмет маркировка лекарств",
+          "observed_frequency": 60,
+          "source_row": 12
+        },
+        {
+          "phrase": "маркировка лекарств аптека",
+          "observed_frequency": 50,
+          "source_row": 13
+        },
+        {
+          "phrase": "маркировка лекарств проверить",
+          "observed_frequency": 44,
+          "source_row": 14
+        },
+        {
+          "phrase": "лекарства подлежащие маркировке",
+          "observed_frequency": 41,
+          "source_row": 15
+        },
+        {
+          "phrase": "маркировка лекарств средств",
+          "observed_frequency": 37,
+          "source_row": 16
+        },
+        {
+          "phrase": "маркировка лекарства с какого",
+          "observed_frequency": 34,
+          "source_row": 17
+        },
+        {
+          "phrase": "проверка маркировки лекарств",
+          "observed_frequency": 26,
+          "source_row": 18
+        },
+        {
+          "phrase": "лекарство без маркировки",
+          "observed_frequency": 26,
+          "source_row": 19
+        },
+        {
+          "phrase": "маркировка лекарств срок",
+          "observed_frequency": 25,
+          "source_row": 20
+        },
+        {
+          "phrase": "маркировка лекарств ру",
+          "observed_frequency": 21,
+          "source_row": 21
+        },
+        {
+          "phrase": "федеральный закон об обязательной маркировке лекарств",
+          "observed_frequency": 20,
+          "source_row": 22
+        },
+        {
+          "phrase": "маркировка лекарств россия",
+          "observed_frequency": 18,
+          "source_row": 23
+        },
+        {
+          "phrase": "александр галицкий маркировка лекарств",
+          "observed_frequency": 11,
+          "source_row": 24
+        },
+        {
+          "phrase": "маркировка лекарств с какого года",
+          "observed_frequency": 10,
+          "source_row": 25
+        },
+        {
+          "phrase": "маркировка лекарств сбис",
+          "observed_frequency": 10,
+          "source_row": 26
+        },
+        {
+          "phrase": "что такое sgtin в маркировке лекарств",
+          "observed_frequency": 10,
+          "source_row": 27
+        },
+        {
+          "phrase": "как выглядит маркировка честный знак на лекарствах",
+          "observed_frequency": 9,
+          "source_row": 28
+        },
+        {
+          "phrase": "маркировка лекарств мдлп",
+          "observed_frequency": 9,
+          "source_row": 29
+        },
+        {
+          "phrase": "маркировка лекарств постановление",
+          "observed_frequency": 8,
+          "source_row": 30
+        },
+        {
+          "phrase": "что такое прямой акцепт при маркировке лекарств",
+          "observed_frequency": 6,
+          "source_row": 31
+        },
+        {
+          "phrase": "что такое кизы в маркировке на лекарства",
+          "observed_frequency": 5,
+          "source_row": 32
+        },
+        {
+          "phrase": "что означает маркировка лекарств в честном знаке",
+          "observed_frequency": 5,
+          "source_row": 33
+        },
+        {
+          "phrase": "что такое производная маркировка лекарств",
+          "observed_frequency": 5,
+          "source_row": 34
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "E_product_labeling",
+      "collection_priority": 3,
+      "pass_a": {
+        "operator_syntax": "маркировка лекарств 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-003-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+        "source_hash": "3bf2779eca7e6fee4d54593e0efefde83d0f575373c645ed1b36a2e9b07a3d71",
+        "row_count": 33
+      }
+    },
+    {
+      "query_id": "ws-p3-004",
+      "exact_phrase": "ТС ПИОТ 1С",
+      "operator_syntax": "\"ТС ПИОТ 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 1101,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_captured",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "маркировка автозапчастей",
+        "маркировка автозапчастей честный",
+        "автозапчасти маркировка честный знак",
+        "автозапчасти подлежащие маркировке",
+        "маркировка автозапчастей сроки",
+        "автозапчасти подлежат маркировке",
+        "обязательная маркировка автозапчастей",
+        "маркировка автозапчастей 2026",
+        "какие автозапчасти подлежат маркировке",
+        "какие автозапчасти подлежат маркировке честный",
+        "какие автозапчасти подлежат маркировке честный знак",
+        "маркировка автозапчастей честный знак сроки",
+        "маркировка товара автозапчасти",
+        "опубликован проект по маркировке автозапчастей",
+        "автозапчасти и комплектующие транспортных средств маркировка",
+        "маркировка автозапчастей честный знак 2026",
+        "маркировка остатков автозапчастей",
+        "подлежат ли маркировке автозапчасти",
+        "когда начнется маркировка автозапчастей",
+        "автозапчасти попадают под маркировку"
+      ],
+      "irrelevant_variants": [],
+      "related_queries": [
+        {
+          "phrase": "маркировка автозапчастей",
+          "observed_frequency": 1101,
+          "source_row": 2
+        },
+        {
+          "phrase": "маркировка автозапчастей честный",
+          "observed_frequency": 392,
+          "source_row": 3
+        },
+        {
+          "phrase": "автозапчасти маркировка честный знак",
+          "observed_frequency": 390,
+          "source_row": 4
+        },
+        {
+          "phrase": "автозапчасти подлежащие маркировке",
+          "observed_frequency": 129,
+          "source_row": 5
+        },
+        {
+          "phrase": "маркировка автозапчастей сроки",
+          "observed_frequency": 123,
+          "source_row": 6
+        },
+        {
+          "phrase": "автозапчасти подлежат маркировке",
+          "observed_frequency": 115,
+          "source_row": 7
+        },
+        {
+          "phrase": "обязательная маркировка автозапчастей",
+          "observed_frequency": 99,
+          "source_row": 8
+        },
+        {
+          "phrase": "маркировка автозапчастей 2026",
+          "observed_frequency": 84,
+          "source_row": 9
+        },
+        {
+          "phrase": "какие автозапчасти подлежат маркировке",
+          "observed_frequency": 79,
+          "source_row": 10
+        },
+        {
+          "phrase": "какие автозапчасти подлежат маркировке честный",
+          "observed_frequency": 57,
+          "source_row": 11
+        },
+        {
+          "phrase": "какие автозапчасти подлежат маркировке честный знак",
+          "observed_frequency": 57,
+          "source_row": 12
+        },
+        {
+          "phrase": "маркировка автозапчастей честный знак сроки",
+          "observed_frequency": 55,
+          "source_row": 13
+        },
+        {
+          "phrase": "маркировка товара автозапчасти",
+          "observed_frequency": 49,
+          "source_row": 14
+        },
+        {
+          "phrase": "опубликован проект по маркировке автозапчастей",
+          "observed_frequency": 24,
+          "source_row": 15
+        },
+        {
+          "phrase": "автозапчасти и комплектующие транспортных средств маркировка",
+          "observed_frequency": 22,
+          "source_row": 16
+        },
+        {
+          "phrase": "маркировка автозапчастей честный знак 2026",
+          "observed_frequency": 20,
+          "source_row": 17
+        },
+        {
+          "phrase": "маркировка остатков автозапчастей",
+          "observed_frequency": 16,
+          "source_row": 18
+        },
+        {
+          "phrase": "подлежат ли маркировке автозапчасти",
+          "observed_frequency": 16,
+          "source_row": 19
+        },
+        {
+          "phrase": "когда начнется маркировка автозапчастей",
+          "observed_frequency": 15,
+          "source_row": 20
+        },
+        {
+          "phrase": "автозапчасти попадают под маркировку",
+          "observed_frequency": 10,
+          "source_row": 21
+        },
+        {
+          "phrase": "маркировка автозапчастей с какого года",
+          "observed_frequency": 9,
+          "source_row": 22
+        },
+        {
+          "phrase": "нужна ли маркировка на автозапчасти",
+          "observed_frequency": 9,
+          "source_row": 23
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "D_ts_piot",
+      "collection_priority": 3,
+      "pass_a": {
+        "operator_syntax": "ТС ПИОТ 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-004-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+        "source_hash": "70b74c5bde18880673902f34641f4bbc2a759dcf585cb49b32a2413d9d807dfa",
+        "row_count": 22
+      }
+    },
+    {
+      "query_id": "ws-p3-005",
+      "exact_phrase": "маркировка автозапчастей 1С",
+      "operator_syntax": "\"маркировка автозапчастей 1С\"",
+      "match_mode": "exact",
+      "region": "Новосибирск + Новосибирская область",
+      "collection_date": "2026-06-22",
+      "primary_frequency": 6539,
+      "primary_frequency_status": "observed_broad_national_not_regional",
+      "broad_frequency": null,
+      "broad_frequency_status": "not_applicable",
+      "nationwide_reference": null,
+      "nationwide_status": "not_collected_separate",
+      "relevant_variants": [
+        "тс пиот настройка в 1с",
+        "настройка тс пиот в 1с розница",
+        "настройка тс пиот в 1с розница 2.3",
+        "настройка тс пиот в 1с ут",
+        "настройка тс пиот в 1с ут 11.5",
+        "настройка подключения к тс пиот 1с",
+        "тс пиот честный знак 1с",
+        "настройка тс пиот в 1с унф",
+        "тс пиот 1с рмк",
+        "настройка тс пиот в 1с розница 3.0",
+        "тс пиот интеграция с 1с",
+        "тс пиот честный знак 1с розница",
+        "настройка подключения к тс пиот 1с розница",
+        "тс пиот в 1с настройка инструкция",
+        "настройка тс пиот в 1с розница 3",
+        "настройка подключения к тс пиот 1с ут",
+        "настройка тс пиот в 1с ут 11",
+        "настройка тс пиот в 1с бухгалтерия"
+      ],
+      "irrelevant_variants": [
+        "тс пиот 1с как настроить",
+        "тс пиот инструкция 1с",
+        "как настроить тс пиот в 1с розница",
+        "установка тс пиот 1с инструкция",
+        "тс пиот в 1с настройка инструкция",
+        "1с тс пиот скачать"
+      ],
+      "related_queries": [
+        {
+          "phrase": "тс пиот 1с",
+          "observed_frequency": 6539,
+          "source_row": 2
+        },
+        {
+          "phrase": "тс пиот настройка в 1с",
+          "observed_frequency": 950,
+          "source_row": 3
+        },
+        {
+          "phrase": "тс пиот 1с розница 2.3",
+          "observed_frequency": 786,
+          "source_row": 4
+        },
+        {
+          "phrase": "1с ут тс пиот",
+          "observed_frequency": 562,
+          "source_row": 5
+        },
+        {
+          "phrase": "настройка тс пиот в 1с розница",
+          "observed_frequency": 425,
+          "source_row": 6
+        },
+        {
+          "phrase": "тс пиот установка 1с",
+          "observed_frequency": 340,
+          "source_row": 7
+        },
+        {
+          "phrase": "настройка тс пиот в 1с розница 2.3",
+          "observed_frequency": 226,
+          "source_row": 8
+        },
+        {
+          "phrase": "подключение тс пиот к 1с",
+          "observed_frequency": 201,
+          "source_row": 9
+        },
+        {
+          "phrase": "тс пиот 1с розница 3.0",
+          "observed_frequency": 193,
+          "source_row": 10
+        },
+        {
+          "phrase": "тс пиот 1с касса",
+          "observed_frequency": 192,
+          "source_row": 11
+        },
+        {
+          "phrase": "настройка тс пиот в 1с ут",
+          "observed_frequency": 170,
+          "source_row": 12
+        },
+        {
+          "phrase": "модуль тс пиот 1с",
+          "observed_frequency": 165,
+          "source_row": 13
+        },
+        {
+          "phrase": "тс пиот 1с как настроить",
+          "observed_frequency": 151,
+          "source_row": 14
+        },
+        {
+          "phrase": "тс пиот 1с атол",
+          "observed_frequency": 126,
+          "source_row": 15
+        },
+        {
+          "phrase": "тс пиот в 1с унф",
+          "observed_frequency": 120,
+          "source_row": 16
+        },
+        {
+          "phrase": "тс пиот и 1с розница",
+          "observed_frequency": 114,
+          "source_row": 17
+        },
+        {
+          "phrase": "как подключить тс пиот к 1с",
+          "observed_frequency": 111,
+          "source_row": 18
+        },
+        {
+          "phrase": "настройка тс пиот в 1с ут 11.5",
+          "observed_frequency": 107,
+          "source_row": 19
+        },
+        {
+          "phrase": "настройка подключения к тс пиот 1с",
+          "observed_frequency": 105,
+          "source_row": 20
+        },
+        {
+          "phrase": "тс пиот честный знак 1с",
+          "observed_frequency": 101,
+          "source_row": 21
+        },
+        {
+          "phrase": "тс пиот 1с бухгалтерия",
+          "observed_frequency": 98,
+          "source_row": 22
+        },
+        {
+          "phrase": "не удалось подключиться к тс пиоту 1с",
+          "observed_frequency": 86,
+          "source_row": 23
+        },
+        {
+          "phrase": "тс пиот инструкция 1с",
+          "observed_frequency": 85,
+          "source_row": 24
+        },
+        {
+          "phrase": "настройка тс пиот в 1с унф",
+          "observed_frequency": 80,
+          "source_row": 25
+        },
+        {
+          "phrase": "тс пиот 1с рмк",
+          "observed_frequency": 77,
+          "source_row": 26
+        },
+        {
+          "phrase": "тс пиот 1с розница 3",
+          "observed_frequency": 75,
+          "source_row": 27
+        },
+        {
+          "phrase": "1с розница подключение тс пиот",
+          "observed_frequency": 74,
+          "source_row": 28
+        },
+        {
+          "phrase": "тс пиот как установить в 1с",
+          "observed_frequency": 70,
+          "source_row": 29
+        },
+        {
+          "phrase": "установка тс пиот 1с розница",
+          "observed_frequency": 68,
+          "source_row": 30
+        },
+        {
+          "phrase": "настройка тс пиот в 1с розница 3.0",
+          "observed_frequency": 62,
+          "source_row": 31
+        },
+        {
+          "phrase": "тс пиот интеграция с 1с",
+          "observed_frequency": 61,
+          "source_row": 32
+        },
+        {
+          "phrase": "тс пиот 1с управление торговлей",
+          "observed_frequency": 59,
+          "source_row": 33
+        },
+        {
+          "phrase": "тс пиот 1с ут 11",
+          "observed_frequency": 46,
+          "source_row": 34
+        },
+        {
+          "phrase": "как настроить тс пиот в 1с розница",
+          "observed_frequency": 42,
+          "source_row": 35
+        },
+        {
+          "phrase": "1с тс пиот сертификация",
+          "observed_frequency": 41,
+          "source_row": 36
+        },
+        {
+          "phrase": "1с тс пиот бесплатно",
+          "observed_frequency": 39,
+          "source_row": 37
+        },
+        {
+          "phrase": "тс пиот 1с erp",
+          "observed_frequency": 31,
+          "source_row": 38
+        },
+        {
+          "phrase": "тс пиот 1с фреш",
+          "observed_frequency": 30,
+          "source_row": 39
+        },
+        {
+          "phrase": "тс пиот честный знак 1с розница",
+          "observed_frequency": 29,
+          "source_row": 40
+        },
+        {
+          "phrase": "настройка подключения к тс пиот 1с розница",
+          "observed_frequency": 28,
+          "source_row": 41
+        },
+        {
+          "phrase": "тс пиот для 1с 2.3",
+          "observed_frequency": 26,
+          "source_row": 42
+        },
+        {
+          "phrase": "тс пиот 1с 7.7",
+          "observed_frequency": 26,
+          "source_row": 43
+        },
+        {
+          "phrase": "1с встроенный тс пиот",
+          "observed_frequency": 26,
+          "source_row": 44
+        },
+        {
+          "phrase": "1с итс тс пиот",
+          "observed_frequency": 23,
+          "source_row": 45
+        },
+        {
+          "phrase": "установка тс пиот 1с ут",
+          "observed_frequency": 23,
+          "source_row": 46
+        },
+        {
+          "phrase": "установка тс пиот 1с инструкция",
+          "observed_frequency": 22,
+          "source_row": 47
+        },
+        {
+          "phrase": "тс пиот в 1с настройка инструкция",
+          "observed_frequency": 20,
+          "source_row": 48
+        },
+        {
+          "phrase": "поддержка тс пиот в 1с",
+          "observed_frequency": 19,
+          "source_row": 49
+        },
+        {
+          "phrase": "1с тс пиот скачать",
+          "observed_frequency": 19,
+          "source_row": 50
+        },
+        {
+          "phrase": "установка тс пиот 1с унф",
+          "observed_frequency": 18,
+          "source_row": 51
+        }
+      ],
+      "commercial_intent_observations": [],
+      "informational_noise_observations": [],
+      "screenshot_ref": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "evidence_grade": "B_semantic_discovery",
+      "acquisition_limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ],
+      "cluster": "E_product_labeling",
+      "collection_priority": 3,
+      "pass_a": {
+        "operator_syntax": "маркировка автозапчастей 1С",
+        "match_mode": "broad_unquoted",
+        "region": "все регионы / all Russia",
+        "status": "ingested",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-005-evidence.json",
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+        "source_hash": "c21c9a6d2a3e93672736106738c533f037da8589a5f5adcdce961d068117887d",
+        "row_count": 73
+      }
+    }
+  ],
+  "external_storage_source": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06"
+}

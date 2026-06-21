@@ -1,0 +1,36 @@
+{
+  "stamp": "20260609-205536",
+  "task": "category-v2-view-switcher-pass",
+  "baseline_rollback": "SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER",
+  "deployed": {
+    "category.twig": {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2-view-switcher-work\\category.twig",
+      "sha256": "b636ad2ee1047411a8e590a19db4b1e4e52bd7b5f09ced26a71765ac7ba4934e",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\category.twig",
+      "rollback_sha256": "49bb0e98efee49b0ee91aa35a972afee5ab912dc34cd4dbb01e6e676b317235c"
+    },
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2-view-switcher-work\\style.css",
+      "sha256": "3ce18510025690e876699d6f9ddc4e2d5d8d5555ccb757a01239a6e8c85ed948",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\style.css",
+      "rollback_sha256": "9ae7ac39174394fee130a177c09179bd00df9eb47fe099bda5267922e27d95a1"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2-view-switcher-work\\main.js",
+      "sha256": "d69e586405008c26579d73857b7d2c2c08a590e39f53ff0b2a406f472cbced45",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\main.js",
+      "rollback_sha256": "548c3a3e94d400c52a525ca76bca92a453789bd8a3ca97b1ffc82b2ed1eeb19f"
+    }
+  },
+  "cache_cleared": 0,
+  "cache_errors": [],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\category.twig -> catalog/view/theme/default/template/product/category.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\style.css -> assets/css/style.css",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\main.js -> assets/js/main.js",
+    "Clear system/storage/cache/template/"
+  ]
+}

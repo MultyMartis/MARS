@@ -1,0 +1,241 @@
+<footer class="zpm-footer" data-footer>
+  <div class="zpm-footer__top">
+    <div class="container">
+      <div class="zpm-footer__grid">
+        <!-- Brand + socials + policy -->
+        <div class="zpm-footer__col zpm-footer__col--brand">
+
+          <div class="zpm-footer__first-block">
+            <a class="zpm-footer__logo" href="/" aria-label="ЗПМ — на главную">
+              <span class="zpm-footer__logo-box" aria-hidden="true">
+                <img src="/assets/img/zpm_logo__white.svg" alt="ЗПМ">
+              </span>
+            </a>
+
+            <div class="zpm-footer__social">
+              <!-- <div class="zpm-footer__social-title">Свяжитесь с нами:</div> -->
+              <div class="zpm-footer__social-list">
+                <a class="zpm-social__link zpm-social__link--max" href="#" aria-label="MAX">
+                  <svg class="zpm-icon zpm-icon--lg" aria-hidden="true">
+                    <use href="#zpm_ico__max"></use>
+                  </svg>
+                </a>
+                <a class="zpm-social__link zpm-social__link--telegram" href="#" aria-label="Telegram">
+                  <svg class="zpm-icon zpm-icon--lg" aria-hidden="true">
+                    <use href="#zpm_ico__telegram"></use>
+                  </svg>
+                </a>
+                <a class="zpm-social__link zpm-social__link--whatsapp" href="#" aria-label="Whatsapp">
+                  <svg class="zpm-icon zpm-icon--lg" aria-hidden="true">
+                    <use href="#zpm_ico__whatsapp"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="zpm-footer__policy">
+            <div class="zpm-footer__policy-title">Правовая информация:</div>
+            <div class="">
+              <a class="zpm-footer__policy-link" href="/privacy-policy/" target="_blank">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+                Политика конфиденциальности
+              </a>
+              <a class="zpm-footer__policy-link" href="/user-agreement/" target="_blank">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+                Пользовательское соглашение
+              </a>
+              <a class="zpm-footer__policy-link" href="/cookie-files-policy/" target="_blank">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+                Правила обработки Cookie файлов
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Catalog -->
+        <div class="zpm-footer__col zpm-footer__col--catalog">
+          <div class="zpm-footer__title">
+            <a href="{{ catalog_primary_entry|default('/katalog/nejtralnoe-oborudovanie') }}" class="zpm-footer__title-link"> Каталог </a>
+          </div>
+          <ul class="zpm-footer__list">
+            {% if categories %}
+                  {% for c in categories %}  
+                    <li class="zpm-footer__item"><a class="zpm-footer__link" href="{{ c.href }}">{{ c.name }}</a></li>
+              {% endfor %}
+            {% endif %}
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/custom-equipment/">Оборудование на&nbsp;заказ</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="zpm-footer__col zpm-footer__col--company">
+          <div class="zpm-footer__title">Компания</div>
+          <ul class="zpm-footer__list">
+
+
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/payment-methods">Оплата</a>
+            </li>
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/delivery">Доставка</a>
+            </li>
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/dealers">Дилерам</a>
+            </li>
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/guarantee">Гарантия</a>
+            </li>
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/about">О компании</a>
+            </li>
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/blog/news">Новости</a>
+            </li>
+            <li class="zpm-footer__item">
+              <a class="zpm-footer__link" href="/contact">Контакты</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Contacts -->
+        <div class="zpm-footer__col zpm-footer__col--contacts">
+          <div class="zpm-footer__title">Контакты</div>
+
+          <div class="zpm-footer__kv--wrap">
+            <div class="zpm-footer__kv">
+              <div class="zpm-footer__k">Адрес:</div>
+              <div class="zpm-footer__v" data-address-field="address">
+                656011, Россия, Алтайский край,<br />
+                г. Барнаул, проспект Калинина, 15В
+              </div>
+            </div>
+
+            <div class="zpm-footer__kv">
+              <div class="zpm-footer__k">Телефон:</div>
+              <div class="zpm-footer__v">
+                <a class="zpm-footer__link" href="tel:+73852721890" data-city-field="phone_link">
+                  <span data-city-field="phone_text">8 (3852) 72-18-90</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="zpm-footer__kv">
+              <div class="zpm-footer__k">E-mail:</div>
+              <div class="zpm-footer__v">
+                <a class="zpm-footer__link" href="mailto:info@bzpm.ru" data-email-field="email_link">
+                  <span data-email-field="email_text">info@bzpm.ru</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="zpm-footer__kv">
+              <div class="zpm-footer__k">График работы:</div>
+              <div class="zpm-footer__v" data-schedule-field="schedule">ПН-ПТ с 9:00 до 18:00</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="zpm-footer__offer">
+        <p>
+          Информация, размещённая на&nbsp;данном сайте, носит исключительно информационный характер и&nbsp;не&nbsp;является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации.
+        </p>
+        <p>
+          Указанные на&nbsp;сайте цены, характеристики товаров, условия поставки и&nbsp;иная информация не&nbsp;являются исчерпывающими и&nbsp;могут быть изменены без предварительного уведомления. Для получения актуальной информации обращайтесь к&nbsp;специалистам компании.
+        </p>
+        <p>
+          Общество с&nbsp;ограниченной ответственностью &laquo;ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ&raquo;
+        </p>
+        <p>
+          ОГРН 1172225049787, ИНН 2221237587, КПП 222101001
+        </p>
+        <p>
+          Юридический адрес: 656011, Россия, Алтайский край, г. Барнаул, пр-т Калинина, д. 15в, оф.&nbsp;110
+        </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="zpm-footer__bottom">
+    <div class="container">
+      <div class="zpm-footer__bottom-inner">
+        <div class="zpm-footer__copy">ООО «ЗПМ», {{ year }}</div>
+        <div class="pws_copyright__wrap">
+          <a
+            class="pws_copyright"
+            href="https://polygon-ws.ru/"
+            title="Разработка сайта - Веб-студия «Полигон»"
+            >Веб-студия «Полигон»</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{{ offcanvasmenu }}
+{{ citypopup }}
+{{ minicart }}
+{{ fancyboxforms }}
+{{ svgsprite }}
+
+
+
+
+
+<script src="/assets/js/vendor/jquery/jquery-3.6.4.min.js"></script>
+
+<!-- Подключение библиотеки reCaptcha v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render={{ reCAPTCHA_open }}" data-sitekey="{{ reCAPTCHA_open }}"></script>
+
+
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+
+<!-- Inputmask (ядро + jQuery-обвязка) -->
+<script src="/assets/js/vendor/inputmask/inputmask.min.js"></script>
+<script src="/assets/js/vendor/inputmask/jquery.inputmask.min.js"></script>
+
+<!-- Swiper -->
+<script src="/assets/js/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Fancybox -->
+<script src="/assets/js/vendor/fancybox/fancybox.umd.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/main.js?11062026-mca"></script>
+
+<!-- Pt2 
+<script src="/assets/js/main-pt2.js"></script>-->
+
+
+<!-- <script src="/assets/js/main.min.js"></script> -->
+
+<!-- Отключил на время -->
+<!-- <script src="/assets/js/main.min.js"></script> -->
+
+<!--<script src="/assets/js/search.js"></script> -->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

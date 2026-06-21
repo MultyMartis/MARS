@@ -1,0 +1,132 @@
+{
+  "task": "M9 Phase 3 remaining neutral branches (322, 207, 326)",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "rollback_source": "SITE-002-STABLE-M8.3-BEFORE-M9-20260615-0159",
+  "phase2_rollback": "m9-phase2-sinks-work/backups/m9-phase2-deploy-20260614-195231.json",
+  "deployed_at_utc": "20260614-200051",
+  "pre_backup": [
+    {
+      "remote": "system/library/zpm/filter_profile_resolver.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-system__library__zpm__filter_profile_resolver.php",
+      "sha256": "05d0cb12edb5a1f317dc1de9e253ccb7bd5af790f04cdb583e517816aee052a1",
+      "bytes": 5724
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-system__library__zpm__filter_profiles__global_hidden.php",
+      "sha256": "63d146bc82a556e52b3adc4a003b003791ddf5ee0134117ff41f3adec3039ea4",
+      "bytes": 569
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-system__library__zpm__filter_profiles__301_stoly.php",
+      "sha256": "27b89d4203887c8e59c20aef1e333fcb2d484e181bd2edd1b5e1d0e1dbe16538",
+      "bytes": 1316
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/80_moechnye_vanny.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-system__library__zpm__filter_profiles__80_moechnye_vanny.php",
+      "sha256": "7650df0ba4dc251bfcff09aae669a4c213c06fb022d41165e6c668208854094b",
+      "bytes": 1441
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/322_podtovarniki.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/207_zonty.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/326_telezhki.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-catalog__model__catalog__product.php",
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "bytes": 58556
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-catalog__controller__product__category.php",
+      "sha256": "20b710843fb5502542484e8c47e071e536db4eae9f16f4d74d2dddea2c2be58b",
+      "bytes": 20275
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\backups\\pre-m9-phase3-catalog__view__theme__default__template__sections__filterssidebar.twig",
+      "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+      "bytes": 18478
+    }
+  ],
+  "files": [
+    {
+      "remote": "system/library/zpm/filter_profile_resolver.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profile_resolver.php",
+      "sha256": "a987d4fbf6fc24429f7196a297b227d390a6a5e2e315c3f616fb94ee0b47087e",
+      "bytes": 6207
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profiles\\global_hidden.php",
+      "sha256": "63d146bc82a556e52b3adc4a003b003791ddf5ee0134117ff41f3adec3039ea4",
+      "bytes": 569
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profiles\\301_stoly.php",
+      "sha256": "27b89d4203887c8e59c20aef1e333fcb2d484e181bd2edd1b5e1d0e1dbe16538",
+      "bytes": 1316
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/80_moechnye_vanny.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profiles\\80_moechnye_vanny.php",
+      "sha256": "7650df0ba4dc251bfcff09aae669a4c213c06fb022d41165e6c668208854094b",
+      "bytes": 1441
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/322_podtovarniki.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profiles\\322_podtovarniki.php",
+      "sha256": "87e3c4eddba97b02727209cc0348f54a04ce7e5c1d62d1aa511b46f9acea1de9",
+      "bytes": 1703
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/207_zonty.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profiles\\207_zonty.php",
+      "sha256": "8a33cc1c9bd8d0005fbfe4c05895cc7ca9153077aeb3c341fc7bacdb31ae80fb",
+      "bytes": 1163
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/326_telezhki.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\system\\library\\zpm\\filter_profiles\\326_telezhki.php",
+      "sha256": "f98cbf903995908d5b8f9ab45bd2ab2eb981d3f32cdbef88bae0ebeca107950b",
+      "bytes": 764
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\catalog\\model\\catalog\\product.php",
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "bytes": 58556
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\catalog\\controller\\product\\category.php",
+      "sha256": "20b710843fb5502542484e8c47e071e536db4eae9f16f4d74d2dddea2c2be58b",
+      "bytes": 20275
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase3-remaining-work\\patch\\catalog\\view\\theme\\default\\template\\sections\\filterssidebar.twig",
+      "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+      "bytes": 18478
+    }
+  ],
+  "attribute_cache_cleared": 0,
+  "twig_cache_cleared": 0,
+  "cache_errors": []
+}

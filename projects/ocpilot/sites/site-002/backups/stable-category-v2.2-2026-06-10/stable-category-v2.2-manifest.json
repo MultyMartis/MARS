@@ -1,0 +1,71 @@
+{
+  "baseline_name": "SITE-002-STABLE-CATEGORY-V2.2-2026-06-10",
+  "site_id": "SITE-002",
+  "environment": "https://zpm.new-site.space/",
+  "mode": "read-only-capture",
+  "captured_at": "2026-06-09T21:55:36.964406+00:00",
+  "backup_dir": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10",
+  "files": [
+    {
+      "local_name": "category.twig",
+      "remote_path": "catalog/view/theme/default/template/product/category.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10\\category.twig",
+      "size": 4276,
+      "sha256": "b636ad2ee1047411a8e590a19db4b1e4e52bd7b5f09ced26a71765ac7ba4934e",
+      "captured_at": "2026-06-09T21:55:36.964406+00:00"
+    },
+    {
+      "local_name": "productcard.twig",
+      "remote_path": "catalog/view/theme/default/template/product/productcard.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10\\productcard.twig",
+      "size": 5710,
+      "sha256": "7f073b94ba22eee9fa237dccf8efb63c93666b1039c6af2c9b652bd6c97ce05e",
+      "captured_at": "2026-06-09T21:55:36.964406+00:00"
+    },
+    {
+      "local_name": "product_results.php",
+      "remote_path": "catalog/controller/product/product_results.php",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10\\product_results.php",
+      "size": 6046,
+      "sha256": "64c46c39852f9711e22e2bf4f83d70f0055b66d8ed5223845df08567c91374f7",
+      "captured_at": "2026-06-09T21:55:36.964406+00:00"
+    },
+    {
+      "local_name": "style.css",
+      "remote_path": "assets/css/style.css",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10\\style.css",
+      "size": 273764,
+      "sha256": "c2cdc2e4bebaba3f30ade2ee8a99e1a3c69171feba46ddbbfe2d468bb4193003",
+      "captured_at": "2026-06-09T21:55:36.964406+00:00"
+    },
+    {
+      "local_name": "main.js",
+      "remote_path": "assets/js/main.js",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10\\main.js",
+      "size": 183265,
+      "sha256": "d69e586405008c26579d73857b7d2c2c08a590e39f53ff0b2a406f472cbced45",
+      "captured_at": "2026-06-09T21:55:36.964406+00:00"
+    }
+  ],
+  "stable_state": [
+    "category grid mode works",
+    "category list mode works",
+    "view switcher Grid/List works",
+    "localStorage zpm_category_view works",
+    "list-card compactness pass applied",
+    "primary specs in list mode work",
+    "grid/mobile not broken",
+    "PDP V4 not affected"
+  ],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10/category.twig -> catalog/view/theme/default/template/product/category.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10/productcard.twig -> catalog/view/theme/default/template/product/productcard.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10/product_results.php -> catalog/controller/product/product_results.php",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10/style.css -> assets/css/style.css",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-category-v2.2-2026-06-10/main.js -> assets/js/main.js",
+    "Clear system/storage/cache/template/ on FTP",
+    "Verify category PLP grid + list modes at Premium-600 URL",
+    "Verify view switcher and zpm_category_view localStorage",
+    "Verify PDP V4 regression on SPKB SKU"
+  ]
+}

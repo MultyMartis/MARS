@@ -1,0 +1,48 @@
+{
+  "snapshot_id": "mig-20260603-9a166b-ws002",
+  "session_id": "mig-20260603-9a166b",
+  "competitor_id": "mig-20260603-9a166b-c002",
+  "domain": "kran-logistik.ru",
+  "requested_url": "https://kran-logistik.ru/uslugi",
+  "final_url": "https://kran-logistik.ru/uslugi",
+  "page_role": "homepage",
+  "capture_time": "2026-06-03T19:59:12.291Z",
+  "status": "failed",
+  "acquisition_method": "http_get_dom",
+  "http_status": null,
+  "redirect_chain": [],
+  "content_type": null,
+  "charset": null,
+  "render_status": "unknown",
+  "fetch_duration_ms": 17,
+  "title": null,
+  "meta_description": null,
+  "canonical_url": null,
+  "lang": null,
+  "headings": [],
+  "contacts": {
+    "phones": [],
+    "emails": [],
+    "addresses": [],
+    "messengers": []
+  },
+  "offers": [],
+  "pricing_signals": [],
+  "cta_elements": [],
+  "forms": [],
+  "links": {
+    "internal": [],
+    "external": []
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": null,
+  "artifact_refs": {
+    "website_snapshot": "snapshots/sites/mig-20260603-9a166b-ws002/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260603-9a166b-ws002/page.html",
+    "headers": "snapshots/sites/mig-20260603-9a166b-ws002/headers.json"
+  },
+  "evidence_grade": "X",
+  "safe_unknown": [
+    "Fetch error: fetch failed"
+  ]
+}

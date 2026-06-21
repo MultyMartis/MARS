@@ -69,7 +69,7 @@ A **reference project** may consist of **many runs** across R01–R15; sequencin
 
 | Reference step | Workflow v0 `stage_id` (canonical) |
 |----------------|-----------------------------------|
-| R01 | `WF_V0_S01_INTAKE` |
+| R01 | `WF_V0_S01_INTAKE` — includes **production_mode** declare; undeclared → **STOP** ([website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md)) |
 | R02 | `WF_V0_S02_SITE_TYPE` |
 | R03 | `WF_V0_S03_STRATEGY` |
 | R04 | `WF_V0_S04_IA` |

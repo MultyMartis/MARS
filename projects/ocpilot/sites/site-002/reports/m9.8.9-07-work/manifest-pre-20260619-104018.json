@@ -1,0 +1,16 @@
+{
+  "task": "M9.8.9-07",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01",
+  "stamp": "20260619-104018",
+  "remote_path": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+  "phase": "pre-deploy",
+  "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-07-work\\live-capture\\catalog__view__theme__default__template__sections__filterssidebar.twig",
+  "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\filterssidebar.twig.pre-m9.8.9-07-hide-subcategories.bak",
+  "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+  "size": 18478,
+  "patch": {
+    "type": "ui-removal",
+    "file": "filterssidebar.twig",
+    "change": "SUBCATEGORIES group: `{% if filter_subcategories %}` → `{% if false and filter_subcategories %}`"
+  }
+}

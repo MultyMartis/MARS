@@ -28,6 +28,15 @@
       "notes": "Campaign promotion URL — may differ from per-ad Ссылка",
       "header": "Объект продвижения:"
     },
+    "ads.group_additional_ad": {
+      "logical": "ads.group_additional_ad",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Col 1 «Доп. объявление группы» — «+» on 2nd+ ad in group; empty on keyword rows (v1.2 transport split)",
+      "header": "Доп. объявление группы",
+      "column": 1
+    },
     "groups.group_name": {
       "logical": "groups.group_name",
       "sheet": "Тексты",
@@ -81,6 +90,15 @@
       "notes": null,
       "header": "Статус фразы",
       "column": 57
+    },
+    "keywords.bid": {
+      "logical": "keywords.bid",
+      "sheet": "Тексты",
+      "region": "data_table",
+      "status": "verified",
+      "notes": "Manual search CPC (Ставка) — template v1 col 54",
+      "header": "Ставка",
+      "column": 54
     },
     "keywords.match_type": {
       "logical": "keywords.match_type",

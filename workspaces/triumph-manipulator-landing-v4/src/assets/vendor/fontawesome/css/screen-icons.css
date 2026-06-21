@@ -34,12 +34,20 @@
   content: "\f64a";
 }
 
+.fa-box::before {
+  content: "\f466";
+}
+
 .fa-check::before {
   content: "\f00c";
 }
 
 .fa-clock::before {
   content: "\f017";
+}
+
+.fa-dolly::before {
+  content: "\f472";
 }
 
 .fa-clipboard-list::before {
@@ -52,6 +60,10 @@
 
 .fa-hard-hat::before {
   content: "\f807";
+}
+
+.fa-handshake::before {
+  content: "\f2b5";
 }
 
 .fa-id-badge::before {
@@ -70,12 +82,20 @@
   content: "\f4d7";
 }
 
+.fa-road::before {
+  content: "\f018";
+}
+
 .fa-ruler-horizontal::before {
   content: "\f547";
 }
 
 .fa-shipping-fast::before {
   content: "\f48b";
+}
+
+.fa-star::before {
+  content: "\f005";
 }
 
 .fa-tools::before {

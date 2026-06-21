@@ -1,0 +1,372 @@
+<div class="flt" data-filters>
+  <form class="flt__form" action="#" method="get" data-filters-form>
+    <!-- PRICE -->
+    <section class="flt__group is-open" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="true">
+        <span class="flt__group-title">Цена (₽)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Цена от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="price_from" placeholder="{{ min_price }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Цена до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="price_to" placeholder="500 000" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_price }}" max="{{ max_price }}" step="1000" value="{{ min_price_selected }}" data-range-min aria-label="Цена от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_price }}" max="{{ max_price }}" step="1000" value="{{ max_price_selected}}" data-range-max aria-label="Цена до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN SWITCHES -->
+    <div class="flt__switches {% if filter_in_stock == 1 %}active{% endif %}">
+      <label class="flt__switch" data-switch-label>
+        <span class="flt__switch-text">Только в наличии</span>
+        <input class="flt__switch-input" type="checkbox" name="in_stock" value="1" data-switch-group="availability"  {% if filter_in_stock == 1 %}checked{% endif %} />
+        <span class="flt__switch-ui" aria-hidden="true"></span>
+      </label>
+
+      <label class="flt__switch {% if filter_preorder_only == 1 %}active{% endif %}" data-switch-label>
+        <span class="flt__switch-text">Только под заказ</span>
+        <input class="flt__switch-input" type="checkbox" name="preorder_only" value="1" data-switch-group="availability" {% if filter_preorder_only == 1 %}checked{% endif %} />
+        <span class="flt__switch-ui" aria-hidden="true"></span>
+      </label>
+
+      <label class="flt__switch {% if filter_only_with_price == 1 %}active{% endif %}" data-switch-label>
+        <span class="flt__switch-text">Только с ценой</span>
+        <input class="flt__switch-input" type="checkbox" name="only_with_price" value="1" {% if filter_only_with_price == 1 %}checked{% endif %}  />
+        <span class="flt__switch-ui" aria-hidden="true"></span>
+      </label>
+
+      <label class="flt__switch {% if filter_only_discount == 1 %}active{% endif %}" data-switch-label>
+        <span class="flt__switch-text">Со скидкой</span>
+        <input class="flt__switch-input" type="checkbox" name="only_discount" value="1" {% if filter_only_discount == 1 %}checked{% endif %} />
+        <span class="flt__switch-ui" aria-hidden="true"></span>
+      </label>
+    </div>
+
+    {% if filter_profile_active %}
+    <!-- M9 profile layout: dimensions → primary attrs → secondary collapse -->
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="false">
+        <span class="flt__group-title">Длина (мм)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel hidden>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Длина от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="len_from" placeholder="{{ min_length }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Длина до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="len_to" placeholder="{{ max_length }}" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_length }}" max="{{ max_length }}" step="10" value="{{ min_length }}" data-range-min aria-label="Длина от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_length }}" max="{{ max_length }}" step="10" value="{{ max_length }}" data-range-max aria-label="Длина до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="false">
+        <span class="flt__group-title">Ширина (мм)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel hidden>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Ширина от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="w_from" placeholder="{{ min_width }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Ширина до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="w_to" placeholder="{{ max_width }}" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_width }}" max="{{ max_width }}" step="1" value="{{ min_width }}" data-range-min aria-label="Ширина от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_width }}" max="{{ max_width }}" step="1" value="{{ max_width }}" data-range-max aria-label="Ширина до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="false">
+        <span class="flt__group-title">Высота (мм)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel hidden>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Высота от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="h_from" placeholder="{{ min_height }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Высота до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="h_to" placeholder="{{ max_height }}" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_height }}" max="{{ max_height }}" step="1" value="{{ min_height }}" data-range-min aria-label="Высота от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_height }}" max="{{ max_height }}" step="1" value="{{ max_height }}" data-range-max aria-label="Высота до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% for group in filter_groups %}
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="{% if group.expanded %}true{% else %}false{% endif %}">
+        <span class="flt__group-title">{{ group.name }}</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel {% if not group.expanded %}hidden{% endif %}>
+        {% for val in group.values %}
+        <label class="flt__check">
+          <input class="flt__check-input" type="checkbox"
+                 name="attr[{{ group.group_slug }}][]"
+                 value="{{ val.text }}"
+                 {% if val.checked %}checked{% endif %} />
+          <span class="flt__check-box" aria-hidden="true"></span>
+          <span class="flt__check-text">{{ val.text }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+
+    {% if filter_secondary_groups %}
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="{% if filter_secondary_open %}true{% else %}false{% endif %}">
+        <span class="flt__group-title">Дополнительные параметры</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel {% if not filter_secondary_open %}hidden{% endif %}>
+        {% for group in filter_secondary_groups %}
+        <section class="flt__group" data-acc>
+          <button class="flt__group-head" type="button" data-acc-btn aria-expanded="{% if group.expanded %}true{% else %}false{% endif %}">
+            <span class="flt__group-title">{{ group.name }}</span>
+            <span class="flt__chev" aria-hidden="true"></span>
+          </button>
+
+          <div class="flt__group-body" data-acc-panel {% if not group.expanded %}hidden{% endif %}>
+            {% for val in group.values %}
+            <label class="flt__check">
+              <input class="flt__check-input" type="checkbox"
+                     name="attr[{{ group.group_slug }}][]"
+                     value="{{ val.text }}"
+                     {% if val.checked %}checked{% endif %} />
+              <span class="flt__check-box" aria-hidden="true"></span>
+              <span class="flt__check-text">{{ val.text }}</span>
+            </label>
+            {% endfor %}
+          </div>
+        </section>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% else %}
+
+    {% for group in filter_groups %}
+<section class="flt__group" data-acc>
+  <button class="flt__group-head" type="button" data-acc-btn aria-expanded="{% if group.expanded %}true{% endif %}">
+    <span class="flt__group-title">{{ group.name }}</span>
+    <span class="flt__chev" aria-hidden="true"></span>
+  </button>
+
+  <div class="flt__group-body" data-acc-panel {% if not group.expanded %}hidden{% endif %} >
+    {% for val in group.values %}
+    <label class="flt__check">
+      <input class="flt__check-input" type="checkbox" 
+             name="attr[{{ group.group_slug }}][]" 
+             value="{{ val.text }}" 
+             {% if val.checked %}checked{% endif %} />
+      <span class="flt__check-box" aria-hidden="true"></span>
+      <span class="flt__check-text">{{ val.text }}</span>
+    </label>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+  
+
+    <!-- DIMENSIONS -->
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="false">
+        <span class="flt__group-title">Длина (мм)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel hidden>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Длина от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="len_from" placeholder="{{ min_length }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Длина до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="len_to" placeholder="{{ max_length }}" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_length }}" max="{{ max_length }}" step="10" value="{{ min_length }}" data-range-min aria-label="Длина от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_length }}" max="{{ max_length }}" step="10" value="{{ max_length }}" data-range-max aria-label="Длина до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="false">
+        <span class="flt__group-title">Ширина (мм)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel hidden>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Ширина от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="w_from" placeholder="{{ min_width }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Ширина до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="w_to" placeholder="{{ max_width }}" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_width }}" max="{{ max_width }}" step="1" value="{{ min_width }}" data-range-min aria-label="Ширина от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_width }}" max="{{ max_width }}" step="1" value="{{ max_width }}" data-range-max aria-label="Ширина до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flt__group" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="false">
+        <span class="flt__group-title">Высота (мм)</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel hidden>
+        <div class="flt__range" data-range>
+          <div class="flt__range-inputs">
+            <label class="flt__field">
+              <span class="flt__field-sr">Высота от</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="h_from" placeholder="{{ min_height }}" data-range-from />
+            </label>
+
+            <label class="flt__field">
+              <span class="flt__field-sr">Высота до</span>
+              <input class="flt__input" type="text" inputmode="numeric" autocomplete="off" name="h_to" placeholder="{{ max_height }}" data-range-to />
+            </label>
+          </div>
+
+          <div class="flt__range-slider">
+            <div class="flt__range-track" aria-hidden="true"></div>
+            <div class="flt__range-progress" aria-hidden="true" data-range-progress></div>
+
+            <input class="flt__range-thumb" type="range" min="{{ min_height }}" max="{{ max_height }}" step="1" value="{{ min_height }}" data-range-min aria-label="Высота от" />
+            <input class="flt__range-thumb" type="range" min="{{ min_height }}" max="{{ max_height }}" step="1" value="{{ max_height }}" data-range-max aria-label="Высота до" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endif %}
+
+    {# M9.8.9-07: Subcategories filter group hidden (UI only). Restore: replace `false and filter_subcategories` with `filter_subcategories`. #}
+    <!-- SUBCATEGORIES -->
+     {% if false and filter_subcategories %}
+    <section class="flt__group is-open" data-acc>
+      <button class="flt__group-head" type="button" data-acc-btn aria-expanded="{% if subcat_open %}true{% endif %}">
+        <span class="flt__group-title">Подкатегории</span>
+        <span class="flt__chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="flt__group-body" data-acc-panel {% if not subcat_open %}hidden{% endif %}>
+        <div class="flt__list" data-list data-list-collapsed="true" data-list-limit="5">
+          {% for subcat in filter_subcategories %}
+              <label class="flt__check">
+                <input class="flt__check-input" 
+                      type="checkbox" 
+                      name="s[]" 
+                      value="{{ subcat.category_id }}"
+                      {% if subcat.checked %}checked{% endif %} />
+                <span class="flt__check-box" aria-hidden="true"></span>
+                <span class="flt__check-text">{{ subcat.name }}</span>
+              </label>
+            {% endfor %}
+        </div>
+
+        <button class="flt__more" type="button" data-list-toggle>
+          Показать все
+        </button>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- FOOTER -->
+    <div class="flt__actions">
+      <button class="flt__submit btn btn_dark btn--primary" type="submit" data-filter-apply>Показать товары</button>
+      <button class="flt__clear btn" type="reset" data-filter-reset>Сбросить всё</button>
+      <button class="flt__copy" type="button" data-filter-copy>Копировать ссылку</button>
+    </div>
+  </form>
+</div>

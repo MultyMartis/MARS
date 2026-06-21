@@ -2,7 +2,7 @@
 
 route_id: konteynery
 route_folder: konteynery
-url: https://manipulator-triumph.ru/perevozka-konteynerov/
+url: https://manipulator-triumph.ru/konteynery.html
 display_path: konteynery
 content_coverage: true
 production_copy_ready: true

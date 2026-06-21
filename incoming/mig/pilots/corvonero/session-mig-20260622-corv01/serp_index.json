@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "generated_at": "2026-06-22T12:45:00.000Z",
+  "queries": [
+    { "query_id": "q01", "artifact": "serp_results/q01.json", "cluster": "A", "captured_at": "2026-06-22T12:35:00.000Z" },
+    { "query_id": "q02", "artifact": "serp_results/q02.json", "cluster": "A", "captured_at": "2026-06-22T12:36:00.000Z" },
+    { "query_id": "q03", "artifact": "serp_results/q03.json", "cluster": "A", "captured_at": "2026-06-22T12:37:00.000Z" },
+    { "query_id": "q04", "artifact": "serp_results/q04.json", "cluster": "A", "captured_at": "2026-06-22T12:38:00.000Z" },
+    { "query_id": "q05", "artifact": "serp_results/q05.json", "cluster": "C", "captured_at": "2026-06-22T12:39:00.000Z" },
+    { "query_id": "q06", "artifact": "serp_results/q06.json", "cluster": "C", "captured_at": "2026-06-22T12:40:00.000Z" },
+    { "query_id": "q07", "artifact": "serp_results/q07.json", "cluster": "D", "captured_at": "2026-06-22T12:41:00.000Z" },
+    { "query_id": "q08", "artifact": "serp_results/q08.json", "cluster": "D", "captured_at": "2026-06-22T12:42:00.000Z" },
+    { "query_id": "q09", "artifact": "serp_results/q09.json", "cluster": "D", "captured_at": "2026-06-22T12:43:00.000Z" }
+  ],
+  "acquisition_summary": {
+    "mode": "manual_bounded_web_search",
+    "search_engine": "yandex",
+    "evidence_grade": "C",
+    "limitations": "No Playwright SERP screenshots; web search index synthesis; ad/map blocks partially visible"
+  }
+}

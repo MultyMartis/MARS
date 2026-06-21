@@ -100,7 +100,7 @@ Human-operated loop: research / packs / PPC ↔ Factory implementation ↔ opera
 | [calibration/OPERATIONAL-INDEX.md](calibration/OPERATIONAL-INDEX.md) | Reading order — first case: Triumph master hot |
 | [calibration/orca-calibration-system-v0.md](calibration/orca-calibration-system-v0.md) | System definition + drift philosophy |
 
-**Canonical case v0:** [calibration/triumph-manipulator/](calibration/triumph-manipulator/) — «Аренда манипулятора в Краснодаре» (`grp_fc12_zakaz`, `workspaces/triumph-manipulator-landing-v5/`).
+**Canonical case v0:** [calibration/triumph-manipulator/](calibration/triumph-manipulator/) — «Аренда манипулятора в Краснодаре» (`grp_fc12_zakaz`, `workspaces/triumph-manipulator-landing-v6/`).
 
 ## ORCA Intelligence Foundation v0
 
@@ -197,3 +197,7 @@ Source-agnostic landing verification between Semantic and PPC — deployed copy 
 ## Boundaries
 
 ORCA is a human-supervised PPC operational toolkit. It does not bid, launch, optimize, schedule, validate, or orchestrate campaigns.
+
+Groundtruth ownership (ecosystem rule — ORCA = Interpretation Owner R2): [../../shared/contracts/groundtruth-ownership-rule-v1.md](../../shared/contracts/groundtruth-ownership-rule-v1.md)
+
+ATLAS context binding (RC-01 pointers — `PROJECT.md` subject refs): [../../shared/contracts/atlas-context-binding-rule-v1.md](../../shared/contracts/atlas-context-binding-rule-v1.md)

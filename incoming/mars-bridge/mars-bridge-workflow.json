@@ -1,0 +1,75 @@
+{
+  "name": "MARS SEO Content Agent Bridge",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "seo-content-agent",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b45144d4-1425-49df-8252-ab0bc5788797",
+      "name": "Webhook",
+      "webhookId": "6d1296a1-7641-4cb8-bf30-9333e68b905b"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"ok\": true,\n  \"source\": \"seo-content-agent\",\n  \"task_id\": \"={{$json.task_id}}\",\n  \"run_id\": \"={{$json.run_id}}\",\n  \"received_payload\": \"={{$json.payload}}\",\n  \"mode\": \"bridge_stub\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        208,
+        0
+      ],
+      "id": "c598fa5e-b516-482d-9d3b-7907280da95a",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "496ec974-9e77-4292-9226-8cf1850ef426",
+  "meta": {
+    "instanceId": "338c44ae516e4e0056c7ecc3277fc130c003243a1558caec17abe328f240ba66"
+  },
+  "id": "a4wvy1jBh3S5WcZU",
+  "tags": [
+    {
+      "updatedAt": "2026-05-07T11:24:05.154Z",
+      "createdAt": "2026-05-07T11:24:05.154Z",
+      "id": "NN3Z1rTFx0hjRyeH",
+      "name": "MARS"
+    },
+    {
+      "updatedAt": "2026-04-25T16:02:32.402Z",
+      "createdAt": "2026-04-25T16:02:32.402Z",
+      "id": "k50c1IixdJeXE3tp",
+      "name": "MetaBOT"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.zpm-header__search [hidden] {
+  display: none !important;
+}
+
+.zpm-header__count[hidden], .zpm-header__m-cart__count[hidden], .zpm-minicart__order-wrap[hidden] {
+ display: none !important;
+}

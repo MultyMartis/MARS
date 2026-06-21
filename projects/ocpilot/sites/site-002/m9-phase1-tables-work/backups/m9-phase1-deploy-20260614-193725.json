@@ -1,0 +1,83 @@
+{
+  "task": "M9 Phase 1 Tables filter profile (301)",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "rollback_source": "SITE-002-STABLE-M8.3-BEFORE-M9-20260615-0159",
+  "deployed_at_utc": "20260614-193725",
+  "pre_backup": [
+    {
+      "remote": "system/library/zpm/filter_profile_resolver.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\backups\\pre-m9-phase1-catalog__model__catalog__product.php",
+      "sha256": "afb59aa8c09e5780d391d2e22e2f09ec3c46d9c8434a05e4963e78efc8a51c0b",
+      "bytes": 58071
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\backups\\pre-m9-phase1-catalog__controller__product__category.php",
+      "sha256": "71ae2e3676cbcc4a53d982e8a2922601530a760ccf809b9980055d820e1ecef6",
+      "bytes": 19469
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\backups\\pre-m9-phase1-catalog__view__theme__default__template__sections__filterssidebar.twig",
+      "sha256": "3ee500a7554be654301f40029019cdc0ae553462944e26684a33d704a803f6bf",
+      "bytes": 10926
+    }
+  ],
+  "files": [
+    {
+      "remote": "system/library/zpm/filter_profile_resolver.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\patch\\system\\library\\zpm\\filter_profile_resolver.php",
+      "sha256": "178a81aa196a102960216083ae246cc822f2dc79383cfd2e311c706cbbf1b39a",
+      "bytes": 5823
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\patch\\system\\library\\zpm\\filter_profiles\\global_hidden.php",
+      "sha256": "63d146bc82a556e52b3adc4a003b003791ddf5ee0134117ff41f3adec3039ea4",
+      "bytes": 569
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\patch\\system\\library\\zpm\\filter_profiles\\301_stoly.php",
+      "sha256": "27b89d4203887c8e59c20aef1e333fcb2d484e181bd2edd1b5e1d0e1dbe16538",
+      "bytes": 1316
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\patch\\catalog\\model\\catalog\\product.php",
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "bytes": 58556
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\patch\\catalog\\controller\\product\\category.php",
+      "sha256": "20b710843fb5502542484e8c47e071e536db4eae9f16f4d74d2dddea2c2be58b",
+      "bytes": 20275
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase1-tables-work\\patch\\catalog\\view\\theme\\default\\template\\sections\\filterssidebar.twig",
+      "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+      "bytes": 18478
+    }
+  ],
+  "attribute_cache_cleared": 0,
+  "twig_cache_cleared": 0,
+  "cache_errors": []
+}

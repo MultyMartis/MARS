@@ -1,0 +1,16 @@
+// Global pointer for interactive controls (keyboard focus uses :focus-visible elsewhere).
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']),
+.button,
+a.button,
+input[type='button']:not(:disabled),
+input[type='submit']:not(:disabled),
+input[type='reset']:not(:disabled),
+summary,
+.site-modal__close,
+.site-header__burger,
+.site-header__drawer-close,
+.hero__cargo-card,
+[data-modal-open] {
+    cursor: pointer;
+}

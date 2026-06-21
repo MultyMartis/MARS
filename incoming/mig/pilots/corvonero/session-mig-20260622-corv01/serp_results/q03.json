@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q03",
+  "captured_at": "2026-06-22T12:37:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "без гео",
+  "city": null,
+  "device": "mobile",
+  "query": "программа 1С не работает",
+  "serp_type": "informational_dominant",
+  "acquisition_limitations": ["No geo modifier; national informational mix expected"],
+  "organic_results": [
+    { "position": 1, "title": "Что делать, если 1С не запускается — пошаговое руководство", "url": "https://scloud.ru/blog/chto_delat_esli_1s_ne_zapuskaetsya/", "surface_type": "informational", "snippet": "DIY troubleshooting guide — hosting/cloud vendor blog", "player_scope": "non_competitor_reference" },
+    { "position": 2, "title": "Ошибка при запуске 1С — что делать", "url": "https://gk-mact.ru/blog/rabota-s-1s/oshibka-pri-zapuske-1s-chto-delat-esli-ne-zagruzhaetsya-ned-TEOip-1/", "surface_type": "informational", "snippet": "Self-help article", "player_scope": "non_competitor_reference" },
+    { "position": 3, "title": "Как исправить ошибки в 1С 8.3", "url": "https://itsvsem.ru/blog/1c/oshibki-v-1s-i-ih-ispravlenie/", "surface_type": "informational", "snippet": "Instructional blog — same domain also sells services", "player_scope": "mixed_info_commercial" },
+    { "position": 4, "title": "Ошибки в 1С:Предприятие — как найти и исправить — Микос", "url": "https://www.mikos.ru/services/service/oshibki-v-1s-8-3-i-ikh-ispravlenie/", "surface_type": "organic", "snippet": "Commercial service page framed as error-fix help", "player_scope": "local_company" },
+    { "position": 5, "title": "Частые ошибки 1С: почему возникают и как их исправить", "url": "https://assino.ru/news/chastye-oshibki-1s-prichiny-i-ustranenie/", "surface_type": "informational", "snippet": "News/blog article", "player_scope": "non_competitor_reference" }
+  ],
+  "commercial_signal": "weak",
+  "noise_signal": "high_informational"
+}

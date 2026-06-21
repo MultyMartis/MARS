@@ -1,0 +1,91 @@
+<section class="product-tabs">
+  <div class="container">
+    <div class="tabs js-tabs">
+      <div class="tabs__head" role="tablist" aria-label="Разделы товара">
+        <button class="tabs__tab section-title__like-h3 is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-desc" data-tab="desc">Описание</button>
+        <button class="tabs__tab section-title__like-h3" type="button" role="tab" aria-selected="false" aria-controls="tab-spec" data-tab="spec">Характеристики</button>
+        <button class="tabs__tab section-title__like-h3" type="button" role="tab" aria-selected="false" aria-controls="tab-docs" data-tab="docs">Документы</button>
+      </div>
+
+      <div class="tabs__body">
+        <div class="tabs__panel is-active" id="tab-desc" role="tabpanel" data-panel="desc">
+          <div class="content">
+           {{ description }}
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="tab-spec" role="tabpanel" data-panel="spec">
+          <div class="spec-table">
+
+            {% if attribute_groups %}
+            {% for ag in attribute_groups %}
+             {% if ag.attribute %}
+                    {% for a in ag.attribute %}
+                     <div class="spec-table__row">
+                      <div class="spec-table__key">{{ a.name }}</div>
+                      <div class="spec-table__val">{{ a.text }}</div>
+                    </div>
+                     {% endfor %}
+              {% endif %}
+             {% endfor %}
+          {% endif %}
+
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="tab-docs" role="tabpanel" data-panel="docs">
+          <ul class="docs-list">
+            {% if documents %}
+            {% for d in documents %}
+              <li class="docs-list__item">
+                <a class="docs-list__link {{ d.type }}" href="{{ d.filename }}" download>{{ d.name }}</a>
+              </li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== НОВЫЙ БЛОК ===== -->
+    <div class="product-help">
+
+      <div class="product-help__content">
+
+        <div class="product-help__left">
+
+          <div class="product-help__title section-title__like-h2">
+            Поможем подобрать и&nbsp;уточнить детали
+          </div>
+
+          <div class="product-help__text">
+            Подскажем по&nbsp;размерам, материалам и&nbsp;срокам поставки. Проверим, подойдёт&nbsp;ли оборудование под ваши задачи и&nbsp;условия. При необходимости предложим альтернативу или комплектацию.
+          </div>
+
+          <button type="button"
+            class="btn btn_dark"
+            data-fancybox
+            data-src="#zpmFbQuestion"
+            data-zpm-fb-mode="2">
+            Задать вопрос
+          </button>
+
+        </div>
+
+<div class="product-help__right">
+
+  <div class="product-help__visual">
+
+    <img src="/assets/img/product-help-visual.png" alt="Подбор оборудования">
+
+  </div>
+
+</div>
+
+      </div>
+
+    </div>
+    <!-- ===== /НОВЫЙ БЛОК ===== -->
+
+  </div>
+</section>

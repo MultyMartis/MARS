@@ -1,0 +1,315 @@
+{
+  "nodes": {
+    "1:877": {
+      "id": "1:877",
+      "name": "Хедер",
+      "type": "FRAME",
+      "text": null,
+      "fills": [],
+      "size": {
+        "w": 1170,
+        "h": 143
+      }
+    },
+    "1:878": {
+      "id": "1:878",
+      "name": "Frame 18",
+      "type": "FRAME",
+      "text": null,
+      "fills": [],
+      "size": {
+        "w": 1170,
+        "h": 101
+      }
+    },
+    "1:879": {
+      "id": "1:879",
+      "name": "Frame 17",
+      "type": "FRAME",
+      "text": null,
+      "fills": [],
+      "size": {
+        "w": 1150,
+        "h": 46
+      }
+    },
+    "1:880": {
+      "id": "1:880",
+      "name": "image 219",
+      "type": "ROUNDED_RECTANGLE",
+      "text": null,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "hex": null,
+          "imageHash": {
+            "0": 222,
+            "1": 33,
+            "2": 156,
+            "3": 110,
+            "4": 70,
+            "5": 44,
+            "6": 139,
+            "7": 244,
+            "8": 36,
+            "9": 105,
+            "10": 187,
+            "11": 51,
+            "12": 117,
+            "13": 26,
+            "14": 129,
+            "15": 37,
+            "16": 46,
+            "17": 237,
+            "18": 192,
+            "19": 127
+          }
+        }
+      ],
+      "size": {
+        "w": 205,
+        "h": 46
+      }
+    },
+    "1:883": {
+      "id": "1:883",
+      "name": "Москва",
+      "type": "TEXT",
+      "fontSize": 14,
+      "fontName": {
+        "family": "Inter",
+        "style": "Light",
+        "postscript": "Inter-Light"
+      },
+      "lineHeight": {
+        "value": 1.399999976158142,
+        "units": "RAW"
+      },
+      "text": "Москва, \nМосковская область",
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#475471",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 141,
+        "h": 40
+      }
+    },
+    "1:888": {
+      "id": "1:888",
+      "name": "пн-пт 08:00-18:00, сб 08:00-22:00",
+      "type": "TEXT",
+      "fontSize": 14,
+      "fontName": {
+        "family": "Inter",
+        "style": "Light",
+        "postscript": "Inter-Light"
+      },
+      "lineHeight": {
+        "value": 1.399999976158142,
+        "units": "RAW"
+      },
+      "text": "пн-пт: 08:00-18:00, \nсб-вс: 08:00-22:00",
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#475471",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 133,
+        "h": 40
+      }
+    },
+    "1:889": {
+      "id": "1:889",
+      "name": "режим работы",
+      "type": "TEXT",
+      "fontSize": 12,
+      "fontName": {
+        "family": "Inter",
+        "style": "Light",
+        "postscript": "Inter-Light"
+      },
+      "lineHeight": {
+        "value": 1.399999976158142,
+        "units": "RAW"
+      },
+      "text": "режим работы",
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#475471",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 86,
+        "h": 17
+      }
+    },
+    "1:890": {
+      "id": "1:890",
+      "name": "8 (800) 777-02-05",
+      "type": "TEXT",
+      "fontSize": 20,
+      "fontName": {
+        "family": "Inter",
+        "style": "Medium",
+        "postscript": "Inter-Medium"
+      },
+      "lineHeight": {
+        "value": 1.399999976158142,
+        "units": "RAW"
+      },
+      "text": "8 (925) 183-64-64\n8 (995) 023-92-26",
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#475471",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 183,
+        "h": 56
+      }
+    },
+    "1:900": {
+      "id": "1:900",
+      "name": "Кнопка",
+      "type": "INSTANCE",
+      "text": null,
+      "fills": [],
+      "cornerRadius": 30,
+      "size": {
+        "w": 190,
+        "h": 44
+      }
+    },
+    "1:903": {
+      "id": "1:903",
+      "name": "Лечение и профилактика",
+      "type": "TEXT",
+      "fontSize": 16,
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "postscript": "Inter-Regular"
+      },
+      "lineHeight": {
+        "value": 1.399999976158142,
+        "units": "RAW"
+      },
+      "text": "Лечение и профилактика",
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#475471",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 198,
+        "h": 22
+      }
+    },
+    "1:911": {
+      "id": "1:911",
+      "name": "8 (800) 777-02-05",
+      "type": "TEXT",
+      "fontSize": 20,
+      "fontName": {
+        "family": "Inter",
+        "style": "Medium",
+        "postscript": "Inter-Medium"
+      },
+      "lineHeight": {
+        "value": 1.399999976158142,
+        "units": "RAW"
+      },
+      "text": "8 (800) 777-02-05",
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#0c0c0c",
+          "imageHash": null
+        },
+        {
+          "type": "SOLID",
+          "hex": "#000000",
+          "imageHash": null
+        },
+        {
+          "type": "SOLID",
+          "hex": "#000000",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 182,
+        "h": 28
+      }
+    },
+    "1:893": {
+      "id": "1:893",
+      "name": "Ellipse",
+      "type": "ELLIPSE",
+      "text": null,
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#2f89ce",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 42,
+        "h": 42
+      }
+    },
+    "1:897": {
+      "id": "1:897",
+      "name": "Ellipse",
+      "type": "ELLIPSE",
+      "text": null,
+      "fills": [
+        {
+          "type": "SOLID",
+          "hex": "#48c95f",
+          "imageHash": null
+        }
+      ],
+      "size": {
+        "w": 42,
+        "h": 42
+      }
+    }
+  },
+  "logoImageHash": {
+    "0": 222,
+    "1": 33,
+    "2": 156,
+    "3": 110,
+    "4": 70,
+    "5": 44,
+    "6": 139,
+    "7": 244,
+    "8": 36,
+    "9": 105,
+    "10": 187,
+    "11": 51,
+    "12": 117,
+    "13": 26,
+    "14": 129,
+    "15": 37,
+    "16": 46,
+    "17": 237,
+    "18": 192,
+    "19": 127
+  }
+}

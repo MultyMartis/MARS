@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-06-21  
-**Evidence cutoff:** 2026-06-21 (SITE-002 stable live checkpoint — M9.8.9 Catalog UX Complete 01 after catalog UX cluster: filter recovery + filter UX + Commercial Trust + state persistence + hub cleanup)  
+**Last updated:** 2026-06-22  
+**Evidence cutoff:** 2026-06-22 (SITE-002 stable live checkpoint — M9.8.9 Catalog UX Complete 01; **Corporate Pages Program** Research **COMPLETE** · IA **READY** · Copy system **REGISTERED**)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.8.9 CATALOG UX COMPLETE 01** (2026-06-21) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` — catalog UX cluster **complete**; Knowledge Map updated (§16 Catalog State Persistence); active work package **M9.8.9 Minor Fixes Pack #1** (remaining tasks); EC-01 mitigated by subcategories hide (07) |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` — catalog UX cluster **complete**; active work package **M9.8.9 Minor Fixes Pack #1** (remaining tasks); **Corporate Pages Program** **OPEN** — Research **COMPLETE** · IA **READY** · Copy system **REGISTERED**; EC-01 mitigated by subcategories hide (07) |
 
 ---
 
@@ -35,7 +35,8 @@
 | Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** |
 | Active stage | **M9.8.9 Minor Fixes Pack #1** — remaining tasks per roadmap (2026-06-19) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
-| Next planned | Remaining M9.8.9 tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) · deferred M9.8.3/4/6/8 · **M10** not authorized |
+| Next planned | Remaining M9.8.9 tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) · **Corporate Pages Program** — IA approval → copy pass → design charter · deferred M9.8.3/4/6/8 · **M10** not authorized |
+| Corporate Pages Program | **OPEN** — [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Copy standard](../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md) · M9.13–M9.18 Research **Complete** · IA **Ready** · PAGE-COPY v1 **Registered** · Contacts **Delivered** (separate workstream) |
 | Run 5 | **NO** — not applicable to current operational lane |
 | Writes (this checkpoint) | **NO** — documentation only |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
@@ -48,6 +49,8 @@
 **CRO backlog (input to M9.8):** [sites/site-002/reports/REPORT-BZPM-CATALOG-IMPROVEMENT-BACKLOG.md](sites/site-002/reports/REPORT-BZPM-CATALOG-IMPROVEMENT-BACKLOG.md)
 
 **M9.8.9 registration:** [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md)
+
+**Corporate Pages Program:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Copy standard](../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md) · M9.13–M9.18 [forensic index](sites/site-002/reports/) · [copy index](sites/site-002/copy/) · [program registration](sites/site-002/reports/REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md) · [copy system registration](sites/site-002/reports/REPORT-BZPM-COPY-SYSTEM-REGISTRATION.md)
 
 **Prior checkpoint (historical):** [sites/site-002/reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md](sites/site-002/reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md) · [sites/site-002/reports/SITE-002-STABLE-M9-COMPLETE.md](sites/site-002/reports/SITE-002-STABLE-M9-COMPLETE.md)
 
@@ -528,6 +531,9 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 
 | 2026-06-14 | **UPDATED** — SITE-002 stable live manual compact checkpoint **REGISTERED**; Run **4.138**; baseline `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; status **STABLE LIVE CHECKPOINT**; rollback = Beget global backup + operator live state; metadata-only — no FTP/file capture |
 | 2026-06-17 | **UPDATED** — SITE-002 authority freeze → `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI`; **MANUAL UI REFINEMENTS ARE CANONICAL**; active stage **M9.8 UX Polish Pack**; [REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md) |
+| 2026-06-22 | **UPDATED** — BZPM **Corporate Pages Program** registered; M9.13/M9.14 research artifacts exported; program **OPEN** |
+| 2026-06-22 | **UPDATED** — Corporate Pages Research **COMPLETE** (M9.15–M9.18); IA map [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md); phase gate Research → IA |
+| 2026-06-22 | **UPDATED** — BZPM Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |
 | 2026-06-19 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.143**; baseline `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`; status **STABLE LIVE CHECKPOINT**; filter recovery + filter UX polish complete; Knowledge Map §7/§8; metadata-only — no FTP/file capture |

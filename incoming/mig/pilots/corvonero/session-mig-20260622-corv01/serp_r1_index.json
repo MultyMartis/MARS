@@ -1,0 +1,342 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "capture_pass": "r1_priority_bounded",
+  "generated_at": "2026-06-21T21:09:42.699Z",
+  "collection_date": "2026-06-22",
+  "checklist_ref": "../../triumph-gruzotaxi-krasnodar/pilot-serp-capture-checklist.md",
+  "query_count": 10,
+  "r1_success_count": 0,
+  "evidence_grade": "C",
+  "acquisition_failure": "af-008",
+  "acquisition_failure_scope": "direct_http_fetch_route_only",
+  "corrected_route_ref": "evidence/serp/serp-capability-audit-v1.md",
+  "queries": [
+    {
+      "r1_id": "r1q01",
+      "query": "программист 1С Новосибирск",
+      "lq_ref": "lq01",
+      "artifact": "serp_results_r1/r1q01.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q01/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q01/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q01/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q01/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q01/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q01.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q01/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q01/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q01/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q01/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 41,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T20:29:35.435Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q01/serp.json"
+    },
+    {
+      "r1_id": "r1q02",
+      "query": "сопровождение 1С Новосибирск",
+      "lq_ref": "lq04",
+      "artifact": "serp_results_r1/r1q02.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q02/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q02/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q02/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q02/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q02/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q02.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q02/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q02/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q02/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q02/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 15,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T20:51:35.849Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q02/serp.json"
+    },
+    {
+      "r1_id": "r1q03",
+      "query": "доработка 1С Новосибирск",
+      "lq_ref": "lq03",
+      "artifact": "serp_results_r1/r1q03.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q03/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q03/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q03/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q03/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q03/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q03.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q03/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q03/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q03/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q03/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 44,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T20:53:42.144Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q03/serp.json"
+    },
+    {
+      "r1_id": "r1q04",
+      "query": "доработка отчёта 1С Новосибирск",
+      "lq_ref": "lq09",
+      "artifact": "serp_results_r1/r1q04.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q04/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q04/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q04/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q04/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q04/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q04.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q04/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q04/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q04/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q04/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 31,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T20:59:12.715Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q04/serp.json"
+    },
+    {
+      "r1_id": "r1q05",
+      "query": "интеграция 1С с сайтом Новосибирск",
+      "lq_ref": "lq13",
+      "artifact": "serp_results_r1/r1q05.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q05/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q05/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q05/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q05/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q05/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q05.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q05/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q05/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q05/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q05/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 39,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T20:30:44.085Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q05/serp.json"
+    },
+    {
+      "r1_id": "r1q06",
+      "query": "интеграция 1С Битрикс Новосибирск",
+      "lq_ref": "lq14",
+      "artifact": "serp_results_r1/r1q06.json",
+      "evidence_grade": "C",
+      "r1_status": "failed_captcha_playwright",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q06/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q06/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q06/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q06/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q06/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q06.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C",
+        "captured_at": "2026-06-21T21:00:57.524Z"
+      },
+      "zpm_workflow_captcha": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q06/serp.html",
+        "stopped_batch": true
+      }
+    },
+    {
+      "r1_id": "r1q07",
+      "query": "маркировка в 1С Новосибирск",
+      "lq_ref": "lq17",
+      "artifact": "serp_results_r1/r1q07.json",
+      "evidence_grade": "C",
+      "r1_status": "failed_captcha_playwright",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q07/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q07/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q07/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q07/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q07/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q07.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C",
+        "captured_at": "2026-06-21T20:31:50.930Z"
+      },
+      "zpm_workflow_captcha": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q07/serp.html",
+        "stopped_batch": true
+      }
+    },
+    {
+      "r1_id": "r1q08",
+      "query": "Честный знак 1С Новосибирск",
+      "lq_ref": "lq19",
+      "artifact": "serp_results_r1/r1q08.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q08/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q08/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q08/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q08/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q08/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q08.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q08/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q08/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q08/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q08/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 33,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T21:07:47.758Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q08/serp.json"
+    },
+    {
+      "r1_id": "r1q09",
+      "query": "настройка ТС ПИОТ",
+      "lq_ref": "lq21",
+      "artifact": "serp_results_r1/r1q09.json",
+      "evidence_grade": "C",
+      "r1_status": "failed_captcha_playwright",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q09/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q09/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q09/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q09/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q09/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q09.json"
+    },
+    {
+      "r1_id": "r1q10",
+      "query": "программа 1С не работает Новосибирск",
+      "lq_ref": "lq06",
+      "artifact": "serp_results_r1/r1q10.json",
+      "evidence_grade": "B",
+      "r1_status": "captured_zpm_workflow",
+      "playwright_capture": {
+        "artifact_dir": "evidence/serp/r1-corv01/captures/r1q10/",
+        "serp_json": "evidence/serp/r1-corv01/captures/r1q10/serp.json",
+        "png": "evidence/serp/r1-corv01/captures/r1q10/serp-full-page.png",
+        "html": "evidence/serp/r1-corv01/captures/r1q10/serp.html",
+        "captcha_status": "blocked",
+        "extracted_count": 0,
+        "evidence_grade": "C"
+      },
+      "artifact_playwright": "evidence/serp/r1-corv01/captures/r1q10/serp.json",
+      "artifact_legacy_fallback": "serp_results_r1/r1q10.json",
+      "zpm_workflow_capture": {
+        "artifact_dir": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q10/",
+        "serp_json": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q10/serp.json",
+        "png": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q10/serp-full-page.png",
+        "html": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q10/serp.html",
+        "captcha_status": "none",
+        "extracted_count": 17,
+        "evidence_grade": "B",
+        "captured_at": "2026-06-21T21:09:42.192Z"
+      },
+      "artifact_zpm_workflow": "evidence/serp/zpm-workflow-corv01/capture-run/captures/r1q10/serp.json"
+    }
+  ],
+  "capture_method": "playwright_mobile_yandex_lr65",
+  "playwright_adapter": "tools/capture-serp-r1.mjs",
+  "triumph_pattern_ref": "incoming/mig/pilots/triumph-gruzotaxi-krasnodar/evidence/serp-multi-20260604/capture-serp-multi.mjs",
+  "r1_playwright_attempt_count": 10,
+  "acquisition_failure_note": "Playwright mobile capture attempted — CAPTCHA on all queries; no bypass",
+  "legacy_grade_c_fallback": "serp_results_r1/ — direct-fetch af-004 preserved",
+  "zpm_workflow_run": {
+    "label": "zpm-workflow-corv01",
+    "adapter": "tools/capture-serp-zpm-workflow.mjs",
+    "triumph_ref": "incoming/mig/pilots/triumph-gruzotaxi-krasnodar/evidence/serp-multi-20260604/capture-serp-multi.mjs",
+    "captured_at": "2026-06-21T21:09:42.699Z",
+    "browser_mode": "headful",
+    "delay_ms_base": 90000,
+    "delay_ms_jitter": 30000,
+    "summary_artifact": "evidence/serp/zpm-workflow-corv01/capture-run/capture-run-summary.json",
+    "workflow_audit": "evidence/serp/zpm-workflow-corv01/workflow-audit/zpm-serp-workflow-recovery-audit-v1.md",
+    "grade_b_count": 7,
+    "grade_c_count": 2,
+    "throttled_resume": true,
+    "last_batch": "batch3",
+    "stopped_on_captcha": false,
+    "stopped_after": "r1q06"
+  },
+  "r1_zpm_workflow_success_count": 7,
+  "r1_best_available_grade": "B_partial"
+}

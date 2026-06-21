@@ -417,7 +417,7 @@
 | Field | Value |
 |-------|-------|
 | **Main commit** | `ce45379` — `foundry: complete G2-R2 SERVICE_PAGE scaffold` |
-| **Metadata commit** | None |
+| **Metadata commit** | `dec7e41` — docs: populate G2-R2 P4 report git result section |
 | **Commit message** | `foundry: complete G2-R2 SERVICE_PAGE scaffold` |
 | **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` updated (`5d5208c..ce45379`) |
 | **Files committed** | P4 selective scope only |

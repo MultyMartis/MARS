@@ -66,12 +66,40 @@
 
 ---
 
+## Phase 2.5 — Spatial cockpit architecture (post–Prototype v0.1)
+
+**Статус:** **baseline complete** (2026-05-24) — documentation only; **не** HTML implementation.
+
+| Output | Doc | State |
+|--------|-----|-------|
+| Spatial zones + tri-focus canon | [cockpit-spatial-architecture-v0.1.md](cockpit-spatial-architecture-v0.1.md) | ✓ draft |
+| Tactical `info_area` philosophy | [tactical-signal-philosophy-v0.1.md](tactical-signal-philosophy-v0.1.md) | ✓ draft |
+| Surface / motion / depth / viewport / priority / focus / empty | pack in [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) § Spatial cockpit | ✓ draft |
+| Visual language charter | [visual-language-direction-v0.1.md](visual-language-direction-v0.1.md) | ✓ draft |
+| Blueprint alignment | [cockpit-architecture-blueprint-v0.1.md](cockpit-architecture-blueprint-v0.1.md) | ✓ aligned |
+
+**Canonical shift:** dashboard-grid interpretation **deprecated** → *spatial operational cockpit environment with layered tactical awareness*.
+
+**Не claim:** operator formal UX study; runtime prototype in repo (workspace HTML **not started**).
+
+---
+
 ## Phase 3 — Visual direction: dark/light cockpit style
 
-| Output | Notes |
-|--------|-------|
-| Visual reference board | Glass, glow restraint |
-| Token value freeze (draft → approved) | [theme-system-draft-v0.1.md](theme-system-draft-v0.1.md) |
+**Статус:** exploration packs **baseline draft** (2026-05-24) — documentation only; **не** token freeze, **не** HTML.
+
+| Output | Notes | State |
+|--------|-------|-------|
+| Visual Direction Exploration Pack v0.1 | [visual-direction-exploration-pack-v0.1.md](visual-direction-exploration-pack-v0.1.md) + 9 subdocs | ✓ draft |
+| Atmospheric Visual Exploration Pack v0.1 | [atmospheric-visual-exploration-pack-v0.1.md](atmospheric-visual-exploration-pack-v0.1.md) + 9 subdocs (probes, studies, prompts) | ✓ draft |
+| Visual language charter (summary) | [visual-language-direction-v0.1.md](visual-language-direction-v0.1.md) | ✓ linked |
+| Operator reference board (curated) | Filter: [reference-analysis-and-visual-boundaries-v0.1.md](reference-analysis-and-visual-boundaries-v0.1.md) | **not started** |
+| Operator probe cycles (external image tools) | [visual-probe-methodology-v0.1.md](visual-probe-methodology-v0.1.md) · [visual-probe-evaluation-framework-v0.1.md](visual-probe-evaluation-framework-v0.1.md) | **not started** (human-operated) |
+| Token value freeze (draft → approved) | [theme-system-draft-v0.1.md](theme-system-draft-v0.1.md) · motion [motion-and-transition-charter-v0.1.md](motion-and-transition-charter-v0.1.md) | pending review |
+| Exo 2 typography in static MVP | [typography-atmosphere-v0.1.md](typography-atmosphere-v0.1.md) | direction set; **MVP v1 tokens applied** |
+| Desktop viewport shell (2560×1440 / 1920px wrapper) | [desktop-viewport-shell-rule-v0.1.md](desktop-viewport-shell-rule-v0.1.md) | **constraint doc v0.1** · MVP v1 implementation |
+
+**Не claim:** Figma, production mockups, design system implementation, frontend code, in-repo generated probe images.
 
 ---
 
@@ -92,7 +120,7 @@
 | Dark/light semantic tokens | Hardcoded colors |
 | Admin-aware HTML structure ([admin-entry notes](admin-entry-and-future-crud-notes-v0.1.md)) | |
 
-**Workspace:** path TBD (`workspaces/homegateway-v4-ai/` recommended — **not created** in Phase 0).
+**Workspace:** `workspaces/homegateway-v4-ai/v1/` — skeleton active; shell geometry per [desktop-viewport-shell-rule-v0.1.md](desktop-viewport-shell-rule-v0.1.md).
 
 ---
 
@@ -175,4 +203,4 @@ Phase 0 ──► Phase 1 ──► Phase 2 ──► Phase 3 ──► Phase 4 
 
 ---
 
-*Last updated: 2026-05-20 — Wireframe Exploration Pack v0.1.*
+*Last updated: 2026-05-25 — Desktop viewport shell rule v0.1; MVP v1 workspace shell geometry.*

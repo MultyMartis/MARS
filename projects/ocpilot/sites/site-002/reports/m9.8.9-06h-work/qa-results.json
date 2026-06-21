@@ -1,0 +1,130 @@
+{
+  "task": "M9.8.9-06H",
+  "run_at": "2026-06-19T06:41:48.392100+00:00",
+  "checks": {
+    "sql_stoly": {
+      "category_id": 301,
+      "min_price": 5405.0,
+      "max_price": 72630.0,
+      "expected_min": 5405,
+      "pass": true
+    },
+    "sql_sinks": {
+      "category_id": 80,
+      "min_price": 5553.0,
+      "max_price": 75071.0,
+      "expected_min": 5553,
+      "pass": true
+    },
+    "zero_price_products_in_db": {
+      "rows": [
+        {
+          "product_id 1": "144",
+          "price": "0.0000",
+          "index_price": "0.0000",
+          "status": "1"
+        },
+        {
+          "product_id 1": "145",
+          "price": "0.0000",
+          "index_price": "0.0000",
+          "status": "1"
+        },
+        {
+          "product_id 1": "1057",
+          "price": "0.0000",
+          "index_price": "0.0000",
+          "status": "1"
+        },
+        {
+          "product_id 1": "1058",
+          "price": "0.0000",
+          "index_price": "0.0000",
+          "status": "1"
+        },
+        {
+          "product_id 1": "3071",
+          "price": "0.0000",
+          "index_price": "0.0000",
+          "status": "1"
+        }
+      ],
+      "pass": true
+    },
+    "zero_price_in_category_301_or_80": {
+      "active_zero_count": 1,
+      "pass": true
+    },
+    "plp_stoly_min_not_zero": {
+      "placeholder_from": 5405,
+      "pass": true
+    },
+    "plp_sinks_min_not_zero": {
+      "placeholder_from": 5553,
+      "pass": true
+    },
+    "pdp_po_zaprosu": {
+      "3071": true,
+      "144": true,
+      "145": true,
+      "1057": true,
+      "1058": true,
+      "pass": true
+    },
+    "only_with_price": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?only_with_price=1",
+      "has_filter_param": true,
+      "no_po_zaprosu_in_listing": true,
+      "pass": true
+    }
+  },
+  "plp": {
+    "stoly": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "fetched_at": "2026-06-19T06:42:01.306652+00:00",
+      "placeholder_from": 5405,
+      "has_po_zaprosu": false,
+      "product_cards": 0
+    },
+    "sinks": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "fetched_at": "2026-06-19T06:42:04.901555+00:00",
+      "placeholder_from": 5553,
+      "has_po_zaprosu": false,
+      "product_cards": 0
+    }
+  },
+  "pdp": {
+    "3071": {
+      "product_id": 3071,
+      "fetched_at": "2026-06-19T06:42:07.994407+00:00",
+      "has_po_zaprosu": true,
+      "price_zero_visible": true
+    },
+    "144": {
+      "product_id": 144,
+      "fetched_at": "2026-06-19T06:42:10.504066+00:00",
+      "has_po_zaprosu": true,
+      "price_zero_visible": true
+    },
+    "145": {
+      "product_id": 145,
+      "fetched_at": "2026-06-19T06:42:13.370417+00:00",
+      "has_po_zaprosu": true,
+      "price_zero_visible": true
+    },
+    "1057": {
+      "product_id": 1057,
+      "fetched_at": "2026-06-19T06:42:16.254083+00:00",
+      "has_po_zaprosu": true,
+      "price_zero_visible": true
+    },
+    "1058": {
+      "product_id": 1058,
+      "fetched_at": "2026-06-19T06:42:18.913576+00:00",
+      "has_po_zaprosu": true,
+      "price_zero_visible": true
+    }
+  },
+  "all_pass": true
+}

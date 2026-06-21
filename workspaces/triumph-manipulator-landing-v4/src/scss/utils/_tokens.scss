@@ -1,11 +1,17 @@
-﻿$color-black: #05070b;
-$color-night: #07101d;
-$color-night-soft: #101929;
+﻿$brand-dark: #090c27;
+$brand-red: #e1002d;
+$brand-dark-rgb: 9, 12, 39;
+$brand-red-rgb: 225, 0, 45;
+
+$color-black: $brand-dark;
+$color-night: $brand-dark;
+$color-night-soft: #0d1135;
 $color-white: #ffffff;
 $color-paper: #f7f8fb;
 $color-card: #ffffff;
-$color-red: #e30621;
-$color-red-dark: #b30018;
+$color-red: $brand-red;
+$color-red-dark: #a80024;
+$color-red-light: #ff2647;
 $color-text: #090f1b;
 $color-text-muted: rgba(9, 15, 27, 0.68);
 $color-text-dim: rgba(9, 15, 27, 0.48);
@@ -30,6 +36,16 @@ $rhythm-compact: clamp(34px, 4vw, 56px);
 $icon-scale-normal: 1.5;
 $icon-scale-proof: 2;
 
+// Shared section H2 (desktop 72px; mobile scales down in section-heading mixin)
+$section-h2-font-size: 72px;
+$section-h2-font-size-mobile: clamp(28px, 8.2vw, 44px);
+$section-h2-font-size-mobile-narrow: clamp(24px, 6.8vw, 32px);
+
+$radius-none: 0;
+$radius-block: 0;
+$radius-control: 0;
+$radius-pill: 0;
+
 $shadow-card: 0 18px 48px rgba(9, 15, 27, 0.08);
-$shadow-dark: 0 24px 60px rgba(0, 0, 0, 0.28);
-$shadow-red: 0 16px 34px rgba(227, 6, 33, 0.34);
+$shadow-dark: 0 24px 60px rgba($brand-dark, 0.28);
+$shadow-red: 0 16px 34px rgba($brand-red, 0.34);

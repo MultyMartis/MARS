@@ -1,3 +1,5 @@
+const TRIUMPH_FORM_JS_VERSION = 'metrika-goal-debug-v1';
+const PRODUCTION_HOST = 'manipulator-triumph.ru';
 const FORM_SELECTOR = '[data-form]';
 const FORM_ROOT_INIT = 'data-form-system';
 const PHONE_DIGITS_MIN = 10;
@@ -5,6 +7,9 @@ const DEFAULT_FORM_ENDPOINT = 'backend/send-lead.php';
 const SITE_CONFIG_ENDPOINT = 'backend/site-config.php';
 const METRIKA_COUNTER_ID = 109490539;
 const METRIKA_GOAL_NAME = 'form-lead';
+const RECAPTCHA_ACTION = 'form_lead';
+const RECAPTCHA_SECURITY_MESSAGE =
+  'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.';
 
 /** @type {Promise<{ recaptchaSiteKey: string }> | null} */
 let siteConfigPromise = null;
@@ -374,15 +379,202 @@ function resetFormUi(form) {
 }
 
 /**
+ * @returns {boolean}
+ */
+function isMetrikaDebugEnabled() {
+  try {
+    return new URLSearchParams(window.location.search).get('metrika_debug') === '1';
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * @param {string} message
+ */
+function metrikaDebugLog(message) {
+  if (isMetrikaDebugEnabled()) {
+    console.log(`[metrika-debug] ${message}`);
+  }
+}
+
+/**
  * Fire Yandex Metrika lead goal after confirmed backend success only.
  */
 function trackLeadGoal() {
+  metrikaDebugLog('trackLeadGoal called yes');
+  metrikaDebugLog(`typeof window.ym ${typeof window.ym}`);
+  metrikaDebugLog(`counter id ${METRIKA_COUNTER_ID}`);
+  metrikaDebugLog(`goal name ${METRIKA_GOAL_NAME}`);
+
   try {
     if (typeof window.ym === 'function') {
-      window.ym(METRIKA_COUNTER_ID, 'reachGoal', METRIKA_GOAL_NAME);
+      metrikaDebugLog('reachGoal call attempted yes');
+      window.ym(METRIKA_COUNTER_ID, 'reachGoal', METRIKA_GOAL_NAME, {}, () => {
+        metrikaDebugLog('reachGoal callback fired yes');
+      });
+    } else {
+      metrikaDebugLog('reachGoal call attempted no');
     }
   } catch {
     // Metrika blocked or unavailable — must not affect form UX.
+  }
+}
+
+/**
+ * @returns {boolean}
+ */
+function isRecaptchaDebugEnabled() {
+  try {
+    return new URLSearchParams(window.location.search).get('recaptcha_debug') === '1';
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * @param {string} message
+ */
+function recaptchaDebugLog(message) {
+  if (isRecaptchaDebugEnabled()) {
+    console.log(`[recaptcha-debug] ${message}`);
+  }
+}
+
+/**
+ * @param {string} [label]
+ */
+function logGrecaptchaApiDebug(label = 'api') {
+  if (!isRecaptchaDebugEnabled()) {
+    return;
+  }
+
+  const exists = typeof window.grecaptcha !== 'undefined';
+  recaptchaDebugLog(`${label}: window.grecaptcha exists ${exists ? 'yes' : 'no'}`);
+  recaptchaDebugLog(`${label}: typeof grecaptcha ${typeof window.grecaptcha}`);
+
+  if (!exists) {
+    recaptchaDebugLog(`${label}: typeof grecaptcha.ready undefined`);
+    recaptchaDebugLog(`${label}: typeof grecaptcha.execute undefined`);
+    return;
+  }
+
+  recaptchaDebugLog(`${label}: typeof grecaptcha.ready ${typeof window.grecaptcha.ready}`);
+  recaptchaDebugLog(`${label}: typeof grecaptcha.execute ${typeof window.grecaptcha.execute}`);
+}
+
+/**
+ * @returns {boolean}
+ */
+function isGrecaptchaReadyApi() {
+  return typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.ready === 'function';
+}
+
+/**
+ * @returns {boolean}
+ */
+function isGrecaptchaExecuteApi() {
+  return isGrecaptchaReadyApi() && typeof window.grecaptcha.execute === 'function';
+}
+
+/**
+ * @param {HTMLScriptElement} script
+ * @returns {boolean}
+ */
+function isRecaptchaScriptDomComplete(script) {
+  return script.dataset.recaptchaLoaded === 'true' || script.getAttribute('data-recaptcha-loaded') === 'true';
+}
+
+/**
+ * @returns {HTMLScriptElement | null}
+ */
+function findRecaptchaScriptElement() {
+  const loader = document.querySelector('script[data-recaptcha-loader="true"]');
+  if (loader instanceof HTMLScriptElement) {
+    return loader;
+  }
+
+  const scripts = document.querySelectorAll('script[src*="google.com/recaptcha/api.js"]');
+  for (const node of scripts) {
+    if (node instanceof HTMLScriptElement) {
+      return node;
+    }
+  }
+
+  return null;
+}
+
+const GRECAPTCHA_READY_POLL_MS = 50;
+const GRECAPTCHA_READY_TIMEOUT_MS = 15000;
+
+/**
+ * @returns {Promise<void>}
+ */
+function waitForGrecaptchaReadyApi() {
+  if (isGrecaptchaReadyApi()) {
+    return new Promise((resolve) => {
+      window.grecaptcha.ready(resolve);
+    });
+  }
+
+  return new Promise((resolve, reject) => {
+    const deadline = Date.now() + GRECAPTCHA_READY_TIMEOUT_MS;
+
+    const poll = () => {
+      if (isGrecaptchaReadyApi()) {
+        window.grecaptcha.ready(resolve);
+        return;
+      }
+
+      if (Date.now() >= deadline) {
+        reject(new Error('recaptcha_ready_timeout'));
+        return;
+      }
+
+      window.setTimeout(poll, GRECAPTCHA_READY_POLL_MS);
+    };
+
+    poll();
+  });
+}
+
+/**
+ * @returns {boolean}
+ */
+function isProductionHost() {
+  const hostname = window.location.hostname;
+  return hostname === PRODUCTION_HOST || hostname.endsWith(`.${PRODUCTION_HOST}`);
+}
+
+/**
+ * @param {FormData} formData
+ * @returns {string}
+ */
+function getRecaptchaTokenFromFormData(formData) {
+  const token = formData.get('g-recaptcha-response');
+  return typeof token === 'string' ? token.trim() : '';
+}
+
+/**
+ * Hard block: production must never POST without a reCAPTCHA token when site key is configured.
+ *
+ * @param {FormData} formData
+ */
+async function assertProductionRecaptchaBeforeFetch(formData) {
+  if (!isProductionHost()) {
+    return;
+  }
+
+  const { recaptchaSiteKey } = await loadSiteConfig();
+
+  if (!recaptchaSiteKey || recaptchaSiteKey === 'PASTE_SITE_KEY_HERE') {
+    return;
+  }
+
+  if (!getRecaptchaTokenFromFormData(formData)) {
+    const error = new Error('recaptcha_token_missing_production');
+    error.userMessage = RECAPTCHA_SECURITY_MESSAGE;
+    throw error;
   }
 }
 
@@ -426,19 +618,58 @@ async function loadSiteConfig() {
  * @returns {Promise<void>}
  */
 function loadRecaptchaScript(siteKey) {
-  if (!siteKey || recaptchaScriptPromise) {
-    return recaptchaScriptPromise || Promise.resolve();
+  if (!siteKey) {
+    return Promise.resolve();
+  }
+
+  if (isGrecaptchaReadyApi()) {
+    logGrecaptchaApiDebug('loadRecaptchaScript immediate');
+    return Promise.resolve();
+  }
+
+  if (recaptchaScriptPromise) {
+    return recaptchaScriptPromise;
   }
 
   recaptchaScriptPromise = new Promise((resolve, reject) => {
-    if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.execute === 'function') {
-      resolve();
+    const finishAfterScript = () => {
+      waitForGrecaptchaReadyApi()
+        .then(() => {
+          logGrecaptchaApiDebug('loadRecaptchaScript after script');
+          resolve();
+        })
+        .catch(reject);
+    };
+
+    if (isGrecaptchaReadyApi()) {
+      logGrecaptchaApiDebug('loadRecaptchaScript already in page');
+      finishAfterScript();
       return;
     }
 
-    const existing = document.querySelector('script[data-recaptcha-loader="true"]');
+    const existing = findRecaptchaScriptElement();
     if (existing) {
-      existing.addEventListener('load', () => resolve(), { once: true });
+      if (isGrecaptchaReadyApi()) {
+        logGrecaptchaApiDebug('loadRecaptchaScript existing tag + api');
+        finishAfterScript();
+        return;
+      }
+
+      if (isRecaptchaScriptDomComplete(existing)) {
+        recaptchaDebugLog('loadRecaptchaScript existing tag DOM complete; waiting for grecaptcha.ready');
+        finishAfterScript();
+        return;
+      }
+
+      existing.addEventListener(
+        'load',
+        () => {
+          existing.dataset.recaptchaLoaded = 'true';
+          recaptchaDebugLog('loadRecaptchaScript existing tag load event');
+          finishAfterScript();
+        },
+        { once: true }
+      );
       existing.addEventListener('error', () => reject(new Error('recaptcha_script_failed')), { once: true });
       return;
     }
@@ -448,9 +679,16 @@ function loadRecaptchaScript(siteKey) {
     script.async = true;
     script.defer = true;
     script.dataset.recaptchaLoader = 'true';
-    script.onload = () => resolve();
+    script.onload = () => {
+      script.dataset.recaptchaLoaded = 'true';
+      recaptchaDebugLog('loadRecaptchaScript injected tag load event');
+      finishAfterScript();
+    };
     script.onerror = () => reject(new Error('recaptcha_script_failed'));
     document.head.appendChild(script);
+  }).catch((error) => {
+    recaptchaScriptPromise = null;
+    throw error;
   });
 
   return recaptchaScriptPromise;
@@ -467,34 +705,80 @@ async function appendRecaptchaToken(form, formData) {
     return;
   }
 
+  let scriptLoaded = false;
+  let tokenGenerated = false;
+  let tokenAppended = false;
+
   const { recaptchaSiteKey } = await loadSiteConfig();
+  recaptchaDebugLog(`site config loaded yes`);
 
   if (!recaptchaSiteKey || recaptchaSiteKey === 'PASTE_SITE_KEY_HERE') {
+    recaptchaDebugLog(`site key present no`);
     return;
   }
 
-  try {
-    await loadRecaptchaScript(recaptchaSiteKey);
+  recaptchaDebugLog(`site key present yes`);
 
-    if (typeof window.grecaptcha === 'undefined' || typeof window.grecaptcha.execute !== 'function') {
-      return;
+  try {
+    logGrecaptchaApiDebug('appendRecaptchaToken before load');
+    await loadRecaptchaScript(recaptchaSiteKey);
+    logGrecaptchaApiDebug('appendRecaptchaToken after load');
+
+    scriptLoaded = isGrecaptchaReadyApi();
+    recaptchaDebugLog(`recaptcha script loaded ${scriptLoaded ? 'yes' : 'no'}`);
+
+    if (!scriptLoaded) {
+      throw new Error('recaptcha_not_ready');
     }
 
-    await new Promise((resolve) => {
-      window.grecaptcha.ready(resolve);
-    });
+    await waitForGrecaptchaReadyApi();
 
-    const token = await window.grecaptcha.execute(recaptchaSiteKey, { action: 'submit' });
+    const grecaptchaExists = typeof window.grecaptcha !== 'undefined';
+    const readyExists = grecaptchaExists && typeof window.grecaptcha.ready === 'function';
+    const executeExists = grecaptchaExists && typeof window.grecaptcha.execute === 'function';
+    recaptchaDebugLog(`grecaptcha exists ${grecaptchaExists ? 'yes' : 'no'}`);
+    recaptchaDebugLog(`ready exists ${readyExists ? 'yes' : 'no'}`);
+    recaptchaDebugLog(`execute exists ${executeExists ? 'yes' : 'no'}`);
 
-    if (typeof token === 'string' && token) {
-      formData.set('g-recaptcha-response', token);
-      const hidden = form.querySelector('[data-form-field="g-recaptcha-response"]');
-      if (hidden instanceof HTMLInputElement) {
-        hidden.value = token;
-      }
+    if (!executeExists) {
+      throw new Error('recaptcha_execute_missing');
+    }
+
+    const token = await window.grecaptcha.execute(recaptchaSiteKey, { action: RECAPTCHA_ACTION });
+    tokenGenerated = typeof token === 'string' && token.length > 0;
+    recaptchaDebugLog(`token generated ${tokenGenerated ? 'yes' : 'no'}`);
+
+    if (!tokenGenerated) {
+      throw new Error('recaptcha_token_empty');
+    }
+
+    formData.set('g-recaptcha-response', token);
+    const hidden = form.querySelector('[data-form-field="g-recaptcha-response"]');
+    if (hidden instanceof HTMLInputElement) {
+      hidden.value = token;
+    }
+
+    const appendedToken = formData.get('g-recaptcha-response');
+    tokenAppended = typeof appendedToken === 'string' && appendedToken.length > 0;
+    recaptchaDebugLog(`token appended ${tokenAppended ? 'yes' : 'no'}`);
+
+    if (!tokenAppended) {
+      throw new Error('recaptcha_token_append_failed');
     }
   } catch {
-    // If reCAPTCHA fails client-side, backend policy decides; do not block UI here.
+    if (!scriptLoaded) {
+      recaptchaDebugLog(`recaptcha script loaded no`);
+    }
+    if (!tokenGenerated) {
+      recaptchaDebugLog(`token generated no`);
+    }
+    if (!tokenAppended) {
+      recaptchaDebugLog(`token appended no`);
+    }
+
+    const error = new Error('recaptcha_failed');
+    error.userMessage = RECAPTCHA_SECURITY_MESSAGE;
+    throw error;
   }
 }
 
@@ -581,6 +865,7 @@ async function productionSubmitHandler(form, payload) {
   });
 
   await appendRecaptchaToken(form, formData);
+  await assertProductionRecaptchaBeforeFetch(formData);
 
   let response;
 
@@ -761,7 +1046,11 @@ function initForm(form) {
         form.getAttribute('data-form-success') ||
         'Заявка принята. Перезвоним в ближайшее время.';
       showFormStatus(form, 'success', successMessage);
-      if (submitResult?.mode === 'production') {
+      metrikaDebugLog('submit success yes');
+      metrikaDebugLog(`submitResult.mode ${submitResult?.mode ?? 'undefined'}`);
+      const willCallMetrikaGoal = submitResult?.mode === 'production';
+      metrikaDebugLog(`will call Metrika goal ${willCallMetrikaGoal ? 'yes' : 'no'}`);
+      if (willCallMetrikaGoal) {
         trackLeadGoal();
       }
       form.reset();
@@ -854,3 +1143,5 @@ function initForms(root = document) {
     }
   });
 }
+
+recaptchaDebugLog(`form js version ${TRIUMPH_FORM_JS_VERSION}`);

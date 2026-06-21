@@ -14,7 +14,7 @@
 | [font-awesome-governance-layer.md](font-awesome-governance-layer.md) | Lightweight Font Awesome semantics, style consistency, and icon drift discipline |
 | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) | **Authority** — RU no word-splitting CSS + selective `&nbsp;` typography |
 | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | **Canonical** RU commercial landing QA widths + checks |
-| [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) | **Anti-drift** — breakpoints, container, FAQ, build/dist, Windows EBUSY |
+| [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) | **Anti-drift** — breakpoints, container, FAQ, CSS multicol browser QA, build/dist, Windows EBUSY |
 | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) | **Inter-section spacing** — same/diff background, mobile, project mapping |
 | [production-standards-governance-v1.md](production-standards-governance-v1.md) | **Standards gate** — Draft + Approval before Shell |
 | [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) | **Start gate** — Production Standards + shell + UI demo before Home |
@@ -25,6 +25,10 @@
 | [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) | **Precision** — spacing scales, typography px + line-height, no arbitrary values, normalization |
 | [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md) | **Layout patterns** — mandatory pattern selection before multi-section production |
 | [design-source-to-frontend-mapping-governance-v1.md](design-source-to-frontend-mapping-governance-v1.md) | **Design mapping** — multi-source extraction, layout chain, Mapping QA before Approval |
+| [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) | **Enforcement** — Operator Law, Compiled CSS, Inline Style, ROOT COMPLIANCE gates |
+| [frontend-inline-style-allowlist-v1.md](frontend-inline-style-allowlist-v1.md) | **Inline styles** — allowlist for EG-03 |
+| [css-multicol-masonry-browser-compatibility-lesson-v1.md](css-multicol-masonry-browser-compatibility-lesson-v1.md) | **CSS multicol** — Chrome/Firefox column group `display` compatibility (WPilot footer incident) |
+| [layout-spec-law-v1.md](layout-spec-law-v1.md) | **Layout Spec Gate** — composition before HTML/CSS; operator APPROVED |
 
 **Registry index:** [registries.md §6](registries.md#6-frontend-production-rules).
 
@@ -162,6 +166,7 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 - Map section spacing in **Project Production Standards** before page production; complete **Draft → Approval** per [production-standards-governance-v1.md](production-standards-governance-v1.md) before Shell.
 - Do **not** start Home page if Visual Foundation + Design Calibration + Foundation QA REPORT is missing.
 - If operator requests Home first → execute shell-first protocol; cite [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md).
+- **Layout Spec before shell/block HTML** — Header, Footer, Hero, any block: operator **APPROVED** Layout Spec required — [layout-spec-law-v1.md](layout-spec-law-v1.md).
 
 ## 15. WF Grid Discipline (mandatory — all Factory frontend)
 
@@ -222,6 +227,28 @@ TYPOGRAPHY PRECISION (line-height = font-size + 4px) — PASS | partial (list) |
 LAYOUT PATTERN LIBRARY — PASS | partial (list LP-*) | NOT READY | N/A (foundation only)
 ```
 
+## 18. Enforcement gates (mandatory — compiled output)
+
+**Authority:** [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) — full rules; **do not** duplicate here.
+
+**Operator summary:**
+
+- **Operator Law Compliance:** gap/margin/padding vs OL-01–OL-07 in **source and `dist/*.css`**.
+- **Compiled CSS Compliance:** mandatory gate on **`dist/*.css`** — not substitutable by SCSS skim.
+- **Inline Style Compliance:** `dist/**/*.html` vs [frontend-inline-style-allowlist-v1.md](frontend-inline-style-allowlist-v1.md).
+- **Authority Conflict:** rank-1 SSOT vs OL requires Exception Registry — else **FAIL**.
+- **ROOT COMPLIANCE:** technical review rollup — **PASS impossible** without it.
+
+**REPORT lines:**
+
+```text
+OPERATOR LAW COMPLIANCE — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
+COMPILED CSS COMPLIANCE — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
+INLINE STYLE COMPLIANCE — PASS | PASS WITH NOTES | FAIL | WAIVED | UNKNOWN
+AUTHORITY CONFLICT STATUS — PASS | FAIL | WAIVED | UNKNOWN
+ROOT COMPLIANCE — PASS | FAIL | UNKNOWN
+```
+
 ---
 
 ## Changelog
@@ -240,3 +267,5 @@ LAYOUT PATTERN LIBRARY — PASS | partial (list LP-*) | NOT READY | N/A (foundat
 | 2026-06-13 | §14 — [production-standards-governance-v1.md](production-standards-governance-v1.md) Draft + Approval gate (Production Standards Governance Pack). |
 | 2026-06-13 | §17 — Frontend Precision Governance Pack ([frontend-precision-governance-v1.md](frontend-precision-governance-v1.md), [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md)). |
 | 2026-06-13 | Authority order pointer + §7 responsive base from Project Production Standards ([frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md)). |
+| 2026-06-14 | §18 — Enforcement Pack v1 gates (compiled CSS, inline styles, ROOT COMPLIANCE). |
+| 2026-06-14 | §14 — Layout Spec Law pointer ([layout-spec-law-v1.md](layout-spec-law-v1.md)); composition gate before HTML/CSS. |

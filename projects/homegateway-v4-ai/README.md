@@ -1,6 +1,9 @@
 # HomeGateway v4.ai — project documentation pack
 
 **project_id:** `homegateway-v4-ai`  
+**Program status (registry):** **`planned`** — PLANNED / DRAFT  
+**Workspace status:** **UI Prototype** — `workspaces/homegateway-v4-ai/v1/` (static Gulp skeleton)  
+**Documentation status:** **Operational Documentation Pack** (дисциплина ведения docs; **не** зрелость продукта)  
 **Статус документации:** **DRAFT** · **PLANNING** · **STATIC-FIRST**  
 **Реестр:** [registry/project-registry.md](../../registry/project-registry.md)
 

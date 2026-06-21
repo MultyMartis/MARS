@@ -1,0 +1,18 @@
+{
+  "task": "M9.8.9-06H",
+  "authority": "SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01",
+  "stamp": "20260619-064138",
+  "remote_path": "catalog/model/catalog/product.php",
+  "pre_deploy": {
+    "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\product.php.pre-m9.8.9-06h-price-range-exclude-zero.bak",
+    "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06h-work\\live-capture\\catalog__model__catalog__product.php",
+    "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+    "size": 58556
+  },
+  "post_deploy": {
+    "local_patched": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06h-work\\catalog__model__catalog__product.php.patched",
+    "sha256": "f53f6b3f0aad776baa28490e340471beb871e55673b0377faf0c2c5c066a844c",
+    "size": 58650
+  },
+  "rollback_sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659"
+}

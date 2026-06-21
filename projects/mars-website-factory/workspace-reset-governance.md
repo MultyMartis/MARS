@@ -1,6 +1,6 @@
 # MARS Website Factory - Workspace Reset Governance
 
-**Status:** **documented** - Website Factory workspace reset governance and human-supervised residue discipline only.  
+**Status:** **documented** - Website Factory workspace reset governance, **Workspace Archive Rule**, and human-supervised residue discipline only.  
 **Not:** automatic cleaner, git reset policy, destructive command approval, runtime workspace manager, or build artifact deletion engine.
 
 **Core principle:** stale implementation state is not neutral.  
@@ -100,8 +100,32 @@ Record **SAFE UNKNOWN** when:
 
 ---
 
-## 8. Changelog
+## 8. Workspace Archive Rule
+
+When a **frontend production cycle is fully restarted** (not a scoped in-place repair), operators **must** follow this archive discipline instead of versioning active workspace folder names.
+
+| # | Rule |
+|---|------|
+| **WA-01** | The **current active workspace** is **moved** to bulk storage archive — e.g. `C:\AI MARS STORAGE\website-factory\archive/<project-slug>-pre-<cycle-label>/`. |
+| **WA-02** | The archived workspace receives lifecycle status: **ARCHIVED** · **READ ONLY** · **REFERENCE ONLY**. An `ARCHIVED.md` marker **should** record path, date, reason, and active replacement path. |
+| **WA-03** | A **new workspace** is created at the **original canonical project name** (e.g. `workspaces/fp-0002-shpigovsky-frontend/`) from the current gulp-starter or approved Factory template. |
+| **WA-04** | **Forbidden** as **active production** workspace names: `project-v2`, `project-v3`, `project-final-final`, `project-new`, or any parallel `-vN` slug that splits canonical identity. |
+| **WA-05** | A project may have **only one ACTIVE** frontend workspace at a time. |
+| **WA-06** | All prior workspace generations **must** remain in archive (or documented snapshot with equivalent read-only posture) — not deleted silently. |
+
+**Distinction from §3 clone-first (R-WF-04 in safe-production-rules):** clone-first applies to **experiments**; Workspace Archive Rule applies when the **canonical production tree is replaced** for a new cycle.
+
+**Storage boundary:** Archive lives under [mars-infrastructure-reality-v1.md](../../governance/mars-infrastructure-reality-v1.md) bulk storage — **not** a second git workspace root.
+
+**Evidence:** Project `<PROJECT>-WORKSPACE-STATUS-vN.md` + `# REPORT — <project> workspace reset` in operations `REPORTS/`.
+
+**First Factory instance:** FP-0002 Shpigovsky — archive `fp-0002-shpigovsky-frontend-pre-v2` (2026-06-14).
+
+---
+
+## 9. Changelog
 
 | Version | Date | Notes |
 |---------|------|-------|
+| v1 | 2026-06-14 | **Workspace Archive Rule** §8 — canonical name preservation, single ACTIVE workspace, bulk-storage archive; FP-0002 pre-v2 instance. |
 | v0 | 2026-05-18 | Initial Workspace Reset Governance layer from Triumph V3 battle-test lessons; documentation only. |

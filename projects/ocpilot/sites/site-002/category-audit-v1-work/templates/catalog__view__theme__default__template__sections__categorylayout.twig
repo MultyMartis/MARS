@@ -1,0 +1,72 @@
+<section class="category">
+  <div class="container">
+    <div class="category__layout">
+      <aside class="category__sidebar" data-filter-sidebar aria-hidden="true">
+        <div class="filter-mobile__head">
+          <button class="filter-mobile__back" type="button" data-filter-close>
+            Назад
+          </button>
+
+          <button class="filter-mobile__reset" type="button" data-filter-reset>
+            Сбросить фильтры
+          </button>
+        </div>
+
+        @@include("partials/components/filters-sidebar.html")
+
+      </aside>
+
+      <div class="category__content">
+        <div class="category__topbar category__topbar--mobile">
+          <div class="category__sort">
+            <span class="category__sort-label">Сортировать по:</span>
+
+            <button class="category__sort-btn" type="button" data-sort-open aria-expanded="false">
+              <span class="category__sort-btn-text">Умолчанию</span>
+            </button>
+
+            <div class="category__sort-menu" data-sort-menu hidden>
+              <button class="category__sort-item" type="button">Умолчанию</button>
+              <button class="category__sort-item" type="button">Сначала дешевле</button>
+              <button class="category__sort-item" type="button">Сначала дороже</button>
+              <button class="category__sort-item" type="button">По популярности</button>
+            </div>
+          </div>
+
+          <button class="category__filters-btn" type="button" data-filter-open aria-expanded="false">
+            Фильтры
+          </button>
+        </div>
+
+        <div class="category__grid">
+@@include("partials/components/product-card.html", { "title": "Ванна моечная Assum ВСРП-С-5/10-Л (1000x700x850)", "price": "14 380,22 ₽", "oldPrice": "", "discount": "", "status": "in-stock", "statusText": "В наличии: 3 шт", "deliveryText": "", "ctaText": "Купить", "canCart": true, "article": "289408" })
+
+@@include("partials/components/product-card.html", { "title": "Стол производственный СП-12/6-Н (1200x600x850) усиленный", "price": "18 950 ₽", "oldPrice": "21 500 ₽", "discount": "-12%", "status": "in-stock", "statusText": "В наличии: 7 шт", "deliveryText": "", "ctaText": "Купить", "canCart": true, "article": "301122" })
+
+@@include("partials/components/product-card.html", { "title": "Шкаф холодильный Polair CM107-S (700 л)", "price": "79 900 ₽", "oldPrice": "", "discount": "", "status": "in-stock", "statusText": "В наличии: 2 шт", "deliveryText": "", "ctaText": "Купить", "canCart": true, "article": "445901" })
+
+@@include("partials/components/product-card.html", { "title": "Ванна моечная двухсекционная Abat ВМ-2/12", "price": "27 300 ₽", "oldPrice": "", "discount": "", "status": "order", "statusText": "Под заказ", "deliveryText": "Через 5–10 дней", "ctaText": "Под заказ", "canCart": false, "article": "332118" })
+
+@@include("partials/components/product-card.html", { "title": "Тележка сервировочная ТС-3 (3 уровня) нержавеющая сталь", "price": "11 600 ₽", "oldPrice": "13 200 ₽", "discount": "-12%", "status": "order", "statusText": "Под заказ", "deliveryText": "Через 5–10 дней", "ctaText": "Под заказ", "canCart": false, "article": "667321" })
+
+@@include("partials/components/product-card.html", { "title": "Стеллаж кухонный СК-4/12 (1200x400x1800), 4 полки", "price": "12 740 ₽", "oldPrice": "", "discount": "", "status": "order", "statusText": "Под заказ", "deliveryText": "Через 5–10 дней", "ctaText": "Под заказ", "canCart": false, "article": "198774" })
+
+@@include("partials/components/product-card.html", { "title": "Шкаф морозильный Polair CB114-G (1400 л)", "price": "Цена по запросу", "oldPrice": "", "discount": "", "status": "in-stock", "statusText": "В наличии: 1 шт", "deliveryText": "", "ctaText": "Цена по запросу", "canCart": false, "article": "901334" })
+
+@@include("partials/components/product-card.html", { "title": "Печь конвекционная UNOX XFT 193 (4 уровня)", "price": "Цена по запросу", "oldPrice": "", "discount": "", "status": "in-stock", "statusText": "В наличии: 2 шт", "deliveryText": "", "ctaText": "Цена по запросу", "canCart": false, "article": "610045" })
+
+@@include("partials/components/product-card.html", { "title": "Плита электрическая 4 конфорки (настольная)", "price": "Цена по запросу", "oldPrice": "", "discount": "", "status": "in-stock", "statusText": "В наличии: 6 шт", "deliveryText": "", "ctaText": "Цена по запросу", "canCart": false, "article": "740219" })
+
+@@include("partials/components/product-card.html", { "title": "Зонт вытяжной пристенный ЗВП-10/10", "price": "Цена по запросу", "oldPrice": "", "discount": "", "status": "order", "statusText": "Под заказ", "deliveryText": "Под заказ • 5–10 дней", "ctaText": "Цена по запросу", "canCart": false, "article": "556203" })
+
+@@include("partials/components/product-card.html", { "title": "Миксер планетарный 20 л (комплект насадок)", "price": "Цена по запросу", "oldPrice": "", "discount": "", "status": "order", "statusText": "Под заказ", "deliveryText": "Под заказ • 5–10 дней", "ctaText": "Цена по запросу", "canCart": false, "article": "880114" })
+
+@@include("partials/components/product-card.html", { "title": "Шкаф расстоечный (для пекарни), 12 уровней, высокий", "price": "Цена по запросу", "oldPrice": "", "discount": "", "status": "order", "statusText": "Под заказ", "deliveryText": "Под заказ • 5–10 дней", "ctaText": "Цена по запросу", "canCart": false, "article": "501772" })
+
+        </div>
+
+        @@include("partials/components/pagination.html")
+      </div>
+    </div>
+  </div>
+</section>

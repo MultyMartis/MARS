@@ -1,0 +1,98 @@
+{
+  "task": "M9 Phase 2 Sink filter profile (80)",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "rollback_source": "SITE-002-STABLE-M8.3-BEFORE-M9-20260615-0159",
+  "phase1_rollback": "m9-phase1-tables-work/backups/m9-phase1-deploy-20260614-193725.json",
+  "deployed_at_utc": "20260614-195231",
+  "pre_backup": [
+    {
+      "remote": "system/library/zpm/filter_profile_resolver.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\backups\\pre-m9-phase2-system__library__zpm__filter_profile_resolver.php",
+      "sha256": "178a81aa196a102960216083ae246cc822f2dc79383cfd2e311c706cbbf1b39a",
+      "bytes": 5823
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\backups\\pre-m9-phase2-system__library__zpm__filter_profiles__global_hidden.php",
+      "sha256": "63d146bc82a556e52b3adc4a003b003791ddf5ee0134117ff41f3adec3039ea4",
+      "bytes": 569
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\backups\\pre-m9-phase2-system__library__zpm__filter_profiles__301_stoly.php",
+      "sha256": "27b89d4203887c8e59c20aef1e333fcb2d484e181bd2edd1b5e1d0e1dbe16538",
+      "bytes": 1316
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/80_moechnye_vanny.php",
+      "local_backup": null,
+      "note": "new file: 550 Failed to open file."
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\backups\\pre-m9-phase2-catalog__model__catalog__product.php",
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "bytes": 58556
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\backups\\pre-m9-phase2-catalog__controller__product__category.php",
+      "sha256": "20b710843fb5502542484e8c47e071e536db4eae9f16f4d74d2dddea2c2be58b",
+      "bytes": 20275
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\backups\\pre-m9-phase2-catalog__view__theme__default__template__sections__filterssidebar.twig",
+      "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+      "bytes": 18478
+    }
+  ],
+  "files": [
+    {
+      "remote": "system/library/zpm/filter_profile_resolver.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\system\\library\\zpm\\filter_profile_resolver.php",
+      "sha256": "05d0cb12edb5a1f317dc1de9e253ccb7bd5af790f04cdb583e517816aee052a1",
+      "bytes": 5724
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\system\\library\\zpm\\filter_profiles\\global_hidden.php",
+      "sha256": "63d146bc82a556e52b3adc4a003b003791ddf5ee0134117ff41f3adec3039ea4",
+      "bytes": 569
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\system\\library\\zpm\\filter_profiles\\301_stoly.php",
+      "sha256": "27b89d4203887c8e59c20aef1e333fcb2d484e181bd2edd1b5e1d0e1dbe16538",
+      "bytes": 1316
+    },
+    {
+      "remote": "system/library/zpm/filter_profiles/80_moechnye_vanny.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\system\\library\\zpm\\filter_profiles\\80_moechnye_vanny.php",
+      "sha256": "7650df0ba4dc251bfcff09aae669a4c213c06fb022d41165e6c668208854094b",
+      "bytes": 1441
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\catalog\\model\\catalog\\product.php",
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "bytes": 58556
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\catalog\\controller\\product\\category.php",
+      "sha256": "20b710843fb5502542484e8c47e071e536db4eae9f16f4d74d2dddea2c2be58b",
+      "bytes": 20275
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9-phase2-sinks-work\\patch\\catalog\\view\\theme\\default\\template\\sections\\filterssidebar.twig",
+      "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+      "bytes": 18478
+    }
+  ],
+  "attribute_cache_cleared": 0,
+  "twig_cache_cleared": 0,
+  "cache_errors": []
+}

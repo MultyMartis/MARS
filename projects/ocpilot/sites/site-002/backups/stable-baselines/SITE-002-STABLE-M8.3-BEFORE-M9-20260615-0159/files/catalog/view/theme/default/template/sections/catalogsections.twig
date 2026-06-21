@@ -1,0 +1,36 @@
+<section class="zpm-cat-sections" data-cat-sections>
+  <div class="container">
+
+
+
+    <div class="zpm-cat-sections__grid-wrapper">
+      <div class="zpm-cat-sections__grid">
+
+        {% if categories %}
+        {% for cat in categories %}
+
+          <a class="zpm-cat-card" href="{{ cat.href }}">
+            <div class="zpm-cat-card__title">{{ cat.name }}</div>
+            <div class="zpm-cat-card__img">
+              <img class="" src="{{ cat.img }}" alt="{{ cat.name }}">
+            </div>
+            <div class="zpm-cat-card__ico_arrow">
+              <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__goto_btn_arrow"></use></svg>
+            </div>
+          </a>
+
+        {% endfor %}
+        {% endif %}
+
+
+
+
+      
+      </div>
+      <div>
+        <a class="btn zm-inline-btn" href="{{ catalog_primary_entry|default('/katalog/nejtralnoe-oborudovanie') }}">Перейти в&nbsp;каталог</a>
+      </div>
+    </div>
+
+  </div>
+</section>

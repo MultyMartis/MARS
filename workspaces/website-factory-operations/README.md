@@ -14,6 +14,8 @@ Bounded Factory Source-of-Truth filesystem root. All Factory structured records 
 
 **Doctrine remains outside this zone:** `workspaces/website-factory-reference-v1/`
 
+**Production mode (passport SoT):** [FP-XXXX-PROJECT-PASSPORT-FIELDS-v1.md](FP-XXXX-PROJECT-PASSPORT-FIELDS-v1.md) · charter [website-factory-production-modes-charter-v1.md](../../projects/mars-website-factory/website-factory-production-modes-charter-v1.md) · validation [website-factory-validation-architecture-charter-v1.md](../../projects/mars-website-factory/website-factory-validation-architecture-charter-v1.md)
+
 ---
 
 ## Portfolio catalog (C4)
@@ -23,6 +25,18 @@ Bounded Factory Source-of-Truth filesystem root. All Factory structured records 
 | Registry ID | Factory Project | LOC-HOME | Discoverability | MOC-01 |
 |-------------|-----------------|----------|-----------------|--------|
 | REG-0001 | FP-0001 — Triumph Manipulator Landing | [projects/FP-0001-triumph-manipulator-landing/](projects/FP-0001-triumph-manipulator-landing/) | discoverable | [MOC-01](projects/FP-0001-triumph-manipulator-landing/manifest/MOC-01-entry-anchor.md) |
+
+### Visibility-only (not ROC-01 enrolled)
+
+| Factory Project ID | Name | Path | Status |
+|--------------------|------|------|--------|
+| **FP-0002** | Shpigovsky.ru | [FP-0002-SHPIGOVSKY/](FP-0002-SHPIGOVSKY/) | Foundation material active; **not** catalog-enrolled — operator decision pending (Awareness Alignment 2026-06) |
+
+### Internal agent seeds (not `agents/registry.md` rows)
+
+| Seed ID | Role | Path |
+|---------|------|------|
+| **AG-WP-001** | Forge WordPress production learning direction | [internal-agent-seeds/AG-WP-001-forge-wordpress/](internal-agent-seeds/AG-WP-001-forge-wordpress/) |
 
 ---
 

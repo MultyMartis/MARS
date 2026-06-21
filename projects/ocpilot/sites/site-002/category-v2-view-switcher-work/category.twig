@@ -1,0 +1,124 @@
+{{ header }}
+
+<main class="main">
+
+
+<section class="category">
+<script>
+(function () {
+  var el = document.currentScript.parentElement;
+  try {
+    if (window.matchMedia('(min-width: 1025px)').matches && localStorage.getItem('zpm_category_view') === 'list') {
+      el.classList.add('category--view-list');
+    }
+  } catch (e) {}
+})();
+</script>
+  <div class="container">
+
+
+
+
+
+    <div class="category__layout">
+
+      <aside class="category__sidebar" data-filter-sidebar aria-hidden="true">
+        <div class="category__sidebar__overlay" data-filter-close tabindex="-1" aria-hidden="true"></div>
+        <div class="category__sidebar__panel" role="dialog" aria-modal="true" aria-label="Фильтры">
+          <div class="zpm-popup_manager__head">
+            Поиск по параметрам
+          </div>
+          <button class="zpm-popup_close" type="button" data-filter-close aria-label="Закрыть окно" title="Закрыть окно">
+            <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__close"></use></svg>
+          </button>
+          <div class="filter-mobile__body">
+            {{ filter }}
+          </div>
+        </div>
+      </aside>
+
+      <div class="category__content">
+
+
+<!-- Показ дочерних подкатегорий -->
+{% if categories %}
+
+<div class="zpm-sub-cat-chips">
+  <span class="zpm-sub-cat-chip--title">Подкатегории:</span>
+  {% for c in categories %}
+    <a class="zpm-sub-cat-chip" href="{{ c.href }}">
+      
+      {% if c.thumb %}
+      <span class="zpm-sub-cat-chip__icon">
+        <img src="{{ c.thumb }}" alt="{{ c.name }}">
+      </span>
+      {% endif %}
+      
+      <span class="zpm-sub-cat-chip__text">
+        {{ c.name }}
+      </span>
+
+    </a>
+  {% endfor %}
+</div>
+
+{% endif %}
+     
+
+        <div class="category__topbar category__topbar--mobile">
+
+
+          <div class="category__sort">
+            <span class="category__sort-label">Сортировать по:</span>
+
+            <button class="category__sort-btn" type="button" data-sort-open aria-expanded="false">
+              <span class="category__sort-btn-text">{{ sorttext }}</span>
+            </button>
+
+            <div class="category__sort-menu" data-sort-menu hidden>
+              <button class="category__sort-item" type="button" data-sort="sort=p.date_added&order=DESC">Умолчанию</button>
+              <button class="category__sort-item" type="button"  data-sort="sort=p.price&order=ASC">Сначала дешевле</button>
+              <button class="category__sort-item" type="button" data-sort="sort=p.price&order=DESC">Сначала дороже</button>
+              <button class="category__sort-item" type="button" data-sort="sort=pd.name&order=ASC">Название - от А до Я</button>
+              <button class="category__sort-item" type="button" data-sort="sort=pd.name&order=DESC">Название - от Я до А</button>
+            </div>
+          </div>
+
+          <div class="category__view" data-category-view role="group" aria-label="Вид каталога">
+            <button type="button" class="category__view-btn is-active" data-category-view-mode="grid" aria-pressed="true" aria-label="Сетка" title="Сетка">
+              <i class="fal fa-th-large" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="category__view-btn" data-category-view-mode="list" aria-pressed="false" aria-label="Список" title="Список">
+              <i class="fal fa-list" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <button class="category__filters-btn" type="button" data-filter-open aria-expanded="false">
+            Фильтры
+          </button>
+        </div>
+
+        <div class="category__grid">
+          
+          {% if productcards %}
+          {% for p in productcards %}
+            {{ p }}
+          {% endfor %}
+          {% endif %}
+          
+        </div>
+
+       {{ pagination }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ seotext }}
+{{ certificates }}
+{{ blockdealersform }}
+
+</main>
+
+
+{{ footer }} 

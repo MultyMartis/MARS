@@ -1,0 +1,24 @@
+{
+  "task": "M9.8.9-01",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01",
+  "stamp": "20260619-122743",
+  "remote_path": "assets/js/main.js",
+  "phase": "post-deploy",
+  "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-01-work\\live-capture\\assets__js__main.js",
+  "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-01-wishlist-compare-tooltips.bak",
+  "sha256": "bd7d0f65cbefb86bd4348b7daabe53e8c9fd856be7d93760a0e10331b3d72eb1",
+  "size": 198690,
+  "patch": {
+    "type": "js-wishlist-compare-smart-titles",
+    "file": "main.js",
+    "changes": [
+      "native title on fav/compare buttons (add/remove states)",
+      "init titles on DOMContentLoaded",
+      "hide previous fav/compare popup before showing new one"
+    ]
+  },
+  "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-01-work\\assets__js__main.js.patched",
+  "patched_sha256": "6ad3aa524679f4d873289a52b0c20379fed9b6b095747a5ed963f6948257addc",
+  "verify_sha256": "6ad3aa524679f4d873289a52b0c20379fed9b6b095747a5ed963f6948257addc",
+  "deploy_ok": true
+}

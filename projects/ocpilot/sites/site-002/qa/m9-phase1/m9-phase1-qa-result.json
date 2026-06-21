@@ -1,0 +1,43 @@
+{
+  "task": "M9 Phase 1 Tables profile QA",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space",
+  "executed_at_utc": "2026-06-14T19:38:16.759578+00:00",
+  "summary": {
+    "pass": 5,
+    "fail": 0,
+    "unknown": 0
+  },
+  "checks": [
+    {
+      "id": "QA-01",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/",
+      "status": "pass",
+      "detail": "Столы PLP (SEO URL) status=200 primary=10/10 secondary_section=True secondary_markers=['Дополнительные параметры', 'Конструкция', 'Материал полки', 'Ножки'] hidden_hits=[]"
+    },
+    {
+      "id": "QA-02",
+      "path": "/index.php?route=product/category&path=301",
+      "status": "pass",
+      "detail": "Столы PLP (path=301) status=200 primary=10/10 secondary_section=True secondary_markers=['Дополнительные параметры', 'Конструкция', 'Материал полки', 'Ножки'] hidden_hits=[]"
+    },
+    {
+      "id": "QA-03",
+      "path": "/katalog/nejtralnoe-oborudovanie",
+      "status": "pass",
+      "detail": "Neutral hub status=200"
+    },
+    {
+      "id": "QA-04",
+      "path": "/index.php?route=product/category&path=80",
+      "status": "pass",
+      "detail": "Vanny PLP status=200 packaging/service_hits=[]"
+    },
+    {
+      "id": "QA-05",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": "pass",
+      "detail": "PDP status=200"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "task": "M9.8.9-09C",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01",
+  "stamp": "20260621-113652",
+  "phase": "post-deploy",
+  "files": [
+    {
+      "remote_path": "assets/js/main.js",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-09c-work\\live-capture\\assets__js__main.js",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-09c-limit-ajax-refresh.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-09c-work\\assets__js__main.js.patched",
+      "sha256_pre": "3e25fabebd954399ece49cd31bc352f15752f82aabb28b711585a457656843d0",
+      "sha256_patched": "3ab098c786099c24e3ccf33e852b0aacc2d66089e81830e2b48af97db3920dbe",
+      "size_pre": 201522,
+      "size_patched": 202482,
+      "verify_sha256": "3ab098c786099c24e3ccf33e852b0aacc2d66089e81830e2b48af97db3920dbe",
+      "deploy_ok": true
+    }
+  ],
+  "twig_cache_cleared": [],
+  "all_deploy_ok": true
+}

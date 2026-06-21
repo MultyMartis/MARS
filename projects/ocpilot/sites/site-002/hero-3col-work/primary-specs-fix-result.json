@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-06-09T05:55:19.292740+00:00",
+  "wave": "primary-specs-fix",
+  "deployed": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css"
+  },
+  "backups": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-primary-specs-fix.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-primary-specs-fix.bak"
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa": {
+    "sp_p_18_6": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/stol-proizvodstvennyy-sp-p-18-6-1800h600h850",
+      "php_ok": true,
+      "has_quick_cards": false,
+      "has_prop_icons": true,
+      "prop_icon_count": 8,
+      "has_inline_svg": true,
+      "has_additional": true,
+      "title_40px": true,
+      "primary_sample": "\n                                                  <div class=\"product-hero__prop\">\n                <span class=\"product-hero__prop-icon\" aria-hidden=\"true\">\n                  <svg class=\"product-hero__prop-icon-svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\" focusable=\"false\"><path stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M1 9h16M4 6 1 9l3 3M14 6l3 3-3 3\"/></svg>\n                </span>\n                <dt>Длина</dt>\n                <dd>1800 мм</dd>\n              ",
+      "grid_intact": true,
+      "media_intact": true,
+      "commerce_intact": true,
+      "cart_intact": true,
+      "qty_intact": true,
+      "wishlist_intact": true,
+      "compare_intact": true,
+      "fancybox_intact": true,
+      "gallery_intact": true
+    },
+    "spkb_multi": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "php_ok": true,
+      "has_quick_cards": false,
+      "has_prop_icons": true,
+      "prop_icon_count": 8,
+      "has_inline_svg": true,
+      "has_additional": true,
+      "title_40px": true,
+      "primary_sample": "\n                                                  <div class=\"product-hero__prop\">\n                <span class=\"product-hero__prop-icon\" aria-hidden=\"true\">\n                  <svg class=\"product-hero__prop-icon-svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\" focusable=\"false\"><path stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M1 9h16M4 6 1 9l3 3M14 6l3 3-3 3\"/></svg>\n                </span>\n                <dt>Длина</dt>\n                <dd>1800 мм</dd>\n              ",
+      "grid_intact": true,
+      "media_intact": true,
+      "commerce_intact": true,
+      "cart_intact": true,
+      "qty_intact": true,
+      "wishlist_intact": true,
+      "compare_intact": true,
+      "fancybox_intact": true,
+      "gallery_intact": true
+    }
+  },
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\primary-specs-fix\\sp-p-18-6-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\primary-specs-fix\\sp-p-18-6-hero-mobile.png"
+  },
+  "overflow": {
+    "desktop_1440": false,
+    "mobile_390": true
+  }
+}

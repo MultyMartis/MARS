@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-06-09T04:46:57.439900+00:00",
+  "task": "SUPER_ATTS presentation rollback (twig + css only)",
+  "restored_files": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css",
+    "product.php": "catalog/controller/product/product.php"
+  },
+  "backups_used": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-superatts-fix.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-superatts-presentation.bak"
+  },
+  "backup_hashes": {
+    "producthero.twig": "9f02cec4204747b03263f8e954fdf42fa40bffb0a667473fd602a30034ab6535",
+    "style.css": "a50a74200612f788269499088dc8d0d33b6f1faeb9f85cc106d92b1b8d10fad0"
+  },
+  "controller_not_rolled_back": {
+    "pre_deploy_sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+    "post_deploy_sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+    "unchanged": true,
+    "markers": {
+      "defined('SUPER_ATTS')": true,
+      "foreach (SUPER_ATTS as $super_attr_id)": true,
+      "$data['super_atts']": true
+    }
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+  "hero_qa": {
+    "hero_found": true,
+    "has_specs": false,
+    "has_primary": false,
+    "has_additional": false,
+    "has_debug": false,
+    "has_original_props": true,
+    "super_atts_count": 10,
+    "super_atts_names": [
+      "Длина, мм",
+      "Ширина, мм",
+      "Высота, мм",
+      "Масса, кг",
+      "Конструкция",
+      "Наличие борта",
+      "Ножки",
+      "Отверстие под смеситель",
+      "Размер раковины (ДхШхВ, мм)",
+      "Тип опоры"
+    ],
+    "cart_btn": true,
+    "qty": true,
+    "wishlist": true,
+    "compare": true,
+    "fancybox": true,
+    "php_ok": true
+  },
+  "checklist": {
+    "1_hero_baseline_restored": true,
+    "2_no_specs_class": true,
+    "3_no_primary_class": true,
+    "4_no_additional_class": true,
+    "5_no_debug_marker": true,
+    "6_twig_matches_backup": true,
+    "7_css_matches_backup": true,
+    "8_controller_super_atts_intact": true,
+    "9_php_ok": true,
+    "10_cart_qty_wishlist_compare": true,
+    "11_super_atts_rendered": true
+  },
+  "checklist_pass": true,
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-presentation-rollback\\spkb-18-7-vl5-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-presentation-rollback\\spkb-18-7-vl5-hero-mobile.png"
+  },
+  "rollback_confidence": "HIGH"
+}

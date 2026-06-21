@@ -356,7 +356,7 @@
 | Field | Value |
 |-------|-------|
 | **Main commit** | `c1aee8f` — `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
-| **Metadata commit** | Pending — this report git binding update |
+| **Metadata commit** | `5d5208c` — docs: populate G2-R2 P3 report git result section |
 | **Commit message** | `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
 | **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` @ `c1aee8f` |
 | **Files committed** | P3 selective scope — see §8–§9 |

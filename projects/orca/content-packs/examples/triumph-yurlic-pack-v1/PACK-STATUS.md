@@ -2,7 +2,7 @@
 
 route_id: yurlic
 route_folder: yurlic
-url: https://manipulator-triumph.ru/manipulyator-dlya-yurlic/
+url: https://manipulator-triumph.ru/yurlic.html
 display_path: dlya-yurlic
 content_coverage: true
 production_copy_ready: true

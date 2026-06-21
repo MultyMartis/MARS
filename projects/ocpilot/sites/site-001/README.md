@@ -2,8 +2,8 @@
 
 **Site ID:** SITE-001  
 **Slug:** site-001  
-**Status:** **AWAITING INTAKE**  
-**Run:** 4 — First Project Site Intake (container only; no dealership data)
+**Status:** **INTAKE COMPLETE** — identity, baseline, and materials recorded; Run 5 gated on access brief and EAR snapshot path  
+**Run:** 4.5+ — repository intake complete; Run 5 not authorized
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
 
@@ -11,7 +11,7 @@ Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
 
 ## Purpose
 
-First registered OCPilot project site workspace. Actual dealership information will be attached when operator supplies materials.
+First registered OCPilot project site workspace. Operator materials accepted — see [materials/INTAKE-COMPLETE.md](materials/INTAKE-COMPLETE.md).
 
 ---
 
@@ -50,8 +50,9 @@ First registered OCPilot project site workspace. Actual dealership information w
 
 | Item | Status |
 |------|--------|
-| Brief file | Present — **incomplete** (SAFE UNKNOWN fields) |
-| Run 5 gate | **NO** until operator completes brief and [intake-readiness-review.md](../../intake-readiness-review.md) |
+| Brief file | Present — access inventory **incomplete** (credential locations SAFE UNKNOWN) |
+| Intake materials | **DONE** — [materials/INTAKE-COMPLETE.md](materials/INTAKE-COMPLETE.md) |
+| Run 5 gate | **NO** — access brief incomplete; EAR snapshot path not executed |
 
 Template: [templates/project-access-brief-template.md](../../templates/project-access-brief-template.md).  
 External credentials (if any): `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\` — not git-tracked.

@@ -1,0 +1,289 @@
+{
+  "timestamp": "2026-06-19T04:55:14.161326+00:00",
+  "errors": [],
+  "cron_describe": [
+    {
+      "field": "id",
+      "type": "int(11)",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    }
+  ],
+  "cron_all": [],
+  "cron_filtered": [],
+  "coverage_301": [
+    {
+      "active_products": "419",
+      "indexed_products": "1",
+      "coverage_pct": "0.24"
+    }
+  ],
+  "coverage_80": [
+    {
+      "active_products": "152",
+      "indexed_products": "37",
+      "coverage_pct": "24.34"
+    }
+  ],
+  "coverage_global": [
+    {
+      "active_products": "608",
+      "indexed_group2": "110",
+      "total_index_rows": "330"
+    }
+  ],
+  "variant_c_301": [],
+  "ftp_files": {
+    "catalog/controller/common/cronjob.php": {
+      "size": 5925,
+      "lines": 215
+    },
+    "reindex_prices.php": {
+      "size": 2153,
+      "lines": 61
+    },
+    "catalog/model/catalog/product.php": {
+      "size": 58556,
+      "lines": 1141
+    }
+  },
+  "ftp_grep": {
+    "catalog/controller/common/cronjob.php": {
+      "size": 5925,
+      "patterns": [
+        "1c_incoming",
+        "offers"
+      ],
+      "snippet_lines": [
+        {
+          "line": 47,
+          "text": "case '1c_offers':"
+        },
+        {
+          "line": 50,
+          "text": "$itsOK = $this->parse1COffers();"
+        },
+        {
+          "line": 74,
+          "text": "protected function parse1COffers()"
+        },
+        {
+          "line": 76,
+          "text": "include('import_1C_offers.php');"
+        },
+        {
+          "line": 138,
+          "text": "$source_file = DIR_ROOT . '1c_incoming/webdata/' . $src;"
+        }
+      ]
+    },
+    "reindex_prices.php": {
+      "size": 2153,
+      "patterns": [
+        "refreshPriceIndex"
+      ],
+      "snippet_lines": [
+        {
+          "line": 24,
+          "text": "// Пробуем подключить модель из админки (так как мы туда писали метод refreshPriceIndex)"
+        },
+        {
+          "line": 42,
+          "text": "if (!method_exists($model, 'refreshPriceIndex')) {"
+        },
+        {
+          "line": 43,
+          "text": "die(\"Error: Method refreshPriceIndex not found in ModelCatalogProduct. Check admin/model/catalog/product.php\\n\");"
+        },
+        {
+          "line": 53,
+          "text": "$model->refreshPriceIndex($product['product_id']);"
+        }
+      ]
+    },
+    "catalog/model/catalog/product.php": {
+      "size": 58556,
+      "patterns": [
+        "refreshPriceIndex",
+        "product_price_index",
+        "price2",
+        "price3",
+        "discount1c"
+      ],
+      "snippet_lines": [
+        {
+          "line": 7,
+          "text": "// 1. Добавляем p.price2, p.price3, p.discount1c в SELECT"
+        },
+        {
+          "line": 8,
+          "text": "$query = $this->db->query(\"SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, p.price2, p.price3, p.discount1c, (SELECT price FROM \" . DB_PREFIX . \"product_discount pd2 WHERE pd2.pro"
+        },
+        {
+          "line": 15,
+          "text": "$base_price = $query->row['price2']; // Дилер"
+        },
+        {
+          "line": 17,
+          "text": "$base_price = $query->row['price3']; // Оптовик"
+        },
+        {
+          "line": 30,
+          "text": "// Уровень 1: discount1c (процент скидки)"
+        },
+        {
+          "line": 31,
+          "text": "if (isset($query->row['discount1c']) && (float)$query->row['discount1c'] > 0) {"
+        },
+        {
+          "line": 32,
+          "text": "$percent = (float)$query->row['discount1c'];"
+        },
+        {
+          "line": 141,
+          "text": "$sql .= \" LEFT JOIN \" . DB_PREFIX . \"product_price_index ppi ON (p.product_id = ppi.product_id AND ppi.customer_group_id = '\" . (int)$customer_group_id . \"')\";"
+        },
+        {
+          "line": 555,
+          "text": "$sql .= \" LEFT JOIN \" . DB_PREFIX . \"product_price_index ppi ON (p.product_id = ppi.product_id AND ppi.customer_group_id = '\" . (int)$customer_group_id . \"')\";"
+        },
+        {
+          "line": 853,
+          "text": "FROM \" . DB_PREFIX . \"product_price_index ppi"
+        },
+        {
+          "line": 890,
+          "text": "public function refreshPriceIndex($product_id = 0) {"
+        },
+        {
+          "line": 904,
+          "text": "$this->db->query(\"DELETE FROM \" . DB_PREFIX . \"product_price_index WHERE product_id = '\" . (int)$p['product_id'] . \"'\");"
+        },
+        {
+          "line": 915,
+          "text": "$this->db->query(\"INSERT INTO \" . DB_PREFIX . \"product_price_index SET"
+        },
+        {
+          "line": 928,
+          "text": "$query = $this->db->query(\"SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, p.price2, p.price3, p.discount1c, (SELECT price FROM \" . DB_PREFIX . \"product_discount pd2 WHERE pd2.pro"
+        },
+        {
+          "line": 935,
+          "text": "$base_price = $query->row['price2']; // Дилер"
+        },
+        {
+          "line": 937,
+          "text": "$base_price = $query->row['price3']; // Оптовик"
+        },
+        {
+          "line": 950,
+          "text": "// Уровень 1: discount1c (процент скидки)"
+        },
+        {
+          "line": 951,
+          "text": "if (isset($query->row['discount1c']) && (float)$query->row['discount1c'] > 0) {"
+        },
+        {
+          "line": 952,
+          "text": "$percent = (float)$query->row['discount1c'];"
+        }
+      ]
+    },
+    "admin/model/catalog/product.php": {
+      "size": 44571,
+      "patterns": [
+        "refreshPriceIndex",
+        "product_price_index",
+        "price2",
+        "price3",
+        "discount1c"
+      ],
+      "snippet_lines": [
+        {
+          "line": 4,
+          "text": "$this->db->query(\"INSERT INTO \" . DB_PREFIX . \"product SET model = '\" . $this->db->escape($data['model']) . \"', sku = '\" . $this->db->escape($data['sku']) . \"', upc = '\" . $this->db->escape($data['upc"
+        },
+        {
+          "line": 145,
+          "text": "$this->db->query(\"UPDATE \" . DB_PREFIX . \"product SET model = '\" . $this->db->escape($data['model']) . \"', sku = '\" . $this->db->escape($data['sku']) . \"', upc = '\" . $this->db->escape($data['upc']) ."
+        },
+        {
+          "line": 735,
+          "text": "public function refreshPriceIndex($product_id) {"
+        },
+        {
+          "line": 749,
+          "text": "$this->db->query(\"DELETE FROM \" . DB_PREFIX . \"product_price_index WHERE product_id = '\" . (int)$product_id . \"'\");"
+        },
+        {
+          "line": 756,
+          "text": "$base_price = $product_data['price2'];"
+        },
+        {
+          "line": 758,
+          "text": "$base_price = $product_data['price3'];"
+        },
+        {
+          "line": 769,
+          "text": "if ((float)$product_data['discount1c'] > 0) {"
+        },
+        {
+          "line": 770,
+          "text": "$final_special = $final_price - ($final_price * ((float)$product_data['discount1c'] / 100));"
+        },
+        {
+          "line": 786,
+          "text": "$this->db->query(\"INSERT INTO \" . DB_PREFIX . \"product_price_index SET"
+        }
+      ]
+    },
+    "catalog/controller/common/import_1C.php": {
+      "size": 13188,
+      "patterns": [
+        "1c_exchange",
+        "1c_incoming"
+      ],
+      "snippet_lines": [
+        {
+          "line": 3,
+          "text": "//$import_directory = DIR_ROOT . '1c_exchange/';"
+        },
+        {
+          "line": 5,
+          "text": "$import_directory = DIR_ROOT . '1c_incoming/webdata/';"
+        }
+      ]
+    },
+    "catalog/controller/common/import_1C_offers.php": {
+      "size": 2095,
+      "patterns": [
+        "1c_exchange",
+        "1c_incoming",
+        "offers"
+      ],
+      "snippet_lines": [
+        {
+          "line": 3,
+          "text": "//$offers_directory = DIR_ROOT . '1c_exchange/';"
+        },
+        {
+          "line": 5,
+          "text": "$offers_directory = DIR_ROOT . '1c_incoming/webdata/';"
+        },
+        {
+          "line": 6,
+          "text": "$files = glob($offers_directory . 'offers0_*.xml');"
+        }
+      ]
+    }
+  },
+  "ftp_1c_exchange": [
+    "-rwx------    1 2263     601       6013631 Jun 08 00:57 import0_1.xml",
+    "drwx------   68 2263     601          4096 Jun 08 00:57 import_files"
+  ],
+  "ftp_1c_incoming": [
+    "drwx------    3 2263     601          4096 Jun 08 00:57 webdata"
+  ]
+}

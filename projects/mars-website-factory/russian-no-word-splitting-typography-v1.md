@@ -20,71 +20,45 @@
 
 Russian words **must not** break inside the word on production landing pages. Line wraps occur at **spaces** (and at intentional typographic ties only).
 
-### 1.1 Forbidden CSS
+### 1.1 Forbidden CSS — property presence (OL-06)
+
+**Detection rule (mandatory for Factory compliance):** any declaration of the following **property names** in **`src/scss/**` or compiled `dist/*.css` is a **FAIL** — regardless of value (`normal`, `none`, `manual`, `initial`, `inherit`, `unset`, or any other token). Exception only with explicit operator instruction **and** Exception Registry record.
+
+| Property | Status |
+|----------|--------|
+| `letter-spacing` | **Forbidden** — any value |
+| `word-break` | **Forbidden** — any value |
+| `overflow-wrap` | **Forbidden** — any value |
+| `hyphens` | **Forbidden** — any value |
+
+**Also forbidden (legacy / alias patterns):**
 
 | Property / pattern | Status |
 |--------------------|--------|
-| `overflow-wrap: anywhere` | **Forbidden** on UI, headings, body default |
-| `word-break: break-all` | **Forbidden** |
-| `word-break: break-word` | **Forbidden** on UI and headings |
-| `word-wrap: break-word` | **Forbidden** on UI and headings |
-| `hyphens: auto` | **Forbidden** for Russian UI copy |
-| Global `overflow-wrap: break-word` on `body` | **Forbidden** |
+| `word-wrap: break-word` | **Forbidden** |
 | `&nbsp;` between **every** word in a heading | **Forbidden** — creates one long unbreakable run; browser may split **inside** words when the run overflows |
+
+**Compliance grep (source + compiled):** zero matches required for each property name above. Non-zero count → **FAIL** unless registered exception.
+
+**Authority:** [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) OL-06 · [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) §4.
 
 ### 1.2 Base rule (global default)
 
-```css
-html,
-body {
-  word-break: normal;
-  hyphens: manual;
-}
-```
+**Do not declare** `word-break`, `overflow-wrap`, `hyphens`, or `letter-spacing` on `html`, `body`, or global resets. Rely on **browser defaults** plus layout discipline (§1.3).
 
-**Do not** set `overflow-wrap: break-word`, `overflow-wrap: anywhere`, `word-break: break-all`, or `word-break: break-word` on `html` or `body`.
+**Do not** set aggressive break values (`break-word`, `break-all`, `anywhere`) anywhere in project CSS.
 
-### 1.3 Protected UI selectors
+### 1.3 Protected UI — layout, not word-break CSS
 
-Headings and short UI surfaces **must** keep normal word boundaries:
+Headings and short UI surfaces **must** keep normal word boundaries **without** emitting OL-06 forbidden properties:
 
-```css
-h1, h2, h3, h4,
-.section-title,
-button,
-.button,
-nav a,
-summary,
-.card-title,
-.form label,
-.cta-title {
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: manual;
-}
-```
+- Fix overflow via container width, `min-width: 0` on flex children, grid constraints, and approved layout patterns ([frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) §4 overflow order).
+- Apply selective RU HTML typography (§2) — **not** word-breaking CSS.
+- Extend the same discipline to project-specific heading/UI classes (hero titles, FAQ summaries, spec labels, consent text, footer links) when they carry short Russian UI copy.
 
-Extend the same protection to project-specific heading/UI classes (hero titles, FAQ summaries, spec labels, consent text, footer links) when they carry short Russian UI copy.
+### 1.4 Long body copy overflow
 
-### 1.4 Allowed exception — long body copy only
-
-`overflow-wrap: break-word` is **permitted only** on long, multi-line **body** text where a single unbreakable token could cause horizontal overflow:
-
-- paragraphs (`p`, `.section-lead`, card body copy)
-- FAQ answer bodies
-- legal / disclaimer / consent paragraphs
-- long descriptions and notes
-
-**Not permitted** on:
-
-- H1 / H2 / H3 / H4 and visual heading classes
-- buttons and CTA labels
-- navigation and menu links
-- card titles and short card labels
-- form labels and short helper lines
-- proof strips, badges, spec `dt`/`dd` pairs, and other short UI blocks
-
-Prefer fixing layout width (`min-width: 0` on flex children, container constraints) before applying break-word to UI.
+Prefer layout width fixes first. **Do not** add `overflow-wrap`, `word-break`, or `hyphens` declarations even on long body paragraphs — OL-06 property ban applies project-wide. Resolve horizontal overflow via container constraints, copy edit, or layout pattern change.
 
 ---
 
@@ -158,3 +132,4 @@ Documented lessons from Triumph V5 — **not** automated detection:
 | 2026-05-24 | v1 — integrated from Triumph V5 production fix; mandatory RU no word-splitting + selective typography ties |
 | 2026-05-24 | §3 defers QA widths/checks to [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) (stabilization pass) |
 | 2026-05-24 | §2.1–§2.2 — forbidden long-word `&nbsp;` ties + layout-fix chains; link [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) |
+| 2026-06-14 | OL-06 alignment — §1.1 property-presence ban; §1.2–§1.4 layout-only (removed CSS examples emitting `word-break` / `overflow-wrap` / `hyphens`) |

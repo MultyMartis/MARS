@@ -1,0 +1,17 @@
+{
+  "task": "m9.8.1-pdp-gallery-compact",
+  "deployed": {
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "sha256": "dbeab88b7710fda83c9ef2e9fa86b72002fe2846cbbe13b208e2ec5592760aac",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.1-pdp-gallery-compact.bak",
+      "rollback_sha256": "b20e55c348a4864f98157ba3662a6b4b1c49275edf25fb6be705fc6438228927"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "sha256": "b19a9617ad17c2d3a2e897148b360013b9281a7ff32ad4cf5f819c20e17d6f55",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.1-pdp-gallery-compact.bak",
+      "rollback_sha256": "298a956014e4cd56b5527ce1f6744de06a13dae99880988cf8c08b69087b1dd5"
+    }
+  }
+}

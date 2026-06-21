@@ -1,0 +1,875 @@
+{
+  "name": "SEO Content Agent Beta.v14 - Intake",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "80dda90b-2f46-4a6a-93be-46e35abdc97a",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [
+        10000,
+        23520
+      ],
+      "webhookId": "3fdc0822-3e1e-4941-8ed6-a39cba9c31db",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent for i-SEO"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const msg = $('Telegram Trigger').first().json.message || {};\nconst from = msg.from || {};\n\nconst chatId = String(msg.chat?.id || '');\nconst userId = String(from.id || '');\nconst username = String(from.username || '');\nconst firstName = String(from.first_name || '');\nconst lastName = String(from.last_name || '');\n\nconst baseLockKey = `chat:${chatId}`;\nconst lockKey = `${baseLockKey}:${Date.now()}`;\n\nreturn [{\n  json: {\n    ...$json,\n    chat_id: chatId,\n    user_id: userId,\n    username,\n    first_name: firstName,\n    last_name: lastName,\n    base_lock_key: baseLockKey,\n    lock_key: lockKey\n  }\n}];"
+      },
+      "id": "86c056b7-02c7-471e-b00d-9230e1cfa849",
+      "name": "Build User Lock Key",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10000,
+        24048
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "busy-condition",
+              "leftValue": "={{ String($json.is_busy) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "083c98b6-6cc6-4b86-82c6-fbfe87fac4fb",
+      "name": "IF Busy",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        10704,
+        24048
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ String($json.chat_id || $('Build User Lock Key').first().json.chat_id).replace(/^=/, '') }}",
+        "text": "=⏳ У вас уже выполняется задача.\n\nДождитесь завершения текущего запроса перед запуском нового.\n\nПосле завершения бот автоматически отправит результат.",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "ab2b0933-dace-4f92-840a-223c8aaa571d",
+      "name": "Send Busy Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        10880,
+        23888
+      ],
+      "webhookId": "5b69bd49-84a4-4df1-96df-707df8af6afc",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent for i-SEO"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const start = $('Build User Lock Key').first().json;\nconst now = Date.now();\n\nlet activeLock = null;\n\nconst checkedRows = [];\n\nfor (const item of items) {\n  const row = item.json || {};\n\n  const rowLockKey = String(row.lock_key || '').trim();\n  const rowChatId = String(row.chat_id || '').trim();\n  const status = String(row.status || '').trim().toLowerCase();\n  const expiresAtRaw = String(row.expires_at || '').trim();\n  const expiresAt = Date.parse(expiresAtRaw);\n\n  if (!rowLockKey && !rowChatId && !status) {\n    continue;\n  }\n\n  checkedRows.push({\n    lock_key: rowLockKey,\n    chat_id: rowChatId,\n    status,\n    expires_at: expiresAtRaw,\n    expires_valid: Number.isFinite(expiresAt),\n    expires_future: Number.isFinite(expiresAt) ? expiresAt > now : false\n  });\n\n  if (\n    rowChatId === String(start.chat_id) &&\n    status === 'active' &&\n    Number.isFinite(expiresAt) &&\n    expiresAt > now\n  ) {\n    activeLock = row;\n    break;\n  }\n}\n\nreturn [{\n  json: {\n    ...start,\n    is_busy: Boolean(activeLock),\n    active_lock: activeLock,\n    active_task_id: activeLock?.task_id || '',\n    lock_debug: {\n      input_items: items.length,\n      checked_rows: checkedRows\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10368,
+        24048
+      ],
+      "id": "c5252a04-4721-499e-a255-bb4b52d35ceb",
+      "name": "Check Active Lock"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2116752312,
+          "mode": "list",
+          "cachedResultName": "seo_active_jobs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI/edit#gid=2116752312"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "chat_id",
+              "lookupValue": "={{ $('Build User Lock Key').first().json.chat_id }}"
+            },
+            {
+              "lookupColumn": "status",
+              "lookupValue": "active"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        10192,
+        24048
+      ],
+      "id": "e81d4790-316d-4da1-8cfc-e9df4a8689d4",
+      "name": "Lookup Active Locks",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2116752312,
+          "mode": "list",
+          "cachedResultName": "seo_active_jobs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI/edit#gid=2116752312"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "lock_key": "={{ $('Build User Lock Key').first().json.lock_key }}",
+            "chat_id": "={{ $('Build User Lock Key').first().json.chat_id }}",
+            "user_id": "={{ $('Build User Lock Key').first().json.user_id }}",
+            "username": "={{ $('Build User Lock Key').first().json.username }}",
+            "task_id": "pending",
+            "created_at": "={{ new Date().toISOString() }}",
+            "expires_at": "={{ new Date(Date.now() + 30 * 60 * 1000).toISOString() }}",
+            "status": "active",
+            "first_name": "={{ $('Build User Lock Key').first().json.first_name }}",
+            "last_name": "={{ $('Build User Lock Key').first().json.last_name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lock_key",
+              "displayName": "lock_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "chat_id",
+              "displayName": "chat_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "user_id",
+              "displayName": "user_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "first_name",
+              "displayName": "first_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "last_name",
+              "displayName": "last_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "task_id",
+              "displayName": "task_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "expires_at",
+              "displayName": "expires_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "finished_at",
+              "displayName": "finished_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "cancel_reason",
+              "displayName": "cancel_reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        10976,
+        24048
+      ],
+      "id": "a356c73f-742b-4b88-afd1-6d74e0d53b5e",
+      "name": "Create Lock Row",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ String($('Build User Lock Key').first().json.chat_id).replace('=', '') }}",
+        "text": "={{\n$('Build User Lock Key').first().json.lock_key\n  ? (\n      $('Detect Local Command').first().json.command === 'run'\n        ? '✅ Задача принята в обработку.\\n\\nPipeline:\\nSEO ТЗ → SEO текст → SEO QA → Factcheck\\n\\nБот пришлёт результат после завершения.'\n        : '✅ Задача принята в обработку.\\n\\nРежим: ' + $('Detect Local Command').first().json.command + '\\n\\nБот пришлёт результат после завершения.'\n    )\n  : '✅ Задача принята в обработку.\\n\\nБот пришлёт результат после завершения.'\n}}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        11152,
+        24048
+      ],
+      "id": "dbb6c1ac-c3c9-46bf-8db7-86cc6809be33",
+      "name": "Send Task Accepted",
+      "webhookId": "b3c21af7-9753-407f-93c1-b26ffa55a6a7",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent for i-SEO"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    lock_key: $json.lock_key,\n    chat_id: $json.chat_id,\n    is_busy: $json.is_busy,\n    active_lock: $json.active_lock,\n    active_task_id: $json.active_task_id,\n    lock_debug: $json.lock_debug\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10544,
+        24048
+      ],
+      "id": "9e2a3892-c3a4-445a-bda2-1ee12072cffa",
+      "name": "Debug Lock State"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://n8n.ai-metacode.com/webhook/seo-content-agent-worker",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{\n  $json.worker_payload\n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        11424,
+        23760
+      ],
+      "id": "16ef7de2-32fa-421b-8163-ddb617c0d46e",
+      "name": "Send To Worker"
+    },
+    {
+      "parameters": {
+        "jsCode": "const msg = $json.message || {};\nconst text = String(msg.text || '').trim();\n\nconst command =\n  (text.match(/^\\/([a-zA-Z0-9_-]+)/)?.[1] || '').toLowerCase();\n\nconst flags = text.match(/--[a-zA-Z0-9_-]+/g) || [];\n\nlet task_id = '';\n\nif (command === 'get') {\n  task_id = text.match(/^\\/get\\s+([a-zA-Z0-9_-]+)/i)?.[1]?.trim() || '';\n}\n\nif (!task_id) {\n  task_id = text.match(/--from\\s+([a-zA-Z0-9_-]+)/i)?.[1]?.trim() || '';\n}\n\nif (!task_id) {\n  task_id = text.match(/(?:^|\\s)from\\s*:\\s*([a-zA-Z0-9_-]+)/i)?.[1]?.trim() || '';\n}\n\nif (!task_id) {\n  task_id = text.match(/(?:^|\\s)task[_-]?id\\s*:\\s*([a-zA-Z0-9_-]+)/i)?.[1]?.trim() || '';\n}\n\nconst contentCommands = [\n  'run',\n  'outline',\n  'text',\n  'seoqa',\n  'factcheck',\n  'get'\n];\n\nconst localCommands = [\n  'start'\n];\n\nconst adminCommands = [\n  'help',\n  'examples',\n  'locks',\n  'health',\n  'stop-all-flow'\n];\n\nconst knownCommands = [\n  ...localCommands,\n  ...adminCommands,\n  ...contentCommands\n];\n\nconst isUnknownSlashCommand = Boolean(command && !knownCommands.includes(command));\n\nconst isLocalCommand =\n  localCommands.includes(command) ||\n  isUnknownSlashCommand;\n\nconst isAdminCommand =\n  adminCommands.includes(command);\n\n// ВАЖНО:\n// retrieval branch в Intake используем только для /get.\n// --from / from:task_id должны идти через обычную lock-ветку,\n// потому что это новая задача генерации/проверки.\nconst isRetrievalCommand =\n  command === 'get';\n\nlet response_text = '';\n\nif (command === 'start') {\n  response_text = `SEO Content Agent\n\nЯ помогаю готовить SEO-ТЗ, SEO-тексты, QA-проверку и factcheck по заданному брифу.\n\nЧто умею:\n— создавать SEO-ТЗ;\n— писать SEO-тексты;\n— проверять текст по ТЗ;\n— проверять факты и рискованные формулировки;\n— работать в строгом режиме без обещаний и гарантий;\n— сохранять результаты по Task ID.\n\nОсновные команды:\n/run — полный pipeline\n/outline — только SEO-ТЗ\n/text — только SEO-текст\n/seoqa — SEO QA\n/factcheck — фактчек\n/get task-id — получить результат\n/examples — примеры заданий\n/help — справка по командам\n\nДля полного запуска отправьте:\n\n/run --strict\nТип: страница услуги\nТема: SEO-аудит сайта\nТаблицы: да\n\nБриф:\nОпишите услугу, ограничения и важные требования.`;\n}\n\nif (isUnknownSlashCommand) {\n  response_text = `Команда не распознана: /${command}\n\nДоступные команды:\n/run — полный pipeline\n/outline — SEO-ТЗ\n/text — SEO-текст\n/seoqa — SEO QA\n/factcheck — factcheck\n/get task-id — получить сохранённый результат\n/help — справка\n/examples — примеры`;\n}\n\nreturn [{\n  json: {\n    ...$json,\n    chat_id: String(msg.chat?.id || ''),\n    user_id: String(msg.from?.id || ''),\n    username: String(msg.from?.username || ''),\n    first_name: String(msg.from?.first_name || ''),\n    last_name: String(msg.from?.last_name || ''),\n    command,\n    flags,\n    task_id,\n    admin_command: isAdminCommand ? command : '',\n    is_local_command: isLocalCommand,\n    is_admin_command: isAdminCommand,\n    is_retrieval_command: isRetrievalCommand,\n    response_text\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10208,
+        23520
+      ],
+      "id": "a54632d0-9331-480b-aaa8-9a332dd0d581",
+      "name": "Detect Local Command"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "8b8dffbb-ed75-4100-a591-89753f492a90",
+              "leftValue": "={{ String($json.is_local_command) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        10400,
+        23520
+      ],
+      "id": "00071c58-5234-45d2-9c48-6daac60753ce",
+      "name": "IF Local Command"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ String($json.chat_id).replace(/^=/, '') }}",
+        "text": "={{ $json.response_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "95baef82-cd8a-437e-97fd-f0e1507d55b9",
+      "name": "Send Local Intake Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        10592,
+        23376
+      ],
+      "webhookId": "5b69bd49-84a4-4df1-96df-707df8af6afc",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent for i-SEO"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "38d26f1e-05b6-43dc-9ebd-bb76c3c09ebb",
+              "leftValue": "={{ String($json.is_admin_command) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        10752,
+        23536
+      ],
+      "id": "4d0a2f9b-7ba1-4498-9eaf-669eca1f73f6",
+      "name": "IF Admin Command"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://n8n.ai-metacode.com/webhook/seo-content-agent-admin",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{\n  {\n    message: $('Telegram Trigger').first().json.message,\n    admin_command: $json.admin_command,\n    chat_id: $json.chat_id,\n    user_id: $json.user_id,\n    username: $json.username\n  }\n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        11424,
+        23520
+      ],
+      "id": "f58a1ca4-ddfe-4c86-be28-33ad0aa1945d",
+      "name": "Send To Admin"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ffc6cd79-d2c5-40fa-bb3f-038f52a03a5b",
+              "leftValue": "={{ $json.is_retrieval_command }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        10000,
+        23776
+      ],
+      "id": "0b9bdfae-5bbd-4596-bbb8-0c638e9f7457",
+      "name": "Route Retrieval Command"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1910541765,
+          "mode": "list",
+          "cachedResultName": "memory",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1OkHTDbue6kZLvYRwEQtTKnW-V_xBhclFXFFjOfETfWI/edit#gid=1910541765"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "task_id",
+              "lookupValue": "={{ $('Detect Local Command').first().json.task_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        10208,
+        23776
+      ],
+      "id": "b06d6946-2cb8-4798-a5e8-8652cc9abd1d",
+      "name": "Lookup From Task",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ef79d22f-39cd-434d-9fa0-69fb0d9f07e0",
+              "leftValue": "={{ Boolean($json.task_id) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        10400,
+        23776
+      ],
+      "id": "8e2d2bf2-9013-436a-acd1-b2279709c55c",
+      "name": "IF From Task Exists"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Detect Local Command').first().json.chat_id }}",
+        "text": "=Task not found: {{ $('Detect Local Command').first().json.task_id }}\n\nПроверь task-id в листе memory.\n\nПодсказка:\nскопируй task-id строго из результата /get.",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "4fe8c4a6-8bb8-4eee-90f9-ee7975599e61",
+      "name": "Send NOT-FOUND Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        10656,
+        23840
+      ],
+      "webhookId": "5b69bd49-84a4-4df1-96df-707df8af6afc",
+      "credentials": {
+        "telegramApi": {
+          "id": "JkQ4TeGyOScqwNyN",
+          "name": "TG account - SEO content agent for i-SEO"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function safeNodeJson(nodeName) {\n  try {\n    const node = $(nodeName);\n    if (!node || !node.isExecuted) return null;\n    return node.first()?.json || null;\n  } catch (e) {\n    return null;\n  }\n}\n\nfunction cleanId(value) {\n  return String(value || '').replace(/^=/, '').trim();\n}\n\nconst telegram = safeNodeJson('Telegram Trigger') || {};\nconst buildLock = safeNodeJson('Build User Lock Key') || {};\nconst detect = safeNodeJson('Detect Local Command') || {};\nconst current = $json || {};\n\nconst message =\n  telegram.message ||\n  current.message ||\n  current.body?.message ||\n  {};\n\nconst from = message.from || {};\nconst chat = message.chat || {};\n\nconst command = String(\n  detect.command ||\n  current.command ||\n  ''\n).trim().toLowerCase();\n\nconst isRetrievalOnly = command === 'get';\n\nconst hasRealLock = Boolean(\n  buildLock.lock_key &&\n  buildLock.chat_id\n);\n\nconst lock = hasRealLock && !isRetrievalOnly\n  ? {\n      lock_key: cleanId(buildLock.lock_key),\n      chat_id: cleanId(buildLock.chat_id),\n      user_id: cleanId(buildLock.user_id),\n      username: String(buildLock.username || ''),\n      first_name: String(buildLock.first_name || ''),\n      last_name: String(buildLock.last_name || '')\n    }\n  : null;\n\nconst statusMessageId =\n  current.result?.message_id ||\n  current.message_id ||\n  current.status_message?.message_id ||\n  null;\n\nconst chatId =\n  cleanId(buildLock.chat_id) ||\n  cleanId(detect.chat_id) ||\n  cleanId(chat.id);\n\nreturn [{\n  json: {\n    ...current,\n    worker_payload: {\n      message,\n      lock,\n      status_message: {\n        chat_id: chatId,\n        message_id: statusMessageId\n      }\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11168,
+        23728
+      ],
+      "id": "677187a6-5fdf-4199-a06d-07567aeebc2c",
+      "name": "Build Worker Payload"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Detect Local Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Busy": {
+      "main": [
+        [
+          {
+            "node": "Send Busy Message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Create Lock Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build User Lock Key": {
+      "main": [
+        [
+          {
+            "node": "Lookup Active Locks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Active Lock": {
+      "main": [
+        [
+          {
+            "node": "Debug Lock State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Active Locks": {
+      "main": [
+        [
+          {
+            "node": "Check Active Lock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Lock Row": {
+      "main": [
+        [
+          {
+            "node": "Send Task Accepted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Task Accepted": {
+      "main": [
+        [
+          {
+            "node": "Build Worker Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Debug Lock State": {
+      "main": [
+        [
+          {
+            "node": "IF Busy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Detect Local Command": {
+      "main": [
+        [
+          {
+            "node": "IF Local Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Local Command": {
+      "main": [
+        [
+          {
+            "node": "Send Local Intake Message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IF Admin Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Admin Command": {
+      "main": [
+        [
+          {
+            "node": "Send To Admin",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Route Retrieval Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Retrieval Command": {
+      "main": [
+        [
+          {
+            "node": "Lookup From Task",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build User Lock Key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup From Task": {
+      "main": [
+        [
+          {
+            "node": "IF From Task Exists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF From Task Exists": {
+      "main": [
+        [
+          {
+            "node": "Build Worker Payload",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send NOT-FOUND Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Worker Payload": {
+      "main": [
+        [
+          {
+            "node": "Send To Worker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "04025d5d-1798-4b96-b582-3280ee934f69",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "338c44ae516e4e0056c7ecc3277fc130c003243a1558caec17abe328f240ba66"
+  },
+  "id": "x8EbTGKNdlBprLvk",
+  "tags": [
+    {
+      "updatedAt": "2026-05-04T12:33:42.598Z",
+      "createdAt": "2026-05-04T12:33:42.598Z",
+      "id": "HjnGBeNXbAsrnAdC",
+      "name": "i-SEO"
+    },
+    {
+      "updatedAt": "2026-04-25T16:02:32.402Z",
+      "createdAt": "2026-04-25T16:02:32.402Z",
+      "id": "k50c1IixdJeXE3tp",
+      "name": "MetaBOT"
+    }
+  ]
+}

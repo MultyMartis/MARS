@@ -1,0 +1,26 @@
+{
+  "pass": "CATEGORY-V2.1-LIST-CARD-LAYOUT-FIX",
+  "site_id": "SITE-002",
+  "deployed_at": "2026-06-09T21:32:54.775803+00:00",
+  "files": {
+    "productcard.twig": {
+      "remote_path": "catalog/view/theme/default/template/product/productcard.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.1-list-card-commerce-work\\productcard.twig",
+      "size": 5710,
+      "sha256": "7f073b94ba22eee9fa237dccf8efb63c93666b1039c6af2c9b652bd6c97ce05e"
+    },
+    "style.css": {
+      "remote_path": "assets/css/style.css",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.1-list-card-commerce-work\\style.css",
+      "size": 273723,
+      "sha256": "f66db9b58fb5af09ca83d06e6d7231f9b4a8d7a4139be897fe00f57b78fc371d"
+    }
+  },
+  "rollback_files": {
+    "productcard.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\productcard.twig.pre-list-card-layout-fix.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-list-card-layout-fix.bak"
+  },
+  "php_touched": false,
+  "template_cache_cleared": 0,
+  "template_cache_errors": []
+}

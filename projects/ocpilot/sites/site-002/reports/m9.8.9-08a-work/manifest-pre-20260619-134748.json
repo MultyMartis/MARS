@@ -1,0 +1,44 @@
+{
+  "task": "M9.8.9-08A",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01",
+  "stamp": "20260619-134748",
+  "phase": "pre-deploy",
+  "files": [
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08a-work\\live-capture\\catalog__view__theme__default__template__sections__filterssidebar.twig",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\filterssidebar.twig.pre-m9.8.9-08a-group-reset-position.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08a-work\\catalog__view__theme__default__template__sections__filterssidebar.twig.patched",
+      "sha256_pre": "e9e462188305bf0c0543fe6ca2a6591d18bce98dbd996e1b2689eac41c127d7d",
+      "sha256_patched": "05550c752dfabd616ce4d02be8188dac34caf39c60c3e97c7c5aed1f696a040a",
+      "size_pre": 19290,
+      "size_patched": 19158,
+      "verify_sha256": "05550c752dfabd616ce4d02be8188dac34caf39c60c3e97c7c5aed1f696a040a",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "assets/js/main.js",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08a-work\\live-capture\\assets__js__main.js",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-08a-group-reset-position.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08a-work\\assets__js__main.js.patched",
+      "sha256_pre": "9f0b40d9254592754b22d310e427725b0380a70ed27bae6683bdc8c6a142a51b",
+      "sha256_patched": "fda2ef8cddea2e0a9c3ba71caf64bf6996ed3fdcce85d0eb545bbd95d7a4cf6f",
+      "size_pre": 201248,
+      "size_patched": 201337,
+      "verify_sha256": "fda2ef8cddea2e0a9c3ba71caf64bf6996ed3fdcce85d0eb545bbd95d7a4cf6f",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "assets/css/style.css",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08a-work\\live-capture\\assets__css__style.css",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.9-08a-group-reset-position.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-08a-work\\assets__css__style.css.patched",
+      "sha256_pre": "511bf1f35535aac51e5f40df6ac9f77dbab80230cc34be3c9a0ef2f0ed6ccbd6",
+      "sha256_patched": "66d9add6710b9c6a116a241c627819ec332d79de02498b64c2979dad55555dc2",
+      "size_pre": 286183,
+      "size_patched": 286335,
+      "verify_sha256": "66d9add6710b9c6a116a241c627819ec332d79de02498b64c2979dad55555dc2",
+      "deploy_ok": true
+    }
+  ]
+}

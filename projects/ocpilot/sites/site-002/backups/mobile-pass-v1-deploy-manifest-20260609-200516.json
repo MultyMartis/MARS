@@ -1,0 +1,20 @@
+{
+  "stamp": "20260609-200516",
+  "task": "pdp-mobile-pass-v1",
+  "baseline_rollback": "SITE-002-STABLE-PDP-V4-2026-06-10",
+  "deployed": {
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\mobile-pass-v1-work\\style.css",
+      "sha256": "9ae7ac39174394fee130a177c09179bd00df9eb47fe099bda5267922e27d95a1",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-mobile-pass-v1.bak",
+      "rollback_sha256": "084c402af786bd817c46657d56dcc085cf7706174db3e62dd6638d2a111c83b2"
+    }
+  },
+  "cache_cleared": 0,
+  "cache_errors": [],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-mobile-pass-v1.bak -> assets/css/style.css",
+    "Clear system/storage/cache/template/"
+  ]
+}

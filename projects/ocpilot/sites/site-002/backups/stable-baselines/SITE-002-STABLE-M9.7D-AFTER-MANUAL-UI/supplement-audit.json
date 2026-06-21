@@ -1,0 +1,78 @@
+{
+  "css_captured": [
+    {
+      "remote": "assets/css/style.css",
+      "bytes": 279343,
+      "sha256": "84270fa97dc64a43865c85ec3c7259c7084c385acd8eeb463e1abcd664bdf1e2"
+    },
+    {
+      "remote": "assets/css/style.min.css",
+      "bytes": 76681,
+      "sha256": "98a3a1382daec7dc4269f21d87a1b01bdfb07bf2e72fcbc33e1eafbb536d7f56"
+    },
+    {
+      "remote": "assets/css/sd.css",
+      "bytes": 190,
+      "sha256": "bebca7741d33b527a273bb51f9b0667d1cceb560de2922a60c67be35a6492c25"
+    }
+  ],
+  "hash_diff_vs_m9_complete": [
+    {
+      "file": "catalog/view/theme/default/template/common/megamenu.twig",
+      "changed": false
+    },
+    {
+      "file": "catalog/view/theme/default/template/product/category.twig",
+      "changed": false
+    },
+    {
+      "file": "catalog/view/theme/default/template/sections/offcanvasmenu.twig",
+      "changed": false
+    },
+    {
+      "file": "catalog/controller/common/header.php",
+      "m9_sha256": "804548a608a1579e",
+      "m9.7d_sha256": "e77fa0bb2200845b",
+      "changed": true
+    },
+    {
+      "file": "system/library/zpm/category_visibility.php",
+      "m9_sha256": "029b22a35513cb79",
+      "m9.7d_sha256": "da5d81e94e4eba57",
+      "changed": true
+    }
+  ],
+  "branch_subcategory_audit": {
+    "stoly": {
+      "filter_subcategories": [],
+      "category_cards": [],
+      "subcat_chips": [
+        "Стол-тумба СПКБ-18/7-ВЛ5 (1800х700х850)"
+      ]
+    },
+    "vanny": {
+      "filter_subcategories": [],
+      "category_cards": [],
+      "subcat_chips": [
+        "Ванна моечная ВМЦ-П3-2/500 (1150х700х850)"
+      ]
+    },
+    "podtovarniki": {
+      "filter_subcategories": [],
+      "category_cards": [],
+      "subcat_chips": [
+        "Подтоварник ПП-П-6/6 (600х600х300)"
+      ]
+    },
+    "zonty": {
+      "filter_subcategories": [],
+      "category_cards": [],
+      "subcat_chips": []
+    },
+    "telezhki": {
+      "filter_subcategories": [],
+      "category_cards": [],
+      "subcat_chips": []
+    }
+  }
+}

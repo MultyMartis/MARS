@@ -4,6 +4,31 @@
 
 **Replaces as default entry:** opening multiple QA docs separately. Underlying checklists remain valid; this file routes only.
 
+**Production mode router (2026-06-17):** Read passport `production_mode` **before** any QA pass. **Undeclared mode** → **STOP**. Charter: [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md).
+
+**Validation Architecture (2026-06-17):** Ordered layer chain VL0→VL6, signals, evidence bundles, false-green rules — [website-factory-validation-architecture-charter-v1.md](website-factory-validation-architecture-charter-v1.md). **Not a runtime** — human operator follows layer map before claiming VERIFIED or PRODUCTION PASS.
+
+---
+
+## Production Mode QA Router
+
+**Not a runtime** — human operator selects branch from passport SoT.
+
+| `production_mode` | QA branch | Primary gates | VERIFIED requires |
+|-------------------|-----------|---------------|-------------------|
+| `PIXEL_PERFECT` | **Pixel-perfect QA** | Source Discovery visual SSOT · Mapping QA · PF-* · render/text diff · Operator Visual side-by-side | Mode checklist + diff evidence — **not** build alone |
+| `TEMPLATE_ART` | **Template-art QA** | Blueprint QA · content contract · semantic Design QA Matrix · block `block_id` provenance | Semantic + responsive + enforcement; PF-* **N/A** (waived with charter ref) |
+| `UNDECLARED` / `UNKNOWN` / `CONFLICT` | **None** | — | **STOP** — declare mode first |
+
+**Artifact lifecycle** (distinct from gate Layer A): **BUILT** → **VERIFIED** → **PRODUCTION PASS** — [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §1.1 · lifecycle boundaries VL4/VL5/VL6 — [website-factory-validation-architecture-charter-v1.md](website-factory-validation-architecture-charter-v1.md) §3, §6.
+
+**REPORT header (when production QA):**
+
+```text
+Production mode: PIXEL_PERFECT | TEMPLATE_ART
+Artifact lifecycle: BUILT | VERIFIED | (pending PRODUCTION PASS)
+```
+
 ---
 
 ## When to use

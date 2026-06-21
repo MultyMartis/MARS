@@ -1,0 +1,17 @@
+{
+  "task": "m9.8.2-pdp-lightbox-constraints",
+  "deployed": {
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "sha256": "b20e55c348a4864f98157ba3662a6b4b1c49275edf25fb6be705fc6438228927",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.2-pdp-lightbox-constraints-20260617-210353.bak",
+      "rollback_sha256": "37e84671b72ebf63fd9feb815a2ba51df96c3c44e5eef7c4fc62656c6e083ebe"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "sha256": "298a956014e4cd56b5527ce1f6744de06a13dae99880988cf8c08b69087b1dd5",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.2-pdp-lightbox-constraints-20260617-210353.bak",
+      "rollback_sha256": "e47dc8b1282809d9cacea11310eb69ba3eecc4e348c20ae57cc88ecdd8c33db9"
+    }
+  }
+}

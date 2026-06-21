@@ -1,0 +1,372 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "generated_at": "2026-06-22T14:35:00.000Z",
+  "acquisition_phase": "website_intelligence_bounded_stage_2",
+  "capture_method": "http_fetch_bounded",
+  "default_evidence_grade": "B",
+  "boundary_note": "Observable page facts only — no conversion claims, no ORCA recommendations",
+  "sites": [
+    {
+      "shortlist_id": "corv-s004",
+      "domain": "avanta-pro.ru",
+      "url": "https://avanta-pro.ru/services/uslugi-1s/programmist-1s/",
+      "capture_date": "2026-06-22",
+      "identity": {
+        "name": "Avanta Pro",
+        "geography": "Новосибирск, ул. Галущака 2а",
+        "company_format": "IT company + 1C services + telecom retail",
+        "specialization": "Broad 1C programmer, implementation, support, IT services",
+        "official_franchisee_claim": "claimed_by_competitor — «официальный представитель фирмы 1С в Новосибирске»",
+        "positioning": "Full-service IT and 1C partner; 17 years; 1000+ clients claim"
+      },
+      "service_architecture": {
+        "services_hub": true,
+        "dedicated_pages": ["programmist-1s", "obsluzhivanie-1s", "obnovlenie-1s", "oblako-1s"],
+        "configurations_named": false,
+        "modifications": "described in page copy",
+        "support_retainer": "separate obsluzhivanie page linked",
+        "integrations": "not primary on this URL",
+        "labeling": "not on this URL",
+        "urgent_help": "implicit via programmer help",
+        "industry_solutions": false
+      },
+      "commercial_presentation": {
+        "offer": "Programmer help for implementation, training, modification",
+        "h1": "Программист 1С",
+        "prices": [{ "item": "Программист 1С", "value": "2200/Час" }],
+        "minimum_order": "SAFE UNKNOWN on page",
+        "free_consultation": "Задать вопрос form",
+        "sla": "SAFE UNKNOWN",
+        "guarantees": "«Гарантия» mentioned in reviews block only",
+        "cta": ["Заказать услугу", "Задать вопрос", "Заказать звонок"],
+        "form": true,
+        "phone": "+7 (383) 204-97-10",
+        "messengers": ["WhatsApp", "Telegram", "VK"]
+      },
+      "trust": {
+        "certificates": "Сертификаты nav link — not displayed on captured page body",
+        "partner_status": "claimed_by_competitor — official 1C representative",
+        "cases": "not on page",
+        "reviews": "confirmed_from_page — Flamp + inline testimonials",
+        "clients": "claimed_by_competitor — 1000+ clients",
+        "metrics": "17 years; reaction from 5 minutes claim",
+        "team": "Наши сотрудники section link",
+        "legal": "Реквизиты page linked"
+      },
+      "page_structure": ["hero", "use_cases", "pricing_snippet", "trust_stats", "reviews", "related_services", "cta_form", "footer"],
+      "technical_ux": {
+        "mobile_usability": "SAFE UNKNOWN — desktop fetch only",
+        "page_speed": "not_measured",
+        "form_complexity": "low — callback/order",
+        "sticky_contacts": "phone in header",
+        "navigation_depth": "2-3 clicks to related 1C services"
+      },
+      "evidence_grade": "B"
+    },
+    {
+      "shortlist_id": "corv-s002",
+      "domain": "profinfoservice.ru",
+      "url": "https://profinfoservice.ru/novosibirsk/soprovozhdenie-1c/",
+      "capture_date": "2026-06-22",
+      "identity": {
+        "name": "Profinfoservice (PIS24)",
+        "geography": "Novosibirsk geo path + federal IT service",
+        "company_format": "IT outsourcing / 1C support integrator",
+        "specialization": "1C сопровождение + broader IT infrastructure",
+        "official_franchisee_claim": "not_verified on captured page",
+        "positioning": "Complex IT support with proactive monitoring and SLA"
+      },
+      "service_architecture": {
+        "services_hub": true,
+        "dedicated_pages": ["soprovozhdenie-1c geo landing"],
+        "configurations_named": true,
+        "modifications": "mentioned in support scope",
+        "support_retainer": "primary page topic",
+        "integrations": "Bitrix mentioned in calculator options",
+        "labeling": "SAFE UNKNOWN",
+        "urgent_help": "«Скорая ИТ-помощь»; 24/7 remote support claim",
+        "industry_solutions": false
+      },
+      "commercial_presentation": {
+        "offer": "Комплексное сопровождение 1С под ключ",
+        "h1": "Сопровождение 1С в Новосибирске",
+        "prices": [{ "item": "Minimum contract", "value": "10 000 руб./мес. (calculator disclaimer)" }],
+        "minimum_order": "10 000 ₽/мес calculator floor",
+        "free_consultation": "Бесплатный экспресс-аудит (limited slots claim)",
+        "sla": "claimed_by_competitor — SLA in copy; 95% incidents remote",
+        "guarantees": "223-FZ compliance claim",
+        "cta": ["Получить КП", "Рассчитать стоимость", "Оставить заявку"],
+        "form": true,
+        "phone": "tel in header",
+        "messengers": "SAFE UNKNOWN"
+      },
+      "trust": {
+        "certificates": "SAFE UNKNOWN on page",
+        "partner_status": "not_verified",
+        "cases": "achievement blocks — not detailed case studies",
+        "reviews": "SAFE UNKNOWN",
+        "clients": "SAFE UNKNOWN",
+        "metrics": "95% remote fix claim",
+        "team": "SAFE UNKNOWN",
+        "legal": "privacy policy on forms"
+      },
+      "page_structure": ["hero", "service_blocks", "calculator", "process", "trust", "faq_seo_text", "cta", "footer"],
+      "technical_ux": {
+        "mobile_usability": "SAFE UNKNOWN",
+        "page_speed": "not_measured",
+        "form_complexity": "medium — multi-step calculator + lead forms",
+        "sticky_contacts": "callback + search",
+        "navigation_depth": "geo path + service silo"
+      },
+      "evidence_grade": "B"
+    },
+    {
+      "shortlist_id": "corv-s003",
+      "domain": "vigyana.ru",
+      "url": "https://vigyana.ru/uslugi/1s-programmirovanie/",
+      "capture_date": "2026-06-22",
+      "identity": {
+        "name": "ООО «Вигьяна»",
+        "geography": "Новосибирск, ул. Мусы Джалиля 3/1",
+        "company_format": "Local 1C programming company",
+        "specialization": "Universal 1C catalog — modifications, support, marking, integrations",
+        "official_franchisee_claim": "not_verified — «сертифицированные программисты» claim",
+        "positioning": "Detailed price list by task type; 24/7 Help Desk claim"
+      },
+      "service_architecture": {
+        "services_hub": true,
+        "dedicated_pages": ["single comprehensive 1s-programmirovanie page"],
+        "configurations_named": true,
+        "modifications": "extensive price table rows",
+        "support_retainer": "абонентское обслуживание row",
+        "integrations": "site, Bitrix, bank, EDO rows",
+        "labeling": "Честный знак под ключ; ЕГАИС; ВетИС rows",
+        "urgent_help": "diagnostics/errors in table",
+        "industry_solutions": false
+      },
+      "commercial_presentation": {
+        "offer": "1С сопровождение и доработки от 3200 ₽",
+        "h1": "1С сопровождение",
+        "prices": [{ "item": "Most line items", "value": "от 3200 руб." }],
+        "minimum_order": "per line item",
+        "free_consultation": "callback form",
+        "sla": "24/7 Help Desk claim",
+        "guarantees": "quality and deadline claims in copy",
+        "cta": ["Заказать", "Заказать звонок"],
+        "form": true,
+        "phone": "+7 (383) 312-00-22",
+        "messengers": "SAFE UNKNOWN"
+      },
+      "trust": {
+        "certificates": "SAFE UNKNOWN",
+        "partner_status": "not_verified",
+        "cases": "not on page",
+        "reviews": "confirmed_from_page — 2GIS reviews section referenced",
+        "clients": "SAFE UNKNOWN",
+        "metrics": "multi-direction business claim",
+        "team": "experts referenced",
+        "legal": "contact block only"
+      },
+      "page_structure": ["hero", "price_table", "benefits", "reviews_ref", "geo_seo", "callback_form", "footer"],
+      "technical_ux": {
+        "mobile_usability": "SAFE UNKNOWN",
+        "page_speed": "not_measured",
+        "form_complexity": "low callback + captcha",
+        "sticky_contacts": "phone in header",
+        "navigation_depth": "single long page"
+      },
+      "evidence_grade": "B"
+    },
+    {
+      "shortlist_id": "corv-s005",
+      "domain": "itllekt.ru",
+      "url": "https://www.itllekt.ru/1c/services/maintenance/dorabotka-1s/",
+      "capture_date": "2026-06-22",
+      "identity": {
+        "name": "ООО «Айтиллект»",
+        "geography": "Новосибирск, ул. Богдана Хмельницкого 103к1",
+        "company_format": "Official 1C partner (claimed)",
+        "specialization": "Modification / reports / forms / gov integrations",
+        "official_franchisee_claim": "claimed_by_competitor — «официальный партнер 1C»",
+        "positioning": "Modification-focused with explicit hourly/table pricing"
+      },
+      "service_architecture": {
+        "services_hub": true,
+        "dedicated_pages": ["dorabotka-1s", maintenance cluster"],
+        "configurations_named": false,
+        "modifications": "primary",
+        "support_retainer": "linked sections",
+        "integrations": "gov systems + exchange rows",
+        "labeling": "Маркировка integration row",
+        "urgent_help": "error fix row from 1500 rub",
+        "industry_solutions": false
+      },
+      "commercial_presentation": {
+        "offer": "Доработка 1С от 1500 руб",
+        "h1": "Доработка 1С",
+        "prices": [
+          { "item": "Устранение ошибок", "value": "от 1500 руб.* (0.5 ч)" },
+          { "item": "Печатная форма", "value": "от 1500 руб.*" },
+          { "item": "Интеграция маркировки/ЕГАИС", "value": "от 3150 руб.*" }
+        ],
+        "minimum_order": "0.5 hour units",
+        "free_consultation": "request form",
+        "sla": "SAFE UNKNOWN",
+        "guarantees": "quality guarantee claim in copy",
+        "cta": ["Заказать"],
+        "form": true,
+        "phone": "+7 (383) 233-07-00",
+        "messengers": "SAFE UNKNOWN"
+      },
+      "trust": {
+        "certificates": "SAFE UNKNOWN",
+        "partner_status": "claimed_by_competitor",
+        "cases": "not on page",
+        "reviews": "SAFE UNKNOWN",
+        "clients": "SAFE UNKNOWN",
+        "metrics": "SAFE UNKNOWN",
+        "team": "partners/careers CTAs",
+        "legal": "privacy policy"
+      },
+      "page_structure": ["hero", "price_table", "support_sections", "cta_form", "footer"],
+      "technical_ux": {
+        "mobile_usability": "SAFE UNKNOWN",
+        "page_speed": "not_measured",
+        "form_complexity": "low",
+        "sticky_contacts": "phone footer",
+        "navigation_depth": "1C services subtree"
+      },
+      "evidence_grade": "B"
+    },
+    {
+      "shortlist_id": "corv-s006",
+      "domain": "ab-onlinekassa.ru",
+      "url": "https://novosibirsk.ab-onlinekassa.ru/markirovka/",
+      "capture_date": "2026-06-22",
+      "identity": {
+        "name": "ООО «Автоматизация Бизнеса» — AB OnlineKassa",
+        "geography": "Новосибирск, Комсомольский пр. 24 + multi-city network",
+        "company_format": "Kassa/marking integrator + 1C shop",
+        "specialization": "Честный знак под ключ; marking hardware/software",
+        "official_franchisee_claim": "not_verified",
+        "positioning": "Turnkey Честный знак with 1C integration and 24/7 support"
+      },
+      "service_architecture": {
+        "services_hub": true,
+        "dedicated_pages": ["markirovka geo landing", product catalog"],
+        "configurations_named": "1С:Розница product card",
+        "modifications": "integration service SKUs",
+        "support_retainer": "24/7 support claim",
+        "integrations": "1C + EDO + kassa",
+        "labeling": "primary",
+        "urgent_help": "24/7 remote support",
+        "industry_solutions": "product category examples (beer, tobacco, etc.)"
+      },
+      "commercial_presentation": {
+        "offer": "Честный знак под ключ — регистрация бесплатно promo",
+        "h1": "Честный знак (page title area)",
+        "prices": [
+          { "item": "Регистрация в Честном знаке", "value": "Бесплатно (promo)" },
+          { "item": "Подключение ЭДО", "value": "от 3 000 ₽" },
+          { "item": "Интеграция в систему", "value": "от 2 500 ₽" },
+          { "item": "Обучение", "value": "от 1 500 ₽" }
+        ],
+        "minimum_order": "per service SKU",
+        "free_consultation": "Бесплатная консультация 10-15 min claim",
+        "sla": "24/7 support claim",
+        "guarantees": "SAFE UNKNOWN",
+        "cta": ["Заказать регистрацию", "Оставить заявку"],
+        "form": true,
+        "phone": "+7 (928) 204-33-49",
+        "messengers": ["WhatsApp", "Telegram"]
+      },
+      "trust": {
+        "certificates": "SAFE UNKNOWN",
+        "partner_status": "not_verified",
+        "cases": "«Реальные кейсы» section claim",
+        "reviews": "SAFE UNKNOWN",
+        "clients": "daily connections claim",
+        "metrics": "since launch of Честный знак claim",
+        "team": "SAFE UNKNOWN",
+        "legal": "copyright OOO Автоматизация Бизнеса"
+      },
+      "page_structure": ["hero_promo", "process_steps", "services_grid", "hardware_catalog", "cta", "footer"],
+      "technical_ux": {
+        "mobile_usability": "SAFE UNKNOWN",
+        "page_speed": "not_measured",
+        "form_complexity": "low lead form",
+        "sticky_contacts": "WhatsApp/Telegram + phone",
+        "navigation_depth": "e-commerce style catalog"
+      },
+      "evidence_grade": "B"
+    },
+    {
+      "shortlist_id": "corv-s007",
+      "domain": "yalstudio.ru",
+      "url": "https://www.yalstudio.ru/razrabotka/integratsiya-1s/",
+      "capture_date": "2026-06-22",
+      "identity": {
+        "name": "Студия ЯЛ",
+        "geography": "Novosibirsk web studio (since 2004 claim)",
+        "company_format": "Web development / integration studio",
+        "specialization": "Site ↔ 1C / Bitrix / ERP integrations",
+        "official_franchisee_claim": "not_applicable",
+        "positioning": "Complex non-standard integrations; portfolio-led"
+      },
+      "service_architecture": {
+        "services_hub": true,
+        "dedicated_pages": ["integratsiya-1s"],
+        "configurations_named": false,
+        "modifications": "custom integration scope",
+        "support_retainer": "technical support after project claim",
+        "integrations": "primary",
+        "labeling": "not on page",
+        "urgent_help": "not on page",
+        "industry_solutions": "portfolio cases by industry"
+      },
+      "commercial_presentation": {
+        "offer": "Интеграция 1C от 5 рабочих дней",
+        "h1": "Интеграция сайтов с 1С",
+        "prices": [{ "item": "Integration service", "value": "от 20 000 р." }],
+        "minimum_order": "project-based",
+        "free_consultation": "request proposal form",
+        "sla": "SAFE UNKNOWN",
+        "guarantees": "100% result claim",
+        "cta": ["Оставить заявку", "Заказать звонок"],
+        "form": true,
+        "phone": "in site header — SAFE UNKNOWN exact on fetch",
+        "messengers": "SAFE UNKNOWN"
+      },
+      "trust": {
+        "certificates": "awards claim (>5 industry awards)",
+        "partner_status": "not_applicable",
+        "cases": "confirmed_from_page — afr-shop.ru, meduzza.ru, client logos grid",
+        "reviews": "SAFE UNKNOWN",
+        "clients": ">500 projects claim",
+        "metrics": "60+ shops integrated claim; 3 specialists",
+        "team": "department head named on page",
+        "legal": "privacy policy on forms"
+      },
+      "page_structure": ["hero", "benefits", "portfolio", "awards", "process", "cta_form", "footer"],
+      "technical_ux": {
+        "mobile_usability": "SAFE UNKNOWN",
+        "page_speed": "not_measured",
+        "form_complexity": "medium — file attach on project form",
+        "sticky_contacts": "callback modal",
+        "navigation_depth": "studio services tree"
+      },
+      "evidence_grade": "B"
+    }
+  ],
+  "fetch_failures": [
+    {
+      "shortlist_id": "corv-s001",
+      "domain": "novosib.shift-company.ru",
+      "url": "https://novosib.shift-company.ru/services/programmist/",
+      "reason": "HTTP fetch timeout during Stage 2 pass",
+      "evidence_grade": "C",
+      "note": "Retained on shortlist from SERP evidence only; Website Intelligence deferred partial"
+    }
+  ]
+}

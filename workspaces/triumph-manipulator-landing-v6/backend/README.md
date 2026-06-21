@@ -39,6 +39,6 @@ php -l backend/api/forms/send.php
 
 ## Limitations
 
-- Uses native PHP `mail()`. Delivery depends on hosting mail configuration.
-- If `mail()` is disabled or unreliable, configure SMTP / PHPMailer in a follow-up pass.
+- Default transport: **SMTP (Beget, port 465 SSL)** when `use_smtp` is true in `config.php` and `smtp.password` is set in `config.local.php`.
+- Fallback: native PHP `mail()` when `use_smtp` is false.
 - No dry-run mode in production; local tests should not spam the live inbox.

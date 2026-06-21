@@ -1,0 +1,85 @@
+{
+  "task": "M9 Phase 3 remaining branches QA",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space",
+  "executed_at_utc": "2026-06-14T20:02:02.711602+00:00",
+  "summary": {
+    "pass": 12,
+    "fail": 0,
+    "unknown": 0
+  },
+  "checks": [
+    {
+      "id": "QA-01",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/",
+      "status": "pass",
+      "detail": "Столы PLP regression (301) status=200 primary=10/10 hidden=[]"
+    },
+    {
+      "id": "QA-02",
+      "path": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "status": "pass",
+      "detail": "Моечные ванны PLP regression (80) status=200 primary=8/8 hidden=[]"
+    },
+    {
+      "id": "QA-03",
+      "path": "/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "status": "pass",
+      "detail": "Подтоварники PLP (322) status=200 primary=7/7 secondary=['Дополнительные параметры', 'Материал столешницы', 'Тип опоры', 'Конструкция'] hidden=[] profile_layout=True"
+    },
+    {
+      "id": "QA-04",
+      "path": "/index.php?route=product/category&path=322",
+      "status": "pass",
+      "detail": "Подтоварники PLP (path=322) status=200 primary=7/7 secondary=['Дополнительные параметры', 'Материал столешницы', 'Тип опоры', 'Конструкция'] hidden=[] profile_layout=True"
+    },
+    {
+      "id": "QA-05",
+      "path": "/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/",
+      "status": "pass",
+      "detail": "Зонты PLP (207) status=200 primary=6/6 secondary=['Дополнительные параметры', 'Страна производства'] hidden=[]"
+    },
+    {
+      "id": "QA-06",
+      "path": "/index.php?route=product/category&path=207",
+      "status": "pass",
+      "detail": "Зонты PLP (path=207) status=200 primary=6/6 secondary=['Дополнительные параметры', 'Страна производства'] hidden=[]"
+    },
+    {
+      "id": "QA-07",
+      "path": "/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+      "status": "pass",
+      "detail": "Тележки серв. PLP (326) status=200 primary=5/5 hidden=[]"
+    },
+    {
+      "id": "QA-08",
+      "path": "/index.php?route=product/category&path=326",
+      "status": "pass",
+      "detail": "Тележки серв. PLP (path=326) status=200 primary=5/5 hidden=[]"
+    },
+    {
+      "id": "QA-09",
+      "path": "/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/podtovarniki-premium/podtovarnik-pp-p-12-6-1200h600h300",
+      "status": "pass",
+      "detail": "PDP status=200"
+    },
+    {
+      "id": "QA-10",
+      "path": "/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/telezhka-dlya-sbora-posudy-ts-1-800h500h930",
+      "status": "pass",
+      "detail": "PDP status=200"
+    },
+    {
+      "id": "QA-11",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": "pass",
+      "detail": "PDP status=200"
+    },
+    {
+      "id": "QA-12",
+      "path": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "status": "pass",
+      "detail": "PDP status=200"
+    }
+  ]
+}

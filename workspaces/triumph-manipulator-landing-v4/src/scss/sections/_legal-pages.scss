@@ -1,0 +1,122 @@
+@use '../utils/tokens' as t;
+
+.legal-header {
+    padding: 18px 0;
+    background: t.$color-night;
+    color: t.$color-ink;
+    border-bottom: 1px solid t.$color-line-dark;
+}
+
+.legal-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.legal-header__brand img {
+    display: block;
+    width: min(220px, 52vw);
+    height: auto;
+}
+
+.legal-header__back {
+    color: t.$color-ink-muted;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+.legal-header__back:hover,
+.legal-header__back:focus-visible {
+    color: t.$color-white;
+}
+
+.legal-page {
+    min-height: 100vh;
+    background: t.$color-night;
+    color: t.$color-ink;
+}
+
+.legal-document {
+    padding-block: clamp(36px, 5vw, 64px);
+}
+
+.legal-document__title {
+    margin: 0;
+    font-family: t.$font-display;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 52px;
+    color: t.$color-white;
+}
+
+.legal-document__updated {
+    margin: 12px 0 0;
+    color: t.$color-ink-dim;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.legal-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin: 28px 0 0;
+    padding: 0 0 24px;
+    border-bottom: 1px solid t.$color-line-dark;
+}
+
+.legal-nav a {
+    color: t.$color-ink-muted;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+.legal-nav a:hover,
+.legal-nav a:focus-visible,
+.legal-nav a.is-active {
+    color: t.$color-white;
+}
+
+.legal-nav a.is-active {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.legal-document__placeholder {
+    max-width: 760px;
+    margin-top: 28px;
+    padding: 24px 28px;
+    border: 1px solid t.$color-line-dark;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.legal-document__placeholder p {
+    margin: 0;
+    color: t.$color-ink-muted;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.legal-document__actions {
+    margin-top: 32px;
+}
+
+.legal-page .landing-footer {
+    margin-top: clamp(48px, 8vw, 96px);
+}
+
+.legal-page .landing-footer__legal {
+    gap: 8px;
+}
+
+@media (max-width: 760px) {
+    .legal-nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

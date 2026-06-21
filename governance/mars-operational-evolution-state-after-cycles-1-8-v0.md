@@ -124,3 +124,19 @@ Always re-verify per task — do not inherit from this file alone:
 | [onboarding-survivability.md](onboarding-survivability.md) | Minimum read set (operational-first) |
 
 *Canonical ecosystem-state reference after Cycles 1–8 — maintenance + operational-first.*
+
+---
+
+## RC5 RESOLUTION NOTE (2026-06-19)
+
+**What changed:** WPilot completed RC5 finalization and is now **Reference Implementation** — first proven CMS Pilot runtime reference in MARS. Proven on DEV: `proven_content_writes` + `proven_connection_runtime`. Authority: `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`. Commit: `648632acbdd42703427fd76a0cb1fd8d88641dcc`. RC5 development focus **closed**; Sprint 3 **HOLD**; maintenance-only unless explicit HITL charter.
+
+**Supersedes (for current-state readers only — §4 ranked list above remains valid for 2026-05-19 intent ordering):**
+
+| Stale statement in this doc (2026-05-19) | Current SoT |
+|------------------------------------------|-------------|
+| §4 item 5 — "WPilot — operational docs + DEV plugin source in-repo (production bridge still planned/external)" | [WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md) — Reference Implementation; proven DEV runtime; production deploy **EXCLUDED** by policy, not "planned bridge" posture |
+
+**Canonical entry:** [projects/wpilot/OPERATIONAL-INDEX.md](../projects/wpilot/OPERATIONAL-INDEX.md) · [REFERENCE-IMPLEMENTATIONS-INDEX.md](../projects/shared/reference-implementations/REFERENCE-IMPLEMENTATIONS-INDEX.md)
+
+*Historical content in sections 1–7 remains valid for its document date (2026-05-19).*

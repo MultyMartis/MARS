@@ -7,7 +7,7 @@
  * NOT a full OOXML engine.
  */
 
-const { isAutotargetPhrase } = require("./mapping");
+const { isAutotargetPhrase, TRANSPORT_ROW_AD, TRANSPORT_ROW_KEYWORD } = require("./mapping");
 
 const DATA_START_ROW = 16;
 
@@ -66,11 +66,9 @@ const STALE_ROW_MASK_KEYS = [
  * Verified metadata block cell positions (sheet Тексты, value column = 5).
  * From template introspection 2026-05-21 — NOT auto-discovered at runtime.
  */
-const METADATA_CELL_MAP = Object.freeze({
-  "campaigns.campaign_type": { row: 7, col: 5 },
-  "campaigns.campaign_negatives": { row: 9, col: 5 },
-  "campaigns.promotion_url": { row: 11, col: 5 },
-});
+const { TEMPLATE_METADATA_CELL_MAP } = require("./template-campaign-metadata-v1.4");
+
+const METADATA_CELL_MAP = TEMPLATE_METADATA_CELL_MAP;
 
 /** Probable transport columns — documented only; not cleared without verified map entry. */
 const PROBABLE_TRANSPORT_KEYS = ["groups.group_number"];
@@ -177,23 +175,30 @@ function resolveGroupNumberColumn(headerMapFields) {
 }
 
 function buildFieldPatches(fillRow, columns, options = {}) {
+  const rowType = fillRow.transport_row_type || TRANSPORT_ROW_AD;
+  const isAdRow = rowType === TRANSPORT_ROW_AD;
+  const isKeywordRow = rowType === TRANSPORT_ROW_KEYWORD;
+
   const fieldMap = [
+    ["ads.group_additional_ad", fillRow.group_additional_ad ?? ""],
     ["groups.group_name", fillRow.group_name],
     ["groups.group_number", fillRow.group_number],
-    ["keywords.phrase", fillRow.phrase],
-    ["ads.headline_1", fillRow.headline_1],
-    ["ads.headline_2", fillRow.headline_2],
-    ["ads.description", fillRow.description],
-    ["ads.landing_url", fillRow.landing_url],
-    ["ads.display_url", fillRow.display_url],
-    ["ads.ad_status", fillRow.ad_status],
-    ["keywords.status", fillRow.keyword_status],
-    ["extensions.fastlink_titles", fillRow.fastlink_titles],
-    ["extensions.fastlink_descriptions", fillRow.fastlink_descriptions],
-    ["extensions.fastlink_urls", fillRow.fastlink_urls],
-    ["extensions.callouts", fillRow.callouts],
+    ["keywords.phrase", isAdRow ? "" : fillRow.phrase],
+    ["ads.headline_1", isKeywordRow ? "" : fillRow.headline_1],
+    ["ads.headline_2", isKeywordRow ? "" : fillRow.headline_2],
+    ["ads.description", isKeywordRow ? "" : fillRow.description],
+    ["ads.landing_url", isKeywordRow ? "" : fillRow.landing_url],
+    ["ads.display_url", isKeywordRow ? "" : fillRow.display_url],
+    ["ads.ad_status", isKeywordRow ? "" : fillRow.ad_status],
+    ["keywords.status", isAdRow ? "" : fillRow.keyword_status],
+    ["extensions.fastlink_titles", isKeywordRow ? "" : fillRow.fastlink_titles],
+    ["extensions.fastlink_descriptions", isKeywordRow ? "" : fillRow.fastlink_descriptions],
+    ["extensions.fastlink_urls", isKeywordRow ? "" : fillRow.fastlink_urls],
+    ["extensions.callouts", isKeywordRow ? "" : fillRow.callouts],
     ["geo.region", fillRow.geo_region],
-    ["ads.ad_type", fillRow.ad_type_transport],
+    ["keywords.bid", isKeywordRow ? fillRow.phrase_bid ?? "" : ""],
+    ["groups.group_negatives", isAdRow && fillRow.group_negatives ? fillRow.group_negatives : ""],
+    ["ads.ad_type", isKeywordRow ? "" : fillRow.ad_type_transport],
     ["ads.image", ""],
     ["ads.creative", ""],
     ["ads.creative_moderation_status", ""],
@@ -211,7 +216,7 @@ function buildFieldPatches(fillRow, columns, options = {}) {
   }
 
   const preserveCommanderIds = options.newCampaignMode === false;
-  if (preserveCommanderIds && fillRow.ad_id && columns["ads.ad_id"]) {
+  if (preserveCommanderIds && isAdRow && fillRow.ad_id && columns["ads.ad_id"]) {
     patches.push({ key: "ads.ad_id", col: columns["ads.ad_id"], value: fillRow.ad_id });
   }
 
@@ -744,7 +749,12 @@ function patchSheet1DataRows(sheetXml, fillRows, columns, options = {}) {
     ...columns,
     ...resolveGeoRegionColumn(headerMapFields),
     ...resolveImageCreativeColumns(headerMapFields),
-    ...resolveColumnsFromHeaderMap(headerMapFields, ["ads.ad_type"]),
+    ...resolveColumnsFromHeaderMap(headerMapFields, [
+      "ads.ad_type",
+      "ads.group_additional_ad",
+      "keywords.bid",
+      "groups.group_negatives",
+    ]),
     "groups.group_number": groupNumberCol,
   };
 

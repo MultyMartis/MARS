@@ -1,0 +1,545 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "generated_at": "2026-06-21T20:21:25.054Z",
+  "updated_for_stage": "mig_demand_surface",
+  "entries": [
+    {
+      "ref_id": "ev-001",
+      "type": "serp_capture",
+      "artifact": "serp_results/q01.json",
+      "query": "программист 1С Новосибирск",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-002",
+      "type": "serp_capture",
+      "artifact": "serp_results/q02.json",
+      "query": "сопровождение 1С Новосибирск",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-003",
+      "type": "serp_capture",
+      "artifact": "serp_results/q03.json",
+      "query": "программа 1С не работает",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-004",
+      "type": "serp_capture",
+      "artifact": "serp_results/q04.json",
+      "query": "доработка отчёта 1С",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-005",
+      "type": "serp_capture",
+      "artifact": "serp_results/q05.json",
+      "query": "интеграция 1С с сайтом Новосибирск",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-006",
+      "type": "serp_capture",
+      "artifact": "serp_results/q06.json",
+      "query": "интеграция 1С Битрикс",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-007",
+      "type": "serp_capture",
+      "artifact": "serp_results/q07.json",
+      "query": "Честный знак 1С настройка",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-008",
+      "type": "serp_capture",
+      "artifact": "serp_results/q08.json",
+      "query": "маркировка в 1С Новосибирск",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-009",
+      "type": "serp_capture",
+      "artifact": "serp_results/q09.json",
+      "query": "ТС ПИОТ 1С настройка",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-010",
+      "type": "website_surface",
+      "artifact": "website-surface-snapshot.json",
+      "url": "http://lk.corvonero.ru/",
+      "date": "2026-06-22",
+      "grade": "B",
+      "source": "http_fetch",
+      "stage": 1
+    },
+    {
+      "ref_id": "ev-011",
+      "type": "seed_matrix",
+      "artifact": "../corvonero-seed-query-matrix-v1.json",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "operator_task_derived",
+      "stage": "1-2"
+    },
+    {
+      "ref_id": "ev-012",
+      "type": "machine_request",
+      "artifact": "../../requests/request-corvonero-yandex-direct-v1.json",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "cursor_adapter",
+      "stage": "1-2"
+    },
+    {
+      "ref_id": "ev-013",
+      "type": "serp_live_index",
+      "artifact": "serp_live_index.json",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search_stage2",
+      "stage": 2,
+      "query_count": 27
+    },
+    {
+      "ref_id": "ev-014",
+      "type": "serp_live_capture",
+      "artifact": "serp_results_live/lq01.json",
+      "query": "программист 1С Новосибирск",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "bounded_web_search_stage2",
+      "stage": 2,
+      "note": "representative — 26 sibling lq files"
+    },
+    {
+      "ref_id": "ev-015",
+      "type": "competitor_shortlist",
+      "artifact": "competitors-shortlist-confirmed.json",
+      "date": "2026-06-22",
+      "grade": "B",
+      "source": "serp_recurrence_plus_fetch",
+      "stage": 2
+    },
+    {
+      "ref_id": "ev-016",
+      "type": "website_intelligence",
+      "artifact": "website_intelligence.json",
+      "date": "2026-06-22",
+      "grade": "B",
+      "source": "http_fetch_bounded",
+      "stage": 2
+    },
+    {
+      "ref_id": "ev-017",
+      "type": "landing_intelligence_v2",
+      "artifact": "landing_intelligence_v2.json",
+      "date": "2026-06-22",
+      "grade": "B",
+      "source": "http_fetch_bounded",
+      "stage": 2
+    },
+    {
+      "ref_id": "ev-018",
+      "type": "website_intelligence_client",
+      "artifact": "website-corvonero-intelligence.json",
+      "date": "2026-06-22",
+      "grade": "B",
+      "source": "http_fetch",
+      "stage": 2
+    },
+    {
+      "ref_id": "ev-019",
+      "type": "wordstat_matrix",
+      "artifact": "corvonero-wordstat-collection-matrix-v1.json",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "prepared_not_executed",
+      "stage": 2
+    },
+    {
+      "ref_id": "ev-020",
+      "type": "wordstat_export_attempt",
+      "artifact": "wordstat-export-manual-20260622-corv01.md",
+      "date": "2026-06-22",
+      "grade": "B_semantic_discovery",
+      "source": "mars_storage_external",
+      "stage": "demand_surface",
+      "query_count": 20,
+      "collected": 18,
+      "external_path": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06"
+    },
+    {
+      "ref_id": "ev-021",
+      "type": "wordstat_snapshot",
+      "artifact": "wordstat_snapshot.cap-20260622-corv01.json",
+      "date": "2026-06-22",
+      "grade": "B_semantic_discovery",
+      "source": "pass_a_complete",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-022",
+      "type": "wordstat_normalized",
+      "artifact": "wordstat-collection-normalized.json",
+      "date": "2026-06-22",
+      "grade": "B_semantic_discovery",
+      "source": "pass_a_ingested",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-023",
+      "type": "wordstat_broad_exact",
+      "artifact": "wordstat-broad-exact-comparison.json",
+      "date": "2026-06-22",
+      "grade": "X_not_collected",
+      "source": "not_executed",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-024",
+      "type": "serp_r1_index",
+      "artifact": "serp_r1_index.json",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "r1_attempt_captcha_blocked",
+      "stage": "demand_surface",
+      "query_count": 10,
+      "r1_success": 0
+    },
+    {
+      "ref_id": "ev-025",
+      "type": "serp_r1_capture",
+      "artifact": "serp_results_r1/r1q01.json",
+      "query": "программист 1С Новосибирск",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "captcha_blocked_af-004",
+      "stage": "demand_surface",
+      "note": "representative — 9 sibling r1q files"
+    },
+    {
+      "ref_id": "ev-026",
+      "type": "demand_surface",
+      "artifact": "demand_surface.json",
+      "date": "2026-06-22",
+      "grade": "C_partial",
+      "source": "serp_synthesis_partial",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-027",
+      "type": "keyword_registry",
+      "artifact": "keyword_registry.json",
+      "date": "2026-06-22",
+      "grade": "C_partial",
+      "source": "draft_registry",
+      "stage": "demand_surface",
+      "keyword_count": 20
+    },
+    {
+      "ref_id": "ev-028",
+      "type": "query_cleaning",
+      "artifact": "query_cleaning_noise_registry.json",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "serp_matrix_inference",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-029",
+      "type": "wordstat_acquisition_log",
+      "artifact": "evidence/wordstat/acquisition-blocked-20260622.md",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "failure_documentation_automated_only",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-030",
+      "type": "wordstat_pass_a_evidence",
+      "artifact": "evidence/wordstat/pass-a-ws-p1-001-evidence.json",
+      "query_id": "ws-p1-001",
+      "date": "2026-06-22",
+      "grade": "B_semantic_discovery",
+      "source": "operator_manual_pass_a",
+      "stage": "demand_surface",
+      "screenshot": "evidence/wordstat/screenshots/ws-p1-001-programmist-1c.jpg",
+      "ingestion_status": "ingested"
+    },
+    {
+      "ref_id": "ev-031",
+      "type": "serp_capability_audit",
+      "artifact": "evidence/serp/serp-capability-audit-v1.md",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "repository_audit",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-032",
+      "type": "policy_audit_report",
+      "artifact": "REPORT-mig-wordstat-policy-and-serp-capability-audit-v1.md",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "cursor_task",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-033",
+      "type": "wordstat_pass_a_file_index",
+      "artifact": "evidence/wordstat/wordstat-pass-a-file-index.json",
+      "date": "2026-06-22",
+      "grade": "B_semantic_discovery",
+      "source": "ingest_wordstat_pass_a",
+      "stage": "demand_surface",
+      "files_found": 18,
+      "files_ingested": 18,
+      "external_storage": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06"
+    },
+    {
+      "ref_id": "ev-034",
+      "type": "wordstat_pass_a_normalized",
+      "artifact": "evidence/wordstat/wordstat-pass-a-normalized.json",
+      "date": "2026-06-22",
+      "grade": "B_semantic_discovery",
+      "source": "ingest_wordstat_pass_a",
+      "stage": "demand_surface",
+      "row_count": 2399
+    },
+    {
+      "ref_id": "ev-035",
+      "type": "wordstat_no_result_evidence",
+      "artifact": "evidence/wordstat/pass-a-ws-p2-003-no-result-evidence.json",
+      "query_id": "ws-p2-003",
+      "date": "2026-06-22",
+      "grade": "B_operator_report",
+      "source": "operator_manual_pass_a",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-036",
+      "type": "wordstat_no_result_evidence",
+      "artifact": "evidence/wordstat/pass-a-ws-p2-006-no-result-evidence.json",
+      "query_id": "ws-p2-006",
+      "date": "2026-06-22",
+      "grade": "B_operator_report",
+      "source": "operator_manual_pass_a",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-037",
+      "type": "serp_r1_playwright_capture",
+      "artifact": "evidence/serp/r1-corv01/capture-run-summary.json",
+      "date": "2026-06-22",
+      "grade": "C",
+      "source": "playwright_mobile_yandex_lr65",
+      "stage": "demand_surface",
+      "query_count": 10,
+      "success_count": 0,
+      "captcha_blocked": 10
+    },
+    {
+      "ref_id": "ev-038",
+      "type": "combined_ingestion_report",
+      "artifact": "REPORT-mig-wordstat-ingestion-and-playwright-serp-v1.md",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "cursor_task",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-039",
+      "type": "serp_zpm_workflow_capture",
+      "artifact": "evidence/serp/zpm-workflow-corv01/capture-run/capture-run-summary.json",
+      "date": "2026-06-22",
+      "grade": "B_partial",
+      "source": "playwright_mobile_yandex_lr65_zpm_workflow",
+      "stage": "demand_surface",
+      "query_count": 3,
+      "success_count": 2,
+      "browser_mode": "headful"
+    },
+    {
+      "ref_id": "ev-040",
+      "type": "zpm_workflow_audit",
+      "artifact": "evidence/serp/zpm-workflow-corv01/workflow-audit/zpm-serp-workflow-recovery-audit-v1.md",
+      "date": "2026-06-22",
+      "grade": "A",
+      "source": "workflow_recovery",
+      "stage": "demand_surface"
+    },
+    {
+      "ref_id": "ev-041",
+      "type": "serp_zpm_workflow_throttled_resume",
+      "artifact": "evidence/serp/zpm-workflow-corv01/capture-run/capture-run-summary.json",
+      "date": "2026-06-22",
+      "grade": "B_partial",
+      "source": "playwright_mobile_yandex_lr65_zpm_workflow_throttled",
+      "stage": "demand_surface",
+      "last_batch": "batch3",
+      "grade_b_count": 7,
+      "grade_c_count": 2,
+      "captcha_queries": [
+        "r1q07",
+        "r1q06"
+      ]
+    }
+  ],
+  "acquisition_failures": [
+    {
+      "failure_id": "af-001",
+      "topic": "Live Yandex mobile SERP Stage 1",
+      "reason": "Bounded web search synthesis only",
+      "impact": "Grade capped at C for Stage 1 SERP",
+      "grade_cap": "C",
+      "status": "open"
+    },
+    {
+      "failure_id": "af-004",
+      "topic": "Direct-fetch Yandex SERP route (Stage 2 + Demand Surface R1 priority pass)",
+      "reason": "Yandex captcha / anti-bot on direct HTTP fetch to https://yandex.ru/search/?lr=65",
+      "impact": "This route failed — grade capped at C; does not prove MIG cannot capture SERP via Playwright or R1 manual workflows",
+      "grade_cap": "C",
+      "status": "superseded_by_zpm_partial",
+      "collection_date": "2026-06-22",
+      "corrected_route_ref": "evidence/serp/serp-capability-audit-v1.md",
+      "recommended_next_route": "Triumph Playwright capture-serp-multi.mjs pattern or pilot-serp-capture-checklist.md R1 manual",
+      "lifecycle": "historical",
+      "blocking": false
+    },
+    {
+      "failure_id": "af-005",
+      "topic": "Shift Company website fetch",
+      "reason": "HTTP fetch timeout",
+      "impact": "corv-s001 Website Intelligence partial — SERP evidence only",
+      "grade_cap": "C",
+      "status": "open"
+    },
+    {
+      "failure_id": "af-002",
+      "topic": "Wordstat Demand Surface volumes",
+      "reason": "Explicitly excluded in Stage 2 — matrix prepared only",
+      "impact": "No volume groundtruth in Stage 2",
+      "grade_cap": "X_not_collected",
+      "status": "superseded_by_af-006"
+    },
+    {
+      "failure_id": "af-006",
+      "topic": "Automated Cursor-agent Wordstat collection",
+      "reason": "Wordstat UI requires authenticated Yandex operator session — not available to Cursor agent automated fetch",
+      "impact": "Zero automated frequencies; manual operator Pass A/B authorized and Pass A in progress",
+      "grade_cap": "X_not_collected_for_automation",
+      "status": "superseded_by_pass_a_storage_ingestion",
+      "collection_date": "2026-06-22",
+      "remediation": "Manual two-pass Wordstat — Pass A PARTIAL; manual operator ingestion authorized; af-006 closed for automation scope",
+      "manual_ingestion_status": "pass_a_complete",
+      "lifecycle": "resolved",
+      "blocking": false
+    },
+    {
+      "failure_id": "af-007",
+      "topic": "Wordstat Pass A Excel export files not on disk",
+      "reason": "Operator reported Pass A Excel collection complete; recursive scan of approved loci found zero .xlsx/.xls/.csv files",
+      "impact": "Pass A remains PARTIAL — no row-level vocabulary ingested; normalized dataset empty",
+      "grade_cap": "X_not_collected",
+      "status": "superseded_by_mars_storage_ingestion",
+      "collection_date": "2026-06-22",
+      "remediation": "Place operator Excel exports in evidence/wordstat/exports/ or pass-a/ with ws-p query_id in filename; re-run tools/ingest-wordstat-pass-a.mjs",
+      "resolution_date": "2026-06-22",
+      "resolution": "Root cause: ingestion scanned in-repo loci only. Operator files were in MARS Storage at approved path.",
+      "corrected_source": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06",
+      "ingestion_result": {
+        "files_found": 18,
+        "files_parsed": 18,
+        "normalized_rows": 2399,
+        "pass_a_status": "COMPLETE"
+      },
+      "prior_false_claim": "zero Excel/CSV at approved loci — superseded",
+      "lifecycle": "resolved",
+      "blocking": false
+    },
+    {
+      "failure_id": "af-008",
+      "topic": "Playwright mobile Yandex SERP R1 — CAPTCHA on all queries",
+      "reason": "Headless Playwright iPhone 13 session — Yandex showcaptcha on all 10 r1q queries (lr=65)",
+      "impact": "R1 grade remains C — PNG/HTML saved as failure evidence; zero organic extraction",
+      "grade_cap": "C",
+      "status": "preserved_r1_corv01_all_captcha",
+      "collection_date": "2026-06-22",
+      "remediation": "Operator-supervised non-headless session with manual CAPTCHA solve; or R1 manual checklist per Triumph pilot-serp-capture-checklist.md",
+      "does_not_supersede_af-004": true,
+      "note": "Historical r1-corv01 adapter (reused browser context, headless) — all 10 CAPTCHA; superseded by zpm-workflow-corv01 partial success",
+      "zpm_workflow_partial_success": {
+        "grade_b_queries": [
+          "r1q01",
+          "r1q05"
+        ],
+        "date": "2026-06-22"
+      },
+      "lifecycle": "historical",
+      "blocking": false
+    },
+    {
+      "failure_id": "af-009",
+      "topic": "ZPM-workflow validation batch — CAPTCHA on third query",
+      "reason": "Headful fresh-browser Triumph-pattern capture; CAPTCHA on r1q07 after 2 Grade B captures",
+      "impact": "Remaining 7 R1 queries not executed; partial regional SERP evidence available",
+      "grade_cap": "B_partial",
+      "status": "partial_captcha_r1q06_r1q07",
+      "collection_date": "2026-06-22",
+      "remediation": "Resume remaining batch after cooldown with same pacing; or operator manual CAPTCHA solve",
+      "does_not_supersede_af_008": true,
+      "grade_b_queries": [
+        "r1q01",
+        "r1q05",
+        "r1q02",
+        "r1q03",
+        "r1q04",
+        "r1q08",
+        "r1q10"
+      ],
+      "captcha_queries": [
+        "r1q07",
+        "r1q06"
+      ],
+      "last_throttled_batch": "batch3",
+      "note": "Throttled resume; CAPTCHA on r1q07, r1q06; 7 Grade B",
+      "lifecycle": "accepted_limitation",
+      "blocking": false
+    }
+  ],
+  "updated_at": "2026-06-21T21:13:44.384Z",
+  "stage": "research_pack_published"
+}

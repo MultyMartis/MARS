@@ -1,0 +1,26 @@
+{
+  "evidence_id": "ws-pass-a-ws-p3-005-20260622",
+  "query_id": "ws-p3-005",
+  "entered_phrase": "маркировка автозапчастей 1С",
+  "query_mode": "broad_unquoted",
+  "geography": "all_russia",
+  "source_file": null,
+  "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+  "source_hash": "c21c9a6d2a3e93672736106738c533f037da8589a5f5adcdce961d068117887d",
+  "collection_mode": "manual_operator_export",
+  "collection_date": "2026-06-22",
+  "row_count": 73,
+  "sheet_names": [
+    "Data"
+  ],
+  "observed_wordstat_total": 6539,
+  "related_phrase_count": 73,
+  "ingestion_status": "ingested",
+  "evidence_grade": "B_semantic_discovery",
+  "external_source_classification": "mars_storage_external_evidence",
+  "limitations": [
+    "Nationwide broad — not regional Novosibirsk demand",
+    "Not exact phrase frequency",
+    "Not traffic forecast"
+  ]
+}

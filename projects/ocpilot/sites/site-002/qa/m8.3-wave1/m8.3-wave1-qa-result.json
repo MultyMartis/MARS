@@ -1,0 +1,47 @@
+{
+  "qa_utc": "2026-06-14T18:32:51.630963+00:00",
+  "base": "https://zpm.new-site.space",
+  "checks": [
+    {
+      "id": "QA-01",
+      "path": "/katalog",
+      "status": "pass",
+      "detail": "Catalog hub status=200 test_marker_hits=[]"
+    },
+    {
+      "id": "QA-02",
+      "path": "/katalog/nejtralnoe-oborudovanie",
+      "status": "pass",
+      "detail": "Neutral hub status=200 test_marker_hits=[]"
+    },
+    {
+      "id": "QA-03",
+      "path": "/index.php?route=product/category&path=301",
+      "status": "pass",
+      "detail": "Столы PLP status=200 test_marker_hits=[]"
+    },
+    {
+      "id": "QA-04",
+      "path": "/index.php?route=product/category&path=80",
+      "status": "pass",
+      "detail": "Моечные ванны PLP status=200 test_marker_hits=[]"
+    },
+    {
+      "id": "QA-05",
+      "path": "/index.php?route=product/product&product_id=3071",
+      "status": "unknown",
+      "detail": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "QA-06",
+      "path": "/index.php?route=product/product&product_id=1",
+      "status": "unknown",
+      "detail": "HTTP Error 404: Not Found"
+    }
+  ],
+  "summary": {
+    "pass": 4,
+    "fail": 0,
+    "unknown": 2
+  }
+}

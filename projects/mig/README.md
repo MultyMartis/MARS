@@ -124,7 +124,7 @@ mars-runtime → Future-integration contracts + narrow R1 experiments
 | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) | Minimal navigation — **start here** |
 | [system-overview.md](system-overview.md) | R1 mission, inputs/outputs, lifecycle |
 | [boundaries.md](boundaries.md) | Ownership matrix — **canonical boundaries** |
-| [contracts/](contracts/) | Domain contracts — Research Request (intake SoT), Research Pack (output SoT), Competitor Discovery (Phase 2), ORCA handoff |
+| [contracts/](contracts/) | Domain contracts — Research Request (intake SoT), Research Pack (output SoT), [Reality Acquisition Model](contracts/MIG-REALITY-ACQUISITION-MODEL-v1.md) (R1–R4 trust stack), Competitor Discovery (Phase 2), ORCA handoff |
 | [reports/](reports/) | Session report templates |
 
 ---

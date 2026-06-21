@@ -1,0 +1,193 @@
+{
+  "run_at": "2026-06-19T08:08:41.832895+00:00",
+  "db": "polygonws_zpm",
+  "discovered_tables": [],
+  "table_counts": {
+    "oc_coupon_product": "0",
+    "oc_customer_wishlist": "27",
+    "oc_order_product": "27",
+    "oc_product": "3134",
+    "oc_product_attribute": "10175",
+    "oc_product_description": "3134",
+    "oc_product_discount": "1",
+    "oc_product_filter": "0",
+    "oc_product_image": "6",
+    "oc_product_option": "0",
+    "oc_product_option_value": "0",
+    "oc_product_price_index": "1977",
+    "oc_product_recurring": "0",
+    "oc_product_related": "0",
+    "oc_product_reward": "0",
+    "oc_product_special": "2",
+    "oc_product_to_category": "3134",
+    "oc_product_to_download": "0",
+    "oc_product_to_layout": "57",
+    "oc_product_to_store": "3134",
+    "oc_review": "0",
+    "oc_seo_url": "3381"
+  },
+  "distinct_product_id_counts": {
+    "oc_coupon_product": "0",
+    "oc_customer_wishlist": "18",
+    "oc_order_product": "9",
+    "oc_product_attribute": "1106",
+    "oc_product_description": "3134",
+    "oc_product_discount": "1",
+    "oc_product_filter": "0",
+    "oc_product_image": "5",
+    "oc_product_option": "0",
+    "oc_product_option_value": "0",
+    "oc_product_price_index": "659",
+    "oc_product_recurring": "0",
+    "oc_product_related": "0",
+    "oc_product_reward": "0",
+    "oc_product_special": "1",
+    "oc_product_to_category": "3134",
+    "oc_product_to_download": "0",
+    "oc_product_to_layout": "57",
+    "oc_product_to_store": "3134",
+    "oc_review": "0"
+  },
+  "summary": {
+    "total_products": "3134",
+    "active_products": "609",
+    "products_with_xml_id": "3079",
+    "product_images_rows": "6",
+    "products_with_main_image": "553",
+    "product_seo_urls": "3134",
+    "product_price_index_rows": "1977",
+    "price_index_products_group2": "659",
+    "category_docs_rows": "4",
+    "order_product_rows": "27",
+    "customer_wishlist_rows": "27",
+    "coupon_product_rows": "0",
+    "reviews_rows": "0"
+  },
+  "branch_product_counts": [
+    {
+      "category_id": "79",
+      "category_name": "Нейтральное оборудование",
+      "product_count": "3134",
+      "active_count": "609"
+    },
+    {
+      "category_id": "80",
+      "category_name": "Моечные ванны",
+      "product_count": "2677",
+      "active_count": "152"
+    },
+    {
+      "category_id": "207",
+      "category_name": "Зонты вытяжные",
+      "product_count": "23",
+      "active_count": "23"
+    },
+    {
+      "category_id": "301",
+      "category_name": "Столы",
+      "product_count": "420",
+      "active_count": "420"
+    },
+    {
+      "category_id": "322",
+      "category_name": "Подтоварники и подставки",
+      "product_count": "11",
+      "active_count": "11"
+    },
+    {
+      "category_id": "326",
+      "category_name": "Тележки сервировочные",
+      "product_count": "3",
+      "active_count": "3"
+    }
+  ],
+  "main_image_samples": [
+    {
+      "image": "catalog/1c_import/d886783cc9a811f0aeba581122cf362c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/290dc81139e411efb00fa85e4515c4f4...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/00c724cbe40311e8977e60a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/895af5f22a3a11eba988a85e4515c4f4...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/5301da072f3411e9a68060a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/7694962cd8dc11e8977e60a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/7c4242f5404c11e3bb4a60a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/f55e27e4888811ebbca4a85e4515c4f4...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/28a4cc1fc36611e6b15260a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/3fefa2f8e40511e8977e60a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/72be570b0e2e11e4ac9a60a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/315e52c32f3a11e9a68060a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/0a3b0490c17b11e49b7460a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/d512022983d211e7856b60a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/cad2baae735c11e6b6d060a44cac3e7c...",
+      "cnt 1": "1"
+    }
+  ],
+  "gallery_image_samples": [
+    {
+      "image": "catalog/1c_import/90a2ca00f17111e5852960a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/12ac2cf4b52711e69eb060a44cac3e7c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/9adb6a06297311eba988a85e4515c4f4...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/b55bccdc7a3011efae97581122cf362c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/b55bccdc7a3011efae97581122cf362c...",
+      "cnt 1": "1"
+    },
+    {
+      "image": "catalog/1c_import/d886783cc9a811f0aeba581122cf362c...",
+      "cnt 1": "1"
+    }
+  ],
+  "all_tables_with_product_id": []
+}

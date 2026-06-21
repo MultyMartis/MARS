@@ -19,6 +19,7 @@ From this locus you can reach minimum understanding categories without monorepo 
 
 | Need | Go to |
 |------|-------|
+| **Current production mode** | **TEMPLATE_ART** — foundation adoption + block registry path (retroactive WF-A01 declare 2026-06-17) · passport: [projects/triumph-manipulator-landing/](../../../../projects/triumph-manipulator-landing/) · charter: [website-factory-production-modes-charter-v1.md](../../../../projects/mars-website-factory/website-factory-production-modes-charter-v1.md) |
 | Factory identity | [MOC-02-identity.md](MOC-02-identity.md) |
 | Production scope | [MOC-03-scope.md](MOC-03-scope.md) |
 | Lifecycle endpoint | [MOC-04-endpoint.md](MOC-04-endpoint.md) |

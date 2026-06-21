@@ -728,3 +728,23 @@ At audit start, the working tree was already dirty with many modified and untrac
 ---
 
 *End of audit report.*
+
+---
+
+## RC5 RESOLUTION NOTE (2026-06-19)
+
+**What changed:** WPilot RC5 finalization (`v0.3.0-RC5`) established proven plugin REST runtime on DEV (`proven_content_writes` + `proven_connection_runtime`), registered authority `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`, and shifted WPilot lifecycle to **Reference Implementation**. WPilot is registered in `registry/project-registry.md` (`wpilot`, updated 2026-06-19). In-repo plugin source exists at `projects/wpilot/plugin/metacode-wpilot/`. Sprint 3 is **HOLD**; active MVP development stream is closed.
+
+**Supersedes (for current-state readers only — historical audit findings above remain valid for 2026-05-19):**
+
+| Stale finding in this audit (2026-05-19) | Current SoT |
+|------------------------------------------|-------------|
+| §2.8 — WPilot "not runtime"; Phase 1 docs + plugin MVP planning only | [WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md), [WPILOT-AUTHORITY-STATE-RC5.md](../projects/wpilot/WPILOT-AUTHORITY-STATE-RC5.md) |
+| §2.8, §3.1, §3.2, §5.1 — WPilot missing from `registry/project-registry.md` | [registry/project-registry.md](../registry/project-registry.md) — `wpilot` row (2026-06-19) |
+| §4.1, §8 — WPilot as "planned future WordPress bridge" / plugin MVP planning | [WPILOT-LIFECYCLE-STATE.md](../projects/wpilot/WPILOT-LIFECYCLE-STATE.md) — Reference Implementation; [cms-ecommerce-pilots-family.md](../projects/ocpilot/cms-ecommerce-pilots-family.md) |
+| §12 Priority 1 — "Add wpilot to registry … not runtime" | Registry row now reflects reference implementation with proven DEV runtime; still **not** MARS core runtime |
+| §13 SAFE UNKNOWN — "Whether WPilot should be added immediately" | Resolved — registered 2026-06-19 |
+
+**Canonical discovery:** [projects/shared/reference-implementations/REFERENCE-IMPLEMENTATIONS-INDEX.md](../projects/shared/reference-implementations/REFERENCE-IMPLEMENTATIONS-INDEX.md)
+
+*Historical findings in sections 0–15 remain valid for their audit date (2026-05-19).*

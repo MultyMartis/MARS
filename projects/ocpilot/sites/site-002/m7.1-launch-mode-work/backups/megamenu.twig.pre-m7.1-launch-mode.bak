@@ -1,0 +1,106 @@
+<!-- DESKTOP CATALOG MEGA MENU -->
+<div class="zpm-catalog" id="zpmCatalog" data-catalog hidden>
+
+    <div class="zpm-catalog__panel" role="dialog" aria-modal="false" aria-label="Каталог">
+      <div class="zpm-catalog__inner">
+
+        <!-- Left column: categories -->
+        <div class="zpm-catalog__megamenu">
+          <div class="zpm-catalog__wrapp">
+            <nav class="zpm-catalog__cats" aria-label="Разделы каталога">
+              <ul class="zpm-catalog__cats-list" role="list">
+
+                  {% if categories %}
+                  {% for c in categories %}                  
+                  <li class="zpm-catalog__cats-item">
+                    <button class="zpm-catalog__cats-btn {% if c.active %}is-active{% endif %}" type="button" data-cat-btn data-cat="{{ c.name }}" >{{ c.name }}</button>
+                  </li>
+                  {% endfor %}
+                  {% endif %}
+                
+                
+              
+              </ul>
+            </nav>
+          </div>
+
+          <div class="zpm-catalog__all">
+            <a href="/katalog" class="btn zpm-catalog__all-link">
+              <span>Открыть страницу каталога</span>
+              <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__more_btn_arrow__bold"></use></svg>
+            </a>
+          </div>
+
+        </div>
+
+          <div class="zpm-catalog__megamenu zpm-catalog__wrapp-blur-box">
+            <div class="zpm-catalog__wrapp ">
+              <!-- Right column: subcategories -->
+              <div class="zpm-catalog__content">
+
+
+                    {% if categories %}
+                  {% for mainc in categories %}  
+                  <div class="zpm-catalog__pane {% if mainc.active %}is-active{% endif %}" data-cat-pane="{{ mainc.name }}">
+                    <div class="zpm-catalog__grid" role="list"> 
+
+                    {%if mainc.children %}
+                    {% for c in mainc.children %}  
+
+                        <a class="zpm-catalog__tile" href="{{ c.href }}" role="listitem">
+                          <span class="zpm-catalog__tile-img" aria-hidden="true">
+                            <img class="" src="{{ c.thumb300 }}" alt="{{ c.name }}">
+                          </span>
+
+                          <div class="zpm-catalog__tile-block">
+                            <span class="zpm-catalog__tile-title">{{ c.name }}</span>
+                            <div class="zpm-catalog__tile-list-counter">
+                              <span>Товаров:</span>
+                              <span>{{ c.count }} шт.</span>
+                            </div>
+                          </div>
+
+                        </a>
+                    {% endfor %}
+                    {% endif %}
+                    </div>
+                  </div>
+                  {% endfor %}
+                {% endif %}
+
+            </div>
+          </div>
+
+          <div class="zpm-catalog__last-block">
+            <button
+              type="button"
+              class="btn btn_dark btn--primary"
+              data-fancybox
+              data-src="#zpmFbCallback"
+              data-zpm-fb-mode="2"
+            >
+              <!-- <img src="assets/img/zpm_ico__callback.svg" alt=""> -->
+              <span>Заказать звонок</span>
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-fancybox
+              data-src="#zpmFbQuestion"
+              data-zpm-fb-mode="2"
+            >
+              <!-- <img src="assets/img/zpm_ico__callback.svg" alt=""> -->
+              <span>Задать вопрос</span>
+            </button>
+            <!-- data-catalog-close -->
+            <button type="button" class="btn btn__close" data-catalog-close aria-label="Закрыть окно" title="Закрыть окно">
+              <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__close"></use></svg>
+              <span>Закрыть</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>

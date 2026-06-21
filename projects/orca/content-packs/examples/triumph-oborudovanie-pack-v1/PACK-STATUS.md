@@ -2,7 +2,7 @@
 
 route_id: oborudovanie
 route_folder: oborudovanie
-url: https://manipulator-triumph.ru/perevozka-oborudovaniya/
+url: https://manipulator-triumph.ru/oborudovanie.html
 display_path: oborudovanie
 content_coverage: true
 production_copy_ready: true

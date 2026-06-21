@@ -13,7 +13,7 @@ Mark **PASS** / **FAIL** / **N/A** / **WAIVED (operator initial + date)**.
 | # | Check | PASS criteria |
 |---|-------|---------------|
 | 1.1 | `route_id` matches `landing-route-registry.json` | Exact ID |
-| 1.2 | `canonical_url` / slug correct | Includes fbs-zhbi `/perevozka-fbs-zhbi/` if applicable |
+| 1.2 | `canonical_url` / slug correct | Matches registry `.html` paths (e.g. `/fbs-zhbi.html`) |
 | 1.3 | `group_id` + campaign ref documented | Instance JSON cited |
 | 1.4 | Blueprint path pinned | Not folder-only `landing-pages/` |
 | 1.5 | V6 `factory_hints` partial paths | Under `triumph-manipulator-landing-v6` |

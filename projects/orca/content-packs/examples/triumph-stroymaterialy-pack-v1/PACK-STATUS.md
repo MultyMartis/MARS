@@ -2,7 +2,7 @@
 
 route_id: stroymaterialy
 route_folder: stroymaterialy
-url: SAFE UNKNOWN
+url: https://manipulator-triumph.ru/stroymaterialy.html
 display_path: stroymaterialy
 content_coverage: true
 production_copy_ready: true

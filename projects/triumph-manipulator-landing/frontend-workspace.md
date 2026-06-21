@@ -8,7 +8,8 @@ Historical: `workspaces/triumph-manipulator-landing-v5/` (mailer MVP freeze), `w
 
 This directory is the **local working area** for frontend implementation. It is intentionally **not** the MARS documentation pack under `projects/triumph-manipulator-landing/`.
 
-**Canonical rules:** [`TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](TRIUMPH-V6-CURRENT-FRONTEND-RULES.md)
+**Canonical rules:** [`TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](TRIUMPH-V6-CURRENT-FRONTEND-RULES.md)  
+**Version lineage (v1–v6):** [`triumph-workspace-authority-map-v1.md`](triumph-workspace-authority-map-v1.md)
 
 ## Intended use (later)
 

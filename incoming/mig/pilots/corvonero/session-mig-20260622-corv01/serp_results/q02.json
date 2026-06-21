@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q02",
+  "captured_at": "2026-06-22T12:36:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "city": "Новосибирск",
+  "device": "mobile",
+  "query": "сопровождение 1С Новосибирск",
+  "serp_type": "commercial_service_pages",
+  "acquisition_limitations": ["Bounded web search; no SERP screenshot"],
+  "aggregators": [],
+  "organic_results": [
+    { "position": 1, "title": "Сопровождение 1С под ключ в Новосибирске", "url": "https://profinfoservice.ru/novosibirsk/soprovozhdenie-1c/", "surface_type": "organic", "snippet": "Profinfoservice — комплексное сопровождение 1С", "player_scope": "local_company" },
+    { "position": 2, "title": "Техническая поддержка и обслуживание 1С в Новосибирске", "url": "https://novosibirsk.rdn-service.ru/services/podderzhka/tekhnicheskaya-podderzhka-1s/", "surface_type": "organic", "snippet": "RDN Group — удалённая поддержка по РФ", "player_scope": "federal_remote" },
+    { "position": 3, "title": "Обслуживание 1С в Новосибирске", "url": "https://avanta-pro.ru/services/uslugi-1s/obsluzhivanie-1s/", "surface_type": "organic", "snippet": "Avanta Pro — абонентское от 7800 руб/мес", "player_scope": "local_franchisee" },
+    { "position": 4, "title": "Сопровождение 1С - Новосибирск", "url": "https://novosibirsk.kkm.center/klientam/soprovozhdenie-1s/", "surface_type": "organic", "snippet": "ККМ.Центр — дистанционное сопровождение", "player_scope": "local_franchisee" },
+    { "position": 5, "title": "Абонентское сопровождение 1С", "url": "https://wiseadvice-it.ru/uslugi-1s/soprovozhdenie/abonentskoe/", "surface_type": "organic", "snippet": "WiseAdvice — федеральный провайдер, удалённо", "player_scope": "federal_remote" }
+  ],
+  "commercial_signal": "strong",
+  "noise_signal": "low"
+}

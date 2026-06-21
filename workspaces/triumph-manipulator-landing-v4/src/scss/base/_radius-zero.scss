@@ -1,0 +1,28 @@
+// Strict zero-radius pack — blocks, controls, media (v5 interaction pack)
+.button,
+.site-modal__dialog,
+.site-modal__close,
+.site-form__input,
+.site-form__consent-box,
+.site-form__status,
+.site-form__reach-phone,
+.site-form__reach-max,
+.site-header__burger,
+.site-header__drawer-close,
+.site-header__messenger,
+.faq-item,
+.proof-strip__item i,
+.proof-strip__logos,
+.machine-transport__card,
+.machine-showcase__media,
+.hero-form,
+.contact-form__panel,
+.landing-footer__legal-card {
+    border-radius: 0;
+}
+
+img,
+video,
+picture {
+    border-radius: 0;
+}

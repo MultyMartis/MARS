@@ -1,0 +1,134 @@
+{
+  "task": "M9.7C category image deploy + megamenu cleanup",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "rollback_source": "SITE-002-STABLE-M9-COMPLETE-20260615",
+  "deployed_at_utc": "20260614-215218",
+  "images": [
+    {
+      "local": "C:\\AI MARS\\image\\catalog\\Category-image\\stoly.webp",
+      "remote": "image/catalog/Category-image/stoly.webp",
+      "bytes": 65110,
+      "sha256": "1c8804f506d321f7b0ec867214a4e3d4fb148f9d14bea80c3d74171d0dface3f"
+    },
+    {
+      "local": "C:\\AI MARS\\image\\catalog\\Category-image\\moechnye-vanny.webp",
+      "remote": "image/catalog/Category-image/moechnye-vanny.webp",
+      "bytes": 82702,
+      "sha256": "d2bc204a0ab81266fb76ae548e1be4e794f5efead2f07d15caee5db3ad186375"
+    },
+    {
+      "local": "C:\\AI MARS\\image\\catalog\\Category-image\\podtovarniki-i-podstavki.webp",
+      "remote": "image/catalog/Category-image/podtovarniki-i-podstavki.webp",
+      "bytes": 59172,
+      "sha256": "7ad714d10e315b65ba95fdeebc141f86138a6ae9b03f7d04775b9fa8977739cb"
+    },
+    {
+      "local": "C:\\AI MARS\\image\\catalog\\Category-image\\zonty-vytyazhnye.webp",
+      "remote": "image/catalog/Category-image/zonty-vytyazhnye.webp",
+      "bytes": 112666,
+      "sha256": "453eb18ad821bd7c323b0e35b38febb92675fdbf292721d2f37f2d37e574d5b1"
+    },
+    {
+      "local": "C:\\AI MARS\\image\\catalog\\Category-image\\telezhki-servirovochnye.webp",
+      "remote": "image/catalog/Category-image/telezhki-servirovochnye.webp",
+      "bytes": 106614,
+      "sha256": "8ed52705395b0a6628b189aa8e0c153474b649f3a2975510877cff04a01c017e"
+    }
+  ],
+  "db_before": [
+    {
+      "category_id 1": "DELETE FROM `oc_category` WHERE `oc_category`.`category_id` = 80",
+      "image": "80"
+    },
+    {
+      "category_id 1": "DELETE FROM `oc_category` WHERE `oc_category`.`category_id` = 207",
+      "image": "207"
+    }
+  ],
+  "db_updates": [
+    {
+      "category_id": 301,
+      "image": "catalog/Category-image/stoly.webp",
+      "result": {
+        "affected": "1"
+      }
+    },
+    {
+      "category_id": 80,
+      "image": "catalog/Category-image/moechnye-vanny.webp",
+      "result": {
+        "affected": "1"
+      }
+    },
+    {
+      "category_id": 322,
+      "image": "catalog/Category-image/podtovarniki-i-podstavki.webp",
+      "result": {
+        "affected": "1"
+      }
+    },
+    {
+      "category_id": 207,
+      "image": "catalog/Category-image/zonty-vytyazhnye.webp",
+      "result": {
+        "affected": "1"
+      }
+    },
+    {
+      "category_id": 326,
+      "image": "catalog/Category-image/telezhki-servirovochnye.webp",
+      "result": {
+        "affected": "1"
+      }
+    }
+  ],
+  "db_after": [],
+  "pre_backup": [
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7c-image-megamenu-work\\backups\\pre-m9.7c-system__library__zpm__category_visibility.php",
+      "sha256": "029b22a35513cb79d728a7e78b07f9a4741b2dde4650562cf0297da5b508623f",
+      "bytes": 3965
+    },
+    {
+      "remote": "catalog/controller/common/header.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7c-image-megamenu-work\\backups\\pre-m9.7c-catalog__controller__common__header.php",
+      "sha256": "804548a608a1579eeacc92ded17bcf27b8966ec244fff53f4446ba1ab08e4bc2",
+      "bytes": 7592
+    },
+    {
+      "remote": "catalog/controller/product/katalog.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7c-image-megamenu-work\\backups\\pre-m9.7c-catalog__controller__product__katalog.php",
+      "sha256": "f91b9a894c55fa50d689de39df6ef44ec5d4e4180f66ae462069695c2ae9cc0e",
+      "bytes": 5700
+    }
+  ],
+  "files": [
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7c-image-megamenu-work\\patch\\system\\library\\zpm\\category_visibility.php",
+      "sha256": "da5d81e94e4eba574b94ddb894907d3a0362574906b8248fb1bde4605028cb74",
+      "bytes": 5543
+    },
+    {
+      "remote": "catalog/controller/common/header.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7c-image-megamenu-work\\patch\\catalog\\controller\\common\\header.php",
+      "sha256": "e77fa0bb2200845ba8ba10f43279b6dd173465ad2ee007f79953b337cf9b3bd7",
+      "bytes": 7670
+    },
+    {
+      "remote": "catalog/controller/product/katalog.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.7c-image-megamenu-work\\patch\\catalog\\controller\\product\\katalog.php",
+      "sha256": "b9c9f32221e81c3c1aa56324e032dfe82b7f0d42b05c44b841e13811c748dfb2",
+      "bytes": 6345
+    }
+  ],
+  "cache": {
+    "attrs": [],
+    "twig": [],
+    "catlist": [],
+    "image_cache": [],
+    "errors": []
+  }
+}

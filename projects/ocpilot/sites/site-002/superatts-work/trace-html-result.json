@@ -1,0 +1,183 @@
+{
+  "vks_url_resolution": {
+    "url": "https://zpm.new-site.space/Structure SQL Search Insert Browse",
+    "meta": {
+      "Target for quick access icon": "Target for second quick access icon",
+      "Structure SQL Search Insert Browse": "Structure SQL Search Insert Browse"
+    }
+  },
+  "VKS": {
+    "url": "https://zpm.new-site.space/Structure SQL Search Insert Browse",
+    "error": "URL can't contain control characters. '/Structure SQL Search Insert Browse' (found at least ' ')"
+  },
+  "SPKB": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+    "http_ok": true,
+    "hero_primary": [
+      {
+        "name": "Длина, мм",
+        "value": "1800"
+      },
+      {
+        "name": "Ширина, мм",
+        "value": "700"
+      },
+      {
+        "name": "Высота, мм",
+        "value": "850"
+      },
+      {
+        "name": "Масса, кг",
+        "value": "71"
+      }
+    ],
+    "hero_additional": [
+      {
+        "name": "Конструкция",
+        "value": "сварная (неразборная)"
+      },
+      {
+        "name": "Наличие борта",
+        "value": "есть"
+      },
+      {
+        "name": "Ножки",
+        "value": "труба 40х40 (нержавеющая сталь AISI 430, 1.2 мм)"
+      },
+      {
+        "name": "Отверстие под смеситель",
+        "value": "есть"
+      },
+      {
+        "name": "Размер раковины (ДхШхВ, мм)",
+        "value": "500х500х300"
+      },
+      {
+        "name": "Тип опоры",
+        "value": "опора-болт"
+      }
+    ],
+    "hero_total": 10,
+    "has_split_markup": true,
+    "has_additional_dl": true,
+    "debug_pre": false,
+    "terms": {
+      "Конструкция": {
+        "found_in_html": true,
+        "location": [
+          "hero"
+        ],
+        "hero_snippet": "       <div class=\"product-hero__prop\">\n                <dt>Конструкция</dt>\n                <dd>сварная (неразборная)</dd>\n              </div>\n                            <div class=\"product-hero__prop\">\n                <dt>Наличие борта</dt>\n                <dd>есть</dd>\n              </div>\n    "
+      },
+      "Наличие борта": {
+        "found_in_html": true,
+        "location": [
+          "hero"
+        ],
+        "hero_snippet": "       <div class=\"product-hero__prop\">\n                <dt>Наличие борта</dt>\n                <dd>есть</dd>\n              </div>\n                            <div class=\"product-hero__prop\">\n                <dt>Ножки</dt>\n                <dd>труба 40х40 (нержавеющая сталь AISI 430, 1.2 мм)</dd>\n    "
+      },
+      "Ножки": {
+        "found_in_html": true,
+        "location": [
+          "hero"
+        ],
+        "hero_snippet": "       <div class=\"product-hero__prop\">\n                <dt>Ножки</dt>\n                <dd>труба 40х40 (нержавеющая сталь AISI 430, 1.2 мм)</dd>\n              </div>\n                            <div class=\"product-hero__prop\">\n                <dt>Отверстие под смеситель</dt>\n                <dd>есть"
+      },
+      "Отверстие под смеситель": {
+        "found_in_html": true,
+        "location": [
+          "hero"
+        ],
+        "hero_snippet": "       <div class=\"product-hero__prop\">\n                <dt>Отверстие под смеситель</dt>\n                <dd>есть</dd>\n              </div>\n                            <div class=\"product-hero__prop\">\n                <dt>Размер раковины (ДхШхВ, мм)</dt>\n                <dd>500х500х300</dd>\n         "
+      },
+      "Размер раковины": {
+        "found_in_html": true,
+        "location": [
+          "hero"
+        ],
+        "hero_snippet": "       <div class=\"product-hero__prop\">\n                <dt>Размер раковины (ДхШхВ, мм)</dt>\n                <dd>500х500х300</dd>\n              </div>\n                            <div class=\"product-hero__prop\">\n                <dt>Тип опоры</dt>\n                <dd>опора-болт</dd>\n              </d"
+      },
+      "Тип опоры": {
+        "found_in_html": true,
+        "location": [
+          "hero"
+        ],
+        "hero_snippet": "       <div class=\"product-hero__prop\">\n                <dt>Тип опоры</dt>\n                <dd>опора-болт</dd>\n              </div>\n                          </dl>\n                      </div>\n          \n\n       <div class=\"product-hero__actions-wrap\">\n\n      \n            <div class=\"product-hero__a"
+      },
+      "Усиление": {
+        "found_in_html": false,
+        "location": [
+          "not found"
+        ],
+        "hero_snippet": null
+      }
+    },
+    "css_rules": {
+      ".product-hero__props--additional": [
+        {
+          "display": "grid"
+        },
+        {
+          "display": "flex",
+          "height": "0"
+        },
+        {
+          "height": "14px"
+        },
+        {
+          "height": "14px"
+        }
+      ],
+      ".product-hero__specs--split": [],
+      ".product-hero__props": [
+        {
+          "overflow": "hidden"
+        },
+        {
+          "display": "grid"
+        },
+        {
+          "display": "flex",
+          "height": "52px"
+        },
+        {
+          "height": "16px"
+        },
+        {
+          "height": "var(--mini-Line-height)"
+        },
+        {
+          "display": "grid"
+        },
+        {
+          "display": "flex",
+          "height": "0"
+        },
+        {
+          "height": "14px"
+        },
+        {
+          "height": "14px"
+        },
+        {
+          "height": "48px"
+        },
+        {
+          "display": "grid"
+        }
+      ],
+      ".product-hero__specs": [
+        {
+          "display": "flex"
+        }
+      ]
+    },
+    "css_files": [
+      "/assets/css/vendor/swiper/swiper-bundle.min.css",
+      "/assets/css/vendor/fancybox/fancybox.css",
+      "/assets/css/style.css",
+      "/assets/css/style.min.css",
+      "/assets/css/sd.css"
+    ]
+  }
+}

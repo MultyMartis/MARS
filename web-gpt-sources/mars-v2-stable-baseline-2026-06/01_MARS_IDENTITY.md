@@ -16,7 +16,7 @@
 | Survivability baseline | **Achieved** (Cycles 3–7) |
 | Global validation | **Cycle 8 complete** — confirms baseline; **no** redesign authorization |
 | Governance | **Frozen** — **maintenance mode** |
-| Primary value | **Operational-first** delivery (ORCA, Factory, programmes) |
+| Primary value | **Operational-first** delivery (ORCA, Factory, ATLAS population discipline, OPS reporting pilots, programmes) |
 
 **MARS is:** operational intelligence, honest boundaries, registry discipline, pack-local OPERATIONAL-INDEX navigation, REPORT closeout culture.
 

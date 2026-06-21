@@ -1,0 +1,113 @@
+<div
+    class="site-modal"
+    id="modal-callback"
+    data-modal
+    data-modal-id="modal-callback"
+    aria-hidden="true"
+    hidden
+>
+    <div class="site-modal__overlay" data-modal-close tabindex="-1" aria-hidden="true"></div>
+    <div
+        class="site-modal__dialog site-modal__dialog--callback"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-callback-title"
+    >
+        <button class="site-modal__close" type="button" data-modal-close aria-label="Закрыть">
+            <span aria-hidden="true"></span>
+        </button>
+
+        <form
+            class="site-form site-form--dark callback-form"
+            action="#"
+            method="post"
+            data-form
+            data-form-id="@@prefix-callback"
+            data-form-name="Обратный звонок"
+            data-form-handler="mock"
+            data-form-success="Спасибо! Заявка принята — скоро перезвоним и уточним детали."
+            aria-label="Форма обратного звонка"
+        >
+            <div class="site-form__hidden" data-form-hidden aria-hidden="true">
+                <input type="hidden" name="page_url" data-form-field="page_url" value="">
+                <input type="hidden" name="page_type" data-form-field="page_type" value="">
+                <input type="hidden" name="form_id" data-form-field="form_id" value="">
+                <input type="hidden" name="form_name" data-form-field="form_name" value="">
+                <input type="hidden" name="cta_source" data-form-field="cta_source" value="">
+                <input type="hidden" name="timestamp" data-form-field="timestamp" value="">
+            </div>
+
+            <h2 class="site-form__title" id="modal-callback-title" data-modal-dynamic-title data-modal-title-default="Обратный звонок">Обратный звонок</h2>
+            <p class="site-form__lead">Оставьте имя и&nbsp;телефон — перезвоним и&nbsp;уточним задачу.</p>
+
+            <div class="site-form__field" data-form-field-wrap>
+                <label class="site-form__label" for="callback-name">
+                    <span class="site-form__label-text">Имя</span>
+                    <input
+                        class="site-form__input"
+                        id="callback-name"
+                        type="text"
+                        name="name"
+                        placeholder="Ваше имя"
+                        autocomplete="name"
+                        data-validate="required name"
+                        required
+                        data-modal-focus
+                    >
+                </label>
+                <span class="site-form__error" data-form-error hidden></span>
+            </div>
+
+            <div class="site-form__field" data-form-field-wrap>
+                <label class="site-form__label" for="callback-phone">
+                    <span class="site-form__label-text">Телефон</span>
+                    <input
+                        class="site-form__input"
+                        id="callback-phone"
+                        type="tel"
+                        name="phone"
+                        placeholder="Телефон"
+                        autocomplete="tel"
+                        data-phone-mask
+                        data-validate="required phone"
+                        required
+                    >
+                </label>
+                <span class="site-form__error" data-form-error hidden></span>
+            </div>
+
+            <button class="button button--primary site-form__submit" type="submit">Перезвоните мне</button>
+
+            <p class="site-form__note">Перезвоним и&nbsp;уточним: тип груза · адрес подачи · возможность работы · ориентировочную стоимость.</p>
+
+            <div class="site-form__field site-form__field--consent" data-form-field-wrap>
+                <label class="site-form__consent">
+                    <input
+                        class="site-form__consent-input"
+                        type="checkbox"
+                        name="consent"
+                        value="1"
+                        data-validate="required consent"
+                        required
+                    >
+                    <span class="site-form__consent-box" aria-hidden="true"></span>
+                    <span class="site-form__consent-text">Я&nbsp;даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a href="/consent-personal-data/" target="_blank">Согласием на&nbsp;обработку персональных данных</a> и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy/" target="_blank">Политикой конфиденциальности</a>.</span>
+                </label>
+                <span class="site-form__error" data-form-error hidden>Подтвердите согласие на&nbsp;обработку данных</span>
+            </div>
+
+            <div class="site-form__reach" aria-label="Связаться напрямую">
+                <a class="site-form__reach-phone" href="tel:+79004658331">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    <span>+7&nbsp;(900)&nbsp;465-83-31</span>
+                </a>
+                <a class="site-form__reach-max" href="#contacts" aria-label="Написать в&nbsp;MAX">
+                    <img src="/assets/img/social/MAX-ico.svg" alt="" width="22" height="22" decoding="async">
+                    <span>MAX</span>
+                </a>
+            </div>
+
+            <div class="site-form__status" data-form-status role="status" aria-live="polite" hidden></div>
+        </form>
+    </div>
+</div>

@@ -59,6 +59,9 @@
 | `CART` | SECONDARY_CONVERSION | Cart review → checkout |
 | `LEGAL_LINKS` | LEGAL | L1–L4 link cluster |
 | `FOOTER` | SYSTEM | Global shell |
+| `HEADER_NAV` | SYSTEM | Global shell navigation |
+| `FILTERS` | INFORMATIONAL | PLP refinement / discovery |
+| `SEARCH` | INFORMATIONAL | Query entry and results routing |
 
 ---
 

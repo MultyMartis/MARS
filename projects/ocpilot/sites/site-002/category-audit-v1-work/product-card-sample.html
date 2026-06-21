@@ -1,0 +1,13 @@
+<div class="product-card__actions" data-product-id="3210" data-cart-card>
+      <!-- ADD button (CARD: видна только при qty=0) -->
+      <button class="btn btn_dark btn--primary btn-qty--toogle" type="button" data-cart-add>
+        <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__cart"></use></svg>
+        <span class="btn__text">В корзину</span>
+      </button>
+
+      <!-- qty stepper (CARD: появляется ВМЕСТО кнопки при qty>=1) -->
+      <div class="zpm-qty zpm-qty--card btn-qty--toogle" data-cart-qty data-cart-qty-card data-product-id="3210" aria-hidden="true">
+        <button type="button" class="zpm-qty__btn" data-qty-minus aria-label="Уменьшить">−</button>
+        <span class="zpm-qty__val" data-qty-value aria-live="polite">0</span>
+        <button type="button" class="zpm-qty__btn" data-qty-plus aria-label="Увеличить">+</button>
+      </div>

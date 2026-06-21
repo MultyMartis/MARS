@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q04",
+  "captured_at": "2026-06-22T12:38:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "без гео / Новосибирск в выдаче",
+  "city": "Новосибирск",
+  "device": "mobile",
+  "query": "доработка отчёта 1С",
+  "serp_type": "commercial_mixed",
+  "organic_results": [
+    { "position": 1, "title": "Доработка и сопровождение 1С в Новосибирске", "url": "https://vigyana.ru/uslugi/1s-programmirovanie/", "surface_type": "organic", "snippet": "Вигьяна — создание/доработка отчётов от 3200 руб", "player_scope": "local_company" },
+    { "position": 2, "title": "Доработка 1С в Новосибирске | Инфотех", "url": "https://it-russia.com/services/dorabotka-1s/", "surface_type": "organic", "snippet": "Infotech — доработка отчётов и модулей", "player_scope": "local_company" },
+    { "position": 3, "title": "Доработка программ 1С — Айтиллект", "url": "https://www.itllekt.ru/1c/services/maintenance/dorabotka-1s/", "surface_type": "organic", "snippet": "Официальный партнёр 1С, Новосибирск", "player_scope": "local_franchisee" },
+    { "position": 4, "title": "Услуги 1С в Новосибирске — Гигант", "url": "https://www.gigansk.ru/services/", "surface_type": "organic", "snippet": "Модификация и доработка 1С", "player_scope": "local_franchisee" },
+    { "position": 5, "title": "Программист 1С — Avanta Pro", "url": "https://avanta-pro.ru/services/uslugi-1s/programmist-1s/", "surface_type": "organic", "snippet": "Раздел про доработку отчётов и печатных форм", "player_scope": "local_franchisee" }
+  ],
+  "commercial_signal": "moderate_strong",
+  "noise_signal": "low"
+}

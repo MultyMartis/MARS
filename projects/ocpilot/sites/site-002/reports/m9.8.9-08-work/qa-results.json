@@ -1,0 +1,215 @@
+{
+  "task": "M9.8.9-08",
+  "run_at": "2026-06-19T13:23:04.340960+00:00",
+  "categories": [
+    {
+      "id": "stoly",
+      "name": "Столы",
+      "category_id": 301,
+      "checks": {
+        "group_reset_buttons_present": {
+          "pass": true,
+          "reset_buttons": 12,
+          "attr_input_markers": 30,
+          "note": "telezhki: no attr groups expected"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "reload_active_group_shows_reset": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+          "active_checks": 0,
+          "pass": false,
+          "note": "checked attr on reload — reset button markup present"
+        },
+        "reload_inactive_groups_hidden": {
+          "pass": true,
+          "hidden_reset_buttons": 12,
+          "total_reset_buttons": 12,
+          "note": "Option A: only groups with selection should expose reset (hidden attr on others)"
+        },
+        "attr_filter_works": {
+          "filter": "attr[51][]=Без полки",
+          "product_cards": 15,
+          "pass": true
+        },
+        "multi_group_selection": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8&filters=attr[47][]=%D0%9D%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C",
+          "pass": true,
+          "hidden_on_inactive": 12,
+          "note": "two attr groups selected — both should have reset controls in markup"
+        },
+        "only_with_price_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1",
+          "product_cards": 15,
+          "pass": true
+        },
+        "price_filter_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=price_from=1000&price_to=500000",
+          "product_cards": 15,
+          "pass": true
+        },
+        "group_reset_with_only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8&only_with_price=1",
+          "product_cards": 15,
+          "pass": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "id": "moechnye",
+      "name": "Моечные ванны",
+      "category_id": 80,
+      "checks": {
+        "group_reset_buttons_present": {
+          "pass": true,
+          "reset_buttons": 12,
+          "attr_input_markers": 39,
+          "note": "telezhki: no attr groups expected"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "reload_active_group_shows_reset": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=1100%D1%85500%D1%85400",
+          "active_checks": 0,
+          "pass": false,
+          "note": "checked attr on reload — reset button markup present"
+        },
+        "reload_inactive_groups_hidden": {
+          "pass": true,
+          "hidden_reset_buttons": 12,
+          "total_reset_buttons": 12,
+          "note": "Option A: only groups with selection should expose reset (hidden attr on others)"
+        },
+        "attr_filter_works": {
+          "filter": "attr[shell-size][]=1100х500х400",
+          "product_cards": 2,
+          "pass": true
+        },
+        "only_with_price_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=only_with_price=1",
+          "product_cards": 15,
+          "pass": true
+        },
+        "price_filter_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=price_from=1000&price_to=500000",
+          "product_cards": 15,
+          "pass": true
+        },
+        "group_reset_with_only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=1100%D1%85500%D1%85400&only_with_price=1",
+          "product_cards": 2,
+          "pass": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "id": "podtovarniki",
+      "name": "Подтоварники и подставки",
+      "category_id": 322,
+      "checks": {
+        "group_reset_buttons_present": {
+          "pass": true,
+          "reset_buttons": 12,
+          "attr_input_markers": 38,
+          "note": "telezhki: no attr groups expected"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "reload_active_group_shows_reset": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+          "active_checks": 0,
+          "pass": false,
+          "note": "checked attr on reload — reset button markup present"
+        },
+        "reload_inactive_groups_hidden": {
+          "pass": true,
+          "hidden_reset_buttons": 12,
+          "total_reset_buttons": 12,
+          "note": "Option A: only groups with selection should expose reset (hidden attr on others)"
+        },
+        "attr_filter_works": {
+          "filter": "attr[51][]=600х400х300",
+          "product_cards": 1,
+          "pass": true
+        },
+        "only_with_price_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=only_with_price=1",
+          "product_cards": 11,
+          "pass": true
+        },
+        "price_filter_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=price_from=1000&price_to=500000",
+          "product_cards": 11,
+          "pass": true
+        },
+        "group_reset_with_only_with_price": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300&only_with_price=1",
+          "product_cards": 1,
+          "pass": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "id": "telezhki",
+      "name": "Тележки сервировочные",
+      "category_id": 326,
+      "checks": {
+        "group_reset_buttons_present": {
+          "pass": true,
+          "reset_buttons": 0,
+          "attr_input_markers": 0,
+          "note": "telezhki: no attr groups expected"
+        },
+        "price_not_affected": {
+          "pass": true
+        },
+        "global_reset_preserved": {
+          "pass": true
+        },
+        "attr_filter_works": {
+          "filter": "baseline (no attr sidebar)",
+          "pass": true
+        },
+        "only_with_price_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=only_with_price=1",
+          "product_cards": 3,
+          "pass": true
+        },
+        "price_filter_unaffected": {
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=price_from=1000&price_to=500000",
+          "product_cards": 3,
+          "pass": true
+        }
+      },
+      "pass": true
+    }
+  ],
+  "global_checks": {
+    "main_js_group_reset": {
+      "pass": true
+    },
+    "headbar_markup": {
+      "pass": true
+    },
+    "distinct_selector": {
+      "pass": true,
+      "note": "group reset uses data-filter-group-reset; global data-filter-reset preserved"
+    }
+  },
+  "all_pass": false
+}

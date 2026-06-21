@@ -23,6 +23,7 @@
 | Site ID | Slug | Platform | Version | Baseline | Status | Storage Location | Last Intake | Notes |
 |---------|------|----------|---------|----------|--------|------------------|-------------|-------|
 | SITE-001 | site-001 | ocStore | 3.0.3.8 (rs.2) | `ocstore-3038-rs2` (approved) | **READY FOR AUDIT** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\` | 2026-06-01 (Run 4.99 — intake closed) | Intake complete; baseline approved; read-only audit chartered. Passport: [sites/site-001/site-passport.md](sites/site-001/site-passport.md). Charter: [sites/site-001/AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md). |
+| SITE-002 | site-002 | ocStore / OpenCart | SAFE UNKNOWN | SAFE UNKNOWN | **AWAITING INTAKE** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` | 2026-06-09 (Run 4.113 — registration) | ЗПМ TEST `zpm.new-site.space`; PDP/Catalog UX pilot. Passport: [sites/site-002/site-passport.md](sites/site-002/site-passport.md). Credentials pending in external `secrets/`. |
 
 ---
 

@@ -126,6 +126,24 @@
       "y": 680,
       "width": 280,
       "height": 120
+    },
+    {
+      "id": "n-prog-atlas",
+      "type": "text",
+      "text": "## ATLAS\n\n\n**REGISTERED** · Business Reality Registry\n`projects/atlas/` · foundation + population Waves 1–6B (docs)",
+      "x": 360,
+      "y": 680,
+      "width": 280,
+      "height": 120
+    },
+    {
+      "id": "n-prog-ops",
+      "type": "text",
+      "text": "## OPS\n\n\n**REGISTERED** · Business Operations Domain\n`projects/ops/` · WF-01/WF-02 pilots PARTIAL",
+      "x": 680,
+      "y": 680,
+      "width": 280,
+      "height": 120
     }
   ],
   "edges": [
@@ -244,6 +262,33 @@
       "toSide": "left",
       "toEnd": "arrow",
       "label": "REGISTERED entry"
+    },
+    {
+      "id": "e-hub-atlas",
+      "fromNode": "n-prog-hub",
+      "fromSide": "bottom",
+      "toNode": "n-prog-atlas",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "business reality registry"
+    },
+    {
+      "id": "e-ops-atlas",
+      "fromNode": "n-prog-ops",
+      "fromSide": "right",
+      "toNode": "n-prog-atlas",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "consumes identity"
+    },
+    {
+      "id": "e-hub-ops",
+      "fromNode": "n-prog-hub",
+      "fromSide": "bottom",
+      "toNode": "n-prog-ops",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "back-office workflows"
     }
   ]
 }

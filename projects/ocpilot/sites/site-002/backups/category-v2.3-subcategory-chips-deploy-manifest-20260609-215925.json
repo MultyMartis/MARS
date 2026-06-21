@@ -1,0 +1,36 @@
+{
+  "stamp": "20260609-215925",
+  "task": "category-v2.3-subcategory-chips-pass",
+  "deployed_at": "2026-06-09T21:59:33.783488+00:00",
+  "deployed": {
+    "category.twig": {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.3-subcategory-chips-pass-work\\category.twig",
+      "sha256": "f27e904ca043cf975b17218442eba8b2dbd5e38a76038059441873f62df375df",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.twig.pre-subcategory-chips-pass.bak",
+      "rollback_sha256": "b636ad2ee1047411a8e590a19db4b1e4e52bd7b5f09ced26a71765ac7ba4934e"
+    },
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.3-subcategory-chips-pass-work\\style.css",
+      "sha256": "4d02d64700270209eb46a9eb2593e66f2452893786ebce7407410dbbfcb6b1c6",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-subcategory-chips-pass.bak",
+      "rollback_sha256": "c2cdc2e4bebaba3f30ade2ee8a99e1a3c69171feba46ddbbfe2d468bb4193003"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.3-subcategory-chips-pass-work\\main.js",
+      "sha256": "e0bb240a72a6f9a2f562a66a909bf169a64f8dc9608355a59f181712baa0742f",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-subcategory-chips-pass.bak",
+      "rollback_sha256": "d69e586405008c26579d73857b7d2c2c08a590e39f53ff0b2a406f472cbced45"
+    }
+  },
+  "cache_cleared": 0,
+  "cache_errors": [],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.twig.pre-subcategory-chips-pass.bak -> catalog/view/theme/default/template/product/category.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-subcategory-chips-pass.bak -> assets/css/style.css",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-subcategory-chips-pass.bak -> assets/js/main.js",
+    "Clear system/storage/cache/template/"
+  ]
+}

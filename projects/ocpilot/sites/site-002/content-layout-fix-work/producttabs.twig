@@ -1,0 +1,93 @@
+<section class="product-content">
+  <div class="container">
+    <div class="product-content__grid{% if documents %} product-content__grid--with-side{% endif %}">
+
+      <div class="product-content__main">
+        {% if description|striptags|trim %}
+        <section class="product-content__description product-content__card">
+          <h3 class="section-title__like-h3">Описание</h3>
+          <div class="content">
+            {{ description }}
+          </div>
+        </section>
+        {% endif %}
+
+        <section class="product-content__specifications product-content__card">
+          <h3 class="section-title__like-h3">Технические характеристики</h3>
+          <div class="spec-table">
+            {% if attribute_groups %}
+            {% for ag in attribute_groups %}
+              {% if ag.attribute %}
+                {% for a in ag.attribute %}
+                <div class="spec-table__row">
+                  <div class="spec-table__key">{{ a.name }}</div>
+                  <div class="spec-table__val">{{ a.text }}</div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+        </section>
+      </div>
+
+      {% if documents %}
+      <aside class="product-content__side">
+        <section class="product-content__documents product-content__card">
+          <h3 class="section-title__like-h3">Документы</h3>
+          <div class="tabs__panel is-active">
+            <ul class="docs-list">
+              {% for d in documents %}
+                <li class="docs-list__item">
+                  <a class="docs-list__link {{ d.type }}" href="{{ d.filename }}" download><span>{{ d.name }}</span></a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </aside>
+      {% endif %}
+
+    <!-- ===== НОВЫЙ БЛОК ===== -->
+    <div class="product-help">
+
+      <div class="product-help__content">
+
+        <div class="product-help__left">
+
+          <div class="product-help__title section-title__like-h2">
+            Поможем подобрать и&nbsp;уточнить детали
+          </div>
+
+          <div class="product-help__text">
+            Подскажем по&nbsp;размерам, материалам и&nbsp;срокам поставки. Проверим, подойдёт&nbsp;ли оборудование под ваши задачи и&nbsp;условия. При необходимости предложим альтернативу или комплектацию.
+          </div>
+
+          <button type="button"
+            class="btn btn_dark"
+            data-fancybox
+            data-src="#zpmFbQuestion"
+            data-zpm-fb-mode="2">
+            Задать вопрос
+          </button>
+
+        </div>
+
+<div class="product-help__right">
+
+  <div class="product-help__visual">
+
+    <img src="/assets/img/product-help-visual.png" alt="Подбор оборудования">
+
+  </div>
+
+</div>
+
+      </div>
+
+    </div>
+    <!-- ===== /НОВЫЙ БЛОК ===== -->
+
+    </div>
+  </div>
+</section>

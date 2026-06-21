@@ -1,0 +1,27 @@
+{
+  "task": "M9.8.9-06D",
+  "stamp": "20260619-123127",
+  "files": {
+    "catalog/model/catalog/product.php": {
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06d-work\\live-capture\\catalog__model__catalog__product.php",
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "size": 58556
+    },
+    "catalog/controller/common/import_1C_offers.php": {
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06d-work\\live-capture\\catalog__controller__common__import_1C_offers.php",
+      "sha256": "403c813e4eb8142e4280b222d0d464c9f2336868fff3ccf52a17b9cc80f6586d",
+      "size": 2095
+    },
+    "admin/model/catalog/product.php": {
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06d-work\\live-capture\\admin__model__catalog__product.php",
+      "sha256": "1b8aeccabb3fb74f8cf4d40b58f9ab85a11d0729c2952b0931cd5ea9beca9e3a",
+      "size": 44571
+    },
+    "reindex_prices.php": {
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-06d-work\\live-capture\\reindex_prices.php",
+      "sha256": "e3d4ea121d9079900119a10fb9259231d07eb9832b0ab194500ea28f40f87850",
+      "size": 2153
+    }
+  },
+  "rollback_note": "No site files modified; only temporary reindex script deployed and removed."
+}

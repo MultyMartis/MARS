@@ -1,0 +1,26 @@
+{
+  "evidence_id": "ws-pass-a-ws-p3-003-20260622",
+  "query_id": "ws-p3-003",
+  "entered_phrase": "маркировка лекарств 1С",
+  "query_mode": "broad_unquoted",
+  "geography": "all_russia",
+  "source_file": null,
+  "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+  "source_hash": "3bf2779eca7e6fee4d54593e0efefde83d0f575373c645ed1b36a2e9b07a3d71",
+  "collection_mode": "manual_operator_export",
+  "collection_date": "2026-06-22",
+  "row_count": 33,
+  "sheet_names": [
+    "Data"
+  ],
+  "observed_wordstat_total": 1555,
+  "related_phrase_count": 33,
+  "ingestion_status": "ingested",
+  "evidence_grade": "B_semantic_discovery",
+  "external_source_classification": "mars_storage_external_evidence",
+  "limitations": [
+    "Nationwide broad — not regional Novosibirsk demand",
+    "Not exact phrase frequency",
+    "Not traffic forecast"
+  ]
+}

@@ -25,7 +25,7 @@ Visualization-only export of the MARS ecosystem as native [JSON Canvas](https://
 | File | Purpose |
 |------|---------|
 | [`master.canvas`](master.canvas) | Top-level nine-layer MARS map (governance → archive) |
-| [`programs.canvas`](programs.canvas) | Program packs; **GitGuard** (REGISTERED); **IdeaBox** (optional incubation) |
+| [`programs.canvas`](programs.canvas) | Program packs; **ATLAS** (REGISTERED); **GitGuard** (REGISTERED); **IdeaBox** (optional incubation) |
 | [`website-factory.canvas`](website-factory.canvas) | Factory layers; Triumph + ISBD **execution cases** (not programs) |
 | [`orca.canvas`](orca.canvas) | ORCA lanes: Fast Path, review, PPC, freeze, handoffs |
 | [`infrastructure.canvas`](infrastructure.canvas) | Active Brain ↔ Storage; **Incoming hybrid**; observed-flow note (labelled) |

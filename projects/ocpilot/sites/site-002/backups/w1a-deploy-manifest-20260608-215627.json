@@ -1,0 +1,19 @@
+{
+  "stamp": "20260608-215627",
+  "remote_twig": "catalog/view/theme/default/template/product/producthero.twig",
+  "remote_css": "assets/css/style.css",
+  "backup_paths": {
+    "twig_timestamped": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.20260608-215627.bak",
+    "css_timestamped": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.20260608-215627.bak",
+    "twig_rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-w1a2.bak",
+    "css_rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-w1a2.bak"
+  },
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-w1a2.bak -> catalog/view/theme/default/template/product/producthero.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-w1a2.bak -> assets/css/style.css",
+    "Clear system/storage/cache/template/"
+  ],
+  "deployed": true,
+  "cache_cleared": 0,
+  "cache_errors": []
+}

@@ -1,0 +1,244 @@
+{
+  "task": "M9.7E homepage neutral branches QA",
+  "base_url": "https://zpm.new-site.space",
+  "summary": {
+    "pass": 13,
+    "fail": 0,
+    "warn": 0
+  },
+  "checks": [
+    {
+      "id": "HTTP-home",
+      "status": "pass",
+      "detail": "home: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "HTTP-katalog",
+      "status": "pass",
+      "detail": "katalog: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "HTTP-neutral_hub",
+      "status": "pass",
+      "detail": "neutral_hub: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "HTTP-stoly",
+      "status": "pass",
+      "detail": "stoly: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "HTTP-vanny",
+      "status": "pass",
+      "detail": "vanny: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "HOME-CARD-COUNT",
+      "status": "pass",
+      "detail": "homepage cards=5 names=['Столы', 'Моечные ванны', 'Подтоварники и подставки', 'Зонты вытяжные', 'Тележки сервировочные']",
+      "evidence": {
+        "cards": [
+          {
+            "name": "Столы",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+          },
+          {
+            "name": "Моечные ванны",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+          },
+          {
+            "name": "Подтоварники и подставки",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+          },
+          {
+            "name": "Зонты вытяжные",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+          },
+          {
+            "name": "Тележки сервировочные",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+          }
+        ]
+      }
+    },
+    {
+      "id": "HOME-EXPECTED-SET",
+      "status": "pass",
+      "detail": "missing=[] extra=[]",
+      "evidence": {}
+    },
+    {
+      "id": "HOME-ORDER",
+      "status": "pass",
+      "detail": "order=['Столы', 'Моечные ванны', 'Подтоварники и подставки', 'Зонты вытяжные', 'Тележки сервировочные']",
+      "evidence": {}
+    },
+    {
+      "id": "HOME-NO-ROOT",
+      "status": "pass",
+      "detail": "forbidden root present",
+      "evidence": {}
+    },
+    {
+      "id": "HOME-NO-FORBIDDEN",
+      "status": "pass",
+      "detail": "forbidden=[]",
+      "evidence": {}
+    },
+    {
+      "id": "HOME-NO-PLACEHOLDER",
+      "status": "pass",
+      "detail": "placeholder=[]",
+      "evidence": {}
+    },
+    {
+      "id": "REG-HUB-CARDS",
+      "status": "pass",
+      "detail": "hub cards=5",
+      "evidence": {
+        "hub_cards": [
+          {
+            "name": "Столы",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+          },
+          {
+            "name": "Моечные ванны",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+          },
+          {
+            "name": "Подтоварники и подставки",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+          },
+          {
+            "name": "Зонты вытяжные",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+          },
+          {
+            "name": "Тележки сервировочные",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REG-MEGAMENU",
+      "status": "pass",
+      "detail": "megamenu tiles=5 zero=[]",
+      "evidence": {
+        "megamenu": [
+          {
+            "name": "Подтоварники и подставки",
+            "count": 11
+          },
+          {
+            "name": "Столы",
+            "count": 419
+          },
+          {
+            "name": "Тележки сервировочные",
+            "count": 3
+          },
+          {
+            "name": "Зонты вытяжные",
+            "count": 23
+          },
+          {
+            "name": "Моечные ванны",
+            "count": 152
+          }
+        ]
+      }
+    }
+  ],
+  "homepage_cards": [
+    {
+      "name": "Столы",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+    },
+    {
+      "name": "Моечные ванны",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+    },
+    {
+      "name": "Подтоварники и подставки",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+    },
+    {
+      "name": "Зонты вытяжные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+    },
+    {
+      "name": "Тележки сервировочные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+    }
+  ],
+  "hub_cards": [
+    {
+      "name": "Столы",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+    },
+    {
+      "name": "Моечные ванны",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+    },
+    {
+      "name": "Подтоварники и подставки",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+    },
+    {
+      "name": "Зонты вытяжные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+    },
+    {
+      "name": "Тележки сервировочные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+    }
+  ],
+  "megamenu": [
+    {
+      "name": "Подтоварники и подставки",
+      "count": 11
+    },
+    {
+      "name": "Столы",
+      "count": 419
+    },
+    {
+      "name": "Тележки сервировочные",
+      "count": 3
+    },
+    {
+      "name": "Зонты вытяжные",
+      "count": 23
+    },
+    {
+      "name": "Моечные ванны",
+      "count": 152
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "case_a_with_documents_live": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+    "sku": "SPKB-18/7-ВЛ5",
+    "php_ok": true,
+    "twig_ok": true,
+    "product_content_grid_with_side": true,
+    "has_side": true,
+    "has_documents_section": true,
+    "docs_heading_h2": true,
+    "docs_list_preserved": true,
+    "docs_list_item": true,
+    "docs_link_class": true,
+    "file_main_structure": true,
+    "file_title_structure": true,
+    "file_type_structure": true,
+    "download_icon": true,
+    "docs_note": true,
+    "contact_link_hook": true,
+    "no_tabs_panel": true,
+    "help_visible": true,
+    "related_visible": true,
+    "mobile_stack_css": true,
+    "pdf_class": true,
+    "href_ok": true,
+    "download_attr": true,
+    "sample_href": "https://zpm.new-site.space/Product_DOCs/69d2ac72d250d--документации.pdf",
+    "pass": true,
+    "fails": []
+  },
+  "case_b_no_documents_live": {
+    "status": "SAFE UNKNOWN",
+    "note": "557+ PDP URLs scanned previously; no live SKU without documents found in catalog"
+  },
+  "case_b_empty_branch_static": {
+    "else_branch_present": true,
+    "empty_cta_hook": true,
+    "sidebar_always": true,
+    "aside_always": true
+  },
+  "twig_empty_checks_pass": true
+}

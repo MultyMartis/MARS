@@ -10,8 +10,8 @@ pack_id: triumph-manipulyator-5-tonn-v0
 pack_version: v0.1
 pack_type: capability
 project_ref: triumph-manipulator-krasnodar
-route_slug: manipulyator-5-tonn
-canonical_url: https://manipulator-triumph.ru/manipulyator-5-tonn/
+route_slug: 5-tonn.html
+canonical_url: https://manipulator-triumph.ru/5-tonn.html
 locale: ru-RU
 artifact_state: approved
 content_mode: MODE_1

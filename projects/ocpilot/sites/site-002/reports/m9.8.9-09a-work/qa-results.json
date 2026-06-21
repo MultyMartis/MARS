@@ -1,0 +1,58 @@
+{
+  "base": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+  "plain_cards": 15,
+  "filtered_cards": 15,
+  "all_pass": true,
+  "results": [
+    {
+      "scenario": "S1 limit=50 + only_with_price page load",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1&limit=50",
+      "limit_in_url": true,
+      "only_with_price_checked": true,
+      "cards": 50,
+      "filtered_cards_baseline": 15,
+      "pass": true
+    },
+    {
+      "scenario": "S2 only_with_price -> limit=50 href",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1",
+      "limit50_href_has_filters": true,
+      "pass": true
+    },
+    {
+      "scenario": "S3 only_with_price + sort price ASC",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1&sort=p.price&order=ASC",
+      "only_with_price_checked": true,
+      "query_has_sort": true,
+      "pass": true
+    },
+    {
+      "scenario": "S4 only_with_price + page 2",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1&page=2",
+      "only_with_price_checked": true,
+      "pagination_link_page2_has_filters": true,
+      "pass": true
+    },
+    {
+      "scenario": "S5 filters+limit+sort+order+page together",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1&limit=50&sort=p.price&order=ASC&page=2",
+      "params_present": {
+        "filters": true,
+        "limit": true,
+        "sort": true,
+        "order": true,
+        "page": true
+      },
+      "only_with_price_checked": true,
+      "pass": true
+    },
+    {
+      "scenario": "S2 follow-through limit=50 href fetch",
+      "found_href": true,
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?filters=only_with_price=1&limit=50",
+      "only_with_price_checked": true,
+      "limit50_active": true,
+      "pass": true
+    }
+  ]
+}

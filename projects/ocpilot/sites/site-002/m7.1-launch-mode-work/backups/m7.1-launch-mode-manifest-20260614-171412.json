@@ -1,0 +1,69 @@
+{
+  "task": "M7.1 Launch Mode",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "generated_at_utc": "20260614-171412",
+  "deploy": false,
+  "files": [
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\system\\library\\zpm\\category_visibility.php",
+      "sha256": "a17fd7ee66448962f5290da151668163c2a5ac60af0348a8c47e183c9a8a59a4",
+      "action": "create"
+    },
+    {
+      "remote": "catalog/controller/product/katalog.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\controller\\product\\katalog.php",
+      "sha256": "f91b9a894c55fa50d689de39df6ef44ec5d4e4180f66ae462069695c2ae9cc0e",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\controller\\product\\category.php",
+      "sha256": "71ae2e3676cbcc4a53d982e8a2922601530a760ccf809b9980055d820e1ecef6",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/controller/common/header.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\controller\\common\\header.php",
+      "sha256": "804548a608a1579eeacc92ded17bcf27b8966ec244fff53f4446ba1ab08e4bc2",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/controller/common/footer.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\controller\\common\\footer.php",
+      "sha256": "1d4b15cb9fd96a7cc792d6c3b3a43c15b01924535a6517d2af8a7a42cd19a7c5",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/controller/common/home.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\controller\\common\\home.php",
+      "sha256": "8bdf16d6ee30078d541518bfc23fd39683f2676cf6cc44a1413440fa47d16a00",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/view/theme/default/template/common/megamenu.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\view\\theme\\default\\template\\common\\megamenu.twig",
+      "sha256": "78b9cfc5c3647a09aae87c6f632eafbe77cc0c45861c0b4a608199548d354978",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/view/theme/default/template/common/footer.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\view\\theme\\default\\template\\common\\footer.twig",
+      "sha256": "9be5bcf2fa8cea09b940305f9fba1367c35608fe26683e921efae83c174b1b47",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/catalogsections.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\view\\theme\\default\\template\\sections\\catalogsections.twig",
+      "sha256": "cf9bd96f334bc6d93f10f626e22e525b2ddf1d09bfdcb2fee880367c4d75ba81",
+      "action": "modify"
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/offcanvasmenu.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m7.1-launch-mode-work\\patch\\catalog\\view\\theme\\default\\template\\sections\\offcanvasmenu.twig",
+      "sha256": "1dc6b22372cdecd0aa5fb0124ae0fa1e5714edd1f82cfcd25e5e6fc0ae11606f",
+      "action": "modify"
+    }
+  ]
+}

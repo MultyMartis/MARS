@@ -30,6 +30,7 @@
 | [visual-reconciliation-layer.md](visual-reconciliation-layer.md) | Qualitative intent read — complements, does not replace PF-* |
 | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | RU commercial mandatory widths |
 | [operational-qa-entry-v1.md](operational-qa-entry-v1.md) | Operational routing surface |
+| [frontend-compliance-decision-model-v1.md](frontend-compliance-decision-model-v1.md) | RAW VIOLATION → Compliance Verdict route for DQ-02a/DQ-02b findings |
 
 **Honesty boundary:** This matrix is **human-operated governance**. It does **not** claim an in-repo QA engine, linter, or automated Production PASS unless a project explicitly adopts checklists as tooling.
 
@@ -103,16 +104,34 @@ Each domain uses **PASS** / **FAIL** criteria below. A domain **FAIL** with **Cr
 
 ---
 
-### DQ-02 — Spacing
+### DQ-02a — Project SSOT Spacing Compliance
 
-**Compare:** Margins, padding, gaps, section spacing tokens vs OL-01 scale and project SSOT spacing table.
+**Compare:** Margins, padding, gaps, section spacing tokens vs **Project Production Standards** spacing table and named inter-section tokens.
 
 | Verdict | Criteria |
 |---------|----------|
-| **PASS** | Approved project scale used; raw design values mapped to nearest scale with C-12 record; inter-section spacing uses approved tokens ([frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md)); no unstated arbitrary px |
-| **FAIL** | Values such as `17px`, `23px`, `37px` without SSOT token; per-block one-off spacing; percentage padding outside OL-02 scope |
+| **PASS** | Values match approved project SSOT spacing table; inter-section spacing uses approved tokens ([frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md)); raw design values mapped with C-12 record |
+| **FAIL** | Value not in project SSOT without documented exception; per-block one-off spacing vs SSOT; percentage padding outside project charter |
 
-**Detail authority:** PF-03 · OL-01 · [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) §2.
+**Detail authority:** PF-03 · [production-standards-governance-v1.md](production-standards-governance-v1.md) C-12.
+
+---
+
+### DQ-02b — Operator Law Spacing Compliance
+
+**Compare:** Margins, padding, gaps vs **Approved Operator Laws OL-01–OL-02** — **independent** of whether project SSOT approves the value.
+
+| Verdict | Criteria |
+|---------|----------|
+| **PASS** | All gap/margin/padding values on OL-01 scale (or OL-02 percentage padding in allowed scope) |
+| **FAIL** | Values such as `17px`, `23px`, `37px`, `64px` without OL scale membership **and** without valid Exception Registry when rank-1 SSOT overrides OL |
+| **WAIVED** | Rank-1 SSOT intentionally overrides OL **and** complete Exception Registry per [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) §6 |
+
+**Sources:** `src/scss/**` **and** `dist/*.css` — source-only review **insufficient** for PASS.
+
+**Detail authority:** OL-01 · OL-02 · [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) §3.1 · PF-03.
+
+**Note:** DQ-02a and DQ-02b are **separate checks**. Project SSOT PASS does **not** imply Operator Law PASS.
 
 ---
 
@@ -188,9 +207,9 @@ Each domain uses **PASS** / **FAIL** criteria below. A domain **FAIL** with **Cr
 | Verdict | Criteria |
 |---------|----------|
 | **PASS** | Real assets or Lead-approved recreation; correct aspect ratio and crop; SVG/raster matches source intent; favicon wired per project |
-| **FAIL** | Placeholder logo/icon/image in production path; wrong asset; compressed artifact changing perceived weight; duplicated baked-in annotation ([semantic-iconography-governance.md](semantic-iconography-governance.md)) |
+| **FAIL** | Placeholder logo/icon/image in production path; wrong asset; **wrong client brand mark** (see [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md)); compressed artifact changing perceived weight; duplicated baked-in annotation ([semantic-iconography-governance.md](semantic-iconography-governance.md)) |
 
-**Detail authority:** PF-07 · mapping L-07.
+**Detail authority:** PF-07 · mapping L-07 · [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md) (upstream selection).
 
 ---
 
@@ -251,7 +270,8 @@ Each domain uses **PASS** / **FAIL** criteria below. A domain **FAIL** with **Cr
 | ID | Domain | Primary authority |
 |----|--------|-------------------|
 | DQ-01 | Typography | Production Standards · OL-05 · PF-01 |
-| DQ-02 | Spacing | OL-01 · PF-03 |
+| DQ-02a | Project SSOT Spacing | Production Standards · PF-03 |
+| DQ-02b | Operator Law Spacing | OL-01 · OL-02 · Enforcement Pack · PF-03 |
 | DQ-03 | Container | WF-GRID · PF-02 |
 | DQ-04 | Grid | WF-GRID · PF-02 |
 | DQ-05 | Layout | WF-LAYOUT · LP-* · PF-04 |
@@ -294,7 +314,7 @@ After all applicable domains are evaluated:
 
 ```text
 FRONTEND DESIGN QA MATRIX — PASS | PASS WITH NOTES | FAIL
-DOMAIN SUMMARY — DQ-01: PASS | FAIL · … · DQ-12: PASS | FAIL | N/A
+DOMAIN SUMMARY — DQ-01: PASS | FAIL · DQ-02a: PASS | FAIL · DQ-02b: PASS | FAIL | WAIVED · … · DQ-12: PASS | FAIL | N/A
 SEVERITY — Critical: (n) · Major: (n) · Minor: (n) · Observation: (n)
 PIXEL FIDELITY AUDIT — PASS | PASS WITH NOTES | FAIL | N/A (see pixel-fidelity-audit-rules-v1.md)
 WF GRID DISCIPLINE — PASS | FAIL
@@ -333,8 +353,8 @@ Production PASS
 | Stage | Matrix scope |
 |-------|----------------|
 | Mapping QA | Informs DQ domains in **Draft** — not full implementation matrix |
-| Design Calibration | DQ-01, DQ-02, DQ-03, DQ-06 subset on demo page |
-| Foundation QA | DQ-01–DQ-09, DQ-12 on foundation URL + shell |
+| Design Calibration | DQ-01, DQ-02a, DQ-02b, DQ-03, DQ-06 subset on demo page |
+| Foundation QA | DQ-01–DQ-09, DQ-02a, DQ-02b, DQ-12 on foundation URL + shell |
 | Page Production QA | Full DQ-01–DQ-12 after Design Completeness PASS |
 
 ---
@@ -344,6 +364,7 @@ Production PASS
 | Condition | Action |
 |-----------|--------|
 | Value not on OL-01 scale and not in SSOT | **STOP** — map or escalate HITL |
+| SSOT PASS assumed to cover Operator Law | **STOP** — run DQ-02a **and** DQ-02b separately |
 | Layout without WF-GRID → WF-LAYOUT → LP-* | **STOP** — document chain |
 | Claim Production PASS without matrix verdict | **STOP** — complete §6 REPORT |
 | Aesthetic override cited as fix | **STOP** — cite rank 1–4 authority |
@@ -379,3 +400,4 @@ Production PASS
 | Date | Change |
 |------|--------|
 | 2026-06-13 | v1 — Frontend Design QA Matrix: DQ-01–DQ-12, severity model, PASS / PASS WITH NOTES / FAIL verdict; Factory Production PASS gate. |
+| 2026-06-14 | v1.1 — Enforcement Pack v1: DQ-02 split → DQ-02a (Project SSOT) · DQ-02b (Operator Law); compiled CSS source requirement. |

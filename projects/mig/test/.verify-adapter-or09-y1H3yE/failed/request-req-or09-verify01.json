@@ -1,0 +1,75 @@
+{
+  "schema_version": "0",
+  "request_id": "req-or09-verify01",
+  "request_type": "serp_capture",
+  "session_id": "mig-20260604-aabbcc",
+  "scope": {
+    "niche": "manipulator rental",
+    "region": "Krasnodar Krai",
+    "city": "Krasnodar",
+    "business_type": "local_service",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "queries": {
+    "seed_queries": [
+      "аренда манипулятора Краснодар"
+    ]
+  },
+  "operator_id": "op-or09-verify",
+  "created_at": "2026-06-04T10:00:00.000Z",
+  "source": {
+    "adapter": "task_file",
+    "adapter_version": "0.1",
+    "transport_ref": "incoming/mig/requests/request-req-or09-verify01.json"
+  },
+  "manual_serp": {
+    "query": "аренда манипулятора Краснодар",
+    "search_engine": "yandex",
+    "region": "Krasnodar Krai",
+    "city": "Krasnodar",
+    "device": "mobile",
+    "localization": "ru, city-level",
+    "timestamp": "2026-06-04T10:00:00.000Z",
+    "serp_type": "local commercial",
+    "ads_blocks": {
+      "top_count": 1,
+      "bottom_count": 0,
+      "visible_patterns": [
+        "price from"
+      ]
+    },
+    "maps_local_pack": "present",
+    "aggregators": [
+      "2GIS"
+    ],
+    "marketplaces": [
+      "Avito"
+    ],
+    "review_signals": [],
+    "offer_patterns": [],
+    "cta_patterns": [],
+    "landing_observations": [],
+    "organic_results": [
+      {
+        "position": 1,
+        "title": "Манипулятор-Сервис Краснодар",
+        "url": "https://manipulator-krd.ru/",
+        "snippet": "Аренда манипулятора в Краснодаре"
+      },
+      {
+        "position": 2,
+        "title": "Кран-Логистик",
+        "url": "https://kran-logistik.ru/uslugi"
+      },
+      {
+        "position": 3,
+        "title": "Авито — аренда спецтехники",
+        "url": "https://www.avito.ru/krasnodar/spetstehnika"
+      }
+    ],
+    "safe_unknown": [
+      "fixture-only manual SERP for OR-09 verification"
+    ]
+  }
+}

@@ -24,6 +24,7 @@
 
 | # | Action | Doc |
 |---|--------|-----|
+| 0 | **Declare production mode** — `PIXEL_PERFECT` \| `TEMPLATE_ART`; record in LOC-ZONE passport (`production_mode`, `mode_history[]`). If undeclared → **SAFE UNKNOWN** → **STOP** — no frontend work | [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md) · [FP-XXXX-PROJECT-PASSPORT-FIELDS-v1.md](../../workspaces/website-factory-operations/FP-XXXX-PROJECT-PASSPORT-FIELDS-v1.md) |
 | 1 | Charter: slug, path, `site_type_id`, block list | handoff |
 | 1b | **Or** copy [workspaces/_template-client-v1/](../../workspaces/_template-client-v1/) wholesale, rename slug | template README |
 | 2 | Copy `scss/foundations/` + `js/core/` from reference (if not using template) | [foundation-adoption-charter-v1.md](foundation-adoption-charter-v1.md) |
@@ -57,7 +58,7 @@
 ## Minimal read order (all paths)
 
 ```text
-OPERATIONAL-INDEX → onboarding-flow-v1 (this) → adoption charter → reference README → golden REPORT example
+OPERATIONAL-INDEX → production mode declare (charter) → onboarding-flow-v1 (this) → adoption charter → reference README → golden REPORT example
 ```
 
 ---

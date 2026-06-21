@@ -1,0 +1,36 @@
+{
+  "stamp": "20260609-220757",
+  "task": "category-v2.3.1-subcategory-polish-pass",
+  "deployed_at": "2026-06-09T22:08:06.603857+00:00",
+  "deployed": {
+    "category.twig": {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.3.1-subcategory-polish-pass-work\\category.twig",
+      "sha256": "c69ba327ce60e9c92abc690e1f55bfb7d5f7d7acabf7e411a47848c7d9ccf89a",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.twig.pre-subcategory-polish-pass.bak",
+      "rollback_sha256": "f27e904ca043cf975b17218442eba8b2dbd5e38a76038059441873f62df375df"
+    },
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.3.1-subcategory-polish-pass-work\\style.css",
+      "sha256": "4d5d83993de3ff27faae6e9555b21ccc22b32e3128544b40d06beb506a1edf2d",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-subcategory-polish-pass.bak",
+      "rollback_sha256": "4d02d64700270209eb46a9eb2593e66f2452893786ebce7407410dbbfcb6b1c6"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\category-v2.3.1-subcategory-polish-pass-work\\main.js",
+      "sha256": "9df9162e0ef84022a9ac0be458cc70f86ff706ed656aaa59007ac36cd9b6f5a7",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-subcategory-polish-pass.bak",
+      "rollback_sha256": "74760a0a3ea48b425bf6befa10480206f93c56c3215bb7bb81255d4ba62403d3"
+    }
+  },
+  "cache_cleared": 0,
+  "cache_errors": [],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.twig.pre-subcategory-polish-pass.bak -> catalog/view/theme/default/template/product/category.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-subcategory-polish-pass.bak -> assets/css/style.css",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-subcategory-polish-pass.bak -> assets/js/main.js",
+    "Clear system/storage/cache/template/"
+  ]
+}

@@ -1,9 +1,9 @@
 # Website Factory — Block Registry Gaps v1
 
-**Версия:** v1  
+**Версия:** v1.1 *(WF-R01.2 Gate 2 — Tier A gap closure)*  
 **Область:** `workspaces/website-factory-reference-v1/block-registry/`  
-**Статус:** cross-layer alignment gaps after Block Registry Alignment v1  
-**Дата:** 2026-05-31  
+**Статус:** cross-layer alignment — Tier A structural gaps **CLOSED** (WF-R01.2 Gate 2)  
+**Дата:** 2026-06-19 (Gate 2 execution pass)  
 **Связь:** [BLOCK-REGISTRY-AUDIT-v1.md](BLOCK-REGISTRY-AUDIT-v1.md), [BLOCK-GAPS-v1.md](BLOCK-GAPS-v1.md), [../page-architecture/PAGE-GAPS-v1.md](../page-architecture/PAGE-GAPS-v1.md)
 
 **Scope:** Validation chain Site Type Registry → Blueprint → Page Architecture → Block Registry. Implementation/design gaps remain in BLOCK-GAPS-v1.
@@ -20,7 +20,7 @@ Blueprint (blueprints/)
 Page Architecture (page-architecture/)
         ↓  PARTIAL — see gaps below
 Block Registry (block-registry/)
-        ↓  ALIGNED — 29 canonical block_id
+        ↓  ALIGNED — **32** canonical block_id (29 Core + 3 structural Tier A)
 Design / Frontend
         ↓  OUT OF SCOPE — not started
 ```
@@ -32,7 +32,7 @@ Design / Frontend
 | Check | Status | Gap |
 |-------|--------|-----|
 | Core site types in BLOCK-REGISTRY `allowed_site_types` | **PASS** | LANDING, PROMO, CATALOG, ECOMMERCE, CORPORATE only |
-| SITE-TYPE-BLOCK-MATRIX-v2 covers all 29 blocks | **PASS** | Updated in alignment pass |
+| SITE-TYPE-BLOCK-MATRIX-v2 covers all 32 blocks | **PASS** | v2.1 — WF-R01.2 Gate 2 structural rows |
 | registry/SITE-TYPE-BLOCK-MAPPING-v1 superseded | **CLOSED** (2026-06-01) | [HYGIENE-PASS-v1.md](../HYGIENE-PASS-v1.md) — banner + block-registry/ pointers |
 | Extended Types (SAAS, WEB_APPLICATION, MARKETPLACE) | **OUT OF SCOPE** | No block rows in Core matrix v2 |
 
@@ -45,8 +45,8 @@ Design / Frontend
 | 5 Core Blueprints mapped | **PASS** | [BLUEPRINT-BLOCK-MAPPING-v1.md](BLUEPRINT-BLOCK-MAPPING-v1.md) |
 | Blueprint `required_blocks` human labels → block_id | **PARTIAL** | Blueprints use "Social proof" — operator maps to TRUST/TESTIMONIALS |
 | LANDING sticky CTA → block_id | **RESOLVED** | Maps to `CTA` (sticky = variant in notes) |
-| CATALOG "Filters / Search" → block_id | **OPEN** | Not in Core 29 — future FILTERS, SEARCH charter |
-| Header/nav → block_id | **OPEN** | Required in blueprints; no HEADER_NAV in registry |
+| CATALOG "Filters / Search" → block_id | **CLOSED** (2026-06-19) | `FILTERS`, `SEARCH` — WF-R01.2 Gate 2 |
+| Header/nav → block_id | **CLOSED** (2026-06-19) | `HEADER_NAV` — WF-R01.2 Gate 2 |
 
 ---
 
@@ -68,11 +68,11 @@ Design / Frontend
 
 | Check | Status | Gap |
 |-------|--------|-----|
-| Operator minimum 29 block_id set | **PASS** | FEATURES, CATEGORY_GRID, REVIEWS added |
-| BLOCK-CONTRACT-v1 fields on every entry | **PARTIAL** | Full `allowed_page_types` + `notes` on 3 new blocks; legacy 26 entries use abbreviated schema |
-| BLOCK-CATEGORY-SYSTEM-v1 assignment | **PASS** | 29 blocks assigned |
-| BLOCK-CONVERSION-ROLES-v1 assignment | **PASS** | 29 blocks assigned |
-| BLOCK-DEPENDENCY-RULES closure | **PASS** | Charter examples + commerce chain |
+| Operator minimum 32 block_id set | **PASS** | 29 Core + HEADER_NAV, FILTERS, SEARCH (Tier A) |
+| BLOCK-CONTRACT-v1 fields on every entry | **PARTIAL** | Full contract on 6 newer blocks (3 alignment + 3 structural); legacy entries abbreviated |
+| BLOCK-CATEGORY-SYSTEM-v1 assignment | **PASS** | 32 blocks assigned; NAVIGATION populated |
+| BLOCK-CONVERSION-ROLES-v1 assignment | **PASS** | 32 blocks assigned |
+| BLOCK-DEPENDENCY-RULES closure | **PASS** | Commerce chain + structural section (WF-R01.2 Gate 2) |
 
 ---
 
@@ -116,7 +116,7 @@ Design / Frontend
 | 1 | Update SITE-TYPE-BLOCK-MAPPING-v1 pointer to block-registry/ | **DONE** — Hygiene Pass v1 (2026-06-01) |
 | 2 | CORE-PAGE-ARCHITECTURES: STICKY_CTA/VIDEO drift | **DONE** — Foundation Finalization Pass v1 (2026-06-04) |
 | 3 | Page → Block Validation (automated or checklist) | Next priority |
-| 4 | HEADER_NAV, FILTERS, SEARCH block_id charter | Registry v1.1 |
+| 4 | HEADER_NAV, FILTERS, SEARCH block_id charter | **DONE** — WF-R01.2 Gate 2 (2026-06-19) |
 | 5 | Expand BLOCK-REGISTRY-v1 entries with full contract fields | Registry hygiene |
 
 ---
@@ -129,4 +129,4 @@ Design / Frontend
 
 ---
 
-*Registry gaps version: v1. Canonical location: `workspaces/website-factory-reference-v1/block-registry/`.*
+*Registry gaps version: v1.1 (WF-R01.2 Gate 2 Tier A closure). Canonical location: `workspaces/website-factory-reference-v1/block-registry/`.*

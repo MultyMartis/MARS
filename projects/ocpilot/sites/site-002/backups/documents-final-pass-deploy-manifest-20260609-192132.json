@@ -1,0 +1,27 @@
+{
+  "stamp": "20260609-192132",
+  "task": "pdp-documents-final-pass",
+  "deployed": {
+    "producttabs.twig": {
+      "remote": "catalog/view/theme/default/template/product/producttabs.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\documents-final-pass-work\\producttabs.twig",
+      "sha256": "296537f678d2fc793eae85ab8b5b3bd707d995a3ab8aa67cac36def531a1abd8",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.twig.pre-documents-final-pass.bak",
+      "rollback_sha256": "86419148b5d10e75dd361de26e8e51a717c4db1f38769c1cfe0049bf5b661d2b"
+    },
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\documents-final-pass-work\\style.css",
+      "sha256": "9c11a023d680fb70c59dffaf035c2dd01ffc78d17411e8f5f0924564968b392b",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-documents-final-pass.bak",
+      "rollback_sha256": "21761371479795f75f98985c551cf3dd0f78abd348672d22409795ab1b68ccde"
+    }
+  },
+  "cache_cleared": 0,
+  "cache_errors": [],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.twig.pre-documents-final-pass.bak -> catalog/view/theme/default/template/product/producttabs.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-documents-final-pass.bak -> assets/css/style.css",
+    "Clear system/storage/cache/template/"
+  ]
+}

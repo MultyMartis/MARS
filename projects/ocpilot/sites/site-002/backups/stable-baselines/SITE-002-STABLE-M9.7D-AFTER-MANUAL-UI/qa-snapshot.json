@@ -1,0 +1,389 @@
+{
+  "generated_at_utc": "2026-06-14T22:33:08.737461+00:00",
+  "test_url": "https://zpm.new-site.space",
+  "checkpoint": "SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI",
+  "baseline_note": "LIVE TEST STATE AFTER MANUAL UI REFINEMENT — supersedes M9.7C visual baseline",
+  "checks": [
+    {
+      "id": "QA-HTTP-home",
+      "status": "pass",
+      "detail": "home: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-katalog",
+      "status": "pass",
+      "detail": "katalog: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-neutral_hub",
+      "status": "pass",
+      "detail": "neutral_hub: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-stoly",
+      "status": "pass",
+      "detail": "stoly: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-vanny",
+      "status": "pass",
+      "detail": "vanny: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-podtovarniki",
+      "status": "pass",
+      "detail": "podtovarniki: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-zonty",
+      "status": "pass",
+      "detail": "zonty: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-telezhki",
+      "status": "pass",
+      "detail": "telezhki: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-reference_table_pdp",
+      "status": "pass",
+      "detail": "reference_table_pdp: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-reference_sink_pdp",
+      "status": "pass",
+      "detail": "reference_sink_pdp: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-MEGAMENU-ROOT",
+      "status": "pass",
+      "detail": "Megamenu single neutral root",
+      "evidence": {
+        "roots": [
+          "Нейтральное оборудование"
+        ]
+      }
+    },
+    {
+      "id": "QA-MM-COUNT",
+      "status": "pass",
+      "detail": "megamenu neutral tiles=5 names=['Подтоварники и подставки', 'Столы', 'Тележки сервировочные', 'Зонты вытяжные', 'Моечные ванны']",
+      "evidence": {
+        "megamenu": [
+          {
+            "name": "Подтоварники и подставки",
+            "count": 11,
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp"
+          },
+          {
+            "name": "Столы",
+            "count": 419,
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp"
+          },
+          {
+            "name": "Тележки сервировочные",
+            "count": 3,
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp"
+          },
+          {
+            "name": "Зонты вытяжные",
+            "count": 23,
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp"
+          },
+          {
+            "name": "Моечные ванны",
+            "count": 152,
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "QA-MM-NO-ZERO",
+      "status": "pass",
+      "detail": "zero-count tiles: []",
+      "evidence": {}
+    },
+    {
+      "id": "QA-MM-NO-FORBIDDEN",
+      "status": "pass",
+      "detail": "forbidden: []",
+      "evidence": {}
+    },
+    {
+      "id": "QA-MM-EXPECTED",
+      "status": "pass",
+      "detail": "missing=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-MM-NO-PLACEHOLDER",
+      "status": "pass",
+      "detail": "placeholder imgs: []",
+      "evidence": {}
+    },
+    {
+      "id": "QA-FOOTER",
+      "status": "pass",
+      "detail": "Footer catalog links show only neutral paths",
+      "evidence": {
+        "links": [
+          "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+          "/custom-equipment/",
+          "/payment-methods",
+          "/delivery",
+          "/dealers",
+          "/guarantee",
+          "/about",
+          "/blog/news",
+          "/contact"
+        ]
+      }
+    },
+    {
+      "id": "QA-HUB-MODE",
+      "status": "pass",
+      "detail": "hub_mode=True hub_cards=5 (expected 5)",
+      "evidence": {
+        "hub_cards": [
+          {
+            "name": "Столы",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+          },
+          {
+            "name": "Моечные ванны",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+          },
+          {
+            "name": "Подтоварники и подставки",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+          },
+          {
+            "name": "Зонты вытяжные",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+          },
+          {
+            "name": "Тележки сервировочные",
+            "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp",
+            "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+          }
+        ]
+      }
+    },
+    {
+      "id": "QA-HUB-NO-PLACEHOLDER",
+      "status": "pass",
+      "detail": "hub placeholder imgs: []",
+      "evidence": {}
+    },
+    {
+      "id": "QA-FILTER-STOLY",
+      "status": "pass",
+      "detail": "primary=10/10 bad=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-FILTER-VANNY",
+      "status": "pass",
+      "detail": "primary=8/8 bad=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-BRANCH-podtovarniki",
+      "status": "pass",
+      "detail": "grid=True filter=True hidden_global=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-BRANCH-zonty",
+      "status": "pass",
+      "detail": "grid=True filter=True hidden_global=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-BRANCH-telezhki",
+      "status": "pass",
+      "detail": "grid=True filter=True hidden_global=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-PDP-reference_table_pdp",
+      "status": "pass",
+      "detail": "status=200 err=None",
+      "evidence": {}
+    },
+    {
+      "id": "QA-PDP-reference_sink_pdp",
+      "status": "pass",
+      "detail": "status=200 err=None",
+      "evidence": {}
+    }
+  ],
+  "summary": {
+    "pass": 26,
+    "fail": 0,
+    "warn": 0
+  },
+  "megamenu_after": [
+    {
+      "name": "Подтоварники и подставки",
+      "count": 11,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp"
+    },
+    {
+      "name": "Столы",
+      "count": 419,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp"
+    },
+    {
+      "name": "Тележки сервировочные",
+      "count": 3,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp"
+    },
+    {
+      "name": "Зонты вытяжные",
+      "count": 23,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp"
+    },
+    {
+      "name": "Моечные ванны",
+      "count": 152,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp"
+    }
+  ],
+  "hub_cards": [
+    {
+      "name": "Столы",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+    },
+    {
+      "name": "Моечные ванны",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+    },
+    {
+      "name": "Подтоварники и подставки",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+    },
+    {
+      "name": "Зонты вытяжные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+    },
+    {
+      "name": "Тележки сервировочные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp",
+      "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+    }
+  ],
+  "pages": {
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/",
+      "error": null,
+      "megamenu_roots": [
+        "Нейтральное оборудование"
+      ],
+      "footer_catalog_links": [
+        "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+        "/custom-equipment/",
+        "/payment-methods",
+        "/delivery",
+        "/dealers",
+        "/guarantee",
+        "/about",
+        "/blog/news",
+        "/contact"
+      ]
+    },
+    "katalog": {
+      "url": "https://zpm.new-site.space/katalog",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "neutral_hub": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "stoly": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "vanny": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "podtovarniki": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "zonty": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "telezhki": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "reference_table_pdp": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "reference_sink_pdp": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    }
+  }
+}

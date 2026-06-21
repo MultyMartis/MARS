@@ -7,6 +7,8 @@
 
 **Companion matrix:** [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) — domain PASS/FAIL and final verdict.
 
+**Enforcement cross-ref:** [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) — PF-* numeric checks must use **`dist/*.css`** evidence when build succeeds; source-only SCSS does not satisfy Compiled CSS Compliance.
+
 **Authority order:** [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) — **Project Production Standards (rank 1)** and **Approved Operator Laws (rank 2)** beat source measurement ambiguity and **always** beat agent aesthetic judgment.
 
 ---
@@ -39,7 +41,21 @@ The following are **never** valid reasons to accept or introduce variance:
 
 **Cross-ref:** [beautification-drift-governance.md](beautification-drift-governance.md) · [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) rank 6.
 
-### 0.3 Measurement method (honest scope)
+### 0.4 Anti-generative-fill (PIXEL_PERFECT only)
+
+When passport `production_mode: PIXEL_PERFECT`:
+
+| Missing data | Forbidden | Required |
+|--------------|-----------|----------|
+| FIG/component text | Generate, paraphrase, invent copy | **SAFE UNKNOWN** or **STOP** + HITL |
+| Review/card bodies | Generic filler | Text lock from extract |
+| Images | CSS placeholders, collision hashes | Asset manifest + brand chain |
+
+**Authority:** [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md) §7 · FP-0002 FAIL-002, FAIL-003, FAIL-006, FAIL-008.
+
+**Rule:** PF-* **FAIL** or gate **UNKNOWN** — not «close enough» via generative fill.
+
+### 0.5 Measurement method (honest scope)
 
 | Method | Allowed claim |
 |--------|---------------|
@@ -281,6 +297,7 @@ The following are **never** valid reasons to accept or introduce variance:
 | Condition | Severity |
 |-----------|----------|
 | Placeholder logo/icon/photo in production path | **Critical** |
+| Wrong client brand logo (foreign mark from multi-brand source) | **Critical** — upstream: [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md) |
 | Wrong logo variant (color on wrong background) | **Major** |
 | Distorted aspect ratio | **Major** |
 | Missing favicon | **Minor** (unless charter requires — then Major) |

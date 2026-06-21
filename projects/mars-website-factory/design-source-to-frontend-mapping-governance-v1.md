@@ -23,6 +23,8 @@
 
 **Authority order (canonical):** [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md)
 
+**Production mode:** Full extract chain is **mandatory** when passport `production_mode: PIXEL_PERFECT` — [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md). **Reduced** mapping depth permitted for `TEMPLATE_ART` with charter waiver.
+
 | Rank | Layer | Role in mapping |
 |------|-------|-----------------|
 | **1** | Project Production Standards | **Wins** — per-project SSOT after approval |
@@ -69,7 +71,7 @@
 
 ### 1.2 When mapping applies
 
-Mapping **must** complete (or explicit SAFE UNKNOWN with HITL) **before** Production Standards Approval and **before** any Shell HTML/SCSS work.
+Mapping **must** complete (or explicit SAFE UNKNOWN with HITL) **before** Production Standards Approval and **before** any Shell HTML/SCSS work. **Layout Spec** (composition decomposition) is **mandatory before** Shell/block HTML per [layout-spec-law-v1.md](layout-spec-law-v1.md) — Mapping QA does **not** substitute for Layout Spec.
 
 ```text
 Approved design source(s)
@@ -85,6 +87,8 @@ Production Standards Draft (production-standards-governance C-01–C-16)
 DESIGN → FRONTEND MAPPING QA (this doc §8)
         ↓
 Production Standards Approval
+        ↓
+Layout Spec (per block) → Operator APPROVED — [layout-spec-law-v1.md](layout-spec-law-v1.md)
         ↓
 Shell → Visual Foundation → Design Calibration → Foundation QA
         ↓
@@ -192,6 +196,7 @@ Draft is **not ready** for DESIGN → FRONTEND MAPPING QA if any L-01–L-08 row
 | **Real assets only** | No placeholder logos/icons in mapping output unless project policy explicitly allows TBD |
 | **Provenance** | Each L-07 row cites export path or Figma node |
 | **Missing asset** | UNKNOWN + blocker classification — not SVG/CSS fake substitute without HITL |
+| **Brand identity** | **Forbidden:** `FIRST IMAGE = LOGO` heuristic — see [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md); run Brand Asset Detection Layer when multi-candidate signals present |
 
 ---
 
@@ -325,6 +330,7 @@ Hidden ambiguity is more dangerous than visible uncertainty ([source-interpretat
 | **Component state absent** | L-06 UNKNOWN per component | Full state matrix from agent habit |
 | **Asset absent** | L-07 blocker or TBD policy | Placeholder logo/icon in mapping SSOT |
 | **Copy absent** | Content UNKNOWN — coordinate content lane | Lorem or AI filler in mapping |
+| **Copy absent (PIXEL_PERFECT)** | **STOP** or HITL — **forbid** generative fill per [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md) §7 · FP-0002 | Paraphrase, invented review/card bodies |
 
 ### 7.3 Escalation
 

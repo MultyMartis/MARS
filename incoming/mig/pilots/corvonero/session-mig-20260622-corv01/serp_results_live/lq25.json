@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "lq25",
+  "stage": "mig_research_stage_2",
+  "captured_at": "2026-06-22T14:00:00.000Z",
+  "collection_date": "2026-06-22",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "region_lr": 65,
+  "city": "Новосибирск",
+  "device": "mobile",
+  "source_mode": "bounded_web_search_stage2",
+  "evidence_grade": "C",
+  "acquisition_limitations": [
+    "Direct Yandex HTTP fetch blocked by captcha (af-004) — not R1/R2 live SERP",
+    "Results from bounded web search synthesis; ad blocks and exact rank order not verified",
+    "Personalization and logged-in state: SAFE UNKNOWN",
+    "Maps/local pack visibility: partial — Yandex Maps org pages may appear in synthesis only"
+  ],
+  "separated_from": "serp_results/ (Stage 1 bounded capture q01-q09)",
+  "query": "маркировка лекарств 1С",
+  "query_group": "product_labeling",
+  "research_label": "product-specific",
+  "serp_type": "informational-heavy",
+  "ads_blocks": {
+    "top_count": "SAFE UNKNOWN",
+    "bottom_count": "SAFE UNKNOWN",
+    "visible_patterns": []
+  },
+  "maps_local_pack": "not_observed",
+  "aggregators": [],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Cleverence — маркировка лекарств",
+      "url": "https://www.cleverence.ru/articles/markirovka-tovarov/",
+      "surface_type": "informational",
+      "player_scope": "vendor_content"
+    },
+    {
+      "position": 2,
+      "title": "Oxtron — chestniy znak",
+      "url": "https://oxtron.ru/chestniy-znak",
+      "surface_type": "commercial_service",
+      "player_scope": "federal_pattern"
+    }
+  ],
+  "commercial_signal": "weak",
+  "noise_signal": "high_informational"
+}

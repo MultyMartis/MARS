@@ -1,6 +1,6 @@
 # Frontend Structure Analysis v1 — zakaz v5
 
-**Workspace:** `workspaces/triumph-manipulator-landing-v5/`  
+**Workspace (canonical):** `workspaces/triumph-manipulator-landing-v6/`  
 **Build:** Gulp → `dist/index.html` (index-only baseline per audit)
 
 ## Stack signals

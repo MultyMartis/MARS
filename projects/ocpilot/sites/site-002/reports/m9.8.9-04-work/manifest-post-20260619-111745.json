@@ -1,0 +1,20 @@
+{
+  "task": "M9.8.9-04",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01",
+  "stamp": "20260619-111745",
+  "remote_path": "assets/js/main.js",
+  "phase": "post-deploy",
+  "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-04-work\\live-capture\\assets__js__main.js",
+  "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-04-filter-scroll-offset.bak",
+  "sha256": "a1759eead063fa9616266507da39a27c4c870a947aa24532aa3a7db0d37e2cd9",
+  "size": 197127,
+  "patch": {
+    "type": "js-scroll-offset",
+    "file": "main.js",
+    "change": "After filter AJAX: scroll section.category with header offset (not .category__grid scrollIntoView)"
+  },
+  "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-04-work\\assets__js__main.js.patched",
+  "patched_sha256": "3ab92227d91832a967106ffc71ccf5c1d44eb8b4030489648e9af91779dd837f",
+  "verify_sha256": "3ab92227d91832a967106ffc71ccf5c1d44eb8b4030489648e9af91779dd837f",
+  "deploy_ok": true
+}

@@ -15,16 +15,16 @@ declare(strict_types=1);
  * }
  */
 return [
-    'to' => 'client.leads@polygon-ws.ru',
-    'from_address' => 'no-reply@polygon-ws.ru',
-    'from_name' => 'Triumph Manipulator',
+    'to' => 'info@manipulator-triumph.ru',
+    'from_address' => 'noreply@manipulator-triumph.ru',
+    'from_name' => 'Триумф',
     'subject_prefix' => '[Triumph]',
-    'use_smtp' => false,
+    'use_smtp' => true,
     'smtp' => [
-        'host' => '',
-        'port' => 587,
-        'encryption' => 'tls',
-        'username' => '',
+        'host' => 'smtp.beget.com',
+        'port' => 465,
+        'encryption' => 'ssl',
+        'username' => 'noreply@manipulator-triumph.ru',
         'password' => '',
     ],
 ];

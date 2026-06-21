@@ -50,8 +50,8 @@ These block audit **findings**, not charter **readiness**.
 
 ## Unblock sequence (recommended)
 
-1. **Human:** Accept EAR v1 architecture docs as Phase 1 baseline.
-2. **Human:** Charter EAR Phase 2 (read-only OpenCart acquisition) — **no date implied**.
+1. ~~**Human:** Accept EAR v1 architecture docs as Phase 1 baseline.~~ **DONE** — architecture program complete (frozen 2026-06-01); EAR Runtime Program **STARTED** (foundation only).
+2. **Human:** Charter EAR Phase 2 (read-only OpenCart acquisition) — **no date implied**. Runtime R1 in progress — connector **not** implemented.
 3. **Operator:** Produce first Snapshot Package for SITE-001 via Mode 0/1 until Mode 2 exists.
 4. **OCPilot:** Resume Run 5 Phase 2+ against snapshot + baseline — status may move to **AUDIT IN PROGRESS** when execution starts.
 

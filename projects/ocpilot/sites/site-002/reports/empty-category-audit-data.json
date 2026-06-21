@@ -1,0 +1,1353 @@
+{
+  "audited_at_utc": "2026-06-14T22:36:37.437302+00:00",
+  "test_url": "https://zpm.new-site.space",
+  "authority": "LIVE TEST STATE AFTER MANUAL UI REFINEMENT",
+  "db_neutral_children": [
+    {
+      "category_id": "207",
+      "name 1": "Зонты вытяжные",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "23",
+      "subtree_active": "23"
+    },
+    {
+      "category_id": "88",
+      "name 1": "Лари",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "80",
+      "name 1": "Моечные ванны",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "152"
+    },
+    {
+      "category_id": "82",
+      "name 1": "Подтоварники",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "322",
+      "name 1": "Подтоварники и подставки",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "11"
+    },
+    {
+      "category_id": "83",
+      "name 1": "Полки",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "86",
+      "name 1": "Стеллажи",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "301",
+      "name 1": "Столы",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "419"
+    },
+    {
+      "category_id": "87",
+      "name 1": "Столы производственные",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "85",
+      "name 1": "Тележки",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "326",
+      "name 1": "Тележки сервировочные",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "3",
+      "subtree_active": "3"
+    },
+    {
+      "category_id": "89",
+      "name 1": "Шкафы",
+      "parent_id": "79",
+      "status": "1",
+      "direct_active": "0",
+      "subtree_active": "0"
+    }
+  ],
+  "db_all_zero_subtree_sample": [
+    {
+      "category_id": "171",
+      "name": "Барное оборудование",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "206",
+      "name": "Вентиляционное оборудование",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "93",
+      "name": "Инвентарь",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "205",
+      "name": "Посудомоечные машины",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "90",
+      "name": "Тепловое оборудование",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "186",
+      "name": "Хлебопекарное оборудование",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "95",
+      "name": "Холодильное оборудование",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "153",
+      "name": "Электромеханическое оборудование",
+      "parent_id 1": "0",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "88",
+      "name": "Лари",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "82",
+      "name": "Подтоварники",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "83",
+      "name": "Полки",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "86",
+      "name": "Стеллажи",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "87",
+      "name": "Столы производственные",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "85",
+      "name": "Тележки",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "89",
+      "name": "Шкафы",
+      "parent_id 1": "79",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "273",
+      "name": "Ванны с рабочей поверхностью ЛЮКС",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "280",
+      "name": "Ванны с рабочей поверхностью ПРЕМИУМ нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "283",
+      "name": "Ванны с рабочей поверхностью ПРЕМИУМ-2 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "293",
+      "name": "Ванны с рабочей поверхностью ПРЕМИУМ-3 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "276",
+      "name": "Ванны с рабочей поверхностью СТАНДАРТ нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "260",
+      "name": "Ванны сварные ПРЕМИУМ НЕСТАНДАРТ",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "264",
+      "name": "Ванны сварные ПРЕМИУМ-2 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "294",
+      "name": "Ванны сварные ПРЕМИУМ-3 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "259",
+      "name": "Ванны сварные ПРЕМИУМ-В",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "288",
+      "name": "Ванны цельнотянутые ПРЕМИУМ нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "277",
+      "name": "Ванны цельнотянутые ПРЕМИУМ-2",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "281",
+      "name": "Ванны цельнотянутые ПРЕМИУМ-2 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "289",
+      "name": "Ванны цельнотянутые Премиум-3 Нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "279",
+      "name": "Ванны цельнотянутые СТАНДАРТ нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "243",
+      "name": "Вставка перфорированная",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "287",
+      "name": "Комплектующие для ванн/рукомойников",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "296",
+      "name": "Котломойки ПРЕМИУМ нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "262",
+      "name": "Котломойки ПРЕМИУМ-2",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "263",
+      "name": "Котломойки ПРЕМИУМ-2 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "300",
+      "name": "Котломойки ПРЕМИУМ-3",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "292",
+      "name": "Котломойки ПРЕМИУМ-3 нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "275",
+      "name": "Котломойки СТАНДАРТ нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "282",
+      "name": "Моповые ванны",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "286",
+      "name": "Моповые ванны нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "284",
+      "name": "Нестандартные/специализированные ванны",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "297",
+      "name": "рукомойники нестандарт",
+      "parent_id 1": "80",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "129",
+      "name": "Под оборудование",
+      "parent_id 1": "82",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "127",
+      "name": "Стандартные",
+      "parent_id 1": "82",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "128",
+      "name": "Усиленные",
+      "parent_id 1": "82",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "121",
+      "name": "Настенные",
+      "parent_id 1": "83",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "122",
+      "name": "Угловые",
+      "parent_id 1": "83",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "138",
+      "name": "Для гастроёмкостей",
+      "parent_id 1": "85",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "139",
+      "name": "Для подносов",
+      "parent_id 1": "85",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "136",
+      "name": "Платформенные",
+      "parent_id 1": "85",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "137",
+      "name": "Сервировочные",
+      "parent_id 1": "85",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "115",
+      "name": "Разборные",
+      "parent_id 1": "86",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "116",
+      "name": "Стационарные",
+      "parent_id 1": "86",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "107",
+      "name": "Без борта",
+      "parent_id 1": "87",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "106",
+      "name": "С бортом",
+      "parent_id 1": "87",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "108",
+      "name": "Специальные",
+      "parent_id 1": "87",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "140",
+      "name": "Производственные",
+      "parent_id 1": "88",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "141",
+      "name": "Складские",
+      "parent_id 1": "88",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "131",
+      "name": "Для хранения",
+      "parent_id 1": "89",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "130",
+      "name": "Производственные",
+      "parent_id 1": "89",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "145",
+      "name": "Жарочные шкафы",
+      "parent_id 1": "90",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "146",
+      "name": "Пароконвектоматы",
+      "parent_id 1": "90",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "144",
+      "name": "Плиты",
+      "parent_id 1": "90",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "147",
+      "name": "Фритюрницы",
+      "parent_id 1": "90",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "151",
+      "name": "Гастроёмкости",
+      "parent_id 1": "93",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "152",
+      "name": "Кухонный инвентарь",
+      "parent_id 1": "93",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "150",
+      "name": "Камеры",
+      "parent_id 1": "95",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "149",
+      "name": "Морозильные шкафы",
+      "parent_id 1": "95",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "148",
+      "name": "Холодильные шкафы",
+      "parent_id 1": "95",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "101",
+      "name": "Без борта",
+      "parent_id 1": "97",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "100",
+      "name": "С бортом",
+      "parent_id 1": "97",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "102",
+      "name": "С бортом",
+      "parent_id 1": "98",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "103",
+      "name": "С полкой",
+      "parent_id 1": "98",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "104",
+      "name": "Для производств",
+      "parent_id 1": "99",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "105",
+      "name": "Для столовых",
+      "parent_id 1": "99",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "109",
+      "name": "С полкой",
+      "parent_id 1": "106",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "110",
+      "name": "Усиленные",
+      "parent_id 1": "106",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "112",
+      "name": "С нижней полкой",
+      "parent_id 1": "107",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "111",
+      "name": "Стандартные",
+      "parent_id 1": "107",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "114",
+      "name": "Для оборудования",
+      "parent_id 1": "108",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "113",
+      "name": "Разделочные",
+      "parent_id 1": "108",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "117",
+      "name": "Лёгкие",
+      "parent_id 1": "115",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "118",
+      "name": "Усиленные",
+      "parent_id 1": "115",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "120",
+      "name": "Для кухни",
+      "parent_id 1": "116",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "119",
+      "name": "Для складов",
+      "parent_id 1": "116",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "124",
+      "name": "Закрытые",
+      "parent_id 1": "121",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "123",
+      "name": "Открытые",
+      "parent_id 1": "121",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "125",
+      "name": "Для кухни",
+      "parent_id 1": "122",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "126",
+      "name": "Для моечных зон",
+      "parent_id 1": "122",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "132",
+      "name": "Закрытые",
+      "parent_id 1": "130",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "133",
+      "name": "С полками",
+      "parent_id 1": "130",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "134",
+      "name": "Инвентарь",
+      "parent_id 1": "131",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "135",
+      "name": "Посуда",
+      "parent_id 1": "131",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "161",
+      "name": "Аппараты пельменные",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "155",
+      "name": "Весы",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "162",
+      "name": "Картофелечистки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "157",
+      "name": "Куттеры и блендеры",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "154",
+      "name": "Мясорубки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "166",
+      "name": "Овощемойки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "160",
+      "name": "Овощерезки и протирки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "170",
+      "name": "Овощесушки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "category_id",
+      "name": "name",
+      "parent_id 1": "parent_id 1",
+      "status": "status",
+      "subtree_active": "subtree_active"
+    },
+    {
+      "category_id": "169",
+      "name": "Панировочное оборудование",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "159",
+      "name": "Пилы для мяса",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "168",
+      "name": "Рыбочистки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "164",
+      "name": "Слайсеры",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "158",
+      "name": "Соковыжималки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "167",
+      "name": "Сырорезки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "163",
+      "name": "Универсальные кухонные машины",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "156",
+      "name": "Упаковочное оборудование",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "165",
+      "name": "Хлеборезки",
+      "parent_id 1": "153",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "185",
+      "name": "Аппараты для взбитых сливок",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "181",
+      "name": "Аппараты для горячего шоколада",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "183",
+      "name": "Аппараты для охлаждения бокалов",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "177",
+      "name": "Барные комбайны",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "179",
+      "name": "Барные станции",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "173",
+      "name": "Блендеры",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "180",
+      "name": "Граниторы - Слаш",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "178",
+      "name": "Измельчители льда",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "182",
+      "name": "Кегераторы",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "172",
+      "name": "Льдогенераторы",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "175",
+      "name": "Миксеры для молочных коктейлей",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "174",
+      "name": "Мороженое и коктейли",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "184",
+      "name": "Системы питьевого водоснабжения",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "176",
+      "name": "Сокоохладители",
+      "parent_id 1": "171",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "199",
+      "name": "Бисквиторезки",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "201",
+      "name": "Дозаторы",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "202",
+      "name": "Измельчители",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "188",
+      "name": "Миксеры планетарные",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "196",
+      "name": "Мукопросеиватели",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "198",
+      "name": "Оборудование для декорирования",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "187",
+      "name": "Подовые печи",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "195",
+      "name": "Прессы для пиццы",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "192",
+      "name": "Прессы для приготовления пасты",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "191",
+      "name": "Ротационные печи",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "194",
+      "name": "Тестоделители и тестоокруглители",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "189",
+      "name": "Тестомесы",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "193",
+      "name": "Тестораскатки, тестозакатки",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "197",
+      "name": "Ферментаторы",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "200",
+      "name": "Центрифуги для яиц",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "190",
+      "name": "Шкафы и столы расстоечные",
+      "parent_id 1": "186",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "298",
+      "name": "Корзины для сан.обработки яиц",
+      "parent_id 1": "258",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "299",
+      "name": "Корзины для сан.обработки яиц НЕСТАНДАРТ",
+      "parent_id 1": "258",
+      "status": "1",
+      "subtree_active": "0"
+    },
+    {
+      "category_id": "291",
+      "name": "Ванна с рабочей поверхностью ПРЕМИУМ-3 нестандарт",
+      "parent_id 1": "290",
+      "status": "1",
+      "subtree_active": "0"
+    }
+  ],
+  "live_surfaces": {
+    "megamenu_neutral": [
+      {
+        "name": "Подтоварники и подставки",
+        "count": 11,
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+      },
+      {
+        "name": "Столы",
+        "count": 419,
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+      },
+      {
+        "name": "Тележки сервировочные",
+        "count": 3,
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+      },
+      {
+        "name": "Зонты вытяжные",
+        "count": 23,
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+      },
+      {
+        "name": "Моечные ванны",
+        "count": 152,
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+      }
+    ],
+    "hub_cards": [
+      {
+        "name": "Столы",
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly"
+      },
+      {
+        "name": "Моечные ванны",
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny"
+      },
+      {
+        "name": "Подтоварники и подставки",
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki"
+      },
+      {
+        "name": "Зонты вытяжные",
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye"
+      },
+      {
+        "name": "Тележки сервировочные",
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye"
+      }
+    ],
+    "katalog_tiles": [
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+        "name": "Подтоварники и подставки"
+      },
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+        "name": "Столы"
+      },
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye",
+        "name": "Тележки сервировочные"
+      },
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye",
+        "name": "Зонты вытяжные"
+      },
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny",
+        "name": "Моечные ванны"
+      }
+    ],
+    "offcanvas_neutral": [
+      {
+        "name": "Перейти в&nbsp;каталог",
+        "href": "/katalog/nejtralnoe-oborudovanie"
+      },
+      {
+        "name": "Каталог",
+        "href": "/katalog/nejtralnoe-oborudovanie"
+      },
+      {
+        "name": "Каталог",
+        "href": "/katalog/nejtralnoe-oborudovanie"
+      }
+    ],
+    "footer_catalog": [
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+        "name": "Нейтральное оборудование"
+      },
+      {
+        "href": "/custom-equipment/",
+        "name": "Оборудование на&nbsp;заказ"
+      },
+      {
+        "href": "/payment-methods",
+        "name": "Оплата"
+      },
+      {
+        "href": "/delivery",
+        "name": "Доставка"
+      },
+      {
+        "href": "/dealers",
+        "name": "Дилерам"
+      },
+      {
+        "href": "/guarantee",
+        "name": "Гарантия"
+      },
+      {
+        "href": "/about",
+        "name": "О компании"
+      },
+      {
+        "href": "/blog/news",
+        "name": "Новости"
+      },
+      {
+        "href": "/contact",
+        "name": "Контакты"
+      }
+    ],
+    "stoly_subcat_chips": [
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+        "name": "Стол-тумба СПКБ-18/7-ВЛ5 (1800х700х850)"
+      }
+    ],
+    "vanny_subcat_chips": [
+      {
+        "href": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+        "name": "Ванна моечная ВМЦ-П3-2/500 (1150х700х850)"
+      }
+    ]
+  },
+  "code_audit": [
+    {
+      "layer": "PHP library",
+      "file": "system/library/zpm/category_visibility.php",
+      "function": "prepareMegamenuCategories",
+      "filters_empty": true,
+      "scope": "megamenu children only",
+      "note": "Filters children with getTotalProducts <= 0"
+    },
+    {
+      "layer": "Controller",
+      "file": "catalog/controller/common/header.php",
+      "calls_prepareMegamenu": true,
+      "note": "Megamenu data path"
+    },
+    {
+      "layer": "Controller",
+      "file": "catalog/controller/product/katalog.php",
+      "calls_prepareMegamenu": true,
+      "filters_on_cache_build": true,
+      "note": "/katalog cache build path"
+    },
+    {
+      "layer": "Controller",
+      "file": "catalog/controller/product/category.php",
+      "hub_branch_filter": true,
+      "getNeutralHubBranchIds": true,
+      "note": "Hub mode branch cards"
+    },
+    {
+      "layer": "Twig",
+      "file": "catalog/view/theme/default/template/common/megamenu.twig",
+      "scope": "megamenu",
+      "renders_children_unconditionally": false,
+      "has_count_guard": true
+    },
+    {
+      "layer": "Twig",
+      "file": "catalog/view/theme/default/template/sections/offcanvasmenu.twig",
+      "scope": "offcanvas",
+      "renders_children_unconditionally": false,
+      "has_count_guard": false
+    },
+    {
+      "layer": "Twig",
+      "file": "catalog/view/theme/default/template/sections/catalogsections.twig",
+      "scope": "home catalog sections",
+      "renders_children_unconditionally": false,
+      "has_count_guard": false
+    },
+    {
+      "layer": "Twig",
+      "file": "catalog/view/theme/default/template/product/category.twig",
+      "scope": "category page / hub",
+      "renders_children_unconditionally": false,
+      "has_count_guard": false
+    }
+  ],
+  "issues": [
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 88,
+      "name": "Лари",
+      "subtree_active": 0
+    },
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 82,
+      "name": "Подтоварники",
+      "subtree_active": 0
+    },
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 83,
+      "name": "Полки",
+      "subtree_active": 0
+    },
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 86,
+      "name": "Стеллажи",
+      "subtree_active": 0
+    },
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 87,
+      "name": "Столы производственные",
+      "subtree_active": 0
+    },
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 85,
+      "name": "Тележки",
+      "subtree_active": 0
+    },
+    {
+      "surface": "database",
+      "type": "neutral_child_zero_products",
+      "category_id": 89,
+      "name": "Шкафы",
+      "subtree_active": 0
+    }
+  ],
+  "issue_count": 7
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "lq11",
+  "stage": "mig_research_stage_2",
+  "captured_at": "2026-06-22T14:00:00.000Z",
+  "collection_date": "2026-06-22",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "region_lr": 65,
+  "city": "Новосибирск",
+  "device": "mobile",
+  "source_mode": "bounded_web_search_stage2",
+  "evidence_grade": "C",
+  "acquisition_limitations": [
+    "Direct Yandex HTTP fetch blocked by captcha (af-004) — not R1/R2 live SERP",
+    "Results from bounded web search synthesis; ad blocks and exact rank order not verified",
+    "Personalization and logged-in state: SAFE UNKNOWN",
+    "Maps/local pack visibility: partial — Yandex Maps org pages may appear in synthesis only"
+  ],
+  "separated_from": "serp_results/ (Stage 1 bounded capture q01-q09)",
+  "query": "настройка отчёта 1С Новосибирск",
+  "query_group": "reports_modifications",
+  "research_label": "commercial",
+  "serp_type": "commercial",
+  "ads_blocks": {
+    "top_count": "SAFE UNKNOWN",
+    "bottom_count": "SAFE UNKNOWN",
+    "visible_patterns": []
+  },
+  "maps_local_pack": "not_observed",
+  "aggregators": [],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Vigyana — настройка отчётов",
+      "url": "https://vigyana.ru/uslugi/1s-programmirovanie/",
+      "surface_type": "commercial_service",
+      "player_scope": "local_company"
+    },
+    {
+      "position": 2,
+      "title": "ITLlekt — настройка отчётов",
+      "url": "https://www.itllekt.ru/1c/services/maintenance/dorabotka-1s/",
+      "surface_type": "commercial_service",
+      "player_scope": "local_franchisee"
+    }
+  ],
+  "commercial_signal": "moderate",
+  "noise_signal": "low"
+}

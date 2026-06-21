@@ -1,0 +1,555 @@
+{
+  "schema_stub_version": "keyword-snapshot-stub-v1",
+  "session_id": "mig-20260622-corv01",
+  "capture_id": "cap-20260622-corv01",
+  "snapshot_type": "wordstat",
+  "import_method": "manual_operator_two_pass",
+  "provider_label": "yandex_wordstat",
+  "collection_policy_ref": "corvonero-wordstat-collection-matrix-v1.json#collection_policy",
+  "pass_a_status": "COMPLETE",
+  "pass_b_status": "NOT_STARTED",
+  "region_label_pass_a": "все регионы / all Russia",
+  "region_label_pass_b": "Новосибирск + Новосибирская область",
+  "period": "unknown",
+  "exported_at": "2026-06-22",
+  "captured_at": "2026-06-22T18:00:00.000Z",
+  "operator_id": "human-operator",
+  "source_file_ref": "evidence/wordstat/wordstat-pass-a-file-index.json",
+  "status": "pass_a_complete",
+  "column_mapping": {
+    "Query": "phrase",
+    "Frequency": "frequency"
+  },
+  "session_safe_unknown": [
+    "Pass A nationwide broad rows ingested — not regional demand",
+    "Pass B regional validation not started",
+    "Individual row frequencies are semantic discovery only"
+  ],
+  "evidence_grade": "B_semantic_discovery",
+  "rows": [
+    {
+      "row_id": "WS-01",
+      "query_id": "ws-p1-001",
+      "phrase": "программист 1С",
+      "pass": "A",
+      "region": "все регионы / all Russia",
+      "match_mode": "broad_unquoted",
+      "operator_syntax": "программист 1С",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": "evidence/wordstat/screenshots/ws-p1-001-programmist-1c.jpg",
+      "screenshot_ingestion_status": "awaiting_ingestion",
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-001-evidence.json",
+      "operator_observed_ui_total": {
+        "value": 19682,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      },
+      "semantic_noise_classes_observed": [
+        "vacancy",
+        "training",
+        "salary",
+        "remote_work",
+        "services",
+        "informational"
+      ],
+      "acquisition_failure": null,
+      "pass_b": {
+        "region": "Новосибирск + Новосибирская область",
+        "match_mode": "exact",
+        "operator_syntax": "\"программист 1С\"",
+        "status": "NOT_STARTED",
+        "frequency": null
+      },
+      "safe_unknown": [
+        "Individual related-query rows not transcribed",
+        "19682 not written to keyword_registry frequency slots",
+        "Pass B regional exact frequency not collected"
+      ],
+      "related_row_count": 589,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx"
+    },
+    {
+      "row_id": "WS-02",
+      "query_id": "ws-p1-002",
+      "phrase": "программист 1С Новосибирск",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"программист 1С Новосибирск\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-002-evidence.json",
+      "related_row_count": 5,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+      "operator_observed_ui_total": {
+        "value": 251,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-03",
+      "query_id": "ws-p1-003",
+      "phrase": "сопровождение 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"сопровождение 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-003-evidence.json",
+      "related_row_count": 177,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+      "operator_observed_ui_total": {
+        "value": 4344,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-04",
+      "query_id": "ws-p1-004",
+      "phrase": "доработка 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"доработка 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-004-evidence.json",
+      "related_row_count": 83,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+      "operator_observed_ui_total": {
+        "value": 3386,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-05",
+      "query_id": "ws-p1-005",
+      "phrase": "интеграция 1С с сайтом",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"интеграция 1С с сайтом\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-005-evidence.json",
+      "related_row_count": 10,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+      "operator_observed_ui_total": {
+        "value": 491,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-06",
+      "query_id": "ws-p1-006",
+      "phrase": "интеграция 1С Битрикс",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"интеграция 1С Битрикс\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-006-evidence.json",
+      "related_row_count": 28,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+      "operator_observed_ui_total": {
+        "value": 619,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-07",
+      "query_id": "ws-p1-007",
+      "phrase": "маркировка в 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"маркировка в 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-007-evidence.json",
+      "related_row_count": 196,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+      "operator_observed_ui_total": {
+        "value": 14346,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-08",
+      "query_id": "ws-p1-008",
+      "phrase": "Честный знак 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"Честный знак 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-008-evidence.json",
+      "related_row_count": 250,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+      "operator_observed_ui_total": {
+        "value": 11125,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-09",
+      "query_id": "ws-p2-001",
+      "phrase": "доработка отчёта 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"доработка отчёта 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-001-evidence.json",
+      "related_row_count": 2,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+      "operator_observed_ui_total": {
+        "value": 146,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-10",
+      "query_id": "ws-p2-002",
+      "phrase": "доработка печатной формы 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"доработка печатной формы 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-002-evidence.json",
+      "related_row_count": 542,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+      "operator_observed_ui_total": {
+        "value": 20147,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-11",
+      "query_id": "ws-p2-003",
+      "phrase": "доработка РМК 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "no_result_for_entered_formulation",
+      "match_mode": "exact",
+      "operator_syntax": "\"доработка РМК 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_operator_report",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-003-no-result-evidence.json"
+    },
+    {
+      "row_id": "WS-12",
+      "query_id": "ws-p2-004",
+      "phrase": "настройка синхронизации 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"настройка синхронизации 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-004-evidence.json",
+      "related_row_count": 384,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+      "operator_observed_ui_total": {
+        "value": 18625,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-13",
+      "query_id": "ws-p2-005",
+      "phrase": "обновление доработанной 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"обновление доработанной 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-005-evidence.json",
+      "related_row_count": 1,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+      "operator_observed_ui_total": {
+        "value": 26,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-14",
+      "query_id": "ws-p2-006",
+      "phrase": "срочно программист 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "no_result_for_entered_formulation",
+      "match_mode": "exact",
+      "operator_syntax": "\"срочно программист 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_operator_report",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-006-no-result-evidence.json"
+    },
+    {
+      "row_id": "WS-15",
+      "query_id": "ws-p2-007",
+      "phrase": "1С не работает",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"1С не работает\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p2-007-evidence.json",
+      "related_row_count": 2,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+      "operator_observed_ui_total": {
+        "value": 312,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-16",
+      "query_id": "ws-p3-001",
+      "phrase": "маркировка пива 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"маркировка пива 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p3-001-evidence.json",
+      "related_row_count": 1,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+      "operator_observed_ui_total": {
+        "value": 89,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-17",
+      "query_id": "ws-p3-002",
+      "phrase": "маркировка воды 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"маркировка воды 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p3-002-evidence.json",
+      "related_row_count": 1,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+      "operator_observed_ui_total": {
+        "value": 58,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-18",
+      "query_id": "ws-p3-003",
+      "phrase": "маркировка лекарств 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"маркировка лекарств 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p3-003-evidence.json",
+      "related_row_count": 33,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+      "operator_observed_ui_total": {
+        "value": 1555,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-19",
+      "query_id": "ws-p3-004",
+      "phrase": "ТС ПИОТ 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"ТС ПИОТ 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p3-004-evidence.json",
+      "related_row_count": 22,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+      "operator_observed_ui_total": {
+        "value": 1101,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    },
+    {
+      "row_id": "WS-20",
+      "query_id": "ws-p3-005",
+      "phrase": "маркировка автозапчастей 1С",
+      "region": "Новосибирск + Новосибирская область",
+      "frequency": null,
+      "frequency_status": "observed_broad_national_semantic_discovery",
+      "match_mode": "exact",
+      "operator_syntax": "\"маркировка автозапчастей 1С\"",
+      "collection_date": "2026-06-22",
+      "evidence_grade": "B_semantic_discovery",
+      "screenshot_ref": null,
+      "acquisition_failure": "af-006_automated_only",
+      "safe_unknown": [
+        "Wordstat UI requires authenticated human operator session — agent environment cannot complete manual export"
+      ],
+      "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p3-005-evidence.json",
+      "related_row_count": 73,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+      "operator_observed_ui_total": {
+        "value": 6539,
+        "status": "observed_from_excel_row_1",
+        "interpretation": "nationwide_broad_semantic_only_not_regional_demand",
+        "source_row": 2
+      }
+    }
+  ],
+  "external_storage_source": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06"
+}

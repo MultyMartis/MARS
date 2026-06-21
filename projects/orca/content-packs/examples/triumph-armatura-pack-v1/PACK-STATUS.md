@@ -2,7 +2,7 @@
 
 route_id: armatura
 route_folder: armatura
-url: SAFE UNKNOWN
+url: https://manipulator-triumph.ru/armatura.html
 display_path: armatura
 content_coverage: true
 production_copy_ready: true

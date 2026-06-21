@@ -4,7 +4,7 @@
 **PPC group:** `grp_fc12_zakaz` — «12 — Заказать манипулятор»  
 **Blueprint:** `01-master-hot-general`  
 **Canonical URL:** `https://manipulator-triumph.ru/`  
-**Factory workspace:** `workspaces/triumph-manipulator-landing-v5/` (`src/pages/index.html`, `data-page-type="ppc-zakaz-manip"`)
+**Factory workspace (canonical):** `workspaces/triumph-manipulator-landing-v6/` (`data-page-type="ppc-zakaz-manip"` on zakaz route; partials under `v5-ppc/zakaz/`). Historical: `workspaces/triumph-manipulator-landing-v5/`.
 
 ## Why this case is first
 

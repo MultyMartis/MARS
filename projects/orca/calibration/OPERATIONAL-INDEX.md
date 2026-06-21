@@ -51,8 +51,9 @@ triumph-manipulator/
 | Campaign instance (grp 12) | `projects/orca/ppc/triumph-manipulator/schema/instances/triumph-s-tier-draft-v1.json` |
 | Capability pack (reference) | `projects/orca/content-packs/examples/triumph-manipulyator-5-tonn-pack-v0.md` |
 | 5-ton handoff (structural cousin) | `projects/orca/ppc/triumph-manipulator/handoff/triumph-manipulator-v5-page-01-manipulyator-5-tonn-handoff.md` |
-| v5 implementation | `workspaces/triumph-manipulator-landing-v5/src/pages/index.html` + `v5-ppc/zakaz/*` |
-| v5 hardening reports | `workspaces/triumph-manipulator-landing-v5/reports/` |
+| **Canonical implementation (v6)** | `workspaces/triumph-manipulator-landing-v6/` — master hot zakaz: `src/pages/index.html` (or route HTML) + `v5-ppc/zakaz/*` partials |
+| v6 production state | `projects/triumph-manipulator-landing/V6-PRODUCTION-CANDIDATE-STATE.md` · authority [triumph-workspace-authority-map-v1.md](../../../triumph-manipulator-landing/triumph-workspace-authority-map-v1.md) |
+| v5 hardening reports (historical) | `workspaces/triumph-manipulator-landing-v5/reports/` |
 | Legacy v4 hero (anti-pattern) | `workspaces/triumph-manipulator-landing-v4/src/partials/sections/screen-01-hero.html` |
 
 **Note:** No dedicated `*-zakaz-handoff.md` exists yet — calibration treats blueprint + instance + as-built HTML as evidence (SAFE UNKNOWN for formal handoff sign-off).
@@ -61,5 +62,5 @@ triumph-manipulator/
 
 ## Boundaries
 
-- Do **not** edit `workspaces/triumph-manipulator-landing-v5/` from this lane unless a separate production charter says so.
+- Do **not** edit `workspaces/triumph-manipulator-landing-v6/` (or v5 historical trees) from this lane unless a separate production charter says so.
 - Do **not** claim launch readiness or conversion performance — human reasoning only.

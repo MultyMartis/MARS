@@ -2,19 +2,22 @@
 
 **Статус:** **DRAFT** · **PLANNING** · **STATIC-FIRST** (target UI shape)
 
-**Phase 1–2 supplements:** [ux-discovery-notes-v0.1.md](ux-discovery-notes-v0.1.md) · [screen-map-v0.1.md](screen-map-v0.1.md) · [block-screen-taxonomy-v0.1.md](block-screen-taxonomy-v0.1.md) · [cockpit-layout-zones-v0.1.md](cockpit-layout-zones-v0.1.md) · **Phase 2:** [multi-view-cockpit-system-v0.1.md](multi-view-cockpit-system-v0.1.md) · [operational-modes-v0.1.md](operational-modes-v0.1.md) · [navigation-hierarchy-v0.1.md](navigation-hierarchy-v0.1.md) · [cockpit-os-concept-notes-v0.1.md](cockpit-os-concept-notes-v0.1.md)
+**Phase 1–2 supplements:** [ux-discovery-notes-v0.1.md](ux-discovery-notes-v0.1.md) · [screen-map-v0.1.md](screen-map-v0.1.md) · [block-screen-taxonomy-v0.1.md](block-screen-taxonomy-v0.1.md) · [cockpit-layout-zones-v0.1.md](cockpit-layout-zones-v0.1.md) · **Phase 2:** [multi-view-cockpit-system-v0.1.md](multi-view-cockpit-system-v0.1.md) · [operational-modes-v0.1.md](operational-modes-v0.1.md) · [navigation-hierarchy-v0.1.md](navigation-hierarchy-v0.1.md) · [cockpit-os-concept-notes-v0.1.md](cockpit-os-concept-notes-v0.1.md)  
+**Post–Prototype v0.1 spatial canon:** [cockpit-spatial-architecture-v0.1.md](cockpit-spatial-architecture-v0.1.md) · [tactical-signal-philosophy-v0.1.md](tactical-signal-philosophy-v0.1.md) · [viewport-and-scroll-philosophy-v0.1.md](viewport-and-scroll-philosophy-v0.1.md) · [visual-language-direction-v0.1.md](visual-language-direction-v0.1.md) — full pack in [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) § Spatial cockpit architecture
 
 ---
 
 ## Архитектурная роль
 
-HomeGateway — **Personal Operational Cockpit** / **multi-view operational cockpit system** для владельца веб-студии, AI-assisted production ecosystem, клиентских операций и MARS-connected infrastructure.
+HomeGateway — **Personal Operational Cockpit** / **spatial operational cockpit environment with layered tactical awareness** для владельца веб-студии, AI-assisted production ecosystem, клиентских операций и MARS-connected infrastructure.
 
 Концептуальное направление (не продукт ОС): **Cockpit OS** = unified operational environment — см. [cockpit-os-concept-notes-v0.1.md](cockpit-os-concept-notes-v0.1.md).
 
-Слой: **operational surface** → **multi-view cockpit UI** → **display/control preparation** (управление — только после admin + integrations).
+Слой: **operational surface** → **multi-view spatial cockpit UI** → **display/control preparation** (управление — только после admin + integrations).
 
 **Phase 2:** HG **не** одна dashboard-страница — connected views per [multi-view-cockpit-system-v0.1.md](multi-view-cockpit-system-v0.1.md).
+
+**Post–Prototype v0.1 (canonical):** dashboard-grid interpretation **deprecated**. Пространственная модель tri-focus (`main_menu` + `main_area` + `info_area`) — [cockpit-spatial-architecture-v0.1.md](cockpit-spatial-architecture-v0.1.md). Legacy `zone-*` ids map to spatial IDs in that doc.
 
 ---
 
@@ -51,19 +54,21 @@ HomeGateway — **Personal Operational Cockpit** / **multi-view operational cock
 
 ## Структура приложения (логическая)
 
-Shell zones (draft, non-binding): [cockpit-layout-zones-v0.1.md](cockpit-layout-zones-v0.1.md).
+Shell zones: **canonical spatial** — [cockpit-spatial-architecture-v0.1.md](cockpit-spatial-architecture-v0.1.md); legacy zone_id — [cockpit-layout-zones-v0.1.md](cockpit-layout-zones-v0.1.md).
 
 ```text
 ┌──────────────────────────────────────────────────────────┐
-│  zone-top-command · theme · admin entry · status          │
+│  top_bar · logo · system_status · theme · admin · user      │
 ├────┬─────────────────────────────────────────────┬───────┤
-│nav │  zone-canvas-central (block-screens)          │signal │
-│left│  ┌─────────┐ ┌─────────┐ ┌─────────┐        │ rail  │
-│    │  │ block   │ │ block   │ │ block   │  ...   │ right │
+│ L  │  main_area (block-screens · operational work) │ info  │
+│ E  │  ┌─────────┐ ┌─────────┐ ┌─────────┐        │ area  │
+│ F  │  │ block   │ │ block   │ │ block   │  ...   │tactical│
+│ T  │  └─────────┘ └─────────┘ └─────────┘        │aware. │
+│nav │  main_menu · favorites_used                  │       │
 ├────┴─────────────────────────────────────────────┴───────┤
-│  zone-strip-bottom (quick actions · clipboard)            │
+│  bottom strip (quick actions · clipboard) — optional      │
 ├──────────────────────────────────────────────────────────┤
-│  zone-overlay (popups, project detail panel) — mock v0.1   │
+│  overlay layer (L3 — project detail) — mock v0.1          │
 └──────────────────────────────────────────────────────────┘
          │
          ▼ (future, not v0.1)
@@ -163,6 +168,19 @@ Shell zones (draft, non-binding): [cockpit-layout-zones-v0.1.md](cockpit-layout-
 
 ---
 
+## Spatial cockpit architecture (post–Prototype v0.1)
+
+| Concern | Doc |
+|---------|-----|
+| Spatial zones + tri-focus | [cockpit-spatial-architecture-v0.1.md](cockpit-spatial-architecture-v0.1.md) |
+| `info_area` / tactical signals | [tactical-signal-philosophy-v0.1.md](tactical-signal-philosophy-v0.1.md) |
+| Viewport / no page scroll | [viewport-and-scroll-philosophy-v0.1.md](viewport-and-scroll-philosophy-v0.1.md) |
+| Surfaces + motion + depth | [surface-behavior-system-v0.1.md](surface-behavior-system-v0.1.md), [motion-and-transition-charter-v0.1.md](motion-and-transition-charter-v0.1.md), [depth-and-z-layer-system-v0.1.md](depth-and-z-layer-system-v0.1.md) |
+| Priority + focus + empty | [information-priority-model-v0.1.md](information-priority-model-v0.1.md), [operational-focus-state-model-v0.1.md](operational-focus-state-model-v0.1.md), [loading-and-empty-state-philosophy-v0.1.md](loading-and-empty-state-philosophy-v0.1.md) |
+| Visual direction (Phase 3) | [visual-language-direction-v0.1.md](visual-language-direction-v0.1.md) |
+
+---
+
 ## SAFE UNKNOWN
 
 - Wireframe fidelity per mode — Phase 2 in progress.
@@ -171,4 +189,4 @@ Shell zones (draft, non-binding): [cockpit-layout-zones-v0.1.md](cockpit-layout-
 
 ---
 
-*Last updated: 2026-05-20 — Phase 2 multi-view alignment.*
+*Last updated: 2026-05-24 — Post–Prototype v0.1 spatial cockpit canon.*

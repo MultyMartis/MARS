@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "website_ref": "WEB-CORV-01",
+  "url": "http://lk.corvonero.ru/",
+  "domain": "lk.corvonero.ru",
+  "captured_at": "2026-06-22T12:44:00.000Z",
+  "capture_mode": "surface_snapshot_only",
+  "evidence_grade": "B",
+  "availability": "available_http_200",
+  "platform_signals": {
+    "tilda_indicators": [
+      "Tilda form JSON blocks in page source (lid/ls/li_type structure)",
+      "Single-page marketing layout typical of Tilda landing"
+    ],
+    "tilda_confirmed": "probable_not_attested"
+  },
+  "title": "Корво Неро",
+  "description": "SAFE UNKNOWN — meta description not extracted in bounded fetch",
+  "h1_primary": "«Корво Неро» — Внедрение и сопровождение 1С",
+  "tagline": "Центр автоматизации",
+  "main_services_observed": [
+    "Внедрение 1С",
+    "Аудит настроек / «почему не работает программа 1С»",
+    "Обновление и сохранение доработок",
+    "Интеграция (сайт, маркировка, ЕГАИС, касса)",
+    "Разработка отчётов и печатных форм",
+    "Переход между конфигурациями 1С",
+    "Честный знак / маркировка (упомянуто в блоке деятельности)",
+    "Настройка торгового оборудования"
+  ],
+  "cta_observed": [
+    "Связаться с нами",
+    "Оставьте заявку",
+    "Обратитесь к нам (коммерческое предложение)"
+  ],
+  "forms": [
+    {
+      "type": "lead_form",
+      "fields": ["Имя (ordername)", "Почта (orderemail)", "Телефон (orderphone)", "Описание задачи (orderrequest)"],
+      "required": ["ordername", "orderphone", "orderrequest"]
+    }
+  ],
+  "contacts": {
+    "phone": "+7 (383) 390-29-28",
+    "email": "contact@corvonero.ru",
+    "address": "г. Новосибирск, ул. Советская, 64/1, офис 804"
+  },
+  "geography_visible": "Новосибирск (офисный адрес)",
+  "pricing_observed": [
+    { "item": "Цена часа работы специалиста", "value": "3000₽" },
+    { "item": "Настройка веб-публикации", "value": "от 2500₽" },
+    { "item": "Разработка печатной формы или отчета", "value": "от 7500₽" },
+    { "item": "Стоимость проекта", "value": "индивидуально" }
+  ],
+  "trust_elements_observed": [
+    "Блок «Почему мы» (анализ, разработка, поддержка)",
+    "Комплексный подход messaging",
+    "No case studies, certificates, or partner badges observed on surface"
+  ],
+  "menu_structure": "Single-page anchors: виды деятельности, услуги, цены, контакты",
+  "limitations": [
+    "Surface snapshot only — not Website Intelligence pass",
+    "No mobile viewport render audit",
+    "No landing observation families v2",
+    "Partner/franchisee status not verified from page"
+  ],
+  "safe_unknown": [
+    "Meta description",
+    "Conversion effectiveness",
+    "Tilda technical constraints",
+    "Official 1C partner status"
+  ]
+}

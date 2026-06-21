@@ -4,7 +4,7 @@
 
 **Canonical local path (do not relocate into public `dist/` or publish):**
 
-`D:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4`
+`C:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4`
 
 This asset is a **licensed, local-only** dependency. Treat every glyph as covered by your Font Awesome Pro agreement. Do not upload the folder, do not attach the whole library to tickets or public repos, and do not ship the entire `webfonts/` or full `all.css` bundle unless your license explicitly allows that distribution model.
 
@@ -125,7 +125,7 @@ Use **kebab-case**, descriptive, **project-prefixed** when ambiguity exists:
 From the repo root (PowerShell example):
 
 ```powershell
-Select-String -Path "D:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4\css\all.css" -Pattern "\.fa-truck" | Select-Object -First 20
+Select-String -Path "C:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4\css\all.css" -Pattern "\.fa-truck" | Select-Object -First 20
 ```
 
 Use the `.fa-<slug>:before` slug as the Font Awesome icon name.

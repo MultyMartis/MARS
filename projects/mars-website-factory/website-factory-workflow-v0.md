@@ -62,11 +62,11 @@ Each row is a **stage** in order. **Primary agents** reference [agent-map.md](ag
 | **purpose** | Capture business goals, audience, constraints, brand/compliance sensitivity, and delivery expectations; establish **scope_in** / **scope_out** for downstream Tasks. |
 | **primary agents** | Project Intake Agent (planned); human PM/lead owns final scope narrative. |
 | **input artifacts** | Client briefs, stakeholder notes, existing analytics (if any), legal/compliance flags, prior site exports (**optional**). |
-| **output artifacts** | Intake summary; **Task**-shaped scope draft (goal, constraints, risk_level hypothesis); open questions list. |
+| **output artifacts** | Intake summary; **Task**-shaped scope draft (goal, constraints, risk_level hypothesis); open questions list; **`production_mode` declaration** (`PIXEL_PERFECT` \| `TEMPLATE_ART`) or explicit **STOP** if undeclared. |
 | **registries used** | None mandatory; may **pre-reference** Site Type Registry for vocabulary only. |
-| **QA gates** | Completeness check: goals, audience, constraints, and approval chain identified. |
+| **QA gates** | Completeness check: goals, audience, constraints, approval chain, and **production mode** identified. |
 | **HITL requirements** | **G1** (per workflow-map): PM/lead confirms intake accuracy and **scope_in** / **scope_out**. |
-| **SAFE UNKNOWN escalation** | If business model, markets, or compliance posture are **missing** → emit **UNKNOWN** or **SAFE UNKNOWN** with bounded assumptions **only** if policy allows; otherwise **park** until resolved. |
+| **SAFE UNKNOWN escalation** | If business model, markets, compliance posture, or **production mode** are **missing** → emit **UNKNOWN** or **SAFE UNKNOWN** with bounded assumptions **only** if policy allows; otherwise **park** until resolved. **Production mode undeclared** → **STOP** — no `WF_V0_S10` frontend handoff per [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md). |
 | **downstream dependencies** | Site Type Classification requires stable intake **goal** and **constraints**. |
 
 ---

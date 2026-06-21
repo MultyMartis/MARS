@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-06-09T04:20:02.641588+00:00",
+  "deployed": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css"
+  },
+  "backups": {
+    "producthero": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.debug-before-cleanup.bak",
+    "style": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-superatts-presentation.bak"
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa": {
+    "spkb": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "php_ok": true,
+      "debug_removed": true,
+      "cart_btn": true,
+      "qty": true,
+      "wishlist": true,
+      "compare": true,
+      "fancybox": true,
+      "specs": {
+        "found": true,
+        "primary_blocks": 1,
+        "additional_blocks": 1,
+        "count": 10,
+        "names": [
+          "Длина, мм",
+          "Ширина, мм",
+          "Высота, мм",
+          "Масса, кг",
+          "Конструкция",
+          "Наличие борта",
+          "Ножки",
+          "Отверстие под смеситель",
+          "Размер раковины (ДхШхВ, мм)",
+          "Тип опоры"
+        ],
+        "split": true
+      },
+      "hero_height_px": null
+    },
+    "vmc": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "php_ok": true,
+      "debug_removed": true,
+      "cart_btn": true,
+      "qty": true,
+      "wishlist": true,
+      "compare": true,
+      "fancybox": true,
+      "specs": {
+        "found": true,
+        "primary_blocks": 1,
+        "additional_blocks": 1,
+        "count": 10,
+        "names": [
+          "Длина, мм",
+          "Ширина, мм",
+          "Высота, мм",
+          "Масса, кг",
+          "Конструкция",
+          "Наличие борта",
+          "Ножки",
+          "Отверстие под смеситель",
+          "Размер раковины (ДхШхВ, мм)",
+          "Тип опоры"
+        ],
+        "split": true
+      },
+      "hero_height_px": null
+    }
+  },
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-presentation\\spkb-18-7-vl5-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-presentation\\spkb-18-7-vl5-hero-mobile.png"
+  }
+}

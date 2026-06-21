@@ -1,0 +1,120 @@
+{
+  "captured_at": "2026-06-21T21:09:42.699Z",
+  "workflow_label": "zpm-workflow-corv01",
+  "source_script": "tools/capture-serp-zpm-workflow.mjs",
+  "triumph_ref": "incoming/mig/pilots/triumph-gruzotaxi-krasnodar/evidence/serp-multi-20260604/capture-serp-multi.mjs",
+  "mode": "batch",
+  "browser_mode": "headful",
+  "delay_ms_base": 90000,
+  "region_lr": "65",
+  "meta": {
+    "validation_complete": false,
+    "remaining_run": false,
+    "stopped_on_captcha": false,
+    "stopped_after": "r1q06",
+    "batch_label": "batch3",
+    "batch_ids": [
+      "r1q08",
+      "r1q10"
+    ],
+    "throttled_resume_active": true,
+    "last_batch": "batch3"
+  },
+  "results": [
+    {
+      "r1_id": "r1q01",
+      "query": "программист 1С Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 41,
+      "page_title": "программист 1С Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T20:29:35.435Z"
+    },
+    {
+      "r1_id": "r1q05",
+      "query": "интеграция 1С с сайтом Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 39,
+      "page_title": "интеграция 1С с сайтом Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T20:30:44.085Z"
+    },
+    {
+      "r1_id": "r1q07",
+      "query": "маркировка в 1С Новосибирск",
+      "ok": false,
+      "grade": "C",
+      "captcha": "blocked",
+      "extracted_count": 0,
+      "page_title": "Loading https://yandex.ru/checkcaptcha?key=751aa3e5-186725e9-2e46ddee-24bb6c88_2/1782073903/16ae2715ec95038b16df00c3ff09e9e1_f76b9016161637ad7f2985a94e02ac5b&mt=5EE2B72B1DA6FAEA2B86D1C10E46080F6346D09E1D3989097670A6443211732B3E262FC9EC71D18704C9B6C7DA457103EAEBD853B0A716318B1EC0B9FF271DD2013A4E616D5344FC7E6393B0FA827019D8CFAC7C6CC5BE7BBF217063D74EAAF88B4E648F19E7C66BC8C88252F79BD9C740D14E6E5A30149C2C76D87573201D1D5BABADD66A8FC9D2349760C37148B140E1AE4A9C5E9F90574D529AA0DEC5639442A0BA492F8BEBCF3C3712EBE0440F93469FF903F5733080AE795A87143EB4AB485E152DE15989F05871F67624BF891E997A1D278FF0E3985EBE79BDFCBD1862F628CAE420DB7A4CDA6BF249882575F082F4A2&retpath=aHR0cHM6Ly95YW5kZXgucnUvc2VhcmNoL3RvdWNoP3RleHQ9JUQwJUJDJUQwJUIwJUQxJTgwJUQwJUJBJUQwJUI4JUQxJTgwJUQwJUJFJUQwJUIyJUQwJUJBJUQwJUIwJTIwJUQwJUIyJTIwMSVEMCVBMSUyMCVEMCU5RCVEMCVCRSVEMCVCMiVEMCVCRSVEMSU4MSVEMCVCOCVEMCVCMSVEMCVCOCVEMSU4MCVEMSU4MSVEMCVCQSZscj02NQ%2C%2C_4dd77543b51fd3d7604cade819b8e299&u=8912490795674572937&s=6a06adabdc9082d4dc59c4384ee047a2",
+      "timestamp": "2026-06-21T20:31:50.930Z"
+    },
+    {
+      "r1_id": "r1q02",
+      "query": "сопровождение 1С Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 15,
+      "page_title": "сопровождение 1С Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T20:51:35.849Z"
+    },
+    {
+      "r1_id": "r1q03",
+      "query": "доработка 1С Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 44,
+      "page_title": "доработка 1С Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T20:53:42.144Z"
+    },
+    {
+      "r1_id": "r1q04",
+      "query": "доработка отчёта 1С Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 31,
+      "page_title": "доработка отчёта 1С Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T20:59:12.715Z"
+    },
+    {
+      "r1_id": "r1q06",
+      "query": "интеграция 1С Битрикс Новосибирск",
+      "ok": false,
+      "grade": "C",
+      "captcha": "blocked",
+      "extracted_count": 0,
+      "page_title": "Вы не робот?",
+      "timestamp": "2026-06-21T21:00:57.524Z"
+    },
+    {
+      "r1_id": "r1q08",
+      "query": "Честный знак 1С Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 33,
+      "page_title": "Честный знак 1С Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T21:07:47.758Z"
+    },
+    {
+      "r1_id": "r1q10",
+      "query": "программа 1С не работает Новосибирск",
+      "ok": true,
+      "grade": "B",
+      "captcha": "none",
+      "extracted_count": 17,
+      "page_title": "программа 1С не работает Новосибирск — Яндекс: нашлось 4 млн результатов",
+      "timestamp": "2026-06-21T21:09:42.192Z"
+    }
+  ],
+  "grade_b_count": 7,
+  "grade_c_count": 2,
+  "delay_ms_jitter": 30000,
+  "throttled_resume": true,
+  "last_registry_batch": "batch3"
+}

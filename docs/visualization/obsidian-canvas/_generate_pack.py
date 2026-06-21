@@ -165,6 +165,16 @@ def build_programs() -> tuple[list, list]:
             11,
         ),
         ("n-prog-ideabox", "IdeaBox\n\n**Incubation Layer** (optional)\n`continuity/` — human-maintained", 12),
+        (
+            "n-prog-atlas",
+            "ATLAS\n\n**REGISTERED** · Business Reality Registry\n`projects/atlas/` · foundation + population Waves 1–6B (docs)",
+            13,
+        ),
+        (
+            "n-prog-ops",
+            "OPS\n\n**REGISTERED** · Business Operations Domain\n`projects/ops/` · WF-01/WF-02 pilots PARTIAL",
+            14,
+        ),
     ]
     nodes = [
         text_node(
@@ -196,6 +206,9 @@ def build_programs() -> tuple[list, list]:
         edge("e-nova-factory", "n-prog-nova", "n-prog-factory", "methodology parallel"),
         edge("e-homegateway-hub", "n-prog-homegateway", "n-prog-hub", "surface layer", "top", "bottom"),
         edge("e-surv-gitguard", "n-prog-survivability", "n-prog-gitguard", "REGISTERED entry"),
+        edge("e-hub-atlas", "n-prog-hub", "n-prog-atlas", "business reality registry", "bottom", "top"),
+        edge("e-ops-atlas", "n-prog-ops", "n-prog-atlas", "consumes identity"),
+        edge("e-hub-ops", "n-prog-hub", "n-prog-ops", "back-office workflows", "bottom", "top"),
     ]
     return nodes, edges
 
@@ -219,7 +232,7 @@ def build_website_factory() -> tuple[list, list]:
         text_node("n-wf-client-tpl", "## Client Template\n\n`workspaces/_template-client-v1/`", 680, 320),
         text_node(
             "n-wf-prod-cases",
-            "## Production / Execution Cases\n\nTriumph (#1) · ISBD (#2)\n`execution-cases-registry-v1.md`",
+            "## Production / Execution Cases\n\nTriumph (#1) · ISBD (#2) · BZPM (#3)\n`execution-cases-registry-v1.md`",
             0,
             480,
         ),
@@ -243,6 +256,24 @@ def build_website_factory() -> tuple[list, list]:
             110,
             "1",
         ),
+        text_node(
+            "n-wf-bzpm-note",
+            "## BZPM Catalog Redesign\n\n**Execution case #3** · `bzpm-catalog-redesign`\n\n- Tree: `projects/website-factory/execution-cases/bzpm-catalog-redesign/`\n- Research phase complete; workspace SAFE UNKNOWN",
+            0,
+            800,
+            280,
+            110,
+            "1",
+        ),
+        text_node(
+            "n-wf-loc-zone",
+            "## Factory LOC-ZONE\n\n`workspaces/website-factory-operations/`\n\nAuthorized Records · ROC-01 · FP-0001 pilot\nDoctrine: `website-factory-reference-v1/`",
+            340,
+            800,
+            300,
+            110,
+            "4",
+        ),
     ]
     edges = [
         edge("e-wf-root-core", "n-wf-root", "n-wf-core"),
@@ -257,6 +288,9 @@ def build_website_factory() -> tuple[list, list]:
         edge("e-wf-qa-build", "n-wf-qa", "n-wf-build", "gates"),
         edge("e-wf-prod-triumph", "n-wf-prod-cases", "n-wf-triumph"),
         edge("e-wf-prod-isbd", "n-wf-prod-cases", "n-wf-isbd-note"),
+        edge("e-wf-prod-bzpm", "n-wf-prod-cases", "n-wf-bzpm-note"),
+        edge("e-wf-root-loc", "n-wf-root", "n-wf-loc-zone", "physical records", "bottom", "top"),
+        edge("e-wf-loc-ref", "n-wf-loc-zone", "n-wf-ref-ws", "doctrine split", "top", "bottom"),
         edge("e-wf-triumph-qa", "n-wf-triumph", "n-wf-qa", "calibration"),
         edge("e-wf-ext-qa", "n-wf-extended", "n-wf-qa"),
     ]
@@ -327,7 +361,7 @@ def build_infrastructure() -> tuple[list, list]:
         ),
         text_node("n-inf-repo", "## repository\n\nSingle MARS git working copy", 40, 380),
         text_node("n-inf-logs", "## logs\n\n`logs/` lifecycle, survivability, infrastructure", 40, 520),
-        text_node("n-inf-workspaces", "## workspaces\n\nLane A execution loci (`workspaces/*`)", 40, 660),
+        text_node("n-inf-workspaces", "## workspaces\n\nLane A execution loci\n+ Factory LOC-ZONE (`website-factory-operations/`)", 40, 660),
         text_node("n-inf-archive-cand", "## archive\n\n`archive/` retired trees (not `incoming/`)", 40, 800),
         text_node("n-inf-storage-repo", "## repository (bulk)\n\nPromoted baselines, snapshots per system registry", 480, 380),
         text_node("n-inf-storage-logs", "## logs (bulk)\n\nDrill exports, large run evidence (when used)", 480, 520),

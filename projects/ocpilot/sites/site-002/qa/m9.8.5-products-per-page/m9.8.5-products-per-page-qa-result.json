@@ -1,0 +1,74 @@
+{
+  "task": "m9.8.5-products-per-page",
+  "timestamp": "2026-06-18T01:16:41",
+  "base": "https://zpm.new-site.space",
+  "category_url": "https://zpm.new-site.space/index.php?route=product/category&path=301",
+  "audit": {},
+  "asset_checks": {
+    "main_js_has_limit_block": true,
+    "css_has_limit_grouped_with_sort": true,
+    "category_page_has_limit_ui": true,
+    "category_page_has_sort_ui": true,
+    "category_page_has_view_switcher": true
+  },
+  "limit_checks": {
+    "default": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "product_card_count": 15,
+      "limit_in_url": false
+    },
+    "15": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=15",
+      "limit_param_present": true,
+      "product_card_count": 15,
+      "cards_match_limit": true,
+      "limit_option_links": 15,
+      "pagination_present": true,
+      "active_marker_in_html": true
+    },
+    "25": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=25",
+      "limit_param_present": true,
+      "product_card_count": 25,
+      "cards_match_limit": true,
+      "limit_option_links": 15,
+      "pagination_present": true,
+      "active_marker_in_html": true
+    },
+    "50": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=50",
+      "limit_param_present": true,
+      "product_card_count": 50,
+      "cards_match_limit": true,
+      "limit_option_links": 15,
+      "pagination_present": true,
+      "active_marker_in_html": true
+    },
+    "100": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=100",
+      "limit_param_present": true,
+      "product_card_count": 100,
+      "cards_match_limit": true,
+      "limit_option_links": 14,
+      "pagination_present": true,
+      "active_marker_in_html": true
+    },
+    "sort_preserved": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly?limit=25&sort=p.price&order=ASC",
+      "has_sort": true,
+      "has_order": true,
+      "has_limit": true,
+      "has_limit_ui": true
+    }
+  },
+  "qa": {
+    "limit_ui_deployed": true,
+    "js_limit_toggle": true,
+    "css_limit_styles": true,
+    "limits_15_25_50_100": true,
+    "sort_still_present": true,
+    "view_switcher_still_present": true,
+    "sort_with_limit": true,
+    "grid_list_mobile": "MANUAL — verify grid/list toggle and mobile topbar on TEST"
+  }
+}

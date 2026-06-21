@@ -1,0 +1,198 @@
+<section class="zpm-commercial-trust zpm-dealers" data-commercial-trust data-dealers>
+  <div class="container">
+    <div class="zpm-commercial-trust__card">
+
+      <div class="zpm-commercial-trust__header">
+        <p class="zpm-commercial-trust__label">Поможем с&nbsp;выбором</p>
+        <h2 class="zpm-commercial-trust__title">{{ commercial_trust_heading|default('Подберём оборудование под вашу задачу') }}</h2>
+        <p class="zpm-commercial-trust__lead">Подберём оборудование под ваши задачи и&nbsp;подготовим прайс-лист в&nbsp;Excel с&nbsp;актуальными ценами и&nbsp;сроками.</p>
+      </div>
+
+      <div class="zpm-commercial-trust__main">
+        <div class="zpm-commercial-trust__cert-col" aria-label="Сертификаты качества">
+          <div class="zpm-commercial-trust__cert-card">
+            <div class="swiper js-commercial-trust-certs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a
+                    class="zpm-commercial-trust__cert-link"
+                    href="/assets/img/certificates/certificat_00.jpg"
+                    data-fancybox="certificates-plp"
+                    data-caption="Сертификат качества"
+                  >
+                    <img
+                      class="zpm-commercial-trust__cert-img"
+                      src="/assets/img/certificates/thumb_00.png"
+                      alt="Сертификат качества"
+                      width="200"
+                      height="280"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="zpm-commercial-trust__cert-all"
+            href="/assets/img/certificates/certificat_00.jpg"
+            data-fancybox="certificates-plp"
+            data-caption="Сертификат качества"
+          >Все сертификаты</a>
+          <a
+            class="zpm-commercial-trust__cert-hidden"
+            href="/assets/img/certificates/certificat_01.jpg"
+            data-fancybox="certificates-plp"
+            data-caption="Сделано в России"
+            tabindex="-1"
+            aria-hidden="true"
+          >Сертификат 2</a>
+        </div>
+
+        <div class="zpm-commercial-trust__benefits">
+          <ul class="zpm-commercial-trust__benefits-grid">
+            <li class="zpm-commercial-trust__benefit">
+              <span class="zpm-commercial-trust__benefit-icon" aria-hidden="true"><i class="fal fa-industry"></i></span>
+              <span class="zpm-commercial-trust__benefit-body">
+                <strong class="zpm-commercial-trust__benefit-title">Собственное производство</strong>
+                <span class="zpm-commercial-trust__benefit-text">Производим нейтральное оборудование на&nbsp;заводе в&nbsp;Барнауле.</span>
+              </span>
+            </li>
+            <li class="zpm-commercial-trust__benefit">
+              <span class="zpm-commercial-trust__benefit-icon" aria-hidden="true"><i class="fal fa-truck"></i></span>
+              <span class="zpm-commercial-trust__benefit-body">
+                <strong class="zpm-commercial-trust__benefit-title">Поставка по&nbsp;всей России</strong>
+                <span class="zpm-commercial-trust__benefit-text">Отгружаем оборудование в&nbsp;регионы транспортными компаниями.</span>
+              </span>
+            </li>
+            <li class="zpm-commercial-trust__benefit">
+              <span class="zpm-commercial-trust__benefit-icon" aria-hidden="true"><i class="fal fa-shield-check"></i></span>
+              <span class="zpm-commercial-trust__benefit-body">
+                <strong class="zpm-commercial-trust__benefit-title">Гарантия производителя</strong>
+                <span class="zpm-commercial-trust__benefit-text">Поставляем оборудование с&nbsp;документами и&nbsp;гарантией ЗПМ.</span>
+              </span>
+            </li>
+            <li class="zpm-commercial-trust__benefit">
+              <span class="zpm-commercial-trust__benefit-icon" aria-hidden="true"><i class="fal fa-tools"></i></span>
+              <span class="zpm-commercial-trust__benefit-body">
+                <strong class="zpm-commercial-trust__benefit-title">Изготовление на&nbsp;заказ</strong>
+                <span class="zpm-commercial-trust__benefit-text">Делаем стандартные и&nbsp;нестандартные позиции под задачу.</span>
+              </span>
+            </li>
+            <li class="zpm-commercial-trust__benefit">
+              <span class="zpm-commercial-trust__benefit-icon" aria-hidden="true"><i class="fal fa-clipboard-list"></i></span>
+              <span class="zpm-commercial-trust__benefit-body">
+                <strong class="zpm-commercial-trust__benefit-title">Подбор оборудования</strong>
+                <span class="zpm-commercial-trust__benefit-text">Поможем подобрать модели под помещение, проект или техзадание.</span>
+              </span>
+            </li>
+            <li class="zpm-commercial-trust__benefit">
+              <span class="zpm-commercial-trust__benefit-icon" aria-hidden="true"><i class="fal fa-file-excel"></i></span>
+              <span class="zpm-commercial-trust__benefit-body">
+                <strong class="zpm-commercial-trust__benefit-title">Прайс-лист в&nbsp;Excel</strong>
+                <span class="zpm-commercial-trust__benefit-text">Отправим актуальные цены в&nbsp;удобном формате.</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="zpm-commercial-trust__form-col">
+          <div class="zpm-commercial-trust__form-card">
+            <h3 class="zpm-commercial-trust__form-title">Получить прайс-лист в&nbsp;Excel</h3>
+            <form class="zpm-form" action="#" method="post">
+              <input type="hidden" name="dialog" value="7">
+              <div class="zpm-form__grid">
+                <div class="zpm-form__field">
+                  <label class="zpm-form__label" for="dealerName">Имя<em>*</em></label>
+                  <input
+                    class="zpm-form__input"
+                    id="dealerName"
+                    name="name"
+                    type="text"
+                    placeholder="Введите ваше имя"
+                    required
+                  />
+                </div>
+                <div class="zpm-form__field">
+                  <label class="zpm-form__label" for="dealerPhone">Номер телефона<em>*</em></label>
+                  <div class="zpm-form__phone">
+                    <input
+                      class="zpm-form__input"
+                      id="dealerPhone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+7 (___) ___-__-__"
+                      data-mask="phone"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="zpm-form__field">
+                  <label class="zpm-form__label" for="dealerEmail">E-mail<em>*</em></label>
+                  <input
+                    class="zpm-form__input"
+                    id="dealerEmail"
+                    name="email"
+                    type="email"
+                    placeholder="name@domain.ru"
+                    data-validate="email"
+                    required
+                  />
+                </div>
+                <div class="zpm-form__field">
+                  <label class="zpm-form__label" for="dealerMsg">Комментарий</label>
+                  <textarea
+                    class="zpm-form__textarea"
+                    id="dealerMsg"
+                    name="message"
+                    rows="3"
+                    placeholder="Опишите задачу или интересующие позиции"
+                  ></textarea>
+                </div>
+                <div class="zpm-form__field">
+                  <span class="zpm-form__check-text">
+                    <em>*</em>&mdash;&nbsp;Обязательно для заполнения.
+                  </span>
+                </div>
+                <div class="zpm-form__actions">
+                  <button class="btn btn_dark zpm-form__submit" type="submit">Отправить заявку</button>
+                  <label class="zpm-form__agree">
+                    <input class="zpm-form__checkbox" type="checkbox" name="agree" />
+                    <span class="zpm-form__agree-text">
+                      Я&nbsp;даю согласие на&nbsp;обработку своих <a href="/user-agreement/" target="_blank">персональных данных</a>, обратный&nbsp;звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a>.
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+            <p class="zpm-commercial-trust__form-note">Отправим актуальный прайс-лист и&nbsp;ответим на&nbsp;вопросы по&nbsp;подбору оборудования.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zpm-commercial-trust__services">
+        <div class="zpm-commercial-trust__service">
+          <span class="zpm-commercial-trust__service-icon" aria-hidden="true"><i class="fal fa-clock"></i></span>
+          <strong class="zpm-commercial-trust__service-title">Быстрый ответ</strong>
+          <span class="zpm-commercial-trust__service-text">Ответим на&nbsp;заявку в&nbsp;рабочее время.</span>
+        </div>
+        <div class="zpm-commercial-trust__service">
+          <span class="zpm-commercial-trust__service-icon" aria-hidden="true"><i class="fal fa-file-excel"></i></span>
+          <strong class="zpm-commercial-trust__service-title">Прайс в&nbsp;Excel</strong>
+          <span class="zpm-commercial-trust__service-text">Пришлём актуальный прайс-лист в&nbsp;удобном формате.</span>
+        </div>
+        <div class="zpm-commercial-trust__service">
+          <span class="zpm-commercial-trust__service-icon" aria-hidden="true"><i class="fal fa-boxes"></i></span>
+          <strong class="zpm-commercial-trust__service-title">Условия для опта</strong>
+          <span class="zpm-commercial-trust__service-text">Подготовим условия для регулярных закупок.</span>
+        </div>
+        <div class="zpm-commercial-trust__service">
+          <span class="zpm-commercial-trust__service-icon" aria-hidden="true"><i class="fal fa-user-headset"></i></span>
+          <strong class="zpm-commercial-trust__service-title">Консультация специалиста</strong>
+          <span class="zpm-commercial-trust__service-text">Поможем с&nbsp;выбором и&nbsp;ответим на&nbsp;вопросы.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

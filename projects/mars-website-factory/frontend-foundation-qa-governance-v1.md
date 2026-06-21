@@ -22,6 +22,11 @@
 | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) | Mandatory REPORT shape + gate vocabulary §5.1 |
 | [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) | Container / page grid law |
 | [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) | Inner-zone layout law |
+| [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) | Enforcement gates EG-01–EG-05; ROOT COMPLIANCE |
+| [frontend-inline-style-allowlist-v1.md](frontend-inline-style-allowlist-v1.md) | Inline style allowlist (EG-03) |
+| [frontend-compliance-decision-model-v1.md](frontend-compliance-decision-model-v1.md) | Canonical RAW VIOLATION → gate verdict route for §6.13–6.17 |
+| [frontend-failure-attribution-model-v1.md](frontend-failure-attribution-model-v1.md) | Post-escape FAILURE EVENT investigation; Expected Capture Point for §6 gates |
+| [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) | Operator Visual Review gate; TECHNICAL PASS ≠ OPERATOR APPROVAL |
 
 **Honesty boundary:** Foundation QA is **human-operated documentation discipline**. It does **not** claim an in-repo QA engine unless a project explicitly adopts checklists as tooling.
 
@@ -102,8 +107,11 @@ Foundation QA **starts** only when **all** inputs are true:
 | OUT-F02 | **Foundation QA gate verdict** — PASS · PASS WITH NOTES · FAIL · UNKNOWN | Shell-first Phase 5 closure |
 | OUT-F03 | **Discipline line set** (§6) with canonical Layer A vocabulary | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.1 |
 | OUT-F04 | **Lead acknowledgment** on Foundation QA PASS or approved PASS WITH NOTES | Unblocks Phase 6 / Home Production |
+| OUT-F05 | **OPERATOR VISUAL REVIEW** block — **OPERATOR VISUAL ACCEPT — ACCEPT** | Unblocks Phase 6 / Home Production **after** OUT-F02 technical PASS |
 
 **Does not produce:** Production PASS for Home or inner pages — that requires §8 downstream gates.
+
+**Rule:** OUT-F02 **Foundation QA PASS** is **technical only**. OUT-F05 is **mandatory** per [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md). **Foundation QA PASS ≠ OPERATOR APPROVAL.**
 
 ---
 
@@ -125,9 +133,13 @@ Foundation QA **starts** only when **all** inputs are true:
 Foundation QA **PASS** requires **all** of:
 
 1. IN-F01–IN-F07 satisfied (§3)
-2. Mandatory checks (§6) — each **PASS** or parent gate **PASS WITH NOTES** with Lead ack on waivers
-3. `# REPORT — <project> foundation QA` filed with **Production Verdict** block appropriate to foundation scope ([frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.1)
-4. Lead acknowledgment recorded in REPORT or linked decision doc
+2. Mandatory checks (§6) — each **PASS** or parent gate **PASS WITH NOTES** with Lead ack on waivers; **6.13–6.16** may be **WAIVED** only with complete Exception Registry per [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) §6
+3. **ROOT COMPLIANCE — PASS** (§6.17) — **mandatory**; without it **PASS is impossible**
+4. `# REPORT — <project> foundation QA` filed with **Production Verdict** block appropriate to foundation scope ([frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.1)
+5. Lead acknowledgment recorded in REPORT or linked decision doc
+6. **OPERATOR VISUAL REVIEW** block filed — **OPERATOR VISUAL ACCEPT — ACCEPT** per [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.7 · [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md)
+
+**Rule:** Items 1–5 establish **technical** Foundation QA PASS. Item 6 establishes **operator visual** acceptance. **Neither substitutes for the other.**
 
 ### 5.3 Foundation QA FAIL (stop conditions)
 
@@ -141,6 +153,8 @@ Foundation QA **FAIL** when **any** mandatory check is **FAIL** without approved
 | **Matrix subset** | Frontend Design QA Matrix foundation subset **FAIL** on Critical domain |
 | **Process** | Home sections already implemented; Production Standards not approved |
 | **Evidence** | No build log and no HITL UNKNOWN scope |
+| **Enforcement** | OPERATOR LAW / COMPILED CSS / INLINE STYLE **FAIL**; AUTHORITY CONFLICT **FAIL**; ROOT COMPLIANCE **FAIL** or **UNKNOWN** |
+| **Exception drift** | Rank-1 OL override without Exception Registry record |
 
 **Correction loop:** Fix upstream stage or code → re-run affected checks → new Foundation QA REPORT version.
 
@@ -159,11 +173,16 @@ Execute checks on **foundation demo URL + shell** unless noted. Detail authority
 | 6.5 | **Typography precision** (`line-height = font-size + 4px`) | [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) §3.1 | `TYPOGRAPHY PRECISION (line-height = font-size + 4px) — PASS \| FAIL \| UNKNOWN \| N/A` |
 | 6.6 | **WF-GRID discipline** — section ≠ container; one page grid contract | [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) | `WF GRID DISCIPLINE — PASS \| FAIL \| UNKNOWN \| N/A` |
 | 6.7 | **WF-LAYOUT discipline** — no default `%` splits; LP-* or fr/minmax | [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) | `WF LAYOUT DISCIPLINE — PASS \| FAIL \| UNKNOWN \| N/A` |
-| 6.8 | **RU typography / no word-splitting** (RU projects) | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) · [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS \| FAIL \| UNKNOWN \| N/A` |
-| 6.9 | **Frontend Design QA Matrix — foundation subset** DQ-01–DQ-09, DQ-12 | [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) §7 | `FRONTEND DESIGN QA MATRIX (foundation subset) — PASS \| PASS WITH NOTES \| FAIL \| UNKNOWN` |
+| 6.8 | **RU typography / no word-splitting** (RU projects) — grep `letter-spacing`, `word-break`, `overflow-wrap`, `hyphens` in `src/scss/**` + `dist/*.css`; **0 matches each** | [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) · [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) | `RU TYPOGRAPHY / NO WORD-SPLITTING — PASS \| FAIL \| UNKNOWN \| N/A` |
+| 6.9 | **Frontend Design QA Matrix — foundation subset** DQ-01, DQ-02a, DQ-02b, DQ-03–DQ-09, DQ-12 | [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) §7 | `FRONTEND DESIGN QA MATRIX (foundation subset) — PASS \| PASS WITH NOTES \| FAIL \| UNKNOWN` |
 | 6.10 | **Pixel Fidelity Audit** on foundation scope (peer detail) | [pixel-fidelity-audit-rules-v1.md](pixel-fidelity-audit-rules-v1.md) | `PIXEL FIDELITY AUDIT — PASS \| PASS WITH NOTES \| FAIL \| UNKNOWN \| N/A` |
 | 6.11 | **Build verification** | Shell-first Phase 3.1 | Build log in REPORT § Build verification |
 | 6.12 | **No Home sections** | Shell-first Phase 5.3 | Scope statement in REPORT |
+| 6.13 | **Operator Law Compliance** — source + compiled CSS vs OL-01–OL-07 | [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) §3.1 · [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) §3 | `OPERATOR LAW COMPLIANCE — PASS \| PASS WITH NOTES \| FAIL \| WAIVED \| UNKNOWN` |
+| 6.14 | **Compiled CSS Compliance** — `dist/*.css` gap/margin/padding/OL-controlled values | Enforcement Pack §3.2 | `COMPILED CSS COMPLIANCE — PASS \| PASS WITH NOTES \| FAIL \| WAIVED \| UNKNOWN` |
+| 6.15 | **Inline Style Compliance** — `dist/**/*.html` vs allowlist | [frontend-inline-style-allowlist-v1.md](frontend-inline-style-allowlist-v1.md) | `INLINE STYLE COMPLIANCE — PASS \| PASS WITH NOTES \| FAIL \| WAIVED \| UNKNOWN` |
+| 6.16 | **Authority Conflict Status** — rank-1 vs rank-2 with Exception Registry | [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) §7 | `AUTHORITY CONFLICT STATUS — PASS \| FAIL \| WAIVED \| UNKNOWN` |
+| 6.17 | **ROOT COMPLIANCE** (technical review rollup) | Enforcement Pack §6 · [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.4 | `ROOT COMPLIANCE — PASS \| FAIL \| UNKNOWN` |
 
 **Optional on foundation slice:** Design Completeness **Foundation slice** per [frontend-design-completeness-governance-v1.md](frontend-design-completeness-governance-v1.md) §11.1 — when run, include completeness gate block per reporting standard §5.2.
 
@@ -178,6 +197,10 @@ Execute checks on **foundation demo URL + shell** unless noted. Detail authority
 | WF-GRID or WF-LAYOUT FAIL | **STOP** — fix markup/CSS; cite discipline authority |
 | Claim Foundation QA PASS without REPORT | **STOP** — file REPORT per §4 |
 | Claim Production PASS for Home using only Foundation QA | **STOP** — page path requires §8 |
+| ROOT COMPLIANCE not **PASS** | **STOP** — complete §6.13–6.17; source-only review insufficient |
+| Compiled CSS not inspected after green build | **STOP** — run EG-02 per Enforcement Pack |
+| Foundation QA technical PASS without **OPERATOR VISUAL REVIEW** | **STOP** — file §5.7 block; require operator to open foundation demo URL |
+| **OPERATOR VISUAL ACCEPT — PENDING** with next stage requested | **STOP** — operator decision required per [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) §5 |
 
 ---
 
@@ -220,3 +243,6 @@ Foundation QA matrix subset (§6.9) is **not** a substitute for full matrix at p
 | Date | Change |
 |------|--------|
 | 2026-06-13 | v1 — Foundation Finalization Pack: consolidated Foundation QA governance layer; peer docs unchanged except lifecycle cross-links. |
+| 2026-06-14 | v1.1 — Enforcement Pack v1: checks §6.13–6.17 (Operator Law, Compiled CSS, Inline Style, Authority Conflict, ROOT COMPLIANCE). |
+| 2026-06-14 | v1.2 — Compliance Decision Model Pack: cross-ref for enforcement gate verdict route. |
+| 2026-06-14 | v1.3 — Operator Visual Approval Law: OUT-F05 operator visual review; §5.2 item 6; stop rules. |

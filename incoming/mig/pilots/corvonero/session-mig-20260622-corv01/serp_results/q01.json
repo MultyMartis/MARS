@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q01",
+  "captured_at": "2026-06-22T12:35:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "city": "Новосибирск",
+  "device": "mobile",
+  "query": "программист 1С Новосибирск",
+  "serp_type": "mixed_commercial",
+  "acquisition_limitations": [
+    "Not live Playwright SERP capture",
+    "Ad positions and promo labels approximate",
+    "Personalization unknown"
+  ],
+  "ads_blocks": { "top_count": "SAFE UNKNOWN", "bottom_count": "SAFE UNKNOWN", "visible_patterns": ["SAFE UNKNOWN — ads not isolated in capture"] },
+  "maps_local_pack": "not_observed_in_capture",
+  "aggregators": ["uslugi.yandex.ru"],
+  "organic_results": [
+    { "position": 1, "title": "Услуги программиста 1С, стоимость часа - программист 1С цена в Новосибирске", "url": "https://novosib.shift-company.ru/services/programmist/", "surface_type": "organic", "snippet": "Shift Company — услуги программиста 1С, от 2500 руб/час", "player_scope": "local_company" },
+    { "position": 2, "title": "Заказать Программист 1С в Новосибирске", "url": "https://avanta-pro.ru/services/uslugi-1s/programmist-1s/", "surface_type": "organic", "snippet": "Avanta Pro — официальный партнёр 1С в Новосибирске", "player_scope": "local_franchisee" },
+    { "position": 3, "title": "1С в Новосибирске: удалённое внедрение и сопровождение | Софт Онлайн", "url": "https://somsk.ru/novosibirsk", "surface_type": "organic", "snippet": "Somsk — программисты от 4000 ₽/час, дистанционно", "player_scope": "federal_remote" },
+    { "position": 4, "title": "Услуги программиста 1С — цена от 1900 руб.", "url": "https://itsvsem.ru/uslugi/uslugi-programmista-1s/", "surface_type": "organic", "snippet": "ITsVsem — от 1900 руб, Новосибирск указан", "player_scope": "local_company" },
+    { "position": 5, "title": "Услуги разработчика 1С ERP в Новосибирске", "url": "https://uslugi.yandex.ru/65-novosibirsk/category?text=услуги+разработчика+1с", "surface_type": "aggregator", "snippet": "61 программист, рейтинг 4.7 — Яндекс Услуги", "player_scope": "aggregator" }
+  ],
+  "informational_surfaces": [
+    { "position": 6, "title": "От чего зависит цена часа 1С разработчика", "url": "https://kedu.ru/press-center/articles/info-prog-ot-chego-zavisit-tsena-chasa-1s-razrabotchika-analiz-klyuchevykh-faktorov-i-rekomendatsii/", "surface_type": "informational", "snippet": "Обзорная статья о ставках — не коммерческий лендинг услуг" }
+  ],
+  "commercial_signal": "strong",
+  "noise_signal": "low"
+}

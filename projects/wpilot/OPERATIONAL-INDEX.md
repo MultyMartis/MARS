@@ -40,18 +40,18 @@
 
 | # | Topic | Document |
 |---|--------|----------|
-| 1 | **Program overview** | [README.md](README.md) |
-| 1a | **Final state (RC5)** | [WPILOT-FINAL-STATE-RC5.md](WPILOT-FINAL-STATE-RC5.md) |
-| 1b | **Authority state (RC5)** | [WPILOT-AUTHORITY-STATE-RC5.md](WPILOT-AUTHORITY-STATE-RC5.md) |
-| 1c | **Lifecycle state** | [WPILOT-LIFECYCLE-STATE.md](WPILOT-LIFECYCLE-STATE.md) |
-| 1d | **Maintenance policy** | [WPILOT-MAINTENANCE-POLICY-v1.md](WPILOT-MAINTENANCE-POLICY-v1.md) |
-| 2 | **RC5 release candidate** | [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) |
-| 3 | **State freeze (RC5)** | [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
-| 4 | **Core freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
-| 5 | **Proven capabilities** | [WPILOT-PROVEN-CAPABILITIES-v1.md](WPILOT-PROVEN-CAPABILITIES-v1.md) |
-| 6 | **Plugin MVP roadmap** | [metacode-wpilot-plugin-mvp-roadmap.md](metacode-wpilot-plugin-mvp-roadmap.md) |
-| 7 | **Local token policy** | [local-storage-policy.md](local-storage-policy.md) |
-| 8 | **Ecosystem sync (RC5)** | [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md) |
+| 1 | **Final state (RC5)** | [WPILOT-FINAL-STATE-RC5.md](WPILOT-FINAL-STATE-RC5.md) |
+| 2 | **Authority state (RC5)** | [WPILOT-AUTHORITY-STATE-RC5.md](WPILOT-AUTHORITY-STATE-RC5.md) |
+| 3 | **Lifecycle state** | [WPILOT-LIFECYCLE-STATE.md](WPILOT-LIFECYCLE-STATE.md) |
+| 4 | **Maintenance policy** | [WPILOT-MAINTENANCE-POLICY-v1.md](WPILOT-MAINTENANCE-POLICY-v1.md) |
+| 5 | **Program overview** | [README.md](README.md) |
+| 6 | **RC5 release candidate** | [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) |
+| 7 | **State freeze (RC5)** | [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
+| 8 | **Core freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
+| 9 | **Proven capabilities** | [WPILOT-PROVEN-CAPABILITIES-v1.md](WPILOT-PROVEN-CAPABILITIES-v1.md) |
+| 10 | **Plugin MVP roadmap** | [metacode-wpilot-plugin-mvp-roadmap.md](metacode-wpilot-plugin-mvp-roadmap.md) |
+| 11 | **Local token policy** | [local-storage-policy.md](local-storage-policy.md) |
+| 12 | **Ecosystem sync (RC5)** | [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md) |
 
 ---
 

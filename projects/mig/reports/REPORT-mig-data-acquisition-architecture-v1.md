@@ -9,6 +9,8 @@
 
 > **MIG acquires reality. ORCA interprets reality.**
 
+**Trust stack (2026-06-04):** Reality layer ordering (R1 Human → R2 Browser → R3 Structured Search → R4 Intelligence) and Human Review Mode are normative in [MIG-REALITY-ACQUISITION-MODEL-v1.md](../contracts/MIG-REALITY-ACQUISITION-MODEL-v1.md). This report remains the **channel topology** reference.
+
 ---
 
 ## Executive Summary

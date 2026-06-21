@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q08",
+  "captured_at": "2026-06-22T12:42:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "city": "Новосибирск",
+  "device": "mobile",
+  "query": "маркировка в 1С Новосибирск",
+  "serp_type": "commercial_and_informational",
+  "organic_results": [
+    { "position": 1, "title": "Честный знак в Новосибирске под ключ", "url": "https://novosibirsk.ab-onlinekassa.ru/markirovka/", "surface_type": "organic", "snippet": "Подключение маркировки к товароучётной системе и 1С", "player_scope": "local_labeling_specialist" },
+    { "position": 2, "title": "Маркировка Честный знак — Мой бизнес НСО", "url": "https://mbnso.ru/support/voprosy-po-rabote-v-sisteme-chestnyy-znak/", "surface_type": "informational", "snippet": "Бесплатные консультации для МСП", "player_scope": "non_competitor_reference" },
+    { "position": 3, "title": "1С для работы с маркировкой — denvic.ru", "url": "https://denvic.ru/blog/markirovka-tovara/kak-nastroit-1s-dlya-raboty-s-markirovkoy-integratsiya-1s-i-chestnyy-znak/", "surface_type": "informational", "snippet": "Setup guide", "player_scope": "non_competitor_reference" },
+    { "position": 4, "title": "Настройка Честного ЗНАКа в 1С:УТ — online-kassa.ru", "url": "https://online-kassa.ru/blog/kak-nastroit-rabotu-s-chestnym-znakom-v-1s-upravlenie-torgovlej/", "surface_type": "informational", "snippet": "Vendor blog", "player_scope": "non_competitor_reference" }
+  ],
+  "commercial_signal": "moderate",
+  "noise_signal": "moderate_informational",
+  "cluster_note": "Geo modifier surfaces local labeling vendor; fewer pure 1C programmer landing pages"
+}

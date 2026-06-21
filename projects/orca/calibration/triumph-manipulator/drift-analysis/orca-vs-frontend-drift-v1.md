@@ -1,7 +1,7 @@
 # ORCA vs Frontend Drift v1 — master hot
 
 **Sources:** `01-master-hot-general.md` + `triumph-s-tier-draft-v1.json` (grp_fc12)  
-**As-built:** `workspaces/triumph-manipulator-landing-v5/src/partials/sections/v5-ppc/zakaz/*`
+**As-built (canonical v6):** `workspaces/triumph-manipulator-landing-v6/src/partials/sections/v5-ppc/zakaz/*`
 
 ## Summary table
 

@@ -1,0 +1,83 @@
+{
+  "snapshot_id": "mig-20260601-a1b2c3-ws002",
+  "session_id": "mig-20260601-a1b2c3",
+  "competitor_id": "mig-20260601-a1b2c3-c002",
+  "domain": "kran-logistik.ru",
+  "requested_url": "https://kran-logistik.ru/uslugi",
+  "final_url": "https://kran-logistik.ru/uslugi",
+  "page_role": "homepage",
+  "capture_time": "2026-06-03T17:30:07.356Z",
+  "status": "success",
+  "acquisition_method": "http_get_dom",
+  "http_status": 200,
+  "redirect_chain": [],
+  "content_type": "text/html; charset=utf-8",
+  "charset": null,
+  "render_status": "static_ok",
+  "fetch_duration_ms": 1,
+  "title": "Кран-Логистик — контакты",
+  "meta_description": "Связаться с Кран-Логистик",
+  "canonical_url": null,
+  "lang": "ru",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Контакты",
+      "order": 0
+    }
+  ],
+  "contacts": {
+    "phones": [
+      "88005551212",
+      "8 800 555-12-12"
+    ],
+    "emails": [
+      "office@kran-logistik.example"
+    ],
+    "addresses": [],
+    "messengers": [
+      {
+        "type": "whatsapp",
+        "handle": "79001234567"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "text": "Контакты",
+      "context": "h1"
+    }
+  ],
+  "pricing_signals": [],
+  "cta_elements": [
+    {
+      "text": "Позвонить",
+      "href": "tel:88005551212",
+      "element_type": "link",
+      "position_hint": "unknown"
+    }
+  ],
+  "forms": [],
+  "links": {
+    "internal": [],
+    "external": [
+      {
+        "href": "tel:88005551212",
+        "text": "Позвонить"
+      },
+      {
+        "href": "https://wa.me/79001234567",
+        "text": "WhatsApp"
+      }
+    ]
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": "Кран-Логистик — контакты Контакты Телефон: 8 800 555-12-12 Email: office@kran-logistik.example Позвонить WhatsApp",
+  "artifact_refs": {
+    "website_snapshot": "snapshots/sites/mig-20260601-a1b2c3-ws002/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260601-a1b2c3-ws002/page.html",
+    "headers": "snapshots/sites/mig-20260601-a1b2c3-ws002/headers.json"
+  },
+  "evidence_grade": "B",
+  "safe_unknown": []
+}

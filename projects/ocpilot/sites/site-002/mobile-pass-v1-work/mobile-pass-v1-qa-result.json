@@ -1,0 +1,92 @@
+{
+  "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+  "static": {
+    "php_ok": true,
+    "twig_ok": true,
+    "hero_dom": true,
+    "super_atts": true,
+    "commerce_card": true,
+    "service_card": true,
+    "cart_hooks": true,
+    "wishlist_compare": true,
+    "gallery_fancybox": true,
+    "content_grid": true,
+    "docs_list": true,
+    "docs_download": true,
+    "docs_note": true,
+    "product_help": true,
+    "related": true,
+    "live_css_has_mobile_pass": true,
+    "work_css_has_mobile_pass": true,
+    "mobile_primary_grid": true,
+    "mobile_help_stack": true,
+    "mobile_content_order": true
+  },
+  "viewport_checks": {
+    "768": {
+      "viewport": 768,
+      "scrollWidth": 753,
+      "noHorizontalOverflow": true,
+      "heroOrderOk": true,
+      "contentOrderOk": true,
+      "primaryLayout": "321.5px 321.5px",
+      "helpLayout": "653px",
+      "galleryImgHeight": 420,
+      "relVisible": true,
+      "footerVisible": true
+    },
+    "576": {
+      "viewport": 576,
+      "scrollWidth": 561,
+      "noHorizontalOverflow": true,
+      "heroOrderOk": true,
+      "contentOrderOk": true,
+      "primaryLayout": "225.5px 225.5px",
+      "helpLayout": "461px",
+      "galleryImgHeight": 360,
+      "relVisible": true,
+      "footerVisible": true
+    },
+    "390": {
+      "viewport": 390,
+      "scrollWidth": 375,
+      "noHorizontalOverflow": true,
+      "heroOrderOk": true,
+      "contentOrderOk": true,
+      "primaryLayout": "132.5px 132.5px",
+      "helpLayout": "275px",
+      "galleryImgHeight": 272,
+      "relVisible": true,
+      "footerVisible": true
+    },
+    "375": {
+      "viewport": 375,
+      "scrollWidth": 360,
+      "noHorizontalOverflow": true,
+      "heroOrderOk": true,
+      "contentOrderOk": true,
+      "primaryLayout": "125px 125px",
+      "helpLayout": "260px",
+      "galleryImgHeight": 257,
+      "relVisible": true,
+      "footerVisible": true
+    },
+    "360": {
+      "viewport": 360,
+      "scrollWidth": 345,
+      "noHorizontalOverflow": true,
+      "heroOrderOk": true,
+      "contentOrderOk": true,
+      "primaryLayout": "117.5px 117.5px",
+      "helpLayout": "245px",
+      "galleryImgHeight": 242,
+      "relVisible": true,
+      "footerVisible": true
+    }
+  },
+  "summary": {
+    "static_pass": true,
+    "viewport_pass": true,
+    "overall": true
+  }
+}

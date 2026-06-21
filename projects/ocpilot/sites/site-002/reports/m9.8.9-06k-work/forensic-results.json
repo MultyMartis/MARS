@@ -1,0 +1,1740 @@
+{
+  "task": "M9.8.9-06K",
+  "authority": "SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01",
+  "context": "post clean catalog reset + import0_1.xml + offers0_1.xml",
+  "run_at": "2026-06-19T09:05:00.313071+00:00",
+  "global": {
+    "product_totals": [
+      {
+        "total_products": "594",
+        "active": "594"
+      }
+    ],
+    "product_attribute_rows": [
+      {
+        "rows": "9877",
+        "products": "591"
+      }
+    ],
+    "price_index": [
+      {
+        "indexed": "594",
+        "active_products": "594"
+      }
+    ],
+    "attribute_descriptions": [
+      {
+        "attribute_id 1": "DELETE FROM `oc_attribute_description` WHERE `oc_attribute_description`.`attribute_id` = 47",
+        "name": "47",
+        "filter_name": "Конструкция борта",
+        "effective_key": "EMPTY"
+      },
+      {
+        "attribute_id 1": "DELETE FROM `oc_attribute_description` WHERE `oc_attribute_description`.`attribute_id` = 51",
+        "name": "51",
+        "filter_name": "Конструкция полки",
+        "effective_key": "EMPTY"
+      }
+    ],
+    "patch_06j_signal": {
+      "test": "stoly attr[51][] first value",
+      "probe": {
+        "filter": "attr[51][]=Без полки",
+        "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+        "cards": 15
+      },
+      "interpretation": "06J likely LIVE"
+    }
+  },
+  "categories": {
+    "stoly": {
+      "category_id": 301,
+      "name": "Столы",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "profile": "301_stoly",
+      "operator_status": "broken",
+      "category_statistics": [
+        {
+          "category_id": "301",
+          "total_products": "460",
+          "with_attributes": "460",
+          "without_attributes": "0"
+        }
+      ],
+      "attribute_coverage": [
+        {
+          "attribute_id 1": "18",
+          "name": "Высота борта (мм)",
+          "filter_name": "side-height",
+          "filter_name_state": "SET",
+          "products_with_value": "374",
+          "sample_values": "| 45 | 50"
+        },
+        {
+          "attribute_id 1": "20",
+          "name": "Макс. нагрузка (до, кг)",
+          "filter_name": "max-load",
+          "filter_name_state": "SET",
+          "products_with_value": "467",
+          "sample_values": "100 | 120 | 150 | 200"
+        },
+        {
+          "attribute_id 1": "21",
+          "name": "Конструкция",
+          "filter_name": "construction",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "разборная | сварная (неразборная)"
+        },
+        {
+          "attribute_id 1": "22",
+          "name": "Материал столешницы",
+          "filter_name": "table-top-material",
+          "filter_name_state": "SET",
+          "products_with_value": "543",
+          "sample_values": "бук толщиной 40 мм | нержавеющая сталь (AISI 430, ..."
+        },
+        {
+          "attribute_id 1": "25",
+          "name": "Наличие борта",
+          "filter_name": "available-board",
+          "filter_name_state": "SET",
+          "products_with_value": "576",
+          "sample_values": "есть | нет"
+        },
+        {
+          "attribute_id 1": "26",
+          "name": "Ножки",
+          "filter_name": "eq-legs",
+          "filter_name_state": "SET",
+          "products_with_value": "586",
+          "sample_values": "труба 40х40 (нержавеющая сталь AISI 430, 1 мм) | т..."
+        },
+        {
+          "attribute_id 1": "31",
+          "name": "Регулируемость опоры по высоте (max мм)",
+          "filter_name": "height-adjustment",
+          "filter_name_state": "SET",
+          "products_with_value": "585",
+          "sample_values": "20 | 30"
+        },
+        {
+          "attribute_id 1": "33",
+          "name": "Тип опоры",
+          "filter_name": "type-support",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "Крепление консольное (к стене) | опора-болт"
+        },
+        {
+          "attribute_id 1": "112",
+          "name": "Материал полки",
+          "filter_name": "material-polki",
+          "filter_name_state": "SET",
+          "products_with_value": "402",
+          "sample_values": "нержавеющая сталь (AISI 430, 0.7 мм) | оцинкованна..."
+        },
+        {
+          "attribute_id 1": "115",
+          "name": "Усиление",
+          "filter_name": "usilenie",
+          "filter_name_state": "SET",
+          "products_with_value": "410",
+          "sample_values": "ламинированная ДСП (16 мм) | Усилитель металлическ..."
+        }
+      ],
+      "attribute_data_db": [
+        {
+          "filter_key": "vys-test",
+          "attribute_id": "117",
+          "attribute_name": "выс ТЕСТ",
+          "filter_name": "vys-test",
+          "value_text": "0,85",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "side-height",
+          "attribute_id": "18",
+          "attribute_name": "Высота борта (мм)",
+          "filter_name": "side-height",
+          "value_text": "45",
+          "product_count": "227"
+        },
+        {
+          "filter_key": "side-height",
+          "attribute_id": "18",
+          "attribute_name": "Высота борта (мм)",
+          "filter_name": "side-height",
+          "value_text": "50",
+          "product_count": "39"
+        },
+        {
+          "filter_key": "dl-test",
+          "attribute_id": "118",
+          "attribute_name": "дл ТЕСТ",
+          "filter_name": "dl-test",
+          "value_text": "1",
+          "product_count": "1"
+        }
+      ],
+      "price_index_coverage": [
+        {
+          "total_active": "460",
+          "indexed_cg2": "460",
+          "with_positive_price": "459"
+        }
+      ],
+      "baseline_cards": 15,
+      "sidebar_filters": [],
+      "html_form_names": {
+        "price_from": 0,
+        "price_to": 0,
+        "in_stock": 0,
+        "preorder_only": 0,
+        "only_with_price": 0,
+        "only_discount": 0,
+        "len_from": 0,
+        "len_to": 0,
+        "w_from": 0,
+        "w_to": 0,
+        "h_from": 0,
+        "h_to": 0,
+        "attr[table-top-material][]": 0,
+        "attr[51][]": 0,
+        "attr[type-support][]": 0,
+        "attr[max-load][]": 0,
+        "attr[available-board][]": 0,
+        "attr[construction][]": 0,
+        "attr[material-polki][]": 0,
+        "attr[eq-legs][]": 0,
+        "attr[height-adjustment][]": 0,
+        "attr[usilenie][]": 0,
+        "attr[side-height][]": 0,
+        "attr[47][]": 0,
+        "s[]": 0
+      },
+      "orphan_filter_values": [],
+      "live_probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 15
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=in_stock=1",
+          "cards": 15
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=preorder_only=1",
+          "cards": 15
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_discount=1",
+          "cards": 0
+        },
+        {
+          "filter": "attr[table-top-material][]=бук толщиной 40 мм",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[table-top-material][]=%D0%B1%D1%83%D0%BA%20%D1%82%D0%BE%D0%BB%D1%89%D0%B8%D0%BD%D0%BE%D0%B9%2040%20%D0%BC%D0%BC",
+          "cards": 12
+        },
+        {
+          "filter": "attr[51][]=Без полки",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+          "cards": 15
+        },
+        {
+          "filter": "attr[type-support][]=Крепление консольное (к стене)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[type-support][]=%D0%9A%D1%80%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%28%D0%BA%20%D1%81%D1%82%D0%B5%D0%BD%D0%B5%29",
+          "cards": 1
+        },
+        {
+          "filter": "attr[max-load][]=100",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[max-load][]=100",
+          "cards": 12
+        },
+        {
+          "filter": "attr[available-board][]=есть",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[available-board][]=%D0%B5%D1%81%D1%82%D1%8C",
+          "cards": 15
+        },
+        {
+          "filter": "attr[construction][]=разборная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[construction][]=%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F",
+          "cards": 15
+        },
+        {
+          "filter": "attr[material-polki][]=нержавеющая сталь (AISI 430, 0.7 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[material-polki][]=%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20%28AISI%20430%2C%200.7%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[eq-legs][]=труба 40х40 (нержавеющая сталь AISI 430, 1.2 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[eq-legs][]=%D1%82%D1%80%D1%83%D0%B1%D0%B0%2040%D1%8540%20%28%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20AISI%20430%2C%201.2%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[height-adjustment][]=20",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[height-adjustment][]=20",
+          "cards": 15
+        },
+        {
+          "filter": "attr[usilenie][]=ламинированная ДСП (16 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[usilenie][]=%D0%BB%D0%B0%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%94%D0%A1%D0%9F%20%2816%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[side-height][]=45",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[side-height][]=45",
+          "cards": 15
+        },
+        {
+          "filter": "attr[47][]=Объемный борт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[47][]=%D0%9E%D0%B1%D1%8A%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%B1%D0%BE%D1%80%D1%82",
+          "cards": 14
+        }
+      ],
+      "sql_probes": [
+        {
+          "filter_key": "table-top-material",
+          "sample_value": "бук толщиной 40 мм",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "12"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 12,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='table-top-material' AND pa.text='бук толщиной 40 мм')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "51",
+          "sample_value": "Без полки",
+          "key_type": "numeric",
+          "db_count_correct_resolution": {
+            "cnt": "57"
+          },
+          "db_count_broken_filter_name_resolution": {
+            "cnt": "0"
+          },
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... attribute_id=51 AND pa.text='Без полки')",
+          "constructed_sql_broken_pre06j": "EXISTS (... ad.filter_name='51' AND pa.text='Без полки')"
+        },
+        {
+          "filter_key": "type-support",
+          "sample_value": "Крепление консольное (к стене)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "1"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 1,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='type-support' AND pa.text='Крепление консольное (к стене)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "max-load",
+          "sample_value": "100",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "12"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 12,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='max-load' AND pa.text='100')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "available-board",
+          "sample_value": "есть",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "266"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='available-board' AND pa.text='есть')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "construction",
+          "sample_value": "разборная",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "351"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='construction' AND pa.text='разборная')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "material-polki",
+          "sample_value": "нержавеющая сталь (AISI 430, 0.7 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "219"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='material-polki' AND pa.text='нержавеющая сталь (AISI 430, 0.7 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "eq-legs",
+          "sample_value": "труба 40х40 (нержавеющая сталь AISI 430, 1.2 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "170"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='eq-legs' AND pa.text='труба 40х40 (нержавеющая сталь AISI 430, 1.2 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "height-adjustment",
+          "sample_value": "20",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "447"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='height-adjustment' AND pa.text='20')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "usilenie",
+          "sample_value": "ламинированная ДСП (16 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "390"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='usilenie' AND pa.text='ламинированная ДСП (16 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "side-height",
+          "sample_value": "45",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "227"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='side-height' AND pa.text='45')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "47",
+          "sample_value": "Объемный борт",
+          "key_type": "numeric",
+          "db_count_correct_resolution": {
+            "cnt": "14"
+          },
+          "db_count_broken_filter_name_resolution": {
+            "cnt": "0"
+          },
+          "live_cards_after_filter": 14,
+          "constructed_sql_correct": "EXISTS (... attribute_id=47 AND pa.text='Объемный борт')",
+          "constructed_sql_broken_pre06j": "EXISTS (... ad.filter_name='47' AND pa.text='Объемный борт')"
+        }
+      ]
+    },
+    "podtovarniki": {
+      "category_id": 322,
+      "name": "Подтоварники и подставки",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "profile": "322_podtovarniki",
+      "operator_status": "broken",
+      "category_statistics": [
+        {
+          "category_id": "322",
+          "total_products": "11",
+          "with_attributes": "11",
+          "without_attributes": "0"
+        }
+      ],
+      "attribute_coverage": [
+        {
+          "attribute_id 1": "19",
+          "name": "Количество уровней направляющих",
+          "filter_name": "number-guide-levels",
+          "filter_name_state": "SET",
+          "products_with_value": "3",
+          "sample_values": "6 | 7"
+        },
+        {
+          "attribute_id 1": "20",
+          "name": "Макс. нагрузка (до, кг)",
+          "filter_name": "max-load",
+          "filter_name_state": "SET",
+          "products_with_value": "467",
+          "sample_values": "100 | 120 | 150 | 200"
+        },
+        {
+          "attribute_id 1": "21",
+          "name": "Конструкция",
+          "filter_name": "construction",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "разборная | сварная (неразборная)"
+        },
+        {
+          "attribute_id 1": "22",
+          "name": "Материал столешницы",
+          "filter_name": "table-top-material",
+          "filter_name_state": "SET",
+          "products_with_value": "543",
+          "sample_values": "бук толщиной 40 мм | нержавеющая сталь (AISI 430, ..."
+        },
+        {
+          "attribute_id 1": "24",
+          "name": "Назначение секции",
+          "filter_name": "section-assignment",
+          "filter_name_state": "SET",
+          "products_with_value": "4",
+          "sample_values": "для гастроемкостей | для противней"
+        },
+        {
+          "attribute_id 1": "26",
+          "name": "Ножки",
+          "filter_name": "eq-legs",
+          "filter_name_state": "SET",
+          "products_with_value": "586",
+          "sample_values": "труба 40х40 (нержавеющая сталь AISI 430, 1 мм) | т..."
+        },
+        {
+          "attribute_id 1": "30",
+          "name": "Размер секции",
+          "filter_name": "section-size",
+          "filter_name_state": "SET",
+          "products_with_value": "3",
+          "sample_values": "600х400 | GN 1/1"
+        },
+        {
+          "attribute_id 1": "31",
+          "name": "Регулируемость опоры по высоте (max мм)",
+          "filter_name": "height-adjustment",
+          "filter_name_state": "SET",
+          "products_with_value": "585",
+          "sample_values": "20 | 30"
+        },
+        {
+          "attribute_id 1": "33",
+          "name": "Тип опоры",
+          "filter_name": "type-support",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "Крепление консольное (к стене) | опора-болт"
+        },
+        {
+          "attribute_id 1": "38",
+          "name": "Количество",
+          "filter_name": "qty",
+          "filter_name_state": "SET",
+          "products_with_value": "30",
+          "sample_values": "12 | 12,7 | 13,6 | 15,15 | 15,5 | 15,8 | 16,2 | 16..."
+        },
+        {
+          "attribute_id 1": "115",
+          "name": "Усиление",
+          "filter_name": "usilenie",
+          "filter_name_state": "SET",
+          "products_with_value": "410",
+          "sample_values": "ламинированная ДСП (16 мм) | Усилитель металлическ..."
+        }
+      ],
+      "attribute_data_db": [
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "12",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "13",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "14",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "15",
+          "product_count": "2"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "16",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "18",
+          "product_count": "2"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "20",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "24",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "9",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "12,7",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "13,6",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "15,15",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "15,8",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "16,2",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "16,4",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "19",
+          "product_count": "2"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "21",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "25,2",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "9,5",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "number-guide-levels",
+          "attribute_id": "19",
+          "attribute_name": "Количество уровней направляющих",
+          "filter_name": "number-guide-levels",
+          "value_text": "6",
+          "product_count": "2"
+        },
+        {
+          "filter_key": "number-guide-levels",
+          "attribute_id": "19",
+          "attribute_name": "Количество уровней направляющих",
+          "filter_name": "number-guide-levels",
+          "value_text": "7",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "construction",
+          "attribute_id": "21",
+          "attribute_name": "Конструкция",
+          "filter_name": "construction",
+          "value_text": "разборная",
+          "product_count": "8"
+        },
+        {
+          "filter_key": "construction",
+          "attribute_id": "21",
+          "attribute_name": "Конструкция",
+          "filter_name": "construction",
+          "value_text": "сварная (неразборная)",
+          "product_count": "3"
+        }
+      ],
+      "price_index_coverage": [
+        {
+          "total_active": "11",
+          "indexed_cg2": "11",
+          "with_positive_price": "11"
+        }
+      ],
+      "baseline_cards": 11,
+      "sidebar_filters": [],
+      "html_form_names": {
+        "price_from": 0,
+        "price_to": 0,
+        "in_stock": 0,
+        "preorder_only": 0,
+        "only_with_price": 0,
+        "only_discount": 0,
+        "len_from": 0,
+        "len_to": 0,
+        "w_from": 0,
+        "w_to": 0,
+        "h_from": 0,
+        "h_to": 0,
+        "attr[51][]": 0,
+        "attr[max-load][]": 0,
+        "attr[table-top-material][]": 0,
+        "attr[type-support][]": 0,
+        "attr[construction][]": 0,
+        "attr[qty][]": 0,
+        "attr[eq-legs][]": 0,
+        "attr[height-adjustment][]": 0,
+        "attr[usilenie][]": 0,
+        "attr[section-size][]": 0,
+        "attr[section-assignment][]": 0,
+        "attr[number-guide-levels][]": 0,
+        "s[]": 0
+      },
+      "orphan_filter_values": [],
+      "live_probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 11
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=in_stock=1",
+          "cards": 11
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=preorder_only=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=only_discount=1",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=600х400х300",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+          "cards": 1
+        },
+        {
+          "filter": "attr[max-load][]=200",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[max-load][]=200",
+          "cards": 8
+        },
+        {
+          "filter": "attr[table-top-material][]=нержавеющая сталь (AISI 430, 0.7 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[table-top-material][]=%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20%28AISI%20430%2C%200.7%20%D0%BC%D0%BC%29",
+          "cards": 8
+        },
+        {
+          "filter": "attr[type-support][]=опора-болт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[type-support][]=%D0%BE%D0%BF%D0%BE%D1%80%D0%B0-%D0%B1%D0%BE%D0%BB%D1%82",
+          "cards": 11
+        },
+        {
+          "filter": "attr[construction][]=разборная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[construction][]=%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F",
+          "cards": 8
+        },
+        {
+          "filter": "attr[qty][]=9,5",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[qty][]=9%2C5",
+          "cards": 1
+        },
+        {
+          "filter": "attr[eq-legs][]=уголок 40х40 (оцинкованная сталь, 1.5 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[eq-legs][]=%D1%83%D0%B3%D0%BE%D0%BB%D0%BE%D0%BA%2040%D1%8540%20%28%D0%BE%D1%86%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%2C%201.5%20%D0%BC%D0%BC%29",
+          "cards": 4
+        },
+        {
+          "filter": "attr[height-adjustment][]=30",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[height-adjustment][]=30",
+          "cards": 11
+        },
+        {
+          "filter": "attr[usilenie][]=ламинированная ДСП (16 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[usilenie][]=%D0%BB%D0%B0%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%94%D0%A1%D0%9F%20%2816%20%D0%BC%D0%BC%29",
+          "cards": 8
+        },
+        {
+          "filter": "attr[section-size][]=GN 1/1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[section-size][]=GN%201%2F1",
+          "cards": 2
+        },
+        {
+          "filter": "attr[section-assignment][]=для гастроемкостей",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[section-assignment][]=%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BC%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%B9",
+          "cards": 2
+        },
+        {
+          "filter": "attr[number-guide-levels][]=6",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[number-guide-levels][]=6",
+          "cards": 2
+        }
+      ],
+      "sql_probes": [
+        {
+          "filter_key": "51",
+          "sample_value": "600х400х300",
+          "key_type": "numeric",
+          "db_count_correct_resolution": {
+            "cnt": "1"
+          },
+          "db_count_broken_filter_name_resolution": {
+            "cnt": "0"
+          },
+          "live_cards_after_filter": 1,
+          "constructed_sql_correct": "EXISTS (... attribute_id=51 AND pa.text='600х400х300')",
+          "constructed_sql_broken_pre06j": "EXISTS (... ad.filter_name='51' AND pa.text='600х400х300')"
+        },
+        {
+          "filter_key": "max-load",
+          "sample_value": "200",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "8"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 8,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='max-load' AND pa.text='200')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "table-top-material",
+          "sample_value": "нержавеющая сталь (AISI 430, 0.7 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "8"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 8,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='table-top-material' AND pa.text='нержавеющая сталь (AISI 430, 0.7 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "type-support",
+          "sample_value": "опора-болт",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "11"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 11,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='type-support' AND pa.text='опора-болт')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "construction",
+          "sample_value": "разборная",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "8"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 8,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='construction' AND pa.text='разборная')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "qty",
+          "sample_value": "9,5",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "1"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 1,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='qty' AND pa.text='9,5')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "eq-legs",
+          "sample_value": "уголок 40х40 (оцинкованная сталь, 1.5 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "4"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 4,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='eq-legs' AND pa.text='уголок 40х40 (оцинкованная сталь, 1.5 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "height-adjustment",
+          "sample_value": "30",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "11"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 11,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='height-adjustment' AND pa.text='30')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "usilenie",
+          "sample_value": "ламинированная ДСП (16 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "8"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 8,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='usilenie' AND pa.text='ламинированная ДСП (16 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "section-size",
+          "sample_value": "GN 1/1",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "2"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 2,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='section-size' AND pa.text='GN 1/1')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "section-assignment",
+          "sample_value": "для гастроемкостей",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "2"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 2,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='section-assignment' AND pa.text='для гастроемкостей')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "number-guide-levels",
+          "sample_value": "6",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "2"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 2,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='number-guide-levels' AND pa.text='6')",
+          "constructed_sql_broken_pre06j": null
+        }
+      ]
+    },
+    "telezhki": {
+      "category_id": 326,
+      "name": "Тележки сервировочные",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+      "profile": "326_telezhki",
+      "operator_status": "broken",
+      "category_statistics": [
+        {
+          "category_id": "326",
+          "total_products": "3",
+          "with_attributes": "3",
+          "without_attributes": "0"
+        }
+      ],
+      "attribute_data_db": [
+        {
+          "filter_key": "equipmentpack",
+          "attribute_id": "17",
+          "attribute_name": "В комплекте",
+          "filter_name": "equipmentpack",
+          "value_text": "сливной сифон",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "qty",
+          "attribute_id": "38",
+          "attribute_name": "Количество",
+          "filter_name": "qty",
+          "value_text": "48",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "section-assignment",
+          "attribute_id": "24",
+          "attribute_name": "Назначение секции",
+          "filter_name": "section-assignment",
+          "value_text": "для гастроемкостей",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "u_v",
+          "attribute_id": "54",
+          "attribute_name": "Упаковка (Высота, мм)",
+          "filter_name": "u_v",
+          "value_text": "35",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "u_l",
+          "attribute_id": "52",
+          "attribute_name": "Упаковка (Длина, мм)",
+          "filter_name": "u_l",
+          "value_text": "55",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "u_s",
+          "attribute_id": "53",
+          "attribute_name": "Упаковка (Ширина, мм)",
+          "filter_name": "u_s",
+          "value_text": "85",
+          "product_count": "1"
+        }
+      ],
+      "price_index_coverage": [
+        {
+          "total_active": "3",
+          "indexed_cg2": "3",
+          "with_positive_price": "3"
+        }
+      ],
+      "baseline_cards": 3,
+      "sidebar_filters": [],
+      "html_form_names": {
+        "price_from": 0,
+        "price_to": 0,
+        "in_stock": 0,
+        "preorder_only": 0,
+        "only_with_price": 0,
+        "only_discount": 0,
+        "len_from": 0,
+        "len_to": 0,
+        "w_from": 0,
+        "w_to": 0,
+        "h_from": 0,
+        "h_to": 0
+      },
+      "orphan_filter_values": [],
+      "live_probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 3
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=in_stock=1",
+          "cards": 3
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=preorder_only=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=only_discount=1",
+          "cards": 0
+        }
+      ],
+      "sql_probes": []
+    },
+    "moechnye_vanny": {
+      "category_id": 80,
+      "name": "Моечные ванны",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "profile": "80_moechnye_vanny",
+      "operator_status": "working",
+      "category_statistics": [
+        {
+          "category_id": "80",
+          "total_products": "119",
+          "with_attributes": "116",
+          "without_attributes": "3"
+        }
+      ],
+      "attribute_coverage": [
+        {
+          "attribute_id 1": "17",
+          "name": "В комплекте",
+          "filter_name": "equipmentpack",
+          "filter_name_state": "SET",
+          "products_with_value": "23",
+          "sample_values": "заглушка для отверстия под смеситель | сливной сиф..."
+        },
+        {
+          "attribute_id 1": "18",
+          "name": "Высота борта (мм)",
+          "filter_name": "side-height",
+          "filter_name_state": "SET",
+          "products_with_value": "374",
+          "sample_values": "| 45 | 50"
+        },
+        {
+          "attribute_id 1": "21",
+          "name": "Конструкция",
+          "filter_name": "construction",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "разборная | сварная (неразборная)"
+        },
+        {
+          "attribute_id 1": "22",
+          "name": "Материал столешницы",
+          "filter_name": "table-top-material",
+          "filter_name_state": "SET",
+          "products_with_value": "543",
+          "sample_values": "бук толщиной 40 мм | нержавеющая сталь (AISI 430, ..."
+        },
+        {
+          "attribute_id 1": "23",
+          "name": "Мойка",
+          "filter_name": "washing",
+          "filter_name_state": "SET",
+          "products_with_value": "173",
+          "sample_values": "сварная (нержавеющая сталь AISI 201, 0.8 мм) | сва..."
+        },
+        {
+          "attribute_id 1": "25",
+          "name": "Наличие борта",
+          "filter_name": "available-board",
+          "filter_name_state": "SET",
+          "products_with_value": "576",
+          "sample_values": "есть | нет"
+        },
+        {
+          "attribute_id 1": "26",
+          "name": "Ножки",
+          "filter_name": "eq-legs",
+          "filter_name_state": "SET",
+          "products_with_value": "586",
+          "sample_values": "труба 40х40 (нержавеющая сталь AISI 430, 1 мм) | т..."
+        },
+        {
+          "attribute_id 1": "28",
+          "name": "Отверстие под смеситель",
+          "filter_name": "hole-for-mixer",
+          "filter_name_state": "SET",
+          "products_with_value": "173",
+          "sample_values": "есть"
+        },
+        {
+          "attribute_id 1": "29",
+          "name": "Размер раковины (ДхШхВ, мм)",
+          "filter_name": "shell-size",
+          "filter_name_state": "SET",
+          "products_with_value": "172",
+          "sample_values": "1100х500х400 | 1250х600х400 | 1450х700х450 | 400х3..."
+        },
+        {
+          "attribute_id 1": "31",
+          "name": "Регулируемость опоры по высоте (max мм)",
+          "filter_name": "height-adjustment",
+          "filter_name_state": "SET",
+          "products_with_value": "585",
+          "sample_values": "20 | 30"
+        },
+        {
+          "attribute_id 1": "33",
+          "name": "Тип опоры",
+          "filter_name": "type-support",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "Крепление консольное (к стене) | опора-болт"
+        }
+      ],
+      "attribute_data_db": [
+        {
+          "filter_key": "equipmentpack",
+          "attribute_id": "17",
+          "attribute_name": "В комплекте",
+          "filter_name": "equipmentpack",
+          "value_text": "заглушка для отверстия под смеситель",
+          "product_count": "21"
+        },
+        {
+          "filter_key": "equipmentpack",
+          "attribute_id": "17",
+          "attribute_name": "В комплекте",
+          "filter_name": "equipmentpack",
+          "value_text": "сливной сифон",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "11",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "12,6",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "15",
+          "product_count": "3"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "16,9",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "18,6",
+          "product_count": "2"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "19,35",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "19,5",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "20,5",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "22,5",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "22,9",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "36",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "38",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "40,5",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "mass_netto",
+          "attribute_id": "57",
+          "attribute_name": "Вес (нетто, кг)",
+          "filter_name": "mass_netto",
+          "value_text": "42",
+          "product_count": "1"
+        },
+        {
+          "filter_key": "side-height",
+          "attribute_id": "18",
+          "attribute_name": "Высота борта (мм)",
+          "filter_name": "side-height",
+          "value_text": "45",
+          "product_count": "82"
+        },
+        {
+          "filter_key": "side-height",
+          "attribute_id": "18",
+          "attribute_name": "Высота борта (мм)",
+          "filter_name": "side-height",
+          "value_text": "50",
+          "product_count": "25"
+        }
+      ],
+      "price_index_coverage": [
+        {
+          "total_active": "119",
+          "indexed_cg2": "119",
+          "with_positive_price": "115"
+        }
+      ],
+      "baseline_cards": 15,
+      "sidebar_filters": [],
+      "html_form_names": {
+        "price_from": 0,
+        "price_to": 0,
+        "in_stock": 0,
+        "preorder_only": 0,
+        "only_with_price": 0,
+        "only_discount": 0,
+        "len_from": 0,
+        "len_to": 0,
+        "w_from": 0,
+        "w_to": 0,
+        "h_from": 0,
+        "h_to": 0,
+        "attr[shell-size][]": 0,
+        "attr[washing][]": 0,
+        "attr[available-board][]": 0,
+        "attr[hole-for-mixer][]": 0,
+        "attr[47][]": 0,
+        "attr[side-height][]": 0,
+        "attr[type-support][]": 0,
+        "attr[eq-legs][]": 0,
+        "attr[construction][]": 0,
+        "attr[height-adjustment][]": 0,
+        "attr[table-top-material][]": 0,
+        "attr[equipmentpack][]": 0,
+        "s[]": 0
+      },
+      "orphan_filter_values": [],
+      "live_probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 15
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=in_stock=1",
+          "cards": 15
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=preorder_only=1",
+          "cards": 15
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=only_discount=1",
+          "cards": 0
+        },
+        {
+          "filter": "attr[shell-size][]=600х600х400",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=600%D1%85600%D1%85400",
+          "cards": 15
+        },
+        {
+          "filter": "attr[washing][]=сварная (нержавеющая сталь AISI 430, 0.7 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[washing][]=%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%28%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20AISI%20430%2C%200.7%20%D0%BC%D0%BC%29",
+          "cards": 1
+        },
+        {
+          "filter": "attr[available-board][]=нет",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[available-board][]=%D0%BD%D0%B5%D1%82",
+          "cards": 5
+        },
+        {
+          "filter": "attr[hole-for-mixer][]=есть",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[hole-for-mixer][]=%D0%B5%D1%81%D1%82%D1%8C",
+          "cards": 15
+        },
+        {
+          "filter": "attr[47][]=Съемный борт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[47][]=%D0%A1%D1%8A%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%B1%D0%BE%D1%80%D1%82",
+          "cards": 15
+        },
+        {
+          "filter": "attr[side-height][]=45",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[side-height][]=45",
+          "cards": 15
+        },
+        {
+          "filter": "attr[type-support][]=опора-болт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[type-support][]=%D0%BE%D0%BF%D0%BE%D1%80%D0%B0-%D0%B1%D0%BE%D0%BB%D1%82",
+          "cards": 15
+        },
+        {
+          "filter": "attr[eq-legs][]=уголок 40х40 (оцинкованная сталь, 1.5 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[eq-legs][]=%D1%83%D0%B3%D0%BE%D0%BB%D0%BE%D0%BA%2040%D1%8540%20%28%D0%BE%D1%86%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%2C%201.5%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[construction][]=разборная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[construction][]=%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F",
+          "cards": 15
+        },
+        {
+          "filter": "attr[height-adjustment][]=20",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[height-adjustment][]=20",
+          "cards": 15
+        },
+        {
+          "filter": "attr[table-top-material][]=нет",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[table-top-material][]=%D0%BD%D0%B5%D1%82",
+          "cards": 1
+        },
+        {
+          "filter": "attr[equipmentpack][]=заглушка для отверстия под смеситель",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[equipmentpack][]=%D0%B7%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%20%D1%81%D0%BC%D0%B5%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D1%8C",
+          "cards": 15
+        }
+      ],
+      "sql_probes": [
+        {
+          "filter_key": "shell-size",
+          "sample_value": "600х600х400",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "18"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='shell-size' AND pa.text='600х600х400')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "washing",
+          "sample_value": "сварная (нержавеющая сталь AISI 430, 0.7 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "1"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 1,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='washing' AND pa.text='сварная (нержавеющая сталь AISI 430, 0.7 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "available-board",
+          "sample_value": "нет",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "5"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 5,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='available-board' AND pa.text='нет')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "hole-for-mixer",
+          "sample_value": "есть",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "116"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='hole-for-mixer' AND pa.text='есть')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "47",
+          "sample_value": "Съемный борт",
+          "key_type": "numeric",
+          "db_count_correct_resolution": {
+            "cnt": "74"
+          },
+          "db_count_broken_filter_name_resolution": {
+            "cnt": "0"
+          },
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... attribute_id=47 AND pa.text='Съемный борт')",
+          "constructed_sql_broken_pre06j": "EXISTS (... ad.filter_name='47' AND pa.text='Съемный борт')"
+        },
+        {
+          "filter_key": "side-height",
+          "sample_value": "45",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "82"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='side-height' AND pa.text='45')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "type-support",
+          "sample_value": "опора-болт",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "115"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='type-support' AND pa.text='опора-болт')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "eq-legs",
+          "sample_value": "уголок 40х40 (оцинкованная сталь, 1.5 мм)",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "43"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='eq-legs' AND pa.text='уголок 40х40 (оцинкованная сталь, 1.5 мм)')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "construction",
+          "sample_value": "разборная",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "111"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='construction' AND pa.text='разборная')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "height-adjustment",
+          "sample_value": "20",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "110"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='height-adjustment' AND pa.text='20')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "table-top-material",
+          "sample_value": "нет",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "1"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 1,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='table-top-material' AND pa.text='нет')",
+          "constructed_sql_broken_pre06j": null
+        },
+        {
+          "filter_key": "equipmentpack",
+          "sample_value": "заглушка для отверстия под смеситель",
+          "key_type": "slug",
+          "db_count_correct_resolution": {
+            "cnt": "21"
+          },
+          "db_count_broken_filter_name_resolution": null,
+          "live_cards_after_filter": 15,
+          "constructed_sql_correct": "EXISTS (... ad.filter_name='equipmentpack' AND pa.text='заглушка для отверстия под смеситель')",
+          "constructed_sql_broken_pre06j": null
+        }
+      ]
+    },
+    "zonty": {
+      "category_id": 207,
+      "name": "Зонты вытяжные",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/",
+      "profile": "207_zonty",
+      "operator_status": "working",
+      "category_statistics": [
+        {
+          "category_id": "207",
+          "total_products": "1",
+          "with_attributes": "1",
+          "without_attributes": "0"
+        }
+      ],
+      "attribute_coverage": [
+        {
+          "attribute_id 1": "21",
+          "name": "Конструкция",
+          "filter_name": "construction",
+          "filter_name_state": "SET",
+          "products_with_value": "587",
+          "sample_values": "разборная | сварная (неразборная)"
+        },
+        {
+          "attribute_id 1": "34",
+          "name": "Страна производства",
+          "filter_name": "country-origin",
+          "filter_name_state": "SET",
+          "products_with_value": "0",
+          "sample_values": "NULL"
+        }
+      ],
+      "attribute_data_db": [],
+      "price_index_coverage": [
+        {
+          "total_active": "1",
+          "indexed_cg2": "1",
+          "with_positive_price": "1"
+        }
+      ],
+      "baseline_cards": 1,
+      "sidebar_filters": [],
+      "html_form_names": {
+        "price_from": 0,
+        "price_to": 0,
+        "in_stock": 0,
+        "preorder_only": 0,
+        "only_with_price": 0,
+        "only_discount": 0,
+        "len_from": 0,
+        "len_to": 0,
+        "w_from": 0,
+        "w_to": 0,
+        "h_from": 0,
+        "h_to": 0
+      },
+      "orphan_filter_values": [],
+      "live_probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 1
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=in_stock=1",
+          "cards": 1
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=preorder_only=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=only_discount=1",
+          "cards": 0
+        }
+      ],
+      "sql_probes": []
+    }
+  }
+}

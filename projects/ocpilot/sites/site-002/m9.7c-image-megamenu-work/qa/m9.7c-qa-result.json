@@ -1,0 +1,198 @@
+{
+  "task": "M9.7C",
+  "base_url": "https://zpm.new-site.space",
+  "checked_at_utc": "2026-06-14T21:53:54.241108+00:00",
+  "megamenu_before_note": "12 neutral tiles incl 7 zero-count before fix",
+  "megamenu_after": [
+    {
+      "name": "Подтоварники и подставки",
+      "count": 11,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp"
+    },
+    {
+      "name": "Столы",
+      "count": 419,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp"
+    },
+    {
+      "name": "Тележки сервировочные",
+      "count": 3,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp"
+    },
+    {
+      "name": "Зонты вытяжные",
+      "count": 23,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp"
+    },
+    {
+      "name": "Моечные ванны",
+      "count": 152,
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp"
+    }
+  ],
+  "hub_cards": [
+    {
+      "name": "Столы",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/stoly-300x300.webp"
+    },
+    {
+      "name": "Моечные ванны",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/moechnye-vanny-300x300.webp"
+    },
+    {
+      "name": "Подтоварники и подставки",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/podtovarniki-i-podstavki-300x300.webp"
+    },
+    {
+      "name": "Зонты вытяжные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/zonty-vytyazhnye-300x300.webp"
+    },
+    {
+      "name": "Тележки сервировочные",
+      "img": "https://zpm.new-site.space/image/cache/catalog/Category-image/telezhki-servirovochnye-300x300.webp"
+    }
+  ],
+  "url_results": {
+    "home": {
+      "path": "/",
+      "http": 200,
+      "php_warnings": false
+    },
+    "katalog": {
+      "path": "/katalog",
+      "http": 200,
+      "php_warnings": false
+    },
+    "neutral_hub": {
+      "path": "/katalog/nejtralnoe-oborudovanie",
+      "http": 200,
+      "php_warnings": false
+    },
+    "stoly": {
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/",
+      "http": 200,
+      "php_warnings": false
+    },
+    "vanny": {
+      "path": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "http": 200,
+      "php_warnings": false
+    },
+    "podtovarniki": {
+      "path": "/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "http": 200,
+      "php_warnings": false
+    },
+    "zonty": {
+      "path": "/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/",
+      "http": 200,
+      "php_warnings": false
+    },
+    "telezhki": {
+      "path": "/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+      "http": 200,
+      "php_warnings": false
+    },
+    "ref_table_pdp": {
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "http": 200,
+      "php_warnings": false
+    },
+    "ref_sink_pdp": {
+      "path": "/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "http": 200,
+      "php_warnings": false
+    }
+  },
+  "checks": [
+    {
+      "id": "HTTP-home",
+      "result": "PASS",
+      "detail": "home: HTTP 200"
+    },
+    {
+      "id": "HTTP-katalog",
+      "result": "PASS",
+      "detail": "katalog: HTTP 200"
+    },
+    {
+      "id": "HTTP-neutral_hub",
+      "result": "PASS",
+      "detail": "neutral_hub: HTTP 200"
+    },
+    {
+      "id": "HTTP-stoly",
+      "result": "PASS",
+      "detail": "stoly: HTTP 200"
+    },
+    {
+      "id": "HTTP-vanny",
+      "result": "PASS",
+      "detail": "vanny: HTTP 200"
+    },
+    {
+      "id": "HTTP-podtovarniki",
+      "result": "PASS",
+      "detail": "podtovarniki: HTTP 200"
+    },
+    {
+      "id": "HTTP-zonty",
+      "result": "PASS",
+      "detail": "zonty: HTTP 200"
+    },
+    {
+      "id": "HTTP-telezhki",
+      "result": "PASS",
+      "detail": "telezhki: HTTP 200"
+    },
+    {
+      "id": "HTTP-ref_table_pdp",
+      "result": "PASS",
+      "detail": "ref_table_pdp: HTTP 200"
+    },
+    {
+      "id": "HTTP-ref_sink_pdp",
+      "result": "PASS",
+      "detail": "ref_sink_pdp: HTTP 200"
+    },
+    {
+      "id": "MM-COUNT",
+      "result": "PASS",
+      "detail": "megamenu neutral tiles=5 names=['Подтоварники и подставки', 'Столы', 'Тележки сервировочные', 'Зонты вытяжные', 'Моечные ванны']"
+    },
+    {
+      "id": "MM-NO-ZERO",
+      "result": "PASS",
+      "detail": "zero-count tiles: []"
+    },
+    {
+      "id": "MM-NO-FORBIDDEN",
+      "result": "PASS",
+      "detail": "forbidden still visible: []"
+    },
+    {
+      "id": "MM-EXPECTED-SET",
+      "result": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "id": "MM-NO-PLACEHOLDER",
+      "result": "PASS",
+      "detail": "placeholder imgs: []"
+    },
+    {
+      "id": "HUB-CARD-COUNT",
+      "result": "PASS",
+      "detail": "hub cards=5 names=['Столы', 'Моечные ванны', 'Подтоварники и подставки', 'Зонты вытяжные', 'Тележки сервировочные']"
+    },
+    {
+      "id": "HUB-NO-PLACEHOLDER",
+      "result": "PASS",
+      "detail": "hub placeholder imgs: []"
+    }
+  ],
+  "summary": {
+    "pass": 17,
+    "fail": 0
+  }
+}

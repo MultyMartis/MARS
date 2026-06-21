@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Contacts page — polish v1
+   ========================================================================== */
+
+.zpm-contact-cards--messengers {
+  padding-top: var(--pad-gap-line);
+}
+
+.zpm-contact-cards__grid--messengers {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.zpm-contact-card--static {
+  cursor: default;
+}
+
+.zpm-contact-summary__fact--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 0;
+}
+
+.zpm-contact-summary__fact--icon::before {
+  content: none;
+}
+
+.zpm-contact-summary__fact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  font-size: 16px;
+  color: var(--accent-color-01);
+}
+
+.zpm-contact-requisites__line + .zpm-contact-requisites__line {
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .zpm-contact-cards__grid--messengers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .zpm-contact-cards__grid--messengers {
+    grid-template-columns: 1fr;
+  }
+}

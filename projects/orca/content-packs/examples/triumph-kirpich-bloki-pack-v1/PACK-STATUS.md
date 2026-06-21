@@ -2,7 +2,7 @@
 
 route_id: kirpich-bloki
 route_folder: kirpich-bloki
-url: SAFE UNKNOWN
+url: https://manipulator-triumph.ru/kirpich-bloki.html
 display_path: kirpich-bloki
 content_coverage: true
 production_copy_ready: true

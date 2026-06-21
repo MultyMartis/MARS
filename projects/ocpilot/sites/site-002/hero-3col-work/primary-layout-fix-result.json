@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-06-09T06:12:11.610306+00:00",
+  "wave": "primary-layout-fix",
+  "backups": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-primary-layout-fix.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-primary-layout-fix.bak"
+  },
+  "deployed": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css"
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa": {
+    "sp_p_18_6": {
+      "phase": "final",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/stol-proizvodstvennyy-sp-p-18-6-1800h600h850",
+      "php_ok": true,
+      "has_prop_icons": true,
+      "has_prop_content": true,
+      "prop_icon_count": 4,
+      "prop_count": 1,
+      "has_inline_svg": true,
+      "has_additional": true,
+      "additional_has_prop_icon": false,
+      "grid_4col": true,
+      "grid_gap_12": true,
+      "prop_gap_8": true,
+      "prop_padding": true,
+      "icon_em_size": true,
+      "mobile_2col": true,
+      "grid_intact": true,
+      "media_intact": true,
+      "commerce_intact": true,
+      "cart_intact": true,
+      "qty_intact": true,
+      "wishlist_intact": true,
+      "compare_intact": true,
+      "fancybox_intact": true,
+      "gallery_intact": true,
+      "forbidden_css_in_primary_block": [],
+      "primary_css_block": ".product-hero__props--primary {\n  display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.product-hero__props--primary .product-hero__prop {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 12px;\n  min-width: 0;\n}\n\n.product-hero__prop-icon {\n  flex: 0 0 auto;\n  width: 1.6em;\n  height: 1.6em;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.product-hero__prop-icon svg {\n  display: block;\n  width: 1.6em;\n  height: 1.6em;\n}\n\n.product-hero__prop-content {\n  min-width: 0;\n  display: flex;\n  flex-direction: column;\n}\n\n@media (max-width: 640px) {\n  .product-hero__props--primary {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n}\n\n",
+      "mobile_css_block": "@media (max-width: 640px) {\n  .product-hero__props--primary {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }"
+    },
+    "spkb_multi": {
+      "phase": "final",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "php_ok": true,
+      "has_prop_icons": true,
+      "has_prop_content": true,
+      "prop_icon_count": 4,
+      "prop_count": 1,
+      "has_inline_svg": true,
+      "has_additional": true,
+      "additional_has_prop_icon": false,
+      "grid_4col": true,
+      "grid_gap_12": true,
+      "prop_gap_8": true,
+      "prop_padding": true,
+      "icon_em_size": true,
+      "mobile_2col": true,
+      "grid_intact": true,
+      "media_intact": true,
+      "commerce_intact": true,
+      "cart_intact": true,
+      "qty_intact": true,
+      "wishlist_intact": true,
+      "compare_intact": true,
+      "fancybox_intact": true,
+      "gallery_intact": true,
+      "forbidden_css_in_primary_block": [],
+      "primary_css_block": ".product-hero__props--primary {\n  display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.product-hero__props--primary .product-hero__prop {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 12px;\n  min-width: 0;\n}\n\n.product-hero__prop-icon {\n  flex: 0 0 auto;\n  width: 1.6em;\n  height: 1.6em;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.product-hero__prop-icon svg {\n  display: block;\n  width: 1.6em;\n  height: 1.6em;\n}\n\n.product-hero__prop-content {\n  min-width: 0;\n  display: flex;\n  flex-direction: column;\n}\n\n@media (max-width: 640px) {\n  .product-hero__props--primary {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n}\n\n",
+      "mobile_css_block": "@media (max-width: 640px) {\n  .product-hero__props--primary {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }"
+    }
+  },
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\primary-layout-fix\\sp-p-18-6-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\primary-layout-fix\\sp-p-18-6-hero-mobile.png"
+  },
+  "overflow": {
+    "desktop_1440": false,
+    "mobile_390": true
+  }
+}

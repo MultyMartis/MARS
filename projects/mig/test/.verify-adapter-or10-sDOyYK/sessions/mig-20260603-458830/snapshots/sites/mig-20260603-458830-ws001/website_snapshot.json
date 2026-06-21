@@ -1,0 +1,48 @@
+{
+  "snapshot_id": "mig-20260603-458830-ws001",
+  "session_id": "mig-20260603-458830",
+  "competitor_id": "mig-20260603-458830-c001",
+  "domain": "manipulator-krd.ru",
+  "requested_url": "https://manipulator-krd.ru/",
+  "final_url": "https://manipulator-krd.ru/",
+  "page_role": "homepage",
+  "capture_time": "2026-06-03T19:59:18.976Z",
+  "status": "failed",
+  "acquisition_method": "http_get_dom",
+  "http_status": null,
+  "redirect_chain": [],
+  "content_type": null,
+  "charset": null,
+  "render_status": "unknown",
+  "fetch_duration_ms": 88,
+  "title": null,
+  "meta_description": null,
+  "canonical_url": null,
+  "lang": null,
+  "headings": [],
+  "contacts": {
+    "phones": [],
+    "emails": [],
+    "addresses": [],
+    "messengers": []
+  },
+  "offers": [],
+  "pricing_signals": [],
+  "cta_elements": [],
+  "forms": [],
+  "links": {
+    "internal": [],
+    "external": []
+  },
+  "trust_signals_visible": [],
+  "visible_text_excerpt": null,
+  "artifact_refs": {
+    "website_snapshot": "snapshots/sites/mig-20260603-458830-ws001/website_snapshot.json",
+    "page_html": "snapshots/sites/mig-20260603-458830-ws001/page.html",
+    "headers": "snapshots/sites/mig-20260603-458830-ws001/headers.json"
+  },
+  "evidence_grade": "X",
+  "safe_unknown": [
+    "Fetch error: fetch failed"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "qa_utc": "2026-06-14T18:47:06.158923+00:00",
+  "base": "https://zpm.new-site.space",
+  "wave": "M8.3 Wave 2",
+  "checks": [
+    {
+      "id": "QA-01",
+      "path": "/katalog/nejtralnoe-oborudovanie",
+      "status": "pass",
+      "detail": "Neutral hub status=200 packaging_hits=[] service_hits=[] commercial_hits=['Конструкция', 'Тип опоры', 'Материал столешницы', 'Макс. нагрузка']"
+    },
+    {
+      "id": "QA-02",
+      "path": "/index.php?route=product/category&path=301",
+      "status": "pass",
+      "detail": "Столы PLP status=200 packaging_hits=[] service_hits=[] commercial_hits=['Конструкция', 'Тип опоры', 'Материал столешницы', 'Макс. нагрузка']"
+    },
+    {
+      "id": "QA-03",
+      "path": "/index.php?route=product/category&path=80",
+      "status": "pass",
+      "detail": "Моечные ванны PLP status=200 packaging_hits=[] service_hits=[] commercial_hits=['Конструкция', 'Тип опоры', 'Материал столешницы']"
+    },
+    {
+      "id": "QA-04",
+      "path": "/index.php?route=product/category&path=322",
+      "status": "pass",
+      "detail": "Подтоварники PLP status=200 packaging_hits=[] service_hits=[] commercial_hits=['Конструкция', 'Тип опоры', 'Материал столешницы', 'Макс. нагрузка']"
+    },
+    {
+      "id": "QA-05",
+      "path": "/index.php?route=product/category&path=207",
+      "status": "pass",
+      "detail": "Зонты PLP status=200 packaging_hits=[] service_hits=[] commercial_hits=['Конструкция']"
+    },
+    {
+      "id": "QA-06",
+      "path": "/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": "pass",
+      "detail": "PDP status=200"
+    }
+  ],
+  "summary": {
+    "pass": 6,
+    "fail": 0,
+    "unknown": 0
+  }
+}

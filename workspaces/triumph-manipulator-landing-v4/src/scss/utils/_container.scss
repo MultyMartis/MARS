@@ -1,0 +1,27 @@
+@use 'tokens' as t;
+
+// Shared horizontal boundaries for hero + main sections (matches approved HERO shell).
+@mixin page-container-width {
+    width: min(100%, t.$container);
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+@mixin page-container-padding {
+    padding-inline: t.$pad-desktop;
+}
+
+@mixin page-container {
+    @include page-container-width;
+    @include page-container-padding;
+}
+
+@mixin page-container-padding-responsive {
+    @media (max-width: 760px) {
+        padding-inline: t.$pad-mobile;
+    }
+
+    @media (min-width: 761px) and (max-width: 1180px) {
+        padding-inline: t.$pad-tablet;
+    }
+}

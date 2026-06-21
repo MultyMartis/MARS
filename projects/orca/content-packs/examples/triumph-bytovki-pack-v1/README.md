@@ -6,7 +6,7 @@ Production-ready ORCA semantic pack для use-case logistics маршрута: 
 
 Пакет фиксирует semantic + visual + factory contract для Website Factory по странице:
 
-- URL: `https://manipulator-triumph.ru/perevozka-bytovok/`
+- URL: `https://manipulator-triumph.ru/bytovki.html`
 - Route ID: `bytovki`
 - Display path: `bytovki`
 - Тип маршрута: use-case logistics route

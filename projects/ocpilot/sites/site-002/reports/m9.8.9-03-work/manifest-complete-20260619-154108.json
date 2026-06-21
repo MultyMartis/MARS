@@ -1,0 +1,20 @@
+{
+  "task": "M9.8.9-03-complete",
+  "stamp": "20260619-154108",
+  "files": [
+    {
+      "remote_path": "catalog/view/theme/default/template/product/category.twig",
+      "sha256_patched": "2b325d8ac349c89efbc400f29ff9be740fecda3bc40079f7a5b861bcb8e6a92b",
+      "verify_sha256": "2b325d8ac349c89efbc400f29ff9be740fecda3bc40079f7a5b861bcb8e6a92b",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "assets/css/style.css",
+      "sha256_patched": "b7269752f629a2849d00e35fa7e930793c01a53af65ce8d875e052a5c297bf57",
+      "verify_sha256": "b7269752f629a2849d00e35fa7e930793c01a53af65ce8d875e052a5c297bf57",
+      "deploy_ok": true
+    }
+  ],
+  "twig_cache_cleared_count": 0,
+  "all_deploy_ok": true
+}

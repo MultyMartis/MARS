@@ -1,0 +1,49 @@
+{
+  "audit_utc": "2026-06-14T18:30:46.173516+00:00",
+  "environment": "https://zpm.new-site.space/",
+  "db": "polygonws_zpm",
+  "product_3071": [
+    {
+      "product_id": "3071",
+      "model": "СПБ-С-10/6",
+      "status": "0",
+      "length": "1.00000000",
+      "width": "1.00000000",
+      "height": "1.00000000",
+      "weight": "4.00000000",
+      "name": "Стол производственный СПБ-С-10/6 (1000х600х850) ТЕ...",
+      "description": "С бортом. <br /> Высота борта 45. <br /> Материалы..."
+    }
+  ],
+  "product_3071_categories": [
+    {
+      "category_id": "306",
+      "name": "Столы СТАНДАРТ-600 с полкой-решеткой",
+      "category_status": "1"
+    }
+  ],
+  "test_attribute_definitions": [],
+  "test_attribute_values": [],
+  "migration_attrs": [],
+  "migration_attr_values_3071": [
+    {
+      "attribute_id": "110",
+      "name": "Тип покрытия",
+      "text": "оцинкованный"
+    }
+  ],
+  "test_name_products": [
+    {
+      "product_id": "3071",
+      "status": "0",
+      "name": "Стол производственный СПБ-С-10/6 (1000х600х850) ТЕ..."
+    }
+  ],
+  "attribute_110_detail": [
+    {
+      "product_id": "3071",
+      "status": "0",
+      "text": "оцинкованный"
+    }
+  ]
+}

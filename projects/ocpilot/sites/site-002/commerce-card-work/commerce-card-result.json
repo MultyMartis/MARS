@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-06-09T08:32:41.211481+00:00",
+  "wave": "commerce-card",
+  "backup_paths": {
+    "producthero_twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-commerce-card.bak",
+    "style_css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-commerce-card.bak"
+  },
+  "changed_files": [
+    "catalog/view/theme/default/template/product/producthero.twig",
+    "assets/css/style.css"
+  ],
+  "local_changed_files": [
+    "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\commerce-card-work\\producthero.twig",
+    "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\commerce-card-work\\style.css"
+  ],
+  "hooks_found": {
+    "quick_order": {
+      "dedicated_hook": "SAFE UNKNOWN — text 'Быстрый заказ' and dedicated modal not found on live site",
+      "used_hook": "#zpmFbCallback",
+      "attributes": "data-fancybox data-src=\"#zpmFbCallback\" data-zpm-fb-mode=\"2\"",
+      "modal_title_live": "Заказать звонок",
+      "dialog_value": "2"
+    },
+    "ask_question": {
+      "hook": "#zpmFbQuestion",
+      "attributes": "data-fancybox data-src=\"#zpmFbQuestion\" data-zpm-fb-mode=\"2\"",
+      "reference": "producttabs.twig product-help block",
+      "dialog_value": "1"
+    }
+  },
+  "twig_sha256_before": "e4c05f4937a3eda76b93b672384d65314d887367db0108750c2202f97186827e",
+  "css_sha256_before": "029e0d3500269542f6230954c54addf7bdb4974666e3f5c9d38d0864fbb622aa",
+  "twig_sha256_deployed": "45d2b053e219e20be559d5eb108a7f1c69522a1d2b8de918557581ea7a438c3a",
+  "css_sha256_deployed": "9e875378f1c5fd89a007e438789c47ed17a179da095170d366f3f54234b59174",
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+    "php_ok": true,
+    "two_cards": false,
+    "commerce_head": true,
+    "price_intact": true,
+    "discount_intact": true,
+    "status_intact": true,
+    "cart_intact": true,
+    "qty_intact": true,
+    "wishlist_intact": true,
+    "compare_intact": true,
+    "fancybox_gallery_intact": true,
+    "quick_order_btn": false,
+    "quick_order_hook": false,
+    "question_btn": false,
+    "question_hook": false,
+    "service_items": 0,
+    "fa_icons": false,
+    "commerce_sample": "\n\n      <div class=\"product-hero__commerce\">\n\n        <div class=\"product-hero__commerce-card\">\n          <div class=\"product-hero__commerce-head\">Стоимость:</div>\n          <div class=\"product-hero__commerce-body\">\n            <div class=\"product-hero__price\">\n              <div class=\"product-hero__price-value\">51 281 ₽</div>\n              <div class=\"product-hero__old-price-value\">60 330 ₽</div>\n              <div class=\"product-hero__discount\">-15%</div>            </div>\n\n            <div class=\"product-hero__status\">\n                                <div class=\"unit p-card__status-Yes\">\n                  Под заказ\n                  </div>\n                            <div class=\"unit p-card__delivery\">Срок поставки 5–10 дней</div>            </div>\n\n            <div class=\"product-hero__actions-wrap\">\n                            <div class=\"product-hero__actions\" data-product-id=\"3213\" data-cart-pdp >\n                <button class=\"btn btn_dark btn--primary btn-qty--toogle\" type=\"button\" data-cart-add>\n                    <svg class=\"zpm-icon\" aria-hidden=\"true\" focusable=\"false\"><use href=\"#zpm_ico__cart\"></use></svg>\n                  <span class=\"btn__text\" data-cart-text>В "
+  },
+  "screenshots": {
+    "desktop_1440": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\commerce-card\\spkb-18-7-vl5-commerce-desktop-1440.png",
+    "mobile_390": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\commerce-card\\spkb-18-7-vl5-commerce-mobile-390.png"
+  },
+  "overflow": {
+    "1440": false,
+    "js_errors_1440": [],
+    "390": true,
+    "js_errors_390": []
+  },
+  "rollback": {
+    "restore_twig_from": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-commerce-card.bak",
+    "restore_css_from": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-commerce-card.bak",
+    "remote_twig_path": "catalog/view/theme/default/template/product/producthero.twig",
+    "remote_css_path": "assets/css/style.css",
+    "note": "FTP upload both backup files to remote paths, then clear OC template cache"
+  }
+}

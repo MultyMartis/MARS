@@ -1,0 +1,224 @@
+{
+  "generated_at_utc": "2026-06-14T20:42:11.230915+00:00",
+  "test_url": "https://zpm.new-site.space",
+  "checkpoint": "SITE-002-STABLE-M9-COMPLETE-20260615",
+  "checks": [
+    {
+      "id": "QA-HTTP-home",
+      "status": "pass",
+      "detail": "home: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-katalog",
+      "status": "pass",
+      "detail": "katalog: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-neutral_hub",
+      "status": "pass",
+      "detail": "neutral_hub: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-stoly",
+      "status": "pass",
+      "detail": "stoly: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-vanny",
+      "status": "pass",
+      "detail": "vanny: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-podtovarniki",
+      "status": "pass",
+      "detail": "podtovarniki: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-zonty",
+      "status": "pass",
+      "detail": "zonty: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-reference_table_pdp",
+      "status": "pass",
+      "detail": "reference_table_pdp: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-HTTP-reference_sink_pdp",
+      "status": "pass",
+      "detail": "reference_sink_pdp: HTTP 200",
+      "evidence": {}
+    },
+    {
+      "id": "QA-MEGAMENU",
+      "status": "pass",
+      "detail": "Megamenu single neutral root",
+      "evidence": {
+        "roots": [
+          "Нейтральное оборудование"
+        ]
+      }
+    },
+    {
+      "id": "QA-FOOTER",
+      "status": "pass",
+      "detail": "Footer catalog links show only neutral paths",
+      "evidence": {
+        "links": [
+          "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+          "/custom-equipment/",
+          "/payment-methods",
+          "/delivery",
+          "/dealers",
+          "/guarantee",
+          "/about",
+          "/blog/news",
+          "/contact"
+        ]
+      }
+    },
+    {
+      "id": "QA-HUB-MODE",
+      "status": "pass",
+      "detail": "hub_mode=True hub_cards=5 (expected 5)",
+      "evidence": {
+        "hub_cards": 5
+      }
+    },
+    {
+      "id": "QA-FILTER-STOLY",
+      "status": "pass",
+      "detail": "primary=10/10 bad=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-FILTER-VANNY",
+      "status": "pass",
+      "detail": "primary=8/8 bad=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-BRANCH-podtovarniki",
+      "status": "pass",
+      "detail": "grid=True filter=True hidden_global=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-BRANCH-zonty",
+      "status": "pass",
+      "detail": "grid=True filter=True hidden_global=[]",
+      "evidence": {}
+    },
+    {
+      "id": "QA-PDP-reference_table_pdp",
+      "status": "pass",
+      "detail": "status=200 err=None",
+      "evidence": {}
+    },
+    {
+      "id": "QA-PDP-reference_sink_pdp",
+      "status": "pass",
+      "detail": "status=200 err=None",
+      "evidence": {}
+    }
+  ],
+  "summary": {
+    "pass": 18,
+    "fail": 0,
+    "warn": 0
+  },
+  "pages": {
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/",
+      "error": null,
+      "megamenu_roots": [
+        "Нейтральное оборудование"
+      ],
+      "footer_catalog_links": [
+        "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+        "/custom-equipment/",
+        "/payment-methods",
+        "/delivery",
+        "/dealers",
+        "/guarantee",
+        "/about",
+        "/blog/news",
+        "/contact"
+      ]
+    },
+    "katalog": {
+      "url": "https://zpm.new-site.space/katalog",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "neutral_hub": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "stoly": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "vanny": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "podtovarniki": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "zonty": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "reference_table_pdp": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    },
+    "reference_sink_pdp": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "status": 200,
+      "final_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-celnotyanutye-premium-3/vanna-moechnaya-vmc-p3-2-500-1150h700h850",
+      "error": null,
+      "megamenu_roots": null,
+      "footer_catalog_links": null
+    }
+  }
+}

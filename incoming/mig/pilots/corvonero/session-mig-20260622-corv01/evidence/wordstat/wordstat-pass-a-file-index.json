@@ -1,0 +1,1052 @@
+{
+  "schema_version": "1",
+  "session_id": "mig-20260622-corv01",
+  "generated_at": "2026-06-21T20:20:54.644Z",
+  "external_storage_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06",
+  "external_storage_inspected": true,
+  "scan_loci": [
+    {
+      "path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06",
+      "normalized_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06",
+      "classification": "mars_storage_external_evidence",
+      "exists": true
+    },
+    {
+      "path": "C:\\AI MARS\\incoming\\mig\\pilots\\corvonero\\session-mig-20260622-corv01\\evidence\\wordstat\\exports",
+      "normalized_path": "C:\\AI MARS\\incoming\\mig\\pilots\\corvonero\\session-mig-20260622-corv01\\evidence\\wordstat\\exports",
+      "classification": "in_repo_controlled_copy",
+      "exists": true
+    },
+    {
+      "path": "C:\\AI MARS\\incoming\\mig\\pilots\\corvonero\\session-mig-20260622-corv01\\evidence\\wordstat\\pass-a",
+      "normalized_path": "C:\\AI MARS\\incoming\\mig\\pilots\\corvonero\\session-mig-20260622-corv01\\evidence\\wordstat\\pass-a",
+      "classification": "in_repo_controlled_copy",
+      "exists": true
+    },
+    {
+      "path": "C:\\AI MARS\\incoming\\mig\\pilots\\corvonero\\session-mig-20260622-corv01\\evidence\\wordstat\\incoming",
+      "normalized_path": "C:\\AI MARS\\incoming\\mig\\pilots\\corvonero\\session-mig-20260622-corv01\\evidence\\wordstat\\incoming",
+      "classification": "in_repo_controlled_copy",
+      "exists": true
+    }
+  ],
+  "prior_af_007_superseded": {
+    "prior_claim": "zero Excel/CSV at in-repo loci only",
+    "root_cause": "wrong evidence locus — files in MARS Storage not scanned",
+    "corrected_source": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06"
+  },
+  "files_found": 18,
+  "files_parsed_ok": 18,
+  "exceljs_available": true,
+  "file_inventory": [
+    {
+      "filename": "ws-p1-001-programmist-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 95223,
+      "sha256": "84464761e9b8d59105766d828bc63cb6730f02dc71e4c081e9a813940a948a96",
+      "inferred_query_id": "ws-p1-001",
+      "seed_phrase": "программист 1С",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 589,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-002-uslugi-programmista-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 16999,
+      "sha256": "a6b8227bf5f70893222f6a91519ad5efa8e5a9a72610d054f581a536979859ec",
+      "inferred_query_id": "ws-p1-002",
+      "seed_phrase": "программист 1С Новосибирск",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 5,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-003-soprovozhdenie-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 40862,
+      "sha256": "75c0904d824787cffe9b4dee3e266d0cdc752ba182e94d253b391b2aec6f2d96",
+      "inferred_query_id": "ws-p1-003",
+      "seed_phrase": "сопровождение 1С",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 177,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-004-dorabotka-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 26714,
+      "sha256": "4e0afa9bc3a63e62ff8e042ea83013783fc2f7199658cd544bc561dee3b4f65a",
+      "inferred_query_id": "ws-p1-004",
+      "seed_phrase": "доработка 1С",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 83,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-005-integraciya-s-saitom.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 17680,
+      "sha256": "a89f26ac2bc56e5ffff283dc3de275778edfb709fecded6dc34882354426ba71",
+      "inferred_query_id": "ws-p1-005",
+      "seed_phrase": "интеграция 1С с сайтом",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 10,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-006-integraciya-bitrix.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 20173,
+      "sha256": "c49fd2c76a72012c806bec57930b658d7e38dc2370828f1fb872daaed48129b4",
+      "inferred_query_id": "ws-p1-006",
+      "seed_phrase": "интеграция 1С Битрикс",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 28,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-007-markirovka-v-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 42693,
+      "sha256": "e726ffa948c71eb1cb6bd97f487533d57b6ffe0f8ef1efdf1fff59b76f9a719a",
+      "inferred_query_id": "ws-p1-007",
+      "seed_phrase": "маркировка в 1С",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 196,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p1-008-chestny-znak-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 50938,
+      "sha256": "f3feb6a59fb5efa3353f517e8e5b3f2effb0bd39e212caf0a5294c8d024ae232",
+      "inferred_query_id": "ws-p1-008",
+      "seed_phrase": "Честный знак 1С",
+      "priority": "P1",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 250,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p2-001-otchet-1c.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 16622,
+      "sha256": "8b45b9cb31b54a30bce4e87394e065732fb8027d07ce2077c127dc885f532634",
+      "inferred_query_id": "ws-p2-001",
+      "seed_phrase": "доработка отчёта 1С",
+      "priority": "P2",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 2,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p2-002-pechatnaya-forma.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 91299,
+      "sha256": "a2ce8003160dcd46c505e1b9f6b2d9691f2f7d81bddd9a6810b3858800e2bc8c",
+      "inferred_query_id": "ws-p2-002",
+      "seed_phrase": "доработка печатной формы 1С",
+      "priority": "P2",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 542,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p2-004-sinhronizaciya.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 69989,
+      "sha256": "6971f418af26674efc551767164784d3278d5c5e4d82c6c92cd1eaa9b92d717b",
+      "inferred_query_id": "ws-p2-004",
+      "seed_phrase": "настройка синхронизации 1С",
+      "priority": "P2",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 384,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 16513,
+      "sha256": "6aeb9123a86bd38b02c2d791d8ee64054a1357105e1b72105e902d120eef4673",
+      "inferred_query_id": "ws-p2-005",
+      "seed_phrase": "обновление доработанной 1С",
+      "priority": "P2",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 1,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p2-007-1c-ne-rabotaet.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 16611,
+      "sha256": "e58373e588b52d3176937bc228ffe94e9714dfdc601c5990773c9cdb5d3fb52d",
+      "inferred_query_id": "ws-p2-007",
+      "seed_phrase": "1С не работает",
+      "priority": "P2",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 2,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p3-001-pivo.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 16456,
+      "sha256": "d053c057c0f90d82fd8893c160c9563851e08ccd0efe981be382b3ea55b78e35",
+      "inferred_query_id": "ws-p3-001",
+      "seed_phrase": "маркировка пива 1С",
+      "priority": "P3",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 1,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p3-002-voda.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 16456,
+      "sha256": "41d35b769456c1cd9f65b43e0b9bd1a1296be36c1862e205f49297cd2aac54c5",
+      "inferred_query_id": "ws-p3-002",
+      "seed_phrase": "маркировка воды 1С",
+      "priority": "P3",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 1,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p3-003-lekarstva.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 20921,
+      "sha256": "3bf2779eca7e6fee4d54593e0efefde83d0f575373c645ed1b36a2e9b07a3d71",
+      "inferred_query_id": "ws-p3-003",
+      "seed_phrase": "маркировка лекарств 1С",
+      "priority": "P3",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 33,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p3-004-avtozapchasti.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 19639,
+      "sha256": "70b74c5bde18880673902f34641f4bbc2a759dcf585cb49b32a2413d9d807dfa",
+      "inferred_query_id": "ws-p3-004",
+      "seed_phrase": "ТС ПИОТ 1С",
+      "priority": "P3",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 22,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    },
+    {
+      "filename": "ws-p3-005-ts-piot.xlsx",
+      "path": null,
+      "source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+      "normalized_source_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+      "absolute_path": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 25147,
+      "sha256": "c21c9a6d2a3e93672736106738c533f037da8589a5f5adcdce961d068117887d",
+      "inferred_query_id": "ws-p3-005",
+      "seed_phrase": "маркировка автозапчастей 1С",
+      "priority": "P3",
+      "read_status": "ok",
+      "file_readable": true,
+      "table_format": "xlsx",
+      "sheet_names": [
+        "Data"
+      ],
+      "row_count": 73,
+      "required_columns_present": true,
+      "mapping_status": "mapped_by_filename_query_id",
+      "mapping_ambiguity": null,
+      "duplicate_status": null,
+      "external_source_classification": "mars_storage_external_evidence",
+      "error": null
+    }
+  ],
+  "duplicate_query_ids": [],
+  "parse_errors": [],
+  "evidence_records": [
+    {
+      "evidence_id": "ws-pass-a-ws-p1-001-20260622",
+      "query_id": "ws-p1-001",
+      "entered_phrase": "программист 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx",
+      "source_hash": "84464761e9b8d59105766d828bc63cb6730f02dc71e4c081e9a813940a948a96",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 589,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 19682,
+      "related_phrase_count": 589,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-002-20260622",
+      "query_id": "ws-p1-002",
+      "entered_phrase": "программист 1С Новосибирск",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+      "source_hash": "a6b8227bf5f70893222f6a91519ad5efa8e5a9a72610d054f581a536979859ec",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 5,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 251,
+      "related_phrase_count": 5,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-003-20260622",
+      "query_id": "ws-p1-003",
+      "entered_phrase": "сопровождение 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+      "source_hash": "75c0904d824787cffe9b4dee3e266d0cdc752ba182e94d253b391b2aec6f2d96",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 177,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 4344,
+      "related_phrase_count": 177,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-004-20260622",
+      "query_id": "ws-p1-004",
+      "entered_phrase": "доработка 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+      "source_hash": "4e0afa9bc3a63e62ff8e042ea83013783fc2f7199658cd544bc561dee3b4f65a",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 83,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 3386,
+      "related_phrase_count": 83,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-005-20260622",
+      "query_id": "ws-p1-005",
+      "entered_phrase": "интеграция 1С с сайтом",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+      "source_hash": "a89f26ac2bc56e5ffff283dc3de275778edfb709fecded6dc34882354426ba71",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 10,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 491,
+      "related_phrase_count": 10,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-006-20260622",
+      "query_id": "ws-p1-006",
+      "entered_phrase": "интеграция 1С Битрикс",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+      "source_hash": "c49fd2c76a72012c806bec57930b658d7e38dc2370828f1fb872daaed48129b4",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 28,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 619,
+      "related_phrase_count": 28,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-007-20260622",
+      "query_id": "ws-p1-007",
+      "entered_phrase": "маркировка в 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+      "source_hash": "e726ffa948c71eb1cb6bd97f487533d57b6ffe0f8ef1efdf1fff59b76f9a719a",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 196,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 14346,
+      "related_phrase_count": 196,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p1-008-20260622",
+      "query_id": "ws-p1-008",
+      "entered_phrase": "Честный знак 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+      "source_hash": "f3feb6a59fb5efa3353f517e8e5b3f2effb0bd39e212caf0a5294c8d024ae232",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 250,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 11125,
+      "related_phrase_count": 250,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-001-20260622",
+      "query_id": "ws-p2-001",
+      "entered_phrase": "доработка отчёта 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+      "source_hash": "8b45b9cb31b54a30bce4e87394e065732fb8027d07ce2077c127dc885f532634",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 2,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 146,
+      "related_phrase_count": 2,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-002-20260622",
+      "query_id": "ws-p2-002",
+      "entered_phrase": "доработка печатной формы 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+      "source_hash": "a2ce8003160dcd46c505e1b9f6b2d9691f2f7d81bddd9a6810b3858800e2bc8c",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 542,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 20147,
+      "related_phrase_count": 542,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-004-20260622",
+      "query_id": "ws-p2-004",
+      "entered_phrase": "настройка синхронизации 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+      "source_hash": "6971f418af26674efc551767164784d3278d5c5e4d82c6c92cd1eaa9b92d717b",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 384,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 18625,
+      "related_phrase_count": 384,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-005-20260622",
+      "query_id": "ws-p2-005",
+      "entered_phrase": "обновление доработанной 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+      "source_hash": "6aeb9123a86bd38b02c2d791d8ee64054a1357105e1b72105e902d120eef4673",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 1,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 26,
+      "related_phrase_count": 1,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-007-20260622",
+      "query_id": "ws-p2-007",
+      "entered_phrase": "1С не работает",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+      "source_hash": "e58373e588b52d3176937bc228ffe94e9714dfdc601c5990773c9cdb5d3fb52d",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 2,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 312,
+      "related_phrase_count": 2,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p3-001-20260622",
+      "query_id": "ws-p3-001",
+      "entered_phrase": "маркировка пива 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+      "source_hash": "d053c057c0f90d82fd8893c160c9563851e08ccd0efe981be382b3ea55b78e35",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 1,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 89,
+      "related_phrase_count": 1,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p3-002-20260622",
+      "query_id": "ws-p3-002",
+      "entered_phrase": "маркировка воды 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+      "source_hash": "41d35b769456c1cd9f65b43e0b9bd1a1296be36c1862e205f49297cd2aac54c5",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 1,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 58,
+      "related_phrase_count": 1,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p3-003-20260622",
+      "query_id": "ws-p3-003",
+      "entered_phrase": "маркировка лекарств 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+      "source_hash": "3bf2779eca7e6fee4d54593e0efefde83d0f575373c645ed1b36a2e9b07a3d71",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 33,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 1555,
+      "related_phrase_count": 33,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p3-004-20260622",
+      "query_id": "ws-p3-004",
+      "entered_phrase": "ТС ПИОТ 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+      "source_hash": "70b74c5bde18880673902f34641f4bbc2a759dcf585cb49b32a2413d9d807dfa",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 22,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 1101,
+      "related_phrase_count": 22,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p3-005-20260622",
+      "query_id": "ws-p3-005",
+      "entered_phrase": "маркировка автозапчастей 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+      "source_hash": "c21c9a6d2a3e93672736106738c533f037da8589a5f5adcdce961d068117887d",
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "row_count": 73,
+      "sheet_names": [
+        "Data"
+      ],
+      "observed_wordstat_total": 6539,
+      "related_phrase_count": 73,
+      "ingestion_status": "ingested",
+      "evidence_grade": "B_semantic_discovery",
+      "external_source_classification": "mars_storage_external_evidence",
+      "limitations": [
+        "Nationwide broad — not regional Novosibirsk demand",
+        "Not exact phrase frequency",
+        "Not traffic forecast"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-003-no-result-20260622",
+      "query_id": "ws-p2-003",
+      "entered_phrase": "доработка РМК",
+      "matrix_seed_phrase": "доработка РМК 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": null,
+      "source_hash": null,
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "wordstat_ui_result": "no results found",
+      "numeric_frequency": "not_available",
+      "ingestion_status": "no_result_for_entered_formulation",
+      "evidence_meaning": "exact seed formulation not represented in the returned Wordstat surface",
+      "thematic_demand": "not_disproved",
+      "alternate_formulation_review": "required",
+      "evidence_grade": "B_operator_report",
+      "limitations": [
+        "Operator entered without «1С» — Wordstat returned no results for exact broad formulation",
+        "Not zero_market_demand — frequency not recorded as 0"
+      ]
+    },
+    {
+      "evidence_id": "ws-pass-a-ws-p2-006-no-result-20260622",
+      "query_id": "ws-p2-006",
+      "entered_phrase": "срочно программист 1С",
+      "matrix_seed_phrase": "срочно программист 1С",
+      "query_mode": "broad_unquoted",
+      "geography": "all_russia",
+      "source_file": null,
+      "source_path_external": null,
+      "source_hash": null,
+      "collection_mode": "manual_operator_export",
+      "collection_date": "2026-06-22",
+      "wordstat_ui_result": "no results found",
+      "numeric_frequency": "not_available",
+      "ingestion_status": "no_result_for_entered_formulation",
+      "evidence_meaning": "exact seed formulation not represented in the returned Wordstat surface",
+      "thematic_demand": "not_disproved",
+      "alternate_formulation_review": "required",
+      "evidence_grade": "B_operator_report",
+      "limitations": [
+        "Wordstat returned no results for exact broad formulation",
+        "Not zero_market_demand — frequency not recorded as 0"
+      ]
+    }
+  ],
+  "no_result_seeds": [
+    {
+      "query_id": "ws-p2-003",
+      "entered_phrase": "доработка РМК",
+      "status": "no_result_for_entered_formulation"
+    },
+    {
+      "query_id": "ws-p2-006",
+      "entered_phrase": "срочно программист 1С",
+      "status": "no_result_for_entered_formulation"
+    }
+  ],
+  "pass_a_completion": {
+    "status": "COMPLETE",
+    "missing_ids": [],
+    "expected": 20,
+    "accounted": 20,
+    "files_with_excel": 18,
+    "seeds_with_no_result": 2,
+    "reason": "All 20 seeds accounted — 18 Excel ingested from MARS Storage + 2 operator no-result records"
+  }
+}

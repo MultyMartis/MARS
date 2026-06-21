@@ -1,4 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
+const { Transform } = require('stream');
+const path = require('path');
 const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
@@ -66,6 +68,26 @@ async function cleanDist() {
   await deleteAsync([paths.dist]);
 }
 
+function assetPrefixForHtmlRelative(relativePath) {
+  const dir = path.dirname(relativePath);
+  const depth = dir === '.' ? 0 : dir.split(path.sep).filter(Boolean).length;
+  return depth === 0 ? 'assets/' : `${'../'.repeat(depth)}assets/`;
+}
+
+function rewriteHtmlAssetPaths() {
+  return new Transform({
+    objectMode: true,
+    transform(file, _enc, cb) {
+      if (file.isBuffer()) {
+        const prefix = assetPrefixForHtmlRelative(file.relative);
+        const html = file.contents.toString().replace(/\/assets\//g, prefix);
+        file.contents = Buffer.from(html);
+      }
+      cb(null, file);
+    },
+  });
+}
+
 function html() {
   return src(paths.html.pages)
     .pipe(onError('HTML'))
@@ -75,6 +97,7 @@ function html() {
         basepath: __dirname + '/src',
       })
     )
+    .pipe(rewriteHtmlAssetPaths())
     .pipe(dest(paths.html.dest));
 }
 
@@ -95,7 +118,7 @@ function scripts() {
   return src(paths.scripts.src, { sourcemaps: true, allowEmpty: true })
     .pipe(onError('JS'))
     .pipe(dest(paths.scripts.dest))
-    .pipe(terser({ module: true }))
+    .pipe(terser())
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest(paths.scripts.dest));
 }

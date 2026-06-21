@@ -7,8 +7,13 @@ declare(strict_types=1);
  * Do not commit config.local.php if it contains environment-specific values.
  */
 return [
-    // 'recipient' => 'client.leads@polygon-ws.ru',
-    // 'from_local_part' => 'noreply',
+    // 'recipients' => ['info@manipulator-triumph.ru', 'opergt@gktriumph.ru'],
+    // 'from_address' => 'noreply@manipulator-triumph.ru',
+    // 'from_name' => 'Триумф',
+    // 'use_smtp' => true,
+    // 'smtp' => [
+    //     'password' => 'PASTE_SMTP_PASSWORD_HERE',
+    // ],
     // 'recaptcha_site_key' => 'PASTE_SITE_KEY_HERE',
     // 'recaptcha_secret_key' => 'PASTE_SECRET_KEY_HERE',
 ];

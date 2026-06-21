@@ -31,12 +31,12 @@
 | `CONTACT` | Contact | Контактные точки, карта, локации |
 | `COMMERCE` | Commerce | Доставка, оплата — transaction-adjacent info (not cart/checkout) |
 | `LEGAL` | Legal | Юридические ссылки и compliance surface |
-| `NAVIGATION` | Navigation | Маршрутизация (v1: reserved — header/nav **GAP**) |
+| `NAVIGATION` | Navigation | Shell routing, search, filters — structural discovery (WF-R01.2 Tier A) |
 | `SYSTEM` | System | Footer shell, global chrome |
 
 ---
 
-## Block assignment — full canonical set (29 blocks)
+## Block assignment — full canonical set (32 blocks)
 
 ### CONVERSION
 
@@ -80,7 +80,9 @@
 
 | block_id | block_name |
 |----------|------------|
-| — | *Reserved — `HEADER_NAV` not in Core Library v1* |
+| `HEADER_NAV` | Header / primary navigation |
+| `FILTERS` | Filters / refinement controls |
+| `SEARCH` | Site / catalog search |
 
 ### COMPANY
 
@@ -159,7 +161,7 @@ Full role assignment: [BLOCK-CONVERSION-ROLES-v1.md](BLOCK-CONVERSION-ROLES-v1.m
 
 - Subcategories (e.g. `TRUST > LOGOS`) — **not in v1**
 - Multi-category blocks — **forbidden** in v1
-- Header/nav `block_id` category assignment — **pending** HEADER_NAV charter
+- Header/nav `block_id` category assignment — **CLOSED** (WF-R01.2 Gate 2): HEADER_NAV, FILTERS, SEARCH → NAVIGATION
 
 ---
 

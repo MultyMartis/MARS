@@ -1,0 +1,164 @@
+<!-- CITY POPUP -->
+<div class="zpm-city" data-city hidden aria-hidden="true">
+  <div class="zpm-city__panel" role="dialog" aria-modal="true" aria-label="Выбор города">
+
+    <button type="button" class="zpm-popup_close" data-city-close aria-label="Закрыть">
+      <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__close"></use></svg>
+    </button>
+
+    <div class="zpm-popup_manager__head">
+      Выберите склад
+    </div>
+
+    <div class="zpm-city__body">
+
+      <div class="zpm-city__list" role="list">
+
+  <button
+    type="button"
+    class="zpm-city__item btn"
+    data-set-city="moscow">
+    Москва
+  </button>
+
+  <button
+    type="button"
+    class="zpm-city__item btn"
+    data-set-city="krasnodar">
+    Краснодар
+  </button>
+
+  <button
+    type="button"
+    class="zpm-city__item btn"
+    data-set-city="barnaul">
+    Барнаул
+  </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+<!-- /CITY POPUP -->
+
+<script>
+const CITY_DATA = {
+  moscow: {
+    name: 'Москва',
+    city_title: 'в&nbsp;Москве',
+    phone_text: '8 (3852) 72-18-90',
+    phone_link: 'tel:+73852721890',
+    address: '141870, Россия, Московская область, м.о.&nbsp;Дмитровский, посёлок Никольское,&nbsp;204',
+    email_text: 'moscow@bzpm.ru',
+    email_link: 'mailto:moscow@bzpm.ru',
+    schedule: 'ПН-ПТ с&nbsp;9:00 до&nbsp;18:00, Мск'
+  },
+  krasnodar: {
+    name: 'Краснодар',
+    city_title: 'в&nbsp;Краснодаре',
+    phone_text: '8 (000) 000-00-00',
+    phone_link: 'tel:+70000000000',
+    address: '000000, г.&nbsp;Краснодар, ул.&nbsp;АДРЕС, д.&nbsp;ДОМ',
+    email_text: 'krasnodar@bzpm.ru',
+    email_link: 'mailto:krasnodar@bzpm.ru',
+    schedule: 'ПН-ПТ с&nbsp;9:00 до&nbsp;18:00, Крд'
+  },
+  barnaul: {
+    name: 'Барнаул',
+    city_title: 'в&nbsp;Барнауле',
+    phone_text: '8 (3852) 72-18-90',
+    phone_link: 'tel:+73852721890',
+    address: '656011, Россия, Алтайский&nbsp;край, г.&nbsp;Барнаул, проспект Калинина,&nbsp;15В',
+    email_text: 'barnaul@bzpm.ru',
+    email_link: 'mailto:barnaul@bzpm.ru',
+    schedule: 'ПН-ПТ с&nbsp;9:00 до&nbsp;18:00, Брн'
+  }
+};
+
+// Функция обновления интерфейса
+function updateCityUI(cityKey) {
+  const data = CITY_DATA[cityKey];
+  if (!data) return;
+
+  // phone_text / phone_link / name и т.д.
+  document.querySelectorAll('[data-city-field]').forEach(el => {
+    const field = el.dataset.cityField;
+
+    if (field === 'phone_link') {
+      el.setAttribute('href', data.phone_link);
+    } else if (data[field] !== undefined) {
+      el.innerHTML = data[field];
+    }
+  });
+
+  // email_text / email_link
+  document.querySelectorAll('[data-email-field]').forEach(el => {
+    const field = el.dataset.emailField;
+
+    if (field === 'email_link') {
+      el.setAttribute('href', data.email_link);
+    } else if (data[field] !== undefined) {
+      el.innerHTML = data[field];
+    }
+  });
+
+  // address
+  document.querySelectorAll('[data-address-field]').forEach(el => {
+    const field = el.dataset.addressField;
+    if (data[field] !== undefined) {
+      el.innerHTML = data[field];
+    }
+  });
+
+  // schedule
+  document.querySelectorAll('[data-schedule-field]').forEach(el => {
+    const field = el.dataset.scheduleField;
+    if (data[field] !== undefined) {
+      el.innerHTML = data[field];
+    }
+  });
+
+  // city_title
+  document.querySelectorAll('[data-city-title-field]').forEach(el => {
+    const field = el.dataset.cityTitleField;
+    if (data[field] !== undefined) {
+      el.innerHTML = data[field];
+    }
+  });
+
+  // Переключение карты
+  document.querySelectorAll('[data-map-city]').forEach(el => {
+    el.hidden = el.dataset.mapCity !== cityKey;
+  });
+
+// Активная кнопка города
+document.querySelectorAll('[data-set-city]').forEach(btn => {
+  const isActive = btn.dataset.setCity === cityKey;
+  btn.classList.toggle('active', isActive);
+});
+
+  // Обновляем текст в кнопках открытия
+  document.querySelectorAll('[data-city-open] span').forEach(span => {
+    span.textContent = data.name;
+  });
+
+  localStorage.setItem('selected_city', cityKey);
+}
+
+// выбор города
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('[data-set-city]');
+  if (!btn) return;
+
+  updateCityUI(btn.dataset.setCity);
+});
+
+// инициализация при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+  const savedCity = localStorage.getItem('selected_city') || 'barnaul';
+  updateCityUI(savedCity);
+});
+</script>

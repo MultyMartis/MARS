@@ -22,6 +22,14 @@
 
 ---
 
+## Visibility-only (not enrolled)
+
+| Factory Project ID | Name | Path | Note |
+|--------------------|------|------|------|
+| **FP-0002** | Shpigovsky.ru | [../FP-0002-SHPIGOVSKY/](../FP-0002-SHPIGOVSKY/) | Material present; ROC-01 enrollment **deferred** — see [FP-0002-PROJECT-PASSPORT.md](../FP-0002-SHPIGOVSKY/FP-0002-PROJECT-PASSPORT.md) |
+
+---
+
 ## Navigation
 
 | Need | Go to |

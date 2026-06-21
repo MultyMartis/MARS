@@ -1,0 +1,173 @@
+{
+  "schema_version": "1",
+  "handoff_id": "orca-handoff-corvonero-mig-20260622-corv01-v1",
+  "status": "READY FOR ORCA REVIEW",
+  "direction": "MIG_TO_ORCA",
+  "transport": "human_handoff_only",
+  "created_at": "2026-06-22T12:00:00.000Z",
+  "published_at": "2026-06-22",
+  "session_id": "mig-20260622-corv01",
+  "pack_id": "mig-20260622-corv01",
+  "request_id": "corvonero-yandex-direct-v1",
+  "project_identity": {
+    "project_name": "Корво Неро — Яндекс Директ и посадочные страницы",
+    "atlas_bindings": {
+      "client_org_ref": "ORG-0009",
+      "legal_entity_ref": "LE-0006",
+      "project_ref": "PRJ-0013",
+      "website_ref": "WEB-CORV-01",
+      "domain_ref": "DOM-CORV-01"
+    }
+  },
+  "research_pack_ref": "research_pack.approved.md",
+  "human_review_gate_ref": "human_review_gate.approved.md",
+  "approved_by": "operator-delegated-cursor-session",
+  "approved_at": "2026-06-22",
+  "research_scope": {
+    "niche": "Коммерческие услуги 1С; маркировка; интеграции; доработки; сопровождение",
+    "region": "Новосибирск и Новосибирская область",
+    "search_engine": "yandex",
+    "device": "mobile",
+    "capture_window": "2026-06-22"
+  },
+  "approved_evidence_sources": [
+    {
+      "layer": "wordstat_pass_a",
+      "grade": "B_semantic_discovery",
+      "artifact": "wordstat-collection-normalized.json",
+      "note": "All Russia broad semantic — not regional volume"
+    },
+    {
+      "layer": "serp_stage_1",
+      "grade": "C",
+      "artifact": "serp_index.json"
+    },
+    {
+      "layer": "serp_stage_2",
+      "grade": "C",
+      "artifact": "serp_live_index.json"
+    },
+    {
+      "layer": "serp_r1_zpm",
+      "grade": "B_partial",
+      "artifact": "serp_r1_index.json",
+      "grade_b_queries": ["r1q01", "r1q02", "r1q03", "r1q04", "r1q05", "r1q08", "r1q10"]
+    },
+    {
+      "layer": "competitors",
+      "grade": "B",
+      "artifact": "competitors-shortlist-confirmed.json"
+    },
+    {
+      "layer": "website_intelligence",
+      "grade": "B",
+      "artifact": "website_intelligence.json"
+    },
+    {
+      "layer": "landing_intelligence",
+      "grade": "B",
+      "artifact": "landing_intelligence_v2.json"
+    },
+    {
+      "layer": "corvonero_site",
+      "grade": "B",
+      "artifact": "website-corvonero-intelligence.json"
+    },
+    {
+      "layer": "demand_surface",
+      "grade": "finalized",
+      "artifact": "demand_surface.json"
+    },
+    {
+      "layer": "keyword_registry",
+      "grade": "reviewed_rev_2",
+      "artifact": "keyword_registry.json"
+    }
+  ],
+  "demand_surface_summary": {
+    "artifact": "demand_surface.json",
+    "cluster_verdict_count": 13,
+    "highlights": {
+      "supported": ["modifications", "reports_print_forms", "website_integration", "chestny_znak"],
+      "conditionally_supported": ["broad_1c", "support", "cash_register_sync", "product_labeling"],
+      "mixed": ["bitrix_integration", "generic_labeling", "troubleshooting"],
+      "weak": ["rmk"],
+      "defer": ["ts_piot"]
+    }
+  },
+  "keyword_registry_ref": "keyword_registry.json",
+  "operator_decisions": [
+    "Wordstat Pass A complete and sufficient",
+    "Wordstat Pass B NOT REQUIRED",
+    "R1 SERP 7/10 Grade B sufficient",
+    "No further MIG evidence acquisition before ORCA",
+    "r1q09 uncaptured accepted",
+    "r1q06/r1q07 CAPTCHA accepted as Grade C limitation"
+  ],
+  "accepted_limitations": [
+    "R1 coverage 7/10 — not 10/10",
+    "r1q06, r1q07 — CAPTCHA Grade C only",
+    "r1q09 — not captured",
+    "Nationwide Wordstat ≠ Novosibirsk regional volume",
+    "Stage 1/2 SERP remain grade C synthesis",
+    "Shift Company website timeout",
+    "Competitor claims unverified"
+  ],
+  "acquisition_failure_lifecycle": {
+    "af-004": "historical — direct fetch — superseded by zpm partial",
+    "af-006": "resolved — Wordstat automation scope closed",
+    "af-007": "resolved — MARS Storage ingestion",
+    "af-008": "historical — r1-corv01 Playwright all CAPTCHA preserved",
+    "af-009": "accepted_limitation — r1q06/r1q07 zpm CAPTCHA"
+  },
+  "safe_unknown": [
+    "CPC",
+    "CTR",
+    "conversion rate",
+    "CPL",
+    "qualified-lead rate",
+    "sale conversion",
+    "average project revenue",
+    "profitability",
+    "exact regional search volume",
+    "competitor ad spend",
+    "competitor lead quality",
+    "effectiveness of current Corvonero page",
+    "achievable lead count",
+    "VAT status",
+    "verified cases and partner status"
+  ],
+  "orca_questions": [
+    "Which service clusters deserve separate PPC treatment under 100k RUB test budget?",
+    "Should broad and specialized campaigns be separated?",
+    "How does budget constrain campaign breadth?",
+    "Should integrations (site/Bitrix) be isolated?",
+    "Should labeling/Честный знак be isolated from general 1C?",
+    "How to handle troubleshooting intent with vacancy noise?",
+    "Should TS PIOT be deferred given r1q09 not captured?",
+    "Which Wordstat phrases are useful but too informational for paid?",
+    "What site/landing changes are required before traffic?",
+    "Can current Tilda support multi-cluster landing structure?",
+    "What proof gaps affect launch readiness?",
+    "Should 3000 RUB/hour and 6000 RUB minimum be shown in ads/landings?"
+  ],
+  "forbidden_assumptions": [
+    "Do not treat Wordstat Pass A national counts as Novosibirsk volume",
+    "Do not treat Keyword Registry entries as final ad keywords",
+    "Do not treat competitor page claims as verified facts",
+    "Do not assume r1q06/r1q07 SERP composition from CAPTCHA artifacts",
+    "Do not assume TS PIOT commercial SERP without r1q09 capture",
+    "Do not infer campaign structure, budgets, or negatives from this handoff",
+    "Do not mark strategy approved or launch ready from this artifact alone"
+  ],
+  "explicitly_not_started": [
+    "ORCA strategy",
+    "campaign architecture",
+    "budget allocation",
+    "ad copy",
+    "negative keyword lists",
+    "landing architecture",
+    "landing copy"
+  ],
+  "session_folder": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/"
+}

@@ -1,4 +1,5 @@
 @use '../utils/tokens' as t;
+@use '../utils/section-headings' as headings;
 
 .prices {
     padding-bottom: t.$rhythm-lower;
@@ -6,17 +7,19 @@
 
 .machine-showcase {
     display: grid;
-    grid-template-columns: minmax(0, 1.64fr) minmax(390px, 0.92fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
     gap: clamp(26px, 3.3vw, 54px);
 }
 
 .machine-showcase__media {
+    width: 100%;
     min-width: 0;
     margin: 0;
     border: 1px solid t.$color-line-light;
     background: t.$color-card;
     box-shadow: 0 22px 58px rgba(9, 15, 27, 0.1);
+    overflow: hidden;
 }
 
 .machine-showcase__media img {
@@ -24,6 +27,20 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    object-position: center center;
+}
+
+// v5 second-screen portrait assets: fill left column, controlled cover crop
+.machine-showcase__media--portrait-2x3 {
+    aspect-ratio: 3 / 4;
+    min-height: clamp(320px, 42vw, 560px);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
 }
 
 .machine-showcase__summary {
@@ -33,13 +50,25 @@
 
 .machine-showcase__title {
     margin: 14px 0 0;
+    max-width: 100%;
+    min-width: 0;
     color: t.$color-text;
     font-family: t.$font-display;
-    font-size: clamp(50px, 5.55vw, 92px);
-    font-weight: 900;
-    letter-spacing: -0.065em;
-    line-height: 0.88;
+    @include headings.section-h2-mobile;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: manual;
+    text-wrap: pretty;
     text-transform: uppercase;
+}
+
+@media (min-width: 761px) {
+    .machine-showcase__title {
+        font-size: clamp(30px, 3.2vw, 56px);
+    }
 }
 
 .machine-showcase__lead {
@@ -47,7 +76,7 @@
     margin: 20px 0 0;
     color: t.$color-text-muted;
     font-size: clamp(18px, 1.42vw, 22px);
-    line-height: 1.45;
+    line-height: 26px;
 }
 
 .machine-showcase__specs {
@@ -77,12 +106,12 @@
     min-width: 0;
     color: rgba(9, 15, 27, 0.76);
     font-size: clamp(17px, 1.18vw, 19px);
-    line-height: 1.35;
+    line-height: 23px;
 }
 
 .machine-showcase__specs i {
     width: 38px;
-    color: rgba(227, 6, 33, 0.82);
+    color: rgba(225, 0, 45, 0.82);
     font-size: 21px * t.$icon-scale-normal;
     line-height: 1;
     text-align: center;
@@ -93,8 +122,9 @@
     color: t.$color-text;
     font-family: t.$font-display;
     font-size: clamp(26px, 2.45vw, 38px);
-    font-weight: 900;
-    line-height: 1;
+    font-weight: 600;
+    line-height: 42px;
+    min-width: 0;
     white-space: nowrap;
 }
 
@@ -119,14 +149,14 @@
     color: t.$color-text;
     font-family: t.$font-display;
     font-size: clamp(25px, 2.25vw, 34px);
-    font-weight: 900;
-    line-height: 0.98;
+    font-weight: 600;
+    line-height: 38px;
     text-transform: uppercase;
 }
 
 .machine-transport__list {
     display: grid;
-    gap: 0 42px;
+    gap: 10px 42px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -142,10 +172,20 @@
     align-items: center;
     gap: 14px;
     min-height: 43px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(9, 15, 27, 0.13);
     color: t.$color-text;
     font-size: clamp(17px, 1.15vw, 19px);
-    line-height: 1.35;
+    line-height: 23px;
+}
+
+.machine-transport__list li:last-child {
+    padding-bottom: 0;
+}
+
+.machine-transport__card--denied .machine-transport__list {
+    row-gap: 16px;
+    column-gap: 0;
 }
 
 .machine-transport__card--allowed .machine-transport__list li:nth-last-child(-n + 2),
@@ -189,7 +229,7 @@
     margin: 20px 0 0;
     color: t.$color-text-muted;
     font-size: 16px;
-    line-height: 1.45;
+    line-height: 20px;
 }
 
 @media (max-width: 1180px) {
@@ -198,12 +238,19 @@
         max-width: 980px;
     }
 
+    .machine-showcase__media--portrait-2x3 {
+        width: 100%;
+        max-width: 100%;
+        min-height: clamp(280px, 52vw, 480px);
+    }
+
     .machine-showcase__summary {
         padding-top: 0;
     }
 
     .machine-transport {
         grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+        align-items: start;
         max-width: 980px;
     }
 
@@ -227,13 +274,46 @@
 }
 
 @media (max-width: 760px) {
-    .machine-showcase {
-        gap: 28px;
+    .machine-transport__heading {
+        max-width: 100%;
+        min-width: 0;
+        font-size: clamp(24px, 6.8vw, 34px);
+        line-height: 1.14;
+        overflow-wrap: break-word;
+
+        span {
+            overflow-wrap: break-word;
+        }
     }
 
-    .machine-showcase__title {
-        font-size: clamp(42px, 13vw, 58px);
-        line-height: 0.92;
+    .machine-transport__card,
+    .machine-transport__list,
+    .machine-transport__list li {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .machine-showcase__specs dd {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .machine-showcase {
+        gap: 32px;
+    }
+
+    .machine-showcase__media--portrait-2x3 {
+        width: 100%;
+        max-width: 100%;
+        min-height: clamp(260px, 72vw, 440px);
+    }
+
+    .machine-showcase__summary {
+        padding-top: 4px;
+    }
+
+    .machine-showcase__specs {
+        margin-top: 24px;
     }
 
     .machine-showcase__specs div {
@@ -243,7 +323,34 @@
 
     .machine-transport {
         grid-template-columns: 1fr;
-        margin-top: 28px;
+        align-items: start;
+        gap: 20px;
+        margin-top: 32px;
+    }
+
+    .machine-transport__card h3 {
+        font-size: clamp(22px, 5.8vw, 28px);
+        line-height: 1.2;
+        overflow-wrap: normal;
+        word-break: normal;
+        text-wrap: balance;
+    }
+
+    .machine-transport__card {
+        padding: 24px 20px;
+    }
+
+    .machine-transport__card h3 {
+        margin-bottom: 20px;
+    }
+
+    .machine-transport__card--denied .machine-transport__list {
+        row-gap: 14px;
+    }
+
+    .machine-transport__list li {
+        min-height: 40px;
+        padding-top: 4px;
     }
 
     .machine-transport__card--allowed .machine-transport__list {

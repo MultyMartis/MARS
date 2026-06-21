@@ -1,0 +1,325 @@
+{
+  "generated_at_utc": "2026-06-14T20:43:02.353083+00:00",
+  "environment": "TEST",
+  "active_sku_count": 608,
+  "inactive_sku_count": 2526,
+  "total_sku_count": 3134,
+  "active_category_count": 25,
+  "active_categories": [
+    {
+      "category_id 1": "79",
+      "name": "Нейтральное оборудование",
+      "status": "1"
+    },
+    {
+      "category_id 1": "80",
+      "name": "Моечные ванны",
+      "status": "1"
+    },
+    {
+      "category_id 1": "82",
+      "name": "Подтоварники",
+      "status": "1"
+    },
+    {
+      "category_id 1": "83",
+      "name": "Полки",
+      "status": "1"
+    },
+    {
+      "category_id 1": "85",
+      "name": "Тележки",
+      "status": "1"
+    },
+    {
+      "category_id 1": "86",
+      "name": "Стеллажи",
+      "status": "1"
+    },
+    {
+      "category_id 1": "87",
+      "name": "Столы производственные",
+      "status": "1"
+    },
+    {
+      "category_id 1": "88",
+      "name": "Лари",
+      "status": "1"
+    },
+    {
+      "category_id 1": "89",
+      "name": "Шкафы",
+      "status": "1"
+    },
+    {
+      "category_id 1": "90",
+      "name": "Тепловое оборудование",
+      "status": "1"
+    },
+    {
+      "category_id 1": "93",
+      "name": "Инвентарь",
+      "status": "1"
+    },
+    {
+      "category_id 1": "95",
+      "name": "Холодильное оборудование",
+      "status": "1"
+    },
+    {
+      "category_id 1": "97",
+      "name": "Односекционные",
+      "status": "1"
+    },
+    {
+      "category_id 1": "98",
+      "name": "Двухсекционные",
+      "status": "1"
+    },
+    {
+      "category_id 1": "99",
+      "name": "Трёхсекционные",
+      "status": "1"
+    },
+    {
+      "category_id 1": "100",
+      "name": "С бортом",
+      "status": "1"
+    },
+    {
+      "category_id 1": "101",
+      "name": "Без борта",
+      "status": "1"
+    },
+    {
+      "category_id 1": "102",
+      "name": "С бортом",
+      "status": "1"
+    },
+    {
+      "category_id 1": "103",
+      "name": "С полкой",
+      "status": "1"
+    },
+    {
+      "category_id 1": "104",
+      "name": "Для производств",
+      "status": "1"
+    },
+    {
+      "category_id 1": "105",
+      "name": "Для столовых",
+      "status": "1"
+    },
+    {
+      "category_id 1": "106",
+      "name": "С бортом",
+      "status": "1"
+    },
+    {
+      "category_id 1": "107",
+      "name": "Без борта",
+      "status": "1"
+    },
+    {
+      "category_id 1": "108",
+      "name": "Специальные",
+      "status": "1"
+    },
+    {
+      "category_id 1": "109",
+      "name": "С полкой",
+      "status": "1"
+    }
+  ],
+  "active_attribute_count": 46,
+  "active_attributes": [
+    {
+      "attribute_id 1": "12",
+      "name": "Габариты нетто (мм)"
+    },
+    {
+      "attribute_id 1": "13",
+      "name": "Габариты брутто (мм)"
+    },
+    {
+      "attribute_id 1": "14",
+      "name": "Борт"
+    },
+    {
+      "attribute_id 1": "15",
+      "name": "Гарантия"
+    },
+    {
+      "attribute_id 1": "17",
+      "name": "В комплекте"
+    },
+    {
+      "attribute_id 1": "18",
+      "name": "Высота борта (мм)"
+    },
+    {
+      "attribute_id 1": "19",
+      "name": "Количество уровней направляющих"
+    },
+    {
+      "attribute_id 1": "20",
+      "name": "Макс. нагрузка (до, кг)"
+    },
+    {
+      "attribute_id 1": "21",
+      "name": "Конструкция"
+    },
+    {
+      "attribute_id 1": "22",
+      "name": "Материал столешницы"
+    },
+    {
+      "attribute_id 1": "23",
+      "name": "Мойка"
+    },
+    {
+      "attribute_id 1": "24",
+      "name": "Назначение секции"
+    },
+    {
+      "attribute_id 1": "25",
+      "name": "Наличие борта"
+    },
+    {
+      "attribute_id 1": "26",
+      "name": "Ножки"
+    },
+    {
+      "attribute_id 1": "27",
+      "name": "Обвязка"
+    },
+    {
+      "attribute_id 1": "28",
+      "name": "Отверстие под смеситель"
+    },
+    {
+      "attribute_id 1": "29",
+      "name": "Размер раковины (ДхШхВ, мм)"
+    },
+    {
+      "attribute_id 1": "30",
+      "name": "Размер секции"
+    },
+    {
+      "attribute_id 1": "31",
+      "name": "Регулируемость опоры по высоте (max мм)"
+    },
+    {
+      "attribute_id 1": "32",
+      "name": "Тип крепления"
+    },
+    {
+      "attribute_id 1": "33",
+      "name": "Тип опоры"
+    },
+    {
+      "attribute_id 1": "34",
+      "name": "Страна производства"
+    },
+    {
+      "attribute_id 1": "35",
+      "name": "Вес брутто (кг)"
+    },
+    {
+      "attribute_id 1": "36",
+      "name": "Обвязка"
+    },
+    {
+      "attribute_id 1": "38",
+      "name": "Количество"
+    }
+  ],
+  "profile_categories": [
+    {
+      "category_id": 79,
+      "name": "Нейтральное оборудование",
+      "mode": "hub",
+      "profile": null
+    },
+    {
+      "category_id": 301,
+      "name": "Столы",
+      "mode": "branch",
+      "profile": "301_stoly"
+    },
+    {
+      "category_id": 80,
+      "name": "Моечные ванны",
+      "mode": "branch",
+      "profile": "80_moechnye_vanny"
+    },
+    {
+      "category_id": 322,
+      "name": "Подтоварники и подставки",
+      "mode": "branch",
+      "profile": "322_podtovarniki"
+    },
+    {
+      "category_id": 207,
+      "name": "Зонты вытяжные",
+      "mode": "branch",
+      "profile": "207_zonty"
+    },
+    {
+      "category_id": 326,
+      "name": "Тележки сервировочные",
+      "mode": "branch",
+      "profile": "326_telezhki"
+    }
+  ],
+  "hidden_attribute_policy": {
+    "m8_3_wave1": "TEST attribute defs removed from DB; product 3071 hidden",
+    "m8_3_wave2": "Packaging + SERVICE attrs hidden via attribute_filter_visibility.php (STORE_ONLY)",
+    "m9_global_hidden": "global_hidden.php — TEST/SERVICE/Packaging/TECHNICAL/dead attribute IDs",
+    "global_hidden_attribute_ids": [
+      16,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      43,
+      48,
+      58,
+      102,
+      44,
+      45,
+      46,
+      52,
+      53,
+      54,
+      56,
+      57,
+      12,
+      13,
+      27,
+      36,
+      34,
+      42,
+      14,
+      15,
+      32,
+      55,
+      103,
+      104
+    ]
+  },
+  "m8_cleanup_active": {
+    "wave1_product_3071": [],
+    "wave1_test_defs_remaining": "0 — verified via prior M8.3 cleanup",
+    "wave1_product_3071_status": "hidden (status=0) — verified via prior M8.3 cleanup"
+  },
+  "total_category_count": 190,
+  "active_category_count_note": "25 categories with status=1 in DB; 190 total rows in oc_category",
+  "total_attribute_count": 53,
+  "active_attribute_count_note": "46 visible defs after M8.3 Wave 1 removed 7 TEST attributes",
+  "database_unchanged_since": "M8.3 Wave 1 (2026-06-14); M9/M9.5 code-only"
+}

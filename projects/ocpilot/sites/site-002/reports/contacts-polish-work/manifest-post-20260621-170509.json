@@ -1,0 +1,68 @@
+{
+  "task": "SITE-002-CONTACTS-PAGE-POLISH-V1",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01",
+  "stamp": "20260621-170509",
+  "files": [
+    {
+      "remote": "catalog/view/theme/default/template/information/contact.twig",
+      "backup_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\contact.twig.pre-contact-polish-v1.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-polish-work\\contact.twig",
+      "sha256_pre": "d33d78fe125d46a0bf64eb7fabef3730e2da844107357197ed42a2cdfca07381",
+      "sha256_deploy": "6fdafb669635ab382830e1a2876cada129f24c80656b7a30940be7e0e5bbb224",
+      "size_pre": 7934,
+      "size_deploy": 10615,
+      "verify_sha256": "6fdafb669635ab382830e1a2876cada129f24c80656b7a30940be7e0e5bbb224",
+      "deploy_ok": true
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/blockanyquestionsform.twig",
+      "backup_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\blockanyquestionsform.twig.pre-contact-polish-v1.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\blockanyquestionsform.twig.pre-contact-polish-v1.bak",
+      "sha256_pre": "6f137ec007974d7e8df44de29d780132482e7fa82dc470e76070bfced6d9a740",
+      "sha256_deploy": "6f137ec007974d7e8df44de29d780132482e7fa82dc470e76070bfced6d9a740",
+      "size_pre": 2873,
+      "size_deploy": 2873,
+      "verify_sha256": "6f137ec007974d7e8df44de29d780132482e7fa82dc470e76070bfced6d9a740",
+      "deploy_ok": true
+    },
+    {
+      "remote": "assets/css/style.css",
+      "backup_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-contact-polish-v1.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-polish-work\\style.css.patched",
+      "sha256_pre": "0a159c01b286515a9b49e79be5feefdbcd5f3ba89eddb03f502bed0dd8ebf7b1",
+      "sha256_deploy": "193c15435c2f1c3464ef70345d011c0bcedefac65f10fa5ac716ea30b2d4773f",
+      "size_pre": 297331,
+      "size_deploy": 298433,
+      "verify_sha256": "193c15435c2f1c3464ef70345d011c0bcedefac65f10fa5ac716ea30b2d4773f",
+      "deploy_ok": true
+    }
+  ],
+  "twig_cache_cleared": [],
+  "all_deploy_ok": true,
+  "qa": {
+    "http_ok": true,
+    "has_contact_cards": true,
+    "has_messengers": true,
+    "has_requisites_ogrn": true,
+    "has_legal_address": true,
+    "has_actual_address": true,
+    "duotone_map": true,
+    "duotone_phone": true,
+    "duotone_email": true,
+    "duotone_clock": true,
+    "duotone_industry": true,
+    "duotone_certificate": true,
+    "duotone_badge": true,
+    "duotone_truck": true,
+    "duotone_bus": true,
+    "duotone_dolly": true,
+    "fab_telegram": true,
+    "fab_whatsapp": true,
+    "max_icon": true,
+    "no_fal_contact_icons": true,
+    "legacy_blocks_absent": true,
+    "all_pass": true,
+    "capture_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-polish-work\\qa-contact-polish.html",
+    "capture_bytes": 92111
+  }
+}

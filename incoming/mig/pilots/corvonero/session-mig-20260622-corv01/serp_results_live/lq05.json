@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "lq05",
+  "stage": "mig_research_stage_2",
+  "captured_at": "2026-06-22T14:00:00.000Z",
+  "collection_date": "2026-06-22",
+  "search_engine": "yandex",
+  "region": "Новосибирск",
+  "region_lr": 65,
+  "city": "Новосибирск",
+  "device": "mobile",
+  "source_mode": "bounded_web_search_stage2",
+  "evidence_grade": "C",
+  "acquisition_limitations": [
+    "Direct Yandex HTTP fetch blocked by captcha (af-004) — not R1/R2 live SERP",
+    "Results from bounded web search synthesis; ad blocks and exact rank order not verified",
+    "Personalization and logged-in state: SAFE UNKNOWN",
+    "Maps/local pack visibility: partial — Yandex Maps org pages may appear in synthesis only"
+  ],
+  "separated_from": "serp_results/ (Stage 1 bounded capture q01-q09)",
+  "query": "срочно программист 1С Новосибирск",
+  "query_group": "urgent_troubleshooting",
+  "research_label": "urgent",
+  "serp_type": "mixed_vacancy_noise",
+  "ads_blocks": {
+    "present": "SAFE UNKNOWN",
+    "block_count": "SAFE UNKNOWN"
+  },
+  "maps_local_pack": "not_observed",
+  "aggregators": [
+    "uslugi.yandex.ru"
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Вакансии программист 1С — hh.ru",
+      "url": "https://novosibirsk.hh.ru/vacancies/programmist-1s",
+      "surface_type": "vacancy_aggregator",
+      "player_scope": "non_service"
+    },
+    {
+      "position": 2,
+      "title": "Срочно работа программистом 1С — GdeJob",
+      "url": "https://gdejob.com/работа-программист-1с-новосибирск",
+      "surface_type": "vacancy_aggregator",
+      "player_scope": "non_service"
+    },
+    {
+      "position": 3,
+      "title": "Яндекс Услуги — программист 1С",
+      "url": "https://uslugi.yandex.ru/65-novosibirsk/category?text=программист+1с",
+      "surface_type": "aggregator",
+      "player_scope": "aggregator"
+    }
+  ],
+  "commercial_signal": "weak",
+  "noise_signal": "high_vacancy"
+}

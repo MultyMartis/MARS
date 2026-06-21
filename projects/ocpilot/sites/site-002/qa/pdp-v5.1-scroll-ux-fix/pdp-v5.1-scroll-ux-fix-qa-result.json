@@ -1,0 +1,34 @@
+{
+  "liveMainJs": {
+    "url": "https://zpm.new-site.space/assets/js/main.js?v=qa-20260614202028",
+    "size": 193876,
+    "has_scrollToProductContentMain": true,
+    "has_call_in_source": true
+  },
+  "toggleScrollTest": {
+    "before": {
+      "collapsed": true,
+      "expanded": false,
+      "toggleText": "Смотреть все характеристики",
+      "toggleHidden": false
+    },
+    "after_expand": {
+      "collapsed": false,
+      "expanded": true,
+      "toggleText": "Скрыть характеристики",
+      "scrollCallsAfterExpand": 1
+    },
+    "after_collapse": {
+      "collapsed": true,
+      "expanded": false,
+      "toggleText": "Смотреть все характеристики",
+      "scrollCallsTotal": 2
+    },
+    "scrollToProductContentMain_called_on_expand": true,
+    "scrollToProductContentMain_called_on_collapse": true,
+    "scrollToProductContentMain_called_both": true,
+    "expand_ok": true,
+    "collapse_ok": true
+  },
+  "qa_pass": true
+}

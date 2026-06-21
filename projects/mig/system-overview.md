@@ -35,6 +35,8 @@ Capture → Normalize → Grade → Review → Approve → Handoff
 | **Approve** | Explicit human sign-off (**Approved By**) before handoff. |
 | **Handoff** | Deliver minimum pack per [contracts/mig-orca-handoff-contract-v0.md](contracts/mig-orca-handoff-contract-v0.md) — **human handoff only**. |
 
+**Reality acquisition discipline:** Trust and capture-mode ordering (Human → Browser → Structured Search → Intelligence) is defined in [contracts/MIG-REALITY-ACQUISITION-MODEL-v1.md](contracts/MIG-REALITY-ACQUISITION-MODEL-v1.md), including **Human Review Mode** and the `evidence/review.md` package.
+
 ---
 
 ## Research Request (intake)

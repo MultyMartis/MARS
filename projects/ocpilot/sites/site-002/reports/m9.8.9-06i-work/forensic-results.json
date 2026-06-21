@@ -1,0 +1,516 @@
+{
+  "task": "M9.8.9-06I",
+  "run_at": "2026-06-19T06:55:29.784437+00:00",
+  "categories": {
+    "stoly": {
+      "category_id": 301,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "profile": "301_stoly",
+      "baseline_cards": 15,
+      "html_filter_groups": [],
+      "probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 15
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=in_stock=1",
+          "cards": 15
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=preorder_only=1",
+          "cards": 15
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_with_price=1",
+          "cards": 1
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=only_discount=1",
+          "cards": 1
+        },
+        {
+          "filter": "attr[table-top-material][]=нержавеющая сталь (AISI 430, 1 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[table-top-material][]=%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20%28AISI%20430%2C%201%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[51][]=Без полки",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+          "cards": 0
+        },
+        {
+          "filter": "attr[type-support][]=опора-болт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[type-support][]=%D0%BE%D0%BF%D0%BE%D1%80%D0%B0-%D0%B1%D0%BE%D0%BB%D1%82",
+          "cards": 15
+        },
+        {
+          "filter": "attr[max-load][]=120",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[max-load][]=120",
+          "cards": 15
+        },
+        {
+          "filter": "attr[available-board][]=есть",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[available-board][]=%D0%B5%D1%81%D1%82%D1%8C",
+          "cards": 15
+        },
+        {
+          "filter": "attr[construction][]=сварная (неразборная)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[construction][]=%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%28%D0%BD%D0%B5%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[material-polki][]=оцинкованная сталь, 0.7 мм",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[material-polki][]=%D0%BE%D1%86%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%2C%200.7%20%D0%BC%D0%BC",
+          "cards": 15
+        },
+        {
+          "filter": "attr[eq-legs][]=уголок 40х40 (оцинкованная сталь, 1.5 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[eq-legs][]=%D1%83%D0%B3%D0%BE%D0%BB%D0%BE%D0%BA%2040%D1%8540%20%28%D0%BE%D1%86%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%2C%201.5%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[height-adjustment][]=20",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[height-adjustment][]=20",
+          "cards": 15
+        },
+        {
+          "filter": "attr[usilenie][]=ламинированная ДСП (16 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[usilenie][]=%D0%BB%D0%B0%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%94%D0%A1%D0%9F%20%2816%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[side-height][]=45",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[side-height][]=45",
+          "cards": 15
+        },
+        {
+          "filter": "attr[47][]=Цельный борт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[47][]=%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B1%D0%BE%D1%80%D1%82",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=Без полки",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=Обвязка с трех сторон",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%9E%D0%B1%D0%B2%D1%8F%D0%B7%D0%BA%D0%B0%20%D1%81%20%D1%82%D1%80%D0%B5%D1%85%20%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=Полка сплошная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%9F%D0%BE%D0%BB%D0%BA%D0%B0%20%D1%81%D0%BF%D0%BB%D0%BE%D1%88%D0%BD%D0%B0%D1%8F",
+          "cards": 0
+        },
+        {
+          "filter": "s[]=304",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=s[]=304",
+          "cards": 12
+        }
+      ]
+    },
+    "podtovarniki": {
+      "category_id": 322,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "profile": "322_podtovarniki",
+      "baseline_cards": 11,
+      "html_filter_groups": [],
+      "probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 11
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=in_stock=1",
+          "cards": 11
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=preorder_only=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=only_discount=1",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=600х400х300",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+          "cards": 0
+        },
+        {
+          "filter": "attr[max-load][]=200",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[max-load][]=200",
+          "cards": 8
+        },
+        {
+          "filter": "attr[table-top-material][]=нержавеющая сталь (AISI 430, 0.7 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[table-top-material][]=%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20%28AISI%20430%2C%200.7%20%D0%BC%D0%BC%29",
+          "cards": 8
+        },
+        {
+          "filter": "attr[type-support][]=опора-болт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[type-support][]=%D0%BE%D0%BF%D0%BE%D1%80%D0%B0-%D0%B1%D0%BE%D0%BB%D1%82",
+          "cards": 11
+        },
+        {
+          "filter": "attr[construction][]=разборная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[construction][]=%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F",
+          "cards": 8
+        },
+        {
+          "filter": "attr[qty][]=9,5",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[qty][]=9%2C5",
+          "cards": 1
+        },
+        {
+          "filter": "attr[eq-legs][]=уголок 40х40 (оцинкованная сталь, 1.5 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[eq-legs][]=%D1%83%D0%B3%D0%BE%D0%BB%D0%BE%D0%BA%2040%D1%8540%20%28%D0%BE%D1%86%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%2C%201.5%20%D0%BC%D0%BC%29",
+          "cards": 4
+        },
+        {
+          "filter": "attr[height-adjustment][]=30",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[height-adjustment][]=30",
+          "cards": 11
+        },
+        {
+          "filter": "attr[usilenie][]=ламинированная ДСП (16 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[usilenie][]=%D0%BB%D0%B0%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%94%D0%A1%D0%9F%20%2816%20%D0%BC%D0%BC%29",
+          "cards": 8
+        },
+        {
+          "filter": "attr[section-size][]=GN 1/1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[section-size][]=GN%201%2F1",
+          "cards": 2
+        },
+        {
+          "filter": "attr[section-assignment][]=для гастроемкостей",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[section-assignment][]=%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BC%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%B9",
+          "cards": 2
+        },
+        {
+          "filter": "attr[number-guide-levels][]=6",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[number-guide-levels][]=6",
+          "cards": 2
+        },
+        {
+          "filter": "attr[51][]=600х400х300",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=1000х400х300",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=1000%D1%85400%D1%85300",
+          "cards": 0
+        },
+        {
+          "filter": "attr[51][]=1200х400х300",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=1200%D1%85400%D1%85300",
+          "cards": 0
+        },
+        {
+          "filter": "s[]=325",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=s[]=325",
+          "cards": 3
+        }
+      ]
+    },
+    "moechnye_vanny": {
+      "category_id": 80,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "profile": "80_moechnye_vanny",
+      "baseline_cards": 15,
+      "html_filter_groups": [],
+      "probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 15
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=in_stock=1",
+          "cards": 15
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=preorder_only=1",
+          "cards": 15
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=only_with_price=1",
+          "cards": 15
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=only_discount=1",
+          "cards": 15
+        },
+        {
+          "filter": "attr[shell-size][]=1100х500х400",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=1100%D1%85500%D1%85400",
+          "cards": 2
+        },
+        {
+          "filter": "attr[washing][]=сварная (нержавеющая сталь AISI 201, 0.8 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[washing][]=%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%28%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20AISI%20201%2C%200.8%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[available-board][]=есть",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[available-board][]=%D0%B5%D1%81%D1%82%D1%8C",
+          "cards": 15
+        },
+        {
+          "filter": "attr[hole-for-mixer][]=2 отверстия",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[hole-for-mixer][]=2%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F",
+          "cards": 1
+        },
+        {
+          "filter": "attr[47][]=Объемный борт",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[47][]=%D0%9E%D0%B1%D1%8A%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%B1%D0%BE%D1%80%D1%82",
+          "cards": 0
+        },
+        {
+          "filter": "attr[side-height][]=200",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[side-height][]=200",
+          "cards": 1
+        },
+        {
+          "filter": "attr[type-support][]=Крепление консольное (к стене)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[type-support][]=%D0%9A%D1%80%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%28%D0%BA%20%D1%81%D1%82%D0%B5%D0%BD%D0%B5%29",
+          "cards": 1
+        },
+        {
+          "filter": "attr[eq-legs][]=труба 40х40 (нержавеющая сталь AISI 430, 1 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[eq-legs][]=%D1%82%D1%80%D1%83%D0%B1%D0%B0%2040%D1%8540%20%28%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20AISI%20430%2C%201%20%D0%BC%D0%BC%29",
+          "cards": 4
+        },
+        {
+          "filter": "attr[construction][]=разборная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[construction][]=%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F",
+          "cards": 15
+        },
+        {
+          "filter": "attr[height-adjustment][]=20",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[height-adjustment][]=20",
+          "cards": 15
+        },
+        {
+          "filter": "attr[table-top-material][]=нержавеющая сталь (AISI 430, 1 мм)",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[table-top-material][]=%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20%28AISI%20430%2C%201%20%D0%BC%D0%BC%29",
+          "cards": 15
+        },
+        {
+          "filter": "attr[equipmentpack][]=заглушка для отверстия под смеситель",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[equipmentpack][]=%D0%B7%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%20%D1%81%D0%BC%D0%B5%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D1%8C",
+          "cards": 15
+        },
+        {
+          "filter": "s[]=258",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=s[]=258",
+          "cards": 1
+        }
+      ]
+    },
+    "zonty": {
+      "category_id": 207,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/",
+      "profile": "207_zonty",
+      "baseline_cards": 15,
+      "html_filter_groups": [],
+      "probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 15
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=in_stock=1",
+          "cards": 15
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=preorder_only=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=only_with_price=1",
+          "cards": 15
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=only_discount=1",
+          "cards": 15
+        },
+        {
+          "filter": "attr[construction][]=угловая, купольная",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=attr[construction][]=%D1%83%D0%B3%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F%2C%20%D0%BA%D1%83%D0%BF%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F",
+          "cards": 1
+        },
+        {
+          "filter": "attr[country-origin][]=Россия",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/zonty-vytyazhnye/?filters=attr[country-origin][]=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F",
+          "cards": 15
+        }
+      ]
+    },
+    "telezhki": {
+      "category_id": 326,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/",
+      "profile": "326_telezhki",
+      "baseline_cards": 3,
+      "html_filter_groups": [],
+      "probes": [
+        {
+          "filter": "(baseline)",
+          "cards": 3
+        },
+        {
+          "filter": "in_stock=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=in_stock=1",
+          "cards": 3
+        },
+        {
+          "filter": "preorder_only=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=preorder_only=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_with_price=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=only_with_price=1",
+          "cards": 0
+        },
+        {
+          "filter": "only_discount=1",
+          "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/telezhki-servirovochnye/?filters=only_discount=1",
+          "cards": 0
+        }
+      ]
+    }
+  },
+  "db_attributes": {
+    "key_attrs": [
+      {
+        "attribute_id": "20",
+        "name": "Макс. нагрузка (до, кг)",
+        "filter_name": "max-load",
+        "product_count": "427",
+        "count_cat_301": "419",
+        "count_cat_322": "8"
+      },
+      {
+        "attribute_id": "21",
+        "name": "Конструкция",
+        "filter_name": "construction",
+        "product_count": "599",
+        "count_cat_301": "420",
+        "count_cat_322": "11"
+      },
+      {
+        "attribute_id": "22",
+        "name": "Материал столешницы",
+        "filter_name": "table-top-material",
+        "product_count": "535",
+        "count_cat_301": "420",
+        "count_cat_322": "11"
+      },
+      {
+        "attribute_id": "23",
+        "name": "Мойка",
+        "filter_name": "washing",
+        "product_count": "192",
+        "count_cat_301": "43",
+        "count_cat_322": "0"
+      },
+      {
+        "attribute_id": "25",
+        "name": "Наличие борта",
+        "filter_name": "available-board",
+        "product_count": "569",
+        "count_cat_301": "420",
+        "count_cat_322": "0"
+      },
+      {
+        "attribute_id": "28",
+        "name": "Отверстие под смеситель",
+        "filter_name": "hole-for-mixer",
+        "product_count": "192",
+        "count_cat_301": "43",
+        "count_cat_322": "0"
+      },
+      {
+        "attribute_id": "29",
+        "name": "Размер раковины (ДхШхВ, мм)",
+        "filter_name": "shell-size",
+        "product_count": "190",
+        "count_cat_301": "43",
+        "count_cat_322": "0"
+      },
+      {
+        "attribute_id": "33",
+        "name": "Тип опоры",
+        "filter_name": "type-support",
+        "product_count": "580",
+        "count_cat_301": "420",
+        "count_cat_322": "11"
+      }
+    ],
+    "sql_resolution_probe": {
+      "stoly_attr_47_by_filter_name": [
+        {
+          "cnt": "0"
+        }
+      ],
+      "stoly_attr_47_by_attribute_id": [
+        {
+          "cnt": "44"
+        }
+      ],
+      "stoly_attr_51_by_filter_name": [
+        {
+          "cnt": "0"
+        }
+      ],
+      "stoly_attr_51_by_attribute_id": [
+        {
+          "cnt": "420"
+        }
+      ],
+      "podtovarniki_attr_47_by_filter_name": [
+        {
+          "cnt": "0"
+        }
+      ],
+      "podtovarniki_attr_47_by_attribute_id": [
+        {
+          "cnt": "0"
+        }
+      ],
+      "podtovarniki_attr_51_by_filter_name": [
+        {
+          "cnt": "0"
+        }
+      ],
+      "podtovarniki_attr_51_by_attribute_id": [
+        {
+          "cnt": "11"
+        }
+      ]
+    }
+  }
+}

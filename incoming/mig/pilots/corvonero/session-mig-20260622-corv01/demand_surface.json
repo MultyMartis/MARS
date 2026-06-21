@@ -1,0 +1,575 @@
+{
+  "schema_version": "1",
+  "artifact_id": "corvonero-demand-surface-v1",
+  "session_id": "mig-20260622-corv01",
+  "project_ref": "PRJ-0013",
+  "generated_at": "2026-06-21T21:13:44.384Z",
+  "geography_primary": {
+    "city": "Новосибирск",
+    "region": "Новосибирская область"
+  },
+  "status": "finalized_research_pack_ready",
+  "evidence_summary": {
+    "wordstat": {
+      "status": "pass_a_complete",
+      "grade": "B_semantic_discovery",
+      "pass_a": {
+        "status": "COMPLETE",
+        "excel_files_ingested": 18,
+        "normalized_row_count": 2399,
+        "no_result_seeds": [
+          "доработка РМК",
+          "срочно программист 1С"
+        ],
+        "semantic_evidence_count": 18,
+        "frequencies_recorded": 2399,
+        "failure": null,
+        "prior_failure": "af-007 resolved",
+        "external_storage_source": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06"
+      },
+      "pass_b": {
+        "status": "NOT_REQUIRED_BY_OPERATOR",
+        "operator_decision_date": "2026-06-22",
+        "superseded_preparation_refs": [
+          "corvonero-wordstat-collection-matrix-v1.json Pass B section",
+          "wordstat-export-manual-20260622-corv01.md Pass B procedure"
+        ],
+        "note": "Regional Wordstat Pass B not required; nationwide Pass A vocabulary accepted for semantic discovery"
+      }
+    },
+    "serp_stage2": {
+      "status": "collected",
+      "grade": "C",
+      "query_count": 27
+    },
+    "serp_r1_priority": {
+      "status": "complete_with_accepted_limitations",
+      "grade": "B_partial",
+      "grade_b_queries": [
+        "r1q01",
+        "r1q02",
+        "r1q03",
+        "r1q04",
+        "r1q05",
+        "r1q08",
+        "r1q10"
+      ],
+      "grade_c_captcha_queries": [
+        "r1q06",
+        "r1q07"
+      ],
+      "not_captured_queries": [
+        "r1q09"
+      ],
+      "operator_decision": "No further SERP acquisition before Research Pack",
+      "zpm_workflow_success_count": 7,
+      "playwright_r1_corv01_attempts": 10,
+      "failures": {
+        "af_004": "historical_direct_fetch — preserved grade C",
+        "af_008": "historical_r1_corv01_playwright_all_captcha — preserved",
+        "af_009": "zpm_workflow_captcha_r1q06_r1q07 — accepted limitation"
+      }
+    }
+  },
+  "clusters": [
+    {
+      "cluster_id": "A_broad_1c",
+      "label": "Broad 1C services",
+      "subclusters": [
+        "programmer",
+        "support",
+        "modification",
+        "setup"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "moderate to high where SERP commercial_signal strong",
+      "informational_noise_level": "low to moderate",
+      "geo_sensitivity": "geo wording observed in SERP for head terms",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq01.json",
+        "serp_results_live/lq02.json",
+        "serp_results_live/lq03.json",
+        "serp_results_live/lq04.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p1-001",
+        "wordstat-collection-normalized.json#ws-p1-002",
+        "wordstat-collection-normalized.json#ws-p1-003",
+        "wordstat-collection-normalized.json#ws-p1-004"
+      ]
+    },
+    {
+      "cluster_id": "B_reports_forms",
+      "label": "Reports and forms",
+      "subclusters": [
+        "reports",
+        "print_forms",
+        "rmk"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "moderate to high where SERP commercial_signal strong",
+      "informational_noise_level": "low to moderate",
+      "geo_sensitivity": "moderate — some clusters work without geo per matrix notes",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq09.json",
+        "serp_results_live/lq10.json",
+        "serp_results_live/lq12.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p2-001",
+        "wordstat-collection-normalized.json#ws-p2-002",
+        "wordstat-collection-normalized.json#ws-p2-003"
+      ]
+    },
+    {
+      "cluster_id": "C_integrations",
+      "label": "Integrations",
+      "subclusters": [
+        "website",
+        "bitrix",
+        "sync_exchange"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "high — web studios dominate SERP",
+      "informational_noise_level": "low to moderate",
+      "geo_sensitivity": "moderate — some clusters work without geo per matrix notes",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq13.json",
+        "serp_results_live/lq14.json",
+        "serp_results_live/lq15.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p1-005",
+        "wordstat-collection-normalized.json#ws-p1-006",
+        "wordstat-collection-normalized.json#ws-p2-004"
+      ]
+    },
+    {
+      "cluster_id": "D_labeling",
+      "label": "Labeling / Честный знак",
+      "subclusters": [
+        "generic_marking",
+        "honest_sign",
+        "implementation_setup"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "moderate to high where SERP commercial_signal strong",
+      "informational_noise_level": "high to moderate",
+      "geo_sensitivity": "moderate — some clusters work without geo per matrix notes",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq17.json",
+        "serp_results_live/lq18.json",
+        "serp_results_live/lq19.json",
+        "serp_results_live/lq20.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p1-007",
+        "wordstat-collection-normalized.json#ws-p1-008"
+      ]
+    },
+    {
+      "cluster_id": "D_ts_piot",
+      "label": "TS PIOT",
+      "subclusters": [
+        "ts_piot_setup"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "low — informational dominance observed",
+      "informational_noise_level": "high to moderate",
+      "geo_sensitivity": "moderate — some clusters work without geo per matrix notes",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq21.json",
+        "serp_results_live/lq22.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p3-004"
+      ]
+    },
+    {
+      "cluster_id": "E_product_labeling",
+      "label": "Product-specific labeling",
+      "subclusters": [
+        "beer",
+        "water",
+        "medicines",
+        "auto_parts"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "moderate to high where SERP commercial_signal strong",
+      "informational_noise_level": "low to moderate",
+      "geo_sensitivity": "moderate — some clusters work without geo per matrix notes",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq23.json",
+        "serp_results_live/lq24.json",
+        "serp_results_live/lq25.json",
+        "serp_results_live/lq26.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p3-001",
+        "wordstat-collection-normalized.json#ws-p3-002",
+        "wordstat-collection-normalized.json#ws-p3-003",
+        "wordstat-collection-normalized.json#ws-p3-005"
+      ]
+    },
+    {
+      "cluster_id": "A_urgent",
+      "label": "Troubleshooting / urgent",
+      "subclusters": [
+        "not_working",
+        "errors",
+        "urgent_programmer"
+      ],
+      "collected_demand_evidence": "wordstat_pass_a_semantic_complete",
+      "direct_phrase_demand": "Nationwide Pass A semantic observations — NOT Novosibirsk regional volume",
+      "broader_thematic_demand": "commercial demand observed in SERP synthesis (grade C)",
+      "commercial_intent_density": "mixed — vacancy noise on urgent formulations",
+      "informational_noise_level": "high to moderate",
+      "geo_sensitivity": "moderate — some clusters work without geo per matrix notes",
+      "query_diversity": "multiple distinct formulations in seed matrix and live SERP pass",
+      "available_competitor_supply": "local 1C firms, franchisees, web studios (integrations), labeling specialists — see competitors-shortlist-confirmed.json",
+      "evidence_strength": "SERP grade C; Wordstat Pass A B_semantic_discovery",
+      "uncertainty": [
+        "Regional search volume unknown",
+        "Ad density unknown",
+        "R1 zpm-workflow 7/10 Grade B — accepted partial regional SERP"
+      ],
+      "orca_review_suitability": "conditional — SERP-only evidence insufficient for volume-based ORCA decisions; qualitative cluster separation supported",
+      "serp_evidence_refs": [
+        "serp_results_live/lq05.json",
+        "serp_results_live/lq06.json",
+        "serp_results_live/lq07.json",
+        "serp_results_live/lq08.json"
+      ],
+      "wordstat_evidence_refs": [
+        "wordstat-collection-normalized.json#ws-p2-006",
+        "wordstat-collection-normalized.json#ws-p2-007"
+      ]
+    }
+  ],
+  "session_safe_unknown": [
+    "CPC",
+    "CTR",
+    "conversion rate",
+    "CPL",
+    "qualified-lead rate",
+    "sale conversion",
+    "average project revenue",
+    "profitability",
+    "exact regional search volume",
+    "competitor ad spend",
+    "competitor lead quality",
+    "effectiveness of current Corvonero page",
+    "achievable lead count",
+    "VAT status",
+    "verified cases and partner status",
+    "Wordstat Pass B regional volumes — NOT REQUIRED BY OPERATOR"
+  ],
+  "wordstat_pass_a_national_semantic_discovery": {
+    "layer_id": "wordstat_pass_a_national_semantic_discovery",
+    "geography": "all_russia",
+    "interpretation": "observed broad Wordstat frequency for semantic discovery — not Novosibirsk regional demand",
+    "pass_a_status": "COMPLETE",
+    "evidence_supported_phrase_count": 2399,
+    "seed_count": 20,
+    "excel_file_count": 18,
+    "broad_national_frequency_signals": "2399 row-level observations from 18 operator exports",
+    "commercial_vocabulary": 2382,
+    "informational_vocabulary": 62,
+    "vacancy_employment_noise": 93,
+    "training_course_noise": 64,
+    "regulatory_noise": 539,
+    "troubleshooting_adjacent": 17,
+    "major_adjacent_intents": [
+      "vacancy/job-seeking in broad programmer cluster",
+      "training/course noise in head terms",
+      "regulatory labeling vocabulary in P1/P3 clusters",
+      "troubleshooting formulations in ws-p2-007 and related exports"
+    ],
+    "no_result_seed_formulations": [
+      {
+        "query_id": "ws-p2-003",
+        "entered_phrase": "доработка РМК",
+        "status": "no_result_for_entered_formulation"
+      },
+      {
+        "query_id": "ws-p2-006",
+        "entered_phrase": "срочно программист 1С",
+        "status": "no_result_for_entered_formulation"
+      }
+    ],
+    "alternative_formulations": {
+      "rmk": {
+        "evidence_supported": [
+          "1с рмк честный знак",
+          "1с рмк синхронизация",
+          "1с рмк настройка синхронизации",
+          "1с рмк синхронизация с 1с унф",
+          "1с рмк синхронизация с 1с розница",
+          "тс пиот 1с рмк"
+        ],
+        "candidates_for_manual_verification": [
+          "РМК 1С",
+          "настройка РМК",
+          "рабочее место кассира",
+          "доработка рабочего места кассира",
+          "настройка кассового рабочего места"
+        ],
+        "not_found": [
+          "РМК 1С",
+          "настройка РМК",
+          "рабочее место кассира",
+          "доработка рабочего места кассира",
+          "настройка кассового рабочего места"
+        ],
+        "rejected_artificial": [
+          "доработка РМК without 1С context — operator no-result for entered formulation"
+        ]
+      },
+      "urgent": {
+        "evidence_supported": [
+          "после обновления 1с не работает синхронизация",
+          "программа 1с не работает"
+        ],
+        "candidates_for_manual_verification": [
+          "срочная помощь 1С",
+          "программист 1С срочно",
+          "1С не работает",
+          "исправить ошибку 1С",
+          "восстановить работу 1С"
+        ],
+        "not_found": [
+          "срочная помощь 1С",
+          "программист 1С срочно",
+          "исправить ошибку 1С",
+          "восстановить работу 1С"
+        ],
+        "rejected_artificial": []
+      }
+    },
+    "evidence_strength": "moderate — full Pass A Excel ingestion from MARS Storage; 2 operator no-result records preserved",
+    "limitations": [
+      "National broad totals must not be used as Novosibirsk demand",
+      "Not exact phrase frequency — broad unquoted semantic discovery",
+      "Not traffic forecast or commercial click expectation",
+      "Pass B not started",
+      "ws-p3-004/ws-p3-005 filename slugs may not match matrix base_phrase — mapped by query_id in filename only"
+    ],
+    "evidence_refs": [
+      "evidence/wordstat/wordstat-pass-a-file-index.json",
+      "evidence/wordstat/wordstat-pass-a-normalized.json",
+      "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06/"
+    ],
+    "separation_note": "Layer 1 nationwide Wordstat semantic discovery — separate from Novosibirsk SERP (grade C) and future Pass B regional Wordstat"
+  },
+  "finalized_at": "2026-06-21T21:13:44.384Z",
+  "cluster_evidence_verdicts": [
+    {
+      "cluster_key": "01_broad_programmer_general_1c",
+      "label": "Broad programmer / general 1C services",
+      "evidence_verdict": "conditionally_supported",
+      "wordstat_layer": "pass_a_semantic — ws-p1-001, ws-p1-002 vocabulary",
+      "serp_layer": "R1 Grade B r1q01; Stage 2 grade C breadth",
+      "website_layer": "Competitors use broad service hubs; Corvonero single universal page",
+      "limitations": [
+        "Vacancy noise on head term",
+        "No regional Wordstat volume"
+      ]
+    },
+    {
+      "cluster_key": "02_support",
+      "label": "Support / сопровождение",
+      "evidence_verdict": "conditionally_supported",
+      "wordstat_layer": "ws-p1-003 semantic breadth",
+      "serp_layer": "R1 Grade B r1q02",
+      "website_layer": "Dedicated support landings observed (Profinfoservice)",
+      "limitations": [
+        "Retainer pricing models vary — not normalized"
+      ]
+    },
+    {
+      "cluster_key": "03_modifications",
+      "label": "Modifications / доработка",
+      "evidence_verdict": "supported",
+      "wordstat_layer": "ws-p1-004 semantic",
+      "serp_layer": "R1 Grade B r1q03",
+      "website_layer": "Granular price tables on franchisee sites",
+      "limitations": [
+        "Nationwide freq ≠ regional demand"
+      ]
+    },
+    {
+      "cluster_key": "04_reports_print_forms",
+      "label": "Reports and print forms",
+      "evidence_verdict": "supported",
+      "wordstat_layer": "ws-p2-001 semantic",
+      "serp_layer": "R1 Grade B r1q04",
+      "website_layer": "Competitors list report/form rows with prices",
+      "limitations": []
+    },
+    {
+      "cluster_key": "05_website_integration",
+      "label": "Website integration",
+      "evidence_verdict": "supported",
+      "wordstat_layer": "ws-p1-005 semantic",
+      "serp_layer": "R1 Grade B r1q05",
+      "website_layer": "Web studios + 1C firms in SERP",
+      "limitations": []
+    },
+    {
+      "cluster_key": "06_bitrix_integration",
+      "label": "Bitrix integration",
+      "evidence_verdict": "mixed",
+      "wordstat_layer": "ws-p1-006 semantic",
+      "serp_layer": "R1 CAPTCHA Grade C r1q06 — af-009",
+      "website_layer": "Integration studios in shortlist",
+      "limitations": [
+        "No Grade B R1 capture — Stage 2 grade C only"
+      ]
+    },
+    {
+      "cluster_key": "07_cash_register_sync",
+      "label": "Cash register / synchronization",
+      "evidence_verdict": "conditionally_supported",
+      "wordstat_layer": "ws-p2-004 high national semantic signal — not regional",
+      "serp_layer": "Stage 2 grade C only — no dedicated R1 query",
+      "website_layer": "Kassa/marking specialists in market surface",
+      "limitations": [
+        "No R1 priority query executed for this subcluster"
+      ]
+    },
+    {
+      "cluster_key": "08_generic_labeling",
+      "label": "Generic labeling",
+      "evidence_verdict": "mixed",
+      "wordstat_layer": "ws-p1-007 semantic + regulatory noise",
+      "serp_layer": "R1 CAPTCHA Grade C r1q07",
+      "website_layer": "Labeling specialists with local landings",
+      "limitations": [
+        "CAPTCHA blocked R1 capture"
+      ]
+    },
+    {
+      "cluster_key": "09_chestny_znak",
+      "label": "Честный знак",
+      "evidence_verdict": "supported",
+      "wordstat_layer": "ws-p1-008 strong national semantic vocabulary",
+      "serp_layer": "R1 Grade B r1q08",
+      "website_layer": "AB OnlineKassa local commercial landing",
+      "limitations": [
+        "High informational/regulatory adjacency in Wordstat"
+      ]
+    },
+    {
+      "cluster_key": "10_product_specific_labeling",
+      "label": "Product-specific labeling",
+      "evidence_verdict": "conditionally_supported",
+      "wordstat_layer": "ws-p3-001..005 semantic discovery",
+      "serp_layer": "Stage 2 grade C — no R1 priority query per product",
+      "website_layer": "Intake lists eleven categories — site shows generic marking only",
+      "limitations": [
+        "Breadth from intake not proven on current site"
+      ]
+    },
+    {
+      "cluster_key": "11_troubleshooting",
+      "label": "Troubleshooting / urgent help",
+      "evidence_verdict": "mixed",
+      "wordstat_layer": "ws-p2-007; ws-p2-006 no-result seed preserved",
+      "serp_layer": "R1 Grade B r1q10 with vacancy noise",
+      "website_layer": "Corvonero mentions audit/troubleshooting; weak proof package",
+      "limitations": [
+        "Vacancy and informational noise",
+        "Urgent formulations partly no-result in Wordstat"
+      ]
+    },
+    {
+      "cluster_key": "12_rmk",
+      "label": "RMK / cashier workplace",
+      "evidence_verdict": "weak",
+      "wordstat_layer": "ws-p2-003 no-result for entered formulation; alternatives in Pass A exports",
+      "serp_layer": "Stage 2 grade C only",
+      "website_layer": "RMK not dedicated on Corvonero site",
+      "limitations": [
+        "Operator no-result seed — not numeric zero"
+      ]
+    },
+    {
+      "cluster_key": "13_ts_piot",
+      "label": "TS PIOT",
+      "evidence_verdict": "defer",
+      "wordstat_layer": "ws-p3-004 semantic vocabulary",
+      "serp_layer": "r1q09 NOT CAPTUREED — operator accepted limitation",
+      "website_layer": "Intake claims TS PIOT — site not proven",
+      "limitations": [
+        "No R1 SERP evidence",
+        "Regulatory/informational dominance in Wordstat"
+      ]
+    }
+  ]
+}

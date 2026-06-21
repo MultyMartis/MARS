@@ -1,0 +1,18 @@
+{
+  "task": "M9.8.9-04A",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01",
+  "stamp": "20260619-115007",
+  "remote_path": "assets/js/main.js",
+  "phase": "pre-deploy",
+  "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-04a-work\\live-capture\\assets__js__main.js",
+  "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-04a-filter-scroll-offset-tuning.bak",
+  "sha256": "c74c9c1dc993a0e7acb5189bd71d1885b93bd46c3e5ee155aa80411c15d5f5d2",
+  "size": 198710,
+  "patch": {
+    "type": "js-scroll-offset-tuning",
+    "file": "main.js",
+    "change": "scrollToCategorySection: offset getPageScrollOffset() -> 15px",
+    "previous_offset": "getPageScrollOffset() (~131 desktop / ~90 mobile)",
+    "new_offset": "15px fixed"
+  }
+}

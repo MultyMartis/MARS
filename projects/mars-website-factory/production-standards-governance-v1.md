@@ -23,6 +23,7 @@
 | [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) | Layout zone mapping obligation |
 | [frontend-precision-governance-v1.md](frontend-precision-governance-v1.md) | Factory spacing/type precision — normalization defaults for Draft |
 | [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md) | LP-01–LP-08 pattern obligation in C-11 |
+| [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md) | C-09 logo provenance — forbid first-image heuristic; `ASSET_IDENTITY_COLLISION` |
 | [design-source-to-frontend-mapping-governance-v1.md](design-source-to-frontend-mapping-governance-v1.md) | Multi-source extraction layers; layout chain; **DESIGN → FRONTEND MAPPING QA** before Approval |
 
 **Registry:** [registries.md §6](registries.md#6-frontend-production-rules).

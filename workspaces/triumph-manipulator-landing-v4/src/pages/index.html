@@ -1,19 +1,26 @@
-@@include("partials/layout/head.html", {"lang":"ru","title":"Аренда манипулятора в&nbsp;Краснодаре | Триумф","description":"Аренда манипулятора в&nbsp;Краснодаре и&nbsp;по&nbsp;краю. Подача от&nbsp;30&nbsp;минут, безналичный расчёт с&nbsp;НДС, техника 5-10&nbsp;тонн.","robots":"noindex,nofollow","ogType":"website"})
-<body id="top">
+@@include("partials/layout/head-v5-page01.html", {"lang":"ru","title":"Аренда&nbsp;манипулятора&nbsp;в&nbsp;Краснодаре&nbsp;|&nbsp;Триумф","description":"Заказать&nbsp;манипулятор&nbsp;5&nbsp;т&nbsp;в&nbsp;Краснодаре:&nbsp;борт&nbsp;5&nbsp;т,&nbsp;стрела&nbsp;3&nbsp;т.&nbsp;Подача&nbsp;по&nbsp;городу&nbsp;и&nbsp;краю.&nbsp;Расчёт&nbsp;по&nbsp;задаче.","robots":"noindex,nofollow","ogType":"website"})
+<body id="top" data-page-type="ppc-zakaz-manip">
     <div class="first-screen" aria-label="Первый экран">
-        @@include("partials/layout/header.html")
-        @@include("partials/sections/screen-01-hero.html")
+        <div class="first-screen__bg" aria-hidden="true"></div>
+        <div class="first-screen__overlay" aria-hidden="true"></div>
+        @@include("partials/layout/header-v5-page01.html", {"prefix": "zakaz"})
+        @@include("partials/sections/v5-ppc/zakaz/screen-01-hero.html")
     </div>
 
     <main class="landing-main" id="main">
-        @@include("partials/sections/screen-02-prices.html")
-        @@include("partials/sections/screen-03-trust-reviews.html")
-        @@include("partials/sections/dark-proof-strip.html")
-        @@include("partials/sections/screen-04-faq.html")
-        @@include("partials/sections/final-contact-cta.html")
+        @@include("partials/sections/v5-ppc/zakaz/screen-02-specs.html")
+        @@include("partials/sections/v5-ppc/zakaz/screen-02-tasks.html")
+        @@include("partials/sections/v5-ppc/zakaz/screen-02b-order-steps.html")
+        @@include("partials/sections/v5-ppc/zakaz/screen-02c-pricing-factors.html")
+        @@include("partials/sections/v5-page01/screen-03-trust-reviews.html")
+        @@include("partials/sections/v5-page01/screen-03b-b2b.html")
+        @@include("partials/sections/v5-page01/dark-proof-strip.html")
+        @@include("partials/sections/v5-ppc/zakaz/screen-04-faq.html")
+        @@include("partials/sections/v5-ppc/zakaz/final-contact-cta.html")
     </main>
 
-    @@include("partials/sections/landing-footer.html")
-    @@include("partials/layout/scripts.html")
+    @@include("partials/sections/v5-page01/landing-footer.html")
+    @@include("partials/components/callback-modal.html", {"prefix": "zakaz"})
+    @@include("partials/layout/scripts-v5-page01.html")
 </body>
 </html>

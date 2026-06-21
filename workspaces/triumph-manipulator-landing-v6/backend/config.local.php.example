@@ -2,4 +2,5 @@
 return [
     'recaptcha_site_key' => 'PASTE_SITE_KEY_HERE',
     'recaptcha_secret_key' => 'PASTE_SECRET_KEY_HERE',
+    // 'recaptcha_debug_public_error' => false,
 ];

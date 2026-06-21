@@ -1,7 +1,7 @@
 # Current Hero Analysis v1 — zakaz v5
 
-**Partial:** `workspaces/triumph-manipulator-landing-v5/src/partials/sections/v5-ppc/zakaz/screen-01-hero.html`  
-**Styles:** `workspaces/triumph-manipulator-landing-v5/src/scss/sections/_v5-hero-extensions.scss`  
+**Partial (canonical v6):** `workspaces/triumph-manipulator-landing-v6/src/partials/sections/v5-ppc/zakaz/screen-01-hero.html`
+**Styles:** `workspaces/triumph-manipulator-landing-v6/src/scss/sections/_v5-hero-extensions.scss`
 **Wrapper:** `index.html` → `.first-screen` with `hero-bg-final.jpg` + multi-layer overlay
 
 ## Layout model

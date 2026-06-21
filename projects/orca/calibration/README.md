@@ -21,7 +21,7 @@
 
 | Case | Route / intent | Workspace |
 |------|----------------|-----------|
-| [triumph-manipulator/](triumph-manipulator/) | Master hot — «Аренда манипулятора в Краснодаре» (`grp_fc12_zakaz`) | `workspaces/triumph-manipulator-landing-v5/` (`index.html` → zakaz partials) |
+| [triumph-manipulator/](triumph-manipulator/) | Master hot — «Аренда манипулятора в Краснодаре» (`grp_fc12_zakaz`) | `workspaces/triumph-manipulator-landing-v6/` (**canonical**; v5 = historical) |
 
 ## Entry points
 

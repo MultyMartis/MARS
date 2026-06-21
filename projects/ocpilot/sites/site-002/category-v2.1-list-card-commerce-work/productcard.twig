@@ -1,0 +1,151 @@
+<article class="p-card p-card--{{ classstatus }}">
+  <div class="p-card__top">
+
+    <div class="p-card__status">
+   {% if canCart %}
+      <span class="p-card__status-Yes">{{ statusText }}</span>
+     <span class="p-card__delivery">{{ deliveryText }}</span>
+    {% else %}
+      <span class="p-card__status-None">{{ statusText }}</span>
+      <span class="p-card__delivery">{{ deliveryText }}</span>
+    {% endif %}
+    </div>
+
+   <div class="p-card__actions">
+  <button
+    class="p-card__action zpm-tip zpm-tip--left {% if compared %}active{% endif %}"
+    type="button"
+    aria-label="Сравнить"
+    data-compare-toggle
+     data-productid="{{ product_id }}"
+  >
+    <svg class="zpm-icon" aria-hidden="true" focusable="false">
+      <use href="#zpm_ico__compare"></use>
+    </svg>
+
+    <span class="zpm-tip__popup" aria-hidden="true">
+      <span class="zpm-tip__body">Добавлено</span>
+      <span class="zpm-tip__arrow"></span>
+    </span>
+  </button>
+
+  <button
+    class="p-card__action zpm-tip zpm-tip--left {% if wishlisted %}active{% endif %}"
+    type="button"
+    aria-label="В избранное"
+    data-fav-toggle
+     data-productid="{{ product_id }}"
+  >
+    <svg class="zpm-icon" aria-hidden="true" focusable="false">
+      <use href="#zpm_ico__favorits"></use>
+    </svg>
+
+    <span class="zpm-tip__popup" aria-hidden="true">
+      <span class="zpm-tip__body">Добавлено</span>
+      <span class="zpm-tip__arrow"></span>
+    </span>
+  </button>
+</div>
+
+  </div>
+
+  
+
+  <div class="p-card__media-wrap">
+    <a class="p-card__media" href="{{ href }}" aria-label="Открыть">
+      <img class="p-card__img" src="{{ thumb }}" alt="" />
+    </a>
+
+    <div class="p-card__buy-ok" hidden>
+      <span class="p-card__buy-ok--label">Выбрано:</span>
+      <span class="p-card__buy-ok--count">1 шт.</span>
+    </div>
+  </div>
+
+
+   <div class="p-card__body">
+    <div class="p-card__article">
+      <b>Арт: </b>
+            <button class="zpm-copy zpm-tip" type="button" aria-label="Скопировать артикул" data-copy="">
+              <span class="zpm-copy__value">{{ model }}</span>
+
+              <span class="zpm-tip__popup" aria-hidden="true">
+                <span class="zpm-tip__body">Артикул скопирован!</span>
+                <span class="zpm-tip__arrow"></span>
+              </span>
+            </button>
+    </div>
+    <div class="p-card__status">
+   {% if canCart %}
+      <span class="p-card__status-Yes">{{ statusText }}</span>
+     <span class="p-card__delivery">{{ deliveryText }}</span>
+    {% else %}
+      <span class="p-card__status-None">{{ statusText }}</span>
+      <span class="p-card__delivery">{{ deliveryText }}</span>
+    {% endif %}
+    </div>
+    {% if primary_specs %}
+    <dl class="p-card__primary-specs">
+      {% for spec in primary_specs %}
+      {% set spec_name = spec.name|lower %}
+      <div class="p-card__primary-spec">
+        <div class="p-card__primary-spec-icon">
+          {% if 'длина' in spec_name %}
+          <i class="fad fa-arrows-alt-h" aria-hidden="true"></i>
+          {% elseif 'ширина' in spec_name %}
+          <i class="fad fa-arrows-alt-v" aria-hidden="true"></i>
+          {% elseif 'высота' in spec_name %}
+          <i class="fad fa-arrow-to-top" aria-hidden="true"></i>
+          {% elseif 'масса' in spec_name %}
+          <i class="far fa-weight-hanging" aria-hidden="true"></i>
+          {% else %}
+          <i class="fal fa-info-circle" aria-hidden="true"></i>
+          {% endif %}
+        </div>
+        <div class="p-card__primary-spec-content">
+          <dt>{{ spec.name }}</dt>
+          <dd>{{ spec.text }}</dd>
+        </div>
+      </div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+    <a class="p-card__title" href="{{ href }}">{{ name }}</a>
+    <div class="p-card__prices">
+      <div class="p-card__price">{{ price }}</div>
+      {% if oldPrice %}  <div class="p-card__old-price">{{ oldPrice }}</div>{% endif %}
+      {% if priceproc %} <div class="p-card__discount">{{ priceproc }}</div> {% endif %}
+    </div>
+  </div>
+
+
+
+  <div class="p-card__footer">
+   {% if canCart %}
+    <div class="product-card__actions" data-product-id="{{ product_id }}" data-cart-card>
+      <!-- ADD button (CARD: видна только при qty=0) -->
+      <button class="btn btn_dark btn--primary btn-qty--toogle" type="button" data-cart-add>
+        <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__cart"></use></svg>
+        <span class="btn__text">В корзину</span>
+      </button>
+
+      <!-- qty stepper (CARD: появляется ВМЕСТО кнопки при qty>=1) -->
+      <div class="zpm-qty zpm-qty--card btn-qty--toogle" data-cart-qty data-cart-qty-card data-product-id="{{ product_id }}" aria-hidden="true">
+        <button type="button" class="zpm-qty__btn" data-qty-minus aria-label="Уменьшить">−</button>
+        <span class="zpm-qty__val" data-qty-value aria-live="polite">{% if cartqty %}{{ cartqty }}{% else %}0{% endif %}</span>
+        <button type="button" class="zpm-qty__btn" data-qty-plus aria-label="Увеличить">+</button>
+      </div>
+
+
+    </div>
+    <a class="btn-no-text" href="{{ href }}" title="Подробнее">
+      <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+    </a>
+      {% else %}
+      <a class="btn btn_dark" href="{{ href }}" title="Подробнее">
+        <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+        <span class="btn__text">Открыть</span>
+      </a>
+     {% endif %}
+  </div>
+</article>

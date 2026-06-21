@@ -1,0 +1,29 @@
+{
+  "task": "m9.8.5-products-per-page",
+  "deployed": {
+    "category.php": {
+      "remote": "catalog/controller/product/category.php",
+      "sha256": "244494f2f3653cd788383f0d7b5841e20069b61103eebfe36d92db8e22a2b05c",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.php.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "rollback_sha256": "4ed6db8db424cf7c2123ab6ea6c74e8dad8c9d10b3e922e2014cf207c611538e"
+    },
+    "category.twig": {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "sha256": "e5ca3478aee81452172c4212a15d91bf9058d575afbddf43c3d0664baceee023",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.twig.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "rollback_sha256": "291daa368db27daca9185c47a9164cb07139a1be727cd0d47e7cb0190c65c94e"
+    },
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "sha256": "ac3f60f4639b76136607d592c7281e270b5b069dc6fc9b27f49212fc7845b420",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "rollback_sha256": "0894cbdc400838ef091335b5a077321de83e9d4db205e93aabcf6956a5a09cf7"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "sha256": "a1759eead063fa9616266507da39a27c4c870a947aa24532aa3a7db0d37e2cd9",
+      "rollback": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "rollback_sha256": "b19a9617ad17c2d3a2e897148b360013b9281a7ff32ad4cf5f819c20e17d6f55"
+    }
+  }
+}

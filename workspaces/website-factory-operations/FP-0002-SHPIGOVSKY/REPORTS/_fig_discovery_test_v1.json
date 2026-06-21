@@ -1,0 +1,2002 @@
+{
+  "meta": {
+    "figFile": "Шпиговский.fig",
+    "parsedAt": "2026-06-17T04:41:47.203Z",
+    "parser": "openfig-core",
+    "homeCandidates": [
+      {
+        "id": "1:875",
+        "size": {
+          "w": 1437,
+          "h": 16809
+        }
+      }
+    ]
+  },
+  "homeFrame": {
+    "name": "Главная страница",
+    "id": "1:875",
+    "size": {
+      "w": 1437,
+      "h": 16809
+    },
+    "childCount": 15,
+    "selectionReason": "Named 'Главная страница', width 1437px (desktop cluster), tallest full-page frame on Page 1; not mobile variant ('- моб')"
+  },
+  "sections": [
+    {
+      "index": 1,
+      "name": "1 - Главный экран",
+      "id": "1:876",
+      "type": "FRAME",
+      "sectionType": "hero+header",
+      "height": 929,
+      "width": 1440,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 15,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Кнопка",
+        "search"
+      ],
+      "instanceCount": 3,
+      "stackMode": null,
+      "childCount": 3,
+      "content": {
+        "heading": "Шпиговский дом",
+        "subheading": "Центр профилактики \nи лечения зависимости",
+        "cta": null
+      },
+      "allTextsSample": [
+        "Москва, \nМосковская область",
+        "пн-пт: 08:00-18:00, \nсб-вс: 08:00-22:00",
+        "режим работы",
+        "8 (925) 183-64-64\n8 (995) 023-92-26",
+        "Лечение и профилактика",
+        "Генотипирование",
+        "Специалисты",
+        "О центре"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "2 - Дом - вступление",
+      "id": "1:927",
+      "type": "FRAME",
+      "sectionType": "intro",
+      "height": 1260,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 14,
+      "hasCta": false,
+      "repeatableComponents": [
+        "Маркированный список",
+        "Ес"
+      ],
+      "instanceCount": 12,
+      "stackMode": null,
+      "childCount": 1,
+      "content": {
+        "heading": "Шпиговский дом — восстановление с уважением к личности",
+        "subheading": "Реабилитация без изоляции",
+        "cta": null
+      },
+      "allTextsSample": [
+        "Шпиговский дом — восстановление с уважением к личности",
+        "Мы убеждены, боль может быть общей для многих, но путь восстановления всегда индивидуален. Каким бы ни был ваш опыт, через что бы вы ни проходили и какой бы образ жизни ни хотели сохранить — в «Шпиговский Дом» программа реабилитации выстраивается вокруг личности человека, его целей и его будущего.",
+        "Реабилитация без изоляции",
+        "Клиенты могут пользоваться гаджетами по предварительной договоренности, продолжать работать удалённо, выезжать на рабочие встречи при сопровождении — это снижает барьер входа для занятых людей. Мы понимаем как важно не “выпадать из жизни”, поэтому не изолируем пациентов от внешнего мира.",
+        "Участие семьи и близких",
+        "Мы не ограничиваем контакты с семьей, а работаем совместно. Семья и близкие для многих становятся мощной опорой на пути к полной ремиссии. Семейная терапия помогает сформировать правильное отношение к имеющимся проблемам у пациента и формы его поддержки.",
+        "Выявление и устранение причины зависимости",
+        "Программа реабилитации направлена не только на уход от зависимости, но и на выявление ее причины: почему человеку сложно получать удовольствие, почему справляется со стрессом с помощью стимуляторов, какие причины мешают выдерживать жизненные ситуации без допинга."
+      ]
+    },
+    {
+      "index": 3,
+      "name": "3- Услуги",
+      "id": "1:958",
+      "type": "FRAME",
+      "sectionType": "services",
+      "height": 1022,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 3,
+      "hasCta": false,
+      "repeatableComponents": [
+        "Раскрытие информации",
+        "Пункт услуги",
+        "Услуга"
+      ],
+      "instanceCount": 13,
+      "stackMode": "VERTICAL",
+      "childCount": 7,
+      "content": {
+        "heading": "Лечение и профилактика",
+        "subheading": "смотреть все",
+        "cta": null
+      },
+      "allTextsSample": [
+        "Лечение и профилактика",
+        "смотреть все",
+        "Мы работаем с зависимостью не как с проступком, а как с состоянием, у которого есть биологические, психологические и социальные причины."
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Нас выбирают",
+      "id": "1:991",
+      "type": "FRAME",
+      "sectionType": "section-frame",
+      "height": 2114,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 19,
+      "hasCta": false,
+      "repeatableComponents": [
+        "Пункт услуги",
+        "Стрелка"
+      ],
+      "instanceCount": 6,
+      "stackMode": null,
+      "childCount": 1,
+      "content": {
+        "heading": "Нас выбирают за мультидисциплинарный подход к лечению",
+        "subheading": "до 15 резидентов",
+        "cta": null
+      },
+      "allTextsSample": [
+        "Нас выбирают за мультидисциплинарный подход к лечению",
+        "У нас команда, а не конвейер. Каждый клиент получает полное внимание — психолога, нейропсихолога, специалиста по кинезиотерапии, специалиста по телесноориентированной терапии и координатора программы.",
+        "Лечение в нашем реабилитационном центре совмещает современный и мультидисциплинарный подход направленный на устранение истинных причин зависимости.\nМультидисциплинарный подход — это когда лечение одного пациента обеспечивается командой специалистов разных профилей. Такой подход становится залогом понимания и решения проблемы.",
+        "до 15 резидентов",
+        "В нашем Доме ценится личное пространство каждого. Такой формат позволяет проявлять заботу о каждом, уделять максимум терапевтического внимания.",
+        "нет решеток и замков",
+        "В нашем Доме нет запертых дверей и решеток на окнах. Мы не закрываем, не удерживаем насильно — мы успешно работаем с мотивацией.",
+        "персональная безопасность"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Отзывы",
+      "id": "1:1050",
+      "type": "FRAME",
+      "sectionType": "reviews",
+      "height": 429,
+      "width": 1435,
+      "hasImages": false,
+      "hasText": true,
+      "textCount": 5,
+      "hasCta": true,
+      "repeatableComponents": [
+        "отзыв"
+      ],
+      "instanceCount": 3,
+      "stackMode": null,
+      "childCount": 6,
+      "content": {
+        "heading": "Отзывы",
+        "subheading": "отзыв клиентки на яндекс",
+        "cta": "Цены указаны примерные. Полную стоимость назовет врач при консультации"
+      },
+      "allTextsSample": [
+        "Отзывы",
+        "смотреть отзывы",
+        "Цены указаны примерные. Полную стоимость назовет врач при консультации",
+        "отзыв клиентки на яндекс",
+        "Записаться на консультацию"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "С чего начать",
+      "id": "1:1079",
+      "type": "FRAME",
+      "sectionType": "section-frame",
+      "height": 1781,
+      "width": 1441,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 10,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Раскрытие информации",
+        "Маркированный список",
+        "Важно ",
+        "Цифра",
+        "Запись маленькая"
+      ],
+      "instanceCount": 11,
+      "stackMode": null,
+      "childCount": 7,
+      "content": {
+        "heading": "Что нужно для прохождения реабилитации и лечения",
+        "subheading": "Связатья с нами",
+        "cta": "Связатья с нами"
+      },
+      "allTextsSample": [
+        "Связатья с нами",
+        "Расскажите нам о своей ситуации — в удобном для вас формате и в удобное время. Первый разговор ни к чему не обязывает, но часто становится началом перемен.",
+        "Определить цели и программу",
+        "Вместе со специалистами центра мы разберёмся, что именно происходит, и составим программу, которая отвечает вашей ситуации.",
+        "Выбрать категорию номера, период стационарного проживания",
+        "Комфорт среды — часть восстановления. Мы подберём условия проживания, которые подойдут именно вам, и согласуем удобные сроки.",
+        "Начать реабилитацию и лечение",
+        "С первого дня рядом с вами будет команда специалистов. Здесь начинается то, ради чего вы пришли. Мы с вами — шаг за шагом, в вашем темпе."
+      ]
+    },
+    {
+      "index": 7,
+      "name": "Программа центра",
+      "id": "1:1115",
+      "type": "FRAME",
+      "sectionType": "program",
+      "height": 1563,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 4,
+      "hasCta": true,
+      "repeatableComponents": [
+        "этап",
+        "Запись маленькая"
+      ],
+      "instanceCount": 5,
+      "stackMode": null,
+      "childCount": 2,
+      "content": {
+        "heading": "Программа центра включает 4 направления",
+        "subheading": "не просто снимаем симптомы. Мы помогаем разобраться в том, что именно в жизни, истории привело к этой точке.",
+        "cta": "подробнее"
+      },
+      "allTextsSample": [
+        "не просто снимаем симптомы. Мы помогаем разобраться в том, что именно в жизни, истории привело к этой точке.",
+        "Каждый человек приходит к нам со своей историей. Со своим сочетанием причин, обстоятельств и состояний, которые привели его туда, где он сейчас находится. Именно поэтому универсальных программ в нашем центре не существует.\nПрограмма реабилитации выстраивается из отдельных блоков — каждый из которых направлен на свой уровень работы: генетические предрасположенности, нейрологические паттерны, психологическое состояние и физическое восстановление тела. Вместе они создают целостный, по-настоящему индивидуальный маршрут — такой, который работает именно для вас.",
+        "Программа центра включает 4 направления",
+        "подробнее"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "Генотипирование",
+      "id": "1:1136",
+      "type": "FRAME",
+      "sectionType": "genotyping",
+      "height": 879,
+      "width": 1440,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 6,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Маркированный список",
+        "Кнопка"
+      ],
+      "instanceCount": 5,
+      "stackMode": null,
+      "childCount": 1,
+      "content": {
+        "heading": "Генотипирование — инструмент диагностики",
+        "subheading": "Кому полезно генетическоее исследование особенностей зависимости",
+        "cta": "подробнее"
+      },
+      "allTextsSample": [
+        "Генотипирование — инструмент диагностики",
+        "подробнее",
+        "анализ, который позволяет увидеть индивидуальные генетические особенности системы регуляции настроения. Не угадать. Не предположить. Измерить.",
+        "Анализ позволяет выявить особенности чувствительности рецепторов к ключевым нейромедиаторам: дофамину, эндогенным опиатам, серотонину и другим. В основе концепции Синдрома Дефицита Удовлетворенности именно гипофункция этих систем — в частности мезолимбического дофаминового пути — объясняет, почему одни люди более уязвимы к развитию зависимостей, а другие нет.\nРезультат генотипирования становится основой для построения персонализированной программы: мы знаем, с чем именно работаем, — и это меняет всё.",
+        "Кому полезно генетическоее исследование особенностей зависимости",
+        "В нашей лаборатории мы исследуем полиморфизмы генов, участвующих в индивидуальной реакции мозга на вещества, на самоощущения. Определенная генетическая панель показывает риски, снимает социальную стигму и чувство вины, доказывая, что зависимость — это комплексное заболевание, а не просто отсутствие силы воли. Чаще всего для проведения этого исследования к нам обращаются:"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "преимущества",
+      "id": "1:1164",
+      "type": "FRAME",
+      "sectionType": "advantages",
+      "height": 1294,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 7,
+      "hasCta": true,
+      "repeatableComponents": [
+        "этап"
+      ],
+      "instanceCount": 6,
+      "stackMode": "VERTICAL",
+      "childCount": 3,
+      "content": {
+        "heading": "Шпиг",
+        "subheading": "вскиЙ",
+        "cta": "подробнее о доме"
+      },
+      "allTextsSample": [
+        "Комфорт, приватность, забота",
+        "подробнее о доме",
+        "Разговор — это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому — без давления и без шаблонных ответов.",
+        "Шпиг",
+        "вскиЙ",
+        "центр профилактики зависимостей",
+        "дом"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "Слово спецу",
+      "id": "1:1208",
+      "type": "FRAME",
+      "sectionType": "section-frame",
+      "height": 511,
+      "width": 1440,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 4,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Кнопка"
+      ],
+      "instanceCount": 1,
+      "stackMode": null,
+      "childCount": 6,
+      "content": {
+        "heading": "Сергей Юрьевич Шпиговский",
+        "subheading": "Основатель центра. Аддиктолог, интервенционист",
+        "cta": "Мы создавали „Шпиговский Дом\" как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.»\nМногие боятся обратиться за лечением, потому что опасаются потерять семью, работу и привычный уклад жизни.\nМы считаем, что современная реабилитация должна помогать человеку восстанавливать себя, сохраняя то, что для него действительно важно.\n«Наша цель - создать безопасное пространство для изменений. Наша задача - не изолировать человека от жизни, а помочь ему вернуть контроль над ней."
+      },
+      "allTextsSample": [
+        "Мы создавали „Шпиговский Дом\" как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.»\nМногие боятся обратиться за лечением, потому что опасаются потерять семью, работу и привычный уклад жизни.\nМы считаем, что современная реабилитация должна помогать человеку восстанавливать себя, сохраняя то, что для него действительно важно.\n«Наша цель - создать безопасное пространство для изменений. Наша задача - не изолировать человека от жизни, а помочь ему вернуть контроль над ней.",
+        "мнение эксперта",
+        "Сергей Юрьевич Шпиговский",
+        "Основатель центра. Аддиктолог, интервенционист"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "Видео ",
+      "id": "1:1224",
+      "type": "FRAME",
+      "sectionType": "video",
+      "height": 550,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 1,
+      "hasCta": false,
+      "repeatableComponents": [],
+      "instanceCount": 0,
+      "stackMode": "VERTICAL",
+      "childCount": 3,
+      "content": {
+        "heading": "Видео о нашем центре",
+        "subheading": null,
+        "cta": null
+      },
+      "allTextsSample": [
+        "Видео о нашем центре"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Специаисты",
+      "id": "1:1231",
+      "type": "FRAME",
+      "sectionType": "section-frame",
+      "height": 561,
+      "width": 1437,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 5,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Врач",
+        "Услуга"
+      ],
+      "instanceCount": 8,
+      "stackMode": "VERTICAL",
+      "childCount": 7,
+      "content": {
+        "heading": "Специалисты центра",
+        "subheading": "отзыв клиентки на яндекс",
+        "cta": "Цены указаны примерные. Полную стоимость назовет врач при консультации"
+      },
+      "allTextsSample": [
+        "Специалисты центра",
+        "все специалисты",
+        "Цены указаны примерные. Полную стоимость назовет врач при консультации",
+        "отзыв клиентки на яндекс",
+        "Записаться на консультацию"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "Статьи",
+      "id": "1:1268",
+      "type": "FRAME",
+      "sectionType": "articles",
+      "height": 511,
+      "width": 1440,
+      "hasImages": false,
+      "hasText": true,
+      "textCount": 3,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Статья"
+      ],
+      "instanceCount": 3,
+      "stackMode": "VERTICAL",
+      "childCount": 2,
+      "content": {
+        "heading": "Статьи",
+        "subheading": "Цены указаны примерные. Полную стоимость назовет врач при консультации",
+        "cta": "Цены указаны примерные. Полную стоимость назовет врач при консультации"
+      },
+      "allTextsSample": [
+        "Статьи",
+        "все статьи",
+        "Цены указаны примерные. Полную стоимость назовет врач при консультации"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "faq",
+      "id": "1:1282",
+      "type": "FRAME",
+      "sectionType": "faq",
+      "height": 1517,
+      "width": 1440,
+      "hasImages": true,
+      "hasText": true,
+      "textCount": 4,
+      "hasCta": true,
+      "repeatableComponents": [
+        "Расскрытие вопроса",
+        "Вопрос скрыт",
+        "Поле ввода",
+        "Кнопка"
+      ],
+      "instanceCount": 15,
+      "stackMode": null,
+      "childCount": 3,
+      "content": {
+        "heading": "Нас часто спрашивают",
+        "subheading": "Остались вопросы?",
+        "cta": "Отправляя форму, вы соглашаетесь с условиями пользовательского соглашения и условиями обработки данных"
+      },
+      "allTextsSample": [
+        "Нас часто спрашивают",
+        "Остались вопросы?",
+        "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+        "Отправляя форму, вы соглашаетесь с условиями пользовательского соглашения и условиями обработки данных"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "Подвал",
+      "id": "1:1309",
+      "type": "INSTANCE",
+      "sectionType": "footer-instance",
+      "height": 488,
+      "width": 1440,
+      "hasImages": false,
+      "hasText": false,
+      "textCount": 0,
+      "hasCta": false,
+      "repeatableComponents": [
+        "Подвал"
+      ],
+      "instanceCount": 1,
+      "stackMode": "VERTICAL",
+      "childCount": 0,
+      "content": {
+        "heading": null,
+        "subheading": null,
+        "cta": null
+      },
+      "allTextsSample": []
+    }
+  ],
+  "contentExtractionFirst5": [
+    {
+      "section": "SECTION-01",
+      "name": "1 - Главный экран",
+      "heading": "Шпиговский дом",
+      "subheading": "Центр профилактики \nи лечения зависимости",
+      "cta": null,
+      "extractionQuality": "GOOD"
+    },
+    {
+      "section": "SECTION-02",
+      "name": "2 - Дом - вступление",
+      "heading": "Шпиговский дом — восстановление с уважением к личности",
+      "subheading": "Реабилитация без изоляции",
+      "cta": null,
+      "extractionQuality": "GOOD"
+    },
+    {
+      "section": "SECTION-03",
+      "name": "3- Услуги",
+      "heading": "Лечение и профилактика",
+      "subheading": "смотреть все",
+      "cta": null,
+      "extractionQuality": "GOOD"
+    },
+    {
+      "section": "SECTION-04",
+      "name": "Нас выбирают",
+      "heading": "Нас выбирают за мультидисциплинарный подход к лечению",
+      "subheading": "до 15 резидентов",
+      "cta": null,
+      "extractionQuality": "GOOD"
+    },
+    {
+      "section": "SECTION-05",
+      "name": "Отзывы",
+      "heading": "Отзывы",
+      "subheading": "отзыв клиентки на яндекс",
+      "cta": "Цены указаны примерные. Полную стоимость назовет врач при консультации",
+      "extractionQuality": "GOOD"
+    }
+  ],
+  "hero": {
+    "frameName": "1 - Главный экран",
+    "frameId": "1:876",
+    "frameSize": {
+      "w": 1440,
+      "h": 929
+    },
+    "tree": {
+      "type": "FRAME",
+      "name": "1 - Главный экран",
+      "id": "1:876",
+      "size": {
+        "w": 1440,
+        "h": 929
+      },
+      "childCount": 3,
+      "stackMode": null,
+      "hasImage": false,
+      "text": null,
+      "isInstance": false,
+      "instanceName": null,
+      "children": [
+        {
+          "type": "FRAME",
+          "name": "Хедер",
+          "id": "1:877",
+          "size": {
+            "w": 1170,
+            "h": 143
+          },
+          "childCount": 2,
+          "stackMode": "VERTICAL",
+          "hasImage": false,
+          "text": null,
+          "isInstance": false,
+          "instanceName": null,
+          "children": [
+            {
+              "type": "FRAME",
+              "name": "Frame 18",
+              "id": "1:878",
+              "size": {
+                "w": 1170,
+                "h": 101
+              },
+              "childCount": 1,
+              "stackMode": "VERTICAL",
+              "hasImage": false,
+              "text": null,
+              "isInstance": false,
+              "instanceName": null,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Frame 17",
+                  "id": "1:879",
+                  "size": {
+                    "w": 1150,
+                    "h": 46
+                  },
+                  "childCount": 5,
+                  "stackMode": "HORIZONTAL",
+                  "hasImage": false,
+                  "text": null,
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": [
+                    {
+                      "type": "ROUNDED_RECTANGLE",
+                      "name": "image 219",
+                      "id": "1:880",
+                      "size": {
+                        "w": 205,
+                        "h": 46
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": true,
+                      "text": null,
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Frame 15",
+                      "id": "1:881",
+                      "size": {
+                        "w": 141,
+                        "h": 40
+                      },
+                      "childCount": 2,
+                      "stackMode": "VERTICAL",
+                      "hasImage": false,
+                      "text": null,
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": [
+                        {
+                          "type": "FRAME",
+                          "name": "Frame 14",
+                          "id": "1:882",
+                          "size": {
+                            "w": 141,
+                            "h": 40
+                          },
+                          "childCount": 2,
+                          "stackMode": "HORIZONTAL",
+                          "hasImage": false,
+                          "text": null,
+                          "isInstance": false,
+                          "instanceName": null,
+                          "childNames": [
+                            "TEXT:Москва",
+                            "FRAME:chevron-down"
+                          ]
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Московская область",
+                          "id": "1:886",
+                          "size": {
+                            "w": 0,
+                            "h": 17
+                          },
+                          "childCount": 0,
+                          "stackMode": null,
+                          "hasImage": false,
+                          "text": null,
+                          "isInstance": false,
+                          "instanceName": null
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Frame 16",
+                      "id": "1:887",
+                      "size": {
+                        "w": 133,
+                        "h": 40
+                      },
+                      "childCount": 2,
+                      "stackMode": "VERTICAL",
+                      "hasImage": false,
+                      "text": null,
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "пн-пт 08:00-18:00, сб 08:00-22:00",
+                          "id": "1:888",
+                          "size": {
+                            "w": 133,
+                            "h": 40
+                          },
+                          "childCount": 0,
+                          "stackMode": null,
+                          "hasImage": false,
+                          "text": "пн-пт: 08:00-18:00, \nсб-вс: 08:00-22:00",
+                          "isInstance": false,
+                          "instanceName": null
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "режим работы",
+                          "id": "1:889",
+                          "size": {
+                            "w": 86,
+                            "h": 17
+                          },
+                          "childCount": 0,
+                          "stackMode": null,
+                          "hasImage": false,
+                          "text": "режим работы",
+                          "isInstance": false,
+                          "instanceName": null
+                        }
+                      ]
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "8 (800) 777-02-05",
+                      "id": "1:890",
+                      "size": {
+                        "w": 183,
+                        "h": 56
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "8 (925) 183-64-64\n8 (995) 023-92-26",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Frame 13",
+                      "id": "1:891",
+                      "size": {
+                        "w": 294,
+                        "h": 44
+                      },
+                      "childCount": 3,
+                      "stackMode": "HORIZONTAL",
+                      "hasImage": false,
+                      "text": null,
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": [
+                        {
+                          "type": "FRAME",
+                          "name": "telegramm",
+                          "id": "1:892",
+                          "size": {
+                            "w": 42,
+                            "h": 42
+                          },
+                          "childCount": 3,
+                          "stackMode": null,
+                          "hasImage": false,
+                          "text": null,
+                          "isInstance": false,
+                          "instanceName": null,
+                          "childNames": [
+                            "ELLIPSE:Ellipse",
+                            "ELLIPSE:Ellipse",
+                            "VECTOR:Vector"
+                          ]
+                        },
+                        {
+                          "type": "FRAME",
+                          "name": "watsapp",
+                          "id": "1:896",
+                          "size": {
+                            "w": 42,
+                            "h": 42
+                          },
+                          "childCount": 3,
+                          "stackMode": null,
+                          "hasImage": false,
+                          "text": null,
+                          "isInstance": false,
+                          "instanceName": null,
+                          "childNames": [
+                            "ELLIPSE:Ellipse",
+                            "ELLIPSE:Ellipse",
+                            "VECTOR:Vector"
+                          ]
+                        },
+                        {
+                          "type": "INSTANCE",
+                          "name": "Кнопка",
+                          "id": "1:900",
+                          "size": {
+                            "w": 190,
+                            "h": 44
+                          },
+                          "childCount": 0,
+                          "stackMode": "HORIZONTAL",
+                          "hasImage": false,
+                          "text": null,
+                          "isInstance": true,
+                          "instanceName": "Кнопка"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Frame 19",
+              "id": "1:901",
+              "size": {
+                "w": 1170,
+                "h": 22
+              },
+              "childCount": 2,
+              "stackMode": "HORIZONTAL",
+              "hasImage": false,
+              "text": null,
+              "isInstance": false,
+              "instanceName": null,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Frame 10",
+                  "id": "1:902",
+                  "size": {
+                    "w": 1130,
+                    "h": 22
+                  },
+                  "childCount": 8,
+                  "stackMode": "HORIZONTAL",
+                  "hasImage": false,
+                  "text": null,
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Лечение и профилактика",
+                      "id": "1:903",
+                      "size": {
+                        "w": 198,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Лечение и профилактика",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Генотипирование",
+                      "id": "1:904",
+                      "size": {
+                        "w": 138,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Генотипирование",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Специалисты",
+                      "id": "1:905",
+                      "size": {
+                        "w": 108,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Специалисты",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "О центре",
+                      "id": "1:906",
+                      "size": {
+                        "w": 73,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "О центре",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Отзывы",
+                      "id": "1:907",
+                      "size": {
+                        "w": 62,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Отзывы",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Статьи",
+                      "id": "1:908",
+                      "size": {
+                        "w": 56,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Статьи",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Контакты",
+                      "id": "1:909",
+                      "size": {
+                        "w": 75,
+                        "h": 22
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Контакты",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "INSTANCE",
+                      "name": "search",
+                      "id": "1:910",
+                      "size": {
+                        "w": 20,
+                        "h": 20
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": null,
+                      "isInstance": true,
+                      "instanceName": "search",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "TEXT",
+                  "name": "8 (800) 777-02-05",
+                  "id": "1:911",
+                  "size": {
+                    "w": 182,
+                    "h": 28
+                  },
+                  "childCount": 0,
+                  "stackMode": null,
+                  "hasImage": false,
+                  "text": "8 (800) 777-02-05",
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "Group 6",
+          "id": "1:912",
+          "size": {
+            "w": 1400,
+            "h": 750
+          },
+          "childCount": 2,
+          "stackMode": null,
+          "hasImage": false,
+          "text": null,
+          "isInstance": false,
+          "instanceName": null,
+          "children": [
+            {
+              "type": "FRAME",
+              "name": "банер",
+              "id": "1:913",
+              "size": {
+                "w": 1400,
+                "h": 750
+              },
+              "childCount": 5,
+              "stackMode": null,
+              "hasImage": false,
+              "text": null,
+              "isInstance": false,
+              "instanceName": null,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Лечение и профилатктика зависимостей",
+                  "id": "1:914",
+                  "size": {
+                    "w": 515,
+                    "h": 100
+                  },
+                  "childCount": 0,
+                  "stackMode": null,
+                  "hasImage": false,
+                  "text": "Центр профилактики \nи лечения зависимости",
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": []
+                },
+                {
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "id": "1:915",
+                  "size": {
+                    "w": 768,
+                    "h": 408
+                  },
+                  "childCount": 0,
+                  "stackMode": null,
+                  "hasImage": false,
+                  "text": null,
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": []
+                },
+                {
+                  "type": "ROUNDED_RECTANGLE",
+                  "name": "image 13030403",
+                  "id": "1:916",
+                  "size": {
+                    "w": 1523,
+                    "h": 863
+                  },
+                  "childCount": 0,
+                  "stackMode": null,
+                  "hasImage": true,
+                  "text": null,
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": []
+                },
+                {
+                  "type": "ROUNDED_RECTANGLE",
+                  "name": "Rectangle 4245",
+                  "id": "1:917",
+                  "size": {
+                    "w": 1400,
+                    "h": 750
+                  },
+                  "childCount": 0,
+                  "stackMode": null,
+                  "hasImage": false,
+                  "text": null,
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": []
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Group 5",
+                  "id": "1:918",
+                  "size": {
+                    "w": 1039,
+                    "h": 162
+                  },
+                  "childCount": 3,
+                  "stackMode": null,
+                  "hasImage": false,
+                  "text": null,
+                  "isInstance": false,
+                  "instanceName": null,
+                  "children": [
+                    {
+                      "type": "ROUNDED_RECTANGLE",
+                      "name": "Rectangle 4246",
+                      "id": "1:919",
+                      "size": {
+                        "w": 1039,
+                        "h": 162
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": null,
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Шпиговский дом",
+                      "id": "1:920",
+                      "size": {
+                        "w": 570,
+                        "h": 80
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Шпиговский дом",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Центр профилактики и лечения зависимостей",
+                      "id": "1:921",
+                      "size": {
+                        "w": 1025,
+                        "h": 44
+                      },
+                      "childCount": 0,
+                      "stackMode": null,
+                      "hasImage": false,
+                      "text": "Центр профилактики и лечения зависимостей",
+                      "isInstance": false,
+                      "instanceName": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Frame 4",
+              "id": "1:922",
+              "size": {
+                "w": 334,
+                "h": 113
+              },
+              "childCount": 1,
+              "stackMode": "VERTICAL",
+              "hasImage": false,
+              "text": null,
+              "isInstance": false,
+              "instanceName": null,
+              "children": [
+                {
+                  "type": "INSTANCE",
+                  "name": "Кнопка",
+                  "id": "1:923",
+                  "size": {
+                    "w": 334,
+                    "h": 53
+                  },
+                  "childCount": 0,
+                  "stackMode": "HORIZONTAL",
+                  "hasImage": false,
+                  "text": null,
+                  "isInstance": true,
+                  "instanceName": "Кнопка",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "Frame 81513852",
+          "id": "1:924",
+          "size": {
+            "w": 187,
+            "h": 83
+          },
+          "childCount": 2,
+          "stackMode": null,
+          "hasImage": false,
+          "text": null,
+          "isInstance": false,
+          "instanceName": null,
+          "children": [
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "id": "1:925",
+              "size": {
+                "w": 186,
+                "h": 61
+              },
+              "childCount": 0,
+              "stackMode": null,
+              "hasImage": false,
+              "text": null,
+              "isInstance": false,
+              "instanceName": null,
+              "children": []
+            },
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "id": "1:926",
+              "size": {
+                "w": 187,
+                "h": 34
+              },
+              "childCount": 0,
+              "stackMode": null,
+              "hasImage": false,
+              "text": null,
+              "isInstance": false,
+              "instanceName": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "groupRegister": [
+      {
+        "name": "1 - Главный экран",
+        "id": "1:876",
+        "type": "FRAME",
+        "size": {
+          "w": 1440,
+          "h": 929
+        },
+        "parent": null,
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 3
+      },
+      {
+        "name": "Хедер",
+        "id": "1:877",
+        "type": "FRAME",
+        "size": {
+          "w": 1170,
+          "h": 143
+        },
+        "parent": "1 - Главный экран",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "VERTICAL",
+        "childCount": 2
+      },
+      {
+        "name": "Frame 18",
+        "id": "1:878",
+        "type": "FRAME",
+        "size": {
+          "w": 1170,
+          "h": 101
+        },
+        "parent": "Хедер",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "VERTICAL",
+        "childCount": 1
+      },
+      {
+        "name": "Frame 17",
+        "id": "1:879",
+        "type": "FRAME",
+        "size": {
+          "w": 1150,
+          "h": 46
+        },
+        "parent": "Frame 18",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 5
+      },
+      {
+        "name": "image 219",
+        "id": "1:880",
+        "type": "ROUNDED_RECTANGLE",
+        "size": {
+          "w": 205,
+          "h": 46
+        },
+        "parent": "Frame 17",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": true,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Frame 15",
+        "id": "1:881",
+        "type": "FRAME",
+        "size": {
+          "w": 141,
+          "h": 40
+        },
+        "parent": "Frame 17",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "VERTICAL",
+        "childCount": 2
+      },
+      {
+        "name": "Frame 14",
+        "id": "1:882",
+        "type": "FRAME",
+        "size": {
+          "w": 141,
+          "h": 40
+        },
+        "parent": "Frame 15",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 2
+      },
+      {
+        "name": "Московская область",
+        "id": "1:886",
+        "type": "TEXT",
+        "size": {
+          "w": 0,
+          "h": 17
+        },
+        "parent": "Frame 15",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Frame 16",
+        "id": "1:887",
+        "type": "FRAME",
+        "size": {
+          "w": 133,
+          "h": 40
+        },
+        "parent": "Frame 17",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "VERTICAL",
+        "childCount": 2
+      },
+      {
+        "name": "пн-пт 08:00-18:00, сб 08:00-22:00",
+        "id": "1:888",
+        "type": "TEXT",
+        "size": {
+          "w": 133,
+          "h": 40
+        },
+        "parent": "Frame 16",
+        "text": "пн-пт: 08:00-18:00, \nсб-вс: 08:00-22:00",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "режим работы",
+        "id": "1:889",
+        "type": "TEXT",
+        "size": {
+          "w": 86,
+          "h": 17
+        },
+        "parent": "Frame 16",
+        "text": "режим работы",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "8 (800) 777-02-05",
+        "id": "1:890",
+        "type": "TEXT",
+        "size": {
+          "w": 183,
+          "h": 56
+        },
+        "parent": "Frame 17",
+        "text": "8 (925) 183-64-64\n8 (995) 023-92-26",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Frame 13",
+        "id": "1:891",
+        "type": "FRAME",
+        "size": {
+          "w": 294,
+          "h": 44
+        },
+        "parent": "Frame 17",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 3
+      },
+      {
+        "name": "telegramm",
+        "id": "1:892",
+        "type": "FRAME",
+        "size": {
+          "w": 42,
+          "h": 42
+        },
+        "parent": "Frame 13",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 3
+      },
+      {
+        "name": "watsapp",
+        "id": "1:896",
+        "type": "FRAME",
+        "size": {
+          "w": 42,
+          "h": 42
+        },
+        "parent": "Frame 13",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 3
+      },
+      {
+        "name": "Кнопка",
+        "id": "1:900",
+        "type": "INSTANCE",
+        "size": {
+          "w": 190,
+          "h": 44
+        },
+        "parent": "Frame 13",
+        "text": null,
+        "isInstance": true,
+        "instanceName": "Кнопка",
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 0
+      },
+      {
+        "name": "Frame 19",
+        "id": "1:901",
+        "type": "FRAME",
+        "size": {
+          "w": 1170,
+          "h": 22
+        },
+        "parent": "Хедер",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 2
+      },
+      {
+        "name": "Frame 10",
+        "id": "1:902",
+        "type": "FRAME",
+        "size": {
+          "w": 1130,
+          "h": 22
+        },
+        "parent": "Frame 19",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 8
+      },
+      {
+        "name": "Лечение и профилактика",
+        "id": "1:903",
+        "type": "TEXT",
+        "size": {
+          "w": 198,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "Лечение и профилактика",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Генотипирование",
+        "id": "1:904",
+        "type": "TEXT",
+        "size": {
+          "w": 138,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "Генотипирование",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Специалисты",
+        "id": "1:905",
+        "type": "TEXT",
+        "size": {
+          "w": 108,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "Специалисты",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "О центре",
+        "id": "1:906",
+        "type": "TEXT",
+        "size": {
+          "w": 73,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "О центре",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Отзывы",
+        "id": "1:907",
+        "type": "TEXT",
+        "size": {
+          "w": 62,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "Отзывы",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Статьи",
+        "id": "1:908",
+        "type": "TEXT",
+        "size": {
+          "w": 56,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "Статьи",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Контакты",
+        "id": "1:909",
+        "type": "TEXT",
+        "size": {
+          "w": 75,
+          "h": 22
+        },
+        "parent": "Frame 10",
+        "text": "Контакты",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "search",
+        "id": "1:910",
+        "type": "INSTANCE",
+        "size": {
+          "w": 20,
+          "h": 20
+        },
+        "parent": "Frame 10",
+        "text": null,
+        "isInstance": true,
+        "instanceName": "search",
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "8 (800) 777-02-05",
+        "id": "1:911",
+        "type": "TEXT",
+        "size": {
+          "w": 182,
+          "h": 28
+        },
+        "parent": "Frame 19",
+        "text": "8 (800) 777-02-05",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Group 6",
+        "id": "1:912",
+        "type": "FRAME",
+        "size": {
+          "w": 1400,
+          "h": 750
+        },
+        "parent": "1 - Главный экран",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 2
+      },
+      {
+        "name": "банер",
+        "id": "1:913",
+        "type": "FRAME",
+        "size": {
+          "w": 1400,
+          "h": 750
+        },
+        "parent": "Group 6",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 5
+      },
+      {
+        "name": "Лечение и профилатктика зависимостей",
+        "id": "1:914",
+        "type": "TEXT",
+        "size": {
+          "w": 515,
+          "h": 100
+        },
+        "parent": "банер",
+        "text": "Центр профилактики \nи лечения зависимости",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Vector",
+        "id": "1:915",
+        "type": "VECTOR",
+        "size": {
+          "w": 768,
+          "h": 408
+        },
+        "parent": "банер",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "image 13030403",
+        "id": "1:916",
+        "type": "ROUNDED_RECTANGLE",
+        "size": {
+          "w": 1523,
+          "h": 863
+        },
+        "parent": "банер",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": true,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Rectangle 4245",
+        "id": "1:917",
+        "type": "ROUNDED_RECTANGLE",
+        "size": {
+          "w": 1400,
+          "h": 750
+        },
+        "parent": "банер",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Group 5",
+        "id": "1:918",
+        "type": "FRAME",
+        "size": {
+          "w": 1039,
+          "h": 162
+        },
+        "parent": "банер",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 3
+      },
+      {
+        "name": "Rectangle 4246",
+        "id": "1:919",
+        "type": "ROUNDED_RECTANGLE",
+        "size": {
+          "w": 1039,
+          "h": 162
+        },
+        "parent": "Group 5",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Шпиговский дом",
+        "id": "1:920",
+        "type": "TEXT",
+        "size": {
+          "w": 570,
+          "h": 80
+        },
+        "parent": "Group 5",
+        "text": "Шпиговский дом",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Центр профилактики и лечения зависимостей",
+        "id": "1:921",
+        "type": "TEXT",
+        "size": {
+          "w": 1025,
+          "h": 44
+        },
+        "parent": "Group 5",
+        "text": "Центр профилактики и лечения зависимостей",
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Frame 4",
+        "id": "1:922",
+        "type": "FRAME",
+        "size": {
+          "w": 334,
+          "h": 113
+        },
+        "parent": "Group 6",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": "VERTICAL",
+        "childCount": 1
+      },
+      {
+        "name": "Кнопка",
+        "id": "1:923",
+        "type": "INSTANCE",
+        "size": {
+          "w": 334,
+          "h": 53
+        },
+        "parent": "Frame 4",
+        "text": null,
+        "isInstance": true,
+        "instanceName": "Кнопка",
+        "hasImage": false,
+        "stackMode": "HORIZONTAL",
+        "childCount": 0
+      },
+      {
+        "name": "Frame 81513852",
+        "id": "1:924",
+        "type": "FRAME",
+        "size": {
+          "w": 187,
+          "h": 83
+        },
+        "parent": "1 - Главный экран",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 2
+      },
+      {
+        "name": "Vector",
+        "id": "1:925",
+        "type": "VECTOR",
+        "size": {
+          "w": 186,
+          "h": 61
+        },
+        "parent": "Frame 81513852",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      },
+      {
+        "name": "Vector",
+        "id": "1:926",
+        "type": "VECTOR",
+        "size": {
+          "w": 187,
+          "h": 34
+        },
+        "parent": "Frame 81513852",
+        "text": null,
+        "isInstance": false,
+        "instanceName": null,
+        "hasImage": false,
+        "stackMode": null,
+        "childCount": 0
+      }
+    ],
+    "heroTexts": [
+      {
+        "name": "Москва",
+        "text": "Москва, \nМосковская область",
+        "fontSize": 14
+      },
+      {
+        "name": "пн-пт 08:00-18:00, сб 08:00-22:00",
+        "text": "пн-пт: 08:00-18:00, \nсб-вс: 08:00-22:00",
+        "fontSize": 14
+      },
+      {
+        "name": "режим работы",
+        "text": "режим работы",
+        "fontSize": 12
+      },
+      {
+        "name": "8 (800) 777-02-05",
+        "text": "8 (925) 183-64-64\n8 (995) 023-92-26",
+        "fontSize": 20
+      },
+      {
+        "name": "Лечение и профилактика",
+        "text": "Лечение и профилактика",
+        "fontSize": 16
+      },
+      {
+        "name": "Генотипирование",
+        "text": "Генотипирование",
+        "fontSize": 16
+      },
+      {
+        "name": "Специалисты",
+        "text": "Специалисты",
+        "fontSize": 16
+      },
+      {
+        "name": "О центре",
+        "text": "О центре",
+        "fontSize": 16
+      },
+      {
+        "name": "Отзывы",
+        "text": "Отзывы",
+        "fontSize": 16
+      },
+      {
+        "name": "Статьи",
+        "text": "Статьи",
+        "fontSize": 16
+      },
+      {
+        "name": "Контакты",
+        "text": "Контакты",
+        "fontSize": 16
+      },
+      {
+        "name": "8 (800) 777-02-05",
+        "text": "8 (800) 777-02-05",
+        "fontSize": 20
+      },
+      {
+        "name": "Лечение и профилатктика зависимостей",
+        "text": "Центр профилактики \nи лечения зависимости",
+        "fontSize": 42
+      },
+      {
+        "name": "Шпиговский дом",
+        "text": "Шпиговский дом",
+        "fontSize": 70
+      },
+      {
+        "name": "Центр профилактики и лечения зависимостей",
+        "text": "Центр профилактики и лечения зависимостей",
+        "fontSize": 36
+      }
+    ],
+    "heroInstances": [
+      "Кнопка",
+      "search"
+    ]
+  }
+}

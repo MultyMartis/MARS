@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-06-09T07:19:33.140218+00:00",
+  "base": "https://zpm.new-site.space",
+  "checks": {
+    "css": {
+      "url": "https://zpm.new-site.space/assets/vendor/fontawesome-pro-5.15.4/css/all.min.css",
+      "status": 200
+    },
+    "css_font_refs_total": 174,
+    "webfonts": {
+      "total": 174,
+      "ok_200": 174,
+      "not_200": 0,
+      "failures": []
+    },
+    "icon_css": {
+      "fa-ruler-horizontal": {
+        "css_rule_present": true,
+        "content_code": "\\f547"
+      },
+      "fa-weight-hanging": {
+        "css_rule_present": true,
+        "content_code": "\\f5cd"
+      }
+    },
+    "styles": {
+      "fal_rule": false,
+      "fas_rule": false,
+      "fa_light_fontface": true,
+      "fa_solid_fontface": true
+    },
+    "pages": {
+      "home": {
+        "url": "https://zpm.new-site.space/",
+        "status": 200,
+        "fa_css_linked": true,
+        "fa_ruler_horizontal_in_html": false,
+        "fa_weight_hanging_in_html": false,
+        "fal_in_html": false,
+        "fas_in_html": false
+      },
+      "catalog": {
+        "url": "https://zpm.new-site.space/katalog/",
+        "status": 200,
+        "fa_css_linked": true,
+        "fa_ruler_horizontal_in_html": false,
+        "fa_weight_hanging_in_html": false,
+        "fal_in_html": false,
+        "fas_in_html": false
+      },
+      "category": {
+        "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/",
+        "status": 200,
+        "fa_css_linked": true,
+        "fa_ruler_horizontal_in_html": false,
+        "fa_weight_hanging_in_html": false,
+        "fal_in_html": false,
+        "fas_in_html": false
+      },
+      "pdp": {
+        "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/stol-proizvodstvennyy-sp-p-18-6-1800h600h850",
+        "status": 200,
+        "fa_css_linked": true,
+        "fa_ruler_horizontal_in_html": false,
+        "fa_weight_hanging_in_html": false,
+        "fal_in_html": false,
+        "fas_in_html": false
+      }
+    }
+  },
+  "verdict_items": {
+    "css_200": true,
+    "all_webfonts_200": true,
+    "ruler_css": true,
+    "weight_css": true,
+    "pages_link_fa": true,
+    "pdp_has_ruler": false,
+    "pdp_has_weight": false,
+    "home_200": true,
+    "catalog_200": true,
+    "pdp_200": true
+  },
+  "verdict": "PASS"
+}

@@ -1,0 +1,506 @@
+{
+  "show_tables": [
+    {
+      "tables_in_polygonws_zpm": "cron"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_address"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_anketa"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_api"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_api_ip"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_api_session"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_attribute"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_attribute_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_attribute_group"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_attribute_group_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_backup_move_polka_to_83"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_banner"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_banner_image"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_blog_posts"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_blog_themes"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_cart"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_doc_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_docs"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_filter"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_path"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_to_layout"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_category_to_store"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_country"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_coupon"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_coupon_category"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_coupon_history"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_coupon_product"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_currency"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_custom_field"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_custom_field_customer_group"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_custom_field_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_custom_field_value"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_custom_field_value_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_activity"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_affiliate"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_approval"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_delivery"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_group"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_group_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_history"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_ip"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_login"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_online"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_remember"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_reward"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_search"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_transaction"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_customer_wishlist"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_download"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_download_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_event"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_extension"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_extension_install"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_extension_path"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_filter"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_filter_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_filter_group"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_filter_group_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_geo_zone"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_googleshopping_category"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_googleshopping_product"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_googleshopping_product_status"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_googleshopping_product_target"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_googleshopping_target"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_information"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_information_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_information_to_layout"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_information_to_store"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_language"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_layout"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_layout_module"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_layout_route"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_length_class"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_length_class_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_location"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_manufacturer"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_manufacturer_to_store"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_marketing"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_modification"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_module"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_option"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_option_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_option_value"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_option_value_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_history"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_option"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_product"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_recurring"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_recurring_transaction"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_shipment"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_status"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_total"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_order_voucher"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_attribute"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "Tables_in_polygonws_zpm"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_discount"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_filter"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_image"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_option"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_option_value"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_price_index"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_recurring"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_related"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_reward"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_special"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_to_category"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_to_download"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_to_layout"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_product_to_store"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_recurring"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_recurring_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_return"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_return_action"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_return_history"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_return_reason"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_return_status"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_review"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_seo_url"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_session"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_setting"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_shipping_courier"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_statistics"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_stock_status"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_store"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_tax_class"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_tax_rate"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_tax_rate_to_customer_group"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_tax_rule"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_theme"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_translation"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_upload"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_user"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_user_group"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_voucher"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_voucher_history"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_voucher_theme"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_voucher_theme_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_weight_class"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_weight_class_description"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_zone"
+    },
+    {
+      "tables_in_polygonws_zpm": "oc_zone_to_geo_zone"
+    }
+  ],
+  "seo_url_breakdown": [
+    {
+      "kind": "category",
+      "c": "189"
+    },
+    {
+      "kind": "information",
+      "c": "11"
+    },
+    {
+      "kind": "manufacturer",
+      "c": "1"
+    },
+    {
+      "kind": "other",
+      "c": "46"
+    },
+    {
+      "kind": "product",
+      "c": "3134"
+    }
+  ],
+  "inactive_no_xml": [
+    {
+      "c": "55"
+    }
+  ],
+  "manual_vs_1c_active": [
+    {
+      "src": "has_xml_id",
+      "status": "0",
+      "c": "2525"
+    },
+    {
+      "src": "has_xml_id",
+      "status": "1",
+      "c": "554"
+    },
+    {
+      "src": "no_xml_id",
+      "status": "1",
+      "c": "55"
+    }
+  ],
+  "image_path_prefixes": [
+    {
+      "prefix": "catalog/1c_import",
+      "c 1": "552"
+    },
+    {
+      "prefix": "catalog/b151225.jpg",
+      "c 1": "1"
+    }
+  ],
+  "gallery_path_prefixes": [
+    {
+      "prefix": "catalog/1c_import",
+      "c": "6"
+    }
+  ],
+  "cron_rows": []
+}

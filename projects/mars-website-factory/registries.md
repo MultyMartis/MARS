@@ -36,13 +36,15 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 
 ## 3. Commercial Pattern Library
 
+**Delivered (v1):** [scroll-process-timeline-pattern-v1.md](scroll-process-timeline-pattern-v1.md) — scroll-driven order-process timeline with track, progress line, branded vehicle, step cards, reverse-on-scroll-up (`pattern_id`: `scroll_process_timeline`; token: `WF-SCROLL-PROCESS-TIMELINE`). Evidence: Triumph Cargo Taxi DEV `/services/gruzovoe-taksi/`.
+
 | Aspect | Content |
 |--------|---------|
-| **Purpose** | Reusable **marketing/commercial** compositions: offer framing, urgency ethics, social proof placement (**policy-bound**). |
-| **Fields (suggested)** | `pattern_id`, `intent`, `copy_structure`, `ethical_constraints`, `forbidden_claims` |
-| **Examples** | “Problem–agitation–solution” outline; testimonial + logo strip pairing |
-| **Anti-patterns** | Dark patterns; unverifiable statistics; medical/financial claims without review |
-| **Relations** | **Marketing Strategy Agent**; **Conversion QA Agent**; **HITL** for sensitive industries |
+| **Purpose** | Reusable **marketing/commercial** compositions: offer framing, urgency ethics, social proof placement, **interactive process explanation** (**policy-bound**). |
+| **Fields (suggested)** | `pattern_id`, `intent`, `copy_structure`, `ethical_constraints`, `forbidden_claims`, `interaction_model` (for interactive patterns) |
+| **Examples** | “Problem–agitation–solution” outline; testimonial + logo strip pairing; **`scroll_process_timeline`** — logistics/service linear process with user-controlled scroll animation |
+| **Anti-patterns** | Dark patterns; unverifiable statistics; medical/financial claims without review; **autoplay / loop animation** on process timelines (see scroll-process-timeline UX rule) |
+| **Relations** | **Marketing Strategy Agent**; **Conversion QA Agent**; **HITL** for sensitive industries; [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md) §10 for engineering invariants |
 
 ---
 
@@ -85,6 +87,7 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **RU landing QA preset** | [ru-landing-qa-preset-v1.md](ru-landing-qa-preset-v1.md) — mandatory widths for Russian commercial landings |
 | **Section spacing (operational)** | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) |
 | **Shell-first start gate** | [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) |
+| **Canonical Clean Shell** | [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md) — mandatory empty shell before Layout Spec |
 | **Production Standards governance** | [production-standards-governance-v1.md](production-standards-governance-v1.md) |
 | **Visual Foundation Contract** | [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) |
 | **Design Calibration stage** | [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) |
@@ -99,6 +102,35 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **Frontend Design QA Matrix** | [frontend-design-qa-matrix-v1.md](frontend-design-qa-matrix-v1.md) — DQ-01–DQ-12 fidelity domains; Production PASS gate |
 | **Pixel fidelity audit** | [pixel-fidelity-audit-rules-v1.md](pixel-fidelity-audit-rules-v1.md) — numeric variance rules per PF-* domain |
 | **Frontend QA reporting** | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) — Production Verdict rollup; gate vocabulary |
+| **Enforcement Pack** | [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) — Operator Law, Compiled CSS, Inline Style, ROOT COMPLIANCE |
+| **Compliance Decision Model** | [frontend-compliance-decision-model-v1.md](frontend-compliance-decision-model-v1.md) — RAW VIOLATION → gate verdict route |
+| **Failure Attribution Model** | [frontend-failure-attribution-model-v1.md](frontend-failure-attribution-model-v1.md) — FAILURE EVENT → Expected Gate → Attribution Verdict |
+| **Operator Visual Approval Law** | [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) — TECHNICAL PASS ≠ OPERATOR APPROVAL; mandatory operator visual review after visual stages |
+| **Layout Spec Law** | [layout-spec-law-v1.md](layout-spec-law-v1.md) — mandatory composition artifact before HTML/CSS; operator APPROVED |
+| **Group Decomposition Law** | [group-decomposition-law-v1.md](group-decomposition-law-v1.md) — discrete GROUP-IDs per ROW before Layout Spec; operator APPROVED |
+| **FP-0002 Group Decomposition lesson** | [FP-0002-group-decomposition-lesson-v1.md](FP-0002-group-decomposition-lesson-v1.md) — CONTACT BLOCK aggregation in JPG test |
+| **FP-0002 Clean Shell lesson** | [FP-0002-clean-shell-lesson-v1.md](FP-0002-clean-shell-lesson-v1.md) — beautiful starter vs empty shell |
+| **CSS multicol masonry browser lesson** | [css-multicol-masonry-browser-compatibility-lesson-v1.md](css-multicol-masonry-browser-compatibility-lesson-v1.md) — Chrome/Firefox column group `display`; WPilot footer incident |
+| **Scroll Process Timeline pattern** | [scroll-process-timeline-pattern-v1.md](scroll-process-timeline-pattern-v1.md) — scroll-driven order-process block; Triumph Cargo Taxi `/services/gruzovoe-taksi/` |
+| **Inline style allowlist** | [frontend-inline-style-allowlist-v1.md](frontend-inline-style-allowlist-v1.md) |
+| **Factory Failure Classes** | [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md) and peer classes — see [§7](#7-factory-failure-classes) |
+
+---
+
+## 7. Factory Failure Classes
+
+**Purpose:** Canonical **documented** failure classes for Website Factory production escapes — human-operated taxonomy and mitigation; **not** a runtime failure engine.
+
+| Token / Class ID | Document | Domain |
+|------------------|----------|--------|
+| `VISUAL INTERPRETATION WITHOUT LAYOUT SPEC` | [layout-spec-law-v1.md](layout-spec-law-v1.md) §7 | Composition without Layout Spec |
+| `PRE-LAYOUT-SPEC STARTER RESIDUE` | [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md) | Starter demo before Clean Shell |
+| `GROUP AGGREGATION BEFORE DECOMPOSITION` | [group-decomposition-law-v1.md](group-decomposition-law-v1.md) §2 | Grouping before decomposition register |
+| `ASSET_IDENTITY_COLLISION` | [failures/asset-identity-collision-v1.md](failures/asset-identity-collision-v1.md) | Wrong brand mark from multi-brand FIG / first-image heuristic |
+
+**Investigation route:** [frontend-failure-attribution-model-v1.md](frontend-failure-attribution-model-v1.md) — FAILURE EVENT → Expected Gate → Attribution Verdict.
+
+**Anti-pattern:** Do **not** register the same class twice under different tokens. Asset wrongness at DQ-08/PF-07 may be **symptom** of `ASSET_IDENTITY_COLLISION` when upstream selection used **first image = logo**.
 
 ---
 

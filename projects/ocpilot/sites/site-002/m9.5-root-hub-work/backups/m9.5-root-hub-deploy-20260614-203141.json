@@ -1,0 +1,51 @@
+{
+  "task": "M9.5 Neutral Root Category Hub (category 79)",
+  "site": "SITE-002",
+  "test_url": "https://zpm.new-site.space/",
+  "rollback_source": "SITE-002-STABLE-M8.3-BEFORE-M9-20260615-0159",
+  "m9_phase3_rollback": "m9-phase3-remaining-work/backups/m9-phase3-deploy-20260614-200051.json",
+  "deployed_at_utc": "20260614-203141",
+  "pre_backup": [
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.5-root-hub-work\\backups\\pre-m9.5-system__library__zpm__category_visibility.php",
+      "sha256": "746e9feac85a9f63340e4188178ffe1da0588bcd3da4bc48a4b7155a8c2a3187",
+      "bytes": 3504
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.5-root-hub-work\\backups\\pre-m9.5-catalog__controller__product__category.php",
+      "sha256": "20b710843fb5502542484e8c47e071e536db4eae9f16f4d74d2dddea2c2be58b",
+      "bytes": 20275
+    },
+    {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "local_backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.5-root-hub-work\\backups\\pre-m9.5-catalog__view__theme__default__template__product__category.twig",
+      "sha256": "c69ba327ce60e9c92abc690e1f55bfb7d5f7d7acabf7e411a47848c7d9ccf89a",
+      "bytes": 4736
+    }
+  ],
+  "files": [
+    {
+      "remote": "system/library/zpm/category_visibility.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.5-root-hub-work\\patch\\system\\library\\zpm\\category_visibility.php",
+      "sha256": "029b22a35513cb79d728a7e78b07f9a4741b2dde4650562cf0297da5b508623f",
+      "bytes": 3965
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.5-root-hub-work\\patch\\catalog\\controller\\product\\category.php",
+      "sha256": "4ed6db8db424cf7c2123ab6ea6c74e8dad8c9d10b3e922e2014cf207c611538e",
+      "bytes": 22103
+    },
+    {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.5-root-hub-work\\patch\\catalog\\view\\theme\\default\\template\\product\\category.twig",
+      "sha256": "291daa368db27daca9185c47a9164cb07139a1be727cd0d47e7cb0190c65c94e",
+      "bytes": 5769
+    }
+  ],
+  "attribute_cache_cleared": 0,
+  "twig_cache_cleared": 0,
+  "cache_errors": []
+}

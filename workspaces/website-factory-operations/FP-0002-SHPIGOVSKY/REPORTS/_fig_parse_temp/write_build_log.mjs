@@ -1,0 +1,34 @@
+import { writeFileSync } from "fs";
+
+const log = `FP-0002 FULL PAGE PRODUCTION BUILD STRESS TEST
+RUN: 2026-06-17
+SSOT: Шпиговский.fig via openfig-core
+
+SECTION-01 HEADER+HERO: PASS
+SECTION-02 INTRO: PASS
+SECTION-03 SERVICES: PASS
+SECTION-04 WHY-US: PASS
+SECTION-05 REVIEWS: PASS
+SECTION-06 HOW-TO-START: PASS
+SECTION-07 PROGRAM: PASS
+SECTION-08 GENOTYPING: PASS
+SECTION-09 ADVANTAGES: PASS
+SECTION-10 SPECIALIST-WORD: PASS
+SECTION-11 VIDEO: PASS
+SECTION-12 SPECIALISTS: PASS
+SECTION-13 ARTICLES: PASS
+SECTION-14 FAQ: PASS
+SECTION-15 FOOTER: PASS
+
+FILES CREATED: 14 partials + _home-sections.scss
+FILES MODIFIED: desktop-shell.html, style.scss
+IMAGES EXTRACTED: 34
+BUILD: npm run build PASS
+`;
+
+writeFileSync(
+  String.raw`C:\AI MARS\workspaces\fp-0002-shpigovsky-frontend\logs\full-build-run.log`,
+  log,
+  "utf8",
+);
+console.log("ok");

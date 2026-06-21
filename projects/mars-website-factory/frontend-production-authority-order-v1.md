@@ -139,12 +139,16 @@ Percentage splits require documented exception per WF-LAYOUT-007 **and** project
 
 ### OL-06 — No Word Breaking
 
-**Forbidden without direct operator instruction:**
+**Forbidden without direct operator instruction + Exception Registry:**
 
-- `letter-spacing` (non-zero)  
-- `word-break` (any value)  
-- `overflow-wrap: break-word`  
-- `hyphens` (including `hyphens: auto`)
+- `letter-spacing` — **any value**  
+- `word-break` — **any value**  
+- `overflow-wrap` — **any value**  
+- `hyphens` — **any value**
+
+**Detection:** **property presence in source or compiled CSS = FAIL.** Values such as `normal`, `none`, `manual`, `0`, `initial`, `inherit`, and `unset` are **not** exemptions.
+
+**Compliance grep:** zero matches required in `src/scss/**` and `dist/*.css` for each property name above.
 
 **Overflow resolution:** Layout and copy fixes first — see [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md).
 
@@ -196,8 +200,51 @@ Percentage splits require documented exception per WF-LAYOUT-007 **and** project
 
 ---
 
-## 6. Changelog
+## 6. Exception Registry (rank-1 overrides of Operator Law)
+
+When **Project Production Standards (rank 1)** intentionally use a value that violates **Approved Operator Laws (rank 2)**, operators **must** record an exception **before** QA may emit **WAIVED** on Operator Law or Authority Conflict gates.
+
+**Mandatory fields — missing any → QA verdict FAIL (not WAIVED):**
+
+| Field | Requirement |
+|-------|-------------|
+| **decision id** | Stable id — e.g. C-12-EX-001 or change-control row |
+| **owner** | Named Project Lead or Frontend Lead |
+| **justification** | Why rank-1 value is required; design or measurement citation |
+| **authority citation** | `Rank 1: <PROJECT>-PRODUCTION-STANDARDS-APPROVAL-vN §…` overriding `Rank 2: OL-0N` |
+
+**Storage:** Production Decisions (C-12) in project SSOT, linked change-control appendix, or QA REPORT **Exception Registry** subsection.
+
+**Detail:** [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) §4.
+
+---
+
+## 7. Authority Conflict Protocol (Rank 1 vs Rank 2)
+
+Official resolution when **Project Production Standards** and **Approved Operator Laws** disagree on the same property.
+
+| Situation | AUTHORITY CONFLICT STATUS | Operator Law / Compiled CSS gate |
+|-----------|---------------------------|----------------------------------|
+| Rank-1 value matches OL | **PASS** | **PASS** (no conflict) |
+| Rank-1 differs from OL; **no** Exception Registry record (§6) | **FAIL** | **FAIL** |
+| Rank-1 differs from OL; **complete** Exception Registry record | **WAIVED** | **WAIVED** (per gate scope) |
+| Conflict not reviewed | **UNKNOWN** | **UNKNOWN** |
+
+**Examples:**
+
+- SSOT spacing token `64px` vs OL-01 gap scale, **no** exception record → **FAIL**.
+- Same conflict with complete §6 record → **WAIVED**.
+
+**Agent stop:** Do not ship rank-1 values that violate OL without §6 record — map to OL scale or escalate HITL.
+
+**Cross-ref:** [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) §5 · [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5.1 · [frontend-compliance-decision-model-v1.md](frontend-compliance-decision-model-v1.md) — canonical route from RAW VIOLATION to gate verdict (Stages 3–4).
+
+---
+
+## 8. Changelog
 
 | Date | Change |
 |------|--------|
 | 2026-06-13 | v1 — Frontend Production Authority Order: canonical 6-layer hierarchy; Approved Operator Laws OL-01–OL-07; critical conflict rules; agent stop behavior. |
+| 2026-06-14 | v1.1 — Enforcement Pack v1: Exception Registry §6; Authority Conflict Protocol §7. |
+| 2026-06-14 | v1.2 — Compliance Decision Model Pack: cross-ref §7 → decision route Stages 3–4. |

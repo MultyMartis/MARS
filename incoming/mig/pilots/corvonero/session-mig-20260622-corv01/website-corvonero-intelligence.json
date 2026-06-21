@@ -1,0 +1,137 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "website_ref": "WEB-CORV-01",
+  "url": "http://lk.corvonero.ru/",
+  "domain": "lk.corvonero.ru",
+  "captured_at": "2026-06-22T14:45:00.000Z",
+  "capture_mode": "website_intelligence_bounded_stage_2",
+  "evidence_grade": "B",
+  "supersedes_surface_snapshot": "website-surface-snapshot.json",
+  "platform": {
+    "tilda_probable": true,
+    "tilda_confirmed": "probable_from_form_blocks"
+  },
+  "page_structure": {
+    "type": "single_page_landing",
+    "sections_in_order": [
+      "hero",
+      "activity_types",
+      "why_us",
+      "services_grid",
+      "pricing",
+      "contact_cta",
+      "about",
+      "lead_form",
+      "footer_contacts"
+    ],
+    "headings": {
+      "h1": "«Корво Неро» — Внедрение и сопровождение 1С",
+      "h2_samples": ["Почему мы?", "Услуги", "Цены", "Связаться с нами", "О центре автоматизации «Корво Неро»"],
+      "h3_samples": ["Анализ", "Разработка", "Поддержка", "Внедрение", "Аудит настроек", "Обновление", "Интеграция", "Разработка", "Переход"]
+    }
+  },
+  "services_observed": [
+    "Внедрение 1С",
+    "Аудит настроек / «почему не работает программа 1С»",
+    "Обновление с сохранением доработок",
+    "Интеграция (сайт, маркировка, ЕГАИС, касса)",
+    "Разработка отчётов и печатных форм",
+    "Переход между конфигурациями 1С / КЭДО",
+    "Честный знак / маркировка (activity block)",
+    "Настройка торгового оборудования"
+  ],
+  "configurations_named_on_site": [],
+  "configurations_intake_claim": [
+    "1С:Управление торговлей",
+    "1С:Управление нашей фирмой",
+    "1С:Розница",
+    "1С:Комплексная автоматизация",
+    "1С:Бухгалтерия предприятия"
+  ],
+  "intake_alignment": {
+    "configurations": "contradiction — intake lists five configs; site does not name configurations",
+    "marking_breadth": "partial — marking mentioned generically; product-level marking list from intake not reflected",
+    "integrations": "aligned — site mentions site/marking/EGAIS/kassa integration",
+    "pricing_hourly": "aligned — 3000 ₽/hour matches intake",
+    "minimum_order": "needs_operator_verification — site shows hourly and «от» prices but not explicit 2h/6000 ₽ minimum",
+    "remote_model": "needs_operator_verification — site shows office address; intake says remote-first with NSO on-site only",
+    "partner_status": "needs_operator_verification — SAFE UNKNOWN in intake; not claimed on site"
+  },
+  "commercial_presentation": {
+    "offer_summary": "Центр автоматизации — внедрение, сопровождение, доработки, интеграции, маркировка, оборудование",
+    "pricing": [
+      { "item": "Цена часа работы специалиста", "value": "3000₽", "source": "site_claim" },
+      { "item": "Настройка веб-публикации", "value": "от 2500₽", "source": "site_claim" },
+      { "item": "Разработка печатной формы или отчета", "value": "от 7500₽", "source": "site_claim" },
+      { "item": "Стоимость проекта", "value": "индивидуально", "source": "site_claim" }
+    ],
+    "intake_pricing_note": "intake_claim — publication of prices on landing pages not approved for ads"
+  },
+  "cta_and_forms": {
+    "cta": ["Связаться с нами", "Оставьте заявку", "Обратитесь к нам"],
+    "form_fields": ["Имя", "Почта", "Телефон", "Описание задачи"],
+    "required_fields": ["Имя", "Телефон", "Описание задачи"]
+  },
+  "contacts": {
+    "phone": "+7 (383) 390-29-28",
+    "email": "contact@corvonero.ru",
+    "address": "г. Новосибирск, ул. Советская, 64/1, офис 804",
+    "geography_visible": "Новосибирск office"
+  },
+  "trust_and_proof": {
+    "cases": { "status": "absent", "claim_type": "not_verified" },
+    "certificates": { "status": "absent", "claim_type": "not_verified" },
+    "partner_badges": { "status": "absent", "claim_type": "not_verified" },
+    "reviews": { "status": "absent", "claim_type": "not_verified" },
+    "process_blocks": { "status": "confirmed_from_page", "items": ["Анализ", "Разработка", "Поддержка"] },
+    "legal_entity_on_site": { "status": "absent", "intake_claim": "ИП Никифоров Роман Вадимович — not on page" }
+  },
+  "mobile_surface": {
+    "viewport_audit": "not_performed",
+    "responsive_signals": "Tilda single-page — SAFE UNKNOWN mobile UX"
+  },
+  "business_intake_crosswalk": [
+    {
+      "topic": "Hourly rate 3000 ₽",
+      "site_claim": "3000₽ on page",
+      "intake_claim": "3000 ₽ confirmed",
+      "status": "aligned"
+    },
+    {
+      "topic": "Minimum order 6000 ₽ / 2 hours",
+      "site_claim": "not stated",
+      "intake_claim": "6000 ₽ / 2h confirmed",
+      "status": "needs_operator_verification"
+    },
+    {
+      "topic": "Supported 1C configurations",
+      "site_claim": "not enumerated",
+      "intake_claim": "five configs listed",
+      "status": "contradiction — site under-specifies vs intake"
+    },
+    {
+      "topic": "Product-level marking services",
+      "site_claim": "generic marking/Честный знак mention",
+      "intake_claim": "eleven product categories + TS PIOT",
+      "status": "needs_operator_verification — site does not prove breadth"
+    },
+    {
+      "topic": "Official 1C partner",
+      "site_claim": "not claimed",
+      "intake_claim": "SAFE UNKNOWN",
+      "status": "aligned — gap preserved"
+    },
+    {
+      "topic": "Cases and certificates",
+      "site_claim": "absent",
+      "intake_claim": "systematic proof package absent",
+      "status": "aligned — market gap confirmed"
+    }
+  ],
+  "limitations": [
+    "No separate service URLs — single-page structure only",
+    "No performance/conversion analytics",
+    "No redesign recommendations — observation only"
+  ]
+}

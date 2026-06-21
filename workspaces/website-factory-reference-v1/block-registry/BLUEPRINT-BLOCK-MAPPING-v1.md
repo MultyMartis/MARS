@@ -1,6 +1,6 @@
 # Website Factory — Blueprint Block Mapping v1
 
-**Версия:** v1  
+**Версия:** v1.1 *(WF-R01.2 Gate 2 — structural stances additive)*  
 **Область:** `workspaces/website-factory-reference-v1/block-registry/`  
 **Статус:** authoritative REQUIRED / OPTIONAL / FORBIDDEN per Core Blueprint  
 **Связь:** [BLUEPRINT-SYSTEM-v1.md](../blueprints/BLUEPRINT-SYSTEM-v1.md), [BLOCK-REGISTRY-v1.md](BLOCK-REGISTRY-v1.md), [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md)
@@ -17,6 +17,9 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 | block_id | LANDING | PROMO | CATALOG | ECOMMERCE | CORPORATE |
 |----------|---------|-------|---------|-----------|-----------|
+| HEADER_NAV | OPT* | REQ | REQ | REQ | REQ |
+| SEARCH | FORB | OPT | REQ | REQ | OPT |
+| FILTERS | FORB | FORB | REQ | REQ | OPT† |
 | HERO | REQ | REQ | OPT | OPT | REQ |
 | BENEFITS | REQ | OPT | FORB | FORB | OPT |
 | FEATURES | OPT | OPT | OPT | OPT | OPT |
@@ -49,6 +52,9 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 \* CATALOG: CTA allowed as RFQ/contact on PLP/PDP — not PPC sticky pattern.
 
+\* LANDING: `HEADER_NAV` OPTIONAL minimal — not catalog chrome.  
+† CORPORATE: `FILTERS` OPTIONAL catalog subtree only.
+
 ---
 
 ## LANDING Blueprint
@@ -62,11 +68,11 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 ### OPTIONAL
 
-`PRICING` · `FEATURES` · `CASES` · `TESTIMONIALS` · `CERTIFICATES` · `MAP`
+`PRICING` · `FEATURES` · `CASES` · `TESTIMONIALS` · `CERTIFICATES` · `MAP` · `HEADER_NAV` (minimal shell)
 
 ### FORBIDDEN
 
-`SERVICES` · `ABOUT` · `TEAM` · `PARTNERS` · `CATEGORIES` · `CATEGORY_GRID` · `PRODUCT_GRID` · `PRODUCT_CARD` · `REVIEWS` · `CART` · `CHECKOUT` · `PAYMENT` · `DELIVERY`
+`SERVICES` · `ABOUT` · `TEAM` · `PARTNERS` · `CATEGORIES` · `CATEGORY_GRID` · `PRODUCT_GRID` · `PRODUCT_CARD` · `REVIEWS` · `CART` · `CHECKOUT` · `PAYMENT` · `DELIVERY` · `FILTERS` · `SEARCH`
 
 **Operator rule:** cart or checkout on LANDING production → **halt** + reclassify ECOMMERCE.
 
@@ -79,15 +85,15 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 ### REQUIRED
 
-`HERO` · `SERVICES` · `ABOUT` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS`
+`HERO` · `SERVICES` · `ABOUT` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS` · `HEADER_NAV`
 
 ### OPTIONAL
 
-`TRUST` · `PROCESS` · `FAQ` · `CTA` · `LEAD_FORM` · `CASES` · `TEAM` · `TESTIMONIALS` · `REVIEWS` · `PRICING` · `FEATURES` · `MAP` · `CERTIFICATES` · `BENEFITS`
+`TRUST` · `PROCESS` · `FAQ` · `CTA` · `LEAD_FORM` · `CASES` · `TEAM` · `TESTIMONIALS` · `REVIEWS` · `PRICING` · `FEATURES` · `MAP` · `CERTIFICATES` · `BENEFITS` · `SEARCH`
 
 ### FORBIDDEN
 
-`CATEGORIES` · `CATEGORY_GRID` · `PRODUCT_GRID` · `PRODUCT_CARD` · `CART` · `CHECKOUT` · `PAYMENT` · `DELIVERY` · site-wide sticky CTA (LANDING pattern)
+`CATEGORIES` · `CATEGORY_GRID` · `PRODUCT_GRID` · `PRODUCT_CARD` · `CART` · `CHECKOUT` · `PAYMENT` · `DELIVERY` · `FILTERS` · site-wide sticky CTA (LANDING pattern)
 
 ---
 
@@ -98,7 +104,7 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 ### REQUIRED
 
-`CATEGORIES` · `PRODUCT_GRID` · `PRODUCT_CARD` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS`
+`CATEGORIES` · `PRODUCT_GRID` · `PRODUCT_CARD` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS` · `HEADER_NAV` · `FILTERS` · `SEARCH`
 
 ### OPTIONAL
 
@@ -119,7 +125,7 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 ### REQUIRED
 
-`CATEGORIES` · `PRODUCT_GRID` · `PRODUCT_CARD` · `CART` · `CHECKOUT` · `PAYMENT` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS`
+`CATEGORIES` · `PRODUCT_GRID` · `PRODUCT_CARD` · `CART` · `CHECKOUT` · `PAYMENT` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS` · `HEADER_NAV` · `FILTERS` · `SEARCH`
 
 ### OPTIONAL
 
@@ -138,11 +144,11 @@ Blueprint-level stance applies **site-wide** across all pages in the Blueprint u
 
 ### REQUIRED
 
-`HERO` · `SERVICES` · `ABOUT` · `TRUST` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS`
+`HERO` · `SERVICES` · `ABOUT` · `TRUST` · `CONTACTS` · `FOOTER` · `LEGAL_LINKS` · `HEADER_NAV`
 
 ### OPTIONAL
 
-`PARTNERS` · `CASES` · `TEAM` · `FAQ` · `CTA` · `LEAD_FORM` · `TESTIMONIALS` · `REVIEWS` · `CERTIFICATES` · `MAP` · `PRICING` · `PROCESS` · `FEATURES` · `BENEFITS` · catalog/ecommerce subtree blocks (inherit CATALOG/ECOMMERCE rows)
+`PARTNERS` · `CASES` · `TEAM` · `FAQ` · `CTA` · `LEAD_FORM` · `TESTIMONIALS` · `REVIEWS` · `CERTIFICATES` · `MAP` · `PRICING` · `PROCESS` · `FEATURES` · `BENEFITS` · `SEARCH` · `FILTERS` (catalog subtree) · catalog/ecommerce subtree blocks (inherit CATALOG/ECOMMERCE rows)
 
 ### FORBIDDEN
 
@@ -174,4 +180,4 @@ Page-level placement refinements — [PAGE-BLOCK-MAPPING-v1.md](PAGE-BLOCK-MAPPI
 
 ---
 
-*Blueprint Block Mapping version: v1. Canonical location: `workspaces/website-factory-reference-v1/block-registry/`.*
+*Blueprint Block Mapping version: v1.1 (WF-R01.2 Gate 2 structural slice). Canonical location: `workspaces/website-factory-reference-v1/block-registry/`.*

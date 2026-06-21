@@ -1,0 +1,46 @@
+{
+  "task": "M9.8.9-03C",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01",
+  "stamp": "20260619-171729",
+  "files": [
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/blockcommercialtrust.twig",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03c-work\\live-capture\\blockcommercialtrust.twig",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\blockcommercialtrust.twig.pre-m9.8.9-03c.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03c-work\\blockcommercialtrust.twig.patched",
+      "sha256_pre": "3c7fec65dc2872154793c7e32e8f10fe2520ee10966283db3c243c8dc9a962db",
+      "sha256_patched": "c20798e8387617195648798defa81612c5124935b087b5230d7faeea4456ba27",
+      "size_pre": 5331,
+      "size_patched": 11643,
+      "verify_sha256": "c20798e8387617195648798defa81612c5124935b087b5230d7faeea4456ba27",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "catalog/controller/product/category.php",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03c-work\\live-capture\\category.php",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.php.pre-m9.8.9-03c.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03c-work\\category.php.patched",
+      "sha256_pre": "10c2bdc81b3ab97eab139742c195ea966d4c2a98b2f4a5982e17ba215c89a436",
+      "sha256_patched": "b4594c74dfc726c96df0cd222e161b6b9c06a702c8f819f6057af530d7049036",
+      "size_pre": 22155,
+      "size_patched": 23106,
+      "verify_sha256": "b4594c74dfc726c96df0cd222e161b6b9c06a702c8f819f6057af530d7049036",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "assets/css/style.css",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03c-work\\live-capture\\style.css",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.9-03c.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03c-work\\style.css.patched",
+      "sha256_pre": "b7269752f629a2849d00e35fa7e930793c01a53af65ce8d875e052a5c297bf57",
+      "sha256_patched": "6cf6a70362b60903d0e438ccecd95d7bbb3249ef880be09e4f34d1ce78438880",
+      "size_pre": 290214,
+      "size_patched": 292648,
+      "verify_sha256": "6cf6a70362b60903d0e438ccecd95d7bbb3249ef880be09e4f34d1ce78438880",
+      "deploy_ok": true
+    }
+  ],
+  "phase": "post-deploy",
+  "twig_cache_cleared_count": 0,
+  "all_deploy_ok": true
+}

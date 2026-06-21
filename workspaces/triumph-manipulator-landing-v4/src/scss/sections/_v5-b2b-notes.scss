@@ -1,0 +1,63 @@
+@use '../utils/tokens' as t;
+
+.b2b-notes {
+    padding-bottom: t.$rhythm-lower;
+}
+
+.b2b-notes__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(24px, 4vw, 48px);
+    min-width: 0;
+    padding: clamp(28px, 3vw, 42px);
+    border: 1px solid t.$color-line-light;
+    background: t.$color-card;
+}
+
+.b2b-notes__content h3 {
+    margin: 0;
+    color: t.$color-text;
+    font-family: t.$font-display;
+    font-size: clamp(24px, 2.4vw, 32px);
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.b2b-notes__content > p {
+    max-width: 720px;
+    margin: 16px 0 0;
+    color: t.$color-text-muted;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.b2b-notes__list {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.b2b-notes__list li {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-items: center;
+    gap: 12px;
+    color: t.$color-text;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.b2b-notes__list i {
+    color: t.$color-red;
+}
+
+@media (max-width: 760px) {
+    .b2b-notes__inner {
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+}

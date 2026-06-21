@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-06-09T06:27:01.140390+00:00",
+  "task": "ROLLBACK TO HERO 3-COLUMN DOM STRUCTURE FIX BASELINE",
+  "restore_backups_used": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-quick-props.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-quick-props.bak",
+    "note": "pre-quick-props = state immediately after hero-3col-dom-fix deploy"
+  },
+  "restore_backup_hashes": {
+    "producthero.twig": "b32789fb8e98dfdfd88e5c4fc31e56cfacff94b5ada01158a296207eb624086e",
+    "style.css": "8d14fe52edad2b3fc2121e91c47b7f20b81b496547b55d3db685e0d757043a31"
+  },
+  "new_pre_rollback_backups": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.20260609-132627.pre-hero-3col-baseline-rollback.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.20260609-132627.pre-hero-3col-baseline-rollback.bak"
+  },
+  "pre_live_hashes": {
+    "producthero.twig": {
+      "bytes": 8562,
+      "sha256": "9f02cec4204747b03263f8e954fdf42fa40bffb0a667473fd602a30034ab6535"
+    },
+    "style.css": {
+      "bytes": 252353,
+      "sha256": "a50a74200612f788269499088dc8d0d33b6f1faeb9f85cc106d92b1b8d10fad0"
+    }
+  },
+  "files_restored": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css"
+  },
+  "files_not_touched": {
+    "product.php": "catalog/controller/product/product.php",
+    "config.php": "not accessed",
+    "js": "not accessed"
+  },
+  "controller_not_rolled_back": {
+    "pre_deploy_sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+    "post_deploy_sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+    "unchanged": true,
+    "markers": {
+      "defined('SUPER_ATTS')": true,
+      "foreach (SUPER_ATTS as $super_attr_id)": true,
+      "$data['super_atts']": true
+    }
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+  "hero_qa": {
+    "hero_found": true,
+    "dom": {
+      "grid_direct_children_count": 3,
+      "grid_direct_children_classes": [
+        "product-hero__col--media",
+        "product-hero__col--info",
+        "product-hero__col--commerce"
+      ],
+      "three_col_layout_ok": true,
+      "media_in_col_media": true,
+      "identity_in_col_info": true,
+      "specs_in_col_info": true,
+      "other_in_col_commerce": true,
+      "commerce_in_col_commerce": true
+    },
+    "post_change_markers": {
+      "quick-card": false,
+      "product-hero__prop-icon": false,
+      "prop-icon": false,
+      "fa-solid": false,
+      "fontawesome": false,
+      "primary-layout-fix": false,
+      "primary-structure-only": false,
+      "primary-specs-fix": false
+    },
+    "any_post_change_marker": false,
+    "super_atts_count": 10,
+    "super_atts_names": [
+      "Длина, мм",
+      "Ширина, мм",
+      "Высота, мм",
+      "Масса, кг",
+      "Конструкция",
+      "Наличие борта",
+      "Ножки",
+      "Отверстие под смеситель",
+      "Размер раковины (ДхШхВ, мм)",
+      "Тип опоры"
+    ],
+    "cart_btn": true,
+    "qty": true,
+    "wishlist": true,
+    "compare": true,
+    "fancybox": true,
+    "php_ok": true
+  },
+  "checklist": {
+    "1_grid_three_direct_children": true,
+    "2_three_col_classes_ok": true,
+    "3_super_atts_rendered": true,
+    "4_no_quick_cards": true,
+    "5_no_prop_icons": true,
+    "6_no_post_change_markers": true,
+    "7_twig_matches_backup": true,
+    "8_css_matches_backup": true,
+    "9_controller_unchanged": true,
+    "10_controller_super_atts_ok": true,
+    "11_php_ok": true,
+    "12_cart_wishlist_compare": true
+  },
+  "checklist_pass": true,
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\hero-3col-baseline-rollback\\spkb-18-7-vl5-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\hero-3col-baseline-rollback\\spkb-18-7-vl5-hero-mobile.png"
+  },
+  "status": "3-column baseline restored"
+}

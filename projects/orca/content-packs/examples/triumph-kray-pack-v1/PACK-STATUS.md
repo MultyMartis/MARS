@@ -2,7 +2,7 @@
 
 route_id: manipulyator-krasnodarskiy-kray
 route_folder: kray
-url: https://manipulator-triumph.ru/manipulyator-krasnodarskiy-kray/
+url: https://manipulator-triumph.ru/kray.html
 display_path: kray
 content_coverage: true
 production_copy_ready: true

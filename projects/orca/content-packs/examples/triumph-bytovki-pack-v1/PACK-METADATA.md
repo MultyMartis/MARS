@@ -7,8 +7,8 @@ pack_type: use-case-logistics
 project_ref: triumph-manipulator-krasnodar
 route_id: bytovki
 route_folder: bytovki
-route_slug: /perevozka-bytovok/
-canonical_url: https://manipulator-triumph.ru/perevozka-bytovok/
+route_slug: /bytovki.html
+canonical_url: https://manipulator-triumph.ru/bytovki.html
 display_path: bytovki
 locale: ru-RU
 artifact_state: production-ready-semantic

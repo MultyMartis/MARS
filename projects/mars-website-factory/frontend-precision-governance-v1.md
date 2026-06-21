@@ -94,16 +94,18 @@ TYPOGRAPHY PRECISION (line-height = font-size + 4px) — PASS | partial (list) |
 
 ## 4. No word breaking policy
 
-**Forbidden without separate operator approval:**
+**Forbidden without separate operator approval + Exception Registry:**
 
 | Property | Status |
 |----------|--------|
-| `letter-spacing` (non-zero) | **Forbidden** |
-| `word-break` (any value including `break-word`, `break-all`) | **Forbidden** on UI/headings |
-| `overflow-wrap: break-word` | **Forbidden** on UI/headings |
-| `hyphens: auto` | **Forbidden** for Russian UI copy |
+| `letter-spacing` | **Forbidden** — **any value** (including `0`, `normal`, `initial`, `inherit`, `unset`) |
+| `word-break` | **Forbidden** — **any value** (including `normal`, `break-word`, `break-all`) |
+| `overflow-wrap` | **Forbidden** — **any value** (including `normal`, `break-word`, `anywhere`) |
+| `hyphens` | **Forbidden** — **any value** (including `manual`, `auto`, `none`) |
 
-**Authority:** [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) — full CSS + selector policy.
+**Detection rule:** **property presence in `src/scss/**` or compiled `dist/*.css` = FAIL.** Value does not matter. Grep each property name — required count = **0** unless registered exception.
+
+**Authority:** [russian-no-word-splitting-typography-v1.md](russian-no-word-splitting-typography-v1.md) §1.1 — layout + HTML typograph policy; **not** permission to emit these properties in CSS.
 
 **Overflow resolution order:**
 
@@ -194,9 +196,11 @@ Precision compliance must be **provable** in REPORT — not chat claims.
 |-------|----------|
 | **Production Standards Draft** | Type table with line-heights; spacing token table mapped to §2; layout zone table (C-11) |
 | **Shell / Global Styles** | Demo page renders tokens; no forbidden CSS in global partials |
-| **Design Calibration** | §5 checks + `TYPOGRAPHY PRECISION` line |
-| **Foundation QA** | `WF GRID DISCIPLINE`, `WF LAYOUT DISCIPLINE`, `RU TYPOGRAPHY`, `TYPOGRAPHY PRECISION` lines |
+| **Design Calibration** | §5 checks + `TYPOGRAPHY PRECISION` line + **COMPILED CSS SPOT-CHECK** on `dist/*.css` |
+| **Foundation QA** | `WF GRID DISCIPLINE`, `WF LAYOUT DISCIPLINE`, `RU TYPOGRAPHY`, `TYPOGRAPHY PRECISION`, `OPERATOR LAW COMPLIANCE`, `COMPILED CSS COMPLIANCE`, `INLINE STYLE COMPLIANCE`, `ROOT COMPLIANCE` lines |
 | **Page production** | Block REPORT cites standards version; deviations = STRUCTURE CHANGE |
+
+**Enforcement authority:** [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) — source-only SCSS review does **not** satisfy compiled-output gates.
 
 ---
 
@@ -230,3 +234,4 @@ See **FP-0002 impact** in pack REPORT — conflicts listed; FP-0002 **not modifi
 |------|--------|
 | 2026-06-13 | v1 — Frontend Precision Governance Pack: spacing scales, percentage padding, typography px + mandatory line-height pre-flight, no word-break, RU HTML typography, layout pattern selection, evidence chain. |
 | 2026-06-13 | v1.1 — Authority chain aligned to [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) — Project SSOT rank 1; this doc rank 3. |
+| 2026-06-14 | v1.2 — Enforcement Pack v1: compiled CSS evidence chain; ROOT COMPLIANCE cross-ref. |

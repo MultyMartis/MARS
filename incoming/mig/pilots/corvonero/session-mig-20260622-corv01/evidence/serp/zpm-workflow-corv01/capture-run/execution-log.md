@@ -1,0 +1,35 @@
+# ZPM-workflow Corvonero SERP execution log
+
+**Session:** mig-20260622-corv01
+- 2026-06-21T20:29:10.393Z — MODE validation headless=false
+- 2026-06-21T20:29:10.399Z — START r1q01: программист 1С Новосибирск
+- 2026-06-21T20:29:35.704Z — DONE r1q01: grade=B captcha=none items=41
+- 2026-06-21T20:29:35.705Z — Waiting 59725ms before next query
+- 2026-06-21T20:30:35.431Z — START r1q05: интеграция 1С с сайтом Новосибирск
+- 2026-06-21T20:30:44.378Z — DONE r1q05: grade=B captcha=none items=39
+- 2026-06-21T20:30:44.378Z — Waiting 59116ms before next query
+- 2026-06-21T20:31:43.495Z — START r1q07: маркировка в 1С Новосибирск
+- 2026-06-21T20:31:51.775Z — DONE r1q07: grade=C captcha=blocked items=0
+- 2026-06-21T20:31:51.776Z — STOP_ON_CAPTCHA after r1q07
+- 2026-06-21T20:51:20.183Z — MODE batch headless=false
+- 2026-06-21T20:51:20.189Z — START r1q02: сопровождение 1С Новосибирск
+- 2026-06-21T20:51:36.331Z — DONE r1q02: grade=B captcha=none items=15
+- 2026-06-21T20:51:36.332Z — Waiting 118507ms before next query
+- 2026-06-21T20:53:34.844Z — START r1q03: доработка 1С Новосибирск
+- 2026-06-21T20:53:42.422Z — DONE r1q03: grade=B captcha=none items=44
+- 2026-06-21T20:53:50.755Z — REGISTRY throttled batch `batch1`: Grade B=4, Grade C=1, captcha=r1q07
+- 2026-06-21T20:58:58.627Z — MODE batch headless=false
+- 2026-06-21T20:58:58.631Z — START r1q04: доработка отчёта 1С Новосибирск
+- 2026-06-21T20:59:13.403Z — DONE r1q04: grade=B captcha=none items=31
+- 2026-06-21T20:59:13.403Z — Waiting 97175ms before next query
+- 2026-06-21T21:00:50.580Z — START r1q06: интеграция 1С Битрикс Новосибирск
+- 2026-06-21T21:00:57.712Z — DONE r1q06: grade=C captcha=blocked items=0
+- 2026-06-21T21:00:57.712Z — STOP_ON_CAPTCHA after r1q06
+- 2026-06-21T21:00:57.826Z — REGISTRY throttled batch `batch2`: Grade B=5, Grade C=2, captcha=r1q07,r1q06
+- 2026-06-21T21:07:17.097Z — MODE batch headless=false
+- 2026-06-21T21:07:17.104Z — START r1q08: Честный знак 1С Новосибирск
+- 2026-06-21T21:07:48.284Z — DONE r1q08: grade=B captcha=none items=33
+- 2026-06-21T21:07:48.285Z — Waiting 106637ms before next query
+- 2026-06-21T21:09:34.923Z — START r1q10: программа 1С не работает Новосибирск
+- 2026-06-21T21:09:42.543Z — DONE r1q10: grade=B captcha=none items=17
+- 2026-06-21T21:09:42.699Z — REGISTRY throttled batch `batch3`: Grade B=7, Grade C=2, captcha=r1q07,r1q06

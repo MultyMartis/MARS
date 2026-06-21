@@ -1,0 +1,26 @@
+{
+  "evidence_id": "ws-pass-a-ws-p3-002-20260622",
+  "query_id": "ws-p3-002",
+  "entered_phrase": "маркировка воды 1С",
+  "query_mode": "broad_unquoted",
+  "geography": "all_russia",
+  "source_file": null,
+  "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+  "source_hash": "41d35b769456c1cd9f65b43e0b9bd1a1296be36c1862e205f49297cd2aac54c5",
+  "collection_mode": "manual_operator_export",
+  "collection_date": "2026-06-22",
+  "row_count": 1,
+  "sheet_names": [
+    "Data"
+  ],
+  "observed_wordstat_total": 58,
+  "related_phrase_count": 1,
+  "ingestion_status": "ingested",
+  "evidence_grade": "B_semantic_discovery",
+  "external_source_classification": "mars_storage_external_evidence",
+  "limitations": [
+    "Nationwide broad — not regional Novosibirsk demand",
+    "Not exact phrase frequency",
+    "Not traffic forecast"
+  ]
+}

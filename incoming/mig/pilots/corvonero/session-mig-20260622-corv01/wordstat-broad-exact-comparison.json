@@ -1,0 +1,447 @@
+{
+  "schema_version": "1",
+  "session_id": "mig-20260622-corv01",
+  "generated_at": "2026-06-22T16:00:00.000Z",
+  "status": "deferred_to_pass_b",
+  "reason": "Two-pass policy — Pass A semantic discovery in progress; broad/exact comparison executes in Pass B on bounded shortlist",
+  "pass_a_note": "Pass A ws-p1-001 nationwide broad evidence registered — not compared to Pass B exact until Pass B starts",
+  "comparisons": [
+    {
+      "query_id": "ws-p1-001",
+      "phrase": "программист 1С",
+      "broad_phrase_frequency": {
+        "status": "semantic_evidence_only",
+        "value": null,
+        "pass_a_evidence_ref": "evidence/wordstat/pass-a-ws-p1-001-evidence.json",
+        "note": "Operator observed UI total 19682 — not ingested as frequency"
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p1-003",
+      "phrase": "сопровождение 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p1-004",
+      "phrase": "доработка 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p1-005",
+      "phrase": "интеграция 1С с сайтом",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p1-006",
+      "phrase": "интеграция 1С Битрикс",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p1-007",
+      "phrase": "маркировка в 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p1-008",
+      "phrase": "Честный знак 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-001",
+      "phrase": "доработка отчёта 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-002",
+      "phrase": "доработка печатной формы 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-003",
+      "phrase": "доработка РМК 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-004",
+      "phrase": "настройка синхронизации 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-005",
+      "phrase": "обновление доработанной 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-006",
+      "phrase": "срочно программист 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p2-007",
+      "phrase": "1С не работает",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    },
+    {
+      "query_id": "ws-p3-004",
+      "phrase": "ТС ПИОТ 1С",
+      "broad_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "quoted_phrase_frequency": {
+        "status": "not_captured",
+        "value": null
+      },
+      "regional_result": {
+        "region": "Новосибирск + Новосибирская область",
+        "status": "not_captured"
+      },
+      "nationwide_reference": {
+        "status": "not_collected",
+        "value": null,
+        "note": "Nationwide kept separate — not merged into primary regional evidence"
+      },
+      "commercially_relevant_subset": {
+        "status": "unknown",
+        "note": "Requires Wordstat related-query review after primary capture"
+      },
+      "interpretation_limitations": [
+        "Broad Wordstat frequency must not be presented as expected advertising traffic",
+        "Exact phrase operator syntax not verified without UI capture"
+      ]
+    }
+  ]
+}

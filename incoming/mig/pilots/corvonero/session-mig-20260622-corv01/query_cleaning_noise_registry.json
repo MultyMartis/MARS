@@ -1,0 +1,357 @@
+{
+  "schema_version": "1",
+  "session_id": "mig-20260622-corv01",
+  "generated_at": "2026-06-22T16:00:00.000Z",
+  "purpose": "query_cleaning_groundtruth_only",
+  "forbidden_use": "orca_negative_keyword_list",
+  "frequent_irrelevant_patterns": [
+    {
+      "pattern_class": "job-seeking",
+      "examples": [
+        "вакансии программист 1С",
+        "работа программистом 1С",
+        "hh.ru"
+      ],
+      "observed_in": [
+        "lq05",
+        "ws-p2-006"
+      ]
+    },
+    {
+      "pattern_class": "educational",
+      "examples": [
+        "курсы 1С",
+        "обучение 1С",
+        "с нуля"
+      ],
+      "observed_in": [
+        "seed_matrix"
+      ]
+    },
+    {
+      "pattern_class": "software-download",
+      "examples": [
+        "скачать 1С",
+        "бесплатно 1С",
+        "демо версия"
+      ],
+      "observed_in": [
+        "seed_matrix"
+      ]
+    },
+    {
+      "pattern_class": "informational",
+      "examples": [
+        "инструкция",
+        "как настроить",
+        "форум",
+        "документация"
+      ],
+      "observed_in": [
+        "lq20",
+        "lq21",
+        "lq06"
+      ]
+    },
+    {
+      "pattern_class": "regulatory",
+      "examples": [
+        "государственные требования маркировки",
+        "закон о маркировке"
+      ],
+      "observed_in": [
+        "lq17",
+        "lq21"
+      ]
+    },
+    {
+      "pattern_class": "equipment_without_service",
+      "examples": [
+        "купить сканер маркировки",
+        "оборудование Честный знак"
+      ],
+      "observed_in": [
+        "seed_matrix"
+      ]
+    },
+    {
+      "pattern_class": "operator_marking",
+      "examples": [
+        "оператор маркировки",
+        "регистрация в системе без 1С"
+      ],
+      "observed_in": [
+        "seed_matrix"
+      ]
+    },
+    {
+      "pattern_class": "platform_self_update",
+      "examples": [
+        "обновление платформы 1С своими руками"
+      ],
+      "observed_in": [
+        "seed_matrix"
+      ]
+    }
+  ],
+  "phrase_classifications": [
+    {
+      "query_id": "ws-p1-001",
+      "phrase": "программист 1С",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "job-seeking"
+      ],
+      "classification_basis": "serp_inference_from_lq01",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-002",
+      "phrase": "программист 1С Новосибирск",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "job-seeking"
+      ],
+      "classification_basis": "serp_inference_from_lq01",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-003",
+      "phrase": "сопровождение 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "educational"
+      ],
+      "classification_basis": "serp_inference_from_lq04",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-004",
+      "phrase": "доработка 1С",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "informational"
+      ],
+      "classification_basis": "serp_inference_from_lq03",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-005",
+      "phrase": "интеграция 1С с сайтом",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "informational",
+        "software-download"
+      ],
+      "classification_basis": "serp_inference_from_lq13",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-006",
+      "phrase": "интеграция 1С Битрикс",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "informational",
+        "software-download"
+      ],
+      "classification_basis": "serp_inference_from_lq14",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-007",
+      "phrase": "маркировка в 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "regulatory",
+        "software-download"
+      ],
+      "classification_basis": "serp_inference_from_lq17",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p1-008",
+      "phrase": "Честный знак 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "regulatory",
+        "software-download"
+      ],
+      "classification_basis": "serp_inference_from_lq19",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-001",
+      "phrase": "доработка отчёта 1С",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "informational"
+      ],
+      "classification_basis": "serp_inference_from_lq09",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-002",
+      "phrase": "доработка печатной формы 1С",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "informational"
+      ],
+      "classification_basis": "serp_inference_from_lq10",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-003",
+      "phrase": "доработка РМК 1С",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational"
+      ],
+      "classification_basis": "serp_inference_from_lq12",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-004",
+      "phrase": "настройка синхронизации 1С",
+      "intent_class": "direct-commercial",
+      "commercial_relevance": "high",
+      "noise_classes": [
+        "informational",
+        "software-download"
+      ],
+      "classification_basis": "serp_inference_from_lq15",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-005",
+      "phrase": "обновление доработанной 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "educational"
+      ],
+      "classification_basis": "matrix_expected_ambiguity_only",
+      "evidence_grade": "D",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-006",
+      "phrase": "срочно программист 1С",
+      "intent_class": "troubleshooting",
+      "commercial_relevance": "mixed",
+      "noise_classes": [
+        "job-seeking",
+        "informational",
+        "vacancy"
+      ],
+      "classification_basis": "serp_inference_from_lq05",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p2-007",
+      "phrase": "1С не работает",
+      "intent_class": "troubleshooting",
+      "commercial_relevance": "mixed",
+      "noise_classes": [
+        "job-seeking",
+        "informational",
+        "vacancy"
+      ],
+      "classification_basis": "serp_inference_from_lq06",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p3-001",
+      "phrase": "маркировка пива 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "regulatory"
+      ],
+      "classification_basis": "serp_inference_from_lq23",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p3-002",
+      "phrase": "маркировка воды 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "regulatory"
+      ],
+      "classification_basis": "serp_inference_from_lq24",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p3-003",
+      "phrase": "маркировка лекарств 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "regulatory"
+      ],
+      "classification_basis": "serp_inference_from_lq25",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p3-004",
+      "phrase": "ТС ПИОТ 1С",
+      "intent_class": "regulatory",
+      "commercial_relevance": "low",
+      "noise_classes": [
+        "informational",
+        "regulatory"
+      ],
+      "classification_basis": "serp_inference_from_lq21",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    },
+    {
+      "query_id": "ws-p3-005",
+      "phrase": "маркировка автозапчастей 1С",
+      "intent_class": "commercial-mixed",
+      "commercial_relevance": "moderate",
+      "noise_classes": [
+        "informational",
+        "regulatory"
+      ],
+      "classification_basis": "serp_inference_from_lq26",
+      "evidence_grade": "C",
+      "note": "Groundtruth classification from SERP signals and matrix — not final negative-keyword list"
+    }
+  ]
+}

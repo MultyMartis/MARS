@@ -1,0 +1,32 @@
+{
+  "task": "M9.8.9-09A",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01",
+  "stamp": "20260621-104243",
+  "phase": "pre-deploy",
+  "files": [
+    {
+      "remote_path": "assets/js/main.js",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-09a-work\\live-capture\\assets__js__main.js",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.9-09a-filter-limit-persistence.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-09a-work\\assets__js__main.js.patched",
+      "sha256_pre": "fda2ef8cddea2e0a9c3ba71caf64bf6996ed3fdcce85d0eb545bbd95d7a4cf6f",
+      "sha256_patched": "3e25fabebd954399ece49cd31bc352f15752f82aabb28b711585a457656843d0",
+      "size_pre": 201337,
+      "size_patched": 201522,
+      "verify_sha256": "3e25fabebd954399ece49cd31bc352f15752f82aabb28b711585a457656843d0",
+      "deploy_ok": true
+    },
+    {
+      "remote_path": "catalog/controller/product/category.php",
+      "capture": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-09a-work\\live-capture\\catalog__controller__product__category.php",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.php.pre-m9.8.9-09a-filter-limit-persistence.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-09a-work\\catalog__controller__product__category.php.patched",
+      "sha256_pre": "b4594c74dfc726c96df0cd222e161b6b9c06a702c8f819f6057af530d7049036",
+      "sha256_patched": "7e5221b7df4f6e45782d7d2786b92ffe2ce0b0d8219e4e44c396650f9af424e6",
+      "size_pre": 23106,
+      "size_patched": 23442,
+      "verify_sha256": "7e5221b7df4f6e45782d7d2786b92ffe2ce0b0d8219e4e44c396650f9af424e6",
+      "deploy_ok": true
+    }
+  ]
+}

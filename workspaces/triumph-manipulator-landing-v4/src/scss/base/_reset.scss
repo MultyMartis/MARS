@@ -2,10 +2,12 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    outline: none;
 }
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body {

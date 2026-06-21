@@ -1,0 +1,15 @@
+{
+  "stamp": "20260609-164306",
+  "task": "pdp-document-type-logic-restore",
+  "remote_twig": "catalog/view/theme/default/template/product/producttabs.twig",
+  "local_twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\content-rebuild-work\\producttabs.twig",
+  "rollback_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.twig.pre-docs-type-restore.bak",
+  "deployed_sha256": "bbe306680aaef8d5bd9f0d9d15bfeb86982f8865d7bc3706505639a874c45048",
+  "rollback_sha256": "c9a02099c8dfbfc4d46f8a83a53ae71ea1b337b0059eaaf8e2405ba14cd2ea7b",
+  "cache_cleared": 0,
+  "cache_errors": [],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.twig.pre-docs-type-restore.bak -> catalog/view/theme/default/template/product/producttabs.twig",
+    "Clear system/storage/cache/template/"
+  ]
+}

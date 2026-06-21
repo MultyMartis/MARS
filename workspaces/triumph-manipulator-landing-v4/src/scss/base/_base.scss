@@ -1,4 +1,6 @@
 @use '../utils/tokens' as t;
+@use '../utils/container' as c;
+@use '../utils/section-headings' as headings;
 
 :root {
     color-scheme: light;
@@ -9,13 +11,13 @@ body {
     background: t.$color-black;
     color: t.$color-ink;
     font-family: t.$font-main;
-    line-height: 1.45;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .section-shell {
-    width: min(100%, t.$container);
-    margin: 0 auto;
-    padding-inline: t.$pad-desktop;
+    @include c.page-container;
+    @include c.page-container-padding-responsive;
 }
 
 .landing-main {
@@ -36,6 +38,8 @@ body {
 }
 
 .section-heading {
+    min-width: 0;
+    max-width: 100%;
     margin-bottom: clamp(32px, 4vw, 58px);
 }
 
@@ -47,7 +51,8 @@ body {
 }
 
 .section-heading--center {
-    max-width: 680px;
+    width: 100%;
+    max-width: min(680px, 100%);
     margin-inline: auto;
     text-align: center;
 }
@@ -63,6 +68,7 @@ body {
     margin-top: 10px;
     color: t.$color-text-dim;
     font-size: 13px;
+    line-height: 17px;
 }
 
 .section-eyebrow {
@@ -73,7 +79,7 @@ body {
     color: t.$color-red;
     font-family: t.$font-display;
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: 0.04em;
     line-height: 1;
     text-transform: uppercase;
@@ -88,12 +94,14 @@ body {
 
 .section-title {
     margin: 14px 0 0;
+    max-width: 100%;
+    min-width: 0;
     color: t.$color-text;
     font-family: t.$font-display;
-    font-size: clamp(46px, 5.2vw, 82px);
-    font-weight: 900;
+    @include headings.section-h2-mobile;
+    font-weight: 600;
     letter-spacing: -0.055em;
-    line-height: 0.9;
+    text-wrap: pretty;
     text-transform: uppercase;
 }
 
@@ -102,7 +110,7 @@ body {
     margin: 22px 0 0;
     color: t.$color-text-muted;
     font-size: clamp(17px, 1.5vw, 22px);
-    line-height: 1.45;
+    line-height: 26px;
 }
 
 .first-screen {
@@ -110,15 +118,30 @@ body {
     min-height: 100vh;
     overflow: hidden;
     background:
-        linear-gradient(90deg, rgba(5, 7, 11, 0.99) 0%, rgba(5, 7, 11, 0.92) 32%, rgba(5, 7, 11, 0.58) 58%, rgba(5, 7, 11, 0.08) 100%),
-        linear-gradient(180deg, rgba(5, 7, 11, 0.8) 0%, rgba(5, 7, 11, 0.08) 42%, rgba(5, 7, 11, 0.98) 100%),
-        url('../img/hero/hero-bg-final.png') right top / auto 100% no-repeat,
+        linear-gradient(90deg, rgba(9, 12, 39, 0.99) 0%, rgba(9, 12, 39, 0.92) 32%, rgba(9, 12, 39, 0.58) 58%, rgba(9, 12, 39, 0.08) 100%),
+        linear-gradient(180deg, rgba(9, 12, 39, 0.8) 0%, rgba(9, 12, 39, 0.08) 42%, rgba(9, 12, 39, 0.98) 100%),
+        url('../img/hero/hero-bg-final.jpg') right top / auto 100% no-repeat,
         t.$color-night;
 }
 
-.first-screen > * {
+// Hero/content below header; header keeps its own layer (drawer/overlay above hero).
+.first-screen > *:not(.first-screen__bg):not(.first-screen__overlay):not(.site-header) {
     position: relative;
     z-index: 1;
+}
+
+.first-screen > .site-header {
+    position: relative;
+    z-index: 120;
+    isolation: isolate;
+}
+
+body.site-header-menu-open .first-screen > .hero {
+    pointer-events: none;
+}
+
+body.site-header-menu-open .first-screen > .site-header {
+    pointer-events: auto;
 }
 
 @media (max-width: 1180px) {
@@ -132,31 +155,18 @@ body {
 }
 
 @media (max-width: 760px) {
-    .section-shell {
-        padding-inline: t.$pad-mobile;
-    }
-
     .section-light--upper,
     .section-light--lower {
         padding-top: clamp(52px, 13vw, 74px);
     }
 
-    .section-title {
-        font-size: clamp(38px, 12vw, 54px);
-    }
-
     .first-screen {
         min-height: auto;
         background:
-            linear-gradient(90deg, rgba(5, 7, 11, 0.98) 0%, rgba(5, 7, 11, 0.9) 58%, rgba(5, 7, 11, 0.44) 100%),
-            linear-gradient(180deg, rgba(5, 7, 11, 0.8) 0%, rgba(5, 7, 11, 0.52) 54%, rgba(5, 7, 11, 1) 100%),
-            url('../img/hero/hero-bg-final.png') 64% top / auto 680px no-repeat,
+            linear-gradient(90deg, rgba(9, 12, 39, 0.98) 0%, rgba(9, 12, 39, 0.9) 58%, rgba(9, 12, 39, 0.44) 100%),
+            linear-gradient(180deg, rgba(9, 12, 39, 0.8) 0%, rgba(9, 12, 39, 0.52) 54%, rgba(9, 12, 39, 1) 100%),
+            url('../img/hero/hero-bg-final.jpg') 64% top / auto 680px no-repeat,
             t.$color-night;
     }
 }
 
-@media (min-width: 761px) and (max-width: 1180px) {
-    .section-shell {
-        padding-inline: t.$pad-tablet;
-    }
-}

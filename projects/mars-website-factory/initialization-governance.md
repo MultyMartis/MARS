@@ -34,6 +34,7 @@ It does not tell a project how to build a page. It tells operators when a build 
 
 | Requirement | Meaning |
 |-------------|---------|
+| **Production mode declared** | `production_mode: PIXEL_PERFECT \| TEMPLATE_ART` in LOC-ZONE passport — **STOP** if undeclared per [website-factory-production-modes-charter-v1.md](website-factory-production-modes-charter-v1.md) |
 | **Clean-start discipline** | Active workspace, source version, allowed assets, and forbidden residue are named before implementation. |
 | **Implementation bootstrap** | Operator records enough initial state for another operator to reproduce the starting assumptions. |
 | **Source-lock-before-build** | Active source authority is established before layout, styling, responsive, or asset decisions. |

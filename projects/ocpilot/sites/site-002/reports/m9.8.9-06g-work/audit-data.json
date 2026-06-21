@@ -1,0 +1,222 @@
+{
+  "task": "M9.8.9-06G",
+  "timestamp": "2026-06-19T06:31:55.736377+00:00",
+  "authority": "SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01",
+  "queries": {
+    "zero_price_total": [
+      {
+        "total_zero_price": "5"
+      }
+    ],
+    "zero_price_sample": [],
+    "zero_price_products_detail": [],
+    "zero_price_category_names": [
+      {
+        "product_id 1": "144",
+        "category_id": "270",
+        "category_name": "Ванны цельнотянутые ЛЮКС"
+      },
+      {
+        "product_id 1": "145",
+        "category_id": "270",
+        "category_name": "Ванны цельнотянутые ЛЮКС"
+      },
+      {
+        "product_id 1": "1057",
+        "category_id": "270",
+        "category_name": "Ванны цельнотянутые ЛЮКС"
+      },
+      {
+        "product_id 1": "1058",
+        "category_id": "270",
+        "category_name": "Ванны цельнотянутые ЛЮКС"
+      },
+      {
+        "product_id 1": "3071",
+        "category_id": "306",
+        "category_name": "Столы СТАНДАРТ-600 с полкой-решеткой"
+      }
+    ],
+    "reported_ids": [],
+    "reported_ids_index": [
+      {
+        "product_id": "144",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000",
+        "effective_price": "0.0000"
+      },
+      {
+        "product_id": "145",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000",
+        "effective_price": "0.0000"
+      },
+      {
+        "product_id": "1057",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000",
+        "effective_price": "0.0000"
+      },
+      {
+        "product_id": "1058",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000",
+        "effective_price": "0.0000"
+      },
+      {
+        "product_id": "3071",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000",
+        "effective_price": "0.0000"
+      }
+    ],
+    "zero_price_by_category": [
+      {
+        "root_category_id": "79",
+        "category_name": "Нейтральное оборудование",
+        "zero_price_count 1": "5"
+      },
+      {
+        "root_category_id": "80",
+        "category_name": "Моечные ванны",
+        "zero_price_count 1": "4"
+      },
+      {
+        "root_category_id": "270",
+        "category_name": "Ванны цельнотянутые ЛЮКС",
+        "zero_price_count 1": "4"
+      },
+      {
+        "root_category_id": "301",
+        "category_name": "Столы",
+        "zero_price_count 1": "1"
+      },
+      {
+        "root_category_id": "305",
+        "category_name": "Столы серии СТАНДАРТ",
+        "zero_price_count 1": "1"
+      },
+      {
+        "root_category_id": "306",
+        "category_name": "Столы СТАНДАРТ-600 с полкой-решеткой",
+        "zero_price_count 1": "1"
+      }
+    ],
+    "zero_in_301": [
+      {
+        "cnt": "1"
+      }
+    ],
+    "zero_in_80": [
+      {
+        "cnt": "4"
+      }
+    ],
+    "zero_in_index_effective": [
+      {
+        "products_with_zero_effective_index": "5"
+      }
+    ],
+    "zero_product_and_index": [
+      {
+        "cnt": "5"
+      }
+    ],
+    "price_range_301": [
+      {
+        "min_price": "0.0000",
+        "max_price": "72630.0000",
+        "product_count": "420"
+      }
+    ],
+    "price_range_301_excl_zero": [
+      {
+        "min_price": "5405.0000",
+        "max_price": "72630.0000"
+      }
+    ],
+    "zero_effective_in_301": [
+      {
+        "product_id": "3071",
+        "model": "СПБ-С-10/6",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000"
+      }
+    ],
+    "price_range_80": [
+      {
+        "min_price": "0.0000",
+        "max_price": "75071.0000",
+        "product_count": "152"
+      }
+    ],
+    "price_range_80_excl_zero": [
+      {
+        "min_price": "5553.0000",
+        "max_price": "75071.0000"
+      }
+    ],
+    "zero_effective_in_80": [
+      {
+        "product_id 1": "144",
+        "model": "ВМЦ-Л-1/500",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000"
+      },
+      {
+        "product_id 1": "145",
+        "model": "ВМЦ-Л-2/400",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000"
+      },
+      {
+        "product_id 1": "1057",
+        "model": "ВМЦ-Л-2/500",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000"
+      },
+      {
+        "product_id 1": "1058",
+        "model": "ВМЦ-Л-1/400",
+        "oc_price": "0.0000",
+        "index_price": "0.0000",
+        "special": "0.0000"
+      }
+    ],
+    "index_coverage_301": [
+      {
+        "active_products": "420",
+        "indexed_products": "420"
+      }
+    ]
+  },
+  "plp": {
+    "stoly": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "fetched_at": "2026-06-19T06:32:23.974312+00:00",
+      "placeholder_from": "0",
+      "placeholder_to": "500 000",
+      "range_min_attr": null,
+      "range_max_attr": null,
+      "po_zaprosu_count": 0
+    },
+    "sinks": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/",
+      "fetched_at": "2026-06-19T06:32:27.518422+00:00",
+      "placeholder_from": "0",
+      "placeholder_to": "500 000",
+      "range_min_attr": null,
+      "range_max_attr": null,
+      "po_zaprosu_count": 0
+    }
+  }
+}

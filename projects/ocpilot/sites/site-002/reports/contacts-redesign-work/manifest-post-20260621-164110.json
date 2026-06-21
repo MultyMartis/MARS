@@ -1,0 +1,45 @@
+{
+  "task": "SITE-002-CONTACTS-PAGE-MAIN-REDESIGN",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01",
+  "stamp": "20260621-164110",
+  "files": [
+    {
+      "remote": "catalog/view/theme/default/template/information/contact.twig",
+      "capture_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-redesign-work\\live-capture\\catalog__view__theme__default__template__information__contact.twig",
+      "backup_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\contact.twig.pre-contact-redesign.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-redesign-work\\contact.twig",
+      "sha256_pre": "2b80ac985e71d55cee21084be13b90c4da6388d576b676e06e924faaa0337408",
+      "sha256_deploy": "d33d78fe125d46a0bf64eb7fabef3730e2da844107357197ed42a2cdfca07381",
+      "size_pre": 1919,
+      "size_deploy": 7934,
+      "verify_sha256": "d33d78fe125d46a0bf64eb7fabef3730e2da844107357197ed42a2cdfca07381",
+      "deploy_ok": true
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/blockanyquestionsform.twig",
+      "capture_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-redesign-work\\live-capture\\catalog__view__theme__default__template__sections__blockanyquestionsform.twig",
+      "backup_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\blockanyquestionsform.twig.pre-contact-redesign.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-redesign-work\\blockanyquestionsform.twig",
+      "sha256_pre": "966d8c05fbfb51ad001e6a3dd387b28c31acba11100c0cdd3d7aeb2ea6d347cc",
+      "sha256_deploy": "6f137ec007974d7e8df44de29d780132482e7fa82dc470e76070bfced6d9a740",
+      "size_pre": 3765,
+      "size_deploy": 2873,
+      "verify_sha256": "6f137ec007974d7e8df44de29d780132482e7fa82dc470e76070bfced6d9a740",
+      "deploy_ok": true
+    },
+    {
+      "remote": "assets/css/style.css",
+      "capture_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-redesign-work\\live-capture\\assets__css__style.css",
+      "backup_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-contact-redesign.bak",
+      "patched_local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\contacts-redesign-work\\style.css.patched",
+      "sha256_pre": "43efd997a4334b21ad906ff1eba315035c57204771738284cc7d23292cde24c7",
+      "sha256_deploy": "0a159c01b286515a9b49e79be5feefdbcd5f3ba89eddb03f502bed0dd8ebf7b1",
+      "size_pre": 290991,
+      "size_deploy": 297331,
+      "verify_sha256": "0a159c01b286515a9b49e79be5feefdbcd5f3ba89eddb03f502bed0dd8ebf7b1",
+      "deploy_ok": true
+    }
+  ],
+  "twig_cache_cleared": [],
+  "all_deploy_ok": true
+}

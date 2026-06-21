@@ -1,0 +1,21 @@
+{
+  "stamp": "20260609-033251",
+  "action": "full-rollback-pre-w1a",
+  "restored_from": {
+    "producthero": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-w1a.bak",
+    "producttabs": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.twig.pre-w1b.bak",
+    "style": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-w1a.bak"
+  },
+  "remote_paths": {
+    "producthero": "catalog/view/theme/default/template/product/producthero.twig",
+    "producttabs": "catalog/view/theme/default/template/product/producttabs.twig",
+    "style": "assets/css/style.css"
+  },
+  "pre_rollback_backup": {
+    "producthero": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.20260609-033251.pre-rollback.bak",
+    "producttabs": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.20260609-033251.pre-rollback.bak",
+    "style": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.20260609-033251.pre-rollback.bak"
+  },
+  "cache_cleared": 0,
+  "cache_errors": []
+}

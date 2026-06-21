@@ -1,0 +1,180 @@
+{
+  "timestamp": "2026-06-09T04:01:52.032865+00:00",
+  "backups": {
+    "config.php": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\config.php.pre-superatts-fix.bak",
+    "product.php": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\product.php.pre-superatts-fix.bak",
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-superatts-fix.bak",
+    "producttabs.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producttabs.twig.pre-superatts-fix.bak"
+  },
+  "remote_config.php": {
+    "size": 1907,
+    "text_preview": "<?php\n// HTTP\ndefine('HTTP_SERVER', 'https://zpm.new-site.space/');\n\n// HTTPS\ndefine('HTTPS_SERVER', 'https://zpm.new-site.space/');\n\n// DIR\ndefine('DIR_APPLICATION', '/home/p/polygonws/zpm.new-site.space/public_html/catalog/');\ndefine('DIR_ROOT', '/home/p/polygonws/zpm.new-site.space/public_html/');\ndefine('DIR_SYSTEM', '/home/p/polygonws/zpm.new-site.space/public_html/system/');\ndefine('DIR_IMAGE', '/home/p/polygonws/zpm.new-site.space/public_html/image/');\ndefine('DIR_STORAGE', '/home/p/polyg"
+  },
+  "remote_product.php": {
+    "size": 29896,
+    "text_preview": "<?php\nclass ControllerProductProduct extends Controller {\n\tprivate $error = array();\n\n\tpublic function index() {\n\t\t$this->load->language('product/product');\n\n\t\t$documents = [];\n\t\t$this->load->model('catalog/product');\n\n\n\t\t$data['breadcrumbs'] = array();\n\n\t\t$data['breadcrumbs'][] = array(\n\t\t\t'text' => $this->language->get('text_home'),\n\t\t\t'href' => $this->url->link('common/home')\n\t\t);\n\n\t\t$this->document->setBodyClass('page page--product');\n\n\t\t$this->load->model('catalog/category');\n\n\t\tif (isset($"
+  },
+  "remote_producthero.twig": {
+    "size": 8562,
+    "text_preview": "<section class=\"product-hero\">\n  <div class=\"container\">\n    <div class=\"product-hero__grid\">\n\n      <!-- Галерея -->\n      <div class=\"product-hero__media\">\n        <div class=\"product-gallery\">\n\n          <div class=\"product-gallery__main swiper js-product-gallery\">\n            <div class=\"swiper-wrapper\">\n              {% if popup %}\n                <div class=\"swiper-slide\">\n                  <a\n                    class=\"product-gallery__fancybox\"\n                    href=\"{{ popup }}\"\n    "
+  },
+  "remote_producttabs.twig": {
+    "size": 3305,
+    "text_preview": "<section class=\"product-tabs\">\n  <div class=\"container\">\n    <div class=\"tabs js-tabs\">\n      <div class=\"tabs__head\" role=\"tablist\" aria-label=\"Разделы товара\">\n        <button class=\"tabs__tab section-title__like-h3 is-active\" type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"tab-desc\" data-tab=\"desc\">Описание</button>\n        <button class=\"tabs__tab section-title__like-h3\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"tab-spec\" data-tab=\"spec\">Характеристики</butto"
+  },
+  "admin_config_super_atts": null,
+  "config_super_atts": {
+    "raw": "define('SUPER_ATTS', array(12,13,14,15,21,25,26,28,29,30,33,115)",
+    "ids": [
+      12,
+      13,
+      14,
+      15,
+      21,
+      25,
+      26,
+      28,
+      29,
+      30,
+      33,
+      115
+    ]
+  },
+  "config_has_expected": true,
+  "controller_analysis": {
+    "has_super_atts_constant_usage": true,
+    "has_super_atts_array_build": true,
+    "in_array_super_atts": true,
+    "dimension_rows": true,
+    "snippet": "$data['super_atts'] =[];\n\t\t\tif ($product_info['length'] > 0) $data['super_atts'][] = array('name'=>\"Длина, мм\", \"text\" => intval($product_info['length']), 'attribute_id' => 0);\n\t\t\tif ($product_info['width'] > 0) $data['super_atts'][] = array('name'=>\"Ширина, мм\", \"text\" => intval($product_info['width']), 'attribute_id' => 0);\n\t\t\tif ($product_info['height'] > 0) $data['super_atts'][] = array('name'=>\"Высота, мм\", \"text\" => intval($product_info['height']), 'attribute_id' => 0);\n\t\t\tif ($product_info['weight'] > 0) $data['super_atts'][] = array('name'=>\"Масса, кг\", \"text\" => round((float)$product_info['weight'], 2), 'attribute_id' => 0);\n\n\t\t\tif (!empty($data['attribute_groups']))\n\t\t\t\t{\n\t\t\t\t\tif (!empty($data['super_atts']) )\n\t\t\t\t\t\tarray_unshift($data['attribute_groups'], array('attribute_group_"
+  },
+  "twig_analysis": {
+    "uses_super_atts_loop": true,
+    "hardcoded_dims_only": false,
+    "product_hero_props": true,
+    "product_hero_props_item": true
+  },
+  "modification_cache": [
+    {
+      "path": "system/storage/modification/catalog/controller/product/product.php",
+      "exists": false
+    }
+  ],
+  "bath_products": {
+    "header": [
+      "Show databases navigation as tree In the navigation panel, replaces the database tree with a selector"
+    ],
+    "data": [
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Link with main panel Link with main panel by highlighting the current database or table."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Display logo Show logo in navigation panel."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Logo link URL URL where logo in the navigation panel will point to."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Enable highlighting Highlight server under the mouse cursor."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Maximum items on first level The number of items that can be displayed on each page on the first level of the navigation tree."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Minimum number of items to display the filter box Defines the minimum number of items (tables, views, routines and events) to display a filter box."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Recently used tables Maximum number of recently used tables; set 0 to disable."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Favorite tables Maximum number of favorite tables; set 0 to disable."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Navigation panel width Set to 0 to collapse navigation panel."
+      }
+    ]
+  },
+  "bath_seo": {
+    "header": [
+      "Show databases navigation as tree In the navigation panel, replaces the database tree with a selector"
+    ],
+    "data": [
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Link with main panel Link with main panel by highlighting the current database or table."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Display logo Show logo in navigation panel."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Logo link URL URL where logo in the navigation panel will point to."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Enable highlighting Highlight server under the mouse cursor."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Maximum items on first level The number of items that can be displayed on each page on the first level of the navigation tree."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Minimum number of items to display the filter box Defines the minimum number of items (tables, views, routines and events) to display a filter box."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Recently used tables Maximum number of recently used tables; set 0 to disable."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Favorite tables Maximum number of favorite tables; set 0 to disable."
+      },
+      {
+        "show databases navigation as tree in the navigation panel, replaces the database tree with a selector": "Navigation panel width Set to 0 to collapse navigation panel."
+      }
+    ]
+  },
+  "bath_url": "https://zpm.new-site.space/Link with main panel Link with main panel by highlighting the current database or table.",
+  "live_bath": {
+    "url": "https://zpm.new-site.space/Link with main panel Link with main panel by highlighting the current database or table.",
+    "error": "URL can't contain control characters. '/Link with main panel Link with main panel by highlighting the current database or table.' (found at least ' ')"
+  },
+  "live_table": {
+    "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/stol-proizvodstvennyy-sp-p-18-6-1800h600h850",
+    "hero_atts": [
+      {
+        "name": "Длина, мм",
+        "value": "1800"
+      },
+      {
+        "name": "Ширина, мм",
+        "value": "600"
+      },
+      {
+        "name": "Высота, мм",
+        "value": "850"
+      },
+      {
+        "name": "Масса, кг",
+        "value": "36"
+      },
+      {
+        "name": "Конструкция",
+        "value": "разборная"
+      },
+      {
+        "name": "Ножки",
+        "value": "уголок 40х40 (нержавеющая сталь AISI 430, 1.5 мм)"
+      },
+      {
+        "name": "Наличие борта",
+        "value": "нет"
+      },
+      {
+        "name": "Тип опоры",
+        "value": "опора-болт"
+      },
+      {
+        "name": "Усиление",
+        "value": "ламинированная ДСП (16 мм)"
+      }
+    ],
+    "hero_count": 9,
+    "has_php_error": false
+  },
+  "attribute_table": []
+}

@@ -1,0 +1,122 @@
+{
+  "task": "M9.8.9-06J",
+  "run_at": "2026-06-19T07:17:58.918289+00:00",
+  "probes": [
+    {
+      "id": "stoly_baseline",
+      "category": "Столы",
+      "category_id": 301,
+      "kind": "primary",
+      "filter": null,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/",
+      "product_cards": 15,
+      "pass": true
+    },
+    {
+      "id": "stoly_attr51",
+      "category": "Столы",
+      "category_id": 301,
+      "kind": "primary",
+      "filter": "attr[51][]=Без полки",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[51][]=%D0%91%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BB%D0%BA%D0%B8",
+      "product_cards": 15,
+      "pass": true
+    },
+    {
+      "id": "stoly_construction_slug",
+      "category": "Столы",
+      "category_id": 301,
+      "kind": "regression",
+      "filter": "attr[construction][]=сварная (неразборная)",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/?filters=attr[construction][]=%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%28%D0%BD%D0%B5%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%29",
+      "product_cards": 15,
+      "pass": true
+    },
+    {
+      "id": "podtovarniki_baseline",
+      "category": "Подтоварники",
+      "category_id": 322,
+      "kind": "primary",
+      "filter": null,
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/",
+      "product_cards": 11,
+      "pass": true
+    },
+    {
+      "id": "podtovarniki_attr51",
+      "category": "Подтоварники",
+      "category_id": 322,
+      "kind": "primary",
+      "filter": "attr[51][]",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki/?filters=attr[51][]=600%D1%85400%D1%85300",
+      "product_cards": 1,
+      "pass": true
+    },
+    {
+      "id": "sinks_shell_size",
+      "category": "Моечные ванны",
+      "category_id": 80,
+      "kind": "regression",
+      "filter": "attr[shell-size][]=1100х500х400",
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/?filters=attr[shell-size][]=1100%D1%85500%D1%85400",
+      "product_cards": 2,
+      "pass": true
+    },
+    {
+      "id": "zonty_construction",
+      "category": "Зонты вытяжные",
+      "category_id": 207,
+      "kind": "regression",
+      "filter": "attr[construction][]=угловая, купольная",
+      "url": "https://zpm.new-site.space/zonty-vytyazhnye/?filters=attr[construction][]=%D1%83%D0%B3%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F%2C%20%D0%BA%D1%83%D0%BF%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F",
+      "product_cards": 1,
+      "pass": true
+    }
+  ],
+  "checks": {
+    "stoly_baseline": {
+      "product_cards": 15,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "stoly_attr51": {
+      "product_cards": 15,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "stoly_construction_slug": {
+      "product_cards": 15,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "podtovarniki_baseline": {
+      "product_cards": 11,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "podtovarniki_attr51": {
+      "product_cards": 1,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "sinks_shell_size": {
+      "product_cards": 2,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "zonty_construction": {
+      "product_cards": 1,
+      "pass_min_cards": 1,
+      "pass": true
+    },
+    "primary_attr51_fixed": {
+      "pass": true,
+      "stoly_attr51_cards": 15,
+      "podtovarniki_attr51_cards": 1
+    },
+    "regression_slug_filters": {
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

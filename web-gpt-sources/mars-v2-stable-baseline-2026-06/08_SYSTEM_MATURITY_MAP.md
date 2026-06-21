@@ -40,7 +40,12 @@
 | **Cold Brain (ARCHIVE)** | materialized | Contents per-item SAFE UNKNOWN |
 | **HomeGateway** | planned / draft | Surface layer doc pack |
 | **NOVA** | foundation complete | Implementation not started |
-| **Triumph programme** | operational delivery (workspace) | Reference case — not Factory runtime |
+| **Triumph programme** | operational delivery (workspace) | Reference case + client pack — **canonical ws v6**; not Factory runtime |
+| **ISBD execution case** | operational delivery | Client delivery #2 — `workspaces/isbd-care-landing/` |
+| **BZPM execution case** | research phase complete | Client delivery #3 — `projects/website-factory/execution-cases/bzpm-catalog-redesign/`; workspace SAFE UNKNOWN |
+| **ATLAS** | foundation + population (docs) | Business Reality Registry — Waves 1–6B attested; **no** runtime engine |
+| **OPS** | foundation + pilots PARTIAL | WF-01/WF-02 live binding pilots; **no** automation engine |
+| **Factory LOC-ZONE** | operational (records) | `workspaces/website-factory-operations/` — ROC-01; FP-0001 pilot; not `project_id` |
 | **Legacy numbered web-gpt-sources** | historical | Import only |
 | **GitGuard** | operational (REGISTERED) | Repository Survivability Layer under mars-survivability; human-invoked; not autonomous product |
 | **IdeaBox / continuity** | operational (optional) | Incubation Layer — not mandatory program entry |

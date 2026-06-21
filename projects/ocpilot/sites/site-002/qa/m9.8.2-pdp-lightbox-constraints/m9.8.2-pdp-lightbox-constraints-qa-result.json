@@ -1,0 +1,61 @@
+{
+  "task": "m9.8.2-pdp-lightbox-constraints",
+  "timestamp": "2026-06-17T21:12:00",
+  "authority": "SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14",
+  "pdp_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+  "sku": "СПКБ-18/7-ВЛ5",
+  "asset_checks": {
+    "applyProductFancyboxClasses_connected": true,
+    "mainClass_includes_is_product_fancybox": true,
+    "css_desktop_80vw_80vh": true,
+    "css_mobile_95vw_90vh": true,
+    "css_targets_f_panzoom_content": true,
+    "object_fit_contain": true
+  },
+  "viewport_metrics": {
+    "desktop-1920": {
+      "imgW": 500,
+      "imgH": 500,
+      "wRatio": 0.26,
+      "hRatio": 0.463,
+      "maxWidth": "1536px",
+      "maxHeight": "864px",
+      "objectFit": "contain",
+      "pass": true
+    },
+    "desktop-1440": {
+      "imgW": 500,
+      "imgH": 500,
+      "wRatio": 0.347,
+      "hRatio": 0.556,
+      "maxWidth": "1152px",
+      "maxHeight": "720px",
+      "objectFit": "contain",
+      "pass": true
+    },
+    "mobile-390": {
+      "imgW": 371,
+      "imgH": 371,
+      "wRatio": 0.95,
+      "hRatio": 0.439,
+      "maxWidth": "370.5px",
+      "maxHeight": "759.6px",
+      "objectFit": "contain",
+      "pass": true
+    }
+  },
+  "qa_checklist": {
+    "open_first_image": "PASS — Playwright click + screenshot",
+    "switch_images": "PASS — next button advances (manual spot-check in session)",
+    "close": "PASS — Escape / toolbar close available",
+    "no_overflow": "PASS — ratios within caps",
+    "no_crop": "PASS — object-fit contain",
+    "no_stretch": "PASS — width/height auto + contain",
+    "visually_smaller": "PASS — 500px img on 1920 viewport vs prior near-fullscreen",
+    "fancybox_works": "PASS — container opens with thumbs + navigation"
+  },
+  "screenshots": [
+    "lightbox-open-desktop-1440.png",
+    "lightbox-open-mobile-390.png"
+  ]
+}

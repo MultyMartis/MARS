@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "request_id": "req-or09-verify01",
+  "status": "failed",
+  "failed_at": "2026-06-03T18:47:55.089Z",
+  "code": "VALIDATION_ERROR",
+  "message": "session_id must not be set before adapter processing (v0.1)",
+  "details": [
+    "session_id must not be set before adapter processing (v0.1)"
+  ],
+  "transport_ref": "incoming/mig/requests/request-req-or09-verify01.json"
+}

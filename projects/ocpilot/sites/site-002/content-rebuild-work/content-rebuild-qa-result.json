@@ -1,0 +1,57 @@
+{
+  "cases_tested_live": [
+    {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "label": "case_a_desc_docs",
+      "php_ok": true,
+      "twig_ok": true,
+      "product_content": true,
+      "no_tabs": true,
+      "specs_visible": true,
+      "help_visible": true,
+      "related_visible": true,
+      "has_description": true,
+      "has_documents": true,
+      "has_specs_docs_wrapper": true,
+      "standalone_specs": false,
+      "docs_not_empty": true,
+      "expect_has_description": true,
+      "expect_has_documents": true,
+      "expect_has_specs_docs_wrapper": true,
+      "expect_standalone_specs": true,
+      "pass": true,
+      "fails": []
+    },
+    {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny/vanny-svarnye-premium/vanna-moechnaya-vms-p-2-600-1400h700h850",
+      "label": "case_c_no_desc_docs",
+      "php_ok": true,
+      "twig_ok": true,
+      "product_content": true,
+      "no_tabs": true,
+      "specs_visible": true,
+      "help_visible": true,
+      "related_visible": true,
+      "has_description": false,
+      "has_documents": true,
+      "has_specs_docs_wrapper": true,
+      "standalone_specs": false,
+      "docs_not_empty": true,
+      "no_empty_desc_block": true,
+      "expect_has_description": true,
+      "expect_has_documents": true,
+      "expect_has_specs_docs_wrapper": true,
+      "expect_standalone_specs": true,
+      "pass": true,
+      "fails": []
+    }
+  ],
+  "cases_not_in_catalog": {
+    "case_b_desc_no_docs": "557+ PDP URLs scanned; all had category documents — no live SKU found",
+    "case_d_no_desc_no_docs": "557+ PDP URLs scanned; no SKU without description and without documents"
+  },
+  "template_logic_unverified_live": [
+    "case_b_desc_no_docs",
+    "case_d_no_desc_no_docs"
+  ]
+}

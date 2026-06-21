@@ -60,7 +60,7 @@
 | Operator manual passes | PLP / filter / breakpoint / CSS / Twig polish · **JS refinements (04B)** |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
-| Next planned | Remaining M9.8.9 tasks per roadmap · deferred M9.8.3/4/6/8 · **M10** — not authorized |
+| Next planned | Remaining M9.8.9 tasks per roadmap · **Corporate Pages Program** — IA **READY** · design charter pending · deferred M9.8.3/4/6/8 · **M10** — not authorized |
 | Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
 
 **Baseline doc:** [baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
@@ -146,6 +146,28 @@
 ### Активный этап
 
 **M9.8.9 Minor Fixes Pack #1** — remaining tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md)
+
+### Corporate Pages Program
+
+**Status:** **OPEN** — Research **COMPLETE** · IA / Architecture **READY** · Copy system **REGISTERED** · copy content not started · design / implementation not started  
+**Program doc:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md)  
+**IA map:** [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md)  
+**Copy standard:** [BZPM-COPY-STANDARDS-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md)
+
+| ID | Page | URL (TEST) | Research | IA | Copy |
+|----|------|------------|----------|-----|------|
+| M9.13 | About Company | `/about` | Complete | Mapped | Registered |
+| M9.14 | Delivery | `/delivery` | Complete | Mapped | Registered |
+| M9.15 | Payment | `/payment-methods` | Complete | Mapped | Registered |
+| M9.16 | Dealers | `/dealers` | Complete | Mapped | Registered |
+| M9.17 | Warranty | `/guarantee` | Complete | Mapped | Registered |
+| M9.18 | Custom Manufacturing | `/custom-equipment` | Complete | Mapped | Registered |
+
+**Research artifacts:** [M9.13](reports/BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md) · [M9.14](reports/BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md) · [M9.15](reports/BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.16](reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.17](reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.18](reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
+
+**PAGE-COPY artifacts:** [M9.13](copy/BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.md) · [M9.14](copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.md) · [M9.15](copy/BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md) · [M9.16](copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.md) · [M9.17](copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md) · [M9.18](copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.md)
+
+**Contacts (separate workstream):** Status **Delivered** — IA mapped for cross-links only. Evidence: [SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md](reports/SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md)
 
 ### Отложено (M9.8 UX Polish Pack — остаток)
 

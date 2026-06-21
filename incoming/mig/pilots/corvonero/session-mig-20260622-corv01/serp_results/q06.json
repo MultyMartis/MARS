@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q06",
+  "captured_at": "2026-06-22T12:40:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "без гео",
+  "city": null,
+  "device": "mobile",
+  "query": "интеграция 1С Битрикс",
+  "serp_type": "mixed_bitrix_1c",
+  "aggregators": ["uslugi.yandex.ru"],
+  "organic_results": [
+    { "position": 1, "title": "Настройка 1С-Битрикс в Новосибирске — Яндекс Услуги", "url": "https://uslugi.yandex.ru/65-novosibirsk/category/kompyuteryi-i-it/administrirovanie/nastrojka-1sbitriks--4583", "surface_type": "aggregator", "snippet": "64 системных администратора, рейтинг 4.8", "player_scope": "aggregator" },
+    { "position": 2, "title": "Программист битрикс в Новосибирске", "url": "https://uslugi.yandex.ru/65-novosibirsk/category?text=программист+битрикс", "surface_type": "aggregator", "snippet": "81 специалист — Bitrix + 1C mentions in profiles", "player_scope": "aggregator" },
+    { "position": 3, "title": "Интеграция 1С с сайтом Битрикс — Studio Expert", "url": "https://novosibirsk.studio-expert.ru/services/integration_1c/", "surface_type": "organic", "snippet": "Built-in Bitrix-1C exchange", "player_scope": "local_web_studio" },
+    { "position": 4, "title": "Интеграция 1с и сайта на 1С-Битрикс | Студия ЯЛ", "url": "https://www.yalstudio.ru/razrabotka/integratsiya-1s/", "surface_type": "organic", "snippet": "CommerceML and custom API", "player_scope": "local_web_studio" }
+  ],
+  "commercial_signal": "strong",
+  "noise_signal": "moderate",
+  "cluster_note": "Query blends Bitrix site integrators with 1C programmers; aggregator presence high"
+}

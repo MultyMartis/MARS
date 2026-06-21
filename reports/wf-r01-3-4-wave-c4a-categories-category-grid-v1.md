@@ -336,9 +336,9 @@ IMPLEMENTATION AUTHORIZED — BOTH IDENTITIES
 
 | Field | Value |
 |-------|-------|
-| **Commit hash** | *(populated after selective commit)* |
+| **Commit hash** | `f1ce535` |
 | **Commit message** | `foundry: complete WF-R01.3.4 category references` |
-| **Push result** | *(populated after push)* |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | Wave C4A selective paths only |
 | **No foreign lane confirmation** | **Confirmed** |
 

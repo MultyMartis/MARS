@@ -1,0 +1,24 @@
+{
+  "evidence_id": "ws-pass-a-ws-p2-003-no-result-20260622",
+  "query_id": "ws-p2-003",
+  "entered_phrase": "доработка РМК",
+  "matrix_seed_phrase": "доработка РМК 1С",
+  "query_mode": "broad_unquoted",
+  "geography": "all_russia",
+  "source_file": null,
+  "source_path_external": null,
+  "source_hash": null,
+  "collection_mode": "manual_operator_export",
+  "collection_date": "2026-06-22",
+  "wordstat_ui_result": "no results found",
+  "numeric_frequency": "not_available",
+  "ingestion_status": "no_result_for_entered_formulation",
+  "evidence_meaning": "exact seed formulation not represented in the returned Wordstat surface",
+  "thematic_demand": "not_disproved",
+  "alternate_formulation_review": "required",
+  "evidence_grade": "B_operator_report",
+  "limitations": [
+    "Operator entered without «1С» — Wordstat returned no results for exact broad formulation",
+    "Not zero_market_demand — frequency not recorded as 0"
+  ]
+}

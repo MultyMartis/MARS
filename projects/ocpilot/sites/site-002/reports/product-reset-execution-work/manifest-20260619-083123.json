@@ -1,0 +1,146 @@
+{
+  "manifest_id": "product-reset-execution-20260619-083123",
+  "created_at": "2026-06-19T08:32:12.990609+00:00",
+  "authority": "SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01",
+  "operator_approval": "GO CONFIRMED",
+  "beget_backup": "CONFIRMED",
+  "physical_images_policy": "DO NOT DELETE",
+  "dry_run_reference": "SITE-002-PRODUCT-RESET-DRY-RUN-FINAL.md",
+  "database": "polygonws_zpm",
+  "site_url": "https://zpm.new-site.space/",
+  "pre_capture_file": "pre-capture-20260619-083123.json",
+  "pre_counts": {
+    "oc_product": "3134",
+    "product_seo_urls": "3134",
+    "oc_product_attribute": "10175",
+    "oc_product_image": "6",
+    "oc_product_price_index": "1977"
+  },
+  "delete_plan": [
+    {
+      "phase": "A",
+      "table": "oc_coupon_product",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "A",
+      "table": "oc_customer_wishlist",
+      "expected_rows": "27"
+    },
+    {
+      "phase": "A",
+      "table": "oc_cart",
+      "expected_rows": "16"
+    },
+    {
+      "phase": "A",
+      "table": "oc_googleshopping_product",
+      "expected_rows": "1"
+    },
+    {
+      "phase": "A",
+      "table": "oc_googleshopping_product_status",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "A",
+      "table": "oc_googleshopping_product_target",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "B",
+      "table": "oc_product_price_index",
+      "expected_rows": "1977"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_attribute",
+      "expected_rows": "10175"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_description",
+      "expected_rows": "3134"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_discount",
+      "expected_rows": "1"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_filter",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_image",
+      "expected_rows": "6"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_option_value",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_option",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_related",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_reward",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_special",
+      "expected_rows": "2"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_category",
+      "expected_rows": "3134"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_download",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_layout",
+      "expected_rows": "57"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_to_store",
+      "expected_rows": "3134"
+    },
+    {
+      "phase": "C",
+      "table": "oc_product_recurring",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "C",
+      "table": "oc_review",
+      "expected_rows": "0"
+    },
+    {
+      "phase": "D",
+      "table": "oc_seo_url (product)",
+      "expected_rows": "3134"
+    },
+    {
+      "phase": "E",
+      "table": "oc_product",
+      "expected_rows": "3134"
+    }
+  ]
+}

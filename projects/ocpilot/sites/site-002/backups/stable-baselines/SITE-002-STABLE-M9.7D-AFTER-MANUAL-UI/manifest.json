@@ -1,0 +1,412 @@
+{
+  "checkpoint_name": "SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI",
+  "site_id": "SITE-002",
+  "environment": "TEST",
+  "test_url": "https://zpm.new-site.space",
+  "timestamp_utc": "2026-06-14T22:35:36.832679+00:00",
+  "stable_state": "M7.1 + M8.3 + M9 + M9.5 + M9.7B/C + operator manual UI refinement on TEST",
+  "supersedes": "SITE-002-STABLE-M9-COMPLETE-20260615",
+  "visual_baseline_note": "LIVE TEST STATE AFTER MANUAL UI REFINEMENT — do NOT use M9.7C or M9-COMPLETE as visual baseline",
+  "next_planned_stage": "M10 (not authorized — checkpoint only)",
+  "mode": "read-only-backup",
+  "qa_summary": {
+    "pass": 26,
+    "fail": 0,
+    "warn": 0
+  },
+  "data_snapshot_summary": {
+    "active_sku_count": 608,
+    "branch_category_images": [
+      {
+        "category_id 1": "79",
+        "name": "Нейтральное оборудование",
+        "image": "catalog/Category-image/nejtralnoe-oborudovanie-2.w...",
+        "status": "1"
+      },
+      {
+        "category_id 1": "80",
+        "name": "Моечные ванны",
+        "image": "catalog/Category-image/moechnye-vanny.webp",
+        "status": "1"
+      },
+      {
+        "category_id 1": "207",
+        "name": "Зонты вытяжные",
+        "image": "catalog/Category-image/zonty-vytyazhnye.webp",
+        "status": "1"
+      },
+      {
+        "category_id 1": "301",
+        "name": "Столы",
+        "image": "catalog/Category-image/stoly.webp",
+        "status": "1"
+      },
+      {
+        "category_id 1": "322",
+        "name": "Подтоварники и подставки",
+        "image": "catalog/Category-image/podtovarniki-i-podstavki.we...",
+        "status": "1"
+      },
+      {
+        "category_id 1": "326",
+        "name": "Тележки сервировочные",
+        "image": "catalog/Category-image/telezhki-servirovochnye.web...",
+        "status": "1"
+      }
+    ],
+    "profile_categories": [
+      79,
+      301,
+      80,
+      322,
+      207,
+      326
+    ]
+  },
+  "files": [
+    {
+      "remote_path": "system/library/zpm/category_visibility.php",
+      "local_path": "files/system/library/zpm/category_visibility.php",
+      "size_bytes": 5543,
+      "sha256": "da5d81e94e4eba574b94ddb894907d3a0362574906b8248fb1bde4605028cb74",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1",
+        "M9.5",
+        "M9.7C"
+      ]
+    },
+    {
+      "remote_path": "catalog/controller/product/katalog.php",
+      "local_path": "files/catalog/controller/product/katalog.php",
+      "size_bytes": 6345,
+      "sha256": "b9c9f32221e81c3c1aa56324e032dfe82b7f0d42b05c44b841e13811c748dfb2",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1",
+        "M9.7C"
+      ]
+    },
+    {
+      "remote_path": "catalog/controller/product/category.php",
+      "local_path": "files/catalog/controller/product/category.php",
+      "size_bytes": 22103,
+      "sha256": "4ed6db8db424cf7c2123ab6ea6c74e8dad8c9d10b3e922e2014cf207c611538e",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1",
+        "M9",
+        "M9.5"
+      ]
+    },
+    {
+      "remote_path": "catalog/controller/common/header.php",
+      "local_path": "files/catalog/controller/common/header.php",
+      "size_bytes": 7670,
+      "sha256": "e77fa0bb2200845ba8ba10f43279b6dd173465ad2ee007f79953b337cf9b3bd7",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1",
+        "M9.7C"
+      ]
+    },
+    {
+      "remote_path": "catalog/controller/common/footer.php",
+      "local_path": "files/catalog/controller/common/footer.php",
+      "size_bytes": 3339,
+      "sha256": "1d4b15cb9fd96a7cc792d6c3b3a43c15b01924535a6517d2af8a7a42cd19a7c5",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1"
+      ]
+    },
+    {
+      "remote_path": "catalog/controller/common/home.php",
+      "local_path": "files/catalog/controller/common/home.php",
+      "size_bytes": 3709,
+      "sha256": "8bdf16d6ee30078d541518bfc23fd39683f2676cf6cc44a1413440fa47d16a00",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/common/megamenu.twig",
+      "local_path": "files/catalog/view/theme/default/template/common/megamenu.twig",
+      "size_bytes": 4190,
+      "sha256": "78b9cfc5c3647a09aae87c6f632eafbe77cc0c45861c0b4a608199548d354978",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1",
+        "M9.7D-manual"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/common/footer.twig",
+      "local_path": "files/catalog/view/theme/default/template/common/footer.twig",
+      "size_bytes": 9710,
+      "sha256": "9be5bcf2fa8cea09b940305f9fba1367c35608fe26683e921efae83c174b1b47",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/catalogsections.twig",
+      "local_path": "files/catalog/view/theme/default/template/sections/catalogsections.twig",
+      "size_bytes": 984,
+      "sha256": "cf9bd96f334bc6d93f10f626e22e525b2ddf1d09bfdcb2fee880367c4d75ba81",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/offcanvasmenu.twig",
+      "local_path": "files/catalog/view/theme/default/template/sections/offcanvasmenu.twig",
+      "size_bytes": 5157,
+      "sha256": "1dc6b22372cdecd0aa5fb0124ae0fa1e5714edd1f82cfcd25e5e6fc0ae11606f",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M7.1",
+        "M9.7D-manual"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/product/category.twig",
+      "local_path": "files/catalog/view/theme/default/template/product/category.twig",
+      "size_bytes": 5769,
+      "sha256": "291daa368db27daca9185c47a9164cb07139a1be727cd0d47e7cb0190c65c94e",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9.5",
+        "M9.7D-manual"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "local_path": "files/catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "size_bytes": 18478,
+      "sha256": "bcf9d1e9d0fc5f74af7698a9c7275df2c8c1fa504783be48fbd291f944cff049",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/attribute_filter_visibility.php",
+      "local_path": "files/system/library/zpm/attribute_filter_visibility.php",
+      "size_bytes": 1724,
+      "sha256": "99bb35e0bb1ca3888a97f84d0afe46d9357372aa3c54bd0098b578b848af3e00",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M8.3-W2"
+      ]
+    },
+    {
+      "remote_path": "catalog/model/catalog/product.php",
+      "local_path": "files/catalog/model/catalog/product.php",
+      "size_bytes": 58556,
+      "sha256": "4dea62375e261bfb2fea986511405f34b28b5c3d4a98c1bbda8520bc31094659",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M8.3-W2",
+        "M9"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profile_resolver.php",
+      "local_path": "files/system/library/zpm/filter_profile_resolver.php",
+      "size_bytes": 6207,
+      "sha256": "a987d4fbf6fc24429f7196a297b227d390a6a5e2e315c3f616fb94ee0b47087e",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profiles/global_hidden.php",
+      "local_path": "files/system/library/zpm/filter_profiles/global_hidden.php",
+      "size_bytes": 569,
+      "sha256": "63d146bc82a556e52b3adc4a003b003791ddf5ee0134117ff41f3adec3039ea4",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profiles/301_stoly.php",
+      "local_path": "files/system/library/zpm/filter_profiles/301_stoly.php",
+      "size_bytes": 1316,
+      "sha256": "27b89d4203887c8e59c20aef1e333fcb2d484e181bd2edd1b5e1d0e1dbe16538",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9-Phase1"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profiles/80_moechnye_vanny.php",
+      "local_path": "files/system/library/zpm/filter_profiles/80_moechnye_vanny.php",
+      "size_bytes": 1441,
+      "sha256": "7650df0ba4dc251bfcff09aae669a4c213c06fb022d41165e6c668208854094b",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9-Phase2"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profiles/322_podtovarniki.php",
+      "local_path": "files/system/library/zpm/filter_profiles/322_podtovarniki.php",
+      "size_bytes": 1703,
+      "sha256": "87e3c4eddba97b02727209cc0348f54a04ce7e5c1d62d1aa511b46f9acea1de9",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9-Phase3"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profiles/207_zonty.php",
+      "local_path": "files/system/library/zpm/filter_profiles/207_zonty.php",
+      "size_bytes": 1163,
+      "sha256": "8a33cc1c9bd8d0005fbfe4c05895cc7ca9153077aeb3c341fc7bacdb31ae80fb",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9-Phase3"
+      ]
+    },
+    {
+      "remote_path": "system/library/zpm/filter_profiles/326_telezhki.php",
+      "local_path": "files/system/library/zpm/filter_profiles/326_telezhki.php",
+      "size_bytes": 764,
+      "sha256": "f98cbf903995908d5b8f9ab45bd2ab2eb981d3f32cdbef88bae0ebeca107950b",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9-Phase3"
+      ]
+    },
+    {
+      "remote_path": "catalog/view/theme/default/stylesheet/stylesheet.css",
+      "local_path": "files/catalog/view/theme/default/stylesheet/stylesheet.css",
+      "size_bytes": 17312,
+      "sha256": "5b1a13b6cf733e03e8fc728da987eb747344388623fa044e5dd23e69f3bfe1f5",
+      "source": "live-ftp-test",
+      "milestones": [
+        "M9.7D-manual"
+      ]
+    }
+  ],
+  "missing_files": [
+    {
+      "remote_path": "catalog/view/theme/default/stylesheet/zpm.css",
+      "error": "550 Failed to open file."
+    },
+    {
+      "remote_path": "catalog/view/theme/default/stylesheet/zpm-catalog.css",
+      "error": "550 Failed to open file."
+    }
+  ],
+  "category_images": [
+    {
+      "remote_path": "image/catalog/Category-image/stoly.webp",
+      "local_path": "images/category-image/stoly.webp",
+      "size_bytes": 65110,
+      "sha256": "1c8804f506d321f7b0ec867214a4e3d4fb148f9d14bea80c3d74171d0dface3f"
+    },
+    {
+      "remote_path": "image/catalog/Category-image/moechnye-vanny.webp",
+      "local_path": "images/category-image/moechnye-vanny.webp",
+      "size_bytes": 82702,
+      "sha256": "d2bc204a0ab81266fb76ae548e1be4e794f5efead2f07d15caee5db3ad186375"
+    },
+    {
+      "remote_path": "image/catalog/Category-image/podtovarniki-i-podstavki.webp",
+      "local_path": "images/category-image/podtovarniki-i-podstavki.webp",
+      "size_bytes": 59172,
+      "sha256": "7ad714d10e315b65ba95fdeebc141f86138a6ae9b03f7d04775b9fa8977739cb"
+    },
+    {
+      "remote_path": "image/catalog/Category-image/zonty-vytyazhnye.webp",
+      "local_path": "images/category-image/zonty-vytyazhnye.webp",
+      "size_bytes": 112666,
+      "sha256": "453eb18ad821bd7c323b0e35b38febb92675fdbf292721d2f37f2d37e574d5b1"
+    },
+    {
+      "remote_path": "image/catalog/Category-image/telezhki-servirovochnye.webp",
+      "local_path": "images/category-image/telezhki-servirovochnye.webp",
+      "size_bytes": 106614,
+      "sha256": "8ed52705395b0a6628b189aa8e0c153474b649f3a2975510877cff04a01c017e"
+    }
+  ],
+  "database_dumps": [],
+  "database_json_exports": [
+    {
+      "filename": "oc_product.json",
+      "path": "database/oc_product.json",
+      "size_bytes": 20729,
+      "sha256": "f8b58bcc126124f5a9315ee398461c5c521e5c11426f6f5e40cccf3147806f60",
+      "row_count": 25,
+      "expected_count": 3134
+    },
+    {
+      "filename": "oc_product_attribute.json",
+      "path": "database/oc_product_attribute.json",
+      "size_bytes": 9394,
+      "sha256": "68f2a122d4048f2ea8c4cf1a65fe4ae1c3711e741a3b0a9e11254fc74df818c1",
+      "row_count": 83,
+      "expected_count": 10169
+    },
+    {
+      "filename": "oc_attribute.json",
+      "path": "database/oc_attribute.json",
+      "size_bytes": 130,
+      "sha256": "cfc043c59b5db88a32a6855d8b5c58728f25b4ba081222139eab1ea6da147232",
+      "row_count": 0,
+      "expected_count": 53
+    },
+    {
+      "filename": "oc_attribute_description.json",
+      "path": "database/oc_attribute_description.json",
+      "size_bytes": 3334,
+      "sha256": "e173be2a4676c71857b7a31ce88b1f4fc022aca27ff833ea548033f7c5acb147",
+      "row_count": 13,
+      "expected_count": 53
+    },
+    {
+      "filename": "oc_category.json",
+      "path": "database/oc_category.json",
+      "size_bytes": 30679,
+      "sha256": "5c11c24b8ab9f53cb8b00d9ba096da87403761c94a4e0090a3252e5e6bbe8859",
+      "row_count": 109,
+      "expected_count": 190
+    },
+    {
+      "filename": "oc_category_description.json",
+      "path": "database/oc_category_description.json",
+      "size_bytes": 348,
+      "sha256": "ca9057d9122400df5d6796bfe7a0f7ef5f4b5395f0dc4ee9d44b71925dbdc24c",
+      "row_count": 1,
+      "expected_count": 190
+    }
+  ],
+  "database_errors": [
+    "scoped sql dump: HTTP Error 500: Internal Server Error"
+  ],
+  "deploy_manifests_reference": [
+    "m7.1-launch-mode-work/backups/m7.1-launch-mode-deploy-20260614-173622.json",
+    "m8.3-wave1-cleanup-work/m8.3-wave1-cleanup-result-20260614-182952.json",
+    "m8.3-wave2-cleanup-work/backups/m8.3-wave2-deploy-20260614-184547.json",
+    "m9-phase1-tables-work/backups/m9-phase1-deploy-20260614-193725.json",
+    "m9-phase2-sinks-work/backups/m9-phase2-deploy-20260614-195231.json",
+    "m9-phase3-remaining-work/backups/m9-phase3-deploy-20260614-200051.json",
+    "m9.5-root-hub-work/backups/m9.5-root-hub-deploy-20260614-203141.json",
+    "m9.7c-image-megamenu-work/backups/m9.7c-deploy-20260614-215218.json"
+  ],
+  "rollback_instruction": {
+    "files": "Upload each file from files/ to matching remote path on FTP. Clear system/storage/cache/template/ and cache.category.attributes.*",
+    "images": "Upload images/category-image/*.webp to image/catalog/Category-image/ on TEST",
+    "database_scoped": "Import scoped-m7-m9-tables.sql — TEST only",
+    "prior_checkpoint": "SITE-002-STABLE-M9-COMPLETE-20260615 for pre-M9.7D rollback (excludes manual UI)",
+    "verify": "Re-run qa-snapshot.json checks"
+  },
+  "backup_dir": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\stable-baselines\\SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI"
+}

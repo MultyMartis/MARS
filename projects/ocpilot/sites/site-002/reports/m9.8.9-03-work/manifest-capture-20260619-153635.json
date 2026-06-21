@@ -1,0 +1,44 @@
+{
+  "task": "M9.8.9-03",
+  "authority": "SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01",
+  "phase": "pre-deploy-capture",
+  "stamp": "20260619-153635",
+  "files": [
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/certificates.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03-work\\live-capture\\certificates.twig",
+      "sha256": "ed49eef6b8aad461df15311cbd5ca293944a57d1e2d61f66790d56496d8e2f9f",
+      "size": 2532
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/sections/blockdealersform.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03-work\\live-capture\\blockdealersform.twig",
+      "sha256": "5abad9f2d27e3f575f6d79b4d50bd877c0fb6844645aff6af4f2f8b2bb9bbe99",
+      "size": 4375
+    },
+    {
+      "remote_path": "catalog/view/theme/default/template/product/category.twig",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03-work\\live-capture\\category.twig",
+      "sha256": "d11ac4b04e0feaa17dae39a5a3e67e7eac757482aff035d1589aa1d2e6ae3b32",
+      "size": 6524
+    },
+    {
+      "remote_path": "catalog/controller/product/category.php",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03-work\\live-capture\\category.php",
+      "sha256": "244494f2f3653cd788383f0d7b5841e20069b61103eebfe36d92db8e22a2b05c",
+      "size": 22218
+    },
+    {
+      "remote_path": "assets/css/style.css",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03-work\\live-capture\\style.css",
+      "sha256": "66d9add6710b9c6a116a241c627819ec332d79de02498b64c2979dad55555dc2",
+      "size": 286335
+    },
+    {
+      "remote_path": "assets/js/main.js",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.8.9-03-work\\live-capture\\main.js",
+      "sha256": "fda2ef8cddea2e0a9c3ba71caf64bf6996ed3fdcce85d0eb545bbd95d7a4cf6f",
+      "size": 201337
+    }
+  ]
+}

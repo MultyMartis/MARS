@@ -47,7 +47,7 @@ Canvas mirrors may live under KC (e.g. `00 START HERE/canvas/master.canvas`).
 
 **Workflow:** Plan in Web-GPT → execute doc changes in `C:\AI MARS` → operator may refresh KC mirrors manually.
 
-**Post-cleanup (2026-06):** KC mirrors may lag git SoT for GitGuard REGISTERED, Incoming hybrid, ISBD execution case, Triumph v6 — operator refresh recommended per `logs/cleanup/knowledge-center-drift-report-v1.md` (no auto-sync).
+**Post-cleanup (2026-06):** Operator sync executed per `logs/visualization/knowledge-center-sync-recommendations-v1.md` — canvas mirrors from git Visual Brain; markdown cards aligned where drift report required. KC remains **not** SoT — backport fixes to Active Brain if needed. Evidence: `logs/visualization/knowledge-center-sync-executed-2026-06.md` · STORAGE `SYNC-REPORT-2026-06-POST-CLEANUP.md`.
 
 ---
 

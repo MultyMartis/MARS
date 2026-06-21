@@ -1,0 +1,677 @@
+{
+  "schema_version": "1",
+  "artifact_id": "corvonero-wordstat-collection-matrix-v1",
+  "project_ref": "PRJ-0013",
+  "session_id": "mig-20260622-corv01",
+  "created_at": "2026-06-22T14:50:00.000Z",
+  "status": "two_pass_in_progress",
+  "boundary_note": "Pass A COMPLETE — 18 Excel from MARS Storage + 2 no-result; Pass B PREPARED NOT STARTED; af-007 resolved (wrong locus)",
+  "updated_at": "2026-06-21T20:21:25.054Z",
+  "pass_a_ingestion_summary": {
+    "completion": "COMPLETE",
+    "files_found": 18,
+    "files_ingested": 18,
+    "seeds_with_excel": 18,
+    "seeds_no_result_registered": 2,
+    "failure_id": null,
+    "prior_failure_id": "af-007",
+    "prior_failure_resolution": "resolved — files in MARS Storage not in-repo loci",
+    "external_storage_source": "C:/AI MARS STORAGE/mig/corvonero/wordstat-2026-06",
+    "normalized_row_count": 2399,
+    "pass_b_eligibility": "authorized after Pass A review"
+  },
+  "collection_policy": {
+    "model": "two_pass",
+    "pass_a": {
+      "id": "semantic_discovery",
+      "status": "AUTHORIZED",
+      "collection_mode": "manual_operator",
+      "progress": "COMPLETE",
+      "geography": "all_russia_all_regions",
+      "query_entry": "broad_unquoted_one_seed_at_a_time",
+      "purpose": [
+        "collect_broad_query_vocabulary",
+        "discover_synonyms_and_adjacent_formulations",
+        "identify_informational_vacancy_educational_noise",
+        "prepare_keyword_and_negative_query_evidence"
+      ],
+      "required_capture": [
+        "visible_wordstat_page_screenshot",
+        "downloadable_export_where_available",
+        "left_and_related_query_columns_preserved"
+      ],
+      "interpretation_forbidden": [
+        "regional_demand",
+        "expected_traffic",
+        "campaign_forecast",
+        "exact_phrase_frequency_from_broad_total"
+      ],
+      "automated_collection": {
+        "status": "blocked",
+        "failure_id": "af-006",
+        "scope": "cursor_agent_automated_only"
+      }
+    },
+    "pass_b": {
+      "id": "regional_demand_validation",
+      "status": "PREPARED",
+      "collection_mode": "manual_operator",
+      "progress": "NOT_STARTED",
+      "geography": {
+        "primary": "Новосибирск",
+        "region_option": "Новосибирская область",
+        "wordstat_lr_note": "Operator sets Novosibirsk + NSO — do not repeat full Pass A matrix regionally"
+      },
+      "query_entry": "exact_quoted_operator_variants",
+      "purpose": [
+        "validate_local_capacity_for_bounded_shortlist",
+        "compare_selected_commercial_clusters_before_orca"
+      ],
+      "shortlist_source": "pass_a_review_output",
+      "replaces_pass_a": false
+    }
+  },
+  "geography_default": {
+    "pass_a": "все регионы / all Russia",
+    "pass_b_primary": "Новосибирск + Новосибирская область"
+  },
+  "collection_rules": {
+    "provider": "manual_wordstat_operator",
+    "forbidden": [
+      "invented_frequency",
+      "automated_scraping_in_stage_2",
+      "nationwide_broad_total_as_novosibirsk_demand"
+    ],
+    "required_exports": [
+      "screenshot_or_csv_per_query_id",
+      "date_stamp",
+      "geo_setting_visible"
+    ],
+    "modes_pass_a": [
+      "broad_unquoted"
+    ],
+    "modes_pass_b": [
+      "exact_phrase",
+      "operator_syntax_quoted"
+    ]
+  },
+  "priority_1": [
+    {
+      "query_id": "ws-p1-001",
+      "base_phrase": "программист 1С",
+      "cluster": "A_broad_commercial",
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "программист 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-001-programmist-1c.xlsx",
+        "source_hash": "84464761e9b8d59105766d828bc63cb6730f02dc71e4c081e9a813940a948a96",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-001-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 589,
+        "sheet_names": [
+          "Data"
+        ]
+      },
+      "pass_b": {
+        "geography": "Новосибирск + Новосибирская область",
+        "match_mode": "exact",
+        "operator_syntax": "\"программист 1С\"",
+        "status": "NOT_STARTED"
+      },
+      "research_label": "commercial",
+      "expected_ambiguity": "low",
+      "inclusion_reason": "Head commercial term — SERP strong local competition",
+      "exclusion_risk": "vacancy noise in broad mode",
+      "required_capture": [
+        "wordstat_main_chart_screenshot",
+        "related_queries_left_and_related_columns"
+      ],
+      "collection_priority": 1
+    },
+    {
+      "query_id": "ws-p1-002",
+      "base_phrase": "программист 1С Новосибирск",
+      "cluster": "A_broad_commercial",
+      "geography": "Новосибирск",
+      "match_mode": "exact",
+      "operator_syntax": "\"программист 1С Новосибирск\"",
+      "research_label": "commercial",
+      "expected_ambiguity": "low",
+      "inclusion_reason": "Geo-mandatory head term",
+      "exclusion_risk": "low",
+      "required_capture": [
+        "screenshot"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "программист 1С Новосибирск",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-002-uslugi-programmista-1c.xlsx",
+        "source_hash": "a6b8227bf5f70893222f6a91519ad5efa8e5a9a72610d054f581a536979859ec",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-002-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 5,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p1-003",
+      "base_phrase": "сопровождение 1С",
+      "cluster": "A_support",
+      "geography": "Новосибирск",
+      "match_mode": "exact",
+      "operator_syntax": "\"сопровождение 1С\"",
+      "research_label": "commercial",
+      "expected_ambiguity": "moderate — ITS/abonent overlap",
+      "inclusion_reason": "Retainer intent cluster",
+      "exclusion_risk": "informational articles",
+      "required_capture": [
+        "screenshot",
+        "seasonality_if_visible"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "сопровождение 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-003-soprovozhdenie-1c.xlsx",
+        "source_hash": "75c0904d824787cffe9b4dee3e266d0cdc752ba182e94d253b391b2aec6f2d96",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-003-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 177,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p1-004",
+      "base_phrase": "доработка 1С",
+      "cluster": "A_modification",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "operator_syntax": "\"доработка 1С\"",
+      "research_label": "commercial",
+      "expected_ambiguity": "low",
+      "inclusion_reason": "Core modification demand",
+      "exclusion_risk": "low",
+      "required_capture": [
+        "screenshot"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "доработка 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-004-dorabotka-1c.xlsx",
+        "source_hash": "4e0afa9bc3a63e62ff8e042ea83013783fc2f7199658cd544bc561dee3b4f65a",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-004-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 83,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p1-005",
+      "base_phrase": "интеграция 1С с сайтом",
+      "cluster": "C_integrations",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "operator_syntax": "\"интеграция 1С с сайтом\"",
+      "research_label": "integration",
+      "expected_ambiguity": "moderate",
+      "inclusion_reason": "Distinct integrator SERP segment",
+      "exclusion_risk": "DIY dev forums",
+      "required_capture": [
+        "screenshot"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "интеграция 1С с сайтом",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-005-integraciya-s-saitom.xlsx",
+        "source_hash": "a89f26ac2bc56e5ffff283dc3de275778edfb709fecded6dc34882354426ba71",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-005-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 10,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p1-006",
+      "base_phrase": "интеграция 1С Битрикс",
+      "cluster": "C_integrations",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "operator_syntax": "\"интеграция 1С Битрикс\"",
+      "research_label": "integration",
+      "expected_ambiguity": "moderate",
+      "inclusion_reason": "Bitrix studio competition",
+      "exclusion_risk": "Bitrix24 vs 1C-Bitrix confusion",
+      "required_capture": [
+        "screenshot"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "интеграция 1С Битрикс",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-006-integraciya-bitrix.xlsx",
+        "source_hash": "c49fd2c76a72012c806bec57930b658d7e38dc2370828f1fb872daaed48129b4",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-006-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 28,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p1-007",
+      "base_phrase": "маркировка в 1С",
+      "cluster": "D_labeling",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "operator_syntax": "\"маркировка в 1С\"",
+      "research_label": "regulated-labeling",
+      "expected_ambiguity": "moderate",
+      "inclusion_reason": "Labeling commercial + info mix",
+      "exclusion_risk": "high informational",
+      "required_capture": [
+        "screenshot"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "маркировка в 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-007-markirovka-v-1c.xlsx",
+        "source_hash": "e726ffa948c71eb1cb6bd97f487533d57b6ffe0f8ef1efdf1fff59b76f9a719a",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-007-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 196,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p1-008",
+      "base_phrase": "Честный знак 1С",
+      "cluster": "D_labeling",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "operator_syntax": "\"Честный знак 1С\"",
+      "research_label": "regulated-labeling",
+      "expected_ambiguity": "moderate",
+      "inclusion_reason": "Regulated terminology anchor",
+      "exclusion_risk": "instructional content",
+      "required_capture": [
+        "screenshot"
+      ],
+      "collection_priority": 1,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "Честный знак 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p1-008-chestny-znak-1c.xlsx",
+        "source_hash": "f3feb6a59fb5efa3353f517e8e5b3f2effb0bd39e212caf0a5294c8d024ae232",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p1-008-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 250,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    }
+  ],
+  "priority_2": [
+    {
+      "query_id": "ws-p2-001",
+      "base_phrase": "доработка отчёта 1С",
+      "cluster": "B_reports",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "research_label": "commercial",
+      "inclusion_reason": "Narrow modification with commercial SERP",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "доработка отчёта 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-001-otchet-1c.xlsx",
+        "source_hash": "8b45b9cb31b54a30bce4e87394e065732fb8027d07ce2077c127dc885f532634",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-001-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 2,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p2-002",
+      "base_phrase": "доработка печатной формы 1С",
+      "cluster": "B_forms",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "research_label": "commercial",
+      "inclusion_reason": "Corvonero site prices this line",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "доработка печатной формы 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-002-pechatnaya-forma.xlsx",
+        "source_hash": "a2ce8003160dcd46c505e1b9f6b2d9691f2f7d81bddd9a6810b3858800e2bc8c",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-002-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 542,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p2-003",
+      "base_phrase": "доработка РМК 1С",
+      "cluster": "B_rmk",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "research_label": "commercial",
+      "inclusion_reason": "Intake hypothesis",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "status": "no_result_for_entered_formulation",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-003-no-result-evidence.json",
+        "ingestion_status": "no_result_for_entered_formulation",
+        "external_file_found": false,
+        "row_count": 0
+      }
+    },
+    {
+      "query_id": "ws-p2-004",
+      "base_phrase": "настройка синхронизации 1С",
+      "cluster": "C_integrations",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "research_label": "integration",
+      "inclusion_reason": "Exchange/sync intent",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "настройка синхронизации 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-004-sinhronizaciya.xlsx",
+        "source_hash": "6971f418af26674efc551767164784d3278d5c5e4d82c6c92cd1eaa9b92d717b",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-004-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 384,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p2-005",
+      "base_phrase": "обновление доработанной 1С",
+      "cluster": "A_support",
+      "geography": "optional_geo",
+      "match_mode": "exact",
+      "research_label": "commercial",
+      "inclusion_reason": "Distinct maintenance intent",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "обновление доработанной 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-005-obnovlenie-dorabotannoy.xlsx",
+        "source_hash": "6aeb9123a86bd38b02c2d791d8ee64054a1357105e1b72105e902d120eef4673",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-005-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 1,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p2-006",
+      "base_phrase": "срочно программист 1С",
+      "cluster": "A_urgent",
+      "geography": "Новосибирск",
+      "match_mode": "exact",
+      "research_label": "urgent",
+      "inclusion_reason": "Urgent lane test — expect vacancy noise",
+      "exclusion_risk": "high vacancy noise",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "status": "no_result_for_entered_formulation",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-006-no-result-evidence.json",
+        "ingestion_status": "no_result_for_entered_formulation",
+        "external_file_found": false,
+        "row_count": 0
+      }
+    },
+    {
+      "query_id": "ws-p2-007",
+      "base_phrase": "1С не работает",
+      "cluster": "A_urgent",
+      "geography": "Новосибирск variant",
+      "match_mode": "exact",
+      "research_label": "urgent",
+      "inclusion_reason": "Troubleshooting demand class",
+      "exclusion_risk": "informational DIY dominance",
+      "collection_priority": 2,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "1С не работает",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p2-007-1c-ne-rabotaet.xlsx",
+        "source_hash": "e58373e588b52d3176937bc228ffe94e9714dfdc601c5990773c9cdb5d3fb52d",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p2-007-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 2,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    }
+  ],
+  "priority_3": [
+    {
+      "query_id": "ws-p3-001",
+      "base_phrase": "маркировка пива 1С",
+      "cluster": "E_product_labeling",
+      "match_mode": "exact",
+      "research_label": "product-specific",
+      "inclusion_reason": "Representative product sample",
+      "collection_priority": 3,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "маркировка пива 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-001-pivo.xlsx",
+        "source_hash": "d053c057c0f90d82fd8893c160c9563851e08ccd0efe981be382b3ea55b78e35",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-001-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 1,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p3-002",
+      "base_phrase": "маркировка воды 1С",
+      "cluster": "E_product_labeling",
+      "match_mode": "exact",
+      "research_label": "product-specific",
+      "collection_priority": 3,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "маркировка воды 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-002-voda.xlsx",
+        "source_hash": "41d35b769456c1cd9f65b43e0b9bd1a1296be36c1862e205f49297cd2aac54c5",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-002-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 1,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p3-003",
+      "base_phrase": "маркировка лекарств 1С",
+      "cluster": "E_product_labeling",
+      "match_mode": "exact",
+      "research_label": "product-specific",
+      "collection_priority": 3,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "маркировка лекарств 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-003-lekarstva.xlsx",
+        "source_hash": "3bf2779eca7e6fee4d54593e0efefde83d0f575373c645ed1b36a2e9b07a3d71",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-003-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 33,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p3-004",
+      "base_phrase": "ТС ПИОТ 1С",
+      "cluster": "D_ts_piot",
+      "match_mode": "exact",
+      "research_label": "regulated-labeling",
+      "exclusion_risk": "informational-heavy",
+      "collection_priority": 3,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "ТС ПИОТ 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-004-avtozapchasti.xlsx",
+        "source_hash": "70b74c5bde18880673902f34641f4bbc2a759dcf585cb49b32a2413d9d807dfa",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-004-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 22,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    },
+    {
+      "query_id": "ws-p3-005",
+      "base_phrase": "маркировка автозапчастей 1С",
+      "cluster": "E_product_labeling",
+      "match_mode": "exact",
+      "research_label": "product-specific",
+      "collection_priority": 3,
+      "pass_a": {
+        "geography": "all_russia_all_regions",
+        "match_mode": "broad_unquoted",
+        "operator_syntax": "маркировка автозапчастей 1С",
+        "status": "ingested",
+        "external_file_found": true,
+        "source_path_external": "C:\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06\\ws-p3-005-ts-piot.xlsx",
+        "source_hash": "c21c9a6d2a3e93672736106738c533f037da8589a5f5adcdce961d068117887d",
+        "evidence_ref": "evidence/wordstat/pass-a-ws-p3-005-evidence.json",
+        "ingestion_status": "parsed_successfully",
+        "row_count": 73,
+        "sheet_names": [
+          "Data"
+        ]
+      }
+    }
+  ],
+  "geo_sensitivity_notes": {
+    "geo_mandatory": [
+      "программист 1С Новосибирск",
+      "сопровождение 1С Новосибирск",
+      "услуги программиста 1С Новосибирск"
+    ],
+    "works_without_geo": [
+      "доработка отчёта 1С",
+      "интеграция 1С Битрикс",
+      "Честный знак 1С настройка",
+      "обновление доработанной 1С"
+    ],
+    "natural_price_modifiers": [
+      "программист 1С цена",
+      "программист 1С стоимость",
+      "сопровождение 1С стоимость",
+      "доработка 1С заказать"
+    ],
+    "artificial_or_low_confidence": [
+      "маркировка масел 1С Новосибирск цена заказать",
+      "ТС ПИОТ 1С срочно Новосибирск недорого",
+      "программист 1С ERP УНФ КА БП все конфигурации"
+    ]
+  },
+  "pre_wordstat_reformulation_candidates": [
+    {
+      "query": "программа 1С не работает",
+      "issue": "informational noise — test with geo + commercial modifier before discard"
+    },
+    {
+      "query": "ТС ПИОТ 1С настройка",
+      "issue": "informational-heavy — pair with «под ключ» variant in P3 only"
+    },
+    {
+      "query": "срочно программист 1С Новосибирск",
+      "issue": "vacancy pollution — verify negative classes before launch"
+    }
+  ]
+}

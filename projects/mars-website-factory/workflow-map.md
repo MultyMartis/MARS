@@ -59,7 +59,7 @@ Pixel Fidelity Audit
 Production PASS
 ```
 
-**Foundation path (pre–Home):** Production Standards Draft → Mapping QA → Approval → Shell → Visual Foundation → Design Calibration → Foundation QA — [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md).
+**Foundation path (pre–Home):** Production Standards Draft → Mapping QA → Approval → **Canonical Clean Shell v1** → **Group Decomposition (APPROVED)** → **Layout Spec (APPROVED)** → Shell → Visual Foundation → Design Calibration → Foundation QA — [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md) · [group-decomposition-law-v1.md](group-decomposition-law-v1.md) · [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) · [layout-spec-law-v1.md](layout-spec-law-v1.md).
 
 **Reporting rollup:** [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5–§6 · **Production PASS authority:** [operational-qa-entry-v1.md](operational-qa-entry-v1.md) § Production PASS authority.
 

@@ -1,0 +1,110 @@
+{
+  "schema_version": "0",
+  "request_id": "corvonero-yandex-direct-v1",
+  "request_type": "groundtruth_run",
+  "scope": {
+    "niche": "Коммерческие услуги 1С; маркировка; интеграции; доработки; сопровождение",
+    "region": "Новосибирск и Новосибирская область",
+    "city": "Новосибирск",
+    "business_type": "b2b_service",
+    "search_engine": "yandex",
+    "device": "mobile"
+  },
+  "queries": {
+    "seed_queries": [
+      "программист 1С Новосибирск",
+      "сопровождение 1С Новосибирск",
+      "программа 1С не работает",
+      "доработка отчёта 1С",
+      "интеграция 1С с сайтом Новосибирск",
+      "интеграция 1С Битрикс",
+      "Честный знак 1С настройка",
+      "маркировка в 1С Новосибирск",
+      "ТС ПИОТ 1С настройка"
+    ],
+    "seed_matrix_ref": "incoming/mig/pilots/corvonero/corvonero-seed-query-matrix-v1.json"
+  },
+  "operator_id": "human-supervised",
+  "created_at": "2026-06-22T12:00:00.000Z",
+  "source": {
+    "adapter": "cursor",
+    "adapter_version": "0.1",
+    "transport_ref": "incoming/mig/requests/request-corvonero-yandex-direct-v1.json"
+  },
+  "capture_profile": {
+    "multi_query": true,
+    "serp_pass": true,
+    "competitor_discovery": true,
+    "website_pass": true,
+    "landing_pass": true,
+    "keyword_pass": false,
+    "deep_research_pass": false
+  },
+  "stage_boundary": {
+    "phase": "mig_research_stage_2",
+    "permitted_modules": [
+      "seed_query_matrix_expansion",
+      "live_serp_bounded",
+      "competitor_shortlist_confirmation",
+      "website_intelligence_bounded",
+      "landing_intelligence_v2_bounded",
+      "corvonero_website_pass",
+      "wordstat_collection_matrix_prep",
+      "evidence_registry",
+      "stage_2_report"
+    ],
+    "excluded_modules": [
+      "wordstat_demand_surface_execution",
+      "keyword_registry_final",
+      "research_pack_approval",
+      "deep_research",
+      "orca_interpretation"
+    ]
+  },
+  "evidence_requirements": {
+    "per_item": ["source", "url_or_reference", "collection_date", "query_context", "evidence_grade"],
+    "acquisition_failure_policy": "record_failure_do_not_fabricate",
+    "safe_unknown_policy": "preserve_gaps"
+  },
+  "groundtruth_run_settings": {
+    "primary_geography": ["Новосибирск", "Новосибирская область"],
+    "comparative_geography": [],
+    "serp_acquisition_mode": "manual_bounded_web_search",
+    "personalization": "SAFE UNKNOWN",
+    "ads_capture": "partial_if_visible"
+  },
+  "downstream_context": {
+    "atlas_client_org_ref": "ORG-0009",
+    "atlas_legal_entity_ref": "LE-0006",
+    "atlas_project_ref": "PRJ-0013",
+    "atlas_website_ref": "WEB-CORV-01",
+    "atlas_domain_ref": "DOM-CORV-01",
+    "vendor_org_ref": "ORG-0003",
+    "client_relationship": "ORG-0009 CLIENT_OF ORG-0003",
+    "pilot_label": "Corvonero — 1C services Novosibirsk",
+    "approved_research_request_path": "incoming/mig/pilots/corvonero/CORVONERO-MIG-RESEARCH-REQUEST-v1.md",
+    "budget_context_rub_month": 100000,
+    "operator_mode": "human-supervised",
+    "minimum_order_rub": 6000,
+    "historical_ad_data": false,
+    "target_cpl": "SAFE UNKNOWN"
+  },
+  "output_locus": {
+    "pilot_folder": "incoming/mig/pilots/corvonero/",
+    "session_folder": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/",
+    "canonical_sessions_root_note": "Runtime adapter may also write to projects/mig/sessions/ when invoked via task-file-adapter"
+  },
+  "operator_approval": {
+    "business_intake": "approved",
+    "atlas_registration": "approved",
+    "research_request": "approved_for_execution",
+    "stage_1": "complete",
+    "stage_2": "authorized",
+    "approved_by": "operator_charter_via_cursor_task",
+    "approved_at": "2026-06-22",
+    "research_pack_approval": "not_started",
+    "orca_handoff": "blocked_until_research_pack_approval"
+  },
+  "priority": "normal",
+  "strict": false
+}

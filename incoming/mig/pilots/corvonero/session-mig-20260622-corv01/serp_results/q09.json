@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "session_id": "mig-20260622-corv01",
+  "query_id": "q09",
+  "captured_at": "2026-06-22T12:43:00.000Z",
+  "source_mode": "manual_bounded_web_search",
+  "evidence_grade": "C",
+  "search_engine": "yandex",
+  "region": "без гео",
+  "city": null,
+  "device": "mobile",
+  "query": "ТС ПИОТ 1С настройка",
+  "serp_type": "informational_dominant",
+  "organic_results": [
+    { "position": 1, "title": "ТС ПИоТ в 1С:Розница и УНФ: настройка пошагово", "url": "https://etiketka-media.ru/blog/2026-05-28-ts-piot-1c/", "surface_type": "informational", "snippet": "Industry media how-to", "player_scope": "non_competitor_reference" },
+    { "position": 2, "title": "ТС ПИоТ в 1С:Бухгалтерия 8 — РОКАС", "url": "https://rokass.ru/blog/markirovka-tovarov-eto-prosto/ts-piot-v-1s-bukhgalteriya-8-poshagovaya-nastroyka-2026/", "surface_type": "informational", "snippet": "Consulting firm blog", "player_scope": "mixed_info_commercial" },
+    { "position": 3, "title": "ТС ПИоТ в 1С:Бухгалтерия 8 — klerk.ru", "url": "https://www.klerk.ru/user/2628154/684869/", "surface_type": "informational", "snippet": "User article on accounting portal", "player_scope": "non_competitor_reference" },
+    { "position": 4, "title": "Что нужно для работы модуля ТС ПИОТ в 1С — Форт", "url": "https://fort.crimea.com/support/9371-chto-nujno-dlya-raboty-programmnogo-modulya-ts-piot.html", "surface_type": "informational", "snippet": "Support KB article", "player_scope": "non_competitor_reference" },
+    { "position": 5, "title": "ТС ПИоТ (ЕСМ) — подключение — ЛегаСофт", "url": "https://spb.legasoft.ru/services/markirovka/ts-piot-esm-podklyuchenie-registratsiya-i-nastroyka/", "surface_type": "organic", "snippet": "Commercial service — СПб, not Novosibirsk-local", "player_scope": "federal_labeling_specialist" }
+  ],
+  "commercial_signal": "weak",
+  "noise_signal": "high_informational",
+  "cluster_note": "TS PIOT queries return regulatory/how-to content; commercial 1C service pages sparse in bounded capture"
+}

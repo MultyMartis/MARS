@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-06-09T06:23:13.874008+00:00",
+  "task": "ROLLBACK TO SUPER_ATTS BASELINE (hero/style only)",
+  "restore_backups_used": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-superatts-fix.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-superatts-presentation.bak"
+  },
+  "restore_backup_hashes": {
+    "producthero.twig": "9f02cec4204747b03263f8e954fdf42fa40bffb0a667473fd602a30034ab6535",
+    "style.css": "a50a74200612f788269499088dc8d0d33b6f1faeb9f85cc106d92b1b8d10fad0"
+  },
+  "new_pre_rollback_backups": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.20260609-132225.pre-superatts-baseline-rollback.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.20260609-132225.pre-superatts-baseline-rollback.bak",
+    "product.php": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\product.php.20260609-132225.pre-superatts-baseline-rollback.bak"
+  },
+  "pre_live_hashes": {
+    "producthero.twig": "62691d0fdb0bb25952e8860149b4d75d2747216cfd1c7e45d79d2dd3134d9424",
+    "style.css": "dbd6ca35e898e6f85b54b592c2c91dedebf48c3ec5aae1011fba25df49007646",
+    "product.php": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27"
+  },
+  "files_restored": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css"
+  },
+  "files_not_touched": {
+    "product.php": "catalog/controller/product/product.php"
+  },
+  "controller_not_rolled_back": {
+    "pre_deploy_sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+    "post_deploy_sha256": "bc990f2a8dc0a27b565d903a081f361b58e5c7207b3f62ab5e7dc596f11e7f27",
+    "unchanged": true,
+    "markers": {
+      "defined('SUPER_ATTS')": true,
+      "foreach (SUPER_ATTS as $super_attr_id)": true,
+      "$data['super_atts']": true
+    }
+  },
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+  "pre_hero_qa": {
+    "hero_found": true,
+    "has_original_props": false,
+    "redesign_markers": {
+      "product-hero__col": true,
+      "quick-card": false,
+      "product-hero__props--primary": true,
+      "product-hero__props--additional": true,
+      "product-hero__specs": true,
+      "prop-icon": true,
+      "hero-3col": false,
+      "primary-layout-fix": false,
+      "primary-structure-only": false,
+      "primary-specs-fix": false
+    },
+    "any_redesign_marker": true,
+    "super_atts_count": 0,
+    "super_atts_names": [],
+    "cart_btn": true,
+    "qty": true,
+    "wishlist": true,
+    "compare": true,
+    "fancybox": true,
+    "php_ok": true
+  },
+  "post_hero_qa": {
+    "hero_found": true,
+    "has_original_props": true,
+    "redesign_markers": {
+      "product-hero__col": false,
+      "quick-card": false,
+      "product-hero__props--primary": false,
+      "product-hero__props--additional": false,
+      "product-hero__specs": false,
+      "prop-icon": false,
+      "hero-3col": false,
+      "primary-layout-fix": false,
+      "primary-structure-only": false,
+      "primary-specs-fix": false
+    },
+    "any_redesign_marker": false,
+    "super_atts_count": 10,
+    "super_atts_names": [
+      "Длина, мм",
+      "Ширина, мм",
+      "Высота, мм",
+      "Масса, кг",
+      "Конструкция",
+      "Наличие борта",
+      "Ножки",
+      "Отверстие под смеситель",
+      "Размер раковины (ДхШхВ, мм)",
+      "Тип опоры"
+    ],
+    "cart_btn": true,
+    "qty": true,
+    "wishlist": true,
+    "compare": true,
+    "fancybox": true,
+    "php_ok": true
+  },
+  "expected_atts_coverage": {
+    "Длина": true,
+    "Ширина": true,
+    "Высота": true,
+    "Масса": true,
+    "Конструкция": true,
+    "Наличие борта": true,
+    "Ножки": true,
+    "Отверстие под смеситель": true,
+    "Размер раковины": true,
+    "Тип опоры": true
+  },
+  "checklist": {
+    "1_hero_baseline_restored": true,
+    "2_no_redesign_markers": true,
+    "3_twig_matches_restore_backup": true,
+    "4_css_matches_restore_backup": true,
+    "5_controller_super_atts_intact": true,
+    "6_product_php_not_uploaded": true,
+    "7_php_ok": true,
+    "8_cart_qty_wishlist_compare": true,
+    "9_super_atts_rendered": true,
+    "10_all_expected_atts": true
+  },
+  "checklist_pass": true,
+  "screenshots": {
+    "before": {
+      "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-baseline-rollback\\spkb-18-7-vl5-hero-before-desktop.png",
+      "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-baseline-rollback\\spkb-18-7-vl5-hero-before-mobile.png"
+    },
+    "after": {
+      "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-baseline-rollback\\spkb-18-7-vl5-hero-after-desktop.png",
+      "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\superatts-baseline-rollback\\spkb-18-7-vl5-hero-after-mobile.png"
+    }
+  },
+  "rollback_confidence": "HIGH"
+}

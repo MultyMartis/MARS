@@ -2,7 +2,7 @@
 
 **route_id:** `manipulyator-5-tonn`  
 **project_id:** `triumph-manipulator-krasnodar`  
-**URL:** `https://manipulator-triumph.ru/manipulyator-5-tonn/`  
+**URL:** `https://manipulator-triumph.ru/5-tonn.html`  
 **Date:** 2026-05-21  
 **Checker:** Assisted pre-check (repo evidence); **final `approved_for_ads` requires human operator**
 

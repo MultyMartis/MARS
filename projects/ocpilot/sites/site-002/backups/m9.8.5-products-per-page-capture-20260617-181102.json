@@ -1,0 +1,35 @@
+{
+  "task": "m9.8.5-products-per-page",
+  "captured_at": "2026-06-17T18:11:02.705960+00:00",
+  "stamp": "20260617-181102",
+  "entries": {
+    "category.php": {
+      "remote": "catalog/controller/product/category.php",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.php.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "work": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.8.5-products-per-page-work\\category.php",
+      "size": 22103,
+      "sha256": "4ed6db8db424cf7c2123ab6ea6c74e8dad8c9d10b3e922e2014cf207c611538e"
+    },
+    "category.twig": {
+      "remote": "catalog/view/theme/default/template/product/category.twig",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\category.twig.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "work": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.8.5-products-per-page-work\\category.twig",
+      "size": 5769,
+      "sha256": "291daa368db27daca9185c47a9164cb07139a1be727cd0d47e7cb0190c65c94e"
+    },
+    "style.css": {
+      "remote": "assets/css/style.css",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "work": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.8.5-products-per-page-work\\style.css",
+      "size": 280558,
+      "sha256": "0894cbdc400838ef091335b5a077321de83e9d4db205e93aabcf6956a5a09cf7"
+    },
+    "main.js": {
+      "remote": "assets/js/main.js",
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.8.5-products-per-page-20260617-181102.bak",
+      "work": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\m9.8.5-products-per-page-work\\main.js",
+      "size": 195934,
+      "sha256": "b19a9617ad17c2d3a2e897148b360013b9281a7ff32ad4cf5f819c20e17d6f55"
+    }
+  }
+}

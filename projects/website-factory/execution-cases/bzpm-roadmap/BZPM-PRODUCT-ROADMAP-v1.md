@@ -3,8 +3,8 @@
 **Program:** Website Factory  
 **Execution case:** BZPM  
 **Document role:** Canonical planning document for future BZPM work  
-**Status:** Post M9.8 UX Polish 01 — **M9.8.9 Minor Fixes Pack #1** active  
-**Date:** 2026-06-19 (M9.8.9 roadmap registration)  
+**Status:** Post M9.8.9 Catalog UX Complete 01 — **M9.8.9 Minor Fixes Pack #1** active · **Corporate Pages Program** open — Research **COMPLETE** · IA **READY**  
+**Date:** 2026-06-22 (Corporate Pages Program — Research → IA phase gate)  
 **Authority:** Repository evidence + SITE-002 TEST checkpoint `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI` + operator feedback (Алексей)
 
 **Boundary:** Documentation and planning only. This roadmap does **not** authorize implementation, OpenCart changes, UX changes, or code work.
@@ -53,9 +53,9 @@ BZPM (ORG-0005 ЗПМ · PRJ-0009 Каталог-платформа bzpm.ru) has
 | **Presentation Pack** | Excel packaging **complete** (2026-06-14) | `presentation-pack/EXPORT-REPORT.md` — operator distribution / executive review may continue |
 | **Product roadmap** | **Created** by this document | `bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md` |
 | **Catalog redesign research** | W0–W4 documentation complete (2026-06-08) | `bzpm-catalog-redesign/` — strategy approved; implementation not chartered |
-| **Live audit environment** | `https://zpm.new-site.space/` (SITE-002 TEST) | OCPilot delivery — **authority** `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI`; **MANUAL UI REFINEMENTS ARE CANONICAL** |
+| **Live audit environment** | `https://zpm.new-site.space/` (SITE-002 TEST) | OCPilot delivery — **authority** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; **MANUAL UI REFINEMENTS ARE CANONICAL** |
 | **Production** | `https://bzpm.ru/` (WEB-ZPM-01) | ATLAS / catalog-redesign README |
-| **OCPilot delivery (SITE-002)** | M7.1–M9.7 + Manual UI + M9.8.1/2/5 **complete** on TEST | Active: **M9.8.9 Minor Fixes Pack #1**; deferred M9.8.3/4/6/7/8; M10 **not authorized** |
+| **OCPilot delivery (SITE-002)** | M7.1–M9.8.9 catalog cluster **complete** on TEST; **Corporate Pages Program** **OPEN** — Research **COMPLETE** · IA **READY** | Active: remaining M9.8.9 tasks; corp pages design charter; M10 **not authorized** |
 
 ## What is known
 
@@ -346,9 +346,9 @@ Delivery lane for BZPM catalog on OpenCart TEST (`zpm.new-site.space`). Distinct
 
 | Rule | Value |
 | --- | --- |
-| **Checkpoint** | `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI` |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, UX edits on live TEST override older M9.x deploy snapshots |
-| **Conflict resolution** | If M9.x documentation contradicts current TEST → source of truth = M9.7D baseline capture |
+| **Conflict resolution** | If M9.x documentation contradicts current TEST → source of truth = live TEST on `zpm.new-site.space` |
 
 ## Completed (TEST)
 
@@ -419,6 +419,62 @@ Delivery lane for BZPM catalog on OpenCart TEST (`zpm.new-site.space`). Distinct
 | **M9.8.9-06** | Category filter + price slider | «Столы» (broken) vs «Моечные ванны» (works) | Filter does not work on «Столы»; price slider right handle moves left handle — audit first |
 
 **M10** (dynamic filter visibility per ROAD-005) remains **not authorized**.
+
+---
+
+## Corporate Pages Program
+
+**Registered:** 2026-06-22  
+**Status:** **OPEN** — Research **COMPLETE** · IA / Architecture **READY** · Copy system **REGISTERED**  
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`  
+**Program doc:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-v1.md)  
+**IA map:** [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md)  
+**Copy standard:** [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md)  
+**Registration report:** [REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md) · [Copy system report](../../../ocpilot/sites/site-002/reports/REPORT-BZPM-COPY-SYSTEM-REGISTRATION.md)
+
+**Research:** M9.13–M9.18 **complete**  
+**Copy content:** **Not started** — PAGE-COPY v1 shells registered  
+**Design / Implementation:** **Not started** — **not authorized**
+
+| ID | Page | URL (TEST) | Research | IA | Copy | Implementation |
+|----|------|------------|----------|-----|------|----------------|
+| **M9.13** | About Company | `/about` | **Complete** | Mapped | Registered | Not started |
+| **M9.14** | Delivery | `/delivery` | **Complete** | Mapped | Registered | Not started |
+| **M9.15** | Payment | `/payment-methods` | **Complete** | Mapped | Registered | Not started |
+| **M9.16** | Dealers | `/dealers` | **Complete** | Mapped | Registered | Not started |
+| **M9.17** | Warranty | `/guarantee` | **Complete** | Mapped | Registered | Not started |
+| **M9.18** | Custom Manufacturing | `/custom-equipment` | **Complete** | Mapped | Registered | Not started |
+
+**Research artifacts:**
+
+- [BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md)
+- [BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md)
+- [BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
+- [BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
+- [BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
+- [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
+
+**PAGE-COPY artifacts (v1 shells — copy not started):**
+
+- [BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.md)
+- [BZPM-M9.14-DELIVERY-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.md)
+- [BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md)
+- [BZPM-M9.16-DEALERS-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.md)
+- [BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md)
+- [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.md)
+
+### Separate completed workstream — Contacts
+
+| Field | Value |
+|-------|--------|
+| **Page** | Contacts |
+| **URL** | `/contact/` |
+| **Status** | **Delivered** |
+| **Program** | **Separate completed workstream** — **not** Corporate Pages Program |
+| **Reason** | Implemented 2026-06-21 before program registration; outside M9.13–M9.18 research series |
+| **Evidence** | [SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md) |
+
+**Mode:** Documentation registration only — **no** corporate page implementation authorized by this section.
 
 ---
 
@@ -495,6 +551,9 @@ All approved roadmap items. Status **Approved** unless noted.
 | --- | --- |
 | 2026-06-14 | **CREATED** — BZPM Product Roadmap v1; initial decision log ROAD-001…010; milestones M1–M13; backlog BL-H/M/L |
 | 2026-06-17 | **UPDATED** — SITE-002 authority freeze → `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI`; MANUAL UI CANONICAL; **M9.8 UX Polish Pack** (M9.8.1–M9.8.8); EC-01 registered; OCPilot delivery track section added |
+| 2026-06-22 | **UPDATED** — **Corporate Pages Program** registered (M9.13–M9.18); M9.13/M9.14 research artifacts; Contacts excluded as separate delivered workstream |
+| 2026-06-22 | **UPDATED** — Corporate Pages Research phase **COMPLETE** (M9.15–M9.18); IA map [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md); M9.17 URL `/guarantee` |
+| 2026-06-22 | **UPDATED** — Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells |
 | 2026-06-19 | **UPDATED** — Authority `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`; M9.8.1/2/5 marked complete; **M9.8.9 Minor Fixes Pack #1** (M9.8.9-01…08) registered as active work package; M9.8.9-06 filter bugs added to open bugs |
 
 ---

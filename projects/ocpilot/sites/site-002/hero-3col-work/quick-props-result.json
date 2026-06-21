@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-06-09T05:45:19.170081+00:00",
+  "wave": "quick-props",
+  "deployed": {
+    "producthero.twig": "catalog/view/theme/default/template/product/producthero.twig",
+    "style.css": "assets/css/style.css",
+    "fa-solid-900.woff2": "assets/vendor/fontawesome/webfonts/fa-solid-900.woff2"
+  },
+  "backups": {
+    "producthero.twig": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\producthero.twig.pre-quick-props.bak",
+    "style.css": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-quick-props.bak"
+  },
+  "fa_webfont_deployed": true,
+  "cache_cleared_count": 0,
+  "cache_errors": [],
+  "qa": {
+    "sp_p_18_6": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-premium/stoly-premium-600/stol-proizvodstvennyy-sp-p-18-6-1800h600h850",
+      "php_ok": true,
+      "has_quick_cards": true,
+      "quick_card_count": 16,
+      "fa_icons": {
+        "arrows_h": true,
+        "arrows_v": true,
+        "weight": true
+      },
+      "has_additional": true,
+      "primary_sample": "\n                                                  <div class=\"product-hero__quick-card\">\n                <span class=\"product-hero__quick-card-icon\" aria-hidden=\"true\"><i class=\"fas fa-arrows-alt-h\"></i></span>\n                <span class=\"product-hero__quick-card-label\">Длина</span>\n                <span class=\"product-hero__quick-card-value\">1800 мм</span>\n              ",
+      "grid_intact": true,
+      "media_intact": true,
+      "commerce_intact": true
+    },
+    "spkb_multi": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-tumby-serii-premium/stoly-tumby-s-odnoy-celnotyanutoy-vannoy/stol-tumba-spkb-18-7-vl5-1800h700h850",
+      "php_ok": true,
+      "has_quick_cards": true,
+      "quick_card_count": 16,
+      "fa_icons": {
+        "arrows_h": true,
+        "arrows_v": true,
+        "weight": true
+      },
+      "has_additional": true,
+      "primary_sample": "\n                                                  <div class=\"product-hero__quick-card\">\n                <span class=\"product-hero__quick-card-icon\" aria-hidden=\"true\"><i class=\"fas fa-arrows-alt-h\"></i></span>\n                <span class=\"product-hero__quick-card-label\">Длина</span>\n                <span class=\"product-hero__quick-card-value\">1800 мм</span>\n              ",
+      "grid_intact": true,
+      "media_intact": true,
+      "commerce_intact": true
+    }
+  },
+  "screenshots": {
+    "desktop": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\quick-props\\sp-p-18-6-hero-desktop.png",
+    "mobile": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\quick-props\\sp-p-18-6-hero-mobile.png"
+  },
+  "overflow": {
+    "desktop_1440": false,
+    "mobile_390": true
+  }
+}

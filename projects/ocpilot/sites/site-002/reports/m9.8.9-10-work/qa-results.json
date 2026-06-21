@@ -1,0 +1,37 @@
+{
+  "task": "M9.8.9-10",
+  "stamp": "20260621-125817",
+  "results": {
+    "hub": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie",
+      "has_page_intro__description": false,
+      "expected": false,
+      "pass": true
+    },
+    "katalog": {
+      "url": "https://zpm.new-site.space/katalog",
+      "has_page_intro__description": true,
+      "expected": true,
+      "pass": true
+    },
+    "stoly": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "has_page_intro__description": false,
+      "expected": false,
+      "pass": true
+    },
+    "vanny": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/moechnye-vanny",
+      "has_page_intro__description": false,
+      "expected": false,
+      "pass": true
+    },
+    "podtov": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+      "has_page_intro__description": false,
+      "expected": false,
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

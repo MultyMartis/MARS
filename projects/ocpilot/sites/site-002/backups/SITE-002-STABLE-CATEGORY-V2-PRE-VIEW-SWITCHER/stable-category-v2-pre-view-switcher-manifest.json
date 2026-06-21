@@ -1,0 +1,42 @@
+{
+  "baseline_name": "SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER",
+  "site_id": "SITE-002",
+  "environment": "https://zpm.new-site.space/",
+  "mode": "read-only-capture",
+  "captured_at": "2026-06-09T20:54:41.463205+00:00",
+  "backup_dir": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER",
+  "files": [
+    {
+      "local_name": "category.twig",
+      "remote_path": "catalog/view/theme/default/template/product/category.twig",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\category.twig",
+      "size": 3245,
+      "sha256": "49bb0e98efee49b0ee91aa35a972afee5ab912dc34cd4dbb01e6e676b317235c",
+      "captured_at": "2026-06-09T20:54:41.463205+00:00"
+    },
+    {
+      "local_name": "style.css",
+      "remote_path": "assets/css/style.css",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\style.css",
+      "size": 268329,
+      "sha256": "9ae7ac39174394fee130a177c09179bd00df9eb47fe099bda5267922e27d95a1",
+      "captured_at": "2026-06-09T20:54:41.463205+00:00"
+    },
+    {
+      "local_name": "main.js",
+      "remote_path": "assets/js/main.js",
+      "local_path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER\\main.js",
+      "size": 181055,
+      "sha256": "548c3a3e94d400c52a525ca76bca92a453789bd8a3ca97b1ffc82b2ed1eeb19f",
+      "captured_at": "2026-06-09T20:54:41.463205+00:00"
+    }
+  ],
+  "rollback_procedure": [
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER/category.twig -> catalog/view/theme/default/template/product/category.twig",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER/style.css -> assets/css/style.css",
+    "Upload C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\SITE-002-STABLE-CATEGORY-V2-PRE-VIEW-SWITCHER/main.js -> assets/js/main.js",
+    "Clear system/storage/cache/template/ on FTP",
+    "Verify category PLP grid mode at Premium-600 URL",
+    "Verify PDP V4 regression on SPKB SKU"
+  ]
+}

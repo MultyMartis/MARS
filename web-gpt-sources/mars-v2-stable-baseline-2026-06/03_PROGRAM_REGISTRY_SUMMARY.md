@@ -25,7 +25,7 @@
 | **GitGuard** | **REGISTERED** cross-cutting — Repository Survivability Layer; **no** `project_id`; SoT under `projects/mars-survivability/registries/gitguard-system-entry-v1.md` |
 | `incoming/` | Ecosystem intake — hybrid Active Incoming (repo) + Historical Bulk (Storage after triage); not a program row |
 
-**Factory execution cases (not `project_id`):** ISBD Care Landing — case `isbd-care-landing` in `projects/mars-website-factory/execution-cases-registry-v1.md` → workspace `workspaces/isbd-care-landing/`.
+**Factory execution cases (not `project_id`):** Triumph — `triumph-manipulator-landing`; ISBD — `isbd-care-landing`; BZPM — `bzpm-catalog-redesign` (#3, research phase) — see `projects/mars-website-factory/execution-cases-registry-v1.md`. **Factory LOC-ZONE:** `workspaces/website-factory-operations/` (physical records; ROC-01 catalog; not a program row).
 
 ---
 
@@ -42,6 +42,8 @@
 | `ear-runtime` | active | Engineering — R1 skeleton only; not live connector | `projects/ear-runtime/OPERATIONAL-INDEX.md` |
 | `mars-survivability` | active | Survivability pack at baseline checkpoint | `projects/mars-survivability/OPERATIONAL-INDEX.md` |
 | `homegateway-v4-ai` | planned | Personal Operational Cockpit — doc/draft | `projects/homegateway-v4-ai/OPERATIONAL-INDEX.md` |
+| `atlas` | planned | Business Reality Registry — foundation + population docs; **not** runtime | `projects/atlas/OPERATIONAL-INDEX.md` |
+| `ops` | planned | Business Operations Domain — WF-01/WF-02 pilots PARTIAL; **not** runtime | `projects/ops/OPERATIONAL-INDEX.md` |
 
 ---
 
@@ -63,6 +65,8 @@
 | **MIG → ORCA** | MIG acquires reality; ORCA interprets — **human-only** handoff |
 | **ORCA → Factory** | Optional strategy/semantic handoff when Factory lane selected |
 | **Factory → WPilot** | Future WordPress bridge — documented boundary |
+| **Factory ↔ ATLAS** | Factory consumers bind ORG/PRJ/WEB ids per `shared/contracts/atlas-context-binding-rule-v1.md` |
+| **OPS → ATLAS** | OPS consumes business identity for reporting bindings — **does not** own ATLAS |
 | **OCPilot ↔ WPilot** | CMS pilot **siblings** — not parent/child |
 | **EAR Runtime → OCPilot** | Snapshots when chartered — consumers don't own acquisition |
 | **MetaBOT** | External lane — MARS holds contracts only |

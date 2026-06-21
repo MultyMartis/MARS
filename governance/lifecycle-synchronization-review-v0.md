@@ -87,3 +87,22 @@
 ---
 
 *Synchronization review — human-maintained lifecycle discipline; not a sync product.*
+
+---
+
+## RC5 RESOLUTION NOTE (2026-06-19)
+
+**What changed:** WPilot RC5 finalization superseded pre-RC5 registry and lifecycle assumptions. WPilot lifecycle is **Reference Implementation** (not "Phase 1 MVP documentation" or "plugin bridge planned" as current posture). Proven DEV runtime with authority registration; Sprint 3 **HOLD**.
+
+**Supersedes (for current-state readers only — audit tables above remain valid for 2026-05-19):**
+
+| Stale statement in this doc (2026-05-19) | Current SoT |
+|------------------------------------------|-------------|
+| §3 suggested evt-0020 — "Phase 1 MVP documentation; plugin bridge **planned**" | [WPILOT-LIFECYCLE-STATE.md](../projects/wpilot/WPILOT-LIFECYCLE-STATE.md), [WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md) — Reference Implementation; RC5 proven |
+| §4 — WPilot registry "`active`, plugin planned" / reality "operational docs ✓" | [registry/project-registry.md](../registry/project-registry.md) — Reference Implementation row (2026-06-19); [WPILOT-PROVEN-CAPABILITIES-v1.md](../projects/wpilot/WPILOT-PROVEN-CAPABILITIES-v1.md) |
+
+**Note on evt-0020 backfill:** If appended, description should reflect 2026-05-19 registration event only — not imply current "plugin planned" posture. Post-RC5 state is documented separately in WPilot finalization artefacts (2026-06-19).
+
+**Canonical entry:** [projects/wpilot/OPERATIONAL-INDEX.md](../projects/wpilot/OPERATIONAL-INDEX.md) · [REFERENCE-IMPLEMENTATIONS-INDEX.md](../projects/shared/reference-implementations/REFERENCE-IMPLEMENTATIONS-INDEX.md)
+
+*Historical findings in sections 1–6 remain valid for their audit date (2026-05-19).*
