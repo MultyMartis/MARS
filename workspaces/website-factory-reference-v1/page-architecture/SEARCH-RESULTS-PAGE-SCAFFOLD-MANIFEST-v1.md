@@ -202,7 +202,7 @@ CATALOG SC **PARTIAL** — **NOT PASSED** after A3. G2-R4 evaluation required.
 
 ## 22. Git Evidence
 
-Binding commit: A3 selective commit on `mars/post-cycle8-live-tests` — message `foundry: complete G2-R3 SEARCH_RESULTS_PAGE scaffold`.
+Binding commit: `6570fcb` on `mars/post-cycle8-live-tests` — message `foundry: complete G2-R3 SEARCH_RESULTS_PAGE scaffold`.
 
 ---
 
