@@ -493,10 +493,10 @@ PC: 1/1 LANDING · 1/1 CATALOG corridor · 1/1 PROMO corridor
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | *(populated after selective commit)* |
-| **Metadata commit** | *(if separate metadata commit applied)* |
+| **Main commit** | `d128182` — foundry: complete G2-R2 promo scaffold package |
+| **Metadata commit** | *(none — git result populated in this commit)* |
 | **Commit message** | `foundry: complete G2-R2 promo scaffold package` |
-| **Push result** | *(populated after push)* |
+| **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` updated `dec7e41..d128182` |
 | **Files committed** | P5 report · roadmap · OPERATIONAL-INDEX |
 | **No foreign lane confirmation** | **Confirmed** — implementation paths excluded |
 
