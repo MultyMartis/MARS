@@ -1,0 +1,54 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// --- CONTACT_PAGE scaffold layout (page-level only) ---
+
+.wf-contact-page__inner {
+  padding-block: $space-6;
+}
+
+.wf-contact-page__identity {
+  margin-block-start: $space-5;
+  max-width: 48rem;
+}
+
+.wf-contact-page__eyebrow {
+  margin: 0 0 $space-2;
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wf-contact-page__title {
+  margin: 0 0 $space-3;
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+  overflow-wrap: anywhere;
+}
+
+.wf-contact-page__lead {
+  margin: 0;
+  color: $color-text-muted;
+  line-height: $line-height-body;
+  max-width: 42rem;
+}
+
+.wf-contact-page .wf-section--contact,
+.wf-contact-page .wf-section--lead-form {
+  margin-block-start: $space-7;
+}
+
+.wf-contact-page .wf-section--lead-form {
+  max-width: 36rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-contact-page__title,
+  .wf-contact-page__lead {
+    transition: none;
+  }
+}

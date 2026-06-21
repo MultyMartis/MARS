@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Contact page scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference scaffold for CONTACT_PAGE — fictional NAP and presentation-only lead form.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-contact-page">
+    <div class="wf-contact-page__inner wf-container">
+      @@include('../partials/components/breadcrumbs.html')
+
+      <section
+        class="wf-contact-page__identity"
+        aria-labelledby="contact-page-title"
+      >
+        <p class="wf-contact-page__eyebrow">
+          Contact
+        </p>
+
+        <h1
+          class="wf-contact-page__title"
+          id="contact-page-title"
+        >
+          Contact the project team
+        </h1>
+
+        <p class="wf-contact-page__lead">
+          Use the fictional contact details or the reference form below
+          to review the structure of a contact page.
+        </p>
+      </section>
+
+      @@include('../partials/sections/contact_block.html')
+      @@include('../partials/sections/lead_form.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
