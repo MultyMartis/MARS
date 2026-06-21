@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — CHECKOUT block reference host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-checkout-reference-main">
+    <div class="wf-checkout-reference-main__inner">
+      <p class="wf-checkout-reference__context">Bounded reference surface · block validation host only</p>
+      <h1>CHECKOUT block reference</h1>
+      <p class="wf-checkout-reference__intro">
+        Bounded build host for the Tier A CHECKOUT conversion block partial. Not a page-type scaffold,
+        not a registered CHECKOUT_PAGE, and not payment or delivery integration.
+      </p>
+
+      <div class="wf-checkout-reference__showcase" data-section>
+        <h2 class="wf-checkout-reference__showcase-title">Static checkout form state</h2>
+        <p class="wf-checkout-reference__showcase-note">
+          Default demonstration state with fictional customer and address fields, static order summary,
+          consent semantics, and a presentation-only action.
+        </p>
+        @@include('../partials/components/checkout.html')
+      </div>
+
+      <p class="wf-checkout-reference__extension-note">
+        PAYMENT and DELIVERY extension slots use <code>data-checkout-slot</code> only — no
+        <code>data-block-id</code> hooks. Future W6-B3/W6-C partials compose into checkout scaffold
+        contexts separately.
+      </p>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

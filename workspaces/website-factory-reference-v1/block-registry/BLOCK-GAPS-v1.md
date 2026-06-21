@@ -124,7 +124,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | PARTNERS | — | Not implemented |
 | DELIVERY | — | Not implemented |
 | PAYMENT | — | Not implemented |
-| CHECKOUT | — | Not implemented |
+| CHECKOUT | `components/checkout.html` | **PARTIAL** — WF-R01.3.5 W6-B2 |
 | CART | `components/cart.html` | **PARTIAL** — WF-R01.3.5 W6-B1 |
 | LEGAL_LINKS | `components/legal-links.html` | **PARTIAL** — WF-R01.3.2 Wave B2 |
 | FOOTER | `footer.html` | **PARTIAL** — WF-R01.3.2 Wave B1 |

@@ -1,0 +1,209 @@
+<form
+  class="wf-checkout"
+  data-block-id="checkout"
+  novalidate
+  aria-labelledby="checkout-title"
+>
+  <header class="wf-checkout__header">
+    <h2 class="wf-checkout__title" id="checkout-title">Checkout</h2>
+    <p class="wf-checkout__intro">
+      Static reference checkout form with fictional customer and address fields. No order is created,
+      stored, or submitted.
+    </p>
+  </header>
+
+  <div class="wf-checkout__layout">
+    <div class="wf-checkout__details">
+      <fieldset class="wf-checkout__fieldset">
+        <legend class="wf-checkout__legend">Customer details</legend>
+
+        <div class="wf-checkout__field-grid">
+          <div class="wf-checkout__field">
+            <label class="wf-checkout__label" for="checkout-first-name">First name</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-first-name"
+              name="first-name"
+              type="text"
+              autocomplete="given-name"
+              value="Alex"
+            />
+          </div>
+
+          <div class="wf-checkout__field">
+            <label class="wf-checkout__label" for="checkout-last-name">Last name</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-last-name"
+              name="last-name"
+              type="text"
+              autocomplete="family-name"
+              value="Reference"
+            />
+          </div>
+
+          <div class="wf-checkout__field wf-checkout__field--wide">
+            <label class="wf-checkout__label" for="checkout-email">Email</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              value="alex.reference@example.test"
+            />
+          </div>
+
+          <div class="wf-checkout__field wf-checkout__field--wide">
+            <label class="wf-checkout__label" for="checkout-phone">Phone</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              value="+1 (555) 010-2030"
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="wf-checkout__fieldset">
+        <legend class="wf-checkout__legend">Delivery address</legend>
+
+        <div class="wf-checkout__field-grid">
+          <div class="wf-checkout__field wf-checkout__field--wide">
+            <label class="wf-checkout__label" for="checkout-country">Country or region</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-country"
+              name="country"
+              type="text"
+              autocomplete="country-name"
+              value="Reference Region"
+            />
+          </div>
+
+          <div class="wf-checkout__field">
+            <label class="wf-checkout__label" for="checkout-city">City</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-city"
+              name="city"
+              type="text"
+              autocomplete="address-level2"
+              value="North Example City"
+            />
+          </div>
+
+          <div class="wf-checkout__field">
+            <label class="wf-checkout__label" for="checkout-postal">Postal code</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-postal"
+              name="postal-code"
+              type="text"
+              autocomplete="postal-code"
+              value="90210-REF"
+            />
+          </div>
+
+          <div class="wf-checkout__field wf-checkout__field--wide">
+            <label class="wf-checkout__label" for="checkout-street">Street address</label>
+            <input
+              class="wf-checkout__control"
+              id="checkout-street"
+              name="street-address"
+              type="text"
+              autocomplete="street-address"
+              value="42 Neutral Commerce Lane, Suite 000, Extended Reference Address Line for Overflow Testing"
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="wf-checkout__extension-slot" data-checkout-slot="delivery">
+        <p class="wf-checkout__extension-slot-label">Delivery</p>
+        <p class="wf-checkout__extension-slot-note">
+          Delivery options are provided by the DELIVERY reference block.
+        </p>
+      </div>
+
+      <div class="wf-checkout__extension-slot" data-checkout-slot="payment">
+        <p class="wf-checkout__extension-slot-label">Payment</p>
+        <p class="wf-checkout__extension-slot-note">
+          Payment options are provided by the PAYMENT reference block.
+        </p>
+      </div>
+
+      <div class="wf-checkout__consent">
+        <input
+          class="wf-checkout__consent-input"
+          id="checkout-consent"
+          name="consent"
+          type="checkbox"
+          checked
+        />
+        <label class="wf-checkout__consent-label" for="checkout-consent">
+          I agree to the
+          <a class="wf-checkout__consent-link" href="#">reference terms of service</a>
+          and
+          <a class="wf-checkout__consent-link" href="#">privacy notice</a>.
+          Fictional consent for demonstration only — no personal data is collected or transmitted.
+        </label>
+      </div>
+
+      <div class="wf-checkout__actions">
+        <button class="wf-checkout__action" type="button">
+          Place fictional order
+        </button>
+        <p class="wf-checkout__action-note">
+          Presentation-only control. This reference block does not submit orders or connect to payment
+          services.
+        </p>
+      </div>
+    </div>
+
+    <aside class="wf-checkout__summary" aria-labelledby="checkout-summary-title">
+      <h3 class="wf-checkout__summary-title" id="checkout-summary-title">Order summary</h3>
+      <p class="wf-checkout__summary-note">
+        Static reference totals — not linked to the CART block on this host.
+      </p>
+
+      <ul class="wf-checkout__summary-items" role="list">
+        <li class="wf-checkout__summary-item">
+          <span class="wf-checkout__summary-item-name">Compact Preparation Unit</span>
+          <span class="wf-checkout__summary-item-meta">Qty 2</span>
+          <span class="wf-checkout__summary-item-price">€2,480</span>
+        </li>
+        <li class="wf-checkout__summary-item">
+          <span class="wf-checkout__summary-item-name">Modular Storage Rack</span>
+          <span class="wf-checkout__summary-item-meta">Qty 1</span>
+          <span class="wf-checkout__summary-item-price">€680</span>
+        </li>
+        <li class="wf-checkout__summary-item">
+          <span class="wf-checkout__summary-item-name">
+            Heavy-Duty Conveyor Preparation Station with Extended Naming for Layout Stress Testing
+          </span>
+          <span class="wf-checkout__summary-item-meta">Qty 1</span>
+          <span class="wf-checkout__summary-item-price">€3,890</span>
+        </li>
+      </ul>
+
+      <dl class="wf-checkout__totals">
+        <div class="wf-checkout__total-row">
+          <dt>Subtotal</dt>
+          <dd>€7,050</dd>
+        </div>
+        <div class="wf-checkout__total-row wf-checkout__total-row--note">
+          <dt>Delivery</dt>
+          <dd>Pending — DELIVERY block</dd>
+        </div>
+        <div class="wf-checkout__total-row wf-checkout__total-row--emphasis">
+          <dt>Total</dt>
+          <dd>€7,050</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</form>
