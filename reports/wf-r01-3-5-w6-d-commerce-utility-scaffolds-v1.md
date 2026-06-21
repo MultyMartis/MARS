@@ -380,7 +380,7 @@ G3R lists W7-C and W7-D as **parallel eligible** before G3-E. Charter defines th
 |-------|-------|
 | **Commit message** | `foundry: implement commerce utility scaffolds` |
 | **Branch** | `mars/post-cycle8-live-tests` |
-| **Commit binding** | *See post-commit SHA below* |
+| **Commit binding** | `0429317` — `foundry: implement commerce utility scaffolds` |
 | **Push** | `git push origin mars/post-cycle8-live-tests` |
 
 ---

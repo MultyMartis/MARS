@@ -247,7 +247,7 @@ npm run build
 |-------|-------|
 | **Commit message** | `foundry: implement commerce utility scaffolds` |
 | **Branch** | `mars/post-cycle8-live-tests` |
-| **Commit binding** | *Pending W6-D commit* |
+| **Commit binding** | `0429317` — `foundry: implement commerce utility scaffolds` |
 
 ---
 
