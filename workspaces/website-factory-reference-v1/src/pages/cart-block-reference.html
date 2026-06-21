@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — CART block reference host</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-cart-reference-main">
+    <div class="wf-cart-reference-main__inner">
+      <p class="wf-cart-reference__context">Bounded reference surface · block validation host only</p>
+      <h1>CART block reference</h1>
+      <p class="wf-cart-reference__intro">
+        Bounded build host for the Tier A CART conversion block partial. Not a page-type scaffold,
+        not a registered CART_PAGE, and not checkout or payment integration.
+      </p>
+
+      <div class="wf-cart-reference__showcase" data-section>
+        <h2 class="wf-cart-reference__showcase-title">Populated cart state</h2>
+        <p class="wf-cart-reference__showcase-note">
+          Default demonstration state with fictional line items, static totals, and presentation-only controls.
+        </p>
+        @@include('../partials/components/cart.html')
+      </div>
+
+      <p class="wf-cart-reference__variation-note">
+        Empty-cart variation is included in the canonical partial as a hidden source variation
+        (<code>data-cart-variation="empty"</code>). It does not receive a separate block identity or RPC accrual.
+      </p>
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
