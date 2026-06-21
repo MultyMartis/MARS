@@ -456,10 +456,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending selective commit |
+| **Main commit** | `be3e2ea` — `foundry: accept G2-R2 promo scaffold charter` |
+| **Metadata commit** | None |
 | **Commit message** | `foundry: accept G2-R2 promo scaffold charter` |
-| **Files committed** | Charter · REPORT · roadmap · OPERATIONAL-INDEX |
-| **No foreign lane confirmation** | Required at commit time |
+| **Push result** | **SUCCESS** — `bc90bc1..be3e2ea` → `origin/mars/post-cycle8-live-tests` |
+| **Files committed** | Charter · REPORT · roadmap · OPERATIONAL-INDEX (4 files) |
+| **No foreign lane confirmation** | **Confirmed** — staged set contained only 4 allowed paths |
 
 ---
 
