@@ -224,6 +224,7 @@ Full matrix: [SITE-TYPE-BLOCK-MATRIX-v2.md](SITE-TYPE-BLOCK-MATRIX-v2.md).
 | **Typical placement** | `/about/` dedicated page |
 | **Conversion value** | Low direct; supports brand queries |
 | **Site type compatibility** | LANDING — · PROMO ● · CATALOG — · ECOMMERCE — · CORPORATE ● |
+| **Reference** | `components/about.html` — **PARTIAL** (WF-R01.3 G2-R1 W3-D) |
 
 ---
 

@@ -119,7 +119,7 @@ Block Registry v1 делает Blueprints **operational** для planning (Site 
 | TRUST | `trust.html` | **Implemented, narrowed** — WF-R01.3.2 Wave A3 |
 | CERTIFICATES | — | Not implemented |
 | TEAM | `components/team.html` | **PARTIAL** — WF-R01.3 G2-R1 W3-C |
-| ABOUT | — | Not implemented |
+| ABOUT | `components/about.html` | **PARTIAL** — WF-R01.3 G2-R1 W3-D |
 | MAP | — | Not implemented |
 | PARTNERS | — | Not implemented |
 | DELIVERY | — | Not implemented |
