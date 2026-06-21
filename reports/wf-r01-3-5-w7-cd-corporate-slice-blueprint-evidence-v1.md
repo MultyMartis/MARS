@@ -234,10 +234,10 @@ WF-R01.3.5: **W7-CD COMPLETE** · package **NOT COMPLETE**. G3: evidence inputs 
 
 | Field | Value |
 |-------|-------|
-| **Commit** | *(populated after selective commit)* |
+| **Commit** | `39ba4a5` — `foundry: publish G3 corporate and ecommerce blueprint evidence` |
 | **Branch** | `mars/post-cycle8-live-tests` |
-| **Push** | *(populated after push)* |
-| **Files committed** | 6 (expected scope) |
+| **Push** | **SUCCESS** — `a86c222..39ba4a5` |
+| **Files committed** | 6 (evidence artefact · report · roadmap · OPERATIONAL-INDEX · 2 blueprint-instances) |
 | **Foreign WIP** | **Excluded** |
 
 ---
