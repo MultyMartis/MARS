@@ -1,0 +1,77 @@
+<section
+  class="wf-payment"
+  data-block-id="payment"
+  aria-labelledby="payment-title"
+>
+  <header class="wf-payment__header">
+    <h2 class="wf-payment__title" id="payment-title">Payment</h2>
+    <p class="wf-payment__intro">
+      Payment methods shown here are fictional reference options. No payment is processed in this
+      reference interface.
+    </p>
+  </header>
+
+  <fieldset class="wf-payment__fieldset">
+    <legend class="wf-payment__legend">Choose a payment method</legend>
+
+    <ul class="wf-payment__methods" role="list">
+      <li class="wf-payment__method">
+        <input
+          class="wf-payment__method-input"
+          type="radio"
+          name="payment-method"
+          id="payment-method-invoice"
+          value="invoice"
+          checked
+        />
+        <label class="wf-payment__method-label" for="payment-method-invoice">
+          <span class="wf-payment__method-title">Pay on invoice</span>
+          <span class="wf-payment__method-description">
+            Reference option for business buyers. Final invoice details would be confirmed after order
+            review.
+          </span>
+        </label>
+      </li>
+
+      <li class="wf-payment__method">
+        <input
+          class="wf-payment__method-input"
+          type="radio"
+          name="payment-method"
+          id="payment-method-bank-transfer"
+          value="bank-transfer"
+        />
+        <label class="wf-payment__method-label" for="payment-method-bank-transfer">
+          <span class="wf-payment__method-title">Reference bank transfer</span>
+          <span class="wf-payment__method-description">
+            Neutral demonstration label only. No real banking details or account numbers are shown.
+          </span>
+        </label>
+      </li>
+
+      <li class="wf-payment__method">
+        <input
+          class="wf-payment__method-input"
+          type="radio"
+          name="payment-method"
+          id="payment-method-fictional-card"
+          value="fictional-card"
+        />
+        <label class="wf-payment__method-label" for="payment-method-fictional-card">
+          <span class="wf-payment__method-title">
+            Fictional card payment with extended neutral naming for layout stress testing
+          </span>
+          <span class="wf-payment__method-description">
+            Presentation-only method label. Card number, expiry, and security code fields are not
+            collected in this reference block.
+          </span>
+        </label>
+      </li>
+    </ul>
+  </fieldset>
+
+  <p class="wf-payment__trust-note">
+    No payment is processed in this reference interface. Final payment instructions would normally be
+    confirmed after order review.
+  </p>
+</section>

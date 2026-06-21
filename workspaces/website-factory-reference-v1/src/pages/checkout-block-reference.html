@@ -14,8 +14,8 @@
       <p class="wf-checkout-reference__context">Bounded reference surface · block validation host only</p>
       <h1>CHECKOUT block reference</h1>
       <p class="wf-checkout-reference__intro">
-        Bounded build host for the Tier A CHECKOUT conversion block partial. Not a page-type scaffold,
-        not a registered CHECKOUT_PAGE, and not payment or delivery integration.
+        Bounded build host for CHECKOUT and PAYMENT reference partials in checkout context. Not a
+        page-type scaffold, not a registered CHECKOUT_PAGE, and not delivery integration.
       </p>
 
       <div class="wf-checkout-reference__showcase" data-section>
@@ -27,10 +27,19 @@
         @@include('../partials/components/checkout.html')
       </div>
 
+      <div class="wf-checkout-reference__showcase wf-checkout-reference__showcase--payment" data-section>
+        <h2 class="wf-checkout-reference__showcase-title">Payment method selection</h2>
+        <p class="wf-checkout-reference__showcase-note">
+          Fictional payment methods with static radio selection and trust/context copy. Composed as a
+          sibling block in checkout context — not nested inside the CHECKOUT partial root.
+        </p>
+        @@include('../partials/components/payment.html')
+      </div>
+
       <p class="wf-checkout-reference__extension-note">
-        PAYMENT and DELIVERY extension slots use <code>data-checkout-slot</code> only — no
-        <code>data-block-id</code> hooks. Future W6-B3/W6-C partials compose into checkout scaffold
-        contexts separately.
+        DELIVERY extension slot uses <code>data-checkout-slot</code> only — no
+        <code>data-block-id</code> hook. PAYMENT is composed as a sibling canonical partial on this
+        bounded host.
       </p>
     </div>
   </main>
