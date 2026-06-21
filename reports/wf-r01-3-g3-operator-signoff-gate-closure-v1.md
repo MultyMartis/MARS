@@ -271,7 +271,14 @@ Documentation-operational · **not started** in this pass · **no** pilot worksp
 
 ## 21. Git Result
 
-See §21 after selective commit and push — populated at commit time.
+| Field | Value |
+|-------|-------|
+| **Commit** | `1f20237` — `foundry: close WF-R01.3 Gate G3 and authorize pilot readiness` |
+| **Branch** | `mars/post-cycle8-live-tests` |
+| **Push** | **SUCCESS** — `c08a897..1f20237` |
+| **Files committed** | 6 — evaluation update · gate closure · post-G3 lifecycle · operator report · roadmap · OPERATIONAL-INDEX |
+| **Foreign WIP** | **Excluded** |
+| **Force push** | **Not used** |
 
 ---
 
