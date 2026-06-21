@@ -271,7 +271,13 @@ W6-G3R complete. Coverage unchanged. Proceed to **W6-D** when authorized.
 
 ## 30. Git Result
 
-*(Updated after selective commit/push)*
+| Field | Value |
+|-------|-------|
+| **Commit** | `3713980` — `foundry: reconcile WF-R01.3 G3 readiness` |
+| **Branch** | `mars/post-cycle8-live-tests` |
+| **Push** | **SUCCESS** — `7bd633d..3713980` |
+| **Files committed** | 4 (reconciliation artefact · report · roadmap · OPERATIONAL-INDEX) |
+| **Foreign WIP** | **Excluded** |
 
 ---
 
