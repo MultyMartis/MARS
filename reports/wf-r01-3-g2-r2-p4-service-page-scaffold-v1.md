@@ -416,10 +416,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending — `foundry: complete G2-R2 SERVICE_PAGE scaffold` |
-| **Metadata commit** | None planned |
+| **Main commit** | `ce45379` — `foundry: complete G2-R2 SERVICE_PAGE scaffold` |
+| **Metadata commit** | None |
 | **Commit message** | `foundry: complete G2-R2 SERVICE_PAGE scaffold` |
-| **Push result** | Pending |
+| **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` updated (`5d5208c..ce45379`) |
 | **Files committed** | P4 selective scope only |
 | **No foreign lane confirmation** | Verified before commit |
 
