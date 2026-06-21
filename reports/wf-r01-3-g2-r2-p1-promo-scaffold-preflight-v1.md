@@ -369,10 +369,12 @@ All P2 gates satisfied: registered page type · final shell/blocks · partial re
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending — selective add |
+| **Main commit** | `ac415b2` — foundry: publish G2-R2 promo scaffold preflight |
+| **Metadata commit** | None |
 | **Commit message** | `foundry: publish G2-R2 promo scaffold preflight` |
+| **Push result** | **Success** — `origin/mars/post-cycle8-live-tests` (`9b95842..ac415b2`) |
 | **Files committed** | P1 preflight · P1 REPORT · roadmap · OPERATIONAL-INDEX |
-| **Foreign lane** | Excluded |
+| **Foreign lane** | **Excluded** — confirmed |
 
 ---
 
