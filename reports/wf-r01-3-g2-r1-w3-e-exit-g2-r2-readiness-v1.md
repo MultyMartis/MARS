@@ -555,7 +555,7 @@ G2-10 · G2-11 · G2-12 · G2-14 · G2-19 · G2-20 · G2-R2 charter gap
 | Field | Value |
 |-------|-------|
 | **Main commit hash** | `ad74f21` — foundry: complete G2-R1 W3 promo references |
-| **Metadata commit** | This section update — see follow-up metadata commit |
+| **Metadata commit** | `0dc6b91` — docs: populate W3-E report git result section |
 | **Commit message** | `foundry: complete G2-R1 W3 promo references` |
 | **Push result** | **SUCCESS** — `a379fc1..ad74f21` → `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | `reports/wf-r01-3-g2-r1-w3-e-exit-g2-r2-readiness-v1.md` · `projects/mars-website-factory/roadmap.md` · `projects/mars-website-factory/OPERATIONAL-INDEX.md` |
