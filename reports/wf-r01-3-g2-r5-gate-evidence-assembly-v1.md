@@ -357,7 +357,15 @@ No G2 PASS · no implementation changes · no metric accrual.
 
 ## 26. Git Result
 
-*Populated after selective commit and push.*
+| Field | Value |
+|-------|-------|
+| **Registry commit** | `a5e6019` — foundry: reconcile SEARCH_RESULTS_PAGE registry status |
+| **Evidence commit** | `1b97595` — foundry: assemble G2 gate evidence |
+| **Metadata commit** | None |
+| **Push result** | **SUCCESS** — `9cc9624..1b97595` |
+| **Remote confirmation** | **CONFIRMED** — `1b97595` on `mars/post-cycle8-live-tests` |
+| **Files committed** | PAGE-TYPE-REGISTRY · G2-R5 decision · G2-R5 report · roadmap · OPERATIONAL-INDEX |
+| **No foreign lane confirmation** | **CONFIRMED** — no src/scss/js · no foreign WIP |
 
 ---
 
