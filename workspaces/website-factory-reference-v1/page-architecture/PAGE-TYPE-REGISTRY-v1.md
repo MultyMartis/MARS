@@ -15,7 +15,7 @@ Page Type Registry v1 — **стабильные `page_type` коды** для P
 
 **Минимальный набор v1 (10 типов):** см. таблицы ниже.
 
-**Расширение beyond minimum (G2-R3 A1, 2026-06-21):** `SEARCH_RESULTS_PAGE` — registered · **UNSCaffolded** · CATALOG SC-required · not CATALOG PC corridor member. Authority: [wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md](../../../projects/mars-website-factory/wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md).
+**Расширение beyond minimum (G2-R3 A1, 2026-06-21):** `SEARCH_RESULTS_PAGE` — registered · **SCAFFOLD COMPLETE / VALIDATED** (G2-R3 A3 · G2-R4 · G2-R5 reconciliation 2026-06-21) · CATALOG SC-required · not CATALOG PC corridor member. Authority: [wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md](../../../projects/mars-website-factory/wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md). *Historical (A1):* registered · UNSCAFFOLDED — superseded by A3 scaffold evidence.
 
 **Расширения (не в минимальном реестре):** `CART_PAGE`, `CHECKOUT_PAGE`, `ORDER_CONFIRMATION_PAGE` — документированы в [PAGE-DEPENDENCY-RULES-v1.md](PAGE-DEPENDENCY-RULES-v1.md) для ECOMMERCE only.
 
@@ -149,11 +149,12 @@ Page Type Registry v1 — **стабильные `page_type` коды** для P
 | **Purpose** | Query-driven results listing surface: search query context, result summary, product/results grid, list controls |
 | **Typical use** | `/search/`, `/catalog/search/` |
 | **Allowed site types** | `CATALOG`, `ECOMMERCE`, `CORPORATE` (catalog subtree) |
-| **Registry status** | **REGISTERED / UNSCAFFOLDED** |
-| **RSC eligibility** | **Yes** — global RSC denominator member (post–G2-R3 A1) |
-| **CATALOG SC** | **Required** — CATALOG minimum scaffold set |
+| **Registry status** | **REGISTERED / SCAFFOLD COMPLETE / VALIDATED** |
+| **Scaffold evidence** | `src/pages/search-results-page-reference.html` · [SEARCH-RESULTS-PAGE-REFERENCE-COMPOSITION-v1.md](SEARCH-RESULTS-PAGE-REFERENCE-COMPOSITION-v1.md) **PUBLISHED** · [SEARCH-RESULTS-PAGE-SCAFFOLD-MANIFEST-v1.md](SEARCH-RESULTS-PAGE-SCAFFOLD-MANIFEST-v1.md) **PUBLISHED / VALIDATED** · `dist/search-results-page-reference.html` · build PASS |
+| **RSC eligibility** | **Yes** — global RSC denominator member (post–G2-R3 A1); **earned** at A3 (+1 → **7/11**) |
+| **CATALOG SC** | **Required** — CATALOG minimum scaffold set; **satisfied** per G2-R4 CATALOG SC PASS |
 | **CATALOG PC corridor** | **Excluded** — PC corridor remains `CATEGORY_PAGE` → `PRODUCT_PAGE` |
-| **Notes** | Distinct from `CATEGORY_PAGE` (taxonomy PLP). PLP search embed does **not** satisfy results-host criterion. Scaffold **absent** — no RSC numerator accrual. Authority: G2-R3 A1 · [wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md](../../../projects/mars-website-factory/wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md). **Forbidden aliases:** `SEARCH_PAGE`, `RESULTS_PAGE`, `SEARCH_LISTING_PAGE`. |
+| **Notes** | Distinct from `CATEGORY_PAGE` (taxonomy PLP). PLP search embed does **not** satisfy results-host criterion. *Historical (A1):* REGISTERED / UNSCAFFOLDED — superseded 2026-06-21 by G2-R3 A3 scaffold. Authority: G2-R3 A1–A3 · G2-R4 · [wf-r01-3-g2-r3-a3-search-results-page-scaffold-v1.md](../../../reports/wf-r01-3-g2-r3-a3-search-results-page-scaffold-v1.md). **Forbidden aliases:** `SEARCH_PAGE`, `RESULTS_PAGE`, `SEARCH_LISTING_PAGE`. |
 
 ---
 
