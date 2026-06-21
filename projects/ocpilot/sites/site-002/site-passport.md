@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 COMMERCIAL TRUST 01**  
-**Run:** Stable live checkpoint after filter recovery + filter UX + Commercial Trust redesign + operator manual polish (2026-06-21)
+**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 CATALOG UX COMPLETE 01**  
+**Run:** Stable live checkpoint after catalog UX cluster completion (2026-06-21)
 
 ---
 
@@ -14,18 +14,18 @@
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
 | **Version** | SAFE UNKNOWN |
-| **Baseline Match** | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
+| **Baseline Match** | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
 | **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
-| **Current Status** | **STABLE LIVE CHECKPOINT — M9.8.9 COMMERCIAL TRUST 01** |
-| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block) |
+| **Current Status** | **STABLE LIVE CHECKPOINT — M9.8.9 CATALOG UX COMPLETE 01** |
+| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
-| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. Filter recovery + filter UX complete. Commercial Trust (03B/03C + operator polish) registered. EC-01 mitigated by subcategories hide (07). M10 not authorized. |
+| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. Catalog UX cluster complete: filter recovery + filter UX + Commercial Trust + state persistence (09A–09C) + hub cleanup (10). EC-01 mitigated by subcategories hide (07). M10 not authorized. |
 
 ---
 
@@ -33,12 +33,12 @@
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
 | **Conflict resolution** | If any documentation contradicts current TEST state, **source of truth** = live TEST on https://zpm.new-site.space/ as registered in this checkpoint |
-| **Do NOT use as visual baseline** | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`, `SITE-002-STABLE-LIVE-PDP-V5.1-2026-06-14`, pre-M9.8.9 work copies |
+| **Do NOT use as visual baseline** | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`, `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`, pre-M9.8.9 work copies |
 
 ---
 
@@ -46,22 +46,24 @@
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
 | Registered | 2026-06-21 |
-| Type | Stable live checkpoint (FTP capture + operator attestation) |
-| Supersedes (live truth) | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
+| Type | Stable live checkpoint (metadata registration) |
+| Supersedes (live truth) | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
 | Recovery scope | Product reset · fresh 1C import · price index · filter hotfixes (06D–06M) |
 | Filter UX scope | Scroll (04/04B) · hide subcategories (07) · group reset (08/08A) |
-| Commercial Trust scope | M9.8.9-03B redesign · M9.8.9-03C deploy · operator manual polish |
+| Commercial Trust scope | M9.8.9-03B redesign · M9.8.9-03C deploy · operator manual polish · FAQ · OEM proof |
+| Catalog state persistence | M9.8.9-09A / 09B / 09C — filter + limit + sort + pagination + only_with_price joint behaviour |
+| Hub cleanup | M9.8.9-10 — no `page-intro__description` on `/katalog/nejtralnoe-oborudovanie` |
 | Other UX | Wishlist/compare smart tooltips (01) |
 | Completed M9.8 passes | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
 | Operator manual passes | PLP / filter / breakpoint / CSS / Twig polish · **JS refinements (04B)** |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | Remaining M9.8.9 tasks per roadmap · deferred M9.8.3/4/6/8 · **M10** — not authorized |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md) |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
 
-**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
+**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
 
 ---
 
@@ -69,15 +71,21 @@
 
 | Field | Value |
 |-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
+| Doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) |
+| Scope | Commercial Trust — superseded for live truth |
+
+| Field | Value |
+|-------|--------|
 | Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
 | Doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
-| Scope | Filter recovery + filter UX — superseded for live truth |
+| Scope | Filter recovery + filter UX — historical |
 
 | Field | Value |
 |-------|--------|
 | Name | `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01` |
 | Doc | [baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md](baselines/SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01.md) |
-| Scope | M9.8.1/2/5 + operator PLP polish — superseded for live truth |
+| Scope | M9.8.1/2/5 + operator PLP polish — historical |
 
 | Field | Value |
 |-------|--------|
@@ -132,6 +140,8 @@
 - **Filter UX polish (04, 04A, 04B, 07, 08, 08A)**
 - **Wishlist / Compare smart tooltips (01)**
 - **Commercial Trust block (03B/03C + operator manual polish)**
+- **Catalog state persistence (09A, 09B, 09C)**
+- **Hub cleanup — page-intro removal (10)**
 
 ### Активный этап
 
@@ -148,11 +158,12 @@ M9.8.3 Homepage Hero · M9.8.4 PLP Density · M9.8.6 UltraWide · M9.8.7 EC-01 �
 Before next SITE-002 change:
 
 1. Read [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md)
-2. Use `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` as authority
-3. For filter / catalog / 1C / price / PLP — follow Knowledge Map §13 domain-specific PRE-TASK rule
-4. For trust block / certificates / dealers form / category CTA — follow Knowledge Map §14 + §13 Commercial Trust PRE-TASK rule
-5. Live-capture any files touched before deploy
-5. **Do not** start M10 without operator charter
+2. Use `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` as authority
+3. For filters / sort / pagination / limit / only_with_price — read Knowledge Map **§16** + passes 09A/09B/09C
+4. For filter / catalog / 1C / price / PLP — follow Knowledge Map §13 domain-specific PRE-TASK rule
+5. For trust block / certificates / dealers form / category CTA — follow Knowledge Map §14 + §13 Commercial Trust PRE-TASK rule
+6. Live-capture any files touched before deploy
+7. **Do not** start M10 without operator charter
 
 Rollback = Beget full backup → current live TEST → file-level pass backups.
 
@@ -162,6 +173,7 @@ Rollback = Beget full backup → current live TEST → file-level pass backups.
 
 - ocStore / OpenCart exact version and release line
 - Beget backup artifact location and timestamp (operator attestation only)
+- M9.8.9-09C browser QA Q1–Q6 — operator interaction HITL pending
 - M10 scope and authorization status
 - Who populates `price2`, `price3`, `discount1c` in production workflow
 

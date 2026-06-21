@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-21  
-**Evidence cutoff:** 2026-06-21 (SITE-002 stable live checkpoint — M9.8.9 Commercial Trust 01 after filter recovery + filter UX + Commercial Trust + operator manual polish)  
+**Evidence cutoff:** 2026-06-21 (SITE-002 stable live checkpoint — M9.8.9 Catalog UX Complete 01 after catalog UX cluster: filter recovery + filter UX + Commercial Trust + state persistence + hub cleanup)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,9 +14,9 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.8.9 COMMERCIAL TRUST 01** (2026-06-21) |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.8.9 CATALOG UX COMPLETE 01** (2026-06-21) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` — filter recovery + filter UX + Commercial Trust **complete**; Knowledge Map updated (§14 Commercial Trust Block); active work package **M9.8.9 Minor Fixes Pack #1** (remaining tasks); EC-01 mitigated by subcategories hide (07) |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` — catalog UX cluster **complete**; Knowledge Map updated (§16 Catalog State Persistence); active work package **M9.8.9 Minor Fixes Pack #1** (remaining tasks); EC-01 mitigated by subcategories hide (07) |
 
 ---
 
@@ -28,11 +28,11 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`** — **STABLE LIVE CHECKPOINT** (FTP capture + metadata; filter recovery + filter UX + Commercial Trust complete) |
+| Baseline | **`SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`** — **STABLE LIVE CHECKPOINT** (metadata registration; catalog UX cluster complete) |
 | Knowledge map | [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Authority policy | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
-| Registry | Active project site — M7.1 through M9.8.5 + filter recovery + filter UX wave **complete** on TEST |
-| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** |
+| Registry | Active project site — M7.1 through M9.8.5 + catalog UX cluster **complete** on TEST |
+| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** |
 | Active stage | **M9.8.9 Minor Fixes Pack #1** — remaining tasks per roadmap (2026-06-19) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | Remaining M9.8.9 tasks per [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) · deferred M9.8.3/4/6/8 · **M10** not authorized |
@@ -41,7 +41,7 @@
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 | External secrets | External storage only — not in repo |
 
-**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
+**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
 
 **State freeze report:** [sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md)
 
@@ -528,6 +528,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 
 | 2026-06-14 | **UPDATED** — SITE-002 stable live manual compact checkpoint **REGISTERED**; Run **4.138**; baseline `SITE-002-STABLE-LIVE-MANUAL-COMPACT-2026-06-14`; status **STABLE LIVE CHECKPOINT**; rollback = Beget global backup + operator live state; metadata-only — no FTP/file capture |
 | 2026-06-17 | **UPDATED** — SITE-002 authority freeze → `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI`; **MANUAL UI REFINEMENTS ARE CANONICAL**; active stage **M9.8 UX Polish Pack**; [REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md) |
+| 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |
 | 2026-06-19 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.143**; baseline `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`; status **STABLE LIVE CHECKPOINT**; filter recovery + filter UX polish complete; Knowledge Map §7/§8; metadata-only — no FTP/file capture |
 | 2026-06-19 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.140**; baseline `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`; status **STABLE LIVE CHECKPOINT**; M9.8.1 · M9.8.2 · M9.8.5 + operator PLP polish complete; rollback = Beget full backup + live TEST + file-level pass backups; metadata-only — no FTP/file capture |

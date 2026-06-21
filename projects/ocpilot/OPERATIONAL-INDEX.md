@@ -130,7 +130,9 @@
 
 | 4.143 | **SITE-002 — Stable Live M9.8.9 Filter UX Complete Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT** — superseded by 4.144 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
-| 4.144 | **SITE-002 — Stable Live M9.8.9 Commercial Trust Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md), [sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/](sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+| 4.144 | **SITE-002 — Stable Live M9.8.9 Commercial Trust Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT** — superseded by 4.145 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md), [sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/](sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.145 | **SITE-002 — Stable Live M9.8.9 Catalog UX Complete Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
@@ -180,17 +182,38 @@
 
 ---
 
+## Run 4.145 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) — stable checkpoint after catalog UX cluster completion
+- [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §16 Catalog State Persistence, PRE-TASK rule for filters/sort/pagination/limit/only_with_price
+- [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md) — registration report
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.8.9 Catalog UX Complete 01
+
+**Site modification:** **NONE** — documentation only. No FTP. No deploy.
+
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
+
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
+
+**Registered scope:** filter recovery (06D–06M) · filter UX (04–08A) · tooltips (01) · Commercial Trust (03B/03C + operator polish) · catalog state persistence (09A–09C) · hub cleanup (10)
+
+**Joint behaviour:** filter + limit + sort + pagination + only_with_price work together on PLP.
+
+**PRE-TASK RULE:** for filters/sort/pagination/limit/only_with_price — read Knowledge Map §16 + passes 09A/09B/09C before any work.
+
+---
+
 ## Run 4.144 deliverables (summary)
 
 - [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) — stable checkpoint after filter recovery + filter UX + Commercial Trust + operator manual polish
 - [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §14 Commercial Trust Block, PRE-TASK rule update for trust/CTA tasks
 - [sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/](sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/) — FTP read-only capture (`blockcommercialtrust.twig`, `style.css`, `category.php`) + SHA256 manifest
 - [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md) — registration report
-- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.8.9 Commercial Trust 01
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.8.9 Commercial Trust 01 (superseded by 4.145)
 
 **Site modification:** **NONE** — documentation + read-only FTP capture only. No deploy.
 
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` — **superseded by 4.145**
 
 **Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
 

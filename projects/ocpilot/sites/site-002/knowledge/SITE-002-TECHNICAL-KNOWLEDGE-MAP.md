@@ -2,11 +2,11 @@
 
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`  
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`  
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
-**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + operator manual Commercial Trust polish (2026-06-21 live capture).
+**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + catalog state persistence (09A–09C) + hub cleanup (10) + operator manual polish (2026-06-21 live state).
 
 ---
 
@@ -20,13 +20,13 @@
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
 | 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) |
+| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
 
 ### Current stable state
 
-- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
-- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
-- **Post-recovery + UX:** filter recovery (06D–06M) → filter UX polish (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator manual polish)
+- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
+- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
+- **Catalog UX cluster:** filter recovery (06D–06M) → filter UX (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator polish) → catalog state persistence (09A–09C) → hub cleanup (10)
 
 ### Manual UI refinements are canonical
 
@@ -603,18 +603,27 @@ Before **any** JS task touching header sticky behaviour or catalog filter scroll
 Before **any** SITE-002 task:
 
 1. **Read** this Technical Knowledge Map
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
 3. **Verify Authority State** matches checkpoint name
 4. **Check Active Roadmap Stage** — [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md)
 5. **Only then** perform audit or changes
+
+### PRE-TASK RULE UPDATE (domain-specific — filters / sort / pagination / limit / only_with_price)
+
+Before **any** task touching **filters**, **sort**, **pagination**, **limit**, or **only_with_price**:
+
+1. **Read** this Technical Knowledge Map — **§16 Catalog State Persistence** (mandatory)
+2. **Read** pass reports **M9.8.9-09A**, **M9.8.9-09B**, **M9.8.9-09C** as mandatory context
+3. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+4. Test **interaction paths** — filter AJAX → limit click; limit → filter; full combo with sort + page — not only full-page URL loads
 
 ### PRE-TASK RULE UPDATE (domain-specific — filters / catalog / 1C / price / PLP)
 
 Before **any** task touching **filters**, **catalog**, **1C import**, **price**, or **PLP**:
 
-1. **Read** this Technical Knowledge Map — especially **§5 Price Index**, **§6 Filter System**, **§7 Filter Architecture**, **§8 Live Files With Business Logic**
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
-3. **Live-capture** the specific business-logic files in scope (`product.php`, `import_1C_offers.php`, `filterssidebar.twig`, `main.js`, `style.css`) before deploy
+1. **Read** this Technical Knowledge Map — especially **§5 Price Index**, **§6 Filter System**, **§7 Filter Architecture**, **§8 Live Files With Business Logic**, **§16 Catalog State Persistence**
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+3. **Live-capture** the specific business-logic files in scope (`product.php`, `import_1C_offers.php`, `filterssidebar.twig`, `main.js`, `style.css`, `category.php`) before deploy
 4. Test isolated URL params **and** sidebar form submit; test `only_with_price` + attribute combos; verify price range min ≠ 0 when zero-price SKUs exist
 
 ### PRE-TASK RULE UPDATE (domain-specific — Commercial Trust / CTA)
@@ -622,7 +631,7 @@ Before **any** task touching **filters**, **catalog**, **1C import**, **price**,
 Before **any** task touching **trust block**, **certificates**, **dealers form**, or **category CTA**:
 
 1. **Read** this Technical Knowledge Map — **§14 Commercial Trust Block**
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
 3. **Live-capture** `blockcommercialtrust.twig`, `style.css`, `category.php` before deploy — do not trust 03C work copies or pass reports alone
 4. Verify dynamic H2 on at least one mapped category + fallback category
 5. Treat operator manual CSS/Twig on live as **canonical** over repo work copies
@@ -653,7 +662,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 
 ## 14. Commercial Trust Block
 
-Category PLP decision-stage block — after product grid, before footer. **Live TEST is canonical**; M9.8.9-03C deploy + operator manual polish registered in `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`.
+Category PLP decision-stage block — after product grid, before footer. **Live TEST is canonical**; M9.8.9-03C deploy + operator manual polish registered in `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` (carried forward from Commercial Trust 01).
 
 ### Purpose
 
@@ -747,13 +756,157 @@ CSS: `.zpm-commercial-trust__services` — `grid-template-columns: repeat(4, 1fr
 Before **any** edit to trust block, certificates strip, dealers form, or category CTA:
 
 1. Read **§14** (this section)
-2. Read latest stable checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
+2. Read latest stable checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
 3. **Live-capture** `blockcommercialtrust.twig`, `style.css`, `category.php` — do not trust 03C work copies or pass reports alone
 4. Operator manual CSS/Twig on live **override** repo work copies
 5. Clear Twig cache after twig deploy
 6. Test at least one mapped category + fallback category PLP
 
 **Evidence:** [SITE-002-M9.8.9-03B-COMMERCIAL-TRUST-BLOCK-REDESIGN.md](../reports/SITE-002-M9.8.9-03B-COMMERCIAL-TRUST-BLOCK-REDESIGN.md) · [SITE-002-M9.8.9-03C-COMMERCIAL-TRUST-BLOCK-IMPLEMENTATION.md](../reports/SITE-002-M9.8.9-03C-COMMERCIAL-TRUST-BLOCK-IMPLEMENTATION.md) · [live-capture 2026-06-21](../reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/)
+
+---
+
+## 15. Page Intro Block (`page-intro`)
+
+Shared H1 strip rendered **above `<main>`** via header partial — not inside `category.twig`.
+
+### Render chain
+
+| Step | File | Role |
+|------|------|------|
+| 1 | Controller sets `Pageintro` | `$pageintro->title`, `$pageintro->description` |
+| 2 | `Pageintro::render()` | Emits `<section class="page-intro">` HTML (incl. optional `.page-intro__description`) |
+| 3 | `$this->document->setPageintro(...)` | Stores rendered HTML on document |
+| 4 | `catalog/controller/common/header.php` | `$data['pageintro'] = $this->document->getPageintro()` |
+| 5 | `catalog/view/theme/default/template/common/header.twig` | `{% if pageintro %}{{ pageintro }}{% endif %}` after breadcrumbs |
+
+**Important:** `$data['description']` in `category.php` (from `oc_category_description`) is the **SEO/category body block below the grid** — **not** the same as `$pageintro->description`.
+
+### Data sources by route
+
+| Route / page | Controller | `$pageintro->description` source | Live (post M9.8.9-10) |
+|--------------|------------|--------------------------------|------------------------|
+| `/katalog` | `catalog/controller/product/katalog.php` | Hardcoded string | **Present** — «Для предприятий общественного питания…» |
+| Category PLP (branch) | `catalog/controller/product/category.php` | Always `''` | **Absent** |
+| Neutral hub `/katalog/nejtralnoe-oborudovanie` | `category.php` + `$is_hub` | Was hardcoded M9.5 hub copy; **removed M9.8.9-10** | **Absent** |
+| PDP | `product.php` | **SAFE UNKNOWN** — no forensic in this pass | **Absent** on sampled PLPs |
+| Wishlist / compare / account | respective controllers | Usually `''` | **Absent** when empty |
+
+Hub intro text was **controller logic**, not CMS category description, not language file, not twig override per category.
+
+### M9.8.9-10 change
+
+Removed hub-only hardcoded string from `category.php`; all category routes now set `$pageintro->description = ''`. **`katalog.php` unchanged** — catalog root keeps its intro line.
+
+**Evidence:** [SITE-002-M9.8.9-10-PAGE-INTRO-DESCRIPTION-REMOVAL.md](../reports/SITE-002-M9.8.9-10-PAGE-INTRO-DESCRIPTION-REMOVAL.md)
+
+---
+
+## 16. Catalog State Persistence
+
+PLP query-state model on live TEST (post M9.8.9-09A / 09B / 09C). **Joint behaviour:** `filter` + `limit` + `sort` + `pagination` + `only_with_price` work together when combined via sidebar AJAX, limit menu, sort buttons, and pagination.
+
+### State model
+
+| Param | Role | Set by |
+|-------|------|--------|
+| `filters` | Semicolon-separated filter payload (`only_with_price=1`, `attr[51][]=…`, `price_from`/`price_to`, etc.) | Sidebar form → JS `updateBrowserUrl()` |
+| `limit` | Products per page (15 / 25 / 50 / 100 on live) | Limit menu `<a href>` or preserved in URL |
+| `sort` | Sort field (e.g. `p.price`) | Sort button `data-sort` → JS URL merge |
+| `order` | Sort direction (`ASC` / `DESC`) | Sort button `data-sort` → JS URL merge |
+| `page` | Pagination page index | Pagination links or `initPaginationAJAX` merge |
+
+**Fetch model:** filter changes do **not** call a separate filter API — `updateProducts()` fetches the **full category page** at current `location.href` and swaps DOM fragments.
+
+### `updateBrowserUrl(form)`
+
+**File:** `assets/js/main.js`
+
+- Reads `[data-filters-form]` fields into semicolon-separated `filters` string
+- Merges into existing `URLSearchParams(window.location.search)` — **preserves** `limit`, `sort`, `order`, `page`, and other query keys
+- Updates `filters` only (set or delete)
+- Applies `history.replaceState` without full navigation
+- Triggers debounced `updateProducts(root)`
+
+**Since 09A:** replaced naive `pathname + "?filters=" + stateText` rebuild that dropped non-filter params.
+
+### `updateProducts(root)`
+
+**File:** `assets/js/main.js`
+
+```
+fetch(location.href) — full category page
+  → parse HTML response
+  → replace .category__grid innerHTML
+  → replace .pagination outerHTML (or insert/remove)
+  → replace .category__limit outerHTML + initCategoryLimitMenu()  [since 09C]
+  → scrollToCategorySection()
+  → initPaginationAJAX(root)
+```
+
+**Since 09C:** limit toolbar refresh closes the 09B gap — after filter AJAX, limit hrefs match server-rendered filtered URLs.
+
+### `category__limit` refresh
+
+| Layer | Role |
+|-------|------|
+| **PHP** | `category.php` builds `$data['limits'][]['href']` — appends `&filters=` when request carries `filters` (09A) |
+| **Twig** | `category.twig` — `.category__limit` menu with `<a href="{{ l.href }}">` |
+| **JS (09C)** | After AJAX, swap `.category__limit` from fetched HTML; call `initCategoryLimitMenu()` to re-bind dropdown toggle |
+
+**09B discovery:** pagination was already refreshed after filter AJAX; limit menu was **not** — operator path filter→limit click used stale plain-page hrefs.
+
+### Pagination refresh
+
+| Layer | Role |
+|-------|------|
+| **PHP** | `category.php` pagination `$url` includes `filters` when present (09A) |
+| **JS** | `updateProducts()` replaces `.pagination` from response; `initPaginationAJAX` merges `page` into current browser URL on click |
+
+Post-filter AJAX, pagination links in fetched HTML include `filters` — consistent with full-page filtered load.
+
+### Sort behaviour
+
+Sort toolbar uses `<button data-sort="sort=…&order=…">` — **not** server-rendered hrefs.
+
+JS click handler merges sort params into `window.location.href` (which already contains `filters` after sidebar toggle). Sort path was unaffected by 09A/09C limit bug.
+
+### PHP URL generation (09A)
+
+**File:** `catalog/controller/product/category.php`
+
+In sort, limit, and pagination `$url` assembly blocks:
+
+```php
+if (isset($this->request->get['filters'])) {
+    $url .= '&filters=' . $this->request->get['filters'];
+}
+```
+
+Ensures full-page navigation links (limit menu, pagination) carry active filter state when request URL includes `filters`.
+
+### Interaction matrix (registered behaviour)
+
+| Scenario | Expected | Mechanism |
+|----------|----------|-----------|
+| Toggle filter at `?limit=50` | Both params in URL | `updateBrowserUrl()` merge (09A) |
+| Filter AJAX → click limit 50 | Filter persists | Limit href refreshed from response (09C) |
+| Set limit → toggle filter | Limit persists | `updateBrowserUrl()` merge (09A) |
+| Filter + sort + page combo | All params coexist | Sort JS merge + PHP pagination URLs + 09C limit refresh |
+| `only_with_price` + attribute + limit | Combined `filters` + `limit` | Full stack |
+
+### Change rules
+
+Before **any** edit to catalog URL state, limit menu, pagination AJAX, or filter sidebar submit chain:
+
+1. Read **§16** (this section) and **§7 Filter Architecture**
+2. Read **09A / 09B / 09C** pass reports
+3. Live-capture `assets/js/main.js` and `catalog/controller/product/category.php`
+4. QA **interaction paths** — not only direct URL loads
+
+**Evidence:** [SITE-002-M9.8.9-09A-FILTER-LIMIT-PERSISTENCE-HOTFIX.md](../reports/SITE-002-M9.8.9-09A-FILTER-LIMIT-PERSISTENCE-HOTFIX.md) · [SITE-002-M9.8.9-09B-LIMIT-LINK-FORENSIC-AFTER-HOTFIX.md](../reports/SITE-002-M9.8.9-09B-LIMIT-LINK-FORENSIC-AFTER-HOTFIX.md) · [SITE-002-M9.8.9-09C-LIMIT-TOOLBAR-AJAX-REFRESH-HOTFIX.md](../reports/SITE-002-M9.8.9-09C-LIMIT-TOOLBAR-AJAX-REFRESH-HOTFIX.md)
+
+**SAFE UNKNOWN:** M9.8.9-09C browser QA Q1–Q6 — automated probe PASS; operator interaction HITL **PENDING**. Mobile filter shell separate limit control — not probed in 09C.
 
 ---
 
@@ -768,4 +921,4 @@ Before **any** edit to trust block, certificates strip, dealers form, or categor
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-21 (M9.8.9 Commercial Trust checkpoint — §14 Commercial Trust Block, PRE-TASK rule update, live FTP capture).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-21 (M9.8.9 Catalog UX Complete — §16 Catalog State Persistence; authority → CATALOG-UX-COMPLETE-01).*
