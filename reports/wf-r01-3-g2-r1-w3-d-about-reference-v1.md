@@ -338,7 +338,7 @@
 | Field | Value |
 |-------|-------|
 | **Main commit hash** | `775f627` |
-| **Metadata commit** | *(none in W3-D)* |
+| **Metadata commit** | `d3233bb` — docs: populate W3-D report git result section |
 | **Commit message** | `foundry: complete G2-R1 ABOUT reference` |
 | **Push result** | **SUCCESS** — pushed to `origin/mars/post-cycle8-live-tests` |
 | **Files committed** | 10 W3-D paths (see §25) |
