@@ -425,11 +425,11 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending selective commit |
-| **Metadata commit** | None planned |
+| **Main commit** | `6570fcb` — `foundry: complete G2-R3 SEARCH_RESULTS_PAGE scaffold` |
+| **Metadata commit** | None |
 | **Commit message** | `foundry: complete G2-R3 SEARCH_RESULTS_PAGE scaffold` |
-| **Push result** | Pending |
-| **Remote confirmation** | Pending post-push |
+| **Push result** | **SUCCESS** — `711bad7..6570fcb` |
+| **Remote confirmation** | **CONFIRMED** |
 | **Files committed** | 8 declared A3 paths |
 | **No foreign lane confirmation** | Required pre-commit |
 
@@ -476,7 +476,8 @@ projects/mars-website-factory/roadmap.md
 projects/mars-website-factory/OPERATIONAL-INDEX.md
 ```
 
-A2 commit: `711bad7`
+A2 commit: `711bad7`  
+A3 commit: `6570fcb`
 
 ---
 
