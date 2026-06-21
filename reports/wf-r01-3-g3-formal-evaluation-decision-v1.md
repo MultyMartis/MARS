@@ -250,7 +250,13 @@ Roadmap + OPERATIONAL-INDEX updated to **G3-F COMPLETE · G3 EVALUATED · AWAITI
 
 ## 30. Git Result
 
-Selective commit/push of G3-F artefacts only — see task closeout after commit.
+| Field | Value |
+|-------|-------|
+| **Commit** | `3b2e3cb` — `foundry: evaluate WF-R01.3 Gate G3` |
+| **Branch** | `mars/post-cycle8-live-tests` |
+| **Push** | **SUCCESS** — `1d17429..3b2e3cb` |
+| **Files committed** | 5 — charter · evaluation · report · roadmap · OPERATIONAL-INDEX |
+| **Foreign WIP** | **Excluded** |
 
 ---
 
