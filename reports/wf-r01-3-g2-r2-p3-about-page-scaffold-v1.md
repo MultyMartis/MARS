@@ -355,10 +355,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending — `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
-| **Metadata commit** | Optional follow-up for report git binding |
+| **Main commit** | `c1aee8f` — `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
+| **Metadata commit** | Pending — this report git binding update |
 | **Commit message** | `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
-| **Push result** | Pending |
+| **Push result** | **SUCCESS** — `origin/mars/post-cycle8-live-tests` @ `c1aee8f` |
 | **Files committed** | P3 selective scope — see §8–§9 |
 | **No foreign lane confirmation** | Verified before commit |
 

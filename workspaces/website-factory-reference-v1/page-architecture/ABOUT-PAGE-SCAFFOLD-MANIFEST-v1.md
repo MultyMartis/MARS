@@ -257,7 +257,7 @@ npm run build
 |-------|-------|
 | **Commit message** | `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
 | **Branch** | `mars/post-cycle8-live-tests` |
-| **Commit binding** | Pending P3 commit |
+| **Commit binding** | `c1aee8f` — `foundry: complete G2-R2 ABOUT_PAGE scaffold` |
 
 ---
 
