@@ -1,6 +1,6 @@
 # Website Factory — Site Type Block Matrix v2
 
-**Версия:** v2  
+**Версия:** v2.1 *(WF-R01.2 Gate 2 — structural rows additive)*  
 **Область:** `workspaces/website-factory-reference-v1/block-registry/`  
 **Статус:** authoritative REQUIRED / OPTIONAL / FORBIDDEN matrix for Core site types  
 **Связь:** [BLOCK-REGISTRY-v1.md](BLOCK-REGISTRY-v1.md), [../registry/SITE-TYPE-REGISTRY-v1.md](../registry/SITE-TYPE-REGISTRY-v1.md), [../blueprints/](../blueprints/)
@@ -58,6 +58,12 @@
 | CART | FORBIDDEN | FORBIDDEN | FORBIDDEN | REQUIRED | OPTIONAL |
 | LEGAL_LINKS | REQUIRED | REQUIRED | REQUIRED | REQUIRED | REQUIRED |
 | FOOTER | REQUIRED | REQUIRED | REQUIRED | REQUIRED | REQUIRED |
+| HEADER_NAV | OPTIONAL* | REQUIRED | REQUIRED | REQUIRED | REQUIRED |
+| SEARCH | FORBIDDEN | OPTIONAL | REQUIRED | REQUIRED | OPTIONAL |
+| FILTERS | FORBIDDEN | FORBIDDEN | REQUIRED | REQUIRED | OPTIONAL† |
+
+\* LANDING: optional **minimal** header chrome — not catalog SEARCH/FILTERS.  
+† CORPORATE: optional in **catalog subtree** only — policy-dependent per route group.
 
 ---
 
@@ -93,6 +99,9 @@
 | **SERVICES** | **FORBIDDEN** | Multi-page → PROMO |
 | **ABOUT** | **FORBIDDEN** | Dedicated about → PROMO |
 | **PARTNERS** | **FORBIDDEN** | → CORPORATE |
+| **HEADER_NAV** | OPTIONAL | Minimal shell — not catalog chrome |
+| **SEARCH** | **FORBIDDEN** | → CATALOG |
+| **FILTERS** | **FORBIDDEN** | → CATALOG |
 
 ---
 
@@ -127,6 +136,9 @@
 | **PRODUCT_CARD** | **FORBIDDEN** | → CATALOG |
 | **CTA (sticky site-wide)** | **FORBIDDEN** | LANDING pattern |
 | **BENEFITS** | OPTIONAL | Not required — PROMO uses SERVICES narrative |
+| **HEADER_NAV** | REQUIRED | Global shell — multi-page IA |
+| **SEARCH** | OPTIONAL | Discovery — not catalog-scale |
+| **FILTERS** | **FORBIDDEN** | → CATALOG |
 
 ---
 
@@ -158,8 +170,13 @@
 | **LEAD_FORM as primary purchase** | OPTIONAL | RFQ only — not checkout |
 | **BENEFITS, PROCESS, SERVICES** | **FORBIDDEN** | Marketing stack → LANDING/PROMO |
 | **CTA (PPC sticky)** | **FORBIDDEN** | LANDING pattern |
+| **HEADER_NAV** | REQUIRED | Global shell |
+| **SEARCH** | REQUIRED | Catalog discovery |
+| **FILTERS** | REQUIRED | PLP refinement |
 
 **Operator rule:** cart/checkout on production → **halt** + reclassify ECOMMERCE.
+
+**Page-type host (G2-R3 A1):** `SEARCH_RESULTS_PAGE` is a registered page type (not a site type). CATALOG `SEARCH` · `PRODUCT_GRID` · `FILTERS` block stances apply on the search-results host per [PAGE-BLOCK-MAPPING-v1.md](PAGE-BLOCK-MAPPING-v1.md) § SEARCH_RESULTS_PAGE — **cross-reference only**; site-type matrix rows unchanged.
 
 ---
 
@@ -191,6 +208,9 @@
 | HERO | OPTIONAL | Shop home |
 | **LEAD_FORM as primary conversion** | **FORBIDDEN** | Purchase path primary |
 | **BENEFITS, PROCESS** | **FORBIDDEN** | Single-page funnel → LANDING |
+| **HEADER_NAV** | REQUIRED | Global shell (+ utility composition in notes) |
+| **SEARCH** | REQUIRED | Shop discovery |
+| **FILTERS** | REQUIRED | PLP refinement |
 
 ---
 
@@ -223,6 +243,9 @@
 | **BENEFITS** | OPTIONAL | Prefer SERVICES/solutions framing |
 | **CART / CHECKOUT / PAYMENT** | OPTIONAL | **Only** in ecommerce subtree |
 | **CTA (site-wide sticky PPC)** | **FORBIDDEN** | LANDING pattern |
+| **HEADER_NAV** | REQUIRED | Mega/primary nav — mega_menu = HEADER_NAV variant |
+| **SEARCH** | OPTIONAL | Optional catalog subtree |
+| **FILTERS** | OPTIONAL | Catalog subtree only — policy per route group |
 
 **Hybrid rule:** document subtree `site_type_code` per route group; matrix applies **within** subtree.
 
@@ -247,4 +270,4 @@ Update project docs to reference **SITE-TYPE-BLOCK-MATRIX-v2** for compatibility
 
 ---
 
-*Matrix version: v2. Supersedes block compatibility detail in SITE-TYPE-BLOCK-MAPPING-v1 for Core types.*
+*Matrix version: v2.1 (WF-R01.2 Gate 2 structural slice). Supersedes block compatibility detail in SITE-TYPE-BLOCK-MAPPING-v1 for Core types.*

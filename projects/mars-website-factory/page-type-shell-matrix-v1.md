@@ -81,8 +81,11 @@ Source: [PAGE-TYPE-REGISTRY-v1.md](../../workspaces/website-factory-reference-v1
 | `FAQ_PAGE` | FAQ hub | — |
 | `REVIEWS_PAGE` | Reviews / testimonials hub | — |
 | `LEGAL_PAGE` | Legal document | — |
+| `SEARCH_RESULTS_PAGE` | Search results listing | Query-driven results host |
 
-**Not in v1 minimum Registry:** `SEARCH_RESULTS_PAGE`, `ARTICLE_PAGE`, `BLOG_PAGE`, standalone `PLP`/`PDP` identities — use `CATEGORY_PAGE` / `PRODUCT_PAGE` when documenting catalog surfaces.
+**Expansion beyond minimum Registry (G2-R3 A1):** `SEARCH_RESULTS_PAGE` — registered · matrix row §6 · **UNSCaffolded**.
+
+**Not in Registry:** `ARTICLE_PAGE`, `BLOG_PAGE`, standalone `PLP`/`PDP` identities — use `CATEGORY_PAGE` / `PRODUCT_PAGE` when documenting catalog surfaces.
 
 ---
 
@@ -124,6 +127,7 @@ Source: [PAGE-TYPE-REGISTRY-v1.md](../../workspaces/website-factory-reference-v1
 | `FAQ_PAGE` | REQ | REQ | POL | POL | REQ | REQ | POL | N/A |
 | `REVIEWS_PAGE` | REQ | REQ | POL | POL | REQ | REQ | N/A | N/A |
 | `LEGAL_PAGE` | REQ | REQ | POL | N/A | REQ | REQ | N/A | N/A |
+| `SEARCH_RESULTS_PAGE` | REQ | REQ | POL | REQ | REQ | REQ | REQ | POL |
 
 ### POL notes (binding interpretations)
 
@@ -151,10 +155,15 @@ Source: [PAGE-TYPE-REGISTRY-v1.md](../../workspaces/website-factory-reference-v1
 | `REVIEWS_PAGE` | PAGINATION | Paginated review lists — **POL** |
 | `LEGAL_PAGE` | BREADCRUMBS | Minimal trail — **POL** |
 | `LEGAL_PAGE` | FOOTER / LEGAL_LINKS | Global footer + legal links on **other** routes remain **REQ**; legal document body is not marketing stack — [LEGAL-PAGE-CONTRACT-v1.md](../../workspaces/website-factory-reference-v1/page-architecture/LEGAL-PAGE-CONTRACT-v1.md) |
+| `SEARCH_RESULTS_PAGE` | BREADCRUMBS | Shallow query-aware trail — **POL** |
+| `SEARCH_RESULTS_PAGE` | SEARCH slot | Results-host query entry — **REQ** in results context |
+| `SEARCH_RESULTS_PAGE` | FILTERS slot | Optional refinement on results — **POL** |
+| `SEARCH_RESULTS_PAGE` | PAGINATION | List surface paging — **REQ** |
+| `SEARCH_RESULTS_PAGE` | Query identity · sort · empty state | **Scaffold-owned regions** — no shell matrix column; see G2-R3 minimum reference contract |
 
-### Planned / not in Registry v1 minimum (informative only)
+### Historical note (superseded)
 
-When `SEARCH_RESULTS`-class routing is scaffolded under **WF-R01.3.4** (future Registry extension): HEADER_NAV **REQ**, BREADCRUMBS **POL**, PAGINATION **REQ**, FOOTER **REQ**, LEGAL_LINKS **REQ**, SEARCH slot **REQ** in results context, FILTERS slot **POL**. **Not** an active Registry identity in this matrix v1.
+Pre–G2-R3 A1 informative planned notes for `SEARCH_RESULTS`-class routing are **superseded** by the active `SEARCH_RESULTS_PAGE` matrix row above (G2-R3 A1 Registry expansion).
 
 ---
 

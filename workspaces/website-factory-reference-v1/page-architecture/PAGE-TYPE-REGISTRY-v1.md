@@ -15,6 +15,8 @@ Page Type Registry v1 — **стабильные `page_type` коды** для P
 
 **Минимальный набор v1 (10 типов):** см. таблицы ниже.
 
+**Расширение beyond minimum (G2-R3 A1, 2026-06-21):** `SEARCH_RESULTS_PAGE` — registered · **UNSCaffolded** · CATALOG SC-required · not CATALOG PC corridor member. Authority: [wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md](../../../projects/mars-website-factory/wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md).
+
 **Расширения (не в минимальном реестре):** `CART_PAGE`, `CHECKOUT_PAGE`, `ORDER_CONFIRMATION_PAGE` — документированы в [PAGE-DEPENDENCY-RULES-v1.md](PAGE-DEPENDENCY-RULES-v1.md) для ECOMMERCE only.
 
 ---
@@ -139,6 +141,22 @@ Page Type Registry v1 — **стабильные `page_type` коды** для P
 
 ---
 
+## SEARCH_RESULTS_PAGE
+
+| Поле | Значение |
+|------|----------|
+| **Code** | `SEARCH_RESULTS_PAGE` |
+| **Purpose** | Query-driven results listing surface: search query context, result summary, product/results grid, list controls |
+| **Typical use** | `/search/`, `/catalog/search/` |
+| **Allowed site types** | `CATALOG`, `ECOMMERCE`, `CORPORATE` (catalog subtree) |
+| **Registry status** | **REGISTERED / UNSCAFFOLDED** |
+| **RSC eligibility** | **Yes** — global RSC denominator member (post–G2-R3 A1) |
+| **CATALOG SC** | **Required** — CATALOG minimum scaffold set |
+| **CATALOG PC corridor** | **Excluded** — PC corridor remains `CATEGORY_PAGE` → `PRODUCT_PAGE` |
+| **Notes** | Distinct from `CATEGORY_PAGE` (taxonomy PLP). PLP search embed does **not** satisfy results-host criterion. Scaffold **absent** — no RSC numerator accrual. Authority: G2-R3 A1 · [wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md](../../../projects/mars-website-factory/wf-r01-3-g2-r3-a1-search-results-registry-matrix-expansion-v1.md). **Forbidden aliases:** `SEARCH_PAGE`, `RESULTS_PAGE`, `SEARCH_LISTING_PAGE`. |
+
+---
+
 ## Mapping: Blueprint page role → page_type
 
 | Blueprint page role (typical) | page_type |
@@ -153,6 +171,7 @@ Page Type Registry v1 — **стабильные `page_type` коды** для P
 | FAQ hub | `FAQ_PAGE` |
 | Reviews / testimonials hub | `REVIEWS_PAGE` |
 | Legal L1–L4 | `LEGAL_PAGE` |
+| Search results | `SEARCH_RESULTS_PAGE` |
 
 ---
 
