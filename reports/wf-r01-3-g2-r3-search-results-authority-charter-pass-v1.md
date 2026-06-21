@@ -373,13 +373,13 @@ No Registry row · no scaffold · no CATALOG SC PASS · no G2 PASS in this pass.
 
 ## 28. Git Result
 
-*(Populated after commit.)*
-
 | Field | Value |
 |-------|-------|
+| **Main commit** | `d8f032c` |
 | **Commit message** | `foundry: accept G2-R3 search authority charter` |
-| **Files committed** | Charter · report · roadmap · OPERATIONAL-INDEX |
-| **No foreign lane** | **Confirmed** |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` |
+| **Files committed** | Charter · report · roadmap · OPERATIONAL-INDEX (4 files) |
+| **No foreign lane** | **Confirmed** — staged scope matched selective list only |
 
 ---
 
