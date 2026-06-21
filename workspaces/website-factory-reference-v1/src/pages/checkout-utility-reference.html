@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Checkout utility scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference utility scaffold for /checkout/ — fictional checkout and payment blocks. Not a registered CHECKOUT_PAGE.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-checkout-utility">
+    <div class="wf-checkout-utility__inner wf-container">
+      <p class="wf-checkout-utility__disclosure">
+        Reference utility surface · not a registered page type · presentation-only commerce
+      </p>
+
+      @@include('../partials/components/breadcrumbs.html', {
+        "trail": "shallow",
+        "currentLabel": "Checkout"
+      })
+
+      <section
+        class="wf-checkout-utility__identity"
+        aria-labelledby="checkout-utility-title"
+      >
+        <p class="wf-checkout-utility__eyebrow">
+          Checkout
+        </p>
+
+        <h1
+          class="wf-checkout-utility__title"
+          id="checkout-utility-title"
+        >
+          Complete your order
+        </h1>
+
+        <p class="wf-checkout-utility__lead">
+          Static checkout and payment reference composition. Reference route role:
+          <span class="wf-checkout-utility__route">/checkout/</span>
+          — no order creation, delivery integration, or payment processing.
+        </p>
+      </section>
+
+      @@include('../partials/components/checkout.html')
+      @@include('../partials/components/payment.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

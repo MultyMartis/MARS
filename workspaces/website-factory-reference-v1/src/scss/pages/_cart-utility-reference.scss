@@ -1,0 +1,65 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// --- CART utility scaffold layout (page-level only) ---
+
+.wf-cart-utility__inner {
+  padding-block: $space-6;
+}
+
+.wf-cart-utility__disclosure {
+  margin: 0 0 $space-4;
+  padding: $space-2 $space-3;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: $color-text-muted;
+  background: $color-surface-alt;
+  border-radius: 0.25rem;
+}
+
+.wf-cart-utility__identity {
+  margin-block-start: $space-5;
+  max-width: 48rem;
+}
+
+.wf-cart-utility__eyebrow {
+  margin: 0 0 $space-2;
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wf-cart-utility__title {
+  margin: 0 0 $space-3;
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+  overflow-wrap: anywhere;
+}
+
+.wf-cart-utility__lead {
+  margin: 0;
+  color: $color-text-muted;
+  line-height: $line-height-body;
+  max-width: 42rem;
+}
+
+.wf-cart-utility__route {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  color: $color-text;
+}
+
+.wf-cart-utility .wf-cart {
+  margin-block-start: $space-7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-cart-utility__title,
+  .wf-cart-utility__lead {
+    transition: none;
+  }
+}

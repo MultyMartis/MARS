@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Cart utility scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference utility scaffold for /cart/ — fictional cart line items and static totals. Not a registered CART_PAGE.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-cart-utility">
+    <div class="wf-cart-utility__inner wf-container">
+      <p class="wf-cart-utility__disclosure">
+        Reference utility surface · not a registered page type · presentation-only commerce
+      </p>
+
+      @@include('../partials/components/breadcrumbs.html', {
+        "trail": "shallow",
+        "currentLabel": "Cart"
+      })
+
+      <section
+        class="wf-cart-utility__identity"
+        aria-labelledby="cart-utility-title"
+      >
+        <p class="wf-cart-utility__eyebrow">
+          Cart
+        </p>
+
+        <h1
+          class="wf-cart-utility__title"
+          id="cart-utility-title"
+        >
+          Your cart
+        </h1>
+
+        <p class="wf-cart-utility__lead">
+          Review selected reference items before continuing. Reference route role:
+          <span class="wf-cart-utility__route">/cart/</span>
+          — static demonstration only; no cart persistence or checkout integration.
+        </p>
+      </section>
+
+      @@include('../partials/components/cart.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/sticky_cta.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
