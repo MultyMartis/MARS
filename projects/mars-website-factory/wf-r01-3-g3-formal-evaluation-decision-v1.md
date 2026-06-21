@@ -1,9 +1,9 @@
 # WF-R01.3 G3 Formal Evaluation Decision v1
 
-**Status:** **PUBLISHED** · **EVALUATED** · **PASS WITH NON-BLOCKING DEBT RECOMMENDED** · **AWAITING OPERATOR DECISION** · **NOT CLOSED**  
+**Status:** **PUBLISHED** · **EVALUATED** · **PASS WITH NON-BLOCKING DEBT RECOMMENDED** · **OPERATOR DECISION RECORDED** · **G3 CLOSED**  
 **Date:** 2026-06-22  
-**Mode:** formal-evaluation-only · criteria-scoring-only · gate-report-only · operator-decision-preparation-only  
-**Honesty boundary:** Evidence-based formal Gate G3 evaluation. **Not** operator sign-off. **Not** G3 CLOSED. **Not** WF-R01.3.5 completion. **Not** production readiness.
+**Mode:** formal-evaluation · operator-decision-bound · gate-closure-sync  
+**Honesty boundary:** Evidence-based formal Gate G3 evaluation with recorded operator sign-off. **Not** WF-R01.3 programme closure. **Not** WF-R01.3.5 re-opened. **Not** production readiness. **Not** G4 started. **Not** Pilot Readiness implementation.
 
 ---
 
@@ -14,7 +14,8 @@
 | **Gate** | **WF-R01.3 Gate G3 — ECOMMERCE + CORPORATE reference slice** |
 | **Evaluation task** | **G3-F COMPLETE** |
 | **Technical Gate decision** | **PASS WITH NON-BLOCKING DEBT RECOMMENDED** |
-| **Gate state** | **EVALUATED** · **PASS WITH NON-BLOCKING DEBT RECOMMENDED** · **AWAITING OPERATOR DECISION** · **NOT CLOSED** |
+| **Operator decision** | **APPROVE WITH RECORDED NON-BLOCKING DEBT** — §26 |
+| **Gate state** | **CLOSED** · **PASS WITH RECORDED NON-BLOCKING DEBT** |
 | **Branch / HEAD** | `mars/post-cycle8-live-tests` · evaluation at `1d17429` (G3-E evidence baseline) |
 | **Coverage** | **UNCHANGED** — RC **32/32** · RPC **29/32** · RSC **7/11** · SC/PC per G3-E freeze |
 
@@ -428,20 +429,50 @@ If operator selects **REQUIRE REMEDIATION**, candidate items (non-exhaustive):
 
 ## 26. Operator Decision Record
 
-Status: **AWAITING OPERATOR DECISION**
+Status: **RECORDED**
 
-Allowed operator outcomes:
+Operator decision: **APPROVE WITH RECORDED NON-BLOCKING DEBT**
 
-- **APPROVE**
-- **APPROVE WITH RECORDED NON-BLOCKING DEBT**
-- **REQUIRE REMEDIATION**
-- **REJECT**
+Operator: **Андрей**
 
-Operator decision: **NOT RECORDED**
+Decision date: **2026-06-22**
 
-Decision date: **NOT RECORDED**
+Lifecycle direction: **PROCEED TO PILOT READINESS**
 
-Operator identity: **NOT RECORDED** — named steward **SAFE UNKNOWN**
+G4: **DEFERRED · NOT STARTED**
+
+**Exact operator record (decision class):**
+
+```text
+Decision:
+APPROVE WITH RECORDED NON-BLOCKING DEBT
+
+Decision owner:
+Human operator — Андрей
+
+Decision basis:
+WF-R01.3 G3-F formal technical recommendation
+
+Accepted debt:
+- FEATURES represented by BENEFITS at G3;
+- REVIEWS represented by TESTIMONIALS / TRUST at G3;
+- MAP represented by CONTACTS geo at G3;
+- TESTIMONIALS is not mounted on selected corporate pilot surfaces;
+- RSC remains 7/11;
+- ECOMMERCE PC is not accrued;
+- DELIVERY, CERTIFICATES and PARTNERS remain G4-only;
+- browser QA remains deferred;
+- Sass legacy-js-api warning remains non-blocking;
+- Template-Art and full Core blueprint coverage remain incomplete.
+
+Lifecycle decision:
+Proceed to Pilot Readiness.
+
+G4 decision:
+Deferred. G4 is not started.
+```
+
+**Technical verdict (unchanged):** **PASS WITH NON-BLOCKING DEBT RECOMMENDED** — §24
 
 ---
 
@@ -450,35 +481,38 @@ Operator identity: **NOT RECORDED** — named steward **SAFE UNKNOWN**
 Gate G3 **CLOSED** only after:
 
 1. This evaluation **PUBLISHED** — **DONE**
-2. Operator decision **RECORDED** in §26
-3. Separate closure task updates roadmap · OPERATIONAL-INDEX to **CLOSED**
+2. Operator decision **RECORDED** in §26 — **DONE**
+3. Separate closure task updates roadmap · OPERATIONAL-INDEX to **CLOSED** — **DONE** — [wf-r01-3-g3-gate-closure-decision-v1.md](wf-r01-3-g3-gate-closure-decision-v1.md)
 
-**Current state:** **NOT CLOSED**
+**Current state:** **CLOSED** · **PASS WITH RECORDED NON-BLOCKING DEBT**
+
+**WF-R01.3 parent:** **OPEN** · **DESIGN** · **CONTINUES** — programme **not** closed
 
 ---
 
 ## 28. Post-G3 Eligibility
 
-Upon operator **APPROVE** or **APPROVE WITH RECORDED NON-BLOCKING DEBT**, eligibility opens for **separate human lifecycle decision**:
+Operator **APPROVE WITH RECORDED NON-BLOCKING DEBT** recorded §26. Lifecycle decision published:
 
 | Option | Status now |
 |--------|------------|
-| Operator Gate closure task | **Eligible after operator decision** |
-| Pilot Readiness decision | **Eligible — NOT STARTED** |
-| G4 continuation | **Eligible — NOT STARTED** |
+| Operator Gate closure task | **COMPLETE** — [wf-r01-3-g3-gate-closure-decision-v1.md](wf-r01-3-g3-gate-closure-decision-v1.md) |
+| Post-G3 lifecycle decision | **PUBLISHED** — [wf-r01-3-post-g3-lifecycle-decision-v1.md](wf-r01-3-post-g3-lifecycle-decision-v1.md) |
+| Pilot Readiness (**WF-PR01**) | **AUTHORIZED · NOT STARTED** |
+| G4 continuation | **DEFERRED · NOT STARTED** |
 | Stable pause | **Always available** |
 
 ```text
-G4: NOT STARTED
-Pilot Readiness: NOT STARTED
+G4: DEFERRED · NOT STARTED
+Pilot Readiness (WF-PR01): AUTHORIZED · NOT STARTED
 ```
 
-**No automatic selection** between Pilot Readiness and G4.
+**Selected lifecycle path:** **PROCEED TO PILOT READINESS** — G4 **not** started.
 
-**Next task (after operator decision only):**
+**Next task:**
 
 ```text
-WF-R01.3 G3 — Operator Sign-Off Recording and Gate Closure
+WF-PR01-A — Pilot Readiness Contract and First Pilot Launch Boundary
 ```
 
 ---
@@ -514,24 +548,25 @@ projects/mars-website-factory/OPERATIONAL-INDEX.md
 **Gate state:**
 
 ```text
-EVALUATED
-PASS WITH NON-BLOCKING DEBT RECOMMENDED
-AWAITING OPERATOR DECISION
-NOT CLOSED
+CLOSED
+PASS WITH RECORDED NON-BLOCKING DEBT
 ```
 
-**WF-R01.3.5:** **G3-F COMPLETE · AWAITING OPERATOR DECISION · NOT COMPLETE**
+**WF-R01.3.5:** **COMPLETE** — delivery subprogramme G3 scope closed — [wf-r01-3-g3-gate-closure-decision-v1.md](wf-r01-3-g3-gate-closure-decision-v1.md)
+
+**WF-R01.3 parent:** **OPEN** · **DESIGN** · **CONTINUES**
 
 **Coverage:** **UNCHANGED**
 
 **Stop confirmation:**
 
 ```text
-Operator decision: NOT RECORDED
-G3 closure: NOT PERFORMED
-WF-R01.3.5 completion: NOT CLAIMED
+Operator decision: RECORDED
+G3 closure: PERFORMED
+WF-R01.3.5 completion: RECORDED
+WF-R01.3 completion: NOT CLAIMED
 G4 implementation: NOT STARTED
-Pilot Readiness: NOT STARTED
+Pilot Readiness implementation: NOT STARTED
 Pilot project: NOT STARTED
 Implementation changes: NONE
 Coverage accrual: NONE
