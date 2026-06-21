@@ -3,6 +3,13 @@
     <li class="wf-breadcrumbs__item">
       <a class="wf-breadcrumbs__link" href="#">Home</a>
     </li>
+    @@if (trail === 'shallow') {
+    <li class="wf-breadcrumbs__item">
+      <span class="wf-breadcrumbs__separator" aria-hidden="true">/</span>
+      <span class="wf-breadcrumbs__current" aria-current="page">@@currentLabel</span>
+    </li>
+    }
+    @@if (trail !== 'shallow') {
     <li class="wf-breadcrumbs__item">
       <span class="wf-breadcrumbs__separator" aria-hidden="true">/</span>
       <a class="wf-breadcrumbs__link" href="#">Catalog</a>
@@ -15,5 +22,6 @@
       <span class="wf-breadcrumbs__separator" aria-hidden="true">/</span>
       <span class="wf-breadcrumbs__current" aria-current="page">Current Page</span>
     </li>
+    }
   </ol>
 </nav>

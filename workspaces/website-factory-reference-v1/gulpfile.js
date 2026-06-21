@@ -25,7 +25,10 @@ function html() {
     .pipe(
       fileinclude({
         prefix: '@@',
-        basepath: '@file'
+        basepath: '@file',
+        context: {
+          trail: 'catalog'
+        }
       })
     )
     .pipe(gulp.dest('dist'));

@@ -1,0 +1,51 @@
+@use '../foundations/tokens' as *;
+@use '../foundations/breakpoints' as *;
+
+// --- ABOUT_PAGE scaffold layout (page-level only) ---
+
+.wf-about-page__inner {
+  padding-block: $space-6;
+}
+
+.wf-about-page__identity {
+  margin-block-start: $space-5;
+  max-width: 48rem;
+}
+
+.wf-about-page__eyebrow {
+  margin: 0 0 $space-2;
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wf-about-page__title {
+  margin: 0 0 $space-3;
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+  overflow-wrap: anywhere;
+}
+
+.wf-about-page__lead {
+  margin: 0;
+  color: $color-text-muted;
+  line-height: $line-height-body;
+  max-width: 42rem;
+}
+
+.wf-about-page .wf-about,
+.wf-about-page .wf-team,
+.wf-about-page .wf-section--trust {
+  margin-block-start: $space-7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-about-page__title,
+  .wf-about-page__lead {
+    transition: none;
+  }
+}

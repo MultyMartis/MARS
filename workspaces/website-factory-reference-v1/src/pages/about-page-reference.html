@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — About page scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference scaffold for ABOUT_PAGE — organisation narrative, team and supporting trust information.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-about-page">
+    <div class="wf-about-page__inner wf-container">
+      @@include('../partials/components/breadcrumbs.html', {
+        "trail": "shallow",
+        "currentLabel": "About"
+      })
+
+      <section
+        class="wf-about-page__identity"
+        aria-labelledby="about-page-title"
+      >
+        <p class="wf-about-page__eyebrow">
+          About
+        </p>
+
+        <h1
+          class="wf-about-page__title"
+          id="about-page-title"
+        >
+          About the organisation
+        </h1>
+
+        <p class="wf-about-page__lead">
+          A neutral reference page showing the organisation,
+          its people and supporting trust information.
+        </p>
+      </section>
+
+      @@include('../partials/components/about.html')
+      @@include('../partials/components/team.html')
+      @@include('../partials/sections/trust.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
