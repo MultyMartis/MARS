@@ -334,9 +334,9 @@
 | Field | Value |
 |-------|-------|
 | **Main commit** | `73ea8c3` — `foundry: complete G2-R2 CONTACT_PAGE scaffold` |
-| **Metadata commit** | Pending — git result section population |
+| **Metadata commit** | `e02ff36` — `docs: populate G2-R2 P2 report git result section` |
 | **Commit message** | `foundry: complete G2-R2 CONTACT_PAGE scaffold` |
-| **Push result** | Pending |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin` (`788d601..e02ff36`) |
 | **Files committed** | 8 files — P2 selective scope only |
 | **No foreign lane** | **Confirmed** |
 
