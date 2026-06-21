@@ -128,7 +128,9 @@
 
 | 4.142 | **SITE-002 — Stable Live M9.8.9 Filter Recovery Checkpoint + Technical Knowledge Map** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT** — superseded by 4.143 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-AND-KNOWLEDGE-MAP-REGISTRATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
-| 4.143 | **SITE-002 — Stable Live M9.8.9 Filter UX Complete Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+| 4.143 | **SITE-002 — Stable Live M9.8.9 Filter UX Complete Checkpoint** | **DONE** (2026-06-19; status: **STABLE LIVE CHECKPOINT** — superseded by 4.144 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.144 | **SITE-002 — Stable Live M9.8.9 Commercial Trust Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md), [sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/](sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
@@ -178,6 +180,26 @@
 
 ---
 
+## Run 4.144 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) — stable checkpoint after filter recovery + filter UX + Commercial Trust + operator manual polish
+- [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §14 Commercial Trust Block, PRE-TASK rule update for trust/CTA tasks
+- [sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/](sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/) — FTP read-only capture (`blockcommercialtrust.twig`, `style.css`, `category.php`) + SHA256 manifest
+- [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md) — registration report
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.8.9 Commercial Trust 01
+
+**Site modification:** **NONE** — documentation + read-only FTP capture only. No deploy.
+
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
+
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
+
+**PRE-TASK RULE:** read Knowledge Map + latest Stable Checkpoint; for trust block / certificates / dealers form / category CTA — read §14 + checkpoint before any work.
+
+**Explicitly not fixed:** limit + filter persistence · page-intro__description
+
+---
+
 ## Run 4.143 deliverables (summary)
 
 - [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) — metadata-only stable checkpoint after filter recovery + filter UX polish
@@ -187,7 +209,7 @@
 
 **Site modification:** **NONE** — documentation only. No FTP. No deploy.
 
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` — **superseded by 4.144**
 
 **Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
 

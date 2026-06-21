@@ -2,11 +2,11 @@
 
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`  
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`  
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
-**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04, 04A, 04B, 07, 08, 08A) + M9.8.9-01 tooltips.
+**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + operator manual Commercial Trust polish (2026-06-21 live capture).
 
 ---
 
@@ -20,13 +20,13 @@
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
 | 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
+| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) |
 
 ### Current stable state
 
-- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
-- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-RECOVERY-01`
-- **Post-recovery + UX:** filter recovery (06D–06M) → filter UX polish (04–08A) → wishlist/compare tooltips (01)
+- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
+- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
+- **Post-recovery + UX:** filter recovery (06D–06M) → filter UX polish (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator manual polish)
 
 ### Manual UI refinements are canonical
 
@@ -420,7 +420,9 @@ Canonical live paths on TEST — capture before any deploy in these areas.
 | `catalog/controller/common/import_1C_offers.php` | **1C offers pipeline** — updates `oc_product.price` + `quantity`; calls `refreshPriceIndex()` after each product (06F); price index stays in sync with offers XML |
 | `catalog/view/theme/default/template/sections/filterssidebar.twig` | **Filter sidebar markup** — form structure, attribute groups, group-reset buttons (08/08A), subcategories hide gate (07), price/LWH ranges, global reset |
 | `assets/js/main.js` | **Filter client orchestration** — `syncChoiceClasses`, `updateBrowserUrl`, `updateProducts`, `scrollToCategorySection` (04/04B), `initGroupReset` (08/08A), wishlist/compare tooltips (01), global filter reset |
-| `assets/css/style.css` | **Filter + PLP presentation** — sidebar layout, `.flt__group-reset` states (08A), mobile filter shell, category grid density (operator polish), overlay coordination |
+| `assets/css/style.css` | **Filter + PLP + Commercial Trust presentation** — sidebar layout, `.flt__group-reset` states (08A), mobile filter shell, category grid density (operator polish), `.zpm-commercial-trust*` block (03C + operator polish), overlay coordination |
+| `catalog/view/theme/default/template/sections/blockcommercialtrust.twig` | **Commercial Trust block markup** — category PLP CTA: header, cert podium, OEM benefits, lead form, FAQ grid (operator polish canonical) |
+| `catalog/controller/product/category.php` | **Commercial Trust dynamic H2** — `$data['commercial_trust_heading']` map + `blockcommercialtrust` view load |
 
 **Rule:** Repo `*-work/` copies and `backups/*.pre-*` are deploy artefacts — **live TEST** is authority unless freshly captured.
 
@@ -601,19 +603,29 @@ Before **any** JS task touching header sticky behaviour or catalog filter scroll
 Before **any** SITE-002 task:
 
 1. **Read** this Technical Knowledge Map
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
 3. **Verify Authority State** matches checkpoint name
 4. **Check Active Roadmap Stage** — [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md)
 5. **Only then** perform audit or changes
 
-### PRE-TASK RULE UPDATE (domain-specific)
+### PRE-TASK RULE UPDATE (domain-specific — filters / catalog / 1C / price / PLP)
 
 Before **any** task touching **filters**, **catalog**, **1C import**, **price**, or **PLP**:
 
 1. **Read** this Technical Knowledge Map — especially **§5 Price Index**, **§6 Filter System**, **§7 Filter Architecture**, **§8 Live Files With Business Logic**
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
 3. **Live-capture** the specific business-logic files in scope (`product.php`, `import_1C_offers.php`, `filterssidebar.twig`, `main.js`, `style.css`) before deploy
 4. Test isolated URL params **and** sidebar form submit; test `only_with_price` + attribute combos; verify price range min ≠ 0 when zero-price SKUs exist
+
+### PRE-TASK RULE UPDATE (domain-specific — Commercial Trust / CTA)
+
+Before **any** task touching **trust block**, **certificates**, **dealers form**, or **category CTA**:
+
+1. **Read** this Technical Knowledge Map — **§14 Commercial Trust Block**
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
+3. **Live-capture** `blockcommercialtrust.twig`, `style.css`, `category.php` before deploy — do not trust 03C work copies or pass reports alone
+4. Verify dynamic H2 on at least one mapped category + fallback category
+5. Treat operator manual CSS/Twig on live as **canonical** over repo work copies
 
 ### Deploy rules (summary)
 
@@ -639,6 +651,112 @@ Before **any** task touching **filters**, **catalog**, **1C import**, **price**,
 
 ---
 
+## 14. Commercial Trust Block
+
+Category PLP decision-stage block — after product grid, before footer. **Live TEST is canonical**; M9.8.9-03C deploy + operator manual polish registered in `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`.
+
+### Purpose
+
+Convert post-catalog evaluation into trust + lead capture: manufacturer proof (OEM, certs, «Сделано в России»), procurement reassurance, and price-list request form (`dialog=7`).
+
+**Scope:** category PLP only. Homepage `certificates.twig`, `/katalog`, PDP, filters — **out of scope**.
+
+### Structure (live canonical — 2026-06-21 capture)
+
+```
+section.zpm-commercial-trust[data-commercial-trust]
+└── .container → .zpm-commercial-trust__card
+    └── .zpm-commercial-trust__wrap (flex row)
+        ├── .zpm-commercial-trust__info
+        │   ├── .zpm-commercial-trust__header — label + H2 + lead
+        │   └── .zpm-commercial-trust__main
+        │       ├── .zpm-commercial-trust__cert-col — cert on podium (sert-base.jpg)
+        │       └── .zpm-commercial-trust__benefits — 3 OEM benefit rows
+        └── .zpm-commercial-trust__form-wrap
+            ├── .zpm-decoration-with-logo — decor-logo.svg background contours
+            └── .zpm-commercial-trust__form-col → form card (dialog=7)
+
+section.zpm-catalog-faq
+└── .zpm-commercial-trust__services--like-FAQ
+    ├── «Частые вопросы» heading
+    └── .zpm-commercial-trust__services — 8 FAQ cards (4-col grid desktop)
+```
+
+**Mobile stack:** header → cert → benefits → form → FAQ grid (2 columns ≤1024px).
+
+### Files
+
+| File | Role |
+|------|------|
+| `catalog/view/theme/default/template/sections/blockcommercialtrust.twig` | Markup — trust card + FAQ section |
+| `catalog/controller/product/category.php` | Loads view; sets `commercial_trust_heading` |
+| `assets/css/style.css` | Block `M9.8.9-03C` CSS + operator polish (podium, cert size, form, FAQ grid, logo decor) |
+| `assets/img/certificates/thumb_00.png` | Visible certificate thumb |
+| `assets/img/certificates/certificat_00.jpg` | Fancybox full-size target |
+| `assets/img/sert-base.jpg` | Certificate podium base |
+| `assets/img/decor-logo.svg` | Background logo contours in form wrap |
+
+**Not used on live block:** `main.js` changes for Commercial Trust — form uses existing `zpm-form` / mask / validation patterns.
+
+### Dynamic headings
+
+`category.php` maps category name → H2:
+
+| Category name | H2 |
+|---------------|-----|
+| Столы | Нужна помощь с выбором столов? |
+| Моечные ванны | Нужна помощь с выбором моечных ванн? |
+| Подтоварники и подставки | Нужна помощь с выбором подтоварников и подставок? |
+| Тележки сервировочные | Нужна помощь с выбором тележек? |
+| Зонты вытяжные | Нужна помощь с выбором зонтов? |
+| **Fallback** | Подберём оборудование под вашу задачу |
+
+Twig: `{{ commercial_trust_heading|default('Подберём оборудование под вашу задачу') }}`
+
+### Certificate
+
+| Item | Live behaviour |
+|------|----------------|
+| Visible count | **1** slide in `.swiper.js-commercial-trust-certs` |
+| Display | Enlarged on podium (`__cert-card--base` + `sert-base.jpg`); `max-width: 250px` on cert card |
+| Interaction | Fancybox `data-fancybox="certificates-plp"` on cert link |
+| «Все сертификаты» | **Not present** on live twig (removed in operator polish) |
+
+**SAFE UNKNOWN:** whether hidden `certificat_01` should return for multi-doc tenders.
+
+### Form
+
+| Item | Value |
+|------|-------|
+| Endpoint | `POST` `dialog=7` (existing dealers/lead handler) |
+| Title | «Получить прайс-лист» |
+| Fields | name, phone (`data-mask="phone"`), email, message (Комментарий), agree checkbox |
+| Submit | «Отправить заявку» |
+| Visual | Backdrop-blur card; decor logo behind form wrap |
+
+**Preserved:** field IDs/names, privacy links, `zpm-form` classes — backend-safe.
+
+### FAQ grid
+
+8 service cards with `fad` icons — catalog gaps, full price list, custom sizes, lead times, dealers, documentation, project fit, nationwide delivery.
+
+CSS: `.zpm-commercial-trust__services` — `grid-template-columns: repeat(4, 1fr)` desktop; `repeat(2, 1fr)` ≤1024px.
+
+### Change rules
+
+Before **any** edit to trust block, certificates strip, dealers form, or category CTA:
+
+1. Read **§14** (this section)
+2. Read latest stable checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md)
+3. **Live-capture** `blockcommercialtrust.twig`, `style.css`, `category.php` — do not trust 03C work copies or pass reports alone
+4. Operator manual CSS/Twig on live **override** repo work copies
+5. Clear Twig cache after twig deploy
+6. Test at least one mapped category + fallback category PLP
+
+**Evidence:** [SITE-002-M9.8.9-03B-COMMERCIAL-TRUST-BLOCK-REDESIGN.md](../reports/SITE-002-M9.8.9-03B-COMMERCIAL-TRUST-BLOCK-REDESIGN.md) · [SITE-002-M9.8.9-03C-COMMERCIAL-TRUST-BLOCK-IMPLEMENTATION.md](../reports/SITE-002-M9.8.9-03C-COMMERCIAL-TRUST-BLOCK-IMPLEMENTATION.md) · [live-capture 2026-06-21](../reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/)
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -650,4 +768,4 @@ Before **any** task touching **filters**, **catalog**, **1C import**, **price**,
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-19 (M9.8.9 Filter UX Complete checkpoint — §7 Filter Architecture, §8 Live Files, PRE-TASK rule update).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-21 (M9.8.9 Commercial Trust checkpoint — §14 Commercial Trust Block, PRE-TASK rule update, live FTP capture).*

@@ -2,8 +2,8 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
-**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 FILTER UX COMPLETE 01** (2026-06-19)  
-**Run:** Stable checkpoint after filter recovery + filter UX polish complete  
+**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 COMMERCIAL TRUST 01** (2026-06-21)  
+**Run:** Stable checkpoint after filter recovery + filter UX + Commercial Trust + operator manual polish  
 **Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap)
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
@@ -22,9 +22,9 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
 | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual and behavioural authority |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block) |
 | **Operator manual JS (04B)** | [knowledge §12](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#12-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Conflict resolution** | If docs contradict current TEST → source of truth = live TEST on https://zpm.new-site.space/ |
 
@@ -59,21 +59,28 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
-| Status | **STABLE LIVE CHECKPOINT** — filter recovery + filter UX polish complete |
-| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` |
+| Status | **STABLE LIVE CHECKPOINT** — filter recovery + filter UX + Commercial Trust complete |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md) |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Recovery | Product reset · 1C import · price index (06D/06F) · filters (06H/06J/06M) |
 | Filter UX | Scroll (04/04B) · hide subcategories (07) · group reset (08/08A) |
+| Commercial Trust | 03B redesign · 03C deploy · operator manual polish |
 | Other UX | Wishlist/compare smart tooltips (01) |
 | Completed M9.8 | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
-| Operator manual | PLP / filter / breakpoint / CSS / Twig polish · JS refinements (04B) |
-| Open bugs | EC-01 — mitigated by subcategories hide (07); M9.8.7 deferred |
+| Operator manual | PLP / filter / breakpoint / CSS / Twig polish · JS refinements (04B) · Commercial Trust polish |
+| Open bugs | EC-01 — mitigated by subcategories hide (07); limit+filter persistence · page-intro__description — open |
 | Roadmap | [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-FILTER-UX-COMPLETE-01.md) |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md) |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 
 ### Prior checkpoints (historical)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01` |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01.md) |
+| Scope | Filter recovery + filter UX — superseded for live truth |
 
 | Field | Value |
 |-------|--------|
@@ -133,6 +140,6 @@ Metadata stays in this repo tree; large archives stay external.
 ## Rules
 
 - No secrets. No live credentials.
-- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work; for filter/catalog/1C/price/PLP — follow domain-specific rule in Knowledge Map §13.
+- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work; for filter/catalog/1C/price/PLP — follow domain-specific rule in Knowledge Map §13; for trust block/certificates/dealers form/category CTA — follow §14.
 - No site modifications, FTP, phpMyAdmin, or admin panel actions until chartered runs.
 - Do not invent URLs, hosting, or client names beyond operator-supplied registration facts.
