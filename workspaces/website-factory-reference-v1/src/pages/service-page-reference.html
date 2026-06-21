@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WF Reference — Service page scaffold</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Reference scaffold for SERVICE_PAGE — one service scope, benefits, process, FAQ, CTA and lead form.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  @@include('../partials/layout/header.html')
+  <main id="main" class="wf-service-page">
+    <div class="wf-service-page__inner wf-container">
+      @@include('../partials/components/breadcrumbs.html', {
+        "trail": "shallow",
+        "currentLabel": "Service"
+      })
+
+      <section
+        class="wf-service-page__identity"
+        aria-labelledby="service-page-title"
+      >
+        <p class="wf-service-page__eyebrow">
+          Service
+        </p>
+
+        <h1
+          class="wf-service-page__title"
+          id="service-page-title"
+        >
+          A clear service page reference
+        </h1>
+
+        <p class="wf-service-page__lead">
+          A neutral page scaffold showing how one service can be described
+          and supported by reusable reference blocks.
+        </p>
+      </section>
+
+      <section
+        class="wf-service-page__detail"
+        aria-labelledby="service-detail-title"
+      >
+        <div class="wf-service-page__detail-content">
+          <h2
+            class="wf-service-page__detail-title"
+            id="service-detail-title"
+          >
+            What this service covers
+          </h2>
+
+          <p>
+            Neutral fictional description of the service scope and intended result.
+          </p>
+
+          <p>
+            Additional paragraph demonstrating longer service content
+            without introducing commercial or production claims.
+          </p>
+        </div>
+
+        <div class="wf-service-page__detail-support">
+          <h3 class="wf-service-page__detail-subtitle">
+            Typical areas of support
+          </h3>
+
+          <ul class="wf-service-page__detail-list">
+            <li>Initial review and planning</li>
+            <li>Implementation guidance</li>
+            <li>Quality and completion checks</li>
+          </ul>
+        </div>
+      </section>
+
+      @@include('../partials/sections/benefits.html')
+      @@include('../partials/sections/process.html')
+      @@include('../partials/sections/faq.html')
+      @@include('../partials/sections/cta_band.html')
+      @@include('../partials/sections/lead_form.html')
+    </div>
+  </main>
+  @@include('../partials/sections/footer.html')
+  @@include('../partials/layout/modal_callback.html')
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/form.js"></script>
+  <script src="js/sections/header_nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
