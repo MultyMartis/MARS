@@ -311,14 +311,14 @@ WF-R01.3 remains **OPEN**.
 
 ## 28. Git Result
 
-*Populated after commit.*
-
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending |
-| **Push result** | Pending |
-| **Files committed** | 4 (evaluation + REPORT + roadmap + index) |
-| **Foreign lane** | **Excluded** |
+| **Main commit** | `326146c` — foundry: evaluate WF-R01.3 Gate G2 |
+| **Metadata commit** | — |
+| **Push result** | **SUCCESS** — `mars/post-cycle8-live-tests` → `origin/mars/post-cycle8-live-tests` |
+| **Remote confirmation** | `39519df..326146c` |
+| **Files committed** | 4 — evaluation · REPORT · roadmap · OPERATIONAL-INDEX |
+| **Foreign lane** | **Excluded** — staged scope verified before commit |
 
 ---
 
