@@ -333,10 +333,11 @@
 
 | Field | Value |
 |-------|-------|
-| **Main commit** | Pending — see metadata commit below |
+| **Main commit** | `73ea8c3` — `foundry: complete G2-R2 CONTACT_PAGE scaffold` |
+| **Metadata commit** | Pending — git result section population |
 | **Commit message** | `foundry: complete G2-R2 CONTACT_PAGE scaffold` |
 | **Push result** | Pending |
-| **Files committed** | P2 selective scope only |
+| **Files committed** | 8 files — P2 selective scope only |
 | **No foreign lane** | **Confirmed** |
 
 ---

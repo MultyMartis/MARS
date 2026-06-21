@@ -240,7 +240,7 @@ npm run build
 |-------|-------|
 | **Commit message** | `foundry: complete G2-R2 CONTACT_PAGE scaffold` |
 | **Branch** | `mars/post-cycle8-live-tests` |
-| **Commit binding** | Set on commit — see P2 report §22 |
+| **Commit binding** | `73ea8c3` — `foundry: complete G2-R2 CONTACT_PAGE scaffold` |
 
 ---
 
