@@ -1,5 +1,9 @@
-﻿2026-06-23T00:50Z | DECISION | One Project SCSS File Law active
-2026-06-23T00:50Z | DECISION | Unified Main Radius Law --radius-main 30px + --radius-full
-2026-06-23T00:50Z | DECISION | No Button Letter Spacing Law
-2026-06-23T00:50Z | DECISION | Preserve operator _root and _hero manual changes
-2026-06-23T00:50Z | DECISION | FA vendor bridge external
+﻿2026-06-23T00:00:00Z | DECISION | Universal Button System Law v1 — MANDATORY PRODUCTION CONTRACT (Factory-wide)
+2026-06-23T00:00:01Z | DECISION | Base class .btn; modifiers .btn_dark, .btn--primary only; no parallel block button systems
+2026-06-23T00:00:02Z | DECISION | --pad-btns aliases --control-padding-inline (20px); --main-size-btns aliases --control-height-primary (45px)
+2026-06-23T00:00:03Z | DECISION | Color mapping: main-dark → --color-text-primary; font-light → --color-text-inverse; accent → --color-accent
+2026-06-23T00:00:04Z | DECISION | Button radius: --radius-full (pill) for all .btn; replaces prior --radius-main on CTAs
+2026-06-23T00:00:05Z | DECISION | Compact callback label typography (12px) remains block-level on site-header__callback / site-footer__callback only
+2026-06-23T00:00:06Z | DECISION | Primary filled accent at rest: .btn.btn_dark.btn--primary combination documented
+2026-06-23T00:00:07Z | DECISION | Removed --button-font-size, --button-line-height, --button-font-weight from :root (superseded by .btn)
+2026-06-23T00:00:08Z | DECISION | Operator header padding change (var(--pad-x)) preserved as authority

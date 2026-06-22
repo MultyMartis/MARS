@@ -43,6 +43,7 @@
 | R-030 | `projects/mars-website-factory/universal-style-scale-law-v1.md` | PRODUCTION LAW | Compact scale; no selector tokens; no alias chains; physical CSS properties | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 | R-031 | `projects/mars-website-factory/one-project-scss-file-law-v1.md` | PRODUCTION LAW | Single `style.scss` entry; no project partials by default | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 | R-032 | `projects/mars-website-factory/no-button-letter-spacing-law-v1.md` | PRODUCTION LAW | No `--button-letter-spacing`; natural font spacing | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
+| R-033 | `projects/mars-website-factory/universal-button-system-law-v1.md` | PRODUCTION LAW | Single `.btn` system; `.btn_dark` / `.btn--primary`; no parallel block button geometry | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 
 ---
 

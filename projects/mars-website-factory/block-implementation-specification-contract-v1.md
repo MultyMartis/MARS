@@ -149,9 +149,31 @@ Custom radius exception: NONE
 ## Button typography
 
 Button letter-spacing required: NO
+
+## Button system
+
+Buttons present:
+
+Semantic elements:
+
+Base class: .btn
+
+Modifiers:
+
+Structural classes:
+
+Width exceptions:
+
+Icon behavior:
+
+Focus behavior:
+
+Disabled behavior:
+
+Parallel button system required: NO
 ```
 
-**Authority:** [one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)
+**Authority:** [one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md) · [universal-button-system-law-v1.md](universal-button-system-law-v1.md)
 
 ### Color bindings
 
@@ -276,3 +298,4 @@ Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 ope
 | 2026-06-22 | v1.2 — Container usage + section rhythm ownership mandatory sections |
 | 2026-06-23 | v1.3 — Existing style scale usage; new token requests; property syntax; Universal Style Scale Law binding |
 | 2026-06-23 | v1.4 — SCSS placement; unified radius; button letter-spacing prohibition |
+| 2026-06-23 | v1.5 — Universal Button System mandatory block spec section |

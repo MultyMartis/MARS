@@ -77,17 +77,16 @@
 	--radius-main: 30px;
 	--radius-full: 999px;
 
-	/* Controls — shared component tokens (Header + Hero + Footer) */
+	/* Controls — shared component tokens (forms + non-button controls) */
 	--control-height-primary: 45px;
 	--control-height-compact: 32px;
 	--control-padding-inline: 20px;
 	--control-padding-inline-compact: 16px;
 	--control-border-width: 1px;
 
-	/* Buttons */
-	--button-font-size: var(--font-size-button);
-	--button-line-height: var(--line-height-button);
-	--button-font-weight: var(--font-weight-medium);
+	/* Universal button system (Website Factory Button System Law) */
+	--pad-btns: var(--control-padding-inline);
+	--main-size-btns: var(--control-height-primary);
 
 	/* Icons */
 	--icon-size-small: 16px;
@@ -358,39 +357,85 @@ address {
    07. Shared components
    ========================================================================== */
 
-.button {
-	display: inline-flex;
+.btn {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	min-height: var(--control-height-primary);
-	padding-left: var(--control-padding-inline);
-	padding-right: var(--control-padding-inline);
-	border: 0;
-	border-radius: var(--radius-main);
-	background-color: var(--color-accent);
-	color: var(--color-text-inverse);
+	height: var(--main-size-btns);
+	padding: 0 var(--pad-btns);
+	gap: var(--pad-gap-mini);
+	border-width: var(--control-border-width);
+	border-style: solid;
+	border-color: var(--color-text-primary);
+	border-radius: var(--radius-full);
+	background-color: transparent;
+	color: var(--color-text-primary);
 	font-family: var(--font-family-base);
-	font-size: var(--button-font-size);
-	font-weight: var(--button-font-weight);
-	line-height: var(--button-line-height);
+	font-size: var(--font-size-button);
+	font-weight: 400;
+	line-height: var(--main-size-btns);
+	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
 	cursor: pointer;
 	transition:
-		background-color var(--transition-base),
-		color var(--transition-base),
-		border-color var(--transition-base);
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		color 0.3s ease;
+
+	svg {
+		fill: currentColor;
+	}
 }
 
-.button--compact {
-	min-height: var(--control-height-compact);
-	padding-left: var(--control-padding-inline-compact);
-	padding-right: var(--control-padding-inline-compact);
-	border: var(--control-border-width) solid var(--color-text-primary);
-	border-radius: var(--radius-main);
-	background-color: transparent;
+.btn:hover {
+	border-color: var(--color-text-primary);
+	background-color: var(--color-text-primary);
+	color: var(--color-text-inverse);
+}
+
+.btn_dark {
+	border-color: var(--color-text-primary);
+	background-color: var(--color-text-primary);
+	color: var(--color-text-inverse);
+	fill: var(--color-text-inverse);
+}
+
+.btn_dark:hover {
+	border-color: var(--color-surface);
+	background-color: var(--color-surface);
 	color: var(--color-text-primary);
+}
+
+.btn.btn_dark.btn--primary {
+	border-color: var(--color-accent);
+	background-color: var(--color-accent);
+	color: var(--color-text-inverse);
+	fill: var(--color-text-inverse);
+}
+
+.btn--primary.btn:hover,
+.btn.btn_dark.btn--primary:hover {
+	border-color: var(--color-accent);
+	background-color: var(--color-accent);
+	color: var(--color-text-inverse);
+}
+
+.btn:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+}
+
+.btn:active {
+	opacity: 0.92;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: 0.5;
 }
 
 .icon {
@@ -416,17 +461,15 @@ address {
    ========================================================================== */
 
 .site-header {
-	padding-top: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header top inset @ 1398px
-	padding-bottom: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header-to-hero boundary @ 1398px
-	background-color: var(--color-page-background);
-	color: var(--color-text-primary);
+	padding-top: var(--pad-x);
+	padding-bottom: var(--pad-x);
 }
 
 .site-header__top {
 	display: flex;
 	align-items: center;
 	gap: var(--pad-box);
-	padding-bottom: var(--pad-box);
+	padding-bottom: var(--pad-gap-line);
 	margin-bottom: var(--pad-gap-line);
 	border-bottom: var(--border-width) solid var(--border-color-subtle);
 }
@@ -494,19 +537,8 @@ address {
 
 .site-header__callback {
 	flex: 0 0 auto;
-	min-height: var(--control-height-compact);
-	padding-left: var(--control-padding-inline-compact);
-	padding-right: var(--control-padding-inline-compact);
-	border: var(--control-border-width) solid var(--color-text-primary);
-	border-radius: var(--radius-main);
-	background-color: transparent;
-	color: var(--color-text-primary);
 	font-size: 12px; // BLOCK_LEVEL_TOKEN — compact callback label (not primary button role)
-	font-weight: var(--font-weight-medium);
 	line-height: 1;
-	text-transform: uppercase;
-	white-space: nowrap;
-	cursor: pointer;
 }
 
 .site-header__bottom {
@@ -655,23 +687,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 .hero__button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
-	min-height: var(--control-height-primary);
-	padding-left: var(--control-padding-inline);
-	padding-right: var(--control-padding-inline);
-	border: 0;
-	border-radius: var(--radius-main);
-	background-color: var(--color-accent);
-	color: var(--color-text-inverse);
-	font-size: var(--button-font-size);
-	font-weight: var(--button-font-weight);
-	line-height: var(--button-line-height);
-	text-transform: uppercase;
-	white-space: nowrap;
-	cursor: pointer;
+	flex: 0 0 auto;
 }
 
 /* ==========================================================================
@@ -680,7 +696,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 $footer-logo-width: 182px; // EXACT_GEOMETRY_EXCEPTION — shared logo SVG viewBox (Header)
 $footer-logo-height: 82px;
-$footer-callback-font-size: 12px; // BLOCK_LEVEL_TOKEN — compact outline CTA label
+$footer-callback-font-size: 12px; // BLOCK_LEVEL_TOKEN — compact callback label typography only
 
 .site-footer {
 	padding-top: var(--pad-x);
@@ -765,19 +781,8 @@ $footer-callback-font-size: 12px; // BLOCK_LEVEL_TOKEN — compact outline CTA l
 
 .site-footer__callback {
 	flex: 0 0 auto;
-	min-height: var(--control-height-compact);
-	padding-left: var(--control-padding-inline-compact);
-	padding-right: var(--control-padding-inline-compact);
-	border: var(--control-border-width) solid var(--color-text-primary);
-	border-radius: var(--radius-main);
-	background-color: transparent;
-	color: var(--color-text-primary);
 	font-size: $footer-callback-font-size;
-	font-weight: var(--font-weight-medium);
 	line-height: 1;
-	text-transform: uppercase;
-	white-space: nowrap;
-	cursor: pointer;
 }
 
 .site-footer__cta {

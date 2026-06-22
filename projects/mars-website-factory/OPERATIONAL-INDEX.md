@@ -20,7 +20,7 @@
 
 **Universal Style Scale Law (2026-06-23):** **MANDATORY PRODUCTION CONTRACT** — **[universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)**; compact `--pad-*` / role-based radius scale; **No Selector Token Law**; **No Alias Chain Law**; physical padding/margin properties (logical properties prohibited by default); FP-0002 V6 pilot normalization; **DOCUMENTED MANDATORY GATE** · **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**.
 
-**Forge WordPress subsystem (2026-06-22):** **FOUNDATION / PRE-OPERATIONAL** — FW-05 synthetic validation **COMPLETE** (FWS-0001 **PROVEN WITH LIMITATIONS**); [capability pack](subsystems/forge-wordpress/capability/OPERATIONAL-INDEX.md); next: **FW-06 Pilot Intake** — [subsystems/forge-wordpress/](subsystems/forge-wordpress/OPERATIONAL-INDEX.md) · synthetic workspace `workspaces/forge-wordpress-synthetic/FWS-0001/` · seed [AG-WP-001](../../workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/) unregistered · **consumes** shared localhost [MARS Localhost Infrastructure](../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) (`D:\MARS-Localhost`) — does not own runtime root.
+**Forge WordPress subsystem (2026-06-23):** **FOUNDATION / PRE-OPERATIONAL** — FW-05R live synthetic validation **COMPLETE** (FWS-0001 **PROVEN WITH LIMITATIONS**); [capability pack](subsystems/forge-wordpress/capability/OPERATIONAL-INDEX.md); next: **FW-06 Pilot Intake** — [subsystems/forge-wordpress/](subsystems/forge-wordpress/OPERATIONAL-INDEX.md) · synthetic workspace `workspaces/forge-wordpress-synthetic/FWS-0001/` · seed [AG-WP-001](../../workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/) **ELIGIBLE WITH DOCUMENTED LIMITATIONS** (unregistered) · **consumes** shared localhost [MARS Localhost Infrastructure](../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) (`D:\MARS-Localhost`) — does not own runtime root · operator **WV6 PENDING**.
 
 **MARS Localhost Infrastructure (2026-06-22):** **FOUNDATION** (MLI-00 **COMPLETE**) — shared Windows local execution on `D:\MARS-Localhost`; brain [../mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../mars-localhost-infrastructure/OPERATIONAL-INDEX.md); next **MLI-01 Laragon Enablement**; **not** operational until profile validation.
 
@@ -61,6 +61,8 @@
 **One Project SCSS File Law (2026-06-23):** All project-owned styles in `src/scss/style.scss` — **[one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md)**; no project partials by default; ONE SCSS FILE GATE on pre-SCSS.
 
 **No Button Letter Spacing Law (2026-06-23):** Prohibits `--button-letter-spacing` — **[no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)**.
+
+**Universal Button System Law (2026-06-23):** **MANDATORY PRODUCTION CONTRACT** — **[universal-button-system-law-v1.md](universal-button-system-law-v1.md)**; single `.btn` base + `.btn_dark` / `.btn--primary` modifiers; no parallel block button systems; UNIVERSAL BUTTON SYSTEM GATE on pre-SCSS; FP-0002 V6 pilot normalization; **DOCUMENTED MANDATORY GATE** · **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**.
 
 **Operator Visual Approval Law (2026-06-14):** TECHNICAL PASS ≠ OPERATOR APPROVAL — **[operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md)**; mandatory **OPERATOR VISUAL REVIEW** REPORT block; Screenshot Override Law.
 

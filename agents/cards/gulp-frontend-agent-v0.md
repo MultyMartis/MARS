@@ -33,6 +33,7 @@
 - **Modular SCSS (exception only):** section/block partials only when operator documents explicit SCSS architecture exception.
 - **Single Base Container Law:** reuse project primary `.container` — no per-block duplicate container geometry ([site-wide-style-foundation-contract-v1.md](../../projects/mars-website-factory/site-wide-style-foundation-contract-v1.md) §4, [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) WF-GRID-006).
 - **Universal Style Scale Law:** consume compact `--pad-*` / role-based radius scale — no selector-named spacing aliases, no alias chains, physical padding/margin properties ([universal-style-scale-law-v1.md](../../projects/mars-website-factory/universal-style-scale-law-v1.md)).
+- **Universal Button System Law:** all CTAs use `.btn` + approved modifiers — no parallel block button systems ([universal-button-system-law-v1.md](../../projects/mars-website-factory/universal-button-system-law-v1.md)).
 - **Section Owns Its Rhythm Law:** layout region owns external vertical rhythm — not first/last internal child ([frontend-section-spacing-rule-v1.md](../../projects/mars-website-factory/frontend-section-spacing-rule-v1.md) §2.6).
 - **Reusable sections:** composition via includes/partials (**gulp-file-include** intent per legacy profile; **SAFE UNKNOWN** if project uses a different include mechanism until documented).
 - **gulp-file-include:** HTML assembly from partials matching **`section_map`** / handoff mappings — target shape, not an in-repo starter claim.

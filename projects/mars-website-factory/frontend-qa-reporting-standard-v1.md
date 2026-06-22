@@ -552,7 +552,33 @@ Button letter-spacing declarations removed:
 Button letter-spacing declarations remaining:
 ```
 
-Corrections must route through **existing core scale** or **documented exact geometry** — not block-specific token aliases, alias chains, logical shorthand properties, arbitrary px tuning, local container width, first/last-child boundary padding, **new project SCSS partials**, **legacy radius scale tokens**, or **button letter-spacing tokens**.
+### Universal button system — mandatory report fields
+
+**Authority:** [universal-button-system-law-v1.md](universal-button-system-law-v1.md)
+
+Every frontend report for SCSS-bearing stages must include:
+
+```text
+Buttons found:
+Buttons migrated to `.btn`:
+Button-like links migrated:
+Legacy button systems found:
+Legacy button systems removed:
+Legacy button systems remaining:
+`.btn` base status:
+`.btn_dark` status:
+`.btn--primary` status:
+Block-specific geometry duplicates found:
+Block-specific geometry duplicates removed:
+Block-specific geometry duplicates remaining:
+Button tokens reused:
+New button tokens:
+Button letter-spacing remaining:
+Focus-visible status:
+Disabled-state status:
+```
+
+Corrections must route through **existing core scale** or **documented exact geometry** — not block-specific token aliases, alias chains, logical shorthand properties, arbitrary px tuning, local container width, first/last-child boundary padding, **new project SCSS partials**, **legacy radius scale tokens**, **button letter-spacing tokens**, or **parallel button systems**.
 
 ---
 
@@ -568,3 +594,4 @@ Corrections must route through **existing core scale** or **documented exact geo
 | 2026-06-22 | **v1.5** — CSS Variable First Law §9.1: mandatory token fields on Visual QA; arbitrary px correction prohibited. |
 | 2026-06-22 | **v1.6** — Container + section rhythm mandatory report fields §9.1 |
 | 2026-06-23 | **v1.7** — Universal Style Scale Law fields §9.1; selector token / alias chain / logical property audit lines |
+| 2026-06-23 | **v1.8** — Universal Button System mandatory report fields §9.1 |

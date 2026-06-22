@@ -187,6 +187,7 @@ Project-specific `--radius-main` values may differ when evidence requires — **
 | Block spec | [block-implementation-specification-contract-v1.md](block-implementation-specification-contract-v1.md) |
 | SCSS review | [frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md) |
 | Visual QA | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) |
+| Button system | [universal-button-system-law-v1.md](universal-button-system-law-v1.md) |
 
 **On violation:**
 

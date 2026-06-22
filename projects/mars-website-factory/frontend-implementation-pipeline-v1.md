@@ -51,7 +51,7 @@ INTAKE
 | Block Implementation Specification | G-BLS | Foundation + page spec + layout/group specs | Per-block binding doc | Engineering | block spec per section | unbound tokens | HTML |
 | HTML | G-HTM | Approved block spec | Structure-only markup | Forge / gulp agent | `html_structure_authorized` | spec missing | HTML Review |
 | HTML Review | G-HTR | HTML | Review PASS / fix list | Operator | visual structure ack | FAIL | SCSS |
-| SCSS | G-SCS | HTML + foundation | Scoped styles in `src/scss/style.scss` | Forge / gulp agent | `scss_authorized` | pre-SCSS checklist FAIL · **CSS Variable First Law** · **Universal Style Scale Law** · **One Project SCSS File Law** · **STYLE SCALE GATE** · **ONE SCSS FILE GATE** · **RADIUS SYSTEM GATE** · **TOKEN ADMISSION GATE** · **CONTAINER GATE** · **SECTION RHYTHM GATE** | Visual QA |
+| SCSS | G-SCS | HTML + foundation | Scoped styles in `src/scss/style.scss` | Forge / gulp agent | `scss_authorized` | pre-SCSS checklist FAIL · **CSS Variable First Law** · **Universal Style Scale Law** · **One Project SCSS File Law** · **Universal Button System Law** · **STYLE SCALE GATE** · **ONE SCSS FILE GATE** · **RADIUS SYSTEM GATE** · **UNIVERSAL BUTTON SYSTEM GATE** · **TOKEN ADMISSION GATE** · **CONTAINER GATE** · **SECTION RHYTHM GATE** | Visual QA |
 | Visual QA | G-VQA | Build + source | QA report | Operator + QA docs | OPERATOR VISUAL REVIEW | FAIL | Correction or PASS |
 | Correction Loop | G-COR | QA defect class | Updated spec/foundation/audit/code | Responsible layer | defect routed | local magic-number fix | Re-enter at routed gate |
 
@@ -108,3 +108,4 @@ This pipeline is **human-operated documentation**. No claim of automated gate en
 | 2026-06-22 | v1.2 — G-SCS binds Container gate + Section rhythm gate |
 | 2026-06-23 | v1.3 — G-SCS binds Universal Style Scale Law; Style scale + Token admission gates |
 | 2026-06-23 | v1.4 — G-SCS binds One Project SCSS File Law; ONE SCSS FILE + RADIUS SYSTEM gates |
+| 2026-06-23 | v1.5 — G-SCS binds Universal Button System Law; UNIVERSAL BUTTON SYSTEM GATE |

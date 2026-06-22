@@ -66,6 +66,23 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 
 **On violation:** `ONE SCSS FILE GATE — FAIL` · `RADIUS SYSTEM GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
 
+### Universal button system gate (mandatory)
+
+- [ ] Existing `.btn` system inspected.
+- [ ] Every new CTA uses `.btn`.
+- [ ] Required modifiers identified.
+- [ ] Block-specific class controls placement only.
+- [ ] No parallel button system is proposed.
+- [ ] No selector-specific button token is proposed.
+- [ ] No button letter-spacing is proposed.
+- [ ] Button/link semantic element is correct.
+- [ ] Focus-visible state is preserved.
+- [ ] Disabled state is defined where applicable.
+
+**Authority:** [universal-button-system-law-v1.md](universal-button-system-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)
+
+**On violation:** `UNIVERSAL BUTTON SYSTEM GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
+
 ### Token lookup gate (mandatory)
 
 - [ ] All design values completed token lookup.
@@ -116,3 +133,4 @@ PRE-SCSS VALIDATION — PASS | FAIL (list #) | BLOCKED (gate)
 | 2026-06-22 | v1.2 — Container gate + Section rhythm gate |
 | 2026-06-23 | v1.3 — Style scale gate; Token admission gate; physical property rule; Universal Style Scale Law |
 | 2026-06-23 | v1.4 — One SCSS file gate; unified radius; no button letter-spacing |
+| 2026-06-23 | v1.5 — Universal Button System gate |

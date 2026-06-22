@@ -160,6 +160,7 @@ Before styling:
 6. Preserve cascade order.
 7. Use `--radius-main` or `--radius-full`.
 8. Do **not** use `--button-letter-spacing`.
+9. Use the universal `.btn` system for all CTAs ([universal-button-system-law-v1.md](universal-button-system-law-v1.md)).
 
 ---
 
@@ -173,6 +174,8 @@ Do not create SCSS partials.
 Use --radius-main for standard rounding.
 Use --radius-full for circles/pills.
 Do not define or use --button-letter-spacing.
+All CTAs use .btn with approved modifiers (.btn_dark, .btn--primary).
+Block-specific classes control placement only — not button geometry.
 ```
 
 ---

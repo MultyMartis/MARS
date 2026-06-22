@@ -92,6 +92,7 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 - Typical layout: `src/partials/sections/`, `src/partials/components/`, `src/partials/layout/` (verify in target repo).
 - **One project SCSS file (mandatory default):** all project-owned styles in `src/scss/style.scss` — no new section/component/layout/page partials without operator exception ([one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md)).
 - **Unified radius:** `--radius-main` for standard rounding; `--radius-full` for circles/pills — no `--radius-small|medium|large` scale by default ([universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)).
+- **Universal button system (mandatory):** all CTAs use `.btn` + approved modifiers — no parallel block button systems ([universal-button-system-law-v1.md](universal-button-system-law-v1.md)).
 - **No button letter-spacing token:** do not define or use `--button-letter-spacing` ([no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)).
 - **One block → one HTML partial + styles in `style.scss`** (+ optional scoped JS).
 - Reuse shared partials across pages; do not duplicate a section to “tweak” — extend partial, modifiers, or include args.

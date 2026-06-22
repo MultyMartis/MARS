@@ -175,7 +175,12 @@ All project CSS variables live in `src/scss/style.scss` — [one-project-scss-fi
 
 ### 12. Button system
 
-Families from component map (primary, secondary, etc.)
+All CTAs use the universal `.btn` system ([universal-button-system-law-v1.md](universal-button-system-law-v1.md)):
+
+- Base class: `.btn`
+- Modifiers: `.btn_dark`, `.btn--primary` (combinable)
+- Tokens: `--pad-btns`, `--main-size-btns`, `--pad-gap-mini`, `--radius-full`
+- Block-specific classes: placement / layout only — no duplicate geometry
 
 ### 13. Form system
 
