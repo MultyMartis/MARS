@@ -8,3 +8,34 @@
 2026-06-22 | SU-007-009 | typography-all-roles | proposals in SECTION-001 spec; font-family SAFE UNKNOWN
 2026-06-22 | SU-010-012 | color-hex-all | role bindings only; sampled candidates with JPEG variance
 2026-06-22 | SU-023 | button-height-global-30px | hero CTA observed 45px — block-level exception proposed
+
+---
+timestamp: 2026-06-22T08:42:32Z
+unknown: header-logo-asset
+why_unknown: logo.svg not present in v6 src/img or src/svg; only INCOMING/03_BRANDING source exists
+needed_from_operator: Copy or authorize logo.svg into v6 assets and replace placeholder
+---
+---
+timestamp: 2026-06-22T08:42:32Z
+unknown: header-search-icon-asset
+why_unknown: No search SVG in v6 workspace assets
+needed_from_operator: Provide search icon asset or approve extraction from branding
+---
+---
+timestamp: 2026-06-22T08:42:32Z
+unknown: header-nav-urls (7 items)
+why_unknown: Navigation href targets not in JPG or allowed V6 docs
+needed_from_operator: Provide page slugs/URLs for nav links before production
+---
+---
+timestamp: 2026-06-22T08:42:32Z
+unknown: header-messenger-urls
+why_unknown: Telegram/WhatsApp deep links not visible in static JPG
+needed_from_operator: Confirm messenger contact URLs
+---
+---
+timestamp: 2026-06-22T08:42:32Z
+unknown: header-callback-action
+why_unknown: Callback modal behavior and target not in JPG
+needed_from_operator: Define callback CTA behavior at JS/HTML gate
+---

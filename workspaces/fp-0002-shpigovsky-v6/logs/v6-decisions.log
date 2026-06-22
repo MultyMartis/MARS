@@ -19,3 +19,39 @@
 2026-06-22 | DECISION | Y=174 OBSERVED_JPG_ESTIMATE CSS_USE_FORBIDDEN NOT_AN_IMPLEMENTATION_BOUNDARY
 2026-06-22 | DECISION | section_001_specification_status=READY_FOR_OPERATOR_REVIEW
 2026-06-22 | DECISION | implementation_authorized=false header_implementation_authorized=false hero_implementation_authorized=false
+
+---
+timestamp: 2026-06-22T08:42:28Z
+decision: header_html_authorized=true
+source_used: FP-0002-V6-SECTION-001-SPECIFICATION.json
+reason: Operator task authorizes Header HTML structure only; SCSS/JS/Hero remain false
+rejected_alternatives: full implementation_authorized, hero_html_authorized, header_scss_authorized
+---
+---
+timestamp: 2026-06-22T08:42:28Z
+decision: Logo placeholder with data-safe-unknown
+source_used: NONE (logo.svg not in v6 src/)
+reason: INCOMING/03_BRANDING/logo.svg exists but not copied to v6 workspace; no legacy asset copy in this task
+rejected_alternatives: inline text logo, copy logo.svg without explicit v6 asset gate
+---
+---
+timestamp: 2026-06-22T08:42:28Z
+decision: Nav items as button type=button
+source_used: HOME-PAGE-FULL-MOCKUP.jpg + SAFE-UNKNOWN SU-S001-018
+reason: Page URLs not visible in JPG or allowed docs; href invention forbidden
+rejected_alternatives: href="#", invented slugs
+---
+---
+timestamp: 2026-06-22T08:42:28Z
+decision: Phones use tel: links
+source_used: evidence/07-header-contacts-nav.jpg
+reason: Numbers legible; href cleaned to +79251836464 and +79950239226
+rejected_alternatives: button-only phones
+---
+---
+timestamp: 2026-06-22T08:42:28Z
+decision: Messenger icons bound to src/img/social/telegram.svg and whatsapp.svg
+source_used: authorized v6 social icon copies
+reason: Icons match JPG GROUP-05; URLs remain SAFE UNKNOWN
+rejected_alternatives: Unicode symbols, legacy workspace icons
+---

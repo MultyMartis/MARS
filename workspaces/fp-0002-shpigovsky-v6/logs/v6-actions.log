@@ -7,3 +7,39 @@
 2026-06-22T00:00:06Z | GATE-1 | CLOSED | composite SECTION-001 architecture locked
 2026-06-22T00:00:07Z | GATE-2 | CLOSED | foundation APPROVED operator 2026-06-22
 2026-06-22T00:00:08Z | GATE-3 | OPEN | section_001_specification_status=READY_FOR_OPERATOR_REVIEW implementation_authorized=false
+
+---
+timestamp: 2026-06-22T08:42:25Z
+file_changed: src/partials/layout/header.html
+action: created
+reason: SECTION-001 Header HTML structure gate — ROW-01 + ROW-02 semantic markup only
+expected_outcome: Header partial with site-header BEM block, no SCSS/JS/Hero
+---
+---
+timestamp: 2026-06-22T08:42:25Z
+file_changed: src/pages/index.html
+action: modified
+reason: Include header partial via gulp-file-include; preserve MAIN/FOOTER placeholders
+expected_outcome: Built index.html contains header markup
+---
+---
+timestamp: 2026-06-22T08:42:25Z
+file_changed: specifications/section-001/FP-0002-V6-SECTION-001-SPECIFICATION.json
+action: modified
+reason: Authorize header HTML only; section_001_specification_status=APPROVED
+expected_outcome: header_html_authorized=true; hero/scss gates remain false
+---
+---
+timestamp: 2026-06-22T08:42:25Z
+file_changed: reviews/header/FP-0002-V6-HEADER-HTML-REVIEW.md
+action: created
+reason: Header HTML review artefact per PHASE-12
+expected_outcome: DOM outline, mapping, SAFE UNKNOWN, build result documented
+---
+---
+timestamp: 2026-06-22T08:42:25Z
+file_changed: dist/
+action: build
+reason: npm run build validation after header HTML
+expected_outcome: Build succeeded; dist not committed
+---
