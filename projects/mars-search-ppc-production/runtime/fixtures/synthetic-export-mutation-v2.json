@@ -1,0 +1,26 @@
+{
+  "manifest_id": "synthetic-export-mutation-v2",
+  "project_id": "SYNTHETIC-EXPORT-MUTATION",
+  "organization_id": "test",
+  "project_name": "Export Mutation",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-20",
+  "lifecycle_status": "ACTIVE",
+  "stage_registry": {
+    "SPPC-01": { "status": "COMPLETED" },
+    "SPPC-19": { "status": "NOT STARTED" },
+    "SPPC-20": { "status": "IN PROGRESS" }
+  },
+  "artifact_registry": {
+    "commander_export_artifact": {
+      "path": "projects/mars-search-ppc-production/state/fixtures/evidence/commander.json",
+      "status": "REGISTERED",
+      "semantic_mutation_detected": true,
+      "note": "Export changed semantic ownership — forbidden"
+    }
+  },
+  "forbidden_actions": ["Semantic mutation via export"],
+  "final_launch_authority": { "granted": false }
+}

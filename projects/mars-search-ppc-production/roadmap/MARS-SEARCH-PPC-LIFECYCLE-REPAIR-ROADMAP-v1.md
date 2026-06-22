@@ -12,8 +12,8 @@
 
 | Wave | Theme | Primary owner | Corvonero dependency |
 |------|-------|---------------|----------------------|
-| 1 | Lifecycle authority and state enforcement | MARS Search PPC / Operator | **AUTHORIZED** — Wave 1 implementation in progress |
-| 2 | MIG evidence production | MIG | Read-only corpus for intake tests only |
+| 1 | Lifecycle authority and state enforcement | MARS Search PPC / Operator | **IMPLEMENTED — OPERATOR REVIEW REQUIRED** |
+| 2 | MIG evidence production | MIG | **BLOCKED UNTIL WAVE 1 APPROVAL** |
 | 3 | ORCA production semantic intelligence | ORCA Semantic Intelligence | Frozen until operator approves lifecycle + Wave 3 charter |
 | 4 | Analytical pack and AI PPC Strategist | Cross-system + Strategist role | Frozen |
 | 5 | Campaign production and QA | Campaign Production / ORCA | Frozen |

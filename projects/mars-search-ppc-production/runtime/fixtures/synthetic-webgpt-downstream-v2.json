@@ -1,0 +1,29 @@
+{
+  "manifest_id": "synthetic-webgpt-downstream-v2",
+  "project_id": "SYNTHETIC-WEBGPT-DOWNSTREAM",
+  "organization_id": "test",
+  "project_name": "WebGPT Downstream",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-03",
+  "lifecycle_status": "ACTIVE",
+  "requested_work": {
+    "type": "AI PPC Strategist",
+    "downstream_stage": "SPPC-13",
+    "forbidden_at_current": true
+  },
+  "stage_registry": {
+    "SPPC-01": { "status": "COMPLETED" },
+    "SPPC-02": { "status": "COMPLETED" },
+    "SPPC-03": { "status": "IN PROGRESS" }
+  },
+  "artifact_registry": {
+    "ppc_strategy_decision_record": {
+      "path": "projects/mars-search-ppc-production/state/fixtures/evidence/analytical-pack.json",
+      "status": "REGISTERED",
+      "generated_downstream_of": "SPPC-03"
+    }
+  },
+  "final_launch_authority": { "granted": false }
+}

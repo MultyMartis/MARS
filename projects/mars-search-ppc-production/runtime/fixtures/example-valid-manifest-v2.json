@@ -1,0 +1,35 @@
+{
+  "manifest_id": "example-valid-pre-sppc02-v2",
+  "schema_version": "2.0.0",
+  "lifecycle_version": "1.0.0",
+  "project_id": "EXAMPLE-VALID-PROJECT",
+  "organization_id": "example-org",
+  "project_name": "Example Valid Project",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "moscow",
+  "timezone": "Europe/Moscow",
+  "current_lifecycle_stage": "SPPC-01",
+  "lifecycle_status": "ACTIVE",
+  "risk_mode": "STANDARD",
+  "project_mode": "PRODUCTION",
+  "lifecycle_contract_ref": "projects/mars-search-ppc-production/contracts/mars-search-ppc-lifecycle-contract-v1.json",
+  "stage_registry": {
+    "SPPC-01": { "stage_id": "SPPC-01", "status": "IN PROGRESS", "owner": "ATLAS" }
+  },
+  "artifact_registry": {
+    "business_scope_operator_authority": {
+      "path": "projects/mars-search-ppc-production/state/fixtures/evidence/scope.json",
+      "status": "REGISTERED",
+      "project_id": "EXAMPLE-VALID-PROJECT",
+      "approved": true
+    }
+  },
+  "approval_registry": { "SPPC-01": { "approved": true, "approved_at": "2026-06-22T12:00:00Z" } },
+  "blocker_registry": [],
+  "degraded_mode_registry": {},
+  "runtime_registry": { "lifecycle_validator": "wave1-v1" },
+  "next_allowed_actions": ["Complete SPPC-01"],
+  "forbidden_actions": ["Campaign Production"],
+  "final_launch_authority": { "granted": false }
+}

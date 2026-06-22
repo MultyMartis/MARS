@@ -1,0 +1,125 @@
+{
+  "manifest_id": "corvonero-direct-v2-clean-room-ppc-manifest-v1",
+  "schema_version": "2.0.0",
+  "lifecycle_version": "1.0.0",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "organization_id": "corvonero",
+  "project_name": "Corvonero Direct V2 Clean Room",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "all_russia",
+  "timezone": "Europe/Moscow",
+  "current_lifecycle_stage": "SPPC-05",
+  "lifecycle_status": "FROZEN",
+  "risk_mode": "DIAGNOSTIC_FREEZE",
+  "project_mode": "PRODUCTION",
+  "lifecycle_contract_ref": "projects/mars-search-ppc-production/contracts/mars-search-ppc-lifecycle-contract-v1.json",
+  "source_registry": {
+    "session_id": "mig-20260622-corv01",
+    "expected_row_count": 2370,
+    "files_read": 18
+  },
+  "stage_registry": {
+    "SPPC-01": { "stage_id": "SPPC-01", "status": "COMPLETED", "owner": "ATLAS", "completed_at": "2026-06-22T08:00:00Z", "evidence_version": "v1" },
+    "SPPC-02": { "stage_id": "SPPC-02", "status": "COMPLETED", "owner": "MIG", "completed_at": "2026-06-22T08:25:00Z", "evidence_version": "v1" },
+    "SPPC-03": { "stage_id": "SPPC-03", "status": "COMPLETED", "owner": "MIG", "completed_at": "2026-06-22T09:00:00Z", "evidence_version": "v1", "note": "Full source corpus preserved — 2370 unique phrases" },
+    "SPPC-04": { "stage_id": "SPPC-04", "status": "COMPLETED", "owner": "ORCA", "completed_at": "2026-06-22T10:00:00Z", "evidence_version": "v1" },
+    "SPPC-05": { "stage_id": "SPPC-05", "status": "FAILED", "owner": "ORCA Semantic Intelligence", "blockers": ["Diagnostic v1 admission failure — topical relevance treated as sufficient (~1892 accepts)"] },
+    "SPPC-06": { "stage_id": "SPPC-06", "status": "NOT STARTED" },
+    "SPPC-07": { "stage_id": "SPPC-07", "status": "NOT STARTED" },
+    "SPPC-08": { "stage_id": "SPPC-08", "status": "NOT STARTED" },
+    "SPPC-09": { "stage_id": "SPPC-09", "status": "NOT STARTED" },
+    "SPPC-10": { "stage_id": "SPPC-10", "status": "NOT STARTED", "blockers": ["MIG PAID SERP — BUSINESS HOURS mode not implemented"] },
+    "SPPC-11": { "stage_id": "SPPC-11", "status": "NOT STARTED" },
+    "SPPC-12": { "stage_id": "SPPC-12", "status": "NOT STARTED" },
+    "SPPC-13": { "stage_id": "SPPC-13", "status": "NOT STARTED" },
+    "SPPC-14": { "stage_id": "SPPC-14", "status": "NOT STARTED" },
+    "SPPC-15": { "stage_id": "SPPC-15", "status": "NOT STARTED" },
+    "SPPC-16": { "stage_id": "SPPC-16", "status": "NOT STARTED" },
+    "SPPC-17": { "stage_id": "SPPC-17", "status": "NOT STARTED" },
+    "SPPC-18": { "stage_id": "SPPC-18", "status": "NOT STARTED" },
+    "SPPC-19": { "stage_id": "SPPC-19", "status": "NOT STARTED" },
+    "SPPC-20": { "stage_id": "SPPC-20", "status": "NOT STARTED" },
+    "SPPC-21": { "stage_id": "SPPC-21", "status": "NOT STARTED" },
+    "SPPC-22": { "stage_id": "SPPC-22", "status": "NOT STARTED" },
+    "SPPC-23": { "stage_id": "SPPC-23", "status": "NOT STARTED" }
+  },
+  "artifact_registry": {
+    "business_scope_operator_authority": {
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/intake/corvonero-direct-v2-business-intake-v1.json",
+      "status": "REGISTERED",
+      "approved": true,
+      "project_id": "corvonero-direct-v2-clean-room"
+    },
+    "source_registry": {
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/mig-source/mig-wordstat-source-ledger-v1.json",
+      "status": "REGISTERED",
+      "project_id": "corvonero-direct-v2-clean-room",
+      "expected_row_count": 2370
+    },
+    "full_semantic_corpus_intake": {
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-normalized-corpus-v1.json",
+      "status": "REGISTERED",
+      "corpus_mode": "PRODUCTION FULL CORPUS",
+      "registered_row_count": 2370,
+      "exclusions_documented": true,
+      "project_id": "corvonero-direct-v2-clean-room"
+    },
+    "canonical_phrase_registry": {
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+      "status": "REGISTERED",
+      "project_id": "corvonero-direct-v2-clean-room"
+    },
+    "commercial_admission_registry": {
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-commercial-eligibility-v1.json",
+      "status": "DIAGNOSTIC ONLY",
+      "diagnostic_only": true,
+      "approved": false,
+      "note": "DIAGNOSTIC EVIDENCE ONLY — DO NOT PROMOTE"
+    },
+    "p0_i_200_phrase_pilot": {
+      "path": "projects/orca/semantic-intelligence/integration/pilot-runs/p0-i-real-slice-v1/output/p0-i-pilot-semantic-records-v1.json",
+      "status": "DIAGNOSTIC ONLY",
+      "corpus_mode": "DIAGNOSTIC SAMPLE",
+      "diagnostic_only": true,
+      "note": "P0-I 200-phrase pilot — TECHNICAL INTEGRATION EVIDENCE only"
+    }
+  },
+  "blocker_registry": [
+    { "id": "CRV-FRZ-001", "code": "PROJECT_FROZEN", "message": "FROZEN PENDING SEARCH PPC PRODUCTION LIFECYCLE IMPLEMENTATION AND GAP CLOSURE" },
+    { "id": "CRV-FRZ-002", "code": "ADMISSION_DIAGNOSTIC_FAILED", "message": "SPPC-05 v1 diagnostic run failed — do not promote semantic decisions" },
+    { "id": "CRV-FRZ-003", "code": "PAID_SERP_MISSING", "message": "SPPC-10 paid SERP business-hours evidence not collected" },
+    { "id": "CRV-FRZ-004", "code": "WAVE3_CHARTER_REQUIRED", "message": "Full production admission requires Wave 3 ORCA charter after Wave 1+2 approval" }
+  ],
+  "approval_registry": {
+    "SPPC-01": { "approved": true, "approved_at": "2026-06-22T08:00:00Z" }
+  },
+  "degraded_mode_registry": {},
+  "runtime_registry": {
+    "lifecycle_validator": "wave1-v1",
+    "orca_admission": "1fcf3d2-diagnostic-only"
+  },
+  "human_review_policy": {
+    "primary_classification_engine": false,
+    "classify_whole_corpus_requested": false,
+    "note": "Manual cleanup of 1892 accepted phrases PROHIBITED per operator D2"
+  },
+  "next_allowed_actions": [
+    "Read-only lifecycle validation",
+    "Preserve source corpus and business intake",
+    "Await operator Wave 1 review and Wave 2–3 charter before semantic rerun"
+  ],
+  "forbidden_actions": [
+    "Campaign Production",
+    "Commander Export",
+    "Import and Launch",
+    "Semantic rerun without Wave 3 charter",
+    "Paid SERP collection while frozen",
+    "Promote diagnostic v1 semantic artifacts to production"
+  ],
+  "final_launch_authority": {
+    "granted": false,
+    "note": "Launch authority is never inferred from export alone"
+  },
+  "first_legitimate_next_requirement": "Operator approval of Wave 1 enforcement + Wave 2 MIG paid SERP mode + Wave 3 ORCA full-corpus production charter"
+}

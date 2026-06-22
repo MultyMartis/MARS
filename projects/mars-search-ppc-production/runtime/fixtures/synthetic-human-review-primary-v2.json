@@ -1,0 +1,21 @@
+{
+  "manifest_id": "synthetic-human-review-primary-v2",
+  "project_id": "SYNTHETIC-HR-PRIMARY",
+  "organization_id": "test",
+  "project_name": "Human Review Primary",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-05",
+  "lifecycle_status": "ACTIVE",
+  "human_review_policy": {
+    "primary_classification_engine": true,
+    "classify_whole_corpus_requested": true,
+    "wholesale_abstain_to_operator": true,
+    "no_automated_reassessment": true,
+    "claims_automation": true,
+    "manual_review_ratio": 1
+  },
+  "artifact_registry": {},
+  "final_launch_authority": { "granted": false }
+}

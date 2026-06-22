@@ -1,0 +1,7 @@
+{
+  "lifecycle_version": "1.0.0",
+  "manifest_schema_version": "2.0.0",
+  "contract_path": "projects/mars-search-ppc-production/contracts/mars-search-ppc-lifecycle-contract-v1.json",
+  "validator_path": "projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs",
+  "cli_path": "projects/mars-search-ppc-production/runtime/cli/search-ppc.mjs"
+}

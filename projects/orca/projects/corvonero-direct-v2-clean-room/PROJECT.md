@@ -1,7 +1,7 @@
 # Корво Неро — Direct V2 Clean Room
 
 **Project ID:** `corvonero-direct-v2-clean-room`  
-**Status:** `DIAGNOSTIC FAILED — COMMERCIAL ADMISSION LOGIC NOT APPROVED`  
+**Status:** `FROZEN PENDING SEARCH PPC PRODUCTION LIFECYCLE IMPLEMENTATION AND GAP CLOSURE`  
 **Active line:** **YES** — canonical semantic rebuild locus (source corpus preserved; semantic decisions frozen)  
 **Date established:** 2026-06-22  
 **Diagnostic freeze recorded:** 2026-06-22 (operator decisions D2, D7; research intake v1)
@@ -23,7 +23,11 @@ Clean-room semantic pipeline v1 completed and exposed a **confirmed failure mode
 | Commander XLSX export | **NOT CREATED — BLOCKED** |
 | Import / launch | **NOT AUTHORIZED** |
 
-**Next gate:** ORCA Semantic Intelligence Architecture Decision Record → guideline + benchmark + pilot thresholds (promotion backlog P0-A through P0-G) → operator sign-off on approved Semantic Core (P0-H) → **then** new semantic admission rerun from preserved corpus only.
+**Next gate:** Operator approval of Wave 1 state enforcement report and execution of repair roadmap Wave 2–3 before semantic rerun.
+
+**Lifecycle manifest (read-only):** `state/project-ppc-state-manifest-v1.json`
+
+**Do not resume:** semantic processing, paid SERP collection, strategy, campaign production, Commander export, import, or launch.
 
 **Research reference:** `projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/`
 

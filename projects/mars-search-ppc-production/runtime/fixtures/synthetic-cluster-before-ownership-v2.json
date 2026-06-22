@@ -1,0 +1,32 @@
+{
+  "manifest_id": "synthetic-cluster-before-ownership-v2",
+  "project_id": "SYNTHETIC-CLUSTER-BEFORE-OWNERSHIP",
+  "organization_id": "test",
+  "project_name": "Cluster Before Ownership",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-08",
+  "lifecycle_status": "ACTIVE",
+  "stage_registry": {
+    "SPPC-01": { "status": "COMPLETED" },
+    "SPPC-02": { "status": "COMPLETED" },
+    "SPPC-03": { "status": "COMPLETED" },
+    "SPPC-04": { "status": "COMPLETED" },
+    "SPPC-05": { "status": "COMPLETED" },
+    "SPPC-06": { "status": "COMPLETED" },
+    "SPPC-07": { "status": "NOT STARTED" },
+    "SPPC-08": { "status": "IN PROGRESS" }
+  },
+  "artifact_registry": {
+    "business_scope_operator_authority": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/scope.json", "status": "REGISTERED", "project_id": "SYNTHETIC-CLUSTER-BEFORE-OWNERSHIP" },
+    "source_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/source-registry.json", "status": "REGISTERED" },
+    "full_semantic_corpus_intake": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/corpus.json", "status": "REGISTERED", "corpus_mode": "PRODUCTION FULL CORPUS" },
+    "canonical_phrase_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/canonical.json", "status": "REGISTERED" },
+    "commercial_admission_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/admission.json", "status": "REGISTERED" },
+    "demand_tier_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/tiers.json", "status": "REGISTERED" },
+    "semantic_cluster_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/clusters.json", "status": "REGISTERED" }
+  },
+  "approval_registry": { "SPPC-01": { "approved": true } },
+  "final_launch_authority": { "granted": false }
+}

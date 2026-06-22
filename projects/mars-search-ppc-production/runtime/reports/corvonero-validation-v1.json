@@ -1,0 +1,94 @@
+{
+  "status": "BLOCKED",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "current_stage": "SPPC-05",
+  "completed_approved_stages": [
+    "SPPC-01",
+    "SPPC-02",
+    "SPPC-03",
+    "SPPC-04"
+  ],
+  "missing_required_inputs": [
+    null
+  ],
+  "invalid_evidence": [],
+  "required_owners": [
+    "Operator"
+  ],
+  "allowed_next_action": [
+    "Resolve freeze blockers per operator charter",
+    "Review Wave 1+ gap closure requirements"
+  ],
+  "forbidden_until_resolved": [],
+  "forbidden_artifacts": [],
+  "next_allowed_stages": [],
+  "blockers": [
+    {
+      "code": "PROJECT_FROZEN",
+      "message": "BLOCKED — PROJECT FROZEN",
+      "owner": "Operator"
+    },
+    {
+      "code": "PROJECT_FROZEN",
+      "message": "Project lifecycle status is FROZEN"
+    },
+    {
+      "code": "MISSING_REQUIREMENTS",
+      "message": "BLOCKED — LIFECYCLE REQUIREMENT NOT MET",
+      "items": [
+        {
+          "type": "prerequisite_stage"
+        }
+      ]
+    }
+  ],
+  "degraded_mode_available": "NO",
+  "operator_approval_required": false,
+  "exit_code": 2,
+  "blocker_report": {
+    "status": "BLOCKED",
+    "project_id": "corvonero-direct-v2-clean-room",
+    "project_name": "Corvonero Direct V2 Clean Room",
+    "current_lifecycle_stage": "SPPC-05",
+    "requested_stage_or_action": "SPPC-05",
+    "missing_required_inputs": [
+      null
+    ],
+    "invalid_or_insufficient_evidence": [],
+    "required_system_or_role": [
+      "Operator"
+    ],
+    "allowed_next_action": [
+      "Resolve freeze blockers per operator charter",
+      "Review Wave 1+ gap closure requirements"
+    ],
+    "forbidden_until_resolved": [],
+    "degraded_mode_available": "NO",
+    "operator_approval_required": "NO",
+    "blockers": [
+      {
+        "code": "PROJECT_FROZEN",
+        "message": "BLOCKED — PROJECT FROZEN",
+        "owner": "Operator"
+      },
+      {
+        "code": "PROJECT_FROZEN",
+        "message": "Project lifecycle status is FROZEN"
+      },
+      {
+        "code": "MISSING_REQUIREMENTS",
+        "message": "BLOCKED — LIFECYCLE REQUIREMENT NOT MET",
+        "items": [
+          {
+            "type": "prerequisite_stage"
+          }
+        ]
+      }
+    ],
+    "blocker_codes": [
+      "PROJECT_FROZEN",
+      "PROJECT_FROZEN",
+      "MISSING_REQUIREMENTS"
+    ]
+  }
+}

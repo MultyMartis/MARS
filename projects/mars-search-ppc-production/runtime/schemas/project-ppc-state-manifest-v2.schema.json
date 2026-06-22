@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "project-ppc-state-manifest-v2.schema.json",
+  "title": "MARS Search PPC Project State Manifest v2",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "schema_version",
+    "lifecycle_version",
+    "project_id",
+    "organization_id",
+    "project_name",
+    "platform",
+    "campaign_type",
+    "region",
+    "timezone",
+    "current_lifecycle_stage",
+    "lifecycle_status",
+    "risk_mode",
+    "project_mode",
+    "stage_registry",
+    "artifact_registry",
+    "blocker_registry",
+    "approval_registry",
+    "degraded_mode_registry",
+    "runtime_registry",
+    "next_allowed_actions",
+    "forbidden_actions",
+    "final_launch_authority"
+  ],
+  "properties": {
+    "manifest_id": { "type": "string" },
+    "schema_version": { "const": "2.0.0" },
+    "lifecycle_version": { "type": "string" },
+    "project_id": { "type": "string" },
+    "organization_id": { "type": "string" },
+    "project_name": { "type": "string" },
+    "platform": { "const": "Yandex Direct" },
+    "campaign_type": { "const": "search" },
+    "region": { "type": "string" },
+    "timezone": { "type": "string" },
+    "current_lifecycle_stage": { "pattern": "^SPPC-[0-9]{2}$" },
+    "lifecycle_status": { "enum": ["ACTIVE", "FROZEN", "ARCHIVED"] },
+    "risk_mode": { "type": "string" },
+    "project_mode": { "enum": ["PRODUCTION", "DIAGNOSTIC", "BENCHMARK", "PILOT"] },
+    "lifecycle_contract_ref": { "type": "string" },
+    "source_registry": { "type": "object" },
+    "stage_registry": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["stage_id", "status"],
+        "properties": {
+          "stage_id": { "type": "string" },
+          "status": { "type": "string" },
+          "started_at": { "type": ["string", "null"] },
+          "completed_at": { "type": ["string", "null"] },
+          "approved_at": { "type": ["string", "null"] },
+          "owner": { "type": ["string", "null"] },
+          "required_artifacts": { "type": "array" },
+          "registered_artifacts": { "type": "array" },
+          "validator_result": { "type": ["string", "null"] },
+          "blockers": { "type": "array" },
+          "operator_approval": { "type": "object" },
+          "degradation_approval": { "type": "object" },
+          "evidence_version": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "artifact_registry": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "status": { "type": "string" },
+          "artifact_type": { "type": "string" },
+          "corpus_mode": { "type": "string" },
+          "registered_at": { "type": "string" },
+          "collection_date": { "type": "string" },
+          "owner_system": { "type": "string" },
+          "project_id": { "type": "string" },
+          "diagnostic_only": { "type": "boolean" },
+          "approved": { "type": "boolean" }
+        }
+      }
+    },
+    "blocker_registry": { "type": "array" },
+    "approval_registry": { "type": "object" },
+    "degraded_mode_registry": { "type": "object" },
+    "runtime_registry": { "type": "object" },
+    "human_review_policy": { "type": "object" },
+    "next_allowed_actions": { "type": "array", "items": { "type": "string" } },
+    "forbidden_actions": { "type": "array", "items": { "type": "string" } },
+    "final_launch_authority": {
+      "type": "object",
+      "required": ["granted"],
+      "properties": {
+        "granted": { "type": "boolean" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

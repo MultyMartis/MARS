@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "blocker-report-v1.schema.json",
+  "title": "MARS Search PPC Blocker Report v1",
+  "type": "object",
+  "required": [
+    "status",
+    "project_id",
+    "current_lifecycle_stage",
+    "requested_stage_or_action",
+    "missing_required_inputs",
+    "invalid_or_insufficient_evidence",
+    "required_system_or_role",
+    "allowed_next_action",
+    "forbidden_until_resolved",
+    "degraded_mode_available",
+    "operator_approval_required"
+  ],
+  "properties": {
+    "status": { "enum": ["BLOCKED", "READY"] },
+    "project_id": { "type": "string" },
+    "current_lifecycle_stage": { "type": "string" },
+    "requested_stage_or_action": { "type": "string" },
+    "missing_required_inputs": { "type": "array" },
+    "invalid_or_insufficient_evidence": { "type": "array" },
+    "required_system_or_role": { "type": "array" },
+    "allowed_next_action": { "type": "array" },
+    "forbidden_until_resolved": { "type": "array" },
+    "degraded_mode_available": { "enum": ["YES", "NO"] },
+    "operator_approval_required": { "enum": ["YES", "NO"] },
+    "blockers": { "type": "array" },
+    "blocker_codes": { "type": "array" }
+  }
+}

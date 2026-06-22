@@ -1,0 +1,208 @@
+{
+  "date": "2026-06-22T16:47:49.684Z",
+  "passed": 20,
+  "failed": 0,
+  "total": 20,
+  "results": [
+    {
+      "id": 1,
+      "name": "Missing project manifest",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 2,
+      "name": "Invalid lifecycle version",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 3,
+      "name": "Missing Business Scope",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 4,
+      "name": "Pilot substituted for full corpus",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 5,
+      "name": "Strategy before analytical pack",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 6,
+      "name": "Campaign before paid SERP",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 7,
+      "name": "Campaign with approved degraded paid-SERP mode",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "READY",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": 8,
+      "name": "Clustering before ownership",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 9,
+      "name": "Negatives before ownership",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 10,
+      "name": "Commander before QA",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 11,
+      "name": "Export attempts semantic mutation",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 12,
+      "name": "Automatic bidding without analytics readiness",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 13,
+      "name": "Launch inferred from export",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 14,
+      "name": "Post-launch silent Semantic Core mutation",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 15,
+      "name": "Bulk human review as primary engine",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 16,
+      "name": "Web-GPT requested downstream task",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 17,
+      "name": "Cursor task missing manifest path",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    },
+    {
+      "id": 18,
+      "name": "Correct pre-strategy state",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "READY",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": 19,
+      "name": "Correct pre-production state",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "READY",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": 20,
+      "name": "Frozen project",
+      "pass": true,
+      "failures": [],
+      "result": {
+        "status": "BLOCKED",
+        "exit_code": 2
+      }
+    }
+  ]
+}

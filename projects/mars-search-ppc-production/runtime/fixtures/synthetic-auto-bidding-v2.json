@@ -1,0 +1,16 @@
+{
+  "manifest_id": "synthetic-auto-bidding-v2",
+  "project_id": "SYNTHETIC-AUTO-BIDDING",
+  "organization_id": "test",
+  "project_name": "Auto Bidding No Analytics",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-18",
+  "lifecycle_status": "ACTIVE",
+  "stage_registry": { "SPPC-18": { "status": "IN PROGRESS" } },
+  "analytics_readiness": { "conversion_tracking": false },
+  "bidding_mode": "automatic",
+  "artifact_registry": {},
+  "final_launch_authority": { "granted": false }
+}

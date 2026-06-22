@@ -1,0 +1,21 @@
+{
+  "manifest_id": "synthetic-postlaunch-mutation-v2",
+  "project_id": "SYNTHETIC-POSTLAUNCH-MUTATION",
+  "organization_id": "test",
+  "project_name": "Post Launch Mutation",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-23",
+  "lifecycle_status": "ACTIVE",
+  "stage_registry": {
+    "SPPC-22": { "status": "COMPLETED" },
+    "SPPC-23": { "status": "IN PROGRESS" }
+  },
+  "post_launch_policy": {
+    "silent_semantic_core_mutation": true,
+    "governed_proposal_required": true
+  },
+  "artifact_registry": {},
+  "final_launch_authority": { "granted": true }
+}

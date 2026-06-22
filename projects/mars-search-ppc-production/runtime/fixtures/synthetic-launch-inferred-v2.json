@@ -1,0 +1,19 @@
+{
+  "manifest_id": "synthetic-launch-inferred-v2",
+  "project_id": "SYNTHETIC-LAUNCH-INFERRED",
+  "organization_id": "test",
+  "project_name": "Launch Inferred",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "test",
+  "current_lifecycle_stage": "SPPC-20",
+  "lifecycle_status": "ACTIVE",
+  "stage_registry": {
+    "SPPC-20": { "status": "COMPLETED" },
+    "SPPC-21": { "status": "NOT STARTED" }
+  },
+  "artifact_registry": {
+    "commander_export_artifact": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/commander.json", "status": "REGISTERED" }
+  },
+  "final_launch_authority": { "granted": true, "note": "Invalid — launch inferred from export" }
+}

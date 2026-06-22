@@ -1,0 +1,36 @@
+{
+  "manifest_id": "project-ppc-state-manifest-template-v2",
+  "schema_version": "2.0.0",
+  "lifecycle_version": "1.0.0",
+  "project_id": "",
+  "organization_id": "",
+  "project_name": "",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "",
+  "timezone": "UTC",
+  "current_lifecycle_stage": "SPPC-01",
+  "lifecycle_status": "ACTIVE",
+  "risk_mode": "STANDARD",
+  "project_mode": "PRODUCTION",
+  "lifecycle_contract_ref": "projects/mars-search-ppc-production/contracts/mars-search-ppc-lifecycle-contract-v1.json",
+  "source_registry": {},
+  "stage_registry": {
+    "SPPC-01": { "stage_id": "SPPC-01", "status": "NOT STARTED", "owner": "ATLAS", "required_artifacts": ["business_scope_operator_authority"], "registered_artifacts": [], "operator_approval": { "approved": false } }
+  },
+  "artifact_registry": {},
+  "blocker_registry": [],
+  "approval_registry": {},
+  "degraded_mode_registry": {},
+  "runtime_registry": {},
+  "human_review_policy": {
+    "primary_classification_engine": false,
+    "classify_whole_corpus_requested": false
+  },
+  "next_allowed_actions": ["Complete SPPC-01 Business Intake and Operator Authority"],
+  "forbidden_actions": ["Campaign Production", "Commander Export", "Import and Launch"],
+  "final_launch_authority": {
+    "granted": false,
+    "note": "Launch authority is never inferred from export alone"
+  }
+}
