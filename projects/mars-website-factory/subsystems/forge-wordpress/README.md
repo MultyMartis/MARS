@@ -18,17 +18,20 @@ Documentation-first **WordPress implementation subsystem** of MARS Website Facto
 
 ---
 
-## Status (FW-02 complete)
+## Status (FW-03 complete)
 
 ```text
 FW-00 — COMPLETE
 FW-01 — COMPLETE
 FW-02 — COMPLETE
-FW-03 — NEXT
+FW-03 — COMPLETE
+FW-04 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
 Standards: BASELINE v1
+Tooling design: BASELINE v1
+Validation design: BASELINE v1
 Templates: BASELINE v1
 Implementation capability: NOT STARTED
 ```
@@ -75,6 +78,26 @@ Human remains the final authority. Production runtime and autonomous deployment 
 | Factory handoff | [contracts/WEBSITE-FACTORY-TO-FORGE-WORDPRESS-HANDOFF-CONTRACT-v1.md](contracts/WEBSITE-FACTORY-TO-FORGE-WORDPRESS-HANDOFF-CONTRACT-v1.md) |
 | WPilot handoff | [contracts/FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md](contracts/FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md) |
 | Templates | [templates/](templates/) |
+
+---
+
+## FW-03 tooling and validation design
+
+| Area | Document |
+|------|----------|
+| Local environment | [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) |
+| Repository model | [FORGE-WORDPRESS-REPOSITORY-AND-FILESYSTEM-MODEL-v1.md](FORGE-WORDPRESS-REPOSITORY-AND-FILESYSTEM-MODEL-v1.md) |
+| Gulp integration | [FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md](FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md) |
+| Tool registry | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
+| Command model | [FORGE-WORDPRESS-COMMAND-AND-OPERATION-MODEL-v1.md](FORGE-WORDPRESS-COMMAND-AND-OPERATION-MODEL-v1.md) |
+| Safe commands | [FORGE-WORDPRESS-SAFE-COMMAND-POLICY-v1.md](FORGE-WORDPRESS-SAFE-COMMAND-POLICY-v1.md) |
+| Validation runners | [FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md](FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md) |
+| Visual regression | [FORGE-WORDPRESS-VISUAL-REGRESSION-DESIGN-v1.md](FORGE-WORDPRESS-VISUAL-REGRESSION-DESIGN-v1.md) |
+| Security validation | [FORGE-WORDPRESS-SECURITY-VALIDATION-DESIGN-v1.md](FORGE-WORDPRESS-SECURITY-VALIDATION-DESIGN-v1.md) |
+| Packaging | [FORGE-WORDPRESS-PACKAGING-AND-RELEASE-DESIGN-v1.md](FORGE-WORDPRESS-PACKAGING-AND-RELEASE-DESIGN-v1.md) |
+| Pilot tooling profile | [FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md](FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md) |
+| Decision record | [reports/FORGE-WORDPRESS-FW-03-TOOLING-DECISION-RECORD-v1.md](reports/FORGE-WORDPRESS-FW-03-TOOLING-DECISION-RECORD-v1.md) |
+| FW-04 input | [reports/FORGE-WORDPRESS-FW-04-PILOT-INTAKE-INPUT-v1.md](reports/FORGE-WORDPRESS-FW-04-PILOT-INTAKE-INPUT-v1.md) |
 
 ---
 

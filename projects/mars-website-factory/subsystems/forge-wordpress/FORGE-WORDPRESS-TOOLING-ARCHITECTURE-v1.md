@@ -64,12 +64,13 @@
 
 ---
 
-## 5. FW-03 deliverables (forward reference)
+## 5. FW-03 deliverables (complete)
 
-- Selected local stack standard
-- Validation runner scripts (human-invoked)
-- Playground/PR preview evaluation
-- Windows setup quickstart
+- Selected local stack standard — [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md)
+- Validation runner specifications — [FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md](FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md)
+- Tool registry — [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md)
+- Capability audit — [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md)
+- Windows setup — operator action per pilot profile (Local install)
 
 ---
 

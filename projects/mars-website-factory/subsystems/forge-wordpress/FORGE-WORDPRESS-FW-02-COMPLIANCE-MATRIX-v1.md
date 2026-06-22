@@ -56,10 +56,26 @@
 | All required artifacts have templates | ✓ FW-T-01–13 |
 | All contracts linked in OPERATIONAL-INDEX | ✓ |
 | All standards linked to WV layer | ✓ |
+| FW-03 tooling covers WV runners | ✓ |
+| Tool registry + capability audit aligned | ✓ |
 | No WordPress code in FW-02 | ✓ |
 | Theme/plugin boundary consistent | ✓ FW-S-03 + FW-S-04 |
 | ACF/content model consistent | ✓ FW-S-01 + FW-S-02 |
 | WPilot separation explicit | ✓ FW-S-04, FW-C-03 |
+
+---
+
+## FW-03 tooling coverage
+
+| FW-03 document | WV / tooling |
+|----------------|--------------|
+| LOCAL-ENVIRONMENT-DECISION | Dev stack |
+| GULP-INTEGRATION-MODEL | R-TOOL-01–03 |
+| VALIDATION-RUNNER-ARCHITECTURE | WV0–WV9 |
+| SECURITY-VALIDATION-DESIGN | WV4, FW-S-07 |
+| VISUAL-REGRESSION-DESIGN | WV6 |
+| PACKAGING-AND-RELEASE-DESIGN | WV9 |
+| PILOT-TOOLING-PROFILE | FW-04 readiness |
 
 ---
 
