@@ -165,3 +165,33 @@ action: build
 reason: npm run build validation after Header SCSS checkpoint
 expected_outcome: Build succeeded; dist not committed
 ---
+
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+file_changed: specifications/section-001/FP-0002-V6-SECTION-001-SPECIFICATION.json
+action: modified
+reason: Hero HTML authorization flags; header desktop approval recorded; hero_media_binding NOT_CONFIRMED
+expected_outcome: hero_html_status READY_FOR_OPERATOR_REVIEW
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+file_changed: src/partials/sections/hero.html
+action: created
+reason: SECTION-001-GROUP-02 semantic HTML only
+expected_outcome: Five proven hero groups in BEM structure
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+file_changed: src/pages/index.html
+action: modified
+reason: intro-section composite wrapper; removed MAIN NOT STARTED placeholder
+expected_outcome: Header + Hero composite preserved
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+file_changed: reviews/hero/FP-0002-V6-HERO-HTML-REVIEW.md
+action: created
+reason: Operator review artefact for hero HTML gate
+expected_outcome: PARTIAL verdict — asset binding pending
+---

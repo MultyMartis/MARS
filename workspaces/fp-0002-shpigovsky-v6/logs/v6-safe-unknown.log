@@ -89,3 +89,21 @@ unknown: Exact separator and secondary text grey vs JPG raster
 why_unknown: Block proposals #6d7b8f and rgb(200,210,220) from element-bounds evidence; subpixel JPEG variance
 needed_from_operator: Accept block proposals or supply measured values at operator visual review
 ---
+
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+id: SU-HERO-MEDIA-001
+item: Hero photo asset (GROUP-09)
+blocks_html: false
+dom_marker: data-safe-unknown=hero-media-asset
+resolution_path: Operator deliver discrete hero photo to INCOMING or approve mockup extraction
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+id: SU-HERO-CTA-001
+item: Hero consultation CTA action
+blocks_html: false
+dom_marker: data-safe-unknown=hero-consultation-action
+resolution_path: Operator decision at JS / routing gate
+---

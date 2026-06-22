@@ -92,3 +92,47 @@ source_used: specifications/section-001/FP-0002-V6-SECTION-001-SPECIFICATION.jso
 reason: SECTION-001 block-level tokens + approved foundation spacing; visual QA STRUCTURAL PASS MAE 18.45 @ 1398px
 rejected_alternatives: FIG; PDF; v1-v5; magic-number Y=174; 1138px max-width; Hero; mobile header; JS hooks
 ---
+
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+decision: Header Desktop operator approval recorded in specification
+source_used: operator decision 2026-06-22; reviews/header/FP-0002-V6-HEADER-SCSS-VISUAL-QA.md
+reason: header_desktop_status APPROVED; header geometry locked
+rejected_alternatives: Re-tuning header against full JPG width
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+decision: Hero HTML authorized; SCSS not authorized
+source_used: FP-0002-V6-SECTION-001-SPECIFICATION.json; GROUP-DECOMPOSITION
+reason: HTML structure gate only per task charter
+rejected_alternatives: Hero SCSS; responsive; JS
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+decision: Composite wrapper div.intro-section wraps Header + Hero
+source_used: SECTION-001 composite rule; index.html
+reason: Preserve SECTION-001 relationship without separate major sections
+rejected_alternatives: Independent header/hero sections; second main
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+decision: Hero media layer without confirmed asset
+source_used: INCOMING asset search; hero_media_binding
+reason: No discrete hero photo in INCOMING; only composite mockup JPG
+rejected_alternatives: Cropping mockup without operator approval; random placeholder image
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+decision: Tagline from evidence crop 03-hero-content-area.jpg
+source_used: specifications/section-001/evidence/03-hero-content-area.jpg
+reason: Readable text confirmed visually
+rejected_alternatives: Guessed tagline; lorem ipsum
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+decision: CTA as button type=button with data-safe-unknown
+source_used: IMPLEMENTATION-SPECIFICATION GROUP-13
+reason: No href in JPG; progressive enhancement safe default
+rejected_alternatives: href=#; anchor without destination
+---

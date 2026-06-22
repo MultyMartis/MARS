@@ -154,3 +154,25 @@ source_accessed: workspaces/fp-0002-shpigovsky-v6/specifications/section-001/FP-
 purpose: Header SCSS authorization gate
 status: allowed
 ---
+
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+source: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/HOME-PAGE-FULL-MOCKUP.jpg
+sha256: cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290
+action: read
+purpose: Visual SSOT verification (preflight)
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+source: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/
+action: search
+purpose: Hero photo asset search (jpg/jpeg/png/webp)
+result: No discrete hero photo; composite mockup only; branding SVGs unrelated
+---
+timestamp: 2026-06-22T09:39:58Z
+task: FP-0002 V6 HERO HTML STRUCTURE
+source: specifications/section-001/evidence/03-hero-content-area.jpg
+action: read
+purpose: Tagline text extraction for GROUP-11
+---
