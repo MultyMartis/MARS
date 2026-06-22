@@ -39,7 +39,7 @@ header_desktop_status: APPROVED
 header_js_authorized: false
 header_responsive_authorized: false
 
-hero_html_status: READY_FOR_OPERATOR_REVIEW
+hero_html_status: APPROVED
 hero_html_authorized: true
 hero_scss_authorized: false
 hero_js_authorized: false
@@ -68,7 +68,8 @@ Header and Hero are internal groups within one composite wrapper — not indepen
 
 ```text
 section.hero
-├── div.hero__media[data-safe-unknown=hero-media-asset][role=img]
+├── div.hero__media
+│   └── img.hero__image[src=assets/img/hero/hero-main.png][aria-hidden=true]
 └── div.hero__container
     ├── div.hero__panel
     │   └── div.hero__content
@@ -94,10 +95,10 @@ section.hero
 
 ## Media layer decision
 
-- Implementation spec binds hero photo to `container-bleed-media` / CSS background on `hero__media`.
-- No discrete hero photo raster was confirmed in `INCOMING/` (search covered all subfolders; only composite `HOME-PAGE-FULL-MOCKUP.jpg` and PDF/FIG assets present).
-- Media layer created as empty `div.hero__media` with `data-safe-unknown="hero-media-asset"`.
-- No `<img>`, `<picture>`, or `background-image` in HTML/SCSS.
+- Hero photo bound via decorative `<img>` inside `div.hero__media` per operator FIG media exception.
+- Asset source: FIG embedded raster `image 13030403` — byte-for-byte copy to `src/img/hero/hero-main.png`.
+- No `background-image` in HTML/SCSS.
+- FIG not used for layout geometry.
 
 ---
 
@@ -106,11 +107,9 @@ section.hero
 | Field | Value |
 |-------|-------|
 | Expected role | GROUP-09 full-bleed hero photo |
-| Search scope | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/` |
-| Confirmed asset | **None** |
-| Copied to `src/img/hero/` | **No** |
-| SHA-256 | **N/A** |
-| Specification binding | `hero_media_binding.asset_status: NOT_CONFIRMED` |
+| Confirmed asset | `src/img/hero/hero-main.png` |
+| SHA-256 | `48cba0b7509915e3e2cedb1c5239ff594b9070a5908fc937e345c8517af0bea1` |
+| Specification binding | `hero_media_binding.asset_status: CONFIRMED` |
 
 ---
 
@@ -139,7 +138,7 @@ Tagline confirmed from evidence crop — not guessed. Russian typography: `и&nb
 | Item | Status |
 |------|--------|
 | Single `h1` on page | Yes — `hero__title` |
-| Media placeholder | `role="img"` + `aria-label` on `hero__media` until asset bound |
+| Media placeholder | Decorative `img` with `aria-hidden="true"` and empty `alt` |
 | CTA | Native `<button>` with visible label |
 | Panel content order | Tagline before title (matches visual hierarchy) |
 
@@ -150,7 +149,6 @@ Tagline confirmed from evidence crop — not guessed. Russian typography: `и&nb
 | ID | Item | DOM marker |
 |----|------|------------|
 | SU-S001-018 | CTA action / href | `data-safe-unknown="hero-consultation-action"` |
-| Hero media asset | No confirmed INCOMING photo | `data-safe-unknown="hero-media-asset"` |
 | SU-S001-003 | Frosted panel radius | Deferred to SCSS gate |
 | SU-S001-004 | Photo top corner radius | Deferred to SCSS gate |
 
@@ -199,10 +197,79 @@ No modal, slider, parallax, or CTA behavior added.
 ## Final verdict
 
 ```text
-FP-0002 V6 HERO HTML — PARTIAL
-CONTENT OR ASSET BINDING REQUIRES REVIEW
+FP-0002 V6 HERO HTML — APPROVED
+HERO MEDIA ASSET — CONFIRMED AND BOUND
 HEADER DESKTOP — UNCHANGED
-HERO SCSS NOT AUTHORIZED
+HERO SCSS READY FOR OPERATOR AUTHORIZATION
 ```
 
-**Reason for PARTIAL:** Hero HTML structure and confirmed text groups are complete; discrete hero photo asset not found in `INCOMING/` — media layer remains `SAFE UNKNOWN` pending operator asset delivery or extraction approval.
+**Reason:** Hero HTML structure and confirmed text groups are complete; original Hero photo extracted from FIG per operator exception and bound in HTML.
+
+---
+
+## FIG asset exception
+
+Operator authorized narrow FIG read for **Hero media asset extraction only**. FIG was not used for layout, geometry, typography, or colors. Visual authority remains JPG mockup SHA `cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290`.
+
+---
+
+## Original Hero asset
+
+| Field | Value |
+|-------|-------|
+| FIG embedded hash | `52431f9977e354192c7f56fe9d5503bdc6374fbb` |
+| FIG node | `image 13030403` (`1:916`) |
+| V6 path | `src/img/hero/hero-main.png` |
+| Format | PNG |
+| Dimensions | 2230 × 1246 px |
+| Bytes | 3,809,988 |
+
+---
+
+## Asset SHA-256
+
+```text
+48cba0b7509915e3e2cedb1c5239ff594b9070a5908fc937e345c8517af0bea1
+```
+
+Source and destination SHA-256 match (byte-for-byte copy, no transformation).
+
+---
+
+## Visual match
+
+| Check | Result |
+|-------|--------|
+| Classification | **EXACT HERO SOURCE** |
+| Building / tower / trees | Matches SECTION-001-GROUP-02 Hero scene in JPG |
+| Text in raster | **None** |
+| CTA in raster | **None** |
+| Frosted panel in raster | **None** |
+| Comparison artefact | `reviews/hero/assets/FP-0002-V6-HERO-FIG-ASSET-COMPARISON.png` |
+| Extraction report | `reviews/hero/assets/FP-0002-V6-HERO-FIG-ASSET-EXTRACTION.md` |
+
+Rejected alternate: `de219c6e…` (`image 219`, 860×204) — header decorative strip, not Hero photo.
+
+---
+
+## Media binding
+
+```html
+<div class="hero__media">
+  <img class="hero__image" src="assets/img/hero/hero-main.png" alt="" aria-hidden="true">
+</div>
+```
+
+Gulp path: `src/img/hero/hero-main.png` → `dist/assets/img/hero/hero-main.png`.
+
+`data-safe-unknown="hero-media-asset"` **removed** — asset confirmed.
+
+---
+
+## Remaining SAFE UNKNOWN
+
+| ID | Item | DOM marker |
+|----|------|------------|
+| SU-S001-018 | CTA action / href | `data-safe-unknown="hero-consultation-action"` |
+| SU-S001-003 | Frosted panel radius | Deferred to SCSS gate |
+| SU-S001-004 | Photo top corner radius | Deferred to SCSS gate |
