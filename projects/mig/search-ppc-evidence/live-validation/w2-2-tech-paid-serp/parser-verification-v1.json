@@ -1,0 +1,41 @@
+{
+  "verification_id": "w2-2-parser-verification-v1",
+  "generated_at": "2026-06-23T12:30:00.000Z",
+  "source": "assisted-fixture-import — fixture HTML validating parser pipeline; not claimed as fresh live Yandex capture",
+  "production_authority": false,
+  "rows": [
+    {
+      "block_index": 1,
+      "visibly_advertising": true,
+      "headline_match": true,
+      "headline_expected": "Натяжные потолки под ключ — замер бесплатно",
+      "headline_extracted": "Натяжные потолки под ключ — замер бесплатно",
+      "domain_match": true,
+      "domain_expected": "yabs.yandex.ru",
+      "domain_extracted": "yabs.yandex.ru",
+      "text_match": "partial",
+      "organic_excluded": true,
+      "sitelinks_recorded_only_when_visible": true,
+      "position_null_when_uncertain": false,
+      "position_recorded": 1,
+      "missing_fields_null": true
+    },
+    {
+      "block_index": 2,
+      "visibly_advertising": true,
+      "headline_match": true,
+      "domain_match": true,
+      "organic_excluded": true,
+      "position_recorded": 2
+    },
+    {
+      "block_index": "organic-1",
+      "visibly_advertising": false,
+      "classified_as_organic": true,
+      "excluded_from_ads": true,
+      "url": "https://example.org/potolki-review"
+    }
+  ],
+  "paid_organic_separation": "PASS",
+  "note": "Parser QA on structured assisted fixture — genuine live ad validation pending operator capture"
+}

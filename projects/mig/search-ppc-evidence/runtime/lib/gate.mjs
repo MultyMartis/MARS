@@ -12,6 +12,8 @@ const ACTION_MAP = {
   'paid-serp:validate-window': 'paid_serp',
   'paid-serp:run': 'paid_serp',
   'paid-serp:report': 'paid_serp',
+  'paid-serp:import-assisted': 'paid_serp',
+  'paid-serp:validate-assisted-bundle': 'paid_serp',
   'competitors:build-pack': 'competitor_audit',
   'evidence:status': 'source_registration',
 };

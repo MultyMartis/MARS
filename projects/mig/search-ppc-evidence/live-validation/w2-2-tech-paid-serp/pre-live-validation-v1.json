@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-06-22T19:01:45.481Z",
+  "manifest_path": "projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/project-ppc-state-manifest-v1.json",
+  "session_id": "w2-2-live-session-recovery-001",
+  "business_hours": {
+    "status": "OUTSIDE APPROVED WINDOW",
+    "allowed": false,
+    "blocker": "BLOCKED — PAID SERP BUSINESS-HOURS WINDOW NOT SATISFIED",
+    "local": {
+      "local_date": "2026-06-22",
+      "local_time": "22:01:45",
+      "weekday": "Monday",
+      "timezone": "Europe/Moscow"
+    }
+  },
+  "query_count": 1,
+  "query_limit": 1,
+  "output_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-tech-paid-serp/session-recovery-001",
+  "captcha_policy": "STOP_ON_CAPTCHA",
+  "production_authority": false,
+  "evidence_class": "TECHNICAL LIVE EVIDENCE"
+}

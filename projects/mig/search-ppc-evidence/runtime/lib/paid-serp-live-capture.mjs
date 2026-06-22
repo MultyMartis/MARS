@@ -126,6 +126,48 @@ export async function captureLiveQuery(page, { queryRecord, regionLr, timezone, 
   };
 }
 
+async function openBrowserContext(pw, sessionConfig, headful) {
+  const { chromium } = pw;
+  const profile = sessionConfig.browser_profile || {};
+  const launchOpts = {
+    headless: !headful,
+    slowMo: headful ? 50 : 0,
+    channel: profile.channel || undefined,
+  };
+
+  if (profile.persistent_user_data_dir) {
+    fs.mkdirSync(profile.persistent_user_data_dir, { recursive: true });
+    const context = await chromium.launchPersistentContext(profile.persistent_user_data_dir, {
+      ...launchOpts,
+      locale: 'ru-RU',
+      timezoneId: sessionConfig.timezone,
+      viewport: sessionConfig.device_profile?.viewport || { width: 1280, height: 800 },
+      userAgent: sessionConfig.device_profile?.user_agent || undefined,
+    });
+    return { browser: context, context, page: context.pages()[0] || (await context.newPage()), persistent: true };
+  }
+
+  const browser = await chromium.launch(launchOpts);
+  const context = await browser.newContext({
+    locale: 'ru-RU',
+    timezoneId: sessionConfig.timezone,
+    viewport: sessionConfig.device_profile?.viewport || { width: 1280, height: 800 },
+    userAgent: sessionConfig.device_profile?.user_agent || undefined,
+  });
+  const page = await context.newPage();
+  return { browser, context, page, persistent: false };
+}
+
+async function warmNavigateIfConfigured(page, sessionConfig, runLog) {
+  const warm = sessionConfig.warm_navigation;
+  if (!warm?.enabled) return;
+  const url = warm.url || 'https://yandex.ru/';
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+  const waitMs = warm.wait_ms || 3000;
+  await page.waitForTimeout(waitMs);
+  runLog.push({ at: nowIso(), event: 'warm_navigation', url, wait_ms: waitMs });
+}
+
 export async function runLivePaidSerpSession({
   sessionConfig,
   querySet,
@@ -133,7 +175,6 @@ export async function runLivePaidSerpSession({
   playwrightModule,
 }) {
   const pw = playwrightModule || resolvePlaywright();
-  const { chromium } = pw;
 
   const outputPath = sessionConfig.output_path;
   fs.mkdirSync(outputPath, { recursive: true });
@@ -156,17 +197,11 @@ export async function runLivePaidSerpSession({
     const queryDir = path.join(outputPath, 'captures', q.query_id);
     fs.mkdirSync(queryDir, { recursive: true });
 
-    const browser = await chromium.launch({ headless: !headful, slowMo: headful ? 50 : 0 });
-    const context = await browser.newContext({
-      locale: 'ru-RU',
-      timezoneId: sessionConfig.timezone,
-      viewport: sessionConfig.device_profile?.viewport || { width: 1280, height: 800 },
-      userAgent: sessionConfig.device_profile?.user_agent || undefined,
-    });
-    const page = await context.newPage();
+    const { browser, context, page, persistent } = await openBrowserContext(pw, sessionConfig, headful);
 
     let serpJson;
     try {
+      await warmNavigateIfConfigured(page, sessionConfig, runLog);
       serpJson = await captureLiveQuery(page, {
         queryRecord: q,
         regionLr: sessionConfig.region_lr,
@@ -221,9 +256,13 @@ export async function runLivePaidSerpSession({
         stoppedOnCaptcha = true;
         unprocessed = queries.slice(i + 1).map((x) => x.query_id);
         runLog.push({ at: nowIso(), event: 'stop_on_captcha', query_id: q.query_id });
-        await page.close();
-        await context.close();
-        await browser.close();
+        if (!persistent) {
+          await page.close();
+          await context.close();
+          await browser.close();
+        } else {
+          await context.close();
+        }
         break;
       }
     } catch (err) {
@@ -240,9 +279,12 @@ export async function runLivePaidSerpSession({
       runLog.push({ at: nowIso(), event: 'query_error', query_id: q.query_id, error: String(err.message || err) });
     } finally {
       try {
-        await page.close();
-        await context.close();
-        await browser.close();
+        if (persistent) await context.close();
+        else {
+          await page.close();
+          await context.close();
+          await browser.close();
+        }
       } catch {
         /* ignore */
       }

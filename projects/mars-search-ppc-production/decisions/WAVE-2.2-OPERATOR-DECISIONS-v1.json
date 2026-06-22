@@ -1,0 +1,63 @@
+{
+  "decision_set_id": "wave-2.2-operator-decisions-v1",
+  "date": "2026-06-23",
+  "wave": "2.2",
+  "decisions": {
+    "W2.2-D1": {
+      "id": "W2.2-D1",
+      "subject": "Wave 2.1",
+      "status": "APPROVED — LIVE PARTIAL VALIDATION",
+      "checkpoint_commit": "f922b83"
+    },
+    "W2.2-D2": {
+      "id": "W2.2-D2",
+      "subject": "Wave 2.2",
+      "status": "AUTHORIZED"
+    },
+    "W2.2-D3": {
+      "id": "W2.2-D3",
+      "subject": "Automated recovery",
+      "status": "MAXIMUM ONE BOUNDED AUTOMATED LIVE SESSION"
+    },
+    "W2.2-D4": {
+      "id": "W2.2-D4",
+      "subject": "Anti-bot boundary",
+      "status": "ENFORCED",
+      "forbidden": [
+        "CAPTCHA bypass",
+        "stealth anti-detection plugins",
+        "proxy rotation",
+        "cookie farming",
+        "repeated aggressive retries",
+        "automatic solving services",
+        "fingerprint spoofing to defeat Yandex protection"
+      ]
+    },
+    "W2.2-D5": {
+      "id": "W2.2-D5",
+      "subject": "Controlled fallback",
+      "status": "OPERATOR-ASSISTED BROWSER CAPTURE APPROVED AS DEGRADED MODE"
+    },
+    "W2.2-D6": {
+      "id": "W2.2-D6",
+      "subject": "Authority",
+      "status": "RAW BROWSER CAPTURE REQUIRES MIG VALIDATION AND LIFECYCLE REGISTRATION"
+    },
+    "W2.2-D7": {
+      "id": "W2.2-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN",
+      "client_queries_forbidden": true,
+      "production_evidence_forbidden": true
+    }
+  },
+  "wave_status": {
+    "wave_1": "OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY",
+    "wave_2_core": "APPROVED — CHECKPOINTED",
+    "wave_2_1": "APPROVED — CHECKPOINTED",
+    "wave_2_overall": "FINAL EVIDENCE GAP CLOSURE IN PROGRESS",
+    "wave_2_2": "AUTHORIZED",
+    "wave_3": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

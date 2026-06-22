@@ -11,6 +11,8 @@ import { intakeCorpus } from '../lib/corpus-intake.mjs';
 import { normalizeCorpus } from '../lib/canonical-registry.mjs';
 import { validateBusinessHoursWindow } from '../lib/business-hours.mjs';
 import { runPaidSerpSession } from '../lib/paid-serp-runtime.mjs';
+import { validateAssistedCaptureBundle } from '../lib/assisted-capture-validator.mjs';
+import { importAssistedCaptureBundle } from '../lib/assisted-capture-importer.mjs';
 import { buildPackFromSession } from '../lib/competitor-pack.mjs';
 import { buildEvidenceManifest } from '../lib/evidence-manifest.mjs';
 import { loadJson, writeJson } from '../lib/utils.mjs';
@@ -30,7 +32,8 @@ function parseArgs(argv) {
     else if (a === '--corpus') args.corpus = argv[++i];
     else if (a === '--region') args.region = argv[++i];
     else if (a === '--session') args.session = argv[++i];
-    else if (a === '--fixture') args.fixtures = [...(args.fixtures || []), argv[++i]];
+    else if (a === '--bundle') args.bundle = argv[++i];
+    else if (a === '--queries') args.queries = argv[++i];
     else args._.push(a);
   }
   return args;
@@ -48,6 +51,8 @@ Commands:
   corpus:normalize      --corpus <path> --output <dir> [--region R]
   paid-serp:validate-window --session <json>
   paid-serp:run         --session <json> [--fixture <path>...]
+  paid-serp:import-assisted --bundle <dir> [--session <json>] [--queries <json>] [--output <dir>]
+  paid-serp:validate-assisted-bundle --bundle <dir> [--session <json>] [--queries <json>]
   paid-serp:report      --session <path>
   competitors:build-pack --session <path> --output <path>
   evidence:status       --output <dir>
@@ -106,6 +111,37 @@ Commands:
         sessionConfig: session,
         fixturePaths: fixtures,
         receipt: auth.evidence_record,
+      });
+      break;
+    }
+    case 'paid-serp:validate-assisted-bundle': {
+      const bundleDir = path.resolve(args.bundle);
+      const session = args.session ? loadJson(args.session) : null;
+      const querySet = args.queries ? loadJson(args.queries) : null;
+      const projectManifest = args.manifest ? loadJson(args.manifest) : null;
+      result = validateAssistedCaptureBundle({
+        bundleDir,
+        querySet,
+        sessionConfig: session,
+        projectManifest,
+      });
+      result = { ok: result.valid, ...result };
+      break;
+    }
+    case 'paid-serp:import-assisted': {
+      const bundleDir = path.resolve(args.bundle);
+      const session = args.session ? loadJson(args.session) : null;
+      const querySet = args.queries ? loadJson(args.queries) : loadJson(
+        path.join(__dirname, '../../live-validation/w2-1-tech-paid-serp/query-set-v1.json'),
+      );
+      const projectManifest = args.manifest ? loadJson(args.manifest) : null;
+      result = importAssistedCaptureBundle({
+        bundleDir,
+        querySet,
+        sessionConfig: session,
+        projectManifest,
+        receipt: auth.evidence_record,
+        outputPath: args.output,
       });
       break;
     }

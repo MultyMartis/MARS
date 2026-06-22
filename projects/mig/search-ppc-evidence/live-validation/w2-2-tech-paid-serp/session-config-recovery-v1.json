@@ -1,0 +1,62 @@
+{
+  "session_id": "w2-2-live-session-recovery-001",
+  "project_id": "MIG-W2-1-TECH-PAID-SERP",
+  "manifest_path": "projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/project-ppc-state-manifest-v1.json",
+  "lifecycle_stage": "SPPC-10",
+  "lifecycle_action": "paid_serp",
+  "recovery_profile": true,
+  "recovery_rationale": "Single bounded recovery attempt with persistent technical profile and warm navigation — differs from session-001 ephemeral context",
+  "differences_from_session_001": [
+    "persistent_user_data_dir for isolated technical test profile",
+    "channel chrome when available",
+    "warm navigation to yandex.ru before query",
+    "query_limit 1 — w2-1-q02 only",
+    "no parallel requests",
+    "STOP_ON_CAPTCHA retained"
+  ],
+  "query_set_ref": "projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/query-set-v1.json",
+  "query_selection": {
+    "query_id": "w2-1-q02",
+    "rationale": "Different generic commercial seed from q01 which triggered CAPTCHA"
+  },
+  "region": "Москва",
+  "region_lr": 213,
+  "search_engine": "yandex",
+  "device_profile": {
+    "label": "desktop",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  "browser_profile": {
+    "channel": "chrome",
+    "persistent_user_data_dir": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-tech-paid-serp/browser-profile-tech",
+    "profile_label": "isolated-technical-test"
+  },
+  "warm_navigation": {
+    "enabled": true,
+    "url": "https://yandex.ru/",
+    "wait_ms": 4000
+  },
+  "timezone": "Europe/Moscow",
+  "allowed_local_collection_windows": [{ "start": "09:00", "end": "21:00" }],
+  "weekday_policy": {
+    "allowed_weekdays": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+  },
+  "approved_exceptions": [],
+  "pause_policy": { "between_queries_ms": 60000, "jitter_ms": 0 },
+  "batch_policy": "one_query_per_browser_session",
+  "captcha_policy": "STOP_ON_CAPTCHA",
+  "stop_policy": { "max_queries": 1, "stop_on_captcha": true, "no_aggressive_retries": true },
+  "capture_policy": {
+    "headful": true,
+    "screenshot": true,
+    "html": true,
+    "structured_json": true
+  },
+  "landing_follow_policy": { "enabled": true, "max_per_query": 2, "bounded": true },
+  "query_limit": 1,
+  "query_filter": ["w2-1-q02"],
+  "output_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-tech-paid-serp/session-recovery-001",
+  "expiry_date": "2026-07-07",
+  "evidence_class": "TECHNICAL LIVE EVIDENCE",
+  "production_authority": false
+}

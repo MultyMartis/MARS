@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "acquisition_mode": "OPERATOR-ASSISTED LIVE SERP CAPTURE",
+  "project_id": "MIG-W2-1-TECH-PAID-SERP",
+  "session_id": "w2-2-assisted-fixture-session",
+  "query_id": "w2-1-q02",
+  "query": "установка натяжных потолков цена",
+  "captured_at": "2026-06-23T10:15:00.000Z",
+  "timezone": "Europe/Moscow",
+  "region": "Москва",
+  "region_lr": 213,
+  "device_browser": "Chrome/124 fixture",
+  "page_url": "https://yandex.ru/search/?text=установка+натяжных+потолков+цена&lr=213",
+  "page_title": "установка натяжных потолков цена — Яндекс",
+  "files": {
+    "screenshot": "screenshot.png",
+    "html": "page.html"
+  },
+  "operator_attestation": {
+    "attested": true,
+    "attested_at": "2026-06-23T10:15:30.000Z",
+    "statement": "Fixture attestation for assisted import pipeline validation."
+  },
+  "production_authority": false,
+  "technical_test_only": true
+}

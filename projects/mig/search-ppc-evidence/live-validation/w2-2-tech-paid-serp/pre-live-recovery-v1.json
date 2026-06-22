@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-06-22T19:01:45.481Z",
+  "session_id": "w2-2-live-session-recovery-001",
+  "recovery_profile": true,
+  "business_hours": {
+    "status": "OUTSIDE APPROVED WINDOW",
+    "allowed": false,
+    "local": {
+      "local_date": "2026-06-22",
+      "local_time": "22:01:45",
+      "weekday": "Monday",
+      "timezone": "Europe/Moscow"
+    }
+  },
+  "outcome": "LIVE SESSION BLOCKED",
+  "browser_session_executed": false,
+  "note": "Single bounded recovery attempt — pre-live gate blocked; no browser launched"
+}

@@ -1,0 +1,68 @@
+{
+  "suite": "assisted-capture-tests",
+  "passed": 12,
+  "failed": 0,
+  "total": 12,
+  "results": [
+    {
+      "id": 1,
+      "name": "assisted capture missing timestamp blocked",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "assisted capture outside approved window blocked",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "wrong project/query blocked",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "screenshot missing blocked",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "HTML missing with no limitation blocked",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "altered checksum blocked",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "manual advertiser rows blocked",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "technical evidence as production blocked",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "valid assisted capture import",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "parser extraction from assisted live HTML",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "operator attestation missing blocked",
+      "pass": true
+    },
+    {
+      "id": 12,
+      "name": "fallback without degraded record blocked",
+      "pass": true
+    }
+  ]
+}

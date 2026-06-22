@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.1.0",
+  "recorded_at": "2026-06-23T12:30:00.000Z",
+  "completed_queries": [],
+  "incomplete_queries": ["w2-1-q02"],
+  "reason": "Automated recovery blocked by business-hours gate; session-001 CAPTCHA on first automated query",
+  "evidence": {
+    "automated_session_id": "w2-2-live-session-recovery-001",
+    "automated_outcome": "LIVE SESSION BLOCKED — OUTSIDE APPROVED WINDOW",
+    "captcha_evidence_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-1-tech-paid-serp/session-001/captures/w2-1-q01",
+    "assisted_session_id": "w2-2-assisted-session-001",
+    "assisted_pipeline": "fixture import validates Mode B tooling"
+  },
+  "impact": "Wave 2 live ad evidence gap remains; assisted fallback infrastructure validated",
+  "retry_recommendation": "Operator-assisted capture during approved business-hours window in normal browser",
+  "lifecycle_continuation_permitted": false,
+  "operator_approval_required": true,
+  "collection_status": "COLLECTION DEGRADED",
+  "acquisition_degradation": {
+    "automated_attempt": true,
+    "assisted_fallback": true,
+    "limitations": [
+      "Recovery session not executed — outside approved window",
+      "No CAPTCHA bypass attempted",
+      "Assisted fixture import is pipeline validation only"
+    ],
+    "sufficient_for_factual_competitor_audit": false,
+    "recollection_recommended": true,
+    "approved_degradation": true,
+    "concealment": false
+  }
+}

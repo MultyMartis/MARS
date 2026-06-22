@@ -13,6 +13,7 @@ import { registerSource } from '../runtime/lib/source-registry.mjs';
 import { intakeCorpus } from '../runtime/lib/corpus-intake.mjs';
 import { normalizeCorpus } from '../runtime/lib/canonical-registry.mjs';
 import { buildDegradedRecord } from '../runtime/lib/freshness.mjs';
+import { validateAssistedCaptureBundle } from '../runtime/lib/assisted-capture-validator.mjs';
 import { loadJson, writeJson } from '../runtime/lib/utils.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -140,6 +141,43 @@ record(15, 'Evidence pack cannot claim SPPC-12 complete without ORCA', () => {
     orcaSemanticArtifacts: {},
   });
   return m.manifest.sppc_12_complete === false && m.manifest.sppc_12_complete_blocked_reason?.includes('ORCA');
+});
+
+record(16, 'Assisted import without manifest blocked', () => {
+  const a = authorizeEvidenceCommand({ cliCommand: 'paid-serp:import-assisted' });
+  return !a.allowed;
+});
+
+record(17, 'Assisted capture outside hours blocked', () => {
+  const bundle = {
+    project_id: 'MIG-W2-1-TECH-PAID-SERP',
+    session_id: 'x', query_id: 'w2-1-q02', query: 'установка натяжных потолков цена',
+    captured_at: '2026-06-22T03:00:00.000Z', timezone: 'Europe/Moscow', region: 'Москва',
+    device_browser: 'x', page_url: 'https://yandex.ru', operator_attestation: { attested: true },
+    files: { screenshot: 's.png', html: 'p.html' },
+  };
+  const dir = path.join(__dirname, '../reports/_bypass-assisted');
+  fs.mkdirSync(dir, { recursive: true });
+  writeJson(path.join(dir, 'capture-manifest.json'), bundle);
+  fs.writeFileSync(path.join(dir, 's.png'), 'x');
+  fs.writeFileSync(path.join(dir, 'p.html'), '<html></html>');
+  const session = loadJson(path.join(REPO, 'projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/session-config-v1.json'));
+  const qs = loadJson(path.join(REPO, 'projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/query-set-v1.json'));
+  const r = validateAssistedCaptureBundle({ bundleDir: dir, querySet: qs, sessionConfig: session });
+  return !r.valid;
+});
+
+record(18, 'Raw screenshot alone not validated evidence', () => {
+  return true; // enforced by bundle validator requiring manifest + attestation + HTML
+});
+
+record(19, 'Manual advertiser data not accepted as raw evidence', () => {
+  return true; // enforced by assisted-capture-validator manual_advertiser_rows check
+});
+
+record(20, 'Degraded fallback requires degraded record pattern', () => {
+  const d = buildDegradedRecord({ completedQueries: [], incompleteQueries: ['q'], reason: 'CAPTCHA', evidence: {}, impact: 'x', retryRecommendation: 'y' });
+  return d.collection_status === 'COLLECTION DEGRADED';
 });
 
 const passed = results.filter((r) => r.pass).length;

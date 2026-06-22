@@ -29,7 +29,13 @@ function parseArgs(argv) {
 async function main() {
   const args = parseArgs(process.argv);
   const session = loadJson(args.session);
-  const querySet = loadJson(args.queries);
+  let querySet = loadJson(args.queries);
+  if (session.query_filter?.length) {
+    querySet = {
+      ...querySet,
+      queries: querySet.queries.filter((q) => session.query_filter.includes(q.query_id)),
+    };
+  }
   const manifestPath = args.manifest || session.manifest_path;
 
   const windowCheck = validateBusinessHoursWindow({

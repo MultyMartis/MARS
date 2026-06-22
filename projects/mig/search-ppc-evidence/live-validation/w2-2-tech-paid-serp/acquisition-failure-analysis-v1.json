@@ -1,0 +1,70 @@
+{
+  "analysis_id": "w2-2-acquisition-failure-analysis-v1",
+  "session_reference": "w2-1-live-session-001",
+  "analyzed_at": "2026-06-23T12:00:00.000Z",
+  "first_live_run": {
+    "session_id": "w2-1-live-session-001",
+    "query_id": "w2-1-q01",
+    "query": "заказать кондиционер москва",
+    "timestamp": "2026-06-22T17:58:47.181Z",
+    "browser_engine": "Playwright Chromium (bundled)",
+    "browser_mode": "headful",
+    "profile_type": "ephemeral — fresh context per query",
+    "context_type": "newContext() — no persistent profile",
+    "locale": "ru-RU",
+    "timezone": "Europe/Moscow",
+    "region_configured": "Москва",
+    "region_lr": 213,
+    "search_url": "https://yandex.ru/search/?text=заказать+кондиционер+москва&lr=213",
+    "navigation_sequence": "direct goto search URL — no warm navigation",
+    "page_wait_ms": 4500,
+    "screenshot_timing": "after wait, before session stop",
+    "final_url": "https://yandex.ru/showcaptcha?...",
+    "page_title": "Вы не робот?",
+    "captcha_detected": true,
+    "captcha_timing": "on first query — before SERP interaction",
+    "region_confirmed_on_page": "SAFE UNKNOWN — CAPTCHA page, region UI not observed",
+    "visible_ads_extracted": 0,
+    "organic_extracted": 0
+  },
+  "captcha_evidence": {
+    "observation_state": "CAPTCHA",
+    "html_reference": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-1-tech-paid-serp/session-001/captures/w2-1-q01/serp.html",
+    "screenshot_reference": "captures/w2-1-q01/serp-full-page.png",
+    "stop_on_captcha": true,
+    "queries_unprocessed": ["w2-1-q02", "w2-1-q03", "w2-1-q04"]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "cause": "fresh automation context",
+      "confidence": "likely",
+      "evidence": "ephemeral newContext per query; no prior Yandex session state"
+    },
+    {
+      "id": "H2",
+      "cause": "environment reputation",
+      "confidence": "likely",
+      "evidence": "CAPTCHA on first navigation without prior interaction"
+    },
+    {
+      "id": "H3",
+      "cause": "query/navigation pattern",
+      "confidence": "possible",
+      "evidence": "direct deep-link to search URL without warm navigation"
+    },
+    {
+      "id": "H4",
+      "cause": "region inconsistency",
+      "confidence": "SAFE UNKNOWN",
+      "evidence": "region not confirmable on CAPTCHA page"
+    },
+    {
+      "id": "H5",
+      "cause": "general Yandex anti-automation",
+      "confidence": "likely",
+      "evidence": "showcaptcha redirect with SmartCaptcha markers in URL"
+    }
+  ],
+  "root_cause_claim": "NOT ASSERTED — hypotheses only"
+}

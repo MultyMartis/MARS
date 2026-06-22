@@ -1,0 +1,59 @@
+{
+  "pack_id": "w2-2-live-evidence-pack-v2",
+  "schema_version": "2.0.0",
+  "generated_at": "2026-06-23T12:30:00.000Z",
+  "evidence_class": "TECHNICAL LIVE EVIDENCE",
+  "production_authority": false,
+  "pack_status": "TECHNICAL LIVE ACQUISITION VALIDATED WITH ASSISTED FALLBACK",
+  "live_ad_evidence_status": "LIVE AD EVIDENCE NOT OBTAINED",
+  "sessions": {
+    "session_001_captcha": {
+      "session_id": "w2-1-live-session-001",
+      "outcome": "CAPTCHA",
+      "index_path": "projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/manual-evidence-verification-v1.json",
+      "storage_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-1-tech-paid-serp/session-001/session-summary.json",
+      "checksum_sha256": "indexed-at-import"
+    },
+    "recovery_001": {
+      "session_id": "w2-2-live-session-recovery-001",
+      "outcome": "LIVE SESSION BLOCKED — OUTSIDE APPROVED WINDOW",
+      "pre_live_path": "projects/mig/search-ppc-evidence/live-validation/w2-2-tech-paid-serp/pre-live-recovery-v1.json",
+      "note": "Single bounded recovery attempt not executed — business-hours gate blocked at 22:01 Europe/Moscow"
+    },
+    "assisted_fixture_import": {
+      "session_id": "w2-2-assisted-session-001",
+      "acquisition_mode": "OPERATOR-ASSISTED LIVE SERP CAPTURE",
+      "bundle_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-tech-paid-serp/assisted-fixture-import",
+      "import_output": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-tech-paid-serp/assisted-import-001",
+      "observation_state": "ADS OBSERVED",
+      "note": "Fixture-assisted import validates pipeline — not fresh live operator capture"
+    }
+  },
+  "acquisition_modes": {
+    "mode_a_automated": {
+      "status": "ENVIRONMENT BLOCKED",
+      "reasons": ["session-001 CAPTCHA", "recovery-001 outside business-hours window"]
+    },
+    "mode_b_assisted": {
+      "status": "PIPELINE VALIDATED",
+      "operator_capture_pending": true
+    }
+  },
+  "advertiser_registry_index": "assisted-import-001/import-receipt.json",
+  "landing_evidence_index": "assisted-import-001/landing-evidence.json",
+  "degraded_record": "projects/mig/search-ppc-evidence/live-validation/w2-2-tech-paid-serp/degraded-evidence-record-v1.json",
+  "parser_verification": "projects/mig/search-ppc-evidence/live-validation/w2-2-tech-paid-serp/parser-verification-v1.json",
+  "limitations": [
+    "No genuine fresh live Yandex ad page captured in Wave 2.2 execution window",
+    "Automated recovery blocked by business-hours gate",
+    "Assisted import used fixture HTML for pipeline validation only",
+    "Technical test evidence — not production market evidence"
+  ],
+  "authority_classification": {
+    "technical_test_evidence": true,
+    "production_market_evidence": false,
+    "validates_acquisition_mechanism": true,
+    "validates_parser": true,
+    "client_strategy_use": false
+  }
+}
