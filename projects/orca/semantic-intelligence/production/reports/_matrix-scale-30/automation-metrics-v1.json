@@ -1,0 +1,27 @@
+{
+  "corpus_size": 500,
+  "automatically_finalized": 488,
+  "human_review_required": 12,
+  "review_ratio": 0.024,
+  "accept": 150,
+  "reject": 200,
+  "abstain": 150,
+  "protected_intent_counts": {
+    "PROTECTED_DOWNLOAD": 1,
+    "PROTECTED_NAVIGATION": 2,
+    "PROTECTED_CAREER": 1
+  },
+  "reassessment_count": 150,
+  "adjudication_count": 500,
+  "tier_counts": {
+    "T1": 150
+  },
+  "ownership_conflicts": 0,
+  "service_gaps": 0,
+  "cluster_defects": 0,
+  "negative_conflicts": 0,
+  "runtime_failures": 0,
+  "unresolved_records": 0,
+  "elapsed_ms": 78,
+  "automation_primary": true
+}

@@ -1,0 +1,6137 @@
+{
+  "corpus_id": "scale-test-corpus-v1",
+  "project_id": "scale-test-non-client",
+  "expected_count": 500,
+  "corpus_mode": "SYNTHETIC_SCALE_TEST",
+  "business_scope": {
+    "version": "v1",
+    "scope": "1c_services"
+  },
+  "service_registry": {
+    "registry_id": "scale-test-service-registry-v1",
+    "version": "1.0.0",
+    "project_id": "scale-test-non-client",
+    "geography": "RU",
+    "services": [
+      {
+        "service_id": "svc-hire",
+        "name": "Hire 1C Specialist",
+        "description": "Explicit provider hire",
+        "included_tasks": [
+          "hire_specialist"
+        ],
+        "excluded_tasks": [],
+        "target_client": "SME",
+        "geography": "RU",
+        "delivery_mode": "remote",
+        "commercial_priority": 90,
+        "landing_candidates": [
+          "/services/hire"
+        ],
+        "related_services": [
+          "svc-support"
+        ],
+        "prohibited_claims": [],
+        "operator_status": "APPROVED"
+      },
+      {
+        "service_id": "svc-implementation",
+        "name": "1C Implementation",
+        "description": "Implementation and migration",
+        "included_tasks": [
+          "implementation"
+        ],
+        "excluded_tasks": [],
+        "target_client": "SME",
+        "geography": "RU",
+        "delivery_mode": "onsite_remote",
+        "commercial_priority": 85,
+        "landing_candidates": [
+          "/services/implementation"
+        ],
+        "related_services": [],
+        "prohibited_claims": [],
+        "operator_status": "APPROVED"
+      },
+      {
+        "service_id": "svc-configuration",
+        "name": "1C Configuration",
+        "description": "Setup and configuration",
+        "included_tasks": [
+          "configuration"
+        ],
+        "excluded_tasks": [],
+        "target_client": "SME",
+        "geography": "RU",
+        "delivery_mode": "remote",
+        "commercial_priority": 80,
+        "landing_candidates": [
+          "/services/configuration"
+        ],
+        "related_services": [],
+        "prohibited_claims": [],
+        "operator_status": "APPROVED"
+      },
+      {
+        "service_id": "svc-modification",
+        "name": "1C Modification",
+        "description": "Customization and integration",
+        "included_tasks": [
+          "modification"
+        ],
+        "excluded_tasks": [],
+        "target_client": "SME",
+        "geography": "RU",
+        "delivery_mode": "remote",
+        "commercial_priority": 75,
+        "landing_candidates": [
+          "/services/modification"
+        ],
+        "related_services": [],
+        "prohibited_claims": [],
+        "operator_status": "APPROVED"
+      },
+      {
+        "service_id": "svc-support",
+        "name": "1C Support",
+        "description": "Support and problem resolution",
+        "included_tasks": [
+          "support",
+          "problem_resolution"
+        ],
+        "excluded_tasks": [],
+        "target_client": "SME",
+        "geography": "RU",
+        "delivery_mode": "remote",
+        "commercial_priority": 70,
+        "landing_candidates": [
+          "/services/support"
+        ],
+        "related_services": [],
+        "prohibited_claims": [],
+        "operator_status": "APPROVED"
+      },
+      {
+        "service_id": "svc-marking",
+        "name": "Marking Compliance",
+        "description": "Marking and Chestny Znak",
+        "included_tasks": [
+          "marking_compliance"
+        ],
+        "excluded_tasks": [],
+        "target_client": "Retail",
+        "geography": "RU",
+        "delivery_mode": "remote",
+        "commercial_priority": 65,
+        "landing_candidates": [
+          "/services/marking"
+        ],
+        "related_services": [],
+        "prohibited_claims": [],
+        "operator_status": "APPROVED"
+      }
+    ]
+  },
+  "phrases": [
+    {
+      "phrase_id": "SCALE-0001",
+      "raw_query": "заказать услуги программиста 1с",
+      "normalized_query": "заказать услуги программиста 1с",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0002",
+      "raw_query": "внедрение 1с под ключ",
+      "normalized_query": "внедрение 1с под ключ",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0003",
+      "raw_query": "настройка 1с цена",
+      "normalized_query": "настройка 1с цена",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0004",
+      "raw_query": "вакансии программист 1с",
+      "normalized_query": "вакансии программист 1с",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0005",
+      "raw_query": "курсы 1с обучение",
+      "normalized_query": "курсы 1с обучение",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0006",
+      "raw_query": "как настроить 1с самостоятельно",
+      "normalized_query": "как настроить 1с самостоятельно",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0007",
+      "raw_query": "скачать 1с бесплатно",
+      "normalized_query": "скачать 1с бесплатно",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0008",
+      "raw_query": "1с не работает ошибка",
+      "normalized_query": "1с не работает ошибка",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0009",
+      "raw_query": "1с бухгалтерия",
+      "normalized_query": "1с бухгалтерия",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0010",
+      "raw_query": "corvonero официальный сайт",
+      "normalized_query": "corvonero официальный сайт",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0011",
+      "raw_query": "заказать услуги программиста 1с 1",
+      "normalized_query": "заказать услуги программиста 1с 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0012",
+      "raw_query": "внедрение 1с под ключ 1",
+      "normalized_query": "внедрение 1с под ключ 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0013",
+      "raw_query": "настройка 1с цена 1",
+      "normalized_query": "настройка 1с цена 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0014",
+      "raw_query": "вакансии программист 1с 1",
+      "normalized_query": "вакансии программист 1с 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0015",
+      "raw_query": "курсы 1с обучение 1",
+      "normalized_query": "курсы 1с обучение 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0016",
+      "raw_query": "как настроить 1с самостоятельно 1",
+      "normalized_query": "как настроить 1с самостоятельно 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0017",
+      "raw_query": "скачать 1с бесплатно 1",
+      "normalized_query": "скачать 1с бесплатно 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0018",
+      "raw_query": "1с не работает ошибка 1",
+      "normalized_query": "1с не работает ошибка 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0019",
+      "raw_query": "1с бухгалтерия 1",
+      "normalized_query": "1с бухгалтерия 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0020",
+      "raw_query": "corvonero официальный сайт 1",
+      "normalized_query": "corvonero официальный сайт 1",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0021",
+      "raw_query": "заказать услуги программиста 1с 2",
+      "normalized_query": "заказать услуги программиста 1с 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0022",
+      "raw_query": "внедрение 1с под ключ 2",
+      "normalized_query": "внедрение 1с под ключ 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0023",
+      "raw_query": "настройка 1с цена 2",
+      "normalized_query": "настройка 1с цена 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0024",
+      "raw_query": "вакансии программист 1с 2",
+      "normalized_query": "вакансии программист 1с 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0025",
+      "raw_query": "курсы 1с обучение 2",
+      "normalized_query": "курсы 1с обучение 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0026",
+      "raw_query": "как настроить 1с самостоятельно 2",
+      "normalized_query": "как настроить 1с самостоятельно 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0027",
+      "raw_query": "скачать 1с бесплатно 2",
+      "normalized_query": "скачать 1с бесплатно 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0028",
+      "raw_query": "1с не работает ошибка 2",
+      "normalized_query": "1с не работает ошибка 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0029",
+      "raw_query": "1с бухгалтерия 2",
+      "normalized_query": "1с бухгалтерия 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0030",
+      "raw_query": "corvonero официальный сайт 2",
+      "normalized_query": "corvonero официальный сайт 2",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0031",
+      "raw_query": "заказать услуги программиста 1с 3",
+      "normalized_query": "заказать услуги программиста 1с 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0032",
+      "raw_query": "внедрение 1с под ключ 3",
+      "normalized_query": "внедрение 1с под ключ 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0033",
+      "raw_query": "настройка 1с цена 3",
+      "normalized_query": "настройка 1с цена 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0034",
+      "raw_query": "вакансии программист 1с 3",
+      "normalized_query": "вакансии программист 1с 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0035",
+      "raw_query": "курсы 1с обучение 3",
+      "normalized_query": "курсы 1с обучение 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0036",
+      "raw_query": "как настроить 1с самостоятельно 3",
+      "normalized_query": "как настроить 1с самостоятельно 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0037",
+      "raw_query": "скачать 1с бесплатно 3",
+      "normalized_query": "скачать 1с бесплатно 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0038",
+      "raw_query": "1с не работает ошибка 3",
+      "normalized_query": "1с не работает ошибка 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0039",
+      "raw_query": "1с бухгалтерия 3",
+      "normalized_query": "1с бухгалтерия 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0040",
+      "raw_query": "corvonero официальный сайт 3",
+      "normalized_query": "corvonero официальный сайт 3",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0041",
+      "raw_query": "заказать услуги программиста 1с 4",
+      "normalized_query": "заказать услуги программиста 1с 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0042",
+      "raw_query": "внедрение 1с под ключ 4",
+      "normalized_query": "внедрение 1с под ключ 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0043",
+      "raw_query": "настройка 1с цена 4",
+      "normalized_query": "настройка 1с цена 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0044",
+      "raw_query": "вакансии программист 1с 4",
+      "normalized_query": "вакансии программист 1с 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0045",
+      "raw_query": "курсы 1с обучение 4",
+      "normalized_query": "курсы 1с обучение 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0046",
+      "raw_query": "как настроить 1с самостоятельно 4",
+      "normalized_query": "как настроить 1с самостоятельно 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0047",
+      "raw_query": "скачать 1с бесплатно 4",
+      "normalized_query": "скачать 1с бесплатно 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0048",
+      "raw_query": "1с не работает ошибка 4",
+      "normalized_query": "1с не работает ошибка 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0049",
+      "raw_query": "1с бухгалтерия 4",
+      "normalized_query": "1с бухгалтерия 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0050",
+      "raw_query": "corvonero официальный сайт 4",
+      "normalized_query": "corvonero официальный сайт 4",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0051",
+      "raw_query": "заказать услуги программиста 1с 5",
+      "normalized_query": "заказать услуги программиста 1с 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0052",
+      "raw_query": "внедрение 1с под ключ 5",
+      "normalized_query": "внедрение 1с под ключ 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0053",
+      "raw_query": "настройка 1с цена 5",
+      "normalized_query": "настройка 1с цена 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0054",
+      "raw_query": "вакансии программист 1с 5",
+      "normalized_query": "вакансии программист 1с 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0055",
+      "raw_query": "курсы 1с обучение 5",
+      "normalized_query": "курсы 1с обучение 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0056",
+      "raw_query": "как настроить 1с самостоятельно 5",
+      "normalized_query": "как настроить 1с самостоятельно 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0057",
+      "raw_query": "скачать 1с бесплатно 5",
+      "normalized_query": "скачать 1с бесплатно 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0058",
+      "raw_query": "1с не работает ошибка 5",
+      "normalized_query": "1с не работает ошибка 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0059",
+      "raw_query": "1с бухгалтерия 5",
+      "normalized_query": "1с бухгалтерия 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0060",
+      "raw_query": "corvonero официальный сайт 5",
+      "normalized_query": "corvonero официальный сайт 5",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0061",
+      "raw_query": "заказать услуги программиста 1с 6",
+      "normalized_query": "заказать услуги программиста 1с 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0062",
+      "raw_query": "внедрение 1с под ключ 6",
+      "normalized_query": "внедрение 1с под ключ 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0063",
+      "raw_query": "настройка 1с цена 6",
+      "normalized_query": "настройка 1с цена 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0064",
+      "raw_query": "вакансии программист 1с 6",
+      "normalized_query": "вакансии программист 1с 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0065",
+      "raw_query": "курсы 1с обучение 6",
+      "normalized_query": "курсы 1с обучение 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0066",
+      "raw_query": "как настроить 1с самостоятельно 6",
+      "normalized_query": "как настроить 1с самостоятельно 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0067",
+      "raw_query": "скачать 1с бесплатно 6",
+      "normalized_query": "скачать 1с бесплатно 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0068",
+      "raw_query": "1с не работает ошибка 6",
+      "normalized_query": "1с не работает ошибка 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0069",
+      "raw_query": "1с бухгалтерия 6",
+      "normalized_query": "1с бухгалтерия 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0070",
+      "raw_query": "corvonero официальный сайт 6",
+      "normalized_query": "corvonero официальный сайт 6",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0071",
+      "raw_query": "заказать услуги программиста 1с 7",
+      "normalized_query": "заказать услуги программиста 1с 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0072",
+      "raw_query": "внедрение 1с под ключ 7",
+      "normalized_query": "внедрение 1с под ключ 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0073",
+      "raw_query": "настройка 1с цена 7",
+      "normalized_query": "настройка 1с цена 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0074",
+      "raw_query": "вакансии программист 1с 7",
+      "normalized_query": "вакансии программист 1с 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0075",
+      "raw_query": "курсы 1с обучение 7",
+      "normalized_query": "курсы 1с обучение 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0076",
+      "raw_query": "как настроить 1с самостоятельно 7",
+      "normalized_query": "как настроить 1с самостоятельно 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0077",
+      "raw_query": "скачать 1с бесплатно 7",
+      "normalized_query": "скачать 1с бесплатно 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0078",
+      "raw_query": "1с не работает ошибка 7",
+      "normalized_query": "1с не работает ошибка 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0079",
+      "raw_query": "1с бухгалтерия 7",
+      "normalized_query": "1с бухгалтерия 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0080",
+      "raw_query": "corvonero официальный сайт 7",
+      "normalized_query": "corvonero официальный сайт 7",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0081",
+      "raw_query": "заказать услуги программиста 1с 8",
+      "normalized_query": "заказать услуги программиста 1с 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0082",
+      "raw_query": "внедрение 1с под ключ 8",
+      "normalized_query": "внедрение 1с под ключ 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0083",
+      "raw_query": "настройка 1с цена 8",
+      "normalized_query": "настройка 1с цена 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0084",
+      "raw_query": "вакансии программист 1с 8",
+      "normalized_query": "вакансии программист 1с 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0085",
+      "raw_query": "курсы 1с обучение 8",
+      "normalized_query": "курсы 1с обучение 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0086",
+      "raw_query": "как настроить 1с самостоятельно 8",
+      "normalized_query": "как настроить 1с самостоятельно 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0087",
+      "raw_query": "скачать 1с бесплатно 8",
+      "normalized_query": "скачать 1с бесплатно 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0088",
+      "raw_query": "1с не работает ошибка 8",
+      "normalized_query": "1с не работает ошибка 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0089",
+      "raw_query": "1с бухгалтерия 8",
+      "normalized_query": "1с бухгалтерия 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0090",
+      "raw_query": "corvonero официальный сайт 8",
+      "normalized_query": "corvonero официальный сайт 8",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0091",
+      "raw_query": "заказать услуги программиста 1с 9",
+      "normalized_query": "заказать услуги программиста 1с 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0092",
+      "raw_query": "внедрение 1с под ключ 9",
+      "normalized_query": "внедрение 1с под ключ 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0093",
+      "raw_query": "настройка 1с цена 9",
+      "normalized_query": "настройка 1с цена 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0094",
+      "raw_query": "вакансии программист 1с 9",
+      "normalized_query": "вакансии программист 1с 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0095",
+      "raw_query": "курсы 1с обучение 9",
+      "normalized_query": "курсы 1с обучение 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0096",
+      "raw_query": "как настроить 1с самостоятельно 9",
+      "normalized_query": "как настроить 1с самостоятельно 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0097",
+      "raw_query": "скачать 1с бесплатно 9",
+      "normalized_query": "скачать 1с бесплатно 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0098",
+      "raw_query": "1с не работает ошибка 9",
+      "normalized_query": "1с не работает ошибка 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0099",
+      "raw_query": "1с бухгалтерия 9",
+      "normalized_query": "1с бухгалтерия 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0100",
+      "raw_query": "corvonero официальный сайт 9",
+      "normalized_query": "corvonero официальный сайт 9",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0101",
+      "raw_query": "заказать услуги программиста 1с 10",
+      "normalized_query": "заказать услуги программиста 1с 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0102",
+      "raw_query": "внедрение 1с под ключ 10",
+      "normalized_query": "внедрение 1с под ключ 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0103",
+      "raw_query": "настройка 1с цена 10",
+      "normalized_query": "настройка 1с цена 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0104",
+      "raw_query": "вакансии программист 1с 10",
+      "normalized_query": "вакансии программист 1с 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0105",
+      "raw_query": "курсы 1с обучение 10",
+      "normalized_query": "курсы 1с обучение 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0106",
+      "raw_query": "как настроить 1с самостоятельно 10",
+      "normalized_query": "как настроить 1с самостоятельно 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0107",
+      "raw_query": "скачать 1с бесплатно 10",
+      "normalized_query": "скачать 1с бесплатно 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0108",
+      "raw_query": "1с не работает ошибка 10",
+      "normalized_query": "1с не работает ошибка 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0109",
+      "raw_query": "1с бухгалтерия 10",
+      "normalized_query": "1с бухгалтерия 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0110",
+      "raw_query": "corvonero официальный сайт 10",
+      "normalized_query": "corvonero официальный сайт 10",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0111",
+      "raw_query": "заказать услуги программиста 1с 11",
+      "normalized_query": "заказать услуги программиста 1с 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0112",
+      "raw_query": "внедрение 1с под ключ 11",
+      "normalized_query": "внедрение 1с под ключ 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0113",
+      "raw_query": "настройка 1с цена 11",
+      "normalized_query": "настройка 1с цена 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0114",
+      "raw_query": "вакансии программист 1с 11",
+      "normalized_query": "вакансии программист 1с 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0115",
+      "raw_query": "курсы 1с обучение 11",
+      "normalized_query": "курсы 1с обучение 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0116",
+      "raw_query": "как настроить 1с самостоятельно 11",
+      "normalized_query": "как настроить 1с самостоятельно 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0117",
+      "raw_query": "скачать 1с бесплатно 11",
+      "normalized_query": "скачать 1с бесплатно 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0118",
+      "raw_query": "1с не работает ошибка 11",
+      "normalized_query": "1с не работает ошибка 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0119",
+      "raw_query": "1с бухгалтерия 11",
+      "normalized_query": "1с бухгалтерия 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0120",
+      "raw_query": "corvonero официальный сайт 11",
+      "normalized_query": "corvonero официальный сайт 11",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0121",
+      "raw_query": "заказать услуги программиста 1с 12",
+      "normalized_query": "заказать услуги программиста 1с 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0122",
+      "raw_query": "внедрение 1с под ключ 12",
+      "normalized_query": "внедрение 1с под ключ 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0123",
+      "raw_query": "настройка 1с цена 12",
+      "normalized_query": "настройка 1с цена 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0124",
+      "raw_query": "вакансии программист 1с 12",
+      "normalized_query": "вакансии программист 1с 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0125",
+      "raw_query": "курсы 1с обучение 12",
+      "normalized_query": "курсы 1с обучение 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0126",
+      "raw_query": "как настроить 1с самостоятельно 12",
+      "normalized_query": "как настроить 1с самостоятельно 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0127",
+      "raw_query": "скачать 1с бесплатно 12",
+      "normalized_query": "скачать 1с бесплатно 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0128",
+      "raw_query": "1с не работает ошибка 12",
+      "normalized_query": "1с не работает ошибка 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0129",
+      "raw_query": "1с бухгалтерия 12",
+      "normalized_query": "1с бухгалтерия 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0130",
+      "raw_query": "corvonero официальный сайт 12",
+      "normalized_query": "corvonero официальный сайт 12",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0131",
+      "raw_query": "заказать услуги программиста 1с 13",
+      "normalized_query": "заказать услуги программиста 1с 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0132",
+      "raw_query": "внедрение 1с под ключ 13",
+      "normalized_query": "внедрение 1с под ключ 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0133",
+      "raw_query": "настройка 1с цена 13",
+      "normalized_query": "настройка 1с цена 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0134",
+      "raw_query": "вакансии программист 1с 13",
+      "normalized_query": "вакансии программист 1с 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0135",
+      "raw_query": "курсы 1с обучение 13",
+      "normalized_query": "курсы 1с обучение 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0136",
+      "raw_query": "как настроить 1с самостоятельно 13",
+      "normalized_query": "как настроить 1с самостоятельно 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0137",
+      "raw_query": "скачать 1с бесплатно 13",
+      "normalized_query": "скачать 1с бесплатно 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0138",
+      "raw_query": "1с не работает ошибка 13",
+      "normalized_query": "1с не работает ошибка 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0139",
+      "raw_query": "1с бухгалтерия 13",
+      "normalized_query": "1с бухгалтерия 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0140",
+      "raw_query": "corvonero официальный сайт 13",
+      "normalized_query": "corvonero официальный сайт 13",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0141",
+      "raw_query": "заказать услуги программиста 1с 14",
+      "normalized_query": "заказать услуги программиста 1с 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0142",
+      "raw_query": "внедрение 1с под ключ 14",
+      "normalized_query": "внедрение 1с под ключ 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0143",
+      "raw_query": "настройка 1с цена 14",
+      "normalized_query": "настройка 1с цена 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0144",
+      "raw_query": "вакансии программист 1с 14",
+      "normalized_query": "вакансии программист 1с 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0145",
+      "raw_query": "курсы 1с обучение 14",
+      "normalized_query": "курсы 1с обучение 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0146",
+      "raw_query": "как настроить 1с самостоятельно 14",
+      "normalized_query": "как настроить 1с самостоятельно 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0147",
+      "raw_query": "скачать 1с бесплатно 14",
+      "normalized_query": "скачать 1с бесплатно 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0148",
+      "raw_query": "1с не работает ошибка 14",
+      "normalized_query": "1с не работает ошибка 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0149",
+      "raw_query": "1с бухгалтерия 14",
+      "normalized_query": "1с бухгалтерия 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0150",
+      "raw_query": "corvonero официальный сайт 14",
+      "normalized_query": "corvonero официальный сайт 14",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0151",
+      "raw_query": "заказать услуги программиста 1с 15",
+      "normalized_query": "заказать услуги программиста 1с 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0152",
+      "raw_query": "внедрение 1с под ключ 15",
+      "normalized_query": "внедрение 1с под ключ 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0153",
+      "raw_query": "настройка 1с цена 15",
+      "normalized_query": "настройка 1с цена 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0154",
+      "raw_query": "вакансии программист 1с 15",
+      "normalized_query": "вакансии программист 1с 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0155",
+      "raw_query": "курсы 1с обучение 15",
+      "normalized_query": "курсы 1с обучение 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0156",
+      "raw_query": "как настроить 1с самостоятельно 15",
+      "normalized_query": "как настроить 1с самостоятельно 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0157",
+      "raw_query": "скачать 1с бесплатно 15",
+      "normalized_query": "скачать 1с бесплатно 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0158",
+      "raw_query": "1с не работает ошибка 15",
+      "normalized_query": "1с не работает ошибка 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0159",
+      "raw_query": "1с бухгалтерия 15",
+      "normalized_query": "1с бухгалтерия 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0160",
+      "raw_query": "corvonero официальный сайт 15",
+      "normalized_query": "corvonero официальный сайт 15",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0161",
+      "raw_query": "заказать услуги программиста 1с 16",
+      "normalized_query": "заказать услуги программиста 1с 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0162",
+      "raw_query": "внедрение 1с под ключ 16",
+      "normalized_query": "внедрение 1с под ключ 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0163",
+      "raw_query": "настройка 1с цена 16",
+      "normalized_query": "настройка 1с цена 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0164",
+      "raw_query": "вакансии программист 1с 16",
+      "normalized_query": "вакансии программист 1с 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0165",
+      "raw_query": "курсы 1с обучение 16",
+      "normalized_query": "курсы 1с обучение 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0166",
+      "raw_query": "как настроить 1с самостоятельно 16",
+      "normalized_query": "как настроить 1с самостоятельно 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0167",
+      "raw_query": "скачать 1с бесплатно 16",
+      "normalized_query": "скачать 1с бесплатно 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0168",
+      "raw_query": "1с не работает ошибка 16",
+      "normalized_query": "1с не работает ошибка 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0169",
+      "raw_query": "1с бухгалтерия 16",
+      "normalized_query": "1с бухгалтерия 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0170",
+      "raw_query": "corvonero официальный сайт 16",
+      "normalized_query": "corvonero официальный сайт 16",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0171",
+      "raw_query": "заказать услуги программиста 1с 17",
+      "normalized_query": "заказать услуги программиста 1с 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0172",
+      "raw_query": "внедрение 1с под ключ 17",
+      "normalized_query": "внедрение 1с под ключ 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0173",
+      "raw_query": "настройка 1с цена 17",
+      "normalized_query": "настройка 1с цена 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0174",
+      "raw_query": "вакансии программист 1с 17",
+      "normalized_query": "вакансии программист 1с 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0175",
+      "raw_query": "курсы 1с обучение 17",
+      "normalized_query": "курсы 1с обучение 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0176",
+      "raw_query": "как настроить 1с самостоятельно 17",
+      "normalized_query": "как настроить 1с самостоятельно 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0177",
+      "raw_query": "скачать 1с бесплатно 17",
+      "normalized_query": "скачать 1с бесплатно 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0178",
+      "raw_query": "1с не работает ошибка 17",
+      "normalized_query": "1с не работает ошибка 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0179",
+      "raw_query": "1с бухгалтерия 17",
+      "normalized_query": "1с бухгалтерия 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0180",
+      "raw_query": "corvonero официальный сайт 17",
+      "normalized_query": "corvonero официальный сайт 17",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0181",
+      "raw_query": "заказать услуги программиста 1с 18",
+      "normalized_query": "заказать услуги программиста 1с 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0182",
+      "raw_query": "внедрение 1с под ключ 18",
+      "normalized_query": "внедрение 1с под ключ 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0183",
+      "raw_query": "настройка 1с цена 18",
+      "normalized_query": "настройка 1с цена 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0184",
+      "raw_query": "вакансии программист 1с 18",
+      "normalized_query": "вакансии программист 1с 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0185",
+      "raw_query": "курсы 1с обучение 18",
+      "normalized_query": "курсы 1с обучение 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0186",
+      "raw_query": "как настроить 1с самостоятельно 18",
+      "normalized_query": "как настроить 1с самостоятельно 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0187",
+      "raw_query": "скачать 1с бесплатно 18",
+      "normalized_query": "скачать 1с бесплатно 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0188",
+      "raw_query": "1с не работает ошибка 18",
+      "normalized_query": "1с не работает ошибка 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0189",
+      "raw_query": "1с бухгалтерия 18",
+      "normalized_query": "1с бухгалтерия 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0190",
+      "raw_query": "corvonero официальный сайт 18",
+      "normalized_query": "corvonero официальный сайт 18",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0191",
+      "raw_query": "заказать услуги программиста 1с 19",
+      "normalized_query": "заказать услуги программиста 1с 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0192",
+      "raw_query": "внедрение 1с под ключ 19",
+      "normalized_query": "внедрение 1с под ключ 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0193",
+      "raw_query": "настройка 1с цена 19",
+      "normalized_query": "настройка 1с цена 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0194",
+      "raw_query": "вакансии программист 1с 19",
+      "normalized_query": "вакансии программист 1с 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0195",
+      "raw_query": "курсы 1с обучение 19",
+      "normalized_query": "курсы 1с обучение 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0196",
+      "raw_query": "как настроить 1с самостоятельно 19",
+      "normalized_query": "как настроить 1с самостоятельно 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0197",
+      "raw_query": "скачать 1с бесплатно 19",
+      "normalized_query": "скачать 1с бесплатно 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0198",
+      "raw_query": "1с не работает ошибка 19",
+      "normalized_query": "1с не работает ошибка 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0199",
+      "raw_query": "1с бухгалтерия 19",
+      "normalized_query": "1с бухгалтерия 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0200",
+      "raw_query": "corvonero официальный сайт 19",
+      "normalized_query": "corvonero официальный сайт 19",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0201",
+      "raw_query": "заказать услуги программиста 1с 20",
+      "normalized_query": "заказать услуги программиста 1с 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0202",
+      "raw_query": "внедрение 1с под ключ 20",
+      "normalized_query": "внедрение 1с под ключ 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0203",
+      "raw_query": "настройка 1с цена 20",
+      "normalized_query": "настройка 1с цена 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0204",
+      "raw_query": "вакансии программист 1с 20",
+      "normalized_query": "вакансии программист 1с 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0205",
+      "raw_query": "курсы 1с обучение 20",
+      "normalized_query": "курсы 1с обучение 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0206",
+      "raw_query": "как настроить 1с самостоятельно 20",
+      "normalized_query": "как настроить 1с самостоятельно 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0207",
+      "raw_query": "скачать 1с бесплатно 20",
+      "normalized_query": "скачать 1с бесплатно 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0208",
+      "raw_query": "1с не работает ошибка 20",
+      "normalized_query": "1с не работает ошибка 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0209",
+      "raw_query": "1с бухгалтерия 20",
+      "normalized_query": "1с бухгалтерия 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0210",
+      "raw_query": "corvonero официальный сайт 20",
+      "normalized_query": "corvonero официальный сайт 20",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0211",
+      "raw_query": "заказать услуги программиста 1с 21",
+      "normalized_query": "заказать услуги программиста 1с 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0212",
+      "raw_query": "внедрение 1с под ключ 21",
+      "normalized_query": "внедрение 1с под ключ 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0213",
+      "raw_query": "настройка 1с цена 21",
+      "normalized_query": "настройка 1с цена 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0214",
+      "raw_query": "вакансии программист 1с 21",
+      "normalized_query": "вакансии программист 1с 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0215",
+      "raw_query": "курсы 1с обучение 21",
+      "normalized_query": "курсы 1с обучение 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0216",
+      "raw_query": "как настроить 1с самостоятельно 21",
+      "normalized_query": "как настроить 1с самостоятельно 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0217",
+      "raw_query": "скачать 1с бесплатно 21",
+      "normalized_query": "скачать 1с бесплатно 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0218",
+      "raw_query": "1с не работает ошибка 21",
+      "normalized_query": "1с не работает ошибка 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0219",
+      "raw_query": "1с бухгалтерия 21",
+      "normalized_query": "1с бухгалтерия 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0220",
+      "raw_query": "corvonero официальный сайт 21",
+      "normalized_query": "corvonero официальный сайт 21",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0221",
+      "raw_query": "заказать услуги программиста 1с 22",
+      "normalized_query": "заказать услуги программиста 1с 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0222",
+      "raw_query": "внедрение 1с под ключ 22",
+      "normalized_query": "внедрение 1с под ключ 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0223",
+      "raw_query": "настройка 1с цена 22",
+      "normalized_query": "настройка 1с цена 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0224",
+      "raw_query": "вакансии программист 1с 22",
+      "normalized_query": "вакансии программист 1с 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0225",
+      "raw_query": "курсы 1с обучение 22",
+      "normalized_query": "курсы 1с обучение 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0226",
+      "raw_query": "как настроить 1с самостоятельно 22",
+      "normalized_query": "как настроить 1с самостоятельно 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0227",
+      "raw_query": "скачать 1с бесплатно 22",
+      "normalized_query": "скачать 1с бесплатно 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0228",
+      "raw_query": "1с не работает ошибка 22",
+      "normalized_query": "1с не работает ошибка 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0229",
+      "raw_query": "1с бухгалтерия 22",
+      "normalized_query": "1с бухгалтерия 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0230",
+      "raw_query": "corvonero официальный сайт 22",
+      "normalized_query": "corvonero официальный сайт 22",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0231",
+      "raw_query": "заказать услуги программиста 1с 23",
+      "normalized_query": "заказать услуги программиста 1с 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0232",
+      "raw_query": "внедрение 1с под ключ 23",
+      "normalized_query": "внедрение 1с под ключ 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0233",
+      "raw_query": "настройка 1с цена 23",
+      "normalized_query": "настройка 1с цена 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0234",
+      "raw_query": "вакансии программист 1с 23",
+      "normalized_query": "вакансии программист 1с 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0235",
+      "raw_query": "курсы 1с обучение 23",
+      "normalized_query": "курсы 1с обучение 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0236",
+      "raw_query": "как настроить 1с самостоятельно 23",
+      "normalized_query": "как настроить 1с самостоятельно 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0237",
+      "raw_query": "скачать 1с бесплатно 23",
+      "normalized_query": "скачать 1с бесплатно 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0238",
+      "raw_query": "1с не работает ошибка 23",
+      "normalized_query": "1с не работает ошибка 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0239",
+      "raw_query": "1с бухгалтерия 23",
+      "normalized_query": "1с бухгалтерия 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0240",
+      "raw_query": "corvonero официальный сайт 23",
+      "normalized_query": "corvonero официальный сайт 23",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0241",
+      "raw_query": "заказать услуги программиста 1с 24",
+      "normalized_query": "заказать услуги программиста 1с 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0242",
+      "raw_query": "внедрение 1с под ключ 24",
+      "normalized_query": "внедрение 1с под ключ 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0243",
+      "raw_query": "настройка 1с цена 24",
+      "normalized_query": "настройка 1с цена 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0244",
+      "raw_query": "вакансии программист 1с 24",
+      "normalized_query": "вакансии программист 1с 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0245",
+      "raw_query": "курсы 1с обучение 24",
+      "normalized_query": "курсы 1с обучение 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0246",
+      "raw_query": "как настроить 1с самостоятельно 24",
+      "normalized_query": "как настроить 1с самостоятельно 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0247",
+      "raw_query": "скачать 1с бесплатно 24",
+      "normalized_query": "скачать 1с бесплатно 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0248",
+      "raw_query": "1с не работает ошибка 24",
+      "normalized_query": "1с не работает ошибка 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0249",
+      "raw_query": "1с бухгалтерия 24",
+      "normalized_query": "1с бухгалтерия 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0250",
+      "raw_query": "corvonero официальный сайт 24",
+      "normalized_query": "corvonero официальный сайт 24",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0251",
+      "raw_query": "заказать услуги программиста 1с 25",
+      "normalized_query": "заказать услуги программиста 1с 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0252",
+      "raw_query": "внедрение 1с под ключ 25",
+      "normalized_query": "внедрение 1с под ключ 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0253",
+      "raw_query": "настройка 1с цена 25",
+      "normalized_query": "настройка 1с цена 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0254",
+      "raw_query": "вакансии программист 1с 25",
+      "normalized_query": "вакансии программист 1с 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0255",
+      "raw_query": "курсы 1с обучение 25",
+      "normalized_query": "курсы 1с обучение 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0256",
+      "raw_query": "как настроить 1с самостоятельно 25",
+      "normalized_query": "как настроить 1с самостоятельно 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0257",
+      "raw_query": "скачать 1с бесплатно 25",
+      "normalized_query": "скачать 1с бесплатно 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0258",
+      "raw_query": "1с не работает ошибка 25",
+      "normalized_query": "1с не работает ошибка 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0259",
+      "raw_query": "1с бухгалтерия 25",
+      "normalized_query": "1с бухгалтерия 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0260",
+      "raw_query": "corvonero официальный сайт 25",
+      "normalized_query": "corvonero официальный сайт 25",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0261",
+      "raw_query": "заказать услуги программиста 1с 26",
+      "normalized_query": "заказать услуги программиста 1с 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0262",
+      "raw_query": "внедрение 1с под ключ 26",
+      "normalized_query": "внедрение 1с под ключ 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0263",
+      "raw_query": "настройка 1с цена 26",
+      "normalized_query": "настройка 1с цена 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0264",
+      "raw_query": "вакансии программист 1с 26",
+      "normalized_query": "вакансии программист 1с 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0265",
+      "raw_query": "курсы 1с обучение 26",
+      "normalized_query": "курсы 1с обучение 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0266",
+      "raw_query": "как настроить 1с самостоятельно 26",
+      "normalized_query": "как настроить 1с самостоятельно 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0267",
+      "raw_query": "скачать 1с бесплатно 26",
+      "normalized_query": "скачать 1с бесплатно 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0268",
+      "raw_query": "1с не работает ошибка 26",
+      "normalized_query": "1с не работает ошибка 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0269",
+      "raw_query": "1с бухгалтерия 26",
+      "normalized_query": "1с бухгалтерия 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0270",
+      "raw_query": "corvonero официальный сайт 26",
+      "normalized_query": "corvonero официальный сайт 26",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0271",
+      "raw_query": "заказать услуги программиста 1с 27",
+      "normalized_query": "заказать услуги программиста 1с 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0272",
+      "raw_query": "внедрение 1с под ключ 27",
+      "normalized_query": "внедрение 1с под ключ 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0273",
+      "raw_query": "настройка 1с цена 27",
+      "normalized_query": "настройка 1с цена 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0274",
+      "raw_query": "вакансии программист 1с 27",
+      "normalized_query": "вакансии программист 1с 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0275",
+      "raw_query": "курсы 1с обучение 27",
+      "normalized_query": "курсы 1с обучение 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0276",
+      "raw_query": "как настроить 1с самостоятельно 27",
+      "normalized_query": "как настроить 1с самостоятельно 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0277",
+      "raw_query": "скачать 1с бесплатно 27",
+      "normalized_query": "скачать 1с бесплатно 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0278",
+      "raw_query": "1с не работает ошибка 27",
+      "normalized_query": "1с не работает ошибка 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0279",
+      "raw_query": "1с бухгалтерия 27",
+      "normalized_query": "1с бухгалтерия 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0280",
+      "raw_query": "corvonero официальный сайт 27",
+      "normalized_query": "corvonero официальный сайт 27",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0281",
+      "raw_query": "заказать услуги программиста 1с 28",
+      "normalized_query": "заказать услуги программиста 1с 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0282",
+      "raw_query": "внедрение 1с под ключ 28",
+      "normalized_query": "внедрение 1с под ключ 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0283",
+      "raw_query": "настройка 1с цена 28",
+      "normalized_query": "настройка 1с цена 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0284",
+      "raw_query": "вакансии программист 1с 28",
+      "normalized_query": "вакансии программист 1с 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0285",
+      "raw_query": "курсы 1с обучение 28",
+      "normalized_query": "курсы 1с обучение 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0286",
+      "raw_query": "как настроить 1с самостоятельно 28",
+      "normalized_query": "как настроить 1с самостоятельно 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0287",
+      "raw_query": "скачать 1с бесплатно 28",
+      "normalized_query": "скачать 1с бесплатно 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0288",
+      "raw_query": "1с не работает ошибка 28",
+      "normalized_query": "1с не работает ошибка 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0289",
+      "raw_query": "1с бухгалтерия 28",
+      "normalized_query": "1с бухгалтерия 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0290",
+      "raw_query": "corvonero официальный сайт 28",
+      "normalized_query": "corvonero официальный сайт 28",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0291",
+      "raw_query": "заказать услуги программиста 1с 29",
+      "normalized_query": "заказать услуги программиста 1с 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0292",
+      "raw_query": "внедрение 1с под ключ 29",
+      "normalized_query": "внедрение 1с под ключ 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0293",
+      "raw_query": "настройка 1с цена 29",
+      "normalized_query": "настройка 1с цена 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0294",
+      "raw_query": "вакансии программист 1с 29",
+      "normalized_query": "вакансии программист 1с 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0295",
+      "raw_query": "курсы 1с обучение 29",
+      "normalized_query": "курсы 1с обучение 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0296",
+      "raw_query": "как настроить 1с самостоятельно 29",
+      "normalized_query": "как настроить 1с самостоятельно 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0297",
+      "raw_query": "скачать 1с бесплатно 29",
+      "normalized_query": "скачать 1с бесплатно 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0298",
+      "raw_query": "1с не работает ошибка 29",
+      "normalized_query": "1с не работает ошибка 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0299",
+      "raw_query": "1с бухгалтерия 29",
+      "normalized_query": "1с бухгалтерия 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0300",
+      "raw_query": "corvonero официальный сайт 29",
+      "normalized_query": "corvonero официальный сайт 29",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0301",
+      "raw_query": "заказать услуги программиста 1с 30",
+      "normalized_query": "заказать услуги программиста 1с 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0302",
+      "raw_query": "внедрение 1с под ключ 30",
+      "normalized_query": "внедрение 1с под ключ 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0303",
+      "raw_query": "настройка 1с цена 30",
+      "normalized_query": "настройка 1с цена 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0304",
+      "raw_query": "вакансии программист 1с 30",
+      "normalized_query": "вакансии программист 1с 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0305",
+      "raw_query": "курсы 1с обучение 30",
+      "normalized_query": "курсы 1с обучение 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0306",
+      "raw_query": "как настроить 1с самостоятельно 30",
+      "normalized_query": "как настроить 1с самостоятельно 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0307",
+      "raw_query": "скачать 1с бесплатно 30",
+      "normalized_query": "скачать 1с бесплатно 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0308",
+      "raw_query": "1с не работает ошибка 30",
+      "normalized_query": "1с не работает ошибка 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0309",
+      "raw_query": "1с бухгалтерия 30",
+      "normalized_query": "1с бухгалтерия 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0310",
+      "raw_query": "corvonero официальный сайт 30",
+      "normalized_query": "corvonero официальный сайт 30",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0311",
+      "raw_query": "заказать услуги программиста 1с 31",
+      "normalized_query": "заказать услуги программиста 1с 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0312",
+      "raw_query": "внедрение 1с под ключ 31",
+      "normalized_query": "внедрение 1с под ключ 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0313",
+      "raw_query": "настройка 1с цена 31",
+      "normalized_query": "настройка 1с цена 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0314",
+      "raw_query": "вакансии программист 1с 31",
+      "normalized_query": "вакансии программист 1с 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0315",
+      "raw_query": "курсы 1с обучение 31",
+      "normalized_query": "курсы 1с обучение 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0316",
+      "raw_query": "как настроить 1с самостоятельно 31",
+      "normalized_query": "как настроить 1с самостоятельно 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0317",
+      "raw_query": "скачать 1с бесплатно 31",
+      "normalized_query": "скачать 1с бесплатно 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0318",
+      "raw_query": "1с не работает ошибка 31",
+      "normalized_query": "1с не работает ошибка 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0319",
+      "raw_query": "1с бухгалтерия 31",
+      "normalized_query": "1с бухгалтерия 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0320",
+      "raw_query": "corvonero официальный сайт 31",
+      "normalized_query": "corvonero официальный сайт 31",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0321",
+      "raw_query": "заказать услуги программиста 1с 32",
+      "normalized_query": "заказать услуги программиста 1с 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0322",
+      "raw_query": "внедрение 1с под ключ 32",
+      "normalized_query": "внедрение 1с под ключ 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0323",
+      "raw_query": "настройка 1с цена 32",
+      "normalized_query": "настройка 1с цена 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0324",
+      "raw_query": "вакансии программист 1с 32",
+      "normalized_query": "вакансии программист 1с 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0325",
+      "raw_query": "курсы 1с обучение 32",
+      "normalized_query": "курсы 1с обучение 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0326",
+      "raw_query": "как настроить 1с самостоятельно 32",
+      "normalized_query": "как настроить 1с самостоятельно 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0327",
+      "raw_query": "скачать 1с бесплатно 32",
+      "normalized_query": "скачать 1с бесплатно 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0328",
+      "raw_query": "1с не работает ошибка 32",
+      "normalized_query": "1с не работает ошибка 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0329",
+      "raw_query": "1с бухгалтерия 32",
+      "normalized_query": "1с бухгалтерия 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0330",
+      "raw_query": "corvonero официальный сайт 32",
+      "normalized_query": "corvonero официальный сайт 32",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0331",
+      "raw_query": "заказать услуги программиста 1с 33",
+      "normalized_query": "заказать услуги программиста 1с 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0332",
+      "raw_query": "внедрение 1с под ключ 33",
+      "normalized_query": "внедрение 1с под ключ 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0333",
+      "raw_query": "настройка 1с цена 33",
+      "normalized_query": "настройка 1с цена 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0334",
+      "raw_query": "вакансии программист 1с 33",
+      "normalized_query": "вакансии программист 1с 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0335",
+      "raw_query": "курсы 1с обучение 33",
+      "normalized_query": "курсы 1с обучение 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0336",
+      "raw_query": "как настроить 1с самостоятельно 33",
+      "normalized_query": "как настроить 1с самостоятельно 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0337",
+      "raw_query": "скачать 1с бесплатно 33",
+      "normalized_query": "скачать 1с бесплатно 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0338",
+      "raw_query": "1с не работает ошибка 33",
+      "normalized_query": "1с не работает ошибка 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0339",
+      "raw_query": "1с бухгалтерия 33",
+      "normalized_query": "1с бухгалтерия 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0340",
+      "raw_query": "corvonero официальный сайт 33",
+      "normalized_query": "corvonero официальный сайт 33",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0341",
+      "raw_query": "заказать услуги программиста 1с 34",
+      "normalized_query": "заказать услуги программиста 1с 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0342",
+      "raw_query": "внедрение 1с под ключ 34",
+      "normalized_query": "внедрение 1с под ключ 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0343",
+      "raw_query": "настройка 1с цена 34",
+      "normalized_query": "настройка 1с цена 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0344",
+      "raw_query": "вакансии программист 1с 34",
+      "normalized_query": "вакансии программист 1с 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0345",
+      "raw_query": "курсы 1с обучение 34",
+      "normalized_query": "курсы 1с обучение 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0346",
+      "raw_query": "как настроить 1с самостоятельно 34",
+      "normalized_query": "как настроить 1с самостоятельно 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0347",
+      "raw_query": "скачать 1с бесплатно 34",
+      "normalized_query": "скачать 1с бесплатно 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0348",
+      "raw_query": "1с не работает ошибка 34",
+      "normalized_query": "1с не работает ошибка 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0349",
+      "raw_query": "1с бухгалтерия 34",
+      "normalized_query": "1с бухгалтерия 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0350",
+      "raw_query": "corvonero официальный сайт 34",
+      "normalized_query": "corvonero официальный сайт 34",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0351",
+      "raw_query": "заказать услуги программиста 1с 35",
+      "normalized_query": "заказать услуги программиста 1с 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0352",
+      "raw_query": "внедрение 1с под ключ 35",
+      "normalized_query": "внедрение 1с под ключ 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0353",
+      "raw_query": "настройка 1с цена 35",
+      "normalized_query": "настройка 1с цена 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0354",
+      "raw_query": "вакансии программист 1с 35",
+      "normalized_query": "вакансии программист 1с 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0355",
+      "raw_query": "курсы 1с обучение 35",
+      "normalized_query": "курсы 1с обучение 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0356",
+      "raw_query": "как настроить 1с самостоятельно 35",
+      "normalized_query": "как настроить 1с самостоятельно 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0357",
+      "raw_query": "скачать 1с бесплатно 35",
+      "normalized_query": "скачать 1с бесплатно 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0358",
+      "raw_query": "1с не работает ошибка 35",
+      "normalized_query": "1с не работает ошибка 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0359",
+      "raw_query": "1с бухгалтерия 35",
+      "normalized_query": "1с бухгалтерия 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0360",
+      "raw_query": "corvonero официальный сайт 35",
+      "normalized_query": "corvonero официальный сайт 35",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0361",
+      "raw_query": "заказать услуги программиста 1с 36",
+      "normalized_query": "заказать услуги программиста 1с 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0362",
+      "raw_query": "внедрение 1с под ключ 36",
+      "normalized_query": "внедрение 1с под ключ 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0363",
+      "raw_query": "настройка 1с цена 36",
+      "normalized_query": "настройка 1с цена 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0364",
+      "raw_query": "вакансии программист 1с 36",
+      "normalized_query": "вакансии программист 1с 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0365",
+      "raw_query": "курсы 1с обучение 36",
+      "normalized_query": "курсы 1с обучение 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0366",
+      "raw_query": "как настроить 1с самостоятельно 36",
+      "normalized_query": "как настроить 1с самостоятельно 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0367",
+      "raw_query": "скачать 1с бесплатно 36",
+      "normalized_query": "скачать 1с бесплатно 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0368",
+      "raw_query": "1с не работает ошибка 36",
+      "normalized_query": "1с не работает ошибка 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0369",
+      "raw_query": "1с бухгалтерия 36",
+      "normalized_query": "1с бухгалтерия 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0370",
+      "raw_query": "corvonero официальный сайт 36",
+      "normalized_query": "corvonero официальный сайт 36",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0371",
+      "raw_query": "заказать услуги программиста 1с 37",
+      "normalized_query": "заказать услуги программиста 1с 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0372",
+      "raw_query": "внедрение 1с под ключ 37",
+      "normalized_query": "внедрение 1с под ключ 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0373",
+      "raw_query": "настройка 1с цена 37",
+      "normalized_query": "настройка 1с цена 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0374",
+      "raw_query": "вакансии программист 1с 37",
+      "normalized_query": "вакансии программист 1с 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0375",
+      "raw_query": "курсы 1с обучение 37",
+      "normalized_query": "курсы 1с обучение 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0376",
+      "raw_query": "как настроить 1с самостоятельно 37",
+      "normalized_query": "как настроить 1с самостоятельно 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0377",
+      "raw_query": "скачать 1с бесплатно 37",
+      "normalized_query": "скачать 1с бесплатно 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0378",
+      "raw_query": "1с не работает ошибка 37",
+      "normalized_query": "1с не работает ошибка 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0379",
+      "raw_query": "1с бухгалтерия 37",
+      "normalized_query": "1с бухгалтерия 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0380",
+      "raw_query": "corvonero официальный сайт 37",
+      "normalized_query": "corvonero официальный сайт 37",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0381",
+      "raw_query": "заказать услуги программиста 1с 38",
+      "normalized_query": "заказать услуги программиста 1с 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0382",
+      "raw_query": "внедрение 1с под ключ 38",
+      "normalized_query": "внедрение 1с под ключ 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0383",
+      "raw_query": "настройка 1с цена 38",
+      "normalized_query": "настройка 1с цена 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0384",
+      "raw_query": "вакансии программист 1с 38",
+      "normalized_query": "вакансии программист 1с 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0385",
+      "raw_query": "курсы 1с обучение 38",
+      "normalized_query": "курсы 1с обучение 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0386",
+      "raw_query": "как настроить 1с самостоятельно 38",
+      "normalized_query": "как настроить 1с самостоятельно 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0387",
+      "raw_query": "скачать 1с бесплатно 38",
+      "normalized_query": "скачать 1с бесплатно 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0388",
+      "raw_query": "1с не работает ошибка 38",
+      "normalized_query": "1с не работает ошибка 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0389",
+      "raw_query": "1с бухгалтерия 38",
+      "normalized_query": "1с бухгалтерия 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0390",
+      "raw_query": "corvonero официальный сайт 38",
+      "normalized_query": "corvonero официальный сайт 38",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0391",
+      "raw_query": "заказать услуги программиста 1с 39",
+      "normalized_query": "заказать услуги программиста 1с 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0392",
+      "raw_query": "внедрение 1с под ключ 39",
+      "normalized_query": "внедрение 1с под ключ 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0393",
+      "raw_query": "настройка 1с цена 39",
+      "normalized_query": "настройка 1с цена 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0394",
+      "raw_query": "вакансии программист 1с 39",
+      "normalized_query": "вакансии программист 1с 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0395",
+      "raw_query": "курсы 1с обучение 39",
+      "normalized_query": "курсы 1с обучение 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0396",
+      "raw_query": "как настроить 1с самостоятельно 39",
+      "normalized_query": "как настроить 1с самостоятельно 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0397",
+      "raw_query": "скачать 1с бесплатно 39",
+      "normalized_query": "скачать 1с бесплатно 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0398",
+      "raw_query": "1с не работает ошибка 39",
+      "normalized_query": "1с не работает ошибка 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0399",
+      "raw_query": "1с бухгалтерия 39",
+      "normalized_query": "1с бухгалтерия 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0400",
+      "raw_query": "corvonero официальный сайт 39",
+      "normalized_query": "corvonero официальный сайт 39",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0401",
+      "raw_query": "заказать услуги программиста 1с 40",
+      "normalized_query": "заказать услуги программиста 1с 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0402",
+      "raw_query": "внедрение 1с под ключ 40",
+      "normalized_query": "внедрение 1с под ключ 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0403",
+      "raw_query": "настройка 1с цена 40",
+      "normalized_query": "настройка 1с цена 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0404",
+      "raw_query": "вакансии программист 1с 40",
+      "normalized_query": "вакансии программист 1с 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0405",
+      "raw_query": "курсы 1с обучение 40",
+      "normalized_query": "курсы 1с обучение 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0406",
+      "raw_query": "как настроить 1с самостоятельно 40",
+      "normalized_query": "как настроить 1с самостоятельно 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0407",
+      "raw_query": "скачать 1с бесплатно 40",
+      "normalized_query": "скачать 1с бесплатно 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0408",
+      "raw_query": "1с не работает ошибка 40",
+      "normalized_query": "1с не работает ошибка 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0409",
+      "raw_query": "1с бухгалтерия 40",
+      "normalized_query": "1с бухгалтерия 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0410",
+      "raw_query": "corvonero официальный сайт 40",
+      "normalized_query": "corvonero официальный сайт 40",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0411",
+      "raw_query": "заказать услуги программиста 1с 41",
+      "normalized_query": "заказать услуги программиста 1с 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0412",
+      "raw_query": "внедрение 1с под ключ 41",
+      "normalized_query": "внедрение 1с под ключ 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0413",
+      "raw_query": "настройка 1с цена 41",
+      "normalized_query": "настройка 1с цена 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0414",
+      "raw_query": "вакансии программист 1с 41",
+      "normalized_query": "вакансии программист 1с 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0415",
+      "raw_query": "курсы 1с обучение 41",
+      "normalized_query": "курсы 1с обучение 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0416",
+      "raw_query": "как настроить 1с самостоятельно 41",
+      "normalized_query": "как настроить 1с самостоятельно 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0417",
+      "raw_query": "скачать 1с бесплатно 41",
+      "normalized_query": "скачать 1с бесплатно 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0418",
+      "raw_query": "1с не работает ошибка 41",
+      "normalized_query": "1с не работает ошибка 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0419",
+      "raw_query": "1с бухгалтерия 41",
+      "normalized_query": "1с бухгалтерия 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0420",
+      "raw_query": "corvonero официальный сайт 41",
+      "normalized_query": "corvonero официальный сайт 41",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0421",
+      "raw_query": "заказать услуги программиста 1с 42",
+      "normalized_query": "заказать услуги программиста 1с 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0422",
+      "raw_query": "внедрение 1с под ключ 42",
+      "normalized_query": "внедрение 1с под ключ 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0423",
+      "raw_query": "настройка 1с цена 42",
+      "normalized_query": "настройка 1с цена 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0424",
+      "raw_query": "вакансии программист 1с 42",
+      "normalized_query": "вакансии программист 1с 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0425",
+      "raw_query": "курсы 1с обучение 42",
+      "normalized_query": "курсы 1с обучение 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0426",
+      "raw_query": "как настроить 1с самостоятельно 42",
+      "normalized_query": "как настроить 1с самостоятельно 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0427",
+      "raw_query": "скачать 1с бесплатно 42",
+      "normalized_query": "скачать 1с бесплатно 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0428",
+      "raw_query": "1с не работает ошибка 42",
+      "normalized_query": "1с не работает ошибка 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0429",
+      "raw_query": "1с бухгалтерия 42",
+      "normalized_query": "1с бухгалтерия 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0430",
+      "raw_query": "corvonero официальный сайт 42",
+      "normalized_query": "corvonero официальный сайт 42",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0431",
+      "raw_query": "заказать услуги программиста 1с 43",
+      "normalized_query": "заказать услуги программиста 1с 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0432",
+      "raw_query": "внедрение 1с под ключ 43",
+      "normalized_query": "внедрение 1с под ключ 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0433",
+      "raw_query": "настройка 1с цена 43",
+      "normalized_query": "настройка 1с цена 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0434",
+      "raw_query": "вакансии программист 1с 43",
+      "normalized_query": "вакансии программист 1с 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0435",
+      "raw_query": "курсы 1с обучение 43",
+      "normalized_query": "курсы 1с обучение 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0436",
+      "raw_query": "как настроить 1с самостоятельно 43",
+      "normalized_query": "как настроить 1с самостоятельно 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0437",
+      "raw_query": "скачать 1с бесплатно 43",
+      "normalized_query": "скачать 1с бесплатно 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0438",
+      "raw_query": "1с не работает ошибка 43",
+      "normalized_query": "1с не работает ошибка 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0439",
+      "raw_query": "1с бухгалтерия 43",
+      "normalized_query": "1с бухгалтерия 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0440",
+      "raw_query": "corvonero официальный сайт 43",
+      "normalized_query": "corvonero официальный сайт 43",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0441",
+      "raw_query": "заказать услуги программиста 1с 44",
+      "normalized_query": "заказать услуги программиста 1с 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0442",
+      "raw_query": "внедрение 1с под ключ 44",
+      "normalized_query": "внедрение 1с под ключ 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0443",
+      "raw_query": "настройка 1с цена 44",
+      "normalized_query": "настройка 1с цена 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0444",
+      "raw_query": "вакансии программист 1с 44",
+      "normalized_query": "вакансии программист 1с 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0445",
+      "raw_query": "курсы 1с обучение 44",
+      "normalized_query": "курсы 1с обучение 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0446",
+      "raw_query": "как настроить 1с самостоятельно 44",
+      "normalized_query": "как настроить 1с самостоятельно 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0447",
+      "raw_query": "скачать 1с бесплатно 44",
+      "normalized_query": "скачать 1с бесплатно 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0448",
+      "raw_query": "1с не работает ошибка 44",
+      "normalized_query": "1с не работает ошибка 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0449",
+      "raw_query": "1с бухгалтерия 44",
+      "normalized_query": "1с бухгалтерия 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0450",
+      "raw_query": "corvonero официальный сайт 44",
+      "normalized_query": "corvonero официальный сайт 44",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0451",
+      "raw_query": "заказать услуги программиста 1с 45",
+      "normalized_query": "заказать услуги программиста 1с 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 10
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0452",
+      "raw_query": "внедрение 1с под ключ 45",
+      "normalized_query": "внедрение 1с под ключ 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 11
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0453",
+      "raw_query": "настройка 1с цена 45",
+      "normalized_query": "настройка 1с цена 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 12
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0454",
+      "raw_query": "вакансии программист 1с 45",
+      "normalized_query": "вакансии программист 1с 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 13
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0455",
+      "raw_query": "курсы 1с обучение 45",
+      "normalized_query": "курсы 1с обучение 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 14
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0456",
+      "raw_query": "как настроить 1с самостоятельно 45",
+      "normalized_query": "как настроить 1с самостоятельно 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 15
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0457",
+      "raw_query": "скачать 1с бесплатно 45",
+      "normalized_query": "скачать 1с бесплатно 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 16
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0458",
+      "raw_query": "1с не работает ошибка 45",
+      "normalized_query": "1с не работает ошибка 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 17
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0459",
+      "raw_query": "1с бухгалтерия 45",
+      "normalized_query": "1с бухгалтерия 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 18
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0460",
+      "raw_query": "corvonero официальный сайт 45",
+      "normalized_query": "corvonero официальный сайт 45",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 19
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0461",
+      "raw_query": "заказать услуги программиста 1с 46",
+      "normalized_query": "заказать услуги программиста 1с 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 20
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0462",
+      "raw_query": "внедрение 1с под ключ 46",
+      "normalized_query": "внедрение 1с под ключ 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 21
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0463",
+      "raw_query": "настройка 1с цена 46",
+      "normalized_query": "настройка 1с цена 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 22
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0464",
+      "raw_query": "вакансии программист 1с 46",
+      "normalized_query": "вакансии программист 1с 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 23
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0465",
+      "raw_query": "курсы 1с обучение 46",
+      "normalized_query": "курсы 1с обучение 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 24
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0466",
+      "raw_query": "как настроить 1с самостоятельно 46",
+      "normalized_query": "как настроить 1с самостоятельно 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 25
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0467",
+      "raw_query": "скачать 1с бесплатно 46",
+      "normalized_query": "скачать 1с бесплатно 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 26
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0468",
+      "raw_query": "1с не работает ошибка 46",
+      "normalized_query": "1с не работает ошибка 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 27
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0469",
+      "raw_query": "1с бухгалтерия 46",
+      "normalized_query": "1с бухгалтерия 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 28
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0470",
+      "raw_query": "corvonero официальный сайт 46",
+      "normalized_query": "corvonero официальный сайт 46",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 29
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0471",
+      "raw_query": "заказать услуги программиста 1с 47",
+      "normalized_query": "заказать услуги программиста 1с 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 30
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0472",
+      "raw_query": "внедрение 1с под ключ 47",
+      "normalized_query": "внедрение 1с под ключ 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 31
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0473",
+      "raw_query": "настройка 1с цена 47",
+      "normalized_query": "настройка 1с цена 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 32
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0474",
+      "raw_query": "вакансии программист 1с 47",
+      "normalized_query": "вакансии программист 1с 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 33
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0475",
+      "raw_query": "курсы 1с обучение 47",
+      "normalized_query": "курсы 1с обучение 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 34
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0476",
+      "raw_query": "как настроить 1с самостоятельно 47",
+      "normalized_query": "как настроить 1с самостоятельно 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 35
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0477",
+      "raw_query": "скачать 1с бесплатно 47",
+      "normalized_query": "скачать 1с бесплатно 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 36
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0478",
+      "raw_query": "1с не работает ошибка 47",
+      "normalized_query": "1с не работает ошибка 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 37
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0479",
+      "raw_query": "1с бухгалтерия 47",
+      "normalized_query": "1с бухгалтерия 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 38
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0480",
+      "raw_query": "corvonero официальный сайт 47",
+      "normalized_query": "corvonero официальный сайт 47",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 39
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0481",
+      "raw_query": "заказать услуги программиста 1с 48",
+      "normalized_query": "заказать услуги программиста 1с 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 40
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0482",
+      "raw_query": "внедрение 1с под ключ 48",
+      "normalized_query": "внедрение 1с под ключ 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 41
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0483",
+      "raw_query": "настройка 1с цена 48",
+      "normalized_query": "настройка 1с цена 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 42
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0484",
+      "raw_query": "вакансии программист 1с 48",
+      "normalized_query": "вакансии программист 1с 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 43
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0485",
+      "raw_query": "курсы 1с обучение 48",
+      "normalized_query": "курсы 1с обучение 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 44
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0486",
+      "raw_query": "как настроить 1с самостоятельно 48",
+      "normalized_query": "как настроить 1с самостоятельно 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 45
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0487",
+      "raw_query": "скачать 1с бесплатно 48",
+      "normalized_query": "скачать 1с бесплатно 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 46
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0488",
+      "raw_query": "1с не работает ошибка 48",
+      "normalized_query": "1с не работает ошибка 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 47
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0489",
+      "raw_query": "1с бухгалтерия 48",
+      "normalized_query": "1с бухгалтерия 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 48
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0490",
+      "raw_query": "corvonero официальный сайт 48",
+      "normalized_query": "corvonero официальный сайт 48",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 49
+      },
+      "category": "nav"
+    },
+    {
+      "phrase_id": "SCALE-0491",
+      "raw_query": "заказать услуги программиста 1с 49",
+      "normalized_query": "заказать услуги программиста 1с 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 50
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0492",
+      "raw_query": "внедрение 1с под ключ 49",
+      "normalized_query": "внедрение 1с под ключ 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 51
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0493",
+      "raw_query": "настройка 1с цена 49",
+      "normalized_query": "настройка 1с цена 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 52
+      },
+      "category": "commercial"
+    },
+    {
+      "phrase_id": "SCALE-0494",
+      "raw_query": "вакансии программист 1с 49",
+      "normalized_query": "вакансии программист 1с 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 53
+      },
+      "category": "career"
+    },
+    {
+      "phrase_id": "SCALE-0495",
+      "raw_query": "курсы 1с обучение 49",
+      "normalized_query": "курсы 1с обучение 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 54
+      },
+      "category": "education"
+    },
+    {
+      "phrase_id": "SCALE-0496",
+      "raw_query": "как настроить 1с самостоятельно 49",
+      "normalized_query": "как настроить 1с самостоятельно 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 55
+      },
+      "category": "diy"
+    },
+    {
+      "phrase_id": "SCALE-0497",
+      "raw_query": "скачать 1с бесплатно 49",
+      "normalized_query": "скачать 1с бесплатно 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 56
+      },
+      "category": "download"
+    },
+    {
+      "phrase_id": "SCALE-0498",
+      "raw_query": "1с не работает ошибка 49",
+      "normalized_query": "1с не работает ошибка 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 57
+      },
+      "category": "problem"
+    },
+    {
+      "phrase_id": "SCALE-0499",
+      "raw_query": "1с бухгалтерия 49",
+      "normalized_query": "1с бухгалтерия 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 58
+      },
+      "category": "topic"
+    },
+    {
+      "phrase_id": "SCALE-0500",
+      "raw_query": "corvonero официальный сайт 49",
+      "normalized_query": "corvonero официальный сайт 49",
+      "source_ids": [
+        "scale-fixture"
+      ],
+      "frequencies": {
+        "total": 59
+      },
+      "category": "nav"
+    }
+  ]
+}

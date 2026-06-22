@@ -9,8 +9,10 @@
 **Wave 1 overall:** `OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY`  
 **Wave 2 Core:** `OPERATIONAL` (`9d0265a`)  
 **Wave 2 Live Acquisition:** `VALIDATION PENDING`  
-**Wave 2.2:** `APPROVED — READY FOR CHECKPOINT` (checkpoint in progress)  
-**Wave 3:** `IMPLEMENTATION AUTHORIZED` (uncommitted — operator review required)  
+**Wave 2.2:** `CHECKPOINTED` (`021062b`)  
+**Wave 3 Core:** `APPROVED — CHECKPOINTED` (Wave 3.1 live model validation separate)  
+**Wave 3 Overall:** `LIVE MODEL VALIDATION IN PROGRESS` (Wave 3.1 uncommitted)  
+**Wave 4:** `BLOCKED UNTIL WAVE 3.1 QUALITY REVIEW`  
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
 **Corvonero default:** `FROZEN` — no Corvonero production work until Wave 3+ operator charter per item
 
@@ -24,7 +26,7 @@
 | 1.1 | Entry-point wiring and bypass closure | MARS Search PPC / MIG / ORCA | **APPROVED — CHECKPOINTED** (`715402f`) |
 | 1.2 | Legacy entry-point physical lockdown | MARS Search PPC / MIG / ORCA | **APPROVED — CHECKPOINTED** (`1f8fe08`) |
 | 2 | MIG evidence production | MIG | **2.1 CHECKPOINTED** (`f922b83`) — **2.2 OPERATOR REVIEW** — [search-ppc-evidence](../../mig/search-ppc-evidence/) |
-| 3 | ORCA production semantic intelligence | ORCA Semantic Intelligence | **BLOCKED UNTIL WAVE 2 OPERATIONAL APPROVAL** |
+| 3 | ORCA production semantic intelligence | ORCA Semantic Intelligence | **Wave 3 Core CHECKPOINTED** — `projects/orca/semantic-intelligence/production/` — Wave 3.1 live model validation uncommitted |
 | 4 | Analytical pack and AI PPC Strategist | Cross-system + Strategist role | Frozen |
 | 5 | Campaign production and QA | Campaign Production / ORCA | Frozen |
 | 6 | Commander and launch | Commander Export + Operator | Frozen |

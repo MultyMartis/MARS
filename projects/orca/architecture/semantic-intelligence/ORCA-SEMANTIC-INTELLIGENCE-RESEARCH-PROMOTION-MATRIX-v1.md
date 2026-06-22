@@ -89,7 +89,7 @@ Record promotion status for each major world-practice research recommendation in
 | Dependency | P0-C guideline; P0-D charter |
 | Implementation phase | P0-D/E |
 | Risks | Benchmark bias; annotation inconsistency |
-| Operator approval status | **APPROVED (D5 sizing)** |
+| Operator approval status | **PROPOSED — P0-D charter drafted** |
 
 ### 6. Double annotation
 
@@ -102,7 +102,7 @@ Record promotion status for each major world-practice research recommendation in
 | Dependency | P0-C guideline |
 | Implementation phase | P0-D |
 | Risks | Cost; inter-annotator disagreement volume |
-| Operator approval status | **PENDING charter** |
+| Operator approval status | **PROPOSED — P0-D charter drafted** |
 
 ### 7. Weak supervision
 

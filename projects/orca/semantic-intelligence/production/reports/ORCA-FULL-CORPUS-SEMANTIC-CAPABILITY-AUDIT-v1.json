@@ -1,0 +1,55 @@
+{
+  "audit_id": "orca-full-corpus-semantic-capability-audit-v1",
+  "date": "2026-06-23",
+  "overall_status": "ENFORCEMENT_CORE_OPERATIONAL_SEMANTIC_ENGINE_RULES_ONLY",
+  "wave_3_status": "IMPLEMENTED_OPERATOR_REVIEW_REQUIRED",
+  "components": {
+    "p0_a_architecture": "REUSABLE_DOCUMENTED_ONLY",
+    "p0_b_taxonomy": "REUSABLE_PARTIALLY_IMPLEMENTED",
+    "p0_c_annotation": "REUSABLE_DOCUMENTED_ONLY",
+    "p0_i_contract_loader": "OPERATIONAL",
+    "admission_orchestrator": "OPERATIONAL_PARTIALLY_IMPLEMENTED",
+    "invariant_validator": "OPERATIONAL",
+    "review_router_pilot": "OPERATIONAL",
+    "review_router_production": "IMPLEMENTED_WAVE3",
+    "legacy_adapter": "DIAGNOSTIC_ONLY",
+    "pilot_runtime": "DIAGNOSTIC_ONLY",
+    "pilot_assessor": "DIAGNOSTIC_ONLY_RULES",
+    "production_deterministic_assessor": "REUSABLE_FIXTURE_ONLY",
+    "production_full_corpus_runner": "IMPLEMENTED_WAVE3",
+    "corvonero_pipeline": "DIAGNOSTIC_ONLY_UNSAFE_AS_AUTHORITY",
+    "corvonero_corpus": "REUSABLE",
+    "corvonero_v1_semantic_outputs": "DIAGNOSTIC_ONLY_DO_NOT_PROMOTE",
+    "triumph_export_validators": "DOWNSTREAM_ONLY",
+    "classifier_llm": "MISSING",
+    "p0_d_benchmark": "DOCUMENTED_ONLY_ON_HOLD"
+  },
+  "semantic_decision_maker": "deterministic-assessor (regex/heuristic) — NOT live model",
+  "contracts_consumed_count": 17,
+  "pilot_metrics": {
+    "input": 200,
+    "accept": 77,
+    "reject": 53,
+    "abstain": 70,
+    "legacy_disagreement": 108,
+    "model_version": null
+  },
+  "abstain_dominant_reasons": {
+    "TOPIC_ONLY_INSUFFICIENT_EVIDENCE": 47,
+    "PROBLEM_QUERY_AMBIGUITY": 19,
+    "PRODUCT_WITHOUT_HIRE_SIGNAL": 2,
+    "SHORT_HEAD": 2
+  },
+  "full_corpus_output": "IMPLEMENTED_SYNTHETIC_SCALE_TEST_ONLY",
+  "corvonero_status": "FROZEN",
+  "reuse_vs_replace": {
+    "reuse": ["P0-A/B/C contracts", "I-01-I-07 enforcement", "Corvonero corpus layers", "Triumph export validators downstream"],
+    "replace": ["pilot-assessor as authority", "Corvonero v1 semantic decisions", "legacy regex as admission authority"],
+    "build_new": ["live semantic model provider", "P0-D benchmark classifier"]
+  },
+  "safe_unknown": [
+    "production_semantic_accuracy_with_live_model",
+    "corvonero_service_registry_runtime_pin",
+    "d3_threshold_compliance_at_corpus_scale"
+  ]
+}

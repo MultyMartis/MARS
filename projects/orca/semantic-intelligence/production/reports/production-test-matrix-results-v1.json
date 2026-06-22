@@ -1,0 +1,157 @@
+{
+  "passed": 30,
+  "total": 30,
+  "results": [
+    {
+      "id": 1,
+      "name": "explicit provider query → ACCEPT",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "explicit order/price query → ACCEPT",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "career query → REJECT",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "education query → REJECT",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "DIY query → REJECT or ABSTAIN",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "product-only query",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "navigational query",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "ambiguous problem query",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "short generic query",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "protected-intent overlap",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "low-confidence ACCEPT reassessment",
+      "pass": true
+    },
+    {
+      "id": 12,
+      "name": "ABSTAIN reassessment",
+      "pass": true
+    },
+    {
+      "id": 13,
+      "name": "assessor disagreement adjudication",
+      "pass": true
+    },
+    {
+      "id": 14,
+      "name": "invalid semantic record",
+      "pass": true
+    },
+    {
+      "id": 15,
+      "name": "full-corpus count mismatch",
+      "pass": true
+    },
+    {
+      "id": 16,
+      "name": "diagnostic sample substituted for corpus",
+      "pass": true
+    },
+    {
+      "id": 17,
+      "name": "tier assignment after ACCEPT only",
+      "pass": true
+    },
+    {
+      "id": 18,
+      "name": "frequency-only tiering blocked",
+      "pass": true
+    },
+    {
+      "id": 19,
+      "name": "ownership to nonexistent service blocked",
+      "pass": true
+    },
+    {
+      "id": 20,
+      "name": "multiple final owners blocked",
+      "pass": true
+    },
+    {
+      "id": 21,
+      "name": "mixed cluster blocked",
+      "pass": true
+    },
+    {
+      "id": 22,
+      "name": "orphan phrase detected",
+      "pass": true
+    },
+    {
+      "id": 23,
+      "name": "negative blocks accepted phrase",
+      "pass": true
+    },
+    {
+      "id": 24,
+      "name": "broad unsafe negative",
+      "pass": true
+    },
+    {
+      "id": 25,
+      "name": "bounded human-review queue",
+      "pass": true
+    },
+    {
+      "id": 26,
+      "name": "frozen project run blocked",
+      "pass": true
+    },
+    {
+      "id": 27,
+      "name": "partial batch falsely marked complete",
+      "pass": true
+    },
+    {
+      "id": 28,
+      "name": "resume preserves provenance",
+      "pass": true
+    },
+    {
+      "id": 29,
+      "name": "runtime contract checksum mismatch",
+      "pass": true
+    },
+    {
+      "id": 30,
+      "name": "output pack reconciliation",
+      "pass": true
+    }
+  ],
+  "at": "2026-06-22T21:20:19.809Z"
+}

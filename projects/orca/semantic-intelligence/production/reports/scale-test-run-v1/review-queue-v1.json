@@ -1,0 +1,140 @@
+{
+  "queue": [
+    {
+      "phrase_id": "SCALE-0023",
+      "raw_query": "настройка 1с цена 2",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ACCEPT",
+      "automated_decision": "ACCEPT",
+      "created_at": "2026-06-22T21:20:26.395Z"
+    },
+    {
+      "phrase_id": "SCALE-0051",
+      "raw_query": "заказать услуги программиста 1с 5",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ACCEPT",
+      "automated_decision": "ACCEPT",
+      "created_at": "2026-06-22T21:20:26.395Z"
+    },
+    {
+      "phrase_id": "SCALE-0087",
+      "raw_query": "скачать 1с бесплатно 8",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL REJECT",
+      "automated_decision": "REJECT",
+      "created_at": "2026-06-22T21:20:26.396Z"
+    },
+    {
+      "phrase_id": "SCALE-0110",
+      "raw_query": "corvonero официальный сайт 10",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL REJECT",
+      "automated_decision": "REJECT",
+      "created_at": "2026-06-22T21:20:26.396Z"
+    },
+    {
+      "phrase_id": "SCALE-0180",
+      "raw_query": "corvonero официальный сайт 17",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL REJECT",
+      "automated_decision": "REJECT",
+      "created_at": "2026-06-22T21:20:26.396Z"
+    },
+    {
+      "phrase_id": "SCALE-0252",
+      "raw_query": "внедрение 1с под ключ 25",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ACCEPT",
+      "automated_decision": "ACCEPT",
+      "created_at": "2026-06-22T21:20:26.397Z"
+    },
+    {
+      "phrase_id": "SCALE-0261",
+      "raw_query": "заказать услуги программиста 1с 26",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ACCEPT",
+      "automated_decision": "ACCEPT",
+      "created_at": "2026-06-22T21:20:26.397Z"
+    },
+    {
+      "phrase_id": "SCALE-0286",
+      "raw_query": "как настроить 1с самостоятельно 28",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ABSTAIN",
+      "automated_decision": "ABSTAIN",
+      "created_at": "2026-06-22T21:20:26.397Z"
+    },
+    {
+      "phrase_id": "SCALE-0303",
+      "raw_query": "настройка 1с цена 30",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ACCEPT",
+      "automated_decision": "ACCEPT",
+      "created_at": "2026-06-22T21:20:26.397Z"
+    },
+    {
+      "phrase_id": "SCALE-0304",
+      "raw_query": "вакансии программист 1с 30",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL REJECT",
+      "automated_decision": "REJECT",
+      "created_at": "2026-06-22T21:20:26.397Z"
+    },
+    {
+      "phrase_id": "SCALE-0348",
+      "raw_query": "1с не работает ошибка 34",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ABSTAIN",
+      "automated_decision": "ABSTAIN",
+      "created_at": "2026-06-22T21:20:26.398Z"
+    },
+    {
+      "phrase_id": "SCALE-0368",
+      "raw_query": "1с не работает ошибка 36",
+      "routes": [
+        "BOUNDED_QA_SAMPLE"
+      ],
+      "adjudication_outcome": "FINAL ABSTAIN",
+      "automated_decision": "ABSTAIN",
+      "created_at": "2026-06-22T21:20:26.398Z"
+    }
+  ],
+  "metrics": {
+    "total_corpus": 500,
+    "automated_final": 488,
+    "human_review": 12,
+    "reason_families": {
+      "BOUNDED_QA_SAMPLE": 12
+    },
+    "protected_classes": {
+      "PROTECTED_DOWNLOAD": 1,
+      "PROTECTED_NAVIGATION": 2,
+      "PROTECTED_CAREER": 1
+    },
+    "high_value_conflicts": 0,
+    "review_ratio": 0.024,
+    "automation_primary": true
+  }
+}

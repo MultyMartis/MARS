@@ -1,0 +1,20 @@
+{
+  "regression_corpus_id": "orca-semantic-regression-v1",
+  "version": "1.0.0",
+  "authority_class": "REGRESSION_FIXTURE",
+  "note": "Diagnostic records — not automatic gold truth",
+  "records": [
+    { "id": "REG-001", "raw_query": "найти программиста 1с", "expected_decision": "ACCEPT", "family": "provider_search", "provenance": "synthetic_positive" },
+    { "id": "REG-002", "raw_query": "стоимость внедрения 1с", "expected_decision": "ACCEPT", "family": "price_quote", "provenance": "synthetic_positive" },
+    { "id": "REG-003", "raw_query": "вакансии программист 1с москва", "expected_decision": "REJECT", "family": "career_vs_provider", "provenance": "protected_career" },
+    { "id": "REG-004", "raw_query": "курсы 1с с нуля", "expected_decision": "REJECT", "family": "education_vs_provider", "provenance": "protected_education" },
+    { "id": "REG-005", "raw_query": "как настроить 1с самостоятельно", "expected_decision": "REJECT", "family": "diy_vs_service", "provenance": "protected_diy" },
+    { "id": "REG-006", "raw_query": "1с управление торговлей", "expected_decision": "ABSTAIN", "family": "product_vs_service", "provenance": "ambiguous_product" },
+    { "id": "REG-007", "raw_query": "corvonero личный кабинет", "expected_decision": "REJECT", "family": "navigation", "provenance": "protected_nav" },
+    { "id": "REG-008", "raw_query": "1с не работает", "expected_decision": "ABSTAIN", "family": "problem_query", "provenance": "ambiguous_problem" },
+    { "id": "REG-009", "raw_query": "1с", "expected_decision": "ABSTAIN", "family": "short_generic", "provenance": "short_head" },
+    { "id": "REG-010", "raw_query": "программист 1с и вакансии", "expected_decision": "REJECT", "family": "protected_overlap", "provenance": "career_provider_ambiguity" },
+    { "id": "REG-011", "raw_query": "заказать доработку 1с", "expected_decision": "ACCEPT", "family": "high_value_commercial", "provenance": "triumph_structure" },
+    { "id": "REG-012", "raw_query": "скачать 1с торрент", "expected_decision": "REJECT", "family": "false_positive_corvonero", "provenance": "corvonero_diagnostic_failure" }
+  ]
+}

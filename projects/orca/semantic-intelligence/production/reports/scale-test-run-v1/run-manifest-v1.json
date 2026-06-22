@@ -1,0 +1,19 @@
+{
+  "run_id": "orca-sem-2026-06-22T21-20-26-340Z",
+  "pack_version": "semantic-output-pack-v1",
+  "generated_at": "2026-06-22T21:20:26.400Z",
+  "project_id": "scale-test-non-client",
+  "input_reconciliation": {
+    "expected_count": 500,
+    "processed_count": 500,
+    "reconciled": true
+  },
+  "runtime_versions": {
+    "runtime": "orca-semantic-production-v1.0.0",
+    "assessor": "deterministic-v1"
+  },
+  "contract_bundle": "p0-i-bundle-v1",
+  "checksums": {
+    "pack_body": "68552F743C349222F0F9C71D484CFF542A94898D82182B4A41D16AE8C2F9A926"
+  }
+}

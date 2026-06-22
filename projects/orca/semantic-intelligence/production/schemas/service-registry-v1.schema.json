@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-service-registry-v1",
+  "title": "ORCA Project Service Registry v1",
+  "type": "object",
+  "required": ["registry_id", "version", "services"],
+  "properties": {
+    "registry_id": { "type": "string" },
+    "version": { "type": "string" },
+    "project_id": { "type": "string" },
+    "geography": { "type": "string" },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["service_id", "name", "operator_status"],
+        "properties": {
+          "service_id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "included_tasks": { "type": "array", "items": { "type": "string" } },
+          "excluded_tasks": { "type": "array", "items": { "type": "string" } },
+          "target_client": { "type": "string" },
+          "geography": { "type": "string" },
+          "delivery_mode": { "type": "string" },
+          "commercial_priority": { "type": "number" },
+          "landing_candidates": { "type": "array", "items": { "type": "string" } },
+          "related_services": { "type": "array", "items": { "type": "string" } },
+          "prohibited_claims": { "type": "array", "items": { "type": "string" } },
+          "operator_status": { "enum": ["APPROVED", "DRAFT", "DEPRECATED"] }
+        }
+      }
+    }
+  }
+}

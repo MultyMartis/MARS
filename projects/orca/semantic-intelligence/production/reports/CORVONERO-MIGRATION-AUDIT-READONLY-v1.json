@@ -1,0 +1,43 @@
+{
+  "audit_id": "corvonero-migration-audit-readonly-v1",
+  "date": "2026-06-23",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "status": "FROZEN",
+  "production_classification_executed": false,
+  "source_count_reconciliation": {
+    "expected_row_count": 2370,
+    "canonical_registry_registered": 2370,
+    "normalized_corpus_registered": 2370,
+    "reconciled": true
+  },
+  "canonical_registry_migration": {
+    "ready": true,
+    "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+    "blocker": "project FROZEN — no production run authorized"
+  },
+  "business_scope": {
+    "sufficient_for_admission": "PARTIAL",
+    "path": "projects/orca/projects/corvonero-direct-v2-clean-room/intake/corvonero-direct-v2-business-intake-v1.json",
+    "approved": true,
+    "gaps": ["operator scope runtime pin to production assessor not validated"]
+  },
+  "service_registry": {
+    "exists_in_manifest": false,
+    "can_draft_from_intake": true,
+    "missing_fields": ["service_registry artifact path in manifest", "approved per-service landing candidates", "operator_status per service"],
+    "recommended_action": "Draft service-registry-v1.json from approved intake before unfrozen full rerun"
+  },
+  "lifecycle_repair_required": [
+    "Unfreeze requires operator charter",
+    "SPPC-05 FAILED — reset diagnostic v1 admission artifacts",
+    "Register service_registry artifact",
+    "Wave 3 production run with live model validation (Wave 3.1)",
+    "SPPC-10 remains VALIDATION PENDING for strategy authority"
+  ],
+  "fields_missing_for_migration": [
+    "service_registry",
+    "production_semantic_pack",
+    "validated_commercial_admission_registry"
+  ],
+  "corvonero_v1_semantic_core": "DIAGNOSTIC ONLY — DO NOT PROMOTE"
+}

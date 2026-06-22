@@ -1,0 +1,56 @@
+{
+  "decision_set_id": "wave-3-operator-decisions-v1",
+  "date": "2026-06-23",
+  "wave": "3",
+  "decisions": {
+    "W3-D1": {
+      "id": "W3-D1",
+      "subject": "Wave 2.2",
+      "status": "APPROVED — READY FOR CHECKPOINT"
+    },
+    "W3-D2": {
+      "id": "W3-D2",
+      "subject": "Wave 2 Core",
+      "status": "OPERATIONAL — LIVE PAID SERP VALIDATION PENDING"
+    },
+    "W3-D3": {
+      "id": "W3-D3",
+      "subject": "Wave 3",
+      "status": "ORCA FULL-CORPUS PRODUCTION SEMANTIC INTELLIGENCE — AUTHORIZED"
+    },
+    "W3-D4": {
+      "id": "W3-D4",
+      "subject": "Full corpus",
+      "status": "PRODUCTION RUNS MUST PROCESS COMPLETE REGISTERED CORPUS",
+      "diagnostic_subset_substitution": false
+    },
+    "W3-D5": {
+      "id": "W3-D5",
+      "subject": "Automation",
+      "status": "PRIMARY CLASSIFICATION AUTOMATED",
+      "human_review": "BOUNDED EXCEPTION ONLY"
+    },
+    "W3-D6": {
+      "id": "W3-D6",
+      "subject": "Commercial admission",
+      "status": "TOPICAL RELEVANCE INSUFFICIENT",
+      "primary_question": "What is the user likely trying to do next?"
+    },
+    "W3-D7": {
+      "id": "W3-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN",
+      "production_semantic_rerun": false,
+      "read_only_inspection": true
+    }
+  },
+  "wave_status": {
+    "wave_1": "OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY",
+    "wave_2_core": "OPERATIONAL",
+    "wave_2_live_acquisition": "VALIDATION PENDING",
+    "wave_2_2": "APPROVED — READY FOR CHECKPOINT",
+    "wave_3": "IMPLEMENTATION AUTHORIZED",
+    "wave_4": "BLOCKED UNTIL WAVE 3 APPROVAL",
+    "corvonero": "FROZEN"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "id": 1,
+      "name": "production run without manifest",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 2,
+      "name": "production run before SPPC-04",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 3,
+      "name": "pilot substituted for full corpus",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 4,
+      "name": "topical match used as positive authority",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 5,
+      "name": "ABSTAIN sent directly wholesale to operator",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 6,
+      "name": "reassessment skipped for risky ACCEPT",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 7,
+      "name": "tiers assigned before final ACCEPT",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 8,
+      "name": "ownership before admission",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 9,
+      "name": "multiple final owners",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 10,
+      "name": "clustering before ownership",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 11,
+      "name": "lexical-only cluster authority",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 12,
+      "name": "negatives before ownership",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 13,
+      "name": "negative conflicts with accepted demand",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 14,
+      "name": "partial run marked complete",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 15,
+      "name": "diagnostic output registered as production",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 16,
+      "name": "frozen project execution",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 17,
+      "name": "contract checksum mismatch",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 18,
+      "name": "missing service registry",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 19,
+      "name": "human review becomes primary classifier",
+      "pass": true,
+      "disposition": "BLOCKED"
+    },
+    {
+      "id": 20,
+      "name": "output pack counts do not reconcile",
+      "pass": true,
+      "disposition": "BLOCKED"
+    }
+  ]
+}
