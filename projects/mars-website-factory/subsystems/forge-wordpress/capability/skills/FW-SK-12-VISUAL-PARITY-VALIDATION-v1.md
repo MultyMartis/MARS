@@ -59,6 +59,10 @@ Compare local WordPress rendering against approved frontend baselines for visual
 - No frontend baseline
 - Operator rejects parity
 
+## FW-05 remediation note (2026-06-22)
+
+When local WordPress URL is unavailable (Profile B / static-only), capture **frontend reference** screenshots and mark WP-render diff as **NOT EXECUTED**. Document side-by-side review package for operator when Profile A enabled. Evidence: FWS-0001 FW-V-05 report.
+
 ## Report format
 ```text
 # REPORT — Forge WordPress Visual Parity Comparison

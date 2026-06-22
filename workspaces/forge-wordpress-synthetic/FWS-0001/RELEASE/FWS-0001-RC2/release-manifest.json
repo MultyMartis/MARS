@@ -1,0 +1,23 @@
+{
+  "release": "FWS-0001-RC2",
+  "date": "2026-06-23",
+  "synthetic": true,
+  "production": false,
+  "tested_runtime": "MLI-WP-SYN-001",
+  "wordpress": "7.0",
+  "php": "8.3.30",
+  "mysql": "8.4.3",
+  "packages": [
+    "fws-synthetic-theme.zip",
+    "fws-synthetic-core.zip"
+  ],
+  "checksums_sha256": {
+    "fws-synthetic-theme.zip": "884f1dc75e57f8475d85aedc63cf67b52ecc93ed20ee739b1cfc8b7b7e00883e",
+    "fws-synthetic-core.zip": "00fa511d4ce6e2ebcf92609bf87baf711ad8c3075ef21a06e8a0465b7638ee43"
+  },
+  "known_limitations": [
+    "ACF Pro workflow not proven",
+    "fws-0001.test hosts elevation pending for operator browser gate",
+    "Operator WV6 visual gate pending"
+  ]
+}

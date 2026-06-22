@@ -1,8 +1,10 @@
 # Forge WordPress — Implementation Capability Pack
 
 **Version:** v1  
-**Stage:** FW-04  
-**Date:** 2026-06-22  
+**Stage:** FW-05R complete — pilot wait  
+**Date:** 2026-06-23  
+**Synthetic case:** FWS-0001 — PROVEN WITH LIMITATIONS (live)  
+**Synthetic source:** Tracked in Git (narrow whitelist)
 **Type:** Prompt-driven human-supervised execution pack for Cursor Agent and Web-GPT
 
 ---

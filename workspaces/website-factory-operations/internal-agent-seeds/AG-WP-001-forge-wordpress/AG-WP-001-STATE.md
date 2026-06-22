@@ -2,7 +2,7 @@
 
 **Agent ID:** AG-WP-001  
 **Canonical Name:** Forge WordPress  
-**Last updated:** 2026-06-22  
+**Last updated:** 2026-06-23  
 **Charter:** Seed Foundation Only  
 
 ---
@@ -12,15 +12,42 @@
 | Dimension | Value |
 |-----------|-------|
 | **Status** | **SEED** (linked to subsystem **FOUNDATION / PRE-OPERATIONAL**) |
-| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — FW-04 **COMPLETE** |
-| **Cursor capability pack** | [FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) — **not** registry agent |
-| **Promotion decision** | [AG-WP-001 remains unregistered](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) until synthetic validation |
+| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — FW-05R **COMPLETE** |
+| **Cursor capability pack** | [FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) — live synthetic **PROVEN WITH LIMITATIONS** |
+| **Promotion decision** | [ELIGIBLE WITH DOCUMENTED LIMITATIONS; registry deferred](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) |
+| **Formal registration** | **NOT PERFORMED** — requires operator charter |
+| **Operational model** | **prompt-driven operational_doc_pack** |
+| **Autonomous runtime** | **NONE** |
+| **Production authority** | **NONE** |
 | **Knowledge Base** | **Empty** |
 | **Production Rules** | **Not Created** |
 | **ACF Rules** | **Not Created** |
 | **Theme Rules** | **Not Created** |
-| **Learning Source** | **FP-0002** — Shpigovsky.ru |
+| **Learning Source** | **FP-0002** — Shpigovsky.ru (WordPress not started) |
 | **Readiness** | **Learning Phase** |
+
+---
+
+## FW-05R checkpoint status (2026-06-23)
+
+```text
+AG-WP-001:
+ELIGIBLE WITH DOCUMENTED LIMITATIONS
+
+Operational model:
+prompt-driven operational_doc_pack
+
+Formal registration:
+REQUIRES OPERATOR CHARTER
+
+Autonomous runtime:
+NONE
+
+Production authority:
+NONE
+```
+
+**Not registered in `agents/registry.md`.** Do not use term «autonomous WordPress agent».
 
 ---
 
@@ -37,19 +64,9 @@
 ## What «ready» does NOT mean
 
 - Not ready for autonomous WordPress production
-- Not ready for registry promotion
+- Not ready for registry promotion without charter
 - Not ready for client-facing «agent» claims
 - Not ready for rule enforcement
-
----
-
-## Next state transitions (indicative only)
-
-| Future state | Prerequisite (indicative) |
-|--------------|---------------------------|
-| First knowledge entries | FP-0002 WordPress production lane started + operator capture |
-| Production Rules draft | Repeatable evidence + human charter — **not in SEED scope** |
-| SEED → operational doc pack | Explicit promotion charter — **SAFE UNKNOWN** criteria |
 
 ---
 

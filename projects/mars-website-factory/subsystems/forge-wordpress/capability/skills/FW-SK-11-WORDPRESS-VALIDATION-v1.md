@@ -61,10 +61,7 @@ Operator reviews blocker resolution.
 - Blocking validator failure unresolved
 - Local env unavailable when required — report PARTIAL
 
-## Report format
-```text
-# REPORT — Forge WordPress Validation Pass
-## Per-validator verdicts
-## Blockers
-## WV6 status: DEFERRED to FW-SK-12
-```
+## FW-05 remediation note (2026-06-22)
+
+When host PHP is unavailable, mark WV2 (`php -l`, PHPCS) as **NOT EXECUTED** and perform static security/structure review. Do not claim PASS for runners that did not run. Evidence: FWS-0001 FW-V-02 report.
+

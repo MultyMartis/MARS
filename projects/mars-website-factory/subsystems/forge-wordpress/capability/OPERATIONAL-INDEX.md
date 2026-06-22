@@ -10,15 +10,13 @@
 
 ```text
 FW-04 — COMPLETE
-FW-05 — NEXT
-Prompt-driven capability: DOCUMENTED / READY
-Primary specialist: CREATED
-Skills: CREATED (14)
-Validators: CREATED (7)
-Synthetic validation: NOT STARTED
-Local environment: NOT READY
-Agent registration: NOT REGISTERED
-Client pilot: NOT READY
+FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-06 — WAITING FOR FP-0002 FRONTEND
+Operator WV6: PENDING
+Direct local domain: PENDING HOSTS ELEVATION
+Agent registration: NOT REGISTERED — ELIGIBLE WITH DOCUMENTED LIMITATIONS
+Client pilot: NOT STARTED
 ```
 
 ---

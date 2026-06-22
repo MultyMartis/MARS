@@ -18,7 +18,7 @@ Documentation-first **WordPress implementation subsystem** of MARS Website Facto
 
 ---
 
-## Status (FW-04 complete)
+## Status (FW-05R complete — pilot wait)
 
 ```text
 FW-00 — COMPLETE
@@ -26,7 +26,9 @@ FW-01 — COMPLETE
 FW-02 — COMPLETE
 FW-03 — COMPLETE
 FW-04 — COMPLETE
-FW-05 — NEXT
+FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-06 — AUTHORIZED BUT WAITING FOR APPROVED CLIENT FRONTEND
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
@@ -34,14 +36,17 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Prompt-driven implementation capability: DOCUMENTED
-Primary specialist profile: CREATED
-Skills: CREATED
-Validators: CREATED
-Synthetic validation: NOT STARTED
-Local environment: NOT READY
+Prompt-driven implementation capability: PROVEN WITH LIMITATIONS (FWS-0001 live)
+Primary specialist profile: PROVEN (live synthetic)
+Skills: PROVEN WITH LIMITATIONS
+Validators: PROVEN (FW-V-01–07 live)
+Synthetic validation: COMPLETE (static + live)
+Synthetic source: TRACKED in Git (narrow whitelist)
+Local environment: PROVEN WITH LIMITATIONS (MLI Profile A)
+Direct local domain: PENDING HOSTS ELEVATION
+Operator WV6: PENDING
 Agent registration: NOT REGISTERED
-Client pilot: NOT READY
+Client pilot: NOT STARTED — WAIT FOR FP-0002 FRONTEND
 ```
 
 **Lifecycle:** `FOUNDATION / PRE-OPERATIONAL`

@@ -1,0 +1,23 @@
+<section class="services-teaser">
+  <div class="container">
+    <h2 class="section-title">Тестовые услуги</h2>
+    <div class="services-grid">
+      @@include('partials/components/service-card.html', {
+        "title": "Тестовая услуга A",
+        "text": "Синтетическое описание для&nbsp;карточки услуги.",
+        "url": "service-single.html"
+      })
+      @@include('partials/components/service-card.html', {
+        "title": "Тестовая услуга B",
+        "text": "Демонстрационный проект без&nbsp;клиентского брендинга.",
+        "url": "service-single.html"
+      })
+      @@include('partials/components/service-card.html', {
+        "title": "Тестовая услуга C",
+        "text": "Контент для&nbsp;проверки responsive output.",
+        "url": "service-single.html"
+      })
+    </div>
+    <a class="btn btn--ghost services-teaser__more" href="services.html">Все услуги</a>
+  </div>
+</section>

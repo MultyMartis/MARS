@@ -2,7 +2,7 @@
 
 **Subsystem:** Forge WordPress  
 **Version:** v1 (high-level stages only)  
-**Date:** 2026-06-22
+**Date:** 2026-06-23
 
 ---
 
@@ -16,7 +16,8 @@
 | **FW-03** | Tooling and Validation Design | **COMPLETE** | Environment, runners, commands, profiles — **not** runtime |
 | **FW-04** | Implementation Capability Construction | **COMPLETE** | Specialist, skills, validators, protocols — prompt-driven |
 | **FW-05** | Local Enablement and Synthetic Validation | **COMPLETE** | FWS-0001 — PROVEN WITH LIMITATIONS |
-| **FW-06** | Pilot Intake | **NEXT** | Charter + candidate approval |
+| **FW-05R** | Live Synthetic Runtime Validation | **COMPLETE** | MLI-WP-SYN-001 — PROVEN WITH LIMITATIONS |
+| **FW-06** | Pilot Intake | **WAITING** | Authorized — waiting for FP-0002 frontend completion |
 | **FW-07** | First Client Pilot | **PLANNED** | Probable: FP-0002 — eligibility TBD at FW-06 |
 | **FW-08** | WPilot Handoff Validation | **PLANNED** | Operational boundary proof on DEV/staging |
 
@@ -41,6 +42,7 @@ FW-02 — COMPLETE
 FW-03 — COMPLETE
 FW-04 — COMPLETE
 FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-06 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
@@ -49,16 +51,20 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Prompt-driven implementation capability: PROVEN WITH LIMITATIONS (synthetic)
-Primary specialist profile: PROVEN (synthetic)
+Prompt-driven implementation capability: PROVEN WITH LIMITATIONS (live synthetic)
+Primary specialist profile: PROVEN (live synthetic)
 Skills: PROVEN WITH LIMITATIONS
-Validators: PROVEN
-Synthetic validation: COMPLETE (FWS-0001)
-Local environment: PARTIAL (Profile B only)
-MLI Laragon profile: ENABLED — MLI-01 COMPLETE
-FW-05R: HOLD until MLI-03
+Validators: PROVEN (FW-V-01–07 live reports)
+Synthetic validation: COMPLETE (FWS-0001 static + live)
+Local environment: PROVEN WITH LIMITATIONS (MLI Profile A on Laragon)
+MLI Laragon profile: ENABLED — MLI-03 COMPLETE
+FW-05R: COMPLETE
+FW-06 — AUTHORIZED BUT WAITING FOR APPROVED CLIENT FRONTEND
+Operator WV6: PENDING
+Direct local domain: PENDING HOSTS ELEVATION
+Synthetic source: TRACKED in Git
 Agent registration: NOT REGISTERED
-Client pilot: READY FOR FW-06 INTAKE (not auto-ready)
+Client pilot: NOT STARTED
 ```
 
 **Lifecycle:** `FOUNDATION / PRE-OPERATIONAL` — not OPERATIONAL until FW-06+ client pilot evidence.
@@ -104,4 +110,4 @@ Website Factory program roadmap: [projects/mars-website-factory/roadmap.md](../.
 
 ---
 
-*Subsystem roadmap v1 — updated FW-04 complete.*
+*Subsystem roadmap v1 — updated FW-05R complete.*

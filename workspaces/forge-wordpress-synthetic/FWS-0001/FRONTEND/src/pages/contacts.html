@@ -1,0 +1,14 @@
+@@include('partials/layout/head.html', {
+  "title": "Контакты — Демонстрационный проект",
+  "description": "Синтетическая контактная страница.",
+  "bodyClass": "page-contacts"
+})
+<section class="page-intro">
+  <div class="container">
+    <h1 class="page-intro__title">Контакты</h1>
+    <p class="page-intro__lead">Синтетические контактные данные для&nbsp;локальной валидации.</p>
+  </div>
+</section>
+@@include('partials/sections/contact-block.html')
+@@include('partials/sections/faq.html', { "faqId": "contacts-faq" })
+@@include('partials/layout/page-close.html')

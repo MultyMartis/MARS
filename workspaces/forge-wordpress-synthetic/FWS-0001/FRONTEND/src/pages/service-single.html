@@ -1,0 +1,28 @@
+@@include('partials/layout/head.html', {
+  "title": "Тестовая услуга — Демонстрационный проект",
+  "description": "Одиночная страница синтетической услуги.",
+  "bodyClass": "page-service-single"
+})
+<article class="service-single">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span aria-hidden="true">/</span>
+      <a href="services.html">Услуги</a>
+      <span aria-hidden="true">/</span>
+      <span>Тестовая услуга</span>
+    </nav>
+    <h1 class="service-single__title">Тестовая услуга</h1>
+    <p class="service-single__excerpt">Краткое описание синтетической услуги для&nbsp;валидации single template.</p>
+    <div class="service-single__content">
+      <p>Это демонстрационный проект Forge WordPress. Контент искусственный и&nbsp;не&nbsp;относится к&nbsp;клиентским данным.</p>
+      <ul>
+        <li>Проверка editable regions</li>
+        <li>Проверка ACF bindings</li>
+        <li>Проверка visual parity</li>
+      </ul>
+    </div>
+    <a class="btn btn--primary" href="contacts.html">Заказать консультацию</a>
+  </div>
+</article>
+@@include('partials/layout/page-close.html')

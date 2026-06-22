@@ -52,6 +52,7 @@
 | **Web server** | Apache 2.4.66 |
 | **mod_rewrite** | enabled |
 | **MySQL bind-address** | 127.0.0.1 (hardened) |
+| **MySQL X Protocol** | disabled (`mysqlx=0`) |
 | **WP-CLI** | 2.12.0 — `D:\MARS-Localhost\tools\wp-cli\` |
 
 ---
@@ -80,15 +81,15 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
 
 ---
 
-## Packages (MLI-03 state)
+## Packages (current state — post FW-05R)
 
 | Package | Status |
 |---------|--------|
 | WordPress core 7.0 ru_RU | installed |
 | Default bundled theme | present |
-| **Forge theme** | **NOT installed** |
-| **Forge plugin** | **NOT installed** |
-| Third-party plugins | none required for MLI-03 proof |
+| **Forge theme `fws-synthetic`** | **installed, active** |
+| **Forge plugin `fws-synthetic-core`** | **installed, active** |
+| ACF Free 6.8.4 | **installed, active** |
 
 ---
 
@@ -98,7 +99,7 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
 |-------|--------|-------|
 | HTTP smoke | **PASS** (with Host header or hosts) | WordPress front/admin reachable |
 | Hosts `mli-smoke-001.test` | **PASS** | Shared MLI managed block |
-| Hosts `fws-0001.test` | **PENDING ELEVATION** | Multi-domain hosts script updated |
+| Hosts `fws-0001.test` | **PENDING ELEVATION** | FW-05R closure 2026-06-23: `add-mli-host.ps1` exit 3; Host-header smoke PASS; direct URL NOT EXECUTED |
 | HTTPS cert generated | **YES** | `laragon\etc\ssl\fws-0001.test.crt` |
 | HTTPS smoke (Playwright) | **PASS WITH UNTRUSTED LOCAL CA** | `ignoreHTTPSErrors: true` — MLI-02 pattern |
 | WP-CLI checksums | verify on consumer handoff | `wp core verify-checksums` |
@@ -109,10 +110,10 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
 
 | Field | Value |
 |-------|-------|
-| **Backup state** | none |
-| **Rollback state** | none |
-| **Last validation** | 2026-06-23 — MLI-03 WordPress runtime profile provisioning |
-| **Last validation report** | *(pending dedicated MLI-03 smoke report)* |
+| **Backup state** | `pre-forge-fw05r` — `D:\MARS-Localhost\backups\wordpress\synthetic\fws-0001\pre-forge-fw05r` |
+| **Rollback state** | pre-forge-fw05r available |
+| **Last validation** | 2026-06-23 — FW-05R Forge live synthetic validation |
+| **Last validation report** | [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md](../../mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md) |
 
 ---
 
@@ -123,7 +124,8 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
 | **Purpose** | Synthetic WordPress capability proof for Forge FWS-0001 |
 | **Data class** | Synthetic fixtures only — no client PII |
 | **Reset** | Permitted after evidence archived per backup policy |
-| **FW-05R** | Consumer validation **HOLD** until MLI-03 accepted + Forge packages installed |
+| **FW-05R** | Consumer validation **COMPLETE** (2026-06-23) — PROVEN WITH LIMITATIONS; WV6 pending; direct domain gate pending hosts elevation |
+| **Forge consumer** | Implementation consumer only — MLI remains runtime provider |
 | **FP-0002** | **Out of scope** — separate future `projects` runtime |
 
 ---
@@ -152,8 +154,8 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
   "implementation_owner": "forge-wordpress",
   "operations_owner": "operator",
   "production_target": "NONE",
-  "backup_state": "none",
-  "rollback_state": "none",
+  "backup_state": "pre-forge-fw05r",
+  "rollback_state": "pre-forge-fw05r",
   "secrets_location": "C:\\AI MARS\\local\\mli\\fws-0001\\runtime.env",
   "current_status": "active",
   "last_validation": "2026-06-23"

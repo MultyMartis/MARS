@@ -1,0 +1,33 @@
+{
+    "key": "group_fws_options",
+    "title": "FWS — Глобальные опции (документация)",
+    "fields": [
+        {
+            "key": "field_fws_options_notice",
+            "label": "Settings API fallback",
+            "name": "fws_options_notice",
+            "type": "message",
+            "message": "Глобальные опции (телефон, email, адрес, CTA title/text) управляются через нативный Settings API темы: Внешний вид → FWS Synthetic. ACF Options Page требует ACF Pro и не используется в FWS-0001. Поля: phone, email, address, cta_title, cta_text — option name fws_synthetic_options.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-fws-synthetic-disabled"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": false,
+    "description": "Документация: глобальные опции через theme inc/options.php (Settings API), не через ACF.",
+    "show_in_rest": 0,
+    "modified": 1750610000
+}

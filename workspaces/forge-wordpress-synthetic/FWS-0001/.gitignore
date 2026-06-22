@@ -1,0 +1,16 @@
+# FWS-0001 synthetic workspace — runtime and generated artifacts
+node_modules/
+FRONTEND/node_modules/
+FRONTEND/dist/
+TEMP/
+VALIDATION/rendered/
+VALIDATION/diff/
+WORDPRESS/runtime-config/wp-data/
+WORDPRESS/runtime-config/playground-export/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.sql
+*.sqlite

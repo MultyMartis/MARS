@@ -23,7 +23,7 @@
 
 | Runtime ID | Synthetic / Project ID | Class | Slug | Domain | Physical root | Database | DB user | Table prefix | WP version | Locale | Manifest | Secrets path | Production | Status | Last verified |
 |------------|------------------------|-------|------|--------|---------------|----------|---------|--------------|------------|--------|----------|--------------|------------|--------|---------------|
-| MLI-WP-SYN-001 | FWS-0001 | synthetic | fws-0001 | fws-0001.test | `D:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` | `mars_wp_fws0001` | `mli_fws0001_app` | `mli_` | 7.0 | ru_RU | [MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) | `C:\AI MARS\local\mli\fws-0001\runtime.env` | **NONE** | active | 2026-06-23 |
+| MLI-WP-SYN-001 | FWS-0001 | synthetic | fws-0001 | fws-0001.test | `D:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` | `mars_wp_fws0001` | `mli_fws0001_app` | `mli_` | 7.0 | ru_RU | [MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) | `C:\AI MARS\local\mli\fws-0001\runtime.env` | **NONE** | active | 2026-06-23 (FW-05R) |
 
 ---
 
@@ -47,10 +47,12 @@ Applies to all rows unless manifest overrides:
 | Check | Result |
 |-------|--------|
 | Hosts `mli-smoke-001.test` | **PASS** |
-| Hosts `fws-0001.test` | **PENDING ELEVATION** (multi-domain script updated) |
+| Hosts `fws-0001.test` | **PENDING ELEVATION** — HTTP 200 via Host header (FW-05R) |
 | HTTPS cert | Generated |
 | HTTPS smoke | **PASS WITH UNTRUSTED LOCAL CA** (when hosts present) |
-| Forge theme/plugin | **NOT installed** |
+| Forge theme/plugin | **INSTALLED** — fws-synthetic + fws-synthetic-core (FW-05R) |
+| ACF Free | **ACTIVE** — 6.8.4 |
+| MySQL X Protocol 33060 | **DISABLED** — `mysqlx=0` |
 
 ---
 

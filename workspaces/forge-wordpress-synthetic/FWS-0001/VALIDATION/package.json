@@ -1,0 +1,13 @@
+{
+  "name": "fws-0001-validation",
+  "private": true,
+  "scripts": {
+    "capture:reference": "node scripts/capture-reference.mjs",
+    "capture:static-review": "node scripts/static-structure-review.mjs",
+    "package:release": "node scripts/package-release.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0"
+  }
+}

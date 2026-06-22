@@ -1,0 +1,134 @@
+{
+    "key": "group_fws_home",
+    "title": "FWS — Главная (Hero + FAQ)",
+    "fields": [
+        {
+            "key": "field_fws_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_fws_hero_eyebrow",
+            "label": "Подзаголовок (eyebrow)",
+            "name": "hero_eyebrow",
+            "type": "text",
+            "instructions": "Строка над заголовком hero-блока.",
+            "required": 0
+        },
+        {
+            "key": "field_fws_hero_title",
+            "label": "Заголовок",
+            "name": "hero_title",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_fws_hero_text",
+            "label": "Текст",
+            "name": "hero_text",
+            "type": "textarea",
+            "rows": 3,
+            "required": 0
+        },
+        {
+            "key": "field_fws_hero_btn_primary_label",
+            "label": "Кнопка 1 — подпись",
+            "name": "hero_btn_primary_label",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_fws_hero_btn_primary_url",
+            "label": "Кнопка 1 — URL",
+            "name": "hero_btn_primary_url",
+            "type": "url",
+            "required": 0
+        },
+        {
+            "key": "field_fws_hero_btn_secondary_label",
+            "label": "Кнопка 2 — подпись",
+            "name": "hero_btn_secondary_label",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_fws_hero_btn_secondary_url",
+            "label": "Кнопка 2 — URL",
+            "name": "hero_btn_secondary_url",
+            "type": "url",
+            "required": 0
+        },
+        {
+            "key": "field_fws_faq_tab",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_fws_faq_q1",
+            "label": "Вопрос 1",
+            "name": "faq_q1",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_fws_faq_a1",
+            "label": "Ответ 1",
+            "name": "faq_a1",
+            "type": "textarea",
+            "rows": 3,
+            "required": 0
+        },
+        {
+            "key": "field_fws_faq_q2",
+            "label": "Вопрос 2",
+            "name": "faq_q2",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_fws_faq_a2",
+            "label": "Ответ 2",
+            "name": "faq_a2",
+            "type": "textarea",
+            "rows": 3,
+            "required": 0
+        },
+        {
+            "key": "field_fws_faq_q3",
+            "label": "Вопрос 3",
+            "name": "faq_q3",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_fws_faq_a3",
+            "label": "Ответ 3",
+            "name": "faq_a3",
+            "type": "textarea",
+            "rows": 3,
+            "required": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "ACF Free compatible: text, textarea, url, tab. FAQ — 3 пары полей вместо repeater.",
+    "show_in_rest": 0,
+    "modified": 1750610000
+}

@@ -1,0 +1,293 @@
+$color-primary: #1a5fb4;
+$color-text: #1e1e1e;
+$color-muted: #5c5c5c;
+$color-bg: #f6f8fb;
+$color-border: #d8dee9;
+$container-max: 1140px;
+$pad-desktop: 50px;
+$pad-mobile: 10px;
+
+@mixin container {
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-inline: $pad-desktop;
+  @media (max-width: 1024px) {
+    padding-inline: $pad-mobile;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: $color-text;
+  line-height: 1.5;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $color-primary;
+}
+
+.container {
+  @include container;
+}
+
+.section-title {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  &--primary {
+    background: $color-primary;
+    color: #fff;
+  }
+  &--ghost {
+    background: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.site-header {
+  border-bottom: 1px solid $color-border;
+  background: #fff;
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 72px;
+  }
+  &__logo {
+    font-weight: 700;
+    color: $color-text;
+    text-decoration: none;
+  }
+  &__toggle {
+    display: none;
+    @media (max-width: 1024px) {
+      display: inline-flex;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    @media (max-width: 1024px) {
+      display: none;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: #fff;
+      border-bottom: 1px solid $color-border;
+      padding: 1rem $pad-mobile;
+      &.is-open {
+        display: flex;
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
+}
+
+.hero {
+  background: $color-bg;
+  padding: 4rem 0;
+  &__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 1rem;
+    max-width: 18ch;
+  }
+  &__text {
+    max-width: 48ch;
+    color: $color-muted;
+  }
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: #fff;
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  &__text {
+    color: $color-muted;
+    margin: 0 0 1rem;
+  }
+}
+
+.services-teaser,
+.services-archive,
+.faq,
+.contact-block,
+.cta-global,
+.page-intro {
+  padding: 3rem 0;
+}
+
+.page-intro__title {
+  margin: 0 0 0.5rem;
+}
+
+.faq__button {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.faq__panel {
+  padding: 0 1rem 1rem;
+}
+
+.faq__item + .faq__item {
+  margin-top: 0.75rem;
+}
+
+.contact-block__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form__field {
+  display: block;
+  margin-bottom: 1rem;
+  span {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    font: inherit;
+  }
+}
+
+.cta-global {
+  background: $color-primary;
+  color: #fff;
+  &__inner {
+    text-align: center;
+  }
+  &__title,
+  &__text {
+    color: #fff;
+  }
+  .btn--primary {
+    background: #fff;
+    color: $color-primary;
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $color-border;
+  padding: 2rem 0;
+  background: #fff;
+  &__inner {
+    @include container;
+    display: grid;
+    gap: 1rem;
+  }
+  &__nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    a {
+      color: $color-text;
+      text-decoration: none;
+    }
+  }
+  &__copy {
+    color: $color-muted;
+    margin: 0;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: $color-muted;
+  a {
+    color: $color-primary;
+  }
+}
+
+.service-single {
+  padding: 2rem 0 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

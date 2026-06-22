@@ -7,27 +7,53 @@
 
 ---
 
-## Decision
+## Decision (FW-05R update — 2026-06-23)
 
 ```text
 AG-WP-001 remains UNREGISTERED.
-The primary specialist profile becomes operational_doc_pack only after synthetic validation.
-Formal agent registration is deferred until proven execution.
+Prompt-driven operational_doc_pack candidate: ELIGIBLE WITH DOCUMENTED LIMITATIONS.
+Formal agent registration: STILL REQUIRES OPERATOR CHARTER.
 ```
 
 **No row added to `agents/registry.md`.**
 
 ---
 
-## Context
+## FW-05 evidence
 
 | Item | State |
 |------|-------|
-| AG-WP-001 seed | Exists at `workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/` |
-| Canonical subsystem | `projects/mars-website-factory/subsystems/forge-wordpress/` |
-| FW-04 primary specialist | `capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md` |
-| Runtime | None |
-| Synthetic validation | Not started (FW-05) |
+| Synthetic case FWS-0001 | COMPLETE |
+| Synthetic outcome (static) | PROVEN WITH LIMITATIONS |
+| Registry promotion | NOT PERFORMED |
+
+---
+
+## FW-05R evidence (2026-06-23)
+
+| Item | State |
+|------|-------|
+| Live runtime MLI-WP-SYN-001 | VALIDATED |
+| Live synthetic outcome | PROVEN WITH LIMITATIONS |
+| PHP syntax / PHPCS / routes | PASS (with documented PHPCS residuals) |
+| Visual parity | PASS WITH DOCUMENTED DEVIATIONS — WV6 PENDING |
+| Registry promotion | NOT PERFORMED — charter still required |
+| Doc pack eligibility | **ELIGIBLE WITH DOCUMENTED LIMITATIONS** |
+
+---
+
+## FW-05R checkpoint (2026-06-23)
+
+```text
+AG-WP-001:
+ELIGIBLE WITH DOCUMENTED LIMITATIONS
+
+Operational model: prompt-driven operational_doc_pack
+Formal registration: REQUIRES OPERATOR CHARTER
+Autonomous runtime: NONE
+Production authority: NONE
+Registry row: NOT ADDED
+```
 
 ---
 
@@ -57,10 +83,11 @@ agents/registry.md
 
 ## Promotion prerequisites (future)
 
-1. FW-05 synthetic validation **PASS**
-2. Capability readiness matrix — client pilot eligibility review
-3. Operator charter for agent registration
-4. Separate decision record — not automatic from FW-04
+1. FW-05 + FW-05R synthetic validation **PASS WITH LIMITATIONS** — **MET**
+2. Capability readiness matrix — client pilot eligibility review — **FW-06**
+3. Operator charter for agent registration — **OPEN**
+4. Operator WV6 on live visual parity — **PENDING**
+5. Separate decision record — not automatic from FW-04 or FW-05R
 
 ---
 

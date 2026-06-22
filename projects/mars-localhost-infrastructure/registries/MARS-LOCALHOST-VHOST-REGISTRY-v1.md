@@ -23,7 +23,7 @@
 | Runtime ID | Slug | Domain | Platform | Class | Physical root | Junction path | Apache vhost path | HTTPS | Hosts status | Manifest | State | Last verified |
 |------------|------|--------|----------|-------|---------------|---------------|-------------------|-------|--------------|----------|-------|---------------|
 | MLI-SMOKE-001 | mli-smoke-001 | mli-smoke-001.test | php | synthetic | `D:\MARS-Localhost\sites\php\synthetic\mli-smoke-001` | `laragon\www\mli-smoke-001` (optional) | `etc\apache2\sites-enabled\mli-smoke-001.test.conf` | **YES** — `mli-smoke-001.test-ssl.conf` | **PASS** — managed block | [MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) | active | 2026-06-23 |
-| MLI-WP-SYN-001 | fws-0001 | fws-0001.test | wordpress | synthetic | `D:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` | `laragon\www\fws-0001` | `etc\apache2\sites-enabled\fws-0001.test.conf` | **YES** — `fws-0001.test-ssl.conf` | **PENDING ELEVATION** — run `tools\hosts\add-mli-host` (multi-domain) | [MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) | active / validated | 2026-06-23 |
+| MLI-WP-SYN-001 | fws-0001 | fws-0001.test | wordpress | synthetic | `D:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` | `laragon\www\fws-0001` | `etc\apache2\sites-enabled\fws-0001.test.conf` | **YES** — `fws-0001.test-ssl.conf` | **PENDING ELEVATION** — FW-05R closure pass 2026-06-23: `add-mli-host.ps1` exit 3 from Cursor; operator elevation required | [MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) | active / validated | 2026-06-23 |
 
 ---
 

@@ -1,0 +1,33 @@
+{
+    "key": "group_fws_service",
+    "title": "FWS — Услуга",
+    "fields": [
+        {
+            "key": "field_fws_short_description",
+            "label": "Краткое описание",
+            "name": "short_description",
+            "type": "textarea",
+            "instructions": "Override для excerpt на карточке и single. При отсутствии ACF используется post meta short_description.",
+            "rows": 4,
+            "required": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "ACF Free compatible fields for CPT service.",
+    "show_in_rest": 0,
+    "modified": 1750610000
+}

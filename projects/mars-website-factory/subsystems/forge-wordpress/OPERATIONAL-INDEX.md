@@ -15,6 +15,7 @@ FW-02 — COMPLETE
 FW-03 — COMPLETE
 FW-04 — COMPLETE
 FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-06 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
@@ -23,16 +24,20 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Prompt-driven implementation capability: PROVEN WITH LIMITATIONS
-Primary specialist profile: PROVEN (synthetic)
+Prompt-driven implementation capability: PROVEN WITH LIMITATIONS (live synthetic)
+Primary specialist profile: PROVEN (live synthetic)
 Skills: PROVEN WITH LIMITATIONS
-Validators: PROVEN
-Synthetic validation: COMPLETE (FWS-0001)
-Local environment: PARTIAL (Profile B Playground only)
-Local Laragon profile: ENABLED (MLI-01) — Laragon at D:\MARS-Localhost\laragon
-FW-05R (full Profile A): HOLD until MLI-03 WordPress runtime profile
+Validators: PROVEN (live reports)
+Synthetic validation: COMPLETE (FWS-0001 static + live)
+Local environment: PROVEN WITH LIMITATIONS (MLI Profile A)
+Local Laragon profile: ENABLED (MLI-03) — Laragon at D:\MARS-Localhost\laragon
+FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-06 — AUTHORIZED BUT WAITING FOR APPROVED CLIENT FRONTEND
+Operator WV6: PENDING
+Direct local domain: PENDING HOSTS ELEVATION
+Synthetic source: TRACKED (Git whitelist)
 Agent registration: NOT REGISTERED
-Client pilot: READY FOR FW-06 INTAKE
+Client pilot: NOT STARTED — WAIT FOR FP-0002 FRONTEND
 ```
 
 | Field | Value |
@@ -205,9 +210,9 @@ WPilot does **not** own theme/content architecture.
 ## Next authorized stage
 
 ```text
-FW-05 — Local Enablement and Synthetic Validation
+FW-06 — Pilot Intake
 ```
 
 ---
 
-*Last updated: 2026-06-22 — FW-04 Implementation Capability Construction complete.*
+*Last updated: 2026-06-23 — FW-05R Live Synthetic Runtime Validation complete.*

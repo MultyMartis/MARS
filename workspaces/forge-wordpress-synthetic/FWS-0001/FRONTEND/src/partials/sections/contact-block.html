@@ -1,0 +1,26 @@
+<section class="contact-block">
+  <div class="container contact-block__inner">
+    <div class="contact-block__info">
+      <h2 class="section-title">Связаться с&nbsp;нами</h2>
+      <p>Телефон: <a href="tel:+70000000000">+7&nbsp;(000)&nbsp;000-00-00</a></p>
+      <p>Email: <a href="mailto:synthetic@example.invalid">synthetic@example.invalid</a></p>
+      <p>Адрес: синтетический, без&nbsp;реальной геолокации</p>
+    </div>
+    <form class="contact-form" data-contact-form action="#" method="post" novalidate>
+      <label class="contact-form__field">
+        <span>Имя</span>
+        <input type="text" name="name" required autocomplete="name">
+      </label>
+      <label class="contact-form__field">
+        <span>Email</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label class="contact-form__field">
+        <span>Сообщение</span>
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <button class="btn btn--primary" type="submit">Отправить</button>
+      <p class="contact-form__note" data-form-status hidden role="status"></p>
+    </form>
+  </div>
+</section>

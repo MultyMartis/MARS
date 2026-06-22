@@ -113,7 +113,7 @@ Full WordPress-specific rules: [MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.m
 | Domain | Status |
 |--------|--------|
 | `mli-smoke-001.test` | **PASS** — managed block present |
-| `fws-0001.test` | **PENDING ELEVATION** — multi-domain script updated; operator elevation required |
+| `fws-0001.test` | **PENDING ELEVATION** — FW-05R closure 2026-06-23: `add-mli-host.ps1` exit 3 from Cursor; Host-header smoke PASS |
 
 Hosts management: [MARS-LOCALHOST-HOSTS-MANAGEMENT-STANDARD-v1.md](MARS-LOCALHOST-HOSTS-MANAGEMENT-STANDARD-v1.md).
 
@@ -324,7 +324,16 @@ planned → provisioning → active → (hold | archived)
 | **hold** | Blocked (e.g. hosts elevation, failed smoke) |
 | **archived** | Teardown complete; evidence retained in brain |
 
-**MLI-WP-SYN-001 current status:** `active` (core provisioned; hosts elevation pending for bare URL resolution).
+**MLI-WP-SYN-001 current status:** `active` (Forge FW-05R complete; hosts elevation pending for direct URL resolution).
+
+### Post-validation closure (2026-06-23)
+
+| Item | Result |
+|------|--------|
+| Direct DNS `fws-0001.test` | **PENDING ELEVATION** |
+| Host-header HTTP smoke | **PASS** |
+| Forge consumer state | **COMPLETE** — PROVEN WITH LIMITATIONS |
+| MLI role | **Runtime provider** — unchanged |
 
 ### Reset (synthetic)
 
