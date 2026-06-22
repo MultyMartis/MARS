@@ -1,0 +1,41 @@
+﻿# FP-0002 v6 — decisions log (append-only)
+# Format: see reports/FP-0002-v6-EXECUTION-LOGGING-SYSTEM-v1.md
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+decision: Social icons normalized via copy from 03_BRANDING alternate filenames to v6 lowercase paths
+source_used: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/03_BRANDING/Telegram-ico.svg, WhatsApp-ico.svg, MAX-ico.svg
+reason: Branding folder has no telegram.svg/whatsapp.svg/max.svg at exact names; operator task authorizes copy with normalized destination names
+rejected_alternatives: Rename source files in 03_BRANDING (forbidden by task); read icons from old workspaces (forbidden)
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+decision: JPG-only hard law and source access guard established as binding v6 discipline
+source_used: HOME-PAGE-FULL-MOCKUP.jpg (authority declaration only; no pixel extraction this task)
+reason: Clean-room v6 requires explicit forbidden/allowed source boundaries before header work
+rejected_alternatives: FIG/PDF/old workspace inspection to resolve unknowns (forbidden)
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+decision: Header, footer, and hero implementation deferred
+source_used: NONE
+reason: Task scope explicitly forbids layout build until JPG audit phase
+rejected_alternatives: NONE
+---
+
+---
+timestamp: 2026-06-22T13:33:00+07:00
+SOURCE:
+FP-0002 V6 project rules and current workspace state.
+
+DECISION:
+The backup is the canonical recovery point for the clean V6 foundation before visual implementation.
+
+REASON:
+Future layout tasks must be recoverable without returning to FIG, PDF, previous workspaces or previous measurements.
+decision: FP-0002 V6 STABLE BACKUP STARTER is canonical pre-layout recovery point
+source_used: workspaces/fp-0002-shpigovsky-v6/
+rejected_alternatives: FIG, PDF, v1-v5 workspaces
+---

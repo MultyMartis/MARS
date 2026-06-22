@@ -1,0 +1,81 @@
+﻿# FP-0002 v6 — actions log (append-only)
+# Format: see reports/FP-0002-v6-EXECUTION-LOGGING-SYSTEM-v1.md
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: src/img/social/telegram.svg
+action: copied
+reason: Phase A social icon normalization from Telegram-ico.svg
+expected_outcome: Normalized telegram icon available in v6 asset pipeline
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: src/img/social/whatsapp.svg
+action: copied
+reason: Phase A social icon normalization from WhatsApp-ico.svg
+expected_outcome: Normalized whatsapp icon available in v6 asset pipeline
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: src/img/social/max.svg
+action: copied
+reason: Phase A social icon normalization from MAX-ico.svg
+expected_outcome: Normalized max icon available in v6 asset pipeline
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: reports/FP-0002-v6-SOCIAL-ICON-NORMALIZATION-v1.md
+action: created
+reason: Phase A deliverable
+expected_outcome: Documented copy mapping and verification checklist
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: reports/FP-0002-v6-JPG-ONLY-HARD-LAW-v1.md
+action: created
+reason: Phase B deliverable
+expected_outcome: Binding JPG-only source law for v6
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: reports/FP-0002-v6-EXECUTION-LOGGING-SYSTEM-v1.md
+action: created
+reason: Phase C deliverable
+expected_outcome: Logging format and rules documented
+---
+
+---
+timestamp: 2026-06-22T00:00:00+03:00
+file_changed: reports/FP-0002-v6-SOURCE-ACCESS-GUARD-v1.md
+action: created
+reason: Phase D deliverable
+expected_outcome: Allowed/forbidden roots defined
+---
+
+---
+timestamp: 2026-06-22T13:00:56+03:00
+file_changed: npm run build
+action: build
+reason: Phase E build verify after social icon copy
+expected_outcome: dist/ contains index.html, css, js, and social SVGs
+---
+
+---
+timestamp: 2026-06-22T13:33:00+07:00
+SOURCE:
+Operator request — FP-0002 V6 STABLE BACKUP STARTER
+
+DECISION:
+Created stable pre-layout backup, inventory and git checkpoint for the V6 CLEAN ROOM workspace.
+
+REASON:
+Preserve the exact foundation state before Header, Hero, Footer or section implementation begins.
+file_changed: backup/FP-0002-V6-STABLE-BACKUP-STARTER.zip, backup/FP-0002-V6-STABLE-BACKUP-STARTER.inventory.json, FP-0002-V6-STABLE-BACKUP-STARTER.md
+action: created
+expected_outcome: Recoverable pre-layout checkpoint with verified SHA-256 inventory and ZIP
+---

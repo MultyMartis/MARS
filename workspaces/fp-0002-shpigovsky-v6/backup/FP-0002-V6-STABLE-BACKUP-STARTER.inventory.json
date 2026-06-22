@@ -1,0 +1,236 @@
+﻿{
+    "checkpoint":  "FP-0002 V6 STABLE BACKUP STARTER",
+    "workspace":  "workspaces/fp-0002-shpigovsky-v6/",
+    "status":  "V6 CLEAN ROOM",
+    "branch":  "mars/post-cycle8-live-tests",
+    "head_before":  "bf313e4a38789ca7d332d24bb2ccddb57345aab6",
+    "created_at":  "2026-06-22T13:32:54+07:00",
+    "visual_source":  "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/HOME-PAGE-FULL-MOCKUP.jpg",
+    "visual_source_sha256":  "cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290",
+    "visual_source_size":  8107632,
+    "archive":  {
+                    "path":  "backup/FP-0002-V6-STABLE-BACKUP-STARTER.zip",
+                    "size":  74983,
+                    "sha256":  "016a9b0626115635e92e073f682d902f680ba21b10efb73fa5cd8da6ce13e3b1",
+                    "entries":  38
+                },
+    "source_policy":  "JPG_ONLY",
+    "files":  [
+                  {
+                      "path":  ".gitignore",
+                      "size":  22,
+                      "sha256":  "ea51f78e69c37ba5b07274b23829325147e58ae7f0b4ddb332200f761dd6ffb1"
+                  },
+                  {
+                      "path":  "backup/FP-0002-V6-STABLE-BACKUP-STARTER.inventory.json",
+                      "size":  10426,
+                      "sha256":  "669ca6a265e2a674bf239d434bae7124cff0e2876dab2b2869c6dafa545afa87"
+                  },
+                  {
+                      "path":  "backup/FP-0002-V6-STABLE-BACKUP-STARTER.zip",
+                      "size":  74983,
+                      "sha256":  "016a9b0626115635e92e073f682d902f680ba21b10efb73fa5cd8da6ce13e3b1"
+                  },
+                  {
+                      "path":  "fonts/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "FP-0002-V6-STABLE-BACKUP-STARTER.md",
+                      "size":  6296,
+                      "sha256":  "6b52406023bc3b3a148b3e7e2cd36538a7956c8d46b9bade22b64b3d869ecf6c"
+                  },
+                  {
+                      "path":  "gulpfile.js",
+                      "size":  2709,
+                      "sha256":  "854a3a9a5601622029d816fb0847bc782ec68cbd1eda6c3a55fa3a4df94cc6bc"
+                  },
+                  {
+                      "path":  "img/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "logs/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "logs/v6-actions.log",
+                      "size":  2442,
+                      "sha256":  "b7df14fd26b58d30405070d8f7b78d501c2dac578532cac531fa9917bf8bf9e7"
+                  },
+                  {
+                      "path":  "logs/v6-decisions.log",
+                      "size":  1834,
+                      "sha256":  "e60968cb329c8dba28b3e6e426fadc3f95c2fc5dda84623c128e14f7bf88fae8"
+                  },
+                  {
+                      "path":  "logs/v6-safe-unknown.log",
+                      "size":  147,
+                      "sha256":  "75ad93c1b69ed3e35f39bb12eefcad66a8aefeb9c8168501f3684e71e1d1b82a"
+                  },
+                  {
+                      "path":  "logs/v6-source-access.log",
+                      "size":  1640,
+                      "sha256":  "9d8cf0b1f2ad806b1688ff86bc07055bcf0408d14c095530f0d6f49b321aafd4"
+                  },
+                  {
+                      "path":  "logs/v6-violations.log",
+                      "size":  144,
+                      "sha256":  "7323e4c681faabcb30872e268a8d3d3c626536142f46c1be0d753d328e032e03"
+                  },
+                  {
+                      "path":  "package.json",
+                      "size":  458,
+                      "sha256":  "6f8b048be6a7fd8692b6a535af22b070e80b24cf51ec09ca2a8d2560627807df"
+                  },
+                  {
+                      "path":  "package-lock.json",
+                      "size":  214035,
+                      "sha256":  "32550df7c2cdf8035276b75209adf45fa45f18e1261cb7f4a9bea4f1aea0d0c8"
+                  },
+                  {
+                      "path":  "qa/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-CLEAN-ROOM-DECLARATION-v1.md",
+                      "size":  1239,
+                      "sha256":  "df6ffd3c578f22d93c378509e47115c5dcdd4ce20be214598212c317a4726312"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-EXECUTION-LOGGING-SYSTEM-v1.md",
+                      "size":  2496,
+                      "sha256":  "20567e6727641abe5a9227eb12814a6967880587c7aa404fb044a84cfd6ed53a"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-JPG-ONLY-HARD-LAW-v1.md",
+                      "size":  2313,
+                      "sha256":  "1a306c65cf547c490a9cc9471a2a6e2f928e949e31638395429b232552bc5e08"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-JPG-ONLY-RULE-LOCK-AND-ASSET-SETUP-REPORT-v1.md",
+                      "size":  3557,
+                      "sha256":  "026d5afbbc1b7d238ae3ca500fa5f7cb3e292948aad7b06f36cde354c8b361b5"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-SOCIAL-ICON-NORMALIZATION-v1.md",
+                      "size":  2194,
+                      "sha256":  "1d403f1dd6168485e3d994aed7e4adabae7e7bb5fc4bb6abf47930371b39d97f"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-SOURCE-ACCESS-GUARD-v1.md",
+                      "size":  2354,
+                      "sha256":  "2b90c30301cc649bb59c9f1b80d2e16d3cda00c0c0d37c0ee73b059f8e40589f"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-SOURCE-CHECK-v1.md",
+                      "size":  1646,
+                      "sha256":  "9b40825f0e62de7df0fd7818f680e37270730841a90e4090619decc1ac4a3b03"
+                  },
+                  {
+                      "path":  "reports/FP-0002-v6-ZERO-SKELETON-REPORT-v1.md",
+                      "size":  3063,
+                      "sha256":  "9661538d2e89ba7a1e232b81aaa037c97f79f820f914b9b0c4b832304d2b9494"
+                  },
+                  {
+                      "path":  "src/fonts/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "src/img/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "src/img/social/max.svg",
+                      "size":  2184,
+                      "sha256":  "0077d093f1fac0503d9ec2666b3860efd1e5b9025b2f3346caf7370b0b7cf2f4"
+                  },
+                  {
+                      "path":  "src/img/social/telegram.svg",
+                      "size":  2324,
+                      "sha256":  "5f49f558bce1d5341ded42db8af9c0e03a0d91061ad992daf9b9d60cc6b138e2"
+                  },
+                  {
+                      "path":  "src/img/social/whatsapp.svg",
+                      "size":  2803,
+                      "sha256":  "7c61346a68fa2e6f54f126e230b914eb6e63ae667997839a7b340f21201297f0"
+                  },
+                  {
+                      "path":  "src/js/main.js",
+                      "size":  47,
+                      "sha256":  "66b72ee1c20b8900cf20bf32e38add2818742f460f835545c6e71098faff9b3b"
+                  },
+                  {
+                      "path":  "src/pages/index.html",
+                      "size":  502,
+                      "sha256":  "fca1bb4e0482e7e594f5fbfb6d09747793563072bbb98694a82c231df29926c2"
+                  },
+                  {
+                      "path":  "src/scss/base/_reset.scss",
+                      "size":  85,
+                      "sha256":  "2cf5eecd253228b1810b87cefa447593bc0ae191bd5c007a941fa40c4ad6a8df"
+                  },
+                  {
+                      "path":  "src/scss/layout/_container.scss",
+                      "size":  116,
+                      "sha256":  "651dc2031e61192d04c4d86c41a94185ca3e61746548e5c7fec618ecefe1feac"
+                  },
+                  {
+                      "path":  "src/scss/style.scss",
+                      "size":  93,
+                      "sha256":  "7ecf2a9afb092e32bfa6c41fb5e459ef84231bb258a1168f4b037c98ef113b14"
+                  },
+                  {
+                      "path":  "src/scss/utils/_mixins.scss",
+                      "size":  228,
+                      "sha256":  "6ea87600d6ddcc818ada972454beefb6cb50642e2be29ac29a968c797f7b7975"
+                  },
+                  {
+                      "path":  "src/scss/utils/_variables.scss",
+                      "size":  119,
+                      "sha256":  "845abfbe5bfede7402eb3305b00afdb20f4489fa1547bed2d6678042269ccdfe"
+                  },
+                  {
+                      "path":  "src/svg/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "svg/.gitkeep",
+                      "size":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  }
+              ],
+    "excluded_sources":  [
+                             "FIG",
+                             "PDF",
+                             "v1",
+                             "v2",
+                             "v3",
+                             "v4",
+                             "v5",
+                             "old workspaces",
+                             "old reports",
+                             "old measurements",
+                             "old decisions"
+                         ],
+    "implementation_state":  {
+                                 "foundation":  true,
+                                 "header_started":  false,
+                                 "hero_started":  false,
+                                 "footer_started":  false,
+                                 "sections_started":  false
+                             },
+    "restore_notes":  [
+                          "Restore workspace from ZIP excluding node_modules; run npm ci then npm run build.",
+                          "Do not use FIG, PDF, or prior workspace versions for layout.",
+                          "JPG visual audit must be approved before HTML implementation.",
+                          "Verify file SHA-256 against this inventory after restore."
+                      ]
+}
