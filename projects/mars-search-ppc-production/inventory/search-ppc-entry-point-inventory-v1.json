@@ -1,7 +1,8 @@
 {
   "inventory_id": "search-ppc-entry-point-inventory-v1",
-  "version": "1.0.0",
-  "date": "2026-06-22",
+  "version": "1.1.0",
+  "date": "2026-06-23",
+  "wave": "1.2",
   "canonical_gate": "projects/mars-search-ppc-production/runtime/src/lifecycle-gate.mjs",
   "gate_cli": "projects/mars-search-ppc-production/runtime/cli/search-ppc-gate.mjs",
   "entry_points": [
@@ -35,9 +36,9 @@
       "owning_system": "MIG",
       "manifest_required": false,
       "validator_invoked": false,
-      "fail_closed": false,
-      "bypass_risk": "HIGH",
-      "integration": "QUARANTINED — use gated wrapper"
+      "fail_closed": true,
+      "bypass_risk": "CLOSED — physical lockdown Wave 1.2",
+      "integration": "LOCKED — use gated wrapper"
     },
     {
       "id": "mig-paid-serp-mode",
@@ -68,8 +69,8 @@
       "path": "projects/orca/semantic-intelligence/integration/runtime/cli/orca-admission.mjs",
       "manifest_required": false,
       "validator_invoked": false,
-      "bypass_risk": "HIGH",
-      "integration": "QUARANTINED"
+      "bypass_risk": "CLOSED — physical lockdown Wave 1.2",
+      "integration": "LOCKED — diagnostic commands only; integration:run requires gate or --diagnostic"
     },
     {
       "id": "campaign-gate",
@@ -82,6 +83,33 @@
       "path": "projects/orca/ppc/triumph-manipulator/tools/export-ppc-gate.mjs",
       "stages": ["SPPC-20"],
       "integration": "WIRED"
+    },
+    {
+      "id": "export-gated-cli",
+      "path": "projects/orca/ppc/triumph-manipulator/tools/run-ppc-gated-export.mjs",
+      "command": "node run-ppc-gated-export.mjs --manifest <path>",
+      "integration": "WIRED"
+    },
+    {
+      "id": "triumph-export-direct",
+      "path": "projects/orca/ppc/triumph-manipulator/tools/exporter-cli/export.js",
+      "command": "node export.js",
+      "owning_system": "Commander Export",
+      "stages": ["SPPC-20"],
+      "manifest_required": false,
+      "validator_invoked": false,
+      "bypass_risk": "CLOSED — physical lockdown Wave 1.2",
+      "integration": "LOCKED — use run-ppc-gated-export.mjs"
+    },
+    {
+      "id": "triumph-sheet1-patch-export-direct",
+      "path": "projects/orca/ppc/triumph-manipulator/tools/exporter-cli/sheet1-patch-export.js",
+      "command": "node sheet1-patch-export.js",
+      "owning_system": "Commander Export",
+      "stages": ["SPPC-20"],
+      "manifest_required": false,
+      "bypass_risk": "CLOSED — physical lockdown Wave 1.2",
+      "integration": "LOCKED — use run-ppc-gated-export.mjs"
     },
     {
       "id": "strategist",

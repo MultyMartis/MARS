@@ -31,6 +31,11 @@ const {
   ZipPatchError,
 } = require("./xlsx-zip-patch");
 const {
+  enforceLegacyBoundary,
+  emitLegacyBlock,
+  isDiagnosticContext,
+} = require("../../../../../mars-search-ppc-production/runtime/src/legacy-entry-boundary.cjs");
+const {
   buildStructureIndex,
   compareIndexes,
 } = require("./ooxml-forensics");
@@ -341,6 +346,25 @@ async function runSheet1PatchExport(mapped, outputPath, options = {}) {
 }
 
 async function main() {
+  const boundary = enforceLegacyBoundary({
+    entryPointId: "triumph-sheet1-patch-export",
+    replacementKey: "triumph-export",
+    tool: "sheet1-patch-export.js",
+    requestedAction: "commander_export",
+    requestedStage: "SPPC-20",
+    searchPpcMode: true,
+    isDiagnostic: isDiagnosticContext(),
+    command: `node sheet1-patch-export.js ${process.argv.slice(2).join(" ")}`,
+  });
+  if (!boundary.allowed) {
+    emitLegacyBlock(boundary);
+    process.exit(boundary.exit_code || 2);
+  }
+
+  const { resolveGuardedOutputPath } = await import(
+    "../../../../../mars-search-ppc-production/runtime/src/output-path-guard.mjs"
+  );
+
   const rawArgs = process.argv.slice(2);
   if (rawArgs.includes("-h") || rawArgs.includes("--help")) usage();
 
@@ -352,7 +376,15 @@ async function main() {
 
   const docPath = path.resolve(docArg);
   const reportPath = path.resolve(reportArg);
-  const outputPath = path.resolve(outArg || DEFAULT_IMPORT_REFINED_OUTPUT);
+  const requestedOutput = path.resolve(outArg || DEFAULT_IMPORT_REFINED_OUTPUT);
+  const guarded = resolveGuardedOutputPath(requestedOutput, {
+    diagnostic: boundary.mode === "diagnostic",
+  });
+  if (guarded.allowed === false) {
+    console.error(`\n[BLOCKED] ${guarded.message}`);
+    process.exit(2);
+  }
+  const outputPath = guarded.path;
 
   try {
     const document = loadJson(docPath, "PPC document");

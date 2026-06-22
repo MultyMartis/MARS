@@ -1,6 +1,7 @@
 # MIG — Operational Index
 
 **Status:** **MIG Runtime MVP implemented** (`run-mig-session.js`, manifest v0.2); **v0.1 Session Spine** and Task File intake verified. Operational model: [contracts/mig-operational-runtime-architecture-v1.md](contracts/mig-operational-runtime-architecture-v1.md).  
+**Search PPC (Wave 1.2):** Direct `run-mig-session.js` CLI is **LOCKED** for Search PPC intake — use [run-ppc-gated-session.mjs](tools/run-ppc-gated-session.mjs). Migration: [docs/MIG-SEARCH-PPC-LEGACY-MIGRATION-v1.md](docs/MIG-SEARCH-PPC-LEGACY-MIGRATION-v1.md).  
 **Not:** production n8n deployment, approval automation, or ORCA transport API.
 
 **Domain root:** [README.md](README.md)

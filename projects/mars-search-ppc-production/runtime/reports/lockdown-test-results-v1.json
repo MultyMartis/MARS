@@ -1,0 +1,106 @@
+{
+  "suite": "mars-search-ppc-lockdown-tests-v1",
+  "wave": "1.2",
+  "timestamp": "2026-06-22T17:14:49.738Z",
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "MIG direct PPC CLI without manifest blocked",
+      "pass": true,
+      "exit_code": 2,
+      "blocked": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "MIG gated invocation with frozen Corvonero blocked",
+      "pass": true,
+      "exit_code": 2,
+      "blocked": true,
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "ORCA diagnostic integration:run allowed",
+      "pass": true,
+      "skipped": true,
+      "note": "fixture missing — SAFE UNKNOWN",
+      "disposition": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "ORCA production integration:run without manifest blocked",
+      "pass": true,
+      "skipped": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "ORCA production with frozen Corvonero blocked",
+      "pass": true,
+      "exit_code": 2,
+      "blocked": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "Direct Triumph export without manifest blocked",
+      "pass": true,
+      "exit_code": 2,
+      "blocked": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "Gated export before QA blocked",
+      "pass": true,
+      "exit_code": 2,
+      "blocked": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "Legacy diagnostic output cannot register as production authority",
+      "pass": true,
+      "output_classification": "diagnostic",
+      "blocked_authority": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 9,
+      "name": "Canonical gated wrapper creates receipt",
+      "pass": true,
+      "receipt_created": true,
+      "exit_code": 2,
+      "disposition": "PASS"
+    },
+    {
+      "id": 10,
+      "name": "No canonical artifact mutation after blocked MIG PPC CLI",
+      "pass": true,
+      "canonical_artifact_mutated": false,
+      "disposition": "PASS"
+    },
+    {
+      "id": 11,
+      "name": "Repository inventory documents gated MIG replacement",
+      "pass": true,
+      "gated_path": "projects/mig/tools/run-ppc-gated-session.mjs",
+      "disposition": "PASS"
+    },
+    {
+      "id": 12,
+      "name": "Web-GPT unvalidated handoff remains proposal-only",
+      "pass": true,
+      "exit_code": 2,
+      "output_classification": "proposal",
+      "disposition": "PASS"
+    }
+  ]
+}

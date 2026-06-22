@@ -17,6 +17,11 @@ const { runPrecheck } = require("./precheck");
 const { mapDocument } = require("./mapping");
 const { writeWorkbook } = require("./workbook-writer");
 const { writeTemplateFill, TemplateFillError } = require("./template-fill-writer");
+const {
+  enforceLegacyBoundary,
+  emitLegacyBlock,
+  isDiagnosticContext,
+} = require("../../../../../mars-search-ppc-production/runtime/src/legacy-entry-boundary.cjs");
 
 const EXPORTER_LABEL = "ORCA Exporter Prototype v0";
 const DEFAULT_OUTPUT = path.join(__dirname, "output", "triumph-export-draft.xlsx");
@@ -117,6 +122,25 @@ function parseArgs(argv) {
 }
 
 async function main() {
+  const boundary = enforceLegacyBoundary({
+    entryPointId: "triumph-export",
+    replacementKey: "triumph-export",
+    tool: "export.js",
+    requestedAction: "commander_export",
+    requestedStage: "SPPC-20",
+    searchPpcMode: true,
+    isDiagnostic: isDiagnosticContext(),
+    command: `node export.js ${process.argv.slice(2).join(" ")}`,
+  });
+  if (!boundary.allowed) {
+    emitLegacyBlock(boundary);
+    process.exit(boundary.exit_code || 2);
+  }
+
+  const { resolveGuardedOutputPath } = await import(
+    "../../../../../mars-search-ppc-production/runtime/src/output-path-guard.mjs"
+  );
+
   const { docArg, reportArg, outArg, templateFill } = parseArgs(
     process.argv.slice(2)
   );
@@ -126,7 +150,15 @@ async function main() {
   const docPath = path.resolve(docArg);
   const reportPath = path.resolve(reportArg);
   const defaultOut = templateFill ? DEFAULT_TEMPLATE_FILL_OUTPUT : DEFAULT_OUTPUT;
-  const outputPath = path.resolve(outArg || defaultOut);
+  const requestedOutput = path.resolve(outArg || defaultOut);
+  const guarded = resolveGuardedOutputPath(requestedOutput, {
+    diagnostic: boundary.mode === "diagnostic",
+  });
+  if (guarded.allowed === false) {
+    console.error(`\n[BLOCKED] ${guarded.message}`);
+    process.exit(2);
+  }
+  const outputPath = guarded.path;
 
   const document = loadJson(docPath, "PPC document");
   const report = loadJson(reportPath, "ValidationReport");

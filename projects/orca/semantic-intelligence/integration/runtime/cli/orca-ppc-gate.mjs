@@ -41,6 +41,8 @@ function main() {
     process.exit(auth.exit_code || 2);
   }
 
+  process.env.MARS_SEARCH_PPC_LIFECYCLE_AUTHORIZED = '1';
+
   if (args.fixture) {
     const admissionCli = path.join(__dirname, '../cli/orca-admission.mjs');
     const sub = spawnSync('node', [admissionCli, 'integration:run', path.resolve(args.fixture)], {

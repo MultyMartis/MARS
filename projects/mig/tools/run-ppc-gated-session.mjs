@@ -42,6 +42,8 @@ async function main() {
     process.exit(auth.exit_code || 2);
   }
 
+  process.env.MARS_SEARCH_PPC_LIFECYCLE_AUTHORIZED = '1';
+
   if (args.passthrough.length) {
     const { runMigSession } = require('../lib/runtime/run-mig-session.js');
     const body = JSON.parse(args.passthrough[0]);

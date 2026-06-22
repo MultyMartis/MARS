@@ -1,0 +1,61 @@
+{
+  "decision_set_id": "wave-1.2-operator-decisions-v1",
+  "date": "2026-06-23",
+  "wave": "1.2",
+  "decisions": {
+    "W1.2-D1": {
+      "id": "W1.2-D1",
+      "subject": "Wave 1.1",
+      "status": "APPROVED — IMPLEMENTED AND TESTED",
+      "checkpoint": "715402f",
+      "note": "Entry-point wiring, gate API, receipts, bypass tests 15/15, Corvonero E2E 9/9"
+    },
+    "W1.2-D2": {
+      "id": "W1.2-D2",
+      "subject": "Wave 1",
+      "status": "FINAL LOCKDOWN AUTHORIZED",
+      "note": "Physical closure of legacy executable bypasses required before operational approval"
+    },
+    "W1.2-D3": {
+      "id": "W1.2-D3",
+      "subject": "Wave 2",
+      "status": "BLOCKED UNTIL WAVE 1.2 OPERATOR REVIEW",
+      "note": "PAID SERP — BUSINESS HOURS belongs to Wave 2; not started in this task"
+    },
+    "W1.2-D4": {
+      "id": "W1.2-D4",
+      "subject": "Existing legacy CLIs",
+      "status": "MANDATORY PHYSICAL LOCKDOWN",
+      "requirement": "wrap, gate, downgrade to diagnostic/read-only, or fail-closed with migration instructions",
+      "documentation_only_quarantine": false
+    },
+    "W1.2-D5": {
+      "id": "W1.2-D5",
+      "subject": "Missing components",
+      "status": "MISSING — CORRECTLY BLOCKED",
+      "examples": ["PAID SERP — BUSINESS HOURS runtime", "Strategist runtime"],
+      "implementation_required_in_wave_1_2": false
+    },
+    "W1.2-D6": {
+      "id": "W1.2-D6",
+      "subject": "Web-GPT boundary",
+      "repository_enforcement": "IMPLEMENTED — REPOSITORY ENFORCEMENT",
+      "ui_runtime_enforcement": "UNAVAILABLE",
+      "blocks_wave_2": false,
+      "note": "Contract + handoff generator + validator implemented; UI hook unavailable"
+    },
+    "W1.2-D7": {
+      "id": "W1.2-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN — READ-ONLY ENFORCEMENT TESTS ONLY",
+      "production_resume": false
+    }
+  },
+  "wave_status": {
+    "wave_1_1": "APPROVED — CHECKPOINTED",
+    "wave_1": "OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY",
+    "wave_1_2": "APPROVED — READY FOR CHECKPOINT",
+    "wave_2": "IMPLEMENTATION AUTHORIZED",
+    "corvonero": "FROZEN"
+  }
+}

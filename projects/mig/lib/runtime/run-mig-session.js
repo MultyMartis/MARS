@@ -526,11 +526,25 @@ function buildRunResult(manifest, lifecycle, sessionDir, artifacts) {
 }
 
 async function main() {
+  const {
+    enforceLegacyBoundary,
+    emitLegacyBlock,
+    isSearchPpcMigBody,
+    isDiagnosticContext,
+  } = require("../../../mars-search-ppc-production/runtime/src/legacy-entry-boundary.cjs");
+
   const argPath = process.argv[2];
   let body = {};
 
-  if (argPath && argPath !== "--stdin") {
+  if (argPath && argPath !== "--stdin" && argPath !== "--diagnostic" && argPath !== "--internal-verify") {
     body = JSON.parse(fs.readFileSync(argPath, "utf8"));
+  } else if (
+    argPath &&
+    argPath !== "--stdin" &&
+    (argPath === "--diagnostic" || argPath === "--internal-verify")
+  ) {
+    const next = process.argv[3];
+    if (next) body = JSON.parse(fs.readFileSync(next, "utf8"));
   } else {
     const chunks = [];
     for await (const chunk of process.stdin) {
@@ -540,6 +554,22 @@ async function main() {
     if (raw) {
       body = JSON.parse(raw);
     }
+  }
+
+  const searchPpcMode = isSearchPpcMigBody(body);
+  const boundary = enforceLegacyBoundary({
+    entryPointId: "mig-run-session",
+    replacementKey: "mig-run-session",
+    tool: "run-mig-session.js",
+    requestedAction: body.search_ppc_action || "mig_session",
+    requestedStage: body.search_ppc_stage || null,
+    searchPpcMode,
+    isDiagnostic: isDiagnosticContext(),
+    command: `node run-mig-session.js ${argPath || "--stdin"}`,
+  });
+  if (!boundary.allowed) {
+    emitLegacyBlock(boundary);
+    process.exit(boundary.exit_code || 2);
   }
 
   const fixtureMap = body._runtime_fixture_map || body.fixture_map;

@@ -8,6 +8,12 @@ import { runAdmissionIntegration } from '../src/admission-orchestrator.mjs';
 import { validateRecordShape } from '../src/record-generator.mjs';
 import { validateInvariants } from '../src/invariant-validator.mjs';
 import { ensureDir, readJson, RUNTIME_ROOT, writeJson } from '../src/lib.mjs';
+import {
+  enforceLegacyBoundary,
+  emitLegacyBlock,
+  isDiagnosticContext,
+  LIFECYCLE_AUTH_ENV,
+} from '../../../../../mars-search-ppc-production/runtime/src/legacy-entry-boundary.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_LOCK = path.join(RUNTIME_ROOT, 'config/orca-semantic-contract-runtime-lock-v1.json');
@@ -22,12 +28,22 @@ Usage:
   node cli/orca-admission.mjs contracts:validate [--lock <path>]
   node cli/orca-admission.mjs contracts:report [--lock <path>] [--out <dir>]
   node cli/orca-admission.mjs record:validate <fixture-path>
-  node cli/orca-admission.mjs integration:run <fixture-path> [--lock <path>] [--out <dir>]
+  node cli/orca-admission.mjs integration:run <fixture-path> [--lock <path>] [--out <dir>] [--diagnostic]
+
+Production Search PPC integration:run requires lifecycle gate via orca-ppc-gate.mjs.
+Ungated integration:run is blocked unless --diagnostic is set (diagnostic output only).
 `);
 }
 
 function parseArgs(argv) {
-  const args = { command: null, positional: [], lock: DEFAULT_LOCK, out: OUTPUT_DIR, config: DEFAULT_CONFIG };
+  const args = {
+    command: null,
+    positional: [],
+    lock: DEFAULT_LOCK,
+    out: OUTPUT_DIR,
+    config: DEFAULT_CONFIG,
+    diagnostic: false,
+  };
   const rest = argv.slice(2);
   if (!rest.length) return args;
   args.command = rest[0];
@@ -35,9 +51,46 @@ function parseArgs(argv) {
     if (rest[i] === '--lock') args.lock = path.resolve(rest[++i]);
     else if (rest[i] === '--out') args.out = path.resolve(rest[++i]);
     else if (rest[i] === '--config') args.config = path.resolve(rest[++i]);
+    else if (rest[i] === '--diagnostic') args.diagnostic = true;
     else if (!rest[i].startsWith('--')) args.positional.push(path.resolve(rest[i]));
   }
   return args;
+}
+
+const DIAGNOSTIC_COMMANDS = new Set(['contracts:validate', 'contracts:report', 'record:validate']);
+
+function guardProductionCommand(args) {
+  if (DIAGNOSTIC_COMMANDS.has(args.command)) {
+    return { allowed: true, mode: 'diagnostic_contract' };
+  }
+  if (args.command !== 'integration:run') {
+    return { allowed: true, mode: 'non_production' };
+  }
+
+  const boundary = enforceLegacyBoundary({
+    entryPointId: 'orca-admission',
+    replacementKey: 'orca-admission',
+    tool: 'orca-admission.mjs',
+    requestedAction: 'integration:run',
+    requestedStage: 'SPPC-05',
+    searchPpcMode: true,
+    isDiagnostic: args.diagnostic || isDiagnosticContext(),
+    command: `node cli/orca-admission.mjs ${args.command}`,
+  });
+
+  if (!boundary.allowed) {
+    emitLegacyBlock(boundary);
+    process.exit(boundary.exit_code || 2);
+  }
+
+  if (boundary.mode === 'diagnostic') {
+    process.env.MARS_SEARCH_PPC_DIAGNOSTIC = '1';
+    if (!args.out.includes('diagnostic')) {
+      args.out = path.join(RUNTIME_ROOT, 'output', 'diagnostic');
+    }
+  }
+
+  return boundary;
 }
 
 async function main() {
@@ -47,10 +100,12 @@ async function main() {
     process.exit(args.command ? 0 : 1);
   }
 
+  guardProductionCommand(args);
+
   ensureDir(args.out);
   ensureDir(REPORTS_DIR);
 
-  const cmdMeta = `node cli/orca-admission.mjs ${args.command}`;
+  const cmdMeta = `node cli/orca-admission.mjs ${args.command}${args.diagnostic ? ' --diagnostic' : ''}`;
 
   if (args.command === 'contracts:validate') {
     const result = loadContracts({ lockPath: args.lock });
@@ -99,13 +154,24 @@ async function main() {
     const config = fs.existsSync(args.config) ? readJson(args.config) : undefined;
     const result = runAdmissionIntegration(fixture, { lockPath: args.lock, config, configPath: args.config });
     const outPath = path.join(args.out, `integration-${fixture.fixture_id || path.basename(fixturePath, '.json')}.json`);
-    writeJson(outPath, result);
+    const outputClass =
+      args.diagnostic || process.env.MARS_SEARCH_PPC_DIAGNOSTIC === '1' || process.env[LIFECYCLE_AUTH_ENV] !== '1'
+        ? 'diagnostic'
+        : 'production_authority';
+    const envelope = {
+      output_class: outputClass,
+      diagnostic_only: outputClass === 'diagnostic',
+      may_authorize_downstream: outputClass === 'production_authority',
+      integration_result: result,
+    };
+    writeJson(outPath, envelope);
     console.log(JSON.stringify({
       fixture_id: fixture.fixture_id,
       ok: result.ok,
       blocked: result.blocked,
       admission_decision: result.admission_decision,
       review_routed: result.routing?.routed,
+      output_class: outputClass,
       out: outPath,
     }, null, 2));
     process.exit(result.ok ? 0 : 2);

@@ -39,6 +39,8 @@ function main() {
     process.exit(auth.exit_code || 2);
   }
 
+  process.env.MARS_SEARCH_PPC_LIFECYCLE_AUTHORIZED = '1';
+
   if (args.document && args.report) {
     const exportCli = path.join(__dirname, 'exporter-cli/export.js');
     const sub = spawnSync('node', [exportCli, path.resolve(args.document), path.resolve(args.report)], {

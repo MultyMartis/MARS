@@ -18,13 +18,15 @@
 
 ## CLI
 
+**Search PPC (Wave 1.2):** `integration:run` without lifecycle gate is **LOCKED** unless `--diagnostic`. Production path: [orca-ppc-gate.mjs](cli/orca-ppc-gate.mjs).
+
 ```bash
 cd projects/orca/semantic-intelligence/integration/runtime
 
 node cli/orca-admission.mjs contracts:validate
 node cli/orca-admission.mjs contracts:report
 node cli/orca-admission.mjs record:validate <path-to-record.json>
-node cli/orca-admission.mjs integration:run <path-to-fixture.json>
+node cli/orca-admission.mjs integration:run <path-to-fixture.json> --diagnostic
 node tests/run-integration-fixtures.mjs
 ```
 
