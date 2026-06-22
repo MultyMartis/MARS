@@ -82,9 +82,12 @@ home_section_01: OPERATOR_APPROVED_FROZEN
 home_section_01_release: FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01
 home_section_01_active_partial: src/partials/sections/home-recovery-intro.html
 home_section_02_audit: COMPLETE
-home_section_02_implementation: IMPLEMENTED_PENDING_OPERATOR_REVIEW
-home_section_03: NOT_STARTED
-main_content_remaining: NOT_STARTED
+home_section_02_implementation: OPERATOR_APPROVED_FROZEN
+home_section_02_portrait_source: EXACT_FIGMA_EXPORT
+home_section_02_release: FP-0002-V6-HOME-SECTION-02-OPERATOR-STABLE-01
+home_section_03_audit: COMPLETE
+home_section_03_implementation: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_section_04: NOT_STARTED
 ```
 
 **Rejection record:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)
