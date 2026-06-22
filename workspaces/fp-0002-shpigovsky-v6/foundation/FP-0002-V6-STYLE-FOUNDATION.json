@@ -3,14 +3,18 @@
   "workspace": "fp-0002-shpigovsky-v6",
   "version": "V6",
   "source_sha256": "cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290",
-  "foundation_status": "PROPOSAL",
+  "foundation_status": "APPROVED",
+  "foundation_approved_by": "operator",
+  "foundation_approved_date": "2026-06-22",
   "implementation_authorized": false,
   "header_implementation_authorized": false,
+  "hero_implementation_authorized": false,
   "html_structure_authorized": false,
   "scss_authorized": false,
-  "site_wide_style_foundation_approved": false,
+  "site_wide_style_foundation_approved": true,
   "grounding_review_verdict": "PARTIAL",
-  "operator_approval_required": true,
+  "operator_approval_required": false,
+  "section_001_specification_status": "READY_FOR_OPERATOR_REVIEW",
   "spacing_scale_ol01": {
     "gap_px": [5, 10, 20, 30, 40, 50, 70],
     "padding_margin_px": [5, 10, 15, 20, 25, 30, 40, 50, 70, 90],
@@ -22,7 +26,7 @@
       "property_class": "max-width",
       "classification": "APPROVED_OPERATOR_RULE",
       "status": "APPROVED_OPERATOR_RULE",
-      "note": "V6 zero-skeleton operator authorization; not derived from JPG 1138px median"
+      "note": "V6 operator approval 2026-06-22; not derived from JPG 1138px median"
     },
     "container-content-band-observed": {
       "value_px": 1138,
@@ -33,30 +37,30 @@
     "container-padding-inline-desktop": {
       "value_px": 50,
       "property_class": "padding-inline",
-      "classification": "APPROVED_OPERATOR_RULE",
-      "status": "PROPOSAL",
-      "note": "Factory container side-padding convention; not JPG-measured"
+      "classification": "DEFERRED",
+      "status": "DEFERRED",
+      "note": "Not approved globally — block-level proposal only via Block Implementation Specification"
     }
   },
   "tokens": {
     "section-padding-compact": {
       "value_px": 40,
       "property_class": "padding",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-001a",
       "rhythm_family": "compact"
     },
     "section-padding-standard": {
       "value_px": 50,
       "property_class": "padding",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-001b",
       "rhythm_family": "standard"
     },
     "section-padding-large": {
       "value_px": 70,
       "property_class": "padding",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-001c",
       "rhythm_family": "large"
     },
@@ -77,7 +81,7 @@
     "heading-content-gap": {
       "value_px": 30,
       "property_class": "margin",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-004"
     },
     "text-stack-gap": {
@@ -89,7 +93,7 @@
     "grid-gap-standard": {
       "value_px": 30,
       "property_class": "gap",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-006"
     },
     "grid-gap-3col": {
@@ -102,28 +106,35 @@
     "card-padding-standard": {
       "value_px": 25,
       "property_class": "padding",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-008"
     },
     "accordion-row-spacing": {
       "value_px": 15,
       "property_class": "margin",
-      "status": "PROPOSAL",
+      "status": "APPROVED_OPERATOR_RULE",
       "rule_id": "NRM-009",
-      "note": "Renamed from accordion-row-gap — 15px is OL-01 padding/margin, not gap scale"
+      "note": "margin only — must not be used as CSS gap"
+    },
+    "footer-gap": {
+      "value_px": 30,
+      "property_class": "gap",
+      "status": "APPROVED_OPERATOR_RULE",
+      "rule_id": "NRM-015",
+      "alias_of": "footer-column-gap"
     },
     "button-height-standard": {
       "value_px": 30,
       "property_class": "height",
-      "status": "PROPOSAL",
+      "status": "DEFERRED",
       "rule_id": "NRM-010",
       "component_family": "FAM-BTN-PRIMARY",
-      "note": "Component geometry; observed 30–37px; lower bound normalized"
+      "note": "Deferred globally — block-level measurement required; SECTION-001 hero CTA observed ~45px"
     },
     "radius-button": {
       "value_px": 5,
       "property_class": "border-radius",
-      "status": "PROPOSAL",
+      "status": "DEFERRED",
       "rule_id": "NRM-011"
     },
     "form-field-gap": {
@@ -135,10 +146,23 @@
     "footer-column-gap": {
       "value_px": 30,
       "property_class": "gap",
-      "status": "PROPOSAL",
-      "rule_id": "NRM-015"
+      "status": "APPROVED_OPERATOR_RULE",
+      "rule_id": "NRM-015",
+      "shared_with": "footer-gap"
     }
   },
+  "deferred_site_wide": [
+    "button-height-standard",
+    "container-padding-inline-desktop",
+    "typography_pixel_values",
+    "font-family",
+    "exact_hex_colors",
+    "radius-card",
+    "radius-field",
+    "radius-hero-panel",
+    "header_internal_height",
+    "header_hero_split_coordinate"
+  ],
   "observed_estimates_not_for_css": {
     "header-bar-y-end-estimate": {
       "value_px": 174,
@@ -146,7 +170,8 @@
       "evidence_id": "SECTION-001-GROUP-01",
       "confidence": "LOW",
       "css_use_forbidden": true,
-      "reason": "Algorithmic row estimate; grounding review SAFE UNKNOWN for exact Header/Hero implementation boundary"
+      "not_an_implementation_boundary": true,
+      "reason": "Algorithmic row estimate; operator rule CSS_USE_FORBIDDEN"
     },
     "jpg-content-band-width": {
       "value_px": 1138,
@@ -160,7 +185,7 @@
       "token": "hero-band-height-desktop",
       "value_px": 904,
       "rule_id": "NRM-014",
-      "reason": "SECTION-001 composite first screen — major boundary Y=904 HIGH confidence",
+      "reason": "SECTION-001 composite first screen — operator decision Y=0–904",
       "classification": "BLOCK_LEVEL_EXCEPTION"
     },
     {
@@ -208,12 +233,18 @@
       "components": ["CMP-001"],
       "height_token": "button-height-standard",
       "radius_token": "radius-button",
-      "count_observed": 8
+      "count_observed": 8,
+      "status": "DEFERRED_GLOBAL"
     },
     {
-      "id": "FAM-BTN-HEADER",
-      "status": "SAFE_UNKNOWN",
-      "reason": "Header CTA not separately measured; may match primary family"
+      "id": "FAM-BTN-HEADER-OUTLINE",
+      "status": "BLOCK_LEVEL_PROPOSAL",
+      "reason": "Header CTA is outline pill — not red fill; measured at block spec"
+    },
+    {
+      "id": "FAM-BTN-HERO-PRIMARY",
+      "status": "BLOCK_LEVEL_PROPOSAL",
+      "reason": "Hero red CTA observed ~45px outer height in SECTION-001"
     }
   ],
   "forbidden_sources": ["FIG", "PDF", "v1", "v2", "v3", "v4", "v5", "FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3"]

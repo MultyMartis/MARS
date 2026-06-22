@@ -3,8 +3,8 @@
 **Project:** FP-0002 Shpigovsky V6  
 **Date:** 2026-06-22  
 **Visual authority:** `HOME-PAGE-FULL-MOCKUP.jpg` SHA-256 `cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290`  
-**Foundation status:** PROPOSAL  
-**Review verdict:** READY FOR OPERATOR APPROVAL (internal consistency)
+**Foundation status:** **APPROVED** (operator 2026-06-22)  
+**Review verdict:** Gate 2 closed — approved tokens locked; deferred values routed to block specs
 
 ---
 
@@ -123,28 +123,22 @@ Items with sufficient evidence chain and no unresolved internal contradiction.
 
 ---
 
-## G. Explicit operator decisions required
+## G. Operator decisions — RECORDED 2026-06-22
 
-1. **Gate 2 — Foundation approval:** Confirm `foundation_status: APPROVED` for §F spacing + container tokens (yes/no/partial list).
-
-2. **Gate 1 — SECTION-001 architecture:** Implement Header+Hero as one composite block spec, or require separate specs with operator-provided Y split (composite / split).
-
-3. **Button height:** Confirm `button-height-standard: 30px` or specify alternative OL-adjacent value (30 / 32 / 35).
-
-4. **Container padding:** Confirm `container-padding-inline-desktop: 50px` (yes / revise to: ___).
-
-5. **LOW-confidence spacing:** Approve `section-gap-band-inner` 70px, `text-stack-gap` 20px, `card-padding-standard` 25px, `footer-column-gap` 30px as proposed (yes / revise).
-
----
-
-## H. Implementation gate status
+| # | Decision | Operator outcome |
+|---|----------|------------------|
+| 1 | Gate 2 — Foundation approval for §F spacing + container | **APPROVED** |
+| 2 | Gate 1 — SECTION-001 composite architecture | **COMPOSITE** — Header+Hero one block spec |
+| 3 | `button-height-standard: 30px` | **DEFERRED** — block-level measurement |
+| 4 | `container-padding-inline-desktop: 50px` | **DEFERRED** — block-level proposal only |
+| 5 | LOW-confidence spacing rows | Approved with approved anchor tokens |
 
 ```text
-site_wide_style_foundation_approved: false
+site_wide_style_foundation_approved: true
+foundation_approved_by: operator
 implementation_authorized: false
 header_implementation_authorized: false
-html_structure_authorized: false
-scss_authorized: false
+section_001_specification_status: READY_FOR_OPERATOR_REVIEW
 ```
 
 ---

@@ -10,8 +10,7 @@
 
 | ID | Unknown | Why | Needed from operator |
 |----|---------|-----|----------------------|
-| SU-001 | Exact Y boundary between header bar and hero within SECTION-001 | Header overlays hero; no reliable major boundary on JPG | Approve split Y or keep composite SECTION-001 spec |
-| SU-002 | Whether hero is separate implementation block from header | Grounding keeps one major section | Architecture decision for block specs |
+| SU-001 | Exact Y boundary between header bar and hero within SECTION-001 | Y=174 is OBSERVED_JPG_ESTIMATE — CSS forbidden; element bounds in SECTION-001 spec |
 | SU-003 | CMP-004 vs CMP-008 — one card component or two | Visually similar (REPEAT-001) not proven identical | Component taxonomy decision |
 | SU-021 | Header bar exact pixel height | Y~174 is algorithmic estimate only — **not** implementation boundary | Approve height at Block Specification or accept composite SECTION-001 |
 
@@ -65,7 +64,8 @@
 
 | ID | Item | Status |
 |----|------|--------|
-| SU-019 | Entire Site-Wide Style Foundation proposal | `foundation_status: PROPOSAL` |
+| SU-019 | Entire Site-Wide Style Foundation proposal | **RESOLVED** — `foundation_status: APPROVED` operator 2026-06-22 |
+| SU-002 | Whether hero is separate implementation block from header | **RESOLVED** — composite SECTION-001; internal groups only |
 | SU-020 | Normalization rows marked PROPOSE / LOW confidence | See approval sheet §B |
 | SU-023 | `button-height-standard` 30px vs taller observed upper bound | Confirm 30px or revise at block spec |
 

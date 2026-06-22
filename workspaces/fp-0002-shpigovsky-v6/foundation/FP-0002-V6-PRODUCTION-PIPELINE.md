@@ -2,7 +2,7 @@
 
 **Workspace:** `workspaces/fp-0002-shpigovsky-v6/`  
 **Factory pipeline:** [frontend-implementation-pipeline-v1.md](../../../projects/mars-website-factory/frontend-implementation-pipeline-v1.md)  
-**Current state:** Grounding PARTIAL; Foundation PROPOSAL; approval sheet prepared; HTML/SCSS locked
+**Current state:** Foundation APPROVED; SECTION-001 spec READY FOR OPERATOR REVIEW; HTML/SCSS locked
 
 ---
 
@@ -12,11 +12,13 @@
 |------|--------|----------|
 | G-SRC Source Authority | PASS | JPG hash + v6 purity gate |
 | G-AUD Visual Audit | PASS | `audit/jpg-visual-audit/` |
-| G-GRD Grounding Review | **PARTIAL** | `review/FP-0002-V6-JPG-AUDIT-GROUNDING-REVIEW.md` |
-| G-EXT Design Foundation Extraction | PASS (proposal) | `foundation/FP-0002-V6-DESIGN-FOUNDATION-EXTRACTION.md` |
-| G-NRM Practical Value Normalization | PASS (proposal, revised) | `foundation/FP-0002-V6-PRACTICAL-VALUE-NORMALIZATION.md` |
-| G-FND Site-Wide Style Foundation | **PROPOSAL** | `foundation/FP-0002-V6-SITE-WIDE-STYLE-FOUNDATION.md` |
-| G-FND-REV Foundation operator review prep | **READY** | `foundation/FP-0002-V6-STYLE-FOUNDATION-APPROVAL-SHEET.md` |
+| G-GRD Grounding Review | **PARTIAL** (Header/Hero split estimate only) | `review/FP-0002-V6-JPG-AUDIT-GROUNDING-REVIEW.md` |
+| G-EXT Design Foundation Extraction | PASS | `foundation/FP-0002-V6-DESIGN-FOUNDATION-EXTRACTION.md` |
+| G-NRM Practical Value Normalization | PASS | `foundation/FP-0002-V6-PRACTICAL-VALUE-NORMALIZATION.md` |
+| G-FND Site-Wide Style Foundation | **APPROVED** | `foundation/FP-0002-V6-SITE-WIDE-STYLE-FOUNDATION.md` |
+| G-FND-REV Foundation operator approval | **CLOSED** | operator 2026-06-22 |
+| G-1 Grounding architecture decision | **CLOSED** | composite SECTION-001 |
+| G-3 SECTION-001 specification draft | **READY FOR OPERATOR REVIEW** | `specifications/section-001/` |
 
 ---
 
@@ -24,13 +26,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Grounding review, grounded structure JSON |
-| **Outputs** | PASS / PARTIAL / FAIL verdict; Header/Hero decision |
-| **Forbidden** | HTML, SCSS, Header block spec |
-| **Approval** | Operator |
-| **Status** | **PARTIAL — awaiting decision on SU-001 / SU-002** |
-| **Note** | Y=174 demoted to observed estimate; CSS use forbidden |
-| **Rollback** | Re-open audit segmentation only with new evidence |
+| **Status** | **CLOSED** — composite SECTION-001 |
+| **Decision** | Header + Hero = one major section; internal groups GROUP-01 / GROUP-02 |
+| **Y=174** | OBSERVED_JPG_ESTIMATE — CSS_USE_FORBIDDEN — NOT_AN_IMPLEMENTATION_BOUNDARY |
 
 ---
 
@@ -38,12 +36,11 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Foundation MD + JSON + normalization + approval sheet |
-| **Outputs** | `foundation_status: APPROVED` or revised PROPOSAL |
-| **Forbidden** | Block HTML/SCSS; promoting v3 standards px |
-| **Approval** | Operator (Андрей) |
-| **Status** | **READY FOR OPERATOR REVIEW** — internal contradictions resolved; approval sheet prepared |
-| **Rollback** | Re-run normalization from extraction |
+| **Status** | **CLOSED** — `foundation_status: APPROVED` |
+| **Approved by** | operator |
+| **Date** | 2026-06-22 |
+| **Approved tokens** | container-main 1220px; section-padding compact/standard/large; grid-gap-standard; heading-content-gap; card-padding-standard; accordion-row-spacing (margin); footer-gap 30px |
+| **Deferred globally** | button-height-standard; container-padding-inline-desktop; typography px; font-family; HEX; radii; header internal height; Header/Hero split coordinate |
 
 ---
 
@@ -51,12 +48,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Approved foundation (or scoped waiver); grounding Header/Hero decision; Group Decomposition; Layout Spec |
-| **Outputs** | `FP-0002-V6-SPEC-SECTION-001-HEADER.md` (and hero if split) |
-| **Forbidden** | HTML until spec approved; CSS `174px` header split without operator approval |
-| **Approval** | Operator |
-| **Status** | **NOT STARTED** — `header_implementation_authorized: false` |
-| **Rollback** | Foundation or grounding |
+| **Required inputs** | Approved foundation; composite architecture decision |
+| **Outputs** | `specifications/section-001/FP-0002-V6-SECTION-001-*` |
+| **Status** | **READY FOR OPERATOR REVIEW** |
+| **Note** | Specification complete; does not authorize HTML |
 
 ---
 
@@ -64,10 +59,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Approved block spec; `html_structure_authorized: true` |
-| **Outputs** | Header partial structure only |
-| **Forbidden** | SCSS; hero unless spec includes |
-| **Status** | **LOCKED** |
+| **Status** | **LOCKED** — `header_implementation_authorized: false` |
 
 ---
 
@@ -75,9 +67,6 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Header HTML |
-| **Outputs** | HTML review PASS |
-| **Forbidden** | SCSS |
 | **Status** | **LOCKED** |
 
 ---
@@ -86,10 +75,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | HTML review PASS; foundation tokens; [frontend-pre-scss-validation-checklist-v1.md](../../../projects/mars-website-factory/frontend-pre-scss-validation-checklist-v1.md) |
-| **Outputs** | Header SCSS bound to tokens |
-| **Forbidden** | Arbitrary px; 174px header boundary; 1138px container |
-| **Status** | **LOCKED** |
+| **Status** | **LOCKED** — `scss_authorized: false` |
 
 ---
 
@@ -97,8 +83,6 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Build + JPG crop compare |
-| **Outputs** | QA report + OPERATOR VISUAL REVIEW |
 | **Status** | **LOCKED** |
 
 ---
@@ -107,40 +91,19 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Gate 1 Header/Hero boundary decision; foundation |
-| **Outputs** | Hero block spec (or combined SECTION-001 spec) |
-| **Forbidden** | Hero HTML if boundary SAFE UNKNOWN unresolved |
-| **Status** | **BLOCKED on SU-001** |
-
----
-
-## Subsequent sections (summary)
-
-| Section | Block spec gate | After foundation APPROVED |
-|---------|-----------------|---------------------------|
-| SECTION-002 … SECTION-011 | One spec per major section or internal group batch | Sequential: spec → HTML → review → SCSS → QA |
-
-**Order recommendation:** SECTION-002 intro grid after SECTION-001 complete; full-bleed SECTION-003 as separate spec.
-
----
-
-## Correction loop routing
-
-| Defect class | Fix in |
-|--------------|--------|
-| Wrong px in CSS | Block spec or foundation token — not ad-hoc patch |
-| Wrong section boundary | Grounding review / audit |
-| Wrong component family | Extraction + component map |
-| Missing token | Normalization + foundation approval |
+| **Status** | **MERGED into SECTION-001 composite spec** — not a separate major section |
 
 ---
 
 ## Authorization summary
 
 ```text
-site_wide_style_foundation_approved: false
+site_wide_style_foundation_approved: true
+foundation_approved_by: operator
 implementation_authorized: false
 header_implementation_authorized: false
+hero_implementation_authorized: false
+section_001_specification_status: READY_FOR_OPERATOR_REVIEW
 html_structure_authorized: false
 scss_authorized: false
 ```

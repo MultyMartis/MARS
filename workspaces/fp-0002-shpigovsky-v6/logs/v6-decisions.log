@@ -1,64 +1,21 @@
-﻿---
-timestamp: 2026-06-22T12:30:00Z
-decision: Use OL-01 from frontend-production-authority-order-v1.md as canonical operator spacing scale for FP-0002 V6 normalization
-source_used: projects/mars-website-factory/frontend-production-authority-order-v1.md OL-01
-reason: Repository-proven operator law; matches 20/30/50/70 anchors within full scale
-rejected_alternatives: FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3 px; ad-hoc per-block values
----
----
-timestamp: 2026-06-22T12:30:00Z
-decision: Site-Wide Style Foundation mandatory before FP-0002 V6 block HTML/SCSS
-source_used: frontend-implementation-pipeline-v1.md
-reason: Prior path risked JPG audit to HTML without normalization
-rejected_alternatives: Immediate structure lock to HTML
----
----
-timestamp: 2026-06-22T12:30:00Z
-decision: foundation_status PROPOSAL; implementation_authorized false
-source_used: Grounding review PARTIAL
-reason: Header/Hero boundary and type/colors not provable from JPG alone
-rejected_alternatives: Auto-approve foundation from algorithmic audit
----
----
-timestamp: 2026-06-22T12:30:00Z
-decision: frontend-section-spacing-rule-v1.md section 4 v3 mapping LEGACY for V6
-source_used: FP-0002 v6 clean-room policy
-reason: v3 project px forbidden as V6 visual authority
-rejected_alternatives: Reuse 80px space-12 from v3
----
-
----
-timestamp: 2026-06-22T16:00:00Z
-decision: container-main 1220px classified APPROVED_OPERATOR_RULE; 1138px OBSERVED_JPG_VALUE only
-source_used: V6 zero skeleton + grounding review container section
-reason: Operator authorized 1220px at workspace creation; JPG median is content band not CSS max-width
-rejected_alternatives: Using 1138px as max-width; holding 1220px as legacy forbidden
----
----
-timestamp: 2026-06-22T16:00:00Z
-decision: Header Y=174 demoted from EX-001 implementation exception to OBSERVED_JPG_ESTIMATE; CSS use forbidden
-source_used: Grounding review SU-001; SECTION-001-GROUP-01 algorithmic estimate
-reason: Exact Header/Hero boundary not pixel-proven; contradiction with SAFE UNKNOWN resolved
-rejected_alternatives: Keeping 174px as geometric implementation constraint
----
----
-timestamp: 2026-06-22T16:00:00Z
-decision: accordion-row-gap renamed accordion-row-spacing with property_class margin (15px)
-source_used: OL-01 gap vs padding/margin scales
-reason: 15px not in gap scale; valid as margin per OL-01
-rejected_alternatives: Keeping misnamed gap token; forcing 10px or 20px gap without evidence
----
----
-timestamp: 2026-06-22T16:00:00Z
-decision: Section rhythm split into compact 40px, standard 50px, large 70px families
-source_used: Extraction observed 40-80px range; section mapping table
-reason: Single 50px token collapsed visually different cadences
-rejected_alternatives: One section-padding-standard for entire 40-80px range
----
----
-timestamp: 2026-06-22T16:00:00Z
-decision: Foundation operator review verdict READY FOR OPERATOR APPROVAL
-source_used: Phases 0-14 validation checklist
-reason: Internal contradictions resolved; approval sheet prepared; implementation remains locked
-rejected_alternatives: Auto-approve foundation; FAIL verdict
----
+﻿2026-06-22 | DECISION | foundation_status=APPROVED | approved_by=operator
+2026-06-22 | DECISION | container-main=1220px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | section-padding-compact=40px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | section-padding-standard=50px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | section-padding-large=70px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | grid-gap-standard=30px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | heading-content-gap=30px margin | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | card-padding-standard=25px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | accordion-row-spacing=15px margin NOT gap | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | footer-gap=30px | APPROVED_OPERATOR_RULE
+2026-06-22 | DECISION | OL-01 gap scale 5/10/20/30/40/50/70 | canonical authority
+2026-06-22 | DECISION | OL-01 padding/margin scale 5/10/15/20/25/30/40/50/70/90 anchors 20/30/50/70 | canonical authority
+2026-06-22 | DEFERRED | button-height-standard=30px | block-level only
+2026-06-22 | DEFERRED | container-padding-inline-desktop=50px | block-level proposal only
+2026-06-22 | DEFERRED | typography px font-family HEX radii header height hero radius split coordinate | block spec only
+2026-06-22 | DECISION | SECTION-001 composite Y=0-904 height=904px | operator locked
+2026-06-22 | DECISION | SECTION-001-GROUP-01 Header internal group | not independent major section
+2026-06-22 | DECISION | SECTION-001-GROUP-02 Hero internal group | not independent major section
+2026-06-22 | DECISION | Y=174 OBSERVED_JPG_ESTIMATE CSS_USE_FORBIDDEN NOT_AN_IMPLEMENTATION_BOUNDARY
+2026-06-22 | DECISION | section_001_specification_status=READY_FOR_OPERATOR_REVIEW
+2026-06-22 | DECISION | implementation_authorized=false header_implementation_authorized=false hero_implementation_authorized=false

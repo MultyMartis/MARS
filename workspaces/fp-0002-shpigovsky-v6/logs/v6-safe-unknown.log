@@ -1,49 +1,10 @@
-﻿---
-timestamp: 2026-06-22T12:00:00Z
-unknown: Exact Header/Hero internal Y boundary within SECTION-001
-why_unknown: Header overlays hero on JPG; grounding review PARTIAL
-needed_from_operator: Approve composite SECTION-001 or provide split Y
----
----
-timestamp: 2026-06-22T12:30:00Z
-unknown: container-main max-width production value
-why_unknown: Median 1138px not universal
-needed_from_operator: Approve container token
----
----
-timestamp: 2026-06-22T12:30:00Z
-unknown: Typography px and font-family
-why_unknown: JPG does not provide reliable type metrics
-needed_from_operator: Type scale approval
----
----
-timestamp: 2026-06-22T12:30:00Z
-unknown: Exact color HEX values
-why_unknown: JPEG COLOR VARIANCE
-needed_from_operator: Brand color approval
----
----
-timestamp: 2026-06-22T12:30:00Z
-unknown: Normalization rows REQUIRES OPERATOR APPROVAL
-why_unknown: Medium/low confidence ranges
-needed_from_operator: Review normalization table
----
----
-timestamp: 2026-06-22T12:30:00Z
-unknown: Site-Wide Style Foundation approval
-why_unknown: foundation_status PROPOSAL only
-needed_from_operator: Gate 2 approval
----
-
----
-timestamp: 2026-06-22T16:00:00Z
-unknown: JPG side inset ~130px vs container-main 1220px + padding-inline 50px
-why_unknown: Image geometry (1398-1138)/2 does not equal (1398-1220)/2; different layout models
-needed_from_operator: Confirm container padding token or per-block inset at implementation
----
----
-timestamp: 2026-06-22T16:00:00Z
-unknown: button-height-standard 30px vs observed upper bound 37px
-why_unknown: JPEG anti-aliasing and border-box ambiguity on CMP-001
-needed_from_operator: Confirm 30px at Gate 2 or revise at Header block QA
----
+﻿2026-06-22 | SU-001 | header-hero-y-split-exact | Y=174 estimate forbidden for CSS; geometry from element bounds only
+2026-06-22 | SU-013 | sticky-header | not visible in static JPG
+2026-06-22 | SU-014 | nav-dropdown-hover | not visible in static JPG
+2026-06-22 | SU-015 | mobile-header-menu | no mobile source; breakpoint 1024px operator rule
+2026-06-22 | SU-018 | mobile-layout-1024 | responsive spec gate required
+2026-06-22 | SU-021 | header-bar-exact-height | element-derived bounds only; no single CSS height token
+2026-06-22 | SU-022 | jpg-inset-130px-vs-container-1220 | container-padding-inline-desktop deferred
+2026-06-22 | SU-007-009 | typography-all-roles | proposals in SECTION-001 spec; font-family SAFE UNKNOWN
+2026-06-22 | SU-010-012 | color-hex-all | role bindings only; sampled candidates with JPEG variance
+2026-06-22 | SU-023 | button-height-global-30px | hero CTA observed 45px — block-level exception proposed

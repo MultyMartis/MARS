@@ -1,0 +1,137 @@
+{
+  "block_spec_id": "FP-0002-V6-SPEC-SECTION-001",
+  "section_id": "SECTION-001",
+  "version": "V6",
+  "composite": true,
+  "internal_groups": [
+    {
+      "id": "SECTION-001-GROUP-01",
+      "role": "header",
+      "rows": ["ROW-01", "ROW-02"],
+      "group_ids": ["GROUP-01", "GROUP-02", "GROUP-03", "GROUP-04", "GROUP-05", "GROUP-06", "GROUP-07", "GROUP-08"]
+    },
+    {
+      "id": "SECTION-001-GROUP-02",
+      "role": "hero",
+      "group_ids": ["GROUP-09", "GROUP-10", "GROUP-11", "GROUP-12", "GROUP-13"]
+    }
+  ],
+  "source_sha256": "cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290",
+  "source_region": {
+    "x_start": 0,
+    "x_end": 1398,
+    "y_start": 0,
+    "y_end": 904,
+    "height_px": 904
+  },
+  "geometry": {
+    "section_height_px": 904,
+    "page_width_px": 1398,
+    "observed_content_band": {
+      "x_start": 130,
+      "x_end": 1267,
+      "width": 1138,
+      "classification": "OBSERVED_JPG_VALUE",
+      "css_use_forbidden_as_max_width": true
+    },
+    "y174_estimate": {
+      "value_px": 174,
+      "classification": "OBSERVED_JPG_ESTIMATE",
+      "css_use_forbidden": true,
+      "not_an_implementation_boundary": true
+    },
+    "header": {
+      "light_wash_y_range": [0, 119],
+      "logo_bounds": { "x": 130, "y": 18, "w": 182, "h": 82 },
+      "phones_bounds": { "x": 851, "y": 38, "w": 349, "h": 42 },
+      "nav_text_y_range": [132, 174]
+    },
+    "hero": {
+      "photo_dominant_from_y": 174,
+      "overlay_panel_approx": { "x_start": 400, "x_end": 1000, "y_start": 660, "y_end": 780 },
+      "cta_button": { "x": 557, "y": 792, "w": 297, "h": 45 }
+    }
+  },
+  "container_bindings": {
+    "header_content": "container-main",
+    "container_main_px": 1220,
+    "hero_photo": "container-bleed-media",
+    "hero_overlay": "container-main",
+    "container_padding_inline_desktop": {
+      "value_px": 50,
+      "status": "DEFERRED",
+      "block_proposal": true
+    }
+  },
+  "foundation_tokens_applied": [
+    "container-main",
+    "grid-gap-standard",
+    "accordion-row-spacing",
+    "text-stack-gap",
+    "heading-content-gap"
+  ],
+  "button_families": [
+    {
+      "id": "FAM-BTN-HEADER-OUTLINE",
+      "group": "GROUP-06",
+      "label": "ЗАКАЗАТЬ ЗВОНОК",
+      "fill": "transparent",
+      "observed_height_px": 32,
+      "status": "BLOCK_LEVEL_PROPOSAL"
+    },
+    {
+      "id": "FAM-BTN-HERO-PRIMARY",
+      "group": "GROUP-13",
+      "label": "ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ",
+      "fill": "accent",
+      "observed_height_px": 45,
+      "exception_id": "EX-S001-001",
+      "status": "BLOCK_LEVEL_EXCEPTION"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "EX-002",
+      "token": "hero-band-height-desktop",
+      "value_px": 904
+    },
+    {
+      "id": "EX-S001-001",
+      "token": "hero-cta-height",
+      "value_px": 45,
+      "evidence": "probe hero_red_button h=45"
+    }
+  ],
+  "section_001_specification_status": "READY_FOR_OPERATOR_REVIEW",
+  "implementation_authorized": false,
+  "header_implementation_authorized": false,
+  "hero_implementation_authorized": false,
+  "html_structure_authorized": false,
+  "scss_authorized": false,
+  "site_wide_style_foundation_approved": true,
+  "foundation_approved_by": "operator",
+  "responsive": {
+    "desktop_specified": true,
+    "mobile_safe_unknown": true,
+    "breakpoint_operator_rule_px": 1024
+  },
+  "evidence_files": [
+    "evidence/01-section-001-full.jpg",
+    "evidence/02-header-estimate-band.jpg",
+    "evidence/03-hero-content-area.jpg",
+    "evidence/04-left-third.jpg",
+    "evidence/05-center-third.jpg",
+    "evidence/06-right-third.jpg",
+    "evidence/07-header-contacts-nav.jpg",
+    "evidence/08-hero-lower-edge.jpg",
+    "evidence/section-001-geometry-probe.json",
+    "evidence/section-001-element-bounds.json"
+  ],
+  "artefacts": {
+    "group_decomposition": "FP-0002-V6-SECTION-001-GROUP-DECOMPOSITION.md",
+    "layout_spec": "FP-0002-V6-SECTION-001-LAYOUT-SPEC.md",
+    "implementation_specification": "FP-0002-V6-SECTION-001-IMPLEMENTATION-SPECIFICATION.md",
+    "source_to_token_map": "FP-0002-V6-SECTION-001-SOURCE-TO-TOKEN-MAP.md",
+    "safe_unknown": "FP-0002-V6-SECTION-001-SAFE-UNKNOWN.md"
+  }
+}

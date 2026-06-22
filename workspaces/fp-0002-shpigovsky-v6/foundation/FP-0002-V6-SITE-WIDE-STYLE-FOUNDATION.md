@@ -2,12 +2,13 @@
 
 **Project:** FP-0002 Shpigovsky V6 CLEAN ROOM  
 **Template:** [site-wide-style-foundation-contract-v1.md](../../../projects/mars-website-factory/site-wide-style-foundation-contract-v1.md)  
-**Status:** PROPOSAL — `REQUIRES OPERATOR APPROVAL`  
-**Review:** Operator review preparation 2026-06-22
+**Status:** **APPROVED** — operator decision 2026-06-22  
+**Review:** Foundation Gate 2 closed; spacing + container tokens approved
 
 ```text
-foundation_status: PROPOSAL
-site_wide_style_foundation_approved: false
+foundation_status: APPROVED
+foundation_approved_by: operator
+site_wide_style_foundation_approved: true
 implementation_authorized: false
 header_implementation_authorized: false
 ```
@@ -48,7 +49,7 @@ Listed in extraction + normalization documents. Factory OL-01 applies unless thi
 | Token | Value | Classification | Status |
 |-------|-------|----------------|--------|
 | `container-main` | **max-width: 1220px** | APPROVED_OPERATOR_RULE | Active — V6 zero-skeleton authorization |
-| `container-padding-inline-desktop` | **50px** | APPROVED_OPERATOR_RULE | PROPOSAL — factory container convention |
+| `container-padding-inline-desktop` | **50px** | DEFERRED | Block-level proposal only — not approved globally |
 
 ### JPG observed content band (not CSS)
 
@@ -80,17 +81,18 @@ Listed in extraction + normalization documents. Factory OL-01 applies unless thi
 
 | Token | Value | Property class | Rhythm / role | Approval |
 |-------|-------|----------------|---------------|----------|
-| `section-padding-compact` | 40px | padding | compact sections | PROPOSAL |
-| `section-padding-standard` | 50px | padding | standard sections | PROPOSAL |
-| `section-padding-large` | 70px | padding | large / band approach | PROPOSAL |
+| `section-padding-compact` | 40px | padding | compact sections | **APPROVED_OPERATOR_RULE** |
+| `section-padding-standard` | 50px | padding | standard sections | **APPROVED_OPERATOR_RULE** |
+| `section-padding-large` | 70px | padding | large / band approach | **APPROVED_OPERATOR_RULE** |
 | `section-gap-same-bg` | 30px | padding (single boundary) | same-wash continuation | PROPOSAL |
 | `section-gap-band-inner` | 70px | padding | feature / diff-bg band | PROPOSAL |
-| `heading-content-gap` | 30px | margin | H2 → content | PROPOSAL |
+| `heading-content-gap` | 30px | margin | H2 → content | **APPROVED_OPERATOR_RULE** |
 | `text-stack-gap` | 20px | margin | paragraph stacks | PROPOSAL |
-| `grid-gap-standard` | 30px | gap | 3×2 card grids | PROPOSAL |
+| `grid-gap-standard` | 30px | gap | 3×2 card grids | **APPROVED_OPERATOR_RULE** |
 | `grid-gap-3col` | 30px | gap | 3-col rows | PROPOSAL |
-| `card-padding-standard` | 25px | padding | card internal | PROPOSAL |
-| `accordion-row-spacing` | 15px | **margin** | accordion rows | PROPOSAL |
+| `card-padding-standard` | 25px | padding | card internal | **APPROVED_OPERATOR_RULE** |
+| `accordion-row-spacing` | 15px | **margin** | accordion rows | **APPROVED_OPERATOR_RULE** |
+| `footer-gap` | 30px | gap | footer columns | **APPROVED_OPERATOR_RULE** |
 | `form-field-gap` | 20px | gap | form fields | PROPOSAL |
 | `footer-column-gap` | 30px | gap | footer columns | PROPOSAL |
 
@@ -180,8 +182,9 @@ Cards — minimal or none on JPG; **SAFE UNKNOWN** default none until evidenced.
 
 | Family | Token bindings | Status |
 |--------|----------------|--------|
-| FAM-BTN-PRIMARY | `button-height-standard` 30px, `radius-button` 5px, colors SAFE UNKNOWN | PROPOSAL partial |
-| FAM-BTN-HEADER | SAFE UNKNOWN | HOLD |
+| FAM-BTN-PRIMARY | `button-height-standard` **DEFERRED** globally | block-level measurement |
+| FAM-BTN-HEADER-OUTLINE | outline pill CTA in header | BLOCK_LEVEL_PROPOSAL |
+| FAM-BTN-HERO-PRIMARY | red CTA in hero ~45px observed | BLOCK_LEVEL_PROPOSAL |
 
 One primary button family observed (CMP-001 ×8). Height 30px = normalized lower bound of 30–37px observed range.
 
@@ -267,21 +270,25 @@ See [FP-0002-V6-FOUNDATION-SAFE-UNKNOWN.md](FP-0002-V6-FOUNDATION-SAFE-UNKNOWN.m
 
 | Field | Value |
 |-------|-------|
-| `foundation_status` | **PROPOSAL** |
-| `approved_by` | pending |
-| `approval_date` | pending |
+| `foundation_status` | **APPROVED** |
+| `approved_by` | operator |
+| `approval_date` | 2026-06-22 |
 
 ---
 
 ## 22. Implementation authorization
 
 ```text
-site_wide_style_foundation_approved: false
+site_wide_style_foundation_approved: true
+foundation_approved_by: operator
 implementation_authorized: false
 header_implementation_authorized: false
 scss_authorized: false
 html_structure_authorized: false
+section_001_specification_status: READY_FOR_OPERATOR_REVIEW
 ```
+
+**Next mandatory gate:** SECTION-001 Block Implementation Specification operator review — foundation approval does **not** authorize HTML.
 
 **Machine-readable:** [FP-0002-V6-STYLE-FOUNDATION.json](FP-0002-V6-STYLE-FOUNDATION.json)
 
