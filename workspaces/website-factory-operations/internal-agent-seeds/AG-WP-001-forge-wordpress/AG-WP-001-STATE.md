@@ -2,7 +2,7 @@
 
 **Agent ID:** AG-WP-001  
 **Canonical Name:** Forge WordPress  
-**Last updated:** 2026-06-11  
+**Last updated:** 2026-06-22  
 **Charter:** Seed Foundation Only  
 
 ---
@@ -11,7 +11,8 @@
 
 | Dimension | Value |
 |-----------|-------|
-| **Status** | **SEED** |
+| **Status** | **SEED** (linked to subsystem **FOUNDATION**) |
+| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — FW-00 **COMPLETE** |
 | **Knowledge Base** | **Empty** |
 | **Production Rules** | **Not Created** |
 | **ACF Rules** | **Not Created** |

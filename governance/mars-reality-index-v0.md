@@ -73,6 +73,8 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **Not:** autonomous factory, deployment platform, MARS runtime, proof that Triumph output = shipped Factory engine.
 
+**Forge WordPress (subsystem):** **FOUNDATION** — WordPress implementation layer candidate; [subsystems/forge-wordpress/](../projects/mars-website-factory/subsystems/forge-wordpress/); **not** operational · **not** runtime · **not** registered agent.
+
 **SoT:** [../projects/mars-website-factory/README.md](../projects/mars-website-factory/README.md) · [OPERATIONAL-INDEX.md](../projects/mars-website-factory/OPERATIONAL-INDEX.md) · registry `mars-website-factory` (**planned**)
 
 ---

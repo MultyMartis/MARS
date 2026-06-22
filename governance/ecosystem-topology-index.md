@@ -87,10 +87,22 @@ AGENTS.md (honesty)
 | | |
 |--|--|
 | **What it is** | **Thin overlay** operational doc pack on `gulp_frontend_agent` — phased pipeline, freeze, anti-drift, overlay QA checklists. |
-| **What it is NOT** | Second Gulp SoT, autonomous build bot, orchestration layer, or pixel-perfect engine (v0). |
+| **What it is NOT** | Second Gulp SoT, autonomous build bot, orchestration layer, pixel-perfect engine (v0), **or Forge WordPress** (WordPress implementation subsystem). |
 | **Operational status** | **Operational doc pack** (`operational_doc_pack`) — human + Cursor/Codex only. |
 | **Canonical path** | [../agents/mars-forge/README.md](../agents/mars-forge/README.md); card [../agents/cards/mars-forge-frontend-agent-v0.md](../agents/cards/mars-forge-frontend-agent-v0.md); transition notes [mars-forge-transition-stabilization-v0.md](mars-forge-transition-stabilization-v0.md). |
 | **Relationship role** | **Extends** Gulp foundation + Factory contracts; **does not** replace them. Older design-only docs are **historical precedent** — see transition doc. |
+
+---
+
+### Forge WordPress
+
+| | |
+|--|--|
+| **What it is** | **Website Factory subsystem** — documentation-first WordPress **implementation** methodology (frontend package → WordPress implementation package → WPilot handoff). Operator alias: WP Forge. |
+| **What it is NOT** | MARS Forge (frontend overlay), WPilot (operations), registered agent, `project_id`, runtime, theme/plugin implementation at FOUNDATION. |
+| **Operational status** | **FOUNDATION** (FW-00 complete) — **not** operational, **not** architecture-started, **not** implementation-started. |
+| **Canonical path** | [../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md](../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md); seed [AG-WP-001](../workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/). |
+| **Relationship role** | **Candidate WordPress Implementation Layer** downstream of approved Factory frontend; upstream of WPilot operations. Internal seed **AG-WP-001** — not `agents/registry.md`. |
 
 ---
 
@@ -194,7 +206,7 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | **LOC-ZONE** — Authorized Records filesystem root for Factory structured records (RT-G04/RT-G05 physical artifact plane). Portfolio catalog ROC-01; pilot **FP-0001** (REG-0001) Waves 1–3 **complete**; **FP-0002** (Shpigovsky) material present — **not** ROC-01 enrolled (visibility only). Internal agent seed **AG-WP-001** (Forge WordPress) lives under `internal-agent-seeds/`. |
+| **What it is** | **LOC-ZONE** — Authorized Records filesystem root for Factory structured records (RT-G04/RT-G05 physical artifact plane). Portfolio catalog ROC-01; pilot **FP-0001** (REG-0001) Waves 1–3 **complete**; **FP-0002** (Shpigovsky) material present — **not** ROC-01 enrolled (visibility only). Internal agent seed **AG-WP-001** (Forge WordPress) lives under `internal-agent-seeds/` — canonical methodology home: [subsystems/forge-wordpress/](../projects/mars-website-factory/subsystems/forge-wordpress/). |
 | **What it is NOT** | Second Factory methodology SoT (doctrine stays in `website-factory-reference-v1/`); `project_id` row; runtime or automation product; replacement for `execution-cases-registry-v1.md`. |
 | **Operational status** | **Operational** (human-maintained records) — Waves 1–3 complete on FP-0001; FP-0002 foundation active. |
 | **Canonical path** | [../workspaces/website-factory-operations/README.md](../workspaces/website-factory-operations/README.md); catalog [ROC-01-catalog-aggregate.md](../workspaces/website-factory-operations/POC-02-registry-facet/ROC-01-catalog-aggregate.md). |

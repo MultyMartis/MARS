@@ -42,6 +42,17 @@ Forge WordPress — **будущее** экспертное производст
 
 **Placement:** `workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/` — Authorized Records Zone, не `agents/registry.md`.
 
+**Canonical subsystem (FW-00):** [projects/mars-website-factory/subsystems/forge-wordpress/](../../../../projects/mars-website-factory/subsystems/forge-wordpress/README.md) — methodology home; seed remains historical/foundation source.
+
+**Seed alignment (2026-06-22):**
+
+```text
+AG-WP-001 remains an internal seed.
+Forge WordPress subsystem is the canonical methodology home.
+AG-WP-001 is not yet a registered agent.
+Future agent promotion requires separate charter.
+```
+
 ---
 
 ## Current Scope (SEED only)

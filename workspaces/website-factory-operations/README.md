@@ -36,7 +36,7 @@ Bounded Factory Source-of-Truth filesystem root. All Factory structured records 
 
 | Seed ID | Role | Path |
 |---------|------|------|
-| **AG-WP-001** | Forge WordPress production learning direction | [internal-agent-seeds/AG-WP-001-forge-wordpress/](internal-agent-seeds/AG-WP-001-forge-wordpress/) |
+| **AG-WP-001** | Forge WordPress — internal seed (not registered agent); canonical subsystem: [subsystems/forge-wordpress/](../../projects/mars-website-factory/subsystems/forge-wordpress/) | [internal-agent-seeds/AG-WP-001-forge-wordpress/](internal-agent-seeds/AG-WP-001-forge-wordpress/) |
 
 ---
 
