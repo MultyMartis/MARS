@@ -1,6 +1,6 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (Section 01 rejected removed + clean visual audit)
+**Updated:** 2026-06-23 (Section 01 V2 corrected crop + implementation)
 
 ## Responsive shell stable release
 
@@ -55,7 +55,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01 **REJECTED_REMOVED** — clean audit complete; Section 02+ **BLOCKED** |
+| Main content sections | Section 01 **V2 IMPLEMENTED** — pending operator review; Section 02+ **NOT STARTED** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
@@ -70,17 +70,22 @@ No automated task may overwrite current src without an explicit operator instruc
 responsive_shell_release: FP-0002-V6-RESPONSIVE-SHELL-STABLE-01
 responsive_shell_status: FROZEN_PRESERVED
 main_content_map: CREATED
-home_section_01: REJECTED_REMOVED
-home_section_01_active_code: NONE
-home_section_01_clean_audit: COMPLETE
-home_section_01_new_implementation: NOT_STARTED
-home_section_02: BLOCKED
+home_section_01_previous_audits: REJECTED
+home_section_01_crop_v2: COMPLETE
+home_section_01_boundaries_v2: CONFIRMED
+home_section_01_implementation_v2: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_section_01_active_partial: src/partials/sections/home-recovery-intro.html
+home_section_02: NOT_STARTED
 main_content_remaining: NOT_STARTED
 ```
 
 **Rejection record:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)
 
-**Clean visual audit:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md)
+**Corrected audit V2:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-CORRECTED-AUDIT-V2.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-CORRECTED-AUDIT-V2.md)
+
+**Implementation review V2:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-V2-IMPLEMENTATION-REVIEW.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-V2-IMPLEMENTATION-REVIEW.md)
+
+**Prior clean audit (superseded):** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md)
 
 **Prior rejected review (historical):** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md)
 

@@ -26,3 +26,6 @@
 [2026-06-23T22:40:00Z] ACTION audit_artefacts rejection=FP-0002-V6-HOME-SECTION-01-REJECTION.md clean_audit=FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md crops=visual-audit/*.png removal_screenshots=rejected-removal/*.png
 [2026-06-23T22:40:00Z] ACTION build_after_removal npm_run_build=PASS main_content_active_sections=0 shell_regression=NONE
 [2026-06-23T22:40:00Z] ACTION factory_rules_append sole_visual_authority_law+no_placeholder_duplication_law+analysis_before_implementation_gate+operator_rejection_override
+2026-06-23T06:00:00Z | SECTION-01-V2 | Corrected crop V2 + home-recovery-intro implementation | afafb2b base
+2026-06-23T06:00:00Z | AUDIT-V2 | Boundaries Y902/904/1195/1415/1491 confirmed from JPG | visual-audit-v2
+2026-06-23T06:00:00Z | BUILD | npm run build PASS after Section 01 V2 | dist/index.html

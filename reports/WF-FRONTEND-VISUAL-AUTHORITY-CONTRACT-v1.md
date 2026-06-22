@@ -108,8 +108,11 @@ When a project declares **one** visual source as canonical (e.g. `HOME-PAGE-FULL
 | **NO PLACEHOLDER DUPLICATION** | Unreadable or missing content **stops** implementation. Agents **must not** duplicate neighboring cards, text, or assets to fill an incomplete section. |
 | **ANALYSIS-BEFORE-IMPLEMENTATION** | After operator visual rejection, the next task is **audit-only**. No HTML/SCSS until operator approves crop, boundaries, structure, and content map. |
 | **OPERATOR REJECTION OVERRIDE** | A technically successful build/report does **not** make a visually incorrect section acceptable. Operator rejection sets status to **REJECTED**. |
+| **CROP COMPLETENESS GATE** | A section crop is invalid if any repeated item, card row, decorative object, section ending, or next-section marker is cut off. |
+| **BOUNDARY LINE RULE** | A section boundary line must never pass through content belonging to that section. |
+| **MAP ACCURACY RULE** | Content and geometry frames must enclose the actual visual element. They must not overlap unrelated heading, paragraph, list or card zones. |
 
-**Evidence:** [FP-0002-V6-HOME-SECTION-01-REJECTION.md](../workspaces/fp-0002-shpigovsky-v6/reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)
+**Evidence:** [FP-0002-V6-HOME-SECTION-01-REJECTION.md](../workspaces/fp-0002-shpigovsky-v6/reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md) · [FP-0002-V6-HOME-SECTION-01-CORRECTED-AUDIT-V2.md](../workspaces/fp-0002-shpigovsky-v6/reviews/main-content/FP-0002-V6-HOME-SECTION-01-CORRECTED-AUDIT-V2.md)
 
 ---
 

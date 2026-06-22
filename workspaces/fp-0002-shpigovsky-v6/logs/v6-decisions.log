@@ -14,3 +14,7 @@
 [2026-06-23T22:40:00Z] DECISION placeholder_card_or_text_duplication=PROHIBITED unreadable_content=STOP
 [2026-06-23T22:40:00Z] DECISION next_authorized_step=clean_visual_audit_only home_section_02=BLOCKED
 [2026-06-23T22:40:00Z] DECISION no_git_revert_0e5af79 selective_removal_only operator_src=PRESERVED
+2026-06-23T06:00:00Z | REJECT-V1-CROP | Operator rejected Y1494 end; V2 uses Y1491 after full card row | CONFIRMED
+2026-06-23T06:00:00Z | CARD-COUNT | Measured 3x1 not 6x2 from canonical JPG | CONFIRMED
+2026-06-23T06:00:00Z | LIST-DUP | Mockup lines 5-6 duplicate line 4; implement 4 unique items | HIGH
+2026-06-23T06:00:00Z | PARTIAL-NAME | home-recovery-intro (not home-intro-mission) | CONFIRMED

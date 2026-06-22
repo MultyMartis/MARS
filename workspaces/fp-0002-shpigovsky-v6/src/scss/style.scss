@@ -750,6 +750,125 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
+   10. Home recovery intro (Section 01)
+   ========================================================================== */
+
+.home-recovery-intro {
+	position: relative;
+	padding-top: 28px;
+	padding-bottom: 76px;
+	overflow: hidden;
+}
+
+.home-recovery-intro__container {
+	position: relative;
+	z-index: 1;
+}
+
+.home-recovery-intro__decor {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	z-index: 0;
+	width: 382px;
+	max-width: 42%;
+	pointer-events: none;
+}
+
+.home-recovery-intro__decor-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.home-recovery-intro__content {
+	max-width: 958px;
+	margin-bottom: var(--pad-gap);
+}
+
+.home-recovery-intro__heading {
+	margin-bottom: var(--pad-gap-line);
+	color: var(--color-text-primary);
+}
+
+.home-recovery-intro__lead {
+	max-width: 958px;
+	margin-bottom: var(--pad-gap-line);
+	color: var(--color-text-secondary);
+}
+
+.home-recovery-intro__benefits {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-tight);
+	max-width: 958px;
+	margin-bottom: var(--pad-gap);
+	padding-left: 0;
+	list-style: none;
+}
+
+.home-recovery-intro__benefits-item {
+	position: relative;
+	padding-left: 18px;
+	color: var(--color-text-secondary);
+}
+
+.home-recovery-intro__benefits-item::before {
+	content: '';
+	position: absolute;
+	top: 0.55em;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	border-radius: var(--radius-full);
+	background-color: var(--color-accent);
+	transform: translateY(-50%);
+}
+
+.home-recovery-intro__card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.home-recovery-intro__card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-tight);
+	box-sizing: border-box;
+	min-height: 200px;
+	padding: var(--pad-box);
+	border: var(--border-width) solid var(--border-color-subtle);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+}
+
+.home-recovery-intro__card-icon {
+	display: block;
+	color: var(--color-accent);
+	font-size: var(--font-size-base);
+	line-height: 1;
+}
+
+.home-recovery-intro__card-title {
+	margin: 0;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+}
+
+.home-recovery-intro__card-text {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
    11. Footer
    ========================================================================== */
 
@@ -1378,6 +1497,15 @@ body[data-offcanvas-state='open'] {
 	.container {
 		padding-left: var(--pad-gap-tight);
 		padding-right: var(--pad-gap-tight);
+	}
+
+	.home-recovery-intro__decor {
+		max-width: 50%;
+		opacity: 0.85;
+	}
+
+	.home-recovery-intro__card-grid {
+		grid-template-columns: minmax(0, 1fr);
 	}
 
 	.site-header {
