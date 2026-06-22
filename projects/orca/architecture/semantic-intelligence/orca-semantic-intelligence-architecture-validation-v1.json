@@ -1,0 +1,36 @@
+{
+  "validation_id": "orca-semantic-intelligence-architecture-validation",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PASS — DOCUMENTATION VALIDATION",
+  "overall_result": "PASS",
+  "checks": [
+    {"id": 1, "criterion": "all_layers_inputs_outputs", "result": "PASS"},
+    {"id": 2, "criterion": "layer_authority_boundaries", "result": "PASS"},
+    {"id": 3, "criterion": "accept_reject_abstain_explicit", "result": "PASS"},
+    {"id": 4, "criterion": "topical_relevance_cannot_accept", "result": "PASS"},
+    {"id": 5, "criterion": "service_mapping_after_eligibility", "result": "PASS"},
+    {"id": 6, "criterion": "negatives_after_ownership", "result": "PASS"},
+    {"id": 7, "criterion": "core_before_campaign", "result": "PASS"},
+    {"id": 8, "criterion": "export_no_semantic_mutation", "result": "PASS"},
+    {"id": 9, "criterion": "human_review_explicit", "result": "PASS"},
+    {"id": 10, "criterion": "d3_thresholds_preserved", "result": "PASS"},
+    {"id": 11, "criterion": "corvonero_blocked", "result": "PASS"},
+    {"id": 12, "criterion": "no_runtime_claims", "result": "PASS"},
+    {"id": 13, "criterion": "no_classifier_created", "result": "PASS"},
+    {"id": 14, "criterion": "no_benchmark_created", "result": "PASS"},
+    {"id": 15, "criterion": "no_annotation_guideline_created", "result": "PASS"},
+    {"id": 16, "criterion": "promotion_matrix_20_items", "result": "PASS"},
+    {"id": 17, "criterion": "contract_family_12_planned", "result": "PASS"},
+    {"id": 18, "criterion": "risk_register_18_risks", "result": "PASS"},
+    {"id": 19, "criterion": "component_matrix_complete", "result": "PASS"},
+    {"id": 20, "criterion": "adr_approved_status", "result": "PASS"}
+  ],
+  "operator_approval": {
+    "recorded": true,
+    "date": "2026-06-22",
+    "adr_status": "APPROVED — IMPLEMENTATION NOT STARTED",
+    "implementation_started": false
+  },
+  "not_validated": ["runtime_execution", "classifier_accuracy", "benchmark_quality", "commander_export", "corvonero_rerun"]
+}

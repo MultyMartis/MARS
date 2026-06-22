@@ -1,0 +1,40 @@
+{
+  "record_id": "orca-semantic-intelligence-adr-v1-operator-approval",
+  "version": "v1",
+  "date": "2026-06-22",
+  "decisions": {
+    "A1_adr_status": "APPROVED — IMPLEMENTATION NOT STARTED",
+    "A2_architecture_model": {
+      "approved": true,
+      "layers": "SI-01 through SI-17",
+      "no_monolithic_classifier": true,
+      "strict_layer_separation": true,
+      "authority_order": true,
+      "explicit_human_review": true,
+      "semantic_core_before_campaign_production": true
+    },
+    "A3_admission_model": {
+      "outputs": ["ACCEPT", "REJECT", "ABSTAIN"],
+      "abstain_mandatory_when_commercial_intent_insufficient": true
+    },
+    "A4_corvonero_risk_mode": "CONSERVATIVE",
+    "A5_pilot_thresholds": {
+      "commercial_precision_auto_accept": { "threshold": 0.95, "operator_approved": true },
+      "protected_strata_fpr_per_class": {
+        "threshold": 0.01,
+        "classes": ["career", "educational", "diy_how_to", "regulatory", "navigational"],
+        "operator_approved": true
+      }
+    },
+    "A6_abstention_rate": {
+      "research_suggestion": 0.15,
+      "status": "DIAGNOSTIC INDICATOR — BENCHMARK VALIDATION REQUIRED",
+      "production_blocker": false
+    },
+    "A7_p0_b_authorization": "AUTHORIZED"
+  },
+  "cross_references": {
+    "adr": "ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md",
+    "operator_decisions": "research/ppc-semantic-intelligence/world-practice-2026-06/decisions/ORCA-PPC-SEMANTIC-INTELLIGENCE-OPERATOR-DECISIONS-v1.md"
+  }
+}

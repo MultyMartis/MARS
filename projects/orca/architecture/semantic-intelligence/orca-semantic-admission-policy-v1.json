@@ -1,0 +1,67 @@
+{
+  "policy_id": "orca-semantic-admission-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "layer": "SI-08",
+  "outcomes": ["ACCEPT", "REJECT", "ABSTAIN"],
+  "abstain_is_failure": false,
+  "accept_requirements": [
+    "supported_probable_paid_service_intent",
+    "honest_service_side_landing_answer",
+    "no_dominant_protected_non_commercial_intent",
+    "sufficient_confidence_for_risk_mode",
+    "no_unresolved_ownership_critical_ambiguity"
+  ],
+  "prohibited_accept_triggers": [
+    "service_term_presence_alone",
+    "topical_relevance_alone",
+    "high_volume_alone",
+    "competitor_bidding_alone",
+    "lexical_similarity_to_known_accept_alone"
+  ],
+  "reject_criteria": [
+    "clearly_non_commercial_primary_intent",
+    "educational_career_diy_regulatory_navigational_irrelevant_malformed",
+    "product_intent_incompatible_with_service_only",
+    "landing_requires_reinterpretation",
+    "hard_exclusion_without_exception",
+    "operator_scope_prohibition"
+  ],
+  "abstain_mandatory_when": [
+    "multiple_plausible_intents",
+    "short_query_no_provider_signal",
+    "problem_query_diy_vs_paid_ambiguity",
+    "service_vs_product_unresolved",
+    "model_rule_disagreement",
+    "confidence_below_threshold",
+    "protected_strata_vs_commercial_conflict",
+    "high_risk_accept_in_conservative_without_confirmation"
+  ],
+  "risk_modes": {
+    "CONSERVATIVE": {
+      "use_for": ["new_accounts", "limited_budgets", "no_conversion_history", "expensive_b2b_leads"],
+      "accept_threshold": "highest",
+      "abstain_queue": "largest",
+      "protected_strata": "strictest",
+      "corvonero_initial": true
+    },
+    "BALANCED": {
+      "use_for": ["established_campaigns", "moderate_data", "active_operator_review"],
+      "accept_threshold": "moderate",
+      "abstain_queue": "moderate",
+      "protected_strata": "standard_D3_FPR"
+    },
+    "EXPLORATORY": {
+      "use_for": ["isolated_experiments", "dedicated_budgets", "controlled_test_governance"],
+      "accept_threshold": "lower_within_charter",
+      "must_not_weaken_approved_core_silently": true
+    }
+  },
+  "topical_relevance_rule": "topical_relevance_not_equal_to_commercial_intent",
+  "protected_strata": {
+    "classes": ["career", "educational", "diy_how_to", "regulatory", "navigational"],
+    "fpr_cap_auto_accept": 0.01,
+    "operator_decision": "D3"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "gates_id": "orca-semantic-intelligence-quality-gates",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "operator_approved_thresholds": {
+    "commercial_precision_auto_accept": {"threshold": 0.95, "operator_decision": "D3", "class": "OPERATOR-APPROVED"},
+    "protected_strata_fpr_per_class": {"threshold": 0.01, "classes": ["career", "educational", "diy_how_to", "regulatory", "navigational"], "operator_decision": "D3", "class": "OPERATOR-APPROVED"},
+    "explicit_abstain_mandatory": {"value": true, "operator_decision": "D4", "class": "OPERATOR-APPROVED"},
+    "campaign_before_approved_core_prohibited": {"value": true, "operator_decision": "D7", "class": "OPERATOR-APPROVED"}
+  },
+  "proposed_metrics": [
+    {"metric": "ambiguity_recall", "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"},
+    {"metric": "service_mapping_precision", "proposed_target": 0.90, "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"},
+    {"metric": "calibration_error_ece", "proposed_target": 0.05, "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"},
+    {"metric": "abstention_rate", "note": "research suggests >= 0.15 early — not operator-validated", "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"},
+    {"metric": "human_disagreement_rate", "proposed_target": 0.10, "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"},
+    {"metric": "per_intent_precision_recall", "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"},
+    {"metric": "cost_weighted_error", "status": "PROPOSED — BENCHMARK VALIDATION REQUIRED"}
+  ],
+  "architecture_gates": [
+    {"id": "G-ARCH-01", "requirement": "ADR v1 operator approval", "blocks": "P0-B onward"},
+    {"id": "G-ARCH-02", "requirement": "Semantic taxonomy frozen P0-B", "blocks": "P0-C"},
+    {"id": "G-ARCH-03", "requirement": "Annotation guideline approved P0-C", "blocks": "P0-D annotation"},
+    {"id": "G-ARCH-04", "requirement": "Gold benchmark frozen P0-D", "blocks": "P0-F baselines"},
+    {"id": "G-ARCH-05", "requirement": "Baseline evaluation P0-F", "blocks": "P0-G"},
+    {"id": "G-ARCH-06", "requirement": "Threshold gate pass P0-G", "blocks": "Corvonero rerun"},
+    {"id": "G-ARCH-07", "requirement": "Semantic Core sign-off P0-H", "blocks": "Campaign production"},
+    {"id": "G-ARCH-08", "requirement": "Export parity SI-16", "blocks": "Commander handoff"}
+  ],
+  "corvonero_pilot": {
+    "corpus_size": "300-500",
+    "parent_benchmark": "1200-2000",
+    "initial_risk_mode": "CONSERVATIVE",
+    "diagnostic_v1_reuse": "FORBIDDEN"
+  }
+}

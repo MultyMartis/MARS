@@ -57,7 +57,8 @@ Core documentation:
 - `workflows/` - documented workflows for research, semantics, generation, export, and QA.
 - `contracts/` - input and output contracts for handoffs between workflow steps.
 - `research/` - SERP, competitor, and review analysis methodology.
-- **PPC Semantic Intelligence — world practice research (2026-06)** — analytical source only; operator decisions D1–D7; promotion gate pending ADR: [research/ppc-semantic-intelligence/world-practice-2026-06/README.md](research/ppc-semantic-intelligence/world-practice-2026-06/README.md).
+- **PPC Semantic Intelligence — world practice research (2026-06)** — analytical source only; operator decisions D1–D7: [research/ppc-semantic-intelligence/world-practice-2026-06/README.md](research/ppc-semantic-intelligence/world-practice-2026-06/README.md).
+- **ORCA Semantic Intelligence Architecture v1** — target multi-stage architecture (SI-01–SI-17); ADR **APPROVED — IMPLEMENTATION NOT STARTED**; operator approval A1–A7 recorded: [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md). Next: P0-B taxonomy (authorized, pending operator approval).
 - `semantic/` - intent, clustering, geo modifier, negative keyword, and semantic quality rules.
 - `qa/` - PPC semantic, campaign structure, landing match, and ad relevance QA.
 - `methodology/` - PPC research, campaign architecture, intent, offer, and landing methodology.

@@ -131,9 +131,32 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 | [research/ppc-semantic-intelligence/world-practice-2026-06/gap-analysis/ORCA-PPC-SEMANTIC-INTELLIGENCE-GAP-MATRIX-v1.md](research/ppc-semantic-intelligence/world-practice-2026-06/gap-analysis/ORCA-PPC-SEMANTIC-INTELLIGENCE-GAP-MATRIX-v1.md) | 20-layer research-to-ORCA gap matrix |
 | [research/ppc-semantic-intelligence/world-practice-2026-06/promotion/ORCA-PPC-SEMANTIC-INTELLIGENCE-PROMOTION-BACKLOG-v1.md](research/ppc-semantic-intelligence/world-practice-2026-06/promotion/ORCA-PPC-SEMANTIC-INTELLIGENCE-PROMOTION-BACKLOG-v1.md) | P0-A through P0-H selective promotion backlog |
 
-**Canonical source:** `research/ppc-semantic-intelligence/world-practice-2026-06/ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-v1.md` (SHA-256 verified at intake). **Next gate:** ORCA Semantic Intelligence Architecture Decision Record.
+**Canonical source:** `research/ppc-semantic-intelligence/world-practice-2026-06/ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-v1.md` (SHA-256 verified at intake). **Role:** analytical source only — not architecture authority.
 
-**Corvonero clean-room v1:** `DIAGNOSTIC FAILED — COMMERCIAL ADMISSION LOGIC NOT APPROVED` — see [projects/corvonero-direct-v2-clean-room/PROJECT.md](projects/corvonero-direct-v2-clean-room/PROJECT.md). Reusable corpus preserved; semantic decisions frozen.
+**Corvonero clean-room v1:** `DIAGNOSTIC FAILED — COMMERCIAL ADMISSION LOGIC NOT APPROVED` — see [projects/corvonero-direct-v2-clean-room/PROJECT.md](projects/corvonero-direct-v2-clean-room/PROJECT.md). Reusable corpus preserved; semantic decisions frozen. **Mode:** CONSERVATIVE (initial admission, post-gates). **Rerun:** BLOCKED.
+
+## ORCA Semantic Intelligence Architecture v1
+
+**Document-first target architecture** — approved specification; not runtime, not classifier, implementation not started.
+
+| Doc | Role |
+|-----|------|
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md) | Architecture Decision Record — **APPROVED — IMPLEMENTATION NOT STARTED** |
+| [architecture/semantic-intelligence/decisions/ORCA-SEMANTIC-INTELLIGENCE-ADR-V1-OPERATOR-APPROVAL.md](architecture/semantic-intelligence/decisions/ORCA-SEMANTIC-INTELLIGENCE-ADR-V1-OPERATOR-APPROVAL.md) | Operator approval record A1–A7 |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-RESEARCH-PROMOTION-MATRIX-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-RESEARCH-PROMOTION-MATRIX-v1.md) | Selective research promotion (20 items) |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-AUTHORITY-MODEL-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-AUTHORITY-MODEL-v1.md) | 12-rank authority hierarchy |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-FLOW-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-FLOW-v1.md) | Layers SI-01–SI-17, state machine, prohibited shortcuts |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-ADMISSION-POLICY-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-ADMISSION-POLICY-v1.md) | ACCEPT / REJECT / ABSTAIN policy and risk modes |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-QUALITY-GATES-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-QUALITY-GATES-v1.md) | D3 thresholds + proposed metrics |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-COMPONENT-RESPONSIBILITY-MATRIX-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-COMPONENT-RESPONSIBILITY-MATRIX-v1.md) | Rules, models, LLM, human, operator boundaries |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-CONTRACT-FAMILY-PLAN-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-CONTRACT-FAMILY-PLAN-v1.md) | 12 planned contracts — status PLANNED |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-MIGRATION-BOUNDARY-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-MIGRATION-BOUNDARY-v1.md) | Reusable vs diagnostic vs must-create |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-RISKS-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-RISKS-v1.md) | Risk register R-01–R-18 |
+| [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-VALIDATION-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-VALIDATION-v1.md) | Documentation validation — PASS |
+
+**Promotion backlog P0-A:** `APPROVED — CHECKPOINTED`.  
+**Next gate:** **P0-B Semantic Taxonomy and Record Schema** — operator review.  
+**Blocked:** classifier, benchmark, annotation guideline, Corvonero rerun, campaign production, Commander.
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)
 

@@ -1,0 +1,48 @@
+{
+  "model_id": "orca-semantic-intelligence-authority-model",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "principle": "Lower authority layers cannot override higher layers",
+  "hierarchy": [
+    {"rank": 1, "source": "explicit_operator_decisions", "artifact": "D1-D7 and future decisions", "authority_level": "POLICY"},
+    {"rank": 2, "source": "approved_business_scope", "layer": "SI-01", "authority_level": "POLICY"},
+    {"rank": 3, "source": "approved_semantic_core", "layer": "SI-14", "state_required": "APPROVED", "authority_level": "CANONICAL"},
+    {"rank": 4, "source": "approved_annotation_guideline", "phase": "P0-C", "authority_level": "PROCEDURE"},
+    {"rank": 5, "source": "benchmark_gold_labels", "phase": "P0-D/E", "authority_level": "EVALUATION"},
+    {"rank": 6, "source": "versioned_deterministic_rules", "layer": "SI-06", "authority_level": "HIGH_CONFIDENCE_RULE"},
+    {"rank": 7, "source": "calibrated_model_output", "layers": ["SI-07", "SI-08"], "authority_level": "ADVISORY", "gate": "P0-G"},
+    {"rank": 8, "source": "llm_assisted_adjudication", "layer": "SI-09", "authority_level": "ASSISTANCE"},
+    {"rank": 9, "source": "clustering_suggestions", "layer": "SI-11", "authority_level": "SUGGESTION"},
+    {"rank": 10, "source": "campaign_production", "layer": "SI-15", "authority_level": "CONSUMER"},
+    {"rank": 11, "source": "export_formatting", "layer": "SI-16", "authority_level": "TRANSPORT"},
+    {"rank": 12, "source": "post_launch_proposals", "layer": "SI-17", "authority_level": "PROPOSAL"}
+  ],
+  "permitted_overrides": [
+    "operator_service_ownership_override_SI10",
+    "human_adjudication_ABSTAIN_resolution",
+    "operator_semantic_core_supersede",
+    "SI06_exception_registry"
+  ],
+  "prohibited_overrides": [
+    "campaign_production_semantic_mutation",
+    "export_silent_semantic_repair",
+    "model_auto_accept_without_P0G",
+    "clustering_primary_intent_merge",
+    "post_launch_auto_core_mutation",
+    "diagnostic_corvonero_v1_promotion"
+  ],
+  "conflict_resolution": {
+    "rule_vs_model": "ABSTAIN → SI-09 → SI-13",
+    "protected_strata_vs_commercial": "REJECT or ABSTAIN; never auto-ACCEPT in CONSERVATIVE",
+    "service_mapping_conflict": "ABSTAIN; block cluster",
+    "export_vs_core": "SI-16 fail closed"
+  },
+  "version_binding_fields": [
+    "operator_scope_version",
+    "rule_set_version",
+    "model_version",
+    "guideline_version",
+    "core_version"
+  ]
+}

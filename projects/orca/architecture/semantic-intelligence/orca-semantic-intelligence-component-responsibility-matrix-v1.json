@@ -1,0 +1,82 @@
+{
+  "matrix_id": "orca-semantic-intelligence-component-responsibility",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "components": [
+    {
+      "name": "deterministic_rules",
+      "layers": ["SI-04", "SI-06"],
+      "permitted": ["hard_exclusions", "deterministic_normalization", "scope_prohibitions"],
+      "prohibited": ["commercial_accept_ambiguous", "service_mapping", "clustering", "negative_rescue"],
+      "output_type": "EXCLUDED_or_PASS",
+      "authority_level": 6,
+      "fallback": "ABSTAIN_on_conflict"
+    },
+    {
+      "name": "weak_supervision",
+      "layers": ["SI-05", "SI-06", "SI-07"],
+      "permitted": ["pattern_hints", "heuristic_features", "weak_label_generation"],
+      "prohibited": ["direct_accept_reject", "override_gold"],
+      "output_type": "features_and_weak_labels",
+      "authority_level": "below_benchmark",
+      "fallback": "ignore_on_gold_disagreement"
+    },
+    {
+      "name": "supervised_classifier",
+      "layers": ["SI-07", "SI-08"],
+      "permitted": ["intent_classification", "eligibility_probability", "calibrated_confidence"],
+      "prohibited": ["final_authority", "protected_strata_auto_accept_without_threshold"],
+      "output_type": "intent_distribution_and_probability",
+      "authority_level": 7,
+      "gate": "P0-G",
+      "fallback": "ABSTAIN_low_confidence"
+    },
+    {
+      "name": "embeddings_retrieval",
+      "layers": ["SI-09", "SI-11"],
+      "permitted": ["neighbor_retrieval", "cluster_suggestions"],
+      "prohibited": ["commercial_eligibility", "merge_conflicting_intents"],
+      "output_type": "neighbors_and_similarity",
+      "authority_level": "support_only",
+      "fallback": "disable_stale_index"
+    },
+    {
+      "name": "llm",
+      "layers": ["SI-09"],
+      "permitted": ["structured_adjudication_drafts", "feature_assistance", "rationale"],
+      "prohibited": ["sole_authority", "unversioned_prompts", "silent_accept"],
+      "output_type": "structured_adjudication_proposal",
+      "authority_level": 8,
+      "decision": "pure_LLM_not_core_authority",
+      "fallback": "route_to_human"
+    },
+    {
+      "name": "human_reviewer",
+      "layers": ["SI-09", "SI-13"],
+      "permitted": ["resolve_abstain", "override_high_risk", "adjudicate_conflicts", "blind_eval"],
+      "prohibited": ["bulk_override_without_audit", "change_operator_scope"],
+      "output_type": "final_accept_reject_with_audit",
+      "authority_level": "adjudication_below_operator_signoff",
+      "fallback": "escalate_to_operator"
+    },
+    {
+      "name": "operator",
+      "layers": ["SI-01", "SI-14"],
+      "permitted": ["business_scope", "risk_mode", "threshold_governance", "core_approval"],
+      "prohibited": ["bypass_benchmark_gate_at_scale"],
+      "output_type": "scope_and_approval_records",
+      "authority_level": "1-3",
+      "fallback": "SAFE_UNKNOWN_halt"
+    },
+    {
+      "name": "validator",
+      "layers": ["SI-16"],
+      "permitted": ["parity_checks", "schema_validation", "invariant_checks"],
+      "prohibited": ["semantic_repair", "silent_correction"],
+      "output_type": "PASS_FAIL_diff_report",
+      "authority_level": "transport_integrity",
+      "fallback": "fail_closed"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "plan_id": "orca-semantic-intelligence-contract-family",
+  "version": "v1",
+  "date": "2026-06-22",
+  "contracts": [
+    {"id": 1, "name": "Semantic Source Contract", "producer": "SI-02/SI-03", "consumer": "SI-04", "status": "PLANNED", "gate": "corpus_freeze"},
+    {"id": 2, "name": "Query Understanding Contract", "producer": "SI-05", "consumer": "SI-06/SI-07", "status": "PLANNED", "gate": "P0-B"},
+    {"id": 3, "name": "Intent Classification Contract", "producer": "SI-07", "consumer": "SI-08/SI-09", "status": "PLANNED", "gate": "P0-B"},
+    {"id": 4, "name": "Commercial Eligibility Contract", "producer": "SI-08", "consumer": "SI-09/SI-10/SI-13", "status": "PLANNED", "gate": "P0-G"},
+    {"id": 5, "name": "Abstention and Human Review Contract", "producer": "SI-08/SI-09/SI-13", "consumer": "SI-14", "status": "PLANNED", "gate": "P0-C"},
+    {"id": 6, "name": "Service Ownership Contract", "producer": "SI-10", "consumer": "SI-11/SI-12", "status": "PLANNED", "gate": "operator_scope"},
+    {"id": 7, "name": "Cluster Candidate Contract", "producer": "SI-11", "consumer": "SI-12/SI-14/SI-15", "status": "PLANNED", "gate": "post_ownership"},
+    {"id": 8, "name": "Negative Intelligence Contract", "producer": "SI-12", "consumer": "SI-14/SI-15", "status": "PLANNED", "gate": "post_cluster"},
+    {"id": 9, "name": "Semantic Core Authority Contract", "producer": "SI-14", "consumer": "SI-15/SI-16", "status": "PLANNED", "gate": "P0-H"},
+    {"id": 10, "name": "Campaign Handoff Contract", "producer": "SI-15", "consumer": "SI-16/Campaign Production Contract v1", "status": "PLANNED", "gate": "APPROVED_core"},
+    {"id": 11, "name": "External Artifact Parity Contract", "producer": "SI-16", "consumer": "export_pipeline", "status": "PLANNED", "gate": "pre_commander"},
+    {"id": 12, "name": "Post-Launch Learning Contract", "producer": "SI-17", "consumer": "operator_gate", "status": "PLANNED", "gate": "operator_review"}
+  ]
+}

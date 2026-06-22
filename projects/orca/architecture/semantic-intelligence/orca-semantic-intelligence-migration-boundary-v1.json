@@ -1,0 +1,42 @@
+{
+  "boundary_id": "orca-semantic-intelligence-migration-boundary",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "reusable": [
+    "corvonero_operator_intake",
+    "service_scope_registry",
+    "mig_raw_ledger",
+    "source_corpus",
+    "normalized_corpus",
+    "canonical_phrase_registry",
+    "provenance_authority_manifest",
+    "campaign_production_contract_v1_compatible",
+    "research_package",
+    "triumph_derived_laws",
+    "architecture_adr_v1_post_approval"
+  ],
+  "diagnostic_only": [
+    "clean_room_v1_intent_classifications",
+    "eligibility_decisions",
+    "service_mappings",
+    "cluster_candidates",
+    "negative_candidates",
+    "semantic_core_candidate_v1",
+    "review_workbook_decisions",
+    "corvonero_v1_v7_1_production"
+  ],
+  "must_create_later": [
+    {"artifact": "intent_taxonomy", "backlog": "P0-B"},
+    {"artifact": "semantic_record_schema", "backlog": "P0-B"},
+    {"artifact": "annotation_guideline", "backlog": "P0-C"},
+    {"artifact": "universal_benchmark_charter", "backlog": "P0-D"},
+    {"artifact": "corvonero_pilot_charter", "backlog": "P0-E"},
+    {"artifact": "gold_labels", "backlog": "P0-D/E"},
+    {"artifact": "baseline_classifiers", "backlog": "P0-F"},
+    {"artifact": "evaluation_harness", "backlog": "P0-F/G"},
+    {"artifact": "approved_semantic_core", "backlog": "P0-H"}
+  ],
+  "no_semantic_decision_migration": true,
+  "corvonero_restart_mode": "CONSERVATIVE"
+}

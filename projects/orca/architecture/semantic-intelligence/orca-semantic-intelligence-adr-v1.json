@@ -1,0 +1,106 @@
+{
+  "adr_id": "orca-semantic-intelligence-adr",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "APPROVED — IMPLEMENTATION NOT STARTED",
+  "title": "ORCA Semantic Intelligence v1 — Multi-Stage Managed Semantic Authority",
+  "context": {
+    "research_package": "projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/",
+    "operator_decisions": "D1-D7",
+    "corvonero_status": "DIAGNOSTIC FAILED — FROZEN"
+  },
+  "problem_statement": "Single-gate topical relevance treated as commercial admission; no approved semantic authority chain",
+  "confirmed_failure_mode": "topic_match_mistaken_for_commercial_intent",
+  "architecture_goals": [
+    "separate_business_authority_from_market_evidence",
+    "hierarchical_gates_SI01_SI17",
+    "distinct_ACCEPT_REJECT_ABSTAIN",
+    "human_review_for_uncertainty",
+    "service_mapping_after_eligibility",
+    "clustering_after_ownership",
+    "negatives_after_ownership",
+    "semantic_freeze_before_campaign_production",
+    "export_transport_only",
+    "post_launch_proposals_only"
+  ],
+  "non_goals": [
+    "classifier_implementation",
+    "annotation_guideline",
+    "benchmark_creation",
+    "corvonero_rerun",
+    "campaign_production_authorization",
+    "runtime_claims"
+  ],
+  "selected_architecture": {
+    "name": "ORCA Semantic Intelligence v1",
+    "type": "multi_stage_managed_system",
+    "layers": [
+      {"id": "SI-01", "name": "Operator Authority"},
+      {"id": "SI-02", "name": "Market Evidence"},
+      {"id": "SI-03", "name": "Source Corpus"},
+      {"id": "SI-04", "name": "Normalization"},
+      {"id": "SI-05", "name": "Query Understanding"},
+      {"id": "SI-06", "name": "Hard Exclusion Screening"},
+      {"id": "SI-07", "name": "Intent Classification"},
+      {"id": "SI-08", "name": "Commercial Eligibility"},
+      {"id": "SI-09", "name": "Semantic Adjudication"},
+      {"id": "SI-10", "name": "Service Mapping"},
+      {"id": "SI-11", "name": "Cluster Discovery"},
+      {"id": "SI-12", "name": "Negative Intelligence"},
+      {"id": "SI-13", "name": "Human Review"},
+      {"id": "SI-14", "name": "Semantic Core Authority"},
+      {"id": "SI-15", "name": "Campaign Production Handoff"},
+      {"id": "SI-16", "name": "External Artifact QA"},
+      {"id": "SI-17", "name": "Post-Launch Learning"}
+    ]
+  },
+  "alternatives_rejected": [
+    "single_end_to_end_classifier",
+    "topical_relevance_plus_inline_negatives",
+    "full_llm_as_judge",
+    "manual_only_without_gates",
+    "promote_corvonero_v1_diagnostic_decisions"
+  ],
+  "authority_hierarchy": [
+    "explicit_operator_decisions",
+    "approved_business_scope",
+    "approved_semantic_core",
+    "approved_annotation_guideline",
+    "benchmark_gold_labels",
+    "versioned_deterministic_rules",
+    "calibrated_model_output",
+    "llm_assisted_adjudication",
+    "clustering_suggestions",
+    "campaign_production",
+    "export_formatting",
+    "post_launch_proposals"
+  ],
+  "admission_outcomes": ["ACCEPT", "REJECT", "ABSTAIN"],
+  "corvonero_initial_risk_mode": "CONSERVATIVE",
+  "semantic_core_states": ["DRAFT", "IN_REVIEW", "APPROVED", "REJECTED", "SUPERSEDED"],
+  "quality_gates_d3": {
+    "commercial_precision_auto_accept": {"threshold": 0.95, "operator_approved": true},
+    "protected_strata_fpr_per_class": {"threshold": 0.01, "classes": ["career", "educational", "diy_how_to", "regulatory", "navigational"], "operator_approved": true},
+    "explicit_abstain": {"mandatory": true, "operator_approved": true},
+    "campaign_before_approved_core": {"prohibited": true, "operator_approved": true}
+  },
+  "approval_gate": {
+    "operator_review_required": false,
+    "operator_approval_record": "decisions/ORCA-SEMANTIC-INTELLIGENCE-ADR-V1-OPERATOR-APPROVAL.md",
+    "p0_a_status": "APPROVED — CHECKPOINTED",
+    "next_task": "P0-B Semantic Taxonomy and Record Schema",
+    "classifier": "NOT STARTED",
+    "benchmark": "NOT STARTED",
+    "campaign_production": "BLOCKED",
+    "commander": "BLOCKED"
+  },
+  "cross_references": {
+    "promotion_matrix": "ORCA-SEMANTIC-INTELLIGENCE-RESEARCH-PROMOTION-MATRIX-v1.md",
+    "authority_model": "ORCA-SEMANTIC-INTELLIGENCE-AUTHORITY-MODEL-v1.md",
+    "flow": "ORCA-SEMANTIC-INTELLIGENCE-FLOW-v1.md",
+    "admission_policy": "ORCA-SEMANTIC-ADMISSION-POLICY-v1.md",
+    "quality_gates": "ORCA-SEMANTIC-INTELLIGENCE-QUALITY-GATES-v1.md",
+    "risks": "ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-RISKS-v1.md",
+    "validation": "ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-VALIDATION-v1.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "register_id": "orca-semantic-intelligence-architecture-risks",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "risks": [
+    {"id": "R-01", "risk": "over_admission", "probability": "HIGH", "impact": "CRITICAL", "blocking": "PRODUCTION"},
+    {"id": "R-02", "risk": "excessive_abstention", "probability": "MEDIUM", "impact": "MEDIUM", "blocking": "PILOT"},
+    {"id": "R-03", "risk": "hidden_recall_loss", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PILOT"},
+    {"id": "R-04", "risk": "rule_conflict", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PILOT"},
+    {"id": "R-05", "risk": "benchmark_bias", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PRODUCTION"},
+    {"id": "R-06", "risk": "annotation_inconsistency", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PRODUCTION"},
+    {"id": "R-07", "risk": "llm_instability", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PILOT"},
+    {"id": "R-08", "risk": "model_drift", "probability": "LOW", "impact": "HIGH", "blocking": "PRODUCTION"},
+    {"id": "R-09", "risk": "stale_service_scope", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PRODUCTION"},
+    {"id": "R-10", "risk": "domain_transfer_failure", "probability": "MEDIUM", "impact": "HIGH", "blocking": "PRODUCTION"},
+    {"id": "R-11", "risk": "russian_morphology_errors", "probability": "MEDIUM", "impact": "MEDIUM", "blocking": "PILOT"},
+    {"id": "R-12", "risk": "product_service_confusion", "probability": "HIGH", "impact": "HIGH", "blocking": "PRODUCTION"},
+    {"id": "R-13", "risk": "false_confidence", "probability": "MEDIUM", "impact": "CRITICAL", "blocking": "PRODUCTION"},
+    {"id": "R-14", "risk": "reviewer_confirmation_bias", "probability": "MEDIUM", "impact": "MEDIUM", "blocking": "PILOT"},
+    {"id": "R-15", "risk": "self_validation", "probability": "MEDIUM", "impact": "CRITICAL", "blocking": "PRODUCTION"},
+    {"id": "R-16", "risk": "campaign_layer_contamination", "probability": "HIGH", "impact": "CRITICAL", "blocking": "PRODUCTION"},
+    {"id": "R-17", "risk": "negative_overblocking", "probability": "MEDIUM", "impact": "MEDIUM", "blocking": "PILOT"},
+    {"id": "R-18", "risk": "post_launch_feedback_leakage", "probability": "MEDIUM", "impact": "CRITICAL", "blocking": "PRODUCTION"}
+  ]
+}
