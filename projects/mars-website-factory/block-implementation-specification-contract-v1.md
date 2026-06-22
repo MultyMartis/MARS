@@ -1,0 +1,152 @@
+# Website Factory Block Implementation Specification Contract v1
+
+**Status:** **documented** — mandatory per-block artefact before HTML and SCSS.  
+**Not:** Layout Spec (see [layout-spec-law-v1.md](layout-spec-law-v1.md)), automated codegen, or Forge task JSON.
+
+**Purpose:** Bind one block/section to approved Site-Wide Style Foundation tokens so implementers do not invent spacing, type, or colors.
+
+**Upstream:** [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md)  
+**Peer:** [layout-spec-law-v1.md](layout-spec-law-v1.md) (zone/row composition), [group-decomposition-law-v1.md](group-decomposition-law-v1.md) (GROUP-IDs)
+
+---
+
+## Core rule
+
+**Implementers must not choose spacing, typography, container, or component values independently when Site-Wide Style Foundation already defines them.**
+
+Deviations require exception register entry + operator approval.
+
+---
+
+## Required sections (per block)
+
+### Identity
+
+- `block_spec_id` (e.g. `FP-0002-V6-SPEC-SECTION-001-HEADER`)
+- `section_id` (grounded section reference)
+- `component_ids` (CMP-* list)
+- `forge_block_id` if registry-bound (optional)
+
+### Source evidence
+
+- JPG region (Y range, screenshot ref)
+- Grounding review classification
+- Confidence
+
+### Parent page section
+
+- Page slug
+- Section order
+- Neighbor sections (rhythm context: same-bg vs diff-bg)
+
+### Component bindings
+
+Map each visible group to foundation component family.
+
+### Container binding
+
+- `container-main` \| `container-narrow` \| `full-bleed` \| `exception`
+
+### Typography bindings
+
+Per element role → foundation typography token.
+
+### Spacing bindings
+
+Per region → foundation spacing token or exception ID.
+
+### Color bindings
+
+Per element → color role (not raw hex unless exception).
+
+### Grid bindings
+
+Column pattern ID, gap token.
+
+### Exact geometry constraints
+
+Provable constraints only (e.g. header bar height observed range).
+
+### Normalized values
+
+Table linking Evidence ID → token.
+
+### Exceptional values
+
+Rows outside foundation with approval slot.
+
+### Asset bindings
+
+Image slots, icons, logo — path policy only.
+
+### Responsive behavior
+
+Desktop evidence; mobile SAFE UNKNOWN unless specified.
+
+### Interaction behavior
+
+Accordion, carousel, form — minimal; SAFE UNKNOWN default.
+
+### SAFE UNKNOWN
+
+Items blocking HTML or SCSS.
+
+### Forbidden deviations
+
+Values agent must not invent.
+
+### HTML structure authorization
+
+```text
+html_structure_authorized: false | true
+```
+
+### SCSS authorization
+
+```text
+scss_authorized: false | true
+```
+
+Requires `html_structure_authorized: true` + foundation `APPROVED` or scoped operator waiver.
+
+### Visual QA acceptance criteria
+
+- Screenshot compare region
+- Foundation token checklist
+- Operator visual review required per [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md)
+
+---
+
+## Gate sequence (per block)
+
+```text
+Block Implementation Specification (draft)
+        ↓ operator review
+Block Implementation Specification (approved)
+        ↓
+HTML only (structure gate)
+        ↓ HTML review
+SCSS (foundation bindings only)
+        ↓
+Visual QA
+        ↓
+Correction loop → spec | foundation | audit defect class
+```
+
+---
+
+## Filename convention
+
+```text
+<PROJECT>-SPEC-<SECTION-ID>-<BLOCK-NAME>.md
+```
+
+Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 opens.
+
+---
+
+## Changelog
+
+| Date | Change |
+|------|--------|
+| 2026-06-22 | v1 — Connects foundation to HTML/SCSS gates |

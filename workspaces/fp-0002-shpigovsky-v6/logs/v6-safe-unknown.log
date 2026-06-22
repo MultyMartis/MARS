@@ -1,68 +1,36 @@
-﻿# FP-0002 v6 — safe unknown log (append-only)
-
-# No SAFE UNKNOWN entries for task FP-0002 v6 JPG-ONLY RULE LOCK + SOCIAL ICON NORMALIZATION.
-
----
-timestamp: 2026-06-22T13:50:18+07:00
-topic: inventory self-checksum drift
-detail: backup/FP-0002-V6-STABLE-BACKUP-STARTER.inventory.json live SHA-256 (86c023b2…) differs from embedded inventory record (669ca6a2…); 37/38 other paths still match.
-action: operator may refresh inventory embedded hash if desired; does not block JPG audit.
----
-
----
-timestamp: 2026-06-22T13:50:18+07:00
-topic: social SVG byte provenance
-detail: v6-actions.log documents copy-only from INCOMING/03_BRANDING; gate did not re-open sources or forbidden workspaces to verify bytes.
-action: accept logged provenance or operator re-verify from allowed branding paths.
----
-
----
-timestamp: 2026-06-22T13:50:18+07:00
-topic: foundation token historical independence
-detail: 1220px container and 1024px breakpoint are approved V6 foundation tokens; independence from pre-v6 iterations not provable without forbidden source reads.
-action: treat as V6 charter values unless operator overrides after JPG audit.
+﻿---
+timestamp: 2026-06-22T12:00:00Z
+unknown: Exact Header/Hero internal Y boundary within SECTION-001
+why_unknown: Header overlays hero on JPG; grounding review PARTIAL
+needed_from_operator: Approve composite SECTION-001 or provide split Y
 ---
 ---
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg — typography
-
-SAFE UNKNOWN:
-font-family and exact line-height for all text
-
-REASON:
-JPEG raster text lacks reliable metrics
+timestamp: 2026-06-22T12:30:00Z
+unknown: container-main max-width production value
+why_unknown: Median 1138px not universal
+needed_from_operator: Approve container token
 ---
 ---
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg — BLOCK boundaries <380px
-
-SAFE UNKNOWN:
-internal column splits within BLOCK-004,014,022,027,028,031,032,035
-
-REASON:
-transition score splits macro bands; sub-grids not uniquely separable by row scan alone
+timestamp: 2026-06-22T12:30:00Z
+unknown: Typography px and font-family
+why_unknown: JPG does not provide reliable type metrics
+needed_from_operator: Type scale approval
 ---
 ---
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg — colors
-
-SAFE UNKNOWN:
-exact HEX for red CTA and dark blue bands
-
-REASON:
-JPEG COLOR VARIANCE
+timestamp: 2026-06-22T12:30:00Z
+unknown: Exact color HEX values
+why_unknown: JPEG COLOR VARIANCE
+needed_from_operator: Brand color approval
 ---
 ---
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg — responsive
-
-SAFE UNKNOWN:
-layout below 1024px
-
-REASON:
-single desktop JPG only
+timestamp: 2026-06-22T12:30:00Z
+unknown: Normalization rows REQUIRES OPERATOR APPROVAL
+why_unknown: Medium/low confidence ranges
+needed_from_operator: Review normalization table
 ---
-GROUNDING-REVIEW: Exact Y boundary between header top bar and hero photo within SECTION-001 — header visually overlays hero
-GROUNDING-REVIEW: Whether CMP-004 and CMP-008 are one shared component or two similar instances
-GROUNDING-REVIEW: Exact content container width vs statistical median 1138px on full-width photo sections
-GROUNDING-REVIEW: BLOCK-001 header bar exact height for implementation (estimated Y~0-174)
+---
+timestamp: 2026-06-22T12:30:00Z
+unknown: Site-Wide Style Foundation approval
+why_unknown: foundation_status PROPOSAL only
+needed_from_operator: Gate 2 approval
+---

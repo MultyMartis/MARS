@@ -1,0 +1,65 @@
+{
+  "project_id": "FP-0002",
+  "workspace": "fp-0002-shpigovsky-v6",
+  "version": "V6",
+  "source_sha256": "cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290",
+  "foundation_status": "PROPOSAL",
+  "implementation_authorized": false,
+  "header_implementation_authorized": false,
+  "html_structure_authorized": false,
+  "scss_authorized": false,
+  "grounding_review_verdict": "PARTIAL",
+  "operator_approval_required": true,
+  "spacing_scale_ol01": {
+    "gap_px": [5, 10, 20, 30, 40, 50, 70],
+    "padding_margin_px": [5, 10, 15, 20, 25, 30, 40, 50, 70, 90],
+    "anchors_px": [20, 30, 50, 70]
+  },
+  "tokens": {
+    "section-padding-standard": { "value_px": 50, "status": "PROPOSAL", "rule_id": "NRM-001" },
+    "section-gap-same-bg": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-003" },
+    "section-gap-band-inner": { "value_px": 70, "status": "PROPOSAL", "rule_id": "NRM-002" },
+    "heading-content-gap": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-004" },
+    "text-stack-gap": { "value_px": 20, "status": "PROPOSAL", "rule_id": "NRM-005" },
+    "grid-gap-standard": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-006" },
+    "grid-gap-3col": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-007" },
+    "card-padding-standard": { "value_px": 25, "status": "PROPOSAL", "rule_id": "NRM-008" },
+    "accordion-row-gap": { "value_px": 15, "status": "PROPOSAL", "rule_id": "NRM-009" },
+    "button-height-primary": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-010" },
+    "radius-button": { "value_px": 5, "status": "PROPOSAL", "rule_id": "NRM-011" },
+    "form-field-gap": { "value_px": 20, "status": "PROPOSAL", "rule_id": "NRM-016" },
+    "footer-column-gap": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-015" }
+  },
+  "exceptions": [
+    {
+      "id": "EX-001",
+      "token": "header-bar-height-observed",
+      "value_px": 174,
+      "rule_id": "NRM-012",
+      "reason": "header bar geometric constraint from GROUP-01"
+    },
+    {
+      "id": "EX-002",
+      "token": "hero-band-height-desktop",
+      "value_px": 904,
+      "rule_id": "NRM-014",
+      "reason": "SECTION-001 composite first screen"
+    }
+  ],
+  "safe_unknown": [
+    "container-main-max",
+    "type-h1",
+    "type-h2",
+    "type-body",
+    "type-button",
+    "color-accent-hex",
+    "color-page-background-hex",
+    "header-hero-y-split",
+    "radius-card",
+    "radius-hero-panel",
+    "mobile-spacing",
+    "cmp-004-vs-cmp-008-identity"
+  ],
+  "section_rhythm_classes": ["compact", "standard", "large", "feature", "hero", "custom-exception"],
+  "forbidden_sources": ["FIG", "PDF", "v1", "v2", "v3", "v4", "v5", "FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3"]
+}

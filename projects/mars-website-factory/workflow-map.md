@@ -61,6 +61,8 @@ Production PASS
 
 **Foundation path (pre–Home):** Production Standards Draft → Mapping QA → Approval → **Canonical Clean Shell v1** → **Group Decomposition (APPROVED)** → **Layout Spec (APPROVED)** → Shell → Visual Foundation → Design Calibration → Foundation QA — [canonical-clean-shell-v1.md](canonical-clean-shell-v1.md) · [group-decomposition-law-v1.md](group-decomposition-law-v1.md) · [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) · [frontend-shell-first-start-protocol-v1.md](frontend-shell-first-start-protocol-v1.md) · [layout-spec-law-v1.md](layout-spec-law-v1.md).
 
+**JPG / clean-room foundation path (2026-06-22):** When visual source is raster audit only (e.g. FP-0002 V6), use **[frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md)** — SOURCE → VISUAL AUDIT → GROUNDING → **DESIGN FOUNDATION EXTRACTION** → **PRACTICAL VALUE NORMALIZATION** → **SITE-WIDE STYLE FOUNDATION** (operator approval) → PAGE/BLOCK IMPLEMENTATION SPECIFICATION → HTML → SCSS → VISUAL QA. **Do not** skip to HTML after structure lock. Contracts: [practical-value-normalization-contract-v1.md](practical-value-normalization-contract-v1.md) · [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) · [block-implementation-specification-contract-v1.md](block-implementation-specification-contract-v1.md).
+
 **Reporting rollup:** [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5–§6 · **Production PASS authority:** [operational-qa-entry-v1.md](operational-qa-entry-v1.md) § Production PASS authority.
 
 ## Prompt → execute → report

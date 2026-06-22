@@ -94,7 +94,9 @@ If mapping is absent → record **SAFE UNKNOWN**; do not start Home page product
 
 ## 4. FP-0002 (Shpigovsky.ru) production mapping
 
-**SSOT:** [FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3.md) §6.
+> **LEGACY for FP-0002 V6 CLEAN ROOM.** V6 must not import v3 px values. Use `workspaces/fp-0002-shpigovsky-v6/foundation/` + [frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md).
+
+**SSOT (v3 instance — read-only for other lanes):** [FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3.md) §6.
 
 | Token / rule | Value | Tier | Usage |
 |--------------|-------|------|-------|

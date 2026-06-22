@@ -1,215 +1,49 @@
-﻿# FP-0002 v6 — actions log (append-only)
-# Format: see reports/FP-0002-v6-EXECUTION-LOGGING-SYSTEM-v1.md
-
----
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: src/img/social/telegram.svg
-action: copied
-reason: Phase A social icon normalization from Telegram-ico.svg
-expected_outcome: Normalized telegram icon available in v6 asset pipeline
----
-
----
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: src/img/social/whatsapp.svg
-action: copied
-reason: Phase A social icon normalization from WhatsApp-ico.svg
-expected_outcome: Normalized whatsapp icon available in v6 asset pipeline
----
-
----
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: src/img/social/max.svg
-action: copied
-reason: Phase A social icon normalization from MAX-ico.svg
-expected_outcome: Normalized max icon available in v6 asset pipeline
----
-
----
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: reports/FP-0002-v6-SOCIAL-ICON-NORMALIZATION-v1.md
+﻿---
+timestamp: 2026-06-22T12:00:00Z
+file_changed: cross-layer-audit
 action: created
-reason: Phase A deliverable
-expected_outcome: Documented copy mapping and verification checklist
+reason: Website Factory cross-layer audit and FP-0002 V6 pipeline repair started
+expected_outcome: Foundation chain documented before implementation
 ---
-
 ---
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: reports/FP-0002-v6-JPG-ONLY-HARD-LAW-v1.md
+timestamp: 2026-06-22T12:30:00Z
+file_changed: projects/mars-website-factory/practical-value-normalization-contract-v1.md
 action: created
-reason: Phase B deliverable
-expected_outcome: Binding JPG-only source law for v6
+reason: Canonical normalization contract
+expected_outcome: Audit-to-foundation traceability
 ---
-
 ---
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: reports/FP-0002-v6-EXECUTION-LOGGING-SYSTEM-v1.md
+timestamp: 2026-06-22T12:30:00Z
+file_changed: projects/mars-website-factory/site-wide-style-foundation-contract-v1.md
 action: created
-reason: Phase C deliverable
-expected_outcome: Logging format and rules documented
+reason: Mandatory foundation gate template
+expected_outcome: Block spec blocked until foundation approved
 ---
-
 ---
-timestamp: 2026-06-22T00:00:00+03:00
-file_changed: reports/FP-0002-v6-SOURCE-ACCESS-GUARD-v1.md
+timestamp: 2026-06-22T12:30:00Z
+file_changed: projects/mars-website-factory/block-implementation-specification-contract-v1.md
 action: created
-reason: Phase D deliverable
-expected_outcome: Allowed/forbidden roots defined
+reason: Block-level binding contract
+expected_outcome: HTML/SCSS require spec
 ---
-
 ---
-timestamp: 2026-06-22T13:00:56+03:00
-file_changed: npm run build
-action: build
-reason: Phase E build verify after social icon copy
-expected_outcome: dist/ contains index.html, css, js, and social SVGs
----
-
----
-timestamp: 2026-06-22T13:33:00+07:00
-SOURCE:
-Operator request — FP-0002 V6 STABLE BACKUP STARTER
-
-DECISION:
-Created stable pre-layout backup, inventory and git checkpoint for the V6 CLEAN ROOM workspace.
-
-REASON:
-Preserve the exact foundation state before Header, Hero, Footer or section implementation begins.
-file_changed: backup/FP-0002-V6-STABLE-BACKUP-STARTER.zip, backup/FP-0002-V6-STABLE-BACKUP-STARTER.inventory.json, FP-0002-V6-STABLE-BACKUP-STARTER.md
+timestamp: 2026-06-22T12:30:00Z
+file_changed: projects/mars-website-factory/frontend-implementation-pipeline-v1.md
 action: created
-expected_outcome: Recoverable pre-layout checkpoint with verified SHA-256 inventory and ZIP
----
-
----
-timestamp: 2026-06-22T13:50:18+07:00
-SOURCE:
-Operator request to verify V6 audit source purity before JPG Visual Audit.
-
-DECISION:
-Performed a read-only contamination and provenance gate over the V6 workspace, logs, backup archive and future audit artefacts.
-
-REASON:
-Ensure that no structure, measurements or decisions from FIG, PDF, v1-v5, old workspaces or old reports can influence the JPG-only audit.
-file_changed: audit/FP-0002-V6-JPG-AUDIT-SOURCE-PURITY-GATE.md, logs/v6-actions.log, logs/v6-decisions.log, logs/v6-safe-unknown.log
-action: purity_gate
-expected_outcome: PASS verdict with gate artefact and updated logs
+reason: Workflow repair — full gate chain
+expected_outcome: No JPG-to-HTML skip
 ---
 ---
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Preflight completed
-
-REASON:
-V6 workspace, purity gate, JPG hash, zero skeleton HTML
+timestamp: 2026-06-22T12:30:00Z
+file_changed: projects/mars-website-factory/website-factory-cross-layer-artefact-registry-v1.md
+action: created
+reason: Found rules registry from audit
+expected_outcome: Classified KEEP/LINK/ADAPT/DO NOT USE
 ---
 ---
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-JPG integrity verified
-
-REASON:
-SHA-256 cdd1d5b… matches 8107632 bytes
+timestamp: 2026-06-22T12:45:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/
+action: created
+reason: FP-0002 V6 foundation artefacts
+expected_outcome: PROPOSAL ready for operator review
 ---
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-JPG opened
-
-REASON:
-PIL native pixel load 1398x16343
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Coordinate system established
-
-REASON:
-top-left origin, source-image-pixel unit
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Global segmentation completed
-
-REASON:
-35 BLOCK segments
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Block extraction completed
-
-REASON:
-12-point template per block in audit MD
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Geometry map completed
-
-REASON:
-FP-0002-V6-JPG-GEOMETRY-MAP.md
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Component map completed
-
-REASON:
-20 CMP entries
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-SAFE UNKNOWN register completed
-
-REASON:
-FP-0002-V6-JPG-SAFE-UNKNOWN.md
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Structure lock completed
-
-REASON:
-FP-0002-V6-JPG-STRUCTURE-LOCK.md
----
----
-SOURCE:
-HOME-PAGE-FULL-MOCKUP.jpg
-
-DECISION:
-Validation completed
-
-REASON:
-PASS verdict; JSON valid
----
-ACTION: Grounding review started.
-ACTION: Review images created (FP-0002-V6-FULL-PAGE-WITH-BOUNDARIES.jpg, FP-0002-V6-BOUNDARY-CONTACT-SHEET.jpg).
-ACTION: All 34 internal boundaries manually checked.
-ACTION: Major sections identified: 11.
-ACTION: Internal groups identified.
-ACTION: Coordinate model normalized (last y_end=16343).
-ACTION: Components reviewed (20 total; CMP-019/020 corrected).
-ACTION: Existing audit updated with RAW vs GROUNDED separation.
-ACTION: Validation completed — verdict PARTIAL.
