@@ -1,0 +1,22 @@
+{
+  "validator_id": "orca-semantic-admission-invariant-validator-v1",
+  "version": "v1",
+  "severity_levels": ["FATAL", "BLOCKING", "WARNING"],
+  "rules": [
+    {"id": 1, "code": "SI-INV-001", "rule": "ACCEPT based only on topical/service match", "severity": "BLOCKING", "invariant_ref": 1},
+    {"id": 2, "code": "SI-INV-002", "rule": "ACCEPT without positive commercial evidence", "severity": "BLOCKING", "invariant_ref": 2},
+    {"id": 3, "code": "SI-INV-003", "rule": "ACCEPT with unresolved high ambiguity", "severity": "BLOCKING", "invariant_ref": 4},
+    {"id": 4, "code": "SI-INV-004", "rule": "ACCEPT with unresolved provider-vs-DIY conflict", "severity": "BLOCKING", "invariant_ref": 3},
+    {"id": 5, "code": "SI-INV-005", "rule": "ACCEPT with unresolved career-vs-provider conflict", "severity": "BLOCKING", "invariant_ref": 3},
+    {"id": 6, "code": "SI-INV-006", "rule": "ACCEPT with unresolved product-vs-service conflict", "severity": "BLOCKING", "invariant_ref": 3},
+    {"id": 7, "code": "SI-INV-007", "rule": "missing provenance", "severity": "BLOCKING", "invariant_ref": 7},
+    {"id": 8, "code": "SI-INV-008", "rule": "missing taxonomy/schema/guideline versions", "severity": "FATAL", "invariant_ref": 8},
+    {"id": 9, "code": "SI-INV-009", "rule": "final service ownership before ACCEPT", "severity": "BLOCKING", "invariant_ref": 9},
+    {"id": 10, "code": "SI-INV-010", "rule": "cluster/campaign/export fields in admission output", "severity": "BLOCKING", "invariant_ref": 10},
+    {"id": 11, "code": "SI-INV-011", "rule": "numeric narrative placeholders", "severity": "BLOCKING", "invariant_ref": 11},
+    {"id": 12, "code": "SI-INV-012", "rule": "silent rewriting of malformed phrases", "severity": "BLOCKING", "invariant_ref": 12},
+    {"id": 13, "code": "SI-INV-013", "rule": "missing ABSTAIN route", "severity": "BLOCKING", "invariant_ref": 6},
+    {"id": 14, "code": "SI-INV-014", "rule": "semantic mutation during export", "severity": "BLOCKING", "invariant_ref": 14},
+    {"id": 15, "code": "SI-INV-015", "rule": "required contract not loaded", "severity": "FATAL", "invariant_ref": 15}
+  ]
+}

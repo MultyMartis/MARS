@@ -61,7 +61,9 @@ Core documentation:
 - **ORCA Semantic Intelligence Architecture v1** — target multi-stage architecture (SI-01–SI-17); ADR **APPROVED — IMPLEMENTATION NOT STARTED**; checkpoint `f17c270`: [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md).
 - **ORCA Semantic Intelligence Taxonomy & Schema v1 (P0-B)** — **APPROVED — IMPLEMENTATION NOT STARTED**; checkpoint `3151953`: [semantic-intelligence/README.md](semantic-intelligence/README.md).
 - **ORCA Semantic Annotation Guideline v1 (P0-C)** — **APPROVED — IMPLEMENTATION NOT STARTED** (checkpoint `78b0557`, C1–C7): [semantic-intelligence/annotation/README.md](semantic-intelligence/annotation/README.md).
-- **ORCA Universal Semantic Benchmark Charter v1 (P0-D)** — **PROPOSED — ON HOLD** (capability recovery audit v1); uncommitted: [semantic-intelligence/benchmark/README.md](semantic-intelligence/benchmark/README.md). Audit: [audits/triumph-to-orca-capability-recovery-v1/](audits/triumph-to-orca-capability-recovery-v1/). Next gate: operator audit review → integration stage → amended P0-D.
+- **ORCA Universal Semantic Benchmark Charter v1 (P0-D)** — **ON HOLD UNTIL P0-I PASS**; uncommitted: [semantic-intelligence/benchmark/README.md](semantic-intelligence/benchmark/README.md).
+- **ORCA Semantic Admission Integration v1 (P0-I)** — **APPROVED — CHECKPOINTED**: [semantic-intelligence/integration/README.md](semantic-intelligence/integration/README.md).
+- **Triumph-to-ORCA Capability Recovery Audit v1** — **APPROVED — CHECKPOINTED** (`a09380d`): [audits/triumph-to-orca-capability-recovery-v1/](audits/triumph-to-orca-capability-recovery-v1/).
 - `semantic/` - intent, clustering, geo modifier, negative keyword, and semantic quality rules.
 - `qa/` - PPC semantic, campaign structure, landing match, and ad relevance QA.
 - `methodology/` - PPC research, campaign architecture, intent, offer, and landing methodology.

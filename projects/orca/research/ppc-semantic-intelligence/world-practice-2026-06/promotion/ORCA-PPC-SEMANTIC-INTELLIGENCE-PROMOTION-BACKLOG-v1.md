@@ -2,7 +2,7 @@
 
 **Backlog ID:** `orca-ppc-semantic-intelligence-promotion-backlog`  
 **Version:** v1  
-**Status:** P0-A `APPROVED — CHECKPOINTED`; P0-B `APPROVED — CHECKPOINTED` (`3151953`); P0-C `APPROVED — IMPLEMENTATION NOT STARTED` (C1–C7); P0-D `AUTHORIZED — NOT STARTED`  
+**Status:** P0-A `APPROVED — CHECKPOINTED`; P0-B `APPROVED — CHECKPOINTED` (`3151953`); P0-C `APPROVED — CHECKPOINTED` (`78b0557`); P0-I `APPROVED — CHECKPOINTED`; P0-D `ON HOLD UNTIL P0-I PASS`; P0-E `BLOCKED UNTIL P0-D APPROVAL`  
 **Authority:** Selective promotion only — no automatic adoption of research
 
 ---
@@ -51,7 +51,7 @@
 | Gate | Guideline approved before benchmark annotation |
 | Prohibited claims | Not benchmark data itself |
 | Corvonero impact | Required per D2 before semantic rerun |
-| Status | **APPROVED — IMPLEMENTATION NOT STARTED** (operator C1–C7) |
+| Status | **APPROVED — CHECKPOINTED** (commit `78b0557`, operator C1–C7) |
 
 ---
 
@@ -61,13 +61,29 @@
 |-------|-------|
 | Purpose | Universal ORCA benchmark program charter |
 | Inputs | D5 sizing (1200–2000 phrases); research strata table; approved P0-C guideline |
-| Outputs | Charter: strata, double annotation, disagreements, adjudication, blind split, regression anchors, hard negatives, versioning |
+| Outputs | `semantic-intelligence/benchmark/` — charter, strata, sampling, splits, leakage, adjudication, schemas |
 | Dependencies | P0-C |
 | Authority | Operator + QA owner |
 | Gate | Gold freeze before baseline evaluation |
 | Prohibited claims | Not trained model; not production core |
 | Corvonero impact | Parent program for Corvonero pilot |
-| Status | **AUTHORIZED — NOT STARTED** |
+| Status | **ON HOLD UNTIL P0-I PASS** (drafted; prerequisite amendment in integration/quality/) |
+
+---
+
+## P0-I — Admission Integration and Enforcement
+
+| Field | Value |
+|-------|-------|
+| Purpose | Make P0-A/B/C contracts blocking pipeline consumers before benchmark or Corvonero rerun |
+| Inputs | Capability recovery audit v1; operator decisions I1–I7, J1–J7 |
+| Outputs | `semantic-intelligence/integration/` — charter, consumers, manifest, validators, enforcement |
+| Dependencies | P0-C |
+| Authority | Operator approval J1–J7 |
+| Gate | Core integration pass + pilot before P0-D release |
+| Prohibited claims | Not semantic accuracy proof; not production classifier |
+| Corvonero impact | Prerequisite for controlled rerun |
+| Status | **APPROVED — CHECKPOINTED** |
 
 ---
 
@@ -83,7 +99,7 @@
 | Gate | Pilot pass required before full corpus admission rerun |
 | Prohibited claims | Not campaign production authorization |
 | Corvonero impact | Direct go/no-go for v2 semantic line |
-| Status | **NOT STARTED** |
+| Status | **BLOCKED UNTIL P0-D APPROVAL** |
 
 ---
 
@@ -138,7 +154,7 @@
 ## Ordering
 
 ```text
-P0-A → P0-B → P0-C → P0-D → P0-E → P0-F → P0-G → P0-H
+P0-A → P0-B → P0-C → P0-I → P0-D → P0-E → P0-F → P0-G → P0-H
 ```
 
 Parallel allowed only where dependencies explicitly permit (e.g. P0-E drafting after P0-D charter outline — not annotation execution).

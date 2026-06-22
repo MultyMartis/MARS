@@ -198,7 +198,20 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 | [audits/triumph-to-orca-capability-recovery-v1/decisions/TRIUMPH-TO-ORCA-CAPABILITY-RECOVERY-AUDIT-APPROVAL-v1.md](audits/triumph-to-orca-capability-recovery-v1/decisions/TRIUMPH-TO-ORCA-CAPABILITY-RECOVERY-AUDIT-APPROVAL-v1.md) | Audit approval (I1) |
 
-**Next gate:** P0-I integration charter (proposed) → operator review → integration pilot.
+**Next gate:** P0-I core implementation (I-01–I-07) → operator review → integration pilot.
+
+## ORCA Semantic Intelligence — Admission Integration (P0-I)
+
+**Integration and enforcement charter** — bounded core authorized. Status: **APPROVED — CHECKPOINTED**.
+
+| Doc | Role |
+|-----|------|
+| [semantic-intelligence/integration/README.md](semantic-intelligence/integration/README.md) | P0-I locus entry |
+| [semantic-intelligence/integration/charters/ORCA-SEMANTIC-ADMISSION-INTEGRATION-CHARTER-v1.md](semantic-intelligence/integration/charters/ORCA-SEMANTIC-ADMISSION-INTEGRATION-CHARTER-v1.md) | Master integration charter |
+| [semantic-intelligence/integration/decisions/ORCA-P0-I-ADMISSION-INTEGRATION-OPERATOR-APPROVAL-v1.md](semantic-intelligence/integration/decisions/ORCA-P0-I-ADMISSION-INTEGRATION-OPERATOR-APPROVAL-v1.md) | Operator approval J1–J7 |
+| [semantic-intelligence/integration/decisions/ORCA-P0-I-OPERATOR-DECISIONS-v1.md](semantic-intelligence/integration/decisions/ORCA-P0-I-OPERATOR-DECISIONS-v1.md) | Operator decisions I2–I7 |
+
+**Audit v1:** `APPROVED — CHECKPOINTED` (commit `a09380d`).
 
 ## ORCA Semantic Intelligence — Universal Benchmark Charter v1 (P0-D)
 
@@ -213,9 +226,12 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 **Promotion backlog P0-A:** `APPROVED — CHECKPOINTED` (commit `f17c270`).  
 **Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (commit `3151953`).  
 **P0-C:** `APPROVED — CHECKPOINTED` (commit `78b0557`, C1–C7).  
-**P0-D:** `PROPOSED — ON HOLD` — capability recovery audit v1 complete; [`decisions/ORCA-P0-D-BENCHMARK-CHARTER-HOLD-v1.md`](audits/triumph-to-orca-capability-recovery-v1/decisions/ORCA-P0-D-BENCHMARK-CHARTER-HOLD-v1.md).  
-**P0-E:** `BLOCKED UNTIL P0-D APPROVAL`.  
-**Next gate:** Operator review of triumph-to-orca capability recovery audit v1 → integration stage charter → amended P0-D.  
+**P0-I:** `APPROVED — CHECKPOINTED` — [semantic-intelligence/integration/](semantic-intelligence/integration/).  
+**P0-D:** `ON HOLD UNTIL P0-I PASS` — [decisions/ORCA-P0-D-BENCHMARK-CHARTER-HOLD-v1.md](audits/triumph-to-orca-capability-recovery-v1/decisions/ORCA-P0-D-BENCHMARK-CHARTER-HOLD-v1.md).  
+**P0-E / B0:** `BLOCKED`.  
+**Corvonero:** `FROZEN`.  
+**Campaign Production:** `BLOCKED`.  
+**Next gate:** I-01–I-07 core implementation → operator review → pilot phrase-selection → P0-I PASS → amended P0-D.  
 **Blocked:** classifier, benchmark rows, Corvonero rerun, campaign production, Commander.
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)

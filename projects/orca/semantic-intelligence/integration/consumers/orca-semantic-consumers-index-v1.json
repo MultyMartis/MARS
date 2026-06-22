@@ -1,0 +1,13 @@
+{
+  "index_id": "orca-semantic-consumers-index-v1",
+  "version": "v1",
+  "consumers": [
+    {"id": "orca-taxonomy-consumer-v1", "contracts": ["orca-primary-intent-taxonomy", "orca-user-goal-taxonomy", "orca-semantic-signal-taxonomy", "orca-commercial-eligibility-taxonomy", "orca-ambiguity-taxonomy", "orca-semantic-risk-taxonomy", "orca-semantic-review-status"]},
+    {"id": "orca-semantic-record-schema-consumer-v1", "contracts": ["orca-semantic-record-schema", "orca-semantic-decision-trace"]},
+    {"id": "orca-annotation-policy-consumer-v1", "contracts": ["orca-semantic-annotation-guideline", "orca-accept-standard", "orca-reject-standard", "orca-abstain-standard", "orca-commercial-evidence-standard"]},
+    {"id": "orca-invariant-consumer-v1", "contracts": ["orca-semantic-record-invariants"]},
+    {"id": "orca-risk-mode-consumer-v1", "contracts": ["orca-semantic-admission-policy", "orca-semantic-intelligence-quality-gates"]},
+    {"id": "orca-operator-scope-consumer-v1", "contracts": ["project-operator-scope"]},
+    {"id": "orca-version-authority-consumer-v1", "contracts": ["orca-semantic-intelligence-authority-model", "orca-semantic-contract-loading-manifest"]}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "decision_id": "orca-universal-benchmark-charter-decision",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "gate": "P0-D",
+  "authority": {
+    "p0_a_adr": "APPROVED — CHECKPOINTED",
+    "p0_b_taxonomy_schema": "APPROVED — CHECKPOINTED",
+    "p0_c_annotation_guideline": "APPROVED — IMPLEMENTATION NOT STARTED",
+    "operator_decisions": "D1-D7"
+  },
+  "selected_model": {
+    "universal_benchmark_phrases": {
+      "min": 1200,
+      "max": 2000,
+      "operator_decision": "D5"
+    },
+    "corvonero_pilot_phrases": {
+      "min": 300,
+      "max": 500,
+      "operator_decision": "D5"
+    },
+    "phases": [
+      "B0",
+      "B1",
+      "B2"
+    ],
+    "blind_test_min": 300,
+    "blind_test_max": 400
+  },
+  "operator_approved_thresholds": {
+    "commercial_precision_auto_accept": {
+      "threshold": 0.95,
+      "operator_decision": "D3"
+    },
+    "protected_strata_fpr_per_class": {
+      "threshold": 0.01,
+      "operator_decision": "D3"
+    }
+  },
+  "deferred_decisions": [
+    {
+      "id": "U-D01",
+      "topic": "long_term_double_annotation_sample_rate",
+      "status": "OPERATOR DECISION REQUIRED AFTER B0"
+    },
+    {
+      "id": "U-D02",
+      "topic": "proposed_metric_thresholds",
+      "status": "PROPOSED — VALIDATE DURING B0/B1"
+    },
+    {
+      "id": "U-D03",
+      "topic": "hard_negative_pack_exact_size",
+      "status": "PROPOSED — VALIDATE DURING B0/B1"
+    }
+  ],
+  "consequences": {
+    "benchmark_rows": "NOT_STARTED",
+    "b0_execution": "BLOCKED_UNTIL_OPERATOR_APPROVAL",
+    "corvonero": "FROZEN",
+    "classifier": "NOT_STARTED",
+    "campaign_production": "BLOCKED"
+  },
+  "artifacts_root": "projects/orca/semantic-intelligence/benchmark/",
+  "next_gate": "OPERATOR APPROVAL P0-D — THEN B0 QUALIFICATION"
+}

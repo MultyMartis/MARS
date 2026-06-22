@@ -1,0 +1,21 @@
+{
+  "validation_id": "p0-i-charter-validation-v1",
+  "date": "2026-06-22",
+  "checks": [
+    {"id": 1, "check": "audit_decisions_recorded", "pass": true},
+    {"id": 2, "check": "p0_d_on_hold", "pass": true},
+    {"id": 3, "check": "contracts_have_consumers", "pass": true},
+    {"id": 4, "check": "blocking_load_behavior", "pass": true},
+    {"id": 5, "check": "legacy_regex_not_authority", "pass": true},
+    {"id": 6, "check": "tri_state_enforced", "pass": true},
+    {"id": 7, "check": "blocking_invariants_defined", "pass": true},
+    {"id": 8, "check": "human_review_routing", "pass": true},
+    {"id": 9, "check": "pilot_distinct_from_b0", "pass": true},
+    {"id": 10, "check": "no_phrases_processed_charter_task", "pass": true},
+    {"id": 11, "check": "operator_approval_j1_j7_recorded", "pass": true},
+    {"id": 12, "check": "corvonero_frozen", "pass": true},
+    {"id": 13, "check": "no_campaign_production", "pass": true},
+    {"id": 14, "check": "p0_i_charter_approved_checkpointed", "pass": true}
+  ],
+  "overall": "PASS"
+}

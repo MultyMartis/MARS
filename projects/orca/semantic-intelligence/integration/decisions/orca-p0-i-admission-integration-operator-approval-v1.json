@@ -1,0 +1,54 @@
+{
+  "approval_id": "orca-p0-i-admission-integration-operator-approval-v1",
+  "date": "2026-06-22",
+  "status": "APPROVED — IMPLEMENTATION AUTHORIZED",
+  "decisions": {
+    "J1": {
+      "topic": "p0_i_charter",
+      "verdict": "APPROVED — IMPLEMENTATION AUTHORIZED"
+    },
+    "J2": {
+      "topic": "core_implementation",
+      "verdict": "AUTHORIZED",
+      "items": ["I-01", "I-02", "I-03", "I-04", "I-05", "I-06", "I-07"]
+    },
+    "J3": {
+      "topic": "pilot_execution",
+      "verdict": "NOT AUTHORIZED",
+      "note": "Real pilot phrase selection and execution require separate operator gate"
+    },
+    "J4": {
+      "topic": "p0_d",
+      "verdict": "ON HOLD UNTIL P0-I INTEGRATION PASS"
+    },
+    "J5": {
+      "topic": "legacy_regex",
+      "verdict": "DIAGNOSTIC ONLY",
+      "allowed_outputs": ["candidate_signals", "diagnostic_baseline", "comparison_output"],
+      "forbidden": "authoritative_commercial_eligibility"
+    },
+    "J6": {
+      "topic": "i_09",
+      "verdict": "PLANNED — DEFERRED UNTIL DOWNSTREAM ARTIFACT INTEGRATION"
+    },
+    "J7": {
+      "topic": "runtime_proof_boundary",
+      "must_prove": [
+        "contracts_loaded",
+        "versions_checksums_checked",
+        "schema_conformance",
+        "violations_hard_block",
+        "review_routing_operates",
+        "consumption_evidence_recorded"
+      ],
+      "must_not_claim": [
+        "semantic_accuracy",
+        "production_readiness"
+      ]
+    }
+  },
+  "prior_decisions": {
+    "I1": "TRIUMPH-TO-ORCA CAPABILITY RECOVERY AUDIT V1 — APPROVED",
+    "checkpoint": "a09380d"
+  }
+}

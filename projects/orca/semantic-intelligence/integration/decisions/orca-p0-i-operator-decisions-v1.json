@@ -1,0 +1,24 @@
+{
+  "registry_id": "orca-p0-i-operator-decisions-v1",
+  "date": "2026-06-22",
+  "status": "APPROVED — IMPLEMENTATION AUTHORIZED",
+  "approval_ref": "orca-p0-i-admission-integration-operator-approval-v1",
+  "decisions": [
+    {"id": "I1", "topic": "audit", "verdict": "TRIUMPH-TO-ORCA CAPABILITY RECOVERY AUDIT V1 — APPROVED", "checkpoint": "a09380d"},
+    {"id": "I2", "topic": "roadmap", "verdict": "OPTION D — HYBRID CORRECTION"},
+    {"id": "I3", "topic": "p0_d", "verdict": "ON HOLD UNTIL P0-I INTEGRATION PASS"},
+    {"id": "I4", "topic": "p0_i", "verdict": "APPROVED — IMPLEMENTATION AUTHORIZED"},
+    {"id": "I5", "topic": "legacy_admission", "verdict": "REGEX-BASED CLASSIFYINTENT / COMMERCIALELIGIBILITY IS NOT SEMANTIC AUTHORITY", "allowed_roles": ["diagnostic_baseline", "signal_generator", "comparison_baseline"]},
+    {"id": "I6", "topic": "contract_enforcement", "verdict": "INTEGRATED_REQUIRES_CONSUMER_VERSION_SCHEMA_BLOCKING_EVIDENCE", "not_integrated_label": "REGISTERED — NOT INTEGRATED"},
+    {"id": "I7", "topic": "historical_examples", "verdict": "DIAGNOSTIC_AND_REGRESSION_ONLY", "old_labels_not_ground_truth": true}
+  ],
+  "operator_approval_j": {
+    "J1": "APPROVED — IMPLEMENTATION AUTHORIZED",
+    "J2": "I-01 through I-07 authorized",
+    "J3": "Pilot execution not authorized",
+    "J4": "ON HOLD UNTIL P0-I INTEGRATION PASS",
+    "J5": "Legacy regex diagnostic only",
+    "J6": "I-09 PLANNED — DEFERRED",
+    "J7": "Runtime proof boundary — no accuracy claim"
+  }
+}

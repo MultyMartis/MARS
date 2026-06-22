@@ -1,7 +1,7 @@
 {
   "backlog_id": "orca-ppc-semantic-intelligence-promotion-backlog",
   "version": "v1",
-  "all_items_status": "P0-A CHECKPOINTED; P0-B CHECKPOINTED; P0-C APPROVED",
+  "all_items_status": "P0-A CHECKPOINTED; P0-B CHECKPOINTED; P0-C CHECKPOINTED; P0-D PROPOSED",
   "items": [
     {
       "id": "P0-A",
@@ -43,21 +43,22 @@
       "gate": "Guideline approved before benchmark annotation",
       "prohibited_claims": ["not_benchmark_data"],
       "corvonero_impact": "Required per D2 before semantic rerun",
-      "status": "APPROVED — IMPLEMENTATION NOT STARTED",
-      "operator_approval": "C1-C7"
+      "status": "APPROVED — CHECKPOINTED",
+      "operator_approval": "C1-C7",
+      "checkpoint_commit": "78b0557"
     },
     {
       "id": "P0-D",
       "title": "Benchmark Charter",
       "purpose": "Universal ORCA benchmark 1200-2000 phrases",
       "inputs": ["D5_sizing", "research_strata_table", "P0-C_guideline"],
-      "outputs": ["benchmark_charter_md"],
+      "outputs": ["semantic-intelligence/benchmark/"],
       "dependencies": ["P0-C"],
       "authority": "operator_and_qa_owner",
       "gate": "Gold freeze before baseline eval",
       "prohibited_claims": ["not_trained_model", "not_production_core"],
       "corvonero_impact": "Parent program for Corvonero pilot",
-      "status": "AUTHORIZED — NOT STARTED"
+      "status": "PROPOSED — OPERATOR REVIEW"
     },
     {
       "id": "P0-E",
@@ -70,7 +71,7 @@
       "gate": "Pilot pass before full corpus rerun",
       "prohibited_claims": ["not_campaign_production_authorization"],
       "corvonero_impact": "Direct go/no-go for v2 semantic line",
-      "status": "NOT STARTED"
+      "status": "BLOCKED UNTIL P0-D APPROVAL"
     },
     {
       "id": "P0-F",
