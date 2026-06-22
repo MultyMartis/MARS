@@ -55,8 +55,8 @@ Skills: PROVEN WITH LIMITATIONS
 Validators: PROVEN
 Synthetic validation: COMPLETE (FWS-0001)
 Local environment: PARTIAL (Profile B only)
-MLI Laragon profile: NOT ENABLED — MLI-01 NEXT
-FW-05R: HOLD until MLI-01
+MLI Laragon profile: ENABLED — MLI-01 COMPLETE
+FW-05R: HOLD until MLI-03
 Agent registration: NOT REGISTERED
 Client pilot: READY FOR FW-06 INTAKE (not auto-ready)
 ```

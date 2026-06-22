@@ -3,7 +3,7 @@
 **Document type:** Consumer relationship model  
 **Version:** v1  
 **Date:** 2026-06-22  
-**Stage:** MLI-00
+**Stage:** MLI-01
 
 ---
 
@@ -21,7 +21,7 @@ MARS Localhost Infrastructure is **shared**. Consumers **use** runtime profiles;
 | **Owns** | Implementation methodology, theme/plugin source in `C:\AI MARS\workspaces\` |
 | **Does not own** | Shared localhost root, Laragon install, global toolchain layout |
 | **Statement** | Forge WordPress does **not** own `D:\MARS-Localhost`. It consumes the WordPress runtime profile provided by MARS Localhost Infrastructure. |
-| **FW-05R** | Full local WordPress re-validation on Profile A — **HOLD** until MLI-01 Laragon enablement |
+| **FW-05R** | Full local WordPress re-validation on Profile A — **HOLD** until MLI-03 WordPress runtime profile |
 
 **Pointer:** [projects/mars-website-factory/subsystems/forge-wordpress/](../mars-website-factory/subsystems/forge-wordpress/)
 
@@ -32,10 +32,11 @@ MARS Localhost Infrastructure is **shared**. Consumers **use** runtime profiles;
 | Aspect | Detail |
 |--------|--------|
 | **Uses** | OpenCart/ocStore runtime; PHP; DB; local site copies; import simulations; module/theme tests |
+| **Future OpenCart root** | `D:\MARS-Localhost\sites\opencart\...` |
 | **Owns** | OpenCart operational pack, baselines, site passports in brain |
 | **Does not own** | MLI root or Laragon |
-| **Statement** | OCPilot may consume the OpenCart runtime profile of MARS Localhost Infrastructure. No OCPilot runtime migration is performed in MLI-00. |
-| **MLI-00** | Pointer only — no OCPilot code/runtime changes |
+| **Statement** | OCPilot may consume the OpenCart runtime profile of MARS Localhost Infrastructure. **No** OCPilot implementation or runtime migration in MLI-01. |
+| **MLI-04** | OpenCart runtime profile validation — **PLANNED** |
 
 **Pointer:** [projects/ocpilot/](../ocpilot/)
 

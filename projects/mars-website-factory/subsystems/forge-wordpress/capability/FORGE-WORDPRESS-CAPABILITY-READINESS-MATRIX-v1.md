@@ -20,7 +20,7 @@
 | Prompt pack | **READY** | — |
 | Reporting standard | **PROVEN** | FW-05 report chain |
 | Git workflow | **PROVEN** | FW-04 selective checkpoint |
-| Local environment | **PARTIAL** | Profile B (Playground) only; Laragon Profile A pending MLI-01 |
+| Local environment | **PARTIAL** | Laragon enabled MLI-01; WordPress profile validation pending MLI-03 |
 | Required tools | **PARTIAL** | Node/Gulp/Playwright yes; PHP/PHPCS no |
 | WordPress runtime | **PARTIAL** | Code complete; live population not executed |
 | ACF workflow | **PARTIAL** | Free + Settings API deviation |

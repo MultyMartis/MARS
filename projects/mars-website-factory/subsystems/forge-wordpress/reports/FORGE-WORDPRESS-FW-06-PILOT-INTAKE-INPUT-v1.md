@@ -28,8 +28,8 @@ Define intake criteria for first **client** Forge WordPress pilot after syntheti
 | Real frontend Production Pass | Website Factory certified `dist/` handoff |
 | Operator visual approval | WV6 on client frontend before WP work |
 | Project eligibility | Explicit charter; not automatic from FP-0002 |
-| Environment readiness | Profile A via [MLI-01](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md) + [MLI-03](../../../../mars-localhost-infrastructure/roadmap.md) WordPress profile validation |
-| FW-05R | **HOLD** until MLI-01 Laragon enablement |
+| Environment readiness | Laragon enabled MLI-01; full Profile A validation via MLI-03 + FW-05R |
+| FW-05R | **HOLD** until MLI-03 WordPress runtime profile |
 | Client risk | Documented; no production deploy from Forge |
 | WPilot target | Registered DEV target only via WPilot ops |
 | ACF | Operator license if Pro workflow required |

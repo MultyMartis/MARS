@@ -3,7 +3,7 @@
 **Status:** documented navigation only — **not** a service registry or automated router.  
 **Lane:** Infrastructure — shared local execution  
 **Domain root:** [README.md](README.md)  
-**Lifecycle:** FOUNDATION (MLI-00 **COMPLETE**)
+**Lifecycle:** ENABLEMENT (MLI-01 **COMPLETE**)
 
 ---
 
@@ -11,13 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Stage** | MLI-00 **COMPLETE** |
-| **Next** | **MLI-01 — Laragon Enablement** |
-| **Runtime operational** | **NO** — not until MLI-03/MLI-04 profile validation |
+| **Stage** | MLI-01 **COMPLETE** |
+| **Next** | **MLI-02 — Shared Toolchain Hardening** |
+| **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
+| **Smoke site** | `http://mli-smoke-001.test/` (hosts elevation may be required) |
+| **Runtime operational (CMS profiles)** | **NO** — until MLI-03/MLI-04 validation |
 | **Brain root** | `C:\AI MARS` |
 | **Runtime root** | `D:\MARS-Localhost` |
-| **Laragon installed** | **NO** (MLI-01) |
-| **Blockers** | Operator Laragon install; FW-05R full Profile A validation on HOLD |
+| **FW-05R** | **HOLD** — pending MLI-03 WordPress profile |
 
 ---
 
@@ -40,13 +41,32 @@
 
 ---
 
-## Roadmap and enablement
+## MLI-01 decisions and reports
+
+| Item | Path |
+|------|------|
+| Path reconciliation | [MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md](MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md) |
+| Document root | [MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md](MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md) |
+| Vhost model | [MARS-LOCALHOST-LARAGON-VHOST-MODEL-v1.md](MARS-LOCALHOST-LARAGON-VHOST-MODEL-v1.md) |
+| Service profile | [MARS-LOCALHOST-SERVICE-PROFILE-v1.md](MARS-LOCALHOST-SERVICE-PROFILE-v1.md) |
+| CLI standard | [MARS-LOCALHOST-CLI-ENVIRONMENT-STANDARD-v1.md](MARS-LOCALHOST-CLI-ENVIRONMENT-STANDARD-v1.md) |
+| Vhost registry | [registries/MARS-LOCALHOST-VHOST-REGISTRY-v1.md](registries/MARS-LOCALHOST-VHOST-REGISTRY-v1.md) |
+| Installation audit | [reports/MARS-LOCALHOST-MLI-01-LARAGON-INSTALLATION-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-INSTALLATION-AUDIT-v1.md) |
+| Service verification | [reports/MARS-LOCALHOST-MLI-01-SERVICE-CONTROL-VERIFICATION-v1.md](reports/MARS-LOCALHOST-MLI-01-SERVICE-CONTROL-VERIFICATION-v1.md) |
+| Toolchain audit | [reports/MARS-LOCALHOST-MLI-01-TOOLCHAIN-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-01-TOOLCHAIN-AUDIT-v1.md) |
+| Browser smoke | [reports/MARS-LOCALHOST-MLI-01-BROWSER-SMOKE-REPORT-v1.md](reports/MARS-LOCALHOST-MLI-01-BROWSER-SMOKE-REPORT-v1.md) |
+| MLI-02 input | [reports/MARS-LOCALHOST-MLI-02-SHARED-TOOLCHAIN-HARDENING-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-02-SHARED-TOOLCHAIN-HARDENING-INPUT-v1.md) |
+
+---
+
+## Roadmap and manifests
 
 | Item | Path |
 |------|------|
 | Roadmap | [roadmap.md](roadmap.md) |
-| MLI-01 input | [reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md) |
+| MLI-01 input (historical) | [reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md) |
 | Runtime manifests | [manifests/](manifests/) |
+| Smoke manifest | [manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) |
 
 ---
 
@@ -57,24 +77,13 @@
 | Forge WordPress | [../mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md](../mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) |
 | OCPilot | [../ocpilot/OPERATIONAL-INDEX.md](../ocpilot/OPERATIONAL-INDEX.md) |
 | Website Factory | [../mars-website-factory/OPERATIONAL-INDEX.md](../mars-website-factory/OPERATIONAL-INDEX.md) |
-| WPilot | [../wpilot/OPERATIONAL-INDEX.md](../wpilot/OPERATIONAL-INDEX.md) |
-
----
-
-## Governance cross-links
-
-| Topic | Path |
-|-------|------|
-| Infrastructure reality | [governance/mars-infrastructure-reality-v1.md](../../governance/mars-infrastructure-reality-v1.md) |
-| Ecosystem topology | [governance/ecosystem-topology-index.md](../../governance/ecosystem-topology-index.md) |
-| MARS STORAGE | [projects/ocpilot/mars-storage-family-note.md](../ocpilot/mars-storage-family-note.md) |
 
 ---
 
 ## Next authorized action
 
-**MLI-01 — Laragon Enablement** — operator-controlled; see enablement input. **Do not** start WordPress synthetic validation in MLI-00 scope.
+**MLI-02 — Shared Toolchain Hardening** — see input report. **Do not** start WordPress synthetic validation until MLI-03.
 
 ---
 
-*Operational index — MLI-00 complete.*
+*Operational index — MLI-01 complete.*

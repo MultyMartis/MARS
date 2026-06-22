@@ -32,7 +32,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **WPilot** | ✓ reference DEV runtime (RC5) | — | production bridge; Sprint 3 (charter-gated) | ✓ WP/host | — | ✓ reference docs + maintenance policy |
 | **MIG** | ✓ acquisition discipline | ✓ v0.1 spine | ✓ R1 boundary | ✓ n8n/self-host runtime lane | — | ✓ contracts + pack |
 | **OCPilot** | ✓ OpenCart bridge discipline | — | ✓ sibling/family model | ✓ hosting/FTP/PMA | — | ✓ Phase 0+ |
-| **MARS Localhost (MLI)** | — | — | ✓ shared localhost foundation | ✓ D: runtime zone | — | ✓ MLI-00 complete; Laragon not installed |
+| **MARS Localhost (MLI)** | — | — | ✓ shared localhost foundation | ✓ D: runtime zone | — | ✓ MLI-01 Laragon enabled |
 | **EAR Runtime** | — | ✓ R1 foundation code | ✓ acquisition helpers architecture alignment | ✓ connector targets (future) | — | ✓ engineering program docs |
 | **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
 | **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
@@ -152,6 +152,8 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **SoT:** [../projects/orca/README.md](../projects/orca/README.md) · [OPERATIONAL-INDEX.md](../projects/orca/OPERATIONAL-INDEX.md) · registry **active**, runtime **excluded**
 
+**Search PPC Lifecycle v1 (2026-06-22):** `PROPOSED — OPERATOR REVIEW` — [../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md). Gap audit **COMPLETE**; lifecycle validator **IMPLEMENTED — NOT VALIDATED AT SCALE**. Corvonero **FROZEN**; P0-I pilot **DIAGNOSTIC EVIDENCE**; P0-D **ON HOLD**.
+
 ---
 
 ## WPilot
@@ -226,13 +228,13 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 |--------|---------|
 | **conceptual** | Shared localhost foundation — brain on `C:\AI MARS`, execution on `D:\MARS-Localhost`. |
 | **external** | D: runtime tree is out-of-git; Laragon install is operator machine state. |
-| **documentation-only** | MLI-00 **COMPLETE** — identity, boundaries, policies, empty safe directory tree. |
+| **documentation-only** | MLI-01 **COMPLETE** — Laragon at `D:\MARS-Localhost\laragon`; smoke site; toolchain baseline. |
 
 **Not:** MARS brain, Git authority, production hosting, or proof that WordPress/OpenCart local profiles are validated.
 
 **SoT:** [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md) · [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md)
 
-**Next:** MLI-01 Laragon Enablement — **not** executed in MLI-00.
+**Next:** MLI-02 Shared Toolchain Hardening.
 
 ---
 

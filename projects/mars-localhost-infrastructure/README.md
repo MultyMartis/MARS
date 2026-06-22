@@ -3,8 +3,8 @@
 **Canonical name:** MARS Localhost Infrastructure  
 **Operator alias:** MLI  
 **Class:** Shared local development infrastructure  
-**Lifecycle:** FOUNDATION  
-**Status:** MLI-00 **COMPLETE** — MLI-01 **NEXT** (Laragon enablement; **not** executed in MLI-00)
+**Lifecycle:** ENABLEMENT  
+**Status:** MLI-01 **COMPLETE** — MLI-02 **NEXT**
 
 ---
 
@@ -24,8 +24,19 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 | Zone | Path | Role |
 |------|------|------|
 | **Brain** | `C:\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
-| **Runtime** | `D:\MARS-Localhost` | Local web stack, CMS runtimes, databases, uploads, caches, logs (**outside Git**) |
-| **Bulk (optional)** | `C:\AI MARS STORAGE` | Large archives, release packages, visual baselines — **not** live runtime root |
+| **Runtime** | `D:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
+| **Bulk (optional)** | `C:\AI MARS STORAGE` | Large archives — **not** live runtime root |
+
+---
+
+## Laragon (MLI-01)
+
+| Item | Path |
+|------|------|
+| **Laragon root** | `D:\MARS-Localhost\laragon` |
+| **Sites** | `D:\MARS-Localhost\sites` |
+| **CLI activation** | `D:\MARS-Localhost\tools\activate-mli.cmd` |
+| **Smoke URL** | `http://mli-smoke-001.test/` |
 
 ---
 
@@ -35,18 +46,16 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 |----------|---------|
 | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) | Navigation hub |
 | [roadmap.md](roadmap.md) | MLI-00 … MLI-06 stages |
-| [MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md](MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md) | Identity and exclusions |
-| [MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md](MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md) | C:/D: contract |
-| [reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md) | Next authorized stage input |
+| [MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md](MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md) | Canonical Laragon path |
+| [reports/MARS-LOCALHOST-MLI-02-SHARED-TOOLCHAIN-HARDENING-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-02-SHARED-TOOLCHAIN-HARDENING-INPUT-v1.md) | Next stage input |
 
 ---
 
 ## Consumers (do not own MLI)
 
-- **Forge WordPress** — WordPress runtime profile
-- **OCPilot** — OpenCart/ocStore runtime profile (planned consumption)
-- **Website Factory** — frontend packages only; no PHP runtime ownership
-- **WPilot** — may consume verified packages or registered DEV; no localhost ownership
+- **Forge WordPress** — WordPress runtime consumer
+- **OCPilot** — OpenCart runtime consumer (planned)
+- **Website Factory** — frontend packages only
 
 ---
 
@@ -54,9 +63,9 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 
 - **Not** a MARS git repository
 - **Not** production hosting
-- **Not** operational until MLI-03/MLI-04 profile validation evidence exists
-- Laragon **not** installed by MLI-00
+- **Not** CMS-profile operational until MLI-03/MLI-04
+- Laragon **enabled** MLI-01; WordPress/OpenCart sites **not** created in MLI-01
 
 ---
 
-*MLI foundation — operator-approved 2026-06-22.*
+*MLI — MLI-01 complete.*

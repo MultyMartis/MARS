@@ -139,20 +139,23 @@ See [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](reports/FORGE
 
 ---
 
-## Superseded note (2026-06-22 — MLI-00)
+## Superseded note (2026-06-22 — MLI-01)
 
 **Shared localhost policy** supersedes §4.1 **Local by Flywheel as primary shared runtime** for MARS studio operations:
 
 | Topic | New policy |
 |-------|------------|
-| **Shared runtime root** | `D:\MARS-Localhost` — [MARS Localhost Infrastructure](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) |
-| **Primary local stack** | **Laragon** via MLI (MLI-01 enablement) |
-| **Forge relationship** | **Consumer** of WordPress runtime profile — does **not** own D: root |
-| **FW-05 historical** | Profile B (Playground) proof remains valid as documentation evidence |
-| **FW-05R** | Full Profile A re-validation on Laragon — **HOLD** until MLI-01 |
+| **Shared runtime provider** | MARS Localhost Infrastructure |
+| **Shared runtime root** | `D:\MARS-Localhost` — [MLI OPERATIONAL-INDEX](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) |
+| **Laragon root** | `D:\MARS-Localhost\laragon` |
+| **WordPress site root** | `D:\MARS-Localhost\sites\wordpress\...` |
+| **Primary local stack** | **Laragon** via MLI — **ENABLED** (MLI-01) |
+| **Forge relationship** | **Consumer** — does **not** own infrastructure |
+| **FW-05 historical** | Profile B (Playground) proof remains valid |
+| **FW-05R** | **HOLD** until MLI-03 WordPress runtime profile + PHP/WP-CLI/PHPCS availability |
 
-Local by Flywheel remains an **optional alternative** per-operator if chartered; it is **not** the canonical shared MARS localhost root.
+Local by Flywheel remains an **optional alternative** per-operator if chartered.
 
 **Forge WordPress does not own `D:\MARS-Localhost`. It consumes the WordPress runtime profile provided by MARS Localhost Infrastructure.**
 
-See also: [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](../../../mars-localhost-infrastructure/MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md)
+See: [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](../../../mars-localhost-infrastructure/MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md)

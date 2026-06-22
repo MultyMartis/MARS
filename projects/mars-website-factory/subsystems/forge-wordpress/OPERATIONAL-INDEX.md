@@ -29,8 +29,8 @@ Skills: PROVEN WITH LIMITATIONS
 Validators: PROVEN
 Synthetic validation: COMPLETE (FWS-0001)
 Local environment: PARTIAL (Profile B Playground only)
-Local Laragon profile: NOT ENABLED (MLI-01 NEXT)
-FW-05R (full Profile A): HOLD until MLI-01
+Local Laragon profile: ENABLED (MLI-01) — Laragon at D:\MARS-Localhost\laragon
+FW-05R (full Profile A): HOLD until MLI-03 WordPress runtime profile
 Agent registration: NOT REGISTERED
 Client pilot: READY FOR FW-06 INTAKE
 ```

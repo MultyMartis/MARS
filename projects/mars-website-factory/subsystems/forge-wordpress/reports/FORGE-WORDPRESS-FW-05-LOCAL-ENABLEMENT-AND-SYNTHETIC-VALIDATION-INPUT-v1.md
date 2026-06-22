@@ -17,7 +17,7 @@ Define what FW-05 must install, configure, and execute to prove the FW-04 capabi
 
 | Tool | Status | FW-05 action |
 |------|--------|--------------|
-| Local WordPress runtime (Laragon / MLI) | NOT READY | Enable via [MLI-01](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md); site path `D:\MARS-Localhost\sites\wordpress\` |
+| Local WordPress runtime (Laragon / MLI) | BASELINE READY | Laragon at `D:\MARS-Localhost\laragon` (MLI-01); WP site path `D:\MARS-Localhost\sites\wordpress\` — **no WP site in MLI-01** |
 | PHP + Composer | PARTIAL | Verify versions match decision doc |
 | WP-CLI | NOT READY | Install local only |
 | PHPCS + WPCS | NOT READY | Install project-local |

@@ -1,9 +1,9 @@
 # MARS Localhost — Directory Standard v1
 
 **Document type:** Directory layout standard  
-**Version:** v1  
+**Version:** v1.1  
 **Date:** 2026-06-22  
-**Stage:** MLI-00  
+**Stage:** MLI-01 (updated from MLI-00)  
 **Runtime root:** `D:\MARS-Localhost`
 
 ---
@@ -19,8 +19,9 @@ Define a **universal** localhost directory layout supporting WordPress, OpenCart
 ```text
 D:\MARS-Localhost\
 ├── README.md
+├── laragon\                     # Laragon install root (canonical — MLI-01)
 ├── runtime\
-│   └── laragon\                 # Laragon install root (MLI-01)
+│   └── laragon\                 # DEPRECATED EMPTY PLACEHOLDER (do not use)
 ├── sites\
 │   ├── wordpress\
 │   │   ├── synthetic\           # e.g. fws-0001
@@ -77,7 +78,7 @@ D:\MARS-Localhost\
 
 | Concern | How this layout addresses it |
 |---------|-------------------------------|
-| **Laragon compatibility** | `runtime\laragon\` isolates stack; document root points to `sites\` (see Laragon decision) |
+| **Laragon compatibility** | `laragon\` at D: root; `www\` = junction/vhost registry; physical sites in `sites\` |
 | **Backup simplicity** | `backups\` + `databases\dumps\` + per-site folders are predictable |
 | **Cursor clarity** | Platform → class → slug path is stable across consumers |
 | **WordPress** | `sites\wordpress\{class}\{slug}\` with optional `public\` or docroot per Laragon vhost |
@@ -100,13 +101,13 @@ D:\MARS-Localhost\
 
 ## Laragon document root
 
-**Preferred:** `D:\MARS-Localhost\sites` as Laragon document root (virtual hosts map to subpaths). See [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md).
+**Model:** Physical sites in `D:\MARS-Localhost\sites`; Laragon `www\` holds slug junctions; explicit vhosts in registry. See [MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md](MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md).
 
 ---
 
-## MLI-00 deviation note
+## MLI-00 → MLI-01 path note
 
-Operator pre-created `D:\MARS-Localhost\laragon\` at **root** before this standard. Canonical target is `runtime\laragon\`. **Do not delete** root `laragon\` in MLI-00; reconcile during MLI-01 enablement.
+MLI-00 proposed `runtime\laragon\`. Operator installed at `D:\MARS-Localhost\laragon\` before enablement. **Canonical path reconciled in MLI-01** — see [MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md](MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md). `runtime\laragon\` is an empty deprecated placeholder.
 
 ---
 
