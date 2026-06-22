@@ -14,7 +14,7 @@
 | Tool | Purpose |
 |------|---------|
 | Git, Node, npm, Gulp | Frontend build |
-| Local (or Laragon) | Default WP environment |
+| Local (or Laragon via MLI) | Default WP environment — [MLI consumer profile](../../../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
 | PHP 8.1+, MySQL | Runtime |
 | WP-CLI | WP operations |
 | PHPCS + WPCS | WV2 |
@@ -27,10 +27,11 @@
 
 | Item | Specification |
 |------|---------------|
-| Profile | Default (Local) |
+| Profile | Laragon via MARS Localhost Infrastructure (`D:\MARS-Localhost`) |
 | OS | Windows 10+ |
-| Isolation | One Local site per pilot |
+| Isolation | One site per pilot under `sites\wordpress\projects\` or `synthetic\` |
 | Secrets | `C:\AI MARS\local\` only |
+| MLI manifest | Required per [runtime manifest contract](../../../mars-localhost-infrastructure/MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md) |
 
 ---
 

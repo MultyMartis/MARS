@@ -1,7 +1,7 @@
 # Forge WordPress Capability Readiness Matrix v1
 
-**Version:** v1  
-**Stage:** FW-04 complete  
+**Version:** v1.1  
+**Stage:** FW-05 complete  
 **Date:** 2026-06-22
 
 ---
@@ -10,32 +10,27 @@
 
 | Component | Status | Notes |
 |-----------|--------|-------|
-| Primary specialist | **READY** | `primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md` |
-| Execution contract | **READY** | 10-stage cycle documented |
-| Context model | **READY** | Tier 1–6 loading rules |
-| Filesystem scope | **READY** | Mandatory scope declaration |
-| Task template | **READY** | Cursor task shell |
-| Skill pack | **READY** | FW-SK-01–14 created |
-| Validator pack | **READY** | FW-V-01–07 created |
-| Prompt pack | **READY** | 11 starters |
-| Reporting standard | **READY** | Mandatory report sections |
-| Git workflow | **READY** | No auto-commit default |
-| Local environment | **NOT READY** | FW-05 — tools not installed |
-| Required tools | **PARTIAL** | Design in FW-03; local audit incomplete execution |
-| Synthetic case | **DOCUMENTED** | Spec only — not executed |
-| Synthetic validation | **NOT STARTED** | FW-05 |
-| Client pilot eligibility | **NOT READY** | Requires FW-05 + FW-06 |
-
----
-
-## FW-04 expected outcome
-
-```text
-Prompt-driven capability: READY (documented, invocable via Cursor)
-Local execution environment: NOT READY
-Synthetic validation: NOT STARTED
-Client pilot eligibility: NOT READY
-```
+| Primary specialist | **READY** | Invoked on FWS-0001 |
+| Execution contract | **PROVEN** | Preflight + scope on synthetic case |
+| Context model | **READY** | Tier loading used |
+| Filesystem scope | **PROVEN** | FWS-0001 isolated; FP-0002 untouched |
+| Task template | **READY** | FW-05 task followed |
+| Skill pack | **PROVEN WITH LIMITATIONS** | FW-SK-01–14 exercised; runtime steps partial |
+| Validator pack | **PROVEN** | FW-V-01–07 reports with honest gaps |
+| Prompt pack | **READY** | — |
+| Reporting standard | **PROVEN** | FW-05 report chain |
+| Git workflow | **PROVEN** | FW-04 selective checkpoint |
+| Local environment | **PARTIAL** | Profile B (Playground) only; Laragon Profile A pending MLI-01 |
+| Required tools | **PARTIAL** | Node/Gulp/Playwright yes; PHP/PHPCS no |
+| WordPress runtime | **PARTIAL** | Code complete; live population not executed |
+| ACF workflow | **PARTIAL** | Free + Settings API deviation |
+| Validation runners | **PARTIAL** | Static + Playwright reference |
+| Visual regression | **PARTIAL** | Reference captures; no WP diff |
+| Packaging | **PROVEN** | FWS-0001-RC1 |
+| Handoff | **PROVEN** | Simulation only |
+| Synthetic test | **COMPLETE** | FWS-0001 |
+| Agent promotion | **ELIGIBLE (doc pack)** | Registry still requires charter |
+| Client pilot eligibility | **READY FOR FW-06 INTAKE** | Operator env + charter still required |
 
 ---
 
@@ -43,26 +38,23 @@ Client pilot eligibility: NOT READY
 
 ```text
 FOUNDATION / PRE-OPERATIONAL
+Synthetic capability: PROVEN WITH LIMITATIONS
 ```
 
-Do **not** use `OPERATIONAL` until FW-05 synthetic test passes.
+Do **not** use `OPERATIONAL` until client pilot evidence (FW-06+).
 
 ---
 
-## Blockers to OPERATIONAL
+## FW-05 outcome block
 
-1. Local WordPress environment enablement (FW-05)
-2. Synthetic pipeline execution (FW-05)
-3. Validator chain proven on synthetic artifacts
-4. Operator sign-off on capability readiness
-
----
-
-## Related
-
-- [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md)
-- [reports/FORGE-WORDPRESS-SYNTHETIC-TEST-CASE-SPEC-v1.md](reports/FORGE-WORDPRESS-SYNTHETIC-TEST-CASE-SPEC-v1.md)
+```text
+FW-05 — COMPLETE
+Synthetic capability — PROVEN WITH LIMITATIONS
+Prompt-driven operational_doc_pack candidate — ELIGIBLE
+Agent registration — NOT PERFORMED
+FW-06 — NEXT
+```
 
 ---
 
-*Readiness matrix v1 — post FW-04.*
+*Readiness matrix v1.1 — post FW-05.*

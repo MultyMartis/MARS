@@ -48,7 +48,7 @@ C:\AI MARS STORAGE\
     db-dumps\                    # local export snapshots (optional)
     release-packages\            # ZIP artifacts + checksums
 
-C:\Users\<user>\Local Sites\{project-slug}\   # Local WP runtime — NOT in Git
+C:\Users\<user>\Local Sites\{project-slug}\   # Legacy optional — NOT canonical shared MLI path
   app\public\wp-content\
     themes\{slug}\
     plugins\{slug}-functionality\
@@ -98,10 +98,13 @@ C:\Users\<user>\Local Sites\{project-slug}\   # Local WP runtime — NOT in Git
 ```text
 C:\AI MARS              → methodology, source, manifests, reports (Git)
 C:\AI MARS STORAGE      → bulk baselines, packages, dumps (out-of-git)
+D:\MARS-Localhost       → shared local runtime (MLI) — sites, DB, Laragon
 client workspace        → workspaces/website-factory-operations/{FP-ID}/
-local WordPress runtime → Local Sites / Laragon (operator machine)
+local WordPress site    → D:\MARS-Localhost\sites\wordpress\{class}\{slug}\
 external hosting        → Beget DEV/staging/prod (WPilot operations)
 ```
+
+**Supersedes (2026-06-22):** `C:\Users\<user>\Local Sites\{project-slug}\` as canonical shared path — historical per-operator layout only; MLI canonical path is under `D:\MARS-Localhost\sites\wordpress\`.
 
 ---
 
@@ -119,6 +122,7 @@ external hosting        → Beget DEV/staging/prod (WPilot operations)
 ## Related
 
 - [governance/mars-infrastructure-reality-v1.md](../../../../governance/mars-infrastructure-reality-v1.md)
+- [projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md)
 - [FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md](FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md)
 - [contracts/WEBSITE-FACTORY-TO-FORGE-WORDPRESS-HANDOFF-CONTRACT-v1.md](contracts/WEBSITE-FACTORY-TO-FORGE-WORDPRESS-HANDOFF-CONTRACT-v1.md)
 

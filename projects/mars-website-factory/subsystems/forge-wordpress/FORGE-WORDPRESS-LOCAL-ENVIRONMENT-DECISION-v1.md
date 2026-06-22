@@ -136,3 +136,23 @@ See [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](reports/FORGE
 ---
 
 *Local environment decision v1 — profiles only; install is FW-04/FW-05 operator action.*
+
+---
+
+## Superseded note (2026-06-22 — MLI-00)
+
+**Shared localhost policy** supersedes §4.1 **Local by Flywheel as primary shared runtime** for MARS studio operations:
+
+| Topic | New policy |
+|-------|------------|
+| **Shared runtime root** | `D:\MARS-Localhost` — [MARS Localhost Infrastructure](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) |
+| **Primary local stack** | **Laragon** via MLI (MLI-01 enablement) |
+| **Forge relationship** | **Consumer** of WordPress runtime profile — does **not** own D: root |
+| **FW-05 historical** | Profile B (Playground) proof remains valid as documentation evidence |
+| **FW-05R** | Full Profile A re-validation on Laragon — **HOLD** until MLI-01 |
+
+Local by Flywheel remains an **optional alternative** per-operator if chartered; it is **not** the canonical shared MARS localhost root.
+
+**Forge WordPress does not own `D:\MARS-Localhost`. It consumes the WordPress runtime profile provided by MARS Localhost Infrastructure.**
+
+See also: [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](../../../mars-localhost-infrastructure/MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md)

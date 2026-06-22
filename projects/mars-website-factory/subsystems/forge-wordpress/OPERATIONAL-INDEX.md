@@ -14,7 +14,8 @@ FW-01 — COMPLETE
 FW-02 — COMPLETE
 FW-03 — COMPLETE
 FW-04 — COMPLETE
-FW-05 — NEXT
+FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-06 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
@@ -22,14 +23,16 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Prompt-driven implementation capability: DOCUMENTED
-Primary specialist profile: CREATED
-Skills: CREATED
-Validators: CREATED
-Synthetic validation: NOT STARTED
-Local environment: NOT READY
+Prompt-driven implementation capability: PROVEN WITH LIMITATIONS
+Primary specialist profile: PROVEN (synthetic)
+Skills: PROVEN WITH LIMITATIONS
+Validators: PROVEN
+Synthetic validation: COMPLETE (FWS-0001)
+Local environment: PARTIAL (Profile B Playground only)
+Local Laragon profile: NOT ENABLED (MLI-01 NEXT)
+FW-05R (full Profile A): HOLD until MLI-01
 Agent registration: NOT REGISTERED
-Client pilot: NOT READY
+Client pilot: READY FOR FW-06 INTAKE
 ```
 
 | Field | Value |
@@ -52,7 +55,8 @@ Client pilot: NOT READY
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
 | **Compliance matrix** | [FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md](FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md) |
-| **Local environment** | [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) |
+| **Local environment** | [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) — **consumes** [MLI WordPress profile](../../../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
+| **Shared localhost** | [projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) — Forge does **not** own `D:\MARS-Localhost` |
 | **Gulp integration** | [FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md](FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md) |
 | **Validation runners** | [FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md](FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md) |
 | **Pilot tooling** | [FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md](FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md) |

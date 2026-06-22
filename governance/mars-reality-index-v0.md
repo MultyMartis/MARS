@@ -32,6 +32,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **WPilot** | ✓ reference DEV runtime (RC5) | — | production bridge; Sprint 3 (charter-gated) | ✓ WP/host | — | ✓ reference docs + maintenance policy |
 | **MIG** | ✓ acquisition discipline | ✓ v0.1 spine | ✓ R1 boundary | ✓ n8n/self-host runtime lane | — | ✓ contracts + pack |
 | **OCPilot** | ✓ OpenCart bridge discipline | — | ✓ sibling/family model | ✓ hosting/FTP/PMA | — | ✓ Phase 0+ |
+| **MARS Localhost (MLI)** | — | — | ✓ shared localhost foundation | ✓ D: runtime zone | — | ✓ MLI-00 complete; Laragon not installed |
 | **EAR Runtime** | — | ✓ R1 foundation code | ✓ acquisition helpers architecture alignment | ✓ connector targets (future) | — | ✓ engineering program docs |
 | **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
 | **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
@@ -215,9 +216,25 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **SoT:** [../projects/ocpilot/README.md](../projects/ocpilot/README.md) · [../projects/ocpilot/OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md)
 
+**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `D:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). No runtime migration in MLI-00.
+
 ---
 
-## EAR Runtime
+## MARS Localhost Infrastructure (MLI)
+
+| Bucket | Reality |
+|--------|---------|
+| **conceptual** | Shared localhost foundation — brain on `C:\AI MARS`, execution on `D:\MARS-Localhost`. |
+| **external** | D: runtime tree is out-of-git; Laragon install is operator machine state. |
+| **documentation-only** | MLI-00 **COMPLETE** — identity, boundaries, policies, empty safe directory tree. |
+
+**Not:** MARS brain, Git authority, production hosting, or proof that WordPress/OpenCart local profiles are validated.
+
+**SoT:** [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md) · [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md)
+
+**Next:** MLI-01 Laragon Enablement — **not** executed in MLI-00.
+
+---
 
 | Bucket | Reality |
 |--------|---------|

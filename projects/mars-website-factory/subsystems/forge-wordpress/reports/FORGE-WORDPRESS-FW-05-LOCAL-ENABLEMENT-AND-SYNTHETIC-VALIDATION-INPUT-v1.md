@@ -17,7 +17,7 @@ Define what FW-05 must install, configure, and execute to prove the FW-04 capabi
 
 | Tool | Status | FW-05 action |
 |------|--------|--------------|
-| Local WordPress runtime (DDEV / Local / Docker) | NOT READY | Install per [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](../FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) |
+| Local WordPress runtime (Laragon / MLI) | NOT READY | Enable via [MLI-01](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md); site path `D:\MARS-Localhost\sites\wordpress\` |
 | PHP + Composer | PARTIAL | Verify versions match decision doc |
 | WP-CLI | NOT READY | Install local only |
 | PHPCS + WPCS | NOT READY | Install project-local |
@@ -28,6 +28,8 @@ Define what FW-05 must install, configure, and execute to prove the FW-04 capabi
 ---
 
 ## Install sequence (recommended)
+
+**Superseded path note (2026-06-22):** Shared localhost enablement is owned by **MLI-01** — [MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md). FW-05R full Profile A validation follows MLI-01.
 
 ```text
 1. Choose local stack per LOCAL-ENVIRONMENT-DECISION

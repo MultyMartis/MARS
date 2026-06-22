@@ -15,8 +15,8 @@
 | **FW-02** | Contracts and Standards | **COMPLETE** | Handoff, modeling, theme/plugin, validation + templates |
 | **FW-03** | Tooling and Validation Design | **COMPLETE** | Environment, runners, commands, profiles — **not** runtime |
 | **FW-04** | Implementation Capability Construction | **COMPLETE** | Specialist, skills, validators, protocols — prompt-driven |
-| **FW-05** | Local Enablement and Synthetic Validation | **NEXT** | Install local stack; run synthetic pipeline |
-| **FW-06** | Pilot Intake | **PLANNED** | Charter + candidate approval — after synthetic PASS |
+| **FW-05** | Local Enablement and Synthetic Validation | **COMPLETE** | FWS-0001 — PROVEN WITH LIMITATIONS |
+| **FW-06** | Pilot Intake | **NEXT** | Charter + candidate approval |
 | **FW-07** | First Client Pilot | **PLANNED** | Probable: FP-0002 — eligibility TBD at FW-06 |
 | **FW-08** | WPilot Handoff Validation | **PLANNED** | Operational boundary proof on DEV/staging |
 
@@ -40,7 +40,8 @@ FW-01 — COMPLETE
 FW-02 — COMPLETE
 FW-03 — COMPLETE
 FW-04 — COMPLETE
-FW-05 — NEXT
+FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
+FW-06 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
@@ -48,17 +49,19 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Prompt-driven implementation capability: DOCUMENTED
-Primary specialist profile: CREATED
-Skills: CREATED
-Validators: CREATED
-Synthetic validation: NOT STARTED
-Local environment: NOT READY
+Prompt-driven implementation capability: PROVEN WITH LIMITATIONS (synthetic)
+Primary specialist profile: PROVEN (synthetic)
+Skills: PROVEN WITH LIMITATIONS
+Validators: PROVEN
+Synthetic validation: COMPLETE (FWS-0001)
+Local environment: PARTIAL (Profile B only)
+MLI Laragon profile: NOT ENABLED — MLI-01 NEXT
+FW-05R: HOLD until MLI-01
 Agent registration: NOT REGISTERED
-Client pilot: NOT READY
+Client pilot: READY FOR FW-06 INTAKE (not auto-ready)
 ```
 
-**Lifecycle:** `FOUNDATION / PRE-OPERATIONAL` — not OPERATIONAL until FW-05 synthetic PASS.
+**Lifecycle:** `FOUNDATION / PRE-OPERATIONAL` — not OPERATIONAL until FW-06+ client pilot evidence.
 
 ---
 
