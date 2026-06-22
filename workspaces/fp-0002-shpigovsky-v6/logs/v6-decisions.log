@@ -153,3 +153,14 @@ source_used: OPERATOR_DECISION
 reason: Operator conditional approval — two point corrections only
 rejected_alternatives: hero-media-height 728px; object-fit cover; padding-inline 18px on .hero
 ---
+
+[2026-06-22T18:22:48] DECISION font-binding
+SOURCE=INCOMING+workspace font audit
+DECISION=No project font files; use system stack via :root tokens
+REASON=Authorized woff2/woff/ttf/otf absent; do not download substitutes
+
+[2026-06-22T18:22:48] DECISION fontawesome-integration
+SOURCE=shared/assets/icon-libraries/Font Awesome Pro 5.15.4/
+DECISION=Connected as controlled shared build dependency
+REASON=Full Pro icon availability without committing or duplicating the licensed vendor package
+

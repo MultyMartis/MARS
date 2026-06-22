@@ -1,0 +1,7 @@
+// FP-0002 V6 — project @font-face declarations
+// Font audit 2026-06-22: no authorized .woff2/.woff/.ttf/.otf in INCOMING or workspace.
+// Binding: PARTIAL — system stack via :root tokens until project font files are supplied.
+
+@use '../utils/variables' as *;
+
+// Intentionally empty — no @font-face without verified project font files.

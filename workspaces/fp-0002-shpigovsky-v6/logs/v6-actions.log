@@ -253,3 +253,18 @@ action: build
 reason: npm run build after hero SCSS fix
 expected_outcome: Build succeeded
 ---
+
+[2026-06-22T18:22:48] ACTION global-scss-foundation
+CHECKPOINT_BEFORE=684e1690a9883ee4f716937a126cbde3ffd91182
+FONT_AUDIT=0 files in INCOMING and src/fonts
+FONT_SELECTION=system stack PARTIAL
+SCSS_CREATED=base/fonts,base/root,base/reset,base/base,base/typography,vendors/fontawesome
+SCSS_UPDATED=utils/variables,style.scss,layout/header,sections/hero,gulpfile.js
+SCSS_REMOVED=layout/container
+FA_SOURCE=shared/assets/icon-libraries/Font Awesome Pro 5.15.4/
+FA_GULP=prepareFaBridge+faWebfonts
+BUILD=SUCCESS
+VISUAL=reviews/foundation/visual/FP-0002-V6-GLOBAL-FOUNDATION-SECTION-001.png
+HEADER_HERO=geometry preserved
+JS=unchanged
+

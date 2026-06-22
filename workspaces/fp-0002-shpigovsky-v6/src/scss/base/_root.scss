@@ -1,0 +1,71 @@
+// FP-0002 V6 — site-wide CSS custom properties (Шпиговский)
+
+:root {
+	/* Typography — families */
+	--font-family-base: system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
+	--font-family-heading: var(--font-family-base);
+	--font-family-display: var(--font-family-base);
+
+	--font-size-base: 16px;
+	--line-height-base: 1.25;
+	--font-weight-base: 400;
+	--font-weight-heading: 400;
+
+	--font-size-small: 14px;
+	--line-height-small: 1.2;
+
+	--font-size-large: 18px;
+	--line-height-large: 1.2;
+
+	--font-size-h1: 40px;
+	--line-height-h1: 1.15;
+
+	--font-size-h2: 28px;
+	--line-height-h2: 1.2;
+
+	--font-size-h3: 22px;
+	--line-height-h3: 1.25;
+
+	--font-size-nav: 15px;
+	--line-height-nav: 1.2;
+
+	--font-size-button: 13px;
+	--line-height-button: 1;
+
+	/* Layout */
+	--container-main: 1220px;
+	--container-hero: 1360px;
+	--page-padding-inline: 40px;
+
+	/* Spacing */
+	--space-5: 5px;
+	--space-10: 10px;
+	--space-15: 15px;
+	--space-20: 20px;
+	--space-25: 25px;
+	--space-30: 30px;
+	--space-40: 40px;
+	--space-50: 50px;
+	--space-70: 70px;
+	--space-90: 90px;
+
+	/* Colors — block-approved SECTION-001 values + foundation roles */
+	--color-page-background: rgb(230, 239, 246);
+	--color-text-primary: #475471;
+	--color-text-secondary: #6d7b8f;
+	--color-text-inverse: #fff;
+	--color-accent: rgb(149, 47, 43);
+	--color-border-subtle: rgb(200, 210, 220);
+	--color-surface: #fff;
+	--color-surface-frosted: rgba(255, 255, 255, 0.24);
+
+	/* Radius */
+	--radius-small: 5px;
+	--radius-medium: 16px;
+	--radius-large: 20px;
+	--radius-pill: 999px;
+
+	/* Motion */
+	--transition-duration: 0.3s;
+	--transition-timing: ease;
+}

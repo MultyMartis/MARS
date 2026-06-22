@@ -20,14 +20,11 @@ $hero-stack-bottom-offset: 66px; // JPG CTA bottom y 837 → media bottom y 903
 $hero-cta-width: 297px;
 $hero-cta-height: 45px; // EX-S001-001
 $hero-cta-radius: 22px;
-$hero-cta-bg: rgb(149, 47, 43);
-$hero-inverse-text: #fff;
-
 .hero {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1360px;
+  max-width: var(--container-hero);
   margin-inline: auto;
 }
 
@@ -87,7 +84,7 @@ $hero-inverse-text: #fff;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
-  color: $hero-inverse-text;
+  color: var(--color-text-inverse);
 }
 
 .hero__title {
@@ -95,7 +92,7 @@ $hero-inverse-text: #fff;
   font-size: 40px;
   font-weight: 400;
   line-height: 1.15;
-  color: $hero-inverse-text;
+  color: var(--color-text-inverse);
 }
 
 .hero__button {
@@ -106,8 +103,8 @@ $hero-inverse-text: #fff;
   padding: 0 20px;
   border: 0;
   border-radius: $hero-cta-radius;
-  background-color: $hero-cta-bg;
-  color: $hero-inverse-text;
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
   font-size: 13px;
   font-weight: 500;
   line-height: 1;

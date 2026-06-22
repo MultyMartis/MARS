@@ -1,15 +1,26 @@
-// FP-0002 v6 — foundation tokens (zero skeleton only)
+// FP-0002 v6 — compile-time Sass constants (paths, aliases)
+// Runtime design tokens live in base/_root.scss as CSS custom properties.
 
-$container-max: 1220px;
-$breakpoint-desktop-min: 1024px;
+$container-main: 1220px;
+$container-max: $container-main; // legacy alias — Header SCSS
+$container-hero: 1360px;
+$page-padding-inline: 40px;
 
-// Foundation spacing (APPROVED_OPERATOR_RULE / PROPOSAL per STYLE-FOUNDATION.json)
+// Approved spacing aliases (STYLE-FOUNDATION.json)
 $grid-gap-standard: 30px;
 $text-stack-gap: 20px;
 $accordion-row-spacing: 15px;
 
-// SECTION-001-GROUP-01 block-level color proposals (element-bounds evidence; HEX HOLD site-wide)
-$color-page-background: rgb(230, 239, 246);
-$color-primary-text: #475471;
-$color-secondary-text: #6d7b8f;
-$color-border-subtle: rgb(200, 210, 220);
+// Sass aliases → CSS custom properties (documented bridge for block SCSS)
+$color-page-background: var(--color-page-background);
+$color-primary-text: var(--color-text-primary);
+$color-secondary-text: var(--color-text-secondary);
+$color-border-subtle: var(--color-border-subtle);
+$color-accent: var(--color-accent);
+$color-text-inverse: var(--color-text-inverse);
+
+// Font asset path for @font-face (project fonts in src/fonts/)
+$font-asset-path: '../fonts' !default;
+
+// Shared Font Awesome Pro source (not copied into workspace)
+$fa-shared-root: '../../../../shared/assets/icon-libraries/Font Awesome Pro 5.15.4';

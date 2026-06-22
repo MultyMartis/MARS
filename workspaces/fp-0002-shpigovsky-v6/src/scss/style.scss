@@ -1,6 +1,9 @@
 @use 'utils/variables';
-@use 'utils/mixins';
+@use 'base/fonts';
+@use 'base/root';
 @use 'base/reset';
-@use 'layout/container';
+@use 'base/base';
+@use 'base/typography';
+@use 'vendors/fontawesome';
 @use 'layout/header';
 @use 'sections/hero';
