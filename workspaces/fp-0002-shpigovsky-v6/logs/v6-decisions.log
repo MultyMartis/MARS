@@ -144,3 +144,12 @@ rejected_alternatives: href=#; anchor without destination
 [2026-06-22T17:10:48] SOURCE=HOME-PAGE-FULL-MOCKUP.jpg
 [2026-06-22T17:10:48] REASON=Hero media inset 18px width 1361px height 728px derived from JPG probe; wider than container-main per operator rule; header geometry locked.
 [2026-06-22T17:10:48] VERDICT=READY_FOR_OPERATOR_VISUAL_REVIEW
+
+---
+timestamp: 2026-06-22T10:20:25Z
+task: FP-0002 V6 HERO FINAL CONTAINER AND FLUID HEIGHT FIX
+decision: Hero visual container max-width 1360px; fixed media height removed; intrinsic image ratio enabled
+source_used: OPERATOR_DECISION
+reason: Operator conditional approval — two point corrections only
+rejected_alternatives: hero-media-height 728px; object-fit cover; padding-inline 18px on .hero
+---

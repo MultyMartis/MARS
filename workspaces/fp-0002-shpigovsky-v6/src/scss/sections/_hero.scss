@@ -3,11 +3,7 @@
 // FP-0002 V6 — Hero desktop only (SECTION-001-GROUP-02)
 // Geometry authority: HOME-PAGE-FULL-MOCKUP.jpg @ 1398px — not FIG
 
-$hero-media-inset-inline: 18px; // JPG x 18–1378 on 1398px page
-$hero-media-height: 728px; // HERO_MEDIA_COMPONENT_GEOMETRY — JPG photo band (BP-S001-HERO-002)
 $hero-media-radius: 20px; // S001-RAD-003 block proposal
-$hero-object-position-x: 36%;
-$hero-object-position-y: 58%;
 
 $hero-panel-width: 600px; // JPG overlay x 400–1000
 $hero-panel-padding-block: 25px;
@@ -31,23 +27,21 @@ $hero-inverse-text: #fff;
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding-inline: $hero-media-inset-inline;
+  max-width: 1360px;
+  margin-inline: auto;
 }
 
 .hero__media {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: $hero-media-height;
   border-radius: $hero-media-radius;
 }
 
 .hero__image {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: $hero-object-position-x $hero-object-position-y;
+  height: auto;
 }
 
 .hero__container {

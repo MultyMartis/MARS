@@ -66,13 +66,23 @@
 | BP-S001-002 | Header CTA outline family separate from red primary | evidence/02-header |
 | BP-S001-003 | Typography px per role table in Implementation Spec | crops |
 | BP-S001-004 | Container inline padding proposal after inset math | x_start 130 vs 1220 |
-| BP-S001-HERO-001 | Hero media inset **18px** inline; visual width **1361px** @ 1398 page | JPG probe x 18–1378 |
-| BP-S001-HERO-002 | Hero media height **728px** (photo y 174–903) | JPG crop; `HERO_MEDIA_COMPONENT_GEOMETRY` |
-| BP-S001-HERO-003 | `object-position: 36% 58%` | PIL crop MAE vs JPG reference |
+| BP-S001-HERO-001 | Hero visual container **max-width 1360px**, centered | `OPERATOR_APPROVED_HERO_VISUAL_CONTAINER` |
+| BP-S001-HERO-002 | ~~Hero media height **728px**~~ | **REMOVED_BY_OPERATOR_DECISION** — intrinsic image ratio |
+| BP-S001-HERO-003 | ~~`object-position: 36% 58%`~~ | **REMOVED_BY_OPERATOR_DECISION** — no crop container |
 | BP-S001-HERO-004 | Hero stack bottom offset **66px** (CTA bottom to media bottom) | probe CTA y 792 h 45; media end y 903 |
 | BP-S001-HERO-005 | Frosted panel **600×auto**, padding 25/40, radius **20px** | overlay x 400–1000 |
 | BP-S001-HERO-006 | Hero media radius **20px** | evidence/01-section-001-full corner visual |
 | BP-S001-HERO-007 | Hero CTA **297×45px**, radius 22px, `rgb(149,47,43)` | probe + center sample |
+
+---
+
+## Operator-approved hero container (2026-06-22)
+
+| Token | Value | Classification |
+|-------|-------|----------------|
+| `hero-max-width` | 1360px | `OPERATOR_APPROVED_HERO_VISUAL_CONTAINER` |
+| `hero-media-height` | ~~728px~~ | `REMOVED_BY_OPERATOR_DECISION` |
+| Hero media ratio | intrinsic | Hero media uses intrinsic image ratio. No fixed media height. |
 
 ---
 

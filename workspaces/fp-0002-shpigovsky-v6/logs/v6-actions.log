@@ -212,3 +212,44 @@ expected_outcome: PARTIAL verdict — asset binding pending
 [2026-06-22T17:10:48] SCREENSHOTS=section-001+hero_desktop_1398
 [2026-06-22T17:10:48] VISUAL_QA=READY_FOR_OPERATOR_VISUAL_REVIEW
 [2026-06-22T17:10:48] HEADER_DIFF=NONE
+
+---
+timestamp: 2026-06-22T10:20:25Z
+task: FP-0002 V6 HERO FINAL CONTAINER AND FLUID HEIGHT FIX
+file_changed: src/scss/sections/_hero.scss
+action: modified
+reason: max-width 1360px; remove fixed media height; intrinsic image flow
+expected_outcome: Hero centered at 1360px; natural image aspect ratio
+---
+timestamp: 2026-06-22T10:20:25Z
+file_changed: specifications/section-001/FP-0002-V6-SECTION-001-SPECIFICATION.json
+action: modified
+reason: hero_container_max_width; INTRINSIC height mode; crop NONE
+expected_outcome: Spec matches implementation
+---
+timestamp: 2026-06-22T10:20:25Z
+file_changed: specifications/section-001/FP-0002-V6-SECTION-001-SOURCE-TO-TOKEN-MAP.md
+action: modified
+reason: hero-max-width 1360px; REMOVED_BY_OPERATOR_DECISION for 728px height
+expected_outcome: Token map reflects operator corrections
+---
+timestamp: 2026-06-22T10:20:25Z
+file_changed: reviews/hero/FP-0002-V6-HERO-DESKTOP-SCSS-REVIEW.md
+action: modified
+reason: Operator final corrections section
+expected_outcome: Review documents container and intrinsic height fix
+---
+
+---
+timestamp: 2026-06-22T10:21:14Z
+task: FP-0002 V6 HERO FINAL CONTAINER AND FLUID HEIGHT FIX
+file_changed: reviews/hero/visual/FP-0002-V6-HERO-DESKTOP-FINAL.png
+action: created
+reason: Final hero desktop render after container and intrinsic height fix
+expected_outcome: Hero 1360px centered; intrinsic image ratio; panel overlay visible
+---
+timestamp: 2026-06-22T10:21:14Z
+action: build
+reason: npm run build after hero SCSS fix
+expected_outcome: Build succeeded
+---

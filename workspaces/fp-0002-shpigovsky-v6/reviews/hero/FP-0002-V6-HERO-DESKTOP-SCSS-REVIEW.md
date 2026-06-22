@@ -288,8 +288,23 @@ No `@media` in `_hero.scss`. Desktop only.
 
 ---
 
+## Operator final corrections
+
+| Change | Detail |
+|--------|--------|
+| Hero max-width | Changed to **1360px** with `margin-inline: auto` |
+| Outer inline padding | **Removed** — `$hero-media-inset-inline: 18px` / `padding-inline` no longer applied to `.hero` |
+| Fixed media height | **Removed** — `height: 728px` deleted from `.hero__media` |
+| Intrinsic image ratio | **Enabled** — `.hero__image` uses `width: 100%`, `height: auto` |
+| Crop mode | **Removed** — `object-fit: cover` and `object-position: 36% 58%` deleted |
+| Header | **Unchanged** |
+
+**Checkpoint before corrections:** `fa98d8d6c26ef592761507483e0fde997730ac16`
+
+---
+
 ## Final verdict
 
-## READY FOR OPERATOR VISUAL REVIEW
+## READY FOR FINAL OPERATOR APPROVAL
 
-Hero desktop styled and compared with JPG. Header approved and unchanged.
+Hero desktop container and intrinsic media height applied per operator decision. Header approved and unchanged.
