@@ -983,6 +983,160 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
+   10c. Home treatment prevention (Section 03)
+   ========================================================================== */
+
+.home-treatment-prevention__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--pad-gap-line);
+	margin-bottom: var(--pad-gap);
+}
+
+.home-treatment-prevention__heading {
+	margin: 0;
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-treatment-prevention__all-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--pad-gap-tight);
+	font-size: 15px; // EXACT_GEOMETRY — mockup view-all link 15px (FIG 1:962)
+	line-height: var(--line-height-nav);
+	font-weight: var(--font-weight-button);
+	color: var(--color-text-primary);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.home-treatment-prevention__all-link:hover,
+.home-treatment-prevention__all-link:focus-visible {
+	color: var(--color-accent);
+}
+
+.home-treatment-prevention__all-icon {
+	display: inline-flex;
+	color: var(--color-accent);
+	font-size: 10px; // EXACT_GEOMETRY — mockup triangle icon scale
+}
+
+.home-treatment-prevention__lead {
+	margin: 0 0 var(--pad-gap);
+	padding: var(--pad-gap-line) 0 var(--pad-gap-line) var(--pad-gap);
+	border-left: 3px solid var(--color-accent); // EXACT_GEOMETRY — mockup lead accent bar 3px
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.home-treatment-prevention__accordion {
+	display: flex;
+	flex-direction: column;
+}
+
+.home-treatment-prevention__item {
+	border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+.home-treatment-prevention__item-title {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.home-treatment-prevention__toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--pad-gap-line);
+	width: 100%;
+	padding: var(--pad-gap-line) 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	text-align: left;
+	color: var(--color-text-primary);
+	cursor: pointer;
+}
+
+.home-treatment-prevention__toggle-label {
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-weight: var(--font-weight-heading);
+}
+
+.home-treatment-prevention__toggle-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 26px; // EXACT_GEOMETRY — mockup accordion chevron circle 26px (FIG 1:1216)
+	height: 26px;
+	border: var(--border-width) solid var(--color-accent);
+	border-radius: var(--radius-full);
+	color: var(--color-accent);
+	font-size: 10px;
+	transition: transform var(--transition-duration) ease;
+}
+
+.home-treatment-prevention__toggle[aria-expanded='true'] .home-treatment-prevention__toggle-icon {
+	transform: rotate(180deg);
+}
+
+.home-treatment-prevention__toggle:hover,
+.home-treatment-prevention__toggle:focus-visible {
+	color: var(--color-accent);
+}
+
+.home-treatment-prevention__panel {
+	padding-bottom: var(--pad-gap-line);
+}
+
+.home-treatment-prevention__panel[hidden] {
+	display: none;
+}
+
+.home-treatment-prevention__service-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-tight);
+	margin: 0;
+	padding: 0 0 var(--pad-gap-tight);
+	list-style: none;
+}
+
+.home-treatment-prevention__service-item {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	gap: var(--pad-gap-tight);
+}
+
+.home-treatment-prevention__service-label {
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	font-weight: var(--font-weight-button);
+	text-transform: uppercase;
+	color: var(--color-text-secondary);
+}
+
+.home-treatment-prevention__service-leader {
+	height: 0;
+	border-bottom: 1px dotted var(--color-border-subtle);
+}
+
+.home-treatment-prevention__service-arrow {
+	display: inline-flex;
+	color: var(--color-accent);
+	font-size: var(--icon-size-small);
+}
+
+/* ==========================================================================
    11. Footer
    ========================================================================== */
 
@@ -1630,6 +1784,19 @@ body[data-offcanvas-state='open'] {
 		position: static;
 		max-width: none;
 		margin-top: var(--pad-gap-line);
+	}
+
+	.home-treatment-prevention__head {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.home-treatment-prevention__service-item {
+		grid-template-columns: 1fr auto;
+	}
+
+	.home-treatment-prevention__service-leader {
+		display: none;
 	}
 
 	.site-header {

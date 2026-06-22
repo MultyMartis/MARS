@@ -162,3 +162,41 @@
 	onViewportChange();
 	syncAria(false);
 })();
+
+// FP-0002 v6 — home treatment prevention accordion (Section 03)
+(function initTreatmentAccordion() {
+	'use strict';
+
+	var roots = document.querySelectorAll('[data-accordion]');
+
+	Array.prototype.forEach.call(roots, function (root) {
+		var items = root.querySelectorAll('[data-accordion-item]');
+
+		Array.prototype.forEach.call(items, function (item) {
+			var button = item.querySelector('[data-accordion-button]');
+			var panel = item.querySelector('[data-accordion-panel]');
+
+			if (!button || !panel) {
+				return;
+			}
+
+			button.addEventListener('click', function () {
+				var isOpen = button.getAttribute('aria-expanded') === 'true';
+
+				Array.prototype.forEach.call(items, function (otherItem) {
+					var otherButton = otherItem.querySelector('[data-accordion-button]');
+					var otherPanel = otherItem.querySelector('[data-accordion-panel]');
+
+					if (!otherButton || !otherPanel) {
+						return;
+					}
+
+					var shouldOpen = otherItem === item && !isOpen;
+
+					otherButton.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+					otherPanel.hidden = !shouldOpen;
+				});
+			});
+		});
+	});
+})();
