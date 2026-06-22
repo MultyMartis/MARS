@@ -31,6 +31,7 @@ This rule set applies to **all** Website Factory frontend surfaces: homepage, PD
 | WF-GRID-003 | Local width authority required | HIGH |
 | WF-GRID-004 | Full-bleed is not grid break | CRITICAL |
 | WF-GRID-005 | QA grid check | CRITICAL |
+| WF-GRID-006 | Single base container | CRITICAL |
 
 ---
 
@@ -201,6 +202,56 @@ Full-width backgrounds and band treatments are **allowed** on the section layer.
 
 ---
 
+## WF-GRID-006 — Single base container
+
+### Core law
+
+Every site has **one primary content container** (project class name documented in Site-Wide Style Foundation — default semantic: `.container`).
+
+The primary container owns:
+
+```scss
+box-sizing: border-box;
+width: 100%;
+max-width: var(--container-main); // or project equivalent
+margin-inline: auto;
+padding-inline: var(--page-padding-inline);
+```
+
+Header, Footer, and standard content sections **must reuse** this class on the inner wrapper.
+
+### Forbidden
+
+```scss
+.site-header__container,
+.site-footer__container,
+.about-section__container {
+  max-width: var(--container-main);
+  margin-inline: auto;
+  padding-inline: var(--page-padding-inline);
+}
+```
+
+Also forbidden: new `--container-*` per block without exception gate; nested primary containers; copying `--container-main` into local selectors for convenience.
+
+### Allowed
+
+Component structural class on the **same element** as `.container` when it does **not** repeat container geometry:
+
+```html
+<div class="site-footer__inner container">
+```
+
+### Exceptions
+
+Separate width field (e.g. `--container-hero`) requires: visual evidence, semantic role, scope, approval, source-to-token mapping. Process: lookup → evidence → classification → approval → registration → implementation.
+
+**Gate:** `CONTAINER GATE — FAIL` without exception record.
+
+**Authority link:** [site-wide-style-foundation-contract-v1.md](../../../projects/mars-website-factory/site-wide-style-foundation-contract-v1.md) §4 Single Base Container Law.
+
+---
+
 ## WF-GRID-005 — QA grid check
 
 Frontend QA **must** verify grid alignment **before** visual approval.
@@ -257,6 +308,7 @@ WF GRID DISCIPLINE — PASS | FAIL (list sections) | SAFE UNKNOWN (widths not te
 - [ ] No undocumented local `max-width` / `padding-inline` / `margin-inline` on section roots (WF-GRID-003)
 - [ ] Full-bleed sections contain inner container wrapper (WF-GRID-004)
 - [ ] Header / hero / sections / footer alignment verified (WF-GRID-005)
+- [ ] Primary container reused — no duplicate `__container` geometry (WF-GRID-006)
 - [ ] REPORT includes `WF GRID DISCIPLINE` line
 
 ---

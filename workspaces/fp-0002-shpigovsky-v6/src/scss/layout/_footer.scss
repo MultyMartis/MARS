@@ -6,18 +6,12 @@ $footer-logo-height: 82px;
 $footer-callback-font-size: 12px; // BLOCK_LEVEL_TOKEN — compact outline CTA label
 
 .site-footer {
+	padding-block: var(--footer-padding-block);
 	background-color: var(--color-page-background);
 	color: var(--color-text-primary);
 }
 
-.site-footer__container {
-	box-sizing: border-box;
-	width: 100%;
-	max-width: var(--container-main);
-	margin-inline: auto;
-	padding-block: var(--footer-padding-block);
-	padding-inline: var(--page-padding-inline);
-}
+
 
 .site-footer__top {
 	display: flex;

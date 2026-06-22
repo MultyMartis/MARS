@@ -45,6 +45,24 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 
 **On violation:** `SCSS GATE — FAIL`
 
+### Container gate (mandatory)
+
+- [ ] Base `.container` (or project primary container class) reused where applicable.
+- [ ] No duplicate component container geometry (`max-width` + `margin-inline` + `padding-inline` outside primary container owner).
+- [ ] No new container token without approved visual exception.
+
+**On violation:** `CONTAINER GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
+
+### Section rhythm gate (mandatory)
+
+- [ ] Section/layout region owns top and bottom rhythm.
+- [ ] First internal child does not simulate section top spacing.
+- [ ] Last internal child does not simulate section bottom spacing.
+- [ ] Parent owns spacing between siblings.
+- [ ] Internal padding is not used as a section-boundary workaround.
+
+**On violation:** `SECTION RHYTHM GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
+
 ---
 
 ## REPORT line
@@ -61,3 +79,4 @@ PRE-SCSS VALIDATION — PASS | FAIL (list #) | BLOCKED (gate)
 |------|--------|
 | 2026-06-22 | v1 — Created from cross-layer audit |
 | 2026-06-22 | v1.1 — CSS Variable First Law token lookup gate; SCSS GATE — FAIL on arbitrary values |
+| 2026-06-22 | v1.2 — Container gate + Section rhythm gate |

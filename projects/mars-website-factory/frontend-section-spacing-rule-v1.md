@@ -73,6 +73,34 @@ When adjacent sections change **surface role** (page wash → elevated card band
 | Global `section { padding: … }` without types | Replace with typed section classes / tokens. |
 | Spacing contamination from prior project | Reset to project Production Standards SSOT. |
 
+### 2.6 Section Owns Its Rhythm Law (mandatory)
+
+Spacing between major page regions belongs to the **section or layout region** — not the first/last internal child.
+
+| Ownership | Owner | Examples |
+|-----------|-------|----------|
+| Section/layout-region rhythm | `.site-header`, `.site-footer`, `section`, `.section` | `padding-block` on layout region |
+| Internal component spacing | Component | card padding, control padding, list `gap` |
+| Inter-component spacing | Parent of siblings | content grid `gap` |
+| Exact geometry | Local exception | evidenced unique geometry |
+
+**Forbidden boundary workarounds:**
+
+```scss
+.site-header__bottom { padding-bottom: 18px; } // if this is header-to-hero gap only
+.section__last-row { margin-bottom: 70px; }    // if this is section bottom air only
+```
+
+**Preferred:** explicit layout-region tokens (`--header-padding-block-end`, `--footer-padding-block`) or site-wide section tokens when role is shared.
+
+**Rhythm modifiers:** `compact` · `standard` · `large` · `none` — use `--section-padding-compact`, `--section-padding-standard`, `--section-padding-large`.
+
+**Gate:** `SECTION RHYTHM GATE — FAIL` when first/last child simulates section boundary spacing.
+
+**Enforcement:** **MANDATORY DOCUMENTED PRODUCTION GATES** — **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**
+
+**Authority link:** [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) §6.
+
 ---
 
 ## 3. Project mapping requirement
@@ -127,3 +155,4 @@ Use [cadence-governance-checklist.md](../../agents/mars-forge/cadence-governance
 | Date | Change |
 |------|--------|
 | 2026-06-13 | v1 — created from FP-0002 audit; consolidates vertical-rhythm canon into operational Factory rule. |
+| 2026-06-22 | v1.1 — Section Owns Its Rhythm Law §2.6 |

@@ -299,3 +299,9 @@ NEXT_AUTHORIZED_TARGET=Footer
 2026-06-22T20:58:46 FOOTER SCSS src/scss/layout/_footer.scss
 2026-06-22T20:58:46 BUILD npm run build PASS
 2026-06-22T20:58:46 SCREENSHOTS reviews/footer/visual/
+2026-06-22T22:30:00Z | TASK | WEBSITE FACTORY SINGLE CONTAINER AND SECTION RHYTHM LAWS + FP-0002 SPACING CLEANUP | START
+2026-06-22T22:30:00Z | OPERATOR | header/footer common .container migration | PRESERVED
+2026-06-22T22:30:00Z | SCSS | header rhythm on .site-header; footer rhythm on .site-footer | DONE
+2026-06-22T22:30:00Z | FACTORY | Single Base Container Law + Section Owns Its Rhythm Law strengthened | DONE
+2026-06-22T22:30:00Z | VALIDATION | one-shot sass compile SUCCESS | watcher not restarted by agent
+2026-06-22T22:30:00Z | VISUAL | reviews/foundation/visual/FP-0002-V6-COMMON-CONTAINER-AND-RHYTHM-*.png | CAPTURED

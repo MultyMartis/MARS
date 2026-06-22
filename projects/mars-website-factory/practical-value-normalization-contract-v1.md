@@ -143,6 +143,8 @@ These are **illustrations**. Operator must confirm against visual deviation tole
 | New token per block without family justification | Foundation bloat |
 | QA fix via arbitrary magic numbers | Bypasses foundation |
 | Importing legacy project px as V6 truth | Violates clean-room policy |
+| Duplicate base container geometry per block | Violates Single Base Container Law — [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) §4 |
+| Section-boundary padding on first/last internal child | Violates Section Owns Its Rhythm Law — [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) §2.6 |
 
 ---
 

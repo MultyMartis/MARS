@@ -68,6 +68,25 @@ Each project file (e.g. `FP-XXXX-VN-SITE-WIDE-STYLE-FOUNDATION.md`) **must** inc
 
 Bind to [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) at implementation time.
 
+#### Single Base Container Law (mandatory)
+
+Every site has **one primary content container** class (project default: `.container`). It owns:
+
+- `width: 100%`
+- `max-width` (e.g. `--container-main`)
+- horizontal centering (`margin-inline: auto`)
+- standard page horizontal padding (`padding-inline`)
+
+Header, Footer, and standard content sections **must reuse** this class on the inner wrapper — not duplicate its geometry in BEM `__container` selectors.
+
+**Prohibited without documented exception:** per-block `__container` selectors repeating `max-width` + `margin-inline` + `padding-inline`; nested primary containers; new `--container-*` tokens per block for convenience.
+
+**Allowed exceptions:** visual evidence of a different width field (e.g. `--container-hero`) — requires exception register: evidence, semantic role, scope, approval, source-to-token mapping.
+
+**Container exception gate:** Existing base container lookup → visual evidence → exception classification → approval → token registration → implementation. On skip: `CONTAINER GATE — FAIL`.
+
+**Enforcement:** **MANDATORY DOCUMENTED PRODUCTION GATES** — **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**
+
 ### 5. Spacing scale
 
 - Base scale (from normalization)
@@ -78,6 +97,25 @@ Bind to [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1
 - Exception rules
 
 Cross-ref [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) for same-bg vs diff-bg boundaries.
+
+#### Section Owns Its Rhythm Law (mandatory)
+
+Spacing between major page regions belongs to the **section or layout region** (`section`, `.section`, `.site-header`, `.site-footer`, other classified major layout regions). It must **not** be simulated by padding or margin on the first/last internal child.
+
+| Ownership | Owner | Examples |
+|-----------|-------|----------|
+| Section/layout-region rhythm | Outer shell | `padding-block` on `.site-header`, `.site-footer`, `.section` |
+| Internal component spacing | Component | card padding, button padding, nav `gap` |
+| Inter-component spacing | Parent of siblings | `.section__content { gap: … }` |
+| Exact geometry | Local exception only | evidenced unique geometry |
+
+**Rhythm modifiers (approved tokens only):** `compact` · `standard` · `large` · `none` — map to `--section-padding-compact`, `--section-padding-standard`, `--section-padding-large`, or layout-region tokens (`--footer-padding-block`, `--header-padding-block-*`).
+
+**Forbidden:** `main > div { padding-block: … }` without semantic section contract; first/last child padding used as section boundary workaround.
+
+**Gate:** `SECTION RHYTHM GATE — FAIL` when boundary spacing is owned by internal children.
+
+**Enforcement:** **MANDATORY DOCUMENTED PRODUCTION GATES** — **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**
 
 ### 6. Section rhythm
 
@@ -193,3 +231,4 @@ Optional `*-STYLE-FOUNDATION.json` mirroring tokens for tooling — must stay in
 |------|--------|
 | 2026-06-22 | v1 — Mandatory gate between normalization and block specification |
 | 2026-06-22 | v1.1 — Component token registration; CSS Variable First Law link |
+| 2026-06-22 | v1.2 — Single Base Container Law; Section Owns Its Rhythm Law |

@@ -49,6 +49,8 @@ After **Frontend Production** produces a page or slice (post–Foundation QA and
 
 **SCSS gate:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — token lookup before block SCSS; Visual QA corrections via token/exception only.
 
+**Container + rhythm gates (mandatory):** [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) — **Single Base Container Law** · **Section Owns Its Rhythm Law**; [frontend-pre-scss-validation-checklist-v1.md](frontend-pre-scss-validation-checklist-v1.md) — `CONTAINER GATE — FAIL` · `SECTION RHYTHM GATE — FAIL`. **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**.
+
 ```text
 Page / block production
         ↓

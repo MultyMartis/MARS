@@ -488,9 +488,17 @@ Tokens changed
 Exceptions changed
 Arbitrary values introduced: 0
 Arbitrary values remaining: 0
+Primary container reused:
+Custom container exceptions:
+Duplicate container rules found:
+Duplicate container rules remaining:
+Section rhythm owners:
+Boundary spacing workarounds found:
+Boundary spacing workarounds removed:
+Boundary spacing workarounds remaining:
 ```
 
-Corrections must route through token or exception update — not arbitrary px tuning.
+Corrections must route through token or exception update — not arbitrary px tuning, local container width, or first/last-child boundary padding.
 
 ---
 
@@ -504,3 +512,4 @@ Corrections must route through token or exception update — not arbitrary px tu
 | 2026-06-14 | **v1.3** — Failure Attribution Model Pack: **FAILURE ATTRIBUTION** block §5.6. |
 | 2026-06-14 | **v1.4** — Operator Visual Approval Law: mandatory **OPERATOR VISUAL REVIEW** block §5.7; Layer E vocabulary. |
 | 2026-06-22 | **v1.5** — CSS Variable First Law §9.1: mandatory token fields on Visual QA; arbitrary px correction prohibited. |
+| 2026-06-22 | **v1.6** — Container + section rhythm mandatory report fields §9.1 |

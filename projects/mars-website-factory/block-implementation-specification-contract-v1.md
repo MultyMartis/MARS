@@ -47,6 +47,38 @@ Map each visible group to foundation component family.
 
 - `container-main` \| `container-narrow` \| `full-bleed` \| `exception`
 
+### Container usage (mandatory)
+
+```markdown
+## Container usage
+
+Primary container reused: YES/NO
+
+Container exception requested: YES/NO
+
+Container exception evidence:
+```
+
+Rules: [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) §4 Single Base Container Law · [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) WF-GRID-006.
+
+### Section rhythm ownership (mandatory)
+
+```markdown
+## Section rhythm ownership
+
+Top rhythm owner:
+
+Bottom rhythm owner:
+
+Internal spacing owners:
+
+First-child boundary spacing: NONE
+
+Last-child boundary spacing: NONE
+```
+
+Rules: [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) §6 Section Owns Its Rhythm Law · [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) §2.6.
+
 ### Typography bindings
 
 Per element role → foundation typography token.
@@ -175,3 +207,4 @@ Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 ope
 |------|--------|
 | 2026-06-22 | v1 — Connects foundation to HTML/SCSS gates |
 | 2026-06-22 | v1.1 — Token lookup sections; CSS Variable First Law binding |
+| 2026-06-22 | v1.2 — Container usage + section rhythm ownership mandatory sections |

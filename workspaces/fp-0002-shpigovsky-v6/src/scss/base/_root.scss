@@ -98,6 +98,10 @@
 	--transition-timing: ease;
 	--transition-base: var(--transition-duration) var(--transition-timing);
 
+	/* Header layout-region tokens (SECTION-001 / CMP-010) */
+	--header-padding-block-start: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header top inset @ 1398px
+	--header-padding-block-end: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header-to-hero boundary @ 1398px
+
 	/* Section rhythm — approved Site-Wide Style Foundation */
 	--section-padding-compact: var(--space-40);
 	--section-padding-standard: var(--space-50);

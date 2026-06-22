@@ -175,9 +175,10 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 **Operator summary:**
 
 - `<section>` / `<nav>` / `<header>` / `<footer>` = section shell; inner `div` = container width authority (WF-GRID-001).
-- One page = one grid contract (`--container-max`, `--container-pad`) — no silent per-section drift (WF-GRID-002).
+- One page = one grid contract (`--container-main`, `--page-padding-inline`) — reuse primary `.container` class (WF-GRID-002, WF-GRID-006).
 - Local `max-width` / `padding-inline` / `margin-inline` outside container → `/* WF-GRID-EXCEPTION */` comment (WF-GRID-003).
 - Full-bleed backgrounds on section; content still inside container (WF-GRID-004).
+- Section/layout region owns external vertical rhythm — not first/last internal child ([frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) §2.6).
 - Frontend QA: header / hero / sections / footer alignment before visual PASS (WF-GRID-005).
 
 **REPORT line:**

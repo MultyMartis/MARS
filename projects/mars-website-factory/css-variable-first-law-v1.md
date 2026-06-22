@@ -25,6 +25,7 @@ Production SCSS must not receive arbitrary design values copied from screenshots
 5. **No fallback literal that silently replaces a missing required token.**
 6. **New tokens require evidence, role, and scope.**
 7. **Exact geometry exceptions must remain explicit and local.**
+8. **Token assignment must match structural owner** — `var(--token)` on the wrong selector still violates production law when the value creates section-boundary or container geometry at the wrong layer.
 
 ---
 
@@ -167,12 +168,22 @@ Sass variables (`$…`) are for **compile-time only**: build paths, maps, mixins
 
 ## Visual QA correction rule
 
-Visual QA **must not** fix mismatch with an arbitrary number. Route through:
+Visual QA **must not** fix mismatch with:
+
+- an arbitrary number
+- a new local container width
+- padding on the last child
+- margin on the first child
+- negative margin between sections
+- a duplicating wrapper `max-width`
+
+Route through:
 
 ```text
 evidence
-→ identify wrong role/token
-→ update approved token or exception
+→ identify correct structural owner
+→ identify existing token
+→ update owner/token
 → apply var()
 → rerender
 ```
@@ -202,6 +213,14 @@ Arbitrary values removed
 Arbitrary values remaining
 Fallback literals found
 Fallback literals remaining
+Primary container reused:
+Custom container exceptions:
+Duplicate container rules found:
+Duplicate container rules remaining:
+Section rhythm owners:
+Boundary spacing workarounds found:
+Boundary spacing workarounds removed:
+Boundary spacing workarounds remaining:
 ```
 
 ---
@@ -211,3 +230,4 @@ Fallback literals remaining
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Mandatory production contract; FP-0002 V6 pilot cleanup |
+| 2026-06-22 | v1.1 — Structural owner law; container/rhythm Visual QA ban; mandatory report fields |

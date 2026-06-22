@@ -1,18 +1,13 @@
 // Desktop-only Header — SECTION-001-GROUP-01 (no mobile, no hero, no JS hooks)
 
 .site-header {
+	padding-block-start: var(--header-padding-block-start);
+	padding-block-end: var(--header-padding-block-end);
 	background-color: var(--color-page-background);
 	color: var(--color-text-primary);
 }
 
-.site-header__container {
-	box-sizing: border-box;
-	width: 100%;
-	max-width: var(--container-main);
-	margin-inline: auto;
-	padding-top: 18px; // BLOCK_LEVEL_TOKEN — header shell top inset
-	padding-inline: var(--page-padding-inline);
-}
+
 
 .site-header__top {
 	display: flex;
@@ -104,7 +99,6 @@
 .site-header__bottom {
 	display: flex;
 	align-items: center;
-	padding-bottom: 18px; // BLOCK_LEVEL_TOKEN — header shell bottom inset
 }
 
 .site-header__nav {

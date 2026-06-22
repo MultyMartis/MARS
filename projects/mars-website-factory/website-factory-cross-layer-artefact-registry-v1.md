@@ -37,6 +37,9 @@
 | R-024 | `projects/mars-website-factory/workflow-map.md` | UNKNOWN | Legacy target flow | STALE | Factory | Partial | Omits foundation chain | SUPERSEDE — link pipeline v1 |
 | R-025 | `projects/mars-website-factory/foundation-systems/README.md` | IMPLEMENTATION | Wave 2 SCSS tokens | REFERENCE | Factory | After foundation approved | Generic demo tokens | LINK — not V6 px source |
 | R-026 | `projects/mars-website-factory/css-variable-first-law-v1.md` | PRODUCTION LAW | Token lookup before SCSS | **MANDATORY** | Factory | Yes | New 2026-06-22 | PROMOTE |
+| R-027 | `projects/mars-website-factory/site-wide-style-foundation-contract-v1.md` §4 | PRODUCTION LAW | Single Base Container Law | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
+| R-028 | `projects/mars-website-factory/site-wide-style-foundation-contract-v1.md` §6 | PRODUCTION LAW | Section Owns Its Rhythm Law | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
+| R-029 | `workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md` WF-GRID-006 | IMPLEMENTATION | Single base container | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
 
 ---
 
@@ -47,6 +50,10 @@
 **Normalization (R-006 §1):** Design ≈64px → **70px**; ≈48px → **50px**; round toward scale.
 
 **Section rhythm (R-007 §2.1):** Same-bg → single boundary padding; forbidden double-gap.
+
+**Section rhythm ownership (R-028):** Major region spacing on layout shell — not first/last internal child.
+
+**Single base container (R-027 / R-029):** One primary `.container` — no per-block duplicate geometry.
 
 **Shell-first gap (R-010 §1):** Historically allowed Home-first; closed by foundation chain + layout spec.
 
