@@ -297,3 +297,18 @@ section_001_specification_status: READY_FOR_OPERATOR_REVIEW
 ## Local styling prohibition
 
 Until approval: **no block-level invented spacing, typography, container max-width, or hex** outside this foundation and exception register.
+
+---
+
+## 23. CSS Variable First Law
+
+```text
+css_variable_first_law: enabled
+arbitrary_production_values_allowed: false
+required_token_lookup: true
+visual_qa_magic_numbers_allowed: false
+```
+
+**Contract:** [css-variable-first-law-v1.md](../../../projects/mars-website-factory/css-variable-first-law-v1.md)
+
+**Component tokens (SECTION-001):** `--control-height-primary`, `--control-height-compact`, `--control-padding-inline`, `--control-padding-inline-compact`, `--control-radius`, `--button-*`, `--icon-size-small`, `--icon-size-medium`, `--border-width`, `--border-color-subtle`, `--surface-frosted-*`, `--transition-base`.

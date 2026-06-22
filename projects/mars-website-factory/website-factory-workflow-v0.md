@@ -5,7 +5,7 @@
 
 **Version:** v0.
 
-**Related:** [workflow-map.md](workflow-map.md) (diagrams and HITL summary), **[frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md)** (JPG/clean-room and frontend gate chain: audit → foundation → block spec → HTML → SCSS → QA), [`../../workflows/task-contract-v0.md`](../../workflows/task-contract-v0.md), [`../../workflows/execution-flow.md`](../../workflows/execution-flow.md), [`../../control-plane/contract.md`](../../control-plane/contract.md).
+**Related:** [workflow-map.md](workflow-map.md) (diagrams and HITL summary), **[frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md)** (JPG/clean-room and frontend gate chain: audit → foundation → block spec → HTML → SCSS → QA), **[css-variable-first-law-v1.md](css-variable-first-law-v1.md)** (mandatory token lookup before SCSS), [`../../workflows/task-contract-v0.md`](../../workflows/task-contract-v0.md), [`../../workflows/execution-flow.md`](../../workflows/execution-flow.md), [`../../control-plane/contract.md`](../../control-plane/contract.md).
 
 ---
 

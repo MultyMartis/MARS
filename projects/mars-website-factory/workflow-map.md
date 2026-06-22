@@ -47,6 +47,8 @@ This is a **target** pipeline for **documentation and future orchestration** —
 
 After **Frontend Production** produces a page or slice (post–Foundation QA and Home work), **Production PASS** requires the documented gate chain — **not** compact operational QA alone:
 
+**SCSS gate:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — token lookup before block SCSS; Visual QA corrections via token/exception only.
+
 ```text
 Page / block production
         ↓

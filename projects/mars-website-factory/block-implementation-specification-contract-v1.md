@@ -109,6 +109,30 @@ scss_authorized: false | true
 
 Requires `html_structure_authorized: true` + foundation `APPROVED` or scoped operator waiver.
 
+### Token lookup (mandatory before SCSS)
+
+Each block specification must include:
+
+```markdown
+## Variables reused
+
+## New tokens proposed
+
+## Block-level tokens
+
+## Exact geometry exceptions
+
+## Technical CSS values
+
+## Arbitrary values prohibited
+
+## Token lookup result
+```
+
+**Authority:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md)
+
+HTML gate does **not** automatically authorize SCSS. SCSS is permitted only after token lookup passes [frontend-pre-scss-validation-checklist-v1.md](frontend-pre-scss-validation-checklist-v1.md).
+
 ### Visual QA acceptance criteria
 
 - Screenshot compare region
@@ -150,3 +174,4 @@ Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 ope
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Connects foundation to HTML/SCSS gates |
+| 2026-06-22 | v1.1 — Token lookup sections; CSS Variable First Law binding |

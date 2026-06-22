@@ -1,0 +1,101 @@
+{
+  "header_container": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "20px",
+    "fontWeight": "400",
+    "maxWidth": "1220px",
+    "width": "1220px",
+    "height": "186px",
+    "minHeight": "0px",
+    "paddingInline": "40px"
+  },
+  "nav_link": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "15px",
+    "lineHeight": "18px",
+    "fontWeight": "400",
+    "maxWidth": "none",
+    "width": "auto",
+    "height": "auto",
+    "minHeight": "0px",
+    "paddingInline": "0px"
+  },
+  "search": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "18px",
+    "lineHeight": "18px",
+    "fontWeight": "400",
+    "maxWidth": "none",
+    "width": "32px",
+    "height": "32px",
+    "minHeight": "0px",
+    "paddingInline": "0px"
+  },
+  "hero_root": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "20px",
+    "fontWeight": "400",
+    "maxWidth": "1360px",
+    "width": "1360px",
+    "height": "759.891px",
+    "minHeight": "0px",
+    "paddingInline": "0px"
+  },
+  "hero_image": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "20px",
+    "fontWeight": "400",
+    "maxWidth": "100%",
+    "width": "1360px",
+    "height": "759.891px",
+    "minHeight": "0px",
+    "paddingInline": "0px"
+  },
+  "hero_panel": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "20px",
+    "fontWeight": "400",
+    "maxWidth": "calc(100% - 40px)",
+    "width": "600px",
+    "height": "133px",
+    "minHeight": "auto",
+    "paddingInline": "40px"
+  },
+  "hero_tagline": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "20px",
+    "fontWeight": "400",
+    "maxWidth": "none",
+    "width": "362.359px",
+    "height": "20px",
+    "minHeight": "auto",
+    "paddingInline": "0px"
+  },
+  "hero_title": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "40px",
+    "lineHeight": "46px",
+    "fontWeight": "400",
+    "maxWidth": "none",
+    "width": "330.656px",
+    "height": "46px",
+    "minHeight": "auto",
+    "paddingInline": "0px"
+  },
+  "hero_cta": {
+    "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "13px",
+    "fontWeight": "500",
+    "maxWidth": "none",
+    "width": "274.375px",
+    "height": "45px",
+    "minHeight": "45px",
+    "paddingInline": "20px"
+  }
+}

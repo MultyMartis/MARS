@@ -177,6 +177,8 @@ Header/hero require explicit flags when grounding review is PARTIAL.
 
 Optional `*-STYLE-FOUNDATION.json` mirroring tokens for tooling — must stay in sync with markdown SSOT.
 
+**Component tokens:** Register shared control, button, icon, border, motion, and surface tokens in `:root` per [css-variable-first-law-v1.md](css-variable-first-law-v1.md) before block SCSS.
+
 ---
 
 ## Relationship to Production Standards governance
@@ -190,3 +192,4 @@ Optional `*-STYLE-FOUNDATION.json` mirroring tokens for tooling — must stay in
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Mandatory gate between normalization and block specification |
+| 2026-06-22 | v1.1 — Component token registration; CSS Variable First Law link |

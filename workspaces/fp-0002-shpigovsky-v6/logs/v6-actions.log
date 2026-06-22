@@ -273,3 +273,15 @@ JS=unchanged
 ACTION=Restored Inter via V1 Google Fonts URL; updated root tokens; Header search -> fas fa-search nav item 8; removed search.svg; foundation/spec/review updated; build + visual QA PASS
 FILES=src/pages/index.html, src/scss/base/_fonts.scss, src/scss/base/_root.scss, src/scss/layout/_header.scss, src/scss/sections/_hero.scss, src/partials/layout/header.html, deleted src/img/icons/search.svg, foundation/*, specifications/section-001/*, reviews/foundation/*
 BUILD=SUCCESS
+
+[2026-06-22T19:15:00] TASK=FP-0002 V6 SCSS CLEANUP AND CSS VARIABLE FIRST LAW
+ACTION=PREFLIGHT branch=mars/post-cycle8-live-tests checkpoint=c7453aa; build BEFORE cleanup SUCCESS
+
+[2026-06-22T19:16:37] ACTION=SCSS cleanup: component tokens in _root.scss; header/hero token binding; hero CTA content-sized; Sass bridges removed; components/_button _icon created
+FILES=src/scss/base/_root.scss, utils/_variables.scss, layout/_header.scss, sections/_hero.scss, components/*, style.scss, foundation/*, reviews/foundation/*
+BUILD=SUCCESS
+
+[2026-06-22T19:19:00] ACTION=Visual QA screenshot FP-0002-V6-SCSS-CLEANUP-SECTION-001.png; hero_cta width=274.375px content-sized (was 297px)
+
+[2026-06-22T19:20:00] ACTION=Factory css-variable-first-law-v1.md + contract updates; arbitrary values removed=2; remaining=0
+

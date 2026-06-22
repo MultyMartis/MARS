@@ -29,6 +29,21 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 | 10 | Skipped gate | No SCSS if HTML review or block spec skipped |
 | 11 | Compiled CSS laws | Plan for [website-factory-enforcement-pack-v1.md](website-factory-enforcement-pack-v1.md) spot-check after build |
 | 12 | LOCAL FIX ban | QA defects route to spec/foundation/audit — not one-off magic numbers |
+| 13 | **CSS Variable First Law** | [css-variable-first-law-v1.md](css-variable-first-law-v1.md) token lookup complete |
+| 14 | Token inventory | All design values classified — see checklist below |
+
+### Token lookup gate (mandatory)
+
+- [ ] All design values completed token lookup.
+- [ ] Reused variables listed.
+- [ ] New token proposals listed.
+- [ ] Exact exceptions listed.
+- [ ] Technical values listed.
+- [ ] Arbitrary values count = **0**.
+- [ ] Hidden fallback literals count = **0**.
+- [ ] Repeated unregistered values count = **0**.
+
+**On violation:** `SCSS GATE — FAIL`
 
 ---
 
@@ -45,3 +60,4 @@ PRE-SCSS VALIDATION — PASS | FAIL (list #) | BLOCKED (gate)
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Created from cross-layer audit |
+| 2026-06-22 | v1.1 — CSS Variable First Law token lookup gate; SCSS GATE — FAIL on arbitrary values |

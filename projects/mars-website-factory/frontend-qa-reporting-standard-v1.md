@@ -477,6 +477,23 @@ FINAL VERDICT — PRODUCTION PASS WITH NOTES
 
 ---
 
+## 9.1 CSS Variable First Law — Visual QA token fields
+
+**Authority:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md)
+
+Every Visual QA report for SCSS-bearing stages must include:
+
+```text
+Tokens changed
+Exceptions changed
+Arbitrary values introduced: 0
+Arbitrary values remaining: 0
+```
+
+Corrections must route through token or exception update — not arbitrary px tuning.
+
+---
+
 ## 10. Revision history
 
 | Date | Change |
@@ -486,3 +503,4 @@ FINAL VERDICT — PRODUCTION PASS WITH NOTES
 | 2026-06-14 | **v1.2** — Compliance Decision Model Pack: mandatory **COMPLIANCE DECISION MODEL** block §5.5. |
 | 2026-06-14 | **v1.3** — Failure Attribution Model Pack: **FAILURE ATTRIBUTION** block §5.6. |
 | 2026-06-14 | **v1.4** — Operator Visual Approval Law: mandatory **OPERATOR VISUAL REVIEW** block §5.7; Layer E vocabulary. |
+| 2026-06-22 | **v1.5** — CSS Variable First Law §9.1: mandatory token fields on Visual QA; arbitrary px correction prohibited. |

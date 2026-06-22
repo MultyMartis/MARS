@@ -67,7 +67,34 @@
 	--radius-large: 20px;
 	--radius-pill: 999px;
 
+	/* Controls — shared component tokens (Header + Hero) */
+	--control-height-primary: 45px;
+	--control-height-compact: 32px;
+	--control-padding-inline: 20px;
+	--control-padding-inline-compact: 16px;
+	--control-border-width: 1px;
+	--control-radius: 22px;
+
+	/* Buttons */
+	--button-font-size: var(--font-size-button);
+	--button-line-height: var(--line-height-button);
+	--button-font-weight: var(--font-weight-medium);
+	--button-letter-spacing: 0.02em;
+
+	/* Icons */
+	--icon-size-small: 32px;
+	--icon-size-medium: 45px;
+
+	/* Borders */
+	--border-width: 1px;
+	--border-color-subtle: var(--color-border-subtle);
+
+	/* Surfaces */
+	--surface-frosted-background: var(--color-surface-frosted);
+	--surface-frosted-blur: 12px;
+
 	/* Motion */
 	--transition-duration: 0.3s;
 	--transition-timing: ease;
+	--transition-base: var(--transition-duration) var(--transition-timing);
 }

@@ -1,0 +1,213 @@
+# CSS Variable First Law v1
+
+**Status:** **MANDATORY PRODUCTION CONTRACT**
+
+**Scope:** All Website Factory execution cases; frontend agents; Cursor prompts; block implementation specifications; SCSS production; visual QA correction passes.
+
+**Enforcement:** **DOCUMENTED MANDATORY GATE** — **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**
+
+**Registry:** [website-factory-cross-layer-artefact-registry-v1.md](website-factory-cross-layer-artefact-registry-v1.md) · [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md)
+
+---
+
+## Purpose
+
+Production SCSS must not receive arbitrary design values copied from screenshots, estimates, or prior projects. Every value must trace through the token lookup chain before it reaches block styles.
+
+---
+
+## Core law
+
+1. **No arbitrary production value before token lookup.**
+2. **No repeated production value without token registration.**
+3. **No block styling before style foundation approval.**
+4. **No magic-number correction during visual QA.**
+5. **No fallback literal that silently replaces a missing required token.**
+6. **New tokens require evidence, role, and scope.**
+7. **Exact geometry exceptions must remain explicit and local.**
+
+---
+
+## Mandatory chain (allowed)
+
+```text
+visual evidence
+→ style role
+→ existing design token
+→ var(--token)
+→ block SCSS
+```
+
+When no suitable token exists:
+
+```text
+visual evidence
+→ new token proposal
+→ token registration
+→ operator/specification approval
+→ var(--new-token)
+→ block SCSS
+```
+
+---
+
+## Forbidden chain
+
+```text
+visual estimate
+→ arbitrary number
+→ production SCSS
+```
+
+---
+
+## Token lookup order
+
+Apply in order; stop and register a proposal when no level fits:
+
+1. **Site-wide foundation token** (`:root` / Style Foundation JSON)
+2. **Shared component token** (controls, buttons, icons, surfaces)
+3. **Page-family token** (page-scoped custom properties)
+4. **Approved block-level token** (documented in Block Implementation Specification)
+5. **Exact geometry exception** (local, classified, evidenced)
+6. **Technical CSS value** (`0`, `100%`, `auto`, `1px` border, local `z-index`)
+
+If none apply:
+
+```text
+STOP
+→ register token proposal
+→ document evidence
+→ approve
+→ implement
+```
+
+---
+
+## Token scope model
+
+| Scope | Description | Owner document |
+|-------|-------------|----------------|
+| `GLOBAL` | Site-wide `:root` tokens | Site-Wide Style Foundation |
+| `COMPONENT` | Reusable control/icon/surface tokens | Style Foundation + component layer |
+| `PAGE_FAMILY` | Page-scoped variables | Page Implementation Specification |
+| `BLOCK` | Block-local registered tokens | Block Implementation Specification |
+| `EXACT_EXCEPTION` | Art-directed geometry not on scale | Block spec exception register |
+| `TECHNICAL` | Browser/layout technical values | Pre-SCSS checklist technical list |
+
+Each new token must record: **name**, **value**, **role**, **scope**, **source evidence**, **reuse expectation**, **status**, **owner document**.
+
+---
+
+## Token naming law
+
+- **lowercase-kebab-case** only
+- Examples: `--font-size-base`, `--space-30`, `--control-height-primary`, `--radius-pill`, `--container-main`
+- Forbidden: `--base-Font-size`, `--Title-h1-Font-size`, `--pad-btns`, `--hero-button-width-297`, `--header-random-gap`
+
+---
+
+## Prohibited patterns (violations)
+
+Without documented classification and approval:
+
+```scss
+width: 297px;
+max-width: calc(100% - 40px);
+padding: 27px;
+gap: 33px;
+font-size: 17px;
+border-radius: 13px;
+```
+
+Also prohibited:
+
+- arbitrary visual tuning during QA
+- duplicated token values under different names
+- local redefinition of global values without scope
+- component width from screenshot when content sizing is correct
+- magic-number overflow prevention
+- hidden fallback literals: `var(--token, 30px)` for required foundation tokens
+- copying numbers from a different project
+
+---
+
+## Allowed exceptions
+
+Require **classification**, **evidence**, **reason**, **scope**, **review status**:
+
+- exact image crop geometry
+- art-directed `object-position`
+- unique overlay coordinates
+- local stacking indexes
+- `1px` technical borders
+- source aspect ratios
+- browser/device technical values
+
+---
+
+## SCSS variable policy
+
+Sass variables (`$…`) are for **compile-time only**: build paths, maps, mixins, functions, vendor configuration. Production design values flow through **CSS custom properties** first. If a Sass bridge is required, one authoritative value must be documented — not parallel unrelated systems.
+
+---
+
+## Layer contracts
+
+| Transition | Contract |
+|------------|----------|
+| Foundation → tokens | [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) |
+| Normalization → tokens | [practical-value-normalization-contract-v1.md](practical-value-normalization-contract-v1.md) |
+| Block → SCSS | [block-implementation-specification-contract-v1.md](block-implementation-specification-contract-v1.md) |
+| Pre-SCSS gate | [frontend-pre-scss-validation-checklist-v1.md](frontend-pre-scss-validation-checklist-v1.md) |
+| Pipeline | [frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md) |
+| Visual QA | [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) · [operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md) |
+
+---
+
+## Visual QA correction rule
+
+Visual QA **must not** fix mismatch with an arbitrary number. Route through:
+
+```text
+evidence
+→ identify wrong role/token
+→ update approved token or exception
+→ apply var()
+→ rerender
+```
+
+Every Visual QA report must include:
+
+```text
+Tokens changed
+Exceptions changed
+Arbitrary values introduced: 0
+Arbitrary values remaining: 0
+```
+
+---
+
+## Production report fields (mandatory)
+
+```text
+Variables reused
+New tokens proposed
+New tokens approved
+Block-level tokens
+Exact geometry exceptions
+Technical CSS values
+Arbitrary values found
+Arbitrary values removed
+Arbitrary values remaining
+Fallback literals found
+Fallback literals remaining
+```
+
+---
+
+## Changelog
+
+| Date | Change |
+|------|--------|
+| 2026-06-22 | v1 — Mandatory production contract; FP-0002 V6 pilot cleanup |

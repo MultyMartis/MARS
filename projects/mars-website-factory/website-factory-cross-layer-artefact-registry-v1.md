@@ -36,6 +36,7 @@
 | R-023 | `projects/mars-website-factory/frontend-implementation-pipeline-v1.md` | UNKNOWN | Full gate chain | CANONICAL | Factory | Yes | New 2026-06-22 | PROMOTE |
 | R-024 | `projects/mars-website-factory/workflow-map.md` | UNKNOWN | Legacy target flow | STALE | Factory | Partial | Omits foundation chain | SUPERSEDE — link pipeline v1 |
 | R-025 | `projects/mars-website-factory/foundation-systems/README.md` | IMPLEMENTATION | Wave 2 SCSS tokens | REFERENCE | Factory | After foundation approved | Generic demo tokens | LINK — not V6 px source |
+| R-026 | `projects/mars-website-factory/css-variable-first-law-v1.md` | PRODUCTION LAW | Token lookup before SCSS | **MANDATORY** | Factory | Yes | New 2026-06-22 | PROMOTE |
 
 ---
 
@@ -67,7 +68,7 @@
 | STYLE FOUNDATION | approved tokens | BLOCK SPEC | foundation MD/JSON | **Was missing** | **Now** block spec contract | **Closed** |
 | BLOCK SPEC | bindings | HTML | approved spec | layout-spec + block spec | pipeline v1 | Medium — layout spec per block still required |
 | HTML | structure | SCSS | HTML review + foundation | pre-scss checklist | pipeline v1 | Low |
-| SCSS | styles | VISUAL QA | build | QA entry + pixel rules | Existing | Low |
+| SCSS | styles | VISUAL QA | build | QA entry + pixel rules + **CSS Variable First Law** | Existing | Low |
 | VISUAL QA | verdict | CORRECTION | QA report | failure attribution model | Existing | Low |
 
 **Primary historical gap:** JPG AUDIT → SITE-WIDE STYLE FOUNDATION (skipped extraction + normalization). **Repaired** by pipeline v1 + contracts (2026-06-22).
@@ -79,3 +80,4 @@
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Cross-layer audit registry |
+| 2026-06-22 | v1.1 — R-026 CSS Variable First Law; SCSS→VQA matrix link |

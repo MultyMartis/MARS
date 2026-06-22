@@ -165,6 +165,8 @@ Store in project `*-PRACTICAL-VALUE-NORMALIZATION.md` and reference from Site-Wi
 
 **STOP:** Block HTML/SCSS if spacing/type/color value lacks foundation token or registered exception.
 
+**CSS Variable First Law:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — production SCSS must use `var(--token)` after lookup; arbitrary px without classification is a gate violation.
+
 ---
 
 ## Relationship to legacy FP-0002 materials
@@ -178,3 +180,4 @@ Store in project `*-PRACTICAL-VALUE-NORMALIZATION.md` and reference from Site-Wi
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Cross-layer audit; connects audit → normalization → foundation pipeline |
+| 2026-06-22 | v1.1 — Link CSS Variable First Law at SCSS gate |

@@ -51,7 +51,7 @@ INTAKE
 | Block Implementation Specification | G-BLS | Foundation + page spec + layout/group specs | Per-block binding doc | Engineering | block spec per section | unbound tokens | HTML |
 | HTML | G-HTM | Approved block spec | Structure-only markup | Forge / gulp agent | `html_structure_authorized` | spec missing | HTML Review |
 | HTML Review | G-HTR | HTML | Review PASS / fix list | Operator | visual structure ack | FAIL | SCSS |
-| SCSS | G-SCS | HTML + foundation | Scoped styles | Forge / gulp agent | `scss_authorized` | pre-SCSS checklist FAIL | Visual QA |
+| SCSS | G-SCS | HTML + foundation | Scoped styles | Forge / gulp agent | `scss_authorized` | pre-SCSS checklist FAIL · **CSS Variable First Law** arbitrary value | Visual QA |
 | Visual QA | G-VQA | Build + source | QA report | Operator + QA docs | OPERATOR VISUAL REVIEW | FAIL | Correction or PASS |
 | Correction Loop | G-COR | QA defect class | Updated spec/foundation/audit/code | Responsible layer | defect routed | local magic-number fix | Re-enter at routed gate |
 
@@ -65,7 +65,7 @@ INTAKE
 | Normalization → Foundation | [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) |
 | Foundation → Block work | [block-implementation-specification-contract-v1.md](block-implementation-specification-contract-v1.md) |
 | Composition before HTML | [group-decomposition-law-v1.md](group-decomposition-law-v1.md) · [layout-spec-law-v1.md](layout-spec-law-v1.md) |
-| SCSS pre-flight | [frontend-pre-scss-validation-checklist-v1.md](frontend-pre-scss-validation-checklist-v1.md) |
+| SCSS pre-flight | [frontend-pre-scss-validation-checklist-v1.md](frontend-pre-scss-validation-checklist-v1.md) · [css-variable-first-law-v1.md](css-variable-first-law-v1.md) |
 | QA | [operational-qa-entry-v1.md](operational-qa-entry-v1.md) · [pixel-fidelity-audit-rules-v1.md](pixel-fidelity-audit-rules-v1.md) |
 
 ---
@@ -104,3 +104,4 @@ This pipeline is **human-operated documentation**. No claim of automated gate en
 | Date | Change |
 |------|--------|
 | 2026-06-22 | v1 — Cross-layer audit repair; connects audit through correction loop |
+| 2026-06-22 | v1.1 — G-SCS binds CSS Variable First Law; pre-SCSS token lookup gate |

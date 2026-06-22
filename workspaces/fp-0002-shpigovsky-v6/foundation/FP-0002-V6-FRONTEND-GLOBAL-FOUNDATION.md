@@ -98,6 +98,19 @@ Global `--radius-small|medium|large|pill`; hero/header block radii remain block-
 - ~~Google Fonts / external font CDN~~ — **exception:** V1 production Inter via Google Fonts (operator-authorized typography recovery)
 - Committing FA Pro vendor to workspace
 - Responsive Header/Hero layout without separate task
+- **Arbitrary production px** without token lookup per [css-variable-first-law-v1.md](../../../projects/mars-website-factory/css-variable-first-law-v1.md)
+- **Hidden fallback literals** on required foundation tokens (`var(--token, 30px)`)
+
+## CSS Variable First Law
+
+```text
+css_variable_first_law: enabled
+arbitrary_production_values_allowed: false
+required_token_lookup: true
+visual_qa_magic_numbers_allowed: false
+```
+
+Component tokens registered in `base/_root.scss`: controls, buttons, icons, borders, surfaces, motion.
 
 ## Responsive boundary
 

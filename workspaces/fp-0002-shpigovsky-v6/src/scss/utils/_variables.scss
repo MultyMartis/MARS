@@ -1,23 +1,5 @@
-// FP-0002 v6 — compile-time Sass constants (paths, aliases)
+// FP-0002 v6 — compile-time Sass constants (paths, vendor config)
 // Runtime design tokens live in base/_root.scss as CSS custom properties.
-
-$container-main: 1220px;
-$container-max: $container-main; // legacy alias — Header SCSS
-$container-hero: 1360px;
-$page-padding-inline: 40px;
-
-// Approved spacing aliases (STYLE-FOUNDATION.json)
-$grid-gap-standard: 30px;
-$text-stack-gap: 20px;
-$accordion-row-spacing: 15px;
-
-// Sass aliases → CSS custom properties (documented bridge for block SCSS)
-$color-page-background: var(--color-page-background);
-$color-primary-text: var(--color-text-primary);
-$color-secondary-text: var(--color-text-secondary);
-$color-border-subtle: var(--color-border-subtle);
-$color-accent: var(--color-accent);
-$color-text-inverse: var(--color-text-inverse);
 
 // Font asset path for @font-face (project fonts in src/fonts/)
 $font-asset-path: '../fonts' !default;

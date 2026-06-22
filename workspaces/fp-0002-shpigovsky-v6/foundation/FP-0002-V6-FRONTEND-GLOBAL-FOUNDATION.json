@@ -76,5 +76,22 @@
     "allowed": true,
     "scope": "TYPOGRAPHY_AND_FONT_RECOVERY_ONLY",
     "forbidden": ["layout", "geometry", "spacing", "responsive", "component_structure"]
+  },
+  "css_variable_first_law": {
+    "enabled": true,
+    "arbitrary_production_values_allowed": false,
+    "required_token_lookup": true,
+    "visual_qa_magic_numbers_allowed": false,
+    "contract": "projects/mars-website-factory/css-variable-first-law-v1.md"
+  },
+  "component_tokens": {
+    "control_height_primary": "45px",
+    "control_height_compact": "32px",
+    "control_padding_inline": "20px",
+    "control_padding_inline_compact": "16px",
+    "control_radius": "22px",
+    "icon_size_small": "32px",
+    "icon_size_medium": "45px",
+    "surface_frosted_blur": "12px"
   }
 }
