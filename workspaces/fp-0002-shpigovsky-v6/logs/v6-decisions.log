@@ -39,3 +39,15 @@ decision: FP-0002 V6 STABLE BACKUP STARTER is canonical pre-layout recovery poin
 source_used: workspaces/fp-0002-shpigovsky-v6/
 rejected_alternatives: FIG, PDF, v1-v5 workspaces
 ---
+
+---
+timestamp: 2026-06-22T13:50:18+07:00
+SOURCE:
+FP-0002 V6 JPG AUDIT SOURCE PURITY GATE.
+
+DECISION:
+PASS — CLEAN FOR JPG VISUAL AUDIT
+
+REASON:
+Checkpoint SHA-256 matched; 38 files inventoried with zero confirmed contamination, zero legacy section measurements, zero structure preload beyond approved placeholders, clean logs and ZIP; no premature audit artefacts.
+---

@@ -1,0 +1,24 @@
+﻿# FP-0002 v6 — safe unknown log (append-only)
+
+# No SAFE UNKNOWN entries for task FP-0002 v6 JPG-ONLY RULE LOCK + SOCIAL ICON NORMALIZATION.
+
+---
+timestamp: 2026-06-22T13:50:18+07:00
+topic: inventory self-checksum drift
+detail: backup/FP-0002-V6-STABLE-BACKUP-STARTER.inventory.json live SHA-256 (86c023b2…) differs from embedded inventory record (669ca6a2…); 37/38 other paths still match.
+action: operator may refresh inventory embedded hash if desired; does not block JPG audit.
+---
+
+---
+timestamp: 2026-06-22T13:50:18+07:00
+topic: social SVG byte provenance
+detail: v6-actions.log documents copy-only from INCOMING/03_BRANDING; gate did not re-open sources or forbidden workspaces to verify bytes.
+action: accept logged provenance or operator re-verify from allowed branding paths.
+---
+
+---
+timestamp: 2026-06-22T13:50:18+07:00
+topic: foundation token historical independence
+detail: 1220px container and 1024px breakpoint are approved V6 foundation tokens; independence from pre-v6 iterations not provable without forbidden source reads.
+action: treat as V6 charter values unless operator overrides after JPG audit.
+---

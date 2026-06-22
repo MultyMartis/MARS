@@ -79,3 +79,18 @@ file_changed: backup/FP-0002-V6-STABLE-BACKUP-STARTER.zip, backup/FP-0002-V6-STA
 action: created
 expected_outcome: Recoverable pre-layout checkpoint with verified SHA-256 inventory and ZIP
 ---
+
+---
+timestamp: 2026-06-22T13:50:18+07:00
+SOURCE:
+Operator request to verify V6 audit source purity before JPG Visual Audit.
+
+DECISION:
+Performed a read-only contamination and provenance gate over the V6 workspace, logs, backup archive and future audit artefacts.
+
+REASON:
+Ensure that no structure, measurements or decisions from FIG, PDF, v1-v5, old workspaces or old reports can influence the JPG-only audit.
+file_changed: audit/FP-0002-V6-JPG-AUDIT-SOURCE-PURITY-GATE.md, logs/v6-actions.log, logs/v6-decisions.log, logs/v6-safe-unknown.log
+action: purity_gate
+expected_outcome: PASS verdict with gate artefact and updated logs
+---
