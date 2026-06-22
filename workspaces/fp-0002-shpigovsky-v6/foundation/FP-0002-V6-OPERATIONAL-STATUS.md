@@ -1,6 +1,6 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (responsive shell stable + home section 01)
+**Updated:** 2026-06-23 (Section 01 rejected removed + clean visual audit)
 
 ## Responsive shell stable release
 
@@ -55,29 +55,36 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01 **IMPLEMENTED PENDING OPERATOR REVIEW**; Section 02+ NOT STARTED |
+| Main content sections | Section 01 **REJECTED_REMOVED** — clean audit complete; Section 02+ **BLOCKED** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
 | Responsive (mobile header/footer) | **IMPLEMENTED** (Hero/main NOT STARTED) |
 | JavaScript | **ACTIVE** (off-canvas in `main.js`) |
 
-**Build map:** Header → Hero → `home-intro-mission` (Section 01) → Footer (`dist/index.html`).
+**Build map:** Header → Hero → *(empty main)* → Footer (`dist/index.html`).
 
 ## Main content operational status
 
 ```text
 responsive_shell_release: FP-0002-V6-RESPONSIVE-SHELL-STABLE-01
-responsive_shell_status: FROZEN
+responsive_shell_status: FROZEN_PRESERVED
 main_content_map: CREATED
-home_section_01: IMPLEMENTED_PENDING_OPERATOR_REVIEW
-home_section_02: NOT_STARTED
+home_section_01: REJECTED_REMOVED
+home_section_01_active_code: NONE
+home_section_01_clean_audit: COMPLETE
+home_section_01_new_implementation: NOT_STARTED
+home_section_02: BLOCKED
 main_content_remaining: NOT_STARTED
 ```
 
-**Stable release record:** [releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md)
+**Rejection record:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)
 
-**Section 01:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md)
+**Clean visual audit:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md)
+
+**Prior rejected review (historical):** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md)
+
+**Stable shell release:** [releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md)
 
 **Prior desktop release:** [releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md)
 

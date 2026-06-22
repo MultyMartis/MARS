@@ -94,3 +94,4 @@
 | 2026-06-22 | v1 — Cross-layer audit registry |
 | 2026-06-22 | v1.1 — R-026 CSS Variable First Law; SCSS→VQA matrix link |
 | 2026-06-23 | v1.2 — R-034 FP-0002 V6 desktop stable baseline release record |
+| 2026-06-23 | v1.3 — R-035 FP-0002 V6 Section 01 rejection; clean audit artefacts; sole JPG authority laws ([WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md](../../reports/WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md) §8) |

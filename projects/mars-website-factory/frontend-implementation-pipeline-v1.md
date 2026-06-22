@@ -110,3 +110,14 @@ This pipeline is **human-operated documentation**. No claim of automated gate en
 | 2026-06-23 | v1.4 — G-SCS binds One Project SCSS File Law; ONE SCSS FILE + RADIUS SYSTEM gates |
 | 2026-06-23 | v1.5 — G-SCS binds Universal Button System Law; UNIVERSAL BUTTON SYSTEM GATE |
 | 2026-06-23 | v1.6 — Operator-Canonical Source, Design Value Freeze, HTML quality, JS hook, Font stability laws |
+| 2026-06-23 | v1.7 — FP-0002 V6: post-rejection **G-AUD-only** path; **G-HTM/G-SCS blocked** until operator approves clean audit |
+
+### Post-rejection gate (FP-0002 V6 pattern)
+
+After operator visual rejection of an implemented section:
+
+```text
+REJECTED active code removal → CLEAN VISUAL AUDIT (G-AUD) → operator approval → Block Spec → HTML → SCSS
+```
+
+**ANALYSIS-BEFORE-IMPLEMENTATION GATE:** No HTML or SCSS until operator approves canonical crop, boundaries, structure, and content map. See [WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md](../../reports/WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md) §8.

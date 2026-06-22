@@ -750,101 +750,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
-   Home Section 01 — intro mission and feature cards
-   ========================================================================== */
-
-.home-intro-mission {
-	padding-top: var(--pad-y);
-	padding-bottom: var(--pad-y);
-	background-color: var(--color-page-background);
-	color: var(--color-text-primary);
-}
-
-.home-intro-mission__heading {
-	margin: 0 0 var(--pad-gap-line);
-}
-
-.home-intro-mission__lead {
-	margin: 0 0 var(--pad-gap-line);
-	font-size: var(--font-size-base);
-	font-weight: var(--font-weight-base);
-	line-height: var(--line-height-base);
-	color: var(--color-text-secondary);
-}
-
-.home-intro-mission__benefits {
-	display: flex;
-	flex-direction: column;
-	gap: var(--pad-gap-line);
-	margin: 0 0 var(--pad-gap);
-	padding: 0;
-	list-style: none;
-}
-
-.home-intro-mission__benefits-item {
-	position: relative;
-	padding-left: var(--pad-box);
-	font-size: var(--font-size-base);
-	font-weight: var(--font-weight-base);
-	line-height: var(--line-height-base);
-	color: var(--color-text-secondary);
-}
-
-.home-intro-mission__benefits-item::before {
-	content: '';
-	position: absolute;
-	top: 0.55em;
-	left: 0;
-	width: var(--pad-gap-mini);
-	height: var(--pad-gap-mini);
-	border-radius: var(--radius-full);
-	background-color: var(--color-accent);
-}
-
-.home-intro-mission__cards {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: var(--pad-gap);
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.home-intro-mission__card {
-	display: flex;
-	flex-direction: column;
-	gap: var(--pad-gap-line);
-	box-sizing: border-box;
-	padding: var(--pad-box);
-	border: var(--border-width) solid var(--border-color-subtle);
-	border-radius: var(--radius-main);
-	background-color: var(--color-surface);
-}
-
-.home-intro-mission__card-icon {
-	display: block;
-	color: var(--color-accent);
-	font-size: var(--font-size-large);
-	line-height: 1;
-}
-
-.home-intro-mission__card-title {
-	margin: 0;
-	font-size: var(--font-size-base);
-	font-weight: var(--font-weight-heading);
-	line-height: var(--line-height-base);
-	color: var(--color-text-primary);
-}
-
-.home-intro-mission__card-text {
-	margin: 0;
-	font-size: var(--font-size-small);
-	font-weight: var(--font-weight-base);
-	line-height: var(--line-height-small);
-	color: var(--color-text-secondary);
-}
-
-/* ==========================================================================
    11. Footer
    ========================================================================== */
 
@@ -1575,7 +1480,13 @@ body[data-offcanvas-state='open'] {
 	}
 
 	.hero {
-		max-height: 490px;
+		max-height: none;
+		height: auto;
+	}
+
+	.hero__container {
+		height: auto;
+		padding-top: var(--pad-gap);
 	}
 
 	.hero__media {

@@ -617,3 +617,4 @@ Remaining load stability risks:
 | 2026-06-22 | **v1.6** — Container + section rhythm mandatory report fields §9.1 |
 | 2026-06-23 | **v1.7** — Universal Style Scale Law fields §9.1; selector token / alias chain / logical property audit lines |
 | 2026-06-23 | **v1.8** — Universal Button System mandatory report fields §9.1 |
+| 2026-06-23 | **v1.9** — Operator rejection override: `OPERATOR VISUAL REVIEW — REJECTED` blocks Production PASS; post-rejection task must report `ANALYSIS-BEFORE-IMPLEMENTATION GATE — BLOCKED` until clean audit approved. |

@@ -22,6 +22,8 @@ Use after **source** edits in the **target** gulp-starter (or equivalent) projec
 - [ ] **Section rhythm ownership (mandatory):** layout region owns top/bottom rhythm — not first/last internal child — [frontend-section-spacing-rule-v1.md](../../projects/mars-website-factory/frontend-section-spacing-rule-v1.md) §2.6. REPORT: `SECTION RHYTHM GATE — PASS | FAIL | SAFE UNKNOWN`.
 - [ ] **WF Layout Discipline (mandatory):** inner-zone authority — hero fr/minmax (no default `%`), card/trust/finance patterns per [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md). REPORT: `WF LAYOUT DISCIPLINE — PASS | FAIL | SAFE UNKNOWN`.
 
+- [ ] **Operator rejection gate (mandatory when applicable):** if operator rejected a section, confirm clean visual audit approved before any new HTML/SCSS — [WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md](../../reports/WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md) §8. REPORT: `ANALYSIS-BEFORE-IMPLEMENTATION GATE — PASS | BLOCKED | NOT APPLICABLE`.
+
 ## Markup and accessibility
 
 - [ ] **Semantic HTML:** heading order, landmarks, interactive elements use correct tags.

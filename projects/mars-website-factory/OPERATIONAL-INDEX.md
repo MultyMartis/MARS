@@ -68,6 +68,8 @@
 
 **FP-0002 V6 desktop stable baseline (2026-06-23):** **FROZEN** — milestone **FP-0002 FIRST STABLE DESKTOP BASELINE**; release `FP-0002-V6-DESKTOP-STABLE-01` · tag `fp-0002-v6-desktop-stable-01` · workspace [fp-0002-shpigovsky-v6](../../workspaces/fp-0002-shpigovsky-v6/) · [manifest](../../workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md); desktop Header/Hero/Footer + local Inter **APPROVED**; mobile **authorized not started**.
 
+**FP-0002 V6 Section 01 rejection + clean audit (2026-06-23):** Home Section 01 (`home-intro-mission`, commit `0e5af79`) **REJECTED_REMOVED**; responsive shell **FROZEN_PRESERVED**; clean visual audit [FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md](../../workspaces/fp-0002-shpigovsky-v6/reviews/main-content/FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md); **IMPLEMENTATION AUTHORIZATION — NOT GRANTED**; Section 02 **BLOCKED**; laws in [WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md](../../reports/WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md) §8.
+
 **Operator Visual Approval Law (2026-06-14):** TECHNICAL PASS ≠ OPERATOR APPROVAL — **[operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md)**; mandatory **OPERATOR VISUAL REVIEW** REPORT block; Screenshot Override Law.
 
 **Session routing (Tier 0–3):** [survivability-canonical-entrypoint-model-v0.md](../../governance/survivability-canonical-entrypoint-model-v0.md) — **Tier 2** live navigation for Factory; open **Core Run** first; **Extended** only when the task needs a governance triad.

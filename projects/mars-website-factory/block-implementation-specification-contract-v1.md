@@ -300,3 +300,4 @@ Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 ope
 | 2026-06-23 | v1.4 — SCSS placement; unified radius; button letter-spacing prohibition |
 | 2026-06-23 | v1.5 — Universal Button System mandatory block spec section |
 | 2026-06-23 | v1.6 — Operator-canonical source, design freeze, production DOM casing/hooks, font stability law bindings |
+| 2026-06-23 | v1.7 — Post-rejection restart: Block Spec **withheld** until operator approves clean visual audit (crop, boundaries, structure, content map). No reuse of rejected partial as template. |

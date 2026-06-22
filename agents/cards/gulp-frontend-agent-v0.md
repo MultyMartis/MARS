@@ -133,3 +133,4 @@
 |------|--------|
 | 2026-05-11 | v0 card — aligned with frontend-production-model + frontend-handoff-contract-v0. |
 | 2026-05-15 | Status normalized to `operational_doc_pack` (registry §4 / §4.1); legacy-bridge as historical footnote only. |
+| 2026-06-23 | FP-0002 V6: after operator rejection — **audit-only** next step; no HTML/SCSS until clean audit approved; no placeholder duplication; sole JPG authority ([WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md](../../reports/WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md) §8). |

@@ -98,6 +98,21 @@ Until then: Discovery and inventory may proceed; **implementation HTML/SCSS rema
 
 ---
 
+## 8. FP-0002 V6 sole-authority laws (2026-06-23 append)
+
+When a project declares **one** visual source as canonical (e.g. `HOME-PAGE-FULL-MOCKUP.jpg` for FP-0002 V6 Home):
+
+| Law | Rule |
+|-----|------|
+| **SOLE VISUAL AUTHORITY** | Archived layouts, `GROUP-*` exports, PDFs, old workspaces, and previous generated implementations **must not** participate in structural reconstruction. |
+| **NO PLACEHOLDER DUPLICATION** | Unreadable or missing content **stops** implementation. Agents **must not** duplicate neighboring cards, text, or assets to fill an incomplete section. |
+| **ANALYSIS-BEFORE-IMPLEMENTATION** | After operator visual rejection, the next task is **audit-only**. No HTML/SCSS until operator approves crop, boundaries, structure, and content map. |
+| **OPERATOR REJECTION OVERRIDE** | A technically successful build/report does **not** make a visually incorrect section acceptable. Operator rejection sets status to **REJECTED**. |
+
+**Evidence:** [FP-0002-V6-HOME-SECTION-01-REJECTION.md](../workspaces/fp-0002-shpigovsky-v6/reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)
+
+---
+
 ## 7. Contract status
 
 **VISUAL AUTHORITY LOCKED — YES** (pending operator sign-off on §6)

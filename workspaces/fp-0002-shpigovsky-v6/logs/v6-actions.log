@@ -1,4 +1,4 @@
-﻿2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Installed local Inter WOFF2 (300/400/500, cyrillic+latin) under src/fonts/inter/
+2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Installed local Inter WOFF2 (300/400/500, cyrillic+latin) under src/fonts/inter/
 2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Added @font-face with font-display:block to src/scss/style.scss
 2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Added critical font preloads to src/pages/index.html
 2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Removed Google Fonts preconnect and stylesheet from index.html
@@ -9,7 +9,7 @@
 2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Review: reviews/foundation/FP-0002-V6-LOCAL-INTER-ZERO-FOUT-REVIEW.md
 2026-06-23T21:00:00Z | LOCAL_INTER_MIGRATION | Updated FP-0002-V6-OPERATIONAL-STATUS.md font delivery fields
 
-[2026-06-23T04:18:03+07:00] ACTION=DESKTOP_STABLE_BASELINE_FREEZE release=FP-0002-V6-DESKTOP-STABLE-01 tag=fp-0002-v6-desktop-stable-01 prior_head=24e55bb1 operator_approval=header,hero,footer,local_inter backup=C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-DESKTOP-STABLE-01-SOURCE.zip archive_sha256=d1cbc9d385bd33ec6b358f8e7ffc39948875aec62383c3485fa0d38c3a0e3438 restore_test=PASS
+[2026-06-23T04:18:03+07:00] ACTION=DESKTOP_STABLE_BASELINE_FREEZE release=FP-0002-V6-DESKTOP-STABLE-01 tag=fp-0002-v6-desktop-stable-01 prior_head=24e55bb1 operator_approval=header,hero,footer,local_inter backup=C:\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v6\\releases\\FP-0002-V6-DESKTOP-STABLE-01-SOURCE.zip archive_sha256=d1cbc9d385bd33ec6b358f8e7ffc39948875aec62383c3485fa0d38c3a0e3438 restore_test=PASS
 2026-06-23T04:31:00Z | ACTION | FP-0002-V6 mobile responsive phase | branch=mars/post-cycle8-live-tests | stable=FP-0002-V6-DESKTOP-STABLE-01 tag=fp-0002-v6-desktop-stable-01 commit=759637ac69a6f71f3f0c68181a978b5db0aa8d3d
 2026-06-23T04:31:00Z | ACTION | Implemented mobile header bar (logo + primary phone + menu toggle)
 2026-06-23T04:31:00Z | ACTION | Implemented off-canvas mobile menu (right panel, overlay, contacts, JS in main.js)
@@ -17,6 +17,12 @@
 2026-06-23T04:31:00Z | ACTION | Responsive CSS appended to src/scss/style.scss section Responsive @ max-width 1024px
 2026-06-23T04:31:00Z | ACTION | Visual capture 17 PNG + functional matrix JSON
 2026-06-23T04:31:00Z | ACTION | Factory contract added projects/mars-website-factory/off-canvas-component-contract-v1.md
-[2026-06-23T05:27:33+07:00] ACTION responsive_shell_freeze release=FP-0002-V6-RESPONSIVE-SHELL-STABLE-01 tag=fp-0002-v6-responsive-shell-stable-01 commit=0fe76cd archive=C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-SOURCE.zip sha256=44f1a9d0e347e54d888a5026f3251b9ba7c341380c7bfc2f6f5bc8d5be062c0f verify=PASS restore=PASS
+[2026-06-23T05:27:33+07:00] ACTION responsive_shell_freeze release=FP-0002-V6-RESPONSIVE-SHELL-STABLE-01 tag=fp-0002-v6-responsive-shell-stable-01 commit=0fe76cd archive=C:\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v6\\releases\\FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-SOURCE.zip sha256=44f1a9d0e347e54d888a5026f3251b9ba7c341380c7bfc2f6f5bc8d5be062c0f verify=PASS restore=PASS
 [2026-06-23T05:27:33+07:00] ACTION main_content_audit sections=12 map=reviews/main-content/FP-0002-V6-HOME-SECTION-01-SPEC.md
 [2026-06-23T05:27:33+07:00] ACTION home_section_01_implement partial=src/partials/sections/home-intro-mission.html scss=style.scss tokens_new=0 shell_regression=NONE
+[2026-06-23T22:40:00Z] ACTION operator_rejection home_section_01=REJECTED commit=0e5af79 reason=visual_authority_violation+archived_GROUP-01+placeholder_duplication
+[2026-06-23T22:40:00Z] ACTION rejected_active_code_removal index_include=REMOVED partial=DELETED scss_block=REMOVED operator_hero_mobile_tweaks=PRESERVED
+[2026-06-23T22:40:00Z] ACTION clean_visual_audit source=HOME-PAGE-FULL-MOCKUP.jpg sha256=CDD1D5BCC512B617DCF93EFA97AF88CF4AD99A0895CFC27A63C07BC704945290 boundaries=902/904/1494/1496
+[2026-06-23T22:40:00Z] ACTION audit_artefacts rejection=FP-0002-V6-HOME-SECTION-01-REJECTION.md clean_audit=FP-0002-V6-HOME-SECTION-01-CLEAN-VISUAL-AUDIT.md crops=visual-audit/*.png removal_screenshots=rejected-removal/*.png
+[2026-06-23T22:40:00Z] ACTION build_after_removal npm_run_build=PASS main_content_active_sections=0 shell_regression=NONE
+[2026-06-23T22:40:00Z] ACTION factory_rules_append sole_visual_authority_law+no_placeholder_duplication_law+analysis_before_implementation_gate+operator_rejection_override

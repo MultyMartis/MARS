@@ -295,6 +295,8 @@ What it **does** claim:
 | Claiming “build green” without running it | Violates §13 / [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md). | Run build or emit SAFE UNKNOWN on build. |
 | “Tested in all browsers” without evidence | Fabrication. | Enumerate viewports actually tested or SAFE UNKNOWN. |
 | Implementing from archive / older `design/v*` screens when charter names another active path | Triumph-class **semantic drift** (wrong entity count, wrong section meaning). | State active path in prompt; obey [`mars-forge/semantic-source-lock.md`](../../agents/mars-forge/semantic-source-lock.md) §2–§3 §8 — **P0–P6** priority. |
+| Duplicating cards/text to fill unreadable mockup slots | **NO PLACEHOLDER DUPLICATION LAW** violation (FP-0002 V6). | STOP; record SAFE UNKNOWN; await operator content authority. |
+| Re-implementing after operator rejection without clean audit approval | **ANALYSIS-BEFORE-IMPLEMENTATION GATE** violation. | Remove rejected code; produce clean audit; await operator approval. |
 
 ---
 

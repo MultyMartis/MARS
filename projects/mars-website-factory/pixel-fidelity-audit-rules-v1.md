@@ -354,3 +354,4 @@ Both may run on the same slice. PF-* **FAIL** on SSOT law blocks Production PASS
 | Date | Change |
 |------|--------|
 | 2026-06-13 | v1 — Pixel Fidelity Audit Rules PF-01–PF-07; authority principles; acceptable vs non-acceptable variance; anti-aesthetic interpretation guardrails. |
+| 2026-06-23 | FP-0002 V6: operator visual rejection overrides automated PASS; archived GROUP sources forbidden for structural reconstruction; clean audit required before re-implementation. |
