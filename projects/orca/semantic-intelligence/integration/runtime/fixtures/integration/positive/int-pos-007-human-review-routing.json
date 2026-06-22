@@ -1,0 +1,23 @@
+{
+  "fixture_id": "int-pos-007-human-review-routing",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "программист 1с спб",
+    "normalized_query": "программист 1с спб",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "protected_strata_conflict": true,
+    "assessor": {
+      "primary_intent": "HIRE_SERVICE",
+      "signals": [{ "signal_id": "PROVIDER_HIRE", "strength": "MEDIUM", "conflict_flag": true }],
+      "risk": { "overall_risk": "HIGH" },
+      "ambiguity": { "types": ["CAREER_VS_PROVIDER"], "severity": "HIGH", "competing_interpretations": ["job seeker", "hire provider"], "unresolved_questions": ["Career or hire?"] },
+      "commercial_eligibility": {
+        "decision": "ABSTAIN",
+        "reason_code": "CAREER_PROVIDER_CONFLICT",
+        "confidence": 0.55,
+        "reviewer_required": true
+      }
+    }
+  },
+  "expect": { "ok": true, "blocked": false, "admission_decision": "ABSTAIN", "review_routed": true }
+}

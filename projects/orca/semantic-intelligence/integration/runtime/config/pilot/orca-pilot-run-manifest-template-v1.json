@@ -1,0 +1,12 @@
+{
+  "manifest_id": "orca-pilot-run-manifest-template-v1",
+  "status": "TEMPLATE — NOT EXECUTED",
+  "pilot_run_id": null,
+  "phrase_count": 0,
+  "phrase_selection_gate": "NOT AUTHORIZED",
+  "config_ref": "config/pilot/orca-integration-pilot-config-v1.json",
+  "contract_lock_ref": "config/orca-semantic-contract-runtime-lock-v1.json",
+  "started_at": null,
+  "completed_at": null,
+  "operator_approval_ref": "orca-p0-i-admission-integration-operator-approval-v1"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-pilot-review-queue-schema-v1.schema.json",
+  "title": "ORCA P0-I Pilot Review Queue v1",
+  "type": "object",
+  "required": ["task_id", "query_id", "routes", "automated_decision_preserved", "status"],
+  "properties": {
+    "task_id": { "type": "string" },
+    "query_id": { "type": "string" },
+    "routes": { "type": "array", "items": { "type": "string" } },
+    "reasons": { "type": "array", "items": { "type": "string" } },
+    "automated_decision_preserved": { "enum": ["ACCEPT", "REJECT", "ABSTAIN"] },
+    "status": { "enum": ["QUEUED", "IN_REVIEW", "RESOLVED"] }
+  }
+}

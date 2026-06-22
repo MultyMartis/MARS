@@ -1,7 +1,7 @@
 # ORCA P0-I Implementation Backlog v1
 
 **Backlog ID:** `orca-p0-i-implementation-backlog-v1`  
-**Status:** `DEFINED — NOT IMPLEMENTED`  
+**Status:** `CORE IMPLEMENTATION APPROVED — I-08 PILOT AUTHORIZED`  
 **Machine-readable:** [`orca-p0-i-implementation-backlog-v1.json`](orca-p0-i-implementation-backlog-v1.json)
 
 ---
@@ -134,4 +134,13 @@
 
 ## Implementation gate
 
-No backlog item may start until **operator approves P0-I charter**. No item authorizes Corvonero rerun or B0.
+Operator approved P0-I charter (`3a5ec5d`). Core I-01–I-07 implemented and fixture-validated — **uncommitted** pending operator review.
+
+## Implementation status (2026-06-22)
+
+| Item | Status |
+|------|--------|
+| I-01 – I-07 | IMPLEMENTED — FIXTURE VALIDATED |
+| I-08 | READY FOR PHRASE-SELECTION GATE |
+| I-09 | PLANNED — DEFERRED |
+| P0-I overall | CORE INTEGRATION PASS — PILOT REQUIRED |

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-pilot-comparison-schema-v1.schema.json",
+  "title": "ORCA P0-I Pilot Comparison v1",
+  "type": "object",
+  "required": ["phrase_id", "new_decision", "legacy_diagnostic"],
+  "properties": {
+    "phrase_id": { "type": "string" },
+    "new_decision": { "enum": ["ACCEPT", "REJECT", "ABSTAIN"] },
+    "legacy_diagnostic": {
+      "type": "object",
+      "properties": {
+        "legacy_intent": { "type": "string" },
+        "legacy_eligibility": { "type": "string" },
+        "disagreement_type": { "type": "string" }
+      }
+    },
+    "note": { "const": "Legacy labels are not ground truth" }
+  }
+}

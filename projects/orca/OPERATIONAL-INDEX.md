@@ -198,15 +198,17 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 | [audits/triumph-to-orca-capability-recovery-v1/decisions/TRIUMPH-TO-ORCA-CAPABILITY-RECOVERY-AUDIT-APPROVAL-v1.md](audits/triumph-to-orca-capability-recovery-v1/decisions/TRIUMPH-TO-ORCA-CAPABILITY-RECOVERY-AUDIT-APPROVAL-v1.md) | Audit approval (I1) |
 
-**Next gate:** P0-I core implementation (I-01–I-07) → operator review → integration pilot.
+**Next gate:** P0-I integration pilot (phrase selection and execution) → operator review of pilot outputs.
 
 ## ORCA Semantic Intelligence — Admission Integration (P0-I)
 
-**Integration and enforcement charter** — bounded core authorized. Status: **APPROVED — CHECKPOINTED**.
+**Integration and enforcement** — bounded core checkpointed. Status: **CORE IMPLEMENTATION APPROVED — INTEGRATION PILOT AUTHORIZED**.
 
 | Doc | Role |
 |-----|------|
 | [semantic-intelligence/integration/README.md](semantic-intelligence/integration/README.md) | P0-I locus entry |
+| [semantic-intelligence/integration/runtime/README.md](semantic-intelligence/integration/runtime/README.md) | Runtime I-01–I-07 |
+| [semantic-intelligence/integration/decisions/ORCA-ADMISSION-ENFORCEMENT-CORE-OPERATOR-APPROVAL-v1.md](semantic-intelligence/integration/decisions/ORCA-ADMISSION-ENFORCEMENT-CORE-OPERATOR-APPROVAL-v1.md) | Operator approval K1–K9 |
 | [semantic-intelligence/integration/charters/ORCA-SEMANTIC-ADMISSION-INTEGRATION-CHARTER-v1.md](semantic-intelligence/integration/charters/ORCA-SEMANTIC-ADMISSION-INTEGRATION-CHARTER-v1.md) | Master integration charter |
 | [semantic-intelligence/integration/decisions/ORCA-P0-I-ADMISSION-INTEGRATION-OPERATOR-APPROVAL-v1.md](semantic-intelligence/integration/decisions/ORCA-P0-I-ADMISSION-INTEGRATION-OPERATOR-APPROVAL-v1.md) | Operator approval J1–J7 |
 | [semantic-intelligence/integration/decisions/ORCA-P0-I-OPERATOR-DECISIONS-v1.md](semantic-intelligence/integration/decisions/ORCA-P0-I-OPERATOR-DECISIONS-v1.md) | Operator decisions I2–I7 |
@@ -226,12 +228,10 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 **Promotion backlog P0-A:** `APPROVED — CHECKPOINTED` (commit `f17c270`).  
 **Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (commit `3151953`).  
 **P0-C:** `APPROVED — CHECKPOINTED` (commit `78b0557`, C1–C7).  
-**P0-I:** `APPROVED — CHECKPOINTED` — [semantic-intelligence/integration/](semantic-intelligence/integration/).  
-**P0-D:** `ON HOLD UNTIL P0-I PASS` — [decisions/ORCA-P0-D-BENCHMARK-CHARTER-HOLD-v1.md](audits/triumph-to-orca-capability-recovery-v1/decisions/ORCA-P0-D-BENCHMARK-CHARTER-HOLD-v1.md).  
-**P0-E / B0:** `BLOCKED`.  
-**Corvonero:** `FROZEN`.  
-**Campaign Production:** `BLOCKED`.  
-**Next gate:** I-01–I-07 core implementation → operator review → pilot phrase-selection → P0-I PASS → amended P0-D.  
+**P0-I:** `CORE IMPLEMENTATION APPROVED — INTEGRATION PILOT AUTHORIZED` — runtime `integration/runtime/` checkpointed.  
+**I-01–I-07:** `APPROVED — CHECKPOINTED`.  
+**I-08:** `PILOT AUTHORIZED — PHRASE SELECTION AND EXECUTION V1`.  
+**P0-D:** `ON HOLD UNTIL P0-I INTEGRATION PASS`.  
 **Blocked:** classifier, benchmark rows, Corvonero rerun, campaign production, Commander.
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)

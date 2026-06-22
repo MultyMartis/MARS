@@ -1,0 +1,21 @@
+{
+  "fixture_id": "int-neg-004-topic-only-accept",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "маркировка товаров",
+    "normalized_query": "маркировка товаров",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "TOPIC_INFORMATIONAL",
+      "signals": [],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "TOPICAL_MATCH",
+        "confidence": 0.6,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-001" }
+}

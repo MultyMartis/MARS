@@ -1,15 +1,15 @@
 {
   "backlog_id": "orca-p0-i-implementation-backlog-v1",
-  "status": "DEFINED — NOT IMPLEMENTED",
+  "status": "CORE IMPLEMENTATION APPROVED — I-08 PILOT AUTHORIZED",
   "items": [
-    {"id": "I-01", "name": "Contract loader", "dependencies": [], "prohibited": ["partial_silent_load"]},
-    {"id": "I-02", "name": "Semantic record generator", "dependencies": ["I-01"], "prohibited": ["legacy_eligibility_authority"]},
-    {"id": "I-03", "name": "Admission orchestrator", "dependencies": ["I-01", "I-02"], "prohibited": ["clustering", "negatives", "export"]},
-    {"id": "I-04", "name": "Invariant validator", "dependencies": ["I-03"], "prohibited": ["warning_only_blocking"]},
-    {"id": "I-05", "name": "Human review router", "dependencies": ["I-04"], "prohibited": ["silent_accept_promotion"]},
-    {"id": "I-06", "name": "Legacy comparison adapter", "dependencies": ["I-03"], "prohibited": ["eligible_commercial_authority"]},
-    {"id": "I-07", "name": "Contract-consumption report", "dependencies": ["I-01", "I-02", "I-03", "I-04", "I-05"], "prohibited": ["manual_status_without_trace"]},
-    {"id": "I-08", "name": "Integration pilot runner", "dependencies": ["I-01", "I-02", "I-03", "I-04", "I-05", "I-06", "I-07"], "prohibited": ["b0_labels", "corvonero_rerun", "gold_adjudication"]},
-    {"id": "I-09", "name": "External artifact parity hook", "dependencies": ["I-03"], "prohibited": ["export_rules_as_admission"]}
+    {"id": "I-01", "name": "Contract loader", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-02", "name": "Semantic record generator", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-03", "name": "Admission orchestrator", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-04", "name": "Invariant validator", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-05", "name": "Human review router", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-06", "name": "Legacy comparison adapter", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-07", "name": "Contract-consumption report", "status": "APPROVED — CHECKPOINTED"},
+    {"id": "I-08", "name": "Integration pilot runner", "status": "PILOT AUTHORIZED — PHRASE SELECTION AND EXECUTION V1"},
+    {"id": "I-09", "name": "External artifact parity hook", "status": "PLANNED — DEFERRED"}
   ]
 }

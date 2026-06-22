@@ -1,0 +1,31 @@
+{
+  "approval_id": "orca-admission-enforcement-core-operator-approval-v1",
+  "date": "2026-06-22",
+  "status": "CORE IMPLEMENTATION APPROVED — READY FOR INTEGRATION PILOT",
+  "charter_checkpoint": "3a5ec5d",
+  "decisions": {
+    "K1_enforcement_core": "APPROVED — FIXTURE VALIDATED — PILOT NOT RUN",
+    "K2_runtime_checkpoint": "AUTHORIZED",
+    "K3_real_integration_pilot": "AUTHORIZED — BOUNDED TECHNICAL PILOT",
+    "K4_pilot_size": { "min": 180, "max": 220, "preferred": 200 },
+    "K5_source_authority": {
+      "primary": "corvonero-mig-canonical-corpus",
+      "supplementary": ["integration-fixtures", "triumph-diagnostic", "hard-negative-design"]
+    },
+    "K6_old_labels": "FORBIDDEN_AS_TRUTH — DIAGNOSTIC_ONLY",
+    "K7_pilot_purpose": "INTEGRATION_ENFORCEMENT_PROOF_ONLY — NO_D3_GO_NO_GO",
+    "K8_human_review": [
+      "all_abstain",
+      "blocked_accept",
+      "high_critical_risk",
+      "protected_strata_conflict",
+      "assessor_legacy_disagreement",
+      "short_head_unresolved_problem",
+      "random_accept_reject_audit"
+    ],
+    "K9_p0_d": "ON HOLD UNTIL OPERATOR REVIEW OF PILOT RESULTS"
+  },
+  "runtime_status_from": "CORE INTEGRATION PASS — PILOT REQUIRED",
+  "runtime_status_to": "CORE IMPLEMENTATION APPROVED — READY FOR INTEGRATION PILOT",
+  "full_p0_i_pass": false
+}

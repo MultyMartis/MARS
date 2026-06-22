@@ -1,0 +1,25 @@
+{
+  "fixture_id": "int-pos-006-product-service-abstain",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "1с управление торговлей купить или настроить",
+    "normalized_query": "1с управление торговлей купить или настроить",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "PRODUCT_OR_SERVICE",
+      "ambiguity": {
+        "types": ["PRODUCT_VS_SERVICE"],
+        "severity": "HIGH",
+        "competing_interpretations": ["license purchase", "implementation service"],
+        "unresolved_questions": ["Product license vs setup service?"]
+      },
+      "commercial_eligibility": {
+        "decision": "ABSTAIN",
+        "reason_code": "PRODUCT_SERVICE_CONFLICT",
+        "confidence": 0.5,
+        "reviewer_required": true
+      }
+    }
+  },
+  "expect": { "ok": true, "blocked": false, "admission_decision": "ABSTAIN", "review_routed": true }
+}

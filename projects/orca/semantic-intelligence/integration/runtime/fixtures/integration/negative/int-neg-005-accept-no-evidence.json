@@ -1,0 +1,21 @@
+{
+  "fixture_id": "int-neg-005-accept-no-evidence",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "бухгалтерия предприятия",
+    "normalized_query": "бухгалтерия предприятия",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "PRODUCT",
+      "signals": [],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "WEAK_TOPIC",
+        "confidence": 0.5,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-002" }
+}

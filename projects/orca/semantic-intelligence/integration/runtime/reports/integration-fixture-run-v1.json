@@ -1,0 +1,157 @@
+{
+  "run_id": "integration-fixture-run-v1",
+  "generated_at": "2026-06-22T13:08:56.539Z",
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "exit_code": 0,
+  "results": [
+    {
+      "case_id": "int-neg-001-missing-contract",
+      "type": "contract",
+      "ok": true,
+      "load_blocked": true,
+      "message": "BLOCKED — REQUIRED SEMANTIC CONTRACT NOT LOADED"
+    },
+    {
+      "case_id": "int-neg-002-checksum-mismatch",
+      "type": "contract",
+      "ok": true,
+      "load_blocked": true,
+      "message": "BLOCKED — SEMANTIC CONTRACT CHECKSUM MISMATCH"
+    },
+    {
+      "case_id": "int-neg-003-version-mismatch",
+      "type": "contract",
+      "ok": true,
+      "load_blocked": true,
+      "message": "BLOCKED — SEMANTIC CONTRACT VERSION MISMATCH"
+    },
+    {
+      "case_id": "int-pos-009-consumption-report",
+      "type": "contract",
+      "ok": true,
+      "load_blocked": false
+    },
+    {
+      "case_id": "int-pos-001-service-accept",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-001-service-accept.json"
+    },
+    {
+      "case_id": "int-pos-002-career-reject",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-002-career-reject.json"
+    },
+    {
+      "case_id": "int-pos-003-diy-reject",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-003-diy-reject.json"
+    },
+    {
+      "case_id": "int-pos-004-short-head-abstain",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-004-short-head-abstain.json"
+    },
+    {
+      "case_id": "int-pos-005-problem-abstain",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-005-problem-abstain.json"
+    },
+    {
+      "case_id": "int-pos-006-product-service-abstain",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-006-product-service-abstain.json"
+    },
+    {
+      "case_id": "int-pos-007-human-review-routing",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-007-human-review-routing.json"
+    },
+    {
+      "case_id": "int-pos-008-legacy-disagreement",
+      "type": "positive",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\positive\\int-pos-008-legacy-disagreement.json"
+    },
+    {
+      "case_id": "int-neg-004-topic-only-accept",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-004-topic-only-accept.json"
+    },
+    {
+      "case_id": "int-neg-005-accept-no-evidence",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-005-accept-no-evidence.json"
+    },
+    {
+      "case_id": "int-neg-006-accept-high-ambiguity",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-006-accept-high-ambiguity.json"
+    },
+    {
+      "case_id": "int-neg-007-ownership-before-accept",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-007-ownership-before-accept.json"
+    },
+    {
+      "case_id": "int-neg-008-campaign-field",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-008-campaign-field.json"
+    },
+    {
+      "case_id": "int-neg-009-missing-provenance",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-009-missing-provenance.json"
+    },
+    {
+      "case_id": "int-neg-010-numeric-placeholder",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-010-numeric-placeholder.json"
+    },
+    {
+      "case_id": "int-neg-011-legacy-authoritative-label",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-011-legacy-authoritative-label.json"
+    },
+    {
+      "case_id": "int-neg-012-missing-abstain-support",
+      "type": "negative",
+      "ok": true,
+      "errors": [],
+      "file": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\runtime\\fixtures\\integration\\negative\\int-neg-012-missing-abstain-support.json"
+    }
+  ],
+  "note": "INTEGRATION TEST FIXTURES — NOT GOLD LABELS"
+}

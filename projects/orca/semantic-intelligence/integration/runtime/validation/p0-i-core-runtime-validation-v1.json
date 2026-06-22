@@ -1,0 +1,20 @@
+{
+  "validation_id": "p0-i-core-runtime-validation-v1",
+  "date": "2026-06-22",
+  "checks": [
+    {"id": 1, "check": "approval_checkpoint_exists", "pass": true, "evidence": "commit 3a5ec5d"},
+    {"id": 2, "check": "runtime_separated_from_contracts", "pass": true},
+    {"id": 3, "check": "required_consumers_exist", "pass": true},
+    {"id": 4, "check": "required_contracts_loaded", "pass": true},
+    {"id": 5, "check": "blocker_tests_work", "pass": true, "fixture_run": "21/21"},
+    {"id": 6, "check": "review_routing_works", "pass": true},
+    {"id": 7, "check": "legacy_authority_removed", "pass": true},
+    {"id": 8, "check": "fixtures_not_gold_labels", "pass": true},
+    {"id": 9, "check": "no_corvonero_corpus_processing", "pass": true},
+    {"id": 10, "check": "no_b0", "pass": true},
+    {"id": 11, "check": "no_campaign_output", "pass": true},
+    {"id": 12, "check": "no_commander_output", "pass": true},
+    {"id": 13, "check": "p0_d_hold_maintained", "pass": true}
+  ],
+  "overall": "CORE INTEGRATION PASS — PILOT REQUIRED"
+}

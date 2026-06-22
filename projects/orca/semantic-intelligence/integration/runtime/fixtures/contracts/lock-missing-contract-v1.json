@@ -1,0 +1,9 @@
+{
+  "lock_id": "lock-missing-contract-v1",
+  "lock_version": "v1",
+  "bundle_version": "p0-i-bundle-v1",
+  "contracts": [
+    {"load_order": 1, "contract_id": "orca-semantic-intelligence-authority-model", "canonical_path": "projects/orca/DOES-NOT-EXIST/missing-contract.json", "version": "v1", "checksum_sha256": null, "required": true, "consumer": "orca-version-authority-consumer-v1", "compatibility": ["p0-i-bundle-v1"]}
+  ],
+  "required_consumers": ["orca-version-authority-consumer-v1"]
+}

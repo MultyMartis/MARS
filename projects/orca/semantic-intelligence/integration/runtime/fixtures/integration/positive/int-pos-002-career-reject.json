@@ -1,0 +1,22 @@
+{
+  "fixture_id": "int-pos-002-career-reject",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "вакансия программист 1с удаленно",
+    "normalized_query": "вакансия программист 1с удаленно",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "CAREER",
+      "signals": [{ "signal_id": "CAREER_INTENT", "strength": "EXPLICIT", "conflict_flag": false }],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "competing_interpretations": [], "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "REJECT",
+        "reason_code": "CAREER_EMPLOYMENT",
+        "supporting_evidence": ["вакансия"],
+        "confidence": 0.95,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": true, "blocked": false, "admission_decision": "REJECT" }
+}

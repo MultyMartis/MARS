@@ -1,0 +1,21 @@
+{
+  "fixture_id": "int-neg-012-missing-abstain-support",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "disable_abstain": true,
+  "input": {
+    "raw_query": "1с",
+    "normalized_query": "1с",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "UNKNOWN",
+      "ambiguity": { "types": ["SHORT_HEAD_TERM"], "severity": "HIGH", "unresolved_questions": ["ambiguous"] },
+      "commercial_eligibility": {
+        "decision": "ABSTAIN",
+        "reason_code": "SHORT_HEAD",
+        "confidence": 0.4,
+        "reviewer_required": true
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-013" }
+}

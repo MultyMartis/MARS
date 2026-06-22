@@ -1,0 +1,27 @@
+{
+  "fixture_id": "int-pos-001-service-accept",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "заказать внедрение 1с под ключ",
+    "normalized_query": "заказать внедрение 1с под ключ",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "HIRE_SERVICE",
+      "likely_user_goal": "HIRE_PROVIDER",
+      "literal_interpretation": "Заказ внедрения 1С у провайдера",
+      "signals": [
+        { "signal_id": "PROVIDER_HIRE", "strength": "EXPLICIT", "evidence_span": "заказать", "conflict_flag": false }
+      ],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "competing_interpretations": [], "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+        "supporting_evidence": ["заказать", "под ключ"],
+        "confidence": 0.9,
+        "reviewer_required": false
+      }
+    },
+    "enable_legacy_comparison": true
+  },
+  "expect": { "ok": true, "blocked": false, "admission_decision": "ACCEPT", "review_routed": false }
+}

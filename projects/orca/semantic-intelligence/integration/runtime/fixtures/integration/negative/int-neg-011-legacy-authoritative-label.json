@@ -1,0 +1,19 @@
+{
+  "fixture_id": "int-neg-011-legacy-authoritative-label",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "скачать 1с бесплатно",
+    "normalized_query": "скачать 1с бесплатно",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "DOWNLOAD",
+      "commercial_eligibility": {
+        "decision": "ELIGIBLE COMMERCIAL",
+        "reason_code": "LEGACY_LABEL",
+        "confidence": 0.9,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "legacy_rejected": true }
+}

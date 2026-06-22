@@ -1,0 +1,23 @@
+{
+  "fixture_id": "int-neg-008-campaign-field",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "услуги программиста 1с",
+    "normalized_query": "услуги программиста 1с",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "extra_fields": { "campaign_group": "test-group" },
+    "assessor": {
+      "primary_intent": "HIRE_SERVICE",
+      "signals": [{ "signal_id": "PROVIDER_HIRE", "strength": "EXPLICIT", "conflict_flag": false }],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+        "supporting_evidence": ["услуги"],
+        "confidence": 0.9,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-010" }
+}

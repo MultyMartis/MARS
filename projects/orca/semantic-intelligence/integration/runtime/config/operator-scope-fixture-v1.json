@@ -1,0 +1,9 @@
+{
+  "scope_id": "orca-integration-fixture-operator-scope-v1",
+  "version": "v1",
+  "project": "integration-fixture",
+  "mode": "FIXTURE — NOT PRODUCTION",
+  "allowed_services": ["SVC-INTEGRATION-FIXTURE"],
+  "protected_strata": ["CAREER", "EDUCATIONAL", "DOWNLOAD", "DIY"],
+  "notes": "Generic integration fixture operator scope. Not Corvonero production scope."
+}

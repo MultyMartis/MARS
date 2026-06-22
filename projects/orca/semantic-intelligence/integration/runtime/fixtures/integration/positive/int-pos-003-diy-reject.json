@@ -1,0 +1,23 @@
+{
+  "fixture_id": "int-pos-003-diy-reject",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "настроить 1с своими руками инструкция",
+    "normalized_query": "настроить 1с своими руками инструкция",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "DIY",
+      "signals": [{ "signal_id": "DIY_INTENT", "strength": "EXPLICIT", "conflict_flag": false }],
+      "ambiguity": { "types": ["PROVIDER_VS_DIY"], "severity": "MEDIUM", "competing_interpretations": [], "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "REJECT",
+        "reason_code": "DIY_SELF_SERVICE",
+        "opposing_evidence": ["своими руками"],
+        "confidence": 0.88,
+        "reviewer_required": false
+      }
+    },
+    "enable_legacy_comparison": true
+  },
+  "expect": { "ok": true, "blocked": false, "admission_decision": "REJECT" }
+}

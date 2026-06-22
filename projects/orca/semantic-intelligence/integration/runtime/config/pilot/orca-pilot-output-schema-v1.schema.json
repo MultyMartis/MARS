@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-pilot-output-schema-v1.schema.json",
+  "title": "ORCA P0-I Pilot Output v1",
+  "type": "object",
+  "required": ["pilot_run_id", "phrase_id", "admission_decision", "integration_result"],
+  "properties": {
+    "pilot_run_id": { "type": "string" },
+    "phrase_id": { "type": "string" },
+    "admission_decision": { "enum": ["ACCEPT", "REJECT", "ABSTAIN", null] },
+    "blocked": { "type": "boolean" },
+    "integration_result": { "type": "object" },
+    "diagnostic_comparison": { "type": ["object", "null"] },
+    "review_task": { "type": ["object", "null"] }
+  }
+}

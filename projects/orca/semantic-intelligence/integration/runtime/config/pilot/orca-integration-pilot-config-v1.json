@@ -1,0 +1,15 @@
+{
+  "pilot_config_id": "orca-integration-pilot-config-v1",
+  "status": "READY FOR PHRASE-SELECTION GATE",
+  "phrase_selection_authorized": false,
+  "target_slice_size": "~200",
+  "actual_phrases_selected": 0,
+  "bundle_version": "p0-i-bundle-v1",
+  "lock_file": "config/orca-semantic-contract-runtime-lock-v1.json",
+  "output_dir": "output/pilot-runs/",
+  "rollback": {
+    "instructions": "Delete output/pilot-runs/<run_id>/ only. Do not modify canonical contracts or committed charter files.",
+    "cleanup_scope": ["output/pilot-runs/", "reports/pilot-*"]
+  },
+  "note": "I-08 scaffold only — execution requires operator gate"
+}

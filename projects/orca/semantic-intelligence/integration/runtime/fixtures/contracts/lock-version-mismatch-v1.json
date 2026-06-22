@@ -1,0 +1,9 @@
+{
+  "lock_id": "lock-version-mismatch-v1",
+  "lock_version": "v1",
+  "bundle_version": "p0-i-bundle-v1",
+  "contracts": [
+    {"load_order": 1, "contract_id": "orca-semantic-intelligence-authority-model", "canonical_path": "projects/orca/architecture/semantic-intelligence/orca-semantic-intelligence-authority-model-v1.json", "version": "v1", "checksum_sha256": "662BCFEC9EB2E6C7FE7847AFD9E66E3969777D00F715B6932F7D7D98D18DF031", "required": true, "consumer": "orca-version-authority-consumer-v1", "compatibility": ["corvonero-pilot-only"]}
+  ],
+  "required_consumers": ["orca-version-authority-consumer-v1"]
+}

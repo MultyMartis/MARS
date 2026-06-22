@@ -1,0 +1,25 @@
+{
+  "fixture_id": "int-pos-005-problem-abstain",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "1с не работает ошибка",
+    "normalized_query": "1с не работает ошибка",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "SUPPORT",
+      "ambiguity": {
+        "types": ["INTENT", "PROVIDER_VS_DIY"],
+        "severity": "HIGH",
+        "competing_interpretations": ["DIY fix", "hire support"],
+        "unresolved_questions": ["Is user seeking paid support?"]
+      },
+      "commercial_eligibility": {
+        "decision": "ABSTAIN",
+        "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+        "confidence": 0.45,
+        "reviewer_required": true
+      }
+    }
+  },
+  "expect": { "ok": true, "blocked": false, "admission_decision": "ABSTAIN", "review_routed": true }
+}

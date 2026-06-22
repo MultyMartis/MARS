@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-pilot-input-schema-v1.schema.json",
+  "title": "ORCA P0-I Pilot Input v1",
+  "type": "object",
+  "required": ["pilot_run_id", "phrase_id", "raw_query", "normalized_query", "provenance"],
+  "properties": {
+    "pilot_run_id": { "type": "string" },
+    "phrase_id": { "type": "string" },
+    "raw_query": { "type": "string", "minLength": 1 },
+    "normalized_query": { "type": "string" },
+    "provenance": {
+      "type": "object",
+      "required": ["status", "source_type"],
+      "properties": {
+        "status": { "enum": ["COMPLETE", "PARTIAL", "MISSING", "UNKNOWN"] },
+        "source_type": { "type": "string" }
+      }
+    },
+    "strata_tags": { "type": "array", "items": { "type": "string" } },
+    "note": { "const": "PHRASE SELECTION NOT AUTHORIZED — SCHEMA ONLY" }
+  }
+}

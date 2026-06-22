@@ -1,0 +1,24 @@
+{
+  "fixture_id": "int-neg-010-numeric-placeholder",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "1с услуги",
+    "normalized_query": "1с услуги",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "HIRE_SERVICE",
+      "literal_interpretation": "999",
+      "signals": [{ "signal_id": "PROVIDER_HIRE", "strength": "EXPLICIT", "conflict_flag": false }],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "TEST",
+        "phrase_explanation": "-1",
+        "supporting_evidence": ["услуги"],
+        "confidence": 0.9,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-011" }
+}

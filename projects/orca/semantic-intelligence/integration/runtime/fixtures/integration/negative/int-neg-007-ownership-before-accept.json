@@ -1,0 +1,26 @@
+{
+  "fixture_id": "int-neg-007-ownership-before-accept",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "заказать аудит 1с",
+    "normalized_query": "заказать аудит 1с",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "HIRE_SERVICE",
+      "signals": [{ "signal_id": "PROVIDER_HIRE", "strength": "EXPLICIT", "conflict_flag": false }],
+      "ambiguity": { "types": ["NONE"], "severity": "LOW", "unresolved_questions": [] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+        "supporting_evidence": ["заказать"],
+        "confidence": 0.9,
+        "reviewer_required": false
+      },
+      "service_candidate": {
+        "mapping_status": "FINAL",
+        "candidate_service_ids": ["SVC-AUDIT-1C"]
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-009" }
+}

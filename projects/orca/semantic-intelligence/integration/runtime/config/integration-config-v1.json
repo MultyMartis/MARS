@@ -1,0 +1,10 @@
+{
+  "config_id": "orca-admission-integration-config-v1",
+  "abstain_supported": true,
+  "review_router": {
+    "random_accept_audit_rate": 0,
+    "random_reject_audit_rate": 0,
+    "audit_seed": "fixture-non-production"
+  },
+  "note": "Random audit rates disabled — production percentages SAFE UNKNOWN"
+}

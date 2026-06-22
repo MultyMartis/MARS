@@ -1,0 +1,22 @@
+{
+  "fixture_id": "int-neg-006-accept-high-ambiguity",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "настроить 1с",
+    "normalized_query": "настроить 1с",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "HIRE_SERVICE",
+      "signals": [{ "signal_id": "PROVIDER_HIRE", "strength": "EXPLICIT", "conflict_flag": false }],
+      "ambiguity": { "types": ["PROVIDER_VS_DIY"], "severity": "CRITICAL", "unresolved_questions": ["DIY?"] },
+      "commercial_eligibility": {
+        "decision": "ACCEPT",
+        "reason_code": "IGNORED_AMBIGUITY",
+        "supporting_evidence": ["настроить"],
+        "confidence": 0.7,
+        "reviewer_required": false
+      }
+    }
+  },
+  "expect": { "ok": false, "blocked": true, "invariant": "SI-INV-003" }
+}

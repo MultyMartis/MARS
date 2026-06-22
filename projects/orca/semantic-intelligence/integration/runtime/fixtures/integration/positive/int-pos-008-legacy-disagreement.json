@@ -1,0 +1,28 @@
+{
+  "fixture_id": "int-pos-008-legacy-disagreement",
+  "label": "INTEGRATION TEST FIXTURE — NOT GOLD LABEL",
+  "input": {
+    "raw_query": "1с не печатает чек",
+    "normalized_query": "1с не печатает чек",
+    "provenance": { "status": "COMPLETE", "source_type": "fixture" },
+    "assessor": {
+      "primary_intent": "SUPPORT",
+      "signals": [{ "signal_id": "SUPPORT_SEEKING", "strength": "MEDIUM", "conflict_flag": false }],
+      "ambiguity": { "types": ["INTENT"], "severity": "HIGH", "unresolved_questions": ["DIY or paid fix?"] },
+      "commercial_eligibility": {
+        "decision": "ABSTAIN",
+        "reason_code": "SUPPORT_AMBIGUITY",
+        "confidence": 0.5,
+        "reviewer_required": true
+      }
+    },
+    "enable_legacy_comparison": true
+  },
+  "expect": {
+    "ok": true,
+    "blocked": false,
+    "admission_decision": "ABSTAIN",
+    "legacy_comparison_present": true,
+    "legacy_not_authoritative": true
+  }
+}
