@@ -54,6 +54,7 @@ After minimum bundle, pull **from repository** into chat context when needed (pa
 | OCPilot | `projects/ocpilot/OPERATIONAL-INDEX.md` |
 | WPilot | `projects/wpilot/README.md` |
 | MIG | `projects/mig/OPERATIONAL-INDEX.md` |
+| Search PPC | `projects/mars-search-ppc-production/README.md` |
 | MetaBOT | `projects/metabot-seo-content-agent/README.md` |
 | HomeGateway | `projects/homegateway-v4-ai/OPERATIONAL-INDEX.md` |
 | Governance maintenance | Targeted `governance/*.md` only with charter |

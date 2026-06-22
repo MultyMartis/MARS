@@ -1,0 +1,48 @@
+{
+  "decision_id": "WAVE-1.1-OPERATOR-APPROVAL-v1",
+  "decision_date": "2026-06-22",
+  "status": "RECORDED — OPERATOR REVIEW REQUIRED",
+  "wave_1_checkpoint_commit": "2b3020d",
+  "lifecycle_checkpoint_commit": "43c4271",
+  "operator_decisions": {
+    "W1.1-D1": {
+      "id": "W1.1-D1",
+      "title": "Wave 1 Core",
+      "decision": "APPROVED — IMPLEMENTED AND TESTED"
+    },
+    "W1.1-D2": {
+      "id": "W1.1-D2",
+      "title": "Wave 1 Overall",
+      "decision": "HARDENING REQUIRED — NOT OPERATIONAL"
+    },
+    "W1.1-D3": {
+      "id": "W1.1-D3",
+      "title": "Runtime checkpoint",
+      "decision": "Authorized after selective verification and rerun of all existing tests",
+      "checkpoint_commit": "2b3020d"
+    },
+    "W1.1-D4": {
+      "id": "W1.1-D4",
+      "title": "Wave 2",
+      "decision": "BLOCKED UNTIL WAVE 1.1 PASS"
+    },
+    "W1.1-D5": {
+      "id": "W1.1-D5",
+      "title": "Entry points",
+      "decision": "Lifecycle rule enforced only when subsystem entry point loads manifest, calls validator, checks stage/action, fails closed, records evidence"
+    },
+    "W1.1-D6": {
+      "id": "W1.1-D6",
+      "title": "Bypass closure",
+      "decision": "CLOSED only with executable proof or unavoidable runtime gate; documentation-only guards cannot receive CLOSED"
+    },
+    "W1.1-D7": {
+      "id": "W1.1-D7",
+      "title": "Corvonero",
+      "decision": "Remains FROZEN — read-only enforcement testing only"
+    }
+  },
+  "wave_1_status": "CORE APPROVED — HARDENING IN PROGRESS",
+  "wave_1_1_status": "IMPLEMENTED — OPERATOR REVIEW REQUIRED",
+  "operational_status": "NOT OPERATIONAL"
+}

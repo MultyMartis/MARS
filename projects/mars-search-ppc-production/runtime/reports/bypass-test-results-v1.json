@@ -1,0 +1,247 @@
+{
+  "test_suite": "mars-search-ppc-bypass-tests-v1",
+  "timestamp": "2026-06-22T17:01:58.449Z",
+  "receipt_dir": "C:\\Users\\WSP-ONE\\AppData\\Local\\Temp\\sppc-bypass-Wx4dfy",
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "MIG collection without manifest",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "MISSING_MANIFEST"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "MIG paid SERP without allowed stage",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "PRIOR_STAGE_INCOMPLETE",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "ORCA admission with diagnostic pilot substituted",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "PRIOR_STAGE_INCOMPLETE",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "ORCA clustering before ownership",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "ORCA negatives before ownership",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "Strategy attempt without analytical pack",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "PRIOR_STAGE_INCOMPLETE",
+        "PRIOR_STAGE_INCOMPLETE",
+        "PAID_SERP_MISSING",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "Campaign Production without approved strategy",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "OUTPUT_CLASS_VIOLATION",
+        "OUTPUT_CLASS_VIOLATION"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "Campaign Production attempting semantic admission",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "PRIOR_STAGE_INCOMPLETE",
+        "PAID_SERP_MISSING",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM",
+        "OUTPUT_CLASS_VIOLATION"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 9,
+      "name": "Export before QA",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 10,
+      "name": "Export mutating ownership",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "PAID_SERP_MISSING",
+        "EXPORT_SEMANTIC_MUTATION",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 11,
+      "name": "Cursor task missing manifest",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "CURSOR_TASK_INVALID"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 12,
+      "name": "Cursor task requesting downstream stage",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "PRIOR_STAGE_INCOMPLETE",
+        "PAID_SERP_MISSING",
+        "FORBIDDEN_DOWNSTREAM",
+        "MISSING_REQUIREMENTS",
+        "FORBIDDEN_DOWNSTREAM"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 13,
+      "name": "Diagnostic artifact as production authority",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PROJECT_FROZEN",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 14,
+      "name": "Bulk human-review as primary engine",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PREREQUISITE_NOT_MET",
+        "HUMAN_REVIEW_PRIMARY",
+        "HUMAN_REVIEW_PRIMARY",
+        "HUMAN_REVIEW_PRIMARY",
+        "HUMAN_REVIEW_PRIMARY",
+        "MISSING_REQUIREMENTS"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 15,
+      "name": "Frozen Corvonero production attempt",
+      "pass": true,
+      "blocked": true,
+      "allowed": false,
+      "exit_code": 2,
+      "blocker_codes": [
+        "PROJECT_FROZEN",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_created": true,
+      "disposition": "PASS"
+    }
+  ]
+}

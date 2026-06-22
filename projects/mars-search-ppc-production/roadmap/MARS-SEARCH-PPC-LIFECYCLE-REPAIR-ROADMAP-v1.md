@@ -1,8 +1,11 @@
 # MARS Search PPC Lifecycle — Repair Roadmap v1
 
 **Date:** 2026-06-22  
-**Status:** `APPROVED — WAVE 1 AUTHORIZED`  
-**Lifecycle authority:** `APPROVED — IMPLEMENTATION AUTHORIZED` (W1-D1, 2026-06-22)  
+**Status:** `APPROVED — WAVE 1 CHECKPOINTED — WAVE 1.1 OPERATOR REVIEW`  
+**Lifecycle authority:** `APPROVED — CHECKPOINTED` (`43c4271`)  
+**Wave 1 runtime:** `CORE APPROVED — CHECKPOINTED` (`2b3020d`)  
+**Wave 1.1:** `IMPLEMENTED — OPERATOR REVIEW REQUIRED`  
+**Wave 2:** `BLOCKED PENDING WAVE 1.1 REVIEW`  
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
 **Corvonero default:** `FROZEN` — no Corvonero production work until Wave 3+ operator charter per item
 
@@ -12,8 +15,9 @@
 
 | Wave | Theme | Primary owner | Corvonero dependency |
 |------|-------|---------------|----------------------|
-| 1 | Lifecycle authority and state enforcement | MARS Search PPC / Operator | **IMPLEMENTED — OPERATOR REVIEW REQUIRED** |
-| 2 | MIG evidence production | MIG | **BLOCKED UNTIL WAVE 1 APPROVAL** |
+| 1 | Lifecycle authority and state enforcement | MARS Search PPC / Operator | **CORE APPROVED — CHECKPOINTED** (`2b3020d`) |
+| 1.1 | Entry-point wiring and bypass closure | MARS Search PPC / MIG / ORCA | **IMPLEMENTED — OPERATOR REVIEW REQUIRED** |
+| 2 | MIG evidence production | MIG | **BLOCKED PENDING WAVE 1.1 REVIEW** |
 | 3 | ORCA production semantic intelligence | ORCA Semantic Intelligence | Frozen until operator approves lifecycle + Wave 3 charter |
 | 4 | Analytical pack and AI PPC Strategist | Cross-system + Strategist role | Frozen |
 | 5 | Campaign production and QA | Campaign Production / ORCA | Frozen |

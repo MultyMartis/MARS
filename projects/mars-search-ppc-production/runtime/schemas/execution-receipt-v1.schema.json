@@ -1,0 +1,44 @@
+{
+  "$schema": "execution-receipt-v1",
+  "title": "MARS Search PPC Execution Receipt",
+  "version": "1.0.0",
+  "required": [
+    "receipt_id",
+    "timestamp",
+    "project_id",
+    "manifest_path",
+    "lifecycle_version",
+    "requested_stage",
+    "requested_action",
+    "authorization_result"
+  ],
+  "properties": {
+    "receipt_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "project_id": { "type": "string" },
+    "manifest_path": { "type": ["string", "null"] },
+    "manifest_checksum": { "type": ["string", "null"] },
+    "lifecycle_version": { "type": ["string", "null"] },
+    "requested_stage": { "type": ["string", "null"] },
+    "requested_action": { "type": "string" },
+    "actor": { "type": "string" },
+    "tool": { "type": "string" },
+    "authorization_result": {
+      "enum": [
+        "AUTHORIZED",
+        "BLOCKED",
+        "AUTHORIZED WITH APPROVED DEGRADATION",
+        "EXECUTED",
+        "EXECUTION FAILED",
+        "OUTPUT VIOLATION"
+      ]
+    },
+    "blockers": { "type": "array" },
+    "expected_outputs": { "type": "array" },
+    "actual_outputs": { "type": ["array", "null"] },
+    "runtime_version": { "type": "string" },
+    "source_commit": { "type": "string" },
+    "command": { "type": ["string", "null"] },
+    "immutable": { "const": true }
+  }
+}

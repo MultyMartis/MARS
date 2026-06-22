@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ARTIFACT_OWNERS } from './constants.mjs';
 import { getArtifact } from './manifest-normalize.mjs';
+import { rejectArtifactEntry } from './output-class-registry.mjs';
 
 export function resolveArtifactPath(manifest, artifactType, repoRoot) {
   const entry = getArtifact(manifest, artifactType);
@@ -39,6 +40,11 @@ export function resolveArtifactPath(manifest, artifactType, repoRoot) {
 
   if (entry.status === 'DIAGNOSTIC ONLY' || entry.diagnostic_only === true) {
     issues.push('artifact is diagnostic-only');
+  }
+
+  const classCheck = rejectArtifactEntry(entry);
+  if (classCheck.rejected) {
+    issues.push(...classCheck.issues);
   }
 
   if (entry.superseded === true || entry.status === 'SUPERSEDED') {

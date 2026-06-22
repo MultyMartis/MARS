@@ -1,0 +1,122 @@
+{
+  "project_id": "corvonero-direct-v2-clean-room",
+  "lifecycle_status": "FROZEN",
+  "manifest": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-direct-v2-clean-room\\state\\project-ppc-state-manifest-v1.json",
+  "receipt_dir": "C:\\Users\\WSP-ONE\\AppData\\Local\\Temp\\sppc-corv-e2e-OIBtyj",
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0
+  },
+  "results": [
+    {
+      "scenario": "MIG source inspection (read-only)",
+      "expect_allowed": true,
+      "actual_allowed": true,
+      "blockers": [],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-58-767Z-93ae1a10",
+      "pass": true
+    },
+    {
+      "scenario": "MIG paid SERP collection",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-58-943Z-057d4e7b",
+      "pass": true
+    },
+    {
+      "scenario": "ORCA production admission",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-59-068Z-cd8a960c",
+      "pass": true
+    },
+    {
+      "scenario": "ORCA clustering",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-59-198Z-e623e9c8",
+      "pass": true
+    },
+    {
+      "scenario": "ORCA negatives",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-59-383Z-68a69676",
+      "pass": true
+    },
+    {
+      "scenario": "Strategy",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "PAID_SERP_MISSING",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-59-639Z-23b0581d",
+      "pass": true
+    },
+    {
+      "scenario": "Campaign production",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "PAID_SERP_MISSING",
+        "FORBIDDEN_DOWNSTREAM",
+        "OUTPUT_CLASS_VIOLATION",
+        "OUTPUT_CLASS_VIOLATION",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-59-781Z-1452b226",
+      "pass": true
+    },
+    {
+      "scenario": "Commander export",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "PAID_SERP_MISSING",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-01-59-919Z-bfa26d59",
+      "pass": true
+    },
+    {
+      "scenario": "Launch",
+      "expect_allowed": false,
+      "actual_allowed": false,
+      "blockers": [
+        "PROJECT_FROZEN",
+        "PAID_SERP_MISSING",
+        "FORBIDDEN_DOWNSTREAM",
+        "PROJECT_FROZEN"
+      ],
+      "receipt_id": "sppc-receipt-2026-06-22T17-02-00-050Z-235e5e67",
+      "pass": true
+    }
+  ]
+}

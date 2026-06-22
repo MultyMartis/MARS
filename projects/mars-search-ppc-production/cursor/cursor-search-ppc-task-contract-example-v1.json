@@ -1,24 +1,23 @@
 {
   "task_id": "example-cursor-search-ppc-task-v1",
-  "project_id": "example-project-id",
-  "manifest_path": "projects/example/state/project-ppc-state-manifest-v1.json",
-  "lifecycle_stage": "SPPC-03",
-  "requested_transition": "IN PROGRESS → READY FOR REVIEW",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "manifest_path": "projects/orca/projects/corvonero-direct-v2-clean-room/state/project-ppc-state-manifest-v1.json",
+  "lifecycle_stage": "SPPC-02",
+  "requested_action": "source_registration",
   "authoritative_inputs": [
-    "projects/example/mig-source/source-ledger-v1.json"
+    "projects/orca/projects/corvonero-direct-v2-clean-room/mig-source/mig-wordstat-source-ledger-v1.json"
   ],
-  "required_outputs": [
-    "full_semantic_corpus_intake artifact registered in manifest"
+  "expected_outputs": [
+    { "artifact_type": "source_registry", "output_class": "production_authority" }
   ],
   "forbidden_outputs": [
     "ppc_strategy_decision_record",
     "campaign_architecture_registry",
     "commander_export_artifact"
   ],
-  "validator_command_before": "node projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs projects/example/state/project-ppc-state-manifest-v1.json",
-  "validator_command_after": "node projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs projects/example/state/project-ppc-state-manifest-v1.json --out-json reports/validation-after.json",
-  "expected_status_transition": "SPPC-03: IN PROGRESS → READY FOR REVIEW",
+  "pre_validation_command": "node projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs projects/orca/projects/corvonero-direct-v2-clean-room/state/project-ppc-state-manifest-v1.json",
+  "post_validation_command": "node projects/mars-search-ppc-production/runtime/cli/search-ppc-gate.mjs --manifest projects/orca/projects/corvonero-direct-v2-clean-room/state/project-ppc-state-manifest-v1.json --action source_registration",
   "git_scope": [
-    "projects/example/"
+    "projects/orca/projects/corvonero-direct-v2-clean-room/"
   ]
 }

@@ -154,6 +154,35 @@ Not: auto handoff, production orchestration, campaign engine.
 
 ---
 
+## MARS Search PPC Production
+
+| Field | Value |
+|-------|--------|
+| **Registry** | `mars-search-ppc-production` (approved lifecycle) |
+| **Canonical entry** | `projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md` |
+| **Lane** | **A** when executing search PPC lifecycle work |
+
+**Synchronization targets:**
+
+- Project PPC state manifest **required** before any search PPC chat work  
+- Lifecycle validator: `projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs`  
+- Opening block: `projects/mars-search-ppc-production/web-gpt/WEB-GPT-OPENING-STATUS-BLOCK-v1.md`  
+- Full production corpus rule; human review is **not** default classification engine  
+- Corvonero **FROZEN**; P0-I pilot **DIAGNOSTIC EVIDENCE** only  
+- **Exclude:** duplicating all 23 stage contracts into chat; invented missing evidence  
+
+**Sync block:**
+
+```text
+Program: MARS Search PPC Production. Entry: projects/mars-search-ppc-production/README.md.
+Sync: project_id, manifest path, current SPPC stage, validator output, blockers.
+Rules: BLOCKED — LIFECYCLE REQUIREMENT NOT MET when evidence missing; no stage skipping.
+Not: Corvonero production resume, P0-I as production corpus, bulk manual phrase classification default.
+Validator: node projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs <manifest>
+```
+
+---
+
 ## MetaBOT
 
 | Field | Value |

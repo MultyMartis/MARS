@@ -1,0 +1,112 @@
+{
+  "inventory_id": "search-ppc-entry-point-inventory-v1",
+  "version": "1.0.0",
+  "date": "2026-06-22",
+  "canonical_gate": "projects/mars-search-ppc-production/runtime/src/lifecycle-gate.mjs",
+  "gate_cli": "projects/mars-search-ppc-production/runtime/cli/search-ppc-gate.mjs",
+  "entry_points": [
+    {
+      "id": "mig-gate-adapter",
+      "path": "projects/mig/tools/mig-ppc-gate.mjs",
+      "command": "authorizeMigAction API",
+      "owning_system": "MIG",
+      "stages": ["SPPC-02", "SPPC-03", "SPPC-04", "SPPC-10", "SPPC-11"],
+      "manifest_required": true,
+      "validator_invoked": true,
+      "fail_closed": true,
+      "bypass_risk": "LOW when gated wrapper used",
+      "integration": "WIRED",
+      "receipt": true
+    },
+    {
+      "id": "mig-gated-session",
+      "path": "projects/mig/tools/run-ppc-gated-session.mjs",
+      "command": "node run-ppc-gated-session.mjs --manifest <path> --action <action>",
+      "owning_system": "MIG",
+      "manifest_required": true,
+      "validator_invoked": true,
+      "fail_closed": true,
+      "integration": "WIRED"
+    },
+    {
+      "id": "mig-run-session-direct",
+      "path": "projects/mig/lib/runtime/run-mig-session.js",
+      "command": "node run-mig-session.js",
+      "owning_system": "MIG",
+      "manifest_required": false,
+      "validator_invoked": false,
+      "fail_closed": false,
+      "bypass_risk": "HIGH",
+      "integration": "QUARANTINED — use gated wrapper"
+    },
+    {
+      "id": "mig-paid-serp-mode",
+      "path": "N/A",
+      "command": "PAID SERP — BUSINESS HOURS",
+      "owning_system": "MIG",
+      "stages": ["SPPC-10"],
+      "integration": "MISSING"
+    },
+    {
+      "id": "orca-gate-adapter",
+      "path": "projects/orca/semantic-intelligence/integration/runtime/src/orca-ppc-gate.mjs",
+      "owning_system": "ORCA Semantic Intelligence",
+      "stages": ["SPPC-05", "SPPC-06", "SPPC-07", "SPPC-08", "SPPC-09"],
+      "manifest_required": true,
+      "validator_invoked": true,
+      "fail_closed": true,
+      "integration": "WIRED"
+    },
+    {
+      "id": "orca-gated-cli",
+      "path": "projects/orca/semantic-intelligence/integration/runtime/cli/orca-ppc-gate.mjs",
+      "command": "node orca-ppc-gate.mjs --manifest <path> --action <action>",
+      "integration": "WIRED"
+    },
+    {
+      "id": "orca-admission-direct",
+      "path": "projects/orca/semantic-intelligence/integration/runtime/cli/orca-admission.mjs",
+      "manifest_required": false,
+      "validator_invoked": false,
+      "bypass_risk": "HIGH",
+      "integration": "QUARANTINED"
+    },
+    {
+      "id": "campaign-gate",
+      "path": "projects/orca/tools/campaign-ppc-gate.mjs",
+      "stages": ["SPPC-14", "SPPC-15", "SPPC-16", "SPPC-17", "SPPC-18", "SPPC-19"],
+      "integration": "WIRED"
+    },
+    {
+      "id": "export-gate",
+      "path": "projects/orca/ppc/triumph-manipulator/tools/export-ppc-gate.mjs",
+      "stages": ["SPPC-20"],
+      "integration": "WIRED"
+    },
+    {
+      "id": "strategist",
+      "path": "projects/mars-search-ppc-production/contracts/strategist-entry-point-spec-v1.md",
+      "integration": "MISSING — contract only"
+    },
+    {
+      "id": "cursor-linter",
+      "path": "projects/mars-search-ppc-production/runtime/cli/validate-cursor-ppc-task.mjs",
+      "integration": "WIRED"
+    },
+    {
+      "id": "webgpt-handoff-validator",
+      "path": "projects/mars-search-ppc-production/runtime/cli/validate-webgpt-handoff.mjs",
+      "integration": "VALIDATION CAPABILITY — not UI enforcement"
+    },
+    {
+      "id": "lifecycle-validator",
+      "path": "projects/mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs",
+      "integration": "WIRED"
+    },
+    {
+      "id": "lifecycle-cli",
+      "path": "projects/mars-search-ppc-production/runtime/cli/search-ppc.mjs",
+      "integration": "WIRED"
+    }
+  ]
+}
