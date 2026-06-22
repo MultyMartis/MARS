@@ -140,3 +140,7 @@ rejected_alternatives: href=#; anchor without destination
 [2026-06-22T16:52:33] SOURCE=workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Шпиговский.fig
 [2026-06-22T16:52:33] REASON=Operator-authorized narrow asset exception. FIG was not used as layout or visual implementation authority.
 [2026-06-22T16:52:33] MATCH=EXACT_HERO_SOURCE VERDICT=APPROVED
+[2026-06-22T17:10:48] DECISION=HERO_SCSS_JPG_GEOMETRY
+[2026-06-22T17:10:48] SOURCE=HOME-PAGE-FULL-MOCKUP.jpg
+[2026-06-22T17:10:48] REASON=Hero media inset 18px width 1361px height 728px derived from JPG probe; wider than container-main per operator rule; header geometry locked.
+[2026-06-22T17:10:48] VERDICT=READY_FOR_OPERATOR_VISUAL_REVIEW

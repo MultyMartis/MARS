@@ -1,0 +1,124 @@
+@use '../utils/variables' as *;
+
+// FP-0002 V6 — Hero desktop only (SECTION-001-GROUP-02)
+// Geometry authority: HOME-PAGE-FULL-MOCKUP.jpg @ 1398px — not FIG
+
+$hero-media-inset-inline: 18px; // JPG x 18–1378 on 1398px page
+$hero-media-height: 728px; // HERO_MEDIA_COMPONENT_GEOMETRY — JPG photo band (BP-S001-HERO-002)
+$hero-media-radius: 20px; // S001-RAD-003 block proposal
+$hero-object-position-x: 36%;
+$hero-object-position-y: 58%;
+
+$hero-panel-width: 600px; // JPG overlay x 400–1000
+$hero-panel-padding-block: 25px;
+$hero-panel-padding-inline: 40px;
+$hero-panel-radius: 20px;
+$hero-panel-surface: rgba(255, 255, 255, 0.24);
+$hero-panel-border: rgba(255, 255, 255, 0.35);
+$hero-panel-blur: 12px;
+
+$hero-tagline-title-gap: 15px;
+$hero-panel-cta-gap: 12px;
+$hero-stack-bottom-offset: 66px; // JPG CTA bottom y 837 → media bottom y 903
+
+$hero-cta-width: 297px;
+$hero-cta-height: 45px; // EX-S001-001
+$hero-cta-radius: 22px;
+$hero-cta-bg: rgb(149, 47, 43);
+$hero-inverse-text: #fff;
+
+.hero {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: $hero-media-inset-inline;
+}
+
+.hero__media {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: $hero-media-height;
+  border-radius: $hero-media-radius;
+}
+
+.hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: $hero-object-position-x $hero-object-position-y;
+}
+
+.hero__container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-bottom: $hero-stack-bottom-offset;
+  gap: $hero-panel-cta-gap;
+  pointer-events: none;
+}
+
+.hero__panel,
+.hero__actions {
+  pointer-events: auto;
+}
+
+.hero__panel {
+  box-sizing: border-box;
+  width: $hero-panel-width;
+  max-width: calc(100% - 40px);
+  padding: $hero-panel-padding-block $hero-panel-padding-inline;
+  border: 1px solid $hero-panel-border;
+  border-radius: $hero-panel-radius;
+  background-color: $hero-panel-surface;
+  backdrop-filter: blur($hero-panel-blur);
+  -webkit-backdrop-filter: blur($hero-panel-blur);
+  text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $hero-tagline-title-gap;
+}
+
+.hero__tagline {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $hero-inverse-text;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: $hero-inverse-text;
+}
+
+.hero__button {
+  box-sizing: border-box;
+  width: $hero-cta-width;
+  max-width: calc(100% - 40px);
+  height: $hero-cta-height;
+  padding: 0 20px;
+  border: 0;
+  border-radius: $hero-cta-radius;
+  background-color: $hero-cta-bg;
+  color: $hero-inverse-text;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
