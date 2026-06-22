@@ -78,7 +78,7 @@
 | System | Relationship |
 |--------|--------------|
 | **OCPilot** | Sibling — CMS/Ecommerce Pilots family; pattern reuse only |
-| **Website Factory** | Planned upstream for Mode A payloads |
+| **Website Factory** | Upstream for Mode A — Forge WordPress handoff: [FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md](../mars-website-factory/subsystems/forge-wordpress/contracts/FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md). WPilot **does not** own theme/content architecture. |
 | **ATLAS** | Consumer — `WEB-*` context; no CMS runtime in ATLAS |
 | **MARS registry** | `wpilot` — [registry/project-registry.md](../../registry/project-registry.md) |
 

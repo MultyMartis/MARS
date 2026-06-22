@@ -18,14 +18,18 @@ Documentation-first **WordPress implementation subsystem** of MARS Website Facto
 
 ---
 
-## Status (FW-01 complete)
+## Status (FW-02 complete)
 
 ```text
 FW-00 — COMPLETE
 FW-01 — COMPLETE
-FW-02 — NEXT
+FW-02 — COMPLETE
+FW-03 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
+Contracts: BASELINE v1
+Standards: BASELINE v1
+Templates: BASELINE v1
 Implementation capability: NOT STARTED
 ```
 
@@ -59,6 +63,18 @@ Human remains the final authority. Production runtime and autonomous deployment 
 | [FORGE-WORDPRESS-ECOSYSTEM-POSITION-v1.md](FORGE-WORDPRESS-ECOSYSTEM-POSITION-v1.md) | Ecosystem relationships |
 | [roadmap.md](roadmap.md) | Subsystem stages |
 | [reports/](reports/) | Stage inputs, decision records |
+
+---
+
+## FW-02 contracts and standards
+
+| Area | Document |
+|------|----------|
+| Register | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
+| Compliance matrix | [FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md](FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md) |
+| Factory handoff | [contracts/WEBSITE-FACTORY-TO-FORGE-WORDPRESS-HANDOFF-CONTRACT-v1.md](contracts/WEBSITE-FACTORY-TO-FORGE-WORDPRESS-HANDOFF-CONTRACT-v1.md) |
+| WPilot handoff | [contracts/FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md](contracts/FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md) |
+| Templates | [templates/](templates/) |
 
 ---
 

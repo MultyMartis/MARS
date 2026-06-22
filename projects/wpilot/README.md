@@ -167,7 +167,7 @@ WPBakery/The7 handling belongs to Mode B compatibility. It is valuable for the c
 
 | System | Relationship |
 |--------|--------------|
-| **MARS Website Factory** | Planned upstream source for Factory-native WordPress payloads and controlled publishing handoffs (future direction, not runtime claim). |
+| **MARS Website Factory** | Upstream for Factory-native WordPress via **Forge WordPress** — [handoff contract](../mars-website-factory/subsystems/forge-wordpress/contracts/FORGE-WORDPRESS-TO-WPILOT-HANDOFF-CONTRACT-v1.md) (documentation; not runtime claim). WPilot operates packages; does **not** design theme/content architecture. |
 | **OCPilot** | **Sibling** in CMS/Ecommerce Pilots family; shared safety/access patterns only, no parent-child ownership. |
 | **EAR Runtime** | Future provider candidate for published acquisition snapshots; relationship is planned and bounded by separate charters. |
 | **ORCA** | Strategy/semantic upstream context when WordPress implementation is part of broader marketing workflow; no ORCA runtime ownership of WPilot. |
