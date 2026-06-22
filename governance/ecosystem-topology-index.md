@@ -100,7 +100,7 @@ AGENTS.md (honesty)
 |--|--|
 | **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `D:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
 | **What it is NOT** | MARS brain, Git authority, governance root, production hosting, second MARS repo, registered agent, or proof that Laragon is installed. |
-| **Operational status** | **ENABLEMENT** (MLI-02 **COMPLETE**, 2026-06-22) — shared toolchain hardened; CMS profiles **not** validated until MLI-03/MLI-04. |
+| **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. |
 | **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `D:\MARS-Localhost` (out-of-git). |
 | **Relationship role** | **`C:\AI MARS` governs; `D:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
 
@@ -112,7 +112,7 @@ AGENTS.md (honesty)
 |--|--|
 | **What it is** | **Website Factory subsystem** — documentation-first WordPress **implementation** methodology (frontend package → WordPress implementation package → WPilot handoff). Operator alias: WP Forge. |
 | **What it is NOT** | MARS Forge (frontend overlay), WPilot (operations), registered agent, `project_id`, owner of `D:\MARS-Localhost`, or autonomous runtime. |
-| **Operational status** | **FOUNDATION / PRE-OPERATIONAL** — FW-05 synthetic **COMPLETE** (Playground Profile B); MLI shared toolchain **READY** (MLI-02); full Profile A re-validation (**FW-05R**) **HOLD** until MLI-03. |
+| **Operational status** | **FOUNDATION / PRE-OPERATIONAL** — FW-05 synthetic **COMPLETE**; MLI-03 WordPress runtime **PROVEN WITH LIMITATIONS**; **FW-05R AUTHORIZED**. |
 | **Canonical path** | [../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md](../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md); localhost consumer: [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). |
 | **Relationship role** | **Consumes** MLI WordPress runtime profile; produces implementation packages; upstream of WPilot operations. Does **not** own shared localhost infrastructure. |
 

@@ -18,8 +18,11 @@
 ```text
 # BEGIN MARS LOCALHOST MANAGED
 127.0.0.1 mli-smoke-001.test
+127.0.0.1 fws-0001.test
 # END MARS LOCALHOST MANAGED
 ```
+
+Domains are driven by `D:\MARS-Localhost\runtime\registries\mli-hosts-domains.txt` (runtime) with built-in defaults in `add-mli-host.ps1`.
 
 Only entries inside this block are owned by MLI scripts.
 

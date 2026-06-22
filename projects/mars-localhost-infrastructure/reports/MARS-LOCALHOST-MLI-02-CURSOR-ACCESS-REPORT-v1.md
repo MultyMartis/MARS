@@ -40,3 +40,17 @@ Not required for MLI-02 success criteria.
 ---
 
 *Cursor access report v1 — MLI-02.*
+
+---
+
+## Post-report closure note (2026-06-23)
+
+Added at MLI-03 validation closeout. Original MLI-02 results above are unchanged.
+
+| Check | Result |
+|-------|--------|
+| Direct `.test` domain (`mli-smoke-001.test`) | **PASS** — DNS 127.0.0.1 |
+| Hosts managed entry | **PASS** |
+| Browser access | **OPERATOR-VERIFIED PASS** |
+
+Terminal direct-URL failure noted in MLI-02 Detail is **superseded** for `mli-smoke-001.test` after hosts elevation and operator browser verification.

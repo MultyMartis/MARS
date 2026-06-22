@@ -3,7 +3,7 @@
 **Status:** documented navigation only — **not** a service registry or automated router.  
 **Lane:** Infrastructure — shared local execution  
 **Domain root:** [README.md](README.md)  
-**Lifecycle:** ENABLEMENT (MLI-02 **COMPLETE**)
+**Lifecycle:** ENABLEMENT (MLI-03 **COMPLETE**)
 
 ---
 
@@ -11,15 +11,17 @@
 
 | Field | Value |
 |-------|-------|
-| **Stage** | MLI-02 **COMPLETE** |
-| **Next** | **MLI-03 — WordPress Runtime Profile** |
+| **Stage** | MLI-03 **COMPLETE** |
+| **Next** | **MLI-04 — OpenCart Runtime Profile** (parallel lane; Forge FW-05R authorized) |
 | **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
 | **Shared toolchain** | **HARDENED** — see tool registry |
-| **Smoke site** | `http://mli-smoke-001.test/` (hosts: run `tools\hosts\add-mli-host`) |
-| **Runtime operational (CMS profiles)** | **NO** — until MLI-03/MLI-04 validation |
+| **Smoke site** | `http://mli-smoke-001.test/` — **PASS** |
+| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **VALIDATED** (hosts elevation pending for direct domain) |
+| **Runtime operational (WordPress)** | **YES** — synthetic profile with limitations |
+| **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
 | **Brain root** | `C:\AI MARS` |
 | **Runtime root** | `D:\MARS-Localhost` |
-| **FW-05R** | **HOLD** — pending MLI-03 WordPress profile |
+| **FW-05R** | **AUTHORIZED** — see Forge FW-05R input |
 
 ---
 
@@ -63,6 +65,21 @@
 
 ---
 
+## MLI-03 WordPress standards and reports
+
+| Item | Path |
+|------|------|
+| WordPress runtime profile | [MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md](MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md) |
+| Directory standard | [MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.md) |
+| Baseline configuration | [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDARD-v1.md) |
+| Local guard (MU-plugin) | [MARS-LOCALHOST-WORDPRESS-LOCAL-GUARD-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-LOCAL-GUARD-STANDARD-v1.md) |
+| WordPress runtime registry | [registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md](registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md) |
+| WP manifest | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
+| Validation matrix | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
+| Forge handoff | [reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md](reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md) |
+
+---
+
 ## MLI-01 decisions and reports
 
 | Item | Path |
@@ -89,6 +106,7 @@
 | MLI-01 input (historical) | [reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md) |
 | Runtime manifests | [manifests/](manifests/) |
 | Smoke manifest | [manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) |
+| WordPress manifest | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
 
 ---
 
@@ -104,8 +122,10 @@
 
 ## Next authorized action
 
-**MLI-03 — WordPress Runtime Profile** — see [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md). **Do not** start without MLI-03 charter step.
+**Forge WordPress FW-05R — Live Synthetic Runtime Validation** — see [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-RUNTIME-VALIDATION-INPUT-v1.md](../mars-website-factory/subsystems/forge-wordpress/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-RUNTIME-VALIDATION-INPUT-v1.md).
+
+Parallel infrastructure lane: **MLI-04 — OpenCart Runtime Profile** (not blocking FW-05R).
 
 ---
 
-*Operational index — MLI-02 complete.*
+*Operational index — MLI-03 complete.*

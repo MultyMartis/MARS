@@ -31,3 +31,17 @@
 ---
 
 *Smoke suite report v1 — MLI-02.*
+
+---
+
+## Post-report closure note (2026-06-23)
+
+Added at MLI-03 validation closeout. Original MLI-02 results above are unchanged.
+
+| Check | Result |
+|-------|--------|
+| Direct `.test` domain (`mli-smoke-001.test`) | **PASS** — DNS resolves to 127.0.0.1 |
+| Hosts managed entry | **PASS** — via `add-mli-host` tooling |
+| Browser access | **OPERATOR-VERIFIED PASS** |
+
+MLI-SMOKE-07 Host-header limitation for direct domain access is **resolved** for `mli-smoke-001.test` at operator verification time.

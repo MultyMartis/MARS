@@ -4,7 +4,7 @@
 **Operator alias:** MLI  
 **Class:** Shared local development infrastructure  
 **Lifecycle:** ENABLEMENT  
-**Status:** MLI-02 **COMPLETE** — MLI-03 **NEXT**
+**Status:** MLI-03 **COMPLETE**
 
 ---
 
@@ -36,9 +36,9 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 | **Laragon root** | `D:\MARS-Localhost\laragon` |
 | **Sites** | `D:\MARS-Localhost\sites` |
 | **CLI activation** | `D:\MARS-Localhost\tools\activate-mli.cmd` |
-| **Hosts scripts** | `D:\MARS-Localhost\tools\hosts\` |
-| **Smoke URL** | `http://mli-smoke-001.test/` (hosts elevation may be required) |
-| **HTTPS smoke** | `https://mli-smoke-001.test/` (self-signed; see MLI-02 HTTPS report) |
+| **Hosts scripts** | `D:\MARS-Localhost\tools\hosts\` (multi-domain registry-driven) |
+| **Smoke URL** | `http://mli-smoke-001.test/` |
+| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 |
 
 ---
 
@@ -48,14 +48,14 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 |----------|---------|
 | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) | Navigation hub |
 | [roadmap.md](roadmap.md) | MLI-00 … MLI-06 stages |
-| [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) | Tool versions |
-| [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md) | Next stage input |
+| [MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md](MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md) | WordPress profile standard |
+| [registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md](registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md) | WordPress runtimes |
 
 ---
 
 ## Consumers (do not own MLI)
 
-- **Forge WordPress** — WordPress runtime consumer (profile MLI-03)
+- **Forge WordPress** — WordPress runtime consumer (**FW-05R authorized**)
 - **OCPilot** — OpenCart runtime consumer (planned MLI-04)
 - **Website Factory** — frontend packages only
 
@@ -65,9 +65,9 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 
 - **Not** a MARS git repository on D:
 - **Not** production hosting
-- **Not** WordPress/OpenCart operational until MLI-03/MLI-04
-- Shared toolchain **hardened** MLI-02; CMS profiles **not** created
+- WordPress synthetic runtime **proven with limitations** (MLI-03)
+- OpenCart profile **not** created (MLI-04)
 
 ---
 
-*MLI — MLI-02 complete.*
+*MLI — MLI-03 complete.*

@@ -1,8 +1,7 @@
 # Forge WordPress Capability Readiness Matrix v1
 
-**Version:** v1.1  
-**Stage:** FW-05 complete  
-**Date:** 2026-06-22
+**Version:** v1.2  
+**Date:** 2026-06-23
 
 ---
 
@@ -20,9 +19,9 @@
 | Prompt pack | **READY** | — |
 | Reporting standard | **PROVEN** | FW-05 report chain |
 | Git workflow | **PROVEN** | FW-04 selective checkpoint |
-| Local environment | **PARTIAL** | MLI shared toolchain **READY** (MLI-02); WordPress runtime profile **NOT YET CREATED** (MLI-03) |
-| Required tools | **PARTIAL** | Node/Gulp/Playwright yes; PHP/PHPCS/WP-CLI **READY on MLI**; live WP validation pending MLI-03 |
-| WordPress runtime | **PARTIAL** | Code complete; live population not executed |
+| Local environment | **PROVEN WITH LIMITATIONS** | MLI-03 WordPress synthetic runtime MLI-WP-SYN-001 on Laragon |
+| Required tools | **PROVEN WITH LIMITATIONS** | PHP/PHPCS/WP-CLI on MLI; live WP baseline validated |
+| WordPress runtime | **PROVEN WITH LIMITATIONS** | Live synthetic runtime installed; Forge theme/plugin pending FW-05R |
 | ACF workflow | **PARTIAL** | Free + Settings API deviation |
 | Validation runners | **PARTIAL** | Static + Playwright reference |
 | Visual regression | **PARTIAL** | Reference captures; no WP diff |
@@ -45,12 +44,12 @@ Do **not** use `OPERATIONAL` until client pilot evidence (FW-06+).
 
 ---
 
-## MLI alignment (MLI-02)
+## MLI alignment (MLI-03)
 
 ```text
 MLI shared toolchain: READY
-WordPress runtime profile: NOT YET CREATED
-FW-05R live synthetic validation: HOLD UNTIL MLI-03
+WordPress runtime profile: PROVEN WITH LIMITATIONS (MLI-WP-SYN-001)
+FW-05R live synthetic validation: AUTHORIZED
 ```
 
 ---
@@ -59,12 +58,11 @@ FW-05R live synthetic validation: HOLD UNTIL MLI-03
 
 ```text
 FW-05 — COMPLETE
-Synthetic capability — PROVEN WITH LIMITATIONS
-Prompt-driven operational_doc_pack candidate — ELIGIBLE
-Agent registration — NOT PERFORMED
-FW-06 — NEXT
+MLI-03 — COMPLETE
+FW-05R — AUTHORIZED (next)
+FW-06 — AFTER FW-05R
 ```
 
 ---
 
-*Readiness matrix v1.1 — post FW-05.*
+*Readiness matrix v1.2 — post MLI-03.*
