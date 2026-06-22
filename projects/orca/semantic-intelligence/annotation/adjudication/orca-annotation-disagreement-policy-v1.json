@@ -1,0 +1,50 @@
+{
+  "policy_id": "orca-annotation-disagreement-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "disagreement_types": [
+    {"id": "DGT-01", "name": "intent_disagreement", "description": "Different primary or secondary intent assignment"},
+    {"id": "DGT-02", "name": "eligibility_disagreement", "description": "ACCEPT vs REJECT vs ABSTAIN differ"},
+    {"id": "DGT-03", "name": "signal_disagreement", "description": "Different signal types, strength, or evidence spans"},
+    {"id": "DGT-04", "name": "ambiguity_disagreement", "description": "Different ambiguity type or severity"},
+    {"id": "DGT-05", "name": "service_candidate_disagreement", "description": "Different candidate service mapping pre-ACCEPT"},
+    {"id": "DGT-06", "name": "risk_disagreement", "description": "Different risk level or review requirement"},
+    {"id": "DGT-07", "name": "rationale_quality_disagreement", "description": "Same eligibility but insufficient or generic rationale"}
+  ],
+  "mandatory_adjudication_triggers": [
+    "independent_annotators_disagree_on_eligibility",
+    "either_label_is_accept",
+    "protected_strata_vs_commercial_path_conflict",
+    "qa_rationale_quality_failure_on_accept_or_borderline_abstain",
+    "service_candidate_conflict_on_accept_bound_record"
+  ],
+  "mechanical_reconciliation_allowed_when": {
+    "eligibility_matches": true,
+    "primary_intent_matches": true,
+    "fields": ["secondary_intent", "signal_strength", "ambiguity_severity", "risk_level", "rationale_wording"]
+  },
+  "override_authority": {
+    "adjudicator": {"may_override": ["annotator_labels_within_guideline"], "may_not_override": ["d3_thresholds", "operator_seed_policy"]},
+    "operator": {"may_override": ["adjudicator", "policy_exceptions"], "may_not_override": ["adr_v1_admission_outputs"]},
+    "llm_assistant": {"may_override": [], "may_not_override": ["any_human_label"]}
+  },
+  "operator_escalation_mandatory_when": [
+    "adjudicator_needs_new_policy",
+    "operator_seed_accept_proposed_without_wordstat_proof",
+    "protected_strata_accept_on_auto_admit_path",
+    "repeated_disagreement_exceeds_charter_threshold",
+    "benchmark_gold_label_candidacy_disputed"
+  ],
+  "benchmark_metadata_fields": [
+    "disagreement_types",
+    "protected_strata_involved",
+    "adjudication_outcome",
+    "prior_labels",
+    "resolution_time",
+    "escalated_to_operator",
+    "ambiguity_class",
+    "guideline_section_cited"
+  ],
+  "benchmark_rows_created_in_this_task": false
+}

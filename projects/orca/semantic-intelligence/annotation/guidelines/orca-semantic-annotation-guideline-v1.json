@@ -1,0 +1,89 @@
+{
+  "guideline_id": "orca-semantic-annotation-guideline",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "purpose": "Human annotation and adjudication handbook for ORCA Semantic Intelligence v1 search-query phrases",
+  "terminal_outcomes": ["ACCEPT", "REJECT", "ABSTAIN"],
+  "unit_of_annotation": "single raw_query phrase per semantic record",
+  "authority_stack": [
+    "operator_policy_and_overrides",
+    "annotation_guideline_and_sub_standards",
+    "p0_b_taxonomy_and_record_schema",
+    "adr_v1_and_admission_policy",
+    "llm_assistant_evidence_only"
+  ],
+  "required_reading_order": [
+    "ORCA-SEMANTIC-ANNOTATION-GUIDELINE-v1.md",
+    "ORCA-COMMERCIAL-EVIDENCE-STANDARD-v1.md",
+    "ORCA-PROTECTED-NONCOMMERCIAL-INTENT-STANDARD-v1.md",
+    "ORCA-PROBLEM-QUERY-ADJUDICATION-v1.md",
+    "ORCA-PRODUCT-VS-SERVICE-ADJUDICATION-v1.md",
+    "ORCA-SHORT-HEAD-TERM-ADJUDICATION-v1.md",
+    "ORCA-ACCEPT-STANDARD-v1.md",
+    "ORCA-REJECT-STANDARD-v1.md",
+    "ORCA-ABSTAIN-STANDARD-v1.md",
+    "ORCA-PHRASE-SPECIFIC-RATIONALE-STANDARD-v1.md",
+    "ORCA-SEMANTIC-ANNOTATION-DECISION-TREE-v1.md",
+    "ORCA-ANNOTATION-EXAMPLE-LIBRARY-v1.md",
+    "ORCA-SEMANTIC-ANNOTATION-ANTI-PATTERNS-v1.md"
+  ],
+  "sections": [
+    "purpose",
+    "annotation_authority",
+    "unit_of_annotation",
+    "required_reading_order",
+    "literal_interpretation",
+    "likely_user_goal",
+    "primary_intent",
+    "secondary_intent",
+    "signal_extraction",
+    "ambiguity_assessment",
+    "commercial_eligibility",
+    "risk_assessment",
+    "service_candidate_handling",
+    "reviewer_status",
+    "decision_trace",
+    "evidence_requirements",
+    "prohibited_reasoning",
+    "escalation_rules",
+    "operator_override",
+    "versioning"
+  ],
+  "mandatory_annotation_order": [
+    {"step": 1, "name": "read_literally", "field": "literal_interpretation", "eligibility_allowed": false},
+    {"step": 2, "name": "identify_likely_next_action", "field": "likely_user_goal", "eligibility_allowed": false},
+    {"step": 3, "name": "extract_signals", "field": "signals", "eligibility_allowed": false},
+    {"step": 4, "name": "assign_primary_and_secondary_intent", "fields": ["primary_intent", "secondary_intents"], "eligibility_allowed": false},
+    {"step": 5, "name": "assess_competing_interpretations", "field": "ambiguity", "eligibility_allowed": false},
+    {"step": 6, "name": "assess_provider_hire_likelihood", "eligibility_allowed": false},
+    {"step": 7, "name": "check_landing_compatibility", "eligibility_allowed": false},
+    {"step": 8, "name": "assign_eligibility", "field": "commercial_eligibility.decision", "eligibility_allowed": true},
+    {"step": 9, "name": "assess_risk_and_review", "fields": ["risk", "review"], "eligibility_allowed": true},
+    {"step": 10, "name": "record_decision_trace", "fields": ["audit", "versioning"], "eligibility_allowed": true}
+  ],
+  "mandatory_abstain_ambiguity_types": [
+    "PROVIDER_VS_DIY",
+    "PRODUCT_VS_SERVICE",
+    "CAREER_VS_PROVIDER",
+    "SUPPORT_VS_INFORMATION",
+    "SHORT_HEAD_TERM",
+    "MULTIPLE"
+  ],
+  "core_distinctions": {
+    "primary_intent_not_eligibility": true,
+    "topic_not_commercial_intent": true,
+    "workflow_status_not_eligibility": true,
+    "service_candidate_not_ownership": true,
+    "problem_signal_not_provider_hire": true
+  },
+  "prohibited_terminal_outcomes": [
+    "service_mapping",
+    "campaign_grouping",
+    "cluster_assignment"
+  ],
+  "training_examples_scope": "training_illustrations_only_not_gold_benchmark",
+  "related_standards_path": "guidelines/",
+  "decision_trees_path": "decision-trees/ORCA-SEMANTIC-ANNOTATION-DECISION-TREE-v1.md",
+  "next_gate": "OPERATOR APPROVAL OF P0-C, THEN P0-D BENCHMARK CHARTER"
+}

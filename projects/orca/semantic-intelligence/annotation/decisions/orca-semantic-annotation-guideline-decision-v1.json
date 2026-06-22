@@ -1,0 +1,59 @@
+{
+  "decision_id": "orca-semantic-annotation-guideline-decision",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "APPROVED — IMPLEMENTATION NOT STARTED",
+  "gate": "P0-C",
+  "authority": {
+    "adr_v1": "APPROVED — CHECKPOINTED",
+    "p0_b_taxonomy_schema": "APPROVED — CHECKPOINTED",
+    "operator_decisions": "D1-D7",
+    "operator_approvals": "A1-A7, B1-B7"
+  },
+  "selected_process": {
+    "unit": "single_search_phrase",
+    "mandatory_steps": 10,
+    "terminal_outputs": ["ACCEPT", "REJECT", "ABSTAIN"],
+    "double_annotation": "blind_second_pass",
+    "evidence_model": "strong_weak_signals_not_auto_trigger"
+  },
+  "selected_roles": [
+    "annotator",
+    "second_annotator",
+    "domain_expert",
+    "ppc_specialist",
+    "adjudicator",
+    "operator",
+    "llm_assistant"
+  ],
+  "artifacts": {
+    "handbook": "guidelines/ORCA-SEMANTIC-ANNOTATION-GUIDELINE-v1.md",
+    "standards": "guidelines/ORCA-*-STANDARD-v1.md",
+    "decision_trees": "decision-trees/ORCA-SEMANTIC-ANNOTATION-DECISION-TREE-v1.md",
+    "examples": "examples/ORCA-ANNOTATION-EXAMPLE-LIBRARY-v1.md",
+    "anti_patterns": "examples/ORCA-SEMANTIC-ANNOTATION-ANTI-PATTERNS-v1.md",
+    "reviewer_checklist": "reviewer-tools/ORCA-SEMANTIC-REVIEWER-CHECKLIST-v1.md",
+    "role_model": "reviewer-tools/ORCA-ANNOTATOR-ROLE-MODEL-v1.md",
+    "disagreement_policy": "adjudication/ORCA-ANNOTATION-DISAGREEMENT-POLICY-v1.md",
+    "quality_gates": "quality/ORCA-ANNOTATION-QUALITY-GATES-v1.md",
+    "readiness_plan": "quality/ORCA-ANNOTATOR-READINESS-PLAN-v1.md",
+    "validation": "validation/ORCA-ANNOTATION-GUIDELINE-VALIDATION-v1.md"
+  },
+  "unresolved_decisions": [
+    {"id": "U-C01", "topic": "qualification_set_and_pass_threshold", "defer_to": "P0-D"},
+    {"id": "U-C02", "topic": "double_annotation_sample_rate", "defer_to": "P0-D"},
+    {"id": "U-C03", "topic": "annotator_agreement_kappa_target", "defer_to": "P0-D"},
+    {"id": "U-C04", "topic": "operator_seed_list_governance", "defer_to": "operator_policy"},
+    {"id": "U-C05", "topic": "automated_rationale_repetition_validator", "defer_to": "post_guideline_tooling"},
+    {"id": "U-C06", "topic": "adjudication_sla_timing", "defer_to": "operations"},
+    {"id": "U-C07", "topic": "llm_prompt_boundary_document", "defer_to": "P0-F"}
+  ],
+  "consequences": {
+    "benchmark": "NOT_STARTED",
+    "corvonero": "FROZEN",
+    "classifier": "NOT_STARTED",
+    "campaign_production": "BLOCKED"
+  },
+  "operator_approval": "decisions/ORCA-P0-C-ANNOTATION-GUIDELINE-OPERATOR-APPROVAL-v1.md",
+  "next_gate": "P0-D UNIVERSAL BENCHMARK CHARTER — OPERATOR APPROVAL REQUIRED"
+}

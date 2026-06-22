@@ -1,0 +1,46 @@
+{
+  "gates_id": "orca-annotation-quality-gates",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "operator_approved_thresholds": {
+    "commercial_precision_auto_accept": {
+      "threshold": 0.95,
+      "operator": ">=",
+      "operator_decision": "D3",
+      "threshold_status": "OPERATOR-APPROVED"
+    },
+    "protected_strata_fpr_per_class": {
+      "threshold": 0.01,
+      "operator": "<=",
+      "classes": ["career", "educational", "diy_how_to", "regulatory", "navigational"],
+      "operator_decision": "D3",
+      "threshold_status": "OPERATOR-APPROVED"
+    }
+  },
+  "proposed_metrics": [
+    {"id": "AQG-01", "metric": "field_completeness", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-02", "metric": "rationale_specificity", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-03", "metric": "schema_validity", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-04", "metric": "annotator_agreement", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-05", "metric": "per_class_disagreement", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-06", "metric": "protected_strata_disagreement", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-07", "metric": "abstain_consistency", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-08", "metric": "decision_tree_compliance", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-09", "metric": "provenance_completeness", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"id": "AQG-10", "metric": "version_completeness", "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"}
+  ],
+  "illustrative_proposed_targets": [
+    {"metric": "annotator_agreement_kappa", "proposed_target": 0.75, "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"metric": "protected_strata_disagreement_rate", "proposed_target": 0.15, "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"metric": "rationale_specificity_pass_rate", "proposed_target": 0.90, "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"metric": "field_completeness", "proposed_target": 0.98, "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"},
+    {"metric": "abstain_consistency_rule_triggered", "proposed_target": 0.95, "threshold_status": "PROPOSED — BENCHMARK CHARTER REQUIRED"}
+  ],
+  "gate_relationships": [
+    {"gate": "p0_c_guideline_approval", "blocks": "p0_d_benchmark_charter"},
+    {"gate": "p0_d_benchmark_charter", "blocks": "gold_label_creation"},
+    {"gate": "annotation_quality_pass", "blocks": "benchmark_freeze"},
+    {"gate": "d3_threshold_pass_p0_g", "blocks": ["corvonero_rerun", "campaign_production"]}
+  ]
+}

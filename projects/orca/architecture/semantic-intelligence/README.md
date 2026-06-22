@@ -5,7 +5,7 @@
 **ADR:** [ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md](ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md)  
 **Operator approval:** [decisions/ORCA-SEMANTIC-INTELLIGENCE-ADR-V1-OPERATOR-APPROVAL.md](decisions/ORCA-SEMANTIC-INTELLIGENCE-ADR-V1-OPERATOR-APPROVAL.md)
 
-Document-first, implementation-neutral target architecture for ORCA Semantic Intelligence v1. Not runtime. Not classifier. Approved for specification work; implementation blocked until P0-C onward gates pass.
+Document-first, implementation-neutral target architecture for ORCA Semantic Intelligence v1. Not runtime. Not classifier. Approved for specification work; implementation blocked until P0-D onward gates pass.
 
 ## Reading order
 
@@ -27,7 +27,8 @@ Document-first, implementation-neutral target architecture for ORCA Semantic Int
 | Item | Status |
 |------|--------|
 | P0-A ADR | **APPROVED — CHECKPOINTED** |
-| P0-B Taxonomy | **APPROVED — CHECKPOINTED** (see `projects/orca/semantic-intelligence/`) |
-| P0-C Annotation Guideline | **AUTHORIZED** (B7) — not started at P0-B checkpoint |
+| P0-B Taxonomy | **APPROVED — CHECKPOINTED** (`3151953`) |
+| P0-C Annotation Guideline | **APPROVED — IMPLEMENTATION NOT STARTED** (C1–C7) — [`semantic-intelligence/annotation/README.md`](../../semantic-intelligence/annotation/README.md) |
+| P0-D Benchmark Charter | **AUTHORIZED — NOT STARTED** |
 | Corvonero rerun | BLOCKED |
 | Campaign production | BLOCKED |

@@ -1,0 +1,99 @@
+{
+  "checklist_id": "orca-semantic-reviewer-checklist",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "mandatory_items": [
+    {
+      "id": "RC-01",
+      "question": "Did I interpret the phrase literally?",
+      "category": "literal_interpretation",
+      "failure_action": "revise_literal_interpretation"
+    },
+    {
+      "id": "RC-02",
+      "question": "Did I identify the likely next action?",
+      "category": "user_goal",
+      "failure_action": "complete_annotation_step_2"
+    },
+    {
+      "id": "RC-03",
+      "question": "Did I separate topic from intent?",
+      "category": "intent_vs_topic",
+      "failure_action": "reassess_primary_intent"
+    },
+    {
+      "id": "RC-04",
+      "question": "Did I consider the strongest non-commercial interpretation?",
+      "category": "protected_strata",
+      "failure_action": "apply_protected_noncommercial_standard"
+    },
+    {
+      "id": "RC-05",
+      "question": "Did I distinguish service from product?",
+      "category": "product_vs_service",
+      "failure_action": "apply_product_vs_service_adjudication"
+    },
+    {
+      "id": "RC-06",
+      "question": "Did I distinguish provider from career?",
+      "category": "career_vs_provider",
+      "failure_action": "apply_protected_noncommercial_standard"
+    },
+    {
+      "id": "RC-07",
+      "question": "Did I distinguish provider from DIY?",
+      "category": "diy_vs_provider",
+      "failure_action": "apply_problem_or_diy_rules"
+    },
+    {
+      "id": "RC-08",
+      "question": "Can the landing honestly satisfy the query?",
+      "category": "landing_compatibility",
+      "failure_action": "reject_or_abstain_not_accept"
+    },
+    {
+      "id": "RC-09",
+      "question": "Did I avoid using service scope as proof of demand?",
+      "category": "scope_not_evidence",
+      "failure_action": "remove_scope_based_reasoning"
+    },
+    {
+      "id": "RC-10",
+      "question": "Is ABSTAIN required?",
+      "category": "abstain_governance",
+      "failure_action": "assign_abstain_with_unresolved_question"
+    },
+    {
+      "id": "RC-11",
+      "question": "Is the rationale phrase-specific?",
+      "category": "rationale_quality",
+      "failure_action": "rewrite_per_rationale_standard"
+    },
+    {
+      "id": "RC-12",
+      "question": "Are provenance and versions present?",
+      "category": "provenance",
+      "failure_action": "complete_audit_fields"
+    }
+  ],
+  "extended_qa_items": [
+    {"id": "RC-13", "question": "Did the annotator follow the 10-step mandatory annotation order?", "applies_to": "qa_reviewer"},
+    {"id": "RC-14", "question": "Are signals recorded with positive and negative evidence separated?", "applies_to": "qa_reviewer"},
+    {"id": "RC-15", "question": "Was commercial eligibility assigned only after intent and landing checks?", "applies_to": "qa_reviewer"},
+    {"id": "RC-16", "question": "Does the decision trace link evidence to final decision?", "applies_to": "qa_reviewer"},
+    {"id": "RC-17", "question": "Is service candidate status distinct from eligibility?", "applies_to": "qa_reviewer"},
+    {"id": "RC-18", "question": "Are protected strata handled conservatively when signals conflict?", "applies_to": "qa_reviewer"},
+    {"id": "RC-19", "question": "Was ABSTAIN used appropriately?", "applies_to": "qa_reviewer"},
+    {"id": "RC-20", "question": "Does the record validate against semantic record schema v1?", "applies_to": "qa_reviewer"}
+  ],
+  "anti_pattern_blockers": [
+    "service_term_auto_accept",
+    "topic_match_as_commercial_intent",
+    "problem_as_provider_without_support_signal",
+    "model_confidence_as_evidence",
+    "cluster_membership_as_label",
+    "copied_generic_rationale",
+    "semantic_decision_at_export"
+  ]
+}

@@ -2,7 +2,7 @@
 
 **Backlog ID:** `orca-ppc-semantic-intelligence-promotion-backlog`  
 **Version:** v1  
-**Status:** P0-A `APPROVED — CHECKPOINTED`; P0-B `APPROVED — CHECKPOINTED`; P0-C `AUTHORIZED` (B7)  
+**Status:** P0-A `APPROVED — CHECKPOINTED`; P0-B `APPROVED — CHECKPOINTED` (`3151953`); P0-C `APPROVED — IMPLEMENTATION NOT STARTED` (C1–C7); P0-D `AUTHORIZED — NOT STARTED`  
 **Authority:** Selective promotion only — no automatic adoption of research
 
 ---
@@ -35,7 +35,7 @@
 | Gate | Schema version frozen before annotation guideline |
 | Prohibited claims | Not phrase registry; not production decisions |
 | Corvonero impact | Required before new admission run |
-| Status | **APPROVED — CHECKPOINTED** (operator B1–B7) |
+| Status | **APPROVED — CHECKPOINTED** (commit `3151953`, operator B1–B7) |
 
 ---
 
@@ -51,7 +51,7 @@
 | Gate | Guideline approved before benchmark annotation |
 | Prohibited claims | Not benchmark data itself |
 | Corvonero impact | Required per D2 before semantic rerun |
-| Status | **AUTHORIZED** (B7) — drafting not started at P0-B checkpoint |
+| Status | **APPROVED — IMPLEMENTATION NOT STARTED** (operator C1–C7) |
 
 ---
 
@@ -60,14 +60,14 @@
 | Field | Value |
 |-------|-------|
 | Purpose | Universal ORCA benchmark program charter |
-| Inputs | D5 sizing (1200–2000 phrases); research strata table |
+| Inputs | D5 sizing (1200–2000 phrases); research strata table; approved P0-C guideline |
 | Outputs | Charter: strata, double annotation, disagreements, adjudication, blind split, regression anchors, hard negatives, versioning |
 | Dependencies | P0-C |
 | Authority | Operator + QA owner |
 | Gate | Gold freeze before baseline evaluation |
 | Prohibited claims | Not trained model; not production core |
 | Corvonero impact | Parent program for Corvonero pilot |
-| Status | **NOT STARTED** |
+| Status | **AUTHORIZED — NOT STARTED** |
 
 ---
 

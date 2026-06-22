@@ -59,7 +59,8 @@ Core documentation:
 - `research/` - SERP, competitor, and review analysis methodology.
 - **PPC Semantic Intelligence — world practice research (2026-06)** — analytical source only; operator decisions D1–D7: [research/ppc-semantic-intelligence/world-practice-2026-06/README.md](research/ppc-semantic-intelligence/world-practice-2026-06/README.md).
 - **ORCA Semantic Intelligence Architecture v1** — target multi-stage architecture (SI-01–SI-17); ADR **APPROVED — IMPLEMENTATION NOT STARTED**; checkpoint `f17c270`: [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md).
-- **ORCA Semantic Intelligence Taxonomy & Schema v1 (P0-B)** — **APPROVED — IMPLEMENTATION NOT STARTED**; checkpointed: [semantic-intelligence/README.md](semantic-intelligence/README.md). Operator approval B1–B7. P0-C Annotation Guideline authorized.
+- **ORCA Semantic Intelligence Taxonomy & Schema v1 (P0-B)** — **APPROVED — IMPLEMENTATION NOT STARTED**; checkpoint `3151953`: [semantic-intelligence/README.md](semantic-intelligence/README.md).
+- **ORCA Semantic Annotation Guideline v1 (P0-C)** — **APPROVED — IMPLEMENTATION NOT STARTED** (operator C1–C7): [semantic-intelligence/annotation/README.md](semantic-intelligence/annotation/README.md). Next gate: P0-D Universal Benchmark Charter.
 - `semantic/` - intent, clustering, geo modifier, negative keyword, and semantic quality rules.
 - `qa/` - PPC semantic, campaign structure, landing match, and ad relevance QA.
 - `methodology/` - PPC research, campaign architecture, intent, offer, and landing methodology.

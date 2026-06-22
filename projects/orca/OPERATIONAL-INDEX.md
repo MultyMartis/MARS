@@ -169,11 +169,27 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 
 | [semantic-intelligence/decisions/ORCA-P0-B-TAXONOMY-AND-SCHEMA-OPERATOR-APPROVAL-v1.md](semantic-intelligence/decisions/ORCA-P0-B-TAXONOMY-AND-SCHEMA-OPERATOR-APPROVAL-v1.md) | P0-B operator approval B1–B7 |
 
+**Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (commit `3151953`).
+
+## ORCA Semantic Intelligence — Annotation Guideline v1 (P0-C)
+
+**Human annotation specification** — not runtime, not classifier, not benchmark. Status: **APPROVED — IMPLEMENTATION NOT STARTED** (operator C1–C7).
+
+| Doc | Role |
+|-----|------|
+| [semantic-intelligence/annotation/README.md](semantic-intelligence/annotation/README.md) | P0-C locus entry |
+| [semantic-intelligence/annotation/guidelines/ORCA-SEMANTIC-ANNOTATION-GUIDELINE-v1.md](semantic-intelligence/annotation/guidelines/ORCA-SEMANTIC-ANNOTATION-GUIDELINE-v1.md) | Main annotation handbook |
+| [semantic-intelligence/annotation/decision-trees/ORCA-SEMANTIC-ANNOTATION-DECISION-TREE-v1.md](semantic-intelligence/annotation/decision-trees/ORCA-SEMANTIC-ANNOTATION-DECISION-TREE-v1.md) | Decision trees — ACCEPT / REJECT / ABSTAIN terminals |
+| [semantic-intelligence/annotation/examples/ORCA-ANNOTATION-EXAMPLE-LIBRARY-v1.md](semantic-intelligence/annotation/examples/ORCA-ANNOTATION-EXAMPLE-LIBRARY-v1.md) | Training illustrations — not gold labels |
+| [semantic-intelligence/annotation/decisions/ORCA-SEMANTIC-ANNOTATION-GUIDELINE-DECISION-v1.md](semantic-intelligence/annotation/decisions/ORCA-SEMANTIC-ANNOTATION-GUIDELINE-DECISION-v1.md) | P0-C decision record |
+| [semantic-intelligence/annotation/decisions/ORCA-P0-C-ANNOTATION-GUIDELINE-OPERATOR-APPROVAL-v1.md](semantic-intelligence/annotation/decisions/ORCA-P0-C-ANNOTATION-GUIDELINE-OPERATOR-APPROVAL-v1.md) | P0-C operator approval C1–C7 |
+
 **Promotion backlog P0-A:** `APPROVED — CHECKPOINTED` (commit `f17c270`).  
-**Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (selective commit this task).  
-**P0-C:** `AUTHORIZED` (B7) — annotation guideline drafting authorized.  
-**Next gate:** P0-C Annotation Guideline operator approval → P0-D Benchmark Charter.  
-**Blocked:** classifier, benchmark, Corvonero rerun, campaign production, Commander.
+**Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (commit `3151953`).  
+**P0-C:** `APPROVED — IMPLEMENTATION NOT STARTED` (C1–C7).  
+**P0-D:** `AUTHORIZED — NOT STARTED`.  
+**Next gate:** P0-D Universal Benchmark Charter.  
+**Blocked:** classifier, benchmark rows, Corvonero rerun, campaign production, Commander.
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)
 

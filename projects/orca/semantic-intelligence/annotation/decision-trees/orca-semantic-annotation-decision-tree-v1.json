@@ -1,0 +1,103 @@
+{
+  "tree_id": "orca-semantic-annotation-decision-tree",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "terminal_outcomes": ["ACCEPT", "REJECT", "ABSTAIN"],
+  "forbidden_terminals": ["service_mapping", "campaign_grouping", "cluster_assignment"],
+  "global_pre_check": {
+    "malformed_route": "malformed_subtree",
+    "require_steps_1_through_7": true
+  },
+  "subtrees": [
+    {
+      "id": "commercial",
+      "name": "Clear commercial requests",
+      "entry_signals": ["explicit_hire_verbs", "implementation_verbs", "scoped_service_object"],
+      "nodes": [
+        {"check": "dominant_protected_intent", "yes": "route_protected", "no": "next"},
+        {"check": "mandatory_ambiguity_unresolved", "yes": "ABSTAIN", "no": "next"},
+        {"check": "strong_explicit_commercial_and_landing_compatible", "yes": "ACCEPT", "no": "ABSTAIN"}
+      ]
+    },
+    {
+      "id": "career_education",
+      "name": "Career and education",
+      "entry_signals": ["вакансия", "резюме", "курсы", "обучение", "с нуля", "сертификация"],
+      "nodes": [
+        {"check": "dominant_career_or_educational", "yes": "REJECT", "no": "next"},
+        {"check": "career_vs_provider_unresolved", "yes": "ABSTAIN", "no": "next"},
+        {"check": "commercial_with_education_modifier_only", "yes": "route_commercial", "no": "REJECT"}
+      ]
+    },
+    {
+      "id": "diy",
+      "name": "DIY and how-to",
+      "entry_signals": ["как сделать", "как настроить самому", "пошагово", "инструкция", "своими руками"],
+      "nodes": [
+        {"check": "dominant_diy_or_documentation", "yes": "REJECT", "no": "next"},
+        {"check": "provider_vs_diy_unresolved", "yes": "ABSTAIN", "no": "next"},
+        {"check": "explicit_hire_overrides_diy", "yes": "route_commercial", "no": "REJECT_or_ABSTAIN"}
+      ]
+    },
+    {
+      "id": "problem",
+      "name": "Problem queries",
+      "entry_signals": ["не работает", "ошибка", "не проводится", "не подключается", "сбой"],
+      "protocol": "three_interpretation_paid_diy_insufficient",
+      "nodes": [
+        {"check": "explicit_provider_support", "yes": "route_commercial", "no": "next"},
+        {"check": "explicit_diy", "yes": "route_diy", "no": "next"},
+        {"check": "problem_only", "yes": "ABSTAIN", "no": "REJECT"}
+      ]
+    },
+    {
+      "id": "product_module",
+      "name": "Product and module",
+      "entry_signals": ["купить", "лицензия", "модуль", "скачать", "дистрибутив", "сравнить"],
+      "nodes": [
+        {"check": "dominant_buy_or_download", "yes": "REJECT", "no": "next"},
+        {"check": "product_vs_service_unresolved", "yes": "ABSTAIN", "no": "next"},
+        {"check": "configuration_with_hire_path", "yes": "route_commercial", "no": "REJECT"}
+      ]
+    },
+    {
+      "id": "short_head",
+      "name": "Short head terms",
+      "entry_signals": ["one_to_three_tokens", "broad_category_noun", "role_without_verb"],
+      "nodes": [
+        {"check": "short_head_high_critical_unresolved", "yes": "ABSTAIN", "no": "next"},
+        {"check": "operator_seed_with_audit", "yes": "ACCEPT", "no": "next"},
+        {"check": "additional_tokens_resolve", "yes": "route_appropriate", "no": "ABSTAIN"}
+      ]
+    },
+    {
+      "id": "regulatory",
+      "name": "Regulatory queries",
+      "entry_signals": ["закон", "ФЗ", "постановление", "требования", "сроки введения"],
+      "nodes": [
+        {"check": "dominant_regulatory_informational", "yes": "REJECT", "no": "next"},
+        {"check": "regulatory_vs_implementation_unresolved", "yes": "ABSTAIN", "no": "next"},
+        {"check": "explicit_paid_compliance_implementation", "yes": "route_commercial", "no": "REJECT"}
+      ]
+    },
+    {
+      "id": "navigational",
+      "name": "Navigational and login",
+      "entry_signals": ["официальный сайт", "личный кабинет", "вход", "портал", "авторизация"],
+      "nodes": [
+        {"check": "dominant_navigational_or_login", "yes": "REJECT", "no": "next"},
+        {"check": "navigational_plus_commercial_verb", "yes": "ABSTAIN", "no": "REJECT"}
+      ]
+    },
+    {
+      "id": "malformed",
+      "name": "Malformed and irrelevant",
+      "entry_signals": ["gibberish", "empty", "off_topic", "spam"],
+      "nodes": [
+        {"check": "malformed_or_irrelevant_clear", "yes": "REJECT", "no": "next"},
+        {"check": "typo_plausible_domain_term", "yes": "ABSTAIN", "no": "ABSTAIN"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2361 @@
+{
+  "library_id": "orca-annotation-example-library",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "training_only": true,
+  "gold_benchmark": false,
+  "domain": "B2B IT/PPC Russian (1С, CRM, ERP)",
+  "coverage_counts": {
+    "accept": 20,
+    "reject": 20,
+    "abstain": 20,
+    "problem": 10,
+    "product_vs_service": 10,
+    "career_vs_provider": 10,
+    "short_head": 10,
+    "counterexample": 10
+  },
+  "examples": [
+    {
+      "id": "ACC-01",
+      "phrase": "заказать внедрение crm под ключ москва",
+      "literal_meaning": "Пользователь хочет заказать полное внедрение CRM в Москве.",
+      "signals": [
+        "PROVIDER_HIRE:EXPLICIT:заказать",
+        "IMPLEMENTATION:STRONG:внедрение crm под ключ",
+        "GEO:MEDIUM:москва"
+      ],
+      "primary_intent": "REQUEST_IMPLEMENTATION",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Явный глагол заказа и scoped implementation object; landing внедрения честно закрывает запрос.",
+      "common_wrong_decision": "ACCEPT по теме crm без глагола",
+      "why_wrong_fails": "Нет автоматического ACCEPT от доменного термина.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-02",
+      "phrase": "нужен подрядчик на интеграцию 1с с битрикс",
+      "literal_meaning": "Пользователь ищет подрядчика для интеграции 1С с Битрикс.",
+      "signals": [
+        "PROVIDER_HIRE:EXPLICIT:нужен подрядчик",
+        "INTEGRATION:STRONG:интеграцию 1с с битрикс"
+      ],
+      "primary_intent": "REQUEST_INTEGRATION",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "EXPLICIT provider hire + integration task object.",
+      "common_wrong_decision": "ACCEPT из-за слова интеграция без подрядчика",
+      "why_wrong_fails": "Интеграция без hire-маркера часто ABSTAIN.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-03",
+      "phrase": "вызвать программиста 1с на выезд",
+      "literal_meaning": "Пользователь хочет вызвать программиста 1С с выездом.",
+      "signals": [
+        "PROVIDER_HIRE:EXPLICIT:вызвать",
+        "SUPPORT:STRONG:программиста 1с на выезд"
+      ],
+      "primary_intent": "HIRE_SERVICE",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Прямой запрос специалиста с выездом — paid service path.",
+      "common_wrong_decision": "REJECT как career из-за программист",
+      "why_wrong_fails": "Есть глагол вызвать — provider path, не вакансия.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-04",
+      "phrase": "доработка отчёта 1с на заказ",
+      "literal_meaning": "Пользователь хочет заказать доработку отчёта в 1С.",
+      "signals": [
+        "MODIFICATION:EXPLICIT:доработка",
+        "PROVIDER_HIRE:MEDIUM:на заказ"
+      ],
+      "primary_intent": "REQUEST_MODIFICATION",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Scoped modification с коммерческим framing «на заказ».",
+      "common_wrong_decision": "ABSTAIN как short head",
+      "why_wrong_fails": "Три токена с task object и заказ-маркером достаточны.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-05",
+      "phrase": "сопровождение 1с абонентская плата оформить",
+      "literal_meaning": "Пользователь хочет оформить абонентское сопровождение 1С.",
+      "signals": [
+        "SUPPORT:STRONG:сопровождение 1с",
+        "PROVIDER_HIRE:MEDIUM:оформить",
+        "COMMERCIAL_PRICE:MEDIUM:абонентская плата"
+      ],
+      "primary_intent": "REQUEST_SUPPORT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "MEDIUM",
+      "reason": "Контекст оформления и цены снимает short-head неоднозначность сопровождения.",
+      "common_wrong_decision": "ACCEPT на «сопровождение 1с» без контекста",
+      "why_wrong_fails": "Без оформить/цена — ABSTAIN.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-06",
+      "phrase": "аудит учётной политики 1с стоимость работ",
+      "literal_meaning": "Пользователь интересуется стоимостью работ по аудиту учётной политики в 1С.",
+      "signals": [
+        "AUDIT_DIAGNOSTIC:STRONG:аудит учётной политики",
+        "COMMERCIAL_PRICE:EXPLICIT:стоимость работ"
+      ],
+      "primary_intent": "REQUEST_AUDIT",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "ACCEPT",
+      "risk": "MEDIUM",
+      "reason": "Цена работ + audit object — hire/quote path, не справка.",
+      "common_wrong_decision": "REJECT как informational quote",
+      "why_wrong_fails": "Стоимость работ на scoped audit — commercial quote.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-07",
+      "phrase": "восстановить базу 1с срочно специалист",
+      "literal_meaning": "Пользователь срочно ищет специалиста для восстановления базы 1С.",
+      "signals": [
+        "RECOVERY:STRONG:восстановить базу 1с",
+        "PROVIDER_HIRE:EXPLICIT:специалист",
+        "URGENCY:MEDIUM:срочно"
+      ],
+      "primary_intent": "REQUEST_RECOVERY",
+      "competing_intent": "PROBLEM_UNRESOLVED",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Problem + explicit specialist hire — paid recovery path.",
+      "common_wrong_decision": "ABSTAIN как чистый problem",
+      "why_wrong_fails": "Специалист явно запрошен.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-08",
+      "phrase": "интеграция erp с маркетплейсом под ключ",
+      "literal_meaning": "Пользователь ищет интеграцию ERP с маркетплейсом под ключ.",
+      "signals": [
+        "INTEGRATION:STRONG:интеграция erp",
+        "IMPLEMENTATION:EXPLICIT:под ключ"
+      ],
+      "primary_intent": "REQUEST_INTEGRATION",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Под ключ — implementation hire signal.",
+      "common_wrong_decision": "REJECT как product compare",
+      "why_wrong_fails": "Нет покупки ПО — услуга интеграции.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-09",
+      "phrase": "настройка обмена 1с заказать услугу",
+      "literal_meaning": "Пользователь хочет заказать услугу настройки обмена в 1С.",
+      "signals": [
+        "CONFIGURATION:STRONG:настройка обмена",
+        "PROVIDER_HIRE:EXPLICIT:заказать услугу"
+      ],
+      "primary_intent": "REQUEST_CONFIGURATION",
+      "competing_intent": "DIY_HOW_TO",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "DIY конкурирует, но EXPLICIT заказать услугу разрешает.",
+      "common_wrong_decision": "ABSTAIN из-за настроить",
+      "why_wrong_fails": "Явный заказ услуги перевешивает DIY.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-10",
+      "phrase": "внедрение сквозной аналитики crm цена подрядчика",
+      "literal_meaning": "Пользователь ищет цену подрядчика на внедрение сквозной аналитики в CRM.",
+      "signals": [
+        "IMPLEMENTATION:STRONG:внедрение",
+        "PROVIDER_HIRE:STRONG:цена подрядчика"
+      ],
+      "primary_intent": "REQUEST_IMPLEMENTATION",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Цена подрядчика — commercial quote path.",
+      "common_wrong_decision": "REJECT как price shopping only",
+      "why_wrong_fails": "Подрядчик указывает hire, не прайс-лист ПО.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-11",
+      "phrase": "доработка печатной формы 1с подрядчик москва",
+      "literal_meaning": "Пользователь ищет подрядчика в Москве для доработки печатной формы 1С.",
+      "signals": [
+        "MODIFICATION:STRONG:доработка печатной формы",
+        "PROVIDER_HIRE:EXPLICIT:подрядчик",
+        "GEO:MEDIUM:москва"
+      ],
+      "primary_intent": "REQUEST_MODIFICATION",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Scoped task + подрядчик.",
+      "common_wrong_decision": "ABSTAIN как печатная форма 1с",
+      "why_wrong_fails": "Добавлены подрядчик и доработка scope.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-12",
+      "phrase": "миграция данных из sap в 1с услуга",
+      "literal_meaning": "Пользователь ищет услугу миграции данных из SAP в 1С.",
+      "signals": [
+        "MIGRATION:STRONG:миграция данных",
+        "PROVIDER_HIRE:MEDIUM:услуга"
+      ],
+      "primary_intent": "REQUEST_MIGRATION",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Migration object + услуга marker.",
+      "common_wrong_decision": "REJECT как IT topic",
+      "why_wrong_fails": "Миграция между ERP — типичная платная услуга.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-13",
+      "phrase": "обслуживание сервера 1с удалённо договор",
+      "literal_meaning": "Пользователь хочет договор на удалённое обслуживание сервера 1С.",
+      "signals": [
+        "MAINTENANCE:STRONG:обслуживание сервера 1с",
+        "PROVIDER_HIRE:MEDIUM:договор"
+      ],
+      "primary_intent": "REQUEST_MAINTENANCE",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Maintenance scope + commercial contract framing.",
+      "common_wrong_decision": "ABSTAIN как обслуживание",
+      "why_wrong_fails": "Договор и удалённо конкретизируют hire.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-14",
+      "phrase": "коммерческое предложение на внедрение erp",
+      "literal_meaning": "Пользователь запрашивает коммерческое предложение на внедрение ERP.",
+      "signals": [
+        "COMMERCIAL_QUOTE:EXPLICIT:коммерческое предложение",
+        "IMPLEMENTATION:STRONG:внедрение erp"
+      ],
+      "primary_intent": "REQUEST_QUOTE",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Явный КП запрос на implementation.",
+      "common_wrong_decision": "REJECT как document download",
+      "why_wrong_fails": "КП — commercial engagement, не шаблон.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-15",
+      "phrase": "найти компанию по внедрению 1с",
+      "literal_meaning": "Пользователь хочет найти компанию для внедрения 1С.",
+      "signals": [
+        "PROVIDER_HIRE:EXPLICIT:найти компанию",
+        "IMPLEMENTATION:STRONG:внедрению 1с"
+      ],
+      "primary_intent": "HIRE_SERVICE",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Поиск компании = provider hire.",
+      "common_wrong_decision": "NAVIGATIONAL reject",
+      "why_wrong_fails": "Компания здесь — подрядчик, не сайт 1С.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-16",
+      "phrase": "1с не работает вызвать специалиста",
+      "literal_meaning": "Пользователь сообщает, что 1С не работает, и хочет вызвать специалиста.",
+      "signals": [
+        "PROBLEM:STRONG:1с не работает",
+        "PROVIDER_HIRE:EXPLICIT:вызвать специалиста"
+      ],
+      "primary_intent": "REQUEST_SUPPORT",
+      "competing_intent": "PROBLEM_UNRESOLVED",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Problem + explicit вызвать специалиста.",
+      "common_wrong_decision": "ABSTAIN как problem only",
+      "why_wrong_fails": "Вызвать специалиста — explicit provider.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-17",
+      "phrase": "настроить обмен с кассой заказать",
+      "literal_meaning": "Пользователь хочет заказать настройку обмена с кассой.",
+      "signals": [
+        "CONFIGURATION:STRONG:настроить обмен с кассой",
+        "PROVIDER_HIRE:EXPLICIT:заказать"
+      ],
+      "primary_intent": "REQUEST_CONFIGURATION",
+      "competing_intent": "DIY_HOW_TO",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Заказать разрешает provider vs DIY.",
+      "common_wrong_decision": "ABSTAIN на настроить",
+      "why_wrong_fails": "Без заказать — ABSTAIN.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-18",
+      "phrase": "разработка внешней обработки 1с цена работ",
+      "literal_meaning": "Пользователь спрашивает цену работ на разработку внешней обработки 1С.",
+      "signals": [
+        "MODIFICATION:STRONG:разработка внешней обработки",
+        "COMMERCIAL_PRICE:EXPLICIT:цена работ"
+      ],
+      "primary_intent": "REQUEST_MODIFICATION",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "ACCEPT",
+      "risk": "MEDIUM",
+      "reason": "Цена работ на scoped dev task.",
+      "common_wrong_decision": "REJECT как DIY code",
+      "why_wrong_fails": "Цена работ — commercial, не пример кода.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-19",
+      "phrase": "внедрение маркировки в 1с под ключ",
+      "literal_meaning": "Пользователь хочет внедрение маркировки в 1С под ключ.",
+      "signals": [
+        "IMPLEMENTATION:EXPLICIT:внедрение маркировки",
+        "REGULATORY_CONTEXT:MEDIUM:маркировки"
+      ],
+      "primary_intent": "REQUEST_IMPLEMENTATION",
+      "competing_intent": "REGULATORY",
+      "eligibility": "ACCEPT",
+      "risk": "MEDIUM",
+      "reason": "Paid implementation under regulatory topic; под ключ decisive.",
+      "common_wrong_decision": "REJECT как regulatory info",
+      "why_wrong_fails": "Внедрение под ключ — service, не норма.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ACC-20",
+      "phrase": "техподдержка 1с абонентское обслуживание оформить",
+      "literal_meaning": "Пользователь хочет оформить абонентское техобслуживание 1С.",
+      "signals": [
+        "SUPPORT:STRONG:техподдержка 1с",
+        "PROVIDER_HIRE:MEDIUM:оформить",
+        "MAINTENANCE:MEDIUM:абонентское обслуживание"
+      ],
+      "primary_intent": "REQUEST_SUPPORT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Оформить + абонентка — commercial support path.",
+      "common_wrong_decision": "ABSTAIN на техподдержка 1с",
+      "why_wrong_fails": "Оформить снимает head-term ambiguity.",
+      "tags": [
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-01",
+      "phrase": "вакансия программист 1с удалённо",
+      "literal_meaning": "Пользователь ищет вакансию программиста 1С с удалённой работой.",
+      "signals": [
+        "CAREER:EXPLICIT:вакансия",
+        "ROLE:MEDIUM:программист 1с"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Dominant career stratum; protected REJECT.",
+      "common_wrong_decision": "ABSTAIN как short head",
+      "why_wrong_fails": "Вакансия — explicit career, не ABSTAIN.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-02",
+      "phrase": "курсы 1с бухгалтерия с нуля",
+      "literal_meaning": "Пользователь ищет курсы 1С для бухгалтерии с нуля.",
+      "signals": [
+        "EDUCATION:EXPLICIT:курсы",
+        "EDUCATION:STRONG:с нуля"
+      ],
+      "primary_intent": "EDUCATIONAL",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Dominant educational intent.",
+      "common_wrong_decision": "ACCEPT как commercial training sale",
+      "why_wrong_fails": "Нет hire подрядчика — обучение.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-03",
+      "phrase": "как настроить обмен 1с самому пошагово",
+      "literal_meaning": "Пользователь хочет самостоятельную пошаговую настройку обмена 1С.",
+      "signals": [
+        "DIY:EXPLICIT:самому",
+        "DIY:STRONG:пошагово",
+        "HOW_TO:EXPLICIT:как настроить"
+      ],
+      "primary_intent": "DIY_HOW_TO",
+      "competing_intent": "REQUEST_CONFIGURATION",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Explicit DIY markers.",
+      "common_wrong_decision": "ABSTAIN как настроить",
+      "why_wrong_fails": "Самому и пошагово — clear DIY.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-04",
+      "phrase": "скачать дистрибутив 1с бесплатно",
+      "literal_meaning": "Пользователь хочет бесплатно скачать дистрибутив 1С.",
+      "signals": [
+        "DOWNLOAD:EXPLICIT:скачать",
+        "FREE:EXPLICIT:бесплатно",
+        "PRODUCT:STRONG:дистрибутив"
+      ],
+      "primary_intent": "DOWNLOAD_RESOURCE",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Download/free — not service core.",
+      "common_wrong_decision": "ACCEPT как lead",
+      "why_wrong_fails": "Нет услуги — product/download.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-05",
+      "phrase": "личный кабинет 1с итс вход",
+      "literal_meaning": "Пользователь хочет войти в личный кабинет 1С:ИТС.",
+      "signals": [
+        "NAVIGATION:EXPLICIT:личный кабинет",
+        "LOGIN:EXPLICIT:вход"
+      ],
+      "primary_intent": "LOGIN_ACCOUNT_ACCESS",
+      "competing_intent": "NAVIGATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Login/navigational dominant.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Clear login — REJECT.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-06",
+      "phrase": "требования маркировки молочной продукции 2025",
+      "literal_meaning": "Пользователь ищет нормативные требования маркировки молочной продукции на 2025 год.",
+      "signals": [
+        "REGULATORY:EXPLICIT:требования",
+        "REGULATORY:STRONG:маркировки"
+      ],
+      "primary_intent": "REGULATORY",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Pure regulatory information.",
+      "common_wrong_decision": "ACCEPT как внедрение маркировки",
+      "why_wrong_fails": "Нет заказа внедрения.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-07",
+      "phrase": "купить лицензию 1с предприятие 8",
+      "literal_meaning": "Пользователь хочет купить лицензию 1С:Предприятие 8.",
+      "signals": [
+        "PRODUCT:EXPLICIT:купить лицензию",
+        "PRODUCT:STRONG:1с предприятие"
+      ],
+      "primary_intent": "BUY_PRODUCT_OR_MODULE",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Product purchase dominant.",
+      "common_wrong_decision": "ACCEPT как внедрение",
+      "why_wrong_fails": "Купить лицензию — product.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-08",
+      "phrase": "документация api rest 1с",
+      "literal_meaning": "Пользователь ищет документацию по REST API 1С.",
+      "signals": [
+        "DOCUMENTATION:EXPLICIT:документация",
+        "TECHNICAL:MEDIUM:api rest"
+      ],
+      "primary_intent": "DOCUMENTATION_LOOKUP",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Documentation lookup.",
+      "common_wrong_decision": "ACCEPT как интеграция услуга",
+      "why_wrong_fails": "API docs — self-serve.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-09",
+      "phrase": "резюме программист 1с опыт 5 лет",
+      "literal_meaning": "Пользователь ищет/размещает резюме программиста 1С.",
+      "signals": [
+        "CAREER:EXPLICIT:резюме",
+        "ROLE:MEDIUM:программист 1с"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Resume — job seeker stratum.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Резюме explicit.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-10",
+      "phrase": "обучение администратору 1с онлайн",
+      "literal_meaning": "Пользователь ищет онлайн-обучение администратора 1С.",
+      "signals": [
+        "EDUCATION:EXPLICIT:обучение"
+      ],
+      "primary_intent": "EDUCATIONAL",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Education dominant.",
+      "common_wrong_decision": "ACCEPT если оператор продаёт курсы",
+      "why_wrong_fails": "Service core ≠ course sales unless charter says otherwise.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-11",
+      "phrase": "сравнить crm битрикс и amo",
+      "literal_meaning": "Пользователь хочет сравнить CRM Битрикс и amoCRM.",
+      "signals": [
+        "INFORMATIONAL:STRONG:сравнить",
+        "PRODUCT:MEDIUM:crm"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Software comparison research.",
+      "common_wrong_decision": "ACCEPT как внедрение",
+      "why_wrong_fails": "Сравнение ≠ заказ услуги.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-12",
+      "phrase": "шаблон договора внедрения erp скачать",
+      "literal_meaning": "Пользователь хочет скачать шаблон договора на внедрение ERP.",
+      "signals": [
+        "DOWNLOAD:EXPLICIT:скачать",
+        "TEMPLATE:STRONG:шаблон"
+      ],
+      "primary_intent": "DOWNLOAD_RESOURCE",
+      "competing_intent": "REQUEST_QUOTE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Template download.",
+      "common_wrong_decision": "ACCEPT из-за слова внедрения",
+      "why_wrong_fails": "Шаблон — resource, не hire.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-13",
+      "phrase": "зарплата 1с программист москва",
+      "literal_meaning": "Пользователь интересуется зарплатой программиста 1С в Москве.",
+      "signals": [
+        "CAREER:EXPLICIT:зарплата",
+        "ROLE:MEDIUM:программист"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Salary research — career.",
+      "common_wrong_decision": "INFORMATIONAL ACCEPT",
+      "why_wrong_fails": "Зарплата — career stratum.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-14",
+      "phrase": "инструкция печатная форма 1с своими руками",
+      "literal_meaning": "Пользователь ищет инструкцию для самостоятельного создания печатной формы 1С.",
+      "signals": [
+        "DIY:EXPLICIT:своими руками",
+        "DOCUMENTATION:STRONG:инструкция"
+      ],
+      "primary_intent": "DIY_HOW_TO",
+      "competing_intent": "REQUEST_MODIFICATION",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "DIY instruction.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Своими руками — clear DIY.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-15",
+      "phrase": "официальный сайт 1с скачать обновление",
+      "literal_meaning": "Пользователь ищет официальный сайт 1С для скачивания обновления.",
+      "signals": [
+        "NAVIGATION:EXPLICIT:официальный сайт",
+        "DOWNLOAD:MEDIUM:скачать обновление"
+      ],
+      "primary_intent": "NAVIGATIONAL",
+      "competing_intent": "DOWNLOAD_RESOURCE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Nav + vendor download.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Not service hire.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-16",
+      "phrase": "экзамен 1с профессионал подготовка",
+      "literal_meaning": "Пользователь готовится к экзамену 1С:Профессионал.",
+      "signals": [
+        "EDUCATION:EXPLICIT:экзамен",
+        "EDUCATION:MEDIUM:подготовка"
+      ],
+      "primary_intent": "EDUCATIONAL",
+      "competing_intent": "REGULATORY",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Certification prep.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Education protected.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-17",
+      "phrase": "бесплатные курсы erp",
+      "literal_meaning": "Пользователь ищет бесплатные курсы по ERP.",
+      "signals": [
+        "EDUCATION:EXPLICIT:курсы",
+        "FREE:EXPLICIT:бесплатные"
+      ],
+      "primary_intent": "EDUCATIONAL",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Free courses.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Clear education.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-18",
+      "phrase": "постановление правительства маркировка текст",
+      "literal_meaning": "Пользователь ищет текст постановления правительства о маркировке.",
+      "signals": [
+        "REGULATORY:EXPLICIT:постановление",
+        "REGULATORY:STRONG:текст"
+      ],
+      "primary_intent": "REGULATORY",
+      "competing_intent": "DOCUMENTATION_LOOKUP",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Legal text lookup.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Regulatory REJECT clear.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-19",
+      "phrase": "найти сотрудника 1с в штат вакансия",
+      "literal_meaning": "Работодатель ищет сотрудника 1С в штат (вакансия).",
+      "signals": [
+        "CAREER:EXPLICIT:вакансия",
+        "EMPLOYER_HIRE:MEDIUM:сотрудника в штат"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Employee hiring ≠ customer seeking contractor.",
+      "common_wrong_decision": "ACCEPT как hire service",
+      "why_wrong_fails": "B2B employer hire — not service buyer.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "REJ-20",
+      "phrase": "пример кода обработки 1с github",
+      "literal_meaning": "Пользователь ищет пример кода обработки 1С на GitHub.",
+      "signals": [
+        "DIY:STRONG:пример кода",
+        "DOWNLOAD:MEDIUM:github"
+      ],
+      "primary_intent": "DIY_HOW_TO",
+      "competing_intent": "DOCUMENTATION_LOOKUP",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Code sample self-serve.",
+      "common_wrong_decision": "ACCEPT как доработка",
+      "why_wrong_fails": "Пример кода — not paid request.",
+      "tags": [
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-01",
+      "phrase": "1с",
+      "literal_meaning": "Упоминание 1С без дополнительного контекста.",
+      "signals": [
+        "TOPIC:WEAK:1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "SHORT_HEAD_TERM CRITICAL; нет task или hire маркеров.",
+      "common_wrong_decision": "ACCEPT по теме",
+      "why_wrong_fails": "Topic ≠ commercial.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-02",
+      "phrase": "программист 1с",
+      "literal_meaning": "Упоминание роли программист 1С.",
+      "signals": [
+        "ROLE:MEDIUM:программист 1с",
+        "CAREER:MEDIUM:role"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "CAREER_EMPLOYMENT",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "CAREER_VS_PROVIDER unresolved.",
+      "common_wrong_decision": "REJECT career",
+      "why_wrong_fails": "Может быть поиск подрядчика.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-03",
+      "phrase": "сопровождение 1с",
+      "literal_meaning": "Упоминание сопровождения 1С.",
+      "signals": [
+        "SUPPORT:MEDIUM:сопровождение",
+        "TOPIC:MEDIUM:1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Short head service noun без hire evidence.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Service noun ≠ ACCEPT.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-04",
+      "phrase": "1с не работает",
+      "literal_meaning": "1С не функционирует.",
+      "signals": [
+        "PROBLEM:STRONG:не работает",
+        "TOPIC:MEDIUM:1с"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Problem without provider/DIY resolution.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Problem ≠ auto provider.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-05",
+      "phrase": "настроить обмен 1с",
+      "literal_meaning": "Настроить обмен в 1С.",
+      "signals": [
+        "CONFIGURATION:MEDIUM:настроить",
+        "DIY:MEDIUM:implicit"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_CONFIGURATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "PROVIDER_VS_DIY unresolved.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Настроить без заказать — ambiguous.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-06",
+      "phrase": "маркировка 1с",
+      "literal_meaning": "Маркировка в контексте 1С.",
+      "signals": [
+        "REGULATORY:MEDIUM:маркировка",
+        "TOPIC:MEDIUM:1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REGULATORY",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Regulatory vs implementation unclear.",
+      "common_wrong_decision": "REJECT regulatory",
+      "why_wrong_fails": "Может быть заказ внедрения.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-07",
+      "phrase": "печатная форма 1с",
+      "literal_meaning": "Печатная форма в 1С.",
+      "signals": [
+        "MODIFICATION:MEDIUM:печатная форма",
+        "TOPIC:MEDIUM:1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_MODIFICATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Short head task noun.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Нет подрядчика/заказать.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-08",
+      "phrase": "обмен 1с",
+      "literal_meaning": "Обмен в 1С.",
+      "signals": [
+        "TOPIC:MEDIUM:обмен",
+        "CONFIGURATION:WEAK:implicit"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_CONFIGURATION",
+      "eligibility": "ABSTAIN",
+      "risk": "CRITICAL",
+      "reason": "1–2 token head.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Frequency не доказательство.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-09",
+      "phrase": "crm внедрение",
+      "literal_meaning": "Внедрение CRM.",
+      "signals": [
+        "IMPLEMENTATION:MEDIUM:внедрение",
+        "TOPIC:MEDIUM:crm"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Нет hire/под ключ/заказать.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Внедрение alone — ABSTAIN.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-10",
+      "phrase": "erp для производства",
+      "literal_meaning": "ERP для производства.",
+      "signals": [
+        "TOPIC:STRONG:erp",
+        "INFORMATIONAL:MEDIUM:для производства"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Product research vs implementation.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Может быть selection phase.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-11",
+      "phrase": "интеграция 1с",
+      "literal_meaning": "Интеграция 1С.",
+      "signals": [
+        "INTEGRATION:MEDIUM:интеграция",
+        "TOPIC:MEDIUM:1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_INTEGRATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Short head integration.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Need scope and hire.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-12",
+      "phrase": "доработка 1с",
+      "literal_meaning": "Доработка 1С.",
+      "signals": [
+        "MODIFICATION:MEDIUM:доработка"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_MODIFICATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Task noun without provider.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Доработка — not auto commercial.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-13",
+      "phrase": "стоимость внедрения crm",
+      "literal_meaning": "Стоимость внедрения CRM.",
+      "signals": [
+        "COMMERCIAL_PRICE:MEDIUM:стоимость",
+        "IMPLEMENTATION:MEDIUM:внедрения"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "REQUEST_QUOTE",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "SUPPORT_VS_INFORMATION vs quote.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Может предшествовать hire.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-14",
+      "phrase": "ошибка обмена 1с",
+      "literal_meaning": "Ошибка обмена в 1С.",
+      "signals": [
+        "PROBLEM:STRONG:ошибка обмена"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "DIY_HOW_TO",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Problem triage unresolved.",
+      "common_wrong_decision": "REJECT DIY",
+      "why_wrong_fails": "DIY not proven.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-15",
+      "phrase": "купить и настроить 1с",
+      "literal_meaning": "Купить и настроить 1С.",
+      "signals": [
+        "PRODUCT:STRONG:купить",
+        "CONFIGURATION:MEDIUM:настроить"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "PRODUCT_VS_SERVICE.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Product+config tied.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-16",
+      "phrase": "1с специалист москва",
+      "literal_meaning": "Специалист 1С в Москве.",
+      "signals": [
+        "ROLE:MEDIUM:специалист",
+        "GEO:MEDIUM:москва"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Career vs provider + geo.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Специалист ambiguous.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-17",
+      "phrase": "техподдержка 1с",
+      "literal_meaning": "Техподдержка 1С.",
+      "signals": [
+        "SUPPORT:MEDIUM:техподдержка"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Vendor ITS vs paid support unclear.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Short head support.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-18",
+      "phrase": "модуль обмена 1с",
+      "literal_meaning": "Модуль обмена 1С.",
+      "signals": [
+        "PRODUCT:MEDIUM:модуль",
+        "TOPIC:MEDIUM:обмен"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Product module vs integration service.",
+      "common_wrong_decision": "REJECT product",
+      "why_wrong_fails": "May want install service.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-19",
+      "phrase": "1с итс продлить подписку",
+      "literal_meaning": "Продлить подписку 1С:ИТС.",
+      "signals": [
+        "NAVIGATION:MEDIUM:итс",
+        "COMMERCIAL:MEDIUM:продлить"
+      ],
+      "primary_intent": "LOGIN_ACCOUNT_ACCESS",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Nav/subscription vs paid support.",
+      "common_wrong_decision": "REJECT nav",
+      "why_wrong_fails": "Продление — vendor relationship.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "ABS-20",
+      "phrase": "битрикс интеграция",
+      "literal_meaning": "Интеграция Битрикс.",
+      "signals": [
+        "INTEGRATION:MEDIUM:интеграция",
+        "TOPIC:MEDIUM:битрикс"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_INTEGRATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Short head; scope missing.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Need partner hire signals.",
+      "tags": [
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-01",
+      "phrase": "не проводится документ 1с",
+      "literal_meaning": "Документ в 1С не проводится.",
+      "signals": [
+        "PROBLEM:STRONG:не проводится документ"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "DIY_HOW_TO",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Problem triage.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No provider signal.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-02",
+      "phrase": "касса не подключается к 1с",
+      "literal_meaning": "Касса не подключается к 1С.",
+      "signals": [
+        "PROBLEM:STRONG:не подключается"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REQUEST_CONFIGURATION",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Problem only.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Ambiguous fix path.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-03",
+      "phrase": "ошибка синхронизации crm",
+      "literal_meaning": "Ошибка синхронизации CRM.",
+      "signals": [
+        "PROBLEM:STRONG:ошибка синхронизации"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REQUEST_INTEGRATION",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Insufficient path.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Not proven DIY.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-04",
+      "phrase": "маркировка не передаётся в честный знак",
+      "literal_meaning": "Маркировка не передаётся в Честный ЗНАК.",
+      "signals": [
+        "PROBLEM:STRONG:не передаётся",
+        "REGULATORY:MEDIUM:маркировка"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REGULATORY",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Problem + regulatory.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No hire verb.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-05",
+      "phrase": "ошибка обмена 1с как исправить",
+      "literal_meaning": "Как исправить ошибку обмена 1С.",
+      "signals": [
+        "PROBLEM:MEDIUM:ошибка",
+        "DIY:EXPLICIT:как исправить"
+      ],
+      "primary_intent": "DIY_HOW_TO",
+      "competing_intent": "PROBLEM_UNRESOLVED",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Explicit how-to.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "DIY explicit — REJECT.",
+      "tags": [
+        "problem",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-06",
+      "phrase": "база 1с повреждена восстановить срочно",
+      "literal_meaning": "База 1С повреждена, нужно срочно восстановить.",
+      "signals": [
+        "PROBLEM:STRONG:повреждена",
+        "RECOVERY:STRONG:восстановить",
+        "URGENCY:MEDIUM:срочно"
+      ],
+      "primary_intent": "REQUEST_RECOVERY",
+      "competing_intent": "PROBLEM_UNRESOLVED",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Recovery likely but no explicit specialist.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Conservative without специалист.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-07",
+      "phrase": "не печатает чек из 1с",
+      "literal_meaning": "Из 1С не печатается чек.",
+      "signals": [
+        "PROBLEM:STRONG:не печатает чек"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Hardware/driver vs 1C config.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Problem only.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-08",
+      "phrase": "зависает 1с при проведении",
+      "literal_meaning": "1С зависает при проведении.",
+      "signals": [
+        "PROBLEM:STRONG:зависает"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Triage needed.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No provider.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-09",
+      "phrase": "сбой обновления 1с",
+      "literal_meaning": "Сбой при обновлении 1С.",
+      "signals": [
+        "PROBLEM:STRONG:сбой обновления"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "DIY_HOW_TO",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "DIY update vs support.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Not clear DIY.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PRB-10",
+      "phrase": "не формируется отчёт 1с",
+      "literal_meaning": "Отчёт в 1С не формируется.",
+      "signals": [
+        "PROBLEM:STRONG:не формируется отчёт"
+      ],
+      "primary_intent": "PROBLEM_UNRESOLVED",
+      "competing_intent": "REQUEST_MODIFICATION",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Config vs custom report.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Ambiguous.",
+      "tags": [
+        "problem",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-01",
+      "phrase": "установить и настроить crm под ключ",
+      "literal_meaning": "Установить и настроить CRM под ключ.",
+      "signals": [
+        "IMPLEMENTATION:EXPLICIT:под ключ",
+        "PRODUCT:MEDIUM:установить"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "PRODUCT_VS_SERVICE.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Install may be product+service.",
+      "tags": [
+        "product_vs_service"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-02",
+      "phrase": "лицензия 1с цена",
+      "literal_meaning": "Цена лицензии 1С.",
+      "signals": [
+        "PRODUCT:MEDIUM:лицензия",
+        "COMMERCIAL_PRICE:MEDIUM:цена"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Price research vs buy.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Not hire.",
+      "tags": [
+        "product_vs_service"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-03",
+      "phrase": "настроить купленную 1с заказать",
+      "literal_meaning": "Заказать настройку уже купленной 1С.",
+      "signals": [
+        "CONFIGURATION:STRONG:настроить",
+        "PROVIDER_HIRE:EXPLICIT:заказать",
+        "PRODUCT:MEDIUM:купленную"
+      ],
+      "primary_intent": "REQUEST_CONFIGURATION",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Service on owned product — ACCEPT.",
+      "common_wrong_decision": "REJECT product",
+      "why_wrong_fails": "Заказать настройку — service.",
+      "tags": [
+        "product_vs_service",
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-04",
+      "phrase": "доработать купленный модуль 1с на заказ",
+      "literal_meaning": "Доработать купленный модуль 1С на заказ.",
+      "signals": [
+        "MODIFICATION:STRONG:доработать",
+        "PROVIDER_HIRE:MEDIUM:на заказ"
+      ],
+      "primary_intent": "REQUEST_MODIFICATION",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Modification service on owned module.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "На заказ — service.",
+      "tags": [
+        "product_vs_service",
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-05",
+      "phrase": "купить и внедрить erp",
+      "literal_meaning": "Купить и внедрить ERP.",
+      "signals": [
+        "PRODUCT:STRONG:купить",
+        "IMPLEMENTATION:STRONG:внедрить"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Bundled product+service.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Split unclear.",
+      "tags": [
+        "product_vs_service"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-06",
+      "phrase": "сравнить цены на erp системы",
+      "literal_meaning": "Сравнить цены на ERP-системы.",
+      "signals": [
+        "INFORMATIONAL:STRONG:сравнить",
+        "PRODUCT:MEDIUM:erp"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Product comparison.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Clear REJECT.",
+      "tags": [
+        "product_vs_service",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-07",
+      "phrase": "демо версия crm скачать",
+      "literal_meaning": "Скачать демо-версию CRM.",
+      "signals": [
+        "DOWNLOAD:EXPLICIT:скачать",
+        "PRODUCT:STRONG:демо версия"
+      ],
+      "primary_intent": "DOWNLOAD_RESOURCE",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Demo download.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Clear product.",
+      "tags": [
+        "product_vs_service",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-08",
+      "phrase": "внедрить купленную лицензию sap",
+      "literal_meaning": "Внедрить купленную лицензию SAP.",
+      "signals": [
+        "IMPLEMENTATION:STRONG:внедрить",
+        "PRODUCT:MEDIUM:лицензию"
+      ],
+      "primary_intent": "REQUEST_IMPLEMENTATION",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Implementation service likely but product owned.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "May need reviewer.",
+      "tags": [
+        "product_vs_service"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-09",
+      "phrase": "подключить модуль эдо 1с",
+      "literal_meaning": "Подключить модуль ЭДО в 1С.",
+      "signals": [
+        "CONFIGURATION:MEDIUM:подключить",
+        "PRODUCT:MEDIUM:модуль"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_INTEGRATION",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Install module vs integration project.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Ambiguous.",
+      "tags": [
+        "product_vs_service"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "PVS-10",
+      "phrase": "аренда 1с в облаке",
+      "literal_meaning": "Аренда 1С в облаке.",
+      "signals": [
+        "PRODUCT:MEDIUM:аренда",
+        "CLOUD:MEDIUM:облаке"
+      ],
+      "primary_intent": "BUY_PRODUCT_OR_MODULE",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "SaaS product vs hosted service.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Product/service blur.",
+      "tags": [
+        "product_vs_service"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-01",
+      "phrase": "работа программистом 1с",
+      "literal_meaning": "Работа программистом 1С.",
+      "signals": [
+        "CAREER:EXPLICIT:работа",
+        "ROLE:MEDIUM:программистом"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Job seeker.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Career not customer.",
+      "tags": [
+        "career_vs_provider",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-02",
+      "phrase": "найти программиста 1с в штат",
+      "literal_meaning": "Найти программиста 1С в штат.",
+      "signals": [
+        "EMPLOYER_HIRE:EXPLICIT:в штат",
+        "CAREER:STRONG:программиста"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Employer hiring.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Not service buyer.",
+      "tags": [
+        "career_vs_provider",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-03",
+      "phrase": "нужен программист 1с на проект подряд",
+      "literal_meaning": "Нужен программист 1С на проект по подряду.",
+      "signals": [
+        "PROVIDER_HIRE:EXPLICIT:подряд",
+        "ROLE:MEDIUM:программист"
+      ],
+      "primary_intent": "HIRE_SERVICE",
+      "competing_intent": "CAREER_EMPLOYMENT",
+      "eligibility": "ACCEPT",
+      "risk": "MEDIUM",
+      "reason": "Подряд disambiguates contractor.",
+      "common_wrong_decision": "REJECT career",
+      "why_wrong_fails": "Подряд — provider.",
+      "tags": [
+        "career_vs_provider",
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-04",
+      "phrase": "программист 1с услуги",
+      "literal_meaning": "Услуги программиста 1С.",
+      "signals": [
+        "ROLE:MEDIUM:программист",
+        "SUPPORT:WEAK:услуги"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Still short; услуги weak.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Weak evidence.",
+      "tags": [
+        "career_vs_provider",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-05",
+      "phrase": "1с разработчик удалённо",
+      "literal_meaning": "1С разработчик удалённо.",
+      "signals": [
+        "ROLE:MEDIUM:разработчик",
+        "CAREER:MEDIUM:удалённо"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "CAREER_EMPLOYMENT",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Job vs freelance unclear.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Not clear career.",
+      "tags": [
+        "career_vs_provider",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-06",
+      "phrase": "аутсорсинг программистов 1с",
+      "literal_meaning": "Аутсорсинг программистов 1С.",
+      "signals": [
+        "PROVIDER_HIRE:STRONG:аутсорсинг",
+        "ROLE:MEDIUM:программистов"
+      ],
+      "primary_intent": "HIRE_SERVICE",
+      "competing_intent": "CAREER_EMPLOYMENT",
+      "eligibility": "ACCEPT",
+      "risk": "LOW",
+      "reason": "Outsourcing — B2B provider.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Not job seeker.",
+      "tags": [
+        "career_vs_provider",
+        "accept"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-07",
+      "phrase": "стажировка 1с",
+      "literal_meaning": "Стажировка по 1С.",
+      "signals": [
+        "CAREER:EXPLICIT:стажировка"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "EDUCATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Internship.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Career clear.",
+      "tags": [
+        "career_vs_provider",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-08",
+      "phrase": "обязанности администратора 1с",
+      "literal_meaning": "Обязанности администратора 1С.",
+      "signals": [
+        "CAREER:MEDIUM:обязанности",
+        "EDUCATION:WEAK:implicit"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "INFORMATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Job duties research.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Career/info.",
+      "tags": [
+        "career_vs_provider",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-09",
+      "phrase": "требования к специалисту 1с",
+      "literal_meaning": "Требования к специалисту 1С.",
+      "signals": [
+        "CAREER:MEDIUM:требования",
+        "ROLE:MEDIUM:специалисту"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Job req vs hiring contractor.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Could be employer.",
+      "tags": [
+        "career_vs_provider",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CVP-10",
+      "phrase": "без опыта 1с работа",
+      "literal_meaning": "Работа по 1С без опыта.",
+      "signals": [
+        "CAREER:EXPLICIT:без опыта",
+        "CAREER:EXPLICIT:работа"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "EDUCATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Entry-level job.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Explicit career.",
+      "tags": [
+        "career_vs_provider",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-01",
+      "phrase": "crm",
+      "literal_meaning": "CRM.",
+      "signals": [
+        "TOPIC:WEAK:crm"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ABSTAIN",
+      "risk": "CRITICAL",
+      "reason": "Single token.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Head term.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-02",
+      "phrase": "erp",
+      "literal_meaning": "ERP.",
+      "signals": [
+        "TOPIC:WEAK:erp"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "CRITICAL",
+      "reason": "Single token.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Head term.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-03",
+      "phrase": "битрикс",
+      "literal_meaning": "Битрикс.",
+      "signals": [
+        "TOPIC:WEAK:битрикс"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "NAVIGATIONAL",
+      "eligibility": "ABSTAIN",
+      "risk": "CRITICAL",
+      "reason": "Brand head.",
+      "common_wrong_decision": "REJECT nav only",
+      "why_wrong_fails": "Too short.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-04",
+      "phrase": "1с erp",
+      "literal_meaning": "1С ERP.",
+      "signals": [
+        "TOPIC:MEDIUM:1с erp"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Product line name.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No verb.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-05",
+      "phrase": "интеграция",
+      "literal_meaning": "Интеграция.",
+      "signals": [
+        "INTEGRATION:WEAK:интеграция"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_INTEGRATION",
+      "eligibility": "ABSTAIN",
+      "risk": "CRITICAL",
+      "reason": "Generic noun.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No scope.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-06",
+      "phrase": "ТС ПИОТ",
+      "literal_meaning": "ТС ПИОТ.",
+      "signals": [
+        "REGULATORY:MEDIUM:ТС ПИОТ"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REGULATORY",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Regulatory acronym head.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Ambiguous.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-07",
+      "phrase": "внедрение",
+      "literal_meaning": "Внедрение.",
+      "signals": [
+        "IMPLEMENTATION:WEAK:внедрение"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_IMPLEMENTATION",
+      "eligibility": "ABSTAIN",
+      "risk": "CRITICAL",
+      "reason": "Lonely service noun.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No object.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-08",
+      "phrase": "1с бухгалтерия",
+      "literal_meaning": "1С Бухгалтерия.",
+      "signals": [
+        "PRODUCT:MEDIUM:1с бухгалтерия"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Product name.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Product vs service.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-09",
+      "phrase": "обновление 1с",
+      "literal_meaning": "Обновление 1С.",
+      "signals": [
+        "TOPIC:MEDIUM:обновление",
+        "DOWNLOAD:WEAK:implicit"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "DOWNLOAD_RESOURCE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Update vs support.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Ambiguous.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "SH-10",
+      "phrase": "1с отчётность",
+      "literal_meaning": "1С отчётность.",
+      "signals": [
+        "TOPIC:MEDIUM:отчётность",
+        "REGULATORY:WEAK:implicit"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REGULATORY",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Reporting module/regulatory.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Short head.",
+      "tags": [
+        "short_head",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-01",
+      "phrase": "сопровождение 1с",
+      "literal_meaning": "Сопровождение 1С.",
+      "signals": [
+        "SUPPORT:MEDIUM:сопровождение"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Wrong ACCEPT tempting due to catalogue match.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Service noun ≠ evidence.",
+      "tags": [
+        "counterexample",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-02",
+      "phrase": "курсы 1с для бухгалтеров цена",
+      "literal_meaning": "Цена курсов 1С для бухгалтеров.",
+      "signals": [
+        "EDUCATION:STRONG:курсы",
+        "COMMERCIAL_PRICE:MEDIUM:цена"
+      ],
+      "primary_intent": "EDUCATIONAL",
+      "competing_intent": "REQUEST_QUOTE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Wrong ACCEPT due to цена.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Education dominates.",
+      "tags": [
+        "counterexample",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-03",
+      "phrase": "заказать 1с",
+      "literal_meaning": "Заказать 1С.",
+      "signals": [
+        "PROVIDER_HIRE:EXPLICIT:заказать",
+        "PRODUCT:MEDIUM:1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "BUY_PRODUCT_OR_MODULE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Wrong ACCEPT — buy or service?",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "PRODUCT_VS_SERVICE.",
+      "tags": [
+        "counterexample",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-04",
+      "phrase": "внедрение erp что это",
+      "literal_meaning": "Что такое внедрение ERP.",
+      "signals": [
+        "EDUCATION:MEDIUM:что это",
+        "IMPLEMENTATION:WEAK:внедрение"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "EDUCATIONAL",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Wrong ABSTAIN/ACCEPT — definitional.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Clear informational.",
+      "tags": [
+        "counterexample",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-05",
+      "phrase": "1с вакансия москва",
+      "literal_meaning": "Вакансия 1С Москва.",
+      "signals": [
+        "CAREER:EXPLICIT:вакансия",
+        "GEO:MEDIUM:москва"
+      ],
+      "primary_intent": "CAREER_EMPLOYMENT",
+      "competing_intent": "HIRE_SERVICE",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Wrong ABSTAIN.",
+      "common_wrong_decision": "ABSTAIN",
+      "why_wrong_fails": "Career explicit.",
+      "tags": [
+        "counterexample",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-06",
+      "phrase": "техподдержка 1с бесплатно",
+      "literal_meaning": "Бесплатная техподдержка 1С.",
+      "signals": [
+        "SUPPORT:MEDIUM:техподдержка",
+        "FREE:EXPLICIT:бесплатно"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "REQUEST_SUPPORT",
+      "eligibility": "REJECT",
+      "risk": "LOW",
+      "reason": "Wrong ACCEPT.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "Free — not paid core.",
+      "tags": [
+        "counterexample",
+        "reject"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-07",
+      "phrase": "настроить crm",
+      "literal_meaning": "Настроить CRM.",
+      "signals": [
+        "CONFIGURATION:MEDIUM:настроить"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "DIY_HOW_TO",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Wrong ACCEPT from verb.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No hire.",
+      "tags": [
+        "counterexample",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-08",
+      "phrase": "стоимость сопровождения 1с",
+      "literal_meaning": "Стоимость сопровождения 1С.",
+      "signals": [
+        "COMMERCIAL_PRICE:MEDIUM:стоимость",
+        "SUPPORT:MEDIUM:сопровождение"
+      ],
+      "primary_intent": "INFORMATIONAL",
+      "competing_intent": "REQUEST_QUOTE",
+      "eligibility": "ABSTAIN",
+      "risk": "MEDIUM",
+      "reason": "Wrong REJECT.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "May precede hire.",
+      "tags": [
+        "counterexample",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-09",
+      "phrase": "программист 1с",
+      "literal_meaning": "Программист 1С.",
+      "signals": [
+        "ROLE:MEDIUM:программист 1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "CAREER_EMPLOYMENT",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Wrong REJECT as career only.",
+      "common_wrong_decision": "REJECT",
+      "why_wrong_fails": "Provider path possible.",
+      "tags": [
+        "counterexample",
+        "abstain",
+        "career_vs_provider"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    },
+    {
+      "id": "CNT-10",
+      "phrase": "монтаж сервера 1с",
+      "literal_meaning": "Монтаж сервера 1С.",
+      "signals": [
+        "MAINTENANCE:MEDIUM:монтаж",
+        "TOPIC:MEDIUM:сервер 1с"
+      ],
+      "primary_intent": "AMBIGUOUS",
+      "competing_intent": "REQUEST_MAINTENANCE",
+      "eligibility": "ABSTAIN",
+      "risk": "HIGH",
+      "reason": "Wrong ACCEPT from IT topic.",
+      "common_wrong_decision": "ACCEPT",
+      "why_wrong_fails": "No подрядчик/заказать.",
+      "tags": [
+        "counterexample",
+        "abstain"
+      ],
+      "training_only": true,
+      "gold_benchmark": false
+    }
+  ]
+}

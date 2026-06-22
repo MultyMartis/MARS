@@ -1,7 +1,7 @@
 {
   "backlog_id": "orca-ppc-semantic-intelligence-promotion-backlog",
   "version": "v1",
-  "all_items_status": "P0-A CHECKPOINTED; P0-B CHECKPOINTED; P0-C AUTHORIZED",
+  "all_items_status": "P0-A CHECKPOINTED; P0-B CHECKPOINTED; P0-C APPROVED",
   "items": [
     {
       "id": "P0-A",
@@ -29,33 +29,35 @@
       "prohibited_claims": ["not_phrase_registry", "not_production_decisions"],
       "corvonero_impact": "Required before new admission run",
       "status": "APPROVED — CHECKPOINTED",
-      "operator_approval": "B1-B7"
+      "operator_approval": "B1-B7",
+      "checkpoint_commit": "3151953"
     },
     {
       "id": "P0-C",
       "title": "Annotation Guideline",
       "purpose": "Human-readable rules, examples, counterexamples, adjudication policy",
       "inputs": ["P0-B_schema", "research_failure_modes", "corvonero_diagnostic_examples"],
-      "outputs": ["annotation_guideline_md"],
+      "outputs": ["semantic-intelligence/annotation/"],
       "dependencies": ["P0-B"],
       "authority": "operator_authority",
       "gate": "Guideline approved before benchmark annotation",
       "prohibited_claims": ["not_benchmark_data"],
       "corvonero_impact": "Required per D2 before semantic rerun",
-      "status": "AUTHORIZED"
+      "status": "APPROVED — IMPLEMENTATION NOT STARTED",
+      "operator_approval": "C1-C7"
     },
     {
       "id": "P0-D",
       "title": "Benchmark Charter",
       "purpose": "Universal ORCA benchmark 1200-2000 phrases",
-      "inputs": ["D5_sizing", "research_strata_table"],
+      "inputs": ["D5_sizing", "research_strata_table", "P0-C_guideline"],
       "outputs": ["benchmark_charter_md"],
       "dependencies": ["P0-C"],
       "authority": "operator_and_qa_owner",
       "gate": "Gold freeze before baseline eval",
       "prohibited_claims": ["not_trained_model", "not_production_core"],
       "corvonero_impact": "Parent program for Corvonero pilot",
-      "status": "NOT STARTED"
+      "status": "AUTHORIZED — NOT STARTED"
     },
     {
       "id": "P0-E",

@@ -1,0 +1,37 @@
+{
+  "record_id": "orca-p0-c-annotation-guideline-operator-approval",
+  "version": "v1",
+  "date": "2026-06-22",
+  "approvals": {
+    "C1_guideline_status": "APPROVED — IMPLEMENTATION NOT STARTED",
+    "C2_annotation_order": [
+      "literal_interpretation",
+      "likely_next_user_action",
+      "signal_extraction",
+      "primary_and_secondary_intent",
+      "competing_interpretations",
+      "provider_hire_likelihood",
+      "landing_compatibility",
+      "accept_reject_abstain",
+      "risk_and_review_requirement",
+      "decision_trace"
+    ],
+    "C3_abstain_governance": "mandatory_safety_outcome_for_unresolved_ambiguity",
+    "C4_example_library_authority": {
+      "role": "training_illustrations_only",
+      "not": ["benchmark_labels", "gold_truth", "automatic_production_authority"]
+    },
+    "C5_double_annotation_direction": "authorized_for_benchmark_design",
+    "C5_sla_defer_to": "P0-D",
+    "C6_numerical_thresholds": {
+      "operator_approved_d3": {
+        "commercial_precision_auto_accept_min": 0.95,
+        "protected_strata_fpr_max_per_class": 0.01
+      },
+      "all_other_thresholds": "PROPOSED — BENCHMARK VALIDATION REQUIRED"
+    },
+    "C7_p0_d_authorization": "AUTHORIZED"
+  },
+  "prior_approvals": ["A1-A7", "B1-B7", "D1-D7"],
+  "next_gate": "P0-D Universal Benchmark Charter — operator approval required"
+}

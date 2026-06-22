@@ -1,0 +1,43 @@
+{
+  "validation_id": "orca-annotation-guideline-validation",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "APPROVED — DOCUMENTATION VALIDATION",
+  "validation_type": "documentation_only",
+  "checks": [
+    {"id": "V-01", "criterion": "all_approved_taxonomy_values_represented", "method": "crosswalk_guideline_to_p0b_taxonomy_json", "expected": "no_orphan_vocabulary"},
+    {"id": "V-02", "criterion": "annotation_order_explicit", "method": "review_handbook_and_part_7", "expected": "10_step_mandatory_sequence"},
+    {"id": "V-03", "criterion": "accept_reject_abstain_rules_distinct", "method": "compare_terminal_standards", "expected": "non_overlapping_terminal_rules"},
+    {"id": "V-04", "criterion": "problem_queries_do_not_auto_accept", "method": "review_problem_query_standard", "expected": "problem_signal_alone_not_accept"},
+    {"id": "V-05", "criterion": "topic_match_does_not_auto_accept", "method": "review_commercial_evidence_and_anti_patterns", "expected": "evidence_not_auto_trigger"},
+    {"id": "V-06", "criterion": "product_service_distinction_exists", "method": "review_product_vs_service_standard", "expected": "distinct_adjudication_paths"},
+    {"id": "V-07", "criterion": "career_provider_distinction_exists", "method": "review_protected_noncommercial_standard", "expected": "career_vs_customer_separated"},
+    {"id": "V-08", "criterion": "diy_provider_distinction_exists", "method": "review_problem_and_protected_standards", "expected": "diy_vs_paid_specialist_separated"},
+    {"id": "V-09", "criterion": "short_head_policy_exists", "method": "review_short_head_standard", "expected": "short_head_rules_documented"},
+    {"id": "V-10", "criterion": "abstain_routes_exist", "method": "review_abstain_standard_and_decision_trees", "expected": "mandatory_abstain_conditions"},
+    {"id": "V-11", "criterion": "examples_cover_all_required_classes", "method": "inventory_example_library", "expected": "minimum_class_coverage_met"},
+    {"id": "V-12", "criterion": "rationales_phrase_specific", "method": "review_rationale_standard", "expected": "six_elements_required_generic_prohibited"},
+    {"id": "V-13", "criterion": "no_benchmark_created", "method": "directory_scan", "expected": "no_gold_benchmark_rows"},
+    {"id": "V-14", "criterion": "no_corvonero_corpus_relabelled", "method": "directory_scan_and_manifest", "expected": "training_illustrations_only"},
+    {"id": "V-15", "criterion": "no_classifier_runtime_implemented", "method": "directory_scan", "expected": "no_classifier_or_runtime_in_p0c_scope"}
+  ],
+  "example_library_minimum_coverage": {
+    "clear_accept": 20,
+    "clear_reject": 20,
+    "abstain": 20,
+    "problem_query": 10,
+    "product_vs_service": 10,
+    "career_vs_provider": 10,
+    "short_head": 10,
+    "difficult_counterexamples": 10
+  },
+  "out_of_scope": [
+    "inter_annotator_agreement_measurement",
+    "classifier_accuracy_blind_test",
+    "live_campaign_validation",
+    "ajv_runtime_validator_execution",
+    "gold_label_adjudication"
+  ],
+  "results": "APPROVED — operator C1–C7 2026-06-22",
+  "operator_approval": "decisions/ORCA-P0-C-ANNOTATION-GUIDELINE-OPERATOR-APPROVAL-v1.md"
+}
