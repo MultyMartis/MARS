@@ -39,3 +39,40 @@ unknown: header-callback-action
 why_unknown: Callback modal behavior and target not in JPG
 needed_from_operator: Define callback CTA behavior at JS/HTML gate
 ---
+
+---
+timestamp: 2026-06-22T08:55:26Z
+id: SU-HDR-001
+marker: header-logo-url
+reason: Home page URL not in allowed sources
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+id: SU-HDR-003
+marker: header-messenger-telegram-url
+reason: Telegram deep link not in JPG
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+id: SU-HDR-004
+marker: header-messenger-whatsapp-url
+reason: WhatsApp deep link not in JPG
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+id: SU-HDR-005
+marker: header-callback-action
+reason: Callback modal/flow not specified
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+id: SU-HDR-006
+marker: header-search-action
+reason: Search behavior not implemented
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+id: SU-HDR-008-014
+marker: header-nav-url-*
+reason: Seven navigation URLs unknown; href omitted intentionally
+---

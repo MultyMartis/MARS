@@ -43,3 +43,36 @@ action: build
 reason: npm run build validation after header HTML
 expected_outcome: Build succeeded; dist not committed
 ---
+
+---
+timestamp: 2026-06-22T08:55:26Z
+task: FP-0002 V6 HEADER HTML CONTENT AND ASSET BINDING
+file_changed: src/partials/layout/header.html
+action: modified
+reason: Navigation links, logo/messenger/search asset binding, text semantics
+expected_outcome: header_html_status=APPROVED
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+task: FP-0002 V6 HEADER HTML CONTENT AND ASSET BINDING
+file_changed: src/img/branding/logo.svg
+action: created
+reason: Copy confirmed logo from 03_BRANDING
+expected_outcome: SHA-256 857884a6e351b935a47934c7cf0b4221b9f59cecf82ccb9809f2c0a107d7ff8b
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+task: FP-0002 V6 HEADER HTML CONTENT AND ASSET BINDING
+file_changed: src/img/icons/search.svg
+action: created
+reason: Extract fa-search glyph from Font Awesome Pro 5.15.4
+expected_outcome: SHA-256 032e727bb013834a3e33b74e159e9e36b93ea7fbc304f5a61326e636b20b1b34
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+task: FP-0002 V6 HEADER HTML CONTENT AND ASSET BINDING
+file_changed: dist/
+action: build
+reason: npm run build validation
+expected_outcome: Build succeeded; dist not committed
+---

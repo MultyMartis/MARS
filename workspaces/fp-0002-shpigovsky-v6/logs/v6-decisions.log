@@ -55,3 +55,31 @@ source_used: authorized v6 social icon copies
 reason: Icons match JPG GROUP-05; URLs remain SAFE UNKNOWN
 rejected_alternatives: Unicode symbols, legacy workspace icons
 ---
+
+---
+timestamp: 2026-06-22T08:55:26Z
+decision: header_html_status APPROVED
+reason: DOM, semantics, and asset bindings verified against JPG SSOT
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+decision: header_scss_ready_for_operator_review true
+reason: HTML structure and assets bound; SCSS not authorized automatically
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+decision: navigation semantics
+reason: Seven nav items changed from button to anchor without href
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+decision: logo asset COPIED
+source: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/03_BRANDING/logo.svg
+sha256: 857884a6e351b935a47934c7cf0b4221b9f59cecf82ccb9809f2c0a107d7ff8b
+---
+---
+timestamp: 2026-06-22T08:55:26Z
+decision: search icon EXTRACTED
+source: shared/assets/icon-libraries/Font Awesome Pro 5.15.4/webfonts/fa-solid-900.svg glyph search
+sha256: 032e727bb013834a3e33b74e159e9e36b93ea7fbc304f5a61326e636b20b1b34
+---

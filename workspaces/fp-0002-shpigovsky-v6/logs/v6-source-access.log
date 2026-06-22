@@ -72,3 +72,66 @@ REASON:
 Required to create the V6 geometry map and structure lock without FIG, PDF or legacy sources.
 ---
 ACCESS: allowed — HOME-PAGE-FULL-MOCKUP.jpg (grounding review visual source)
+
+---
+SOURCE:
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/03_BRANDING/logo.svg
+
+DECISION:
+скопирован
+
+REASON:
+Визуально соответствует логотипу Header на JPG; текущий project asset в FP-0002 INCOMING
+
+SHA-256:
+857884a6e351b935a47934c7cf0b4221b9f59cecf82ccb9809f2c0a107d7ff8b
+---
+---
+SOURCE:
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/03_BRANDING/Telegram-ico.svg
+
+DECISION:
+использован
+
+REASON:
+Соответствует Telegram icon на JPG; ранее нормализован в src/img/social/telegram.svg
+
+SHA-256:
+5f49f558bce1d5341ded42db8af9c0e03a0d91061ad992daf9b9d60cc6b138e2
+---
+---
+SOURCE:
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/03_BRANDING/WhatsApp-ico.svg
+
+DECISION:
+использован
+
+REASON:
+Соответствует WhatsApp icon на JPG; ранее нормализован в src/img/social/whatsapp.svg
+
+SHA-256:
+7c61346a68fa2e6f54f126e230b914eb6e63ae667997839a7b340f21201297f0
+---
+---
+SOURCE:
+shared/assets/icon-libraries/Font Awesome Pro 5.15.4/webfonts/fa-solid-900.svg (glyph search)
+
+DECISION:
+скопирован
+
+REASON:
+Project search asset отсутствовал; fa-search визуально близок JPG magnifying glass; currentColor single-path extract
+
+SHA-256:
+032e727bb013834a3e33b74e159e9e36b93ea7fbc304f5a61326e636b20b1b34
+---
+---
+SOURCE:
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+использован
+
+REASON:
+Единственный visual authority; SHA-256 cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290
+---
