@@ -1,5 +1,32 @@
 <header class="site-header">
   <div class="container">
+    <div class="site-header__mobile-bar">
+      <a class="site-header__logo site-header__logo--mobile" href="#">
+        <img
+          class="site-header__logo-image"
+          src="assets/img/branding/logo.svg"
+          alt="Шпиговский дом"
+        >
+      </a>
+      <a
+        class="site-header__phone site-header__phone--mobile-primary"
+        href="tel:+79251836464"
+      >
+        8 (925) 183-64-64
+      </a>
+      <button
+        type="button"
+        class="site-header__menu-toggle"
+        data-offcanvas-open
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Открыть меню"
+      >
+        <span class="site-header__menu-toggle-icon" aria-hidden="true">
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
+    </div>
     <div class="site-header__top">
       <a class="site-header__logo" href="#">
         <img
@@ -85,6 +112,106 @@
           </li>
         </ul>
       </nav>
+    </div>
+  </div>
+
+  <div
+    class="offcanvas"
+    id="mobile-menu"
+    data-offcanvas
+    data-offcanvas-state="closed"
+    aria-hidden="true"
+  >
+    <div
+      class="offcanvas__overlay"
+      data-offcanvas-overlay
+    ></div>
+
+    <div
+      class="offcanvas__panel"
+      data-offcanvas-panel
+      role="dialog"
+      aria-modal="true"
+      aria-label="Мобильное меню"
+    >
+      <div class="offcanvas__header">
+        <a class="offcanvas__logo" href="#">
+          <img
+            class="offcanvas__logo-image"
+            src="assets/img/branding/logo.svg"
+            alt="Шпиговский дом"
+          >
+        </a>
+
+        <button
+          type="button"
+          class="offcanvas__close"
+          data-offcanvas-close
+          aria-label="Закрыть меню"
+        >
+          <span class="offcanvas__close-icon" aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </div>
+
+      <nav class="offcanvas__nav" aria-label="Мобильная навигация">
+        <ul class="offcanvas__nav-list">
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">Лечение и профилактика</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">Генотипирование</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">Специалисты</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">О&nbsp;центре</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">Отзывы</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">Статьи</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="offcanvas__contacts">
+        <div class="offcanvas__phones">
+          <a class="offcanvas__phone" href="tel:+79251836464">8 (925) 183-64-64</a>
+          <a class="offcanvas__phone" href="tel:+79950239226">8 (995) 023-92-26</a>
+        </div>
+        <div class="offcanvas__messengers">
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Telegram"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/telegram.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="WhatsApp"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/whatsapp.svg"
+              alt=""
+            >
+          </a>
+        </div>
+        <button type="button" class="btn offcanvas__cta">Заказать звонок</button>
+      </div>
     </div>
   </div>
 </header>

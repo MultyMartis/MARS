@@ -69,6 +69,8 @@ Production PASS
 
 **FP-0002 V6 desktop stable baseline (2026-06-23):** Milestone **FP-0002 FIRST STABLE DESKTOP BASELINE** — release `FP-0002-V6-DESKTOP-STABLE-01`, tag `fp-0002-v6-desktop-stable-01`, workspace `workspaces/fp-0002-shpigovsky-v6/`; [release manifest](../../workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md); authorized next phase: mobile Header, off-canvas menu, mobile Footer; **not** mobile implementation.
 
+**FP-0002 V6 mobile shell phase (2026-06-23):** Mobile Header + off-canvas + mobile Footer **IMPLEMENTED** in `workspaces/fp-0002-shpigovsky-v6/`; review [FP-0002-V6-MOBILE-HEADER-OFFCANVAS-FOOTER-REVIEW.md](../../workspaces/fp-0002-shpigovsky-v6/reviews/responsive/FP-0002-V6-MOBILE-HEADER-OFFCANVAS-FOOTER-REVIEW.md); contract [off-canvas-component-contract-v1.md](off-canvas-component-contract-v1.md); Hero mobile / main content **NOT STARTED**.
+
 **Reporting rollup:** [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5–§6 · **Production PASS authority:** [operational-qa-entry-v1.md](operational-qa-entry-v1.md) § Production PASS authority.
 
 ## Prompt → execute → report

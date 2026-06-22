@@ -1,28 +1,9 @@
-﻿2026-06-23T00:50Z | DECISION | One Project SCSS File Law active
-2026-06-23T00:50Z | DECISION | Unified Main Radius Law --radius-main 30px + --radius-full
-2026-06-23T00:50Z | DECISION | No Button Letter Spacing Law
-2026-06-23T00:50Z | DECISION | Preserve operator _root and _hero manual changes
-2026-06-23T00:50Z | DECISION | FA vendor bridge external
-2026-06-23T12:00Z | DECISION | Universal Button System Law v1 — MANDATORY PRODUCTION CONTRACT (Factory-wide)
-2026-06-23T12:00Z | DECISION | Base class .btn; modifiers .btn_dark, .btn--primary only; no parallel block button systems
-2026-06-23T12:00Z | DECISION | --pad-btns aliases --control-padding-inline (20px); --main-size-btns aliases --control-height-primary (45px)
-2026-06-23T12:00Z | DECISION | Color mapping: main-dark to --color-text-primary; font-light to --color-text-inverse; accent to --color-accent
-2026-06-23T12:00Z | DECISION | Button radius: --radius-full (pill) for all .btn; replaces prior --radius-main on CTAs
-2026-06-23T12:00Z | DECISION | Compact callback label typography (12px) remains block-level on site-header__callback / site-footer__callback only
-2026-06-23T12:00Z | DECISION | Primary filled accent at rest: .btn.btn_dark.btn--primary combination documented
-2026-06-23T12:00Z | DECISION | Removed --button-font-size, --button-line-height, --button-font-weight from :root (superseded by .btn)
-2026-06-23T12:00Z | DECISION | Operator header padding change (var(--pad-x)) preserved as authority
-2026-06-23T00:00:00Z | SOURCE_AUTHORITY | Operator manual src overrides prior artefacts
-2026-06-23T00:00:00Z | EXTERNAL_FONT_RISK | PARTIAL external Google Fonts dependency
-
-2026-06-23T21:00:00Z | DECISION | Operator rejected Google Fonts + font-display:swap — visible FOUT remains
-2026-06-23T21:00:00Z | DECISION | Migrate to local WOFF2 delivery model (Manipulator pattern)
-2026-06-23T21:00:00Z | DECISION | Use font-display:block for local critical Inter
-2026-06-23T21:00:00Z | DECISION | Preload inter-400, inter-400-latin, inter-300 (above-fold critical)
-2026-06-23T21:00:00Z | DECISION | Font source: @fontsource/inter@5.2.8 (Google Fonts Inter v20 equivalent, OFL)
-2026-06-23T21:00:00Z | DECISION | Static weight model with cyrillic+latin unicode-range (RU site requirement)
-2026-06-23T21:00:00Z | DECISION | operator_font_approval remains PENDING_OPERATOR_REVIEW
-2026-06-23T21:00:00Z | DECISION | Previous load-stability report correction: swap did not eliminate visible FOUT
-2026-06-23T21:00:00Z | DECISION | Website Factory font-and-layout-stability-law v1.1 — local WOFF2 default + operator visual gate
-
-[2026-06-23T04:18:03+07:00] DECISION=FREEZE_DESKTOP_BASELINE release=FP-0002-V6-DESKTOP-STABLE-01 reason=operator_visual_approval scope=header,hero,footer,local_inter_woff2 exclude=mobile,main_content next=mobile_header,offcanvas_menu,mobile_footer
+﻿2026-06-23T04:31:00Z | DECISION | Responsive phase authorized by operator task FP-0002 mobile header/offcanvas/footer
+2026-06-23T04:31:00Z | DECISION | Breakpoint max-width 1024px / min-width 1025px — source: FP-0002-V6-SECTION-001-SPECIFICATION.json breakpoint_operator_rule_px 1024
+2026-06-23T04:31:00Z | DECISION | Primary mobile header phone: 8 (925) 183-64-64 — source-order (first in canonical header phones block)
+2026-06-23T04:31:00Z | DECISION | Secondary phone location: off-canvas contacts + mobile footer (site-footer__phone--secondary)
+2026-06-23T04:31:00Z | DECISION | Off-canvas direction: right edge LTR; width min(320px, calc(100vw - var(--pad-gap-tight)*2))
+2026-06-23T04:31:00Z | DECISION | JS hooks: data-offcanvas, data-offcanvas-open, data-offcanvas-close, data-offcanvas-overlay, data-offcanvas-panel
+2026-06-23T04:31:00Z | DECISION | Navigation source: duplicated markup in off-canvas (desktop safety over shared partial refactor)
+2026-06-23T04:31:00Z | DECISION | Desktop baseline preserved — responsive rules scoped to max-width 1024px + off-canvas desktop CSS safety net min-width 1025px
+2026-06-23T04:31:00Z | DECISION | Hero mobile NOT STARTED; main content NOT STARTED

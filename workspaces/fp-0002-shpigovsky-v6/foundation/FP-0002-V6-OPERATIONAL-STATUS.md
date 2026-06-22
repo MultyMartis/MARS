@@ -1,6 +1,6 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (desktop stable baseline freeze)
+**Updated:** 2026-06-23 (mobile header, off-canvas, footer responsive phase)
 
 ## Desktop stable release
 
@@ -46,11 +46,11 @@ No automated task may overwrite current src without an explicit operator instruc
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Main content sections | NOT STARTED |
-| Mobile Header | AUTHORIZED_NOT_STARTED |
-| Mobile off-canvas menu | AUTHORIZED_NOT_STARTED |
-| Mobile Footer | AUTHORIZED_NOT_STARTED |
-| Responsive (mobile) | NOT STARTED |
-| JavaScript | NOT STARTED (zero skeleton) |
+| Mobile Header | **IMPLEMENTED** |
+| Mobile off-canvas menu | **IMPLEMENTED** |
+| Mobile Footer | **IMPLEMENTED** |
+| Responsive (mobile header/footer) | **IMPLEMENTED** (Hero/main NOT STARTED) |
+| JavaScript | **ACTIVE** (off-canvas in `main.js`) |
 
 **Build map:** Header → Hero → empty `main` → Footer (`dist/index.html`).
 
