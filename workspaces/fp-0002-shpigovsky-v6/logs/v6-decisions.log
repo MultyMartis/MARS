@@ -611,3 +611,363 @@ CMP-020 registered as site-footer; repeat=1.
 REASON:
 Visible pattern in block Y-range; dark blue ~Y15420+; logo, contacts, link columns.
 ---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=904
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-001 and BLOCK-002
+
+REASON:
+Hero photo and overlay end; light-blue page intro with heading and 6-card grid begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=1456
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-002 and BLOCK-003
+
+REASON:
+6-card grid ends; quote block with portrait begins within continuous light-blue page band.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=1904
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-003 and BLOCK-004
+
+REASON:
+Quote block ends; accordion services list begins; same page background family.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=2232
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-004 and BLOCK-005
+
+REASON:
+Accordion list transitions to row of square clinical photos within programs area.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=2824
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-005 and BLOCK-006
+
+REASON:
+Photo row ends; heading and text block (team/approach copy) follows in same composition.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=3312
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-006 and BLOCK-007
+
+REASON:
+Text block to following team content; no full-width background break.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=3912
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-007 and BLOCK-008
+
+REASON:
+Continuous light-blue team section; boundary aligns with internal row not page panel.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=4544
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-008 and BLOCK-009
+
+REASON:
+Page-light content ends; full-width staff group photograph (#0e0e26 band) begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=4992
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-009 and BLOCK-010
+
+REASON:
+Full-width photograph ends; light page and second card grid resume.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=5480
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-010 and BLOCK-011
+
+REASON:
+Card grid transitions to full-width landscape photograph within post-team content flow.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=6064
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-011 and BLOCK-012
+
+REASON:
+Landscape photograph ends; benefit 6-card grid section with new heading begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=6776
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-012 and BLOCK-013
+
+REASON:
+Benefit card grid ends; reviews subsection with two cards begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=7136
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-013 and BLOCK-014
+
+REASON:
+Reviews end; process/requirements heading and numbered steps begin.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=7504
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-014 and BLOCK-015
+
+REASON:
+Numbered steps transition to dark-blue CTA banner inside process section.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=7848
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-015 and BLOCK-016
+
+REASON:
+CTA banner ends; dark interior photo band for documents section follows.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=8408
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-016 and BLOCK-017
+
+REASON:
+Interior photo band ends; documents list on light-blue page continues.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=8824
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-017 and BLOCK-018
+
+REASON:
+Documents text transitions to interior hallway gallery photos.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=9416
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-018 and BLOCK-019
+
+REASON:
+Interior gallery band ends; rehabilitation program list with thumb+text rows begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=10008
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-019 and BLOCK-020
+
+REASON:
+Split between program list item rows within same 4-item section.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=10368
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-020 and BLOCK-021
+
+REASON:
+Program rows end; bordered philosophy/info panel begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=10880
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-021 and BLOCK-022
+
+REASON:
+Bordered panel to comfort/gallery heading within diagnostics/comfort area.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=11248
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-022 and BLOCK-023
+
+REASON:
+Section heading to facility photo mosaic grid.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=11592
+
+DECISION:
+ALGORITHMIC_FALSE_POSITIVE between BLOCK-023 and BLOCK-024
+
+REASON:
+Luminance spike from single mosaic photo tile (#133848); mosaic continues.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=11984
+
+DECISION:
+ALGORITHMIC_FALSE_POSITIVE between BLOCK-024 and BLOCK-025
+
+REASON:
+Dark photo tile inside mosaic grid; not a page-level section edge.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=12336
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-025 and BLOCK-026
+
+REASON:
+Facility mosaic gallery ends; video section with two play thumbs begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=13136
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-026 and BLOCK-027
+
+REASON:
+Video thumbs end; light page continues toward specialists — not contact form.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=13456
+
+DECISION:
+ALGORITHMIC_FALSE_POSITIVE between BLOCK-027 and BLOCK-028
+
+REASON:
+Short local dark band (~54px) from image edge; center row remains light-blue page.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=13776
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-028 and BLOCK-029
+
+REASON:
+Specialists section heading row to 3-column profile cards.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=14368
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-029 and BLOCK-030
+
+REASON:
+Specialists cards end; Articles section with 3 cards begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=14736
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-030 and BLOCK-031
+
+REASON:
+Articles end; FAQ accordion list section begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=15064
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-031 and BLOCK-032
+
+REASON:
+FAQ accordion continues; no compositional page break.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=15408
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-032 and BLOCK-033
+
+REASON:
+FAQ/light page ends; contact band with dark left panel and form (Y~15420 mixed luminance) begins.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=15776
+
+DECISION:
+CONFIRMED_SECTION_BOUNDARY between BLOCK-033 and BLOCK-034
+
+REASON:
+Contact form band ends; footer link columns on light page begin.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — boundary at Y=16152
+
+DECISION:
+INTERNAL_SUBBLOCK_BOUNDARY between BLOCK-034 and BLOCK-035
+
+REASON:
+Footer link columns to bottom copyright/social strip within one footer composition.
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — SECTION-001 Header/Hero
+
+DECISION:
+SAFE UNKNOWN — no reliable major-section boundary between header bar and hero photo
+
+REASON:
+Header visually overlays hero; exact Y split not determinable from JPG alone
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — CMP-019 contact form
+
+DECISION:
+Relocated from BLOCK-027 to BLOCK-033 / SECTION-010
+
+REASON:
+BLOCK-027 center row is light page; contact band with dark left panel visible at Y~15408-15776
+---

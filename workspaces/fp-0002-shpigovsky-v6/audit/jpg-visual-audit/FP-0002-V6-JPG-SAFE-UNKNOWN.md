@@ -19,4 +19,12 @@
 ## Per-block boundary ambiguity
 
 - BLOCK-001: boundary or internal column layout — MEDIUM confidence
-- BLOCK-035: boundary or internal column layout — LOW confidence
+- BLOCK-035: boundary or internal column layout — LOW confidence (y_end corrected to 16343)
+
+## Grounding review (2026-06-22)
+
+- Header/Hero exact Y split within SECTION-001 — SAFE UNKNOWN
+- Whether CMP-004 and CMP-008 are identical component — SAFE UNKNOWN
+- 1138px median content width vs full-width sections — SAFE UNKNOWN
+- Header bar exact height (~174px estimated) — SAFE UNKNOWN
+- BLOCK-027 prior contact-form role — **corrected** to BLOCK-033 in grounded map

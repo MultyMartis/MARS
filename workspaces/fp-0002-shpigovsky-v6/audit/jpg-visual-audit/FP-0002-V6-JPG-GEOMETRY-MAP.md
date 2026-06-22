@@ -1,5 +1,9 @@
 # FP-0002 V6 JPG GEOMETRY MAP
 
+> **RAW ALGORITHMIC SEGMENTATION — NOT IMPLEMENTATION STRUCTURE**
+>
+> Block table below is the preserved algorithmic map. Visually grounded major sections: `review/FP-0002-V6-JPG-GROUNDED-STRUCTURE.json`. Coordinate model: `y_start` inclusive, `y_end` exclusive; page ends at **16343**.
+
 Source: HOME-PAGE-FULL-MOCKUP.jpg (1398×16343px)
 
 ## Global table
@@ -40,7 +44,7 @@ Source: HOME-PAGE-FULL-MOCKUP.jpg (1398×16343px)
 | BLOCK-032 | segment-32 | 15064 | 15408 | 344 | #e6eff6 | 0 | 1397 | 1398 | SAFE UNKNOWN | HIGH |
 | BLOCK-033 | segment-33 | 15408 | 15776 | 368 | #ffffff | 6 | 1397 | 1392 | SAFE UNKNOWN | HIGH |
 | BLOCK-034 | segment-34 | 15776 | 16152 | 376 | #e6eff6 | 0 | 1397 | 1398 | SAFE UNKNOWN | HIGH |
-| BLOCK-035 | segment-35 | 16152 | 16342 | 190 | #e6eff6 | 0 | 1397 | 1398 | SAFE UNKNOWN | LOW |
+| BLOCK-035 | segment-35 | 16152 | 16343 | 191 | #e6eff6 | 0 | 1397 | 1398 | SAFE UNKNOWN | LOW |
 
 ## Vertical map
 

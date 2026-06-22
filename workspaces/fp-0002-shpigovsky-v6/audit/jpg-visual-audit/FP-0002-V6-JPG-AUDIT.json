@@ -345,7 +345,7 @@
       "content_width": 1397,
       "dominant_family": "visual-heavy",
       "confidence": "HIGH",
-      "proven_role": "contact form dark section (visually proven)"
+      "proven_role": null
     },
     {
       "id": "BLOCK-028",
@@ -369,7 +369,7 @@
       "content_width": 1398,
       "dominant_family": "visual-heavy",
       "confidence": "HIGH",
-      "proven_role": null
+      "proven_role": "specialists 3-card row (visually grounded)"
     },
     {
       "id": "BLOCK-030",
@@ -417,7 +417,7 @@
       "content_width": 1392,
       "dominant_family": "visual-heavy",
       "confidence": "HIGH",
-      "proven_role": null
+      "proven_role": "contact form band (visually grounded — SECTION-010)"
     },
     {
       "id": "BLOCK-034",
@@ -434,8 +434,8 @@
     {
       "id": "BLOCK-035",
       "y_start": 16152,
-      "y_end": 16342,
-      "height": 190,
+      "y_end": 16343,
+      "height": 191,
       "content_x_start": 0,
       "content_x_end": 1397,
       "content_width": 1398,
@@ -627,22 +627,22 @@
     },
     {
       "id": "CMP-019",
-      "name": "contact-form-dark-section",
-      "first": "BLOCK-027",
+      "name": "contact-form-band",
+      "first": "BLOCK-033",
       "repeat": 1,
       "shared": false,
       "states": "default",
-      "notes": "dark blue full-width; heading left; form right",
+      "notes": "dark left panel + form fields Y~15408-15776; grounding review corrected from BLOCK-027",
       "unknown": "validation, submit"
     },
     {
       "id": "CMP-020",
       "name": "site-footer",
-      "first": "BLOCK-033",
+      "first": "BLOCK-034",
       "repeat": 1,
       "shared": false,
       "states": "default",
-      "notes": "dark blue ~Y15420+; logo, contacts, link columns",
+      "notes": "light page footer Y~15776-16343; grounding review corrected from BLOCK-033 dark-blue claim",
       "unknown": "legal links href"
     }
   ],
@@ -706,7 +706,12 @@
     "relationship between JPG content width 1138px and future CSS container 1220px"
   ],
   "forbidden_sources_accessed": [],
-  "structure_lock_status": "JPG_DERIVED",
+  "structure_lock_status": "JPG_GROUNDED",
+  "raw_segmentation_note": "RAW ALGORITHMIC SEGMENTATION — NOT IMPLEMENTATION STRUCTURE",
+  "grounded_structure_path": "audit/jpg-visual-audit/review/FP-0002-V6-JPG-GROUNDED-STRUCTURE.json",
+  "grounding_review_verdict": "PARTIAL",
+  "major_section_count": 11,
   "implementation_authorized": false,
-  "verdict": "PASS"
+  "header_implementation_authorized": false,
+  "verdict": "PARTIAL"
 }

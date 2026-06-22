@@ -1,5 +1,13 @@
 # FP-0002 V6 JPG VISUAL AUDIT
 
+> **RAW ALGORITHMIC SEGMENTATION — NOT IMPLEMENTATION STRUCTURE**
+>
+> The 35 `BLOCK-*` entries below are pixel-derived algorithmic segments (8px row scan, transition-score peaks, min distance ~320px). They are **preserved for audit history** only.
+>
+> **Visually grounded structure** for implementation planning: see `review/FP-0002-V6-JPG-GROUNDED-STRUCTURE.json` and `review/FP-0002-V6-JPG-AUDIT-GROUNDING-REVIEW.md` — **11 major sections**, internal groups, 10 confirmed section boundaries, 21 internal boundaries, 3 false positives.
+>
+> Grounding review verdict: **PARTIAL** (Header/Hero Y split SAFE UNKNOWN). `header_implementation_authorized`: false.
+
 ## Source authority
 
 | Field | Value |
@@ -19,7 +27,7 @@
 | Color mode | RGB |
 | Coordinate origin | top-left (0,0) |
 | Y page top | 0 |
-| Y page bottom | 16342 |
+| Y page bottom (exclusive end) | 16343 |
 
 ## Coordinate system
 
@@ -31,7 +39,7 @@
 
 ## Global page segmentation
 
-35 major segments detected (BLOCK-001 … BLOCK-035). Boundaries are pixel-derived; some adjacent segments share page-light family — not merged per V6 rules.
+35 **raw algorithmic** segments detected (BLOCK-001 … BLOCK-035). Boundaries are pixel-derived; grounding review confirmed most are **not** major page sections — see review artefact.
 
 | Segment | Y start | Y end | Height | Dominant family | Proven role |
 |---------|---------|-------|--------|-----------------|-------------|
@@ -61,15 +69,15 @@
 | BLOCK-024 | 11592 | 11984 | 392 | visual-heavy | SAFE UNKNOWN — role not labeled on JPG |
 | BLOCK-025 | 11984 | 12336 | 352 | visual-heavy | SAFE UNKNOWN — role not labeled on JPG |
 | BLOCK-026 | 12336 | 13136 | 800 | visual-heavy | SAFE UNKNOWN — role not labeled on JPG |
-| BLOCK-027 | 13136 | 13456 | 320 | visual-heavy | contact form dark section (visually proven) |
+| BLOCK-027 | 13136 | 13456 | 320 | visual-heavy | post-video light page (NOT contact form — corrected) |
 | BLOCK-028 | 13456 | 13776 | 320 | page | SAFE UNKNOWN — role not labeled on JPG |
-| BLOCK-029 | 13776 | 14368 | 592 | visual-heavy | SAFE UNKNOWN — role not labeled on JPG |
+| BLOCK-029 | 13776 | 14368 | 592 | visual-heavy | specialists 3-card row (visually grounded) |
 | BLOCK-030 | 14368 | 14736 | 368 | page | SAFE UNKNOWN — role not labeled on JPG |
 | BLOCK-031 | 14736 | 15064 | 328 | page | SAFE UNKNOWN — role not labeled on JPG |
 | BLOCK-032 | 15064 | 15408 | 344 | page | SAFE UNKNOWN — role not labeled on JPG |
-| BLOCK-033 | 15408 | 15776 | 368 | visual-heavy | footer region (dark blue band visible) |
-| BLOCK-034 | 15776 | 16152 | 376 | page | footer region (dark blue band visible) |
-| BLOCK-035 | 16152 | 16342 | 190 | page | footer region (dark blue band visible) |
+| BLOCK-033 | 15408 | 15776 | 368 | visual-heavy | contact form band (SECTION-010) |
+| BLOCK-034 | 15776 | 16152 | 376 | page | footer link columns (SECTION-011) |
+| BLOCK-035 | 16152 | 16343 | 191 | page | footer region (light page strip) |
 
 ## Block audit
 

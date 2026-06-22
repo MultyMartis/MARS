@@ -1,6 +1,42 @@
 # FP-0002 V6 JPG STRUCTURE LOCK
 
-JPG-derived hierarchy. No HTML/CSS/JS.
+> **Implementation structure lock references visually grounded major sections only.**
+>
+> Raw algorithmic `BLOCK-*` list below is preserved as audit history — **not** HTML structure. See `review/FP-0002-V6-JPG-GROUNDED-STRUCTURE.json`.
+
+## Visually grounded major sections
+
+| ID | Y start | Y end | Height | Role |
+|----|---------|-------|--------|------|
+| SECTION-001 | 0 | 904 | 904 | Header + hero |
+| SECTION-002 | 904 | 4544 | 3640 | Intro, quote, programs, team copy |
+| SECTION-003 | 4544 | 4992 | 448 | Full-width staff group photo |
+| SECTION-004 | 4992 | 6064 | 1072 | Second card grid + landscape photo |
+| SECTION-005 | 6064 | 9416 | 3352 | Benefits, reviews, process, CTA, documents, interior gallery |
+| SECTION-006 | 9416 | 12336 | 2920 | Program list, philosophy, facility mosaic |
+| SECTION-007 | 12336 | 14368 | 2032 | Video + specialists |
+| SECTION-008 | 14368 | 14736 | 368 | Articles |
+| SECTION-009 | 14736 | 15408 | 672 | FAQ accordion |
+| SECTION-010 | 15408 | 15776 | 368 | Contact form band |
+| SECTION-011 | 15776 | 16343 | 567 | Site footer |
+
+## Internal groups (selected)
+
+- SECTION-001-GROUP-01: header top bar (Y 0–174)
+- SECTION-001-GROUP-02: hero photo + overlay (Y 174–904)
+- SECTION-005-GROUP-04: dark-blue CTA banner (BLOCK-015)
+- SECTION-007-GROUP-01: video thumbs (BLOCK-026)
+- SECTION-007-GROUP-04: specialist profile cards (BLOCK-029)
+- SECTION-010: contact form band (BLOCK-033)
+- SECTION-011-GROUP-01/02: footer columns + bottom strip (BLOCK-034–035)
+
+Full group list: `review/FP-0002-V6-JPG-GROUNDED-STRUCTURE.json`.
+
+---
+
+## RAW ALGORITHMIC BLOCKS (NOT IMPLEMENTATION STRUCTURE)
+
+JPG-derived hierarchy preserved for audit history. No HTML/CSS/JS.
 
 ## BLOCK-001
 - Order: 1

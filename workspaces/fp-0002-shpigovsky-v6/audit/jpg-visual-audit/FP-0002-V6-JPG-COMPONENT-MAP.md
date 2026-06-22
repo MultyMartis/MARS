@@ -1,5 +1,7 @@
 # FP-0002 V6 JPG COMPONENT MAP
 
+> Grounding review corrections: `CMP-019` contact form → `SECTION-010` / BLOCK-033 (not BLOCK-027). `CMP-020` footer → `SECTION-011` / BLOCK-034–035 (light page footer). Raw block IDs in table below preserved for history.
+
 | Component ID | Working name | First occurrence | Repeat count | Shared/Unique | Visible states | Geometry notes | SAFE UNKNOWN |
 | ------------ | ------------ | ---------------- | ------------ | ------------- | -------------- | -------------- | ------------ |
 | CMP-001 | primary-red-cta-button | BLOCK-001 | 8 | Shared | default visible | red fill ~#d32f2f band, white label, rounded corners ~4-6px, height ~30-37px | hover, exact radius, font |
@@ -20,5 +22,5 @@
 | CMP-016 | specialist-profile-card | BLOCK-029 | 3 | Shared | default | photo, name, role | hover |
 | CMP-017 | article-card | BLOCK-030 | 3 | Shared | default | image top, title, date/excerpt | exact meta fields |
 | CMP-018 | faq-accordion-list | BLOCK-031 | 10 | Shared | collapsed | long vertical list CMP-006 pattern | open state |
-| CMP-019 | contact-form-dark-section | BLOCK-027 | 1 | Unique | default | dark blue full-width; heading left; form right | validation, submit |
-| CMP-020 | site-footer | BLOCK-033 | 1 | Unique | default | dark blue ~Y15420+; logo, contacts, link columns | legal links href |
+| CMP-019 | contact-form-band | BLOCK-033 | 1 | Unique | default | dark left panel + form fields Y~15408–15776; not full-width dark | validation, submit |
+| CMP-020 | site-footer | BLOCK-034 | 1 | Unique | default | light page footer Y~15776–16343; logo, contacts, link columns | legal links href |
