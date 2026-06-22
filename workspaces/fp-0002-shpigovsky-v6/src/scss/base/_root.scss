@@ -37,19 +37,15 @@
 	/* Layout */
 	--container-main: 1220px;
 	--container-hero: 1360px;
-	--page-padding-inline: 40px;
 
-	/* Spacing */
-	--space-5: 5px;
-	--space-10: 10px;
-	--space-15: 15px;
-	--space-20: 20px;
-	--space-25: 25px;
-	--space-30: 30px;
-	--space-40: 40px;
-	--space-50: 50px;
-	--space-70: 70px;
-	--space-90: 90px;
+	/* Core spacing scale — compact reusable system (Universal Style Scale Law) */
+	--pad-x: 40px;
+	--pad-y: 50px;
+	--pad-gap: 30px;
+	--pad-gap-line: 15px;
+	--pad-gap-mini: 5px;
+	--pad-gap-tight: 10px;
+	--pad-box: 20px;
 
 	/* Colors — block-approved SECTION-001 values + foundation roles */
 	--color-page-background: rgb(230, 239, 246);
@@ -61,13 +57,13 @@
 	--color-surface: #fff;
 	--color-surface-frosted: rgba(255, 255, 255, 0.24);
 
-	/* Radius */
+	/* Core radius scale */
 	--radius-small: 5px;
 	--radius-medium: 16px;
 	--radius-large: 20px;
-	--radius-pill: 999px;
+	--radius-full: 999px;
 
-	/* Controls — shared component tokens (Header + Hero) */
+	/* Controls — shared component tokens (Header + Hero + Footer) */
 	--control-height-primary: 45px;
 	--control-height-compact: 32px;
 	--control-padding-inline: 20px;
@@ -97,33 +93,4 @@
 	--transition-duration: 0.3s;
 	--transition-timing: ease;
 	--transition-base: var(--transition-duration) var(--transition-timing);
-
-	/* Header layout-region tokens (SECTION-001 / CMP-010) */
-	--header-padding-block-start: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header top inset @ 1398px
-	--header-padding-block-end: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header-to-hero boundary @ 1398px
-
-	/* Section rhythm — approved Site-Wide Style Foundation */
-	--section-padding-compact: var(--space-40);
-	--section-padding-standard: var(--space-50);
-	--section-padding-large: var(--space-70);
-	--heading-content-gap: var(--space-30);
-	--grid-gap-standard: var(--space-30);
-	--card-padding-standard: var(--space-25);
-	--accordion-row-spacing: var(--space-15);
-
-	/* Footer layout-region tokens (CMP-020 / FOOTER) */
-	--footer-column-gap: var(--space-30);
-	--footer-gap: var(--footer-column-gap);
-	--footer-padding-block: var(--section-padding-compact);
-	--footer-row-gap: var(--space-40);
-	--footer-legal-gap: var(--space-40);
-	--footer-nav-heading-gap: var(--space-15);
-	--footer-nav-link-gap: var(--space-10);
-	--footer-contact-stack-gap: var(--space-20);
-	--footer-legal-row-padding-block: var(--space-30);
-	--footer-social-size: var(--icon-size-medium);
-	--footer-social-icon-size: var(--icon-size-small);
-	--footer-social-gap: var(--space-10);
-	--footer-social-background: var(--color-surface);
-	--footer-social-fa-size: var(--font-size-large);
 }

@@ -91,7 +91,7 @@ Spacing between major page regions belongs to the **section or layout region** �
 .section__last-row { margin-bottom: 70px; }    // if this is section bottom air only
 ```
 
-**Preferred:** explicit layout-region tokens (`--header-padding-block-end`, `--footer-padding-block`) or site-wide section tokens when role is shared.
+**Preferred:** core spacing scale tokens (`--pad-x`, `--pad-y`, `--pad-gap`, `--pad-gap-line`, `--pad-box`) consumed directly by layout regions — **not** selector-named aliases (`--header-padding-block-end`, `--footer-padding-block`). See [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md).
 
 **Rhythm modifiers:** `compact` · `standard` · `large` · `none` — use `--section-padding-compact`, `--section-padding-standard`, `--section-padding-large`.
 

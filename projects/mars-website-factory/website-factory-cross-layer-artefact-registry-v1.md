@@ -36,10 +36,11 @@
 | R-023 | `projects/mars-website-factory/frontend-implementation-pipeline-v1.md` | UNKNOWN | Full gate chain | CANONICAL | Factory | Yes | New 2026-06-22 | PROMOTE |
 | R-024 | `projects/mars-website-factory/workflow-map.md` | UNKNOWN | Legacy target flow | STALE | Factory | Partial | Omits foundation chain | SUPERSEDE — link pipeline v1 |
 | R-025 | `projects/mars-website-factory/foundation-systems/README.md` | IMPLEMENTATION | Wave 2 SCSS tokens | REFERENCE | Factory | After foundation approved | Generic demo tokens | LINK — not V6 px source |
-| R-026 | `projects/mars-website-factory/css-variable-first-law-v1.md` | PRODUCTION LAW | Token lookup before SCSS | **MANDATORY** | Factory | Yes | New 2026-06-22 | PROMOTE |
+| R-026 | `projects/mars-website-factory/css-variable-first-law-v1.md` | PRODUCTION LAW | Token lookup before SCSS | **MANDATORY** | Factory | Yes | Corrected 2026-06-23 | PROMOTE |
 | R-027 | `projects/mars-website-factory/site-wide-style-foundation-contract-v1.md` §4 | PRODUCTION LAW | Single Base Container Law | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
 | R-028 | `projects/mars-website-factory/site-wide-style-foundation-contract-v1.md` §6 | PRODUCTION LAW | Section Owns Its Rhythm Law | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
 | R-029 | `workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md` WF-GRID-006 | IMPLEMENTATION | Single base container | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
+| R-030 | `projects/mars-website-factory/universal-style-scale-law-v1.md` | PRODUCTION LAW | Compact scale; no selector tokens; no alias chains; physical CSS properties | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 
 ---
 

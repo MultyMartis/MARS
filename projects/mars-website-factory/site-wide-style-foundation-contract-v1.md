@@ -74,12 +74,14 @@ Every site has **one primary content container** class (project default: `.conta
 
 - `width: 100%`
 - `max-width` (e.g. `--container-main`)
-- horizontal centering (`margin-inline: auto`)
-- standard page horizontal padding (`padding-inline`)
+- horizontal centering (`margin-left: auto; margin-right: auto`)
+- standard page horizontal padding (`padding-left` / `padding-right` via `--pad-x`)
 
 Header, Footer, and standard content sections **must reuse** this class on the inner wrapper — not duplicate its geometry in BEM `__container` selectors.
 
-**Prohibited without documented exception:** per-block `__container` selectors repeating `max-width` + `margin-inline` + `padding-inline`; nested primary containers; new `--container-*` tokens per block for convenience.
+**Prohibited without documented exception:** per-block `__container` selectors repeating `max-width` + horizontal centering + horizontal padding; nested primary containers; new `--container-*` tokens per block for convenience; selector-specific spacing tokens (`--header-*`, `--footer-*` for primitive scale); alias chains that only rename `--pad-*` for one block.
+
+**Physical CSS rule:** production SCSS uses `padding-top/right/bottom/left` and `margin-top/right/bottom/left` — not logical `padding-block` / `padding-inline` / `margin-block` / `margin-inline` by default ([universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)).
 
 **Allowed exceptions:** visual evidence of a different width field (e.g. `--container-hero`) — requires exception register: evidence, semantic role, scope, approval, source-to-token mapping.
 
@@ -89,12 +91,14 @@ Header, Footer, and standard content sections **must reuse** this class on the i
 
 ### 5. Spacing scale
 
-- Base scale (from normalization)
-- Section padding classes
+- **Compact core scale** — role-named primitives (e.g. `--pad-x`, `--pad-y`, `--pad-gap`, `--pad-gap-line`, `--pad-box`) — not selector-named aliases
+- Section padding classes (consume core scale — do not invent per-block vocabulary)
 - Component padding classes
 - Layout gaps
 - Text gaps
 - Exception rules
+
+**Authority:** [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) · [css-variable-first-law-v1.md](css-variable-first-law-v1.md) (corrected: reusable → token; unique geometry → direct local CSS)
 
 Cross-ref [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) for same-bg vs diff-bg boundaries.
 

@@ -167,7 +167,13 @@ function watcher() {
   watch(paths.fonts.watch, fonts);
 }
 
+const buildIncremental = series(
+  prepareFaBridge,
+  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts)
+);
+
 exports.clean = cleanDist;
 exports.build = build;
 exports.default = build;
 exports.watch = series(build, watcher);
+exports['watch:dev'] = series(buildIncremental, watcher);

@@ -12,14 +12,16 @@
 
 ## Purpose
 
-Production SCSS must not receive arbitrary design values copied from screenshots, estimates, or prior projects. Every value must trace through the token lookup chain before it reaches block styles.
+Production SCSS must not receive arbitrary design values copied from screenshots, estimates, or prior projects. Every **reusable** design value must trace through the shared token system before it reaches block styles. Truly unique evidence-backed geometry may remain **direct CSS** local to the owning block — it must not pollute `:root` as a selector-specific or one-use alias.
+
+**Companion law:** [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) — compact scale, no selector tokens, no alias chains, physical padding/margin properties.
 
 ---
 
-## Core law
+## Core law (corrected interpretation)
 
-1. **No arbitrary production value before token lookup.**
-2. **No repeated production value without token registration.**
+1. **No arbitrary production value before token lookup** for any **reusable** spacing, radius, type, or color role.
+2. **No repeated production value without token registration** — repeated magnitudes belong on the compact site scale ([universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)), not as selector-named aliases.
 3. **No block styling before style foundation approval.**
 4. **No magic-number correction during visual QA.**
 5. **No fallback literal that silently replaces a missing required token.**
@@ -103,8 +105,9 @@ Each new token must record: **name**, **value**, **role**, **scope**, **source e
 ## Token naming law
 
 - **lowercase-kebab-case** only
-- Examples: `--font-size-base`, `--space-30`, `--control-height-primary`, `--radius-pill`, `--container-main`
-- Forbidden: `--base-Font-size`, `--Title-h1-Font-size`, `--pad-btns`, `--hero-button-width-297`, `--header-random-gap`
+- Examples: `--font-size-base`, `--pad-gap`, `--control-height-primary`, `--radius-full`, `--container-main`
+- Forbidden: `--base-Font-size`, `--Title-h1-Font-size`, `--pad-btns`, `--hero-button-width-297`, `--header-random-gap`, `--footer-column-gap`, `--header-padding-block-start`
+- **Selector names are not valid token reasons** for ordinary spacing or radius — see [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) No Selector Token Law
 
 ---
 
@@ -125,6 +128,9 @@ Also prohibited:
 
 - arbitrary visual tuning during QA
 - duplicated token values under different names
+- selector-specific spacing/radius aliases (`--footer-*`, `--header-*`, `--section-name-*` for primitive scale)
+- alias chains that only rename an existing primitive for one block
+- logical `padding-block` / `padding-inline` / `margin-block` / `margin-inline` / `inset-block` / `inset-inline` in production SCSS (physical properties required by default)
 - local redefinition of global values without scope
 - component width from screenshot when content sizing is correct
 - magic-number overflow prevention
@@ -202,6 +208,24 @@ Arbitrary values remaining: 0
 ## Production report fields (mandatory)
 
 ```text
+Core spacing tokens reused:
+Core radius tokens reused:
+Selector-specific tokens found:
+Selector-specific tokens removed:
+Selector-specific tokens remaining:
+One-use tokens found:
+One-use tokens removed:
+One-use tokens remaining:
+Alias chains found:
+Alias chains removed:
+Alias chains remaining:
+Logical CSS properties found:
+Logical CSS properties removed:
+Logical CSS properties remaining:
+Direct exact values:
+New global tokens:
+New shared component tokens:
+Token admission result:
 Variables reused
 New tokens proposed
 New tokens approved
@@ -231,3 +255,4 @@ Boundary spacing workarounds remaining:
 |------|--------|
 | 2026-06-22 | v1 — Mandatory production contract; FP-0002 V6 pilot cleanup |
 | 2026-06-22 | v1.1 — Structural owner law; container/rhythm Visual QA ban; mandatory report fields |
+| 2026-06-23 | v1.2 — Corrected interpretation: reusable values from shared scale; direct exact geometry allowed locally; Universal Style Scale Law cross-ref; expanded report fields |

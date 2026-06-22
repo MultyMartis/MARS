@@ -19,6 +19,7 @@ Rules apply to **target project source** (external/local gulp-starter or equival
 ## SCSS
 
 - **Modular SCSS:** section/block partials; shared tokens/mixins in dedicated files; avoid monolithic dumps unless project policy says otherwise.
+- **Universal Style Scale Law (mandatory):** compact role-named spacing/radius primitives (`--pad-*`, `--radius-full`) — **no** selector-specific spacing tokens (`--footer-*`, `--header-*` for primitive scale); **no** one-block alias chains; **physical** `padding-top/right/bottom/left` — not logical `padding-block` / `padding-inline` by default. Authority: [universal-style-scale-law-v1.md](../../projects/mars-website-factory/universal-style-scale-law-v1.md) · [css-variable-first-law-v1.md](../../projects/mars-website-factory/css-variable-first-law-v1.md).
 - **Reusable sections/components:** match HTML partial boundaries; naming aligned with project convention (e.g. kebab-case files).
 - **Isolation:** prefer block-scoped selectors; avoid unscoped global resets that stomp third-party widgets without review.
 

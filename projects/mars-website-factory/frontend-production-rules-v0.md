@@ -155,6 +155,8 @@ RU TYPOGRAPHY / NO WORD-SPLITTING — PASS | partial (list) | FAIL | SAFE UNKNOW
 |-------|----------|
 | Production Standards Draft + Approval | [production-standards-governance-v1.md](production-standards-governance-v1.md) |
 | Inter-section spacing tokens, same/diff background | [frontend-section-spacing-rule-v1.md](frontend-section-spacing-rule-v1.md) |
+| Compact spacing/radius scale; no selector tokens | [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) |
+| CSS variable lookup + direct exact geometry | [css-variable-first-law-v1.md](css-variable-first-law-v1.md) |
 | Foundation before Home; Foundation Demo Page composition | [frontend-visual-foundation-contract-v1.md](frontend-visual-foundation-contract-v1.md) |
 | Design Calibration before Foundation QA | [frontend-design-calibration-stage-v1.md](frontend-design-calibration-stage-v1.md) |
 | Foundation QA (consolidated gate) | [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) |

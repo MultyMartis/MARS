@@ -167,7 +167,9 @@ Store in project `*-PRACTICAL-VALUE-NORMALIZATION.md` and reference from Site-Wi
 
 **STOP:** Block HTML/SCSS if spacing/type/color value lacks foundation token or registered exception.
 
-**CSS Variable First Law:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — production SCSS must use `var(--token)` after lookup; arbitrary px without classification is a gate violation.
+**CSS Variable First Law:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — reusable production values use `var(--token)` after lookup; unique geometry may stay direct local CSS.
+
+**Universal Style Scale Law:** [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) — normalized spacing/radius map to compact role-named primitives (`--pad-*`) — not selector-named aliases.
 
 ---
 
@@ -183,3 +185,4 @@ Store in project `*-PRACTICAL-VALUE-NORMALIZATION.md` and reference from Site-Wi
 |------|--------|
 | 2026-06-22 | v1 — Cross-layer audit; connects audit → normalization → foundation pipeline |
 | 2026-06-22 | v1.1 — Link CSS Variable First Law at SCSS gate |
+| 2026-06-23 | v1.2 — Universal Style Scale Law; compact `--pad-*` naming at normalization output |

@@ -139,7 +139,20 @@ Full QA checklist and Triumph case study: [scroll-process-timeline-pattern-v1.md
 
 ---
 
-## 11. Reusable prompt invariant block (V5 / frontend tasks)
+## 11. Universal Style Scale (compact tokens)
+
+| Rule | Detail |
+|------|--------|
+| **Compact scale** | Spacing/radius primitives are role-named (`--pad-x`, `--pad-gap`, `--radius-full`) — not selector-named (`--footer-column-gap`, `--header-padding-block-start`). |
+| **No alias chains** | Blocks consume primitives directly — no `--footer-padding: var(--pad-y)` one-block aliases. |
+| **Physical properties** | Production SCSS uses `padding-top/right/bottom/left` — not `padding-block` / `padding-inline` by default. |
+| **Token admission** | New global tokens require repeatability or true component-family justification — see [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md). |
+
+**Authority:** [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) · [css-variable-first-law-v1.md](css-variable-first-law-v1.md)
+
+---
+
+## 12. Reusable prompt invariant block (V5 / frontend tasks)
 
 Paste into Cursor frontend execution prompts when scope is V5 lane or Triumph-class Gulp static work:
 

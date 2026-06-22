@@ -3,7 +3,7 @@
 **Status:** **documented** — minimal human checklist before SCSS implementation.  
 **Not:** runtime linter, Stylelint config, or CI job (unless project adopts separately).
 
-**Authority:** [frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md) gate G-SCS · [practical-value-normalization-contract-v1.md](practical-value-normalization-contract-v1.md)
+**Authority:** [frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md) gate G-SCS · [practical-value-normalization-contract-v1.md](practical-value-normalization-contract-v1.md) · [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)
 
 ---
 
@@ -32,6 +32,23 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 | 13 | **CSS Variable First Law** | [css-variable-first-law-v1.md](css-variable-first-law-v1.md) token lookup complete |
 | 14 | Token inventory | All design values classified — see checklist below |
 
+### Style scale gate (mandatory)
+
+- [ ] Existing core spacing scale inspected.
+- [ ] Existing radius scale inspected.
+- [ ] No selector-specific spacing tokens proposed.
+- [ ] No one-use alias tokens proposed.
+- [ ] No alias chain proposed.
+- [ ] Every new token has multiple-consumer or true component justification.
+- [ ] Unique geometry kept local and documented.
+- [ ] Physical padding/margin properties used.
+- [ ] Logical padding/margin/inset properties absent.
+- [ ] Base `.container` reused.
+- [ ] Section owns its external rhythm.
+- [ ] Internal parent owns sibling gaps.
+
+**On violation:** `STYLE SCALE GATE — FAIL` · `TOKEN ADMISSION GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
+
 ### Token lookup gate (mandatory)
 
 - [ ] All design values completed token lookup.
@@ -48,7 +65,7 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 ### Container gate (mandatory)
 
 - [ ] Base `.container` (or project primary container class) reused where applicable.
-- [ ] No duplicate component container geometry (`max-width` + `margin-inline` + `padding-inline` outside primary container owner).
+- [ ] No duplicate component container geometry (`max-width` + horizontal centering + horizontal padding outside primary container owner).
 - [ ] No new container token without approved visual exception.
 
 **On violation:** `CONTAINER GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
@@ -80,3 +97,4 @@ PRE-SCSS VALIDATION — PASS | FAIL (list #) | BLOCKED (gate)
 | 2026-06-22 | v1 — Created from cross-layer audit |
 | 2026-06-22 | v1.1 — CSS Variable First Law token lookup gate; SCSS GATE — FAIL on arbitrary values |
 | 2026-06-22 | v1.2 — Container gate + Section rhythm gate |
+| 2026-06-23 | v1.3 — Style scale gate; Token admission gate; physical property rule; Universal Style Scale Law |

@@ -6,7 +6,8 @@
 	justify-content: center;
 	box-sizing: border-box;
 	min-height: var(--control-height-primary);
-	padding-inline: var(--control-padding-inline);
+	padding-left: var(--control-padding-inline);
+	padding-right: var(--control-padding-inline);
 	border: 0;
 	border-radius: var(--control-radius);
 	background-color: var(--color-accent);
@@ -27,7 +28,8 @@
 
 .button--compact {
 	min-height: var(--control-height-compact);
-	padding-inline: var(--control-padding-inline-compact);
+	padding-left: var(--control-padding-inline-compact);
+	padding-right: var(--control-padding-inline-compact);
 	border: var(--control-border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-medium);
 	background-color: transparent;

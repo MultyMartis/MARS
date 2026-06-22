@@ -1,8 +1,8 @@
 // Desktop-only Header — SECTION-001-GROUP-01 (no mobile, no hero, no JS hooks)
 
 .site-header {
-	padding-block-start: var(--header-padding-block-start);
-	padding-block-end: var(--header-padding-block-end);
+	padding-top: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header top inset @ 1398px
+	padding-bottom: 18px; // EXACT_GEOMETRY_EXCEPTION — JPG header-to-hero boundary @ 1398px
 	background-color: var(--color-page-background);
 	color: var(--color-text-primary);
 }
@@ -12,9 +12,9 @@
 .site-header__top {
 	display: flex;
 	align-items: center;
-	gap: var(--space-20);
-	padding-bottom: var(--space-20);
-	margin-bottom: var(--space-15);
+	gap: var(--pad-box);
+	padding-bottom: var(--pad-box);
+	margin-bottom: var(--pad-gap-line);
 	border-bottom: var(--border-width) solid var(--border-color-subtle);
 }
 
@@ -34,7 +34,7 @@
 .site-header__schedule {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-10);
+	gap: var(--pad-gap-tight);
 	flex: 0 0 auto;
 	margin: 0;
 	font-style: normal;
@@ -47,7 +47,7 @@
 .site-header__phones {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-10);
+	gap: var(--pad-gap-tight);
 	flex: 0 0 auto;
 	margin-left: auto;
 }
@@ -63,7 +63,7 @@
 .site-header__messengers {
 	display: flex;
 	align-items: center;
-	gap: var(--space-10);
+	gap: var(--pad-gap-tight);
 	flex: 0 0 auto;
 }
 
@@ -82,7 +82,8 @@
 .site-header__callback {
 	flex: 0 0 auto;
 	min-height: var(--control-height-compact);
-	padding-inline: var(--control-padding-inline-compact);
+	padding-left: var(--control-padding-inline-compact);
+	padding-right: var(--control-padding-inline-compact);
 	border: var(--control-border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-medium);
 	background-color: transparent;

@@ -3,6 +3,7 @@
 
 // BLOCK_LEVEL_TOKEN — hero panel unique geometry (JPG overlay x 400–1000)
 $hero-panel-width: 600px;
+$hero-panel-padding-y: 25px; // EXACT_GEOMETRY_EXCEPTION — frosted panel vertical inset
 $hero-panel-cta-gap: 12px; // EXACT_GEOMETRY_EXCEPTION — panel-to-CTA stack gap
 $hero-stack-bottom-offset: 66px; // EXACT_GEOMETRY_EXCEPTION — JPG CTA bottom y 837 → media bottom y 903
 $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — frosted panel edge
@@ -12,7 +13,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	box-sizing: border-box;
 	width: 100%;
 	max-width: var(--container-hero);
-	margin-inline: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .hero__media {
@@ -49,8 +51,11 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .hero__panel {
 	box-sizing: border-box;
 	width: $hero-panel-width;
-	max-width: calc(100% - var(--space-40));
-	padding: var(--space-25) var(--space-40);
+	max-width: calc(100% - var(--pad-x));
+	padding-top: $hero-panel-padding-y;
+	padding-bottom: $hero-panel-padding-y;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
 	border: var(--border-width) solid $hero-panel-border;
 	border-radius: var(--radius-large);
 	background-color: var(--surface-frosted-background);
@@ -63,7 +68,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--space-15);
+	gap: var(--pad-gap-line);
 }
 
 .hero__tagline {
@@ -89,7 +94,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	justify-content: center;
 	box-sizing: border-box;
 	min-height: var(--control-height-primary);
-	padding-inline: var(--control-padding-inline);
+	padding-left: var(--control-padding-inline);
+	padding-right: var(--control-padding-inline);
 	border: 0;
 	border-radius: var(--control-radius);
 	background-color: var(--color-accent);

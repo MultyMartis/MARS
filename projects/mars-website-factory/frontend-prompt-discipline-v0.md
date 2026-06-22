@@ -117,6 +117,7 @@ Per [frontend-production-model.md](frontend-production-model.md) and [frontend-h
 | **Modular SCSS** | Section/block partials per component; shared tokens in a dedicated entry. |
 | **No monolithic dumps** | Avoid single-file mega-sheets unless project policy explicitly allows. |
 | **Tokens via shared entry** | New tokens introduced under shared variables; never inline arbitrary hex/px buried in a section partial. |
+| **Universal Style Scale** | Consume compact `--pad-*` / role-based radius — no selector-named spacing aliases; no alias chains; physical padding/margin properties — [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md). |
 | **No `!important` waves** | A handful of justified instances, never used to “fix” cascade issues without review. |
 | **No global resets** | Element-level resets only via the agreed shared reset partial; never per-section. |
 | **Naming** | Block-aligned BEM-ish or project convention; consistent with handoff `SCSS_mapping`. |

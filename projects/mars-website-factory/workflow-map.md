@@ -47,7 +47,7 @@ This is a **target** pipeline for **documentation and future orchestration** —
 
 After **Frontend Production** produces a page or slice (post–Foundation QA and Home work), **Production PASS** requires the documented gate chain — **not** compact operational QA alone:
 
-**SCSS gate:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — token lookup before block SCSS; Visual QA corrections via token/exception only.
+**SCSS gate:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) — reusable values from shared token lookup; unique geometry → direct local CSS. [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) — compact `--pad-*` scale; no selector tokens; no alias chains; physical padding/margin. Visual QA corrections via core scale or documented exact geometry only.
 
 **Container + rhythm gates (mandatory):** [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) — **Single Base Container Law** · **Section Owns Its Rhythm Law**; [frontend-pre-scss-validation-checklist-v1.md](frontend-pre-scss-validation-checklist-v1.md) — `CONTAINER GATE — FAIL` · `SECTION RHYTHM GATE — FAIL`. **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**.
 

@@ -477,13 +477,31 @@ FINAL VERDICT — PRODUCTION PASS WITH NOTES
 
 ---
 
-## 9.1 CSS Variable First Law — Visual QA token fields
+## 9.1 CSS Variable First Law + Universal Style Scale — Visual QA token fields
 
-**Authority:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md)
+**Authority:** [css-variable-first-law-v1.md](css-variable-first-law-v1.md) · [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)
 
 Every Visual QA report for SCSS-bearing stages must include:
 
 ```text
+Core spacing tokens reused:
+Core radius tokens reused:
+Selector-specific tokens found:
+Selector-specific tokens removed:
+Selector-specific tokens remaining:
+One-use tokens found:
+One-use tokens removed:
+One-use tokens remaining:
+Alias chains found:
+Alias chains removed:
+Alias chains remaining:
+Logical CSS properties found:
+Logical CSS properties removed:
+Logical CSS properties remaining:
+Direct exact values:
+New global tokens:
+New shared component tokens:
+Token admission result:
 Tokens changed
 Exceptions changed
 Arbitrary values introduced: 0
@@ -498,7 +516,7 @@ Boundary spacing workarounds removed:
 Boundary spacing workarounds remaining:
 ```
 
-Corrections must route through token or exception update — not arbitrary px tuning, local container width, or first/last-child boundary padding.
+Corrections must route through **existing core scale** or **documented exact geometry** — not block-specific token aliases, alias chains, logical shorthand properties, arbitrary px tuning, local container width, or first/last-child boundary padding.
 
 ---
 
@@ -513,3 +531,4 @@ Corrections must route through token or exception update — not arbitrary px tu
 | 2026-06-14 | **v1.4** — Operator Visual Approval Law: mandatory **OPERATOR VISUAL REVIEW** block §5.7; Layer E vocabulary. |
 | 2026-06-22 | **v1.5** — CSS Variable First Law §9.1: mandatory token fields on Visual QA; arbitrary px correction prohibited. |
 | 2026-06-22 | **v1.6** — Container + section rhythm mandatory report fields §9.1 |
+| 2026-06-23 | **v1.7** — Universal Style Scale Law fields §9.1; selector token / alias chain / logical property audit lines |

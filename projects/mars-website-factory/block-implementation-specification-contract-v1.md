@@ -85,7 +85,45 @@ Per element role → foundation typography token.
 
 ### Spacing bindings
 
-Per region → foundation spacing token or exception ID.
+Per region → **core spacing scale token** (`--pad-*`) or shared component token — **not** selector-named aliases. See [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md).
+
+### Existing style scale usage (mandatory)
+
+```markdown
+## Existing style scale usage
+
+Spacing tokens reused:
+
+Radius tokens reused:
+
+Typography tokens reused:
+
+Color tokens reused:
+
+Component tokens reused:
+
+## New token requests
+
+New primitive tokens requested:
+
+New shared component tokens requested:
+
+Independent consumers:
+
+Why existing scale is insufficient:
+
+## Exact geometry
+
+Direct exact values:
+
+Evidence:
+
+## Property syntax
+
+Logical properties required: NO
+
+Physical padding/margin properties planned: YES
+```
 
 ### Color bindings
 
@@ -208,3 +246,4 @@ Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 ope
 | 2026-06-22 | v1 — Connects foundation to HTML/SCSS gates |
 | 2026-06-22 | v1.1 — Token lookup sections; CSS Variable First Law binding |
 | 2026-06-22 | v1.2 — Container usage + section rhythm ownership mandatory sections |
+| 2026-06-23 | v1.3 — Existing style scale usage; new token requests; property syntax; Universal Style Scale Law binding |
