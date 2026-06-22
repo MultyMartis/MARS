@@ -13,7 +13,8 @@ FW-00 — COMPLETE
 FW-01 — COMPLETE
 FW-02 — COMPLETE
 FW-03 — COMPLETE
-FW-04 — NEXT
+FW-04 — COMPLETE
+FW-05 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
@@ -21,12 +22,19 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Implementation capability: NOT STARTED
+Prompt-driven implementation capability: DOCUMENTED
+Primary specialist profile: CREATED
+Skills: CREATED
+Validators: CREATED
+Synthetic validation: NOT STARTED
+Local environment: NOT READY
+Agent registration: NOT REGISTERED
+Client pilot: NOT READY
 ```
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **FOUNDATION** |
+| **Lifecycle** | **FOUNDATION / PRE-OPERATIONAL** |
 | **Runtime** | **EXCLUDED** |
 | **Agent** | **NOT REGISTERED** — seed `AG-WP-001` only |
 | **project_id** | **NOT CREATED** |
@@ -37,6 +45,9 @@ Implementation capability: NOT STARTED
 
 | Concern | Start here |
 |---------|------------|
+| **Implementation capability (FW-04)** | [capability/OPERATIONAL-INDEX.md](capability/OPERATIONAL-INDEX.md) |
+| **Primary specialist** | [capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md](capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) |
+| **Prompt pack** | [capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md](capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md) |
 | **Architecture overview** | [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md) |
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
@@ -46,7 +57,23 @@ Implementation capability: NOT STARTED
 | **Validation runners** | [FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md](FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md) |
 | **Pilot tooling** | [FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md](FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md) |
 | **Project lifecycle** | [FORGE-WORDPRESS-PROJECT-LIFECYCLE-v1.md](FORGE-WORDPRESS-PROJECT-LIFECYCLE-v1.md) |
-| **FW-04 input** | [reports/FORGE-WORDPRESS-FW-04-PILOT-INTAKE-INPUT-v1.md](reports/FORGE-WORDPRESS-FW-04-PILOT-INTAKE-INPUT-v1.md) |
+| **FW-05 input** | [reports/FORGE-WORDPRESS-FW-05-LOCAL-ENABLEMENT-AND-SYNTHETIC-VALIDATION-INPUT-v1.md](reports/FORGE-WORDPRESS-FW-05-LOCAL-ENABLEMENT-AND-SYNTHETIC-VALIDATION-INPUT-v1.md) |
+| **Capability readiness** | [capability/FORGE-WORDPRESS-CAPABILITY-READINESS-MATRIX-v1.md](capability/FORGE-WORDPRESS-CAPABILITY-READINESS-MATRIX-v1.md) |
+
+---
+
+## FW-04 capability pack
+
+| # | Document |
+|---|----------|
+| 1 | [capability/README.md](capability/README.md) |
+| 2 | [capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md](capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) |
+| 3 | [capability/protocols/FORGE-WORDPRESS-SPECIALIST-EXECUTION-CONTRACT-v1.md](capability/protocols/FORGE-WORDPRESS-SPECIALIST-EXECUTION-CONTRACT-v1.md) |
+| 4 | [capability/skills/](capability/skills/) — 14 skills |
+| 5 | [capability/validators/](capability/validators/) — 7 validators |
+| 6 | [capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md](capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md) |
+| 7 | [capability/reports/FORGE-WORDPRESS-SYNTHETIC-TEST-CASE-SPEC-v1.md](capability/reports/FORGE-WORDPRESS-SYNTHETIC-TEST-CASE-SPEC-v1.md) |
+| 8 | [capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md](capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) |
 
 ---
 
@@ -65,8 +92,8 @@ Implementation capability: NOT STARTED
 | 9 | [FORGE-WORDPRESS-ACCESSIBILITY-AND-PERFORMANCE-PROFILE-v1.md](FORGE-WORDPRESS-ACCESSIBILITY-AND-PERFORMANCE-PROFILE-v1.md) |
 | 10 | [FORGE-WORDPRESS-SECURITY-VALIDATION-DESIGN-v1.md](FORGE-WORDPRESS-SECURITY-VALIDATION-DESIGN-v1.md) |
 | 11 | [FORGE-WORDPRESS-PACKAGING-AND-RELEASE-DESIGN-v1.md](FORGE-WORDPRESS-PACKAGING-AND-RELEASE-DESIGN-v1.md) |
-| 12 | [FORGE-WORDPRESS-FUTURE-SKILL-MODEL-v1.md](FORGE-WORDPRESS-FUTURE-SKILL-MODEL-v1.md) |
-| 13 | [FORGE-WORDPRESS-FUTURE-VALIDATOR-MODEL-v1.md](FORGE-WORDPRESS-FUTURE-VALIDATOR-MODEL-v1.md) |
+| 12 | [FORGE-WORDPRESS-FUTURE-SKILL-MODEL-v1.md](FORGE-WORDPRESS-FUTURE-SKILL-MODEL-v1.md) — superseded by capability skills |
+| 13 | [FORGE-WORDPRESS-FUTURE-VALIDATOR-MODEL-v1.md](FORGE-WORDPRESS-FUTURE-VALIDATOR-MODEL-v1.md) — superseded by capability validators |
 | 14 | [FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md](FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md) |
 | 15 | [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md) |
 | 16 | [reports/FORGE-WORDPRESS-FW-03-TOOLING-DECISION-RECORD-v1.md](reports/FORGE-WORDPRESS-FW-03-TOOLING-DECISION-RECORD-v1.md) |
@@ -143,6 +170,7 @@ Implementation capability: NOT STARTED
 | Source | Index |
 |--------|-------|
 | AG-WP-001 seed | [research README](../../../../workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/research/README.md) |
+| AG-WP-001 promotion | [capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md](capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) |
 | Adaptation register | [FORGE-WORDPRESS-RESEARCH-ADAPTATION-REGISTER-v1.md](FORGE-WORDPRESS-RESEARCH-ADAPTATION-REGISTER-v1.md) |
 
 ---
@@ -166,16 +194,16 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — visibility only; WordPress **NOT STARTED**; eligibility **FW-04**.
+**FP-0002 — Shpigovsky.ru** — visibility only; WordPress **NOT STARTED**; eligibility **FW-06** (after synthetic validation).
 
 ---
 
 ## Next authorized stage
 
 ```text
-FW-04 — Pilot Intake
+FW-05 — Local Enablement and Synthetic Validation
 ```
 
 ---
 
-*Last updated: 2026-06-22 — FW-03 Tooling and Validation Design complete.*
+*Last updated: 2026-06-22 — FW-04 Implementation Capability Construction complete.*

@@ -18,14 +18,15 @@ Documentation-first **WordPress implementation subsystem** of MARS Website Facto
 
 ---
 
-## Status (FW-03 complete)
+## Status (FW-04 complete)
 
 ```text
 FW-00 — COMPLETE
 FW-01 — COMPLETE
 FW-02 — COMPLETE
 FW-03 — COMPLETE
-FW-04 — NEXT
+FW-04 — COMPLETE
+FW-05 — NEXT
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
@@ -33,8 +34,17 @@ Standards: BASELINE v1
 Tooling design: BASELINE v1
 Validation design: BASELINE v1
 Templates: BASELINE v1
-Implementation capability: NOT STARTED
+Prompt-driven implementation capability: DOCUMENTED
+Primary specialist profile: CREATED
+Skills: CREATED
+Validators: CREATED
+Synthetic validation: NOT STARTED
+Local environment: NOT READY
+Agent registration: NOT REGISTERED
+Client pilot: NOT READY
 ```
+
+**Lifecycle:** `FOUNDATION / PRE-OPERATIONAL`
 
 ---
 
@@ -65,6 +75,7 @@ Human remains the final authority. Production runtime and autonomous deployment 
 | [FORGE-WORDPRESS-SCOPE-AND-BOUNDARIES-v1.md](FORGE-WORDPRESS-SCOPE-AND-BOUNDARIES-v1.md) | Scope and exclusions |
 | [FORGE-WORDPRESS-ECOSYSTEM-POSITION-v1.md](FORGE-WORDPRESS-ECOSYSTEM-POSITION-v1.md) | Ecosystem relationships |
 | [roadmap.md](roadmap.md) | Subsystem stages |
+| [capability/OPERATIONAL-INDEX.md](capability/OPERATIONAL-INDEX.md) | **FW-04** implementation capability pack |
 | [reports/](reports/) | Stage inputs, decision records |
 
 ---
@@ -97,7 +108,23 @@ Human remains the final authority. Production runtime and autonomous deployment 
 | Packaging | [FORGE-WORDPRESS-PACKAGING-AND-RELEASE-DESIGN-v1.md](FORGE-WORDPRESS-PACKAGING-AND-RELEASE-DESIGN-v1.md) |
 | Pilot tooling profile | [FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md](FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md) |
 | Decision record | [reports/FORGE-WORDPRESS-FW-03-TOOLING-DECISION-RECORD-v1.md](reports/FORGE-WORDPRESS-FW-03-TOOLING-DECISION-RECORD-v1.md) |
-| FW-04 input | [reports/FORGE-WORDPRESS-FW-04-PILOT-INTAKE-INPUT-v1.md](reports/FORGE-WORDPRESS-FW-04-PILOT-INTAKE-INPUT-v1.md) |
+| FW-05 input | [reports/FORGE-WORDPRESS-FW-05-LOCAL-ENABLEMENT-AND-SYNTHETIC-VALIDATION-INPUT-v1.md](reports/FORGE-WORDPRESS-FW-05-LOCAL-ENABLEMENT-AND-SYNTHETIC-VALIDATION-INPUT-v1.md) |
+
+---
+
+## FW-04 implementation capability
+
+| Area | Document |
+|------|----------|
+| Capability home | [capability/README.md](capability/README.md) |
+| Operational index | [capability/OPERATIONAL-INDEX.md](capability/OPERATIONAL-INDEX.md) |
+| Primary specialist | [capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md](capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) |
+| Skills | [capability/skills/](capability/skills/) — FW-SK-01–14 |
+| Validators | [capability/validators/](capability/validators/) — FW-V-01–07 |
+| Protocols | [capability/protocols/](capability/protocols/) |
+| Prompt pack | [capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md](capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md) |
+| Readiness matrix | [capability/FORGE-WORDPRESS-CAPABILITY-READINESS-MATRIX-v1.md](capability/FORGE-WORDPRESS-CAPABILITY-READINESS-MATRIX-v1.md) |
+| AG-WP-001 decision | [capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md](capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) |
 
 ---
 

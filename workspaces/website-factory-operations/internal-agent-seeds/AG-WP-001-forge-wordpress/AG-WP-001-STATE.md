@@ -11,8 +11,10 @@
 
 | Dimension | Value |
 |-----------|-------|
-| **Status** | **SEED** (linked to subsystem **FOUNDATION**) |
-| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — FW-00 **COMPLETE** |
+| **Status** | **SEED** (linked to subsystem **FOUNDATION / PRE-OPERATIONAL**) |
+| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — FW-04 **COMPLETE** |
+| **Cursor capability pack** | [FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) — **not** registry agent |
+| **Promotion decision** | [AG-WP-001 remains unregistered](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) until synthetic validation |
 | **Knowledge Base** | **Empty** |
 | **Production Rules** | **Not Created** |
 | **ACF Rules** | **Not Created** |

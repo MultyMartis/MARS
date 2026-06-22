@@ -101,8 +101,8 @@ The **Artifact Bus Layer v0** is **not** an eighth runtime pipeline — it is **
 | Aspect | Content |
 |--------|---------|
 | **Purpose** | Transform **approved Website Factory frontend packages** into **WordPress implementation packages** (theme/plugin architecture, content model, templates, admin UX planning, QA-gated handoff). |
-| **Subsystem** | **Forge WordPress** — [subsystems/forge-wordpress/](subsystems/forge-wordpress/README.md) (**FOUNDATION**; FW-03 complete; tooling + validation design **documented**; implementation **not started**). |
-| **Planned agents** | **SAFE UNKNOWN** — `AG-WP-001` internal seed only; **not** registered; primary implementation agent deferred to FW-05 charter. |
+| **Subsystem** | **Forge WordPress** — [subsystems/forge-wordpress/](subsystems/forge-wordpress/README.md) (**FOUNDATION / PRE-OPERATIONAL**; FW-04 complete; [capability pack](subsystems/forge-wordpress/capability/OPERATIONAL-INDEX.md) **documented**; local execution **not ready**). |
+| **Planned agents** | **SAFE UNKNOWN** — `AG-WP-001` internal seed only; **not** registered; [promotion decision](subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) defers registration until synthetic validation. |
 | **Expected artifacts** | Per [FORGE-WORDPRESS-PROJECT-ARTIFACT-MODEL-v1.md](subsystems/forge-wordpress/FORGE-WORDPRESS-PROJECT-ARTIFACT-MODEL-v1.md) — **defined**; none evidenced on disk for pilots yet. |
 | **QA gates** | **WV0–WV9** — [FORGE-WORDPRESS-VALIDATION-ARCHITECTURE-v1.md](subsystems/forge-wordpress/FORGE-WORDPRESS-VALIDATION-ARCHITECTURE-v1.md); Factory VL0–VL6 applies **upstream** only. |
 | **Downstream** | **WPilot** — controlled WordPress **operations** (not development). |

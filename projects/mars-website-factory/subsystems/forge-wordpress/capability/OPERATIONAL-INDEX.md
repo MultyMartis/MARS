@@ -1,0 +1,117 @@
+# Forge WordPress Capability — Operational Index
+
+**Pack:** Implementation capability (FW-04)  
+**Parent:** [../OPERATIONAL-INDEX.md](../OPERATIONAL-INDEX.md)  
+**Lifecycle:** FOUNDATION / PRE-OPERATIONAL
+
+---
+
+## Current state
+
+```text
+FW-04 — COMPLETE
+FW-05 — NEXT
+Prompt-driven capability: DOCUMENTED / READY
+Primary specialist: CREATED
+Skills: CREATED (14)
+Validators: CREATED (7)
+Synthetic validation: NOT STARTED
+Local environment: NOT READY
+Agent registration: NOT REGISTERED
+Client pilot: NOT READY
+```
+
+---
+
+## Primary specialist
+
+[primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md](primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md)
+
+---
+
+## Protocols
+
+| Document | Purpose |
+|----------|---------|
+| [FORGE-WORDPRESS-SPECIALIST-EXECUTION-CONTRACT-v1.md](protocols/FORGE-WORDPRESS-SPECIALIST-EXECUTION-CONTRACT-v1.md) | 10-stage mandatory cycle |
+| [FORGE-WORDPRESS-CONTEXT-LOADING-MODEL-v1.md](protocols/FORGE-WORDPRESS-CONTEXT-LOADING-MODEL-v1.md) | Tier 1–6 context rules |
+| [FORGE-WORDPRESS-FILESYSTEM-SCOPE-CONTRACT-v1.md](protocols/FORGE-WORDPRESS-FILESYSTEM-SCOPE-CONTRACT-v1.md) | Write/read/forbidden scope |
+| [FORGE-WORDPRESS-VALIDATOR-INDEPENDENCE-POLICY-v1.md](protocols/FORGE-WORDPRESS-VALIDATOR-INDEPENDENCE-POLICY-v1.md) | Independence rules |
+| [FORGE-WORDPRESS-REPORTING-STANDARD-v1.md](protocols/FORGE-WORDPRESS-REPORTING-STANDARD-v1.md) | Report format |
+| [FORGE-WORDPRESS-GIT-WORKFLOW-v1.md](protocols/FORGE-WORDPRESS-GIT-WORKFLOW-v1.md) | Git discipline |
+
+---
+
+## Skills (FW-SK-01–14)
+
+| ID | Document |
+|----|----------|
+| FW-SK-01 | [FW-SK-01-FRONTEND-PACKAGE-INSPECTION-v1.md](skills/FW-SK-01-FRONTEND-PACKAGE-INSPECTION-v1.md) |
+| FW-SK-02 | [FW-SK-02-WORDPRESS-ARCHITECTURE-DECISION-v1.md](skills/FW-SK-02-WORDPRESS-ARCHITECTURE-DECISION-v1.md) |
+| FW-SK-03 | [FW-SK-03-CONTENT-MODELING-v1.md](skills/FW-SK-03-CONTENT-MODELING-v1.md) |
+| FW-SK-04 | [FW-SK-04-BLOCK-TO-WORDPRESS-MAPPING-v1.md](skills/FW-SK-04-BLOCK-TO-WORDPRESS-MAPPING-v1.md) |
+| FW-SK-05 | [FW-SK-05-THEME-ARCHITECTURE-v1.md](skills/FW-SK-05-THEME-ARCHITECTURE-v1.md) |
+| FW-SK-06 | [FW-SK-06-ACF-ARCHITECTURE-v1.md](skills/FW-SK-06-ACF-ARCHITECTURE-v1.md) |
+| FW-SK-07 | [FW-SK-07-CPT-TAXONOMY-DESIGN-v1.md](skills/FW-SK-07-CPT-TAXONOMY-DESIGN-v1.md) |
+| FW-SK-08 | [FW-SK-08-ADMIN-UX-DESIGN-v1.md](skills/FW-SK-08-ADMIN-UX-DESIGN-v1.md) |
+| FW-SK-09 | [FW-SK-09-WORDPRESS-IMPLEMENTATION-PLANNING-v1.md](skills/FW-SK-09-WORDPRESS-IMPLEMENTATION-PLANNING-v1.md) |
+| FW-SK-10 | [FW-SK-10-WORDPRESS-CODE-IMPLEMENTATION-v1.md](skills/FW-SK-10-WORDPRESS-CODE-IMPLEMENTATION-v1.md) |
+| FW-SK-11 | [FW-SK-11-WORDPRESS-VALIDATION-v1.md](skills/FW-SK-11-WORDPRESS-VALIDATION-v1.md) |
+| FW-SK-12 | [FW-SK-12-VISUAL-PARITY-VALIDATION-v1.md](skills/FW-SK-12-VISUAL-PARITY-VALIDATION-v1.md) |
+| FW-SK-13 | [FW-SK-13-RELEASE-PACKAGING-v1.md](skills/FW-SK-13-RELEASE-PACKAGING-v1.md) |
+| FW-SK-14 | [FW-SK-14-WPILOT-HANDOFF-v1.md](skills/FW-SK-14-WPILOT-HANDOFF-v1.md) |
+
+---
+
+## Validators (FW-V-01–07)
+
+| ID | Document |
+|----|----------|
+| FW-V-01 | [FW-V-01-ARCHITECTURE-VALIDATOR-v1.md](validators/FW-V-01-ARCHITECTURE-VALIDATOR-v1.md) |
+| FW-V-02 | [FW-V-02-CODE-QUALITY-AND-SECURITY-VALIDATOR-v1.md](validators/FW-V-02-CODE-QUALITY-AND-SECURITY-VALIDATOR-v1.md) |
+| FW-V-03 | [FW-V-03-WORDPRESS-CORRECTNESS-VALIDATOR-v1.md](validators/FW-V-03-WORDPRESS-CORRECTNESS-VALIDATOR-v1.md) |
+| FW-V-04 | [FW-V-04-FUNCTIONAL-VALIDATOR-v1.md](validators/FW-V-04-FUNCTIONAL-VALIDATOR-v1.md) |
+| FW-V-05 | [FW-V-05-VISUAL-PARITY-VALIDATOR-v1.md](validators/FW-V-05-VISUAL-PARITY-VALIDATOR-v1.md) |
+| FW-V-06 | [FW-V-06-ADMIN-UX-VALIDATOR-v1.md](validators/FW-V-06-ADMIN-UX-VALIDATOR-v1.md) |
+| FW-V-07 | [FW-V-07-RELEASE-AND-HANDOFF-VALIDATOR-v1.md](validators/FW-V-07-RELEASE-AND-HANDOFF-VALIDATOR-v1.md) |
+
+---
+
+## Task templates
+
+| Document | Purpose |
+|----------|---------|
+| [FORGE-WORDPRESS-CURSOR-TASK-TEMPLATE-v1.md](task-templates/FORGE-WORDPRESS-CURSOR-TASK-TEMPLATE-v1.md) | Reusable task shell |
+| [FORGE-WORDPRESS-PROMPT-PACK-v1.md](task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md) | 11 prompt starters |
+
+---
+
+## Reports and readiness
+
+| Document | Purpose |
+|----------|---------|
+| [FORGE-WORDPRESS-CAPABILITY-READINESS-MATRIX-v1.md](FORGE-WORDPRESS-CAPABILITY-READINESS-MATRIX-v1.md) | Readiness status |
+| [reports/FORGE-WORDPRESS-SYNTHETIC-TEST-CASE-SPEC-v1.md](reports/FORGE-WORDPRESS-SYNTHETIC-TEST-CASE-SPEC-v1.md) | Synthetic test spec |
+| [reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md](reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) | AG-WP-001 decision |
+
+---
+
+## Current blockers
+
+1. Local WordPress environment not enabled (FW-05)
+2. Synthetic validation not executed (FW-05)
+3. Client pilot intake deferred to FW-06
+
+---
+
+## Next authorized stage
+
+```text
+FW-05 — Local Enablement and Synthetic Validation
+```
+
+Input: [../reports/FORGE-WORDPRESS-FW-05-LOCAL-ENABLEMENT-AND-SYNTHETIC-VALIDATION-INPUT-v1.md](../reports/FORGE-WORDPRESS-FW-05-LOCAL-ENABLEMENT-AND-SYNTHETIC-VALIDATION-INPUT-v1.md)
+
+---
+
+*Capability operational index v1 — FW-04 complete.*
