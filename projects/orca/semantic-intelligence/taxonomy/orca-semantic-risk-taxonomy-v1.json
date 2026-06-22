@@ -1,0 +1,27 @@
+{
+  "taxonomy_id": "orca-semantic-risk-taxonomy",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "risk_classes": [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+  ],
+  "risk_dimensions": [
+    "FALSE_POSITIVE_SPEND",
+    "PROTECTED_STRATA",
+    "AMBIGUITY",
+    "SERVICE_MISMATCH",
+    "LANDING_MISMATCH",
+    "PRODUCT_SERVICE_MISMATCH",
+    "NEGATIVE_OVERBLOCKING",
+    "DOMAIN_KNOWLEDGE",
+    "MORPHOLOGY_OPERATOR",
+    "UNSUPPORTED_CLAIM",
+    "PROVENANCE",
+    "MODEL_DISAGREEMENT"
+  ],
+  "aggregation_rule": "Overall risk is the maximum of dimension risks unless blocking condition applies.",
+  "note": "High risk does not automatically mean REJECT; may require ABSTAIN and review."
+}

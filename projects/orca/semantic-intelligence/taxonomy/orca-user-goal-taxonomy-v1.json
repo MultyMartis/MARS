@@ -1,0 +1,105 @@
+{
+  "taxonomy_id": "orca-user-goal-taxonomy",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "employment_distinction": {
+    "seek_employment": "SEEK_EMPLOYMENT",
+    "hire_employee": "HIRE_EMPLOYEE",
+    "hire_provider": "HIRE_PROVIDER",
+    "note": "These must not share one employment label internally."
+  },
+  "goals": [
+    {
+      "goal_id": "HIRE_PROVIDER",
+      "label": "Hire Provider"
+    },
+    {
+      "goal_id": "REQUEST_QUOTE",
+      "label": "Request Quote"
+    },
+    {
+      "goal_id": "CONTACT_SUPPORT",
+      "label": "Contact Support"
+    },
+    {
+      "goal_id": "OBTAIN_IMPLEMENTATION",
+      "label": "Obtain Implementation"
+    },
+    {
+      "goal_id": "CONFIGURE_SYSTEM",
+      "label": "Configure System"
+    },
+    {
+      "goal_id": "MODIFY_SYSTEM",
+      "label": "Modify System"
+    },
+    {
+      "goal_id": "INTEGRATE_SYSTEMS",
+      "label": "Integrate Systems"
+    },
+    {
+      "goal_id": "RECOVER_OPERATION",
+      "label": "Recover Operation"
+    },
+    {
+      "goal_id": "DIAGNOSE_ISSUE",
+      "label": "Diagnose Issue"
+    },
+    {
+      "goal_id": "MIGRATE_DATA",
+      "label": "Migrate Data"
+    },
+    {
+      "goal_id": "MAINTAIN_SYSTEM",
+      "label": "Maintain System"
+    },
+    {
+      "goal_id": "BUY_MODULE_OR_PRODUCT",
+      "label": "Buy Module Or Product"
+    },
+    {
+      "goal_id": "COMPARE_OPTIONS",
+      "label": "Compare Options"
+    },
+    {
+      "goal_id": "LEARN",
+      "label": "Learn"
+    },
+    {
+      "goal_id": "PERFORM_TASK_INDEPENDENTLY",
+      "label": "Perform Task Independently"
+    },
+    {
+      "goal_id": "READ_DOCUMENTATION",
+      "label": "Read Documentation"
+    },
+    {
+      "goal_id": "DOWNLOAD",
+      "label": "Download"
+    },
+    {
+      "goal_id": "COMPLY_WITH_REGULATION",
+      "label": "Comply With Regulation"
+    },
+    {
+      "goal_id": "SEEK_EMPLOYMENT",
+      "label": "Seek Employment"
+    },
+    {
+      "goal_id": "HIRE_EMPLOYEE",
+      "label": "Hire Employee"
+    },
+    {
+      "goal_id": "NAVIGATE_TO_KNOWN_SITE",
+      "label": "Navigate To Known Site"
+    },
+    {
+      "goal_id": "ACCESS_ACCOUNT",
+      "label": "Access Account"
+    },
+    {
+      "goal_id": "UNKNOWN",
+      "label": "Unknown"
+    }
+  ]
+}

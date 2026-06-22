@@ -1,0 +1,29 @@
+{
+  "fixture_manifest_id": "orca-semantic-record-fixtures-v1",
+  "version": "v1",
+  "purpose": "Schema shape and invariant validation only \u2014 NOT gold labels",
+  "valid_count": 9,
+  "invalid_count": 9,
+  "valid_ids": [
+    "fix-valid-001",
+    "fix-valid-002",
+    "fix-valid-003",
+    "fix-valid-004",
+    "fix-valid-005",
+    "fix-valid-006",
+    "fix-valid-007",
+    "fix-valid-008",
+    "fix-valid-009"
+  ],
+  "invalid_ids": [
+    "fix-invalid-001",
+    "fix-invalid-002",
+    "fix-invalid-003",
+    "fix-invalid-004",
+    "fix-invalid-005",
+    "fix-invalid-006",
+    "fix-invalid-007",
+    "fix-invalid-008",
+    "fix-invalid-009"
+  ]
+}

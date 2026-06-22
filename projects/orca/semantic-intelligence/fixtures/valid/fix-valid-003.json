@@ -1,0 +1,89 @@
+{
+  "query_id": "fix-valid-003",
+  "record_version": "1.0.0",
+  "schema_version": "v1",
+  "created_at": "2026-06-22T09:55:22Z",
+  "updated_at": "2026-06-22T09:55:22Z",
+  "raw_query": "вакансии программист 1с",
+  "normalized_query": "вакансии программист 1с",
+  "language": "ru",
+  "source_type": "fixture",
+  "provenance_status": "COMPLETE",
+  "literal_interpretation": "вакансии программист 1с",
+  "likely_user_goal": "SEEK_EMPLOYMENT",
+  "primary_intent": "CAREER_EMPLOYMENT",
+  "secondary_intents": [],
+  "entities": [],
+  "actions": [],
+  "objects": [],
+  "problems": [],
+  "desired_outcomes": [],
+  "modifiers": [],
+  "geography": null,
+  "product_or_module": null,
+  "configuration_or_version": null,
+  "industry_context": null,
+  "signals": [
+    {
+      "signal_id": "CAREER_SEEKER",
+      "strength": "EXPLICIT",
+      "evidence_span": "вакансии",
+      "normalized_evidence_token": "вакансии",
+      "source_type": "rule",
+      "source_id": "fixture",
+      "confidence": 0.99,
+      "conflict_flag": false
+    }
+  ],
+  "ambiguity": {
+    "types": [
+      "NONE"
+    ],
+    "severity": "LOW",
+    "competing_interpretations": [],
+    "unresolved_questions": []
+  },
+  "commercial_eligibility": {
+    "decision": "REJECT",
+    "reason_code": "CLEAR_CAREER_SEEKER",
+    "phrase_explanation": "Fixture illustration only.",
+    "supporting_evidence": [],
+    "opposing_evidence": [],
+    "confidence": 0.5,
+    "threshold_profile": "CONSERVATIVE",
+    "reviewer_required": false
+  },
+  "risk": {
+    "overall_risk": "LOW",
+    "dimensions": {},
+    "blocking_conditions": []
+  },
+  "service_candidate": {
+    "candidate_service_ids": [],
+    "mapping_status": "NOT_STARTED",
+    "mapping_confidence": null,
+    "mapping_conflicts": []
+  },
+  "review": {
+    "workflow_status": "AUTO_SCREENED",
+    "automated_assessors": [
+      "fixture"
+    ],
+    "human_reviewers": [],
+    "adjudicator": null,
+    "operator_override": false,
+    "review_notes": null
+  },
+  "versioning": {
+    "taxonomy_version": "v1",
+    "rule_version": "fixture-0",
+    "model_version": null,
+    "prompt_version": null
+  },
+  "audit": {
+    "decision_history": [],
+    "change_reasons": [],
+    "immutable_evidence_references": [],
+    "validation_results": []
+  }
+}

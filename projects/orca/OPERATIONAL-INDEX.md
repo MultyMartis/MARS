@@ -154,9 +154,26 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 | [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-RISKS-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-RISKS-v1.md) | Risk register R-01–R-18 |
 | [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-VALIDATION-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ARCHITECTURE-VALIDATION-v1.md) | Documentation validation — PASS |
 
-**Promotion backlog P0-A:** `APPROVED — CHECKPOINTED`.  
-**Next gate:** **P0-B Semantic Taxonomy and Record Schema** — operator review.  
-**Blocked:** classifier, benchmark, annotation guideline, Corvonero rerun, campaign production, Commander.
+## ORCA Semantic Intelligence — Taxonomy and Record Schema v1 (P0-B)
+
+**Implementation-neutral specification locus** — not runtime, not classifier, not benchmark. Status: **APPROVED — IMPLEMENTATION NOT STARTED** (operator B1–B7).
+
+| Doc | Role |
+|-----|------|
+| [semantic-intelligence/README.md](semantic-intelligence/README.md) | P0-B locus entry — taxonomy, schema, invariants, fixtures |
+| [semantic-intelligence/taxonomy/ORCA-SEMANTIC-TAXONOMY-PRINCIPLES-v1.md](semantic-intelligence/taxonomy/ORCA-SEMANTIC-TAXONOMY-PRINCIPLES-v1.md) | 15 design principles |
+| [semantic-intelligence/taxonomy/ORCA-PRIMARY-INTENT-TAXONOMY-v1.md](semantic-intelligence/taxonomy/ORCA-PRIMARY-INTENT-TAXONOMY-v1.md) | 26 primary intents |
+| [semantic-intelligence/schemas/ORCA-SEMANTIC-RECORD-SCHEMA-v1.md](semantic-intelligence/schemas/ORCA-SEMANTIC-RECORD-SCHEMA-v1.md) | Canonical semantic record schema |
+| [semantic-intelligence/contracts/ORCA-SEMANTIC-RECORD-INVARIANTS-v1.md](semantic-intelligence/contracts/ORCA-SEMANTIC-RECORD-INVARIANTS-v1.md) | 20 record invariants |
+| [semantic-intelligence/decisions/ORCA-SEMANTIC-TAXONOMY-AND-SCHEMA-DECISION-v1.md](semantic-intelligence/decisions/ORCA-SEMANTIC-TAXONOMY-AND-SCHEMA-DECISION-v1.md) | P0-B decision record |
+
+| [semantic-intelligence/decisions/ORCA-P0-B-TAXONOMY-AND-SCHEMA-OPERATOR-APPROVAL-v1.md](semantic-intelligence/decisions/ORCA-P0-B-TAXONOMY-AND-SCHEMA-OPERATOR-APPROVAL-v1.md) | P0-B operator approval B1–B7 |
+
+**Promotion backlog P0-A:** `APPROVED — CHECKPOINTED` (commit `f17c270`).  
+**Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (selective commit this task).  
+**P0-C:** `AUTHORIZED` (B7) — annotation guideline drafting authorized.  
+**Next gate:** P0-C Annotation Guideline operator approval → P0-D Benchmark Charter.  
+**Blocked:** classifier, benchmark, Corvonero rerun, campaign production, Commander.
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)
 

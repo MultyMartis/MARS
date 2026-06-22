@@ -2,7 +2,7 @@
 
 **Backlog ID:** `orca-ppc-semantic-intelligence-promotion-backlog`  
 **Version:** v1  
-**Status:** All items `NOT STARTED`  
+**Status:** P0-A `APPROVED — CHECKPOINTED`; P0-B `APPROVED — CHECKPOINTED`; P0-C `AUTHORIZED` (B7)  
 **Authority:** Selective promotion only — no automatic adoption of research
 
 ---
@@ -13,13 +13,13 @@
 |-------|-------|
 | Purpose | Selectively promote research findings into versioned ORCA Semantic Intelligence architecture |
 | Inputs | World-practice research v1; operator decisions D1–D7; gap matrix |
-| Outputs | `architecture/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md` (future) |
+| Outputs | `architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md` |
 | Dependencies | Research intake complete |
 | Authority | Operator + architecture maintainer |
 | Gate | ADR approved before P0-B implementation drafting |
 | Prohibited claims | Not runtime; not classifier; not auto-promoted research |
 | Corvonero impact | Unblocks design path for v2 semantic rerun |
-| Status | **NOT STARTED** |
+| Status | **APPROVED — CHECKPOINTED** (commit `f17c270`) |
 
 ---
 
@@ -29,13 +29,13 @@
 |-------|-------|
 | Purpose | Define per-phrase semantic record schema |
 | Inputs | Research adjudication table; D4 abstention policy |
-| Outputs | Schema MD + JSON for: literal interpretation, likely user goal, primary/secondary intent, provider-hire signal, commercial eligibility, ambiguity, risk, accept/reject/abstain, evidence, provenance, versions |
+| Outputs | `semantic-intelligence/` — taxonomy, schema, invariants, fixtures (MD + JSON) |
 | Dependencies | P0-A |
 | Authority | Architecture ADR |
 | Gate | Schema version frozen before annotation guideline |
 | Prohibited claims | Not phrase registry; not production decisions |
 | Corvonero impact | Required before new admission run |
-| Status | **NOT STARTED** |
+| Status | **APPROVED — CHECKPOINTED** (operator B1–B7) |
 
 ---
 
@@ -51,7 +51,7 @@
 | Gate | Guideline approved before benchmark annotation |
 | Prohibited claims | Not benchmark data itself |
 | Corvonero impact | Required per D2 before semantic rerun |
-| Status | **NOT STARTED** |
+| Status | **AUTHORIZED** (B7) — drafting not started at P0-B checkpoint |
 
 ---
 

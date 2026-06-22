@@ -1,0 +1,80 @@
+{
+  "query_id": "fix-valid-008",
+  "record_version": "1.0.0",
+  "schema_version": "v1",
+  "created_at": "2026-06-22T09:55:22Z",
+  "updated_at": "2026-06-22T09:55:22Z",
+  "raw_query": "аудит учета 1с для ооо",
+  "normalized_query": "аудит учета 1с для ооо",
+  "language": "ru",
+  "source_type": "fixture",
+  "provenance_status": "COMPLETE",
+  "literal_interpretation": "аудит учета 1с для ооо",
+  "likely_user_goal": "DIAGNOSE_ISSUE",
+  "primary_intent": "REQUEST_AUDIT_OR_DIAGNOSTIC",
+  "secondary_intents": [],
+  "entities": [],
+  "actions": [],
+  "objects": [],
+  "problems": [],
+  "desired_outcomes": [],
+  "modifiers": [],
+  "geography": null,
+  "product_or_module": null,
+  "configuration_or_version": null,
+  "industry_context": null,
+  "signals": [],
+  "ambiguity": {
+    "types": [
+      "NONE"
+    ],
+    "severity": "LOW",
+    "competing_interpretations": [],
+    "unresolved_questions": []
+  },
+  "commercial_eligibility": {
+    "decision": "ACCEPT",
+    "reason_code": "EXPLICIT_SERVICE_REQUEST",
+    "phrase_explanation": "Fixture illustration only.",
+    "supporting_evidence": [],
+    "opposing_evidence": [],
+    "confidence": 0.96,
+    "threshold_profile": "CONSERVATIVE",
+    "reviewer_required": true
+  },
+  "risk": {
+    "overall_risk": "LOW",
+    "dimensions": {},
+    "blocking_conditions": []
+  },
+  "service_candidate": {
+    "candidate_service_ids": [],
+    "mapping_status": "NOT_STARTED",
+    "mapping_confidence": null,
+    "mapping_conflicts": []
+  },
+  "review": {
+    "workflow_status": "HUMAN_REVIEWED",
+    "automated_assessors": [
+      "fixture"
+    ],
+    "human_reviewers": [
+      "reviewer-fixture"
+    ],
+    "adjudicator": null,
+    "operator_override": false,
+    "review_notes": null
+  },
+  "versioning": {
+    "taxonomy_version": "v1",
+    "rule_version": "fixture-0",
+    "model_version": null,
+    "prompt_version": null
+  },
+  "audit": {
+    "decision_history": [],
+    "change_reasons": [],
+    "immutable_evidence_references": [],
+    "validation_results": []
+  }
+}

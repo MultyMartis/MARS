@@ -1,0 +1,149 @@
+{
+  "taxonomy_id": "orca-semantic-signal-taxonomy",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "strength_values": [
+    "NONE",
+    "WEAK",
+    "MEDIUM",
+    "STRONG",
+    "EXPLICIT"
+  ],
+  "signals": [
+    {
+      "signal_id": "PROVIDER_HIRE",
+      "label": "Provider Hire"
+    },
+    {
+      "signal_id": "TRANSACTION",
+      "label": "Transaction"
+    },
+    {
+      "signal_id": "QUOTE_PRICE",
+      "label": "Quote Price"
+    },
+    {
+      "signal_id": "CONTACT",
+      "label": "Contact"
+    },
+    {
+      "signal_id": "GEOGRAPHY",
+      "label": "Geography"
+    },
+    {
+      "signal_id": "URGENCY",
+      "label": "Urgency"
+    },
+    {
+      "signal_id": "IMPLEMENTATION",
+      "label": "Implementation"
+    },
+    {
+      "signal_id": "CONFIGURATION",
+      "label": "Configuration"
+    },
+    {
+      "signal_id": "MODIFICATION",
+      "label": "Modification"
+    },
+    {
+      "signal_id": "INTEGRATION",
+      "label": "Integration"
+    },
+    {
+      "signal_id": "SUPPORT",
+      "label": "Support"
+    },
+    {
+      "signal_id": "RECOVERY",
+      "label": "Recovery"
+    },
+    {
+      "signal_id": "AUDIT_DIAGNOSTIC",
+      "label": "Audit Diagnostic"
+    },
+    {
+      "signal_id": "MIGRATION",
+      "label": "Migration"
+    },
+    {
+      "signal_id": "MAINTENANCE",
+      "label": "Maintenance"
+    },
+    {
+      "signal_id": "PROBLEM",
+      "label": "Problem"
+    },
+    {
+      "signal_id": "DIY",
+      "label": "Diy"
+    },
+    {
+      "signal_id": "INFORMATIONAL",
+      "label": "Informational"
+    },
+    {
+      "signal_id": "EDUCATIONAL",
+      "label": "Educational"
+    },
+    {
+      "signal_id": "CAREER_SEEKER",
+      "label": "Career Seeker"
+    },
+    {
+      "signal_id": "EMPLOYEE_HIRING",
+      "label": "Employee Hiring"
+    },
+    {
+      "signal_id": "REGULATORY",
+      "label": "Regulatory"
+    },
+    {
+      "signal_id": "NAVIGATIONAL",
+      "label": "Navigational"
+    },
+    {
+      "signal_id": "LOGIN",
+      "label": "Login"
+    },
+    {
+      "signal_id": "DOCUMENTATION",
+      "label": "Documentation"
+    },
+    {
+      "signal_id": "DOWNLOAD",
+      "label": "Download"
+    },
+    {
+      "signal_id": "FREE",
+      "label": "Free"
+    },
+    {
+      "signal_id": "PRODUCT_MODULE",
+      "label": "Product Module"
+    },
+    {
+      "signal_id": "VERSION_CONFIGURATION",
+      "label": "Version Configuration"
+    },
+    {
+      "signal_id": "INDUSTRY_CONTEXT",
+      "label": "Industry Context"
+    },
+    {
+      "signal_id": "MALFORMED_NOISE",
+      "label": "Malformed Noise"
+    }
+  ],
+  "signal_record_fields": [
+    "signal_id",
+    "strength",
+    "evidence_span",
+    "normalized_evidence_token",
+    "source_type",
+    "source_id",
+    "confidence",
+    "conflict_flag"
+  ],
+  "rule": "Do not infer an entire intent solely from one signal."
+}

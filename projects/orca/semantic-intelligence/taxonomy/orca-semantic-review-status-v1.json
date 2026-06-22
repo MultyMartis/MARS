@@ -1,0 +1,19 @@
+{
+  "taxonomy_id": "orca-semantic-review-status",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "workflow_statuses": [
+    "UNPROCESSED",
+    "AUTO_SCREENED",
+    "AUTO_ACCEPT_CANDIDATE",
+    "AUTO_REJECT_CANDIDATE",
+    "ABSTAIN_PENDING_REVIEW",
+    "HUMAN_REVIEWED",
+    "ADJUDICATED",
+    "OPERATOR_OVERRIDE",
+    "APPROVED_FOR_CORE",
+    "REJECTED_FROM_CORE",
+    "SUPERSEDED"
+  ],
+  "rule": "Workflow status must never replace semantic eligibility."
+}

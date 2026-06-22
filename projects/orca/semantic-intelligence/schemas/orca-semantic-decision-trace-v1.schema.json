@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-semantic-decision-trace-v1.schema.json",
+  "title": "ORCA Semantic Decision Trace v1",
+  "type": "object",
+  "required": [
+    "trace_id",
+    "query_id",
+    "entries",
+    "schema_version"
+  ],
+  "properties": {
+    "trace_id": {
+      "type": "string"
+    },
+    "query_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stage",
+          "assessor_type",
+          "assessor_id",
+          "output",
+          "timestamp"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string"
+          },
+          "assessor_type": {
+            "enum": [
+              "rule",
+              "model",
+              "llm",
+              "human",
+              "operator"
+            ]
+          },
+          "assessor_id": {
+            "type": "string"
+          },
+          "input_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "output": {
+            "type": "object"
+          },
+          "confidence": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "rule_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "model_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prompt_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "disagreements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reviewer_action": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "operator_override": {
+            "type": "boolean"
+          },
+          "reason_for_change": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "decision_id": "orca-semantic-taxonomy-and-schema-decision",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "APPROVED — IMPLEMENTATION NOT STARTED",
+  "operator_approval": "orca-p0-b-taxonomy-and-schema-operator-approval-v1.json",
+  "selected_models": {
+    "taxonomy": "multi-axis intent-signal-eligibility",
+    "intent_granularity": "26 primary intents",
+    "signal_model": "typed signals with strength and evidence",
+    "eligibility_model": "ACCEPT REJECT ABSTAIN with reason families",
+    "ambiguity_model": "typed ambiguity with severity",
+    "risk_model": "multi-dimensional aggregation",
+    "workflow_model": "review status separate from eligibility",
+    "schema_approach": "JSON Schema draft 2020-12 with invariants"
+  },
+  "next_gate": "P0-C Annotation Guideline after P0-B approval"
+}

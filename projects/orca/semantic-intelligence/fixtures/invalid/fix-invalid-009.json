@@ -1,0 +1,76 @@
+{
+  "query_id": "fix-invalid-009",
+  "record_version": "1.0.0",
+  "schema_version": "v1",
+  "created_at": "2026-06-22T09:55:22Z",
+  "updated_at": "2026-06-22T09:55:22Z",
+  "raw_query": "тест3",
+  "normalized_query": "тест3",
+  "language": "ru",
+  "source_type": "fixture",
+  "provenance_status": "MISSING",
+  "literal_interpretation": "тест3",
+  "likely_user_goal": "UNKNOWN",
+  "primary_intent": "UNKNOWN",
+  "secondary_intents": [],
+  "entities": [],
+  "actions": [],
+  "objects": [],
+  "problems": [],
+  "desired_outcomes": [],
+  "modifiers": [],
+  "geography": null,
+  "product_or_module": null,
+  "configuration_or_version": null,
+  "industry_context": null,
+  "signals": [],
+  "ambiguity": {
+    "types": [
+      "NONE"
+    ],
+    "severity": "LOW",
+    "competing_interpretations": [],
+    "unresolved_questions": [
+      "Missing provenance"
+    ]
+  },
+  "commercial_eligibility": {
+    "decision": "ABSTAIN",
+    "reason_code": "INSUFFICIENT_EVIDENCE",
+    "phrase_explanation": "Fixture illustration only.",
+    "supporting_evidence": [],
+    "opposing_evidence": [],
+    "confidence": 0.5,
+    "threshold_profile": "CONSERVATIVE",
+    "reviewer_required": false
+  },
+  "risk": {
+    "overall_risk": "LOW",
+    "dimensions": {},
+    "blocking_conditions": []
+  },
+  "service_candidate": {
+    "candidate_service_ids": [],
+    "mapping_status": "NOT_STARTED",
+    "mapping_confidence": null,
+    "mapping_conflicts": []
+  },
+  "review": {
+    "workflow_status": "AUTO_SCREENED",
+    "automated_assessors": [
+      "fixture"
+    ],
+    "human_reviewers": [],
+    "adjudicator": null,
+    "operator_override": false,
+    "review_notes": null
+  },
+  "versioning": {},
+  "audit": {
+    "decision_history": [],
+    "change_reasons": [],
+    "immutable_evidence_references": [],
+    "validation_results": []
+  },
+  "_violation": "Missing provenance and assessor version"
+}

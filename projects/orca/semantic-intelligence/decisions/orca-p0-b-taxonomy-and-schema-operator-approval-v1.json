@@ -1,0 +1,35 @@
+{
+  "record_id": "orca-p0-b-taxonomy-and-schema-operator-approval",
+  "version": "v1",
+  "date": "2026-06-22",
+  "approvals": {
+    "B1_taxonomy_status": "APPROVED — IMPLEMENTATION NOT STARTED",
+    "B2_schema_status": "APPROVED — IMPLEMENTATION NOT STARTED",
+    "B3_admission_outputs": ["ACCEPT", "REJECT", "ABSTAIN"],
+    "B4_core_distinction": {
+      "primary_intent_not_commercial_eligibility": true,
+      "topic_relevance_not_commercial_intent": true,
+      "workflow_status_not_eligibility": true,
+      "service_candidate_not_service_ownership": true,
+      "problem_signal_not_provider_hire_signal": true
+    },
+    "B5_schema_authority": [
+      "annotation",
+      "benchmark",
+      "baseline_implementation",
+      "evaluation",
+      "semantic_core_production"
+    ],
+    "B6_runtime_validation": {
+      "required_for_p0_b_approval": false,
+      "required_before": [
+        "benchmark_automation",
+        "baseline_comparison",
+        "production_semantic_processing"
+      ]
+    },
+    "B7_p0_c_authorization": "AUTHORIZED"
+  },
+  "prior_approvals": ["A1-A7", "D1-D7"],
+  "next_gate": "P0-C Annotation Guideline — operator approval required"
+}

@@ -1,0 +1,87 @@
+{
+  "contract_id": "orca-semantic-record-invariants",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "invariants": [
+    {
+      "id": 1,
+      "rule": "Topic match alone cannot support ACCEPT"
+    },
+    {
+      "id": 2,
+      "rule": "ACCEPT requires positive commercial evidence"
+    },
+    {
+      "id": 3,
+      "rule": "Conflicting protected signal may require ABSTAIN"
+    },
+    {
+      "id": 4,
+      "rule": "Unresolved high ambiguity cannot ACCEPT"
+    },
+    {
+      "id": 5,
+      "rule": "REJECT requires a reason code"
+    },
+    {
+      "id": 6,
+      "rule": "ABSTAIN requires an unresolved question or conflict"
+    },
+    {
+      "id": 7,
+      "rule": "Every decision requires provenance"
+    },
+    {
+      "id": 8,
+      "rule": "Every automated decision records rule/model/prompt versions"
+    },
+    {
+      "id": 9,
+      "rule": "Service ownership cannot be final before ACCEPT"
+    },
+    {
+      "id": 10,
+      "rule": "Cluster or campaign fields are forbidden"
+    },
+    {
+      "id": 11,
+      "rule": "Export fields are forbidden"
+    },
+    {
+      "id": 12,
+      "rule": "Human override must retain prior decision"
+    },
+    {
+      "id": 13,
+      "rule": "Superseded records remain auditable"
+    },
+    {
+      "id": 14,
+      "rule": "Narrative fields cannot contain raw numeric sentinels"
+    },
+    {
+      "id": 15,
+      "rule": "Primary intent and eligibility must not be conflated"
+    },
+    {
+      "id": 16,
+      "rule": "Workflow status and eligibility must not be conflated"
+    },
+    {
+      "id": 17,
+      "rule": "Product/module intent cannot silently map to service intent"
+    },
+    {
+      "id": 18,
+      "rule": "UNKNOWN cannot automatically become ACCEPT"
+    },
+    {
+      "id": 19,
+      "rule": "Malformed query cannot be rewritten into a new commercial query"
+    },
+    {
+      "id": 20,
+      "rule": "ABSTAIN is a valid terminal output for automated processing"
+    }
+  ]
+}

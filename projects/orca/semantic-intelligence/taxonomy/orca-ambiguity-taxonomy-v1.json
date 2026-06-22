@@ -1,0 +1,34 @@
+{
+  "taxonomy_id": "orca-ambiguity-taxonomy",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "ambiguity_types": [
+    "NONE",
+    "LEXICAL",
+    "INTENT",
+    "SERVICE",
+    "PRODUCT_VS_SERVICE",
+    "PROVIDER_VS_DIY",
+    "SUPPORT_VS_INFORMATION",
+    "CAREER_VS_PROVIDER",
+    "REGULATORY_VS_IMPLEMENTATION",
+    "GEOGRAPHIC",
+    "SHORT_HEAD_TERM",
+    "MULTIPLE",
+    "UNKNOWN"
+  ],
+  "severity_values": [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+  ],
+  "mandatory_abstain_when_unresolved": [
+    "PROVIDER_VS_DIY",
+    "PRODUCT_VS_SERVICE",
+    "CAREER_VS_PROVIDER",
+    "SUPPORT_VS_INFORMATION",
+    "SHORT_HEAD_TERM",
+    "MULTIPLE"
+  ]
+}

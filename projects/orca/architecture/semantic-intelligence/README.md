@@ -27,6 +27,7 @@ Document-first, implementation-neutral target architecture for ORCA Semantic Int
 | Item | Status |
 |------|--------|
 | P0-A ADR | **APPROVED — CHECKPOINTED** |
-| P0-B Taxonomy | AUTHORIZED — operator review pending |
+| P0-B Taxonomy | **APPROVED — CHECKPOINTED** (see `projects/orca/semantic-intelligence/`) |
+| P0-C Annotation Guideline | **AUTHORIZED** (B7) — not started at P0-B checkpoint |
 | Corvonero rerun | BLOCKED |
 | Campaign production | BLOCKED |

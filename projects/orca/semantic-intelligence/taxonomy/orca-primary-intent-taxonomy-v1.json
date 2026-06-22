@@ -1,0 +1,215 @@
+{
+  "taxonomy_id": "orca-primary-intent-taxonomy",
+  "version": "v1",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "intents": [
+    {
+      "intent_id": "HIRE_SERVICE",
+      "label": "Hire service provider",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_IMPLEMENTATION",
+      "label": "Request implementation",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_CONFIGURATION",
+      "label": "Request configuration",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_MODIFICATION",
+      "label": "Request modification",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_INTEGRATION",
+      "label": "Request integration",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_SUPPORT",
+      "label": "Request support",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_RECOVERY",
+      "label": "Request recovery",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_AUDIT_OR_DIAGNOSTIC",
+      "label": "Request audit or diagnostic",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_MIGRATION",
+      "label": "Request migration",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "REQUEST_MAINTENANCE",
+      "label": "Request maintenance",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "BUY_PRODUCT_OR_MODULE",
+      "label": "Buy product or module",
+      "family": "commercial",
+      "protected_class": null,
+      "may_support_accept": true,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "PROBLEM_UNRESOLVED",
+      "label": "Unresolved problem",
+      "family": "problem_self_service",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "TROUBLESHOOT_SELF",
+      "label": "Self-troubleshoot",
+      "family": "problem_self_service",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "DIY_HOW_TO",
+      "label": "DIY how-to",
+      "family": "problem_self_service",
+      "protected_class": "diy_how_to",
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "DOCUMENTATION_LOOKUP",
+      "label": "Documentation lookup",
+      "family": "problem_self_service",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "DOWNLOAD_RESOURCE",
+      "label": "Download resource",
+      "family": "problem_self_service",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "INFORMATIONAL",
+      "label": "Informational",
+      "family": "knowledge_regulation",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "EDUCATIONAL",
+      "label": "Educational",
+      "family": "knowledge_regulation",
+      "protected_class": "educational",
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "REGULATORY",
+      "label": "Regulatory",
+      "family": "knowledge_regulation",
+      "protected_class": "regulatory",
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "CAREER_EMPLOYMENT",
+      "label": "Career or employment",
+      "family": "employment_navigation",
+      "protected_class": "career",
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "NAVIGATIONAL",
+      "label": "Navigational",
+      "family": "employment_navigation",
+      "protected_class": "navigational",
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "LOGIN_ACCOUNT_ACCESS",
+      "label": "Login or account access",
+      "family": "employment_navigation",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "AMBIGUOUS",
+      "label": "Ambiguous",
+      "family": "quality_uncertainty",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    },
+    {
+      "intent_id": "IRRELEVANT",
+      "label": "Irrelevant",
+      "family": "quality_uncertainty",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "MALFORMED",
+      "label": "Malformed",
+      "family": "quality_uncertainty",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": false
+    },
+    {
+      "intent_id": "UNKNOWN",
+      "label": "Unknown",
+      "family": "quality_uncertainty",
+      "protected_class": null,
+      "may_support_accept": false,
+      "human_review_normally_required": true
+    }
+  ]
+}

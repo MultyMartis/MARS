@@ -1,0 +1,67 @@
+{
+  "validation_id": "orca-semantic-taxonomy-and-schema-validation",
+  "version": "v1",
+  "status": "PASS — DOCUMENTATION VALIDATION",
+  "checks": [
+    {
+      "id": 1,
+      "criterion": "taxonomy_ids_unique",
+      "result": "PASS"
+    },
+    {
+      "id": 2,
+      "criterion": "schema_enums_reference_taxonomies",
+      "result": "PASS"
+    },
+    {
+      "id": 3,
+      "criterion": "required_fields_defined",
+      "result": "PASS"
+    },
+    {
+      "id": 4,
+      "criterion": "accept_reject_abstain_invariants",
+      "result": "PASS"
+    },
+    {
+      "id": 5,
+      "criterion": "abstain_valid_terminal",
+      "result": "PASS"
+    },
+    {
+      "id": 6,
+      "criterion": "protected_classes_represented",
+      "result": "PASS"
+    },
+    {
+      "id": 7,
+      "criterion": "workflow_distinct_from_eligibility",
+      "result": "PASS"
+    },
+    {
+      "id": 8,
+      "criterion": "service_candidate_distinct_from_ownership",
+      "result": "PASS"
+    },
+    {
+      "id": 9,
+      "criterion": "campaign_export_fields_absent",
+      "result": "PASS"
+    },
+    {
+      "id": 10,
+      "criterion": "versioning_provenance_mandatory",
+      "result": "PASS"
+    },
+    {
+      "id": 11,
+      "criterion": "fixtures_pass_fail_expected",
+      "result": "PASS"
+    },
+    {
+      "id": 12,
+      "criterion": "no_benchmark_or_classifier_created",
+      "result": "PASS"
+    }
+  ]
+}

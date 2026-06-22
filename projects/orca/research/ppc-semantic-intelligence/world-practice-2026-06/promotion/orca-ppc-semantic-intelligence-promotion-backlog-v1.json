@@ -1,33 +1,35 @@
 {
   "backlog_id": "orca-ppc-semantic-intelligence-promotion-backlog",
   "version": "v1",
-  "all_items_status": "NOT STARTED",
+  "all_items_status": "P0-A CHECKPOINTED; P0-B CHECKPOINTED; P0-C AUTHORIZED",
   "items": [
     {
       "id": "P0-A",
       "title": "Architecture Decision Record",
       "purpose": "Selectively promote research findings into ORCA architecture",
       "inputs": ["world_practice_research_v1", "operator_decisions_D1_D7", "gap_matrix_v1"],
-      "outputs": ["architecture/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md"],
+      "outputs": ["architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md"],
       "dependencies": [],
       "authority": "operator_and_architecture_maintainer",
       "gate": "ADR approved before P0-B",
       "prohibited_claims": ["not_runtime", "not_classifier", "not_auto_promoted_research"],
       "corvonero_impact": "Unblocks design for v2 semantic rerun",
-      "status": "NOT STARTED"
+      "status": "APPROVED — CHECKPOINTED",
+      "checkpoint_commit": "f17c270"
     },
     {
       "id": "P0-B",
       "title": "Semantic Taxonomy and Record Schema",
       "purpose": "Define per-phrase semantic record schema",
       "inputs": ["research_adjudication_table", "D4_abstention_policy"],
-      "outputs": ["semantic_record_schema_md", "semantic_record_schema_json"],
+      "outputs": ["semantic-intelligence/taxonomy", "semantic-intelligence/schemas", "semantic-intelligence/contracts", "semantic-intelligence/fixtures"],
       "dependencies": ["P0-A"],
       "authority": "architecture_ADR",
       "gate": "Schema frozen before P0-C",
       "prohibited_claims": ["not_phrase_registry", "not_production_decisions"],
       "corvonero_impact": "Required before new admission run",
-      "status": "NOT STARTED"
+      "status": "APPROVED — CHECKPOINTED",
+      "operator_approval": "B1-B7"
     },
     {
       "id": "P0-C",
@@ -40,7 +42,7 @@
       "gate": "Guideline approved before benchmark annotation",
       "prohibited_claims": ["not_benchmark_data"],
       "corvonero_impact": "Required per D2 before semantic rerun",
-      "status": "NOT STARTED"
+      "status": "AUTHORIZED"
     },
     {
       "id": "P0-D",
