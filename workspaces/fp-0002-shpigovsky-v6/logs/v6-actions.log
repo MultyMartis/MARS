@@ -94,3 +94,113 @@ file_changed: audit/FP-0002-V6-JPG-AUDIT-SOURCE-PURITY-GATE.md, logs/v6-actions.
 action: purity_gate
 expected_outcome: PASS verdict with gate artefact and updated logs
 ---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Preflight completed
+
+REASON:
+V6 workspace, purity gate, JPG hash, zero skeleton HTML
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+JPG integrity verified
+
+REASON:
+SHA-256 cdd1d5b… matches 8107632 bytes
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+JPG opened
+
+REASON:
+PIL native pixel load 1398x16343
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Coordinate system established
+
+REASON:
+top-left origin, source-image-pixel unit
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Global segmentation completed
+
+REASON:
+35 BLOCK segments
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Block extraction completed
+
+REASON:
+12-point template per block in audit MD
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Geometry map completed
+
+REASON:
+FP-0002-V6-JPG-GEOMETRY-MAP.md
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Component map completed
+
+REASON:
+20 CMP entries
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+SAFE UNKNOWN register completed
+
+REASON:
+FP-0002-V6-JPG-SAFE-UNKNOWN.md
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Structure lock completed
+
+REASON:
+FP-0002-V6-JPG-STRUCTURE-LOCK.md
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg
+
+DECISION:
+Validation completed
+
+REASON:
+PASS verdict; JSON valid
+---

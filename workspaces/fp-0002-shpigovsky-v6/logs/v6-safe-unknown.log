@@ -22,3 +22,43 @@ topic: foundation token historical independence
 detail: 1220px container and 1024px breakpoint are approved V6 foundation tokens; independence from pre-v6 iterations not provable without forbidden source reads.
 action: treat as V6 charter values unless operator overrides after JPG audit.
 ---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — typography
+
+SAFE UNKNOWN:
+font-family and exact line-height for all text
+
+REASON:
+JPEG raster text lacks reliable metrics
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — BLOCK boundaries <380px
+
+SAFE UNKNOWN:
+internal column splits within BLOCK-004,014,022,027,028,031,032,035
+
+REASON:
+transition score splits macro bands; sub-grids not uniquely separable by row scan alone
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — colors
+
+SAFE UNKNOWN:
+exact HEX for red CTA and dark blue bands
+
+REASON:
+JPEG COLOR VARIANCE
+---
+---
+SOURCE:
+HOME-PAGE-FULL-MOCKUP.jpg — responsive
+
+SAFE UNKNOWN:
+layout below 1024px
+
+REASON:
+single desktop JPG only
+---
