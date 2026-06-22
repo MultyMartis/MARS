@@ -1,5 +1,6 @@
 <header class="site-header">
   <div class="container">
+
     <div class="site-header__mobile-bar">
       <a class="site-header__logo site-header__logo--mobile" href="#">
         <img
@@ -8,25 +9,69 @@
           alt="Шпиговский дом"
         >
       </a>
-      <a
-        class="site-header__phone site-header__phone--mobile-primary"
-        href="tel:+79251836464"
-      >
-        8 (925) 183-64-64
-      </a>
-      <button
-        type="button"
-        class="site-header__menu-toggle"
-        data-offcanvas-open
-        aria-controls="mobile-menu"
-        aria-expanded="false"
-        aria-label="Открыть меню"
-      >
-        <span class="site-header__menu-toggle-icon" aria-hidden="true">
-          <i class="fas fa-bars"></i>
-        </span>
-      </button>
+
+      <div class="site-header__mobile-bar--actions">
+        <a
+          class="site-header__phone site-header__phone--mobile-primary"
+          href="tel:+79251836464"
+        >
+          8 (925) 183-64-64
+        </a>
+
+        <div class="mobile-header__messengers">
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Telegram"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/telegram.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="WhatsApp"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/whatsapp.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Max"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/max.svg"
+              alt=""
+            >
+          </a>
+        </div>
+
+
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          data-offcanvas-open
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="site-header__menu-toggle-icon" aria-hidden="true">
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+      </div>
     </div>
+
+
+
     <div class="site-header__top">
       <a class="site-header__logo" href="#">
         <img
@@ -77,6 +122,9 @@
       </div>
 
     </div>
+
+
+
     <div class="site-header__bottom">
       <nav class="site-header__nav" aria-label="Основная навигация">
         <ul class="site-header__nav-list">
@@ -113,6 +161,9 @@
         </ul>
       </nav>
     </div>
+
+
+
   </div>
 
   <div
@@ -206,6 +257,17 @@
             <img
               class="offcanvas__messenger-icon"
               src="assets/img/social/whatsapp.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Max"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/max.svg"
               alt=""
             >
           </a>
