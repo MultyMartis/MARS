@@ -897,6 +897,92 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
+   10b. Home founder quote (Section 02)
+   ========================================================================== */
+
+.home-founder-quote__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 24px; // EXACT_GEOMETRY — mockup column split gap 720-696 at 1398 canvas
+	align-items: start;
+}
+
+.home-founder-quote__quote {
+	margin: 0;
+}
+
+.home-founder-quote__mark {
+	margin: 0 0 var(--pad-gap-line);
+	color: var(--color-accent);
+	font-size: 72px; // EXACT_GEOMETRY — mockup quote_mark zone height 72px at 1398 canvas
+	line-height: 1;
+	font-weight: var(--font-weight-heading);
+}
+
+.home-founder-quote__text {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+}
+
+.home-founder-quote__text:last-child {
+	margin-bottom: 0;
+}
+
+.home-founder-quote__figure {
+	position: relative;
+	margin: 0;
+}
+
+.home-founder-quote__photo {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.home-founder-quote__author {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 630px; // EXACT_GEOMETRY — mockup author_block width 1350-720 at 1398 canvas
+	padding: var(--pad-gap);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+}
+
+.home-founder-quote__name {
+	margin: 0 0 var(--pad-gap-tight);
+	padding-bottom: var(--pad-gap-tight);
+	border-bottom: var(--border-width) solid var(--color-text-primary);
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+}
+
+.home-founder-quote__role {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-secondary);
+}
+
+.home-founder-quote__cta {
+	border-color: var(--color-accent);
+	color: var(--color-text-primary);
+	background-color: transparent;
+}
+
+.home-founder-quote__cta:hover {
+	border-color: var(--color-accent);
+	background-color: var(--color-accent);
+	color: var(--color-text-inverse);
+}
+
+/* ==========================================================================
    11. Footer
    ========================================================================== */
 
@@ -1534,6 +1620,16 @@ body[data-offcanvas-state='open'] {
 
 	.home-recovery-intro__card-grid {
 		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.home-founder-quote__layout {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.home-founder-quote__author {
+		position: static;
+		max-width: none;
+		margin-top: var(--pad-gap-line);
 	}
 
 	.site-header {

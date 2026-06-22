@@ -64,7 +64,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01 **OPERATOR_APPROVED_FROZEN**; Section 02 **NOT STARTED**; Section 03+ **NOT STARTED** |
+| Main content sections | Section 01 **OPERATOR_APPROVED_FROZEN**; Section 02 **IMPLEMENTED_PENDING_OPERATOR_REVIEW**; Section 03+ **NOT STARTED** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
@@ -81,7 +81,8 @@ responsive_shell_status: FROZEN_PRESERVED
 home_section_01: OPERATOR_APPROVED_FROZEN
 home_section_01_release: FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01
 home_section_01_active_partial: src/partials/sections/home-recovery-intro.html
-home_section_02: NOT_STARTED
+home_section_02_audit: COMPLETE
+home_section_02_implementation: IMPLEMENTED_PENDING_OPERATOR_REVIEW
 home_section_03: NOT_STARTED
 main_content_remaining: NOT_STARTED
 ```
