@@ -1,0 +1,47 @@
+{
+  "section_id": "SECTION-002",
+  "semantic_name": "intro-programs",
+  "status": "PARTIAL_ASSET_REQUIRED",
+  "variable_first_pilot": true,
+  "source_sha256": "cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290",
+  "y_start": 904,
+  "y_end": 4544,
+  "boundaries_confidence": "HIGH",
+  "html_partial": "src/partials/sections/intro-programs.html",
+  "scss_partial": "src/scss/sections/_intro-programs.scss",
+  "scss_authorization": {
+    "token_lookup_complete": true,
+    "arbitrary_values_allowed": false,
+    "arbitrary_values_count": 0,
+    "hidden_fallback_literals_count": 0,
+    "html_authorized": true,
+    "scss_authorized": true,
+    "javascript_authorized": false,
+    "responsive_authorized": false
+  },
+  "internal_groups": [
+    { "id": "SECTION-002-GROUP-01", "blocks": ["BLOCK-002"], "component": "CMP-004" },
+    { "id": "SECTION-002-GROUP-02", "blocks": ["BLOCK-003"], "component": "CMP-005" },
+    { "id": "SECTION-002-GROUP-03", "blocks": ["BLOCK-004"], "component": "CMP-006" },
+    { "id": "SECTION-002-GROUP-04", "blocks": ["BLOCK-005"], "component": "CMP-007" },
+    { "id": "SECTION-002-GROUP-05", "blocks": ["BLOCK-006"], "role": "team copy heading" },
+    { "id": "SECTION-002-GROUP-06", "blocks": ["BLOCK-007"], "role": "team copy continuation" },
+    { "id": "SECTION-002-GROUP-07", "blocks": ["BLOCK-008"], "role": "multidisciplinary approach" }
+  ],
+  "assets": [
+    { "role": "founder-portrait", "required": true, "status": "ASSET_REQUIRED" },
+    { "role": "clinical-photo-01", "required": true, "status": "ASSET_REQUIRED" },
+    { "role": "clinical-photo-02", "required": true, "status": "ASSET_REQUIRED" },
+    { "role": "clinical-photo-03", "required": true, "status": "ASSET_REQUIRED" },
+    { "role": "clinical-photo-04", "required": true, "status": "ASSET_REQUIRED" },
+    { "role": "lifebuoy-decor", "required": false, "status": "DEFERRED" }
+  ],
+  "content": {
+    "intro_heading": "Шпиговский дом — восстановление с уважением к личности",
+    "treatment_heading": "Лечение и профилактика",
+    "approach_heading": "Нас выбирают за мультидисциплинарный подход к лечению"
+  },
+  "evidence": [
+    "specifications/section-002/evidence/01-section-002-full.jpg"
+  ]
+}

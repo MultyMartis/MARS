@@ -2,7 +2,19 @@
 
 **Workspace:** `workspaces/fp-0002-shpigovsky-v6/`  
 **Factory pipeline:** [frontend-implementation-pipeline-v1.md](../../../projects/mars-website-factory/frontend-implementation-pipeline-v1.md)  
-**Current state:** Foundation APPROVED; SECTION-001 spec READY FOR OPERATOR REVIEW; HTML/SCSS locked
+**Current state:** Foundation APPROVED; SECTION-001 implemented; SECTION-002 variable-first pilot **PARTIAL · ASSET REQUIRED**
+
+---
+
+## SECTION-002 pilot (2026-06-22)
+
+| Field | Value |
+|-------|-------|
+| Semantic name | `intro-programs` |
+| Status | PARTIAL · ASSET REQUIRED (founder portrait, 4 clinical photos) |
+| Variable-first pilot | **COMPLETE** (gates: arbitrary 0, hidden fallback 0) |
+| Spec | `specifications/section-002/` |
+| Review | `reviews/section-002/` |
 
 ---
 
