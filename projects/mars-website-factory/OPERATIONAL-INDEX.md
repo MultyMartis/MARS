@@ -64,6 +64,8 @@
 
 **Universal Button System Law (2026-06-23):** **MANDATORY PRODUCTION CONTRACT** — **[universal-button-system-law-v1.md](universal-button-system-law-v1.md)**; single `.btn` base + `.btn_dark` / `.btn--primary` modifiers; no parallel block button systems; UNIVERSAL BUTTON SYSTEM GATE on pre-SCSS; FP-0002 V6 pilot normalization; **DOCUMENTED MANDATORY GATE** · **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**.
 
+**Operator-Canonical Source & Load Stability Pack (2026-06-23):** **MANDATORY PRODUCTION CONTRACTS** — **[operator-canonical-source-law-v1.md](operator-canonical-source-law-v1.md)** · **[no-new-design-values-after-operator-calibration-law-v1.md](no-new-design-values-after-operator-calibration-law-v1.md)** · **[no-production-safe-unknown-attribute-law-v1.md](no-production-safe-unknown-attribute-law-v1.md)** · **[semantic-text-casing-law-v1.md](semantic-text-casing-law-v1.md)** · **[data-attribute-js-hook-law-v1.md](data-attribute-js-hook-law-v1.md)** · **[font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md)**; FP-0002 V6 operator manual `src` authority + design value freeze + production DOM hygiene + load stability; **DOCUMENTED MANDATORY GATES** · **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED**.
+
 **Operator Visual Approval Law (2026-06-14):** TECHNICAL PASS ≠ OPERATOR APPROVAL — **[operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md)**; mandatory **OPERATOR VISUAL REVIEW** REPORT block; Screenshot Override Law.
 
 **Session routing (Tier 0–3):** [survivability-canonical-entrypoint-model-v0.md](../../governance/survivability-canonical-entrypoint-model-v0.md) — **Tier 2** live navigation for Factory; open **Core Run** first; **Extended** only when the task needs a governance triad.

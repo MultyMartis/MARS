@@ -114,6 +114,46 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 
 **On violation:** `SECTION RHYTHM GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
 
+### Operator source gate (mandatory)
+
+- [ ] Current `src` inspected (read files — do not assume from specs).
+- [ ] Operator modifications identified and protected.
+- [ ] No previous artefact will overwrite current `src`.
+- [ ] Planned edits are minimal and local.
+
+**Authority:** [operator-canonical-source-law-v1.md](operator-canonical-source-law-v1.md)
+
+**On violation:** `OPERATOR SOURCE AUTHORITY GATE — FAIL` · `IMPLEMENTATION DENIED`
+
+### Design value freeze gate (mandatory when freeze ACTIVE)
+
+- [ ] No new spacing, dimension, font, color, button, or radius values proposed.
+- [ ] Every changed value is operator-authored or exception-approved.
+
+**Authority:** [no-new-design-values-after-operator-calibration-law-v1.md](no-new-design-values-after-operator-calibration-law-v1.md)
+
+**On violation:** `DESIGN VALUE FREEZE GATE — FAIL`
+
+### HTML quality gate (mandatory)
+
+- [ ] `data-safe-unknown` absent in production HTML.
+- [ ] Visible text uses semantic case; uppercase via CSS `text-transform`.
+- [ ] Official acronyms preserved.
+
+**Authority:** [no-production-safe-unknown-attribute-law-v1.md](no-production-safe-unknown-attribute-law-v1.md) · [semantic-text-casing-law-v1.md](semantic-text-casing-law-v1.md)
+
+### JS hook gate (mandatory when JS present)
+
+- [ ] Behavior selectors use `data-*`; no unused hooks.
+
+**Authority:** [data-attribute-js-hook-law-v1.md](data-attribute-js-hook-law-v1.md)
+
+### Font stability gate (mandatory on stability tasks)
+
+- [ ] Font delivery audited; critical weights limited; dimensions reserved for icons/images.
+
+**Authority:** [font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md)
+
 ---
 
 ## REPORT line

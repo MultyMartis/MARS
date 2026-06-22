@@ -92,6 +92,23 @@ Project invariants:
 
 Full rule prose: [frontend-production-invariants-v1.md](frontend-production-invariants-v1.md).
 
+### Factory operator-canonical invariant block (2026-06-23)
+
+Paste into `constraints` for any Website Factory frontend task after operator manual calibration:
+
+```text
+Current src is operator-canonical.
+Do not overwrite manual changes.
+Do not invent new design values.
+Do not use data-safe-unknown in production HTML.
+Write visible HTML text in semantic normal case.
+Use CSS text-transform for uppercase presentation.
+Use data-* attributes for JS behavior hooks.
+Prevent FOUT, FOIT and layout shifts.
+```
+
+Authority: [operator-canonical-source-law-v1.md](operator-canonical-source-law-v1.md) · [no-new-design-values-after-operator-calibration-law-v1.md](no-new-design-values-after-operator-calibration-law-v1.md) · [no-production-safe-unknown-attribute-law-v1.md](no-production-safe-unknown-attribute-law-v1.md) · [semantic-text-casing-law-v1.md](semantic-text-casing-law-v1.md) · [data-attribute-js-hook-law-v1.md](data-attribute-js-hook-law-v1.md) · [font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md).
+
 ---
 
 ## 4. Section implementation prompts

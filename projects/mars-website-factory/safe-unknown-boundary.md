@@ -21,6 +21,10 @@ This file states explicit **honesty boundaries** for the Website Factory directi
 - **All production execution** remains **human-supervised** until governance and implementation evidence say otherwise.
 - **Cursor** remains a **prompt-driven** execution surface for filesystem work in Phase 1 (`governance/execution-model.md`).
 
+## Production HTML boundary (2026-06-23)
+
+**SAFE UNKNOWN** is a **governance/documentation** state only. It must **never** appear as `data-safe-unknown` or similar markers in production HTML. See [no-production-safe-unknown-attribute-law-v1.md](no-production-safe-unknown-attribute-law-v1.md).
+
 ## When claims become allowed
 
 Update this boundary when **concrete** evidence exists in-repo (code, configs, runbooks with verified automation) and governance agrees — until then, default to **SAFE UNKNOWN** or **planned**.
