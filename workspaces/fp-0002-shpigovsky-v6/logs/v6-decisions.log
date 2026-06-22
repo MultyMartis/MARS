@@ -83,3 +83,12 @@ decision: search icon EXTRACTED
 source: shared/assets/icon-libraries/Font Awesome Pro 5.15.4/webfonts/fa-solid-900.svg glyph search
 sha256: 032e727bb013834a3e33b74e159e9e36b93ea7fbc304f5a61326e636b20b1b34
 ---
+
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+decision: Header desktop SCSS checkpoint complete; header_scss_authorized=true retained
+source_used: specifications/section-001/FP-0002-V6-SECTION-001-SPECIFICATION.json; foundation/FP-0002-V6-SITE-WIDE-STYLE-FOUNDATION.md; evidence/02-header-estimate-band.jpg
+reason: SECTION-001 block-level tokens + approved foundation spacing; visual QA STRUCTURAL PASS MAE 18.45 @ 1398px
+rejected_alternatives: FIG; PDF; v1-v5; magic-number Y=174; 1138px max-width; Hero; mobile header; JS hooks
+---

@@ -76,3 +76,92 @@ action: build
 reason: npm run build validation
 expected_outcome: Build succeeded; dist not committed
 ---
+
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: src/scss/layout/_header.scss
+action: created
+reason: Desktop-only Header SCSS per SECTION-001-GROUP-01
+expected_outcome: Two-row header layout with foundation + block color tokens
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: src/scss/utils/_variables.scss
+action: modified
+reason: Foundation spacing tokens + SECTION-001 block color proposals
+expected_outcome: grid-gap-standard 30px; text-stack-gap 20px; page wash rgb(230,239,246)
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: src/scss/base/_reset.scss
+action: modified
+reason: Apply page wash background token on body
+expected_outcome: body background-color uses $color-page-background
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: src/scss/style.scss
+action: modified
+reason: Import layout/header
+expected_outcome: Header styles compiled into dist/css/style.css
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: src/img/social/telegram.svg
+action: modified
+reason: Remove Google Fonts @import network dependency
+expected_outcome: No runtime @import in Header messenger assets
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: src/img/social/whatsapp.svg
+action: modified
+reason: Remove Google Fonts @import network dependency
+expected_outcome: No runtime @import in Header messenger assets
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: specifications/section-001/FP-0002-V6-SECTION-001-SPECIFICATION.json
+action: modified
+reason: Set header_scss_authorized true
+expected_outcome: SCSS gate open for operator review closure
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: reviews/header/FP-0002-V6-HEADER-SCSS-VISUAL-QA.md
+action: modified
+reason: Checkpoint QA completion report
+expected_outcome: Documented visual compare + inventory + logging restoration
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: reviews/header/_qa-header-render.png
+action: created
+reason: Playwright screenshot dist/index.html @ 1398x200
+expected_outcome: Visual QA artefact for operator review
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: reviews/header/_qa-header-metrics.json
+action: created
+reason: Reproducible MAE metrics from _header-visual-qa.py
+expected_outcome: MAE 18.45 structural pass
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+task: FP-0002 V6 HEADER DESKTOP SCSS CHECKPOINT AND QA COMPLETION
+file_changed: dist/
+action: build
+reason: npm run build validation after Header SCSS checkpoint
+expected_outcome: Build succeeded; dist not committed
+---

@@ -76,3 +76,16 @@ id: SU-HDR-008-014
 marker: header-nav-url-*
 reason: Seven navigation URLs unknown; href omitted intentionally
 ---
+
+---
+timestamp: 2026-06-22T09:25:57Z
+unknown: Header font-family exact match to JPG serif logo wordmark
+why_unknown: Site-wide typography tokens HOLD in foundation; system stack used in SCSS
+needed_from_operator: Approve block-level typography exception at Header QA or defer to global type pass
+---
+---
+timestamp: 2026-06-22T09:25:57Z
+unknown: Exact separator and secondary text grey vs JPG raster
+why_unknown: Block proposals #6d7b8f and rgb(200,210,220) from element-bounds evidence; subpixel JPEG variance
+needed_from_operator: Accept block proposals or supply measured values at operator visual review
+---

@@ -1,0 +1,15 @@
+// FP-0002 v6 — foundation tokens (zero skeleton only)
+
+$container-max: 1220px;
+$breakpoint-desktop-min: 1024px;
+
+// Foundation spacing (APPROVED_OPERATOR_RULE / PROPOSAL per STYLE-FOUNDATION.json)
+$grid-gap-standard: 30px;
+$text-stack-gap: 20px;
+$accordion-row-spacing: 15px;
+
+// SECTION-001-GROUP-01 block-level color proposals (element-bounds evidence; HEX HOLD site-wide)
+$color-page-background: rgb(230, 239, 246);
+$color-primary-text: #475471;
+$color-secondary-text: #6d7b8f;
+$color-border-subtle: rgb(200, 210, 220);
