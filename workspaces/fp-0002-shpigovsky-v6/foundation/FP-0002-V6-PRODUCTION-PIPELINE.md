@@ -2,19 +2,39 @@
 
 **Workspace:** `workspaces/fp-0002-shpigovsky-v6/`  
 **Factory pipeline:** [frontend-implementation-pipeline-v1.md](../../../projects/mars-website-factory/frontend-implementation-pipeline-v1.md)  
-**Current state:** Foundation APPROVED; SECTION-001 implemented; SECTION-002 variable-first pilot **PARTIAL · ASSET REQUIRED**
+**Current state:** Foundation APPROVED; SECTION-001 (Header + Hero) IMPLEMENTED · REVIEWED; **Footer = next authorized production target**
 
 ---
 
-## SECTION-002 pilot (2026-06-22)
+## Current production order (operator-approved)
+
+```text
+CURRENT IMPLEMENTED:
+  Header
+  Hero
+
+NEXT:
+  Footer
+
+NOT STARTED:
+  Main content sections (SECTION-002+)
+  Responsive layout
+  JavaScript interactions
+  SECTION-003 and further content implementation
+```
+
+**Correction (2026-06-22):** `intro-programs` was implemented out of order and removed from active build. Variable-First foundation verified on aborted noncanonical block attempt. No canonical post-Hero content section approved. Footer remains next production target.
+
+---
+
+## Aborted attempt (archived — not active)
 
 | Field | Value |
 |-------|-------|
 | Semantic name | `intro-programs` |
-| Status | PARTIAL · ASSET REQUIRED (founder portrait, 4 clinical photos) |
-| Variable-first pilot | **COMPLETE** (gates: arbitrary 0, hidden fallback 0) |
-| Spec | `specifications/section-002/` |
-| Review | `reviews/section-002/` |
+| Status | **ABORTED · NOT ACTIVE · NOT CANONICAL** |
+| Archive | `archive/aborted-section-attempts/intro-programs/` |
+| Reason | Violated Footer-first production order after Header/Hero |
 
 ---
 
@@ -31,6 +51,7 @@
 | G-FND-REV Foundation operator approval | **CLOSED** | operator 2026-06-22 |
 | G-1 Grounding architecture decision | **CLOSED** | composite SECTION-001 |
 | G-3 SECTION-001 specification draft | **READY FOR OPERATOR REVIEW** | `specifications/section-001/` |
+| G-VF CSS Variable First Law | **VERIFIED** (mechanics on aborted attempt; law active) | `reviews/foundation/FP-0002-V6-SCSS-CLEANUP-AND-TOKEN-NORMALIZATION.md` |
 
 ---
 
@@ -67,57 +88,17 @@
 
 ---
 
-## Gate 4 — Header HTML only
-
-| Field | Value |
-|-------|-------|
-| **Status** | **LOCKED** — `header_implementation_authorized: false` |
-
----
-
-## Gate 5 — Header HTML review
-
-| Field | Value |
-|-------|-------|
-| **Status** | **LOCKED** |
-
----
-
-## Gate 6 — Header SCSS
-
-| Field | Value |
-|-------|-------|
-| **Status** | **LOCKED** — `scss_authorized: false` |
-
----
-
-## Gate 7 — Header screenshot QA
-
-| Field | Value |
-|-------|-------|
-| **Status** | **LOCKED** |
-
----
-
-## Gate 8 — Hero specification
-
-| Field | Value |
-|-------|-------|
-| **Status** | **MERGED into SECTION-001 composite spec** — not a separate major section |
-
----
-
 ## Authorization summary
 
 ```text
 site_wide_style_foundation_approved: true
 foundation_approved_by: operator
-implementation_authorized: false
-header_implementation_authorized: false
-hero_implementation_authorized: false
-section_001_specification_status: READY_FOR_OPERATOR_REVIEW
-html_structure_authorized: false
-scss_authorized: false
+section_001_status: IMPLEMENTED_REVIEWED
+footer_status: NEXT_AUTHORIZED_TARGET
+intro_programs_status: ABORTED_NOT_ACTIVE
+main_content_implementation_status: NOT_STARTED
+css_variable_first_law_status: ACTIVE
+foundation_verification_status: PASSED
+javascript_changed: false
+responsive_layout_implemented: false
 ```
-
-**HTML / SCSS / JS remain NOT STARTED** in `src/pages/index.html` skeleton.

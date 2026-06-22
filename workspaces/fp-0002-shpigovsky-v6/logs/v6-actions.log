@@ -286,3 +286,10 @@ BUILD=SUCCESS
 [2026-06-22T19:20:00] ACTION=Factory css-variable-first-law-v1.md + contract updates; arbitrary values removed=2; remaining=0
 
 [2026-06-22T19:47:00] ACTION=SECTION-002 foundation verification + intro-programs variable-first pilot; build=SUCCESS; visual QA @1398px
+
+[2026-06-22T20:31:04] CORRECTION=intro-programs implementation removed from active build
+REASON=Violated operator-approved Footer-first production order after Header/Hero
+PRESERVED=Variable-First law, foundation verification, Header/Hero cleanup, operator-approved section rhythm tokens
+REMOVED=active include, SCSS import, intro-only tokens section-gap-same-bg and text-stack-gap
+ARCHIVED=archive/aborted-section-attempts/intro-programs/
+NEXT_AUTHORIZED_TARGET=Footer
