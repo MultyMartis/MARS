@@ -1,9 +1,15 @@
-﻿2026-06-23T00:00:00Z | ACTION | Operator command: enforce Website Factory Universal Button System Law on FP-0002 V6
-2026-06-23T00:00:01Z | ACTION | Preflight: branch mars/post-cycle8-live-tests HEAD 06eba64; operator diff preserved in style.scss (header padding tokens)
-2026-06-23T00:00:02Z | ACTION | Token mapping: --pad-btns, --main-size-btns added; color roles mapped to --color-* system
-2026-06-23T00:00:03Z | ACTION | Implemented .btn, .btn_dark, .btn--primary in src/scss/style.scss
-2026-06-23T00:00:04Z | ACTION | Markup migration: header.html, hero.html, footer.html → .btn classes
-2026-06-23T00:00:05Z | ACTION | Removed legacy .button / .button--compact; stripped block geometry duplicates
-2026-06-23T00:00:06Z | ACTION | Factory law: universal-button-system-law-v1.md + cross-layer doc updates
-2026-06-23T00:00:07Z | ACTION | Sass compile check PASS; visual QA screenshots captured
-2026-06-23T00:00:08Z | ACTION | Review: reviews/components/FP-0002-V6-UNIVERSAL-BUTTON-SYSTEM-REVIEW.md
+﻿2026-06-23T00:50Z | ACTION | Consolidated FP-0002 V6 project SCSS into src/scss/style.scss
+2026-06-23T00:50Z | ACTION | Removed 13 project SCSS partial files
+2026-06-23T00:50Z | ACTION | Normalized border-radius to --radius-main / --radius-full
+2026-06-23T00:50Z | ACTION | Removed --button-letter-spacing and button letter-spacing declarations
+2026-06-23T00:50Z | ACTION | Sass compile validation PASS
+2026-06-23T00:50Z | ACTION | Visual QA screenshots captured
+2026-06-23T00:50Z | ACTION | Factory governance laws created/updated
+2026-06-23T12:00Z | ACTION | Operator command: enforce Website Factory Universal Button System Law on FP-0002 V6
+2026-06-23T12:00Z | ACTION | Token mapping: --pad-btns, --main-size-btns added; color roles mapped to --color-* system
+2026-06-23T12:00Z | ACTION | Implemented .btn, .btn_dark, .btn--primary in src/scss/style.scss
+2026-06-23T12:00Z | ACTION | Markup migration: header.html, hero.html, footer.html to .btn classes
+2026-06-23T12:00Z | ACTION | Removed legacy .button / .button--compact; stripped block geometry duplicates
+2026-06-23T12:00Z | ACTION | Factory law: universal-button-system-law-v1.md + cross-layer doc updates
+2026-06-23T12:00Z | ACTION | Sass compile check PASS; button system visual QA screenshots captured
+2026-06-23T12:00Z | ACTION | Review: reviews/components/FP-0002-V6-UNIVERSAL-BUTTON-SYSTEM-REVIEW.md
