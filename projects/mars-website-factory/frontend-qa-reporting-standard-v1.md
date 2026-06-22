@@ -580,6 +580,28 @@ Disabled-state status:
 
 Corrections must route through **existing core scale** or **documented exact geometry** — not block-specific token aliases, alias chains, logical shorthand properties, arbitrary px tuning, local container width, first/last-child boundary padding, **new project SCSS partials**, **legacy radius scale tokens**, **button letter-spacing tokens**, or **parallel button systems**.
 
+### Font stability — mandatory report fields (when font delivery is in scope)
+
+**Authority:** [font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md)
+
+```text
+Font delivery method:
+Local font files:
+Critical font preloads:
+Font-display strategy:
+Google Fonts requests after migration:
+External Inter requests after migration:
+FOUT observed before:
+FOUT observed after (technical validation):
+FOUT observed by operator:
+Operator font approval:
+Layout shifts observed before:
+Layout shifts observed after:
+Remaining load stability risks:
+```
+
+**Rule:** `OPERATOR FONT APPROVAL — APPROVED` requires explicit operator visual confirmation — not automated CLS or agent filmstrip alone.
+
 ---
 
 ## 10. Revision history

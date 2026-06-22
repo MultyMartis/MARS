@@ -24,21 +24,29 @@ Do **not** mask instability with global `visibility: hidden` or `body { opacity:
 ## 2. Preferred font delivery
 
 ```text
-local WOFF2 (when licensed project files exist)
+local WOFF2 (default for operator-approved production fonts)
 + correct @font-face
 + only required weights
 + preload for critical above-fold files
++ font-display: block when operator requires zero visible font switch
 + stable fallback stack
 + explicit font-family from first paint
 ```
+
+**Default Website Factory approach:** For operator-approved production fonts, **local WOFF2 delivery** is the default when external font swapping produces visible FOUT.
+
+**Operator Visual Font Gate (mandatory):** Automated CLS and screenshots do **not** override an operator-observed FOUT. Font stability is approved only after **operator visual confirmation**. Do not report `visible_fout: NOT_OBSERVED` as fully resolved while the operator still sees a font switch.
 
 When only external Google Fonts is permitted:
 
 - `preconnect` to required origins;
 - load in `<head>` before main CSS;
 - request only weights in active use;
-- `display=swap` (or documented alternative);
-- document remaining network risk as `PARTIAL · EXTERNAL FONT DELIVERY RISK`.
+- `display=swap` only when operator accepts visible fallback risk;
+- document remaining network risk as `PARTIAL · EXTERNAL FONT DELIVERY RISK`;
+- **do not** claim zero FOUT while operator reports visible swap.
+
+**Forbidden masking:** global `visibility: hidden`, `body { opacity: 0 }`, waiting for `document.fonts.ready` before showing the page, or loader screens to hide FOUT.
 
 ---
 
@@ -88,3 +96,4 @@ Remaining load stability risks:
 | Date | Change |
 |------|--------|
 | 2026-06-23 | v1 — font/layout stability production law |
+| 2026-06-23 | v1.1 — local WOFF2 default; operator visual font gate; swap not zero-FOUT; masking forbidden (FP-0002 correction) |

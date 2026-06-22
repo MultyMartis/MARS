@@ -37,6 +37,7 @@ Use after **source** edits in the **target** gulp-starter (or equivalent) projec
 ## Assets and SEO
 
 - [ ] **Asset paths:** images/fonts resolve; lazy rules respected where specified.
+- [ ] **Font delivery gate (mandatory):** local WOFF2 for production fonts when operator requires zero FOUT; preload critical weights; no Google Fonts in production HTML; `font-display: block` when swap produces visible switch — [font-and-layout-stability-law-v1.md](../../projects/mars-website-factory/font-and-layout-stability-law-v1.md). REPORT: `FONT STABILITY GATE — PASS | FAIL | PARTIAL | SAFE UNKNOWN`. Operator visual confirmation required — automated CLS does not override operator-observed FOUT.
 - [ ] **SEO basics:** H1 policy, title/description slots, honest schema if present.
 
 ## Risk

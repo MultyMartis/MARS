@@ -19,6 +19,7 @@
 - **Enforce** QA and reporting discipline ([`qa-checklist.md`](qa-checklist.md), [`reporting.md`](reporting.md), [`reporting-standard-v0.md`](../../projects/mars-website-factory/reporting-standard-v0.md) §4.2).
 - **Apply** mandatory RU no word-splitting typography for Russian landings per [`russian-no-word-splitting-typography-v1.md`](../../projects/mars-website-factory/russian-no-word-splitting-typography-v1.md) and [`frontend-production-rules-v0.md`](../../projects/mars-website-factory/frontend-production-rules-v0.md) §12.
 - **Prevent** unsafe edits: no manual `dist/`, no undeclared globals, no fake build/QA claims.
+- **Font delivery:** prefer local WOFF2 + preload + `font-display: block` when operator requires zero visible font switch; operator visual confirmation required for font stability PASS ([font-and-layout-stability-law-v1.md](../../projects/mars-website-factory/font-and-layout-stability-law-v1.md)).
 
 ---
 

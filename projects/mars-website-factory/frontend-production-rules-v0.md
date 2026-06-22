@@ -98,6 +98,16 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 - Reuse shared partials across pages; do not duplicate a section to “tweak” — extend partial, modifiers, or include args.
 - Semantic HTML: logical heading order, landmarks, buttons vs links used correctly.
 
+## 8.5 Production font delivery
+
+- **Default:** local WOFF2 under `src/fonts/` for operator-approved production fonts ([font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md)).
+- Preload critical above-fold weights in `<head>` before main stylesheet.
+- `@font-face` in project `style.scss`; only weights actually used in CSS.
+- **`font-display: block`** when operator requires zero visible fallback-to-Inter switch; do not use `swap` and claim zero FOUT.
+- **No Google Fonts** as production default for new Factory projects when local files are available.
+- **Forbidden:** hiding the page (`visibility: hidden`, `opacity: 0`, loaders) to mask FOUT.
+- **Operator visual gate:** automated CLS/screenshots do not override operator-observed font switch.
+
 ## 9. Icon governance
 
 - Use project-approved icon sources only; for governed Font Awesome work, default to **Font Awesome Pro 5.15.4** per [font-awesome-governance-layer.md](font-awesome-governance-layer.md).

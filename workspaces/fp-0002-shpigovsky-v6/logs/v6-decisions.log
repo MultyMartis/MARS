@@ -14,3 +14,13 @@
 2026-06-23T12:00Z | DECISION | Operator header padding change (var(--pad-x)) preserved as authority
 2026-06-23T00:00:00Z | SOURCE_AUTHORITY | Operator manual src overrides prior artefacts
 2026-06-23T00:00:00Z | EXTERNAL_FONT_RISK | PARTIAL external Google Fonts dependency
+
+2026-06-23T21:00:00Z | DECISION | Operator rejected Google Fonts + font-display:swap — visible FOUT remains
+2026-06-23T21:00:00Z | DECISION | Migrate to local WOFF2 delivery model (Manipulator pattern)
+2026-06-23T21:00:00Z | DECISION | Use font-display:block for local critical Inter
+2026-06-23T21:00:00Z | DECISION | Preload inter-400, inter-400-latin, inter-300 (above-fold critical)
+2026-06-23T21:00:00Z | DECISION | Font source: @fontsource/inter@5.2.8 (Google Fonts Inter v20 equivalent, OFL)
+2026-06-23T21:00:00Z | DECISION | Static weight model with cyrillic+latin unicode-range (RU site requirement)
+2026-06-23T21:00:00Z | DECISION | operator_font_approval remains PENDING_OPERATOR_REVIEW
+2026-06-23T21:00:00Z | DECISION | Previous load-stability report correction: swap did not eliminate visible FOUT
+2026-06-23T21:00:00Z | DECISION | Website Factory font-and-layout-stability-law v1.1 — local WOFF2 default + operator visual gate

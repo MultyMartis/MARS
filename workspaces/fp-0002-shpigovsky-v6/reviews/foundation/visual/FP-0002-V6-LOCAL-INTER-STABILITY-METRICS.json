@@ -1,0 +1,564 @@
+{
+  "generated_at": "2026-06-22T21:00:51Z",
+  "local_font_urls": [
+    "assets/fonts/inter/inter-300.woff2",
+    "assets/fonts/inter/inter-300-latin.woff2",
+    "assets/fonts/inter/inter-400.woff2",
+    "assets/fonts/inter/inter-400-latin.woff2",
+    "assets/fonts/inter/inter-500.woff2",
+    "assets/fonts/inter/inter-500-latin.woff2"
+  ],
+  "google_fonts_requests_after": 0,
+  "external_inter_requests_after": 0,
+  "font_display": "block",
+  "preloaded_files": [
+    "assets/fonts/inter/inter-400.woff2",
+    "assets/fonts/inter/inter-400-latin.woff2",
+    "assets/fonts/inter/inter-300.woff2"
+  ],
+  "passes": [
+    {
+      "pass": "cold_1",
+      "cache_disabled": true,
+      "cls_samples": [
+        {
+          "value": 0.010046327822952505,
+          "sources": [
+            {
+              "node": "hero__container"
+            },
+            {
+              "node": "hero__panel"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            }
+          ]
+        }
+      ],
+      "layout_shift_sources": [
+        "hero__container",
+        "hero__panel",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav"
+      ],
+      "font_requests": [],
+      "external_font_requests": [],
+      "preload_warnings": [],
+      "document_fonts_checks": {
+        "w300": true,
+        "w400": true,
+        "w500": true,
+        "status": "loaded"
+      },
+      "timings": {
+        "navigation_start_ms": 0,
+        "fcp_ms": 1112,
+        "fonts_ready_after_navigation_ms": 0,
+        "total_pass_ms": 4193.08
+      },
+      "first_visible_font": "Inter 400",
+      "fallback_font_visibly_painted": "NOT OBSERVED",
+      "fout_observed": false,
+      "cls_total": 0.010046327822952505,
+      "computed_fonts": {
+        "headerPhone": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTitle": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTagline": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "btn": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "500"
+        }
+      }
+    },
+    {
+      "pass": "cold_2",
+      "cache_disabled": true,
+      "cls_samples": [
+        {
+          "value": 0.0008297134141970821,
+          "sources": [
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-header__phones"
+            },
+            {
+              "node": "site-header__address"
+            }
+          ]
+        },
+        {
+          "value": 0.009380001407707587,
+          "sources": [
+            {
+              "node": "hero__container"
+            },
+            {
+              "node": "hero__panel"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__phone"
+            }
+          ]
+        }
+      ],
+      "layout_shift_sources": [
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-header__phones",
+        "site-header__address",
+        "hero__container",
+        "hero__panel",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__phone"
+      ],
+      "font_requests": [],
+      "external_font_requests": [],
+      "preload_warnings": [],
+      "document_fonts_checks": {
+        "w300": true,
+        "w400": true,
+        "w500": true,
+        "status": "loaded"
+      },
+      "timings": {
+        "navigation_start_ms": 0,
+        "fcp_ms": 276,
+        "fonts_ready_after_navigation_ms": 0,
+        "total_pass_ms": 3125.75
+      },
+      "first_visible_font": "Inter 400",
+      "fallback_font_visibly_painted": "NOT OBSERVED",
+      "fout_observed": false,
+      "cls_total": 0.01020971482190467,
+      "computed_fonts": {
+        "headerPhone": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTitle": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTagline": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "btn": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "500"
+        }
+      }
+    },
+    {
+      "pass": "cold_3",
+      "cache_disabled": true,
+      "cls_samples": [
+        {
+          "value": 0.001074529147675546,
+          "sources": [
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__phone"
+            },
+            {
+              "node": "site-footer__social"
+            }
+          ]
+        },
+        {
+          "value": 0.00399942657160761,
+          "sources": [
+            {
+              "node": "hero__container"
+            },
+            {
+              "node": "hero__panel"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__phone"
+            }
+          ]
+        }
+      ],
+      "layout_shift_sources": [
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__phone",
+        "site-footer__social",
+        "hero__container",
+        "hero__panel",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__phone"
+      ],
+      "font_requests": [],
+      "external_font_requests": [],
+      "preload_warnings": [],
+      "document_fonts_checks": {
+        "w300": true,
+        "w400": true,
+        "w500": true,
+        "status": "loaded"
+      },
+      "timings": {
+        "navigation_start_ms": 0,
+        "fcp_ms": 260,
+        "fonts_ready_after_navigation_ms": 0.10000000149011612,
+        "total_pass_ms": 3080.82
+      },
+      "first_visible_font": "Inter 400",
+      "fallback_font_visibly_painted": "NOT OBSERVED",
+      "fout_observed": false,
+      "cls_total": 0.005073955719283155,
+      "computed_fonts": {
+        "headerPhone": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTitle": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTagline": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "btn": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "500"
+        }
+      }
+    },
+    {
+      "pass": "warm_1",
+      "cache_disabled": false,
+      "cls_samples": [
+        {
+          "value": 0.010046327822952505,
+          "sources": [
+            {
+              "node": "hero__container"
+            },
+            {
+              "node": "hero__panel"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            }
+          ]
+        }
+      ],
+      "layout_shift_sources": [
+        "hero__container",
+        "hero__panel",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav"
+      ],
+      "font_requests": [],
+      "external_font_requests": [],
+      "preload_warnings": [],
+      "document_fonts_checks": {
+        "w300": true,
+        "w400": true,
+        "w500": true,
+        "status": "loaded"
+      },
+      "timings": {
+        "navigation_start_ms": 0,
+        "fcp_ms": 240,
+        "fonts_ready_after_navigation_ms": 0,
+        "total_pass_ms": 3119.79
+      },
+      "first_visible_font": "Inter 400",
+      "fallback_font_visibly_painted": "NOT OBSERVED",
+      "fout_observed": false,
+      "cls_total": 0.010046327822952505,
+      "computed_fonts": {
+        "headerPhone": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTitle": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTagline": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "btn": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "500"
+        }
+      }
+    },
+    {
+      "pass": "warm_2",
+      "cache_disabled": false,
+      "cls_samples": [
+        {
+          "value": 0.010046327822952505,
+          "sources": [
+            {
+              "node": "hero__container"
+            },
+            {
+              "node": "hero__panel"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            }
+          ]
+        }
+      ],
+      "layout_shift_sources": [
+        "hero__container",
+        "hero__panel",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav"
+      ],
+      "font_requests": [],
+      "external_font_requests": [],
+      "preload_warnings": [],
+      "document_fonts_checks": {
+        "w300": true,
+        "w400": true,
+        "w500": true,
+        "status": "loaded"
+      },
+      "timings": {
+        "navigation_start_ms": 0,
+        "fcp_ms": 388,
+        "fonts_ready_after_navigation_ms": 0.09999999403953552,
+        "total_pass_ms": 3366.97
+      },
+      "first_visible_font": "Inter 400",
+      "fallback_font_visibly_painted": "NOT OBSERVED",
+      "fout_observed": false,
+      "cls_total": 0.010046327822952505,
+      "computed_fonts": {
+        "headerPhone": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTitle": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTagline": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "btn": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "500"
+        }
+      }
+    },
+    {
+      "pass": "throttled_1",
+      "cache_disabled": true,
+      "cls_samples": [
+        {
+          "value": 0.010046327822952505,
+          "sources": [
+            {
+              "node": "hero__container"
+            },
+            {
+              "node": "hero__panel"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            }
+          ]
+        }
+      ],
+      "layout_shift_sources": [
+        "hero__container",
+        "hero__panel",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav"
+      ],
+      "font_requests": [],
+      "external_font_requests": [],
+      "preload_warnings": [],
+      "document_fonts_checks": {
+        "w300": true,
+        "w400": true,
+        "w500": true,
+        "status": "loaded"
+      },
+      "timings": {
+        "navigation_start_ms": 0,
+        "fcp_ms": 288,
+        "fonts_ready_after_navigation_ms": 0,
+        "total_pass_ms": 3180.16
+      },
+      "first_visible_font": "Inter 400",
+      "fallback_font_visibly_painted": "NOT OBSERVED",
+      "fout_observed": false,
+      "cls_total": 0.010046327822952505,
+      "computed_fonts": {
+        "headerPhone": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTitle": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "heroTagline": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "400"
+        },
+        "btn": {
+          "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+          "fontWeight": "500"
+        }
+      }
+    }
+  ],
+  "cls_before_reference": 0.006411790278448994,
+  "primary_pass": {
+    "pass": "cold_1",
+    "cache_disabled": true,
+    "cls_samples": [
+      {
+        "value": 0.010046327822952505,
+        "sources": [
+          {
+            "node": "hero__container"
+          },
+          {
+            "node": "hero__panel"
+          },
+          {
+            "node": "site-footer__nav"
+          },
+          {
+            "node": "site-footer__nav"
+          },
+          {
+            "node": "site-footer__nav"
+          }
+        ]
+      }
+    ],
+    "layout_shift_sources": [
+      "hero__container",
+      "hero__panel",
+      "site-footer__nav",
+      "site-footer__nav",
+      "site-footer__nav"
+    ],
+    "font_requests": [],
+    "external_font_requests": [],
+    "preload_warnings": [],
+    "document_fonts_checks": {
+      "w300": true,
+      "w400": true,
+      "w500": true,
+      "status": "loaded"
+    },
+    "timings": {
+      "navigation_start_ms": 0,
+      "fcp_ms": 1112,
+      "fonts_ready_after_navigation_ms": 0,
+      "total_pass_ms": 4193.08
+    },
+    "first_visible_font": "Inter 400",
+    "fallback_font_visibly_painted": "NOT OBSERVED",
+    "fout_observed": false,
+    "cls_total": 0.010046327822952505,
+    "computed_fonts": {
+      "headerPhone": {
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontWeight": "400"
+      },
+      "heroTitle": {
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontWeight": "400"
+      },
+      "heroTagline": {
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontWeight": "400"
+      },
+      "btn": {
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontWeight": "500"
+      }
+    }
+  },
+  "cls_after": 0.010046327822952505,
+  "duplicate_font_requests": false
+}

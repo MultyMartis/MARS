@@ -105,6 +105,8 @@ Write visible HTML text in semantic normal case.
 Use CSS text-transform for uppercase presentation.
 Use data-* attributes for JS behavior hooks.
 Prevent FOUT, FOIT and layout shifts.
+Serve production fonts as local WOFF2 with preload and font-display:block when operator requires zero visible font switch.
+Do not use Google Fonts + swap and claim zero FOUT while operator still sees a font switch.
 ```
 
 Authority: [operator-canonical-source-law-v1.md](operator-canonical-source-law-v1.md) · [no-new-design-values-after-operator-calibration-law-v1.md](no-new-design-values-after-operator-calibration-law-v1.md) · [no-production-safe-unknown-attribute-law-v1.md](no-production-safe-unknown-attribute-law-v1.md) · [semantic-text-casing-law-v1.md](semantic-text-casing-law-v1.md) · [data-attribute-js-hook-law-v1.md](data-attribute-js-hook-law-v1.md) · [font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md).

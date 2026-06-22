@@ -125,6 +125,20 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 
 **On violation:** `OPERATOR SOURCE AUTHORITY GATE — FAIL` · `IMPLEMENTATION DENIED`
 
+### Font delivery gate (mandatory when production font is Inter or custom webfont)
+
+- [ ] Local WOFF2 files exist under `src/fonts/` for each used weight.
+- [ ] `@font-face` in `src/scss/style.scss` with `font-display: block` when operator requires zero visible font switch.
+- [ ] Critical above-fold weights preloaded in `<head>` before main stylesheet.
+- [ ] Google Fonts / external font CSS links absent from production HTML.
+- [ ] Only required weights included (no 600/700 unless used).
+- [ ] Font provenance documented.
+- [ ] Operator visual font confirmation pending — do not claim APPROVED from automated CLS alone.
+
+**Authority:** [font-and-layout-stability-law-v1.md](font-and-layout-stability-law-v1.md)
+
+**On violation:** `FONT STABILITY GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
+
 ### Design value freeze gate (mandatory when freeze ACTIVE)
 
 - [ ] No new spacing, dimension, font, color, button, or radius values proposed.
@@ -174,3 +188,4 @@ PRE-SCSS VALIDATION — PASS | FAIL (list #) | BLOCKED (gate)
 | 2026-06-23 | v1.3 — Style scale gate; Token admission gate; physical property rule; Universal Style Scale Law |
 | 2026-06-23 | v1.4 — One SCSS file gate; unified radius; no button letter-spacing |
 | 2026-06-23 | v1.5 — Universal Button System gate |
+| 2026-06-23 | v1.6 — Font delivery gate; local WOFF2 default; operator visual font gate (FP-0002) |
