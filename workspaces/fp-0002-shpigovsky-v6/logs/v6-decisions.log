@@ -26,3 +26,39 @@ source_used: FP-0002 v6 clean-room policy
 reason: v3 project px forbidden as V6 visual authority
 rejected_alternatives: Reuse 80px space-12 from v3
 ---
+
+---
+timestamp: 2026-06-22T16:00:00Z
+decision: container-main 1220px classified APPROVED_OPERATOR_RULE; 1138px OBSERVED_JPG_VALUE only
+source_used: V6 zero skeleton + grounding review container section
+reason: Operator authorized 1220px at workspace creation; JPG median is content band not CSS max-width
+rejected_alternatives: Using 1138px as max-width; holding 1220px as legacy forbidden
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+decision: Header Y=174 demoted from EX-001 implementation exception to OBSERVED_JPG_ESTIMATE; CSS use forbidden
+source_used: Grounding review SU-001; SECTION-001-GROUP-01 algorithmic estimate
+reason: Exact Header/Hero boundary not pixel-proven; contradiction with SAFE UNKNOWN resolved
+rejected_alternatives: Keeping 174px as geometric implementation constraint
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+decision: accordion-row-gap renamed accordion-row-spacing with property_class margin (15px)
+source_used: OL-01 gap vs padding/margin scales
+reason: 15px not in gap scale; valid as margin per OL-01
+rejected_alternatives: Keeping misnamed gap token; forcing 10px or 20px gap without evidence
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+decision: Section rhythm split into compact 40px, standard 50px, large 70px families
+source_used: Extraction observed 40-80px range; section mapping table
+reason: Single 50px token collapsed visually different cadences
+rejected_alternatives: One section-padding-standard for entire 40-80px range
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+decision: Foundation operator review verdict READY FOR OPERATOR APPROVAL
+source_used: Phases 0-14 validation checklist
+reason: Internal contradictions resolved; approval sheet prepared; implementation remains locked
+rejected_alternatives: Auto-approve foundation; FAIL verdict
+---

@@ -2,6 +2,8 @@
 
 **Purpose:** Items that must not be invented during implementation. Route to operator or future audit.
 
+**Review:** Operator review preparation 2026-06-22
+
 ---
 
 ## Structural / grounding
@@ -11,6 +13,7 @@
 | SU-001 | Exact Y boundary between header bar and hero within SECTION-001 | Header overlays hero; no reliable major boundary on JPG | Approve split Y or keep composite SECTION-001 spec |
 | SU-002 | Whether hero is separate implementation block from header | Grounding keeps one major section | Architecture decision for block specs |
 | SU-003 | CMP-004 vs CMP-008 — one card component or two | Visually similar (REPEAT-001) not proven identical | Component taxonomy decision |
+| SU-021 | Header bar exact pixel height | Y~174 is algorithmic estimate only — **not** implementation boundary | Approve height at Block Specification or accept composite SECTION-001 |
 
 ---
 
@@ -18,9 +21,10 @@
 
 | ID | Unknown | Why | Needed |
 |----|---------|-----|--------|
-| SU-004 | Universal `container-main` max-width | Median 1138px not universal; full-bleed rows differ | Approve max-width token or per-section rules |
-| SU-005 | Side inset ~130px — padding vs margin vs grid | Derived from median X | Container model decision |
-| SU-006 | Relationship 1138px JPG vs any CSS max-width | Audit JSON lists as unknown | Explicit production width |
+| SU-004 | ~~Universal container-main max-width~~ | **RESOLVED** — `container-main: 1220px` APPROVED_OPERATOR_RULE | — |
+| SU-005 | Side inset ~130px on JPG vs container padding model | Derived from median X on 1398px image; not same as 1220px + 50px padding math | Container inset decision at block spec |
+| SU-006 | ~~Relationship 1138px JPG vs CSS max-width~~ | **RESOLVED** — 1138px = OBSERVED only; 1220px = production | — |
+| SU-022 | JPG side inset vs `container-padding-inline-desktop` 50px | 130px observed band margin ≠ 89px implied by (1398−1220)/2 | Confirm padding token or per-block inset |
 
 ---
 
@@ -62,8 +66,17 @@
 | ID | Item | Status |
 |----|------|--------|
 | SU-019 | Entire Site-Wide Style Foundation proposal | `foundation_status: PROPOSAL` |
-| SU-020 | Normalization rows marked REQUIRES OPERATOR APPROVAL | See normalization doc |
-| SU-021 | OL-01 scale as V6 rank-1 until foundation approved | Factory default vs project SSOT promotion |
+| SU-020 | Normalization rows marked PROPOSE / LOW confidence | See approval sheet §B |
+| SU-023 | `button-height-standard` 30px vs taller observed upper bound | Confirm 30px or revise at block spec |
+
+---
+
+## CSS-forbidden observed values
+
+| Value | Classification | Rule |
+|-------|----------------|------|
+| Y = 174px | OBSERVED_JPG_ESTIMATE | Do not use in CSS for header height or Header/Hero split until operator approves |
+| width = 1138px | OBSERVED_JPG_VALUE | Do not use as `max-width` |
 
 ---
 

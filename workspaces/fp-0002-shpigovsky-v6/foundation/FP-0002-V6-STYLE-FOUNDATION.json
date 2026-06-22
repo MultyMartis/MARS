@@ -8,6 +8,7 @@
   "header_implementation_authorized": false,
   "html_structure_authorized": false,
   "scss_authorized": false,
+  "site_wide_style_foundation_approved": false,
   "grounding_review_verdict": "PARTIAL",
   "operator_approval_required": true,
   "spacing_scale_ol01": {
@@ -15,51 +16,205 @@
     "padding_margin_px": [5, 10, 15, 20, 25, 30, 40, 50, 70, 90],
     "anchors_px": [20, 30, 50, 70]
   },
+  "container": {
+    "container-main": {
+      "value_px": 1220,
+      "property_class": "max-width",
+      "classification": "APPROVED_OPERATOR_RULE",
+      "status": "APPROVED_OPERATOR_RULE",
+      "note": "V6 zero-skeleton operator authorization; not derived from JPG 1138px median"
+    },
+    "container-content-band-observed": {
+      "value_px": 1138,
+      "classification": "OBSERVED_JPG_VALUE",
+      "status": "NOT_CSS_CONTAINER",
+      "note": "Median repeated content width on JPG — informational only"
+    },
+    "container-padding-inline-desktop": {
+      "value_px": 50,
+      "property_class": "padding-inline",
+      "classification": "APPROVED_OPERATOR_RULE",
+      "status": "PROPOSAL",
+      "note": "Factory container side-padding convention; not JPG-measured"
+    }
+  },
   "tokens": {
-    "section-padding-standard": { "value_px": 50, "status": "PROPOSAL", "rule_id": "NRM-001" },
-    "section-gap-same-bg": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-003" },
-    "section-gap-band-inner": { "value_px": 70, "status": "PROPOSAL", "rule_id": "NRM-002" },
-    "heading-content-gap": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-004" },
-    "text-stack-gap": { "value_px": 20, "status": "PROPOSAL", "rule_id": "NRM-005" },
-    "grid-gap-standard": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-006" },
-    "grid-gap-3col": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-007" },
-    "card-padding-standard": { "value_px": 25, "status": "PROPOSAL", "rule_id": "NRM-008" },
-    "accordion-row-gap": { "value_px": 15, "status": "PROPOSAL", "rule_id": "NRM-009" },
-    "button-height-primary": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-010" },
-    "radius-button": { "value_px": 5, "status": "PROPOSAL", "rule_id": "NRM-011" },
-    "form-field-gap": { "value_px": 20, "status": "PROPOSAL", "rule_id": "NRM-016" },
-    "footer-column-gap": { "value_px": 30, "status": "PROPOSAL", "rule_id": "NRM-015" }
+    "section-padding-compact": {
+      "value_px": 40,
+      "property_class": "padding",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-001a",
+      "rhythm_family": "compact"
+    },
+    "section-padding-standard": {
+      "value_px": 50,
+      "property_class": "padding",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-001b",
+      "rhythm_family": "standard"
+    },
+    "section-padding-large": {
+      "value_px": 70,
+      "property_class": "padding",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-001c",
+      "rhythm_family": "large"
+    },
+    "section-gap-same-bg": {
+      "value_px": 30,
+      "property_class": "padding",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-003",
+      "rhythm_family": "compact"
+    },
+    "section-gap-band-inner": {
+      "value_px": 70,
+      "property_class": "padding",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-002",
+      "rhythm_family": "feature"
+    },
+    "heading-content-gap": {
+      "value_px": 30,
+      "property_class": "margin",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-004"
+    },
+    "text-stack-gap": {
+      "value_px": 20,
+      "property_class": "margin",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-005"
+    },
+    "grid-gap-standard": {
+      "value_px": 30,
+      "property_class": "gap",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-006"
+    },
+    "grid-gap-3col": {
+      "value_px": 30,
+      "property_class": "gap",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-007",
+      "shared_with": "grid-gap-standard"
+    },
+    "card-padding-standard": {
+      "value_px": 25,
+      "property_class": "padding",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-008"
+    },
+    "accordion-row-spacing": {
+      "value_px": 15,
+      "property_class": "margin",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-009",
+      "note": "Renamed from accordion-row-gap — 15px is OL-01 padding/margin, not gap scale"
+    },
+    "button-height-standard": {
+      "value_px": 30,
+      "property_class": "height",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-010",
+      "component_family": "FAM-BTN-PRIMARY",
+      "note": "Component geometry; observed 30–37px; lower bound normalized"
+    },
+    "radius-button": {
+      "value_px": 5,
+      "property_class": "border-radius",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-011"
+    },
+    "form-field-gap": {
+      "value_px": 20,
+      "property_class": "gap",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-016"
+    },
+    "footer-column-gap": {
+      "value_px": 30,
+      "property_class": "gap",
+      "status": "PROPOSAL",
+      "rule_id": "NRM-015"
+    }
+  },
+  "observed_estimates_not_for_css": {
+    "header-bar-y-end-estimate": {
+      "value_px": 174,
+      "classification": "OBSERVED_JPG_ESTIMATE",
+      "evidence_id": "SECTION-001-GROUP-01",
+      "confidence": "LOW",
+      "css_use_forbidden": true,
+      "reason": "Algorithmic row estimate; grounding review SAFE UNKNOWN for exact Header/Hero implementation boundary"
+    },
+    "jpg-content-band-width": {
+      "value_px": 1138,
+      "classification": "OBSERVED_JPG_VALUE",
+      "css_use_forbidden_as_max_width": true
+    }
   },
   "exceptions": [
-    {
-      "id": "EX-001",
-      "token": "header-bar-height-observed",
-      "value_px": 174,
-      "rule_id": "NRM-012",
-      "reason": "header bar geometric constraint from GROUP-01"
-    },
     {
       "id": "EX-002",
       "token": "hero-band-height-desktop",
       "value_px": 904,
       "rule_id": "NRM-014",
-      "reason": "SECTION-001 composite first screen"
+      "reason": "SECTION-001 composite first screen — major boundary Y=904 HIGH confidence",
+      "classification": "BLOCK_LEVEL_EXCEPTION"
+    },
+    {
+      "id": "EX-003",
+      "token": "section-contact-band",
+      "section_id": "SECTION-010",
+      "reason": "Split panel contact band — per Block Specification",
+      "classification": "BLOCK_LEVEL_EXCEPTION"
+    }
+  ],
+  "removed_tokens": [
+    {
+      "token": "accordion-row-gap",
+      "reason": "OL-01 violation — 15px not in gap scale; replaced by accordion-row-spacing (margin)"
+    },
+    {
+      "token": "header-bar-height-observed",
+      "reason": "Demoted from implementation exception — Y=174 is unproven exact boundary"
+    },
+    {
+      "token": "button-height-primary",
+      "reason": "Renamed to button-height-standard for family clarity"
     }
   ],
   "safe_unknown": [
-    "container-main-max",
+    "header-hero-y-split-exact",
+    "header-bar-height-exact",
     "type-h1",
     "type-h2",
     "type-body",
     "type-button",
     "color-accent-hex",
     "color-page-background-hex",
-    "header-hero-y-split",
     "radius-card",
     "radius-hero-panel",
     "mobile-spacing",
-    "cmp-004-vs-cmp-008-identity"
+    "cmp-004-vs-cmp-008-identity",
+    "container-narrow-groups",
+    "jpg-side-inset-vs-container-padding"
   ],
   "section_rhythm_classes": ["compact", "standard", "large", "feature", "hero", "custom-exception"],
+  "button_families": [
+    {
+      "id": "FAM-BTN-PRIMARY",
+      "components": ["CMP-001"],
+      "height_token": "button-height-standard",
+      "radius_token": "radius-button",
+      "count_observed": 8
+    },
+    {
+      "id": "FAM-BTN-HEADER",
+      "status": "SAFE_UNKNOWN",
+      "reason": "Header CTA not separately measured; may match primary family"
+    }
+  ],
   "forbidden_sources": ["FIG", "PDF", "v1", "v2", "v3", "v4", "v5", "FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3"]
 }

@@ -47,3 +47,46 @@ action: created
 reason: FP-0002 V6 foundation artefacts
 expected_outcome: PROPOSAL ready for operator review
 ---
+
+---
+timestamp: 2026-06-22T16:00:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/FP-0002-V6-STYLE-FOUNDATION.json
+action: modified
+reason: Operator review preparation — OL-01 fix, container 1220px, section rhythm split, header Y demotion
+expected_outcome: Internally consistent foundation JSON
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/FP-0002-V6-PRACTICAL-VALUE-NORMALIZATION.md
+action: modified
+reason: Traceability tables, accordion rename, section rhythm mapping
+expected_outcome: Full evidence chains per token
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/FP-0002-V6-SITE-WIDE-STYLE-FOUNDATION.md
+action: modified
+reason: Container authority, spacing property classes, removed EX-001
+expected_outcome: Foundation MD aligned with JSON
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/FP-0002-V6-FOUNDATION-SAFE-UNKNOWN.md
+action: modified
+reason: Resolved SU-004/SU-006; added CSS-forbidden observed values
+expected_outcome: Safe unknown register current
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/FP-0002-V6-PRODUCTION-PIPELINE.md
+action: modified
+reason: Gate 2 READY status; foundation review gate added
+expected_outcome: Pipeline reflects review completion
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+file_changed: workspaces/fp-0002-shpigovsky-v6/foundation/FP-0002-V6-STYLE-FOUNDATION-APPROVAL-SHEET.md
+action: created
+reason: Operator approval sheet per review task Phase 13
+expected_outcome: Operator sign-off artefact
+---

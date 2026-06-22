@@ -34,3 +34,16 @@ unknown: Site-Wide Style Foundation approval
 why_unknown: foundation_status PROPOSAL only
 needed_from_operator: Gate 2 approval
 ---
+
+---
+timestamp: 2026-06-22T16:00:00Z
+unknown: JPG side inset ~130px vs container-main 1220px + padding-inline 50px
+why_unknown: Image geometry (1398-1138)/2 does not equal (1398-1220)/2; different layout models
+needed_from_operator: Confirm container padding token or per-block inset at implementation
+---
+---
+timestamp: 2026-06-22T16:00:00Z
+unknown: button-height-standard 30px vs observed upper bound 37px
+why_unknown: JPEG anti-aliasing and border-box ambiguity on CMP-001
+needed_from_operator: Confirm 30px at Gate 2 or revise at Header block QA
+---

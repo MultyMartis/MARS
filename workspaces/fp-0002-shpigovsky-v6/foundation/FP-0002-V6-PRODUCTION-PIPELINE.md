@@ -2,7 +2,7 @@
 
 **Workspace:** `workspaces/fp-0002-shpigovsky-v6/`  
 **Factory pipeline:** [frontend-implementation-pipeline-v1.md](../../../projects/mars-website-factory/frontend-implementation-pipeline-v1.md)  
-**Current state:** Grounding PARTIAL; Foundation PROPOSAL; HTML/SCSS locked
+**Current state:** Grounding PARTIAL; Foundation PROPOSAL; approval sheet prepared; HTML/SCSS locked
 
 ---
 
@@ -14,8 +14,9 @@
 | G-AUD Visual Audit | PASS | `audit/jpg-visual-audit/` |
 | G-GRD Grounding Review | **PARTIAL** | `review/FP-0002-V6-JPG-AUDIT-GROUNDING-REVIEW.md` |
 | G-EXT Design Foundation Extraction | PASS (proposal) | `foundation/FP-0002-V6-DESIGN-FOUNDATION-EXTRACTION.md` |
-| G-NRM Practical Value Normalization | PASS (proposal) | `foundation/FP-0002-V6-PRACTICAL-VALUE-NORMALIZATION.md` |
+| G-NRM Practical Value Normalization | PASS (proposal, revised) | `foundation/FP-0002-V6-PRACTICAL-VALUE-NORMALIZATION.md` |
 | G-FND Site-Wide Style Foundation | **PROPOSAL** | `foundation/FP-0002-V6-SITE-WIDE-STYLE-FOUNDATION.md` |
+| G-FND-REV Foundation operator review prep | **READY** | `foundation/FP-0002-V6-STYLE-FOUNDATION-APPROVAL-SHEET.md` |
 
 ---
 
@@ -27,7 +28,8 @@
 | **Outputs** | PASS / PARTIAL / FAIL verdict; Header/Hero decision |
 | **Forbidden** | HTML, SCSS, Header block spec |
 | **Approval** | Operator |
-| **Status** | **PARTIAL — awaiting decision on SU-001** |
+| **Status** | **PARTIAL — awaiting decision on SU-001 / SU-002** |
+| **Note** | Y=174 demoted to observed estimate; CSS use forbidden |
 | **Rollback** | Re-open audit segmentation only with new evidence |
 
 ---
@@ -36,11 +38,11 @@
 
 | Field | Value |
 |-------|-------|
-| **Required inputs** | Foundation MD + JSON + normalization table |
+| **Required inputs** | Foundation MD + JSON + normalization + approval sheet |
 | **Outputs** | `foundation_status: APPROVED` or revised PROPOSAL |
 | **Forbidden** | Block HTML/SCSS; promoting v3 standards px |
 | **Approval** | Operator (Андрей) |
-| **Status** | **BLOCKED on Gate 1 clarity for SECTION-001** (may approve non-header tokens in scoped PARTIAL) |
+| **Status** | **READY FOR OPERATOR REVIEW** — internal contradictions resolved; approval sheet prepared |
 | **Rollback** | Re-run normalization from extraction |
 
 ---
@@ -51,7 +53,7 @@
 |-------|-------|
 | **Required inputs** | Approved foundation (or scoped waiver); grounding Header/Hero decision; Group Decomposition; Layout Spec |
 | **Outputs** | `FP-0002-V6-SPEC-SECTION-001-HEADER.md` (and hero if split) |
-| **Forbidden** | HTML until spec approved |
+| **Forbidden** | HTML until spec approved; CSS `174px` header split without operator approval |
 | **Approval** | Operator |
 | **Status** | **NOT STARTED** — `header_implementation_authorized: false` |
 | **Rollback** | Foundation or grounding |
@@ -86,7 +88,7 @@
 |-------|-------|
 | **Required inputs** | HTML review PASS; foundation tokens; [frontend-pre-scss-validation-checklist-v1.md](../../../projects/mars-website-factory/frontend-pre-scss-validation-checklist-v1.md) |
 | **Outputs** | Header SCSS bound to tokens |
-| **Forbidden** | Arbitrary px |
+| **Forbidden** | Arbitrary px; 174px header boundary; 1138px container |
 | **Status** | **LOCKED** |
 
 ---
@@ -136,6 +138,7 @@
 ## Authorization summary
 
 ```text
+site_wide_style_foundation_approved: false
 implementation_authorized: false
 header_implementation_authorized: false
 html_structure_authorized: false
