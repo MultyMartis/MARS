@@ -1,0 +1,16 @@
+{
+  "registry_id": "triumph-to-orca-capability-classification-v1",
+  "classifications": [
+    {"capability_id": "C-05", "primary": "ALREADY EXISTS AND ENFORCED", "scope_note": "Triumph validation-cli path only"},
+    {"capability_id": "C-15", "primary": "EXISTS BUT NOT ENFORCED", "scope_note": "Contract states advisory; pipelines violated"},
+    {"capability_id": "C-19", "primary": "DUPLICATED BY CURRENT P0 WORK", "scope_note": "Triumph implicit via curation; P0-C explicit"},
+    {"capability_id": "C-20", "primary": "NEWLY REQUIRED", "scope_note": "No ABSTAIN in Triumph tools"},
+    {"capability_id": "C-22", "primary": "PARTIALLY GENERALIZED", "scope_note": "2026-06 contract; integration incomplete"}
+  ],
+  "p0_classifications": [
+    {"artifact": "P0-A", "primary": "FORMALIZATION OF EXISTING TACIT PRACTICE"},
+    {"artifact": "P0-B", "primary": "FORMALIZATION + NEWLY REQUIRED"},
+    {"artifact": "P0-C", "primary": "STRENGTHENING FROM SOFT GUIDANCE TO HARD GOVERNANCE"},
+    {"artifact": "P0-D", "primary": "NEWLY REQUIRED", "hold": "ON HOLD PENDING AUDIT"}
+  ]
+}

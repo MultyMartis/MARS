@@ -1,0 +1,21 @@
+{
+  "registry_id": "triumph-orca-corvonero-layer-crosswalk-v1",
+  "rows": [
+    {
+      "capability": "architecture_freeze_before_semantics",
+      "triumph": "present",
+      "pre_si_orca": "documented_freezes",
+      "si_p0": "SI-04",
+      "corvonero_clean_room": "missing",
+      "assessment": "critical_gap"
+    },
+    {
+      "capability": "accept_requires_commercial_evidence",
+      "triumph": "implicit_operator_curation",
+      "pre_si_orca": "doctrine_only",
+      "si_p0": "P0-C_commercial_evidence_standard",
+      "corvonero_clean_room": "absent",
+      "assessment": "p0_documents_fix_not_integrated"
+    }
+  ]
+}

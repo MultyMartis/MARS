@@ -1,0 +1,9 @@
+{
+  "registry_id": "orca-p0-a-to-p0-d-duplication-audit-v1",
+  "packages": [
+    {"id": "P0-A", "primary_verdict": "FORMALIZATION_AND_STRENGTHENING", "unnecessary_duplication": false},
+    {"id": "P0-B", "primary_verdict": "GENUINELY_NEW_MACHINE_LAYER", "merge_candidate": "campaign_production_invariants"},
+    {"id": "P0-C", "primary_verdict": "STRENGTHENING_TRIUMPH_JUDGMENT", "enforce_before_benchmark": true},
+    {"id": "P0-D", "primary_verdict": "GENUINELY_NEW", "status": "ON_HOLD", "not_duplicate_of": "triumph_validation_cli_345_rules"}
+  ]
+}

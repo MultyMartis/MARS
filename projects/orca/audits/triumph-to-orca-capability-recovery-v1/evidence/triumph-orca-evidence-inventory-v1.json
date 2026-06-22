@@ -1,0 +1,109 @@
+{
+  "registry_id": "triumph-orca-evidence-inventory-v1",
+  "generated_at": "2026-06-22",
+  "method": "repository_only",
+  "usage_states": ["CONFIRMED USED", "REFERENCED", "AVAILABLE BUT USAGE UNPROVEN", "NOT USED", "SAFE UNKNOWN"],
+  "summary": {
+    "triumph_production_core": 18,
+    "triumph_derived_laws_contract": 8,
+    "corvonero_historical": 5,
+    "corvonero_clean_room": 5,
+    "orca_semantic_intelligence_p0": 4,
+    "mig_demand": 4,
+    "landing_readiness": 2,
+    "safe_unknown": 5
+  },
+  "artifacts": [
+    {
+      "path": "projects/orca/freeze/battle-pilot-triumph-search-v1/TRIUMPH-SEARCH-RK-STABLE-STATE-v1.md",
+      "title": "Battle stable state",
+      "date_version": "2026-05-30",
+      "owner_system": "ORCA/Triumph",
+      "artifact_type": "freeze_milestone",
+      "authority_status": "partial_import_pass_not_launch",
+      "operational_usage": "CONFIRMED USED",
+      "usage_evidence": "Commander import PASS documented; reproduction steps",
+      "downstream_consumers": ["contract_derivation", "audits"],
+      "current_relevance": "high"
+    },
+    {
+      "path": "projects/orca/ppc/triumph-manipulator/schema/instances/triumph-s-tier-draft-v1.json",
+      "title": "PPC JSON instance",
+      "date_version": "v1",
+      "owner_system": "ORCA Triumph",
+      "artifact_type": "schema_instance",
+      "authority_status": "draft_fixture",
+      "operational_usage": "CONFIRMED USED",
+      "usage_evidence": "validation-cli and exporter-cli inputs; 12 groups 64 phrases",
+      "downstream_consumers": ["exporter", "validation"],
+      "current_relevance": "high"
+    },
+    {
+      "path": "projects/orca/contracts/ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1.md",
+      "title": "Campaign production contract",
+      "date_version": "v1_uncommitted",
+      "owner_system": "ORCA",
+      "artifact_type": "contract",
+      "authority_status": "declared_canonical",
+      "operational_usage": "REFERENCED",
+      "usage_evidence": "Listed AUTH-03 in clean-room manifest; validate-campaign-production-contract.mjs exists; clean-room pipeline does not load contract",
+      "downstream_consumers": ["validator_tool", "v7_audit"],
+      "current_relevance": "critical"
+    },
+    {
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/tools/run-clean-room-semantic-pipeline-v1.mjs",
+      "title": "Clean-room semantic pipeline",
+      "date_version": "v1",
+      "owner_system": "ORCA tools",
+      "artifact_type": "pipeline_script",
+      "authority_status": "diagnostic_executed",
+      "operational_usage": "CONFIRMED USED",
+      "usage_evidence": "pipeline-run-summary-v1.json; 1892 eligible commercial",
+      "downstream_consumers": ["semantic_core_candidate"],
+      "current_relevance": "critical"
+    },
+    {
+      "path": "incoming/mig/pilots/triumph-gruzotaxi-krasnodar/request-triumph-gruzotaxi-krasnodar-v1-fields.md",
+      "title": "Triumph MIG request",
+      "date_version": "v1",
+      "owner_system": "MIG",
+      "artifact_type": "intake",
+      "authority_status": "pilot_completed",
+      "operational_usage": "REFERENCED",
+      "usage_evidence": "keyword_pass false documented",
+      "downstream_consumers": ["process_precedent"],
+      "current_relevance": "medium"
+    },
+    {
+      "path": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/",
+      "title": "Corvonero MIG session",
+      "date_version": "2026-06-22",
+      "owner_system": "MIG",
+      "artifact_type": "research_session",
+      "authority_status": "operator_approved",
+      "operational_usage": "CONFIRMED USED",
+      "usage_evidence": "Wordstat Pass A 2399 rows ingested by clean-room pipeline",
+      "downstream_consumers": ["corvonero_clean_room"],
+      "current_relevance": "high"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/benchmark/",
+      "title": "P0-D benchmark charter package",
+      "date_version": "2026-06-22",
+      "owner_system": "ORCA SI",
+      "artifact_type": "charter_package",
+      "authority_status": "PROPOSED_UNCOMMITTED",
+      "operational_usage": "NOT USED",
+      "usage_evidence": "No benchmark rows; B0 not started",
+      "downstream_consumers": [],
+      "current_relevance": "on_hold"
+    }
+  ],
+  "safe_unknown": [
+    "Web-GPT chat transcripts for Triumph build",
+    "Operator Wordstat files for Triumph if used outside repo",
+    "Triumph gitignored launch XLSX",
+    "Operator-signed Triumph launch approval document",
+    "Live Triumph campaign performance metrics"
+  ]
+}

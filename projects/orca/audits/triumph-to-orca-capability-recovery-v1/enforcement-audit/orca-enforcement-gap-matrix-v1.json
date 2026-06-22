@@ -1,0 +1,15 @@
+{
+  "registry_id": "orca-enforcement-gap-matrix-v1",
+  "gaps": [
+    {
+      "rule": "accept_requires_commercial_evidence",
+      "source": "P0-C ORCA-COMMERCIAL-EVIDENCE-STANDARD-v1",
+      "intended_consumer": "SI-07_admission",
+      "actual_consumer": "none",
+      "enforcement": "NOT CONSUMED",
+      "priority": "P0",
+      "required_fix": "INTEGRATE",
+      "new_implementation_needed": false
+    }
+  ]
+}

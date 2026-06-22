@@ -1,0 +1,51 @@
+{
+  "registry_id": "triumph-manipulator-actual-workflow-v1",
+  "generated_at": "2026-06-22",
+  "stages": [
+    {
+      "stage_id": "TWF-01",
+      "name": "business_service_scope",
+      "input": ["operator_brief", "mig_gruzotaxi_pilot_serp_website"],
+      "actor": "operator",
+      "action": "Define manipulator rental scope Krasnodar equipment line",
+      "output": "12_route_families_concept",
+      "tool": "MIG_intake_docs",
+      "mode": "hybrid",
+      "repeatable": "partial",
+      "project_specific": true,
+      "promoted_to_orca": "route_family_freeze_pattern"
+    },
+    {
+      "stage_id": "TWF-04",
+      "name": "keyword_phrase_design",
+      "input": ["intent_groups_v1", "scenario_reasoning"],
+      "actor": "operator_plus_chat_unknown",
+      "action": "Curate 64 phrases with is_primary anchors across 12 groups",
+      "output": "triumph-s-tier-draft-v1.json keywords",
+      "tool": "manual_json_editing",
+      "mode": "manual_hybrid",
+      "repeatable": "partial",
+      "project_specific": true,
+      "promoted_to_orca": "protected_seed_pattern",
+      "evidence_paths": [
+        "projects/orca/ppc/triumph-manipulator/schema/instances/triumph-s-tier-draft-v1.json",
+        "projects/orca/ppc/triumph-manipulator/research/intent-groups-v1.md"
+      ],
+      "unknown": "Web-GPT chat phrase generation not in repository"
+    },
+    {
+      "stage_id": "TWF-11",
+      "name": "validation_gate",
+      "input": ["json_instance"],
+      "actor": "operator_triggers_validator",
+      "action": "345 rules must PASS before export",
+      "output": "validation_report",
+      "tool": "ppc/triumph-manipulator/tools/validation-cli",
+      "mode": "automated_check_human_trigger",
+      "repeatable": true,
+      "project_specific": false,
+      "promoted_to_orca": "pre_export_validation_pattern",
+      "evidence_paths": ["projects/orca/freeze/battle-pilot-triumph-search-v1/TRIUMPH-SEARCH-RK-STABLE-STATE-v1.md"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "decision_id": "I1-triumph-to-orca-capability-recovery-audit-approval-v1",
+  "audit_id": "triumph-to-orca-capability-recovery-v1",
+  "status": "APPROVED — CHECKPOINTED",
+  "date": "2026-06-22",
+  "operator_decision": "TRIUMPH-TO-ORCA CAPABILITY RECOVERY AUDIT V1 — APPROVED",
+  "roadmap_input": "OPTION D — HYBRID CORRECTION",
+  "p0_d_status": "PROPOSED — ON HOLD UNTIL P0-I INTEGRATION PASS",
+  "p0_i_status": "AUTHORIZED — CHARTER PROPOSED",
+  "legacy_regex_admission": "DEPRECATE AS SEMANTIC AUTHORITY",
+  "does_not_authorize": [
+    "p0_d_approval_unchanged",
+    "b0_benchmark",
+    "corvonero_rerun",
+    "runtime_implementation",
+    "campaign_production",
+    "gold_labels"
+  ]
+}

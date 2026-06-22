@@ -1,0 +1,17 @@
+{
+  "registry_id": "orca-contract-consumption-audit-v1",
+  "findings": [
+    {
+      "contract": "ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1",
+      "corvonero_clean_room_loaded": false,
+      "enforcement": "NOT CONSUMED",
+      "evidence": "run-clean-room-semantic-pipeline-v1.mjs has no contract import; manifest AUTH-03 reference only"
+    },
+    {
+      "contract": "P0-C ORCA-SEMANTIC-ANNOTATION-GUIDELINE-v1",
+      "corvonero_clean_room_loaded": false,
+      "enforcement": "DOCUMENTATION ONLY",
+      "evidence": "Approved 78b0557; implementation not started; pipeline uses regex not ACCEPT/REJECT/ABSTAIN"
+    }
+  ]
+}

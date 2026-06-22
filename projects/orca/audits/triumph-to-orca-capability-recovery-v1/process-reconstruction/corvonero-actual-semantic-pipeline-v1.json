@@ -1,0 +1,31 @@
+{
+  "registry_id": "corvonero-actual-semantic-pipeline-v1",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "status": "DIAGNOSTIC_FAILED_FROZEN",
+  "pipeline_script": "projects/orca/projects/corvonero-direct-v2-clean-room/tools/run-clean-room-semantic-pipeline-v1.mjs",
+  "stages": [
+    {
+      "stage_id": "CR2-06",
+      "name": "intent_screening",
+      "artifact_paths": ["semantic-core/corvonero-intent-screening-v1.json"],
+      "rules": "classifyIntent regex arrays",
+      "authority_read": ["service_scope_patterns"],
+      "authority_not_read": ["ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1", "P0-C annotation guideline", "triumph-derived-orca-laws-v1"],
+      "output": "provisional intent classes",
+      "execution_evidence": "pipeline-run-summary-v1.json",
+      "known_defects": ["regex_classification", "commercial_service_medium_confidence"]
+    },
+    {
+      "stage_id": "CR2-07",
+      "name": "commercial_eligibility",
+      "artifact_paths": ["semantic-core/corvonero-commercial-eligibility-v1.json"],
+      "rules": "commercialEligibility function",
+      "authority_read": ["CORVONERO-DIRECT-V2-SERVICE-SCOPE-v1"],
+      "authority_not_read": ["commercial_evidence_standard", "ABSTAIN policy"],
+      "output": "1892 ELIGIBLE COMMERCIAL",
+      "execution_evidence": "artifacts/pipeline-run-summary-v1.json",
+      "known_defects": ["topic_equals_intent", "bulk_auto_accept"]
+    }
+  ],
+  "forbidden_historical_source": "projects/orca/projects/corvonero-yandex-direct/production/"
+}

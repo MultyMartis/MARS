@@ -1,0 +1,33 @@
+{
+  "registry_id": "triumph-derived-capability-inventory-v1",
+  "capabilities": [
+    {
+      "id": "C-03",
+      "name": "operator_approved_service_scope_lock",
+      "source_evidence": ["freeze/route-family-freeze-v1/", "knowledge/triumph-derived-orca-laws-v1.md#ORCA-LAW-01"],
+      "first_known_appearance": "2026-05-28",
+      "system_owner": "operator",
+      "documented": true,
+      "implemented": "partial",
+      "integrated": "corvonero_v7_recovery_only",
+      "enforced": "partial_v7_contract_validator",
+      "validated": "v7_audit",
+      "current_consumer": "validate-campaign-production-contract.mjs",
+      "failure_mode_if_absent": "classifier_or_repair_deletes_required_services"
+    },
+    {
+      "id": "C-19",
+      "name": "accept_requires_commercial_evidence",
+      "source_evidence": ["architecture/semantic-intelligence/ORCA-SEMANTIC-ADMISSION-POLICY-v1.md", "semantic-intelligence/annotation/guidelines/ORCA-COMMERCIAL-EVIDENCE-STANDARD-v1.md"],
+      "first_known_appearance": "2026-06-22",
+      "system_owner": "ORCA_SI",
+      "documented": true,
+      "implemented": false,
+      "integrated": false,
+      "enforced": false,
+      "validated": false,
+      "current_consumer": "none_runtime",
+      "failure_mode_if_absent": "topical_relevance_treated_as_commercial_admission"
+    }
+  ]
+}
