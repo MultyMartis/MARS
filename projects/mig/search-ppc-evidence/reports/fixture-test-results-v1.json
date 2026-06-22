@@ -1,0 +1,108 @@
+{
+  "suite": "wave2-fixtures",
+  "passed": 20,
+  "failed": 0,
+  "total": 20,
+  "results": [
+    {
+      "id": 1,
+      "name": "valid source registration",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "source missing collection date blocked",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "corpus count reconciliation pass",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "corpus count mismatch blocked",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "duplicate aggregation preserving provenance",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "semantic rewriting detection",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "paid SERP within approved window",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "paid SERP outside window blocked",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "timezone missing blocked",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "CAPTCHA partial session degraded",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "no ads observed explicit state",
+      "pass": "NO ADS OBSERVED applies only to this query/timestamp/region/device — not market-wide"
+    },
+    {
+      "id": 12,
+      "name": "ads observed structured evidence",
+      "pass": true
+    },
+    {
+      "id": 13,
+      "name": "advertiser deduplication safe case",
+      "pass": true
+    },
+    {
+      "id": 14,
+      "name": "advertiser ambiguous merge unresolved",
+      "pass": true
+    },
+    {
+      "id": 15,
+      "name": "landing evidence partial",
+      "pass": true
+    },
+    {
+      "id": 16,
+      "name": "degraded collection without approval",
+      "pass": true
+    },
+    {
+      "id": 17,
+      "name": "evidence pack partial readiness",
+      "pass": true
+    },
+    {
+      "id": 18,
+      "name": "stale evidence detection",
+      "pass": true
+    },
+    {
+      "id": 19,
+      "name": "synthetic source cannot be production authority",
+      "pass": true
+    },
+    {
+      "id": 20,
+      "name": "frozen project collection blocked via gate",
+      "pass": true
+    }
+  ]
+}

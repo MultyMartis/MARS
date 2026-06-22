@@ -1,0 +1,21 @@
+{
+  "source_id": "src-fixture-missing-date",
+  "project_id": "WAVE2-TEST-PROJECT",
+  "source_class": "OPERATOR PROVIDED KEYWORDS",
+  "source_title": "Missing date fixture",
+  "source_path": "projects/mig/search-ppc-evidence/fixtures/corpus/keywords-pass.csv",
+  "collection_start": null,
+  "collection_end": null,
+  "imported_at": null,
+  "region": "moscow",
+  "timezone": "Europe/Moscow",
+  "collection_method": "operator_export",
+  "tool_runtime_version": "wave2-mig-evidence-v1",
+  "operator_tool": "fixture",
+  "raw_row_count": 3,
+  "content_checksum": "abc",
+  "limitations": [],
+  "use_authority": "production",
+  "status": "REGISTERED",
+  "related_lifecycle_stage": "SPPC-02"
+}

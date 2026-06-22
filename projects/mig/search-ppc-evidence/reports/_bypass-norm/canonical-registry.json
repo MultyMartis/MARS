@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-06-22T17:50:10.389Z",
+  "entry_count": 1,
+  "entries": [
+    {
+      "phrase_id": "7e07c786d045a10c",
+      "raw_query": "тест",
+      "normalized_query": "тест",
+      "source_ids": [
+        "a"
+      ],
+      "source_row_references": [
+        "a:1"
+      ],
+      "frequency": null,
+      "frequency_type": "missing",
+      "region": "msk",
+      "collection_period": null,
+      "duplicate_group": "тест|msk",
+      "normalization_operations": [
+        "nfc_lowercase_collapse_whitespace"
+      ],
+      "exclusion_status": "included",
+      "exclusion_reason": null,
+      "checksum": "350ab2ff26a5bc457e5ed74794e6ffc76fef9616e9d1d53f7c2762c32369d155"
+    }
+  ],
+  "checksum": "6cf31fcaa0083c02cc3c5f7cefa54171093cd9e222bbfe00da9fa40c66baaf6e"
+}

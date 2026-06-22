@@ -1,13 +1,14 @@
 # MARS Search PPC Lifecycle — Repair Roadmap v1
 
 **Date:** 2026-06-22  
-**Status:** `APPROVED — WAVE 1 CHECKPOINTED — WAVE 1.1 CHECKPOINTED — WAVE 1.2 OPERATOR REVIEW`  
+**Status:** `APPROVED — WAVE 1 CHECKPOINTED — WAVE 1.1 CHECKPOINTED — WAVE 1.2 CHECKPOINTED — WAVE 2 OPERATOR REVIEW`  
 **Lifecycle authority:** `APPROVED — CHECKPOINTED` (`43c4271`)  
 **Wave 1 runtime:** `CORE APPROVED — CHECKPOINTED` (`2b3020d`)  
 **Wave 1.1:** `APPROVED — CHECKPOINTED` (`715402f`)  
-**Wave 1.2:** `IMPLEMENTED — OPERATOR REVIEW REQUIRED`  
-**Wave 1 overall:** `READY FOR OPERATIONAL APPROVAL` (pending operator sign-off)  
-**Wave 2:** `READY FOR OPERATOR AUTHORIZATION` (pending Wave 1.2 review)  
+**Wave 1.2:** `APPROVED — CHECKPOINTED` (`1f8fe08`)  
+**Wave 1 overall:** `OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY`  
+**Wave 2:** `IMPLEMENTED — OPERATOR REVIEW REQUIRED` (uncommitted)  
+**Wave 3:** `BLOCKED UNTIL WAVE 2 APPROVAL`  
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
 **Corvonero default:** `FROZEN` — no Corvonero production work until Wave 3+ operator charter per item
 
@@ -19,9 +20,9 @@
 |------|-------|---------------|----------------------|
 | 1 | Lifecycle authority and state enforcement | MARS Search PPC / Operator | **CORE APPROVED — CHECKPOINTED** (`2b3020d`) |
 | 1.1 | Entry-point wiring and bypass closure | MARS Search PPC / MIG / ORCA | **APPROVED — CHECKPOINTED** (`715402f`) |
-| 1.2 | Legacy entry-point physical lockdown | MARS Search PPC / MIG / ORCA | **IMPLEMENTED — OPERATOR REVIEW REQUIRED** |
-| 2 | MIG evidence production | MIG | **READY FOR OPERATOR AUTHORIZATION** (after W1.2 review) |
-| 3 | ORCA production semantic intelligence | ORCA Semantic Intelligence | Frozen until operator approves lifecycle + Wave 3 charter |
+| 1.2 | Legacy entry-point physical lockdown | MARS Search PPC / MIG / ORCA | **APPROVED — CHECKPOINTED** (`1f8fe08`) |
+| 2 | MIG evidence production | MIG | **IMPLEMENTED — OPERATOR REVIEW REQUIRED** — [search-ppc-evidence](../../mig/search-ppc-evidence/) |
+| 3 | ORCA production semantic intelligence | ORCA Semantic Intelligence | **BLOCKED UNTIL WAVE 2 APPROVAL** |
 | 4 | Analytical pack and AI PPC Strategist | Cross-system + Strategist role | Frozen |
 | 5 | Campaign production and QA | Campaign Production / ORCA | Frozen |
 | 6 | Commander and launch | Commander Export + Operator | Frozen |

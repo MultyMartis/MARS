@@ -1,0 +1,48 @@
+{
+  "audit_id": "corvonero-readonly-compatibility-audit-v1",
+  "date": "2026-06-23",
+  "corvonero_status": "FROZEN",
+  "session_reference": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01",
+  "compatibility": {
+    "source_registry": {
+      "status": "PARTIAL",
+      "legacy_schema": "0.1",
+      "wave2_schema": "1.0.0",
+      "gap": "legacy entries lack timezone, collection_method, content_checksum, use_authority"
+    },
+    "corpus_intake": {
+      "status": "INCOMPATIBLE_AS-IS",
+      "note": "keyword_registry.json and demand_surface.json are pilot artifacts — require mapping pass"
+    },
+    "normalization_provenance": {
+      "status": "PARTIAL",
+      "legacy": "keyword_registry phrase_normalized",
+      "wave2": "canonical-registry with source_row_references"
+    },
+    "serp_evidence_classification": {
+      "status": "PARTIAL",
+      "legacy": "organic_results may contain yabs ad URLs mixed with organic",
+      "wave2": "paid-serp-runtime separates paid via visible_ads + yabs filter"
+    },
+    "dates_times": {
+      "status": "COMPATIBLE",
+      "legacy": "timestamp ISO + region in serp.json"
+    },
+    "paid_vs_organic": {
+      "status": "NEEDS_RECLASSIFICATION",
+      "note": "Corvonero captures labeled organic SERP; visible_ads often empty while yabs URLs in organic_results"
+    },
+    "captcha_incomplete_sessions": {
+      "status": "COMPATIBLE",
+      "legacy": "captcha_status field present"
+    }
+  },
+  "migration_repair_list": [
+    "Map legacy source-registry 0.1 entries to Wave 2 source record schema",
+    "Reclassify yabs URLs from organic_results into paid observations (read-only audit pass)",
+    "Add timezone and business-hours metadata to Corvonero session manifests retroactively where missing",
+    "Do not mutate canonical Corvonero evidence — create sidecar compatibility indexes only",
+    "keyword_registry → canonical-registry mapping charter for operator-approved migration"
+  ],
+  "new_collection_authorized": false
+}

@@ -6,7 +6,8 @@
 |------|-------|
 | **Authority** | [MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md) |
 | **Status** | `APPROVED — IMPLEMENTATION AUTHORIZED` |
-| **Wave 1** | `AUTHORIZED` — see [decisions/WAVE-1-OPERATOR-APPROVAL-v1.md](decisions/WAVE-1-OPERATOR-APPROVAL-v1.md) |
+| **Wave 1** | `OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY` |
+| **Wave 2** | `IMPLEMENTED — OPERATOR REVIEW REQUIRED` — MIG evidence: [../mig/search-ppc-evidence/README.md](../mig/search-ppc-evidence/README.md) |
 | **Stages** | SPPC-01 … SPPC-23 |
 | **Validator** | `validators/validate-search-ppc-lifecycle.mjs` |
 | **Placement** | [architecture/PLACEMENT-DECISION-v1.md](architecture/PLACEMENT-DECISION-v1.md) |

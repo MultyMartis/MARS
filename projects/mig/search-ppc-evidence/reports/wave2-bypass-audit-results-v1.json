@@ -1,0 +1,98 @@
+{
+  "suite": "wave2-bypass-audit",
+  "passed": 15,
+  "failed": 0,
+  "total": 15,
+  "results": [
+    {
+      "id": 1,
+      "name": "Paid SERP without manifest",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "Paid SERP outside approved hours",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "Paid SERP unresolved timezone",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "Paid SERP on frozen project",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "Evidence missing timestamp rejected in parser",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "Organic SERP not mislabeled as paid when no yabs",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "No-ads not generalized as market conclusion",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "CAPTCHA session not marked complete",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 9,
+      "name": "Partial session requires degraded record pattern",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 10,
+      "name": "Synthetic evidence as production blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 11,
+      "name": "Corpus subset mismatch blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 12,
+      "name": "Frequency missing not invented in normalization",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 13,
+      "name": "Competitor inference not recorded as observed fact in pack contract",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 14,
+      "name": "Stale evidence flagged",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 15,
+      "name": "Evidence pack cannot claim SPPC-12 complete without ORCA",
+      "pass": true,
+      "disposition": "PASS"
+    }
+  ]
+}

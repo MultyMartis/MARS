@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "query_id": "fixture-no-ads-01",
+  "query": "редкий технический запрос тест",
+  "timestamp": "2026-06-23T11:00:00.000Z",
+  "timezone": "Europe/Moscow",
+  "region": "Москва",
+  "device": "desktop",
+  "captcha_status": "none",
+  "visible_ads": [],
+  "organic_results": [
+    {
+      "title": "Форум — редкий технический запрос",
+      "url": "https://forum.example.org/thread",
+      "path_text": "forum.example.org"
+    }
+  ]
+}

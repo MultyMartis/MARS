@@ -1,0 +1,88 @@
+{
+  "audit_id": "mig-search-ppc-evidence-capability-audit-v1",
+  "date": "2026-06-23",
+  "wave": "2",
+  "capabilities": {
+    "wordstat_source_registration": {
+      "status": "PARTIALLY_IMPLEMENTED",
+      "location": "projects/mig/contracts/MIG-KEYWORD-*",
+      "wave2": "source-registry.mjs supports WORDSTAT EXPORT class"
+    },
+    "source_ledgers": {
+      "status": "OPERATIONAL",
+      "location": "search-ppc-evidence/runtime/lib/source-registry.mjs",
+      "legacy": "incoming/mig/pilots/*/evidence/source-registry.json (schema 0.1)"
+    },
+    "raw_corpus_storage": {
+      "status": "OPERATIONAL",
+      "location": "search-ppc-evidence/runtime/lib/corpus-intake.mjs",
+      "storage": "external incoming/mig or MARS STORAGE"
+    },
+    "normalization": {
+      "status": "OPERATIONAL",
+      "location": "search-ppc-evidence/runtime/lib/canonical-registry.mjs",
+      "legacy": "projects/mig/contracts/MIG-PROVIDER-MAPPING-SPEC-v1.md"
+    },
+    "deduplication": {
+      "status": "REUSABLE",
+      "location": "canonical-registry.mjs duplicate_group merge",
+      "legacy": "MIG-KEYWORD-REGISTRY-WRITER-CONTRACT-v1"
+    },
+    "serp_runners": {
+      "status": "PROJECT-SPECIFIC",
+      "location": "incoming/mig/pilots/corvonero/.../capture-serp-*.mjs",
+      "wave2": "paid-serp-runtime.mjs adapter + fixture mode"
+    },
+    "headful_browser_automation": {
+      "status": "PROJECT-SPECIFIC",
+      "location": "corvonero capture-serp-zpm-workflow.mjs (Playwright)",
+      "note": "Not generalized into Wave 2 core — adapter only"
+    },
+    "device_profiles": {
+      "status": "REUSABLE",
+      "location": "corvonero serp.json device/viewport fields",
+      "wave2": "session contract device_profile"
+    },
+    "region_handling": {
+      "status": "OPERATIONAL",
+      "location": "session contract + serp.json region/lr"
+    },
+    "captcha_handling": {
+      "status": "OPERATIONAL",
+      "location": "paid-serp-runtime.mjs CAPTCHA/SESSION STOPPED states",
+      "legacy": "STOP_ON_CAPTCHA in corvonero tools"
+    },
+    "evidence_screenshots_html_json": {
+      "status": "PARTIALLY_IMPLEMENTED",
+      "location": "corvonero capture-run captures/",
+      "wave2": "capture_policy in session contract; fixture JSON for tests"
+    },
+    "competitor_extraction": {
+      "status": "OPERATIONAL",
+      "location": "competitor-registry.mjs, competitor-pack.mjs"
+    },
+    "session_manifests": {
+      "status": "REUSABLE",
+      "location": "projects/mig/lib/session-spine/",
+      "wave2": "paid SERP session-summary.json"
+    },
+    "run_reports": {
+      "status": "OPERATIONAL",
+      "location": "intake-report.json, session-summary.json, evidence-manifest.json"
+    },
+    "n8n_external_automation": {
+      "status": "DOCUMENTED_ONLY",
+      "location": "projects/mig/workflows/n8n/",
+      "note": "Not production-proven for Search PPC"
+    },
+    "paid_serp_business_hours": {
+      "status": "OPERATIONAL",
+      "location": "business-hours.mjs + paid-serp-runtime.mjs",
+      "live_collection": "SAFE UNKNOWN — requires operator live validation"
+    },
+    "lifecycle_gate_integration": {
+      "status": "OPERATIONAL",
+      "location": "runtime/lib/gate.mjs → mig-ppc-gate.mjs"
+    }
+  }
+}

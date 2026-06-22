@@ -1,0 +1,76 @@
+{
+  "decision_set_id": "wave-2-operator-decisions-v1",
+  "date": "2026-06-23",
+  "wave": "2",
+  "decisions": {
+    "W2-D1": {
+      "id": "W2-D1",
+      "subject": "Wave 1",
+      "status": "OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY",
+      "note": "Lifecycle gate, receipts, legacy lockdown, bypass tests green"
+    },
+    "W2-D2": {
+      "id": "W2-D2",
+      "subject": "Wave 1.2 checkpoint",
+      "status": "AUTHORIZED AFTER SELECTIVE VERIFICATION",
+      "note": "Legacy entry-point lockdown approved for checkpoint"
+    },
+    "W2-D3": {
+      "id": "W2-D3",
+      "subject": "Wave 2",
+      "status": "MIG EVIDENCE PRODUCTION CORE — AUTHORIZED",
+      "note": "Implementation authorized; operator review required before operational"
+    },
+    "W2-D4": {
+      "id": "W2-D4",
+      "subject": "Paid SERP",
+      "status": "PAID SERP — BUSINESS HOURS",
+      "required_fields": [
+        "local_date",
+        "exact_local_time",
+        "timezone",
+        "weekday",
+        "region",
+        "device",
+        "query",
+        "advertising_block_observations",
+        "interruption_captcha_status"
+      ]
+    },
+    "W2-D5": {
+      "id": "W2-D5",
+      "subject": "Business-hours policy",
+      "status": "PROJECT/REGION-AWARE",
+      "requirement": "Each project defines timezone, advertiser-active interval, collection windows, exception policy",
+      "universal_fixed_interval": false
+    },
+    "W2-D6": {
+      "id": "W2-D6",
+      "subject": "Evidence honesty",
+      "status": "MANDATORY EXPLICIT STATES",
+      "valid_states": [
+        "NO ADS OBSERVED",
+        "COLLECTION DEGRADED",
+        "CAPTCHA / INTERRUPTION"
+      ],
+      "forbidden_inferences": [
+        "no competitors exist",
+        "no market demand exists",
+        "collection completed successfully without evidence"
+      ]
+    },
+    "W2-D7": {
+      "id": "W2-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN",
+      "production_collection": false,
+      "read_only_compatibility_audit": true
+    }
+  },
+  "wave_status": {
+    "wave_1": "OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY",
+    "wave_1_2": "APPROVED — READY FOR CHECKPOINT",
+    "wave_2": "IMPLEMENTATION AUTHORIZED",
+    "corvonero": "FROZEN"
+  }
+}

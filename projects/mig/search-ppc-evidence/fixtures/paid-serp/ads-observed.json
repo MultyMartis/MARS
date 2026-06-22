@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "query_id": "fixture-ads-01",
+  "query": "купить станок чпу москва",
+  "timestamp": "2026-06-23T10:30:00.000Z",
+  "timezone": "Europe/Moscow",
+  "region": "Москва",
+  "region_lr": 213,
+  "device": "desktop",
+  "captcha_status": "none",
+  "visible_ads": [
+    {
+      "title": "Станки ЧПУ от производителя — доставка по РФ",
+      "url": "https://yabs.yandex.ru/count/example-ad-1",
+      "path_text": "cnc-pro.example.ru",
+      "description": "Производство и сервис. Рассрочка."
+    },
+    {
+      "title": "Фрезерные станки ЧПУ — каталог 2026",
+      "url": "https://yabs.yandex.ru/count/example-ad-2",
+      "path_text": "tools-market.example.ru"
+    }
+  ],
+  "organic_results": [
+    {
+      "title": "Обзор станков ЧПУ",
+      "url": "https://example.org/review",
+      "path_text": "example.org › review"
+    }
+  ]
+}
