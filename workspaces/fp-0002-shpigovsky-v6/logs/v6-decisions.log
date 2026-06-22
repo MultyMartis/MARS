@@ -1,20 +1,2 @@
-2026-06-23T04:31:00Z | DECISION | Responsive phase authorized by operator task FP-0002 mobile header/offcanvas/footer
-2026-06-23T04:31:00Z | DECISION | Breakpoint max-width 1024px / min-width 1025px — source: FP-0002-V6-SECTION-001-SPECIFICATION.json breakpoint_operator_rule_px 1024
-2026-06-23T04:31:00Z | DECISION | Primary mobile header phone: 8 (925) 183-64-64 — source-order (first in canonical header phones block)
-2026-06-23T04:31:00Z | DECISION | Secondary phone location: off-canvas contacts + mobile footer (site-footer__phone--secondary)
-2026-06-23T04:31:00Z | DECISION | Off-canvas direction: right edge LTR; width min(320px, calc(100vw - var(--pad-gap-tight)*2))
-2026-06-23T04:31:00Z | DECISION | JS hooks: data-offcanvas, data-offcanvas-open, data-offcanvas-close, data-offcanvas-overlay, data-offcanvas-panel
-2026-06-23T04:31:00Z | DECISION | Navigation source: duplicated markup in off-canvas (desktop safety over shared partial refactor)
-2026-06-23T04:31:00Z | DECISION | Desktop baseline preserved — responsive rules scoped to max-width 1024px + off-canvas desktop CSS safety net min-width 1025px
-2026-06-23T04:31:00Z | DECISION | Hero mobile NOT STARTED; main content NOT STARTED
-[2026-06-23T05:27:33+07:00] DECISION section_01_identity=home-intro-mission block=BLOCK-002 exclude=intro-programs_composite SOURCE=HOME-PAGE-FULL-MOCKUP.jpg
-[2026-06-23T05:27:33+07:00] DECISION card_row_2_duplicate=JPG_placeholder_layout REASON=mockup_repeats_three_unique_cards
-[2026-06-23T22:40:00Z] DECISION operator_rejection_overrides_automated_pass home_section_01=REJECTED despite_build=PASS
-[2026-06-23T22:40:00Z] DECISION archived_GROUP-01_and_intro-programs=PROHIBITED_for_V6_structural_reconstruction
-[2026-06-23T22:40:00Z] DECISION placeholder_card_or_text_duplication=PROHIBITED unreadable_content=STOP
-[2026-06-23T22:40:00Z] DECISION next_authorized_step=clean_visual_audit_only home_section_02=BLOCKED
-[2026-06-23T22:40:00Z] DECISION no_git_revert_0e5af79 selective_removal_only operator_src=PRESERVED
-2026-06-23T06:00:00Z | REJECT-V1-CROP | Operator rejected Y1494 end; V2 uses Y1491 after full card row | CONFIRMED
-2026-06-23T06:00:00Z | CARD-COUNT | Measured 3x1 not 6x2 from canonical JPG | CONFIRMED
-2026-06-23T06:00:00Z | LIST-DUP | Mockup lines 5-6 duplicate line 4; implement 4 unique items | HIGH
-2026-06-23T06:00:00Z | PARTIAL-NAME | home-recovery-intro (not home-intro-mission) | CONFIRMED
+﻿2026-06-23T06:35:00+03:00 | DECISION | Operator manual polish after 69fe35b is canonical for Section 01; agent delivery at 69fe35b is historical only
+2026-06-23T06:36:00+03:00 | DECISION | Freeze scope excludes Section 02; responsive shell preserved unchanged

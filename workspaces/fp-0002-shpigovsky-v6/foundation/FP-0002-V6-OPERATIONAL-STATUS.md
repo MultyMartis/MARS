@@ -1,6 +1,15 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (Section 01 V2 corrected crop + implementation)
+**Updated:** 2026-06-23 (Section 01 operator-stable freeze)
+
+## Section 01 operator-stable release
+
+| Field | Value |
+|-------|-------|
+| `home_section_01_release` | `FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01` |
+| `home_section_01_status` | **OPERATOR_APPROVED_FROZEN** |
+| `home_section_01_tag` | `fp-0002-v6-section-01-operator-stable-01` |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01-SOURCE.zip` |
 
 ## Responsive shell stable release
 
@@ -55,7 +64,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01 **V2 IMPLEMENTED** — pending operator review; Section 02+ **NOT STARTED** |
+| Main content sections | Section 01 **OPERATOR_APPROVED_FROZEN**; Section 02 **NOT STARTED**; Section 03+ **NOT STARTED** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
@@ -69,13 +78,11 @@ No automated task may overwrite current src without an explicit operator instruc
 ```text
 responsive_shell_release: FP-0002-V6-RESPONSIVE-SHELL-STABLE-01
 responsive_shell_status: FROZEN_PRESERVED
-main_content_map: CREATED
-home_section_01_previous_audits: REJECTED
-home_section_01_crop_v2: COMPLETE
-home_section_01_boundaries_v2: CONFIRMED
-home_section_01_implementation_v2: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_section_01: OPERATOR_APPROVED_FROZEN
+home_section_01_release: FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01
 home_section_01_active_partial: src/partials/sections/home-recovery-intro.html
 home_section_02: NOT_STARTED
+home_section_03: NOT_STARTED
 main_content_remaining: NOT_STARTED
 ```
 

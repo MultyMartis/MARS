@@ -86,14 +86,14 @@
 	--font-size-large: 20px;
 	--line-height-large: 26px;
 
-	--font-size-h1: 40px;
-	--line-height-h1: 40px;
+	--font-size-h1: 46px;
+	--line-height-h1: 46px;
 
-	--font-size-h2: 30px;
-	--line-height-h2: 30px;
+	--font-size-h2: 36px;
+	--line-height-h2: 36px;
 
-	--font-size-h3: 24px;
-	--line-height-h3: 28px;
+	--font-size-h3: 26px;
+	--line-height-h3: 30px;
 
 	--font-size-nav: 16px;
 	--line-height-nav: 20px;
@@ -346,6 +346,21 @@ svg {
 	padding-right: var(--pad-x);
 }
 
+
+main > section, main > .section, main > div {
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    05. Typography
    ========================================================================== */
@@ -405,6 +420,20 @@ em {
 /* ==========================================================================
    07. Shared components
    ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .btn {
 	display: flex;
@@ -755,9 +784,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-recovery-intro {
 	position: relative;
-	padding-top: 28px;
-	padding-bottom: 76px;
-	overflow: hidden;
+
 }
 
 .home-recovery-intro__container {
@@ -781,36 +808,37 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	height: auto;
 }
 
+.home-recovery-intro--wrapper {
+	display: flex;
+	flex-flow: column;
+	gap: var(--pad-gap);
+}
+
 .home-recovery-intro__content {
-	max-width: 958px;
-	margin-bottom: var(--pad-gap);
+	display: flex;
+	flex-flow: column;
+	gap: var(--pad-gap);
 }
 
 .home-recovery-intro__heading {
-	margin-bottom: var(--pad-gap-line);
-	color: var(--color-text-primary);
+	position: relative;
 }
 
 .home-recovery-intro__lead {
-	max-width: 958px;
-	margin-bottom: var(--pad-gap-line);
-	color: var(--color-text-secondary);
+	position: relative;
 }
 
 .home-recovery-intro__benefits {
 	display: flex;
 	flex-direction: column;
 	gap: var(--pad-gap-tight);
-	max-width: 958px;
-	margin-bottom: var(--pad-gap);
 	padding-left: 0;
 	list-style: none;
 }
 
 .home-recovery-intro__benefits-item {
 	position: relative;
-	padding-left: 18px;
-	color: var(--color-text-secondary);
+	padding-left: var(--pad-gap);
 }
 
 .home-recovery-intro__benefits-item::before {
@@ -818,8 +846,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	position: absolute;
 	top: 0.55em;
 	left: 0;
-	width: 6px;
-	height: 6px;
+	width: 8px;
+	height: 8px;
 	border-radius: var(--radius-full);
 	background-color: var(--color-accent);
 	transform: translateY(-50%);
@@ -828,7 +856,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-recovery-intro__card-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 16px;
+	gap: var(--pad-gap);
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -837,20 +865,21 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-recovery-intro__card {
 	display: flex;
 	flex-direction: column;
-	gap: var(--pad-gap-tight);
+	gap: 20px;
 	box-sizing: border-box;
 	min-height: 200px;
-	padding: var(--pad-box);
-	border: var(--border-width) solid var(--border-color-subtle);
+	padding: var(--pad-gap);
+	border: var(--border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-main);
-	background-color: var(--color-surface);
+	background-color: transparent;
 }
 
 .home-recovery-intro__card-icon {
-	display: block;
+	display: flex;
 	color: var(--color-accent);
-	font-size: var(--font-size-base);
-	line-height: 1;
+	flex-flow: row;
+	align-items: baseline;
+	gap: 10px;
 }
 
 .home-recovery-intro__card-title {
@@ -863,9 +892,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-recovery-intro__card-text {
 	margin: 0;
-	font-size: var(--font-size-small);
-	line-height: var(--line-height-small);
-	color: var(--color-text-secondary);
+	font-size: 16px;
+	line-height: 20px;
 }
 
 /* ==========================================================================

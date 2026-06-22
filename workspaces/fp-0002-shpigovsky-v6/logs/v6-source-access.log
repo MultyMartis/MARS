@@ -1,10 +1,3 @@
-2026-06-23T04:31:00Z | SOURCE | Preflight src diff vs fp-0002-v6-desktop-stable-01 before edits: NONE (operator-canonical matched stable)
-2026-06-23T04:31:00Z | SOURCE | PRE-MOBILE desktop reference screenshots captured post-build at 1398px alongside POST-MOBILE regression set; stable manifest PNG remains authoritative pre-change baseline
-2026-06-23T04:31:00Z | SOURCE | No mobile JPG art for header/footer layout — mobile geometry from operator task + existing tokens
-[2026-06-23T05:27:33+07:00] SOURCE ACCESS HOME-PAGE-FULL-MOCKUP.jpg path=workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/ status=READ
-[2026-06-23T22:40:00Z] SOURCE ACCESS HOME-PAGE-FULL-MOCKUP.jpg sha256=CDD1D5BCC512B617DCF93EFA97AF88CF4AD99A0895CFC27A63C07BC704945290 role=SOLE_VISUAL_AUTHORITY clean_audit=YES
-[2026-06-23T22:40:00Z] SOURCE ACCESS archived_GROUP-01 status=IDENTIFY_REJECTED_ONLY new_audit=NO
-[2026-06-23T22:40:00Z] SOURCE ACCESS FP-0002-V6-HOME-SECTION-01-SPEC.md status=HISTORICAL_NOT_AUTHORITY
-2026-06-23T06:00:00Z | JPG-ONLY | HOME-PAGE-FULL-MOCKUP.jpg SHA CDD1D5BC...5290 | Section 01 V2
-2026-06-23T06:00:00Z | ARCHIVE-NO | GROUP-01 / intro-programs / 0e5af79 not used for structure | 0
-2026-06-23T06:00:00Z | DECOR-DERIVE | home-recovery-intro-decor.png from JPG decor zone | ALLOWED
+﻿2026-06-23T06:35:00+03:00 | SOURCE | CANONICAL | workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/HOME-PAGE-FULL-MOCKUP.jpg | Section 01 validation reference only at freeze
+2026-06-23T06:35:00+03:00 | SOURCE | OPERATOR-CANONICAL | workspaces/fp-0002-shpigovsky-v6/src/partials/sections/home-recovery-intro.html
+2026-06-23T06:35:00+03:00 | SOURCE | OPERATOR-CANONICAL | workspaces/fp-0002-shpigovsky-v6/src/scss/style.scss
