@@ -1,0 +1,52 @@
+{
+  "status": "BLOCKED",
+  "project_id": "SYNTHETIC-BLOCKED-TEST",
+  "current_stage": "SPPC-14",
+  "missing_required_inputs": [
+    "SPPC-13",
+    "campaign_architecture_registry"
+  ],
+  "required_owners": [
+    "Campaign Production",
+    "MIG"
+  ],
+  "allowed_next_action": [
+    "Resolve blockers for SPPC-14"
+  ],
+  "forbidden_until_resolved": [
+    "Commander Export"
+  ],
+  "forbidden_artifacts": [
+    {
+      "artifact": "commander_export_artifact",
+      "reason": "exists before SPPC-19 complete",
+      "action": [
+        "Commander Export"
+      ]
+    }
+  ],
+  "next_allowed_stages": [],
+  "blockers": [
+    {
+      "code": "PAID_SERP_EVIDENCE_MISSING",
+      "message": "BLOCKED OR DEGRADED — PAID COMPETITIVE EVIDENCE MISSING",
+      "owner": "MIG"
+    },
+    {
+      "code": "MISSING_REQUIREMENTS",
+      "message": "Lifecycle requirement not met",
+      "items": [
+        {
+          "type": "prerequisite_stage",
+          "id": "SPPC-13",
+          "owner": "AI PPC Strategist"
+        },
+        {
+          "type": "artifact",
+          "id": "campaign_architecture_registry",
+          "owner": "Campaign Production"
+        }
+      ]
+    }
+  ]
+}

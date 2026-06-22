@@ -152,7 +152,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **SoT:** [../projects/orca/README.md](../projects/orca/README.md) · [OPERATIONAL-INDEX.md](../projects/orca/OPERATIONAL-INDEX.md) · registry **active**, runtime **excluded**
 
-**Search PPC Lifecycle v1 (2026-06-22):** `PROPOSED — OPERATOR REVIEW` — [../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md). Gap audit **COMPLETE**; lifecycle validator **IMPLEMENTED — NOT VALIDATED AT SCALE**. Corvonero **FROZEN**; P0-I pilot **DIAGNOSTIC EVIDENCE**; P0-D **ON HOLD**.
+**Search PPC Lifecycle v1 (2026-06-22):** `APPROVED — CHECKPOINTED` — [../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md). Wave 1 authorized. Gap audit **COMPLETE**; lifecycle validator **IMPLEMENTED — NOT VALIDATED AT SCALE**. Corvonero **FROZEN**; P0-I pilot **DIAGNOSTIC EVIDENCE**; P0-D **ON HOLD**.
 
 ---
 

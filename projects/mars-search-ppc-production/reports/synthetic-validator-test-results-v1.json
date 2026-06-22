@@ -1,0 +1,30 @@
+{
+  "test_run": "2026-06-22",
+  "fixtures": [
+    {
+      "manifest": "synthetic-blocked-v1.json",
+      "expected_status": "BLOCKED",
+      "expected_exit_code": 2,
+      "result_status": "BLOCKED",
+      "exit_code": 2,
+      "validates": [
+        "blocks downstream campaign production at SPPC-14",
+        "forbids Commander Export when premature",
+        "non-zero exit on blockers"
+      ]
+    },
+    {
+      "manifest": "synthetic-pre-strategy-v1.json",
+      "expected_status": "READY",
+      "expected_exit_code": 0,
+      "result_status": "READY",
+      "exit_code": 0,
+      "validates": [
+        "allows advance to SPPC-13 only",
+        "does not allow Commander Export",
+        "pre-strategy chain complete through SPPC-12 artifacts"
+      ]
+    }
+  ],
+  "note": "Synthetic fixtures — not real projects"
+}

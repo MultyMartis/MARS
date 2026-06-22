@@ -1,0 +1,48 @@
+{
+  "manifest_id": "synthetic-blocked-v1",
+  "project_id": "SYNTHETIC-BLOCKED-TEST",
+  "organization": "Synthetic Test Org",
+  "campaign_platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "Test Region",
+  "current_lifecycle_stage": "SPPC-14",
+  "lifecycle_contract_ref": "projects/mars-search-ppc-production/contracts/mars-search-ppc-lifecycle-contract-v1.json",
+  "stage_statuses": {
+    "SPPC-01": { "status": "COMPLETED" },
+    "SPPC-02": { "status": "COMPLETED" },
+    "SPPC-03": { "status": "COMPLETED" },
+    "SPPC-04": { "status": "COMPLETED" },
+    "SPPC-05": { "status": "COMPLETED" },
+    "SPPC-06": { "status": "COMPLETED" },
+    "SPPC-07": { "status": "COMPLETED" },
+    "SPPC-08": { "status": "COMPLETED" },
+    "SPPC-09": { "status": "COMPLETED" },
+    "SPPC-10": { "status": "COMPLETED" },
+    "SPPC-11": { "status": "COMPLETED" },
+    "SPPC-12": { "status": "NOT STARTED" },
+    "SPPC-13": { "status": "NOT STARTED" },
+    "SPPC-14": { "status": "IN PROGRESS" }
+  },
+  "artifacts": {
+    "business_scope_operator_authority": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/scope.json", "status": "REGISTERED" },
+    "source_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/source-registry.json", "status": "REGISTERED" },
+    "full_semantic_corpus_intake": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/corpus.json", "status": "REGISTERED" },
+    "canonical_phrase_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/canonical.json", "status": "REGISTERED" },
+    "commercial_admission_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/admission.json", "status": "REGISTERED" },
+    "demand_tier_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/tiers.json", "status": "REGISTERED" },
+    "service_ownership_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/ownership.json", "status": "REGISTERED" },
+    "semantic_cluster_registry": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/clusters.json", "status": "REGISTERED" },
+    "negative_intelligence_pack": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/negatives.json", "status": "REGISTERED" },
+    "commander_export_artifact": { "path": "projects/mars-search-ppc-production/state/fixtures/evidence/commander.json", "status": "REGISTERED" }
+  },
+  "operator_approvals": {
+    "SPPC-01": { "approved": true, "approved_at": "2026-06-22T00:00:00Z" }
+  },
+  "degraded_evidence_approvals": {},
+  "blockers": ["Attempted campaign architecture without dated analytical pack and paid SERP evidence"],
+  "next_required_action": "Complete SPPC-12 Dated Analytical Pack",
+  "runtime_versions": { "lifecycle_validator": "v1" },
+  "final_launch_authority": { "granted": false },
+  "_synthetic": true,
+  "_note": "Deliberately invalid — tests downstream block"
+}

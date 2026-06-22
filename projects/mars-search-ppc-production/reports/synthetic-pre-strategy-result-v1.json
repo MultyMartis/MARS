@@ -1,0 +1,17 @@
+{
+  "status": "READY",
+  "project_id": "SYNTHETIC-PRE-STRATEGY-TEST",
+  "current_stage": "SPPC-12",
+  "missing_required_inputs": [],
+  "required_owners": [],
+  "allowed_next_action": [
+    "Complete SPPC-12",
+    "Advance to SPPC-13"
+  ],
+  "forbidden_until_resolved": [],
+  "forbidden_artifacts": [],
+  "next_allowed_stages": [
+    "SPPC-13"
+  ],
+  "blockers": []
+}

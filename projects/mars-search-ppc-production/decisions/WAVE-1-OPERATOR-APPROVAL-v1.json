@@ -1,0 +1,60 @@
+{
+  "decision_id": "WAVE-1-OPERATOR-APPROVAL-v1",
+  "decision_date": "2026-06-22",
+  "status": "APPROVED — IMPLEMENTATION AUTHORIZED",
+  "lifecycle_authority": "MARS SEARCH PPC PRODUCTION LIFECYCLE V1",
+  "operator_decisions": {
+    "W1-D1": {
+      "id": "W1-D1",
+      "title": "Lifecycle Authority",
+      "decision": "MARS SEARCH PPC PRODUCTION LIFECYCLE V1 — APPROVED",
+      "canonical_locus": "projects/mars-search-ppc-production/",
+      "primary_document": "MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md"
+    },
+    "W1-D2": {
+      "id": "W1-D2",
+      "title": "Implementation",
+      "decision": "WAVE 1 — AUTHORIZED",
+      "scope": "Lifecycle authority and state enforcement"
+    },
+    "W1-D3": {
+      "id": "W1-D3",
+      "title": "Project Manifest",
+      "decision": "Every Search PPC project must have a valid lifecycle state manifest before lifecycle work proceeds"
+    },
+    "W1-D4": {
+      "id": "W1-D4",
+      "title": "Entry-Point Enforcement",
+      "decision": "Web-GPT and Cursor tasks must identify project ID, current lifecycle stage, completed approved stages, authoritative inputs, blockers, allowed current work, forbidden downstream work"
+    },
+    "W1-D5": {
+      "id": "W1-D5",
+      "title": "Missing Requirements",
+      "decision": "Missing evidence must produce BLOCKED — LIFECYCLE REQUIREMENT NOT MET; no invented substitutes"
+    },
+    "W1-D6": {
+      "id": "W1-D6",
+      "title": "Operator Manual Work",
+      "decision": "Mass phrase-by-phrase operator classification is prohibited as the default production workflow",
+      "allowed_exceptions": [
+        "bounded unresolved conflicts",
+        "sampled QA",
+        "high-value policy decisions",
+        "explicit operator request",
+        "benchmark construction under separate approved process"
+      ]
+    },
+    "W1-D7": {
+      "id": "W1-D7",
+      "title": "Corvonero",
+      "decision": "Create read-only lifecycle manifest; do not resume production",
+      "project_id": "corvonero-direct-v2-clean-room",
+      "lifecycle_status": "FROZEN"
+    }
+  },
+  "previous_lifecycle_status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "new_lifecycle_status": "APPROVED — IMPLEMENTATION AUTHORIZED",
+  "wave_1_status": "AUTHORIZED — NOT COMPLETE",
+  "reviewed_by": "Operator",
+  "notes": "Wave 1 implementation authorized; OPERATIONAL status requires operator review after Wave 1 report."
+}

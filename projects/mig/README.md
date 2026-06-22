@@ -137,3 +137,15 @@ Hand off to ORCA only via [contracts/mig-orca-handoff-contract-v0.md](contracts/
 Report using [reports/REPORT-TEMPLATE.md](reports/REPORT-TEMPLATE.md).
 
 Default: state **SAFE UNKNOWN** when evidence or scope is incomplete — do not infer downstream semantics.
+
+---
+
+## Search PPC Production Lifecycle (consumer)
+
+MIG evidence obligations for Yandex Direct search campaigns are defined in the **canonical cross-system lifecycle** (`APPROVED — CHECKPOINTED`, 2026-06-22):
+
+- [MARS Search PPC Production Lifecycle v1](../mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md)
+
+**MIG-owned stages:** SPPC-02 Source Registration, SPPC-03 Full Corpus Intake, SPPC-10 Daytime Paid SERP (`PAID SERP — BUSINESS HOURS` mode — **planned, not implemented**), SPPC-11 Competitor Advertising Audit.
+
+Do not duplicate full lifecycle text here — link and comply with stage contracts.

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mars-search-ppc-lifecycle-contract-v1.schema.json",
+  "title": "MARS Search PPC Lifecycle Contract v1",
+  "type": "object",
+  "required": ["contract_id", "version", "stages", "lifecycle_statuses"],
+  "properties": {
+    "contract_id": { "const": "mars-search-ppc-lifecycle-contract-v1" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "platform": { "const": "Yandex Direct" },
+    "campaign_type": { "const": "search" },
+    "lifecycle_statuses": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "NOT STARTED",
+          "IN PROGRESS",
+          "BLOCKED",
+          "READY FOR REVIEW",
+          "APPROVED",
+          "COMPLETED",
+          "COMPLETED WITH APPROVED DEGRADATION",
+          "SUPERSEDED",
+          "FAILED",
+          "FROZEN"
+        ]
+      }
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 23,
+      "maxItems": 23,
+      "items": {
+        "type": "object",
+        "required": ["stage_id", "name", "owning_system", "required_artifacts", "allowed_next_stages"],
+        "properties": {
+          "stage_id": { "pattern": "^SPPC-[0-9]{2}$" },
+          "name": { "type": "string" },
+          "owning_system": { "type": "string" },
+          "prerequisites": { "type": "array" },
+          "required_artifacts": { "type": "array" },
+          "allowed_next_stages": { "type": "array" },
+          "operator_approval_required": { "type": "boolean" },
+          "degraded_mode_allowed": { "type": "boolean" },
+          "transport_only": { "type": "boolean" },
+          "completion_requires_registered_artifacts": { "const": true },
+          "report_claim_alone_insufficient": { "const": true }
+        }
+      }
+    }
+  }
+}

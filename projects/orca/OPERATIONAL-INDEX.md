@@ -228,10 +228,11 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 **Promotion backlog P0-A:** `APPROVED — CHECKPOINTED` (commit `f17c270`).  
 **Promotion backlog P0-B:** `APPROVED — CHECKPOINTED` (commit `3151953`).  
 **P0-C:** `APPROVED — CHECKPOINTED` (commit `78b0557`, C1–C7).  
-**P0-I:** `CORE IMPLEMENTATION APPROVED — INTEGRATION PILOT AUTHORIZED` — runtime `integration/runtime/` checkpointed.  
+**P0-I:** `DIAGNOSTIC INTEGRATION EVIDENCE — NOT PRODUCTION WORKFLOW` — reclassification [ORCA-P0-I-PILOT-RECLASSIFICATION-DECISION-v1](semantic-intelligence/integration/decisions/ORCA-P0-I-PILOT-RECLASSIFICATION-DECISION-v1.md).  
 **I-01–I-07:** `APPROVED — CHECKPOINTED`.  
-**I-08:** `PILOT AUTHORIZED — PHRASE SELECTION AND EXECUTION V1`.  
-**P0-D:** `ON HOLD UNTIL P0-I INTEGRATION PASS`.  
+**I-08:** `TECHNICAL PASS — DIAGNOSTIC EVIDENCE ONLY`.  
+**P0-D:** `ON HOLD`.  
+**Search PPC Lifecycle v1:** `APPROVED — CHECKPOINTED` — [projects/mars-search-ppc-production/](../mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md). Wave 1 state enforcement authorized.  
 **Blocked:** classifier, benchmark rows, Corvonero rerun, campaign production, Commander.
 
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)
@@ -271,7 +272,20 @@ Source-agnostic landing verification between Semantic and PPC — deployed copy 
 |------------|--------|-------|
 | `triumph-manipulator-krasnodar` | launch-prep (Search export) | [projects/triumph-manipulator-krasnodar/PROJECT.md](projects/triumph-manipulator-krasnodar/PROJECT.md) |
 | `corvonero-yandex-direct` | **HISTORICAL DIAGNOSTIC — NOT SEMANTIC SOURCE** (v1–v7.1) | [projects/corvonero-yandex-direct/PROJECT.md](projects/corvonero-yandex-direct/PROJECT.md) |
-| `corvonero-direct-v2-clean-room` | **DIAGNOSTIC FAILED — FROZEN** — corpus preserved; semantic rerun blocked until Semantic Intelligence gates | [projects/corvonero-direct-v2-clean-room/PROJECT.md](projects/corvonero-direct-v2-clean-room/PROJECT.md) |
+| `corvonero-direct-v2-clean-room` | **FROZEN PENDING SEARCH PPC PRODUCTION LIFECYCLE IMPLEMENTATION AND GAP CLOSURE** | [projects/corvonero-direct-v2-clean-room/PROJECT.md](projects/corvonero-direct-v2-clean-room/PROJECT.md) |
+
+## MARS Search PPC Production Lifecycle v1
+
+**Canonical cross-system lifecycle** for Yandex Direct search campaigns. **Status:** `PROPOSED — OPERATOR REVIEW`.
+
+| Doc | Role |
+|-----|------|
+| [../mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](../mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md) | Primary lifecycle authority (SPPC-01–23) |
+| [../mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs](../mars-search-ppc-production/validators/validate-search-ppc-lifecycle.mjs) | Lifecycle readiness validator — `IMPLEMENTED — NOT VALIDATED AT SCALE` |
+| [../mars-search-ppc-production/reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../mars-search-ppc-production/reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md) | Gap audit — `COMPLETE` |
+| [../mars-search-ppc-production/roadmap/MARS-SEARCH-PPC-LIFECYCLE-REPAIR-ROADMAP-v1.md](../mars-search-ppc-production/roadmap/MARS-SEARCH-PPC-LIFECYCLE-REPAIR-ROADMAP-v1.md) | Repair roadmap — `PROPOSED` |
+
+**ORCA consumer obligation:** stages SPPC-04–09, campaign production stages SPPC-14–20 — link to lifecycle; do not duplicate full text.
 
 ## ORCA Route Family Freeze v1
 

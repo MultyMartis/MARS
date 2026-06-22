@@ -1,0 +1,708 @@
+{
+  "contract_id": "mars-search-ppc-lifecycle-contract-v1",
+  "version": "1.0.0",
+  "status": "APPROVED — IMPLEMENTATION AUTHORIZED",
+  "lifecycle_statuses": [
+    "NOT STARTED",
+    "IN PROGRESS",
+    "BLOCKED",
+    "READY FOR REVIEW",
+    "APPROVED",
+    "COMPLETED",
+    "COMPLETED WITH APPROVED DEGRADATION",
+    "SUPERSEDED",
+    "FAILED",
+    "FROZEN"
+  ],
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "stages": [
+    {
+      "stage_id": "SPPC-01",
+      "name": "Business Intake and Operator Authority",
+      "owning_system": "ATLAS",
+      "prerequisites": [],
+      "required_artifacts": [
+        {
+          "artifact_type": "business_scope_operator_authority",
+          "must_exist": true,
+          "path_field": "artifacts.business_scope_operator_authority.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-02"
+      ],
+      "operator_approval_required": true,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-02",
+      "name": "Source Registration",
+      "owning_system": "MIG",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-01",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "source_registry",
+          "must_exist": true,
+          "path_field": "artifacts.source_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-03"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-03",
+      "name": "Full Semantic Corpus Intake",
+      "owning_system": "MIG",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-02",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "full_semantic_corpus_intake",
+          "must_exist": true,
+          "path_field": "artifacts.full_semantic_corpus_intake.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-04"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-04",
+      "name": "Normalization and Canonical Registry",
+      "owning_system": "ORCA",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-03",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "canonical_phrase_registry",
+          "must_exist": true,
+          "path_field": "artifacts.canonical_phrase_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-05"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-05",
+      "name": "Commercial Intent Admission",
+      "owning_system": "ORCA Semantic Intelligence",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-04",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "commercial_admission_registry",
+          "must_exist": true,
+          "path_field": "artifacts.commercial_admission_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-06"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-06",
+      "name": "Demand Priority Segmentation",
+      "owning_system": "ORCA Semantic Intelligence",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-05",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "demand_tier_registry",
+          "must_exist": true,
+          "path_field": "artifacts.demand_tier_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-07"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-07",
+      "name": "Service and Meaning Ownership",
+      "owning_system": "ORCA Semantic Intelligence",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-06",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "service_ownership_registry",
+          "must_exist": true,
+          "path_field": "artifacts.service_ownership_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-08"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-08",
+      "name": "Semantic Clustering",
+      "owning_system": "ORCA Semantic Intelligence",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-07",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "semantic_cluster_registry",
+          "must_exist": true,
+          "path_field": "artifacts.semantic_cluster_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-09"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-09",
+      "name": "Negative Keyword Intelligence",
+      "owning_system": "ORCA Semantic Intelligence",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-08",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "negative_intelligence_pack",
+          "must_exist": true,
+          "path_field": "artifacts.negative_intelligence_pack.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-10"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-10",
+      "name": "Daytime Paid SERP Intelligence",
+      "owning_system": "MIG",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-09",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "paid_serp_business_hours_evidence",
+          "must_exist": true,
+          "path_field": "artifacts.paid_serp_business_hours_evidence.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-11"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": true,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-11",
+      "name": "Competitor Advertising Audit",
+      "owning_system": "MIG",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-10",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "competitor_advertising_audit",
+          "must_exist": true,
+          "path_field": "artifacts.competitor_advertising_audit.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-12"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-12",
+      "name": "Dated Analytical Pack",
+      "owning_system": "Cross-system",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-11",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "dated_analytical_pack",
+          "must_exist": true,
+          "path_field": "artifacts.dated_analytical_pack.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-13"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-13",
+      "name": "AI PPC Strategist",
+      "owning_system": "AI PPC Strategist",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-12",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "ppc_strategy_decision_record",
+          "must_exist": true,
+          "path_field": "artifacts.ppc_strategy_decision_record.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-14"
+      ],
+      "operator_approval_required": true,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-14",
+      "name": "Campaign Architecture",
+      "owning_system": "Campaign Production",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-13",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "campaign_architecture_registry",
+          "must_exist": true,
+          "path_field": "artifacts.campaign_architecture_registry.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-15"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-15",
+      "name": "Keyword and Negative Distribution",
+      "owning_system": "Campaign Production",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-14",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "keyword_negative_distribution",
+          "must_exist": true,
+          "path_field": "artifacts.keyword_negative_distribution.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-16"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-16",
+      "name": "Ad Production",
+      "owning_system": "Campaign Production",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-15",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "ad_production_pack",
+          "must_exist": true,
+          "path_field": "artifacts.ad_production_pack.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-17"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-17",
+      "name": "Landing and Offer Alignment",
+      "owning_system": "QA",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-16",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "landing_alignment_report",
+          "must_exist": true,
+          "path_field": "artifacts.landing_alignment_report.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-18"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-18",
+      "name": "Bidding and Budget Strategy",
+      "owning_system": "Campaign Production",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-17",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "bidding_budget_strategy",
+          "must_exist": true,
+          "path_field": "artifacts.bidding_budget_strategy.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-19"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-19",
+      "name": "Campaign QA",
+      "owning_system": "QA / Validators",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-18",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "campaign_qa_report",
+          "must_exist": true,
+          "path_field": "artifacts.campaign_qa_report.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-20"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-20",
+      "name": "Commander Export",
+      "owning_system": "Commander Export",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-19",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "commander_export_artifact",
+          "must_exist": true,
+          "path_field": "artifacts.commander_export_artifact.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-21"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": true,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-21",
+      "name": "Dry Run and Operator Approval",
+      "owning_system": "Operator",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-20",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "operator_launch_approval",
+          "must_exist": true,
+          "path_field": "artifacts.operator_launch_approval.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-22"
+      ],
+      "operator_approval_required": true,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-22",
+      "name": "Import and Launch",
+      "owning_system": "Operator / Platform",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-21",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "launch_evidence_pack",
+          "must_exist": true,
+          "path_field": "artifacts.launch_evidence_pack.path"
+        }
+      ],
+      "allowed_next_stages": [
+        "SPPC-23"
+      ],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    },
+    {
+      "stage_id": "SPPC-23",
+      "name": "Post-Launch Learning",
+      "owning_system": "Post-Launch Learning",
+      "prerequisites": [
+        {
+          "stage_id": "SPPC-22",
+          "required_status": [
+            "COMPLETED",
+            "COMPLETED WITH APPROVED DEGRADATION"
+          ]
+        }
+      ],
+      "required_artifacts": [
+        {
+          "artifact_type": "post_launch_learning_log",
+          "must_exist": true,
+          "path_field": "artifacts.post_launch_learning_log.path"
+        }
+      ],
+      "allowed_next_stages": [],
+      "operator_approval_required": false,
+      "degraded_mode_allowed": false,
+      "transport_only": false,
+      "completion_requires_registered_artifacts": true,
+      "report_claim_alone_insufficient": true
+    }
+  ],
+  "downstream_prohibitions": {
+    "before_SPPC-12": [
+      "ppc_strategy_decision_record",
+      "campaign_architecture_registry",
+      "commander_export_artifact"
+    ],
+    "before_SPPC-13": [
+      "campaign_architecture_registry",
+      "commander_export_artifact"
+    ],
+    "before_SPPC-19": [
+      "commander_export_artifact"
+    ],
+    "before_SPPC-21": [
+      "launch_evidence_pack"
+    ]
+  },
+  "blocking_behavior": {
+    "on_missing_prerequisite": "BLOCKED",
+    "on_missing_artifact": "BLOCKED",
+    "on_forbidden_downstream_artifact": "BLOCKED",
+    "fabricate_missing_evidence": false
+  },
+  "degraded_evidence_mode": {
+    "requires_operator_approval": true,
+    "applicable_stages": [
+      "SPPC-10"
+    ],
+    "silent_degradation_forbidden": true
+  }
+}
