@@ -158,6 +158,17 @@ Record observed families (e.g. light blue page wash) as evidence notes; HEX prop
 
 ### 9. Radius system
 
+Default unified radius (mandatory unless operator exception):
+
+```text
+--radius-main   — standard rounding (buttons, inputs, cards, panels)
+--radius-full   — circles and pills only
+```
+
+Prohibited by default: `--radius-small`, `--radius-medium`, `--radius-large`, `--control-radius`, `--button-radius`, `--button-letter-spacing`. Authority: [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md).
+
+All project CSS variables live in `src/scss/style.scss` — [one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md).
+
 ### 10. Border system
 
 ### 11. Shadow system

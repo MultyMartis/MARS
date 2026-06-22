@@ -41,6 +41,8 @@
 | R-028 | `projects/mars-website-factory/site-wide-style-foundation-contract-v1.md` §6 | PRODUCTION LAW | Section Owns Its Rhythm Law | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
 | R-029 | `workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md` WF-GRID-006 | IMPLEMENTATION | Single base container | **MANDATORY** | Factory | Yes | 2026-06-22 | STRENGTHEN |
 | R-030 | `projects/mars-website-factory/universal-style-scale-law-v1.md` | PRODUCTION LAW | Compact scale; no selector tokens; no alias chains; physical CSS properties | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
+| R-031 | `projects/mars-website-factory/one-project-scss-file-law-v1.md` | PRODUCTION LAW | Single `style.scss` entry; no project partials by default | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
+| R-032 | `projects/mars-website-factory/no-button-letter-spacing-law-v1.md` | PRODUCTION LAW | No `--button-letter-spacing`; natural font spacing | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 
 ---
 

@@ -18,8 +18,9 @@ Rules apply to **target project source** (external/local gulp-starter or equival
 
 ## SCSS
 
-- **Modular SCSS:** section/block partials; shared tokens/mixins in dedicated files; avoid monolithic dumps unless project policy says otherwise.
-- **Universal Style Scale Law (mandatory):** compact role-named spacing/radius primitives (`--pad-*`, `--radius-full`) — **no** selector-specific spacing tokens (`--footer-*`, `--header-*` for primitive scale); **no** one-block alias chains; **physical** `padding-top/right/bottom/left` — not logical `padding-block` / `padding-inline` by default. Authority: [universal-style-scale-law-v1.md](../../projects/mars-website-factory/universal-style-scale-law-v1.md) · [css-variable-first-law-v1.md](../../projects/mars-website-factory/css-variable-first-law-v1.md).
+- **One project SCSS file (mandatory default):** all project-owned styles in `src/scss/style.scss`; append by section — do not create project partials without operator exception ([one-project-scss-file-law-v1.md](../../projects/mars-website-factory/one-project-scss-file-law-v1.md)).
+- **Universal Style Scale Law (mandatory):** compact role-named spacing/radius primitives (`--pad-*`, `--radius-main`, `--radius-full`) — **no** `--radius-small|medium|large` by default; **no** selector-specific spacing tokens; **no** one-block alias chains; **physical** `padding-top/right/bottom/left` — not logical `padding-block` / `padding-inline` by default. Authority: [universal-style-scale-law-v1.md](../../projects/mars-website-factory/universal-style-scale-law-v1.md) · [css-variable-first-law-v1.md](../../projects/mars-website-factory/css-variable-first-law-v1.md).
+- **No button letter-spacing token:** do not define or use `--button-letter-spacing` ([no-button-letter-spacing-law-v1.md](../../projects/mars-website-factory/no-button-letter-spacing-law-v1.md)).
 - **Reusable sections/components:** match HTML partial boundaries; naming aligned with project convention (e.g. kebab-case files).
 - **Isolation:** prefer block-scoped selectors; avoid unscoped global resets that stomp third-party widgets without review.
 

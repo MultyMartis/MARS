@@ -1,8 +1,0 @@
-// FP-0002 v6 — compile-time Sass constants (paths, vendor config)
-// Runtime design tokens live in base/_root.scss as CSS custom properties.
-
-// Font asset path for @font-face (project fonts in src/fonts/)
-$font-asset-path: '../fonts' !default;
-
-// Shared Font Awesome Pro source (not copied into workspace)
-$fa-shared-root: '../../../../shared/assets/icon-libraries/Font Awesome Pro 5.15.4';

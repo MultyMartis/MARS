@@ -167,13 +167,14 @@ Projects declare a **small primitive set** in Site-Wide Style Foundation, for ex
 	--pad-gap-mini: 5px;
 	--pad-box: 20px;
 
-	--radius-full: 999px;
 	--radius-main: 30px;
-	--border-radius-form: 10px;
+	--radius-full: 999px;
 }
 ```
 
-Project-specific values may differ when evidence requires — **names stay role-based**, not selector-based. Additional scale steps require **repeatability justification** (see Token admission gate).
+**Unified Main Radius Law (mandatory):** The default Factory radius system uses only `--radius-main` (standard rounding) and `--radius-full` (circles / pills). Do **not** create `--radius-small`, `--radius-medium`, `--radius-large`, or alias chains mapping old scale names to `--radius-main`. Do **not** add component radius tokens that only duplicate `--radius-main` (e.g. `--control-radius`, `--button-radius`, `--card-radius`) unless a separate operator-approved visual family is documented.
+
+Project-specific `--radius-main` values may differ when evidence requires — **names stay role-based**, not selector-based. Multi-step radius scales require **explicit operator authorization** with evidence that multiple radius families are intentional.
 
 ---
 

@@ -125,6 +125,34 @@ Logical properties required: NO
 Physical padding/margin properties planned: YES
 ```
 
+### SCSS placement (mandatory)
+
+```markdown
+## SCSS placement
+
+Target file: src/scss/style.scss
+
+New SCSS partial required: NO
+
+Insertion section:
+
+Cascade dependencies:
+
+## Radius usage
+
+Standard radius: --radius-main
+
+Full radius: --radius-full
+
+Custom radius exception: NONE
+
+## Button typography
+
+Button letter-spacing required: NO
+```
+
+**Authority:** [one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)
+
 ### Color bindings
 
 Per element → color role (not raw hex unless exception).
@@ -247,3 +275,4 @@ Example: `FP-0002-V6-SPEC-SECTION-001-HEADER.md` — create only when Gate 3 ope
 | 2026-06-22 | v1.1 — Token lookup sections; CSS Variable First Law binding |
 | 2026-06-22 | v1.2 — Container usage + section rhythm ownership mandatory sections |
 | 2026-06-23 | v1.3 — Existing style scale usage; new token requests; property syntax; Universal Style Scale Law binding |
+| 2026-06-23 | v1.4 — SCSS placement; unified radius; button letter-spacing prohibition |

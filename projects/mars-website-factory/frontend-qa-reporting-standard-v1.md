@@ -516,7 +516,43 @@ Boundary spacing workarounds removed:
 Boundary spacing workarounds remaining:
 ```
 
-Corrections must route through **existing core scale** or **documented exact geometry** — not block-specific token aliases, alias chains, logical shorthand properties, arbitrary px tuning, local container width, or first/last-child boundary padding.
+### One SCSS file + unified radius — mandatory report fields
+
+**Authority:** [one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)
+
+Every frontend report for SCSS-bearing stages must include:
+
+```text
+Project SCSS entry:
+Project SCSS files before:
+Project SCSS files after:
+Project partials found:
+Project partials removed:
+Project partials remaining:
+Project @use/@import found:
+Project @use/@import removed:
+Project @use/@import remaining:
+Cascade order:
+Duplicate selectors found:
+Duplicate selectors removed:
+Duplicate selectors remaining:
+--radius-main status:
+--radius-full status:
+Legacy radius tokens found:
+Legacy radius tokens removed:
+Legacy radius tokens remaining:
+Component radius aliases found:
+Component radius aliases removed:
+Component radius aliases remaining:
+--button-letter-spacing found:
+--button-letter-spacing removed:
+--button-letter-spacing remaining:
+Button letter-spacing declarations found:
+Button letter-spacing declarations removed:
+Button letter-spacing declarations remaining:
+```
+
+Corrections must route through **existing core scale** or **documented exact geometry** — not block-specific token aliases, alias chains, logical shorthand properties, arbitrary px tuning, local container width, first/last-child boundary padding, **new project SCSS partials**, **legacy radius scale tokens**, or **button letter-spacing tokens**.
 
 ---
 

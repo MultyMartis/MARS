@@ -56,6 +56,12 @@
 
 **Foundry Vocabulary Canon (2026-06-19):** **ACCEPTED** — **[foundry-vocabulary-canon-charter-v1.md](foundry-vocabulary-canon-charter-v1.md)**; six vocabulary families (Site Type, Page Type, Block, Commercial Pattern, Trust Pattern, SEO Surface); authority layer between Research (RV-01–03) and Registry; design [foundry-vocabulary-canon-charter-design-v1.md](../../reports/foundry-vocabulary-canon-charter-design-v1.md); pass [foundry-vocabulary-canon-charter-pass-v1.md](../../reports/foundry-vocabulary-canon-charter-pass-v1.md); **not** runtime, **not** registry content.
 
+**Universal Style Scale Law (2026-06-23):** Compact `--pad-*` + unified `--radius-main` / `--radius-full` — **[universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)**; no selector-named spacing tokens; no alias chains; physical CSS properties; **CSS Variable First Law** corrected interpretation.
+
+**One Project SCSS File Law (2026-06-23):** All project-owned styles in `src/scss/style.scss` — **[one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md)**; no project partials by default; ONE SCSS FILE GATE on pre-SCSS.
+
+**No Button Letter Spacing Law (2026-06-23):** Prohibits `--button-letter-spacing` — **[no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)**.
+
 **Operator Visual Approval Law (2026-06-14):** TECHNICAL PASS ≠ OPERATOR APPROVAL — **[operator-visual-approval-law-v1.md](operator-visual-approval-law-v1.md)**; mandatory **OPERATOR VISUAL REVIEW** REPORT block; Screenshot Override Law.
 
 **Session routing (Tier 0–3):** [survivability-canonical-entrypoint-model-v0.md](../../governance/survivability-canonical-entrypoint-model-v0.md) — **Tier 2** live navigation for Factory; open **Core Run** first; **Extended** only when the task needs a governance triad.

@@ -49,6 +49,23 @@ Before writing or merging **block/section SCSS** for any Factory frontend projec
 
 **On violation:** `STYLE SCALE GATE — FAIL` · `TOKEN ADMISSION GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
 
+### One SCSS file gate (mandatory)
+
+- [ ] The existing `src/scss/style.scss` was inspected.
+- [ ] All project styles will be added to `style.scss`.
+- [ ] No new project SCSS partial is planned.
+- [ ] No new project `@use` / `@import` / `@forward` is planned.
+- [ ] `--radius-main` is used for standard rounding.
+- [ ] `--radius-full` is used only for circles/pills.
+- [ ] `--radius-small` / `--radius-medium` / `--radius-large` are absent.
+- [ ] `--button-letter-spacing` is absent.
+- [ ] Button `letter-spacing` is not being introduced.
+- [ ] Cascade placement is defined before implementation.
+
+**Authority:** [one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md) · [no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)
+
+**On violation:** `ONE SCSS FILE GATE — FAIL` · `RADIUS SYSTEM GATE — FAIL` · `SCSS AUTHORIZATION — DENIED`
+
 ### Token lookup gate (mandatory)
 
 - [ ] All design values completed token lookup.
@@ -98,3 +115,4 @@ PRE-SCSS VALIDATION — PASS | FAIL (list #) | BLOCKED (gate)
 | 2026-06-22 | v1.1 — CSS Variable First Law token lookup gate; SCSS GATE — FAIL on arbitrary values |
 | 2026-06-22 | v1.2 — Container gate + Section rhythm gate |
 | 2026-06-23 | v1.3 — Style scale gate; Token admission gate; physical property rule; Universal Style Scale Law |
+| 2026-06-23 | v1.4 — One SCSS file gate; unified radius; no button letter-spacing |

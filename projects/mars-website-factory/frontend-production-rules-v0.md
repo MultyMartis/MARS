@@ -61,7 +61,7 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 - Section/block **partials**; shared **tokens/mixins** in a dedicated entry — no monolithic mega-sheets unless project policy allows.
 - Block-scoped selectors; no unscoped global resets that break third-party widgets without review.
 - No **`!important`** waves to “fix” cascade without HITL sign-off.
-- No inline `<style>` on sections — styles live in SCSS partials.
+- No inline `<style>` on sections — styles live in `src/scss/style.scss`.
 - Naming aligned with handoff **`SCSS_mapping`** and project convention.
 
 ## 5. JS module discipline
@@ -90,7 +90,10 @@ If preview/CDN needs a snapshot, that is a **delivery** step with an explicit pa
 
 - Canonical **`block_id`** from [block-registry-v0.md](block-registry-v0.md) — no ad-hoc section semantics without mapping.
 - Typical layout: `src/partials/sections/`, `src/partials/components/`, `src/partials/layout/` (verify in target repo).
-- **One block → one HTML partial + matching SCSS partial** (+ optional scoped JS).
+- **One project SCSS file (mandatory default):** all project-owned styles in `src/scss/style.scss` — no new section/component/layout/page partials without operator exception ([one-project-scss-file-law-v1.md](one-project-scss-file-law-v1.md)).
+- **Unified radius:** `--radius-main` for standard rounding; `--radius-full` for circles/pills — no `--radius-small|medium|large` scale by default ([universal-style-scale-law-v1.md](universal-style-scale-law-v1.md)).
+- **No button letter-spacing token:** do not define or use `--button-letter-spacing` ([no-button-letter-spacing-law-v1.md](no-button-letter-spacing-law-v1.md)).
+- **One block → one HTML partial + styles in `style.scss`** (+ optional scoped JS).
 - Reuse shared partials across pages; do not duplicate a section to “tweak” — extend partial, modifiers, or include args.
 - Semantic HTML: logical heading order, landmarks, buttons vs links used correctly.
 

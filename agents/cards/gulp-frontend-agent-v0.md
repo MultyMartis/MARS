@@ -29,7 +29,8 @@
 ## primary_responsibilities
 
 - **Source-first architecture:** implement and edit under agreed **`src/`** (or project equivalent); rebuild to produce deployable static output.
-- **Modular SCSS:** partials per section/component; shared tokens/variables per [frontend-production-model.md](../../projects/mars-website-factory/frontend-production-model.md) and [Frontend Handoff Contract v0](../../projects/mars-website-factory/frontend-handoff-contract-v0.md).
+- **One project SCSS file (default):** all project-owned styles in `src/scss/style.scss` ([one-project-scss-file-law-v1.md](../../projects/mars-website-factory/one-project-scss-file-law-v1.md)).
+- **Modular SCSS (exception only):** section/block partials only when operator documents explicit SCSS architecture exception.
 - **Single Base Container Law:** reuse project primary `.container` — no per-block duplicate container geometry ([site-wide-style-foundation-contract-v1.md](../../projects/mars-website-factory/site-wide-style-foundation-contract-v1.md) §4, [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) WF-GRID-006).
 - **Universal Style Scale Law:** consume compact `--pad-*` / role-based radius scale — no selector-named spacing aliases, no alias chains, physical padding/margin properties ([universal-style-scale-law-v1.md](../../projects/mars-website-factory/universal-style-scale-law-v1.md)).
 - **Section Owns Its Rhythm Law:** layout region owns external vertical rhythm — not first/last internal child ([frontend-section-spacing-rule-v1.md](../../projects/mars-website-factory/frontend-section-spacing-rule-v1.md) §2.6).

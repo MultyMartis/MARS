@@ -261,17 +261,17 @@
     "control-padding-inline": { "value": "20px", "scope": "COMPONENT", "status": "APPROVED" },
     "control-padding-inline-compact": { "value": "16px", "scope": "COMPONENT", "status": "APPROVED" },
     "control-border-width": { "value": "1px", "scope": "TECHNICAL", "status": "APPROVED" },
-    "control-radius": { "value": "22px", "scope": "COMPONENT", "status": "APPROVED" },
+    "radius-main": { "value": "30px", "scope": "PRIMITIVE", "status": "APPROVED" },
+    "radius-full": { "value": "999px", "scope": "PRIMITIVE", "status": "APPROVED" },
     "button-font-size": { "value": "var(--font-size-button)", "scope": "COMPONENT", "status": "APPROVED" },
     "button-line-height": { "value": "var(--line-height-button)", "scope": "COMPONENT", "status": "APPROVED" },
     "button-font-weight": { "value": "var(--font-weight-medium)", "scope": "COMPONENT", "status": "APPROVED" },
-    "button-letter-spacing": { "value": "0.02em", "scope": "COMPONENT", "status": "APPROVED" },
-    "icon-size-small": { "value": "32px", "scope": "COMPONENT", "status": "APPROVED" },
-    "icon-size-medium": { "value": "45px", "scope": "COMPONENT", "status": "APPROVED" },
+    "icon-size-small": { "value": "16px", "scope": "COMPONENT", "status": "APPROVED" },
+    "icon-size-medium": { "value": "30px", "scope": "COMPONENT", "status": "APPROVED" },
     "border-width": { "value": "1px", "scope": "TECHNICAL", "status": "APPROVED" },
     "border-color-subtle": { "value": "var(--color-border-subtle)", "scope": "COMPONENT", "status": "APPROVED" },
     "surface-frosted-background": { "value": "var(--color-surface-frosted)", "scope": "COMPONENT", "status": "APPROVED" },
-    "surface-frosted-blur": { "value": "12px", "scope": "COMPONENT", "status": "APPROVED" },
+    "surface-frosted-blur": { "value": "10px", "scope": "COMPONENT", "status": "APPROVED" },
     "transition-base": { "value": "var(--transition-duration) var(--transition-timing)", "scope": "COMPONENT", "status": "APPROVED" }
   }
 }

@@ -102,7 +102,7 @@ Discipline:
 
 - one block per prompt (not “all blocks on the page”);
 - references `section_map` and `partials_mapping` rows from the handoff;
-- produces one HTML partial + matching SCSS partial + (optional) scoped JS module;
+- produces one HTML partial + matching styles in `src/scss/style.scss` + (optional) scoped JS module;
 - does **not** modify atoms / shared tokens unless the prompt explicitly targets them;
 - emits **STRUCTURE CHANGE** if the section requires new tokens or shared components.
 
@@ -130,11 +130,11 @@ Per [frontend-production-model.md](frontend-production-model.md) and [frontend-h
 | Rule | Detail |
 |------|--------|
 | One block, one HTML partial. | Page entry assembles partials in blueprint order. |
-| One block, one SCSS partial (or grouped per project convention). | No cross-block selectors. |
+| One block, styles in `src/scss/style.scss` (no new project partials). | No cross-block selectors. |
 | Atoms (button, badge, icon) live under `src/partials/atoms/`. | Shared imports only. |
-| Page-level aggregation under `src/pages/<slug>.html`. | Page-level SCSS aggregator under `src/scss/pages/_<slug>.scss`. |
+| Page-level aggregation under `src/pages/<slug>.html`. | Page styles appended to `src/scss/style.scss` in cascade order. |
 | No inline JavaScript in HTML partials. | Behavior via scoped JS modules anchored on data-attributes. |
-| No inline `<style>` blocks. | Styles always live in SCSS partials. |
+| No inline `<style>` blocks. | Styles always live in `src/scss/style.scss`. |
 
 ---
 
