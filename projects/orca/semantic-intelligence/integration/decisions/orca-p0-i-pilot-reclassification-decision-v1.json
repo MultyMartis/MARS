@@ -1,0 +1,17 @@
+{
+  "decision_id": "ORCA-P0-I-PILOT-RECLASSIFICATION-DECISION-v1",
+  "date": "2026-06-22",
+  "runtime_checkpoint": "1fcf3d2",
+  "pilot_classification": [
+    "TECHNICAL INTEGRATION EVIDENCE",
+    "NOT A PRODUCTION SEMANTIC WORKFLOW",
+    "NOT A FULL-CORPUS LIMIT",
+    "NOT A MANDATORY MANUAL-REVIEW PROCESS"
+  ],
+  "workbook_classification": "OPTIONAL DIAGNOSTIC / EMERGENCY REVIEW TOOL",
+  "p0_i_full_pass": false,
+  "p0_d_status": "ON HOLD",
+  "corvonero_status": "FROZEN",
+  "pilot_evidence_path": "projects/orca/semantic-intelligence/integration/pilot-runs/p0-i-real-slice-v1/",
+  "next_gate": "OPERATOR REVIEW OF MARS SEARCH PPC PRODUCTION LIFECYCLE V1"
+}

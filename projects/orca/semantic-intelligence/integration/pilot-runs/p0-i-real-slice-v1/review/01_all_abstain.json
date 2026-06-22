@@ -1,0 +1,4023 @@
+{
+  "queue_id": "01_all_abstain",
+  "count": 70,
+  "entries": [
+    {
+      "pilot_row_id": "P0I-00022",
+      "phrase": "установка маркировки в 1с розница",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_PRODUCT",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PRODUCT_WITHOUT_HIRE_SIGNAL",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.6,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PRODUCT_SERVICE"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01075",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01075",
+        "source_file": "ws-p1-007-markirovka-v-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 184
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00025",
+      "phrase": "установка локального модуля честный знак 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01149",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01149",
+        "source_file": "ws-p1-008-chestny-znak-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 62
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00041",
+      "phrase": "не проходит синхронизация в 1с розница",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_PRODUCT",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PRODUCT_WITHOUT_HIRE_SIGNAL",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.6,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PRODUCT_SERVICE"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02197",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02197",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 316
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00043",
+      "phrase": "как настроить синхронизацию 1с через яндекс диск",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02207",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02207",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 326
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00044",
+      "phrase": "как делать синхронизацию в 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02171",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02171",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 290
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00046",
+      "phrase": "1с синхронизация зуп erp",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02033",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02033",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 152
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00048",
+      "phrase": "правила синхронизации данных 1с 8.3",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02077",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02077",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 196
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00052",
+      "phrase": "1с расширение синхронизация",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02019",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02019",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 138
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00054",
+      "phrase": "синхронизация 1с бухгалтерия и зуп 3",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02163",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02163",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 282
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00055",
+      "phrase": "ошибки программиста 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00273",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00273",
+        "source_file": "ws-p1-001-programmist-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 274
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00056",
+      "phrase": "ошибка при настройке синхронизации 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02189",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02189",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 308
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00057",
+      "phrase": "не открывается печатная форма 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01807",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01807",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 468
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00058",
+      "phrase": "1с ошибка синхронизации данных",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02000",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02000",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 119
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00059",
+      "phrase": "как в 1с исправить печатную форму",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01513",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01513",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 174
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00060",
+      "phrase": "зависла синхронизация 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02061",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02061",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 180
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00061",
+      "phrase": "1с ошибка печатная форма недоступна",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01769",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01769",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 430
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00062",
+      "phrase": "почему не работает синхронизация в 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02219",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02219",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 338
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00063",
+      "phrase": "программа 1с не работает",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02268",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02268",
+        "source_file": "ws-p2-007-1c-ne-rabotaet.xlsx",
+        "source_sheet": "Data",
+        "source_row": 2
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00064",
+      "phrase": "после обновления 1с не работает синхронизация",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02221",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02221",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 340
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00065",
+      "phrase": "ошибка синхронизации 1с 8.3",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02081",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02081",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 200
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00066",
+      "phrase": "ошибки синхронизации 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01904",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01904",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 23
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00067",
+      "phrase": "1с ошибка формата потока при синхронизации",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02264",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02264",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 383
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00068",
+      "phrase": "ошибка доступа к локальному файлу 1с синхронизация",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02252",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02252",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 371
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00069",
+      "phrase": "1с ошибка синхронизация недоступна для использования",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02249",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02249",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 368
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00070",
+      "phrase": "почему не работает программа 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02269",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02269",
+        "source_file": "ws-p2-007-1c-ne-rabotaet.xlsx",
+        "source_sheet": "Data",
+        "source_row": 3
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00071",
+      "phrase": "1с синхронизация ошибка доступа к файлу",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02194",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02194",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 313
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00072",
+      "phrase": "тс пиот ошибка доступа через порт 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02398",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02398",
+        "source_file": "ws-p3-005-ts-piot.xlsx",
+        "source_sheet": "Data",
+        "source_row": 73
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00122",
+      "phrase": "обязательной маркировки лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02278",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02278",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 8
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00123",
+      "phrase": "автозапчасти маркировка честный знак",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02307",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02307",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 4
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00124",
+      "phrase": "систему маркировки лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02280",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02280",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 10
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00125",
+      "phrase": "маркировка лекарств средств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02286",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02286",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 16
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00126",
+      "phrase": "что такое sgtin в маркировке лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02297",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02297",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 27
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00127",
+      "phrase": "маркировка лекарств проверить",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02284",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02284",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 14
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00128",
+      "phrase": "маркировка лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02272",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02272",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 2
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00129",
+      "phrase": "как выглядит маркировка честный знак на лекарствах",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02298",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02298",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 28
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00130",
+      "phrase": "код маркировки лекарства",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02276",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02276",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 6
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00151",
+      "phrase": "программист 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "SHORT_HEAD_COMMERCIAL",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "программист"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.45,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "программист"
+      ],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "explicit_hire",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "SHORT_HEAD"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00001",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00001",
+        "source_file": "ws-p1-001-programmist-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 2
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00152",
+      "phrase": "доработка 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "SHORT_HEAD_COMMERCIAL",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "доработ"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.45,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "доработ"
+      ],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "SHORT_HEAD"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00772",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00772",
+        "source_file": "ws-p1-004-dorabotka-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 2
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00153",
+      "phrase": "проверка маркировки лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02288",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02288",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 18
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00154",
+      "phrase": "маркировка лекарств срок",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02290",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02290",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 20
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00155",
+      "phrase": "маркировка автозапчастей",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02305",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02305",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 2
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00156",
+      "phrase": "лекарства подлежащие маркировке",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02285",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02285",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 15
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00157",
+      "phrase": "маркировка автозапчастей честный знак 2026",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02320",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02320",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 17
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00158",
+      "phrase": "автозапчасти подлежат маркировке",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02310",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02310",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 7
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00159",
+      "phrase": "не работает синхронизация 1с 8.3",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "SUPPORT_SEEKING",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "PROBLEM_QUERY_AMBIGUITY",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.55,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "SUPPORT SEEKING — AMBIGUOUS",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "support_ambiguous_pattern",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY",
+          "PROVIDER_DIY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02182",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02182",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 301
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00160",
+      "phrase": "списание кодов маркировки в 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01007",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01007",
+        "source_file": "ws-p1-007-markirovka-v-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 116
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00163",
+      "phrase": "как сделать печатную форму в 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01356",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01356",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 17
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00164",
+      "phrase": "1с размер печатной формы",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01491",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01491",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 152
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00165",
+      "phrase": "честный знак в 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01089",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01089",
+        "source_file": "ws-p1-008-chestny-znak-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 2
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00167",
+      "phrase": "1с 8.3 добавить внешнюю печатную форму",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01812",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01812",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 473
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00168",
+      "phrase": "добавить параметр в печатную форму 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01680",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01680",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 341
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00169",
+      "phrase": "1с печатная форма управляемое",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01411",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01411",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 72
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00170",
+      "phrase": "печатная форма авансового отчета 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01508",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01508",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 169
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00180",
+      "phrase": "маркировка лекарства с какого",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02287",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02287",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 17
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00181",
+      "phrase": "автозапчасти подлежащие маркировке",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02308",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02308",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 5
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00182",
+      "phrase": "александр галицкий маркировка лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02294",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02294",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 24
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00183",
+      "phrase": "маркировка автозапчастей честный",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02306",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02306",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 3
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00184",
+      "phrase": "обязательная маркировка автозапчастей",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02311",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02311",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 8
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00185",
+      "phrase": "автозапчасти и комплектующие транспортных средств маркировка",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02319",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02319",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 16
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00186",
+      "phrase": "маркировка лекарств россия",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02293",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02293",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 23
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00187",
+      "phrase": "маркировка лекарств сбис",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02296",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02296",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 26
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00188",
+      "phrase": "что такое кизы в маркировке на лекарства",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02302",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02302",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 32
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00189",
+      "phrase": "лекарство без маркировки",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02289",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02289",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 19
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00190",
+      "phrase": "опубликован проект по маркировке автозапчастей",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02318",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02318",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 15
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00191",
+      "phrase": "что означает маркировка лекарств в честном знаке",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02303",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02303",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 33
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00192",
+      "phrase": "маркировка упаковки лекарств",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02279",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02279",
+        "source_file": "ws-p3-003-lekarstva.xlsx",
+        "source_sheet": "Data",
+        "source_row": 9
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00193",
+      "phrase": "когда начнется маркировка автозапчастей",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "UNKNOWN",
+        "legacy_eligibility": "INELIGIBLE",
+        "legacy_reason": "no_rule_match",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02323",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02323",
+        "source_file": "ws-p3-004-avtozapchasti.xlsx",
+        "source_sheet": "Data",
+        "source_row": 20
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00195",
+      "phrase": "1с 8.3 печатная форма разрыв страницы",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01695",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01695",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 356
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00196",
+      "phrase": "где в 1с зуп синхронизация с бухгалтерией",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-02153",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-02153",
+        "source_file": "ws-p2-004-sinhronizaciya.xlsx",
+        "source_sheet": "Data",
+        "source_row": 272
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00200",
+      "phrase": "таблица в печатной форме 1с",
+      "automated_output": {
+        "admission_decision": "ABSTAIN",
+        "blocked": false,
+        "primary_intent": "COMMERCIAL_TOPIC",
+        "commercial_eligibility": {
+          "decision": "ABSTAIN",
+          "reason_code": "TOPIC_ONLY_INSUFFICIENT_EVIDENCE",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [],
+          "opposing_evidence": [],
+          "confidence": 0.4,
+          "threshold_profile": null,
+          "reviewer_required": true
+        },
+        "risk": {
+          "overall_risk": "MEDIUM",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [],
+      "opposing_evidence": [],
+      "risk": "MEDIUM",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ABSTAIN",
+        "disagreement_type": "LEGACY_ELIGIBLE_NEW_ABSTAIN",
+        "violated_invariants": [],
+        "review_route": [
+          "ABSTAIN_MANDATORY",
+          "PROBLEM_QUERY"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01496",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01496",
+        "source_file": "ws-p2-002-pechatnaya-forma.xlsx",
+        "source_sheet": "Data",
+        "source_row": 157
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    }
+  ]
+}

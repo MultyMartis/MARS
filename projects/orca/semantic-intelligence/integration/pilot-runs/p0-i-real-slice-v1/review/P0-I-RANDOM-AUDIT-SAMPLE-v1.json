@@ -1,0 +1,44 @@
+{
+  "audit_id": "p0-i-random-audit-sample-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "workbook_id": "ORCA-P0-I-OPERATOR-REVIEW-WORKBOOK-v1",
+  "seed": "p0-i-operator-review-workbook-audit-v1-20260622",
+  "algorithm": "SHA-256 sort key: hash(seed:decision_class:query_id); ascending sort; take first N up to 20; non-mandatory population only",
+  "max_per_class": 20,
+  "selection_timestamp": "2026-06-22T13:40:36.746Z",
+  "accept": {
+    "source_population_count": 77,
+    "selected_count": 20,
+    "selected_query_ids": [
+      "CR2-PHR-00367",
+      "CR2-PHR-00137",
+      "CR2-PHR-00803",
+      "CR2-PHR-00854",
+      "CR2-PHR-00828",
+      "CR2-PHR-00822",
+      "CR2-PHR-00550",
+      "CR2-PHR-00778",
+      "CR2-PHR-00790",
+      "CR2-PHR-00947",
+      "CR2-PHR-01935",
+      "CR2-PHR-00756",
+      "CR2-PHR-00127",
+      "CR2-PHR-00346",
+      "CR2-PHR-00730",
+      "CR2-PHR-00623",
+      "CR2-PHR-00017",
+      "CR2-PHR-00319",
+      "CR2-PHR-00269",
+      "CR2-PHR-00245"
+    ]
+  },
+  "reject": {
+    "source_population_count": 2,
+    "selected_count": 2,
+    "selected_query_ids": [
+      "CR2-PHR-02245",
+      "CR2-PHR-02246"
+    ]
+  },
+  "mandatory_excluded_count": 121
+}

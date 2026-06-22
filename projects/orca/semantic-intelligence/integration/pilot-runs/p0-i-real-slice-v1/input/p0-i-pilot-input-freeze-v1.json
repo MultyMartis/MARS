@@ -1,0 +1,15 @@
+{
+  "freeze_id": "p0-i-pilot-input-freeze-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "frozen_at": "2026-06-22T13:18:14.889Z",
+  "git_head": "1fcf3d2",
+  "runtime_commit": "1fcf3d2",
+  "contract_lock_id": "orca-semantic-contract-runtime-lock-v1",
+  "contract_lock_checksum": "2D399C19C986E93CFD5CB497C7D7FAA7D9CE362847F5B62A24025762DFBECDD5",
+  "selection_manifest_checksum": "08A9ECA895C90DC83CC3D8991B18B1AD60C104AEC9E32668CB52A1F97055FBE5",
+  "selection_script": "selection/select-pilot-phrases-v1.mjs",
+  "selection_script_version": "v1",
+  "phrase_count": 200,
+  "checksum_sha256": "D07DD45274258B662F0F459EF6C1870797EA8D0633EB8D593C3D98856F100CF9",
+  "immutability_note": "Any phrase change after execution requires P0-I PILOT INPUT VERSION BUMP"
+}

@@ -1,0 +1,33 @@
+{
+  "parity_id": "p0-i-operator-review-source-parity-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "runtime_commit": "1fcf3d2",
+  "generated_at": "2026-06-22T13:40:36.733Z",
+  "checks": {
+    "frozen_input_count": 200,
+    "selection_manifest_count": 200,
+    "semantic_record_count": 200,
+    "unique_query_id_count": 200,
+    "duplicate_query_ids": 0,
+    "accept_count": 77,
+    "reject_count": 53,
+    "abstain_count": 70,
+    "legacy_commercial_new_reject": 39,
+    "legacy_commercial_new_abstain": 69,
+    "legacy_same_decision": 92,
+    "queue_reference_count": 127,
+    "operator_decisions_populated": 0,
+    "runtime_commit_expected": "1fcf3d2",
+    "metrics_runtime_commit": "1fcf3d2"
+  },
+  "expected": {
+    "total_unique_records": 200,
+    "accept": 77,
+    "reject": 53,
+    "abstain": 70,
+    "legacy_commercial_new_reject": 39,
+    "legacy_commercial_new_abstain": 69,
+    "legacy_same": 92
+  },
+  "passed": true
+}

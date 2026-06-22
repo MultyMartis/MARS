@@ -1,0 +1,17 @@
+{
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "mandatory_review_rows": 294,
+  "operator_decisions_recorded": 0,
+  "status": "HUMAN REVIEW PENDING",
+  "queues": {
+    "11_random_accept_audit": 7,
+    "01_all_abstain": 70,
+    "07_product_service_ambiguity": 2,
+    "10_legacy_new_disagreement": 108,
+    "06_problem_query_ambiguity": 66,
+    "09_provider_diy_ambiguity": 19,
+    "08_career_provider_ambiguity": 14,
+    "12_random_reject_audit": 6,
+    "05_short_head_cases": 2
+  }
+}

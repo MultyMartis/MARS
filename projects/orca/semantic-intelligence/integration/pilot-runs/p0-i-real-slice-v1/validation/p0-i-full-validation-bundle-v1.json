@@ -1,0 +1,22 @@
+{
+  "validation_id": "p0-i-full-validation-bundle-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "generated_at": "2026-06-22",
+  "artifacts": [
+    { "gate": "runtime_checkpoint", "status": "PASS", "evidence": "commit 1fcf3d2 pushed" },
+    { "gate": "source_selection", "status": "PASS", "evidence": "selection/p0-i-pilot-selection-manifest-v1.json" },
+    { "gate": "input_freeze", "status": "PASS", "evidence": "input/p0-i-pilot-input-freeze-v1.json" },
+    { "gate": "scope_lock", "status": "PASS", "evidence": "config/p0-i-pilot-scope-lock-v1.json" },
+    { "gate": "pre_run_validation", "status": "PASS", "evidence": "validation/p0-i-pre-run-validation-v1.json" },
+    { "gate": "execution_completeness", "status": "PASS", "evidence": "200/200 processed" },
+    { "gate": "contract_consumption", "status": "PASS", "evidence": "contract_consumption_success: true" },
+    { "gate": "schema_validity", "status": "PASS", "evidence": "schema_valid_count: 200" },
+    { "gate": "invariant_execution", "status": "PASS", "evidence": "all records validated" },
+    { "gate": "review_queue_generation", "status": "PASS", "evidence": "review/p0-i-human-review-queues-v1.json" },
+    { "gate": "downstream_isolation", "status": "PASS", "evidence": "downstream_field_leakage_count: 0" },
+    { "gate": "corvonero_safety", "status": "PASS", "evidence": "validation/p0-i-corvonero-safety-check-v1.json" },
+    { "gate": "no_benchmark_gold_claims", "status": "PASS", "evidence": "no gold labels created" }
+  ],
+  "technical_pilot_status": "P0-I TECHNICAL PILOT PASS — HUMAN REVIEW PENDING",
+  "full_p0_i_pass": false
+}

@@ -1,0 +1,62 @@
+{
+  "validation_id": "p0-i-pre-run-validation-v1",
+  "generated_at": "2026-06-22T13:18:22.363Z",
+  "blocked": false,
+  "checks": [
+    {
+      "id": "input_count_range",
+      "pass": true,
+      "detail": {
+        "count": 200
+      }
+    },
+    {
+      "id": "unique_phrases",
+      "pass": true,
+      "detail": {
+        "unique": 200
+      }
+    },
+    {
+      "id": "provenance_complete",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "no_forbidden_truth",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "freeze_checksum_match",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "scope_lock_present",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "runtime_head_pinned",
+      "pass": true,
+      "detail": {
+        "head": "1fcf3d2",
+        "pinned": "1fcf3d2"
+      }
+    },
+    {
+      "id": "fixture_suite_21_21",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "output_dir_clean",
+      "pass": true,
+      "detail": {
+        "files": []
+      }
+    }
+  ],
+  "status": "PRE-RUN VALIDATION PASS"
+}

@@ -1,0 +1,40 @@
+{
+  "inventory_id": "corvonero-pilot-source-inventory-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "sources": [
+    {
+      "layer": "raw_mig_wordstat",
+      "path": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/evidence/wordstat/wordstat-pass-a-normalized.json",
+      "phrase_field": "phrase",
+      "forbidden_fields": ["legacy_intent", "legacy_eligibility"]
+    },
+    {
+      "layer": "source_ledger",
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/mig-source/mig-wordstat-source-ledger-v1.json",
+      "phrase_field": "original_phrase",
+      "id_field": "ledger_row_id",
+      "frequency_field": "original_frequency",
+      "provenance_fields": ["provenance", "source_file", "source_sheet", "source_row", "mig_source_id"]
+    },
+    {
+      "layer": "normalized_corpus",
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-normalized-corpus-v1.json",
+      "phrase_field": "normalized_phrase",
+      "stats": { "rows": 2399 }
+    },
+    {
+      "layer": "canonical_registry",
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+      "phrase_field": "phrase",
+      "id_field": "phrase_id",
+      "frequency_field": "combined_frequency",
+      "stats": { "unique_normalized": 2368 },
+      "primary_selection_source": true
+    }
+  ],
+  "forbidden_authority_paths": [
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-commercial-eligibility-v1.json",
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-intent-screening-v1.json",
+    "projects/orca/projects/corvonero-yandex-direct/production"
+  ]
+}

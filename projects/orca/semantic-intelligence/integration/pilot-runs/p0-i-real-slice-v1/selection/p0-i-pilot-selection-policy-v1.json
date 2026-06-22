@@ -1,0 +1,33 @@
+{
+  "policy_id": "p0-i-pilot-selection-policy-v1",
+  "target_count": { "min": 180, "max": 220, "preferred": 200 },
+  "selection_seed": "p0-i-real-slice-v1-20260622",
+  "strata_quotas": {
+    "commercial_explicit_service_request": 18,
+    "commercial_implementation_configuration": 18,
+    "commercial_modification_integration": 18,
+    "commercial_support_recovery": 18,
+    "commercial_quote_price_contact": 18,
+    "protected_career": 10,
+    "protected_education": 10,
+    "protected_diy_howto": 10,
+    "protected_regulatory": 10,
+    "protected_navigational_login": 10,
+    "protected_documentation_download_free": 10,
+    "ambiguous_short_head": 8,
+    "ambiguous_problem_query": 8,
+    "ambiguous_product_vs_service": 8,
+    "ambiguous_support_vs_info": 4,
+    "ambiguous_career_vs_provider": 4,
+    "ambiguous_provider_vs_diy": 4,
+    "ambiguous_malformed_noise": 4,
+    "ambiguous_unknown": 10
+  },
+  "forbidden_prefill_fields": [
+    "primary_intent_truth",
+    "eligibility_truth",
+    "expected_decision",
+    "gold_label",
+    "legacy_decision_target"
+  ]
+}

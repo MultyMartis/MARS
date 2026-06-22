@@ -1,0 +1,42 @@
+{
+  "scope_lock_id": "p0-i-pilot-scope-lock-v1",
+  "scope_id": "corvonero-direct-v2-clean-room-pilot-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "risk_mode": "CONSERVATIVE",
+  "generated_at": "2026-06-22",
+  "authorities": [
+    {
+      "artifact_id": "corvonero-business-intake",
+      "canonical_path": "projects/orca/projects/corvonero-direct-v2-clean-room/intake/corvonero-direct-v2-business-intake-v1.json",
+      "markdown_path": "projects/orca/projects/corvonero-direct-v2-clean-room/intake/CORVONERO-DIRECT-V2-BUSINESS-INTAKE-v1.md",
+      "checksum_sha256": "C870556BACD1758F990B252AB511BB5DA10EA453BF3BFDB5BE5900B52E5BB38C"
+    },
+    {
+      "artifact_id": "corvonero-service-scope",
+      "canonical_path": "projects/orca/projects/corvonero-direct-v2-clean-room/intake/corvonero-direct-v2-service-scope-v1.json",
+      "markdown_path": "projects/orca/projects/corvonero-direct-v2-clean-room/intake/CORVONERO-DIRECT-V2-SERVICE-SCOPE-v1.md",
+      "checksum_sha256": "4ED0E54B0ABA90FE74833E0A66BB21B57F4EF0BD22C623CA0623CAD0C8A5BE77",
+      "service_count": 34
+    }
+  ],
+  "allowed_service_ids_source": "corvonero-direct-v2-service-scope-v1.json",
+  "geography": {
+    "first_launch": ["Новосибирск", "Новосибирская область"],
+    "remote_work": "допустимо",
+    "on_site": "только Новосибирск"
+  },
+  "audience": ["юридические лица", "индивидуальные предприниматели"],
+  "service_product_boundary": "Services only — no product ownership at admission stage",
+  "prohibited_claims": [
+    "official 1C partner status",
+    "certification without evidence",
+    "guarantees",
+    "SLA",
+    "24/7",
+    "free diagnostics",
+    "exact completion times",
+    "fabricated cases or clients"
+  ],
+  "runtime_operator_scope_pin": "projects/orca/semantic-intelligence/integration/runtime/config/operator-scope-fixture-v1.json",
+  "note": "Canonical Corvonero scope referenced for provenance; runtime lock uses integration fixture scope for contract consumption in P0-I pilot."
+}

@@ -1,0 +1,44 @@
+{
+  "validation_id": "p0-i-corvonero-safety-check-v1",
+  "generated_at": "2026-06-22T13:18:48.416Z",
+  "checks": [
+    {
+      "check": "corvonero_file_exists",
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+      "pass": true
+    },
+    {
+      "check": "corvonero_file_exists",
+      "path": "projects/orca/projects/corvonero-direct-v2-clean-room/mig-source/mig-wordstat-source-ledger-v1.json",
+      "pass": true
+    },
+    {
+      "check": "no_corvonero_overwrite",
+      "pass": true,
+      "note": "pilot reads canonical corpus read-only"
+    },
+    {
+      "check": "pilot_outputs_isolated",
+      "pass": true,
+      "path": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\integration\\pilot-runs\\p0-i-real-slice-v1\\output"
+    },
+    {
+      "check": "no_semantic_core_produced",
+      "pass": true
+    },
+    {
+      "check": "no_campaign_artifacts",
+      "pass": true
+    },
+    {
+      "check": "no_commander_file",
+      "pass": true
+    },
+    {
+      "check": "no_production_import",
+      "pass": true
+    }
+  ],
+  "status": "CORVONERO SAFETY PASS — PILOT ISOLATED",
+  "pass": true
+}

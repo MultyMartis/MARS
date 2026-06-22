@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-p0-i-operator-review-template-v1.schema.json",
+  "title": "ORCA P0-I Operator Review Template v1",
+  "type": "object",
+  "required": [
+    "template_id",
+    "pilot_run_id",
+    "records"
+  ],
+  "properties": {
+    "template_id": {
+      "const": "orca-p0-i-operator-review-template-v1"
+    },
+    "pilot_run_id": {
+      "const": "p0-i-real-slice-v1"
+    },
+    "workbook_id": {
+      "const": "ORCA-P0-I-OPERATOR-REVIEW-WORKBOOK-v1"
+    },
+    "runtime_commit": {
+      "const": "1fcf3d2"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "note": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 200,
+      "maxItems": 200,
+      "items": {
+        "type": "object",
+        "required": [
+          "pilot_row_id",
+          "query_id"
+        ],
+        "properties": {
+          "pilot_row_id": {
+            "type": "string",
+            "pattern": "^P0I-\\d{5}$"
+          },
+          "query_id": {
+            "type": "string",
+            "pattern": "^CR2-PHR-\\d+$"
+          },
+          "operator_decision": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "APPROVE_ACCEPT",
+              "APPROVE_REJECT",
+              "APPROVE_ABSTAIN",
+              "CHANGE_TO_ACCEPT",
+              "CHANGE_TO_REJECT",
+              "CHANGE_TO_ABSTAIN",
+              "NEEDS_DOMAIN_EXPERT",
+              "INVALID_RECORD",
+              null
+            ]
+          },
+          "corrected_eligibility": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "ACCEPT",
+              "REJECT",
+              "ABSTAIN",
+              null
+            ]
+          },
+          "corrected_primary_intent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "primary_error_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "NONE",
+              "OVER_ADMISSION",
+              "OVER_REJECTION",
+              "EXCESS_ABSTENTION",
+              "WRONG_PRIMARY_INTENT",
+              "WRONG_SECONDARY_INTENT",
+              "WRONG_PROTECTED_CLASS",
+              "WRONG_PROVIDER_DIY_SPLIT",
+              "WRONG_PRODUCT_SERVICE_SPLIT",
+              "WRONG_SUPPORT_INFORMATION_SPLIT",
+              "WRONG_CAREER_PROVIDER_SPLIT",
+              "WRONG_PROBLEM_QUERY_HANDLING",
+              "INSUFFICIENT_EVIDENCE",
+              "RATIONALE_GENERIC",
+              "RATIONALE_INCORRECT",
+              "DOMAIN_KNOWLEDGE_ERROR",
+              "SOURCE_OR_PROVENANCE_ERROR",
+              "SCHEMA_OR_RECORD_ERROR",
+              "OTHER",
+              null
+            ]
+          },
+          "secondary_error_types": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "operator_comment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "needs_domain_expert": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "reviewed_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reviewed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

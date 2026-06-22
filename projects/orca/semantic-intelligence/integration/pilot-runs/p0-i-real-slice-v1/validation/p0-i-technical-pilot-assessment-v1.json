@@ -1,0 +1,38 @@
+{
+  "status": "P0-I TECHNICAL PILOT PASS — HUMAN REVIEW PENDING",
+  "criteria": {
+    "frozen_input_processed": true,
+    "contracts_consumed": true,
+    "schema_validity": true,
+    "validators_executed": true,
+    "three_outcomes": true,
+    "review_queues_created": true,
+    "no_downstream_outputs": true,
+    "no_silent_failures": true
+  },
+  "metrics": {
+    "metrics_id": "p0-i-integration-metrics-v1",
+    "pilot_run_id": "p0-i-real-slice-v1",
+    "generated_at": "2026-06-22T13:18:23.452Z",
+    "runtime_commit": "1fcf3d2",
+    "input_count": 200,
+    "processed_count": 200,
+    "successful_count": 200,
+    "blocked_count": 0,
+    "failed_count": 0,
+    "unprocessed_count": 0,
+    "schema_valid_count": 200,
+    "accept_count": 77,
+    "reject_count": 53,
+    "abstain_count": 70,
+    "review_routed_count": 96,
+    "contract_consumption_success": true,
+    "invariant_execution_success": true,
+    "decision_trace_completeness": 200,
+    "provenance_completeness": 200,
+    "legacy_disagreement_count": 108,
+    "downstream_field_leakage_count": 0,
+    "runtime_errors": 0,
+    "note": "INTEGRATION METRICS ONLY — NOT BENCHMARK METRICS"
+  }
+}

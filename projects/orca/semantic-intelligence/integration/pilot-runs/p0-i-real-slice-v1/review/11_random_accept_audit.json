@@ -1,0 +1,426 @@
+{
+  "queue_id": "11_random_accept_audit",
+  "count": 7,
+  "entries": [
+    {
+      "pilot_row_id": "P0I-00014",
+      "phrase": "опыт работы удаленным программистом 1с",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "программист"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "программист"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "explicit_hire",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00257",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00257",
+        "source_file": "ws-p1-001-programmist-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 258
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00020",
+      "phrase": "настройка обмена суз 1с честный знак",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "настройк"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "настройк"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-01184",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-01184",
+        "source_file": "ws-p1-008-chestny-znak-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 97
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00038",
+      "phrase": "доработки 1с зуп",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "доработ"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "доработ"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00794",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00794",
+        "source_file": "ws-p1-004-dorabotka-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 24
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00087",
+      "phrase": "сопровождение 1с бухгалтерия цена",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "сопровожд"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "сопровожд"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00737",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00737",
+        "source_file": "ws-p1-003-soprovozhdenie-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 144
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00090",
+      "phrase": "доработка 1с стоимость",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "доработ"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "доработ"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "1c_commercial_context",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00800",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00800",
+        "source_file": "ws-p1-004-dorabotka-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 30
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00112",
+      "phrase": "1с программист самостоятельно",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "программист"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "программист"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "explicit_hire",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00191",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00191",
+        "source_file": "ws-p1-001-programmist-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 192
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    },
+    {
+      "pilot_row_id": "P0I-00198",
+      "phrase": "программист 1с оренбург",
+      "automated_output": {
+        "admission_decision": "ACCEPT",
+        "blocked": false,
+        "primary_intent": "HIRE_SERVICE",
+        "commercial_eligibility": {
+          "decision": "ACCEPT",
+          "reason_code": "EXPLICIT_PROVIDER_REQUEST",
+          "phrase_explanation": "NOT_ASSESSED",
+          "supporting_evidence": [
+            "программист"
+          ],
+          "opposing_evidence": [],
+          "confidence": 0.82,
+          "threshold_profile": null,
+          "reviewer_required": false
+        },
+        "risk": {
+          "overall_risk": "LOW",
+          "dimensions": {},
+          "blocking_conditions": []
+        }
+      },
+      "supporting_evidence": [
+        "программист"
+      ],
+      "opposing_evidence": [],
+      "risk": "LOW",
+      "invariant_findings": [],
+      "legacy_comparison": {
+        "legacy_intent": "COMMERCIAL SERVICE",
+        "legacy_eligibility": "ELIGIBLE COMMERCIAL",
+        "legacy_reason": "explicit_hire",
+        "new_candidate_decision": "ACCEPT",
+        "disagreement_type": "NONE",
+        "violated_invariants": [],
+        "review_route": [
+          "RANDOM_ACCEPT_AUDIT"
+        ],
+        "authority": "DIAGNOSTIC ONLY — NOT SEMANTIC AUTHORITY"
+      },
+      "review_questions": [
+        "Подтвердить или отклонить автоматическое решение?",
+        "Достаточно ли evidence для tri-state?"
+      ],
+      "source_provenance": {
+        "status": "COMPLETE",
+        "source_type": "corvonero-canonical-corpus",
+        "ledger_row_id": "CR2-LED-00367",
+        "mig_provenance": "mig-wordstat-source-ledger-v1.json#CR2-LED-00367",
+        "source_file": "ws-p1-001-programmist-1c.xlsx",
+        "source_sheet": "Data",
+        "source_row": 368
+      },
+      "operator_decision": null,
+      "operator_notes": null,
+      "adjudicator": null
+    }
+  ]
+}

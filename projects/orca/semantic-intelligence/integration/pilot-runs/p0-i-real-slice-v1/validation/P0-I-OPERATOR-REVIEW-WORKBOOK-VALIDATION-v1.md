@@ -1,0 +1,30 @@
+# P0-I Operator Review Workbook Validation v1
+
+**Passed:** true
+
+## Issues
+
+- none
+
+## Checks
+
+```json
+{
+  "master_row_count": 200,
+  "unique_query_ids": 200,
+  "accept_count": 77,
+  "reject_count": 53,
+  "abstain_count": 70,
+  "mandatory_review_unique": 121,
+  "mandatory_review_count": 121,
+  "random_accept_selected": 20,
+  "random_reject_selected": 2,
+  "operator_fields_blank": true,
+  "workbook_exists": true,
+  "dropdown_enums": {
+    "operator_decisions": 8,
+    "error_types": 19,
+    "primary_intents": 26
+  }
+}
+```

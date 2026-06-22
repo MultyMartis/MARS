@@ -1,0 +1,34 @@
+{
+  "pilot_config_id": "p0-i-pilot-run-config-v1",
+  "pilot_run_id": "p0-i-real-slice-v1",
+  "status": "AUTHORIZED",
+  "runtime_commit": "1fcf3d2",
+  "contract_lock": "projects/orca/semantic-intelligence/integration/runtime/config/orca-semantic-contract-runtime-lock-v1.json",
+  "scope_lock": "config/p0-i-pilot-scope-lock-v1.json",
+  "schema_version": "v1",
+  "taxonomy_version": "v1",
+  "guideline_version": "v1",
+  "invariant_version": "v1",
+  "bundle_version": "p0-i-bundle-v1",
+  "risk_mode": "CONSERVATIVE",
+  "fail_closed": true,
+  "random_audit": {
+    "seed": "p0-i-audit-20260622",
+    "max_random_accept_samples": 20,
+    "max_random_reject_samples": 20,
+    "accept_audit_rate": 0.1,
+    "reject_audit_rate": 0.1
+  },
+  "input": {
+    "manifest": "selection/p0-i-pilot-selection-manifest-v1.json",
+    "freeze": "input/p0-i-pilot-input-freeze-v1.json",
+    "jsonl": "input/p0-i-pilot-input-v1.jsonl"
+  },
+  "output_paths": {
+    "records": "output/p0-i-pilot-semantic-records-v1.json",
+    "review_queues": "review/p0-i-human-review-queues-v1.json",
+    "diagnostics": "diagnostics/p0-i-legacy-diagnostic-comparison-v1.json",
+    "metrics": "reports/p0-i-integration-metrics-v1.json"
+  },
+  "prohibited_outputs": ["semantic_core", "clusters", "negatives", "campaigns", "commander", "production_export"]
+}
