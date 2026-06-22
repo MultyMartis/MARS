@@ -1,7 +1,8 @@
 // FP-0002 V6 — project @font-face declarations
-// Font audit 2026-06-22: no authorized .woff2/.woff/.ttf/.otf in INCOMING or workspace.
-// Binding: PARTIAL — system stack via :root tokens until project font files are supplied.
+// Production font: Inter — restored from V1 (fp-0002-shpigovsky-frontend).
+// Connection: Google Fonts <link> in index.html (Variant B — no local webfont files in V1).
+// V1 URL: family=Inter:wght@300;400;500;600;700&display=swap
 
 @use '../utils/variables' as *;
 
-// Intentionally empty — no @font-face without verified project font files.
+// No @font-face — external Google Fonts link is the V1 production path.

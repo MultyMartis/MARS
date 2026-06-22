@@ -81,16 +81,18 @@ $hero-cta-radius: 22px;
 
 .hero__tagline {
   margin: 0;
+  font-family: var(--font-family-base);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--font-weight-base);
   line-height: 1.25;
   color: var(--color-text-inverse);
 }
 
 .hero__title {
   margin: 0;
+  font-family: var(--font-family-heading);
   font-size: 40px;
-  font-weight: 400;
+  font-weight: var(--font-weight-heading);
   line-height: 1.15;
   color: var(--color-text-inverse);
 }
@@ -105,8 +107,9 @@ $hero-cta-radius: 22px;
   border-radius: $hero-cta-radius;
   background-color: var(--color-accent);
   color: var(--color-text-inverse);
+  font-family: var(--font-family-base);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 1;
   letter-spacing: 0.02em;
   text-transform: uppercase;

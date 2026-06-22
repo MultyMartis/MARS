@@ -152,3 +152,17 @@ No Header/Hero responsive layout. No new breakpoint media queries for compositio
 ## Final verdict
 
 **PARTIAL** — global foundation and Font Awesome Pro complete; **project font binding pending** authorized font files. Header/Hero geometry preserved.
+
+---
+
+## Supplement — V1 typography recovery (2026-06-22)
+
+**Checkpoint before:** `c7453aa`  
+**Review:** `FP-0002-V6-V1-TYPOGRAPHY-AND-FA-SEARCH-REVIEW.md`
+
+- **Font:** Inter via V1 Google Fonts URL (`wght@300;400;500;600;700`, `display=swap`)
+- **Root tokens:** `--font-family-base` → Inter; weight tokens 400/500/600
+- **Header search:** `fas fa-search` as eighth nav `<li>`; `search.svg` removed
+- **Computed Inter:** confirmed on body, Header, Hero (`_typography-computed-styles.json`)
+- **Geometry:** header 1220×186, hero 1360×759.891 — unchanged
+- **Verdict:** **READY FOR OPERATOR REVIEW** (typography connected)

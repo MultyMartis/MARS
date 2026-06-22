@@ -164,3 +164,11 @@ SOURCE=shared/assets/icon-libraries/Font Awesome Pro 5.15.4/
 DECISION=Connected as controlled shared build dependency
 REASON=Full Pro icon availability without committing or duplicating the licensed vendor package
 
+
+[2026-06-22T18:45:07] SOURCE=workspaces/fp-0002-shpigovsky-frontend/src/pages/desktop-shell.html; src/scss/utils/_tokens.scss; src/scss/base/_base.scss; src/scss/sections/_site-header.scss; src/scss/sections/_hero.scss
+DECISION=V1 accessed only for production typography and font recovery.
+REASON=Operator-authorized one-time exception to restore the previously selected project font, type scale and typography colors.
+FONT=Inter Google Fonts wght@300;400;500;600;700 display=swap
+FA_SEARCH=fas fa-search NAV_ITEM_LAST index=8
+OLD_SVG=deleted unused search.svg
+TYPOGRAPHY_STATUS=READY_FOR_OPERATOR_REVIEW

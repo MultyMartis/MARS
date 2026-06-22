@@ -1,8 +1,8 @@
 // FP-0002 V6 — site-wide CSS custom properties (Шпиговский)
 
 :root {
-	/* Typography — families */
-	--font-family-base: system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
+	/* Typography — families (V1 production: Inter, all roles) */
+	--font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
 	--font-family-heading: var(--font-family-base);
 	--font-family-display: var(--font-family-base);
 
@@ -10,6 +10,8 @@
 	--line-height-base: 1.25;
 	--font-weight-base: 400;
 	--font-weight-heading: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
 
 	--font-size-small: 14px;
 	--line-height-small: 1.2;

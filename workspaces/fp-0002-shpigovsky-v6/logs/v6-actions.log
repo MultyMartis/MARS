@@ -268,3 +268,8 @@ VISUAL=reviews/foundation/visual/FP-0002-V6-GLOBAL-FOUNDATION-SECTION-001.png
 HEADER_HERO=geometry preserved
 JS=unchanged
 
+
+[2026-06-22T18:45:07] TASK=FP-0002 V6 V1 TYPOGRAPHY AND FA SEARCH
+ACTION=Restored Inter via V1 Google Fonts URL; updated root tokens; Header search -> fas fa-search nav item 8; removed search.svg; foundation/spec/review updated; build + visual QA PASS
+FILES=src/pages/index.html, src/scss/base/_fonts.scss, src/scss/base/_root.scss, src/scss/layout/_header.scss, src/scss/sections/_hero.scss, src/partials/layout/header.html, deleted src/img/icons/search.svg, foundation/*, specifications/section-001/*, reviews/foundation/*
+BUILD=SUCCESS

@@ -40,8 +40,8 @@ SECTION-001 is **one** major section. Header and Hero are **internal groups**, n
 
 | GROUP-ID | Name | Contents | Position | Bounds (JPG px) |
 |----------|------|----------|----------|-----------------|
-| GROUP-07 | Navigation | Seven text links: Лечение и профилактика; Генотипирование; Специалисты; О центре; Отзывы; Статьи; Контакты | left → center | y 132–174, x ~130–1150 |
-| GROUP-08 | Search | Magnifying-glass icon control | far right | y ~135–165, x ~1320–1360 |
+| GROUP-07 | Navigation | Eight list items: seven text links (Лечение и профилактика … Контакты) + search button (`fas fa-search`) as final item | left → far right | y 132–174, x ~130–1360 |
+| GROUP-08 | Search | Magnifying-glass icon control — **eighth** `<li>` inside GROUP-07 nav list (not a sibling block) | far right | y ~135–165, x ~1320–1360 |
 
 ### Header relationships
 

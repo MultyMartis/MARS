@@ -1,8 +1,8 @@
 # FP-0002 V6 Frontend Global Foundation
 
 **Project:** FP-0002 Shpigovsky V6  
-**Status:** READY FOR OPERATOR REVIEW (font binding PARTIAL)  
-**Checkpoint before:** `684e1690a9883ee4f716937a126cbde3ffd91182`
+**Status:** READY FOR OPERATOR REVIEW (production typography restored)  
+**Checkpoint before:** `c7453aa7f900cdc8e2322c26659e649483230cb6`
 
 ---
 
@@ -42,18 +42,27 @@ See `base/_root.scss` and `foundation/FP-0002-V6-FRONTEND-GLOBAL-FOUNDATION.json
 
 | Role | Value | Status |
 |------|-------|--------|
-| base / heading / display | system UI stack | PARTIAL — no project font files in INCOMING |
+| base / heading / display | **Inter** (Google Fonts, V1 production path) | CONNECTED |
+
+**V1 source:** `workspaces/fp-0002-shpigovsky-frontend` — `desktop-shell.html` link tag.  
+**URL:** `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap`  
+**Weights loaded:** 300, 400, 500, 600, 700  
+**Weights used in SECTION-001:** 400, 500, 600
+
+### V1 typography exception (operator-authorized)
+
+V1 accessed **only** for typography recovery. Allowed: font sources, families, sizes, line-heights, weights, typography colors. Forbidden: layout, geometry, spacing, component structure, responsive behavior, Header/Hero positioning.
 
 ## Typography roles
 
 | Role | Token / size | Status |
 |------|--------------|--------|
-| body | 16px / 1.25 | PROPOSED |
-| small / meta | 14px / 1.2 | APPROVED (Header) |
-| phones | 18px / 600 | APPROVED (Header) |
-| nav | 15px | APPROVED (Header) |
-| H1 / display | 40px / 1.15 | APPROVED (Hero) |
-| button label | 13px | APPROVED (Hero CTA) |
+| body | 16px / 1.25 / Inter 400 | APPROVED_JPG |
+| small / meta | 14px / 1.2 / Inter 400 | APPROVED_JPG |
+| phones | 18px / 600 | APPROVED_JPG |
+| nav | 15px / 400 | APPROVED_JPG |
+| H1 / display | 40px / 1.15 / Inter 400 | APPROVED_JPG |
+| button label | 13px / 500 | APPROVED_JPG |
 | H2 / H3 | 28px / 22px | PROPOSED |
 
 ## Container policy
@@ -80,15 +89,15 @@ Global `--radius-small|medium|large|pill`; hero/header block radii remain block-
 - **Gulp:** `prepareFaBridge` + `faWebfonts` → `dist/assets/webfonts/`
 - **SCSS:** `vendors/_fontawesome.scss`
 - **Styles:** Solid, Regular, Light, Duotone, Brands
+- **Header search:** `fas fa-search` — eighth nav `<li>`, not standalone sibling block
 - **Not in Git:** vendor package, `fa-all.css` bridge, `dist/`
 
 ## Prohibited patterns
 
 - Global `outline: none` on `*`
-- Google Fonts / external font CDN
+- ~~Google Fonts / external font CDN~~ — **exception:** V1 production Inter via Google Fonts (operator-authorized typography recovery)
 - Committing FA Pro vendor to workspace
 - Responsive Header/Hero layout without separate task
-- Replacing Header `search.svg` without operator decision
 
 ## Responsive boundary
 

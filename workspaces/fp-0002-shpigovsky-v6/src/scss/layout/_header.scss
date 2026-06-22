@@ -1,158 +1,168 @@
-@use '../utils/variables' as *;
-
-// Desktop-only Header — SECTION-001-GROUP-01 (no mobile, no hero, no JS hooks)
-
-.site-header {
-  background-color: $color-page-background;
-  color: $color-primary-text;
-}
-
-.site-header__container {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: $container-max;
-  margin-inline: auto;
-  padding-top: 18px;
-  padding-inline: 40px;
-}
-
-.site-header__top {
-  display: flex;
-  align-items: center;
-  gap: $text-stack-gap;
-  padding-bottom: $text-stack-gap;
-  margin-bottom: $accordion-row-spacing;
-  border-bottom: 1px solid $color-border-subtle;
-}
-
-.site-header__logo {
-  display: block;
-  flex: 0 0 auto;
-  line-height: 0;
-  text-decoration: none;
-}
-
-.site-header__logo-image {
-  display: block;
-  width: 182px;
-  height: 82px;
-}
-
-.site-header__address,
-.site-header__schedule {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 0 0 auto;
-  margin: 0;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.2;
-  color: $color-secondary-text;
-}
-
-.site-header__phones {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 0 0 auto;
-  margin-left: auto;
-}
-
-.site-header__phone {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: $color-primary-text;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.site-header__messengers {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 0 0 auto;
-}
-
-.site-header__messenger-link {
-  display: block;
-  flex: 0 0 auto;
-  line-height: 0;
-  text-decoration: none;
-}
-
-.site-header__messenger-icon {
-  display: block;
-  width: 45px;
-  height: 45px;
-}
-
-.site-header__callback {
-  flex: 0 0 auto;
-  height: 32px;
-  padding-inline: 16px;
-  border: 1px solid $color-primary-text;
-  border-radius: 16px;
-  background-color: transparent;
-  color: $color-primary-text;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.site-header__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: $grid-gap-standard;
-  padding-bottom: 18px;
-}
-
-.site-header__nav {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.site-header__nav-list {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: $grid-gap-standard;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-header__nav-link {
-  font-size: 15px;
-  line-height: 1.2;
-  color: $color-primary-text;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.site-header__search {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: $color-primary-text;
-  cursor: pointer;
-}
-
-.site-header__search-icon {
-  display: block;
-  width: 22px;
-  height: 22px;
-}
-
+@use '../utils/variables' as *;
+
+// Desktop-only Header — SECTION-001-GROUP-01 (no mobile, no hero, no JS hooks)
+
+.site-header {
+  background-color: $color-page-background;
+  color: $color-primary-text;
+}
+
+.site-header__container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-top: 18px;
+  padding-inline: 40px;
+}
+
+.site-header__top {
+  display: flex;
+  align-items: center;
+  gap: $text-stack-gap;
+  padding-bottom: $text-stack-gap;
+  margin-bottom: $accordion-row-spacing;
+  border-bottom: 1px solid $color-border-subtle;
+}
+
+.site-header__logo {
+  display: block;
+  flex: 0 0 auto;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-header__logo-image {
+  display: block;
+  width: 182px;
+  height: 82px;
+}
+
+.site-header__address,
+.site-header__schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 0 auto;
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: var(--font-weight-base);
+  line-height: 1.2;
+  color: $color-secondary-text;
+}
+
+.site-header__phones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.site-header__phone {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  color: $color-primary-text;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header__messengers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.site-header__messenger-link {
+  display: block;
+  flex: 0 0 auto;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-header__messenger-icon {
+  display: block;
+  width: 45px;
+  height: 45px;
+}
+
+.site-header__callback {
+  flex: 0 0 auto;
+  height: 32px;
+  padding-inline: 16px;
+  border: 1px solid $color-primary-text;
+  border-radius: 16px;
+  background-color: transparent;
+  color: $color-primary-text;
+  font-family: var(--font-family-base);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.site-header__bottom {
+  display: flex;
+  align-items: center;
+  padding-bottom: 18px;
+}
+
+.site-header__nav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.site-header__nav-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: $grid-gap-standard;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header__nav-link {
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  font-weight: var(--font-weight-base);
+  line-height: 1.2;
+  color: $color-primary-text;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header__nav-item--search {
+  margin-left: auto;
+}
+
+.site-header__search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $color-primary-text;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+
+  i {
+    display: block;
+    color: currentColor;
+    pointer-events: none;
+  }
+}
+
