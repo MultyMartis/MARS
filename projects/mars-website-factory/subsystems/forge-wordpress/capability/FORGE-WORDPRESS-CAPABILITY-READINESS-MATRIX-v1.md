@@ -20,8 +20,8 @@
 | Prompt pack | **READY** | — |
 | Reporting standard | **PROVEN** | FW-05 report chain |
 | Git workflow | **PROVEN** | FW-04 selective checkpoint |
-| Local environment | **PARTIAL** | Laragon enabled MLI-01; WordPress profile validation pending MLI-03 |
-| Required tools | **PARTIAL** | Node/Gulp/Playwright yes; PHP/PHPCS no |
+| Local environment | **PARTIAL** | MLI shared toolchain **READY** (MLI-02); WordPress runtime profile **NOT YET CREATED** (MLI-03) |
+| Required tools | **PARTIAL** | Node/Gulp/Playwright yes; PHP/PHPCS/WP-CLI **READY on MLI**; live WP validation pending MLI-03 |
 | WordPress runtime | **PARTIAL** | Code complete; live population not executed |
 | ACF workflow | **PARTIAL** | Free + Settings API deviation |
 | Validation runners | **PARTIAL** | Static + Playwright reference |
@@ -42,6 +42,16 @@ Synthetic capability: PROVEN WITH LIMITATIONS
 ```
 
 Do **not** use `OPERATIONAL` until client pilot evidence (FW-06+).
+
+---
+
+## MLI alignment (MLI-02)
+
+```text
+MLI shared toolchain: READY
+WordPress runtime profile: NOT YET CREATED
+FW-05R live synthetic validation: HOLD UNTIL MLI-03
+```
 
 ---
 

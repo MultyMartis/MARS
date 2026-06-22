@@ -3,7 +3,7 @@
 **Status:** documented navigation only — **not** a service registry or automated router.  
 **Lane:** Infrastructure — shared local execution  
 **Domain root:** [README.md](README.md)  
-**Lifecycle:** ENABLEMENT (MLI-01 **COMPLETE**)
+**Lifecycle:** ENABLEMENT (MLI-02 **COMPLETE**)
 
 ---
 
@@ -11,10 +11,11 @@
 
 | Field | Value |
 |-------|-------|
-| **Stage** | MLI-01 **COMPLETE** |
-| **Next** | **MLI-02 — Shared Toolchain Hardening** |
+| **Stage** | MLI-02 **COMPLETE** |
+| **Next** | **MLI-03 — WordPress Runtime Profile** |
 | **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
-| **Smoke site** | `http://mli-smoke-001.test/` (hosts elevation may be required) |
+| **Shared toolchain** | **HARDENED** — see tool registry |
+| **Smoke site** | `http://mli-smoke-001.test/` (hosts: run `tools\hosts\add-mli-host`) |
 | **Runtime operational (CMS profiles)** | **NO** — until MLI-03/MLI-04 validation |
 | **Brain root** | `C:\AI MARS` |
 | **Runtime root** | `D:\MARS-Localhost` |
@@ -38,6 +39,27 @@
 | 10 | [MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md](MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md) |
 | 11 | [MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md](MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md) |
 | 12 | [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md) |
+
+---
+
+## MLI-02 standards and reports
+
+| Item | Path |
+|------|------|
+| Hosts management | [MARS-LOCALHOST-HOSTS-MANAGEMENT-STANDARD-v1.md](MARS-LOCALHOST-HOSTS-MANAGEMENT-STANDARD-v1.md) |
+| Vhost provisioning | [MARS-LOCALHOST-VHOST-PROVISIONING-STANDARD-v1.md](MARS-LOCALHOST-VHOST-PROVISIONING-STANDARD-v1.md) |
+| Local certificates | [MARS-LOCALHOST-LOCAL-CERTIFICATE-STANDARD-v1.md](MARS-LOCALHOST-LOCAL-CERTIFICATE-STANDARD-v1.md) |
+| Composer | [MARS-LOCALHOST-COMPOSER-STANDARD-v1.md](MARS-LOCALHOST-COMPOSER-STANDARD-v1.md) |
+| WP-CLI | [MARS-LOCALHOST-WPCLI-STANDARD-v1.md](MARS-LOCALHOST-WPCLI-STANDARD-v1.md) |
+| PHPCS/WPCS | [MARS-LOCALHOST-PHPCS-WPCS-STANDARD-v1.md](MARS-LOCALHOST-PHPCS-WPCS-STANDARD-v1.md) |
+| Node/npm | [MARS-LOCALHOST-NODE-AND-NPM-STANDARD-v1.md](MARS-LOCALHOST-NODE-AND-NPM-STANDARD-v1.md) |
+| MySQL credentials | [MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md](MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md) |
+| Smoke suite | [MARS-LOCALHOST-SMOKE-SUITE-v1.md](MARS-LOCALHOST-SMOKE-SUITE-v1.md) |
+| Upgrade policy | [MARS-LOCALHOST-TOOLCHAIN-VERSION-AND-UPGRADE-POLICY-v1.md](MARS-LOCALHOST-TOOLCHAIN-VERSION-AND-UPGRADE-POLICY-v1.md) |
+| Tool registry | [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
+| MLI-02 toolchain audit | [reports/MARS-LOCALHOST-MLI-02-TOOLCHAIN-STATE-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-02-TOOLCHAIN-STATE-AUDIT-v1.md) |
+| MLI-02 smoke report | [reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md](reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md) |
+| MLI-03 input | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md) |
 
 ---
 
@@ -82,8 +104,8 @@
 
 ## Next authorized action
 
-**MLI-02 — Shared Toolchain Hardening** — see input report. **Do not** start WordPress synthetic validation until MLI-03.
+**MLI-03 — WordPress Runtime Profile** — see [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md). **Do not** start without MLI-03 charter step.
 
 ---
 
-*Operational index — MLI-01 complete.*
+*Operational index — MLI-02 complete.*

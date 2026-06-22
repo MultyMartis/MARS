@@ -1,9 +1,9 @@
 # MARS Localhost — Vhost Registry v1
 
 **Document type:** Local vhost registry (human-maintained)  
-**Version:** v1  
+**Version:** v1.1  
 **Date:** 2026-06-22  
-**Stage:** MLI-01  
+**Stage:** MLI-02  
 **Authority:** Brain (`C:\AI MARS`) — not Laragon auto-discovery alone
 
 ---
@@ -20,9 +20,9 @@
 
 ## Registered vhosts
 
-| Slug | Domain | Platform | Class | Physical path | Web server | HTTPS | Junction | Vhost conf | Manifest |
-|------|--------|----------|-------|---------------|------------|-------|----------|------------|----------|
-| mli-smoke-001 | mli-smoke-001.test | php | synthetic | `D:\MARS-Localhost\sites\php\synthetic\mli-smoke-001` | Apache | HTTP baseline | `laragon\www\mli-smoke-001` | `etc\apache2\sites-enabled\mli-smoke-001.test.conf` | [MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) |
+| Runtime ID | Slug | Domain | Platform | Class | Physical root | Junction path | Apache vhost path | HTTPS | Hosts status | Manifest | State | Last verified |
+|------------|------|--------|----------|-------|---------------|---------------|-------------------|-------|--------------|----------|-------|---------------|
+| MLI-SMOKE-001 | mli-smoke-001 | mli-smoke-001.test | php | synthetic | `D:\MARS-Localhost\sites\php\synthetic\mli-smoke-001` | `laragon\www\mli-smoke-001` (optional) | `etc\apache2\sites-enabled\mli-smoke-001.test.conf` | **YES** — `mli-smoke-001.test-ssl.conf` | **PENDING ELEVATION** — use `tools\hosts\add-mli-host` | [MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) | active | 2026-06-22 |
 
 ---
 
@@ -34,7 +34,14 @@
 - [ ] `hosts` entry verified (`127.0.0.1 {slug}.test`)
 - [ ] Runtime manifest created in brain
 - [ ] Smoke HTTP 200 confirmed
+- [ ] HTTPS tested per certificate standard (optional)
 
 ---
 
-*Vhost registry v1 — MLI-01.*
+## Related
+
+- [MARS-LOCALHOST-VHOST-PROVISIONING-STANDARD-v1.md](../MARS-LOCALHOST-VHOST-PROVISIONING-STANDARD-v1.md)
+
+---
+
+*Vhost registry v1.1 — MLI-02.*
