@@ -3,7 +3,7 @@
 | ID | Y start | Y end | Semantic name | Implementation status |
 |----|---------|-------|---------------|----------------------|
 | SECTION-001 | 0 | 904 | header + hero (composite) | **IMPLEMENTED · REVIEWED** |
-| FOOTER | 15776 | 16343 | footer (layout region) | **NEXT AUTHORIZED PRODUCTION TARGET** |
+| FOOTER | 15776 | 16343 | footer (layout region) | **IMPLEMENTED · READY FOR OPERATOR VISUAL REVIEW** |
 | SECTION-002 | 904 | 4544 | intro-programs (JPG taxonomy) | NOT STARTED · **ABORTED ATTEMPT archived** — not canonical assignment |
 | SECTION-003 | 4544 | 4992 | staff group photo | NOT STARTED |
 | SECTION-004 | 4992 | 6064 | second card grid + landscape | NOT STARTED |

@@ -94,7 +94,7 @@ Listed in extraction + normalization documents. Factory OL-01 applies unless thi
 | `accordion-row-spacing` | 15px | **margin** | accordion rows | **APPROVED_OPERATOR_RULE** |
 | `footer-gap` | 30px | gap | footer columns | **APPROVED_OPERATOR_RULE** |
 | `form-field-gap` | 20px | gap | form fields | PROPOSAL |
-| `footer-column-gap` | 30px | gap | footer columns | PROPOSAL |
+| `footer-column-gap` | 30px | gap | footer columns | **APPROVED_OPERATOR_RULE** · **ACTIVE in :root** |
 
 **Removed:** `accordion-row-gap` — OL-01 gap-scale violation; replaced by `accordion-row-spacing` (margin).
 

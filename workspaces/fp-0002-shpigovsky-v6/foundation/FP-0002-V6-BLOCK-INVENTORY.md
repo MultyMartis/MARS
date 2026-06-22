@@ -3,7 +3,7 @@
 | Component | Block(s) | Section | Desktop status |
 |-----------|----------|---------|----------------|
 | CMP-001 … CMP-003 | BLOCK-001 | SECTION-001 | **IMPLEMENTED · REVIEWED** |
-| FOOTER | BLOCK-FOOTER | FOOTER (layout region) | **NEXT AUTHORIZED PRODUCTION TARGET** |
+| FOOTER | BLOCK-FOOTER | FOOTER (layout region) | **IMPLEMENTED · READY FOR OPERATOR VISUAL REVIEW** |
 | CMP-004 service-card-6-grid | BLOCK-002 | SECTION-002 | NOT STARTED · draft archived (`archive/aborted-section-attempts/intro-programs/`) |
 | CMP-005 quote-block-with-portrait | BLOCK-003 | SECTION-002 | NOT STARTED · draft archived only |
 | CMP-006 accordion-row | BLOCK-004 | SECTION-002 | NOT STARTED · draft archived only |

@@ -106,4 +106,15 @@
 	--grid-gap-standard: var(--space-30);
 	--card-padding-standard: var(--space-25);
 	--accordion-row-spacing: var(--space-15);
+
+	/* Footer layout-region tokens (CMP-020 / FOOTER) */
+	--footer-column-gap: var(--space-30);
+	--footer-gap: var(--footer-column-gap);
+	--footer-padding-block: var(--section-padding-compact);
+	--footer-row-gap: var(--space-40);
+	--footer-legal-gap: var(--space-40);
+	--footer-nav-heading-gap: var(--space-15);
+	--footer-nav-link-gap: var(--space-10);
+	--footer-contact-stack-gap: var(--space-20);
+	--footer-legal-row-padding-block: var(--space-30);
 }

@@ -1,0 +1,106 @@
+{
+  "project_id": "FP-0002",
+  "workspace": "fp-0002-shpigovsky-v6",
+  "version": "V6",
+  "canonical_id": "FOOTER",
+  "component_id": "CMP-020",
+  "section_alias": "SECTION-011",
+  "classification": "LAYOUT_REGION",
+  "semantic_name": "site-footer",
+  "implementation_status": "READY_FOR_OPERATOR_VISUAL_REVIEW",
+  "responsive_status": "NOT_STARTED",
+  "javascript_status": "NOT_CHANGED",
+  "source_sha256": "cdd1d5bcc512b617dcf93efa97af88cf4ad99a0895cfc27a63c07bc704945290",
+  "boundaries": {
+    "y_start": 15776,
+    "y_end": 16343,
+    "total_height_px": 567,
+    "group_01_height_px": 376,
+    "group_02_height_px": 191
+  },
+  "html_partial": "src/partials/layout/footer.html",
+  "scss_partial": "src/scss/layout/_footer.scss",
+  "authorization": {
+    "footer_identified": true,
+    "footer_text_inventory_complete": true,
+    "footer_asset_inventory_complete": true,
+    "token_lookup_complete": true,
+    "arbitrary_values_allowed": false,
+    "arbitrary_values_count": 0,
+    "hidden_fallback_literals_count": 0,
+    "html_authorized": true,
+    "scss_authorized": true,
+    "javascript_authorized": false,
+    "responsive_authorized": false
+  },
+  "assets": [
+    {
+      "role": "footer-logo",
+      "source": "Header reuse",
+      "path": "src/img/branding/logo.svg",
+      "reuse_allowed": true,
+      "status": "RESOLVED"
+    },
+    {
+      "role": "social-telegram",
+      "source": "Header reuse / INCOMING 03_BRANDING",
+      "path": "src/img/social/telegram.svg",
+      "reuse_allowed": true,
+      "status": "RESOLVED"
+    },
+    {
+      "role": "social-whatsapp",
+      "source": "Header reuse / INCOMING 03_BRANDING",
+      "path": "src/img/social/whatsapp.svg",
+      "reuse_allowed": true,
+      "status": "RESOLVED"
+    },
+    {
+      "role": "social-youtube",
+      "source": "JPG evidence",
+      "path": "NONE",
+      "reuse_allowed": false,
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "role": "map-marker-icon",
+      "source": "Font Awesome Pro 5.15.4",
+      "path": "fas fa-map-marker-alt",
+      "reuse_allowed": true,
+      "status": "RESOLVED"
+    },
+    {
+      "role": "envelope-icon",
+      "source": "Font Awesome Pro 5.15.4",
+      "path": "fas fa-envelope",
+      "reuse_allowed": true,
+      "status": "RESOLVED"
+    }
+  ],
+  "new_tokens_approved": [
+    "--footer-column-gap",
+    "--footer-gap",
+    "--footer-padding-block",
+    "--footer-row-gap",
+    "--footer-legal-gap",
+    "--footer-nav-heading-gap",
+    "--footer-nav-link-gap",
+    "--footer-contact-stack-gap",
+    "--footer-legal-row-padding-block"
+  ],
+  "block_level_tokens": [
+    "$footer-logo-width",
+    "$footer-logo-height",
+    "$footer-callback-font-size"
+  ],
+  "exact_geometry_exceptions": [
+    "$footer-logo-width: 182px",
+    "$footer-logo-height: 82px"
+  ],
+  "safe_unknown": [
+    "footer-nav-final-labels",
+    "footer-legal-hrefs",
+    "footer-cta-actions",
+    "footer-social-youtube-asset"
+  ]
+}

@@ -2,7 +2,7 @@
 
 **Workspace:** `workspaces/fp-0002-shpigovsky-v6/`  
 **Factory pipeline:** [frontend-implementation-pipeline-v1.md](../../../projects/mars-website-factory/frontend-implementation-pipeline-v1.md)  
-**Current state:** Foundation APPROVED; SECTION-001 (Header + Hero) IMPLEMENTED · REVIEWED; **Footer = next authorized production target**
+**Current state:** Foundation APPROVED; SECTION-001 (Header + Hero) IMPLEMENTED · REVIEWED; **Footer IMPLEMENTED · READY FOR OPERATOR VISUAL REVIEW**; main content sections NOT STARTED.
 
 ---
 
@@ -12,9 +12,10 @@
 CURRENT IMPLEMENTED:
   Header
   Hero
+  Footer (desktop — operator visual review pending)
 
 NEXT:
-  Footer
+  Main content sections (SECTION-002+) — NOT AUTHORIZED until operator assigns
 
 NOT STARTED:
   Main content sections (SECTION-002+)
@@ -94,7 +95,7 @@ NOT STARTED:
 site_wide_style_foundation_approved: true
 foundation_approved_by: operator
 section_001_status: IMPLEMENTED_REVIEWED
-footer_status: NEXT_AUTHORIZED_TARGET
+footer_status: READY_FOR_OPERATOR_VISUAL_REVIEW
 intro_programs_status: ABORTED_NOT_ACTIVE
 main_content_implementation_status: NOT_STARTED
 css_variable_first_law_status: ACTIVE
