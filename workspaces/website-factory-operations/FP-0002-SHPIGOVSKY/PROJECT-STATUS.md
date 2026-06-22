@@ -1,8 +1,14 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-11  
-**Status owner:** Factory operator *(placeholder until onboarding)*  
+**Last updated:** 2026-06-23  
+**Status owner:** Factory operator  
+
+---
+
+## Milestone (2026-06-23)
+
+**FP-0002 FIRST STABLE DESKTOP BASELINE** — release `FP-0002-V6-DESKTOP-STABLE-01`, tag `fp-0002-v6-desktop-stable-01`. Active workspace: `workspaces/fp-0002-shpigovsky-v6/`. Desktop Header, Hero, Footer and local Inter delivery **APPROVED** and frozen. Mobile work **authorized but not started**.
 
 ---
 
@@ -28,7 +34,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | Not Started |
+| **Frontend** | **In progress** — V6 desktop shell frozen (`FP-0002-V6-DESKTOP-STABLE-01`) |
 | **WordPress** | Not Started |
 | **QA** | Not Started |
 | **Delivery** | Not Started |

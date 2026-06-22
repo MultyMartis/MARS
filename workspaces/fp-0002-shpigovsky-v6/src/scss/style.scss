@@ -408,7 +408,7 @@ em {
 
 .btn {
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
 	height: var(--main-size-btns);
@@ -423,7 +423,7 @@ em {
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-button);
 	font-weight: var(--font-weight-button);
-	line-height: var(--main-size-btns);
+	line-height: calc(var(--main-size-btns));
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -754,8 +754,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .site-footer {
 	padding-top: var(--pad-x);
 	padding-bottom: var(--pad-x);
-	background-color: var(--color-page-background);
-	
 }
 
 .site-footer__top {

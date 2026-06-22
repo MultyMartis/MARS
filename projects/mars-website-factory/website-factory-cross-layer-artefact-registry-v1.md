@@ -44,6 +44,7 @@
 | R-031 | `projects/mars-website-factory/one-project-scss-file-law-v1.md` | PRODUCTION LAW | Single `style.scss` entry; no project partials by default | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 | R-032 | `projects/mars-website-factory/no-button-letter-spacing-law-v1.md` | PRODUCTION LAW | No `--button-letter-spacing`; natural font spacing | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 | R-033 | `projects/mars-website-factory/universal-button-system-law-v1.md` | PRODUCTION LAW | Single `.btn` system; `.btn_dark` / `.btn--primary`; no parallel block button geometry | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
+| R-034 | `workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md` | RELEASE | FP-0002 V6 first stable desktop baseline; operator-approved Header/Hero/Footer + local Inter | **FROZEN** | Operator + release record | Yes (rollback tag) | None | KEEP |
 
 ---
 
@@ -92,3 +93,4 @@
 |------|--------|
 | 2026-06-22 | v1 — Cross-layer audit registry |
 | 2026-06-22 | v1.1 — R-026 CSS Variable First Law; SCSS→VQA matrix link |
+| 2026-06-23 | v1.2 — R-034 FP-0002 V6 desktop stable baseline release record |

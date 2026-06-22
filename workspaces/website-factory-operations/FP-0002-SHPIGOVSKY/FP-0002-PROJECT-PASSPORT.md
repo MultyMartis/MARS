@@ -79,13 +79,14 @@
 
 | Dimension | State |
 |-----------|-------|
-| Factory workspace | **Created** — foundation only |
+| Factory workspace | **Active** — `workspaces/fp-0002-shpigovsky-v6/` |
+| V6 desktop baseline | **FROZEN** — `FP-0002-V6-DESKTOP-STABLE-01` · tag `fp-0002-v6-desktop-stable-01` |
 | Factory manifest enrollment | **Not started** |
 | Factory registry enrollment | **Not started** |
 | RT-G04 substrate (POC-01…POC-10) | **Not started** |
-| Website Factory operational phase | **Pre-Onboarding** |
-| Production lanes | **Not Started** |
-| Design intake | **Awaiting Intake** |
+| Website Factory operational phase | **Pre-Onboarding** (V6 pilot execution active) |
+| Production lanes — Frontend | **In progress** — desktop shell frozen; mobile authorized not started |
+| Design intake | **Partial** — JPG mockup + operator-canonical V6 src |
 
 ---
 

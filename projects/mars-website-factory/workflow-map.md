@@ -67,6 +67,8 @@ Production PASS
 
 **JPG / clean-room foundation path (2026-06-22):** When visual source is raster audit only (e.g. FP-0002 V6), use **[frontend-implementation-pipeline-v1.md](frontend-implementation-pipeline-v1.md)** — SOURCE → VISUAL AUDIT → GROUNDING → **DESIGN FOUNDATION EXTRACTION** → **PRACTICAL VALUE NORMALIZATION** → **SITE-WIDE STYLE FOUNDATION** (operator approval) → PAGE/BLOCK IMPLEMENTATION SPECIFICATION → HTML → SCSS → VISUAL QA. **Do not** skip to HTML after structure lock. Contracts: [practical-value-normalization-contract-v1.md](practical-value-normalization-contract-v1.md) · [site-wide-style-foundation-contract-v1.md](site-wide-style-foundation-contract-v1.md) · [block-implementation-specification-contract-v1.md](block-implementation-specification-contract-v1.md).
 
+**FP-0002 V6 desktop stable baseline (2026-06-23):** Milestone **FP-0002 FIRST STABLE DESKTOP BASELINE** — release `FP-0002-V6-DESKTOP-STABLE-01`, tag `fp-0002-v6-desktop-stable-01`, workspace `workspaces/fp-0002-shpigovsky-v6/`; [release manifest](../../workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md); authorized next phase: mobile Header, off-canvas menu, mobile Footer; **not** mobile implementation.
+
 **Reporting rollup:** [frontend-qa-reporting-standard-v1.md](frontend-qa-reporting-standard-v1.md) §5–§6 · **Production PASS authority:** [operational-qa-entry-v1.md](operational-qa-entry-v1.md) § Production PASS authority.
 
 ## Prompt → execute → report

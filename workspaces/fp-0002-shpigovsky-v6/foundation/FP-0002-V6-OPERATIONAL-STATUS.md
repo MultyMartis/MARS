@@ -1,6 +1,15 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (local Inter migration)
+**Updated:** 2026-06-23 (desktop stable baseline freeze)
+
+## Desktop stable release
+
+| Field | Value |
+|-------|-------|
+| `desktop_stable_release` | `FP-0002-V6-DESKTOP-STABLE-01` |
+| `desktop_stable_commit` | `git rev-parse fp-0002-v6-desktop-stable-01` |
+| `desktop_stable_tag` | `fp-0002-v6-desktop-stable-01` |
+| `design_value_freeze` | **ACTIVE** |
 
 ## Canonical source authority
 
@@ -24,23 +33,28 @@ No automated task may overwrite current src without an explicit operator instruc
 | `external_inter_requests` | 0 |
 | `critical_font_preload` | ACTIVE |
 | `font_display` | BLOCK |
-| `visible_fout` | NOT_OBSERVED (technical validation) |
+| `visible_fout` | RESOLVED |
 | `visible_foit` | NOT_OBSERVED_OR_NOT_MATERIAL |
-| `operator_font_approval` | PENDING_OPERATOR_REVIEW |
+| `operator_font_approval` | **APPROVED** |
 | `new_design_values_introduced` | 0 |
 
 ## Block status
 
 | Block | Status |
 |-------|--------|
-| Header | OPERATOR-CANONICAL (manual calibration protected) |
-| Hero | OPERATOR-CANONICAL (manual calibration protected) |
-| Footer | OPERATOR-CANONICAL (manual calibration protected) |
+| Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
+| Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
+| Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Main content sections | NOT STARTED |
-| Responsive | NOT STARTED |
+| Mobile Header | AUTHORIZED_NOT_STARTED |
+| Mobile off-canvas menu | AUTHORIZED_NOT_STARTED |
+| Mobile Footer | AUTHORIZED_NOT_STARTED |
+| Responsive (mobile) | NOT STARTED |
 | JavaScript | NOT STARTED (zero skeleton) |
 
 **Build map:** Header → Hero → empty `main` → Footer (`dist/index.html`).
+
+**Stable release record:** [releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md)
 
 **Review:** [FP-0002-V6-OPERATOR-CANONICAL-SOURCE-AND-LOAD-STABILITY-REVIEW.md](../reviews/foundation/FP-0002-V6-OPERATOR-CANONICAL-SOURCE-AND-LOAD-STABILITY-REVIEW.md) · [FP-0002-V6-LOCAL-INTER-ZERO-FOUT-REVIEW.md](../reviews/foundation/FP-0002-V6-LOCAL-INTER-ZERO-FOUT-REVIEW.md)
 
@@ -50,4 +64,14 @@ No automated task may overwrite current src without an explicit operator instruc
 Previous Google Fonts + swap solution did not eliminate visible FOUT.
 Operator validation overrules automated screenshot/CLS acceptance.
 Local WOFF2 + font-display:block + critical preload implemented in this pass.
+Operator visual approval recorded at FP-0002-V6-DESKTOP-STABLE-01 freeze.
+```
+
+## Freeze entry (2026-06-23)
+
+```text
+Milestone: FP-0002 FIRST STABLE DESKTOP BASELINE
+Tag: fp-0002-v6-desktop-stable-01
+Backup: C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-DESKTOP-STABLE-01-SOURCE.zip
+Authorized next: Mobile Header, Off-canvas Mobile Menu, Mobile Footer
 ```

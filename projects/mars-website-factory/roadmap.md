@@ -77,6 +77,7 @@ Phases **6–7** depend on MARS **planned-implementation** items (runtime, tools
 
 | Date | Note |
 |------|------|
+| 2026-06-23 | **FP-0002 V6 desktop stable baseline:** milestone **FP-0002 FIRST STABLE DESKTOP BASELINE** — release `FP-0002-V6-DESKTOP-STABLE-01`, tag `fp-0002-v6-desktop-stable-01`; [manifest](../../workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md). |
 | 2026-05-11 | Initial phase table for Website Factory registration |
 | 2026-05-11 | Phase **2** row reframed: **Artifact Architecture Layer v0** documented (semantic models; **not** runtime/schemas). |
 | 2026-05-11 | Phase **3** row reframed: **Prompt Standards Layer v0** documented (overview, structure, agent behavior, Cursor execution, reporting, HITL, SAFE UNKNOWN, artifact transfer, QA prompt rules, frontend prompt discipline); **documentation only**; **not** a prompt engine; QA checklist breadth still planned. |

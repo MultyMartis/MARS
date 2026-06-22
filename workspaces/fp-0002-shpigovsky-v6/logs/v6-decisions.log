@@ -24,3 +24,5 @@
 2026-06-23T21:00:00Z | DECISION | operator_font_approval remains PENDING_OPERATOR_REVIEW
 2026-06-23T21:00:00Z | DECISION | Previous load-stability report correction: swap did not eliminate visible FOUT
 2026-06-23T21:00:00Z | DECISION | Website Factory font-and-layout-stability-law v1.1 — local WOFF2 default + operator visual gate
+
+[2026-06-23T04:18:03+07:00] DECISION=FREEZE_DESKTOP_BASELINE release=FP-0002-V6-DESKTOP-STABLE-01 reason=operator_visual_approval scope=header,hero,footer,local_inter_woff2 exclude=mobile,main_content next=mobile_header,offcanvas_menu,mobile_footer

@@ -17,6 +17,8 @@ Provide a consistent method to evaluate whether a **real** project with **concre
 - score hypothetical projects;
 - bypass operator P0 approval.
 
+**FP-0002 note (2026-06-23):** FP-0002 V6 reached **FP-0002 FIRST STABLE DESKTOP BASELINE** (`FP-0002-V6-DESKTOP-STABLE-01`) — lesson source and active pilot workspace, **not** WF-PR01 first-pilot auto-selection.
+
 ---
 
 ## 2. Evaluation Matrix
