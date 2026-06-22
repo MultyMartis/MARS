@@ -1,0 +1,56 @@
+{
+  "verification_id": "w2-1-manual-evidence-verification-v1",
+  "session_id": "w2-1-live-session-001",
+  "generated_at": "2026-06-22T17:58:50.299Z",
+  "note": "Bounded manual check of live observations — not mass semantic labeling",
+  "rows": [
+    {
+      "query_id": "w2-1-q01",
+      "query": "заказать кондиционер москва",
+      "result_state": "CAPTCHA",
+      "screenshot_exists": true,
+      "screenshot_path": "captures/w2-1-q01/serp-full-page.png",
+      "html_exists": true,
+      "structured_json_exists": true,
+      "timestamp_recorded": "2026-06-22T17:58:47.181Z",
+      "timezone_recorded": "Europe/Moscow",
+      "region_recorded": "Москва",
+      "device_recorded": "desktop",
+      "paid_organic_separation": "N/A — CAPTCHA page, zero SERP items extracted",
+      "fabricated_advertiser_data": false,
+      "manual_check": "HTML title 'Вы не робот?' and showcaptcha URL confirm CAPTCHA — not mislabeled as ads",
+      "parser_vs_visual": "MATCH — observation_state CAPTCHA aligns with screenshot/HTML"
+    },
+    {
+      "query_id": "w2-1-q02",
+      "query": "установка натяжных потолков цена",
+      "result_state": "SESSION STOPPED",
+      "screenshot_exists": false,
+      "note": "Unprocessed — STOP_ON_CAPTCHA after w2-1-q01",
+      "fabricated_advertiser_data": false
+    },
+    {
+      "query_id": "w2-1-q03",
+      "query": "аренда офиса москва",
+      "result_state": "SESSION STOPPED",
+      "screenshot_exists": false,
+      "note": "Unprocessed — STOP_ON_CAPTCHA after w2-1-q01",
+      "fabricated_advertiser_data": false
+    },
+    {
+      "query_id": "w2-1-q04",
+      "query": "доставка суши на дом",
+      "result_state": "SESSION STOPPED",
+      "screenshot_exists": false,
+      "note": "Unprocessed — STOP_ON_CAPTCHA after w2-1-q01",
+      "fabricated_advertiser_data": false
+    }
+  ],
+  "fixture_captcha_stop_policy": {
+    "fixture": "fixtures/paid-serp/captcha-partial.json",
+    "observation_state": "CAPTCHA",
+    "degraded": true,
+    "session_marked_complete": false,
+    "confirmed_by": "run-fixture-tests.mjs #10"
+  }
+}

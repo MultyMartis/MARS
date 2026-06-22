@@ -1,0 +1,54 @@
+{
+  "decision_set_id": "wave-2.1-operator-decisions-v1",
+  "date": "2026-06-23",
+  "wave": "2.1",
+  "decisions": {
+    "W2.1-D1": {
+      "id": "W2.1-D1",
+      "subject": "Wave 2 Core",
+      "status": "APPROVED — IMPLEMENTED AND FIXTURE TESTED",
+      "checkpoint_commit": "9d0265a"
+    },
+    "W2.1-D2": {
+      "id": "W2.1-D2",
+      "subject": "Wave 2 Overall",
+      "status": "LIVE VALIDATION REQUIRED — NOT OPERATIONAL"
+    },
+    "W2.1-D3": {
+      "id": "W2.1-D3",
+      "subject": "Wave 2.1",
+      "status": "AUTHORIZED"
+    },
+    "W2.1-D4": {
+      "id": "W2.1-D4",
+      "subject": "Live validation scope",
+      "status": "BOUNDED TECHNICAL VALIDATION ONLY",
+      "production_research": false
+    },
+    "W2.1-D5": {
+      "id": "W2.1-D5",
+      "subject": "Corvonero",
+      "status": "FROZEN — DO NOT USE FOR LIVE TEST"
+    },
+    "W2.1-D6": {
+      "id": "W2.1-D6",
+      "subject": "Query safety",
+      "status": "SYNTHETIC TEST MANIFEST + GENERIC COMMERCIAL SEEDS",
+      "client_queries_forbidden": true
+    },
+    "W2.1-D7": {
+      "id": "W2.1-D7",
+      "subject": "Live reliability",
+      "status": "FIXTURE PASS NOT SUFFICIENT",
+      "live_pass_requires": "real evidence artifacts"
+    }
+  },
+  "wave_status": {
+    "wave_1": "OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY",
+    "wave_2_core": "APPROVED — CHECKPOINTED",
+    "wave_2_overall": "LIVE VALIDATION IN PROGRESS",
+    "wave_2_1": "AUTHORIZED",
+    "wave_3": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

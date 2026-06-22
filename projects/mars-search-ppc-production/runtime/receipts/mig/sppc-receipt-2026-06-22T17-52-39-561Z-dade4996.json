@@ -1,0 +1,44 @@
+{
+  "receipt_id": "sppc-receipt-2026-06-22T17-52-39-561Z-dade4996",
+  "receipt_schema_version": "1.0.0",
+  "timestamp": "2026-06-22T17:52:39.563Z",
+  "project_id": "SYNTHETIC-PRE-STRATEGY-TEST",
+  "manifest_path": "C:\\AI MARS\\projects\\mars-search-ppc-production\\state\\fixtures\\synthetic-pre-strategy-v1.json",
+  "manifest_checksum": "ae6f7b370c41c7d9b4b21b6083021ca54b48401e68e8e1f8b4dfdfef2dce0a92",
+  "lifecycle_version": "1.0.0",
+  "requested_stage": "SPPC-10",
+  "requested_action": "paid_serp",
+  "actor": "MIG",
+  "tool": "mig-runtime",
+  "authorization_result": "BLOCKED",
+  "blockers": [
+    {
+      "code": "DEGRADED_NOT_APPROVED",
+      "message": "BLOCKED — DEGRADED EVIDENCE MODE NOT APPROVED",
+      "issues": [
+        "missing field: affected_stage",
+        "missing field: attempted_collection",
+        "missing field: failure_evidence",
+        "missing field: alternative_evidence",
+        "missing field: impact",
+        "missing field: operator_approval",
+        "missing field: approval_timestamp",
+        "missing field: expiry_or_recheck_condition",
+        "missing field: downstream_limitations"
+      ],
+      "owner": "Operator"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "artifact_type": "paid_serp_business_hours_evidence",
+      "output_class": "production_authority"
+    }
+  ],
+  "actual_outputs": null,
+  "runtime_version": "wave1.1-v1",
+  "source_commit": "4a46267",
+  "command": "mig-ppc-gate paid_serp",
+  "note": null,
+  "immutable": true
+}

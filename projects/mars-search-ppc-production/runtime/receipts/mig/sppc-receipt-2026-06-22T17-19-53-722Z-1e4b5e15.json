@@ -1,0 +1,41 @@
+{
+  "receipt_id": "sppc-receipt-2026-06-22T17-19-53-722Z-1e4b5e15",
+  "receipt_schema_version": "1.0.0",
+  "timestamp": "2026-06-22T17:19:53.722Z",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "manifest_path": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-direct-v2-clean-room\\state\\project-ppc-state-manifest-v1.json",
+  "manifest_checksum": "8d94c9d38333c1166b1f78b3b23cababd40b9ecb5a24380f59a6cd4dbc8de0ae",
+  "lifecycle_version": "1.0.0",
+  "requested_stage": "SPPC-10",
+  "requested_action": "paid_serp",
+  "actor": "MIG",
+  "tool": "mig-runtime",
+  "authorization_result": "BLOCKED",
+  "blockers": [
+    {
+      "code": "PROJECT_FROZEN",
+      "message": "BLOCKED — PROJECT FROZEN",
+      "owner": "Operator"
+    },
+    {
+      "code": "FORBIDDEN_DOWNSTREAM",
+      "message": "BLOCKED — requested stage SPPC-10 is not authorized at current SPPC-05"
+    },
+    {
+      "code": "PROJECT_FROZEN",
+      "message": "BLOCKED — PROJECT FROZEN"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "artifact_type": "paid_serp_business_hours_evidence",
+      "output_class": "production_authority"
+    }
+  ],
+  "actual_outputs": null,
+  "runtime_version": "wave1.1-v1",
+  "source_commit": "1f8fe08",
+  "command": "mig-evidence paid-serp:run",
+  "note": null,
+  "immutable": true
+}

@@ -1,0 +1,42 @@
+{
+  "query_set_id": "w2-1-tech-paid-serp-queries-v1",
+  "classification": "TECHNICAL RESEARCH SEED",
+  "semantic_core": false,
+  "benchmark": false,
+  "region_default": "Москва",
+  "region_lr": 213,
+  "queries": [
+    {
+      "query_id": "w2-1-q01",
+      "text": "заказать кондиционер москва",
+      "region": "Москва",
+      "seed_label": "TECHNICAL RESEARCH SEED",
+      "rationale": "Generic commercial HVAC purchase intent — high ad density probability, non-brand",
+      "observation_purpose": "Validate top paid block extraction on commodity service query"
+    },
+    {
+      "query_id": "w2-1-q02",
+      "text": "установка натяжных потолков цена",
+      "region": "Москва",
+      "seed_label": "TECHNICAL RESEARCH SEED",
+      "rationale": "Home improvement service with price modifier — commercial intent without client brands",
+      "observation_purpose": "Validate paid/organic separation on price-oriented query"
+    },
+    {
+      "query_id": "w2-1-q03",
+      "text": "аренда офиса москва",
+      "region": "Москва",
+      "seed_label": "TECHNICAL RESEARCH SEED",
+      "rationale": "B2B commercial real estate — distinct vertical from MIG pilots",
+      "observation_purpose": "Validate advertiser domain normalization on B2B ads"
+    },
+    {
+      "query_id": "w2-1-q04",
+      "text": "доставка суши на дом",
+      "region": "Москва",
+      "seed_label": "TECHNICAL RESEARCH SEED",
+      "rationale": "High-competition local delivery vertical — likely ads, no client linkage",
+      "observation_purpose": "Validate sitelink and display domain capture when visible"
+    }
+  ]
+}

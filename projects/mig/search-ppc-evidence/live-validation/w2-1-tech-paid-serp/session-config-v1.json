@@ -1,0 +1,39 @@
+{
+  "session_id": "w2-1-live-session-001",
+  "project_id": "MIG-W2-1-TECH-PAID-SERP",
+  "manifest_path": "projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/project-ppc-state-manifest-v1.json",
+  "lifecycle_stage": "SPPC-10",
+  "lifecycle_action": "paid_serp",
+  "query_set_ref": "projects/mig/search-ppc-evidence/live-validation/w2-1-tech-paid-serp/query-set-v1.json",
+  "query_selection_rationale": "Bounded technical validation seeds — not semantic core",
+  "region": "Москва",
+  "region_lr": 213,
+  "search_engine": "yandex",
+  "device_profile": {
+    "label": "desktop",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  "timezone": "Europe/Moscow",
+  "allowed_local_collection_windows": [{ "start": "09:00", "end": "21:00" }],
+  "weekday_policy": {
+    "allowed_weekdays": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+  },
+  "approved_exceptions": [],
+  "requested_date": "2026-06-23",
+  "pause_policy": { "between_queries_ms": 45000, "jitter_ms": 5000 },
+  "batch_policy": "one_query_per_browser_session",
+  "captcha_policy": "STOP_ON_CAPTCHA",
+  "stop_policy": { "max_queries": 4, "stop_on_captcha": true, "no_aggressive_retries": true },
+  "capture_policy": {
+    "headful": true,
+    "screenshot": true,
+    "html": true,
+    "structured_json": true
+  },
+  "landing_follow_policy": { "enabled": true, "max_per_query": 2, "bounded": true },
+  "query_limit": 4,
+  "output_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-1-tech-paid-serp/session-001",
+  "expiry_date": "2026-07-07",
+  "evidence_class": "TECHNICAL LIVE EVIDENCE",
+  "production_authority": false
+}
