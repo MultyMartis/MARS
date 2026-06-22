@@ -116,7 +116,8 @@
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
-	gap: var(--space-30);
+	justify-content: space-between;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -128,10 +129,6 @@
 	line-height: var(--line-height-nav);
 	color: var(--color-text-primary);
 	white-space: nowrap;
-}
-
-.site-header__nav-item--search {
-	margin-left: auto;
 }
 
 .site-header__search {

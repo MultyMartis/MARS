@@ -42,27 +42,38 @@ $footer-callback-font-size: 12px; // BLOCK_LEVEL_TOKEN — compact outline CTA l
 .site-footer__social {
 	display: flex;
 	align-items: center;
-	gap: var(--space-10);
+	gap: var(--footer-social-gap);
 	flex: 0 0 auto;
 }
 
 .site-footer__social-link {
-	display: block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	flex: 0 0 auto;
+	width: var(--footer-social-size);
+	height: var(--footer-social-size);
+	border-radius: var(--radius-pill);
+	background-color: var(--footer-social-background);
 	line-height: 0;
+	transition: opacity var(--transition-base);
+
+	&:hover,
+	&:focus-visible {
+		opacity: 0.85;
+	}
 }
 
 .site-footer__social-icon {
 	display: block;
-	width: var(--icon-size-medium);
-	height: var(--icon-size-medium);
+	width: var(--footer-social-icon-size);
+	height: var(--footer-social-icon-size);
 }
 
-.site-footer__social-link--asset-required {
-	width: var(--icon-size-medium);
-	height: var(--icon-size-medium);
-	border-radius: var(--radius-pill);
-	background-color: var(--color-surface);
+.site-footer__social-fa {
+	font-size: var(--footer-social-fa-size);
+	color: var(--color-accent);
+	line-height: 1;
 }
 
 .site-footer__phone {
