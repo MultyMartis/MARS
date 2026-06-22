@@ -18,6 +18,19 @@ Documentation-first **WordPress implementation subsystem** of MARS Website Facto
 
 ---
 
+## Status (FW-01 complete)
+
+```text
+FW-00 — COMPLETE
+FW-01 — COMPLETE
+FW-02 — NEXT
+Architecture: DOCUMENTED
+Methodology: BASELINE v1
+Implementation capability: NOT STARTED
+```
+
+---
+
 ## Position in the pipeline
 
 ```text
@@ -38,12 +51,31 @@ Human remains the final authority. Production runtime and autonomous deployment 
 | Document | Purpose |
 |----------|---------|
 | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) | Session navigation and current state |
+| [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md) | Layer model L1–L10 |
+| [FORGE-WORDPRESS-PROJECT-LIFECYCLE-v1.md](FORGE-WORDPRESS-PROJECT-LIFECYCLE-v1.md) | FWP-01–FWP-12 stages |
+| [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md) | Core FW-01 decisions |
 | [FORGE-WORDPRESS-IDENTITY-v1.md](FORGE-WORDPRESS-IDENTITY-v1.md) | Identity and classification |
-| [FORGE-WORDPRESS-SCOPE-AND-BOUNDARIES-v1.md](FORGE-WORDPRESS-SCOPE-AND-BOUNDARIES-v1.md) | Preliminary scope and exclusions |
+| [FORGE-WORDPRESS-SCOPE-AND-BOUNDARIES-v1.md](FORGE-WORDPRESS-SCOPE-AND-BOUNDARIES-v1.md) | Scope and exclusions |
 | [FORGE-WORDPRESS-ECOSYSTEM-POSITION-v1.md](FORGE-WORDPRESS-ECOSYSTEM-POSITION-v1.md) | Ecosystem relationships |
-| [FORGE-WORDPRESS-RESEARCH-REGISTER-v1.md](FORGE-WORDPRESS-RESEARCH-REGISTER-v1.md) | Evidence register |
-| [roadmap.md](roadmap.md) | High-level subsystem stages |
-| [reports/](reports/) | Stage inputs and future reports |
+| [roadmap.md](roadmap.md) | Subsystem stages |
+| [reports/](reports/) | Stage inputs, decision records |
+
+---
+
+## FW-01 methodology pack
+
+| Area | Document |
+|------|----------|
+| Capabilities | [FORGE-WORDPRESS-CAPABILITY-MODEL-v1.md](FORGE-WORDPRESS-CAPABILITY-MODEL-v1.md) |
+| Implementation modes | [FORGE-WORDPRESS-IMPLEMENTATION-MODES-v1.md](FORGE-WORDPRESS-IMPLEMENTATION-MODES-v1.md) |
+| Artifacts | [FORGE-WORDPRESS-PROJECT-ARTIFACT-MODEL-v1.md](FORGE-WORDPRESS-PROJECT-ARTIFACT-MODEL-v1.md) |
+| Roles | [FORGE-WORDPRESS-ROLE-AND-AGENT-MODEL-v1.md](FORGE-WORDPRESS-ROLE-AND-AGENT-MODEL-v1.md) |
+| Tooling (classes) | [FORGE-WORDPRESS-TOOLING-ARCHITECTURE-v1.md](FORGE-WORDPRESS-TOOLING-ARCHITECTURE-v1.md) |
+| Validation WV0–WV9 | [FORGE-WORDPRESS-VALIDATION-ARCHITECTURE-v1.md](FORGE-WORDPRESS-VALIDATION-ARCHITECTURE-v1.md) |
+| Human control | [FORGE-WORDPRESS-HUMAN-CONTROL-MODEL-v1.md](FORGE-WORDPRESS-HUMAN-CONTROL-MODEL-v1.md) |
+| Handoff boundaries | [FORGE-WORDPRESS-HANDOFF-BOUNDARIES-v1.md](FORGE-WORDPRESS-HANDOFF-BOUNDARIES-v1.md) |
+| Research adaptation | [FORGE-WORDPRESS-RESEARCH-ADAPTATION-REGISTER-v1.md](FORGE-WORDPRESS-RESEARCH-ADAPTATION-REGISTER-v1.md) |
+| Research register | [FORGE-WORDPRESS-RESEARCH-REGISTER-v1.md](FORGE-WORDPRESS-RESEARCH-REGISTER-v1.md) |
 
 ---
 
@@ -63,4 +95,4 @@ Research Base v1: [research/README.md](../../../../workspaces/website-factory-op
 
 ---
 
-*Foundation entity only. Not runtime. Not a registered agent. Not production WordPress capability.*
+*Foundation + architecture v1. Not runtime. Not a registered agent. Not production WordPress capability.*

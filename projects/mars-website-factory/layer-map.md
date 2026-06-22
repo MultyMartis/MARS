@@ -101,10 +101,10 @@ The **Artifact Bus Layer v0** is **not** an eighth runtime pipeline — it is **
 | Aspect | Content |
 |--------|---------|
 | **Purpose** | Transform **approved Website Factory frontend packages** into **WordPress implementation packages** (theme/plugin architecture, content model, templates, admin UX planning, QA-gated handoff). |
-| **Subsystem** | **Forge WordPress** — [subsystems/forge-wordpress/](subsystems/forge-wordpress/README.md) (**FOUNDATION**; FW-00 complete; architecture **not started**). |
-| **Planned agents** | **SAFE UNKNOWN** — `AG-WP-001` internal seed only; **not** registered in `agents/registry.md`; agent vs skill family is Phase 1 decision. |
-| **Expected artifacts** | WordPress implementation package, content model spec, handoff package to WPilot — **planned**; none evidenced at FOUNDATION. |
-| **QA gates** | Implementation fidelity vs approved frontend; validation stack **TBD** Phase 1; Factory VL chain applies to **upstream** frontend only until WP-specific gates exist. |
+| **Subsystem** | **Forge WordPress** — [subsystems/forge-wordpress/](subsystems/forge-wordpress/README.md) (**FOUNDATION**; FW-01 complete; architecture **documented**; implementation **not started**). |
+| **Planned agents** | **SAFE UNKNOWN** — `AG-WP-001` internal seed only; **not** registered; primary implementation agent deferred to FW-05 charter. |
+| **Expected artifacts** | Per [FORGE-WORDPRESS-PROJECT-ARTIFACT-MODEL-v1.md](subsystems/forge-wordpress/FORGE-WORDPRESS-PROJECT-ARTIFACT-MODEL-v1.md) — **defined**; none evidenced on disk for pilots yet. |
+| **QA gates** | **WV0–WV9** — [FORGE-WORDPRESS-VALIDATION-ARCHITECTURE-v1.md](subsystems/forge-wordpress/FORGE-WORDPRESS-VALIDATION-ARCHITECTURE-v1.md); Factory VL0–VL6 applies **upstream** only. |
 | **Downstream** | **WPilot** — controlled WordPress **operations** (not development). |
 | **SAFE UNKNOWN risks** | Conflating **MARS Forge** (frontend overlay) with **Forge WordPress**; starting implementation before Phase 1 architecture; duplicating WPilot operations scope. |
 | **Status honesty** | **Candidate layer** — **not** operational, **not** runtime, **not** a built production layer until architecture approval and pilot evidence. |
