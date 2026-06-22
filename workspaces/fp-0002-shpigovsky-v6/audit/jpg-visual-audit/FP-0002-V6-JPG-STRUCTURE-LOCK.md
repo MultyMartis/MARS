@@ -257,7 +257,7 @@ JPG-derived hierarchy. No HTML/CSS/JS.
 ## BLOCK-029
 - Order: 29
 - Y: 13776–14368 (592px)
-- Role: contact form dark section (visually proven)
+- Role: SAFE UNKNOWN — role not labeled on JPG
 - Parent area: PAGE
 - Columns: SAFE UNKNOWN
 - Components in block: CMP-016
