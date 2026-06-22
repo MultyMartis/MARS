@@ -1,0 +1,89 @@
+{
+  "decision_set_id": "orca-ppc-semantic-intelligence-operator-decisions",
+  "version": "v1",
+  "recorded_date": "2026-06-22",
+  "decisions": {
+    "D1": {
+      "id": "D1",
+      "title": "Research status",
+      "decision": "ADOPT SELECTIVELY AS BASIS FOR ORCA TARGET ARCHITECTURE",
+      "notes": "Source is not promoted in full automatically."
+    },
+    "D2": {
+      "id": "D2",
+      "title": "Corvonero clean-room v1",
+      "decision": "FREEZE AS DIAGNOSTIC — RE-RUN SEMANTIC ADMISSION AFTER GUIDELINE AND BENCHMARK",
+      "notes": "Do not manually clean 1892 accepted phrases."
+    },
+    "D3": {
+      "id": "D3",
+      "title": "Production-blocker metrics",
+      "decision": "INITIAL_PILOT_THRESHOLDS",
+      "thresholds": {
+        "commercial_precision_auto_accept_min": 0.95,
+        "protected_strata_fpr_max_per_class": 0.01
+      },
+      "protected_classes": [
+        "career",
+        "educational",
+        "diy_how_to",
+        "regulatory",
+        "navigational"
+      ],
+      "threshold_change_policy": "requires_new_versioned_operator_decision"
+    },
+    "D4": {
+      "id": "D4",
+      "title": "Abstention policy",
+      "decision": "ABSTAIN IS MANDATORY WHEN COMMERCIAL INTENT IS NOT SUFFICIENTLY SUPPORTED",
+      "rules": [
+        "system_must_not_invent_commercial_interpretation",
+        "ambiguity_cannot_auto_resolve_to_accept",
+        "needs_operator_decision_may_be_workflow_status",
+        "classification_must_explicitly_contain_abstain"
+      ]
+    },
+    "D5": {
+      "id": "D5",
+      "title": "Gold dataset scope",
+      "decision": "DUAL_SCOPE_BENCHMARK_PROGRAM",
+      "universal_orca_benchmark_phrases": {
+        "min": 1200,
+        "max": 2000
+      },
+      "corvonero_pilot_phrases": {
+        "min": 300,
+        "max": 500
+      },
+      "requirements": [
+        "independent_blind_test",
+        "protected_hard_negative_strata"
+      ],
+      "corvonero_pilot_role": "bounded_pilot_within_universal_program"
+    },
+    "D6": {
+      "id": "D6",
+      "title": "Canonical research path",
+      "decision": "FIXED_LOCUS",
+      "canonical_path": "projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/",
+      "canonical_source": "ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-v1.md"
+    },
+    "D7": {
+      "id": "D7",
+      "title": "Corvonero restart boundary",
+      "decision": "DOWNSTREAM_PRODUCTION_PROHIBITED_UNTIL_GATES_PASS",
+      "prohibited_until_gate_pass": [
+        "campaign_architecture",
+        "advertising_groups",
+        "advertisements",
+        "final_negatives",
+        "bids",
+        "match_type_production",
+        "commander_export",
+        "import",
+        "launch"
+      ],
+      "additional_requirement": "semantic_core_explicit_operator_sign_off_before_campaign_production"
+    }
+  }
+}

@@ -120,7 +120,39 @@ Pre-implementation architecture layer — intake, projects, evidence, campaign m
 | [artifacts/approval-gates-contract-v0.md](artifacts/approval-gates-contract-v0.md) | HITL approval gates (no auto-launch) |
 | [research/orca-research-layer-v0.md](research/orca-research-layer-v0.md) | Human-operated research collection |
 
+## ORCA PPC Semantic Intelligence — World Practice Research (2026-06)
+
+**Analytical source only** — not approved architecture, not runtime, not phrase authority. Operator decisions D1–D7 recorded. Campaign production and Corvonero semantic rerun **blocked** until promotion backlog P0-A through P0-G pass and Semantic Core sign-off (P0-H).
+
+| Doc | Role |
+|-----|------|
+| [research/ppc-semantic-intelligence/world-practice-2026-06/README.md](research/ppc-semantic-intelligence/world-practice-2026-06/README.md) | Package entry — lifecycle and canonical source |
+| [research/ppc-semantic-intelligence/world-practice-2026-06/decisions/ORCA-PPC-SEMANTIC-INTELLIGENCE-OPERATOR-DECISIONS-v1.md](research/ppc-semantic-intelligence/world-practice-2026-06/decisions/ORCA-PPC-SEMANTIC-INTELLIGENCE-OPERATOR-DECISIONS-v1.md) | Operator decisions D1–D7 |
+| [research/ppc-semantic-intelligence/world-practice-2026-06/gap-analysis/ORCA-PPC-SEMANTIC-INTELLIGENCE-GAP-MATRIX-v1.md](research/ppc-semantic-intelligence/world-practice-2026-06/gap-analysis/ORCA-PPC-SEMANTIC-INTELLIGENCE-GAP-MATRIX-v1.md) | 20-layer research-to-ORCA gap matrix |
+| [research/ppc-semantic-intelligence/world-practice-2026-06/promotion/ORCA-PPC-SEMANTIC-INTELLIGENCE-PROMOTION-BACKLOG-v1.md](research/ppc-semantic-intelligence/world-practice-2026-06/promotion/ORCA-PPC-SEMANTIC-INTELLIGENCE-PROMOTION-BACKLOG-v1.md) | P0-A through P0-H selective promotion backlog |
+
+**Canonical source:** `research/ppc-semantic-intelligence/world-practice-2026-06/ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-v1.md` (SHA-256 verified at intake). **Next gate:** ORCA Semantic Intelligence Architecture Decision Record.
+
+**Corvonero clean-room v1:** `DIAGNOSTIC FAILED — COMMERCIAL ADMISSION LOGIC NOT APPROVED` — see [projects/corvonero-direct-v2-clean-room/PROJECT.md](projects/corvonero-direct-v2-clean-room/PROJECT.md). Reusable corpus preserved; semantic decisions frozen.
+
 **Contracts (v0):** [landing-route-registry-contract-v0.md](intelligence/landing-route-registry-contract-v0.md) · [ppc-landing-qa-contract-v0.md](intelligence/ppc-landing-qa-contract-v0.md) · [competitor-snapshot-contract-v0.md](research/competitor-snapshot-contract-v0.md) · [research-session-snapshot-contract-v0.md](research/research-session-snapshot-contract-v0.md) · [moderation-incident-registry-v0.md](moderation/moderation-incident-registry-v0.md)
+
+## ORCA Campaign Production Contract v1
+
+**Authority layer above classifier, repair package, and pipeline validators.** Derived from Triumph Manipulator battle production evidence. **Not** runtime.
+
+| Doc | Role |
+|-----|------|
+| [contracts/ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1.md](contracts/ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1.md) | Canonical production contract — scope, seeds, viability, QA boundary |
+| [contracts/orca-campaign-production-contract-v1.json](contracts/orca-campaign-production-contract-v1.json) | Machine-readable contract |
+| [contracts/orca-campaign-production-invariants-v1.json](contracts/orca-campaign-production-invariants-v1.json) | Invariant registry |
+| [knowledge/triumph-manipulator-production-evidence-inventory.md](knowledge/triumph-manipulator-production-evidence-inventory.md) | Triumph evidence inventory |
+| [knowledge/triumph-manipulator-production-process-v1.md](knowledge/triumph-manipulator-production-process-v1.md) | Reconstructed Triumph production process |
+| [knowledge/triumph-derived-orca-laws-v1.md](knowledge/triumph-derived-orca-laws-v1.md) | 15 reusable ORCA laws |
+| [architecture/orca-production-contract-integration-plan-v1.md](architecture/orca-production-contract-integration-plan-v1.md) | Pipeline authority integration plan |
+| [tools/validate-campaign-production-contract.mjs](tools/validate-campaign-production-contract.mjs) | Read-only contract validator |
+
+**Corvonero v7 contract gate (FINAL):** [projects/corvonero-yandex-direct/production/validation/orca-production-contract-audit-v7.md](projects/corvonero-yandex-direct/production/validation/orca-production-contract-audit-v7.md) — **PASS — V7 AUTHORITY SYNCHRONIZED**; actual XLSX review and Commander dry-run authorized after external file review. Authority sync: [operator-scope-authority-sync-v7.json](projects/corvonero-yandex-direct/production/audit/operator-scope-authority-sync-v7.json).
 
 ## ORCA Landing Readiness Layer v1
 
@@ -133,6 +165,14 @@ Source-agnostic landing verification between Semantic and PPC — deployed copy 
 | [intelligence/final-website-copy-pack-v1.md](intelligence/final-website-copy-pack-v1.md) | Final Website Copy Pack artifact — semantic pack ≠ deployed copy |
 
 **Intake drop zone:** `incoming/orca/<project-id>-raw-pack/` (see intake architecture).
+
+## Active ORCA project containers
+
+| project_id | Status | Entry |
+|------------|--------|-------|
+| `triumph-manipulator-krasnodar` | launch-prep (Search export) | [projects/triumph-manipulator-krasnodar/PROJECT.md](projects/triumph-manipulator-krasnodar/PROJECT.md) |
+| `corvonero-yandex-direct` | **HISTORICAL DIAGNOSTIC — NOT SEMANTIC SOURCE** (v1–v7.1) | [projects/corvonero-yandex-direct/PROJECT.md](projects/corvonero-yandex-direct/PROJECT.md) |
+| `corvonero-direct-v2-clean-room` | **DIAGNOSTIC FAILED — FROZEN** — corpus preserved; semantic rerun blocked until Semantic Intelligence gates | [projects/corvonero-direct-v2-clean-room/PROJECT.md](projects/corvonero-direct-v2-clean-room/PROJECT.md) |
 
 ## ORCA Route Family Freeze v1
 

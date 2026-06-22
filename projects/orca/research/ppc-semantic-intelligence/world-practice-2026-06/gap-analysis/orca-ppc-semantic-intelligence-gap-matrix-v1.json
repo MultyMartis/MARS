@@ -1,0 +1,354 @@
+{
+  "matrix_id": "orca-ppc-semantic-intelligence-gap-matrix",
+  "version": "v1",
+  "date": "2026-06-22",
+  "maturity_scale": ["ABSENT", "DOCUMENTED", "PARTIAL", "PILOT", "VALIDATED"],
+  "layers": [
+    {
+      "layer_number": 1,
+      "layer_name": "Operator Authority",
+      "research_recommendation": "Versioned operator brief, scope freeze, threshold governance, sign-off before campaign production",
+      "current_evidence": "Corvonero intake v1; operator decisions D1-D7",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/intake/",
+        "projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/decisions/"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Operator intake and D1-D7 recorded",
+      "missing_capability": "Semantic Core authority sign-off contract P0-H",
+      "risk": "Scope drift without authority contract",
+      "required_promotion_artifact": "P0-H",
+      "dependencies": ["P0-A"],
+      "corvonero_blocking_impact": "HIGH",
+      "implementation_status": "DOCUMENTED governance only"
+    },
+    {
+      "layer_number": 2,
+      "layer_name": "Market Evidence",
+      "research_recommendation": "Evidence packs with source log from Wordstat, tools, search terms",
+      "current_evidence": "MIG Wordstat Pass A; ORCA research layer v0",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/mig-source/",
+        "projects/orca/research/orca-research-layer-v0.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Corvonero MIG corpus with ledger",
+      "missing_capability": "Benchmark-stratified market evidence",
+      "risk": "Corpus insufficient for commercial admission",
+      "required_promotion_artifact": "P0-D",
+      "dependencies": ["P0-C"],
+      "corvonero_blocking_impact": "MEDIUM",
+      "implementation_status": "PILOT evidence Corvonero only"
+    },
+    {
+      "layer_number": 3,
+      "layer_name": "Source Corpus",
+      "research_recommendation": "Raw corpus snapshot with provenance",
+      "current_evidence": "Normalized corpus and canonical phrase registry v1",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-NORMALIZED-CORPUS-v1.md",
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-CANONICAL-PHRASE-REGISTRY-v1.md"
+      ],
+      "maturity": "PILOT",
+      "confirmed_capability": "2370 unique raw phrases preserved",
+      "missing_capability": "Universal ORCA corpus program",
+      "risk": "Version drift on re-run",
+      "required_promotion_artifact": "P0-A corpus versioning",
+      "dependencies": [],
+      "corvonero_blocking_impact": "LOW",
+      "implementation_status": "PILOT clean-room v1"
+    },
+    {
+      "layer_number": 4,
+      "layer_name": "Normalization",
+      "research_recommendation": "Lemmatization, dedupe, operator-aware parsing",
+      "current_evidence": "normalize-mig-corpus.mjs; normalized corpus v1",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/tools/normalize-mig-corpus.mjs"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Basic MIG normalization",
+      "missing_capability": "Yandex operator test suite",
+      "risk": "Operator scope loss",
+      "required_promotion_artifact": "P0-A normalizer requirements",
+      "dependencies": ["P0-B"],
+      "corvonero_blocking_impact": "MEDIUM",
+      "implementation_status": "PARTIAL script not validated product"
+    },
+    {
+      "layer_number": 5,
+      "layer_name": "Query Understanding",
+      "research_recommendation": "Entity/action/object feature object",
+      "current_evidence": "Research recommendation only",
+      "artifact_paths": [
+        "projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/intake/ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-NORMALIZED-v1.md"
+      ],
+      "maturity": "ABSENT",
+      "confirmed_capability": "None",
+      "missing_capability": "Query understanding schema and extractors",
+      "risk": "Admission without task decomposition",
+      "required_promotion_artifact": "P0-B",
+      "dependencies": ["P0-A"],
+      "corvonero_blocking_impact": "HIGH",
+      "implementation_status": "NOT STARTED"
+    },
+    {
+      "layer_number": 6,
+      "layer_name": "Intent Screening",
+      "research_recommendation": "Hard exclusions and query-type classification",
+      "current_evidence": "CORVONERO-INTENT-SCREENING-v1 DIAGNOSTIC EVIDENCE ONLY",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-INTENT-SCREENING-v1.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Diagnostic pass existed",
+      "missing_capability": "Benchmark-gated screening with abstention",
+      "risk": "Protected strata leakage",
+      "required_promotion_artifact": "P0-C, P0-F",
+      "dependencies": ["P0-D", "P0-E"],
+      "corvonero_blocking_impact": "CRITICAL",
+      "implementation_status": "DIAGNOSTIC FAILED"
+    },
+    {
+      "layer_number": 7,
+      "layer_name": "Commercial Eligibility",
+      "research_recommendation": "accept/reject/abstain with cost-sensitive thresholds",
+      "current_evidence": "CORVONERO-COMMERCIAL-ELIGIBILITY-v1 DIAGNOSTIC EVIDENCE ONLY",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-COMMERCIAL-ELIGIBILITY-v1.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "1892 diagnostic accepts",
+      "missing_capability": "D3/D4 gated classifier",
+      "risk": "Paid search false positives",
+      "required_promotion_artifact": "P0-G",
+      "dependencies": ["P0-C", "P0-D", "P0-F"],
+      "corvonero_blocking_impact": "CRITICAL",
+      "implementation_status": "DIAGNOSTIC FAILED"
+    },
+    {
+      "layer_number": 8,
+      "layer_name": "Semantic Adjudication",
+      "research_recommendation": "Per-phrase adjudication record with abstain",
+      "current_evidence": "Research field model",
+      "artifact_paths": [
+        "projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-v1.md"
+      ],
+      "maturity": "DOCUMENTED",
+      "confirmed_capability": "Recommended field model in research",
+      "missing_capability": "Approved schema and workflow",
+      "risk": "Invented commercial intent",
+      "required_promotion_artifact": "P0-B, P0-C",
+      "dependencies": ["P0-A"],
+      "corvonero_blocking_impact": "HIGH",
+      "implementation_status": "NOT STARTED"
+    },
+    {
+      "layer_number": 9,
+      "layer_name": "Service Mapping",
+      "research_recommendation": "Ownership with confidence and conflict review",
+      "current_evidence": "Phrase-to-service map v1 DIAGNOSTIC EVIDENCE ONLY",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-PHRASE-TO-SERVICE-MAP-v1.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "34 service IDs; diagnostic mapping",
+      "missing_capability": "Mapping precision gate",
+      "risk": "Wrong ownership",
+      "required_promotion_artifact": "P0-G",
+      "dependencies": ["P0-B", "P0-C"],
+      "corvonero_blocking_impact": "HIGH",
+      "implementation_status": "DIAGNOSTIC FAILED"
+    },
+    {
+      "layer_number": 10,
+      "layer_name": "Cluster Discovery",
+      "research_recommendation": "Task-based clusters with operator approval",
+      "current_evidence": "Cluster candidates v1 DIAGNOSTIC EVIDENCE ONLY",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-COMMERCIAL-CLUSTER-CANDIDATES-v1.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Diagnostic clusters generated",
+      "missing_capability": "Approved cluster spec on approved core",
+      "risk": "Lexical intent mixing",
+      "required_promotion_artifact": "P0-A stage separation",
+      "dependencies": ["P0-H"],
+      "corvonero_blocking_impact": "HIGH",
+      "implementation_status": "DIAGNOSTIC FAILED"
+    },
+    {
+      "layer_number": 11,
+      "layer_name": "Negative Intelligence",
+      "research_recommendation": "Negatives after ownership with collision tests",
+      "current_evidence": "Negative candidate registry v1 DIAGNOSTIC; Triumph cross-negative freeze",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-NEGATIVE-CANDIDATE-REGISTRY-v1.md",
+        "projects/orca/freeze/ppc-exporter-production-baseline-v1/CROSS-NEGATIVE-RULES-v1.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Triumph cross-negative doctrine",
+      "missing_capability": "ORCA semantic negatives on approved ownership",
+      "risk": "Destructive negatives",
+      "required_promotion_artifact": "P0-A, P0-H",
+      "dependencies": ["Approved service map"],
+      "corvonero_blocking_impact": "CRITICAL",
+      "implementation_status": "DIAGNOSTIC candidates only"
+    },
+    {
+      "layer_number": 12,
+      "layer_name": "Human Review",
+      "research_recommendation": "Double annotation and adjudication queues",
+      "current_evidence": "Review workbook; approval gates contract v0",
+      "artifact_paths": [
+        "projects/orca/artifacts/approval-gates-contract-v0.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "HITL vocabulary; diagnostic workbook",
+      "missing_capability": "Guideline and double annotation",
+      "risk": "Self-validating pipeline",
+      "required_promotion_artifact": "P0-C, P0-D, P0-E",
+      "dependencies": ["Benchmark charters"],
+      "corvonero_blocking_impact": "HIGH",
+      "implementation_status": "PARTIAL diagnostic workbook"
+    },
+    {
+      "layer_number": 13,
+      "layer_name": "Semantic Core Authority",
+      "research_recommendation": "Freeze Approved Semantic Core before campaigns",
+      "current_evidence": "Semantic core candidate v1 NOT APPROVED; campaign production contract v1",
+      "artifact_paths": [
+        "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-DIRECT-SEMANTIC-CORE-CANDIDATE-v1.md",
+        "projects/orca/contracts/ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1.md"
+      ],
+      "maturity": "PARTIAL",
+      "confirmed_capability": "Production contract documents authority concept",
+      "missing_capability": "Approved Semantic Core P0-H",
+      "risk": "Pipeline contamination",
+      "required_promotion_artifact": "P0-H",
+      "dependencies": ["P0-G"],
+      "corvonero_blocking_impact": "CRITICAL",
+      "implementation_status": "CANDIDATE v1 INVALID"
+    },
+    {
+      "layer_number": 14,
+      "layer_name": "Campaign Architecture",
+      "research_recommendation": "Blueprint after approved core",
+      "current_evidence": "Campaign mode architecture v0; Corvonero PROJECT D7 block",
+      "artifact_paths": [
+        "projects/orca/campaign-modes/orca-campaign-mode-architecture-v0.md",
+        "projects/orca/projects/corvonero-direct-v2-clean-room/PROJECT.md"
+      ],
+      "maturity": "DOCUMENTED",
+      "confirmed_capability": "Documentation separation; D7 prohibition",
+      "missing_capability": "Corvonero v2 campaign architecture",
+      "risk": "Premature groups",
+      "required_promotion_artifact": "P0-H sign-off",
+      "dependencies": ["Approved semantic core"],
+      "corvonero_blocking_impact": "BLOCKED D7",
+      "implementation_status": "NOT STARTED Corvonero"
+    },
+    {
+      "layer_number": 15,
+      "layer_name": "Ad and Landing Alignment",
+      "research_recommendation": "Honest landing fit per cluster",
+      "current_evidence": "Landing readiness layer v1",
+      "artifact_paths": [
+        "projects/orca/intelligence/landing-readiness-layer-v1.md"
+      ],
+      "maturity": "DOCUMENTED",
+      "confirmed_capability": "Landing QA layer documented",
+      "missing_capability": "Corvonero landing routes",
+      "risk": "Ads compensate bad core",
+      "required_promotion_artifact": "Post P0-H campaign phase",
+      "dependencies": ["Approved clusters"],
+      "corvonero_blocking_impact": "BLOCKED D7",
+      "implementation_status": "NOT STARTED Corvonero"
+    },
+    {
+      "layer_number": 16,
+      "layer_name": "Match Type and Bid Layer",
+      "research_recommendation": "Match/bid plan after blueprint",
+      "current_evidence": "Triumph bid rules freeze",
+      "artifact_paths": [
+        "projects/orca/freeze/ppc-exporter-production-baseline-v1/BID-MANAGEMENT-RULES-v1.md"
+      ],
+      "maturity": "DOCUMENTED",
+      "confirmed_capability": "Triumph bid doctrine",
+      "missing_capability": "Corvonero match-type plan",
+      "risk": "Match strategy rewrites core",
+      "required_promotion_artifact": "Post semantic-core gate",
+      "dependencies": ["P0-H"],
+      "corvonero_blocking_impact": "BLOCKED D7",
+      "implementation_status": "NOT STARTED Corvonero"
+    },
+    {
+      "layer_number": 17,
+      "layer_name": "Production Dataset",
+      "research_recommendation": "Schema-validated export tables",
+      "current_evidence": "Triumph schema and exporter",
+      "artifact_paths": [
+        "projects/orca/ppc/triumph-manipulator/schema/"
+      ],
+      "maturity": "VALIDATED",
+      "confirmed_capability": "Triumph battle-tested dataset path",
+      "missing_capability": "Corvonero production dataset",
+      "risk": "Semantic mutation at export",
+      "required_promotion_artifact": "P0-H export QA",
+      "dependencies": ["Approved core"],
+      "corvonero_blocking_impact": "BLOCKED D7",
+      "implementation_status": "Triumph only"
+    },
+    {
+      "layer_number": 18,
+      "layer_name": "Platform Export",
+      "research_recommendation": "Commander export with pre-export QA",
+      "current_evidence": "PPC exporter production baseline v1",
+      "artifact_paths": [
+        "projects/orca/freeze/ppc-exporter-production-baseline-v1/"
+      ],
+      "maturity": "VALIDATED",
+      "confirmed_capability": "Triumph Commander baseline",
+      "missing_capability": "Corvonero export",
+      "risk": "Export mutates semantics",
+      "required_promotion_artifact": "External artefact QA",
+      "dependencies": ["P0-H"],
+      "corvonero_blocking_impact": "BLOCKED D7",
+      "implementation_status": "NOT STARTED Corvonero"
+    },
+    {
+      "layer_number": 19,
+      "layer_name": "External Artifact QA",
+      "research_recommendation": "Parity and checksum QA",
+      "current_evidence": "Commander hygiene audit Triumph",
+      "artifact_paths": [
+        "projects/orca/freeze/ppc-exporter-production-baseline-v1/COMMANDER-HYGIENE-AUDIT-v1.md"
+      ],
+      "maturity": "VALIDATED",
+      "confirmed_capability": "Triumph hygiene checklist",
+      "missing_capability": "Corvonero export QA",
+      "risk": "Silent mutations",
+      "required_promotion_artifact": "Reuse Triumph QA in charter",
+      "dependencies": ["Production dataset"],
+      "corvonero_blocking_impact": "BLOCKED D7",
+      "implementation_status": "Triumph only"
+    },
+    {
+      "layer_number": 20,
+      "layer_name": "Post-Launch Search-Term Learning",
+      "research_recommendation": "Post-launch feedback not pre-launch excuse",
+      "current_evidence": "search-terms-review assembly",
+      "artifact_paths": [
+        "projects/orca/search-terms-review/"
+      ],
+      "maturity": "DOCUMENTED",
+      "confirmed_capability": "Human search-term review docs",
+      "missing_capability": "Corvonero post-launch loop",
+      "risk": "Bad core rationalized post-hoc",
+      "required_promotion_artifact": "P0-A post-launch policy",
+      "dependencies": ["Launch prohibited until gates"],
+      "corvonero_blocking_impact": "N/A until launch",
+      "implementation_status": "NOT STARTED Corvonero"
+    }
+  ]
+}

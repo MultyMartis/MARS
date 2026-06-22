@@ -1,0 +1,111 @@
+{
+  "backlog_id": "orca-ppc-semantic-intelligence-promotion-backlog",
+  "version": "v1",
+  "all_items_status": "NOT STARTED",
+  "items": [
+    {
+      "id": "P0-A",
+      "title": "Architecture Decision Record",
+      "purpose": "Selectively promote research findings into ORCA architecture",
+      "inputs": ["world_practice_research_v1", "operator_decisions_D1_D7", "gap_matrix_v1"],
+      "outputs": ["architecture/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md"],
+      "dependencies": [],
+      "authority": "operator_and_architecture_maintainer",
+      "gate": "ADR approved before P0-B",
+      "prohibited_claims": ["not_runtime", "not_classifier", "not_auto_promoted_research"],
+      "corvonero_impact": "Unblocks design for v2 semantic rerun",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-B",
+      "title": "Semantic Taxonomy and Record Schema",
+      "purpose": "Define per-phrase semantic record schema",
+      "inputs": ["research_adjudication_table", "D4_abstention_policy"],
+      "outputs": ["semantic_record_schema_md", "semantic_record_schema_json"],
+      "dependencies": ["P0-A"],
+      "authority": "architecture_ADR",
+      "gate": "Schema frozen before P0-C",
+      "prohibited_claims": ["not_phrase_registry", "not_production_decisions"],
+      "corvonero_impact": "Required before new admission run",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-C",
+      "title": "Annotation Guideline",
+      "purpose": "Human-readable rules, examples, counterexamples, adjudication policy",
+      "inputs": ["P0-B_schema", "research_failure_modes", "corvonero_diagnostic_examples"],
+      "outputs": ["annotation_guideline_md"],
+      "dependencies": ["P0-B"],
+      "authority": "operator_authority",
+      "gate": "Guideline approved before benchmark annotation",
+      "prohibited_claims": ["not_benchmark_data"],
+      "corvonero_impact": "Required per D2 before semantic rerun",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-D",
+      "title": "Benchmark Charter",
+      "purpose": "Universal ORCA benchmark 1200-2000 phrases",
+      "inputs": ["D5_sizing", "research_strata_table"],
+      "outputs": ["benchmark_charter_md"],
+      "dependencies": ["P0-C"],
+      "authority": "operator_and_qa_owner",
+      "gate": "Gold freeze before baseline eval",
+      "prohibited_claims": ["not_trained_model", "not_production_core"],
+      "corvonero_impact": "Parent program for Corvonero pilot",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-E",
+      "title": "Corvonero Pilot Charter",
+      "purpose": "Bounded pilot 300-500 phrases within universal benchmark",
+      "inputs": ["D5_pilot_sizing", "D3_thresholds", "preserved_corpus"],
+      "outputs": ["corvonero_pilot_charter_md"],
+      "dependencies": ["P0-D"],
+      "authority": "operator_authority",
+      "gate": "Pilot pass before full corpus rerun",
+      "prohibited_claims": ["not_campaign_production_authorization"],
+      "corvonero_impact": "Direct go/no-go for v2 semantic line",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-F",
+      "title": "Baseline Implementations",
+      "purpose": "Compare rules, structured LLM, and hybrid hierarchical baselines",
+      "inputs": ["P0-C_guideline", "benchmark_dev_split"],
+      "outputs": ["baseline_evaluation_reports"],
+      "dependencies": ["P0-D"],
+      "authority": "ml_engineer_and_operator",
+      "gate": "Baselines measured before threshold tuning",
+      "prohibited_claims": ["not_validated_production_classifier"],
+      "corvonero_impact": "Informs upgraded admission",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-G",
+      "title": "Evaluation and Threshold Gate",
+      "purpose": "Measure commercial precision, protected FPR, abstention, calibration",
+      "inputs": ["P0-F_baselines", "blind_test", "D3_thresholds"],
+      "outputs": ["threshold_gate_report"],
+      "dependencies": ["P0-F", "P0-E"],
+      "authority": "operator_go_no_go",
+      "gate": "Pass required for full corpus rerun and P0-H",
+      "prohibited_claims": ["not_launch_approval"],
+      "corvonero_impact": "Blocks or permits semantic rerun",
+      "status": "NOT STARTED"
+    },
+    {
+      "id": "P0-H",
+      "title": "Semantic Core Authority Contract",
+      "purpose": "Block campaign production until approved Semantic Core",
+      "inputs": ["D7", "campaign_production_contract_v1", "gap_layer_13"],
+      "outputs": ["semantic_core_authority_contract_md", "semantic_core_authority_contract_json"],
+      "dependencies": ["P0-G"],
+      "authority": "operator_sign_off",
+      "gate": "Sign-off before campaign architecture",
+      "prohibited_claims": ["not_commander_export_authorization_alone"],
+      "corvonero_impact": "CRITICAL campaign production blocked until signed",
+      "status": "NOT STARTED"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "validation_id": "orca-ppc-semantic-intelligence-research-intake-validation",
+  "version": "v1",
+  "validation_date": "2026-06-22",
+  "checks": [
+    {"id": 1, "check": "canonical_source_checksum_unchanged", "result": "PASS", "sha256": "984192DAFC79AA9E7071C5F915CD30A630924C5EEBAE22BFD6C26CCD43CE5ACD"},
+    {"id": 2, "check": "readme_references_correct_source", "result": "PASS"},
+    {"id": 3, "check": "original_research_unchanged", "result": "PASS"},
+    {"id": 4, "check": "normalized_companion_exists", "result": "PASS"},
+    {"id": 5, "check": "source_ledger_exists", "result": "PASS"},
+    {"id": 6, "check": "D1_D7_md_json_parity", "result": "PASS"},
+    {"id": 7, "check": "gap_matrix_20_layers", "result": "PASS", "layer_count": 20},
+    {"id": 8, "check": "promotion_backlog_P0_A_through_P0_H", "result": "PASS"},
+    {"id": 9, "check": "corvonero_diagnostic_freeze", "result": "PASS"},
+    {"id": 10, "check": "reusable_vs_invalid_layers", "result": "PASS"},
+    {"id": 11, "check": "no_architecture_implementation", "result": "PASS"},
+    {"id": 12, "check": "no_benchmark_generated", "result": "PASS"},
+    {"id": 13, "check": "no_corvonero_semantic_rerun", "result": "PASS"},
+    {"id": 14, "check": "no_production_export_files", "result": "PASS"},
+    {"id": 15, "check": "operational_index_updated", "result": "PASS"},
+    {"id": 16, "check": "ocpilot_untouched", "result": "PASS"},
+    {"id": 17, "check": "no_commit_no_push", "result": "PASS"}
+  ],
+  "final_status": {
+    "canonical_source": "VERIFIED — UNCHANGED",
+    "research_package": "NORMALIZED",
+    "research_authority": "ANALYTICAL SOURCE — SELECTIVE PROMOTION REQUIRED",
+    "operator_decisions": "D1–D7 RECORDED",
+    "gap_matrix": "COMPLETE",
+    "promotion_backlog": "P0-A THROUGH P0-H REGISTERED",
+    "orca_target_architecture": "NOT YET APPROVED",
+    "corvonero_clean_room_v1": "DIAGNOSTIC FAILED — FROZEN",
+    "reusable_corvonero_source_corpus": "PRESERVED",
+    "campaign_production": "BLOCKED",
+    "commander_export": "BLOCKED",
+    "next_gate": "ORCA SEMANTIC INTELLIGENCE ARCHITECTURE DECISION RECORD"
+  }
+}

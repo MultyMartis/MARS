@@ -57,6 +57,7 @@ Core documentation:
 - `workflows/` - documented workflows for research, semantics, generation, export, and QA.
 - `contracts/` - input and output contracts for handoffs between workflow steps.
 - `research/` - SERP, competitor, and review analysis methodology.
+- **PPC Semantic Intelligence — world practice research (2026-06)** — analytical source only; operator decisions D1–D7; promotion gate pending ADR: [research/ppc-semantic-intelligence/world-practice-2026-06/README.md](research/ppc-semantic-intelligence/world-practice-2026-06/README.md).
 - `semantic/` - intent, clustering, geo modifier, negative keyword, and semantic quality rules.
 - `qa/` - PPC semantic, campaign structure, landing match, and ad relevance QA.
 - `methodology/` - PPC research, campaign architecture, intent, offer, and landing methodology.
