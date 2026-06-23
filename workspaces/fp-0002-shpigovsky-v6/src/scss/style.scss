@@ -1387,9 +1387,9 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	width: 100%;
 	height: 100%;
 	padding: var(--pad-gap);
-	border: var(--border-width) solid var(--color-border-subtle);
+	border: var(--border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-main);
-	background-color: var(--color-surface);
+	background-color: ек;
 }
 
 .home-reviews__rating {
@@ -1417,7 +1417,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	margin: 0;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
-	color: var(--color-text-secondary);
 }
 
 .home-reviews__author {
@@ -1454,6 +1453,139 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-reviews__pagination .swiper-pagination-bullet-active {
 	background-color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   10j. Home rehabilitation requirements
+   ========================================================================== */
+
+.home-rehabilitation-requirements {
+	padding-top: var(--pad-gap);
+	padding-bottom: var(--pad-gap);
+}
+
+.home-rehabilitation-requirements__heading {
+	margin: 0 0 var(--pad-gap);
+	padding-left: var(--pad-gap);
+	border-left: 3px solid var(--color-accent); // EXACT_GEOMETRY — mockup H2 accent bar 3px
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-rehabilitation-requirements__intro {
+	margin: 0 0 var(--pad-gap);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.home-rehabilitation-requirements__steps {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+	margin: 0 0 var(--pad-gap);
+	padding: 0;
+	list-style: none;
+}
+
+.home-rehabilitation-requirements__step {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--pad-gap);
+}
+
+.home-rehabilitation-requirements__step-number {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 48px; // EXACT_GEOMETRY — mockup CMP-010 number disc ~48px
+	height: 48px;
+	border: var(--border-width) solid var(--color-accent);
+	border-radius: var(--radius-full);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-heading);
+	line-height: 1;
+	color: var(--color-accent);
+}
+
+.home-rehabilitation-requirements__step-body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	min-width: 0;
+}
+
+.home-rehabilitation-requirements__step-title {
+	margin: 0;
+	font-size: var(--font-size-h3);
+	line-height: var(--line-height-h3);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-rehabilitation-requirements__step-text {
+	margin: 0;
+	font-size: 16px; // EXACT_GEOMETRY — Figma step body 17px → nearest existing 16px card body
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.home-rehabilitation-requirements__cta-band {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto auto;
+	align-items: center;
+	gap: var(--pad-gap);
+	box-sizing: border-box;
+	margin-bottom: var(--pad-gap);
+	padding: var(--pad-gap);
+	border-radius: var(--radius-main);
+	background-color: var(--color-text-primary);
+	color: var(--color-text-inverse);
+}
+
+.home-rehabilitation-requirements__cta-lead {
+	margin: 0;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-inverse);
+}
+
+.home-rehabilitation-requirements__cta-phone {
+	font-size: 40px; // EXACT_GEOMETRY — reuse footer phone scale in dark band
+	font-weight: var(--font-weight-heading);
+	line-height: 40px;
+	color: var(--color-text-inverse);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.home-rehabilitation-requirements__cta-phone:hover,
+.home-rehabilitation-requirements__cta-phone:focus-visible {
+	color: var(--color-text-inverse);
+	opacity: 0.9;
+}
+
+.home-rehabilitation-requirements__cta-button {
+	flex-shrink: 0;
+}
+
+.home-rehabilitation-requirements__photo-bleed {
+	overflow: hidden;
+	border-radius: var(--radius-main);
+}
+
+.home-rehabilitation-requirements__photo {
+	display: block;
+	width: 100%;
+	height: 388px; // EXACT_GEOMETRY — JPG BLOCK-017 interior band height 388px
+	object-fit: cover;
+	object-position: center;
+	border-radius: var(--radius-main);
 }
 
 /* ==========================================================================
@@ -2132,6 +2264,26 @@ body[data-offcanvas-state='open'] {
 
 	.home-clinic-landscape__image {
 		height: 220px; // EXACT_GEOMETRY — mobile landscape band scaled from JPG 584px
+	}
+
+	.home-rehabilitation-requirements__cta-band {
+		grid-template-columns: 1fr;
+		justify-items: start;
+		max-width: 100%;
+	}
+
+	.home-rehabilitation-requirements__step-title {
+		overflow-wrap: anywhere;
+	}
+
+	.home-rehabilitation-requirements__cta-phone {
+		font-size: 24px;
+		line-height: 28px;
+		white-space: normal;
+	}
+
+	.home-rehabilitation-requirements__photo {
+		height: 220px; // EXACT_GEOMETRY — mobile interior band scaled from JPG 388px
 	}
 
 	.site-header {

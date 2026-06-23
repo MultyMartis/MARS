@@ -1,0 +1,22 @@
+{
+  "mockup_path": "C:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\INCOMING\\01_DESIGN\\HOME-PAGE-FULL-MOCKUP.jpg",
+  "mockup_sha256": "CDD1D5BCC512B617DCF93EFA97AF88CF4AD99A0895CFC27A63C07BC704945290",
+  "boundaries": {
+    "reviews_end_y": 7136,
+    "next_section_start_y": 7136,
+    "next_section_content_start_y": 7160,
+    "next_section_content_end_y": 8448,
+    "next_section_end_y": 8824,
+    "following_section_start_y": 8824,
+    "cta_band_start_y": 7504,
+    "cta_band_end_y": 8408
+  },
+  "semantic_identity": "home-rehabilitation-requirements",
+  "boundary_confidence": "HIGH",
+  "gate": {
+    "reviews_end_lte_next_start": true,
+    "next_start_lt_content_end": true,
+    "content_end_lte_next_end": true,
+    "next_end_lte_following_start": true
+  }
+}

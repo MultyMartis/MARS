@@ -1,6 +1,18 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (pre-reviews image fix + reviews Swiper)
+**Updated:** 2026-06-23 (reviews operator-stable freeze + rehabilitation requirements section)
+
+## Reviews operator-stable release
+
+| Field | Value |
+|-------|-------|
+| `reviews_release` | `FP-0002-V6-REVIEWS-OPERATOR-STABLE-01` |
+| `reviews_status` | **OPERATOR_APPROVED_FROZEN** |
+| `reviews_tag` | `fp-0002-v6-reviews-operator-stable-01` |
+| `reviews_content` | DEMO |
+| `reviews_production_replacement_required` | YES |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-REVIEWS-OPERATOR-STABLE-01-SOURCE.zip` |
+| `backup_sha256` | `18eadd1214c0c1963b93114497ff8dc1125ddb8dea6139abff0dac5d35050a5a` |
 
 ## Pre-reviews operator-stable release
 
@@ -103,15 +115,18 @@ clinic_landscape_crop: CORRECTED
 pre_reviews_release: FP-0002-V6-PRE-REVIEWS-OPERATOR-STABLE-01
 pre_reviews_status: OPERATOR_APPROVED_FROZEN
 
-home_reviews: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_reviews: OPERATOR_APPROVED_FROZEN
+home_reviews_release: FP-0002-V6-REVIEWS-OPERATOR-STABLE-01
 home_reviews_content: DEMO
 home_reviews_count: 10
 home_reviews_production_content_required: YES
 home_reviews_swiper: ACTIVE
-home_reviews_autoplay: DISABLED
-home_reviews_lightbox: DISABLED
 
-next_home_section: NOT_STARTED
+next_section_audit: COMPLETE
+next_section_implementation: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+next_section_identity: home-rehabilitation-requirements
+following_section: NOT_STARTED
+
 responsive_shell: FROZEN_PRESERVED
 ```
 
