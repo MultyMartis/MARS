@@ -5,16 +5,20 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const DEFAULT_CONTROLS = {
-  maxPhrasesPerRun: 5000,
-  batchSize: 25,
-  concurrency: 3,
-  tokenEstimatePerPhrase: 800,
-  costCapUsd: 50,
-  retryCap: 3,
-  timeoutMs: 30000,
-  backoffBaseMs: 1000,
-};
+export function getRuntimeControls() {
+  return {
+    maxPhrasesPerRun: Number(process.env.ORCA_EVAL_MAX_RECORDS) || 5000,
+    batchSize: Number(process.env.ORCA_EVAL_BATCH_SIZE) || 25,
+    concurrency: Number(process.env.ORCA_EVAL_CONCURRENCY) || 3,
+    tokenEstimatePerPhrase: 800,
+    costCapUsd: Number(process.env.ORCA_EVAL_MAX_COST) || 50,
+    retryCap: 3,
+    timeoutMs: Number(process.env.ORCA_SEMANTIC_TIMEOUT_MS) || 30000,
+    backoffBaseMs: 1000,
+  };
+}
+
+export const DEFAULT_CONTROLS = getRuntimeControls();
 
 export function assertModelAvailable(adapter) {
   if (!adapter) {

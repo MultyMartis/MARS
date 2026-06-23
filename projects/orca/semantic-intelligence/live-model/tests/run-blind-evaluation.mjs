@@ -15,7 +15,8 @@ import { assessDeterministic } from '../../production/assessors/deterministic-as
 import { createAssessorContext } from '../../production/assessors/assessor-contract.mjs';
 import { computeD3Metrics } from '../evaluation/d3-quality-gates.mjs';
 import { extractErrorFamilies, runBoundedCalibration } from '../evaluation/error-analysis.mjs';
-import { assertCostCap, DEFAULT_CONTROLS } from '../controls/cost-rate-controls.mjs';
+import { assertCostCap, getRuntimeControls } from '../controls/cost-rate-controls.mjs';
+import { loadLocalSecrets } from '../runtime/local-secret-loader.mjs';
 import { PROMPT_VERSION } from '../contracts/prompt-contract.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -108,7 +109,7 @@ async function runEvaluation(corpusPath, outSubdir, label) {
   const context = { businessScope, serviceRegistry, taxonomy: {}, commercialPolicy: { version: 'v1' } };
 
   const { adapter, mode, inventory } = resolveAdapter(process.env.ORCA_EVAL_LIVE === '1');
-  const costCheck = assertCostCap(corpus.records.length, DEFAULT_CONTROLS);
+  const costCheck = assertCostCap(corpus.records.length, CONTROLS);
   if (!costCheck.ok && mode === 'LIVE') {
     return { label, blocked: costCheck.blocker, mode };
   }
@@ -159,6 +160,8 @@ async function runEvaluation(corpusPath, outSubdir, label) {
 }
 
 async function main() {
+  loadLocalSecrets();
+  const CONTROLS = getRuntimeControls();
   fs.mkdirSync(FIX, { recursive: true });
   if (!fs.existsSync(path.join(FIX, 'evaluation-corpus-v1.json'))) {
     await import('../evaluation/build-evaluation-corpus.mjs');

@@ -46,7 +46,8 @@ export function createOpenAICompatibleAdapter(options = {}) {
 
         if (!response.ok) {
           const errText = await response.text();
-          return { ok: false, blocker: 'MODEL_API_ERROR', errors: [`HTTP ${response.status}: ${errText.slice(0, 200)}`] };
+          const sanitized = sanitizeProviderError(errText, response.status);
+          return { ok: false, blocker: classifyHttpError(response.status), errors: [sanitized] };
         }
 
         const data = await response.json();
@@ -105,6 +106,18 @@ async function fetchWithTimeout(url, options, timeoutMs) {
   } finally {
     clearTimeout(timer);
   }
+}
+
+function sanitizeProviderError(errText, status) {
+  const truncated = String(errText || '').slice(0, 200);
+  return `HTTP ${status}: ${truncated.replace(/sk-[a-zA-Z0-9_-]+/g, '[REDACTED]').replace(/Bearer\s+\S+/gi, 'Bearer [REDACTED]')}`;
+}
+
+function classifyHttpError(status) {
+  if (status === 401 || status === 403) return 'AUTH_FAILED';
+  if (status === 404) return 'MODEL_NOT_FOUND';
+  if (status === 429) return 'RATE_LIMITED';
+  return 'ENDPOINT_FAILED';
 }
 
 /** Test-only mock adapter for bypass audit and pipeline validation */

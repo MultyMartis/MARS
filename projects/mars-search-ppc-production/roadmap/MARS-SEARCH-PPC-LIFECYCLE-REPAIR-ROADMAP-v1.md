@@ -11,8 +11,8 @@
 **Wave 2 Live Acquisition:** `VALIDATION PENDING`  
 **Wave 2.2:** `CHECKPOINTED` (`021062b`)  
 **Wave 3 Core:** `APPROVED — CHECKPOINTED` (`2820b9f`)  
-**Wave 3.1:** `APPROVED — CHECKPOINTED` (live provider completion pass in progress)  
-**Wave 3 Overall:** `NOT OPERATIONAL` — live semantic quality not validated  
+**Wave 3.1:** `LIVE PROVIDER APPROVED — CHECKPOINTED`  
+**Wave 3 Overall:** `NOT OPERATIONAL` — live semantic quality validation in progress  
 **Wave 4:** `BLOCKED UNTIL WAVE 3.1 QUALITY REVIEW`  
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
 **Corvonero default:** `FROZEN` — no Corvonero production work until Wave 3+ operator charter per item

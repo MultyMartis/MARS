@@ -10,7 +10,8 @@ import { runIndependentReassessment } from '../assessment/independent-reassessme
 import { adjudicateSemanticIntent } from '../adjudication/semantic-adjudicator.mjs';
 import { createMockLiveAdapter } from '../adapters/openai-compatible-adapter.mjs';
 import { inspectProviderInventory } from '../adapters/provider-inventory.mjs';
-import { assertCostCap, loadRunCheckpoint, saveRunCheckpoint, DEFAULT_CONTROLS } from '../controls/cost-rate-controls.mjs';
+import { assertCostCap, getRuntimeControls, loadRunCheckpoint, saveRunCheckpoint } from '../controls/cost-rate-controls.mjs';
+import { loadLocalSecrets } from '../runtime/local-secret-loader.mjs';
 import { applyHardRules } from '../../production/assessors/hard-rules.mjs';
 import { assessDeterministic } from '../../production/assessors/deterministic-assessor.mjs';
 import { createAssessorContext } from '../../production/assessors/assessor-contract.mjs';
@@ -20,10 +21,12 @@ const SCALE_CORPUS = path.resolve(__dirname, '../../production/fixtures/scale-co
 const OUT = path.join(__dirname, '../reports/full-corpus-readiness-v1');
 
 async function main() {
+  loadLocalSecrets();
+  const CONTROLS = getRuntimeControls();
   const inventory = inspectProviderInventory();
   const corpus = JSON.parse(fs.readFileSync(SCALE_CORPUS, 'utf8'));
   const phrases = corpus.phrases.slice(0, 100);
-  const costCheck = assertCostCap(phrases.length, DEFAULT_CONTROLS);
+  const costCheck = assertCostCap(phrases.length, CONTROLS);
 
   const adapter = inventory.any_live_provider_configured && process.env.ORCA_EVAL_LIVE === '1'
     ? (await import('../adapters/openai-compatible-adapter.mjs')).createOpenAICompatibleAdapter()

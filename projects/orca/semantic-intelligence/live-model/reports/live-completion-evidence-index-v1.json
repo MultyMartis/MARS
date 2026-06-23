@@ -1,0 +1,36 @@
+{
+  "index_id": "live-completion-evidence-index-v1",
+  "date": "2026-06-23",
+  "wave": "3.1",
+  "checkpoints": {
+    "wave_3_core": "2820b9f",
+    "wave_3_1_framework": "7f7cb21"
+  },
+  "live_runs": [
+    {
+      "run_id": "completion-pass-1782181300220",
+      "type": "original_holdout",
+      "records": 133,
+      "quality_decision": "WAVE 3.1 — INSUFFICIENT GOLD SUPPORT",
+      "commercial_precision": 1.0,
+      "cost_usd": 0.152,
+      "artifacts_gitignored": true,
+      "sanitized_summaries": [
+        "holdout-d3-metrics-v1.json",
+        "holdout-integrity-v1.json",
+        "gold-support-audit-v1.json",
+        "quality-decision-v1.json"
+      ]
+    }
+  ],
+  "secret_handling": {
+    "loader": "runtime/local-secret-loader.mjs",
+    "git_tracked_secrets": false,
+    "cursorignore": true
+  },
+  "supplementary_validation": {
+    "status": "EXECUTED — UNCOMMITTED",
+    "run_id": "supplementary-pass-1782182564197",
+    "note": "Separate artifact; not merged with holdout"
+  }
+}
