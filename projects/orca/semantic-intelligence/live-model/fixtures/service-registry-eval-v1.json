@@ -1,0 +1,32 @@
+{
+  "registry_id": "eval-service-registry-v1",
+  "version": "1.0.0",
+  "project_id": "eval-non-client",
+  "geography": "RU",
+  "services": [
+    {
+      "service_id": "svc-hire",
+      "name": "Hire 1C Specialist",
+      "description": "Find and hire 1C programmer or consultant",
+      "included_tasks": ["hire_specialist", "outsource_development"],
+      "excluded_tasks": ["career_search", "education"],
+      "operator_status": "APPROVED"
+    },
+    {
+      "service_id": "svc-implementation",
+      "name": "1C Implementation",
+      "description": "Full 1C deployment and migration",
+      "included_tasks": ["implementation", "migration"],
+      "excluded_tasks": [],
+      "operator_status": "APPROVED"
+    },
+    {
+      "service_id": "svc-support",
+      "name": "1C Support",
+      "description": "Ongoing 1C maintenance and support",
+      "included_tasks": ["support", "troubleshooting"],
+      "excluded_tasks": [],
+      "operator_status": "APPROVED"
+    }
+  ]
+}

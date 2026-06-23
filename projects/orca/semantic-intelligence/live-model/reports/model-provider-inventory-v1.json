@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-06-22T21:27:12.847Z",
+  "any_live_provider_configured": false,
+  "recommended_primary": null,
+  "providers": [
+    {
+      "id": "openai-compatible",
+      "name": "OpenAI API",
+      "classification": "AVAILABLE — CREDENTIALS REQUIRED",
+      "adapter_path": "live-model/adapters/openai-compatible-adapter.mjs",
+      "structured_output": true,
+      "credential_env": "OPENAI_API_KEY",
+      "credential_present": false
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter Gateway",
+      "classification": "AVAILABLE — CREDENTIALS REQUIRED",
+      "adapter_path": "live-model/adapters/openai-compatible-adapter.mjs",
+      "structured_output": true,
+      "credential_env": "OPENROUTER_API_KEY",
+      "credential_present": false,
+      "notes": "Documented in MIG/SEO plans; not validated in production semantic path until Wave 3.1"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic API",
+      "classification": "MISSING",
+      "adapter_path": null,
+      "structured_output": false,
+      "credential_env": "ANTHROPIC_API_KEY",
+      "credential_present": false,
+      "notes": "No executable adapter in repository"
+    },
+    {
+      "id": "ollama-local",
+      "name": "Ollama Local Runtime",
+      "classification": "LOCAL RUNTIME AVAILABLE",
+      "adapter_path": null,
+      "structured_output": "SAFE UNKNOWN",
+      "credential_env": "OLLAMA_HOST",
+      "notes": "No adapter wired in Wave 3.1"
+    },
+    {
+      "id": "n8n-openrouter-nodes",
+      "name": "n8n OpenRouter HTTP nodes",
+      "classification": "ADAPTER EXISTS — NOT VALIDATED",
+      "notes": "Documented in MIG runtime design; credentials in n8n env only"
+    },
+    {
+      "id": "mars-model-layer",
+      "name": "MARS Model Layer (documented)",
+      "classification": "ADAPTER EXISTS — NOT VALIDATED",
+      "adapter_path": "models/README.md",
+      "notes": "Architecture documentation only; no runtime router in repo"
+    }
+  ],
+  "credential_boundary": "Operator-supplied via environment; never committed to Git",
+  "cost_tracking": "Token estimate per batch; hard cap in controls/cost-rate-controls.mjs",
+  "retry_logic": "Exponential backoff; max 3 retries per phrase",
+  "logging_redaction": "contracts/PRIVACY-LOGGING-BOUNDARY-v1.md"
+}

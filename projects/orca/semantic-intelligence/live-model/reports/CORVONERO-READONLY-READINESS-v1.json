@@ -1,0 +1,57 @@
+{
+  "audit_id": "corvonero-readonly-readiness-v1",
+  "date": "2026-06-23",
+  "corvonero_status": "FROZEN",
+  "classification_attempted": false,
+  "requirements_before_future_run": [
+    {
+      "id": "CRR-01",
+      "requirement": "Approved service registry",
+      "status": "GAP — operator approval required",
+      "evidence": "corvonero-direct-v2-clean-room has draft registry; not production-approved"
+    },
+    {
+      "id": "CRR-02",
+      "requirement": "Business-scope gaps resolved",
+      "status": "GAP — scope reconciliation pending",
+      "evidence": "CORVONERO-MIGRATION-AUDIT-READONLY-v1.md"
+    },
+    {
+      "id": "CRR-03",
+      "requirement": "Model/provider readiness",
+      "status": "BLOCKED — live model credentials required",
+      "evidence": "Wave 3.1 provider inventory: no configured provider in environment"
+    },
+    {
+      "id": "CRR-04",
+      "requirement": "Paid SERP live evidence",
+      "status": "PENDING — Wave 2 live acquisition validation",
+      "evidence": "Wave 2.2 checkpoint 021062b; live SERP not fully validated"
+    },
+    {
+      "id": "CRR-05",
+      "requirement": "Full-corpus source manifest",
+      "status": "EXISTS — frozen read-only",
+      "evidence": "corvonero-direct-v2-clean-room intake manifests"
+    },
+    {
+      "id": "CRR-06",
+      "requirement": "Expected cost estimate",
+      "status": "ESTIMATED — operator authorization required",
+      "evidence": "cost-rate-controls.mjs default cap $50 / 5000 phrases"
+    },
+    {
+      "id": "CRR-07",
+      "requirement": "Run authorization",
+      "status": "NOT AUTHORIZED",
+      "evidence": "W3.1-D6 Corvonero FROZEN"
+    },
+    {
+      "id": "CRR-08",
+      "requirement": "Operator quality gates",
+      "status": "NOT PASSED",
+      "evidence": "D3 gates require live model + operator approval"
+    }
+  ],
+  "verdict": "NOT READY — remain FROZEN until Wave 3.1 operator quality approval and explicit Corvonero run authorization"
+}

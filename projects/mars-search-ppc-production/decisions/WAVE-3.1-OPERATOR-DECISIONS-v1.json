@@ -1,0 +1,60 @@
+{
+  "decision_set_id": "wave-3.1-operator-decisions-v1",
+  "date": "2026-06-23",
+  "decisions": [
+    {
+      "id": "W3.1-D1",
+      "subject": "Wave 3 Core",
+      "status": "APPROVED — IMPLEMENTED AND TESTED"
+    },
+    {
+      "id": "W3.1-D2",
+      "subject": "Wave 3 Overall",
+      "status": "SEMANTIC QUALITY VALIDATION REQUIRED — NOT OPERATIONAL"
+    },
+    {
+      "id": "W3.1-D3",
+      "subject": "Model role",
+      "status": "REAL_SEMANTIC_MODEL_REQUIRED",
+      "deterministic_rules": ["block_protected", "validate_records", "provide_evidence", "detect_contradictions"],
+      "forbidden_as_sole_authority": ["topical_regex_positive", "deterministic_preview"]
+    },
+    {
+      "id": "W3.1-D4",
+      "subject": "Blind assessment",
+      "status": "REQUIRED",
+      "excluded_from_primary_input": [
+        "deterministic_final_decision",
+        "legacy_orca_decision",
+        "p0i_decision",
+        "expected_label",
+        "adjudicator_result"
+      ]
+    },
+    {
+      "id": "W3.1-D5",
+      "subject": "Human work",
+      "status": "BOUNDED",
+      "operator_not_required": ["full_corpus_labeling"],
+      "operator_review_scope": ["policy_decisions", "high_risk_disagreements", "domain_conflicts", "bounded_qa", "quality_gate_approval"]
+    },
+    {
+      "id": "W3.1-D6",
+      "subject": "Corvonero",
+      "status": "FROZEN",
+      "allowed": ["diagnostic_regression_examples", "read_only_migration_audit"],
+      "forbidden": ["production_classification", "corvonero_semantic_core"]
+    },
+    {
+      "id": "W3.1-D7",
+      "subject": "Wave 4",
+      "status": "BLOCKED UNTIL WAVE 3.1 QUALITY REVIEW"
+    }
+  ],
+  "wave_status": {
+    "wave_3_core": "APPROVED — READY FOR CHECKPOINT",
+    "wave_3_overall": "LIVE MODEL VALIDATION IN PROGRESS",
+    "wave_4": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

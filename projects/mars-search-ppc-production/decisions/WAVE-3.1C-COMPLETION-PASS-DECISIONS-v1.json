@@ -1,0 +1,62 @@
+{
+  "decision_set_id": "wave-3.1c-completion-pass-decisions-v1",
+  "date": "2026-06-23",
+  "task": "MARS SEARCH PPC PRODUCTION — WAVE 3.1 LIVE PROVIDER COMPLETION PASS",
+  "decisions": [
+    {
+      "id": "W3.1C-D1",
+      "subject": "Wave 3.1 implementation",
+      "status": "APPROVED — READY FOR CHECKPOINT"
+    },
+    {
+      "id": "W3.1C-D2",
+      "subject": "Semantic quality",
+      "status": "LIVE PROVIDER VALIDATION REQUIRED"
+    },
+    {
+      "id": "W3.1C-D3",
+      "subject": "Provider credentials",
+      "status": "ENVIRONMENT_ONLY",
+      "permitted_env": ["OPENAI_API_KEY", "OPENROUTER_API_KEY"],
+      "forbidden_storage": ["git", "markdown", "json_reports", "receipts", "logs", "fixtures", "screenshots", "console_transcripts"]
+    },
+    {
+      "id": "W3.1C-D4",
+      "subject": "Staged execution",
+      "status": "REQUIRED",
+      "stages": [
+        "provider_connectivity_smoke",
+        "structured_output_smoke",
+        "stratified_live_pilot",
+        "calibration_set",
+        "one_final_holdout",
+        "non_client_full_corpus_readiness"
+      ]
+    },
+    {
+      "id": "W3.1C-D5",
+      "subject": "Cost control",
+      "status": "HARD_CAP_PER_STAGE",
+      "config_env": ["ORCA_EVAL_MAX_COST", "ORCA_EVAL_MAX_RECORDS", "ORCA_EVAL_BATCH_SIZE", "ORCA_EVAL_CONCURRENCY"]
+    },
+    {
+      "id": "W3.1C-D6",
+      "subject": "Holdout",
+      "status": "SINGLE_FINAL_PASS",
+      "forbidden_uses": ["prompt_tuning", "hard_rule_changes", "cherry_picking", "recalibration"]
+    },
+    {
+      "id": "W3.1C-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN",
+      "forbidden": ["model_corpus_submission", "production_classification", "semantic_core_creation"]
+    }
+  ],
+  "wave_status": {
+    "wave_3_1_implementation": "APPROVED — READY FOR CHECKPOINT",
+    "wave_3_1_live_quality": "VALIDATION IN PROGRESS",
+    "wave_3_overall": "NOT OPERATIONAL",
+    "wave_4": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}
