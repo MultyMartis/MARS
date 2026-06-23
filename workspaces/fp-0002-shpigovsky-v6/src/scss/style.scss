@@ -1562,7 +1562,38 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	border-radius: var(--radius-main);
 	background-color: var(--color-text-primary);
 	color: var(--color-text-inverse);
+
+	position: relative;
 }
+
+
+.home-rehabilitation-requirements__cta-band::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: url("../img/content/home-final-form/home-final-form-background.webp");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.1;
+	pointer-events: none;
+}
+
+.home-rehabilitation-requirements__cta-band > * {
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .home-rehabilitation-requirements__cta-lead {
 	margin: 0;
