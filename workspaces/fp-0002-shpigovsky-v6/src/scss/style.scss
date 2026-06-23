@@ -464,7 +464,7 @@ em {
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-button);
 	font-weight: var(--font-weight-button);
-	line-height: calc(var(--main-size-btns));
+	line-height: calc(var(--main-size-btns) - 2px);
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
