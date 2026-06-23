@@ -1050,6 +1050,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
+	text-transform: uppercase;
 }
 
 .home-treatment-prevention__accordion {
@@ -1222,6 +1223,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
+	text-transform: uppercase;
 }
 
 .home-why-us__body-stack {
@@ -1403,7 +1405,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	padding: var(--pad-gap);
 	border: var(--border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-main);
-	background-color: ек;
+	background-color: transparent;
 }
 
 .home-reviews__rating {
@@ -1480,12 +1482,12 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-rehabilitation-requirements__heading {
 	margin: 0 0 var(--pad-gap);
-	padding-left: var(--pad-gap);
-	border-left: 3px solid var(--color-accent); // EXACT_GEOMETRY — mockup H2 accent bar 3px
+	// padding-left: var(--pad-gap);
+	// border-left: 3px solid var(--color-accent); // EXACT_GEOMETRY — mockup H2 accent bar 3px
 	font-size: var(--font-size-h2);
 	line-height: var(--line-height-h2);
 	font-weight: var(--font-weight-heading);
-	color: var(--color-text-primary);
+	// color: var(--color-text-primary);
 }
 
 .home-rehabilitation-requirements__intro {
@@ -1588,14 +1590,24 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	flex-shrink: 0;
 }
 
+.UNIVERSAL-requirements__support {
+	margin-bottom: var(--pad-gap);
+	padding: var(--pad-gap);
+  border: var(--border-width) solid var(--color-text-primary);
+  border-radius: var(--radius-main);
+}
+
 .home-rehabilitation-requirements__support {
 	margin-bottom: var(--pad-gap);
+	padding: var(--pad-gap);
+  border: var(--border-width) solid var(--color-text-primary);
+  border-radius: var(--radius-main);
 }
 
 .home-rehabilitation-requirements__support-heading {
-	margin: 0 0 var(--pad-gap-line);
-	font-size: var(--font-size-base);
-	line-height: var(--line-height-base);
+	margin: 0 0 var(--pad-gap);
+	font-size: var(--font-size-h3);
+	line-height: var(--line-height-h3);
 	font-weight: var(--font-weight-heading);
 	color: var(--color-text-primary);
 }
@@ -1677,12 +1689,12 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-articles__heading,
 .home-faq__heading {
 	margin: 0;
-	padding-left: var(--pad-gap);
-	border-left: 3px solid var(--color-accent);
+	// padding-left: var(--pad-gap);
+	// border-left: 3px solid var(--color-accent);
 	font-size: var(--font-size-h2);
 	line-height: var(--line-height-h2);
 	font-weight: var(--font-weight-heading);
-	color: var(--color-text-primary);
+	// color: var(--color-text-primary);
 }
 
 .home-rehabilitation-program__all-link,
@@ -1725,6 +1737,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	font-size: 10px;
 }
 
+
 .home-rehabilitation-program__lead,
 .home-genotyping__lead,
 .home-comfort__lead {
@@ -1734,6 +1747,17 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
+	text-transform: uppercase;
+}
+
+.rehub-universal-decor {
+	margin: 0 0 var(--pad-gap-line);
+	padding: var(--pad-gap-line) 0 var(--pad-gap-line) var(--pad-gap);
+	border-left: 3px solid var(--color-accent);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+	text-transform: uppercase;
 }
 
 .home-rehabilitation-program__intro,
@@ -1752,9 +1776,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-rehabilitation-program__direction {
 	padding: var(--pad-gap);
-	border: var(--border-width) solid var(--color-border-subtle);
+	border: var(--border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-main);
-	background-color: var(--color-surface);
 }
 
 .home-rehabilitation-program__direction-title {
@@ -1832,7 +1855,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-comfort__gallery-image {
 	display: block;
 	width: 100%;
-	height: 220px;
+	height: 320px;
 	object-fit: cover;
 	object-position: center;
 	border-radius: var(--radius-main);
@@ -1883,7 +1906,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-specialists__track {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: var(--pad-gap-line);
+	gap: var(--pad-gap);
 	max-width: 100%;
 }
 
@@ -1892,10 +1915,10 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	flex-direction: column;
 	gap: var(--pad-gap-tight);
 	min-width: 0;
-	padding: var(--pad-box);
-	border: var(--border-width) solid var(--color-border-subtle);
-	border-radius: var(--radius-main);
-	background-color: var(--color-surface);
+	/* padding: var(--pad-box); */
+	/* border: var(--border-width) solid var(--color-border-subtle); */
+	/* border-radius: var(--radius-main); */
+	/* background-color: var(--color-surface); */
 }
 
 .home-specialists__photo {
@@ -1909,10 +1932,10 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-specialists__name {
 	margin: 0;
-	font-size: var(--font-size-large);
-	line-height: var(--line-height-large);
-	font-weight: var(--font-weight-heading);
-	color: var(--color-text-primary);
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	text-align: center;
 }
 
 .home-specialists__role {
@@ -1920,6 +1943,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	font-size: 16px;
 	line-height: 20px;
 	color: var(--color-text-secondary);
+	text-align: center;
 }
 
 .home-articles__grid {
@@ -1952,10 +1976,11 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-articles__title {
 	margin: 0;
-	font-size: var(--font-size-large);
-	line-height: var(--line-height-large);
-	font-weight: var(--font-weight-heading);
 	color: var(--color-text-primary);
+	padding: 10px 30px 0px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 500;
 }
 
 .home-articles__meta {
@@ -1964,6 +1989,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	line-height: var(--line-height-small);
 	color: var(--color-text-secondary);
 	text-transform: uppercase;
+	padding-left: 30px;
 }
 
 .home-faq__answer {
