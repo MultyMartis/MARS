@@ -49,12 +49,19 @@ page_inventory: UPDATED
 url_map: UPDATED
 wordpress_target: CONFIRMED
 
-services_page: FOUNDATION_IMPLEMENTED_PENDING_OPERATOR_REVIEW
+services_foundation: COMPLETE
+services_rejected_unique_implementation: REVERTED
+services_reuse_matrix: COMPLETE
+
+services_page_mode: REUSE_ONLY
 services_page_source: src/pages/uslugi.html
 services_page_static_build: dist/uslugi.html
 services_page_wordpress_url: /uslugi/
-services_page_existing_blocks: ASSEMBLED
-services_page_unique_blocks: NOT_STARTED
+services_exact_reused_blocks: header, home-rehabilitation-program, home-founder-quote, home-comfort, home-faq, home-final-form, footer, modal-consultation
+services_new_unique_blocks: 0
+services_unimplemented_blocks: service-hero, addictions, mental-health, eating-disorders
+
+services_page_unique_blocks: REJECTED_AND_REVERTED
 
 header_href_map: UPDATED
 mobile_menu_href_map: UPDATED
@@ -66,6 +73,10 @@ home_page: PRESERVED
 modal_backend: BLOCKED
 captcha_configuration: BLOCKED
 ```
+
+**Rejected unique implementation:** commit `feff069` reverted by `25bfbce`. Recovery archive: `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\recovery\FP-0002-V6-PRE-SERVICES-ROLLBACK-FEFF069.zip` — **NOT CURRENT AUTHORITY**.
+
+**Reuse audit:** `reviews/services-page/reuse-only/FP-0002-SERVICES-EXACT-REUSE-MATRIX-v1.md`
 
 ## Full home operator-stable release
 

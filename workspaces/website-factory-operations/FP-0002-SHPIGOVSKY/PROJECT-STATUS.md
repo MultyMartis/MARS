@@ -1,11 +1,11 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-23 (services hub foundation)
+**Last updated:** 2026-06-23 (services reuse-only reassembly)
 
 ## Milestone (2026-06-23)
 
-**FP-0002 SERVICES HUB FOUNDATION** — static page `uslugi.html` assembled from shared blocks; unique hub sections **not started**. Prior desktop baseline frozen at `FP-0002-V6-DESKTOP-STABLE-01`.
+**FP-0002 SERVICES REUSE-ONLY REASSEMBLY** — rejected unique `feff069` implementation reverted; services page rebuilt from exact shared blocks only. Four mockup sections documented as gaps. Pending operator review.
 
 ---
 
@@ -31,7 +31,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | **In progress** — Home complete; **Services hub foundation** (`uslugi.html`) pending operator review |
+| **Frontend** | **In progress** — Home complete; **Services page REUSE_ONLY** on `uslugi.html` pending operator review |
 | **WordPress** | Not Started |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
@@ -44,7 +44,22 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 |-------|-------|
 | **Design Materials** | Awaiting Intake |
 | **Page Inventory** | **Updated** — `foundation/FP-0002-V6-PAGE-INVENTORY.md` in V6 workspace |
-| **Block Inventory** | Factory doc exists; services unique blocks not started |
+| **Block Inventory** | **Updated** — `reviews/services-page/reuse-only/FP-0002-HOME-BLOCK-INVENTORY-v1.md` |
+
+---
+
+## Services page status
+
+| Field | Value |
+|-------|-------|
+| `services_foundation` | COMPLETE |
+| `services_rejected_unique_implementation` | REVERTED (`25bfbce`) |
+| `services_reuse_matrix` | COMPLETE |
+| `services_page_mode` | REUSE_ONLY |
+| `services_exact_reused_blocks` | header, program, founder, comfort, FAQ, final form, footer, modal |
+| `services_new_unique_blocks` | 0 |
+| `services_unimplemented_blocks` | hero, addictions, mental-health, eating-disorders |
+| `services_unique_blocks` | REJECTED_AND_REVERTED |
 
 ---
 
@@ -73,7 +88,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 ## Next gate
 
-**Factory onboarding** — Playbook 01 Manifest Enrollment Workflow (see [FP-0002-ONBOARDING-READINESS.md](FP-0002-ONBOARDING-READINESS.md)).
+**Operator review** — services reuse-only page; then one-block-at-a-time implementation for hard-gate FAIL sections only with explicit charter.
 
 ---
 
