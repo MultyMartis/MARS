@@ -39,28 +39,6 @@ submission_backend: BLOCKED
 false_success: PROHIBITED
 ```
 
-## Services hub unique blocks (2026-06-23)
-
-```text
-current_src: OPERATOR_CANONICAL
-
-services_foundation: COMPLETE
-services_unique_blocks: IMPLEMENTED_PENDING_OPERATOR_REVIEW
-
-services_hero: IMPLEMENTED
-services_addictions: IMPLEMENTED
-services_mental_health: IMPLEMENTED
-services_eating_disorders: IMPLEMENTED
-
-services_mockup_authority: DESKTOP_AND_MOBILE_PNG
-services_figma_usage: EXACT_TEXT_AND_IMAGE_NODES_ONLY
-services_wordpress_urls: ACTIVE
-
-home_page: PRESERVED
-modal_backend: BLOCKED
-captcha_configuration: BLOCKED
-```
-
 ## Services hub foundation (2026-06-23)
 
 ```text
@@ -76,7 +54,7 @@ services_page_source: src/pages/uslugi.html
 services_page_static_build: dist/uslugi.html
 services_page_wordpress_url: /uslugi/
 services_page_existing_blocks: ASSEMBLED
-services_page_unique_blocks: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+services_page_unique_blocks: NOT_STARTED
 
 header_href_map: UPDATED
 mobile_menu_href_map: UPDATED
