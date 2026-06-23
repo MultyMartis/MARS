@@ -205,38 +205,46 @@
 (function initHomeGallery() {
 	'use strict';
 
-	var slider = document.querySelector('[data-gallery-slider]');
+	function boot() {
+		var slider = document.querySelector('[data-gallery-slider]');
 
-	if (!slider || typeof window.Swiper !== 'function') {
-		return;
+		if (!slider || typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		if (slider.swiper) {
+			return;
+		}
+
+		new window.Swiper(slider, {
+			slidesPerView: 4,
+			spaceBetween: 20,
+			loop: false,
+			autoplay: false,
+			navigation: false,
+			pagination: false,
+			watchOverflow: true,
+			grabCursor: true,
+			breakpoints: {
+				320: {
+					slidesPerView: 2.15,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3.15,
+					spaceBetween: 20,
+				},
+				1025: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
+		});
 	}
 
-	if (slider.swiper) {
-		return;
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
 	}
-
-	new window.Swiper(slider, {
-		slidesPerView: 4,
-		spaceBetween: 20,
-		loop: false,
-		autoplay: false,
-		navigation: false,
-		pagination: false,
-		watchOverflow: true,
-		grabCursor: true,
-		breakpoints: {
-			320: {
-				slidesPerView: 2.1,
-				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 3.1,
-				spaceBetween: 20,
-			},
-			1025: {
-				slidesPerView: 4,
-				spaceBetween: 20,
-			},
-		},
-	});
 })();

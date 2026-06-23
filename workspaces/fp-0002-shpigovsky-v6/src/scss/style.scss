@@ -1101,6 +1101,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-treatment-prevention__panel {
 	padding-bottom: var(--pad-gap-line);
+	padding-right: 6px;
 }
 
 .home-treatment-prevention__panel[hidden] {
@@ -1112,7 +1113,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	flex-direction: column;
 	gap: var(--pad-gap-tight);
 	margin: 0;
-	padding: 0 0 var(--pad-gap-tight);
+	padding: var(--pad-gap-tight) 0;
 	list-style: none;
 }
 
@@ -1124,8 +1125,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-treatment-prevention__service-item {
 	display: grid;
 	grid-template-columns: auto 1fr auto;
-	align-items: center;
-	gap: var(--pad-gap-tight);
+	align-items: baseline;
+	gap: 5px;
 	text-decoration: none;
 	color: inherit;
 }
@@ -1150,20 +1151,18 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-treatment-prevention__service-leader {
 	height: 0;
-	border-bottom: 1px dotted var(--color-border-subtle);
+	border-bottom: 1px dotted var(--color-text-primary);
 }
 
 .home-treatment-prevention__service-icon {
 	display: inline-flex;
-	color: var(--color-accent);
-	font-size: var(--icon-size-small);
+	font-size: 14px;
+	color: var(--color-text-secondary);
 }
 
 /* ==========================================================================
    10d. Home gallery
    ========================================================================== */
-
-@import '../../node_modules/swiper/swiper-bundle.min.css';
 
 .home-gallery {
 	padding-top: var(--pad-gap);
@@ -1226,6 +1225,98 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-why-us__card-grid {
 	margin-top: var(--pad-gap-line);
+}
+
+/* ==========================================================================
+   10f. Home staff photo (pre-reviews)
+   ========================================================================== */
+
+.home-staff-photo {
+	padding-top: var(--pad-gap);
+	padding-bottom: var(--pad-gap);
+}
+
+.home-staff-photo__bleed {
+	overflow: hidden;
+	border-radius: var(--radius-main);
+}
+
+.home-staff-photo__image {
+	display: block;
+	width: 100%;
+	height: 448px; // EXACT_GEOMETRY — JPG SECTION-003 staff band height 448px
+	object-fit: cover;
+	object-position: center;
+}
+
+/* ==========================================================================
+   10g. Home feature grid (pre-reviews)
+   ========================================================================== */
+
+.home-feature-grid {
+	padding-top: var(--pad-gap);
+	padding-bottom: var(--pad-gap);
+}
+
+.home-feature-grid__card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--pad-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.home-feature-grid__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--pad-gap-line);
+	box-sizing: border-box;
+	min-height: 200px;
+	padding: var(--pad-gap);
+	border: var(--border-width) solid var(--color-text-primary);
+	border-radius: var(--radius-main);
+	background-color: transparent;
+	text-align: center;
+}
+
+.home-feature-grid__card-title {
+	margin: 0;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+	text-transform: uppercase;
+}
+
+.home-feature-grid__card-text {
+	margin: 0;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   10h. Home clinic landscape (pre-reviews)
+   ========================================================================== */
+
+.home-clinic-landscape {
+	padding-top: var(--pad-gap);
+	padding-bottom: var(--pad-gap);
+}
+
+.home-clinic-landscape__bleed {
+	overflow: hidden;
+	border-radius: var(--radius-main);
+}
+
+.home-clinic-landscape__image {
+	display: block;
+	width: 100%;
+	height: 584px; // EXACT_GEOMETRY — JPG BLOCK-011 landscape band height 584px
+	object-fit: cover;
+	object-position: center;
 }
 
 /* ==========================================================================
@@ -1892,6 +1983,18 @@ body[data-offcanvas-state='open'] {
 
 	.home-gallery__image {
 		height: 280px; // EXACT_GEOMETRY — mobile gallery card height scaled from FIG 372px display
+	}
+
+	.home-feature-grid__card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-staff-photo__image {
+		height: 240px; // EXACT_GEOMETRY — mobile staff photo band scaled from JPG 448px
+	}
+
+	.home-clinic-landscape__image {
+		height: 220px; // EXACT_GEOMETRY — mobile landscape band scaled from JPG 584px
 	}
 
 	.site-header {

@@ -1,6 +1,6 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (Section 03 operator-stable freeze + gallery + pre-reviews)
+**Updated:** 2026-06-23 (gallery repair + pre-reviews recovery)
 
 ## Section 01 operator-stable release
 
@@ -74,7 +74,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01–03 **OPERATOR_APPROVED_FROZEN**; Gallery **IMPLEMENTED_PENDING_OPERATOR_REVIEW**; Pre-reviews **IMPLEMENTED_OR_MAPPED**; Reviews **NOT STARTED** |
+| Main content sections | Section 01–03 **OPERATOR_APPROVED_FROZEN**; Gallery **REPAIRED_PENDING_OPERATOR_REVIEW**; Pre-reviews **RECOVERED_PENDING_OPERATOR_REVIEW**; Reviews **NOT STARTED** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
@@ -99,11 +99,18 @@ home_section_03: OPERATOR_APPROVED_FROZEN
 home_section_03_service_links: ACTIVE
 home_section_03_arrow_icons: ACTIVE
 home_section_03_release: FP-0002-V6-HOME-SECTION-03-OPERATOR-STABLE-01
-home_gallery: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_gallery_previous_implementation: REJECTED
+home_gallery_root_cause: SWIPER_CSS_NOT_CONNECTED
+home_gallery: REPAIRED_PENDING_OPERATOR_REVIEW
+home_gallery_orientation: HORIZONTAL
 home_gallery_slide_count: 4
 home_gallery_lightbox: DISABLED
 home_gallery_autoplay: DISABLED
-pre_reviews_blocks: IMPLEMENTED_OR_MAPPED
+home_gallery_previous_success_report: OVERRULED_BY_OPERATOR
+
+pre_reviews_block_map_v1: REJECTED_INCOMPLETE
+pre_reviews_block_map_v2: COMPLETE
+pre_reviews_blocks: RECOVERED_PENDING_OPERATOR_REVIEW
 reviews: NOT_STARTED
 ```
 
@@ -117,7 +124,26 @@ reviews: NOT_STARTED
 
 **Prior rejected review (historical):** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REVIEW.md)
 
-**Stable shell release:** [releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md)
+## Visual QA rules (2026-06-23 append)
+
+### Runtime visual validation rule
+
+A successful build and initialized library do not prove a component works. Interactive components must be validated in the actual rendered page.
+
+### Slider validation rule
+
+For every slider report, verify: track orientation; wrapper computed `display`; slide computed width; slide count; instance count; drag movement; breakpoint state; screenshot evidence.
+
+### Section map completeness rule
+
+A block map is invalid if the canonical mockup contains unregistered sections before the declared stop boundary.
+
+### Report override rule
+
+Operator visual evidence overrides an automated SUCCESS report.
+
+**Automated enforcement:** NONE — human-operated documentation only.
+
 
 **Prior desktop release:** [releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md)
 

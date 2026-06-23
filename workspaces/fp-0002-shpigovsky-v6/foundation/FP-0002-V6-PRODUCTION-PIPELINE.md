@@ -100,6 +100,14 @@ intro_programs_status: ABORTED_NOT_ACTIVE
 main_content_implementation_status: NOT_STARTED
 css_variable_first_law_status: ACTIVE
 foundation_verification_status: PASSED
-javascript_changed: false
-responsive_layout_implemented: false
+javascript_changed: true
+responsive_layout_implemented: true
 ```
+
+---
+
+## Visual QA rules (append-only, 2026-06-23)
+
+See `reviews/main-content/FP-0002-V6-GALLERY-REPAIR-AND-PRE-REVIEWS-RECOVERY.md` — runtime visual validation, slider validation, section map completeness, report override. **Automated enforcement: NONE.**
+
+**Stable shell release:** [releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01/FP-0002-V6-RESPONSIVE-SHELL-STABLE-01-MANIFEST.md)
