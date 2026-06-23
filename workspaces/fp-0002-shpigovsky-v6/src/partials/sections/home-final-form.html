@@ -6,45 +6,35 @@
         <p class="home-final-form__lead">Опишите вашу ситуацию в&nbsp;форме заявки, и&nbsp;мы расскажем, как сможем помочь</p>
       </div>
 
-      <form class="home-final-form__form" data-final-form action="#" method="post" novalidate>
-        <div class="home-final-form__field">
-          <label class="home-final-form__label" for="home-final-form-name">Ваше имя</label>
-          <input
-            class="home-final-form__input"
-            type="text"
-            id="home-final-form-name"
-            name="name"
-            autocomplete="name"
-            placeholder="Ваше имя"
-            required
-          >
+      <form class="home-final-form__form" data-final-form action="#" method="post">
+        <div class="home-final-form__row">
+          <div class="home-final-form__field">
+            <label class="home-final-form__label" for="home-final-form-name">Ваше имя</label>
+            <input
+              class="home-final-form__input"
+              type="text"
+              id="home-final-form-name"
+              name="name"
+              autocomplete="name"
+              placeholder="Ваше имя"
+              required
+            >
+          </div>
+          <div class="home-final-form__field">
+            <label class="home-final-form__label" for="home-final-form-phone">Ваш телефон</label>
+            <input
+              class="home-final-form__input"
+              type="tel"
+              id="home-final-form-phone"
+              name="phone"
+              data-phone-input
+              placeholder="+7 999 999 - 99 - 99"
+              autocomplete="tel"
+              required
+            >
+          </div>
         </div>
-        <div class="home-final-form__field">
-          <label class="home-final-form__label" for="home-final-form-phone">Ваш телефон</label>
-          <input
-            class="home-final-form__input"
-            type="tel"
-            id="home-final-form-phone"
-            name="phone"
-            data-mask="phone"
-            placeholder="+7 999 999 - 99 - 99"
-            autocomplete="tel"
-            required
-          >
-        </div>
-        <div class="home-final-form__field">
-          <label class="home-final-form__label" for="home-final-form-email">Ваша электронная почта</label>
-          <input
-            class="home-final-form__input"
-            type="email"
-            id="home-final-form-email"
-            name="email"
-            placeholder="Введите вашу почту"
-            autocomplete="email"
-            required
-          >
-        </div>
-        <div class="home-final-form__field">
+        <div class="home-final-form__field home-final-form__field_message">
           <label class="home-final-form__label" for="home-final-form-message">Опишите ситуацию</label>
           <textarea
             class="home-final-form__textarea"
@@ -55,8 +45,18 @@
             required
           ></textarea>
         </div>
+        <label class="home-final-form__consent">
+          <input
+            class="home-final-form__consent-input"
+            type="checkbox"
+            name="consent"
+            value="1"
+            required
+          >
+          <span class="home-final-form__consent-control" aria-hidden="true"></span>
+          <span class="home-final-form__consent-text">Я&nbsp;даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a class="home-final-form__consent-link" href="/consent-personal-data/">Согласием на&nbsp;обработку персональных данных</a> и&nbsp;соглашаюсь с&nbsp;<a class="home-final-form__consent-link" href="/privacy-policy/">Политикой конфиденциальности</a>.</span>
+        </label>
         <button type="submit" class="btn btn_dark btn--primary home-final-form__submit">Записаться на&nbsp;консультацию</button>
-        <p class="home-final-form__consent">Отправляя форму, вы соглашаетесь с&nbsp;условиями пользовательского соглашения и&nbsp;условиями обработки данных</p>
       </form>
     </div>
   </div>

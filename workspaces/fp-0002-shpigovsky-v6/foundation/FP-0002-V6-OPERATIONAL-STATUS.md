@@ -13,6 +13,26 @@
 | `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-FULL-HOME-OPERATOR-STABLE-01-SOURCE.zip` |
 | `backup_sha256` | `c01b7e125f03607b935bc4f71fdd64b2b96e1db37d08179cca8ee419b29ce587` |
 
+## Final corrections (2026-06-23)
+
+```text
+current_src: OPERATOR_CANONICAL
+latest_operator_checkpoint: COMPLETE
+
+therapy_yoga_image: EXACT_FIGMA_EXPORT
+therapy_bos_image: EXACT_FIGMA_EXPORT
+
+home_final_form_fields: 3
+home_final_form_email: REMOVED
+home_final_form_desktop_primary_row: NAME_AND_PHONE
+home_final_form_consent: REQUIRED
+home_final_form_consent_source: TRIUMPH_MANIPULATOR
+home_final_form_background: EXACT_FIGMA_EXPORT
+home_final_form_backend: NOT_CONNECTED
+
+final_corrections: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+```
+
 ## Lower home corrections (2026-06-23)
 
 ```text

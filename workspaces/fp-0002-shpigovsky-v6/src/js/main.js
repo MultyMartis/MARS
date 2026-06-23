@@ -391,26 +391,13 @@
 
 	function boot() {
 		var form = document.querySelector('[data-final-form]');
-		var phoneInput = document.querySelector('[data-mask="phone"]');
-		var emailInput = form ? form.querySelector('input[type="email"]') : null;
+		var phoneInput = form ? form.querySelector('[data-phone-input]') : null;
 
-		if (phoneInput && typeof window.Inputmask === 'function') {
+		if (phoneInput && typeof window.Inputmask === 'function' && !phoneInput.inputmask) {
 			window.Inputmask({
 				mask: '+7 999 999 - 99 - 99',
 				showMaskOnHover: false,
 			}).mask(phoneInput);
-		}
-
-		if (emailInput) {
-			emailInput.addEventListener('input', function () {
-				emailInput.setCustomValidity('');
-			});
-
-			emailInput.addEventListener('invalid', function () {
-				if (emailInput.validity.typeMismatch) {
-					emailInput.setCustomValidity('Введите корректный адрес электронной почты');
-				}
-			});
 		}
 
 		if (!form) {
