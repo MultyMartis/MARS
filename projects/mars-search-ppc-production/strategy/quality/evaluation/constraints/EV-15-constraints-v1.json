@@ -1,0 +1,23 @@
+{
+  "constraint_id": "EV-15-constraints-v1",
+  "case_id": "EV-15",
+  "scenario": "t5_experiment",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "t5_isolated": true
+  },
+  "acceptable_strategy_families": [
+    "isolated_experiment"
+  ],
+  "invalid_strategy_families": [
+    "merged_t5_launch"
+  ],
+  "prohibited_recommendations": [
+    "t5_merge_with_t1"
+  ]
+}

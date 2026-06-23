@@ -1,0 +1,88 @@
+{
+  "suite": "wave41-bypass-audit-v1",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "name": "expected architecture not in strategist prompt",
+      "pass": true
+    },
+    {
+      "name": "rubric not in strategist prompt",
+      "pass": true
+    },
+    {
+      "name": "invented budget blocked by invariant",
+      "pass": true
+    },
+    {
+      "name": "invented landing blocked",
+      "pass": true
+    },
+    {
+      "name": "constraints marked evaluator_only",
+      "pass": true
+    },
+    {
+      "name": "missing Paid SERP not hidden invariant",
+      "pass": true
+    },
+    {
+      "name": "rejected phrase activation invariant",
+      "pass": true
+    },
+    {
+      "name": "T5 isolation invariant",
+      "pass": true
+    },
+    {
+      "name": "auto bidding without tracking invariant",
+      "pass": true
+    },
+    {
+      "name": "exact bid forbidden in prompt",
+      "pass": true
+    },
+    {
+      "name": "blocker preservation in reviewer",
+      "pass": true
+    },
+    {
+      "name": "provisional not production invariant",
+      "pass": true
+    },
+    {
+      "name": "reviewer separate from strategist adapter",
+      "pass": true
+    },
+    {
+      "name": "holdout cases defined in registry",
+      "pass": true
+    },
+    {
+      "name": "calibration does not use holdout by default",
+      "pass": true
+    },
+    {
+      "name": "no case-specific answers in strategist prompt",
+      "pass": true
+    },
+    {
+      "name": "Corvonero not in quality runner",
+      "pass": true
+    },
+    {
+      "name": "Wave 5 not started",
+      "pass": true
+    },
+    {
+      "name": "output reconciliation invariant",
+      "pass": true
+    },
+    {
+      "name": "quality model contract exists",
+      "pass": true
+    }
+  ],
+  "timestamp": "2026-06-23T15:42:10.033Z"
+}

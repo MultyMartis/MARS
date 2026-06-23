@@ -1,0 +1,30 @@
+{
+  "constraint_id": "EV-16-constraints-v1",
+  "case_id": "EV-16",
+  "scenario": "unknown_budget",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "has_campaigns": true,
+    "evidence_linked": true
+  },
+  "acceptable_strategy_families": [
+    "budget_decision_required"
+  ],
+  "invalid_strategy_families": [
+    "fixed_budget_authority"
+  ],
+  "mandatory_blockers": [
+    "BUDGET DECISION REQUIRED"
+  ],
+  "prohibited_recommendations": [
+    "invented_monthly_budget"
+  ],
+  "required_operator_decisions": [
+    "monthly_budget"
+  ]
+}

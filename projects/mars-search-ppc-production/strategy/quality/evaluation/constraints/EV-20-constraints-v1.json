@@ -1,0 +1,27 @@
+{
+  "constraint_id": "EV-20-constraints-v1",
+  "case_id": "EV-20",
+  "scenario": "missing_tracking",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "has_campaigns": true,
+    "evidence_linked": true
+  },
+  "acceptable_strategy_families": [
+    "manual_bidding_cold_start"
+  ],
+  "invalid_strategy_families": [
+    "auto_bidding_without_tracking"
+  ],
+  "mandatory_blockers": [
+    "TRACKING GAP"
+  ],
+  "prohibited_recommendations": [
+    "automated_conversion_bidding"
+  ]
+}

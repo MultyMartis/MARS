@@ -1,0 +1,21 @@
+{
+  "decision_pack_id": "WAVE-4.1-OPERATOR-DECISIONS-v1",
+  "date": "2026-06-23",
+  "task": "MARS SEARCH PPC PRODUCTION — WAVE 4.1 AI PPC STRATEGIST QUALITY VALIDATION V1",
+  "decisions": [
+    { "id": "W4.1-D1", "subject": "Wave 4 Core", "status": "APPROVED — IMPLEMENTED AND TESTED" },
+    { "id": "W4.1-D2", "subject": "Wave 4 Overall", "status": "OPERATIONAL WITH APPROVED MODEL AND EVIDENCE BOUNDARY" },
+    { "id": "W4.1-D3", "subject": "Production evidence", "status": "GENUINE SPPC-10 PAID SERP MANDATORY FOR CLIENT PRODUCTION; SYNTHETIC/TEST FOR QA ONLY" },
+    { "id": "W4.1-D4", "subject": "Quality authority", "status": "SCHEMA-VALID OUTPUT IS NOT PROOF OF GOOD PPC STRATEGY" },
+    { "id": "W4.1-D5", "subject": "Independent evaluation", "status": "STRATEGIST MUST NOT RECEIVE EXPECTED STRATEGY, RUBRIC, OR ANSWER KEY" },
+    { "id": "W4.1-D6", "subject": "Operator workload", "status": "COMPACT QUALITY REPORT AND SMALL CONFLICT PACKAGE" },
+    { "id": "W4.1-D7", "subject": "Corvonero", "status": "FROZEN" }
+  ],
+  "wave_status": {
+    "wave_4_core": "APPROVED — READY FOR CHECKPOINT",
+    "wave_4_1": "APPROVED — READY FOR CHECKPOINT",
+    "wave_4_overall": "OPERATIONAL WITH APPROVED MODEL AND EVIDENCE BOUNDARY",
+    "wave_5": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

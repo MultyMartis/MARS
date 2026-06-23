@@ -19,9 +19,9 @@ const checks = [
     return m.calibration_forbidden === true && m.post_run_calibration_forbidden === true;
   }],
   ['product service policy exists', () => fs.existsSync(path.join(SUP, 'policies/product-service-disambiguation-policy-v1.json'))],
-  ['prompt v1.2 product rules', () => {
+  ['prompt v1.3 product rules', () => {
     const src = fs.readFileSync(path.join(ROOT, 'contracts/prompt-contract.mjs'), 'utf8');
-    return src.includes('v1.2') && src.includes('product_only_likelihood');
+    return src.includes('v1.3') && src.includes('product_only_likelihood');
   }],
   ['adjudicator product service resolver', () => {
     const src = fs.readFileSync(path.join(ROOT, 'adjudication/semantic-adjudicator.mjs'), 'utf8');

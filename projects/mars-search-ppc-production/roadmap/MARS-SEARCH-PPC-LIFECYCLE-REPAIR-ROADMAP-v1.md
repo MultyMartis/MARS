@@ -16,9 +16,10 @@
 **Wave 3.1F:** `APPROVED — CHECKPOINTED` — geo-commercial recall repair  
 **Wave 3.1 Quality:** `LIVE MODEL VALIDATED — D3 QUALITY EVIDENCE COMPLETE`  
 **Wave 3 Overall:** `OPERATIONAL WITH APPROVED MODEL BOUNDARY`  
-**Wave 4 Core:** `APPROVED — CHECKPOINTED` — `projects/mars-search-ppc-production/strategy/` (excludes `strategy/quality/` Wave 4.1)  
-**Wave 4.1:** `IMPLEMENTATION AUTHORIZED — OPERATOR REVIEW REQUIRED`  
-**Wave 4 Overall:** `STRATEGIST QUALITY VALIDATION IN PROGRESS`  
+**Wave 4 Core:** `APPROVED — CHECKPOINTED` — `ecc9fcd`  
+**Wave 4.1:** `APPROVED — READY FOR CHECKPOINT`  
+**Wave 4 Overall:** `OPERATIONAL WITH APPROVED MODEL AND EVIDENCE BOUNDARY`  
+**Wave 2 Live Acquisition:** `CLOSURE IN PROGRESS` (Wave 2.3)  
 **Wave 5:** `BLOCKED`  
 **Corvonero:** `FROZEN`
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
