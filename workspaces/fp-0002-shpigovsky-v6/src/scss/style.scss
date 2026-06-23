@@ -271,14 +271,21 @@ table {
    04. Base
    ========================================================================== */
 
+.intro-section {
+	overflow-x: clip;
+	max-width: 100%;
+}
+
 html {
 	scroll-behavior: smooth;
+	overflow-x: clip;
 }
 
 body {
 	position: relative;
 	min-width: 320px;
-	overflow-x: hidden;
+	width: 100%;
+	overflow-x: clip;
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-base);
 	font-weight: var(--font-weight-base);
@@ -346,6 +353,11 @@ svg {
 	padding-right: var(--pad-x);
 }
 
+
+main {
+	overflow-x: clip;
+	max-width: 100%;
+}
 
 main > section, main > .section, main > div {
 	padding-top: var(--pad-y);
@@ -1167,6 +1179,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-gallery {
 	padding-top: var(--pad-gap);
 	padding-bottom: var(--pad-gap);
+	overflow: hidden;
 }
 
 .home-gallery__slider {
@@ -1330,6 +1343,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-reviews {
 	padding-top: var(--pad-gap);
 	padding-bottom: var(--pad-gap);
+	overflow: hidden;
 }
 
 .home-reviews__heading {
@@ -1493,7 +1507,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-rehabilitation-requirements__step {
 	display: flex;
 	align-items: flex-start;
-	gap: var(--pad-gap);
+	gap: var(--pad-gap-line);
 }
 
 .home-rehabilitation-requirements__step-number {
@@ -1502,21 +1516,21 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	width: 48px; // EXACT_GEOMETRY — mockup CMP-010 number disc ~48px
-	height: 48px;
-	border: var(--border-width) solid var(--color-accent);
+	width: 50px;
+	height: 50px;
+	border: var(--border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-full);
 	font-size: var(--font-size-small);
 	font-weight: var(--font-weight-heading);
 	line-height: 1;
-	color: var(--color-accent);
+	/* color: var(--color-accent); */
 }
 
 .home-rehabilitation-requirements__step-body {
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;
-	gap: var(--pad-gap-line);
+	gap: 5px;
 	min-width: 0;
 }
 
@@ -1574,6 +1588,45 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	flex-shrink: 0;
 }
 
+.home-rehabilitation-requirements__support {
+	margin-bottom: var(--pad-gap);
+}
+
+.home-rehabilitation-requirements__support-heading {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-rehabilitation-requirements__support-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.home-rehabilitation-requirements__support-item {
+	position: relative;
+	margin: 0 0 var(--pad-gap-tight);
+	padding-left: var(--pad-gap);
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.home-rehabilitation-requirements__support-item::before {
+	content: '';
+	position: absolute;
+	top: 0.55em;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: var(--radius-full);
+	background-color: var(--color-accent);
+	transform: translateY(-50%);
+}
+
 .home-rehabilitation-requirements__photo-bleed {
 	overflow: hidden;
 	border-radius: var(--radius-main);
@@ -1589,12 +1642,422 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
+   10k. Home rehabilitation program
+   ========================================================================== */
+
+.home-rehabilitation-program,
+.home-genotyping,
+.home-comfort,
+.home-videos,
+.home-specialists,
+.home-articles,
+.home-faq,
+.home-final-form {
+	padding-top: var(--pad-gap);
+	padding-bottom: var(--pad-gap);
+}
+
+.home-rehabilitation-program__head,
+.home-genotyping__head,
+.home-comfort__head,
+.home-specialists__head,
+.home-articles__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--pad-gap-line);
+	margin-bottom: var(--pad-gap);
+}
+
+.home-rehabilitation-program__heading,
+.home-genotyping__heading,
+.home-comfort__heading,
+.home-videos__heading,
+.home-specialists__heading,
+.home-articles__heading,
+.home-faq__heading {
+	margin: 0;
+	padding-left: var(--pad-gap);
+	border-left: 3px solid var(--color-accent);
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-rehabilitation-program__all-link,
+.home-genotyping__all-link,
+.home-comfort__all-link,
+.home-specialists__all-link,
+.home-articles__all-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--pad-gap-tight);
+	font-size: 15px;
+	line-height: var(--line-height-nav);
+	font-weight: var(--font-weight-button);
+	color: var(--color-text-primary);
+	text-decoration: none;
+	text-transform: uppercase;
+	flex-shrink: 0;
+}
+
+.home-rehabilitation-program__all-link:hover,
+.home-rehabilitation-program__all-link:focus-visible,
+.home-genotyping__all-link:hover,
+.home-genotyping__all-link:focus-visible,
+.home-comfort__all-link:hover,
+.home-comfort__all-link:focus-visible,
+.home-specialists__all-link:hover,
+.home-specialists__all-link:focus-visible,
+.home-articles__all-link:hover,
+.home-articles__all-link:focus-visible {
+	color: var(--color-accent);
+}
+
+.home-rehabilitation-program__all-icon,
+.home-genotyping__all-icon,
+.home-comfort__all-icon,
+.home-specialists__all-icon,
+.home-articles__all-icon {
+	display: inline-flex;
+	color: var(--color-accent);
+	font-size: 10px;
+}
+
+.home-rehabilitation-program__lead,
+.home-genotyping__lead,
+.home-comfort__lead {
+	margin: 0 0 var(--pad-gap-line);
+	padding: var(--pad-gap-line) 0 var(--pad-gap-line) var(--pad-gap);
+	border-left: 3px solid var(--color-accent);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.home-rehabilitation-program__intro,
+.home-genotyping__text {
+	margin: 0 0 var(--pad-gap);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.home-rehabilitation-program__directions {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.home-rehabilitation-program__direction {
+	padding: var(--pad-gap);
+	border: var(--border-width) solid var(--color-border-subtle);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+}
+
+.home-rehabilitation-program__direction-title {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-h3);
+	line-height: var(--line-height-h3);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-rehabilitation-program__direction-text {
+	margin: 0;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.home-genotyping__subheading {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-genotyping__list {
+	margin: 0 0 var(--pad-gap);
+	padding: 0;
+	list-style: none;
+}
+
+.home-genotyping__list-item {
+	position: relative;
+	margin: 0 0 var(--pad-gap-tight);
+	padding-left: var(--pad-gap);
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.home-genotyping__list-item::before {
+	content: '';
+	position: absolute;
+	top: 0.55em;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: var(--radius-full);
+	background-color: var(--color-accent);
+	transform: translateY(-50%);
+}
+
+.home-genotyping__actions {
+	display: flex;
+}
+
+.home-comfort__gallery {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--pad-gap-line);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.home-comfort__gallery-item {
+	overflow: hidden;
+	border-radius: var(--radius-main);
+}
+
+.home-comfort__gallery-item--wide {
+	grid-column: span 2;
+}
+
+.home-comfort__gallery-image {
+	display: block;
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: var(--radius-main);
+}
+
+.home-videos__heading {
+	margin: 0 0 var(--pad-gap);
+}
+
+.home-videos__preview {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	border-radius: var(--radius-main);
+}
+
+.home-videos__preview-image {
+	display: block;
+	width: 100%;
+	height: 388px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: var(--radius-main);
+}
+
+.home-videos__play {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	pointer-events: none;
+}
+
+.home-videos__play-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border-radius: var(--radius-full);
+	background-color: var(--color-surface);
+	color: var(--color-accent);
+	font-size: 20px;
+}
+
+.home-specialists__track {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: var(--pad-gap-line);
+	max-width: 100%;
+}
+
+.home-specialists__card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-tight);
+	min-width: 0;
+	padding: var(--pad-box);
+	border: var(--border-width) solid var(--color-border-subtle);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+}
+
+.home-specialists__photo {
+	display: block;
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+	object-position: center top;
+	border-radius: var(--radius-main);
+}
+
+.home-specialists__name {
+	margin: 0;
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-specialists__role {
+	margin: 0;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.home-articles__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--pad-gap-line);
+}
+
+.home-articles__card {
+	min-width: 0;
+}
+
+.home-articles__card-link {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-tight);
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+}
+
+.home-articles__image {
+	display: block;
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: var(--radius-main);
+}
+
+.home-articles__title {
+	margin: 0;
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-articles__meta {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-secondary);
+	text-transform: uppercase;
+}
+
+.home-faq__answer {
+	margin: 0;
+	padding: 0 0 var(--pad-gap-line);
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.home-final-form__band {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: var(--pad-gap);
+	box-sizing: border-box;
+	padding: var(--pad-gap);
+	border-radius: var(--radius-main);
+	background-color: var(--color-text-primary);
+	color: var(--color-text-inverse);
+}
+
+.home-final-form__heading {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: 30px;
+	line-height: 34px;
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-inverse);
+}
+
+.home-final-form__lead {
+	margin: 0;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-inverse);
+}
+
+.home-final-form__form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	min-width: 0;
+}
+
+.home-final-form__field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-mini);
+}
+
+.home-final-form__label {
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-inverse);
+}
+
+.home-final-form__input,
+.home-final-form__textarea {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	padding: var(--pad-gap-tight) var(--pad-box);
+	border: var(--control-border-width) solid var(--color-border-subtle);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+	font: inherit;
+	color: var(--color-text-primary);
+}
+
+.home-final-form__textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.home-final-form__submit {
+	align-self: flex-start;
+}
+
+.home-final-form__consent {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-inverse);
+	opacity: 0.9;
+}
+
+/* ==========================================================================
    11. Footer
    ========================================================================== */
 
 .site-footer {
 	padding-top: var(--pad-x);
 	padding-bottom: var(--pad-x);
+	overflow-x: clip;
+	max-width: 100%;
 }
 
 .site-footer__top {
@@ -2151,6 +2614,12 @@ body[data-offcanvas-state='open'] {
 		height: 60px;
 	}
 
+	.site-footer__actions {
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 100%;
+	}
+
 	.site-footer__main, .site-footer__top {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
@@ -2286,6 +2755,49 @@ body[data-offcanvas-state='open'] {
 		height: 220px; // EXACT_GEOMETRY — mobile interior band scaled from JPG 388px
 	}
 
+	.home-comfort__gallery {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.home-comfort__gallery-item--wide {
+		grid-column: auto;
+	}
+
+	.home-comfort__gallery-image,
+	.home-videos__preview-image {
+		height: 200px;
+	}
+
+	.home-specialists__track {
+		display: flex;
+		gap: var(--pad-gap-tight);
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.home-specialists__card {
+		flex: 0 0 min(280px, 85%);
+		scroll-snap-align: start;
+	}
+
+	.home-articles__grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.home-rehabilitation-program__head,
+	.home-genotyping__head,
+	.home-comfort__head,
+	.home-specialists__head,
+	.home-articles__head {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.home-final-form__band {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
 	.site-header {
 		padding-top: var(--pad-gap-tight);
 		padding-bottom: var(--pad-gap-tight);
@@ -2383,6 +2895,13 @@ body[data-offcanvas-state='open'] {
 	.hero__title {
 		font-size: 40px;
 		line-height: 40px;
+		white-space: normal;
+	}
+
+	.hero__content {
+		max-width: 100%;
+		box-sizing: border-box;
+		padding-inline: var(--pad-gap-tight);
 	}
 
 	.hero {

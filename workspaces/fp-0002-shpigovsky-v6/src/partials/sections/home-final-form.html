@@ -1,0 +1,48 @@
+<section class="home-final-form" aria-labelledby="home-final-form-heading">
+  <div class="container">
+    <div class="home-final-form__band">
+      <div class="home-final-form__copy">
+        <h2 class="home-final-form__heading" id="home-final-form-heading">Остались вопросы?</h2>
+        <p class="home-final-form__lead">Опишите вашу ситуацию в&nbsp;форме заявки, и&nbsp;мы расскажем, как сможем помочь</p>
+      </div>
+
+      <form class="home-final-form__form" data-final-form action="#" method="post" novalidate>
+        <div class="home-final-form__field">
+          <label class="home-final-form__label" for="home-final-form-phone">Ваш телефон</label>
+          <input
+            class="home-final-form__input"
+            type="tel"
+            id="home-final-form-phone"
+            name="phone"
+            data-mask="phone"
+            placeholder="+7 999 999 - 99 - 99"
+            autocomplete="tel"
+            required
+          >
+        </div>
+        <div class="home-final-form__field">
+          <label class="home-final-form__label" for="home-final-form-email">Ваша электронная почта</label>
+          <input
+            class="home-final-form__input"
+            type="email"
+            id="home-final-form-email"
+            name="email"
+            placeholder="Введите вашу почту"
+            autocomplete="email"
+          >
+        </div>
+        <div class="home-final-form__field">
+          <label class="home-final-form__label" for="home-final-form-message">Опишите ситуацию</label>
+          <textarea
+            class="home-final-form__textarea"
+            id="home-final-form-message"
+            name="message"
+            rows="4"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn_dark btn--primary home-final-form__submit">Записаться на&nbsp;консультацию</button>
+        <p class="home-final-form__consent">Отправляя форму, вы соглашаетесь с&nbsp;условиями пользовательского соглашения и&nbsp;условиями обработки данных</p>
+      </form>
+    </div>
+  </div>
+</section>

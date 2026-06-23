@@ -123,9 +123,25 @@ home_reviews_production_content_required: YES
 home_reviews_swiper: ACTIVE
 
 next_section_audit: COMPLETE
-next_section_implementation: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+next_section_implementation: COMPLETE_PENDING_OPERATOR_REVIEW
 next_section_identity: home-rehabilitation-requirements
-following_section: NOT_STARTED
+following_section: home-rehabilitation-program
+
+current_src: OPERATOR_CANONICAL
+
+reviews_status: OPERATOR_APPROVED_FROZEN
+rehabilitation_requirements: COMPLETE_PENDING_OPERATOR_REVIEW
+rehabilitation_program: COMPLETE_PENDING_OPERATOR_REVIEW
+home_genotyping: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_comfort: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_videos: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_specialists: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_articles: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_faq: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_final_form: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+
+footer: PRESERVED
+home_page_lower_sequence: COMPLETE_PENDING_OPERATOR_REVIEW
 
 responsive_shell: FROZEN_PRESERVED
 ```

@@ -303,3 +303,34 @@
 		boot();
 	}
 })();
+
+// FP-0002 v6 — home final form phone mask + safe submit
+(function initHomeFinalForm() {
+	'use strict';
+
+	function boot() {
+		var form = document.querySelector('[data-final-form]');
+		var phoneInput = document.querySelector('[data-mask="phone"]');
+
+		if (phoneInput && typeof window.Inputmask === 'function') {
+			window.Inputmask({
+				mask: '+7 999 999 - 99 - 99',
+				showMaskOnHover: false,
+			}).mask(phoneInput);
+		}
+
+		if (!form) {
+			return;
+		}
+
+		form.addEventListener('submit', function (event) {
+			event.preventDefault();
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
