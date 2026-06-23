@@ -1,0 +1,107 @@
+{
+  "suite": "wave4-strategy-fixtures-v1",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "id": 1,
+      "name": "complete evidence pack",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "missing Paid SERP",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "stale semantic pack",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "missing service registry",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "missing landing",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "missing tracking",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "unknown budget",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "T1-only launch",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "T1/T2 staged launch",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "T5 isolated experiment",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "out-of-scope commercial demand",
+      "pass": true
+    },
+    {
+      "id": 12,
+      "name": "negative conflict",
+      "pass": true
+    },
+    {
+      "id": 13,
+      "name": "conflicting geography",
+      "pass": true
+    },
+    {
+      "id": 14,
+      "name": "manual bidding cold start",
+      "pass": true
+    },
+    {
+      "id": 15,
+      "name": "auto strategy without conversions",
+      "pass": true
+    },
+    {
+      "id": 16,
+      "name": "provisional strategy",
+      "pass": true
+    },
+    {
+      "id": 17,
+      "name": "diagnostic evidence as authority",
+      "pass": true
+    },
+    {
+      "id": 18,
+      "name": "recommendation without evidence",
+      "pass": true
+    },
+    {
+      "id": 19,
+      "name": "fabricated competitor claim blocked in prompt contract",
+      "pass": true
+    },
+    {
+      "id": 20,
+      "name": "Commander requested before strategy approval",
+      "pass": true
+    }
+  ]
+}

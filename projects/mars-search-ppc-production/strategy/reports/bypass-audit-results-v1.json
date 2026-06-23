@@ -1,0 +1,108 @@
+{
+  "suite": "wave4-bypass-audit-v1",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "id": 1,
+      "name": "strategy without analytical pack",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "strategy without semantic pack",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "missing Paid SERP hidden",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "diagnostic evidence used as authority",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "stale evidence accepted blocked",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "observed fact fabricated blocked by statement model",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "recommendation lacks evidence",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "rejected phrase activated",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "cluster without owner activated",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "campaign without landing",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "bidding without conversion evidence",
+      "pass": true
+    },
+    {
+      "id": 12,
+      "name": "budget invented",
+      "pass": true
+    },
+    {
+      "id": 13,
+      "name": "T5 mixed into main launch",
+      "pass": true
+    },
+    {
+      "id": 14,
+      "name": "negative conflict ignored",
+      "pass": true
+    },
+    {
+      "id": 15,
+      "name": "provisional strategy marked production",
+      "pass": true
+    },
+    {
+      "id": 16,
+      "name": "Commander requested before approval",
+      "pass": true
+    },
+    {
+      "id": 17,
+      "name": "Wave 5 started early",
+      "pass": true
+    },
+    {
+      "id": 18,
+      "name": "Corvonero strategy generated",
+      "pass": true
+    },
+    {
+      "id": 19,
+      "name": "secret leak",
+      "pass": true
+    },
+    {
+      "id": 20,
+      "name": "output reconciliation failure",
+      "pass": true
+    }
+  ],
+  "timestamp": "2026-06-23T15:13:07.023Z"
+}

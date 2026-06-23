@@ -1,0 +1,15 @@
+{
+  "inventory_id": "land-synth-v1",
+  "pages": [
+    {
+      "service_id": "svc-consulting",
+      "url": "https://client.example/services/1c",
+      "status": "available",
+      "geo": ["moscow_region"],
+      "mobile_ready": true,
+      "cta": "request_quote",
+      "trust_signals": ["certification"]
+    }
+  ],
+  "collected_at": "2026-06-20T15:00:00Z"
+}

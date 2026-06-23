@@ -1,0 +1,19 @@
+{
+  "audit_id": "SEARCH-PPC-ANALYTICAL-STRATEGIST-CAPABILITY-AUDIT-v1",
+  "date": "2026-06-23",
+  "capabilities": [
+    { "id": "lifecycle-validator", "status": "OPERATIONAL", "path": "projects/mars-search-ppc-production/runtime/src/validate-lifecycle.mjs" },
+    { "id": "orca-semantic-production", "status": "OPERATIONAL", "path": "projects/orca/semantic-intelligence/production/" },
+    { "id": "orca-live-model-d3", "status": "OPERATIONAL", "path": "projects/orca/semantic-intelligence/live-model/", "boundary": "openrouter/openai/gpt-5-mini" },
+    { "id": "mig-evidence-cli", "status": "OPERATIONAL", "path": "projects/mig/search-ppc-evidence/" },
+    { "id": "mig-paid-serp-live", "status": "VALIDATION PENDING", "path": "projects/mig/search-ppc-evidence/runtime/cli/run-live-paid-serp-session.mjs" },
+    { "id": "sppc-12-contract-human", "status": "DOCUMENTED ONLY", "path": "projects/mars-search-ppc-production/stages/SPPC-12-dated-analytical-pack.md" },
+    { "id": "sppc-12-builder", "status": "OPERATIONAL", "path": "projects/mars-search-ppc-production/strategy/runtime/lib/analytical-pack-builder.mjs" },
+    { "id": "sppc-13-strategist", "status": "OPERATIONAL", "path": "projects/mars-search-ppc-production/strategy/runtime/lib/strategist-contract.mjs" },
+    { "id": "triumph-campaign-sot", "status": "PROJECT-SPECIFIC", "path": "projects/orca/ppc/triumph-manipulator/", "reuse": "patterns only" },
+    { "id": "corvonero-production-scripts", "status": "PROJECT-SPECIFIC", "must_not_promote": true },
+    { "id": "corvonero-clean-room", "status": "FROZEN", "path": "projects/orca/projects/corvonero-direct-v2-clean-room/" },
+    { "id": "commander-export", "status": "PROJECT-SPECIFIC", "path": "projects/orca/ppc/triumph-manipulator/tools/run-ppc-gated-export.mjs" },
+    { "id": "chat-strategy-bypass", "status": "UNSAFE", "mitigation": "lifecycle gate SPPC-12 before SPPC-13" }
+  ]
+}

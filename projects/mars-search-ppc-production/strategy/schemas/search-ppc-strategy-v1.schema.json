@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "search-ppc-strategy-v1.schema.json",
+  "title": "Search PPC Strategy v1",
+  "type": "object",
+  "required": ["strategy_id", "version", "strategy_status", "supporting_evidence_ids", "blockers"],
+  "properties": {
+    "strategy_id": { "type": "string" },
+    "version": { "type": "string" },
+    "strategy_status": { "type": "string" },
+    "strategic_objective": { "type": ["string", "null"] },
+    "tier_activation_policy": { "type": "object" },
+    "campaign_segmentation": { "type": "object" },
+    "blockers": { "type": "array" },
+    "supporting_evidence_ids": { "type": "array" }
+  }
+}
