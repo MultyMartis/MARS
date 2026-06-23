@@ -39,6 +39,34 @@ submission_backend: BLOCKED
 false_success: PROHIBITED
 ```
 
+## Services hub foundation (2026-06-23)
+
+```text
+current_src: OPERATOR_CANONICAL
+
+site_structure_xlsx: AUDITED
+page_inventory: UPDATED
+url_map: UPDATED
+wordpress_target: CONFIRMED
+
+services_page: FOUNDATION_IMPLEMENTED_PENDING_OPERATOR_REVIEW
+services_page_source: src/pages/uslugi.html
+services_page_static_build: dist/uslugi.html
+services_page_wordpress_url: /uslugi/
+services_page_existing_blocks: ASSEMBLED
+services_page_unique_blocks: NOT_STARTED
+
+header_href_map: UPDATED
+mobile_menu_href_map: UPDATED
+footer_href_map: UPDATED
+header_interaction_states: IMPLEMENTED
+footer_interaction_states: IMPLEMENTED
+
+home_page: PRESERVED
+modal_backend: BLOCKED
+captcha_configuration: BLOCKED
+```
+
 ## Full home operator-stable release
 
 | Field | Value |
@@ -198,7 +226,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Responsive (mobile header/footer) | **IMPLEMENTED** (Hero/main NOT STARTED) |
 | JavaScript | **ACTIVE** (off-canvas in `main.js`) |
 
-**Build map:** Header → Hero → *(empty main)* → Footer (`dist/index.html`).
+**Build map:** Header → Hero → Home main sections → Footer (`dist/index.html`); Services foundation → Header → shared blocks → Footer (`dist/uslugi.html`).
 
 ## Main content operational status
 
