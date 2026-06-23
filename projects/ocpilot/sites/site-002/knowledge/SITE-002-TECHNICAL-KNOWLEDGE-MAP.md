@@ -2,11 +2,11 @@
 
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`  
+**Authority:** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`  
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
-**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + catalog state persistence (09A–09C) + hub cleanup (10) + operator manual polish (2026-06-21 live state).
+**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + catalog state persistence (09A–09C) + hub cleanup (10) + operator manual polish (2026-06-21 live state) + M9.13 About Company redesign/polish/rejection/restoration (2026-06-23).
 
 ---
 
@@ -20,13 +20,14 @@
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
 | 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
+| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
 
 ### Current stable state
 
-- **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
-- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
+- **Authority:** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`
+- **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
 - **Catalog UX cluster:** filter recovery (06D–06M) → filter UX (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator polish) → catalog state persistence (09A–09C) → hub cleanup (10)
+- **About page:** M9.13 redesign **rejected by operator** — live `/about` **restored** to pre-redesign version (operator-approved restoration, not rollback failure)
 
 ### Manual UI refinements are canonical
 
@@ -603,7 +604,7 @@ Before **any** JS task touching header sticky behaviour or catalog filter scroll
 Before **any** SITE-002 task:
 
 1. **Read** this Technical Knowledge Map
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
 3. **Verify Authority State** matches checkpoint name
 4. **Check Active Roadmap Stage** — [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md)
 5. **Only then** perform audit or changes
@@ -614,15 +615,26 @@ Before **any** task touching **filters**, **sort**, **pagination**, **limit**, o
 
 1. **Read** this Technical Knowledge Map — **§16 Catalog State Persistence** (mandatory)
 2. **Read** pass reports **M9.8.9-09A**, **M9.8.9-09B**, **M9.8.9-09C** as mandatory context
-3. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+3. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
 4. Test **interaction paths** — filter AJAX → limit click; limit → filter; full combo with sort + page — not only full-page URL loads
+
+### PRE-TASK RULE UPDATE (domain-specific — About page)
+
+Before **any** task touching the **About page** (`/about`, `information/about`) or planning a **new About redesign**:
+
+1. **Read** this Technical Knowledge Map — **§17 About Page History** (mandatory)
+2. **Read** [SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](../reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md)
+3. **Read** [SITE-002-M9.13-ABOUT-COMPANY-REDESIGN-IMPLEMENTATION.md](../reports/SITE-002-M9.13-ABOUT-COMPANY-REDESIGN-IMPLEMENTATION.md)
+4. **Read** [SITE-002-M9.13-ABOUT-COMPANY-POLISH-PASS-V1.md](../reports/SITE-002-M9.13-ABOUT-COMPANY-POLISH-PASS-V1.md)
+5. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
+6. Treat **restored version** on live TEST as **source of truth** — M9.13 work copies are historical reference only
 
 ### PRE-TASK RULE UPDATE (domain-specific — filters / catalog / 1C / price / PLP)
 
 Before **any** task touching **filters**, **catalog**, **1C import**, **price**, or **PLP**:
 
 1. **Read** this Technical Knowledge Map — especially **§5 Price Index**, **§6 Filter System**, **§7 Filter Architecture**, **§8 Live Files With Business Logic**, **§16 Catalog State Persistence**
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
 3. **Live-capture** the specific business-logic files in scope (`product.php`, `import_1C_offers.php`, `filterssidebar.twig`, `main.js`, `style.css`, `category.php`) before deploy
 4. Test isolated URL params **and** sidebar form submit; test `only_with_price` + attribute combos; verify price range min ≠ 0 when zero-price SKUs exist
 
@@ -631,7 +643,7 @@ Before **any** task touching **filters**, **catalog**, **1C import**, **price**,
 Before **any** task touching **trust block**, **certificates**, **dealers form**, or **category CTA**:
 
 1. **Read** this Technical Knowledge Map — **§14 Commercial Trust Block**
-2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+2. **Read** the latest Stable Checkpoint — [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
 3. **Live-capture** `blockcommercialtrust.twig`, `style.css`, `category.php` before deploy — do not trust 03C work copies or pass reports alone
 4. Verify dynamic H2 on at least one mapped category + fallback category
 5. Treat operator manual CSS/Twig on live as **canonical** over repo work copies
@@ -662,7 +674,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 
 ## 14. Commercial Trust Block
 
-Category PLP decision-stage block — after product grid, before footer. **Live TEST is canonical**; M9.8.9-03C deploy + operator manual polish registered in `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` (carried forward from Commercial Trust 01).
+Category PLP decision-stage block — after product grid, before footer. **Live TEST is canonical**; M9.8.9-03C deploy + operator manual polish registered in `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` (catalog UX carried forward from Commercial Trust 01 / Catalog UX Complete 01).
 
 ### Purpose
 
@@ -756,7 +768,7 @@ CSS: `.zpm-commercial-trust__services` — `grid-template-columns: repeat(4, 1fr
 Before **any** edit to trust block, certificates strip, dealers form, or category CTA:
 
 1. Read **§14** (this section)
-2. Read latest stable checkpoint — [SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](../baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md)
+2. Read latest stable checkpoint — [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
 3. **Live-capture** `blockcommercialtrust.twig`, `style.css`, `category.php` — do not trust 03C work copies or pass reports alone
 4. Operator manual CSS/Twig on live **override** repo work copies
 5. Clear Twig cache after twig deploy
@@ -910,6 +922,99 @@ Before **any** edit to catalog URL state, limit menu, pagination AJAX, or filter
 
 ---
 
+## 17. About Page History
+
+Corporate page `/about` — route `information/about`. **Current canonical state = restored pre-M9.13 version** on live TEST.
+
+### 1. Original page (pre-M9.13)
+
+| Item | Value |
+|------|--------|
+| **Route** | `information/about` |
+| **Controller** | `catalog/controller/information/about.php` |
+| **Twig** | `catalog/view/theme/default/template/information/about.twig` |
+| **Structure** | Legacy layout — `about-page--main-wrap`, video hero (`about-page-video`), metrics, certificate Swiper, dealer form, geo block (`geo-web.png`) |
+| **Hero image** | `assets/img/about-page-img.jpg` |
+| **CSS** | Scoped rules in `assets/css/style.css` (no `zpm-about-*` namespace) |
+
+This structure was live before M9.13 redesign (2026-06-23).
+
+### 2. M9.13 redesign
+
+| Item | Value |
+|------|--------|
+| **Status** | **IMPLEMENTED** · **QA PASSED** · **REJECTED BY OPERATOR** |
+| **Scope** | 6-section compact concept — `zpm-about-hero`, company, advantages, certs, geo, CTA |
+| **Files changed** | `about.twig`, `about.php`, `style.css` (`zpm-about-page*` block) |
+| **Evidence** | [SITE-002-M9.13-ABOUT-COMPANY-REDESIGN-IMPLEMENTATION.md](../reports/SITE-002-M9.13-ABOUT-COMPANY-REDESIGN-IMPLEMENTATION.md) |
+| **Work copies** | `reports/m9.13-work/` |
+| **Backups** | `backups/*.pre-m9.13-about-redesign.bak` |
+
+Removed legacy blocks: video hero, metrics cards, cert slider, dealer section, advantage partials.
+
+### 3. M9.13 polish
+
+| Item | Value |
+|------|--------|
+| **Status** | **IMPLEMENTED** · **QA PASSED** · **REJECTED WITH REDESIGN** |
+| **Scope** | Hero trust row, spacing, cert column sizing, hero + logistics image upgrades |
+| **Files changed** | `about.twig`, `style.css`, `about-page-img.jpg`; **new** `about-logistics.jpg` |
+| **Evidence** | [SITE-002-M9.13-ABOUT-COMPANY-POLISH-PASS-V1.md](../reports/SITE-002-M9.13-ABOUT-COMPANY-POLISH-PASS-V1.md) |
+| **Work copies** | `reports/m9.13-polish-work/` |
+| **Backups** | `backups/*.pre-m9.13-about-polish-v1.bak` |
+
+Structure unchanged from redesign — polish only.
+
+### 4. Operator review
+
+| Item | Value |
+|------|--------|
+| **Decision** | **REJECTED** — M9.13 redesign/polish not accepted for production |
+| **Classification** | Operator visual evaluation — not a technical deploy failure |
+| **Implication** | Redesign work copies remain **historical reference**; live must return to pre-redesign |
+
+### 5. Restoration
+
+| Item | Value |
+|------|--------|
+| **Status** | **RESTORED** · **QA PASSED** |
+| **Type** | **Operator-approved restoration** — **not** rollback failure |
+| **Date** | 2026-06-23 |
+| **Script** | `reports/m9.13-restore-work/m913-about-restore-to-pre-redesign.py` |
+| **Evidence** | [SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](../reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md) |
+
+**Restored from:** `backups/*.pre-m9.13-about-redesign.bak` (+ `about-page-img.jpg` from polish backup — same pre-redesign bytes).
+
+**Removed:** `assets/img/about-logistics.jpg` (polish-only asset).
+
+**SHA verified** against redesign pre-deploy manifest — restored files match pre-M9.13 state.
+
+### 6. Current canonical state
+
+| Item | Value |
+|------|--------|
+| **Live URL** | https://zpm.new-site.space/about |
+| **Structure** | **Restored original** — pre-M9.13 legacy layout |
+| **M9.13 namespaces** | **Absent** on live — no `zpm-about-*` |
+| **Source of truth** | Live TEST restored version |
+| **Authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+
+### Change rules
+
+Before **any** edit to About page or new About redesign:
+
+1. Read **§17** (this section)
+2. Read restoration, redesign, and polish reports (listed above)
+3. **Live-capture** `about.twig`, `about.php`, `style.css` before deploy
+4. Treat restored live version as canonical — do not assume M9.13 work copies reflect production intent
+5. New redesign requires **operator charter** — M9.13 pass is closed as rejected/restored
+
+**Evidence:** [SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](../reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md) · [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
+
+**SAFE UNKNOWN:** Twig cache clear after restore returned empty listing — operator manual clear on Beget if stale render appears.
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -921,4 +1026,4 @@ Before **any** edit to catalog URL state, limit menu, pagination AJAX, or filter
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-21 (M9.8.9 Catalog UX Complete — §16 Catalog State Persistence; authority → CATALOG-UX-COMPLETE-01).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-23 (M9.13 About Company Restored — §17 About Page History; authority → M9.13-ABOUT-COMPANY-RESTORED-01).*

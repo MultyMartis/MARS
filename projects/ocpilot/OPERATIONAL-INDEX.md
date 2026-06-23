@@ -134,7 +134,9 @@
 
 | 4.144 | **SITE-002 — Stable Live M9.8.9 Commercial Trust Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT** — superseded by 4.145 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-COMMERCIAL-TRUST-01.md), [sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/](sites/site-002/reports/m9.8.9-commercial-trust-checkpoint-work/live-capture/), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
-| 4.145 | **SITE-002 — Stable Live M9.8.9 Catalog UX Complete Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+| 4.145 | **SITE-002 — Stable Live M9.8.9 Catalog UX Complete Checkpoint** | **DONE** (2026-06-21; status: **STABLE LIVE CHECKPOINT** — superseded by 4.146 for live truth) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
+| 4.146 | **SITE-002 — Stable Live M9.13 About Company Restored Checkpoint** | **DONE** (2026-06-23; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md), [sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
@@ -184,6 +186,26 @@
 
 ---
 
+## Run 4.146 deliverables (summary)
+
+- [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) — stable checkpoint after operator-approved About page restoration
+- [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §17 About Page History, PRE-TASK rule for About page tasks
+- [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md) — registration report
+- [sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md) — restoration evidence
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — authority → M9.13 About Company Restored 01
+
+**Site modification:** **NONE** — documentation only. No FTP. No deploy.
+
+**Authority:** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`
+
+**Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
+
+**Registered scope:** catalog UX cluster (carried forward) · M9.13 About lifecycle (IMPLEMENTED · QA PASSED · REJECTED · RESTORED) · About page canonical = restored pre-redesign version
+
+**PRE-TASK RULE:** for About page — read Knowledge Map §17 + restoration / redesign / polish reports before any new redesign; treat restored version as source of truth.
+
+---
+
 ## Run 4.145 deliverables (summary)
 
 - [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) — stable checkpoint after catalog UX cluster completion
@@ -193,7 +215,7 @@
 
 **Site modification:** **NONE** — documentation only. No FTP. No deploy.
 
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` — **superseded by 4.146**
 
 **Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`
 
@@ -215,7 +237,7 @@
 
 **Site modification:** **NONE** — documentation + read-only FTP capture only. No deploy.
 
-**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` — **superseded by 4.145**
+**Authority:** `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01` — **superseded by 4.145** (live truth superseded by 4.146)
 
 **Supersedes for live truth:** `SITE-002-STABLE-LIVE-M9.8.9-FILTER-UX-COMPLETE-01`
 
