@@ -2328,6 +2328,317 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	color: var(--color-text-inverse);
 }
 
+.home-final-form__field-error {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: #ffb4b4;
+}
+
+.home-final-form__field-error[hidden] {
+	display: none;
+}
+
+.home-final-form__field--invalid .home-final-form__input,
+.home-final-form__field--invalid .home-final-form__textarea {
+	border-color: #ff8a8a;
+}
+
+.home-final-form__field-error_consent {
+	grid-column: 1 / -1;
+	margin-top: var(--pad-gap-mini);
+	margin-left: 30px;
+}
+
+.home-final-form__status {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-inverse);
+}
+
+.home-final-form__status[hidden] {
+	display: none;
+}
+
+.home-final-form__status--error {
+	color: #ffb4b4;
+}
+
+.home-final-form__status--success {
+	color: #b8f0c8;
+}
+
+.home-final-form__status--loading {
+	opacity: 0.85;
+}
+
+.home-final-form[data-lead-form-state='loading'] .home-final-form__submit {
+	opacity: 0.7;
+	pointer-events: none;
+}
+
+/* ==========================================================================
+   10b. Modal consultation
+   ========================================================================== */
+
+.modal-consultation {
+	position: fixed;
+	inset: 0;
+	z-index: 1200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--pad-gap-line);
+	box-sizing: border-box;
+	visibility: hidden;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-consultation[hidden] {
+	display: none;
+}
+
+.modal-consultation[data-modal-state='open'] {
+	visibility: visible;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+body[data-modal-state='open'] {
+	overflow: hidden;
+}
+
+.modal-consultation__overlay {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(17, 24, 39, 0.56);
+}
+
+.modal-consultation__dialog {
+	position: relative;
+	z-index: 1;
+	box-sizing: border-box;
+	width: min(100%, 720px);
+	max-height: min(92vh, 920px);
+	overflow: auto;
+	padding: var(--pad-gap);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+	color: var(--color-text-primary);
+	box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+}
+
+.modal-consultation__close {
+	position: absolute;
+	top: var(--pad-gap-line);
+	right: var(--pad-gap-line);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border: 0;
+	border-radius: var(--radius-full);
+	background: transparent;
+	color: var(--color-text-primary);
+	cursor: pointer;
+}
+
+.modal-consultation__close:hover,
+.modal-consultation__close:focus-visible {
+	background-color: rgba(0, 0, 0, 0.06);
+	outline: none;
+}
+
+.modal-consultation__title {
+	margin: 0 48px var(--pad-gap-mini) 0;
+	font-size: 30px;
+	line-height: 34px;
+	font-weight: var(--font-weight-heading);
+}
+
+.modal-consultation__subtitle {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.modal-consultation__subtitle[hidden] {
+	display: none;
+}
+
+.modal-consultation__form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	min-width: 0;
+}
+
+.modal-consultation__row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--pad-gap-line);
+	min-width: 0;
+}
+
+.modal-consultation__field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-mini);
+	min-width: 0;
+}
+
+.modal-consultation__label {
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-primary);
+}
+
+.modal-consultation__input,
+.modal-consultation__textarea {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	padding: var(--pad-gap-tight) var(--pad-box);
+	border: var(--control-border-width) solid var(--color-border-subtle);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+	font: inherit;
+	color: var(--color-text-primary);
+}
+
+.modal-consultation__textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.modal-consultation__submit {
+	align-self: flex-start;
+}
+
+.modal-consultation__consent {
+	display: grid;
+	grid-template-columns: 20px minmax(0, 1fr);
+	align-items: start;
+	gap: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+.modal-consultation__consent-input,
+.modal-consultation__consent-control {
+	grid-column: 1;
+	grid-row: 1;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+}
+
+.modal-consultation__consent-input {
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+	appearance: none;
+}
+
+.modal-consultation__consent-control {
+	display: block;
+	border: 2px solid var(--color-border-subtle);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+	pointer-events: none;
+	transition:
+		border-color 0.2s ease,
+		background-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.modal-consultation__consent-input:checked + .modal-consultation__consent-control {
+	border-color: var(--color-accent);
+	background-color: var(--color-accent);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M4.2 9.1 1.6 6.5l.9-.9 1.7 1.7 5-5 .9.9z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 12px 12px;
+}
+
+.modal-consultation__consent-input:focus-visible + .modal-consultation__consent-control {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+}
+
+.modal-consultation__consent-text {
+	grid-column: 2;
+	grid-row: 1;
+	margin-left: 10px;
+	min-width: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-primary);
+	overflow-wrap: anywhere;
+}
+
+.modal-consultation__consent-link {
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.modal-consultation__field-error {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: #c62828;
+}
+
+.modal-consultation__field-error[hidden] {
+	display: none;
+}
+
+.modal-consultation__field--invalid .modal-consultation__input,
+.modal-consultation__field--invalid .modal-consultation__textarea {
+	border-color: #c62828;
+}
+
+.modal-consultation__field-error_consent {
+	grid-column: 1 / -1;
+	margin-top: var(--pad-gap-mini);
+	margin-left: 30px;
+}
+
+.modal-consultation__status {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+}
+
+.modal-consultation__status[hidden] {
+	display: none;
+}
+
+.modal-consultation__status--error {
+	color: #c62828;
+}
+
+.modal-consultation__status--success {
+	color: #1b7f3b;
+}
+
+.modal-consultation__status--loading {
+	color: var(--color-text-secondary);
+}
+
+.modal-consultation[data-lead-form-state='loading'] .modal-consultation__submit {
+	opacity: 0.7;
+	pointer-events: none;
+}
+
 /* ==========================================================================
    11. Footer
    ========================================================================== */
@@ -3070,6 +3381,18 @@ body[data-offcanvas-state='open'] {
 
 	.home-final-form__row {
 		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.modal-consultation__row {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.modal-consultation {
+		padding: 10px;
+	}
+
+	.modal-consultation__dialog {
+		padding: var(--pad-gap-line);
 	}
 
 	.site-header {

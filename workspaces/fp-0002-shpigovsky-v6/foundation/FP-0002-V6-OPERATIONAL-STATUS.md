@@ -1,6 +1,43 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (reviews operator-stable freeze + rehabilitation requirements section)
+**Updated:** 2026-06-23 (pre-modals freeze + modal consultation forms)
+
+## Pre-modals operator-stable release
+
+| Field | Value |
+|-------|-------|
+| `pre_modals_release` | `FP-0002-V6-PRE-MODALS-OPERATOR-STABLE-01` |
+| `pre_modals_release_status` | **VERIFIED** |
+| `pre_modals_release_tag` | `fp-0002-v6-pre-modals-operator-stable-01` |
+| `pre_modals_release_commit` | `0f78f6d` |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-PRE-MODALS-OPERATOR-STABLE-01-SOURCE.zip` |
+| `backup_sha256` | `b05bdda7e34fdf51b7e560bcd8937ea1dcccd6501e20ba8d43828bee11a52f93` |
+
+## Modal consultation system (2026-06-23)
+
+```text
+current_src: OPERATOR_CANONICAL
+
+pre_modals_release: FP-0002-V6-PRE-MODALS-OPERATOR-STABLE-01
+pre_modals_release_status: VERIFIED
+
+modal_system: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+modal_component_instances: 1
+modal_trigger_inventory: COMPLETE
+modal_forms: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+
+form_functional_authority: TRIUMPH_MANIPULATOR_V6
+form_visual_authority: FP_0002
+
+required_validation: ACTIVE
+phone_inputmask: ACTIVE
+consent_validation: ACTIVE
+
+captcha_architecture: PORTED
+captcha_configuration: BLOCKED
+submission_backend: BLOCKED
+false_success: PROHIBITED
+```
 
 ## Full home operator-stable release
 

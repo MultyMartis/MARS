@@ -6,9 +6,16 @@
         <p class="home-final-form__lead">Опишите вашу ситуацию в&nbsp;форме заявки, и&nbsp;мы расскажем, как сможем помочь</p>
       </div>
 
-      <form class="home-final-form__form" data-final-form action="#" method="post">
+      <form class="home-final-form__form" data-lead-form data-form-context="final" novalidate>
+        <div class="home-final-form__hidden" data-lead-form-hidden aria-hidden="true">
+          <input type="hidden" name="form_context" data-lead-hidden="form_context" value="final">
+          <input type="hidden" name="lead_source" data-lead-hidden="lead_source" value="final-section">
+          <input type="hidden" name="page_url" data-lead-hidden="page_url" value="">
+          <input type="hidden" name="page_title" data-lead-hidden="page_title" value="">
+          <input type="hidden" name="g-recaptcha-response" data-lead-hidden="g-recaptcha-response" value="">
+        </div>
         <div class="home-final-form__row">
-          <div class="home-final-form__field">
+          <div class="home-final-form__field" data-lead-field-wrap>
             <label class="home-final-form__label" for="home-final-form-name">Ваше имя</label>
             <input
               class="home-final-form__input"
@@ -18,9 +25,11 @@
               autocomplete="name"
               placeholder="Ваше имя"
               required
+              aria-describedby="home-final-form-name-error"
             >
+            <span class="home-final-form__field-error" data-lead-field-error id="home-final-form-name-error" hidden></span>
           </div>
-          <div class="home-final-form__field">
+          <div class="home-final-form__field" data-lead-field-wrap>
             <label class="home-final-form__label" for="home-final-form-phone">Ваш телефон</label>
             <input
               class="home-final-form__input"
@@ -28,13 +37,16 @@
               id="home-final-form-phone"
               name="phone"
               data-phone-input
+              inputmode="tel"
               placeholder="+7 999 999 - 99 - 99"
               autocomplete="tel"
               required
+              aria-describedby="home-final-form-phone-error"
             >
+            <span class="home-final-form__field-error" data-lead-field-error id="home-final-form-phone-error" hidden></span>
           </div>
         </div>
-        <div class="home-final-form__field home-final-form__field_message">
+        <div class="home-final-form__field home-final-form__field_message" data-lead-field-wrap>
           <label class="home-final-form__label" for="home-final-form-message">Опишите ситуацию</label>
           <textarea
             class="home-final-form__textarea"
@@ -43,9 +55,11 @@
             rows="4"
             placeholder="Опишите ситуацию"
             required
+            aria-describedby="home-final-form-message-error"
           ></textarea>
+          <span class="home-final-form__field-error" data-lead-field-error id="home-final-form-message-error" hidden></span>
         </div>
-        <label class="home-final-form__consent">
+        <label class="home-final-form__consent" data-lead-field-wrap>
           <input
             class="home-final-form__consent-input"
             type="checkbox"
@@ -55,8 +69,10 @@
           >
           <span class="home-final-form__consent-control" aria-hidden="true"></span>
           <span class="home-final-form__consent-text">Я&nbsp;даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a class="home-final-form__consent-link" href="/consent-personal-data/">Согласием на&nbsp;обработку персональных данных</a> и&nbsp;соглашаюсь с&nbsp;<a class="home-final-form__consent-link" href="/privacy-policy/">Политикой конфиденциальности</a>.</span>
+          <span class="home-final-form__field-error home-final-form__field-error_consent" data-lead-field-error id="home-final-form-consent-error" hidden></span>
         </label>
         <button type="submit" class="btn btn_dark btn--primary home-final-form__submit">Записаться на&nbsp;консультацию</button>
+        <div class="home-final-form__status" data-lead-form-status role="status" aria-live="polite" hidden></div>
       </form>
     </div>
   </div>
