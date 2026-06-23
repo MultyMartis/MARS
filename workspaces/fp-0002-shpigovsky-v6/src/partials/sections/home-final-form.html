@@ -8,6 +8,18 @@
 
       <form class="home-final-form__form" data-final-form action="#" method="post" novalidate>
         <div class="home-final-form__field">
+          <label class="home-final-form__label" for="home-final-form-name">Ваше имя</label>
+          <input
+            class="home-final-form__input"
+            type="text"
+            id="home-final-form-name"
+            name="name"
+            autocomplete="name"
+            placeholder="Ваше имя"
+            required
+          >
+        </div>
+        <div class="home-final-form__field">
           <label class="home-final-form__label" for="home-final-form-phone">Ваш телефон</label>
           <input
             class="home-final-form__input"
@@ -29,6 +41,7 @@
             name="email"
             placeholder="Введите вашу почту"
             autocomplete="email"
+            required
           >
         </div>
         <div class="home-final-form__field">
@@ -38,6 +51,8 @@
             id="home-final-form-message"
             name="message"
             rows="4"
+            placeholder="Опишите ситуацию"
+            required
           ></textarea>
         </div>
         <button type="submit" class="btn btn_dark btn--primary home-final-form__submit">Записаться на&nbsp;консультацию</button>

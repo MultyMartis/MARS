@@ -2,6 +2,44 @@
 
 **Updated:** 2026-06-23 (reviews operator-stable freeze + rehabilitation requirements section)
 
+## Full home operator-stable release
+
+| Field | Value |
+|-------|-------|
+| `full_home_backup` | `FP-0002-V6-FULL-HOME-OPERATOR-STABLE-01` |
+| `full_home_backup_status` | **VERIFIED** |
+| `full_home_backup_tag` | `fp-0002-v6-full-home-operator-stable-01` |
+| `full_home_backup_commit` | `9018827` |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-FULL-HOME-OPERATOR-STABLE-01-SOURCE.zip` |
+| `backup_sha256` | `c01b7e125f03607b935bc4f71fdd64b2b96e1db37d08179cca8ee419b29ce587` |
+
+## Lower home corrections (2026-06-23)
+
+```text
+current_src: OPERATOR_CANONICAL
+full_home_backup: FP-0002-V6-FULL-HOME-OPERATOR-STABLE-01
+full_home_backup_status: VERIFIED
+
+rehabilitation_program_images: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_comfort_assets: EXACT_FIGMA_EXPORT
+home_comfort_fancybox: ACTIVE
+home_comfort_decor_logo_clickable: NO
+
+home_videos_preview_count: 2
+home_videos_mode: DEMO_NO_VIDEO_URLS
+
+home_specialists_swiper: ACTIVE
+home_specialists_desktop_slides: 3.5
+
+home_faq_visual_system: INDEPENDENT
+home_faq_answers_2_10: BLOCKED
+
+home_final_form_fields: 4
+home_final_form_backend: NOT_CONNECTED
+
+lower_home_corrections: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+```
+
 ## Reviews operator-stable release
 
 | Field | Value |

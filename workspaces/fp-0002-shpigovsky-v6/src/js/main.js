@@ -304,6 +304,87 @@
 	}
 })();
 
+// FP-0002 v6 — home specialists swiper
+(function initHomeSpecialists() {
+	'use strict';
+
+	function boot() {
+		var slider = document.querySelector('[data-specialists-slider]');
+
+		if (!slider || typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		if (slider.swiper) {
+			return;
+		}
+
+		new window.Swiper(slider, {
+			slidesPerView: 3.5,
+			spaceBetween: 20,
+			loop: false,
+			autoplay: false,
+			navigation: false,
+			pagination: false,
+			watchOverflow: true,
+			grabCursor: true,
+			breakpoints: {
+				320: {
+					slidesPerView: 1.35,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				1025: {
+					slidesPerView: 3.5,
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 v6 — home comfort fancybox
+(function initHomeComfortFancybox() {
+	'use strict';
+
+	function boot() {
+		var fancybox = window.Fancybox;
+
+		if (typeof fancybox !== 'function') {
+			return;
+		}
+
+		fancybox.bind('[data-fancybox="home-comfort"]', {
+			groupAll: false,
+			Carousel: {
+				infinite: false,
+			},
+			Toolbar: {
+				display: {
+					left: ['infobar'],
+					middle: [],
+					right: ['close'],
+				},
+			},
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
 // FP-0002 v6 — home final form phone mask + safe submit
 (function initHomeFinalForm() {
 	'use strict';
@@ -311,12 +392,25 @@
 	function boot() {
 		var form = document.querySelector('[data-final-form]');
 		var phoneInput = document.querySelector('[data-mask="phone"]');
+		var emailInput = form ? form.querySelector('input[type="email"]') : null;
 
 		if (phoneInput && typeof window.Inputmask === 'function') {
 			window.Inputmask({
 				mask: '+7 999 999 - 99 - 99',
 				showMaskOnHover: false,
 			}).mask(phoneInput);
+		}
+
+		if (emailInput) {
+			emailInput.addEventListener('input', function () {
+				emailInput.setCustomValidity('');
+			});
+
+			emailInput.addEventListener('invalid', function () {
+				if (emailInput.validity.typeMismatch) {
+					emailInput.setCustomValidity('Введите корректный адрес электронной почты');
+				}
+			});
 		}
 
 		if (!form) {
