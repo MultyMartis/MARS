@@ -23,6 +23,9 @@ const cases = [
   { id: 'PQR-ABSTAIN-02', q: 'ошибка 0x80004005 1с', expected: 'ABSTAIN', class: 'unclear_error' },
   { id: 'PQR-ACCEPT-02', q: 'заказать восстановление базы 1с после сбоя', expected: 'ACCEPT', class: 'service_object_problem' },
   { id: 'PQR-REJECT-03', q: 'как установить photoshop на mac самому', expected: 'REJECT', class: 'out_of_scope_diy' },
+  { id: 'PQR-ABSTAIN-03', q: 'как исправить ошибку 0x80004005 1с', expected: 'ABSTAIN', class: 'diy_ambiguous_error' },
+  { id: 'PQR-ACCEPT-03', q: 'устранить ошибку 0x80004005 1с срочно', expected: 'ACCEPT', class: 'urgent_error_resolution' },
+  { id: 'PQR-ACCEPT-04', q: 'специалист по ошибке 0x80004005 1с', expected: 'ACCEPT', class: 'provider_error_resolution' },
 ];
 
 function loadJson(p) { return JSON.parse(fs.readFileSync(p, 'utf8')); }
@@ -49,6 +52,7 @@ async function main() {
       assessmentB: null,
       hardRuleEvidence: hardRules,
       serviceRegistry: context.serviceRegistry,
+      phrase,
     });
     results.push({
       record_id: c.id,

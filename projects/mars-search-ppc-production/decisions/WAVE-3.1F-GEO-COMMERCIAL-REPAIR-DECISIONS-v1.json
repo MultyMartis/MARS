@@ -1,0 +1,21 @@
+{
+  "decision_pack_id": "WAVE-3.1F-GEO-COMMERCIAL-REPAIR-DECISIONS-v1",
+  "version": "1.0.0",
+  "date": "2026-06-23",
+  "decisions": [
+    { "id": "W3.1F-D1", "subject": "Wave 3.1E", "status": "APPROVED — QUALITY EVIDENCE ACCEPTED" },
+    { "id": "W3.1F-D2", "subject": "Product repair", "status": "VALIDATED — PROTECTED PRODUCT PASS" },
+    { "id": "W3.1F-D3", "subject": "Geo quality", "status": "NONCOMMERCIAL GEO FPR 0.0 PASS; COMMERCIAL GEO RECALL 0.619 BLOCKER" },
+    { "id": "W3.1F-D4", "subject": "Repair scope", "status": "One systemic geo-commercial repair iteration authorized" },
+    { "id": "W3.1F-D5", "subject": "Service scope", "status": "Separate commercial intent, scope fit, ownership" },
+    { "id": "W3.1F-D6", "subject": "Problem query", "status": "PQR-ABSTAIN-02 and bare error codes → ABSTAIN when insufficient evidence" },
+    { "id": "W3.1F-D7", "subject": "Corvonero", "status": "FROZEN" }
+  ],
+  "wave_status": {
+    "wave_3_1e": "APPROVED — READY FOR CHECKPOINT",
+    "wave_3_1f": "IMPLEMENTATION AUTHORIZED",
+    "wave_3_overall": "FINAL GEO QUALITY REPAIR IN PROGRESS",
+    "wave_4": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

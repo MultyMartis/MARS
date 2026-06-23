@@ -22,9 +22,10 @@ const FIX = path.join(__dirname, '../fixtures');
 
 const stratumArg = process.argv.find((a) => a.startsWith('--stratum='))?.split('=')[1];
 const runLabel = process.argv.find((a) => a.startsWith('--run-label='))?.split('=')[1]
-  || (stratumArg === 'geo_commercial_confirmation' ? 'geo' : 'product');
+  || (stratumArg?.includes('geo') ? 'geo' : 'product');
+const STRATUM_VERSION = stratumArg === 'geo_commercial_confirmation_v2' ? 'v2' : 'v1';
 if (!stratumArg) {
-  console.error('Usage: node run-confirmation-validation.mjs --stratum=protected_product_confirmation|geo_commercial_confirmation');
+  console.error('Usage: node run-confirmation-validation.mjs --stratum=protected_product_confirmation|geo_commercial_confirmation|geo_commercial_confirmation_v2');
   process.exit(1);
 }
 
@@ -48,9 +49,18 @@ function assertCap(controls) {
   if (cost.calculated_cost_usd > controls.costCapUsd) throw new Error('COST_CAP_EXCEEDED');
 }
 
+function stratumFiles(stratum) {
+  const ver = stratum === 'geo_commercial_confirmation_v2' ? 'v2' : 'v1';
+  return {
+    phrases: path.join(CONF, 'strata', stratum, `phrases-blind-${ver}.json`),
+    labels: path.join(CONF, 'strata', stratum, `gold-labels-sealed-${ver}.json`),
+  };
+}
+
 function mergeStratum(stratum) {
-  const phrases = loadJson(path.join(CONF, 'strata', stratum, 'phrases-blind-v1.json'));
-  const labels = loadJson(path.join(CONF, 'strata', stratum, 'gold-labels-sealed-v1.json'));
+  const files = stratumFiles(stratum);
+  const phrases = loadJson(files.phrases);
+  const labels = loadJson(files.labels);
   const labelMap = new Map(labels.records.map((r) => [r.record_id, r]));
   return phrases.records.map((p) => {
     const l = labelMap.get(p.record_id);
@@ -60,6 +70,7 @@ function mergeStratum(stratum) {
       expected_decision: l.expected_decision,
       expected_authority_class: l.expected_authority_class,
       expected_protected_intent_class: l.expected_protected_intent_class,
+      expected_scope_fit: l.expected_scope_fit,
       gold_authority_basis: l.gold_authority_basis,
       geo_class: p.geo_class || l.geo_class,
     };
@@ -89,6 +100,7 @@ async function evaluateRecord(record, context, adapter, controls) {
     assessmentB: secondary.ok ? secondary.output : null,
     hardRuleEvidence: hardRules,
     serviceRegistry: context.serviceRegistry,
+    phrase,
   });
   cost.records_processed++;
   return {
@@ -108,6 +120,10 @@ async function evaluateRecord(record, context, adapter, controls) {
     adjudicator_overturn: primary.output.decision !== adj.final_decision,
     human_review_required: adj.human_review_required,
     hard_rule_blocked: hardRules.blocked || false,
+    scope_fit: adj.scope_fit,
+    ownership: adj.ownership,
+    service_gap: adj.service_gap,
+    expected_scope_fit: record.expected_scope_fit,
   };
 }
 
@@ -152,12 +168,51 @@ function geoMetrics(results) {
     adversarial_false_accept_count: adversarialFalseAccepts.length,
     adversarial_false_accept_rate: advFpr,
     high_confidence_geo_precision: highConfGeoAccept.length ? highConfCorrect.length / highConfGeoAccept.length : null,
-    gate_pass: (commercialRecall === null || commercialRecall >= 0.85)
+    recall_gate_threshold: 0.90,
+    gate_pass: (commercialRecall === null || commercialRecall >= 0.90)
       && (advFpr === null || advFpr <= 0.01)
       && (highConfGeoAccept.length === 0 || (highConfCorrect.length / highConfGeoAccept.length) >= 0.95),
     commercial_false_rejects: commercialFalseRejects.map((r) => ({ record_id: r.record_id, query: r.raw_query })),
     adversarial_false_accepts: adversarialFalseAccepts.map((r) => ({ record_id: r.record_id, query: r.raw_query })),
+    in_scope_commercial_recall: computeInScopeRecall(gold),
+    out_of_scope_commercial_intent_recall: computeOutOfScopeRecall(gold),
+    scope_fit_accuracy: computeScopeFitAccuracy(gold),
+    provider_noun_recall: computeFamilyRecall(gold, 'provider'),
+    service_task_recall: computeFamilyRecall(gold, 'task'),
+    product_service_recall: computeFamilyRecall(gold, 'product_service'),
+    abstain_rate: gold.filter((r) => r.final_decision === 'ABSTAIN').length / (gold.length || 1),
+    review_ratio: results.filter((r) => r.human_review_required).length / (results.length || 1),
+    adjudicator_overturn_rate: results.filter((r) => r.adjudicator_overturn).length / (results.length || 1),
   };
+}
+
+function computeInScopeRecall(gold) {
+  const inScope = gold.filter((r) => r.expected_scope_fit === 'IN_SCOPE' && r.expected_decision === 'ACCEPT');
+  if (!inScope.length) return null;
+  return inScope.filter((r) => r.final_decision === 'ACCEPT').length / inScope.length;
+}
+
+function computeOutOfScopeRecall(gold) {
+  const oos = gold.filter((r) => (r.expected_scope_fit === 'OUT_OF_SCOPE' || r.family?.includes('out_of_scope')) && r.expected_decision === 'ACCEPT');
+  if (!oos.length) return null;
+  return oos.filter((r) => r.final_decision === 'ACCEPT').length / oos.length;
+}
+
+function computeScopeFitAccuracy(gold) {
+  const labeled = gold.filter((r) => r.expected_scope_fit && r.expected_scope_fit !== 'VARIES' && r.expected_scope_fit !== 'N/A');
+  if (!labeled.length) return null;
+  return labeled.filter((r) => r.scope_fit === r.expected_scope_fit).length / labeled.length;
+}
+
+function computeFamilyRecall(gold, kind) {
+  const patterns = {
+    provider: /provider|PRV|PRV/i,
+    task: /task|TSK|implementation/i,
+    product_service: /product_service|PSV|PSV/i,
+  };
+  const subset = gold.filter((r) => patterns[kind].test(r.family || r.record_id || '') && r.expected_decision === 'ACCEPT');
+  if (!subset.length) return null;
+  return subset.filter((r) => r.final_decision === 'ACCEPT').length / subset.length;
 }
 
 async function main() {
@@ -178,7 +233,7 @@ async function main() {
     results.push(await evaluateRecord(rec, context, adapter, controls));
   }
 
-  const metrics = stratumArg === 'geo_commercial_confirmation'
+  const metrics = stratumArg?.includes('geo_commercial')
     ? geoMetrics(results)
     : productMetrics(results);
 

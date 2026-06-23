@@ -1,0 +1,38 @@
+{
+  "total_gold": 120,
+  "commercial_recall": 0.9603960396039604,
+  "commercial_false_reject_count": 4,
+  "adversarial_false_accept_count": 0,
+  "adversarial_false_accept_rate": 0,
+  "high_confidence_geo_precision": 1,
+  "recall_gate_threshold": 0.9,
+  "gate_pass": true,
+  "commercial_false_rejects": [
+    {
+      "record_id": "CFM2-GEO-PRV-023",
+      "query": "инженер по вентиляции ярославль"
+    },
+    {
+      "record_id": "CFM2-GEO-TSK-048",
+      "query": "миграция данных mysql омск"
+    },
+    {
+      "record_id": "CFM2-GEO-PSV-072",
+      "query": "настройка figma корпоративный аккаунт воронеж"
+    },
+    {
+      "record_id": "CFM2-GEO-PSV-073",
+      "query": "настройка figma корпоративный аккаунт пермь"
+    }
+  ],
+  "adversarial_false_accepts": [],
+  "in_scope_commercial_recall": null,
+  "out_of_scope_commercial_intent_recall": 0.9821428571428571,
+  "scope_fit_accuracy": 0.8571428571428571,
+  "provider_noun_recall": 0.96875,
+  "service_task_recall": 0.9523809523809523,
+  "product_service_recall": 0.8333333333333334,
+  "abstain_rate": 0,
+  "review_ratio": 0.016666666666666666,
+  "adjudicator_overturn_rate": 0.15
+}

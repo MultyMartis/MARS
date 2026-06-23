@@ -1,0 +1,24 @@
+{
+  "package_id": "wave-3.1f-operator-review-package-v1",
+  "generated_at": "2026-06-23",
+  "geo_v2_run": "confirmation-geo-v2-pass-1782223272398",
+  "remaining_commercial_false_rejects": [
+    { "record_id": "CFM2-GEO-PRV-023", "query": "инженер по вентиляции ярославль", "family": "provider_profession_geo" },
+    { "record_id": "CFM2-GEO-TSK-048", "query": "миграция данных mysql омск", "family": "implementation_task_geo" },
+    { "record_id": "CFM2-GEO-PSV-072", "query": "настройка figma корпоративный аккаунт воронеж", "family": "product_service_geo" },
+    { "record_id": "CFM2-GEO-PSV-073", "query": "настройка figma корпоративный аккаунт пермь", "family": "product_service_geo" }
+  ],
+  "remaining_geo_false_accepts": [],
+  "scope_fit_disagreements_sample": [
+    { "note": "Out-of-scope commercial ACCEPT with scope_fit OUT_OF_SCOPE — expected pattern for non-1C services" }
+  ],
+  "unresolved_problem_queries": [],
+  "product_service_regressions": [],
+  "bounded_random_audit": [
+    { "record_id": "CFM2-GEO-PRV-001", "query": "разработчик django краснодар", "final": "ACCEPT", "scope_fit": "OUT_OF_SCOPE" },
+    { "record_id": "CFM2-GEO-ADV-115", "query": "вакансия разработчик python краснодар", "final": "REJECT" },
+    { "record_id": "CFM2-GEO-OOS-089", "query": "заказать клининг офиса ростов-на-дону", "final": "ACCEPT", "scope_fit": "OUT_OF_SCOPE" }
+  ],
+  "v1_false_reject_regression": { "fixed": "16/16", "mode": "closed regression evidence" },
+  "problem_policy": { "pass": "10/10", "pqr_abstain_02": "ABSTAIN" }
+}

@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { adjudicateSemanticIntent } from '../adjudication/semantic-adjudicator.mjs';
 import { applyHardRules } from '../../production/assessors/hard-rules.mjs';
+import { extractServiceIntentEvidence } from '../evidence/service-intent-evidence.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIX = path.join(__dirname, '../supplementary/regression/under-admission-regression-v1.json');
@@ -110,6 +111,37 @@ assert('hard rule allows service bundled supply', !hardService.blocked);
 const psFixture = JSON.parse(fs.readFileSync(PSFIX, 'utf8'));
 assert('product regression minimal pairs count', psFixture.minimal_pairs.length === 8);
 assert('boxed regression ids tracked', psFixture.boxed_delivery_regression_ids.length === 2);
+
+// Wave 3.1F: structured geo commercial override on agree-REJECT
+const structuredGeo = adjudicateSemanticIntent({
+  assessmentA: { decision: 'REJECT', confidence: 0.9, commercial_evidence: [], rationale: 'sap not in registry' },
+  assessmentB: { decision: 'REJECT', confidence: 0.85, commercial_evidence: [], rationale: 'out of scope' },
+  hardRuleEvidence: { blocked: false },
+  serviceRegistry: { services: [{ service_id: 'svc-hire', name: '1C' }] },
+  phrase: { raw_query: 'цена настройки sap москва', normalized_query: 'цена настройки sap москва' },
+});
+assert('price+service+geo agree-REJECT overridden to ACCEPT', structuredGeo.final_decision === 'ACCEPT');
+assert('out-of-scope commercial has scope_fit OUT_OF_SCOPE', structuredGeo.scope_fit === 'OUT_OF_SCOPE');
+
+// Bare error abstain
+const bareError = applyHardRules(
+  { raw_query: 'ошибка 0x80004005 1с', normalized_query: 'ошибка 0x80004005 1с' },
+  { decision: 'REJECT' },
+);
+assert('bare error hard rule forces ABSTAIN not REJECT', bareError.override_decision === 'ABSTAIN');
+
+const bareAdj = adjudicateSemanticIntent({
+  assessmentA: { decision: 'REJECT', confidence: 0.7, rationale: 'error' },
+  assessmentB: null,
+  hardRuleEvidence: bareError,
+  serviceRegistry: { services: [] },
+  phrase: { raw_query: 'ошибка 0x80004005 1с', normalized_query: 'ошибка 0x80004005 1с' },
+});
+assert('bare error adjudicator yields ABSTAIN', bareAdj.final_decision === 'ABSTAIN');
+
+// Provider noun + geo
+const prvEvidence = extractServiceIntentEvidence({ raw_query: 'программист bitrix москва', normalized_query: 'программист bitrix москва' });
+assert('provider+geo strong commercial evidence', prvEvidence.strong_commercial_geo === true);
 
 console.log(`Under-admission regression: ${passed}/${passed + failed}`);
 process.exit(failed ? 1 : 0);

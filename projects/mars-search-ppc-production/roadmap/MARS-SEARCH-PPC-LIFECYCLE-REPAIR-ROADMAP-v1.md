@@ -12,10 +12,11 @@
 **Wave 2.2:** `CHECKPOINTED` (`021062b`)  
 **Wave 3 Core:** `APPROVED — CHECKPOINTED` (`2820b9f`)  
 **Wave 3.1:** `LIVE PROVIDER APPROVED` — checkpoint `3d43c12`  
-**Wave 3.1D:** `APPROVED — CHECKPOINTED` — supplementary gold strata evaluated  
-**Wave 3.1 Quality:** `REPAIR REQUIRED` — protected product FPR gate fail  
-**Wave 3 Overall:** `NOT OPERATIONAL` — D3 closure pending Wave 3.1E quality repair  
-**Wave 4:** `BLOCKED`  
+**Wave 3.1E:** `APPROVED — CHECKPOINTED` (`fba8a97`)  
+**Wave 3.1F:** `APPROVED — CHECKPOINTED` — geo-commercial recall repair  
+**Wave 3.1 Quality:** `LIVE MODEL VALIDATED — D3 QUALITY EVIDENCE COMPLETE`  
+**Wave 3 Overall:** `OPERATIONAL WITH APPROVED MODEL BOUNDARY`  
+**Wave 4:** `BLOCKED` — pending operator authorization  
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
 **Corvonero default:** `FROZEN` — no Corvonero production work until Wave 3+ operator charter per item
 
