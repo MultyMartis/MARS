@@ -1,6 +1,6 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (Section 01 operator-stable freeze)
+**Updated:** 2026-06-23 (Section 03 operator-stable freeze + gallery + pre-reviews)
 
 ## Section 01 operator-stable release
 
@@ -10,6 +10,16 @@
 | `home_section_01_status` | **OPERATOR_APPROVED_FROZEN** |
 | `home_section_01_tag` | `fp-0002-v6-section-01-operator-stable-01` |
 | `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01-SOURCE.zip` |
+
+## Section 03 operator-stable release
+
+| Field | Value |
+|-------|-------|
+| `home_section_03_release` | `FP-0002-V6-HOME-SECTION-03-OPERATOR-STABLE-01` |
+| `home_section_03_status` | **OPERATOR_APPROVED_FROZEN** |
+| `home_section_03_tag` | `fp-0002-v6-section-03-operator-stable-01` |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-HOME-SECTION-03-OPERATOR-STABLE-01-SOURCE.zip` |
+| `backup_sha256` | `87389fd57ad03bedc986e9dcc43f41048539ad05d30efb236fbbf271364f9ce7` |
 
 ## Responsive shell stable release
 
@@ -64,7 +74,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01 **OPERATOR_APPROVED_FROZEN**; Section 02 **IMPLEMENTED_PENDING_OPERATOR_REVIEW**; Section 03+ **NOT STARTED** |
+| Main content sections | Section 01–03 **OPERATOR_APPROVED_FROZEN**; Gallery **IMPLEMENTED_PENDING_OPERATOR_REVIEW**; Pre-reviews **IMPLEMENTED_OR_MAPPED**; Reviews **NOT STARTED** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
@@ -85,9 +95,16 @@ home_section_02_audit: COMPLETE
 home_section_02_implementation: OPERATOR_APPROVED_FROZEN
 home_section_02_portrait_source: EXACT_FIGMA_EXPORT
 home_section_02_release: FP-0002-V6-HOME-SECTION-02-OPERATOR-STABLE-01
-home_section_03_audit: COMPLETE
-home_section_03_implementation: IMPLEMENTED_PENDING_OPERATOR_REVIEW
-home_section_04: NOT_STARTED
+home_section_03: OPERATOR_APPROVED_FROZEN
+home_section_03_service_links: ACTIVE
+home_section_03_arrow_icons: ACTIVE
+home_section_03_release: FP-0002-V6-HOME-SECTION-03-OPERATOR-STABLE-01
+home_gallery: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_gallery_slide_count: 4
+home_gallery_lightbox: DISABLED
+home_gallery_autoplay: DISABLED
+pre_reviews_blocks: IMPLEMENTED_OR_MAPPED
+reviews: NOT_STARTED
 ```
 
 **Rejection record:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)
