@@ -1,6 +1,16 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (gallery repair + pre-reviews recovery)
+**Updated:** 2026-06-23 (pre-reviews image fix + reviews Swiper)
+
+## Pre-reviews operator-stable release
+
+| Field | Value |
+|-------|-------|
+| `pre_reviews_release` | `FP-0002-V6-PRE-REVIEWS-OPERATOR-STABLE-01` |
+| `pre_reviews_status` | **OPERATOR_APPROVED_FROZEN** |
+| `pre_reviews_tag` | `fp-0002-v6-pre-reviews-operator-stable-01` |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-PRE-REVIEWS-OPERATOR-STABLE-01-SOURCE.zip` |
+| `backup_sha256` | `6bd8bb43f418b32b7dd0dd3ca9ad7dde38843210b240c742a27be441546aa29b` |
 
 ## Section 01 operator-stable release
 
@@ -74,7 +84,7 @@ No automated task may overwrite current src without an explicit operator instruc
 | Header (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Hero (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
 | Footer (desktop) | **APPROVED** — frozen at `FP-0002-V6-DESKTOP-STABLE-01` |
-| Main content sections | Section 01–03 **OPERATOR_APPROVED_FROZEN**; Gallery **REPAIRED_PENDING_OPERATOR_REVIEW**; Pre-reviews **RECOVERED_PENDING_OPERATOR_REVIEW**; Reviews **NOT STARTED** |
+| Main content sections | Section 01–03 **OPERATOR_APPROVED_FROZEN**; Gallery **REPAIRED_PENDING_OPERATOR_REVIEW**; Pre-reviews **OPERATOR_APPROVED_FROZEN**; Reviews **IMPLEMENTED_PENDING_OPERATOR_REVIEW** |
 | Mobile Header | **IMPLEMENTED** |
 | Mobile off-canvas menu | **IMPLEMENTED** |
 | Mobile Footer | **IMPLEMENTED** |
@@ -86,32 +96,23 @@ No automated task may overwrite current src without an explicit operator instruc
 ## Main content operational status
 
 ```text
-responsive_shell_release: FP-0002-V6-RESPONSIVE-SHELL-STABLE-01
-responsive_shell_status: FROZEN_PRESERVED
-home_section_01: OPERATOR_APPROVED_FROZEN
-home_section_01_release: FP-0002-V6-HOME-SECTION-01-OPERATOR-STABLE-01
-home_section_01_active_partial: src/partials/sections/home-recovery-intro.html
-home_section_02_audit: COMPLETE
-home_section_02_implementation: OPERATOR_APPROVED_FROZEN
-home_section_02_portrait_source: EXACT_FIGMA_EXPORT
-home_section_02_release: FP-0002-V6-HOME-SECTION-02-OPERATOR-STABLE-01
-home_section_03: OPERATOR_APPROVED_FROZEN
-home_section_03_service_links: ACTIVE
-home_section_03_arrow_icons: ACTIVE
-home_section_03_release: FP-0002-V6-HOME-SECTION-03-OPERATOR-STABLE-01
-home_gallery_previous_implementation: REJECTED
-home_gallery_root_cause: SWIPER_CSS_NOT_CONNECTED
-home_gallery: REPAIRED_PENDING_OPERATOR_REVIEW
-home_gallery_orientation: HORIZONTAL
-home_gallery_slide_count: 4
-home_gallery_lightbox: DISABLED
-home_gallery_autoplay: DISABLED
-home_gallery_previous_success_report: OVERRULED_BY_OPERATOR
+current_src: OPERATOR_CANONICAL
 
-pre_reviews_block_map_v1: REJECTED_INCOMPLETE
-pre_reviews_block_map_v2: COMPLETE
-pre_reviews_blocks: RECOVERED_PENDING_OPERATOR_REVIEW
-reviews: NOT_STARTED
+staff_photo_crop: CORRECTED
+clinic_landscape_crop: CORRECTED
+pre_reviews_release: FP-0002-V6-PRE-REVIEWS-OPERATOR-STABLE-01
+pre_reviews_status: OPERATOR_APPROVED_FROZEN
+
+home_reviews: IMPLEMENTED_PENDING_OPERATOR_REVIEW
+home_reviews_content: DEMO
+home_reviews_count: 10
+home_reviews_production_content_required: YES
+home_reviews_swiper: ACTIVE
+home_reviews_autoplay: DISABLED
+home_reviews_lightbox: DISABLED
+
+next_home_section: NOT_STARTED
+responsive_shell: FROZEN_PRESERVED
 ```
 
 **Rejection record:** [reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md](../reviews/main-content/FP-0002-V6-HOME-SECTION-01-REJECTION.md)

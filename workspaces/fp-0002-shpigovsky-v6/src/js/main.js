@@ -248,3 +248,58 @@
 		boot();
 	}
 })();
+
+// FP-0002 v6 — home reviews swiper
+(function initHomeReviews() {
+	'use strict';
+
+	function boot() {
+		var slider = document.querySelector('[data-reviews-slider]');
+
+		if (!slider || typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		if (slider.swiper) {
+			return;
+		}
+
+		var pagination = slider.querySelector('[data-reviews-pagination]');
+
+		new window.Swiper(slider, {
+			slidesPerView: 2.2,
+			spaceBetween: 20,
+			loop: false,
+			autoplay: false,
+			navigation: false,
+			watchOverflow: true,
+			grabCursor: true,
+			pagination: pagination
+				? {
+					el: pagination,
+					clickable: true,
+				}
+				: false,
+			breakpoints: {
+				320: {
+					slidesPerView: 1.15,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2.15,
+					spaceBetween: 20,
+				},
+				1025: {
+					slidesPerView: 2.2,
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
