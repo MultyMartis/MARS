@@ -1160,6 +1160,33 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
+   10d. Home gallery
+   ========================================================================== */
+
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
+.home-gallery {
+	padding-top: var(--pad-gap);
+	padding-bottom: var(--pad-gap);
+}
+
+.home-gallery__slider {
+	overflow: hidden;
+}
+
+.home-gallery__slide {
+	height: auto;
+}
+
+.home-gallery__image {
+	display: block;
+	width: 100%;
+	height: 372px; // EXACT_GEOMETRY — FIG gallery card display height 372px (nodes 1:986–1:989)
+	object-fit: cover;
+	border-radius: var(--radius-main);
+}
+
+/* ==========================================================================
    11. Footer
    ========================================================================== */
 
@@ -1821,6 +1848,9 @@ body[data-offcanvas-state='open'] {
 		display: none;
 	}
 
+	.home-gallery__image {
+		height: 280px; // EXACT_GEOMETRY — mobile gallery card height scaled from FIG 372px display
+	}
 
 	.site-header {
 		padding-top: var(--pad-gap-tight);

@@ -51,6 +51,11 @@ const paths = {
     watch: 'src/fonts/**/*',
     dest: 'dist/assets/fonts/',
   },
+  vendor: {
+    swiperJs: 'node_modules/swiper/swiper-bundle.min.js',
+    swiperCss: 'node_modules/swiper/swiper-bundle.min.css',
+    dest: 'dist/assets/vendor/swiper/',
+  },
 };
 
 function onError(title) {
@@ -152,10 +157,16 @@ function fonts() {
     .pipe(dest(paths.fonts.dest));
 }
 
+function vendorSwiper() {
+  return src([paths.vendor.swiperJs, paths.vendor.swiperCss], { allowEmpty: false })
+    .pipe(onError('Swiper vendor'))
+    .pipe(dest(paths.vendor.dest));
+}
+
 const build = series(
   cleanDist,
   prepareFaBridge,
-  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts)
+  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts, vendorSwiper)
 );
 
 function watcher() {
@@ -169,7 +180,7 @@ function watcher() {
 
 const buildIncremental = series(
   prepareFaBridge,
-  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts)
+  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts, vendorSwiper)
 );
 
 exports.clean = cleanDist;
