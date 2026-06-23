@@ -1,0 +1,47 @@
+{
+  "analysis_id": "product-service-false-accept-v1",
+  "error_family": "PRODUCT ACQUISITION MISCLASSIFIED AS SERVICE PROCUREMENT",
+  "count": 2,
+  "general_hypothesis": "Boxed product delivery queries with explicit product object (1с бухгалтерия, 1с erp) are misread as commercial service procurement because assessors treat «коробочная поставка» as provider fulfillment; geo-commercial disagreement resolver or accept-side commercial_evidence overrides secondary REJECT without product_only analysis.",
+  "cases": [
+    {
+      "record_id": "SUP-PROD-BOX-02",
+      "phrase": "1с бухгалтерия коробочная поставка",
+      "gold_basis": "explicit protected-intent policy — product boxed delivery",
+      "primary_model_result": "ACCEPT",
+      "reassessment_result": "REJECT",
+      "adjudicator_result": "ACCEPT",
+      "product_indicators": ["1с бухгалтерия", "коробочная поставка", "product SKU"],
+      "service_indicators": [],
+      "likely_next_action": "purchase boxed software license",
+      "evidence_erroneously_used_for_accept": ["поставка interpreted as service fulfillment", "topic overlap with 1C services"],
+      "prompt_ambiguity": "Rule 5 present but «поставка» not explicitly scoped to product object",
+      "adjudicator_ambiguity": "No product/service disagreement resolver; geo resolver may fire on disagreement",
+      "confidence": 0.9,
+      "decisive_defect": "PRODUCT OBJECT + SUPPLY MODIFIER treated as provider hire"
+    },
+    {
+      "record_id": "SUP-PROD-BOX-04",
+      "phrase": "1с erp коробочная поставка",
+      "gold_basis": "explicit protected-intent policy — product boxed delivery",
+      "primary_model_result": "ACCEPT",
+      "reassessment_result": "REJECT",
+      "adjudicator_result": "ACCEPT",
+      "product_indicators": ["1с erp", "коробочная поставка"],
+      "service_indicators": [],
+      "likely_next_action": "order boxed ERP license shipment",
+      "evidence_erroneously_used_for_accept": ["commercial_evidence from product topic", "provider_hire_likelihood inflated by «поставка»"],
+      "prompt_ambiguity": "Same as BOX-02 — supply verb without service scope",
+      "adjudicator_ambiguity": "Disagreement not resolved toward product-only REJECT",
+      "confidence": 0.9,
+      "decisive_defect": "PRODUCT ACQUISITION MISCLASSIFIED AS SERVICE PROCUREMENT"
+    }
+  ],
+  "proposed_systemic_repair": [
+    "prompt v1.2: product object + purchase/supply rules 14-16",
+    "adjudicator v1.2: resolveProductServiceDisagreement before geo resolver",
+    "hard-rules: product_acquisition without service_scope blocks ACCEPT",
+    "regression minimal pairs in product-service-regression-v1.json"
+  ],
+  "forbidden_repair": "phrase-specific record IDs or exception list"
+}

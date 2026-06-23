@@ -1,0 +1,73 @@
+{
+  "policy_id": "product-service-disambiguation-policy-v1",
+  "version": "1.0.0",
+  "mandatory_rule": "PRODUCT OBJECT + PURCHASE/SUPPLY MODIFIER does not imply provider-hire intent",
+  "classes": {
+    "PRODUCT_ONLY_REJECT": {
+      "description": "User seeks product acquisition, not service hire",
+      "signals": [
+        "buy product",
+        "boxed delivery",
+        "license purchase",
+        "edition or version selection",
+        "product price",
+        "download distributive",
+        "official product site",
+        "self-install instruction",
+        "product update as goods",
+        "license supply without explicit service scope"
+      ],
+      "expected_decision": "REJECT",
+      "examples": [
+        "купить коробочную лицензию bitrix24",
+        "скачать дистрибутив photoshop",
+        "стоимость microsoft office professional"
+      ]
+    },
+    "SERVICE_ACCEPT": {
+      "description": "User seeks provider for paid work",
+      "signals": [
+        "implementation",
+        "configuration",
+        "integration",
+        "customization",
+        "support contract as service",
+        "migration",
+        "recovery",
+        "staff training as commercial service",
+        "specialist installation",
+        "delivery bundled with advertised service scope"
+      ],
+      "expected_decision": "ACCEPT",
+      "examples": [
+        "внедрение sap под ключ",
+        "настройка bitrix24 специалистом",
+        "интеграция crm с сайтом заказать"
+      ]
+    },
+    "AMBIGUOUS_ABSTAIN": {
+      "description": "Product purchase and service hire equally plausible without decisive next-action signal",
+      "expected_decision": "ABSTAIN",
+      "examples": [
+        "autocad купить или заказать настройку",
+        "нужна лицензия sql server или администратор"
+      ]
+    }
+  },
+  "hard_rules": {
+    "supply_word_not_service_alone": true,
+    "product_name_not_auto_reject": true,
+    "service_markers_override_product_supply": true,
+    "phrase_specific_exceptions_forbidden": true
+  },
+  "regression_minimal_pairs": [
+    { "product_only": "купить коробочную 1с", "expected": "REJECT" },
+    { "product_only": "заказать поставку лицензии 1с", "expected": "REJECT" },
+    { "product_only": "поставка 1с предприятие", "expected": "REJECT" },
+    { "service_positive": "внедрение 1с под ключ", "expected": "ACCEPT" },
+    { "service_positive": "поставка и внедрение 1с", "expected": "ACCEPT" },
+    { "service_positive": "купить 1с с настройкой", "expected": "ABSTAIN" },
+    { "service_positive": "заказать специалиста для установки 1с", "expected": "ACCEPT" },
+    { "service_positive": "интеграция 1с с сайтом", "expected": "ACCEPT" }
+  ]
+}

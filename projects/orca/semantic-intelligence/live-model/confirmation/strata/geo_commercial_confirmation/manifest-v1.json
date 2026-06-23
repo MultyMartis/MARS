@@ -1,0 +1,21 @@
+{
+  "stratum": "geo_commercial_confirmation",
+  "set_title": "GEO COMMERCIAL BLIND CONFIRMATION SET V1",
+  "phrase_checksum": "dee0d5bfcf76f868d86ca85ed6a566fb34dfcbb86d2fbd6a19df3c0cd003f22a",
+  "labels_checksum": "bcd8bcce478a8728dc44145666ddfb0d42ca86e220b1d2c1c2e76e432360bbba",
+  "combined_checksum": "b3858bb1372b2ede702c687d59757f435a12df71b8dfd45ce35deab471bd37e2",
+  "record_count": 100,
+  "gold_record_count": 100,
+  "contrast_positive_count": 42,
+  "frozen_at": "2026-06-23T05:39:32.398Z",
+  "confirmation_blind_validation": true,
+  "calibration_forbidden": true,
+  "post_run_calibration_forbidden": true,
+  "model": "openai/gpt-5-mini",
+  "provider": "openrouter",
+  "prompt_version": "orca-semantic-assessment-prompt-v1.2",
+  "policy_version": "product-service-disambiguation-policy-v1",
+  "adjudicator_version": "v1.2",
+  "author": "MARS-ORCA-CONFIRMATION-GOLD-DESIGNER-v1",
+  "reviewer_status": "FROZEN_PRE_RUN"
+}

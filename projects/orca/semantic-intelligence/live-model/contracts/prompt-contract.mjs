@@ -1,4 +1,4 @@
-export const PROMPT_VERSION = 'orca-semantic-assessment-prompt-v1.1';
+export const PROMPT_VERSION = 'orca-semantic-assessment-prompt-v1.2';
 
 export function buildSystemPrompt(context) {
   const services = (context.serviceRegistry?.services || [])
@@ -22,6 +22,9 @@ CRITICAL RULES:
 11. Service role noun + geography (city/region) WITHOUT career markers (вакансия, работа, резюме, зарплата, устроиться, трудоустройство) is often a provider-location commercial search — weigh provider_hire_likelihood before career REJECT.
 12. Informational location queries (где находится, адрес офиса, режим работы) differ from provider hire queries (найти специалиста, заказать, срочно нужен + service noun).
 13. Geography alone never forces ACCEPT — require service hire, order, price, urgency, or implementation signals.
+14. Product object + purchase/supply modifier (купить, лицензия, коробочная поставка, скачать, цена продукта) does NOT imply provider-hire intent — set high product_only_likelihood and low provider_hire_likelihood unless explicit service scope (внедрение, настройка, интеграция, специалист, под ключ) is present.
+15. «Поставка» alone is not a service hire signal — analyze WHAT is supplied: product/license delivery → product_only; delivery WITH implementation/service scope → may be commercial service.
+16. Do not REJECT real implementation, configuration, integration, or support queries because a product name appears.
 
 Business scope: ${JSON.stringify(context.businessScope || {})}
 Approved services:

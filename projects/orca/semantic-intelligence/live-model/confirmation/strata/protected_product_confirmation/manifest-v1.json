@@ -1,0 +1,21 @@
+{
+  "stratum": "protected_product_confirmation",
+  "set_title": "PROTECTED PRODUCT BLIND CONFIRMATION SET V1",
+  "phrase_checksum": "7db52790ab2cdf74045275205bfe80e65c5e858d1dd85cf73e15cd0d1b16d7b2",
+  "labels_checksum": "bbece47db2952e4dbd993943afe0f83ae66591747687d8f587a0e4321fb62426",
+  "combined_checksum": "9818c8d9d7800b0457809f8f465a083ea89e01723c4ab515d2db9275e481a4b5",
+  "record_count": 106,
+  "gold_record_count": 106,
+  "contrast_positive_count": 20,
+  "frozen_at": "2026-06-23T05:39:32.398Z",
+  "confirmation_blind_validation": true,
+  "calibration_forbidden": true,
+  "post_run_calibration_forbidden": true,
+  "model": "openai/gpt-5-mini",
+  "provider": "openrouter",
+  "prompt_version": "orca-semantic-assessment-prompt-v1.2",
+  "policy_version": "product-service-disambiguation-policy-v1",
+  "adjudicator_version": "v1.2",
+  "author": "MARS-ORCA-CONFIRMATION-GOLD-DESIGNER-v1",
+  "reviewer_status": "FROZEN_PRE_RUN"
+}

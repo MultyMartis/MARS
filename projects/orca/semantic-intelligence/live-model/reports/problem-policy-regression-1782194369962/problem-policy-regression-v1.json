@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "record_id": "PQR-ACCEPT-01",
+      "class": "urgent_specialist",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "match": true
+    },
+    {
+      "record_id": "PQR-ABSTAIN-01",
+      "class": "ordinary_troubleshooting",
+      "expected": "ABSTAIN",
+      "final": "ABSTAIN",
+      "match": true
+    },
+    {
+      "record_id": "PQR-REJECT-01",
+      "class": "diy",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true
+    },
+    {
+      "record_id": "PQR-REJECT-02",
+      "class": "informational",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true
+    },
+    {
+      "record_id": "PQR-ABSTAIN-02",
+      "class": "unclear_error",
+      "expected": "ABSTAIN",
+      "final": "REJECT",
+      "match": false
+    },
+    {
+      "record_id": "PQR-ACCEPT-02",
+      "class": "service_object_problem",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "match": true
+    },
+    {
+      "record_id": "PQR-REJECT-03",
+      "class": "out_of_scope_diy",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true
+    }
+  ],
+  "pass_count": 6,
+  "total": 7
+}

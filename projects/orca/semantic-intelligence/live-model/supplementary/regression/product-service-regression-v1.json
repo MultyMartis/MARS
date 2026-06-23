@@ -1,0 +1,15 @@
+{
+  "fixture_id": "product-service-regression-v1",
+  "description": "Bounded Wave 3.1E product/service disambiguation regression pairs",
+  "minimal_pairs": [
+    { "record_id": "PSR-NEG-01", "raw_query": "купить коробочную 1с", "expected_decision": "REJECT", "class": "product_only" },
+    { "record_id": "PSR-NEG-02", "raw_query": "заказать поставку лицензии 1с", "expected_decision": "REJECT", "class": "product_only" },
+    { "record_id": "PSR-NEG-03", "raw_query": "поставка 1с предприятие", "expected_decision": "REJECT", "class": "product_only" },
+    { "record_id": "PSR-POS-01", "raw_query": "внедрение 1с под ключ", "expected_decision": "ACCEPT", "class": "service" },
+    { "record_id": "PSR-POS-02", "raw_query": "поставка и внедрение 1с", "expected_decision": "ACCEPT", "class": "service" },
+    { "record_id": "PSR-AMB-01", "raw_query": "купить 1с с настройкой", "expected_decision": "ABSTAIN", "class": "ambiguous" },
+    { "record_id": "PSR-POS-03", "raw_query": "заказать специалиста для установки 1с", "expected_decision": "ACCEPT", "class": "service" },
+    { "record_id": "PSR-POS-04", "raw_query": "интеграция 1с с сайтом", "expected_decision": "ACCEPT", "class": "service" }
+  ],
+  "boxed_delivery_regression_ids": ["SUP-PROD-BOX-02", "SUP-PROD-BOX-04"]
+}

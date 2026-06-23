@@ -1,6 +1,7 @@
 /**
  * Model-aware semantic adjudicator — receives assessments only after both complete.
  */
+export const ADJUDICATOR_VERSION = 'v1.2';
 export const ADJUDICATION_OUTCOMES = [
   'FINAL ACCEPT', 'FINAL REJECT', 'FINAL ABSTAIN',
   'POLICY CONFLICT', 'DOMAIN CONFLICT', 'INVALID EVIDENCE',
@@ -70,23 +71,31 @@ export function adjudicateSemanticIntent(params) {
     decisiveEvidence.push('assessor_agreement');
   } else if (agreementState === 'DISAGREE') {
     findings.push('assessor_disagreement');
-    const geoCommercialAccept = resolveGeoCommercialDisagreement(assessmentA, assessmentB);
-    if (geoCommercialAccept) {
-      outcome = 'FINAL ACCEPT';
-      confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0.5);
-      decisiveEvidence.push('geo_service_commercial_evidence');
-      findings.push('geo_commercial_disagreement_resolved');
-    } else if (decisionA === 'REJECT' || decisionB === 'REJECT') {
+    const productReject = resolveProductServiceDisagreement(assessmentA, assessmentB);
+    if (productReject) {
       outcome = 'FINAL REJECT';
-      confidence = 0.65;
-      decisiveEvidence.push('reject_wins_on_disagreement');
-    } else if (decisionA === 'ABSTAIN' || decisionB === 'ABSTAIN') {
-      outcome = 'FINAL ABSTAIN';
-      confidence = 0.5;
+      confidence = 0.75;
+      decisiveEvidence.push('product_acquisition_not_service');
+      findings.push('product_service_disagreement_resolved');
     } else {
-      outcome = 'POLICY CONFLICT';
-      humanRequired = true;
-      conflictingEvidence.push('accept_abstain_split');
+      const geoCommercialAccept = resolveGeoCommercialDisagreement(assessmentA, assessmentB);
+      if (geoCommercialAccept) {
+        outcome = 'FINAL ACCEPT';
+        confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0.5);
+        decisiveEvidence.push('geo_service_commercial_evidence');
+        findings.push('geo_commercial_disagreement_resolved');
+      } else if (decisionA === 'REJECT' || decisionB === 'REJECT') {
+        outcome = 'FINAL REJECT';
+        confidence = 0.65;
+        decisiveEvidence.push('reject_wins_on_disagreement');
+      } else if (decisionA === 'ABSTAIN' || decisionB === 'ABSTAIN') {
+        outcome = 'FINAL ABSTAIN';
+        confidence = 0.5;
+      } else {
+        outcome = 'POLICY CONFLICT';
+        humanRequired = true;
+        conflictingEvidence.push('accept_abstain_split');
+      }
     }
   } else if (agreementState === 'SINGLE_ASSESSOR') {
     outcome = `FINAL ${decisionA}`;
@@ -134,6 +143,36 @@ export function adjudicateSemanticIntent(params) {
 }
 
 const CAREER_MARKERS = /(ваканси|резюме|зарплат|устроиться|трудоустройств|ищу работу|работа программист)/i;
+const SERVICE_SCOPE_MARKERS = /(внедрен|настрой|интеграц|под ключ|специалист|обслуживан|сопровожден|доработ|миграц|администрир)/i;
+const PRODUCT_ACQUISITION_MARKERS = /(купить|скачать|лицензи|коробочн|дистрибутив|стоимость программ|цена программ|официальн.*сайт|верси.*проф|обновлен.*верси)/i;
+const SUPPLY_WITHOUT_SERVICE = /(?:заказать\s+)?поставк(?:а|у|и)\s+(?!.*(?:внедрен|настрой|интеграц|специалист|под ключ))/i;
+
+function resolveProductServiceDisagreement(assessmentA, assessmentB) {
+  const acceptSide = [assessmentA, assessmentB].find((a) => a?.decision === 'ACCEPT');
+  if (!acceptSide) return false;
+  const other = assessmentA === acceptSide ? assessmentB : assessmentA;
+  const text = `${acceptSide.rationale || ''} ${other?.rationale || ''}`.toLowerCase();
+  const productOnly = Math.max(
+    acceptSide.product_only_likelihood ?? 0,
+    other?.product_only_likelihood ?? 0,
+  );
+  const providerHire = acceptSide.provider_hire_likelihood ?? 0;
+  const protectedProduct = /product_only|product-only|software purchase|license purchase/i.test(
+    `${acceptSide.protected_intent_class || ''} ${other?.protected_intent_class || ''}`,
+  );
+  const hasServiceScope = SERVICE_SCOPE_MARKERS.test(text)
+    || (acceptSide.commercial_evidence || []).some((e) => SERVICE_SCOPE_MARKERS.test(String(e)));
+  const productAcquisitionSignal = PRODUCT_ACQUISITION_MARKERS.test(text)
+    || SUPPLY_WITHOUT_SERVICE.test(text)
+    || protectedProduct;
+  if (productAcquisitionSignal && !hasServiceScope && (productOnly >= 0.55 || providerHire < 0.5)) {
+    return true;
+  }
+  if (other?.decision === 'REJECT' && productOnly >= 0.65 && providerHire < 0.45 && !hasServiceScope) {
+    return true;
+  }
+  return false;
+}
 
 function resolveGeoCommercialDisagreement(assessmentA, assessmentB) {
   const candidates = [assessmentA, assessmentB].filter((a) => a?.decision === 'ACCEPT');
