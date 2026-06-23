@@ -282,15 +282,15 @@
 				: false,
 			breakpoints: {
 				320: {
-					slidesPerView: 1.15,
+					slidesPerView: 1.35,
 					spaceBetween: 10,
 				},
 				768: {
-					slidesPerView: 2.15,
+					slidesPerView: 2.5,
 					spaceBetween: 20,
 				},
 				1025: {
-					slidesPerView: 2.2,
+					slidesPerView: 2.5,
 					spaceBetween: 20,
 				},
 			},
