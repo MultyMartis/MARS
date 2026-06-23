@@ -211,6 +211,18 @@ workspaces/forge-wordpress-synthetic/FWS-0001/**/*.jpg
 workspaces/forge-wordpress-synthetic/FWS-0001/**/*.jpeg
 workspaces/forge-wordpress-synthetic/FWS-0001/**/*.webp
 
+# FP-0002 Shpigovsky — WORDPRESS foundation source only (FW-06A; frontend src/ remains workspace-local)
+!workspaces/fp-0002-shpigovsky-v6/
+workspaces/fp-0002-shpigovsky-v6/*
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/
+workspaces/fp-0002-shpigovsky-v6/WORDPRESS/*
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/theme-source/
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/theme-source/**
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/functionality-plugin/
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/functionality-plugin/**
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/acf-json/
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/acf-json/**
+
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/
 

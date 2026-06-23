@@ -1,0 +1,39 @@
+/**
+ * Foundation-only styles — no client frontend assets.
+ */
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+	line-height: 1.5;
+	color: #1a1a1a;
+	background: #f5f5f5;
+}
+
+.shpigovsky-foundation__inner,
+.shpigovsky-foundation-header__inner,
+.shpigovsky-foundation-footer__inner {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1.5rem;
+}
+
+.shpigovsky-foundation h1 {
+	font-size: 1.5rem;
+	margin: 0 0 0.5rem;
+}
+
+.shpigovsky-foundation-header {
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+.shpigovsky-foundation-footer {
+	background: #fff;
+	border-top: 1px solid #ddd;
+	margin-top: 2rem;
+	font-size: 0.875rem;
+}
+
+.shpigovsky-foundation-footer__note {
+	color: #666;
+}

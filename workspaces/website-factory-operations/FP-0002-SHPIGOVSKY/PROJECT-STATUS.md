@@ -1,11 +1,11 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-23 (services reuse-only reassembly)
+**Last updated:** 2026-06-23 (FW-06A.1 WordPress foundation closure)
 
 ## Milestone (2026-06-23)
 
-**FP-0002 SERVICES REUSE-ONLY REASSEMBLY** — rejected unique `feff069` implementation reverted; services page rebuilt from exact shared blocks only. Four mockup sections documented as gaps. Pending operator review.
+**FP-0002 WORDPRESS FOUNDATION CLOSURE (FW-06A.1)** — local runtime `shpigovsky.test` validated: direct domain PASS, `wp db check` PASS, Playwright foundation smoke PASS. Theme integration **LOCKED** until Frontend Production Pass and FW-06B.
 
 ---
 
@@ -32,7 +32,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 | Lane | Status |
 |------|--------|
 | **Frontend** | **In progress** — Home complete; **Services page REUSE_ONLY** on `uslugi.html` pending operator review |
-| **WordPress** | Not Started |
+| **WordPress** | **Foundation READY (FW-06A.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
 

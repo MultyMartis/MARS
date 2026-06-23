@@ -16,9 +16,11 @@ FW-03 — COMPLETE
 FW-04 — COMPLETE
 FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
-FW-06 — NEXT
+FW-06A — COMPLETE (FP-0002 local foundation)
+FW-06A.1 — COMPLETE (FP-0002 foundation closure)
+FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
+FW-07 — First Client Implementation — PLANNED
 Architecture: DOCUMENTED
-Methodology: BASELINE v1
 Contracts: BASELINE v1
 Standards: BASELINE v1
 Tooling design: BASELINE v1
@@ -32,12 +34,12 @@ Synthetic validation: COMPLETE (FWS-0001 static + live)
 Local environment: PROVEN WITH LIMITATIONS (MLI Profile A)
 Local Laragon profile: ENABLED (MLI-03) — Laragon at D:\MARS-Localhost\laragon
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
-FW-06 — AUTHORIZED BUT WAITING FOR APPROVED CLIENT FRONTEND
+FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 Operator WV6: PENDING
-Direct local domain: PENDING HOSTS ELEVATION
+Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: NOT REGISTERED
-Client pilot: NOT STARTED — WAIT FOR FP-0002 FRONTEND
+Client pilot: NOT STARTED — WordPress foundation READY; theme integration LOCKED until FW-06B
 ```
 
 | Field | Value |
@@ -203,14 +205,14 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — visibility only; WordPress **NOT STARTED**; eligibility **FW-06** (after synthetic validation).
+**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY** on `shpigovsky.test`; frontend integration **HOLD**; see [projects/fp-0002/](projects/fp-0002/).
 
 ---
 
 ## Next authorized stage
 
 ```text
-FW-06 — Pilot Intake
+FW-06B — Approved Frontend Intake (FP-0002)
 ```
 
 ---

@@ -12,16 +12,17 @@
 | Field | Value |
 |-------|-------|
 | **Stage** | MLI-03 **COMPLETE** |
-| **Next** | **MLI-04 — OpenCart Runtime Profile** (parallel lane; Forge FW-05R authorized) |
+| **Next** | **MLI-04 — OpenCart Runtime Profile** (parallel lane; Forge **FW-06** waiting) |
 | **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
 | **Shared toolchain** | **HARDENED** — see tool registry |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** |
 | **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **VALIDATED** (hosts elevation pending for direct domain) |
+| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY** (FW-06A.1 complete) |
 | **Runtime operational (WordPress)** | **YES** — synthetic profile with limitations |
 | **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
 | **Brain root** | `C:\AI MARS` |
 | **Runtime root** | `D:\MARS-Localhost` |
-| **FW-05R** | **AUTHORIZED** — see Forge FW-05R input |
+| **FW-05R** | **COMPLETE** — see [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md](../mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md) |
 
 ---
 
@@ -122,7 +123,7 @@
 
 ## Next authorized action
 
-**Forge WordPress FW-05R — Live Synthetic Runtime Validation** — see [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-RUNTIME-VALIDATION-INPUT-v1.md](../mars-website-factory/subsystems/forge-wordpress/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-RUNTIME-VALIDATION-INPUT-v1.md).
+**Forge WordPress FW-05R — Live Synthetic Runtime Validation** — **COMPLETE** (2026-06-23) — [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md](../mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md).
 
 Parallel infrastructure lane: **MLI-04 — OpenCart Runtime Profile** (not blocking FW-05R).
 
