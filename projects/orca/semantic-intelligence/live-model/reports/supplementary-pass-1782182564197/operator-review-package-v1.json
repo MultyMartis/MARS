@@ -1,0 +1,29 @@
+{
+  "package_id": "wave-3.1d-operator-review-package-v1",
+  "purpose": "Small operator decision package — not full supplementary corpus",
+  "ambiguous_problem_query_policy_examples": [
+    { "query": "1с не работает", "recommended": "ABSTAIN", "reason": "generic problem without urgency or hire signal" },
+    { "query": "срочно 1с не работает нужен специалист", "recommended": "ACCEPT", "reason": "urgency + specialist hire" },
+    { "query": "как настроить 1с самостоятельно", "recommended": "REJECT", "reason": "DIY intent" }
+  ],
+  "unresolved_product_service_ambiguity": [
+    { "record_id": "SUP-PROD-AMB-01", "query": "1с предприятие купить или заказать внедрение", "model": "ACCEPT", "gold": "ABSTAIN" },
+    { "record_id": "SUP-PROD-BOX-02", "query": "1с бухгалтерия коробочная поставка", "model": "ACCEPT", "gold": "REJECT" }
+  ],
+  "unresolved_informational_service_ambiguity": [
+    { "record_id": "SUP-INFO-CTR-03", "query": "найти специалиста 1с зарплата москва", "model": "REJECT", "gold": "ACCEPT" }
+  ],
+  "high_risk_false_accept": [
+    { "record_id": "SUP-PROD-BOX-02", "query": "1с бухгалтерия коробочная поставка", "family": "boxed_delivery" },
+    { "record_id": "SUP-PROD-BOX-04", "query": "1с erp коробочная поставка", "family": "boxed_delivery" }
+  ],
+  "remaining_high_value_false_reject": [
+    { "record_id": "EVAL-COM-010", "query": "программист 1с москва 10", "source": "original_holdout" },
+    { "record_id": "EVAL-COM-019", "query": "программист 1с москва 19", "source": "original_holdout" },
+    { "record_id": "SUP-INFO-CTR-03", "query": "найти специалиста 1с зарплата москва", "source": "supplementary" }
+  ],
+  "bounded_random_audit": {
+    "sample_size": 5,
+    "record_ids": ["SUP-PROD-LIC-03", "SUP-INFO-WHAT-02", "SUP-PROD-CTR-05", "SUP-INFO-PRB-04", "SUP-INFO-REG-02"]
+  }
+}

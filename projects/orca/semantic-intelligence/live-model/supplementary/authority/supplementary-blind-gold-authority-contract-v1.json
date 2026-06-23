@@ -1,0 +1,54 @@
+{
+  "contract_id": "supplementary-blind-protected-strata-validation-set-v1",
+  "title": "Supplementary Blind Protected-Strata Validation Set",
+  "purpose": [
+    "close_evidence_gap_for_protected_product_and_protected_informational",
+    "not_replace_original_holdout",
+    "not_general_quality_re_evaluation",
+    "not_calibration_dataset"
+  ],
+  "required_record_fields": [
+    "record_id",
+    "phrase",
+    "protected_class",
+    "provenance",
+    "gold_authority_basis",
+    "expected_decision",
+    "expected_protected_intent_class",
+    "rationale",
+    "ambiguity_status",
+    "source_author",
+    "approval_status",
+    "checksum"
+  ],
+  "permitted_gold_authority_basis": [
+    "unambiguous_user_next_action_evidence",
+    "explicit_commercial_policy",
+    "explicit_protected_intent_policy",
+    "independently_reviewed_expert_label",
+    "verified_production_truth"
+  ],
+  "forbidden_gold_sources": [
+    "model_generated_labels",
+    "holdout_leakage",
+    "post_run_calibration_labels"
+  ],
+  "blindness": {
+    "supplementary_blind_validation": true,
+    "assessor_label_access": false,
+    "phrase_label_separation": true,
+    "calibration_forbidden": true
+  },
+  "strata": {
+    "protected_product": {
+      "manifest": "strata/protected_product/manifest-v1.json",
+      "min_gold_records": 50,
+      "actual_gold_records": 70
+    },
+    "protected_informational": {
+      "manifest": "strata/protected_informational/manifest-v1.json",
+      "min_gold_records": 50,
+      "actual_gold_records": 66
+    }
+  }
+}

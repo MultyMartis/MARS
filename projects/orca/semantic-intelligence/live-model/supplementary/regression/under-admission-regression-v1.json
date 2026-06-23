@@ -1,0 +1,16 @@
+{
+  "fixture_id": "under-admission-regression-v1",
+  "description": "Bounded repair regression — commercial geo false rejects + adversarial geography negatives",
+  "false_reject_cases": [
+    "EVAL-COM-010",
+    "EVAL-COM-019",
+    "EVAL-COM-013",
+    "EVAL-COM-003"
+  ],
+  "adversarial_geography_negatives": [
+    { "record_id": "REG-GEO-NEG-01", "raw_query": "москва", "expected_decision": "ABSTAIN" },
+    { "record_id": "REG-GEO-NEG-02", "raw_query": "санкт-петербург офис 1с", "expected_decision": "REJECT" },
+    { "record_id": "REG-GEO-NEG-03", "raw_query": "где находится фирма 1с", "expected_decision": "REJECT" },
+    { "record_id": "REG-GEO-NEG-04", "raw_query": "вакансии программист 1с москва", "expected_decision": "REJECT" }
+  ]
+}

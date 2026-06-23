@@ -1,0 +1,115 @@
+{
+  "commercial_precision": 1,
+  "commercial_recall": null,
+  "abstain_rate": 0,
+  "human_review_ratio": 0.058823529411764705,
+  "assessor_agreement": 0.9779411764705882,
+  "adjudicator_overturn_rate": 0,
+  "protected_strata": {
+    "protected_career": {
+      "total": 0,
+      "accept": 0,
+      "reject": 0,
+      "abstain": 0,
+      "false_accept_candidates": 0,
+      "false_positive_rate": 0
+    },
+    "protected_education": {
+      "total": 0,
+      "accept": 0,
+      "reject": 0,
+      "abstain": 0,
+      "false_accept_candidates": 0,
+      "false_positive_rate": 0
+    },
+    "protected_diy": {
+      "total": 0,
+      "accept": 0,
+      "reject": 0,
+      "abstain": 0,
+      "false_accept_candidates": 0,
+      "false_positive_rate": 0
+    },
+    "protected_navigation": {
+      "total": 0,
+      "accept": 0,
+      "reject": 0,
+      "abstain": 0,
+      "false_accept_candidates": 0,
+      "false_positive_rate": 0
+    },
+    "protected_download": {
+      "total": 0,
+      "accept": 0,
+      "reject": 0,
+      "abstain": 0,
+      "false_accept_candidates": 0,
+      "false_positive_rate": 0
+    },
+    "protected_product": {
+      "total": 70,
+      "accept": 14,
+      "reject": 56,
+      "abstain": 0,
+      "false_accept_candidates": 14,
+      "false_positive_rate": 0.2
+    },
+    "protected_informational": {
+      "total": 66,
+      "accept": 11,
+      "reject": 55,
+      "abstain": 0,
+      "false_accept_candidates": 11,
+      "false_positive_rate": 0.16666666666666666
+    }
+  },
+  "positive_commercial_strata": {
+    "total": 0,
+    "false_reject": 0,
+    "excessive_abstain": 0,
+    "recall": null
+  },
+  "gates": {
+    "commercial_precision_gold_high_confidence": {
+      "target": 0.95,
+      "value": 1,
+      "pass": true,
+      "authority": "gold_only"
+    },
+    "protected_false_positive_rate": {
+      "target": 0.01,
+      "per_class": {
+        "protected_career": {
+          "value": 0,
+          "pass": true
+        },
+        "protected_education": {
+          "value": 0,
+          "pass": true
+        },
+        "protected_diy": {
+          "value": 0,
+          "pass": true
+        },
+        "protected_navigation": {
+          "value": 0,
+          "pass": true
+        },
+        "protected_download": {
+          "value": 0,
+          "pass": true
+        },
+        "protected_product": {
+          "value": 0.2,
+          "pass": false
+        },
+        "protected_informational": {
+          "value": 0.16666666666666666,
+          "pass": false
+        }
+      },
+      "pass": false
+    }
+  },
+  "diagnostic_excluded_from_gates": true
+}

@@ -1,0 +1,17 @@
+{
+  "stratum": "protected_informational",
+  "phrase_checksum": "9f4bf990abd648f0fff20ffe015e2b2d763ef298f1a1a2ec45bc82cde33a537a",
+  "labels_checksum": "9628ee883167a989bc5ca78984ef9247053eb5c8c096a5f5724695f1fed923e8",
+  "combined_checksum": "c82d0558b9353e6b656bfa2dd967d7342f4319906f5017d6059ed6981a8be90c",
+  "record_count": 66,
+  "gold_record_count": 66,
+  "contrast_positive_count": 11,
+  "frozen_at": "2026-06-23T02:41:19.641Z",
+  "supplementary_blind_validation": true,
+  "calibration_forbidden": true,
+  "model": "openai/gpt-5-mini",
+  "provider": "openrouter",
+  "prompt_version": "orca-semantic-assessment-prompt-v1.1",
+  "policy_version": "v1",
+  "adjudicator_version": "v1.1"
+}

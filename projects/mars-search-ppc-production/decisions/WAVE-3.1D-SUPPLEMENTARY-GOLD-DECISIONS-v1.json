@@ -1,0 +1,49 @@
+{
+  "decision_set_id": "wave-3.1d-supplementary-gold-decisions-v1",
+  "date": "2026-06-23",
+  "task": "MARS SEARCH PPC PRODUCTION — WAVE 3.1D SUPPLEMENTARY GOLD VALIDATION",
+  "decisions": [
+    {
+      "id": "W3.1D-D1",
+      "subject": "Live provider execution",
+      "status": "APPROVED — REAL PROVIDER EXECUTED"
+    },
+    {
+      "id": "W3.1D-D2",
+      "subject": "Existing holdout",
+      "status": "CLOSED — NO MODIFICATION OR FULL RERUN"
+    },
+    {
+      "id": "W3.1D-D3",
+      "subject": "Supplementary validation",
+      "status": "AUTHORIZED — BLIND PROTECTED STRATA ONLY"
+    },
+    {
+      "id": "W3.1D-D4",
+      "subject": "False rejects",
+      "status": "INVESTIGATE AS SYSTEMIC ERROR FAMILY — NO PHRASE EXCEPTIONS"
+    },
+    {
+      "id": "W3.1D-D5",
+      "subject": "Ambiguous problem queries",
+      "status": "POLICY RECOMMENDATION REQUIRED"
+    },
+    {
+      "id": "W3.1D-D6",
+      "subject": "Wave 3 semantic quality approval",
+      "status": "BLOCKED UNTIL SUPPLEMENTARY + REGRESSION + D3 CLOSURE"
+    },
+    {
+      "id": "W3.1D-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN"
+    }
+  ],
+  "wave_status": {
+    "wave_3_1_live_provider": "APPROVED",
+    "wave_3_1_quality": "SUPPLEMENTARY VALIDATION IN PROGRESS",
+    "wave_3_overall": "NOT OPERATIONAL",
+    "wave_4": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

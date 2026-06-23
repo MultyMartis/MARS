@@ -70,7 +70,13 @@ export function adjudicateSemanticIntent(params) {
     decisiveEvidence.push('assessor_agreement');
   } else if (agreementState === 'DISAGREE') {
     findings.push('assessor_disagreement');
-    if (decisionA === 'REJECT' || decisionB === 'REJECT') {
+    const geoCommercialAccept = resolveGeoCommercialDisagreement(assessmentA, assessmentB);
+    if (geoCommercialAccept) {
+      outcome = 'FINAL ACCEPT';
+      confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0.5);
+      decisiveEvidence.push('geo_service_commercial_evidence');
+      findings.push('geo_commercial_disagreement_resolved');
+    } else if (decisionA === 'REJECT' || decisionB === 'REJECT') {
       outcome = 'FINAL REJECT';
       confidence = 0.65;
       decisiveEvidence.push('reject_wins_on_disagreement');
@@ -125,6 +131,21 @@ export function adjudicateSemanticIntent(params) {
     findings,
     explanation: buildExplanation(outcome, agreementState, findings, decisiveEvidence, conflictingEvidence),
   };
+}
+
+const CAREER_MARKERS = /(ваканси|резюме|зарплат|устроиться|трудоустройств|ищу работу|работа программист)/i;
+
+function resolveGeoCommercialDisagreement(assessmentA, assessmentB) {
+  const candidates = [assessmentA, assessmentB].filter((a) => a?.decision === 'ACCEPT');
+  if (candidates.length !== 1) return false;
+  const accept = candidates[0];
+  const rejectSide = [assessmentA, assessmentB].find((a) => a?.decision === 'REJECT');
+  if (!rejectSide) return false;
+  const hire = accept.provider_hire_likelihood ?? 0;
+  const career = Math.max(accept.career_likelihood ?? 0, rejectSide.career_likelihood ?? 0);
+  const hasCommercialEvidence = (accept.commercial_evidence || []).length > 0;
+  const careerRationale = CAREER_MARKERS.test(`${rejectSide.rationale || ''} ${accept.rationale || ''}`);
+  return hasCommercialEvidence && hire >= career && hire >= 0.55 && !careerRationale;
 }
 
 function invalidEvidenceResult(reason) {

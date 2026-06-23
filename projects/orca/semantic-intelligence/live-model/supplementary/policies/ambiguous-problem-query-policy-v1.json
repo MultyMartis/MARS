@@ -1,0 +1,68 @@
+{
+  "policy_id": "orca-ambiguous-problem-query-policy-v1",
+  "version": "1.0.0",
+  "scope": "1C service advertising — problem-formulated queries",
+  "classes": {
+    "ACCEPT": {
+      "description": "Problem clearly implies paid specialist or urgent remediation",
+      "signals": [
+        "urgency_markers",
+        "hire_or_order_verbs",
+        "specialist_noun_with_problem",
+        "business_critical_failure",
+        "commercial_modifier_with_problem"
+      ],
+      "examples": [
+        "срочно 1с не работает нужен специалист",
+        "заказать восстановление базы 1с",
+        "программист 1с москва срочно"
+      ]
+    },
+    "ABSTAIN": {
+      "description": "Problem allows DIY or specialist path without sufficient commercial signal",
+      "signals": [
+        "generic_failure_without_urgency",
+        "ambiguous_object",
+        "no_hire_or_order_language",
+        "diy_path_plausible"
+      ],
+      "examples": [
+        "1с не работает",
+        "1с зависает при проведении документа",
+        "база 1с повреждена что делать"
+      ]
+    },
+    "REJECT": {
+      "description": "Query is educational, reference, DIY, or out of service scope",
+      "signals": [
+        "how_to_diy",
+        "definition_or_overview",
+        "career_or_vacancy",
+        "product_only",
+        "out_of_registry_scope"
+      ],
+      "examples": [
+        "как настроить 1с самостоятельно",
+        "что такое 1с",
+        "скачать 1с бесплатно"
+      ]
+    }
+  },
+  "decision_factors": [
+    "problem_framing",
+    "urgency",
+    "service_object",
+    "business_scope_fit",
+    "solution_seeking_signals",
+    "provider_hire_likelihood",
+    "diy_likelihood",
+    "commercial_modifier_presence",
+    "service_geography_without_career_markers",
+    "alternative_interpretation_strength"
+  ],
+  "hard_rules": {
+    "career_markers_force_reject": true,
+    "geography_alone_never_accept": true,
+    "protected_intent_blocks_accept": true
+  }
+}

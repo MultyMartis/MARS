@@ -1,0 +1,29 @@
+{
+  "declaration_id": "original-holdout-closed-v1",
+  "status": "ORIGINAL HOLDOUT — CLOSED",
+  "authorization": "NO FURTHER CALIBRATION OR FULL RERUN AUTHORIZED",
+  "holdout_id": "orca-live-eval-holdout-v1",
+  "holdout_checksum": "1e76c9f4b94b9cc4288e2bbccd03b812a49d1af29fdf8e0ac9646c77b1e9b52a",
+  "record_count": 133,
+  "model": "openai/gpt-5-mini",
+  "provider": "openrouter",
+  "prompt_version": "orca-semantic-assessment-prompt-v1",
+  "policy_version": "v1",
+  "schema_version": "v1",
+  "adjudicator_version": "v1",
+  "live_run_id": "completion-pass-1782181300220",
+  "completed_at": "2026-06-23T02:05:38.926Z",
+  "d3_results": {
+    "commercial_precision": 1.0,
+    "protected_false_positive_rate_supported_classes": 0.0,
+    "quality_decision": "WAVE 3.1 — INSUFFICIENT GOLD SUPPORT",
+    "false_reject_commercial_geo": 4
+  },
+  "forbidden_actions": [
+    "append_records",
+    "reshuffle",
+    "calibration",
+    "full_rerun_for_tuning"
+  ],
+  "supplementary_set_relationship": "SEPARATE_ARTIFACT — NOT MERGED"
+}

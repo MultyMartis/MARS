@@ -1,4 +1,4 @@
-export const PROMPT_VERSION = 'orca-semantic-assessment-prompt-v1';
+export const PROMPT_VERSION = 'orca-semantic-assessment-prompt-v1.1';
 
 export function buildSystemPrompt(context) {
   const services = (context.serviceRegistry?.services || [])
@@ -19,6 +19,9 @@ CRITICAL RULES:
 8. Do NOT invent services outside the approved registry.
 9. Obey business scope: ${context.businessScope?.scope || 'as provided'}.
 10. Do NOT use any expected labels or prior system decisions — you assess blind.
+11. Service role noun + geography (city/region) WITHOUT career markers (вакансия, работа, резюме, зарплата, устроиться, трудоустройство) is often a provider-location commercial search — weigh provider_hire_likelihood before career REJECT.
+12. Informational location queries (где находится, адрес офиса, режим работы) differ from provider hire queries (найти специалиста, заказать, срочно нужен + service noun).
+13. Geography alone never forces ACCEPT — require service hire, order, price, urgency, or implementation signals.
 
 Business scope: ${JSON.stringify(context.businessScope || {})}
 Approved services:

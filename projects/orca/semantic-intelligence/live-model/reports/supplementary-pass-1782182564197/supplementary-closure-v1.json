@@ -1,0 +1,28 @@
+{
+  "product_stratum": {
+    "total_gold": 70,
+    "accept": 14,
+    "reject": 56,
+    "abstain": 0,
+    "false_accept_on_protected_negatives": 2,
+    "false_positive_rate": 0.034482758620689655,
+    "false_reject_contrast_positives": 0,
+    "assessor_agreement": 0.9714285714285714,
+    "adjudicator_overturns": 0,
+    "gate_pass": false
+  },
+  "informational_stratum": {
+    "total_gold": 66,
+    "accept": 11,
+    "reject": 55,
+    "abstain": 0,
+    "false_accept_on_protected_negatives": 0,
+    "false_positive_rate": 0,
+    "false_reject_contrast_positives": 1,
+    "assessor_agreement": 0.9848484848484849,
+    "adjudicator_overturns": 0,
+    "gate_pass": true
+  },
+  "combined_verdict": "WAVE 3.1 — QUALITY REPAIR REQUIRED",
+  "insufficient_gold": null
+}
