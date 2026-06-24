@@ -1,6 +1,28 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (pre-modals freeze + modal consultation forms)
+**Updated:** 2026-06-24 (final operator-stable freeze before V7 bootstrap)
+
+## Final operator-stable release (2026-06-24)
+
+| Field | Value |
+|-------|-------|
+| `final_release` | `FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01` |
+| `lifecycle` | **FROZEN_FALLBACK** |
+| `final_release_tag` | `fp-0002-v6-final-before-v7-operator-stable-01` |
+| `baseline_commit_before_post_114b064_operator_edits` | `114b064d7398f09e9cc50686ed46b3482ef2c7b9` |
+| `operator_post_114b064_src_files` | `src/partials/sections/hero.html`, `src/scss/style.scss` |
+| `release_manifest` | [releases/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01-MANIFEST.md) |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01-SOURCE.zip` |
+| `v7_workspace` | `workspaces/fp-0002-shpigovsky-v7/` (created after this freeze) |
+| `package_001` | NOT STARTED |
+| `spig_v1_2_migration` | NOT STARTED |
+
+```text
+current_src: OPERATOR_CANONICAL
+status: FROZEN_FALLBACK
+design_authority_at_freeze: HISTORICAL PRE-V7 BASELINE
+authorized_next: V7 ACTIVE_DEVELOPMENT (package #001 only after explicit charter)
+```
 
 ## Pre-modals operator-stable release
 

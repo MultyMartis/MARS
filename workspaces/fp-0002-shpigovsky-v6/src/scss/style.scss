@@ -166,7 +166,8 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -176,6 +177,7 @@ html {
 html,
 body {
 	min-height: 100%;
+	height: 100%;
 }
 
 body {
@@ -285,7 +287,8 @@ body {
 	position: relative;
 	min-width: 320px;
 	width: 100%;
-	overflow-x: clip;
+	// overflow-x: clip;
+	overflow-x: hidden;
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-base);
 	font-weight: var(--font-weight-base);
@@ -294,6 +297,8 @@ body {
 	background-color: var(--color-page-background);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	font-optical-sizing: auto;
 }
 
 a {
@@ -357,6 +362,8 @@ svg {
 main {
 	overflow-x: clip;
 	max-width: 100%;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
 }
 
 main > section, main > .section, main > div {
@@ -427,6 +434,72 @@ b {
 em {
 	font-style: italic;
 }
+
+
+
+
+/* ==========================================================
+   FANCYBOX: отключаем компенсацию скроллбара (прыжок вбок)
+   У тебя уже есть html { scrollbar-gutter: stable; }
+   Поэтому Fancybox-компенсация не нужна.
+========================================================== */
+
+html.with-fancybox {
+  --f-scrollbar-compensate: 0px;
+  --f-body-margin: 0px;
+}
+
+html.with-fancybox body.hide-scrollbar {
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
+
+/* Оверлей: базовый */
+.page_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0.3s;
+}
+
+/* Режим оверлея включён */
+body.has-overlay .page_overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  /* при показе visibility включаем сразу */
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0s;
+}
+
+.page_overlay {
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+body.has-overlay .page_overlay {
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+/* Блокировка скролла без дёрганий (у тебя scrollbar-gutter: stable) */
+body.is-scroll-locked {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 
 
 /* ==========================================================================
@@ -1152,11 +1225,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	color: var(--color-accent);
 }
 
-.home-treatment-prevention__panel {
-	padding-bottom: var(--pad-gap-line);
-	padding-right: 6px;
-}
-
 .home-treatment-prevention__panel[hidden] {
 	display: none;
 }
@@ -1166,7 +1234,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	flex-direction: column;
 	gap: var(--pad-gap-tight);
 	margin: 0;
-	padding: var(--pad-gap-tight) 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -1269,7 +1337,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-why-us__body-stack {
 	display: flex;
 	flex-direction: column;
-	gap: var(--pad-gap-line);
+	gap: var(--pad-gap);
 	margin-bottom: var(--pad-gap);
 }
 
@@ -1359,10 +1427,10 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
    10h. Home clinic landscape (pre-reviews)
    ========================================================================== */
 
-.home-clinic-landscape {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
-}
+// .home-clinic-landscape {
+// 	padding-top: var(--pad-gap);
+// 	padding-bottom: var(--pad-gap);
+// }
 
 .home-clinic-landscape__bleed {
 	overflow: hidden;
@@ -1383,8 +1451,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
    ========================================================================== */
 
 .home-reviews {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
 	overflow: hidden;
 }
 
