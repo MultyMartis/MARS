@@ -5,26 +5,35 @@ import { buildSerpJsonFromAssistedBundle, extractSerpItemsFromHtml } from './ser
 import { parsePaidSerpCapture } from './paid-serp-runtime.mjs';
 import { buildAdvertiserRegistry } from './competitor-registry.mjs';
 import { captureLandingEvidence } from './landing-evidence.mjs';
+import { resolveLandingBounded } from './landing-resolve-bounded.mjs';
 import { buildDegradedRecord } from './freshness.mjs';
+import {
+  assertDegradedEvidenceAuthority,
+  consumeApprovedDegradation,
+} from './approved-degradation-registry.mjs';
 import { loadJson, writeJson, nowIso, sha256File } from './utils.mjs';
 
-export function importAssistedCaptureBundle({
+export async function importAssistedCaptureBundle({
   bundleDir,
   querySet,
   sessionConfig,
   projectManifest,
   receipt,
   outputPath,
+  approvedDegradationsDir,
+  consumptionRegistryPath,
 }) {
   const validation = validateAssistedCaptureBundle({
     bundleDir,
     querySet,
     sessionConfig,
     projectManifest,
+    approvedDegradationsDir,
+    consumptionRegistryPath,
   });
 
   if (!validation.valid) {
-    return { ok: false, blockers: validation.blockers };
+    return { ok: false, blockers: validation.blockers, validation };
   }
 
   const { bundle, screenshotPath, htmlPath } = validation;
@@ -56,17 +65,22 @@ export function importAssistedCaptureBundle({
 
   const landingEvidence = [];
   for (const ad of (parsed.ads || []).slice(0, 2)) {
-    landingEvidence.push(
-      captureLandingEvidence({
+    const resolved = await resolveLandingBounded(ad.destination_url);
+    landingEvidence.push({
+      observation_id: ad.observation_id,
+      ...captureLandingEvidence({
         destinationUrl: ad.destination_url,
         pageData: {
-          final_url: ad.destination_url,
-          page_title: null,
-          redirect_chain: [],
+          final_url: resolved.final_url,
+          page_title: resolved.title,
+          h1: resolved.h1,
+          cta_text: resolved.primary_cta,
+          redirect_chain: resolved.redirect_chain,
         },
-        evidenceLinks: {},
+        evidenceLinks: { screenshot: 'screenshot.png', html: bundle.files?.html || 'page.htm' },
       }),
-    );
+      bounded_resolution: resolved,
+    });
   }
   if (landingEvidence.length) writeJson(path.join(outDir, 'landing-evidence.json'), landingEvidence);
 
@@ -80,6 +94,7 @@ export function importAssistedCaptureBundle({
     acquisition_mode: 'OPERATOR-ASSISTED LIVE SERP CAPTURE',
     evidence_class: 'TECHNICAL LIVE EVIDENCE',
     production_authority: false,
+    client_authority: false,
     bundle_dir: bundleDir,
     bundle_manifest_sha256: sha256File(path.join(bundleDir, 'capture-manifest.json')),
     output_dir: outDir,
@@ -87,8 +102,32 @@ export function importAssistedCaptureBundle({
     ads_count: parsed.ads?.length || 0,
     execution_receipt_id: receipt?.receipt_id || null,
     operator_attestation: bundle.operator_attestation,
+    capture_time_status: validation.capture_time_status,
+    degradation_status: validation.degradation_status,
+    degradation_id: validation.degradation_applied?.degradation_id || null,
+    operator_decision_id: validation.degradation_applied?.operator_decision_id || null,
+    import_verdict: validation.import_verdict,
+    warnings: validation.warnings || [],
   };
   writeJson(path.join(outDir, 'import-receipt.json'), importReceipt);
+
+  const authorityCheck = assertDegradedEvidenceAuthority({ validation, importReceipt });
+  if (!authorityCheck.ok) {
+    return {
+      ok: false,
+      blockers: [`${validation.blockers?.[0]?.split(':')[0] || 'BLOCKED'}: degraded evidence authority escalation: ${authorityCheck.flags.join(', ')}`],
+      validation,
+    };
+  }
+
+  if (validation.degradation_applied?.degradation_id && consumptionRegistryPath) {
+    consumeApprovedDegradation({
+      degradationId: validation.degradation_applied.degradation_id,
+      bundle,
+      consumptionRegistryPath,
+      importReceiptId: importReceipt.import_id,
+    });
+  }
 
   return {
     ok: true,
@@ -98,6 +137,7 @@ export function importAssistedCaptureBundle({
     importReceipt,
     outputDir: outDir,
     serpJson,
+    validation,
   };
 }
 

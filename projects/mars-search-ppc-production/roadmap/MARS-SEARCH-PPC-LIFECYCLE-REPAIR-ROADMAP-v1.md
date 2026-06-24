@@ -19,9 +19,10 @@
 **Wave 4 Core:** `APPROVED — CHECKPOINTED` — `ecc9fcd`  
 **Wave 4.1:** `APPROVED — READY FOR CHECKPOINT`  
 **Wave 4 Overall:** `OPERATIONAL WITH APPROVED MODEL AND EVIDENCE BOUNDARY`  
-**Wave 2 Live Acquisition:** `CLOSURE IN PROGRESS` (Wave 2.3)  
+**Wave 2 Live Acquisition:** `OPERATIONAL WITH CONTROLLED FALLBACK` (Wave 2.3 genuine technical closure — W2.3-D8 approved degradation)  
 **Wave 5:** `BLOCKED`  
-**Corvonero:** `FROZEN`
+**Wave 2.3:** `CHECKPOINT PENDING` — genuine live Paid SERP technical capability validated with operator-approved time-window degradation (W2.3-D8)  
+**Search PPC Production System Core:** `READY FOR FIRST CONTROLLED CLIENT PILOT SELECTION` (does not authorize pilot automatically)  
 **Basis:** [MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-LIFECYCLE-GAP-AUDIT-v1.md), [MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md](../reports/MARS-SEARCH-PPC-BYPASS-FAILURE-AUDIT-v1.md)  
 **Corvonero default:** `FROZEN` — no Corvonero production work until Wave 3+ operator charter per item
 

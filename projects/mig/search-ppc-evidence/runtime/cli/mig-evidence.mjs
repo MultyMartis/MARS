@@ -119,11 +119,19 @@ Commands:
       const session = args.session ? loadJson(args.session) : null;
       const querySet = args.queries ? loadJson(args.queries) : null;
       const projectManifest = args.manifest ? loadJson(args.manifest) : null;
+      const degradationsDir = args.manifest
+        ? path.join(path.dirname(path.resolve(args.manifest)), 'approved-degradations')
+        : null;
+      const consumptionRegistryPath = degradationsDir
+        ? path.join(degradationsDir, 'consumption-registry-v1.json')
+        : null;
       result = validateAssistedCaptureBundle({
         bundleDir,
         querySet,
         sessionConfig: session,
         projectManifest,
+        approvedDegradationsDir: degradationsDir,
+        consumptionRegistryPath,
       });
       result = { ok: result.valid, ...result };
       break;
@@ -135,13 +143,21 @@ Commands:
         path.join(__dirname, '../../live-validation/w2-1-tech-paid-serp/query-set-v1.json'),
       );
       const projectManifest = args.manifest ? loadJson(args.manifest) : null;
-      result = importAssistedCaptureBundle({
+      const degradationsDir = args.manifest
+        ? path.join(path.dirname(path.resolve(args.manifest)), 'approved-degradations')
+        : null;
+      const consumptionRegistryPath = degradationsDir
+        ? path.join(degradationsDir, 'consumption-registry-v1.json')
+        : null;
+      result = await importAssistedCaptureBundle({
         bundleDir,
         querySet,
         sessionConfig: session,
         projectManifest,
         receipt: auth.evidence_record,
         outputPath: args.output,
+        approvedDegradationsDir: degradationsDir,
+        consumptionRegistryPath,
       });
       break;
     }

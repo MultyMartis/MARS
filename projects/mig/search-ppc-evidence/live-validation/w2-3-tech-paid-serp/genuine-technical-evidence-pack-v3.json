@@ -1,0 +1,1380 @@
+{
+  "pack_id": "w2-3-genuine-technical-evidence-pack-v3",
+  "status": "GENUINE LIVE PAID SERP CAPABILITY VALIDATED",
+  "project_id": "MIG-W2-3-TECH-PAID-SERP",
+  "acquisition_mode": "OPERATOR-ASSISTED LIVE SERP CAPTURE",
+  "production_authority": false,
+  "client_authority": false,
+  "evidence_class": "TECHNICAL LIVE EVIDENCE",
+  "authority": "TECHNICAL TEST — APPROVED WITH DEGRADATION",
+  "generated_at": "2026-06-24T05:50:12.316Z",
+  "bundle_dir": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-3-tech-paid-serp/assisted-capture-pending/w2-3-q02",
+  "manifest_refs": {
+    "raw_firefox": "capture-manifest by-firefox.json",
+    "normalized": "capture-manifest.normalized.json",
+    "canonical": "capture-manifest.json"
+  },
+  "capture": {
+    "query_id": "w2-3-q02",
+    "query": "ремонт квартир под ключ",
+    "captured_at": "2026-06-24T04:41:47.799Z",
+    "timezone": "Europe/Moscow",
+    "region": "Москва",
+    "region_lr": 213,
+    "device_browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "page_url": "https://yandex.ru/search/?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87&lr=213&re=1",
+    "local_time": "07:41:47",
+    "weekday": "Wednesday"
+  },
+  "checksums": {
+    "screenshot_sha256": "74ea32161f8967d51843cad74be2da6f350f9605b4d599ea395ccd4f3c22187b",
+    "html_sha256": "4485a9b365c9daf3bddfbffbb4ec123f3e4da9388b922c0e3f7d4294ffabcefc",
+    "manifest_sha256": "d2fa45b558a58c8aff487ac565187101a0de7866c7eb439ec0eaeac510590301"
+  },
+  "business_hours": {
+    "status": "OUTSIDE APPROVED WINDOW",
+    "allowed": false,
+    "blocker": "BLOCKED — PAID SERP BUSINESS-HOURS WINDOW NOT SATISFIED",
+    "local": {
+      "local_date": "2026-06-24",
+      "local_time": "07:41:47",
+      "weekday": "Wednesday",
+      "timezone": "Europe/Moscow"
+    },
+    "capture_time_status": "OUTSIDE_PREFERRED_WINDOW",
+    "degradation_status": "OPERATOR_APPROVED"
+  },
+  "degradation": {
+    "degradation_id": "w2-3-q02-time-window-degradation-v1",
+    "operator_decision_id": "W2.3-D8",
+    "degraded_verdict": "APPROVED WITH DEGRADATION — TECHNICAL CAPABILITY ONLY",
+    "capture_time_status": "OUTSIDE_PREFERRED_WINDOW",
+    "degradation_status": "OPERATOR_APPROVED",
+    "production_authority": false,
+    "client_authority": false
+  },
+  "bundle_validation": {
+    "valid": true,
+    "import_verdict": "IMPORT ACCEPTED — APPROVED WITH DEGRADATION",
+    "blockers": [],
+    "warnings": [
+      "Capture outside preferred business-hours window; operator-approved degradation w2-3-q02-time-window-degradation-v1 applied",
+      "Evidence authority limited to technical capability validation only"
+    ]
+  },
+  "gated_import": {
+    "ok": true,
+    "import_verdict": "IMPORT ACCEPTED — APPROVED WITH DEGRADATION",
+    "degradation_id": "w2-3-q02-time-window-degradation-v1",
+    "output_dir": "C:\\AI MARS STORAGE\\incoming\\mig\\live-validation\\w2-3-tech-paid-serp\\assisted-capture-pending\\imported\\w2-3-q02"
+  },
+  "privacy_sanitization": {
+    "html_present": true,
+    "html_path_class": "EXTERNAL_EVIDENCE_ONLY",
+    "raw_html_committed_to_git": false,
+    "contains_session_identifiers": true,
+    "finding_types": [
+      "LOGIN_FIELD_VALUE",
+      "LOGGED_IN_FLAG",
+      "YANDEXUID_VALUE",
+      "UID_FIELD_VALUE",
+      "EMAIL_VALUE"
+    ],
+    "findings": [
+      {
+        "id": "LOGIN_FIELD_VALUE",
+        "count": 5,
+        "sanitized": true
+      },
+      {
+        "id": "LOGGED_IN_FLAG",
+        "count": 4,
+        "sanitized": true
+      },
+      {
+        "id": "YANDEXUID_VALUE",
+        "count": 1,
+        "sanitized": true
+      },
+      {
+        "id": "UID_FIELD_VALUE",
+        "count": 5,
+        "sanitized": true
+      },
+      {
+        "id": "EMAIL_VALUE",
+        "count": 36,
+        "sanitized": true
+      }
+    ],
+    "raw_values_withheld": true
+  },
+  "observations": {
+    "observation_state": "ADS OBSERVED",
+    "ads": [
+      {
+        "observation_id": "w2-3-q02-ad-01",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+        "domain": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+        "headline": "Ремонт-квартир…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+        "destination_url": "https://xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai/?yclid=7850451626683269119",
+        "visible_ad_marker": "Реклама",
+        "extraction_signals": [
+          "report_feedback_feature_entity",
+          "snippet_url"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-02",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "kirillshlykovrepair.ru",
+        "domain": "kirillshlykovrepair.ru",
+        "headline": "Ремонт квартир в Москве под ключ: от базового до премиум…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "kirillshlykovrepair.ru",
+        "destination_url": "https://kirillshlykovrepair.ru/?yclid=1909173489604231167",
+        "visible_ad_marker": "Реклама",
+        "extraction_signals": [
+          "report_feedback_feature_entity",
+          "snippet_url"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-03",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "a4remont.ru",
+        "domain": "a4remont.ru",
+        "headline": "Ремонт квартир в Москве и МО без авансов + дизайн-проект…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "a4remont.ru",
+        "destination_url": "https://a4remont.ru/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-04",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "kostyukov.design",
+        "domain": "kostyukov.design",
+        "headline": "ремонт-под-ключ…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "kostyukov.design",
+        "destination_url": "https://kostyukov.design/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-05",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "moscow.petrovich.ru",
+        "domain": "moscow.petrovich.ru",
+        "headline": "Ремонт-под-ключ…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "moscow.petrovich.ru",
+        "destination_url": "https://moscow.petrovich.ru/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-06",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "point-remont.ru",
+        "domain": "point-remont.ru",
+        "headline": "внутренняя-отделка…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "point-remont.ru",
+        "destination_url": "https://point-remont.ru/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-07",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "mastera-remonta.moscow",
+        "domain": "mastera-remonta.moscow",
+        "headline": "ремонт-квартиры…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "mastera-remonta.moscow",
+        "destination_url": "https://mastera-remonta.moscow/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-08",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "simmnsk.ru",
+        "domain": "simmnsk.ru",
+        "headline": "ремонт-под-ключ…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "simmnsk.ru",
+        "destination_url": "https://simmnsk.ru/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-09",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "lprost.ru",
+        "domain": "lprost.ru",
+        "headline": "ремонт-под-ключ…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "lprost.ru",
+        "destination_url": "https://lprost.ru/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      },
+      {
+        "observation_id": "w2-3-q02-ad-10",
+        "block_type": "top",
+        "position": null,
+        "advertiser_display_name": "mosdomremont.ru",
+        "domain": "mosdomremont.ru",
+        "headline": "Ремонт-квартир…",
+        "text": null,
+        "sitelinks": [],
+        "displayed_url": "mosdomremont.ru",
+        "destination_url": "https://mosdomremont.ru/",
+        "visible_ad_marker": "Промо",
+        "extraction_signals": [
+          "visible_marker",
+          "path_domain"
+        ],
+        "extraction_confidence": "medium",
+        "observed_fact": true,
+        "session_id": "w2-3-assisted-session-001",
+        "project_id": "MIG-W2-3-TECH-PAID-SERP",
+        "query_id": "w2-3-q02",
+        "query": "ремонт квартир под ключ",
+        "observed_timestamp": "2026-06-24T04:41:47.799Z",
+        "timezone": "Europe/Moscow",
+        "local_date": "2026-06-24",
+        "local_time": "07:41:47",
+        "weekday": "Wednesday",
+        "region": "Москва",
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+        "evidence_type": "paid_serp",
+        "fact_vs_inference": "observed_fact",
+        "source_html_reference": "page.htm",
+        "screenshot_reference": "screenshot.png",
+        "confidence": "high"
+      }
+    ],
+    "organic_results": [
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартиры с материалами под ключ в Москве : 167... uslugi.yandex.ru › 213-moscow/category… </div",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартиры с материалами под ключ в Москве : 167... uslugi.yandex.ru › 213-moscow/category… </div",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартиры с материалами под ключ в Москве : 167... uslugi.yandex.ru › 213-moscow/category… </div",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартиры с материалами под ключ в Москве : 167... uslugi.yandex.ru › 213-moscow/category… </div",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартиры с материалами под ключ в Москве : 167... uslugi.yandex.ru › 213-moscow/category… </div",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "в Москве : 167... uslugi.yandex.ru › 213-moscow/category… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw06-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw06-04\" aria-label=\"Действия\" aria-description=\"Всплывающее меню\" data-zO9nC",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "uslugi.yandex.ru › 213-moscow/category… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw06-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw06-04\" aria-label=\"Действия\" aria-description=\"Всплывающее меню\" data-zO9nC=\"{\"uniqId\":\"2_945",
+        "url": "https://uslugi.yandex.ru/213-moscow/category?text=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%D1%8B+%D1%81+%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8+%D0%BF%D0%BE%D0%B4+%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... <a target=\"_blank",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... <a target=\"_blank\" class=\"Link Link_theme_outer Path-",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... <a target=\"_blank\" class=\"Link Link_theme_outer Path-Item link\" theme=\"outer\" tabindex=\"0\" href=\"https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> ремонт квартир под ключ - Авито | Объявления в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extral",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "ения в Москве ... m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw07-04\" aria-label=\"Действия\" aria-description=\"Всплывающее меню\" data-zO9nC=\"{\"uniqId\":\"2_945h",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "m.avito.ru › moskva… <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw07-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw07-04\" aria-label=\"Действия\" aria-description=\"Всплывающее меню\" data-zO9nC=\"{\"uniqId\":\"2_945hw07-04\",\"items\":[{",
+        "url": "https://m.avito.ru/moskva?q=%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extra",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "/b> — 20274 мастера... profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw08-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw08-04\" aria-label=\"Действия\" aria-description=",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "profi.ru › Комплексный ремонт › Ремонт квартир и домов под ключ <spa",
+        "url": "https://profi.ru/remont/remont-kvartir-i-domov-pod-klyuch/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extral",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extr",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве - «Мастера ремонта » mastera-remonta.com <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw09-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw09-04\" aria-label=\"Действия\" aria-d",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "Мастера ремонта » mastera-remonta.com <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "mastera-remonta.com <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" class",
+        "url": "https://mastera-remonta.com/",
+        "path_text": "mastera-remonta.com"
+      },
+      {
+        "title": "13.5\" r=\"1.5\"> Ремонт и отделка квартир в Москве . Цены за квадратный метр, портфолио выполненных работ, отзывы, калькулятор стоимости. Сделаем качественный ремонт квартиры под ключ . Рейтинг 3,5 из 5 3,5 573 отзыва Шоурум Блог Ремонт квартир <a target=\"_blank\" class=\"Link Link_theme_normal Sitelink",
+        "url": "https://mastera-remonta.com/shourum-otdelochnyh-materialov-i-korpusnoj-mebeli/",
+        "path_text": ""
+      },
+      {
+        "title": "Ремонт и отделка квартир в Москве . Цены за квадратный метр, портфолио выполненных работ, отзывы, калькулятор стоимости. Сделаем качественный ремонт квартиры под ключ . Рейтинг 3,5 из 5 3,5 573 отзыва Шоурум Блог Ремонт квартир <a target=\"_blank\" class=\"Link Link_theme_normal Sitelinks-Title link Ty",
+        "url": "https://mastera-remonta.com/shourum-otdelochnyh-materialov-i-korpusnoj-mebeli/",
+        "path_text": ""
+      },
+      {
+        "title": "t Typo Typo_text_m Typo_line_m\"> Ремонт и отделка квартир в Москве . Цены за квадратный метр, портфолио выполненных работ, отзывы, калькулятор стоимости. Сделаем качественный ремонт квартиры под ключ . Рейтинг 3,5 из 5 3,5 573 отзыва Шоурум Блог Ремонт квартир Дизайн интерьера <div class=",
+        "url": "https://mastera-remonta.com/shourum-otdelochnyh-materialov-i-korpusnoj-mebeli/",
+        "path_text": ""
+      },
+      {
+        "title": "uwb9svww7kr-PxtxEH1\" data-state-id=\"2_945h2\"> Рейтинг 3,5 из 5 3,5 573 отзыва Шоурум Блог Ремонт квартир Дизайн интерьера Демонтаж <div cl",
+        "url": "https://mastera-remonta.com/shourum-otdelochnyh-materialov-i-korpusnoj-mebeli/",
+        "path_text": ""
+      },
+      {
+        "title": "\"Line Line_size_s ShopInfo Organic-ShopInfo\"> Рейтинг 3,5 из 5 3,5 573 отзыва Шоурум Блог Ремонт квартир Дизайн интерьера Демонтаж <div class=\"M",
+        "url": "https://mastera-remonta.com/shourum-otdelochnyh-materialov-i-korpusnoj-mebeli/",
+        "path_text": ""
+      },
+      {
+        "title": "dot\">573 отзыва Шоурум Блог Ремонт квартир Дизайн интерьера Демонтаж Телефон +7 (924) 077-XX-XX Показать <div class=\"Organic Typo Typo_",
+        "url": "https://mastera-remonta.com/shourum-otdelochnyh-materialov-i-korpusnoj-mebeli/",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве и МО deloremonta.moscow <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0b-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0b-04\" aria-label=\"Действия\" aria-descriptio",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве и МО deloremonta.moscow <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0b-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0b-04\" aria-label=\"Действия\" aria-descriptio",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве и МО deloremonta.moscow <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0b-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0b-04\" aria-label=\"Действия\" aria-descriptio",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве и МО deloremonta.moscow <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0b-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0b-04\" aria-label=\"Действия\" aria-descriptio",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов под ключ в Москве и МО deloremonta.moscow <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0b-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0b-04\" aria-label=\"Действия\" aria-descriptio",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "b> в Москве и МО deloremonta.moscow <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" vie",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "deloremonta.moscow <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" class=\"Icon2-",
+        "url": "https://deloremonta.moscow/",
+        "path_text": "deloremonta.moscow"
+      },
+      {
+        "title": "OrganicTitle OrganicTitle_size_l\" data-initer=\"OrganicHeader\"><a target=\"_blank\" class=\"Link Link_theme_normal OrganicTitle-Link link\" accessKey=\"8\" tabindex=\"0\" theme=\"normal\" href=\"https://sk-blagodat.ru/\" data-count",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle OrganicTitle_size_l\" data-initer=\"OrganicHeader\"> <div class=\"Favicon Favicon_size_m Favicon_",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы <div class=\"Organic-Subt",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы <div class=\"Path Path_overflowEllipsis Organic-Pat",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы sk-blagodat.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0c-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0c-04\" aria-label=\"Действия\" aria-descript",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы sk-blagodat.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0c-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0c-04\" aria-label=\"Действия\" aria-descript",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы sk-blagodat.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0c-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0c-04\" aria-label=\"Действия\" aria-descript",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы sk-blagodat.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0c-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0c-04\" aria-label=\"Действия\" aria-descript",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы sk-blagodat.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0c-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0c-04\" aria-label=\"Действия\" aria-descript",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ - цены фиксированы sk-blagodat.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0c-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0c-04\" aria-label=\"Действия\" aria-descript",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "- цены фиксированы sk-blagodat.ru <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" class=\"Icon2-Co",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "sk-blagodat.ru <circle cx=\"8\" cy=\"2.5\"",
+        "url": "https://sk-blagodat.ru/",
+        "path_text": "sk-blagodat.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... <a target=\"_blank\" class=\"Link Link_theme_outer Path-Item link\" theme=\"outer\" tabindex=\"0\" href=\"https://domclick.ru/my-home/promo/remont\" data-counter=\"[\"b\"]\" data-zIdjJSAYKFQA",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domcl",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": ""
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont<",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир и домов в Москве , цена за м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0d-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0d-04\" ar",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "м2 от 7000 ₽ в 2026... domclick.ru › my-home/promo/remont <span style=\"width:1rem;height:1rem\" class=\"Icon2 Icon2_embed Icon2_size_16 Extralinks-Icon\" aria-",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "domclick.ru › my-home/promo/remont <svg xmlns=\"http",
+        "url": "https://domclick.ru/my-home/promo/remont",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир в Москве под ключ цена м2, заказать отделку... remo-nt.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0e-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0e-04\" aria-label=\"Действия\" aria-de",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "м2, заказать отделку... remo-nt.ru <circle cx=\"8\" cy=\"2.5\"",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "remo-nt.ru <circle cx=\"8",
+        "url": "https://remo-nt.ru/",
+        "path_text": "remo-nt.ru"
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": ""
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": ""
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "20 лучших компаний по",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "ве 2026: рейтинг... kp.ru › Москва › Лучшие компании по ремонту квартир <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0f-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0f-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ме",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "kp.ru › Москва › Лучшие компании по ремонту квартир <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0f-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0f-04\" aria-label=\"Действия\" aria-description=\"Всплывающее меню\" data-zO9nC=\"{\"un",
+        "url": "https://www.kp.ru/russia/moskva/luchshie-kompanii-po-remontu-kvartir-v-moskve/",
+        "path_text": "›"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "OrganicTitle-LinkText\"> Ремонт квартир под ключ в Москве | Абада abada.ru <button class=\"zG9bADAQJEDdhFWBC Extralinks Extralinks_id_2_945hw0g-04 Extralinks_hidden Extralinks_hidden Extralinks_position_topRight Organic-Extralinks\" id=\"2_945hw0g-04\" aria-label=\"Действия\" aria-description=\"Всплывающее ",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "в Москве | Абада abada.ru </circl",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      },
+      {
+        "title": "abada.ru <circle cx=\"8\" cy=\"8\" r=\"1.5",
+        "url": "https://abada.ru/",
+        "path_text": "abada.ru"
+      }
+    ],
+    "organic_kept_separate": true,
+    "degraded": false,
+    "no_ads_scope": null
+  },
+  "advertisers": {
+    "advertisers": [
+      {
+        "advertiser_id": "adv-1",
+        "display_name": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+        "primary_domain": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-2",
+        "display_name": "kirillshlykovrepair.ru",
+        "primary_domain": "kirillshlykovrepair.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-3",
+        "display_name": "a4remont.ru",
+        "primary_domain": "a4remont.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-4",
+        "display_name": "kostyukov.design",
+        "primary_domain": "kostyukov.design",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-5",
+        "display_name": "moscow.petrovich.ru",
+        "primary_domain": "moscow.petrovich.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-6",
+        "display_name": "point-remont.ru",
+        "primary_domain": "point-remont.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-7",
+        "display_name": "mastera-remonta.moscow",
+        "primary_domain": "mastera-remonta.moscow",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-8",
+        "display_name": "simmnsk.ru",
+        "primary_domain": "simmnsk.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-9",
+        "display_name": "lprost.ru",
+        "primary_domain": "lprost.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      },
+      {
+        "advertiser_id": "adv-10",
+        "display_name": "mosdomremont.ru",
+        "primary_domain": "mosdomremont.ru",
+        "relation_to_domain": "known_same_domain",
+        "merge_policy": "domain_primary_not_display_name",
+        "observation_count": 1,
+        "query_coverage": [
+          "ремонт квартир под ключ"
+        ]
+      }
+    ],
+    "domains": [
+      {
+        "domain": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "kirillshlykovrepair.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "a4remont.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "kostyukov.design",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "moscow.petrovich.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "point-remont.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "mastera-remonta.moscow",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "simmnsk.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "lprost.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      },
+      {
+        "domain": "mosdomremont.ru",
+        "advertiser_ids": [],
+        "first_observed": "2026-06-24T04:41:47.799Z",
+        "last_observed": "2026-06-24T04:41:47.799Z",
+        "observation_count": 1,
+        "regions": [
+          "Москва"
+        ],
+        "devices": [
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+        ]
+      }
+    ],
+    "relation_types": [
+      "known_same_domain",
+      "probable_relation",
+      "separate_entity",
+      "unresolved"
+    ]
+  },
+  "landing_evidence": [
+    {
+      "observation_id": "w2-3-q02-ad-01",
+      "displayed_url": "https://xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai/?yclid=7850451626683269119",
+      "ok": true,
+      "state": "RESOLVED",
+      "final_url": "https://xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai/?yclid=7850451626683269119",
+      "redirect_chain": [
+        "https://xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai/?yclid=7850451626683269119"
+      ],
+      "http_status": 200,
+      "title": "Ремонт квартир в Новосибирске",
+      "h1": "Ремонт квартир в НовосибирскеКачественно в срок",
+      "primary_cta": null,
+      "domain": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+      "resolved_at": "2026-06-24T05:50:12.180Z",
+      "limitation": null
+    },
+    {
+      "observation_id": "w2-3-q02-ad-02",
+      "displayed_url": "https://kirillshlykovrepair.ru/?yclid=1909173489604231167",
+      "ok": true,
+      "state": "RESOLVED",
+      "final_url": "https://kirillshlykovrepair.ru/?yclid=1909173489604231167",
+      "redirect_chain": [
+        "https://kirillshlykovrepair.ru/?yclid=1909173489604231167"
+      ],
+      "http_status": 200,
+      "title": "Кирилл Шлыков Ремонт | Ремонт квартир и коммерческих помещений в Москве",
+      "h1": "Ремонт,\n          без\n          компромиссов.",
+      "primary_cta": "Консультация",
+      "domain": "kirillshlykovrepair.ru",
+      "resolved_at": "2026-06-24T05:50:12.316Z",
+      "limitation": null
+    }
+  ],
+  "screenshot_verification": [
+    {
+      "observation_id": "w2-3-q02-ad-01",
+      "headline": "Ремонт-квартир…",
+      "domain": "xn-----7kcfccq1acboipogiibyibitehf.xn--p1ai",
+      "visible_marker": "Реклама",
+      "html_evidence": "CONFIRMED",
+      "screenshot_evidence": "CORROBORATED — operator full-page capture shows paid markers",
+      "verdict": "PAID CONFIRMED"
+    },
+    {
+      "observation_id": "w2-3-q02-ad-02",
+      "headline": "Ремонт квартир в Москве под ключ: от базового до премиум…",
+      "domain": "kirillshlykovrepair.ru",
+      "visible_marker": "Реклама",
+      "html_evidence": "CONFIRMED",
+      "screenshot_evidence": "CORROBORATED — operator full-page capture shows paid markers",
+      "verdict": "PAID CONFIRMED"
+    },
+    {
+      "observation_id": "w2-3-q02-ad-03",
+      "headline": "Ремонт квартир в Москве и МО без авансов + дизайн-проект…",
+      "domain": "a4remont.ru",
+      "visible_marker": "Промо",
+      "html_evidence": "CONFIRMED",
+      "screenshot_evidence": "CORROBORATED — operator full-page capture shows paid markers",
+      "verdict": "PAID CONFIRMED"
+    },
+    {
+      "observation_id": "w2-3-q02-ad-04",
+      "headline": "ремонт-под-ключ…",
+      "domain": "kostyukov.design",
+      "visible_marker": "Промо",
+      "html_evidence": "CONFIRMED",
+      "screenshot_evidence": "CORROBORATED — operator full-page capture shows paid markers",
+      "verdict": "PAID CONFIRMED"
+    },
+    {
+      "observation_id": "w2-3-q02-ad-05",
+      "headline": "Ремонт-под-ключ…",
+      "domain": "moscow.petrovich.ru",
+      "visible_marker": "Промо",
+      "html_evidence": "CONFIRMED",
+      "screenshot_evidence": "CORROBORATED — operator full-page capture shows paid markers",
+      "verdict": "PAID CONFIRMED"
+    },
+    {
+      "observation_id": "w2-3-q02-ad-06",
+      "headline": "внутренняя-отделка…",
+      "domain": "point-remont.ru",
+      "visible_marker": "Промо",
+      "html_evidence": "CONFIRMED",
+      "screenshot_evidence": "CORROBORATED — operator full-page capture shows paid markers",
+      "verdict": "PAID CONFIRMED"
+    }
+  ],
+  "minimum_closure": {
+    "genuine_live_serp_pages": 1,
+    "genuine_paid_ad_observations": 10,
+    "validated_advertiser_entities": 10,
+    "bounded_landing_resolutions": 2
+  },
+  "minimum_closure_met": true,
+  "limitations": [
+    "Captured at 07:41 Europe/Moscow — outside preferred representative window 09:00–21:00",
+    "Operator-approved technical degradation W2.3-D8 — not client market-representative evidence",
+    "Logged-in Yandex session may have influenced ad mix",
+    "Ad positions were not asserted",
+    "Single query only (w2-3-q02)",
+    "Not suitable for client competitor or campaign strategy conclusions",
+    "Technical evidence does not grant client production authority",
+    "Global acquisition capability operational ≠ client-specific SPPC-10 evidence complete",
+    "Raw HTML and screenshot remain outside Git"
+  ],
+  "maturity_verdict": {
+    "wave2_live_paid_serp": "WAVE 2 LIVE PAID SERP CAPABILITY — OPERATIONAL WITH CONTROLLED FALLBACK",
+    "sppc_10_acquisition": "SPPC-10 GLOBAL ACQUISITION CAPABILITY — OPERATIONAL WITH CONTROLLED FALLBACK",
+    "authority": "TECHNICAL TEST — APPROVED WITH DEGRADATION",
+    "client_boundary": "Global acquisition capability operational ≠ Client-specific SPPC-10 evidence complete"
+  }
+}

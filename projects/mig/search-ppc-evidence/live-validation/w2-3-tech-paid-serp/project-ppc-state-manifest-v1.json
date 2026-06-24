@@ -1,0 +1,68 @@
+{
+  "manifest_id": "mig-w2-3-tech-paid-serp-manifest-v1",
+  "schema_version": "2.0.0",
+  "lifecycle_version": "1.0.0",
+  "project_id": "MIG-W2-3-TECH-PAID-SERP",
+  "organization_id": "mars-mig-technical-validation",
+  "project_name": "MIG Wave 2.3 Technical Paid SERP Genuine Closure",
+  "platform": "Yandex Direct",
+  "campaign_type": "search",
+  "region": "moscow",
+  "timezone": "Europe/Moscow",
+  "current_lifecycle_stage": "SPPC-10",
+  "lifecycle_status": "ACTIVE",
+  "risk_mode": "STANDARD",
+  "project_mode": "TECHNICAL TEST",
+  "production_authority": "NONE",
+  "lifecycle_contract_ref": "projects/mars-search-ppc-production/contracts/mars-search-ppc-lifecycle-contract-v1.json",
+  "stage_registry": {
+    "SPPC-01": { "stage_id": "SPPC-01", "status": "COMPLETED" },
+    "SPPC-02": { "stage_id": "SPPC-02", "status": "COMPLETED" },
+    "SPPC-03": { "stage_id": "SPPC-03", "status": "COMPLETED" },
+    "SPPC-04": { "stage_id": "SPPC-04", "status": "COMPLETED" },
+    "SPPC-05": { "stage_id": "SPPC-05", "status": "COMPLETED" },
+    "SPPC-06": { "stage_id": "SPPC-06", "status": "COMPLETED" },
+    "SPPC-07": { "stage_id": "SPPC-07", "status": "COMPLETED" },
+    "SPPC-08": { "stage_id": "SPPC-08", "status": "COMPLETED" },
+    "SPPC-09": { "stage_id": "SPPC-09", "status": "COMPLETED" },
+    "SPPC-10": { "stage_id": "SPPC-10", "status": "IN PROGRESS" }
+  },
+  "artifact_registry": {
+    "business_scope_operator_authority": {
+      "path": "projects/mars-search-ppc-production/state/fixtures/evidence/scope.json",
+      "status": "REGISTERED",
+      "project_id": "MIG-W2-3-TECH-PAID-SERP",
+      "approved": true,
+      "output_class": "technical_evidence"
+    }
+  },
+  "approval_registry": {
+    "SPPC-01": { "approved": true, "approved_at": "2026-06-23T08:00:00Z" },
+    "W2-3-TECH-VALIDATION": {
+      "approved": true,
+      "approved_at": "2026-06-23T15:00:00Z",
+      "note": "Bounded genuine live Paid SERP technical closure — no production authority"
+    }
+  },
+  "blocker_registry": [],
+  "degraded_mode_registry": {},
+  "runtime_registry": { "lifecycle_validator": "wave2-v1", "mig_evidence": "wave2-mig-evidence-v1" },
+  "next_allowed_actions": ["paid_serp technical collection"],
+  "forbidden_actions": [
+    "Campaign Production",
+    "Commander Export",
+    "Import and Launch",
+    "Corvonero production collection",
+    "Semantic core promotion",
+    "Client production strategy"
+  ],
+  "final_launch_authority": { "granted": false },
+  "technical_validation": {
+    "wave": "2.3",
+    "purpose": "genuine live Paid SERP capability closure",
+    "expiry_date": "2026-07-14",
+    "isolated_from_clients": true,
+    "corvonero_linked": false
+  },
+  "_note": "Synthetic technical test project — not client production advertising"
+}

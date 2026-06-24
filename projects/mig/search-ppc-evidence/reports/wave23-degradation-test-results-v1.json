@@ -1,0 +1,77 @@
+{
+  "suite": "wave23-degradation-tests",
+  "passed": 14,
+  "failed": 0,
+  "results": [
+    {
+      "id": 1,
+      "name": "outside-window bundle blocked without degradation",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "exact approved degradation permits technical import",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "wrong project does not match degradation",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "wrong session does not match degradation",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "wrong query does not match degradation",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "wrong timestamp does not match degradation",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "generic bypass flag rejected",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "degraded evidence cannot become client authority",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "degraded evidence cannot complete client SPPC-10",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "execution receipt includes degradation ID",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "factual outside-window status preserved",
+      "pass": true
+    },
+    {
+      "id": 12,
+      "name": "one-time degradation cannot be reused for another capture",
+      "pass": true
+    },
+    {
+      "id": 13,
+      "name": "genuine counts reconcile when live bundle present",
+      "pass": true
+    },
+    {
+      "id": 14,
+      "name": "raw evidence remains outside Git",
+      "pass": true
+    }
+  ]
+}

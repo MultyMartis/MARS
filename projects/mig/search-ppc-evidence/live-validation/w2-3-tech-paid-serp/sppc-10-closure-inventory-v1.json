@@ -1,0 +1,24 @@
+{
+  "inventory_id": "sppc-10-closure-inventory-w2-3-v1",
+  "date": "2026-06-23",
+  "components": [
+    { "id": "business-hours-validator", "path": "projects/mig/search-ppc-evidence/runtime/lib/business-hours.mjs", "status": "READY" },
+    { "id": "automated-paid-serp-runner", "path": "projects/mig/search-ppc-evidence/runtime/cli/run-live-paid-serp-session.mjs", "status": "READY" },
+    { "id": "live-capture-adapter", "path": "projects/mig/search-ppc-evidence/runtime/lib/paid-serp-live-capture.mjs", "status": "READY" },
+    { "id": "persistent-browser-profile", "path": "session-config browser_profile.persistent_user_data_dir", "status": "READY" },
+    { "id": "stop-on-captcha", "path": "paid-serp-live-capture.mjs captcha_policy", "status": "READY" },
+    { "id": "assisted-capture-contract", "path": "projects/mig/search-ppc-evidence/contracts/operator-assisted-live-serp-capture-v1.md", "status": "READY" },
+    { "id": "devtools-snippet", "path": "projects/mig/search-ppc-evidence/runtime/tools/assisted-capture-snippet.js", "status": "READY" },
+    { "id": "bundle-preparer", "path": "projects/mig/search-ppc-evidence/runtime/cli/prepare-assisted-capture-bundle.mjs", "status": "READY", "note": "supports page.htm, Firefox manifest normalization, capture-manifest.normalized.json" },
+    { "id": "bundle-validator", "path": "projects/mig/search-ppc-evidence/runtime/lib/assisted-capture-validator.mjs", "status": "READY" },
+    { "id": "assisted-importer", "path": "projects/mig/search-ppc-evidence/runtime/lib/assisted-capture-importer.mjs", "status": "READY" },
+    { "id": "serp-html-extractor", "path": "projects/mig/search-ppc-evidence/runtime/lib/serp-html-extract.mjs", "status": "READY" },
+    { "id": "paid-block-parser", "path": "projects/mig/search-ppc-evidence/runtime/lib/paid-serp-runtime.mjs", "status": "READY" },
+    { "id": "advertiser-registry", "path": "projects/mig/search-ppc-evidence/runtime/lib/competitor-registry.mjs", "status": "READY" },
+    { "id": "landing-evidence", "path": "projects/mig/search-ppc-evidence/runtime/lib/landing-evidence.mjs", "status": "READY" },
+    { "id": "execution-receipts", "path": "projects/mars-search-ppc-production/runtime/receipts/", "status": "READY" },
+    { "id": "external-storage-paths", "path": "C:/AI MARS STORAGE/incoming/mig/live-validation/", "status": "READY" },
+    { "id": "genuine-live-paid-serp-evidence", "path": "external — w2-3-q02 assisted bundle", "status": "CAPTURED — GATED IMPORT BLOCKED (BUSINESS HOURS)", "note": "Mode B Firefox capture 2026-06-24; local time 07:41 outside 09:00–21:00 window" },
+    { "id": "playwright-runtime", "path": "incoming/mig/pilots/.../node_modules/playwright", "status": "READY", "note": "not in repo root — candidate path only" }
+  ]
+}

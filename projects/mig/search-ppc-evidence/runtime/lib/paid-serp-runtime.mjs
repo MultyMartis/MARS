@@ -81,7 +81,7 @@ function mapAd(ad, index, blockType) {
   return {
     observation_id: `ad-${index + 1}`,
     block_type: blockType,
-    position: index + 1,
+    position: null,
     advertiser_display_name: ad.path_text || extractDomain(ad.url) || null,
     domain: extractDomain(ad.url),
     headline: ad.title,
@@ -89,6 +89,8 @@ function mapAd(ad, index, blockType) {
     sitelinks: ad.sitelinks || [],
     displayed_url: ad.path_text || null,
     destination_url: ad.url,
+    visible_ad_marker: ad.visible_ad_marker || null,
+    extraction_signals: ad.extraction_signals || [],
     extraction_confidence: ad.url ? 'medium' : 'low',
     observed_fact: true,
   };

@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-06-24T05:50:12.323Z",
+  "operator_decision_id": "W2.3-D8",
+  "degradation_contract": "approved-degradations/w2-3-q02-time-window-degradation-v1.json",
+  "applied": true,
+  "degradation": {
+    "degradation_id": "w2-3-q02-time-window-degradation-v1",
+    "operator_decision_id": "W2.3-D8",
+    "degraded_verdict": "APPROVED WITH DEGRADATION — TECHNICAL CAPABILITY ONLY",
+    "capture_time_status": "OUTSIDE_PREFERRED_WINDOW",
+    "degradation_status": "OPERATOR_APPROVED",
+    "production_authority": false,
+    "client_authority": false
+  },
+  "consumption_registry": "approved-degradations/consumption-registry-v1.json"
+}

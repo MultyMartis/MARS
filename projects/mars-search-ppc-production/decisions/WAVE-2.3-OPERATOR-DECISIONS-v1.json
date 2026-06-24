@@ -1,0 +1,50 @@
+{
+  "decision_pack_id": "WAVE-2.3-OPERATOR-DECISIONS-v1",
+  "date": "2026-06-23",
+  "task": "MARS SEARCH PPC PRODUCTION — WAVE 2.3 GENUINE LIVE PAID SERP CLOSURE V1",
+  "decisions": [
+    { "id": "W2.3-D1", "subject": "Wave 4.1", "status": "APPROVED — READY FOR CHECKPOINT" },
+    { "id": "W2.3-D2", "subject": "Wave 4", "status": "OPERATIONAL WITH APPROVED MODEL AND EVIDENCE BOUNDARY" },
+    { "id": "W2.3-D3", "subject": "SPPC-10 closure", "status": "GENUINE LIVE PAID SERP CLOSURE — AUTHORIZED" },
+    { "id": "W2.3-D4", "subject": "Acquisition modes", "status": "MODE A AND MODE B AUTHORIZED — MODE B IS CONTROLLED FALLBACK" },
+    { "id": "W2.3-D5", "subject": "Anti-bot boundary", "status": "CAPTCHA SOLVING, STEALTH, PROXY ROTATION, AGGRESSIVE RETRIES — FORBIDDEN" },
+    { "id": "W2.3-D6", "subject": "Technical validation", "status": "NON-CLIENT TECHNICAL PROJECT AUTHORIZED — NO CLIENT PRODUCTION AUTHORITY" },
+    { "id": "W2.3-D7", "subject": "Corvonero", "status": "FROZEN" },
+    {
+      "id": "W2.3-D8",
+      "subject": "Technical business-hours degradation",
+      "status": "APPROVED",
+      "project_id": "MIG-W2-3-TECH-PAID-SERP",
+      "session_id": "w2-3-assisted-session-001",
+      "query_id": "w2-3-q02",
+      "capture_timestamp_utc": "2026-06-24T04:41:47.799Z",
+      "capture_local": "2026-06-24 07:41:47 Europe/Moscow",
+      "operator_authority": "explicit operator decision",
+      "approved_at": "2026-06-24",
+      "permitted_uses": [
+        "global SPPC-10 acquisition capability validation",
+        "parser validation",
+        "assisted-capture validation",
+        "advertiser registry validation",
+        "bounded landing resolution validation"
+      ],
+      "prohibited_uses": [
+        "client-specific Paid SERP completion",
+        "client market-representative evidence",
+        "competitor strategy authority",
+        "campaign strategy authority",
+        "Corvonero evidence",
+        "production campaign authority"
+      ],
+      "consequence": "APPROVED WITH DEGRADATION — technical capability proof only",
+      "degradation_contract": "projects/mig/search-ppc-evidence/live-validation/w2-3-tech-paid-serp/approved-degradations/w2-3-q02-time-window-degradation-v1.json"
+    }
+  ],
+  "wave_status": {
+    "wave_4_1": "APPROVED — READY FOR CHECKPOINT",
+    "wave_4": "OPERATIONAL WITH APPROVED MODEL AND EVIDENCE BOUNDARY",
+    "wave_2_live_acquisition": "OPERATIONAL WITH CONTROLLED FALLBACK",
+    "wave_5": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

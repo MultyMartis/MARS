@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-06-24T05:50:12.322Z",
+  "capture_timestamp": "2026-06-24T04:41:47.799Z",
+  "timezone": "Europe/Moscow",
+  "local": {
+    "local_date": "2026-06-24",
+    "local_time": "07:41:47",
+    "weekday": "Wednesday",
+    "timezone": "Europe/Moscow"
+  },
+  "configured_window": {
+    "start": "09:00",
+    "end": "21:00"
+  },
+  "weekday_policy": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+  ],
+  "status": "OUTSIDE APPROVED WINDOW",
+  "allowed": false,
+  "capture_time_status": "OUTSIDE_PREFERRED_WINDOW",
+  "degradation_status": "OPERATOR_APPROVED",
+  "degradation_id": "w2-3-q02-time-window-degradation-v1",
+  "bundle_validation_allowed": true,
+  "import_verdict": "IMPORT ACCEPTED — APPROVED WITH DEGRADATION"
+}
