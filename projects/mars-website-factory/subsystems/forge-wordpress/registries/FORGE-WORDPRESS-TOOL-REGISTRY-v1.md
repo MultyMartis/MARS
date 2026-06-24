@@ -66,6 +66,7 @@
 
 - [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](../reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md)
 - [FORGE-WORDPRESS-TOOLING-ARCHITECTURE-v1.md](../FORGE-WORDPRESS-TOOLING-ARCHITECTURE-v1.md)
+- [bindings/ag-wp-001/bindings-v1.json](../bindings/ag-wp-001/bindings-v1.json) (FW-07B AG-WP-001 bindings)
 
 ---
 

@@ -116,4 +116,19 @@
 
 ---
 
-*Register v1 — subsystem local; updated FW-07A AG-WP-001.*
+## FW-07B AG-WP-001 typed operation contracts
+
+| ID | Document | Type | Status |
+|----|----------|------|--------|
+| FW-B-01 | [schemas/AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json](../schemas/AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json) | Schema | BASELINE v1 |
+| FW-B-02 | [operations/ag-wp-001/operations-v1.json](../operations/ag-wp-001/operations-v1.json) | Registry | BASELINE v1 |
+| FW-B-03 | [bindings/ag-wp-001/bindings-v1.json](../bindings/ag-wp-001/bindings-v1.json) | Bindings | BASELINE v1 |
+| FW-B-04 | [schemas/AG-WP-001-FAILURE-CODE-REGISTRY-v1.json](../schemas/AG-WP-001-FAILURE-CODE-REGISTRY-v1.json) | Registry | BASELINE v1 |
+| FW-B-05 | [agents/AG-WP-001-TOOL-BINDING-CONTRACT-v1.md](../agents/AG-WP-001-TOOL-BINDING-CONTRACT-v1.md) | Contract | BASELINE v1 |
+| FW-B-06 | [tools/validate-ag-wp-001-operation-contracts.mjs](../tools/validate-ag-wp-001-operation-contracts.mjs) | Validator | AVAILABLE |
+
+*Full FW-07B pack: [agents/README.md](../agents/README.md) § FW-07B*
+
+---
+
+*Register v1 — subsystem local; updated FW-07B AG-WP-001 typed operations.*

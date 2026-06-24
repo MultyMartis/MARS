@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json",
+  "title": "AG-WP-001 Operation Contract v1",
+  "description": "Canonical schema for one AG-WP-001 typed operation. Contract layer only — not runtime execution.",
+  "type": "object",
+  "required": [
+    "operation_id",
+    "version",
+    "title",
+    "description",
+    "category",
+    "lifecycle_status",
+    "implementation_status",
+    "risk_class",
+    "environment_scope",
+    "production_allowed",
+    "input_schema",
+    "output_schema",
+    "preconditions",
+    "postconditions",
+    "invariants",
+    "approval",
+    "approval_evidence",
+    "tool_binding",
+    "tool_status",
+    "idempotency",
+    "side_effects",
+    "rollback",
+    "audit_evidence",
+    "success_criteria",
+    "failure_codes",
+    "safe_unknown_behavior",
+    "timeout_policy",
+    "retry_policy",
+    "secret_policy",
+    "logging_policy",
+    "dependencies",
+    "conflicts",
+    "allowed_next_operations"
+  ],
+  "properties": {
+    "operation_id": {
+      "type": "string",
+      "pattern": "^wp\\.[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$"
+    },
+    "legacy_op_id": {
+      "type": "string",
+      "description": "FW-07A snake_case alias for migration"
+    },
+    "version": { "type": "string", "const": "1.0.0" },
+    "title": { "type": "string", "minLength": 3 },
+    "description": { "type": "string", "minLength": 10 },
+    "category": {
+      "type": "string",
+      "enum": [
+        "inspection",
+        "planning",
+        "scaffold",
+        "generation",
+        "validation",
+        "checkpoint",
+        "change",
+        "backup",
+        "review",
+        "rollback",
+        "forbidden"
+      ]
+    },
+    "lifecycle_status": {
+      "type": "string",
+      "enum": ["DRAFT", "DEFINED", "APPROVED", "DEPRECATED"]
+    },
+    "implementation_status": {
+      "type": "string",
+      "enum": [
+        "UNBOUND",
+        "BOUND_NOT_IMPLEMENTED",
+        "IMPLEMENTED_NOT_VALIDATED",
+        "VALIDATED_LOCAL",
+        "AUTHORIZED_LOCAL",
+        "AUTHORIZED_STAGING",
+        "PRODUCTION_PROHIBITED"
+      ]
+    },
+    "risk_class": {
+      "type": "string",
+      "enum": ["R0", "R1", "R2", "R3", "R4", "R5"]
+    },
+    "environment_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BRAIN_ONLY",
+          "LOCAL_SOURCE",
+          "LOCAL_RUNTIME_READ_ONLY",
+          "LOCAL_RUNTIME_MUTATION",
+          "STAGING_READ_ONLY",
+          "STAGING_MUTATION",
+          "PRODUCTION_READ_ONLY",
+          "PRODUCTION_MUTATION"
+        ]
+      },
+      "minItems": 1
+    },
+    "production_allowed": { "type": "boolean", "const": false },
+    "input_schema": { "type": "object" },
+    "output_schema": { "type": "object" },
+    "preconditions": { "type": "array", "items": { "type": "string" } },
+    "postconditions": { "type": "array", "items": { "type": "string" } },
+    "invariants": { "type": "array", "items": { "type": "string" } },
+    "approval": {
+      "type": "object",
+      "required": ["required", "risk_gate", "token_required"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "risk_gate": { "type": "string" },
+        "token_required": { "type": "boolean" },
+        "pre_authorized_local": { "type": "boolean" }
+      }
+    },
+    "approval_evidence": { "type": "array", "items": { "type": "string" } },
+    "tool_binding": {
+      "type": "object",
+      "required": ["tool_ids", "binding_id"],
+      "properties": {
+        "binding_id": { "type": "string" },
+        "tool_ids": { "type": "array", "items": { "type": "string" } },
+        "invocation_class": { "type": "string" }
+      }
+    },
+    "tool_status": {
+      "type": "string",
+      "enum": ["UNBOUND", "BOUND", "PROVEN", "HOLD", "NOT_APPROVED"]
+    },
+    "idempotency": {
+      "type": "string",
+      "enum": ["IDEMPOTENT", "CONDITIONALLY_IDEMPOTENT", "NON_IDEMPOTENT"]
+    },
+    "side_effects": {
+      "type": "string",
+      "enum": ["NONE", "READ_ONLY_ARTIFACTS", "SOURCE_MUTATION", "RUNTIME_MUTATION", "DATABASE_MUTATION"]
+    },
+    "rollback": {
+      "type": "object",
+      "required": ["method", "required"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "method": { "type": "string" },
+        "automatic": { "type": "boolean" }
+      }
+    },
+    "audit_evidence": { "type": "array", "items": { "type": "string" } },
+    "success_criteria": { "type": "array", "items": { "type": "string" } },
+    "failure_codes": { "type": "array", "items": { "type": "string" } },
+    "safe_unknown_behavior": {
+      "type": "string",
+      "enum": ["BLOCK", "REPORT_AND_CONTINUE", "ESCALATE", "STOP"]
+    },
+    "timeout_policy": {
+      "type": "object",
+      "properties": {
+        "default_seconds": { "type": "integer", "minimum": 1 },
+        "max_seconds": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "retry_policy": {
+      "type": "object",
+      "properties": {
+        "retryable": { "type": "boolean" },
+        "max_attempts": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "secret_policy": {
+      "type": "string",
+      "enum": ["NO_ACCESS", "INDIRECT_CONSUMPTION", "OPERATOR_PROVIDED_SESSION", "PROHIBITED"]
+    },
+    "logging_policy": {
+      "type": "object",
+      "properties": {
+        "sanitize_secrets": { "type": "boolean" },
+        "redact_paths": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "dependencies": { "type": "array", "items": { "type": "string" } },
+    "conflicts": { "type": "array", "items": { "type": "string" } },
+    "allowed_next_operations": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AG-WP-001-TOOL-BINDING-SCHEMA-v1.json",
+  "title": "AG-WP-001 Tool Binding v1",
+  "type": "object",
+  "required": [
+    "operation_id",
+    "tool_id",
+    "binding_version",
+    "binding_status",
+    "invocation_class",
+    "allowed_environment",
+    "forbidden_environment",
+    "secret_handling",
+    "timeout_seconds",
+    "audit_artifact"
+  ],
+  "properties": {
+    "operation_id": { "type": "string" },
+    "tool_id": { "type": "string" },
+    "tool_ids": { "type": "array", "items": { "type": "string" } },
+    "binding_id": { "type": "string" },
+    "binding_version": { "type": "string" },
+    "binding_status": {
+      "enum": ["UNBOUND", "BOUND", "BOUND_NOT_IMPLEMENTED", "PROVEN", "HOLD", "NOT_APPROVED"]
+    },
+    "invocation_class": { "type": "string" },
+    "commands": { "type": "array", "items": { "type": "string" } },
+    "working_directory_policy": { "type": "string" },
+    "input_transformation": { "type": "string" },
+    "output_normalization": { "type": "string" },
+    "allowed_files": { "type": "array", "items": { "type": "string" } },
+    "forbidden_files": { "type": "array", "items": { "type": "string" } },
+    "allowed_environment": { "type": "array", "items": { "type": "string" } },
+    "forbidden_environment": { "type": "array", "items": { "type": "string" } },
+    "preflight": { "type": "array", "items": { "type": "string" } },
+    "execution": { "type": "array", "items": { "type": "string" } },
+    "post_validation": { "type": "array", "items": { "type": "string" } },
+    "rollback": { "type": "string" },
+    "secret_handling": {
+      "enum": ["NO_ACCESS", "INDIRECT_CONSUMPTION", "OPERATOR_PROVIDED_SESSION", "PROHIBITED"]
+    },
+    "timeout_seconds": { "type": "integer", "minimum": 1 },
+    "retry": {
+      "type": "object",
+      "properties": {
+        "retryable": { "type": "boolean" },
+        "max_attempts": { "type": "integer" }
+      }
+    },
+    "audit_artifact": { "type": "string" }
+  }
+}

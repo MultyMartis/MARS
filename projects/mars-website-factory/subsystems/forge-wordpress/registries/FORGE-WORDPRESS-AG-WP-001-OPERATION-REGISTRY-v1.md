@@ -2,14 +2,17 @@
 
 **Document type:** Typed operation registry (contract level)  
 **Version:** v1  
-**Stage:** FW-07A  
+**Stage:** FW-07A + FW-07B  
 **Date:** 2026-06-24  
 **Agent:** AG-WP-001
 
 **Extends:** [FORGE-WORDPRESS-COMMAND-AND-OPERATION-MODEL-v1.md](../FORGE-WORDPRESS-COMMAND-AND-OPERATION-MODEL-v1.md)  
 **Risk classes:** [AG-WP-001-RISK-AND-APPROVAL-MATRIX-v1.md](../agents/AG-WP-001-RISK-AND-APPROVAL-MATRIX-v1.md)
 
-**Honesty:** Operation **specifications** only — **not** implemented runtime, MCP, or Abilities API (FW-07B).
+**Honesty:** Operation **specifications** with FW-07B machine-readable contracts — **not** implemented runtime, MCP, or Abilities API.
+
+**Machine-readable:** [operations/ag-wp-001/operations-v1.json](../operations/ag-wp-001/operations-v1.json)  
+**ID reconciliation:** [agents/AG-WP-001-FW-07B-OPERATION-RECONCILIATION-v1.md](../agents/AG-WP-001-FW-07B-OPERATION-RECONCILIATION-v1.md)
 
 ---
 
@@ -17,7 +20,7 @@
 
 | Column | Meaning |
 |--------|---------|
-| **op_id** | Stable operation identifier |
+| **op_id** | Stable operation identifier (`wp.*` canonical; FW-07A snake_case via `legacy_op_id`) |
 | **risk** | R0–R5 per AG-WP-001 matrix |
 | **scope** | `local` · `staging` · `production` |
 | **approval** | `auto` · `plan+checkpoint` · `operator` · `denied` |
@@ -121,8 +124,10 @@ Operations above **superset** FW-03 names (`inspect_frontend_package` → `inspe
 
 ## Next phase
 
-**FW-07B** — Typed Operations and Tool Contract: machine-readable stubs, runner bindings, optional MCP mapping — **not started**.
+**FW-07B** — Typed Operations and Tool Contract: **COMPLETE** (contracts, bindings, validator — not runtime).
+
+**FW-07C** — AG-WP-001 Local Read-Only Execution Harness — **PLANNED** (not auto-started).
 
 ---
 
-*Operation registry v1 — contract only.*
+*Operation registry v1 — FW-07B machine-readable layer added.*

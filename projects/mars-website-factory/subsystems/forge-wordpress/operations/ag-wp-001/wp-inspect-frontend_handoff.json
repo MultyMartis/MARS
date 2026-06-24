@@ -1,0 +1,125 @@
+{
+  "operation_id": "wp.inspect.frontend_handoff",
+  "legacy_op_id": "inspect_frontend_handoff",
+  "version": "1.0.0",
+  "title": "Inspect Frontend_Handoff",
+  "description": "Verify approved frontend input contract completeness",
+  "category": "inspection",
+  "lifecycle_status": "DEFINED",
+  "implementation_status": "UNBOUND",
+  "risk_class": "R0",
+  "environment_scope": [
+    "BRAIN_ONLY",
+    "LOCAL_SOURCE"
+  ],
+  "production_allowed": false,
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "project_id": {
+        "type": "string"
+      },
+      "runtime_id": {
+        "type": "string"
+      },
+      "source_commit": {
+        "type": "string"
+      },
+      "approval_reference": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": true
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "report_type": {
+        "const": "gate_a_report"
+      },
+      "status": {
+        "enum": [
+          "SUCCEEDED",
+          "FAILED",
+          "BLOCKED_SAFE_UNKNOWN"
+        ]
+      },
+      "evidence_paths": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "preconditions": [
+    "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+    "environment_scope matches operation allowlist",
+    "production_allowed is false"
+  ],
+  "postconditions": [
+    "execution envelope schema-compatible artifact emitted (when harness exists)",
+    "audit_evidence paths recorded without secrets"
+  ],
+  "invariants": [
+    "No production mutation",
+    "No credential emission in logs",
+    "Risk class not escalated without approval"
+  ],
+  "approval": {
+    "required": false,
+    "risk_gate": "R0",
+    "token_required": false,
+    "pre_authorized_local": true
+  },
+  "approval_evidence": [],
+  "tool_binding": {
+    "binding_id": "UNBOUND",
+    "tool_ids": [],
+    "invocation_class": "unbound"
+  },
+  "tool_status": "UNBOUND",
+  "idempotency": "IDEMPOTENT",
+  "side_effects": "NONE",
+  "rollback": {
+    "required": false,
+    "method": "not_applicable",
+    "automatic": false
+  },
+  "audit_evidence": [
+    "execution_id",
+    "operation_id",
+    "started_at",
+    "status"
+  ],
+  "success_criteria": [
+    "Emit gate_a_report without BLOCKER failure codes"
+  ],
+  "failure_codes": [
+    "WP_SAFE_UNKNOWN_BLOCKING",
+    "WP_ENVIRONMENT_SCOPE_VIOLATION",
+    "WP_RUNTIME_NOT_LOCAL",
+    "WP_TOOL_BINDING_UNAVAILABLE"
+  ],
+  "safe_unknown_behavior": "BLOCK",
+  "timeout_policy": {
+    "default_seconds": 120,
+    "max_seconds": 600
+  },
+  "retry_policy": {
+    "retryable": true,
+    "max_attempts": 2
+  },
+  "secret_policy": "NO_ACCESS",
+  "logging_policy": {
+    "sanitize_secrets": true,
+    "redact_paths": [
+      "wp-config.php",
+      "runtime.env",
+      ".env"
+    ]
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "allowed_next_operations": []
+}

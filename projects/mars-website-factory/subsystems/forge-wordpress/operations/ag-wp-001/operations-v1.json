@@ -1,0 +1,5356 @@
+{
+  "registry_id": "AG-WP-001-OPERATION-REGISTRY-v1",
+  "version": "1.0.0",
+  "stage": "FW-07B",
+  "agent_id": "AG-WP-001",
+  "operation_count": 42,
+  "id_convention": "wp.<category_verb>.<object>",
+  "legacy_alias_note": "FW-07A snake_case legacy_op_id preserved per operation",
+  "operations": [
+    {
+      "operation_id": "wp.inspect.runtime",
+      "legacy_op_id": "inspect_wp_runtime",
+      "version": "1.0.0",
+      "title": "Inspect Runtime",
+      "description": "Validate MLI runtime profile vs manifest",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "runtime_validation_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-INSPECT-RUNTIME-v1",
+        "tool_ids": [
+          "MLI-TOOL-007",
+          "MLI-TOOL-015",
+          "FW-TOL-010"
+        ],
+        "invocation_class": "read_only_cli_and_http"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit runtime_validation_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.frontend_handoff",
+      "legacy_op_id": "inspect_frontend_handoff",
+      "version": "1.0.0",
+      "title": "Inspect Frontend_Handoff",
+      "description": "Verify approved frontend input contract completeness",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "BRAIN_ONLY",
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "gate_a_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit gate_a_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.theme",
+      "legacy_op_id": "inspect_theme",
+      "version": "1.0.0",
+      "title": "Inspect Theme",
+      "description": "Theme structure, hierarchy, enqueue audit",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE",
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "theme_inspection_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-INSPECT-THEME-v1",
+        "tool_ids": [
+          "FW-TOL-010",
+          "MLI-TOOL-007"
+        ],
+        "invocation_class": "filesystem_and_wp_cli"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit theme_inspection_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.functionality_plugin",
+      "legacy_op_id": "inspect_functionality_plugin",
+      "version": "1.0.0",
+      "title": "Inspect Functionality_Plugin",
+      "description": "Functionality plugin bootstrap and CPT registration audit",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "plugin_inspection_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit plugin_inspection_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.content_model",
+      "legacy_op_id": "inspect_content_model",
+      "version": "1.0.0",
+      "title": "Inspect Content_Model",
+      "description": "Content model doc vs runtime fields diff",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "BRAIN_ONLY",
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "content_model_diff"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit content_model_diff without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.plugin_state",
+      "legacy_op_id": "inspect_plugin_state",
+      "version": "1.0.0",
+      "title": "Inspect Plugin_State",
+      "description": "Installed plugins vs register",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "plugin_state_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-INSPECT-PLUGIN-v1",
+        "tool_ids": [
+          "FW-TOL-010",
+          "MLI-TOOL-007"
+        ],
+        "invocation_class": "wp_cli_read_only"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit plugin_state_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.routes",
+      "legacy_op_id": "inspect_routes",
+      "version": "1.0.0",
+      "title": "Inspect Routes",
+      "description": "URL resolution smoke inspection",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "route_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-INSPECT-ROUTES-v1",
+        "tool_ids": [
+          "FW-TOL-010",
+          "MLI-TOOL-014",
+          "FW-TOL-015"
+        ],
+        "invocation_class": "wp_cli_and_http"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit route_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.templates",
+      "legacy_op_id": "inspect_templates",
+      "version": "1.0.0",
+      "title": "Inspect Templates",
+      "description": "Template map coverage audit",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "template_coverage_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit template_coverage_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.assets",
+      "legacy_op_id": "inspect_assets",
+      "version": "1.0.0",
+      "title": "Inspect Assets",
+      "description": "Asset manifest vs theme files",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "asset_audit_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit asset_audit_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.forms",
+      "legacy_op_id": "inspect_forms",
+      "version": "1.0.0",
+      "title": "Inspect Forms",
+      "description": "Forms map vs implementation",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE",
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "forms_inspection_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit forms_inspection_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.inspect.editor_configuration",
+      "legacy_op_id": "inspect_editor_configuration",
+      "version": "1.0.0",
+      "title": "Inspect Editor_Configuration",
+      "description": "ACF/editor governance boundaries audit",
+      "category": "inspection",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "BRAIN_ONLY",
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "editor_audit_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit editor_audit_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.implementation",
+      "legacy_op_id": "draft_implementation_plan",
+      "version": "1.0.0",
+      "title": "Plan Implementation",
+      "description": "Master implementation plan draft",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "implementation_plan"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit implementation_plan without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.theme_architecture",
+      "legacy_op_id": "draft_theme_architecture",
+      "version": "1.0.0",
+      "title": "Plan Theme_Architecture",
+      "description": "Theme architecture proposal",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "theme_architecture"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit theme_architecture without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.functionality_architecture",
+      "legacy_op_id": "draft_functionality_architecture",
+      "version": "1.0.0",
+      "title": "Plan Functionality_Architecture",
+      "description": "Functionality plugin architecture proposal",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "functionality_architecture"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit functionality_architecture without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.content_model",
+      "legacy_op_id": "draft_content_model",
+      "version": "1.0.0",
+      "title": "Plan Content_Model",
+      "description": "Content model proposal",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "content_model"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit content_model without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.plugin_decisions",
+      "legacy_op_id": "draft_plugin_decision",
+      "version": "1.0.0",
+      "title": "Plan Plugin_Decisions",
+      "description": "Plugin register proposal",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "plugin_register_draft"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit plugin_register_draft without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.editor_governance",
+      "legacy_op_id": "draft_editor_governance",
+      "version": "1.0.0",
+      "title": "Plan Editor_Governance",
+      "description": "Editor boundaries document draft",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "editor_governance"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit editor_governance without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.migration",
+      "legacy_op_id": "draft_migration_plan",
+      "version": "1.0.0",
+      "title": "Plan Migration",
+      "description": "Content migration plan draft",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "migration_plan"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit migration_plan without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.validation",
+      "legacy_op_id": "draft_validation_plan",
+      "version": "1.0.0",
+      "title": "Plan Validation",
+      "description": "Project validation plan draft",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "validation_plan"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit validation_plan without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.plan.rollback",
+      "legacy_op_id": "prepare_rollback",
+      "version": "1.0.0",
+      "title": "Plan Rollback",
+      "description": "Rollback strategy draft (plan phase)",
+      "category": "planning",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "rollback_plan_draft"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit rollback_plan_draft without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.scaffold.theme",
+      "legacy_op_id": "scaffold_theme",
+      "version": "1.0.0",
+      "title": "Scaffold Theme",
+      "description": "Create theme skeleton from approved plan",
+      "category": "scaffold",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "theme_source_tree"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit theme_source_tree without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.scaffold.functionality_plugin",
+      "legacy_op_id": "scaffold_functionality_plugin",
+      "version": "1.0.0",
+      "title": "Scaffold Functionality_Plugin",
+      "description": "Create functionality plugin skeleton",
+      "category": "scaffold",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "plugin_source_tree"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit plugin_source_tree without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.scaffold.tests",
+      "legacy_op_id": "scaffold_tests",
+      "version": "1.0.0",
+      "title": "Scaffold Tests",
+      "description": "Test harness skeleton",
+      "category": "scaffold",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "test_tree"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit test_tree without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.generate.acf_json",
+      "legacy_op_id": "generate_acf_json",
+      "version": "1.0.0",
+      "title": "Generate Acf_Json",
+      "description": "Version-controlled ACF field JSON",
+      "category": "generation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "acf_json_files"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit acf_json_files without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.generate.template",
+      "legacy_op_id": "generate_template",
+      "version": "1.0.0",
+      "title": "Generate Template",
+      "description": "PHP template from template map",
+      "category": "generation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "template_file"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit template_file without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.generate.template_part",
+      "legacy_op_id": "generate_template_part",
+      "version": "1.0.0",
+      "title": "Generate Template_Part",
+      "description": "Template part from partial map",
+      "category": "generation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "template_part_file"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit template_part_file without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.generate.custom_block",
+      "legacy_op_id": "generate_custom_block",
+      "version": "1.0.0",
+      "title": "Generate Custom_Block",
+      "description": "Custom block scaffold",
+      "category": "generation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "block_source"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "CONDITIONALLY_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit block_source without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.change.apply_approved_source",
+      "legacy_op_id": "apply_approved_source_change",
+      "version": "1.0.0",
+      "title": "Change Apply_Approved_Source",
+      "description": "Apply scoped approved source edit",
+      "category": "change",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "diff_and_build_log"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit diff_and_build_log without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.php_syntax",
+      "legacy_op_id": "validate_php_syntax",
+      "version": "1.0.0",
+      "title": "Validate Php_Syntax",
+      "description": "PHP lint all project PHP paths",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "php_syntax_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-VALIDATE-PHP-v1",
+        "tool_ids": [
+          "MLI-TOOL-004",
+          "FW-TOL-005"
+        ],
+        "invocation_class": "php_cli_lint"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit php_syntax_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.wpcs",
+      "legacy_op_id": "validate_wpcs",
+      "version": "1.0.0",
+      "title": "Validate Wpcs",
+      "description": "PHPCS/WPCS scan",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "wpcs_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-VALIDATE-WPCS-v1",
+        "tool_ids": [
+          "MLI-TOOL-008",
+          "MLI-TOOL-009",
+          "FW-TOL-011",
+          "FW-TOL-012"
+        ],
+        "invocation_class": "phpcs_scan"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit wpcs_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.core_checksums",
+      "legacy_op_id": "validate_wordpress_checksums",
+      "version": "1.0.0",
+      "title": "Validate Core_Checksums",
+      "description": "WordPress core integrity checksums",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "checksum_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-VALIDATE-CHECKSUMS-v1",
+        "tool_ids": [
+          "MLI-TOOL-007",
+          "FW-TOL-010"
+        ],
+        "invocation_class": "wp_cli_read_only"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit checksum_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.database",
+      "legacy_op_id": "validate_database",
+      "version": "1.0.0",
+      "title": "Validate Database",
+      "description": "Database integrity check",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "db_check_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-VALIDATE-DB-v1",
+        "tool_ids": [
+          "MLI-TOOL-007",
+          "MLI-TOOL-005",
+          "FW-TOL-007"
+        ],
+        "invocation_class": "wp_cli_and_db_check"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "NONE",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit db_check_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.routes",
+      "legacy_op_id": "validate_routes",
+      "version": "1.0.0",
+      "title": "Validate Routes",
+      "description": "HTTP route validation tests",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "route_test_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "BIND-WP-VALIDATE-ROUTES-v1",
+        "tool_ids": [
+          "MLI-TOOL-014",
+          "FW-TOL-015"
+        ],
+        "invocation_class": "http_or_playwright"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit route_test_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.rendering",
+      "legacy_op_id": "validate_rendering",
+      "version": "1.0.0",
+      "title": "Validate Rendering",
+      "description": "Render smoke — no fatal errors",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "render_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit render_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.visual_fidelity",
+      "legacy_op_id": "validate_visual_fidelity",
+      "version": "1.0.0",
+      "title": "Validate Visual_Fidelity",
+      "description": "Screenshot diff vs approved baseline",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "visual_diff_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit visual_diff_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.accessibility",
+      "legacy_op_id": "validate_accessibility",
+      "version": "1.0.0",
+      "title": "Validate Accessibility",
+      "description": "Accessibility scan",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "a11y_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit a11y_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.security",
+      "legacy_op_id": "validate_security",
+      "version": "1.0.0",
+      "title": "Validate Security",
+      "description": "Secret scan and capability review",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "LOCAL_SOURCE",
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "security_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit security_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.validate.plugin_risk",
+      "legacy_op_id": "validate_plugin_risk",
+      "version": "1.0.0",
+      "title": "Validate Plugin_Risk",
+      "description": "Plugin provenance and risk check",
+      "category": "validation",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R0",
+      "environment_scope": [
+        "BRAIN_ONLY",
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "plugin_risk_report"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": false,
+        "risk_gate": "R0",
+        "token_required": false,
+        "pre_authorized_local": true
+      },
+      "approval_evidence": [],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit plugin_risk_report without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_RUNTIME_NOT_LOCAL",
+        "WP_TOOL_BINDING_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": true,
+        "max_attempts": 2
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.backup.create",
+      "legacy_op_id": "create_backup",
+      "version": "1.0.0",
+      "title": "Backup Create",
+      "description": "DB and files backup before mutation",
+      "category": "backup",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R3",
+      "environment_scope": [
+        "LOCAL_RUNTIME_MUTATION"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "backup_manifest"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R3",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "RUNTIME_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "restore_backup",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit backup_manifest without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "INDIRECT_CONSUMPTION",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.checkpoint.create",
+      "legacy_op_id": "create_checkpoint",
+      "version": "1.0.0",
+      "title": "Checkpoint Create",
+      "description": "Git checkpoint with manifest",
+      "category": "checkpoint",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "risk_class": "R2",
+      "environment_scope": [
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "commit_sha_and_checkpoint_manifest"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "BIND-WP-CHECKPOINT-v1",
+        "tool_ids": [
+          "MLI-TOOL-011",
+          "FW-TOL-001"
+        ],
+        "invocation_class": "git_selective_commit"
+      },
+      "tool_status": "BOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "SOURCE_MUTATION",
+      "rollback": {
+        "required": true,
+        "method": "git_revert",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit commit_sha_and_checkpoint_manifest without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH",
+        "WP_ROLLBACK_UNAVAILABLE"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.review.prepare",
+      "legacy_op_id": "prepare_review_package",
+      "version": "1.0.0",
+      "title": "Review Prepare",
+      "description": "Operator review bundle assembly",
+      "category": "review",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R1",
+      "environment_scope": [
+        "BRAIN_ONLY"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "review_package"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R1",
+        "token_required": false,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit review_package without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    },
+    {
+      "operation_id": "wp.rollback.prepare",
+      "legacy_op_id": "prepare_rollback",
+      "version": "1.0.0",
+      "title": "Rollback Prepare",
+      "description": "Rollback package assembly",
+      "category": "rollback",
+      "lifecycle_status": "DEFINED",
+      "implementation_status": "UNBOUND",
+      "risk_class": "R2",
+      "environment_scope": [
+        "BRAIN_ONLY",
+        "LOCAL_SOURCE"
+      ],
+      "production_allowed": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string"
+          },
+          "runtime_id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "approval_reference": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "report_type": {
+            "const": "rollback_package"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "BLOCKED_SAFE_UNKNOWN"
+            ]
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "preconditions": [
+        "AG-WP-001 agent registered; runtime NOT required for BRAIN_ONLY ops",
+        "environment_scope matches operation allowlist",
+        "production_allowed is false"
+      ],
+      "postconditions": [
+        "execution envelope schema-compatible artifact emitted (when harness exists)",
+        "audit_evidence paths recorded without secrets"
+      ],
+      "invariants": [
+        "No production mutation",
+        "No credential emission in logs",
+        "Risk class not escalated without approval"
+      ],
+      "approval": {
+        "required": true,
+        "risk_gate": "R2",
+        "token_required": true,
+        "pre_authorized_local": false
+      },
+      "approval_evidence": [
+        "approval_id",
+        "approved_scope",
+        "source_commit"
+      ],
+      "tool_binding": {
+        "binding_id": "UNBOUND",
+        "tool_ids": [],
+        "invocation_class": "unbound"
+      },
+      "tool_status": "UNBOUND",
+      "idempotency": "NON_IDEMPOTENT",
+      "side_effects": "READ_ONLY_ARTIFACTS",
+      "rollback": {
+        "required": false,
+        "method": "not_applicable",
+        "automatic": false
+      },
+      "audit_evidence": [
+        "execution_id",
+        "operation_id",
+        "started_at",
+        "status"
+      ],
+      "success_criteria": [
+        "Emit rollback_package without BLOCKER failure codes"
+      ],
+      "failure_codes": [
+        "WP_SAFE_UNKNOWN_BLOCKING",
+        "WP_ENVIRONMENT_SCOPE_VIOLATION",
+        "WP_APPROVAL_REQUIRED",
+        "WP_APPROVAL_SCOPE_MISMATCH"
+      ],
+      "safe_unknown_behavior": "BLOCK",
+      "timeout_policy": {
+        "default_seconds": 120,
+        "max_seconds": 600
+      },
+      "retry_policy": {
+        "retryable": false,
+        "max_attempts": 0
+      },
+      "secret_policy": "NO_ACCESS",
+      "logging_policy": {
+        "sanitize_secrets": true,
+        "redact_paths": [
+          "wp-config.php",
+          "runtime.env",
+          ".env"
+        ]
+      },
+      "dependencies": [],
+      "conflicts": [],
+      "allowed_next_operations": []
+    }
+  ]
+}

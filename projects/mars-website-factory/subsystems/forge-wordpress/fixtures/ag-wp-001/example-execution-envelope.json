@@ -1,0 +1,29 @@
+{
+  "execution_id": "00000000-0000-4000-8000-000000000001",
+  "operation_id": "wp.inspect.runtime",
+  "operation_version": "1.0.0",
+  "agent_id": "AG-WP-001",
+  "project_id": "FP-0002-SYNTHETIC",
+  "requested_by": "operator",
+  "approval_reference": null,
+  "environment": "LOCAL_RUNTIME_READ_ONLY",
+  "runtime_id": "MLI-WP-FP0002-LOCAL",
+  "source_commit": "0000000000000000000000000000000000000000",
+  "started_at": "2026-06-24T12:00:00Z",
+  "completed_at": "2026-06-24T12:00:05Z",
+  "status": "PLANNED",
+  "normalized_inputs": {
+    "runtime_id": "MLI-WP-FP0002-LOCAL",
+    "expected_url": "https://example-local.test"
+  },
+  "normalized_outputs": {},
+  "changed_files": [],
+  "runtime_mutations": [],
+  "database_mutations": [],
+  "validation_results": [],
+  "audit_artifacts": [],
+  "failure_codes": [],
+  "safe_unknown": [],
+  "rollback_reference": null,
+  "next_allowed_operations": ["wp.inspect.theme", "wp.validate.database"]
+}

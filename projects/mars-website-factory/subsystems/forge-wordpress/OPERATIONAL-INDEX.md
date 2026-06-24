@@ -20,8 +20,8 @@ FW-06A — COMPLETE (FP-0002 local foundation)
 FW-06A.1 — COMPLETE (FP-0002 foundation closure)
 FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 FW-07A — COMPLETE (AG-WP-001 foundation)
-FW-07 — First Client Implementation — PLANNED
-FW-07B — Typed Operations — PLANNED
+FW-07B — COMPLETE (AG-WP-001 typed operations)
+FW-07C — Local Read-Only Harness — PLANNED
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
 Standards: BASELINE v1
@@ -64,7 +64,8 @@ Client pilot: NOT STARTED — WordPress foundation READY; theme integration LOCK
 | **Architecture overview** | [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md) |
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
-| **AG-WP-001 operation registry** | [registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) |
+| **AG-WP-001 operation registry** | [registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) + [operations/ag-wp-001/operations-v1.json](operations/ag-wp-001/operations-v1.json) |
+| **AG-WP-001 contract validator** | [tools/validate-ag-wp-001-operation-contracts.mjs](tools/validate-ag-wp-001-operation-contracts.mjs) |
 | **Compliance matrix** | [FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md](FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md) |
 | **Local environment** | [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) — **consumes** [MLI WordPress profile](../../../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
 | **Shared localhost** | [projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) — Forge does **not** own `D:\MARS-Localhost` |

@@ -2,7 +2,7 @@
 
 **Subsystem:** Forge WordPress  
 **Agent ID:** `AG-WP-001`  
-**Stage:** FW-07A — Agent foundation (document-first)
+**Stage:** FW-07B — COMPLETE
 
 ---
 
@@ -28,6 +28,28 @@
 | 15 | [AG-WP-001-EXECUTION-WORKFLOW-v1.md](AG-WP-001-EXECUTION-WORKFLOW-v1.md) | Execution workflow |
 | 16 | [AG-WP-001-FP-0002-PILOT-READINESS-MAP-v1.md](AG-WP-001-FP-0002-PILOT-READINESS-MAP-v1.md) | FP-0002 pilot readiness |
 
+## FW-07B typed operations pack
+
+| # | Document | Purpose |
+|---|----------|---------|
+| B1 | [../schemas/AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json](../schemas/AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json) | Operation contract JSON schema |
+| B2 | [../operations/ag-wp-001/operations-v1.json](../operations/ag-wp-001/operations-v1.json) | Machine-readable operation registry |
+| B3 | [AG-WP-001-FW-07B-OPERATION-RECONCILIATION-v1.md](AG-WP-001-FW-07B-OPERATION-RECONCILIATION-v1.md) | FW-07A → canonical ID reconciliation |
+| B4 | [AG-WP-001-FAILURE-CODE-REGISTRY-v1.md](AG-WP-001-FAILURE-CODE-REGISTRY-v1.md) | Failure codes |
+| B5 | [AG-WP-001-TOOL-CAPABILITY-MATRIX-v1.md](AG-WP-001-TOOL-CAPABILITY-MATRIX-v1.md) | Tool capability audit |
+| B6 | [AG-WP-001-TOOL-BINDING-CONTRACT-v1.md](AG-WP-001-TOOL-BINDING-CONTRACT-v1.md) | Tool binding contract |
+| B7 | [AG-WP-001-FILESYSTEM-SCOPE-CONTRACT-v1.md](AG-WP-001-FILESYSTEM-SCOPE-CONTRACT-v1.md) | Filesystem scope |
+| B8 | [AG-WP-001-COMMAND-EXECUTION-CONTRACT-v1.md](AG-WP-001-COMMAND-EXECUTION-CONTRACT-v1.md) | Command execution |
+| B9 | [AG-WP-001-APPROVAL-TOKEN-CONTRACT-v1.md](AG-WP-001-APPROVAL-TOKEN-CONTRACT-v1.md) | Approval tokens |
+| B10 | [AG-WP-001-EXECUTION-ENVELOPE-CONTRACT-v1.md](AG-WP-001-EXECUTION-ENVELOPE-CONTRACT-v1.md) | Execution envelope |
+| B11 | [AG-WP-001-OPERATION-STATE-MACHINE-v1.md](AG-WP-001-OPERATION-STATE-MACHINE-v1.md) | State machine |
+| B12 | [AG-WP-001-IDEMPOTENCY-AND-REPEATABILITY-CONTRACT-v1.md](AG-WP-001-IDEMPOTENCY-AND-REPEATABILITY-CONTRACT-v1.md) | Idempotency |
+| B13 | [AG-WP-001-SECRET-BOUNDARY-CONTRACT-v1.md](AG-WP-001-SECRET-BOUNDARY-CONTRACT-v1.md) | Secret boundary |
+| B14 | [AG-WP-001-FP-0002-PILOT-SAFE-OPERATION-PROFILE-v1.md](AG-WP-001-FP-0002-PILOT-SAFE-OPERATION-PROFILE-v1.md) | Pilot-safe profile |
+| B15 | [../tools/validate-ag-wp-001-operation-contracts.mjs](../tools/validate-ag-wp-001-operation-contracts.mjs) | Contract validator |
+| B16 | [AG-WP-001-FW-07B-CONTRACT-VALIDATION-REPORT-v1.md](AG-WP-001-FW-07B-CONTRACT-VALIDATION-REPORT-v1.md) | Validation report |
+| B17 | [AG-WP-001-FW-07B-READINESS-ASSESSMENT-v1.md](AG-WP-001-FW-07B-READINESS-ASSESSMENT-v1.md) | Readiness assessment |
+
 ---
 
 ## MARS registry cross-links
@@ -41,7 +63,10 @@
 
 ```text
 AG-WP-001:
-REGISTERED (FW-07A)
+REGISTERED (FW-07A + FW-07B)
+
+Operation contracts:
+DEFINED (42 ops; validator AVAILABLE)
 
 Runtime state:
 NOT ACTIVE

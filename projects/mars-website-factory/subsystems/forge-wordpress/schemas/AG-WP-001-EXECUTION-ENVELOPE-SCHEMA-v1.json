@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AG-WP-001-EXECUTION-ENVELOPE-SCHEMA-v1.json",
+  "title": "AG-WP-001 Execution Envelope v1",
+  "description": "Logical execution record schema. Not emitted by runtime until FW-07C+.",
+  "type": "object",
+  "required": [
+    "execution_id",
+    "operation_id",
+    "operation_version",
+    "agent_id",
+    "project_id",
+    "environment",
+    "status"
+  ],
+  "properties": {
+    "execution_id": { "type": "string", "format": "uuid" },
+    "operation_id": { "type": "string" },
+    "operation_version": { "type": "string" },
+    "agent_id": { "const": "AG-WP-001" },
+    "project_id": { "type": "string" },
+    "requested_by": { "type": "string" },
+    "approval_reference": { "type": "string" },
+    "environment": { "type": "string" },
+    "runtime_id": { "type": "string" },
+    "source_commit": { "type": "string" },
+    "started_at": { "type": "string", "format": "date-time" },
+    "completed_at": { "type": "string", "format": "date-time" },
+    "status": {
+      "enum": [
+        "PLANNED",
+        "PREFLIGHT_FAILED",
+        "APPROVAL_REQUIRED",
+        "RUNNING",
+        "SUCCEEDED",
+        "SUCCEEDED_WITH_LIMITATIONS",
+        "FAILED",
+        "ROLLED_BACK",
+        "BLOCKED_SAFE_UNKNOWN"
+      ]
+    },
+    "normalized_inputs": { "type": "object" },
+    "normalized_outputs": { "type": "object" },
+    "changed_files": { "type": "array", "items": { "type": "string" } },
+    "runtime_mutations": { "type": "array", "items": { "type": "string" } },
+    "database_mutations": { "type": "array", "items": { "type": "string" } },
+    "validation_results": { "type": "array", "items": { "type": "object" } },
+    "audit_artifacts": { "type": "array", "items": { "type": "string" } },
+    "failure_codes": { "type": "array", "items": { "type": "string" } },
+    "safe_unknown": { "type": "array", "items": { "type": "string" } },
+    "rollback_reference": { "type": "string" },
+    "next_allowed_operations": { "type": "array", "items": { "type": "string" } }
+  }
+}

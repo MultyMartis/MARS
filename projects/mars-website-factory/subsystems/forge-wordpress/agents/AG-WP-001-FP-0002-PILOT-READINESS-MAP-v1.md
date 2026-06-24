@@ -2,7 +2,8 @@
 
 **Document type:** Pilot readiness mapping  
 **Version:** v1  
-**Stage:** FW-07A  
+**Stage:** FW-07A + FW-07B  
+**Extends:** FW-07A agent foundation; FW-07B typed operations ([AG-WP-001-FP-0002-PILOT-SAFE-OPERATION-PROFILE-v1.md](AG-WP-001-FP-0002-PILOT-SAFE-OPERATION-PROFILE-v1.md))  
 **Date:** 2026-06-24  
 **Project:** FP-0002 Shpigovsky
 
@@ -17,7 +18,7 @@
 | Frontend implementation | **IN PROGRESS** | `workspaces/fp-0002-shpigovsky-v6/` (and v7 WIP) |
 | Frontend Production Pass | **PENDING** | Not issued |
 | Approved frontend intake | **PENDING** | FW-06B not executed |
-| Agent architecture (AG-WP-001) | **COMPLETE** (after FW-07A) | This pack |
+| Agent architecture (AG-WP-001) | **COMPLETE** (FW-07A + FW-07B) | Agent pack + typed operations |
 | Agent runtime | **NOT ACTIVE** | Documentation only |
 | Pilot execution | **BLOCKED** | See §2 |
 
