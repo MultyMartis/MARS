@@ -1465,6 +1465,121 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
+   10h-b. Home recovery life (pre-reviews)
+   ========================================================================== */
+
+.home-recovery-life {
+	position: relative;
+	overflow: hidden;
+}
+
+.home-recovery-life::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background-image: url("../img/content/recovery-life/recovery-life-section-bg.webp");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+.home-recovery-life .container {
+	position: relative;
+	z-index: 1;
+}
+
+.home-recovery-life__content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.home-recovery-life__heading {
+	margin: 0;
+	max-width: 1170px;
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.home-recovery-life__highlight {
+	margin: 0;
+	box-sizing: border-box;
+	max-width: 1170px;
+	padding: var(--pad-gap-line) var(--pad-gap);
+	border: var(--border-width) solid var(--color-accent);
+	border-radius: var(--radius-main);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-weight: var(--font-weight-base);
+	color: var(--color-text-primary);
+	text-transform: uppercase;
+}
+
+.home-recovery-life__intro {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	max-width: 1170px;
+}
+
+.home-recovery-life__intro-text {
+	margin: 0;
+	font-size: var(--font-size-base);
+	line-height: 1.48;
+	font-weight: var(--font-weight-base);
+	color: var(--color-text-primary);
+}
+
+.home-recovery-life__stages {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--pad-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.home-recovery-life__stage {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	box-sizing: border-box;
+	padding: 41px 30px 30px;
+	border: var(--border-width) solid var(--color-text-primary);
+	border-radius: var(--radius-main);
+	background-color: transparent;
+}
+
+.home-recovery-life__stage-title {
+	margin: 0;
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+	text-transform: uppercase;
+}
+
+.home-recovery-life__stage-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.home-recovery-life__stage-item {
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: var(--font-weight-base);
+	color: var(--color-text-primary);
+}
+
+/* ==========================================================================
    10i. Home reviews
    ========================================================================== */
 
@@ -3519,6 +3634,10 @@ body[data-offcanvas-state='open'] {
 	}
 
 	.home-feature-grid__card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-recovery-life__stages {
 		grid-template-columns: 1fr;
 	}
 

@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-24 (V7 Package #001 Phase 3A–3B)
+**Last updated:** 2026-06-24 (V7 Package #001 Phase 3C)
 
 ## Workspace versions (2026-06-24)
 
@@ -21,7 +21,8 @@ package_001_phase_2_head: COMPLETE_PENDING_OPERATOR_REVIEW
 package_001_phase_3a_intro_content: COMPLETE_PENDING_OPERATOR_REVIEW
 package_001_phase_3b_founder_quote_svg: COMPLETE_PENDING_OPERATOR_REVIEW
 package_001_phase_3b_gallery_captions: COMPLETE_PENDING_OPERATOR_REVIEW
-new_recovery_block: NOT_STARTED
+package_001_phase_3c_recovery_life: COMPLETE_PENDING_OPERATOR_REVIEW
+new_recovery_block: COMPLETE_PENDING_OPERATOR_REVIEW
 section_spacing_cleanup: NOT_STARTED
 global_visual_polish: NOT_STARTED
 ```
@@ -67,7 +68,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — Package #001 Phase 3A–3B complete pending operator review (intro text, quote SVG, gallery captions) |
+| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — Package #001 Phase 3C complete pending operator review (recovery-life section) |
 | **WordPress** | **Foundation READY — POST-REBOOT VALIDATED (MLI-03R.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
