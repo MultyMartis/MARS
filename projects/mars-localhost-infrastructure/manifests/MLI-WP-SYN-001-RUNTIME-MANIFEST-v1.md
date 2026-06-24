@@ -113,6 +113,7 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
 | **Backup state** | `pre-forge-fw05r` — `D:\MARS-Localhost\backups\wordpress\synthetic\fws-0001\pre-forge-fw05r` |
 | **Rollback state** | pre-forge-fw05r available |
 | **Last validation** | 2026-06-23 — FW-05R Forge live synthetic validation |
+| **MLI-03R.1 post-reboot** | 2026-06-24 — `wp db check` PASS; HTTP 200; MySQL loopback restored — [report](../../reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md) |
 | **Last validation report** | [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md](../../mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md) |
 
 ---

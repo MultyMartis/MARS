@@ -16,8 +16,8 @@
 | **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
 | **Shared toolchain** | **HARDENED** — see tool registry |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** |
-| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **VALIDATED** (hosts elevation pending for direct domain) |
-| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY** (FW-06A.1 complete) |
+| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **POST-REBOOT VALIDATED** (MLI-03R.1) |
+| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY — POST-REBOOT VALIDATED** (MLI-03R.1) |
 | **Runtime operational (WordPress)** | **YES** — synthetic profile with limitations |
 | **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
 | **Brain root** | `C:\AI MARS` |
@@ -36,6 +36,7 @@
 | 4 | [MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md](MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md) |
 | 5 | [MARS-LOCALHOST-DOMAIN-STANDARD-v1.md](MARS-LOCALHOST-DOMAIN-STANDARD-v1.md) |
 | 6 | [MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md) |
+| 6b | [MARS-LOCALHOST-DATABASE-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) — provisioning (MLI-03R.1) |
 | 7 | [MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md](MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md) |
 | 8 | [MARS-LOCALHOST-CONSUMER-MODEL-v1.md](MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
 | 9 | [MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md](MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md) |
@@ -78,6 +79,18 @@
 | WP manifest | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
 | Validation matrix | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
 | Forge handoff | [reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md](reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md) |
+
+---
+
+## MLI-03R.1 post-reboot remediation (2026-06-24)
+
+| Item | Path |
+|------|------|
+| Master incident report | [reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md) |
+| Active config audit | [reports/MARS-LOCALHOST-MLI-03R1-ACTIVE-MYSQL-CONFIG-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-03R1-ACTIVE-MYSQL-CONFIG-AUDIT-v1.md) |
+| Network hardening | [reports/MARS-LOCALHOST-MLI-03R1-MYSQL-POST-REBOOT-NETWORK-HARDENING-v1.md](reports/MARS-LOCALHOST-MLI-03R1-MYSQL-POST-REBOOT-NETWORK-HARDENING-v1.md) |
+| Database provisioning standard | [MARS-LOCALHOST-DATABASE-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) |
+| Provisioning script | [scripts/provision-mli-wordpress-db.ps1](scripts/provision-mli-wordpress-db.ps1) |
 
 ---
 

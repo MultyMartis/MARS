@@ -99,6 +99,29 @@ Closure date:
 
 ---
 
+## MLI-03R.1 post-reboot qualification (2026-06-24)
+
+```text
+FW-06A.1 initial runtime validation:
+PASS at original checkpoint (2026-06-23) — preserved above.
+
+Post-reboot persistence incident:
+DETECTED — MySQL datadir/config drift after Windows reboot.
+
+MLI-03R.1 remediation:
+PASS — datadir restored to mysql-8.4.3; loopback + mysqlx=0; wp db check PASS;
+HTTP 200; Playwright 5/5; controlled MySQL restart PASS.
+
+FP-0002 WordPress foundation:
+READY — POST-REBOOT VALIDATED
+```
+
+Report: [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md)
+
+FW-06B: **NOT EXECUTED**
+
+---
+
 ## Next authorized action
 
 ```text

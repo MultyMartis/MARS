@@ -1,11 +1,24 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-23 (FW-06A.1 WordPress foundation closure)
+**Last updated:** 2026-06-24 (MLI-03R.1 post-reboot validation)
 
 ## Milestone (2026-06-23)
 
 **FP-0002 WORDPRESS FOUNDATION CLOSURE (FW-06A.1)** — local runtime `shpigovsky.test` validated: direct domain PASS, `wp db check` PASS, Playwright foundation smoke PASS. Theme integration **LOCKED** until Frontend Production Pass and FW-06B.
+
+## MLI-03R.1 post-reboot (2026-06-24)
+
+After full Windows reboot, MySQL datadir/config drift broke DB connectivity. Remediation restored authoritative `my.ini`, loopback binding, and X Protocol disable. **No reinstall, no DB recreate, no password rotation.**
+
+```text
+FP-0002 WordPress foundation:
+READY — POST-REBOOT VALIDATED
+
+Evidence:
+wp db check PASS; HTTP 200; Playwright 5/5; controlled MySQL restart PASS
+Report: projects/mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md
+```
 
 ---
 
@@ -32,7 +45,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 | Lane | Status |
 |------|--------|
 | **Frontend** | **In progress** — Home complete; **Services page REUSE_ONLY** on `uslugi.html` pending operator review |
-| **WordPress** | **Foundation READY (FW-06A.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
+| **WordPress** | **Foundation READY — POST-REBOOT VALIDATED (MLI-03R.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
 

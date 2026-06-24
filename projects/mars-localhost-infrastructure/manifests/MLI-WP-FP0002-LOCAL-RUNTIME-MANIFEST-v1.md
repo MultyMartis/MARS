@@ -94,6 +94,26 @@
 
 ---
 
+## MLI-03R.1 post-reboot validation (2026-06-24)
+
+| Check | Result |
+|-------|--------|
+| MySQL `datadir` | `mysql-8.4.3` — **PROVEN** |
+| Auth plugin (`mli_shpigovsky_app@127.0.0.1`) | `caching_sha2_password` |
+| `wp db check` | **PASS** |
+| HTTP smoke | **PASS** |
+| Playwright foundation smoke | **PASS** (5/5) |
+| Controlled MySQL restart | **PASS** |
+
+```text
+FP-0002 WordPress foundation:
+READY — POST-REBOOT VALIDATED
+```
+
+Report: [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](../../reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md)
+
+---
+
 ## FW-06A.1 closure — direct domain
 
 ```text
