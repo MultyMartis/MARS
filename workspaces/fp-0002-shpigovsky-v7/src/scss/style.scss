@@ -1287,8 +1287,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
    ========================================================================== */
 
 .home-gallery {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
 	overflow: hidden;
 }
 
@@ -1328,11 +1326,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 /* ==========================================================================
    10e. Home why us (pre-reviews)
    ========================================================================== */
-
-.home-why-us {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-y);
-}
 
 .home-why-us__heading {
 	margin: 0 0 var(--pad-gap);
@@ -1374,11 +1367,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
    10f. Home staff photo (pre-reviews)
    ========================================================================== */
 
-.home-staff-photo {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
-}
-
 .home-staff-photo__bleed {
 	overflow: hidden;
 	border-radius: var(--radius-main);
@@ -1396,11 +1384,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 /* ==========================================================================
    10g. Home feature grid (pre-reviews)
    ========================================================================== */
-
-.home-feature-grid {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
-}
 
 .home-feature-grid__card-grid {
 	display: grid;
@@ -1714,11 +1697,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
    10j. Home rehabilitation requirements
    ========================================================================== */
 
-.home-rehabilitation-requirements {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
-}
-
 .home-rehabilitation-requirements__heading {
 	margin: 0 0 var(--pad-gap);
 	// padding-left: var(--pad-gap);
@@ -1926,18 +1904,6 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 /* ==========================================================================
    10k. Home rehabilitation program
    ========================================================================== */
-
-.home-rehabilitation-program,
-.home-genotyping,
-.home-comfort,
-.home-videos,
-.home-specialists,
-.home-articles,
-.home-faq,
-.home-final-form {
-	padding-top: var(--pad-gap);
-	padding-bottom: var(--pad-gap);
-}
 
 .home-rehabilitation-program__head,
 .home-genotyping__head,

@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-24 (Package #001 Phase 3C)
+**Updated:** 2026-06-24 (Package #001 Phase 4A)
 
 ```text
 workspace: V7
@@ -27,7 +27,11 @@ package_001_phase_2_head: COMPLETE_PENDING_OPERATOR_REVIEW
 package_001_phase_3a_intro_content: COMPLETE_PENDING_OPERATOR_REVIEW
 package_001_phase_3b_founder_quote_svg: COMPLETE_PENDING_OPERATOR_REVIEW
 package_001_phase_3b_gallery_captions: COMPLETE_PENDING_OPERATOR_REVIEW
-package_001_phase_3c_recovery_life: COMPLETE_PENDING_OPERATOR_REVIEW
+package_001_phase_3c_recovery_life: CONDITIONALLY_ACCEPTED
+package_001_phase_3c_desktop: FIGMA_VERIFIED
+package_001_phase_3c_mobile: RESPONSIVE_DERIVED
+package_001_phase_3c_final_review: REQUIRED_DURING_GLOBAL_POLISH
+package_001_phase_4a_spacing_cleanup: COMPLETE_PENDING_OPERATOR_REVIEW
 
 visible_content_authority_rule: ACTIVE
 hidden_layer_exclusion_rule: ACTIVE
@@ -38,8 +42,8 @@ social_preview: IMPLEMENTED
 canonical_domain: CONFIRMED
 wordpress_head_migration_contract: DOCUMENTED
 
-new_recovery_block: COMPLETE_PENDING_OPERATOR_REVIEW
-section_spacing_cleanup: NOT_STARTED
+new_recovery_block: CONDITIONALLY_ACCEPTED
+section_spacing_cleanup: COMPLETE_PENDING_OPERATOR_REVIEW
 global_visual_polish: NOT_STARTED
 ```
 
