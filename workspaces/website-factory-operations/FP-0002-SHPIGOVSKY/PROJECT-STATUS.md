@@ -12,8 +12,12 @@
 
 ```text
 V7 design authority: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig
+V7 design authority SHA-256: BAE5D91C74B5A22AFC610F7C7845B9BADC6B87EC8DA85C5705ECF4EEC4DE3041
 Historical Figma (Шпиговский.fig): DO NOT USE FOR NEW WORK
-Package #001: NOT STARTED
+Factory Figma rules: projects/mars-website-factory/figma-inspection-authority-rules-v1.md
+package_001: IN_PROGRESS
+package_001_phase_1_figma_rules: COMPLETE
+package_001_phase_2_head: COMPLETE_PENDING_OPERATOR_REVIEW
 V6/V7 bootstrap parity: PASS (source, visual, functional)
 ```
 
@@ -58,7 +62,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — bootstrap parity PASS with frozen V6; package #001 not started |
+| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — Package #001 Phase 1–2 complete pending operator review; shared head + Figma authority rules |
 | **WordPress** | **Foundation READY — POST-REBOOT VALIDATED (MLI-03R.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
@@ -115,7 +119,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 ## Next gate
 
-**Package #001 Phase 1** — explicit charter required; V7 is bootstrapped from frozen V6 with zero unexpected initial differences. Do not start package work without operator charter.
+**Package #001 Phase 2** — head/favicon/OG implemented; operator review for SEO copy and OG asset. Content migration and visual polish phases not started.
 
 ---
 

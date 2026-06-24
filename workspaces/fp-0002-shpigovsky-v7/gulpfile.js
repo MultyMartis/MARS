@@ -51,6 +51,11 @@ const paths = {
     watch: 'src/fonts/**/*',
     dest: 'dist/assets/fonts/',
   },
+  favicon: {
+    src: 'src/favicon/**/*',
+    watch: 'src/favicon/**/*',
+    dest: 'dist/assets/favicon/',
+  },
   vendor: {
     swiperJs: 'node_modules/swiper/swiper-bundle.min.js',
     swiperCss: 'node_modules/swiper/swiper-bundle.min.css',
@@ -160,6 +165,12 @@ function fonts() {
     .pipe(dest(paths.fonts.dest));
 }
 
+function favicon() {
+  return src(paths.favicon.src, { allowEmpty: true })
+    .pipe(onError('Favicon'))
+    .pipe(dest(paths.favicon.dest));
+}
+
 function vendorSwiper() {
   return src([paths.vendor.swiperJs, paths.vendor.swiperCss], { allowEmpty: false })
     .pipe(onError('Swiper vendor'))
@@ -175,7 +186,7 @@ function vendorFancybox() {
 const build = series(
   cleanDist,
   prepareFaBridge,
-  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts, vendorSwiper, vendorFancybox)
+  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts, favicon, vendorSwiper, vendorFancybox)
 );
 
 function watcher() {
@@ -185,11 +196,12 @@ function watcher() {
   watch(paths.images.watch, images);
   watch(paths.svg.watch, svg);
   watch(paths.fonts.watch, fonts);
+  watch(paths.favicon.watch, favicon);
 }
 
 const buildIncremental = series(
   prepareFaBridge,
-  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts, vendorSwiper, vendorFancybox)
+  parallel(html, series(faWebfonts, styles), scripts, images, svg, fonts, favicon, vendorSwiper, vendorFancybox)
 );
 
 exports.clean = cleanDist;

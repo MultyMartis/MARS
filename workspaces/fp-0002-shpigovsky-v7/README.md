@@ -19,20 +19,26 @@
 
 ## Design authority
 
-| Source | Role |
-|--------|------|
-| `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig` | **Primary** design authority for future changes |
-| `Шпиговский.fig` | HISTORICAL — DO NOT USE FOR NEW WORK |
+| Source | Role | SHA-256 |
+|--------|------|---------|
+| `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig` | **ACTIVE** — primary for all new work | `BAE5D91C74B5A22AFC610F7C7845B9BADC6B87EC8DA85C5705ECF4EEC4DE3041` |
+| `Шпиговский.fig` | **HISTORICAL — DO NOT USE FOR NEW WORK** | `D25A13617664040045A88AE9B804FEB737076007CB317D49699196F92232B64B` |
 
 ## Package #001
 
 ```text
-NOT STARTED
+package_001: IN_PROGRESS
+package_001_phase_1_figma_rules: COMPLETE
+package_001_phase_2_head: COMPLETE_PENDING_OPERATOR_REVIEW
 ```
+
+See `foundation/FP-0002-V7-FIGMA-AUTHORITY-RULES.md` and `reviews/package-001/head/`.
 
 ## URL policy
 
 V7 is an internal workspace version. User-facing URLs remain unchanged (`/`, `/uslugi/`, `/o-centre/`, etc.). Do not add `/v7/` to public links.
+
+Production host: `shpigovsky.ru` (DOM-SHPIG-01).
 
 ## Build
 
