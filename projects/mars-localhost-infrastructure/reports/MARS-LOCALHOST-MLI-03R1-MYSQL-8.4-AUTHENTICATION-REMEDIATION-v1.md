@@ -11,9 +11,12 @@
 ## 1. Result
 
 ```text
-MLI MySQL 8.4 post-reboot state: PROVEN (controlled restart)
-FP-0002 WordPress foundation: READY — POST-REBOOT VALIDATED
-FWS-0001 synthetic runtime: ACTIVE — POST-REBOOT VALIDATED
+MLI MySQL current state: PROVEN (current session + controlled restart)
+Controlled MySQL restart: PASS
+Full Windows reboot: DEFERRED OPERATOR GATE
+FP-0002 WordPress foundation: READY — CURRENT SESSION VALIDATED
+FWS-0001 synthetic runtime: ACTIVE — HTTPS VALIDATED (current session)
+FW-06B: WAITING FOR FP-0002 FRONTEND PRODUCTION PASS
 ```
 
 ---
@@ -125,9 +128,98 @@ No `GRANT OPTION`, `FILE`, `PROCESS`, `SUPER`, or `SYSTEM_USER`.
 
 | Item | Note |
 |------|------|
-| Full Windows reboot re-test | Operator observation on next natural reboot |
+| Full Windows reboot re-test | **DEFERRED BY OPERATOR** — use [MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md](MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md) on next natural reboot |
 | Drop redundant `localhost` account variants | Low priority; `DB_HOST` uses `127.0.0.1` |
-| Deprecate empty `mysql-8.4` datadir | Operator cleanup — not required for runtime |
+| Empty `mysql-8.4` datadir | **QUARANTINE CANDIDATE / DO NOT USE** — deletion deferred until successful full Windows reboot validation |
+
+---
+
+## Post-report Git and runtime reconciliation
+
+**Reconciliation date:** 2026-06-24 (MLI-03R.1 final pass)
+
+### Git state
+
+| Item | Value |
+|------|-------|
+| Branch | `mars/post-cycle8-live-tests` |
+| Remediation commit | `f003fe8d` — `fix(mli): migrate local WordPress DB users for MySQL 8.4` |
+| Local HEAD (reconciliation) | `8ccda4da` — includes `f003fe8d` in ancestry |
+| Origin HEAD (reconciliation) | `8ccda4da` — matches local |
+| Branch ahead/behind | **NO** — synced with `origin/mars/post-cycle8-live-tests` |
+| `f003fe8d` on origin | **YES** (`git branch -r --contains f003fe8d`) |
+
+### Push result (contradiction closure)
+
+| Phase | Status |
+|-------|--------|
+| Initial report session (§28 agent closeout) | Push **NOT COMPLETED** / branch reported ahead by 1 at `f003fe8d` |
+| Subsequent reconciliation | **PUSH CONFIRMED COMPLETE** — `f003fe8d` and later commits present on origin; local/origin HEAD aligned at `8ccda4da` |
+
+No duplicate push required during reconciliation. No force push performed.
+
+### Current MySQL runtime (no Windows reboot this session)
+
+| Check | Result |
+|-------|--------|
+| Process binary | `mysql-8.4.3-winx64\bin\mysqld.exe` (two PIDs observed — Laragon parent/child pattern) |
+| `VERSION()` | `8.4.3` |
+| `datadir` | `D:\MARS-Localhost\laragon\data\mysql-8.4.3\` |
+| `bind_address` | `127.0.0.1` |
+| `127.0.0.1:3306` | **LISTENING** |
+| `33060` | **NOT listening** |
+
+### FP-0002 current state
+
+| Check | Result |
+|-------|--------|
+| `wp db check` | **PASS** |
+| `wp core verify-checksums` | **PASS** |
+| `blog_public` | `0` |
+| `http://shpigovsky.test/` | HTTP **200** — no database error |
+| `wp-login.php`, `wp-json/` | HTTP **200** |
+
+### FWS-0001 current state
+
+| Check | Result |
+|-------|--------|
+| `wp db check` | **PASS** |
+| `wp core verify-checksums` | **PASS** |
+| Active theme | `fws-synthetic` |
+| Active plugins | `advanced-custom-fields`, `fws-synthetic-core` (+ MU `mars-local-runtime`) |
+| Demo content | **Present** — `MARS Forge WordPress Synthetic Runtime` marker in HTML |
+| Database error | **None** |
+
+### HTTPS / redirect state
+
+| Probe | Result |
+|-------|--------|
+| `http://fws-0001.test/` (CLI, no redirect follow) | HTTP **200** direct (no `Location` header in automation session) |
+| `https://fws-0001.test/` (PHP curl, local cert) | HTTP **200** — synthetic runtime renders |
+| Operator browser session | HTTP → HTTPS redirect **confirmed by operator** after Laragon start |
+
+Apache vhosts expose both `:80` and `:443` for `fws-0001.test`; WordPress `siteurl`/`home` remain `http://`. HTTPS availability is proven; HTTP→HTTPS may be operator-browser or HSTS behaviour — not required to block current runtime status.
+
+### Windows reboot validation
+
+```text
+Full Windows reboot persistence test: DEFERRED BY OPERATOR
+Reason: Operator actively working; reboot not authorized this session.
+Blocking current work: NO
+Controlled MySQL restart: PASS (unchanged from remediation)
+```
+
+Post-reboot operator command: `& "D:\MARS-Localhost\tools\verify-mli-after-reboot.ps1"` — see [MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md](MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md).
+
+### Empty `mysql-8.4` datadir policy
+
+```text
+Path: D:\MARS-Localhost\laragon\data\mysql-8.4
+Status: QUARANTINE CANDIDATE / DO NOT USE
+Deletion: DEFERRED UNTIL SUCCESSFUL FULL WINDOWS REBOOT VALIDATION
+```
+
+Directory left untouched (28 entries observed — not authoritative MLI data).
 
 ---
 
