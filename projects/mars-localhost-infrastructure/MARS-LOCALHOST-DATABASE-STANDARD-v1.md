@@ -34,7 +34,20 @@ Canonical rules for creating MLI WordPress (and future consumer) databases and l
 | `mysqlx` | `0` | X Protocol disabled |
 | `mysql_native_password` | **Must remain DISABLED** | Do not enable plugin or use for new accounts |
 
-**Reboot rule:** Laragon starts `mysqld` without `--defaults-file`; Windows MySQL reads `my.ini` from the **binary directory**. Edits to `laragon\data\my.ini` alone are **not** sufficient.
+**Reboot rule:** Laragon starts `mysqld` without `--defaults-file`; Windows MySQL reads `my.ini` from the **binary directory**. Laragon **regenerates** `bin\mysql\mysql-8.4.3-winx64\my.ini` at each MySQL start, deriving `datadir` from package family `mysql-8.4` (see `usr\packages.conf`). Edits to `laragon\data\my.ini` alone are **not** sufficient.
+
+**MLI-03R.3 durable pinning (2026-06-24):**
+
+| Layer | Path | Role |
+|-------|------|------|
+| User template | `laragon\usr\tpl\MySQL.my.ini.tpl` | Canonical `datadir`, `bind-address`, `mysqlx=0` for Laragon merge |
+| Authoritative runtime | `laragon\bin\mysql\mysql-8.4.3-winx64\my.ini` | Loaded by `mysqld`; **ReadOnly** to block generator overwrite |
+| Operator mirror | `laragon\data\my.ini` | Reference copy; must stay in sync |
+| Recovery | `D:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Audit; `-Apply` after MySQL stop |
+
+Report: [MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md)
+
+**Windows reboot persistence:** Laragon cold-start **PROVEN** (MLI-03R.3); full OS reboot **PENDING OPERATOR RETEST**.
 
 ---
 

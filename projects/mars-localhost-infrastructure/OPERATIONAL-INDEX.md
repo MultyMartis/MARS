@@ -16,8 +16,8 @@
 | **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
 | **Shared toolchain** | **HARDENED** — see tool registry |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** |
-| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **POST-REBOOT VALIDATED** (MLI-03R.1) |
-| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY — POST-REBOOT VALIDATED** (MLI-03R.1) |
+| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **CURRENT SESSION RESTORED** (MLI-03R.3) |
+| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY — CURRENT SESSION RESTORED** (MLI-03R.3) |
 | **Runtime operational (WordPress)** | **YES** — synthetic profile with limitations |
 | **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
 | **Brain root** | `C:\AI MARS` |
@@ -79,6 +79,17 @@
 | WP manifest | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
 | Validation matrix | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
 | Forge handoff | [reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md](reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md) |
+
+---
+
+## MLI-03R.3 Laragon cold-start datadir persistence (2026-06-24)
+
+| Item | Path |
+|------|------|
+| Master report | [reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md) |
+| Recovery script (D:) | `D:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` |
+
+**Status:** Laragon cold-start persistence **PROVEN**; full Windows reboot **PENDING OPERATOR RETEST**.
 
 ---
 

@@ -118,6 +118,24 @@ READY — POST-REBOOT VALIDATED
 
 Report: [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md)
 
+### MLI-03R.3 reconciliation (2026-06-24)
+
+```text
+Post-Windows-reboot datadir drift (mysql-8.4):
+REPRODUCED
+
+Laragon cold-start persistence after MLI-03R.3:
+PROVEN (2 consecutive cold starts)
+
+FP-0002 WordPress foundation:
+READY — CURRENT SESSION RESTORED
+
+Full Windows reboot after MLI-03R.3:
+PENDING OPERATOR RETEST
+```
+
+Report: [MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](../../../../mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md)
+
 FW-06B: **NOT EXECUTED**
 
 ---

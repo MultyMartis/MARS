@@ -3,7 +3,7 @@
 **Document type:** Operator procedure (read-only verification)  
 **Version:** v1  
 **Date:** 2026-06-24  
-**Stage:** MLI-03R.1 reconciliation; MLI-03R.2 process-model checks added 2026-06-24
+**Stage:** MLI-03R.1 reconciliation; MLI-03R.2 process-model checks added 2026-06-24; MLI-03R.3 datadir drift guidance added 2026-06-24
 
 ---
 
@@ -54,6 +54,7 @@ This procedure complements controlled MySQL restart validation (already **PASS**
 | 2b | **Single server listener** — exactly one `127.0.0.1:3306` (not raw PID count) |
 | 2c | **MySQL process model** — one `mysqld` or parent/child pair where only child owns 3306 |
 | 3 | Effective `datadir` contains `mysql-8.4.3` |
+| 3b | **Durable datadir mechanism** — `bin\my.ini` ReadOnly + canonical datadir in `bin\my.ini` and `usr\tpl\MySQL.my.ini.tpl` |
 | 4 | Effective `bind_address` = `127.0.0.1` |
 | 5 | Port `3306` loopback-only |
 | 6 | Port `33060` not listening |
@@ -86,7 +87,9 @@ HTTP→HTTPS redirect on FWS-0001 may be direct HTTP 200 or 3xx depending on vho
 
 1. Record script output (no secrets).
 2. Do **not** delete `mysql-8.4` datadir.
-3. Escalate to MLI remediation charter — reference [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md).
+3. If effective datadir is `mysql-8.4` (not `mysql-8.4.3`): **FAIL — LARAGON STARTUP DATADIR DRIFT** — see [MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md).
+4. Optional recovery (MySQL stopped): `& "D:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1" -Apply`
+5. Escalate to MLI remediation charter — reference [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md).
 
 ---
 
@@ -95,6 +98,7 @@ HTTP→HTTPS redirect on FWS-0001 may be direct HTTP 200 or 3xx depending on vho
 - Runtime script (D: only, not in Git): `D:\MARS-Localhost\tools\verify-mli-after-reboot.ps1`
 - MLI-03R.2 process audit: [MARS-LOCALHOST-MLI-03R2-MYSQL-PROCESS-IDENTITY-AUDIT-v1.md](MARS-LOCALHOST-MLI-03R2-MYSQL-PROCESS-IDENTITY-AUDIT-v1.md)
 - MLI-03R.2 closure: [MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md](MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md)
+- MLI-03R.3 datadir persistence: [MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md)
 - Remediation master report: [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md)
 
 ---

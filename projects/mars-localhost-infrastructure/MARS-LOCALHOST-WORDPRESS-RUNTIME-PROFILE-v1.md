@@ -385,6 +385,7 @@ Summary:
 | Production URLs in `WP_HOME` | **Forbidden** unless mirror charter |
 | Production credentials | **Forbidden** in `runtime.env` |
 | MySQL exposure | `bind-address=127.0.0.1` |
+| MySQL datadir | `mysql-8.4.3` — Laragon cold-start pinned MLI-03R.3; see [DATABASE-STANDARD](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) |
 | WP-CLI `@production` aliases | **Forbidden** |
 
 ---

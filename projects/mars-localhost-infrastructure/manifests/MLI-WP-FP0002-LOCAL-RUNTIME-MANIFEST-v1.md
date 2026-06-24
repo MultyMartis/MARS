@@ -114,6 +114,28 @@ Report: [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](../
 
 ---
 
+## MLI-03R.3 Laragon cold-start datadir persistence (2026-06-24)
+
+| Check | Result |
+|-------|--------|
+| Post-Windows-reboot incident | **DETECTED** — wrong datadir `mysql-8.4` |
+| Session recovery | **PASS** |
+| Laragon cold-start ×2 | **PASS** — datadir `mysql-8.4.3` |
+| `wp db check` | **PASS** |
+| HTTP smoke | **PASS** |
+
+```text
+FP-0002 WordPress foundation:
+READY — CURRENT SESSION RESTORED
+
+Windows reboot persistence:
+PENDING OPERATOR RETEST
+```
+
+Report: [MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](../../reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md)
+
+---
+
 ## FW-06A.1 closure — direct domain
 
 ```text
