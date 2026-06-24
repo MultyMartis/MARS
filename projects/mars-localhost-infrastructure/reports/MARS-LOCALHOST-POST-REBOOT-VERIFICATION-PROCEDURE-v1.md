@@ -3,7 +3,7 @@
 **Document type:** Operator procedure (read-only verification)  
 **Version:** v1  
 **Date:** 2026-06-24  
-**Stage:** MLI-03R.1 reconciliation
+**Stage:** MLI-03R.1 reconciliation; MLI-03R.2 process-model checks added 2026-06-24
 
 ---
 
@@ -51,6 +51,8 @@ This procedure complements controlled MySQL restart validation (already **PASS**
 |---|--------|
 | 1 | `mysqld.exe` process exists |
 | 2 | Binary path under `mysql-8.4.3-winx64` |
+| 2b | **Single server listener** — exactly one `127.0.0.1:3306` (not raw PID count) |
+| 2c | **MySQL process model** — one `mysqld` or parent/child pair where only child owns 3306 |
 | 3 | Effective `datadir` contains `mysql-8.4.3` |
 | 4 | Effective `bind_address` = `127.0.0.1` |
 | 5 | Port `3306` loopback-only |
@@ -71,7 +73,7 @@ The script does **not**: output passwords, modify `my.ini`, restart MySQL/Apache
 
 | Area | PASS criteria |
 |------|----------------|
-| MySQL | Version 8.4.3 family; datadir `...\laragon\data\mysql-8.4.3\` |
+| MySQL | Version 8.4.3 family; datadir `...\laragon\data\mysql-8.4.3\`; **one logical server** (one `127.0.0.1:3306` listener; two `mysqld.exe` parent/child on Windows is acceptable if only child listens) |
 | Network | `127.0.0.1:3306` only; no `33060` |
 | FP-0002 | `wp db check` success; `http://shpigovsky.test/` HTTP 200 |
 | FWS-0001 | `wp db check` success; `https://fws-0001.test/` HTTP 200 with synthetic runtime content |
@@ -91,6 +93,8 @@ HTTP→HTTPS redirect on FWS-0001 may be direct HTTP 200 or 3xx depending on vho
 ## Related
 
 - Runtime script (D: only, not in Git): `D:\MARS-Localhost\tools\verify-mli-after-reboot.ps1`
+- MLI-03R.2 process audit: [MARS-LOCALHOST-MLI-03R2-MYSQL-PROCESS-IDENTITY-AUDIT-v1.md](MARS-LOCALHOST-MLI-03R2-MYSQL-PROCESS-IDENTITY-AUDIT-v1.md)
+- MLI-03R.2 closure: [MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md](MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md)
 - Remediation master report: [MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md)
 
 ---

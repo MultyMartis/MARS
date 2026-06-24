@@ -82,6 +82,18 @@
 
 ---
 
+## MLI-03R.2 duplicate MySQL process closure (2026-06-24)
+
+| Item | Path |
+|------|------|
+| Process identity audit | [reports/MARS-LOCALHOST-MLI-03R2-MYSQL-PROCESS-IDENTITY-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-03R2-MYSQL-PROCESS-IDENTITY-AUDIT-v1.md) |
+| Closure report | [reports/MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md](reports/MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md) |
+| Post-reboot procedure | [reports/MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md](reports/MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md) |
+
+**MySQL process state:** NORMAL — VERIFIED MULTI-PROCESS INTERNAL MODEL (single canonical server on `127.0.0.1:3306`).
+
+---
+
 ## MLI-03R.1 post-reboot remediation (2026-06-24)
 
 | Item | Path |
