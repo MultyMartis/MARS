@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-24 (V6 freeze + V7 bootstrap)
+**Last updated:** 2026-06-24 (V7 Package #001 Phase 3A–3B)
 
 ## Workspace versions (2026-06-24)
 
@@ -18,7 +18,12 @@ Factory Figma rules: projects/mars-website-factory/figma-inspection-authority-ru
 package_001: IN_PROGRESS
 package_001_phase_1_figma_rules: COMPLETE
 package_001_phase_2_head: COMPLETE_PENDING_OPERATOR_REVIEW
-V6/V7 bootstrap parity: PASS (source, visual, functional)
+package_001_phase_3a_intro_content: COMPLETE_PENDING_OPERATOR_REVIEW
+package_001_phase_3b_founder_quote_svg: COMPLETE_PENDING_OPERATOR_REVIEW
+package_001_phase_3b_gallery_captions: COMPLETE_PENDING_OPERATOR_REVIEW
+new_recovery_block: NOT_STARTED
+section_spacing_cleanup: NOT_STARTED
+global_visual_polish: NOT_STARTED
 ```
 
 ## Milestone (2026-06-23)
@@ -62,7 +67,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — Package #001 Phase 1–2 complete pending operator review; shared head + Figma authority rules |
+| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — Package #001 Phase 3A–3B complete pending operator review (intro text, quote SVG, gallery captions) |
 | **WordPress** | **Foundation READY — POST-REBOOT VALIDATED (MLI-03R.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |

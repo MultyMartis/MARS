@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-24 (Package #001 Phase 1–2)
+**Updated:** 2026-06-24 (Package #001 Phase 3A–3B)
 
 ```text
 workspace: V7
@@ -24,6 +24,9 @@ active_design_sha256: BAE5D91C74B5A22AFC610F7C7845B9BADC6B87EC8DA85C5705ECF4EEC4
 package_001: IN_PROGRESS
 package_001_phase_1_figma_rules: COMPLETE
 package_001_phase_2_head: COMPLETE_PENDING_OPERATOR_REVIEW
+package_001_phase_3a_intro_content: COMPLETE_PENDING_OPERATOR_REVIEW
+package_001_phase_3b_founder_quote_svg: COMPLETE_PENDING_OPERATOR_REVIEW
+package_001_phase_3b_gallery_captions: COMPLETE_PENDING_OPERATOR_REVIEW
 
 visible_content_authority_rule: ACTIVE
 hidden_layer_exclusion_rule: ACTIVE
@@ -34,10 +37,7 @@ social_preview: IMPLEMENTED
 canonical_domain: CONFIRMED
 wordpress_head_migration_contract: DOCUMENTED
 
-content_migration: NOT_STARTED
 new_recovery_block: NOT_STARTED
-gallery_caption_update: NOT_STARTED
-founder_quote_svg: NOT_STARTED
 section_spacing_cleanup: NOT_STARTED
 global_visual_polish: NOT_STARTED
 ```
@@ -53,4 +53,4 @@ global_visual_polish: NOT_STARTED
 
 ## Package #001 boundary
 
-Phases 1–2 complete pending operator review. Content migration, recovery block, gallery captions, quote SVG, spacing cleanup, and global polish **not** started.
+Phases 1–2 complete pending operator review. Phase 3A–3B (intro text, founder quote SVG, gallery captions) complete pending operator review. New recovery block, spacing cleanup, and global polish **not** started.

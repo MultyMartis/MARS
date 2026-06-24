@@ -1037,10 +1037,11 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 .home-founder-quote__mark {
+	display: block;
+	width: 70px; // EXACT_GEOMETRY — FIG node 1:1217 width 70px
+	height: 55px; // EXACT_GEOMETRY — FIG node 1:1217 height 55px
 	margin: 0 0 var(--pad-gap-line);
 	color: var(--color-accent);
-	font-size: 70px; // EXACT_GEOMETRY — mockup quote_mark zone height 72px at 1398 canvas
-	line-height: 1;
 }
 
 .home-founder-quote__text {
@@ -1296,6 +1297,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 .home-gallery__slide {
+	position: relative;
 	height: auto;
 }
 
@@ -1305,6 +1307,22 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	height: 372px; // EXACT_GEOMETRY — FIG gallery card display height 372px (nodes 1:986–1:989)
 	object-fit: cover;
 	border-radius: var(--radius-main);
+}
+
+.home-gallery__caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: var(--pad-gap-tight) var(--pad-gap-line);
+	border-radius: 0 0 var(--radius-main) var(--radius-main);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-small);
+	color: var(--color-text-inverse);
+	pointer-events: none;
 }
 
 /* ==========================================================================
