@@ -85,6 +85,22 @@
 | ID | Document | Type | Status |
 |----|----------|------|--------|
 | FW-R-02 | [FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) | Registry | BASELINE v1 |
+| FW-R-03 | [FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) | Registry | BASELINE v1 (FW-07A) |
+
+---
+
+## FW-07A AG-WP-001 agent contracts
+
+| ID | Document | Type | Status |
+|----|----------|------|--------|
+| FW-A-01 | [agents/README.md](../agents/README.md) | Index | BASELINE v1 |
+| FW-A-02 | [agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-AGENT-CARD-v1.md](../agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-AGENT-CARD-v1.md) | Agent card | BASELINE v1 |
+| FW-A-03 | [agents/AG-WP-001-APPROVED-FRONTEND-INPUT-CONTRACT-v1.md](../agents/AG-WP-001-APPROVED-FRONTEND-INPUT-CONTRACT-v1.md) | Contract | BASELINE v1 |
+| FW-A-04 | [agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-OUTPUT-CONTRACT-v1.md](../agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-OUTPUT-CONTRACT-v1.md) | Contract | BASELINE v1 |
+| FW-A-05 | [agents/AG-WP-001-EXECUTION-WORKFLOW-v1.md](../agents/AG-WP-001-EXECUTION-WORKFLOW-v1.md) | Workflow | BASELINE v1 |
+| FW-A-06 | [agents/AG-WP-001-FP-0002-PILOT-READINESS-MAP-v1.md](../agents/AG-WP-001-FP-0002-PILOT-READINESS-MAP-v1.md) | Map | BASELINE v1 |
+
+*Full pack: [agents/README.md](../agents/README.md)*
 
 ---
 
@@ -100,4 +116,4 @@
 
 ---
 
-*Register v1 — subsystem local; updated FW-03 complete.*
+*Register v1 — subsystem local; updated FW-07A AG-WP-001.*

@@ -21,6 +21,8 @@
 | **FW-06A.1** | FP-0002 Foundation Closure and Checkpoint | **COMPLETE** | Direct domain, DB check, Playwright smoke |
 | **FW-06B** | Approved Frontend Intake and Integration Lock | **WAITING** | Waiting for FP-0002 Production Pass |
 | **FW-06** | Pilot Intake (legacy label) | **SUPERSEDED** | Split into FW-06A + FW-06B |
+| **FW-07A** | AG-WP-001 WordPress Implementation Agent Foundation | **COMPLETE** | Agent contracts, registry, pilot map — **not** runtime-active |
+| **FW-07B** | AG-WP-001 Typed Operations and Tool Contract | **PLANNED** | Machine-readable ops, runner bindings — **not started** |
 | **FW-07** | First Client Implementation | **PLANNED** | FP-0002 — after FW-06B |
 | **FW-08** | WPilot Handoff Validation | **PLANNED** | Operational boundary proof on DEV/staging |
 
@@ -49,6 +51,8 @@ FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-06A — COMPLETE (FP-0002 foundation — READY)
 FW-06A.1 — COMPLETE (FP-0002 foundation closure and checkpoint)
 FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
+FW-07A — COMPLETE (AG-WP-001 foundation — DOCUMENTED / REGISTERED / NOT RUNTIME-ACTIVE)
+FW-07B — PLANNED (typed operations — not started)
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
@@ -68,8 +72,8 @@ FW-06 — AUTHORIZED BUT WAITING FOR FRONTEND PRODUCTION PASS
 Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 shpigovsky.test — FW-06A.1)
 Synthetic source: TRACKED in Git
-Agent registration: NOT REGISTERED
-Client pilot: NOT STARTED
+Agent registration: REGISTERED (AG-WP-001 — draft; NOT RUNTIME-ACTIVE)
+Client pilot: NOT STARTED (BLOCKED until Production Pass + FW-06B)
 ```
 
 **Lifecycle:** `FOUNDATION / PRE-OPERATIONAL` — not OPERATIONAL until FW-06+ client pilot evidence.
@@ -115,4 +119,4 @@ Website Factory program roadmap: [projects/mars-website-factory/roadmap.md](../.
 
 ---
 
-*Subsystem roadmap v1 — updated FW-05R complete.*
+*Subsystem roadmap v1 — updated FW-07A AG-WP-001 foundation complete.*

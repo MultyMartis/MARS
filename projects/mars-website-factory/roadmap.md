@@ -25,7 +25,7 @@
 | **Foundry Vocabulary Canon** | Vocabulary authority layer (F1–F6) | **ACCEPTED** | [foundry-vocabulary-canon-charter-v1.md](foundry-vocabulary-canon-charter-v1.md) · six vocabulary families, constraint graph, REG-VOC-* rules; authority between Research (RV-01–03) and Registry; [foundry-vocabulary-canon-charter-pass-v1.md](../../reports/foundry-vocabulary-canon-charter-pass-v1.md) · **not** runtime · **not** registry rows |
 | **WF-R01** | Registry Expansion Program | **CHARTERED** | [wf-r01-registry-expansion-program-charter-v1.md](../../reports/wf-r01-registry-expansion-program-charter-v1.md) · scope [foundry-registry-expansion-program-design-v1.md](../../reports/foundry-registry-expansion-program-design-v1.md) · authority [wf-r01-program-authority-pass-v1.md](../../reports/wf-r01-program-authority-pass-v1.md) · subprograms — see table below · **documentation + controlled reference expansion**; **not** runtime; R01.2 Gate 2 **COMPLETE** (RC **32/32**) |
 | **WF-A03** | Pixel Factory Expansion | **DEFERRED** | Vision Layer, Visual Diff, Pixel QA Runtime, Screenshot Engine, Agent Runtime — **forbidden** until WF-A01 **and** WF-A02 complete |
-| **Forge WordPress (FW)** | WordPress implementation subsystem | **FOUNDATION / PRE-OPERATIONAL** (FW-05 **COMPLETE**) | [subsystems/forge-wordpress/](subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — synthetic FWS-0001 **PROVEN WITH LIMITATIONS**; next: **FW-06 Pilot Intake** |
+| **Forge WordPress (FW)** | WordPress implementation subsystem | **FOUNDATION / PRE-OPERATIONAL** (FW-07A **COMPLETE**) | [subsystems/forge-wordpress/](subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — AG-WP-001 **REGISTERED** (`draft`; not runtime-active); FP-0002 foundation READY; next: **FW-06B** (blocked on Production Pass) · **FW-07B** planned |
 | **Universal Style Scale Law** | Compact CSS token scale + physical properties | **ACTIVE (doc)** | [universal-style-scale-law-v1.md](universal-style-scale-law-v1.md) · FP-0002 V6 pilot normalization 2026-06-23 · **DOCUMENTED MANDATORY GATE** · **AUTOMATED ENFORCEMENT — NOT YET IMPLEMENTED** |
 
 ### WF-R01 subprograms
@@ -77,6 +77,7 @@ Phases **6–7** depend on MARS **planned-implementation** items (runtime, tools
 
 | Date | Note |
 |------|------|
+| 2026-06-24 | **Forge WordPress FW-07A:** AG-WP-001 WordPress Implementation Agent foundation — registered (`draft`), contracts, operation registry, FP-0002 pilot map; **not** runtime-active. |
 | 2026-06-23 | **FP-0002 V6 desktop stable baseline:** milestone **FP-0002 FIRST STABLE DESKTOP BASELINE** — release `FP-0002-V6-DESKTOP-STABLE-01`, tag `fp-0002-v6-desktop-stable-01`; [manifest](../../workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md). |
 | 2026-05-11 | Initial phase table for Website Factory registration |
 | 2026-05-11 | Phase **2** row reframed: **Artifact Architecture Layer v0** documented (semantic models; **not** runtime/schemas). |
