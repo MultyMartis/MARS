@@ -1,7 +1,21 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-24 (MLI-03R.1 post-reboot validation)
+**Last updated:** 2026-06-24 (V6 freeze + V7 bootstrap)
+
+## Workspace versions (2026-06-24)
+
+| Workspace | Path | Lifecycle | Tag / parent |
+|-----------|------|-----------|--------------|
+| **V6** | `workspaces/fp-0002-shpigovsky-v6/` | **FROZEN_FALLBACK** | `fp-0002-v6-final-before-v7-operator-stable-01` |
+| **V7** | `workspaces/fp-0002-shpigovsky-v7/` | **ACTIVE_DEVELOPMENT** | Parent: V6 final stable |
+
+```text
+V7 design authority: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig
+Historical Figma (Шпиговский.fig): DO NOT USE FOR NEW WORK
+Package #001: NOT STARTED
+V6/V7 bootstrap parity: PASS (source, visual, functional)
+```
 
 ## Milestone (2026-06-23)
 
@@ -44,7 +58,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | **In progress** — Home complete; **Services page REUSE_ONLY** on `uslugi.html` pending operator review |
+| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — bootstrap parity PASS with frozen V6; package #001 not started |
 | **WordPress** | **Foundation READY — POST-REBOOT VALIDATED (MLI-03R.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
@@ -101,7 +115,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 ## Next gate
 
-**Operator review** — services reuse-only page; then one-block-at-a-time implementation for hard-gate FAIL sections only with explicit charter.
+**Package #001 Phase 1** — explicit charter required; V7 is bootstrapped from frozen V6 with zero unexpected initial differences. Do not start package work without operator charter.
 
 ---
 

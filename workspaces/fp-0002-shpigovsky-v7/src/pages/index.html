@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>FP-0002 Shpigovsky v6 — Zero Skeleton</title>
+  <link rel="preload" href="assets/fonts/inter/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter/inter-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/vendor/fancybox/fancybox.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="intro-section">
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": ""})
+    @@include('partials/sections/hero.html')
+  </div>
+  <main>
+    @@include('partials/sections/home-recovery-intro.html')
+    @@include('partials/sections/home-founder-quote.html', {"modalSource": "founder-quote"})
+    @@include('partials/sections/home-treatment-prevention.html')
+    @@include('partials/sections/home-gallery.html')
+    @@include('partials/sections/home-why-us.html')
+    @@include('partials/sections/home-staff-photo.html')
+    @@include('partials/sections/home-feature-grid.html')
+    @@include('partials/sections/home-clinic-landscape.html')
+    @@include('partials/sections/home-reviews.html')
+    @@include('partials/sections/home-rehabilitation-requirements.html')
+    @@include('partials/sections/home-rehabilitation-program.html', {"programHeading": "Программа центра включает 4&nbsp;направления"})
+    @@include('partials/sections/home-genotyping.html')
+    @@include('partials/sections/home-comfort.html')
+    @@include('partials/sections/home-videos.html')
+    @@include('partials/sections/home-specialists.html')
+    @@include('partials/sections/home-articles.html')
+    @@include('partials/sections/home-faq.html')
+    @@include('partials/sections/home-final-form.html', {"leadSource": "final-section"})
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/components/modal-consultation.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
