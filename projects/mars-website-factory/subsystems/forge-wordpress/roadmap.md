@@ -23,7 +23,9 @@
 | **FW-06** | Pilot Intake (legacy label) | **SUPERSEDED** | Split into FW-06A + FW-06B |
 | **FW-07A** | AG-WP-001 WordPress Implementation Agent Foundation | **COMPLETE** | Agent contracts, registry, pilot map — **not** runtime-active |
 | **FW-07B** | AG-WP-001 Typed Operations and Tool Contract | **COMPLETE** | Machine-readable ops, bindings, validator — **not** runtime-active |
-| **FW-07C** | AG-WP-001 Local Read-Only Execution Harness | **PLANNED** | Harness for proven read-only bindings — **not started** |
+| **FW-07C** | Safety Enforcement Preflight | **COMPLETE** | [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md) — design only |
+| **FW-07C-0** | Enforcement Foundation (repo) | **AUTHORIZED** | Path validator, denylist, audit schema — **not started** |
+| **FW-07C-1** | Local Read-Only Execution Harness | **PLANNED** | fws-0001 only — after FW-07C-0 |
 | **FW-07** | First Client Implementation | **PLANNED** | FP-0002 — after FW-06B |
 | **FW-08** | WPilot Handoff Validation | **PLANNED** | Operational boundary proof on DEV/staging |
 
@@ -54,7 +56,9 @@ FW-06A.1 — COMPLETE (FP-0002 foundation closure and checkpoint)
 FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 FW-07A — COMPLETE (AG-WP-001 foundation — DOCUMENTED / REGISTERED / NOT RUNTIME-ACTIVE)
 FW-07B — COMPLETE (typed operations — DEFINED; bindings PARTIALLY BOUND; validator AVAILABLE)
-FW-07C — PLANNED (local read-only harness — not started)
+FW-07C — COMPLETE (safety preflight — 2026-06-25)
+FW-07C-0 — AUTHORIZED (enforcement foundation — not started)
+FW-07C-1 — PLANNED (local read-only harness — after FW-07C-0)
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1

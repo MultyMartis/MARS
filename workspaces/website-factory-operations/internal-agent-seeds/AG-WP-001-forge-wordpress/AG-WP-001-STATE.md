@@ -1,9 +1,9 @@
 # AG-WP-001 — Forge WordPress Readiness State
 
-**Agent ID:** AG-WP-001  
-**Canonical Name:** Forge WordPress  
-**Last updated:** 2026-06-23  
-**Charter:** Seed Foundation Only  
+**Agent ID:** AG-WP-001
+**Canonical Name:** Forge WordPress
+**Last updated:** 2026-06-25
+**Charter:** FW-07A/B foundation complete; FW-07C preflight complete
 
 ---
 
@@ -11,71 +11,52 @@
 
 | Dimension | Value |
 |-----------|-------|
-| **Status** | **SEED** (linked to subsystem **FOUNDATION / PRE-OPERATIONAL**) |
-| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — FW-05R **COMPLETE** |
-| **Cursor capability pack** | [FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) — live synthetic **PROVEN WITH LIMITATIONS** |
-| **Promotion decision** | [ELIGIBLE WITH DOCUMENTED LIMITATIONS; registry deferred](../../../../projects/mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-AG-WP-001-PROMOTION-DECISION-v1.md) |
-| **Formal registration** | **NOT PERFORMED** — requires operator charter |
-| **Operational model** | **prompt-driven operational_doc_pack** |
+| **Status** | **FOUNDATION / PRE-OPERATIONAL** (FW-07A + FW-07B **COMPLETE**) |
+| **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) |
+| **Typed operations** | **42 DEFINED** — `operations/ag-wp-001/operations-v1.json` |
+| **Runtime bindings** | **0 proven** — 11 `BOUND_NOT_IMPLEMENTED`, 31 `UNBOUND` |
+| **FW-07C preflight** | **COMPLETE** — [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md) |
+| **FW-07C-0** | **AUTHORIZED** — enforcement foundation (repo only) |
 | **Autonomous runtime** | **NONE** |
 | **Production authority** | **NONE** |
-| **Knowledge Base** | **Empty** |
-| **Production Rules** | **Not Created** |
-| **ACF Rules** | **Not Created** |
-| **Theme Rules** | **Not Created** |
-| **Learning Source** | **FP-0002** — Shpigovsky.ru (WordPress not started) |
-| **Readiness** | **Learning Phase** |
+| **Formal registry promotion** | **NOT PERFORMED** — requires operator charter |
+| **Operational model** | **prompt-driven operational_doc_pack** + future typed harness |
 
 ---
 
-## FW-05R checkpoint status (2026-06-23)
+## FW-07 checkpoint status (2026-06-25)
 
 ```text
 AG-WP-001:
-ELIGIBLE WITH DOCUMENTED LIMITATIONS
+BRAIN PRESERVED — FW-07A/B COMPLETE
+RUNTIME INACTIVE — FW-07C harness NOT BUILT
+FW-07C PREFLIGHT: COMPLETE
+NEXT: FW-07C-0 enforcement foundation (repo only)
 
-Operational model:
-prompt-driven operational_doc_pack
-
-Formal registration:
-REQUIRES OPERATOR CHARTER
-
-Autonomous runtime:
-NONE
-
-Production authority:
-NONE
+Autonomous runtime: NONE
+Production authority: NONE
+Filesystem enforcement: DOCUMENTED_ONLY (until FW-07C-0)
 ```
 
-**Not registered in `agents/registry.md`.** Do not use term «autonomous WordPress agent».
-
----
-
-## Readiness interpretation
-
-| Label | Meaning |
-|-------|---------|
-| **SEED** | Identity, boundaries, and learning discipline exist; **no** operational agent pack |
-| **Learning Phase** | Allowed: observe real projects, capture to KNOWLEDGE-EXTRACTION containers |
-| **Empty knowledge** | By design — not a gap to fill with speculation |
+**Not registered in `agents/registry.md`.** Do not claim autonomous WordPress agent.
 
 ---
 
 ## What «ready» does NOT mean
 
 - Not ready for autonomous WordPress production
-- Not ready for registry promotion without charter
-- Not ready for client-facing «agent» claims
-- Not ready for rule enforcement
+- Not ready for unguarded filesystem writes
+- Not ready for client-facing «agent» claims without harness evidence
+- Not ready for shpigovsky pilot harness (fws-0001 synthetic first)
 
 ---
 
 ## Related
 
 - [AG-WP-001-FORGE-WORDPRESS-SEED.md](AG-WP-001-FORGE-WORDPRESS-SEED.md)
-- [AG-WP-001-LEARNING-PROTOCOL.md](AG-WP-001-LEARNING-PROTOCOL.md)
-- [FP-0002 PROJECT-STATUS.md](../../FP-0002-SHPIGOVSKY/PROJECT-STATUS.md)
+- [FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md)
+- [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md)
 
 ---
 
-*State document only. Human-maintained. Not telemetry.*
+*AG-WP-001 state — reconciled with FW-07C preflight 2026-06-25.*

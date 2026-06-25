@@ -21,7 +21,9 @@ FW-06A.1 — COMPLETE (FP-0002 foundation closure)
 FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 FW-07A — COMPLETE (AG-WP-001 foundation)
 FW-07B — COMPLETE (AG-WP-001 typed operations)
-FW-07C — Local Read-Only Harness — PLANNED
+FW-07C — Safety Preflight — COMPLETE (2026-06-25)
+FW-07C-0 — Enforcement Foundation — AUTHORIZED (not started)
+FW-07C-1 — Local Read-Only Harness — PLANNED (after FW-07C-0)
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
 Standards: BASELINE v1
