@@ -222,9 +222,17 @@
 			loop: false,
 			autoplay: false,
 			navigation: false,
-			pagination: false,
 			watchOverflow: true,
 			grabCursor: true,
+			pagination: (function () {
+				var pagination = slider.querySelector('[data-gallery-pagination]');
+				return pagination
+					? {
+						el: pagination,
+						clickable: true,
+					}
+					: false;
+			})(),
 			breakpoints: {
 				320: {
 					slidesPerView: 2.15,
@@ -319,13 +327,20 @@
 			return;
 		}
 
+		var pagination = slider.querySelector('[data-specialists-pagination]');
+
 		new window.Swiper(slider, {
 			slidesPerView: 3.5,
 			spaceBetween: 30,
 			loop: false,
 			autoplay: false,
 			navigation: false,
-			pagination: false,
+			pagination: pagination
+				? {
+					el: pagination,
+					clickable: true,
+				}
+				: false,
 			watchOverflow: true,
 			grabCursor: true,
 			breakpoints: {
@@ -373,6 +388,58 @@
 					left: ['infobar'],
 					middle: [],
 					right: ['close'],
+				},
+			},
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 v7 — home videos fancybox (Package #002)
+(function initHomeVideosFancybox() {
+	'use strict';
+
+	function pauseVideos(container) {
+		if (!container) {
+			return;
+		}
+
+		container.querySelectorAll('video').forEach(function (video) {
+			video.pause();
+			video.currentTime = 0;
+		});
+	}
+
+	function boot() {
+		var fancybox = window.Fancybox;
+
+		if (typeof fancybox !== 'function') {
+			return;
+		}
+
+		fancybox.bind('[data-fancybox="home-videos"]', {
+			groupAll: false,
+			Html: {
+				video: {
+					autoplay: true,
+					controls: true,
+				},
+			},
+			Toolbar: {
+				display: {
+					left: ['infobar'],
+					middle: [],
+					right: ['close'],
+				},
+			},
+			on: {
+				destroy: function (fancyboxInstance) {
+					pauseVideos(fancyboxInstance.container);
 				},
 			},
 		});
