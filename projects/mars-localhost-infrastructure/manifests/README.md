@@ -1,6 +1,6 @@
 # MLI Runtime Manifests
 
-**Location:** `C:\AI MARS\projects\mars-localhost-infrastructure\manifests\`  
+**Location:** `C:\MARS Phenix\AI MARS\projects\mars-localhost-infrastructure\manifests\`
 **Contract:** [MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md](../MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md)
 
 ---

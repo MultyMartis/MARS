@@ -29,7 +29,7 @@ projects/mig/search-ppc-evidence/
 
 ## Storage boundary
 
-Large/raw evidence → `C:\AI MARS STORAGE` or `incoming/mig/` per project session. Git holds contracts, schemas, manifests, checksums, sanitized fixtures only.
+Large/raw evidence → `C:\MARS Phenix\AI MARS STORAGE` or `incoming/mig/` per project session. Git holds contracts, schemas, manifests, checksums, sanitized fixtures only.
 
 ## CLI (gated)
 

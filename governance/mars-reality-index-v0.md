@@ -226,7 +226,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **conceptual** | Shared localhost foundation — brain on `C:\AI MARS`, execution on `D:\MARS-Localhost`. |
+| **conceptual** | Shared localhost foundation — brain on `C:\MARS Phenix\AI MARS`, execution on `E:\MARS-Localhost`. |
 | **external** | D: runtime tree is out-of-git; Laragon install is operator machine state. |
 | **documentation-only** | MLI-03 **COMPLETE** — WordPress synthetic MLI-WP-SYN-001; OpenCart profile **NEXT** (MLI-04). |
 

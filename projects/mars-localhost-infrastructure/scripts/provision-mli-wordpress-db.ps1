@@ -10,7 +10,7 @@
 .PARAMETER AdminUser
     MySQL administrative user (default root).
 .EXAMPLE
-    .\provision-mli-wordpress-db.ps1 -RuntimeEnv 'C:\AI MARS\local\mli\fp-0002\runtime.env'
+    .\provision-mli-wordpress-db.ps1 -RuntimeEnv 'C:\MARS Phenix\AI MARS\local\mli\fp-0002\runtime.env'
 #>
 [CmdletBinding()]
 param(
@@ -20,7 +20,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$Mysql = 'D:\MARS-Localhost\laragon\bin\mysql\mysql-8.4.3-winx64\bin\mysql.exe'
+$Mysql = 'E:\MARS-Localhost\laragon\bin\mysql\mysql-8.4.3-winx64\bin\mysql.exe'
 
 function Get-EnvValue([string]$Path, [string]$Key) {
     foreach ($line in Get-Content -LiteralPath $Path) {

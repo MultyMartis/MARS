@@ -37,8 +37,8 @@ Operator token storage for WPilot REST auth is local-only under the MARS workspa
 
 | Field | Value |
 |-------|-------|
-| **Storage root** | `C:\AI MARS\local\tokens\` |
-| **DEV token file** | `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
+| **Storage root** | `C:\MARS Phenix\AI MARS\local\tokens\` |
+| **DEV token file** | `C:\MARS Phenix\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
 | **Auth header** | `X-WPilot-Token` |
 | **DEV site** | `https://dev.gktriumph.ru` |
 
@@ -179,7 +179,7 @@ WPBakery/The7 handling belongs to Mode B compatibility. It is valuable for the c
 - [beget-test-plan.md](beget-test-plan.md) - Beget-hosted test-site run plan.
 - [backup-rollback-rules.md](backup-rollback-rules.md) - backup confirmation and rollback discipline.
 - [access-safety.md](access-safety.md) - credential and access handling rules.
-- [local-storage-policy.md](local-storage-policy.md) - local-only `C:\AI MARS\backups\` and `C:\AI MARS\local\` policy, token handoff workflow, rollback snapshot storage, and no-secret-in-git rules.
+- [local-storage-policy.md](local-storage-policy.md) - local-only `C:\MARS Phenix\AI MARS\backups\` and `C:\MARS Phenix\AI MARS\local\` policy, token handoff workflow, rollback snapshot storage, and no-secret-in-git rules.
 - [qa-checklist.md](qa-checklist.md) - Phase 1 QA gates.
 - [reports/test-report-template.md](reports/test-report-template.md) - operator report template.
 - [templates/site-passport-template.md](templates/site-passport-template.md) - sanitized site facts template.
@@ -199,7 +199,7 @@ The plugin MVP planning pack is documentation only. It does not prove a WordPres
 - No secrets in repo.
 - No credentials, passwords, tokens, cookies, SSH keys, API keys, or hosting panel secrets.
 - No `wp-config.php` copies or database dumps.
-- No committed `C:\AI MARS\local\` or `C:\AI MARS\backups\` contents; those folders are local-only operational support if created on an operator machine.
+- No committed `C:\MARS Phenix\AI MARS\local\` or `C:\MARS Phenix\AI MARS\backups\` contents; those folders are local-only operational support if created on an operator machine.
 - No destructive SQL.
 - No live production changes in MVP.
 - No plugin or theme updates in MVP.

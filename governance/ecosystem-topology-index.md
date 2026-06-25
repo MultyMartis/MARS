@@ -98,11 +98,11 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `D:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
+| **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `E:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
 | **What it is NOT** | MARS brain, Git authority, governance root, production hosting, second MARS repo, registered agent, or proof that Laragon is installed. |
 | **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. |
-| **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `D:\MARS-Localhost` (out-of-git). |
-| **Relationship role** | **`C:\AI MARS` governs; `D:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
+| **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `E:\MARS-Localhost` (out-of-git). |
+| **Relationship role** | **`C:\MARS Phenix\AI MARS` governs; `E:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
 
 ---
 
@@ -186,7 +186,7 @@ AGENTS.md (honesty)
 | **What it is NOT** | Autonomous WP admin, MARS runtime, deploy bot, production bridge, active MVP development target, or Sprint 3 authorization from RC5 freeze alone. |
 | **Operational status** | **Reference Implementation** — `proven_content_writes` + `proven_connection_runtime` on DEV (`https://dev.gktriumph.ru`); human-supervised only. Authority: `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`; commit `648632acbdd42703427fd76a0cb1fd8d88641dcc`. RC5 development focus **closed**. Sprint 3 **HOLD**. |
 | **Canonical path** | [../projects/wpilot/WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md); [../projects/wpilot/OPERATIONAL-INDEX.md](../projects/wpilot/OPERATIONAL-INDEX.md); [../projects/wpilot/README.md](../projects/wpilot/README.md); registry `wpilot`; RC5 [../projects/wpilot/WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](../projects/wpilot/WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md). |
-| **Relationship role** | **Reference runtime** and **validation source** for CMS Pilot family; **future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. Token storage: `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` (local-only; no value in repo). |
+| **Relationship role** | **Reference runtime** and **validation source** for CMS Pilot family; **future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. Token storage: `C:\MARS Phenix\AI MARS\local\tokens\wpilot-dev-gktriumph.token` (local-only; no value in repo). |
 
 ---
 

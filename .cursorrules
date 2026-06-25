@@ -16,7 +16,7 @@ Phase 1: Web-GPT documentation pack; **no shipped runtime in-repo** unless sourc
 - If a fact is not provable from repo or attached sources, answer with **SAFE UNKNOWN** (state what is unknown and what would verify it).
 
 ## Edits and filesystem
-- **Work only** under `C:\AI MARS` for this project’s filesystem changes.
+- **Work only** under `C:\MARS Phenix\AI MARS` for this project’s filesystem changes.
 - **Do not** delete or move files unless the user **explicitly** instructs.
 - **Do not** hand-edit **generated** or **build** outputs (e.g. `node_modules/`, `dist/`, `build/`, `out/`, compiled caches); change sources or regen if applicable.
 

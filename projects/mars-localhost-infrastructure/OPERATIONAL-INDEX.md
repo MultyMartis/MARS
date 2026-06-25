@@ -14,15 +14,15 @@
 | **Canonical name** | MARS Localhost Infrastructure (MLI) |
 | **Class** | Shared **universal** local development infrastructure — WordPress, OpenCart, PHP smoke sites, synthetic validation; **not** WordPress-only |
 | **Production authority** | **NONE** — local operator-controlled execution only |
-| **Brain root (governance)** | `C:\AI MARS` |
-| **Runtime root (execution)** | `D:\MARS-Localhost` |
-| **Bulk support** | `C:\AI MARS STORAGE` — optional archives; **not** live runtime root |
+| **Brain root (governance)** | `C:\MARS Phenix\AI MARS` |
+| **Runtime root (execution)** | `E:\MARS-Localhost` |
+| **Bulk support** | `C:\MARS Phenix\AI MARS STORAGE` — optional archives; **not** live runtime root |
 
 **Mandatory formulation** ([MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md](MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md)):
 
 ```text
-C:\AI MARS governs.
-D:\MARS-Localhost executes.
+C:\MARS Phenix\AI MARS governs.
+E:\MARS-Localhost executes.
 ```
 
 MLI is an **execution environment**. It is **not** the MARS brain, governance source, project registry, or Git authority.
@@ -47,13 +47,13 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 
 | Zone | Path | Role |
 |------|------|------|
-| **Brain** | `C:\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
-| **Runtime** | `D:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
-| **Laragon** | `D:\MARS-Localhost\laragon` (v8.6.1) | Service control — Laragon-generated `my.ini` is **active config authority** |
+| **Brain** | `C:\MARS Phenix\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
+| **Runtime** | `E:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
+| **Laragon** | `E:\MARS-Localhost\laragon` (v8.6.1) | Service control — Laragon-generated `my.ini` is **active config authority** |
 | **Canonical historical datadir** | `mysql-8.4.3` under Laragon data | Wrong-datadir incident remediated — see MLI-03R.1 |
-| **Recovery script** | `D:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Datadir recovery (D: path — historical; no global D:→E: rewrite in docs) |
+| **Recovery script** | `E:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Datadir recovery — active path on E:; historical D: references preserved in MLI-03R.* reports |
 
-**Drive-letter note:** Historical paths remain as recorded. Physical path reconciliation (e.g. D: vs E:) is a **deferred** separate task.
+**Drive-letter note:** Historical `D:\MARS-Localhost` paths remain in MLI-03R.* incident evidence. Active operator runtime root confirmed on **`E:\MARS-Localhost`** (2026-06-25 post-cutover reconciliation).
 
 ---
 

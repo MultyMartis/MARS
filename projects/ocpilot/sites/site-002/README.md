@@ -125,13 +125,13 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 | Run 5 gate | **NO** — access brief incomplete; intake not closed |
 
 Template: [templates/project-access-brief-template.md](../../templates/project-access-brief-template.md).  
-External credentials (when supplied): `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\` — not git-tracked.
+External credentials (when supplied): `C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\` — not git-tracked.
 
 ---
 
 ## External bulk storage
 
-`C:\AI MARS STORAGE\ocpilot\project-sites\site-002\`
+`C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\site-002\`
 
 Metadata stays in this repo tree; large archives stay external.
 

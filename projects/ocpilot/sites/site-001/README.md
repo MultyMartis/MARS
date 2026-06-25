@@ -55,13 +55,13 @@ First registered OCPilot project site workspace. Operator materials accepted —
 | Run 5 gate | **NO** — access brief incomplete; EAR snapshot path not executed |
 
 Template: [templates/project-access-brief-template.md](../../templates/project-access-brief-template.md).  
-External credentials (if any): `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\` — not git-tracked.
+External credentials (if any): `C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\` — not git-tracked.
 
 ---
 
 ## External bulk storage
 
-`C:\AI MARS STORAGE\ocpilot\project-sites\site-001\`
+`C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\site-001\`
 
 Metadata stays in this repo tree; large archives stay external.
 

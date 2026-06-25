@@ -44,7 +44,7 @@
 
 | 3.6 | **Baseline Storage Review** | **DONE** | [storage-audit-run-3.6.md](storage-audit-run-3.6.md), [storage-strategy-options.md](storage-strategy-options.md), [recommended-storage-model.md](recommended-storage-model.md), [git-storage-policy.md](git-storage-policy.md), [knowledge/knowledge-storage-principles.md](knowledge/knowledge-storage-principles.md) |
 
-| 3.7 | **External Storage Architecture** | **DONE** | [external-storage-registry.md](external-storage-registry.md), [baseline-storage-migration-plan.md](baseline-storage-migration-plan.md), [mars-storage-family-note.md](mars-storage-family-note.md) — root `C:\AI MARS STORAGE` |
+| 3.7 | **External Storage Architecture** | **DONE** | [external-storage-registry.md](external-storage-registry.md), [baseline-storage-migration-plan.md](baseline-storage-migration-plan.md), [mars-storage-family-note.md](mars-storage-family-note.md) — root `C:\MARS Phenix\AI MARS STORAGE` |
 
 | 4 | **First Project Site Intake** | **DONE** | [project-site-registry.md](project-site-registry.md), [sites/site-001/](sites/site-001/site-passport.md), [site-passport-standard.md](site-passport-standard.md), [baseline-match-workflow.md](baseline-match-workflow.md), [intake-readiness-review.md](intake-readiness-review.md) |
 
@@ -562,7 +562,7 @@
 
 **Knowledge layer:** [knowledge/](knowledge/README.md) — skeleton + [knowledge-storage-principles.md](knowledge/knowledge-storage-principles.md) (Run 3.6).
 
-**Storage policy (canonical):** [recommended-storage-model.md](recommended-storage-model.md) — Option D; approved external root `C:\AI MARS STORAGE` ([external-storage-registry.md](external-storage-registry.md)); local promoted cache gitignored; grandfathered Run 3.5 trees unchanged.
+**Storage policy (canonical):** [recommended-storage-model.md](recommended-storage-model.md) — Option D; approved external root `C:\MARS Phenix\AI MARS STORAGE` ([external-storage-registry.md](external-storage-registry.md)); local promoted cache gitignored; grandfathered Run 3.5 trees unchanged.
 
 **Priority first baselines:** `baselines/ocstore-3038-rs2/` and `baselines/ocstore-3039-rs1/` — **READY** for file-level comparison after Run 3.5 promotion ([run-3.5-readiness-recheck.md](run-3.5-readiness-recheck.md)). Canonical ZIPs remain in repo `incoming/baselines/` until migration ([baseline-storage-migration-plan.md](baseline-storage-migration-plan.md)).
 
@@ -805,7 +805,7 @@
 - [project-site-registry.md](project-site-registry.md) — SITE-001 registered (Run 4 container; intake completed Run 4.99)
 - [sites/site-001/](sites/site-001/) — full template structure + [site-passport.md](sites/site-001/site-passport.md) + [project-access-brief.md](sites/site-001/project-access-brief.md) (stub; **required before Run 5**)
 - [templates/project-access-brief-template.md](templates/project-access-brief-template.md) — standard access brief for project sites
-- External bulk root: `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\` (materials, audits, snapshots, backups, reports, temp; `secrets/` for credentials outside git)
+- External bulk root: `C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\site-001\` (materials, audits, snapshots, backups, reports, temp; `secrets/` for credentials outside git)
 - [site-passport-standard.md](site-passport-standard.md) — mandatory passport fields
 - [baseline-match-workflow.md](baseline-match-workflow.md) — 3038-rs2 vs 3039-rs1 selection workflow
 - [intake-readiness-review.md](intake-readiness-review.md) — Run 5 gate; SITE-001 **NO** at end of Run 4
@@ -960,7 +960,7 @@ Incoming Material  must pass intake
 5. [baseline-acquisition-strategy.md](baseline-acquisition-strategy.md) — как baseline packages входят в систему  
 
 6. [baselines/storage-policy.md](baselines/storage-policy.md) — ZIP vs extract vs metadata  
-6b. [external-storage-registry.md](external-storage-registry.md) — external bulk root `C:\AI MARS STORAGE`  
+6b. [external-storage-registry.md](external-storage-registry.md) — external bulk root `C:\MARS Phenix\AI MARS STORAGE`
 
 7. [archive-intake-rules.md](archive-intake-rules.md) — Archive / Package / OpenCart Root  
 

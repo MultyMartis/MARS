@@ -10,10 +10,10 @@ This directory is the **main local working copy** of the MARS project: design no
 
 | Layer | Path | Role |
 |-------|------|------|
-| **Workspace root** | `C:\AI MARS` | This git repository — governance, projects, workspaces, docs. |
-| **Bulk storage** | `C:\AI MARS STORAGE` | Out-of-git bulk (baselines, archives, snapshots). **Not** a second repo or MARS instance. |
+| **Workspace root** | `C:\MARS Phenix\AI MARS` | This git repository — governance, projects, workspaces, docs. |
+| **Bulk storage** | `C:\MARS Phenix\AI MARS STORAGE` | Out-of-git bulk (baselines, archives, snapshots). **Not** a second repo or MARS instance. |
 
-Canonical reference: [`governance/mars-infrastructure-reality-v1.md`](governance/mars-infrastructure-reality-v1.md). In-repo [`storage/`](storage/) is **documentation** for the architecture Storage Layer — not the physical `C:\AI MARS STORAGE` path.
+Canonical reference: [`governance/mars-infrastructure-reality-v1.md`](governance/mars-infrastructure-reality-v1.md). In-repo [`storage/`](storage/) is **documentation** for the architecture Storage Layer — not the physical `C:\MARS Phenix\AI MARS STORAGE` path.
 
 ## What this repository contains (by status)
 

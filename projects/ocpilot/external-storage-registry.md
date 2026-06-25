@@ -9,12 +9,12 @@
 
 | Scope | Path |
 |-------|------|
-| **MARS bulk root** | `C:\AI MARS STORAGE` |
-| **OCPilot bulk root** | `C:\AI MARS STORAGE\ocpilot\` |
+| **MARS bulk root** | `C:\MARS Phenix\AI MARS STORAGE` |
+| **OCPilot bulk root** | `C:\MARS Phenix\AI MARS STORAGE\ocpilot\` |
 
 External storage is **not** a git repository by default. The MARS repo at `C:\AI MARS` holds metadata; this registry describes where bulk lives.
 
-**On-disk READMEs:** each external folder has an operator-facing README under `C:\AI MARS STORAGE\`.
+**On-disk READMEs:** each external folder has an operator-facing README under `C:\MARS Phenix\AI MARS STORAGE\`.
 
 ---
 
@@ -22,11 +22,11 @@ External storage is **not** a git repository by default. The MARS repo at `C:\AI
 
 | Subfolder | Full path |
 |-----------|-----------|
-| `baselines\` | `C:\AI MARS STORAGE\ocpilot\baselines\` |
-| `incoming\` | `C:\AI MARS STORAGE\ocpilot\incoming\` |
-| `project-sites\` | `C:\AI MARS STORAGE\ocpilot\project-sites\` |
-| `backups\` | `C:\AI MARS STORAGE\ocpilot\backups\` |
-| `temp\` | `C:\AI MARS STORAGE\ocpilot\temp\` |
+| `baselines\` | `C:\MARS Phenix\AI MARS STORAGE\ocpilot\baselines\` |
+| `incoming\` | `C:\MARS Phenix\AI MARS STORAGE\ocpilot\incoming\` |
+| `project-sites\` | `C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\` |
+| `backups\` | `C:\MARS Phenix\AI MARS STORAGE\ocpilot\backups\` |
+| `temp\` | `C:\MARS Phenix\AI MARS STORAGE\ocpilot\temp\` |
 
 ---
 
@@ -126,7 +126,7 @@ External storage is **not** a git repository by default. The MARS repo at `C:\AI
 2. **Manifests** — path counts and structure evidence; not a duplicate of every external file.
 3. **This registry** — folder contract and allow/deny rules.
 4. **Recommended model** — [recommended-storage-model.md](recommended-storage-model.md) Option D.
-5. **External READMEs** — operator orientation at `C:\AI MARS STORAGE\ocpilot\`.
+5. **External READMEs** — operator orientation at `C:\MARS Phenix\AI MARS STORAGE\ocpilot\`.
 
 No automated path resolver or sync engine is claimed in Run 3.7.
 
