@@ -1,4 +1,4 @@
-# MARS Localhost — Vhost Provisioning Standard v1
+﻿# MARS Localhost — Vhost Provisioning Standard v1
 
 **Document type:** Vhost provisioning procedure  
 **Version:** v1  
@@ -29,13 +29,13 @@ site directory
 Create under:
 
 ```text
-D:\MARS-Localhost\sites\{platform}\{class}\{slug}\
+E:\MARS-Localhost\sites\{platform}\{class}\{slug}\
 ```
 
 ### 2. Junction (when using Laragon www layer)
 
 ```text
-D:\MARS-Localhost\laragon\www\{slug}  →  physical site root
+E:\MARS-Localhost\laragon\www\{slug}  →  physical site root
 ```
 
 ### 3. Apache vhost
@@ -43,7 +43,7 @@ D:\MARS-Localhost\laragon\www\{slug}  →  physical site root
 Add to:
 
 ```text
-D:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test.conf
+E:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test.conf
 ```
 
 HTTP baseline required; HTTPS optional per [MARS-LOCALHOST-LOCAL-CERTIFICATE-STANDARD-v1.md](MARS-LOCALHOST-LOCAL-CERTIFICATE-STANDARD-v1.md).

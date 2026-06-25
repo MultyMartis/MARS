@@ -1,4 +1,4 @@
-# MARS Localhost — Laragon Vhost Model v1
+﻿# MARS Localhost — Laragon Vhost Model v1
 
 **Document type:** Domain and vhost model  
 **Version:** v1  
@@ -11,7 +11,7 @@
 
 ```text
 Local domain:  {slug}.test
-Physical path: D:\MARS-Localhost\sites\{platform}\{class}\{slug}\
+Physical path: E:\MARS-Localhost\sites\{platform}\{class}\{slug}\
 ```
 
 **Forbidden default:** `wordpress.synthetic.fws-0001.test` (nested category in hostname)
@@ -64,7 +64,7 @@ Domain:   fws-0001.test
 |------|--------|
 | Laragon auto-SSL | Available in Laragon UI — **not verified end-to-end in MLI-01** |
 | MLI baseline | **HTTP** for smoke |
-| Certificate storage (target) | `D:\MARS-Localhost\certificates\` |
+| Certificate storage (target) | `E:\MARS-Localhost\certificates\` |
 | Follow-up | **MLI-02** certificate hardening |
 
 ---
@@ -72,7 +72,7 @@ Domain:   fws-0001.test
 ## Certificate location (when enabled)
 
 ```text
-D:\MARS-Localhost\certificates\   # MLI target store
+E:\MARS-Localhost\certificates\   # MLI target store
 Laragon-managed certs              # under Laragon SSL tooling (operator UI)
 ```
 

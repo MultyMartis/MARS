@@ -1,4 +1,4 @@
-# FP-0002 — WordPress Baseline Configuration v1
+﻿# FP-0002 — WordPress Baseline Configuration v1
 
 **Version:** v1 | **Date:** 2026-06-23 | **Runtime:** MLI-WP-FP0002-LOCAL
 
@@ -12,7 +12,7 @@
 | `WP_DEBUG_DISPLAY` | `false` |
 | `SCRIPT_DEBUG` | `true` |
 | `DISALLOW_FILE_EDIT` | `true` |
-| `WP_DEBUG_LOG_FILE` | `D:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/debug.log` |
+| `WP_DEBUG_LOG_FILE` | `E:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/debug.log` |
 
 ## Site options
 

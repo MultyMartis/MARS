@@ -1,4 +1,4 @@
-# MARS Localhost — Database Provisioning Standard v1
+﻿# MARS Localhost — Database Provisioning Standard v1
 
 **Document type:** MySQL database and application-user provisioning standard  
 **Version:** v1  
@@ -19,8 +19,8 @@ Canonical rules for creating MLI WordPress (and future consumer) databases and l
 |-------|----------|
 | Naming | [MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md) |
 | Credentials | [MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md](MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md) |
-| Active MySQL config | `D:\MARS-Localhost\laragon\bin\mysql\mysql-8.4.3-winx64\my.ini` (**authoritative** for `mysqld`) |
-| MLI mirror copy | `D:\MARS-Localhost\laragon\data\my.ini` (operator reference; must stay in sync) |
+| Active MySQL config | `E:\MARS-Localhost\laragon\bin\mysql\mysql-8.4.3-winx64\my.ini` (**authoritative** for `mysqld`) |
+| MLI mirror copy | `E:\MARS-Localhost\laragon\data\my.ini` (operator reference; must stay in sync) |
 | Provisioning helper | [scripts/provision-mli-wordpress-db.ps1](scripts/provision-mli-wordpress-db.ps1) |
 
 ---
@@ -29,7 +29,7 @@ Canonical rules for creating MLI WordPress (and future consumer) databases and l
 
 | Setting | Required value | Notes |
 |---------|----------------|-------|
-| `datadir` | `D:/MARS-Localhost/laragon/data/mysql-8.4.3` | MLI WordPress data lives here |
+| `datadir` | `E:/MARS-Localhost/laragon/data/mysql-8.4.3` | MLI WordPress data lives here |
 | `bind-address` | `127.0.0.1` | Classic protocol loopback only |
 | `mysqlx` | `0` | X Protocol disabled |
 | `mysql_native_password` | **Must remain DISABLED** | Do not enable plugin or use for new accounts |
@@ -43,7 +43,7 @@ Canonical rules for creating MLI WordPress (and future consumer) databases and l
 | User template | `laragon\usr\tpl\MySQL.my.ini.tpl` | Canonical `datadir`, `bind-address`, `mysqlx=0` for Laragon merge |
 | Authoritative runtime | `laragon\bin\mysql\mysql-8.4.3-winx64\my.ini` | Loaded by `mysqld`; **ReadOnly** to block generator overwrite |
 | Operator mirror | `laragon\data\my.ini` | Reference copy; must stay in sync |
-| Recovery | `D:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Audit; `-Apply` after MySQL stop |
+| Recovery | `E:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Audit; `-Apply` after MySQL stop |
 
 Report: [MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md)
 

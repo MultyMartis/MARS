@@ -1,4 +1,4 @@
-# MARS Localhost — Laragon Placement Decision v1
+﻿# MARS Localhost — Laragon Placement Decision v1
 
 **Document type:** Architecture decision record  
 **Version:** v1.1  
@@ -13,9 +13,9 @@
 | Item | Value |
 |------|-------|
 | **Stack** | Laragon 8.6.1 as shared Windows local web runtime |
-| **Install path (canonical)** | `D:\MARS-Localhost\laragon` |
-| **Previous MLI-00 preferred path** | `D:\MARS-Localhost\runtime\laragon` — **superseded** |
-| **Physical sites** | `D:\MARS-Localhost\sites` |
+| **Install path (canonical)** | `E:\MARS-Localhost\laragon` |
+| **Previous MLI-00 preferred path** | `E:\MARS-Localhost\runtime\laragon` — **superseded** |
+| **Physical sites** | `E:\MARS-Localhost\sites` |
 | **Document root model** | Junction registry + explicit vhosts — see [MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md](MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md) |
 | **Install status** | **COMPLETE** (MLI-01) |
 
@@ -38,16 +38,16 @@
 
 | Component | Path |
 |-----------|------|
-| Laragon binaries | `D:\MARS-Localhost\laragon\` |
+| Laragon binaries | `E:\MARS-Localhost\laragon\` |
 | PHP binaries | `laragon\bin\php\php-8.3.30-Win32-vs16-x64\` |
 | MySQL data | `laragon\data\mysql-8.4.3\` |
 | Web server config | `laragon\etc\apache2\`, `laragon\bin\apache\` |
-| Composer (shared) | `D:\MARS-Localhost\tools\composer\` |
-| WP-CLI | `D:\MARS-Localhost\tools\wp-cli\` |
-| PHPCS / WPCS | `D:\MARS-Localhost\tools\phpcs\` |
-| Local certificates (target) | `D:\MARS-Localhost\certificates\` |
-| Logs (target) | `D:\MARS-Localhost\logs\` |
-| Temp | `D:\MARS-Localhost\temp\` |
+| Composer (shared) | `E:\MARS-Localhost\tools\composer\` |
+| WP-CLI | `E:\MARS-Localhost\tools\wp-cli\` |
+| PHPCS / WPCS | `E:\MARS-Localhost\tools\phpcs\` |
+| Local certificates (target) | `E:\MARS-Localhost\certificates\` |
+| Logs (target) | `E:\MARS-Localhost\logs\` |
+| Temp | `E:\MARS-Localhost\temp\` |
 
 ---
 

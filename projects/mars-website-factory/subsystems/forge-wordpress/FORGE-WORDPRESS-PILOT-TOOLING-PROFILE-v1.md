@@ -1,4 +1,4 @@
-# Forge WordPress — Pilot Tooling Profile v1
+﻿# Forge WordPress — Pilot Tooling Profile v1
 
 **Document type:** Minimum tooling profile for first pilot  
 **Version:** v1  
@@ -27,7 +27,7 @@
 
 | Item | Specification |
 |------|---------------|
-| Profile | Laragon via MARS Localhost Infrastructure (`D:\MARS-Localhost`) |
+| Profile | Laragon via MARS Localhost Infrastructure (`E:\MARS-Localhost`) |
 | OS | Windows 10+ |
 | Isolation | One site per pilot under `sites\wordpress\projects\` or `synthetic\` |
 | Secrets | `C:\AI MARS\local\` only |

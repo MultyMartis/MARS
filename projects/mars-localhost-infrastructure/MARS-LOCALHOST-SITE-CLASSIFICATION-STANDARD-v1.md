@@ -1,4 +1,4 @@
-# MARS Localhost — Site Classification Standard v1
+﻿# MARS Localhost — Site Classification Standard v1
 
 **Document type:** Site class standard  
 **Version:** v1  
@@ -9,7 +9,7 @@
 
 ## Purpose
 
-Classify every site under `D:\MARS-Localhost\sites\` so consumers, backups, retention, and manifests behave consistently.
+Classify every site under `E:\MARS-Localhost\sites\` so consumers, backups, retention, and manifests behave consistently.
 
 ---
 

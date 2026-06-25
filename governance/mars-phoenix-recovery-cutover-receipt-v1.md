@@ -52,8 +52,8 @@ Historical documentation may still cite `C:\AI MARS` or `D:\MARS-Localhost` wher
 | Track | Status |
 |-------|--------|
 | **Repository / storage operational paths** | **completed** in post-cutover commit (`recovery: establish Phoenix canonical paths`) |
-| **Runtime drive-letter reconciliation** | **partial** — active operational references updated where filesystem confirms `E:\MARS-Localhost`; historical `D:\MARS-Localhost` preserved in reports and incident evidence |
-| **Branch integration** | **pending** — separate operator decision; recovery branch remains canonical recovery line |
+| **Runtime drive-letter reconciliation** | **completed** (2026-06-25 pass 2) — active MLI registries, standards, manifests, and operational authority docs use `E:\MARS-Localhost`; historical `D:\MARS-Localhost` preserved in MLI-03R.* reports and governance historical rows |
+| **Branch integration** | **decision documented** — see [mars-phoenix-branch-integration-decision-v1.md](mars-phoenix-branch-integration-decision-v1.md); merge **not executed**; recovery branch remains canonical working line until permanent branch charter |
 
 ---
 

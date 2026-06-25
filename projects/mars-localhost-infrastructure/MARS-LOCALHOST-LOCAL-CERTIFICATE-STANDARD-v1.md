@@ -1,4 +1,4 @@
-# MARS Localhost — Local Certificate Standard v1
+﻿# MARS Localhost — Local Certificate Standard v1
 
 **Document type:** Local TLS certificate standard  
 **Version:** v1  
@@ -16,7 +16,7 @@ Local development certificates for `.test` vhosts on D: only. **Production certi
 ## Storage (runtime, outside Git)
 
 ```text
-D:\MARS-Localhost\laragon\etc\ssl\
+E:\MARS-Localhost\laragon\etc\ssl\
   {domain}.crt
   {domain}.key
 ```
@@ -30,7 +30,7 @@ Private keys **must not** be committed to `C:\AI MARS`.
 Script:
 
 ```text
-D:\MARS-Localhost\tools\ssl\generate-mli-smoke-cert.cmd
+E:\MARS-Localhost\tools\ssl\generate-mli-smoke-cert.cmd
 ```
 
 Uses Laragon-bundled OpenSSL with `OPENSSL_CONF` pointing at Laragon Apache `openssl.cnf`.

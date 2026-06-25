@@ -1,4 +1,4 @@
-# MARS Localhost Infrastructure — Roadmap
+﻿# MARS Localhost Infrastructure — Roadmap
 
 **Program:** MARS Localhost Infrastructure (MLI)  
 **Version:** v1.3  
@@ -28,7 +28,7 @@ MLI-01 — COMPLETE
 MLI-02 — COMPLETE
 MLI-03 — COMPLETE
 MLI-04 — NEXT (OpenCart lane; not blocking Forge FW-05R)
-Laragon: ENABLED at D:\MARS-Localhost\laragon
+Laragon: ENABLED at E:\MARS-Localhost\laragon
 Shared toolchain: HARDENED
 WordPress profile: PROVEN WITH LIMITATIONS (MLI-WP-SYN-001)
 OpenCart profile proven on Laragon: NO (MLI-04)

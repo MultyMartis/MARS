@@ -1,4 +1,4 @@
-# MARS Localhost — CLI Environment Standard v1
+﻿# MARS Localhost — CLI Environment Standard v1
 
 **Document type:** CLI environment standard  
 **Version:** v1  
@@ -18,7 +18,7 @@ Use **session-local activation** for Cursor terminals and operator shells.
 ## Activation script (canonical)
 
 ```text
-D:\MARS-Localhost\tools\activate-mli.cmd
+E:\MARS-Localhost\tools\activate-mli.cmd
 ```
 
 ### Behavior
@@ -38,7 +38,7 @@ D:\MARS-Localhost\tools\activate-mli.cmd
 ### Usage (Cursor terminal)
 
 ```bat
-D:\MARS-Localhost\tools\activate-mli.cmd
+E:\MARS-Localhost\tools\activate-mli.cmd
 php -v
 composer --version
 wp --info
@@ -51,16 +51,16 @@ phpcs --version
 
 | Tool | Wrapper |
 |------|---------|
-| Composer | `D:\MARS-Localhost\tools\composer\composer.cmd` |
-| WP-CLI | `D:\MARS-Localhost\tools\wp-cli\wp.cmd` |
-| PHPCS | `D:\MARS-Localhost\tools\phpcs\phpcs.cmd` |
+| Composer | `E:\MARS-Localhost\tools\composer\composer.cmd` |
+| WP-CLI | `E:\MARS-Localhost\tools\wp-cli\wp.cmd` |
+| PHPCS | `E:\MARS-Localhost\tools\phpcs\phpcs.cmd` |
 
 ---
 
 ## PHP binary (explicit)
 
 ```text
-D:\MARS-Localhost\laragon\bin\php\php-8.3.30-Win32-vs16-x64\php.exe
+E:\MARS-Localhost\laragon\bin\php\php-8.3.30-Win32-vs16-x64\php.exe
 ```
 
 ---

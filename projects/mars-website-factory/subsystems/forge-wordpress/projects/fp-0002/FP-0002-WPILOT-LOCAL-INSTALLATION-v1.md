@@ -1,4 +1,4 @@
-# FP-0002 — WPilot Local Installation v1
+﻿# FP-0002 — WPilot Local Installation v1
 
 **Version:** v1 | **Date:** 2026-06-23 | **Stage:** FW-06A.1
 
@@ -22,7 +22,7 @@ NOT BLOCKED
 | Brain plugin source | `projects/wpilot/plugin/metacode-wpilot/` — v0.3.0 (Sprint 2) |
 | Source lifecycle | DEV/test bridge — Phase 0–1 + Sprint 1–2 |
 | Latest approved checkpoint | **NOT ISSUED** for FP-0002 local install |
-| Canonical distributable ZIP | **NOT IN** `D:\MARS-Localhost\storage\packages\` |
+| Canonical distributable ZIP | **NOT IN** `E:\MARS-Localhost\storage\packages\` |
 | Build/package procedure | Manual copy/zip per README — no brain checksum charter |
 | Checksum for FP-0002 local | **NOT ISSUED** |
 | FWS-0001 reference install | **NOT INSTALLED** on synthetic runtime |

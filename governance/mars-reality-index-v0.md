@@ -1,4 +1,4 @@
-# MARS — Reality index v0
+﻿# MARS — Reality index v0
 
 **Status:** **documented** — compact operational visibility layer.  
 **Version:** v0 (Structural Stabilization **Phase 2**).  
@@ -218,7 +218,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **SoT:** [../projects/ocpilot/README.md](../projects/ocpilot/README.md) · [../projects/ocpilot/OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md)
 
-**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `D:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). No runtime migration in MLI-00.
+**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `E:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). No runtime migration in MLI-00.
 
 ---
 

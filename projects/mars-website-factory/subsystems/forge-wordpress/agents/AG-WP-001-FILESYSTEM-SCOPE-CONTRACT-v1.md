@@ -1,4 +1,4 @@
-# AG-WP-001 — Filesystem Scope Contract v1
+﻿# AG-WP-001 — Filesystem Scope Contract v1
 
 **Document type:** Filesystem scope contract  
 **Version:** v1  
@@ -20,7 +20,7 @@
 | Tests / reports / manifests | `operations/`, `bindings/`, `fixtures/`, agent reports |
 | Approved project workspace | FP-0002 foundation docs — **not** frontend implementation |
 
-### Runtime authority — `D:\MARS-Localhost`
+### Runtime authority — `E:\MARS-Localhost`
 
 | Allowed class | Examples |
 |---------------|----------|

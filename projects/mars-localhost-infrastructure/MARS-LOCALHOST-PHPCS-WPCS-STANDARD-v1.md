@@ -1,4 +1,4 @@
-# MARS Localhost — PHPCS / WPCS / PHPCompatibility Standard v1
+﻿# MARS Localhost — PHPCS / WPCS / PHPCompatibility Standard v1
 
 **Document type:** PHPCS toolchain standard  
 **Version:** v1  
@@ -15,7 +15,7 @@
 | WPCS | bundled in wpcs vendor | `tools\phpcs\wpcs\` |
 | PHPCompatibility | 9.3.5 | `tools\phpcs\phpcompat\vendor\phpcompatibility\php-compatibility` |
 
-Wrapper: `D:\MARS-Localhost\tools\phpcs\phpcs.cmd`
+Wrapper: `E:\MARS-Localhost\tools\phpcs\phpcs.cmd`
 
 ---
 
@@ -28,7 +28,7 @@ MySource, PEAR, PSR1, PSR2, PSR12, Squiz, Zend, WordPress, WordPress-Core, WordP
 ## Shared ruleset
 
 ```text
-D:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml
+E:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml
 ```
 
 - WPCS baseline with moderate exclusions for first profile
@@ -40,7 +40,7 @@ D:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml
 ## Smoke fixture only
 
 ```text
-D:\MARS-Localhost\tools\phpcs\fixtures\mli-smoke-sample.php
+E:\MARS-Localhost\tools\phpcs\fixtures\mli-smoke-sample.php
 ```
 
 **Do not** scan client projects from MLI shared tooling.
@@ -50,10 +50,10 @@ D:\MARS-Localhost\tools\phpcs\fixtures\mli-smoke-sample.php
 ## Activation
 
 ```bat
-D:\MARS-Localhost\tools\activate-mli.cmd
+E:\MARS-Localhost\tools\activate-mli.cmd
 phpcs --version
 phpcs -i
-phpcs --standard=D:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml D:\MARS-Localhost\tools\phpcs\fixtures\mli-smoke-sample.php
+phpcs --standard=E:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml E:\MARS-Localhost\tools\phpcs\fixtures\mli-smoke-sample.php
 ```
 
 ---

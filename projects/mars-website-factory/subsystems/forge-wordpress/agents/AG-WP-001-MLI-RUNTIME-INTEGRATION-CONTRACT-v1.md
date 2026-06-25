@@ -1,4 +1,4 @@
-# AG-WP-001 — MLI Runtime Integration Contract v1
+﻿# AG-WP-001 — MLI Runtime Integration Contract v1
 
 **Document type:** Runtime integration contract  
 **Version:** v1  
@@ -9,7 +9,7 @@
 
 ```text
 C:\AI MARS governs.
-D:\MARS-Localhost executes.
+E:\MARS-Localhost executes.
 ```
 
 ---
@@ -59,7 +59,7 @@ Agent validates URL, PHP version, mail suppression policy before R2+ work.
 | Zone | Agent may |
 |------|-----------|
 | `C:\AI MARS` (brain, WORDPRESS source) | Read/write project artifacts per Git |
-| `D:\MARS-Localhost` | **No structural changes** without MLI task; consume runtime only |
+| `E:\MARS-Localhost` | **No structural changes** without MLI task; consume runtime only |
 
 ---
 

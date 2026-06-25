@@ -1,4 +1,4 @@
-# MARS Localhost — Data and Secrets Policy v1
+﻿# MARS Localhost — Data and Secrets Policy v1
 
 **Document type:** Data and secrets policy  
 **Version:** v1  
@@ -35,7 +35,7 @@ Control data classification, secrets handling, and leakage risk across brain and
 
 | Rule | Policy |
 |------|--------|
-| Storage | `D:\MARS-Localhost\databases\dumps\` |
+| Storage | `E:\MARS-Localhost\databases\dumps\` |
 | Large retention | Optional `C:\AI MARS STORAGE\{consumer}\` |
 | Git | **Never** commit dumps |
 | Production imports | Operator approval + sanitization review |

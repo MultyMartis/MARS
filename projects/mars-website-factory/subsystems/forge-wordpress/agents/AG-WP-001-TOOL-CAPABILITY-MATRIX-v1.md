@@ -1,4 +1,4 @@
-# AG-WP-001 — Tool Capability Matrix v1
+﻿# AG-WP-001 — Tool Capability Matrix v1
 
 **Document type:** Tool capability audit  
 **Version:** v1  
@@ -21,7 +21,7 @@
 
 | tool_id | Tool | Availability | Location | Proven version | Environment | Supported operation classes | Unsupported classes | Risk limits | Secret boundary | Audit output | Rollback | Authorization |
 |---------|------|--------------|----------|----------------|-------------|----------------------------|---------------------|-------------|-----------------|--------------|----------|---------------|
-| `MLI-TOOL-007` | WP-CLI | PROVEN | `D:\MARS-Localhost\tools\wp-cli\` | 2.12.0 | LOCAL_RUNTIME | inspect, validate read-only | prod write, arbitrary SQL | R0–R2 local | INDIRECT | CLI JSON stdout | DB restore | MLI activate |
+| `MLI-TOOL-007` | WP-CLI | PROVEN | `E:\MARS-Localhost\tools\wp-cli\` | 2.12.0 | LOCAL_RUNTIME | inspect, validate read-only | prod write, arbitrary SQL | R0–R2 local | INDIRECT | CLI JSON stdout | DB restore | MLI activate |
 | `MLI-TOOL-004` | PHP CLI | PROVEN | Laragon `php-8.3.30` | 8.3.30 | LOCAL_SOURCE/RUNTIME | `php -l`, WP execution | prod execution | R0–R2 | INDIRECT | lint report | reinstall | MLI activate |
 | `MLI-TOOL-008` | PHPCS | PROVEN | MLI wpcs vendor | 3.13.5 | LOCAL_SOURCE | WPCS scan | — | R0 | NO_ACCESS | phpcs report | fix code | MLI activate |
 | `MLI-TOOL-009` | WPCS | PROVEN | bundled with PHPCS | bundled | LOCAL_SOURCE | WP coding standard | — | R0 | NO_ACCESS | phpcs report | fix code | MLI activate |

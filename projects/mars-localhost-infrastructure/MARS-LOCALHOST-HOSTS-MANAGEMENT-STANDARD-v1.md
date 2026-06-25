@@ -1,4 +1,4 @@
-# MARS Localhost — Hosts Management Standard v1
+﻿# MARS Localhost — Hosts Management Standard v1
 
 **Document type:** Hosts management standard  
 **Version:** v1  
@@ -22,7 +22,7 @@
 # END MARS LOCALHOST MANAGED
 ```
 
-Domains are driven by `D:\MARS-Localhost\runtime\registries\mli-hosts-domains.txt` (runtime) with built-in defaults in `add-mli-host.ps1`.
+Domains are driven by `E:\MARS-Localhost\runtime\registries\mli-hosts-domains.txt` (runtime) with built-in defaults in `add-mli-host.ps1`.
 
 Only entries inside this block are owned by MLI scripts.
 
@@ -32,17 +32,17 @@ Only entries inside this block are owned by MLI scripts.
 
 | Script | Purpose |
 |--------|---------|
-| `D:\MARS-Localhost\tools\hosts\add-mli-host.cmd` | Add or refresh managed block |
-| `D:\MARS-Localhost\tools\hosts\remove-mli-host.cmd` | Remove managed block only |
-| `D:\MARS-Localhost\tools\hosts\add-mli-host.ps1` | PowerShell implementation |
-| `D:\MARS-Localhost\tools\hosts\remove-mli-host.ps1` | PowerShell implementation |
+| `E:\MARS-Localhost\tools\hosts\add-mli-host.cmd` | Add or refresh managed block |
+| `E:\MARS-Localhost\tools\hosts\remove-mli-host.cmd` | Remove managed block only |
+| `E:\MARS-Localhost\tools\hosts\add-mli-host.ps1` | PowerShell implementation |
+| `E:\MARS-Localhost\tools\hosts\remove-mli-host.ps1` | PowerShell implementation |
 
 ---
 
 ## Behaviour rules
 
 1. **Elevation** only when a hosts change is required.
-2. **Backup** hosts to `D:\MARS-Localhost\backups\runtime\hosts\` before mutation.
+2. **Backup** hosts to `E:\MARS-Localhost\backups\runtime\hosts\` before mutation.
 3. **Idempotent** — repeated add is a no-op when block unchanged.
 4. **Non-destructive** — never remove non-MLI entries.
 5. **No secrets** in scripts or output.
@@ -53,7 +53,7 @@ Only entries inside this block are owned by MLI scripts.
 ## Operator command (elevation required)
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File "D:\MARS-Localhost\tools\hosts\add-mli-host.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "E:\MARS-Localhost\tools\hosts\add-mli-host.ps1"
 ```
 
 Run from an **Administrator** PowerShell session if UAC prompt is unavailable to automation.

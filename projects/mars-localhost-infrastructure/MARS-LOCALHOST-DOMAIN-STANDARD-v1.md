@@ -1,4 +1,4 @@
-# MARS Localhost — Domain Standard v1
+﻿# MARS Localhost — Domain Standard v1
 
 **Document type:** Local domain naming standard  
 **Version:** v1  
@@ -71,7 +71,7 @@ RFC 2606-style local use; not issued for public DNS in normal operations.
 | Topic | Policy |
 |-------|--------|
 | **Local TLS** | Optional but recommended for parity testing |
-| **Certificates** | Stored under `D:\MARS-Localhost\certificates\` |
+| **Certificates** | Stored under `E:\MARS-Localhost\certificates\` |
 | **Trusted local CA** | Use if operator supports (e.g. mkcert) — document in MLI-01 |
 | **Production certs** | **Prohibited** — never copy production TLS material |
 | **Default MLI-00** | HTTP acceptable for foundation; HTTPS enablement in MLI-01+ |

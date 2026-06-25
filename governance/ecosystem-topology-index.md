@@ -1,4 +1,4 @@
-# MARS — Ecosystem topology index
+﻿# MARS — Ecosystem topology index
 
 **Status:** **documented** — compact canonical visibility layer.  
 **Version:** v0 (Structural Stabilization Phase 1).  
@@ -111,7 +111,7 @@ AGENTS.md (honesty)
 | | |
 |--|--|
 | **What it is** | **Website Factory subsystem** — documentation-first WordPress **implementation** methodology (frontend package → WordPress implementation package → WPilot handoff). Operator alias: WP Forge. |
-| **What it is NOT** | MARS Forge (frontend overlay), WPilot (operations), registered agent, `project_id`, owner of `D:\MARS-Localhost`, or autonomous runtime. |
+| **What it is NOT** | MARS Forge (frontend overlay), WPilot (operations), registered agent, `project_id`, owner of `E:\MARS-Localhost`, or autonomous runtime. |
 | **Operational status** | **FOUNDATION / PRE-OPERATIONAL** — FW-05 synthetic **COMPLETE**; MLI-03 WordPress runtime **PROVEN WITH LIMITATIONS**; **FW-05R AUTHORIZED**. |
 | **Canonical path** | [../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md](../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md); localhost consumer: [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). |
 | **Relationship role** | **Consumes** MLI WordPress runtime profile; produces implementation packages; upstream of WPilot operations. Does **not** own shared localhost infrastructure. |

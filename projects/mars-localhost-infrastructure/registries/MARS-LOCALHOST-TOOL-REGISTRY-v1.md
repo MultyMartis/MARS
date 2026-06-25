@@ -1,4 +1,4 @@
-# MARS Localhost — Tool Registry v1
+﻿# MARS Localhost — Tool Registry v1
 
 **Document type:** Tool registry (human-maintained)  
 **Version:** v1  
@@ -11,7 +11,7 @@
 
 | Tool ID | Tool | Version | Source | Physical path | Activation | Consumers | Status | Update policy | Risk | Last verified |
 |---------|------|---------|--------|---------------|------------|-----------|--------|---------------|------|---------------|
-| MLI-TOOL-001 | Laragon | 8.6.1.60301 | Installer | `D:\MARS-Localhost\laragon` | Laragon UI / Procfile | MLI | ACTIVE | Operator approval | Medium | 2026-06-22 |
+| MLI-TOOL-001 | Laragon | 8.6.1.60301 | Installer | `E:\MARS-Localhost\laragon` | Laragon UI / Procfile | MLI | ACTIVE | Operator approval | Medium | 2026-06-22 |
 | MLI-TOOL-002 | Apache | 2.4.66 | Laragon | `laragon\bin\apache\httpd-2.4.66-*` | Laragon / httpd.exe | MLI, PHP sites | ACTIVE | No auto major | Medium | 2026-06-22 |
 | MLI-TOOL-003 | Nginx | 1.28.2 | Laragon | `laragon\bin\nginx\nginx-1.28.2` | Laragon profile | OPTIONAL | OPTIONAL | — | Low | 2026-06-22 |
 | MLI-TOOL-004 | PHP | 8.3.30 | Laragon | `laragon\bin\php\php-8.3.30-*` | activate-mli | Forge, OCPilot | ACTIVE | Pin 8.3 profile | Medium | 2026-06-22 |

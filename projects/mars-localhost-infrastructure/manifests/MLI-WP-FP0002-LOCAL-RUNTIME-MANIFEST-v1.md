@@ -1,4 +1,4 @@
-# MLI-WP-FP0002-LOCAL — Runtime Manifest v1
+﻿# MLI-WP-FP0002-LOCAL — Runtime Manifest v1
 
 **Document type:** WordPress runtime manifest  
 **Version:** v1  
@@ -17,8 +17,8 @@
 | **Platform** | WordPress |
 | **Class** | `projects` / `local` |
 | **Brain authority** | `C:\AI MARS` |
-| **Physical root** | `D:\MARS-Localhost\sites\wordpress\projects\shpigovsky` |
-| **Junction** | `D:\MARS-Localhost\laragon\www\shpigovsky` |
+| **Physical root** | `E:\MARS-Localhost\sites\wordpress\projects\shpigovsky` |
+| **Junction** | `E:\MARS-Localhost\laragon\www\shpigovsky` |
 | **Local URL** | `http://shpigovsky.test` |
 | **Database** | `mars_wp_fp0002` |
 | **DB user** | `mli_shpigovsky_app` |
@@ -71,7 +71,7 @@
 
 | Field | Value |
 |-------|-------|
-| Baseline | `D:\MARS-Localhost\backups\wordpress\projects\shpigovsky\foundation-001` |
+| Baseline | `E:\MARS-Localhost\backups\wordpress\projects\shpigovsky\foundation-001` |
 | Backup script | `mars-runtime\scripts\backup-runtime.ps1` |
 | Reset script | `mars-runtime\scripts\reset-to-foundation.ps1` |
 | Reset token | `RESET-FP-0002` |

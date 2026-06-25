@@ -1,4 +1,4 @@
-# OCPilot — Operational Index
+﻿# OCPilot — Operational Index
 
 
 
@@ -10,7 +10,7 @@
 
 **Family:** [cms-ecommerce-pilots-family.md](cms-ecommerce-pilots-family.md)
 
-**Localhost (pointer only, 2026-06-22):** OCPilot may consume OpenCart runtime profile on `D:\MARS-Localhost` via [MARS Localhost Infrastructure](../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) — **no** OCPilot runtime migration in MLI-00.
+**Localhost (pointer only, 2026-06-22):** OCPilot may consume OpenCart runtime profile on `E:\MARS-Localhost` via [MARS Localhost Infrastructure](../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) — **no** OCPilot runtime migration in MLI-00.
 
 
 

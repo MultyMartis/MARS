@@ -1,4 +1,4 @@
-# Forge WordPress — Repository and Filesystem Model v1
+﻿# Forge WordPress — Repository and Filesystem Model v1
 
 **Document type:** Storage and repository architecture  
 **Version:** v1  
@@ -98,13 +98,13 @@ C:\Users\<user>\Local Sites\{project-slug}\   # Legacy optional — NOT canonica
 ```text
 C:\AI MARS              → methodology, source, manifests, reports (Git)
 C:\AI MARS STORAGE      → bulk baselines, packages, dumps (out-of-git)
-D:\MARS-Localhost       → shared local runtime (MLI) — sites, DB, Laragon
+E:\MARS-Localhost       → shared local runtime (MLI) — sites, DB, Laragon
 client workspace        → workspaces/website-factory-operations/{FP-ID}/
-local WordPress site    → D:\MARS-Localhost\sites\wordpress\{class}\{slug}\
+local WordPress site    → E:\MARS-Localhost\sites\wordpress\{class}\{slug}\
 external hosting        → Beget DEV/staging/prod (WPilot operations)
 ```
 
-**Supersedes (2026-06-22):** `C:\Users\<user>\Local Sites\{project-slug}\` as canonical shared path — historical per-operator layout only; MLI canonical path is under `D:\MARS-Localhost\sites\wordpress\`.
+**Supersedes (2026-06-22):** `C:\Users\<user>\Local Sites\{project-slug}\` as canonical shared path — historical per-operator layout only; MLI canonical path is under `E:\MARS-Localhost\sites\wordpress\`.
 
 ---
 

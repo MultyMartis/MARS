@@ -1,4 +1,4 @@
-# MARS Localhost — WordPress Local Guard Standard v1
+﻿# MARS Localhost — WordPress Local Guard Standard v1
 
 **Document type:** WordPress local-only guard standard  
 **Version:** v1  
@@ -59,7 +59,7 @@ Verified MLI-03: bind-address hardened from Laragon default `*` exposure.
 Before import or sync operations:
 
 ```bat
-findstr /i /s "DB_HOST" D:\MARS-Localhost\sites\wordpress\*\*\wp-config.php
+findstr /i /s "DB_HOST" E:\MARS-Localhost\sites\wordpress\*\*\wp-config.php
 ```
 
 Reject any non-loopback host unless manifest exception documented.
@@ -91,7 +91,7 @@ Reject any non-loopback host unless manifest exception documented.
 Activation path:
 
 ```bat
-D:\MARS-Localhost\tools\activate-mli.cmd
+E:\MARS-Localhost\tools\activate-mli.cmd
 ```
 
 See [MARS-LOCALHOST-WPCLI-STANDARD-v1.md](MARS-LOCALHOST-WPCLI-STANDARD-v1.md).
@@ -105,7 +105,7 @@ See [MARS-LOCALHOST-WPCLI-STANDARD-v1.md](MARS-LOCALHOST-WPCLI-STANDARD-v1.md).
 | DB password | `runtime.env` | Git, markdown, manifest body |
 | WordPress auth keys | `runtime.env` | Committed wp-config templates |
 | Production API keys | — | Any local config unless sandbox charter |
-| TLS private keys | `D:\MARS-Localhost\laragon\etc\ssl\` | Git |
+| TLS private keys | `E:\MARS-Localhost\laragon\etc\ssl\` | Git |
 
 **Reference secrets path (values not documented):**
 
@@ -168,7 +168,7 @@ Hosts entries managed only inside MLI block:
 | `mli-smoke-001.test` | **PASS** |
 | `fws-0001.test` | **PENDING ELEVATION** — script supports multi-domain; operator must run elevated add |
 
-Scripts: `D:\MARS-Localhost\tools\hosts\add-mli-host.ps1`
+Scripts: `E:\MARS-Localhost\tools\hosts\add-mli-host.ps1`
 
 ---
 

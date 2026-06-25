@@ -1,10 +1,10 @@
-# MLI-02 Runtime Config Baseline Manifest v1
+﻿# MLI-02 Runtime Config Baseline Manifest v1
 
 **Document type:** Runtime backup manifest (brain pointer)  
 **Version:** v1  
 **Date:** 2026-06-22  
 **Stage:** MLI-02  
-**Backup location:** `D:\MARS-Localhost\backups\runtime\MLI-02-BASELINE\` (**outside Git**)
+**Backup location:** `E:\MARS-Localhost\backups\runtime\MLI-02-BASELINE\` (**outside Git**)
 
 ---
 

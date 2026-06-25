@@ -1,4 +1,4 @@
-# FWS-0001 — Project Status
+﻿# FWS-0001 — Project Status
 
 **Last updated:** 2026-06-23  
 **Stage:** FW-05R closure checkpoint
@@ -31,7 +31,7 @@ FP-0002 — NOT USED
 | Validation | `VALIDATION/reports/`, `VALIDATION/scripts/` |
 | Release manifests | `RELEASE/FWS-0001-RC2/` |
 
-Runtime WordPress: `D:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\` (not in Git).
+Runtime WordPress: `E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\` (not in Git).
 
 ---
 
