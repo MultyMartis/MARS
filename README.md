@@ -15,6 +15,8 @@ This directory is the **main local working copy** of the MARS project: design no
 
 Canonical reference: [`governance/mars-infrastructure-reality-v1.md`](governance/mars-infrastructure-reality-v1.md). In-repo [`storage/`](storage/) is **documentation** for the architecture Storage Layer — not the physical `C:\MARS Phenix\AI MARS STORAGE` path.
 
+**Post–disaster recovery (2026-06-24 incident):** program **closed** 2026-06-25 — work only from this root on branch `mars/canonical-post-recovery`. Closure record: [`governance/mars-disaster-recovery-2026-06-24-closure-v1.md`](governance/mars-disaster-recovery-2026-06-24-closure-v1.md). Resumption checklist: [`governance/mars-normal-operations-resumption-checklist-v1.md`](governance/mars-normal-operations-resumption-checklist-v1.md). Do **not** use `C:\AI MARS` as active workspace.
+
 ## What this repository contains (by status)
 
 ### Documented architecture

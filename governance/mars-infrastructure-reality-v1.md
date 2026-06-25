@@ -86,6 +86,8 @@
 | Topic | Path |
 |-------|------|
 | Phoenix cutover receipt | [mars-phoenix-recovery-cutover-receipt-v1.md](mars-phoenix-recovery-cutover-receipt-v1.md) |
+| Disaster recovery closure | [mars-disaster-recovery-2026-06-24-closure-v1.md](mars-disaster-recovery-2026-06-24-closure-v1.md) |
+| Normal operations checklist | [mars-normal-operations-resumption-checklist-v1.md](mars-normal-operations-resumption-checklist-v1.md) |
 | Legacy tree retention | [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md) |
 | OCPilot bulk registry | [projects/ocpilot/external-storage-registry.md](../projects/ocpilot/external-storage-registry.md) |
 | MARS storage family | [projects/ocpilot/mars-storage-family-note.md](../projects/ocpilot/mars-storage-family-note.md) |
@@ -95,4 +97,4 @@
 
 ---
 
-*Synchronized: 2026-06-02 — Infrastructure Reality Synchronization Pass v1; Phoenix canonical paths: 2026-06-25.*
+*Synchronized: 2026-06-02 — Infrastructure Reality Synchronization Pass v1; Phoenix canonical paths: 2026-06-25; disaster recovery closed: 2026-06-25.*
