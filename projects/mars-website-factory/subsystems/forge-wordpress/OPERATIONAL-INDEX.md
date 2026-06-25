@@ -23,7 +23,8 @@ FW-07A — COMPLETE (AG-WP-001 foundation)
 FW-07B — COMPLETE (AG-WP-001 typed operations)
 FW-07C — Safety Preflight — COMPLETE (2026-06-25)
 FW-07C-0 — Enforcement Foundation — IMPLEMENTED_AND_VALIDATED_IN_REPO (2026-06-26)
-FW-07C-1 — Local Read-Only Harness — LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED (2026-06-26)
+FW-07C-1 — Local Read-Only Harness — VALIDATED BASELINE FROZEN (2026-06-26)
+FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
 Standards: BASELINE v1
@@ -42,7 +43,7 @@ FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
-Agent registration: REGISTERED (AG-WP-001 — draft; NOT RUNTIME-ACTIVE)
+Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
 Client pilot: NOT STARTED — WordPress foundation READY; theme integration LOCKED until FW-06B
 ```
 
@@ -216,13 +217,23 @@ WPilot does **not** own theme/content architecture.
 
 ---
 
+## FW-07C-1 baseline freeze
+
+| Document | Path |
+|----------|------|
+| Baseline freeze | [FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md](FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md) |
+| Baseline manifest | [runtime/FW-07C-1-VALIDATED-BASELINE-v1.json](runtime/FW-07C-1-VALIDATED-BASELINE-v1.json) |
+
+---
+
 ## Next authorized stage
 
 ```text
 FW-06B — Approved Frontend Intake (FP-0002) — WAITING
-FW-07B — AG-WP-001 Typed Operations — PLANNED (not auto-start)
+FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
+Return to FP-0002 Shpigovsky frontend work
 ```
 
 ---
 
-*Last updated: 2026-06-24 — FW-07A AG-WP-001 foundation complete.*
+*Last updated: 2026-06-26 — FW-07C-1 validated baseline frozen.*

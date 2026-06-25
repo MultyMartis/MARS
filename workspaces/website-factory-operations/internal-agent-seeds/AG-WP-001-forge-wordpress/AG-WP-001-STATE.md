@@ -3,7 +3,7 @@
 **Agent ID:** AG-WP-001
 **Canonical Name:** Forge WordPress
 **Last updated:** 2026-06-26
-**Charter:** FW-07A/B foundation complete; FW-07C preflight complete; FW-07C-0 enforcement foundation implemented; FW-07C-1 read-only binding validated
+**Charter:** FW-07A/B foundation complete; FW-07C preflight complete; FW-07C-0 enforcement foundation implemented; FW-07C-1 validated baseline frozen
 
 ---
 
@@ -17,8 +17,8 @@
 | **Runtime bindings** | **4 proven** (read-only R0 on fws-0001) — [runtime/bindings/fws-0001-readonly-bindings-v1.json](../../../../projects/mars-website-factory/subsystems/forge-wordpress/runtime/bindings/fws-0001-readonly-bindings-v1.json) |
 | **FW-07C preflight** | **COMPLETE** — [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md) |
 | **FW-07C-0** | **IMPLEMENTED_AND_VALIDATED_IN_REPO** — [enforcement/README.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/enforcement/README.md) |
-| **FW-07C-1** | **LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED** — [runtime/README.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/runtime/README.md) |
-| **FW-07C-2** | **NOT ADMITTED** |
+| **FW-07C-1** | **VALIDATED BASELINE FROZEN** — [FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md) |
+| **FW-07C-2** | **BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED** |
 | **Autonomous runtime** | **NONE** |
 | **Production authority** | **NONE** |
 | **Formal registry promotion** | **NOT PERFORMED** — requires operator charter |
@@ -30,16 +30,18 @@
 
 ```text
 AG-WP-001:
-BRAIN PRESERVED — FW-07A/B COMPLETE
+SYNTHETIC READ-ONLY CAPABILITY ONLY
+NOT PRODUCTION READY
+
 FW-07C-0 ENFORCEMENT — IMPLEMENTED_AND_VALIDATED_IN_REPO
-FW-07C-1 READ-ONLY BINDING — LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED
+FW-07C-1 — VALIDATED BASELINE FROZEN
 RUNTIME TARGET: fws-0001 only (read-only)
-FW-07C-2: NOT ADMITTED
-NEXT: Freeze FW-07C-1 baseline; do not start FW-07C-2 without charter
+FW-07C-2: BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
+NEXT: Return to FP-0002 Shpigovsky frontend work
 
 Autonomous runtime: NONE
 Production authority: NONE
-Filesystem enforcement: REPO + READ-ONLY RUNTIME (fws-0001 validated)
+Filesystem enforcement: REPO + READ-ONLY RUNTIME (fws-0001 frozen baseline)
 Proven operations: wp.inspect.runtime, wp.inspect.theme, wp.inspect.plugin_state, wp.inspect.routes
 ```
 
@@ -66,4 +68,4 @@ Proven operations: wp.inspect.runtime, wp.inspect.theme, wp.inspect.plugin_state
 
 ---
 
-*AG-WP-001 state — reconciled with FW-07C-1 validation 2026-06-26.*
+*AG-WP-001 state — reconciled with FW-07C-1 validated baseline freeze 2026-06-26.*
