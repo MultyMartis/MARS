@@ -53,7 +53,18 @@ Historical documentation may still cite `C:\AI MARS` or `D:\MARS-Localhost` wher
 |-------|--------|
 | **Repository / storage operational paths** | **completed** in post-cutover commit (`recovery: establish Phoenix canonical paths`) |
 | **Runtime drive-letter reconciliation** | **completed** (2026-06-25 pass 2) — active MLI registries, standards, manifests, and operational authority docs use `E:\MARS-Localhost`; historical `D:\MARS-Localhost` preserved in MLI-03R.* reports and governance historical rows |
-| **Branch integration** | **decision documented** — see [mars-phoenix-branch-integration-decision-v1.md](mars-phoenix-branch-integration-decision-v1.md); merge **not executed**; recovery branch remains canonical working line until permanent branch charter |
+| **Branch integration** | **canonical branch established** — `mars/canonical-post-recovery` from recovery anchor `fe9d9c8e`; see [mars-canonical-branch-cutover-v1.md](mars-canonical-branch-cutover-v1.md); merge **not executed** |
+
+---
+
+## Canonical development branch (post–branch cutover)
+
+| Field | Value |
+|-------|-------|
+| **Active development branch** | `mars/canonical-post-recovery` |
+| **Creation anchor** | `fe9d9c8e52edd2632de15dcc5ee5d353d8660362` |
+| **Immutable recovery anchor** | `recovery/mars-phenix-2026-06-25` @ same SHA |
+| **Authority receipt** | [mars-canonical-branch-cutover-v1.md](mars-canonical-branch-cutover-v1.md) |
 
 ---
 

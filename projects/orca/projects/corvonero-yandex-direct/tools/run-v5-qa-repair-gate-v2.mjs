@@ -38,6 +38,7 @@ const VALIDATION = path.join(ROOT, 'production/validation');
 const APPROVALS = path.join(ROOT, 'production/approvals');
 const ARTIFACTS = path.join(ROOT, 'artifacts');
 const EXPORTS = path.join(ROOT, 'exports');
+const MARS_CANONICAL_BRANCH = 'mars/canonical-post-recovery';
 
 function writeJson(fp, obj) {
   fs.mkdirSync(path.dirname(fp), { recursive: true });
@@ -462,7 +463,7 @@ function buildReport(gate, packages, regression, inspection, workbook) {
     '',
     '## 1. Preflight',
     '',
-    '- Branch: `mars/post-cycle8-live-tests`',
+    `- Branch: \`${MARS_CANONICAL_BRANCH}\``,
     '- HEAD: `bf313e4`',
     '- v5 production files: unchanged',
     '- v6 production: not executed in this task',

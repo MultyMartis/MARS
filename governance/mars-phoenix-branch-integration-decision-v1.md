@@ -1,8 +1,9 @@
 # MARS Phoenix — Branch integration decision v1
 
-**Status:** **documented** — operator decision record; **integration not executed**.  
-**Date:** 2026-06-25  
+**Status:** **executed (Strategy B)** — permanent canonical branch created; **merge not executed**.
+**Date:** 2026-06-25
 **Supersedes:** branch-integration section of [mars-phoenix-recovery-cutover-receipt-v1.md](mars-phoenix-recovery-cutover-receipt-v1.md) (status only).
+**Canonical branch receipt:** [mars-canonical-branch-cutover-v1.md](mars-canonical-branch-cutover-v1.md).
 
 ---
 
@@ -11,7 +12,8 @@
 | Field | Value |
 |-------|-------|
 | **Recovery branch** | `recovery/mars-phenix-2026-06-25` |
-| **Recovery HEAD (local = remote)** | `de1a4d1bb1f417f5af0ae43a864dfeb321e503e6` |
+| **Recovery HEAD (local = remote)** | `fe9d9c8e52edd2632de15dcc5ee5d353d8660362` |
+| **Permanent canonical branch** | `mars/canonical-post-recovery` @ `fe9d9c8e52edd2632de15dcc5ee5d353d8660362` (initial anchor) |
 | **Old forward branch (remote)** | `mars/post-cycle8-live-tests` @ `f78af433f8878f7523ae933ba9fb9986b18533f8` |
 | **Old forward branch (local stale)** | `84b9a8c77dd9472bea6b23e6ec327ba3081c3615` — operator must not use legacy `C:\AI MARS` checkout as forward SHA authority |
 | **Merge-base** | `84b9a8c77dd9472bea6b23e6ec327ba3081c3615` |
@@ -58,8 +60,8 @@
 
 **Strategy B:**
 
-1. Retain `recovery/mars-phenix-2026-06-25` @ `de1a4d1` (and subsequent recovery commits) as **`IMMUTABLE_RECOVERY_ANCHOR`**.
-2. After operator approval, create a new permanent branch (e.g. `mars/canonical-post-recovery`) **from recovery HEAD** — **no merge** with `mars/post-cycle8-live-tests`.
+1. Retain `recovery/mars-phenix-2026-06-25` @ `fe9d9c8e` as **`IMMUTABLE_RECOVERY_ANCHOR`** — **no further commits on recovery branch**.
+2. **Executed:** `mars/canonical-post-recovery` created **from recovery HEAD** — **no merge** with `mars/post-cycle8-live-tests`.
 3. Optionally update GitHub default branch **only** after operator charter — **not** part of this receipt.
 4. Mark `mars/post-cycle8-live-tests` as **`LEGACY_FORWARD_LINE`** — read-only reference; do not delete without archival plan.
 
@@ -71,14 +73,15 @@
 |------|--------|
 | Merge / rebase / cherry-pick | **NOT EXECUTED** |
 | Default branch change | **NOT EXECUTED** |
-| Permanent canonical branch creation | **PENDING operator approval** |
+| Permanent canonical branch creation | **EXECUTED** — `mars/canonical-post-recovery` |
+| Recovery branch immutability | **CONFIRMED** — fixed at `fe9d9c8e` |
 | Recovery branch push authority | **CONFIRMED** |
 
 ---
 
-## Explicit next operator decision
+## Operator decision (recorded)
 
-**Approve creation of a permanent canonical branch from verified recovery HEAD (`de1a4d1` or later), while retaining `recovery/mars-phenix-2026-06-25` as an immutable recovery anchor; defer any merge with `mars/post-cycle8-live-tests`.**
+**Approved and executed:** permanent canonical branch `mars/canonical-post-recovery` from verified recovery HEAD `fe9d9c8e`, with `recovery/mars-phenix-2026-06-25` retained as immutable recovery anchor; merge with `mars/post-cycle8-live-tests` deferred/rejected.
 
 ---
 

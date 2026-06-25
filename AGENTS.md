@@ -29,6 +29,7 @@
 
 ## File operations
 - Constrain filesystem work to **`C:\MARS Phenix\AI MARS`** for MARS work (canonical workspace root).
+- **Canonical development branch:** `mars/canonical-post-recovery` — see [governance/mars-canonical-branch-cutover-v1.md](governance/mars-canonical-branch-cutover-v1.md). Immutable recovery anchor: `recovery/mars-phenix-2026-06-25` @ `fe9d9c8e`.
 - **Bulk storage** for large out-of-git artefacts: **`C:\MARS Phenix\AI MARS STORAGE`** — supporting layer only; **not** a second repository or parallel workspace root. See [governance/mars-infrastructure-reality-v1.md](governance/mars-infrastructure-reality-v1.md).
 - **No** delete or move without explicit user instruction.
 - **No** manual edits to generated or build artifacts; ignore or regenerate via the proper pipeline.

@@ -26,6 +26,7 @@ const EXPORTS = path.join(ROOT, 'exports');
 const ARTIFACTS = path.join(ROOT, 'artifacts');
 const V7_DATASET = path.join(PROD, 'direct-commander-production-dataset-v7.json');
 const V71_DATASET = path.join(PROD, 'direct-commander-production-dataset-v7.1.json');
+const MARS_CANONICAL_BRANCH = 'mars/canonical-post-recovery';
 
 const FOUR_SUSPECT = [
   'kw-corv01-disc-499',
@@ -375,7 +376,7 @@ function buildNegativeCollisionV71(v7Neg, v7Coll, v7Evidence, removedCount, newK
 
 async function main() {
   const preflight = {
-    branch: 'mars/post-cycle8-live-tests',
+    branch: MARS_CANONICAL_BRANCH,
     head: '96050ec',
     v7_dataset_exists: fs.existsSync(V7_DATASET),
     v7_commander_exists: fs.existsSync(path.join(EXPORTS, 'CORVONERO-YANDEX-DIRECT-COMMANDER-v7.xlsx')),
@@ -598,7 +599,7 @@ function buildFinalReport(ctx) {
   return `# REPORT — КОРВО НЕРО — V7 REGRESSION REPAIR AND V7.1 XLSX INTEGRITY GATE
 
 ## 1. Preflight
-- Branch: mars/post-cycle8-live-tests @ 96050ec
+- Branch: ${MARS_CANONICAL_BRANCH} @ 96050ec
 - v7 artefacts preserved; v7.1 repair authorized
 
 ## 2. V7 Actual Export Rejection

@@ -20,6 +20,7 @@ const ExcelJS = require(path.join(
 
 const PILOT_RUN_ID = 'p0-i-real-slice-v1';
 const RUNTIME_COMMIT = '1fcf3d2';
+const MARS_CANONICAL_BRANCH = 'mars/canonical-post-recovery';
 const WORKBOOK_ID = 'ORCA-P0-I-OPERATOR-REVIEW-WORKBOOK-v1';
 const WORKBOOK_FILE = 'ORCA-P0-I-OPERATOR-REVIEW-WORKBOOK-v1.xlsx';
 const AUDIT_SEED = 'p0-i-operator-review-workbook-audit-v1-20260622';
@@ -983,7 +984,7 @@ function buildReport(parity, rows, mandatoryRows, randomAudit, validation, workb
 
 | Check | Result |
 |-------|--------|
-| Branch | mars/post-cycle8-live-tests |
+| Branch | ${MARS_CANONICAL_BRANCH} |
 | Runtime commit in history | \`1fcf3d2\` ✓ |
 | Pilot package | uncommitted ✓ |
 | Operator decisions | 0 ✓ |

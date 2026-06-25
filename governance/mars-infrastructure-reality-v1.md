@@ -13,6 +13,8 @@
 | **Workspace root (git repository)** | `C:\MARS Phenix\AI MARS` | Single MARS working copy: governance, registry, projects, workspaces, docs, minimal R1. All agent filesystem work for MARS stays here unless a task explicitly charters otherwise. |
 | **Storage layer (bulk, out-of-git)** | `C:\MARS Phenix\AI MARS STORAGE` | Supporting bulk-data root on the operator machine. Large binaries, promoted baselines, site archives, snapshots, temp extracts. **Not** a second git repository, **not** a second MARS instance, **not** a parallel workspace root. |
 | **Localhost runtime (execution, out-of-git)** | `E:\MARS-Localhost` | Shared Windows local web runtime: Laragon at `E:\MARS-Localhost\laragon`, MLI tools under `tools\`, CMS sites under `sites\`, databases, logs. **Not** MARS brain, **not** Git authority. Governed from [projects/mars-localhost-infrastructure/](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md). |
+| **Canonical development branch** | `mars/canonical-post-recovery` | Active Git development line after Phoenix recovery; see [mars-canonical-branch-cutover-v1.md](mars-canonical-branch-cutover-v1.md). |
+| **Immutable recovery anchor** | `recovery/mars-phenix-2026-06-25` @ `fe9d9c8e` | Fixed recovery branch — no further commits; do not merge into. |
 | **Operational relationship** | — | Metadata, passports, policies, manifests, and reports remain in `C:\MARS Phenix\AI MARS`. Bulk artefacts referenced by path + checksum live under `C:\MARS Phenix\AI MARS STORAGE\<system>\` per system registry (e.g. OCPilot [external-storage-registry.md](../projects/ocpilot/external-storage-registry.md)). Live local runtime files live under `E:\MARS-Localhost\`. |
 
 **Repo folder `storage/`** (at `C:\MARS Phenix\AI MARS\storage\`) is the **documentation** Storage Layer in MARS architecture (contracts v0). It is **not** the physical path `C:\MARS Phenix\AI MARS STORAGE`. See [../storage/README.md](../storage/README.md).
@@ -57,6 +59,7 @@
 | [AGENTS.md](../AGENTS.md) | `C:\MARS Phenix\AI MARS` | Pointer: this doc |
 | [README.md](../README.md) | `C:\MARS Phenix\AI MARS` | Pointer: this doc |
 | [mars-phoenix-recovery-cutover-receipt-v1.md](mars-phoenix-recovery-cutover-receipt-v1.md) | `C:\MARS Phenix\AI MARS` | Legacy hold documented |
+| [mars-canonical-branch-cutover-v1.md](mars-canonical-branch-cutover-v1.md) | `mars/canonical-post-recovery` | Canonical development branch |
 | [web-gpt-sources/mars-v2/06_MARS_v2_BOOTSTRAP_AND_MIGRATION.md](../web-gpt-sources/mars-v2/06_MARS_v2_BOOTSTRAP_AND_MIGRATION.md) | Historical `C:\AI MARS` in pack — **legacy imported** | Per-system registry when bulk needed |
 | [web-gpt-sources/chat-migration/](../web-gpt-sources/chat-migration/) | Historical `C:\AI MARS` in pack — **legacy imported** | — |
 | [projects/mars-survivability/protocols/safe-execution-layer-v1.md](../projects/mars-survivability/protocols/safe-execution-layer-v1.md) | `C:\MARS Phenix\AI MARS` | External bulk via task/passport |
