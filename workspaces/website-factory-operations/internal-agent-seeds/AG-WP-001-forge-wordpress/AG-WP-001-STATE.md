@@ -3,7 +3,7 @@
 **Agent ID:** AG-WP-001
 **Canonical Name:** Forge WordPress
 **Last updated:** 2026-06-26
-**Charter:** FW-07A/B foundation complete; FW-07C preflight complete; FW-07C-0 enforcement foundation implemented
+**Charter:** FW-07A/B foundation complete; FW-07C preflight complete; FW-07C-0 enforcement foundation implemented; FW-07C-1 read-only binding validated
 
 ---
 
@@ -14,33 +14,36 @@
 | **Status** | **FOUNDATION / PRE-OPERATIONAL** (FW-07A + FW-07B **COMPLETE**) |
 | **Canonical subsystem** | [Forge WordPress](../../../../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) |
 | **Typed operations** | **42 DEFINED** — `operations/ag-wp-001/operations-v1.json` |
-| **Runtime bindings** | **0 proven** — 11 `BOUND_NOT_IMPLEMENTED`, 31 `UNBOUND` |
+| **Runtime bindings** | **4 proven** (read-only R0 on fws-0001) — [runtime/bindings/fws-0001-readonly-bindings-v1.json](../../../../projects/mars-website-factory/subsystems/forge-wordpress/runtime/bindings/fws-0001-readonly-bindings-v1.json) |
 | **FW-07C preflight** | **COMPLETE** — [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md) |
 | **FW-07C-0** | **IMPLEMENTED_AND_VALIDATED_IN_REPO** — [enforcement/README.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/enforcement/README.md) |
-| **FW-07C-1** | **BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT** |
+| **FW-07C-1** | **LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED** — [runtime/README.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/runtime/README.md) |
+| **FW-07C-2** | **NOT ADMITTED** |
 | **Autonomous runtime** | **NONE** |
 | **Production authority** | **NONE** |
 | **Formal registry promotion** | **NOT PERFORMED** — requires operator charter |
-| **Operational model** | **prompt-driven operational_doc_pack** + future typed harness |
+| **Operational model** | **prompt-driven operational_doc_pack** + read-only typed harness (fws-0001) |
 
 ---
 
-## FW-07 checkpoint status (2026-06-25)
+## FW-07 checkpoint status (2026-06-26)
 
 ```text
 AG-WP-001:
 BRAIN PRESERVED — FW-07A/B COMPLETE
 FW-07C-0 ENFORCEMENT — IMPLEMENTED_AND_VALIDATED_IN_REPO
-RUNTIME INACTIVE — FW-07C-1 BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT
-FW-07C PREFLIGHT: COMPLETE
-NEXT: FW-07C-1 local synthetic runtime binding preflight (fws-0001)
+FW-07C-1 READ-ONLY BINDING — LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED
+RUNTIME TARGET: fws-0001 only (read-only)
+FW-07C-2: NOT ADMITTED
+NEXT: Freeze FW-07C-1 baseline; do not start FW-07C-2 without charter
 
 Autonomous runtime: NONE
 Production authority: NONE
-Filesystem enforcement: REPO-ONLY (FW-07C-0 validated)
+Filesystem enforcement: REPO + READ-ONLY RUNTIME (fws-0001 validated)
+Proven operations: wp.inspect.runtime, wp.inspect.theme, wp.inspect.plugin_state, wp.inspect.routes
 ```
 
-**Not registered in `agents/registry.md`.** Do not claim autonomous WordPress agent.
+**Not registered in `agents/registry.md`.** Do not claim autonomous WordPress agent or production-ready status.
 
 ---
 
@@ -49,7 +52,8 @@ Filesystem enforcement: REPO-ONLY (FW-07C-0 validated)
 - Not ready for autonomous WordPress production
 - Not ready for unguarded filesystem writes
 - Not ready for client-facing «agent» claims without harness evidence
-- Not ready for shpigovsky pilot harness (fws-0001 synthetic first)
+- Not ready for shpigovsky pilot harness (fws-0001 synthetic first — read-only only)
+- Not ready for FW-07C-2 mutating operations
 
 ---
 
@@ -58,7 +62,8 @@ Filesystem enforcement: REPO-ONLY (FW-07C-0 validated)
 - [AG-WP-001-FORGE-WORDPRESS-SEED.md](AG-WP-001-FORGE-WORDPRESS-SEED.md)
 - [FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md)
 - [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md)
+- [FW-07C-1 Validation Report](../../../../projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/FW-07C-1-VALIDATION-REPORT.md)
 
 ---
 
-*AG-WP-001 state — reconciled with FW-07C preflight 2026-06-25.*
+*AG-WP-001 state — reconciled with FW-07C-1 validation 2026-06-26.*

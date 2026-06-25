@@ -23,7 +23,7 @@ FW-07A — COMPLETE (AG-WP-001 foundation)
 FW-07B — COMPLETE (AG-WP-001 typed operations)
 FW-07C — Safety Preflight — COMPLETE (2026-06-25)
 FW-07C-0 — Enforcement Foundation — IMPLEMENTED_AND_VALIDATED_IN_REPO (2026-06-26)
-FW-07C-1 — Local Read-Only Harness — BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT
+FW-07C-1 — Local Read-Only Harness — LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED (2026-06-26)
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
 Standards: BASELINE v1

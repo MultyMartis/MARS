@@ -121,14 +121,9 @@ node .../tests/run-admission-tests.mjs
 
 ## Transition to FW-07C-1
 
-FW-07C-1 is **BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT**. Required before local read-only harness:
+FW-07C-1 is **LOCAL_SYNTHETIC_READ_ONLY_BINDING_VALIDATED** (2026-06-26). See [runtime/README.md](../runtime/README.md).
 
-1. Local synthetic runtime binding preflight for `fws-0001`
-2. Reparse verification adapter
-3. G5 closure beyond `CONTRACT_READY_RUNTIME_BINDING_PENDING`
-4. Operator charter for read-only inspect on `E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001`
-
-Do **not** touch runtime until preflight explicitly authorizes read-only inspection.
+FW-07C-2 is **NOT ADMITTED**. Do not perform mutating runtime operations.
 
 ---
 

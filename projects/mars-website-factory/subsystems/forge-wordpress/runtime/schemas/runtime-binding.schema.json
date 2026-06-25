@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-wordpress/runtime-binding.schema.json",
+  "title": "Forge WordPress Runtime Binding",
+  "type": "object",
+  "required": ["binding_registry_id", "version", "site_id", "allowed_root", "bindings"],
+  "properties": {
+    "binding_registry_id": { "type": "string" },
+    "version": { "type": "string" },
+    "site_id": { "type": "string" },
+    "runtime_id": { "type": "string" },
+    "environment": { "type": "string" },
+    "allowed_root": { "type": "string" },
+    "phase": { "type": "string" },
+    "default_kill_switch": { "type": "string" },
+    "bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["operation_id", "runtime_binding_id", "binding_decision"],
+        "properties": {
+          "operation_id": { "type": "string" },
+          "runtime_binding_id": { "type": "string" },
+          "adapter_module": { "type": ["string", "null"] },
+          "binding_decision": {
+            "type": "string",
+            "enum": [
+              "BOUND_READ_ONLY_PROVEN",
+              "BOUND_READ_ONLY_WITH_LIMITS",
+              "DEFER_SIDE_EFFECT_RISK",
+              "DEFER_EXTERNAL_TOOL",
+              "DEFER_DATABASE",
+              "REJECT",
+              "UNBOUND"
+            ]
+          },
+          "filesystem_reads": { "type": "array", "items": { "type": "string" } },
+          "database_reads": { "type": "boolean" },
+          "process_spawn": { "type": "boolean" },
+          "network_access": { "type": "boolean" },
+          "temporary_files": { "type": "boolean" },
+          "cache_effects": { "type": "boolean" },
+          "log_effects": { "type": "boolean" },
+          "side_effect_verdict": { "type": "string" },
+          "risk_class": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -25,7 +25,8 @@
 | **FW-07B** | AG-WP-001 Typed Operations and Tool Contract | **COMPLETE** | Machine-readable ops, bindings, validator — **not** runtime-active |
 | **FW-07C** | Safety Enforcement Preflight | **COMPLETE** | [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md) — design only |
 | **FW-07C-0** | Enforcement Foundation (repo) | **COMPLETE** | [enforcement/](enforcement/) — validated repo-only layer (2026-06-26) |
-| **FW-07C-1** | Local Read-Only Execution Harness | **BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT** | fws-0001 — after runtime preflight |
+| **FW-07C-1** | Local Read-Only Execution Harness | **COMPLETE** | [runtime/](runtime/) — fws-0001 read-only validated (2026-06-26) |
+| **FW-07C-2** | Additive/Mutating Operations | **NOT ADMITTED** | Requires separate charter |
 | **FW-07** | First Client Implementation | **PLANNED** | FP-0002 — after FW-06B |
 | **FW-08** | WPilot Handoff Validation | **PLANNED** | Operational boundary proof on DEV/staging |
 
@@ -58,7 +59,8 @@ FW-07A — COMPLETE (AG-WP-001 foundation — DOCUMENTED / REGISTERED / NOT RUNT
 FW-07B — COMPLETE (typed operations — DEFINED; bindings PARTIALLY BOUND; validator AVAILABLE)
 FW-07C — COMPLETE (safety preflight — 2026-06-25)
 FW-07C-0 — COMPLETE (enforcement foundation — validated in repo 2026-06-26)
-FW-07C-1 — BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT
+FW-07C-1 — COMPLETE (local synthetic read-only binding validated 2026-06-26)
+FW-07C-2 — NOT ADMITTED
 Architecture: DOCUMENTED
 Methodology: BASELINE v1
 Contracts: BASELINE v1
