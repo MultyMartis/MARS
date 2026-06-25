@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forge-operation-request.schema.json",
+  "title": "Forge Operation Admission Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation_id",
+    "site_id",
+    "environment",
+    "raw_path",
+    "allowed_root"
+  ],
+  "properties": {
+    "operation_id": { "type": "string", "minLength": 1 },
+    "site_id": { "type": "string", "minLength": 1 },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "LOCAL_SYNTHETIC",
+        "LOCAL_PROJECT_RUNTIME",
+        "REMOTE_DEV",
+        "REMOTE_TEST",
+        "REMOTE_PRODUCTION"
+      ]
+    },
+    "raw_path": { "type": "string" },
+    "allowed_root": { "type": "string", "minLength": 1 },
+    "source_path": { "type": "string" },
+    "destination_path": { "type": "string" },
+    "disallow_root_mutation": { "type": "boolean" },
+    "reparse_status": {
+      "type": "string",
+      "enum": ["UNKNOWN", "VERIFIED", "NOT_REQUIRED", "TEST_ONLY_SYNTHETIC_BINDING"]
+    },
+    "runtime_binding_status": {
+      "type": "string",
+      "enum": ["UNBOUND", "BOUND_NOT_IMPLEMENTED", "PROVEN", "TEST_ONLY_SYNTHETIC_BINDING"]
+    },
+    "dry_run_status": {
+      "type": "string",
+      "enum": ["NOT_REQUIRED", "PENDING", "PASSED", "FAILED", "UNKNOWN"]
+    },
+    "snapshot_id": { "type": "string" },
+    "approval_id": { "type": "string" },
+    "kill_switch_state": {
+      "type": "string",
+      "enum": [
+        "GLOBAL_DISABLED",
+        "SITE_DISABLED",
+        "SITE_ENABLED_READ_ONLY",
+        "EMERGENCY_STOP"
+      ]
+    },
+    "agent_id": { "type": "string" }
+  }
+}

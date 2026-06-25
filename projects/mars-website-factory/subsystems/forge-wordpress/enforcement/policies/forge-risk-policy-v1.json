@@ -1,0 +1,69 @@
+{
+  "policy_id": "FORGE-RISK-POLICY-v1",
+  "version": "1.0.0",
+  "phase": "FW-07C-0",
+  "risk_classes": {
+    "R0_READ_ONLY": {
+      "risk_class": "R0",
+      "dry_run_required": false,
+      "snapshot_required": false,
+      "operator_approval_required": false,
+      "rollback_required": false,
+      "runtime_binding_required": true,
+      "allowed_in_phase": ["FW-07C-0", "FW-07C-1"]
+    },
+    "R1_ADDITIVE": {
+      "risk_class": "R1",
+      "dry_run_required": true,
+      "snapshot_required": false,
+      "operator_approval_required": false,
+      "rollback_required": false,
+      "runtime_binding_required": false,
+      "allowed_in_phase": ["FW-07C-2"]
+    },
+    "R2_BOUNDED_MODIFY": {
+      "risk_class": "R2",
+      "dry_run_required": true,
+      "snapshot_required": true,
+      "operator_approval_required": true,
+      "rollback_required": true,
+      "runtime_binding_required": true,
+      "allowed_in_phase": ["FW-07C-3"]
+    },
+    "R3_BOUNDED_DELETE_REPLACE": {
+      "risk_class": "R3",
+      "dry_run_required": true,
+      "snapshot_required": true,
+      "operator_approval_required": true,
+      "rollback_required": true,
+      "runtime_binding_required": true,
+      "allowed_in_phase": ["FW-07C-3"]
+    },
+    "R4_DIRECTORY_MUTATION": {
+      "risk_class": "R4",
+      "dry_run_required": true,
+      "snapshot_required": true,
+      "operator_approval_required": true,
+      "rollback_required": true,
+      "runtime_binding_required": true,
+      "allowed_in_phase": ["FW-07C-4"]
+    },
+    "R5_DATABASE_RUNTIME_REMOTE": {
+      "risk_class": "R5",
+      "dry_run_required": true,
+      "snapshot_required": true,
+      "operator_approval_required": true,
+      "rollback_required": true,
+      "runtime_binding_required": true,
+      "allowed_in_phase": ["FW-07C-5"]
+    }
+  },
+  "fw07c0_policy": {
+    "R0": "ADMIT_AFTER_VALIDATION",
+    "R1": "DENY",
+    "R2": "DENY",
+    "R3": "DENY",
+    "R4": "DENY",
+    "R5": "DENY"
+  }
+}

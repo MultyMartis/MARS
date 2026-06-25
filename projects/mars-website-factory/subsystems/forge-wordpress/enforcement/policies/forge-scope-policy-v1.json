@@ -1,0 +1,43 @@
+{
+  "policy_id": "FORGE-SCOPE-POLICY-v1",
+  "version": "1.0.0",
+  "phase": "FW-07C-0",
+  "environments": {
+    "LOCAL_SYNTHETIC": {
+      "allowed_risk_classes": ["R0"],
+      "requires_full_validation": true,
+      "admission_default": "CONDITIONAL"
+    },
+    "LOCAL_PROJECT_RUNTIME": {
+      "allowed_risk_classes": [],
+      "admission_default": "DENY"
+    },
+    "REMOTE_DEV": {
+      "allowed_risk_classes": [],
+      "admission_default": "DENY"
+    },
+    "REMOTE_TEST": {
+      "allowed_risk_classes": [],
+      "admission_default": "DENY"
+    },
+    "REMOTE_PRODUCTION": {
+      "allowed_risk_classes": [],
+      "admission_default": "DENY"
+    }
+  },
+  "registered_synthetic_sites": [
+    {
+      "site_id": "fws-0001",
+      "runtime_id": "MLI-WP-SYN-001",
+      "class": "synthetic",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "environment": "LOCAL_SYNTHETIC"
+    }
+  ],
+  "phase_execution_policy": {
+    "FW-07C-0": {
+      "allowed_risk_classes": ["R0"],
+      "deny_risk_classes": ["R1", "R2", "R3", "R4", "R5"]
+    }
+  }
+}

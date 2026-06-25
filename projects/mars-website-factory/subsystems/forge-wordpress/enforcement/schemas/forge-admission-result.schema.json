@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forge-admission-result.schema.json",
+  "title": "Forge Admission Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "admitted",
+    "decision",
+    "reason_codes",
+    "operation_id",
+    "risk_class",
+    "phase"
+  ],
+  "properties": {
+    "admitted": { "type": "boolean" },
+    "decision": {
+      "type": "string",
+      "enum": ["ADMIT", "DENY"]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "operation_id": { "type": "string" },
+    "risk_class": { "type": "string" },
+    "phase": { "type": "string" },
+    "path_validation": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

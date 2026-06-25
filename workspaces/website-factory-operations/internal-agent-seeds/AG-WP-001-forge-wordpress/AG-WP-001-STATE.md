@@ -2,8 +2,8 @@
 
 **Agent ID:** AG-WP-001
 **Canonical Name:** Forge WordPress
-**Last updated:** 2026-06-25
-**Charter:** FW-07A/B foundation complete; FW-07C preflight complete
+**Last updated:** 2026-06-26
+**Charter:** FW-07A/B foundation complete; FW-07C preflight complete; FW-07C-0 enforcement foundation implemented
 
 ---
 
@@ -16,7 +16,8 @@
 | **Typed operations** | **42 DEFINED** — `operations/ag-wp-001/operations-v1.json` |
 | **Runtime bindings** | **0 proven** — 11 `BOUND_NOT_IMPLEMENTED`, 31 `UNBOUND` |
 | **FW-07C preflight** | **COMPLETE** — [FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/FW-07C-SAFETY-ENFORCEMENT-PREFLIGHT-v1.md) |
-| **FW-07C-0** | **AUTHORIZED** — enforcement foundation (repo only) |
+| **FW-07C-0** | **IMPLEMENTED_AND_VALIDATED_IN_REPO** — [enforcement/README.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/enforcement/README.md) |
+| **FW-07C-1** | **BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT** |
 | **Autonomous runtime** | **NONE** |
 | **Production authority** | **NONE** |
 | **Formal registry promotion** | **NOT PERFORMED** — requires operator charter |
@@ -29,13 +30,14 @@
 ```text
 AG-WP-001:
 BRAIN PRESERVED — FW-07A/B COMPLETE
-RUNTIME INACTIVE — FW-07C harness NOT BUILT
+FW-07C-0 ENFORCEMENT — IMPLEMENTED_AND_VALIDATED_IN_REPO
+RUNTIME INACTIVE — FW-07C-1 BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT
 FW-07C PREFLIGHT: COMPLETE
-NEXT: FW-07C-0 enforcement foundation (repo only)
+NEXT: FW-07C-1 local synthetic runtime binding preflight (fws-0001)
 
 Autonomous runtime: NONE
 Production authority: NONE
-Filesystem enforcement: DOCUMENTED_ONLY (until FW-07C-0)
+Filesystem enforcement: REPO-ONLY (FW-07C-0 validated)
 ```
 
 **Not registered in `agents/registry.md`.** Do not claim autonomous WordPress agent.

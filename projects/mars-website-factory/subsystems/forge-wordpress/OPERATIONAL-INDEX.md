@@ -22,8 +22,8 @@ FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 FW-07A — COMPLETE (AG-WP-001 foundation)
 FW-07B — COMPLETE (AG-WP-001 typed operations)
 FW-07C — Safety Preflight — COMPLETE (2026-06-25)
-FW-07C-0 — Enforcement Foundation — AUTHORIZED (not started)
-FW-07C-1 — Local Read-Only Harness — PLANNED (after FW-07C-0)
+FW-07C-0 — Enforcement Foundation — IMPLEMENTED_AND_VALIDATED_IN_REPO (2026-06-26)
+FW-07C-1 — Local Read-Only Harness — BLOCKED_BY_RUNTIME_BINDING_PREFLIGHT
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
 Standards: BASELINE v1

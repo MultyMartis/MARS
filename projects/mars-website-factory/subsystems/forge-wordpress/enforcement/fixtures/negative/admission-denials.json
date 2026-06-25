@@ -1,0 +1,156 @@
+[
+  {
+    "fixture_id": "neg-unknown-operation",
+    "request": {
+      "operation_id": "wp.unknown.operation",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_OPERATION_UNKNOWN"
+  },
+  {
+    "fixture_id": "neg-unknown-environment",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "UNKNOWN_ENV",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_ENVIRONMENT_DENIED"
+  },
+  {
+    "fixture_id": "neg-missing-site-id",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_SITE_ID_MISSING"
+  },
+  {
+    "fixture_id": "neg-missing-runtime-binding",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "UNBOUND"
+    },
+    "expected_code": "FW_RUNTIME_BINDING_MISSING"
+  },
+  {
+    "fixture_id": "neg-missing-reparse-verification",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "UNKNOWN",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_REPARSE_STATUS_REQUIRED"
+  },
+  {
+    "fixture_id": "neg-kill-switch-disabled",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "GLOBAL_DISABLED",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_KILL_SWITCH_DISABLED"
+  },
+  {
+    "fixture_id": "neg-emergency-stop",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "EMERGENCY_STOP",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_KILL_SWITCH_EMERGENCY"
+  },
+  {
+    "fixture_id": "neg-r1-operation-fw07c0",
+    "request": {
+      "operation_id": "wp.plan.implementation",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_RISK_CLASS_DENIED"
+  },
+  {
+    "fixture_id": "neg-r3-destructive-operation",
+    "request": {
+      "operation_id": "wp.backup.create",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_SYNTHETIC",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_RISK_CLASS_DENIED"
+  },
+  {
+    "fixture_id": "neg-remote-environment",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "REMOTE_PRODUCTION",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_ENVIRONMENT_DENIED"
+  },
+  {
+    "fixture_id": "neg-local-project-runtime",
+    "request": {
+      "operation_id": "wp.inspect.theme",
+      "site_id": "fws-0001",
+      "environment": "LOCAL_PROJECT_RUNTIME",
+      "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+      "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+      "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+      "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING"
+    },
+    "expected_code": "FW_ENVIRONMENT_DENIED"
+  }
+]

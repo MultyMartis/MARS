@@ -11,7 +11,7 @@
 
 ## Zones
 
-### Brain authority — `C:\AI MARS`
+### Brain authority — `C:\MARS Phenix\AI MARS`
 
 | Allowed class | Examples |
 |---------------|----------|
@@ -46,7 +46,7 @@
 
 | Operation class | Read | Write |
 |-----------------|------|-------|
-| `wp.inspect.*` (brain) | `C:\AI MARS` project paths | none |
+| `wp.inspect.*` (brain) | `C:\MARS Phenix\AI MARS` project paths | none |
 | `wp.inspect.*` (runtime) | MLI manifest paths, theme/plugin in runtime | none |
 | `wp.plan.*` | brain docs | brain draft artifacts only |
 | `wp.validate.*` (source) | project PHP/theme paths | report artifacts only |

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forge-kill-switch-state.schema.json",
+  "title": "Forge Kill Switch State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["state", "phase", "evaluated_at"],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": [
+        "GLOBAL_DISABLED",
+        "SITE_DISABLED",
+        "SITE_ENABLED_READ_ONLY",
+        "EMERGENCY_STOP"
+      ]
+    },
+    "site_id": { "type": "string" },
+    "phase": { "type": "string" },
+    "evaluated_at": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

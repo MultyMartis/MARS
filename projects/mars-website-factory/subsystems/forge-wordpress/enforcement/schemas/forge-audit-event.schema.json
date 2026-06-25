@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forge-audit-event.schema.json",
+  "title": "Forge Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "timestamp",
+    "agent_id",
+    "operation_id",
+    "site_id",
+    "environment",
+    "raw_path",
+    "normalized_path",
+    "risk_class",
+    "validator_decision",
+    "reason_codes",
+    "dry_run_status",
+    "execution_status",
+    "rollback_status"
+  ],
+  "properties": {
+    "timestamp": { "type": "string", "format": "date-time" },
+    "agent_id": { "type": "string" },
+    "operation_id": { "type": "string" },
+    "site_id": { "type": "string" },
+    "environment": { "type": "string" },
+    "raw_path": { "type": "string" },
+    "normalized_path": { "type": "string" },
+    "risk_class": { "type": "string" },
+    "validator_decision": {
+      "type": "string",
+      "enum": ["ADMIT", "DENY"]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dry_run_status": { "type": "string" },
+    "snapshot_id": { "type": ["string", "null"] },
+    "approval_id": { "type": ["string", "null"] },
+    "execution_status": { "type": "string" },
+    "rollback_status": { "type": "string" }
+  }
+}

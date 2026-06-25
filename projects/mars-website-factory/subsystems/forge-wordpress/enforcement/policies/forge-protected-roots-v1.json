@@ -1,0 +1,23 @@
+{
+  "policy_id": "FORGE-PROTECTED-ROOTS-v1",
+  "version": "1.0.0",
+  "phase": "FW-07C-0",
+  "description": "Protected roots that must never be write targets. Parent roots deny bulk mutation; registered descendants may be allowlisted per site manifest in later phases.",
+  "protected_roots": [
+    "C:\\",
+    "C:\\Users",
+    "C:\\Windows",
+    "C:\\Program Files",
+    "C:\\Program Files (x86)",
+    "C:\\MARS Phenix",
+    "C:\\AI MARS",
+    "C:\\AI MARS STORAGE",
+    "C:\\this is backUP AI MARS 23.06.2026",
+    "E:\\",
+    "E:\\MARS-Localhost"
+  ],
+  "notes": {
+    "E_MARS_Localhost": "Protected parent; exact site sandbox descendants require registered allowlist in FW-07C-1+",
+    "canonical_repo": "C:\\MARS Phenix\\AI MARS is a descendant of C:\\MARS Phenix — repo paths are not bulk write targets"
+  }
+}

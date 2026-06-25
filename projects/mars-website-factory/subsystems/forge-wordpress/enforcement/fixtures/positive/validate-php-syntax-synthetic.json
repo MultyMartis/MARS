@@ -1,0 +1,19 @@
+{
+  "fixture_id": "positive-validate-php-syntax",
+  "description": "R0 validate PHP syntax on synthetic theme file path",
+  "request": {
+    "operation_id": "wp.validate.php_syntax",
+    "site_id": "fws-0001",
+    "environment": "LOCAL_SYNTHETIC",
+    "raw_path": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes\\active-theme\\functions.php",
+    "allowed_root": "E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY",
+    "reparse_status": "TEST_ONLY_SYNTHETIC_BINDING",
+    "runtime_binding_status": "TEST_ONLY_SYNTHETIC_BINDING",
+    "dry_run_status": "NOT_REQUIRED"
+  },
+  "expected": {
+    "admitted": true,
+    "decision": "ADMIT"
+  }
+}
