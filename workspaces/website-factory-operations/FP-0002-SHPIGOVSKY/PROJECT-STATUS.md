@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-24 (V7 Package #001 final polish)
+**Last updated:** 2026-06-26 (V7 operator manual polish checkpoint before Package #002)
 
 ## Workspace versions (2026-06-24)
 
@@ -29,6 +29,11 @@ gallery_captions: POSITION_BELOW_IMAGE — COMPLETE
 recovery_life: DESKTOP_COMPLETE / MOBILE_RESPONSIVE_DERIVED_COMPLETE
 section_spacing_cleanup: COMPLETE
 global_visual_polish: COMPLETE_PENDING_OPERATOR_FINAL_REVIEW
+
+operator_manual_checkpoint:
+  date: 2026-06-26
+  note: Operator manual polish checkpoint before Package #002. Current src is operator-canonical. Existing manual dimensions, spacing, typography and composition must be preserved.
+  package_002: NOT_STARTED
 ```
 
 ## Milestone (2026-06-23)

@@ -218,7 +218,7 @@
 
 		new window.Swiper(slider, {
 			slidesPerView: 4,
-			spaceBetween: 20,
+			spaceBetween: 30,
 			loop: false,
 			autoplay: false,
 			navigation: false,
@@ -235,8 +235,8 @@
 					spaceBetween: 20,
 				},
 				1025: {
-					slidesPerView: 4,
-					spaceBetween: 20,
+					slidesPerView: 3.5,
+					spaceBetween: 30,
 				},
 			},
 		});
@@ -268,7 +268,7 @@
 
 		new window.Swiper(slider, {
 			slidesPerView: 2.2,
-			spaceBetween: 20,
+			spaceBetween: 30,
 			loop: false,
 			autoplay: false,
 			navigation: false,
@@ -291,7 +291,7 @@
 				},
 				1025: {
 					slidesPerView: 2.5,
-					spaceBetween: 20,
+					spaceBetween: 30,
 				},
 			},
 		});
@@ -321,7 +321,7 @@
 
 		new window.Swiper(slider, {
 			slidesPerView: 3.5,
-			spaceBetween: 20,
+			spaceBetween: 30,
 			loop: false,
 			autoplay: false,
 			navigation: false,
@@ -339,7 +339,7 @@
 				},
 				1025: {
 					slidesPerView: 3.5,
-					spaceBetween: 20,
+					spaceBetween: 30,
 				},
 			},
 		});

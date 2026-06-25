@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-24 (Package #001 final polish)
+**Updated:** 2026-06-26 (Operator manual polish checkpoint before Package #002)
 
 ```text
 workspace: V7
@@ -57,6 +57,11 @@ captcha: BLOCKED
 
 visible_content_authority_rule: ACTIVE
 hidden_layer_exclusion_rule: ACTIVE
+
+operator_manual_checkpoint:
+  date: 2026-06-26
+  note: Operator manual polish checkpoint before Package #002. Current src is operator-canonical. Existing manual dimensions, spacing, typography and composition must be preserved.
+  package_002: NOT_STARTED
 ```
 
 ## Parent reference
