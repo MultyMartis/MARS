@@ -25,8 +25,9 @@
 
 | Tree | Path | Status |
 |------|------|--------|
-| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_RECOVERY_SOURCE` — pre-cutover working copy; **not** canonical; do not use as write target |
-| **Immutable pre-incident backup** | `C:\this is backUP AI MARS 23.06.2026` | `IMMUTABLE_PRE_INCIDENT_BACKUP` — forensic evidence only |
+| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_HOLD` — pre-cutover forward checkout; **not** canonical; see [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md) |
+| **Legacy bulk storage** | `C:\AI MARS STORAGE` | `LEGACY_READ_ONLY_HOLD` — unique-content audit complete 2026-06-25; **0** archive blockers; forensic recovery clone superseded by Phoenix Git |
+| **Immutable pre-incident backup** | `C:\this is backUP AI MARS 23.06.2026` | `PERMANENT_IMMUTABLE_BACKUP` — **not** archive candidate; do not delete |
 | **Historical runtime letter** | `D:\MARS-Localhost` | Preserved in incident reports and MLI-03R.* evidence; active operator runtime confirmed on **E:** after Windows reinstall (2026-06-25 reconciliation) |
 
 ---
@@ -72,7 +73,7 @@
 1. **One workspace root** — `C:\MARS Phenix\AI MARS` is the only MARS git working copy for documentation and agent scope unless the operator charters an explicit exception in the task.
 2. **Storage is support only** — Do not describe `C:\MARS Phenix\AI MARS STORAGE` as a second MARS repo, runtime instance, or governance root.
 3. **Localhost executes on E:** — `E:\MARS-Localhost` is shared local **execution** only; governance and Git remain on `C:\MARS Phenix\AI MARS`. Do not relocate MARS brain to E:.
-4. **Legacy hold** — `C:\AI MARS` remains on disk as `LEGACY_READ_ONLY_RECOVERY_SOURCE` until a separate archival decision; do not delete on cutover.
+4. **Legacy hold** — `C:\AI MARS` and `C:\AI MARS STORAGE` remain on disk under `LEGACY_READ_ONLY_HOLD` until operator-approved archival; do not delete on cutover or by automation. See [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md).
 5. **Preserve history** — Migration plans, drill logs, incident reports, and archived reports may show `C:\AI MARS`, `C:\AI MARS STORAGE`, or `D:\MARS-Localhost`; mark **historical** in new docs, do not rewrite evidence.
 6. **SAFE UNKNOWN** — Existence of on-disk folders under storage roots, sync/NAS layout, and per-machine mirrors are operator infrastructure unless verified in session.
 
@@ -83,6 +84,7 @@
 | Topic | Path |
 |-------|------|
 | Phoenix cutover receipt | [mars-phoenix-recovery-cutover-receipt-v1.md](mars-phoenix-recovery-cutover-receipt-v1.md) |
+| Legacy tree retention | [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md) |
 | OCPilot bulk registry | [projects/ocpilot/external-storage-registry.md](../projects/ocpilot/external-storage-registry.md) |
 | MARS storage family | [projects/ocpilot/mars-storage-family-note.md](../projects/ocpilot/mars-storage-family-note.md) |
 | EAR placement (repo vs external artefacts) | [projects/ear-runtime/DECISION-EAR-RUNTIME-PLACEMENT-v1.md](../projects/ear-runtime/DECISION-EAR-RUNTIME-PLACEMENT-v1.md) |

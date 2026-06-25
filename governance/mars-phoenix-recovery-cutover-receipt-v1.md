@@ -39,8 +39,9 @@ E:\MARS-Localhost executes.
 
 | Tree | Path | Status |
 |------|------|--------|
-| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_RECOVERY_SOURCE` — **not** canonical working copy; **no** deletion on this cutover |
-| **Immutable pre-incident backup** | `C:\this is backUP AI MARS 23.06.2026` | `IMMUTABLE_PRE_INCIDENT_BACKUP` — forensic evidence only |
+| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_HOLD` — **not** canonical working copy; **no** deletion on this cutover |
+| **Legacy bulk storage** | `C:\AI MARS STORAGE` | `LEGACY_READ_ONLY_HOLD` — unique-content audit 2026-06-25 complete; see [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md) |
+| **Immutable pre-incident backup** | `C:\this is backUP AI MARS 23.06.2026` | `PERMANENT_IMMUTABLE_BACKUP` — forensic evidence only; **not** archive candidate |
 | **Reconstruction control** | `C:\MARS Phenix\_reconstruction-control` | Out-of-repo manifests, checkpoints, reports |
 
 Historical documentation may still cite `C:\AI MARS` or `D:\MARS-Localhost` where those paths describe **past** operator state. Do **not** mass-rewrite incident, drill, or receipt evidence.
