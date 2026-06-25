@@ -1,7 +1,7 @@
 # MARS Phoenix — Recovery and canonical cutover receipt v1
 
-**Status:** **documented** — operator-authoritative cutover record after 2026-06-24 incident reconstruction.
-**Is not:** branch integration decision, legacy archival execution, or runtime migration proof.
+**Status:** **documented** — operator-authoritative cutover record; legacy archive snapshots verified 2026-06-25.
+**Is not:** branch integration decision, runtime migration proof, or off-disk redundancy execution.
 
 ---
 
@@ -39,9 +39,10 @@ E:\MARS-Localhost executes.
 
 | Tree | Path | Status |
 |------|------|--------|
-| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_HOLD` — **not** canonical working copy; **no** deletion on this cutover |
-| **Legacy bulk storage** | `C:\AI MARS STORAGE` | `LEGACY_READ_ONLY_HOLD` — unique-content audit 2026-06-25 complete; see [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md) |
+| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_HOLD_SOURCE` — sources retained; archive: `_legacy-hold\AI MARS-forward-source-2026-06-25` |
+| **Legacy bulk storage** | `C:\AI MARS STORAGE` | `LEGACY_READ_ONLY_HOLD_SOURCE` — archive: `_legacy-hold\AI MARS STORAGE-forward-source-2026-06-25` |
 | **Immutable pre-incident backup** | `C:\this is backUP AI MARS 23.06.2026` | `PERMANENT_IMMUTABLE_BACKUP` — forensic evidence only; **not** archive candidate |
+| **Legacy archive hold** | `C:\MARS Phenix\_legacy-hold\` | Verified same-disk snapshots 2026-06-25 — **not** canonical |
 | **Reconstruction control** | `C:\MARS Phenix\_reconstruction-control` | Out-of-repo manifests, checkpoints, reports |
 
 Historical documentation may still cite `C:\AI MARS` or `D:\MARS-Localhost` where those paths describe **past** operator state. Do **not** mass-rewrite incident, drill, or receipt evidence.
@@ -72,8 +73,9 @@ Historical documentation may still cite `C:\AI MARS` or `D:\MARS-Localhost` wher
 ## Outstanding (explicit non-goals of this receipt)
 
 - Merge recovery branch into `mars/post-cycle8-live-tests` or `main`
-- Delete, rename, or archive `C:\AI MARS`
-- Modify contents of legacy trees or original backup
+- Delete, rename, or move `C:\AI MARS` or `C:\AI MARS STORAGE` (sources retained after 2026-06-25 archive)
+- Modify contents of original backup
+- Off-disk redundancy copy execution (pending operator action)
 - Start Laragon/MySQL/CMS runtime services
 - Claim full Windows reboot / MLI cold-start validation complete
 

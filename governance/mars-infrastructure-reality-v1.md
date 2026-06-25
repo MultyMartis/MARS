@@ -25,9 +25,10 @@
 
 | Tree | Path | Status |
 |------|------|--------|
-| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_HOLD` — pre-cutover forward checkout; **not** canonical; see [mars-legacy-tree-retention-decision-v1.md](mars-legacy-tree-retention-decision-v1.md) |
-| **Legacy bulk storage** | `C:\AI MARS STORAGE` | `LEGACY_READ_ONLY_HOLD` — unique-content audit complete 2026-06-25; **0** archive blockers; forensic recovery clone superseded by Phoenix Git |
+| **Legacy current MARS** | `C:\AI MARS` | `LEGACY_READ_ONLY_HOLD_SOURCE` — pre-cutover forward checkout; archive copy under `_legacy-hold` |
+| **Legacy bulk storage** | `C:\AI MARS STORAGE` | `LEGACY_READ_ONLY_HOLD_SOURCE` — archive copy under `_legacy-hold` |
 | **Immutable pre-incident backup** | `C:\this is backUP AI MARS 23.06.2026` | `PERMANENT_IMMUTABLE_BACKUP` — **not** archive candidate; do not delete |
+| **Legacy archive hold** | `C:\MARS Phenix\_legacy-hold\` | `VERIFIED_ARCHIVE_EVIDENCE` — same-disk only; not canonical |
 | **Historical runtime letter** | `D:\MARS-Localhost` | Preserved in incident reports and MLI-03R.* evidence; active operator runtime confirmed on **E:** after Windows reinstall (2026-06-25 reconciliation) |
 
 ---
@@ -44,7 +45,8 @@
 | `C:\MARS Phenix\AI MARS\workspaces\`, `\local\`, `\backups\` | **canonical** (repo-relative) | Workspaces and WPilot local-only policy paths under workspace root. |
 | `E:\MARS-Localhost` | **canonical** (localhost runtime) | Operator-confirmed shared local execution root after drive-letter reconciliation (2026-06-25); brain docs in `projects/mars-localhost-infrastructure/`; **not** git, **not** governance SoT. |
 | `D:\MARS-Localhost` | **historical** (runtime) | Pre-reinstall / MLI-03R.* incident evidence; **do not** global-replace in historical reports. |
-| `C:\AI MARS`, `C:\AI MARS STORAGE` | **legacy** | Pre-cutover paths — may appear in historical docs, receipts, and evidence; **not** active operational authority after Phoenix cutover. |
+| `C:\AI MARS`, `C:\AI MARS STORAGE` | **legacy (source)** | Pre-cutover paths — retained in place; **not** active operational authority |
+| `C:\MARS Phenix\_legacy-hold\` | **archive evidence** | Verified 2026-06-25 file copies; same-disk; not canonical |
 | `D:\AI MARS`, `D:/AI MARS` | **none in repo** | No matches at pass v1; if seen in external chats, treat as **historical/obsolete** unless operator re-confirms. |
 | `D:\MARS-WP` | **obsolete / none** | No repo matches; superseded by `E:\MARS-Localhost\sites\wordpress\` model if ever proposed. |
 | `storage/` (in-repo docs folder) | **canonical** (doc layer name) | Architecture contracts only — disambiguate from `C:\MARS Phenix\AI MARS STORAGE`. |
