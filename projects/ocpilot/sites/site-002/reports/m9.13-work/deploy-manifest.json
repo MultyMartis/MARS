@@ -1,0 +1,51 @@
+{
+  "pass": "m9.13-about-redesign",
+  "timestamp": "2026-06-22T19:13:15.737452+00:00",
+  "files": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "pre_sha256": "998321d3b3ea0a119b0aa688d9c6ebbcdc31431ced75110450026d24458202f8",
+      "pre_bytes": 3443,
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.twig.pre-m9.13-about-redesign.bak",
+      "post_sha256": "3d6ca15ea89e460950c4c1ee01a849ec534607a9b3baf08d6ef2a4c5210a9fc8",
+      "post_bytes": 18532
+    },
+    "catalog/controller/information/about.php": {
+      "pre_sha256": "77ac5ea35be5863f5c729c996743a8f8cd18af3e9afca328d4dcde7585b5fa8a",
+      "pre_bytes": 1687,
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.php.pre-m9.13-about-redesign.bak",
+      "post_sha256": "e598e6eba95d7b864b01e1f6ee0cddfeacf3e5705f20b541a33ac3c3df62e29f",
+      "post_bytes": 1864
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "6f91745218bfd7a455ebd3c23a28745d3c6ee60e8a26814c0ee5efc4723249cd",
+      "pre_bytes": 299779,
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.13-about-redesign.bak",
+      "post_sha256": "8a051a5b130e2f87f5b839f052140ee48da78c4f1cbe2471071ac685b285a9a5",
+      "post_bytes": 305315
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_ok": true,
+    "has_zpm_about_page": true,
+    "has_hero": true,
+    "has_proof_cards": true,
+    "has_advantages": true,
+    "has_certs_podium": true,
+    "has_fancybox_cert": true,
+    "has_geo": true,
+    "has_cta": true,
+    "has_2010": true,
+    "no_5x_metric": true,
+    "no_dealer_block": false,
+    "no_video_block": true,
+    "no_cert_slider": true,
+    "cert_link": true,
+    "delivery_link": true,
+    "form_dialog_7": true,
+    "proof_production": true,
+    "proof_docs": true,
+    "proof_made_in_russia": true,
+    "all_pass": false
+  }
+}

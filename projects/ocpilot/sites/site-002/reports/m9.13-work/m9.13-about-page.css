@@ -1,0 +1,369 @@
+/* ==========================================================================
+   M9.13 — About Company page — compact redesign
+   M9.13 polish pass v1 — trust row, spacing, cert balance, geo photo
+   ========================================================================== */
+
+.zpm-about-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-y);
+  padding-bottom: var(--pad-y);
+}
+
+/* §01 Hero */
+.zpm-about-hero {
+  padding-top: var(--pad-y);
+}
+
+.zpm-about-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
+  gap: var(--pad-gap);
+  align-items: center;
+}
+
+.zpm-about-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap);
+  min-width: 0;
+}
+
+.zpm-about-hero__lead {
+  margin: 0;
+  max-width: 720px;
+  font-size: var(--Heading-Font-size);
+  line-height: var(--Heading-Line-height);
+}
+
+.zpm-about-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--pad-gap-mini) var(--pad-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zpm-about-hero__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.zpm-about-hero__trust-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  font-size: 16px;
+  color: var(--accent-color-01);
+  flex-shrink: 0;
+}
+
+.zpm-about-hero__trust-text {
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+}
+
+.zpm-about-hero__media {
+  margin: 0;
+  border-radius: var(--radius-main);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+.zpm-about-hero__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.zpm-about-hero__caption {
+  padding: var(--pad-gap-mini) var(--pad-inner);
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+}
+
+/* §02 About company */
+.zpm-about-company__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap);
+  margin-bottom: var(--pad-gap);
+  max-width: 900px;
+}
+
+.zpm-about-company__title {
+  margin: 0;
+}
+
+.zpm-about-company__text {
+  margin: 0;
+}
+
+.zpm-about-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--pad-gap);
+}
+
+.zpm-about-proof-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap);
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  min-width: 0;
+}
+
+.zpm-about-proof-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  font-size: 28px;
+  color: var(--accent-color-01);
+  flex-shrink: 0;
+}
+
+.zpm-about-proof-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-mini);
+  min-width: 0;
+}
+
+.zpm-about-proof-card__title {
+  margin: 0;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-about-proof-card__text {
+  margin: 0;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+}
+
+/* §03 Advantages */
+.zpm-about-advantages__title {
+  margin: 0 0 var(--pad-y);
+}
+
+.zpm-about-advantages .zpm-adv-bottom {
+  padding: 0;
+}
+
+/* §04 Certificates */
+.zpm-about-certs__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 460px);
+  gap: var(--pad-gap);
+  align-items: center;
+}
+
+.zpm-about-certs__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap);
+  min-width: 0;
+}
+
+.zpm-about-certs__title {
+  margin: 0;
+}
+
+.zpm-about-certs__text,
+.zpm-about-certs__meta,
+.zpm-about-certs__note {
+  margin: 0;
+}
+
+.zpm-about-certs__note {
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+}
+
+.zpm-about-certs__cert {
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.zpm-about-certs .zpm-commercial-trust__cert-col {
+  max-width: none;
+  width: 100%;
+  padding: 72px var(--pad-inner) 118px;
+}
+
+.zpm-about-certs .zpm-commercial-trust__cert-card {
+  max-width: 280px;
+}
+
+.zpm-about-certs .zpm-commercial-trust__cert-card--base {
+  bottom: 12px;
+}
+
+/* §05 Geography */
+.zpm-about-geo__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pad-gap);
+  align-items: center;
+}
+
+.zpm-about-geo__media {
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 280px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.zpm-about-geo__media img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.zpm-about-geo__content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--pad-gap) * 0.85);
+  min-width: 0;
+}
+
+.zpm-about-geo__title {
+  margin: 0;
+}
+
+.zpm-about-geo__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zpm-about-geo__list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+.zpm-about-geo__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-color-01);
+}
+
+.zpm-about-geo__link {
+  align-self: flex-start;
+}
+
+/* §06 CTA */
+.zpm-about-cta {
+  padding-top: var(--pad-y);
+}
+
+.zpm-about-cta .zpm-commercial-trust__wrap {
+  align-items: stretch;
+}
+
+.zpm-about-cta__benefits {
+  margin-top: var(--pad-gap);
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .zpm-about-proof__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .zpm-about-hero__grid,
+  .zpm-about-certs__grid,
+  .zpm-about-geo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-about-hero__media {
+    order: -1;
+  }
+
+  .zpm-about-certs .zpm-commercial-trust__cert-col {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .zpm-about-certs .zpm-commercial-trust__cert-card {
+    max-width: 240px;
+  }
+
+  .zpm-about-cta .zpm-commercial-trust__wrap {
+    flex-direction: column;
+  }
+
+  .zpm-about-cta .zpm-commercial-trust__form-wrap {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .zpm-about-proof__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-about-hero__trust {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--pad-gap-mini);
+  }
+
+  .zpm-about-geo__media {
+    min-height: 220px;
+  }
+
+  .zpm-about-geo__media img {
+    min-height: 220px;
+  }
+
+  .zpm-about-certs .zpm-commercial-trust__cert-card {
+    max-width: 220px;
+  }
+}

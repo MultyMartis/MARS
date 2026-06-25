@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-06-22T05:54:01.280Z",
+  "anchors": [
+    "маркировка лекарств проверить",
+    "маркировка автозапчастей 2026",
+    "маркировка автозапчастей честный знак 2026",
+    "1с программист 2026"
+  ],
+  "cleanup_items": [
+    {
+      "keyword_id": "kw-corv01-disc-2272",
+      "phrase": "маркировка лекарств проверить",
+      "group": "CORV-G06-08",
+      "v6_status": "ACTIVE COMMERCIAL",
+      "v6_reason": "ACTIVE: «маркировка лекарств проверить» — заказ услуги «Маркировка лекарств в 1С»; ключевые сигналы: маркировка, лекарств, проверить.",
+      "cleanup_pattern": "regression_anchor_informational",
+      "v7_decision": "EXCLUDE",
+      "v7_reason": "EXCLUDE INFORMATIONAL: regression_anchor_informational"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-2300",
+      "phrase": "маркировка автозапчастей 2026",
+      "group": "CORV-G06-10",
+      "v6_status": "ACTIVE COMMERCIAL",
+      "v6_reason": "ACTIVE: «маркировка автозапчастей 2026» — заказ услуги «Маркировка автозапчастей в 1С»; ключевые сигналы: маркировка, автозапчастей, 2026.",
+      "cleanup_pattern": "regression_anchor_informational",
+      "v7_decision": "EXCLUDE",
+      "v7_reason": "EXCLUDE INFORMATIONAL: regression_anchor_informational"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-2308",
+      "phrase": "маркировка автозапчастей честный знак 2026",
+      "group": "CORV-G06-10",
+      "v6_status": "ACTIVE COMMERCIAL",
+      "v6_reason": "ACTIVE: «маркировка автозапчастей честный знак 2026» — заказ услуги «Маркировка автозапчастей в 1С»; ключевые сигналы: маркировка, автозапчастей, честный, знак, 2026.",
+      "cleanup_pattern": "regression_anchor_informational",
+      "v7_decision": "EXCLUDE",
+      "v7_reason": "EXCLUDE INFORMATIONAL: regression_anchor_informational"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-037",
+      "phrase": "1с программист 2026",
+      "group": "CORV-G01-01",
+      "v6_status": "HOLD",
+      "v6_reason": "ACTIVE: «1с программист 2026» — заказ услуги «Услуги программиста 1С для организаций»; ключевые сигналы: программист, 2026.",
+      "cleanup_pattern": "regression_anchor_informational",
+      "v7_decision": "EXCLUDE",
+      "v7_reason": "EXCLUDE INFORMATIONAL: regression_anchor_informational"
+    }
+  ],
+  "leakage_count_v6": 4,
+  "target_leakage_v7": 0
+}

@@ -1,0 +1,27 @@
+{
+  "registry_id": "clusters-synth-v1",
+  "clusters": [
+    {
+      "cluster_id": "cl-t1-consult",
+      "service_id": "svc-consulting",
+      "tier": "T1",
+      "phrases": [
+        { "phrase_id": "p1", "text": "заказать внедрение 1с", "decision": "ACCEPT" },
+        { "phrase_id": "p2", "text": "специалист 1с под ключ", "decision": "ACCEPT" }
+      ]
+    },
+    {
+      "cluster_id": "cl-t2-problem",
+      "service_id": "svc-consulting",
+      "tier": "T2",
+      "phrases": [{ "phrase_id": "p3", "text": "ошибка 1с не открывается", "decision": "ACCEPT" }]
+    },
+    {
+      "cluster_id": "cl-t5-exp",
+      "service_id": "svc-consulting",
+      "tier": "T5",
+      "phrases": [{ "phrase_id": "p5", "text": "аутсорсинг 1с цена", "decision": "ACCEPT" }]
+    }
+  ],
+  "collected_at": "2026-06-20T12:00:00Z"
+}

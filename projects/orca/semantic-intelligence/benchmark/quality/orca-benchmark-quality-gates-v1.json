@@ -1,0 +1,60 @@
+{
+  "gates_id": "orca-benchmark-quality-gates",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "gates": [
+    {
+      "id": "BQG-01",
+      "gate": "charter_operator_approval",
+      "blocks": "B0_execution"
+    },
+    {
+      "id": "BQG-02",
+      "gate": "b0_qualification_pass",
+      "blocks": "B1_scale_up"
+    },
+    {
+      "id": "BQG-03",
+      "gate": "schema_validity_100pct",
+      "threshold_status": "PROPOSED — VALIDATE B0"
+    },
+    {
+      "id": "BQG-04",
+      "gate": "double_annotation_complete_mandatory_cohorts",
+      "blocks": "gold_freeze"
+    },
+    {
+      "id": "BQG-05",
+      "gate": "adjudication_backlog_zero",
+      "blocks": "gold_freeze"
+    },
+    {
+      "id": "BQG-06",
+      "gate": "blind_seal_checklist",
+      "blocks": "BLIND_EVALUATION"
+    },
+    {
+      "id": "BQG-07",
+      "gate": "d3_commercial_precision",
+      "threshold": 0.95,
+      "threshold_status": "OPERATOR-APPROVED"
+    },
+    {
+      "id": "BQG-08",
+      "gate": "d3_protected_fpr",
+      "threshold": 0.01,
+      "threshold_status": "OPERATOR-APPROVED"
+    },
+    {
+      "id": "BQG-09",
+      "gate": "leakage_controls_pass",
+      "blocks": "p0_f_baselines"
+    },
+    {
+      "id": "BQG-10",
+      "gate": "operator_gold_freeze_signoff",
+      "blocks": "RELEASED_FOR_DEVELOPMENT"
+    }
+  ]
+}

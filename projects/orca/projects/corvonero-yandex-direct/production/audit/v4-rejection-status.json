@@ -1,0 +1,14 @@
+{
+  "registered_at": "2026-06-22T00:00:00.000Z",
+  "commander_v4": "REJECTED BY OPERATOR — EVIDENCE QA FAILURE",
+  "review_workbook_v4": "REJECTED BY OPERATOR — FORMAL QA EVIDENCE",
+  "v4_pipeline": "AUDIT INPUT",
+  "launch_readiness": "NOT ASSESSED",
+  "preserved_files": [
+    "exports/CORVONERO-YANDEX-DIRECT-COMMANDER-v4.xlsx",
+    "exports/CORVONERO-CAMPAIGN-REVIEW-v4.xlsx",
+    "production/direct-commander-production-dataset-v4.json",
+    "production/semantic-human-review-v4.json"
+  ],
+  "superseded_by": "v5 — pending operator review"
+}

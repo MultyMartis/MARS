@@ -1,11 +1,52 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-23 (services hub foundation)
+**Last updated:** 2026-06-24 (V7 Package #001 final polish)
+
+## Workspace versions (2026-06-24)
+
+| Workspace | Path | Lifecycle | Tag / parent |
+|-----------|------|-----------|--------------|
+| **V6** | `workspaces/fp-0002-shpigovsky-v6/` | **FROZEN_FALLBACK** | `fp-0002-v6-final-before-v7-operator-stable-01` |
+| **V7** | `workspaces/fp-0002-shpigovsky-v7/` | **ACTIVE_DEVELOPMENT** | `fp-0002-v7-pre-final-polish-operator-stable-01` |
+
+```text
+V7 design authority: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig
+V7 design authority SHA-256: BAE5D91C74B5A22AFC610F7C7845B9BADC6B87EC8DA85C5705ECF4EEC4DE3041
+Historical Figma (Шпиговский.fig): DO NOT USE FOR NEW WORK
+Factory Figma rules: projects/mars-website-factory/figma-inspection-authority-rules-v1.md
+package_001: COMPLETE_PENDING_OPERATOR_FINAL_REVIEW
+package_001_phase_1_figma_rules: COMPLETE
+package_001_phase_2_head: TECHNICALLY_COMPLETE
+package_001_phase_3a_intro_content: COMPLETE
+package_001_phase_3b_founder_quote_svg: COMPLETE
+package_001_phase_3b_gallery_captions: COMPLETE
+package_001_phase_3c_recovery_life: DESKTOP_COMPLETE
+package_001_phase_3c_mobile: MOBILE_RESPONSIVE_DERIVED_COMPLETE
+package_001_phase_4a_spacing_cleanup: COMPLETE
+package_001_phase_9_global_polish: COMPLETE_PENDING_OPERATOR_FINAL_REVIEW
+gallery_captions: POSITION_BELOW_IMAGE — COMPLETE
+recovery_life: DESKTOP_COMPLETE / MOBILE_RESPONSIVE_DERIVED_COMPLETE
+section_spacing_cleanup: COMPLETE
+global_visual_polish: COMPLETE_PENDING_OPERATOR_FINAL_REVIEW
+```
 
 ## Milestone (2026-06-23)
 
-**FP-0002 SERVICES HUB FOUNDATION** — static page `uslugi.html` assembled from shared blocks; unique hub sections **not started**. Prior desktop baseline frozen at `FP-0002-V6-DESKTOP-STABLE-01`.
+**FP-0002 WORDPRESS FOUNDATION CLOSURE (FW-06A.1)** — local runtime `shpigovsky.test` validated: direct domain PASS, `wp db check` PASS, Playwright foundation smoke PASS. Theme integration **LOCKED** until Frontend Production Pass and FW-06B.
+
+## MLI-03R.1 post-reboot (2026-06-24)
+
+After full Windows reboot, MySQL datadir/config drift broke DB connectivity. Remediation restored authoritative `my.ini`, loopback binding, and X Protocol disable. **No reinstall, no DB recreate, no password rotation.**
+
+```text
+FP-0002 WordPress foundation:
+READY — POST-REBOOT VALIDATED
+
+Evidence:
+wp db check PASS; HTTP 200; Playwright 5/5; controlled MySQL restart PASS
+Report: projects/mars-localhost-infrastructure/reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md
+```
 
 ---
 
@@ -31,8 +72,8 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 | Lane | Status |
 |------|--------|
-| **Frontend** | **In progress** — Home complete; **Services hub foundation** (`uslugi.html`) pending operator review |
-| **WordPress** | Not Started |
+| **Frontend** | **V7 ACTIVE_DEVELOPMENT** — Package #001 complete pending operator final review (gallery captions below image, controlled polish) |
+| **WordPress** | **Foundation READY — POST-REBOOT VALIDATED (MLI-03R.1)** — local runtime `shpigovsky.test`; theme integration **LOCKED** until Production Pass + FW-06B |
 | **QA** | Not Started |
 | **Delivery** | Not Started |
 
@@ -44,7 +85,22 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 |-------|-------|
 | **Design Materials** | Awaiting Intake |
 | **Page Inventory** | **Updated** — `foundation/FP-0002-V6-PAGE-INVENTORY.md` in V6 workspace |
-| **Block Inventory** | Factory doc exists; services unique blocks not started |
+| **Block Inventory** | **Updated** — `reviews/services-page/reuse-only/FP-0002-HOME-BLOCK-INVENTORY-v1.md` |
+
+---
+
+## Services page status
+
+| Field | Value |
+|-------|-------|
+| `services_foundation` | COMPLETE |
+| `services_rejected_unique_implementation` | REVERTED (`25bfbce`) |
+| `services_reuse_matrix` | COMPLETE |
+| `services_page_mode` | REUSE_ONLY |
+| `services_exact_reused_blocks` | header, program, founder, comfort, FAQ, final form, footer, modal |
+| `services_new_unique_blocks` | 0 |
+| `services_unimplemented_blocks` | hero, addictions, mental-health, eating-disorders |
+| `services_unique_blocks` | REJECTED_AND_REVERTED |
 
 ---
 
@@ -73,7 +129,7 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 
 ## Next gate
 
-**Factory onboarding** — Playbook 01 Manifest Enrollment Workflow (see [FP-0002-ONBOARDING-READINESS.md](FP-0002-ONBOARDING-READINESS.md)).
+**Package #001** — implementation complete pending operator final visual review. WordPress theme integration **LOCKED** until operator sign-off + FW-06B.
 
 ---
 

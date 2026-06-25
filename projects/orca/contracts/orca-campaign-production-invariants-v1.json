@@ -1,0 +1,150 @@
+{
+  "registry_id": "orca-campaign-production-invariants-v1",
+  "contract_id": "ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1",
+  "version": "1.0.0",
+  "invariants": [
+    {
+      "invariant_id": "INV-SCOPE-01",
+      "class": "operator_scope",
+      "checked_entities": ["operator_service_scope.services", "production_dataset.groups", "production_dataset.keywords"],
+      "source_of_authority": "operator-service-scope registry + operator-scope-correction",
+      "pass_condition": "Every service with absence_from_production_permitted=false has an active export group with at least one commercial phrase",
+      "failure_condition": "Mandatory service missing from export or only in HOLD group",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Restore service representation or document explicit operator absence approval"
+    },
+    {
+      "invariant_id": "INV-SCOPE-02",
+      "class": "operator_scope",
+      "checked_entities": ["operator_service_scope.services.current_group_status", "production_dataset.groups.viability_status"],
+      "source_of_authority": "operator-service-scope registry",
+      "pass_condition": "Scope registry status matches production dataset for all recovery_required services",
+      "failure_condition": "Scope registry shows HOLD while dataset exports ACTIVE for same service",
+      "severity": "high",
+      "automated": true,
+      "required_operator_action": "Sync operator-service-scope registry to production truth before operator approval"
+    },
+    {
+      "invariant_id": "INV-SEED-01",
+      "class": "protected_seeds",
+      "checked_entities": ["protected_seed_registry", "production_dataset.keywords"],
+      "source_of_authority": "recovery package phrases_to_restore + commercial anchors",
+      "pass_condition": "All protected seeds active in assigned group with export_present=true",
+      "failure_condition": "Protected seed EXCLUDE, missing, or wrong group",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Restore seed or operator-remove with documented decision"
+    },
+    {
+      "invariant_id": "INV-CAMP-01",
+      "class": "campaign_architecture",
+      "checked_entities": ["production_dataset.unified_campaign", "logical_directions"],
+      "source_of_authority": "operator campaign architecture decision",
+      "pass_condition": "Export model, campaign count, and direction markers match operator-approved architecture",
+      "failure_condition": "Undocumented campaign split or direction drift",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Re-freeze architecture or obtain operator amendment"
+    },
+    {
+      "invariant_id": "INV-GRP-01",
+      "class": "group_architecture",
+      "checked_entities": ["production_dataset.groups"],
+      "source_of_authority": "group registry + operator intent architecture",
+      "pass_condition": "Each export group has distinct intent, ad, landing, at least one active phrase",
+      "failure_condition": "Empty export group, duplicate intent without separation, or HOLD without operator approval",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Merge only with operator approval; otherwise restore viability"
+    },
+    {
+      "invariant_id": "INV-SEM-01",
+      "class": "semantic_integrity",
+      "checked_entities": ["production_dataset.keywords", "semantic_evidence"],
+      "source_of_authority": "phrase-specific semantic review",
+      "pass_condition": "No active informational, career, or education leakage phrases",
+      "failure_condition": "Active phrase matches informational blocklist or EXCLUDE reason contradicts ACTIVE status",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Exclude phrase or reclassify with operator evidence"
+    },
+    {
+      "invariant_id": "INV-SEM-02",
+      "class": "semantic_integrity",
+      "checked_entities": ["production_dataset.keywords"],
+      "source_of_authority": "phrase ownership registry",
+      "pass_condition": "Each phrase owned by exactly one active group",
+      "failure_condition": "Duplicate phrase ownership across groups",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Resolve ownership before negatives"
+    },
+    {
+      "invariant_id": "INV-CT-01",
+      "class": "controlled_tests",
+      "checked_entities": ["controlled_test_registry.tests"],
+      "source_of_authority": "controlled-test-registry + operator test charter",
+      "pass_condition": "Each controlled test has phrase in hypothesis, group, ad, landing, bid tier, success and pause rules",
+      "failure_condition": "Generic hypothesis, missing phrase reference, or cross-topic template",
+      "severity": "high",
+      "automated": true,
+      "required_operator_action": "Rewrite hypothesis or downgrade to EXCLUDE"
+    },
+    {
+      "invariant_id": "INV-NEG-01",
+      "class": "negative_safety",
+      "checked_entities": ["negative_registry", "collision_validation"],
+      "source_of_authority": "final phrase ownership + conflict matrix",
+      "pass_condition": "No blocking collisions; negatives reference final ownership",
+      "failure_condition": "Blocking collision or unresolved unique negative risk",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Rebuild negatives after ownership freeze"
+    },
+    {
+      "invariant_id": "INV-AD-01",
+      "class": "ad_landing_alignment",
+      "checked_entities": ["ad_registry.ads", "production_dataset.groups"],
+      "source_of_authority": "ad registry + landing map",
+      "pass_condition": "One ad per export group; ad URL matches group landing",
+      "failure_condition": "Missing ad, URL mismatch, or ad/group ID conflict",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Fix ad or landing mapping"
+    },
+    {
+      "invariant_id": "INV-INLINE-01",
+      "class": "semantic_integrity",
+      "checked_entities": ["production_dataset.keywords.phrase"],
+      "source_of_authority": "ORCA-LAW-07 inline negative limit",
+      "pass_condition": "No phrase uses long inline-minus tail rescue pattern",
+      "failure_condition": "Phrase contains 4+ inline minus tokens or excessive length with minus repair",
+      "severity": "high",
+      "automated": true,
+      "required_operator_action": "Rewrite phrase or isolate with documented evidence"
+    },
+    {
+      "invariant_id": "INV-QA-01",
+      "class": "report_export_consistency",
+      "checked_entities": ["validation_gates", "production_dataset counts"],
+      "source_of_authority": "contract validator independent of pipeline PASS",
+      "pass_condition": "Independent contract audit agrees with export counts and scope",
+      "failure_condition": "Pipeline PASS while contract critical violations exist",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Do not treat pipeline PASS as operator approval"
+    },
+    {
+      "invariant_id": "INV-HOLD-01",
+      "class": "group_architecture",
+      "checked_entities": ["production_dataset.groups", "production_dataset.held_groups"],
+      "source_of_authority": "operator scope + recovery gate",
+      "pass_condition": "No unexpected HOLD groups when operator required full representation",
+      "failure_condition": "Operator-required service group in HOLD without documented exception",
+      "severity": "critical",
+      "automated": true,
+      "required_operator_action": "Reactivate group or obtain operator HOLD approval"
+    }
+  ]
+}

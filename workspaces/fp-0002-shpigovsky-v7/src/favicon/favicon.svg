@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <radialGradient id="badge" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16 16) scale(14)">
+      <stop offset="0" stop-color="#8c8c8c"/>
+      <stop offset="0.68" stop-color="#9b9b9b"/>
+      <stop offset="0.83" stop-color="#edebeb"/>
+      <stop offset="1" stop-color="#737373"/>
+    </radialGradient>
+  </defs>
+  <circle cx="16" cy="16" r="14" fill="url(#badge)"/>
+  <circle cx="16" cy="16" r="9.5" fill="#dae5f0"/>
+  <path fill="#c00f0f" d="M16 8.5v6.75M12.625 12.125h6.75M16 17.75v6.75M12.625 21.375h6.75"/>
+</svg>

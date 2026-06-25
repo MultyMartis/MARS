@@ -1,0 +1,32 @@
+{
+  "receipt_id": "sppc-receipt-2026-06-23T02-39-47-023Z-f4f856a9",
+  "receipt_schema_version": "1.0.0",
+  "timestamp": "2026-06-23T02:39:47.025Z",
+  "project_id": "UNKNOWN",
+  "manifest_path": null,
+  "manifest_checksum": null,
+  "lifecycle_version": null,
+  "requested_stage": "SPPC-10",
+  "requested_action": "paid_serp",
+  "actor": "MIG",
+  "tool": "mig-runtime",
+  "authorization_result": "BLOCKED",
+  "blockers": [
+    {
+      "code": "MISSING_MANIFEST",
+      "message": "BLOCKED — LIFECYCLE REQUIREMENT NOT MET"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "artifact_type": "paid_serp_business_hours_evidence",
+      "output_class": "production_authority"
+    }
+  ],
+  "actual_outputs": null,
+  "runtime_version": "wave1.1-v1",
+  "source_commit": "e92b907",
+  "command": "mig-evidence paid-serp:run",
+  "note": null,
+  "immutable": true
+}

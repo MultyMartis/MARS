@@ -1,0 +1,51 @@
+{
+  "policy_id": "orca-benchmark-split-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "splits": [
+    {
+      "split_id": "SPLIT_DEV",
+      "label": "Development",
+      "purpose": "Iterative guideline and rules development",
+      "max_pct_of_gold": 40,
+      "leakage_tier": "INTERNAL"
+    },
+    {
+      "split_id": "SPLIT_CALIBRATION",
+      "label": "Calibration",
+      "purpose": "Threshold and confidence calibration",
+      "max_pct_of_gold": 25,
+      "leakage_tier": "INTERNAL"
+    },
+    {
+      "split_id": "SPLIT_BLIND",
+      "label": "Blind test",
+      "purpose": "P0-G gate evaluation",
+      "min_phrases": 300,
+      "max_phrases": 400,
+      "leakage_tier": "SEALED"
+    },
+    {
+      "split_id": "SPLIT_REGRESSION_ANCHOR",
+      "label": "Regression anchors",
+      "purpose": "Fixed anchor suite — never relabelled casually",
+      "size": "fixed_pack",
+      "leakage_tier": "ANCHOR"
+    },
+    {
+      "split_id": "SPLIT_HARD_NEGATIVE",
+      "label": "Hard negatives",
+      "purpose": "Protected-strata FP traps",
+      "size": "fixed_pack",
+      "leakage_tier": "SEALED"
+    }
+  ],
+  "mutual_exclusivity": true,
+  "blind_isolation_rules": [
+    "no_training",
+    "no_prompt_tuning",
+    "no_example_inclusion",
+    "no_embedding_index"
+  ]
+}

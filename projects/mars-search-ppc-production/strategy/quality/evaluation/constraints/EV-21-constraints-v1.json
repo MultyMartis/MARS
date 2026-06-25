@@ -1,0 +1,31 @@
+{
+  "constraint_id": "EV-21-constraints-v1",
+  "case_id": "EV-21",
+  "scenario": "missing_paid_serp",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "provisional_only": true
+  },
+  "acceptable_strategy_families": [
+    "provisional_draft",
+    "blocked_with_remediation"
+  ],
+  "invalid_strategy_families": [
+    "production_ready"
+  ],
+  "mandatory_blockers": [
+    "BLOCKED — PAID SERP LIVE EVIDENCE MISSING"
+  ],
+  "prohibited_recommendations": [
+    "production_ready_claim",
+    "hide_missing_paid_serp"
+  ],
+  "required_operator_decisions": [
+    "paid_serp_collection"
+  ]
+}

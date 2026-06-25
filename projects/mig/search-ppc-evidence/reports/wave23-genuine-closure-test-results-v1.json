@@ -1,0 +1,117 @@
+{
+  "suite": "wave23-genuine-closure-tests",
+  "passed": 22,
+  "failed": 0,
+  "results": [
+    {
+      "id": 1,
+      "name": "genuine assisted bundle validation for w2-3 project",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "name": "paid/organic extraction from assisted HTML",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "name": "advertiser creation from parsed ads",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "name": "bounded landing resolution records access status",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "name": "technical evidence cannot become client authority",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "name": "global capability does not complete client stage",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "name": "project-specific evidence required for client manifest",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "name": "stale live evidence rejected",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "name": "CAPTCHA session not complete",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "name": "manually typed advertiser rows rejected",
+      "pass": true
+    },
+    {
+      "id": 11,
+      "name": "missing raw evidence rejected",
+      "pass": true
+    },
+    {
+      "id": 12,
+      "name": "SPPC-12 blocked without client ORCA evidence",
+      "pass": true
+    },
+    {
+      "id": 13,
+      "name": ".htm accepted when declared in manifest",
+      "pass": true
+    },
+    {
+      "id": 14,
+      "name": "actual Firefox manifest preferred over empty template",
+      "pass": true
+    },
+    {
+      "id": 15,
+      "name": "legacy IDs normalized only under strong bundle evidence",
+      "pass": true
+    },
+    {
+      "id": 16,
+      "name": "timestamp preserved during normalization",
+      "pass": true
+    },
+    {
+      "id": 17,
+      "name": "browser preserved during normalization",
+      "pass": true
+    },
+    {
+      "id": 18,
+      "name": "attestation preserved during normalization",
+      "pass": true
+    },
+    {
+      "id": 19,
+      "name": "raw login/account identifiers do not leak into repo reports",
+      "pass": true
+    },
+    {
+      "id": 20,
+      "name": "raw HTML remains outside Git",
+      "pass": true
+    },
+    {
+      "id": 21,
+      "name": "empty template cannot override actual capture",
+      "pass": true
+    },
+    {
+      "id": 22,
+      "name": "screenshot and HTML reconcile with paid extraction",
+      "pass": true
+    }
+  ]
+}

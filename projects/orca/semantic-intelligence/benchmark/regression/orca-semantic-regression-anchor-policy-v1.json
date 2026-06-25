@@ -1,0 +1,24 @@
+{
+  "policy_id": "orca-semantic-regression-anchor-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "split_id": "SPLIT_REGRESSION_ANCHOR",
+  "anchor_properties": {
+    "fixed_query_ids": true,
+    "relabel_requires_operator": true,
+    "version_pinning": true
+  },
+  "categories": [
+    "protected_strata_regression",
+    "commercial_core_regression",
+    "abstain_boundary_regression",
+    "problem_query_regression"
+  ],
+  "trigger_rerun": [
+    "rules_change",
+    "taxonomy_change",
+    "prompt_change",
+    "threshold_change"
+  ]
+}

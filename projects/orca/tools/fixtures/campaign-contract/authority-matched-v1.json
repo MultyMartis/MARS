@@ -1,0 +1,49 @@
+{
+  "fixture_id": "authority-matched-v1",
+  "description": "Matched authority and production — must PASS",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-C01",
+        "service_name": "манипулятор аренда",
+        "current_group": "grp-c01",
+        "current_group_status": "ACTIVE",
+        "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+        "absence_from_production_permitted": false,
+        "recovery_required": false
+      }
+    ]
+  },
+  "protected_seed_registry": [
+    {
+      "keyword_id": "kw-c01",
+      "phrase": "манипулятор аренда",
+      "group_id": "grp-c01"
+    }
+  ],
+  "production_dataset": {
+    "groups": [
+      {
+        "group_id": "grp-c01",
+        "viability_status": "ACTIVE",
+        "export_to_xlsx": true,
+        "planned_url": "https://example.test/rent"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword_id": "kw-c01",
+        "phrase": "манипулятор аренда",
+        "group_id": "grp-c01",
+        "final_status": "ACTIVE"
+      }
+    ],
+    "held_groups": []
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": {
+    "ads": [{ "ad_id": "ad-c01", "group_id": "grp-c01", "landing_url": "https://example.test/rent" }]
+  },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

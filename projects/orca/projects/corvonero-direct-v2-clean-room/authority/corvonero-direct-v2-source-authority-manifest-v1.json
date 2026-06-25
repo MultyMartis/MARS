@@ -1,0 +1,85 @@
+{
+  "manifest_id": "corvonero-direct-v2-source-authority-manifest-v1",
+  "schema_version": "1",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "generated_at": "2026-06-22T00:00:00.000Z",
+  "clean_room_declaration": "No semantic decision inheritance from Corvonero v1-v7.1 production branch.",
+  "source_classes": {
+    "AUTHORITATIVE": [
+      {
+        "id": "AUTH-01",
+        "name": "Operator business inputs",
+        "paths": [
+          "projects/orca/projects/corvonero-direct-v2-clean-room/intake/",
+          "workspaces/corvonero-yandex-direct/CORVONERO-BUSINESS-INTAKE-v1.md",
+          "incoming/mig/pilots/corvonero/CORVONERO-MIG-RESEARCH-REQUEST-v1.md"
+        ]
+      },
+      {
+        "id": "AUTH-02",
+        "name": "Original MIG source files",
+        "paths": [
+          "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/",
+          "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/evidence/wordstat/wordstat-pass-a-normalized.json",
+          "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/evidence/wordstat/wordstat-pass-a-file-index.json"
+        ],
+        "exclusions": ["preliminary_intent_class from MIG is EVIDENCE ONLY, not production authority"]
+      },
+      {
+        "id": "AUTH-03",
+        "name": "Universal ORCA contract",
+        "paths": [
+          "projects/orca/contracts/ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1.md",
+          "projects/orca/contracts/orca-campaign-production-contract-v1.json",
+          "projects/orca/contracts/orca-campaign-production-invariants-v1.json"
+        ]
+      },
+      {
+        "id": "AUTH-04",
+        "name": "Triumph-derived universal laws",
+        "paths": [
+          "projects/orca/knowledge/triumph-derived-orca-laws-v1.md"
+        ]
+      }
+    ],
+    "EVIDENCE_ONLY": [
+      {
+        "id": "EVD-01",
+        "name": "SERP evidence",
+        "paths": ["incoming/mig/pilots/corvonero/session-mig-20260622-corv01/evidence/serp/"]
+      },
+      {
+        "id": "EVD-02",
+        "name": "Frequency data",
+        "note": "observed broad Wordstat frequency — not regional demand, not traffic forecast"
+      },
+      {
+        "id": "EVD-03",
+        "name": "MIG research notes",
+        "paths": ["incoming/mig/pilots/corvonero/session-mig-20260622-corv01/research_pack.approved.md"]
+      }
+    ],
+    "HISTORICAL_ANTI_PATTERN_ONLY": [
+      {
+        "id": "HIST-01",
+        "name": "Corvonero v1-v7.1 production artefacts",
+        "paths": ["projects/orca/projects/corvonero-yandex-direct/"],
+        "use": "defect evidence, regression anti-patterns, technical history only"
+      }
+    ],
+    "FORBIDDEN_FOR_SEMANTIC_DECISIONS": [
+      "projects/orca/projects/corvonero-yandex-direct/production/direct-commander-production-dataset-v*.json",
+      "projects/orca/projects/corvonero-yandex-direct/production/final-keyword-registry-v*.json",
+      "projects/orca/projects/corvonero-yandex-direct/production/final-negative-registry-v*.json",
+      "projects/orca/projects/corvonero-yandex-direct/production/final-controlled-test-registry-v*.json",
+      "projects/orca/projects/corvonero-yandex-direct/production/semantic-*-v*.json",
+      "projects/orca/projects/corvonero-yandex-direct/production/repair/",
+      "projects/orca/projects/corvonero-yandex-direct/production/recovery/",
+      "projects/orca/projects/corvonero-yandex-direct/exports/*COMMANDER*.xlsx",
+      "projects/orca/projects/corvonero-yandex-direct/exports/*REVIEW*.xlsx",
+      "projects/orca/projects/corvonero-yandex-direct/production/operator-service-scope-v1.json",
+      "projects/orca/projects/corvonero-yandex-direct/production/validation/*"
+    ]
+  },
+  "provenance_rule": "Every semantic record in the new core must include provenance from an allowed source."
+}

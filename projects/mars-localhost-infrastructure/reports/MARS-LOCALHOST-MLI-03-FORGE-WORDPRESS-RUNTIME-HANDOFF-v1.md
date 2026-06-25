@@ -18,9 +18,9 @@ Document what Forge WordPress (FW) may rely on after MLI-03 synthetic WordPress 
 
 | Consumer | MLI-03 handoff | Notes |
 |----------|----------------|-------|
-| **Forge WordPress** | **PARTIAL — WITH LIMITATIONS** | Synthetic runtime exists; full Profile A re-validation remains **FW-05R** |
+| **Forge WordPress** | **PROVEN WITH LIMITATIONS** | FW-05R live validation **COMPLETE** (2026-06-23) |
 | **FP-0002** | **OUT OF SCOPE** | Explicit charter required |
-| **FW-05R** | **HOLD** | Pending MLI-03 profile matrix acceptance |
+| **FW-05R** | **COMPLETE** | See Forge live validation report |
 
 ---
 
@@ -51,11 +51,28 @@ Document what Forge WordPress (FW) may rely on after MLI-03 synthetic WordPress 
 
 ---
 
+## FW-05R post-validation status (2026-06-23)
+
+| Item | State |
+|------|-------|
+| Forge theme/plugin on live runtime | **INSTALLED** — fws-synthetic + fws-synthetic-core |
+| ACF Free 6.8.4 | **ACTIVE** |
+| Route smoke | **PASS** — home, services, contacts |
+| `wp db check` | **PASS** |
+| MySQL X Protocol 33060 | **HARDENED** — `mysqlx=0` |
+| Hosts `fws-0001.test` | **PENDING** — Host header workaround used |
+| Operator WV6 | **PENDING** |
+| Next Forge stage | **FW-06 Pilot Intake** |
+
+Evidence: [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md](../../mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md)
+
+---
+
 ## Recommended consumer next steps
 
-1. Run elevated `add-mli-host.ps1` to register `fws-0001.test`.
-2. Re-run Playwright HTTPS scenario; attach artefacts to FW-05R intake.
-3. Complete FW-05R synthetic validation charter before declaring Profile A operational.
+1. *(Optional)* Run elevated `add-mli-host.ps1` to register `fws-0001.test`.
+2. Operator WV6 visual approval on live parity captures.
+3. Proceed to **FW-06 Pilot Intake** charter.
 
 ---
 

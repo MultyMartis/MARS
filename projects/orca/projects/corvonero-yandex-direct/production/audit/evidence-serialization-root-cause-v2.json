@@ -1,0 +1,64 @@
+{
+  "audit_id": "evidence-serialization-root-cause-v2",
+  "generated_at": "2026-06-22T05:15:48.289Z",
+  "defects": [
+    {
+      "id": "SER-01",
+      "symptom": "Object-to-string coercion in workbook metric row",
+      "root_cause": "Object values (e.g. pass_requires: { UNRESOLVED: 0 }) written to workbook via String(v) without typed formatter.",
+      "source_file": "tools/run-v5-qa-repair-gate.mjs",
+      "function": "writeQaRepairWorkbook → Semantic-risk reconciliation sheet",
+      "field": "pass_requires",
+      "mechanism": "object_to_string_coercion",
+      "fix": "formatMetricValue() / formatStatusValue() — never String(object)"
+    },
+    {
+      "id": "SER-02",
+      "symptom": "Shared-string index leak in regression error column (empty cell)",
+      "root_cause": "Empty string \"\" in regression test error column. ExcelJS deduplicates empty strings; operator tools display sharedStrings index (970 in QA repair workbook).",
+      "source_file": "tools/run-v5-qa-repair-gate.mjs",
+      "function": "writeQaRepairWorkbook → Generator regression tests",
+      "field": "error",
+      "mechanism": "shared_string_index_leak",
+      "related_index": 970,
+      "fix": "formatErrorDetails(passed, error) → PASS uses «Not applicable — test passed»"
+    },
+    {
+      "id": "SER-03",
+      "symptom": "Shared-string index leak in narrative column (empty cell)",
+      "root_cause": "Empty narrative fields (replacement, representative_phrases, detail) deduplicated to sharedStrings[2464].",
+      "source_file": "tools/generate-review-workbook-v5.cjs",
+      "function": "Negative risk resolution row mapping",
+      "field": "replacement, representative_phrases, detail",
+      "mechanism": "shared_string_index_leak",
+      "related_index": 2464,
+      "fix": "formatNarrative() with explicit sentinels; forbid bare empty strings"
+    },
+    {
+      "id": "SER-04",
+      "symptom": "Legacy four-digit placeholder literal in narrative scan",
+      "root_cause": "Legacy placeholder literal in narrative scan fixtures.",
+      "mechanism": "literal_placeholder",
+      "fix": "isPlaceholderValue() rejects /^\\d{4}$/"
+    }
+  ],
+  "formatters": [
+    "formatNarrative",
+    "formatListValue",
+    "formatStatusValue",
+    "formatCount",
+    "formatOptionalEvidence",
+    "formatNotApplicable",
+    "formatExactAction",
+    "formatErrorDetails",
+    "formatMetricValue"
+  ],
+  "narrative_forbidden_types": [
+    "object",
+    "array_without_formatting",
+    "integer",
+    "boolean",
+    "empty_string"
+  ],
+  "implementation": "tools/lib/evidence-serialization-v2.mjs"
+}

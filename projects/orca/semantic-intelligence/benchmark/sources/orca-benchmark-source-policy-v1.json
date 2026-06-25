@@ -1,0 +1,46 @@
+{
+  "policy_id": "orca-benchmark-source-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "forbidden_as_ground_truth": [
+    "corvonero_v1_admission_labels",
+    "p0_c_training_illustrations",
+    "classifier_outputs",
+    "campaign_export_phrases_without_adjudication"
+  ],
+  "permitted_source_classes": [
+    {
+      "class_id": "SRC_HISTORICAL_SEARCH_TERMS",
+      "label": "Historical search term extracts",
+      "provenance_required": true
+    },
+    {
+      "class_id": "SRC_OPERATOR_SEED",
+      "label": "Operator-curated seed list",
+      "provenance_required": true,
+      "operator_approval": true
+    },
+    {
+      "class_id": "SRC_SYNTHETIC_DESIGN",
+      "label": "Synthetic phrases for adversarial/minimal-pair design",
+      "provenance_required": true,
+      "design_only": true
+    },
+    {
+      "class_id": "SRC_PUBLIC_CORPUS",
+      "label": "Public query logs or benchmarks (license-checked)",
+      "provenance_required": true
+    },
+    {
+      "class_id": "SRC_DOMAIN_EXPERT_CURATED",
+      "label": "Domain-expert curated candidates",
+      "provenance_required": true
+    }
+  ],
+  "corvonero_corpus": {
+    "status": "FROZEN",
+    "use": "candidate_phrase_extraction_only",
+    "labels": "FORBIDDEN_AS_GOLD"
+  }
+}

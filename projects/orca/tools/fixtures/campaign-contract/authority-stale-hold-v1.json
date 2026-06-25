@@ -1,0 +1,49 @@
+{
+  "fixture_id": "authority-stale-hold-v1",
+  "description": "Authority HOLD while production is ACTIVE — must BLOCK authority drift",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-A01",
+        "service_name": "внедрение ERP",
+        "current_group": "grp-a01",
+        "current_group_status": "HOLD — NO VALID COMMERCIAL DEMAND",
+        "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+        "absence_from_production_permitted": false,
+        "recovery_required": true
+      }
+    ]
+  },
+  "protected_seed_registry": [
+    {
+      "keyword_id": "kw-a01",
+      "phrase": "внедрение erp",
+      "group_id": "grp-a01"
+    }
+  ],
+  "production_dataset": {
+    "groups": [
+      {
+        "group_id": "grp-a01",
+        "viability_status": "ACTIVE",
+        "export_to_xlsx": true,
+        "planned_url": "https://example.test/erp"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword_id": "kw-a01",
+        "phrase": "внедрение erp",
+        "group_id": "grp-a01",
+        "final_status": "ACTIVE"
+      }
+    ],
+    "held_groups": []
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": {
+    "ads": [{ "ad_id": "ad-a01", "group_id": "grp-a01", "landing_url": "https://example.test/erp" }]
+  },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

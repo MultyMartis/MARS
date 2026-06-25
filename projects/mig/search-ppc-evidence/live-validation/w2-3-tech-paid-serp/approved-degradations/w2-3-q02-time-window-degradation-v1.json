@@ -1,0 +1,40 @@
+{
+  "degradation_id": "w2-3-q02-time-window-degradation-v1",
+  "operator_decision_id": "W2.3-D8",
+  "project_id": "MIG-W2-3-TECH-PAID-SERP",
+  "session_id": "w2-3-assisted-session-001",
+  "query_id": "w2-3-q02",
+  "capture_timestamp": "2026-06-24T04:41:47.799Z",
+  "capture_local": {
+    "timezone": "Europe/Moscow",
+    "local_datetime": "2026-06-24 07:41:47",
+    "weekday": "Wednesday"
+  },
+  "original_gate": "PREFERRED_BUSINESS_HOURS_09_00_21_00",
+  "original_verdict": "BLOCKED — PAID SERP BUSINESS-HOURS WINDOW NOT SATISFIED",
+  "approved_degraded_verdict": "APPROVED WITH DEGRADATION — TECHNICAL CAPABILITY ONLY",
+  "authority_class": "TECHNICAL_CAPABILITY_VALIDATION",
+  "permitted_consumer": "MIG-W2-3-TECH-PAID-SERP",
+  "reason": "The genuine live SERP contained sufficient visible paid advertising evidence despite collection before the preferred 09:00 window.",
+  "permitted_uses": [
+    "global SPPC-10 acquisition capability validation",
+    "parser validation",
+    "assisted-capture validation",
+    "advertiser registry validation",
+    "bounded landing resolution validation"
+  ],
+  "prohibited_uses": [
+    "client-specific Paid SERP completion",
+    "client market-representative evidence",
+    "competitor strategy authority",
+    "campaign strategy authority",
+    "Corvonero evidence",
+    "production campaign authority"
+  ],
+  "production_authority": false,
+  "client_authority": false,
+  "one_time_use": true,
+  "status": "approved",
+  "created_at": "2026-06-24T08:00:00.000Z",
+  "checksum": "5870b863deeae4a37cf322eb86282046902ec3a66f3c5fb84d7d089f22cf459c"
+}

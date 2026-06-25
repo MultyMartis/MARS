@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "checks": [
+    {
+      "id": "SRC-01",
+      "name": "Every core phrase traces to MIG ledger",
+      "pass": true,
+      "count": 1892
+    },
+    {
+      "id": "SRC-02",
+      "name": "Zero records from forbidden production tree",
+      "pass": true,
+      "note": "Pipeline did not read forbidden paths",
+      "forbidden_root": "projects/orca/projects/corvonero-yandex-direct/production"
+    },
+    {
+      "id": "SRC-03",
+      "name": "All raw MIG rows accounted",
+      "pass": true,
+      "ledger": 2399,
+      "source": 2399
+    },
+    {
+      "id": "SRC-04",
+      "name": "No duplicate canonical phrase IDs",
+      "pass": true
+    },
+    {
+      "id": "SRC-05",
+      "name": "No phrase both eligible and excluded",
+      "pass": true
+    },
+    {
+      "id": "SRC-06",
+      "name": "No campaign production fields in core",
+      "pass": true
+    }
+  ],
+  "overall": "PASS"
+}

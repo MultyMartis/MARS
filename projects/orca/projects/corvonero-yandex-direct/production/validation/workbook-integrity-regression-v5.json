@@ -1,0 +1,46 @@
+{
+  "tested_at": "2026-06-22T05:01:04.683Z",
+  "passed": true,
+  "tests": [
+    {
+      "regression_id": "WB-01",
+      "description": "reject literal 1234 in narrative scan",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-02",
+      "description": "reject literal 2464 in narrative scan",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-03",
+      "description": "reject arbitrary four-digit values",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-04",
+      "description": "reject boolean yes in explanation",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-05",
+      "description": "reject PASS-only values",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-06",
+      "description": "reject prohibited correction tokens",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-07",
+      "description": "detect generic SAFE template",
+      "passed": true
+    },
+    {
+      "regression_id": "WB-08",
+      "description": "workbook scan catches 2464 in sheet data",
+      "passed": true
+    }
+  ]
+}

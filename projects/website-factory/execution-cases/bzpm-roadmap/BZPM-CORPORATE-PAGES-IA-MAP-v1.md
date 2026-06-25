@@ -22,8 +22,10 @@
 |-------|--------|----------|
 | **Research** | **COMPLETE** | M9.13–M9.18 forensic reports registered 2026-06-22 |
 | **IA / Architecture** | **READY** (this document) | Unified ownership map · cross-link rules · relationship structure |
-| **Copy system** | **REGISTERED** | [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md) · PAGE-COPY v1 shells — content **not started** |
-| **Design** | **NOT READY** | Requires per-page operator design charter after **COPY COMPLETE** |
+| **Copy system** | **CLOSED** | M9.13–M9.18 PAGE-COPY substantively complete — operator sign-off pending (B8) — [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md) |
+| **Design Charter** | **DRAFT COMPLETE / APPROVAL OPEN** | Six charters v1 in [charters/](charters/) — all **PENDING OPERATOR APPROVAL** — [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) |
+| **Design Brief** | **DRAFT COMPLETE** | Six briefs v1 in [charters/](charters/) |
+| **Design (visual)** | **NOT OPEN** | Requires operator-approved Design Charter per page |
 | **Implementation** | **NOT READY** | Requires design charter + implementation charter per page |
 
 **Contacts:** Delivered outside program — included in IA map for cross-link discipline only.
@@ -680,17 +682,19 @@ Single primary owner per topic (CP-01). Secondary references = one-line summary 
 |-------|---------|-----------|
 | **Research** | **COMPLETE** | All M9.13–M9.18 forensic reports exist in-repo with URL discovery, content audit, objection maps, and cross-link inventory |
 | **IA / Architecture** | **READY** | This map defines purpose, audience, ownership, cross-links, and relationship structure for all 7 surfaces |
-| **Copy** | **NOT STARTED** | PAGE-COPY v1 shells registered; full final text required per [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md) before Design Charter |
-| **Design** | **NOT READY** | No per-page design charter; operator OQ clusters unresolved (payment VAT/bank, warranty term, dealer commercial framework, custom SLA) |
+| **Copy** | **SUBSTANTIVELY COMPLETE** | Canonical PAGE-COPY reproducible; `Approved by: pending` on all six (B8) |
+| **Design Charter** | **DRAFT COMPLETE / APPROVAL OPEN** | Six charters v1 in [charters/](charters/); operator approval pending on all |
+| **Design Brief** | **DRAFT COMPLETE** | Six briefs v1 in [charters/](charters/) |
+| **Design (visual)** | **NOT OPEN** | [BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md](BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md) verdict **NO** |
 | **Implementation** | **NOT READY** | Research + IA ≠ implementation authorization; Contacts only page delivered; all M9.13–M9.18 implementation **not started** |
 
 ---
 
 ## Recommended next step
 
-1. **Operator review** of this IA map — approve ownership matrix and cross-link rules.
-2. **Per-page copy pass** — full PAGE-COPY per [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md) (operator priority order).
-3. **Per-page design charter** — after **COPY COMPLETE**; start with highest commercial weight: **M9.16 Dealers** or **M9.17 Warranty** (critical gaps) or **M9.13 About** (existing dedicated CSS scaffold).
+1. ~~**Per-page copy pass**~~ — **SUBSTANTIVELY COMPLETE** (M9.13–M9.18); operator sign-off pending (B8).
+2. **Operator approval of Design Charters** — per [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md); **first approval: M9.13 About** charter v1.
+3. **Resolve OQ clusters** affecting visual commitments (warehouse address, PLP dealer form, warranty term badge policy).
 4. **Catalog cross-link pass** (documentation) — align Commercial Trust / M9.9 FAQ targets to IA owners before visual design.
 5. **PLP dealer form reconciliation** — decide primary intake: corp page vs PLP block (document in program, not implement here).
 
@@ -704,6 +708,8 @@ Single primary owner per topic (CP-01). Secondary references = one-line summary 
 |------|--------|
 | 2026-06-22 | **CREATED** — BZPM Corporate Pages IA Map v1; Research → IA phase gate; ownership matrix; relationship maps; per-page IA for M9.13–M9.18 + Contacts |
 | 2026-06-22 | **UPDATED** — Copy artefact system registered; workflow IA → Copy → Design Charter; [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md) |
+| 2026-06-22 | **UPDATED** — Copy phase **CLOSED**; Design Charter **OPEN**; [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) |
+| 2026-06-22 | **RECONCILED** — Design Charter/Brief **DRAFT COMPLETE**; copy **SUBSTANTIVELY COMPLETE**; registry synced — [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 
 ---
 

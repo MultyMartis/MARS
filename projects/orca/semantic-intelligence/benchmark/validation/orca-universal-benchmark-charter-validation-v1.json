@@ -1,0 +1,68 @@
+{
+  "validation_id": "orca-universal-benchmark-charter-validation",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PASS — DOCUMENTATION VALIDATION (OPERATOR APPROVAL PENDING)",
+  "checks": [
+    {
+      "id": "V-D01",
+      "criterion": "no_benchmark_rows_in_package",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D02",
+      "criterion": "two_product_model_documented",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D03",
+      "criterion": "b0_b1_b2_phases_defined",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D04",
+      "criterion": "release_states_complete",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D05",
+      "criterion": "intent_strata_ten_with_shares",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D06",
+      "criterion": "domain_coverage_seven_plus",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D07",
+      "criterion": "d3_thresholds_preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D08",
+      "criterion": "corvonero_labels_forbidden",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D09",
+      "criterion": "double_annotation_mandatory_cohorts",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D10",
+      "criterion": "blind_governance_present",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D11",
+      "criterion": "benchmark_record_schema_refs_semantic",
+      "result": "PASS"
+    },
+    {
+      "id": "V-D12",
+      "criterion": "operator_approval_pending",
+      "result": "PENDING"
+    }
+  ]
+}

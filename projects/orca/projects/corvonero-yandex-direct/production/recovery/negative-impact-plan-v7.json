@@ -1,0 +1,102 @@
+{
+  "plan_id": "negative-impact-plan-v7",
+  "generated_at": "2026-06-22T05:54:01.286Z",
+  "note": "Production plan only — not final negative registry",
+  "groups": [
+    {
+      "group_id": "CORV-G07-04",
+      "recovered_phrases": [
+        "восстановление работы 1с"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Восстановление работы 1С",
+      "reversal_or_narrow": "Standard group isolation"
+    },
+    {
+      "group_id": "CORV-G05-06",
+      "recovered_phrases": [
+        "миграция данных 1с",
+        "перенос данных в 1с"
+      ],
+      "existing_negatives_that_would_block": [
+        {
+          "level": "group_cross",
+          "token": "перенос данных",
+          "on": "CORV-G05-01",
+          "action": "NARROW — exclude from blocking CORV-G05-06 own phrases"
+        }
+      ],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Перенос данных в 1С",
+      "reversal_or_narrow": "Review cross-negative «перенос данных» on CORV-G05-01/04 — must not block own group"
+    },
+    {
+      "group_id": "CORV-G04-01",
+      "recovered_phrases": [
+        "расчет себестоимости 1с",
+        "себестоимость в 1с"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Расчёт себестоимости в 1С",
+      "reversal_or_narrow": "Standard group isolation"
+    },
+    {
+      "group_id": "CORV-G04-02",
+      "recovered_phrases": [
+        "планирование закупок 1с"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Планирование закупок 1С",
+      "reversal_or_narrow": "Standard group isolation"
+    },
+    {
+      "group_id": "CORV-G04-03",
+      "recovered_phrases": [
+        "платежный календарь 1с"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Платёжный календарь 1С",
+      "reversal_or_narrow": "Standard group isolation"
+    },
+    {
+      "group_id": "CORV-G01-02",
+      "recovered_phrases": [
+        "программист 1с новосибирск",
+        "программисты 1с новосибирск"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Программист 1С Новосибирск",
+      "reversal_or_narrow": "Global/direction «новосибирск» negative removed in v6 repair — retain removal"
+    },
+    {
+      "group_id": "CORV-G01-06",
+      "recovered_phrases": [
+        "обслуживание 1с для организации",
+        "обслуживание и сопровождение 1с",
+        "сопровождение и обслуживание 1с предприятие"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [
+        "CORV-G01-07 — retain removal of «обслуживание» cross-negative"
+      ],
+      "safe_ownership": "Обслуживание 1С",
+      "reversal_or_narrow": "Standard group isolation"
+    },
+    {
+      "group_id": "CORV-G01-04",
+      "recovered_phrases": [
+        "внедрение 1с",
+        "внедренцы и программисты 1с"
+      ],
+      "existing_negatives_that_would_block": [],
+      "cross_minus_neighbors": [],
+      "safe_ownership": "Внедрение 1С",
+      "reversal_or_narrow": "Standard group isolation"
+    }
+  ]
+}

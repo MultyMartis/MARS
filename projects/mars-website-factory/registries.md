@@ -95,6 +95,7 @@ Each module: **purpose**, **fields** (suggested), **examples**, **anti-patterns*
 | **Frontend authority order** | [frontend-production-authority-order-v1.md](frontend-production-authority-order-v1.md) — canonical decision hierarchy; Approved Operator Laws OL-01–OL-07 |
 | **Layout pattern requirement** | [frontend-layout-pattern-library-requirement-v1.md](frontend-layout-pattern-library-requirement-v1.md) |
 | **Design source → frontend mapping** | [design-source-to-frontend-mapping-governance-v1.md](design-source-to-frontend-mapping-governance-v1.md) — multi-source extraction, layout chain, Mapping QA gate |
+| **Figma inspection authority** | [figma-inspection-authority-rules-v1.md](figma-inspection-authority-rules-v1.md) — FIGMA-VISIBLE-CONTENT-AUTHORITY, hidden-layer exclusion, layer-name conflict, audit contract |
 | **WF-GRID discipline (container layer)** | [WF-GRID-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-GRID-DISCIPLINE-v1.md) — section ≠ container; page grid contract |
 | **WF-LAYOUT discipline (inner zones)** | [WF-LAYOUT-DISCIPLINE-v1.md](../../workspaces/website-factory-reference-v1/frontend-rules/WF-LAYOUT-DISCIPLINE-v1.md) — hero/card/trust zones; fr/minmax authority |
 | **Foundation QA (pre–Home gate)** | [frontend-foundation-qa-governance-v1.md](frontend-foundation-qa-governance-v1.md) — consolidated checklist; shell-first Phase 5 |

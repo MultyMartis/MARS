@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dated-analytical-pack-v1.schema.json",
+  "title": "Dated Analytical Pack v1",
+  "type": "object",
+  "required": ["schema_version", "pack_id", "project_identity", "analysis_period", "evidence_inventory", "pack_readiness"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "pack_id": { "type": "string" },
+    "project_identity": { "type": "object" },
+    "analysis_period": { "type": "object" },
+    "evidence_inventory": { "type": "array" },
+    "pack_readiness": { "type": "string" },
+    "blockers": { "type": "array" },
+    "missing_evidence": { "type": "array" },
+    "statements": { "type": "array" }
+  }
+}

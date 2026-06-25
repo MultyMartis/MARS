@@ -1,0 +1,42 @@
+{
+  "fixture_id": "corvonero-v6-failure-patterns-v1",
+  "description": "Synthetic patterns from Corvonero v1–v6 failures: seed loss, HOLD, informational leakage",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-04",
+        "service_name": "внедрение 1С",
+        "current_group": "CORV-G01-04",
+        "current_group_status": "HOLD — NO VALID COMMERCIAL DEMAND",
+        "absence_from_production_permitted": false,
+        "recovery_required": true
+      }
+    ]
+  },
+  "protected_seed_registry": [
+    {
+      "keyword_id": "seed-CORV-G01-04-core-внедрение-1с",
+      "phrase": "внедрение 1с",
+      "group_id": "CORV-G01-04"
+    }
+  ],
+  "production_dataset": {
+    "project_id": "corvonero-fixture",
+    "dataset_id": "corvonero-v6-failure",
+    "groups": [
+      {
+        "group_id": "CORV-G01-04",
+        "export_name": "[C01] Внедрение 1С",
+        "viability_status": "HOLD",
+        "planned_url": "https://lk.corvonero.ru/vnedrenie-1c/",
+        "export_to_xlsx": false
+      }
+    ],
+    "keywords": [],
+    "held_groups": ["CORV-G01-04"]
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": { "ads": [] },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

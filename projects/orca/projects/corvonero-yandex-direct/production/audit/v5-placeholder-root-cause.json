@@ -1,0 +1,41 @@
+{
+  "audit_id": "v5-placeholder-root-cause",
+  "generated_at": "2026-06-22T05:01:04.644Z",
+  "defect_value": "2464",
+  "root_cause": {
+    "source_file": "tools/generate-review-workbook-v5.cjs",
+    "function": "main → Negative risk resolution sheet mapping",
+    "field": "replacement, representative_phrases, QA consistency detail",
+    "exact_defect": "Empty string \"\" written to narrative evidence columns. ExcelJS deduplicates empty strings to sharedStrings index 2464. Operator tools and Excel display the raw shared-string index \"2464\" instead of blank.",
+    "mechanism": "shared_string_index_leak",
+    "affected_sheets": [
+      "Negative risk resolution",
+      "QA consistency",
+      "Collision findings (empty corrections)"
+    ],
+    "affected_cell_count_estimate": 613,
+    "related_indices": {
+      "empty_string_shared_index": 2464,
+      "columns": [
+        "F=replacement",
+        "H=representative_phrases",
+        "C=detail"
+      ]
+    },
+    "why_validation_failed": "workbook-integrity-v5 only checked literal \"1234\", not four-digit shared-string indices or empty narrative fields in XLSX output.",
+    "reusable_correction": "Use evidence-format-v5.formatNarrative() with explicit sentinels; forbid bare empty strings in narrative columns; scan for /^\\d{4}$/ in narrative fields post-generation."
+  },
+  "evidence": {
+    "xlsx_scan": {
+      "shared_strings_index_2464_resolves_to": "",
+      "cells_referencing_index_2464": 613,
+      "primary_sheet": "sheet17.xml (Negative risk resolution)"
+    },
+    "source_mapping_lines": {
+      "file": "tools/generate-review-workbook-v5.cjs",
+      "replacement": "r.replacement || \"\"",
+      "representative": "(r.representative_affected_phrases || []).join(\"; \") → empty when array empty",
+      "qa_detail": "['collision_final_status', evidence.summary.final_status, '']"
+    }
+  }
+}

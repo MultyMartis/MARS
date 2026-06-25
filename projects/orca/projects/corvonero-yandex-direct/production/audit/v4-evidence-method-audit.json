@@ -1,0 +1,100 @@
+{
+  "audit_id": "corv-v4-evidence-method-audit",
+  "generated_at": "2026-06-22T00:00:00.000Z",
+  "v4_status": {
+    "commander": "REJECTED BY OPERATOR — EVIDENCE QA FAILURE",
+    "review_workbook": "REJECTED BY OPERATOR — FORMAL QA EVIDENCE",
+    "pipeline": "AUDIT INPUT"
+  },
+  "root_causes": [
+    {
+      "id": "RC-01",
+      "issue": "Template semantic approvals",
+      "file": "tools/lib/semantic-human-review-v4.mjs",
+      "function": "reviewKeywordV4",
+      "lines": "281-284",
+      "detail": "324/344 active phrases received identical reason clear_commercial_service_intent and confidence HIGH from intentType===commercial branch without phrase-specific analysis."
+    },
+    {
+      "id": "RC-02",
+      "issue": "Generic likely_user_intent fallback",
+      "file": "tools/lib/semantic-human-review-v4.mjs",
+      "function": "inferLikelyIntent",
+      "lines": "129",
+      "detail": "Fallback returns «Коммерческий запрос по услуге группы {groupId}» copied across unrelated phrases."
+    },
+    {
+      "id": "RC-03",
+      "issue": "reviewer_status always REVIEWED",
+      "file": "tools/lib/semantic-human-review-v4.mjs",
+      "function": "reviewKeywordV4",
+      "lines": "310",
+      "detail": "Automatic REVIEWED status regardless of evidence depth; mislabeled as human-grade in registry metadata."
+    },
+    {
+      "id": "RC-04",
+      "issue": "No independent group-fit gate",
+      "file": "tools/run-full-production-v4.mjs",
+      "function": "main loop",
+      "detail": "Phrases retain v3 group_id; reviewKeywordV4 never validates ad/landing fit against assigned product-specific group (e.g. water group for production marking phrases)."
+    },
+    {
+      "id": "RC-05",
+      "issue": "Ad/landing match booleans yes",
+      "file": "tools/lib/semantic-human-review-v4.mjs",
+      "function": "evaluateAdLandingMatch",
+      "lines": "155-161",
+      "detail": "adOk true for any ACTIVE COMMERCIAL; exported as yes in workbook without mismatch detection."
+    },
+    {
+      "id": "RC-06",
+      "issue": "False collision PASS with unresolved stem warnings",
+      "file": "tools/lib/collision-evidence-v4.mjs",
+      "function": "buildCollisionEvidence",
+      "lines": "64-79",
+      "detail": "2451 unresolved_stem_warnings counted but not resolved; collisions_before_correction=0 while corrections_applied=13; validation still PASS."
+    },
+    {
+      "id": "RC-07",
+      "issue": "negativeRegistryWithQA auto PASS",
+      "file": "tools/lib/collision-evidence-v4.mjs",
+      "function": "negativeRegistryWithQA",
+      "lines": "129-139",
+      "detail": "STEM_REVIEWED label without per-token resolution; collision_test PASS when no literal hit only."
+    },
+    {
+      "id": "RC-08",
+      "issue": "Workbook collision findings without corrections",
+      "file": "tools/generate-review-workbook-v4.cjs",
+      "function": "Collision findings sheet",
+      "lines": "198-210",
+      "detail": "STEM_RISK rows exported with empty correction column and result_after PASS — formal evidence without decision."
+    },
+    {
+      "id": "RC-09",
+      "issue": "Ad changes sheet empty issues",
+      "file": "tools/lib/ads-v4.mjs",
+      "function": "reviewAllAdsCertainty",
+      "lines": "115-137",
+      "detail": "All ads pushed to changes with status PASS and empty issues_found — no original problem documented."
+    },
+    {
+      "id": "RC-10",
+      "issue": "Validation gates ignore workbook integrity",
+      "file": "tools/regression-tests-v4.mjs",
+      "detail": "PASS when JSON booleans true; no check for placeholder cells, template reasons, or count reconciliation."
+    }
+  ],
+  "data_flow": {
+    "semantic": "v3 keywords → reviewKeywordV4 (template) → semantic-human-review-v4.json → workbook Semantic review sheet",
+    "collision": "filterSafeNegatives → runCollisionAudit → stem_warnings counted → buildCollisionEvidence → PASS without resolution",
+    "workbook": "generate-review-workbook-v4.cjs → CSV/XLSX with STEM_RISK rows, empty corrections, yes/REVIEWED defaults"
+  },
+  "v4_metrics": {
+    "active_keywords": 341,
+    "generic_active_reasons": 324,
+    "unresolved_stem_warnings": 2451,
+    "collisions_before_correction": 0,
+    "corrections_applied": 13
+  }
+}

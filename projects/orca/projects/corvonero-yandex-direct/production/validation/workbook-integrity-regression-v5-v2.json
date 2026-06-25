@@ -1,0 +1,66 @@
+{
+  "tested_at": "2026-06-22T05:15:48.421Z",
+  "passed": true,
+  "tests": [
+    {
+      "regression_id": "WB2-01",
+      "description": "reject object coercion in narrative",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-02",
+      "description": "format array as numbered list",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-03",
+      "description": "reject numeric narrative",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-04",
+      "description": "reject shared-string index 2464",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-05",
+      "description": "reject blank evidence",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-06",
+      "description": "PASS uses sentinel not empty error",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-07",
+      "description": "formatMetricValue handles object",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-08",
+      "description": "summary/detail mismatch guard",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-09",
+      "description": "reject invalid exact action token",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    },
+    {
+      "regression_id": "WB2-10",
+      "description": "contradictory metrics detection",
+      "passed": true,
+      "error_details": "Not applicable — test passed"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "decision_pack_id": "WAVE-4-OPERATOR-DECISIONS-v1",
+  "date": "2026-06-23",
+  "status": "RECORDED — IMPLEMENTATION AUTHORIZED",
+  "decisions": [
+    { "id": "W4-D1", "subject": "Wave 3.1F", "status": "APPROVED — READY FOR CHECKPOINT" },
+    { "id": "W4-D2", "subject": "Wave 3 Overall", "status": "OPERATIONAL WITH APPROVED MODEL BOUNDARY" },
+    { "id": "W4-D3", "subject": "Wave 4", "status": "DATED ANALYTICAL PACK + AI PPC STRATEGIST CORE — AUTHORIZED" },
+    { "id": "W4-D4", "subject": "Evidence authority", "status": "APPROVED/CURRENT/MANIFEST-REGISTERED/LIFECYCLE-AUTHORIZED ONLY" },
+    { "id": "W4-D5", "subject": "Missing SPPC-10", "status": "SPPC-12 FULL PACK BLOCKED; PROVISIONAL STRATEGY NON-PRODUCTION DRAFT ONLY" },
+    { "id": "W4-D6", "subject": "Strategic separation", "status": "FACT/FINDING/RECOMMENDATION/ASSUMPTION/OPERATOR_DECISION/SAFE_UNKNOWN DISTINCT" },
+    { "id": "W4-D7", "subject": "Corvonero", "status": "FROZEN" }
+  ],
+  "approved_model_boundary": {
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "primary_authority": ["live_model_assessment", "independent_reassessment", "adjudication"],
+    "deterministic_assessor": "diagnostic_support_only"
+  }
+}

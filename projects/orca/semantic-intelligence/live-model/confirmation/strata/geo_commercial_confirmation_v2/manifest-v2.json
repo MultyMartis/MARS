@@ -1,0 +1,23 @@
+{
+  "stratum": "geo_commercial_confirmation_v2",
+  "set_title": "GEO COMMERCIAL BLIND CONFIRMATION SET V2",
+  "phrase_checksum": "65c254e4d2feb2e8f51b52b29ee21d8c6c6372d839bfb1af7f204a2fc105ecf1",
+  "labels_checksum": "745aa4d91abf7e24b77d37c7b66a21d71872c15c7338b9e62fad8c0985210283",
+  "combined_checksum": "ae26d8213a56b04b2b35212780dd601e39e20014c314814108b1c18c7615d214",
+  "record_count": 120,
+  "gold_record_count": 120,
+  "contrast_positive_count": 101,
+  "frozen_at": "2026-06-23T14:01:05.438Z",
+  "confirmation_blind_validation": true,
+  "commercial_intent_label_separate_from_scope_fit": true,
+  "calibration_forbidden": true,
+  "post_run_calibration_forbidden": true,
+  "model": "openai/gpt-5-mini",
+  "provider": "openrouter",
+  "prompt_version": "orca-semantic-assessment-prompt-v1.3",
+  "policy_version": "geo-evidence-policy-v2",
+  "adjudicator_version": "v1.3",
+  "author": "MARS-ORCA-CONFIRMATION-GOLD-DESIGNER-v2",
+  "reviewer_status": "FROZEN_PRE_RUN",
+  "v1_phrase_exclusion": true
+}

@@ -1,0 +1,28 @@
+{
+  "shots": [
+    "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.13-about-restore-screenshots\\desktop-1440-full.png",
+    "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.13-about-restore-screenshots\\mobile-390-full.png"
+  ],
+  "console_errors": [],
+  "checks": {
+    "header_present": true,
+    "footer_present": false,
+    "breadcrumb_present": true,
+    "no_m913_hero": true,
+    "old_video": true
+  },
+  "http": {
+    "desktop-1440": 200,
+    "mobile-390": 200
+  },
+  "overflow": {
+    "desktop-1440": {
+      "sw": 1425,
+      "cw": 1440
+    },
+    "mobile-390": {
+      "sw": 375,
+      "cw": 390
+    }
+  }
+}

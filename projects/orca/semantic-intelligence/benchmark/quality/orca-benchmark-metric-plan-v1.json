@@ -1,0 +1,57 @@
+{
+  "plan_id": "orca-benchmark-metric-plan",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "operator_approved": {
+    "commercial_precision_auto_accept": {
+      "threshold": 0.95,
+      "operator_decision": "D3"
+    },
+    "protected_strata_fpr_per_class": {
+      "threshold": 0.01,
+      "classes": [
+        "career",
+        "educational",
+        "diy_how_to",
+        "regulatory",
+        "navigational"
+      ],
+      "operator_decision": "D3"
+    }
+  },
+  "proposed_validate_b0_b1": [
+    {
+      "metric": "overall_auto_accept_fpr",
+      "proposed_threshold": 0.03
+    },
+    {
+      "metric": "service_mapping_precision",
+      "proposed_threshold": 0.97
+    },
+    {
+      "metric": "ambiguity_recall_blind_hard",
+      "proposed_threshold": 0.9
+    },
+    {
+      "metric": "abstention_rate_initial",
+      "proposed_threshold": 0.15,
+      "operator": ">="
+    },
+    {
+      "metric": "annotator_agreement_kappa_eligibility",
+      "proposed_threshold": 0.75
+    },
+    {
+      "metric": "calibration_ece",
+      "proposed_threshold": "corridor_TBD"
+    }
+  ],
+  "evaluation_splits": {
+    "primary_gate": "SPLIT_BLIND",
+    "secondary": [
+      "SPLIT_HARD_NEGATIVE",
+      "SPLIT_REGRESSION_ANCHOR"
+    ]
+  }
+}

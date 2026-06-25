@@ -55,7 +55,7 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 
 ## Consumers (do not own MLI)
 
-- **Forge WordPress** — WordPress runtime consumer (**FW-05R authorized**)
+- **Forge WordPress** — WordPress runtime consumer (**FW-05R complete**)
 - **OCPilot** — OpenCart runtime consumer (planned MLI-04)
 - **Website Factory** — frontend packages only
 

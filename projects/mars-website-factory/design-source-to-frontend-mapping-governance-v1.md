@@ -457,3 +457,21 @@ Rank 5–6 Advisory / Forbidden override
 | Date | Change |
 |------|--------|
 | 2026-06-13 | v1 — Foundation-level design source → frontend mapping governance; eight extraction layers; layout chain; Mapping QA gate; multi-source support; drift prohibitions; UNKNOWN-first protocol. |
+| 2026-06-24 | §12 — Figma inspection authority cross-ref (visible content, hidden layers, layer-name conflict, audit contract). |
+
+---
+
+## 12. Figma inspection authority (when Figma is design source)
+
+When **Figma** is an approved design source, mapping and extraction **must** also satisfy [figma-inspection-authority-rules-v1.md](figma-inspection-authority-rules-v1.md):
+
+| Token | Requirement |
+|-------|-------------|
+| **FIGMA-VISIBLE-CONTENT-AUTHORITY** | Visible rendered content beats layer / component names |
+| **FIGMA-INSTANCE-OVERRIDE-PRIORITY** | Instance overrides beat master defaults and names |
+| **FIGMA-LAYER-NAME-CONFLICT** | Record `LAYER_NAME_CONTENT_CONFLICT` when name ≠ visible content |
+| **FIGMA-HIDDEN-LAYER-EXCLUSION** | Hidden / opacity-0 / parent-hidden nodes excluded — `EXCLUDED_BY_VISIBILITY` |
+
+**Forge:** [`../../agents/mars-forge/figma-inspection-checklist.md`](../../agents/mars-forge/figma-inspection-checklist.md).
+
+Figma audits without visibility inheritance checks are **incomplete** for Mapping QA sign-off.

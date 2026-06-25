@@ -1,0 +1,55 @@
+{
+  "repair_id": "v7-keyword-regression-decisions",
+  "generated_at": "2026-06-22T08:12:56.479Z",
+  "decisions": [
+    {
+      "phrase": "1с программист без образования",
+      "keyword_id": "kw-corv01-disc-499",
+      "literal_meaning": "Programmer 1C without formal education qualification",
+      "likely_intent": "Career/education requirements for becoming or hiring programmers",
+      "commercial_provider_hire_signal": false,
+      "alternative_intent": "Education pathway, job requirements research",
+      "naturalness": "Grammatically valid but semantically educational",
+      "inline_negatives_change_base": false,
+      "final_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "v5 authority; not provider service hire"
+    },
+    {
+      "phrase": "программист 1с без высшего образования",
+      "keyword_id": "kw-corv01-disc-591",
+      "literal_meaning": "1C programmer without higher education",
+      "likely_intent": "Education qualification research",
+      "commercial_provider_hire_signal": false,
+      "alternative_intent": "Career requirements",
+      "naturalness": "Valid grammar, educational intent",
+      "inline_negatives_change_base": false,
+      "final_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "v5 authority; restored erroneously in v7"
+    },
+    {
+      "phrase": "задание программисту 1с",
+      "keyword_id": "kw-corv01-disc-041",
+      "literal_meaning": "Task/assignment to a 1C programmer",
+      "likely_intent": "Ambiguous — could be employer tasking or seeking contractor",
+      "commercial_provider_hire_signal": "weak",
+      "alternative_intent": "HR tasking, homework, training assignment",
+      "naturalness": "Ambiguous without hire verb",
+      "inline_negatives_change_base": true,
+      "inline_negatives_note": "v7 export used 5-token rescue tail — does not fix weak base",
+      "final_decision": "EXCLUDE AMBIGUOUS",
+      "reason": "Destructive inline-minus repair; base remains informational/ambiguous"
+    },
+    {
+      "phrase": "часа программиста 1с",
+      "keyword_id": "kw-corv01-disc-034",
+      "literal_meaning": "Broken genitive — hour(s) of programmer 1C",
+      "likely_intent": "Unclear — likely generator artefact",
+      "commercial_provider_hire_signal": false,
+      "alternative_intent": "Malformed variant of hourly rate queries",
+      "naturalness": "UNNATURAL — incomplete/broken",
+      "inline_negatives_change_base": false,
+      "final_decision": "EXCLUDE UNNATURAL",
+      "reason": "No stable commercial formulation"
+    }
+  ]
+}

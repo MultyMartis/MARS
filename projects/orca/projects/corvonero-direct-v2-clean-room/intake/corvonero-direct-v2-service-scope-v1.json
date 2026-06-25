@@ -1,0 +1,769 @@
+{
+  "schema_version": "1",
+  "registry_id": "corvonero-direct-v2-service-scope-v1",
+  "service_count": 34,
+  "services": [
+    {
+      "service_id": "CR2-SVC-001",
+      "canonical_name": "Программист 1С",
+      "family": "core-1c-services",
+      "operator_source": "task-mandatory-scope; CORVONERO-BUSINESS-INTAKE-v1.md",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-002",
+      "canonical_name": "Внедрение и настройка 1С",
+      "family": "implementation",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-003",
+      "canonical_name": "Сопровождение 1С",
+      "family": "support",
+      "operator_source": "task-mandatory-scope; intake §6.4",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-004",
+      "canonical_name": "Обслуживание 1С",
+      "family": "support",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-005",
+      "canonical_name": "Доработка 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-006",
+      "canonical_name": "Доработка документов 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-007",
+      "canonical_name": "Доработка отчётов 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope; intake §6.2",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-008",
+      "canonical_name": "Внешние отчёты 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-009",
+      "canonical_name": "Печатные формы 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope; intake §6.2",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-010",
+      "canonical_name": "Внешние печатные формы 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-011",
+      "canonical_name": "Рабочее место кассира (РМК)",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope; intake §6.2",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-012",
+      "canonical_name": "Расчёт себестоимости в 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope; intake §6.2",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-013",
+      "canonical_name": "Планирование закупок в 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope; intake §6.2",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-014",
+      "canonical_name": "Платёжный календарь в 1С",
+      "family": "modifications",
+      "operator_source": "task-mandatory-scope; intake §6.2",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-015",
+      "canonical_name": "Интеграция 1С с сайтом",
+      "family": "integrations",
+      "operator_source": "task-mandatory-scope; intake §6.3",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-016",
+      "canonical_name": "Интеграция 1С с Битрикс",
+      "family": "integrations",
+      "operator_source": "task-mandatory-scope; intake §6.3",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-017",
+      "canonical_name": "Интеграция 1С с кассой",
+      "family": "integrations",
+      "operator_source": "task-mandatory-scope; intake §6.3",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-018",
+      "canonical_name": "Обмен данными 1С",
+      "family": "integrations",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-019",
+      "canonical_name": "Синхронизация баз 1С",
+      "family": "integrations",
+      "operator_source": "task-mandatory-scope; intake §6.3",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-020",
+      "canonical_name": "Перенос данных в 1С",
+      "family": "migration",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-021",
+      "canonical_name": "Миграция данных 1С",
+      "family": "migration",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-022",
+      "canonical_name": "Маркировка в 1С",
+      "family": "marking",
+      "operator_source": "task-mandatory-scope; intake §6.1",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-023",
+      "canonical_name": "Честный знак / маркировка",
+      "family": "marking",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-024",
+      "canonical_name": "Товарные направления маркировки",
+      "family": "marking",
+      "operator_source": "task-mandatory-scope; intake §6.1",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-025",
+      "canonical_name": "Настройка ТС ПИОТ",
+      "family": "marking",
+      "operator_source": "task-mandatory-scope; intake §6.1",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-026",
+      "canonical_name": "Диагностика ошибок 1С",
+      "family": "troubleshooting",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-027",
+      "canonical_name": "Восстановление работы 1С",
+      "family": "troubleshooting",
+      "operator_source": "task-mandatory-scope",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-028",
+      "canonical_name": "Обновление и адаптация доработок 1С",
+      "family": "support",
+      "operator_source": "task-mandatory-scope; intake §6.4",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-029",
+      "canonical_name": "1С не работает — устранение",
+      "family": "troubleshooting",
+      "operator_source": "task-mandatory-scope; intake §6.4",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:УТ",
+        "1С:УНФ",
+        "1С:Розница",
+        "1С:КА",
+        "1С:БП"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-030",
+      "canonical_name": "1С:Управление торговлей",
+      "family": "configurations",
+      "operator_source": "intake §5",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:Управление торговлей"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-031",
+      "canonical_name": "1С:Управление нашей фирмой",
+      "family": "configurations",
+      "operator_source": "intake §5",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:Управление нашей фирмой"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-032",
+      "canonical_name": "1С:Розница",
+      "family": "configurations",
+      "operator_source": "intake §5",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:Розница"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-033",
+      "canonical_name": "1С:Комплексная автоматизация",
+      "family": "configurations",
+      "operator_source": "intake §5",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:Комплексная автоматизация"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    },
+    {
+      "service_id": "CR2-SVC-034",
+      "canonical_name": "1С:Бухгалтерия предприятия",
+      "family": "configurations",
+      "operator_source": "intake §5",
+      "business_description": "Подтверждённая услуга оператора в scope первого запуска",
+      "likely_customer_problem": "Зависит от конкретной поисковой фразы — см. phrase-to-service map",
+      "paid_deliverable": "Почасовая работа специалиста 1С по договору (от 2 часов)",
+      "known_configurations": [
+        "1С:Бухгалтерия предприятия"
+      ],
+      "geographic_limitations": "Удалённо по НСО; выезд только Новосибирск",
+      "must_be_represented_in_semantic_research": true,
+      "safe_unknown": [
+        "точный SLA",
+        "гарантии результата",
+        "фиксированная стоимость проекта"
+      ]
+    }
+  ]
+}

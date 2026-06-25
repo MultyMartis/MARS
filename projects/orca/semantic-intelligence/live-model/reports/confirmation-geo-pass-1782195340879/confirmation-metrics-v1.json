@@ -1,0 +1,76 @@
+{
+  "total_gold": 100,
+  "commercial_recall": 0.6190476190476191,
+  "commercial_false_reject_count": 16,
+  "adversarial_false_accept_count": 0,
+  "adversarial_false_accept_rate": 0,
+  "high_confidence_geo_precision": 1,
+  "gate_pass": false,
+  "commercial_false_rejects": [
+    {
+      "record_id": "CFM-GEO-PRV-06",
+      "query": "программист bitrix москва"
+    },
+    {
+      "record_id": "CFM-GEO-PRV-08",
+      "query": "программист bitrix новосибирск"
+    },
+    {
+      "record_id": "CFM-GEO-PRV-09",
+      "query": "программист bitrix казань"
+    },
+    {
+      "record_id": "CFM-GEO-PRV-13",
+      "query": "программист bitrix новосибирск"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-01",
+      "query": "цена настройки sap москва"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-02",
+      "query": "цена настройки sap санкт-петербург"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-03",
+      "query": "цена настройки sap нижний новгород"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-04",
+      "query": "цена настройки sap москва"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-05",
+      "query": "цена настройки sap санкт-петербург"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-06",
+      "query": "цена настройки sap нижний новгород"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-07",
+      "query": "цена настройки sap москва"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-08",
+      "query": "цена настройки sap санкт-петербург"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-09",
+      "query": "цена настройки sap нижний новгород"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-10",
+      "query": "цена настройки sap москва"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-11",
+      "query": "цена настройки sap санкт-петербург"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-12",
+      "query": "цена настройки sap нижний новгород"
+    }
+  ],
+  "adversarial_false_accepts": []
+}

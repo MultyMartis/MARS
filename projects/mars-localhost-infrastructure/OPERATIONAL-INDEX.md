@@ -7,110 +7,115 @@
 
 ---
 
-## Current status
+## 1. Identity and authority
+
+| Field | Value |
+|-------|-------|
+| **Canonical name** | MARS Localhost Infrastructure (MLI) |
+| **Class** | Shared **universal** local development infrastructure — WordPress, OpenCart, PHP smoke sites, synthetic validation; **not** WordPress-only |
+| **Production authority** | **NONE** — local operator-controlled execution only |
+| **Brain root (governance)** | `C:\AI MARS` |
+| **Runtime root (execution)** | `D:\MARS-Localhost` |
+| **Bulk support** | `C:\AI MARS STORAGE` — optional archives; **not** live runtime root |
+
+**Mandatory formulation** ([MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md](MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md)):
+
+```text
+C:\AI MARS governs.
+D:\MARS-Localhost executes.
+```
+
+MLI is an **execution environment**. It is **not** the MARS brain, governance source, project registry, or Git authority.
 
 | Field | Value |
 |-------|-------|
 | **Stage** | MLI-03 **COMPLETE** |
-| **Next** | **MLI-04 — OpenCart Runtime Profile** (parallel lane; Forge FW-05R authorized) |
-| **Laragon** | **YES** — `D:\MARS-Localhost\laragon` (v8.6.1) |
-| **Shared toolchain** | **HARDENED** — see tool registry |
+| **Next** | **MLI-04 — OpenCart Runtime Profile** (parallel lane; Forge **FW-06** waiting) |
+| **FW-05R** | **COMPLETE** — [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md](../mars-website-factory/subsystems/forge-wordpress/capability/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-VALIDATION-REPORT-v1.md) |
+
+---
+
+## 2. Recovery warning
+
+**Post-incident reconciliation (2026-06-24):** MLI-03R.1–R.3 document MySQL 8.4 migration, wrong-datadir incident, Laragon `my.ini` authority, and cold-start persistence. **Do not** delete the historical `mysql-8.4` directory. **Do not** assume full Windows reboot validation is complete until operator retest per [MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md](reports/MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md).
+
+**AG-WP-001 / WPilot bridge:** **not claimed** as live runtime in this index. Forge WordPress consumer validation references synthetic FWS-0001 only.
+
+---
+
+## 3. Architecture and roots
+
+| Zone | Path | Role |
+|------|------|------|
+| **Brain** | `C:\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
+| **Runtime** | `D:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
+| **Laragon** | `D:\MARS-Localhost\laragon` (v8.6.1) | Service control — Laragon-generated `my.ini` is **active config authority** |
+| **Canonical historical datadir** | `mysql-8.4.3` under Laragon data | Wrong-datadir incident remediated — see MLI-03R.1 |
+| **Recovery script** | `D:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Datadir recovery (D: path — historical; no global D:→E: rewrite in docs) |
+
+**Drive-letter note:** Historical paths remain as recorded. Physical path reconciliation (e.g. D: vs E:) is a **deferred** separate task.
+
+---
+
+## 4. Capability and consumers
+
+| Capability | State |
+|------------|-------|
+| **Shared toolchain** | **HARDENED** — [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** |
-| **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 **VALIDATED** (hosts elevation pending for direct domain) |
-| **Runtime operational (WordPress)** | **YES** — synthetic profile with limitations |
+| **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — MLI-WP-SYN-001 **CURRENT SESSION RESTORED** (MLI-03R.3); FW-05R synthetic validation complete |
+| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY — CURRENT SESSION RESTORED** (MLI-03R.3) |
+| **Runtime operational (WordPress)** | **YES** — synthetic + project profiles with documented limitations |
 | **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
-| **Brain root** | `C:\AI MARS` |
-| **Runtime root** | `D:\MARS-Localhost` |
-| **FW-05R** | **AUTHORIZED** — see Forge FW-05R input |
+
+**Forge consumer:** [../mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md](../mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md) — MLI provides runtime surface; Forge owns promotion semantics.
 
 ---
 
-## Foundation documents
+## 5. Chronological phase and checkpoint history
 
-| # | Document |
-|---|----------|
-| 1 | [MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md](MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md) |
-| 2 | [MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md](MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md) |
-| 3 | [MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md) |
-| 4 | [MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md](MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md) |
-| 5 | [MARS-LOCALHOST-DOMAIN-STANDARD-v1.md](MARS-LOCALHOST-DOMAIN-STANDARD-v1.md) |
-| 6 | [MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md) |
-| 7 | [MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md](MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md) |
-| 8 | [MARS-LOCALHOST-CONSUMER-MODEL-v1.md](MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
-| 9 | [MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md](MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md) |
-| 10 | [MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md](MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md) |
-| 11 | [MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md](MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md) |
-| 12 | [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md) |
+| Phase | Status | Key pointer |
+|-------|--------|-------------|
+| **MLI-01** | Complete | [reports/MARS-LOCALHOST-MLI-01-LARAGON-INSTALLATION-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-INSTALLATION-AUDIT-v1.md) |
+| **MLI-02** | Complete | [reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md](reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md) |
+| **MLI-03** | Complete | WordPress runtime profile — [MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md](MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md) |
+| **MLI-03R.1** | Complete (2026-06-24) | MySQL 8.4 auth remediation — [reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md) |
+| **MLI-03R.2** | Complete (2026-06-24) | Duplicate MySQL process closure — [reports/MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md](reports/MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md) |
+| **MLI-03R.3** | Complete (2026-06-24) | Laragon cold-start datadir persistence — [reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md) |
+| **MLI-04** | Planned | OpenCart runtime profile |
+
+Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`, `266e2a8` — authority preserved in current HEAD documentation.
 
 ---
 
-## MLI-02 standards and reports
+## 6. Current MySQL authority model
 
-| Item | Path |
-|------|------|
-| Hosts management | [MARS-LOCALHOST-HOSTS-MANAGEMENT-STANDARD-v1.md](MARS-LOCALHOST-HOSTS-MANAGEMENT-STANDARD-v1.md) |
-| Vhost provisioning | [MARS-LOCALHOST-VHOST-PROVISIONING-STANDARD-v1.md](MARS-LOCALHOST-VHOST-PROVISIONING-STANDARD-v1.md) |
-| Local certificates | [MARS-LOCALHOST-LOCAL-CERTIFICATE-STANDARD-v1.md](MARS-LOCALHOST-LOCAL-CERTIFICATE-STANDARD-v1.md) |
-| Composer | [MARS-LOCALHOST-COMPOSER-STANDARD-v1.md](MARS-LOCALHOST-COMPOSER-STANDARD-v1.md) |
-| WP-CLI | [MARS-LOCALHOST-WPCLI-STANDARD-v1.md](MARS-LOCALHOST-WPCLI-STANDARD-v1.md) |
-| PHPCS/WPCS | [MARS-LOCALHOST-PHPCS-WPCS-STANDARD-v1.md](MARS-LOCALHOST-PHPCS-WPCS-STANDARD-v1.md) |
-| Node/npm | [MARS-LOCALHOST-NODE-AND-NPM-STANDARD-v1.md](MARS-LOCALHOST-NODE-AND-NPM-STANDARD-v1.md) |
-| MySQL credentials | [MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md](MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md) |
-| Smoke suite | [MARS-LOCALHOST-SMOKE-SUITE-v1.md](MARS-LOCALHOST-SMOKE-SUITE-v1.md) |
-| Upgrade policy | [MARS-LOCALHOST-TOOLCHAIN-VERSION-AND-UPGRADE-POLICY-v1.md](MARS-LOCALHOST-TOOLCHAIN-VERSION-AND-UPGRADE-POLICY-v1.md) |
-| Tool registry | [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
-| MLI-02 toolchain audit | [reports/MARS-LOCALHOST-MLI-02-TOOLCHAIN-STATE-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-02-TOOLCHAIN-STATE-AUDIT-v1.md) |
-| MLI-02 smoke report | [reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md](reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md) |
-| MLI-03 input | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md) |
+| Item | Authority |
+|------|-----------|
+| **Server** | Single canonical MySQL 8.4 on `127.0.0.1:3306` |
+| **Process model** | Two `mysqld.exe` processes = **parent/child internal model** (NORMAL — verified MLI-03R.2) |
+| **Authentication** | `caching_sha2_password` remains **valid** for MLI app users |
+| **Active config** | Laragon-generated `my.ini` — see [reports/MARS-LOCALHOST-MLI-03R1-ACTIVE-MYSQL-CONFIG-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-03R1-ACTIVE-MYSQL-CONFIG-AUDIT-v1.md) |
+| **Datadir** | Canonical `mysql-8.4.3`; old `mysql-8.4` directory **must not be deleted** |
+| **Provisioning** | [MARS-LOCALHOST-DATABASE-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) · [scripts/provision-mli-wordpress-db.ps1](scripts/provision-mli-wordpress-db.ps1) |
+| **Network hardening** | [reports/MARS-LOCALHOST-MLI-03R1-MYSQL-POST-REBOOT-NETWORK-HARDENING-v1.md](reports/MARS-LOCALHOST-MLI-03R1-MYSQL-POST-REBOOT-NETWORK-HARDENING-v1.md) |
 
 ---
 
-## MLI-03 WordPress standards and reports
+## 7. Validation gates
 
-| Item | Path |
-|------|------|
-| WordPress runtime profile | [MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md](MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md) |
-| Directory standard | [MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.md) |
-| Baseline configuration | [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDARD-v1.md) |
-| Local guard (MU-plugin) | [MARS-LOCALHOST-WORDPRESS-LOCAL-GUARD-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-LOCAL-GUARD-STANDARD-v1.md) |
-| WordPress runtime registry | [registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md](registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md) |
-| WP manifest | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
-| Validation matrix | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
-| Forge handoff | [reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md](reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md) |
+| Gate | Status |
+|------|--------|
+| MLI-02 smoke suite | **PASS** |
+| MLI-03 WordPress profile matrix | **PASS** — [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
+| FW-05R live synthetic validation | **COMPLETE** (2026-06-23) |
+| FWS-0001 synthetic (MLI-WP-SYN-001) | **VALIDATED** — manifest [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
+| Laragon cold-start persistence | **PROVEN** (MLI-03R.3) |
+| **Full Windows reboot** | **PENDING OPERATOR RETEST** — separate validation gate; **not proven** in this index |
 
 ---
 
-## MLI-01 decisions and reports
-
-| Item | Path |
-|------|------|
-| Path reconciliation | [MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md](MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md) |
-| Document root | [MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md](MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md) |
-| Vhost model | [MARS-LOCALHOST-LARAGON-VHOST-MODEL-v1.md](MARS-LOCALHOST-LARAGON-VHOST-MODEL-v1.md) |
-| Service profile | [MARS-LOCALHOST-SERVICE-PROFILE-v1.md](MARS-LOCALHOST-SERVICE-PROFILE-v1.md) |
-| CLI standard | [MARS-LOCALHOST-CLI-ENVIRONMENT-STANDARD-v1.md](MARS-LOCALHOST-CLI-ENVIRONMENT-STANDARD-v1.md) |
-| Vhost registry | [registries/MARS-LOCALHOST-VHOST-REGISTRY-v1.md](registries/MARS-LOCALHOST-VHOST-REGISTRY-v1.md) |
-| Installation audit | [reports/MARS-LOCALHOST-MLI-01-LARAGON-INSTALLATION-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-INSTALLATION-AUDIT-v1.md) |
-| Service verification | [reports/MARS-LOCALHOST-MLI-01-SERVICE-CONTROL-VERIFICATION-v1.md](reports/MARS-LOCALHOST-MLI-01-SERVICE-CONTROL-VERIFICATION-v1.md) |
-| Toolchain audit | [reports/MARS-LOCALHOST-MLI-01-TOOLCHAIN-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-01-TOOLCHAIN-AUDIT-v1.md) |
-| Browser smoke | [reports/MARS-LOCALHOST-MLI-01-BROWSER-SMOKE-REPORT-v1.md](reports/MARS-LOCALHOST-MLI-01-BROWSER-SMOKE-REPORT-v1.md) |
-| MLI-02 input | [reports/MARS-LOCALHOST-MLI-02-SHARED-TOOLCHAIN-HARDENING-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-02-SHARED-TOOLCHAIN-HARDENING-INPUT-v1.md) |
-
----
-
-## Roadmap and manifests
-
-| Item | Path |
-|------|------|
-| Roadmap | [roadmap.md](roadmap.md) |
-| MLI-01 input (historical) | [reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-01-LARAGON-ENABLEMENT-INPUT-v1.md) |
-| Runtime manifests | [manifests/](manifests/) |
-| Smoke manifest | [manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) |
-| WordPress manifest | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
-
----
-
-## Consumers (pointers)
+## 8. Runtime consumers (pointers)
 
 | Consumer | Pointer |
 |----------|---------|
@@ -120,12 +125,84 @@
 
 ---
 
-## Next authorized action
+## 9. Risks and prohibitions
 
-**Forge WordPress FW-05R — Live Synthetic Runtime Validation** — see [FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-RUNTIME-VALIDATION-INPUT-v1.md](../mars-website-factory/subsystems/forge-wordpress/reports/FORGE-WORDPRESS-FW-05R-LIVE-SYNTHETIC-RUNTIME-VALIDATION-INPUT-v1.md).
-
-Parallel infrastructure lane: **MLI-04 — OpenCart Runtime Profile** (not blocking FW-05R).
+- **No production authority** — MLI is local-only; no client production access claimed.
+- **No secrets in Git** — credentials in `local/mli/` env files or external storage only.
+- **No automatic datadir deletion** — preserve `mysql-8.4` historical directory.
+- **No conflation of governance and runtime** — manifests in Git point to runtime; runtime state stays on D:.
+- **No AG-WP-001 runtime claim** without separate promotion evidence.
 
 ---
 
-*Operational index — MLI-03 complete.*
+## 10. Deferred decisions
+
+| Item | Status |
+|------|--------|
+| MLI-04 OpenCart runtime profile | Planned — parallel to Forge FW-06 |
+| Physical drive-letter reconciliation (D: vs E:) | **Deferred** — historical paths unchanged in documentation |
+| Full Windows reboot operator retest | **Pending** |
+| MLI-04 blocking Forge | **No** — FW-05R complete; MLI-04 parallel |
+
+**Next authorized action:** Parallel infrastructure lane **MLI-04 — OpenCart Runtime Profile** (not blocking FW-05R).
+
+---
+
+## 11. Evidence and report links
+
+### Foundation documents
+
+| # | Document |
+|---|----------|
+| 1 | [MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md](MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md) |
+| 2 | [MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md](MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md) |
+| 3 | [MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md) |
+| 4 | [MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md](MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md) |
+| 5 | [MARS-LOCALHOST-DOMAIN-STANDARD-v1.md](MARS-LOCALHOST-DOMAIN-STANDARD-v1.md) |
+| 6 | [MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md) |
+| 6b | [MARS-LOCALHOST-DATABASE-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) — provisioning (MLI-03R.1) |
+| 7 | [MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md](MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md) |
+| 8 | [MARS-LOCALHOST-CONSUMER-MODEL-v1.md](MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
+| 9 | [MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md](MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md) |
+| 10 | [MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md](MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md) |
+| 11 | [MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md](MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md) |
+| 12 | [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md) |
+
+### MLI-02 standards and reports
+
+| Item | Path |
+|------|------|
+| Tool registry | [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
+| MLI-02 toolchain audit | [reports/MARS-LOCALHOST-MLI-02-TOOLCHAIN-STATE-AUDIT-v1.md](reports/MARS-LOCALHOST-MLI-02-TOOLCHAIN-STATE-AUDIT-v1.md) |
+| MLI-02 smoke report | [reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md](reports/MARS-LOCALHOST-MLI-02-SMOKE-SUITE-REPORT-v1.md) |
+| MLI-03 input | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-RUNTIME-PROFILE-INPUT-v1.md) |
+
+### MLI-03 WordPress standards and reports
+
+| Item | Path |
+|------|------|
+| WordPress runtime profile | [MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md](MARS-LOCALHOST-WORDPRESS-RUNTIME-PROFILE-v1.md) |
+| WordPress runtime registry | [registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md](registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md) |
+| WP manifest (FWS-0001) | [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
+| Validation matrix | [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
+| Forge handoff | [reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md](reports/MARS-LOCALHOST-MLI-03-FORGE-WORDPRESS-RUNTIME-HANDOFF-v1.md) |
+
+### MLI-03R remediation reports
+
+| Item | Path |
+|------|------|
+| MLI-03R.3 datadir persistence | [reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md](reports/MARS-LOCALHOST-MLI-03R3-LARAGON-REBOOT-DATADIR-PERSISTENCE-v1.md) |
+| MLI-03R.2 process closure | [reports/MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md](reports/MARS-LOCALHOST-MLI-03R2-DUPLICATE-MYSQL-PROCESS-CLOSURE-v1.md) |
+| MLI-03R.1 auth remediation | [reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md](reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md) |
+| Post-reboot procedure | [reports/MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md](reports/MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md) |
+
+### Roadmap and manifests
+
+| Item | Path |
+|------|------|
+| Roadmap | [roadmap.md](roadmap.md) |
+| Smoke manifest | [manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-SMOKE-001-RUNTIME-MANIFEST-v1.md) |
+
+---
+
+*Operational index — MLI-03 complete; MLI-03R remediation reconciled (Wave 4).*

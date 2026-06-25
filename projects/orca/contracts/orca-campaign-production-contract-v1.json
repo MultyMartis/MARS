@@ -1,0 +1,166 @@
+{
+  "contract_id": "ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1",
+  "version": "1.0.0",
+  "effective_date": "2026-06-22",
+  "status": "CANONICAL",
+  "derived_from": "triumph-manipulator-production-evidence",
+  "authority_order": [
+    {
+      "rank": 1,
+      "layer": "explicit_operator_decisions",
+      "description": "Written operator corrections, scope locks, recovery packages, gate approvals"
+    },
+    {
+      "rank": 2,
+      "layer": "operator_approved_business_service_scope",
+      "description": "Mandatory services, advertising status, absence policy"
+    },
+    {
+      "rank": 3,
+      "layer": "operator_approved_campaign_architecture",
+      "description": "Campaign count, logical directions, export model"
+    },
+    {
+      "rank": 4,
+      "layer": "operator_approved_group_intent_architecture",
+      "description": "Group boundaries, intent ownership, landing and ad ownership"
+    },
+    {
+      "rank": 5,
+      "layer": "verified_market_semantic_evidence",
+      "description": "Wordstat, SERP, phrase-specific semantic review"
+    },
+    {
+      "rank": 6,
+      "layer": "production_rules",
+      "description": "ORCA production contracts, Triumph-derived laws, format contracts"
+    },
+    {
+      "rank": 7,
+      "layer": "classifier_suggestions",
+      "description": "Machine semantic classification — advisory only"
+    },
+    {
+      "rank": 8,
+      "layer": "qa_repair_suggestions",
+      "description": "QA repair packages, collision repair, workbook generators"
+    },
+    {
+      "rank": 9,
+      "layer": "export_formatting",
+      "description": "XLSX transport, Commander column mapping"
+    }
+  ],
+  "sections": {
+    "A_operator_scope_lock": {
+      "id": "A",
+      "title": "Operator Scope Lock",
+      "rules": [
+        "Every mandatory service receives stable service_id, campaign representation status, owner group, landing mapping, absence policy",
+        "Classifier and repair scripts cannot silently change these fields",
+        "Any disappearance of a required service blocks export"
+      ]
+    },
+    "B_commercial_seed_protection": {
+      "id": "B",
+      "title": "Commercial Seed Protection",
+      "rules": [
+        "Operator-approved direct commercial seeds are protected",
+        "Automatic EXCLUDE of protected seeds is forbidden",
+        "Removal requires explicit operator decision recorded in recovery or scope artefact"
+      ]
+    },
+    "C_campaign_architecture_first": {
+      "id": "C",
+      "title": "Campaign Architecture First",
+      "rules": [
+        "Freeze campaign count, directions, groups, intent boundaries, landing and ad ownership before final semantic processing"
+      ]
+    },
+    "D_group_viability": {
+      "id": "D",
+      "title": "Group Viability",
+      "rules": [
+        "Viable when distinct paid-service intent, at least one legitimate commercial phrase, ad, landing, safe negative separation",
+        "No arbitrary minimum keyword count"
+      ]
+    },
+    "E_semantic_admission": {
+      "id": "E",
+      "title": "Semantic Admission",
+      "rules": [
+        "Every active phrase must justify paid service, hire intent, group ownership, informational alternative, and status"
+      ]
+    },
+    "F_controlled_tests": {
+      "id": "F",
+      "title": "Controlled Tests",
+      "rules": [
+        "Require phrase-specific hypothesis, risk, group, ad, landing, lower bid, success and exclusion rules",
+        "No copied cross-topic hypotheses"
+      ]
+    },
+    "G_inline_negative_limit": {
+      "id": "G",
+      "title": "Inline Negative Limit",
+      "rules": [
+        "Long inline-minus tails to rescue weak base phrases are forbidden without explicit evidence",
+        "Prefer rewrite, replace, exclude, or isolate"
+      ],
+      "thresholds": {
+        "max_inline_minus_tokens": 3,
+        "max_phrase_length_with_inline_minus": 80
+      }
+    },
+    "H_negative_architecture": {
+      "id": "H",
+      "title": "Negative Architecture",
+      "rules": [
+        "Negatives produced after final phrase ownership",
+        "Every negative identifies protected intent, competing intent, scope, collision and semantic-risk result"
+      ]
+    },
+    "I_qa_authority_boundary": {
+      "id": "I",
+      "title": "QA Authority Boundary",
+      "rules": [
+        "QA may detect, warn, block, recommend",
+        "QA may not remove mandatory services, exclude protected seeds, merge approved groups, change campaign count or landing ownership, invent commercial scope"
+      ]
+    },
+    "J_external_artefact_gate": {
+      "id": "J",
+      "title": "External Artefact Gate",
+      "rules": [
+        "Final XLSX must be independently reopened and audited",
+        "Internal PASS files are not independent proof"
+      ]
+    },
+    "K_commercial_validity_gate": {
+      "id": "K",
+      "title": "Commercial Validity Gate",
+      "rules": [
+        "PASS requires service coverage, intent purity, group clarity, ad alignment, landing alignment, safe negatives — not structure alone"
+      ]
+    }
+  },
+  "law_ids": [
+    "ORCA-LAW-01",
+    "ORCA-LAW-02",
+    "ORCA-LAW-03",
+    "ORCA-LAW-04",
+    "ORCA-LAW-05",
+    "ORCA-LAW-06",
+    "ORCA-LAW-07",
+    "ORCA-LAW-08",
+    "ORCA-LAW-09",
+    "ORCA-LAW-10",
+    "ORCA-LAW-11",
+    "ORCA-LAW-12",
+    "ORCA-LAW-13",
+    "ORCA-LAW-14",
+    "ORCA-LAW-15"
+  ],
+  "validator_tool": "projects/orca/tools/validate-campaign-production-contract.mjs",
+  "invariants_registry": "projects/orca/contracts/orca-campaign-production-invariants-v1.json"
+}

@@ -1,0 +1,38 @@
+{
+  "receipt_id": "sppc-receipt-2026-06-22T20-31-27-602Z-21110b57",
+  "receipt_schema_version": "1.0.0",
+  "timestamp": "2026-06-22T20:31:27.603Z",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "manifest_path": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-direct-v2-clean-room\\state\\project-ppc-state-manifest-v1.json",
+  "manifest_checksum": "8d94c9d38333c1166b1f78b3b23cababd40b9ecb5a24380f59a6cd4dbc8de0ae",
+  "lifecycle_version": "1.0.0",
+  "requested_stage": "SPPC-05",
+  "requested_action": "admission",
+  "actor": "ORCA Semantic Intelligence",
+  "tool": "orca-semantic-runtime",
+  "authorization_result": "BLOCKED",
+  "blockers": [
+    {
+      "code": "PROJECT_FROZEN",
+      "message": "BLOCKED — PROJECT FROZEN",
+      "owner": "Operator"
+    },
+    {
+      "code": "PROJECT_FROZEN",
+      "message": "BLOCKED — PROJECT FROZEN"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "artifact_type": "commercial_admission_registry",
+      "output_class": "production_authority",
+      "requestedAsAuthority": true
+    }
+  ],
+  "actual_outputs": null,
+  "runtime_version": "wave1.1-v1",
+  "source_commit": "55850b7",
+  "command": "node orca-ppc-gate.mjs --action admission",
+  "note": null,
+  "immutable": true
+}

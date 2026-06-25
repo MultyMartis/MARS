@@ -1,0 +1,33 @@
+{
+  "fixture_id": "authority-active-missing-production-v1",
+  "description": "Authority ACTIVE but production group missing — must BLOCK",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-B01",
+        "service_name": "интеграция CRM",
+        "current_group": "grp-b01",
+        "current_group_status": "ACTIVE",
+        "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+        "absence_from_production_permitted": false,
+        "recovery_required": false
+      }
+    ]
+  },
+  "protected_seed_registry": [
+    {
+      "keyword_id": "kw-b01",
+      "phrase": "интеграция crm",
+      "group_id": "grp-b01"
+    }
+  ],
+  "production_dataset": {
+    "groups": [],
+    "keywords": [],
+    "held_groups": []
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": { "ads": [] },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

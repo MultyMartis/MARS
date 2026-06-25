@@ -1,0 +1,107 @@
+{
+  "registry_id": "triumph-manipulator-production-decisions-v1",
+  "generated_at": "2026-06-22",
+  "source": "triumph-manipulator-production-evidence-inventory.md",
+  "decisions": [
+    {
+      "decision_id": "TRIUMPH-D01",
+      "stage": "campaign_architecture",
+      "statement": "Single unified search campaign for Krasnodar manipulator services",
+      "evidence_paths": [
+        "ppc/triumph-manipulator/schema/instances/triumph-s-tier-draft-v1.json",
+        "freeze/battle-pilot-triumph-search-v1/TRIUMPH-SEARCH-RK-STABLE-STATE-v1.md"
+      ],
+      "reusable": true,
+      "project_specific_note": "Corvonero uses same unified model with 8 logical directions inside one campaign"
+    },
+    {
+      "decision_id": "TRIUMPH-D02",
+      "stage": "group_architecture",
+      "statement": "Twelve groups map to twelve frozen route families — one commercial intent each",
+      "evidence_paths": [
+        "freeze/route-family-freeze-v1/ROUTE-FAMILY-INDEX-v1.md",
+        "ppc/triumph-manipulator/validation/semantic-validation-rules-v1.md"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D03",
+      "stage": "negative_architecture",
+      "statement": "Cross-negative matrix is mandatory before export; applied at group scope",
+      "evidence_paths": [
+        "freeze/ppc-exporter-production-baseline-v1/CROSS-NEGATIVE-RULES-v1.md",
+        "ppc/triumph-manipulator/tools/exporter-cli/cross-negative-matrix-v1.4.js"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D04",
+      "stage": "validation",
+      "statement": "345 validation rules must PASS before export — human-triggered CLI",
+      "evidence_paths": [
+        "ppc/triumph-manipulator/tools/validation-cli/",
+        "freeze/battle-pilot-triumph-search-v1/TRIUMPH-SEARCH-RK-STABLE-STATE-v1.md"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D05",
+      "stage": "landing_alignment",
+      "statement": "URL registry, JSON instance, and exporter mapping must be synchronized before export",
+      "evidence_paths": [
+        "freeze/commander-url-sync-v1/URL-SYNCHRONIZATION-REPORT-v1.md",
+        "freeze/battle-pilot-triumph-search-v1/ORCA-LESSONS-LEARNED-v1.md"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D06",
+      "stage": "operator_review",
+      "statement": "Commander import structural PASS does not equal launch approval",
+      "evidence_paths": [
+        "freeze/battle-pilot-triumph-search-v1/TRIUMPH-SEARCH-RK-STABLE-STATE-v1.md"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D07",
+      "stage": "narrow_groups",
+      "statement": "Low keyword count acceptable when commercial intent is distinct (capability routes)",
+      "evidence_paths": [
+        "ppc/triumph-manipulator/research/intent-groups-v1.md",
+        "freeze/ppc-launch-export-v1.4/GROUP-FIDELITY-QA-v1.md"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D08",
+      "stage": "semantic_filter",
+      "statement": "Employment, purchase, wrong-service terms blocked at keyword and campaign negative layers",
+      "evidence_paths": [
+        "ppc/triumph-manipulator/validation/semantic-validation-rules-v1.md",
+        "ppc/triumph-manipulator/schema/instances/triumph-s-tier-draft-v1.json"
+      ],
+      "reusable": true
+    },
+    {
+      "decision_id": "TRIUMPH-D09",
+      "stage": "bids",
+      "statement": "Manual CPC; bids assigned on keyword rows; default range 400–600 RUB with within-group spread",
+      "evidence_paths": [
+        "freeze/ppc-exporter-production-baseline-v1/BID-MANAGEMENT-RULES-v1.md"
+      ],
+      "reusable": "conditional",
+      "project_specific_note": "Corvonero uses T1–T4 tier model adapted from this pattern"
+    },
+    {
+      "decision_id": "TRIUMPH-D10",
+      "stage": "export_transport",
+      "statement": "Sheet1 patch on Commander template v1 — not greenfield XLSX generation",
+      "evidence_paths": [
+        "freeze/ppc-exporter-production-baseline-v1/COMMANDER-TEMPLATE-SOT-v1.md",
+        "ppc/triumph-manipulator/tools/exporter-cli/sheet1-patch-export.js"
+      ],
+      "reusable": true
+    }
+  ]
+}

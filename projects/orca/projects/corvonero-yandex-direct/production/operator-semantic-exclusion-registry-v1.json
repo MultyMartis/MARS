@@ -1,0 +1,145 @@
+{
+  "registry_id": "operator-semantic-exclusion-registry-v1",
+  "version": "v1",
+  "project_id": "corvonero-yandex-direct",
+  "generated_at": "2026-06-22T08:12:56.474Z",
+  "policy": {
+    "automatic_pipeline_restore": "FORBIDDEN",
+    "inline_minus_bypass": "FORBIDDEN",
+    "normalization_bypass": "FORBIDDEN",
+    "restoration_requires": "explicit_operator_approved_override"
+  },
+  "exclusions": [
+    {
+      "exclusion_id": "EXC-V71-001",
+      "normalized_phrase": "1с программист без образования",
+      "variants": [
+        "1с программист без образования"
+      ],
+      "category": "EDUCATIONAL_CAREER",
+      "authority_source": "v5-collision-actions-final.json CF-0016; v5-career-education-query-audit; v7.1 regression repair",
+      "first_decision_version": "v5",
+      "last_confirmed_version": "v7.1",
+      "reason": "Educational qualification intent — not provider hire.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V71-002",
+      "normalized_phrase": "программист 1с без высшего образования",
+      "variants": [
+        "программист 1с без высшего образования"
+      ],
+      "category": "EDUCATIONAL_CAREER",
+      "authority_source": "v5-collision-actions-final.json; v5-career-education-query-audit; v7.1 regression repair",
+      "first_decision_version": "v5",
+      "last_confirmed_version": "v7.1",
+      "reason": "Educational qualification intent — not provider hire.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V71-003",
+      "normalized_phrase": "задание программисту 1с",
+      "variants": [
+        "задание программисту 1с"
+      ],
+      "category": "AMBIGUOUS_INLINE_MINUS_RESCUE",
+      "authority_source": "v7.1 phrase review; destructive inline-minus tail in v7 export",
+      "first_decision_version": "v5",
+      "last_confirmed_version": "v7.1",
+      "reason": "Ambiguous base phrase; v7 used long inline-negative rescue tail.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V71-004",
+      "normalized_phrase": "часа программиста 1с",
+      "variants": [
+        "часа программиста 1с"
+      ],
+      "category": "UNNATURAL_MALFORMED",
+      "authority_source": "v7.1 phrase review; unnatural generator artefact",
+      "first_decision_version": "v5",
+      "last_confirmed_version": "v7.1",
+      "reason": "Grammatically broken / unnatural phrase without stable commercial formulation.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V71-005",
+      "normalized_phrase": "образование программист 1с",
+      "variants": [
+        "образование программист 1с"
+      ],
+      "category": "EDUCATIONAL_CAREER",
+      "authority_source": "v5-career-education-query-audit; v5-collision-actions-final.json",
+      "first_decision_version": "v5",
+      "last_confirmed_version": "v7.1",
+      "reason": "Education intent — wrongly restored by v7 scope recovery.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V71-006",
+      "normalized_phrase": "программист 1с высшее образование",
+      "variants": [
+        "программист 1с высшее образование"
+      ],
+      "category": "EDUCATIONAL_CAREER",
+      "authority_source": "v5-career-education-query-audit; v5-collision-actions-final.json",
+      "first_decision_version": "v5",
+      "last_confirmed_version": "v7.1",
+      "reason": "Education intent — wrongly restored by v7 scope recovery.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V5-INFO-100",
+      "normalized_phrase": "маркировка лекарств проверить",
+      "variants": [
+        "маркировка лекарств проверить"
+      ],
+      "category": "INFORMATIONAL_REGULATORY",
+      "authority_source": "v7-scope-recovery-apply HARD_EXCLUDES",
+      "first_decision_version": "v7",
+      "last_confirmed_version": "v7.1",
+      "reason": "Informational/regulatory phrase — hard exclude in production.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V5-INFO-101",
+      "normalized_phrase": "маркировка автозапчастей 2026",
+      "variants": [
+        "маркировка автозапчастей 2026"
+      ],
+      "category": "INFORMATIONAL_REGULATORY",
+      "authority_source": "v7-scope-recovery-apply HARD_EXCLUDES",
+      "first_decision_version": "v7",
+      "last_confirmed_version": "v7.1",
+      "reason": "Informational/regulatory phrase — hard exclude in production.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V5-INFO-102",
+      "normalized_phrase": "маркировка автозапчастей честный знак 2026",
+      "variants": [
+        "маркировка автозапчастей честный знак 2026"
+      ],
+      "category": "INFORMATIONAL_REGULATORY",
+      "authority_source": "v7-scope-recovery-apply HARD_EXCLUDES",
+      "first_decision_version": "v7",
+      "last_confirmed_version": "v7.1",
+      "reason": "Informational/regulatory phrase — hard exclude in production.",
+      "override_policy": "operator_approved_override_only"
+    },
+    {
+      "exclusion_id": "EXC-V5-INFO-103",
+      "normalized_phrase": "1с программист 2026",
+      "variants": [
+        "1с программист 2026"
+      ],
+      "category": "INFORMATIONAL_REGULATORY",
+      "authority_source": "v7-scope-recovery-apply HARD_EXCLUDES",
+      "first_decision_version": "v7",
+      "last_confirmed_version": "v7.1",
+      "reason": "Informational/regulatory phrase — hard exclude in production.",
+      "override_policy": "operator_approved_override_only"
+    }
+  ],
+  "exclusion_count": 10
+}

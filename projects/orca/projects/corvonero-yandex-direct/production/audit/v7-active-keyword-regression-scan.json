@@ -1,0 +1,520 @@
+{
+  "audit_id": "v7-active-keyword-regression-scan",
+  "generated_at": "2026-06-22T08:12:56.523Z",
+  "active_keywords_scanned": 311,
+  "findings": [
+    {
+      "keyword_id": "seed-CORV-G06-07-core-маркировка-к",
+      "phrase": "маркировка косметики 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-09-core-маркировка-б",
+      "phrase": "маркировка бытовой химии 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-11-core-маркировка-м",
+      "phrase": "маркировка масел 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-12-core-маркировка-т",
+      "phrase": "маркировка техники 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-13-core-маркировка-с",
+      "phrase": "маркировка строительных материалов 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-04-core-ошибка-марки",
+      "phrase": "ошибка маркировки 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-01-core-подключение-",
+      "phrase": "подключение маркировки 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G06-02-core-настройка-ма",
+      "phrase": "настройка маркировки 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G07-03-core-не-работает-",
+      "phrase": "не работает синхронизация 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G07-02-core-ошибка-1с",
+      "phrase": "ошибка 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G07-02-core-ошибка-1с-по",
+      "phrase": "ошибка 1с после обновления",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G07-04-core-восстановлен",
+      "phrase": "восстановление работы 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-014",
+      "phrase": "срочно программист 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G05-03-core-интеграция-1",
+      "phrase": "интеграция 1с с кассой",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-миграция-дан",
+      "phrase": "миграция данных 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-перенос-данн",
+      "phrase": "перенос данных в 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G05-05-core-настройка-об",
+      "phrase": "настройка обмена 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-расчет-себес",
+      "phrase": "расчет себестоимости 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-себестоимост",
+      "phrase": "себестоимость в 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G04-02-core-планирование",
+      "phrase": "планирование закупок 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G04-03-core-платежный-ка",
+      "phrase": "платежный календарь 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G03-06-core-настройка-рм",
+      "phrase": "настройка рмк 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G03-02-core-новый-отчет-",
+      "phrase": "новый отчет 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G03-02-core-создание-отч",
+      "phrase": "создание отчета 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G03-01-core-настройка-от",
+      "phrase": "настройка отчета 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G02-05-core-перенос-дора",
+      "phrase": "перенос доработок 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G02-05-core-сохранение-д",
+      "phrase": "сохранение доработок при обновлении 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G02-06-core-исправление-",
+      "phrase": "исправление доработок после обновления 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-002",
+      "phrase": "программист 1с новосибирск",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-092",
+      "phrase": "программисты 1с новосибирск",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G01-07-core-абонентское-",
+      "phrase": "абонентское обслуживание 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G01-06-core-обслуживание",
+      "phrase": "обслуживание 1с для организации",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-661",
+      "phrase": "обслуживание и сопровождение 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-717",
+      "phrase": "сопровождение и обслуживание 1с предприятие",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G01-04-core-внедрение-1с",
+      "phrase": "внедрение 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-509",
+      "phrase": "внедренцы и программисты 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G01-03-core-настройка-1с",
+      "phrase": "настройка 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "phrase": "1с программист без образования",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-101",
+      "phrase": "образование программист 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "phrase": "программист 1с без высшего образования",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-264",
+      "phrase": "программист 1с высшее образование",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G01-08-core-разовая-дора",
+      "phrase": "разовая доработка 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "seed-CORV-G01-08-core-разовые-рабо",
+      "phrase": "разовые работы 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-041",
+      "phrase": "задание программисту 1с стать",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-054",
+      "phrase": "задачи 1с программиста",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-052",
+      "phrase": "найти программиста 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-050",
+      "phrase": "нужен программист 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-062",
+      "phrase": "отзыв программисту 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-060",
+      "phrase": "программа программист 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-001",
+      "phrase": "программист 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-056",
+      "phrase": "программист 1с предприятие",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-026",
+      "phrase": "программист 1с удаленно",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-061",
+      "phrase": "программист аналитик 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-038",
+      "phrase": "программист разработчик 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-048",
+      "phrase": "программисты 1с спб",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-053",
+      "phrase": "работать программистом 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-064",
+      "phrase": "сколько зарабатывает программист 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-033",
+      "phrase": "сколько программистов 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-042",
+      "phrase": "стал программистом 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-044",
+      "phrase": "стоимость 1с программисты",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-059",
+      "phrase": "стоимость часа 1с программиста",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-066",
+      "phrase": "технические задания программистам 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    },
+    {
+      "keyword_id": "kw-corv01-disc-034",
+      "phrase": "часа программиста 1с",
+      "action": "KEEP",
+      "findings": [
+        "protected_commercial_seed"
+      ]
+    }
+  ],
+  "exclude_count": 6,
+  "exclude_ids": [
+    "kw-corv01-disc-499",
+    "kw-corv01-disc-591",
+    "kw-corv01-disc-041",
+    "kw-corv01-disc-034",
+    "kw-corv01-disc-101",
+    "kw-corv01-disc-264"
+  ]
+}

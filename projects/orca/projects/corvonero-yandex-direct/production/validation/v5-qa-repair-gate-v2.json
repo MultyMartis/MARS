@@ -1,0 +1,103 @@
+{
+  "gate_id": "v5-qa-repair-gate-v2",
+  "evaluated_at": "2026-06-22T05:15:49.372Z",
+  "final_result": "PASS — V6 PRODUCTION AUTHORIZED",
+  "v6_production": "AUTHORIZED_FOR_FOLLOWUP_TASK",
+  "checks": [
+    {
+      "id": "G2-01-serialization",
+      "passed": true,
+      "detail": "object_coercion=0"
+    },
+    {
+      "id": "G2-02-no-970",
+      "passed": true,
+      "detail": "970_in_narrative=0"
+    },
+    {
+      "id": "G2-03-no-2464",
+      "passed": true,
+      "detail": "four_digit=0"
+    },
+    {
+      "id": "G2-04-placeholder-reconciled",
+      "passed": true,
+      "detail": "613 vs 334 count layers reconciled"
+    },
+    {
+      "id": "G2-05-career-education",
+      "passed": true,
+      "detail": "leakage_to_future_production=0; v5_unchanged=4"
+    },
+    {
+      "id": "G2-06-controlled-tests",
+      "passed": true,
+      "detail": "missing_hypothesis=0 reviewed=234"
+    },
+    {
+      "id": "G2-07-unique-negatives",
+      "passed": true,
+      "detail": "UNRESOLVED=0 BLOCKING=0"
+    },
+    {
+      "id": "G2-08-safe-evidence",
+      "passed": true,
+      "detail": "SAFE_PROVEN=333"
+    },
+    {
+      "id": "G2-09-semantic-reconciliation",
+      "passed": true,
+      "detail": "unique_unresolved=0"
+    },
+    {
+      "id": "G2-10-collision-actions",
+      "passed": true,
+      "detail": "20/20 exact actions"
+    },
+    {
+      "id": "G2-11-regression",
+      "passed": true,
+      "detail": "all passed"
+    },
+    {
+      "id": "G2-12-workbook-inspection",
+      "passed": true,
+      "detail": "0 findings"
+    }
+  ],
+  "blockers": [],
+  "summary": "All v2 repair gates passed; v6 production may proceed in a separate authorized task.",
+  "workbook_inspection": {
+    "inspected_at": "2026-06-22T05:15:49.372Z",
+    "workbook_path": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V5-QA-REPAIR-AUDIT-v2.xlsx",
+    "sheets": [
+      "Audit summary",
+      "V5 rejection",
+      "Serialization root causes",
+      "Placeholder count reconciliatio",
+      "Evidence integrity scan",
+      "Career and education correction",
+      "Controlled-test decisions",
+      "Unique negative resolution",
+      "Semantic-risk reconciliation",
+      "Exact collision actions",
+      "V6 input repair package",
+      "Generator regression tests",
+      "Independent gate details",
+      "QA gate decision"
+    ],
+    "findings": [],
+    "reconciliation": {
+      "workbook_sheets": 14,
+      "expected_sheets": 14,
+      "sheets_match": true,
+      "placeholder_findings": 0,
+      "object_coercion": 0,
+      "numeric_narrative_970": 0,
+      "four_digit_narrative": 0,
+      "empty_required": 0
+    },
+    "passed": true
+  },
+  "workbook_path": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V5-QA-REPAIR-AUDIT-v2.xlsx"
+}

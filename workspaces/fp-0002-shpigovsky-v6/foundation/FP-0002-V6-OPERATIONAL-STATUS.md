@@ -1,6 +1,28 @@
 # FP-0002 V6 Operational Status
 
-**Updated:** 2026-06-23 (pre-modals freeze + modal consultation forms)
+**Updated:** 2026-06-24 (final operator-stable freeze before V7 bootstrap)
+
+## Final operator-stable release (2026-06-24)
+
+| Field | Value |
+|-------|-------|
+| `final_release` | `FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01` |
+| `lifecycle` | **FROZEN_FALLBACK** |
+| `final_release_tag` | `fp-0002-v6-final-before-v7-operator-stable-01` |
+| `baseline_commit_before_post_114b064_operator_edits` | `114b064d7398f09e9cc50686ed46b3482ef2c7b9` |
+| `operator_post_114b064_src_files` | `src/partials/sections/hero.html`, `src/scss/style.scss` |
+| `release_manifest` | [releases/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01-MANIFEST.md](../releases/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01/FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01-MANIFEST.md) |
+| `backup_archive` | `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\releases\FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01-SOURCE.zip` |
+| `v7_workspace` | `workspaces/fp-0002-shpigovsky-v7/` (created after this freeze) |
+| `package_001` | NOT STARTED |
+| `spig_v1_2_migration` | NOT STARTED |
+
+```text
+current_src: OPERATOR_CANONICAL
+status: FROZEN_FALLBACK
+design_authority_at_freeze: HISTORICAL PRE-V7 BASELINE
+authorized_next: V7 ACTIVE_DEVELOPMENT (package #001 only after explicit charter)
+```
 
 ## Pre-modals operator-stable release
 
@@ -49,12 +71,19 @@ page_inventory: UPDATED
 url_map: UPDATED
 wordpress_target: CONFIRMED
 
-services_page: FOUNDATION_IMPLEMENTED_PENDING_OPERATOR_REVIEW
+services_foundation: COMPLETE
+services_rejected_unique_implementation: REVERTED
+services_reuse_matrix: COMPLETE
+
+services_page_mode: REUSE_ONLY
 services_page_source: src/pages/uslugi.html
 services_page_static_build: dist/uslugi.html
 services_page_wordpress_url: /uslugi/
-services_page_existing_blocks: ASSEMBLED
-services_page_unique_blocks: NOT_STARTED
+services_exact_reused_blocks: header, home-rehabilitation-program, home-founder-quote, home-comfort, home-faq, home-final-form, footer, modal-consultation
+services_new_unique_blocks: 0
+services_unimplemented_blocks: service-hero, addictions, mental-health, eating-disorders
+
+services_page_unique_blocks: REJECTED_AND_REVERTED
 
 header_href_map: UPDATED
 mobile_menu_href_map: UPDATED
@@ -66,6 +95,10 @@ home_page: PRESERVED
 modal_backend: BLOCKED
 captcha_configuration: BLOCKED
 ```
+
+**Rejected unique implementation:** commit `feff069` reverted by `25bfbce`. Recovery archive: `C:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v6\recovery\FP-0002-V6-PRE-SERVICES-ROLLBACK-FEFF069.zip` — **NOT CURRENT AUTHORITY**.
+
+**Reuse audit:** `reviews/services-page/reuse-only/FP-0002-SERVICES-EXACT-REUSE-MATRIX-v1.md`
 
 ## Full home operator-stable release
 

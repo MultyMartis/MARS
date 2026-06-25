@@ -1,0 +1,20 @@
+{
+  "policy_id": "orca-benchmark-double-annotation-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "mandatory_100_percent": [
+    "phase_B0",
+    "corvonero_pilot",
+    "split_blind",
+    "protected_strata",
+    "hard_negative_pack",
+    "adversarial_difficulty"
+  ],
+  "long_term_sample_rate": {
+    "status": "OPERATOR DECISION REQUIRED AFTER B0",
+    "deferred_from": "P0-C U-C02"
+  },
+  "process": "blind_second_pass",
+  "disagreement_ref": "../../annotation/adjudication/ORCA-ANNOTATION-DISAGREEMENT-POLICY-v1.md"
+}

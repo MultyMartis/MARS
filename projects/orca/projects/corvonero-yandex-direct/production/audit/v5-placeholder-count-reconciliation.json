@@ -1,0 +1,37 @@
+{
+  "audit_id": "v5-placeholder-count-reconciliation",
+  "generated_at": "2026-06-22T05:15:48.290Z",
+  "metrics": {
+    "total_affected_cells": 613,
+    "total_finding_rows": 334,
+    "unique_workbook_sheets": 3,
+    "unique_columns": [
+      "replacement",
+      "representative_phrases",
+      "detail"
+    ],
+    "unique_entities": 363,
+    "unique_bad_values": 1,
+    "duplicate_occurrences": 280,
+    "root_causes": 1
+  },
+  "breakdown": {
+    "shared_string_index": 2464,
+    "resolves_to": "",
+    "sheet17_negative_risk_resolution_cells": 602,
+    "sheet17_replacement_column_cells": 363,
+    "sheet17_representative_phrases_column_cells": 239,
+    "other_sheets_cells": 11,
+    "aggregate_workbook_finding_rows": 1,
+    "entity_level_finding_rows": 333,
+    "formula_cells": "363 replacement + 239 representative_phrases + 11 other sheets = 613 affected cells",
+    "formula_findings": "333 entity findings + 1 aggregate = 334 finding rows"
+  },
+  "explanation": {
+    "why_613_vs_334": "613 counts physical XLSX cells storing sharedStrings index 2464 across 3 sheets (602 on Negative risk resolution + 11 elsewhere). 334 counts deduplicated audit finding rows at entity level (333 per-resolution replacement defects + 1 workbook summary). Cell instances vs entity findings — different layers, not interchangeable.",
+    "duplicate_occurrences_meaning": "280 extra cell-level occurrences beyond entity finding rows (second column leaks + cross-sheet cells).",
+    "unique_entities_meaning": "363 resolution rows with null replacement written as empty → index 2464.",
+    "unique_root_cause": "ExcelJS empty-string deduplication to sharedStrings[2464] without narrative sentinel."
+  },
+  "reconciliation_pass": true
+}

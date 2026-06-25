@@ -1,0 +1,44 @@
+{
+  "policy_id": "orca-geo-evidence-policy-v2",
+  "version": "2.0.0",
+  "scope": "Universal geo-commercial intent admission — project-independent",
+  "mandatory_rule": "geography strengthens existing commercial evidence but never creates it alone",
+  "strong_commercial_geo_evidence": [
+    "explicit_provider_noun_plus_geography",
+    "explicit_service_task_plus_geography_with_order_or_price",
+    "price_or_order_modifier_plus_service_plus_geography",
+    "urgent_paid_problem_plus_geography",
+    "product_name_plus_explicit_service_task_plus_geography"
+  ],
+  "supporting_evidence_only": [
+    "service_noun_plus_geography_without_additional_signals",
+    "recognized_commercial_task_plus_geography"
+  ],
+  "insufficient_evidence": [
+    "product_plus_geography_without_service_task",
+    "profession_career_query_plus_geography",
+    "education_plus_geography",
+    "informational_noun_plus_geography",
+    "brand_navigation_plus_geography",
+    "broad_ambiguous_noun_plus_geography",
+    "geography_alone"
+  ],
+  "commercial_intent_vs_scope_fit": {
+    "commercial_eligibility": "User seeks paid service or specialist — independent of project registry",
+    "scope_fit": "Whether this project offers the service — separate from commercial admission",
+    "ownership": "Service owner landing or SERVICE_GAP for out-of-scope commercial intent",
+    "forbidden_inference": "service not listed in this project does NOT prove user intent is noncommercial"
+  },
+  "valid_combined_outcomes": [
+    { "commercial_eligibility": "ACCEPT", "scope_fit": "IN_SCOPE" },
+    { "commercial_eligibility": "ACCEPT", "scope_fit": "OUT_OF_SCOPE", "ownership": "SERVICE_GAP" },
+    { "commercial_eligibility": "REJECT", "scope_fit": "N/A" },
+    { "commercial_eligibility": "ABSTAIN", "scope_fit": "UNKNOWN" }
+  ],
+  "signal_taxonomy": {
+    "provider_professions": ["программист", "разработчик", "специалист", "мастер", "юрист", "бухгалтер", "врач"],
+    "implementation_tasks": ["внедрение", "настройка", "интеграция", "доработка", "сопровождение", "ремонт", "установка"],
+    "procurement_modifiers": ["заказать", "стоимость", "цена", "услуги", "вызвать", "нанять", "под ключ"],
+    "geography_modifiers": "city_or_region_tokens"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "plan_id": "orca-universal-benchmark-sampling-plan",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "phases": {
+    "B0": {
+      "min_phrases": 60,
+      "max_phrases": 100,
+      "strata_min_per_intent": 2,
+      "domains_min": 5
+    },
+    "B1": {
+      "min_phrases": 300,
+      "max_phrases": 500,
+      "includes_corvonero_pilot": true
+    },
+    "B2": {
+      "min_phrases": 1200,
+      "max_phrases": 2000,
+      "authority": "D5"
+    }
+  },
+  "stratification_dimensions": [
+    "intent_stratum",
+    "domain_id",
+    "difficulty_id"
+  ],
+  "intent_strata_ref": "strata/orca-benchmark-intent-strata-v1.json",
+  "domain_coverage_ref": "strata/orca-benchmark-domain-coverage-v1.json",
+  "sampling_method": "stratified_quota_with_shortfall_backfill",
+  "shortfall_policy": "operator_waiver_or_adjacent_stratum_backfill_with_audit",
+  "corvonero_pilot": {
+    "min": 300,
+    "max": 500,
+    "double_annotation_pct": 100
+  },
+  "universal_blind_min": 300,
+  "universal_blind_max": 400
+}

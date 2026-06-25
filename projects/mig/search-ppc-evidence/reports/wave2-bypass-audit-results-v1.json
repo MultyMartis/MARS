@@ -1,8 +1,8 @@
 {
   "suite": "wave2-bypass-audit",
-  "passed": 15,
+  "passed": 20,
   "failed": 0,
-  "total": 15,
+  "total": 20,
   "results": [
     {
       "id": 1,
@@ -91,6 +91,36 @@
     {
       "id": 15,
       "name": "Evidence pack cannot claim SPPC-12 complete without ORCA",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 16,
+      "name": "Assisted import without manifest blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 17,
+      "name": "Assisted capture outside hours blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 18,
+      "name": "Raw screenshot alone not validated evidence",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 19,
+      "name": "Manual advertiser data not accepted as raw evidence",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 20,
+      "name": "Degraded fallback requires degraded record pattern",
       "pass": true,
       "disposition": "PASS"
     }

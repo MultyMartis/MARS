@@ -1,0 +1,11 @@
+{
+  "audit_id": "v7-placeholder-272-root-cause",
+  "root_cause": "Keywords sheet used empty string for non-controlled hypothesis; workbook-integrity-v6 excluded Keywords from narrative scan; Excel/consumers can coerce blank shared-string cells to numeric placeholders (e.g. 272 row-index artefact).",
+  "source_field": "generate-review-workbook-v7.cjs Keywords column hypothesis: k.controlled_test_hypothesis || \"\"",
+  "affected_sheet": "Keywords",
+  "affected_column": "hypothesis",
+  "affected_row_count_estimate": 284,
+  "commander_affected": false,
+  "validator_gap": "validateWorkbookSheetsV6 listed Keywords under METRIC_VALUE_SHEETS — skipped narrative validation",
+  "fix": "resolveKeywordHypothesis() with Russian non-controlled sentinel; validateWorkbookSheetsV71 scans Keywords col 7; actual XLSX gate"
+}

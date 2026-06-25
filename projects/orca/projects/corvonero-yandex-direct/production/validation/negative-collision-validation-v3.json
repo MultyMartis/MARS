@@ -1,0 +1,232 @@
+{
+  "validated_at": "2026-06-21T22:44:55.915Z",
+  "pairs_tested": 24103,
+  "collisions_before_correction": 1,
+  "corrections_applied": 14,
+  "collisions_after_correction": 0,
+  "regression_before": {
+    "passed": false,
+    "failures": [
+      {
+        "regression_id": "REG-05",
+        "group_id": "CORV-G08-01",
+        "keyword": "тс пиот в 1с настройка инструкция",
+        "negative": "инструкция",
+        "description": "No active phrase blocked by global negative in owner campaign"
+      }
+    ]
+  },
+  "regression_after": {
+    "passed": true,
+    "failures": []
+  },
+  "blocking_records": [],
+  "removal_log": [
+    {
+      "group_id": "CORV-G08-02",
+      "removed": [
+        {
+          "negative": "честный знак",
+          "level": "group_cross",
+          "group_id": "CORV-G08-02",
+          "colliding_keywords": [
+            "тс пиот честный знак 1с",
+            "тс пиот честный знак 1с розница"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G06-03",
+      "removed": [
+        {
+          "negative": "настрой",
+          "level": "group_cross",
+          "group_id": "CORV-G06-03",
+          "colliding_keywords": [
+            "настройка честного знака в 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G05-01",
+      "removed": [
+        {
+          "negative": "обмен",
+          "level": "group_cross",
+          "group_id": "CORV-G05-01",
+          "colliding_keywords": [
+            "обмена с сайтом 1с интеграция"
+          ],
+          "reason": "blocks_own_group_keyword"
+        },
+        {
+          "negative": "синхрон",
+          "level": "group_cross",
+          "group_id": "CORV-G05-01",
+          "colliding_keywords": [
+            "синхронизация сайта 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G03-05",
+      "removed": [
+        {
+          "negative": "создан",
+          "level": "group_cross",
+          "group_id": "CORV-G03-05",
+          "colliding_keywords": [
+            "1с создание внешней печатной формы",
+            "создание внешних печатных форм 1с 8.3"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G03-03",
+      "removed": [
+        {
+          "negative": "отчет",
+          "level": "group_cross",
+          "group_id": "CORV-G03-03",
+          "colliding_keywords": [
+            "печатная форма отчета 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G02-04",
+      "removed": [
+        {
+          "negative": "конфигурац",
+          "level": "group_cross",
+          "group_id": "CORV-G02-04",
+          "colliding_keywords": [
+            "обновление доработанных конфигураций 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G02-05",
+      "removed": [
+        {
+          "negative": "обновлен",
+          "level": "group_cross",
+          "group_id": "CORV-G02-05",
+          "colliding_keywords": [
+            "сохранение доработок при обновлении 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G02-06",
+      "removed": [
+        {
+          "negative": "обновлен",
+          "level": "group_cross",
+          "group_id": "CORV-G02-06",
+          "colliding_keywords": [
+            "исправление доработок после обновления 1С"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G02-02",
+      "removed": [
+        {
+          "negative": "обновлен",
+          "level": "group_cross",
+          "group_id": "CORV-G02-02",
+          "colliding_keywords": [
+            "обновление конфигурации 1с с доработками"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G01-07",
+      "removed": [
+        {
+          "negative": "обслуживание",
+          "level": "group_cross",
+          "group_id": "CORV-G01-07",
+          "colliding_keywords": [
+            "абонентское обслуживание 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G01-04",
+      "removed": [
+        {
+          "negative": "программист",
+          "level": "group_cross",
+          "group_id": "CORV-G01-04",
+          "colliding_keywords": [
+            "внедренцы и программисты 1с"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G01-03",
+      "removed": [
+        {
+          "negative": "программист",
+          "level": "group_cross",
+          "group_id": "CORV-G01-03",
+          "colliding_keywords": [
+            "программист 1с настройка"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "group_id": "CORV-G01-08",
+      "removed": [
+        {
+          "negative": "программист",
+          "level": "group_cross",
+          "group_id": "CORV-G01-08",
+          "colliding_keywords": [
+            "1с программист без образования",
+            "ищу 1с программиста для разовой задачи",
+            "образование программист 1с",
+            "программист 1с без высшего образования",
+            "программист 1с высшее образование"
+          ],
+          "reason": "blocks_own_group_keyword"
+        }
+      ]
+    },
+    {
+      "negative": "инструкция",
+      "level": "global",
+      "colliding_keywords": [
+        "тс пиот в 1с настройка инструкция"
+      ],
+      "reason": "blocks_own_group_keyword",
+      "scope": "global"
+    }
+  ]
+}

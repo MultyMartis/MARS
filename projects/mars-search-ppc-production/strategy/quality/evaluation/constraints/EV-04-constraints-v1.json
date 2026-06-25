@@ -1,0 +1,24 @@
+{
+  "constraint_id": "EV-04-constraints-v1",
+  "case_id": "EV-04",
+  "scenario": "ecommerce_direct_sale",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "has_campaigns": true,
+    "evidence_linked": true
+  },
+  "acceptable_strategy_families": [
+    "service_segmented",
+    "tier_staged",
+    "geo_aware"
+  ],
+  "invalid_strategy_families": [
+    "commander_export",
+    "fabricated_evidence"
+  ]
+}

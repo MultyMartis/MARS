@@ -1,0 +1,19 @@
+{
+  "project_meta": {
+    "project_id": "corvonero-yandex-direct",
+    "dataset_id": "corv-direct-commander-production-dataset-v7.1",
+    "candidate_status": "v7.1 REGRESSION REPAIR — OPERATOR XLSX REVIEW REQUIRED",
+    "authority_synchronized": true,
+    "repair_version": "v7.1"
+  },
+  "operator_service_scope": "../operator-service-scope-v1.json",
+  "recovery_package": "../recovery/v7-production-input-package.json",
+  "protected_seed_registry": "../protected-commercial-seed-registry-v7.1.json",
+  "exclusion_registry": "../operator-semantic-exclusion-registry-v1.json",
+  "production_dataset": "../direct-commander-production-dataset-v7.1.json",
+  "controlled_test_registry": "../final-controlled-test-registry-v7.1.json",
+  "ad_registry": "../final-ad-registry-v7.json",
+  "group_registry": "../final-group-registry-v7.json",
+  "negative_validation": "./negative-collision-validation-v7.1.json",
+  "collision_validation": "./negative-collision-validation-v7.1.json"
+}

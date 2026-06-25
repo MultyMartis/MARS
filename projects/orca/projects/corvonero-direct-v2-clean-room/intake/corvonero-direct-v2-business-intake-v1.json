@@ -1,0 +1,82 @@
+{
+  "intake_id": "corvonero-direct-v2-business-intake-v1",
+  "schema_version": "1",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "generated_at": "2026-06-22T00:00:00.000Z",
+  "operator_sources": [
+    "workspaces/corvonero-yandex-direct/CORVONERO-BUSINESS-INTAKE-v1.md",
+    "incoming/mig/pilots/corvonero/CORVONERO-MIG-RESEARCH-REQUEST-v1.md",
+    "operator task specification 2026-06-22"
+  ],
+  "company": {
+    "commercial_name": "Центр автоматизации «Корво Неро»",
+    "legal_entity": "ИП Никифоров Роман Вадимович",
+    "website": "http://lk.corvonero.ru/",
+    "platform": "Tilda"
+  },
+  "audience": ["юридические лица", "индивидуальные предприниматели"],
+  "geography": {
+    "first_launch": ["Новосибирск", "Новосибирская область"],
+    "remote_work": "допустимо",
+    "on_site": "только Новосибирск",
+    "future_expansion": "не входит в первый запуск"
+  },
+  "delivery_model": {
+    "one_off_tasks": true,
+    "subscription_support": true,
+    "contract_required": true,
+    "cashless_payment": true
+  },
+  "pricing": {
+    "hourly_rate_rub": 3000,
+    "minimum_hours": 2,
+    "minimum_order_rub": 6000,
+    "price_on_landing_published": false
+  },
+  "budget": {
+    "monthly_rub": 100000,
+    "historical_ppc_data": false
+  },
+  "confirmed_configurations": [
+    "1С:Управление торговлей",
+    "1С:Управление нашей фирмой",
+    "1С:Розница",
+    "1С:Комплексная автоматизация",
+    "1С:Бухгалтерия предприятия"
+  ],
+  "service_priority_between_services": "not_set_by_operator",
+  "confirmed_facts": [
+    "Яндекс Метрика установлена",
+    "Доступ к счётчику имеется",
+    "Отдельные посадочные на Tilda создавать можно",
+    "Системный пакет кейсов отсутствует"
+  ],
+  "safe_unknown": [
+    "НДС",
+    "Target CPL",
+    "Официальный партнёрский статус 1С",
+    "Сертификаты",
+    "Гарантии и SLA",
+    "24/7 поддержка",
+    "Бесплатная диагностика",
+    "Точные сроки выполнения",
+    "CRM и коллтрекинг",
+    "Тариф Tilda"
+  ],
+  "prohibited_claims": [
+    "official 1C partner status",
+    "certification without evidence",
+    "guarantees",
+    "SLA",
+    "24/7",
+    "free diagnostics",
+    "exact completion times",
+    "fabricated cases or clients"
+  ],
+  "launch_restrictions": {
+    "campaign_production": false,
+    "commander_export": false,
+    "import": false,
+    "launch": false
+  }
+}

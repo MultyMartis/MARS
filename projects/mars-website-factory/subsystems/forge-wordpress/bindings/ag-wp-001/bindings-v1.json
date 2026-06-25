@@ -1,0 +1,304 @@
+{
+  "binding_registry_id": "AG-WP-001-TOOL-BINDINGS-v1",
+  "version": "1.0.0",
+  "stage": "FW-07B",
+  "honesty": "Bindings are contract-level; BOUND_NOT_IMPLEMENTED until FW-07C harness",
+  "wpilot_status": "NOT_BOUND_HOLD",
+  "mcp_status": "NOT_APPROVED",
+  "abilities_api_status": "EXPERIMENTAL_NOT_APPROVED",
+  "bindings": [
+    {
+      "operation_id": "wp.inspect.runtime",
+      "binding_id": "BIND-WP-INSPECT-RUNTIME-v1",
+      "tool_ids": [
+        "MLI-TOOL-007",
+        "MLI-TOOL-015",
+        "FW-TOL-010"
+      ],
+      "invocation_class": "read_only_cli_and_http",
+      "commands": [
+        "wp option get siteurl",
+        "wp core version",
+        "HTTP GET /"
+      ],
+      "environment": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-inspect-runtime-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.inspect.theme",
+      "binding_id": "BIND-WP-INSPECT-THEME-v1",
+      "tool_ids": [
+        "FW-TOL-010",
+        "MLI-TOOL-007"
+      ],
+      "invocation_class": "filesystem_and_wp_cli",
+      "commands": [
+        "wp theme list",
+        "filesystem read theme_path"
+      ],
+      "environment": [
+        "LOCAL_SOURCE",
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-inspect-theme-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.inspect.plugin_state",
+      "binding_id": "BIND-WP-INSPECT-PLUGIN-v1",
+      "tool_ids": [
+        "FW-TOL-010",
+        "MLI-TOOL-007"
+      ],
+      "invocation_class": "wp_cli_read_only",
+      "commands": [
+        "wp plugin list --format=json"
+      ],
+      "environment": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-inspect-plugin_state-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.inspect.routes",
+      "binding_id": "BIND-WP-INSPECT-ROUTES-v1",
+      "tool_ids": [
+        "FW-TOL-010",
+        "MLI-TOOL-014",
+        "FW-TOL-015"
+      ],
+      "invocation_class": "wp_cli_and_http",
+      "commands": [
+        "wp rewrite list",
+        "HTTP GET routes"
+      ],
+      "environment": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-inspect-routes-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.validate.php_syntax",
+      "binding_id": "BIND-WP-VALIDATE-PHP-v1",
+      "tool_ids": [
+        "MLI-TOOL-004",
+        "FW-TOL-005"
+      ],
+      "invocation_class": "php_cli_lint",
+      "commands": [
+        "php -l <file>"
+      ],
+      "environment": [
+        "LOCAL_SOURCE"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-validate-php_syntax-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.validate.core_checksums",
+      "binding_id": "BIND-WP-VALIDATE-CHECKSUMS-v1",
+      "tool_ids": [
+        "MLI-TOOL-007",
+        "FW-TOL-010"
+      ],
+      "invocation_class": "wp_cli_read_only",
+      "commands": [
+        "wp core verify-checksums"
+      ],
+      "environment": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-validate-core_checksums-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.validate.database",
+      "binding_id": "BIND-WP-VALIDATE-DB-v1",
+      "tool_ids": [
+        "MLI-TOOL-007",
+        "MLI-TOOL-005",
+        "FW-TOL-007"
+      ],
+      "invocation_class": "wp_cli_and_db_check",
+      "commands": [
+        "wp db check"
+      ],
+      "environment": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-validate-database-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.validate.routes",
+      "binding_id": "BIND-WP-VALIDATE-ROUTES-v1",
+      "tool_ids": [
+        "MLI-TOOL-014",
+        "FW-TOL-015"
+      ],
+      "invocation_class": "http_or_playwright",
+      "commands": [
+        "HTTP GET route_list",
+        "playwright smoke"
+      ],
+      "environment": [
+        "LOCAL_RUNTIME_READ_ONLY"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-validate-routes-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.validate.wpcs",
+      "binding_id": "BIND-WP-VALIDATE-WPCS-v1",
+      "tool_ids": [
+        "MLI-TOOL-008",
+        "MLI-TOOL-009",
+        "FW-TOL-011",
+        "FW-TOL-012"
+      ],
+      "invocation_class": "phpcs_scan",
+      "commands": [
+        "phpcs --standard=WordPress <paths>"
+      ],
+      "environment": [
+        "LOCAL_SOURCE"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-validate-wpcs-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    },
+    {
+      "operation_id": "wp.checkpoint.create",
+      "binding_id": "BIND-WP-CHECKPOINT-v1",
+      "tool_ids": [
+        "MLI-TOOL-011",
+        "FW-TOL-001"
+      ],
+      "invocation_class": "git_selective_commit",
+      "commands": [
+        "git status",
+        "git diff",
+        "git commit (selective, approved scope)"
+      ],
+      "environment": [
+        "LOCAL_SOURCE"
+      ],
+      "binding_status": "BOUND_NOT_IMPLEMENTED",
+      "implementation_status": "BOUND_NOT_IMPLEMENTED",
+      "secret_handling": "INDIRECT_CONSUMPTION",
+      "timeout_seconds": 120,
+      "retry": {
+        "max_attempts": 2,
+        "retryable": true
+      },
+      "audit_artifact": "reports/ag-wp-001/wp-checkpoint-create-audit.json",
+      "forbidden_environment": [
+        "PRODUCTION_MUTATION",
+        "PRODUCTION_READ_ONLY"
+      ]
+    }
+  ]
+}

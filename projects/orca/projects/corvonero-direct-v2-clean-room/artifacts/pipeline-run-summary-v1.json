@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "files_read": 18,
+    "rows_read": 2399,
+    "empty_rows": 0,
+    "malformed_rows": 0,
+    "duplicate_raw": 29,
+    "unique_raw_phrases": 2370
+  },
+  "canonical": 2368,
+  "coreCandidate": {
+    "eligible_commercial": 1892,
+    "eligible_narrow": 590,
+    "controlled_test": 17,
+    "excluded": 200,
+    "holds": 259
+  },
+  "gate": "READY FOR OPERATOR SEMANTIC REVIEW",
+  "xlsx": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-direct-v2-clean-room\\semantic-core\\CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx"
+}

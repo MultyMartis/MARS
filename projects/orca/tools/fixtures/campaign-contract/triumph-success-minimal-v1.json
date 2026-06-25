@@ -1,0 +1,57 @@
+{
+  "fixture_id": "triumph-success-minimal-v1",
+  "description": "Minimal Triumph-success pattern: scope locked, seeds protected, one intent per group",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-T01",
+        "service_name": "манипулятор 5 тонн",
+        "current_group": "grp_fc01_5ton",
+        "current_group_status": "ACTIVE",
+        "absence_from_production_permitted": false,
+        "recovery_required": false
+      }
+    ]
+  },
+  "protected_seed_registry": [
+    {
+      "keyword_id": "kw-t01-primary",
+      "phrase": "манипулятор 5 тонн краснодар",
+      "group_id": "grp_fc01_5ton"
+    }
+  ],
+  "production_dataset": {
+    "project_id": "triumph-fixture",
+    "dataset_id": "triumph-success-minimal",
+    "groups": [
+      {
+        "group_id": "grp_fc01_5ton",
+        "export_name": "01 — Манипулятор 5 тонн",
+        "viability_status": "ACTIVE",
+        "planned_url": "https://manipulator-triumph.ru/5-tonn.html",
+        "export_to_xlsx": true
+      }
+    ],
+    "keywords": [
+      {
+        "keyword_id": "kw-t01-primary",
+        "phrase": "манипулятор 5 тонн краснодар",
+        "group_id": "grp_fc01_5ton",
+        "final_status": "ACTIVE"
+      }
+    ],
+    "held_groups": []
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": {
+    "ads": [
+      {
+        "ad_id": "ad_fc01_a1",
+        "group_id": "grp_fc01_5ton",
+        "landing_url": "https://manipulator-triumph.ru/5-tonn.html"
+      }
+    ]
+  },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

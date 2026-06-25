@@ -1,0 +1,27 @@
+{
+  "receipt_id": "sppc-receipt-2026-06-22T20-31-37-736Z-8d9d75ca",
+  "receipt_schema_version": "1.0.0",
+  "timestamp": "2026-06-22T20:31:37.737Z",
+  "project_id": "MIG-W2-1-TECH-PAID-SERP",
+  "manifest_path": "C:\\AI MARS\\projects\\mig\\search-ppc-evidence\\live-validation\\w2-1-tech-paid-serp\\project-ppc-state-manifest-v1.json",
+  "manifest_checksum": "1a6011cd20ad62fd4a4ab9c154e72910e1d2ec18955203f93f7c53bebf7c2dcf",
+  "lifecycle_version": "1.0.0",
+  "requested_stage": "SPPC-10",
+  "requested_action": "paid_serp",
+  "actor": "MIG",
+  "tool": "mig-runtime",
+  "authorization_result": "AUTHORIZED",
+  "blockers": [],
+  "expected_outputs": [
+    {
+      "artifact_type": "paid_serp_business_hours_evidence",
+      "output_class": "production_authority"
+    }
+  ],
+  "actual_outputs": null,
+  "runtime_version": "wave1.1-v1",
+  "source_commit": "55850b7",
+  "command": "mig-evidence paid-serp:import-assisted",
+  "note": null,
+  "immutable": true
+}

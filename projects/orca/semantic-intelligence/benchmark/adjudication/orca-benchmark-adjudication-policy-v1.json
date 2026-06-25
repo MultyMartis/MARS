@@ -1,0 +1,26 @@
+{
+  "policy_id": "orca-benchmark-adjudication-policy",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "disagreement_types_ref": "../../annotation/adjudication/orca-annotation-disagreement-policy-v1.json",
+  "mandatory_triggers": [
+    "eligibility_mismatch",
+    "accept_on_either_side",
+    "protected_vs_commercial_intent_conflict",
+    "rationale_quality_failure_on_accept",
+    "service_candidate_conflict_on_accept_bound"
+  ],
+  "gold_fields": [
+    "commercial_eligibility",
+    "primary_intent",
+    "ambiguity",
+    "risk",
+    "benchmark.adjudication"
+  ],
+  "operator_escalation": [
+    "protected_strata_accept",
+    "pilot_go_no_go_edge",
+    "contamination"
+  ]
+}

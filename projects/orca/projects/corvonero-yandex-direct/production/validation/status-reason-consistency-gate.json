@@ -1,0 +1,423 @@
+{
+  "gate_id": "status-reason-consistency-gate",
+  "generated_at": "2026-06-22T05:54:01.284Z",
+  "v6_contradictions_found": 59,
+  "v6_contradictions": [
+    {
+      "keyword_id": "kw-corv01-disc-2272",
+      "phrase": "маркировка лекарств проверить",
+      "status": "ACTIVE COMMERCIAL",
+      "reason": "ACTIVE: «маркировка лекарств проверить» — заказ услуги «Маркировка лекарств в 1С»; ключевые сигналы: маркировка, лекарств, проверить.",
+      "type": "ACTIVE_INFORMATIONAL_PHRASE"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-2300",
+      "phrase": "маркировка автозапчастей 2026",
+      "status": "ACTIVE COMMERCIAL",
+      "reason": "ACTIVE: «маркировка автозапчастей 2026» — заказ услуги «Маркировка автозапчастей в 1С»; ключевые сигналы: маркировка, автозапчастей, 2026.",
+      "type": "ACTIVE_INFORMATIONAL_PHRASE"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-2308",
+      "phrase": "маркировка автозапчастей честный знак 2026",
+      "status": "ACTIVE COMMERCIAL",
+      "reason": "ACTIVE: «маркировка автозапчастей честный знак 2026» — заказ услуги «Маркировка автозапчастей в 1С»; ключевые сигналы: маркировка, автозапчастей, честный, знак, 2026.",
+      "type": "ACTIVE_INFORMATIONAL_PHRASE"
+    },
+    {
+      "keyword_id": "seed-CORV-G07-04-core-восстановлен",
+      "phrase": "восстановление работы 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-014",
+      "phrase": "срочно программист 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-миграция-дан",
+      "phrase": "миграция данных 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-перенос-данн",
+      "phrase": "перенос данных в 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-расчет-себес",
+      "phrase": "расчет себестоимости 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-себестоимост",
+      "phrase": "себестоимость в 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-02-core-планирование",
+      "phrase": "планирование закупок 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-03-core-платежный-ка",
+      "phrase": "платежный календарь 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G03-02-core-новый-отчет-",
+      "phrase": "новый отчет 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-002",
+      "phrase": "программист 1с новосибирск",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-092",
+      "phrase": "программисты 1с новосибирск",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-06-core-обслуживание",
+      "phrase": "обслуживание 1с для организации",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-661",
+      "phrase": "обслуживание и сопровождение 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-717",
+      "phrase": "сопровождение и обслуживание 1с предприятие",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-04-core-внедрение-1с",
+      "phrase": "внедрение 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-509",
+      "phrase": "внедренцы и программисты 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "phrase": "1с программист без образования",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-101",
+      "phrase": "образование программист 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "phrase": "программист 1с без высшего образования",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-264",
+      "phrase": "программист 1с высшее образование",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-08-core-разовые-рабо",
+      "phrase": "разовые работы 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-041",
+      "phrase": "задание программисту 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-054",
+      "phrase": "задачи 1с программиста",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-052",
+      "phrase": "найти программиста 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-050",
+      "phrase": "нужен программист 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-062",
+      "phrase": "отзыв программисту 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-060",
+      "phrase": "программа программист 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-001",
+      "phrase": "программист 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-056",
+      "phrase": "программист 1с предприятие",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-026",
+      "phrase": "программист 1с удаленно",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-061",
+      "phrase": "программист аналитик 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-038",
+      "phrase": "программист разработчик 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-048",
+      "phrase": "программисты 1с спб",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-053",
+      "phrase": "работать программистом 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-064",
+      "phrase": "сколько зарабатывает программист 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-033",
+      "phrase": "сколько программистов 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-042",
+      "phrase": "стал программистом 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-044",
+      "phrase": "стоимость 1с программисты",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-059",
+      "phrase": "стоимость часа 1с программиста",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-066",
+      "phrase": "технические задания программистам 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-034",
+      "phrase": "часа программиста 1с",
+      "status": "EXCLUDE",
+      "reason": "repair_package commercial seed exclusion",
+      "type": "EXCLUDE_ON_COMMERCIAL_SEED"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1879",
+      "phrase": "1с 8.3 зуп синхронизация",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «1с 8.3 зуп синхронизация».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1878",
+      "phrase": "1с бухгалтерия 8.3 синхронизация",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «1с бухгалтерия 8.3 синхронизация».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1876",
+      "phrase": "синхронизация 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «синхронизация 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1883",
+      "phrase": "синхронизация зуп и 1с бухгалтерия 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «синхронизация зуп и 1с бухгалтерия 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1789",
+      "phrase": "1с 7.7 изменить печатную форму",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «1с 7.7 изменить печатную форму».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1509",
+      "phrase": "1с 8.3 изменить печатную форму счета",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «1с 8.3 изменить печатную форму счета».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1375",
+      "phrase": "изменить печатную форму 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «изменить печатную форму 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1438",
+      "phrase": "1с 3.0 внешние печатные формы",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «1с 3.0 внешние печатные формы».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1460",
+      "phrase": "1с 8.3 внешние печатные формы упд",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «1с 8.3 внешние печатные формы упд».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1342",
+      "phrase": "внешние печатные формы 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «внешние печатные формы 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1431",
+      "phrase": "внешняя печатная форма 1с 8.3 управляемое",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «внешняя печатная форма 1с 8.3 управляемое».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1435",
+      "phrase": "создание внешних печатных форм 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «создание внешних печатных форм 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1366",
+      "phrase": "макет печатной формы в 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «макет печатной формы в 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1335",
+      "phrase": "печатные формы 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «печатные формы 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-634",
+      "phrase": "сопровождение 1с 8.3",
+      "status": "CONTROLLED TEST — JUSTIFIED",
+      "reason": "Narrow test: users configuring TS PIOT/marking in 1C retail may convert to paid setup for «сопровождение 1с 8.3».",
+      "type": "GENERIC_HYPOTHESIS_MISMATCH"
+    }
+  ],
+  "projected_v7_contradictions": 0,
+  "projected_v7_remaining": [],
+  "pass": true
+}

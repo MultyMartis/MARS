@@ -1,0 +1,119 @@
+{
+  "audit_id": "v5-career-education-query-audit",
+  "generated_at": "2026-06-22T05:01:04.678Z",
+  "phrases_checked": 348,
+  "matched_phrases": 4,
+  "active_leakage_count": 4,
+  "rows": [
+    {
+      "phrase": "1с программист без образования",
+      "keyword_id": "kw-corv01-disc-499",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education",
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    },
+    {
+      "phrase": "образование программист 1с",
+      "keyword_id": "kw-corv01-disc-101",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    },
+    {
+      "phrase": "программист 1с без высшего образования",
+      "keyword_id": "kw-corv01-disc-591",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    },
+    {
+      "phrase": "программист 1с высшее образование",
+      "keyword_id": "kw-corv01-disc-264",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education",
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    }
+  ],
+  "leakage": [
+    {
+      "phrase": "1с программист без образования",
+      "keyword_id": "kw-corv01-disc-499",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education",
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    },
+    {
+      "phrase": "образование программист 1с",
+      "keyword_id": "kw-corv01-disc-101",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    },
+    {
+      "phrase": "программист 1с без высшего образования",
+      "keyword_id": "kw-corv01-disc-591",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    },
+    {
+      "phrase": "программист 1с высшее образование",
+      "keyword_id": "kw-corv01-disc-264",
+      "current_group": "CORV-G01-08",
+      "matched_intent_tags": [
+        "education",
+        "education"
+      ],
+      "current_v5_decision": "ACTIVE COMMERCIAL",
+      "corrected_decision": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "required_downstream_action": "EXCLUDE_KEYWORD — required before v6 export",
+      "service_hire_override_considered": false
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "audit_id": "operator-scope-authority-sync-v7",
+  "generated_at": "2026-06-22T12:00:00.000Z",
+  "task": "Synchronize operator-service-scope-v1.json with v7 production truth",
+  "count_reconciliation": {
+    "expected_stale_records": 6,
+    "identified_stale_records": 6,
+    "reconciled": true,
+    "previous_audit_high_violations": 6,
+    "post_sync_expected_high_violations": 0
+  },
+  "authority_inputs": [
+    "production/operator-service-scope-v1.json",
+    "production/final-group-registry-v7.json",
+    "production/direct-commander-production-dataset-v7.json",
+    "production/recovery/hold-group-review-v1.json",
+    "production/recovery/commercial-scope-recovery-registry.json",
+    "production/recovery/v7-production-input-package.json",
+    "production/validation/production-scope-recovery-gate.json",
+    "strategy/operator-scope-correction-v1.md"
+  ],
+  "production_dataset_modified": false,
+  "stale_records": [
+    {
+      "service_id": "SVC-04",
+      "service_name": "внедрение 1С",
+      "authority_status_before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "v7_production_status": "ACTIVE NARROW",
+      "owning_group": "CORV-G01-04",
+      "group_status": "ACTIVE NARROW",
+      "protected_seeds": ["seed-CORV-G01-04-core-внедрение-1с"],
+      "recovery_evidence": [
+        "hold-group-review-v1.json#CORV-G01-04",
+        "commercial-scope-recovery-registry.json#внедрение 1с",
+        "v7-production-input-package.json#CORV-G01-04"
+      ],
+      "reason_stale": "Authority registry not updated after Production Scope Recovery Gate and v7 group reactivation",
+      "corrected_authority_status": "ACTIVE NARROW",
+      "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+      "landing_id": "LP-03"
+    },
+    {
+      "service_id": "SVC-06",
+      "service_name": "обслуживание 1С",
+      "authority_status_before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "v7_production_status": "ACTIVE",
+      "owning_group": "CORV-G01-06",
+      "group_status": "ACTIVE",
+      "protected_seeds": ["seed-CORV-G01-06-core-обслуживание"],
+      "recovery_evidence": [
+        "hold-group-review-v1.json#CORV-G01-06",
+        "commercial-scope-recovery-registry.json#обслуживание 1с",
+        "v7-production-input-package.json#CORV-G01-06"
+      ],
+      "reason_stale": "Authority registry not updated after Production Scope Recovery Gate and v7 group reactivation",
+      "corrected_authority_status": "ACTIVE",
+      "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+      "landing_id": "LP-04"
+    },
+    {
+      "service_id": "SVC-20",
+      "service_name": "расчёт себестоимости",
+      "authority_status_before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "v7_production_status": "ACTIVE NARROW",
+      "owning_group": "CORV-G04-01",
+      "group_status": "ACTIVE NARROW",
+      "protected_seeds": [
+        "seed-CORV-G04-01-core-расчет-себес",
+        "seed-CORV-G04-01-core-себестоимост"
+      ],
+      "recovery_evidence": [
+        "hold-group-review-v1.json#CORV-G04-01",
+        "commercial-scope-recovery-registry.json#расчет себестоимости 1с",
+        "v7-production-input-package.json#CORV-G04-01"
+      ],
+      "reason_stale": "Authority registry not updated after Production Scope Recovery Gate and v7 group reactivation",
+      "corrected_authority_status": "ACTIVE NARROW",
+      "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+      "landing_id": "LP-10"
+    },
+    {
+      "service_id": "SVC-21",
+      "service_name": "планирование закупок",
+      "authority_status_before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "v7_production_status": "ACTIVE NARROW",
+      "owning_group": "CORV-G04-02",
+      "group_status": "ACTIVE NARROW",
+      "protected_seeds": ["seed-CORV-G04-02-core-планирование"],
+      "recovery_evidence": [
+        "hold-group-review-v1.json#CORV-G04-02",
+        "commercial-scope-recovery-registry.json#планирование закупок 1с",
+        "v7-production-input-package.json#CORV-G04-02"
+      ],
+      "reason_stale": "Authority registry not updated after Production Scope Recovery Gate and v7 group reactivation",
+      "corrected_authority_status": "ACTIVE NARROW",
+      "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+      "landing_id": "LP-11"
+    },
+    {
+      "service_id": "SVC-22",
+      "service_name": "платёжный календарь",
+      "authority_status_before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "v7_production_status": "ACTIVE NARROW",
+      "owning_group": "CORV-G04-03",
+      "group_status": "ACTIVE NARROW",
+      "protected_seeds": ["seed-CORV-G04-03-core-платежный-ка"],
+      "recovery_evidence": [
+        "hold-group-review-v1.json#CORV-G04-03",
+        "commercial-scope-recovery-registry.json#платежный календарь 1с",
+        "v7-production-input-package.json#CORV-G04-03"
+      ],
+      "reason_stale": "Authority registry not updated after Production Scope Recovery Gate and v7 group reactivation",
+      "corrected_authority_status": "ACTIVE NARROW",
+      "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+      "landing_id": "LP-12"
+    },
+    {
+      "service_id": "SVC-28",
+      "service_name": "перенос данных / миграция",
+      "authority_status_before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "v7_production_status": "ACTIVE NARROW",
+      "owning_group": "CORV-G05-06",
+      "group_status": "ACTIVE NARROW",
+      "protected_seeds": [
+        "seed-CORV-G05-06-core-перенос-данн",
+        "seed-CORV-G05-06-core-миграция-дан"
+      ],
+      "recovery_evidence": [
+        "hold-group-review-v1.json#CORV-G05-06",
+        "commercial-scope-recovery-registry.json#перенос данных в 1с",
+        "v7-production-input-package.json#CORV-G05-06"
+      ],
+      "reason_stale": "Authority registry not updated after Production Scope Recovery Gate and v7 group reactivation",
+      "corrected_authority_status": "ACTIVE NARROW",
+      "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+      "landing_id": "LP-17"
+    }
+  ],
+  "excluded_from_sync": {
+    "note": "CORV-G01-02 and CORV-G07-04 were reactivated in v7 but map to operator scope families already ACTIVE in authority; not part of the six stale HOLD records."
+  },
+  "previous_validator_findings": {
+    "audit_file": "production/validation/orca-production-contract-audit-v7.json",
+    "validated_at": "2026-06-22T06:41:14.292Z",
+    "invariant_id": "INV-SCOPE-02",
+    "high_violations": 6
+  }
+}

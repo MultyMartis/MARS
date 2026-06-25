@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "not_finalized": true,
+  "global": [
+    {
+      "term": "вакансии",
+      "source_phrases": [
+        "программист 1с вакансии",
+        "работа программист 1с",
+        "программист 1с зарплата",
+        "программист 1с удаленно вакансии",
+        "стажировка 1с программист"
+      ],
+      "intended_exclusion": "Исключить поиск работы",
+      "false_positive_risk": "низкий для коммерческих фраз",
+      "recommended_level": "GLOBAL",
+      "risk": "LOW",
+      "status": "SAFE CANDIDATE"
+    },
+    {
+      "term": "обучение",
+      "source_phrases": [
+        "программист 1с обучение",
+        "курсы программист 1с",
+        "программист 1с обучение с нуля",
+        "курсы программист 1с с нуля",
+        "программист 1с бесплатное обучение"
+      ],
+      "intended_exclusion": "Исключить обучающий интент",
+      "false_positive_risk": "средний если услуга обучения появится",
+      "recommended_level": "GLOBAL",
+      "risk": "MEDIUM",
+      "status": "CANDIDATE"
+    },
+    {
+      "term": "скачать",
+      "source_phrases": [
+        "программист 1с скачать",
+        "программист 1с торрент",
+        "программист 1с курс скачать",
+        "программист 1с торрент скачать",
+        "0504402 доработка скачать для 1с згу"
+      ],
+      "intended_exclusion": "Исключить скачивание",
+      "false_positive_risk": "низкий",
+      "recommended_level": "GLOBAL",
+      "risk": "LOW",
+      "status": "SAFE CANDIDATE"
+    }
+  ],
+  "semantic": [],
+  "boundary": []
+}

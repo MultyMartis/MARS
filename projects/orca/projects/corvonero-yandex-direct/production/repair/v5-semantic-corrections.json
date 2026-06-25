@@ -1,0 +1,117 @@
+{
+  "package_id": "v5-semantic-corrections",
+  "generated_at": "2026-06-22T05:15:48.293Z",
+  "phrases_checked": 348,
+  "corrections": [
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "phrase": "1с программист без образования",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education",
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-101",
+      "phrase": "образование программист 1с",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "phrase": "программист 1с без высшего образования",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-264",
+      "phrase": "программист 1с высшее образование",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education",
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    }
+  ],
+  "totals": {
+    "matched": 4,
+    "exclusions": 4,
+    "v5_files_active_leakage_unchanged": 4,
+    "leakage_to_future_production": 0
+  },
+  "repair_state_applied": true,
+  "v5_active_leakage_unchanged": [
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "phrase": "1с программист без образования",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education",
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-101",
+      "phrase": "образование программист 1с",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "phrase": "программист 1с без высшего образования",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-264",
+      "phrase": "программист 1с высшее образование",
+      "previous_status": "ACTIVE COMMERCIAL",
+      "final_status": "EXCLUDE EDUCATIONAL",
+      "reason": "Phrase targets education requirements/qualifications for programmers, not hiring a 1C service provider.",
+      "group": "CORV-G01-08",
+      "intent_tags": [
+        "education",
+        "education"
+      ],
+      "required_production_action": "EXCLUDE_KEYWORD"
+    }
+  ],
+  "note": "Corrections recorded in repair package; v5 production files unchanged per scope. leakage_to_future_production=0 after package apply."
+}

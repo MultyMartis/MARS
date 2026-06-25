@@ -2,8 +2,8 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
-**Status:** **STABLE LIVE CHECKPOINT — M9.8.9 CATALOG UX COMPLETE 01** (2026-06-21)  
-**Run:** Stable checkpoint after catalog UX cluster completion  
+**Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT COMPANY RESTORED 01** (2026-06-23)  
+**Run:** Stable checkpoint after operator-approved About page restoration  
 **Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap) · **Corporate Pages Program** **OPEN** — Research **COMPLETE** · IA **READY** · Copy system **REGISTERED**
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
@@ -22,9 +22,9 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
 | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual and behavioural authority |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
 | **Operator manual JS (04B)** | [knowledge §12](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#12-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Conflict resolution** | If docs contradict current TEST → source of truth = live TEST on https://zpm.new-site.space/ |
 
@@ -59,25 +59,22 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
-| Status | **STABLE LIVE CHECKPOINT** — catalog UX cluster complete |
-| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
-| Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
-| Recovery | Product reset · 1C import · price index (06D/06F) · filters (06H/06J/06M) |
-| Filter UX | Scroll (04/04B) · hide subcategories (07) · group reset (08/08A) |
-| Commercial Trust | 03B redesign · 03C deploy · operator manual polish · FAQ · OEM proof |
-| Catalog state persistence | 09A / 09B / 09C — joint filter + limit + sort + pagination + only_with_price |
-| Hub cleanup | 10 — no page-intro on neutral hub |
-| Other UX | Wishlist/compare smart tooltips (01) |
-| Completed M9.8 | M9.8.1 PDP Gallery · M9.8.2 Lightbox · M9.8.5 Products Per Page |
-| Operator manual | PLP / filter / breakpoint / CSS / Twig polish · JS refinements (04B) · Commercial Trust polish |
-| Open bugs | EC-01 — mitigated by subcategories hide (07) |
-| Roadmap | [BZPM-PRODUCT-ROADMAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) |
-| Corporate Pages Program | [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Copy standard](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md) · [PAGE-COPY index](copy/) |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
-| Rollback source | Beget full backup + current live TEST + file-level pass backups |
+| Name | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+| Status | **STABLE LIVE CHECKPOINT** — About page restored; catalog UX carried forward |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
+| Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §17 About Page History |
+| About page | M9.13 redesign **rejected** — **restored** pre-redesign `/about` |
+| Catalog UX | Carried forward from M9.8.9 Catalog UX Complete 01 |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
+| Rollback source | Beget full backup + current live TEST + About pass backups + file-level pass backups |
 
 ### Prior checkpoints (historical)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md](baselines/SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01.md) |
+| Scope | Catalog UX cluster — superseded for live truth |
 
 | Field | Value |
 |-------|--------|
@@ -143,6 +140,6 @@ Metadata stays in this repo tree; large archives stay external.
 ## Rules
 
 - No secrets. No live credentials.
-- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work; for filters/sort/pagination/limit/only_with_price — follow §16 + 09A/09B/09C; for filter/catalog/1C/price/PLP — follow domain-specific rule in Knowledge Map §13; for trust block/certificates/dealers form/category CTA — follow §14.
+- **PRE-TASK:** read Knowledge Map + latest Stable Checkpoint before any SITE-002 work; for About page — follow §17 + M9.13 restore/redesign/polish reports; for filters/sort/pagination/limit/only_with_price — follow §16 + 09A/09B/09C; for filter/catalog/1C/price/PLP — follow domain-specific rule in Knowledge Map §13; for trust block/certificates/dealers form/category CTA — follow §14.
 - No site modifications, FTP, phpMyAdmin, or admin panel actions until chartered runs.
 - Do not invent URLs, hosting, or client names beyond operator-supplied registration facts.

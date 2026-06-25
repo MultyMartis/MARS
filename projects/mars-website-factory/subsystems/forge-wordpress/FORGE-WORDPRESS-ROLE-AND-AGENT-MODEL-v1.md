@@ -38,12 +38,14 @@
 
 ## 3. AG-WP-001 disposition
 
-| Field | FW-01 decision |
-|-------|----------------|
-| **Registration** | **NOT REGISTERED** |
-| **Role** | Internal seed — methodology source |
-| **Promotion path** | FW-05 pilot charter may promote **Theme Implementation Specialist** agent; seed informs prompts, not registry row |
-| **vs MARS Forge** | Unrelated — no shared agent |
+| Field | FW-01 decision | FW-07A update |
+|-------|----------------|---------------|
+| **Registration** | **NOT REGISTERED** | **REGISTERED** — `agents/registry.md` §4.1 (`draft`) |
+| **Role** | Internal seed — methodology source | Controlled implementation agent foundation |
+| **Promotion path** | FW-05 pilot charter | FW-07A foundation complete; `active` requires pilot + FW-07B |
+| **vs MARS Forge** | Unrelated — no shared agent | Unchanged |
+
+*Authoritative contracts: [agents/README.md](agents/README.md)*
 
 ---
 

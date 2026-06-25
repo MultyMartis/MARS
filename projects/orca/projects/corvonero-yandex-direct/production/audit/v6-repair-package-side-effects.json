@@ -1,0 +1,822 @@
+{
+  "audit_id": "v6-repair-package-side-effects",
+  "generated_at": "2026-06-22T05:54:01.264Z",
+  "package_id": "v6-production-input-package",
+  "rules_identified": [
+    {
+      "rule_id": "RULE-NARROW-SEED-EXCLUSION",
+      "description": "Operator seeds marked EXCLUDE when repair package treated narrow demand as invalid",
+      "commercial_phrases_affected": 41
+    },
+    {
+      "rule_id": "RULE-GROUP-EMPTY-HOLD",
+      "description": "v6-repair-apply auto-HOLD when all group keywords excluded — no operator-scope exception",
+      "groups_affected": [
+        "CORV-G07-04",
+        "CORV-G05-06",
+        "CORV-G04-01",
+        "CORV-G04-02",
+        "CORV-G04-03",
+        "CORV-G01-02",
+        "CORV-G01-06",
+        "CORV-G01-04"
+      ]
+    },
+    {
+      "rule_id": "RULE-GENERIC-CONTROLLED-HYPOTHESIS",
+      "description": "Single TS PIOT/marking retail template copied to unrelated controlled tests",
+      "phrases_affected": 15
+    },
+    {
+      "rule_id": "RULE-THIN-GROUP-HOLD",
+      "description": "Print-form phrases moved to HOLD instead of ACTIVE NARROW or EXCLUDE with proof",
+      "phrases_affected": 26
+    },
+    {
+      "rule_id": "RULE-INFORMATIONAL-PASSTHROUGH",
+      "description": "Informational/regulatory phrases remained ACTIVE in v6 output despite QA intent",
+      "note": "Classifier reason text says заказ услуги while phrase has verification/regulatory signals"
+    }
+  ],
+  "commercial_exclusions": [
+    {
+      "keyword_id": "seed-CORV-G07-04-core-восстановлен",
+      "phrase": "восстановление работы 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-014",
+      "phrase": "срочно программист 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-миграция-дан",
+      "phrase": "миграция данных 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-перенос-данн",
+      "phrase": "перенос данных в 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-расчет-себес",
+      "phrase": "расчет себестоимости 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-себестоимост",
+      "phrase": "себестоимость в 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-02-core-планирование",
+      "phrase": "планирование закупок 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-03-core-платежный-ка",
+      "phrase": "платежный календарь 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G03-02-core-новый-отчет-",
+      "phrase": "новый отчет 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-002",
+      "phrase": "программист 1с новосибирск",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-092",
+      "phrase": "программисты 1с новосибирск",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-06-core-обслуживание",
+      "phrase": "обслуживание 1с для организации",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-661",
+      "phrase": "обслуживание и сопровождение 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-717",
+      "phrase": "сопровождение и обслуживание 1с предприятие",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-04-core-внедрение-1с",
+      "phrase": "внедрение 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-509",
+      "phrase": "внедренцы и программисты 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "phrase": "1с программист без образования",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-101",
+      "phrase": "образование программист 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "phrase": "программист 1с без высшего образования",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-264",
+      "phrase": "программист 1с высшее образование",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-08-core-разовые-рабо",
+      "phrase": "разовые работы 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-NARROW-SEED-EXCLUSION — QA repair treated operator seed as disposable when group became empty",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-041",
+      "phrase": "задание программисту 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-054",
+      "phrase": "задачи 1с программиста",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-052",
+      "phrase": "найти программиста 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-050",
+      "phrase": "нужен программист 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-062",
+      "phrase": "отзыв программисту 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-060",
+      "phrase": "программа программист 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-001",
+      "phrase": "программист 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-056",
+      "phrase": "программист 1с предприятие",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-026",
+      "phrase": "программист 1с удаленно",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-061",
+      "phrase": "программист аналитик 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-038",
+      "phrase": "программист разработчик 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-048",
+      "phrase": "программисты 1с спб",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-053",
+      "phrase": "работать программистом 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-064",
+      "phrase": "сколько зарабатывает программист 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-033",
+      "phrase": "сколько программистов 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-042",
+      "phrase": "стал программистом 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-044",
+      "phrase": "стоимость 1с программисты",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-059",
+      "phrase": "стоимость часа 1с программиста",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-066",
+      "phrase": "технические задания программистам 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-034",
+      "phrase": "часа программиста 1с",
+      "from": "ACTIVE COMMERCIAL",
+      "to": "EXCLUDE",
+      "rule": "RULE-COMMERCIAL-SEED-EXCLUSION — direct paid-service query removed; cascaded group to HOLD",
+      "inherited_from": "v5-qa-repair generic semantic_status_changes"
+    }
+  ],
+  "hold_group_causes": [
+    {
+      "group_id": "CORV-G07-04",
+      "group_name": "Восстановление работы 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 1,
+      "seed_exclusions": [
+        "восстановление работы 1с"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G05-06",
+      "group_name": "Перенос данных в 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 2,
+      "seed_exclusions": [
+        "миграция данных 1с",
+        "перенос данных в 1с"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G04-01",
+      "group_name": "Расчёт себестоимости в 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 2,
+      "seed_exclusions": [
+        "расчет себестоимости 1с",
+        "себестоимость в 1с"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G04-02",
+      "group_name": "Планирование закупок 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 1,
+      "seed_exclusions": [
+        "планирование закупок 1с"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G04-03",
+      "group_name": "Платёжный календарь 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 1,
+      "seed_exclusions": [
+        "платежный календарь 1с"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G01-02",
+      "group_name": "Программист 1С Новосибирск",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 2,
+      "seed_exclusions": [],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G01-06",
+      "group_name": "Обслуживание 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 3,
+      "seed_exclusions": [
+        "обслуживание 1с для организации"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    },
+    {
+      "group_id": "CORV-G01-04",
+      "group_name": "Внедрение 1С",
+      "cause": "GROUP_EMPTY_AFTER_REPAIR — v6-repair-apply sets HOLD when keyword_count=0 after exclusions",
+      "excluded_phrase_count": 2,
+      "seed_exclusions": [
+        "внедрение 1с"
+      ],
+      "inherited_from": "tools/lib/v6-repair-apply.mjs groupKeywords.length===0"
+    }
+  ],
+  "controlled_test_copy_errors": [
+    {
+      "keyword_id": "kw-corv01-disc-1879",
+      "phrase": "1с 8.3 зуп синхронизация",
+      "group_match": "CORV-G05-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "sync_exchange"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1878",
+      "phrase": "1с бухгалтерия 8.3 синхронизация",
+      "group_match": "CORV-G05-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "sync_exchange"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1876",
+      "phrase": "синхронизация 1с 8.3",
+      "group_match": "CORV-G05-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "sync_exchange"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1883",
+      "phrase": "синхронизация зуп и 1с бухгалтерия 8.3",
+      "group_match": "CORV-G05-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "sync_exchange"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1789",
+      "phrase": "1с 7.7 изменить печатную форму",
+      "group_match": "CORV-G03-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "print_form_modification"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1509",
+      "phrase": "1с 8.3 изменить печатную форму счета",
+      "group_match": "CORV-G03-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "print_form_modification"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1375",
+      "phrase": "изменить печатную форму 1с 8.3",
+      "group_match": "CORV-G03-04",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "print_form_modification"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1438",
+      "phrase": "1с 3.0 внешние печатные формы",
+      "group_match": "CORV-G03-05",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "external_reports"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1460",
+      "phrase": "1с 8.3 внешние печатные формы упд",
+      "group_match": "CORV-G03-05",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "external_reports"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1342",
+      "phrase": "внешние печатные формы 1с 8.3",
+      "group_match": "CORV-G03-05",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "external_reports"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1431",
+      "phrase": "внешняя печатная форма 1с 8.3 управляемое",
+      "group_match": "CORV-G03-05",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "external_reports"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1435",
+      "phrase": "создание внешних печатных форм 1с 8.3",
+      "group_match": "CORV-G03-05",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "external_reports"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1366",
+      "phrase": "макет печатной формы в 1с 8.3",
+      "group_match": "CORV-G03-03",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "print_forms_general"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-1335",
+      "phrase": "печатные формы 1с 8.3",
+      "group_match": "CORV-G03-03",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "print_forms_general"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-634",
+      "phrase": "сопровождение 1с 8.3",
+      "group_match": "CORV-G01-05",
+      "copied_hypothesis_snippet": "users configuring TS PIOT/marking in 1C retail",
+      "actual_group_intent": "support_retainer"
+    }
+  ],
+  "status_reason_contradictions_in_package": [
+    {
+      "keyword_id": "seed-CORV-G07-04-core-восстановлен",
+      "phrase": "восстановление работы 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-014",
+      "phrase": "срочно программист 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-миграция-дан",
+      "phrase": "миграция данных 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G05-06-core-перенос-данн",
+      "phrase": "перенос данных в 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-расчет-себес",
+      "phrase": "расчет себестоимости 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-01-core-себестоимост",
+      "phrase": "себестоимость в 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-02-core-планирование",
+      "phrase": "планирование закупок 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G04-03-core-платежный-ка",
+      "phrase": "платежный календарь 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G03-02-core-новый-отчет-",
+      "phrase": "новый отчет 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-002",
+      "phrase": "программист 1с новосибирск",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-092",
+      "phrase": "программисты 1с новосибирск",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-06-core-обслуживание",
+      "phrase": "обслуживание 1с для организации",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-661",
+      "phrase": "обслуживание и сопровождение 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-717",
+      "phrase": "сопровождение и обслуживание 1с предприятие",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-04-core-внедрение-1с",
+      "phrase": "внедрение 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-509",
+      "phrase": "внедренцы и программисты 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "phrase": "1с программист без образования",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-101",
+      "phrase": "образование программист 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "phrase": "программист 1с без высшего образования",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-264",
+      "phrase": "программист 1с высшее образование",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "seed-CORV-G01-08-core-разовые-рабо",
+      "phrase": "разовые работы 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-041",
+      "phrase": "задание программисту 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-054",
+      "phrase": "задачи 1с программиста",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-052",
+      "phrase": "найти программиста 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-050",
+      "phrase": "нужен программист 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-062",
+      "phrase": "отзыв программисту 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-060",
+      "phrase": "программа программист 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-001",
+      "phrase": "программист 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-056",
+      "phrase": "программист 1с предприятие",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-026",
+      "phrase": "программист 1с удаленно",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-061",
+      "phrase": "программист аналитик 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-038",
+      "phrase": "программист разработчик 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-048",
+      "phrase": "программисты 1с спб",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-053",
+      "phrase": "работать программистом 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-064",
+      "phrase": "сколько зарабатывает программист 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-033",
+      "phrase": "сколько программистов 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-042",
+      "phrase": "стал программистом 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-044",
+      "phrase": "стоимость 1с программисты",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-059",
+      "phrase": "стоимость часа 1с программиста",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-066",
+      "phrase": "технические задания программистам 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-034",
+      "phrase": "часа программиста 1с",
+      "status": "EXCLUDE",
+      "contradiction": "EXCLUDE status on direct commercial seed previously ACTIVE COMMERCIAL"
+    }
+  ],
+  "inherited_from_qa_repair": true,
+  "narrow_demand_mistaken_for_invalid": [
+    "восстановление работы 1с",
+    "миграция данных 1с",
+    "перенос данных в 1с",
+    "расчет себестоимости 1с",
+    "себестоимость в 1с",
+    "планирование закупок 1с",
+    "платежный календарь 1с",
+    "новый отчет 1с",
+    "обслуживание 1с для организации",
+    "внедрение 1с",
+    "разовые работы 1с"
+  ]
+}

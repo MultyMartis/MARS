@@ -1,0 +1,40 @@
+{
+  "suite": "wave4-live-strategist-test-v1",
+  "mode": "mock",
+  "provider": "mock",
+  "model_id": "mock-strategist",
+  "passed": 7,
+  "total": 7,
+  "checks": [
+    {
+      "name": "model responded",
+      "pass": true
+    },
+    {
+      "name": "structured output",
+      "pass": true
+    },
+    {
+      "name": "evidence refs preserved",
+      "pass": true
+    },
+    {
+      "name": "no invented budget in strategy",
+      "pass": true
+    },
+    {
+      "name": "blockers preserved",
+      "pass": true
+    },
+    {
+      "name": "tier policy intact",
+      "pass": true
+    },
+    {
+      "name": "mode",
+      "pass": "mock"
+    }
+  ],
+  "usage": null,
+  "timestamp": "2026-06-23T15:13:18.394Z"
+}

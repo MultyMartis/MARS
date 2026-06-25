@@ -46,7 +46,8 @@ Every Corporate Pages Program page (M9.13–M9.18) must have **four mandatory ar
 | **Research** | `projects/ocpilot/sites/site-002/reports/` | `BZPM-M9.{ID}-*-FORENSIC-RESEARCH.md` (registered names vary) |
 | **IA** | [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md) | Per-page section `### M9.{ID} — …` |
 | **Copy** | `projects/ocpilot/sites/site-002/copy/` | `BZPM-M9.{ID}-{PAGE-SLUG}-PAGE-COPY-v{N}.md` |
-| **Design Charter** | `projects/website-factory/execution-cases/bzpm-roadmap/charters/` | `BZPM-M9.{ID}-{PAGE-SLUG}-DESIGN-CHARTER-v{N}.md` *(folder reserved — not created until charter pass)* |
+| **Design Charter** | `projects/website-factory/execution-cases/bzpm-roadmap/charters/` | `BZPM-M9.{ID}-{PAGE-SLUG}-DESIGN-CHARTER-v{N}.md` · [charters/README.md](charters/README.md) |
+| **Design Brief** | `projects/website-factory/execution-cases/bzpm-roadmap/charters/` | `BZPM-M9.{ID}-{PAGE-SLUG}-DESIGN-BRIEF-v{N}.md` · [charters/README.md](charters/README.md) |
 
 **Program index:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-v1.md) — canonical registry with links to all four artefact types per page.
 
@@ -173,14 +174,14 @@ Research  →  IA  →  Copy  →  Design Charter  →  Design  →  Implementat
 
 ## Program registry cross-reference
 
-| ID | Page | Research | IA | Copy (v1 shell) |
-|----|------|----------|-----|-----------------|
-| M9.13 | About Company | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md) | [IA § M9.13](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m913--about-company-about) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.md) |
-| M9.14 | Delivery | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md) | [IA § M9.14](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m914--delivery-delivery) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.md) |
-| M9.15 | Payment | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.15](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m915--payment-payment-methods) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md) |
-| M9.16 | Dealers | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.16](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m916--dealers-dealers) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.md) |
-| M9.17 | Warranty | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.17](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m917--warranty-guarantee) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md) |
-| M9.18 | Custom Manufacturing | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.18](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m918--custom-manufacturing-custom-equipment) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.md) |
+| ID | Page | Research | IA | Copy (canonical) | Design Charter | Design Brief |
+|----|------|----------|-----|------------------|----------------|--------------|
+| M9.13 | About Company | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md) | [IA § M9.13](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m913--about-company-about) | [PAGE-COPY v1.1](../../../ocpilot/sites/site-002/copy/BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.1.md) | [Charter v1](charters/BZPM-M9.13-ABOUT-COMPANY-DESIGN-CHARTER-v1.md) | [Brief v1](charters/BZPM-M9.13-ABOUT-COMPANY-DESIGN-BRIEF-v1.md) |
+| M9.14 | Delivery | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md) | [IA § M9.14](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m914--delivery-delivery) | [PAGE-COPY v1.1](../../../ocpilot/sites/site-002/copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md) | [Charter v1](charters/BZPM-M9.14-DELIVERY-DESIGN-CHARTER-v1.md) | [Brief v1](charters/BZPM-M9.14-DELIVERY-DESIGN-BRIEF-v1.md) |
+| M9.15 | Payment | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.15](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m915--payment-payment-methods) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md) | [Charter v1](charters/BZPM-M9.15-PAYMENT-DESIGN-CHARTER-v1.md) | [Brief v1](charters/BZPM-M9.15-PAYMENT-DESIGN-BRIEF-v1.md) |
+| M9.16 | Dealers | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.16](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m916--dealers-dealers) | [PAGE-COPY v1.1](../../../ocpilot/sites/site-002/copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md) | [Charter v1](charters/BZPM-M9.16-DEALERS-DESIGN-CHARTER-v1.md) | [Brief v1](charters/BZPM-M9.16-DEALERS-DESIGN-BRIEF-v1.md) |
+| M9.17 | Warranty | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.17](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m917--warranty-guarantee) | [PAGE-COPY v1](../../../ocpilot/sites/site-002/copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md) | [Charter v1](charters/BZPM-M9.17-WARRANTY-DESIGN-CHARTER-v1.md) | [Brief v1](charters/BZPM-M9.17-WARRANTY-DESIGN-BRIEF-v1.md) |
+| M9.18 | Custom Manufacturing | [Forensic](../../../ocpilot/sites/site-002/reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) | [IA § M9.18](BZPM-CORPORATE-PAGES-IA-MAP-v1.md#m918--custom-manufacturing-custom-equipment) | [PAGE-COPY v1.1](../../../ocpilot/sites/site-002/copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md) | [Charter v1](charters/BZPM-M9.18-CUSTOM-MANUFACTURING-DESIGN-CHARTER-v1.md) | [Brief v1](charters/BZPM-M9.18-CUSTOM-MANUFACTURING-DESIGN-BRIEF-v1.md) |
 
 ---
 
@@ -189,6 +190,7 @@ Research  →  IA  →  Copy  →  Design Charter  →  Design  →  Implementat
 | Date | Change |
 |------|--------|
 | 2026-06-22 | **CREATED** — BZPM Copy Standards v1; four-artefact model; PAGE-COPY naming, storage, versioning, approval workflow; M9.13–M9.18 v1 shells registered |
+| 2026-06-22 | **RECONCILED** — Charter/brief storage active; canonical PAGE-COPY v1/v1.1 links; full registry — [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 
 ---
 

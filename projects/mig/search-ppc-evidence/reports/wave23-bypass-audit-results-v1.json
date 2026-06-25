@@ -1,0 +1,127 @@
+{
+  "suite": "wave23-bypass-audit",
+  "passed": 20,
+  "failed": 0,
+  "results": [
+    {
+      "id": 1,
+      "name": "generic business-hours bypass blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "degradation without operator decision blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "degradation matches another project blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "degradation matches another query blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "degradation matches another capture blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "degraded technical evidence promoted to client evidence blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "degraded evidence used in strategy blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "technical project marked production blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 9,
+      "name": "factual capture time rewritten blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 10,
+      "name": "screenshot omitted blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 11,
+      "name": "HTML omitted blocked without limitation",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 12,
+      "name": "organic result accepted as paid blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 13,
+      "name": "advertiser fabricated blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 14,
+      "name": "landing fabricated requires bounded resolution",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 15,
+      "name": "execution receipt missing degradation blocked when degraded import used",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 16,
+      "name": "raw session data leaks into report blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 17,
+      "name": "Corvonero consumes evidence blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 18,
+      "name": "Wave 5 starts blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 19,
+      "name": "Commander generated blocked",
+      "pass": true,
+      "disposition": "PASS"
+    },
+    {
+      "id": 20,
+      "name": "output reconciliation fails pattern guarded",
+      "pass": true,
+      "disposition": "PASS"
+    }
+  ]
+}

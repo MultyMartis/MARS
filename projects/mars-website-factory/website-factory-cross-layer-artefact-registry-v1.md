@@ -45,6 +45,8 @@
 | R-032 | `projects/mars-website-factory/no-button-letter-spacing-law-v1.md` | PRODUCTION LAW | No `--button-letter-spacing`; natural font spacing | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 | R-033 | `projects/mars-website-factory/universal-button-system-law-v1.md` | PRODUCTION LAW | Single `.btn` system; `.btn_dark` / `.btn--primary`; no parallel block button geometry | **MANDATORY** | Factory | Yes | New 2026-06-23 | PROMOTE |
 | R-034 | `workspaces/fp-0002-shpigovsky-v6/releases/FP-0002-V6-DESKTOP-STABLE-01/FP-0002-V6-DESKTOP-STABLE-01-MANIFEST.md` | RELEASE | FP-0002 V6 first stable desktop baseline; operator-approved Header/Hero/Footer + local Inter | **FROZEN** | Operator + release record | Yes (rollback tag) | None | KEEP |
+| R-036 | `projects/mars-website-factory/figma-inspection-authority-rules-v1.md` | FOUNDATION | Figma visible content, hidden-layer exclusion, layer-name conflict, audit contract | **ACTIVE** | Factory | Yes (V7+ Figma sources) | None | KEEP |
+| R-036a | `workspaces/fp-0002-shpigovsky-v7/foundation/FP-0002-V7-FIGMA-AUTHORITY-RULES.md` | PROJECT | FP-0002 V7 local Figma authority; Spig_v1.2.fig ACTIVE | **ACTIVE** | V7 operator | V7 only | None | KEEP |
 
 ---
 
@@ -95,3 +97,4 @@
 | 2026-06-22 | v1.1 — R-026 CSS Variable First Law; SCSS→VQA matrix link |
 | 2026-06-23 | v1.2 — R-034 FP-0002 V6 desktop stable baseline release record |
 | 2026-06-23 | v1.3 — R-035 FP-0002 V6 Section 01 rejection; clean audit artefacts; sole JPG authority laws ([WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md](../../reports/WF-FRONTEND-VISUAL-AUTHORITY-CONTRACT-v1.md) §8) |
+| 2026-06-24 | v1.4 — R-036 Figma inspection authority rules; FP-0002 V7 Spig_v1.2.fig active; Package #001 Phase 1–2 |

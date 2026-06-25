@@ -1,0 +1,64 @@
+{
+  "semantic_record": {
+    "query_id": "",
+    "record_version": "0.0.0",
+    "schema_version": "v1",
+    "created_at": "",
+    "updated_at": "",
+    "raw_query": "",
+    "normalized_query": "",
+    "language": "",
+    "source_type": "",
+    "provenance_status": "UNKNOWN",
+    "literal_interpretation": "",
+    "likely_user_goal": "",
+    "primary_intent": "",
+    "signals": [],
+    "ambiguity": {
+      "types": [],
+      "severity": "LOW"
+    },
+    "commercial_eligibility": {
+      "decision": "ABSTAIN",
+      "reason_code": "",
+      "confidence": 0,
+      "reviewer_required": true
+    },
+    "risk": {
+      "overall_risk": "LOW",
+      "dimensions": [],
+      "blocking_conditions": []
+    },
+    "service_candidate": {
+      "mapping_status": "NOT_STARTED"
+    },
+    "review": {
+      "workflow_status": "NOT_STARTED"
+    },
+    "versioning": {},
+    "audit": {}
+  },
+  "benchmark": {
+    "benchmark_version": "v1",
+    "phase": "B0",
+    "stratum_id": "",
+    "domain_id": "",
+    "difficulty_id": "",
+    "split_id": "UNASSIGNED",
+    "gold_status": "DRAFT",
+    "release_state": "DRAFT",
+    "double_annotation": {
+      "required": true,
+      "pass_count": 0,
+      "disagreement_types": []
+    },
+    "adjudication": null,
+    "provenance": {
+      "source_class": "",
+      "sampling_frame_id": "",
+      "forbidden_source_flags": []
+    },
+    "minimal_pair_id": null,
+    "corvonero_pilot": false
+  }
+}

@@ -16,9 +16,13 @@ FW-03 — COMPLETE
 FW-04 — COMPLETE
 FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
-FW-06 — NEXT
+FW-06A — COMPLETE (FP-0002 local foundation)
+FW-06A.1 — COMPLETE (FP-0002 foundation closure)
+FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
+FW-07A — COMPLETE (AG-WP-001 foundation)
+FW-07B — COMPLETE (AG-WP-001 typed operations)
+FW-07C — Local Read-Only Harness — PLANNED
 Architecture: DOCUMENTED
-Methodology: BASELINE v1
 Contracts: BASELINE v1
 Standards: BASELINE v1
 Tooling design: BASELINE v1
@@ -32,19 +36,19 @@ Synthetic validation: COMPLETE (FWS-0001 static + live)
 Local environment: PROVEN WITH LIMITATIONS (MLI Profile A)
 Local Laragon profile: ENABLED (MLI-03) — Laragon at D:\MARS-Localhost\laragon
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
-FW-06 — AUTHORIZED BUT WAITING FOR APPROVED CLIENT FRONTEND
+FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 Operator WV6: PENDING
-Direct local domain: PENDING HOSTS ELEVATION
+Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
-Agent registration: NOT REGISTERED
-Client pilot: NOT STARTED — WAIT FOR FP-0002 FRONTEND
+Agent registration: REGISTERED (AG-WP-001 — draft; NOT RUNTIME-ACTIVE)
+Client pilot: NOT STARTED — WordPress foundation READY; theme integration LOCKED until FW-06B
 ```
 
 | Field | Value |
 |-------|-------|
 | **Lifecycle** | **FOUNDATION / PRE-OPERATIONAL** |
 | **Runtime** | **EXCLUDED** |
-| **Agent** | **NOT REGISTERED** — seed `AG-WP-001` only |
+| **Agent** | **REGISTERED** (`AG-WP-001` — `draft`; **NOT RUNTIME-ACTIVE**) |
 | **project_id** | **NOT CREATED** |
 
 ---
@@ -54,11 +58,14 @@ Client pilot: NOT STARTED — WAIT FOR FP-0002 FRONTEND
 | Concern | Start here |
 |---------|------------|
 | **Implementation capability (FW-04)** | [capability/OPERATIONAL-INDEX.md](capability/OPERATIONAL-INDEX.md) |
+| **AG-WP-001 agent pack (FW-07A)** | [agents/README.md](agents/README.md) |
 | **Primary specialist** | [capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md](capability/primary-specialist/FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1.md) |
 | **Prompt pack** | [capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md](capability/task-templates/FORGE-WORDPRESS-PROMPT-PACK-v1.md) |
 | **Architecture overview** | [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md) |
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
+| **AG-WP-001 operation registry** | [registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) + [operations/ag-wp-001/operations-v1.json](operations/ag-wp-001/operations-v1.json) |
+| **AG-WP-001 contract validator** | [tools/validate-ag-wp-001-operation-contracts.mjs](tools/validate-ag-wp-001-operation-contracts.mjs) |
 | **Compliance matrix** | [FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md](FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md) |
 | **Local environment** | [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) — **consumes** [MLI WordPress profile](../../../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
 | **Shared localhost** | [projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) — Forge does **not** own `D:\MARS-Localhost` |
@@ -203,16 +210,17 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — visibility only; WordPress **NOT STARTED**; eligibility **FW-06** (after synthetic validation).
+**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY** on `shpigovsky.test`; frontend integration **HOLD**; see [projects/fp-0002/](projects/fp-0002/).
 
 ---
 
 ## Next authorized stage
 
 ```text
-FW-06 — Pilot Intake
+FW-06B — Approved Frontend Intake (FP-0002) — WAITING
+FW-07B — AG-WP-001 Typed Operations — PLANNED (not auto-start)
 ```
 
 ---
 
-*Last updated: 2026-06-23 — FW-05R Live Synthetic Runtime Validation complete.*
+*Last updated: 2026-06-24 — FW-07A AG-WP-001 foundation complete.*

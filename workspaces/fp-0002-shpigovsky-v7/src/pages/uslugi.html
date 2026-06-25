@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Услуги — Шпиговский дом", "description": "Услуги центра «Шпиговский дом»: программа реабилитации, сопровождение и поддержка на пути восстановления. TEMPORARY_SEO_COPY", "canonical": "https://shpigovsky.ru/uslugi/", "robots": "index, follow", "ogType": "website", "ogTitle": "Услуги — Шпиговский дом", "ogDescription": "Услуги центра «Шпиговский дом»: программа реабилитации, сопровождение и поддержка на пути восстановления. TEMPORARY_SEO_COPY", "ogUrl": "https://shpigovsky.ru/uslugi/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Услуги центра «Шпиговский дом»"})
+</head>
+<body class="page-uslugi" data-page="uslugi">
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": " site-header__nav-link--active", "activeNavOffcanvasClass": " offcanvas__nav-link--active", "activeNavUslugiAria": " aria-current=\"page\""})
+  <main>
+    @@include('partials/sections/home-rehabilitation-program.html', {"programHeading": "Наша программа включает 4&nbsp;направления"})
+    @@include('partials/sections/home-founder-quote.html', {"modalSource": "services-founder"})
+    @@include('partials/sections/home-comfort.html')
+    @@include('partials/sections/home-faq.html')
+    @@include('partials/sections/home-final-form.html', {"leadSource": "services-final"})
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/components/modal-consultation.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+"regression_id","description","result_before","result_after","failures_after"
+"REG-01","Bitrix/site phrases must not be blocked by bare «сайт» in owner group","PASS","PASS","[]"
+"REG-02","Exchange-failure group must not minus core symptom «не работает»","PASS","PASS","[]"
+"REG-03","External print-form group must not minus «печатная форма»","PASS","PASS","[]"
+"REG-04","Cash-register sync group must not minus stem «синхрон»","PASS","PASS","[]"
+"REG-05","No active phrase blocked by global negative in owner campaign","PASS","PASS","[]"
+"REG-06","Informational phrase must not survive via long inline-minus tail alone","PASS","PASS","[]"

@@ -1,0 +1,93 @@
+{
+  "coverage_set_id": "orca-benchmark-domain-coverage",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "min_domains": 7,
+  "domains": [
+    {
+      "domain_id": "DOMAIN_ERP_ACCOUNTING",
+      "label": "ERP and accounting systems",
+      "min_share_pct": 12,
+      "example_verticals": [
+        "1C",
+        "ERP implementation",
+        "bookkeeping automation"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_WEB_DEVELOPMENT",
+      "label": "Web development and digital products",
+      "min_share_pct": 10,
+      "example_verticals": [
+        "site development",
+        "CMS",
+        "e-commerce build"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_DIGITAL_MARKETING_PPC",
+      "label": "Digital marketing and PPC services",
+      "min_share_pct": 10,
+      "example_verticals": [
+        "context ads",
+        "SEO",
+        "analytics setup"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_IT_INFRASTRUCTURE_CLOUD",
+      "label": "IT infrastructure and cloud",
+      "min_share_pct": 12,
+      "example_verticals": [
+        "hosting",
+        "cloud migration",
+        "backup"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_BUSINESS_CONSULTING",
+      "label": "Business and management consulting",
+      "min_share_pct": 10,
+      "example_verticals": [
+        "process audit",
+        "CRM consulting"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_INDUSTRIAL_EQUIPMENT",
+      "label": "Industrial and commercial equipment",
+      "min_share_pct": 10,
+      "example_verticals": [
+        "kitchen equipment",
+        "POS",
+        "warehouse tech"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_LEGAL_COMPLIANCE",
+      "label": "Legal and compliance services",
+      "min_share_pct": 8,
+      "example_verticals": [
+        "licensing",
+        "tax compliance",
+        "contracts"
+      ]
+    },
+    {
+      "domain_id": "DOMAIN_HR_RECRUITING",
+      "label": "HR systems and recruiting services",
+      "min_share_pct": 8,
+      "example_verticals": [
+        "HR software",
+        "outstaffing",
+        "payroll"
+      ]
+    }
+  ],
+  "b2_coverage_rule": "All domains represented; no domain below min_share_pct without operator waiver",
+  "corvonero_pilot_overweight": [
+    "DOMAIN_ERP_ACCOUNTING",
+    "DOMAIN_DIGITAL_MARKETING_PPC"
+  ]
+}

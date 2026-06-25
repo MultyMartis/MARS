@@ -59,7 +59,7 @@ wp config shuffle-salts
 | Constant | MLI-WP-SYN-001 value | Rule |
 |----------|----------------------|------|
 | `DB_NAME` | `mars_wp_fws0001` | Per [database naming standard](MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md) |
-| `DB_USER` | `mli_fws0001_app` | Pattern: `mli_{slug_normalized}_app` |
+| `DB_USER` | `mli_fws0001_app` | Pattern: `mli_{slug_normalized}_app`; plugin **`caching_sha2_password`** per [database standard](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) |
 | `DB_PASSWORD` | *(runtime.env)* | Never in docs |
 | `DB_HOST` | `127.0.0.1` | **Required** local host |
 | `DB_CHARSET` | `utf8mb4` | WordPress default |

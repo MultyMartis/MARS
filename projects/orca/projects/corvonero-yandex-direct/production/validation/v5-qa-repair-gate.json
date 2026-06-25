@@ -1,0 +1,89 @@
+{
+  "gate_id": "v5-qa-repair-gate",
+  "evaluated_at": "2026-06-22T05:01:04.708Z",
+  "final_result": "BLOCKED — QA REPAIR INCOMPLETE",
+  "v6_production": "NOT AUTHORIZED",
+  "checks": [
+    {
+      "id": "G-01-no-placeholder-in-repair-package",
+      "passed": true,
+      "detail": "Repair package JSON must not introduce new placeholder values"
+    },
+    {
+      "id": "G-02-root-cause-documented",
+      "passed": true,
+      "detail": "2464 shared-string index leak documented with reusable fix"
+    },
+    {
+      "id": "G-03-career-education-leakage",
+      "passed": false,
+      "detail": "4 active v5 phrases require EXCLUDE (education/career/employment)"
+    },
+    {
+      "id": "G-04-controlled-test-hypothesis",
+      "passed": false,
+      "detail": "149 controlled phrases lack commercial hypothesis"
+    },
+    {
+      "id": "G-05-unique-negative-final-states",
+      "passed": false,
+      "detail": "UNRESOLVED=333 BLOCKING=0"
+    },
+    {
+      "id": "G-06-safe-evidence-specific",
+      "passed": false,
+      "detail": "333 SAFE decisions still use generic template without phrase-specific proof"
+    },
+    {
+      "id": "G-07-no-unresolved-semantic-risks",
+      "passed": false,
+      "detail": "unique_unresolved_after=333"
+    },
+    {
+      "id": "G-08-collision-exact-actions",
+      "passed": false,
+      "detail": "20 blocking findings still have generic correction field in v5 source"
+    },
+    {
+      "id": "G-09-summary-reconciliation",
+      "passed": false,
+      "detail": "v5 collision summary contradiction flagged (semantic_risks_after vs unresolved_count)"
+    },
+    {
+      "id": "G-10-generator-regression",
+      "passed": true,
+      "detail": "all passed"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "G-03-career-education-leakage",
+      "detail": "4 active v5 phrases require EXCLUDE (education/career/employment)"
+    },
+    {
+      "id": "G-04-controlled-test-hypothesis",
+      "detail": "149 controlled phrases lack commercial hypothesis"
+    },
+    {
+      "id": "G-05-unique-negative-final-states",
+      "detail": "UNRESOLVED=333 BLOCKING=0"
+    },
+    {
+      "id": "G-06-safe-evidence-specific",
+      "detail": "333 SAFE decisions still use generic template without phrase-specific proof"
+    },
+    {
+      "id": "G-07-no-unresolved-semantic-risks",
+      "detail": "unique_unresolved_after=333"
+    },
+    {
+      "id": "G-08-collision-exact-actions",
+      "detail": "20 blocking findings still have generic correction field in v5 source"
+    },
+    {
+      "id": "G-09-summary-reconciliation",
+      "detail": "v5 collision summary contradiction flagged (semantic_risks_after vs unresolved_count)"
+    }
+  ],
+  "summary": "7 gate check(s) failed; v6 production blocked."
+}

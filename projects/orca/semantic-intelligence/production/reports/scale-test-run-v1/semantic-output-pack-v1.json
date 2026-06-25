@@ -1,8 +1,8 @@
 {
   "run_manifest": {
-    "run_id": "orca-sem-2026-06-22T21-20-26-340Z",
+    "run_id": "orca-sem-2026-06-23T02-39-48-663Z",
     "pack_version": "semantic-output-pack-v1",
-    "generated_at": "2026-06-22T21:20:26.400Z",
+    "generated_at": "2026-06-23T02:39:48.732Z",
     "project_id": "scale-test-non-client",
     "input_reconciliation": {
       "expected_count": 500,
@@ -15,7 +15,7 @@
     },
     "contract_bundle": "p0-i-bundle-v1",
     "checksums": {
-      "pack_body": "68552F743C349222F0F9C71D484CFF542A94898D82182B4A41D16AE8C2F9A926"
+      "pack_body": "09567BF6BCEEFA58C5BFA73AD6559F8FC7D0EDFB926B4F1A81F42787BAD253B4"
     }
   },
   "final_accept": [
@@ -10113,7 +10113,7 @@
         "risk": "low"
       }
     ],
-    "generated_at": "2026-06-22T21:20:26.394Z"
+    "generated_at": "2026-06-23T02:39:48.726Z"
   },
   "negative_conflicts": {
     "conflicts": [],
@@ -10130,7 +10130,7 @@
       ],
       "adjudication_outcome": "FINAL ACCEPT",
       "automated_decision": "ACCEPT",
-      "created_at": "2026-06-22T21:20:26.395Z"
+      "created_at": "2026-06-23T02:39:48.728Z"
     },
     {
       "phrase_id": "SCALE-0051",
@@ -10140,7 +10140,7 @@
       ],
       "adjudication_outcome": "FINAL ACCEPT",
       "automated_decision": "ACCEPT",
-      "created_at": "2026-06-22T21:20:26.395Z"
+      "created_at": "2026-06-23T02:39:48.728Z"
     },
     {
       "phrase_id": "SCALE-0087",
@@ -10150,7 +10150,7 @@
       ],
       "adjudication_outcome": "FINAL REJECT",
       "automated_decision": "REJECT",
-      "created_at": "2026-06-22T21:20:26.396Z"
+      "created_at": "2026-06-23T02:39:48.729Z"
     },
     {
       "phrase_id": "SCALE-0110",
@@ -10160,7 +10160,7 @@
       ],
       "adjudication_outcome": "FINAL REJECT",
       "automated_decision": "REJECT",
-      "created_at": "2026-06-22T21:20:26.396Z"
+      "created_at": "2026-06-23T02:39:48.729Z"
     },
     {
       "phrase_id": "SCALE-0180",
@@ -10170,7 +10170,7 @@
       ],
       "adjudication_outcome": "FINAL REJECT",
       "automated_decision": "REJECT",
-      "created_at": "2026-06-22T21:20:26.396Z"
+      "created_at": "2026-06-23T02:39:48.729Z"
     },
     {
       "phrase_id": "SCALE-0252",
@@ -10180,7 +10180,7 @@
       ],
       "adjudication_outcome": "FINAL ACCEPT",
       "automated_decision": "ACCEPT",
-      "created_at": "2026-06-22T21:20:26.397Z"
+      "created_at": "2026-06-23T02:39:48.729Z"
     },
     {
       "phrase_id": "SCALE-0261",
@@ -10190,7 +10190,7 @@
       ],
       "adjudication_outcome": "FINAL ACCEPT",
       "automated_decision": "ACCEPT",
-      "created_at": "2026-06-22T21:20:26.397Z"
+      "created_at": "2026-06-23T02:39:48.730Z"
     },
     {
       "phrase_id": "SCALE-0286",
@@ -10200,7 +10200,7 @@
       ],
       "adjudication_outcome": "FINAL ABSTAIN",
       "automated_decision": "ABSTAIN",
-      "created_at": "2026-06-22T21:20:26.397Z"
+      "created_at": "2026-06-23T02:39:48.730Z"
     },
     {
       "phrase_id": "SCALE-0303",
@@ -10210,7 +10210,7 @@
       ],
       "adjudication_outcome": "FINAL ACCEPT",
       "automated_decision": "ACCEPT",
-      "created_at": "2026-06-22T21:20:26.397Z"
+      "created_at": "2026-06-23T02:39:48.730Z"
     },
     {
       "phrase_id": "SCALE-0304",
@@ -10220,7 +10220,7 @@
       ],
       "adjudication_outcome": "FINAL REJECT",
       "automated_decision": "REJECT",
-      "created_at": "2026-06-22T21:20:26.397Z"
+      "created_at": "2026-06-23T02:39:48.730Z"
     },
     {
       "phrase_id": "SCALE-0348",
@@ -10230,7 +10230,7 @@
       ],
       "adjudication_outcome": "FINAL ABSTAIN",
       "automated_decision": "ABSTAIN",
-      "created_at": "2026-06-22T21:20:26.398Z"
+      "created_at": "2026-06-23T02:39:48.730Z"
     },
     {
       "phrase_id": "SCALE-0368",
@@ -10240,7 +10240,7 @@
       ],
       "adjudication_outcome": "FINAL ABSTAIN",
       "automated_decision": "ABSTAIN",
-      "created_at": "2026-06-22T21:20:26.398Z"
+      "created_at": "2026-06-23T02:39:48.730Z"
     }
   ],
   "metrics": {
@@ -10267,13 +10267,13 @@
     "negative_conflicts": 0,
     "runtime_failures": 0,
     "unresolved_records": 0,
-    "elapsed_ms": 60,
+    "elapsed_ms": 69,
     "automation_primary": true
   },
   "output_class": "PRODUCTION_SEMANTIC_PACK",
   "complete": true,
   "execution_receipt": {
-    "run_id": "orca-sem-2026-06-22T21-20-26-340Z",
+    "run_id": "orca-sem-2026-06-23T02-39-48-663Z",
     "ok": true,
     "input_count": 500,
     "output_count": 500,
@@ -10281,7 +10281,7 @@
     "review_queue_size": 12,
     "cluster_count": 3,
     "negative_conflict_blocked": false,
-    "completed_at": "2026-06-22T21:20:26.407Z"
+    "completed_at": "2026-06-23T02:39:48.736Z"
   },
   "human_readable_summary": {
     "demand_by_tier": {

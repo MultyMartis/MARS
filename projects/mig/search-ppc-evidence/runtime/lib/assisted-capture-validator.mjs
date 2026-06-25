@@ -1,9 +1,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { validateBusinessHoursWindow } from './business-hours.mjs';
+import {
+  CANONICAL_MANIFEST,
+  NORMALIZED_MANIFEST,
+  RAW_FIREFOX_MANIFEST,
+  selectCanonicalManifest,
+} from './assisted-manifest-normalizer.mjs';
+import {
+  loadApprovedDegradations,
+  matchApprovedDegradation,
+  rejectGenericBusinessHoursBypass,
+} from './approved-degradation-registry.mjs';
 import { loadJson, sha256File, sha256Text } from './utils.mjs';
 
 export const ASSISTED_BLOCKER = 'BLOCKED — ASSISTED LIVE CAPTURE BUNDLE INVALID';
+export const DEGRADED_IMPORT_VERDICT = 'IMPORT ACCEPTED — APPROVED WITH DEGRADATION';
 
 export function hashAssistedManifestBody(bundle) {
   const copy = JSON.parse(JSON.stringify(bundle));
@@ -30,23 +42,27 @@ export function validateAssistedCaptureBundle({
   querySet,
   sessionConfig,
   projectManifest,
+  approvedDegradationsDir,
+  consumptionRegistryPath,
 }) {
   const blockers = [];
+  const warnings = [];
 
   if (!bundleDir || !fs.existsSync(bundleDir)) {
     return { valid: false, blockers: [`${ASSISTED_BLOCKER}: bundle directory missing`] };
   }
 
-  const manifestPath = path.join(bundleDir, 'capture-manifest.json');
-  if (!fs.existsSync(manifestPath)) {
-    blockers.push('capture-manifest.json missing');
+  const selected = selectCanonicalManifest(bundleDir);
+  const manifestPath = selected.path;
+  if (!manifestPath || !fs.existsSync(manifestPath)) {
+    blockers.push('no valid capture manifest found');
   }
 
   let bundle;
   try {
-    bundle = loadJson(manifestPath);
+    bundle = selected.manifest || loadJson(manifestPath);
   } catch (e) {
-    blockers.push(`capture-manifest.json invalid: ${e.message}`);
+    blockers.push(`capture manifest invalid: ${e.message}`);
     return { valid: false, blockers: blockers.map((b) => `${ASSISTED_BLOCKER}: ${b}`) };
   }
 
@@ -76,15 +92,68 @@ export function validateAssistedCaptureBundle({
   if (!bundle.timezone) blockers.push('timezone missing');
   if (!bundle.region) blockers.push('region missing');
 
+  let businessHours = null;
+  let captureTimeStatus = null;
+  let degradationStatus = null;
+  let degradationApplied = null;
+
+  const genericBypass = rejectGenericBusinessHoursBypass(bundle);
+  if (genericBypass.rejected) {
+    blockers.push(genericBypass.reason);
+  }
+
   if (sessionConfig) {
-    const windowCheck = validateBusinessHoursWindow({
+    businessHours = validateBusinessHoursWindow({
       projectTimezone: bundle.timezone || sessionConfig.timezone,
       currentTimestamp: bundle.captured_at,
       observationWindows: sessionConfig.allowed_local_collection_windows,
       weekdayPolicy: sessionConfig.weekday_policy,
       approvedExceptions: sessionConfig.approved_exceptions || [],
     });
-    if (!windowCheck.allowed) blockers.push(`outside approved window: ${windowCheck.status}`);
+    captureTimeStatus = businessHours.allowed
+      ? 'WITHIN_PREFERRED_WINDOW'
+      : 'OUTSIDE_PREFERRED_WINDOW';
+
+    if (!businessHours.allowed) {
+      const degradationsDir =
+        approvedDegradationsDir ||
+        (projectManifest?.project_root
+          ? path.join(projectManifest.project_root, 'approved-degradations')
+          : null);
+      const registryPath =
+        consumptionRegistryPath ||
+        (degradationsDir ? path.join(degradationsDir, 'consumption-registry-v1.json') : null);
+      const degradations = degradationsDir ? loadApprovedDegradations(degradationsDir) : [];
+      const match = matchApprovedDegradation({
+        bundle,
+        degradations,
+        consumptionRegistryPath: registryPath,
+      });
+
+      if (match.matched) {
+        degradationStatus = 'OPERATOR_APPROVED';
+        degradationApplied = {
+          degradation_id: match.degradation.degradation_id,
+          operator_decision_id: match.degradation.operator_decision_id,
+          degraded_verdict: match.degraded_verdict,
+          capture_time_status: match.capture_time_status,
+          degradation_status: match.degradation_status,
+          production_authority: false,
+          client_authority: false,
+        };
+        warnings.push(...(match.warnings || []));
+      } else {
+        blockers.push(`outside approved window: ${businessHours.status}`);
+        if (match.blockers?.length) {
+          for (const b of match.blockers) {
+            if (!blockers.includes(b)) blockers.push(b);
+          }
+        }
+      }
+    } else {
+      captureTimeStatus = 'WITHIN_PREFERRED_WINDOW';
+      degradationStatus = 'NOT_REQUIRED';
+    }
   }
 
   const screenshotPath = resolveBundleFile(bundleDir, bundle, 'screenshot');
@@ -131,8 +200,20 @@ export function validateAssistedCaptureBundle({
     bundle,
     bundleDir,
     manifestPath,
+    manifest_source: selected.source,
+    manifest_files: {
+      canonical: path.join(bundleDir, CANONICAL_MANIFEST),
+      normalized: path.join(bundleDir, NORMALIZED_MANIFEST),
+      raw_firefox: path.join(bundleDir, RAW_FIREFOX_MANIFEST),
+    },
     screenshotPath,
     htmlPath,
+    business_hours: businessHours,
+    capture_time_status: captureTimeStatus,
+    degradation_status: degradationStatus,
+    degradation_applied: degradationApplied,
+    import_verdict: degradationApplied ? DEGRADED_IMPORT_VERDICT : valid ? 'IMPORT ACCEPTED' : 'IMPORT BLOCKED',
+    warnings,
     blockers: blockers.map((b) => `${ASSISTED_BLOCKER}: ${b}`),
   };
 }

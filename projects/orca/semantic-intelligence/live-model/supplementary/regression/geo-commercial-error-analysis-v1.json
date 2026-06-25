@@ -1,0 +1,173 @@
+{
+  "analysis_id": "geo-commercial-false-reject-forensics-v1",
+  "version": "1.0.0",
+  "source_run": "confirmation-geo-pass-1782195340879",
+  "total_false_rejects": 16,
+  "error_families": [
+    {
+      "family_id": "provider_noun_not_recognized",
+      "count": 4,
+      "description": "Provider profession + geography rejected; assessors confuse hire with career or out-of-scope product topic"
+    },
+    {
+      "family_id": "price_service_underweighted",
+      "count": 12,
+      "description": "Price + service task + geography rejected; scope-fit leakage treats non-registry product as noncommercial"
+    }
+  ],
+  "records": [
+    {
+      "record_id": "CFM-GEO-PRV-06",
+      "phrase": "программист bitrix москва",
+      "gold_decision": "ACCEPT",
+      "commercial_intent_evidence": ["provider_profession_noun", "geography_modifier"],
+      "geography_evidence": "москва",
+      "service_noun": null,
+      "provider_noun": "программист",
+      "task_verb": null,
+      "price_order_modifier": false,
+      "product_indicator": "bitrix",
+      "primary_assessment": "REJECT",
+      "reassessment": "ACCEPT",
+      "adjudicator_outcome": "REJECT",
+      "hard_rule_influence": false,
+      "confidence": 0.65,
+      "rejected_because": "noncommercial",
+      "decisive_failure": "reject_wins_on_disagreement — geo resolver failed (commercial_evidence missing on ACCEPT side)",
+      "error_family": "provider_noun_not_recognized"
+    },
+    {
+      "record_id": "CFM-GEO-PRV-08",
+      "phrase": "программист bitrix новосибирск",
+      "gold_decision": "ACCEPT",
+      "commercial_intent_evidence": ["provider_profession_noun", "geography_modifier"],
+      "geography_evidence": "новосибирск",
+      "provider_noun": "программист",
+      "product_indicator": "bitrix",
+      "primary_assessment": "REJECT",
+      "reassessment": "REJECT",
+      "adjudicator_outcome": "REJECT",
+      "hard_rule_influence": false,
+      "confidence": 0.9,
+      "rejected_because": "noncommercial",
+      "decisive_failure": "assessor_agreement REJECT — out-of-scope product suppressed commercial intent",
+      "error_family": "provider_noun_not_recognized"
+    },
+    {
+      "record_id": "CFM-GEO-PRV-09",
+      "phrase": "программист bitrix казань",
+      "gold_decision": "ACCEPT",
+      "provider_noun": "программист",
+      "product_indicator": "bitrix",
+      "primary_assessment": "REJECT",
+      "reassessment": "ACCEPT",
+      "adjudicator_outcome": "REJECT",
+      "rejected_because": "noncommercial",
+      "decisive_failure": "reject_wins_on_disagreement",
+      "error_family": "provider_noun_not_recognized"
+    },
+    {
+      "record_id": "CFM-GEO-PRV-13",
+      "phrase": "программист bitrix новосибирск",
+      "gold_decision": "ACCEPT",
+      "provider_noun": "программист",
+      "product_indicator": "bitrix",
+      "primary_assessment": "REJECT",
+      "reassessment": "ACCEPT",
+      "adjudicator_outcome": "REJECT",
+      "rejected_because": "noncommercial",
+      "decisive_failure": "reject_wins_on_disagreement",
+      "error_family": "provider_noun_not_recognized"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-01",
+      "phrase": "цена настройки sap москва",
+      "gold_decision": "ACCEPT",
+      "commercial_intent_evidence": ["price_service_modifier", "implementation_task", "geography_modifier"],
+      "service_noun": "настройки",
+      "task_verb": "настройки",
+      "price_order_modifier": true,
+      "product_indicator": "sap",
+      "primary_assessment": "REJECT",
+      "reassessment": "REJECT",
+      "adjudicator_outcome": "REJECT",
+      "rejected_because": "outside_scope_confused_with_noncommercial",
+      "decisive_failure": "assessor_agreement REJECT — SAP not in registry treated as noncommercial",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-02",
+      "phrase": "цена настройки sap санкт-петербург",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted",
+      "rejected_because": "outside_scope_confused_with_noncommercial",
+      "decisive_failure": "scope_fit leakage"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-03",
+      "phrase": "цена настройки sap нижний новгород",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted",
+      "rejected_because": "outside_scope_confused_with_noncommercial"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-04",
+      "phrase": "цена настройки sap москва",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-05",
+      "phrase": "цена настройки sap санкт-петербург",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-06",
+      "phrase": "цена настройки sap нижний новгород",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-07",
+      "phrase": "цена настройки sap москва",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-08",
+      "phrase": "цена настройки sap санкт-петербург",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-09",
+      "phrase": "цена настройки sap нижний новгород",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-10",
+      "phrase": "цена настройки sap москва",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-11",
+      "phrase": "цена настройки sap санкт-петербург",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    },
+    {
+      "record_id": "CFM-GEO-ORD-12",
+      "phrase": "цена настройки sap нижний новгород",
+      "gold_decision": "ACCEPT",
+      "error_family": "price_service_underweighted"
+    }
+  ],
+  "primary_assessment_pattern": "REJECT dominant on non-1С product + service + geo",
+  "reassessment_pattern": "mixed — secondary sometimes ACCEPT but overridden",
+  "adjudicator_pattern": "reject_wins_on_disagreement or assessor_agreement REJECT",
+  "hard_rule_influence": "none — failures are model/policy not hard-rule",
+  "recommended_repair": "structured service-intent evidence + commercial/scope-fit separation"
+}

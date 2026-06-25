@@ -1,0 +1,198 @@
+{
+  "suite": "wave41-quality-validation-v1",
+  "mode": "live",
+  "calibration_iteration": "0",
+  "holdout_only": true,
+  "provider": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "timestamp": "2026-06-23T15:30:48.952Z",
+  "case_count": 8,
+  "results_summary": [
+    {
+      "case_id": "EV-07",
+      "scenario": "recurring_support",
+      "verdict": "PASS",
+      "invariant_pass_rate": 1,
+      "critical_failures": [],
+      "stability": null,
+      "cost_usd": 0.0030076499999999997
+    },
+    {
+      "case_id": "EV-14",
+      "scenario": "t3_t4_expansion",
+      "verdict": "PASS",
+      "invariant_pass_rate": 1,
+      "critical_failures": [],
+      "stability": null,
+      "cost_usd": 0.0030453
+    },
+    {
+      "case_id": "EV-16",
+      "scenario": "unknown_budget",
+      "verdict": "PASS",
+      "invariant_pass_rate": 1,
+      "critical_failures": [],
+      "stability": null,
+      "cost_usd": 0.00292965
+    },
+    {
+      "case_id": "EV-19",
+      "scenario": "missing_landing",
+      "verdict": "REPAIR REQUIRED",
+      "invariant_pass_rate": 0.95,
+      "critical_failures": [
+        "output_reconciliation"
+      ],
+      "stability": null,
+      "cost_usd": 0.00275145
+    },
+    {
+      "case_id": "EV-21",
+      "scenario": "missing_paid_serp",
+      "verdict": "PASS",
+      "invariant_pass_rate": 1,
+      "critical_failures": [],
+      "stability": null,
+      "cost_usd": 0.00297915
+    },
+    {
+      "case_id": "EV-24",
+      "scenario": "conflicting_geography",
+      "verdict": "REPAIR REQUIRED",
+      "invariant_pass_rate": 0.95,
+      "critical_failures": [
+        "no_invented_conversion_history"
+      ],
+      "stability": null,
+      "cost_usd": 0.00256905
+    },
+    {
+      "case_id": "EV-28",
+      "scenario": "manual_bidding_constraint",
+      "verdict": "PASS",
+      "invariant_pass_rate": 1,
+      "critical_failures": [],
+      "stability": null,
+      "cost_usd": 0.00263805
+    },
+    {
+      "case_id": "EV-30",
+      "scenario": "provisional_only_evidence",
+      "verdict": "PASS",
+      "invariant_pass_rate": 1,
+      "critical_failures": [],
+      "stability": null,
+      "cost_usd": 0.00274875
+    }
+  ],
+  "stability_results": [],
+  "metrics": {
+    "case_count": 8,
+    "schema_valid_rate": 1,
+    "invariant_pass_rate": 0.75,
+    "evidence_link_rate": 1,
+    "fabricated_fact_rate": 0,
+    "missing_blocker_rate": 0,
+    "false_blocker_rate": 0,
+    "landing_alignment_pass_rate": 1,
+    "bidding_maturity_pass_rate": 1,
+    "budget_honesty_pass_rate": 1,
+    "tier_policy_pass_rate": 1,
+    "architecture_coherence_rate": 1,
+    "reviewer_verdicts": {
+      "PASS": 6,
+      "REPAIR REQUIRED": 2
+    },
+    "stability_contradiction_rate": 0,
+    "operator_decision_burden": 2.125,
+    "average_cost_usd": 0.00283363125,
+    "total_cost_usd": 0.02266905,
+    "critical_gates": {
+      "fabricated_production_facts": 0,
+      "invented_budget_authority": 0,
+      "hidden_critical_blockers": 0,
+      "rejected_demand_activation": 0,
+      "campaign_without_landing_or_blocker": 0,
+      "provisional_marked_production": 0
+    },
+    "target_gates": {
+      "schema_valid_rate": 1,
+      "evidence_link_validity": 1,
+      "critical_invariant_pass_rate": 0.75,
+      "material_stability_contradiction_rate": 0
+    },
+    "all_critical_gates_pass": true,
+    "maturity_verdict": "WAVE 4.1 — STRATEGIST QUALITY REPAIR REQUIRED"
+  },
+  "operator_review_package": {
+    "material_contradictions": [],
+    "repair_required": [
+      {
+        "case_id": "EV-19",
+        "scenario": "missing_landing",
+        "verdict": "REPAIR REQUIRED",
+        "issues": [],
+        "campaign_count": 1,
+        "operator_decisions": [
+          "tracking_setup",
+          "resolve_blockers"
+        ]
+      },
+      {
+        "case_id": "EV-24",
+        "scenario": "conflicting_geography",
+        "verdict": "REPAIR REQUIRED",
+        "issues": [],
+        "campaign_count": 1,
+        "operator_decisions": [
+          "tracking_setup",
+          "resolve_blockers"
+        ]
+      }
+    ],
+    "total_conflicts": 2,
+    "cases_requiring_operator_policy": []
+  },
+  "error_families": {
+    "fabricated_evidence": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "objective_mismatch": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "tier_mixing": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "landing_mismatch": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "bidding_overreach": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "budget_invention": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "blocker_omission": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    },
+    "evidence_citation_failure": {
+      "count": 0,
+      "severity": "none",
+      "examples": []
+    }
+  }
+}

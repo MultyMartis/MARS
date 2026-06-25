@@ -1,0 +1,930 @@
+{
+  "handoff_id": "corv-landing-handoff-v5",
+  "generated_at": "2026-06-21T23:19:33.958Z",
+  "unified_utm_campaign": "corvonero_1c_search_nsk",
+  "status": "NOT STARTED — AFTER OPERATOR V5 REVIEW",
+  "pages": [
+    {
+      "landing_id": "LP-01",
+      "url": "https://lk.corvonero.ru/uslugi-1c/",
+      "groups": [
+        "CORV-G01-01",
+        "CORV-G01-02",
+        "CORV-G01-08"
+      ],
+      "active_groups": [
+        "CORV-G01-02",
+        "CORV-G01-08",
+        "CORV-G01-01"
+      ],
+      "service_scope": [
+        "Программист 1С Новосибирск",
+        "Разовые работы 1С",
+        "Услуги программиста 1С"
+      ],
+      "keyword_intents": [
+        "local_1c_dev",
+        "one_off_1c",
+        "hire_outsource_1c_dev"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Программист 1С в Новосибирске",
+          "text": "Задачи по 1С для организаций. Договор, безнал. Оценка по запросу.",
+          "group_id": "CORV-G01-02"
+        },
+        {
+          "headline": "Разовые работы по 1С",
+          "text": "Точечные задачи программиста 1С. Минимальный заказ от 2 часов.",
+          "group_id": "CORV-G01-08"
+        },
+        {
+          "headline": "Программист 1С для бизнеса",
+          "text": "Доработки и поддержка 1С для юрлиц и ИП. От 6000 ₽. Оставьте заявку.",
+          "group_id": "CORV-G01-01"
+        },
+        {
+          "headline": "Программист 1С для бизнеса",
+          "text": "Разовые работы по 1С для юрлиц. Минимум 2 часа. Оставьте заявку.",
+          "group_id": "CORV-G01-01"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-02",
+      "url": "https://lk.corvonero.ru/nastroyka-1c/",
+      "groups": [
+        "CORV-G01-03"
+      ],
+      "active_groups": [
+        "CORV-G01-03"
+      ],
+      "service_scope": [
+        "Настройка 1С"
+      ],
+      "keyword_intents": [
+        "setup_1c"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Настройка 1С под вашу работу",
+          "text": "Настроим учёт и процессы в 1С. Работаем по договору с юрлицами.",
+          "group_id": "CORV-G01-03"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-03",
+      "url": "https://lk.corvonero.ru/vnedrenie-1c/",
+      "groups": [
+        "CORV-G01-04"
+      ],
+      "active_groups": [
+        "CORV-G01-04"
+      ],
+      "service_scope": [
+        "Внедрение 1С"
+      ],
+      "keyword_intents": [
+        "implementation_1c"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Внедрение 1С для организации",
+          "text": "Запуск и настройка 1С под задачи бизнеса. Оценка объёма по брифу.",
+          "group_id": "CORV-G01-04"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-04",
+      "url": "https://lk.corvonero.ru/soprovozhdenie-1c/",
+      "groups": [
+        "CORV-G01-05",
+        "CORV-G01-06",
+        "CORV-G01-07"
+      ],
+      "active_groups": [
+        "CORV-G01-07",
+        "CORV-G01-06",
+        "CORV-G01-05"
+      ],
+      "service_scope": [
+        "Абонентское сопровождение",
+        "Обслуживание 1С",
+        "Сопровождение 1С"
+      ],
+      "keyword_intents": [
+        "subscription_support",
+        "maintenance_1c",
+        "support_retainer"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Абонентское сопровождение 1С",
+          "text": "Регулярная поддержка базы 1С. Договор и безналичная оплата.",
+          "group_id": "CORV-G01-07"
+        },
+        {
+          "headline": "Обслуживание 1С для компании",
+          "text": "Техническая поддержка и задачи по 1С. Работаем с юрлицами и ИП.",
+          "group_id": "CORV-G01-06"
+        },
+        {
+          "headline": "Сопровождение 1С для бизнеса",
+          "text": "Поддержка и доработки базы 1С. Договор, безнал, удалённо и с выездом.",
+          "group_id": "CORV-G01-05"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-05",
+      "url": "https://lk.corvonero.ru/dorabotka-1c/",
+      "groups": [
+        "CORV-G02-01",
+        "CORV-G02-02",
+        "CORV-G02-03"
+      ],
+      "active_groups": [
+        "CORV-G02-02",
+        "CORV-G02-03",
+        "CORV-G02-01"
+      ],
+      "service_scope": [
+        "Доработка конфигурации 1С",
+        "Доработка базы 1С",
+        "Доработка 1С"
+      ],
+      "keyword_intents": [
+        "modification_config",
+        "modification_database",
+        "modification_general"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Доработка конфигурации 1С",
+          "text": "Модули, расширения и логика в 1С. Работаем по договору.",
+          "group_id": "CORV-G02-02"
+        },
+        {
+          "headline": "Доработка базы 1С",
+          "text": "Изменения в базе 1С с предварительной оценкой. Работа по договору.",
+          "group_id": "CORV-G02-03"
+        },
+        {
+          "headline": "Доработка 1С под вашу задачу",
+          "text": "Изменим конфигурацию и логику 1С. Оценка работ до старта.",
+          "group_id": "CORV-G02-01"
+        },
+        {
+          "headline": "Доработка 1С под вашу задачу",
+          "text": "Разовые работы по 1С для юрлиц. Минимум 2 часа. Оставьте заявку.",
+          "group_id": "CORV-G02-01"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-06",
+      "url": "https://lk.corvonero.ru/obnovlenie-dorabotok-1c/",
+      "groups": [
+        "CORV-G02-04",
+        "CORV-G02-05",
+        "CORV-G02-06"
+      ],
+      "active_groups": [
+        "CORV-G02-04",
+        "CORV-G02-05",
+        "CORV-G02-06"
+      ],
+      "service_scope": [
+        "Обновление доработанной 1С",
+        "Перенос и сохранение доработок",
+        "Исправление доработок после обновления"
+      ],
+      "keyword_intents": [
+        "update_custom_base",
+        "migration_customizations",
+        "fix_after_update"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Обновление доработанной 1С",
+          "text": "Обновление доработанной 1С с предварительной оценкой. Работа по договору.",
+          "group_id": "CORV-G02-04"
+        },
+        {
+          "headline": "Перенос доработок при обновлении",
+          "text": "Перенос и адаптация доработок при обновлении. Оценка по базе.",
+          "group_id": "CORV-G02-05"
+        },
+        {
+          "headline": "Исправление доработок после обновления",
+          "text": "Поможем восстановить работу доработок в 1С после релиза.",
+          "group_id": "CORV-G02-06"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-07",
+      "url": "https://lk.corvonero.ru/otchety-1c/",
+      "groups": [
+        "CORV-G03-01",
+        "CORV-G03-02",
+        "CORV-G03-05"
+      ],
+      "active_groups": [
+        "CORV-G03-05",
+        "CORV-G03-02",
+        "CORV-G03-01"
+      ],
+      "service_scope": [
+        "Внешние отчёты и обработки",
+        "Создание отчёта 1С",
+        "Доработка и настройка отчёта 1С"
+      ],
+      "keyword_intents": [
+        "external_reports",
+        "report_creation",
+        "report_customization"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Внешние отчёты и обработки 1С",
+          "text": "Разработка внешних отчётов и обработок. Договор и безнал.",
+          "group_id": "CORV-G03-05"
+        },
+        {
+          "headline": "Создание отчёта в 1С",
+          "text": "Разработаем новый отчёт в 1С. Работаем с юрлицами по договору.",
+          "group_id": "CORV-G03-02"
+        },
+        {
+          "headline": "Доработка отчёта в 1С",
+          "text": "Настроим или изменим отчёт под ваш учёт. Оценка до начала работ.",
+          "group_id": "CORV-G03-01"
+        },
+        {
+          "headline": "Доработка отчёта в 1С",
+          "text": "Разовые работы по 1С для юрлиц. Минимум 2 часа. Оставьте заявку.",
+          "group_id": "CORV-G03-01"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-08",
+      "url": "https://lk.corvonero.ru/pechatnye-formy-1c/",
+      "groups": [
+        "CORV-G03-03",
+        "CORV-G03-04"
+      ],
+      "active_groups": [
+        "CORV-G03-04",
+        "CORV-G03-03"
+      ],
+      "service_scope": [
+        "Доработка печатной формы",
+        "Печатные формы 1С"
+      ],
+      "keyword_intents": [
+        "print_form_modification",
+        "print_forms_general"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Доработка печатной формы 1С",
+          "text": "Изменим форму документа в 1С под ваши требования. Работа по договору.",
+          "group_id": "CORV-G03-04"
+        },
+        {
+          "headline": "Печатные формы в 1С",
+          "text": "Создадим или изменим печатные формы. Оценка по макету.",
+          "group_id": "CORV-G03-03"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-09",
+      "url": "https://lk.corvonero.ru/rmk-1c/",
+      "groups": [
+        "CORV-G03-06"
+      ],
+      "active_groups": [
+        "CORV-G03-06"
+      ],
+      "service_scope": [
+        "РМК и рабочее место кассира"
+      ],
+      "keyword_intents": [
+        "rmk_cashier"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Настройка РМК в 1С",
+          "text": "Доработаем рабочее место кассира в 1С. Оценка по конфигурации.",
+          "group_id": "CORV-G03-06"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-10",
+      "url": "https://lk.corvonero.ru/sebestoimost-1c/",
+      "groups": [
+        "CORV-G04-01"
+      ],
+      "active_groups": [
+        "CORV-G04-01"
+      ],
+      "service_scope": [
+        "Расчёт себестоимости в 1С"
+      ],
+      "keyword_intents": [
+        "cost_calculation"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Расчёт себестоимости в 1С",
+          "text": "Настроим расчёт себестоимости в 1С. Оценка по вашей базе.",
+          "group_id": "CORV-G04-01"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-11",
+      "url": "https://lk.corvonero.ru/plan-zakupok-1c/",
+      "groups": [
+        "CORV-G04-02"
+      ],
+      "active_groups": [
+        "CORV-G04-02"
+      ],
+      "service_scope": [
+        "Планирование закупок 1С"
+      ],
+      "keyword_intents": [
+        "procurement_planning"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Планирование закупок в 1С",
+          "text": "Настроим планирование закупок в 1С. Работа по договору.",
+          "group_id": "CORV-G04-02"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-12",
+      "url": "https://lk.corvonero.ru/platezhnyj-kalendar-1c/",
+      "groups": [
+        "CORV-G04-03"
+      ],
+      "active_groups": [
+        "CORV-G04-03"
+      ],
+      "service_scope": [
+        "Платёжный календарь 1С"
+      ],
+      "keyword_intents": [
+        "payment_calendar"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Платёжный календарь в 1С",
+          "text": "Настроим календарь платежей в 1С. Оценка по задаче.",
+          "group_id": "CORV-G04-03"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-13",
+      "url": "https://lk.corvonero.ru/integraciya-1c-s-sajtom/",
+      "groups": [
+        "CORV-G05-01"
+      ],
+      "active_groups": [
+        "CORV-G05-01"
+      ],
+      "service_scope": [
+        "Интеграция 1С с сайтом"
+      ],
+      "keyword_intents": [
+        "website_integration"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Интеграция 1С с сайтом",
+          "text": "Свяжем 1С с сайтом: каталог, заказы, остатки. Оценка интеграции.",
+          "group_id": "CORV-G05-01"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-14",
+      "url": "https://lk.corvonero.ru/integraciya-1c-bitrix/",
+      "groups": [
+        "CORV-G05-02"
+      ],
+      "active_groups": [
+        "CORV-G05-02"
+      ],
+      "service_scope": [
+        "Интеграция 1С Битрикс"
+      ],
+      "keyword_intents": [
+        "bitrix_integration"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Интеграция 1С и Битрикс",
+          "text": "Настроим обмен 1С с Битрикс24. Работаем по договору.",
+          "group_id": "CORV-G05-02"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-15",
+      "url": "https://lk.corvonero.ru/integraciya-1c-kassa/",
+      "groups": [
+        "CORV-G05-03"
+      ],
+      "active_groups": [
+        "CORV-G05-03"
+      ],
+      "service_scope": [
+        "Интеграция 1С с кассой"
+      ],
+      "keyword_intents": [
+        "cash_register_integration"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Интеграция 1С с кассой",
+          "text": "Подключим кассу и фискализацию к 1С. Оценка по оборудованию.",
+          "group_id": "CORV-G05-03"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-16",
+      "url": "https://lk.corvonero.ru/sinhronizaciya-1c/",
+      "groups": [
+        "CORV-G05-04",
+        "CORV-G05-05"
+      ],
+      "active_groups": [
+        "CORV-G05-04",
+        "CORV-G05-05"
+      ],
+      "service_scope": [
+        "Синхронизация и обмен 1С",
+        "Настройка обмена 1С"
+      ],
+      "keyword_intents": [
+        "sync_exchange",
+        "exchange_setup"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Синхронизация и обмен 1С",
+          "text": "Настроим обмен и синхронизацию данных в 1С.",
+          "group_id": "CORV-G05-04"
+        },
+        {
+          "headline": "Настройка обмена в 1С",
+          "text": "Настроим правила обмена между базами 1С. Договор, безнал.",
+          "group_id": "CORV-G05-05"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-17",
+      "url": "https://lk.corvonero.ru/perenos-dannyh-1c/",
+      "groups": [
+        "CORV-G05-06"
+      ],
+      "active_groups": [
+        "CORV-G05-06"
+      ],
+      "service_scope": [
+        "Перенос данных в 1С"
+      ],
+      "keyword_intents": [
+        "data_migration"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Перенос данных в 1С",
+          "text": "Перенесём справочники и документы в 1С. Оценка объёма заранее.",
+          "group_id": "CORV-G05-06"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-18",
+      "url": "https://lk.corvonero.ru/markirovka-1c/",
+      "groups": [
+        "CORV-G06-01",
+        "CORV-G06-02",
+        "CORV-G06-04"
+      ],
+      "active_groups": [
+        "CORV-G06-04",
+        "CORV-G06-01",
+        "CORV-G06-02"
+      ],
+      "service_scope": [
+        "Устранение ошибок маркировки",
+        "Подключение маркировки в 1С",
+        "Настройка маркировки 1С"
+      ],
+      "keyword_intents": [
+        "marking_troubleshooting",
+        "marking_setup",
+        "marking_configuration"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Ошибки маркировки в 1С",
+          "text": "Поможем устранить ошибки маркировки и обмена в 1С. Оценка по симптомам.",
+          "group_id": "CORV-G06-04"
+        },
+        {
+          "headline": "Подключение маркировки в 1С",
+          "text": "Настроим маркировку товаров в 1С. Работаем с юрлицами.",
+          "group_id": "CORV-G06-01"
+        },
+        {
+          "headline": "Настройка маркировки в 1С",
+          "text": "Подключим маркировку и обмен с ГИС МТ. Оценка по номенклатуре.",
+          "group_id": "CORV-G06-02"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-19",
+      "url": "https://lk.corvonero.ru/chestnyj-znak-1c/",
+      "groups": [
+        "CORV-G06-03"
+      ],
+      "active_groups": [
+        "CORV-G06-03"
+      ],
+      "service_scope": [
+        "Честный знак и 1С"
+      ],
+      "keyword_intents": [
+        "honest_sign"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Честный знак и 1С",
+          "text": "Настроим работу с Честным знаком в 1С. Договор и безнал.",
+          "group_id": "CORV-G06-03"
+        },
+        {
+          "headline": "Честный знак и 1С",
+          "text": "Разовые работы по 1С для юрлиц. Минимум 2 часа. Оставьте заявку.",
+          "group_id": "CORV-G06-03"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-20",
+      "url": "https://lk.corvonero.ru/markirovka-napitkov-1c/",
+      "groups": [
+        "CORV-G06-05"
+      ],
+      "active_groups": [
+        "CORV-G06-05"
+      ],
+      "service_scope": [
+        "Маркировка напитков и алкоголя"
+      ],
+      "keyword_intents": [
+        "marking_beverages"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка напитков в 1С",
+          "text": "Настроим маркировку напитков в 1С. Работа по договору.",
+          "group_id": "CORV-G06-05"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-21",
+      "url": "https://lk.corvonero.ru/markirovka-vody-1c/",
+      "groups": [
+        "CORV-G06-06"
+      ],
+      "active_groups": [
+        "CORV-G06-06"
+      ],
+      "service_scope": [
+        "Маркировка воды"
+      ],
+      "keyword_intents": [
+        "marking_water"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка воды в 1С",
+          "text": "Подключим маркировку воды в 1С. Оценка по базе.",
+          "group_id": "CORV-G06-06"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-22",
+      "url": "https://lk.corvonero.ru/markirovka-kosmetiki-1c/",
+      "groups": [
+        "CORV-G06-07"
+      ],
+      "active_groups": [
+        "CORV-G06-07"
+      ],
+      "service_scope": [
+        "Маркировка косметики"
+      ],
+      "keyword_intents": [
+        "marking_cosmetics"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка косметики в 1С",
+          "text": "Настроим маркировку косметики в 1С для юрлиц. Работа по договору.",
+          "group_id": "CORV-G06-07"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-23",
+      "url": "https://lk.corvonero.ru/markirovka-lekarstv-1c/",
+      "groups": [
+        "CORV-G06-08"
+      ],
+      "active_groups": [
+        "CORV-G06-08"
+      ],
+      "service_scope": [
+        "Маркировка лекарств"
+      ],
+      "keyword_intents": [
+        "marking_medicines"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка лекарств в 1С",
+          "text": "Настроим маркировку лекарств в 1С. Договор и безнал.",
+          "group_id": "CORV-G06-08"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-24",
+      "url": "https://lk.corvonero.ru/markirovka-byt-himii-1c/",
+      "groups": [
+        "CORV-G06-09"
+      ],
+      "active_groups": [
+        "CORV-G06-09"
+      ],
+      "service_scope": [
+        "Маркировка бытовой химии"
+      ],
+      "keyword_intents": [
+        "marking_household_chem"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка бытовой химии в 1С",
+          "text": "Подключим маркировку бытовой химии в 1С.",
+          "group_id": "CORV-G06-09"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-25",
+      "url": "https://lk.corvonero.ru/markirovka-avtozapchastej-1c/",
+      "groups": [
+        "CORV-G06-10"
+      ],
+      "active_groups": [
+        "CORV-G06-10"
+      ],
+      "service_scope": [
+        "Маркировка автозапчастей"
+      ],
+      "keyword_intents": [
+        "marking_auto_parts"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка автозапчастей в 1С",
+          "text": "Настроим маркировку автозапчастей в 1С. Оценка по номенклатуре.",
+          "group_id": "CORV-G06-10"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-26",
+      "url": "https://lk.corvonero.ru/markirovka-masel-1c/",
+      "groups": [
+        "CORV-G06-11"
+      ],
+      "active_groups": [
+        "CORV-G06-11"
+      ],
+      "service_scope": [
+        "Маркировка масел"
+      ],
+      "keyword_intents": [
+        "marking_oils"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка масел в 1С",
+          "text": "Подключим маркировку масел в 1С. Работаем с юрлицами.",
+          "group_id": "CORV-G06-11"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-27",
+      "url": "https://lk.corvonero.ru/markirovka-tehniki-1c/",
+      "groups": [
+        "CORV-G06-12"
+      ],
+      "active_groups": [
+        "CORV-G06-12"
+      ],
+      "service_scope": [
+        "Маркировка техники"
+      ],
+      "keyword_intents": [
+        "marking_equipment"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка техники в 1С",
+          "text": "Настроим маркировку техники в 1С. Оценка по задаче. Договор, безнал.",
+          "group_id": "CORV-G06-12"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-28",
+      "url": "https://lk.corvonero.ru/markirovka-stroymaterialov-1c/",
+      "groups": [
+        "CORV-G06-13"
+      ],
+      "active_groups": [
+        "CORV-G06-13"
+      ],
+      "service_scope": [
+        "Маркировка строительных материалов"
+      ],
+      "keyword_intents": [
+        "marking_building_materials"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Маркировка стройматериалов в 1С",
+          "text": "Подключим маркировку стройматериалов в 1С.",
+          "group_id": "CORV-G06-13"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-29",
+      "url": "https://lk.corvonero.ru/1c-ne-rabotaet/",
+      "groups": [
+        "CORV-G07-01",
+        "CORV-G07-02",
+        "CORV-G07-04"
+      ],
+      "active_groups": [
+        "CORV-G07-02",
+        "CORV-G07-04",
+        "CORV-G07-01"
+      ],
+      "service_scope": [
+        "Ошибка 1С / после обновления",
+        "Восстановление работы 1С",
+        "Программа 1С не работает"
+      ],
+      "keyword_intents": [
+        "error_after_update",
+        "recovery",
+        "urgent_not_working"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Ошибка 1С после обновления",
+          "text": "Поможем устранить ошибки 1С после релиза. Оценка по симптомам.",
+          "group_id": "CORV-G07-02"
+        },
+        {
+          "headline": "Восстановление работы 1С",
+          "text": "Поможем вернуть 1С в рабочее состояние. Удалённо и с выездом.",
+          "group_id": "CORV-G07-04"
+        },
+        {
+          "headline": "1С не работает — поможем",
+          "text": "Поможем восстановить работу 1С. От 6000 ₽. Оставьте заявку.",
+          "group_id": "CORV-G07-01"
+        },
+        {
+          "headline": "Программа 1С не запускается",
+          "text": "Проверим причину сбоя и предложим решение. Договор, безнал.",
+          "group_id": "CORV-G07-01"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-30",
+      "url": "https://lk.corvonero.ru/obmen-1c-ne-rabotaet/",
+      "groups": [
+        "CORV-G07-03"
+      ],
+      "active_groups": [
+        "CORV-G07-03"
+      ],
+      "service_scope": [
+        "Не работает обмен / синхронизация"
+      ],
+      "keyword_intents": [
+        "sync_failure"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Не работает обмен в 1С",
+          "text": "Поможем восстановить обмен и синхронизацию между базами 1С.",
+          "group_id": "CORV-G07-03"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    },
+    {
+      "landing_id": "LP-31",
+      "url": "https://lk.corvonero.ru/ts-piot-1c/",
+      "groups": [
+        "CORV-G08-01",
+        "CORV-G08-02"
+      ],
+      "active_groups": [
+        "CORV-G08-01",
+        "CORV-G08-02"
+      ],
+      "service_scope": [
+        "ТС ПИОТ настройка",
+        "ТС ПИОТ интеграция с 1С"
+      ],
+      "keyword_intents": [
+        "ts_piot_setup",
+        "ts_piot_integration"
+      ],
+      "ad_promises": [
+        {
+          "headline": "Настройка ТС ПИОТ в 1С",
+          "text": "Подключим и настроим ТС ПИОТ в 1С. Оценка по задаче.",
+          "group_id": "CORV-G08-01"
+        },
+        {
+          "headline": "Интеграция ТС ПИОТ с 1С",
+          "text": "Свяжем ТС ПИОТ с учётом в 1С. Договор и безнал.",
+          "group_id": "CORV-G08-02"
+        }
+      ],
+      "status": "READY FOR LANDING COPY — AFTER OPERATOR V5 REVIEW"
+    }
+  ]
+}

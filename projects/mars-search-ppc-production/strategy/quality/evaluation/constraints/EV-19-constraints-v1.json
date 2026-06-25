@@ -1,0 +1,27 @@
+{
+  "constraint_id": "EV-19-constraints-v1",
+  "case_id": "EV-19",
+  "scenario": "missing_landing",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "has_campaigns": true,
+    "evidence_linked": true
+  },
+  "acceptable_strategy_families": [
+    "landing_gap_blocked"
+  ],
+  "invalid_strategy_families": [
+    "active_without_landing"
+  ],
+  "mandatory_blockers": [
+    "LANDING GAP"
+  ],
+  "prohibited_recommendations": [
+    "invented_landing_url"
+  ]
+}

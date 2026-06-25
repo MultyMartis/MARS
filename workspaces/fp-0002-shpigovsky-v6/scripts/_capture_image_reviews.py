@@ -43,9 +43,11 @@ def main() -> int:
         ]:
             page.set_viewport_size({"width": width, "height": 900})
             page.goto(DIST_HTML.as_uri(), wait_until="networkidle")
+            page.locator(".home-staff-photo").scroll_into_view_if_needed()
             page.locator(".home-staff-photo").screenshot(
                 path=str(IMAGE_OUT / f"FP-0002-V6-STAFF-IMAGE-FIX-{staff_suffix}.png")
             )
+            page.locator(".home-clinic-landscape").scroll_into_view_if_needed()
             page.locator(".home-clinic-landscape").screenshot(
                 path=str(IMAGE_OUT / f"FP-0002-V6-CLINIC-LANDSCAPE-FIX-{land_suffix}.png")
             )

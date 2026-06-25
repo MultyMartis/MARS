@@ -1,0 +1,37 @@
+{
+  "validated_at": "2026-06-21T23:09:55.022Z",
+  "file": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v4.xlsx",
+  "dataset": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\production\\direct-commander-production-dataset-v4.json",
+  "status": "STRUCTURALLY_VALIDATED",
+  "version": "v4",
+  "export_model": "UNIFIED_SINGLE_CAMPAIGN",
+  "errors": [],
+  "warnings": [],
+  "checks_performed": [
+    "workbook_opens: pass",
+    "semantic_review: pass",
+    "review_workbook_evidence: pass"
+  ],
+  "counts": {
+    "data_rows": 394,
+    "active_groups_in_sheet": 48,
+    "held_groups": 0,
+    "ad_rows": 53,
+    "keyword_rows": 341,
+    "excluded_keywords_v2": 0,
+    "global_negatives": 52,
+    "direction_negative_tokens": 78,
+    "group_cross_negatives": 229,
+    "collision_errors": 0,
+    "keyword_bands": {
+      "1": 11,
+      "2": 11,
+      "3-4": 7,
+      "5-9": 8,
+      "10+": 11
+    }
+  },
+  "manual_import_check_required": true,
+  "v3_status": "SUPERSEDED",
+  "v4_status": "GENERATED_AND_EVIDENCE_QA_VALIDATED"
+}

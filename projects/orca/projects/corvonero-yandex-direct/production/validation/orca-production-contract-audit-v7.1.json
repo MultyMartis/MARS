@@ -1,0 +1,521 @@
+{
+  "validator_id": "validate-campaign-production-contract-v1",
+  "validated_at": "2026-06-22T08:13:16.877Z",
+  "contract_id": "ORCA-CAMPAIGN-PRODUCTION-CONTRACT-v1",
+  "project_id": "corvonero-yandex-direct",
+  "dataset_id": "corv-direct-commander-production-dataset-v7.1",
+  "candidate_status": "v7.1 REGRESSION REPAIR — OPERATOR XLSX REVIEW REQUIRED",
+  "summary": {
+    "groups": 48,
+    "active_keywords": 277,
+    "ads": 48,
+    "protected_seeds_checked": 35,
+    "operator_services_checked": 31,
+    "controlled_tests": 27,
+    "critical_violations": 0,
+    "high_violations": 0,
+    "authority_drift_violations": 0,
+    "authority_production_mismatches": 0,
+    "warnings": 0
+  },
+  "gate_decision": "PASS — V7.1 REGRESSION REPAIR; OPERATOR ACTUAL XLSX REVIEW AND COMMANDER DRY-RUN AUTHORIZED",
+  "authority_drift_blocked": false,
+  "critical_violations": [],
+  "high_violations": [],
+  "authority_drift_violations": [],
+  "warnings": [],
+  "group_audit": [
+    {
+      "group_id": "CORV-G08-01",
+      "direction": "[C08]",
+      "keyword_count": 18,
+      "controlled_test_count": 8,
+      "ad_id": "ad-CORV-G08-01-a1",
+      "landing": "https://lk.corvonero.ru/ts-piot-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G08-02",
+      "direction": "[C08]",
+      "keyword_count": 10,
+      "controlled_test_count": 1,
+      "ad_id": "ad-CORV-G08-02-a1",
+      "landing": "https://lk.corvonero.ru/ts-piot-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-05",
+      "direction": "[C06]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-05-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-napitkov-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-06",
+      "direction": "[C06]",
+      "keyword_count": 3,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-06-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-vody-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-07",
+      "direction": "[C06]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-07-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-kosmetiki-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-08",
+      "direction": "[C06]",
+      "keyword_count": 7,
+      "controlled_test_count": 1,
+      "ad_id": "ad-CORV-G06-08-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-lekarstv-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-09",
+      "direction": "[C06]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-09-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-byt-himii-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-10",
+      "direction": "[C06]",
+      "keyword_count": 8,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-10-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-avtozapchastej-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-11",
+      "direction": "[C06]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-11-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-masel-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-12",
+      "direction": "[C06]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-12-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-tehniki-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-13",
+      "direction": "[C06]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-13-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-stroymaterialov-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-03",
+      "direction": "[C06]",
+      "keyword_count": 25,
+      "controlled_test_count": 1,
+      "ad_id": "ad-CORV-G06-03-a2",
+      "landing": "https://lk.corvonero.ru/chestnyj-znak-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-04",
+      "direction": "[C06]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-04-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-01",
+      "direction": "[C06]",
+      "keyword_count": 18,
+      "controlled_test_count": 1,
+      "ad_id": "ad-CORV-G06-01-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G06-02",
+      "direction": "[C06]",
+      "keyword_count": 3,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G06-02-a1",
+      "landing": "https://lk.corvonero.ru/markirovka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G07-03",
+      "direction": "[C07]",
+      "keyword_count": 4,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G07-03-a1",
+      "landing": "https://lk.corvonero.ru/obmen-1c-ne-rabotaet/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G07-02",
+      "direction": "[C07]",
+      "keyword_count": 4,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G07-02-a1",
+      "landing": "https://lk.corvonero.ru/1c-ne-rabotaet/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G07-04",
+      "direction": "[C07]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G07-04-a1",
+      "landing": "https://lk.corvonero.ru/1c-ne-rabotaet/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G07-01",
+      "direction": "[C07]",
+      "keyword_count": 4,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G07-01-a2",
+      "landing": "https://lk.corvonero.ru/1c-ne-rabotaet/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G05-02",
+      "direction": "[C05]",
+      "keyword_count": 20,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G05-02-a1",
+      "landing": "https://lk.corvonero.ru/integraciya-1c-bitrix/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G05-01",
+      "direction": "[C05]",
+      "keyword_count": 9,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G05-01-a1",
+      "landing": "https://lk.corvonero.ru/integraciya-1c-s-sajtom/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G05-03",
+      "direction": "[C05]",
+      "keyword_count": 9,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G05-03-a1",
+      "landing": "https://lk.corvonero.ru/integraciya-1c-kassa/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G05-06",
+      "direction": "[C05]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G05-06-a1",
+      "landing": "https://lk.corvonero.ru/perenos-dannyh-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G05-04",
+      "direction": "[C05]",
+      "keyword_count": 20,
+      "controlled_test_count": 4,
+      "ad_id": "ad-CORV-G05-04-a1",
+      "landing": "https://lk.corvonero.ru/sinhronizaciya-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G05-05",
+      "direction": "[C05]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G05-05-a1",
+      "landing": "https://lk.corvonero.ru/sinhronizaciya-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G04-01",
+      "direction": "[C04]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G04-01-a1",
+      "landing": "https://lk.corvonero.ru/sebestoimost-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G04-02",
+      "direction": "[C04]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G04-02-a1",
+      "landing": "https://lk.corvonero.ru/plan-zakupok-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G04-03",
+      "direction": "[C04]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G04-03-a1",
+      "landing": "https://lk.corvonero.ru/platezhnyj-kalendar-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G03-04",
+      "direction": "[C03]",
+      "keyword_count": 4,
+      "controlled_test_count": 3,
+      "ad_id": "ad-CORV-G03-04-a1",
+      "landing": "https://lk.corvonero.ru/pechatnye-formy-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G03-06",
+      "direction": "[C03]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G03-06-a1",
+      "landing": "https://lk.corvonero.ru/rmk-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G03-05",
+      "direction": "[C03]",
+      "keyword_count": 6,
+      "controlled_test_count": 5,
+      "ad_id": "ad-CORV-G03-05-a1",
+      "landing": "https://lk.corvonero.ru/otchety-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G03-02",
+      "direction": "[C03]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G03-02-a1",
+      "landing": "https://lk.corvonero.ru/otchety-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G03-01",
+      "direction": "[C03]",
+      "keyword_count": 4,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G03-01-a2",
+      "landing": "https://lk.corvonero.ru/otchety-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G03-03",
+      "direction": "[C03]",
+      "keyword_count": 4,
+      "controlled_test_count": 2,
+      "ad_id": "ad-CORV-G03-03-a1",
+      "landing": "https://lk.corvonero.ru/pechatnye-formy-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G02-04",
+      "direction": "[C02]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G02-04-a1",
+      "landing": "https://lk.corvonero.ru/obnovlenie-dorabotok-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G02-05",
+      "direction": "[C02]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G02-05-a1",
+      "landing": "https://lk.corvonero.ru/obnovlenie-dorabotok-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G02-06",
+      "direction": "[C02]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G02-06-a1",
+      "landing": "https://lk.corvonero.ru/obnovlenie-dorabotok-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G02-02",
+      "direction": "[C02]",
+      "keyword_count": 7,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G02-02-a1",
+      "landing": "https://lk.corvonero.ru/dorabotka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G02-03",
+      "direction": "[C02]",
+      "keyword_count": 1,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G02-03-a1",
+      "landing": "https://lk.corvonero.ru/dorabotka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G02-01",
+      "direction": "[C02]",
+      "keyword_count": 25,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G02-01-a2",
+      "landing": "https://lk.corvonero.ru/dorabotka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-02",
+      "direction": "[C01]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-02-a1",
+      "landing": "https://lk.corvonero.ru/uslugi-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-07",
+      "direction": "[C01]",
+      "keyword_count": 3,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-07-a1",
+      "landing": "https://lk.corvonero.ru/soprovozhdenie-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-06",
+      "direction": "[C01]",
+      "keyword_count": 3,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-06-a1",
+      "landing": "https://lk.corvonero.ru/soprovozhdenie-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-05",
+      "direction": "[C01]",
+      "keyword_count": 4,
+      "controlled_test_count": 1,
+      "ad_id": "ad-CORV-G01-05-a1",
+      "landing": "https://lk.corvonero.ru/soprovozhdenie-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-04",
+      "direction": "[C01]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-04-a1",
+      "landing": "https://lk.corvonero.ru/vnedrenie-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-03",
+      "direction": "[C01]",
+      "keyword_count": 2,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-03-a1",
+      "landing": "https://lk.corvonero.ru/nastroyka-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-08",
+      "direction": "[C01]",
+      "keyword_count": 3,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-08-a1",
+      "landing": "https://lk.corvonero.ru/uslugi-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    },
+    {
+      "group_id": "CORV-G01-01",
+      "direction": "[C01]",
+      "keyword_count": 19,
+      "controlled_test_count": 0,
+      "ad_id": "ad-CORV-G01-01-a2",
+      "landing": "https://lk.corvonero.ru/uslugi-1c/",
+      "contract_result": "PASS",
+      "required_action": "None"
+    }
+  ],
+  "laws_evaluated": [
+    "ORCA-LAW-01",
+    "ORCA-LAW-02",
+    "ORCA-LAW-04",
+    "ORCA-LAW-06",
+    "ORCA-LAW-07",
+    "ORCA-LAW-08",
+    "ORCA-LAW-09",
+    "ORCA-LAW-10",
+    "ORCA-LAW-11",
+    "ORCA-LAW-12"
+  ]
+}

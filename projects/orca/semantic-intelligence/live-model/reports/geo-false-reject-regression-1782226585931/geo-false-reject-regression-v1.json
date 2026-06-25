@@ -1,0 +1,168 @@
+{
+  "total": 16,
+  "fixed_count": 16,
+  "remaining_false_reject": 0,
+  "results": [
+    {
+      "record_id": "CFM-GEO-PRV-06",
+      "phrase": "программист bitrix москва",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-PRV-08",
+      "phrase": "программист bitrix новосибирск",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-PRV-09",
+      "phrase": "программист bitrix казань",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-PRV-13",
+      "phrase": "программист bitrix новосибирск",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-01",
+      "phrase": "цена настройки sap москва",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-02",
+      "phrase": "цена настройки sap санкт-петербург",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-03",
+      "phrase": "цена настройки sap нижний новгород",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-04",
+      "phrase": "цена настройки sap москва",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-05",
+      "phrase": "цена настройки sap санкт-петербург",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-06",
+      "phrase": "цена настройки sap нижний новгород",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-07",
+      "phrase": "цена настройки sap москва",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-08",
+      "phrase": "цена настройки sap санкт-петербург",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-09",
+      "phrase": "цена настройки sap нижний новгород",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-10",
+      "phrase": "цена настройки sap москва",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-11",
+      "phrase": "цена настройки sap санкт-петербург",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    },
+    {
+      "record_id": "CFM-GEO-ORD-12",
+      "phrase": "цена настройки sap нижний новгород",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "scope_fit": "OUT_OF_SCOPE",
+      "ownership": "SERVICE_GAP",
+      "strong_commercial_geo": true,
+      "fixed": true
+    }
+  ],
+  "analysis_source": "C:\\AI MARS\\projects\\orca\\semantic-intelligence\\live-model\\supplementary\\regression\\geo-commercial-error-analysis-v1.json"
+}

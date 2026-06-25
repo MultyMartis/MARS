@@ -1,6 +1,13 @@
 /**
  * Model-aware semantic adjudicator — receives assessments only after both complete.
+ * Wave 3.1F: commercial intent vs scope-fit separation; service-intent evidence layer.
  */
+import {
+  extractServiceIntentEvidence,
+  resolveScopeFit,
+} from '../evidence/service-intent-evidence.mjs';
+
+export const ADJUDICATOR_VERSION = 'v1.3';
 export const ADJUDICATION_OUTCOMES = [
   'FINAL ACCEPT', 'FINAL REJECT', 'FINAL ABSTAIN',
   'POLICY CONFLICT', 'DOMAIN CONFLICT', 'INVALID EVIDENCE',
@@ -15,7 +22,13 @@ export function adjudicateSemanticIntent(params) {
     businessScope,
     serviceRegistry,
     protectedIntentPolicy = {},
+    phrase,
+    structuredEvidence: structuredEvidenceIn,
   } = params;
+
+  const structuredEvidence = structuredEvidenceIn
+    || (phrase ? extractServiceIntentEvidence(phrase) : null);
+  const scopeFitResult = phrase ? resolveScopeFit(phrase, serviceRegistry) : null;
 
   const findings = [];
   let outcome = 'FINAL ABSTAIN';
@@ -68,25 +81,52 @@ export function adjudicateSemanticIntent(params) {
     outcome = `FINAL ${decisionA}`;
     confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0);
     decisiveEvidence.push('assessor_agreement');
+    if (decisionA === 'REJECT' && structuredEvidence?.strong_commercial_geo) {
+      outcome = 'FINAL ACCEPT';
+      confidence = Math.max(0.75, confidence);
+      decisiveEvidence.push('structured_strong_commercial_geo_override');
+      findings.push('scope_fit_separated_from_commercial_reject');
+    }
+    if (decisionA === 'REJECT' && structuredEvidence?.strong_commercial && !structuredEvidence?.strong_commercial_geo) {
+      outcome = 'FINAL ACCEPT';
+      confidence = Math.max(0.75, confidence);
+      decisiveEvidence.push('structured_strong_commercial_override');
+      findings.push('paid_problem_or_service_accept');
+    }
   } else if (agreementState === 'DISAGREE') {
     findings.push('assessor_disagreement');
-    const geoCommercialAccept = resolveGeoCommercialDisagreement(assessmentA, assessmentB);
-    if (geoCommercialAccept) {
-      outcome = 'FINAL ACCEPT';
-      confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0.5);
-      decisiveEvidence.push('geo_service_commercial_evidence');
-      findings.push('geo_commercial_disagreement_resolved');
-    } else if (decisionA === 'REJECT' || decisionB === 'REJECT') {
+    const productReject = resolveProductServiceDisagreement(assessmentA, assessmentB);
+    if (productReject) {
       outcome = 'FINAL REJECT';
-      confidence = 0.65;
-      decisiveEvidence.push('reject_wins_on_disagreement');
-    } else if (decisionA === 'ABSTAIN' || decisionB === 'ABSTAIN') {
-      outcome = 'FINAL ABSTAIN';
-      confidence = 0.5;
+      confidence = 0.75;
+      decisiveEvidence.push('product_acquisition_not_service');
+      findings.push('product_service_disagreement_resolved');
     } else {
-      outcome = 'POLICY CONFLICT';
-      humanRequired = true;
-      conflictingEvidence.push('accept_abstain_split');
+      const geoCommercialAccept = resolveGeoCommercialDisagreement(
+        assessmentA, assessmentB, structuredEvidence,
+      );
+      if (geoCommercialAccept) {
+        outcome = 'FINAL ACCEPT';
+        confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0.5, 0.75);
+        decisiveEvidence.push('geo_service_commercial_evidence');
+        findings.push('geo_commercial_disagreement_resolved');
+      } else if (structuredEvidence?.strong_commercial_geo) {
+        outcome = 'FINAL ACCEPT';
+        confidence = 0.78;
+        decisiveEvidence.push('structured_strong_commercial_geo');
+        findings.push('structured_geo_commercial_disagreement_resolved');
+      } else if (decisionA === 'REJECT' || decisionB === 'REJECT') {
+        outcome = 'FINAL REJECT';
+        confidence = 0.65;
+        decisiveEvidence.push('reject_wins_on_disagreement');
+      } else if (decisionA === 'ABSTAIN' || decisionB === 'ABSTAIN') {
+        outcome = 'FINAL ABSTAIN';
+        confidence = 0.5;
+      } else {
+        outcome = 'POLICY CONFLICT';
+        humanRequired = true;
+        conflictingEvidence.push('accept_abstain_split');
+      }
     }
   } else if (agreementState === 'SINGLE_ASSESSOR') {
     outcome = `FINAL ${decisionA}`;
@@ -95,34 +135,69 @@ export function adjudicateSemanticIntent(params) {
       outcome = 'FINAL ABSTAIN';
       findings.push('single_assessor_low_confidence');
     }
+    if (decisionA === 'REJECT' && (structuredEvidence?.strong_commercial_geo || structuredEvidence?.strong_commercial)) {
+      outcome = 'FINAL ACCEPT';
+      confidence = 0.76;
+      decisiveEvidence.push('structured_strong_commercial_geo_single');
+      findings.push('scope_fit_separated_from_commercial_reject');
+    }
+    if (decisionA === 'ABSTAIN' && structuredEvidence?.strong_commercial_problem) {
+      outcome = 'FINAL ACCEPT';
+      confidence = 0.77;
+      decisiveEvidence.push('structured_paid_problem_resolution');
+      findings.push('explicit_paid_problem_accept');
+    }
+  }
+
+  if (structuredEvidence?.bare_error_insufficient_context && outcome === 'FINAL REJECT') {
+    outcome = 'FINAL ABSTAIN';
+    confidence = 0.45;
+    findings.push('bare_error_downgraded_to_abstain');
+    decisiveEvidence.push('insufficient_context_error_code');
   }
 
   if (outcome === 'FINAL ACCEPT') {
     const hasCommercialEvidence = (assessmentA.commercial_evidence || []).length > 0
-      || (assessmentB?.commercial_evidence || []).length > 0;
-    if (!hasCommercialEvidence && !decisiveEvidence.includes('assessor_agreement')) {
+      || (assessmentB?.commercial_evidence || []).length > 0
+      || structuredEvidence?.strong_commercial_geo
+      || structuredEvidence?.strong_commercial
+      || structuredEvidence?.supporting_commercial_geo;
+    if (!hasCommercialEvidence && !decisiveEvidence.some((d) => d.includes('structured'))) {
       outcome = 'FINAL ABSTAIN';
       findings.push('accept_without_evidence_blocked');
     }
-    if (confidence < 0.7) {
+    if (confidence < 0.7 && !structuredEvidence?.strong_commercial_geo) {
       outcome = 'FINAL ABSTAIN';
       findings.push('low_confidence_accept_downgraded');
     }
   }
 
   if (serviceScopeHallucination(assessmentA, serviceRegistry) || serviceScopeHallucination(assessmentB, serviceRegistry)) {
-    outcome = 'DOMAIN CONFLICT';
+    findings.push('scope_fit_out_of_registry');
     humanRequired = true;
     conflictingEvidence.push('service_outside_scope');
+    if (outcome === 'FINAL ACCEPT' || outcome !== 'FINAL REJECT') {
+      outcome = 'DOMAIN CONFLICT';
+    }
   }
 
   confidence = Math.max(0, Math.min(1, confidence));
   if (['POLICY CONFLICT', 'DOMAIN CONFLICT', 'INVALID EVIDENCE'].includes(outcome)) humanRequired = true;
   if (outcome === 'FINAL ABSTAIN' && confidence < 0.4) humanRequired = true;
 
+  const finalDecision = outcome.replace('FINAL ', '').replace('POLICY CONFLICT', 'ABSTAIN').replace('DOMAIN CONFLICT', 'ABSTAIN').replace('INVALID EVIDENCE', 'ABSTAIN');
+
   return {
     outcome,
-    final_decision: outcome.replace('FINAL ', '').replace('POLICY CONFLICT', 'ABSTAIN').replace('DOMAIN CONFLICT', 'ABSTAIN').replace('INVALID EVIDENCE', 'ABSTAIN'),
+    final_decision: finalDecision,
+    commercial_eligibility: {
+      decision: finalDecision,
+      confidence,
+    },
+    scope_fit: scopeFitResult?.scope_fit || 'UNKNOWN',
+    ownership: scopeFitResult?.ownership || null,
+    service_gap: scopeFitResult?.service_gap || false,
+    structured_evidence: structuredEvidence,
     agreement_state: agreementState,
     decisive_evidence: decisiveEvidence,
     conflicting_evidence: conflictingEvidence,
@@ -134,24 +209,64 @@ export function adjudicateSemanticIntent(params) {
 }
 
 const CAREER_MARKERS = /(ваканси|резюме|зарплат|устроиться|трудоустройств|ищу работу|работа программист)/i;
+const SERVICE_SCOPE_MARKERS = /(внедрен|настрой|интеграц|под ключ|специалист|обслуживан|сопровожден|доработ|миграц|администрир|программист|разработчик|мастер|юрист|бухгалтер)/i;
+const PRODUCT_ACQUISITION_MARKERS = /(купить|скачать|лицензи|коробочн|дистрибутив|стоимость программ|цена программ|официальн.*сайт|верси.*проф|обновлен.*верси)/i;
+const SUPPLY_WITHOUT_SERVICE = /(?:заказать\s+)?поставк(?:а|у|и)\s+(?!.*(?:внедрен|настрой|интеграц|специалист|под ключ))/i;
 
-function resolveGeoCommercialDisagreement(assessmentA, assessmentB) {
+function resolveProductServiceDisagreement(assessmentA, assessmentB) {
+  const acceptSide = [assessmentA, assessmentB].find((a) => a?.decision === 'ACCEPT');
+  if (!acceptSide) return false;
+  const other = assessmentA === acceptSide ? assessmentB : assessmentA;
+  const text = `${acceptSide.rationale || ''} ${other?.rationale || ''}`.toLowerCase();
+  const productOnly = Math.max(
+    acceptSide.product_only_likelihood ?? 0,
+    other?.product_only_likelihood ?? 0,
+  );
+  const providerHire = acceptSide.provider_hire_likelihood ?? 0;
+  const protectedProduct = /product_only|product-only|software purchase|license purchase/i.test(
+    `${acceptSide.protected_intent_class || ''} ${other?.protected_intent_class || ''}`,
+  );
+  const hasServiceScope = SERVICE_SCOPE_MARKERS.test(text)
+    || (acceptSide.commercial_evidence || []).some((e) => SERVICE_SCOPE_MARKERS.test(String(e)));
+  const productAcquisitionSignal = PRODUCT_ACQUISITION_MARKERS.test(text)
+    || SUPPLY_WITHOUT_SERVICE.test(text)
+    || protectedProduct;
+  if (productAcquisitionSignal && !hasServiceScope && (productOnly >= 0.55 || providerHire < 0.5)) {
+    return true;
+  }
+  if (other?.decision === 'REJECT' && productOnly >= 0.65 && providerHire < 0.45 && !hasServiceScope) {
+    return true;
+  }
+  return false;
+}
+
+function resolveGeoCommercialDisagreement(assessmentA, assessmentB, structuredEvidence) {
   const candidates = [assessmentA, assessmentB].filter((a) => a?.decision === 'ACCEPT');
   if (candidates.length !== 1) return false;
   const accept = candidates[0];
   const rejectSide = [assessmentA, assessmentB].find((a) => a?.decision === 'REJECT');
   if (!rejectSide) return false;
-  const hire = accept.provider_hire_likelihood ?? 0;
+  const hire = Math.max(
+    accept.provider_hire_likelihood ?? 0,
+    structuredEvidence?.strong_commercial_geo ? 0.7 : 0,
+  );
   const career = Math.max(accept.career_likelihood ?? 0, rejectSide.career_likelihood ?? 0);
-  const hasCommercialEvidence = (accept.commercial_evidence || []).length > 0;
-  const careerRationale = CAREER_MARKERS.test(`${rejectSide.rationale || ''} ${accept.rationale || ''}`);
-  return hasCommercialEvidence && hire >= career && hire >= 0.55 && !careerRationale;
+  const hasCommercialEvidence = (accept.commercial_evidence || []).length > 0
+    || structuredEvidence?.strong_commercial_geo
+    || structuredEvidence?.supporting_commercial_geo;
+  const careerRationale = CAREER_MARKERS.test(`${rejectSide.rationale || ''} ${accept.rationale || ''}`)
+    || structuredEvidence?.career;
+  if (structuredEvidence?.strong_commercial_geo && !careerRationale) return true;
+  return hasCommercialEvidence && hire >= career && hire >= 0.5 && !careerRationale;
 }
 
 function invalidEvidenceResult(reason) {
   return {
     outcome: 'INVALID EVIDENCE',
     final_decision: 'ABSTAIN',
+    commercial_eligibility: { decision: 'ABSTAIN', confidence: 0 },
+    scope_fit: 'UNKNOWN',
+    ownership: null,
     agreement_state: 'INVALID',
     decisive_evidence: [],
     conflicting_evidence: [reason],
@@ -164,8 +279,6 @@ function invalidEvidenceResult(reason) {
 
 function serviceScopeHallucination(assessment, registry) {
   if (!assessment?.rationale) return false;
-  const services = (registry?.services || []).map((s) => s.name.toLowerCase());
-  const hireSignals = ['hire', 'найм', 'специалист'];
   const mentionsUnknownService = /service_id:\s*(\w+)/i.test(assessment.rationale);
   if (mentionsUnknownService) {
     const match = assessment.rationale.match(/service_id:\s*(\w+)/i);

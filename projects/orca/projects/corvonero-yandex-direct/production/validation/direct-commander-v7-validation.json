@@ -1,0 +1,16 @@
+{
+  "validated_at": "2026-06-22T06:10:44.350Z",
+  "version": "v7",
+  "status": "PASS",
+  "gates": {
+    "semantic": true,
+    "group": true,
+    "operator_scope": true,
+    "status_reason": true,
+    "controlled_tests": true,
+    "negative": true,
+    "collision": true,
+    "ad_evidence": true,
+    "consistency": true
+  }
+}

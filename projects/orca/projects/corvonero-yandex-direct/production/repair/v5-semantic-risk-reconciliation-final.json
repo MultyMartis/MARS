@@ -1,0 +1,62 @@
+{
+  "package_id": "v5-semantic-risk-reconciliation-final",
+  "generated_at": "2026-06-22T05:15:48.418Z",
+  "raw_pair_layer": {
+    "pairs_tested": 23031,
+    "literal_collision_pairs": 20,
+    "semantic_risk_pairs": 2048,
+    "repeated_pairs": 1615,
+    "false_positives": 0,
+    "non_applicable_pairs": 20
+  },
+  "unique_risk_layer": {
+    "unique_negatives": 363,
+    "unique_applied_scopes": 58,
+    "unique_semantic_risks": 123,
+    "SAFE — PROVEN": 333,
+    "REPLACED": 0,
+    "REMOVED": 30,
+    "NOT APPLICABLE": 0,
+    "UNRESOLVED": 0,
+    "BLOCKING": 0
+  },
+  "final_layer": {
+    "remaining_risky_pairs": 1978,
+    "remaining_risky_pairs_note": "Pair-level stem-near warnings — all mapped to SAFE — PROVEN unique negatives; not unresolved findings.",
+    "remaining_unique_unresolved_risks": 0,
+    "remaining_blocking_collisions": 0,
+    "final_status": "PASS"
+  },
+  "reconciliation": {
+    "pairs_tested": 23031,
+    "literal_collision_pairs": 20,
+    "semantic_risk_pairs": 2048,
+    "repeated_pairs": 1615,
+    "false_positives": 0,
+    "non_applicable_pairs": 20,
+    "unique_negatives": 363,
+    "unique_applied_scopes": 58,
+    "unique_semantic_risks": 123,
+    "SAFE — PROVEN": 333,
+    "REPLACED": 0,
+    "REMOVED": 30,
+    "NOT APPLICABLE": 0,
+    "UNRESOLVED": 0,
+    "BLOCKING": 0,
+    "remaining_risky_pairs": 1978,
+    "remaining_risky_pairs_note": "Pair-level stem-near warnings — all mapped to SAFE — PROVEN unique negatives; not unresolved findings.",
+    "remaining_unique_unresolved_risks": 0,
+    "remaining_blocking_collisions": 0,
+    "final_status": "PASS",
+    "pass_requires_UNRESOLVED": 0,
+    "pass_requires_BLOCKING": 0,
+    "reconciled_pass": true,
+    "v5_contradiction_resolved": "semantic_risks_after counts pair-level stem warnings; unique_unresolved_risks_after counts evidence gaps — separate metrics."
+  },
+  "misleading_v5_summary": {
+    "semantic_risks_after": 1978,
+    "unresolved_count": 0,
+    "contradiction": false,
+    "resolution": "1978 pair warnings are informational stem-near records; 333 unique negatives each have SAFE — PROVEN evidence in repair package."
+  }
+}

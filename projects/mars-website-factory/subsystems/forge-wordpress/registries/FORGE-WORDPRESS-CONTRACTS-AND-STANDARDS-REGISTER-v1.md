@@ -85,6 +85,22 @@
 | ID | Document | Type | Status |
 |----|----------|------|--------|
 | FW-R-02 | [FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) | Registry | BASELINE v1 |
+| FW-R-03 | [FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) | Registry | BASELINE v1 (FW-07A) |
+
+---
+
+## FW-07A AG-WP-001 agent contracts
+
+| ID | Document | Type | Status |
+|----|----------|------|--------|
+| FW-A-01 | [agents/README.md](../agents/README.md) | Index | BASELINE v1 |
+| FW-A-02 | [agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-AGENT-CARD-v1.md](../agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-AGENT-CARD-v1.md) | Agent card | BASELINE v1 |
+| FW-A-03 | [agents/AG-WP-001-APPROVED-FRONTEND-INPUT-CONTRACT-v1.md](../agents/AG-WP-001-APPROVED-FRONTEND-INPUT-CONTRACT-v1.md) | Contract | BASELINE v1 |
+| FW-A-04 | [agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-OUTPUT-CONTRACT-v1.md](../agents/AG-WP-001-WORDPRESS-IMPLEMENTATION-OUTPUT-CONTRACT-v1.md) | Contract | BASELINE v1 |
+| FW-A-05 | [agents/AG-WP-001-EXECUTION-WORKFLOW-v1.md](../agents/AG-WP-001-EXECUTION-WORKFLOW-v1.md) | Workflow | BASELINE v1 |
+| FW-A-06 | [agents/AG-WP-001-FP-0002-PILOT-READINESS-MAP-v1.md](../agents/AG-WP-001-FP-0002-PILOT-READINESS-MAP-v1.md) | Map | BASELINE v1 |
+
+*Full pack: [agents/README.md](../agents/README.md)*
 
 ---
 
@@ -100,4 +116,19 @@
 
 ---
 
-*Register v1 — subsystem local; updated FW-03 complete.*
+## FW-07B AG-WP-001 typed operation contracts
+
+| ID | Document | Type | Status |
+|----|----------|------|--------|
+| FW-B-01 | [schemas/AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json](../schemas/AG-WP-001-OPERATION-CONTRACT-SCHEMA-v1.json) | Schema | BASELINE v1 |
+| FW-B-02 | [operations/ag-wp-001/operations-v1.json](../operations/ag-wp-001/operations-v1.json) | Registry | BASELINE v1 |
+| FW-B-03 | [bindings/ag-wp-001/bindings-v1.json](../bindings/ag-wp-001/bindings-v1.json) | Bindings | BASELINE v1 |
+| FW-B-04 | [schemas/AG-WP-001-FAILURE-CODE-REGISTRY-v1.json](../schemas/AG-WP-001-FAILURE-CODE-REGISTRY-v1.json) | Registry | BASELINE v1 |
+| FW-B-05 | [agents/AG-WP-001-TOOL-BINDING-CONTRACT-v1.md](../agents/AG-WP-001-TOOL-BINDING-CONTRACT-v1.md) | Contract | BASELINE v1 |
+| FW-B-06 | [tools/validate-ag-wp-001-operation-contracts.mjs](../tools/validate-ag-wp-001-operation-contracts.mjs) | Validator | AVAILABLE |
+
+*Full FW-07B pack: [agents/README.md](../agents/README.md) § FW-07B*
+
+---
+
+*Register v1 — subsystem local; updated FW-07B AG-WP-001 typed operations.*

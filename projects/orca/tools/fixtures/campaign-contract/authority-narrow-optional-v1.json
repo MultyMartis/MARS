@@ -1,0 +1,44 @@
+{
+  "fixture_id": "authority-narrow-optional-v1",
+  "description": "MAY BE NARROW service represented correctly in narrow group",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-D01",
+        "service_name": "программист 1С",
+        "current_group": "grp-d01",
+        "current_group_status": "ACTIVE NARROW",
+        "advertising_status": "MAY BE NARROW",
+        "absence_from_production_permitted": false,
+        "recovery_required": false,
+        "narrow_groups_allowed": true
+      }
+    ]
+  },
+  "protected_seed_registry": [],
+  "production_dataset": {
+    "groups": [
+      {
+        "group_id": "grp-d01",
+        "viability_status": "ACTIVE NARROW",
+        "export_to_xlsx": true,
+        "planned_url": "https://example.test/1c"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword_id": "kw-d01",
+        "phrase": "программист 1с",
+        "group_id": "grp-d01",
+        "final_status": "ACTIVE NARROW"
+      }
+    ],
+    "held_groups": []
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": {
+    "ads": [{ "ad_id": "ad-d01", "group_id": "grp-d01", "landing_url": "https://example.test/1c" }]
+  },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

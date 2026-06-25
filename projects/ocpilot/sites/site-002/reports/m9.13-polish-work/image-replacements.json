@@ -1,0 +1,51 @@
+{
+  "pass": "m9.13-about-polish-v1",
+  "date": "2026-06-23",
+  "replacements": [
+    {
+      "remote": "assets/img/about-page-img.jpg",
+      "action": "replace",
+      "reason": "Previous hero was sterile 3D kitchen render; replaced with photorealistic stainless steel factory production scene",
+      "work_copy": "reports/m9.13-polish-work/assets/img/about-page-img.jpg",
+      "backup": "backups/about-page-img.jpg.pre-m9.13-about-polish-v1.bak",
+      "sections": ["§01 Hero"]
+    },
+    {
+      "remote": "assets/img/about-logistics.jpg",
+      "action": "new",
+      "reason": "§05 reused generic 3D transport illustration (adv-trans-company.png); dedicated photorealistic loading-dock photo",
+      "work_copy": "reports/m9.13-polish-work/assets/img/about-logistics.jpg",
+      "sections": ["§05 Geography & logistics"]
+    }
+  ],
+  "kept_unchanged": [
+    {
+      "remote": "assets/img/advant/adv-instock.png",
+      "reason": "Site-wide advantage illustration; consistent with catalog UX"
+    },
+    {
+      "remote": "assets/img/advant/adv-quality-prod.png",
+      "reason": "Site-wide advantage illustration; consistent with catalog UX"
+    },
+    {
+      "remote": "assets/img/advant/adv-in-order.png",
+      "reason": "Site-wide advantage illustration; consistent with catalog UX"
+    },
+    {
+      "remote": "assets/img/advant/adv-trans-company.png",
+      "reason": "Still used in §03 advantages grid; only removed from §05"
+    },
+    {
+      "remote": "assets/img/certificates/thumb_00.png",
+      "reason": "Real certificate asset; quality acceptable"
+    },
+    {
+      "remote": "assets/img/certificates/certificat_00.jpg",
+      "reason": "Real certificate full-size; Fancybox target unchanged"
+    },
+    {
+      "remote": "assets/img/sert-base.jpg",
+      "reason": "Podium asset shared with Commercial Trust pattern"
+    }
+  ]
+}

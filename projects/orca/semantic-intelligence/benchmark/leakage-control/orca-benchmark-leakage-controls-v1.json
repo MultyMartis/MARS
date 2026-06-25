@@ -1,0 +1,49 @@
+{
+  "controls_id": "orca-benchmark-leakage-controls",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "controls": [
+    {
+      "id": "LC-01",
+      "control": "blind_split_sealed_before_model_access",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "LC-02",
+      "control": "no_blind_phrases_in_p0_c_examples",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "LC-03",
+      "control": "no_corvonero_v1_labels_in_training",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "LC-04",
+      "control": "embedding_index_excludes_blind",
+      "severity": "HIGH"
+    },
+    {
+      "id": "LC-05",
+      "control": "prompt_and_fewshot_audit_against_blind",
+      "severity": "HIGH"
+    },
+    {
+      "id": "LC-06",
+      "control": "annotator_blind_to_peer_labels_during_pass",
+      "severity": "HIGH"
+    },
+    {
+      "id": "LC-07",
+      "control": "versioned_hash_on_frozen_packs",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "LC-08",
+      "control": "contamination_triggers_WITHDRAWN_or_CONTAMINATED",
+      "severity": "CRITICAL"
+    }
+  ],
+  "contamination_response": "Mark pack CONTAMINATED; operator review; new version if needed"
+}

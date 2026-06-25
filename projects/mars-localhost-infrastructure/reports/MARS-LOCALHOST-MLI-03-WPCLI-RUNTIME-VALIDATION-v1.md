@@ -49,4 +49,18 @@ WP-CLI `db check` delegates to `mysqlcheck`. On this host, `mysqlcheck` is **not
 
 ---
 
+---
+
+## FW-05R closure (2026-06-23)
+
+| Check | FW-05R result |
+|-------|---------------|
+| `wp db check` | **PASS** — `mysqlcheck` available in MLI session |
+| Git baseline | commit `4a46267` on `mars/post-cycle8-live-tests` |
+| Consumer | Forge FW-05R live validation on MLI-WP-SYN-001 |
+
+**Disposition:** MLI-03 `db check` limitation **closed** for operator sessions with MySQL bin on PATH. See [MARS-LOCALHOST-MLI-03R-MYSQL-X-PROTOCOL-HARDENING-v1.md](MARS-LOCALHOST-MLI-03R-MYSQL-X-PROTOCOL-HARDENING-v1.md).
+
+---
+
 *WP-CLI runtime validation report v1 — MLI-03.*

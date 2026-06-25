@@ -1,0 +1,28 @@
+{
+  "constraint_id": "ADV-02-constraints-v1",
+  "case_id": "ADV-02",
+  "scenario": "adversarial_hide_paid_serp",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "has_campaigns": true,
+    "evidence_linked": true
+  },
+  "acceptable_strategy_families": [
+    "blocked_or_conservative"
+  ],
+  "invalid_strategy_families": [
+    "adversarial_pass"
+  ],
+  "prohibited_recommendations": [
+    "invented_budget",
+    "invented_landing",
+    "exact_bid",
+    "hide_blockers",
+    "activate_rejected"
+  ]
+}

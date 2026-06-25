@@ -1,0 +1,53 @@
+{
+  "pass": "m9.13-about-polish-v1",
+  "timestamp": "2026-06-22T20:44:47.031935+00:00",
+  "files": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "pre_sha256": "3d6ca15ea89e460950c4c1ee01a849ec534607a9b3baf08d6ef2a4c5210a9fc8",
+      "pre_bytes": 18532,
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.twig.pre-m9.13-about-polish-v1.bak",
+      "post_sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+      "post_bytes": 19585
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "8a051a5b130e2f87f5b839f052140ee48da78c4f1cbe2471071ac685b285a9a5",
+      "pre_bytes": 305315,
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.13-about-polish-v1.bak",
+      "post_sha256": "fbf5aaadf69b20c8d8d2bba91770158d0a8588a077f512dc61f6cc73d8a7e251",
+      "post_bytes": 306728
+    }
+  },
+  "images": {
+    "assets/img/about-page-img.jpg": {
+      "action": "replace",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-polish-work\\assets\\img\\about-page-img.jpg",
+      "post_sha256": "9732ce40aed0ba90d3cba7872b8bde0dba00d651ab4dd4050614e4ed158ddfe6",
+      "post_bytes": 2585275,
+      "pre_sha256": "138d682e4e3b0acc214c9ac24d31fe1c5110653809da9f6c35028966293230e3",
+      "pre_bytes": 276765,
+      "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about-page-img.jpg.pre-m9.13-about-polish-v1.bak"
+    },
+    "assets/img/about-logistics.jpg": {
+      "action": "new",
+      "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-polish-work\\assets\\img\\about-logistics.jpg",
+      "post_sha256": "b97dcfaa20f61a8bc583efcc558d8bf74003bd216bb90be0121cb800e728bfc6",
+      "post_bytes": 2301124
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_ok": true,
+    "has_trust_row": true,
+    "trust_production": true,
+    "trust_certified": true,
+    "trust_custom": true,
+    "has_fad_icons": true,
+    "logistics_photo": true,
+    "hero_photo": true,
+    "has_fancybox_cert": true,
+    "has_cta": true,
+    "form_dialog_7": true,
+    "no_adv_trans_geo": true,
+    "all_pass": true
+  }
+}

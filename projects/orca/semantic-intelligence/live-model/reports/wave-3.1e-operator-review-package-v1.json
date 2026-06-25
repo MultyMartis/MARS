@@ -1,0 +1,27 @@
+{
+  "package_id": "wave-3.1e-operator-review-v1",
+  "generated_at": "2026-06-23T06:30:00.000Z",
+  "combined_verdict": "WAVE 3.1 — QUALITY REPAIR REQUIRED",
+  "remaining_product_false_accepts": [],
+  "remaining_geo_commercial_false_rejects": [
+    { "record_id": "CFM-GEO-PRV-06", "query": "программист bitrix москва", "pattern": "provider_noun_geo" },
+    { "record_id": "CFM-GEO-ORD-01", "query": "цена настройки sap москва", "pattern": "price_order_geo" }
+  ],
+  "geo_false_reject_sample_count": 16,
+  "geo_driven_false_accepts": [],
+  "unresolved_product_service_ambiguity": [
+    { "record_id": "PSR-AMB-01", "query": "купить 1с с настройкой", "expected": "ABSTAIN", "got": "ACCEPT", "source": "closed_regression" }
+  ],
+  "unresolved_problem_queries": [
+    { "record_id": "PQR-ABSTAIN-02", "query": "ошибка 0x80004005 1с", "expected": "ABSTAIN", "got": "REJECT" }
+  ],
+  "bounded_random_audit": [
+    { "record_id": "CFM-PROD-BOX-03", "query": "коробочная поставка megaplan crm", "expected": "REJECT", "final": "REJECT" },
+    { "record_id": "CFM-GEO-CAR-01", "query": "вакансия программист 1с москва", "expected": "REJECT", "final": "REJECT" },
+    { "record_id": "CFM-GEO-SVC-01", "query": "заказать внедрение crm москва", "expected": "ACCEPT", "final": "ACCEPT" },
+    { "record_id": "SUP-PROD-BOX-02", "query": "1с бухгалтерия коробочная поставка", "expected": "REJECT", "final": "REJECT", "note": "closed_regression_fixed" }
+  ],
+  "product_confirmation_gate": "PASS",
+  "geo_confirmation_gate": "FAIL",
+  "next_gate": "OPERATOR REVIEW OF WAVE 3.1E FINAL D3 QUALITY RESULTS"
+}

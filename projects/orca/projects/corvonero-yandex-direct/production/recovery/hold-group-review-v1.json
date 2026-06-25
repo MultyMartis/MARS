@@ -1,0 +1,225 @@
+{
+  "generated_at": "2026-06-22T05:54:01.277Z",
+  "groups": [
+    {
+      "group_id": "CORV-G07-04",
+      "service_family": "Восстановление работы 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "восстановление работы 1с"
+      ],
+      "v5_phrase_count": 1,
+      "v6_exclusions": [
+        {
+          "phrase": "восстановление работы 1с",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "восстановление работы 1с"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G07-04-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/1c-ne-rabotaet/",
+      "negative_logic_impact": "Standard group isolation",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G05-06",
+      "service_family": "Перенос данных в 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "миграция данных 1с",
+        "перенос данных в 1с"
+      ],
+      "v5_phrase_count": 2,
+      "v6_exclusions": [
+        {
+          "phrase": "миграция данных 1с",
+          "to": "EXCLUDE"
+        },
+        {
+          "phrase": "перенос данных в 1с",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "миграция данных 1с",
+        "перенос данных в 1с"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G05-06-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/perenos-dannyh-1c/",
+      "negative_logic_impact": "Review cross-negative «перенос данных» on CORV-G05-01/04 — must not block own group",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G04-01",
+      "service_family": "Расчёт себестоимости в 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "расчет себестоимости 1с",
+        "себестоимость в 1с"
+      ],
+      "v5_phrase_count": 2,
+      "v6_exclusions": [
+        {
+          "phrase": "расчет себестоимости 1с",
+          "to": "EXCLUDE"
+        },
+        {
+          "phrase": "себестоимость в 1с",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "расчет себестоимости 1с",
+        "себестоимость в 1с"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G04-01-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/sebestoimost-1c/",
+      "negative_logic_impact": "Standard group isolation",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G04-02",
+      "service_family": "Планирование закупок 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "планирование закупок 1с"
+      ],
+      "v5_phrase_count": 1,
+      "v6_exclusions": [
+        {
+          "phrase": "планирование закупок 1с",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "планирование закупок 1с"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G04-02-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/plan-zakupok-1c/",
+      "negative_logic_impact": "Standard group isolation",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G04-03",
+      "service_family": "Платёжный календарь 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "платежный календарь 1с"
+      ],
+      "v5_phrase_count": 1,
+      "v6_exclusions": [
+        {
+          "phrase": "платежный календарь 1с",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "платежный календарь 1с"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G04-03-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/platezhnyj-kalendar-1c/",
+      "negative_logic_impact": "Standard group isolation",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G01-02",
+      "service_family": "Программист 1С Новосибирск",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "программист 1с новосибирск",
+        "программисты 1с новосибирск"
+      ],
+      "v5_phrase_count": 2,
+      "v6_exclusions": [
+        {
+          "phrase": "программист 1с новосибирск",
+          "to": "EXCLUDE"
+        },
+        {
+          "phrase": "программисты 1с новосибирск",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "программист 1с новосибирск",
+        "программисты 1с новосибирск"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G01-02-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/uslugi-1c/",
+      "negative_logic_impact": "Global/direction «новосибирск» negative removed in v6 repair — retain removal",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G01-06",
+      "service_family": "Обслуживание 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "обслуживание 1с для организации",
+        "обслуживание и сопровождение 1с",
+        "сопровождение и обслуживание 1с предприятие"
+      ],
+      "v5_phrase_count": 3,
+      "v6_exclusions": [
+        {
+          "phrase": "обслуживание 1с для организации",
+          "to": "EXCLUDE"
+        },
+        {
+          "phrase": "обслуживание и сопровождение 1с",
+          "to": "EXCLUDE"
+        },
+        {
+          "phrase": "сопровождение и обслуживание 1с предприятие",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "обслуживание 1с для организации",
+        "обслуживание и сопровождение 1с",
+        "сопровождение и обслуживание 1с предприятие"
+      ],
+      "final_group_status": "ACTIVE",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G01-06-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/soprovozhdenie-1c/",
+      "negative_logic_impact": "Standard group isolation",
+      "hold_proof_required": false
+    },
+    {
+      "group_id": "CORV-G01-04",
+      "service_family": "Внедрение 1С",
+      "operator_requirement": "MUST REPRESENT IN CAMPAIGN — operator-scope-correction-v1.md",
+      "original_phrases": [
+        "внедрение 1с",
+        "внедренцы и программисты 1с"
+      ],
+      "v5_phrase_count": 2,
+      "v6_exclusions": [
+        {
+          "phrase": "внедрение 1с",
+          "to": "EXCLUDE"
+        },
+        {
+          "phrase": "внедренцы и программисты 1с",
+          "to": "EXCLUDE"
+        }
+      ],
+      "commercially_valid_phrases_recovered": [
+        "внедрение 1с",
+        "внедренцы и программисты 1с"
+      ],
+      "final_group_status": "ACTIVE NARROW",
+      "ad_requirement": "Reuse v5 ad ad-CORV-G01-04-a1",
+      "landing_mapping": "https://https://lk.corvonero.ru/vnedrenie-1c/",
+      "negative_logic_impact": "Standard group isolation",
+      "hold_proof_required": false
+    }
+  ]
+}

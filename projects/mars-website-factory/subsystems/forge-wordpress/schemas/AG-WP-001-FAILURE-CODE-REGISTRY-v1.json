@@ -1,0 +1,347 @@
+{
+  "registry_id": "AG-WP-001-FAILURE-CODE-REGISTRY-v1",
+  "version": "1.0.0",
+  "stage": "FW-07B",
+  "families": [
+    "WP_INPUT",
+    "WP_SOURCE",
+    "WP_RUNTIME",
+    "WP_DATABASE",
+    "WP_PLUGIN",
+    "WP_THEME",
+    "WP_CONTENT_MODEL",
+    "WP_VALIDATION",
+    "WP_SECURITY",
+    "WP_APPROVAL",
+    "WP_ROLLBACK",
+    "WP_ENVIRONMENT",
+    "WP_TOOL",
+    "WP_SAFE_UNKNOWN"
+  ],
+  "codes": [
+    {
+      "code": "WP_INPUT_FRONTEND_NOT_APPROVED",
+      "family": "WP_INPUT",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Obtain frontend production pass and FW-06B intake",
+      "expected_evidence": "gate_a_report"
+    },
+    {
+      "code": "WP_INPUT_COMMIT_MISSING",
+      "family": "WP_INPUT",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Record source_commit in handoff manifest",
+      "expected_evidence": "handoff_manifest"
+    },
+    {
+      "code": "WP_INPUT_HANDOFF_INCOMPLETE",
+      "family": "WP_INPUT",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Complete approved frontend input contract fields",
+      "expected_evidence": "gate_a_report"
+    },
+    {
+      "code": "WP_SOURCE_AUTHORITY_AMBIGUOUS",
+      "family": "WP_SOURCE",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Resolve single source-of-truth path",
+      "expected_evidence": "filesystem_scope_audit"
+    },
+    {
+      "code": "WP_SOURCE_OUT_OF_SCOPE",
+      "family": "WP_SOURCE",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Restrict writes to approved allowlist",
+      "expected_evidence": "changed_files_log"
+    },
+    {
+      "code": "WP_RUNTIME_NOT_LOCAL",
+      "family": "WP_RUNTIME",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Use MLI local runtime profile only",
+      "expected_evidence": "runtime_validation_report"
+    },
+    {
+      "code": "WP_RUNTIME_PRODUCTION_DETECTED",
+      "family": "WP_RUNTIME",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Abort — production mutation prohibited",
+      "expected_evidence": "environment_probe"
+    },
+    {
+      "code": "WP_RUNTIME_MANIFEST_MISMATCH",
+      "family": "WP_RUNTIME",
+      "severity": "ERROR",
+      "retryable": true,
+      "stop_rule": "STOP",
+      "operator_action": "Reconcile runtime_id with MLI manifest",
+      "expected_evidence": "manifest_hash"
+    },
+    {
+      "code": "WP_DATABASE_CONNECTION_FAILED",
+      "family": "WP_DATABASE",
+      "severity": "ERROR",
+      "retryable": true,
+      "stop_rule": "STOP",
+      "operator_action": "Verify MLI MySQL and wp-config indirect access",
+      "expected_evidence": "db_check_report"
+    },
+    {
+      "code": "WP_DATABASE_INTEGRITY_UNCERTAIN",
+      "family": "WP_DATABASE",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Run wp db check; escalate if uncertain",
+      "expected_evidence": "db_check_report"
+    },
+    {
+      "code": "WP_PLUGIN_UNAPPROVED",
+      "family": "WP_PLUGIN",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Add plugin to approved register or remove",
+      "expected_evidence": "plugin_state_report"
+    },
+    {
+      "code": "WP_PLUGIN_NOT_INSTALLED",
+      "family": "WP_PLUGIN",
+      "severity": "ERROR",
+      "retryable": true,
+      "stop_rule": "REPORT",
+      "operator_action": "Install per approved plan with operator approval",
+      "expected_evidence": "plugin_state_report"
+    },
+    {
+      "code": "WP_THEME_MODE_NOT_APPROVED",
+      "family": "WP_THEME",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Obtain architecture approval for implementation mode",
+      "expected_evidence": "mode_decision_doc"
+    },
+    {
+      "code": "WP_THEME_STRUCTURE_INVALID",
+      "family": "WP_THEME",
+      "severity": "ERROR",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Fix theme hierarchy per FW-S-03",
+      "expected_evidence": "theme_inspection_report"
+    },
+    {
+      "code": "WP_CONTENT_MODEL_MISMATCH",
+      "family": "WP_CONTENT_MODEL",
+      "severity": "ERROR",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Reconcile model doc with runtime fields",
+      "expected_evidence": "content_model_diff"
+    },
+    {
+      "code": "WP_CONTENT_MODEL_NOT_APPROVED",
+      "family": "WP_CONTENT_MODEL",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Obtain content model approval before apply",
+      "expected_evidence": "content_model_doc"
+    },
+    {
+      "code": "WP_VALIDATION_PHP_SYNTAX_FAIL",
+      "family": "WP_VALIDATION",
+      "severity": "ERROR",
+      "retryable": true,
+      "stop_rule": "STOP",
+      "operator_action": "Fix PHP syntax errors",
+      "expected_evidence": "php_syntax_report"
+    },
+    {
+      "code": "WP_VALIDATION_WPCS_FAIL",
+      "family": "WP_VALIDATION",
+      "severity": "WARNING",
+      "retryable": true,
+      "stop_rule": "REPORT",
+      "operator_action": "Fix or document waiver per FW-S-07",
+      "expected_evidence": "wpcs_report"
+    },
+    {
+      "code": "WP_VALIDATION_ROUTE_FAIL",
+      "family": "WP_VALIDATION",
+      "severity": "ERROR",
+      "retryable": true,
+      "stop_rule": "REPORT",
+      "operator_action": "Fix routing or permalink config",
+      "expected_evidence": "route_test_report"
+    },
+    {
+      "code": "WP_VALIDATION_RENDER_FATAL",
+      "family": "WP_VALIDATION",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Fix fatal render error",
+      "expected_evidence": "render_report"
+    },
+    {
+      "code": "WP_VALIDATION_VISUAL_REGRESSION",
+      "family": "WP_VALIDATION",
+      "severity": "WARNING",
+      "retryable": true,
+      "stop_rule": "REPORT",
+      "operator_action": "Review visual diff; re-baseline if approved",
+      "expected_evidence": "visual_diff_report"
+    },
+    {
+      "code": "WP_VALIDATION_SECURITY_FINDING",
+      "family": "WP_SECURITY",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Remediate security finding before continue",
+      "expected_evidence": "security_report"
+    },
+    {
+      "code": "WP_SECURITY_SECRET_DETECTED",
+      "family": "WP_SECURITY",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Remove secret from source; rotate if exposed",
+      "expected_evidence": "secret_scan_report"
+    },
+    {
+      "code": "WP_APPROVAL_REQUIRED",
+      "family": "WP_APPROVAL",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Issue approval token per risk class",
+      "expected_evidence": "approval_reference"
+    },
+    {
+      "code": "WP_APPROVAL_EXPIRED",
+      "family": "WP_APPROVAL",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Re-issue approval token with current scope",
+      "expected_evidence": "approval_reference"
+    },
+    {
+      "code": "WP_APPROVAL_SCOPE_MISMATCH",
+      "family": "WP_APPROVAL",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Match operation to approved_scope",
+      "expected_evidence": "approval_reference"
+    },
+    {
+      "code": "WP_ROLLBACK_UNAVAILABLE",
+      "family": "WP_ROLLBACK",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Create checkpoint or backup before mutation",
+      "expected_evidence": "rollback_reference"
+    },
+    {
+      "code": "WP_ROLLBACK_PARTIAL",
+      "family": "WP_ROLLBACK",
+      "severity": "ERROR",
+      "retryable": false,
+      "stop_rule": "ESCALATE",
+      "operator_action": "Manual operator recovery required",
+      "expected_evidence": "rollback_package"
+    },
+    {
+      "code": "WP_ENVIRONMENT_SCOPE_VIOLATION",
+      "family": "WP_ENVIRONMENT",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Restrict to operation environment_scope",
+      "expected_evidence": "environment_probe"
+    },
+    {
+      "code": "WP_ENVIRONMENT_STAGING_NOT_AUTHORIZED",
+      "family": "WP_ENVIRONMENT",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Staging requires future charter",
+      "expected_evidence": "environment_probe"
+    },
+    {
+      "code": "WP_TOOL_BINDING_UNAVAILABLE",
+      "family": "WP_TOOL",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Complete FW-07C harness or bind tool",
+      "expected_evidence": "tool_capability_matrix"
+    },
+    {
+      "code": "WP_TOOL_NOT_PROVEN",
+      "family": "WP_TOOL",
+      "severity": "ERROR",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Validate tool in MLI before execution",
+      "expected_evidence": "tool_verification_report"
+    },
+    {
+      "code": "WP_TOOL_VERSION_MISMATCH",
+      "family": "WP_TOOL",
+      "severity": "WARNING",
+      "retryable": true,
+      "stop_rule": "REPORT",
+      "operator_action": "Align with MLI toolchain standard",
+      "expected_evidence": "tool_version_audit"
+    },
+    {
+      "code": "WP_SAFE_UNKNOWN_BLOCKING",
+      "family": "WP_SAFE_UNKNOWN",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Resolve unknown; do not assume",
+      "expected_evidence": "safe_unknown_log"
+    },
+    {
+      "code": "WP_SAFE_UNKNOWN_RUNTIME_STATE",
+      "family": "WP_SAFE_UNKNOWN",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Inspect runtime; do not mutate",
+      "expected_evidence": "runtime_validation_report"
+    },
+    {
+      "code": "WP_SAFE_UNKNOWN_HANDOFF_STATE",
+      "family": "WP_SAFE_UNKNOWN",
+      "severity": "BLOCKER",
+      "retryable": false,
+      "stop_rule": "STOP",
+      "operator_action": "Complete intake validation",
+      "expected_evidence": "gate_a_report"
+    }
+  ]
+}

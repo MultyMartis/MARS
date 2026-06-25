@@ -1,0 +1,45 @@
+{
+  "review_xlsx": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v5.xlsx",
+  "review_csv_dir": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\review-v5-csv",
+  "sheets": [
+    "Campaign",
+    "Directions",
+    "Groups",
+    "Group viability",
+    "Keywords",
+    "Semantic evidence review",
+    "Exclusions",
+    "Group reassignments",
+    "Ads",
+    "Ad evidence audit",
+    "Ad changes",
+    "Global negatives",
+    "Direction negatives",
+    "Group negatives",
+    "Cross-negatives",
+    "Inline negatives",
+    "Negative risk resolution",
+    "Collision summary",
+    "Collision findings",
+    "Collision passed samples",
+    "Regression tests",
+    "Bids",
+    "URLs",
+    "Held groups",
+    "Merge log",
+    "V4→V5 change log",
+    "QA consistency"
+  ],
+  "sheet_count": 27,
+  "integrity": {
+    "passed": true,
+    "errors": [],
+    "checks": {
+      "no_1234": true,
+      "semantic_coverage": true,
+      "risk_resolution_rows": true
+    }
+  },
+  "evidence_populated": true,
+  "note": "Review XLSX v5 generated with evidence"
+}

@@ -1,0 +1,83 @@
+{
+  "diff_id": "operator-service-scope-v1-sync-diff",
+  "generated_at": "2026-06-22T12:00:00.000Z",
+  "file": "production/operator-service-scope-v1.json",
+  "records_changed": 6,
+  "production_dataset_modified": false,
+  "changes": [
+    {
+      "service_id": "SVC-04",
+      "field": "current_group_status",
+      "before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "after": "ACTIVE NARROW"
+    },
+    {
+      "service_id": "SVC-04",
+      "field": "recovery_required",
+      "before": true,
+      "after": false
+    },
+    {
+      "service_id": "SVC-06",
+      "field": "current_group_status",
+      "before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "after": "ACTIVE"
+    },
+    {
+      "service_id": "SVC-06",
+      "field": "recovery_required",
+      "before": true,
+      "after": false
+    },
+    {
+      "service_id": "SVC-20",
+      "field": "current_group_status",
+      "before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "after": "ACTIVE NARROW"
+    },
+    {
+      "service_id": "SVC-20",
+      "field": "recovery_required",
+      "before": true,
+      "after": false
+    },
+    {
+      "service_id": "SVC-21",
+      "field": "current_group_status",
+      "before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "after": "ACTIVE NARROW"
+    },
+    {
+      "service_id": "SVC-21",
+      "field": "recovery_required",
+      "before": true,
+      "after": false
+    },
+    {
+      "service_id": "SVC-22",
+      "field": "current_group_status",
+      "before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "after": "ACTIVE NARROW"
+    },
+    {
+      "service_id": "SVC-22",
+      "field": "recovery_required",
+      "before": true,
+      "after": false
+    },
+    {
+      "service_id": "SVC-28",
+      "field": "current_group_status",
+      "before": "HOLD — NO VALID COMMERCIAL DEMAND",
+      "after": "ACTIVE NARROW"
+    },
+    {
+      "service_id": "SVC-28",
+      "field": "recovery_required",
+      "before": true,
+      "after": false
+    }
+  ],
+  "registry_metadata_added": ["last_authority_sync"],
+  "per_service_metadata_added": ["protected_seed_refs", "last_authority_sync"]
+}

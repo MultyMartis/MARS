@@ -1,0 +1,47 @@
+{
+  "pack_id": "w2-3-genuine-technical-evidence-pack-v1",
+  "status": "GENUINE LIVE PAID SERP CAPABILITY NOT VALIDATED",
+  "project_id": "MIG-W2-3-TECH-PAID-SERP",
+  "production_authority": false,
+  "evidence_class": "TECHNICAL LIVE EVIDENCE",
+  "generated_at": "2026-06-23T15:50:00.000Z",
+  "manifest_ref": "projects/mig/search-ppc-evidence/live-validation/w2-3-tech-paid-serp/project-ppc-state-manifest-v1.json",
+  "sessions": [
+    {
+      "session_id": "w2-3-live-session-001",
+      "acquisition_mode": "AUTOMATED LIVE CAPTURE",
+      "collection_status": "COLLECTION DEGRADED",
+      "stopped_on_captcha": true,
+      "output_path": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-3-tech-paid-serp/session-001",
+      "execution_receipt_id": "sppc-receipt-2026-06-23T15-45-38-400Z-f93f965e"
+    }
+  ],
+  "queries_attempted": ["w2-3-q01"],
+  "genuine_paid_observations": 0,
+  "minimum_closure_met": false,
+  "minimum_closure_requirements": {
+    "genuine_live_serp_pages": 1,
+    "genuine_paid_ad_observations": 2,
+    "validated_advertiser_entities": 1,
+    "bounded_landing_resolutions": 1
+  },
+  "captcha_degradation_history": [
+    {
+      "session_id": "w2-3-live-session-001",
+      "query_id": "w2-3-q01",
+      "at": "2026-06-23T15:45:54.314Z",
+      "policy": "STOP_ON_CAPTCHA",
+      "page_title": "Вы не робот?"
+    }
+  ],
+  "mode_b_package": {
+    "status": "PREPARED — AWAITING OPERATOR CAPTURE",
+    "instructions": "projects/mig/search-ppc-evidence/live-validation/w2-3-tech-paid-serp/OPERATOR-ASSISTED-LIVE-CAPTURE-INSTRUCTIONS-v2.md",
+    "bundle_dir": "C:/AI MARS STORAGE/incoming/mig/live-validation/w2-3-tech-paid-serp/assisted-capture-pending/w2-3-q02"
+  },
+  "limitations": [
+    "Automated session blocked by Yandex CAPTCHA — no bypass attempted",
+    "No operator-assisted genuine bundle imported",
+    "Technical evidence does not grant client production authority"
+  ]
+}

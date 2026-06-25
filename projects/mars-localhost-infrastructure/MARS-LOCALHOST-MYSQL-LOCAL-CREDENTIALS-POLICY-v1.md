@@ -24,15 +24,16 @@
 
 ---
 
-## Exposure (MLI-02 verified)
+## Exposure (MLI-02 verified; superseded for bind by MLI-03R.1)
 
 | Check | Finding |
 |-------|---------|
 | Server version | 8.4.3 |
 | Local connection | **PASS** (`SELECT VERSION()`) |
-| `bind_address` variable | `*` (Laragon default) |
-| Listening | `0.0.0.0:3306` — **local network exposure risk** |
-| Remote access | **Not intentionally enabled**; Windows firewall posture is operator responsibility |
+| `bind_address` variable | **`127.0.0.1`** (MLI-03R.1 post-reboot) |
+| Listening | **`127.0.0.1:3306` only** |
+| X Protocol 33060 | **Disabled** (`mysqlx=0`) |
+| Remote access | **Not intentionally enabled** |
 | WordPress DB | **Not created** in MLI-02 |
 
 ---
@@ -51,8 +52,8 @@ Per [MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md](MARS-LOCALHOST-BACKUP-AND-RES
 
 ## MLI-03 recommendation
 
-Create dedicated DB/user per WordPress runtime; restrict bind to `127.0.0.1` when compatible with Laragon profile.
+Create dedicated DB/user per WordPress runtime; restrict bind to `127.0.0.1` when compatible with Laragon profile. See [MARS-LOCALHOST-DATABASE-STANDARD-v1.md](MARS-LOCALHOST-DATABASE-STANDARD-v1.md) (MLI-03R.1).
 
 ---
 
-*MySQL local credentials policy v1 — MLI-02.*
+*MySQL local credentials policy v1 — MLI-02; exposure updated MLI-03R.1.*

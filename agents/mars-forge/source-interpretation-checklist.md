@@ -32,6 +32,8 @@ This checklist does not authorize guessing, redesign, hidden responsive decision
 - [ ] **Contradictions checked** — active source, matrix, implementation pack, old docs, shared assets, and existing code do not silently conflict.
 - [ ] **Visual extraction uncertainty checked** — raster artifacts, compression noise, export artifacts, accidental alignment, crop, or low resolution not treated as design law.
 - [ ] **No hallucinated structure** — no invented wrappers, section splits, cards, catalogs, sliders, tabs, forms, or hidden states.
+- [ ] **Figma visible-content authority** — when Figma is source, layer names do not override visible text/overrides; see [`figma-inspection-checklist.md`](figma-inspection-checklist.md).
+- [ ] **Figma hidden layers excluded** — hidden/off/opacity-0 nodes not implemented unless approved frame or operator charter.
 - [ ] **No screenshot overfitting** — visible detail is interpreted by confidence, not copied blindly.
 - [ ] **Source confidence recorded** — explicit / strongly implied / weakly implied / ambiguous / unknown / contradictory.
 

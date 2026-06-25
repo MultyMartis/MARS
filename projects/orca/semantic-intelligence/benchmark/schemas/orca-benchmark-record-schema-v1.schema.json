@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orca-benchmark-record-schema-v1.schema.json",
+  "title": "ORCA Benchmark Record v1",
+  "type": "object",
+  "required": [
+    "semantic_record",
+    "benchmark"
+  ],
+  "properties": {
+    "semantic_record": {
+      "$ref": "../../schemas/orca-semantic-record-schema-v1.schema.json",
+      "description": "Full P0-B semantic record — gold adjudicated"
+    },
+    "benchmark": {
+      "type": "object",
+      "required": [
+        "benchmark_version",
+        "phase",
+        "stratum_id",
+        "domain_id",
+        "difficulty_id",
+        "split_id",
+        "gold_status",
+        "release_state",
+        "double_annotation"
+      ],
+      "properties": {
+        "benchmark_version": {
+          "type": "string"
+        },
+        "phase": {
+          "enum": [
+            "B0",
+            "B1",
+            "B2"
+          ]
+        },
+        "stratum_id": {
+          "type": "string"
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "difficulty_id": {
+          "type": "string"
+        },
+        "split_id": {
+          "enum": [
+            "SPLIT_DEV",
+            "SPLIT_CALIBRATION",
+            "SPLIT_BLIND",
+            "SPLIT_REGRESSION_ANCHOR",
+            "SPLIT_HARD_NEGATIVE",
+            "UNASSIGNED"
+          ]
+        },
+        "gold_status": {
+          "enum": [
+            "DRAFT",
+            "PROVISIONAL",
+            "AUTHORITATIVE",
+            "INVALID"
+          ]
+        },
+        "release_state": {
+          "enum": [
+            "DRAFT",
+            "ANNOTATION IN PROGRESS",
+            "ADJUDICATION IN PROGRESS",
+            "FROZEN INTERNAL",
+            "BLIND EVALUATION",
+            "RELEASED FOR DEVELOPMENT",
+            "SUPERSEDED",
+            "CONTAMINATED",
+            "WITHDRAWN"
+          ]
+        },
+        "double_annotation": {
+          "type": "object",
+          "required": [
+            "required",
+            "pass_count",
+            "disagreement_types"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "pass_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "disagreement_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "adjudication": {
+          "type": "object",
+          "properties": {
+            "adjudicator_id": {
+              "type": "string"
+            },
+            "adjudicated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "disagreement_types_resolved": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "source_class": {
+              "type": "string"
+            },
+            "sampling_frame_id": {
+              "type": "string"
+            },
+            "forbidden_source_flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "minimal_pair_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "corvonero_pilot": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

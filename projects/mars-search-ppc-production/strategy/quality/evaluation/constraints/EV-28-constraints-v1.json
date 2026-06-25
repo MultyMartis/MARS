@@ -1,0 +1,25 @@
+{
+  "constraint_id": "EV-28-constraints-v1",
+  "case_id": "EV-28",
+  "scenario": "manual_bidding_constraint",
+  "evaluator_only": true,
+  "strategist_must_not_receive": true,
+  "mandatory_facts": [
+    "pack_has_evidence_inventory",
+    "tier_distribution_present"
+  ],
+  "minimum_architecture_properties": {
+    "has_campaigns": true,
+    "evidence_linked": true
+  },
+  "acceptable_strategy_families": [
+    "manual_bidding"
+  ],
+  "invalid_strategy_families": [
+    "commander_export",
+    "fabricated_evidence"
+  ],
+  "prohibited_recommendations": [
+    "automated_conversion_without_data"
+  ]
+}

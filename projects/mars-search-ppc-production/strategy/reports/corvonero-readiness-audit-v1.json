@@ -1,0 +1,33 @@
+{
+  "audit_id": "CORVONERO-SPPC-12-13-READINESS-v1",
+  "date": "2026-06-23",
+  "project_id": "corvonero-direct-v2-clean-room",
+  "status": "FROZEN",
+  "strategy_generation": "BLOCKED",
+  "sppc_12_requirements": {
+    "approved_service_registry": { "status": "MISSING", "stage": "SPPC-07 NOT STARTED" },
+    "genuine_paid_serp": { "status": "MISSING", "stage": "SPPC-10 NOT STARTED", "note": "MIG live SPPC-10 VALIDATION PENDING globally" },
+    "competitor_pack": { "status": "MISSING", "stage": "SPPC-11 NOT STARTED" },
+    "landing_inventory": { "status": "MISSING" },
+    "tracking_state": { "status": "SAFE UNKNOWN" },
+    "budget": { "status": "MISSING" },
+    "operator_objectives": { "status": "PARTIAL", "note": "business intake exists" },
+    "semantic_full_corpus_run": { "status": "BLOCKED", "note": "SPPC-05 FAILED — operator charter required" }
+  },
+  "sppc_13_requirements": {
+    "dated_analytical_pack_complete": { "status": "BLOCKED" },
+    "evidence_authority_matrix": { "status": "NOT APPLICABLE UNTIL SPPC-12" },
+    "operator_approval": { "status": "MISSING" }
+  },
+  "frozen_artifacts_usable_as_evidence": [
+    "business_scope_operator_authority",
+    "source_registry",
+    "full_semantic_corpus_intake",
+    "canonical_phrase_registry"
+  ],
+  "must_not_use_as_production_authority": [
+    "CORVONERO-COMMERCIAL-ELIGIBILITY-v1.json",
+    "diagnostic admission outputs",
+    "corvonero-yandex-direct v1-v7 production runs"
+  ]
+}

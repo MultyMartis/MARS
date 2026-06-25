@@ -1,0 +1,114 @@
+{
+  "pass": "m9.13-about-restore-to-pre-redesign",
+  "timestamp": "2026-06-22T23:45:15.594843+00:00",
+  "live_url": "https://zpm.new-site.space/about",
+  "backup_verification": {
+    "ok": true,
+    "files": {
+      "catalog/view/theme/default/template/information/about.twig": {
+        "path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.twig.pre-m9.13-about-redesign.bak",
+        "exists": true,
+        "sha256": "998321d3b3ea0a119b0aa688d9c6ebbcdc31431ced75110450026d24458202f8",
+        "bytes": 3443
+      },
+      "catalog/controller/information/about.php": {
+        "path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.php.pre-m9.13-about-redesign.bak",
+        "exists": true,
+        "sha256": "77ac5ea35be5863f5c729c996743a8f8cd18af3e9afca328d4dcde7585b5fa8a",
+        "bytes": 1687
+      },
+      "assets/css/style.css": {
+        "path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.13-about-redesign.bak",
+        "exists": true,
+        "sha256": "6f91745218bfd7a455ebd3c23a28745d3c6ee60e8a26814c0ee5efc4723249cd",
+        "bytes": 299779
+      },
+      "assets/img/about-page-img.jpg": {
+        "path": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about-page-img.jpg.pre-m9.13-about-polish-v1.bak",
+        "exists": true,
+        "sha256": "138d682e4e3b0acc214c9ac24d31fe1c5110653809da9f6c35028966293230e3",
+        "bytes": 276765,
+        "note": "No pre-m9.13-about-redesign.bak for image; redesign did not replace file — polish backup equals pre-redesign bytes."
+      }
+    }
+  },
+  "pre_restore_capture": {
+    "files": {
+      "catalog/view/theme/default/template/information/about.twig": {
+        "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-restore-work\\pre-restore-capture\\about.twig",
+        "sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+        "bytes": 19585
+      },
+      "catalog/controller/information/about.php": {
+        "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-restore-work\\pre-restore-capture\\about.php",
+        "sha256": "e598e6eba95d7b864b01e1f6ee0cddfeacf3e5705f20b541a33ac3c3df62e29f",
+        "bytes": 1864
+      },
+      "assets/css/style.css": {
+        "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-restore-work\\pre-restore-capture\\style.css",
+        "sha256": "fbf5aaadf69b20c8d8d2bba91770158d0a8588a077f512dc61f6cc73d8a7e251",
+        "bytes": 306728
+      }
+    },
+    "images": {
+      "assets/img/about-page-img.jpg": {
+        "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-restore-work\\pre-restore-capture\\about-page-img.jpg",
+        "sha256": "9732ce40aed0ba90d3cba7872b8bde0dba00d651ab4dd4050614e4ed158ddfe6",
+        "bytes": 2585275
+      },
+      "assets/img/about-logistics.jpg": {
+        "local": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-restore-work\\pre-restore-capture\\about-logistics.jpg",
+        "sha256": "b97dcfaa20f61a8bc583efcc558d8bf74003bd216bb90be0121cb800e728bfc6",
+        "bytes": 2301124
+      }
+    }
+  },
+  "restored": {
+    "files": {
+      "catalog/view/theme/default/template/information/about.twig": {
+        "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.twig.pre-m9.13-about-redesign.bak",
+        "sha256": "998321d3b3ea0a119b0aa688d9c6ebbcdc31431ced75110450026d24458202f8",
+        "bytes": 3443
+      },
+      "catalog/controller/information/about.php": {
+        "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about.php.pre-m9.13-about-redesign.bak",
+        "sha256": "77ac5ea35be5863f5c729c996743a8f8cd18af3e9afca328d4dcde7585b5fa8a",
+        "bytes": 1687
+      },
+      "assets/css/style.css": {
+        "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.13-about-redesign.bak",
+        "sha256": "6f91745218bfd7a455ebd3c23a28745d3c6ee60e8a26814c0ee5efc4723249cd",
+        "bytes": 299779
+      },
+      "assets/img/about-page-img.jpg": {
+        "backup": "C:\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\about-page-img.jpg.pre-m9.13-about-polish-v1.bak",
+        "sha256": "138d682e4e3b0acc214c9ac24d31fe1c5110653809da9f6c35028966293230e3",
+        "bytes": 276765
+      }
+    }
+  },
+  "removed": {
+    "remote": "assets/img/about-logistics.jpg",
+    "deleted": true,
+    "reason": "Introduced by M9.13 polish only; not in pre-redesign page"
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_200": true,
+    "http_status": 200,
+    "old_main_wrap": true,
+    "old_video_block": true,
+    "old_geo_image": true,
+    "old_dealer_block": true,
+    "old_cert_slider": true,
+    "no_zpm-about-hero": true,
+    "no_zpm-about-company": true,
+    "no_zpm-about-advantages": true,
+    "no_zpm-about-certs": true,
+    "no_zpm-about-geo": true,
+    "no_zpm-about-cta": true,
+    "no_m913_sections": true,
+    "no_about_logistics_img": true,
+    "all_pass": true
+  }
+}

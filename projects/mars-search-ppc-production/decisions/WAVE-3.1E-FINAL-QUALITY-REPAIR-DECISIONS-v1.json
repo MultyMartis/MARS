@@ -1,0 +1,49 @@
+{
+  "decision_set_id": "wave-3.1e-final-quality-repair-decisions-v1",
+  "date": "2026-06-23",
+  "task": "MARS SEARCH PPC PRODUCTION — WAVE 3.1E FINAL QUALITY REPAIR",
+  "decisions": [
+    {
+      "id": "W3.1E-D1",
+      "subject": "Wave 3.1D",
+      "status": "APPROVED — QUALITY REPAIR REQUIRED"
+    },
+    {
+      "id": "W3.1E-D2",
+      "subject": "Gold support",
+      "status": "SUFFICIENT — blocker is product/service FPR not evidence volume"
+    },
+    {
+      "id": "W3.1E-D3",
+      "subject": "Original datasets",
+      "status": "CLOSED — regression evidence only, not new blind PASS"
+    },
+    {
+      "id": "W3.1E-D4",
+      "subject": "Product repair",
+      "status": "AUTHORIZED — one systemic product/service disambiguation iteration"
+    },
+    {
+      "id": "W3.1E-D5",
+      "subject": "Geo repair",
+      "status": "CONFIRM via new blind geo-commercial confirmation set"
+    },
+    {
+      "id": "W3.1E-D6",
+      "subject": "Final quality gate",
+      "status": "PASS only when new product + geo confirmation PASS and no critical regression"
+    },
+    {
+      "id": "W3.1E-D7",
+      "subject": "Corvonero",
+      "status": "FROZEN"
+    }
+  ],
+  "wave_status": {
+    "wave_3_1d": "APPROVED — READY FOR CHECKPOINT",
+    "wave_3_1e": "IMPLEMENTATION AUTHORIZED",
+    "wave_3_overall": "FINAL QUALITY REPAIR IN PROGRESS",
+    "wave_4": "BLOCKED",
+    "corvonero": "FROZEN"
+  }
+}

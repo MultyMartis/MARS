@@ -1,0 +1,36 @@
+{
+  "review_xlsx": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v4.xlsx",
+  "review_csv_dir": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\review-v4-csv",
+  "sheets": [
+    "Campaign",
+    "Directions",
+    "Groups",
+    "Keywords",
+    "Semantic review",
+    "Exclusions",
+    "Ads",
+    "Ad changes",
+    "Global negatives",
+    "Direction negatives",
+    "Group negatives",
+    "Cross-negatives",
+    "Inline negatives",
+    "Collision summary",
+    "Collision findings",
+    "Collision passed samples",
+    "Regression tests",
+    "Bids",
+    "URLs",
+    "Held groups",
+    "Merge log",
+    "V3→V4 changes"
+  ],
+  "evidence_rows": {
+    "semantic_review": 341,
+    "collision_summary": 12,
+    "collision_findings": 313,
+    "collision_passed_samples": 60
+  },
+  "evidence_populated": true,
+  "note": "Review XLSX v4 generated with collision evidence"
+}

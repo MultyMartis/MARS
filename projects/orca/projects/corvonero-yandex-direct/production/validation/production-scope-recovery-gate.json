@@ -1,0 +1,61 @@
+{
+  "gate_id": "production-scope-recovery-gate",
+  "generated_at": "2026-06-22T05:54:01.291Z",
+  "outcome": "PASS — V7 PRODUCTION AUTHORIZED",
+  "checks": [
+    {
+      "id": 1,
+      "check": "every operator service family represented or evidence-backed absence",
+      "pass": true
+    },
+    {
+      "id": 2,
+      "check": "direct commercial seeds not excluded",
+      "pass": true
+    },
+    {
+      "id": 3,
+      "check": "no HOLD group contains recoverable commercial phrases",
+      "pass": true
+    },
+    {
+      "id": 4,
+      "check": "active informational/regulatory leakage plan is zero",
+      "pass": true
+    },
+    {
+      "id": 5,
+      "check": "controlled-test hypotheses phrase-specific in v7 plan",
+      "pass": true
+    },
+    {
+      "id": 6,
+      "check": "status/reason contradictions zero after v7 plan",
+      "pass": true
+    },
+    {
+      "id": 7,
+      "check": "recovered phrases have valid group ownership",
+      "pass": true
+    },
+    {
+      "id": 8,
+      "check": "recovered groups have ad and landing plans",
+      "pass": true
+    },
+    {
+      "id": 9,
+      "check": "negative impacts mapped",
+      "pass": true
+    },
+    {
+      "id": 10,
+      "check": "no campaign production file generated in this task",
+      "pass": true
+    }
+  ],
+  "commander_v6": "REJECTED BY OPERATOR — COMMERCIAL SCOPE LOSS",
+  "review_v6": "REJECTED BY OPERATOR — SEMANTIC AND CONTROLLED-TEST DEFECTS",
+  "commander_dry_run": "BLOCKED",
+  "v7_production": "AUTHORIZED"
+}

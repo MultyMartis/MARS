@@ -1,0 +1,51 @@
+{
+  "review_xlsx": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v7.xlsx",
+  "review_csv_dir": "C:\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\review-v7-csv",
+  "sheets": [
+    "Campaign",
+    "Operator service scope",
+    "Directions",
+    "Groups",
+    "Group viability",
+    "Restored groups",
+    "Keywords",
+    "Restored commercial phrases",
+    "Controlled tests",
+    "Exclusions",
+    "Semantic decisions",
+    "Ads",
+    "Ad changes",
+    "Global negatives",
+    "Direction negatives",
+    "Group negatives",
+    "Cross-negatives",
+    "Inline negatives",
+    "Negative resolution",
+    "Collision summary",
+    "Collision findings",
+    "Collision passed samples",
+    "Bids",
+    "URLs",
+    "HOLD groups",
+    "V6 to V7 changes",
+    "Status reason consistency",
+    "Operator scope coverage",
+    "QA consistency",
+    "Commander row reconciliation"
+  ],
+  "sheet_count": 30,
+  "integrity": {
+    "passed": true,
+    "errors": [],
+    "checks": {
+      "no_1234": true,
+      "no_2464": true,
+      "no_970_narrative": true,
+      "keyword_coverage": true,
+      "negative_resolution_rows": true,
+      "placeholder_patterns_checked": 10
+    }
+  },
+  "evidence_populated": true,
+  "note": "Review XLSX v7 generated"
+}

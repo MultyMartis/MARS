@@ -2,20 +2,22 @@
 
 **Document type:** Agent promotion decision record  
 **Version:** v1  
-**Stage:** FW-04  
-**Date:** 2026-06-22
+**Stage:** FW-04 → **updated FW-07A**  
+**Date:** 2026-06-22 (original) · **2026-06-24 (FW-07A registration)**
 
 ---
 
-## Decision (FW-05R update — 2026-06-23)
+## Decision (FW-07A update — 2026-06-24)
 
 ```text
-AG-WP-001 remains UNREGISTERED.
-Prompt-driven operational_doc_pack candidate: ELIGIBLE WITH DOCUMENTED LIMITATIONS.
-Formal agent registration: STILL REQUIRES OPERATOR CHARTER.
+AG-WP-001: REGISTERED in agents/registry.md §4.1
+Catalog status: draft
+Runtime state: NOT RUNTIME-ACTIVE
+Production authority: NONE
+Pilot execution: BLOCKED until Production Pass + FW-06B
 ```
 
-**No row added to `agents/registry.md`.**
+**Registration is foundation/documentation — not promotion to `active` or autonomous runtime.**
 
 ---
 
@@ -25,7 +27,7 @@ Formal agent registration: STILL REQUIRES OPERATOR CHARTER.
 |------|-------|
 | Synthetic case FWS-0001 | COMPLETE |
 | Synthetic outcome (static) | PROVEN WITH LIMITATIONS |
-| Registry promotion | NOT PERFORMED |
+| Registry promotion to `active` | NOT PERFORMED |
 
 ---
 
@@ -37,66 +39,69 @@ Formal agent registration: STILL REQUIRES OPERATOR CHARTER.
 | Live synthetic outcome | PROVEN WITH LIMITATIONS |
 | PHP syntax / PHPCS / routes | PASS (with documented PHPCS residuals) |
 | Visual parity | PASS WITH DOCUMENTED DEVIATIONS — WV6 PENDING |
-| Registry promotion | NOT PERFORMED — charter still required |
+| Registry row (FW-04) | NOT ADDED — charter required |
 | Doc pack eligibility | **ELIGIBLE WITH DOCUMENTED LIMITATIONS** |
 
 ---
 
-## FW-05R checkpoint (2026-06-23)
+## FW-07A evidence (2026-06-24)
 
-```text
-AG-WP-001:
-ELIGIBLE WITH DOCUMENTED LIMITATIONS
-
-Operational model: prompt-driven operational_doc_pack
-Formal registration: REQUIRES OPERATOR CHARTER
-Autonomous runtime: NONE
-Production authority: NONE
-Registry row: NOT ADDED
-```
+| Item | State |
+|------|-------|
+| Agent foundation pack | **COMPLETE** — [agents/README.md](../agents/README.md) |
+| MARS registry row | **ADDED** — `wordpress_implementation_agent` (`draft`) |
+| Typed operation registry | **DEFINED** (contract level) — FW-07B for runtime binding |
+| Autonomous runtime | **NONE** |
+| Production authority | **NONE** |
 
 ---
 
-## Options considered
+## Checkpoint (FW-07A)
 
-| Option | Decision |
-|--------|----------|
-| Remains seed only | **Selected** — until FW-05 proves execution |
-| Becomes internal specialist profile | **Partial** — specialist doc pack is operational for Cursor; not registry agent |
-| Registers later | **Yes** — after synthetic validation + operator charter |
-| Never registers | **Not selected** — deferred, not rejected |
+```text
+AG-WP-001:
+REGISTERED (draft)
+
+Agent foundation:
+COMPLETE
+
+Runtime state:
+NOT ACTIVE
+
+Production authority:
+NONE
+
+FP-0002 pilot:
+BLOCKED UNTIL FRONTEND PRODUCTION PASS AND FW-06B
+
+Next proposed phase:
+FW-07B — AG-WP-001 Typed Operations and Tool Contract
+```
 
 ---
 
 ## Relationship model
 
 ```text
-AG-WP-001 (seed, historical)
-    → informs research and boundaries
+AG-WP-001 (registered foundation, FW-07A)
+    → agent contracts, ops registry, QA gates
 FORGE-WORDPRESS-IMPLEMENTATION-SPECIALIST-v1 (FW-04)
-    → active Cursor execution profile
-agents/registry.md
-    → no entry until separate promotion charter
+    → Cursor execution profile (inherits contracts)
+agents/registry.md §4.1
+    → wordpress_implementation_agent (draft)
+Historical seed
+    → research only; contracts authoritative in agents/ pack
 ```
 
 ---
 
-## Promotion prerequisites (future)
+## Promotion to `active` (future — not FW-07A)
 
-1. FW-05 + FW-05R synthetic validation **PASS WITH LIMITATIONS** — **MET**
-2. Capability readiness matrix — client pilot eligibility review — **FW-06**
-3. Operator charter for agent registration — **OPEN**
-4. Operator WV6 on live visual parity — **PENDING**
-5. Separate decision record — not automatic from FW-04 or FW-05R
-
----
-
-## Seed alignment note
-
-Update seed cross-links to point to `capability/` pack. Seed status remains **SEED** — not OPERATIONAL agent.
-
-See [AG-WP-001-FORGE-WORDPRESS-SEED.md](../../../../workspaces/website-factory-operations/internal-agent-seeds/AG-WP-001-forge-wordpress/AG-WP-001-FORGE-WORDPRESS-SEED.md).
+1. FW-06B + client pilot evidence
+2. FW-07B typed operations implemented
+3. Operator pilot charter
+4. Separate promotion decision — not automatic from registration
 
 ---
 
-*Promotion decision v1 — AG-WP-001 unregistered.*
+*Promotion decision v1 — updated FW-07A registration; not runtime-active.*

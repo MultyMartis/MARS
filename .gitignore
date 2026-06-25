@@ -211,6 +211,36 @@ workspaces/forge-wordpress-synthetic/FWS-0001/**/*.jpg
 workspaces/forge-wordpress-synthetic/FWS-0001/**/*.jpeg
 workspaces/forge-wordpress-synthetic/FWS-0001/**/*.webp
 
+# FP-0002 Shpigovsky — WORDPRESS foundation source only (FW-06A; frontend src/ remains workspace-local)
+!workspaces/fp-0002-shpigovsky-v6/
+workspaces/fp-0002-shpigovsky-v6/*
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/
+workspaces/fp-0002-shpigovsky-v6/WORDPRESS/*
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/theme-source/
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/theme-source/**
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/functionality-plugin/
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/functionality-plugin/**
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/acf-json/
+!workspaces/fp-0002-shpigovsky-v6/WORDPRESS/acf-json/**
+
+# FP-0002 Shpigovsky V7 — active frontend workspace (bootstrap from frozen V6)
+!workspaces/fp-0002-shpigovsky-v7/
+workspaces/fp-0002-shpigovsky-v7/*
+!workspaces/fp-0002-shpigovsky-v7/README.md
+!workspaces/fp-0002-shpigovsky-v7/package.json
+!workspaces/fp-0002-shpigovsky-v7/package-lock.json
+!workspaces/fp-0002-shpigovsky-v7/gulpfile.js
+!workspaces/fp-0002-shpigovsky-v7/src/
+!workspaces/fp-0002-shpigovsky-v7/src/**
+!workspaces/fp-0002-shpigovsky-v7/foundation/
+!workspaces/fp-0002-shpigovsky-v7/foundation/**
+!workspaces/fp-0002-shpigovsky-v7/reviews/
+workspaces/fp-0002-shpigovsky-v7/reviews/*
+!workspaces/fp-0002-shpigovsky-v7/reviews/v7-bootstrap/
+!workspaces/fp-0002-shpigovsky-v7/reviews/v7-bootstrap/**
+!workspaces/fp-0002-shpigovsky-v7/reviews/package-001/
+!workspaces/fp-0002-shpigovsky-v7/reviews/package-001/**
+
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/
 
@@ -218,3 +248,7 @@ shared/assets/icon-libraries/
 projects/ocpilot/baselines/*/files/*
 !projects/ocpilot/baselines/*/files/.gitkeep
 projects/ocpilot/incoming/baselines/*.zip
+
+# Large source/design binaries are stored in external MARS STORAGE.
+/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Шпиговский.fig
+/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/services-hub/SERVICES-HUB-DESKTOP.png

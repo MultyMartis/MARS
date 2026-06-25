@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "checks": [
+    {
+      "id": "INT-01",
+      "name": "Canonical count reconciles",
+      "pass": true,
+      "canonical": 2368,
+      "dedup": 2368
+    },
+    {
+      "id": "INT-02",
+      "name": "Intent records match canonical",
+      "pass": true
+    },
+    {
+      "id": "INT-03",
+      "name": "Eligibility records match canonical",
+      "pass": true
+    },
+    {
+      "id": "INT-04",
+      "name": "Eligible + excluded + holds + controlled = canonical",
+      "pass": true,
+      "breakdown": {
+        "eligible_commercial": 1892,
+        "eligible_narrow": 590,
+        "controlled_test": 17,
+        "excluded": 200,
+        "holds": 259
+      }
+    },
+    {
+      "id": "INT-05",
+      "name": "No generic-only reasons",
+      "pass": true
+    }
+  ],
+  "overall": "PASS"
+}

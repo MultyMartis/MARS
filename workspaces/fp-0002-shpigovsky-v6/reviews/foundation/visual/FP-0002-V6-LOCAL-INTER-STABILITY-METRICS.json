@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T21:00:51Z",
+  "generated_at": "2026-06-22T21:14:08Z",
   "local_font_urls": [
     "assets/fonts/inter/inter-300.woff2",
     "assets/fonts/inter/inter-300-latin.woff2",
@@ -22,7 +22,35 @@
       "cache_disabled": true,
       "cls_samples": [
         {
-          "value": 0.010046327822952505,
+          "value": 0.0019339840563260384,
+          "sources": [
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__nav"
+            },
+            {
+              "node": "site-footer__phone"
+            },
+            {
+              "node": "site-footer__actions"
+            }
+          ]
+        },
+        {
+          "value": 1.7734898733728234e-07,
+          "sources": [
+            {
+              "node": "fab fa-youtube site-footer__social-fa"
+            }
+          ]
+        },
+        {
+          "value": 0.0038067849288830565,
           "sources": [
             {
               "node": "hero__container"
@@ -37,17 +65,23 @@
               "node": "site-footer__nav"
             },
             {
-              "node": "site-footer__nav"
+              "node": "site-header__phones"
             }
           ]
         }
       ],
       "layout_shift_sources": [
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__nav",
+        "site-footer__phone",
+        "site-footer__actions",
+        "fab fa-youtube site-footer__social-fa",
         "hero__container",
         "hero__panel",
         "site-footer__nav",
         "site-footer__nav",
-        "site-footer__nav"
+        "site-header__phones"
       ],
       "font_requests": [],
       "external_font_requests": [],
@@ -60,14 +94,14 @@
       },
       "timings": {
         "navigation_start_ms": 0,
-        "fcp_ms": 1112,
+        "fcp_ms": 336,
         "fonts_ready_after_navigation_ms": 0,
-        "total_pass_ms": 4193.08
+        "total_pass_ms": 3140.0
       },
       "first_visible_font": "Inter 400",
       "fallback_font_visibly_painted": "NOT OBSERVED",
       "fout_observed": false,
-      "cls_total": 0.010046327822952505,
+      "cls_total": 0.005740946334196432,
       "computed_fonts": {
         "headerPhone": {
           "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -92,33 +126,10 @@
       "cache_disabled": true,
       "cls_samples": [
         {
-          "value": 0.0008297134141970821,
+          "value": 0.0019339840563260384,
           "sources": [
             {
               "node": "site-footer__nav"
-            },
-            {
-              "node": "site-footer__nav"
-            },
-            {
-              "node": "site-footer__nav"
-            },
-            {
-              "node": "site-header__phones"
-            },
-            {
-              "node": "site-header__address"
-            }
-          ]
-        },
-        {
-          "value": 0.009380001407707587,
-          "sources": [
-            {
-              "node": "hero__container"
-            },
-            {
-              "node": "hero__panel"
             },
             {
               "node": "site-footer__nav"
@@ -128,6 +139,9 @@
             },
             {
               "node": "site-footer__phone"
+            },
+            {
+              "node": "site-footer__actions"
             }
           ]
         }
@@ -136,13 +150,8 @@
         "site-footer__nav",
         "site-footer__nav",
         "site-footer__nav",
-        "site-header__phones",
-        "site-header__address",
-        "hero__container",
-        "hero__panel",
-        "site-footer__nav",
-        "site-footer__nav",
-        "site-footer__phone"
+        "site-footer__phone",
+        "site-footer__actions"
       ],
       "font_requests": [],
       "external_font_requests": [],
@@ -155,14 +164,14 @@
       },
       "timings": {
         "navigation_start_ms": 0,
-        "fcp_ms": 276,
+        "fcp_ms": 280,
         "fonts_ready_after_navigation_ms": 0,
-        "total_pass_ms": 3125.75
+        "total_pass_ms": 3076.6
       },
       "first_visible_font": "Inter 400",
       "fallback_font_visibly_painted": "NOT OBSERVED",
       "fout_observed": false,
-      "cls_total": 0.01020971482190467,
+      "cls_total": 0.0019339840563260384,
       "computed_fonts": {
         "headerPhone": {
           "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -187,7 +196,7 @@
       "cache_disabled": true,
       "cls_samples": [
         {
-          "value": 0.001074529147675546,
+          "value": 0.0008297134141970821,
           "sources": [
             {
               "node": "site-footer__nav"
@@ -199,7 +208,27 @@
               "node": "site-footer__nav"
             },
             {
+              "node": "site-header__phones"
+            },
+            {
+              "node": "site-header__address"
+            }
+          ]
+        },
+        {
+          "value": 0.0007354960257200369,
+          "sources": [
+            {
               "node": "site-footer__phone"
+            },
+            {
+              "node": "site-footer__actions"
+            },
+            {
+              "node": "hero__actions"
+            },
+            {
+              "node": "site-header__btns-wrap"
             },
             {
               "node": "site-footer__social"
@@ -207,7 +236,7 @@
           ]
         },
         {
-          "value": 0.00399942657160761,
+          "value": 0.0038067849288830565,
           "sources": [
             {
               "node": "hero__container"
@@ -222,7 +251,7 @@
               "node": "site-footer__nav"
             },
             {
-              "node": "site-footer__phone"
+              "node": "site-header__phones"
             }
           ]
         }
@@ -231,13 +260,18 @@
         "site-footer__nav",
         "site-footer__nav",
         "site-footer__nav",
+        "site-header__phones",
+        "site-header__address",
         "site-footer__phone",
+        "site-footer__actions",
+        "hero__actions",
+        "site-header__btns-wrap",
         "site-footer__social",
         "hero__container",
         "hero__panel",
         "site-footer__nav",
         "site-footer__nav",
-        "site-footer__phone"
+        "site-header__phones"
       ],
       "font_requests": [],
       "external_font_requests": [],
@@ -250,14 +284,14 @@
       },
       "timings": {
         "navigation_start_ms": 0,
-        "fcp_ms": 260,
-        "fonts_ready_after_navigation_ms": 0.10000000149011612,
-        "total_pass_ms": 3080.82
+        "fcp_ms": 288,
+        "fonts_ready_after_navigation_ms": 0,
+        "total_pass_ms": 3166.45
       },
       "first_visible_font": "Inter 400",
       "fallback_font_visibly_painted": "NOT OBSERVED",
       "fout_observed": false,
-      "cls_total": 0.005073955719283155,
+      "cls_total": 0.005371994368800176,
       "computed_fonts": {
         "headerPhone": {
           "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -282,7 +316,7 @@
       "cache_disabled": false,
       "cls_samples": [
         {
-          "value": 0.010046327822952505,
+          "value": 0.010051848239700458,
           "sources": [
             {
               "node": "hero__container"
@@ -320,14 +354,14 @@
       },
       "timings": {
         "navigation_start_ms": 0,
-        "fcp_ms": 240,
+        "fcp_ms": 252,
         "fonts_ready_after_navigation_ms": 0,
-        "total_pass_ms": 3119.79
+        "total_pass_ms": 3076.54
       },
       "first_visible_font": "Inter 400",
       "fallback_font_visibly_painted": "NOT OBSERVED",
       "fout_observed": false,
-      "cls_total": 0.010046327822952505,
+      "cls_total": 0.010051848239700458,
       "computed_fonts": {
         "headerPhone": {
           "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -352,7 +386,7 @@
       "cache_disabled": false,
       "cls_samples": [
         {
-          "value": 0.010046327822952505,
+          "value": 0.003718627703094149,
           "sources": [
             {
               "node": "hero__container"
@@ -367,7 +401,7 @@
               "node": "site-footer__nav"
             },
             {
-              "node": "site-footer__nav"
+              "node": "site-header__nav-item"
             }
           ]
         }
@@ -377,7 +411,7 @@
         "hero__panel",
         "site-footer__nav",
         "site-footer__nav",
-        "site-footer__nav"
+        "site-header__nav-item"
       ],
       "font_requests": [],
       "external_font_requests": [],
@@ -390,14 +424,14 @@
       },
       "timings": {
         "navigation_start_ms": 0,
-        "fcp_ms": 388,
-        "fonts_ready_after_navigation_ms": 0.09999999403953552,
-        "total_pass_ms": 3366.97
+        "fcp_ms": 252,
+        "fonts_ready_after_navigation_ms": 0,
+        "total_pass_ms": 3056.12
       },
       "first_visible_font": "Inter 400",
       "fallback_font_visibly_painted": "NOT OBSERVED",
       "fout_observed": false,
-      "cls_total": 0.010046327822952505,
+      "cls_total": 0.003718627703094149,
       "computed_fonts": {
         "headerPhone": {
           "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -422,7 +456,7 @@
       "cache_disabled": true,
       "cls_samples": [
         {
-          "value": 0.010046327822952505,
+          "value": 0.010051848239700458,
           "sources": [
             {
               "node": "hero__container"
@@ -460,14 +494,14 @@
       },
       "timings": {
         "navigation_start_ms": 0,
-        "fcp_ms": 288,
-        "fonts_ready_after_navigation_ms": 0,
-        "total_pass_ms": 3180.16
+        "fcp_ms": 264,
+        "fonts_ready_after_navigation_ms": 0.10000000149011612,
+        "total_pass_ms": 3063.36
       },
       "first_visible_font": "Inter 400",
       "fallback_font_visibly_painted": "NOT OBSERVED",
       "fout_observed": false,
-      "cls_total": 0.010046327822952505,
+      "cls_total": 0.010051848239700458,
       "computed_fonts": {
         "headerPhone": {
           "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -494,7 +528,35 @@
     "cache_disabled": true,
     "cls_samples": [
       {
-        "value": 0.010046327822952505,
+        "value": 0.0019339840563260384,
+        "sources": [
+          {
+            "node": "site-footer__nav"
+          },
+          {
+            "node": "site-footer__nav"
+          },
+          {
+            "node": "site-footer__nav"
+          },
+          {
+            "node": "site-footer__phone"
+          },
+          {
+            "node": "site-footer__actions"
+          }
+        ]
+      },
+      {
+        "value": 1.7734898733728234e-07,
+        "sources": [
+          {
+            "node": "fab fa-youtube site-footer__social-fa"
+          }
+        ]
+      },
+      {
+        "value": 0.0038067849288830565,
         "sources": [
           {
             "node": "hero__container"
@@ -509,17 +571,23 @@
             "node": "site-footer__nav"
           },
           {
-            "node": "site-footer__nav"
+            "node": "site-header__phones"
           }
         ]
       }
     ],
     "layout_shift_sources": [
+      "site-footer__nav",
+      "site-footer__nav",
+      "site-footer__nav",
+      "site-footer__phone",
+      "site-footer__actions",
+      "fab fa-youtube site-footer__social-fa",
       "hero__container",
       "hero__panel",
       "site-footer__nav",
       "site-footer__nav",
-      "site-footer__nav"
+      "site-header__phones"
     ],
     "font_requests": [],
     "external_font_requests": [],
@@ -532,14 +600,14 @@
     },
     "timings": {
       "navigation_start_ms": 0,
-      "fcp_ms": 1112,
+      "fcp_ms": 336,
       "fonts_ready_after_navigation_ms": 0,
-      "total_pass_ms": 4193.08
+      "total_pass_ms": 3140.0
     },
     "first_visible_font": "Inter 400",
     "fallback_font_visibly_painted": "NOT OBSERVED",
     "fout_observed": false,
-    "cls_total": 0.010046327822952505,
+    "cls_total": 0.005740946334196432,
     "computed_fonts": {
       "headerPhone": {
         "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
@@ -559,6 +627,6 @@
       }
     }
   },
-  "cls_after": 0.010046327822952505,
+  "cls_after": 0.005740946334196432,
   "duplicate_font_requests": false
 }

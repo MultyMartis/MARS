@@ -1,0 +1,64 @@
+{
+  "fixture_id": "unauthorized-production-service-v1",
+  "description": "Active export group not in operator scope registry — must BLOCK",
+  "operator_service_scope": {
+    "services": [
+      {
+        "service_id": "SVC-E01",
+        "service_name": "настройка 1С",
+        "current_group": "grp-e01",
+        "current_group_status": "ACTIVE",
+        "advertising_status": "MUST REPRESENT IN CAMPAIGN",
+        "absence_from_production_permitted": false,
+        "recovery_required": false
+      }
+    ]
+  },
+  "protected_seed_registry": [
+    {
+      "keyword_id": "kw-e01",
+      "phrase": "настройка 1с",
+      "group_id": "grp-e01"
+    }
+  ],
+  "production_dataset": {
+    "groups": [
+      {
+        "group_id": "grp-e01",
+        "viability_status": "ACTIVE",
+        "export_to_xlsx": true,
+        "planned_url": "https://example.test/setup"
+      },
+      {
+        "group_id": "grp-unauthorized",
+        "viability_status": "ACTIVE",
+        "export_to_xlsx": true,
+        "planned_url": "https://example.test/unauthorized"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword_id": "kw-e01",
+        "phrase": "настройка 1с",
+        "group_id": "grp-e01",
+        "final_status": "ACTIVE"
+      },
+      {
+        "keyword_id": "kw-unauth",
+        "phrase": "несанкционированная услуга",
+        "group_id": "grp-unauthorized",
+        "final_status": "ACTIVE"
+      }
+    ],
+    "held_groups": []
+  },
+  "controlled_test_registry": { "tests": [] },
+  "ad_registry": {
+    "ads": [
+      { "ad_id": "ad-e01", "group_id": "grp-e01", "landing_url": "https://example.test/setup" },
+      { "ad_id": "ad-unauth", "group_id": "grp-unauthorized", "landing_url": "https://example.test/unauthorized" }
+    ]
+  },
+  "collision_validation": { "final_status": "PASS" },
+  "negative_validation": {}
+}

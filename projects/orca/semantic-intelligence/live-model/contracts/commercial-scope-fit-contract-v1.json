@@ -1,0 +1,28 @@
+{
+  "contract_id": "orca-commercial-scope-fit-contract-v1",
+  "version": "1.0.0",
+  "separation_required": true,
+  "questions": {
+    "A_commercial_intent": {
+      "question": "Is the user seeking a paid service or specialist?",
+      "output_field": "commercial_eligibility.decision",
+      "values": ["ACCEPT", "REJECT", "ABSTAIN"]
+    },
+    "B_scope_fit": {
+      "question": "Does this project offer the requested service?",
+      "output_field": "scope_fit",
+      "values": ["IN_SCOPE", "OUT_OF_SCOPE", "UNKNOWN"]
+    },
+    "C_ownership": {
+      "question": "Which service owner or landing should accept the query?",
+      "output_field": "ownership",
+      "values": ["service_id", "SERVICE_GAP", null]
+    }
+  },
+  "forbidden_rules": [
+    "out_of_scope_service_must_not_force_commercial_reject",
+    "registry_absence_is_not_noncommercial_proof",
+    "geography_alone_must_not_force_accept"
+  ],
+  "admission_boundary": "commercial_eligibility only — scope_fit evaluated separately post-admission"
+}

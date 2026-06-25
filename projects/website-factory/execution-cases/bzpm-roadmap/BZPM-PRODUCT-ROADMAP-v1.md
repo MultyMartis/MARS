@@ -3,7 +3,7 @@
 **Program:** Website Factory  
 **Execution case:** BZPM  
 **Document role:** Canonical planning document for future BZPM work  
-**Status:** Post M9.8.9 Catalog UX Complete 01 — **M9.8.9 Minor Fixes Pack #1** active · **Corporate Pages Program** open — Research **COMPLETE** · IA **READY**  
+**Status:** Post M9.8.9 Catalog UX Complete 01 — **M9.8.9 Minor Fixes Pack #1** active · **Corporate Pages Program** open — Research **COMPLETE** · IA **READY** · Charters **DRAFT COMPLETE / APPROVAL OPEN** · Visual design **NOT OPEN**  
 **Date:** 2026-06-22 (Corporate Pages Program — Research → IA phase gate)  
 **Authority:** Repository evidence + SITE-002 TEST checkpoint `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI` + operator feedback (Алексей)
 
@@ -425,25 +425,29 @@ Delivery lane for BZPM catalog on OpenCart TEST (`zpm.new-site.space`). Distinct
 ## Corporate Pages Program
 
 **Registered:** 2026-06-22  
-**Status:** **OPEN** — Research **COMPLETE** · IA / Architecture **READY** · Copy system **REGISTERED**  
+**Status:** **OPEN** — Research **COMPLETE** · IA **READY** · Copy **SUBSTANTIVELY COMPLETE** (sign-off pending) · Design Charter **DRAFT COMPLETE / APPROVAL OPEN** · Visual design **NOT OPEN**  
 **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`  
 **Program doc:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-v1.md)  
 **IA map:** [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md)  
+**Design program:** [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md)  
+**Phase gate:** [BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md](BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md)  
 **Copy standard:** [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md)  
+**Charters:** [charters/README.md](charters/README.md)  
 **Registration report:** [REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md) · [Copy system report](../../../ocpilot/sites/site-002/reports/REPORT-BZPM-COPY-SYSTEM-REGISTRATION.md)
 
 **Research:** M9.13–M9.18 **complete**  
-**Copy content:** **Not started** — PAGE-COPY v1 shells registered  
-**Design / Implementation:** **Not started** — **not authorized**
+**Copy content:** **Substantively complete** — canonical PAGE-COPY; operator sign-off pending  
+**Design Charter / Brief:** **Draft complete** — operator approval pending  
+**Design / Implementation:** **NOT OPEN** / **not started** — **not authorized**
 
-| ID | Page | URL (TEST) | Research | IA | Copy | Implementation |
-|----|------|------------|----------|-----|------|----------------|
-| **M9.13** | About Company | `/about` | **Complete** | Mapped | Registered | Not started |
-| **M9.14** | Delivery | `/delivery` | **Complete** | Mapped | Registered | Not started |
-| **M9.15** | Payment | `/payment-methods` | **Complete** | Mapped | Registered | Not started |
-| **M9.16** | Dealers | `/dealers` | **Complete** | Mapped | Registered | Not started |
-| **M9.17** | Warranty | `/guarantee` | **Complete** | Mapped | Registered | Not started |
-| **M9.18** | Custom Manufacturing | `/custom-equipment` | **Complete** | Mapped | Registered | Not started |
+| ID | Page | URL (TEST) | Research | IA | Copy | Design Charter | Design Brief | Implementation |
+|----|------|------------|----------|-----|------|----------------|--------------|----------------|
+| **M9.13** | About Company | `/about` | **Complete** | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete | Not started |
+| **M9.14** | Delivery | `/delivery` | **Complete** | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete | Not started |
+| **M9.15** | Payment | `/payment-methods` | **Complete** | Mapped | Substantively complete (v1) | Draft complete | Draft complete | Not started |
+| **M9.16** | Dealers | `/dealers` | **Complete** | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete | Not started |
+| **M9.17** | Warranty | `/guarantee` | **Complete** | Mapped | Substantively complete (v1) | Draft complete | Draft complete | Not started |
+| **M9.18** | Custom Manufacturing | `/custom-equipment` | **Complete** | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete | Not started |
 
 **Research artifacts:**
 
@@ -454,14 +458,16 @@ Delivery lane for BZPM catalog on OpenCart TEST (`zpm.new-site.space`). Distinct
 - [BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
 - [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../../../ocpilot/sites/site-002/reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
 
-**PAGE-COPY artifacts (v1 shells — copy not started):**
+**PAGE-COPY artifacts (canonical):**
 
-- [BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.md)
-- [BZPM-M9.14-DELIVERY-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.md)
+- [BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.13-ABOUT-COMPANY-PAGE-COPY-v1.1.md)
+- [BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md)
 - [BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md)
-- [BZPM-M9.16-DEALERS-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.md)
+- [BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md)
 - [BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md)
-- [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.md)
+- [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md](../../../ocpilot/sites/site-002/copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md)
+
+**Design Charter + Brief:** [charters/README.md](charters/README.md)
 
 ### Separate completed workstream — Contacts
 
@@ -554,6 +560,7 @@ All approved roadmap items. Status **Approved** unless noted.
 | 2026-06-22 | **UPDATED** — **Corporate Pages Program** registered (M9.13–M9.18); M9.13/M9.14 research artifacts; Contacts excluded as separate delivered workstream |
 | 2026-06-22 | **UPDATED** — Corporate Pages Research phase **COMPLETE** (M9.15–M9.18); IA map [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md); M9.17 URL `/guarantee` |
 | 2026-06-22 | **UPDATED** — Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells |
+| 2026-06-22 | **RECONCILED** — Corporate Pages registry synced; charters + briefs registered — [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-19 | **UPDATED** — Authority `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`; M9.8.1/2/5 marked complete; **M9.8.9 Minor Fixes Pack #1** (M9.8.9-01…08) registered as active work package; M9.8.9-06 filter bugs added to open bugs |
 
 ---

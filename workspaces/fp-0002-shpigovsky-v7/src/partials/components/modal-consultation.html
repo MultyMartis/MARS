@@ -1,0 +1,105 @@
+<div
+  class="modal-consultation"
+  data-modal="consultation"
+  aria-hidden="true"
+  hidden
+>
+  <div class="modal-consultation__overlay" data-modal-close tabindex="-1" aria-hidden="true"></div>
+  <div
+    class="modal-consultation__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-consultation-title"
+  >
+    <button
+      class="modal-consultation__close"
+      type="button"
+      data-modal-close
+      aria-label="Закрыть окно"
+    >
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+
+    <h2 class="modal-consultation__title" id="modal-consultation-title" data-modal-title-target>Записаться на&nbsp;консультацию</h2>
+    <p class="modal-consultation__subtitle" data-modal-subtitle-target hidden></p>
+
+    <form
+      class="modal-consultation__form"
+      data-lead-form
+      data-form-context="modal"
+      novalidate
+    >
+      <div class="modal-consultation__hidden" data-lead-form-hidden aria-hidden="true">
+        <input type="hidden" name="form_context" data-lead-hidden="form_context" value="modal">
+        <input type="hidden" name="lead_source" data-lead-hidden="lead_source" value="">
+        <input type="hidden" name="page_url" data-lead-hidden="page_url" value="">
+        <input type="hidden" name="page_title" data-lead-hidden="page_title" value="">
+        <input type="hidden" name="g-recaptcha-response" data-lead-hidden="g-recaptcha-response" value="">
+      </div>
+
+      <div class="modal-consultation__row">
+        <div class="modal-consultation__field" data-lead-field-wrap>
+          <label class="modal-consultation__label" for="modal-consultation-name">Ваше имя</label>
+          <input
+            class="modal-consultation__input"
+            type="text"
+            id="modal-consultation-name"
+            name="name"
+            autocomplete="name"
+            placeholder="Ваше имя"
+            required
+            data-modal-focus
+          >
+          <span class="modal-consultation__field-error" data-lead-field-error id="modal-consultation-name-error" hidden></span>
+        </div>
+        <div class="modal-consultation__field" data-lead-field-wrap>
+          <label class="modal-consultation__label" for="modal-consultation-phone">Ваш телефон</label>
+          <input
+            class="modal-consultation__input"
+            type="tel"
+            id="modal-consultation-phone"
+            name="phone"
+            data-phone-input
+            inputmode="tel"
+            placeholder="+7 999 999 - 99 - 99"
+            autocomplete="tel"
+            required
+          >
+          <span class="modal-consultation__field-error" data-lead-field-error id="modal-consultation-phone-error" hidden></span>
+        </div>
+      </div>
+
+      <div class="modal-consultation__field modal-consultation__field_message" data-lead-field-wrap>
+        <label class="modal-consultation__label" for="modal-consultation-message">Опишите ситуацию</label>
+        <textarea
+          class="modal-consultation__textarea"
+          id="modal-consultation-message"
+          name="message"
+          rows="4"
+          placeholder="Опишите ситуацию"
+          required
+          aria-describedby="modal-consultation-message-error"
+        ></textarea>
+        <span class="modal-consultation__field-error" data-lead-field-error id="modal-consultation-message-error" hidden></span>
+      </div>
+
+      <label class="modal-consultation__consent" data-lead-field-wrap>
+        <input
+          class="modal-consultation__consent-input"
+          type="checkbox"
+          name="consent"
+          value="1"
+          required
+          aria-describedby="modal-consultation-consent-error"
+        >
+        <span class="modal-consultation__consent-control" aria-hidden="true"></span>
+        <span class="modal-consultation__consent-text">Я&nbsp;даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a class="modal-consultation__consent-link" href="/consent-personal-data/">Согласием на&nbsp;обработку персональных данных</a> и&nbsp;соглашаюсь с&nbsp;<a class="modal-consultation__consent-link" href="/privacy-policy/">Политикой конфиденциальности</a>.</span>
+        <span class="modal-consultation__field-error modal-consultation__field-error_consent" data-lead-field-error id="modal-consultation-consent-error" hidden></span>
+      </label>
+
+      <button type="submit" class="btn btn_dark btn--primary modal-consultation__submit" data-modal-submit-target>Записаться на&nbsp;консультацию</button>
+
+      <div class="modal-consultation__status" data-lead-form-status role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</div>

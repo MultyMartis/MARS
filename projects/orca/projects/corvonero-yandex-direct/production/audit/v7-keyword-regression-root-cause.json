@@ -1,0 +1,51 @@
+{
+  "audit_id": "v7-keyword-regression-root-cause",
+  "generated_at": "2026-06-22T08:12:56.478Z",
+  "failure_pattern": "v7 scope-recovery restore path bypassed v5 educational exclusions and semantic gates; export validators did not read actual XLSX narrative fields or exclusion authority.",
+  "phrases": [
+    {
+      "keyword_id": "kw-corv01-disc-499",
+      "raw_phrase": "1с программист без образования",
+      "previous_exclusion": "EXCLUDE EDUCATIONAL — v5-collision-actions-final CF-0016",
+      "source_stage": "v7-production-input-package.json phrases_to_restore",
+      "responsible_rule": "applyV7ScopeRecoveryPackage restoreMap override",
+      "validation_failure": "scope recovery treated v6 EXCLUDE as wrongful without semantic re-review",
+      "repair_action": "EXCLUDE — restore v5 authority via exclusion registry"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-591",
+      "raw_phrase": "программист 1с без высшего образования",
+      "previous_exclusion": "EXCLUDE EDUCATIONAL — v5-collision-actions-final",
+      "source_stage": "v7-production-input-package.json phrases_to_restore",
+      "responsible_rule": "applyV7ScopeRecoveryPackage restoreMap override",
+      "validation_failure": "commercial-scope-recovery-registry misclassified education phrase as seed",
+      "repair_action": "EXCLUDE — restore v5 authority via exclusion registry"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-041",
+      "raw_phrase": "задание программисту 1с",
+      "previous_exclusion": "EXCLUDE in v6 — ambiguous informational",
+      "source_stage": "v7 scope recovery + phrase_inline_negatives rescue tail",
+      "responsible_rule": "phrase_inline_negatives CORV-G01-01 + HIGH confidence auto-active",
+      "validation_failure": "inline-minus tail masked weak base; contract INV-INLINE-01 not enforced on export",
+      "repair_action": "EXCLUDE AMBIGUOUS — remove keyword and inline tail"
+    },
+    {
+      "keyword_id": "kw-corv01-disc-034",
+      "raw_phrase": "часа программиста 1с",
+      "previous_exclusion": "EXCLUDE in v6 — unnatural phrase",
+      "source_stage": "v7-production-input-package.json phrases_to_restore",
+      "responsible_rule": "restored_by_scope_recovery without naturalness gate",
+      "validation_failure": "no unnatural-phrase validator on scope recovery restore list",
+      "repair_action": "EXCLUDE UNNATURAL"
+    }
+  ],
+  "reusable_failure_pattern": {
+    "id": "SCOPE_RECOVERY_WITHOUT_EXCLUSION_AUTHORITY",
+    "description": "Automated scope recovery restored phrases previously excluded for education/ambiguity without checking operator-semantic-exclusion-registry; inline-minus rescue and blank hypothesis serialization were not gated on actual XLSX."
+  },
+  "evidence": {
+    "v7_package_restore_count": 41,
+    "v5_education_audit_rows": 4
+  }
+}

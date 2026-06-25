@@ -1,0 +1,47 @@
+{
+  "design_id": "orca-hard-negative-set-design",
+  "version": "v1",
+  "date": "2026-06-22",
+  "status": "PROPOSED — OPERATOR APPROVAL REQUIRED",
+  "pack_type": "fixed_separate_pack",
+  "double_annotation_mandatory": true,
+  "categories": [
+    {
+      "id": "HN_PROTECTED_CAREER",
+      "protected_class": "career",
+      "design_goal": "commercial_keyword_trap"
+    },
+    {
+      "id": "HN_PROTECTED_EDUCATIONAL",
+      "protected_class": "educational",
+      "design_goal": "course_vs_service_trap"
+    },
+    {
+      "id": "HN_PROTECTED_DIY",
+      "protected_class": "diy_how_to",
+      "design_goal": "self_service_vs_hire_trap"
+    },
+    {
+      "id": "HN_PROTECTED_REGULATORY",
+      "protected_class": "regulatory",
+      "design_goal": "info_vs_consulting_trap"
+    },
+    {
+      "id": "HN_PROTECTED_NAVIGATIONAL",
+      "protected_class": "navigational",
+      "design_goal": "brand_login_trap"
+    },
+    {
+      "id": "HN_PROBLEM_FALSE_COMMERCIAL",
+      "protected_class": null,
+      "design_goal": "problem_query_over_admission"
+    },
+    {
+      "id": "HN_SHORT_HEAD",
+      "protected_class": null,
+      "design_goal": "head_term_ambiguity"
+    }
+  ],
+  "split_assignment": "SPLIT_HARD_NEGATIVE",
+  "d3_evaluation": "protected_strata_fpr_per_class"
+}
