@@ -1,0 +1,8 @@
+# AUTHORITY v1
+
+- Desktop PNG: Услуга - десктоп.png — SHA A7AB847F2BBF9CA9FF63F11C44EF9FD1472072F04A6274B9550FE6D6C3790D7E
+- Mobile PNG: Услуга - мобильная.png — SHA 6B252C5F43F3E61A090787D8031880F635BD4F58291268A5484870A826BBFC84
+- Desktop frame: 1:1748
+- Mobile frame: 1:5078
+- Stale extracts used: NONE as authority
+- Verdict: PASS

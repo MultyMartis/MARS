@@ -229,7 +229,7 @@ service_subdivision_deploy: NOT_STARTED
 fp0002_png_grouped_page_implementation_protocol: ACTIVE_REFERENCE_WORKFLOW
 service_subdivision_final_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-final-reference-freeze/
 next_page: FP-0002-PG-004-SERVICE-LEAF-INTERNAL-PAGE
-next_phase: FP-0002-PG-004-SERVICE-LEAF-GROUP-2
+next_phase: FP-0002-PG-004-SERVICE-LEAF-GROUP-3
 services_v2_reference: PRESERVED
 service_leaf_page_id: FP-0002-PG-004
 service_leaf_page_name: Услуга конечная
@@ -244,12 +244,22 @@ service_leaf_group_1_cta: PNG_MATCH_COMPLETE
 service_leaf_lifebuoy_runtime: ZERO_BY_OPERATOR_OVERRIDE
 service_leaf_group_1_desktop: PASS
 service_leaf_group_1_mobile: PASS
+service_leaf_group_2: COMPLETE
+service_leaf_group_2_name: SIGNS_OF_ALCOHOL_DEPENDENCE_EDITORIAL
+service_leaf_group_2_text_transcript: COMPLETE
+service_leaf_group_2_content_fidelity: EXACT_VISIBLE_DESIGN_COPY
+service_leaf_group_2_desktop: PASS
+service_leaf_group_2_mobile: PASS
+service_leaf_group_2_missing_text: ZERO
+service_leaf_group_2_invented_copy: ZERO
+service_leaf_group_2_template_garbage: ZERO
 service_leaf_remaining_groups: NOT_IMPLEMENTED
 service_leaf_full_page: INCOMPLETE
 service_leaf_noindex: ACTIVE
 service_leaf_group_1_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-group-1/
 service_leaf_group_1_plan: READY
-service_leaf_implementation: GROUP_1_COMPLETE
+service_leaf_implementation: GROUP_2_COMPLETE
+service_leaf_group_2_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-group-2/
 service_leaf_canonical_switch: NOT_STARTED
 service_leaf_navigation_switch: NOT_STARTED
 service_leaf_deploy: NOT_STARTED
