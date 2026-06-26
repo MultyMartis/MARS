@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (Services Figma MCP anatomy audit — HYBRID_RECONSTRUCTION recommended)
+**Last updated:** 2026-06-26 (Services V2 Block 1 — upper page complete pending operator review)
 
 ## Workspace versions (2026-06-24)
 
@@ -97,10 +97,20 @@ services_breadcrumbs: IDENTIFIED
 services_page_subnav: IDENTIFIED
 services_v1_differential: COMPLETE
 services_v2_decision: HYBRID_RECONSTRUCTION
-services_v2_implementation: NOT_STARTED
 services_v1: PRESERVED_FALLBACK
+services_v2_strategy: HYBRID_RECONSTRUCTION
+services_v2_block_1: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_hero: FIGMA_DRIVEN_SERVICES_SPECIFIC
+services_v2_breadcrumbs: IMPLEMENTED
+services_v2_subnav: IMPLEMENTED
+services_v2_category_sections: NOT_STARTED
+services_v2_program: NOT_STARTED
+services_v2_navigation_activation: NOT_STARTED
+services_v2_stable_freeze: NOT_STARTED
+services_v2_implementation: BLOCK_1_COMPLETE
+services_v2_page: workspaces/fp-0002-shpigovsky-v7/src/pages/uslugi-v2.html
 home_source_universalization: NOT_STARTED
-next_phase: SERVICES_V2_HERO_BREADCRUMBS_SUBNAV_BLOCK_1
+next_phase: SERVICES_V2_CATEGORY_RECONSTRUCTION_BLOCK_2
 ```
 
 ## Milestone (2026-06-23)

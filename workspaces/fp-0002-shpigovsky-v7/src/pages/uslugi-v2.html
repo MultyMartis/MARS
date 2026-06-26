@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Услуги V2 — Шпиговский дом", "description": "Услуги центра «Шпиговский дом»: лечение и профилактика. Экспериментальная V2-страница верхнего блока. TEMPORARY_SEO_COPY", "canonical": "https://shpigovsky.ru/uslugi/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Услуги — Шпиговский дом", "ogDescription": "Услуги центра «Шпиговский дом»: лечение и профилактика. TEMPORARY_SEO_COPY", "ogUrl": "https://shpigovsky.ru/uslugi/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Услуги центра «Шпиговский дом»"})
+</head>
+<body class="page-uslugi-v2" data-page="uslugi-v2">
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": " site-header__nav-link--active", "activeNavOffcanvasClass": " offcanvas__nav-link--active", "activeNavUslugiAria": " aria-current=\"page\""})
+  <main class="page-uslugi-v2__main">
+    @@include('partials/sections/services-inner-hero-v2.html')
+    <div class="page-uslugi-v2__upper-nav container">
+      @@include('partials/components/breadcrumbs.html', {"crumbHome": "Главная", "crumbCurrent": "Услуги лечения и профилактики"})
+      @@include('partials/components/services-page-subnav.html')
+    </div>
+    <!-- FP-0002 SERVICES V2 BLOCK 1 audit boundary — category sections not started -->
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/components/modal-consultation.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

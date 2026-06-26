@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-26 (Services Figma MCP anatomy audit)
+**Updated:** 2026-06-26 (Services V2 Block 1 — upper page)
 
 ```text
 workspace: V7
@@ -131,10 +131,21 @@ services_breadcrumbs: IDENTIFIED
 services_page_subnav: IDENTIFIED
 services_v1_differential: COMPLETE
 services_v2_decision: HYBRID_RECONSTRUCTION
-services_v2_implementation: NOT_STARTED
 services_v1: PRESERVED_FALLBACK
+services_v2_strategy: HYBRID_RECONSTRUCTION
+services_v2_block_1: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_hero: FIGMA_DRIVEN_SERVICES_SPECIFIC
+services_v2_breadcrumbs: IMPLEMENTED
+services_v2_subnav: IMPLEMENTED
+services_v2_category_sections: NOT_STARTED
+services_v2_program: NOT_STARTED
+services_v2_navigation_activation: NOT_STARTED
+services_v2_stable_freeze: NOT_STARTED
+services_v2_implementation: BLOCK_1_COMPLETE
+services_v2_page: src/pages/uslugi-v2.html
+services_v2_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-1/
 services_figma_mcp_audit: workspaces/fp-0002-shpigovsky-v7/audits/services-figma-mcp-anatomy-01/
-next_phase: SERVICES_V2_HERO_BREADCRUMBS_SUBNAV_BLOCK_1
+next_phase: SERVICES_V2_CATEGORY_RECONSTRUCTION_BLOCK_2
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
