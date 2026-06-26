@@ -685,10 +685,10 @@ service_leaf_group_1_mobile:
 PASS
 
 service_leaf_remaining_groups:
-NOT_IMPLEMENTED
+COMPLETE
 
 service_leaf_full_page:
-INCOMPLETE
+COMPLETE_PENDING_OPERATOR_REVIEW
 
 service_leaf_noindex:
 ACTIVE
@@ -780,11 +780,59 @@ FP-0002-V7-PG-004-SERVICE-LEAF-GROUP-4-BEFORE-SOURCE.zip
 service_leaf_group_4_backup_sha256:
 CE8FBD28503A6EDF210D4B44AE71AB76836C4C846A486CC0CBB4E19ECE1BACC2
 
-service_leaf_remaining_groups:
-NOT_IMPLEMENTED
+service_leaf_group_5:
+COMPLETE
+
+service_leaf_group_5_name:
+REHABILITATION_REQUIREMENTS_STAGES_AND_INTERIOR
+
+service_leaf_group_5_desktop:
+PASS
+
+service_leaf_group_5_mobile:
+PASS
+
+service_leaf_group_5_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-remaining-page/
+
+service_leaf_group_6:
+COMPLETE
+
+service_leaf_group_6_name:
+SHARED_LOWER_BLOCKS
+
+service_leaf_group_6_desktop:
+PASS
+
+service_leaf_group_6_mobile:
+PASS
+
+service_leaf_group_6_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-remaining-page/
+
+service_leaf_desktop:
+PASS
+
+service_leaf_mobile:
+PASS
+
+service_leaf_functional_qa:
+PASS
+
+service_leaf_regression_qa:
+PASS
+
+service_leaf_remaining_page_backup:
+FP-0002-V7-PG-004-SERVICE-LEAF-BEFORE-REMAINING-PAGE-SOURCE.zip
+
+service_leaf_remaining_page_backup_sha256:
+71FB1DC74890A366B0E1795DC4F0A5A4406ECB21A36A50605EDEB9C705D6E9C8
+
+service_leaf_full_page_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-remaining-page/
 
 service_leaf_implementation:
-GROUP_4_COMPLETE
+FULL_PAGE_ASSEMBLY_COMPLETE
 
 service_leaf_canonical_switch:
 NOT_STARTED

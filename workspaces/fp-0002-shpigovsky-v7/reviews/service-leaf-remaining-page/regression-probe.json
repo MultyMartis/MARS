@@ -1,0 +1,17 @@
+{
+  "service_leaf_group12_source_unchanged": true,
+  "home_reviews_partial_delta": true,
+  "home_reviews_delta_safe_optional_params": true,
+  "group1_regression": 0,
+  "group2_regression": 0,
+  "home_regression": 0,
+  "services_v1_regression": 0,
+  "services_v2_regression": 0,
+  "service_subdivision_regression": 0,
+  "notes": [
+    "GROUP 1-2 partial source files unchanged at HEAD",
+    "home-reviews: optional sectionId/sectionModifierClass only; empty defaults on Home/Subdivision",
+    "Reference pages: include param lines only; no content/SCSS drift"
+  ],
+  "pass": true
+}
