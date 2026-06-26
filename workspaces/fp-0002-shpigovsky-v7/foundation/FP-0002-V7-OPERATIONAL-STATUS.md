@@ -134,15 +134,16 @@ services_v2_decision: HYBRID_RECONSTRUCTION
 services_v1: PRESERVED_FALLBACK
 services_v2_strategy: HYBRID_RECONSTRUCTION
 services_v2_block_1: ACCEPTED_WORKING_BASE
-services_v2_block_2a: COMPLETE_PENDING_OPERATOR_REVIEW
-services_v2_category_reference_pattern: ADDICTIONS_IMPLEMENTED
-services_v2_remaining_categories: NOT_STARTED
+services_v2_block_2a: CORRECTED_AND_INTEGRATED
+services_v2_block_2b: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_category_family: FOUR_SECTIONS_IMPLEMENTED
+services_v2_gallery_captions: IMPLEMENTED_FROM_EXISTING_V7_PATTERN
 services_v2_program: NOT_STARTED
 services_v2_manual_polish: OPERATOR_REQUIRED
 services_v2_root_tokens_added: ZERO
 services_v1: PRESERVED_FALLBACK
-services_v2_review_block_2a: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2a/
-next_phase: SERVICES_V2_BLOCK_2B_MENTAL_HEALTH
+services_v2_review_block_2b: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2b/
+next_phase: SERVICES_V2_PROGRAM_AFTER_OPERATOR_REVIEW
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
