@@ -751,7 +751,13 @@ fp0002_service_leaf_template:
 CANONICAL_STABLE
 
 fp0002_static_demo_site:
-PASS_2_COMPLETE_PENDING_NAVIGATION_WIRING
+PASS_2_COMPLETE_READY_FOR_PASS_3
+
+fp0002_static_demo_overflow:
+ZERO_CONFIRMED
+
+fp0002_static_demo_visual_readiness:
+READY_FOR_NAVIGATION_WIRING
 
 fp0002_static_demo_excel_authority:
 CONFIRMED

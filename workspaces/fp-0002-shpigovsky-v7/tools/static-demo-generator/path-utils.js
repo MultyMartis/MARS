@@ -49,9 +49,17 @@ function rewriteAssetPathsToRoot(html, outputRelative) {
 
   let result = html;
   const prefix = '/assets/';
-  result = result.replace(/(?<![/"'=])assets\//g, prefix);
-  result = result.replace(/href="\/assets\/assets\//g, 'href="/assets/');
-  result = result.replace(/src="\/assets\/assets\//g, 'src="/assets/');
+
+  // Rewrite quoted relative asset roots used in src/href/preload links.
+  result = result.replace(/(["'])(?:\.\/)?assets\//g, `$1${prefix}`);
+
+  // Rewrite unquoted url(...) references if present in inline markup.
+  result = result.replace(/url\((["']?)(?:\.\/)?assets\//g, `url($1${prefix}`);
+
+  // Remaining bare assets/ tokens outside absolute URLs.
+  result = result.replace(/(?<![\w/"'=])assets\//g, prefix);
+
+  result = result.replace(/\/assets\/assets\//g, '/assets/');
   return result;
 }
 
