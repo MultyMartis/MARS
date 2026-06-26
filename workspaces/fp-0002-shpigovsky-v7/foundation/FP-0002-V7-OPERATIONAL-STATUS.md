@@ -229,37 +229,52 @@ services_v1:
 PRESERVED_FALLBACK
 
 services_v2_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-reference-freeze/
-next_phase: SERVICE_SUBDIVISION_PAGE_PASS_2
+next_phase: SERVICE_SUBDIVISION_PAGE_PASS_3_OPERATOR_REVIEW
 
 service_subdivision_page:
 IN_IMPLEMENTATION
+
+service_subdivision_pass_1_intro:
+REMOVED_BY_OPERATOR_DECISION
+
+service_subdivision_primary:
+REMOVED_BY_OPERATOR_DECISION
+
+service_subdivision_upper_structure:
+RECONSTRUCTED_FROM_FIGMA
+
+service_subdivision_subnav_border:
+CANONICAL_EXISTING_TOKEN
+
+service_subdivision_anchor_map:
+VALID
 
 service_subdivision_pass_1:
 CORRECTED_AND_INTEGRATED
 
 service_subdivision_intro_markup:
-VALID
+SUPERSEDED_NOT_IN_RUNTIME
 
 service_subdivision_optional_regions:
 CONDITIONAL_RENDERING_ENABLED
 
 service_subdivision_primary_content:
-ADJUDICATED
+REMOVED_BY_OPERATOR_DECISION
 
 service_subdivision_pass_2:
-COMPLETE_PENDING_OPERATOR_REVIEW
+COMPLETE
 
 service_subdivision_nature:
-IMPLEMENTED
+PRESERVED
 
 service_subdivision_info_cards:
-IMPLEMENTED
+PRESERVED
 
 service_subdivision_first_cta:
-IMPLEMENTED
+PRESERVED
 
 service_subdivision_program:
-IMPLEMENTED
+PRESERVED
 
 service_subdivision_working_page:
 src/pages/usluga-podrazdel-v1.html
@@ -274,6 +289,24 @@ service_subdivision_root_tokens_added:
 ZERO
 
 service_subdivision_pass_3:
+COMPLETE_PENDING_OPERATOR_REVIEW
+
+service_subdivision_stages:
+IMPLEMENTED
+
+service_subdivision_second_cta:
+IMPLEMENTED
+
+service_subdivision_approach:
+IMPLEMENTED
+
+service_subdivision_center_visual:
+IMPLEMENTED
+
+service_subdivision_team_stats:
+IMPLEMENTED
+
+service_subdivision_pass_4:
 NOT_STARTED
 
 service_subdivision_pass_1_review:
@@ -281,6 +314,9 @@ workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-1/
 
 service_subdivision_pass_2_review:
 workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-2/
+
+service_subdivision_pass_3_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-3/
 
 services_v2_reference:
 PRESERVED
