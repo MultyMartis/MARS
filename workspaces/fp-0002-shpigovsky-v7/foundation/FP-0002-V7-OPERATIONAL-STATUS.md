@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-26 (Services General final polish — pending operator review)
+**Updated:** 2026-06-26 (Services Figma MCP anatomy audit)
 
 ```text
 workspace: V7
@@ -123,7 +123,18 @@ services_general_home_regression: NONE_DETECTED
 services_general_untracked_asset_cleanup: PROBE_CLEANUP_COMPLETE_17_FILES_REMOVED
 services_general_stable_freeze: NOT_STARTED
 services_general_final_polish_commit: pending
-next_phase: SERVICES_GENERAL_OPERATOR_APPROVAL
+services_figma_mcp_connection: VERIFIED
+services_figma_mcp_live_file_read: BLOCKED_NO_FILEKEY
+services_figma_target_frames: VERIFIED_OFFLINE
+services_page_anatomy: COMPLETE
+services_breadcrumbs: IDENTIFIED
+services_page_subnav: IDENTIFIED
+services_v1_differential: COMPLETE
+services_v2_decision: HYBRID_RECONSTRUCTION
+services_v2_implementation: NOT_STARTED
+services_v1: PRESERVED_FALLBACK
+services_figma_mcp_audit: workspaces/fp-0002-shpigovsky-v7/audits/services-figma-mcp-anatomy-01/
+next_phase: SERVICES_V2_HERO_BREADCRUMBS_SUBNAV_BLOCK_1
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26

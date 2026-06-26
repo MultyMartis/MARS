@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (Services General final polish — pending operator review)
+**Last updated:** 2026-06-26 (Services Figma MCP anatomy audit — HYBRID_RECONSTRUCTION recommended)
 
 ## Workspace versions (2026-06-24)
 
@@ -89,8 +89,18 @@ services_general_home_regression: NONE_DETECTED
 services_general_untracked_asset_cleanup: PROBE_CLEANUP_COMPLETE_17_FILES_REMOVED
 services_general_stable_freeze: NOT_STARTED
 services_general_pass_2: COMPLETE_PENDING_OPERATOR_REVIEW
+services_figma_mcp_connection: VERIFIED
+services_figma_mcp_live_file_read: BLOCKED_NO_FILEKEY
+services_figma_target_frames: VERIFIED_OFFLINE
+services_page_anatomy: COMPLETE
+services_breadcrumbs: IDENTIFIED
+services_page_subnav: IDENTIFIED
+services_v1_differential: COMPLETE
+services_v2_decision: HYBRID_RECONSTRUCTION
+services_v2_implementation: NOT_STARTED
+services_v1: PRESERVED_FALLBACK
 home_source_universalization: NOT_STARTED
-next_phase: SERVICES_GENERAL_OPERATOR_APPROVAL
+next_phase: SERVICES_V2_HERO_BREADCRUMBS_SUBNAV_BLOCK_1
 ```
 
 ## Milestone (2026-06-23)
