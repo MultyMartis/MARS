@@ -262,19 +262,18 @@
 	'use strict';
 
 	function boot() {
-		var slider = document.querySelector('[data-reviews-slider]');
-
-		if (!slider || typeof window.Swiper !== 'function') {
+		if (typeof window.Swiper !== 'function') {
 			return;
 		}
 
-		if (slider.swiper) {
-			return;
-		}
+		document.querySelectorAll('[data-reviews-slider]').forEach(function (slider) {
+			if (slider.swiper) {
+				return;
+			}
 
-		var pagination = slider.querySelector('[data-reviews-pagination]');
+			var pagination = slider.querySelector('[data-reviews-pagination]');
 
-		new window.Swiper(slider, {
+			new window.Swiper(slider, {
 			slidesPerView: 2.2,
 			spaceBetween: 30,
 			loop: false,
@@ -303,6 +302,7 @@
 				},
 			},
 		});
+		});
 	}
 
 	if (document.readyState === 'loading') {
@@ -317,19 +317,18 @@
 	'use strict';
 
 	function boot() {
-		var slider = document.querySelector('[data-specialists-slider]');
-
-		if (!slider || typeof window.Swiper !== 'function') {
+		if (typeof window.Swiper !== 'function') {
 			return;
 		}
 
-		if (slider.swiper) {
-			return;
-		}
+		document.querySelectorAll('[data-specialists-slider]').forEach(function (slider) {
+			if (slider.swiper) {
+				return;
+			}
 
-		var pagination = slider.querySelector('[data-specialists-pagination]');
+			var pagination = slider.querySelector('[data-specialists-pagination]');
 
-		new window.Swiper(slider, {
+			new window.Swiper(slider, {
 			slidesPerView: 3.5,
 			spaceBetween: 30,
 			loop: false,
@@ -357,6 +356,7 @@
 					spaceBetween: 30,
 				},
 			},
+		});
 		});
 	}
 
