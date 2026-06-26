@@ -118,17 +118,24 @@ services_v2_mockup_copy_review: workspaces/fp-0002-shpigovsky-v7/reviews/service
 services_v2_text_recovery_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-text-recovery/
 services_v2_category_family: COMPLETE_PENDING_OPERATOR_POLISH
 services_v2_mockup_copy_policy: ALL_VISIBLE_TEXT_INCLUDED
+services_v2_hero_layout: CORRECTED_PENDING_OPERATOR_REVIEW
+services_v2_gallery_media_height: NORMALIZED
+services_v2_program_dom: BODY_BEFORE_MEDIA
+services_v2_program_card_pattern: HOME_DIRECTION_STYLE_REUSED
 services_v2_program: COMPLETE_PENDING_OPERATOR_REVIEW
 services_v2_program_mockup_text: COMPLETE
 services_v2_program_empty_content_slots: ZERO
 services_v2_program_component: SERVICES_SPECIFIC_REUSABLE_PARTIAL
 services_v2_root_tokens_added: ZERO
-services_v2_founder: NOT_STARTED
-services_v2_comfort: NOT_STARTED
-services_v2_mid_page_cta: NOT_STARTED
+services_v2_founder: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_comfort: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_mid_page_cta: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_faq: NOT_STARTED
+services_v2_final_form: NOT_STARTED
 services_v2_program_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-program/
+services_v2_lower_pass_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-founder-comfort-cta/
 services_v1: PRESERVED_FALLBACK
-next_phase: SERVICES_V2_PROGRAM_OPERATOR_REVIEW
+next_phase: SERVICES_V2_LOWER_BLOCKS_OPERATOR_REVIEW
 ```
 
 ## Milestone (2026-06-23)
