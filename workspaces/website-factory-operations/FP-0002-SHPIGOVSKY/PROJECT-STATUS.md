@@ -228,9 +228,27 @@ service_subdivision_navigation_switch: NOT_STARTED
 service_subdivision_deploy: NOT_STARTED
 fp0002_png_grouped_page_implementation_protocol: ACTIVE_REFERENCE_WORKFLOW
 service_subdivision_final_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-final-reference-freeze/
-next_page: READY_FOR_SEPARATE_START_TASK
-next_phase: FP-0002-PG-004-SERVICE-LEAF-INTERNAL-PAGE
+next_page: FP-0002-PG-004-SERVICE-LEAF-INTERNAL-PAGE
+next_phase: FP-0002-PG-004-SERVICE-LEAF-GROUP-1
 services_v2_reference: PRESERVED
+service_leaf_page_id: FP-0002-PG-004
+service_leaf_page_name: Услуга конечная
+service_leaf_page_type: SERVICE_LEAF_INTERNAL_PAGE
+service_leaf_png_authority: DESKTOP_AND_MOBILE_REGISTERED
+service_leaf_figma_frames: EXACT_NODES_CONFIRMED
+service_leaf_desktop_registry: COMPLETE
+service_leaf_mobile_registry: COMPLETE
+service_leaf_visible_text_anchors: COMPLETE
+service_leaf_asset_registry: COMPLETE
+service_leaf_reuse_matrix: COMPLETE
+service_leaf_group_registry: COMPLETE
+service_leaf_group_1_plan: READY
+service_leaf_implementation: NOT_STARTED
+service_leaf_canonical_switch: NOT_STARTED
+service_leaf_navigation_switch: NOT_STARTED
+service_leaf_deploy: NOT_STARTED
+service_leaf_pass_opening_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-pass-opening/
+service_leaf_planning_pack: workspaces/fp-0002-shpigovsky-v7/plans/service-leaf-page/
 ```
 
 ## Milestone (2026-06-23)
