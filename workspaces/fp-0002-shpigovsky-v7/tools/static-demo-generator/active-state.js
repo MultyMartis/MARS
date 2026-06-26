@@ -4,7 +4,7 @@ const { resolveActiveNavKey } = require('./link-graph');
 
 const NAV_ACTIVE_MAP = {
   uslugi: '/uslugi/',
-  genotipirovanie: '/uslugi/genotipirovanie/',
+  zavisimosti: '/zavisimosti/',
   specialisty: '/specialisty/',
   oCentre: '/o-centre/',
   otzyvy: '/otzyvy/',

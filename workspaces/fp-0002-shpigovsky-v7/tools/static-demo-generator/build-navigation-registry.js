@@ -7,6 +7,7 @@ const { WORKSPACE_ROOT } = require('./registry-loader');
 const { normalizeDemoUrl } = require('./path-utils');
 const { getVisibleChildren, HIDDEN_ORPHAN_PAGE_IDS } = require('./link-graph');
 const { STATIC_SELECTOR_TARGETS } = require('./link-rewriter');
+const { HOME_TREATMENT_PANELS } = require('./home-treatment-links');
 
 const HUB_SECTION_PARENTS = {
   'services-category-addictions': 'FP0002-DEMO-PG-031',
@@ -49,7 +50,7 @@ function buildPass3NavigationRegistry(registry) {
 
   const headerItems = [
     { label: 'Лечение и профилактика', target: 'FP0002-DEMO-PG-002' },
-    { label: 'Генотипирование', target: 'FP0002-DEMO-PG-003' },
+    { label: 'Зависимости', target: 'FP0002-DEMO-PG-003' },
     { label: 'Специалисты', target: 'FP0002-DEMO-PG-004' },
     { label: 'О центре', target: 'FP0002-DEMO-PG-005' },
     { label: 'Отзывы', target: 'FP0002-DEMO-PG-006' },
@@ -93,7 +94,7 @@ function buildPass3NavigationRegistry(registry) {
         { label: 'Зависимости и пристрастия', target: 'FP0002-DEMO-PG-031' },
         { label: 'Психическое здоровье', target: 'FP0002-DEMO-PG-029' },
         { label: 'Расстройства пищевого поведения', target: 'FP0002-DEMO-PG-030' },
-        { label: 'Генотипирование', target: 'FP0002-DEMO-PG-003' },
+        { label: 'Зависимости', target: 'FP0002-DEMO-PG-003' },
       ],
     },
     {
@@ -146,6 +147,26 @@ function buildPass3NavigationRegistry(registry) {
         mapping_method: 'SELECTOR_CLASS',
       })
     );
+  });
+
+  Object.entries(HOME_TREATMENT_PANELS).forEach(([panelId, panelLinks]) => {
+    panelLinks.forEach((item) => {
+      const targetPage = [...byId.values()].find((p) => p.url === item.url);
+      links.push(
+        makeLink({
+          id: nextId('HOME'),
+          surface: 'home_treatment_prevention',
+          label: item.label,
+          source_scope: 'FP0002-DEMO-PG-001',
+          source_page_id: 'FP0002-DEMO-PG-001',
+          source_label: panelId,
+          target_page_id: targetPage ? targetPage.id : null,
+          target_url: item.url,
+          mapping_method: 'HOME_TREATMENT_PANEL',
+          normalization_status: 'OPERATOR_URGENT_TASK_001',
+        })
+      );
+    });
   });
 
   ['Telegram', 'WhatsApp', 'Max'].forEach((label) => {

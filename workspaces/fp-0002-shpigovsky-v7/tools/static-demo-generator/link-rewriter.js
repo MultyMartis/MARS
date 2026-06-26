@@ -3,10 +3,11 @@
 const { resolveActiveNavKey, matchChildByCardLabel, getVisibleChildren } = require('./link-graph');
 const { normalizeDemoUrl } = require('./path-utils');
 const { applyActiveStates } = require('./active-state');
+const { injectHomeTreatmentPreventionLinks } = require('./home-treatment-links');
 
 const STATIC_SELECTOR_TARGETS = [
   { selector: 'home-treatment-prevention__all-link', url: '/uslugi/' },
-  { selector: 'home-genotyping__all-link', url: '/uslugi/genotipirovanie/' },
+  { selector: 'home-genotyping__all-link', url: '/zavisimosti/' },
   { selector: 'home-specialists__all-link', url: '/specialisty/' },
   { selector: 'home-reviews__all-link', url: '/otzyvy/' },
   { selector: 'home-rehabilitation-program__all-link', url: '/o-centre/programma-lecheniya/' },
@@ -80,6 +81,21 @@ const HUB_SECTION_PARENTS = {
   'services-category-eating-disorders': 'FP0002-DEMO-PG-030',
   'services-category-genotyping': 'FP0002-DEMO-PG-003',
 };
+
+function migrateGenotipirovanieNavigation(html) {
+  let result = html;
+  const navLinkPatterns = [
+    /(<a\b[^>]*class="[^"]*site-header__nav-link[^"]*"[^>]*href=")\/uslugi\/genotipirovanie\/("[^>]*>)\s*Генотипирование/gi,
+    /(<a\b[^>]*class="[^"]*offcanvas__nav-link[^"]*"[^>]*href=")\/uslugi\/genotipirovanie\/("[^>]*>)\s*Генотипирование/gi,
+    /(<a\b[^>]*class="[^"]*site-footer__nav-link[^"]*"[^>]*href=")\/uslugi\/genotipirovanie\/("[^>]*>)\s*Генотипирование/gi,
+  ];
+  navLinkPatterns.forEach((pattern) => {
+    result = result.replace(pattern, '$1/zavisimosti/$2Зависимости');
+  });
+  result = result.replace(/href="\/uslugi\/genotipirovanie\/"/g, 'href="/zavisimosti/"');
+  result = result.replace(/href='\/uslugi\/genotipirovanie\/'/g, "href='/zavisimosti/'");
+  return result;
+}
 
 function getExpandedChildren(parentPage, indexes) {
   if (!parentPage) {
@@ -185,7 +201,10 @@ function applyNavigationRewrites(html, page, indexes) {
 
   if (page.template === 'HOME_PAGE_TEMPLATE') {
     result = rewriteHomeArticleCards(result, indexes);
+    result = injectHomeTreatmentPreventionLinks(result);
   }
+
+  result = migrateGenotipirovanieNavigation(result);
 
   if (
     page.template === 'SERVICE_SUBDIVISION_INTERNAL_PAGE' ||

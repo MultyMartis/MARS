@@ -14,6 +14,7 @@ const { applyNavigationRewrites } = require('./link-rewriter');
 const { writePass3NavigationRegistry } = require('./build-navigation-registry');
 const { writePass3Evidence } = require('./pass-3-evidence');
 const { crawlGeneratedSite } = require('./link-validator');
+const { renderLegacyGenotipirovanieAlias } = require('./legacy-alias-renderer');
 
 const DIST_DIR = path.join(WORKSPACE_ROOT, 'dist');
 const EVIDENCE_DIR = path.join(WORKSPACE_ROOT, 'plans/static-client-demo/evidence');
@@ -84,6 +85,13 @@ function generatePages(registry, indexes) {
   });
 
   return { results, skipped };
+}
+
+function generateLegacyAliases() {
+  const outputPath = path.join(DIST_DIR, 'genotipirovanie/index.html');
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, renderLegacyGenotipirovanieAlias(), 'utf8');
+  return outputPath;
 }
 
 function validateOutputs(registry) {
@@ -212,6 +220,7 @@ function main() {
   }
 
   const generation = generatePages(registry, indexes);
+  generateLegacyAliases();
   const receipt = writeReceipt({
     registry,
     registryValidation,

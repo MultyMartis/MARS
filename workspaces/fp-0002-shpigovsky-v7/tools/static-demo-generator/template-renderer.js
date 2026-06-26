@@ -22,6 +22,11 @@ function renderBreadcrumbsHtml(breadcrumbs) {
       <span class="breadcrumbs__current">${name}</span>
     </li>`;
       }
+      if (!crumb.url) {
+        return `    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__text">${name}</span>
+    </li>`;
+      }
       return `    <li class="breadcrumbs__item">
       <a class="breadcrumbs__link" href="${escapeHtml(crumb.url)}">${name}</a>
     </li>`;

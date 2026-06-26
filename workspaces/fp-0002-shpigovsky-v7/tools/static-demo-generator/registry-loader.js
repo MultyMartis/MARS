@@ -251,7 +251,20 @@ function buildFinalNavigationFromDraft(urlById) {
   };
 }
 
-function ensureFinalRegistries({ rebuildNavigation = false } = {}) {
+function ensureFinalRegistries({ rebuildNavigation = false, forceDraft = false } = {}) {
+  if (!forceDraft && fs.existsSync(FINAL_REGISTRY)) {
+    const existing = JSON.parse(fs.readFileSync(FINAL_REGISTRY, 'utf8'));
+    if (existing.meta?.operator_urgent_v2 || existing.meta?.version === 'urgent-v2') {
+      let navigation;
+      if (fs.existsSync(FINAL_NAV) && !rebuildNavigation) {
+        navigation = JSON.parse(fs.readFileSync(FINAL_NAV, 'utf8'));
+      } else {
+        navigation = null;
+      }
+      return { registry: existing, navigation };
+    }
+  }
+
   const registry = buildFinalRegistryFromDraft();
 
   fs.mkdirSync(path.dirname(FINAL_REGISTRY), { recursive: true });

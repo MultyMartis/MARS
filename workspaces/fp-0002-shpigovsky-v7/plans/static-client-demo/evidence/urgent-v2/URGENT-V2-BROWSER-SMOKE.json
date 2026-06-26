@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-06-26T16:38:25.066968+00:00",
+  "pass": "URGENT-V2-BROWSER-SMOKE",
+  "checks": [
+    {
+      "page": "legacy-alias",
+      "viewport": "http",
+      "legacy_ok": true,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "url": "/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "zavisimosti",
+      "viewport": "desktop",
+      "url": "/zavisimosti/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "depressiya",
+      "viewport": "desktop",
+      "url": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "profilakticheskiy",
+      "viewport": "desktop",
+      "url": "/zavisimosti/genotipirovanie/profilakticheskiy-analiz/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "task002-nark",
+      "viewport": "desktop",
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "home-mental-health-links",
+      "viewport": "desktop",
+      "link_count": 6,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "url": "/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "zavisimosti",
+      "viewport": "mobile",
+      "url": "/zavisimosti/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page": "profilakticheskiy",
+      "viewport": "mobile",
+      "url": "/zavisimosti/genotipirovanie/profilakticheskiy-analiz/",
+      "http_ok": true,
+      "overflow": false,
+      "console_errors": [],
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

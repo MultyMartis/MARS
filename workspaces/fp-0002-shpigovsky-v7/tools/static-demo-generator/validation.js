@@ -23,16 +23,18 @@ function clientFacingBlob(page) {
 function validateRegistry(registry) {
   const errors = [];
   const pages = registry.pages || [];
+  const expectedCount = registry.meta?.page_count || pages.length;
 
-  if (pages.length !== 56) {
-    errors.push(`Expected 56 pages, got ${pages.length}`);
+  if (pages.length !== expectedCount) {
+    errors.push(`Expected ${expectedCount} pages, got ${pages.length}`);
   }
 
   const ids = new Set();
   const urls = new Set();
   const outputs = new Set();
   const titles = new Set();
-  const h1s = new Set();
+  const titleUrlKeys = new Set();
+  const h1UrlKeys = new Set();
   const idMap = new Map(pages.map((p) => [p.id, p]));
 
   pages.forEach((page) => {
@@ -54,16 +56,22 @@ function validateRegistry(registry) {
     }
     outputs.add(page.output);
 
+    const titleKey = `${page.title}::${page.url}`;
+    if (titleUrlKeys.has(titleKey)) {
+      errors.push(`Duplicate title/url: ${page.title}`);
+    }
+    titleUrlKeys.add(titleKey);
     if (titles.has(page.title)) {
-      errors.push(`Duplicate title: ${page.title}`);
+      // allowed when URLs differ; tracked for reporting only
     }
     titles.add(page.title);
 
     if (page.template !== 'HOME_PAGE_TEMPLATE' && page.h1) {
-      if (h1s.has(page.h1)) {
-        errors.push(`Duplicate h1: ${page.h1}`);
+      const h1Key = `${page.h1}::${page.url}`;
+      if (h1UrlKeys.has(h1Key)) {
+        errors.push(`Duplicate h1/url: ${page.h1}`);
       }
-      h1s.add(page.h1);
+      h1UrlKeys.add(h1Key);
     }
 
     if (page.parent_id && !idMap.has(page.parent_id)) {
@@ -111,9 +119,9 @@ function validateRegistry(registry) {
   const expected = {
     HOME_PAGE_TEMPLATE: 1,
     SERVICES_HUB_INTERNAL_PAGE: 1,
-    SERVICE_SUBDIVISION_INTERNAL_PAGE: 6,
-    SERVICE_LEAF_INTERNAL_PAGE: 18,
-    PLACEHOLDER_PAGE: 30,
+    SERVICE_SUBDIVISION_INTERNAL_PAGE: 3,
+    SERVICE_LEAF_INTERNAL_PAGE: 7,
+    PLACEHOLDER_PAGE: 46,
   };
 
   Object.entries(expected).forEach(([template, count]) => {

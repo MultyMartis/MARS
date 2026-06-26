@@ -829,10 +829,40 @@ fp0002_static_demo_functional_qa:
 PASS
 
 fp0002_static_demo_deploy_pack:
-READY
+V2_READY
 
 fp0002_static_demo_deployment:
-NOT_STARTED
+NOT_PERFORMED_BY_TASK
+
+fp0002_static_demo_composition:
+URGENT_V2_COMPLETE
+
+fp0002_static_demo_primary_pages:
+58
+
+fp0002_static_demo_legacy_aliases:
+1
+
+fp0002_static_demo_dependencies_page:
+RENAMED_TO_ZAVISIMOSTI
+
+fp0002_static_demo_genotipirovanie_route:
+LEGACY_ALIAS_ONLY
+
+fp0002_static_demo_task_001_placeholders:
+11_TARGETS_COMPLETE
+
+fp0002_static_demo_task_002_placeholders:
+4_UNIQUE_URLS_COMPLETE
+
+fp0002_static_demo_navigation:
+COMPLETE
+
+fp0002_static_demo_internal_404:
+ZERO
+
+fp0002_about_page:
+PAUSED_AFTER_PASS_OPENING
 
 fp0002_static_demo_client_url:
 NOT_ASSIGNED

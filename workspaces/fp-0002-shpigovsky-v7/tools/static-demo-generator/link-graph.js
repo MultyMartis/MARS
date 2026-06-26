@@ -11,10 +11,10 @@ const TOP_LEVEL_NAV = {
     labels: ['лечение и профилактика', 'услуги'],
     headerLabel: 'Лечение и профилактика',
   },
-  genotipirovanie: {
+  zavisimosti: {
     pageId: 'FP0002-DEMO-PG-003',
-    url: '/uslugi/genotipirovanie/',
-    labels: ['генотипирование'],
+    url: '/zavisimosti/',
+    labels: ['зависимости'],
   },
   specialisty: {
     pageId: 'FP0002-DEMO-PG-004',
@@ -72,6 +72,9 @@ function resolveActiveNavKey(page) {
     return null;
   }
   const url = normalizeDemoUrl(page.url);
+  if (url === '/zavisimosti/' || url.startsWith('/zavisimosti/')) {
+    return 'zavisimosti';
+  }
   if (url.startsWith('/uslugi/')) {
     return 'uslugi';
   }
