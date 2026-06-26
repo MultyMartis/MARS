@@ -462,6 +462,33 @@ PASS
 service_subdivision_png_reconciliation_backup_group_3:
 FP-0002-V7-SERVICE-SUBDIVISION-PNG-GROUP-3-BEFORE-SOURCE.zip
 
+service_subdivision_png_group_4:
+COMPLETE
+
+service_subdivision_team_center:
+PNG_MATCH_COMPLETE
+
+service_subdivision_team_stats:
+PNG_MATCH_COMPLETE
+
+service_subdivision_corridor_interior:
+PNG_MATCH_COMPLETE
+
+service_subdivision_group_4_empty_media:
+ZERO
+
+service_subdivision_group_4_artificial_blank_zones:
+ZERO
+
+service_subdivision_group_4_desktop:
+PASS
+
+service_subdivision_group_4_mobile:
+PASS
+
+service_subdivision_png_reconciliation_backup_group_4:
+FP-0002-V7-SERVICE-SUBDIVISION-PNG-GROUP-4-BEFORE-SOURCE.zip
+
 service_subdivision_remaining_groups:
 NOT_RECONCILED
 

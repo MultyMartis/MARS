@@ -200,12 +200,20 @@ service_subdivision_rehabilitation_stages: PNG_MATCH_COMPLETE
 service_subdivision_rehabilitation_support: PNG_MATCH_COMPLETE
 service_subdivision_group_3_desktop: PASS
 service_subdivision_group_3_mobile: PASS
+service_subdivision_png_group_4: COMPLETE
+service_subdivision_team_center: PNG_MATCH_COMPLETE
+service_subdivision_team_stats: PNG_MATCH_COMPLETE
+service_subdivision_corridor_interior: PNG_MATCH_COMPLETE
+service_subdivision_group_4_empty_media: ZERO
+service_subdivision_group_4_artificial_blank_zones: ZERO
+service_subdivision_group_4_desktop: PASS
+service_subdivision_group_4_mobile: PASS
 service_subdivision_remaining_groups: NOT_RECONCILED
 service_subdivision_full_page: INCOMPLETE
 service_subdivision_canonical_switch: NOT_STARTED
 service_subdivision_second_cta: REMOVED_FROM_RUNTIME_PNG_AUTHORITY
 services_v2_reference: PRESERVED
-next_phase: SERVICE_SUBDIVISION_PNG_GROUP_4
+next_phase: SERVICE_SUBDIVISION_PNG_GROUP_5
 ```
 
 ## Milestone (2026-06-23)

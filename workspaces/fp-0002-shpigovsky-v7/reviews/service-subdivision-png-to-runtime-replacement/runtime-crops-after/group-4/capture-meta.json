@@ -1,0 +1,122 @@
+{
+  "desktop": {
+    "page_height": 12490,
+    "G4-01-TRANSITION": {
+      "present": true,
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1437,
+        "height": 160.0
+      }
+    },
+    "G4-02-CORRIDOR": {
+      "present": true,
+      "selector": ".service-subdivision-team-stats-v1__corridor-bleed",
+      "box": {
+        "x": 126,
+        "y": 0.078125,
+        "width": 1170,
+        "height": 388
+      }
+    },
+    "G4-03-APPROACH-HEAD": {
+      "present": true,
+      "clip": {
+        "x": 0,
+        "y": 408.078125,
+        "width": 1437,
+        "height": 251.0
+      }
+    },
+    "G4-04-TEAM": {
+      "present": true,
+      "selector": ".service-subdivision-team-stats-v1__staff-bleed",
+      "box": {
+        "x": 126,
+        "y": 445.078125,
+        "width": 1170,
+        "height": 455.046875
+      }
+    },
+    "G4-05-CARDS": {
+      "present": true,
+      "selector": ".service-subdivision-team-stats-v1__approach-cards",
+      "box": {
+        "x": 126,
+        "y": 235.125,
+        "width": 1170,
+        "height": 430
+      }
+    },
+    "G4-06-END": {
+      "present": true,
+      "clip": {
+        "x": 0,
+        "y": 175.125,
+        "width": 1437,
+        "height": 130.0
+      }
+    }
+  },
+  "mobile": {
+    "page_height": 21361,
+    "G4-01-TRANSITION": {
+      "present": true,
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 380,
+        "height": 160
+      }
+    },
+    "G4-02-CORRIDOR": {
+      "present": true,
+      "selector": ".service-subdivision-team-stats-v1__corridor-bleed",
+      "box": {
+        "x": 15,
+        "y": 0,
+        "width": 335,
+        "height": 220
+      }
+    },
+    "G4-03-APPROACH-HEAD": {
+      "present": true,
+      "clip": {
+        "x": 0,
+        "y": 240,
+        "width": 380,
+        "height": 598
+      }
+    },
+    "G4-04-TEAM": {
+      "present": true,
+      "selector": ".service-subdivision-team-stats-v1__staff-bleed",
+      "box": {
+        "x": 15,
+        "y": 660,
+        "width": 335,
+        "height": 240
+      }
+    },
+    "G4-05-CARDS": {
+      "present": true,
+      "selector": ".service-subdivision-team-stats-v1__approach-cards",
+      "box": {
+        "x": 15,
+        "y": -101,
+        "width": 335,
+        "height": 1102
+      }
+    },
+    "G4-06-END": {
+      "present": true,
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 380,
+        "height": 130
+      }
+    }
+  }
+}
