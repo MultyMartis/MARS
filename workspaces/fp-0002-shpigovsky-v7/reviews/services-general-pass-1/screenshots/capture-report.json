@@ -1,0 +1,59 @@
+{
+  "overflow": {
+    "services": {
+      "390": false,
+      "768": false,
+      "1024": false,
+      "1025": false,
+      "1398": false,
+      "1440": false,
+      "1920": false
+    },
+    "home": {
+      "390": false,
+      "768": false,
+      "1024": false,
+      "1025": false,
+      "1398": false,
+      "1440": false,
+      "1920": false
+    }
+  },
+  "services": {
+    "sectionOrder": [
+      "hero hero--inner",
+      "home-rehabilitation-program",
+      "home-founder-quote",
+      "home-comfort",
+      "home-faq",
+      "home-final-form"
+    ],
+    "heroPresent": true,
+    "heroH1": "Лечение и профилактика",
+    "categoryPlaceholderVisible": false,
+    "heroCtaCount": 0,
+    "founderCtaCount": 1,
+    "modalOpens": true,
+    "faqExpanded": "false",
+    "comfortFancybox": true,
+    "finalForm": true,
+    "leadSource": "services-final",
+    "headerNav": true
+  },
+  "home": {
+    "variantB": true,
+    "recoveryIntro": true,
+    "gallerySwiper": 1,
+    "reviewsSwiper": 1,
+    "specialistsSwiper": 1,
+    "fancybox": true
+  },
+  "consoleErrors": {
+    "services": [],
+    "home": []
+  },
+  "missingAssets": {
+    "services": [],
+    "home": []
+  }
+}

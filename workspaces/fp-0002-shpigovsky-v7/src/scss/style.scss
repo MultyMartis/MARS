@@ -4049,3 +4049,11 @@ body[data-offcanvas-state='open'] {
 	}
 }
 
+/* ==========================================================================
+   Services General — page scope (Pass 1)
+   ========================================================================== */
+
+.page-uslugi .hero__tagline:empty {
+	display: none;
+}
+

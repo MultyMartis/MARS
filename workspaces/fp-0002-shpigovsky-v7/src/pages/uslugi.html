@@ -5,7 +5,9 @@
 </head>
 <body class="page-uslugi" data-page="uslugi">
   @@include('partials/layout/header.html', {"activeNavUslugiClass": " site-header__nav-link--active", "activeNavOffcanvasClass": " offcanvas__nav-link--active", "activeNavUslugiAria": " aria-current=\"page\""})
-  <main>
+  <main class="page-uslugi">
+    @@include('partials/sections/hero-inner.html', {"heroImage": "assets/img/hero/hero-main.png", "heroWidth": "2230", "heroHeight": "1246", "heroTagline": "", "heroTitle": "Лечение и&nbsp;профилактика"})
+    <!-- SERVICES CATEGORY HUBS WILL BE INSERTED HERE IN PASS 2 -->
     @@include('partials/sections/home-rehabilitation-program.html', {"programHeading": "Наша программа включает 4&nbsp;направления"})
     @@include('partials/sections/home-founder-quote.html', {"modalSource": "services-founder", "founderQuoteModifierClass": ""})
     @@include('partials/sections/home-comfort.html')

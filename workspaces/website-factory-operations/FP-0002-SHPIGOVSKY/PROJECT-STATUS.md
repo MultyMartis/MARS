@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (Services General design-to-source build plan complete)
+**Last updated:** 2026-06-26 (Services General Pass 1 — pending operator review)
 
 ## Workspace versions (2026-06-24)
 
@@ -68,10 +68,16 @@ source_universalization: NOT_STARTED
 services_general_source_reconciliation: COMPLETE
 services_general_design_mapping: COMPLETE
 services_general_build_plan: COMPLETE
-services_general_source_implementation: NOT_STARTED
-services_general_page: NOT_STARTED
+services_general_implementation_pass_1: COMPLETE_PENDING_OPERATOR_REVIEW
+services_general_inner_hero: COMPLETE_WITH_EXISTING_OR_TEMPORARY_ASSET
+services_general_reuse_section_order: COMPLETE
+services_general_category_hubs: NOT_STARTED
+services_general_unique_assets: NOT_EXPORTED
+services_general_page: PASS_1_SHELL_COMPLETE
+home_regression: NONE_DETECTED
+services_general_pass_2: AUTHORIZED_NOT_STARTED
 home_source_universalization: NOT_STARTED
-next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_1
+next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_2
 ```
 
 ## Milestone (2026-06-23)

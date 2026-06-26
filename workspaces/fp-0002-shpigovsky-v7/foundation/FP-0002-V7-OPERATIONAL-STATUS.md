@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-26 (Services General design-to-source build plan complete)
+**Updated:** 2026-06-26 (Services General implementation Pass 1 complete — pending operator review)
 
 ```text
 workspace: V7
@@ -102,10 +102,15 @@ source_universalization: NOT_STARTED
 services_general_source_reconciliation: COMPLETE
 services_general_design_mapping: COMPLETE
 services_general_build_plan: COMPLETE
-services_general_source_implementation: NOT_STARTED
-services_general_page: NOT_STARTED
-home_source_universalization: NOT_STARTED
-next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_1
+services_general_implementation_pass_1: COMPLETE_PENDING_OPERATOR_REVIEW
+services_general_inner_hero: COMPLETE_WITH_EXISTING_OR_TEMPORARY_ASSET
+services_general_reuse_section_order: COMPLETE
+services_general_category_hubs: NOT_STARTED
+services_general_unique_assets: NOT_EXPORTED
+services_general_page: PASS_1_SHELL_COMPLETE
+home_regression: NONE_DETECTED
+services_general_pass_2: AUTHORIZED_NOT_STARTED
+next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_2
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
