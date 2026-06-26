@@ -1195,7 +1195,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	max-height: 640px;
 	object-fit: cover;
 	object-position: 62% 12%;
-	border-radius: 0;
+	border-radius: var(--radius-main);
 	-webkit-mask-image:  linear-gradient(90deg, transparent 5%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.95) 30%, #000 90%);
 	mask-image: linear-gradient(90deg, transparent 5%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.95) 30%, #000 90%);
 }
