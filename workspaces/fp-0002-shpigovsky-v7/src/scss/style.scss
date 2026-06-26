@@ -5294,3 +5294,172 @@ body[data-offcanvas-state='open'] {
 		line-height: 28px;
 	}
 }
+
+/* FP-0002 Service Subdivision Pass 1 */
+.page-service-subdivision-v1__main {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-service-subdivision-v1__upper-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding-top: 16px;
+	padding-bottom: 8px;
+}
+
+.page-service-subdivision-v1 .breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-service-subdivision-v1 .breadcrumbs__item {
+	display: inline-flex;
+	align-items: center;
+}
+
+.page-service-subdivision-v1 .breadcrumbs__item + .breadcrumbs__item::before {
+	content: "/";
+	margin-right: 4px;
+	color: var(--color-text-muted);
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.page-service-subdivision-v1 .breadcrumbs__link,
+.page-service-subdivision-v1 .breadcrumbs__current {
+	color: var(--color-text-muted);
+	font-size: 12px;
+	line-height: 12px;
+	text-decoration: none;
+}
+
+.page-service-subdivision-v1 .breadcrumbs__link:hover,
+.page-service-subdivision-v1 .breadcrumbs__link:focus-visible {
+	color: var(--color-text);
+}
+
+.page-service-subdivision-v1 .breadcrumbs__current {
+	color: var(--color-text);
+}
+
+.page-service-subdivision-v1 .services-page-subnav__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-service-subdivision-v1 .services-page-subnav__item {
+	display: flex;
+}
+
+.page-service-subdivision-v1 .services-page-subnav__link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 33px;
+	padding: 6px 14px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-full);
+	background: transparent;
+	color: var(--color-text);
+	font-size: 14px;
+	line-height: 18px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.page-service-subdivision-v1 .services-page-subnav__link:hover,
+.page-service-subdivision-v1 .services-page-subnav__link:focus-visible {
+	border-color: var(--color-text);
+	color: var(--color-text);
+}
+
+.page-service-subdivision-v1 .service-subdivision-intro-v1 .home-recovery-intro__card-grid {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.page-service-subdivision-v1 .service-subdivision-v1__list-heading {
+	margin: 0 0 var(--pad-gap-line);
+	color: var(--color-text);
+	font-size: var(--font-size-h3);
+	line-height: var(--line-height-h3);
+	font-weight: var(--font-weight-semibold);
+}
+
+.page-service-subdivision-v1 .service-subdivision-v1__genotyping-link {
+	margin: var(--pad-gap-line) 0 0;
+}
+
+.page-service-subdivision-v1 .service-subdivision-primary-v1 .services-category-section-v2__lead:empty {
+	display: none;
+}
+
+.page-service-subdivision-v1 .service-subdivision-primary-v1 .services-category-section-v2__actions {
+	display: none;
+}
+
+.page-service-subdivision-v1 .service-subdivision-primary-v1 .services-category-section-v2__gallery:empty {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.page-service-subdivision-v1 .service-subdivision-intro-v1 .home-recovery-intro__card-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.page-service-subdivision-v1__upper-nav {
+		gap: 8px;
+		padding-top: 8px;
+	}
+
+	.page-service-subdivision-v1 .breadcrumbs__list {
+		gap: 2px;
+	}
+
+	.page-service-subdivision-v1 .breadcrumbs__item + .breadcrumbs__item::before {
+		margin-right: 2px;
+		font-size: 11px;
+		line-height: 11px;
+	}
+
+	.page-service-subdivision-v1 .breadcrumbs__link,
+	.page-service-subdivision-v1 .breadcrumbs__current {
+		font-size: 11px;
+		line-height: 11px;
+	}
+
+	.page-service-subdivision-v1 .services-page-subnav {
+		margin-right: calc(-1 * var(--pad-gap-line));
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+	}
+
+	.page-service-subdivision-v1 .services-page-subnav::-webkit-scrollbar {
+		display: none;
+	}
+
+	.page-service-subdivision-v1 .services-page-subnav__list {
+		flex-wrap: nowrap;
+		width: max-content;
+		max-width: none;
+		padding-right: var(--pad-gap-line);
+	}
+
+	.page-service-subdivision-v1 .services-page-subnav__link {
+		min-height: 29px;
+		padding: 4px 12px;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: var(--font-weight-base);
+	}
+}

@@ -148,8 +148,19 @@ services_v2_reference_baseline: READY_FOR_FREEZE
 services_v2_canonical_switch: NOT_STARTED
 services_v2_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-reference-freeze/
 service_subdivision_planning: workspaces/fp-0002-shpigovsky-v7/plans/service-subdivision-page/
-service_subdivision_implementation: NOT_STARTED
-next_phase: SERVICE_SUBDIVISION_PAGE_PASS_1
+service_subdivision_page: IN_IMPLEMENTATION
+service_subdivision_pass_1: COMPLETE_PENDING_OPERATOR_REVIEW
+service_subdivision_working_page: src/pages/usluga-podrazdel-v1.html
+service_subdivision_hero: REUSED_WITH_CONTENT
+service_subdivision_intro: IMPLEMENTED
+service_subdivision_primary_service_information: IMPLEMENTED
+service_subdivision_visible_mockup_text_policy: ACTIVE
+service_subdivision_lifebuoy_decor: FORBIDDEN_ZERO
+service_subdivision_root_tokens_added: ZERO
+service_subdivision_pass_2: NOT_STARTED
+service_subdivision_pass_1_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-1/
+services_v2_reference: PRESERVED
+next_phase: SERVICE_SUBDIVISION_PAGE_PASS_2
 ```
 
 ## Milestone (2026-06-23)

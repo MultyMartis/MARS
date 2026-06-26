@@ -229,7 +229,43 @@ services_v1:
 PRESERVED_FALLBACK
 
 services_v2_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-reference-freeze/
-next_phase: SERVICE_SUBDIVISION_PAGE_PASS_1
+next_phase: SERVICE_SUBDIVISION_PAGE_PASS_2
+
+service_subdivision_page:
+IN_IMPLEMENTATION
+
+service_subdivision_pass_1:
+COMPLETE_PENDING_OPERATOR_REVIEW
+
+service_subdivision_working_page:
+src/pages/usluga-podrazdel-v1.html
+
+service_subdivision_hero:
+REUSED_WITH_CONTENT
+
+service_subdivision_intro:
+IMPLEMENTED
+
+service_subdivision_primary_service_information:
+IMPLEMENTED
+
+service_subdivision_visible_mockup_text_policy:
+ACTIVE
+
+service_subdivision_lifebuoy_decor:
+FORBIDDEN_ZERO
+
+service_subdivision_root_tokens_added:
+ZERO
+
+service_subdivision_pass_2:
+NOT_STARTED
+
+service_subdivision_pass_1_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-1/
+
+services_v2_reference:
+PRESERVED
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
