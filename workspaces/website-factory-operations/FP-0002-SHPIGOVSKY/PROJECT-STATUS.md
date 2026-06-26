@@ -140,8 +140,16 @@ services_v2_v1: PRESERVED_FALLBACK
 services_v2_navigation_switch: NOT_STARTED
 services_v2_founder_comfort_cta_superseded: SUPERSEDED_NOT_IN_RUNTIME
 services_v2_final_assembly_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-final-lower-assembly/
-services_v1: PRESERVED_FALLBACK
-next_phase: SERVICES_V2_LOWER_BLOCKS_OPERATOR_REVIEW
+services_v2_operator_acceptance: CONDITIONAL_ACCEPTED_REFERENCE
+services_v2_reference_type: SERVICES_HUB_INTERNAL_PAGE
+services_v2_lifebuoy_decor: REMOVED_BY_OPERATOR_DECISION
+services_v2_detail_links: HOME_REHABILITATION_PATTERN_REUSED
+services_v2_reference_baseline: READY_FOR_FREEZE
+services_v2_canonical_switch: NOT_STARTED
+services_v2_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-reference-freeze/
+service_subdivision_planning: workspaces/fp-0002-shpigovsky-v7/plans/service-subdivision-page/
+service_subdivision_implementation: NOT_STARTED
+next_phase: SERVICE_SUBDIVISION_PAGE_PASS_1
 ```
 
 ## Milestone (2026-06-23)
