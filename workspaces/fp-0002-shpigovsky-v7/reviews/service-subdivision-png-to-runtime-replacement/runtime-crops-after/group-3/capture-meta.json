@@ -1,0 +1,96 @@
+{
+  "desktop": {
+    "page_height": 13085,
+    "G3-01-REHABILITATION-HEADER": {
+      "present": true,
+      "selector": "#service-subdivision-stages-heading, #service-subdivision-stages .service-subdivision-stages-v1__lead",
+      "box": {
+        "x": 126,
+        "y": 432.078125,
+        "width": 1170,
+        "height": 36
+      }
+    },
+    "G3-02-REHABILITATION-STAGES": {
+      "present": true,
+      "selector": "#service-subdivision-stages .service-subdivision-stages-v1__steps",
+      "box": {
+        "x": 126,
+        "y": 510.078125,
+        "width": 1170,
+        "height": 390
+      }
+    },
+    "G3-03-CTA": {
+      "present": true,
+      "selector": "#service-subdivision-stages .service-subdivision-stages-v1__cta",
+      "box": {
+        "x": 126,
+        "y": 381.078125,
+        "width": 1170,
+        "height": 138
+      }
+    },
+    "G3-04-SUPPORT-BLOCK": {
+      "present": true,
+      "selector": "#service-subdivision-stages .service-subdivision-stages-v1__support",
+      "box": {
+        "x": 126,
+        "y": 549.078125,
+        "width": 1170,
+        "height": 262
+      }
+    },
+    "G3-05-TRANSITION": {
+      "present": true,
+      "fallback": "team-top"
+    }
+  },
+  "mobile": {
+    "page_height": 21448,
+    "G3-01-REHABILITATION-HEADER": {
+      "present": true,
+      "selector": "#service-subdivision-stages-heading, #service-subdivision-stages .service-subdivision-stages-v1__lead",
+      "box": {
+        "x": 15,
+        "y": 378,
+        "width": 335,
+        "height": 144
+      }
+    },
+    "G3-02-REHABILITATION-STAGES": {
+      "present": true,
+      "selector": "#service-subdivision-stages .service-subdivision-stages-v1__steps",
+      "box": {
+        "x": 15,
+        "y": 30,
+        "width": 335,
+        "height": 870
+      }
+    },
+    "G3-03-CTA": {
+      "present": true,
+      "selector": "#service-subdivision-stages .service-subdivision-stages-v1__cta",
+      "box": {
+        "x": 15,
+        "y": 300,
+        "width": 335,
+        "height": 299
+      }
+    },
+    "G3-04-SUPPORT-BLOCK": {
+      "present": true,
+      "selector": "#service-subdivision-stages .service-subdivision-stages-v1__support",
+      "box": {
+        "x": 15,
+        "y": 398,
+        "width": 335,
+        "height": 502
+      }
+    },
+    "G3-05-TRANSITION": {
+      "present": true,
+      "fallback": "team-top"
+    }
+  }
+}

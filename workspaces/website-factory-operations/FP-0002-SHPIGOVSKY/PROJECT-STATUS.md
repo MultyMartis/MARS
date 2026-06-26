@@ -195,12 +195,17 @@ service_subdivision_program: PNG_MATCH_COMPLETE
 service_subdivision_cta_02: PNG_MATCH_COMPLETE
 service_subdivision_group_2_desktop: PASS
 service_subdivision_group_2_mobile: PASS
+service_subdivision_png_group_3: COMPLETE
+service_subdivision_rehabilitation_stages: PNG_MATCH_COMPLETE
+service_subdivision_rehabilitation_support: PNG_MATCH_COMPLETE
+service_subdivision_group_3_desktop: PASS
+service_subdivision_group_3_mobile: PASS
 service_subdivision_remaining_groups: NOT_RECONCILED
 service_subdivision_full_page: INCOMPLETE
 service_subdivision_canonical_switch: NOT_STARTED
 service_subdivision_second_cta: REMOVED_FROM_RUNTIME_PNG_AUTHORITY
 services_v2_reference: PRESERVED
-next_phase: SERVICE_SUBDIVISION_PNG_GROUP_2
+next_phase: SERVICE_SUBDIVISION_PNG_GROUP_4
 ```
 
 ## Milestone (2026-06-23)

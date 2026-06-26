@@ -444,6 +444,24 @@ PASS
 service_subdivision_group_2_mobile:
 PASS
 
+service_subdivision_png_group_3:
+COMPLETE
+
+service_subdivision_rehabilitation_stages:
+PNG_MATCH_COMPLETE
+
+service_subdivision_rehabilitation_support:
+PNG_MATCH_COMPLETE
+
+service_subdivision_group_3_desktop:
+PASS
+
+service_subdivision_group_3_mobile:
+PASS
+
+service_subdivision_png_reconciliation_backup_group_3:
+FP-0002-V7-SERVICE-SUBDIVISION-PNG-GROUP-3-BEFORE-SOURCE.zip
+
 service_subdivision_remaining_groups:
 NOT_RECONCILED
 
