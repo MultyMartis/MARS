@@ -208,12 +208,29 @@ service_subdivision_group_4_empty_media: ZERO
 service_subdivision_group_4_artificial_blank_zones: ZERO
 service_subdivision_group_4_desktop: PASS
 service_subdivision_group_4_mobile: PASS
-service_subdivision_remaining_groups: NOT_RECONCILED
-service_subdivision_full_page: INCOMPLETE
+service_subdivision_remaining_groups: ZERO
+service_subdivision_full_page: COMPLETE
 service_subdivision_canonical_switch: NOT_STARTED
 service_subdivision_second_cta: REMOVED_FROM_RUNTIME_PNG_AUTHORITY
+service_subdivision_approach_v1: SUPERSEDED_NOT_IN_RUNTIME
+service_subdivision_clinic_landscape: HOME_SHARED_COMPONENT_REUSED
+service_subdivision_program_template_garbage: ZERO
+service_subdivision_dependencies_row_borders: REMOVED_BY_OPERATOR_DECISION
+service_subdivision_final_corrections: COMPLETE
+service_subdivision_build: PASS
+service_subdivision_functional_qa: PASS
+service_subdivision_regression_qa: PASS
+service_subdivision_stable_source_backup: COMPLETE
+service_subdivision_stable_tag: fp-0002-v7-service-subdivision-internal-page-reference-01
+service_subdivision_reference_type: SERVICE_SUBDIVISION_INTERNAL_PAGE
+service_subdivision_operator_status: CONDITIONALLY_ACCEPTED_REFERENCE
+service_subdivision_navigation_switch: NOT_STARTED
+service_subdivision_deploy: NOT_STARTED
+fp0002_png_grouped_page_implementation_protocol: ACTIVE_REFERENCE_WORKFLOW
+service_subdivision_final_reference_freeze_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-final-reference-freeze/
+next_page: READY_FOR_SEPARATE_START_TASK
+next_phase: FP-0002-PG-004-SERVICE-LEAF-INTERNAL-PAGE
 services_v2_reference: PRESERVED
-next_phase: SERVICE_SUBDIVISION_PNG_GROUP_5
 ```
 
 ## Milestone (2026-06-23)
