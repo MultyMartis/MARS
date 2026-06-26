@@ -153,13 +153,41 @@ services_v2_category_geometry: CONTENT_DRIVEN
 services_v2_operator_copy_required: []
 services_v2_mockup_copy_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-exact-mockup-copy/
 services_v2_text_recovery_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-text-recovery/
-services_v2_category_family: FOUR_SECTIONS_IMPLEMENTED
-services_v2_review_block_2b: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2b/
-services_v2_category_content_fidelity_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-content-fidelity/
-services_v2_program: NOT_STARTED
-services_v2_root_tokens_added: ZERO
-services_v1: PRESERVED_FALLBACK
-next_phase: SERVICES_V2_MOCKUP_COPY_OPERATOR_REVIEW
+services_v2_category_family:
+COMPLETE_PENDING_OPERATOR_POLISH
+
+services_v2_mockup_copy_policy:
+ALL_VISIBLE_TEXT_INCLUDED
+
+services_v2_program:
+COMPLETE_PENDING_OPERATOR_REVIEW
+
+services_v2_program_mockup_text:
+COMPLETE
+
+services_v2_program_empty_content_slots:
+ZERO
+
+services_v2_program_component:
+SERVICES_SPECIFIC_REUSABLE_PARTIAL
+
+services_v2_root_tokens_added:
+ZERO
+
+services_v2_founder:
+NOT_STARTED
+
+services_v2_comfort:
+NOT_STARTED
+
+services_v2_mid_page_cta:
+NOT_STARTED
+
+services_v1:
+PRESERVED_FALLBACK
+
+services_v2_program_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-program/
+next_phase: SERVICES_V2_PROGRAM_OPERATOR_REVIEW
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
