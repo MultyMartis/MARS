@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (Services General Pass 2 — pending operator review)
+**Last updated:** 2026-06-26 (Services General final polish — pending operator review)
 
 ## Workspace versions (2026-06-24)
 
@@ -82,10 +82,15 @@ services_general_content_safe_unknowns:
   - Genotyping hub lead paragraphs (Figma lorem only)
   - Mental health per-service descriptions (Figma lorem excluded)
   - Eating disorders per-service descriptions (Figma lorem excluded)
-services_general_final_polish: NOT_STARTED
+services_general_final_polish: COMPLETE_PENDING_OPERATOR_REVIEW
+services_general_visual_parity: COMPLETE_WITH_DOCUMENTED_SAFE_UNKNOWNS
+services_general_clean_build: PASS_WITH_CLEAN_DIST_ENVIRONMENT_CAVEAT
+services_general_home_regression: NONE_DETECTED
+services_general_untracked_asset_cleanup: PROBE_CLEANUP_COMPLETE_17_FILES_REMOVED
+services_general_stable_freeze: NOT_STARTED
 services_general_pass_2: COMPLETE_PENDING_OPERATOR_REVIEW
 home_source_universalization: NOT_STARTED
-next_phase: SERVICES_GENERAL_FINAL_POLISH_OPERATOR_REVIEW
+next_phase: SERVICES_GENERAL_OPERATOR_APPROVAL
 ```
 
 ## Milestone (2026-06-23)
