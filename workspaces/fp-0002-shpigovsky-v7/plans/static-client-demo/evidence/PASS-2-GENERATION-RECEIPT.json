@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-06-26T13:21:22.988Z",
+  "source_commit": "797dab58",
+  "stable_baseline_tag": "fp-0002-v7-four-template-canonical-demo-baseline-01",
+  "registry_sha256": "cbd8d95d90b5ef0e468ee375ac36d3277af6a0d470fb6416c8bc97bb016b92cc",
+  "generated_page_count": 56,
+  "counts_by_template": {
+    "HOME_PAGE_TEMPLATE": 1,
+    "SERVICES_HUB_INTERNAL_PAGE": 1,
+    "SERVICE_SUBDIVISION_INTERNAL_PAGE": 6,
+    "PLACEHOLDER_PAGE": 30,
+    "SERVICE_LEAF_INTERNAL_PAGE": 18
+  },
+  "placeholder_count": 30,
+  "output_paths": [
+    "index.html",
+    "uslugi/index.html",
+    "uslugi/genotipirovanie/index.html",
+    "specialisty/index.html",
+    "o-centre/index.html",
+    "otzyvy/index.html",
+    "blog/index.html",
+    "kontakty/index.html",
+    "pravovaya-informaciya-polzovatelyu/index.html",
+    "consent-personal-data/index.html",
+    "cookie-files-policy/index.html",
+    "privacy-policy/index.html",
+    "user-agreement/index.html",
+    "stati/statya-2/index.html",
+    "stati/statya-3/index.html",
+    "stati/statya-1/index.html",
+    "o-centre/galereya-o-dome/index.html",
+    "o-centre/intervyu-i-smi/index.html",
+    "o-centre/o-nas/index.html",
+    "o-centre/programma-lecheniya/index.html",
+    "o-centre/rodstvennikam/index.html",
+    "o-centre/specialistam/index.html",
+    "specialisty/kazakov/index.html",
+    "specialisty/kostyuk/index.html",
+    "specialisty/shipovsky/index.html",
+    "specialisty/spetsialist-4-slot-01/index.html",
+    "specialisty/spetsialist-5-slot-02/index.html",
+    "specialisty/spetsialist-6-slot-03/index.html",
+    "uslugi/psihicheskoe-zdorovie/index.html",
+    "uslugi/rasstroystva-pischevogo-povedeniya/index.html",
+    "uslugi/zavisimosti/index.html",
+    "uslugi/psihicheskoe-zdorovie/depressiya/index.html",
+    "uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/index.html",
+    "uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/index.html",
+    "uslugi/psihicheskoe-zdorovie/nazvanie-slot-02/index.html",
+    "uslugi/psihicheskoe-zdorovie/nazvanie-slot-03/index.html",
+    "uslugi/psihicheskoe-zdorovie/ptsr/index.html",
+    "uslugi/psihicheskoe-zdorovie/rasstroystva-sna/index.html",
+    "uslugi/psihicheskoe-zdorovie/travma/index.html",
+    "uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/index.html",
+    "uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/index.html",
+    "uslugi/rasstroystva-pischevogo-povedeniya/buliniya/index.html",
+    "uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/index.html",
+    "uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/index.html",
+    "uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-01/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-02/index.html",
+    "uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/index.html",
+    "uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/index.html",
+    "uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/index.html",
+    "uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/index.html",
+    "uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/index.html"
+  ],
+  "skipped_pages": [
+    {
+      "id": "FP0002-DEMO-PG-001",
+      "reason": "canonical_home_from_gulp"
+    }
+  ],
+  "validation_errors": [],
+  "template_hashes_before": "# FP-0002 PASS 2 — Canonical template SHA-256 (before)\n# HEAD: 797dab58\n\r\nc14ff5a3b58af5dafe957edfa56ebd22addb02ba084ef29101e82178aec83f53  src/pages/index.html\r\ne0f7f8c8efb4aa5622418b1382442e8684152000a3330c5894ab07d0275eb9bc  src/pages/uslugi-v2.html\r\nfc32e6744f51ddd4a5b218baf253b80da6206f359dfb6161de3c0a769c76c49c  src/pages/usluga-podrazdel-v1.html\r\nb24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a  src/pages/usluga-konechnaya-v1.html",
+  "template_hashes_after": [
+    {
+      "file": "src/pages/index.html",
+      "sha256": "c14ff5a3b58af5dafe957edfa56ebd22addb02ba084ef29101e82178aec83f53"
+    },
+    {
+      "file": "src/pages/uslugi-v2.html",
+      "sha256": "e0f7f8c8efb4aa5622418b1382442e8684152000a3330c5894ab07d0275eb9bc"
+    },
+    {
+      "file": "src/pages/usluga-podrazdel-v1.html",
+      "sha256": "fc32e6744f51ddd4a5b218baf253b80da6206f359dfb6161de3c0a769c76c49c"
+    },
+    {
+      "file": "src/pages/usluga-konechnaya-v1.html",
+      "sha256": "b24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a"
+    }
+  ],
+  "duration_ms": 192,
+  "command": "npm run build:demo"
+}

@@ -5,6 +5,7 @@
   "description": "FP-0002 Shpigovsky v7 — active development from frozen V6 baseline",
   "scripts": {
     "build": "gulp build",
+    "build:demo": "gulp build && node tools/static-demo-generator/index.js",
     "watch": "gulp watch",
     "watch:dev": "gulp watch:dev"
   },

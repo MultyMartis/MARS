@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "version": "pass-2-final",
+    "generated_from": "demo-navigation-registry.draft.json",
+    "link_count": 28
+  },
+  "links": [
+    {
+      "surface": "desktop_header",
+      "current_label": "Лечение и профилактика",
+      "target_page_id": "FP0002-DEMO-PG-002",
+      "target_url": "/uslugi/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "desktop_header",
+      "current_label": "Генотипирование",
+      "target_page_id": "FP0002-DEMO-PG-003",
+      "target_url": "/uslugi/genotipirovanie/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/genotipirovanie/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "desktop_header",
+      "current_label": "Специалисты",
+      "target_page_id": "FP0002-DEMO-PG-004",
+      "target_url": "/specialisty/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/specyalisty/",
+      "normalization_status": "NORMALIZED_FOR_CLIENT_DEMO"
+    },
+    {
+      "surface": "desktop_header",
+      "current_label": "О центре",
+      "target_page_id": "FP0002-DEMO-PG-005",
+      "target_url": "/o-centre/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "desktop_header",
+      "current_label": "Отзывы",
+      "target_page_id": "FP0002-DEMO-PG-006",
+      "target_url": "/otzyvy/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/otzyvy/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "desktop_header",
+      "current_label": "Статьи",
+      "target_page_id": "FP0002-DEMO-PG-007",
+      "target_url": "/blog/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/blog/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "desktop_header",
+      "current_label": "Контакты",
+      "target_page_id": "FP0002-DEMO-PG-008",
+      "target_url": "/kontakty/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/kontakty/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "Лечение и профилактика",
+      "target_page_id": "FP0002-DEMO-PG-002",
+      "target_url": "/uslugi/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "Генотипирование",
+      "target_page_id": "FP0002-DEMO-PG-003",
+      "target_url": "/uslugi/genotipirovanie/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/genotipirovanie/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "Специалисты",
+      "target_page_id": "FP0002-DEMO-PG-004",
+      "target_url": "/specialisty/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/specyalisty/",
+      "normalization_status": "NORMALIZED_FOR_CLIENT_DEMO"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "О центре",
+      "target_page_id": "FP0002-DEMO-PG-005",
+      "target_url": "/o-centre/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "Отзывы",
+      "target_page_id": "FP0002-DEMO-PG-006",
+      "target_url": "/otzyvy/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/otzyvy/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "Статьи",
+      "target_page_id": "FP0002-DEMO-PG-007",
+      "target_url": "/blog/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/blog/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "mobile_header",
+      "current_label": "Контакты",
+      "target_page_id": "FP0002-DEMO-PG-008",
+      "target_url": "/kontakty/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/kontakty/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "logo",
+      "current_label": "Шпиговский дом",
+      "target_page_id": "FP0002-DEMO-PG-001",
+      "target_url": "/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_services",
+      "current_label": "Зависимости и пристрастия",
+      "target_page_id": "FP0002-DEMO-PG-031",
+      "target_url": "/uslugi/zavisimosti/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/zavisimosti/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_services",
+      "current_label": "Психическое здоровье",
+      "target_page_id": "FP0002-DEMO-PG-029",
+      "target_url": "/uslugi/psihicheskoe-zdorovie/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/psihicheskoe-zdorovie/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_services",
+      "current_label": "Расстройства пищевого поведения",
+      "target_page_id": "FP0002-DEMO-PG-030",
+      "target_url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_services",
+      "current_label": "Генотипирование",
+      "target_page_id": "FP0002-DEMO-PG-003",
+      "target_url": "/uslugi/genotipirovanie/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/uslugi/genotipirovanie/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_about",
+      "current_label": "О нас",
+      "target_page_id": "FP0002-DEMO-PG-019",
+      "target_url": "/o-centre/o-nas/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/o-nas/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_about",
+      "current_label": "Программа лечения",
+      "target_page_id": "FP0002-DEMO-PG-020",
+      "target_url": "/o-centre/programma-lecheniya/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/programma-lecheniya/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_about",
+      "current_label": "Галерея о доме",
+      "target_page_id": "FP0002-DEMO-PG-017",
+      "target_url": "/o-centre/galereya-o-dome/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/galereya-o-dome/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_about",
+      "current_label": "Специалистам",
+      "target_page_id": "FP0002-DEMO-PG-022",
+      "target_url": "/o-centre/specialistam/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/specialistam/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_about",
+      "current_label": "Родственникам",
+      "target_page_id": "FP0002-DEMO-PG-021",
+      "target_url": "/o-centre/rodstvennikam/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/o-centre/rodstvennikam/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_legal",
+      "current_label": "Политика конфиденциальности",
+      "target_page_id": "FP0002-DEMO-PG-012",
+      "target_url": "/privacy-policy/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/privacy-policy/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_legal",
+      "current_label": "Пользовательское соглашение",
+      "target_page_id": "FP0002-DEMO-PG-013",
+      "target_url": "/user-agreement/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/user-agreement/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_legal",
+      "current_label": "Согласие на обработку персональных данных",
+      "target_page_id": "FP0002-DEMO-PG-010",
+      "target_url": "/consent-personal-data/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/consent-personal-data/",
+      "normalization_status": "EXPLICIT"
+    },
+    {
+      "surface": "footer_legal",
+      "current_label": "Политика Cookie-файлов",
+      "target_page_id": "FP0002-DEMO-PG-011",
+      "target_url": "/cookie-files-policy/",
+      "source_of_mapping": "EXPLICIT: runtime header/footer.html",
+      "confidence": "HIGH",
+      "source_url": "/cookie-files-policy/",
+      "normalization_status": "EXPLICIT"
+    }
+  ]
+}

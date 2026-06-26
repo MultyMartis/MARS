@@ -1,0 +1,165 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "template": "HOME_PAGE_TEMPLATE",
+      "viewport": "desktop",
+      "file": "home-desktop-1437.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/"
+    },
+    {
+      "slug": "home",
+      "template": "HOME_PAGE_TEMPLATE",
+      "viewport": "mobile",
+      "file": "home-mobile-380.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/"
+    },
+    {
+      "slug": "services-hub",
+      "template": "SERVICES_HUB_INTERNAL_PAGE",
+      "viewport": "desktop",
+      "file": "services-hub-desktop-1437.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/"
+    },
+    {
+      "slug": "services-hub",
+      "template": "SERVICES_HUB_INTERNAL_PAGE",
+      "viewport": "mobile",
+      "file": "services-hub-mobile-380.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/"
+    },
+    {
+      "slug": "subdivision-genotipirovanie",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "viewport": "desktop",
+      "file": "subdivision-genotipirovanie-desktop-1437.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/genotipirovanie/"
+    },
+    {
+      "slug": "subdivision-genotipirovanie",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "viewport": "mobile",
+      "file": "subdivision-genotipirovanie-mobile-380.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/genotipirovanie/"
+    },
+    {
+      "slug": "subdivision-zavisimosti",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "viewport": "desktop",
+      "file": "subdivision-zavisimosti-desktop-1437.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/zavisimosti/"
+    },
+    {
+      "slug": "subdivision-zavisimosti",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "viewport": "mobile",
+      "file": "subdivision-zavisimosti-mobile-380.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/zavisimosti/"
+    },
+    {
+      "slug": "leaf-alkogol",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "viewport": "desktop",
+      "file": "leaf-alkogol-desktop-1437.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+    },
+    {
+      "slug": "leaf-alkogol",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "viewport": "mobile",
+      "file": "leaf-alkogol-mobile-380.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+    },
+    {
+      "slug": "leaf-depressiya",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "viewport": "desktop",
+      "file": "leaf-depressiya-desktop-1437.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/psihicheskoe-zdorovie/depressiya/"
+    },
+    {
+      "slug": "leaf-depressiya",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "viewport": "mobile",
+      "file": "leaf-depressiya-mobile-380.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/psihicheskoe-zdorovie/depressiya/"
+    },
+    {
+      "slug": "leaf-ptsr",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "viewport": "desktop",
+      "file": "leaf-ptsr-desktop-1437.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/psihicheskoe-zdorovie/ptsr/"
+    },
+    {
+      "slug": "leaf-ptsr",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "viewport": "mobile",
+      "file": "leaf-ptsr-mobile-380.png",
+      "overflow": true,
+      "url": "http://127.0.0.1:4175/uslugi/psihicheskoe-zdorovie/ptsr/"
+    },
+    {
+      "slug": "placeholder-specialisty",
+      "template": "PLACEHOLDER_PAGE",
+      "viewport": "desktop",
+      "file": "placeholder-specialisty-desktop-1437.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/specialisty/"
+    },
+    {
+      "slug": "placeholder-specialisty",
+      "template": "PLACEHOLDER_PAGE",
+      "viewport": "mobile",
+      "file": "placeholder-specialisty-mobile-380.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/specialisty/"
+    },
+    {
+      "slug": "placeholder-privacy",
+      "template": "PLACEHOLDER_PAGE",
+      "viewport": "desktop",
+      "file": "placeholder-privacy-desktop-1437.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/privacy-policy/"
+    },
+    {
+      "slug": "placeholder-privacy",
+      "template": "PLACEHOLDER_PAGE",
+      "viewport": "mobile",
+      "file": "placeholder-privacy-mobile-380.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/privacy-policy/"
+    },
+    {
+      "slug": "placeholder-reserved",
+      "template": "PLACEHOLDER_PAGE",
+      "viewport": "desktop",
+      "file": "placeholder-reserved-desktop-1437.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/"
+    },
+    {
+      "slug": "placeholder-reserved",
+      "template": "PLACEHOLDER_PAGE",
+      "viewport": "mobile",
+      "file": "placeholder-reserved-mobile-380.png",
+      "overflow": false,
+      "url": "http://127.0.0.1:4175/uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/"
+    }
+  ],
+  "output_dir": "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v7\\plans\\static-client-demo\\evidence\\screenshots\\pass-2-smoke"
+}

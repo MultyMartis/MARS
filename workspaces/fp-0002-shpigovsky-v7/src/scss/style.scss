@@ -7146,3 +7146,18 @@ font-size: var(--font-size-base);
 		height: 220px;
 	}
 }
+
+/* FP-0002 static demo — placeholder shell (PASS 2 scope only) */
+.page-placeholder__section {
+	padding: 48px 0 80px;
+}
+
+.page-placeholder__title {
+	margin: 24px 0 16px;
+}
+
+.page-placeholder__message {
+	max-width: 720px;
+	font-size: 18px;
+	line-height: 1.5;
+}
