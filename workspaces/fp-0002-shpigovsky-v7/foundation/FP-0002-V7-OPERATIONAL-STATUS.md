@@ -760,10 +760,31 @@ service_leaf_group_3_backup_sha256:
 E8DD7D62F5917ED21987E8AE42F5C6F08B3D588E927775044A854BC11750D2E6
 
 service_leaf_group_4:
-NOT_STARTED
+COMPLETE
+
+service_leaf_group_4_name:
+FOUR_DIRECTION_PROGRAM
+
+service_leaf_group_4_desktop:
+PASS
+
+service_leaf_group_4_mobile:
+PASS
+
+service_leaf_group_4_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-group-4/
+
+service_leaf_group_4_backup:
+FP-0002-V7-PG-004-SERVICE-LEAF-GROUP-4-BEFORE-SOURCE.zip
+
+service_leaf_group_4_backup_sha256:
+CE8FBD28503A6EDF210D4B44AE71AB76836C4C846A486CC0CBB4E19ECE1BACC2
+
+service_leaf_remaining_groups:
+NOT_IMPLEMENTED
 
 service_leaf_implementation:
-GROUP_3_COMPLETE
+GROUP_4_COMPLETE
 
 service_leaf_canonical_switch:
 NOT_STARTED
