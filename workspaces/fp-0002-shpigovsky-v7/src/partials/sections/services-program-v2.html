@@ -15,21 +15,7 @@
       @@itemsHtml
     </div>
 
-    <div class="services-program-v2__cta-band">
-      <div class="services-program-v2__cta-copy">
-        <p class="services-program-v2__cta-title">@@ctaTitle</p>
-        <p class="services-program-v2__cta-subtitle">@@ctaSubtitle</p>
-      </div>
-      <a class="services-program-v2__cta-phone" href="tel:+79251836464">@@ctaPhone</a>
-      <button
-        type="button"
-        class="btn btn_dark btn--primary services-program-v2__cta-button"
-        data-modal-open="consultation"
-        data-modal-source="@@ctaSource"
-        data-modal-title="@@ctaText"
-        data-modal-submit-text="@@ctaText"
-      >@@ctaText</button>
-    </div>
+    @@include('partials/components/services-program-cta-band-v2.html', {"ctaTitle": "@@ctaTitle", "ctaSubtitle": "@@ctaSubtitle", "ctaPhone": "@@ctaPhone", "ctaText": "@@ctaText", "ctaSource": "@@ctaSource"})
 
     <a class="services-program-v2__foot-link" href="@@allLinkHref">
       <span class="services-program-v2__foot-link-text">@@allLinkTextMobile</span>

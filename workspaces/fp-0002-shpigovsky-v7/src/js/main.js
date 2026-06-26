@@ -391,20 +391,6 @@
 				},
 			},
 		});
-
-		fancybox.bind('[data-fancybox="services-comfort-v2"]', {
-			groupAll: false,
-			Carousel: {
-				infinite: false,
-			},
-			Toolbar: {
-				display: {
-					left: ['infobar'],
-					middle: [],
-					right: ['close'],
-				},
-			},
-		});
 	}
 
 	if (document.readyState === 'loading') {

@@ -127,13 +127,19 @@ services_v2_program_mockup_text: COMPLETE
 services_v2_program_empty_content_slots: ZERO
 services_v2_program_component: SERVICES_SPECIFIC_REUSABLE_PARTIAL
 services_v2_root_tokens_added: ZERO
-services_v2_founder: COMPLETE_PENDING_OPERATOR_REVIEW
-services_v2_comfort: COMPLETE_PENDING_OPERATOR_REVIEW
-services_v2_mid_page_cta: COMPLETE_PENDING_OPERATOR_REVIEW
-services_v2_faq: NOT_STARTED
-services_v2_final_form: NOT_STARTED
-services_v2_program_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-program/
-services_v2_lower_pass_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-founder-comfort-cta/
+services_v2_program_item_descriptions: REMOVED_BY_OPERATOR_DECISION
+services_v2_founder: HOME_FOUNDER_QUOTE_REUSED
+services_v2_comfort: HOME_COMFORT_REUSED
+services_v2_mid_page_cta: SECOND_PROGRAM_CTA_BAND_REUSED
+services_v2_faq: HOME_FAQ_REUSED
+services_v2_final_form: HOME_FINAL_FORM_REUSED
+services_v2_lower_page_assembly: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_visible_mockup_text_policy: ACTIVE
+services_v2_root_tokens_added: ZERO
+services_v2_v1: PRESERVED_FALLBACK
+services_v2_navigation_switch: NOT_STARTED
+services_v2_founder_comfort_cta_superseded: SUPERSEDED_NOT_IN_RUNTIME
+services_v2_final_assembly_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-final-lower-assembly/
 services_v1: PRESERVED_FALLBACK
 next_phase: SERVICES_V2_LOWER_BLOCKS_OPERATOR_REVIEW
 ```
