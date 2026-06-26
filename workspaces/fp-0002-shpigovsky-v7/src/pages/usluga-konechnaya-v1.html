@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Лечение алкогольной зависимости — Шпиговский дом", "description": "Центр лечения алкогольной зависимости в «Шпиговский дом»: индивидуальный подход к реабилитации. Экспериментальная страница конечной услуги.", "canonical": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Лечение алкогольной зависимости — Шпиговский дом", "ogDescription": "Центр лечения алкогольной зависимости в «Шпиговский дом»: индивидуальный подход к реабилитации.", "ogUrl": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Лечение алкогольной зависимости — Шпиговский дом"})
+</head>
+<body class="page-service-leaf-v1" data-page="usluga-konechnaya-v1">
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": ""})
+  <main class="page-service-leaf-v1__main">
+    @@include('partials/sections/services-inner-hero-v2.html', {"titleId": "service-leaf-hero-title", "heroImage": "assets/img/content/services/service-leaf-alcohol-hero.webp", "heroWidth": "850", "heroHeight": "567", "heroEyebrow": "Заболевания, которые мы&nbsp;лечим", "heroTitle": "Центр лечения алкогольной зависимости", "heroLead": "В&nbsp;центре реабилитации Шпиговский Дом мы&nbsp;понимаем, что каждый человек уникален, поэтому мы&nbsp;не&nbsp;предложим вам универсальный подход к&nbsp;лечению. Путь в&nbsp;борьбе с&nbsp;алкогольной зависимостью может быть только индивидуальным.", "heroCtaText": "Записаться на&nbsp;консультацию", "heroCtaSource": "service-leaf-hero-v1"})
+    <div class="page-service-leaf-v1__upper-nav container">
+      @@include('partials/components/breadcrumbs.html', {"crumbHome": "Главная", "crumbMiddle": "Услуги", "crumbMiddleHref": "/uslugi-v2.html", "crumbMiddle2": "Зависимости и&nbsp;пристрастия", "crumbMiddleHref2": "/usluga-podrazdel-v1.html", "crumbCurrent": "Лечение алкогольной зависимости"})
+      @@include('partials/components/services-page-subnav.html', {"listHtml": "<li class=\"services-page-subnav__item\"><a class=\"services-page-subnav__link\" href=\"#service-leaf-approach\">Наш подход к лечению</a></li><li class=\"services-page-subnav__item\"><a class=\"services-page-subnav__link\" href=\"#service-leaf-program\">Программа лечения</a></li><li class=\"services-page-subnav__item\"><a class=\"services-page-subnav__link\" href=\"#service-leaf-start\">С чего начать</a></li><li class=\"services-page-subnav__item\"><a class=\"services-page-subnav__link\" href=\"#service-leaf-specialists\">Специалисты</a></li><li class=\"services-page-subnav__item\"><a class=\"services-page-subnav__link\" href=\"#service-leaf-comfort\">Условия центра</a></li><li class=\"services-page-subnav__item\"><a class=\"services-page-subnav__link\" href=\"#service-leaf-reviews\">Отзывы о программе</a></li>"})
+    </div>
+    @@include('partials/sections/service-leaf-intro-v1.html')
+    @@include('partials/sections/service-leaf-bordered-info-v1.html')
+    @@include('partials/sections/service-leaf-cta-01-v1.html')
+    <!-- SERVICE-LEAF-GROUP-1-BOUNDARY -->
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/components/modal-consultation.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

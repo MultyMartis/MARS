@@ -8,6 +8,11 @@
       <a class="breadcrumbs__link" href="@@crumbMiddleHref">@@crumbMiddle</a>
     </li>
     }
+    @@if (crumbMiddle2 !== '') {
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="@@crumbMiddleHref2">@@crumbMiddle2</a>
+    </li>
+    }
     <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
       <span class="breadcrumbs__current">@@crumbCurrent</span>
     </li>
