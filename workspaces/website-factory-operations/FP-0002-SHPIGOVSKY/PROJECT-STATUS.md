@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (V7 Package #002 complete pending operator review)
+**Last updated:** 2026-06-26 (V7 Package #003 complete pending operator review)
 
 ## Workspace versions (2026-06-24)
 
@@ -44,6 +44,18 @@ slider_pagination: COMPLETE
 home_videos: COMPLETE
 faq_filler: COMPLETE_TEMPORARY_CONTENT
 home_recovery_intro_text: FIGMA_EXACT_COMPLETE
+
+operator_checkpoint_before_package_003:
+  date: 2026-06-26
+  status: NOT_REQUIRED
+  backup_sha256: 3BE9ADAA1B35FD27DC5E4F0CAA3CFB34667A18B818511F4EC5A51247B37C0E75
+
+package_003: COMPLETE_PENDING_OPERATOR_REVIEW
+video_posters: REAL_VIDEO_FRAMES_COMPLETE
+hero_container_gutters: COMPLETE
+founder_quote_variant_a: PRESERVED_FALLBACK
+founder_quote_variant_b: EXPERIMENTAL_COMPLETE_PENDING_OPERATOR_SELECTION
+treatment_service_icons: COMPLETE
 ```
 
 ## Milestone (2026-06-23)

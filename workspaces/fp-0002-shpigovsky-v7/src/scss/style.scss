@@ -867,7 +867,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	max-width: 1400px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 10px;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
 	overflow: hidden;
 	border-radius: var(--radius-main);
 }
@@ -1184,6 +1185,36 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	color: var(--color-text-inverse);
 }
 
+.home-founder-quote--variant-b .home-founder-quote__figure {
+	overflow: hidden;
+	border-radius: var(--radius-main);
+}
+
+.home-founder-quote--variant-b .home-founder-quote__photo {
+	width: 100%;
+	max-height: 640px;
+	object-fit: cover;
+	object-position: 62% 12%;
+	border-radius: 0;
+	-webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.35) 18%, rgba(0, 0, 0, 0.92) 42%, #000 68%);
+	mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.35) 18%, rgba(0, 0, 0, 0.92) 42%, #000 68%);
+}
+
+.home-founder-quote--variant-b .home-founder-quote__figure::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background:
+		linear-gradient(90deg, var(--color-page-background) 0%, rgba(218, 229, 240, 0.55) 22%, rgba(218, 229, 240, 0) 52%),
+		linear-gradient(180deg, rgba(218, 229, 240, 0) 58%, rgba(218, 229, 240, 0.45) 100%);
+	pointer-events: none;
+}
+
+.home-founder-quote--variant-b .home-founder-quote__author {
+	z-index: 2;
+}
+
 /* ==========================================================================
    10c. Home treatment prevention (Section 03)
    ========================================================================== */
@@ -1361,12 +1392,13 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	display: inline-flex;
 	font-size: 14px;
 	color: var(--color-text-secondary);
+	opacity: 0.5;
 }
 
 .home-treatment-prevention__service-icon-image {
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 }
 
 /* ==========================================================================
@@ -3685,6 +3717,11 @@ body[data-offcanvas-state='open'] {
 		padding-right: var(--pad-gap-line);
 	}
 
+	.hero {
+		padding-left: var(--pad-gap-line);
+		padding-right: var(--pad-gap-line);
+	}
+
 	.hero--home,
 	.hero--inner {
 		max-height: none;
@@ -3716,6 +3753,19 @@ body[data-offcanvas-state='open'] {
 	.home-founder-quote__author {
 		position: static;
 		margin-top: var(--pad-gap-line);
+	}
+
+	.home-founder-quote--variant-b .home-founder-quote__photo {
+		max-height: 420px;
+		object-position: 58% 10%;
+		-webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 14%, rgba(0, 0, 0, 0.95) 36%, #000 62%);
+		mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 14%, rgba(0, 0, 0, 0.95) 36%, #000 62%);
+	}
+
+	.home-founder-quote--variant-b .home-founder-quote__figure::before {
+		background:
+			linear-gradient(180deg, var(--color-page-background) 0%, rgba(218, 229, 240, 0.5) 18%, rgba(218, 229, 240, 0) 42%),
+			linear-gradient(180deg, rgba(218, 229, 240, 0) 55%, rgba(218, 229, 240, 0.5) 100%);
 	}
 
 	.home-treatment-prevention__head {
