@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-26 (Home operator baseline frozen before style audit)
+**Updated:** 2026-06-26 (Home visual style baseline audit complete)
 
 ```text
 workspace: V7
@@ -95,9 +95,13 @@ treatment_service_icons: COMPLETE
 
 home_operator_manual_polish: ACCEPTED_AS_CURRENT_BASELINE
 home_source_authority: OPERATOR_CANONICAL
-home_visual_style_audit: AUTHORIZED_NOT_STARTED
+home_visual_style_audit: COMPLETE
+home_visual_baseline: DOCUMENTED
+component_reuse_map: COMPLETE
+source_universalization: NOT_STARTED
+services_general_planning: AUTHORIZED_NOT_STARTED
 services_general_page: NOT_STARTED
-next_phase: HOME_VISUAL_STYLE_BASELINE_AUDIT
+next_phase: SERVICES_GENERAL_DESIGN_TO_SOURCE_MAPPING
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
