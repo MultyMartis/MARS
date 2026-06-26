@@ -738,8 +738,32 @@ FP-0002-V7-PG-004-SERVICE-LEAF-GROUP-2-BEFORE-SOURCE.zip
 service_leaf_group_2_backup_sha256:
 95709398AC8AC8AC2905024D91C1C296352B14D0B735AA0BBFB4DCBBBF87A908
 
+service_leaf_group_3:
+COMPLETE
+
+service_leaf_group_3_name:
+TREATMENT_APPROACH_TEAM_AND_LANDSCAPE
+
+service_leaf_group_3_desktop:
+PASS
+
+service_leaf_group_3_mobile:
+PASS
+
+service_leaf_group_3_review:
+workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-group-3/
+
+service_leaf_group_3_backup:
+FP-0002-V7-PG-004-SERVICE-LEAF-GROUP-3-BEFORE-SOURCE.zip
+
+service_leaf_group_3_backup_sha256:
+E8DD7D62F5917ED21987E8AE42F5C6F08B3D588E927775044A854BC11750D2E6
+
+service_leaf_group_4:
+NOT_STARTED
+
 service_leaf_implementation:
-GROUP_2_COMPLETE
+GROUP_3_COMPLETE
 
 service_leaf_canonical_switch:
 NOT_STARTED
