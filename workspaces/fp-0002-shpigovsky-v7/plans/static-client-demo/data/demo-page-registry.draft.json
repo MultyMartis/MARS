@@ -1,0 +1,2830 @@
+{
+  "meta": {
+    "excel_path": "C:\\MARS Phenix\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\INCOMING\\02_CONTENT\\Предварит структура и спрос.xlsx",
+    "excel_size": 14102,
+    "excel_modified": "2026-06-13T03:34:52.991062",
+    "sheet_audits": [
+      {
+        "sheet": "Структура",
+        "dimensions": "53x5",
+        "rows": 53,
+        "columns": 5,
+        "header_row": 1,
+        "headers": [
+          null,
+          "1 уровень",
+          "2 уровень",
+          "3 уровень",
+          "4 уровень"
+        ],
+        "hidden": "visible",
+        "merged_cells": 0,
+        "verdict": "STRUCTURE"
+      },
+      {
+        "sheet": "Спрос набросок",
+        "dimensions": "53x8",
+        "rows": 53,
+        "columns": 8,
+        "header_row": 1,
+        "headers": [
+          "Запрос",
+          "Частотность МСК",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "hidden": "visible",
+        "merged_cells": 0,
+        "verdict": "SUPPORTING"
+      }
+    ],
+    "total_source_rows": 53,
+    "page_rows": 56,
+    "placeholder_slots": 3,
+    "duplicate_titles": 0,
+    "duplicate_h1": 0,
+    "duplicate_urls": 0,
+    "max_depth": 4,
+    "template_counts": {
+      "HOME_PAGE_TEMPLATE": 1,
+      "SERVICES_HUB_INTERNAL_PAGE": 1,
+      "SERVICE_SUBDIVISION_INTERNAL_PAGE": 6,
+      "PLACEHOLDER_PAGE": 30,
+      "SERVICE_LEAF_INTERNAL_PAGE": 18
+    }
+  },
+  "pages": [
+    {
+      "source_row": "Структура!2",
+      "raw_url": "https://shpigovsky.ru/",
+      "url": "/",
+      "raw_name": "/",
+      "hierarchy_level": 1,
+      "levels": [
+        "/",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": null,
+      "parent_resolved": null,
+      "children_count": 7,
+      "page_id": "FP0002-DEMO-PG-001",
+      "normalized_name": "/",
+      "slug": "index",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/",
+      "output_path": "dist/index.html",
+      "template": "HOME_PAGE_TEMPLATE",
+      "template_evidence": "EXPLICIT: единственная главная",
+      "template_confidence": "HIGH",
+      "title": "Шпиговский дом — центр профилактики и лечения зависимостей",
+      "h1": "/",
+      "breadcrumbs": [],
+      "menu_presence": true,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!3",
+      "raw_url": "https://shpigovsky.ru/uslugi/",
+      "url": "/uslugi/",
+      "raw_name": "Услуги",
+      "hierarchy_level": 1,
+      "levels": [
+        "Услуги",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 4,
+      "page_id": "FP0002-DEMO-PG-002",
+      "normalized_name": "Услуги",
+      "slug": "uslugi",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/",
+      "output_path": "dist/uslugi/index.html",
+      "template": "SERVICES_HUB_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: каталог услуг L1",
+      "template_confidence": "HIGH",
+      "title": "Услуги — Шпиговский Дом",
+      "h1": "Услуги",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!32",
+      "raw_url": "https://shpigovsky.ru/uslugi/genotipirovanie/",
+      "url": "/uslugi/genotipirovanie/",
+      "raw_name": "Генотипирование",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Генотипирование",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/",
+      "parent_resolved": "/uslugi/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-003",
+      "normalized_name": "Генотипирование",
+      "slug": "genotipirovanie",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/genotipirovanie/",
+      "output_path": "dist/uslugi/genotipirovanie/index.html",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: standalone service direction L2 under /uslugi/",
+      "template_confidence": "HIGH",
+      "title": "Генотипирование — Шпиговский Дом",
+      "h1": "Генотипирование",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Генотипирование",
+          "url": "/uslugi/genotipirovanie/",
+          "page_id": "FP0002-DEMO-PG-003"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!33",
+      "raw_url": "https://shpigovsky.ru/specyalisty/",
+      "url": "/specyalisty/",
+      "raw_name": "Специалисты",
+      "hierarchy_level": 1,
+      "levels": [
+        "Специалисты",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 6,
+      "page_id": "FP0002-DEMO-PG-004",
+      "normalized_name": "Специалисты",
+      "slug": "specyalisty",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/specyalisty/",
+      "output_path": "dist/specyalisty/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: top menu informational /specyalisty/",
+      "template_confidence": "HIGH",
+      "title": "Специалисты — Шпиговский Дом",
+      "h1": "Специалисты",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!40",
+      "raw_url": "https://shpigovsky.ru/o-centre/",
+      "url": "/o-centre/",
+      "raw_name": "О центре",
+      "hierarchy_level": 1,
+      "levels": [
+        "О центре",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 6,
+      "page_id": "FP0002-DEMO-PG-005",
+      "normalized_name": "О центре",
+      "slug": "o-centre",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/",
+      "output_path": "dist/o-centre/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: top menu informational /o-centre/",
+      "template_confidence": "HIGH",
+      "title": "О центре — Шпиговский Дом",
+      "h1": "О центре",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!47",
+      "raw_url": "https://shpigovsky.ru/otzyvy/",
+      "url": "/otzyvy/",
+      "raw_name": "Отзывы",
+      "hierarchy_level": 1,
+      "levels": [
+        "Отзывы",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-006",
+      "normalized_name": "Отзывы",
+      "slug": "otzyvy",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/otzyvy/",
+      "output_path": "dist/otzyvy/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: top menu informational /otzyvy/",
+      "template_confidence": "HIGH",
+      "title": "Отзывы — Шпиговский Дом",
+      "h1": "Отзывы",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Отзывы",
+          "url": "/otzyvy/",
+          "page_id": "FP0002-DEMO-PG-006"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!48",
+      "raw_url": "https://shpigovsky.ru/blog/",
+      "url": "/blog/",
+      "raw_name": "Статьи",
+      "hierarchy_level": 1,
+      "levels": [
+        "Статьи",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 3,
+      "page_id": "FP0002-DEMO-PG-007",
+      "normalized_name": "Статьи",
+      "slug": "blog",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/blog/",
+      "output_path": "dist/blog/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: top menu informational /blog/",
+      "template_confidence": "HIGH",
+      "title": "Статьи — Шпиговский Дом",
+      "h1": "Статьи",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Статьи",
+          "url": "/blog/",
+          "page_id": "FP0002-DEMO-PG-007"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!52",
+      "raw_url": "https://shpigovsky.ru/kontakty/",
+      "url": "/kontakty/",
+      "raw_name": "Контакты",
+      "hierarchy_level": 1,
+      "levels": [
+        "Контакты",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-008",
+      "normalized_name": "Контакты",
+      "slug": "kontakty",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/kontakty/",
+      "output_path": "dist/kontakty/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: top menu informational /kontakty/",
+      "template_confidence": "HIGH",
+      "title": "Контакты — Шпиговский Дом",
+      "h1": "Контакты",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Контакты",
+          "url": "/kontakty/",
+          "page_id": "FP0002-DEMO-PG-008"
+        }
+      ],
+      "menu_presence": true,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!53",
+      "raw_url": "https://shpigovsky.ru/pravovaya-informaciya-pilzovatelyu//",
+      "url": "/pravovaya-informaciya-pilzovatelyu/",
+      "raw_name": "Правовая информация",
+      "hierarchy_level": 1,
+      "levels": [
+        "Правовая информация",
+        null,
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-009",
+      "normalized_name": "Правовая информация",
+      "slug": "pravovaya-informaciya-pilzovatelyu",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/pravovaya-informaciya-pilzovatelyu/",
+      "output_path": "dist/pravovaya-informaciya-pilzovatelyu/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: top menu informational /pravovaya-informaciya-pilzovatelyu/",
+      "template_confidence": "HIGH",
+      "title": "Правовая информация — Шпиговский Дом",
+      "h1": "Правовая информация",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Правовая информация",
+          "url": "/pravovaya-informaciya-pilzovatelyu/",
+          "page_id": "FP0002-DEMO-PG-009"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "INFERRED:footer.html",
+      "raw_url": "/consent-personal-data/",
+      "url": "/consent-personal-data/",
+      "raw_name": "Согласие на обработку персональных данных",
+      "normalized_name": "Согласие на обработку персональных данных",
+      "hierarchy_level": 1,
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "source_notes": "INFERRED: footer legal links not in Excel",
+      "confidence": "MEDIUM",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "page_id": "FP0002-DEMO-PG-010",
+      "slug": "consent-personal-data",
+      "canonical_url": "/consent-personal-data/",
+      "output_path": "dist/consent-personal-data/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "INFERRED: legal footer links not in Excel",
+      "template_confidence": "MEDIUM",
+      "title": "Согласие на обработку персональных данных — Шпиговский Дом",
+      "h1": "Согласие на обработку персональных данных",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Согласие на обработку персональных данных",
+          "url": "/consent-personal-data/",
+          "page_id": "FP0002-DEMO-PG-010"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "INFERRED:footer.html",
+      "raw_url": "/cookie-files-policy/",
+      "url": "/cookie-files-policy/",
+      "raw_name": "Политика Cookie-файлов",
+      "normalized_name": "Политика Cookie-файлов",
+      "hierarchy_level": 1,
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "source_notes": "INFERRED: footer legal links not in Excel",
+      "confidence": "MEDIUM",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "page_id": "FP0002-DEMO-PG-011",
+      "slug": "cookie-files-policy",
+      "canonical_url": "/cookie-files-policy/",
+      "output_path": "dist/cookie-files-policy/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "INFERRED: legal footer links not in Excel",
+      "template_confidence": "MEDIUM",
+      "title": "Политика Cookie-файлов — Шпиговский Дом",
+      "h1": "Политика Cookie-файлов",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Политика Cookie-файлов",
+          "url": "/cookie-files-policy/",
+          "page_id": "FP0002-DEMO-PG-011"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "INFERRED:footer.html",
+      "raw_url": "/privacy-policy/",
+      "url": "/privacy-policy/",
+      "raw_name": "Политика конфиденциальности",
+      "normalized_name": "Политика конфиденциальности",
+      "hierarchy_level": 1,
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "source_notes": "INFERRED: footer legal links not in Excel",
+      "confidence": "MEDIUM",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "page_id": "FP0002-DEMO-PG-012",
+      "slug": "privacy-policy",
+      "canonical_url": "/privacy-policy/",
+      "output_path": "dist/privacy-policy/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "INFERRED: legal footer links not in Excel",
+      "template_confidence": "MEDIUM",
+      "title": "Политика конфиденциальности — Шпиговский Дом",
+      "h1": "Политика конфиденциальности",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Политика конфиденциальности",
+          "url": "/privacy-policy/",
+          "page_id": "FP0002-DEMO-PG-012"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "INFERRED:footer.html",
+      "raw_url": "/user-agreement/",
+      "url": "/user-agreement/",
+      "raw_name": "Пользовательское соглашение",
+      "normalized_name": "Пользовательское соглашение",
+      "hierarchy_level": 1,
+      "parent_raw": "/",
+      "parent_resolved": "/",
+      "source_notes": "INFERRED: footer legal links not in Excel",
+      "confidence": "MEDIUM",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "page_id": "FP0002-DEMO-PG-013",
+      "slug": "user-agreement",
+      "canonical_url": "/user-agreement/",
+      "output_path": "dist/user-agreement/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "INFERRED: legal footer links not in Excel",
+      "template_confidence": "MEDIUM",
+      "title": "Пользовательское соглашение — Шпиговский Дом",
+      "h1": "Пользовательское соглашение",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Пользовательское соглашение",
+          "url": "/user-agreement/",
+          "page_id": "FP0002-DEMO-PG-013"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!50",
+      "raw_url": "https://shpigovsky.ru/blog/nazvanie-stati/",
+      "url": "/blog/nazvanie-stati-1/",
+      "raw_name": "Статья 2",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Статья 2",
+        null,
+        null
+      ],
+      "source_notes": "; EXCEL_DUPLICATE_URL",
+      "confidence": "MEDIUM",
+      "parent_raw": "/blog/",
+      "parent_resolved": "/blog/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "page_id": "FP0002-DEMO-PG-014",
+      "normalized_name": "Статья 2",
+      "slug": "nazvanie-stati-1",
+      "canonical_url": "/blog/nazvanie-stati-1/",
+      "output_path": "dist/blog/nazvanie-stati-1/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: blog/article — нет шаблона",
+      "template_confidence": "HIGH",
+      "title": "Статья 2 — Шпиговский Дом",
+      "h1": "Статья 2",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Статьи",
+          "url": "/blog/",
+          "page_id": "FP0002-DEMO-PG-007"
+        },
+        {
+          "name": "Статья 2",
+          "url": "/blog/nazvanie-stati-1/",
+          "page_id": "FP0002-DEMO-PG-014"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!51",
+      "raw_url": "https://shpigovsky.ru/blog/nazvanie-stati/",
+      "url": "/blog/nazvanie-stati-2/",
+      "raw_name": "Статья 3",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Статья 3",
+        null,
+        null
+      ],
+      "source_notes": "; EXCEL_DUPLICATE_URL",
+      "confidence": "MEDIUM",
+      "parent_raw": "/blog/",
+      "parent_resolved": "/blog/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "page_id": "FP0002-DEMO-PG-015",
+      "normalized_name": "Статья 3",
+      "slug": "nazvanie-stati-2",
+      "canonical_url": "/blog/nazvanie-stati-2/",
+      "output_path": "dist/blog/nazvanie-stati-2/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: blog/article — нет шаблона",
+      "template_confidence": "HIGH",
+      "title": "Статья 3 — Шпиговский Дом",
+      "h1": "Статья 3",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Статьи",
+          "url": "/blog/",
+          "page_id": "FP0002-DEMO-PG-007"
+        },
+        {
+          "name": "Статья 3",
+          "url": "/blog/nazvanie-stati-2/",
+          "page_id": "FP0002-DEMO-PG-015"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!49",
+      "raw_url": "https://shpigovsky.ru/blog/nazvanie-stati/",
+      "url": "/blog/nazvanie-stati/",
+      "raw_name": "Статья 1",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Статья 1",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/blog/",
+      "parent_resolved": "/blog/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-016",
+      "normalized_name": "Статья 1",
+      "slug": "nazvanie-stati",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/blog/nazvanie-stati/",
+      "output_path": "dist/blog/nazvanie-stati/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: blog/article — нет шаблона",
+      "template_confidence": "HIGH",
+      "title": "Статья 1 — Шпиговский Дом",
+      "h1": "Статья 1",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Статьи",
+          "url": "/blog/",
+          "page_id": "FP0002-DEMO-PG-007"
+        },
+        {
+          "name": "Статья 1",
+          "url": "/blog/nazvanie-stati/",
+          "page_id": "FP0002-DEMO-PG-016"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!43",
+      "raw_url": "https://shpigovsky.ru/o-centre/galereya-o-dome/",
+      "url": "/o-centre/galereya-o-dome/",
+      "raw_name": "Галерея о доме",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Галерея о доме",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/o-centre/",
+      "parent_resolved": "/o-centre/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-017",
+      "normalized_name": "Галерея о доме",
+      "slug": "galereya-o-dome",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/galereya-o-dome/",
+      "output_path": "dist/o-centre/galereya-o-dome/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: about sub-pages / hub",
+      "template_confidence": "HIGH",
+      "title": "Галерея о доме — Шпиговский Дом",
+      "h1": "Галерея о доме",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        },
+        {
+          "name": "Галерея о доме",
+          "url": "/o-centre/galereya-o-dome/",
+          "page_id": "FP0002-DEMO-PG-017"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!46",
+      "raw_url": "https://shpigovsky.ru/o-centre/intervyu-i-smi/",
+      "url": "/o-centre/intervyu-i-smi/",
+      "raw_name": "Интервью и СМИ",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Интервью и СМИ",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/o-centre/",
+      "parent_resolved": "/o-centre/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-018",
+      "normalized_name": "Интервью и СМИ",
+      "slug": "intervyu-i-smi",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/intervyu-i-smi/",
+      "output_path": "dist/o-centre/intervyu-i-smi/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: about sub-pages / hub",
+      "template_confidence": "HIGH",
+      "title": "Интервью и СМИ — Шпиговский Дом",
+      "h1": "Интервью и СМИ",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        },
+        {
+          "name": "Интервью и СМИ",
+          "url": "/o-centre/intervyu-i-smi/",
+          "page_id": "FP0002-DEMO-PG-018"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!41",
+      "raw_url": "https://shpigovsky.ru/o-centre/o-nas/",
+      "url": "/o-centre/o-nas/",
+      "raw_name": "О нас",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "О нас",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/o-centre/",
+      "parent_resolved": "/o-centre/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-019",
+      "normalized_name": "О нас",
+      "slug": "o-nas",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/o-nas/",
+      "output_path": "dist/o-centre/o-nas/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: about sub-pages / hub",
+      "template_confidence": "HIGH",
+      "title": "О нас — Шпиговский Дом",
+      "h1": "О нас",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        },
+        {
+          "name": "О нас",
+          "url": "/o-centre/o-nas/",
+          "page_id": "FP0002-DEMO-PG-019"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!42",
+      "raw_url": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+      "url": "/o-centre/programma-lecheniya/",
+      "raw_name": "Программа лечения",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Программа лечения",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/o-centre/",
+      "parent_resolved": "/o-centre/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-020",
+      "normalized_name": "Программа лечения",
+      "slug": "programma-lecheniya",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/programma-lecheniya/",
+      "output_path": "dist/o-centre/programma-lecheniya/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: about sub-pages / hub",
+      "template_confidence": "HIGH",
+      "title": "Программа лечения — Шпиговский Дом",
+      "h1": "Программа лечения",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        },
+        {
+          "name": "Программа лечения",
+          "url": "/o-centre/programma-lecheniya/",
+          "page_id": "FP0002-DEMO-PG-020"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!45",
+      "raw_url": "https://shpigovsky.ru/o-centre/rodstvennikam/",
+      "url": "/o-centre/rodstvennikam/",
+      "raw_name": "Родственникам",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Родственникам",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/o-centre/",
+      "parent_resolved": "/o-centre/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-021",
+      "normalized_name": "Родственникам",
+      "slug": "rodstvennikam",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/rodstvennikam/",
+      "output_path": "dist/o-centre/rodstvennikam/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: about sub-pages / hub",
+      "template_confidence": "HIGH",
+      "title": "Родственникам — Шпиговский Дом",
+      "h1": "Родственникам",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        },
+        {
+          "name": "Родственникам",
+          "url": "/o-centre/rodstvennikam/",
+          "page_id": "FP0002-DEMO-PG-021"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!44",
+      "raw_url": "https://shpigovsky.ru/o-centre/specialistam/",
+      "url": "/o-centre/specialistam/",
+      "raw_name": "Специалистам",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалистам",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/o-centre/",
+      "parent_resolved": "/o-centre/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-022",
+      "normalized_name": "Специалистам",
+      "slug": "specialistam",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/o-centre/specialistam/",
+      "output_path": "dist/o-centre/specialistam/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: about sub-pages / hub",
+      "template_confidence": "HIGH",
+      "title": "Специалистам — Шпиговский Дом",
+      "h1": "Специалистам",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "О центре",
+          "url": "/o-centre/",
+          "page_id": "FP0002-DEMO-PG-005"
+        },
+        {
+          "name": "Специалистам",
+          "url": "/o-centre/specialistam/",
+          "page_id": "FP0002-DEMO-PG-022"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!35",
+      "raw_url": "https://shpigovsky.ru/specyalisty/kazakov/",
+      "url": "/specyalisty/kazakov/",
+      "raw_name": "Специалист 2",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалист 2",
+        null,
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT",
+      "confidence": "LOW",
+      "parent_raw": "/specyalisty/",
+      "parent_resolved": "/specyalisty/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-023",
+      "normalized_name": "Специалист 2",
+      "slug": "kazakov",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/specyalisty/kazakov/",
+      "output_path": "dist/specyalisty/kazakov/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: specialists hub/profiles",
+      "template_confidence": "LOW",
+      "title": "Специалист 2 — Шпиговский Дом",
+      "h1": "Специалист 2",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        },
+        {
+          "name": "Специалист 2",
+          "url": "/specyalisty/kazakov/",
+          "page_id": "FP0002-DEMO-PG-023"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!36",
+      "raw_url": "https://shpigovsky.ru/specyalisty/kostyuk/",
+      "url": "/specyalisty/kostyuk/",
+      "raw_name": "Специалист 3",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалист 3",
+        null,
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT",
+      "confidence": "LOW",
+      "parent_raw": "/specyalisty/",
+      "parent_resolved": "/specyalisty/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-024",
+      "normalized_name": "Специалист 3",
+      "slug": "kostyuk",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/specyalisty/kostyuk/",
+      "output_path": "dist/specyalisty/kostyuk/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: specialists hub/profiles",
+      "template_confidence": "LOW",
+      "title": "Специалист 3 — Шпиговский Дом",
+      "h1": "Специалист 3",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        },
+        {
+          "name": "Специалист 3",
+          "url": "/specyalisty/kostyuk/",
+          "page_id": "FP0002-DEMO-PG-024"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!34",
+      "raw_url": "https://shpigovsky.ru/specyalisty/shipovsky/",
+      "url": "/specyalisty/shipovsky/",
+      "raw_name": "Специалист 1",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалист 1",
+        null,
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT",
+      "confidence": "LOW",
+      "parent_raw": "/specyalisty/",
+      "parent_resolved": "/specyalisty/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-025",
+      "normalized_name": "Специалист 1",
+      "slug": "shipovsky",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/specyalisty/shipovsky/",
+      "output_path": "dist/specyalisty/shipovsky/index.html",
+      "template": "PLACEHOLDER_PAGE",
+      "template_evidence": "EXPLICIT: specialists hub/profiles",
+      "template_confidence": "LOW",
+      "title": "Специалист 1 — Шпиговский Дом",
+      "h1": "Специалист 1",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        },
+        {
+          "name": "Специалист 1",
+          "url": "/specyalisty/shipovsky/",
+          "page_id": "FP0002-DEMO-PG-025"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!37",
+      "raw_url": null,
+      "url": "/specyalisty/spetsialist-4-slot-01/",
+      "raw_name": "Специалист 4",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалист 4",
+        null,
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/specyalisty/",
+      "parent_resolved": "/specyalisty/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-026",
+      "normalized_name": "Специалист 4",
+      "slug": "spetsialist-4-slot-01",
+      "canonical_url": "/specyalisty/spetsialist-4-slot-01/",
+      "output_path": "dist/specyalisty/spetsialist-4-slot-01/index.html",
+      "template_evidence": "EXPLICIT: specialists hub/profiles",
+      "template_confidence": "LOW",
+      "title": "Специалист 4 — Шпиговский Дом",
+      "h1": "Специалист 4",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        },
+        {
+          "name": "Специалист 4",
+          "url": "/specyalisty/spetsialist-4-slot-01/",
+          "page_id": "FP0002-DEMO-PG-026"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!38",
+      "raw_url": null,
+      "url": "/specyalisty/spetsialist-5-slot-02/",
+      "raw_name": "Специалист 5",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалист 5",
+        null,
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/specyalisty/",
+      "parent_resolved": "/specyalisty/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-027",
+      "normalized_name": "Специалист 5",
+      "slug": "spetsialist-5-slot-02",
+      "canonical_url": "/specyalisty/spetsialist-5-slot-02/",
+      "output_path": "dist/specyalisty/spetsialist-5-slot-02/index.html",
+      "template_evidence": "EXPLICIT: specialists hub/profiles",
+      "template_confidence": "LOW",
+      "title": "Специалист 5 — Шпиговский Дом",
+      "h1": "Специалист 5",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        },
+        {
+          "name": "Специалист 5",
+          "url": "/specyalisty/spetsialist-5-slot-02/",
+          "page_id": "FP0002-DEMO-PG-027"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!39",
+      "raw_url": null,
+      "url": "/specyalisty/spetsialist-6-slot-03/",
+      "raw_name": "Специалист 6",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Специалист 6",
+        null,
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/specyalisty/",
+      "parent_resolved": "/specyalisty/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-028",
+      "normalized_name": "Специалист 6",
+      "slug": "spetsialist-6-slot-03",
+      "canonical_url": "/specyalisty/spetsialist-6-slot-03/",
+      "output_path": "dist/specyalisty/spetsialist-6-slot-03/index.html",
+      "template_evidence": "EXPLICIT: specialists hub/profiles",
+      "template_confidence": "LOW",
+      "title": "Специалист 6 — Шпиговский Дом",
+      "h1": "Специалист 6",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Специалисты",
+          "url": "/specyalisty/",
+          "page_id": "FP0002-DEMO-PG-004"
+        },
+        {
+          "name": "Специалист 6",
+          "url": "/specyalisty/spetsialist-6-slot-03/",
+          "page_id": "FP0002-DEMO-PG-028"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!18",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/",
+      "url": "/uslugi/psihicheskoe-zdorovie/",
+      "raw_name": "Психическое здоровье",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Психическое здоровье",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/",
+      "parent_resolved": "/uslugi/",
+      "children_count": 9,
+      "page_id": "FP0002-DEMO-PG-029",
+      "normalized_name": "Психическое здоровье",
+      "slug": "psihicheskoe-zdorovie",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/index.html",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: parent with 9 children",
+      "template_confidence": "HIGH",
+      "title": "Психическое здоровье — Шпиговский Дом",
+      "h1": "Психическое здоровье",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!28",
+      "raw_url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "raw_name": "Расстройства пищевого поведения",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Расстройства пищевого поведения",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/",
+      "parent_resolved": "/uslugi/",
+      "children_count": 3,
+      "page_id": "FP0002-DEMO-PG-030",
+      "normalized_name": "Расстройства пищевого поведения",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "output_path": "dist/uslugi/rasstroystva-pischevogo-povedeniya/index.html",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: parent with 3 children",
+      "template_confidence": "HIGH",
+      "title": "Расстройства пищевого поведения — Шпиговский Дом",
+      "h1": "Расстройства пищевого поведения",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Расстройства пищевого поведения",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+          "page_id": "FP0002-DEMO-PG-030"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!4",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/",
+      "url": "/uslugi/zavisimosti/",
+      "raw_name": "Зависимости и пристрастия",
+      "hierarchy_level": 2,
+      "levels": [
+        null,
+        "Зависимости и пристрастия",
+        null,
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/",
+      "parent_resolved": "/uslugi/",
+      "children_count": 3,
+      "page_id": "FP0002-DEMO-PG-031",
+      "normalized_name": "Зависимости и пристрастия",
+      "slug": "zavisimosti",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/",
+      "output_path": "dist/uslugi/zavisimosti/index.html",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: parent with 3 children",
+      "template_confidence": "HIGH",
+      "title": "Зависимости и пристрастия — Шпиговский Дом",
+      "h1": "Зависимости и пристрастия",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!19",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "url": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "raw_name": "Депрессия",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Депрессия",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-032",
+      "normalized_name": "Депрессия",
+      "slug": "depressiya",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/depressiya/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Депрессия — Шпиговский Дом",
+      "h1": "Депрессия",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Депрессия",
+          "url": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+          "page_id": "FP0002-DEMO-PG-032"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!21",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+      "url": "/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+      "raw_name": "Эмомциональное выгорание",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Эмомциональное выгорание",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-033",
+      "normalized_name": "Эмомциональное выгорание",
+      "slug": "emotsionalnoe-vygoranie",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Эмомциональное выгорание — Шпиговский Дом",
+      "h1": "Эмомциональное выгорание",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Эмомциональное выгорание",
+          "url": "/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+          "page_id": "FP0002-DEMO-PG-033"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!25",
+      "raw_url": null,
+      "url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/",
+      "raw_name": "Название",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Название",
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-034",
+      "normalized_name": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-01)",
+      "slug": "nazvanie-slot-01",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/index.html",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "LOW",
+      "title": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-01) — Шпиговский Дом",
+      "h1": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-01)",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Название",
+          "url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-01/",
+          "page_id": "FP0002-DEMO-PG-034"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!26",
+      "raw_url": null,
+      "url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-02/",
+      "raw_name": "Название",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Название",
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-035",
+      "normalized_name": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-02)",
+      "slug": "nazvanie-slot-02",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-02/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/nazvanie-slot-02/index.html",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "LOW",
+      "title": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-02) — Шпиговский Дом",
+      "h1": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-02)",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Название",
+          "url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-02/",
+          "page_id": "FP0002-DEMO-PG-035"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!27",
+      "raw_url": null,
+      "url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-03/",
+      "raw_name": "Название",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Название",
+        null
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-036",
+      "normalized_name": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-03)",
+      "slug": "nazvanie-slot-03",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-03/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/nazvanie-slot-03/index.html",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "LOW",
+      "title": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-03) — Шпиговский Дом",
+      "h1": "Зарезервированная страница — Психическое здоровье (nazvanie-slot-03)",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Название",
+          "url": "/uslugi/psihicheskoe-zdorovie/nazvanie-slot-03/",
+          "page_id": "FP0002-DEMO-PG-036"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!20",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/ptsr/",
+      "url": "/uslugi/psihicheskoe-zdorovie/ptsr/",
+      "raw_name": "ПТСР",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "ПТСР",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-037",
+      "normalized_name": "ПТСР",
+      "slug": "ptsr",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/ptsr/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/ptsr/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "ПТСР — Шпиговский Дом",
+      "h1": "ПТСР",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "ПТСР",
+          "url": "/uslugi/psihicheskoe-zdorovie/ptsr/",
+          "page_id": "FP0002-DEMO-PG-037"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!23",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "url": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "raw_name": "Расстройства сна",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Расстройства сна",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-038",
+      "normalized_name": "Расстройства сна",
+      "slug": "rasstroystva-sna",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Расстройства сна — Шпиговский Дом",
+      "h1": "Расстройства сна",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Расстройства сна",
+          "url": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+          "page_id": "FP0002-DEMO-PG-038"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!24",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/travma/",
+      "url": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "raw_name": "Травма",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Травма",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-039",
+      "normalized_name": "Травма",
+      "slug": "travma",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/travma/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Травма — Шпиговский Дом",
+      "h1": "Травма",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Травма",
+          "url": "/uslugi/psihicheskoe-zdorovie/travma/",
+          "page_id": "FP0002-DEMO-PG-039"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!22",
+      "raw_url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "url": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "raw_name": "Тревожные расстройства",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Тревожные расстройства",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/psihicheskoe-zdorovie/",
+      "parent_resolved": "/uslugi/psihicheskoe-zdorovie/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-040",
+      "normalized_name": "Тревожные расстройства",
+      "slug": "trevozhnye-rasstroystva",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "output_path": "dist/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Тревожные расстройства — Шпиговский Дом",
+      "h1": "Тревожные расстройства",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Психическое здоровье",
+          "url": "/uslugi/psihicheskoe-zdorovie/",
+          "page_id": "FP0002-DEMO-PG-029"
+        },
+        {
+          "name": "Тревожные расстройства",
+          "url": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+          "page_id": "FP0002-DEMO-PG-040"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!29",
+      "raw_url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "raw_name": "Нервная анорексия",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Нервная анорексия",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "parent_resolved": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-041",
+      "normalized_name": "Нервная анорексия",
+      "slug": "anoreksiya",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "output_path": "dist/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Нервная анорексия — Шпиговский Дом",
+      "h1": "Нервная анорексия",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Расстройства пищевого поведения",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+          "page_id": "FP0002-DEMO-PG-030"
+        },
+        {
+          "name": "Нервная анорексия",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+          "page_id": "FP0002-DEMO-PG-041"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!30",
+      "raw_url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+      "raw_name": "Нервная булимия",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Нервная булимия",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "parent_resolved": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-042",
+      "normalized_name": "Нервная булимия",
+      "slug": "buliniya",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+      "output_path": "dist/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Нервная булимия — Шпиговский Дом",
+      "h1": "Нервная булимия",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Расстройства пищевого поведения",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+          "page_id": "FP0002-DEMO-PG-030"
+        },
+        {
+          "name": "Нервная булимия",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+          "page_id": "FP0002-DEMO-PG-042"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!31",
+      "raw_url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "raw_name": "Коммпульсивное переедание",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Коммпульсивное переедание",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "parent_resolved": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-043",
+      "normalized_name": "Коммпульсивное переедание",
+      "slug": "kompulsivnoe-pereedanie",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "output_path": "dist/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Коммпульсивное переедание — Шпиговский Дом",
+      "h1": "Коммпульсивное переедание",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Расстройства пищевого поведения",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+          "page_id": "FP0002-DEMO-PG-030"
+        },
+        {
+          "name": "Коммпульсивное переедание",
+          "url": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+          "page_id": "FP0002-DEMO-PG-043"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!5",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "raw_name": "Лечение алкогольной зависимости",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Лечение алкогольной зависимости",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-044",
+      "normalized_name": "Лечение алкогольной зависимости",
+      "slug": "lechenie-alkogolnoy-zavisimosti",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение алкогольной зависимости — Шпиговский Дом",
+      "h1": "Лечение алкогольной зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение алкогольной зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-044"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!6",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "raw_name": "Лечение наркотической зависимости",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Лечение наркотической зависимости",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/",
+      "children_count": 6,
+      "page_id": "FP0002-DEMO-PG-045",
+      "normalized_name": "Лечение наркотической зависимости",
+      "slug": "lechenie-narkoticheskoy-zavisimosti",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/index.html",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: parent with 6 children",
+      "template_confidence": "HIGH",
+      "title": "Лечение наркотической зависимости — Шпиговский Дом",
+      "h1": "Лечение наркотической зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!11",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "raw_name": "Поведенческие зависимости",
+      "hierarchy_level": 3,
+      "levels": [
+        null,
+        null,
+        "Поведенческие зависимости",
+        null
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/",
+      "children_count": 4,
+      "page_id": "FP0002-DEMO-PG-046",
+      "normalized_name": "Поведенческие зависимости",
+      "slug": "lechenie-povedencheskoy-zavisimosti",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/index.html",
+      "template": "SERVICE_SUBDIVISION_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: parent with 4 children",
+      "template_confidence": "HIGH",
+      "title": "Поведенческие зависимости — Шпиговский Дом",
+      "h1": "Поведенческие зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Поведенческие зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-046"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!9",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+      "raw_name": "Лечение героиновой зависимости",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Лечение героиновой зависимости"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-047",
+      "normalized_name": "Лечение героиновой зависимости",
+      "slug": "geroin",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение героиновой зависимости — Шпиговский Дом",
+      "h1": "Лечение героиновой зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        },
+        {
+          "name": "Лечение героиновой зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+          "page_id": "FP0002-DEMO-PG-047"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!10",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+      "raw_name": "Лечение лекарственной зависимости",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Лечение лекарственной зависимости"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-048",
+      "normalized_name": "Лечение лекарственной зависимости",
+      "slug": "lekarstva",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение лекарственной зависимости — Шпиговский Дом",
+      "h1": "Лечение лекарственной зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        },
+        {
+          "name": "Лечение лекарственной зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+          "page_id": "FP0002-DEMO-PG-048"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!8",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+      "raw_name": "Лечение метадоновой зависимости",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Лечение метадоновой зависимости"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-049",
+      "normalized_name": "Лечение метадоновой зависимости",
+      "slug": "matadon",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение метадоновой зависимости — Шпиговский Дом",
+      "h1": "Лечение метадоновой зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        },
+        {
+          "name": "Лечение метадоновой зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+          "page_id": "FP0002-DEMO-PG-049"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!16",
+      "raw_url": null,
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-01/",
+      "raw_name": "Название",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Название"
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-050",
+      "normalized_name": "Зарезервированная страница — Лечение наркотической зависимости (nazvanie-slot-01)",
+      "slug": "nazvanie-slot-01",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-01/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-01/index.html",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "LOW",
+      "title": "Зарезервированная страница — Лечение наркотической зависимости (nazvanie-slot-01) — Шпиговский Дом",
+      "h1": "Зарезервированная страница — Лечение наркотической зависимости (nazvanie-slot-01)",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        },
+        {
+          "name": "Название",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-01/",
+          "page_id": "FP0002-DEMO-PG-050"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!17",
+      "raw_url": null,
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-02/",
+      "raw_name": "Название",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Название"
+      ],
+      "source_notes": "PLACEHOLDER_SLOT; INFERRED_URL",
+      "confidence": "LOW",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "children_count": 0,
+      "slug_source": "DEMO_GENERATED_SLUG",
+      "template": "PLACEHOLDER_PAGE",
+      "page_id": "FP0002-DEMO-PG-051",
+      "normalized_name": "Зарезервированная страница — Лечение наркотической зависимости (nazvanie-slot-02)",
+      "slug": "nazvanie-slot-02",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-02/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-02/index.html",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "LOW",
+      "title": "Зарезервированная страница — Лечение наркотической зависимости (nazvanie-slot-02) — Шпиговский Дом",
+      "h1": "Зарезервированная страница — Лечение наркотической зависимости (nazvanie-slot-02)",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        },
+        {
+          "name": "Название",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/nazvanie-slot-02/",
+          "page_id": "FP0002-DEMO-PG-051"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": "Раздел скоро будет опубликован"
+    },
+    {
+      "source_row": "Структура!7",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+      "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+      "raw_name": "Лечение солевой зависимости",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Лечение солевой зависимости"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-052",
+      "normalized_name": "Лечение солевой зависимости",
+      "slug": "soli",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение солевой зависимости — Шпиговский Дом",
+      "h1": "Лечение солевой зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Лечение наркотической зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-045"
+        },
+        {
+          "name": "Лечение солевой зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+          "page_id": "FP0002-DEMO-PG-052"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!13",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+      "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+      "raw_name": "Интернет-зависимость",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Интернет-зависимость"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-053",
+      "normalized_name": "Интернет-зависимость",
+      "slug": "internet-zavisimost",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Интернет-зависимость — Шпиговский Дом",
+      "h1": "Интернет-зависимость",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Поведенческие зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-046"
+        },
+        {
+          "name": "Интернет-зависимость",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+          "page_id": "FP0002-DEMO-PG-053"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!12",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+      "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+      "raw_name": "Лечение игровой зависимости",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Лечение игровой зависимости"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-054",
+      "normalized_name": "Лечение игровой зависимости",
+      "slug": "ludomaniya",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение игровой зависимости — Шпиговский Дом",
+      "h1": "Лечение игровой зависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Поведенческие зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-046"
+        },
+        {
+          "name": "Лечение игровой зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+          "page_id": "FP0002-DEMO-PG-054"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!15",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+      "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+      "raw_name": "Зависимость от постоянных покупок",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Зависимость от постоянных покупок"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-055",
+      "normalized_name": "Зависимость от постоянных покупок",
+      "slug": "shopogolizm",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Зависимость от постоянных покупок — Шпиговский Дом",
+      "h1": "Зависимость от постоянных покупок",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Поведенческие зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-046"
+        },
+        {
+          "name": "Зависимость от постоянных покупок",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+          "page_id": "FP0002-DEMO-PG-055"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    },
+    {
+      "source_row": "Структура!14",
+      "raw_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+      "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+      "raw_name": "Лечение созависимости",
+      "hierarchy_level": 4,
+      "levels": [
+        null,
+        null,
+        null,
+        "Лечение созависимости"
+      ],
+      "source_notes": "",
+      "confidence": "HIGH",
+      "parent_raw": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "parent_resolved": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+      "children_count": 0,
+      "page_id": "FP0002-DEMO-PG-056",
+      "normalized_name": "Лечение созависимости",
+      "slug": "sozavisimost",
+      "slug_source": "EXPLICIT",
+      "canonical_url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+      "output_path": "dist/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/index.html",
+      "template": "SERVICE_LEAF_INTERNAL_PAGE",
+      "template_evidence": "EXPLICIT: terminal service URL",
+      "template_confidence": "HIGH",
+      "title": "Лечение созависимости — Шпиговский Дом",
+      "h1": "Лечение созависимости",
+      "breadcrumbs": [
+        {
+          "name": "/",
+          "url": "/",
+          "page_id": "FP0002-DEMO-PG-001"
+        },
+        {
+          "name": "Услуги",
+          "url": "/uslugi/",
+          "page_id": "FP0002-DEMO-PG-002"
+        },
+        {
+          "name": "Зависимости и пристрастия",
+          "url": "/uslugi/zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-031"
+        },
+        {
+          "name": "Поведенческие зависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+          "page_id": "FP0002-DEMO-PG-046"
+        },
+        {
+          "name": "Лечение созависимости",
+          "url": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+          "page_id": "FP0002-DEMO-PG-056"
+        }
+      ],
+      "menu_presence": false,
+      "placeholder_message": null
+    }
+  ]
+}

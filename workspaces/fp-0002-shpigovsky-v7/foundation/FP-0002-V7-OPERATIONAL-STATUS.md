@@ -751,10 +751,37 @@ fp0002_service_leaf_template:
 CANONICAL_STABLE
 
 fp0002_static_demo_site:
+PASS_OPENING_COMPLETE
+
+fp0002_static_demo_excel_authority:
+CONFIRMED
+
+fp0002_static_demo_page_registry:
+DRAFT_COMPLETE
+
+fp0002_static_demo_url_registry:
+DRAFT_COMPLETE
+
+fp0002_static_demo_title_h1_registry:
+DRAFT_COMPLETE
+
+fp0002_static_demo_navigation_registry:
+DRAFT_COMPLETE
+
+fp0002_static_demo_placeholder_registry:
+DRAFT_COMPLETE
+
+fp0002_static_demo_generation:
+NOT_STARTED
+
+fp0002_static_demo_deploy:
 NOT_STARTED
 
 fp0002_static_demo_structure_source:
-EXCEL_PENDING_NEXT_PASS
+CONFIRMED
+
+fp0002_static_demo_planning_pack:
+workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/
 
 fp0002_placeholder_page_contract:
 READY
