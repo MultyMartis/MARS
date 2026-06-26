@@ -137,28 +137,29 @@ services_v2_block_1: ACCEPTED_WORKING_BASE
 services_v2_block_2a: CORRECTED_AND_INTEGRATED
 services_v2_block_2b: COMPLETE_PENDING_OPERATOR_REVIEW
 services_v2_category_structure: COMPLETE
-services_v2_category_content_fidelity: COMPLETE_WITH_EXPLICIT_PLACEHOLDERS
-services_v2_category_geometry: RECALCULATED_AFTER_CONTENT
-services_v2_category_decor: REPOSITIONED_AFTER_CONTENT
-services_v2_visible_placeholders: 12
-services_v2_operator_copy_required:
-  - Category 04 intro (32:4591)
-  - Category 04 lead (32:4594)
-  - Category 02 service descriptions (6)
-  - Category 03 service descriptions (3)
-  - Category 04 service description (32:4605)
+services_v2_category_content_fidelity: SUPERSEDED_BY_MOCKUP_COPY_PASS
+services_v2_category_text_recovery: SUPERSEDED_BY_MOCKUP_COPY_PASS
+services_v2_category_mockup_copy_population: COMPLETE
+services_v2_runtime_content_population: COMPLETE
+services_v2_empty_content_slots: ZERO
+services_v2_visible_mockup_text_omissions: ZERO
+services_v2_temporary_mockup_copy: PRESENT_AND_DOCUMENTED
+services_v2_production_copy_replacement: FUTURE_SEPARATE_PASS
+services_v2_missing_visible_text: ZERO_REAL_RUSSIAN_OMISSIONS
+services_v2_true_visible_placeholders: 0
+services_v2_extraction_failures: ZERO_UNRESOLVED_AFTER_PNG_ADJUDICATION
+services_v2_premature_compaction: REMOVED_OR_CORRECTED
+services_v2_category_geometry: CONTENT_DRIVEN
+services_v2_operator_copy_required: []
+services_v2_mockup_copy_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-exact-mockup-copy/
+services_v2_text_recovery_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-text-recovery/
 services_v2_category_family: FOUR_SECTIONS_IMPLEMENTED
-services_v2_gallery_captions: IMPLEMENTED_FROM_EXISTING_V7_PATTERN
+services_v2_review_block_2b: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2b/
+services_v2_category_content_fidelity_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-content-fidelity/
 services_v2_program: NOT_STARTED
-services_v2_manual_polish: OPERATOR_REQUIRED
 services_v2_root_tokens_added: ZERO
 services_v1: PRESERVED_FALLBACK
-services_v2_review_block_2b: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2b/
-services_v2_category_content_fidelity: COMPLETE_WITH_EXPLICIT_PLACEHOLDERS
-services_v2_category_content_fidelity_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-content-fidelity/
-services_v2_visible_placeholders: 12
-services_v2_category_geometry: RECALCULATED_AFTER_CONTENT
-next_phase: SERVICES_V2_CATEGORY_CONTENT_OPERATOR_REVIEW
+next_phase: SERVICES_V2_MOCKUP_COPY_OPERATOR_REVIEW
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
