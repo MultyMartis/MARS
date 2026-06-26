@@ -1,6 +1,6 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-26 (Home visual style baseline audit complete)
+**Updated:** 2026-06-26 (Services General design-to-source build plan complete)
 
 ```text
 workspace: V7
@@ -99,9 +99,13 @@ home_visual_style_audit: COMPLETE
 home_visual_baseline: DOCUMENTED
 component_reuse_map: COMPLETE
 source_universalization: NOT_STARTED
-services_general_planning: AUTHORIZED_NOT_STARTED
+services_general_source_reconciliation: COMPLETE
+services_general_design_mapping: COMPLETE
+services_general_build_plan: COMPLETE
+services_general_source_implementation: NOT_STARTED
 services_general_page: NOT_STARTED
-next_phase: SERVICES_GENERAL_DESIGN_TO_SOURCE_MAPPING
+home_source_universalization: NOT_STARTED
+next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_1
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
@@ -112,6 +116,15 @@ home_operator_baseline_checkpoint:
   operator_edits_after_package_003:
     - src/partials/sections/home-recovery-intro.html
     - src/scss/style.scss
+
+operator_checkpoint_before_services_planning:
+  date: 2026-06-26
+  status: COMPLETE
+  backup_id: FP-0002-V7-OPERATOR-DELTA-BEFORE-SERVICES-PLANNING-01
+  backup_path: C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v7\operator-checkpoints\FP-0002-V7-OPERATOR-DELTA-BEFORE-SERVICES-PLANNING-01-SOURCE.zip
+  backup_sha256: 161003A850B88A63EC834ED7469DBBE800DD507D841DEB9E6E2F2022D24DD14F
+  operator_deltas_committed: true
+  planning_pack: workspaces/fp-0002-shpigovsky-v7/plans/services-general-01/
 ```
 
 ## Parent reference

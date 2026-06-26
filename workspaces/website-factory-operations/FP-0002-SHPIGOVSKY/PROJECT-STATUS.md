@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (V7 Home visual style baseline audit complete)
+**Last updated:** 2026-06-26 (Services General design-to-source build plan complete)
 
 ## Workspace versions (2026-06-24)
 
@@ -65,9 +65,13 @@ home_visual_style_audit: COMPLETE
 home_visual_baseline: DOCUMENTED
 component_reuse_map: COMPLETE
 source_universalization: NOT_STARTED
-services_general_planning: AUTHORIZED_NOT_STARTED
+services_general_source_reconciliation: COMPLETE
+services_general_design_mapping: COMPLETE
+services_general_build_plan: COMPLETE
+services_general_source_implementation: NOT_STARTED
 services_general_page: NOT_STARTED
-next_phase: SERVICES_GENERAL_DESIGN_TO_SOURCE_MAPPING
+home_source_universalization: NOT_STARTED
+next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_1
 ```
 
 ## Milestone (2026-06-23)
