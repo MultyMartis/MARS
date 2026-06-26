@@ -4,22 +4,37 @@
       <h2 class="services-program-v2__heading" id="services-program-v2-heading">@@heading</h2>
       <a class="services-program-v2__head-link" href="@@allLinkHref">
         <span class="services-program-v2__head-link-text">@@allLinkTextDesktop</span>
+        @@if (usePlayLinkIcon === 'true') {
+        <span class="services-program-v2__head-link-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+        } else {
         <span class="services-program-v2__head-link-icon" aria-hidden="true"><img class="services-program-v2__head-link-icon-image" src="assets/svg/external-link.svg" width="20" height="20" alt=""></span>
+        }
       </a>
     </header>
 
     <p class="services-program-v2__lead">@@lead</p>
+    @@if (intro !== '') {
     <p class="services-program-v2__intro">@@intro</p>
+    }
+    @@if (intro2 !== '') {
+    <p class="services-program-v2__intro services-program-v2__intro--continued">@@intro2</p>
+    }
 
     <div class="services-program-v2__grid">
       @@itemsHtml
     </div>
 
-    @@include('partials/components/services-program-cta-band-v2.html', {"ctaTitle": "@@ctaTitle", "ctaSubtitle": "@@ctaSubtitle", "ctaPhone": "@@ctaPhone", "ctaText": "@@ctaText", "ctaSource": "@@ctaSource"})
+    @@if (hideCtaBand !== 'true') {
+    @@include('partials/components/services-program-cta-band-v2.html', {"ctaTitle": "@@ctaTitle", "ctaSubtitle": "@@ctaSubtitle", "ctaPhone": "@@ctaPhone", "ctaPhoneHint": "@@ctaPhoneHint", "ctaText": "@@ctaText", "ctaSource": "@@ctaSource"})
+    }
 
     <a class="services-program-v2__foot-link" href="@@allLinkHref">
       <span class="services-program-v2__foot-link-text">@@allLinkTextMobile</span>
+      @@if (usePlayLinkIcon === 'true') {
+      <span class="services-program-v2__foot-link-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+      } else {
       <span class="services-program-v2__foot-link-icon" aria-hidden="true"><img class="services-program-v2__foot-link-icon-image" src="assets/svg/external-link.svg" width="20" height="20" alt=""></span>
+      }
     </a>
   </div>
 </section>

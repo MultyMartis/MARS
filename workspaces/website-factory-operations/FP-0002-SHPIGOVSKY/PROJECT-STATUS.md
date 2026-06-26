@@ -189,15 +189,16 @@ service_subdivision_center_visual: IMPLEMENTED
 service_subdivision_pass_1_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-1/
 service_subdivision_pass_2_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-2/
 service_subdivision_png_group_1: COMPLETE
-service_subdivision_extra_intro: REMOVED_FROM_RUNTIME
-service_subdivision_extra_procedure: REMOVED_FROM_RUNTIME
-service_subdivision_dependencies: PNG_MATCH_COMPLETE
-service_subdivision_nature: PNG_MATCH_COMPLETE
-service_subdivision_group_1_desktop: PASS
-service_subdivision_group_1_mobile: PASS
+service_subdivision_png_group_2: COMPLETE
+service_subdivision_cta_01: PNG_MATCH_COMPLETE
+service_subdivision_program: PNG_MATCH_COMPLETE
+service_subdivision_cta_02: PNG_MATCH_COMPLETE
+service_subdivision_group_2_desktop: PASS
+service_subdivision_group_2_mobile: PASS
 service_subdivision_remaining_groups: NOT_RECONCILED
 service_subdivision_full_page: INCOMPLETE
 service_subdivision_canonical_switch: NOT_STARTED
+service_subdivision_second_cta: REMOVED_FROM_RUNTIME_PNG_AUTHORITY
 services_v2_reference: PRESERVED
 next_phase: SERVICE_SUBDIVISION_PNG_GROUP_2
 ```

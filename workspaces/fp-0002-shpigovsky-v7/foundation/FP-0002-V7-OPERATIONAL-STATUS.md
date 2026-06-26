@@ -426,6 +426,36 @@ ZERO
 service_subdivision_png_group_1:
 COMPLETE
 
+service_subdivision_png_group_2:
+COMPLETE
+
+service_subdivision_cta_01:
+PNG_MATCH_COMPLETE
+
+service_subdivision_program:
+PNG_MATCH_COMPLETE
+
+service_subdivision_cta_02:
+PNG_MATCH_COMPLETE
+
+service_subdivision_group_2_desktop:
+PASS
+
+service_subdivision_group_2_mobile:
+PASS
+
+service_subdivision_remaining_groups:
+NOT_RECONCILED
+
+service_subdivision_full_page:
+INCOMPLETE
+
+service_subdivision_canonical_switch:
+NOT_STARTED
+
+service_subdivision_png_reconciliation_backup_group_2:
+FP-0002-V7-SERVICE-SUBDIVISION-PNG-GROUP-2-BEFORE-SOURCE.zip
+
 service_subdivision_extra_intro:
 REMOVED_FROM_RUNTIME
 

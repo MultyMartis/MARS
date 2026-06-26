@@ -1,0 +1,40 @@
+{
+  "desktop": {
+    "page_height": 12917,
+    "05-CTA-01": {
+      "present": true,
+      "selector": "#service-subdivision-start"
+    },
+    "06-PROGRAM-HEADER": {
+      "present": true,
+      "selector": "#service-subdivision-program .services-program-v2__head"
+    },
+    "07-PROGRAM-CARDS": {
+      "present": true,
+      "selector": "#service-subdivision-program .services-program-v2__grid"
+    },
+    "08-CTA-02": {
+      "present": false,
+      "note": "design has no desktop dark CTA-02 after program"
+    }
+  },
+  "mobile": {
+    "page_height": 21119,
+    "05-CTA-01": {
+      "present": true,
+      "selector": "#service-subdivision-start"
+    },
+    "06-PROGRAM-HEADER": {
+      "present": true,
+      "selector": "#service-subdivision-program .services-program-v2__head"
+    },
+    "07-PROGRAM-CARDS": {
+      "present": true,
+      "selector": "#service-subdivision-program .services-program-v2__grid"
+    },
+    "08-CTA-02": {
+      "present": true,
+      "selector": "#service-subdivision-program .services-program-v2__foot-link"
+    }
+  }
+}
