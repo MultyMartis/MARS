@@ -136,6 +136,17 @@ services_v2_strategy: HYBRID_RECONSTRUCTION
 services_v2_block_1: ACCEPTED_WORKING_BASE
 services_v2_block_2a: CORRECTED_AND_INTEGRATED
 services_v2_block_2b: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_category_structure: COMPLETE
+services_v2_category_content_fidelity: COMPLETE_WITH_EXPLICIT_PLACEHOLDERS
+services_v2_category_geometry: RECALCULATED_AFTER_CONTENT
+services_v2_category_decor: REPOSITIONED_AFTER_CONTENT
+services_v2_visible_placeholders: 12
+services_v2_operator_copy_required:
+  - Category 04 intro (32:4591)
+  - Category 04 lead (32:4594)
+  - Category 02 service descriptions (6)
+  - Category 03 service descriptions (3)
+  - Category 04 service description (32:4605)
 services_v2_category_family: FOUR_SECTIONS_IMPLEMENTED
 services_v2_gallery_captions: IMPLEMENTED_FROM_EXISTING_V7_PATTERN
 services_v2_program: NOT_STARTED
@@ -143,7 +154,11 @@ services_v2_manual_polish: OPERATOR_REQUIRED
 services_v2_root_tokens_added: ZERO
 services_v1: PRESERVED_FALLBACK
 services_v2_review_block_2b: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2b/
-next_phase: SERVICES_V2_PROGRAM_AFTER_OPERATOR_REVIEW
+services_v2_category_content_fidelity: COMPLETE_WITH_EXPLICIT_PLACEHOLDERS
+services_v2_category_content_fidelity_review: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-category-content-fidelity/
+services_v2_visible_placeholders: 12
+services_v2_category_geometry: RECALCULATED_AFTER_CONTENT
+next_phase: SERVICES_V2_CATEGORY_CONTENT_OPERATOR_REVIEW
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26

@@ -4781,9 +4781,29 @@ body[data-offcanvas-state='open'] {
 }
 
 .page-uslugi-v2 .services-category-section-v2--genotyping .services-category-section-v2__decor {
-	top: 18%;
-	right: -12%;
+	top: 14%;
+	right: -14%;
 	opacity: 0.09;
+}
+
+.page-uslugi-v2 .services-category-section-v2--eating-disorders,
+.page-uslugi-v2 .services-category-section-v2--genotyping {
+	padding-top: calc(var(--pad-y) * 0.9);
+	padding-bottom: calc(var(--pad-y) * 0.85);
+}
+
+.page-uslugi-v2 .services-category-section-v2--genotyping .services-category-section-v2__heading {
+	margin-bottom: calc(var(--pad-gap-line) * 0.75);
+}
+
+.page-uslugi-v2 .services-category-section-v2--addictions .services-category-section-v2__gallery,
+.page-uslugi-v2 .services-category-section-v2--mental-health .services-category-section-v2__gallery {
+	margin-bottom: calc(var(--pad-gap) * 1.05);
+}
+
+.page-uslugi-v2 .services-category-section-v2__service:not(:has(.services-category-section-v2__service-text)) {
+	gap: 0;
+	padding-bottom: calc(var(--pad-gap-line) * 0.85);
 }
 
 .page-uslugi-v2 .services-category-section-v2__decor-image {
@@ -5022,8 +5042,15 @@ body[data-offcanvas-state='open'] {
 	}
 
 	.page-uslugi-v2 .services-category-section-v2--genotyping .services-category-section-v2__decor {
-		top: 14%;
+		top: 10%;
+		right: -28%;
 		opacity: 0.05;
+	}
+
+	.page-uslugi-v2 .services-category-section-v2--eating-disorders,
+	.page-uslugi-v2 .services-category-section-v2--genotyping {
+		padding-top: calc(var(--pad-y) * 0.65);
+		padding-bottom: calc(var(--pad-y) * 0.6);
 	}
 
 	.page-uslugi-v2 .services-category-section-v2__head-main {
