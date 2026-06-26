@@ -10,19 +10,25 @@
       </div>
     </header>
 
+    @@if (lead !== '') {
     <p class="services-category-section-v2__lead">@@lead</p>
-    <!-- lead empty → hidden via scoped :empty -->
+    }
 
+    @@if (bodyHtml !== '') {
     <div class="services-category-section-v2__body">@@bodyHtml</div>
+    }
 
     <div class="services-category-section-v2__services">
       @@servicesHtml
     </div>
 
+    @@if (galleryHtml !== '') {
     <div class="services-category-section-v2__gallery">
       @@galleryHtml
     </div>
+    }
 
+    @@if (hideCta !== 'true') {
     <div class="services-category-section-v2__actions">
       <button
         type="button"
@@ -35,5 +41,6 @@
         @@ctaText
       </button>
     </div>
+    }
   </div>
 </section>
