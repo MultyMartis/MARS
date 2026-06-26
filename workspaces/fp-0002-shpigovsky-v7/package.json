@@ -7,6 +7,7 @@
     "build": "gulp build",
     "build:demo": "gulp build && node tools/static-demo-generator/index.js",
     "validate:demo-links": "node tools/static-demo-generator/run-link-crawl.js",
+    "qa:demo-pass4": "python tools/static-demo-generator/pass-4-qa-runner.py",
     "watch": "gulp watch",
     "watch:dev": "gulp watch:dev"
   },

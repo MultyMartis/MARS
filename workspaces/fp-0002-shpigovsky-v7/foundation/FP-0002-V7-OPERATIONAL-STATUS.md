@@ -751,7 +751,10 @@ fp0002_service_leaf_template:
 CANONICAL_STABLE
 
 fp0002_static_demo_site:
-PASS_3_COMPLETE_READY_FOR_CLIENT_QA_AND_DEPLOY_PACK
+PASS_4_FINAL_QA_COMPLETE
+
+fp0002_static_demo_client_readiness:
+READY_FOR_DEPLOYMENT
 
 fp0002_static_demo_overflow:
 ZERO_CONFIRMED
@@ -812,6 +815,27 @@ ZERO
 
 fp0002_static_demo_active_states:
 IMPLEMENTED
+
+fp0002_static_demo_http_200:
+56
+
+fp0002_static_demo_asset_failures:
+ZERO
+
+fp0002_static_demo_console_errors:
+ZERO
+
+fp0002_static_demo_functional_qa:
+PASS
+
+fp0002_static_demo_deploy_pack:
+READY
+
+fp0002_static_demo_deployment:
+NOT_STARTED
+
+fp0002_static_demo_client_url:
+NOT_ASSIGNED
 
 fp0002_static_demo_deploy:
 NOT_STARTED

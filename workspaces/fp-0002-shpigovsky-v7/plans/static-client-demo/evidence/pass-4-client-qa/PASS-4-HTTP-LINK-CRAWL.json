@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-06-26T14:28:49.350Z",
+  "base": "http://127.0.0.1:4175",
+  "file_crawl": {
+    "pagesCrawled": 56,
+    "internalLinksChecked": 2493,
+    "validInternalLinks": 2493,
+    "internal404": 0,
+    "brokenAnchors": 0,
+    "emptyHref": 0,
+    "clientFacingHash": 0,
+    "htmlInternalLinks": 0,
+    "excelTypoUrls": 0,
+    "doubleSlashes": 0
+  },
+  "http_verification": {
+    "links_checked": 2493,
+    "http_200": 2493,
+    "http_404": 0,
+    "http_fail": 0
+  },
+  "stats": {
+    "pages_crawled": 56,
+    "links_checked": 2493,
+    "valid": 2493,
+    "internal_404": 0,
+    "broken_anchors": 0,
+    "page_hash": 0,
+    "html_href": 0,
+    "typo_urls": 0,
+    "localhost_urls": 0,
+    "windows_path_leaks": 0,
+    "dist_href_leaks": 0,
+    "http_404": 0,
+    "result": true
+  },
+  "sample_http_failures": []
+}
