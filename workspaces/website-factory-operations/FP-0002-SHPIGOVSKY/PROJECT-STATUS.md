@@ -99,16 +99,16 @@ services_v1_differential: COMPLETE
 services_v2_decision: HYBRID_RECONSTRUCTION
 services_v1: PRESERVED_FALLBACK
 services_v2_strategy: HYBRID_RECONSTRUCTION
-services_v2_block_1: COMPLETE_PENDING_OPERATOR_REVIEW
-services_v2_hero: FIGMA_DRIVEN_SERVICES_SPECIFIC
-services_v2_breadcrumbs: IMPLEMENTED
-services_v2_subnav: IMPLEMENTED
-services_v2_category_sections: NOT_STARTED
+services_v2_block_1: ACCEPTED_WORKING_BASE
+services_v2_block_2a: COMPLETE_PENDING_OPERATOR_REVIEW
+services_v2_category_reference_pattern: ADDICTIONS_IMPLEMENTED
+services_v2_remaining_categories: NOT_STARTED
 services_v2_program: NOT_STARTED
-services_v2_navigation_activation: NOT_STARTED
-services_v2_stable_freeze: NOT_STARTED
-services_v2_implementation: BLOCK_1_COMPLETE
+services_v2_manual_polish: OPERATOR_REQUIRED
+services_v2_root_tokens_added: ZERO
+services_v1: PRESERVED_FALLBACK
 services_v2_page: workspaces/fp-0002-shpigovsky-v7/src/pages/uslugi-v2.html
+services_v2_review_block_2a: workspaces/fp-0002-shpigovsky-v7/reviews/services-v2-block-2a/
 home_source_universalization: NOT_STARTED
 next_phase: SERVICES_V2_CATEGORY_RECONSTRUCTION_BLOCK_2
 ```
