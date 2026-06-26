@@ -103,14 +103,22 @@ services_general_source_reconciliation: COMPLETE
 services_general_design_mapping: COMPLETE
 services_general_build_plan: COMPLETE
 services_general_implementation_pass_1: COMPLETE_PENDING_OPERATOR_REVIEW
-services_general_inner_hero: COMPLETE_WITH_EXISTING_OR_TEMPORARY_ASSET
+services_general_implementation_pass_2: COMPLETE_PENDING_OPERATOR_REVIEW
+services_general_inner_hero: FINAL_ASSET_COMPLETE
 services_general_reuse_section_order: COMPLETE
-services_general_category_hubs: NOT_STARTED
-services_general_unique_assets: NOT_EXPORTED
-services_general_page: PASS_1_SHELL_COMPLETE
-home_regression: NONE_DETECTED
-services_general_pass_2: AUTHORIZED_NOT_STARTED
-next_phase: SERVICES_GENERAL_IMPLEMENTATION_PASS_2
+services_general_category_hubs: FOUR_IMPLEMENTED
+services_general_unique_assets: FIGMA_EXPORT_COMPLETE
+services_general_page: PASS_2_CATEGORY_HUBS_COMPLETE
+services_general_clean_build: PASS
+services_general_assets: FIGMA_EXPORT_COMPLETE
+services_general_home_regression: NONE_DETECTED
+services_general_content_safe_unknowns:
+  - Genotyping hub lead paragraphs (Figma lorem only)
+  - Mental health per-service descriptions (Figma lorem excluded)
+  - Eating disorders per-service descriptions (Figma lorem excluded)
+services_general_final_polish: NOT_STARTED
+services_general_pass_2: COMPLETE_PENDING_OPERATOR_REVIEW
+next_phase: SERVICES_GENERAL_FINAL_POLISH_OPERATOR_REVIEW
 
 home_operator_baseline_checkpoint:
   date: 2026-06-26
