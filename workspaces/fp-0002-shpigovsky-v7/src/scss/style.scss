@@ -5426,6 +5426,14 @@ body[data-offcanvas-state='open'] {
 	display: none;
 }
 
+.page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__lead {
+	margin: 0 0 var(--pad-gap);
+	max-width: 1170px;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
 .page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__services {
 	display: flex;
 	flex-direction: column;
@@ -5449,6 +5457,10 @@ body[data-offcanvas-state='open'] {
 }
 
 .page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__service-title {
+	display: flex;
+	align-items: baseline;
+	flex: 1 1 auto;
+	min-width: 0;
 	margin: 0;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
@@ -5457,14 +5469,52 @@ body[data-offcanvas-state='open'] {
 
 .page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__service-name {
 	display: inline;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+.page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__service-name::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: var(--pad-gap-line);
+	border-radius: 50%;
+	background-color: var(--color-accent);
+	vertical-align: middle;
 }
 
 .page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__service-leader {
-	display: none;
+	flex: 1 1 auto;
+	min-width: 12px;
+	height: 0;
+	margin: 0 var(--pad-gap-line);
+	border-bottom: 1px dotted var(--color-text-primary);
 }
 
-.page-service-subdivision-v1 .service-subdivision-v1__genotyping-link {
-	margin: var(--pad-gap-line) 0 0;
+.page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__service-link .home-rehabilitation-program__all-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.page-service-subdivision-v1 .service-subdivision-dependencies-v1 .services-category-section-v2__service-link {
+	position: relative;
+	flex-shrink: 0;
+}
+
+.page-service-subdivision-v1 .service-subdivision-dependencies-v1__footer-text {
+	margin: var(--pad-gap) 0 0;
+	max-width: 1170px;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
 }
 
 .page-service-subdivision-v1 .service-subdivision-nature-v1 .services-category-section-v2__lead {
@@ -5475,6 +5525,7 @@ body[data-offcanvas-state='open'] {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
+	text-transform: uppercase;
 }
 
 .page-service-subdivision-v1 .service-subdivision-nature-v1 {
@@ -5489,16 +5540,39 @@ body[data-offcanvas-state='open'] {
 	color: var(--color-text-primary);
 }
 
-.page-service-subdivision-v1 .service-subdivision-nature-v1__body {
+.page-service-subdivision-v1 .service-subdivision-nature-v1__subsection {
 	margin-bottom: var(--pad-gap);
 }
 
+.page-service-subdivision-v1 .service-subdivision-nature-v1__subsection-heading {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
 .page-service-subdivision-v1 .service-subdivision-nature-v1__text {
-	margin: 0;
+	margin: 0 0 var(--pad-gap-line);
 	max-width: 1170px;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
+}
+
+.page-service-subdivision-v1 .service-subdivision-nature-v1__text:last-child {
+	margin-bottom: 0;
+}
+
+.page-service-subdivision-v1 .service-subdivision-nature-v1__genotyping-link {
+	margin: 0 0 var(--pad-gap-line);
+}
+
+.page-service-subdivision-v1 .service-subdivision-nature-v1__genotyping-link .home-rehabilitation-program__all-text {
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
 }
 
 .page-service-subdivision-v1 .service-subdivision-nature-v1__cards {

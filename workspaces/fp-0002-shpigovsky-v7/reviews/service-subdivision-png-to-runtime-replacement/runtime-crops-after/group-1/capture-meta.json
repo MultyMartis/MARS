@@ -1,0 +1,86 @@
+{
+  "desktop": {
+    "01-HEADER-HERO": {
+      "present": true,
+      "selector": "header, .services-inner-hero-v2",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1422,
+        "height": 195
+      }
+    },
+    "02-UPPER-NAV": {
+      "present": true,
+      "selector": ".page-service-subdivision-v1__upper-nav",
+      "box": {
+        "x": 96,
+        "y": 409.078125,
+        "width": 1230,
+        "height": 81
+      }
+    },
+    "03-DEPENDENCIES": {
+      "present": true,
+      "selector": "#service-subdivision-dependencies",
+      "box": {
+        "x": 0,
+        "y": 374.078125,
+        "width": 1422,
+        "height": 526
+      }
+    },
+    "04-NATURE": {
+      "present": true,
+      "selector": "#service-subdivision-nature",
+      "box": {
+        "x": 0,
+        "y": 24.078125,
+        "width": 1422,
+        "height": 851
+      }
+    }
+  },
+  "mobile": {
+    "01-HEADER-HERO": {
+      "present": true,
+      "selector": "header, .services-inner-hero-v2",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 365,
+        "height": 80
+      }
+    },
+    "02-UPPER-NAV": {
+      "present": true,
+      "selector": ".page-service-subdivision-v1__upper-nav",
+      "box": {
+        "x": 0,
+        "y": 645,
+        "width": 365,
+        "height": 64
+      }
+    },
+    "03-DEPENDENCIES": {
+      "present": true,
+      "selector": "#service-subdivision-dependencies",
+      "box": {
+        "x": 0,
+        "y": 2,
+        "width": 365,
+        "height": 898
+      }
+    },
+    "04-NATURE": {
+      "present": true,
+      "selector": "#service-subdivision-nature",
+      "box": {
+        "x": 0,
+        "y": -571,
+        "width": 365,
+        "height": 2041
+      }
+    }
+  }
+}

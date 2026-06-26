@@ -188,8 +188,18 @@ service_subdivision_approach: IMPLEMENTED
 service_subdivision_center_visual: IMPLEMENTED
 service_subdivision_pass_1_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-1/
 service_subdivision_pass_2_review: workspaces/fp-0002-shpigovsky-v7/reviews/service-subdivision-pass-2/
+service_subdivision_png_group_1: COMPLETE
+service_subdivision_extra_intro: REMOVED_FROM_RUNTIME
+service_subdivision_extra_procedure: REMOVED_FROM_RUNTIME
+service_subdivision_dependencies: PNG_MATCH_COMPLETE
+service_subdivision_nature: PNG_MATCH_COMPLETE
+service_subdivision_group_1_desktop: PASS
+service_subdivision_group_1_mobile: PASS
+service_subdivision_remaining_groups: NOT_RECONCILED
+service_subdivision_full_page: INCOMPLETE
+service_subdivision_canonical_switch: NOT_STARTED
 services_v2_reference: PRESERVED
-next_phase: SERVICE_SUBDIVISION_PAGE_PASS_3_OPERATOR_REVIEW
+next_phase: SERVICE_SUBDIVISION_PNG_GROUP_2
 ```
 
 ## Milestone (2026-06-23)
