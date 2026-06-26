@@ -9,6 +9,11 @@ const { validateRegistry, validateGeneratedHtml } = require('./validation');
 const { applyTemplateInstance } = require('./template-renderer');
 const { renderPlaceholderPage } = require('./placeholder-renderer');
 const { rewriteAssetPathsToRoot, normalizeTypoUrlsInHtml } = require('./path-utils');
+const { buildPageIndexes } = require('./navigation-loader');
+const { applyNavigationRewrites } = require('./link-rewriter');
+const { writePass3NavigationRegistry } = require('./build-navigation-registry');
+const { writePass3Evidence } = require('./pass-3-evidence');
+const { crawlGeneratedSite } = require('./link-validator');
 
 const DIST_DIR = path.join(WORKSPACE_ROOT, 'dist');
 const EVIDENCE_DIR = path.join(WORKSPACE_ROOT, 'plans/static-client-demo/evidence');
@@ -27,12 +32,13 @@ function readDistTemplate(fileName) {
   return fs.readFileSync(filePath, 'utf8');
 }
 
-function writeOutput(page, html) {
+function writeOutput(page, html, indexes) {
   const outputRelative = page.output;
+  let processed = applyNavigationRewrites(html, page, indexes);
+  processed = normalizeTypoUrlsInHtml(rewriteAssetPathsToRoot(processed, outputRelative));
   const outputPath = path.join(DIST_DIR, outputRelative);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  const finalHtml = normalizeTypoUrlsInHtml(rewriteAssetPathsToRoot(html, outputRelative));
-  fs.writeFileSync(outputPath, finalHtml, 'utf8');
+  fs.writeFileSync(outputPath, processed, 'utf8');
   return outputPath;
 }
 
@@ -41,7 +47,7 @@ function sha256File(filePath) {
   return crypto.createHash('sha256').update(data).digest('hex');
 }
 
-function generatePages(registry) {
+function generatePages(registry, indexes) {
   const templateCache = {};
   const shellHtml = readDistTemplate('uslugi-v2.html');
   const results = [];
@@ -53,10 +59,9 @@ function generatePages(registry) {
       if (!fs.existsSync(homePath)) {
         throw new Error('Home output missing after gulp build');
       }
-      const homeHtml = normalizeTypoUrlsInHtml(fs.readFileSync(homePath, 'utf8'));
-      fs.writeFileSync(homePath, homeHtml, 'utf8');
-      skipped.push({ id: page.id, reason: 'canonical_home_from_gulp' });
-      results.push({ id: page.id, output: page.output, mode: 'skipped_home' });
+      writeOutput(page, fs.readFileSync(homePath, 'utf8'), indexes);
+      skipped.push({ id: page.id, reason: 'canonical_home_from_gulp_with_pass3_nav' });
+      results.push({ id: page.id, output: page.output, mode: 'home_nav_wired' });
       return;
     }
 
@@ -74,7 +79,7 @@ function generatePages(registry) {
       html = applyTemplateInstance(templateCache[sourceFile], page);
     }
 
-    const outputPath = writeOutput(page, html);
+    const outputPath = writeOutput(page, html, indexes);
     results.push({ id: page.id, output: page.output, outputPath, mode: 'generated' });
   });
 
@@ -103,7 +108,7 @@ function validateOutputs(registry) {
   return pageErrors;
 }
 
-function writeReceipt({ registry, registryValidation, generation, durationMs, command }) {
+function writeReceipt({ registry, registryValidation, generation, durationMs, command, navigation }) {
   fs.mkdirSync(EVIDENCE_DIR, { recursive: true });
 
   const registryHash = crypto
@@ -111,10 +116,11 @@ function writeReceipt({ registry, registryValidation, generation, durationMs, co
     .update(fs.readFileSync(path.join(WORKSPACE_ROOT, 'src/data/static-demo/demo-page-registry.json')))
     .digest('hex');
 
-  const templateHashesBefore = fs.readFileSync(
-    path.join(EVIDENCE_DIR, 'PASS-2-CANONICAL-TEMPLATE-HASHES-BEFORE.txt'),
-    'utf8'
-  );
+  const templateHashesBefore = fs.existsSync(
+    path.join(EVIDENCE_DIR, 'PASS-2-CANONICAL-TEMPLATE-HASHES-BEFORE.txt')
+  )
+    ? fs.readFileSync(path.join(EVIDENCE_DIR, 'PASS-2-CANONICAL-TEMPLATE-HASHES-BEFORE.txt'), 'utf8')
+    : '';
 
   const canonicalFiles = [
     'src/pages/index.html',
@@ -128,18 +134,23 @@ function writeReceipt({ registry, registryValidation, generation, durationMs, co
   });
 
   const outputErrors = validateOutputs(registry);
+  const indexes = buildPageIndexes(registry);
+  const crawl = crawlGeneratedSite({ distDir: DIST_DIR, registry, indexes });
 
   const receipt = {
     timestamp: new Date().toISOString(),
-    source_commit: '797dab58',
+    pass: 'PASS-3',
+    source_commit: '1d9e5dfb',
     stable_baseline_tag: 'fp-0002-v7-four-template-canonical-demo-baseline-01',
     registry_sha256: registryHash,
+    navigation_link_count: navigation.links.length,
     generated_page_count: registry.pages.length,
     counts_by_template: registryValidation.counts,
     placeholder_count: registryValidation.counts.PLACEHOLDER_PAGE || 0,
     output_paths: registry.pages.map((p) => p.output),
     skipped_pages: generation.skipped,
     validation_errors: [...registryValidation.errors, ...outputErrors],
+    link_crawl_stats: crawl.stats,
     template_hashes_before: templateHashesBefore.trim(),
     template_hashes_after: templateHashesAfter,
     duration_ms: durationMs,
@@ -152,15 +163,18 @@ function writeReceipt({ registry, registryValidation, generation, durationMs, co
     'utf8'
   );
 
-  const md = `# PASS 2 Generation Receipt
+  const md = `# PASS 3 Generation Receipt
 
 - Timestamp: ${receipt.timestamp}
 - Registry SHA-256: \`${registryHash}\`
 - Generated pages: ${receipt.generated_page_count}
+- Navigation links: ${receipt.navigation_link_count}
 - Placeholder pages: ${receipt.placeholder_count}
 - Duration: ${durationMs}ms
 - Command: \`${command}\`
 - Validation errors: ${receipt.validation_errors.length}
+- Internal 404: ${crawl.stats.internal404}
+- Client-facing hash links: ${crawl.stats.clientFacingHash}
 
 ## Template counts
 
@@ -171,7 +185,7 @@ ${Object.entries(registryValidation.counts)
   fs.writeFileSync(path.join(EVIDENCE_DIR, 'PASS-2-GENERATION-RECEIPT.md'), md, 'utf8');
 
   const afterHashLines = [
-    '# FP-0002 PASS 2 — Canonical template SHA-256 (after)',
+    '# FP-0002 PASS 3 — Canonical template SHA-256 (after)',
     '',
     ...templateHashesAfter.map((item) => `${item.sha256}  ${item.file}`),
   ];
@@ -186,9 +200,10 @@ ${Object.entries(registryValidation.counts)
 
 function main() {
   const started = Date.now();
-  const command = process.argv[1].includes('index.js') ? 'node tools/static-demo-generator/index.js' : process.argv.join(' ');
-
   const { registry } = ensureFinalRegistries();
+  const navigation = writePass3NavigationRegistry(registry);
+  const indexes = buildPageIndexes(registry);
+
   const registryValidation = validateRegistry(registry);
   if (!registryValidation.valid) {
     console.error('Registry validation failed:');
@@ -196,13 +211,21 @@ function main() {
     process.exit(1);
   }
 
-  const generation = generatePages(registry);
+  const generation = generatePages(registry, indexes);
   const receipt = writeReceipt({
     registry,
     registryValidation,
     generation,
     durationMs: Date.now() - started,
     command: 'npm run build:demo',
+    navigation,
+  });
+
+  const pass3Receipt = writePass3Evidence({
+    registry,
+    navigation,
+    receipt,
+    durationMs: Date.now() - started,
   });
 
   if (receipt.validation_errors.length) {
@@ -211,7 +234,14 @@ function main() {
     process.exit(1);
   }
 
-  console.log(`FP-0002 static demo generator: ${registry.pages.length} pages, ${generation.results.length} processed`);
+  if (pass3Receipt.result !== 'PASS') {
+    console.error('PASS 3 link validation failed:', pass3Receipt);
+    process.exit(1);
+  }
+
+  console.log(
+    `FP-0002 static demo generator PASS 3: ${registry.pages.length} pages, ${navigation.links.length} nav links`
+  );
 }
 
 if (require.main === module) {

@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-06-26T14:08:01.875Z",
+  "pass": "PASS-3",
+  "source_commit": "1d9e5dfb",
+  "generated_page_count": 56,
+  "navigation_link_count": 76,
+  "crawl_stats": {
+    "pagesCrawled": 56,
+    "internalLinksChecked": 2493,
+    "validInternalLinks": 2493,
+    "internal404": 0,
+    "brokenAnchors": 0,
+    "emptyHref": 0,
+    "clientFacingHash": 0,
+    "htmlInternalLinks": 0,
+    "excelTypoUrls": 0,
+    "doubleSlashes": 0
+  },
+  "reachability": {
+    "reachable": [
+      "FP0002-DEMO-PG-001",
+      "FP0002-DEMO-PG-002",
+      "FP0002-DEMO-PG-004",
+      "FP0002-DEMO-PG-005",
+      "FP0002-DEMO-PG-006",
+      "FP0002-DEMO-PG-007",
+      "FP0002-DEMO-PG-008",
+      "FP0002-DEMO-PG-009",
+      "FP0002-DEMO-PG-010",
+      "FP0002-DEMO-PG-011",
+      "FP0002-DEMO-PG-012",
+      "FP0002-DEMO-PG-013",
+      "FP0002-DEMO-PG-003",
+      "FP0002-DEMO-PG-031",
+      "FP0002-DEMO-PG-029",
+      "FP0002-DEMO-PG-030",
+      "FP0002-DEMO-PG-019",
+      "FP0002-DEMO-PG-020",
+      "FP0002-DEMO-PG-017",
+      "FP0002-DEMO-PG-022",
+      "FP0002-DEMO-PG-021",
+      "FP0002-DEMO-PG-044",
+      "FP0002-DEMO-PG-045",
+      "FP0002-DEMO-PG-046",
+      "FP0002-DEMO-PG-032",
+      "FP0002-DEMO-PG-033",
+      "FP0002-DEMO-PG-037",
+      "FP0002-DEMO-PG-038",
+      "FP0002-DEMO-PG-039",
+      "FP0002-DEMO-PG-040",
+      "FP0002-DEMO-PG-041",
+      "FP0002-DEMO-PG-042",
+      "FP0002-DEMO-PG-043",
+      "FP0002-DEMO-PG-023",
+      "FP0002-DEMO-PG-024",
+      "FP0002-DEMO-PG-025",
+      "FP0002-DEMO-PG-026",
+      "FP0002-DEMO-PG-027",
+      "FP0002-DEMO-PG-028",
+      "FP0002-DEMO-PG-018",
+      "FP0002-DEMO-PG-014",
+      "FP0002-DEMO-PG-015",
+      "FP0002-DEMO-PG-016",
+      "FP0002-DEMO-PG-034",
+      "FP0002-DEMO-PG-035",
+      "FP0002-DEMO-PG-036",
+      "FP0002-DEMO-PG-047",
+      "FP0002-DEMO-PG-048",
+      "FP0002-DEMO-PG-049",
+      "FP0002-DEMO-PG-050",
+      "FP0002-DEMO-PG-051",
+      "FP0002-DEMO-PG-052",
+      "FP0002-DEMO-PG-053",
+      "FP0002-DEMO-PG-054",
+      "FP0002-DEMO-PG-055",
+      "FP0002-DEMO-PG-056"
+    ],
+    "intentionallyHidden": [
+      "FP0002-DEMO-PG-034",
+      "FP0002-DEMO-PG-035",
+      "FP0002-DEMO-PG-036",
+      "FP0002-DEMO-PG-050",
+      "FP0002-DEMO-PG-051"
+    ],
+    "unexpectedOrphans": [],
+    "totalPages": 56
+  },
+  "walkthroughs_pass": true,
+  "template_hashes": [
+    {
+      "file": "src/pages/index.html",
+      "sha256": "c14ff5a3b58af5dafe957edfa56ebd22addb02ba084ef29101e82178aec83f53"
+    },
+    {
+      "file": "src/pages/uslugi-v2.html",
+      "sha256": "e0f7f8c8efb4aa5622418b1382442e8684152000a3330c5894ab07d0275eb9bc"
+    },
+    {
+      "file": "src/pages/usluga-podrazdel-v1.html",
+      "sha256": "fc32e6744f51ddd4a5b218baf253b80da6206f359dfb6161de3c0a769c76c49c"
+    },
+    {
+      "file": "src/pages/usluga-konechnaya-v1.html",
+      "sha256": "b24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a"
+    }
+  ],
+  "duration_ms": 453,
+  "command": "npm run build:demo",
+  "result": "PASS"
+}

@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-06-26T14:08:01.871Z",
+  "routes": [
+    {
+      "id": "route-1-service-journey",
+      "name": "Service journey",
+      "steps": [
+        {
+          "page_id": "FP0002-DEMO-PG-001",
+          "url": "/",
+          "output": "index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-002",
+          "url": "/uslugi/",
+          "output": "uslugi/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-031",
+          "url": "/uslugi/zavisimosti/",
+          "output": "uslugi/zavisimosti/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-032",
+          "url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+          "output": "uslugi/psihicheskoe-zdorovie/depressiya/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-002",
+          "url": "/uslugi/",
+          "output": "uslugi/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-001",
+          "url": "/",
+          "output": "index.html",
+          "exists": true,
+          "result": "OK"
+        }
+      ],
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "id": "route-2-informational",
+      "name": "Informational",
+      "steps": [
+        {
+          "page_id": "FP0002-DEMO-PG-001",
+          "url": "/",
+          "output": "index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-005",
+          "url": "/o-centre/",
+          "output": "o-centre/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-019",
+          "url": "/o-centre/o-nas/",
+          "output": "o-centre/o-nas/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-001",
+          "url": "/",
+          "output": "index.html",
+          "exists": true,
+          "result": "OK"
+        }
+      ],
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "id": "route-3-specialists",
+      "name": "Specialists",
+      "steps": [
+        {
+          "page_id": "FP0002-DEMO-PG-004",
+          "url": "/specialisty/",
+          "output": "specialisty/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-023",
+          "url": "/specialisty/shipovsky/",
+          "output": "specialisty/kazakov/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-004",
+          "url": "/specialisty/",
+          "output": "specialisty/index.html",
+          "exists": true,
+          "result": "OK"
+        }
+      ],
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "id": "route-4-articles",
+      "name": "Articles",
+      "steps": [
+        {
+          "page_id": "FP0002-DEMO-PG-007",
+          "url": "/blog/",
+          "output": "blog/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-016",
+          "url": "/stati/statya-1/",
+          "output": "stati/statya-1/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-014",
+          "url": "/stati/statya-2/",
+          "output": "stati/statya-2/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-007",
+          "url": "/blog/",
+          "output": "blog/index.html",
+          "exists": true,
+          "result": "OK"
+        }
+      ],
+      "completed": true,
+      "result": "PASS"
+    },
+    {
+      "id": "route-5-legal",
+      "name": "Legal",
+      "steps": [
+        {
+          "page_id": "FP0002-DEMO-PG-012",
+          "url": "/privacy-policy/",
+          "output": "privacy-policy/index.html",
+          "exists": true,
+          "result": "OK"
+        },
+        {
+          "page_id": "FP0002-DEMO-PG-001",
+          "url": "/",
+          "output": "index.html",
+          "exists": true,
+          "result": "OK"
+        }
+      ],
+      "completed": true,
+      "result": "PASS"
+    }
+  ],
+  "all_pass": true
+}

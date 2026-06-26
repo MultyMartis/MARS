@@ -1,8 +1,10 @@
 {
-  "timestamp": "2026-06-26T13:21:22.988Z",
-  "source_commit": "797dab58",
+  "timestamp": "2026-06-26T14:08:01.733Z",
+  "pass": "PASS-3",
+  "source_commit": "1d9e5dfb",
   "stable_baseline_tag": "fp-0002-v7-four-template-canonical-demo-baseline-01",
   "registry_sha256": "cbd8d95d90b5ef0e468ee375ac36d3277af6a0d470fb6416c8bc97bb016b92cc",
+  "navigation_link_count": 76,
   "generated_page_count": 56,
   "counts_by_template": {
     "HOME_PAGE_TEMPLATE": 1,
@@ -73,10 +75,22 @@
   "skipped_pages": [
     {
       "id": "FP0002-DEMO-PG-001",
-      "reason": "canonical_home_from_gulp"
+      "reason": "canonical_home_from_gulp_with_pass3_nav"
     }
   ],
   "validation_errors": [],
+  "link_crawl_stats": {
+    "pagesCrawled": 56,
+    "internalLinksChecked": 2493,
+    "validInternalLinks": 2493,
+    "internal404": 0,
+    "brokenAnchors": 0,
+    "emptyHref": 0,
+    "clientFacingHash": 0,
+    "htmlInternalLinks": 0,
+    "excelTypoUrls": 0,
+    "doubleSlashes": 0
+  },
   "template_hashes_before": "# FP-0002 PASS 2 — Canonical template SHA-256 (before)\n# HEAD: 797dab58\n\r\nc14ff5a3b58af5dafe957edfa56ebd22addb02ba084ef29101e82178aec83f53  src/pages/index.html\r\ne0f7f8c8efb4aa5622418b1382442e8684152000a3330c5894ab07d0275eb9bc  src/pages/uslugi-v2.html\r\nfc32e6744f51ddd4a5b218baf253b80da6206f359dfb6161de3c0a769c76c49c  src/pages/usluga-podrazdel-v1.html\r\nb24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a  src/pages/usluga-konechnaya-v1.html",
   "template_hashes_after": [
     {
@@ -96,6 +110,6 @@
       "sha256": "b24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a"
     }
   ],
-  "duration_ms": 192,
+  "duration_ms": 303,
   "command": "npm run build:demo"
 }

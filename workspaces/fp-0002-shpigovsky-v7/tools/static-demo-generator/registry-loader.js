@@ -251,14 +251,24 @@ function buildFinalNavigationFromDraft(urlById) {
   };
 }
 
-function ensureFinalRegistries() {
+function ensureFinalRegistries({ rebuildNavigation = false } = {}) {
   const registry = buildFinalRegistryFromDraft();
-  const urlById = Object.fromEntries(registry.pages.map((p) => [p.id, p.url]));
-  const navigation = buildFinalNavigationFromDraft(urlById);
 
   fs.mkdirSync(path.dirname(FINAL_REGISTRY), { recursive: true });
   fs.writeFileSync(FINAL_REGISTRY, `${JSON.stringify(registry, null, 2)}\n`, 'utf8');
-  fs.writeFileSync(FINAL_NAV, `${JSON.stringify(navigation, null, 2)}\n`, 'utf8');
+
+  let navigation;
+  if (rebuildNavigation) {
+    const urlById = Object.fromEntries(registry.pages.map((p) => [p.id, p.url]));
+    navigation = buildFinalNavigationFromDraft(urlById);
+    fs.writeFileSync(FINAL_NAV, `${JSON.stringify(navigation, null, 2)}\n`, 'utf8');
+  } else if (fs.existsSync(FINAL_NAV)) {
+    navigation = JSON.parse(fs.readFileSync(FINAL_NAV, 'utf8'));
+  } else {
+    const urlById = Object.fromEntries(registry.pages.map((p) => [p.id, p.url]));
+    navigation = buildFinalNavigationFromDraft(urlById);
+    fs.writeFileSync(FINAL_NAV, `${JSON.stringify(navigation, null, 2)}\n`, 'utf8');
+  }
 
   return { registry, navigation };
 }

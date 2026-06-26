@@ -751,13 +751,13 @@ fp0002_service_leaf_template:
 CANONICAL_STABLE
 
 fp0002_static_demo_site:
-PASS_2_COMPLETE_READY_FOR_PASS_3
+PASS_3_COMPLETE_READY_FOR_CLIENT_QA_AND_DEPLOY_PACK
 
 fp0002_static_demo_overflow:
 ZERO_CONFIRMED
 
 fp0002_static_demo_visual_readiness:
-READY_FOR_NAVIGATION_WIRING
+READY_FOR_CLIENT_QA
 
 fp0002_static_demo_excel_authority:
 CONFIRMED
@@ -772,7 +772,7 @@ fp0002_static_demo_title_h1_registry:
 FINAL_56_PAGES
 
 fp0002_static_demo_navigation_registry:
-DRAFT_COMPLETE
+COMPLETE
 
 fp0002_static_demo_placeholder_registry:
 FINAL_56_PAGES
@@ -792,11 +792,26 @@ fp0002_static_demo_placeholder_pages:
 fp0002_static_demo_breadcrumbs:
 IMPLEMENTED
 
+fp0002_static_demo_navigation:
+COMPLETE
+
 fp0002_static_demo_full_navigation:
-NOT_STARTED
+COMPLETE
 
 fp0002_static_demo_link_graph:
-NOT_STARTED
+COMPLETE
+
+fp0002_static_demo_internal_404:
+ZERO
+
+fp0002_static_demo_broken_anchors:
+ZERO
+
+fp0002_static_demo_unexpected_orphans:
+ZERO
+
+fp0002_static_demo_active_states:
+IMPLEMENTED
 
 fp0002_static_demo_deploy:
 NOT_STARTED
