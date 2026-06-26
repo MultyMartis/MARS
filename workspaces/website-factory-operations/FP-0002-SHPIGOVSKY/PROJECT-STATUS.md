@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (V7 Package #003 complete pending operator review)
+**Last updated:** 2026-06-26 (V7 Home operator baseline frozen before style audit)
 
 ## Workspace versions (2026-06-24)
 
@@ -50,12 +50,20 @@ operator_checkpoint_before_package_003:
   status: NOT_REQUIRED
   backup_sha256: 3BE9ADAA1B35FD27DC5E4F0CAA3CFB34667A18B818511F4EC5A51247B37C0E75
 
-package_003: COMPLETE_PENDING_OPERATOR_REVIEW
+package_003: TECHNICALLY_ACCEPTED
+package_003_commit: c74bb04d
 video_posters: REAL_VIDEO_FRAMES_COMPLETE
 hero_container_gutters: COMPLETE
+founder_quote_current_variant: variant-b
 founder_quote_variant_a: PRESERVED_FALLBACK
-founder_quote_variant_b: EXPERIMENTAL_COMPLETE_PENDING_OPERATOR_SELECTION
+founder_quote_variant_b: ACTIVE_ON_HOME
 treatment_service_icons: COMPLETE
+
+home_operator_manual_polish: ACCEPTED_AS_CURRENT_BASELINE
+home_source_authority: OPERATOR_CANONICAL
+home_visual_style_audit: AUTHORIZED_NOT_STARTED
+services_general_page: NOT_STARTED
+next_phase: HOME_VISUAL_STYLE_BASELINE_AUDIT
 ```
 
 ## Milestone (2026-06-23)
