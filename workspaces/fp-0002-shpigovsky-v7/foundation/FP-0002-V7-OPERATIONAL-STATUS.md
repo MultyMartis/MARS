@@ -862,19 +862,13 @@ fp0002_static_demo_internal_404:
 ZERO
 
 fp0002_about_page:
-ISOLATED_V1_IMPLEMENTED
+REJECTED_IMPLEMENTATION_REMOVED
 
 fp0002_about_page_source:
-src/pages/o-centre-v1.html
+NOT_CREATED
 
-fp0002_about_page_preview:
-READY_FOR_OPERATOR_REVIEW
-
-fp0002_about_page_copy:
-PLACEHOLDERS_REMAIN
-
-fp0002_about_page_registry_switch:
-NOT_STARTED
+fp0002_about_page_reprojection:
+IN_PROGRESS
 
 fp0002_about_page_route_switch:
 NOT_STARTED
