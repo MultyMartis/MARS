@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-06-23  
-**Evidence cutoff:** 2026-06-23 (SITE-002 stable live checkpoint — M9.13 About Company Restored 01; M9.13 redesign rejected · operator-approved restoration)  
+**Last updated:** 2026-06-28  
+**Evidence cutoff:** 2026-06-28 (SITE-002 post-recovery completeness reconciliation; authority unchanged — M9.13 About Company Restored 01)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -52,7 +52,7 @@
 
 **M9.8.9 registration:** [sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md](sites/site-002/reports/SITE-002-M9.8.9-MINOR-FIXES-PACK-01-REGISTRATION.md)
 
-**Corporate Pages Program:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Design program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [Phase gate](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md) · [Reconciliation](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) · [Charters](../website-factory/execution-cases/bzpm-roadmap/charters/README.md) · M9.13–M9.18 [forensic index](sites/site-002/reports/) · [copy index](sites/site-002/copy/) · [program registration](sites/site-002/reports/REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md) · [copy system registration](sites/site-002/reports/REPORT-BZPM-COPY-SYSTEM-REGISTRATION.md)
+**Corporate Pages Program:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Design program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [Phase gate](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md) · [Reconciliation](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) · [Charters](../website-factory/execution-cases/bzpm-roadmap/charters/README.md) · M9.13–M9.18 [forensic index](sites/site-002/reports/) · [copy index](sites/site-002/copy/) · [program registration](sites/site-002/reports/REPORT-BZPM-CORPORATE-PAGES-PROGRAM-REGISTRATION.md) · [copy system registration](sites/site-002/reports/REPORT-BZPM-COPY-SYSTEM-REGISTRATION.md) · [post-recovery completeness reconciliation](sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md)
 
 **Prior checkpoint (historical):** [sites/site-002/reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md](sites/site-002/reports/SITE-002-STABLE-M9.7E-HOMEPAGE-COMPLETE.md) · [sites/site-002/reports/SITE-002-STABLE-M9-COMPLETE.md](sites/site-002/reports/SITE-002-STABLE-M9-COMPLETE.md)
 
@@ -536,6 +536,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-22 | **UPDATED** — BZPM **Corporate Pages Program** registered; M9.13/M9.14 research artifacts exported; program **OPEN** |
 | 2026-06-22 | **UPDATED** — Corporate Pages Research **COMPLETE** (M9.15–M9.18); IA map [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md); phase gate Research → IA |
 | 2026-06-22 | **UPDATED** — BZPM Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells |
+| 2026-06-28 | **RECONCILED** — BZPM post-recovery completeness audit semantics; M9.14/M9.15 **NOT_IMPLEMENTED** (not lost); distributed strategy/findings; [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |

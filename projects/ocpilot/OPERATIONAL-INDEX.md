@@ -138,6 +138,8 @@
 
 | 4.146 | **SITE-002 — Stable Live M9.13 About Company Restored Checkpoint** | **DONE** (2026-06-23; status: **STABLE LIVE CHECKPOINT**) | [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md), [sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
+| 4.147 | **SITE-002 — BZPM Post-Recovery Completeness Reconciliation** | **DONE** (2026-06-28; documentation only) | [sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |
@@ -203,6 +205,17 @@
 **Registered scope:** catalog UX cluster (carried forward) · M9.13 About lifecycle (IMPLEMENTED · QA PASSED · REJECTED · RESTORED) · About page canonical = restored pre-redesign version
 
 **PRE-TASK RULE:** for About page — read Knowledge Map §17 + restoration / redesign / polish reports before any new redesign; treat restored version as source of truth.
+
+---
+
+## Run 4.147 deliverables (summary)
+
+- [sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — post-recovery completeness audit semantics reconciled against Web-GPT project context
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — cross-reference + M9.14/M9.15 **NOT_IMPLEMENTED** clarification
+
+**Site modification:** **NONE** — documentation only.
+
+**Index lag (acknowledged, not resolved):** dedicated runs still absent for Contacts delivery · Corporate Pages registration · Copy registration · M9.13 redesign/polish — see reconciliation §5. **DOCUMENTATION_LAG** only; artefacts exist elsewhere.
 
 ---
 

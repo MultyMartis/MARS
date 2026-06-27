@@ -173,6 +173,10 @@
 
 **Contacts (separate workstream):** Status **Delivered** — IA mapped for cross-links only. Evidence: [SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md](reports/SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md)
 
+**M9.14 Delivery / M9.15 Payment implementation:** **NOT_IMPLEMENTED / PLANNED_NOT_STARTED** — research + copy + charters preserved; no deploy work folders. Not post-recovery losses. See [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md).
+
+**Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
+
 ### Отложено (M9.8 UX Polish Pack — остаток)
 
 M9.8.3 Homepage Hero · M9.8.4 PLP Density · M9.8.6 UltraWide · M9.8.7 EC-01 · M9.8.8 Thumbnail Rail — per roadmap
