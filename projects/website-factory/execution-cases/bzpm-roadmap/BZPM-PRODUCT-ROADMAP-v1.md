@@ -3,8 +3,8 @@
 **Program:** Website Factory  
 **Execution case:** BZPM  
 **Document role:** Canonical planning document for future BZPM work  
-**Status:** Post M9.8.9 Catalog UX Complete 01 — **M9.8.9 Minor Fixes Pack #1** active · **Corporate Pages Program** open — Research **COMPLETE** · IA **READY** · Charters **DRAFT COMPLETE / APPROVAL OPEN** · Visual design **NOT OPEN**  
-**Date:** 2026-06-22 (Corporate Pages Program — Research → IA phase gate)  
+**Status:** Post M9.8.9 Catalog UX Complete 01 — BZPM recovery **CLOSED** · **PRODUCTION PREPARATION** · **Corporate Pages Program** open — Research **COMPLETE** · implementation **NOT STARTED** (M9.14+) · Visual design **NOT OPEN**  
+**Date:** 2026-06-28 (Recovery closeout — production transition)  
 **Authority:** Repository evidence + SITE-002 TEST checkpoint `SITE-002-STABLE-M9.7D-AFTER-MANUAL-UI` + operator feedback (Алексей)
 
 **Boundary:** Documentation and planning only. This roadmap does **not** authorize implementation, OpenCart changes, UX changes, or code work.
@@ -55,7 +55,7 @@ BZPM (ORG-0005 ЗПМ · PRJ-0009 Каталог-платформа bzpm.ru) has
 | **Catalog redesign research** | W0–W4 documentation complete (2026-06-08) | `bzpm-catalog-redesign/` — strategy approved; implementation not chartered |
 | **Live audit environment** | `https://zpm.new-site.space/` (SITE-002 TEST) | OCPilot delivery — **authority** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; **MANUAL UI REFINEMENTS ARE CANONICAL** |
 | **Production** | `https://bzpm.ru/` (WEB-ZPM-01) | ATLAS / catalog-redesign README |
-| **OCPilot delivery (SITE-002)** | M7.1–M9.8.9 catalog cluster **complete** on TEST; **Corporate Pages Program** **OPEN** — Research **COMPLETE** · IA **READY** | Active: remaining M9.8.9 tasks; corp pages design charter; M10 **not authorized** |
+| **OCPilot delivery (SITE-002)** | M7.1–M9.8.9 catalog cluster **complete** on TEST; BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program** **OPEN** — implementation **NOT STARTED** (M9.14+) | Operator gates B6/B8/B1/B3; queue M9.14→M9.15→M9.17→M9.16→M9.18; M10 **not authorized** |
 
 ## What is known
 
@@ -425,7 +425,8 @@ Delivery lane for BZPM catalog on OpenCart TEST (`zpm.new-site.space`). Distinct
 ## Corporate Pages Program
 
 **Registered:** 2026-06-22  
-**Status:** **OPEN** — Research **COMPLETE** · IA **READY** · Copy **SUBSTANTIVELY COMPLETE** (sign-off pending) · Design Charter **DRAFT COMPLETE / APPROVAL OPEN** · Visual design **NOT OPEN**  
+**Recovery:** **CLOSED** 2026-06-28 — [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md)  
+**Status:** **OPEN** — Research **COMPLETE** · IA **READY** · Copy **SUBSTANTIVELY COMPLETE** (sign-off pending) · Design Charter **DRAFT COMPLETE / APPROVAL OPEN** · Visual design **NOT OPEN** · implementation **NOT STARTED** (M9.14+)  
 **Authority:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`  
 **Program doc:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-v1.md)  
 **IA map:** [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md)  
@@ -481,6 +482,8 @@ Delivery lane for BZPM catalog on OpenCart TEST (`zpm.new-site.space`). Distinct
 | **Evidence** | [SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-CONTACTS-PAGE-MAIN-REDESIGN-IMPLEMENTATION.md) |
 
 **Mode:** Documentation registration only — **no** corporate page implementation authorized by this section.
+
+**Operator implementation order (remaining pages):** M9.14 Delivery → M9.15 Payment → M9.17 Warranty → M9.16 Dealers → M9.18 Custom Manufacturing. **Design order** (unchanged): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) § Corporate Pages Design Order.
 
 ---
 
@@ -561,6 +564,7 @@ All approved roadmap items. Status **Approved** unless noted.
 | 2026-06-22 | **UPDATED** — Corporate Pages Research phase **COMPLETE** (M9.15–M9.18); IA map [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](BZPM-CORPORATE-PAGES-IA-MAP-v1.md); M9.17 URL `/guarantee` |
 | 2026-06-22 | **UPDATED** — Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells |
 | 2026-06-22 | **RECONCILED** — Corporate Pages registry synced; charters + briefs registered — [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
+| 2026-06-28 | **UPDATED** — BZPM recovery **CLOSED**; production preparation; operator implementation queue registered |
 | 2026-06-19 | **UPDATED** — Authority `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`; M9.8.1/2/5 marked complete; **M9.8.9 Minor Fixes Pack #1** (M9.8.9-01…08) registered as active work package; M9.8.9-06 filter bugs added to open bugs |
 
 ---

@@ -140,6 +140,8 @@
 
 | 4.147 | **SITE-002 — BZPM Post-Recovery Completeness Reconciliation** | **DONE** (2026-06-28; documentation only) | [sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
+| 4.148 | **SITE-002 — BZPM Recovery Closeout & Production Transition** | **DONE** (2026-06-28; documentation only) | [sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/README.md](sites/site-002/README.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [OCPILOT-STATE.md](OCPILOT-STATE.md), [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md), [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |
@@ -216,6 +218,22 @@
 **Site modification:** **NONE** — documentation only.
 
 **Index lag (acknowledged, not resolved):** dedicated runs still absent for Contacts delivery · Corporate Pages registration · Copy registration · M9.13 redesign/polish — see reconciliation §5. **DOCUMENTATION_LAG** only; artefacts exist elsewhere.
+
+---
+
+## Run 4.148 deliverables (summary)
+
+- [sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) — BZPM UX Redesign recovery **CLOSED**; production preparation; operator implementation queue; active blockers B6/B8/B1/B3
+- [sites/site-002/site-passport.md](sites/site-002/site-passport.md) · [sites/site-002/README.md](sites/site-002/README.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [OCPILOT-STATE.md](OCPILOT-STATE.md) — project banner + lifecycle sync
+- [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [BZPM-PRODUCT-ROADMAP-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-PRODUCT-ROADMAP-v1.md) — operator implementation order registered (design order unchanged)
+
+**Site modification:** **NONE** — documentation only.
+
+**Recovery status:** **CLOSED** — recovery is **not** an active blocker.
+
+**Production status:** **READY AFTER OPERATOR GATES** — Corporate Pages implementation **NOT STARTED** (M9.14+).
+
+**Authority unchanged:** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`
 
 ---
 

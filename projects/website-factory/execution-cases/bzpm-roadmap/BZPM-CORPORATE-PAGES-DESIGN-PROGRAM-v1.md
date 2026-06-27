@@ -77,6 +77,26 @@
 
 ---
 
+## Operator implementation order (production queue)
+
+**Registered:** 2026-06-28 — [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md)
+
+**Distinct from design order above.** Design order optimizes shared-component lock-in and composition dependencies. **Operator implementation order** reflects production priority on live TEST after recovery closeout.
+
+| Order | Page | ID | Status |
+|-------|------|-----|--------|
+| **1** | Delivery | M9.14 | **NOT STARTED** |
+| **2** | Payment | M9.15 | **NOT STARTED** |
+| **3** | Warranty | M9.17 | **NOT STARTED** |
+| **4** | Dealers | M9.16 | **NOT STARTED** |
+| **5** | Custom Manufacturing | M9.18 | **NOT STARTED** |
+
+**M9.13 About:** excluded from remaining implementation queue — live authority = restored pre-redesign; M9.13 redesign **ARCHIVED** · **NOT ACTIVE**.
+
+**Gate:** Implementation **NOT AUTHORIZED** until operator gates B6/B8/B1/B3 cleared per [BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md](BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md).
+
+---
+
 ## Corporate Pages Shared Components Registry
 
 Goal: design each pattern **once**, then instantiate per page with copy-driven variants.
@@ -1046,6 +1066,7 @@ H1 + Lead
 |------|--------|
 | 2026-06-22 | **CREATED** — Design Program v1; Copy phase closed; Design Charter phase opened; per-page briefs M9.13–M9.18; design order; shared components registry; readiness matrix |
 | 2026-06-22 | **RECONCILED** — Charter + brief registries added; draft-complete status; B6 updated — [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
+| 2026-06-28 | **REGISTERED** — Operator implementation order (M9.14→M9.15→M9.17→M9.16→M9.18); design order unchanged — [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 
 ---
 

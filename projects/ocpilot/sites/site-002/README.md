@@ -4,7 +4,16 @@
 **Slug:** site-002  
 **Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT COMPANY RESTORED 01** (2026-06-23)  
 **Run:** Stable checkpoint after operator-approved About page restoration  
-**Active stage:** **M9.8.9 Minor Fixes Pack #1** (remaining tasks per roadmap) · **Corporate Pages Program** **OPEN** — Research **COMPLETE** · IA **READY** · Copy system **REGISTERED**
+**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** **OPEN** — Research **COMPLETE** · implementation **NOT STARTED** (M9.14+)
+
+### BZPM UX REDESIGN — project banner
+
+| Field | Value |
+|-------|--------|
+| **Recovery status** | **CLOSED** |
+| **Production status** | **READY AFTER OPERATOR GATES** |
+| **Implementation (remaining corp pages)** | **NOT STARTED** |
+| **Closeout** | [reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 
 Copy source: [sites/_template-site/](../_template-site/README.md) folder map.
 

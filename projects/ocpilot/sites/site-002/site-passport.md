@@ -122,6 +122,36 @@
 
 ## Project status (BZPM)
 
+### BZPM UX REDESIGN — project banner
+
+| Field | Value |
+|-------|--------|
+| **Project** | BZPM UX REDESIGN (SITE-002) |
+| **Recovery status** | **CLOSED** (2026-06-28) — [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
+| **Production status** | **READY AFTER OPERATOR GATES** |
+| **Current phase** | **PRODUCTION PREPARATION** |
+| **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
+| **Implementation (remaining corp pages)** | **NOT STARTED** (M9.14+) |
+| **Live About authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+| **M9.13 redesign** | **ARCHIVED** · **NOT ACTIVE** — never implementation authority |
+
+**Lifecycle:** Research → Corporate Pages Program → Recovery (**CLOSED**) → Production Development
+
+**Post-recovery reconciliation:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md)
+
+### Active blockers (production path)
+
+Recovery is **not** a blocker. Operator gates before Corporate Pages implementation:
+
+| Blocker | Status | Affected |
+|---------|--------|----------|
+| **B6** | OPEN | Design Charter operator approval — all M9.13–M9.18 |
+| **B8** | OPEN | PAGE-COPY formal sign-off — all M9.13–M9.18 |
+| **B1** | OPEN | МО warehouse address — M9.14 · M9.16 |
+| **B3** | OPEN | PLP dealer form vs `/dealers` — M9.16 |
+
+**Operator implementation order (remaining pages):** M9.14 Delivery → M9.15 Payment → M9.17 Warranty → M9.16 Dealers → M9.18 Custom Manufacturing. **Design order** (historical, unchanged): M9.13 → M9.15 → M9.14 → M9.17 → M9.16 → M9.18 — see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+
 ### Завершено
 
 - M7.1 Launch Mode
@@ -176,6 +206,8 @@
 **M9.14 Delivery / M9.15 Payment implementation:** **NOT_IMPLEMENTED / PLANNED_NOT_STARTED** — research + copy + charters preserved; no deploy work folders. Not post-recovery losses. See [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md).
 
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
+
+**Recovery closeout:** [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) — recovery **CLOSED**; production preparation active.
 
 ### Отложено (M9.8 UX Polish Pack — остаток)
 

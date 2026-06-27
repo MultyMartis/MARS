@@ -119,6 +119,7 @@ This pass **does not** constitute operator approval of copy or charters. It corr
 |------|--------|
 | 2026-06-22 | **CREATED** — Program reconciliation v1; drift table; per-page matrix; design readiness; registry sync record |
 | 2026-06-28 | **CROSS-REF** — Post-recovery completeness reconciliation: [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — M9.14/M9.15 implementation **NOT_IMPLEMENTED** (not lost) |
+| 2026-06-28 | **CROSS-REF** — Recovery closeout: [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) — recovery **CLOSED**; operator implementation queue |
 
 ---
 

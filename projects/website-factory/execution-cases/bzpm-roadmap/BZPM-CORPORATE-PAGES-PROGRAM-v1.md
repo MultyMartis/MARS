@@ -282,6 +282,7 @@ No corporate page implementation is authorized by this program document alone. B
 | 2026-06-22 | **UPDATED** — Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells in `site-002/copy/` |
 | 2026-06-22 | **UPDATED** — Copy phase **CLOSED** (M9.13–M9.18 COPY COMPLETE); Design Charter phase **OPEN**; [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) |
 | 2026-06-22 | **RECONCILED** — Registry synced to repo reality per [BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md](BZPM-CORPORATE-PAGES-FINAL-PHASE-GATE-v1.md); six charters + six briefs registered; copy **SUBSTANTIVELY COMPLETE**; Design Charter **DRAFT COMPLETE / APPROVAL OPEN** — [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
+| 2026-06-28 | **NOTED** — BZPM recovery **CLOSED**; operator implementation order registered — [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../../../ocpilot/sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 
 
 

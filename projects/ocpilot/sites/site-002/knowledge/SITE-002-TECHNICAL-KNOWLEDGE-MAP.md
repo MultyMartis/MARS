@@ -6,7 +6,25 @@
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
-**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + catalog state persistence (09A–09C) + hub cleanup (10) + operator manual polish (2026-06-21 live state) + M9.13 About Company redesign/polish/rejection/restoration (2026-06-23).
+**Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + catalog state persistence (09A–09C) + hub cleanup (10) + operator manual polish (2026-06-21 live state) + M9.13 About Company redesign/polish/rejection/restoration (2026-06-23) + BZPM recovery closeout (2026-06-28).
+
+---
+
+## 0. BZPM UX Redesign — project lifecycle
+
+| Field | Value |
+|-------|--------|
+| **Recovery status** | **CLOSED** (2026-06-28) |
+| **Production status** | **READY AFTER OPERATOR GATES** |
+| **Current phase** | **PRODUCTION PREPARATION** |
+| **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
+| **Closeout** | [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
+
+**Lifecycle:** Research → Corporate Pages Program → Recovery (**CLOSED**) → Production Development
+
+**M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
+
+**Operator implementation order (remaining corp pages):** M9.14 → M9.15 → M9.17 → M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
 
 ---
 
@@ -1026,4 +1044,4 @@ Before **any** edit to About page or new About redesign:
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-23 (M9.13 About Company Restored — §17 About Page History; authority → M9.13-ABOUT-COMPANY-RESTORED-01).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§0 BZPM recovery closeout; authority → M9.13-ABOUT-COMPANY-RESTORED-01).*
