@@ -2,7 +2,12 @@
   <div class="container">
     <div class="home-reviews__heading">
       <h2 class="home-reviews__title">Отзывы</h2>
+      @@if (allLinkHref !== '') {
+      <a class="home-reviews__all-link" href="@@allLinkHref">
+      }
+      @@if (allLinkHref === '') {
       <a class="home-reviews__all-link" href="#">
+      }
         <span class="home-reviews__all-text">Смотреть отзывы</span>
         <span class="home-reviews__all-icon" aria-hidden="true"><i class="fas fa-caret-right"></i></span>
       </a>

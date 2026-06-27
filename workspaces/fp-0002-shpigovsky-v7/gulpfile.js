@@ -134,6 +134,12 @@ function html() {
       fileInclude({
         prefix: '@@',
         basepath: __dirname + '/src',
+        context: {
+          allLinkHref: '',
+          founderQuoteVariant: '',
+          founderQuoteEyebrow: '',
+          hideFounderCta: '',
+        },
       })
     )
     .pipe(dest(paths.html.dest));
