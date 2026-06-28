@@ -1,0 +1,120 @@
+{
+  "generated": "2026-06-28",
+  "page": "src/pages/o-centre-v1.html",
+  "rebuild": "v3",
+  "blocks": [
+    {
+      "block": "services-inner-hero-v2",
+      "donor": "uslugi-v2.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "page-uslugi-v2__upper-nav",
+      "donor": "uslugi-v2.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "home-founder-quote",
+      "donor": "index.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "services-category-section-v2",
+      "donor": "uslugi-v2.html addictions section",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "service-subdivision-first-cta-v1",
+      "donor": "usluga-podrazdel-v1.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "service-leaf-approach-v1",
+      "donor": "usluga-konechnaya-v1.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "home-clinic-landscape",
+      "donor": "usluga-konechnaya-v1.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "services-program-v2",
+      "donor": "uslugi-v2.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "home-comfort composition",
+      "donor": "home-comfort.html bricks",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true,
+      "note": "Inline page composition; gallery order matches canonical home-comfort partial"
+    },
+    {
+      "block": "services-program-cta-band-v2",
+      "donor": "uslugi-v2.html secondary CTA",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "home-specialists",
+      "donor": "index.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "home-reviews",
+      "donor": "index.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    },
+    {
+      "block": "home-final-form",
+      "donor": "index.html",
+      "STRUCTURE_IDENTICAL": true,
+      "CLASS_LIST_IDENTICAL": true,
+      "ACCESSIBILITY_IDENTICAL": true,
+      "HOOKS_IDENTICAL": true
+    }
+  ],
+  "compositions": [
+    {
+      "block": "service-leaf-intro-v1 + service-subdivision-nature-v1__text",
+      "donor": "usluga-konechnaya-v1.html + usluga-podrazdel-v1.html",
+      "NEW_CSS": 0,
+      "note": "Page assembly only; existing donor classes"
+    }
+  ]
+}

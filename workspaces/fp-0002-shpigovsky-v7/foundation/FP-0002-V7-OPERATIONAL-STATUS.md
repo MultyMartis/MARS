@@ -862,16 +862,22 @@ fp0002_static_demo_internal_404:
 ZERO
 
 fp0002_about_page:
-REUSE_FIRST_V2_IMPLEMENTED
+REUSE_FIRST_REBUILD_V3_IMPLEMENTED
 
 fp0002_about_page_source:
 src/pages/o-centre-v1.html
 
+fp0002_about_page_visual_donor_map:
+COMPLETE
+
 fp0002_about_page_architecture:
 EXACT_COMPONENT_REUSE
 
+fp0002_about_page_new_namespaces:
+ZERO
+
 fp0002_about_page_new_blocks:
-1_BRAND_TYPOGRAPHY_ONLY
+REMOVED_BRAND_TYPOGRAPHY_V2
 
 fp0002_about_page_preview:
 READY_FOR_OPERATOR_VISUAL_REVIEW
