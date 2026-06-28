@@ -104,10 +104,10 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-faq.html` |
-| Class family | `.home-faq*` |
-| Pages | All three internal service templates |
-| Consolidation priority | P2 |
+| Shared partial | `partials/sections/faq.html` |
+| Class family | `.faq*` |
+| Pages | All five canonical templates |
+| Consolidation priority | COMPLETE — universalized CF-008 wave 6 |
 
 ---
 

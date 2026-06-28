@@ -2066,7 +2066,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-videos__heading,
 .specialists__heading,
 .home-articles__heading,
-.home-faq__heading {
+.faq__heading {
 	margin: 0;
 	// padding-left: var(--pad-gap);
 	// border-left: 5px solid var(--color-accent);
@@ -2436,7 +2436,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	padding-left: 30px;
 }
 
-.home-faq__answer {
+.faq__answer {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
@@ -2444,26 +2444,26 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	color: var(--color-text-secondary);
 }
 
-.home-faq__list {
+.faq__list {
 	display: flex;
 	flex-direction: column;
 	gap: var(--pad-gap-line);
 	margin-top: var(--pad-gap);
 }
 
-.home-faq__item {
+.faq__item {
 	padding: 25px var(--pad-gap);
 	border: var(--border-width) solid var(--color-text-primary);
 	border-radius: var(--radius-main);
 }
 
-.home-faq__item-title {
+.faq__item-title {
 	margin: 0;
 	font-size: inherit;
 	font-weight: inherit;
 }
 
-.home-faq__question {
+.faq__question {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -2478,13 +2478,13 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	cursor: pointer;
 }
 
-.home-faq__question-label {
+.faq__question-label {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	font-weight: var(--font-weight-heading);
 }
 
-.home-faq__icon {
+.faq__icon {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -2498,20 +2498,20 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	transition: transform var(--transition-duration) ease;
 }
 
-.home-faq__question[aria-expanded='true'] .home-faq__icon {
+.faq__question[aria-expanded='true'] .faq__icon {
 	transform: rotate(180deg);
 }
 
-.home-faq__question:hover,
-.home-faq__question:focus-visible {
+.faq__question:hover,
+.faq__question:focus-visible {
 	color: var(--color-accent);
 }
 
-.home-faq__answer-panel {
+.faq__answer-panel {
 	padding-top: var(--pad-gap-line);
 }
 
-.home-faq__answer-panel[hidden] {
+.faq__answer-panel[hidden] {
 	display: none;
 }
 

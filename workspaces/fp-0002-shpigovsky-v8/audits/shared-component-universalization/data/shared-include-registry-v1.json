@@ -125,20 +125,29 @@
     },
     {
       "family_id": "CF-008",
-      "current_name": "home-faq",
-      "current_partial": "src/partials/sections/home-faq.html",
-      "pages_using": ["index.html", "uslugi-v2.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html", "uslugi.html"],
+      "current_name": "faq",
+      "current_partial": "src/partials/sections/faq.html",
+      "pages_using": ["index.html", "uslugi.html", "uslugi-v2.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html"],
       "visual_identity": "SAME",
-      "html_identity": "SAME",
-      "css_identity": "SAME",
-      "page_specific_name": true,
+      "html_identity": "UNIFIED",
+      "css_identity": "UNIFIED",
+      "js_identity": "UNIFIED",
+      "accessibility_identity": "UNIFIED",
+      "responsive_identity": "UNIFIED",
+      "page_specific_name": false,
       "duplicate_partials": [],
       "duplicate_classes": [],
-      "classification": "SHARED_BUT_PAGE_NAMED",
-      "recommended_action": "RENAME_AND_UNIVERSALIZE",
-      "future_neutral_name": "UNDECIDED",
-      "priority": "P1",
-      "implementation_status": "NOT_STARTED"
+      "duplicate_initializations": [],
+      "classification": "UNIVERSALIZED",
+      "recommended_action": "NONE",
+      "future_neutral_name": "faq",
+      "priority": "COMPLETE",
+      "implementation_status": "COMPLETE",
+      "old_name_retired": "home-faq",
+      "aliases": 0,
+      "content_parameters": ["sectionId", "headingId", "headingText", "sectionModifierClass"],
+      "accordion_hooks": ["data-accordion", "data-accordion-button", "data-accordion-panel"],
+      "notes": "Wave 6 complete — global accordion init unchanged"
     },
     {
       "family_id": "CF-009",
@@ -277,16 +286,16 @@
     }
   ],
   "page_specific_naming_audit": {
-    "home_prefix_shared_but_page_named": 4,
+    "home_prefix_shared_but_page_named": 3,
     "genuinely_page_specific": 12,
     "duplicated_shared_family": 2,
-    "universalized": 6,
+    "universalized": 7,
     "unresolved": 1
   },
   "next_recommended_wave": {
-    "family_id": "CF-008",
-    "current_name": "home-faq",
-    "reason": "Shared on 5 templates; page-specific name; NOT AUTHORIZED until operator charters wave 6",
+    "family_id": "CF-009",
+    "current_name": "home-final-form",
+    "reason": "Shared on 5 templates; page-specific name; NOT AUTHORIZED until operator charters wave 7",
     "authorized": false
   }
 }

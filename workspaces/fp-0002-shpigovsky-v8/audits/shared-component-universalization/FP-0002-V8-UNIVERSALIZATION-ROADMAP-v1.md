@@ -14,7 +14,8 @@
 | 2 | CF-004 founder-quote | COMPLETE — commit `25f972f9` |
 | 3 | CF-005 specialists | COMPLETE — commit `c6efb089` |
 | 4 | CF-006 comfort | COMPLETE — commit `4737b020` |
-| 5 | CF-007 reviews | COMPLETE — pending commit |
+| 5 | CF-007 reviews | COMPLETE — commit `4fe928f2` |
+| 6 | CF-008 FAQ | COMPLETE — pending commit |
 
 ---
 
@@ -27,8 +28,8 @@
 | 3 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
 | 4 | CF-006 comfort gallery | P1 | 5 | Low–medium | **COMPLETE** |
 | 5 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | **COMPLETE** |
-| 6 | CF-009 final form | P1 | 5 | Low | Form mask hooks |
-| 7 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | NOT AUTHORIZED |
+| 6 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | **COMPLETE** |
+| 7 | CF-009 final form | P1 | 5 | Low | Form mask hooks — NOT AUTHORIZED |
 | 10 | CF-010 clinic landscape | P2 | 3 | Low | Remove leaf modifier class |
 | — | CF-013 inner hero | P2 | HOLD | Already shared on 3 templates | No wave unless Home unification requested |
 | — | CF-015 home gallery | HOLD | 1 | Unknown until O-Centre | Defer |
@@ -86,11 +87,24 @@
 
 ---
 
-## Next wave: CF-008 FAQ
+## Completed wave: CF-008 FAQ
+
+**Result:** COMPLETE
+
+- Partial: `src/partials/sections/faq.html`
+- Root class: `.faq`
+- Retired: `home-faq` (partial, classes, component IDs)
+- Consumers: 5 pages
+- Visual parity: PASS (crop + context 40/40 exact)
+- Accordion QA: PASS
+
+---
+
+## Next wave: CF-009 Final form
 
 **Status:** NOT AUTHORIZED
 
-Operator gate required before any `home-faq` rename.
+Operator gate required before any `home-final-form` rename.
 
 ---
 

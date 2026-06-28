@@ -12,7 +12,7 @@
 | Metric | Count |
 |--------|------:|
 | Total candidate families | 13 |
-| Universalized (complete) | 6 (CF-003, CF-004, CF-005, CF-006, CF-007, CF-014) |
+| Universalized (complete) | 7 (CF-003, CF-004, CF-005, CF-006, CF-007, CF-008, CF-014) |
 | Shared but page-named | 4 |
 | Duplicated shared family | 2 |
 | Genuinely page-specific | 1 |
@@ -29,6 +29,7 @@
 | CF-005 | specialists | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-006 | comfort | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-007 | reviews | 3 | UNIVERSALIZED | COMPLETE | NONE |
+| CF-008 | faq | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-008 | home-faq | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-009 | home-final-form | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-010 | home-clinic-landscape | 3 | SHARED_BUT_PAGE_NAMED | P2 | RENAME_AND_UNIVERSALIZE |
@@ -127,8 +128,25 @@
 
 ---
 
+## FAQ family (CF-008 detail)
+
+| Item | Value |
+|------|-------|
+| Canonical partial | `src/partials/sections/faq.html` |
+| Canonical root class | `.faq` |
+| Pages using | `index.html`, `uslugi.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
+| HTML copies | 0 — single include |
+| CSS copies | 1 — `.faq*` in `style.scss` |
+| JS init | 1 — global `[data-accordion]` in `main.js` |
+| Old name retired | `home-faq` |
+| Aliases | 0 |
+| Classification | UNIVERSALIZED |
+| Implementation status | COMPLETE |
+
+---
+
 ## Next recommended wave
 
-**CF-008 — FAQ (`home-faq`)** — NOT AUTHORIZED
+**CF-009 — Final form (`home-final-form`)** — NOT AUTHORIZED
 
-Reason: multi-page reuse; accordion init in main.js — verify single init path during wave.
+Reason: shared on 5 templates; page-specific name; operator gate required before wave 7.

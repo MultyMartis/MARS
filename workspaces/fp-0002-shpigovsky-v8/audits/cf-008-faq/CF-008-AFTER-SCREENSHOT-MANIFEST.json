@@ -1,0 +1,2108 @@
+{
+  "manifest_id": "CF-008-AFTER-SCREENSHOT-MANIFEST",
+  "captured_utc": "2026-06-28T12:40:42.571190+00:00",
+  "phase": "after",
+  "port": 4198,
+  "rows": [
+    {
+      "page": "home",
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-desktop-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-desktop-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-desktop-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "c1f400c759d26624dc00a2db484ac292007567eee8b1419ae96a670dde81a1c6",
+        "faq_crop": "5391ac5c4a1ed0c46a3dbcf88fdfd675297495a5d2e2015316516f7db8b5749d"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "home",
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-desktop-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-desktop-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-desktop-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "f23c83824f3456e9d24dff6fa8f55785f28cea63f959f158b8f80c45543305a4",
+        "faq_crop": "5391ac5c4a1ed0c46a3dbcf88fdfd675297495a5d2e2015316516f7db8b5749d"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "home",
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-mobile-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-mobile-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-mobile-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "3734812caa708ac399c3e4c6d88f113210474bd81f467375046b183423c04963",
+        "faq_crop": "f9b912bd21e4be1fe50be72a84f1c9dab289f29f12f247c82199d942702b6cfe"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "home",
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-mobile-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-mobile-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\home-mobile-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "31fc9c0ad4b3b27bcbbc9e4cf02c24004267826b4d3a66d0e7ef82a19c713f09",
+        "faq_crop": "f9b912bd21e4be1fe50be72a84f1c9dab289f29f12f247c82199d942702b6cfe"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services",
+      "page_file": "uslugi.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-desktop-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-desktop-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-desktop-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "db613350c9bbb36477392075cdbe9154c1947f83dc1a03d35d4a5e96b5d32d78",
+        "faq_crop": "5c90f276553384f7ec436f2905d948bef3cbae449b4dc40be59b181c6d959339"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services",
+      "page_file": "uslugi.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-desktop-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-desktop-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-desktop-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "db613350c9bbb36477392075cdbe9154c1947f83dc1a03d35d4a5e96b5d32d78",
+        "faq_crop": "5c90f276553384f7ec436f2905d948bef3cbae449b4dc40be59b181c6d959339"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services",
+      "page_file": "uslugi.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-mobile-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-mobile-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-mobile-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "ce95e6864d7869d1b68c7f3c65194fbd554c7af31c58e703ffbc3d919a2d4854",
+        "faq_crop": "cbbc1b016de09e27b8000b979cd754c6d1d89b0e6fb23ddc760bc881d62c8dc5"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services",
+      "page_file": "uslugi.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-mobile-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-mobile-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-mobile-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "ce95e6864d7869d1b68c7f3c65194fbd554c7af31c58e703ffbc3d919a2d4854",
+        "faq_crop": "cbbc1b016de09e27b8000b979cd754c6d1d89b0e6fb23ddc760bc881d62c8dc5"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-desktop-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-desktop-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-desktop-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "6d283ea5d06e806d11bb1f21652735be094d08a8564fc5fd422158a21c6081e7",
+        "faq_crop": "671a35e3a0d5c9f34b365cd0a0f5eb902a8ab47e26a1e0222a8f49e8db629c11"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-desktop-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-desktop-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-desktop-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "6d283ea5d06e806d11bb1f21652735be094d08a8564fc5fd422158a21c6081e7",
+        "faq_crop": "671a35e3a0d5c9f34b365cd0a0f5eb902a8ab47e26a1e0222a8f49e8db629c11"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-mobile-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-mobile-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-mobile-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "29d0a06028cffba4cf1e3a103b86430f755d1c930a84068f6552e19866bd5a64",
+        "faq_crop": "fe7cd0a00096044acf1d5c8e111d877a5ab04d429422017e2f6a795cd049e2de"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "services-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-mobile-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-mobile-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\services-v2-mobile-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "29d0a06028cffba4cf1e3a103b86430f755d1c930a84068f6552e19866bd5a64",
+        "faq_crop": "fe7cd0a00096044acf1d5c8e111d877a5ab04d429422017e2f6a795cd049e2de"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": null,
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-desktop-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-desktop-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-desktop-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "fbd7898845f74e4bd0256ae0fe08a29f349fda2bb5b6ec262be718747af2d142",
+        "faq_crop": "2bca000a0b9f2662fdb0c6afb720f3e7571d49dde5b3707bc6f16fe502017253"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-subdivision-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-desktop-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-desktop-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-desktop-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "0fcfede9871974059737375f33b096264851a8dfeff9c67af103d517e74f6311",
+        "faq_crop": "2bca000a0b9f2662fdb0c6afb720f3e7571d49dde5b3707bc6f16fe502017253"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-subdivision-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-mobile-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-mobile-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-mobile-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "f987b2a9d80a64218c6318ff87c7d74fe014de73b9b9224a81fd985ac78d8710",
+        "faq_crop": "da04bc7970886fac951704aab945c7259187c555a8827a65cdac0f90414aa2b5"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-subdivision-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-mobile-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-mobile-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-subdivision-mobile-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "f987b2a9d80a64218c6318ff87c7d74fe014de73b9b9224a81fd985ac78d8710",
+        "faq_crop": "da04bc7970886fac951704aab945c7259187c555a8827a65cdac0f90414aa2b5"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-subdivision-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-desktop-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-desktop-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-desktop-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "48940448e688c9e5eaf68adbc7a3cf9dc3a2431d825d963c18818ff0ac519379",
+        "faq_crop": "d146500c45467fc7fc60b5d97612f391816fbaf2cb0716c0ed6eb09e367c0c6d"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-leaf-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-desktop-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-desktop-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-desktop-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "48940448e688c9e5eaf68adbc7a3cf9dc3a2431d825d963c18818ff0ac519379",
+        "faq_crop": "d146500c45467fc7fc60b5d97612f391816fbaf2cb0716c0ed6eb09e367c0c6d"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-leaf-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -128,
+          "width": 1422,
+          "height": 1256
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "initial",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-mobile-initial-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-mobile-initial-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-mobile-initial-faq-context.png"
+      },
+      "sha256": {
+        "full": "ac88f8e3f08816387bb0eb46d784996b9935bc6138435e84ebf7b5b7207d10d8",
+        "faq_crop": "1a2bee357407b849bf36d25d24dcf395df3461d8af4385e0c6ca0895ca2ac2fc"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-leaf-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    },
+    {
+      "page": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "phase": "after",
+      "state": "open-first",
+      "screenshots": {
+        "full": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-mobile-open-first-full.png",
+        "faq_crop": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-mobile-open-first-faq-crop.png",
+        "faq_context": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-008-evidence\\after\\service-leaf-mobile-open-first-faq-context.png"
+      },
+      "sha256": {
+        "full": "ac88f8e3f08816387bb0eb46d784996b9935bc6138435e84ebf7b5b7207d10d8",
+        "faq_crop": "1a2bee357407b849bf36d25d24dcf395df3461d8af4385e0c6ca0895ca2ac2fc"
+      },
+      "http_status": 200,
+      "faq": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "faqCount": 1,
+        "sectionClass": "faq",
+        "sectionId": "service-leaf-faq",
+        "itemCount": 10,
+        "openItemCount": 1,
+        "headingText": "Нас часто спрашивают",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": -492,
+          "width": 365,
+          "height": 1884
+        },
+        "ariaMap": [
+          {
+            "id": "faq-trigger-1",
+            "ariaExpanded": "true",
+            "ariaControls": "faq-panel-1",
+            "panelHidden": false
+          },
+          {
+            "id": "faq-trigger-2",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-2",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-3",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-3",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-4",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-4",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-5",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-5",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-6",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-6",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-7",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-7",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-8",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-8",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-9",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-9",
+            "panelHidden": true
+          },
+          {
+            "id": "faq-trigger-10",
+            "ariaExpanded": "false",
+            "ariaControls": "faq-panel-10",
+            "panelHidden": true
+          }
+        ],
+        "computed": {
+          "headingFontSize": "36px",
+          "itemBorder": "1px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": []
+    }
+  ]
+}

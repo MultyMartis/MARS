@@ -116,7 +116,8 @@ Starter template demo pages may exist from gulp-starter copy — **not** FP-0002
 | CF-005 Specialists | COMPLETE (2026-06-28) |
 | CF-006 Comfort gallery | COMPLETE (2026-06-28) |
 | CF-007 Reviews | COMPLETE (2026-06-28) |
-| Shared component audit | COMPLETE — next wave CF-008 FAQ (NOT AUTHORIZED) |
+| CF-008 FAQ | COMPLETE (2026-06-28) |
+| Shared component audit | COMPLETE — next wave CF-009 final form (NOT AUTHORIZED) |
 | About (`o-centre`) | DEFERRED in V8 |
 
 ---
