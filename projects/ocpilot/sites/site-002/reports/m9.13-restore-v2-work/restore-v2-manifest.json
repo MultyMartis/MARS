@@ -1,0 +1,137 @@
+{
+  "pass": "m9.13-about-redesign-restore-v2",
+  "timestamp": "2026-06-28T19:08:07.038256+00:00",
+  "live_url": "https://zpm.new-site.space/about",
+  "authority": {
+    "visual_baseline": "SITE-002-STABLE-LIVE-LOCAL-FONTS-01",
+    "about_implementation": "M9.13 redesign + polish pass v1 work copies",
+    "merge_policy": "Live operator CSS preserved; M9.13 zpm-about block merged"
+  },
+  "backup_suffix": "pre-site-002-about-restore-v2.bak",
+  "authority_verification": {
+    "ok": true,
+    "files": {
+      "twig": {
+        "path": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-work\\about.twig",
+        "exists": true,
+        "sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+        "bytes": 19585
+      },
+      "php": {
+        "path": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-work\\about.php",
+        "exists": true,
+        "sha256": "e598e6eba95d7b864b01e1f6ee0cddfeacf3e5705f20b541a33ac3c3df62e29f",
+        "bytes": 1864
+      },
+      "css_block": {
+        "path": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-work\\m9.13-about-page.css",
+        "exists": true,
+        "sha256": "3d7313a747fa1854a129a63a7377f40b180b0f3c415621cf907795e072d42453",
+        "bytes": 7317
+      },
+      "hero_img": {
+        "path": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-polish-work\\assets\\img\\about-page-img.jpg",
+        "exists": true,
+        "sha256": "9732ce40aed0ba90d3cba7872b8bde0dba00d651ab4dd4050614e4ed158ddfe6",
+        "bytes": 2585275
+      },
+      "logistics_img": {
+        "path": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-polish-work\\assets\\img\\about-logistics.jpg",
+        "exists": true,
+        "sha256": "b97dcfaa20f61a8bc583efcc558d8bf74003bd216bb90be0121cb800e728bfc6",
+        "bytes": 2301124
+      }
+    }
+  },
+  "files": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "pre_sha256": "998321d3b3ea0a119b0aa688d9c6ebbcdc31431ced75110450026d24458202f8",
+      "pre_bytes": 3443,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__about.twig.pre-site-002-about-restore-v2.bak",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-work\\about.twig",
+      "source_sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+      "post_sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+      "post_bytes": 19585
+    },
+    "catalog/controller/information/about.php": {
+      "pre_sha256": "77ac5ea35be5863f5c729c996743a8f8cd18af3e9afca328d4dcde7585b5fa8a",
+      "pre_bytes": 1687,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__about.php.pre-site-002-about-restore-v2.bak",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-work\\about.php",
+      "source_sha256": "e598e6eba95d7b864b01e1f6ee0cddfeacf3e5705f20b541a33ac3c3df62e29f",
+      "post_sha256": "e598e6eba95d7b864b01e1f6ee0cddfeacf3e5705f20b541a33ac3c3df62e29f",
+      "post_bytes": 1864
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "78c6e13b17632e8f8638515af5141c8a79c432ff45e215e75d56c5b3430635d7",
+      "pre_bytes": 414913,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-site-002-about-restore-v2.bak",
+      "merge": "M9.13 block merged onto live operator style.css",
+      "post_sha256": "a7773bc32ea9a0745d14d28d17748e2591e48917dc56db4bdef14d6be45fad0f",
+      "post_bytes": 421855
+    }
+  },
+  "images": {
+    "assets/img/about-page-img.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-polish-work\\assets\\img\\about-page-img.jpg",
+      "source_sha256": "9732ce40aed0ba90d3cba7872b8bde0dba00d651ab4dd4050614e4ed158ddfe6",
+      "post_sha256": "9732ce40aed0ba90d3cba7872b8bde0dba00d651ab4dd4050614e4ed158ddfe6",
+      "post_bytes": 2585275,
+      "action": "replace",
+      "pre_sha256": "138d682e4e3b0acc214c9ac24d31fe1c5110653809da9f6c35028966293230e3",
+      "pre_bytes": 276765,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\assets__img__about-page-img.jpg.pre-site-002-about-restore-v2.bak"
+    },
+    "assets/img/about-logistics.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\m9.13-polish-work\\assets\\img\\about-logistics.jpg",
+      "source_sha256": "b97dcfaa20f61a8bc583efcc558d8bf74003bd216bb90be0121cb800e728bfc6",
+      "post_sha256": "b97dcfaa20f61a8bc583efcc558d8bf74003bd216bb90be0121cb800e728bfc6",
+      "post_bytes": 2301124,
+      "action": "new_or_replace",
+      "pre_exists": false
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_200": true,
+    "http_status": 200,
+    "has_zpm_about_page": true,
+    "has_trust_row": true,
+    "logistics_photo": true,
+    "hero_photo": true,
+    "has_fancybox_cert": true,
+    "has_cta": true,
+    "form_dialog_7": true,
+    "has_breadcrumbs": true,
+    "no_old_main_wrap": true,
+    "no_old_video_block": true,
+    "no_old_dealer_block": true,
+    "no_old_cert_slider": true,
+    "no_adv_trans_in_geo": true,
+    "has_zpm-about-hero": true,
+    "has_zpm-about-company": true,
+    "has_zpm-about-advantages": true,
+    "has_zpm-about-certs": true,
+    "has_zpm-about-geo": true,
+    "has_zpm-about-cta": true,
+    "all_pass": true
+  },
+  "backup_sha256": {
+    "assets__img__about-page-img.jpg.pre-site-002-about-restore-v2.bak": {
+      "sha256": "138d682e4e3b0acc214c9ac24d31fe1c5110653809da9f6c35028966293230e3",
+      "bytes": 276765
+    },
+    "catalog__controller__information__about.php.pre-site-002-about-restore-v2.bak": {
+      "sha256": "77ac5ea35be5863f5c729c996743a8f8cd18af3e9afca328d4dcde7585b5fa8a",
+      "bytes": 1687
+    },
+    "catalog__view__theme__default__template__information__about.twig.pre-site-002-about-restore-v2.bak": {
+      "sha256": "998321d3b3ea0a119b0aa688d9c6ebbcdc31431ced75110450026d24458202f8",
+      "bytes": 3443
+    },
+    "style.css.pre-site-002-about-restore-v2.bak": {
+      "sha256": "78c6e13b17632e8f8638515af5141c8a79c432ff45e215e75d56c5b3430635d7",
+      "bytes": 414913
+    }
+  }
+}

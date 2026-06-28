@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-29  
-**Evidence cutoff:** 2026-06-29 (SITE-002 **Local Fonts 01** checkpoint `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` — TEST deploy; operator manual visual baseline preserved)  
+**Evidence cutoff:** 2026-06-29 (SITE-002 **M9.13 About Redesign 02** checkpoint `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` — M9.13 About re-activated on TEST; Local Fonts 01 + Operator Manual Polish baseline preserved)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,9 +14,9 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT LOCAL FONTS 01** (2026-06-29) |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.13 ABOUT REDESIGN 02** (2026-06-29) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` — 100% local Inter on TEST; Operator Manual Polish 01 visual baseline **preserved**; [Knowledge Map §27](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program COMPLETE on TEST** |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · Local Fonts 01 retained · Operator Manual Polish 01 visual baseline **preserved**; [Knowledge Map §17](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program COMPLETE on TEST** |
 
 ---
 
@@ -41,24 +41,24 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-LOCAL-FONTS-01`** — **STABLE LIVE CHECKPOINT** (local Inter; visual baseline from Operator Manual Polish 01) |
+| Baseline | **`SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`** — About active · **`SITE-002-STABLE-LIVE-LOCAL-FONTS-01`** — fonts retained |
 | Knowledge map | [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Authority policy | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
 | Registry | Active project site — M7.1 through M9.8.5 + catalog UX cluster **complete** on TEST |
-| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (rejected/restored)** |
+| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (re-activated 2026-06-29)** |
 | Active stage | **PRODUCTION PREPARATION** — BZPM recovery **CLOSED**; remaining M9.8.9 tasks per roadmap (non-blocking) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | **Production parity / rollout** for corp pages · operator gates B6/B8/B1 · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
 | Active blockers | **B6** charter approval · **B8** copy sign-off · **B1** МО address · **B3** PLP vs `/dealers` (**governance-only** — does not block corp `/dealers` implementation) — recovery **not** a blocker |
-| Corporate Pages Program | **OPEN** — [Program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Design program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [Charters](../website-factory/execution-cases/bzpm-roadmap/charters/README.md) · M9.13 **IMPLEMENTED · QA PASSED · REJECTED · RESTORED** · M9.14+ charters **Draft complete / approval open** · Visual design **NOT OPEN** · Contacts **Delivered** (separate workstream) |
+| Corporate Pages Program | **OPEN** — [Program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Design program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [Charters](../website-factory/execution-cases/bzpm-roadmap/charters/README.md) · M9.13 **RE-ACTIVATED on TEST** (2026-06-29) · M9.14+ charters **Draft complete / approval open** · Visual design **NOT OPEN** · Contacts **Delivered** (separate workstream) |
 | Run 5 | **NO** — not applicable to current operational lane |
 | Writes (this checkpoint) | **NO** — documentation only |
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 | External secrets | External storage only — not in repo |
 
-**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
+**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · [sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
 
-**M9.13 About restoration:** [sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md) · [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md)
+**M9.13 About re-activation:** [sites/site-002/reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md](sites/site-002/reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md) · [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md)
 
 **State freeze report:** [sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md](sites/site-002/reports/REPORT-BZPM-STATE-FREEZE-ROADMAP-UPDATE.md)
 
@@ -554,6 +554,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-28 | **CLOSED** — BZPM UX Redesign recovery phase; production transition; Run **4.148**; [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 | 2026-06-28 | **REGISTERED** — M9.18 Custom Manufacturing Implementation Charter **READY**; Run **4.155**; terminal corp page charter; [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](sites/site-002/reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md); Knowledge Map §22 |
 | 2026-06-28 | **DONE** — Corporate Pages Visual Polish Pass 1.2 on TEST; Run **4.160**; checkpoint `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2`; [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](sites/site-002/reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md); Knowledge Map §25 |
+| 2026-06-29 | **DONE** — M9.13 About Company redesign re-activated on TEST; Run **4.163**; checkpoint `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`; [SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md](sites/site-002/reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md); Knowledge Map §17 |
 | 2026-06-29 | **DONE** — Local Fonts Migration on TEST; Run **4.162**; checkpoint `SITE-002-STABLE-LIVE-LOCAL-FONTS-01`; [SITE-002-LOCAL-FONTS-MIGRATION.md](sites/site-002/reports/SITE-002-LOCAL-FONTS-MIGRATION.md); Knowledge Map §27 |
 | 2026-06-29 | **DONE** — Operator Manual Polish Canonical Checkpoint 01; Run **4.161**; checkpoint `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`; FTP read-only capture; superseded by Local Fonts 01 for checkpoint authority; [SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md); Knowledge Map §26 |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |

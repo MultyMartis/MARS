@@ -2,9 +2,9 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
-**Status:** **STABLE LIVE CHECKPOINT — LOCAL FONTS 01**  
-**Run:** Local Inter webfonts migration (2026-06-29)  
-**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** implementation phase **COMPLETE on TEST** — M9.14–M9.18 **IMPLEMENTED** · **Local Fonts 01** **ACTIVE on TEST** (2026-06-29) · Operator Manual Polish 01 visual baseline **preserved**
+**Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT REDESIGN 02**  
+**Run:** M9.13 About Company redesign re-activation (2026-06-29)  
+**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** implementation phase **COMPLETE on TEST** — M9.14–M9.18 **IMPLEMENTED** · **M9.13 About RE-ACTIVATED on TEST** (2026-06-29) · Local Fonts 01 **retained** · Operator Manual Polish 01 visual baseline **preserved**
 
 ### BZPM UX REDESIGN — project banner
 
@@ -31,7 +31,7 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (fonts) |
 | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual and behavioural authority |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
 | **Operator manual JS (04B)** | [knowledge §12](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#12-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
@@ -68,14 +68,15 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
-| Status | **STABLE LIVE CHECKPOINT** — About page restored; catalog UX carried forward |
-| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
+| Name | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` |
+| Status | **STABLE LIVE CHECKPOINT** — M9.13 About redesign + polish v1 active on TEST |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) |
 | Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §17 About Page History |
-| About page | M9.13 redesign **rejected** — **restored** pre-redesign `/about` |
-| Catalog UX | Carried forward from M9.8.9 Catalog UX Complete 01 |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
-| Rollback source | Beget full backup + current live TEST + About pass backups + file-level pass backups |
+| About page | M9.13 redesign + polish v1 **ACTIVE** on `/about` |
+| Fonts authority | [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) — retained |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md](reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md) |
+| Restore report | [reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md](reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md) |
+| Rollback source | `.pre-site-002-about-restore-v2.bak` + `m913-about-rollback-restore-v2.py` |
 
 ### Prior checkpoints (historical)
 

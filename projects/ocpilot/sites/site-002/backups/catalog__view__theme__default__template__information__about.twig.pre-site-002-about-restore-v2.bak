@@ -1,0 +1,83 @@
+{{ header }}
+
+<main class="main">
+
+  <section>
+    <div class="container">
+
+      <div class="about-page--main-wrap">
+
+        <div class="about-page--main-text">
+          <h2>Завод пищевого машиностроения</h2>
+          <p><strong>ООО &laquo;Завод пищевого машиностроения&raquo; (ЗПМ)&nbsp;</strong>&mdash; российский производитель оборудования для предприятий общественного питания и&nbsp;пищевых производств. Основное направление деятельности компании&nbsp;&mdash; разработка и&nbsp;производство нейтрального оборудования для ресторанов, кафе, столовых, пищевых производств и&nbsp;предприятий торговли. Производство расположено в&nbsp;Барнауле.</p>
+        </div>
+
+        <div class="about-page--main-img">
+          <img src="/assets/img/about-page-img.jpg" alt="ЗПМ">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about-page-video about-page--big-media-capture" aria-label="Видео производства оборудования">
+
+    <video
+      class="about-page-video__media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    >
+      <source src="assets/video/about_us_video.mp4" type="video/mp4">
+    </video>
+
+    <button
+      class="about-page-video__scroll-btn"
+      type="button"
+      aria-label="Прокрутить вниз"
+      data-scroll-next="about-after-video"
+    >
+    <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+    </button>
+
+  </section>
+  <!-- Якорь для скролла -->
+  <span id="about-after-video"></span>
+
+ {{ blockaboutadvanttop }}
+  {{ blockaboutadvantbotom }} 
+ {{ aboutcertificates }}
+
+  <section class="zpm-seo">
+    <div class="container">
+
+
+    <div class="about-page--geo-promo-wrap">
+      <div class="">
+        <h2>География поставок</h2>
+
+        <p>Оборудование завода поставляется предприятиям общественного питания и&nbsp;пищевой промышленности по&nbsp;всей территории России и&nbsp;в&nbsp;страны СНГ.</p>
+
+        <p>Производство и&nbsp;офис компании находятся в&nbsp;Барнауле. Для удобства поставок и&nbsp;логистики продукция также доступна через склад партнёрской компании в&nbsp;Московской области, что позволяет ускорить доставку оборудования заказчикам из&nbsp;различных регионов.</p>
+
+        <p>Компания активно развивает дилерскую сеть и&nbsp;сотрудничает с&nbsp;партнёрами в&nbsp;различных регионах России.</p>
+      </div>
+      <div class="about-page--geo-promo-img">
+        <img src="/assets/img/geo-web.png" alt="География поставок" />
+      </div>
+    </div>
+
+
+
+    </div>
+  </section>
+
+  {{ blockdealersform }}
+
+</main>
+
+{{ footer }}

@@ -942,7 +942,7 @@ Before **any** edit to catalog URL state, limit menu, pagination AJAX, or filter
 
 ## 17. About Page History
 
-Corporate page `/about` — route `information/about`. **Current canonical state = restored pre-M9.13 version** on live TEST.
+Corporate page `/about` — route `information/about`. **Current canonical state = M9.13 redesign + polish v1 re-activated** on live TEST (2026-06-29).
 
 ### 1. Original page (pre-M9.13)
 
@@ -1007,29 +1007,43 @@ Structure unchanged from redesign — polish only.
 
 **SHA verified** against redesign pre-deploy manifest — restored files match pre-M9.13 state.
 
-### 6. Current canonical state
+### 6. Re-activation (2026-06-29)
+
+| Item | Value |
+|------|--------|
+| **Status** | **RE-ACTIVATED** · **QA PASSED** · **HITL PENDING** |
+| **Type** | Saved M9.13 implementation restored — **not** new redesign |
+| **Script** | `reports/m9.13-restore-v2-work/m913-about-restore-redesign-v2.py` |
+| **Merge policy** | Live operator CSS (Local Fonts 01 + Operator Manual Polish 01) preserved; M9.13 `zpm-about-page*` block merged |
+| **Evidence** | [SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md](../reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md) |
+
+**Deployed from:** `reports/m9.13-work/` (twig, php, css block) + `reports/m9.13-polish-work/assets/img/` (hero, logistics).
+
+**Backups:** `backups/*.pre-site-002-about-restore-v2.bak`
+
+### 7. Current canonical state
 
 | Item | Value |
 |------|--------|
 | **Live URL** | https://zpm.new-site.space/about |
-| **Structure** | **Restored original** — pre-M9.13 legacy layout |
-| **M9.13 namespaces** | **Absent** on live — no `zpm-about-*` |
-| **Source of truth** | Live TEST restored version |
-| **Authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+| **Structure** | **M9.13 compact 6-section** — `zpm-about-hero` … `zpm-about-cta` |
+| **M9.13 namespaces** | **Present** on live |
+| **Source of truth** | Live TEST M9.13 redesign + polish v1 |
+| **Authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` |
 
 ### Change rules
 
-Before **any** edit to About page or new About redesign:
+Before **any** edit to About page:
 
 1. Read **§17** (this section)
-2. Read restoration, redesign, and polish reports (listed above)
+2. Read redesign, polish, and restore-v2 reports (listed above)
 3. **Live-capture** `about.twig`, `about.php`, `style.css` before deploy
-4. Treat restored live version as canonical — do not assume M9.13 work copies reflect production intent
-5. New redesign requires **operator charter** — M9.13 pass is closed as rejected/restored
+4. Operator manual CSS/Twig/JS on non-About pages remains **CANONICAL** — merge carefully for About-only changes
+5. Rollback: `m913-about-rollback-restore-v2.py` or `.pre-site-002-about-restore-v2.bak` files
 
-**Evidence:** [SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](../reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md) · [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
+**Evidence:** [SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md](../reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md) · [SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md)
 
-**SAFE UNKNOWN:** Twig cache clear after restore returned empty listing — operator manual clear on Beget if stale render appears.
+**SAFE UNKNOWN:** Form POST end-to-end on TEST — operator smoke test pending. Operator visual HITL @ 1440 / 1024 / 390 pending.
 
 ---
 
