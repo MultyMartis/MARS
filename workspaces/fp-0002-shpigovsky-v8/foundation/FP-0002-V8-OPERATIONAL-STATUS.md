@@ -9,7 +9,9 @@ fp0002_v8_baseline: FOUR_TEMPLATE_AUTHORITY_6eb493e9
 fp0002_v8_component_audit: COMPLETE
 fp0002_v8_component_consolidation: IN_PROGRESS
 fp0002_v8_cf003_upper_navigation: COMPLETE
+fp0002_v8_cf003_commit: 361502bf
 fp0002_v8_shared_component_audit: COMPLETE
+fp0002_v8_shared_component_audit_commit: PENDING
 fp0002_v8_next_wave: CF-004_FOUNDER_QUOTE (audit recommended, not started)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
@@ -28,7 +30,7 @@ build_cf003: PASS
 browser_qa_cf003: PASS
 dom_validation_cf003: PASS
 selector_validation_cf003: PASS
-cf003_commit: PENDING_OPERATOR_REPORT
+cf003_commit: PUSHED (361502bf)
 shared_component_audit: COMPLETE
 consolidation_wave_1_cf003: COMPLETE
 
