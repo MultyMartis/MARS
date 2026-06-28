@@ -1,0 +1,54 @@
+{
+  "pass": "site-002-corp-visual-polish-pass1-rollback",
+  "timestamp": "2026-06-28T13:27:54.386349+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "operator_decision": "REJECTED BY OPERATOR",
+  "rollback_reason": "Global padding-top: 0 reset on corporate sections removed vertical rhythm",
+  "files": {
+    "assets/css/style.css": {
+      "rejected_backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.rejected-site-002-corp-visual-polish-pass1.bak",
+      "rejected_sha256": "d4303c40d972135c092f5b8803b148b37e80881ac6f6db9e76a220995115ca42",
+      "rejected_bytes": 379408,
+      "pre_pass1_backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-site-002-corp-visual-polish-pass1.bak",
+      "pre_pass1_sha256": "8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c",
+      "pre_pass1_bytes": 358072,
+      "post_rollback_sha256": "8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c",
+      "post_rollback_bytes": 358072
+    }
+  },
+  "deploy": {
+    "remote": "assets/css/style.css",
+    "qa": {
+      "urls": {
+        "https://zpm.new-site.space/": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/delivery": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/payment-methods": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/guarantee": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/dealers": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/custom-equipment": {
+          "http_status": 200,
+          "ok": true
+        }
+      },
+      "css_marker_absent": true,
+      "live_css_sha256": "8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c",
+      "all_http_ok": true,
+      "rollback_matches_pre_pass1": true
+    }
+  }
+}

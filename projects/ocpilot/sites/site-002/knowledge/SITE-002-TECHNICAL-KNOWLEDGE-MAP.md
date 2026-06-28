@@ -1247,18 +1247,58 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 | Item | Value |
 |------|--------|
-| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01` |
+| **Status** | **REJECTED BY OPERATOR** (2026-06-28) — rolled back on TEST |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01` — **historical / not active visual authority** |
+| **Current visual authority** | **Pre-Pass-1** — `style.css` SHA256 `8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c` |
 | **Audit** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md) |
-| **Report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md) |
-| **CSS block** | `assets/css/style.css` — `SITE-002 — Corporate Pages Visual Polish Pass 1` |
-| **Patch source** | [site-002-visual-polish-pass1-work/site-002-corp-visual-polish-pass1.css](../reports/site-002-visual-polish-pass1-work/site-002-corp-visual-polish-pass1.css) |
-| **Backup** | [backups/style.css.pre-site-002-corp-visual-polish-pass1.bak](../backups/style.css.pre-site-002-corp-visual-polish-pass1.bak) |
-| **post_sha256** | `d4303c40d972135c092f5b8803b148b37e80881ac6f6db9e76a220995115ca42` |
+| **Implementation report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md) |
+| **Rollback report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01-ROLLBACK.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01-ROLLBACK.md) |
+| **Rejected patch** | [site-002-corp-visual-polish-pass1.css](../reports/site-002-visual-polish-pass1-work/site-002-corp-visual-polish-pass1.css) |
+| **Pre-Pass-1 backup** | [backups/style.css.pre-site-002-corp-visual-polish-pass1.bak](../backups/style.css.pre-site-002-corp-visual-polish-pass1.bak) |
+| **Rejected-state backup** | [backups/style.css.rejected-site-002-corp-visual-polish-pass1.bak](../backups/style.css.rejected-site-002-corp-visual-polish-pass1.bak) |
+| **Rejected post_sha256** | `d4303c40d972135c092f5b8803b148b37e80881ac6f6db9e76a220995115ca42` |
 
-**Implemented:** Audit Priority 1 + Priority 2 (VP-01–VP-11). Priority 3 deferred to Pass 2.
+**Rejection reason:** global `padding-top: 0` on corporate sections (VP-01) removed vertical rhythm.
 
-**Not in scope:** Home · catalog · PLP · PDP · Contacts · Twig · PHP · JS.
+**Next:** Pass 1.1 — see §24.
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-28 (§23 Corporate Pages Visual Polish Pass 1).*
+## 24. Corporate Pages Visual Polish Pass 1.1 — operator rules
+
+**Status:** **REGISTERED** (2026-06-28) — **not implemented** in rollback task.
+
+### RULE 01 — `.page-intro__description` forbidden
+
+- Treat `.page-intro__description` as a **forbidden component** on corporate pages M9.14–M9.18.
+- In Pass 1.1: remove usage; preserve all text, order, and copy; move text into the corresponding page `main` block.
+- **Not executed** during Pass 1 rollback — registration only.
+
+### RULE 02 — reuse existing card systems
+
+Allowed base components:
+
+- `.zpm-commercial-trust` / `.zpm-commercial-trust__*`
+- `.zpm-catalog-faq` / `.zpm-catalog-faq__*`
+
+Use for cards, advantages, proof blocks, steps, info cards, FAQ-like blocks, card grids, small forms, icon blocks. Do **not** create new card systems without necessity.
+
+### RULE 03 — Home visual authority
+
+Home page is the visual authority for vertical rhythm, air, sizes, density, visual weight, distances, and block separation. **Do not** use Catalog or PDP as reference for Corporate Pages.
+
+### RULE 04 — no global padding-top reset
+
+Forbidden: global rules such as `padding-top: 0` across all corporate sections. Any vertical rhythm change must be **local**, justified, and verified against Home.
+
+### RULE 05 — mandatory backups before polish
+
+Before each Corporate Pages Visual Polish pass:
+
+1. Backup all files to be changed (repo file-level backups).
+2. Operator Beget backup.
+3. Git checkpoint.
+
+---
+
+*Documentation only — live TEST evidence in rollback manifest. Last updated: 2026-06-28 (§23 Pass 1 REJECTED · §24 Pass 1.1 rules registered).*
