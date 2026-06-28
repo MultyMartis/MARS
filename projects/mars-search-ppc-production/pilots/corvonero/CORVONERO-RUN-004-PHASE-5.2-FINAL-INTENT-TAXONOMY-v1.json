@@ -1,0 +1,89 @@
+{
+  "taxonomy_id": "corvonero-run-004-phase-52-final-intent-taxonomy-v1",
+  "classes": [
+    {
+      "intent_class": "SPECIALIST_SEARCH",
+      "record_count": 389,
+      "accept_count": 389,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "CAREER_OR_EDUCATION",
+      "record_count": 173,
+      "accept_count": 0,
+      "reject_count": 173,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "PRICE_AND_COST",
+      "record_count": 17,
+      "accept_count": 17,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "DIRECT_SERVICE_ORDER",
+      "record_count": 252,
+      "accept_count": 252,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "INFORMATIONAL",
+      "record_count": 194,
+      "accept_count": 0,
+      "reject_count": 194,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "MODIFICATION",
+      "record_count": 67,
+      "accept_count": 67,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "INTEGRATION",
+      "record_count": 62,
+      "accept_count": 62,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "PROBLEM_RESOLUTION",
+      "record_count": 2,
+      "accept_count": 2,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "SUPPORT_AND_MAINTENANCE",
+      "record_count": 139,
+      "accept_count": 139,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "IMPLEMENTATION",
+      "record_count": 7,
+      "accept_count": 7,
+      "reject_count": 0,
+      "abstain_count": 0
+    },
+    {
+      "intent_class": "AMBIGUOUS",
+      "record_count": 296,
+      "accept_count": 0,
+      "reject_count": 0,
+      "abstain_count": 296
+    },
+    {
+      "intent_class": "PRODUCT_OR_LICENSE",
+      "record_count": 1,
+      "accept_count": 0,
+      "reject_count": 1,
+      "abstain_count": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "receipt_id": "phase-4-resume-authorization-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "resume_mode": true,
+  "lifecycle_transitions": [
+    "PHASE_4_TRIGGER_RECONCILIATION_PASS",
+    "PHASE_4_RESUME_AUTHORIZED",
+    "PHASE_4_FULL_CORPUS_EXECUTING"
+  ],
+  "operator_decisions": {
+    "phase_4_full_corpus": "AUTHORIZED",
+    "canary_attempt_2": "APPROVED",
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "hard_cost_cap_usd": 3,
+    "soft_cost_warning_usd": 2,
+    "strategy": "NOT AUTHORIZED",
+    "wave_5": "BLOCKED"
+  },
+  "canary_reuse_audit": {
+    "reusable": 120,
+    "remaining": 769,
+    "verdict": "PASS"
+  },
+  "cost_projection": {
+    "remaining_records": 769,
+    "projected_new_cost_usd": 0.5506541487829615,
+    "cost_per_new_record_usd": 0.0007160652129817444,
+    "cumulative_at_resume_usd": 1.9158524,
+    "projected_total_cost_usd": 2.466506548782961,
+    "hard_cap_usd": 3,
+    "pass_hard_cap": true,
+    "basis": "actual_phase4_per_record"
+  },
+  "resume_from_unique_assessed": 1599,
+  "remaining_at_resume": 769,
+  "authorized_at": "2026-06-28T13:54:18.281Z"
+}

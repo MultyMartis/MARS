@@ -1,0 +1,51 @@
+{
+  "receipt_id": "corvonero-run-004-phase-4-trigger-reconciliation-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "verdict": "PHASE_4_TRIGGER_RECONCILIATION — PASS",
+  "reconciled_at": "2026-06-28T11:27:47.460Z",
+  "records_reconciled": 720,
+  "trigger_records": {
+    "CR2-PHR-00253": {
+      "phrase": "сколько стоит работа программиста 1с",
+      "action": "classifier_false_positive_removed",
+      "policy_class": "DIRECT_COMMERCIAL_1C_SERVICE",
+      "final_verdict": "ACCEPT",
+      "prior_family": "careers_training_education",
+      "reconciled_family": "direct_commercial_1c_service"
+    },
+    "CR2-PHR-00584": {
+      "phrase": "программист 1с стажер аптека плюс самара",
+      "action": "operator_adjudication_override",
+      "policy_class": "CAREER_EMPLOYMENT",
+      "model_verdict": "ACCEPT",
+      "final_authoritative_verdict": "REJECT"
+    }
+  },
+  "metrics": {
+    "raw_career_accept_triggers": 2,
+    "classifier_false_positives": 1,
+    "confirmed_career_false_accepts_before_override": 1,
+    "operator_overrides": 1,
+    "remaining_unresolved_career_false_accepts": 0,
+    "career_accept_raw_count": 1,
+    "career_accept_confirmed_error_count": 0,
+    "career_accept_classifier_false_positive_count": 0,
+    "career_accept_review_pending_count": 1,
+    "career_accept_override_count": 0,
+    "career_accept_rate": 0.001389,
+    "additional_review_items": [
+      "CR2-PHR-00559"
+    ]
+  },
+  "before_gate": {
+    "career_accept_raw_count": 3,
+    "stop_required": false,
+    "confirmed_error_ids": []
+  },
+  "after_gate": {
+    "career_accept_raw_count": 1,
+    "stop_required": false,
+    "unresolved_confirmed_error_ids": []
+  },
+  "checkpoint_hash_before": "a313c7f45bdbfaab"
+}

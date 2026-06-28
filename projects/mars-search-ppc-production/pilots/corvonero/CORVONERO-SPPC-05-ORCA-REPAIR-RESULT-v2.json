@@ -1,0 +1,31 @@
+{
+  "document_id": "CORVONERO-SPPC-05-ORCA-REPAIR-RESULT-v2",
+  "date": "2026-06-26",
+  "orca_repair_verdict": "ORCA_WAVE_3_1F_TARGETED_SPPC05_REPAIR_V2 — PASS",
+  "corvonero_status": "BLOCKED_AT_SPPC_05",
+  "ready_for_run_004_sppc_05_attempt": true,
+  "run_004_authorized": false,
+  "corpus_processed": "0 / 2368",
+  "frozen_runs": [
+    "corv-semantic-v2-20260626-002",
+    "corv-semantic-v2-20260626-003"
+  ],
+  "repair_fixtures": [
+    { "id": "PQR-ABSTAIN-03", "expected": "ABSTAIN", "post_repair": "ABSTAIN", "pass": true },
+    { "id": "PC-ABSTAIN-01", "expected": "ABSTAIN", "post_repair": "ABSTAIN", "pass": true },
+    { "id": "CFM-PROD-UPD-02", "expected": "REJECT", "post_repair": "REJECT", "pass": true }
+  ],
+  "authority": {
+    "prompt_contract": "v1.4",
+    "semantic_adjudicator": "v1.5",
+    "platform_compatibility": "v1.1",
+    "service_intent_evidence": "v1.1",
+    "hard_rules": "v1.2"
+  },
+  "known_ambiguity": {
+    "fixture": "PSR-AMB-01",
+    "expected": "ABSTAIN",
+    "observed_distribution": "ACCEPT×3",
+    "blocking": false
+  }
+}

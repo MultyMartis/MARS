@@ -1,0 +1,3230 @@
+{
+  "queue_id": "corvonero-run-004-phase-4-review-queue-v2",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "mandatory_items": [
+    "CR2-PHR-00200",
+    "CR2-PHR-00584"
+  ],
+  "monitored_families": [
+    "psr_amb_01",
+    "generic_erp_platform_ambiguity",
+    "ambiguous_diy",
+    "career_related_accept"
+  ],
+  "career_gate_summary": {
+    "career_accept_raw_count": 3,
+    "career_accept_confirmed_error_count": 0,
+    "career_accept_classifier_false_positive_count": 0,
+    "career_accept_review_pending_count": 1,
+    "career_accept_override_count": 0
+  },
+  "total_items": 320,
+  "items": [
+    {
+      "phrase_id": "CR2-PHR-00010",
+      "phrase": "программист 1с москва",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "direct_commercial_1c_service",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00022",
+      "phrase": "задание программисту 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00033",
+      "phrase": "найти программиста 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00037",
+      "phrase": "программист 1с предприятие",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00053",
+      "phrase": "ии для программистов 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00056",
+      "phrase": "тз программисту 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00058",
+      "phrase": "программист 1с окз",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00063",
+      "phrase": "форум 1с программистов",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "informational_self_service",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00068",
+      "phrase": "программист 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00076",
+      "phrase": "лучший программист 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00083",
+      "phrase": "программист 1с зуп",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00092",
+      "phrase": "программист 1с россия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00096",
+      "phrase": "программист 1с разработка",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00100",
+      "phrase": "erp программиста 1с",
+      "review_reason": "Generic ERP platform ambiguity",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-00103",
+      "phrase": "программист 1с ру",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00112",
+      "phrase": "1с программист сложно",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00113",
+      "phrase": "хх программист 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00118",
+      "phrase": "договор программиста 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00171",
+      "phrase": "программист 1с хабаровск",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "direct_commercial_1c_service",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00172",
+      "phrase": "поиск программистов 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00186",
+      "phrase": "отчет программиста 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00200",
+      "phrase": "что нужно знать программисту 1с",
+      "review_reason": "CR2-PHR-00200 — operator review item (scored false reject)",
+      "primary_family": "informational_self_service",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "expected_policy_authority": "direct_commercial_service_demand_policy"
+    },
+    {
+      "phrase_id": "CR2-PHR-00204",
+      "phrase": "программист администратор 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00263",
+      "phrase": "1с программист 2025",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00264",
+      "phrase": "ironskills программист 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "careers_training_education",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00274",
+      "phrase": "программист 1с пермь",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "direct_commercial_1c_service",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00292",
+      "phrase": "1с бизнес программист",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00305",
+      "phrase": "где найти программиста 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00307",
+      "phrase": "клиенты программисту 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00309",
+      "phrase": "программист 1с франчайзи",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00330",
+      "phrase": "программист 1с удаленно москва",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "direct_commercial_1c_service",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00341",
+      "phrase": "программист 1с на проект",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00346",
+      "phrase": "инструменты программиста 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00365",
+      "phrase": "программист 1с рарус",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00371",
+      "phrase": "руском программист 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00389",
+      "phrase": "парк культуры программист 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00404",
+      "phrase": "программист 1с казахстан",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00459",
+      "phrase": "код по окз программист 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00461",
+      "phrase": "программист 1с саранск",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00476",
+      "phrase": "программист 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00484",
+      "phrase": "1с программист алматы hh",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00490",
+      "phrase": "внедренцы и программисты 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00514",
+      "phrase": "требуется программист 1с удаленно",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00548",
+      "phrase": "промты для программиста 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00559",
+      "phrase": "стажировка 1с программист ростов на дону",
+      "review_reason": "Primary/reassessment consensus REJECT contradicts final ACCEPT — review item, not broad stop contributor",
+      "primary_family": "careers_training_education",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "career_gate_classification": "OPERATOR_REVIEW_REQUIRED"
+    },
+    {
+      "phrase_id": "CR2-PHR-00568",
+      "phrase": "программист 1с лидер фарм",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00573",
+      "phrase": "тех задание программистам 1с пример",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "informational_self_service",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00584",
+      "phrase": "программист 1с стажер аптека плюс самара",
+      "review_reason": "Operator override — CR2-PHR-00584",
+      "primary_family": "careers_training_education",
+      "final_verdict": "REJECT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "operator_override": {
+        "run_id": "corv-semantic-v2-20260626-004",
+        "phrase_id": "CR2-PHR-00584",
+        "phrase": "программист 1с стажер аптека плюс самара",
+        "model_verdict": "ACCEPT",
+        "operator_final_verdict": "REJECT",
+        "policy_class": "CAREER_EMPLOYMENT",
+        "rationale": "Explicit career markers (стажер, employer entity, location) — operator manual adjudication override to REJECT per Run 004 Phase 4 authorization.",
+        "original_batch": "phase4-batch-006",
+        "source_evidence": {
+          "observed_tags": [
+            "geography",
+            "one_c",
+            "career",
+            "provider_role"
+          ],
+          "primary_family": "careers_training_education",
+          "career_markers": [
+            "стажер",
+            "employer_entity_phrase",
+            "location_samara"
+          ]
+        },
+        "timestamp": "2026-06-28T11:27:47.367Z",
+        "authority": "OPERATOR_ADJUDICATION_OVERRIDE — CORVONERO RUN 004 PHASE 4 RESUME V1",
+        "override_status": "OPERATOR_ADJUDICATION_OVERRIDE"
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00587",
+      "phrase": "ironskills инструменты программиста 1с часть 2",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "careers_training_education",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00636",
+      "phrase": "сопровождение 1с erp",
+      "review_reason": "Generic ERP platform ambiguity",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-00657",
+      "phrase": "окпд услуги по сопровождению 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "direct_commercial_1c_service",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00671",
+      "phrase": "информационно технологическое сопровождение 1с итс",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00673",
+      "phrase": "отдел сопровождения 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00675",
+      "phrase": "окпд сопровождение программного продукта 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00685",
+      "phrase": "окпд 2 сопровождение программного продукта 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00720",
+      "phrase": "техническое задание на сопровождение 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00721",
+      "phrase": "окпд 2 информационно технологическое сопровождение 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00736",
+      "phrase": "1с менеджер сопровождения корп",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00747",
+      "phrase": "окпд 2 информационно технологическое сопровождение программ 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00752",
+      "phrase": "техническое задание на сопровождение 1с erp",
+      "review_reason": "Generic ERP platform ambiguity",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-00770",
+      "phrase": "примеры доработки 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "informational_self_service",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00778",
+      "phrase": "доработки 1с erp",
+      "review_reason": "Generic ERP platform ambiguity",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-00781",
+      "phrase": "типовые доработки 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00807",
+      "phrase": "список доработок 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00828",
+      "phrase": "сценарий тестирования методология 1с для тестирования доработок",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00832",
+      "phrase": "сидение с амортизатором для куго 1с доработка",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00835",
+      "phrase": "примеры реальных задач по доработки конфигурации 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "informational_self_service",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00836",
+      "phrase": "служебка на доработку программы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00840",
+      "phrase": "как найти доработки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00873",
+      "phrase": "битрикс интеграция с 1с инструкция",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "integrations",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00879",
+      "phrase": "маркировка в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00880",
+      "phrase": "код маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00881",
+      "phrase": "маркировка товаров в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00882",
+      "phrase": "маркировка честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00883",
+      "phrase": "маркировка в 1с ут",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00884",
+      "phrase": "маркировка в 1с бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00886",
+      "phrase": "коды маркировки честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00889",
+      "phrase": "маркировка в 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00890",
+      "phrase": "проверка кодов маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00892",
+      "phrase": "как добавить маркировку в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00895",
+      "phrase": "коды маркировки в упд 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00896",
+      "phrase": "маркировка продукции в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00898",
+      "phrase": "коды маркировки в 1с бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00899",
+      "phrase": "маркировка в 1с эдо",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00905",
+      "phrase": "1с маркировка ввод в оборот",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00906",
+      "phrase": "маркировка в 1с erp",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00911",
+      "phrase": "контур маркировка в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00915",
+      "phrase": "маркировка чз в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00916",
+      "phrase": "эмиссия кодов маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00923",
+      "phrase": "агрегация в 1с маркировка",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00924",
+      "phrase": "сбис маркировка в 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-00925",
+      "phrase": "маркировка товаров в 1с бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00928",
+      "phrase": "как проверить маркировку в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00929",
+      "phrase": "как ввести коды маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00932",
+      "phrase": "настройка маркировки в 1с ут",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00934",
+      "phrase": "передача маркировки в 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-00936",
+      "phrase": "маркировка в 1с бухгалтерия 3.0",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00940",
+      "phrase": "модуль маркировка в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00943",
+      "phrase": "маркировка в 1с управление торговлей",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00946",
+      "phrase": "маркировка в 1с ка",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00950",
+      "phrase": "маркировка в 1с ерп",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00951",
+      "phrase": "1с маркировка в производстве",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00955",
+      "phrase": "маркировка остатков в 1с ут",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00956",
+      "phrase": "маркировка честный знак в 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00957",
+      "phrase": "маркировка радиоэлектронной продукции в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00958",
+      "phrase": "маркировка честный знак в 1с ут",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00959",
+      "phrase": "маркировка в 1с розница 2.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00961",
+      "phrase": "маркировка товаров в 1с розница",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00962",
+      "phrase": "маркировка в 1с 8",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00965",
+      "phrase": "маркировка в 1с розница 3.0",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00969",
+      "phrase": "вывод из оборота кодов маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00970",
+      "phrase": "маркировка 2026 в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00973",
+      "phrase": "маркировка товаров в 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00974",
+      "phrase": "маркировка в 1с 8.3 бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-00975",
+      "phrase": "как получить коды маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00976",
+      "phrase": "в 1с маркировка моторные масла",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00978",
+      "phrase": "маркировка в 1с бух",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00981",
+      "phrase": "автоматизация маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00982",
+      "phrase": "как заказать коды маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00984",
+      "phrase": "агрегация кодов маркировки честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00986",
+      "phrase": "отключить проверку маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00990",
+      "phrase": "маркировка пива в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00994",
+      "phrase": "как добавить коды маркировки в упд 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00997",
+      "phrase": "маркировка остатков товара в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01001",
+      "phrase": "маркировка игрушек в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01002",
+      "phrase": "настройки сканирования кодов маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01006",
+      "phrase": "как внести код маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01007",
+      "phrase": "маркировка воды в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01009",
+      "phrase": "где в 1с посмотреть коды маркировки",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01011",
+      "phrase": "как подключить маркировку в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01015",
+      "phrase": "маркировка импортного товара в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01017",
+      "phrase": "где найти коды маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01023",
+      "phrase": "как коды маркировки попадают в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01025",
+      "phrase": "маркировка товаров в 1с бухгалтерия 3.0",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01026",
+      "phrase": "маркировка товара в 1с 8.3 бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01028",
+      "phrase": "как завести коды маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01029",
+      "phrase": "маркировка в 1с шины",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01031",
+      "phrase": "как добавить коды маркировки в 1с бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01033",
+      "phrase": "маркировка одежды в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01036",
+      "phrase": "маркировка в 1с упп",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01038",
+      "phrase": "маркировка в 1с через сбис",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01039",
+      "phrase": "инвентаризация кодов маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01040",
+      "phrase": "маркировка в 1с 10.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01043",
+      "phrase": "как перенести маркировку в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01044",
+      "phrase": "маркировка молочной продукции в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01046",
+      "phrase": "как повторно распечатать коды маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01053",
+      "phrase": "настройка маркировки в 1с розница 2.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01054",
+      "phrase": "проверка кода маркировки в 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01055",
+      "phrase": "маркировка и контроль в номенклатуре 1с бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01057",
+      "phrase": "маркировка остатков в 1с розница",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01058",
+      "phrase": "создание наборов в 1с кодами маркировки",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01059",
+      "phrase": "маркировка в 1с с нуля",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01061",
+      "phrase": "контроль статуса кода маркировки в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01065",
+      "phrase": "маркировка наборов в 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01066",
+      "phrase": "маркировка в 1с розница настройка номенклатуры",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01071",
+      "phrase": "как в 1с увидеть выпущенные коды маркировки",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01076",
+      "phrase": "1с бухгалтерия честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01079",
+      "phrase": "честный знак через 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01085",
+      "phrase": "1с торговля честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01088",
+      "phrase": "как работает честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01092",
+      "phrase": "настройка локального модуля честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01095",
+      "phrase": "честный знак как загрузить в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01100",
+      "phrase": "система честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01108",
+      "phrase": "1с ут 11 честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01109",
+      "phrase": "честный знак в 1с бухгалтерия 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01122",
+      "phrase": "как подключить честный знак к 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01127",
+      "phrase": "честный знак в 1с управление торговлей",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01129",
+      "phrase": "1с розница 3.0 честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01132",
+      "phrase": "установка локального модуля честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01134",
+      "phrase": "сбис честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01138",
+      "phrase": "1с ут работа с честным знаком",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01139",
+      "phrase": "настройка честного знака в 1с ут 11.5",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01145",
+      "phrase": "тс пиот честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ts_piot",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01152",
+      "phrase": "честный знак в 1с бп",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01153",
+      "phrase": "тестовый контур честный знак 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01155",
+      "phrase": "1с обработка честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01165",
+      "phrase": "1с подпись честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01173",
+      "phrase": "gtin честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01174",
+      "phrase": "как настроить интеграцию 1с и честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01176",
+      "phrase": "честный знак в 1с производство",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01178",
+      "phrase": "маркировка честный знак 1с розница",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01186",
+      "phrase": "честный знак в 1с фреш",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01189",
+      "phrase": "как интегрировать честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01191",
+      "phrase": "как завести честный знак в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01194",
+      "phrase": "локальный модуль честный знак для 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01195",
+      "phrase": "честный знак в 1с комплексная автоматизация",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01201",
+      "phrase": "честный знак егаис 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01202",
+      "phrase": "токен честный знак 1с розница",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01221",
+      "phrase": "расширение честный знак для 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01227",
+      "phrase": "1с разрешительный режим честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01228",
+      "phrase": "нужна ли 1с для честного знака",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01230",
+      "phrase": "токен для ккт честный знак 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01232",
+      "phrase": "мчд честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01235",
+      "phrase": "переменная характеристика честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01239",
+      "phrase": "тс пиот честный знак 1с розница",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ts_piot",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01242",
+      "phrase": "как в 1с отгрузить товара честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01245",
+      "phrase": "модуль 1с маркировка честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01247",
+      "phrase": "идентификатор соединения 1с честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01248",
+      "phrase": "как привязать честный знак к 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01251",
+      "phrase": "как подключить честный знак к 1с бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01256",
+      "phrase": "как синхронизировать 1с и честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01257",
+      "phrase": "токен авторизации честный знак 1с просрочен",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01259",
+      "phrase": "маркировка честный знак 1с упп",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01260",
+      "phrase": "1с честный знак одежда",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01262",
+      "phrase": "печать маркировок честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01269",
+      "phrase": "интеграция 1с с честным знаком как сделать",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "integrations",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01270",
+      "phrase": "1с wms честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01281",
+      "phrase": "41 недостаточное описание товара честный знак 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01282",
+      "phrase": "как соединить 1с и честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01285",
+      "phrase": "как подключить честный знак к 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01286",
+      "phrase": "oms connection 1с где взять честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01287",
+      "phrase": "монотоварная упаковка 1с честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01288",
+      "phrase": "система честный знак в 1с erp",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01289",
+      "phrase": "1с унф маркировка остатков честный знак",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01291",
+      "phrase": "честный знак учет в 1с унф",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01296",
+      "phrase": "1с ка 2 честный знак",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01311",
+      "phrase": "1с в конфигурации бухгалтерия включить честный знак",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01315",
+      "phrase": "печатные формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01316",
+      "phrase": "1с внешняя печатная форма",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01317",
+      "phrase": "печатные формы 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01319",
+      "phrase": "1с печатные формы документов",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01320",
+      "phrase": "печатная форма счета 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01322",
+      "phrase": "печатные формы 1с зуп",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01323",
+      "phrase": "добавить печатную форму в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01324",
+      "phrase": "внешние печатные формы 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01325",
+      "phrase": "печатная форма 1с ут",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01327",
+      "phrase": "1с вывести печатную форму",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01328",
+      "phrase": "как изменить печатную форму в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01329",
+      "phrase": "1с унф печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01331",
+      "phrase": "создание печатной формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01333",
+      "phrase": "1с программно печатную форму",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01338",
+      "phrase": "обработки печатная форма 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01339",
+      "phrase": "печатная форма отчета 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01344",
+      "phrase": "1с печатная форма счет на оплату",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01348",
+      "phrase": "макет печатной формы в 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01351",
+      "phrase": "1с erp печатные формы",
+      "review_reason": "Generic ERP platform ambiguity",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01354",
+      "phrase": "вывод печатных форм 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01360",
+      "phrase": "1с как убрать печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01364",
+      "phrase": "печатная форма счета 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01365",
+      "phrase": "1с сформировать печатную форму",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01366",
+      "phrase": "1с макеты печатных форм изменить",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01368",
+      "phrase": "печатная форма документа 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01370",
+      "phrase": "1с внешняя печатная форма обработки",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01371",
+      "phrase": "1с ерп печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01372",
+      "phrase": "1с дополнительные печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01374",
+      "phrase": "1с печатная форма счет фактура",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01377",
+      "phrase": "1с печатная форма заказа",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01381",
+      "phrase": "1с 8.3 зуп печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01382",
+      "phrase": "1с бсп печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01383",
+      "phrase": "печатная форма накладной 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01384",
+      "phrase": "печатная форма 1с 8.3 создание",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01387",
+      "phrase": "печатные формы расширение 1с",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01389",
+      "phrase": "поля в печатной форме 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01390",
+      "phrase": "печатная форма 1с 7.7",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01392",
+      "phrase": "1с формирование печатных форм",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01398",
+      "phrase": "1с редактировать печатную форму",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01399",
+      "phrase": "1с изменить печатную форму счета",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01400",
+      "phrase": "печатные формы в 1с 8.3 бухгалтерия",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01402",
+      "phrase": "1с зуп внешняя печатная форма",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01405",
+      "phrase": "типовые печатные формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01406",
+      "phrase": "печатные формы 1с ут 11",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01407",
+      "phrase": "формат печатной формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01408",
+      "phrase": "1с добавить печатную форму в документ",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01409",
+      "phrase": "1с внешняя печатная форма макет",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01414",
+      "phrase": "артикул в печатных формах 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01415",
+      "phrase": "как поменять печатную форму в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01416",
+      "phrase": "1с бп внешняя печатная форма",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01425",
+      "phrase": "1с вывести печатную форму документа",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01426",
+      "phrase": "подключаемые печатные формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01431",
+      "phrase": "1с макет печатных форм параметры",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01436",
+      "phrase": "1с бп печатная форма упд",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01437",
+      "phrase": "1с открыть печатную форму",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01438",
+      "phrase": "сумма в печатной форме 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01444",
+      "phrase": "1с бухгалтерия внешние печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01445",
+      "phrase": "1с внешние печатные формы word",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01446",
+      "phrase": "печатная форма 1с ворд",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01447",
+      "phrase": "префикс печатных форм в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01449",
+      "phrase": "создать печатную форму в 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01452",
+      "phrase": "печать внешней печатной формы 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01458",
+      "phrase": "внешняя печатная форма 1с 8.3 документа",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01459",
+      "phrase": "1с зуп печатная форма трудового договора",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01467",
+      "phrase": "1с внешняя печатная форма договор",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01468",
+      "phrase": "1с 8 внешние печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01469",
+      "phrase": "1с печатная форма заполнение",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01472",
+      "phrase": "1с печатная форма документа программно",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01474",
+      "phrase": "внешняя печатная форма 1с бп 3.0",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01475",
+      "phrase": "1с документооборот печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01477",
+      "phrase": "комплект печатных форм 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01479",
+      "phrase": "настройка печатной формы 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01484",
+      "phrase": "стандартные печатные формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01485",
+      "phrase": "печатная форма загрузить в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01486",
+      "phrase": "отладка печатных форм 1с 8.3",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01491",
+      "phrase": "1с 8.3 изменить печатную форму счета",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01493",
+      "phrase": "основная печатная форма 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01498",
+      "phrase": "1с коллекция печатных форм",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01503",
+      "phrase": "внешняя печатная форма 1с 7.7",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01507",
+      "phrase": "печатная форма обработки 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01511",
+      "phrase": "1с предприятие 8.3 печатные формы",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01514",
+      "phrase": "1с 7 печатные формы",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01516",
+      "phrase": "1с зуп 3.1 печатные формы",
+      "review_reason": "Retried malformed output — verify structured response",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01517",
+      "phrase": "печатная форма договор счет 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01527",
+      "phrase": "1с внешняя печатная форма справочника",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01531",
+      "phrase": "1с работа с печатными формами",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01535",
+      "phrase": "название печатной формы 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01536",
+      "phrase": "печатная форма счета 1с 8",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01537",
+      "phrase": "печатная форма упд в 1с изменить",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01539",
+      "phrase": "1с 8.3 сформировать печатную форму",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=REJECT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01542",
+      "phrase": "1с печатная форма ттн",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ACCEPT",
+      "model_verdict": "ACCEPT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01551",
+      "phrase": "1с печатная форма на клиенте",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01557",
+      "phrase": "вывести печатную форму 1с 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01559",
+      "phrase": "печатная форма этикетки 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01657",
+      "phrase": "1с erp внешние печатные формы",
+      "review_reason": "Generic ERP platform ambiguity",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE"
+    },
+    {
+      "phrase_id": "CR2-PHR-01688",
+      "phrase": "1с печатная форма через макет",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ambiguous_mixed_intent",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ACCEPT; reassessment=ABSTAIN"
+    },
+    {
+      "phrase_id": "CR2-PHR-01713",
+      "phrase": "1с 8.3 внешние печатные формы пример",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "informational_self_service",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-02107",
+      "phrase": "синхронизация данных в 1с бухгалтерия 8.3",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "integrations",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-02132",
+      "phrase": "настройка синхронизации через ftp в 1с",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "integrations",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-02228",
+      "phrase": "1с наименование этой информационной базы для синхронизации",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "integrations",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-02239",
+      "phrase": "программа 1с не работает",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "problem_troubleshooting",
+      "final_verdict": "ABSTAIN",
+      "model_verdict": "ABSTAIN",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-02277",
+      "phrase": "маркировка автозапчастей честный",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "marking_chestny_znak",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-02331",
+      "phrase": "1с тс пиот сертификация",
+      "review_reason": "Primary/reassessment disagreement",
+      "primary_family": "ts_piot",
+      "final_verdict": "REJECT",
+      "model_verdict": "REJECT",
+      "review_state": "REVIEW_QUEUE",
+      "disagreement_reason": "primary=ABSTAIN; reassessment=REJECT"
+    }
+  ],
+  "created_at": "2026-06-28T13:58:40.445Z"
+}

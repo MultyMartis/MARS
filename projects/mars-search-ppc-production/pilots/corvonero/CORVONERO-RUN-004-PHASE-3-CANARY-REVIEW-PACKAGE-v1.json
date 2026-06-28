@@ -1,0 +1,376 @@
+{
+  "package_id": "corvonero-run-004-phase-3-canary-review-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "canary_verdict": "FAILED",
+  "lifecycle_state": "BLOCKED_AT_PHASE_3_CANARY",
+  "processed_count": 120,
+  "manifest_id": "corvonero-run-004-phase-3-canary-selection-v1",
+  "family_counts": {
+    "direct_commercial_1c_service": 20,
+    "informational_self_service": 12,
+    "generic_erp_platform_ambiguity": 8,
+    "careers_training_education": 8,
+    "product_license_version": 12,
+    "geography_modified": 10,
+    "ambiguous_mixed_intent": 12,
+    "integrations": 10,
+    "marking_chestny_znak": 8,
+    "problem_troubleshooting": 15,
+    "ts_piot": 5
+  },
+  "verdict_distribution": {
+    "ACCEPT": 32,
+    "REJECT": 59,
+    "ABSTAIN": 29
+  },
+  "metrics": {
+    "schema_valid_percentage": 100,
+    "retry_count": 0,
+    "model_error_count": 2,
+    "confirmation_disagreement_rate": 0.1,
+    "reassessment_disagreement_rate": 0.1,
+    "adjudication_rate": 0.1,
+    "invariant_application_rate": 0,
+    "operator_review_rate": 0.6333333333333333,
+    "pre_authorized_false_accepts": 0,
+    "pre_authorized_false_rejects": 12
+  },
+  "cost": {
+    "canary_cost_usd": 0.0850596,
+    "cumulative_cost_usd": 0.7703344999999999,
+    "input_tokens": 299068,
+    "output_tokens": 66999
+  },
+  "psr_amb_01": {
+    "policy": "KNOWN NON-BLOCKING AMBIGUITY — MUST BE INCLUDED AND MONITORED",
+    "family_size": 3,
+    "accepted_count": 1,
+    "accepted_ids": [
+      "CR2-PHR-00756"
+    ],
+    "expands_false_accept_family": false
+  },
+  "pre_authorized_evaluation": {
+    "total": 50,
+    "false_accepts": [],
+    "false_rejects": [
+      {
+        "id": "CR2-PHR-00013",
+        "phrase": "собеседование 1с программиста"
+      },
+      {
+        "id": "CR2-PHR-00017",
+        "phrase": "вопрос программисту 1с"
+      },
+      {
+        "id": "CR2-PHR-00019",
+        "phrase": "программист разработчик 1с"
+      },
+      {
+        "id": "CR2-PHR-00044",
+        "phrase": "как стать программистом 1с"
+      },
+      {
+        "id": "CR2-PHR-00167",
+        "phrase": "бухгалтерия для программиста 1с"
+      },
+      {
+        "id": "CR2-PHR-00203",
+        "phrase": "пример тз для программиста 1с"
+      },
+      {
+        "id": "CR2-PHR-00264",
+        "phrase": "ironskills программист 1с"
+      },
+      {
+        "id": "CR2-PHR-00331",
+        "phrase": "программист 1с дмитрий"
+      },
+      {
+        "id": "CR2-PHR-00376",
+        "phrase": "1с клуб программистов и робототехники кострома"
+      },
+      {
+        "id": "CR2-PHR-00381",
+        "phrase": "skillbox 1с программист"
+      },
+      {
+        "id": "CR2-PHR-00406",
+        "phrase": "1с программист быстрый старт"
+      },
+      {
+        "id": "CR2-PHR-00515",
+        "phrase": "что должен уметь программист 1с"
+      }
+    ],
+    "wrong_abstains": [
+      {
+        "id": "CR2-PHR-00636",
+        "phrase": "сопровождение 1с erp",
+        "got": "ACCEPT"
+      },
+      {
+        "id": "CR2-PHR-00752",
+        "phrase": "техническое задание на сопровождение 1с erp",
+        "got": "ACCEPT"
+      }
+    ]
+  },
+  "error_families": [
+    {
+      "family": "platform_mismatch",
+      "affected_ids": [],
+      "count": 0,
+      "examples": [],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "generic_erp_ambiguity",
+      "affected_ids": [
+        "CR2-PHR-00100",
+        "CR2-PHR-00636",
+        "CR2-PHR-00752",
+        "CR2-PHR-00863",
+        "CR2-PHR-01351",
+        "CR2-PHR-02006",
+        "CR2-PHR-02179",
+        "CR2-PHR-02333"
+      ],
+      "count": 8,
+      "examples": [
+        "erp программиста 1с",
+        "сопровождение 1с erp"
+      ],
+      "unexpected_count": 2,
+      "severity": "non_blocking_review",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "product_license_vs_service",
+      "affected_ids": [
+        "CR2-PHR-00343",
+        "CR2-PHR-01244",
+        "CR2-PHR-01337",
+        "CR2-PHR-01362",
+        "CR2-PHR-01457",
+        "CR2-PHR-01501",
+        "CR2-PHR-01553",
+        "CR2-PHR-01563",
+        "CR2-PHR-01636",
+        "CR2-PHR-01803",
+        "CR2-PHR-01849",
+        "CR2-PHR-02344"
+      ],
+      "count": 12,
+      "examples": [
+        "лицензия программиста 1с",
+        "локальный модуль честный знак 1с скачать"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "product_plus_service_bundles",
+      "affected_ids": [
+        "CR2-PHR-00343",
+        "CR2-PHR-00756",
+        "CR2-PHR-01629"
+      ],
+      "count": 3,
+      "examples": [
+        "лицензия программиста 1с",
+        "услуги сопровождение 1с систем купить"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "informational_self_service",
+      "affected_ids": [
+        "CR2-PHR-00063",
+        "CR2-PHR-00127",
+        "CR2-PHR-00145",
+        "CR2-PHR-00191",
+        "CR2-PHR-00199",
+        "CR2-PHR-00271",
+        "CR2-PHR-00288",
+        "CR2-PHR-01342",
+        "CR2-PHR-01541",
+        "CR2-PHR-01641",
+        "CR2-PHR-01763",
+        "CR2-PHR-01799"
+      ],
+      "count": 12,
+      "examples": [
+        "форум 1с программистов",
+        "инструкция программиста 1с"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "ambiguous_diy_problems",
+      "affected_ids": [],
+      "count": 0,
+      "examples": [],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "direct_problem_demand",
+      "affected_ids": [
+        "CR2-PHR-01487",
+        "CR2-PHR-01742",
+        "CR2-PHR-01877",
+        "CR2-PHR-01973",
+        "CR2-PHR-02053",
+        "CR2-PHR-02153",
+        "CR2-PHR-02160",
+        "CR2-PHR-02165",
+        "CR2-PHR-02190",
+        "CR2-PHR-02192",
+        "CR2-PHR-02220",
+        "CR2-PHR-02223",
+        "CR2-PHR-02235",
+        "CR2-PHR-02239",
+        "CR2-PHR-02240"
+      ],
+      "count": 15,
+      "examples": [
+        "как в 1с исправить печатную форму",
+        "1с ошибка печатная форма недоступна"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "integrations",
+      "affected_ids": [
+        "CR2-PHR-00844",
+        "CR2-PHR-00860",
+        "CR2-PHR-01878",
+        "CR2-PHR-01974",
+        "CR2-PHR-02094",
+        "CR2-PHR-02099",
+        "CR2-PHR-02101",
+        "CR2-PHR-02104",
+        "CR2-PHR-02177",
+        "CR2-PHR-02228"
+      ],
+      "count": 10,
+      "examples": [
+        "управление сайтом интеграция с 1с",
+        "настройка интеграции 1с и битрикс"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "marking_chestny_znak",
+      "affected_ids": [
+        "CR2-PHR-00983",
+        "CR2-PHR-01018",
+        "CR2-PHR-01020",
+        "CR2-PHR-01030",
+        "CR2-PHR-01108",
+        "CR2-PHR-01152",
+        "CR2-PHR-01156",
+        "CR2-PHR-01308"
+      ],
+      "count": 8,
+      "examples": [
+        "маркировка в 1с комплексная автоматизация",
+        "как удалить маркировку в 1с"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "ts_piot",
+      "affected_ids": [
+        "CR2-PHR-02303",
+        "CR2-PHR-02304",
+        "CR2-PHR-02336",
+        "CR2-PHR-02340",
+        "CR2-PHR-02354"
+      ],
+      "count": 5,
+      "examples": [
+        "тс пиот установка 1с",
+        "настройка тс пиот в 1с розница 2.3"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "careers_training",
+      "affected_ids": [
+        "CR2-PHR-00216",
+        "CR2-PHR-00362",
+        "CR2-PHR-00377",
+        "CR2-PHR-00392",
+        "CR2-PHR-00399",
+        "CR2-PHR-00494",
+        "CR2-PHR-00510",
+        "CR2-PHR-00540"
+      ],
+      "count": 8,
+      "examples": [
+        "программист 1с вакансии владивосток",
+        "работа стажером программистом 1с"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    },
+    {
+      "family": "geography",
+      "affected_ids": [
+        "CR2-PHR-00059",
+        "CR2-PHR-00086",
+        "CR2-PHR-00216",
+        "CR2-PHR-00377",
+        "CR2-PHR-00387",
+        "CR2-PHR-00399",
+        "CR2-PHR-00422",
+        "CR2-PHR-00426",
+        "CR2-PHR-00451",
+        "CR2-PHR-00494",
+        "CR2-PHR-00538",
+        "CR2-PHR-00553",
+        "CR2-PHR-00618",
+        "CR2-PHR-00745",
+        "CR2-PHR-00754",
+        "CR2-PHR-00763"
+      ],
+      "count": 16,
+      "examples": [
+        "1с программист красноярск",
+        "1с программисты ростов"
+      ],
+      "unexpected_count": 0,
+      "severity": "none",
+      "recommendation": "Monitor — no broad pattern detected"
+    }
+  ],
+  "operator_review_required": true,
+  "full_corpus_authorized": false,
+  "project_counters": {
+    "canonical_corpus_total": 2368,
+    "canary_selected": 120,
+    "canary_processed": 120,
+    "full_production_processed": 0,
+    "unique_run004_assessed": 120
+  },
+  "completed_at": "2026-06-27T21:39:33.870Z"
+}

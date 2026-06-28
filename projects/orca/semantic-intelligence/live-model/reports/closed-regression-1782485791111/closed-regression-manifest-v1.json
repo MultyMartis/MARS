@@ -1,0 +1,16 @@
+{
+  "run_id": "closed-regression-1782485791111",
+  "regression_mode": true,
+  "prompt_version": "orca-semantic-assessment-prompt-v1.4",
+  "adjudicator_version": "v1.5",
+  "secret_summary": {
+    "OPENROUTER_API_KEY": "SET",
+    "ORCA_SEMANTIC_PROVIDER": "openrouter",
+    "ORCA_SEMANTIC_MODEL": "openai/gpt-5-mini",
+    "ORCA_EVAL_LIVE": "enabled",
+    "ORCA_EVAL_MAX_COST": "10",
+    "ORCA_EVAL_MAX_RECORDS": "665",
+    "ORCA_EVAL_BATCH_SIZE": "10",
+    "ORCA_EVAL_CONCURRENCY": "2"
+  }
+}

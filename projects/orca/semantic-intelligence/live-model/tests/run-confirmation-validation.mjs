@@ -89,7 +89,7 @@ async function evaluateRecord(record, context, adapter, controls) {
   if (!primary.ok) return { record_id: record.record_id, error: primary.blocker, stratum: record.stratum };
   trackUsage(primary.output?.model_metadata);
   const det = assessDeterministic(createAssessorContext(phrase, context));
-  const hardRules = applyHardRules(phrase, det);
+  const hardRules = applyHardRules(phrase, det, context);
   const secondary = await runIndependentReassessment({
     phrase, ...context, primaryAdapter: adapter, secondaryAdapter: adapter,
     hardRuleEvidence: hardRules, primaryDecision: undefined, primaryRationale: undefined, expectedLabel: undefined,
@@ -100,6 +100,7 @@ async function evaluateRecord(record, context, adapter, controls) {
     assessmentB: secondary.ok ? secondary.output : null,
     hardRuleEvidence: hardRules,
     serviceRegistry: context.serviceRegistry,
+    businessScope: context.businessScope,
     phrase,
   });
   cost.records_processed++;

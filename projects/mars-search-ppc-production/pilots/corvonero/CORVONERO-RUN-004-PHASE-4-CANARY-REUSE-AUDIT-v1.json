@@ -1,0 +1,3024 @@
+{
+  "audit_id": "corvonero-run-004-phase-4-canary-reuse-audit-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "created_at": "2026-06-28T13:54:18.274Z",
+  "corpus_sha256_prefix": "eaa09b8450f82738",
+  "orca_hashes": {
+    "semantic_adjudicator": "9618364947ba812c85f3fedbda99c1669db4d47fc58ec9d3996fc436b58bf341",
+    "platform_compatibility": "49b8c4d604ee732f4cfaeb0e07b99166133f4932533562aae7454171c99fc7ea",
+    "hard_rules": "e6cd74ccca6ed453138f003d56f872e8a727e41bba04703589bd42c6f218c678",
+    "prompt_contract": "481075e55a8274047124b24d42293d616e37f57a129563e9f15f034034496e53",
+    "service_intent_evidence": "5bfff7ae2ed3b854ea613011797a91e35ab15804c10c8859c8ec667bd32f7d9f"
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "attempt2_receipt_reference": "present",
+  "canary_selection_count": 120,
+  "canary_result_count": 120,
+  "reusable_count": 120,
+  "reprocess_count": 0,
+  "expected_reusable_maximum": 120,
+  "expected_remaining_minimum": 2248,
+  "records": [
+    {
+      "phrase_id": "CR2-PHR-00046",
+      "phrase": "курсы программист 1с с нуля",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00051",
+      "phrase": "что делает программист 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00069",
+      "phrase": "вакансия программист 1с работа",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00073",
+      "phrase": "программисты 1с новосибирск",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00086",
+      "phrase": "1с программисты ростов",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00100",
+      "phrase": "erp программиста 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00126",
+      "phrase": "программисты 1с челябинск",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00136",
+      "phrase": "программисты 1с воронеж",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00145",
+      "phrase": "должностная инструкция программиста 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00165",
+      "phrase": "программист 1с настройка",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00166",
+      "phrase": "омск программисты 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00183",
+      "phrase": "программист 1с рязань",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00191",
+      "phrase": "1с программист самостоятельно",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00200",
+      "phrase": "что нужно знать программисту 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00221",
+      "phrase": "1с программист разработка и автоматизация",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00230",
+      "phrase": "программисты 1с волгоград",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00234",
+      "phrase": "программист 1с уфа",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00239",
+      "phrase": "насколько востребованы программисты 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00340",
+      "phrase": "пример технического задания для программиста 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00353",
+      "phrase": "обучиться на программиста 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-01",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00362",
+      "phrase": "работа стажером программистом 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00372",
+      "phrase": "программист 1с джуниор вакансии",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00373",
+      "phrase": "программист 1с найти специалиста",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00436",
+      "phrase": "вакансии в аккредитованных компаниях программист стажер 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00441",
+      "phrase": "программист 1с торрент скачать",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00445",
+      "phrase": "техзадание для программиста 1с пример",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00476",
+      "phrase": "программист 1с унф",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00478",
+      "phrase": "1с программист вакансии в ульяновске",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00486",
+      "phrase": "1с программист быстрый старт в профессию",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00515",
+      "phrase": "что должен уметь программист 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00530",
+      "phrase": "нужен программист 1с для доработок",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00553",
+      "phrase": "программист 1с обучение с нуля курсы спб",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00580",
+      "phrase": "программист 1с комендантский проспект спб",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00591",
+      "phrase": "услуги по сопровождению 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00612",
+      "phrase": "сопровождение 1с екатеринбург",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00618",
+      "phrase": "центр сопровождения 1с екатеринбург",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00626",
+      "phrase": "асп сопровождение 1с екатеринбург",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00629",
+      "phrase": "асп центр сопровождения 1с екатеринбург",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00631",
+      "phrase": "сопровождение 1с стоимость",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00636",
+      "phrase": "сопровождение 1с erp",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-02",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00650",
+      "phrase": "услуги по сопровождению 1с 8",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00654",
+      "phrase": "сопровождение программы 1с предприятие",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00657",
+      "phrase": "окпд услуги по сопровождению 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00663",
+      "phrase": "услуги по техническому сопровождению 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00669",
+      "phrase": "услуги по сопровождению 1с окпд 2",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00687",
+      "phrase": "информационно технологическое сопровождение 1с договор",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00698",
+      "phrase": "услуги по информационно технологическому сопровождению 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00708",
+      "phrase": "сколько стоит сопровождение 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00729",
+      "phrase": "стоимость услуг 1с сопровождения",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00731",
+      "phrase": "внедрение и сопровождение продуктов 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00742",
+      "phrase": "1с сопровождение москва",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00745",
+      "phrase": "сопровождение 1с ростов",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00746",
+      "phrase": "сопровождение 1с предприятие 8.3 цена",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00752",
+      "phrase": "техническое задание на сопровождение 1с erp",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00754",
+      "phrase": "сопровождение и поддержка 1с в красноярске",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00763",
+      "phrase": "сопровождение 1с новосибирск",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00770",
+      "phrase": "примеры доработки 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00771",
+      "phrase": "доработки программы 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00778",
+      "phrase": "доработки 1с erp",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00856",
+      "phrase": "1с унф битрикс интеграция",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-03",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00912",
+      "phrase": "учет маркировки в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00932",
+      "phrase": "настройка маркировки в 1с ут",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00943",
+      "phrase": "маркировка в 1с управление торговлей",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00958",
+      "phrase": "маркировка честный знак в 1с ут",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00962",
+      "phrase": "маркировка в 1с 8",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-00991",
+      "phrase": "настройка маркировки в 1с ут 11.5",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01163",
+      "phrase": "настройка обмена суз 1с честный знак",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01171",
+      "phrase": "объемно сортовой учет честный знак в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01252",
+      "phrase": "настройка локального модуля честный знак 1с ут",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01329",
+      "phrase": "1с унф печатные формы",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01341",
+      "phrase": "настройка печатных форм в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01351",
+      "phrase": "1с erp печатные формы",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01389",
+      "phrase": "поля в печатной форме 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01404",
+      "phrase": "1с печатная форма пример",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01410",
+      "phrase": "печатная форма справочника 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01416",
+      "phrase": "1с бп внешняя печатная форма",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01431",
+      "phrase": "1с макет печатных форм параметры",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01487",
+      "phrase": "как в 1с исправить печатную форму",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01509",
+      "phrase": "1с внешняя печатная форма пример",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01544",
+      "phrase": "добавить реквизит в печатную форму 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-04",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01637",
+      "phrase": "1с бухгалтерия макеты печатных форм",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01640",
+      "phrase": "1с внешняя печатная форма открыть форму",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01657",
+      "phrase": "1с erp внешние печатные формы",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01688",
+      "phrase": "1с печатная форма через макет",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01713",
+      "phrase": "1с 8.3 внешние печатные формы пример",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01742",
+      "phrase": "1с ошибка печатная форма недоступна",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01763",
+      "phrase": "создание печатных форм 1с инструкция",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01799",
+      "phrase": "как обновить печатную форму упд в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01834",
+      "phrase": "подключение внешней печатной формы в 1с 8.3",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01873",
+      "phrase": "1с синхронизация зуп бп",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01877",
+      "phrase": "ошибки синхронизации 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01885",
+      "phrase": "1с настройка синхронизации данных",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01905",
+      "phrase": "настройка синхронизации 1с зуп и бп",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01951",
+      "phrase": "1с расписание синхронизации",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-01973",
+      "phrase": "1с ошибка синхронизации данных",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02053",
+      "phrase": "ошибка синхронизации 1с 8.3",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02107",
+      "phrase": "синхронизация данных в 1с бухгалтерия 8.3",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02132",
+      "phrase": "настройка синхронизации через ftp в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02136",
+      "phrase": "1с мобильная касса синхронизация с 1с розница",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02150",
+      "phrase": "синхронизация 1с fresh",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-05",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02153",
+      "phrase": "не работает синхронизация 1с 8.3",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02160",
+      "phrase": "ошибка при настройке синхронизации 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02165",
+      "phrase": "1с синхронизация ошибка доступа к файлу",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02177",
+      "phrase": "экватор синхронизация с 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "raw-responses/attempt2",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02190",
+      "phrase": "почему не работает синхронизация в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02192",
+      "phrase": "после обновления 1с не работает синхронизация",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02210",
+      "phrase": "1с синхронизация через локальный каталог",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02220",
+      "phrase": "1с ошибка синхронизация недоступна для использования",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02223",
+      "phrase": "ошибка доступа к локальному файлу 1с синхронизация",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02228",
+      "phrase": "1с наименование этой информационной базы для синхронизации",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02235",
+      "phrase": "1с ошибка формата потока при синхронизации",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02239",
+      "phrase": "программа 1с не работает",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02240",
+      "phrase": "почему не работает программа 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02268",
+      "phrase": "что такое sgtin в маркировке лекарств",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02277",
+      "phrase": "маркировка автозапчастей честный",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "raw-responses/attempt2",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02315",
+      "phrase": "настройка тс пиот в 1с ут 11.5",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ACCEPT",
+        "primary_verdict": "ACCEPT",
+        "reassessment_verdict": "ACCEPT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02324",
+      "phrase": "тс пиот как установить в 1с",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "REJECT",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02331",
+      "phrase": "1с тс пиот сертификация",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "raw-responses/attempt2",
+      "canary_outcome": {
+        "final_verdict": "REJECT",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "REJECT",
+        "confirmation_disagreement": true
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02338",
+      "phrase": "1с встроенный тс пиот",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    },
+    {
+      "phrase_id": "CR2-PHR-02354",
+      "phrase": "1с не видит тс пиот",
+      "reuse_status": "PRODUCTION_ELIGIBLE_CANARY_RESULT",
+      "checks": {
+        "phrase_id_in_corpus": true,
+        "phrase_text_match": true,
+        "corpus_checksum_match": true,
+        "orca_hashes_match": true,
+        "provider_model_match": true,
+        "schema_valid": true,
+        "final_verdict_exists": true,
+        "no_malformed_unresolved": true,
+        "no_duplicate_id": true,
+        "receipt_trace_exists": true,
+        "attempt2_completion_receipt_exists": true
+      },
+      "receipt_reference": "batches/canary-attempt2-batch-06",
+      "canary_outcome": {
+        "final_verdict": "ABSTAIN",
+        "primary_verdict": "ABSTAIN",
+        "reassessment_verdict": "ABSTAIN",
+        "confirmation_disagreement": false
+      }
+    }
+  ],
+  "verdict": "PASS"
+}

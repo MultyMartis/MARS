@@ -1,0 +1,70 @@
+{
+  "declaration_id": "corvonero-old-run-non-resumable-v1",
+  "schema_version": "1.0.0",
+  "status": "OLD_CORVONERO_RUN_NON_RESUMABLE",
+  "project": {
+    "client": "Корво Неро",
+    "project_ref": "PRJ-0013",
+    "workspace_id": "corvonero-direct-v2-clean-room"
+  },
+  "old_run": {
+    "run_identity": "corvonero-direct-v2-clean-room-v1-diagnostic",
+    "brain_version": "clean-room-v1-diagnostic-only",
+    "orca_admission_ref": "1fcf3d2-diagnostic-only",
+    "failed_stage": "SPPC-05",
+    "failure_evidence": {
+      "false_accepts_approx": 1892,
+      "unique_phrases_basis": 2370,
+      "failure_mode": "Topical/service-scope relevance treated as sufficient for commercial admission",
+      "manifest_path": "projects/orca/projects/corvonero-direct-v2-clean-room/state/project-ppc-state-manifest-v1.json",
+      "pipeline_summary": "projects/orca/projects/corvonero-direct-v2-clean-room/artifacts/pipeline-run-summary-v1.json"
+    },
+    "freeze_date": "2026-06-22",
+    "operator_decisions": ["D2", "D7"]
+  },
+  "non_resume_reasons": [
+    "SPPC-05 admission gate failed with mass false accepts",
+    "Diagnostic v1 semantic decisions are forensic evidence only",
+    "Operator D2 prohibits manual cleanup/promotion of v1 decisions",
+    "Wave 3.1F supersedes v1 admission brain",
+    "New run requires fresh run ID, lock, checkpoint, and operator charter"
+  ],
+  "forbidden_reuse": [
+    "old run ID",
+    "old PID",
+    "old lock",
+    "old checkpoint",
+    "old cache identity",
+    "v1 intent screening decisions",
+    "v1 commercial eligibility decisions",
+    "v1 phrase-to-service mapping",
+    "v1 cluster candidates",
+    "v1 negative candidates",
+    "v1 semantic core candidate",
+    "resume old clean-room v1 state"
+  ],
+  "reusable_input_artefacts": [
+    "RAW Wordstat XLSX (STORAGE)",
+    "wordstat-pass-a-normalized.json (2399)",
+    "corvonero-canonical-phrase-registry-v1.json (2368)",
+    "MIG handoff pack",
+    "Research Pack",
+    "demand surface",
+    "keyword registry",
+    "SERP evidence",
+    "business intake",
+    "service scope",
+    "ORCA Wave 3.1F brain",
+    "deep research v1"
+  ],
+  "forensic_artefacts": [
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-commercial-eligibility-v1.json",
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-intent-screening-v1.json",
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-direct-semantic-core-candidate-v1.json",
+    "projects/orca/projects/corvonero-direct-v2-clean-room/artifacts/pipeline-run-summary-v1.json",
+    "projects/mars-search-ppc-production/runtime/receipts/orca/sppc-receipt-2026-06-23T02-39-37-582Z-eb245205.json"
+  ],
+  "authority": "projects/orca/projects/corvonero-direct-v2-clean-room/PROJECT.md",
+  "operator_approval_required": true,
+  "next_permitted_action": "Approve new controlled semantic run charter — do not resume old run"
+}

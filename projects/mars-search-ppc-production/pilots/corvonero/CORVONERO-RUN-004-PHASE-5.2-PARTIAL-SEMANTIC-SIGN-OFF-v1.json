@@ -1,0 +1,73 @@
+{
+  "sign_off_id": "corvonero-run-004-phase-52-partial-semantic-sign-off-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "phase": "5.2",
+  "phase_verdict": "PASS",
+  "partial_semantic_authority": "OPERATOR APPROVED",
+  "project_lifecycle": "READY_FOR_PARTIAL_CAMPAIGN_PLANNING",
+  "campaign_architecture": "NOT STARTED",
+  "provider_calls": "FROZEN",
+  "assessed_records": 1599,
+  "unprocessed_records": 769,
+  "canonical_total": 2368,
+  "partial_coverage_pct": 67.5,
+  "operator_decisions_applied": 47,
+  "operator_decision_breakdown": {
+    "ACCEPT": 10,
+    "REJECT": 10,
+    "ABSTAIN": 27
+  },
+  "verdict_distribution": {
+    "phase4": {
+      "ACCEPT": 529,
+      "REJECT": 762,
+      "ABSTAIN": 308
+    },
+    "phase5": {
+      "ACCEPT": 531,
+      "REJECT": 578,
+      "ABSTAIN": 490
+    },
+    "phase51": {
+      "ACCEPT": 926,
+      "REJECT": 358,
+      "ABSTAIN": 315
+    },
+    "phase52_final": {
+      "ACCEPT": 935,
+      "REJECT": 368,
+      "ABSTAIN": 296
+    }
+  },
+  "verdict_transitions": {
+    "unchanged": 28,
+    "changed": 19,
+    "by_from": {
+      "ABSTAIN_TO_ACCEPT": 9,
+      "ABSTAIN_TO_REJECT": 10
+    }
+  },
+  "integrity": {
+    "pass": true,
+    "unique_ids": 1599,
+    "duplicates": 0,
+    "missing_assessed_ids": 0,
+    "unprocessed_ids": 769,
+    "overlap": 0,
+    "union": 2368,
+    "final_counts": {
+      "ACCEPT": 935,
+      "REJECT": 368,
+      "ABSTAIN": 296
+    },
+    "phase51_counts": {
+      "ACCEPT": 926,
+      "REJECT": 358,
+      "ABSTAIN": 315
+    }
+  },
+  "remaining_blocking_flags": [],
+  "remaining_non_blocking_flags_count": 349,
+  "next_gate": "OPERATOR REVIEW OF FINAL PARTIAL SEMANTIC SIGN-OFF",
+  "created_at": "2026-06-28T15:45:09.053Z"
+}

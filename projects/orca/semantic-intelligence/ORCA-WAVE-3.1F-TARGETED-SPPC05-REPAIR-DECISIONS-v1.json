@@ -1,0 +1,91 @@
+{
+  "repair_id": "ORCA-WAVE-3.1F-TARGETED-SPPC05-REPAIR-v1",
+  "verdict": "PASS",
+  "orca_wave": "3.1F",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.4",
+  "adjudicator_version": "v1.4",
+  "hard_rules_version": "v1.1",
+  "service_intent_evidence_version": "v1.1",
+  "platform_compatibility_version": "v1.0",
+  "failed_run_preserved": "corv-semantic-v2-20260626-002",
+  "next_run_id_not_authorized": "corv-semantic-v2-20260626-003",
+  "defects_repaired": [
+    {
+      "id": "CFM-PROD-UPD-02",
+      "class": "foreign_erp_product_version_update",
+      "expected": "REJECT",
+      "repair_layers": [
+        "service-intent-evidence product_version_update signal",
+        "hard-rules product_version_update_hard_rule",
+        "adjudicator product_version_update_reject guard",
+        "prompt-contract rule 23 platform/product maintenance"
+      ]
+    },
+    {
+      "id": "PQR-ABSTAIN-03",
+      "class": "ambiguous_diy_technical_error",
+      "expected": "ABSTAIN",
+      "repair_layers": [
+        "service-intent-evidence ambiguous_diy_problem + DIY-framed error split",
+        "hard-rules ambiguous_diy_problem_abstain_rule",
+        "adjudicator hard_rule_override preservation on SINGLE_ASSESSOR",
+        "prompt-contract rule 24 ambiguous DIY problem abstain"
+      ]
+    }
+  ],
+  "modified_production_files": [
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/contracts/prompt-contract.mjs",
+      "previous_hash": "HEAD-v1.3",
+      "new_hash": "8d886f51a7da6909df0a34d5caf57a9dd0237a8e",
+      "rationale": "Clarify product version maintenance vs service update; ambiguous DIY error abstain",
+      "false_positive_risk": "low",
+      "false_negative_risk": "low-medium on borderline update phrasing"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/evidence/service-intent-evidence.mjs",
+      "previous_hash": "HEAD-v1.0",
+      "new_hash": "58c06e2912228073c23588fb999f6c1cda9a0ed4",
+      "rationale": "Semantic classes: product_version_update, ambiguous_diy_problem, direct commercial error split",
+      "false_positive_risk": "low",
+      "false_negative_risk": "low"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/evidence/platform-compatibility.mjs",
+      "previous_hash": null,
+      "new_hash": "new file",
+      "rationale": "Project-independent platform vs approved-scope compatibility",
+      "false_positive_risk": "low",
+      "false_negative_risk": "low"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/production/assessors/hard-rules.mjs",
+      "previous_hash": "HEAD-v1.0",
+      "new_hash": "d5b6d5b99292b7217f0f457c0297de55332c18cb",
+      "rationale": "Enforce product version update reject and ambiguous DIY abstain",
+      "false_positive_risk": "low",
+      "false_negative_risk": "low"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/adjudication/semantic-adjudicator.mjs",
+      "previous_hash": "2f3aaa26f75b0abe1b98fbb5420a71240695ff92",
+      "new_hash": "76a30867a4bdf91dab243bd046abde7a2c9f2218",
+      "rationale": "Respect hard-rule overrides; block product version ACCEPT; DIY ambiguous downgrade",
+      "false_positive_risk": "low",
+      "false_negative_risk": "low"
+    }
+  ],
+  "regression_summary": {
+    "sppc05_defect_repro": "2/2 PASS",
+    "problem_query_policy": "10/10 PASS",
+    "platform_compatibility": "7/7 PASS",
+    "under_admission": "21/21 PASS",
+    "wave31f_bypass": "15/15 PASS",
+    "product_confirmation_fpr": 0,
+    "geo_commercial_recall": 0.96,
+    "model_variance_repair_cases": "3/3 stable REJECT and ABSTAIN",
+    "closed_dataset_regression": "PASS exit 0 — product_fpr 0, boxed_delivery_fixed true, contrast_false_reject_count 1 (PSR-AMB-01 pre-existing ambiguous pair)"
+  },
+  "ready_for_new_sppc05_attempt": true,
+  "run_003_authorized": false
+}

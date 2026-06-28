@@ -1,0 +1,137 @@
+{
+  "mode": "CLOSED_DATASET_REGRESSION",
+  "not_blind_pass": true,
+  "boxed_delivery_fixed": true,
+  "boxed_cases": [
+    {
+      "record_id": "SUP-PROD-BOX-02",
+      "raw_query": "1с бухгалтерия коробочная поставка",
+      "stratum": "protected_product",
+      "family": "boxed_delivery",
+      "contrast_positive": false,
+      "expected_decision": "REJECT",
+      "final_decision": "REJECT",
+      "primary_decision": "REJECT",
+      "secondary_decision": "REJECT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "SUP-PROD-BOX-04",
+      "raw_query": "1с erp коробочная поставка",
+      "stratum": "protected_product",
+      "family": "boxed_delivery",
+      "contrast_positive": false,
+      "expected_decision": "REJECT",
+      "final_decision": "REJECT",
+      "primary_decision": "REJECT",
+      "secondary_decision": "REJECT",
+      "hard_rule_blocked": false
+    }
+  ],
+  "product_false_accept_count": 0,
+  "product_fpr": 0,
+  "contrast_false_reject_count": 0,
+  "informational_false_accept_count": 0,
+  "minimal_pairs": [
+    {
+      "record_id": "PSR-NEG-01",
+      "raw_query": "купить коробочную 1с",
+      "stratum": "regression",
+      "family": "product_only",
+      "contrast_positive": false,
+      "expected_decision": "REJECT",
+      "final_decision": "REJECT",
+      "primary_decision": "REJECT",
+      "secondary_decision": "REJECT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-NEG-02",
+      "raw_query": "заказать поставку лицензии 1с",
+      "stratum": "regression",
+      "family": "product_only",
+      "contrast_positive": false,
+      "expected_decision": "REJECT",
+      "final_decision": "REJECT",
+      "primary_decision": "REJECT",
+      "secondary_decision": "REJECT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-NEG-03",
+      "raw_query": "поставка 1с предприятие",
+      "stratum": "regression",
+      "family": "product_only",
+      "contrast_positive": false,
+      "expected_decision": "REJECT",
+      "final_decision": "REJECT",
+      "primary_decision": "REJECT",
+      "secondary_decision": "REJECT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-POS-01",
+      "raw_query": "внедрение 1с под ключ",
+      "stratum": "regression",
+      "family": "service",
+      "contrast_positive": true,
+      "expected_decision": "ACCEPT",
+      "final_decision": "ACCEPT",
+      "primary_decision": "ACCEPT",
+      "secondary_decision": "ACCEPT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-POS-02",
+      "raw_query": "поставка и внедрение 1с",
+      "stratum": "regression",
+      "family": "service",
+      "contrast_positive": true,
+      "expected_decision": "ACCEPT",
+      "final_decision": "ACCEPT",
+      "primary_decision": "ACCEPT",
+      "secondary_decision": "ACCEPT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-AMB-01",
+      "raw_query": "купить 1с с настройкой",
+      "stratum": "regression",
+      "family": "ambiguous",
+      "contrast_positive": false,
+      "expected_decision": "ABSTAIN",
+      "final_decision": "ACCEPT",
+      "primary_decision": "ACCEPT",
+      "secondary_decision": "ACCEPT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-POS-03",
+      "raw_query": "заказать специалиста для установки 1с",
+      "stratum": "regression",
+      "family": "service",
+      "contrast_positive": true,
+      "expected_decision": "ACCEPT",
+      "final_decision": "ACCEPT",
+      "primary_decision": "ACCEPT",
+      "secondary_decision": "ACCEPT",
+      "hard_rule_blocked": false
+    },
+    {
+      "record_id": "PSR-POS-04",
+      "raw_query": "интеграция 1с с сайтом",
+      "stratum": "regression",
+      "family": "service",
+      "contrast_positive": true,
+      "expected_decision": "ACCEPT",
+      "final_decision": "ACCEPT",
+      "primary_decision": "ACCEPT",
+      "secondary_decision": "ACCEPT",
+      "hard_rule_blocked": false
+    }
+  ],
+  "holdout_reference": {
+    "note": "Original holdout not re-run — commercial precision 1.0 preserved from completion-pass-1782181300220",
+    "commercial_precision": 1
+  }
+}

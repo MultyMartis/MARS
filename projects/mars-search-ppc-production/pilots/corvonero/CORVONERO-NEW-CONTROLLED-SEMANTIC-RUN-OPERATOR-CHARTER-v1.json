@@ -1,0 +1,107 @@
+{
+  "charter_id": "corvonero-new-controlled-semantic-run-operator-charter-v1",
+  "schema_version": "1.0.0",
+  "status": "APPROVED FOR PHASE 0/1/2",
+  "generated_at": "2026-06-26",
+  "gate_a": {
+    "status": "APPROVED",
+    "approved_at": "2026-06-26",
+    "decision": "APPROVE_CHARTER",
+    "phases_authorized": ["Phase 0", "Phase 1", "Phase 2"],
+    "phases_not_authorized": ["Phase 3", "Phase 4", "Phase 5", "Phase 6", "Phase 7", "Phase 8", "Phase 9", "Wave 5"]
+  },
+  "project_identity": {
+    "client": "Корво Неро",
+    "project_ref": "PRJ-0013",
+    "workspace_id": "corvonero-direct-v2-clean-room",
+    "sites": ["lk.corvonero.ru", "corvonero.ru"],
+    "atlas_entities": ["ORG-0009", "LE-0006", "PRJ-0013", "WEB-CORV-01", "DOM-CORV-01", "REL-0042"]
+  },
+  "purpose": "Authorize a completely new controlled ORCA semantic run on preserved canonical corpus using Wave 3.1F — not a resume of clean-room v1",
+  "operator_decisions": {
+    "production_semantic_provider": "openrouter",
+    "production_semantic_model": "openai/gpt-5-mini",
+    "hard_cost_cap_usd": 3.0,
+    "soft_cost_warning_usd": 2.0,
+    "old_run_resume": "PROHIBITED",
+    "old_forensic_cache_reuse": "PROHIBITED",
+    "missing_ts_piot_serp": "NON_BLOCKING_FOR_PHASE_0_1_2",
+    "wave5": "BLOCKED",
+    "code_default_gpt_4o_mini": "NOT_AUTHORIZED"
+  },
+  "operator_authority_required": [
+    "Charter approval (Gate A) — COMPLETE",
+    "SPPC-05 pass/fail acceptance — Gate B pending operator review",
+    "Canary approval (Gate C) — not authorized in this charter",
+    "Mid-run and final review decisions — not authorized in this charter"
+  ],
+  "proposed_run_identity": {
+    "format": "corv-semantic-v2-<YYYYMMDD>-<sequence>",
+    "instantiated_run_id": "corv-semantic-v2-20260626-002",
+    "corpus_id": "corvonero-canonical-phrase-registry-v1",
+    "corpus_checksum_prefix": "eaa09b8450f82738",
+    "corpus_record_count": 2368,
+    "mig_session_id": "session-mig-20260622-corv01",
+    "orca_wave": "3.1F",
+    "prompt_contract_version": "orca-semantic-assessment-prompt-v1.3",
+    "lifecycle_status": "BLOCKED_AT_SPPC_05"
+  },
+  "model_runtime_policy": {
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "temperature": 0.1,
+    "structured_output": "json_object required",
+    "retry_cap": 3,
+    "timeout_ms_default": 30000,
+    "batch_size_default": 25,
+    "batch_size_confirmation_precedent": 10,
+    "concurrency_default": 3,
+    "hard_cost_cap_usd": 3.0,
+    "soft_cost_warning_usd": 2.0,
+    "full_corpus_cost_cap_usd": "OPERATOR_DECISION_REQUIRED",
+    "secrets_source": ".secrets/orca-live-model.env",
+    "logging_policy": "sanitized receipts in Git; raw provider responses in STORAGE only",
+    "fallback_policy": "fail-closed — no silent model fallback"
+  },
+  "sppc_05_gate": {
+    "evaluation_dataset": "closed confirmation/supplementary strata + Wave 3.1F regression fixtures",
+    "false_accept_threshold": {
+      "adversarial_fpr_max": 0.01,
+      "authority": "projects/orca/semantic-intelligence/live-model/tests/run-confirmation-validation.mjs",
+      "operator_approval_required": false
+    },
+    "false_reject_threshold": "OPERATOR_APPROVAL_REQUIRED — no single canonical numeric gate for commercial false rejects on full corpus",
+    "fail_closed": true,
+    "stop_before_full_corpus_on_failure": true
+  },
+  "canary_design": {
+    "size": 120,
+    "not_started": true,
+    "authorization": "BLOCKED — requires Gate B operator review + Phase 3 charter"
+  },
+  "checkpoint_lock_model": {
+    "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-002\\",
+    "instantiated": true,
+    "lifecycle_status": "BLOCKED_AT_SPPC_05"
+  },
+  "run_phases": [
+    "Phase 0 — Authority preflight",
+    "Phase 1 — Immutable input registration",
+    "Phase 2 — Closed-dataset SPPC-05 validation",
+    "Phase 3 — Small live canary batch",
+    "Phase 4 — Operator review gate",
+    "Phase 5 — Bounded production batches",
+    "Phase 6 — Full reconciliation",
+    "Phase 7 — Semantic assembly",
+    "Phase 8 — Operator semantic review",
+    "Phase 9 — MIG/ORCA/Search PPC handoff"
+  ],
+  "wave5_prohibition": true,
+  "search_ppc_handoff_boundary": "No strategy/campaign work until Gates E+F and Search PPC lifecycle unfreeze separately",
+  "approval_fields": {
+    "operator_name": "Operator (charter authorization task)",
+    "approved_at": "2026-06-26",
+    "charter_version": "v1",
+    "decision": "APPROVE_CHARTER — Phase 0/1/2 only"
+  }
+}

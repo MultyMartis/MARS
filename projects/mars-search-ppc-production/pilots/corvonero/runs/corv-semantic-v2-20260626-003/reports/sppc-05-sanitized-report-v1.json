@@ -1,0 +1,297 @@
+{
+  "report_id": "corvonero-run-003-sppc-05-execution-v1",
+  "run_id": "corv-semantic-v2-20260626-003",
+  "lifecycle_state": "REGISTERED_FOR_SPPC_05_RETRY",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "repair_authority": {
+    "snapshot_id": "corv-semantic-v2-20260626-003-repair-authority-freeze-v1",
+    "run_id": "corv-semantic-v2-20260626-003",
+    "frozen_at": "2026-06-26T09:33:53.235Z",
+    "repair_status": "APPROVED",
+    "repair_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+    "operator_decision": "ORCA_WAVE_3_1F_TARGETED_REPAIR — PASS",
+    "components": [
+      {
+        "component": "prompt_contract",
+        "path": "projects/orca/semantic-intelligence/live-model/contracts/prompt-contract.mjs",
+        "version": "orca-semantic-assessment-prompt-v1.4",
+        "sha256": "481075e55a8274047124b24d42293d616e37f57a129563e9f15f034034496e53",
+        "sha256_prefix": "481075e55a827404",
+        "last_modified": "2026-06-26T01:21:57.891Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "service_intent_evidence",
+        "path": "projects/orca/semantic-intelligence/live-model/evidence/service-intent-evidence.mjs",
+        "version": "v1.1",
+        "sha256": "5bfff7ae2ed3b854ea613011797a91e35ab15804c10c8859c8ec667bd32f7d9f",
+        "sha256_prefix": "5bfff7ae2ed3b854",
+        "last_modified": "2026-06-26T01:21:57.891Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "platform_compatibility",
+        "path": "projects/orca/semantic-intelligence/live-model/evidence/platform-compatibility.mjs",
+        "version": "v1.0",
+        "sha256": "1dfde3777fb776a7ca4914dd224c4f04307b4c89d12866ffb8a19f4d5ebb2788",
+        "sha256_prefix": "1dfde3777fb776a7",
+        "last_modified": "2026-06-26T01:21:57.897Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "hard_rules",
+        "path": "projects/orca/semantic-intelligence/production/assessors/hard-rules.mjs",
+        "version": "v1.1",
+        "sha256": "f90e94386767f429fd8fa5987966486b4678700cdfb48aa60c6435a9764f7e6b",
+        "sha256_prefix": "f90e94386767f429",
+        "last_modified": "2026-06-26T01:21:57.894Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "semantic_adjudicator",
+        "path": "projects/orca/semantic-intelligence/live-model/adjudication/semantic-adjudicator.mjs",
+        "version": "v1.4",
+        "sha256": "9439ef14ef41b76fe1942fbccf0769e05b9d5257623b9c26b13fe4043229e47f",
+        "sha256_prefix": "9439ef14ef41b76f",
+        "last_modified": "2026-06-26T01:21:57.893Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "confirmation_runner",
+        "path": "projects/orca/semantic-intelligence/live-model/tests/run-confirmation-validation.mjs",
+        "version": "wave31f-repair",
+        "sha256": "c77f62889fea9a2ff987f00808547e48e0289518354498bbef37b45b57dfe43e",
+        "sha256_prefix": "c77f62889fea9a2f",
+        "last_modified": "2026-06-26T01:21:57.900Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "problem_query_runner",
+        "path": "projects/orca/semantic-intelligence/live-model/tests/run-problem-query-policy-regression.mjs",
+        "version": "wave31f-repair",
+        "sha256": "3cd5d3edaff22edf57f11c1a12a9d182225934205e498e999cfc692d075e49fa",
+        "sha256_prefix": "3cd5d3edaff22edf",
+        "last_modified": "2026-06-26T01:21:57.890Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "under_admission_runner",
+        "path": "projects/orca/semantic-intelligence/live-model/tests/run-under-admission-regression.mjs",
+        "version": "wave31f-repair",
+        "sha256": "5720bdac51134de829dc30115842e141c4073b7200d5049a4db5f8ba6cfb25ed",
+        "sha256_prefix": "5720bdac51134de8",
+        "last_modified": "2026-06-26T01:21:57.904Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      },
+      {
+        "component": "wave31f_bypass_runner",
+        "path": "projects/orca/semantic-intelligence/live-model/tests/run-wave31f-bypass-audit.mjs",
+        "version": "wave31f-repair",
+        "sha256": "27aa6fc96b042bdf84815a05cad9c988c41760069a3a61ae69399d4e4595a081",
+        "sha256_prefix": "27aa6fc96b042bdf",
+        "last_modified": "2026-06-26T01:21:57.899Z",
+        "repair_decision_reference": "REPORT-orca-wave31f-targeted-sppc05-repair-v1.md",
+        "test_evidence_reference": "projects/orca/semantic-intelligence/live-model/reports/sppc05-defect-repro-1782433956822"
+      }
+    ],
+    "semantic_classes": [
+      "product_version_update",
+      "ambiguous_diy_problem",
+      "platform_service_compatibility implemented via platform-compatibility.mjs evaluatePlatformCompatibility"
+    ],
+    "approved_target_behavior": [
+      {
+        "query": "обновление sap business one до новой версии",
+        "expected": "REJECT"
+      },
+      {
+        "query": "как исправить ошибку 0x80004005 1с",
+        "expected": "ABSTAIN"
+      }
+    ],
+    "drift_detected": false,
+    "drift_details": [],
+    "verdict": "APPROVED ORCA REPAIR AUTHORITY — FROZEN"
+  },
+  "gate_b_verdict": {
+    "status": "FAILED",
+    "project": "BLOCKED_AT_SPPC_05",
+    "run_lifecycle": "BLOCKED_AT_SPPC_05"
+  },
+  "gate_criteria": {
+    "adversarial_fpr_max_0_01_product": true,
+    "adversarial_fpr_max_0_01_geo": true,
+    "geo_commercial_recall_gte_0_90": true,
+    "geo_adversarial_fpr_zero": true,
+    "closed_dataset_boxed_delivery_fixed": true,
+    "closed_dataset_product_fpr": true,
+    "problem_query_all_match": true,
+    "wave31f_bypass_all_pass": true,
+    "under_admission_all_pass": true,
+    "platform_compatibility_full_pass": false,
+    "structured_output_full_pass": false,
+    "focused_repair_stable": false,
+    "variance_repair_cases_stable": false,
+    "all_suites_exit_zero": false,
+    "psr_amb_01_isolated": true,
+    "project_corpus_processed_zero": true,
+    "all_pass": false,
+    "psr_amb_01_status": {
+      "record_id": "PSR-AMB-01",
+      "query": "купить 1с с настройкой",
+      "expected": "ABSTAIN",
+      "observed": "UNKNOWN",
+      "known_ambiguity": true,
+      "non_blocking": true,
+      "historically_observed": "ACCEPT",
+      "expands_false_accept_family": false,
+      "note": "Pre-existing ambiguous minimal pair; must remain visible in operator review"
+    }
+  },
+  "fixture_inventory": {
+    "protected_product_confirmation": 106,
+    "geo_commercial_confirmation_v2": 120,
+    "closed_dataset_supplementary": 136,
+    "problem_query_policy": 10,
+    "wave31f_bypass_checks": 15,
+    "under_admission_unit_tests": 21,
+    "platform_compatibility": 7,
+    "variance_cases": [
+      "CFM-PROD-UPD-02",
+      "PQR-ABSTAIN-03",
+      "PSR-AMB-01"
+    ]
+  },
+  "suite_results": [
+    {
+      "id": "wave31f_bypass",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-wave31f-bypass-audit.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 145,
+      "live": false,
+      "metrics": null
+    },
+    {
+      "id": "under_admission",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-under-admission-regression.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 132,
+      "live": false,
+      "metrics": null
+    },
+    {
+      "id": "platform_compatibility",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-platform-compatibility-regression.mjs",
+      "pass": false,
+      "exit_code": 1,
+      "runtime_ms": 123575,
+      "live": true,
+      "metrics": null
+    },
+    {
+      "id": "focused_repair_repro",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-sppc05-defect-repro.mjs",
+      "pass": false,
+      "exit_code": 1,
+      "runtime_ms": 83102,
+      "live": true,
+      "metrics": null
+    },
+    {
+      "id": "problem_query_policy",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-problem-query-policy-regression.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 177617,
+      "live": true,
+      "metrics": null
+    },
+    {
+      "id": "confirmation_product",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-confirmation-validation.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 3354666,
+      "live": true,
+      "metrics": null
+    },
+    {
+      "id": "confirmation_geo_v2",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-confirmation-validation.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 3952719,
+      "live": true,
+      "metrics": null
+    },
+    {
+      "id": "closed_dataset_regression",
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-closed-dataset-regression.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 5229960,
+      "live": true,
+      "metrics": null
+    }
+  ],
+  "variance_check": null,
+  "psr_amb_01": {
+    "record_id": "PSR-AMB-01",
+    "query": "купить 1с с настройкой",
+    "expected": "ABSTAIN",
+    "observed": "UNKNOWN",
+    "known_ambiguity": true,
+    "non_blocking": true,
+    "historically_observed": "ACCEPT",
+    "expands_false_accept_family": false,
+    "note": "Pre-existing ambiguous minimal pair; must remain visible in operator review"
+  },
+  "cumulative_cost_usd": 1.03,
+  "isolation": {
+    "verdict": "OLD_RUN_ISOLATION — PASS",
+    "pass": true,
+    "forbidden_refs": [],
+    "unexpected_runtime_data": []
+  },
+  "full_corpus_started": false,
+  "canary_started": false,
+  "wave5_started": false,
+  "secret_summary": {
+    "OPENROUTER_API_KEY": "SET",
+    "ORCA_SEMANTIC_PROVIDER": "openrouter",
+    "ORCA_SEMANTIC_MODEL": "openai/gpt-5-mini",
+    "ORCA_EVAL_LIVE": "enabled",
+    "ORCA_EVAL_MAX_COST": "10",
+    "ORCA_EVAL_MAX_RECORDS": "665",
+    "ORCA_EVAL_BATCH_SIZE": "10",
+    "ORCA_EVAL_CONCURRENCY": "2"
+  },
+  "completed_at": "2026-06-26T13:29:20.099Z",
+  "critical_failures": [
+    "Platform compatibility not full pass (PC-ABSTAIN-01)",
+    "Focused repair repro: PQR-ABSTAIN-03 expected ABSTAIN received REJECT",
+    "Variance check: PQR-ABSTAIN-03 unstable REJECT×3 (repair_cases_stable false)"
+  ],
+  "closed_dataset_run_id": "closed-regression-1782475078637",
+  "closed_dataset_product_fpr": 0,
+  "psr_amb_01_closed_dataset": {
+    "record_id": "PSR-AMB-01",
+    "expected": "ABSTAIN",
+    "observed": "ACCEPT",
+    "known_ambiguity": true,
+    "non_blocking": true
+  },
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.4",
+  "adjudicator_version": "v1.4"
+}

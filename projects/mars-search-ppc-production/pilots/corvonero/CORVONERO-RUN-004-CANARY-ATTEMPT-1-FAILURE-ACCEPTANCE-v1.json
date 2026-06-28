@@ -1,0 +1,40 @@
+{
+  "record_id": "corvonero-run-004-canary-attempt-1-failure-acceptance-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "attempt_id": "corv-run004-phase3-canary-attempt-001",
+  "accepted_at": "2026-06-28T00:00:00.000Z",
+  "operator_decision": "ACCEPTED",
+  "failure_classification": {
+    "status": "FAILED",
+    "failure_class": "CANARY_CLASSIFIER_EXPECTATION_POLICY_FAILURE",
+    "orca_quality_regression": "NOT CONFIRMED"
+  },
+  "interpretation": {
+    "harness_failure": true,
+    "orca_regression_established": false,
+    "full_corpus_blocked": true,
+    "attempt_2_required": true,
+    "attempt_1_immutable": true
+  },
+  "attempt_1_evidence": {
+    "selection": "CORVONERO-RUN-004-PHASE-3-CANARY-SELECTION-v1.json",
+    "result": "CORVONERO-RUN-004-PHASE-3-CANARY-RESULT-v1.json",
+    "review_package": "CORVONERO-RUN-004-PHASE-3-CANARY-REVIEW-PACKAGE-v1.json",
+    "report": "REPORT-corvonero-run-004-phase-3-canary-v1.md"
+  },
+  "metrics_summary": {
+    "phrases_processed": 120,
+    "schema_valid": 120,
+    "false_accepts": 0,
+    "false_rejects": 12,
+    "wrong_abstains": 2,
+    "root_cause": "canary classifier assigned career/education/informational phrases to direct_commercial_1c_service with authoritative ACCEPT expectations"
+  },
+  "immutable_boundary": {
+    "do_not_overwrite": true,
+    "do_not_change_verdict": true,
+    "do_not_change_selection": true,
+    "do_not_reinterpret_labels_as_canonical_truth": true
+  },
+  "next_gate": "CORVONERO RUN 004 PHASE 3 CANARY ATTEMPT 2"
+}

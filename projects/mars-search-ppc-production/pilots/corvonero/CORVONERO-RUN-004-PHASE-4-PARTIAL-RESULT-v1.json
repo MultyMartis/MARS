@@ -1,0 +1,137 @@
+{
+  "run_id": "corv-semantic-v2-20260626-004",
+  "result_id": "corvonero-run-004-phase-4-partial-result-v1",
+  "phase_verdict": "PARTIAL ACCEPTED — OPERATOR REVIEW REQUIRED",
+  "lifecycle_state": "PHASE_4_PARTIAL_COMPLETE",
+  "project_lifecycle": "READY_FOR_PARTIAL_SEMANTIC_REVIEW",
+  "status": {
+    "phase_4": "PARTIAL ACCEPTED — OPERATOR REVIEW REQUIRED",
+    "run_004": "PHASE_4_PARTIAL_COMPLETE",
+    "project": "READY_FOR_PARTIAL_SEMANTIC_REVIEW",
+    "provider_calls": "FROZEN — NO FURTHER OPENROUTER CALLS THIS CYCLE"
+  },
+  "reconciliation": {
+    "canonical_total": 2368,
+    "unique_processed": 1599,
+    "unprocessed": 769,
+    "duplicates": 0,
+    "orphans": 0,
+    "complete": false,
+    "partial_accepted": true,
+    "identity_equation": "120 canary reuse + 1479 phase4 new = 1599 processed (769 unprocessed)"
+  },
+  "verdict_distribution": {
+    "ACCEPT": 529,
+    "REJECT": 762,
+    "ABSTAIN": 308
+  },
+  "career_gate": {
+    "career_accept_raw_count": 3,
+    "career_accept_confirmed_error_count": 0,
+    "career_accept_classifier_false_positive_count": 0,
+    "career_accept_review_pending_count": 1,
+    "career_accept_override_count": 0,
+    "career_accept_rate": 0.001876,
+    "items": [
+      {
+        "phrase_id": "CR2-PHR-00559",
+        "phrase": "стажировка 1с программист ростов на дону",
+        "classification": "OPERATOR_REVIEW_REQUIRED",
+        "contributes_to_stop": false,
+        "model_verdict": "ACCEPT",
+        "final_authoritative_verdict": "ACCEPT",
+        "rationale": "Primary/reassessment consensus REJECT contradicts final ACCEPT — review item, not broad stop contributor"
+      }
+    ],
+    "confirmed_error_ids": [],
+    "unresolved_confirmed_error_ids": [],
+    "stop_issues": [],
+    "stop_required": false,
+    "monitored_patterns": "(?:стажер|стажировк|ваканс|работа\\s+программист(?:ом|ами|ов|ке)|ищу\\s+работ|резюме|зарплат|собеседован)"
+  },
+  "operator_overrides": [
+    {
+      "run_id": "corv-semantic-v2-20260626-004",
+      "phrase_id": "CR2-PHR-00584",
+      "phrase": "программист 1с стажер аптека плюс самара",
+      "model_verdict": "ACCEPT",
+      "operator_final_verdict": "REJECT",
+      "policy_class": "CAREER_EMPLOYMENT",
+      "rationale": "Explicit career markers (стажер, employer entity, location) — operator manual adjudication override to REJECT per Run 004 Phase 4 authorization.",
+      "original_batch": "phase4-batch-006",
+      "source_evidence": {
+        "observed_tags": [
+          "geography",
+          "one_c",
+          "career",
+          "provider_role"
+        ],
+        "primary_family": "careers_training_education",
+        "career_markers": [
+          "стажер",
+          "employer_entity_phrase",
+          "location_samara"
+        ]
+      },
+      "timestamp": "2026-06-28T11:27:47.367Z",
+      "authority": "OPERATOR_ADJUDICATION_OVERRIDE — CORVONERO RUN 004 PHASE 4 RESUME V1",
+      "override_status": "OPERATOR_ADJUDICATION_OVERRIDE"
+    }
+  ],
+  "trigger_reconciliation": {
+    "receipt_id": "corvonero-run-004-phase-4-trigger-reconciliation-v1",
+    "run_id": "corv-semantic-v2-20260626-004",
+    "verdict": "PHASE_4_TRIGGER_RECONCILIATION — PASS",
+    "reconciled_at": "2026-06-28T11:27:47.460Z",
+    "records_reconciled": 720,
+    "trigger_records": {
+      "CR2-PHR-00253": {
+        "phrase": "сколько стоит работа программиста 1с",
+        "action": "classifier_false_positive_removed",
+        "policy_class": "DIRECT_COMMERCIAL_1C_SERVICE",
+        "final_verdict": "ACCEPT",
+        "prior_family": "careers_training_education",
+        "reconciled_family": "direct_commercial_1c_service"
+      },
+      "CR2-PHR-00584": {
+        "phrase": "программист 1с стажер аптека плюс самара",
+        "action": "operator_adjudication_override",
+        "policy_class": "CAREER_EMPLOYMENT",
+        "model_verdict": "ACCEPT",
+        "final_authoritative_verdict": "REJECT"
+      }
+    },
+    "metrics": {
+      "raw_career_accept_triggers": 2,
+      "classifier_false_positives": 1,
+      "confirmed_career_false_accepts_before_override": 1,
+      "operator_overrides": 1,
+      "remaining_unresolved_career_false_accepts": 0,
+      "career_accept_raw_count": 1,
+      "career_accept_confirmed_error_count": 0,
+      "career_accept_classifier_false_positive_count": 0,
+      "career_accept_review_pending_count": 1,
+      "career_accept_override_count": 0,
+      "career_accept_rate": 0.001389,
+      "additional_review_items": [
+        "CR2-PHR-00559"
+      ]
+    },
+    "before_gate": {
+      "career_accept_raw_count": 3,
+      "stop_required": false,
+      "confirmed_error_ids": []
+    },
+    "after_gate": {
+      "career_accept_raw_count": 1,
+      "stop_required": false,
+      "unresolved_confirmed_error_ids": []
+    },
+    "checkpoint_hash_before": "a313c7f45bdbfaab"
+  },
+  "cost": {
+    "cumulative_cost_usd": 1.9158524
+  },
+  "batch_count": 31,
+  "frozen_at": "2026-06-28T14:49:06.180Z"
+}

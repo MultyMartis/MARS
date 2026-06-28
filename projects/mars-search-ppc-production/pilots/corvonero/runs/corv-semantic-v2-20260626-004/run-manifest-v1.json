@@ -1,0 +1,67 @@
+{
+  "run_id": "corv-semantic-v2-20260626-004",
+  "project_id": "PRJ-0013",
+  "mig_session_id": "session-mig-20260622-corv01",
+  "corpus_path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+  "corpus_count": 2368,
+  "corpus_sha256": "eaa09b8450f8273890676c1ac2746172fac3cd884a4ee9697a8076593355b4fc",
+  "orca_wave": "3.1F",
+  "orca_repair_authority": "APPROVED ORCA REPAIR V2 AUTHORITY — FROZEN",
+  "orca_repair_version": "v2",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.4",
+  "hard_rules_version": "v1.2",
+  "adjudicator_version": "v1.5",
+  "service_intent_evidence_version": "v1.1",
+  "platform_compatibility_version": "v1.1",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "lifecycle_state": "BLOCKED_AT_PHASE_3_CANARY_ATTEMPT_2",
+  "authorized_phases": [
+    "Phase 0 — authority verification",
+    "Phase 1 — Run 004 registration",
+    "Phase 2 — complete SPPC-05 validation"
+  ],
+  "prohibited_phases": [
+    "Phase 3 canary",
+    "full 2368 corpus",
+    "semantic production batches",
+    "Wave 5",
+    "strategy",
+    "Campaign Architecture",
+    "Commander",
+    "import",
+    "launch"
+  ],
+  "cost_limits": {
+    "hard_cap_usd": 3,
+    "soft_warning_usd": 2
+  },
+  "operator_decisions": {
+    "orca_repair": "ORCA_WAVE_3_1F_TARGETED_SPPC05_REPAIR_V2 — PASS",
+    "run_002": "BLOCKED_AT_SPPC_05 — NON-RESUMABLE — IMMUTABLE FAILED EVIDENCE",
+    "run_003": "BLOCKED_AT_SPPC_05 — NON-RESUMABLE — IMMUTABLE FAILED EVIDENCE",
+    "run_004": "AUTHORIZED FOR SPPC-05 VALIDATION ONLY",
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "hard_cost_cap_usd": 3,
+    "soft_cost_warning_usd": 2,
+    "psr_amb_01": "KNOWN PRE-EXISTING AMBIGUITY — NON-BLOCKING FOR RUN 004 SPPC-05 — MUST REMAIN VISIBLE",
+    "phase_3": "NOT AUTHORIZED",
+    "wave_5": "BLOCKED"
+  },
+  "previous_failed_runs": [
+    "corv-semantic-v2-20260626-002",
+    "corv-semantic-v2-20260626-003"
+  ],
+  "old_run_isolation_requirement": "Run 004 fully isolated from Runs 001–003 locks/checkpoints/cache",
+  "psr_amb_01_operator_decision": "KNOWN PRE-EXISTING AMBIGUITY — NON-BLOCKING FOR RUN 004 SPPC-05 — MUST REMAIN VISIBLE",
+  "recovery_authority": "ebc65acd4087fa9d180bb2a50921027fde51e3b7",
+  "created_at": "2026-06-27T08:02:51.704Z",
+  "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-004",
+  "git_run_dir": "projects\\mars-search-ppc-production\\pilots\\corvonero\\runs\\corv-semantic-v2-20260626-004",
+  "gate_b": "PASS — OPERATOR REVIEW REQUIRED",
+  "completed_at": "2026-06-28T06:45:54.531Z",
+  "gate_c": "FAILED",
+  "canary_processed": 120,
+  "canary_attempt_2_processed": 117
+}

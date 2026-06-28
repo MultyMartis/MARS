@@ -1,0 +1,92 @@
+{
+  "run_id": "corv-semantic-v2-20260626-002",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.3",
+  "adjudicator_version": "v1.3",
+  "fixture_inventory": {
+    "protected_product_confirmation": 106,
+    "geo_commercial_confirmation_v2": 120,
+    "closed_dataset_supplementary": 136,
+    "problem_query_policy": 10,
+    "wave31f_bypass_checks": 12,
+    "under_admission_unit_tests": 18
+  },
+  "suite_results": [
+    {
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-wave31f-bypass-audit.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 84,
+      "metrics": null
+    },
+    {
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-under-admission-regression.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 91,
+      "metrics": null
+    },
+    {
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-closed-dataset-regression.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 7237267,
+      "metrics": null
+    },
+    {
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-confirmation-validation.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 4730027,
+      "metrics": null
+    },
+    {
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-confirmation-validation.mjs",
+      "pass": true,
+      "exit_code": 0,
+      "runtime_ms": 3828719,
+      "metrics": null
+    },
+    {
+      "script": "projects/orca/semantic-intelligence/live-model/tests/run-problem-query-policy-regression.mjs",
+      "pass": false,
+      "exit_code": 1,
+      "runtime_ms": 163129,
+      "metrics": null
+    }
+  ],
+  "gate_criteria": {
+    "adversarial_fpr_max_0_01_product": false,
+    "adversarial_fpr_max_0_01_geo": false,
+    "closed_dataset_boxed_delivery_fixed": false,
+    "closed_dataset_product_fpr": false,
+    "problem_query_all_match": false,
+    "wave31f_bypass_all_pass": true,
+    "under_admission_all_pass": true,
+    "all_suites_exit_zero": false,
+    "all_pass": false
+  },
+  "cumulative_cost_usd": 0,
+  "gate_b_verdict": {
+    "status": "FAILED",
+    "project": "BLOCKED_AT_SPPC_05"
+  },
+  "isolation": {
+    "verdict": "OLD_RUN_ISOLATION — PASS",
+    "pass": true,
+    "forbidden_refs": [],
+    "unexpected_runtime_data": []
+  },
+  "secret_summary": {
+    "OPENROUTER_API_KEY": "SET",
+    "ORCA_SEMANTIC_PROVIDER": "openrouter",
+    "ORCA_SEMANTIC_MODEL": "openai/gpt-5-mini",
+    "ORCA_EVAL_LIVE": "enabled",
+    "ORCA_EVAL_MAX_COST": "10",
+    "ORCA_EVAL_MAX_RECORDS": "665",
+    "ORCA_EVAL_BATCH_SIZE": "10",
+    "ORCA_EVAL_CONCURRENCY": "2"
+  },
+  "completed_at": "2026-06-25T23:19:16.768Z"
+}

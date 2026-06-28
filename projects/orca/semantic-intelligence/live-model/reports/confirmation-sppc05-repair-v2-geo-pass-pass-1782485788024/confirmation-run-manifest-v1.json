@@ -1,0 +1,21 @@
+{
+  "run_id": "confirmation-sppc05-repair-v2-geo-pass-pass-1782485788024",
+  "stratum": "geo_commercial_confirmation_v2",
+  "confirmation_blind_validation": true,
+  "assessor_label_access": false,
+  "prompt_version": "orca-semantic-assessment-prompt-v1.4",
+  "adjudicator_version": "v1.5",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "secret_summary": {
+    "OPENROUTER_API_KEY": "SET",
+    "ORCA_SEMANTIC_PROVIDER": "openrouter",
+    "ORCA_SEMANTIC_MODEL": "openai/gpt-5-mini",
+    "ORCA_EVAL_LIVE": "enabled",
+    "ORCA_EVAL_MAX_COST": "10",
+    "ORCA_EVAL_MAX_RECORDS": "665",
+    "ORCA_EVAL_BATCH_SIZE": "10",
+    "ORCA_EVAL_CONCURRENCY": "2"
+  },
+  "record_count": 120
+}

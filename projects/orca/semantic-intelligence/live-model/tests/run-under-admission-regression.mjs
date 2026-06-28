@@ -143,5 +143,60 @@ assert('bare error adjudicator yields ABSTAIN', bareAdj.final_decision === 'ABST
 const prvEvidence = extractServiceIntentEvidence({ raw_query: 'программист bitrix москва', normalized_query: 'программист bitrix москва' });
 assert('provider+geo strong commercial evidence', prvEvidence.strong_commercial_geo === true);
 
+// Wave 3.1F repair: product version update blocks ACCEPT
+const sapUpdateHard = applyHardRules(
+  { raw_query: 'обновление sap business one до новой версии', normalized_query: 'обновление sap business one до новой версии' },
+  { decision: 'ACCEPT' },
+  { businessScope: { scope: '1c_services' }, serviceRegistry: { services: [] } },
+);
+assert('product version update hard rule blocks ACCEPT', sapUpdateHard.blocked && sapUpdateHard.override_decision === 'REJECT');
+
+const sapUpdateAdj = adjudicateSemanticIntent({
+  assessmentA: { decision: 'ACCEPT', confidence: 0.78, commercial_evidence: ['update service'], rationale: 'update request' },
+  assessmentB: { decision: 'ACCEPT', confidence: 0.76, commercial_evidence: ['update'], rationale: 'version update' },
+  hardRuleEvidence: sapUpdateHard,
+  serviceRegistry: { services: [{ service_id: 'svc-hire', name: '1C' }] },
+  phrase: { raw_query: 'обновление sap business one до новой версии', normalized_query: 'обновление sap business one до новой версии' },
+});
+assert('product version update adjudicator yields REJECT', sapUpdateAdj.final_decision === 'REJECT');
+
+// Wave 3.1F repair: ambiguous DIY problem → ABSTAIN not REJECT
+const diyErrorHard = applyHardRules(
+  { raw_query: 'как исправить ошибку 0x80004005 1с', normalized_query: 'как исправить ошибку 0x80004005 1с' },
+  { decision: 'REJECT' },
+);
+assert('ambiguous DIY error hard rule forces ABSTAIN', diyErrorHard.override_decision === 'ABSTAIN');
+
+const diyErrorAdj = adjudicateSemanticIntent({
+  assessmentA: { decision: 'REJECT', confidence: 0.7, rationale: 'diy how-to' },
+  assessmentB: null,
+  hardRuleEvidence: diyErrorHard,
+  serviceRegistry: { services: [] },
+  phrase: { raw_query: 'как исправить ошибку 0x80004005 1с', normalized_query: 'как исправить ошибку 0x80004005 1с' },
+});
+assert('ambiguous DIY error adjudicator yields ABSTAIN', diyErrorAdj.final_decision === 'ABSTAIN');
+
+// Wave 3.1F repair v2: generic ERP platform family → ABSTAIN
+const genericErpHard = applyHardRules(
+  { raw_query: 'обновление erp до новой версии', normalized_query: 'обновление erp до новой версии' },
+  { decision: 'REJECT' },
+  { businessScope: { scope: '1c_services' }, serviceRegistry: { services: [] } },
+);
+assert('generic ERP hard rule forces ABSTAIN', genericErpHard.override_decision === 'ABSTAIN');
+
+const genericErpAdj = adjudicateSemanticIntent({
+  assessmentA: { decision: 'REJECT', confidence: 0.7, rationale: 'erp update' },
+  assessmentB: null,
+  hardRuleEvidence: genericErpHard,
+  serviceRegistry: { services: [] },
+  businessScope: { scope: '1c_services' },
+  phrase: { raw_query: 'обновление erp до новой версии', normalized_query: 'обновление erp до новой версии' },
+});
+assert('generic ERP adjudicator yields ABSTAIN', genericErpAdj.final_decision === 'ABSTAIN');
+
+// Service update with specialist remains admissible
+const svcUpdateEvidence = extractServiceIntentEvidence({ raw_query: 'специалист обновить конфигурацию 1с', normalized_query: 'специалист обновить конфигурацию 1с' });
+assert('service update with specialist has service scope', svcUpdateEvidence.service_update_intent || svcUpdateEvidence.provider_noun_detected);
+
 console.log(`Under-admission regression: ${passed}/${passed + failed}`);
 process.exit(failed ? 1 : 0);

@@ -1,0 +1,118 @@
+{
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.4",
+  "adjudicator_version": "v1.4",
+  "hard_rules_version": "v1.1",
+  "service_intent_evidence_version": "v1.1",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "results": [
+    {
+      "record_id": "CFM-PROD-UPD-02",
+      "query": "обновление sap business one до новой версии",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true,
+      "primary": "REJECT",
+      "secondary": "REJECT",
+      "confidence": 0.86,
+      "findings": [],
+      "decisive_evidence": [
+        "assessor_agreement"
+      ],
+      "hard_rule": {
+        "blocked": false,
+        "reinforce_reject": true,
+        "evidence": [
+          {
+            "rule": "product_version_update_hard_rule",
+            "class": "PROTECTED_PRODUCT",
+            "span": "product_maintenance"
+          }
+        ],
+        "rationale": "product_version_update_hard_rule"
+      },
+      "structured_evidence": {
+        "version": "v1.1",
+        "signals": [
+          "product_version_update"
+        ],
+        "evidence_strength": "none",
+        "strong_commercial_geo": false,
+        "strong_commercial_problem": false,
+        "strong_commercial": false,
+        "supporting_commercial_geo": false,
+        "geography_alone": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": true,
+        "product_self_update": false,
+        "service_update_intent": false,
+        "ambiguous_diy_problem": false,
+        "clearly_instructional": false,
+        "bare_error_insufficient_context": false,
+        "provider_noun_detected": false,
+        "service_task_detected": false,
+        "geography_detected": false,
+        "price_order_detected": false
+      },
+      "primary_rationale": "The query asks about 'обновление SAP Business One до новой версии' — a product version update phrasing without any hiring/order/implementation words. Per rules, product-version update queries are treated as product-only/informational (REJECT for paid-service advertising) and additionally the product is outside the 1C services scope. There are no explicit signals (специалист, заказать, внедрение, цена, срочно) that would indicate intent to hire a provider."
+    },
+    {
+      "record_id": "PQR-ABSTAIN-03",
+      "query": "как исправить ошибку 0x80004005 1с",
+      "expected": "ABSTAIN",
+      "final": "REJECT",
+      "match": false,
+      "primary": "REJECT",
+      "confidence": 0.92,
+      "findings": [],
+      "decisive_evidence": [],
+      "hard_rule": {
+        "blocked": false,
+        "reinforce_abstain": true,
+        "evidence": [
+          {
+            "rule": "ambiguous_diy_problem_abstain_rule",
+            "class": "AMBIGUOUS_DIY",
+            "span": "diy_framed_error"
+          }
+        ],
+        "rationale": "ambiguous_diy_problem_abstain_rule"
+      },
+      "structured_evidence": {
+        "version": "v1.1",
+        "signals": [
+          "ambiguous_diy_problem"
+        ],
+        "evidence_strength": "none",
+        "strong_commercial_geo": false,
+        "strong_commercial_problem": false,
+        "strong_commercial": false,
+        "supporting_commercial_geo": false,
+        "geography_alone": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "product_self_update": false,
+        "service_update_intent": false,
+        "ambiguous_diy_problem": true,
+        "clearly_instructional": false,
+        "bare_error_insufficient_context": false,
+        "provider_noun_detected": false,
+        "service_task_detected": false,
+        "geography_detected": false,
+        "price_order_detected": false
+      },
+      "primary_rationale": "Query explicitly asks 'how to fix' an error code for 1C, which is a clear DIY/instructional intent. There are no signals of wanting to hire a specialist or purchase a support service (no words like 'заказать', 'специалист', 'услуга', 'срочно', price, or location). Although the topic (1C error) falls within the 1c_services domain (support could theoretically resolve it), the user's intent is self-service troubleshooting, a protected DIY intent that should be rejected for commercial advertising."
+    }
+  ],
+  "all_match": false
+}

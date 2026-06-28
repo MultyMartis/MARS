@@ -46,13 +46,14 @@ async function main() {
     const phrase = { phrase_id: c.id, raw_query: c.q, normalized_query: c.q.toLowerCase(), region: 'RU' };
     const primary = await runBlindPrimaryAssessment({ phrase, ...context, adapter, forbiddenContext: {} });
     const det = assessDeterministic(createAssessorContext(phrase, context));
-    const hardRules = applyHardRules(phrase, det);
+    const hardRules = applyHardRules(phrase, det, context);
     const adj = adjudicateSemanticIntent({
       assessmentA: primary.ok ? primary.output : { decision: 'ABSTAIN' },
       assessmentB: null,
-      hardRuleEvidence: hardRules,
-      serviceRegistry: context.serviceRegistry,
-      phrase,
+    hardRuleEvidence: hardRules,
+    serviceRegistry: context.serviceRegistry,
+    businessScope: context.businessScope,
+    phrase,
     });
     results.push({
       record_id: c.id,

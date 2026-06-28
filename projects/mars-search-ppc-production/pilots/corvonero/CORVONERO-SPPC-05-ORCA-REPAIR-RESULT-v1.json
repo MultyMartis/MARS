@@ -1,0 +1,19 @@
+{
+  "document_id": "CORVONERO-SPPC-05-ORCA-REPAIR-RESULT-v1",
+  "failed_run_id": "corv-semantic-v2-20260626-002",
+  "failed_run_status": "BLOCKED_AT_SPPC_05",
+  "orca_repair_verdict": "ORCA_WAVE_3_1F_TARGETED_REPAIR_PASS",
+  "ready_for_new_sppc05_attempt": true,
+  "run_003_authorized": false,
+  "defects": [
+    { "record_id": "CFM-PROD-UPD-02", "pre": "ACCEPT", "post": "REJECT", "expected": "REJECT" },
+    { "record_id": "PQR-ABSTAIN-03", "pre": "REJECT", "post": "ABSTAIN", "expected": "ABSTAIN" }
+  ],
+  "post_repair_gates": {
+    "product_fpr": 0,
+    "problem_query": "10/10",
+    "geo_commercial_recall": 0.96,
+    "variance_stable": true
+  },
+  "next_gate": "OPERATOR REVIEW OF ORCA WAVE 3.1F TARGETED REPAIR"
+}

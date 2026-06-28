@@ -1,0 +1,4042 @@
+{
+  "manifest_id": "corvonero-run-004-phase-3-canary-selection-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "seed": "corv-run004-canary-v1-20260628",
+  "algorithm": "edge_case_first → family_minimums → deterministic SHA-256 rank fill",
+  "selected_count": 120,
+  "family_minimums": {
+    "direct_commercial_1c_service": 20,
+    "problem_troubleshooting": 15,
+    "integrations": 10,
+    "marking_chestny_znak": 8,
+    "ts_piot": 5,
+    "product_license_version": 12,
+    "informational_self_service": 12,
+    "careers_training_education": 8,
+    "generic_erp_platform_ambiguity": 8,
+    "geography_modified": 10,
+    "ambiguous_mixed_intent": 12
+  },
+  "family_counts": {
+    "direct_commercial_1c_service": 20,
+    "informational_self_service": 12,
+    "generic_erp_platform_ambiguity": 8,
+    "careers_training_education": 8,
+    "product_license_version": 12,
+    "geography_modified": 10,
+    "ambiguous_mixed_intent": 12,
+    "integrations": 10,
+    "marking_chestny_znak": 8,
+    "problem_troubleshooting": 15,
+    "ts_piot": 5
+  },
+  "selection_log": [
+    {
+      "type": "edge_case",
+      "edge": "product_plus_service_bundle",
+      "phrase_id": "CR2-PHR-01629"
+    },
+    {
+      "type": "edge_case",
+      "edge": "problem_without_commercial_marker",
+      "phrase_id": "CR2-PHR-02240"
+    },
+    {
+      "type": "edge_case",
+      "edge": "psr_amb_01_family",
+      "phrase_id": "CR2-PHR-00756"
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00295",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00086",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00264",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00376",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00013",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00059",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00568",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00203",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00017",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00044",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00102",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00406",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00130",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00381",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00019",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00515",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00735",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00167",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "direct_commercial_1c_service",
+      "phrase_id": "CR2-PHR-00331",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02160",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02235",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02223",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02053",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02192",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-01742",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-01877",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02153",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-01487",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02190",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02239",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-01973",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02165",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "problem_troubleshooting",
+      "phrase_id": "CR2-PHR-02220",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-00844",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-02101",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-02094",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-01974",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-00860",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-02228",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-02104",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-02099",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-02177",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "integrations",
+      "phrase_id": "CR2-PHR-01878",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01152",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01018",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01308",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01030",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01020",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01156",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-00983",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "marking_chestny_znak",
+      "phrase_id": "CR2-PHR-01108",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ts_piot",
+      "phrase_id": "CR2-PHR-02340",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ts_piot",
+      "phrase_id": "CR2-PHR-02354",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ts_piot",
+      "phrase_id": "CR2-PHR-02336",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ts_piot",
+      "phrase_id": "CR2-PHR-02303",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ts_piot",
+      "phrase_id": "CR2-PHR-02304",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01563",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-00343",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01501",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-02344",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01457",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01337",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01803",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01553",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01849",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01636",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01244",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "product_license_version",
+      "phrase_id": "CR2-PHR-01362",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00063",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-01541",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00127",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00199",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00271",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00145",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-01641",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-01342",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-01799",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00288",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-00191",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "informational_self_service",
+      "phrase_id": "CR2-PHR-01763",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00540",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00510",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00377",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00399",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00216",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00392",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00362",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "careers_training_education",
+      "phrase_id": "CR2-PHR-00494",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-02006",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-02179",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-00100",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-00863",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-02333",
+      "tag_fallback": true
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-00636",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-00752",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "generic_erp_platform_ambiguity",
+      "phrase_id": "CR2-PHR-01351",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00553",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00422",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00745",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00451",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00618",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00387",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00754",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00538",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00763",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "geography_modified",
+      "phrase_id": "CR2-PHR-00426",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-01432",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-01586",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-00705",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-00635",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-01534",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-01613",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-00655",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-00628",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-01416",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-01438",
+      "tag_fallback": false
+    },
+    {
+      "type": "family_minimum",
+      "family": "ambiguous_mixed_intent",
+      "phrase_id": "CR2-PHR-00765",
+      "tag_fallback": false
+    }
+  ],
+  "items": [
+    {
+      "phrase_id": "CR2-PHR-00013",
+      "phrase": "собеседование 1с программиста",
+      "normalized_phrase": "собеседование 1с программиста",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00017",
+      "phrase": "вопрос программисту 1с",
+      "normalized_phrase": "вопрос программисту 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00019",
+      "phrase": "программист разработчик 1с",
+      "normalized_phrase": "программист разработчик 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00044",
+      "phrase": "как стать программистом 1с",
+      "normalized_phrase": "как стать программистом 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00059",
+      "phrase": "1с программист красноярск",
+      "normalized_phrase": "1с программист красноярск",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": true,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00063",
+      "phrase": "форум 1с программистов",
+      "normalized_phrase": "форум 1с программистов",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00086",
+      "phrase": "1с программисты ростов",
+      "normalized_phrase": "1с программисты ростов",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": true,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00100",
+      "phrase": "erp программиста 1с",
+      "normalized_phrase": "erp программиста 1с",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:generic_erp_platform_ambiguity",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-00102",
+      "phrase": "требуется программист 1с",
+      "normalized_phrase": "требуется программист 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00127",
+      "phrase": "инструкция программиста 1с",
+      "normalized_phrase": "инструкция программиста 1с",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00130",
+      "phrase": "программист консультант 1с",
+      "normalized_phrase": "программист консультант 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00145",
+      "phrase": "должностная инструкция программиста 1с",
+      "normalized_phrase": "должностная инструкция программиста 1с",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00167",
+      "phrase": "бухгалтерия для программиста 1с",
+      "normalized_phrase": "бухгалтерия для программиста 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00191",
+      "phrase": "1с программист самостоятельно",
+      "normalized_phrase": "1с программист самостоятельно",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00199",
+      "phrase": "1с программист самому",
+      "normalized_phrase": "1с программист самому",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00203",
+      "phrase": "пример тз для программиста 1с",
+      "normalized_phrase": "пример тз для программиста 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00216",
+      "phrase": "программист 1с вакансии владивосток",
+      "normalized_phrase": "программист 1с вакансии владивосток",
+      "primary_family": "careers_training_education",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": true,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00264",
+      "phrase": "ironskills программист 1с",
+      "normalized_phrase": "ironskills программист 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00271",
+      "phrase": "программист 1с с нуля самостоятельно",
+      "normalized_phrase": "программист 1с с нуля самостоятельно",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00288",
+      "phrase": "1с программист обучение с нуля самостоятельно",
+      "normalized_phrase": "1с программист обучение с нуля самостоятельно",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00295",
+      "phrase": "программист 1с барнаул",
+      "normalized_phrase": "программист 1с барнаул",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00331",
+      "phrase": "программист 1с дмитрий",
+      "normalized_phrase": "программист 1с дмитрий",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00343",
+      "phrase": "лицензия программиста 1с",
+      "normalized_phrase": "лицензия программиста 1с",
+      "primary_family": "product_license_version",
+      "tags": [
+        "product_only",
+        "product_plus_service_bundle"
+      ],
+      "edge_cases": [
+        "product_plus_service_bundle",
+        "psr_amb_01_family"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": true,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:product_license_version",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00362",
+      "phrase": "работа стажером программистом 1с",
+      "normalized_phrase": "работа стажером программистом 1с",
+      "primary_family": "careers_training_education",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00376",
+      "phrase": "1с клуб программистов и робототехники кострома",
+      "normalized_phrase": "1с клуб программистов и робототехники кострома",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00377",
+      "phrase": "программист 1с средняя зарплата москва",
+      "normalized_phrase": "программист 1с средняя зарплата москва",
+      "primary_family": "careers_training_education",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": true,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00381",
+      "phrase": "skillbox 1с программист",
+      "normalized_phrase": "skillbox 1с программист",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00387",
+      "phrase": "программист 1с обучение спб",
+      "normalized_phrase": "программист 1с обучение спб",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00392",
+      "phrase": "вакансии программиста 1с верхняя пышма",
+      "normalized_phrase": "вакансии программиста 1с верхняя пышма",
+      "primary_family": "careers_training_education",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": true,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00399",
+      "phrase": "вакансии программиста 1с уфа",
+      "normalized_phrase": "вакансии программиста 1с уфа",
+      "primary_family": "careers_training_education",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": true,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00406",
+      "phrase": "1с программист быстрый старт",
+      "normalized_phrase": "1с программист быстрый старт",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00422",
+      "phrase": "программист 1с обучение с нуля екатеринбург",
+      "normalized_phrase": "программист 1с обучение с нуля екатеринбург",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00426",
+      "phrase": "программист 1с обучение с нуля спб",
+      "normalized_phrase": "программист 1с обучение с нуля спб",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00451",
+      "phrase": "курсы программист 1с спб",
+      "normalized_phrase": "курсы программист 1с спб",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00494",
+      "phrase": "программист 1с красноярск вакансии без опыта",
+      "normalized_phrase": "программист 1с красноярск вакансии без опыта",
+      "primary_family": "careers_training_education",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": true,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00510",
+      "phrase": "освоив программу 1с куда может трудоустроиться программист",
+      "normalized_phrase": "освоив программу 1с куда может трудоустроиться программист",
+      "primary_family": "careers_training_education",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": true,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00515",
+      "phrase": "что должен уметь программист 1с",
+      "normalized_phrase": "что должен уметь программист 1с",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00538",
+      "phrase": "программист 1с обучение с нуля челябинск",
+      "normalized_phrase": "программист 1с обучение с нуля челябинск",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00540",
+      "phrase": "тестовое задание для стажера программиста 1с",
+      "normalized_phrase": "тестовое задание для стажера программиста 1с",
+      "primary_family": "careers_training_education",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:careers_training_education",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00553",
+      "phrase": "программист 1с обучение с нуля курсы спб",
+      "normalized_phrase": "программист 1с обучение с нуля курсы спб",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": true,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00568",
+      "phrase": "программист 1с лидер фарм",
+      "normalized_phrase": "программист 1с лидер фарм",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00618",
+      "phrase": "центр сопровождения 1с екатеринбург",
+      "normalized_phrase": "центр сопровождения 1с екатеринбург",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00628",
+      "phrase": "1с сопровождение цены",
+      "normalized_phrase": "1с сопровождение цены",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00635",
+      "phrase": "сопровождение 1с организации",
+      "normalized_phrase": "сопровождение 1с организации",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00636",
+      "phrase": "сопровождение 1с erp",
+      "normalized_phrase": "сопровождение 1с erp",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ABSTAIN",
+      "review_required": true,
+      "selection_reason": "family_minimum:generic_erp_platform_ambiguity",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00655",
+      "phrase": "казначейское сопровождение в 1с бухгалтерия",
+      "normalized_phrase": "казначейское сопровождение в 1с бухгалтерия",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00705",
+      "phrase": "техническое сопровождение 1с предприятие",
+      "normalized_phrase": "техническое сопровождение 1с предприятие",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00735",
+      "phrase": "сопровождение 1с стоимость 1 часа",
+      "normalized_phrase": "сопровождение 1с стоимость 1 часа",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "family_minimum:direct_commercial_1c_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00745",
+      "phrase": "сопровождение 1с ростов",
+      "normalized_phrase": "сопровождение 1с ростов",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00752",
+      "phrase": "техническое задание на сопровождение 1с erp",
+      "normalized_phrase": "техническое задание на сопровождение 1с erp",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ABSTAIN",
+      "review_required": true,
+      "selection_reason": "family_minimum:generic_erp_platform_ambiguity",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00754",
+      "phrase": "сопровождение и поддержка 1с в красноярске",
+      "normalized_phrase": "сопровождение и поддержка 1с в красноярске",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00756",
+      "phrase": "услуги сопровождение 1с систем купить",
+      "normalized_phrase": "услуги сопровождение 1с систем купить",
+      "primary_family": "direct_commercial_1c_service",
+      "tags": [
+        "product_plus_service_bundle"
+      ],
+      "edge_cases": [
+        "product_plus_service_bundle",
+        "psr_amb_01_family"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": true,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ACCEPT",
+      "review_required": false,
+      "selection_reason": "edge_case_required:psr_amb_01_family"
+    },
+    {
+      "phrase_id": "CR2-PHR-00763",
+      "phrase": "сопровождение 1с новосибирск",
+      "normalized_phrase": "сопровождение 1с новосибирск",
+      "primary_family": "geography_modified",
+      "tags": [
+        "geography"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:geography_modified",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00765",
+      "phrase": "доработка конфигурации 1с",
+      "normalized_phrase": "доработка конфигурации 1с",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00844",
+      "phrase": "управление сайтом интеграция с 1с",
+      "normalized_phrase": "управление сайтом интеграция с 1с",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00860",
+      "phrase": "настройка интеграции 1с и битрикс",
+      "normalized_phrase": "настройка интеграции 1с и битрикс",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-00863",
+      "phrase": "интеграция битрикс 1с erp",
+      "normalized_phrase": "интеграция битрикс 1с erp",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "integrations",
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum_tag_fallback:generic_erp_platform_ambiguity",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-00983",
+      "phrase": "маркировка в 1с комплексная автоматизация",
+      "normalized_phrase": "маркировка в 1с комплексная автоматизация",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01018",
+      "phrase": "как удалить маркировку в 1с",
+      "normalized_phrase": "как удалить маркировку в 1с",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01020",
+      "phrase": "подключение маркировки в 1с",
+      "normalized_phrase": "подключение маркировки в 1с",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01030",
+      "phrase": "как настроить маркировку в 1с розница",
+      "normalized_phrase": "как настроить маркировку в 1с розница",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01108",
+      "phrase": "1с ут 11 честный знак",
+      "normalized_phrase": "1с ут 11 честный знак",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01152",
+      "phrase": "честный знак в 1с бп",
+      "normalized_phrase": "честный знак в 1с бп",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01156",
+      "phrase": "маркировка честный знак через 1с",
+      "normalized_phrase": "маркировка честный знак через 1с",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01244",
+      "phrase": "локальный модуль честный знак 1с скачать",
+      "normalized_phrase": "локальный модуль честный знак 1с скачать",
+      "primary_family": "product_license_version",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01308",
+      "phrase": "как честный знак синхронизировать с 1с ут",
+      "normalized_phrase": "как честный знак синхронизировать с 1с ут",
+      "primary_family": "marking_chestny_znak",
+      "tags": [
+        "marking_chestny_znak"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:marking_chestny_znak",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01337",
+      "phrase": "скачать печатную форму 1с",
+      "normalized_phrase": "скачать печатную форму 1с",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01342",
+      "phrase": "как настроить печатную форму в 1с",
+      "normalized_phrase": "как настроить печатную форму в 1с",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01351",
+      "phrase": "1с erp печатные формы",
+      "normalized_phrase": "1с erp печатные формы",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "ABSTAIN",
+      "review_required": true,
+      "selection_reason": "family_minimum:generic_erp_platform_ambiguity",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01362",
+      "phrase": "1с внешняя печатная форма скачать",
+      "normalized_phrase": "1с внешняя печатная форма скачать",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01416",
+      "phrase": "1с бп внешняя печатная форма",
+      "normalized_phrase": "1с бп внешняя печатная форма",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01432",
+      "phrase": "1с печатная форма выбор",
+      "normalized_phrase": "1с печатная форма выбор",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01438",
+      "phrase": "сумма в печатной форме 1с",
+      "normalized_phrase": "сумма в печатной форме 1с",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01457",
+      "phrase": "скачать печатные формы 1с 8.3",
+      "normalized_phrase": "скачать печатные формы 1с 8 3",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01487",
+      "phrase": "как в 1с исправить печатную форму",
+      "normalized_phrase": "как в 1с исправить печатную форму",
+      "primary_family": "problem_troubleshooting",
+      "tags": [],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01501",
+      "phrase": "внешняя печатная форма 1с скачать бесплатно",
+      "normalized_phrase": "внешняя печатная форма 1с скачать бесплатно",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01534",
+      "phrase": "данные из печатной формы 1с",
+      "normalized_phrase": "данные из печатной формы 1с",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01541",
+      "phrase": "как настроить печатные формы в 1с 8.3",
+      "normalized_phrase": "как настроить печатные формы в 1с 8 3",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01553",
+      "phrase": "1с печатная форма счет скачать",
+      "normalized_phrase": "1с печатная форма счет скачать",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01563",
+      "phrase": "1с внешняя печатная форма упд скачать",
+      "normalized_phrase": "1с внешняя печатная форма упд скачать",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01586",
+      "phrase": "qr код в печатной форме 1с",
+      "normalized_phrase": "qr код в печатной форме 1с",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01613",
+      "phrase": "1с ут изменить печатную форму",
+      "normalized_phrase": "1с ут изменить печатную форму",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ambiguous_mixed_intent",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01629",
+      "phrase": "1с бухгалтерия внешние печатные формы скачать",
+      "normalized_phrase": "1с бухгалтерия внешние печатные формы скачать",
+      "primary_family": "ambiguous_mixed_intent",
+      "tags": [
+        "product_plus_service_bundle"
+      ],
+      "edge_cases": [
+        "product_plus_service_bundle",
+        "psr_amb_01_family"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": true,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "edge_case_required:product_plus_service_bundle"
+    },
+    {
+      "phrase_id": "CR2-PHR-01636",
+      "phrase": "печатные формы 1с 7.7 скачать",
+      "normalized_phrase": "печатные формы 1с 7 7 скачать",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01641",
+      "phrase": "как установить печатную форму в 1с",
+      "normalized_phrase": "как установить печатную форму в 1с",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01742",
+      "phrase": "1с ошибка печатная форма недоступна",
+      "normalized_phrase": "1с ошибка печатная форма недоступна",
+      "primary_family": "problem_troubleshooting",
+      "tags": [],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01763",
+      "phrase": "создание печатных форм 1с инструкция",
+      "normalized_phrase": "создание печатных форм 1с инструкция",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": true,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01799",
+      "phrase": "как обновить печатную форму упд в 1с",
+      "normalized_phrase": "как обновить печатную форму упд в 1с",
+      "primary_family": "informational_self_service",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:informational_self_service",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01803",
+      "phrase": "макеты печатных форм 1с скачать",
+      "normalized_phrase": "макеты печатных форм 1с скачать",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01849",
+      "phrase": "скачать печатная форма ос 6а 1с",
+      "normalized_phrase": "скачать печатная форма ос 6а 1с",
+      "primary_family": "product_license_version",
+      "tags": [],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-01877",
+      "phrase": "ошибки синхронизации 1с",
+      "normalized_phrase": "ошибки синхронизации 1с",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01878",
+      "phrase": "синхронизация между 1с зуп",
+      "normalized_phrase": "синхронизация между 1с зуп",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01973",
+      "phrase": "1с ошибка синхронизации данных",
+      "normalized_phrase": "1с ошибка синхронизации данных",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-01974",
+      "phrase": "1с синхронизация префикс",
+      "normalized_phrase": "1с синхронизация префикс",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02006",
+      "phrase": "1с синхронизация зуп erp",
+      "normalized_phrase": "1с синхронизация зуп erp",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "integrations",
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum_tag_fallback:generic_erp_platform_ambiguity",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-02053",
+      "phrase": "ошибка синхронизации 1с 8.3",
+      "normalized_phrase": "ошибка синхронизации 1с 8 3",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02094",
+      "phrase": "синхронизация 1с интернет магазинами",
+      "normalized_phrase": "синхронизация 1с интернет магазинами",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02099",
+      "phrase": "1с повторная синхронизация данных",
+      "normalized_phrase": "1с повторная синхронизация данных",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02101",
+      "phrase": "синхронизация серверных баз 1с",
+      "normalized_phrase": "синхронизация серверных баз 1с",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02104",
+      "phrase": "1с розница синхронизация 2.3 и 3.0",
+      "normalized_phrase": "1с розница синхронизация 2 3 и 3 0",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02153",
+      "phrase": "не работает синхронизация 1с 8.3",
+      "normalized_phrase": "не работает синхронизация 1с 8 3",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02160",
+      "phrase": "ошибка при настройке синхронизации 1с",
+      "normalized_phrase": "ошибка при настройке синхронизации 1с",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02165",
+      "phrase": "1с синхронизация ошибка доступа к файлу",
+      "normalized_phrase": "1с синхронизация ошибка доступа к файлу",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02177",
+      "phrase": "экватор синхронизация с 1с",
+      "normalized_phrase": "экватор синхронизация с 1с",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02179",
+      "phrase": "настройка синхронизации 1с зуп и erp",
+      "normalized_phrase": "настройка синхронизации 1с зуп и erp",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "integrations",
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum_tag_fallback:generic_erp_platform_ambiguity",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-02190",
+      "phrase": "почему не работает синхронизация в 1с",
+      "normalized_phrase": "почему не работает синхронизация в 1с",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02192",
+      "phrase": "после обновления 1с не работает синхронизация",
+      "normalized_phrase": "после обновления 1с не работает синхронизация",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02220",
+      "phrase": "1с ошибка синхронизация недоступна для использования",
+      "normalized_phrase": "1с ошибка синхронизация недоступна для использования",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02223",
+      "phrase": "ошибка доступа к локальному файлу 1с синхронизация",
+      "normalized_phrase": "ошибка доступа к локальному файлу 1с синхронизация",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02228",
+      "phrase": "1с наименование этой информационной базы для синхронизации",
+      "normalized_phrase": "1с наименование этой информационной базы для синхронизации",
+      "primary_family": "integrations",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:integrations",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02235",
+      "phrase": "1с ошибка формата потока при синхронизации",
+      "normalized_phrase": "1с ошибка формата потока при синхронизации",
+      "primary_family": "problem_troubleshooting",
+      "tags": [
+        "integrations"
+      ],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02239",
+      "phrase": "программа 1с не работает",
+      "normalized_phrase": "программа 1с не работает",
+      "primary_family": "problem_troubleshooting",
+      "tags": [],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:problem_troubleshooting",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02240",
+      "phrase": "почему не работает программа 1с",
+      "normalized_phrase": "почему не работает программа 1с",
+      "primary_family": "problem_troubleshooting",
+      "tags": [],
+      "edge_cases": [
+        "problem_without_commercial_marker"
+      ],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "edge_case_required:problem_without_commercial_marker"
+    },
+    {
+      "phrase_id": "CR2-PHR-02303",
+      "phrase": "тс пиот установка 1с",
+      "normalized_phrase": "тс пиот установка 1с",
+      "primary_family": "ts_piot",
+      "tags": [
+        "ts_piot"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ts_piot",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02304",
+      "phrase": "настройка тс пиот в 1с розница 2.3",
+      "normalized_phrase": "настройка тс пиот в 1с розница 2 3",
+      "primary_family": "ts_piot",
+      "tags": [
+        "ts_piot"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ts_piot",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02333",
+      "phrase": "тс пиот 1с erp",
+      "normalized_phrase": "тс пиот 1с erp",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "tags": [
+        "ts_piot",
+        "erp_reference"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum_tag_fallback:generic_erp_platform_ambiguity",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-02336",
+      "phrase": "тс пиот для 1с 2.3",
+      "normalized_phrase": "тс пиот для 1с 2 3",
+      "primary_family": "ts_piot",
+      "tags": [
+        "ts_piot"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ts_piot",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02340",
+      "phrase": "установка тс пиот 1с ут",
+      "normalized_phrase": "установка тс пиот 1с ут",
+      "primary_family": "ts_piot",
+      "tags": [
+        "ts_piot"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ts_piot",
+      "selection_family_override": false
+    },
+    {
+      "phrase_id": "CR2-PHR-02344",
+      "phrase": "1с тс пиот скачать",
+      "normalized_phrase": "1с тс пиот скачать",
+      "primary_family": "product_license_version",
+      "tags": [
+        "ts_piot"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": true,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "pre_authorized",
+      "expected_verdict": "REJECT",
+      "review_required": false,
+      "selection_reason": "family_minimum_tag_fallback:product_license_version",
+      "selection_family_override": true
+    },
+    {
+      "phrase_id": "CR2-PHR-02354",
+      "phrase": "1с не видит тс пиот",
+      "normalized_phrase": "1с не видит тс пиот",
+      "primary_family": "ts_piot",
+      "tags": [
+        "ts_piot"
+      ],
+      "edge_cases": [],
+      "evidence_summary": {
+        "strong_commercial": false,
+        "strong_commercial_problem": false,
+        "product_only": false,
+        "product_plus_service": false,
+        "product_version_update": false,
+        "ambiguous_diy_problem": false,
+        "career": false,
+        "education": false,
+        "diy": false,
+        "informational": false
+      },
+      "platform_classification": "EXPLICIT_COMPATIBLE",
+      "expectation_class": "review_required",
+      "expected_verdict": null,
+      "review_required": true,
+      "selection_reason": "family_minimum:ts_piot",
+      "selection_family_override": false
+    }
+  ],
+  "created_at": "2026-06-27T21:24:45.547Z"
+}

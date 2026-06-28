@@ -1,0 +1,52 @@
+{
+  "run_id": "corv-semantic-v2-20260626-003",
+  "project_id": "PRJ-0013",
+  "mig_session_id": "session-mig-20260622-corv01",
+  "corpus_count": 2368,
+  "corpus_sha256": "eaa09b8450f8273890676c1ac2746172fac3cd884a4ee9697a8076593355b4fc",
+  "orca_wave": "3.1F",
+  "orca_repair_authority": "APPROVED ORCA REPAIR AUTHORITY — FROZEN",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.4",
+  "hard_rules_version": "v1.1",
+  "adjudicator_version": "v1.4",
+  "service_intent_evidence_version": "v1.1",
+  "platform_compatibility_version": "v1.0",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "lifecycle_state": "BLOCKED_AT_SPPC_05",
+  "authorized_phases": [
+    "Phase 0 — authority verification",
+    "Phase 1 — new run registration",
+    "Phase 2 — SPPC-05 validation retry"
+  ],
+  "prohibited_phases": [
+    "Phase 3 canary",
+    "full 2368 corpus",
+    "semantic production",
+    "Wave 5"
+  ],
+  "cost_limits": {
+    "hard_cap_usd": 3,
+    "soft_warning_usd": 2
+  },
+  "operator_decisions": {
+    "orca_repair": "APPROVED",
+    "run_002": "BLOCKED_AT_SPPC_05 — NON-RESUMABLE — IMMUTABLE FAILED EVIDENCE",
+    "run_003": "AUTHORIZED FOR SPPC-05 RETRY ONLY",
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "hard_cost_cap_usd": 3,
+    "soft_cost_warning_usd": 2,
+    "old_forensic_cache": "PROHIBITED",
+    "old_checkpoint_lock": "PROHIBITED",
+    "missing_ts_piot_serp": "NON-BLOCKING",
+    "psr_amb_01": "KNOWN PRE-EXISTING AMBIGUITY — NON-BLOCKING FOR RETRY — MUST REMAIN REPORTED",
+    "phase_3": "NOT AUTHORIZED",
+    "wave_5": "BLOCKED"
+  },
+  "recovery_authority": "ebc65acd4087fa9d180bb2a50921027fde51e3b7",
+  "created_at": "2026-06-26T09:33:53.228Z",
+  "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-003",
+  "git_run_dir": "projects\\mars-search-ppc-production\\pilots\\corvonero\\runs\\corv-semantic-v2-20260626-003",
+  "gate_b": "FAILED"
+}

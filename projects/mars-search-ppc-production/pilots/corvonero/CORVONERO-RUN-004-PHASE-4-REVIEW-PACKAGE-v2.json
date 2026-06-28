@@ -1,0 +1,140 @@
+{
+  "package_id": "corvonero-run-004-phase-4-review-package-v2",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "phase_verdict": "PARTIAL — INCOMPLETE — 1599/2368 assessed",
+  "lifecycle_state": "BLOCKED_AT_PHASE_4",
+  "project_lifecycle": "BLOCKED_AT_PHASE_4",
+  "verdict_distribution": {
+    "ACCEPT": 529,
+    "REJECT": 762,
+    "ABSTAIN": 308
+  },
+  "review_queue_size": 320,
+  "mandatory_review": [
+    "CR2-PHR-00200",
+    "CR2-PHR-00584"
+  ],
+  "trigger_reconciliation_verdict": "PHASE_4_TRIGGER_RECONCILIATION — PASS",
+  "family_reviews": [
+    {
+      "family": "direct_commercial_1c_service",
+      "count": 63,
+      "distribution": {
+        "ACCEPT": 61,
+        "REJECT": 1,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "careers_training_education",
+      "count": 178,
+      "distribution": {
+        "ACCEPT": 3,
+        "REJECT": 175,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "informational_self_service",
+      "count": 30,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 29,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "problem_troubleshooting",
+      "count": 15,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 1,
+        "ABSTAIN": 14
+      }
+    },
+    {
+      "family": "generic_erp_platform_ambiguity",
+      "count": 6,
+      "distribution": {
+        "ACCEPT": 3,
+        "REJECT": 2,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "integrations",
+      "count": 54,
+      "distribution": {
+        "ACCEPT": 41,
+        "REJECT": 8,
+        "ABSTAIN": 5
+      }
+    },
+    {
+      "family": "marking_chestny_znak",
+      "count": 416,
+      "distribution": {
+        "ACCEPT": 73,
+        "REJECT": 183,
+        "ABSTAIN": 160
+      }
+    },
+    {
+      "family": "ts_piot",
+      "count": 7,
+      "distribution": {
+        "ACCEPT": 1,
+        "REJECT": 2,
+        "ABSTAIN": 4
+      }
+    },
+    {
+      "family": "geography_modified",
+      "count": 8,
+      "distribution": {
+        "ACCEPT": 8,
+        "REJECT": 0,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "ambiguous_mixed_intent",
+      "count": 822,
+      "distribution": {
+        "ACCEPT": 339,
+        "REJECT": 361,
+        "ABSTAIN": 122
+      }
+    }
+  ],
+  "career_gate": {
+    "career_accept_raw_count": 3,
+    "career_accept_confirmed_error_count": 0,
+    "career_accept_classifier_false_positive_count": 0,
+    "career_accept_review_pending_count": 1,
+    "career_accept_override_count": 0,
+    "career_accept_rate": 0.001876,
+    "items": [
+      {
+        "phrase_id": "CR2-PHR-00559",
+        "phrase": "стажировка 1с программист ростов на дону",
+        "classification": "OPERATOR_REVIEW_REQUIRED",
+        "contributes_to_stop": false,
+        "model_verdict": "ACCEPT",
+        "final_authoritative_verdict": "ACCEPT",
+        "rationale": "Primary/reassessment consensus REJECT contradicts final ACCEPT — review item, not broad stop contributor"
+      }
+    ],
+    "confirmed_error_ids": [],
+    "unresolved_confirmed_error_ids": [],
+    "stop_issues": [],
+    "stop_required": false,
+    "monitored_patterns": "(?:стажер|стажировк|ваканс|работа\\s+программист(?:ом|ами|ов|ке)|ищу\\s+работ|резюме|зарплат|собеседован)"
+  },
+  "cost": {
+    "cumulative_cost_usd": 1.9158524
+  },
+  "operator_review_required": true,
+  "strategy_authorized": false,
+  "next_gate": "OPERATOR REVIEW OF CORVONERO RUN 004 COMPLETED PHASE 4"
+}

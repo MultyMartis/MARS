@@ -1,0 +1,262 @@
+{
+  "results": [
+    {
+      "record_id": "PC-ACCEPT-01",
+      "class": "1c_service_update",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "match": true,
+      "primary": "ACCEPT",
+      "hard_rule": null,
+      "structured_signals": [
+        "provider_profession_noun",
+        "service_update_intent"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "1c"
+        ],
+        "generic_platform_families": [],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_COMPATIBLE",
+        "foreign_platform": false,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": false
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-REJECT-01",
+      "class": "foreign_product_update",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true,
+      "primary": "REJECT",
+      "hard_rule": null,
+      "structured_signals": [
+        "product_version_update"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "sap"
+        ],
+        "generic_platform_families": [],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_INCOMPATIBLE",
+        "foreign_platform": true,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": true
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-REJECT-02",
+      "class": "foreign_product_update",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true,
+      "primary": "REJECT",
+      "hard_rule": null,
+      "structured_signals": [
+        "product_version_update"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "dynamics"
+        ],
+        "generic_platform_families": [],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_INCOMPATIBLE",
+        "foreign_platform": true,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": true
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-REJECT-03",
+      "class": "1c_self_update",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true,
+      "primary": "REJECT",
+      "hard_rule": null,
+      "structured_signals": [],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "1c"
+        ],
+        "generic_platform_families": [],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_COMPATIBLE",
+        "foreign_platform": false,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": false
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-ACCEPT-02",
+      "class": "1c_service_update",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "match": true,
+      "primary": "ACCEPT",
+      "hard_rule": null,
+      "structured_signals": [
+        "provider_profession_noun",
+        "procurement_modifier",
+        "service_update_intent"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "1c"
+        ],
+        "generic_platform_families": [],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_COMPATIBLE",
+        "foreign_platform": false,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": false
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-ABSTAIN-01",
+      "class": "generic_erp_update",
+      "expected": "ABSTAIN",
+      "final": "ABSTAIN",
+      "match": true,
+      "primary": "ABSTAIN",
+      "hard_rule": "ABSTAIN",
+      "structured_signals": [
+        "product_version_update"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [],
+        "generic_platform_families": [
+          "erp"
+        ],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "GENERIC_PLATFORM_FAMILY",
+        "foreign_platform": false,
+        "platform_unspecified": false,
+        "generic_platform_family": true,
+        "incompatible_product_maintenance": false
+      },
+      "findings": [
+        "hard_rule_override"
+      ]
+    },
+    {
+      "record_id": "PC-ABSTAIN-02",
+      "class": "generic_erp_update",
+      "expected": "ABSTAIN",
+      "final": "ABSTAIN",
+      "match": true,
+      "primary": "ABSTAIN",
+      "hard_rule": null,
+      "structured_signals": [],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [],
+        "generic_platform_families": [
+          "erp"
+        ],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "GENERIC_PLATFORM_FAMILY",
+        "foreign_platform": false,
+        "platform_unspecified": false,
+        "generic_platform_family": true,
+        "incompatible_product_maintenance": false
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-REJECT-04",
+      "class": "foreign_product_update",
+      "expected": "REJECT",
+      "final": "REJECT",
+      "match": true,
+      "primary": "REJECT",
+      "hard_rule": null,
+      "structured_signals": [
+        "product_version_update"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "oracle"
+        ],
+        "generic_platform_families": [
+          "erp"
+        ],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_INCOMPATIBLE",
+        "foreign_platform": true,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": true
+      },
+      "findings": []
+    },
+    {
+      "record_id": "PC-ACCEPT-03",
+      "class": "1c_service_update",
+      "expected": "ACCEPT",
+      "final": "ACCEPT",
+      "match": true,
+      "primary": "ACCEPT",
+      "hard_rule": null,
+      "structured_signals": [
+        "provider_profession_noun",
+        "service_update_intent"
+      ],
+      "platform": {
+        "version": "v1.1",
+        "detected_platforms": [
+          "1c"
+        ],
+        "generic_platform_families": [],
+        "approved_platforms": [
+          "1c"
+        ],
+        "classification": "EXPLICIT_COMPATIBLE",
+        "foreign_platform": false,
+        "platform_unspecified": false,
+        "generic_platform_family": false,
+        "incompatible_product_maintenance": false
+      },
+      "findings": []
+    }
+  ],
+  "pass_count": 9,
+  "total": 9
+}

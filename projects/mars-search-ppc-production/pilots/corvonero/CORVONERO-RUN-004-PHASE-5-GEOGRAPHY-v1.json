@@ -1,0 +1,721 @@
+{
+  "geography_id": "corvonero-run-004-phase-5-geography-v1",
+  "primary_markets": [
+    "Новосибирск",
+    "Новосибирская область"
+  ],
+  "expansion_markets": [
+    "Краснодар",
+    "Екатеринбург",
+    "Красноярск",
+    "other million cities",
+    "Russia-wide remote service"
+  ],
+  "phrase_registry": [
+    {
+      "phrase_id": "CR2-PHR-00010",
+      "phrase": "программист 1с москва",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00029",
+      "phrase": "программисты 1с спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00059",
+      "phrase": "1с программист красноярск",
+      "normalized": "красноярск",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00061",
+      "phrase": "программисты 1с екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00072",
+      "phrase": "программист 1с нижний новгород",
+      "normalized": "нижний новгород",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00073",
+      "phrase": "программисты 1с новосибирск",
+      "normalized": "Новосибирск / Новосибирская область",
+      "usable": true,
+      "status": "PRIMARY",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00086",
+      "phrase": "1с программисты ростов",
+      "normalized": "ростов",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00104",
+      "phrase": "программисты 1с самара",
+      "normalized": "самара",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00105",
+      "phrase": "программисты 1с краснодар",
+      "normalized": "краснодар",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00109",
+      "phrase": "программисты 1с владивосток",
+      "normalized": "владивосток",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00121",
+      "phrase": "программисты 1с казань",
+      "normalized": "казань",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00126",
+      "phrase": "программисты 1с челябинск",
+      "normalized": "челябинск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00128",
+      "phrase": "программист 1с ростов на дону",
+      "normalized": "ростов",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00136",
+      "phrase": "программисты 1с воронеж",
+      "normalized": "воронеж",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00160",
+      "phrase": "программист 1с иркутск",
+      "normalized": "иркутск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00166",
+      "phrase": "омск программисты 1с",
+      "normalized": "омск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00171",
+      "phrase": "программист 1с хабаровск",
+      "normalized": "хабаровск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00210",
+      "phrase": "работа москва программист 1с",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00228",
+      "phrase": "1с программист алматы",
+      "normalized": "алматы",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00230",
+      "phrase": "программисты 1с волгоград",
+      "normalized": "волгоград",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00234",
+      "phrase": "программист 1с уфа",
+      "normalized": "уфа",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00242",
+      "phrase": "программист 1с томск",
+      "normalized": "омск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00255",
+      "phrase": "программист 1с тюмень",
+      "normalized": "тюмень",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00274",
+      "phrase": "программист 1с пермь",
+      "normalized": "пермь",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00330",
+      "phrase": "программист 1с удаленно москва",
+      "normalized": "Russia-wide remote",
+      "usable": true,
+      "status": "REMOTE",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00434",
+      "phrase": "работа хабаровск программист 1с",
+      "normalized": "хабаровск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00484",
+      "phrase": "1с программист алматы hh",
+      "normalized": "алматы",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00527",
+      "phrase": "работа 1с программистом воронеж",
+      "normalized": "воронеж",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00536",
+      "phrase": "1с программист москва hh",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00559",
+      "phrase": "стажировка 1с программист ростов на дону",
+      "normalized": "ростов",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00569",
+      "phrase": "авито иркутск программист 1с",
+      "normalized": "иркутск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00580",
+      "phrase": "программист 1с комендантский проспект спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00612",
+      "phrase": "сопровождение 1с екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00618",
+      "phrase": "центр сопровождения 1с екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00626",
+      "phrase": "асп сопровождение 1с екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00629",
+      "phrase": "асп центр сопровождения 1с екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00742",
+      "phrase": "1с сопровождение москва",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00745",
+      "phrase": "сопровождение 1с ростов",
+      "normalized": "ростов",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00754",
+      "phrase": "сопровождение и поддержка 1с в красноярске",
+      "normalized": "красноярск",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00763",
+      "phrase": "сопровождение 1с новосибирск",
+      "normalized": "Новосибирск / Новосибирская область",
+      "usable": true,
+      "status": "PRIMARY",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00839",
+      "phrase": "доработка 1с 7.7 минск",
+      "normalized": "минск",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00024",
+      "phrase": "программист 1с вакансии москва",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00066",
+      "phrase": "программист 1с минск",
+      "normalized": "минск",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00091",
+      "phrase": "программист 1с вакансии спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00125",
+      "phrase": "вакансия программиста 1с красноярск",
+      "normalized": "красноярск",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00149",
+      "phrase": "вакансии программист 1с екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00151",
+      "phrase": "программист 1с вакансии нижний новгород",
+      "normalized": "нижний новгород",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00175",
+      "phrase": "вакансия программист 1с минск",
+      "normalized": "минск",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00184",
+      "phrase": "программист 1с вакансии казань",
+      "normalized": "казань",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00190",
+      "phrase": "вакансии ростов программист 1с",
+      "normalized": "ростов",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00216",
+      "phrase": "программист 1с вакансии владивосток",
+      "normalized": "владивосток",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00224",
+      "phrase": "вакансии программист 1с ростов на дону",
+      "normalized": "ростов",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00237",
+      "phrase": "программист 1с вакансии самара",
+      "normalized": "самара",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00272",
+      "phrase": "1с программист вакансии краснодар",
+      "normalized": "краснодар",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00301",
+      "phrase": "программист 1с омск вакансии",
+      "normalized": "омск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00302",
+      "phrase": "программист 1с челябинск вакансии",
+      "normalized": "челябинск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00314",
+      "phrase": "вакансии программист 1с в новосибирске",
+      "normalized": "Новосибирск / Новосибирская область",
+      "usable": true,
+      "status": "PRIMARY",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00315",
+      "phrase": "вакансии программист 1с волгоград",
+      "normalized": "волгоград",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00316",
+      "phrase": "вакансии программист 1с хабаровск",
+      "normalized": "хабаровск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00334",
+      "phrase": "вакансии программист 1с воронеже",
+      "normalized": "воронеж",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00347",
+      "phrase": "вакансии 1с программист томск",
+      "normalized": "омск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00352",
+      "phrase": "1с программист вакансии тюмень",
+      "normalized": "тюмень",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00357",
+      "phrase": "программист 1с вакансии москва удаленно",
+      "normalized": "Russia-wide remote",
+      "usable": true,
+      "status": "REMOTE",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00377",
+      "phrase": "программист 1с средняя зарплата москва",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00387",
+      "phrase": "программист 1с обучение спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00399",
+      "phrase": "вакансии программиста 1с уфа",
+      "normalized": "уфа",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00412",
+      "phrase": "вакансии программист 1с иркутск",
+      "normalized": "иркутск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00422",
+      "phrase": "программист 1с обучение с нуля екатеринбург",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00426",
+      "phrase": "программист 1с обучение с нуля спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00433",
+      "phrase": "работа программист 1с удаленно вакансии спб",
+      "normalized": "Russia-wide remote",
+      "usable": true,
+      "status": "REMOTE",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00451",
+      "phrase": "курсы программист 1с спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00466",
+      "phrase": "1с программист алматы работа",
+      "normalized": "алматы",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00472",
+      "phrase": "работа программистом 1с в спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00485",
+      "phrase": "вакансии 1с программист стажер москва",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00492",
+      "phrase": "подработка программистом 1с минск",
+      "normalized": "минск",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00493",
+      "phrase": "программист 1с вакансии пермь",
+      "normalized": "пермь",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00494",
+      "phrase": "программист 1с красноярск вакансии без опыта",
+      "normalized": "красноярск",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00501",
+      "phrase": "работа программистом 1с в иркутске",
+      "normalized": "иркутск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00538",
+      "phrase": "программист 1с обучение с нуля челябинск",
+      "normalized": "челябинск",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00552",
+      "phrase": "стажер 1с программист вакансии в новосибирске",
+      "normalized": "Новосибирск / Новосибирская область",
+      "usable": true,
+      "status": "PRIMARY",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00553",
+      "phrase": "программист 1с обучение с нуля курсы спб",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00554",
+      "phrase": "программист 1с вакансии москва форум",
+      "normalized": "москва",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00576",
+      "phrase": "вакансии 1с программист на сопровождение минск",
+      "normalized": "минск",
+      "usable": false,
+      "status": "IRRELEVANT",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00578",
+      "phrase": "вакансии ученик 1с программист красноярск",
+      "normalized": "красноярск",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00581",
+      "phrase": "работа программист 1с спб метро комендантский проспект",
+      "normalized": "спб",
+      "usable": true,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00584",
+      "phrase": "программист 1с стажер аптека плюс самара",
+      "normalized": "самара",
+      "usable": false,
+      "status": "OTHER_RU",
+      "phase5_verdict": "REJECT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00755",
+      "phrase": "асп центр сопровождения 1с екатеринбург вакансии",
+      "normalized": "екатеринбург",
+      "usable": true,
+      "status": "EXPANSION",
+      "phase5_verdict": "REJECT"
+    }
+  ],
+  "distribution": {
+    "primary": 4,
+    "expansion": 15,
+    "remote": 3,
+    "other_ru": 57,
+    "irrelevant": 8,
+    "safe_unknown": 0
+  },
+  "note": "Geography alone is not commercial intent"
+}

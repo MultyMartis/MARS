@@ -1,0 +1,97 @@
+{
+  "document_id": "ORCA-WAVE-3.1F-TARGETED-SPPC05-REPAIR-DECISIONS-v2",
+  "repair_version": "v2",
+  "date": "2026-06-26",
+  "verdict": "ORCA_WAVE_3_1F_TARGETED_SPPC05_REPAIR_V2 — PASS",
+  "ready_for_run_004": true,
+  "run_004_authorized": false,
+  "authority_after_repair": {
+    "prompt_contract": "v1.4",
+    "semantic_adjudicator": "v1.5",
+    "platform_compatibility": "v1.1",
+    "service_intent_evidence": "v1.1",
+    "hard_rules": "v1.2"
+  },
+  "defects": [
+    {
+      "id": "A",
+      "fixture": "PQR-ABSTAIN-03",
+      "phrase": "как исправить ошибку 0x80004005 1с",
+      "root_cause": "adjudicator_ordering",
+      "repair": "applyMandatorySemanticInvariants after SINGLE_ASSESSOR / disagreement / agreement branches"
+    },
+    {
+      "id": "B",
+      "fixture": "PC-ABSTAIN-01",
+      "phrase": "обновление erp до новой версии",
+      "root_cause": "generic_erp_over_rejection",
+      "repair": "PLATFORM_CLASSIFICATION GENERIC_PLATFORM_FAMILY + hard-rule/adjudicator abstain"
+    }
+  ],
+  "files_modified": [
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/adjudication/semantic-adjudicator.mjs",
+      "version_from": "v1.4",
+      "version_to": "v1.5",
+      "sha256_prefix": "9618364947BA812C",
+      "semantic_classes": ["ambiguous_diy_problem", "generic_platform_family_abstain"],
+      "regression_risk": "low — invariant layer is post-branch only"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/evidence/platform-compatibility.mjs",
+      "version_from": "v1.0",
+      "version_to": "v1.1",
+      "sha256_prefix": "49B8C4D604EE732F",
+      "semantic_classes": ["EXPLICIT_COMPATIBLE", "EXPLICIT_INCOMPATIBLE", "GENERIC_PLATFORM_FAMILY", "PLATFORM_UNKNOWN"],
+      "regression_risk": "low — explicit SAP/Dynamics/Oracle path unchanged"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/production/assessors/hard-rules.mjs",
+      "version_from": "v1.1",
+      "version_to": "v1.2",
+      "sha256_prefix": "E6CD74CCCA6ED453",
+      "semantic_classes": ["PLATFORM_SERVICE_COMPATIBILITY", "AMBIGUOUS_DIY"],
+      "regression_risk": "low — generic ERP rule ordered before product_version_update"
+    }
+  ],
+  "files_unchanged": [
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/contracts/prompt-contract.mjs",
+      "version": "v1.4",
+      "sha256_prefix": "481075E55A827404",
+      "rationale": "not required after adjudicator/platform-policy fix"
+    },
+    {
+      "path": "projects/orca/semantic-intelligence/live-model/evidence/service-intent-evidence.mjs",
+      "version": "v1.1",
+      "sha256_prefix": "5BFFF7AE2ED3B854",
+      "rationale": "ambiguous_diy_problem evidence already correct"
+    }
+  ],
+  "regression_summary": {
+    "sppc05_defect_repro": "3/3 PASS",
+    "problem_query": "10/10",
+    "platform_compatibility": "9/9",
+    "under_admission": "23/23",
+    "bypass_audit": "16/16",
+    "ambiguous_problem_policy": "8/8",
+    "product_confirmation_fpr": 0,
+    "geo_commercial_recall": 1.0,
+    "geo_adversarial_fpr": 0,
+    "closed_dataset_exit": 0,
+    "variance_repair_cases_stable": true
+  },
+  "known_ambiguity": {
+    "fixture": "PSR-AMB-01",
+    "phrase": "купить 1с с настройкой",
+    "expected": "ABSTAIN",
+    "observed": "ACCEPT",
+    "stable": true,
+    "blocking": false
+  },
+  "frozen_runs": [
+    "corv-semantic-v2-20260626-002",
+    "corv-semantic-v2-20260626-003"
+  ],
+  "next_run_id": "corv-semantic-v2-20260626-004"
+}

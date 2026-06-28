@@ -1,0 +1,41 @@
+{
+  "document_id": "CORVONERO-RUN-003-SPPC-05-FAILURE-ACCEPTANCE-v1",
+  "run_id": "corv-semantic-v2-20260626-003",
+  "status": "BLOCKED_AT_SPPC_05",
+  "lifecycle": "BLOCKED_AT_SPPC_05",
+  "decision_date": "2026-06-26",
+  "operator_accepted": true,
+  "resume_prohibited": true,
+  "run_id_reuse_prohibited": true,
+  "checkpoint_receipt_immutable": true,
+  "phase_3_blocked": true,
+  "lock": "RELEASED",
+  "full_corpus_calls": 0,
+  "canary_calls": 0,
+  "next_required_run_id": "corv-semantic-v2-20260626-004",
+  "run_004_authorized": false,
+  "co_frozen_runs": [
+    {
+      "run_id": "corv-semantic-v2-20260626-002",
+      "status": "BLOCKED_AT_SPPC_05",
+      "immutable_failed_evidence": true
+    },
+    {
+      "run_id": "corv-semantic-v2-20260626-003",
+      "status": "BLOCKED_AT_SPPC_05",
+      "immutable_failed_evidence": true
+    }
+  ],
+  "confirmed_failure_causes": [
+    {
+      "fixture": "PQR-ABSTAIN-03",
+      "expected": "ABSTAIN",
+      "defect": "adjudicator_ordering"
+    },
+    {
+      "fixture": "PC-ABSTAIN-01",
+      "expected": "ABSTAIN",
+      "defect": "generic_erp_over_rejection"
+    }
+  ]
+}

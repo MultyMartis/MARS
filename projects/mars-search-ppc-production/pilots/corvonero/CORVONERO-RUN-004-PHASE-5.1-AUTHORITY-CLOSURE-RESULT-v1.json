@@ -1,0 +1,133 @@
+{
+  "run_id": "corv-semantic-v2-20260626-004",
+  "result_id": "corvonero-run-004-phase-51-authority-closure-result-v1",
+  "phase_verdict": "PASS — OPERATOR DECISION PACKET REQUIRED",
+  "lifecycle_state": "PHASE_51_PARTIAL_AUTHORITY_CLOSURE",
+  "project_lifecycle": "READY_FOR_FINAL_PARTIAL_SEMANTIC_SIGN-OFF",
+  "provider_calls": "FROZEN",
+  "campaign_architecture": "NOT AUTHORIZED",
+  "operator_decisions": {
+    "CR2-PHR-00200": {
+      "phrase_id": "CR2-PHR-00200",
+      "final_authoritative_verdict": "REJECT",
+      "review_status": "OPERATOR_CONFIRMED",
+      "reason": "informational / DIY query, not direct commercial service demand"
+    },
+    "CR2-PHR-00584": {
+      "phrase_id": "CR2-PHR-00584",
+      "model_verdict": "ACCEPT",
+      "final_authoritative_verdict": "REJECT",
+      "authority": "OPERATOR_ADJUDICATION_OVERRIDE"
+    },
+    "openrouter": "FROZEN",
+    "campaign_architecture": "NOT AUTHORIZED"
+  },
+  "preflight": {
+    "pass": true,
+    "processedIds": 1599,
+    "unprocessedIds": 769,
+    "phase5Counts": {
+      "accept": 531,
+      "reject": 578,
+      "abstain": 490,
+      "sum": 1599
+    },
+    "overlap": 0,
+    "union": 2368
+  },
+  "review_flag_audit": {
+    "stale_review_flag_after_authoritative_verdict": 338,
+    "informational_diy_ambiguity": 1,
+    "education_platform_ambiguity": 1,
+    "operator_decision_applied": 1,
+    "product_plus_service_ambiguity": 1,
+    "primary_reassessment_disagreement_only": 6,
+    "ambiguous_diy_problem_demand": 3
+  },
+  "verdict_distribution": {
+    "phase4": {
+      "ACCEPT": 529,
+      "REJECT": 762,
+      "ABSTAIN": 308
+    },
+    "phase5": {
+      "ACCEPT": 531,
+      "REJECT": 578,
+      "ABSTAIN": 490
+    },
+    "phase51": {
+      "ACCEPT": 926,
+      "REJECT": 358,
+      "ABSTAIN": 315
+    }
+  },
+  "operator_review_required_phase5": 350,
+  "operator_review_required_phase51": 47,
+  "operator_packet_count": 47,
+  "phase51_corrections": 428,
+  "troubleshooting_audit": {
+    "total_assessed": 16,
+    "accept": 1,
+    "reject": 1,
+    "abstain": 14,
+    "zero_accept_phase5_validity": "Phase 5 zero ACCEPT was partially caused by taxonomy mapping — sync-error phrases classified as integration troubleshooting, not SF-TROUBLESHOOTING-NOT-WORKING; classic program-not-working phrases remain ambiguous DIY vs service"
+  },
+  "ts_piot_audit": {
+    "total_assessed": 7,
+    "accept": 1,
+    "reject": 2,
+    "abstain": 4,
+    "accept_explanation": "Only explicit setup/service-demand phrases (e.g. настройка тс пиот) map to SF-TS-PIOT ACCEPT; combined marking+TS ПИОТ and DIY install queries remain ABSTAIN/REJECT",
+    "records": [
+      {
+        "phrase_id": "CR2-PHR-01145",
+        "phrase": "тс пиот честный знак 1с",
+        "phase51_verdict": "ABSTAIN",
+        "service_family": null
+      },
+      {
+        "phrase_id": "CR2-PHR-01239",
+        "phrase": "тс пиот честный знак 1с розница",
+        "phase51_verdict": "ABSTAIN",
+        "service_family": null
+      },
+      {
+        "phrase_id": "CR2-PHR-02315",
+        "phrase": "настройка тс пиот в 1с ут 11.5",
+        "phase51_verdict": "ACCEPT",
+        "service_family": "SF-TS-PIOT"
+      },
+      {
+        "phrase_id": "CR2-PHR-02324",
+        "phrase": "тс пиот как установить в 1с",
+        "phase51_verdict": "REJECT",
+        "service_family": null
+      },
+      {
+        "phrase_id": "CR2-PHR-02331",
+        "phrase": "1с тс пиот сертификация",
+        "phase51_verdict": "REJECT",
+        "service_family": null
+      },
+      {
+        "phrase_id": "CR2-PHR-02338",
+        "phrase": "1с встроенный тс пиот",
+        "phase51_verdict": "ABSTAIN",
+        "service_family": null
+      },
+      {
+        "phrase_id": "CR2-PHR-02354",
+        "phrase": "1с не видит тс пиот",
+        "phase51_verdict": "ABSTAIN",
+        "service_family": null
+      }
+    ]
+  },
+  "integrations_marking_audit": {
+    "total": 482,
+    "unnecessarily_abstain_from_stale_flags": 143,
+    "promoted_to_accept": 260,
+    "remain_abstain": 195
+  },
+  "created_at": "2026-06-28T15:09:04.208Z"
+}

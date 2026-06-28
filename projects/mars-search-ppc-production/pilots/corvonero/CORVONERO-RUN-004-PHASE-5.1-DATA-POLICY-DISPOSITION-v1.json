@@ -1,0 +1,161 @@
+{
+  "disposition_id": "corvonero-run-004-phase-51-data-policy-disposition-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "total": 15,
+  "records": [
+    {
+      "phrase_id": "CR2-PHR-00924",
+      "phrase": "сбис маркировка в 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ACCEPT",
+      "disposition_reason": "Valid structured verdict exists; marking service in scope — promote to ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-00934",
+      "phrase": "передача маркировки в 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ACCEPT",
+      "disposition_reason": "Valid structured verdict exists; marking service in scope — promote to ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01153",
+      "phrase": "тестовый контур честный знак 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "RESOLVED_FROM_EXISTING_EVIDENCE",
+      "resolved_verdict": "REJECT",
+      "disposition_reason": "Marking DIY query resolved from existing evidence"
+    },
+    {
+      "phrase_id": "CR2-PHR-01195",
+      "phrase": "честный знак в 1с комплексная автоматизация",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ACCEPT",
+      "disposition_reason": "Valid structured verdict exists; marking service in scope — promote to ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01221",
+      "phrase": "расширение честный знак для 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "RESOLVED_FROM_EXISTING_EVIDENCE",
+      "resolved_verdict": "REJECT",
+      "disposition_reason": "Marking DIY query resolved from existing evidence"
+    },
+    {
+      "phrase_id": "CR2-PHR-01230",
+      "phrase": "токен для ккт честный знак 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ACCEPT",
+      "disposition_reason": "Valid structured verdict exists; marking service in scope — promote to ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01289",
+      "phrase": "1с унф маркировка остатков честный знак",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ACCEPT",
+      "disposition_reason": "Valid structured verdict exists; marking service in scope — promote to ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01296",
+      "phrase": "1с ка 2 честный знак",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ACCEPT",
+      "disposition_reason": "Valid structured verdict exists; marking service in scope — promote to ACCEPT"
+    },
+    {
+      "phrase_id": "CR2-PHR-01319",
+      "phrase": "1с печатные формы документов",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    },
+    {
+      "phrase_id": "CR2-PHR-01322",
+      "phrase": "печатные формы 1с зуп",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    },
+    {
+      "phrase_id": "CR2-PHR-01338",
+      "phrase": "обработки печатная форма 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    },
+    {
+      "phrase_id": "CR2-PHR-01387",
+      "phrase": "печатные формы расширение 1с",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    },
+    {
+      "phrase_id": "CR2-PHR-01486",
+      "phrase": "отладка печатных форм 1с 8.3",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    },
+    {
+      "phrase_id": "CR2-PHR-01514",
+      "phrase": "1с 7 печатные формы",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    },
+    {
+      "phrase_id": "CR2-PHR-01516",
+      "phrase": "1с зуп 3.1 печатные формы",
+      "phase4_review_reason": "Retried malformed output — verify structured response",
+      "phase5_verdict": "ABSTAIN",
+      "malformed_retry": true,
+      "disposition": "MALFORMED_RETRY_VERIFIED",
+      "resolved_verdict": "ABSTAIN",
+      "disposition_reason": "Valid final response exists — malformed retry flag cleared; retain Phase 5 ABSTAIN as policy-safe default"
+    }
+  ],
+  "summary": {
+    "MALFORMED_RETRY_VERIFIED": 13,
+    "RESOLVED_FROM_EXISTING_EVIDENCE": 2
+  }
+}

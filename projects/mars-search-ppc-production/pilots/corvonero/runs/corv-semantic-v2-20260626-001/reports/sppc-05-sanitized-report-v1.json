@@ -1,0 +1,54 @@
+{
+  "run_id": "corv-semantic-v2-20260626-001",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.3",
+  "adjudicator_version": "v1.3",
+  "fixture_inventory": {
+    "protected_product_confirmation": 106,
+    "geo_commercial_confirmation_v2": 120,
+    "closed_dataset_supplementary": 136,
+    "problem_query_policy": 10,
+    "wave31f_bypass_checks": 12,
+    "under_admission_unit_tests": 18
+  },
+  "suite_results": [],
+  "gate_criteria": {
+    "adversarial_fpr_max_0_01_product": false,
+    "adversarial_fpr_max_0_01_geo": false,
+    "closed_dataset_boxed_delivery_fixed": false,
+    "closed_dataset_product_fpr": false,
+    "problem_query_all_match": false,
+    "wave31f_bypass_all_pass": false,
+    "under_admission_all_pass": false,
+    "all_suites_exit_zero": true,
+    "all_pass": false
+  },
+  "cumulative_cost_usd": 0,
+  "gate_b_verdict": {
+    "status": "FAILED",
+    "project": "BLOCKED_AT_SPPC_05"
+  },
+  "isolation": {
+    "verdict": "BLOCKED — OLD RUN STATE CONTAMINATION",
+    "pass": false,
+    "forbidden_refs": [
+      {
+        "file": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-001\\manifests\\run-manifest-v1.json",
+        "reason": "forensic_reference"
+      }
+    ],
+    "unexpected_runtime_data": []
+  },
+  "secret_summary": {
+    "OPENROUTER_API_KEY": "SET",
+    "ORCA_SEMANTIC_PROVIDER": "openrouter",
+    "ORCA_SEMANTIC_MODEL": "openai/gpt-5-mini",
+    "ORCA_EVAL_LIVE": "enabled",
+    "ORCA_EVAL_MAX_COST": "10",
+    "ORCA_EVAL_MAX_RECORDS": "665",
+    "ORCA_EVAL_BATCH_SIZE": "10",
+    "ORCA_EVAL_CONCURRENCY": "2"
+  },
+  "completed_at": "2026-06-25T18:52:48.651Z"
+}

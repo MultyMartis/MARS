@@ -1,0 +1,174 @@
+{
+  "package_id": "corvonero-run-004-phase-3-canary-review-v2",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "attempt_id": "corv-run004-phase3-canary-attempt-002",
+  "canary_verdict": "PASS — OPERATOR REVIEW REQUIRED",
+  "lifecycle_state": "PHASE_3_COMPLETE",
+  "processed_count": 120,
+  "manifest_id": "corvonero-run-004-phase-3-canary-selection-v2",
+  "expectation_audit_pass": true,
+  "family_counts": {
+    "careers_training_education": 8,
+    "informational_self_service": 13,
+    "direct_commercial_1c_service": 21,
+    "generic_erp_platform_ambiguity": 6,
+    "ambiguous_mixed_intent": 22,
+    "geography_modified": 8,
+    "integrations": 12,
+    "marking_chestny_znak": 10,
+    "problem_troubleshooting": 15,
+    "ts_piot": 5
+  },
+  "attempt_1_overlap": 35,
+  "verdict_distribution": {
+    "ACCEPT": 49,
+    "REJECT": 40,
+    "ABSTAIN": 31
+  },
+  "metrics": {
+    "schema_valid_percentage": 100,
+    "retry_count": 120,
+    "model_error_count": 4,
+    "scored_authoritative_count": 47,
+    "review_required_count": 74,
+    "confirmed_false_accepts": 0,
+    "confirmed_false_rejects": 1,
+    "operator_review_rate": 0.6581196581196581,
+    "resume_completed": true,
+    "resume_added": 3
+  },
+  "cost": {
+    "attempt2_cost_usd": 0.08645745,
+    "cumulative_before_attempt2_usd": 0.7703344999999999,
+    "cumulative_cost_usd": 0.85679195,
+    "input_tokens": 300367,
+    "output_tokens": 69004
+  },
+  "scored_authoritative": {
+    "total": 47,
+    "false_accepts": [],
+    "false_rejects": [
+      {
+        "id": "CR2-PHR-00200",
+        "phrase": "что нужно знать программисту 1с"
+      }
+    ]
+  },
+  "review_required_subset": {
+    "total": 76,
+    "accept": 30,
+    "reject": 16,
+    "abstain": 30
+  },
+  "family_reviews": [
+    {
+      "family": "direct_commercial_1c_service",
+      "count": 21,
+      "distribution": {
+        "ACCEPT": 19,
+        "REJECT": 1,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "careers_training_education",
+      "count": 8,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 8,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "informational_self_service",
+      "count": 13,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 13,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "problem_troubleshooting",
+      "count": 15,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 1,
+        "ABSTAIN": 14
+      }
+    },
+    {
+      "family": "generic_erp_platform_ambiguity",
+      "count": 6,
+      "distribution": {
+        "ACCEPT": 3,
+        "REJECT": 2,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "integrations",
+      "count": 12,
+      "distribution": {
+        "ACCEPT": 5,
+        "REJECT": 3,
+        "ABSTAIN": 4
+      }
+    },
+    {
+      "family": "marking_chestny_znak",
+      "count": 10,
+      "distribution": {
+        "ACCEPT": 3,
+        "REJECT": 5,
+        "ABSTAIN": 2
+      }
+    },
+    {
+      "family": "ts_piot",
+      "count": 5,
+      "distribution": {
+        "ACCEPT": 1,
+        "REJECT": 2,
+        "ABSTAIN": 2
+      }
+    },
+    {
+      "family": "geography_modified",
+      "count": 8,
+      "distribution": {
+        "ACCEPT": 8,
+        "REJECT": 0,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "product_license_version",
+      "count": 0,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 0,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "ambiguous_mixed_intent",
+      "count": 22,
+      "distribution": {
+        "ACCEPT": 10,
+        "REJECT": 5,
+        "ABSTAIN": 7
+      }
+    }
+  ],
+  "operator_review_required": true,
+  "full_corpus_authorized": false,
+  "project_counters": {
+    "canonical_corpus_total": 2368,
+    "attempt_1_canary_processed": 120,
+    "attempt_2_canary_selected": 120,
+    "attempt_2_canary_processed": 120,
+    "full_production_processed": 0
+  },
+  "completed_at": "2026-06-28T06:48:21.789Z"
+}

@@ -1,0 +1,95 @@
+{
+  "matrix_id": "corvonero-new-controlled-semantic-run-gate-matrix-v1",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-06-26",
+  "gates": [
+    {
+      "gate_id": "A",
+      "name": "Charter approval",
+      "phase": "Before any runtime execution",
+      "required_evidence": [
+        "CORVONERO-NEW-CONTROLLED-SEMANTIC-RUN-OPERATOR-CHARTER-v1.md",
+        "CORVONERO-NEW-CONTROLLED-SEMANTIC-RUN-INPUT-MANIFEST-v1.json",
+        "CORVONERO-OLD-RUN-NON-RESUMABLE-v1.json"
+      ],
+      "allowed_decisions": ["APPROVE_CHARTER", "REJECT_CHARTER", "REQUEST_REVISION"],
+      "rejection_behavior": "Stop — no run ID, no lock, no model calls",
+      "resume_permitted": false,
+      "new_run_id_after_failure": "N/A — run not started"
+    },
+    {
+      "gate_id": "B",
+      "name": "SPPC-05 closed-dataset validation",
+      "phase": "Before live canary",
+      "required_evidence": [
+        "SPPC-05 closed-dataset report",
+        "Wave 3.1F regression receipts",
+        "false-accept / false-reject metrics"
+      ],
+      "allowed_decisions": ["PASS", "FAIL", "FAIL_CLOSED"],
+      "rejection_behavior": "Stop — no canary, no production batches",
+      "resume_permitted": false,
+      "new_run_id_after_failure": "Required if corruption or authority mismatch"
+    },
+    {
+      "gate_id": "C",
+      "name": "Canary review",
+      "phase": "Before full corpus",
+      "required_evidence": [
+        "canary batch receipt",
+        "canary class distribution report",
+        "operator review sample"
+      ],
+      "allowed_decisions": ["APPROVE_CONTINUE", "REJECT_STOP", "REQUEST_CANARY_RERUN"],
+      "rejection_behavior": "Stop — lock retained for forensic review only",
+      "resume_permitted": false,
+      "new_run_id_after_failure": "Required for canary rerun after material policy change"
+    },
+    {
+      "gate_id": "D",
+      "name": "Mid-run quality review",
+      "phase": "At fixed processed threshold (e.g. 500 phrases)",
+      "required_evidence": [
+        "cumulative ACCEPT/REJECT/ABSTAIN counts",
+        "error-family audit",
+        "cost report"
+      ],
+      "allowed_decisions": ["CONTINUE", "PAUSE", "STOP_FAIL_CLOSED"],
+      "rejection_behavior": "Pause batches — operator decides resume or abort",
+      "resume_permitted": true,
+      "new_run_id_after_failure": "Required if stop is due to admission failure"
+    },
+    {
+      "gate_id": "E",
+      "name": "Final semantic reconciliation",
+      "phase": "Before semantic assembly authority",
+      "required_evidence": [
+        "full corpus reconciliation receipt",
+        "duplicate/orphan audit",
+        "registry completeness vs 2368"
+      ],
+      "allowed_decisions": ["APPROVE_ASSEMBLY", "REJECT_RECONCILIATION"],
+      "rejection_behavior": "Stop — no semantic registry promotion",
+      "resume_permitted": false,
+      "new_run_id_after_failure": "Required if corpus hash or ID integrity fails"
+    },
+    {
+      "gate_id": "F",
+      "name": "Final handoff approval",
+      "phase": "Before Search PPC strategy work",
+      "required_evidence": [
+        "semantic registry",
+        "operator review package",
+        "MIG/ORCA/Search PPC handoff manifest"
+      ],
+      "allowed_decisions": ["APPROVE_HANDOFF", "REJECT_HANDOFF"],
+      "rejection_behavior": "Semantic outputs remain diagnostic until approved",
+      "resume_permitted": false,
+      "new_run_id_after_failure": "N/A unless handoff corruption detected"
+    }
+  ],
+  "wave5_prohibition": {
+    "status": "BLOCKED",
+    "reasons": ["maturity gate", "W5-01 not built", "project freeze", "failed old SPPC-05", "absence of new operator charter"]
+  }
+}

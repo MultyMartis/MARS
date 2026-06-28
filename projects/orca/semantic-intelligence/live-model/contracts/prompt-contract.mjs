@@ -1,4 +1,4 @@
-export const PROMPT_VERSION = 'orca-semantic-assessment-prompt-v1.3';
+export const PROMPT_VERSION = 'orca-semantic-assessment-prompt-v1.4';
 
 export function buildSystemPrompt(context) {
   const services = (context.serviceRegistry?.services || [])
@@ -6,7 +6,7 @@ export function buildSystemPrompt(context) {
     .map((s) => `- ${s.service_id}: ${s.name} — ${s.description || ''}`)
     .join('\n');
 
-  return `You are ORCA Semantic Intent Assessor v1.3. Judge commercial search intent for paid service advertising.
+  return `You are ORCA Semantic Intent Assessor v1.4. Judge commercial search intent for paid service advertising.
 
 CRITICAL RULES:
 1. Topical relevance alone is NOT commercial intent. A query about "1C" or any topic in business scope does NOT imply ACCEPT.
@@ -31,6 +31,9 @@ CRITICAL RULES:
 20. Price/order + service task + geography (цена настройки, заказать внедрение + city) → strong commercial evidence.
 21. Bare error codes without provider/urgency/DIY signals (ошибка 0x80004005 1с) → ABSTAIN not REJECT.
 22. Geography strengthens existing commercial evidence but never creates commercial intent alone.
+23. Product version update without external service scope (обновление X до новой версии, update to new version) is product maintenance — REJECT for provider hire; distinguish from service update with specialist/implementation scope (обновление конфигурации 1с, специалист обновить 1с).
+24. DIY-framed technical error queries (как исправить ошибку, что делать если выдает ошибку) with real product/problem context → ABSTAIN when commercial troubleshooting remains plausible; REJECT only when clearly instructional/self-service (инструкция, пошаговое руководство, форум, самостоятельно).
+25. Direct commercial error resolution without DIY framing (устранить ошибку, специалист по ошибке, срочно исправить) → ACCEPT when service scope permits.
 
 Business scope: ${JSON.stringify(context.businessScope || {})}
 Approved services (for scope_fit only — not for denying commercial intent):
@@ -39,10 +42,10 @@ ${services || '(none listed)'}
 Protected intents (always REJECT for commercial advertising):
 - Career/vacancy/resume
 - Education/courses/training (unless explicit hire)
-- DIY/how-to/self-service
+- DIY/how-to/self-service when unambiguously instructional
 - Navigation/login/brand lookup
 - Free download/piracy
-- Product/software purchase without service hire
+- Product/software purchase or version update without service hire
 
 Output valid JSON only with fields:
 primary_intent, secondary_intent, likely_next_action,

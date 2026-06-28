@@ -1,0 +1,33 @@
+{
+  "run_id": "corv-semantic-v2-20260626-004",
+  "phase_verdict": "PARTIAL — FAIL-CLOSED — career_education_acceptance_family",
+  "lifecycle_state": "BLOCKED_AT_PHASE_4",
+  "reconciliation": {
+    "canonical_total": 2368,
+    "unique_assessed_ids": 720,
+    "missing_ids": 1648,
+    "complete": false
+  },
+  "verdict_distribution": {
+    "ACCEPT": 249,
+    "REJECT": 433,
+    "ABSTAIN": 38
+  },
+  "registries": {
+    "full_semantic_count": 720,
+    "accept_count": 249,
+    "reject_count": 433,
+    "abstain_count": 38
+  },
+  "cost": {
+    "cumulative_cost_usd": 1.2746279
+  },
+  "malformed_policy": {},
+  "gate_receipts": [],
+  "batch_count": 0,
+  "full_production_complete": false,
+  "partial_stop_reason": "FAIL-CLOSED — career_education_acceptance_family",
+  "resume_from_checkpoint": true,
+  "strategy": "not started",
+  "completed_at": "2026-06-28T11:15:06.351Z"
+}

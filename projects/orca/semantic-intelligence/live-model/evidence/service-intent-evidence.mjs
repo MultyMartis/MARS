@@ -2,7 +2,7 @@
  * Universal service-intent evidence layer — Wave 3.1F.
  * Project-independent patterns; not a closed 1С-only dictionary.
  */
-export const SERVICE_INTENT_EVIDENCE_VERSION = 'v1.0';
+export const SERVICE_INTENT_EVIDENCE_VERSION = 'v1.1';
 
 const PROVIDER_NOUNS = /(?:программист|разработчик|специалист|мастер|юрист|бухгалтер|врач|инженер|консультант|администратор|аналитик|архитектор|дизайнер|монтажник|электрик|сантехник)/i;
 const IMPLEMENTATION_TASKS = /(?:внедрен|настрой|интеграц|доработ|сопровожден|обслуживан|ремонт|установк|миграц|аудит|оптимизац|консультац|устран|исправ|восстанов)/i;
@@ -16,23 +16,41 @@ const INFORMATIONAL_GEO = /(?:где находится|адрес офиса|р
 const PRODUCT_ACQUISITION = /(?:купить|скачать|лицензи(?:я|и|ю)|дистрибутив|коробочн)/i;
 const GEOGRAPHY = /(?:москва|санкт-петербург|спб|екатеринбург|новосибирск|казань|нижний новгород|самара|ростов|краснодар|воронеж|пермь|волгоград|красноярск|тюмень|уфа|омск|челябинск|иркутск|хабаровск|владивосток)/i;
 const BARE_ERROR = /^(?:ошибка|error)\s+[\w0x-]+/i;
-const EXPLICIT_ERROR_RESOLUTION = /(?:устранить|исправить|специалист по ошибке|заказать.*ошибк|восстанов)/i;
+const DIY_FRAMED_PROBLEM = /(?:^|\s)как\s+(?:исправить|устранить|решить|убрать)(?:\s|$)|(?:^|\s)что\s+делать\s+(?:если|когда)(?:\s|$)/i;
+const CLEARLY_INSTRUCTIONAL = /(?:инструкци|пошагов(?:ое|ый|ая)|форум|руководств|manual|tutorial|самостоятельно|самому|скачать\s+обновлен)/i;
+const DIRECT_COMMERCIAL_ERROR = /(?:специалист по ошибке|заказать.*(?:ошибк|устран)|срочно.*(?:исправ|устран)|^(?:устранить|исправить)\s+(?:ошибк|сбой))/i;
+const PRODUCT_VERSION_UPDATE = /(?:обновлен(?:ие|и|ь)|update)\s+(?:[\w.-]+\s+){0,6}(?:до\s+(?:новой\s+)?верси|version)/i;
+const SERVICE_UPDATE_SCOPE = /(?:обновлен|обновить).*(?:специалист|под\s+ключ|сопровожден|конфигурац|баз(?:ы|у)|заказать|услуг|внедрен|настрой)/i;
+const PRODUCT_SELF_UPDATE = /(?:как\s+)?(?:обновить|скачать\s+обновлен).*(?:самостоятельно|инструкци|самому)/i;
+const TECHNICAL_PROBLEM_MARKERS = /(?:ошибк|сбой|не работает|0x[\da-f]+|exception|fault)/i;
 
 export function extractServiceIntentEvidence(phrase) {
   const text = (phrase?.normalized_query || phrase?.raw_query || '').toLowerCase().trim();
   const signals = [];
   let strength = 'none';
 
+  const diyFramedProblem = DIY_FRAMED_PROBLEM.test(text);
+  const clearlyInstructional = CLEARLY_INSTRUCTIONAL.test(text);
+  const directCommercialError = DIRECT_COMMERCIAL_ERROR.test(text);
+  const explicitErrorResolution = directCommercialError && !diyFramedProblem;
+  const productVersionUpdate = PRODUCT_VERSION_UPDATE.test(text) && !SERVICE_UPDATE_SCOPE.test(text);
+  const productSelfUpdate = PRODUCT_SELF_UPDATE.test(text);
+  const serviceUpdateIntent = SERVICE_UPDATE_SCOPE.test(text);
+  const ambiguousDiyProblem = diyFramedProblem
+    && TECHNICAL_PROBLEM_MARKERS.test(text)
+    && !clearlyInstructional
+    && !directCommercialError;
+
   const hasGeo = GEOGRAPHY.test(text);
   const hasProvider = PROVIDER_NOUNS.test(text);
-  const hasTask = IMPLEMENTATION_TASKS.test(text);
+  const hasTask = IMPLEMENTATION_TASKS.test(text) && !diyFramedProblem && !productVersionUpdate;
   const hasProcurement = PROCUREMENT_MODIFIERS.test(text);
   const hasPriceService = PRICE_SERVICE.test(text);
   const hasUrgent = URGENT_PROBLEM.test(text);
-  const hasProductAcquisition = PRODUCT_ACQUISITION.test(text);
-  const hasServiceScope = hasTask || hasProvider || hasPriceService || hasProcurement;
-  const explicitErrorResolution = EXPLICIT_ERROR_RESOLUTION.test(text);
-  const bareError = BARE_ERROR.test(text) || (/ошибка\s+[\w0x-]+/i.test(text) && !explicitErrorResolution);
+  const hasProductAcquisition = PRODUCT_ACQUISITION.test(text) || productVersionUpdate || productSelfUpdate;
+  const hasServiceScope = hasTask || hasProvider || hasPriceService || hasProcurement || serviceUpdateIntent;
+  const bareError = (BARE_ERROR.test(text) || (/ошибка\s+[\w0x-]+/i.test(text) && !explicitErrorResolution))
+    && !ambiguousDiyProblem;
 
   if (hasProvider) signals.push('provider_profession_noun');
   if (hasTask) signals.push('implementation_task');
@@ -40,13 +58,16 @@ export function extractServiceIntentEvidence(phrase) {
   if (hasPriceService) signals.push('price_service_modifier');
   if (hasUrgent) signals.push('urgent_problem_resolution');
   if (hasGeo) signals.push('geography_modifier');
+  if (productVersionUpdate) signals.push('product_version_update');
+  if (ambiguousDiyProblem) signals.push('ambiguous_diy_problem');
+  if (serviceUpdateIntent) signals.push('service_update_intent');
 
   const career = CAREER_MARKERS.test(text);
   const education = EDUCATION_MARKERS.test(text);
-  const diy = DIY_MARKERS.test(text);
+  const diy = DIY_MARKERS.test(text) || productSelfUpdate || (diyFramedProblem && clearlyInstructional);
   const informational = INFORMATIONAL_GEO.test(text);
-  const productOnly = hasProductAcquisition && !hasServiceScope;
-  const productPlusService = hasProductAcquisition && hasServiceScope;
+  const productOnly = (hasProductAcquisition && !hasServiceScope) || productVersionUpdate || productSelfUpdate;
+  const productPlusService = hasProductAcquisition && hasServiceScope && !productVersionUpdate;
   const strongCommercialProblem = explicitErrorResolution && (hasUrgent || hasProvider || hasProcurement) && !diy;
 
   if (hasProvider && hasGeo && !career) {
@@ -78,7 +99,7 @@ export function extractServiceIntentEvidence(phrase) {
   }
 
   const strongCommercial = (strength === 'strong' || strongCommercialProblem)
-    && !career && !education && !diy && !informational && !productOnly;
+    && !career && !education && !diy && !informational && !productOnly && !ambiguousDiyProblem;
 
   return {
     version: SERVICE_INTENT_EVIDENCE_VERSION,
@@ -95,6 +116,11 @@ export function extractServiceIntentEvidence(phrase) {
     informational,
     product_only: productOnly,
     product_plus_service: productPlusService,
+    product_version_update: productVersionUpdate,
+    product_self_update: productSelfUpdate,
+    service_update_intent: serviceUpdateIntent,
+    ambiguous_diy_problem: ambiguousDiyProblem,
+    clearly_instructional: clearlyInstructional,
     bare_error_insufficient_context: bareError && !explicitErrorResolution && !hasProvider && !hasProcurement && !hasUrgent,
     provider_noun_detected: hasProvider,
     service_task_detected: hasTask,

@@ -1,0 +1,20 @@
+{
+  "manifest_id": "corv-semantic-v2-20260626-003-input-reference-v1",
+  "run_id": "corv-semantic-v2-20260626-003",
+  "project_id": "PRJ-0013",
+  "mig_session_id": "session-mig-20260622-corv01",
+  "source_path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+  "record_count": 2368,
+  "sha256": "eaa09b8450f8273890676c1ac2746172fac3cd884a4ee9697a8076593355b4fc",
+  "sha256_prefix": "eaa09b8450f82738",
+  "id_scheme": "CR2-PHR-*",
+  "duplicate_ids": 0,
+  "missing_ids": 0,
+  "normalized_corpus_parent": {
+    "record_count": 2399,
+    "sha256_prefix": "fbeb1b65d4a90cb0",
+    "lineage": "2399 → 31 duplicate clusters → 2368"
+  },
+  "mutability": "READ_ONLY",
+  "registered_at": "2026-06-26T09:33:53.228Z"
+}

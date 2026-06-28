@@ -1,0 +1,104 @@
+{
+  "manifest_id": "corvonero-new-controlled-semantic-run-input-manifest-v1",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-06-26",
+  "status": "REGISTERED — IMMUTABLE INPUT LOCKED",
+  "project": {
+    "client": "Корво Неро",
+    "project_ref": "PRJ-0013",
+    "workspace_id": "corvonero-direct-v2-clean-room",
+    "mig_session_id": "session-mig-20260622-corv01"
+  },
+  "raw_wordstat": {
+    "authority": "VERIFIED",
+    "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\wordstat-2026-06",
+    "file_count": 18,
+    "mutability": "READ_ONLY",
+    "files": [
+      { "name": "ws-p1-001-programmist-1c.xlsx", "sha256_prefix": "84464761e9b8d591" },
+      { "name": "ws-p1-002-uslugi-programmista-1c.xlsx", "sha256_prefix": "a6b8227bf5f70893" },
+      { "name": "ws-p1-003-soprovozhdenie-1c.xlsx", "sha256_prefix": "75c0904d824787cf" },
+      { "name": "ws-p1-004-dorabotka-1c.xlsx", "sha256_prefix": "4e0afa9bc3a63e62" },
+      { "name": "ws-p1-005-integraciya-s-saitom.xlsx", "sha256_prefix": "a89f26ac2bc56e5f" },
+      { "name": "ws-p1-006-integraciya-bitrix.xlsx", "sha256_prefix": "c49fd2c76a72012c" },
+      { "name": "ws-p1-007-markirovka-v-1c.xlsx", "sha256_prefix": "e726ffa948c71eb1" },
+      { "name": "ws-p1-008-chestny-znak-1c.xlsx", "sha256_prefix": "f3feb6a59fb5efa3" },
+      { "name": "ws-p2-001-otchet-1c.xlsx", "sha256_prefix": "8b45b9cb31b54a30" },
+      { "name": "ws-p2-002-pechatnaya-forma.xlsx", "sha256_prefix": "a2ce8003160dcd46" },
+      { "name": "ws-p2-004-sinhronizaciya.xlsx", "sha256_prefix": "6971f418af26674e" },
+      { "name": "ws-p2-005-obnovlenie-dorabotannoy.xlsx", "sha256_prefix": "6aeb9123a86bd38b" },
+      { "name": "ws-p2-007-1c-ne-rabotaet.xlsx", "sha256_prefix": "e58373e588b52d31" },
+      { "name": "ws-p3-001-pivo.xlsx", "sha256_prefix": "d053c057c0f90d82" },
+      { "name": "ws-p3-002-voda.xlsx", "sha256_prefix": "41d35b769456c1cd" },
+      { "name": "ws-p3-003-lekarstva.xlsx", "sha256_prefix": "3bf2779eca7e6fee" },
+      { "name": "ws-p3-004-avtozapchasti.xlsx", "sha256_prefix": "70b74c5bde188806" },
+      { "name": "ws-p3-005-ts-piot.xlsx", "sha256_prefix": "c21c9a6d2a3e9367" }
+    ],
+    "no_result_seeds": ["ws-p2-003", "ws-p2-006"],
+    "authority_documents": [
+      "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/keyword_registry.json",
+      "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/evidence/final-evidence-audit-v1.md",
+      "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/REPORT-mig-wordstat-storage-ingestion-correction-v1.md"
+    ]
+  },
+  "normalized_corpus": {
+    "record_count": 2399,
+    "path": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/evidence/wordstat/wordstat-pass-a-normalized.json",
+    "mirror_path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-normalized-corpus-v1.json",
+    "format": "json",
+    "sha256_prefix": "fbeb1b65d4a90cb0",
+    "mirror_sha256_prefix": "998422df6892d4cd",
+    "lineage": "18 raw XLSX → Pass A ingestion",
+    "mutability": "READ_ONLY",
+    "consumer": "ORCA semantic admission input registration"
+  },
+  "canonical_semantic_corpus": {
+    "record_count": 2368,
+    "path": "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-canonical-phrase-registry-v1.json",
+    "format": "json",
+    "sha256_prefix": "eaa09b8450f82738",
+    "id_scheme": "CR2-PHR-##### / CR2-LED-#####",
+    "lineage": "2399 normalized rows → deterministic dedup (31 clusters) → 2368 canonical entities",
+    "dedup_authority": "projects/orca/projects/corvonero-direct-v2-clean-room/reports/REPORT-corvonero-direct-v2-clean-room-semantic-core-v1.md",
+    "mutability": "READ_ONLY",
+    "consumer": "New controlled semantic run primary input"
+  },
+  "lineage_reconciliation": {
+    "raw_rows": 2399,
+    "duplicate_clusters": 31,
+    "unique_normalized": 2368,
+    "rule": "Deterministic normalization + dedup key (trim, lowercase, ё→е, punctuation, tokens)",
+    "tool": "projects/orca/projects/corvonero-direct-v2-clean-room/tools/normalize-mig-corpus.mjs",
+    "reproducible": true,
+    "stable_ids": true
+  },
+  "mig_handoff": {
+    "session_manifest": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/session_manifest.json",
+    "orca_handoff": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/handoff/orca-evidence-handoff-v1.json",
+    "demand_surface": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/demand_surface.json",
+    "keyword_registry": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/keyword_registry.json",
+    "research_pack": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/research_pack.approved.md",
+    "status": "COMPLETE — READY FOR ORCA REVIEW"
+  },
+  "orca_authority": {
+    "wave": "3.1F",
+    "prompt_contract_version": "orca-semantic-assessment-prompt-v1.3",
+    "files": [
+      { "path": "projects/orca/semantic-intelligence/live-model/adjudication/semantic-adjudicator.mjs", "sha256_prefix": "4e197d816cfd1389" },
+      { "path": "projects/orca/semantic-intelligence/live-model/contracts/prompt-contract.mjs", "sha256_prefix": "0fbe20bfef33d2e6" },
+      { "path": "projects/orca/semantic-intelligence/production/assessors/hard-rules.mjs", "sha256_prefix": "aed6d1078aa87833" }
+    ]
+  },
+  "deep_research": {
+    "path": "projects/orca/research/ppc-semantic-intelligence/world-practice-2026-06/ORCA-PPC-SEMANTIC-CORE-WORLD-PRACTICE-RESEARCH-v1.md",
+    "sha256_prefix": "984192dafc79aa9e",
+    "status": "PRESERVED — CANONICAL — READY"
+  },
+  "forbidden_inputs": [
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-commercial-eligibility-v1.json",
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-intent-screening-v1.json",
+    "projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/corvonero-direct-semantic-core-candidate-v1.json",
+    "old run forensic cache",
+    "old run checkpoints/locks"
+  ]
+}

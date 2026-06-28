@@ -1,0 +1,68 @@
+{
+  "report_id": "corvonero-new-controlled-sppc-05-execution-v1",
+  "run_id": "corv-semantic-v2-20260626-002",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.3",
+  "adjudicator_version": "v1.3",
+  "gate_b_verdict": { "status": "FAILED", "project": "BLOCKED_AT_SPPC_05" },
+  "gate_criteria": {
+    "adversarial_fpr_max_0_01_product": false,
+    "adversarial_fpr_max_0_01_geo": true,
+    "closed_dataset_boxed_delivery_fixed": true,
+    "closed_dataset_product_fpr": true,
+    "problem_query_all_match": false,
+    "wave31f_bypass_all_pass": true,
+    "under_admission_all_pass": true,
+    "all_pass": false,
+    "critical_failures": [
+      "Product confirmation adversarial FPR 0.0125 exceeds canonical threshold 0.01 (CFM-PROD-UPD-02)",
+      "Problem query policy 9/10 — PQR-ABSTAIN-03 expected ABSTAIN received REJECT"
+    ]
+  },
+  "suite_results": {
+    "wave31f_bypass": { "pass": true, "score": "12/12", "live": false },
+    "under_admission": { "pass": true, "score": "16/16", "live": false },
+    "closed_dataset_regression": {
+      "pass": true,
+      "run_id": "closed-regression-1782418950653",
+      "product_fpr": 0,
+      "boxed_delivery_fixed": true,
+      "cost_usd": 0.2844255
+    },
+    "confirmation_product": {
+      "pass": false,
+      "run_id": "confirmation-product-pass-1782425250184",
+      "gate_pass": false,
+      "false_positive_rate": 0.0125,
+      "false_accepts": [
+        { "record_id": "CFM-PROD-UPD-02", "query": "обновление sap business one до новой версии" }
+      ],
+      "cost_usd": 0.2175288
+    },
+    "confirmation_geo_v2": {
+      "pass": true,
+      "run_id": "confirmation-geo-pass-1782429005975",
+      "gate_pass": true,
+      "adversarial_false_accept_rate": 0,
+      "commercial_recall": 1,
+      "cost_usd": 0.243093
+    },
+    "problem_query_policy": {
+      "pass": false,
+      "run_id": "problem-policy-regression-1782429006146",
+      "score": "9/10",
+      "failure": {
+        "record_id": "PQR-ABSTAIN-03",
+        "query": "как исправить ошибку 0x80004005 1с",
+        "expected": "ABSTAIN",
+        "final": "REJECT"
+      }
+    }
+  },
+  "cumulative_cost_usd": 0.7950473,
+  "isolation_verdict": "OLD_RUN_ISOLATION — PASS",
+  "full_corpus_started": false,
+  "wave5_started": false,
+  "completed_at": "2026-06-26T00:12:46.833Z"
+}

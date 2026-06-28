@@ -1,0 +1,1880 @@
+{
+  "audit_id": "corvonero-run-004-phase-3-canary-expectation-audit-v2",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "attempt_id": "corv-run004-phase3-canary-attempt-002",
+  "records": [
+    {
+      "phrase_id": "CR2-PHR-00046",
+      "phrase": "курсы программист 1с с нуля",
+      "observed_tags": [
+        "one_c",
+        "education",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00051",
+      "phrase": "что делает программист 1с",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "provider_role"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00069",
+      "phrase": "вакансия программист 1с работа",
+      "observed_tags": [
+        "one_c",
+        "career",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00073",
+      "phrase": "программисты 1с новосибирск",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00086",
+      "phrase": "1с программисты ростов",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00100",
+      "phrase": "erp программиста 1с",
+      "observed_tags": [
+        "one_c",
+        "erp_reference",
+        "provider_role"
+      ],
+      "coverage_family": "generic_erp_platform_ambiguity",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ABSTAIN",
+      "authority_source": "generic_erp_platform_policy",
+      "review_required": true,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00126",
+      "phrase": "программисты 1с челябинск",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00136",
+      "phrase": "программисты 1с воронеж",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00145",
+      "phrase": "должностная инструкция программиста 1с",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "self_service",
+        "provider_role"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00165",
+      "phrase": "программист 1с настройка",
+      "observed_tags": [
+        "one_c",
+        "service_task",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00166",
+      "phrase": "омск программисты 1с",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00183",
+      "phrase": "программист 1с рязань",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00191",
+      "phrase": "1с программист самостоятельно",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "self_service",
+        "provider_role"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00200",
+      "phrase": "что нужно знать программисту 1с",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "provider_role"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00221",
+      "phrase": "1с программист разработка и автоматизация",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00230",
+      "phrase": "программисты 1с волгоград",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00234",
+      "phrase": "программист 1с уфа",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00239",
+      "phrase": "насколько востребованы программисты 1с",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00340",
+      "phrase": "пример технического задания для программиста 1с",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "provider_role"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00353",
+      "phrase": "обучиться на программиста 1с",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00362",
+      "phrase": "работа стажером программистом 1с",
+      "observed_tags": [
+        "one_c",
+        "career",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00372",
+      "phrase": "программист 1с джуниор вакансии",
+      "observed_tags": [
+        "one_c",
+        "career",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00373",
+      "phrase": "программист 1с найти специалиста",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "provider_role"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00436",
+      "phrase": "вакансии в аккредитованных компаниях программист стажер 1с",
+      "observed_tags": [
+        "one_c",
+        "career",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00441",
+      "phrase": "программист 1с торрент скачать",
+      "observed_tags": [
+        "one_c",
+        "provider_role",
+        "product_plus_service_bundle"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00445",
+      "phrase": "техзадание для программиста 1с пример",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "provider_role"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00476",
+      "phrase": "программист 1с унф",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00478",
+      "phrase": "1с программист вакансии в ульяновске",
+      "observed_tags": [
+        "one_c",
+        "career",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00486",
+      "phrase": "1с программист быстрый старт в профессию",
+      "observed_tags": [
+        "one_c",
+        "education",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00515",
+      "phrase": "что должен уметь программист 1с",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "provider_role"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00530",
+      "phrase": "нужен программист 1с для доработок",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task",
+        "provider_role"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00553",
+      "phrase": "программист 1с обучение с нуля курсы спб",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "education",
+        "provider_role"
+      ],
+      "coverage_family": "careers_training_education",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00580",
+      "phrase": "программист 1с комендантский проспект спб",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "provider_role",
+        "strong_commercial"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00591",
+      "phrase": "услуги по сопровождению 1с",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00612",
+      "phrase": "сопровождение 1с екатеринбург",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00618",
+      "phrase": "центр сопровождения 1с екатеринбург",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00626",
+      "phrase": "асп сопровождение 1с екатеринбург",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00629",
+      "phrase": "асп центр сопровождения 1с екатеринбург",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00631",
+      "phrase": "сопровождение 1с стоимость",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00636",
+      "phrase": "сопровождение 1с erp",
+      "observed_tags": [
+        "one_c",
+        "erp_reference",
+        "service_task"
+      ],
+      "coverage_family": "generic_erp_platform_ambiguity",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00650",
+      "phrase": "услуги по сопровождению 1с 8",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00654",
+      "phrase": "сопровождение программы 1с предприятие",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00657",
+      "phrase": "окпд услуги по сопровождению 1с",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00663",
+      "phrase": "услуги по техническому сопровождению 1с",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00669",
+      "phrase": "услуги по сопровождению 1с окпд 2",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00687",
+      "phrase": "информационно технологическое сопровождение 1с договор",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00698",
+      "phrase": "услуги по информационно технологическому сопровождению 1с",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00708",
+      "phrase": "сколько стоит сопровождение 1с",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00729",
+      "phrase": "стоимость услуг 1с сопровождения",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00731",
+      "phrase": "внедрение и сопровождение продуктов 1с",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00742",
+      "phrase": "1с сопровождение москва",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00745",
+      "phrase": "сопровождение 1с ростов",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00746",
+      "phrase": "сопровождение 1с предприятие 8.3 цена",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "coverage_family": "direct_commercial_1c_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ACCEPT",
+      "authority_source": "direct_commercial_service_demand_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00752",
+      "phrase": "техническое задание на сопровождение 1с erp",
+      "observed_tags": [
+        "one_c",
+        "erp_reference",
+        "service_task"
+      ],
+      "coverage_family": "generic_erp_platform_ambiguity",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00754",
+      "phrase": "сопровождение и поддержка 1с в красноярске",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00763",
+      "phrase": "сопровождение 1с новосибирск",
+      "observed_tags": [
+        "geography",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "geography_modified",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00770",
+      "phrase": "примеры доработки 1с",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "service_task"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00771",
+      "phrase": "доработки программы 1с",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00778",
+      "phrase": "доработки 1с erp",
+      "observed_tags": [
+        "one_c",
+        "erp_reference",
+        "service_task"
+      ],
+      "coverage_family": "generic_erp_platform_ambiguity",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00856",
+      "phrase": "1с унф битрикс интеграция",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00912",
+      "phrase": "учет маркировки в 1с",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00932",
+      "phrase": "настройка маркировки в 1с ут",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00943",
+      "phrase": "маркировка в 1с управление торговлей",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00958",
+      "phrase": "маркировка честный знак в 1с ут",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00962",
+      "phrase": "маркировка в 1с 8",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-00991",
+      "phrase": "настройка маркировки в 1с ут 11.5",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01163",
+      "phrase": "настройка обмена суз 1с честный знак",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01171",
+      "phrase": "объемно сортовой учет честный знак в 1с",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01252",
+      "phrase": "настройка локального модуля честный знак 1с ут",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01329",
+      "phrase": "1с унф печатные формы",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01341",
+      "phrase": "настройка печатных форм в 1с",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01351",
+      "phrase": "1с erp печатные формы",
+      "observed_tags": [
+        "one_c",
+        "erp_reference"
+      ],
+      "coverage_family": "generic_erp_platform_ambiguity",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ABSTAIN",
+      "authority_source": "generic_erp_platform_policy",
+      "review_required": true,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01389",
+      "phrase": "поля в печатной форме 1с",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01404",
+      "phrase": "1с печатная форма пример",
+      "observed_tags": [
+        "one_c",
+        "informational"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01410",
+      "phrase": "печатная форма справочника 1с",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01416",
+      "phrase": "1с бп внешняя печатная форма",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01431",
+      "phrase": "1с макет печатных форм параметры",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01487",
+      "phrase": "как в 1с исправить печатную форму",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01509",
+      "phrase": "1с внешняя печатная форма пример",
+      "observed_tags": [
+        "one_c",
+        "informational"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01544",
+      "phrase": "добавить реквизит в печатную форму 1с",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01637",
+      "phrase": "1с бухгалтерия макеты печатных форм",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01640",
+      "phrase": "1с внешняя печатная форма открыть форму",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01657",
+      "phrase": "1с erp внешние печатные формы",
+      "observed_tags": [
+        "one_c",
+        "erp_reference"
+      ],
+      "coverage_family": "generic_erp_platform_ambiguity",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "ABSTAIN",
+      "authority_source": "generic_erp_platform_policy",
+      "review_required": true,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01688",
+      "phrase": "1с печатная форма через макет",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01713",
+      "phrase": "1с 8.3 внешние печатные формы пример",
+      "observed_tags": [
+        "one_c",
+        "informational"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01742",
+      "phrase": "1с ошибка печатная форма недоступна",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01763",
+      "phrase": "создание печатных форм 1с инструкция",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "self_service"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01799",
+      "phrase": "как обновить печатную форму упд в 1с",
+      "observed_tags": [
+        "one_c",
+        "self_service"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01834",
+      "phrase": "подключение внешней печатной формы в 1с 8.3",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "ambiguous_mixed_intent",
+      "expectation_status": "REVIEW_REQUIRED",
+      "expected_verdict": null,
+      "authority_source": "ambiguous_intent_policy",
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01873",
+      "phrase": "1с синхронизация зуп бп",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01877",
+      "phrase": "ошибки синхронизации 1с",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01885",
+      "phrase": "1с настройка синхронизации данных",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01905",
+      "phrase": "настройка синхронизации 1с зуп и бп",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01951",
+      "phrase": "1с расписание синхронизации",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-01973",
+      "phrase": "1с ошибка синхронизации данных",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02053",
+      "phrase": "ошибка синхронизации 1с 8.3",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02107",
+      "phrase": "синхронизация данных в 1с бухгалтерия 8.3",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "provider_role"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02132",
+      "phrase": "настройка синхронизации через ftp в 1с",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02136",
+      "phrase": "1с мобильная касса синхронизация с 1с розница",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02150",
+      "phrase": "синхронизация 1с fresh",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02153",
+      "phrase": "не работает синхронизация 1с 8.3",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02160",
+      "phrase": "ошибка при настройке синхронизации 1с",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02165",
+      "phrase": "1с синхронизация ошибка доступа к файлу",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02177",
+      "phrase": "экватор синхронизация с 1с",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02190",
+      "phrase": "почему не работает синхронизация в 1с",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02192",
+      "phrase": "после обновления 1с не работает синхронизация",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02210",
+      "phrase": "1с синхронизация через локальный каталог",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02220",
+      "phrase": "1с ошибка синхронизация недоступна для использования",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02223",
+      "phrase": "ошибка доступа к локальному файлу 1с синхронизация",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02228",
+      "phrase": "1с наименование этой информационной базы для синхронизации",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "integrations",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02235",
+      "phrase": "1с ошибка формата потока при синхронизации",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02239",
+      "phrase": "программа 1с не работает",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02240",
+      "phrase": "почему не работает программа 1с",
+      "observed_tags": [
+        "one_c"
+      ],
+      "coverage_family": "problem_troubleshooting",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02268",
+      "phrase": "что такое sgtin в маркировке лекарств",
+      "observed_tags": [
+        "informational"
+      ],
+      "coverage_family": "informational_self_service",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02277",
+      "phrase": "маркировка автозапчастей честный",
+      "observed_tags": [
+        "marking_chestny_znak"
+      ],
+      "coverage_family": "marking_chestny_znak",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02315",
+      "phrase": "настройка тс пиот в 1с ут 11.5",
+      "observed_tags": [
+        "ts_piot",
+        "one_c",
+        "service_task"
+      ],
+      "coverage_family": "ts_piot",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02324",
+      "phrase": "тс пиот как установить в 1с",
+      "observed_tags": [
+        "ts_piot",
+        "one_c",
+        "self_service"
+      ],
+      "coverage_family": "ts_piot",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "informational_self_service_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02331",
+      "phrase": "1с тс пиот сертификация",
+      "observed_tags": [
+        "ts_piot",
+        "one_c",
+        "education"
+      ],
+      "coverage_family": "ts_piot",
+      "expectation_status": "POLICY_DERIVED_EXPECTATION",
+      "expected_verdict": "REJECT",
+      "authority_source": "career_training_exclusion_policy",
+      "review_required": false,
+      "scored": true,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02338",
+      "phrase": "1с встроенный тс пиот",
+      "observed_tags": [
+        "ts_piot",
+        "one_c"
+      ],
+      "coverage_family": "ts_piot",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    },
+    {
+      "phrase_id": "CR2-PHR-02354",
+      "phrase": "1с не видит тс пиот",
+      "observed_tags": [
+        "ts_piot",
+        "one_c"
+      ],
+      "coverage_family": "ts_piot",
+      "expectation_status": "NO_GOLD_LABEL",
+      "expected_verdict": null,
+      "authority_source": null,
+      "review_required": true,
+      "scored": false,
+      "conflict_flags": []
+    }
+  ],
+  "preflight": {
+    "pass": true,
+    "career_records_with_expected_accept": 0,
+    "education_records_with_expected_accept": 0,
+    "informational_unsupported_accept": 0,
+    "expectations_without_authority_source": 0,
+    "selected_ids": 120,
+    "duplicate_ids": 0,
+    "violations": []
+  },
+  "created_at": "2026-06-28T06:26:30.092Z"
+}

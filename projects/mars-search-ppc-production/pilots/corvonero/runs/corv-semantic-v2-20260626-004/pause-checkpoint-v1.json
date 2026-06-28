@@ -1,0 +1,26 @@
+{
+  "checkpoint_id": "corv-semantic-v2-20260626-004-pause-v1",
+  "schema_version": "1.0.0",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "phase": "SPPC-05_VALIDATION",
+  "lifecycle_state": "PAUSED_AT_SPPC_05_EXECUTION",
+  "paused_at": "2026-06-27T10:10:00.000Z",
+  "pause_authority": "OPERATOR — save state and pause; resume on ПРОДОЛЖИМ",
+  "project_id": "PRJ-0013",
+  "project_processed": 0,
+  "project_total": 2368,
+  "complete": false,
+  "resume_token": "ПРОДОЛЖИМ",
+  "resume_script": "projects/mars-search-ppc-production/pilots/corvonero/tools/resume-run-004-sppc05-v1.mjs",
+  "node_executable": "C:\\MARS Phenix\\AI MARS\\.tools\\node-runtime\\node.exe",
+  "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-004",
+  "partial_results_storage": "reports/partial-sppc05-results-v1.json",
+  "suites_completed_count": 6,
+  "suites_total_count": 10,
+  "next_suite_id": "confirmation_geo_v2",
+  "frozen_runs_do_not_touch": [
+    "corv-semantic-v2-20260626-002",
+    "corv-semantic-v2-20260626-003"
+  ],
+  "cost_limits": { "hard_cap_usd": 3.0, "soft_warning_usd": 2.0, "spent_partial_usd": 0.2180604 }
+}

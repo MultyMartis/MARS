@@ -1,0 +1,713 @@
+{
+  "packet_id": "corvonero-run-004-phase-51-operator-decision-packet-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "total": 47,
+  "note": "Genuine operator judgment required — not mechanically resolvable from existing policy",
+  "records": [
+    {
+      "phrase_id": "CR2-PHR-00076",
+      "phrase": "лучший программист 1с",
+      "current_verdict": "ACCEPT",
+      "recommended_verdict": "REJECT",
+      "ambiguity": "Ranking/comparison query may be research or pre-purchase evaluation",
+      "business_consequence": "Low conversion informational traffic vs possible high-intent comparison shopper",
+      "options": [
+        "REJECT as informational",
+        "ABSTAIN",
+        "ACCEPT if treated as specialist search"
+      ],
+      "phase5_verdict": "ACCEPT",
+      "review_flag_root_cause": "informational_diy_ambiguity"
+    },
+    {
+      "phrase_id": "CR2-PHR-00673",
+      "phrase": "отдел сопровождения 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-00697",
+      "phrase": "купить 1с сопровождение",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "License purchase bundled with setup/support — product resale vs pure service scope",
+      "business_consequence": "Wrong ACCEPT wastes budget on product-reseller intent; wrong REJECT drops valid bundled-service leads",
+      "options": [
+        "ACCEPT as bundled service",
+        "REJECT as product-only",
+        "ABSTAIN / exclude from launch set"
+      ],
+      "phase5_verdict": "ACCEPT",
+      "review_flag_root_cause": "product_plus_service_ambiguity"
+    },
+    {
+      "phrase_id": "CR2-PHR-00736",
+      "phrase": "1с менеджер сопровождения корп",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-00756",
+      "phrase": "услуги сопровождение 1с систем купить",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "License purchase bundled with setup/support — product resale vs pure service scope",
+      "business_consequence": "Wrong ACCEPT wastes budget on product-reseller intent; wrong REJECT drops valid bundled-service leads",
+      "options": [
+        "ACCEPT as bundled service",
+        "REJECT as product-only",
+        "ABSTAIN / exclude from launch set"
+      ],
+      "phase5_verdict": "ACCEPT",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-00767",
+      "phrase": "учет доработки 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-00799",
+      "phrase": "задания на доработку 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-00813",
+      "phrase": "как учесть доработку 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-00926",
+      "phrase": "1с криптохвост в маркировке",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01145",
+      "phrase": "тс пиот честный знак 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Combined TS ПИОТ and Честный знак — scope of bundled compliance service unclear",
+      "business_consequence": "May represent high-value bundled offer or out-of-scope research query",
+      "options": [
+        "ACCEPT as bundled compliance service",
+        "ABSTAIN",
+        "REJECT if informational only"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01239",
+      "phrase": "тс пиот честный знак 1с розница",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Combined TS ПИОТ and Честный знак — scope of bundled compliance service unclear",
+      "business_consequence": "May represent high-value bundled offer or out-of-scope research query",
+      "options": [
+        "ACCEPT as bundled compliance service",
+        "ABSTAIN",
+        "REJECT if informational only"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01318",
+      "phrase": "1с макеты печатных форм",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01321",
+      "phrase": "1с печатная форма упд",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01326",
+      "phrase": "1с печатная форма печать",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01329",
+      "phrase": "1с унф печатные формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01331",
+      "phrase": "создание печатной формы 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01333",
+      "phrase": "1с программно печатную форму",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01334",
+      "phrase": "1с 8 печатная форма",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01340",
+      "phrase": "1с печатная форма недоступна",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01345",
+      "phrase": "печатные формы 1с конфигуратор",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01346",
+      "phrase": "1с печатная форма акта",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01347",
+      "phrase": "1с изменение печатной формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01352",
+      "phrase": "1с предприятие печатные формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01359",
+      "phrase": "1с файл печатной формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01363",
+      "phrase": "1с печатная форма word",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01369",
+      "phrase": "печатная форма 1с картинка",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01380",
+      "phrase": "сохранение печатной формы 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01382",
+      "phrase": "1с бсп печатные формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01385",
+      "phrase": "1с печатная форма управляемое",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01392",
+      "phrase": "1с формирование печатных форм",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01396",
+      "phrase": "печатная форма ка 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01410",
+      "phrase": "печатная форма справочника 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01428",
+      "phrase": "1с несколько печатных форм",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01432",
+      "phrase": "1с печатная форма выбор",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01433",
+      "phrase": "1с печатная форма колонтитул",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01450",
+      "phrase": "отредактировать печатную форму 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01465",
+      "phrase": "1с размер печатной формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01475",
+      "phrase": "1с документооборот печатные формы",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01483",
+      "phrase": "1с печатная форма штрихкод",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01492",
+      "phrase": "печатные формы формируются 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01497",
+      "phrase": "встроенные печатные формы 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01500",
+      "phrase": "1с печатные формы ширина",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01523",
+      "phrase": "1с обновление печатных форм",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-01550",
+      "phrase": "1с печатная форма скд",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Insufficient context to distinguish service demand from navigation/research",
+      "business_consequence": "Forced ACCEPT/REJECT risks systematic over/under-blocking",
+      "options": [
+        "ABSTAIN",
+        "REJECT",
+        "ACCEPT"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-02239",
+      "phrase": "программа 1с не работает",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "User may seek free forum fix or paid emergency support",
+      "business_consequence": "High-intent troubleshooting leads vs informational DIY traffic",
+      "options": [
+        "ACCEPT as emergency support",
+        "REJECT as DIY",
+        "ABSTAIN"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-02240",
+      "phrase": "почему не работает программа 1с",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "User may seek free forum fix or paid emergency support",
+      "business_consequence": "High-intent troubleshooting leads vs informational DIY traffic",
+      "options": [
+        "ACCEPT as emergency support",
+        "REJECT as DIY",
+        "ABSTAIN"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    },
+    {
+      "phrase_id": "CR2-PHR-02354",
+      "phrase": "1с не видит тс пиот",
+      "current_verdict": "ABSTAIN",
+      "recommended_verdict": "ABSTAIN",
+      "ambiguity": "Technical failure query may seek forum fix or paid specialist",
+      "business_consequence": "ACCEPT on DIY intent wastes spend; REJECT drops valid troubleshooting leads",
+      "options": [
+        "ACCEPT as troubleshooting service",
+        "REJECT as DIY",
+        "ABSTAIN"
+      ],
+      "phase5_verdict": "ABSTAIN",
+      "review_flag_root_cause": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "receipt_id": "phase-4-full-corpus-authorization-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "lifecycle_transitions": [
+    "PHASE_3_COMPLETE",
+    "PHASE_4_FULL_CORPUS_AUTHORIZED",
+    "PHASE_4_FULL_CORPUS_EXECUTING"
+  ],
+  "operator_decisions": {
+    "phase_4_full_corpus": "AUTHORIZED",
+    "canary_attempt_2": "APPROVED",
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "hard_cost_cap_usd": 3,
+    "soft_cost_warning_usd": 2,
+    "strategy": "NOT AUTHORIZED",
+    "wave_5": "BLOCKED"
+  },
+  "canary_reuse_audit": {
+    "reusable": 120,
+    "remaining": 2248,
+    "verdict": "PASS"
+  },
+  "cost_projection": {
+    "remaining_records": 2248,
+    "projected_new_cost_usd": 1.6195716,
+    "cumulative_before_phase4_usd": 0.85679195,
+    "projected_total_cost_usd": 2.47636355,
+    "hard_cap_usd": 3,
+    "soft_warning_usd": 2,
+    "pass_hard_cap": true,
+    "crosses_soft_warning": true
+  },
+  "authorized_at": "2026-06-28T09:43:30.312Z"
+}

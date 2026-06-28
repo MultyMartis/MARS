@@ -1,0 +1,34 @@
+{
+  "document_id": "CORVONERO-RUN-002-SPPC-05-FAILURE-ACCEPTANCE-v1",
+  "version": "1.0.0",
+  "run_id": "corv-semantic-v2-20260626-002",
+  "status": "BLOCKED_AT_SPPC_05",
+  "failure_accepted": true,
+  "evidence_immutable": true,
+  "resume_prohibited": true,
+  "run_id_reuse_prohibited": true,
+  "next_validation_run_id": "corv-semantic-v2-20260626-003",
+  "next_validation_run_id_authorized_in_this_task": false,
+  "phase_3_blocked": true,
+  "lock": "RELEASED",
+  "full_corpus_calls": 0,
+  "canary_calls": 0,
+  "confirmed_failures": [
+    {
+      "record_id": "CFM-PROD-UPD-02",
+      "query": "обновление sap business one до новой версии",
+      "expected": "REJECT",
+      "observed": "ACCEPT",
+      "suite": "protected_product_confirmation"
+    },
+    {
+      "record_id": "PQR-ABSTAIN-03",
+      "query": "как исправить ошибку 0x80004005 1с",
+      "expected": "ABSTAIN",
+      "observed": "REJECT",
+      "suite": "problem_query_policy"
+    }
+  ],
+  "operator_decision": "FAILURE_ACCEPTED_FAIL_CLOSED",
+  "created_at": "2026-06-26T00:00:00.000Z"
+}

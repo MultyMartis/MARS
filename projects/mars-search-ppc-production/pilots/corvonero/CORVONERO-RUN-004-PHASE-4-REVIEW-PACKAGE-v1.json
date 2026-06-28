@@ -1,0 +1,112 @@
+{
+  "package_id": "corvonero-run-004-phase-4-review-package-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "phase_verdict": "PARTIAL — FAIL-CLOSED — career_education_acceptance_family",
+  "verdict_distribution": {
+    "ACCEPT": 249,
+    "REJECT": 433,
+    "ABSTAIN": 38
+  },
+  "review_queue_size": 72,
+  "mandatory_review": [
+    "CR2-PHR-00200"
+  ],
+  "family_reviews": [
+    {
+      "family": "direct_commercial_1c_service",
+      "count": 51,
+      "distribution": {
+        "ACCEPT": 48,
+        "REJECT": 2,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "careers_training_education",
+      "count": 168,
+      "distribution": {
+        "ACCEPT": 2,
+        "REJECT": 166,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "informational_self_service",
+      "count": 23,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 23,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "problem_troubleshooting",
+      "count": 15,
+      "distribution": {
+        "ACCEPT": 0,
+        "REJECT": 1,
+        "ABSTAIN": 14
+      }
+    },
+    {
+      "family": "generic_erp_platform_ambiguity",
+      "count": 6,
+      "distribution": {
+        "ACCEPT": 3,
+        "REJECT": 2,
+        "ABSTAIN": 1
+      }
+    },
+    {
+      "family": "integrations",
+      "count": 13,
+      "distribution": {
+        "ACCEPT": 6,
+        "REJECT": 3,
+        "ABSTAIN": 4
+      }
+    },
+    {
+      "family": "marking_chestny_znak",
+      "count": 10,
+      "distribution": {
+        "ACCEPT": 3,
+        "REJECT": 5,
+        "ABSTAIN": 2
+      }
+    },
+    {
+      "family": "ts_piot",
+      "count": 5,
+      "distribution": {
+        "ACCEPT": 1,
+        "REJECT": 2,
+        "ABSTAIN": 2
+      }
+    },
+    {
+      "family": "geography_modified",
+      "count": 8,
+      "distribution": {
+        "ACCEPT": 8,
+        "REJECT": 0,
+        "ABSTAIN": 0
+      }
+    },
+    {
+      "family": "ambiguous_mixed_intent",
+      "count": 421,
+      "distribution": {
+        "ACCEPT": 178,
+        "REJECT": 229,
+        "ABSTAIN": 14
+      }
+    }
+  ],
+  "cost": {
+    "cumulative_cost_usd": 1.2746279
+  },
+  "operator_review_required": true,
+  "strategy_authorized": false,
+  "next_gate": "OPERATOR REVIEW OF CORVONERO RUN 004 PHASE 4 RESULT"
+}

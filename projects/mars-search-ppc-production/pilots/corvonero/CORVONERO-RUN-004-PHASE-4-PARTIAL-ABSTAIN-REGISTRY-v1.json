@@ -1,0 +1,4840 @@
+{
+  "run_id": "corv-semantic-v2-20260626-004",
+  "count": 308,
+  "records": [
+    {
+      "phrase_id": "CR2-PHR-00096",
+      "phrase": "программист 1с разработка",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T09:56:09.866Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00129",
+      "phrase": "1с программист стоит ли",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T10:00:25.548Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00226",
+      "phrase": "нейросеть для 1с программиста",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T10:17:14.248Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00273",
+      "phrase": "ошибки программиста 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T10:24:23.806Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00326",
+      "phrase": "программист 1с рускон",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T10:31:58.397Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00410",
+      "phrase": "21 день программиста 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T10:43:11.126Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00517",
+      "phrase": "роадмап 1с программист",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T10:56:55.146Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00657",
+      "phrase": "окпд услуги по сопровождению 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "direct_commercial_1c_service",
+      "observed_tags": [
+        "one_c",
+        "commercial_demand",
+        "service_task"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00673",
+      "phrase": "отдел сопровождения 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:32:43.544Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00685",
+      "phrase": "окпд 2 сопровождение программного продукта 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:34:31.655Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00720",
+      "phrase": "техническое задание на сопровождение 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:39:09.121Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00725",
+      "phrase": "условия сопровождения не выполнены 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:39:56.498Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00736",
+      "phrase": "1с менеджер сопровождения корп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:41:10.356Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00747",
+      "phrase": "окпд 2 информационно технологическое сопровождение программ 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:42:45.015Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00767",
+      "phrase": "учет доработки 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:47:40.120Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00799",
+      "phrase": "задания на доработку 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:02:29.130Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00801",
+      "phrase": "техническое задание на доработку 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:52:18.119Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00813",
+      "phrase": "как учесть доработку 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:54:05.657Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00818",
+      "phrase": "техническое задание на доработку 1с пример",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "informational_self_service",
+      "observed_tags": [
+        "one_c",
+        "informational",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T11:54:43.506Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00851",
+      "phrase": "сайт личного кабинета интеграция с 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "integrations",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:00:05.779Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00885",
+      "phrase": "маркировка в 1с розница",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:07:02.025Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00887",
+      "phrase": "проверка маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:07:28.296Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00888",
+      "phrase": "настройка маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:07:41.431Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00897",
+      "phrase": "настроить маркировку в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:09:07.401Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00901",
+      "phrase": "как загрузить коды маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:09:46.224Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00903",
+      "phrase": "маркировка товаров в 1с честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:10:05.770Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00904",
+      "phrase": "маркировка товаров в 1с ут",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:10:17.188Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00905",
+      "phrase": "1с маркировка ввод в оборот",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:10:28.149Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00907",
+      "phrase": "маркировка в 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:10:50.425Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00908",
+      "phrase": "маркировка в 1с ут 11.5",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:10:58.706Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00910",
+      "phrase": "маркировка в 1с торговля",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:11:22.012Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00911",
+      "phrase": "контур маркировка в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:11:27.769Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00913",
+      "phrase": "маркировка масел в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:11:32.353Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00914",
+      "phrase": "упд с маркировкой в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:11:39.938Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00917",
+      "phrase": "маркировка в 1с ут 11",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:12:11.962Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00918",
+      "phrase": "как ввести маркировку в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:12:19.898Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00920",
+      "phrase": "загрузка маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:12:35.567Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00921",
+      "phrase": "1с ввод в оборот кодов маркировки",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:12:46.398Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00922",
+      "phrase": "1с маркировка в чеке",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:12:54.109Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00924",
+      "phrase": "сбис маркировка в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:13:15.496Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00926",
+      "phrase": "1с криптохвост в маркировке",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:13:36.014Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00930",
+      "phrase": "маркировка в 1с бп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:14:05.198Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00932",
+      "phrase": "настройка маркировки в 1с ут",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00933",
+      "phrase": "загрузка кодов маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:14:28.408Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00934",
+      "phrase": "передача маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:14:39.425Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00937",
+      "phrase": "в структуре кода маркировки отсутствует криптохвост 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:15:06.027Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00941",
+      "phrase": "маркировка набора в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:15:42.564Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00942",
+      "phrase": "полный код маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:15:49.308Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00944",
+      "phrase": "проверка кодов маркировки гис мт в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:15:59.164Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00949",
+      "phrase": "маркировка товаров ис мп в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:16:41.725Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00953",
+      "phrase": "маркировка в 1с предприятие",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:17:12.039Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00960",
+      "phrase": "передача кодов маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:18:04.037Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00967",
+      "phrase": "маркировка честный знак в 1с бухгалтерия",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:18:50.031Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00968",
+      "phrase": "возврат маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:18:57.232Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00972",
+      "phrase": "маркировка в 1с фреш",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:19:35.661Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00977",
+      "phrase": "маркировка склада в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:20:18.874Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00979",
+      "phrase": "распечатать коды маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:20:37.616Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00985",
+      "phrase": "маркировка товаров в 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:21:26.325Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00989",
+      "phrase": "маркировка честный знак в 1с erp",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "erp_reference"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:22:04.870Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00993",
+      "phrase": "списание кодов маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:22:32.731Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-00996",
+      "phrase": "маркировка товаров в 1с ут 11",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:23:06.511Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01008",
+      "phrase": "маркировка остатков в 1с ут 11.5",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:24:55.909Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01010",
+      "phrase": "маркировка остатков радиоэлектронной продукции в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:25:11.830Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01012",
+      "phrase": "маркировка честный знак в 1с розница",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:25:31.165Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01016",
+      "phrase": "загрузка кодов маркировки в 1с из файла",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:26:07.895Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01019",
+      "phrase": "настройка маркировки в 1с розница 3.0",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:26:26.812Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01021",
+      "phrase": "маркировка остатков честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:26:46.314Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01022",
+      "phrase": "маркировка остатков в 1с унф",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:26:54.185Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01034",
+      "phrase": "калуга астрал маркировка в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:28:27.954Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01035",
+      "phrase": "маркировка наборов в 1с ут",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:28:35.196Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01038",
+      "phrase": "маркировка в 1с через сбис",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:28:58.623Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01041",
+      "phrase": "получение кодов маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:29:24.880Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01051",
+      "phrase": "отчет по кодам маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:31:00.648Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01052",
+      "phrase": "маркировка в 1с ут 10.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:31:15.080Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01062",
+      "phrase": "некорректный формат кода маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:32:37.116Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01064",
+      "phrase": "маркировка в 1с бухгалтерия 3.0 для импортера",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:32:53.202Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01067",
+      "phrase": "1с внести в чек код маркировки",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:33:23.769Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01069",
+      "phrase": "перенести документ из контур маркировки в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:33:40.717Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01070",
+      "phrase": "в форму не передана организация 1с маркировка",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:33:46.244Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01073",
+      "phrase": "маркировка радиоэлектронной продукции в 1с ут 11.4",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:34:12.567Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01074",
+      "phrase": "честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:34:21.298Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01075",
+      "phrase": "честный знак модуль 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:34:33.491Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01076",
+      "phrase": "1с бухгалтерия честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:34:41.592Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01081",
+      "phrase": "честный знак в 1с ут",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:35:30.958Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01082",
+      "phrase": "1с 8.3 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:35:40.480Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01084",
+      "phrase": "1с номенклатура честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:36:01.002Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01085",
+      "phrase": "1с торговля честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:36:11.823Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01086",
+      "phrase": "лм честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:36:22.550Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01087",
+      "phrase": "1с erp честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "erp_reference"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:36:33.989Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01091",
+      "phrase": "маркировка товара честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:37:14.879Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01092",
+      "phrase": "настройка локального модуля честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:37:23.018Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01098",
+      "phrase": "честный знак учет 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:38:23.598Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01101",
+      "phrase": "локальный модуль честный знак 1с розница",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:38:54.600Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01102",
+      "phrase": "программа 1с честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:39:04.302Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01104",
+      "phrase": "честный знак без 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:39:19.906Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01105",
+      "phrase": "1с 8 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:39:28.802Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01106",
+      "phrase": "токен авторизации честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:39:35.728Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01107",
+      "phrase": "суз честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:39:45.230Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01108",
+      "phrase": "1с ут 11 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:39:54.907Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01110",
+      "phrase": "честный знак в 1с ут 11.5",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:40:15.222Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01111",
+      "phrase": "как добавить честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:40:25.403Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01112",
+      "phrase": "контур честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:40:35.507Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01113",
+      "phrase": "1с этикетка честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:40:49.470Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01115",
+      "phrase": "пиот честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:41:08.848Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01117",
+      "phrase": "вывод из оборота честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:41:28.904Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01118",
+      "phrase": "честный знак 1с предприятие",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:41:34.266Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01120",
+      "phrase": "ввод в оборот честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:41:48.245Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01121",
+      "phrase": "агрегация честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:41:56.413Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01123",
+      "phrase": "1с розница и честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:42:18.966Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01124",
+      "phrase": "1с ка честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:42:24.363Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01125",
+      "phrase": "выгрузить из честного знака в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:42:38.274Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01128",
+      "phrase": "1с эдо и честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:43:02.226Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01129",
+      "phrase": "1с розница 3.0 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:43:13.248Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01134",
+      "phrase": "сбис честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:44:00.378Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01135",
+      "phrase": "честный знак токен для 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:44:07.969Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01136",
+      "phrase": "упд из 1с в честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:44:19.327Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01137",
+      "phrase": "честный знак в 1с ерп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:44:25.311Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01138",
+      "phrase": "1с ут работа с честным знаком",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:44:34.906Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01139",
+      "phrase": "настройка честного знака в 1с ут 11.5",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:44:44.107Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01141",
+      "phrase": "1с итс честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:45:00.791Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01142",
+      "phrase": "инициализация модуля честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:45:10.593Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01145",
+      "phrase": "тс пиот честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ts_piot",
+      "observed_tags": [
+        "ts_piot",
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:45:29.373Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01146",
+      "phrase": "1с честный знак наборы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:45:39.237Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01149",
+      "phrase": "выгрузка честного знака 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:46:04.955Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01150",
+      "phrase": "идет настройка локального модуля честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:46:12.567Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01151",
+      "phrase": "1с ут11 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:46:26.795Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01153",
+      "phrase": "тестовый контур честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:46:51.090Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01154",
+      "phrase": "1с загрузка из честного знака",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:47:00.972Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01155",
+      "phrase": "1с обработка честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:47:17.553Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01158",
+      "phrase": "маркировка остатков честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:47:51.621Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01161",
+      "phrase": "эдо лайт честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:48:19.680Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01162",
+      "phrase": "1с розница 3 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:48:30.611Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01165",
+      "phrase": "1с подпись честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:48:45.234Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01166",
+      "phrase": "инициализация локального модуля честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:48:55.032Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01167",
+      "phrase": "1с 10.3 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:49:02.940Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01169",
+      "phrase": "локальный модуль честный знак 1с ут",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:49:19.143Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01170",
+      "phrase": "1с 7.7 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:49:30.023Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01171",
+      "phrase": "объемно сортовой учет честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01172",
+      "phrase": "локальный модуль честный знак не установлен 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:49:41.256Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01177",
+      "phrase": "честный знак конфигурация 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:50:29.345Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01180",
+      "phrase": "локальный модуль честный знак 1с розница 2.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:50:54.130Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01184",
+      "phrase": "локальный модуль честный знак не инициализирован 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:51:31.499Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01188",
+      "phrase": "тсд для честного знака 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:52:14.203Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01194",
+      "phrase": "локальный модуль честный знак для 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:53:03.412Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01195",
+      "phrase": "честный знак в 1с комплексная автоматизация",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:53:15.600Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01202",
+      "phrase": "токен честный знак 1с розница",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:54:14.639Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01205",
+      "phrase": "честный знак альфа авто 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:54:38.584Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01207",
+      "phrase": "1с рмк честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:54:58.775Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01208",
+      "phrase": "1с честный знак ут 10.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:55:08.010Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01211",
+      "phrase": "честный знак на кассе 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:55:33.200Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01213",
+      "phrase": "честный знак через 1с эдо",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:55:50.400Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01214",
+      "phrase": "1с меркурий и честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:56:00.539Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01216",
+      "phrase": "честный знак в 1с упп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:56:15.244Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01219",
+      "phrase": "как связать честный знак и 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:56:40.579Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01220",
+      "phrase": "приемка товара честный знак в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:56:49.548Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01221",
+      "phrase": "расширение честный знак для 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:57:01.408Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01222",
+      "phrase": "код состояния http 400 1с честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:57:12.014Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01223",
+      "phrase": "настройка номенклатуры в 1с для честного знака",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:57:19.956Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01226",
+      "phrase": "инвентаризация честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:57:45.618Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01229",
+      "phrase": "1с запрос api честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:58:18.741Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01230",
+      "phrase": "токен для ккт честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:58:37.161Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01232",
+      "phrase": "мчд честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:58:58.275Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01233",
+      "phrase": "1с розница 2.3 и честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:59:06.732Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01236",
+      "phrase": "честный знак бизнес 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:59:31.995Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01238",
+      "phrase": "локальный модуль честный знак 1с унф",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:59:50.034Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01239",
+      "phrase": "тс пиот честный знак 1с розница",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ts_piot",
+      "observed_tags": [
+        "ts_piot",
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T12:59:58.039Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01249",
+      "phrase": "поэкземплярный учет честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:02:17.670Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01253",
+      "phrase": "1с бит честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:02:55.741Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01260",
+      "phrase": "1с честный знак одежда",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:04:15.716Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01261",
+      "phrase": "автоматическое обновление токенов честного знака в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:04:30.885Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01263",
+      "phrase": "патч 1с честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:04:49.623Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01270",
+      "phrase": "1с wms честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:06:17.123Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01272",
+      "phrase": "1с 7.7 торговля и склад честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:06:35.974Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01278",
+      "phrase": "полный url запроса 1с честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:07:37.259Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01280",
+      "phrase": "маркировка радиоэлектроники честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:07:57.559Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01289",
+      "phrase": "1с унф маркировка остатков честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:09:18.718Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01292",
+      "phrase": "код состояния http 503 1с честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:09:40.723Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01294",
+      "phrase": "как интегрировать 1с упп и честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:09:54.342Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01295",
+      "phrase": "1с ка работа с честным знаком",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:10:01.375Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01296",
+      "phrase": "1с ка 2 честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:10:12.854Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01301",
+      "phrase": "отсутствует доступ к ресурсу честный знак 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:10:54.479Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01302",
+      "phrase": "1с не видит локальный модуль честный знак",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:11:03.001Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01308",
+      "phrase": "как честный знак синхронизировать с 1с ут",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:11:54.830Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01309",
+      "phrase": "проверка поступивших товаров честного знака 1с розница",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:12:00.352Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01312",
+      "phrase": "честный знак у продавца в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "marking_chestny_znak",
+      "observed_tags": [
+        "marking_chestny_znak",
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:12:27.004Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01318",
+      "phrase": "1с макеты печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:13:20.092Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01319",
+      "phrase": "1с печатные формы документов",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:13:37.019Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01321",
+      "phrase": "1с печатная форма упд",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:13:52.323Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01322",
+      "phrase": "печатные формы 1с зуп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:14:03.406Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01326",
+      "phrase": "1с печатная форма печать",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:14:30.938Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01329",
+      "phrase": "1с унф печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01331",
+      "phrase": "создание печатной формы 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:14:58.942Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01333",
+      "phrase": "1с программно печатную форму",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:15:20.363Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01334",
+      "phrase": "1с 8 печатная форма",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:15:27.975Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01338",
+      "phrase": "обработки печатная форма 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:16:04.586Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01340",
+      "phrase": "1с печатная форма недоступна",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:16:20.067Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01345",
+      "phrase": "печатные формы 1с конфигуратор",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:16:49.211Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01346",
+      "phrase": "1с печатная форма акта",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:16:56.808Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01347",
+      "phrase": "1с изменение печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:17:06.127Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01352",
+      "phrase": "1с предприятие печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:17:39.671Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01355",
+      "phrase": "подписи в печатной форме 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:18:02.859Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01357",
+      "phrase": "изменить печатную форму 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:18:20.567Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01359",
+      "phrase": "1с файл печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:18:37.595Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01363",
+      "phrase": "1с печатная форма word",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:19:11.017Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01369",
+      "phrase": "печатная форма 1с картинка",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:20:03.712Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01378",
+      "phrase": "1с 8 3 печатная форма",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:21:17.250Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01380",
+      "phrase": "сохранение печатной формы 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:21:32.293Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01382",
+      "phrase": "1с бсп печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:21:46.712Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01385",
+      "phrase": "1с печатная форма управляемое",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:22:13.369Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01386",
+      "phrase": "1с внешняя печатная форма упд",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:22:20.235Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01387",
+      "phrase": "печатные формы расширение 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:22:33.146Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01391",
+      "phrase": "1с зуп макеты печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:22:59.843Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01392",
+      "phrase": "1с формирование печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:23:05.643Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01394",
+      "phrase": "1с внешние печатные формы управляемые",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:23:28.267Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01395",
+      "phrase": "1с печатная форма табличный документ",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:23:37.627Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01396",
+      "phrase": "печатная форма ка 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:23:47.279Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01403",
+      "phrase": "новая печатная форма в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:24:39.951Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01410",
+      "phrase": "печатная форма справочника 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01411",
+      "phrase": "1с печатная форма с нуля",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:25:33.057Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01413",
+      "phrase": "внешняя печатная форма 1с 8.3 управляемое",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:25:53.383Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01420",
+      "phrase": "1с 3.0 внешние печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:26:51.462Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01428",
+      "phrase": "1с несколько печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:28:04.189Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01432",
+      "phrase": "1с печатная форма выбор",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:28:27.386Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01433",
+      "phrase": "1с печатная форма колонтитул",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:28:37.788Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01436",
+      "phrase": "1с бп печатная форма упд",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:29:04.673Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01439",
+      "phrase": "макеты печатных форм 1с 8.3 изменить",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:29:29.751Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01442",
+      "phrase": "1с 8.3 внешние печатные формы упд",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:29:55.574Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01450",
+      "phrase": "отредактировать печатную форму 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:31:00.667Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01451",
+      "phrase": "создание печатной формы с нуля 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:31:09.997Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01455",
+      "phrase": "в 1с не выводится печатная форма",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:31:51.289Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01456",
+      "phrase": "1с 8 печатная форма документа",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:32:02.073Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01459",
+      "phrase": "1с зуп печатная форма трудового договора",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:32:38.477Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01460",
+      "phrase": "1с внешняя печатная форма бсп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:32:46.973Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01463",
+      "phrase": "1с печатная форма штрих код",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:33:13.249Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01465",
+      "phrase": "1с размер печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:33:33.715Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01470",
+      "phrase": "таблица в печатной форме 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:34:22.829Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01472",
+      "phrase": "1с печатная форма документа программно",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:34:38.521Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01475",
+      "phrase": "1с документооборот печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:35:06.068Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01476",
+      "phrase": "1с печатная форма разрыв страницы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:35:16.190Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01479",
+      "phrase": "настройка печатной формы 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:35:44.809Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01480",
+      "phrase": "печатная форма в конфигураторе 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:35:56.377Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01483",
+      "phrase": "1с печатная форма штрихкод",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:36:20.255Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01486",
+      "phrase": "отладка печатных форм 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:36:50.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01488",
+      "phrase": "1с изменение макета печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:36:58.499Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01489",
+      "phrase": "1с 8.3 параметры печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:37:09.758Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01492",
+      "phrase": "печатные формы формируются 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:37:37.380Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01495",
+      "phrase": "1с 8.3 отладка внешней печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:38:05.392Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01496",
+      "phrase": "1с картинка в макете печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:38:18.686Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01497",
+      "phrase": "встроенные печатные формы 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:38:28.810Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01499",
+      "phrase": "1с печатная форма открытие формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:38:45.687Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01500",
+      "phrase": "1с печатные формы ширина",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:38:55.204Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01502",
+      "phrase": "печатная форма 1с управляемое приложение",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:39:15.317Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01504",
+      "phrase": "1с унф внешние печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:39:34.445Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01505",
+      "phrase": "1с 8.3 изменение печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:39:44.530Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01506",
+      "phrase": "1с зуп печатные формы документов",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:39:53.082Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01510",
+      "phrase": "1с шаблон в макете печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:40:21.562Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01512",
+      "phrase": "1с ут добавить печатную форму",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:40:41.312Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01513",
+      "phrase": "сделать печатную форму в 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:40:51.109Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01514",
+      "phrase": "1с 7 печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:41:02.656Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01515",
+      "phrase": "внешняя печатная форма 1с управляемое приложение",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:41:12.755Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01516",
+      "phrase": "1с зуп 3.1 печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:41:30.035Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01518",
+      "phrase": "1с печатная форма по умолчанию",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:41:43.894Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01519",
+      "phrase": "печатная форма 1с 8.3 управляемое приложение",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:41:52.966Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01522",
+      "phrase": "внешняя печатная форма 1с 8.3 управляемое приложение",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:42:19.108Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01523",
+      "phrase": "1с обновление печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:42:27.746Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01526",
+      "phrase": "1с печатная форма путевой лист",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:42:48.562Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01528",
+      "phrase": "1с внешняя печатная форма упд бп 3.0",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:43:02.640Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01530",
+      "phrase": "внешняя печатная форма 1с с нуля",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:43:24.588Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01532",
+      "phrase": "управляемые формы 1с отладка печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:43:42.243Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01533",
+      "phrase": "добавить новую печатную форму 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:43:52.302Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01538",
+      "phrase": "1с унф добавить печатную форму",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:44:42.675Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01540",
+      "phrase": "перенос печатной формы в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:44:59.391Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01543",
+      "phrase": "1с шаблон внешняя печатная форма",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:45:28.702Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01544",
+      "phrase": "добавить реквизит в печатную форму 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01545",
+      "phrase": "1с 8.3 редактирование печатной формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:45:37.328Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01546",
+      "phrase": "1с печатная форма недоступна почему",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:45:47.951Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01548",
+      "phrase": "1с печатная форма недоступна 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:46:06.937Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01550",
+      "phrase": "1с печатная форма скд",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:46:26.749Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01551",
+      "phrase": "1с печатная форма на клиенте",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:46:37.867Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01552",
+      "phrase": "внешняя печатная форма 1с подключить",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:46:49.635Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01554",
+      "phrase": "1с табличная часть в печатной форме",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:47:10.038Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01560",
+      "phrase": "убрать разрывы в печатной форме 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:47:56.924Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01561",
+      "phrase": "настраиваемые печатные формы 1с зуп",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "PHASE_4_NEW",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T13:48:07.489Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01637",
+      "phrase": "1с бухгалтерия макеты печатных форм",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c",
+        "provider_role"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01640",
+      "phrase": "1с внешняя печатная форма открыть форму",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01657",
+      "phrase": "1с erp внешние печатные формы",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "generic_erp_platform_ambiguity",
+      "observed_tags": [
+        "one_c",
+        "erp_reference"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01688",
+      "phrase": "1с печатная форма через макет",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ACCEPT",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01742",
+      "phrase": "1с ошибка печатная форма недоступна",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01834",
+      "phrase": "подключение внешней печатной формы в 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ambiguous_mixed_intent",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01877",
+      "phrase": "ошибки синхронизации 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01951",
+      "phrase": "1с расписание синхронизации",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "integrations",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-01973",
+      "phrase": "1с ошибка синхронизации данных",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02053",
+      "phrase": "ошибка синхронизации 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02150",
+      "phrase": "синхронизация 1с fresh",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "integrations",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02153",
+      "phrase": "не работает синхронизация 1с 8.3",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02160",
+      "phrase": "ошибка при настройке синхронизации 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c",
+        "service_task"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02165",
+      "phrase": "1с синхронизация ошибка доступа к файлу",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02177",
+      "phrase": "экватор синхронизация с 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "integrations",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02190",
+      "phrase": "почему не работает синхронизация в 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02192",
+      "phrase": "после обновления 1с не работает синхронизация",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02210",
+      "phrase": "1с синхронизация через локальный каталог",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "integrations",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02220",
+      "phrase": "1с ошибка синхронизация недоступна для использования",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02223",
+      "phrase": "ошибка доступа к локальному файлу 1с синхронизация",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02235",
+      "phrase": "1с ошибка формата потока при синхронизации",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "integrations",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02239",
+      "phrase": "программа 1с не работает",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ACCEPT",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02240",
+      "phrase": "почему не работает программа 1с",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "problem_troubleshooting",
+      "observed_tags": [
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02338",
+      "phrase": "1с встроенный тс пиот",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ts_piot",
+      "observed_tags": [
+        "ts_piot",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    },
+    {
+      "phrase_id": "CR2-PHR-02354",
+      "phrase": "1с не видит тс пиот",
+      "model_verdict": "ABSTAIN",
+      "final_authoritative_verdict": "ABSTAIN",
+      "primary_verdict": "ABSTAIN",
+      "reassessment_verdict": "ABSTAIN",
+      "primary_family": "ts_piot",
+      "observed_tags": [
+        "ts_piot",
+        "one_c"
+      ],
+      "production_source": "CANARY_ATTEMPT_2_REUSE",
+      "operator_override": null,
+      "assessed_at": "2026-06-28T06:48:21.789Z"
+    }
+  ]
+}

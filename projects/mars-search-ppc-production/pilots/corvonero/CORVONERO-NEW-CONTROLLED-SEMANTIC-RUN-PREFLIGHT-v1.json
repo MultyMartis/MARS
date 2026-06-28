@@ -1,0 +1,35 @@
+{
+  "preflight_id": "corvonero-new-controlled-semantic-run-preflight-v1",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-06-26",
+  "git_preflight": {
+    "branch": "mars/canonical-post-recovery",
+    "head": "ebc65acd4087fa9d180bb2a50921027fde51e3b7",
+    "expected_head": "ebc65acd4087fa9d180bb2a50921027fde51e3b7",
+    "head_match": true,
+    "recovery_branch_exists": true,
+    "recovery_anchor": "fe9d9c8e52edd2632de15dcc5ee5d353d8660362",
+    "corvonero_dirty_paths": [],
+    "unrelated_wip": "present — not staged"
+  },
+  "canonical_locus": {
+    "documentation": "projects/mars-search-ppc-production/pilots/corvonero/",
+    "operational_state": "projects/orca/projects/corvonero-direct-v2-clean-room/",
+    "mig_session": "incoming/mig/pilots/corvonero/session-mig-20260622-corv01/",
+    "atlas": "projects/atlas/population/",
+    "search_ppc_lifecycle": "projects/mars-search-ppc-production/"
+  },
+  "authority_verdicts": {
+    "raw_wordstat": "VERIFIED",
+    "normalized_corpus_2399": "VERIFIED",
+    "canonical_semantic_corpus_2368": "VERIFIED",
+    "lineage_2399_to_2368": "PROVEN",
+    "mig_handoff": "READY FOR ORCA REVIEW",
+    "serp": "SERP_PARTIAL_BUT_NON_BLOCKING",
+    "orca_wave_3_1f": "ORCA_WAVE_3_1F_AUTHORITY_VERIFIED",
+    "deep_research": "DEEP_RESEARCH_AUTHORITY_VERIFIED",
+    "old_run_boundary": "OLD_CORVONERO_RUN_NON_RESUMABLE",
+    "project_lifecycle": "FROZEN — READY_AFTER_OPERATOR_CHARTER"
+  },
+  "preliminary_readiness_verdict": "READY_FOR_OPERATOR_CHARTER_APPROVAL"
+}

@@ -16,13 +16,13 @@ const checks = [
   }],
   ['geo evidence policy v2 exists', () => fs.existsSync(path.join(SUP, 'policies/geo-evidence-policy-v2.json'))],
   ['service intent evidence layer exists', () => fs.existsSync(path.join(ROOT, 'evidence/service-intent-evidence.mjs'))],
-  ['prompt v1.3 scope-fit rules', () => {
+  ['prompt v1.4 scope-fit rules', () => {
     const src = fs.readFileSync(path.join(ROOT, 'contracts/prompt-contract.mjs'), 'utf8');
-    return src.includes('v1.3') && src.includes('scope_fit');
+    return src.includes('v1.4') && src.includes('scope_fit');
   }],
-  ['adjudicator v1.3 structured evidence', () => {
+  ['adjudicator v1.5 mandatory invariants', () => {
     const src = fs.readFileSync(path.join(ROOT, 'adjudication/semantic-adjudicator.mjs'), 'utf8');
-    return src.includes('v1.3') && src.includes('structured_strong_commercial_geo');
+    return src.includes('v1.5') && src.includes('applyMandatorySemanticInvariants');
   }],
   ['no phrase-specific exceptions', () => {
     const src = fs.readFileSync(path.join(ROOT, 'adjudication/semantic-adjudicator.mjs'), 'utf8');
@@ -47,6 +47,19 @@ const checks = [
   ['holdout checksum unchanged', () => {
     const d = JSON.parse(fs.readFileSync(path.join(SUP, 'preservation/original-holdout-closed-declaration-v1.json'), 'utf8'));
     return d.holdout_checksum === '1e76c9f4b94b9cc4288e2bbccd03b812a49d1af29fdf8e0ac9646c77b1e9b52a';
+  }],
+  ['platform compatibility layer exists', () => fs.existsSync(path.join(ROOT, 'evidence/platform-compatibility.mjs'))],
+  ['product version update repair present', () => {
+    const src = fs.readFileSync(path.join(ROOT, '../production/assessors/hard-rules.mjs'), 'utf8');
+    return src.includes('product_version_update_hard_rule');
+  }],
+  ['generic platform family abstain repair present', () => {
+    const src = fs.readFileSync(path.join(ROOT, '../production/assessors/hard-rules.mjs'), 'utf8');
+    return src.includes('generic_platform_family_abstain_rule');
+  }],
+  ['ambiguous diy abstain repair present', () => {
+    const src = fs.readFileSync(path.join(ROOT, '../production/assessors/hard-rules.mjs'), 'utf8');
+    return src.includes('ambiguous_diy_problem_abstain_rule');
   }],
   ['corvonero not classified', () => {
     const src = fs.readFileSync(path.join(__dirname, 'run-confirmation-validation.mjs'), 'utf8');

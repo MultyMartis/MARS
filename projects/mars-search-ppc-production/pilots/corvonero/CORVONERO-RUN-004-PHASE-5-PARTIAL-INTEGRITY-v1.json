@@ -1,0 +1,34 @@
+{
+  "receipt_id": "corvonero-run-004-phase-5-partial-integrity-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "verdict": "PASS — INTEGRITY RECONCILED",
+  "reconciled_at": "2026-06-28T14:56:10.425Z",
+  "counts": {
+    "canonical_total": 2368,
+    "processed_unique": 1599,
+    "unprocessed_unique": 769,
+    "accept": 529,
+    "reject": 762,
+    "abstain": 308,
+    "accept_plus_reject_plus_abstain": 1599,
+    "overlap_processed_unprocessed": 0,
+    "missing_from_registry": 0,
+    "extra_in_registry": 0,
+    "orphans": [],
+    "missing_from_union": 0,
+    "duplicates_processed": 0,
+    "duplicates_unprocessed": 0
+  },
+  "operator_override_00584": {
+    "preserved": true,
+    "model_verdict": "ACCEPT",
+    "final_authoritative_verdict": "REJECT",
+    "authority": "OPERATOR_ADJUDICATION_OVERRIDE"
+  },
+  "exclusion_boundary": {
+    "current_cycle_assembly_scope": "1599 assessed records only",
+    "out_of_scope": "769 unprocessed records",
+    "rule": "769 unprocessed IDs must not enter clusters, taxonomies, demand conclusions, or coverage percentages based on assessed results"
+  },
+  "pass": true
+}

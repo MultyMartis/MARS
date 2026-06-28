@@ -1,0 +1,21 @@
+{
+  "total_gold": 120,
+  "commercial_recall": 1,
+  "commercial_false_reject_count": 0,
+  "adversarial_false_accept_count": 0,
+  "adversarial_false_accept_rate": 0,
+  "high_confidence_geo_precision": 1,
+  "recall_gate_threshold": 0.9,
+  "gate_pass": true,
+  "commercial_false_rejects": [],
+  "adversarial_false_accepts": [],
+  "in_scope_commercial_recall": null,
+  "out_of_scope_commercial_intent_recall": 1,
+  "scope_fit_accuracy": 0.8571428571428571,
+  "provider_noun_recall": 1,
+  "service_task_recall": 1,
+  "product_service_recall": 1,
+  "abstain_rate": 0.008333333333333333,
+  "review_ratio": 0,
+  "adjudicator_overturn_rate": 0
+}

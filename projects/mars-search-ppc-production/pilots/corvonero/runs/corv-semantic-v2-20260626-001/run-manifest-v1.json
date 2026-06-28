@@ -1,0 +1,30 @@
+{
+  "run_id": "corv-semantic-v2-20260626-001",
+  "project_id": "PRJ-0013",
+  "mig_session_id": "session-mig-20260622-corv01",
+  "corpus_id": "corvonero-canonical-phrase-registry-v1",
+  "corpus_count": 2368,
+  "corpus_sha256": "eaa09b8450f8273890676c1ac2746172fac3cd884a4ee9697a8076593355b4fc",
+  "orca_wave": "3.1F",
+  "prompt_contract_version": "orca-semantic-assessment-prompt-v1.3",
+  "hard_rules_version": "hard-rules.mjs",
+  "adjudicator_version": "v1.3",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "authority_class": "CONTROLLED_SEMANTIC_RUN_V2",
+  "lifecycle_phase": "SPPC-05_VALIDATION",
+  "created_at": "2026-06-25T18:52:48.618Z",
+  "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-001",
+  "git_run_dir": "projects\\mars-search-ppc-production\\pilots\\corvonero\\runs\\corv-semantic-v2-20260626-001",
+  "operator_decisions": {
+    "provider": "openrouter",
+    "model": "openai/gpt-5-mini",
+    "hard_cost_cap_usd": 3,
+    "soft_cost_warning_usd": 2,
+    "old_run_resume": "PROHIBITED",
+    "old_forensic_cache_reuse": "PROHIBITED",
+    "missing_ts_piot_serp": "NON_BLOCKING_FOR_PHASE_0_1_2",
+    "wave5": "BLOCKED"
+  },
+  "old_run_boundary": "OLD_CORVONERO_RUN_NON_RESUMABLE"
+}

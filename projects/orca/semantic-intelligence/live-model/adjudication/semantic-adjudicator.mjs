@@ -1,13 +1,17 @@
 /**
  * Model-aware semantic adjudicator — receives assessments only after both complete.
- * Wave 3.1F: commercial intent vs scope-fit separation; service-intent evidence layer.
+ * Wave 3.1F v2: mandatory semantic invariants applied after all primary outcome branches.
  */
 import {
   extractServiceIntentEvidence,
   resolveScopeFit,
 } from '../evidence/service-intent-evidence.mjs';
+import {
+  evaluatePlatformCompatibility,
+  PLATFORM_CLASSIFICATION,
+} from '../evidence/platform-compatibility.mjs';
 
-export const ADJUDICATOR_VERSION = 'v1.3';
+export const ADJUDICATOR_VERSION = 'v1.5';
 export const ADJUDICATION_OUTCOMES = [
   'FINAL ACCEPT', 'FINAL REJECT', 'FINAL ABSTAIN',
   'POLICY CONFLICT', 'DOMAIN CONFLICT', 'INVALID EVIDENCE',
@@ -24,10 +28,13 @@ export function adjudicateSemanticIntent(params) {
     protectedIntentPolicy = {},
     phrase,
     structuredEvidence: structuredEvidenceIn,
+    platformCompatibility: platformCompatibilityIn,
   } = params;
 
   const structuredEvidence = structuredEvidenceIn
     || (phrase ? extractServiceIntentEvidence(phrase) : null);
+  const platformCompatibility = platformCompatibilityIn
+    || (phrase ? evaluatePlatformCompatibility(phrase, businessScope, serviceRegistry) : null);
   const scopeFitResult = phrase ? resolveScopeFit(phrase, serviceRegistry) : null;
 
   const findings = [];
@@ -37,6 +44,7 @@ export function adjudicateSemanticIntent(params) {
   let decisiveEvidence = [];
   let conflictingEvidence = [];
   let agreementState = 'UNKNOWN';
+  const invariantApplications = [];
 
   if (!assessmentA?.decision) {
     return invalidEvidenceResult('assessment A missing decision');
@@ -51,10 +59,21 @@ export function adjudicateSemanticIntent(params) {
     agreementState = 'SINGLE_ASSESSOR';
   }
 
+  // Phase 1: hard-rule override
   if (hardRuleEvidence?.blocked && hardRuleEvidence.override_decision) {
     outcome = `FINAL ${hardRuleEvidence.override_decision}`;
     decisiveEvidence = hardRuleEvidence.evidence || [];
     findings.push('hard_rule_override');
+  }
+
+  // Phase 2: product version update blocks premature ACCEPT
+  if (structuredEvidence?.product_version_update && !structuredEvidence?.service_update_intent) {
+    if (outcome === 'FINAL ACCEPT' || decisionA === 'ACCEPT') {
+      outcome = 'FINAL REJECT';
+      confidence = 0.8;
+      decisiveEvidence.push('product_version_update_not_service');
+      findings.push('product_version_update_reject');
+    }
   }
 
   const blockingInvariants = invariantResults.filter((f) => f.blocking);
@@ -71,12 +90,13 @@ export function adjudicateSemanticIntent(params) {
     findings.push('protected_class_accept');
   }
 
-  if (hardRuleEvidence?.blocked && decisionA === 'ACCEPT') {
+  if (hardRuleEvidence?.blocked && decisionA === 'ACCEPT' && !hardRuleEvidence.override_decision) {
     outcome = 'FINAL REJECT';
     decisiveEvidence = hardRuleEvidence.evidence || [];
     findings.push('hard_rule_blocks_accept');
   }
 
+  // Phase 3: primary outcome branches (agreement / disagreement / single assessor)
   if (agreementState === 'AGREE' && !findings.includes('hard_rule_override')) {
     outcome = `FINAL ${decisionA}`;
     confidence = Math.max(assessmentA.confidence || 0.5, assessmentB?.confidence || 0);
@@ -87,7 +107,8 @@ export function adjudicateSemanticIntent(params) {
       decisiveEvidence.push('structured_strong_commercial_geo_override');
       findings.push('scope_fit_separated_from_commercial_reject');
     }
-    if (decisionA === 'REJECT' && structuredEvidence?.strong_commercial && !structuredEvidence?.strong_commercial_geo) {
+    if (decisionA === 'REJECT' && structuredEvidence?.strong_commercial && !structuredEvidence?.strong_commercial_geo
+      && !structuredEvidence?.product_version_update && !structuredEvidence?.ambiguous_diy_problem) {
       outcome = 'FINAL ACCEPT';
       confidence = Math.max(0.75, confidence);
       decisiveEvidence.push('structured_strong_commercial_override');
@@ -128,14 +149,15 @@ export function adjudicateSemanticIntent(params) {
         conflictingEvidence.push('accept_abstain_split');
       }
     }
-  } else if (agreementState === 'SINGLE_ASSESSOR') {
+  } else if (agreementState === 'SINGLE_ASSESSOR' && !findings.includes('hard_rule_override')) {
     outcome = `FINAL ${decisionA}`;
     confidence = assessmentA.confidence || 0.5;
     if (decisionA === 'ACCEPT' && confidence < 0.75) {
       outcome = 'FINAL ABSTAIN';
       findings.push('single_assessor_low_confidence');
     }
-    if (decisionA === 'REJECT' && (structuredEvidence?.strong_commercial_geo || structuredEvidence?.strong_commercial)) {
+    if (decisionA === 'REJECT' && (structuredEvidence?.strong_commercial_geo || structuredEvidence?.strong_commercial)
+      && !structuredEvidence?.product_version_update && !structuredEvidence?.ambiguous_diy_problem) {
       outcome = 'FINAL ACCEPT';
       confidence = 0.76;
       decisiveEvidence.push('structured_strong_commercial_geo_single');
@@ -149,13 +171,7 @@ export function adjudicateSemanticIntent(params) {
     }
   }
 
-  if (structuredEvidence?.bare_error_insufficient_context && outcome === 'FINAL REJECT') {
-    outcome = 'FINAL ABSTAIN';
-    confidence = 0.45;
-    findings.push('bare_error_downgraded_to_abstain');
-    decisiveEvidence.push('insufficient_context_error_code');
-  }
-
+  // Phase 4: accept safety gates (before mandatory invariants)
   if (outcome === 'FINAL ACCEPT') {
     const hasCommercialEvidence = (assessmentA.commercial_evidence || []).length > 0
       || (assessmentB?.commercial_evidence || []).length > 0
@@ -181,6 +197,20 @@ export function adjudicateSemanticIntent(params) {
     }
   }
 
+  // Phase 5: mandatory semantic invariants (always after primary branches)
+  const invariantResult = applyMandatorySemanticInvariants({
+    outcome,
+    confidence,
+    structuredEvidence,
+    platformCompatibility,
+    hardRuleEvidence,
+    findings,
+    decisiveEvidence,
+    invariantApplications,
+  });
+  outcome = invariantResult.outcome;
+  confidence = invariantResult.confidence;
+
   confidence = Math.max(0, Math.min(1, confidence));
   if (['POLICY CONFLICT', 'DOMAIN CONFLICT', 'INVALID EVIDENCE'].includes(outcome)) humanRequired = true;
   if (outcome === 'FINAL ABSTAIN' && confidence < 0.4) humanRequired = true;
@@ -198,14 +228,100 @@ export function adjudicateSemanticIntent(params) {
     ownership: scopeFitResult?.ownership || null,
     service_gap: scopeFitResult?.service_gap || false,
     structured_evidence: structuredEvidence,
+    platform_compatibility: platformCompatibility,
     agreement_state: agreementState,
     decisive_evidence: decisiveEvidence,
     conflicting_evidence: conflictingEvidence,
     confidence,
     human_review_required: humanRequired,
     findings,
+    invariant_applications: invariantApplications,
     explanation: buildExplanation(outcome, agreementState, findings, decisiveEvidence, conflictingEvidence),
   };
+}
+
+function hasDirectCommercialErrorOverride(structuredEvidence) {
+  return Boolean(
+    structuredEvidence?.strong_commercial_problem
+    || (structuredEvidence?.provider_noun_detected && structuredEvidence?.service_task_detected
+      && !structuredEvidence?.ambiguous_diy_problem),
+  );
+}
+
+export function applyMandatorySemanticInvariants({
+  outcome,
+  confidence,
+  structuredEvidence,
+  platformCompatibility,
+  hardRuleEvidence,
+  findings,
+  decisiveEvidence,
+  invariantApplications,
+}) {
+  let nextOutcome = outcome;
+  let nextConfidence = confidence;
+
+  if (structuredEvidence?.ambiguous_diy_problem
+    && !hasDirectCommercialErrorOverride(structuredEvidence)) {
+    if (nextOutcome === 'FINAL REJECT' || nextOutcome === 'FINAL ACCEPT') {
+      nextOutcome = 'FINAL ABSTAIN';
+      nextConfidence = Math.min(nextConfidence, 0.48);
+      findings.push('invariant_ambiguous_diy_abstain');
+      decisiveEvidence.push('ambiguous_diy_problem');
+      invariantApplications.push({
+        invariant_id: 'ambiguous_diy_problem_abstain',
+        applied: true,
+        prior_outcome: outcome,
+        final_outcome: nextOutcome,
+      });
+    }
+  }
+
+  if (platformCompatibility?.classification === PLATFORM_CLASSIFICATION.GENERIC_PLATFORM_FAMILY
+    && (structuredEvidence?.product_version_update || structuredEvidence?.product_only)
+    && !structuredEvidence?.service_update_intent) {
+    if (nextOutcome === 'FINAL REJECT' || nextOutcome === 'FINAL ACCEPT') {
+      nextOutcome = 'FINAL ABSTAIN';
+      nextConfidence = Math.min(nextConfidence, 0.46);
+      findings.push('invariant_generic_platform_family_abstain');
+      decisiveEvidence.push('generic_platform_family_ambiguity');
+      invariantApplications.push({
+        invariant_id: 'generic_platform_family_abstain',
+        applied: true,
+        prior_outcome: outcome,
+        final_outcome: nextOutcome,
+      });
+    }
+  }
+
+  if (structuredEvidence?.bare_error_insufficient_context && nextOutcome === 'FINAL REJECT') {
+    nextOutcome = 'FINAL ABSTAIN';
+    nextConfidence = Math.min(nextConfidence, 0.45);
+    findings.push('invariant_bare_error_abstain');
+    decisiveEvidence.push('insufficient_context_error_code');
+    invariantApplications.push({
+      invariant_id: 'bare_error_insufficient_context_abstain',
+      applied: true,
+      prior_outcome: outcome,
+      final_outcome: nextOutcome,
+    });
+  }
+
+  if (hardRuleEvidence?.reinforce_abstain
+    && (nextOutcome === 'FINAL REJECT' || nextOutcome === 'FINAL ACCEPT')
+    && structuredEvidence?.ambiguous_diy_problem
+    && !hasDirectCommercialErrorOverride(structuredEvidence)) {
+    nextOutcome = 'FINAL ABSTAIN';
+    findings.push('invariant_hard_rule_reinforce_abstain');
+    invariantApplications.push({
+      invariant_id: 'hard_rule_reinforce_abstain',
+      applied: true,
+      prior_outcome: outcome,
+      final_outcome: nextOutcome,
+    });
+  }
+
+  return { outcome: nextOutcome, confidence: nextConfidence };
 }
 
 const CAREER_MARKERS = /(ваканси|резюме|зарплат|устроиться|трудоустройств|ищу работу|работа программист)/i;
@@ -273,6 +389,7 @@ function invalidEvidenceResult(reason) {
     confidence: 0,
     human_review_required: true,
     findings: ['invalid_evidence'],
+    invariant_applications: [],
     explanation: reason,
   };
 }

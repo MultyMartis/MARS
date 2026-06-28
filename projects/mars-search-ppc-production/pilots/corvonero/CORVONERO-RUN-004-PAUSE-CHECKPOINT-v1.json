@@ -1,0 +1,45 @@
+{
+  "document_id": "CORVONERO-RUN-004-PAUSE-CHECKPOINT-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "status": "PAUSED_AT_SPPC_05_EXECUTION",
+  "paused_at": "2026-06-27T10:10:00.000Z",
+  "resume_token": "ПРОДОЛЖИМ",
+  "lifecycle_state": "PAUSED_AT_SPPC_05_EXECUTION",
+  "project_processed": "0 / 2368",
+  "partial_cost_usd": 0.2180604,
+  "preflight": {
+    "branch": "mars/canonical-post-recovery",
+    "orca_repair_v2": "FROZEN — hashes match",
+    "corpus": "2368 verified",
+    "registration": "COMPLETE"
+  },
+  "completed_suites": [
+    "wave31f_bypass — PASS",
+    "under_admission — PASS",
+    "platform_compatibility — 9/9 PASS (PC-ABSTAIN-01 → ABSTAIN)",
+    "focused_repair_repro — all_match (CFM-PROD-UPD-02, PQR-ABSTAIN-03, PC-ABSTAIN-01)",
+    "problem_query_policy — 10/10 PASS",
+    "confirmation_product — FPR 0.0, gate_pass true"
+  ],
+  "interrupted_suite": "confirmation_geo_v2",
+  "pending_suites": [
+    "confirmation_geo_v2",
+    "closed_dataset_regression",
+    "structured_output",
+    "variance_check (3×: CFM-PROD-UPD-02, PQR-ABSTAIN-03, PC-ABSTAIN-01, PSR-AMB-01)"
+  ],
+  "final_deliverables_pending": [
+    "CORVONERO-RUN-004-SPPC-05-RESULT-v1.*",
+    "CORVONERO-RUN-004-SPPC-05-REVIEW-PACKAGE-v1.*",
+    "CORVONERO-RUN-004-PHASE-3-NEXT-TASK-v1.md",
+    "REPORT-corvonero-run-004-sppc05-validation-v1.md"
+  ],
+  "resume": {
+    "script": "projects/mars-search-ppc-production/pilots/corvonero/tools/resume-run-004-sppc05-v1.mjs",
+    "node": "C:\\MARS Phenix\\AI MARS\\.tools\\node-runtime\\node.exe",
+    "storage_checkpoint": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-004\\checkpoints\\pause-checkpoint-v1.json",
+    "partial_results": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-004\\reports\\partial-sppc05-results-v1.json"
+  },
+  "frozen_runs": ["corv-semantic-v2-20260626-002", "corv-semantic-v2-20260626-003"],
+  "operator_note": "Отправьте ПРОДОЛЖИМ — агент продолжит с confirmation_geo_v2 без перезапуска завершённых suite."
+}

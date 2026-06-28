@@ -1,0 +1,17 @@
+{
+  "run_id": "corv-semantic-v2-20260626-003",
+  "phase": "0/1/2 — SPPC-05 retry",
+  "started_at": "2026-06-26T09:33:53.228Z",
+  "completed_at": "2026-06-26T13:29:20.099Z",
+  "gate_b": "FAILED",
+  "lifecycle_state": "BLOCKED_AT_SPPC_05",
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "corpus_verified": true,
+  "corpus_processed_count": 0,
+  "isolation_verdict": "OLD_RUN_ISOLATION — PASS",
+  "cumulative_cost_usd": 0,
+  "full_corpus_started": false,
+  "canary_started": false,
+  "wave5_started": false
+}

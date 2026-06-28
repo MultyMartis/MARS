@@ -1,0 +1,100 @@
+{
+  "repetitions_per_case": 3,
+  "provider": "openrouter",
+  "model": "openai/gpt-5-mini",
+  "cases": [
+    {
+      "record_id": "CFM-PROD-UPD-02",
+      "expected": "REJECT",
+      "repetitions": 3,
+      "verdict_distribution": {
+        "REJECT": 3
+      },
+      "confidence_values": [
+        0.88,
+        0.88,
+        0.78
+      ],
+      "primary_distribution": {
+        "REJECT": 3
+      },
+      "stable": true,
+      "all_match": true
+    },
+    {
+      "record_id": "PQR-ABSTAIN-03",
+      "expected": "ABSTAIN",
+      "repetitions": 3,
+      "verdict_distribution": {
+        "ABSTAIN": 3
+      },
+      "confidence_values": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "primary_distribution": {
+        "REJECT": 3
+      },
+      "stable": true,
+      "all_match": true
+    },
+    {
+      "record_id": "PC-ABSTAIN-01",
+      "expected": "ABSTAIN",
+      "repetitions": 3,
+      "verdict_distribution": {
+        "ABSTAIN": 3
+      },
+      "confidence_values": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "primary_distribution": {
+        "ABSTAIN": 2,
+        "REJECT": 1
+      },
+      "stable": true,
+      "all_match": true
+    },
+    {
+      "record_id": "PSR-AMB-01",
+      "expected": "ABSTAIN",
+      "repetitions": 3,
+      "verdict_distribution": {
+        "ACCEPT": 3
+      },
+      "confidence_values": [
+        0.92,
+        0.92,
+        0.9
+      ],
+      "primary_distribution": {
+        "ACCEPT": 3
+      },
+      "stable": false,
+      "all_match": false
+    }
+  ],
+  "policy_stable": false,
+  "repair_cases_stable": true,
+  "psr_amb_01": {
+    "record_id": "PSR-AMB-01",
+    "expected": "ABSTAIN",
+    "repetitions": 3,
+    "verdict_distribution": {
+      "ACCEPT": 3
+    },
+    "confidence_values": [
+      0.92,
+      0.92,
+      0.9
+    ],
+    "primary_distribution": {
+      "ACCEPT": 3
+    },
+    "stable": false,
+    "all_match": false
+  }
+}
