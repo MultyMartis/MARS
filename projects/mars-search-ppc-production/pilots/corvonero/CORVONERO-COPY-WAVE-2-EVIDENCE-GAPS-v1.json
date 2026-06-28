@@ -1,0 +1,54 @@
+{
+  "packet_id": "corvonero-copy-wave-2-evidence-gaps-v1",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "scope": ["LP-02", "LP-03", "LP-04", "LP-05"],
+  "classification_legend": {
+    "CONFIRMED": "Used in draft copy",
+    "SAFE_TO_OMIT": "Omitted from public copy by design",
+    "OPERATOR_DECISION_REQUIRED": "Draft uses neutral wording; operator must confirm before export",
+    "CLIENT_EVIDENCE_REQUIRED": "No invented proof; generic scope only"
+  },
+  "cross_page": [
+    {"field_id": "brand_korvo_nero", "classification": "CONFIRMED"},
+    {"field_id": "phone", "classification": "CONFIRMED"},
+    {"field_id": "b2b_contract_cashless", "classification": "CONFIRMED"},
+    {"field_id": "remote_russia", "classification": "CONFIRMED"},
+    {"field_id": "onsite_novosibirsk_only", "classification": "CONFIRMED"},
+    {"field_id": "configurations_ut_unf_retail_ka_bp", "classification": "CONFIRMED"},
+    {"field_id": "hourly_3000_min_2h", "classification": "CONFIRMED", "note": "LP-01 only; not auto-applied LP-02-05"},
+    {"field_id": "subscription_tariffs", "classification": "OPERATOR_DECISION_REQUIRED"},
+    {"field_id": "sla_response_time", "classification": "SAFE_TO_OMIT"},
+    {"field_id": "partner_1c_status", "classification": "SAFE_TO_OMIT"},
+    {"field_id": "case_studies", "classification": "CLIENT_EVIDENCE_REQUIRED"},
+    {"field_id": "nds_vat", "classification": "OPERATOR_DECISION_REQUIRED"}
+  ],
+  "by_landing_page": {
+    "LP-02": {
+      "unresolved": [
+        "hourly_rate_for_incident_support",
+        "abonent_description_without_tariffs",
+        "nds_in_copy"
+      ]
+    },
+    "LP-03": {
+      "unresolved": [
+        "hourly_vs_estimate_public_pricing",
+        "portfolio_examples"
+      ]
+    },
+    "LP-04": {
+      "unresolved": [
+        "extended_systems_list",
+        "integration_pricing_model"
+      ]
+    },
+    "LP-05": {
+      "unresolved": [
+        "industry_experience_proof",
+        "ts_piot_subsection_depth"
+      ]
+    }
+  },
+  "draft_blockers": []
+}

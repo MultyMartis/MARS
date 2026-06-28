@@ -1,0 +1,26 @@
+{
+  "copy_id": "corvonero-copy-wave-2-lp05-marking-draft-v1",
+  "landing_page_id": "LP-05",
+  "campaign_id": "CA-05",
+  "language": "ru",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "status": "operator_review_draft",
+  "phrase_reconciliation": {"allocated": 220, "mapped": 220, "pass": true},
+  "default_first_screen_variant": "A",
+  "meta": {
+    "title": "Маркировка и Честный знак в 1С — настройка и сопровождение | Корво Неро",
+    "slug": "markirovka-chestny-znak"
+  },
+  "subsections": ["ts_piot"],
+  "legal_scope_boundary": "technical_1c_service_only_no_compliance_guarantee",
+  "ad_group_alignment": [
+    {"group_id": "ca-05-direct-service-order", "phrase_count": 199, "sections": ["first_screen", "service_scope", "typical_tasks"], "first_screen_variant": "A"},
+    {"group_id": "ca-05-integration", "phrase_count": 14, "sections": ["service_scope", "typical_tasks"], "first_screen_variant": "A"},
+    {"group_id": "ca-05-ts-piot", "phrase_count": 4, "sections": ["ts_piot"], "first_screen_variant": "A"},
+    {"group_id": "ca-05-support-and-maintenance", "phrase_count": 2, "sections": ["typical_tasks", "process"], "first_screen_variant": "B"},
+    {"group_id": "ca-05-specialist-search", "phrase_count": 1, "sections": ["typical_tasks"], "first_screen_variant": "B"}
+  ],
+  "wave2_reconciliation": {"lp02": 155, "lp03": 71, "lp04": 48, "lp05": 220, "total": 494},
+  "unresolved_decisions": ["industry_experience_proof", "ts_piot_depth"],
+  "prohibited_in_copy": ["compliance_guarantee", "official_chestny_znak_representative", "marking_implementation_prices", "invented_cases"]
+}

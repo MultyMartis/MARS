@@ -1,0 +1,38 @@
+{
+  "copy_id": "corvonero-copy-wave-2-lp04-integrations-final-v2",
+  "landing_page_id": "LP-04",
+  "campaign_id": "CA-04",
+  "language": "ru",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "status": "operator_approved_final",
+  "supersedes": "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-DRAFT-v1",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "phrase_reconciliation": {"allocated": 48, "mapped": 48, "pass": true},
+  "default_first_screen_variant": "A",
+  "meta": {
+    "title": "Интеграция 1С с сайтом, Битрикс и внешними системами | Корво Неро",
+    "description": "Настройка обмена данными между 1С и сайтом, Битрикс, внешними системами. Синхронизация, импорт и экспорт. Удалённо по России, выезд в Новосибирске. Корво Неро.",
+    "slug": "integracii-1s"
+  },
+  "first_screen": {
+    "variant": "A",
+    "h1": "Интеграция 1С с сайтом, Битрикс и внешними системами",
+    "lead": "Настраиваем обмен данными между 1С и вашими системами: синхронизацию каталога и заказов, импорт и экспорт, связь с сайтом и Битрикс. Удалённо по России, с выездом в Новосибирске.",
+    "primary_cta": "Обсудить задачу",
+    "secondary_cta": "Получить оценку",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "systems_mentioned": ["website", "internet_shop", "bitrix", "external_systems_generic", "api", "import_export", "synchronization"],
+  "pricing_policy": {
+    "numeric_prices_public": false,
+    "approach": "estimate_after_analysis"
+  },
+  "operator_decisions_applied": [
+    "first_screen_variant_a",
+    "integration_scope_wording_revised",
+    "external_systems_faq_revised",
+    "no_unverified_platform_names"
+  ],
+  "faq_artifact": "CORVONERO-COPY-WAVE-2-LP04-FINAL-FAQ-v2.md",
+  "approval_artifact": "CORVONERO-COPY-WAVE-2-LP04-FINAL-APPROVAL-v1.md"
+}

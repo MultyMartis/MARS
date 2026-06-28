@@ -1,0 +1,31 @@
+{
+  "result_id": "corvonero-copy-wave-2-result-v1",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "branch": "mars/canonical-post-recovery",
+  "verdict": "PASS — LP-02 TO LP-05 DRAFTS READY FOR OPERATOR REVIEW",
+  "landing_pages": {
+    "LP-02": {"status": "DRAFT CREATED", "phrases": "155/155", "default_first_screen": "A"},
+    "LP-03": {"status": "DRAFT CREATED", "phrases": "71/71", "default_first_screen": "A"},
+    "LP-04": {"status": "DRAFT CREATED", "phrases": "48/48", "default_first_screen": "A"},
+    "LP-05": {"status": "DRAFT CREATED", "phrases": "220/220", "default_first_screen": "A"}
+  },
+  "phrase_reconciliation": {
+    "LP-02": 155,
+    "LP-03": 71,
+    "LP-04": 48,
+    "LP-05": 220,
+    "wave_total": 494,
+    "pass": true
+  },
+  "authorized_next_steps": [],
+  "not_authorized": ["docx_export", "tilda_implementation", "ad_creation", "commander_import", "campaign_launch"],
+  "preflight": {
+    "branch_ok": true,
+    "checkpoint_ancestor_ok": true,
+    "requirements_packs_ok": true,
+    "lp01_unchanged": true,
+    "commit_performed": false
+  },
+  "output_files_count": 21
+}

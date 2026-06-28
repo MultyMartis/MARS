@@ -1,0 +1,21 @@
+{
+  "copy_id": "corvonero-copy-wave-2-lp04-integrations-draft-v1",
+  "landing_page_id": "LP-04",
+  "campaign_id": "CA-04",
+  "language": "ru",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "status": "operator_review_draft",
+  "phrase_reconciliation": {"allocated": 48, "mapped": 48, "pass": true},
+  "default_first_screen_variant": "A",
+  "meta": {
+    "title": "Интеграция 1С с сайтом, Битрикс и внешними системами | Корво Неро",
+    "slug": "integracii-1s"
+  },
+  "systems_mentioned": ["website", "internet_shop", "bitrix", "external_systems_generic"],
+  "systems_not_invented": true,
+  "ad_group_alignment": [
+    {"group_id": "ca-04-integration", "phrase_count": 48, "sections": ["all"], "first_screen_variant": "A"}
+  ],
+  "unresolved_decisions": ["extended_systems_list", "integration_pricing_model"],
+  "prohibited_in_copy": ["any_system_guarantee", "named_unverified_platforms", "integration_budgets", "invented_cases"]
+}

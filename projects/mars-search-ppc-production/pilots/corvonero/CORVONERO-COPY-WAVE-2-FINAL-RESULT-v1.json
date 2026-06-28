@@ -1,0 +1,66 @@
+{
+  "result_id": "corvonero-copy-wave-2-final-result-v1",
+  "task": "wave_2_finalization_and_roman_docx_export",
+  "date": "2026-06-29",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "verdict": {
+    "wave_2_finalization": "PASS",
+    "lp02_final_copy": "APPROVED",
+    "lp03_final_copy": "APPROVED",
+    "lp04_final_copy": "APPROVED",
+    "lp05_final_copy": "APPROVED",
+    "roman_docx": "4_CREATED_AND_VERIFIED",
+    "total_roman_landing_page_docx": "5_READY_INCLUDING_LP01",
+    "ads": "NOT_STARTED",
+    "commander": "NOT_STARTED"
+  },
+  "phrase_reconciliation": {
+    "lp02": {"allocated": 155, "mapped": 155, "pass": true},
+    "lp03": {"allocated": 71, "mapped": 71, "pass": true},
+    "lp04": {"allocated": 48, "mapped": 48, "pass": true},
+    "lp05": {"allocated": 220, "mapped": 220, "pass": true},
+    "total": {"allocated": 494, "mapped": 494, "pass": true}
+  },
+  "final_copy_artifacts": {
+    "lp02": [
+      "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "CORVONERO-COPY-WAVE-2-LP02-FINAL-FAQ-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP02-FINAL-APPROVAL-v1.md"
+    ],
+    "lp03": [
+      "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+      "CORVONERO-COPY-WAVE-2-LP03-FINAL-FAQ-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP03-FINAL-APPROVAL-v1.md"
+    ],
+    "lp04": [
+      "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-FINAL-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-FINAL-v2.json",
+      "CORVONERO-COPY-WAVE-2-LP04-FINAL-FAQ-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP04-FINAL-APPROVAL-v1.md"
+    ],
+    "lp05": [
+      "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "CORVONERO-COPY-WAVE-2-LP05-FINAL-FAQ-v2.md",
+      "CORVONERO-COPY-WAVE-2-LP05-FINAL-APPROVAL-v1.md"
+    ],
+    "common": [
+      "CORVONERO-COPY-WAVE-2-FINAL-CHANGELOG-v1.md",
+      "CORVONERO-COPY-WAVE-2-FINAL-RESULT-v1.md",
+      "CORVONERO-COPY-WAVE-2-FINAL-RESULT-v1.json"
+    ]
+  },
+  "roman_docx_export_dir": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29",
+  "roman_docx_files": [
+    "CORVONERO-LP02-СОПРОВОЖДЕНИЕ-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+    "CORVONERO-LP03-ДОРАБОТКА-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+    "CORVONERO-LP04-ИНТЕГРАЦИИ-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+    "CORVONERO-LP05-МАРКИРОВКА-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx"
+  ],
+  "lp01_docx_reference": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-LP01-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+  "draft_sources_preserved": true,
+  "lp01_artifacts_unchanged": true,
+  "commit_performed": false
+}

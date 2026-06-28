@@ -1,0 +1,121 @@
+{
+  "checkpoint_id": "corvonero-landing-page-copy-program-checkpoint-v1",
+  "generated_at": "2026-06-28T22:00:48.856441+00:00",
+  "git": {
+    "branch": "mars/canonical-post-recovery",
+    "pre_commit_head": "472be1abffb666a836eb83d5644e1fd3a233cc2d",
+    "prior_checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+    "prior_checkpoint_tag": "corvonero-pre-export-production-2026-06",
+    "planned_tag": "corvonero-final-landing-page-copy-program-2026-06"
+  },
+  "copy_readiness": {
+    "LP-01": "READY — authority unchanged",
+    "LP-02": "OPERATOR APPROVED FINAL",
+    "LP-03": "OPERATOR APPROVED FINAL",
+    "LP-04": "OPERATOR APPROVED FINAL",
+    "LP-05": "OPERATOR APPROVED FINAL",
+    "LP-06": "DEFERRED — 37 phrases"
+  },
+  "roman_docx": {
+    "count_ready": 5,
+    "lp01_path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-LP01-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+    "lp02_lp05_dir": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29",
+    "inventory": [
+      {
+        "page": "LP-01",
+        "docx_path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-LP01-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "source_final_copy": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+        "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-LP01-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "opens": true,
+        "size_bytes": 39634,
+        "sha256": "a6df05d8c3f1ff80f437e378cdd9e5faad2aec9bcf9d65b70cedd9162f4c4259",
+        "forbidden_hits": [],
+        "pass": true
+      },
+      {
+        "page": "LP-02",
+        "docx_path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP02-СОПРОВОЖДЕНИЕ-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "source_final_copy": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+        "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP02-СОПРОВОЖДЕНИЕ-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "opens": true,
+        "size_bytes": 39765,
+        "sha256": "24707c76699974f1551fdfa557fb1bd462ed68bcc365041f177de27e85b58688",
+        "forbidden_hits": [],
+        "pass": true
+      },
+      {
+        "page": "LP-03",
+        "docx_path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP03-ДОРАБОТКА-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "source_final_copy": "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+        "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP03-ДОРАБОТКА-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "opens": true,
+        "size_bytes": 39504,
+        "sha256": "dfd09d7fcc9360072b8161e4da4ac7ec4d3527067b0687b77dea88b74505182d",
+        "forbidden_hits": [],
+        "pass": true
+      },
+      {
+        "page": "LP-04",
+        "docx_path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP04-ИНТЕГРАЦИИ-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "source_final_copy": "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-FINAL-v2.json",
+        "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP04-ИНТЕГРАЦИИ-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "opens": true,
+        "size_bytes": 39137,
+        "sha256": "97e12351600ea5e0ca4c2e6d0c35fc0880a127510d26e1cebca9768973ebaa94",
+        "forbidden_hits": [],
+        "pass": true
+      },
+      {
+        "page": "LP-05",
+        "docx_path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP05-МАРКИРОВКА-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "source_final_copy": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+        "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29\\CORVONERO-LP05-МАРКИРОВКА-1С-ТЕКСТ-ДЛЯ-РОМАНА-v1.docx",
+        "opens": true,
+        "size_bytes": 39004,
+        "sha256": "f7ca9d51f582a0a4eb4e1f345e61de3a310b3a81d5edcc63d6a0bd1705ba6110",
+        "forbidden_hits": [],
+        "pass": true
+      }
+    ]
+  },
+  "phrase_coverage": {
+    "LP-01": 404,
+    "LP-02": 155,
+    "LP-03": 71,
+    "LP-04": 48,
+    "LP-05": 220,
+    "p1_landing_page_total": 898,
+    "lp06_deferred": 37,
+    "accept_total": 935,
+    "note": "935 total ACCEPT; 898 covered by final P1 landing-page copy; 37 assigned to deferred LP-06"
+  },
+  "ads_state": "NOT_STARTED",
+  "commander_state": "NOT_STARTED",
+  "website_unchanged": true,
+  "phrase_reconciliation_lp02_lp05": {
+    "LP-02": {
+      "allocated": 155,
+      "mapped": 155,
+      "pass": true,
+      "variant_a": true
+    },
+    "LP-03": {
+      "allocated": 71,
+      "mapped": 71,
+      "pass": true,
+      "variant_a": true
+    },
+    "LP-04": {
+      "allocated": 48,
+      "mapped": 48,
+      "pass": true,
+      "variant_a": true
+    },
+    "LP-05": {
+      "allocated": 220,
+      "mapped": 220,
+      "pass": true,
+      "variant_a": true
+    }
+  }
+}

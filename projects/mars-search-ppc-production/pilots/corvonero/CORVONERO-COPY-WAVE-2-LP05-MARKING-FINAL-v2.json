@@ -1,0 +1,40 @@
+{
+  "copy_id": "corvonero-copy-wave-2-lp05-marking-final-v2",
+  "landing_page_id": "LP-05",
+  "campaign_id": "CA-05",
+  "language": "ru",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "status": "operator_approved_final",
+  "supersedes": "CORVONERO-COPY-WAVE-2-LP05-MARKING-DRAFT-v1",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "phrase_reconciliation": {"allocated": 220, "mapped": 220, "pass": true},
+  "default_first_screen_variant": "A",
+  "meta": {
+    "title": "Маркировка и Честный знак в 1С — настройка и сопровождение | Корво Неро",
+    "description": "Настройка маркировки и Честного знака в 1С: обмен кодами, документооборот, устранение ошибок. ТС ПИОТ. Удалённо по России, выезд в Новосибирске. Корво Неро.",
+    "slug": "markirovka-chestny-znak"
+  },
+  "first_screen": {
+    "variant": "A",
+    "h1": "Маркировка и Честный знак в 1С — настройка и сопровождение",
+    "lead": "Настраиваем маркировку товаров в 1С, подключаем обмен с Честным знаком, помогаем с документами и ошибками. Удалённо по России, с выездом в Новосибирске.",
+    "primary_cta": "Обсудить задачу",
+    "secondary_cta": "Получить оценку",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "service_boundary": "technical_marking_and_exchange_in_1c",
+  "pricing_policy": {
+    "numeric_prices_public": false,
+    "approach": "estimate_after_discussion"
+  },
+  "operator_decisions_applied": [
+    "first_screen_variant_a",
+    "removed_legal_compliance_language",
+    "ts_piot_no_acronym_expansion",
+    "work_format_full_wording",
+    "website_bitrix_faq_revised",
+    "legal_faq_removed"
+  ],
+  "faq_artifact": "CORVONERO-COPY-WAVE-2-LP05-FINAL-FAQ-v2.md",
+  "approval_artifact": "CORVONERO-COPY-WAVE-2-LP05-FINAL-APPROVAL-v1.md"
+}

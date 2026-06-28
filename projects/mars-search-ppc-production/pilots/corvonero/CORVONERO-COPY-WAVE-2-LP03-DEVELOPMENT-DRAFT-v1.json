@@ -1,0 +1,35 @@
+{
+  "copy_id": "corvonero-copy-wave-2-lp03-development-draft-v1",
+  "landing_page_id": "LP-03",
+  "campaign_id": "CA-03",
+  "language": "ru",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "status": "operator_review_draft",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "phrase_reconciliation": {"allocated": 71, "mapped": 71, "pass": true},
+  "default_first_screen_variant": "A",
+  "meta": {
+    "title": "Доработка и разработка 1С под задачи бизнеса — отчёты, обработки | Корво Неро",
+    "description": "Доработка конфигураций 1С, отчёты, обработки, печатные формы и автоматизация процессов. Внедрение и разовые задачи. Удалённо по России, выезд в Новосибирске. Корво Неро.",
+    "slug": "dorabotka-razrabotka-1s"
+  },
+  "first_screen": {
+    "variant": "A",
+    "h1": "Доработка и разработка 1С под задачи вашего бизнеса",
+    "lead": "Дорабатываем конфигурации, создаём отчёты, обработки и печатные формы, автоматизируем процессы и помогаем с внедрением. Удалённо по России, с выездом в Новосибирске.",
+    "primary_cta": "Обсудить задачу",
+    "secondary_cta": "Получить оценку",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "pricing_policy": {
+    "hourly_public": false,
+    "approach": "estimate_after_specification"
+  },
+  "ad_group_alignment": [
+    {"group_id": "ca-03-modification", "phrase_count": 62, "sections": ["first_screen", "service_scope", "typical_tasks"], "first_screen_variant": "A"},
+    {"group_id": "ca-03-implementation", "phrase_count": 7, "sections": ["implementation_block", "process"], "first_screen_variant": "A"},
+    {"group_id": "ca-03-direct-service-order", "phrase_count": 2, "sections": ["form", "final_cta"], "first_screen_variant": "C"}
+  ],
+  "unresolved_decisions": ["hourly_vs_estimate_public", "portfolio_examples"],
+  "prohibited_in_copy": ["fixed_deadlines_without_scope", "compatibility_guarantees", "invented_cases"]
+}

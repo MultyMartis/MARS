@@ -1,0 +1,42 @@
+{
+  "copy_id": "corvonero-copy-wave-2-lp02-support-final-v2",
+  "landing_page_id": "LP-02",
+  "campaign_id": "CA-02",
+  "language": "ru",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "status": "operator_approved_final",
+  "supersedes": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-DRAFT-v1",
+  "checkpoint_commit": "2de6bafab4ca80f2e1bf641468f0b973c4c21282",
+  "phrase_reconciliation": {"allocated": 155, "mapped": 155, "pass": true},
+  "default_first_screen_variant": "A",
+  "meta": {
+    "title": "Сопровождение и обслуживание 1С в Новосибирске — поддержка баз | Корво Неро",
+    "description": "Сопровождение 1С для компаний и ИП: обновления, помощь пользователям, устранение ошибок. Абонентский формат и разовые обращения. Удалённо по России, выезд в Новосибирске. Корво Неро.",
+    "slug": "soprovozhdenie-1s"
+  },
+  "first_screen": {
+    "variant": "A",
+    "h1": "Сопровождение и обслуживание 1С для компаний и ИП",
+    "lead": "Поддерживаем рабочую базу 1С: помогаем пользователям, обновляем конфигурацию, устраняем ошибки и сопровождаем учёт. Удалённо по России, с выездом в Новосибирске.",
+    "primary_cta": "Обсудить задачу",
+    "secondary_cta": "Получить оценку",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "pricing_policy": {
+    "numeric_prices_public": false,
+    "subscription_tariffs_public": false,
+    "approach": "estimate_after_discussion"
+  },
+  "operator_decisions_applied": [
+    "first_screen_variant_a",
+    "no_public_numeric_prices",
+    "no_vat_mention",
+    "no_backup_scope",
+    "subscription_block_revised",
+    "remote_russia_onsite_novosibirsk",
+    "contract_cashless",
+    "configurations_ut_unf_roznitsa_ka_bp"
+  ],
+  "faq_artifact": "CORVONERO-COPY-WAVE-2-LP02-FINAL-FAQ-v2.md",
+  "approval_artifact": "CORVONERO-COPY-WAVE-2-LP02-FINAL-APPROVAL-v1.md"
+}
