@@ -202,7 +202,7 @@ Unified across all five corporate pages:
 | Item | Value |
 |------|--------|
 | **Preflight commit** | `68f11fdc` — checkpoint before pass |
-| **Implementation commit** | *(pending — this report + doc registration)* |
+| **Implementation commit** | `85a9a429` — `feat(site-002): corporate pages visual polish pass 1 on TEST` |
 | **Branch** | `mars/canonical-post-recovery` |
 
 ---
