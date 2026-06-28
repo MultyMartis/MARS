@@ -1,0 +1,645 @@
+{{ header }}
+
+<main class="main zpm-custom-page">
+  <section class="zpm-corp-page-lead zpm-corp-intro" aria-label="Вводная информация">
+    <div class="container">
+      <div class="zpm-corp-intro__grid">
+        <div class="zpm-corp-intro__media">
+          <img src="/assets/img/corporate/custom-intro.jpg" alt="Проектирование оборудования на заказ" loading="lazy" />
+        </div>
+        <div class="zpm-corp-intro__body zpm-corp-page-lead__body">
+          {{ page_lead|raw }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {# LANDMARK 02 — BLOCK 01: When custom manufacturing is needed #}
+  <section class="zpm-custom-section zpm-custom-triggers" id="zpm-custom-triggers" aria-labelledby="zpm-custom-triggers-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-triggers-title">Когда требуется изготовление оборудования на&nbsp;заказ</h2>
+      <p class="zpm-custom-section__body">Изготовление на&nbsp;заказ нужно, когда стандартное решение из&nbsp;каталога не&nbsp;закрывает задачу целиком. Типичные ситуации:</p>
+
+      <ul class="zpm-custom-triggers__list">
+        <li><strong>Нестандартные размеры</strong> — стол, ванна, стеллаж или другая конструкция не&nbsp;вписывается в&nbsp;отведённое место по&nbsp;длине, ширине или высоте.</li>
+        <li><strong>Особенности помещения</strong> — ниши, колонны, углы, проёмы, существующие коммуникации или оборудование, вокруг которых нужно «подстроить» изделие.</li>
+        <li><strong>Нестандартная комплектация</strong> — дополнительные полки, борта, усиления, колёсные опоры, направляющие, технологические отверстия, бортики под мойку или иные элементы, которых нет в&nbsp;серийной конфигурации.</li>
+        <li><strong>Серия изделий под объект</strong> — несколько одинаковых или связанных позиций для оснащения кухни, цеха, моечной зоны или склада по&nbsp;единому проекту.</li>
+        <li><strong>Замена или доработка существующего</strong> — изготовление аналога вышедшего из&nbsp;строя изделия или адаптация конструкции под изменившийся процесс.</li>
+      </ul>
+
+      <p class="zpm-custom-section__body">Если в&nbsp;каталоге есть близкая модель, но&nbsp;требуется изменить один или несколько параметров — это тоже заказ на&nbsp;изготовление, а&nbsp;не&nbsp;покупка «как есть». Подробнее о&nbsp;таком пути — в&nbsp;блоке «Что можно изготовить».</p>
+      <p class="zpm-custom-section__note">ЗПМ специализируется на&nbsp;<strong>нейтральном оборудовании из&nbsp;нержавеющей стали</strong> для общепита и&nbsp;пищевых производств. Тепловое, холодильное и&nbsp;иное сложное технологическое оборудование в&nbsp;эту услугу не&nbsp;входит — для серийных моделей таких категорий используйте <a href="/">каталог на&nbsp;сайте</a>.</p>
+    </div>
+  </section>
+
+  {# LANDMARK 02 — BLOCK 02: Task matrix #}
+  <section class="zpm-custom-section zpm-custom-tasks" id="zpm-custom-tasks" aria-labelledby="zpm-custom-tasks-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-tasks-title">Какие задачи помогает решать индивидуальное изготовление</h2>
+      <p class="zpm-custom-section__intro">Индивидуальное изготовление решает не&nbsp;«маркетинговую», а&nbsp;производственную задачу: оборудование должно встать на&nbsp;место, выдержать нагрузку и&nbsp;быть удобным в&nbsp;ежедневной работе.</p>
+
+      <div class="zpm-custom-tasks__table-wrap">
+        <table class="zpm-custom-tasks__table">
+          <thead>
+            <tr>
+              <th scope="col">Задача</th>
+              <th scope="col">Пояснение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Задача"><strong>Нестандартные размеры</strong></td>
+              <td data-label="Пояснение">Изделие проектируется под фактические габариты зоны установки, а&nbsp;не&nbsp;под типоразмер серии</td>
+            </tr>
+            <tr>
+              <td data-label="Задача"><strong>Особенности помещения</strong></td>
+              <td data-label="Пояснение">Учитываются планировка, высота потолка, расположение моек, стояков, вентиляции и&nbsp;соседнего оборудования</td>
+            </tr>
+            <tr>
+              <td data-label="Задача"><strong>Технологические линии и&nbsp;участки</strong></td>
+              <td data-label="Пояснение">Столы, ванны, стеллажи и&nbsp;вспомогательные конструкции согласуются между собой как единый комплект для цеха или кухни</td>
+            </tr>
+            <tr>
+              <td data-label="Задача"><strong>Замена импортного или снятого с&nbsp;производства решения</strong></td>
+              <td data-label="Пояснение">Изготовление аналога по&nbsp;образцу, чертежу или описанию с&nbsp;адаптацией под российские условия эксплуатации</td>
+            </tr>
+            <tr>
+              <td data-label="Задача"><strong>Модернизация существующего оборудования</strong></td>
+              <td data-label="Пояснение">Доработка конструкции: усиление, изменение комплектации, добавление элементов под новый процесс</td>
+            </tr>
+            <tr>
+              <td data-label="Задача"><strong>Рациональное использование площади</strong></td>
+              <td data-label="Пояснение">Угловые, встроенные и&nbsp;составные решения, когда каждый сантиметр рабочей зоны на&nbsp;учёте</td>
+            </tr>
+            <tr>
+              <td data-label="Задача"><strong>Единый стиль и&nbsp;логика для сети объектов</strong></td>
+              <td data-label="Пояснение">Повторяемые конфигурации для нескольких точек — при условии согласованного ТЗ и&nbsp;утверждённой конструкции</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-custom-section__helper">Блок ориентирован на&nbsp;технолога, инженера и&nbsp;руководителя производства, которым важно понять, <strong>решает&nbsp;ли завод их&nbsp;класс задач</strong>, а&nbsp;не&nbsp;только продаёт&nbsp;ли «любое оборудование».</p>
+    </div>
+  </section>
+
+  {# LANDMARK 03 — BLOCK 03: Scope groups + in/out table #}
+  <section class="zpm-custom-section zpm-custom-scope" id="zpm-custom-scope" aria-labelledby="zpm-custom-scope-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-scope-title">Что можно изготовить</h2>
+      <p class="zpm-custom-section__intro">На&nbsp;заказ изготавливаются изделия из&nbsp;нержавеющей стали в&nbsp;рамках производственной специализации ЗПМ. Завод работает с&nbsp;индивидуальными проектами в&nbsp;категориях, которые серийно выпускает для общепита и&nbsp;пищевых производств — с&nbsp;адаптацией параметров под ваш объект. Это не&nbsp;второй каталог: ниже — границы специализации, а&nbsp;не&nbsp;перечень моделей.</p>
+
+      <div class="zpm-custom-scope__groups">
+        <article class="zpm-custom-scope__group">
+          <h3 class="zpm-custom-scope__group-title section-title__like-h3">Рабочие и&nbsp;сервировочные поверхности</h3>
+          <p class="zpm-custom-scope__group-text">Столы и&nbsp;смежные конструкции — по&nbsp;согласованным габаритам, высоте, комплектации и&nbsp;усилениям. Возможна доработка серийной модели из&nbsp;<a href="/">каталога столов</a>.</p>
+        </article>
+        <article class="zpm-custom-scope__group">
+          <h3 class="zpm-custom-scope__group-title section-title__like-h3">Моечные зоны и&nbsp;санитарные узлы</h3>
+          <p class="zpm-custom-scope__group-text">Моечные ванны и&nbsp;вспомогательные элементы — по&nbsp;габаритам, секционности и&nbsp;привязке к&nbsp;существующей мойке или проёму. Возможна доработка серийной модели из&nbsp;<a href="/">каталога моечных ванн</a>.</p>
+        </article>
+        <article class="zpm-custom-scope__group">
+          <h3 class="zpm-custom-scope__group-title section-title__like-h3">Складские и&nbsp;технологические конструкции</h3>
+          <p class="zpm-custom-scope__group-text">Стеллажи, полки, подтоварники, подставки, тележки — по&nbsp;нагрузке, габаритам и&nbsp;логике перемещения на&nbsp;объекте.</p>
+        </article>
+        <article class="zpm-custom-scope__group">
+          <h3 class="zpm-custom-scope__group-title section-title__like-h3">Вытяжные и&nbsp;вспомогательные конструкции</h3>
+          <p class="zpm-custom-scope__group-text">Вытяжные зонты и&nbsp;смежные изделия — в&nbsp;рамках производственных возможностей завода, по&nbsp;согласованному ТЗ.</p>
+        </article>
+        <article class="zpm-custom-scope__group">
+          <h3 class="zpm-custom-scope__group-title section-title__like-h3">Прочие нейтральные конструкции из&nbsp;нержавеющей стали</h3>
+          <p class="zpm-custom-scope__group-text">Ёмкости, лари, шкафы, технологические рамы — если задача укладывается в&nbsp;профиль производства ЗПМ. Спорные запросы рассматриваются после получения описания; завод сообщит, может&nbsp;ли взять проект в&nbsp;работу.</p>
+        </article>
+      </div>
+
+      <p class="zpm-custom-section__helper">Если в&nbsp;<a href="/">каталоге</a> уже есть подходящая серия, укажите артикул или ссылку на&nbsp;карточку товара и&nbsp;опишите, что нужно изменить. Это часто быстрее, чем проект «с&nbsp;нуля».</p>
+
+      <div class="zpm-custom-scope__table-wrap">
+        <table class="zpm-custom-scope__table">
+          <thead>
+            <tr>
+              <th scope="col">В&nbsp;scope</th>
+              <th scope="col">Вне scope этой услуги</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="В scope">Нейтральное оборудование и&nbsp;металлоконструкции из&nbsp;нержавеющей стали</td>
+              <td data-label="Вне scope этой услуги">Тепловое, холодильное, электромеханическое оборудование — только серийные модели из&nbsp;каталога</td>
+            </tr>
+            <tr>
+              <td data-label="В scope">Доработка серийной модели ЗПМ</td>
+              <td data-label="Вне scope этой услуги">Проектирование и&nbsp;монтаж инженерных систем объекта</td>
+            </tr>
+            <tr>
+              <td data-label="В scope">Серия однотипных изделий для одного заказчика</td>
+              <td data-label="Вне scope этой услуги">Изделия из&nbsp;материалов, не&nbsp;входящих в&nbsp;производственную специализацию завода</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {# LANDMARK 03 — BLOCK 04: OEM trust layer #}
+  <section class="zpm-custom-section zpm-custom-oem" id="zpm-custom-oem" aria-labelledby="zpm-custom-oem-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-oem-title">Почему проектируют и&nbsp;производят именно на&nbsp;заводе</h2>
+      <p class="zpm-custom-section__intro">Нестандартный проект несёт риск: изделие должно встать на&nbsp;объект, выдержать нагрузку и&nbsp;соответствовать согласованным параметрам. Заказчику важно понимать не&nbsp;только «что можно заказать», но&nbsp;и&nbsp;<strong>почему этому производителю можно доверить проект</strong> — и&nbsp;на&nbsp;каких основаниях завод берёт на&nbsp;себя ответственность за&nbsp;результат.</p>
+
+      <div class="zpm-custom-oem__stack">
+        <article class="zpm-custom-oem__item">
+          <h3 class="zpm-custom-oem__title section-title__like-h3">Производитель, а&nbsp;не&nbsp;посредник</h3>
+          <p class="zpm-custom-oem__text">ЗПМ — завод пищевого машиностроения с&nbsp;собственной производственной площадкой в&nbsp;Барнауле. Изделия на&nbsp;заказ изготавливаются здесь&nbsp;же, а&nbsp;не&nbsp;передаются на&nbsp;сторону без вашего ведома. Вы&nbsp;работаете напрямую с&nbsp;юридическим лицом-производителем: реквизиты, адрес площадки и&nbsp;сведения о&nbsp;компании — на&nbsp;страницах <a href="/about">О&nbsp;компании</a> и&nbsp;<a href="/contact/">Контакты</a>.</p>
+        </article>
+        <article class="zpm-custom-oem__item">
+          <h3 class="zpm-custom-oem__title section-title__like-h3">Ответственность за&nbsp;результат — у&nbsp;производителя</h3>
+          <p class="zpm-custom-oem__text">Завод несёт ответственность за&nbsp;изделие, которое изготовил: конструкция, материал, комплектация и&nbsp;соответствие согласованной конфигурации. При претензии вы&nbsp;обращаетесь к&nbsp;производителю — а&nbsp;не&nbsp;к&nbsp;цепочке посредников, где теряется контекст заказа.</p>
+        </article>
+        <article class="zpm-custom-oem__item">
+          <h3 class="zpm-custom-oem__title section-title__like-h3">Параметры фиксируются до&nbsp;запуска в&nbsp;цех</h3>
+          <p class="zpm-custom-oem__text">Размеры, комплектация, стоимость и&nbsp;условия фиксируются в&nbsp;переписке и&nbsp;коммерческом предложении до&nbsp;передачи заказа в&nbsp;производство. Изделие не&nbsp;уходит в&nbsp;цех «примерно по&nbsp;договорённости»: производство начинается после вашего подтверждения согласованной конфигурации и&nbsp;выполнения условий оплаты. Подробности об&nbsp;оплате — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+        </article>
+        <article class="zpm-custom-oem__item">
+          <h3 class="zpm-custom-oem__title section-title__like-h3">Профильная специализация, а&nbsp;не&nbsp;«любое оборудование»</h3>
+          <p class="zpm-custom-oem__text">Завод серийно выпускает нейтральное оборудование из&nbsp;нержавеющей стали для общепита и&nbsp;пищевых производств. Индивидуальные проекты опираются на&nbsp;ту&nbsp;же производственную базу, технологии и&nbsp;конструктивные решения, что и&nbsp;серийный каталог — с&nbsp;адаптацией под ваше ТЗ. Завод не&nbsp;берёт в&nbsp;работу задачи вне своего производственного профиля и&nbsp;сообщает об&nbsp;этом до&nbsp;запуска.</p>
+        </article>
+        <article class="zpm-custom-oem__item">
+          <h3 class="zpm-custom-oem__title section-title__like-h3">Предсказуемый результат, а&nbsp;не&nbsp;сюрприз на&nbsp;объекте</h3>
+          <p class="zpm-custom-oem__text">Потому что параметры согласуются до&nbsp;изготовления, вы&nbsp;заранее знаете, что получите: конфигурацию, стоимость и&nbsp;порядок следующих шагов. Это снижает риск расхождения между ожиданием и&nbsp;фактом на&nbsp;объекте — при условии, что исходные данные и&nbsp;подтверждённая спецификация соответствуют реальным условиям установки.</p>
+        </article>
+      </div>
+
+      <dl class="zpm-custom-oem__proof-strip">
+        <div class="zpm-custom-oem__proof-item">
+          <dt class="zpm-custom-oem__proof-label">Производство</dt>
+          <dd class="zpm-custom-oem__proof-value">Собственная площадка в&nbsp;Барнауле — <a href="/about">О&nbsp;компании</a></dd>
+        </div>
+        <div class="zpm-custom-oem__proof-item">
+          <dt class="zpm-custom-oem__proof-label">Сертификация</dt>
+          <dd class="zpm-custom-oem__proof-value">Добровольная сертификация «Сделано в&nbsp;России» — <a href="/our-certification">Сертификация</a></dd>
+        </div>
+        <div class="zpm-custom-oem__proof-item">
+          <dt class="zpm-custom-oem__proof-label">Каталог</dt>
+          <dd class="zpm-custom-oem__proof-value">Серийные модели — отправная точка для доработки — <a href="/">Каталог</a></dd>
+        </div>
+      </dl>
+
+      <figure class="zpm-custom-oem__media">
+        <img
+          class="zpm-custom-oem__image"
+          src="/assets/img/about-page-img.jpg"
+          alt="Цех изготовления оборудования из нержавеющей стали завода пищевого машиностроения ЗПМ"
+          width="640"
+          height="480"
+          loading="lazy"
+        />
+        <figcaption class="zpm-custom-oem__caption">Производство нейтрального оборудования на&nbsp;площадке ЗПМ в&nbsp;Барнауле</figcaption>
+        <a class="zpm-custom-oem__badge" href="/our-certification">Сделано в&nbsp;России</a>
+      </figure>
+    </div>
+  </section>
+
+  {# LANDMARK 04 — BLOCK 05: Process timeline (8 steps) #}
+  <section class="zpm-custom-section zpm-custom-process" id="zpm-custom-process" aria-labelledby="zpm-custom-process-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-process-title">Как проходит работа над заказом</h2>
+      <p class="zpm-custom-section__intro">Работа над заказом выстроена так, чтобы до&nbsp;запуска в&nbsp;производство были понятны параметры изделия, стоимость и&nbsp;порядок следующих шагов. Ниже — типовая последовательность; в&nbsp;отдельных проектах возможны дополнительные этапы согласования.</p>
+
+      <p class="zpm-custom-process__approval">
+        <span class="zpm-custom-process__approval-badge">Согласование до&nbsp;производства</span>
+        <span class="zpm-custom-process__approval-text">Изделие передаётся в&nbsp;цех только после подтверждения параметров заказчиком и&nbsp;выполнения условий оплаты.</span>
+      </p>
+
+      <ol class="zpm-corp-timeline zpm-custom-timeline" aria-label="Порядок работы над заказом на изготовление оборудования на заводе ЗПМ">
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">1</span>
+          <span class="zpm-corp-timeline__badge-label">Заявка</span>
+          <h3 class="zpm-corp-timeline__title">Заявка и&nbsp;исходные данные</h3>
+          <p class="zpm-corp-timeline__text">Вы&nbsp;передаёте описание задачи: тип изделия, размеры, назначение, фото или схему места установки, чертёж или эскиз — если они есть. Можно приложить ссылку на&nbsp;серийную модель из&nbsp;каталога, которую нужно доработать</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">2</span>
+          <span class="zpm-corp-timeline__badge-label">Уточнение</span>
+          <h3 class="zpm-corp-timeline__title">Уточнение требований</h3>
+          <p class="zpm-corp-timeline__text">Менеджер и&nbsp;специалисты завода уточняют габариты, комплектацию, условия эксплуатации, нагрузку, способ крепления и&nbsp;иные параметры, без которых нельзя подготовить расчёт</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">3</span>
+          <span class="zpm-corp-timeline__badge-label">Расчёт</span>
+          <h3 class="zpm-corp-timeline__title">Расчёт и&nbsp;коммерческое предложение</h3>
+          <p class="zpm-corp-timeline__text">Завод готовит коммерческое предложение с&nbsp;описанием согласованной конфигурации, стоимостью и&nbsp;условиями. Срок подготовки расчёта зависит от&nbsp;сложности запроса и&nbsp;полноты исходных данных</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">4</span>
+          <span class="zpm-corp-timeline__badge-label">Подтверждение</span>
+          <h3 class="zpm-corp-timeline__title">Согласование и&nbsp;подтверждение</h3>
+          <p class="zpm-corp-timeline__text">Вы&nbsp;проверяете параметры изделия в&nbsp;КП. После вашего подтверждения конфигурации заказ считается согласованным для производства. Изменения после подтверждения оформляются отдельным согласованием</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">5</span>
+          <span class="zpm-corp-timeline__badge-label">Оплата</span>
+          <h3 class="zpm-corp-timeline__title">Оплата</h3>
+          <p class="zpm-corp-timeline__text">После согласования выставляется счёт. Производство заказа на&nbsp;изготовление начинается после выполнения условий оплаты, установленных для таких заказов. Подробности — на&nbsp;странице <a href="/payment-methods">Оплата</a></p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">6</span>
+          <span class="zpm-corp-timeline__badge-label">Изготовление</span>
+          <h3 class="zpm-corp-timeline__title">Изготовление</h3>
+          <p class="zpm-corp-timeline__text">Изделие изготавливается на&nbsp;производственной площадке ЗПМ в&nbsp;Барнауле по&nbsp;согласованным параметрам</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">7</span>
+          <span class="zpm-corp-timeline__badge-label">Контроль</span>
+          <h3 class="zpm-corp-timeline__title">Контроль и&nbsp;комплектация</h3>
+          <p class="zpm-corp-timeline__text">Перед отгрузкой выполняется проверка готового изделия и&nbsp;комплектация документов, предусмотренных для данной категории продукции</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">8</span>
+          <span class="zpm-corp-timeline__badge-label">Отгрузка</span>
+          <h3 class="zpm-corp-timeline__title">Отгрузка</h3>
+          <p class="zpm-corp-timeline__text">Готовое оборудование передаётся заказчику: самовывоз, отгрузка со&nbsp;склада партнёра или доставка транспортной компанией — по&nbsp;согласованным условиям. Регионы, способы и&nbsp;особенности крупногабарита — на&nbsp;странице <a href="/delivery">Доставка</a></p>
+        </li>
+      </ol>
+
+      <p class="zpm-custom-section__note">Срок изготовления определяется после согласования параметров и&nbsp;зависит от&nbsp;сложности изделия, текущей загрузки производства и&nbsp;объёма заказа. Конкретный срок указывается в&nbsp;коммерческом предложении.</p>
+    </div>
+  </section>
+
+  {# LANDMARK 05 — BLOCK 06: Requirements checklist #}
+  <section class="zpm-custom-section zpm-custom-requirements" id="zpm-custom-requirements" aria-labelledby="zpm-custom-requirements-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-requirements-title">Какие данные нужны для расчёта</h2>
+      <p class="zpm-custom-section__intro">Чем полнее исходные данные, тем быстрее завод подготовит расчёт и&nbsp;тем меньше итераций уточнений. Ниже — перечень того, что желательно указать уже в&nbsp;первой заявке.</p>
+
+      <div class="zpm-custom-requirements__table-wrap">
+        <table class="zpm-custom-requirements__table">
+          <thead>
+            <tr>
+              <th scope="col">№</th>
+              <th scope="col">Данные</th>
+              <th scope="col">Зачем нужны</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="№">1</td>
+              <td data-label="Данные"><strong>Тип изделия</strong></td>
+              <td data-label="Зачем нужны">Стол, ванна, стеллаж, тележка, зонт, другая конструкция</td>
+            </tr>
+            <tr>
+              <td data-label="№">2</td>
+              <td data-label="Данные"><strong>Назначение</strong></td>
+              <td data-label="Зачем нужны">Участок, процесс, зона установки (кухня, моечная, цех, склад)</td>
+            </tr>
+            <tr>
+              <td data-label="№">3</td>
+              <td data-label="Данные"><strong>Габариты</strong></td>
+              <td data-label="Зачем нужны">Длина, ширина, высота — или максимально допустимые пределы</td>
+            </tr>
+            <tr>
+              <td data-label="№">4</td>
+              <td data-label="Данные"><strong>Место установки</strong></td>
+              <td data-label="Зачем нужны">Схема, эскиз, фото ниши или привязка к&nbsp;существующему оборудованию</td>
+            </tr>
+            <tr>
+              <td data-label="№">5</td>
+              <td data-label="Данные"><strong>Комплектация</strong></td>
+              <td data-label="Зачем нужны">Полки, борта, усиления, колёса, направляющие, отверстия — что нужно и&nbsp;где</td>
+            </tr>
+            <tr>
+              <td data-label="№">6</td>
+              <td data-label="Данные"><strong>Нагрузка и&nbsp;режим работы</strong></td>
+              <td data-label="Зачем нужны">Если на&nbsp;изделие ложится вес оборудования, ёмкостей или интенсивная эксплуатация — опишите словами</td>
+            </tr>
+            <tr>
+              <td data-label="№">7</td>
+              <td data-label="Данные"><strong>Количество</strong></td>
+              <td data-label="Зачем нужны">Одна позиция или серия для объекта</td>
+            </tr>
+            <tr>
+              <td data-label="№">8</td>
+              <td data-label="Данные"><strong>Срок, к&nbsp;которому нужно оборудование</strong></td>
+              <td data-label="Зачем нужны">Плановая дата открытия, ввода цеха или замены — для оценки реализуемости</td>
+            </tr>
+            <tr>
+              <td data-label="№">9</td>
+              <td data-label="Данные"><strong>Контакт для связи и&nbsp;регион поставки</strong></td>
+              <td data-label="Зачем нужны">Чтобы включить в&nbsp;КП логистику и&nbsp;способ отгрузки</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-custom-section__body">Если есть, приложите:</p>
+      <ul class="zpm-custom-requirements__optional">
+        <li>чертёж или эскиз (PDF, JPG, PNG);</li>
+        <li>файл проекта (DWG и&nbsp;другие форматы — по&nbsp;согласованию с&nbsp;менеджером);</li>
+        <li>ссылка или артикул серийной модели из&nbsp;каталога ЗПМ;</li>
+        <li>реквизиты организации — если нужен расчёт для юридического лица.</li>
+      </ul>
+
+      <p class="zpm-custom-section__helper">Необязательно иметь готовый проект: достаточно описания задачи и&nbsp;размеров «в&nbsp;чистоте». Специалисты завода помогут уточнить параметры на&nbsp;этапе согласования. Если чертёж готовит ваш проектировщик — укажите это в&nbsp;заявке; порядок взаимодействия согласуется отдельно.</p>
+      <p class="zpm-custom-section__note">Можно начать с&nbsp;короткого описания в&nbsp;форме ниже — менеджер запросит недостающие данные по&nbsp;телефону или электронной почте.</p>
+    </div>
+  </section>
+
+  {# LANDMARK 05 — BLOCK 07: Materials #}
+  <section class="zpm-custom-section zpm-custom-materials" id="zpm-custom-materials" aria-labelledby="zpm-custom-materials-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-materials-title">Материалы и&nbsp;исполнение</h2>
+      <p class="zpm-custom-section__intro">Изделия на&nbsp;заказ изготавливаются из&nbsp;<strong>нержавеющей стали</strong>, применяемой для профессионального оборудования в&nbsp;среде общепита и&nbsp;пищевых производств. Конкретная марка металла, толщина листа и&nbsp;тип поверхности определяются назначением изделия и&nbsp;<strong>согласуются в&nbsp;коммерческом предложении</strong> — исходя из&nbsp;условий эксплуатации и&nbsp;конструктивных требований.</p>
+
+      <div class="zpm-custom-materials__stack">
+        <article class="zpm-custom-materials__item">
+          <h3 class="zpm-custom-materials__title section-title__like-h3">Материал</h3>
+          <ul class="zpm-custom-materials__list">
+            <li>Основной материал корпусных деталей — нержавеющая сталь.</li>
+            <li>Для серийных моделей в&nbsp;<a href="/">каталоге</a> марка и&nbsp;толщина металла указаны в&nbsp;карточке товара; для изделия на&nbsp;заказ эти параметры фиксируются в&nbsp;согласованной спецификации.</li>
+            <li>Если у&nbsp;вас есть требования к&nbsp;материалу со&nbsp;стороны внутреннего регламента или проекта — укажите их&nbsp;в&nbsp;заявке; завод подтвердит возможность исполнения или предложит согласованный вариант.</li>
+          </ul>
+        </article>
+        <article class="zpm-custom-materials__item">
+          <h3 class="zpm-custom-materials__title section-title__like-h3">Конструкция и&nbsp;комплектация</h3>
+          <ul class="zpm-custom-materials__list">
+            <li>Сварные и&nbsp;разборные узлы, усиления, опоры, бортики, полки и&nbsp;навесные элементы — по&nbsp;согласованному ТЗ.</li>
+            <li>Крепёж и&nbsp;фурнитура подбираются под условия эксплуатации на&nbsp;объекте.</li>
+            <li>Конструктивные решения должны обеспечивать устойчивость изделия при заявленной нагрузке и&nbsp;типовом режиме работы — параметры нагрузки уточняются на&nbsp;этапе согласования.</li>
+          </ul>
+        </article>
+        <article class="zpm-custom-materials__item">
+          <h3 class="zpm-custom-materials__title section-title__like-h3">Поверхность и&nbsp;гигиена</h3>
+          <ul class="zpm-custom-materials__list">
+            <li>Поверхности, контактирующие с&nbsp;пищевыми продуктами или зоной мойки, выполняются с&nbsp;учётом назначения изделия и&nbsp;требований к&nbsp;профессиональной эксплуатации.</li>
+            <li>Конкретные требования к&nbsp;обработке кромок, стыков и&nbsp;зон мойки — в&nbsp;ТЗ или в&nbsp;согласованной спецификации.</li>
+          </ul>
+        </article>
+        <article class="zpm-custom-materials__item">
+          <h3 class="zpm-custom-materials__title section-title__like-h3">Соответствие и&nbsp;документы на&nbsp;материал</h3>
+          <ul class="zpm-custom-materials__list">
+            <li>На&nbsp;продукцию завода предусмотрен комплект документов в&nbsp;соответствии с&nbsp;категорией изделия.</li>
+            <li>Дополнительные требования заказчика к&nbsp;подтверждению материала или происхождения — обсуждаются при согласовании заказа.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="zpm-custom-section__note">ЗПМ не&nbsp;публикует на&nbsp;этой странице универсальную таблицу марок стали и&nbsp;толщин для всех типов изделий: параметры зависят от&nbsp;конструкции. Итоговые значения — в&nbsp;коммерческом предложении и&nbsp;документации на&nbsp;конкретное изделие.</p>
+    </div>
+  </section>
+
+  {# LANDMARK 06 — BLOCK 08: Outcomes #}
+  <section class="zpm-custom-section zpm-custom-outcomes" id="zpm-custom-outcomes" aria-labelledby="zpm-custom-outcomes-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-outcomes-title">Что получает заказчик</h2>
+      <p class="zpm-custom-section__intro">Результат работы с&nbsp;заводом — изделие, которое решает вашу задачу на&nbsp;объекте, и&nbsp;понятные условия на&nbsp;каждом этапе. Документы и&nbsp;гарантия входят в&nbsp;результат, но&nbsp;не&nbsp;заменяют главного: <strong>вы&nbsp;получаете оборудование под вашу конфигурацию, а&nbsp;не&nbsp;«что получится»</strong>.</p>
+
+      <div class="zpm-custom-outcomes__table-wrap">
+        <table class="zpm-custom-outcomes__table">
+          <thead>
+            <tr>
+              <th scope="col">Что получаете</th>
+              <th scope="col">Пояснение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Что получаете"><strong>Изделие под вашу задачу</strong></td>
+              <td data-label="Пояснение">Оборудование из&nbsp;нержавеющей стали, изготовленное под ваш объект: габариты, комплектация и&nbsp;конструктивные решения — по&nbsp;согласованному ТЗ, а&nbsp;не&nbsp;по&nbsp;типоразмеру «из&nbsp;серии»</td>
+            </tr>
+            <tr>
+              <td data-label="Что получаете"><strong>Согласованная конфигурация до&nbsp;изготовления</strong></td>
+              <td data-label="Пояснение">Параметры, стоимость и&nbsp;условия фиксируются в&nbsp;коммерческом предложении до&nbsp;запуска в&nbsp;производство. Вы&nbsp;подтверждаете конфигурацию — и&nbsp;получаете именно её</td>
+            </tr>
+            <tr>
+              <td data-label="Что получаете"><strong>Документы для приёмки и&nbsp;учёта</strong></td>
+              <td data-label="Пояснение">Коммерческое предложение и&nbsp;счёт — для согласования закупки. Закрывающие документы по&nbsp;факту поставки — для юридических лиц. Документы на&nbsp;продукцию (паспорт, декларация или сертификат соответствия — если предусмотрены для данной категории) — по&nbsp;правилам для изделия. Подробности — на&nbsp;странице <a href="/payment-methods">Оплата</a>; перечень по&nbsp;конкретной позиции — в&nbsp;КП или по&nbsp;запросу</td>
+            </tr>
+            <tr>
+              <td data-label="Что получаете"><strong>Гарантийные обязательства производителя</strong></td>
+              <td data-label="Пояснение">На&nbsp;изделие распространяются условия гарантии производителя. Для заказов на&nbsp;изготовление действуют правила, указанные на&nbsp;странице <a href="/guarantee">Гарантия</a></td>
+            </tr>
+            <tr>
+              <td data-label="Что получаете"><strong>Возможность повторного заказа</strong></td>
+              <td data-label="Пояснение">При необходимости второй партии или копии для другого объекта — по&nbsp;сохранённым параметрам заказа, после уточнения актуальности спецификации с&nbsp;менеджером</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-custom-section__helper">Точный перечень документов на&nbsp;конкретное изделие зависит от&nbsp;его типа и&nbsp;требований законодательства к&nbsp;данной категории продукции. Запросите перечень при подготовке КП — особенно если закупка идёт через тендер или внутренний аудит.</p>
+      <p class="zpm-custom-section__pointer">Условия гарантии на&nbsp;изделия, изготовленные по&nbsp;индивидуальному заказу, могут отличаться от&nbsp;серийных моделей со&nbsp;склада. Актуальные правила — на&nbsp;странице <a href="/guarantee">Гарантия</a>.</p>
+      <p class="zpm-custom-section__note">Отгрузка и&nbsp;доставка оформляются после готовности изделия. Способы и&nbsp;регионы — на&nbsp;странице <a href="/delivery">Доставка</a>.</p>
+    </div>
+  </section>
+
+  {# LANDMARK 07 — BLOCK 09: FAQ #}
+  <section class="zpm-custom-section zpm-custom-faq" id="zpm-custom-faq" aria-labelledby="zpm-custom-faq-title">
+    <div class="container">
+      <h2 class="zpm-custom-section__title section-title__like-h2" id="zpm-custom-faq-title">Ответы на&nbsp;частые вопросы</h2>
+
+      <div class="zpm-corp-faq zpm-custom-faq__accordion" data-custom-faq data-accordion>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-1" aria-expanded="false" aria-controls="custom-faq-panel-1" data-accordion-button>Изготовите&nbsp;ли вы&nbsp;мой нестандарт или можете отказать?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-1" role="region" aria-labelledby="custom-faq-btn-1" hidden data-accordion-panel>
+            <p>ЗПМ принимает заказы на&nbsp;нейтральное оборудование из&nbsp;нержавеющей стали — столы, моечные ванны, стеллажи, тележки, зонты и&nbsp;смежные конструкции — с&nbsp;индивидуальными параметрами. Если задача входит в&nbsp;производственную специализацию завода, менеджер подготовит расчёт. Если запрос выходит за&nbsp;scope производства или требует решений, которые завод не&nbsp;выполняет, вы&nbsp;получите прямой ответ об&nbsp;этом — без запуска в&nbsp;производство «на&nbsp;пробу». Опишите задачу в&nbsp;форме ниже или отправьте ТЗ на&nbsp;расчёт.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-2" aria-expanded="false" aria-controls="custom-faq-panel-2" data-accordion-button>Кто проектирует изделие — мы, наш проектировщик или завод?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-2" role="region" aria-labelledby="custom-faq-btn-2" hidden data-accordion-panel>
+            <p>Возможны оба пути. Если у&nbsp;вас есть чертёж или эскиз — передайте его в&nbsp;заявке; завод проверит конструктивную реализуемость и&nbsp;подготовит расчёт. Если есть только описание задачи и&nbsp;размеры — специалисты завода помогут уточнить параметры и&nbsp;согласовать конфигурацию до&nbsp;запуска в&nbsp;производство. Распределение ответственности за&nbsp;проектную документацию и&nbsp;порядок согласования фиксируются в&nbsp;переписке и&nbsp;коммерческом предложении до&nbsp;начала изготовления.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-3" aria-expanded="false" aria-controls="custom-faq-panel-3" data-accordion-button>Можно&nbsp;ли взять за&nbsp;основу модель из&nbsp;вашего каталога и&nbsp;изменить её?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-3" role="region" aria-labelledby="custom-faq-btn-3" hidden data-accordion-panel>
+            <p>Да. Укажите артикул или ссылку на&nbsp;карточку товара и&nbsp;опишите, что нужно изменить: размер, комплектацию, борта, полки, усиления или иные элементы. Это распространённый и&nbsp;часто более быстрый путь, чем проект с&nbsp;нуля — потому что завод уже имеет конструктивную базу серии.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-4" aria-expanded="false" aria-controls="custom-faq-panel-4" data-accordion-button>Какие документы я&nbsp;получу на&nbsp;изделие, изготовленное на&nbsp;заказ?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-4" role="region" aria-labelledby="custom-faq-btn-4" hidden data-accordion-panel>
+            <p>На&nbsp;продукцию предусмотрен комплект документов в&nbsp;соответствии с&nbsp;категорией изделия — как правило, это паспорт и&nbsp;документ подтверждения соответствия (декларация или сертификат), если они требуются для данной категории. Точный перечень по&nbsp;вашей позиции менеджер укажет в&nbsp;коммерческом предложении или по&nbsp;запросу. Закрывающие документы по&nbsp;поставке — по&nbsp;правилам для юридических лиц на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-5" aria-expanded="false" aria-controls="custom-faq-panel-5" data-accordion-button>Какая гарантия на&nbsp;оборудование, изготовленное на&nbsp;заказ?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-5" role="region" aria-labelledby="custom-faq-btn-5" hidden data-accordion-panel>
+            <p>На&nbsp;изделия распространяются гарантийные обязательства производителя. Для заказов на&nbsp;индивидуальное изготовление могут действовать условия, отличные от&nbsp;серийных моделей со&nbsp;склада — срок, порядок обращения и&nbsp;исключения указаны на&nbsp;странице <a href="/guarantee">Гарантия</a>. Перед подтверждением заказа уточните актуальные условия для вашей конфигурации.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-6" aria-expanded="false" aria-controls="custom-faq-panel-6" data-accordion-button>Нужна&nbsp;ли предоплата и&nbsp;когда начинается производство?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-6" role="region" aria-labelledby="custom-faq-btn-6" hidden data-accordion-panel>
+            <p>Заказы на&nbsp;изготовление оформляются по&nbsp;правилам для индивидуальных проектов: после согласования параметров выставляется счёт, производство начинается после выполнения условий оплаты, установленных для таких заказов. Конкретный порядок (аванс, полная предоплата, этапы) — на&nbsp;странице <a href="/payment-methods">Оплата</a> и&nbsp;в&nbsp;вашем коммерческом предложении.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-7" aria-expanded="false" aria-controls="custom-faq-panel-7" data-accordion-button>Сколько времени занимает изготовление — от&nbsp;заявки до&nbsp;отгрузки?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-7" role="region" aria-labelledby="custom-faq-btn-7" hidden data-accordion-panel>
+            <p>Срок зависит от&nbsp;сложности изделия, полноты исходных данных, объёма заказа и&nbsp;текущей загрузки производства. После получения ТЗ менеджер сообщит ориентировочные сроки подготовки расчёта; точный срок изготовления и&nbsp;отгрузки — в&nbsp;коммерческом предложении после согласования всех параметров. Планируйте заказ заблаговременно относительно даты открытия объекта или ввода участка.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="custom-faq-btn-8" aria-expanded="false" aria-controls="custom-faq-panel-8" data-accordion-button>Что делать, если на&nbsp;объекте изделие не&nbsp;встаёт или не&nbsp;соответствует согласованному?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="custom-faq-panel-8" role="region" aria-labelledby="custom-faq-btn-8" hidden data-accordion-panel>
+            <p>Поэтому до&nbsp;запуска в&nbsp;производство обязательны этап уточнения параметров и&nbsp;ваше подтверждение конфигурации в&nbsp;коммерческом предложении. Перед подтверждением проверьте габариты, привязки и&nbsp;комплектацию. Если после отгрузки возникает претензия, действуйте по&nbsp;порядку обращения производителя — на&nbsp;странице <a href="/guarantee">Гарантия</a>. Конкретные случаи рассматриваются с&nbsp;учётом согласованной документации на&nbsp;заказ.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="zpm-custom-section__helper">Не&nbsp;нашли ответ — напишите в&nbsp;форму ниже или позвоните менеджеру. Контакты — на&nbsp;странице <a href="/contact/">Контакты</a>.</p>
+    </div>
+  </section>
+
+<section class="zpm-corp-cta zpm-corp-cta--custom" id="zpm-custom-cta" aria-labelledby="zpm-custom-cta-title" data-corp-cta="custom">
+    <div class="container">
+      <div class="zpm-corp-cta__card">
+        <div class="zpm-corp-cta__wrap">
+          <div class="zpm-corp-cta__info">
+            <div class="zpm-corp-cta__header">
+              <p class="zpm-corp-cta__label">Оборудование на&nbsp;заказ</p>
+              <h2 class="zpm-corp-cta__title" id="zpm-custom-cta-title">Получить расчёт изделия под ваш объект</h2>
+              <p class="zpm-corp-cta__lead">Опишите задачу — тип изделия, размеры, назначение и&nbsp;регион поставки. Менеджер свяжется с&nbsp;вами, уточнит параметры и&nbsp;подготовит расчёт. Если удобнее начать с&nbsp;телефона — позвоните по&nbsp;номеру, указанному в&nbsp;шапке сайта.</p>
+            </div>
+            <div class="zpm-corp-cta__main">
+              <div class="zpm-corp-cta__cert-col" aria-label="Сертификаты">
+                <div class="zpm-corp-cta__cert-card">
+                  <div class="swiper js-commercial-trust-certs">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a
+                          class="zpm-corp-cta__cert-link"
+                          href="/assets/img/certificates/certificat_00.jpg"
+                          data-fancybox="certificates-custom"
+                          data-caption="Сертификат «Сделано в России»"
+                        >
+                          <img
+                            class="zpm-corp-cta__cert-img"
+                            src="/assets/img/certificates/thumb_00.png"
+                            alt="Сертификат «Сделано в России»"
+                            width="200"
+                            height="280"
+                            loading="lazy"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="zpm-corp-cta__cert-card--base">
+                  <img src="/assets/img/sert-base.jpg" alt="" width="250" height="40" loading="lazy" />
+                </div>
+              </div>
+              <div class="zpm-corp-cta__benefits">
+                <ul class="zpm-corp-cta__benefits-grid">
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad fa-ruler-combined"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">Нестандартные размеры</strong>
+                    <span class="zpm-corp-cta__benefit-text">Изготовим изделие по&nbsp;вашим параметрам и&nbsp;условиям объекта.</span>
+                  </span>
+                </li>
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad fa-cogs"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">Производство на&nbsp;заказ</strong>
+                    <span class="zpm-corp-cta__benefit-text">Полный цикл на&nbsp;площадке в&nbsp;Барнауле без посредников.</span>
+                  </span>
+                </li>
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad fa-calculator"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">Расчёт стоимости</strong>
+                    <span class="zpm-corp-cta__benefit-text">Подготовим предварительный расчёт после уточнения параметров.</span>
+                  </span>
+                </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="zpm-corp-cta__form-wrap">
+            <div class="zpm-decoration-with-logo">
+              <img src="/assets/img/decor-logo.svg" alt="" width="120" height="120" loading="lazy" />
+            </div>
+            <div class="zpm-corp-cta__form-col">
+              <div class="zpm-corp-cta__form-card" id="zpm-custom-form">
+                <h3 class="zpm-corp-cta__form-title">Заявка на&nbsp;расчёт</h3>
+                <p class="zpm-corp-cta__form-note">Заполните поля ниже. Поля, отмеченные звёздочкой, обязательны.</p>
+<form class="zpm-form zpm-custom-form" action="#" method="post" novalidate>
+  <input type="hidden" name="dialog" value="7">
+  <div class="zpm-form__grid">
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customCompany">Организация<em>*</em></label>
+      <input class="zpm-form__input" id="customCompany" name="company" type="text" placeholder="Полное или сокращённое наименование" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customContact">Контактное лицо<em>*</em></label>
+      <input class="zpm-form__input" id="customContact" name="contact" type="text" placeholder="ФИО" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customPhone">Номер телефона<em>*</em></label>
+      <div class="zpm-form__phone">
+        <input class="zpm-form__input" id="customPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+      </div>
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customEmail">E-mail<em>*</em></label>
+      <input class="zpm-form__input" id="customEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="customProjectDescription">Описание задачи<em>*</em></label>
+      <textarea class="zpm-form__textarea" id="customProjectDescription" name="project_description" rows="4" placeholder="Назначение, размеры, комплектация, особенности монтажа" required></textarea>
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="customDrawings">Чертёж, эскиз или описание файлов</label>
+      <textarea class="zpm-form__textarea" id="customDrawings" name="drawings" rows="3" placeholder="Опишите приложенные материалы или укажите, что отправите отдельно"></textarea>
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="customNotes">Дополнительные примечания</label>
+      <textarea class="zpm-form__textarea" id="customNotes" name="notes" rows="3" placeholder="Срок, регион поставки, ссылка на&nbsp;модель каталога и&nbsp;другое"></textarea>
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <p class="zpm-custom-form__helper">Файлы чертежей, эскизов или фото можно направить на&nbsp;<a href="mailto:info@bzpm.ru">info@bzpm.ru</a> — укажите в&nbsp;письме номер заявки или название организации после отправки формы.</p>
+    </div>
+    <div class="zpm-form__field">
+      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+    </div>
+    <div class="zpm-form__actions">
+      <button class="btn btn_dark zpm-form__submit" type="submit" aria-label="Отправить заявку на расчёт оборудования на заказ">Отправить заявку на&nbsp;расчёт</button>
+      <label class="zpm-form__agree">
+        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+        <span class="zpm-form__agree-text">Я&nbsp;согласен на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;связь по&nbsp;указанным контактам для ответа на&nbsp;заявку.</span>
+      </label>
+    </div>
+  </div>
+</form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{ footer }}
