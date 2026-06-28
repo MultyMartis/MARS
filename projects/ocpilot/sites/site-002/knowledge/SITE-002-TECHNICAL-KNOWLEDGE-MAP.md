@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **IMPLEMENTED** · M9.18 Custom Manufacturing — **NOT STARTED**.
+**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **IMPLEMENTED** · M9.18 Custom Manufacturing — **CHARTER READY** (implementation **NOT STARTED**).
 
 ---
 
@@ -1185,6 +1185,49 @@ Standalone `/dealers` corp page = **primary qualification surface** per charter.
 
 ---
 
+## 22. Custom Manufacturing Page (M9.18)
+
+Corporate page `/custom-equipment` — route `information/custom_equipment`. **Implementation charter READY** (2026-06-28); **not yet implemented** on live TEST.
+
+| Item | Value |
+|------|--------|
+| **Live URL** | https://zpm.new-site.space/custom-equipment |
+| **Target route** | `information/custom_equipment` |
+| **SEO** | `oc_seo_url` keyword `custom-equipment` → `information/custom_equipment` (prior `information/information&information_id=…` — **SAFE UNKNOWN** until preflight) |
+| **Controller (planned)** | `catalog/controller/information/custom_equipment.php` |
+| **Twig (planned)** | `catalog/view/theme/default/template/information/custom_equipment.twig` |
+| **CSS namespace (planned)** | `zpm-custom-page`, `zpm-custom-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS (planned)** | Corp FAQ accordion in `assets/js/main.js` — add `[data-custom-faq]` to selector list |
+| **Copy** | [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md](../copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md) |
+| **Charter** | [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md) |
+| **Target checkpoint** | `SITE-002-STABLE-LIVE-M9.18-CUSTOM-01` (post-implementation) |
+
+### Structure (target)
+
+Pageintro (H1 + Lead) → when custom needed (BLOCK 01 + BLOCK 02) → scope + OEM proof (BLOCK 03 + BLOCK 04) → **8-step process timeline** (BLOCK 05 — dominant) → requirements + materials (BLOCK 06 + BLOCK 07) → project outcomes (BLOCK 08 — second emphasis) → FAQ (8) → Commercial Trust CTA + custom form (company, contact, phone, email, project_description required; **no upload MVP**).
+
+### Reuse boundaries
+
+- **Commercial Trust:** CTA card + form wrap — **not** full PLP trust block
+- **Contacts:** `zpm-form` discipline — **not** contact card grid or map
+- **Delivery / Payment / Warranty / Dealers:** one-line summaries + links only — **not** embedded sibling bodies
+- **Catalog:** text links and scope bridge — **not** PLP grid or prices
+- **Forbidden on page:** calculator/configurator · file upload MVP · price/lead badges · tender portal UX · fake case gallery · universal AISI table hero
+
+### Program note
+
+M9.18 is the **terminal** Corporate Pages Program implementation milestone. After stable checkpoint, corp implementation phase for M9.14–M9.18 (About restoration separate) is **complete on TEST** — pending operator gates B6/B8 for formal sign-off.
+
+### Change rules
+
+1. Read [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md) and **§22**
+2. Live-capture remote files before deploy
+3. Do not bleed scope into sibling corp pages or catalog templates
+
+**Evidence (preflight):** [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · `reports/m9.18-work/` (to be populated at implementation)
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -1196,4 +1239,4 @@ Standalone `/dealers` corp page = **primary qualification surface** per charter.
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§21 M9.16 Dealers IMPLEMENTED on TEST).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§22 M9.18 Custom Manufacturing Implementation Charter READY).*

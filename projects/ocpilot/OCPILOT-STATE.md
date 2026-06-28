@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-28  
-**Evidence cutoff:** 2026-06-28 (SITE-002 M9.14 Delivery + M9.15 Payment + M9.17 Warranty + **M9.16 Dealers IMPLEMENTED** on TEST; BZPM recovery **CLOSED**; site authority M9.13 About Restored + M9.14 Delivery + M9.15 Payment + M9.17 Warranty + **M9.16 Dealers** page checkpoints)  
+**Evidence cutoff:** 2026-06-28 (SITE-002 M9.14 Delivery + M9.15 Payment + M9.17 Warranty + M9.16 Dealers IMPLEMENTED on TEST; **M9.18 Custom Manufacturing Implementation Charter READY**; BZPM recovery **CLOSED**; site authority M9.13 About Restored + M9.14 Delivery + M9.15 Payment + M9.17 Warranty + M9.16 Dealers page checkpoints)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.13 ABOUT COMPANY RESTORED 01** (2026-06-23) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` + **M9.14 Delivery** + **M9.15 Payment** + **M9.17 Warranty** + **M9.16 Dealers** page checkpoints — BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; catalog UX **complete**; About **restored**; **M9.14 + M9.15 + M9.17 + M9.16 IMPLEMENTED** on TEST; next **M9.18 Custom Manufacturing**; operator gates B6/B8/B1; **B3 OPEN** (governance-only; PLP unchanged) |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` + **M9.14 Delivery** + **M9.15 Payment** + **M9.17 Warranty** + **M9.16 Dealers** page checkpoints — BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; catalog UX **complete**; About **restored**; **M9.14 + M9.15 + M9.17 + M9.16 IMPLEMENTED** on TEST; **M9.18 Custom Manufacturing Implementation Charter READY**; operator gates B6/B8/B1; **B3 OPEN** (governance-only; PLP unchanged) |
 
 ---
 
@@ -30,7 +30,7 @@
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
 | **Next phase** | **Production Development** — Corporate Pages after operator gates |
-| **Implementation (M9.14+)** | **M9.14 Delivery + M9.15 Payment + M9.17 Warranty + M9.16 Dealers IMPLEMENTED** (2026-06-28) · M9.18 **NOT STARTED** |
+| **Implementation (M9.14+)** | **M9.14 Delivery + M9.15 Payment + M9.17 Warranty + M9.16 Dealers IMPLEMENTED** (2026-06-28) · M9.18 **CHARTER READY** · implementation **NOT STARTED** |
 | **Closeout** | [sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 
 **Lifecycle:** Research → Corporate Pages Program → Recovery (**CLOSED**) → Production Development
@@ -48,7 +48,7 @@
 | Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (rejected/restored)** |
 | Active stage | **PRODUCTION PREPARATION** — BZPM recovery **CLOSED**; remaining M9.8.9 tasks per roadmap (non-blocking) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
-| Next planned | **M9.18 Custom Manufacturing** · operator queue M9.18 only · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
+| Next planned | **M9.18 Custom Manufacturing implementation** (charter **READY** 2026-06-28) · operator queue M9.18 only · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
 | Active blockers | **B6** charter approval · **B8** copy sign-off · **B1** МО address · **B3** PLP vs `/dealers` (**governance-only** — does not block corp `/dealers` implementation) — recovery **not** a blocker |
 | Corporate Pages Program | **OPEN** — [Program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Design program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [Charters](../website-factory/execution-cases/bzpm-roadmap/charters/README.md) · M9.13 **IMPLEMENTED · QA PASSED · REJECTED · RESTORED** · M9.14+ charters **Draft complete / approval open** · Visual design **NOT OPEN** · Contacts **Delivered** (separate workstream) |
 | Run 5 | **NO** — not applicable to current operational lane |
@@ -552,6 +552,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-22 | **UPDATED** — BZPM Copy artefact system **REGISTERED**; [BZPM-COPY-STANDARDS-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-COPY-STANDARDS-v1.md); M9.13–M9.18 PAGE-COPY v1 shells |
 | 2026-06-28 | **RECONCILED** — BZPM post-recovery completeness audit semantics; M9.14/M9.15 **NOT_IMPLEMENTED** (not lost); distributed strategy/findings; [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](sites/site-002/reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) |
 | 2026-06-28 | **CLOSED** — BZPM UX Redesign recovery phase; production transition; Run **4.148**; [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
+| 2026-06-28 | **REGISTERED** — M9.18 Custom Manufacturing Implementation Charter **READY**; Run **4.155**; terminal corp page charter; [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](sites/site-002/reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md); Knowledge Map §22 |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |
