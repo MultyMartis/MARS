@@ -1,0 +1,144 @@
+{
+  "architecture_id": "corvonero-phase-6.6-lp01-final-message-architecture-v3",
+  "landing_page_id": "LP-01",
+  "campaign_id": "CA-01",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "supersedes": "corvonero-phase-6.5-lp01-message-architecture-v2",
+  "default_first_screen_variant": "A",
+  "editorial_revision": "phase-6.6-final-v3",
+  "operator_approved": true,
+  "campaign_allocation_changed": false,
+  "layer_count": 13,
+  "final_v3_notes": [
+    "work format and FAQ onsite positive framing",
+    "trust lead operator-approved",
+    "final CTA H2 aligned production copy and handoff",
+    "pricing H2 Стоимость работы программиста 1С",
+    "form messages implementation text only"
+  ],
+  "layers": [
+    {
+      "layer_id": "first_screen",
+      "order": 1,
+      "purpose": "Immediate message match for specialist-search traffic",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["H1 task scope", "remote Russia", "onsite Novosibirsk", "primary CTA", "phone above fold"],
+      "prohibited_claims": ["official partner", "SLA", "fixed project prices", "license sales", "unverified cases"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order"],
+      "phrase_families": ["программист 1с", "специалист 1с", "доработка 1с", "удалённо"],
+      "cta_role": {"primary": "Обсудить задачу", "secondary": "Получить оценку"}
+    },
+    {
+      "layer_id": "audience",
+      "order": 2,
+      "h2_direction_ru": "Услуги программиста 1С для компаний и ИП",
+      "purpose": "B2B qualification",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["companies and IP", "external specialist without staff hire"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "service_scope",
+      "order": 3,
+      "h2_direction_ru": "Что делает программист 1С",
+      "purpose": "Direct service scope match",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["approved scope list"],
+      "ad_groups": ["ca-01-direct-service-order", "ca-01-specialist-search"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "typical_tasks",
+      "order": 4,
+      "h2_direction_ru": "Типовые задачи",
+      "purpose": "Task/result intent coverage",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "configurations",
+      "order": 5,
+      "h2_direction_ru": "Конфигурации 1С",
+      "required_content": ["УТ", "УНФ", "Розница", "КА", "БП"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "work_format",
+      "order": 6,
+      "h2_direction_ru": "Формат работы",
+      "required_content": ["remote Russia positive process", "onsite within Novosibirsk", "other cities remote"],
+      "removed_from_public": ["negative_regional_refusal_wording"],
+      "v3_change": "positive_framing_only",
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Заказать звонок"}
+    },
+    {
+      "layer_id": "pricing",
+      "order": 7,
+      "h2_direction_ru": "Стоимость работы программиста 1С",
+      "required_content": ["from 3000 RUB per hour wording 3 000 ₽ в час", "minimum 2 hours", "cost factors"],
+      "v3_change": "h2_spelling_aligned",
+      "ad_groups": ["ca-01-price-intent"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "process",
+      "order": 8,
+      "h2_direction_ru": "Как мы работаем",
+      "required_content": ["discuss", "clarify scope", "agree estimate", "execute", "deliver"],
+      "ad_groups": ["ca-01-direct-service-order"],
+      "cta_role": {"primary": "Заказать звонок"}
+    },
+    {
+      "layer_id": "trust",
+      "order": 9,
+      "h2_direction_ru": "Почему обращаются в Корво Неро",
+      "required_content": ["operator-approved lead", "hourly model", "contract", "remote", "onsite", "configs bullet работаем с"],
+      "prohibited": ["experience duration", "case counts", "certificates"],
+      "v3_change": "lead_and_configs_bullet",
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "faq",
+      "order": 10,
+      "h2_direction_ru": "Частые вопросы",
+      "required_content": ["9 customer-facing Q&A"],
+      "v3_change": ["faq-04 positive onsite", "faq-09 simplified estimate"],
+      "ad_groups": ["ca-01-price-intent", "ca-01-specialist-search"],
+      "cta_role": {"primary": "scroll to form"}
+    },
+    {
+      "layer_id": "messengers_phone",
+      "order": 11,
+      "h2_direction_ru": "Связаться с нами",
+      "required_content": ["lead Позвоните нам или выберите удобный мессенджер", "phone", "MAX", "Telegram", "WhatsApp labels"],
+      "v3_change": "contact_lead_added",
+      "implementation_inputs": ["messenger URLs"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "click-to-call"}
+    },
+    {
+      "layer_id": "lead_form",
+      "order": 12,
+      "h2_direction_ru": "Оставить заявку",
+      "required_content": ["name optional", "phone required", "submit Заказать звонок"],
+      "supporting_text": "Оставьте телефон — уточним задачу и сориентируем по стоимости.",
+      "implementation_inputs": ["consent text", "success/error messages implementation only"],
+      "ad_groups": ["ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"submit": "Заказать звонок"}
+    },
+    {
+      "layer_id": "final_cta",
+      "order": 13,
+      "h2_direction_ru": "Обсудим вашу задачу в 1С",
+      "required_content": ["body recap", "Обсудить задачу", "phone"],
+      "v3_change": "h2_and_body_operator_approved",
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    }
+  ]
+}

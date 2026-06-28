@@ -1,0 +1,141 @@
+{
+  "architecture_id": "corvonero-phase-6.5-lp01-message-architecture-v2",
+  "landing_page_id": "LP-01",
+  "campaign_id": "CA-01",
+  "generated_at": "2026-06-29T14:00:00.000Z",
+  "supersedes": "corvonero-phase-6.4-lp01-message-architecture-v1",
+  "default_first_screen_variant": "A",
+  "editorial_revision": "phase-6.5-v2",
+  "campaign_allocation_changed": false,
+  "layer_count": 13,
+  "editorial_v2_notes": [
+    "governance language internal only",
+    "trust positive framing",
+    "faq 9 items customer-facing",
+    "no placeholder text in public copy"
+  ],
+  "layers": [
+    {
+      "layer_id": "first_screen",
+      "order": 1,
+      "purpose": "Immediate message match for specialist-search traffic",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["H1 task scope", "remote Russia", "onsite Novosibirsk", "primary CTA", "phone above fold"],
+      "prohibited_claims": ["official partner", "SLA", "fixed project prices", "license sales", "unverified cases"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order"],
+      "phrase_families": ["программист 1с", "специалист 1с", "доработка 1с", "удалённо"],
+      "cta_role": {"primary": "Обсудить задачу", "secondary": "Получить оценку"},
+      "v2_change": "new H1 and lead copy"
+    },
+    {
+      "layer_id": "audience",
+      "order": 2,
+      "h2_direction_ru": "Услуги программиста 1С для компаний и ИП",
+      "purpose": "B2B qualification",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["companies and IP", "external specialist without staff hire"],
+      "removed_from_public": ["training filter", "vacancy filter", "page purpose disclaimer"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "service_scope",
+      "order": 3,
+      "h2_direction_ru": "Что делает программист 1С",
+      "purpose": "Direct service scope match",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["approved scope list"],
+      "ad_groups": ["ca-01-direct-service-order", "ca-01-specialist-search"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "typical_tasks",
+      "order": 4,
+      "h2_direction_ru": "Типовые задачи",
+      "purpose": "Task/result intent coverage",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "v2_change": "formal post-update wording",
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "configurations",
+      "order": 5,
+      "h2_direction_ru": "Конфигурации 1С",
+      "required_content": ["УТ", "УНФ", "Розница", "КА", "БП"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "work_format",
+      "order": 6,
+      "h2_direction_ru": "Формат работы",
+      "required_content": ["remote Russia", "on-site Novosibirsk only"],
+      "removed_from_public": ["advertising_traffic_note"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Заказать звонок"}
+    },
+    {
+      "layer_id": "pricing",
+      "order": 7,
+      "h2_direction_ru": "Стоимость работ",
+      "required_content": ["from 3000 RUB/hour", "minimum 2 hours", "cost factors"],
+      "removed_from_public": ["packages disclaimer"],
+      "ad_groups": ["ca-01-price-intent"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "process",
+      "order": 8,
+      "h2_direction_ru": "Как мы работаем",
+      "required_content": ["discuss", "clarify scope", "agree estimate", "execute", "deliver"],
+      "v2_change": "concise five-step structure",
+      "ad_groups": ["ca-01-direct-service-order"],
+      "cta_role": {"primary": "Заказать звонок"}
+    },
+    {
+      "layer_id": "trust",
+      "order": 9,
+      "h2_direction_ru": "Почему обращаются в Корво Неро",
+      "required_content": ["positive evidence facts", "hourly model", "contract", "remote", "onsite", "configs"],
+      "removed_from_public": ["case absence disclaimer", "partner absence disclaimer"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "faq",
+      "order": 10,
+      "h2_direction_ru": "Частые вопросы",
+      "required_content": ["9 customer-facing Q&A"],
+      "removed": ["partner question", "training/license negatives", "SLA internal explanations"],
+      "ad_groups": ["ca-01-price-intent", "ca-01-specialist-search"],
+      "cta_role": {"primary": "scroll to form"}
+    },
+    {
+      "layer_id": "messengers_phone",
+      "order": 11,
+      "h2_direction_ru": "Связаться с нами",
+      "required_content": ["phone", "MAX", "Telegram", "WhatsApp labels"],
+      "implementation_inputs": ["messenger URLs"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "click-to-call"}
+    },
+    {
+      "layer_id": "lead_form",
+      "order": 12,
+      "h2_direction_ru": "Оставить заявку",
+      "required_content": ["name optional", "phone required", "submit Заказать звонок"],
+      "supporting_text_v2": "Оставьте телефон — уточним задачу и сориентируем по стоимости.",
+      "implementation_inputs": ["consent text"],
+      "ad_groups": ["ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"submit": "Заказать звонок"}
+    },
+    {
+      "layer_id": "final_cta",
+      "order": 13,
+      "required_content": ["recap", "Обсудить задачу", "phone"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    }
+  ]
+}

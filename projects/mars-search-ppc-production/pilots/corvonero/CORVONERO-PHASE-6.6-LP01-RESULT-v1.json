@@ -1,0 +1,44 @@
+{
+  "result_id": "corvonero-phase-6.6-lp01-result-v1",
+  "phase": "6.6",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "verdict": {
+    "phase_6_6": "PASS — LP-01 FINAL COPY V3 OPERATOR APPROVED",
+    "lp01_copy": "FINAL FOR TILDA PRODUCTION",
+    "landing_page": "NOT BUILT",
+    "website": "UNCHANGED",
+    "phase_7_build": "READY FOR SEPARATE AUTHORIZATION"
+  },
+  "final_revision": {
+    "input_authority": "corvonero-phase-6.5-lp01-v2-artefacts",
+    "v1_artefacts_modified": false,
+    "v2_artefacts_modified": false,
+    "campaign_allocation_changed": false,
+    "semantic_architecture_rebuilt": false
+  },
+  "reconciliation": {
+    "ca01_phrase_ids": 404,
+    "mapped_to_lp01": 404,
+    "unchanged_from_phase_6_4": true
+  },
+  "operator_edits_count": 7,
+  "consistency_fixes_count": 3,
+  "outputs_count": 14,
+  "artefacts_created": [
+    "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.md",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-MESSAGE-ARCHITECTURE-v3.md",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-MESSAGE-ARCHITECTURE-v3.json",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-FAQ-v3.md",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-FAQ-v3.json",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-TILDA-HANDOFF-v3.md",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-TILDA-HANDOFF-v3.json",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-COPY-CHANGELOG-v1.md",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-COPY-APPROVAL-v1.md",
+    "CORVONERO-PHASE-6.6-LP01-FINAL-COPY-APPROVAL-v1.json",
+    "CORVONERO-PHASE-6.6-LP01-RESULT-v1.md",
+    "CORVONERO-PHASE-6.6-LP01-RESULT-v1.json",
+    "reports/REPORT-corvonero-phase-6.6-lp01-final-copy-v1.md"
+  ]
+}

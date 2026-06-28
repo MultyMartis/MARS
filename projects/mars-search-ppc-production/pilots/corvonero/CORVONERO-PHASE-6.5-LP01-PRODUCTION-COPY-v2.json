@@ -1,0 +1,119 @@
+{
+  "copy_id": "corvonero-phase-6.5-lp01-production-copy-v2",
+  "landing_page_id": "LP-01",
+  "language": "ru",
+  "generated_at": "2026-06-29T14:00:00.000Z",
+  "supersedes": "corvonero-phase-6.4-lp01-production-copy-v1",
+  "default_first_screen_variant": "A",
+  "editorial_revision": "phase-6.5-v2",
+  "meta": {
+    "title": "Программист 1С в Новосибирске — услуги специалиста | Корво Неро",
+    "description": "Подключим программиста 1С для доработки, исправления ошибок, интеграций и сопровождения. Удалённо по России, выезд в Новосибирске. Стоимость от 3 000 ₽/час. Корво Неро."
+  },
+  "first_screen": {
+    "variant": "A",
+    "h1": "Программист 1С для доработки, настройки и исправления ошибок",
+    "lead": "Решаем разовые задачи в 1С, дорабатываем конфигурации и восстанавливаем работу базы. Удалённо по России, с выездом в Новосибирске.",
+    "primary_cta": "Обсудить задачу",
+    "secondary_cta": "Получить оценку",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "sections": {
+    "audience": {
+      "h2": "Услуги программиста 1С для компаний и ИП",
+      "body_summary": "B2B companies and IP; external specialist without staff hire"
+    },
+    "service_scope": {
+      "h2": "Что делает программист 1С",
+      "items": [
+        "доработка конфигураций 1С",
+        "исправление ошибок и восстановление работоспособности",
+        "настройка учёта и бизнес-процессов",
+        "разработка отчётов, обработок и печатных форм",
+        "интеграции с сайтами, Битрикс и внешними системами",
+        "настройка маркировки и Честного знака",
+        "обновление и сопровождение баз",
+        "разовые и срочные задачи"
+      ],
+      "cta": "Получить оценку"
+    },
+    "typical_tasks": {
+      "h2": "Типовые задачи",
+      "cta": "Обсудить задачу",
+      "editorial_fix": "post-update wording formalized"
+    },
+    "configurations": {
+      "h2": "Конфигурации 1С",
+      "list": ["УТ", "УНФ", "Розница", "КА", "БП"],
+      "cta": "Получить оценку"
+    },
+    "work_format": {
+      "h2": "Формат работы",
+      "remote": "по всей России",
+      "onsite": "только Новосибирск",
+      "cta": "Заказать звонок",
+      "removed_from_public": ["advertising_traffic_note"]
+    },
+    "pricing": {
+      "h2": "Стоимость работ программиста 1С",
+      "hourly_from_rub": 3000,
+      "minimum_hours": 2,
+      "wording": "Стоимость работы — от 3 000 ₽ в час. Минимальный заказ — 2 часа.",
+      "cta": "Получить оценку",
+      "removed_from_public": ["packages_subscriptions_discounts_disclaimer"]
+    },
+    "process": {
+      "h2": "Как мы работаем",
+      "steps": [
+        "Обсуждаем задачу",
+        "Уточняем конфигурацию и объём работ",
+        "Согласовываем оценку",
+        "Выполняем работу",
+        "Передаём результат"
+      ],
+      "cta": "Заказать звонок"
+    },
+    "trust": {
+      "h2": "Почему обращаются в Корво Неро",
+      "facts": [
+        "разовые задачи без штатного найма",
+        "почасовая модель",
+        "договор и безналичная оплата",
+        "удалённое подключение по России",
+        "выезд в Новосибирске",
+        "конфигурации УТ УНФ Розница КА БП"
+      ],
+      "cta": "Обсудить задачу",
+      "removed_from_public": ["negative_disclaimers"]
+    },
+    "contact": {
+      "h2": "Связаться с нами",
+      "phone": "+7 (383) 390-29-28",
+      "messengers": ["MAX", "Telegram", "WhatsApp"]
+    },
+    "form": {
+      "h2": "Оставить заявку на услуги программиста 1С",
+      "supporting_text": "Оставьте телефон — уточним задачу и сориентируем по стоимости.",
+      "submit_cta": "Заказать звонок"
+    },
+    "final_cta": {
+      "cta": "Обсудить задачу",
+      "phone": "+7 (383) 390-29-28"
+    }
+  },
+  "footer": {
+    "brand": "Центр автоматизации «Корво Неро»",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "implementation_inputs": {
+    "messenger_urls": "operator_client",
+    "privacy_policy_url": "operator_client",
+    "consent_text": "operator_client",
+    "legal_entity_details": "operator_client",
+    "og_image": "operator_client"
+  },
+  "internal_compliance": {
+    "prohibited_in_copy": ["VAT", "SLA", "partner claims", "fake cases", "license sales", "package prices"],
+    "acceptance_criteria_ref": "CORVONERO-PHASE-6.4-LP01-ACCEPTANCE-CRITERIA-v1"
+  }
+}

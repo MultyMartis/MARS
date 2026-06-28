@@ -1,0 +1,38 @@
+{
+  "result_id": "corvonero-phase-6.5-lp01-result-v1",
+  "phase": "6.5",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T14:00:00.000Z",
+  "verdict": {
+    "phase_6_5": "PASS — LP-01 COPY V2 READY FOR OPERATOR REVIEW",
+    "landing_page": "NOT BUILT",
+    "website": "UNCHANGED",
+    "tilda_production": "NOT AUTHORIZED"
+  },
+  "editorial_revision": {
+    "input_authority": "phase-6.4-lp01-v1-artefacts",
+    "v1_artefacts_modified": false,
+    "campaign_allocation_changed": false,
+    "semantic_architecture_rebuilt": false
+  },
+  "reconciliation": {
+    "ca01_phrase_ids": 404,
+    "mapped_to_lp01": 404,
+    "unchanged_from_phase_6_4": true
+  },
+  "outputs_count": 12,
+  "artefacts_created": [
+    "CORVONERO-PHASE-6.5-LP01-PRODUCTION-COPY-v2.md",
+    "CORVONERO-PHASE-6.5-LP01-PRODUCTION-COPY-v2.json",
+    "CORVONERO-PHASE-6.5-LP01-MESSAGE-ARCHITECTURE-v2.md",
+    "CORVONERO-PHASE-6.5-LP01-MESSAGE-ARCHITECTURE-v2.json",
+    "CORVONERO-PHASE-6.5-LP01-FAQ-v2.md",
+    "CORVONERO-PHASE-6.5-LP01-FAQ-v2.json",
+    "CORVONERO-PHASE-6.5-LP01-TILDA-HANDOFF-v2.md",
+    "CORVONERO-PHASE-6.5-LP01-TILDA-HANDOFF-v2.json",
+    "CORVONERO-PHASE-6.5-LP01-EDITORIAL-CHANGELOG-v1.md",
+    "CORVONERO-PHASE-6.5-LP01-RESULT-v1.md",
+    "CORVONERO-PHASE-6.5-LP01-RESULT-v1.json",
+    "reports/REPORT-corvonero-phase-6.5-lp01-editorial-revision-v1.md"
+  ]
+}

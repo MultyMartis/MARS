@@ -1,0 +1,43 @@
+{
+  "approval_id": "corvonero-phase-6.6-lp01-final-copy-approval-v1",
+  "landing_page_id": "LP-01",
+  "phase": "6.6",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "input_authority": "corvonero-phase-6.5-lp01-v2-artefacts",
+  "v2_artefacts_modified": false,
+  "operator_decisions_applied": 7,
+  "consistency_fixes_applied": 3,
+  "verdict": {
+    "final_copy_v3": "OPERATOR APPROVED",
+    "tilda_production_authority": [
+      "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3",
+      "CORVONERO-PHASE-6.6-LP01-FINAL-TILDA-HANDOFF-v3"
+    ],
+    "phase_7_build": "REQUIRES_SEPARATE_AUTHORIZATION"
+  },
+  "compliance": {
+    "h1_preserved": true,
+    "governance_language_absent": true,
+    "unsupported_claims_absent": true,
+    "vat_absent": true,
+    "sla_absent": true,
+    "license_sales_absent": true,
+    "placeholder_tokens_absent": true,
+    "cyrillic_1c": true,
+    "cta_count": 3,
+    "faq_count": 9
+  },
+  "typography_audit": {
+    "cyrillic_1c": "pass",
+    "mixed_alphabet": "none",
+    "brand_spelling": "Корво Неро",
+    "rub_formatting": "3 000 ₽ в час",
+    "doubled_spaces": "none",
+    "visible_placeholders": "none"
+  },
+  "sign_off": {
+    "operator_task_charter": "2026-06-29",
+    "copy_pack_complete": "2026-06-29",
+    "tilda_build_started": false
+  }
+}

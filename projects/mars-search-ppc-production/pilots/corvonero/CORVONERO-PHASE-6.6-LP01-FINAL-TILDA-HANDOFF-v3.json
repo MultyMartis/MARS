@@ -1,0 +1,80 @@
+{
+  "handoff_id": "corvonero-phase-6.6-lp01-final-tilda-handoff-v3",
+  "landing_page_id": "LP-01",
+  "platform": "Tilda",
+  "builder": "Roman",
+  "base_url": "https://lk.corvonero.ru/programmist-1s/",
+  "generated_at": "2026-06-29T18:00:00.000Z",
+  "supersedes": "corvonero-phase-6.5-lp01-tilda-handoff-v2",
+  "editorial_revision": "phase-6.6-final-v3",
+  "operator_approved": true,
+  "blocks": [
+    {"order": 1, "purpose": "header", "tilda_concept": "header", "copy_ref": "phone + brand"},
+    {"order": 2, "purpose": "first_screen", "tilda_concept": "cover_hero", "copy_ref": "PRODUCTION-COPY-v3 first screen"},
+    {"order": 3, "purpose": "audience", "tilda_concept": "text_or_cards", "copy_ref": "PRODUCTION-COPY-v3 audience"},
+    {"order": 4, "purpose": "service_scope", "tilda_concept": "cards", "copy_ref": "PRODUCTION-COPY-v3 service_scope"},
+    {"order": 5, "purpose": "typical_tasks", "tilda_concept": "list", "copy_ref": "PRODUCTION-COPY-v3 typical_tasks"},
+    {"order": 6, "purpose": "configurations", "tilda_concept": "table_or_tags", "copy_ref": "PRODUCTION-COPY-v3 configurations"},
+    {"order": 7, "purpose": "work_format", "tilda_concept": "two_column", "copy_ref": "PRODUCTION-COPY-v3 work_format"},
+    {"order": 8, "purpose": "pricing", "tilda_concept": "highlight_box", "copy_ref": "PRODUCTION-COPY-v3 pricing", "h2": "Стоимость работы программиста 1С"},
+    {"order": 9, "purpose": "process", "tilda_concept": "numbered_steps", "copy_ref": "PRODUCTION-COPY-v3 process"},
+    {"order": 10, "purpose": "trust", "tilda_concept": "text", "copy_ref": "PRODUCTION-COPY-v3 trust"},
+    {"order": 11, "purpose": "faq", "tilda_concept": "faq_accordion", "copy_ref": "FAQ-v3"},
+    {"order": 12, "purpose": "contact_messengers", "tilda_concept": "contact", "copy_ref": "lead + phone + messenger labels"},
+    {"order": 13, "purpose": "lead_form", "tilda_concept": "form", "copy_ref": "PRODUCTION-COPY-v3 form"},
+    {"order": 14, "purpose": "final_cta", "tilda_concept": "cta_strip", "copy_ref": "PRODUCTION-COPY-v3 final_cta", "h2": "Обсудим вашу задачу в 1С"},
+    {"order": 15, "purpose": "footer", "tilda_concept": "footer", "copy_ref": "brand + phone + legal entity visible"}
+  ],
+  "form": {
+    "fields": [{"name": "Имя", "required": false}, {"name": "Телефон", "required": true}],
+    "supporting_text": "Оставьте телефон — уточним задачу и сориентируем по стоимости.",
+    "submit_label": "Заказать звонок"
+  },
+  "form_messages": {
+    "authority": "implementation_text_only",
+    "success": "Спасибо! Мы получили заявку и перезвоним по указанному телефону.",
+    "error": "Не удалось отправить заявку. Проверьте телефон или позвоните нам: +7 (383) 390-29-28."
+  },
+  "cta_labels": ["Обсудить задачу", "Получить оценку", "Заказать звонок"],
+  "phone": "+7 (383) 390-29-28",
+  "contact_block": {
+    "h2": "Связаться с нами",
+    "lead": "Позвоните нам или выберите удобный мессенджер."
+  },
+  "final_cta": {
+    "h2": "Обсудим вашу задачу в 1С",
+    "body": "Расскажите, что нужно исправить, настроить или доработать. Уточним детали и сориентируем по стоимости.",
+    "cta": "Обсудить задачу",
+    "phone": "+7 (383) 390-29-28"
+  },
+  "pricing_block": {
+    "h2": "Стоимость работы программиста 1С",
+    "rate": "от 3 000 ₽ в час",
+    "minimum": "Минимальный заказ — 2 часа"
+  },
+  "messengers": {
+    "channels": ["MAX", "Telegram", "WhatsApp"],
+    "urls_status": "implementation_input_operator_client",
+    "fabricate_urls_forbidden": true
+  },
+  "footer": {
+    "brand": "Центр автоматизации «Корво Неро»",
+    "phone": "+7 (383) 390-29-28",
+    "legal_entity_visible": "ИП Никифоров Роман Вадимович"
+  },
+  "implementation_inputs": {
+    "messenger_urls": "operator_client",
+    "privacy_policy_url": "operator_client",
+    "consent_text": "operator_client",
+    "legal_entity_full_requisites": "operator_client_atlas_le_0006",
+    "og_image": "operator_client",
+    "tilda_access": "operator",
+    "form_messages": "this_handoff_implementation_text_only"
+  },
+  "seo": {
+    "title": "Программист 1С в Новосибирске — услуги специалиста | Корво Неро",
+    "description_ref": "PRODUCTION-COPY-v3 meta"
+  },
+  "acceptance_criteria_ref": "CORVONERO-PHASE-6.4-LP01-ACCEPTANCE-CRITERIA-v1",
+  "publish_gate": "phase_7_build_authorization_required"
+}

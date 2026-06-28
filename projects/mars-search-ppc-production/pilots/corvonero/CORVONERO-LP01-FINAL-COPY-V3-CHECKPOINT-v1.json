@@ -1,0 +1,83 @@
+{
+  "checkpoint_id": "corvonero-lp01-final-copy-v3-checkpoint-v1",
+  "generated_at": "2026-06-29T20:00:00.000Z",
+  "checkpoint_type": "selective_git_checkpoint",
+  "git": {
+    "branch": "mars/canonical-post-recovery",
+    "pre_commit_head": "7d9df484a1e37bbf0ef7607f63a672d77cebcb3a",
+    "prior_checkpoint_commit": "bf85956f14474119063185413f8a7bc57b7393e6",
+    "prior_checkpoint_tag": "corvonero-phase6.4-lp01-content-pack-2026-06",
+    "planned_tag": "corvonero-lp01-final-copy-v3-2026-06"
+  },
+  "campaign": {
+    "id": "CA-01",
+    "name_ru": "Программист / специалист 1С",
+    "landing_page_id": "LP-01"
+  },
+  "phases_included": {
+    "6.5": {
+      "name": "LP-01 editorial revision v2",
+      "status": "complete",
+      "file_count": 12
+    },
+    "6.6": {
+      "name": "LP-01 final copy v3",
+      "status": "operator_approved",
+      "file_count": 14
+    }
+  },
+  "final_copy": {
+    "authority_md": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.md",
+    "authority_json": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+    "tilda_handoff": "CORVONERO-PHASE-6.6-LP01-FINAL-TILDA-HANDOFF-v3",
+    "operator_approved": true,
+    "status": "FINAL FOR TILDA PRODUCTION"
+  },
+  "semantic_mapping": {
+    "ca01_phrase_ids": 404,
+    "mapped_to_lp01": 404,
+    "missing": 0,
+    "duplicates": 0
+  },
+  "integrity": {
+    "h1": "Программист 1С для доработки, настройки и исправления ошибок",
+    "price": "от 3 000 ₽ в час",
+    "minimum_order_hours": 2,
+    "configurations": ["УТ", "УНФ", "Розница", "КА", "БП"],
+    "remote": "по всей России",
+    "onsite": "в пределах Новосибирска",
+    "faq_count": 9,
+    "form_fields": ["Имя", "Телефон"],
+    "ctas": ["Обсудить задачу", "Получить оценку", "Заказать звонок"]
+  },
+  "scope_boundaries": {
+    "v1_v2_source_artefacts_modified": false,
+    "website_changes": 0,
+    "landing_page_built": false,
+    "phase_7_started": false,
+    "unrelated_wip_included": false
+  },
+  "compliance": {
+    "mixed_script_defects": false,
+    "governance_placeholders_in_public_copy": false,
+    "vat_statement": false,
+    "sla_promise": false,
+    "unsupported_partner_claims": false
+  },
+  "remaining_implementation_inputs": [
+    "messenger_urls",
+    "privacy_policy_url",
+    "consent_checkbox_text",
+    "legal_entity_full_requisites",
+    "og_image",
+    "form_success_message",
+    "form_error_message"
+  ],
+  "excluded": [
+    "phase_6.4_and_earlier_source_artefacts",
+    "phase_7_next_task_documents",
+    "unrelated_workspace_wip"
+  ],
+  "inventory_report": "reports/REPORT-corvonero-lp01-final-copy-v3-checkpoint-inventory-v1.md",
+  "eligible_file_count": 30
+}

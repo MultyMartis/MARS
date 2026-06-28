@@ -1,0 +1,75 @@
+{
+  "faq_id": "corvonero-phase-6.5-lp01-faq-v2",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T14:00:00.000Z",
+  "supersedes": "corvonero-phase-6.4-lp01-faq-v1",
+  "editorial_revision": "phase-6.5-v2",
+  "h2": "Частые вопросы",
+  "item_count": 9,
+  "items": [
+    {
+      "id": "faq-01",
+      "question_ru": "Какие задачи может выполнить программист 1С?",
+      "topic": "service_scope",
+      "answer_summary": "Full approved scope list without negative exclusions"
+    },
+    {
+      "id": "faq-02",
+      "question_ru": "С какими конфигурациями 1С вы работаете?",
+      "topic": "configurations",
+      "answer_configs": ["УТ", "УНФ", "Розница", "КА", "БП"]
+    },
+    {
+      "id": "faq-03",
+      "question_ru": "Можно ли работать удалённо?",
+      "topic": "remote_work",
+      "answer": "Remote throughout Russia"
+    },
+    {
+      "id": "faq-04",
+      "question_ru": "Выезжаете ли вы к клиенту?",
+      "topic": "onsite",
+      "answer": "Novosibirsk only"
+    },
+    {
+      "id": "faq-05",
+      "question_ru": "Какой минимальный заказ?",
+      "topic": "minimum_order",
+      "answer_hours": 2
+    },
+    {
+      "id": "faq-06",
+      "question_ru": "Как рассчитывается стоимость?",
+      "topic": "pricing",
+      "hourly_from_rub": 3000,
+      "removed_from_public": ["packages disclaimer"]
+    },
+    {
+      "id": "faq-07",
+      "question_ru": "Работаете ли вы по договору и безналичному расчёту?",
+      "topic": "contract_payment",
+      "answer": "Да. Работаем с юридическими лицами и ИП по договору с безналичной оплатой."
+    },
+    {
+      "id": "faq-08",
+      "question_ru": "Берёте ли вы срочные задачи?",
+      "topic": "urgent_tasks",
+      "answer": "Да, возможность срочного подключения зависит от текущей загрузки специалиста. Опишите проблему — мы уточним доступный формат работы.",
+      "sla_promise": false
+    },
+    {
+      "id": "faq-09",
+      "question_ru": "Что нужно для первичной оценки?",
+      "topic": "estimate_inputs"
+    }
+  ],
+  "removed_items": [
+    "faq-10 partner status question"
+  ],
+  "removed_from_answers": [
+    "training exclusion",
+    "license sales exclusion",
+    "SLA not published explanation",
+    "REQUIRED_FROM_OPERATOR_OR_CLIENT placeholders"
+  ]
+}
