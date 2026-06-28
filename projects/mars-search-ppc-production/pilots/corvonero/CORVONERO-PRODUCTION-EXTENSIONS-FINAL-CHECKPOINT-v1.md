@@ -10,7 +10,8 @@ Branch: `mars/canonical-post-recovery`
 |------|-------|
 | Prior final-ad commit | `508837a02658e357ce18dca777a46231d2575b25` |
 | Prior final-ad tag | `corvonero-final-p1-search-ads-2026-06` |
-| Pre-commit HEAD | `f39d9b9dabd45c6ba609c9fd60cc5226613b049d` |
+| Pre-commit HEAD | `b2c0f84ce84c5d01485f52ace06dec25754d7284` |
+| Checkpoint commit | `017c6de26d711f3f71be5d2ebef41a5eba83f21b` |
 | Planned tag | `corvonero-final-production-extensions-2026-06` |
 
 ## Validation totals

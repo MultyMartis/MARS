@@ -58,7 +58,7 @@ NOT STARTED
 | Check | Result |
 |-------|--------|
 | Branch | `mars/canonical-post-recovery` |
-| Pre-commit HEAD | `f39d9b9dabd45c6ba609c9fd60cc5226613b049d` |
+| Pre-commit HEAD | `b2c0f84ce84c5d01485f52ace06dec25754d7284` |
 | Ancestor of `508837a0` | **YES** |
 | Prior tag | `corvonero-final-p1-search-ads-2026-06` |
 | Final ads unchanged | **YES** (no diff since `508837a0` outside EXT-W1 scope) |
@@ -68,9 +68,13 @@ NOT STARTED
 
 | Item | Value |
 |------|-------|
+| Commit SHA | `017c6de26d711f3f71be5d2ebef41a5eba83f21b` |
 | Commit message | `checkpoint(corvonero): preserve production extensions` |
 | Tag | `corvonero-final-production-extensions-2026-06` |
+| Remote branch verified | **YES** — `origin/mars/canonical-post-recovery` @ `017c6de2` |
+| Remote tag verified | **YES** — `corvonero-final-production-extensions-2026-06` @ `017c6de2` |
 | Receipt | `CORVONERO-PRODUCTION-EXTENSIONS-FINAL-CHECKPOINT-v1.md` / `.json` |
+| Staged files | 52 |
 
 ## Selective scope committed
 
@@ -92,6 +96,16 @@ Source: `CORVONERO-EXT-W1-RESULT-v2.json`
 ## External backup
 
 Target: `C:\MARS Phenix\AI MARS STORAGE\backups\corvonero\CORVONERO-FINAL-PRODUCTION-EXTENSIONS-2026-06-29\`
+
+| Item | Value |
+|------|-------|
+| Archive | `CORVONERO-FINAL-PRODUCTION-EXTENSIONS-2026-06-29.zip` |
+| Archive SHA-256 | `b7ffd7119cefafdcef468cbc8aafb0fd7eb7395b959494761a35ea04e5603d95` |
+| Manifest files | 515 |
+| DOCX in archive | 6 (5 LP Roman + final Ads) |
+| XLSX in archive | 1 (Research) |
+| Extensions v2 files | 14 |
+| ZIP validation | **PASS** (opens; manifest count matches; hash verified; no forbidden roots; no secrets) |
 
 Includes: full Corvonero pilot authority, extensions v1/v2, five Roman LP DOCX, Research XLSX, final Ads DOCX, phrase allocation/deployability overlay, reports, extension generators, export manifests.
 
