@@ -1,10 +1,10 @@
 {
   "checkpoint_id": "FP-0002-V8-CF003-CF009-CONSOLIDATION-CHECKPOINT",
-  "captured_utc": "2026-06-28T13:28:57.077759+00:00",
-  "head": "2107d2b93c95efdfbfa9d9231a51e1df47286da4",
+  "captured_utc": "2026-06-28T13:49:47.299109+00:00",
+  "head": "d96359f6f8bf7b0487d1cd7953ba6089cdc06082",
   "retired_names": {
     "audit_id": "FP-0002-V8-RETIRED-NAMES-AUDIT",
-    "captured_utc": "2026-06-28T13:28:57.004452+00:00",
+    "captured_utc": "2026-06-28T13:49:47.218513+00:00",
     "scope": "src/**/*.html,scss,js",
     "rows": [
       {
@@ -187,9 +187,9 @@
       "duplicate_ids": 0,
       "duplicate_id_map": {},
       "broken_aria_controls": 0,
-      "broken_aria_labelledby": 1,
+      "broken_aria_labelledby": 0,
       "unresolved_includes": 0,
-      "result": "FAIL"
+      "result": "PASS"
     },
     {
       "page": "usluga-konechnaya-v1.html",
@@ -202,15 +202,7 @@
     }
   ],
   "cf003_cf009_scope": "PASS",
-  "page_wide_dom_gate": "FAIL",
-  "pre_existing_blockers": [
-    {
-      "page": "usluga-podrazdel-v1.html",
-      "issue": "broken aria-labelledby",
-      "missing_id": "service-subdivision-start-heading",
-      "source": "service-subdivision-first-cta-v1.html",
-      "scope": "PRE_EXISTING_CF011_TERRITORY"
-    }
-  ],
-  "overall": "FAIL"
+  "page_wide_dom_gate": "PASS",
+  "pre_existing_blockers": [],
+  "overall": "PASS"
 }

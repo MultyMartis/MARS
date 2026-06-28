@@ -25,7 +25,7 @@
 
 | Wave | Family | Priority | Pages | Risk | Operator gate |
 |------|--------|----------|------:|------|---------------|
-| 3 | CF-011 dark CTA band wrappers | P1 | 3 | Medium CSS (page-scoped duplicates) | Charter wave 3 |
+| 3 | CF-011 dark CTA band wrappers | P1 | 3 | Medium CSS (page-scoped duplicates) | **COMPLETE** |
 | 4 | CF-012 program block modifiers | P1 | 3 | Medium CSS | Collapse redundant modifiers |
 | 3 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
 | 4 | CF-006 comfort gallery | P1 | 5 | Low–medium | **COMPLETE** |
@@ -115,11 +115,11 @@
 
 ---
 
-## Next wave: CF-011 Dark CTA wrappers
+## CF-011 Dark CTA wrappers
 
-**Status:** NOT AUTHORIZED
+**Status:** COMPLETE (pending operator visual review)
 
-Operator gate required before CF-011 wrapper consolidation. Include subdivision ARIA remediation in charter scope.
+Subdivision `aria-labelledby` blocker repaired. Next authorized family: **CF-012 — NOT AUTHORIZED**.
 
 ---
 

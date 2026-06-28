@@ -1,0 +1,67 @@
+{
+  "validation_id": "CF-011-FUNCTIONAL-QA",
+  "port": 4199,
+  "rows": [
+    {
+      "consumer": "uslugi-v2-secondary",
+      "viewport": "desktop",
+      "click": true,
+      "keyboard": true,
+      "target_modal_source": "services-program-cta-secondary",
+      "expected_source": "services-program-cta-secondary",
+      "duplicate_action": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "subdivision-start",
+      "viewport": "desktop",
+      "click": true,
+      "keyboard": true,
+      "target_modal_source": "service-subdivision-cta-01",
+      "expected_source": "service-subdivision-cta-01",
+      "duplicate_action": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "leaf-cta-01",
+      "viewport": "desktop",
+      "click": true,
+      "keyboard": true,
+      "target_modal_source": "service-leaf-cta-01",
+      "expected_source": "service-leaf-cta-01",
+      "duplicate_action": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "uslugi-v2-secondary",
+      "viewport": "mobile",
+      "click": true,
+      "keyboard": true,
+      "target_modal_source": "services-program-cta-secondary",
+      "expected_source": "services-program-cta-secondary",
+      "duplicate_action": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "subdivision-start",
+      "viewport": "mobile",
+      "click": true,
+      "keyboard": true,
+      "target_modal_source": "service-subdivision-cta-01",
+      "expected_source": "service-subdivision-cta-01",
+      "duplicate_action": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "leaf-cta-01",
+      "viewport": "mobile",
+      "click": true,
+      "keyboard": true,
+      "target_modal_source": "service-leaf-cta-01",
+      "expected_source": "service-leaf-cta-01",
+      "duplicate_action": false,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

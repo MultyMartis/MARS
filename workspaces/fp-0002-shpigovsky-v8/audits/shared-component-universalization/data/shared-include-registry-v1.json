@@ -190,29 +190,45 @@
     },
     {
       "family_id": "CF-011",
-      "current_name": "services-program-cta-band-v2",
-      "current_partial": "src/partials/components/services-program-cta-band-v2.html",
+      "current_name": "program-cta-band",
+      "current_partial": "src/partials/components/program-cta-band.html",
       "pages_using": ["uslugi-v2.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html", "services-program-v2.html"],
-      "visual_identity": "SAME",
-      "html_identity": "SAME",
-      "css_identity": "DUPLICATED_SCOPED",
+      "visual_identity": "UNIFIED",
+      "html_identity": "UNIFIED",
+      "css_identity": "UNIFIED",
       "page_specific_name": false,
-      "duplicate_partials": [
+      "duplicate_partials": [],
+      "duplicate_classes": [],
+      "classification": "UNIVERSALIZED",
+      "recommended_action": "NONE",
+      "future_neutral_name": "program-cta-band",
+      "priority": "COMPLETE",
+      "implementation_status": "COMPLETE",
+      "old_name_retired": "services-program-cta-band-v2",
+      "removed_wrappers": [
         "service-subdivision-first-cta-v1.html",
         "service-subdivision-second-cta-v1.html",
         "service-leaf-cta-01-v1.html"
       ],
-      "duplicate_classes": [
-        "service-subdivision-first-cta-v1",
-        "service-subdivision-second-cta-v1",
-        "service-leaf-cta-01-v1"
+      "aliases": 0,
+      "subdivision_aria_blocker": "REPAIRED",
+      "page_wide_dom_gate": "PASS",
+      "content_parameters": [
+        "wrapSection",
+        "wrapContainer",
+        "sectionId",
+        "headingId",
+        "headingText",
+        "buttonFirst",
+        "marginFlush",
+        "ctaTitle",
+        "ctaSubtitle",
+        "ctaPhone",
+        "ctaPhoneHint",
+        "ctaText",
+        "ctaSource"
       ],
-      "classification": "DUPLICATED_SHARED_FAMILY",
-      "recommended_action": "COLLAPSE_WRAPPERS_KEEP_BAND",
-      "future_neutral_name": "program-cta-band",
-      "priority": "P1",
-      "implementation_status": "NOT_STARTED",
-      "notes": "Core band is shared; page wrappers duplicate SCSS under .page-service-* scope"
+      "notes": "Wave 8 — collapsed page wrappers into parameterized canonical include; unified CSS"
     },
     {
       "family_id": "CF-012",

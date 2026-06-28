@@ -32,7 +32,7 @@
 | CF-008 | faq | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-009 | final-form | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-010 | home-clinic-landscape | 3 | SHARED_BUT_PAGE_NAMED | P2 | RENAME_AND_UNIVERSALIZE |
-| CF-011 | services-program-cta-band-v2 | 3+ | DUPLICATED_SHARED_FAMILY | P1 | COLLAPSE_WRAPPERS_KEEP_BAND |
+| CF-011 | program-cta-band | 3+ | UNIVERSALIZED | COMPLETE | NONE |
 | CF-012 | services-program-v2 | 3 | DUPLICATED_SHARED_FAMILY | P1 | COLLAPSE_REDUNDANT_MODIFIERS |
 | CF-013 | services-inner-hero-v2 | 3 | GENUINELY_PAGE_SPECIFIC | P2 | HOLD |
 | CF-014 | header/footer/modal | 4 | UNIVERSALIZED | COMPLETE | NONE |
@@ -62,8 +62,12 @@
 
 | Item | Value |
 |------|-------|
-| Shared component | `services-program-cta-band-v2.html` |
-| Wrapper partials | `service-subdivision-first-cta-v1`, `service-subdivision-second-cta-v1`, `service-leaf-cta-01-v1` |
+| Canonical component | `program-cta-band.html` |
+| Root class | `.program-cta-band` |
+| Retired component | `services-program-cta-band-v2.html` |
+| Removed wrappers | `service-subdivision-first-cta-v1`, `service-subdivision-second-cta-v1`, `service-leaf-cta-01-v1` |
+| Subdivision ARIA blocker | REPAIRED (`service-subdivision-start-heading`) |
+| Page-wide DOM gate | PASS |
 | Problem | Same visual band wrapped in page-specific sections with duplicated page-scoped SCSS |
 | Classification | DUPLICATED_SHARED_FAMILY |
 

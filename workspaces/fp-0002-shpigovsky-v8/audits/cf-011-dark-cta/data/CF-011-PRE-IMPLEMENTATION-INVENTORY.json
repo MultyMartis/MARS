@@ -1,0 +1,65 @@
+{
+  "inventory_id": "CF-011-PRE-IMPLEMENTATION-INVENTORY",
+  "head": "db0c3ec78a83d0b06574cbb935394d284112f929",
+  "candidates": [
+    {
+      "candidate": "program-cta-band-core",
+      "partial": "services-program-cta-band-v2.html",
+      "consumers": 5,
+      "root_class": "services-program-v2__cta-band",
+      "structure_signature": "copy+phone+button dark grid band",
+      "css_source": "page-scoped duplicates",
+      "cta_behavior": "modal consultation",
+      "ids_aria": "varies by wrapper",
+      "classification": "SAME_CF011_FAMILY"
+    },
+    {
+      "candidate": "subdivision-first-cta-wrapper",
+      "partial": "service-subdivision-first-cta-v1.html",
+      "consumers": 1,
+      "root_class": "service-subdivision-first-cta-v1",
+      "structure_signature": "section>container>band",
+      "css_source": "page-service-subdivision-v1 scoped duplicate",
+      "cta_behavior": "modal consultation",
+      "ids_aria": "broken aria-labelledby service-subdivision-start-heading",
+      "classification": "SAME_CF011_FAMILY"
+    },
+    {
+      "candidate": "leaf-cta-wrapper",
+      "partial": "service-leaf-cta-01-v1.html",
+      "consumers": 1,
+      "root_class": "service-leaf-cta-01-v1",
+      "structure_signature": "section>container>hidden h2>band",
+      "css_source": "page-service-leaf-v1 scoped duplicate",
+      "cta_behavior": "modal consultation",
+      "ids_aria": "valid hidden heading",
+      "classification": "SAME_CF011_FAMILY"
+    },
+    {
+      "candidate": "services-mid-cta-v2",
+      "partial": "services-mid-cta-v2.html",
+      "consumers": 0,
+      "root_class": "services-mid-cta-v2",
+      "structure_signature": "different multi-block layout",
+      "css_source": "unique",
+      "cta_behavior": "modal",
+      "ids_aria": "own model",
+      "classification": "DIFFERENT_CTA_FAMILY"
+    }
+  ],
+  "included_partials": [
+    "services-program-cta-band-v2.html",
+    "service-subdivision-first-cta-v1.html",
+    "service-leaf-cta-01-v1.html"
+  ],
+  "included_consumers": [
+    "uslugi-v2.html",
+    "usluga-podrazdel-v1.html",
+    "usluga-konechnaya-v1.html",
+    "services-program-v2.html",
+    "service-subdivision-stages-v1.html",
+    "service-leaf-stages-v1.html"
+  ],
+  "excluded": ["services-mid-cta-v2", "service-subdivision-second-cta-v1.html"],
+  "unresolved": []
+}

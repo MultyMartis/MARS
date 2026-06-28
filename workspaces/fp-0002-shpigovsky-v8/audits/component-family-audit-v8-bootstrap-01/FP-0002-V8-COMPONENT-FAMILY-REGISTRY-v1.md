@@ -68,7 +68,7 @@ Registry of visually recurring families across the four canonical templates. Eac
 | Field | Value |
 | ----- | ----- |
 | Visual role | Four program cards + optional guest CTA band |
-| Shared partials | `services-program-v2.html`, `services-program-cta-band-v2.html` |
+| Shared partials | `services-program-v2.html`, `program-cta-band.html` |
 | Class family | `.services-program-v2*` |
 | Pages | All four templates (home uses `home-rehabilitation-program.html` — parallel family) |
 | Page modifiers | `.services-program-v2--subdivision`, `.service-subdivision-program-v1`, `.service-leaf-program-v1` |
