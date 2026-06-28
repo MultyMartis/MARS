@@ -1,0 +1,134 @@
+{
+  "pass": "m9.18-custom-implementation",
+  "timestamp": "2026-06-28T11:52:06.349683+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "expected_head_note": "26e09732 or descendant — verify at git checkpoint",
+  "live_url": "https://zpm.new-site.space/custom-equipment",
+  "route": "information/custom_equipment",
+  "seo_keyword": "custom-equipment",
+  "files": {
+    "catalog/controller/information/custom_equipment.php": {
+      "pre_sha256": null,
+      "pre_bytes": 0,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\custom_equipment.php.pre-m9.18-custom.bak",
+      "is_new": true,
+      "post_sha256": "9916a7b9f1ea1c34488b8b88b3a82d019ac914bd2e56ad1e8c74530bb8cc8f70",
+      "post_bytes": 3434
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "pre_sha256": null,
+      "pre_bytes": 0,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\custom_equipment.twig.pre-m9.18-custom.bak",
+      "is_new": true,
+      "post_sha256": "6f6ab92fbfc50e5073e9ce5eb7f312ed5a0492826c035533901d091da4bd1c64",
+      "post_bytes": 66593
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "0adc3dd31840985a7893150df2817fdba2992f6c20709470dfab3f802b8307b8",
+      "pre_bytes": 344669,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.18-custom.bak",
+      "is_new": false,
+      "post_sha256": "8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c",
+      "post_bytes": 358072
+    },
+    "assets/js/main.js": {
+      "pre_sha256": "48fe8e6d32fcff41a968f07c71290a6c90ff0d734aab0f62f2a1e072bbd7c03d",
+      "pre_bytes": 204159,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.18-custom.bak",
+      "is_new": false,
+      "post_sha256": "64ea2da8d6e50a39ed0ee178fa756ececdda49df55d2f8f3a095b65f766f171d",
+      "post_bytes": 204187
+    }
+  },
+  "preflight": {
+    "catalog/controller/information/custom_equipment.php": {
+      "exists": false,
+      "pre_sha256": null,
+      "pre_bytes": 0
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "exists": false,
+      "pre_sha256": null,
+      "pre_bytes": 0
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "0adc3dd31840985a7893150df2817fdba2992f6c20709470dfab3f802b8307b8",
+      "pre_bytes": 344669
+    },
+    "assets/js/main.js": {
+      "exists": true,
+      "pre_sha256": "48fe8e6d32fcff41a968f07c71290a6c90ff0d734aab0f62f2a1e072bbd7c03d",
+      "pre_bytes": 204159
+    }
+  },
+  "seo_url_patch_response": {
+    "ok": true,
+    "before": {
+      "seo_url_id": "1042",
+      "query": "information_id=14",
+      "keyword": "custom-equipment"
+    },
+    "after": {
+      "seo_url_id": "1042",
+      "query": "information/custom_equipment",
+      "keyword": "custom-equipment"
+    }
+  },
+  "seo_url_updated": true,
+  "twig_cache_cleared": [],
+  "opencart_cache_clear": {
+    "ok": true,
+    "cache_files_cleared": 5
+  },
+  "qa": {
+    "http_ok": true,
+    "has_zpm_custom_page": true,
+    "has_page_intro_lead": true,
+    "has_triggers": true,
+    "triggers_5_bullets": true,
+    "has_tasks_matrix": true,
+    "tasks_7_rows": true,
+    "has_scope": true,
+    "has_oem": true,
+    "oem_5_h3": true,
+    "has_process": true,
+    "timeline_8_steps": true,
+    "approval_badge": false,
+    "has_requirements": true,
+    "checklist_9_rows": true,
+    "has_materials": true,
+    "no_grade_table_hero": true,
+    "has_outcomes": true,
+    "outcomes_5_rows": true,
+    "has_faq": true,
+    "faq_8_items": true,
+    "data_custom_faq": true,
+    "has_cta_title": true,
+    "has_form_title": true,
+    "company_required": true,
+    "contact_required": true,
+    "project_description_required": true,
+    "phone_mask": true,
+    "email_validate": true,
+    "drawings_optional": true,
+    "notes_optional": true,
+    "no_file_upload": true,
+    "no_calculator": true,
+    "dialog_7": true,
+    "meta_title": true,
+    "payment_link_step5": true,
+    "delivery_link_step8": true,
+    "guarantee_link": true,
+    "about_link": true,
+    "privacy_link": true,
+    "commercial_trust_card": true,
+    "zpm_form": true,
+    "breadcrumb": true,
+    "phone_cta": true,
+    "email_cta": true,
+    "dealers_pointer": true,
+    "no_zpm_seo_body": true,
+    "all_pass": false
+  }
+}

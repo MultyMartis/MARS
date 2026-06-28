@@ -131,7 +131,7 @@
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
 | **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
-| **Implementation (remaining corp pages)** | M9.18 Custom Manufacturing — **CHARTER READY** · implementation **NOT STARTED** |
+| **Implementation (corp pages)** | M9.14–M9.18 **IMPLEMENTED** on TEST — program implementation phase **COMPLETE** (pending operator B6/B8) |
 | **Live About authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
 | **M9.13 redesign** | **ARCHIVED** · **NOT ACTIVE** — never implementation authority |
 
@@ -150,7 +150,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 | **B1** | OPEN | МО warehouse address — M9.14 · M9.16 |
 | **B3** | OPEN | PLP dealer form vs `/dealers` — M9.16 |
 
-**Operator implementation order (remaining pages):** M9.14 Delivery → M9.15 Payment → M9.17 Warranty → M9.16 Dealers → M9.18 Custom Manufacturing. **M9.16 Dealers IMPLEMENTED** (2026-06-28). **M9.18 Implementation Charter READY** (2026-06-28) — [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md). **Design order** (historical, unchanged): M9.13 → M9.15 → M9.14 → M9.17 → M9.16 → M9.18 — see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+**Operator implementation order:** M9.14 Delivery → M9.15 Payment → M9.17 Warranty → M9.16 Dealers → M9.18 Custom Manufacturing — **all IMPLEMENTED** (2026-06-28). **M9.18 checkpoint** `SITE-002-STABLE-LIVE-M9.18-CUSTOM-01` — [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION.md](reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION.md). **Design order** (historical, unchanged): M9.13 → M9.15 → M9.14 → M9.17 → M9.16 → M9.18 — see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
 
 ### Завершено
 
@@ -195,7 +195,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 | M9.15 | Payment | `/payment-methods` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.16 | Dealers | `/dealers` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.17 | Warranty | `/guarantee` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
-| M9.18 | Custom Manufacturing | `/custom-equipment` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
+| M9.18 | Custom Manufacturing | `/custom-equipment` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 
 **Research artifacts:** [M9.13](reports/BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md) · [M9.14](reports/BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md) · [M9.15](reports/BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.16](reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.17](reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.18](reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
 
@@ -211,7 +211,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 **M9.16 Dealers implementation:** **IMPLEMENTED** (2026-06-28) · checkpoint `SITE-002-STABLE-LIVE-M9.16-DEALERS-01` · B3 PLP reconciliation **OPEN / out of scope** · [SITE-002-M9.16-DEALERS-IMPLEMENTATION.md](reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION.md)
 
-**M9.18 Custom Manufacturing implementation charter:** **READY** (2026-06-28) · verdict **READY** for implementation · [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md) · implementation **NOT STARTED**
+**M9.18 Custom Manufacturing:** **IMPLEMENTED** (2026-06-28) · checkpoint `SITE-002-STABLE-LIVE-M9.18-CUSTOM-01` · [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION.md](reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION.md) · **terminal corp page** — program implementation phase **COMPLETE on TEST**
 
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
 

@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **IMPLEMENTED** · M9.18 Custom Manufacturing — **CHARTER READY** (implementation **NOT STARTED**).
+**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **IMPLEMENTED** · M9.18 Custom Manufacturing **IMPLEMENTED** — Corporate Pages Program implementation phase **COMPLETE on TEST** (pending operator B6/B8).
 
 ---
 
@@ -1187,20 +1187,22 @@ Standalone `/dealers` corp page = **primary qualification surface** per charter.
 
 ## 22. Custom Manufacturing Page (M9.18)
 
-Corporate page `/custom-equipment` — route `information/custom_equipment`. **Implementation charter READY** (2026-06-28); **not yet implemented** on live TEST.
+Corporate page `/custom-equipment` — route `information/custom_equipment`. **IMPLEMENTED** on live TEST (2026-06-28). Checkpoint **`SITE-002-STABLE-LIVE-M9.18-CUSTOM-01`**.
 
 | Item | Value |
 |------|--------|
 | **Live URL** | https://zpm.new-site.space/custom-equipment |
-| **Target route** | `information/custom_equipment` |
-| **SEO** | `oc_seo_url` keyword `custom-equipment` → `information/custom_equipment` (prior `information/information&information_id=…` — **SAFE UNKNOWN** until preflight) |
-| **Controller (planned)** | `catalog/controller/information/custom_equipment.php` |
-| **Twig (planned)** | `catalog/view/theme/default/template/information/custom_equipment.twig` |
-| **CSS namespace (planned)** | `zpm-custom-page`, `zpm-custom-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
-| **JS (planned)** | Corp FAQ accordion in `assets/js/main.js` — add `[data-custom-faq]` to selector list |
+| **Route** | `information/custom_equipment` |
+| **SEO** | `oc_seo_url` keyword `custom-equipment` → `information/custom_equipment` (id 1042; prior `information_id=14`) |
+| **Legacy CMS** | Information id **14** — orphaned, not deleted |
+| **Controller** | `catalog/controller/information/custom_equipment.php` |
+| **Twig** | `catalog/view/theme/default/template/information/custom_equipment.twig` |
+| **CSS namespace** | `zpm-custom-page`, `zpm-custom-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS** | Corp FAQ accordion in `assets/js/main.js` — `[data-custom-faq]` in selector list |
 | **Copy** | [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md](../copy/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-COPY-v1.1.md) |
 | **Charter** | [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md) |
-| **Target checkpoint** | `SITE-002-STABLE-LIVE-M9.18-CUSTOM-01` (post-implementation) |
+| **Implementation** | [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION.md](../reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION.md) |
+| **Checkpoint** | [SITE-002-STABLE-LIVE-M9.18-CUSTOM-01.md](../baselines/SITE-002-STABLE-LIVE-M9.18-CUSTOM-01.md) |
 
 ### Structure (target)
 
@@ -1224,7 +1226,7 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 2. Live-capture remote files before deploy
 3. Do not bleed scope into sibling corp pages or catalog templates
 
-**Evidence (preflight):** [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · `reports/m9.18-work/` (to be populated at implementation)
+**Evidence:** [BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [reports/m9.18-work/deploy-manifest.json](../reports/m9.18-work/deploy-manifest.json) · [qa/m9.18-custom-screenshots/](../qa/m9.18-custom-screenshots/)
 
 ---
 
@@ -1239,4 +1241,4 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§22 M9.18 Custom Manufacturing Implementation Charter READY).*
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-28 (§22 M9.18 Custom Manufacturing IMPLEMENTED — terminal corp page).*
