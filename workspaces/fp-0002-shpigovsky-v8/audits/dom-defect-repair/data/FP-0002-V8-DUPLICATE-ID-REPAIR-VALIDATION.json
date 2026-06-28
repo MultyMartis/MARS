@@ -1,0 +1,31 @@
+{
+  "validation_id": "FP-0002-V8-DUPLICATE-ID-REPAIR-VALIDATION",
+  "captured_utc": "2026-06-28T13:27:20.119620+00:00",
+  "phase": "after",
+  "port": 4197,
+  "target_duplicate_id": "home-treatment-prevention-panel-1",
+  "dom": {
+    "total_ids": 59,
+    "unique_ids": 59,
+    "duplicate_id_count": 0,
+    "duplicate_ids": {},
+    "home-treatment-prevention-panel-1_count": 1
+  },
+  "aria": {
+    "broken_aria_controls": 0,
+    "broken_aria_labelledby": 0,
+    "broken_controls_ids": [],
+    "broken_labelledby_ids": []
+  },
+  "functional": {
+    "trigger_exists": true,
+    "panel_exists": true,
+    "default_expanded": true,
+    "default_hidden": false,
+    "click_works": true,
+    "enter_works": true,
+    "space_works": true
+  },
+  "console_errors": [],
+  "result": "PASS"
+}
