@@ -1,0 +1,53 @@
+{
+  "validated_utc": "2026-06-28T15:21:38.148520+00:00",
+  "consumers": [
+    {
+      "consumer": "uslugi-v2.html",
+      "canonical_root": true,
+      "modifiers": [
+        "services-program-v2",
+        "services-program-v2--media-frame-fixed",
+        "services-program-v2--item-image-stack-tall",
+        "services-program-v2--item-body-mobile-pad",
+        "services-program-v2--item-media-mobile-pad"
+      ],
+      "item_count": 4,
+      "cta_preserved": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "usluga-podrazdel-v1.html",
+      "canonical_root": true,
+      "modifiers": [
+        "services-program-v2",
+        "services-program-v2--play-link",
+        "services-program-v2--intro-stacked",
+        "services-program-v2--grid-compact",
+        "services-program-v2--media-contain",
+        "services-program-v2--title-block",
+        "services-program-v2--media-frame-fixed",
+        "services-program-v2--item-image-mobile-short"
+      ],
+      "item_count": 4,
+      "cta_preserved": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "usluga-konechnaya-v1.html",
+      "canonical_root": true,
+      "modifiers": [
+        "services-program-v2",
+        "services-program-v2--play-link",
+        "services-program-v2--intro-stacked",
+        "services-program-v2--title-flush",
+        "services-program-v2--item-body-spaced",
+        "services-program-v2--item-image-stack-tall",
+        "services-program-v2--media-frame-fixed"
+      ],
+      "item_count": 4,
+      "cta_preserved": true,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

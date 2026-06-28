@@ -68,12 +68,15 @@ Registry of visually recurring families across the four canonical templates. Eac
 | Field | Value |
 | ----- | ----- |
 | Visual role | Four program cards + optional guest CTA band |
-| Shared partials | `services-program-v2.html`, `program-cta-band.html` |
+| Shared partials | `services-program-v2.html`, `program-cta-band.html` (CF-011) |
 | Class family | `.services-program-v2*` |
-| Pages | All four templates (home uses `home-rehabilitation-program.html` — parallel family) |
-| Page modifiers | `.services-program-v2--subdivision`, `.service-subdivision-program-v1`, `.service-leaf-program-v1` |
-| Duplication | High — same visual system, multiple modifier stacks |
-| Consolidation priority | P1 |
+| Pages | `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` (+ home parallel `home-rehabilitation-program.html` — excluded) |
+| Consolidation status | **Wave 9 complete (2026-06-28)** — CF-012 program modifier consolidation |
+| Canonical base | `services-program-v2.html` / `.services-program-v2` |
+| Functional modifiers | `--media-frame-fixed`, `--item-image-stack-tall`, `--item-body-mobile-pad`, `--item-media-mobile-pad`, `--play-link`, `--intro-stacked`, `--grid-compact`, `--media-contain`, `--title-block`, `--title-flush`, `--item-body-spaced`, `--item-image-mobile-short` |
+| Retired page modifiers | `services-program-v2--subdivision`, `service-subdivision-program-v1`, `service-leaf-program-v1`, `.page-uslugi-v2 .services-program-v2*`, page-scoped subdivision/leaf program blocks |
+| Duplication | **Resolved** — one CSS source per visual rule |
+| Consolidation priority | **COMPLETE** (CF-012) |
 
 ---
 

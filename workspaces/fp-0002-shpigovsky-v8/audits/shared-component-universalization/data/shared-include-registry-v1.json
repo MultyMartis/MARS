@@ -237,19 +237,37 @@
       "pages_using": ["uslugi-v2.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html"],
       "visual_identity": "SAME",
       "html_identity": "SAME",
-      "css_identity": "MODIFIER_STACKED",
+      "css_identity": "UNIFIED",
       "page_specific_name": false,
-      "duplicate_partials": ["home-rehabilitation-program.html"],
-      "duplicate_classes": [
+      "duplicate_partials": [],
+      "duplicate_classes": [],
+      "functional_modifiers": [
+        "services-program-v2--media-frame-fixed",
+        "services-program-v2--item-image-stack-tall",
+        "services-program-v2--item-body-mobile-pad",
+        "services-program-v2--item-media-mobile-pad",
+        "services-program-v2--play-link",
+        "services-program-v2--intro-stacked",
+        "services-program-v2--grid-compact",
+        "services-program-v2--media-contain",
+        "services-program-v2--title-block",
+        "services-program-v2--title-flush",
+        "services-program-v2--item-body-spaced",
+        "services-program-v2--item-image-mobile-short"
+      ],
+      "retired_modifiers": [
         "services-program-v2--subdivision",
         "service-subdivision-program-v1",
         "service-leaf-program-v1"
       ],
-      "classification": "DUPLICATED_SHARED_FAMILY",
-      "recommended_action": "COLLAPSE_REDUNDANT_MODIFIERS",
-      "future_neutral_name": "program-block-v2",
-      "priority": "P1",
-      "implementation_status": "NOT_STARTED"
+      "classification": "UNIVERSALIZED",
+      "recommended_action": "NONE",
+      "future_neutral_name": "services-program-v2",
+      "priority": "COMPLETE",
+      "implementation_status": "COMPLETE",
+      "cf011_protection": "PASS",
+      "page_wide_dom_gate": "PASS",
+      "notes": "CF-012 wave 9 — page-scoped program CSS collapsed to functional modifiers; home-rehabilitation-program excluded as parallel family"
     },
     {
       "family_id": "CF-013",

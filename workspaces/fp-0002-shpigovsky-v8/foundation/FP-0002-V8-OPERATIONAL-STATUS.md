@@ -1,13 +1,13 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-28 (CF-003–CF-009 consolidation checkpoint)
+**Updated:** 2026-06-28 (CF-012 program modifier consolidation)
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
 fp0002_v8_git_protection: ENABLED
 fp0002_v8_baseline: FOUR_TEMPLATE_AUTHORITY_6eb493e9
 fp0002_v8_component_audit: COMPLETE
-fp0002_v8_component_consolidation: CF003_CF011_SCOPE_IN_PROGRESS
+fp0002_v8_component_consolidation: CF003_CF012_SCOPE_IN_PROGRESS
 fp0002_v8_cf003_upper_navigation: COMPLETE
 fp0002_v8_cf003_commit: 361502bf
 fp0002_v8_cf004_founder_quote: COMPLETE
@@ -21,8 +21,9 @@ fp0002_v8_duplicate_id_repair: COMPLETE
 fp0002_v8_duplicate_id_repair_commit: 2107d2b9
 fp0002_v8_consolidation_checkpoint: DOCUMENTED
 fp0002_v8_page_wide_dom_gate: PASS
-fp0002_v8_cf011_dark_cta: COMPLETE_PENDING_OPERATOR_REVIEW
-fp0002_v8_next_wave: CF-012_PROGRAM_MODIFIERS (NOT AUTHORIZED)
+fp0002_v8_cf011_dark_cta: COMPLETE
+fp0002_v8_cf012_program_modifiers: COMPLETE_PENDING_OPERATOR_REVIEW
+fp0002_v8_next_wave: CF-010_CLINIC_LANDSCAPE (NOT AUTHORIZED)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -57,7 +58,14 @@ consolidation_wave_7_cf009: COMPLETE
 duplicate_id_repair_treatment_prevention: COMPLETE
 consolidation_checkpoint_cf003_cf009: DOCUMENTED
 page_wide_dom_gate: PASS
-consolidation_wave_8_cf011: COMPLETE_PENDING_OPERATOR_REVIEW
+consolidation_wave_9_cf012: COMPLETE_PENDING_OPERATOR_REVIEW
+build_cf012: PASS
+browser_qa_cf012: PASS
+dom_validation_cf012: PASS
+selector_validation_cf012: PASS
+visual_parity_cf012: PASS
+functional_qa_cf012: PASS
+cf011_protection_cf012: PASS
 build_cf007: PASS
 browser_qa_cf007: PASS
 dom_validation_cf007: PASS

@@ -1,0 +1,96 @@
+[
+  {
+    "consumer": "hub-services-program",
+    "viewport": "desktop",
+    "found": true,
+    "modifiers": [
+      "services-program-v2"
+    ],
+    "child_count": 4,
+    "cta_in_section": true,
+    "images_ready": true,
+    "section_height": "1599px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "subdivision-program",
+    "viewport": "desktop",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--subdivision"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "1416px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "leaf-program",
+    "viewport": "desktop",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--subdivision"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "1461px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "hub-services-program",
+    "viewport": "mobile",
+    "found": true,
+    "modifiers": [
+      "services-program-v2"
+    ],
+    "child_count": 4,
+    "cta_in_section": true,
+    "images_ready": true,
+    "section_height": "3534px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "subdivision-program",
+    "viewport": "mobile",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--subdivision"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "2924px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "leaf-program",
+    "viewport": "mobile",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--subdivision"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "3044px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  }
+]

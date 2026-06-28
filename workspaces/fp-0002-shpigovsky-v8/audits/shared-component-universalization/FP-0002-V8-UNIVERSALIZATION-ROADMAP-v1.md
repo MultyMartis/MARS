@@ -26,7 +26,7 @@
 | Wave | Family | Priority | Pages | Risk | Operator gate |
 |------|--------|----------|------:|------|---------------|
 | 3 | CF-011 dark CTA band wrappers | P1 | 3 | Medium CSS (page-scoped duplicates) | **COMPLETE** |
-| 4 | CF-012 program block modifiers | P1 | 3 | Medium CSS | Collapse redundant modifiers |
+| 4 | CF-012 program block modifiers | P1 | 3 | Medium CSS | **COMPLETE** |
 | 3 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
 | 4 | CF-006 comfort gallery | P1 | 5 | Low–medium | **COMPLETE** |
 | 5 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | **COMPLETE** |
@@ -119,7 +119,19 @@
 
 **Status:** COMPLETE (pending operator visual review)
 
-Subdivision `aria-labelledby` blocker repaired. Next authorized family: **CF-012 — NOT AUTHORIZED**.
+Subdivision `aria-labelledby` blocker repaired. CF-012 program modifier consolidation **COMPLETE** (pending operator visual review). Next authorized family: **CF-010 — NOT AUTHORIZED**.
+
+---
+
+## CF-012 Program modifier consolidation
+
+**Status:** COMPLETE (pending operator visual review)
+
+- Canonical partial: `services-program-v2.html`
+- Page-named modifiers removed; functional modifiers only
+- Page-scoped duplicate CSS removed from `style.scss`
+- CF-011 `program-cta-band` unchanged
+- Page-wide DOM gate: PASS
 
 ---
 
