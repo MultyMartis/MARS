@@ -193,9 +193,9 @@ Legacy CMS Information entry id **14** retained for RB-4.
 
 | Item | Value |
 |------|--------|
-| Commit | *(pending this task)* |
-| Push | `mars/canonical-post-recovery` *(pending)* |
-| HEAD (pre-commit) | `c6efb08905ecdf81c82e31fab493d223cc82fe7c` |
+| Commit | `49a6d6d6` — `feat(site-002): implement M9.18 Custom Manufacturing page on TEST` |
+| Push | **DONE** → `origin/mars/canonical-post-recovery` |
+| HEAD | `49a6d6d6eb8023eea155a9838c0fc99f22d03dad` |
 
 **SAFE UNKNOWN:** Production `bzpm.ru/custom-equipment` parity not verified in this pass.
 
