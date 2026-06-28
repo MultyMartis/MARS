@@ -8,8 +8,8 @@
 | Status | Count |
 |---|---:|
 | CONFIRMED | 40+ |
-| UNREADABLE (Lorem) | 3 |
-| MISSING (steps) | BLK-018 block |
+| UNREADABLE (Lorem) | 0 (omitted at implementation) |
+| RETIRED (steps) | OC-B05 / BLK-018 — not in Spig_v1.2 O-Centre |
 | CONFLICT | 0 (FAQ resolved) |
 
 ## Key content (sample — full list in JSON)
@@ -28,7 +28,7 @@
 | OC-C034 | OC-B06 | direction | 04 — Кинезиотерапия | 1:2428 | 1:5664 | CONFIRMED |
 | OC-C040 | OC-B08 | h2 | Место, где лечение начинается с ощущения безопасности | 1:2442 | 1:5697 | CONFIRMED |
 | OC-C041 | OC-B08 | bullet | «Шпиговский Дом» расположен в ближнем Подмосковье… | 1:2449 | 1:5697 | CONFIRMED |
-| OC-C050 | OC-B09 | quote | Lorem ipsum… | 1:2301 | 1:5569 | UNREADABLE |
+| OC-C050 | OC-B09 | quote | CF-004 reuse (Figma `1:2301` Lorem) | 1:2301 | 1:5569 | CONFIRMED_REUSE |
 | OC-C051 | OC-B09 | attribution | Сергей Юрьевич Шпиговский | 1:2308 | 1:5569 | CONFIRMED |
 | OC-C060 | OC-B13 | h2 | Остались вопросы? | 1:2581 | 1:5918 | CONFIRMED |
 | OC-C070 | OC-B07 | cta | Запишитесь на гостевой визит | 1:2511 | 1:5617 | CONFIRMED |

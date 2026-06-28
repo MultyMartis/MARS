@@ -249,7 +249,7 @@ See risk register. Top: missing BLK-036–038 assets/copy; false reuse; SCSS reg
 | Hero asset | `EXPORT_CANONICAL` → `src/img/content/o-centre/o-centre-hero.webp` |
 | BLK-037/038 copy | **Resolved** — single `преимущества` frame `1:2440` |
 | BLK-037/038 assets | **22 photos pending export** |
-| BLK-018 steps | **Absent** from O-Centre Spig_v1.2 — scope blocked |
+| BLK-018 steps | **RETIRED** — not in O-Centre Spig_v1.2; frame `1:2310` is who-we-treat (reconciliation 2026-06-29) |
 | FAQ | **No accordion** — reuse CF-009 final form, not CF-008 |
 | Subnav | **7 labels confirmed** (`1:2241`–`1:2247`) |
 | Founder quote | **Blocked** — Lorem ipsum in node `1:2301` |

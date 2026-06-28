@@ -188,9 +188,11 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 ## O-Centre charter (2026-06-29)
 
 - Charter: `audits/o-centre-page-charter/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER-v1.md`
-- Status: **CHARTER COMPLETE WITH KNOWN GAPS** — implementation **NOT AUTHORIZED**
-- Blockers: BLK-037/038 copy and assets; About hero asset confirmation; FAQ inventory vs Figma conflict
-- Next recommended task: **FP-0002 V8 O-Centre implementation prompt** (after optional asset prep)
+- Content blocker resolution: `audits/o-centre-content-blocker-resolution/` (2026-06-29)
+- Status: **CONTENT BLOCKERS RESOLVED** — implementation **NOT AUTHORIZED**
+- Composition: 12 sections (OC-B05/BLK-018 retired — inventory label error)
+- Gates: Design PASS · Assets PASS · Content PASS · Reuse PASS
+- Next recommended task: **FP-0002 V8 O-Centre implementation prompt**
 
 ## Next wave (documentation only)
 
@@ -201,4 +203,4 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 
 - Status: **APPROVED_EXPORTED** — 20 WebP under `src/img/content/o-centre/o-centre-infrastructure-*.webp`
 - Evidence: `audits/o-centre-targeted-asset-export/`
-- Implementation authorized: **false** (content blockers remain)
+- Implementation authorized: **false** (operator must authorize implementation task)

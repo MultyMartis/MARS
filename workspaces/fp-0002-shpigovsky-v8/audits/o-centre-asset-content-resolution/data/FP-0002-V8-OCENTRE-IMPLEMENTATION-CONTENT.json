@@ -79,16 +79,53 @@
       "К нам приходят люди, которые устали. Устали бороться с собой, устали притворяться, что всё в порядке, устали от схем, которые перестали работать. Некоторые приходят сами — когда понимают, что дальше так невозможно. Другие приходят с близкими, которые первыми увидели то, что сам человек не мог или не хотел замечать.\n\nМы работаем с широким спектром состояний:",
       "Разные люди, разные истории — одно общее: что-то пошло не так"
     ],
-    "status": "CONFIRMED"
+    "status": "CONFIRMED",
+    "figma_frame_note": "Frame 1:2310 mislabeled Этапы процедуры — content is OC-B04 who-we-treat"
   },
   "steps": {
+    "present": false,
     "heading": null,
     "steps": [],
-    "status": "MISSING",
-    "missing_reason": "BLK-018 steps absent from Spig_v1.2 O-Centre frames; Этапы процедуры frame holds who-we-treat content"
+    "status": "RETIRED_NOT_IN_COMPOSITION",
+    "reason": "BLK-018 absent from Spig_v1.2 O-Centre; inventory label error corrected 2026-06-29"
   },
   "program": {
-    "approach_status": "PARTIAL_LOREM",
+    "approach_heading": "Наш подход к лечению",
+    "approach_heading_source": "1:2243",
+    "approach_heading_rejected_node": "1:2343",
+    "approach_leads": [
+      "Мы используем мультидисциплинарный подход — когда лечение одного пациента обеспечивается командой специалистов разных профилей. Такой подход становится залогом понимания и решения проблемы.",
+      "Лечение в нашем реабилитационном центре совмещает современный и мультидисциплинарный подход направленный на устранение истинных причин зависимости."
+    ],
+    "approach_cards": [
+      {
+        "title": "диагностические инструменты",
+        "body": null,
+        "body_status": "OMITTED_LOREM",
+        "source_title": "1:2366"
+      },
+      {
+        "title": "Психиатрия",
+        "body": null,
+        "body_status": "OMITTED_LOREM",
+        "source_title": "1:2369"
+      },
+      {
+        "title": "Функциональная терапия",
+        "body": null,
+        "body_status": "OMITTED_LOREM",
+        "source_title": "1:2384"
+      },
+      {
+        "title": "комплиментарная терапия",
+        "body": null,
+        "body_status": "OMITTED_LOREM",
+        "source_title": "1:2387"
+      }
+    ],
+    "intro": null,
+    "intro2": null,
+    "intro_status": "OMITTED_LOREM",
     "directions": [
       "01 — Генотипирование",
       "02 — Нейропсихологическая коррекция",
@@ -96,7 +133,8 @@
       "04 — Кинезиотерапия"
     ],
     "heading": "Наша программа включает 4 направления",
-    "status": "CONFIRMED_WITH_GAPS"
+    "foot_link": "подробнее",
+    "status": "CONFIRMED_WITH_OMISSIONS"
   },
   "cta": {
     "text": "Запишитесь на гостевой визит",
@@ -123,11 +161,19 @@
     "note": "Desktop single frame преимущества; inventory BLK-037+038 merged in Figma"
   },
   "founder_quote": {
-    "quote": null,
+    "reuse": "CF-004-founder-quote.html",
+    "quote_paragraphs": [
+      "Мы создавали «Шпиговский Дом» как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.",
+      "Многие боятся обратиться за лечением, потому что опасаются потерять семью, работу и привычный уклад жизни.",
+      "Мы считаем, что современная реабилитация должна помогать человеку восстанавливать себя, сохраняя то, что для него действительно важно.",
+      "«Наша цель — создать безопасное пространство для изменений. Наша задача — не изолировать человека от жизни, а помочь ему вернуть контроль над ней.»"
+    ],
     "attribution": "Сергей Юрьевич Шпиговский",
     "role": "Основатель центра. Аддиктолог, интервенционист",
-    "status": "BLOCKED_MISSING_CANONICAL_SOURCE",
-    "reason": "Quote body is Lorem ipsum in Spig_v1.2 node 1:2301"
+    "status": "CONFIRMED_REUSE_CF004",
+    "figma_body_node": "1:2301",
+    "figma_body_note": "Lorem placeholder — not implemented",
+    "authority": "BLK-022 on PG-005 + manual polish 472be1ab"
   },
   "comfort": {
     "status": "PROBABLE_MOBILE_ONLY",
@@ -147,6 +193,12 @@
   },
   "footer": {
     "status": "INHERITED"
+  },
+  "content_reconciliation": {
+    "task": "FP-0002-V8-OCENTRE-CONTENT-BLOCKER-RESOLUTION",
+    "date": "2026-06-29",
+    "verdict": "FP0002_V8_OCENTRE_CONTENT_BLOCKERS_RESOLVED",
+    "pack": "audits/o-centre-content-blocker-resolution/"
   },
   "implementation_authorized": false
 }

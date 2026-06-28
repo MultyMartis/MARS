@@ -1,46 +1,39 @@
 # FP-0002 V8 O-Centre Preimplementation Readiness v1
 
-**Task:** FP-0002 V8 O-Centre Asset + Content Resolution  
-**HEAD:** `508837a02658e357ce18dca777a46231d2575b25`
+**Task:** FP-0002 V8 O-Centre Content Blocker Resolution
+**HEAD:** `ba196a379fd6aa7dc755a774cc10994597e34849`
 
 | Gate | Before | After | Evidence | Missing |
 |---|---|---|---|---|
-| Design | PASS_WITH_KNOWN_GAPS | **PASS** | Spig_v1.2 node map; 13 desktop sections mapped | — |
-| Content | PASS_WITH_KNOWN_GAPS | **PASS_WITH_KNOWN_GAPS** | Content pack JSON | Founder quote; program Lorem; steps absent |
-| Assets | PASS_WITH_KNOWN_GAPS | **PASS** | Hero + 20 infrastructure WebP exported | — |
-| Reuse | PASS | **PASS** | FAQ→final-form; composition updated | — |
+| Design | PASS | **PASS** | Spig_v1.2 fresh parse; reconciled composition | — |
+| Content | PASS_WITH_KNOWN_GAPS | **PASS** | Content blocker resolution pack | Meta title; anchor IDs at implementation |
+| Assets | PASS | **PASS** | Hero + 20 infrastructure WebP | — |
+| Reuse | PASS | **PASS** | CF-004 founder; CF-012 program | — |
 | Responsive | PASS | **PASS** | Mobile frames mapped | Comfort mobile photos |
-| Accessibility | PASS_WITH_KNOWN_GAPS | PASS_WITH_KNOWN_GAPS | Subnav labels confirmed | Alt text for pending photos |
-| Implementation | PASS (charter) | **NOT AUTHORIZED** | Blockers below | See critical |
+| Accessibility | PASS_WITH_KNOWN_GAPS | PASS_WITH_KNOWN_GAPS | Labels confirmed | Pending comfort alts |
+| Implementation | NOT AUTHORIZED | **NOT AUTHORIZED** | Charter policy | Operator must authorize next task |
 
 ## Overall
 
-**NOT READY** for full implementation prompt.
+**READY** for implementation prompt recommendation (content gate PASS).
 
-## Critical blockers
+## Former blockers (resolved 2026-06-29)
 
-1. OC-B05 / BLK-018 steps — absent from canonical Figma O-Centre page  
-2. Founder quote body — Lorem ipsum in Figma (`1:2301`)  
-3. ~~22 infrastructure photos~~ — **RESOLVED** (20 unique production WebP exported 2026-06-29)
+1. ~~OC-B05 / BLK-018 steps~~ — **RETIRED** (not in canonical Figma; inventory error)
+2. ~~Founder quote body~~ — **RESOLVED** (CF-004 reuse / BLK-022 on PG-005)
+3. ~~Program Lorem~~ — **RESOLVED** (omit placeholders; confirmed fields only)
 
 ## Non-critical gaps
 
-- Program approach card Lorem ipsum placeholders  
-- Meta title not extracted from Figma  
-- Anchor IDs proposed but not wired  
-- Frame `2 - Дом - вступление` image-only section semantics  
+- Meta title not extracted from Figma
+- Anchor IDs proposed but not wired
+- Optional approach card bodies omitted (Lorem in Figma)
 
 ## Recommended next task
 
-**`READY_FOR_FP0002_V8_OCENTRE_CONTENT_BLOCKER_RESOLUTION`**
-
-Sequence:
-
-1. ~~Bulk export infrastructure images~~ — **DONE**
-2. Operator supplies founder quote canonical text (or approved alternate source)  
-3. Confirm removal of BLK-018 steps from scope **or** supply copy source  
-4. Then narrow implementation prompt without steps block / with resolved assets
+**`READY_FOR_FP0002_V8_OCENTRE_IMPLEMENTATION_PROMPT`**
 
 ## Full implementation prompt allowed?
 
-**No** — assets complete; steps unresolved, founder quote blocked, program Lorem partial.
+**Recommended yes** — with restrictions in `FP-0002-V8-OCENTRE-CONTENT-RESOLUTION-VERDICT-v1.md`.
+`implementation_authorized` remains **false** until operator charters implementation task.

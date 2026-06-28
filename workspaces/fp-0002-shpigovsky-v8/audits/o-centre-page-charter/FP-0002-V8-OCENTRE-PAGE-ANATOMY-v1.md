@@ -10,7 +10,7 @@
 | 2 | OC-B02 | Breadcrumbs + subnav (005/006) | Wayfinding | Breadcrumb trail; in-page anchor list | Below hero; horizontal subnav | Same DOM; subnav scroll/wrap |
 | 3 | OC-B03 | Дом - вступление / «Кто мы» (036) | About narrative intro | H2, lead bar, multi-paragraph institutional copy | Single-column editorial in container | Long-form stacked text |
 | 4 | OC-B04 | Услуги / «Кого мы лечим» (036 ext.) | Condition spectrum + optional gallery | H2, intro, bullet categories, 3-up gallery | Text + static gallery grid (not Swiper) | «Зависимости…» + «Кого мы лечим» split frames |
-| 5 | OC-B05 | Этапы процедуры (018) | Numbered rehabilitation steps | 4 steps 01–04 + phone CTA bar | Horizontal step list + dark CTA band | Stacked steps |
+| 5 | OC-B05 | Этапы процедуры (018) | **RETIRED** — mislabeled frame; actual block is OC-B04 at `1:2310` | — | — | — | **NOT IN COMPOSITION** |
 | 6 | OC-B06 | Программа центра (020) | Four-direction program | H2, leads, 4 program tiles with images | Vertical program stack (services-program pattern) | Tall program band (~2184px) |
 | 7 | OC-B07 | Guest visit CTA (019) | Program CTA band | Title, subtitle, phone, button | `program-cta-band` dark wrapper | Repeated CTA pattern |
 | 8 | OC-B08 | преимущества / «Наш Дом» (037) | Narrative + advantages | H2, body, feature grid or photo bands | Large composite (~3621px) — infrastructure storytelling | Part of approach/advantage stack |

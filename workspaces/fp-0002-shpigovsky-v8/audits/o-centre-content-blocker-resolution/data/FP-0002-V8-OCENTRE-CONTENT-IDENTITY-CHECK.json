@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-06-29T00:00:00Z",
+  "comparisons": [
+    {
+      "blocker": "OC-G10",
+      "candidate_source": "founder-quote.html",
+      "source_text": "Мы создавали «Шпиговский Дом» как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.",
+      "target_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit…",
+      "target_node": "1:2301",
+      "exact_match": false,
+      "normalized_match": false,
+      "authority": "CF-004 operator-approved V8 partial",
+      "decision": "REUSE_SOURCE_NOT_FIGMA_BODY",
+      "reason": "Figma body is Lorem placeholder; V8 partial is BLK-022 canonical content for PG-005"
+    },
+    {
+      "blocker": "OC-G10",
+      "candidate_source": "_fig_full_build_extract.json",
+      "source_text": "Мы создавали „Шпиговский Дом\" как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.",
+      "target_text": "Мы создавали «Шпиговский Дом» как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.",
+      "target_node": "founder-quote.html",
+      "exact_match": false,
+      "normalized_match": true,
+      "authority": "Spig_v1.2 text export (Home frame)",
+      "decision": "ACCEPT_SUPPORTING",
+      "reason": "Punctuation/quote glyph differences only; same approved copy"
+    },
+    {
+      "blocker": "OC-G10",
+      "candidate_source": "founder-quote.html",
+      "source_text": "Сергей Юрьевич Шпиговский",
+      "target_text": "Сергей Юрьевич Шпиговский",
+      "target_node": "1:2308",
+      "exact_match": true,
+      "normalized_match": true,
+      "authority": "Spig_v1.2 + V8 partial",
+      "decision": "CONFIRMED",
+      "reason": "Attribution exact match"
+    },
+    {
+      "blocker": "OC-G10",
+      "candidate_source": "founder-quote.html",
+      "source_text": "Основатель центра. Аддиктолог, интервенционист",
+      "target_text": "Основатель центра. Аддиктолог, интервенционист",
+      "target_node": "1:2309",
+      "exact_match": true,
+      "normalized_match": true,
+      "authority": "Spig_v1.2 + V8 partial",
+      "decision": "CONFIRMED",
+      "reason": "Role exact match"
+    },
+    {
+      "blocker": "OC-G06",
+      "candidate_source": "home-rehabilitation-requirements.html",
+      "source_text": "N/A — not exact-extracted for compare",
+      "target_text": "N/A — no steps nodes in O-Centre Figma",
+      "target_node": null,
+      "exact_match": false,
+      "normalized_match": false,
+      "authority": "V8 partial",
+      "decision": "REJECT",
+      "reason": "No BLK-018 block in O-Centre composition; reuse not authorized"
+    },
+    {
+      "blocker": "OC-G11",
+      "candidate_source": "uslugi-v2.html program lead",
+      "source_text": "Боль бывает очень похожей у разных людей…",
+      "target_text": "Lorem ipsum… (1:2406)",
+      "target_node": "1:2406",
+      "exact_match": false,
+      "normalized_match": false,
+      "authority": "V8 services page",
+      "decision": "REJECT",
+      "reason": "Different copy; Figma field is Lorem — omit not replace from services"
+    },
+    {
+      "blocker": "OC-G11",
+      "candidate_source": "Spig_v1.2 subnav 1:2243",
+      "source_text": "Наш подход к лечению",
+      "target_text": "Наш подход к лечению алкогольной зависимости",
+      "target_node": "1:2343",
+      "exact_match": false,
+      "normalized_match": false,
+      "authority": "Canonical Figma O-Centre subnav",
+      "decision": "PREFER_SUBNAV",
+      "reason": "1:2343 is service-template leak; subnav is O-Centre-specific label"
+    }
+  ]
+}

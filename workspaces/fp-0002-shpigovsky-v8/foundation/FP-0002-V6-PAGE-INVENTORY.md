@@ -14,7 +14,7 @@
 | Услуга — конечная | Подраздел | `/uslugi/…/{leaf}/` | — | Footer / in-page | **NOT STARTED** |
 | Генотипирование | Услуги (parallel) | `/uslugi/genotipirovanie/` | — | Header + footer | **NOT STARTED** |
 | Специалисты | — | `/specyalisty/` | — | Header | **NOT STARTED** (no PDF) |
-| О центре | — | `/o-centre/` | — | Header + footer | **NOT STARTED** — V8 charter complete 2026-06-29; see `audits/o-centre-page-charter/` |
+| О центре | — | `/o-centre/` | — | Header + footer | **NOT STARTED** — V8 charter + content resolution complete 2026-06-29; see `audits/o-centre-content-blocker-resolution/` |
 | Отзывы | — | `/otzyvy/` | — | Header | **NOT STARTED** |
 | Статьи — хаб | — | `/blog/` | — | Header | **NOT STARTED** |
 | Статья | Статьи | `/blog/{slug}/` | — | — | **NOT STARTED** |
