@@ -1,10 +1,14 @@
 # FP-0002 V7 Operational Status
 
-**Updated:** 2026-06-26 (Services V2 Block 1 — upper page)
+**Updated:** 2026-06-28 (V8 bootstrap transition — status freeze)
 
 ```text
 workspace: V7
-lifecycle: ACTIVE_DEVELOPMENT
+lifecycle: IMMUTABLE_STABLE_FALLBACK
+successor_workspace: workspaces/fp-0002-shpigovsky-v8
+v8_bootstrap_authority_tag: fp-0002-v7-four-template-canonical-demo-baseline-01
+v7_static_demo_stable_tag: fp-0002-v7-static-client-demo-stable-02
+v7_four_template_baseline_tag: fp-0002-v7-four-template-canonical-demo-baseline-01
 parent_v6: FROZEN_FALLBACK
 parent_tag: fp-0002-v6-final-before-v7-operator-stable-01
 pre_final_polish_tag: fp-0002-v7-pre-final-polish-operator-stable-01

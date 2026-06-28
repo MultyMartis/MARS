@@ -1,0 +1,46 @@
+<section class="services-category-section-v2 @@modifierClass" id="@@id" aria-labelledby="@@sectionId">
+  <div class="container services-category-section-v2__container">
+    <header class="services-category-section-v2__head">
+      <div class="services-category-section-v2__head-main">
+        <span class="services-category-section-v2__marker" aria-hidden="true">@@icon</span>
+        <div class="services-category-section-v2__head-copy">
+          <h2 class="services-category-section-v2__heading" id="@@sectionId">@@heading</h2>
+          <p class="services-category-section-v2__intro">@@intro</p>
+        </div>
+      </div>
+    </header>
+
+    @@if (lead !== '') {
+    <p class="services-category-section-v2__lead">@@lead</p>
+    }
+
+    @@if (bodyHtml !== '') {
+    <div class="services-category-section-v2__body">@@bodyHtml</div>
+    }
+
+    <div class="services-category-section-v2__services">
+      @@servicesHtml
+    </div>
+
+    @@if (galleryHtml !== '') {
+    <div class="services-category-section-v2__gallery">
+      @@galleryHtml
+    </div>
+    }
+
+    @@if (hideCta !== 'true') {
+    <div class="services-category-section-v2__actions">
+      <button
+        type="button"
+        class="btn btn_dark btn--primary services-category-section-v2__cta"
+        data-modal-open="consultation"
+        data-modal-source="@@ctaSource"
+        data-modal-title="@@ctaText"
+        data-modal-submit-text="@@ctaText"
+      >
+        @@ctaText
+      </button>
+    </div>
+    }
+  </div>
+</section>

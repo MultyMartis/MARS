@@ -1,0 +1,24 @@
+<div class="services-program-v2__cta-band">
+  <div class="services-program-v2__cta-copy">
+    <p class="services-program-v2__cta-title">@@ctaTitle</p>
+    @@if (ctaSubtitle !== '') {
+    <p class="services-program-v2__cta-subtitle">@@ctaSubtitle</p>
+    }
+  </div>
+  @@if (ctaPhone !== '') {
+  <a class="services-program-v2__cta-phone" href="tel:+79251836464">
+    <span class="services-program-v2__cta-phone-number">@@ctaPhone</span>
+    @@if (ctaPhoneHint !== '') {
+    <span class="services-program-v2__cta-phone-hint">@@ctaPhoneHint</span>
+    }
+  </a>
+  }
+  <button
+    type="button"
+    class="btn btn_dark btn--primary services-program-v2__cta-button"
+    data-modal-open="consultation"
+    data-modal-source="@@ctaSource"
+    data-modal-title="@@ctaText"
+    data-modal-submit-text="@@ctaText"
+  >@@ctaText</button>
+</div>

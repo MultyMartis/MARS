@@ -1,0 +1,293 @@
+<header class="site-header">
+  <div class="container">
+
+    <div class="site-header__mobile-bar">
+      <a class="site-header__logo site-header__logo--mobile" href="/">
+        <img
+          class="site-header__logo-image"
+          src="assets/img/branding/logo.svg"
+          alt="Шпиговский дом"
+        >
+      </a>
+
+      <div class="site-header__mobile-bar--actions">
+        <a
+          class="site-header__phone site-header__phone--mobile-primary"
+          href="tel:+79251836464"
+        >
+          8 (925) 183-64-64
+        </a>
+
+        <div class="mobile-header__messengers">
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Telegram"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/telegram.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="WhatsApp"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/whatsapp.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Max"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/max.svg"
+              alt=""
+            >
+          </a>
+        </div>
+
+
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          data-offcanvas-open
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="site-header__menu-toggle-icon" aria-hidden="true">
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="site-header__top">
+      <a class="site-header__logo" href="/">
+        <img
+          class="site-header__logo-image"
+          src="assets/img/branding/logo.svg"
+          alt="Шпиговский дом"
+        >
+      </a>
+      <address class="site-header__address">
+        <span class="site-header__address-line">Москва,</span>
+        <span class="site-header__address-line">Московская область</span>
+      </address>
+      <div class="site-header__schedule">
+        <span class="site-header__schedule-line">пн-пт: 08:00-18:00,</span>
+        <span class="site-header__schedule-line">сб-вс: 08:00-22:00</span>
+      </div>
+      <div class="site-header__phones">
+        <a class="site-header__phone" href="tel:+79251836464">8 (925) 183-64-64</a>
+        <a class="site-header__phone" href="tel:+79950239226">8 (995) 023-92-26</a>
+      </div>
+
+      <div class="site-header__btns-wrap">
+        <div class="site-header__messengers">
+          <a
+            class="site-header__messenger-link"
+            href="#"
+            aria-label="Telegram"
+          >
+            <img
+              class="site-header__messenger-icon"
+              src="assets/img/social/telegram.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="site-header__messenger-link"
+            href="#"
+            aria-label="WhatsApp"
+          >
+            <img
+              class="site-header__messenger-icon"
+              src="assets/img/social/whatsapp.svg"
+              alt=""
+            >
+          </a>
+        </div>
+        <button
+          type="button"
+          class="btn"
+          data-modal-open="consultation"
+          data-modal-source="header"
+          data-modal-title="Заказать звонок"
+          data-modal-submit-text="Заказать звонок"
+        >Заказать звонок</button>
+      </div>
+
+    </div>
+
+
+
+    <div class="site-header__bottom">
+      <nav class="site-header__nav" aria-label="Основная навигация">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link@@activeNavUslugiClass" href="/uslugi/"@@activeNavUslugiAria>Лечение и профилактика</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/uslugi/genotipirovanie/">Генотипирование</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/specyalisty/">Специалисты</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/o-centre/">О&nbsp;центре</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/otzyvy/">Отзывы</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/blog/">Статьи</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/kontakty/">Контакты</a>
+          </li>
+          <li class="site-header__nav-item site-header__nav-item--search">
+            <button
+              type="button"
+              class="site-header__search"
+              aria-label="Открыть поиск"
+            >
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+  </div>
+
+  <div
+    class="offcanvas"
+    id="mobile-menu"
+    data-offcanvas
+    data-offcanvas-state="closed"
+    aria-hidden="true"
+  >
+    <div
+      class="offcanvas__overlay"
+      data-offcanvas-overlay
+    ></div>
+
+    <div
+      class="offcanvas__panel"
+      data-offcanvas-panel
+      role="dialog"
+      aria-modal="true"
+      aria-label="Мобильное меню"
+    >
+      <div class="offcanvas__header">
+        <a class="offcanvas__logo" href="/">
+          <img
+            class="offcanvas__logo-image"
+            src="assets/img/branding/logo.svg"
+            alt="Шпиговский дом"
+          >
+        </a>
+
+        <button
+          type="button"
+          class="offcanvas__close"
+          data-offcanvas-close
+          aria-label="Закрыть меню"
+        >
+          <span class="offcanvas__close-icon" aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </div>
+
+      <nav class="offcanvas__nav" aria-label="Мобильная навигация">
+        <ul class="offcanvas__nav-list">
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link@@activeNavOffcanvasClass" href="/uslugi/"@@activeNavUslugiAria>Лечение и профилактика</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="/uslugi/genotipirovanie/">Генотипирование</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="/specyalisty/">Специалисты</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="/o-centre/">О&nbsp;центре</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="/otzyvy/">Отзывы</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="/blog/">Статьи</a>
+          </li>
+          <li class="offcanvas__nav-item">
+            <a class="offcanvas__nav-link" href="/kontakty/">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="offcanvas__contacts">
+        <div class="offcanvas__phones">
+          <a class="offcanvas__phone" href="tel:+79251836464">8 (925) 183-64-64</a>
+          <a class="offcanvas__phone" href="tel:+79950239226">8 (995) 023-92-26</a>
+        </div>
+        <div class="offcanvas__messengers">
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Telegram"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/telegram.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="WhatsApp"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/whatsapp.svg"
+              alt=""
+            >
+          </a>
+          <a
+            class="offcanvas__messenger-link"
+            href="#"
+            aria-label="Max"
+          >
+            <img
+              class="offcanvas__messenger-icon"
+              src="assets/img/social/max.svg"
+              alt=""
+            >
+          </a>
+        </div>
+        <button
+          type="button"
+          class="btn offcanvas__cta"
+          data-modal-open="consultation"
+          data-modal-source="mobile-header"
+          data-modal-title="Заказать звонок"
+          data-modal-submit-text="Заказать звонок"
+        >Заказать звонок</button>
+      </div>
+    </div>
+  </div>
+</header>

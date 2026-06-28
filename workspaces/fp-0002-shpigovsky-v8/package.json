@@ -1,0 +1,22 @@
+{
+  "name": "fp-0002-shpigovsky-v8",
+  "version": "8.0.0-bootstrap",
+  "private": true,
+  "description": "FP-0002 Shpigovsky v8 — shared component consolidation workspace",
+  "scripts": {
+    "build": "gulp build",
+    "audit:components": "python tools/component-audit/_run-v8-component-family-audit.py",
+    "watch": "gulp watch",
+    "watch:dev": "gulp watch:dev"
+  },
+  "devDependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8",
+    "swiper": "^11.2.10"
+  }
+}

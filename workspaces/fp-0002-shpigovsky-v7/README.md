@@ -4,7 +4,8 @@
 |-------|-------|
 | **Project** | FP-0002 Shpigovsky |
 | **Workspace version** | V7 |
-| **Status** | ACTIVE DEVELOPMENT |
+| **Status** | IMMUTABLE_STABLE_FALLBACK (architectural work moved to V8) |
+| **Successor workspace** | `workspaces/fp-0002-shpigovsky-v8/` |
 | **Parent workspace** | `workspaces/fp-0002-shpigovsky-v6/` |
 | **Parent release** | `FP-0002-V6-FINAL-BEFORE-V7-OPERATOR-STABLE-01` |
 | **Parent tag** | `fp-0002-v6-final-before-v7-operator-stable-01` |

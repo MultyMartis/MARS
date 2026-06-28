@@ -310,6 +310,39 @@ workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-group-4/runtime-crops-afte
 !workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-remaining-page/**
 workspaces/fp-0002-shpigovsky-v7/reviews/service-leaf-remaining-page/screenshots/
 
+# FP-0002 Shpigovsky V8 — explicit allow-list (consolidation workspace; dist/node_modules/screenshots not tracked)
+!workspaces/fp-0002-shpigovsky-v8/
+workspaces/fp-0002-shpigovsky-v8/*
+!workspaces/fp-0002-shpigovsky-v8/README.md
+!workspaces/fp-0002-shpigovsky-v8/.gitignore
+!workspaces/fp-0002-shpigovsky-v8/package.json
+!workspaces/fp-0002-shpigovsky-v8/package-lock.json
+!workspaces/fp-0002-shpigovsky-v8/gulpfile.js
+!workspaces/fp-0002-shpigovsky-v8/src/
+!workspaces/fp-0002-shpigovsky-v8/src/**
+!workspaces/fp-0002-shpigovsky-v8/foundation/
+!workspaces/fp-0002-shpigovsky-v8/foundation/**
+!workspaces/fp-0002-shpigovsky-v8/docs/
+!workspaces/fp-0002-shpigovsky-v8/docs/**
+!workspaces/fp-0002-shpigovsky-v8/audits/
+!workspaces/fp-0002-shpigovsky-v8/audits/**
+!workspaces/fp-0002-shpigovsky-v8/plans/
+!workspaces/fp-0002-shpigovsky-v8/plans/**
+!workspaces/fp-0002-shpigovsky-v8/tools/
+!workspaces/fp-0002-shpigovsky-v8/tools/**
+workspaces/fp-0002-shpigovsky-v8/**/node_modules/
+workspaces/fp-0002-shpigovsky-v8/**/dist/
+workspaces/fp-0002-shpigovsky-v8/**/temp/
+workspaces/fp-0002-shpigovsky-v8/**/logs/
+workspaces/fp-0002-shpigovsky-v8/**/.cache/
+workspaces/fp-0002-shpigovsky-v8/**/coverage/
+workspaces/fp-0002-shpigovsky-v8/**/*.png
+workspaces/fp-0002-shpigovsky-v8/**/*.jpg
+workspaces/fp-0002-shpigovsky-v8/**/*.jpeg
+workspaces/fp-0002-shpigovsky-v8/**/*.webp
+workspaces/fp-0002-shpigovsky-v8/**/*.zip
+workspaces/fp-0002-shpigovsky-v8/**/.server.pid
+
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/
 

@@ -101,6 +101,21 @@ Starter template demo pages may exist from gulp-starter copy — **not** FP-0002
 
 ---
 
+## V7 / V8 transition (2026-06-28)
+
+| Layer | Status |
+|-------|--------|
+| V7 workspace | `IMMUTABLE_STABLE_FALLBACK` — source frozen |
+| V7 static demo | `fp-0002-v7-static-client-demo-stable-02` — deployed demo unchanged |
+| V8 workspace | Bootstrap reconciliation complete; Git whitelist enabled |
+| V8 baseline | Four-template authority `6eb493e9` |
+| Browser parity | PASS (V7 reference dist vs V8 dist) |
+| Component audit | COMPLETE — consolidation not started |
+| CF-003 Upper Navigation | Next gate — ready pending operator approval |
+| About (`o-centre`) | DEFERRED in V8 |
+
+---
+
 ## Changelog
 
 | Version | Date | Notes |

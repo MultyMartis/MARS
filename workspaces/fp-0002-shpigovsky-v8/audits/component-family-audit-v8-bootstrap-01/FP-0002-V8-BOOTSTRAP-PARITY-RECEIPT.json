@@ -1,0 +1,49 @@
+{
+  "receipt_id": "FP-0002-V8-BOOTSTRAP-PARITY-01",
+  "date": "2026-06-28",
+  "authority_tag": "fp-0002-v7-four-template-canonical-demo-baseline-01",
+  "authority_commit": "6eb493e9eadb2578c2223278d41bdfe6970e5637",
+  "v8_workspace": "workspaces/fp-0002-shpigovsky-v8",
+  "build_status": "PASS",
+  "templates": [
+    {
+      "page": "src/pages/index.html",
+      "dist": "dist/index.html",
+      "sha256": "f861e28fcd94aee93f0c4243e38a23178d00b6ed67e49972713d6af3f99a91cd",
+      "git_blob_v8": "67a3ac21df4235f1e14cafb26e3eec96983a495e",
+      "git_blob_tag": "67a3ac21df4235f1e14cafb26e3eec96983a495e",
+      "git_blob_match": true,
+      "dist_exists": true
+    },
+    {
+      "page": "src/pages/uslugi-v2.html",
+      "dist": "dist/uslugi-v2.html",
+      "sha256": "e0f7f8c8efb4aa5622418b1382442e8684152000a3330c5894ab07d0275eb9bc",
+      "git_blob_v8": "745366274264d198c5b30e2bb9cca3e2d63ac0b9",
+      "git_blob_tag": "745366274264d198c5b30e2bb9cca3e2d63ac0b9",
+      "git_blob_match": true,
+      "dist_exists": true
+    },
+    {
+      "page": "src/pages/usluga-podrazdel-v1.html",
+      "dist": "dist/usluga-podrazdel-v1.html",
+      "sha256": "fc32e6744f51ddd4a5b218baf253b80da6206f359dfb6161de3c0a769c76c49c",
+      "git_blob_v8": "ef5564bb5f16379788b590d1476a4a0c3b6788b0",
+      "git_blob_tag": "ef5564bb5f16379788b590d1476a4a0c3b6788b0",
+      "git_blob_match": true,
+      "dist_exists": true
+    },
+    {
+      "page": "src/pages/usluga-konechnaya-v1.html",
+      "dist": "dist/usluga-konechnaya-v1.html",
+      "sha256": "b24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a",
+      "git_blob_v8": "aee81b3da0927d9bd348cded1360bc5f7e3785f5",
+      "git_blob_tag": "aee81b3da0927d9bd348cded1360bc5f7e3785f5",
+      "git_blob_match": true,
+      "dist_exists": true
+    }
+  ],
+  "style_scss_git_blob_match": true,
+  "excluded": ["o-centre-v1.html", "node_modules", "dist at bootstrap time", "static-demo-generator tooling"],
+  "functional_parity_method": "Source byte-identical to authority tag; gulp build succeeded; dist artifacts emitted for all four templates"
+}
