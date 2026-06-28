@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining corp pages):** M9.14 **IMPLEMENTED** · M9.15 **IMPLEMENTED** · M9.17 → M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+**Operator implementation order (remaining corp pages):** M9.14 **IMPLEMENTED** · M9.15 **IMPLEMENTED** · M9.17 **CHARTER READY** · M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
 
 ---
 
@@ -1106,6 +1106,44 @@ Pageintro (H1 + Lead) → 6-step payment timeline (step 6 = Подготовка
 
 ---
 
+## 20. Warranty Page (M9.17)
+
+Corporate page `/guarantee` — route `information/guarantee`. **Implementation charter READY** (2026-06-28); **not yet implemented** on live TEST.
+
+| Item | Value |
+|------|--------|
+| **Live URL** | https://zpm.new-site.space/guarantee |
+| **Target route** | `information/guarantee` |
+| **SEO** | `oc_seo_url` keyword `guarantee` → `information/guarantee` (at implementation) |
+| **Controller** | `catalog/controller/information/guarantee.php` (**NEW**) |
+| **Twig** | `catalog/view/theme/default/template/information/guarantee.twig` (**NEW**) |
+| **CSS namespace** | `zpm-warranty-page`, `zpm-warranty-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS** | Corp FAQ accordion in `assets/js/main.js` — scoped `[data-warranty-faq]` |
+| **Copy** | [BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md](../copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md) |
+| **Charter** | [SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md) |
+
+### Structure
+
+Pageintro (H1 + Lead) → warranty principles + coverage (BLOCK 01) → document checklist (BLOCK 02) → 5-step claim timeline (BLOCK 03) → verification cases (BLOCK 04) → service outcomes (BLOCK 05) → FAQ (8) → Commercial Trust CTA + service form (equipment_model required).
+
+### Reuse boundaries
+
+- **Commercial Trust:** CTA card + form wrap — **not** full PLP trust block
+- **Contacts:** `zpm-form` discipline — **not** contact card grid or map
+- **Delivery:** outbound/RMA pointers only — **not** TK tables or shipment points
+- **Payment:** deal-docs pointer only — **not** methods matrix or bank detail
+- **Forbidden on page:** term badge without OQ-W01 · ASC map · fear exclusion walls · warranty certificate hero · photo upload MVP
+
+### Change rules
+
+1. Read [SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md) and **§20**
+2. Live-capture remote files before deploy
+3. Do not bleed scope into About, Delivery, Payment, Contacts, catalog, or other corp pages
+
+**Evidence:** [BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · `reports/m9.17-work/guarantee-live.html`
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -1117,4 +1155,4 @@ Pageintro (H1 + Lead) → 6-step payment timeline (step 6 = Подготовка
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§19 M9.15 Payment implemented on TEST).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§20 M9.17 Warranty Implementation Charter v1).*

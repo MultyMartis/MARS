@@ -207,6 +207,8 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 **M9.15 Payment implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.15-PAYMENT-01` · [SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md](reports/SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md)
 
+**M9.17 Warranty implementation charter:** **READY** (2026-06-28) — [SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md](reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md) · implementation **NOT STARTED**
+
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
 
 **Recovery closeout:** [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) — recovery **CLOSED**; production preparation active.

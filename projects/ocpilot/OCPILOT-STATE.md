@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.13 ABOUT COMPANY RESTORED 01** (2026-06-23) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` + **M9.14 Delivery** `SITE-002-STABLE-LIVE-M9.14-DELIVERY-01` + **M9.15 Payment** `SITE-002-STABLE-LIVE-M9.15-PAYMENT-01` — BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; catalog UX **complete**; About **restored**; **M9.14 Delivery + M9.15 Payment IMPLEMENTED** on TEST; next **M9.17 Warranty**; operator gates B6/B8/B1/B3 |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` + **M9.14 Delivery** `SITE-002-STABLE-LIVE-M9.14-DELIVERY-01` + **M9.15 Payment** `SITE-002-STABLE-LIVE-M9.15-PAYMENT-01` — BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; catalog UX **complete**; About **restored**; **M9.14 Delivery + M9.15 Payment IMPLEMENTED** on TEST; **M9.17 Warranty Implementation Charter READY**; next **M9.17 implementation**; operator gates B6/B8/B1/B3 |
 
 ---
 
@@ -30,7 +30,7 @@
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
 | **Next phase** | **Production Development** — Corporate Pages after operator gates |
-| **Implementation (M9.14+)** | **M9.14 Delivery + M9.15 Payment IMPLEMENTED** (2026-06-28) · M9.17+ **NOT STARTED** |
+| **Implementation (M9.14+)** | **M9.14 Delivery + M9.15 Payment IMPLEMENTED** (2026-06-28) · **M9.17 Warranty Charter READY** · M9.17 implementation + M9.16/M9.18 **NOT STARTED** |
 | **Closeout** | [sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 
 **Lifecycle:** Research → Corporate Pages Program → Recovery (**CLOSED**) → Production Development
@@ -48,7 +48,7 @@
 | Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (rejected/restored)** |
 | Active stage | **PRODUCTION PREPARATION** — BZPM recovery **CLOSED**; remaining M9.8.9 tasks per roadmap (non-blocking) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
-| Next planned | **M9.17 Warranty** · operator queue M9.17→M9.16→M9.18 · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
+| Next planned | **M9.17 Warranty implementation** (charter ready) · operator queue M9.17→M9.16→M9.18 · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
 | Active blockers | **B6** charter approval · **B8** copy sign-off · **B1** МО address · **B3** PLP vs `/dealers` — recovery **not** a blocker |
 | Corporate Pages Program | **OPEN** — [Program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md) · [IA map](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md) · [Design program](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md) · [Charters](../website-factory/execution-cases/bzpm-roadmap/charters/README.md) · M9.13 **IMPLEMENTED · QA PASSED · REJECTED · RESTORED** · M9.14+ charters **Draft complete / approval open** · Visual design **NOT OPEN** · Contacts **Delivered** (separate workstream) |
 | Run 5 | **NO** — not applicable to current operational lane |
