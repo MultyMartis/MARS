@@ -172,21 +172,24 @@
     },
     {
       "family_id": "CF-010",
-      "current_name": "home-clinic-landscape",
-      "current_partial": "src/partials/sections/home-clinic-landscape.html",
+      "current_name": "clinic-landscape",
+      "current_partial": "src/partials/sections/clinic-landscape.html",
       "pages_using": ["index.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html"],
       "visual_identity": "SAME",
       "html_identity": "SAME",
-      "css_identity": "MOSTLY_SAME",
-      "page_specific_name": true,
+      "css_identity": "UNIFIED",
+      "page_specific_name": false,
       "duplicate_partials": [],
       "duplicate_classes": ["service-leaf-landscape-v1"],
-      "classification": "SHARED_BUT_PAGE_NAMED",
-      "recommended_action": "RENAME_AND_UNIVERSALIZE",
-      "future_neutral_name": "UNDECIDED",
-      "priority": "P2",
-      "implementation_status": "NOT_STARTED",
-      "notes": "Leaf passes page-specific modifier class on include param"
+      "classification": "UNIVERSALIZED",
+      "recommended_action": "NONE",
+      "future_neutral_name": "clinic-landscape",
+      "priority": "COMPLETE",
+      "implementation_status": "COMPLETE",
+      "old_name_retired": "home-clinic-landscape",
+      "aliases": 0,
+      "asset_path_exception": "assets/img/content/pre-reviews/shpigovsky-clinic-landscape.webp",
+      "notes": "Wave 10 complete — page modifier service-leaf-landscape-v1 retained on leaf consumer"
     },
     {
       "family_id": "CF-011",
@@ -324,16 +327,16 @@
     }
   ],
   "page_specific_naming_audit": {
-    "home_prefix_shared_but_page_named": 2,
+    "home_prefix_shared_but_page_named": 0,
     "genuinely_page_specific": 12,
     "duplicated_shared_family": 2,
-    "universalized": 8,
+    "universalized": 9,
     "unresolved": 1
   },
   "next_recommended_wave": {
-    "family_id": "CF-010",
-    "current_name": "home-clinic-landscape",
-    "reason": "Shared on 3 templates; page-specific name; NOT AUTHORIZED until operator charters wave 10",
+    "family_id": "O-CENTRE-CHARTER",
+    "current_name": "o-centre-page-anatomy",
+    "reason": "Component consolidation complete; next page requires anatomy/reuse charter before implementation",
     "authorized": false
   }
 }

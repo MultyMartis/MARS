@@ -1,0 +1,121 @@
+{
+  "gate_id": "FP-0002-V8-FINAL-CONSOLIDATION-READINESS",
+  "captured_utc": "2026-06-28T22:17:51.734848+00:00",
+  "head": "fdd1899c5eb13268021636e40629cfa237a454cf",
+  "manual_polish_authority": "472be1abffb666a836eb83d5644e1fd3a233cc2d",
+  "families": [
+    {
+      "cf": "CF-003",
+      "canonical_family": "internal-page-nav",
+      "partial": "src/partials/**/internal-page-nav.html",
+      "consumers": 3,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-004",
+      "canonical_family": "founder-quote",
+      "partial": "src/partials/**/founder-quote.html",
+      "consumers": 5,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-005",
+      "canonical_family": "specialists",
+      "partial": "src/partials/**/specialists.html",
+      "consumers": 3,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-006",
+      "canonical_family": "comfort",
+      "partial": "src/partials/**/comfort.html",
+      "consumers": 5,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-007",
+      "canonical_family": "reviews",
+      "partial": "src/partials/**/reviews.html",
+      "consumers": 3,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-008",
+      "canonical_family": "faq",
+      "partial": "src/partials/**/faq.html",
+      "consumers": 5,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-009",
+      "canonical_family": "final-form",
+      "partial": "src/partials/**/final-form.html",
+      "consumers": 5,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-010",
+      "canonical_family": "clinic-landscape",
+      "partial": "src/partials/**/clinic-landscape.html",
+      "consumers": 3,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-011",
+      "canonical_family": "program-cta-band",
+      "partial": "src/partials/**/program-cta-band.html",
+      "consumers": 3,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    },
+    {
+      "cf": "CF-012",
+      "canonical_family": "program-modifiers",
+      "partial": "scss modifiers",
+      "consumers": 3,
+      "retired_refs": 0,
+      "aliases": 0,
+      "dom": "PASS",
+      "visual": "PASS",
+      "status": "COMPLETE"
+    }
+  ],
+  "component_consolidation": "COMPLETE",
+  "page_wide_dom_gate": "PASS",
+  "build": "PASS"
+}

@@ -27,7 +27,8 @@ fp0002_v8_cf011_dark_cta: COMPLETE
 fp0002_v8_cf012_program_modifiers: COMPLETE_OPERATOR_APPROVED
 fp0002_v8_cf012_commit: 9e8fa083
 fp0002_v8_manual_polish_checkpoint: DOCUMENTED
-fp0002_v8_next_wave: CF-010_CLINIC_LANDSCAPE (NOT STARTED)
+fp0002_v8_cf010_clinic_landscape: COMPLETE
+fp0002_v8_next_wave: O_CENTRE_CHARTER_NOT_AUTHORIZED
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 

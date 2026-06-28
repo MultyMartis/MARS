@@ -1,10 +1,10 @@
 {
   "checkpoint_id": "FP-0002-V8-CF003-CF009-CONSOLIDATION-CHECKPOINT",
-  "captured_utc": "2026-06-28T13:49:47.299109+00:00",
-  "head": "d96359f6f8bf7b0487d1cd7953ba6089cdc06082",
+  "captured_utc": "2026-06-28T22:16:46.353821+00:00",
+  "head": "fdd1899c5eb13268021636e40629cfa237a454cf",
   "retired_names": {
     "audit_id": "FP-0002-V8-RETIRED-NAMES-AUDIT",
-    "captured_utc": "2026-06-28T13:49:47.218513+00:00",
+    "captured_utc": "2026-06-28T22:16:46.290071+00:00",
     "scope": "src/**/*.html,scss,js",
     "rows": [
       {
@@ -99,7 +99,7 @@
       "partial_count": 1,
       "root_class": "founder-quote",
       "consumers": 5,
-      "css_sources": 23,
+      "css_sources": 29,
       "js_init_sources": 0,
       "result": "PASS"
     },
@@ -119,7 +119,7 @@
       "partial_count": 1,
       "root_class": "comfort",
       "consumers": 5,
-      "css_sources": 19,
+      "css_sources": 20,
       "js_init_sources": 2,
       "result": "PASS"
     },
@@ -129,7 +129,7 @@
       "partial_count": 1,
       "root_class": "reviews",
       "consumers": 3,
-      "css_sources": 20,
+      "css_sources": 21,
       "js_init_sources": 3,
       "result": "PASS"
     },

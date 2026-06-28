@@ -150,18 +150,20 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 ---
 
-## CF-012 — Clinic landscape bleed
+## CF-010 — Clinic landscape bleed
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-clinic-landscape.html` |
-| Class family | `.home-clinic-landscape*` |
-| Pages | Subdivision + leaf |
-| Consolidation priority | P3 |
+| Shared partial | `partials/sections/clinic-landscape.html` |
+| Class family | `.clinic-landscape*` |
+| Pages | Home, subdivision, leaf |
+| Consolidation priority | COMPLETE (CF-010) |
+| Retired name | `home-clinic-landscape` |
+| Asset path exception | `pre-reviews/shpigovsky-clinic-landscape.webp` |
 
 ---
 
-## CF-013 — Home-only blocks (reference)
+## CF-012 — Program modifiers (reference)
 
 Blocks on `index.html` without equivalents on service templates: `hero.html`, `home-recovery-intro`, `home-treatment-prevention`, `home-gallery`, `home-why-us`, `home-recovery-life`, etc.
 

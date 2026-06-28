@@ -1,0 +1,67 @@
+{
+  "validation_id": "CF-010-FUNCTIONAL-ASSET-QA",
+  "source": "CF-010-BROWSER-METRICS-after.json",
+  "overall": "PASS",
+  "consumers": [
+    {
+      "consumer": "home",
+      "viewport_desktop": {
+        "image_loaded": true,
+        "correct_source": true,
+        "ratio": "1170x584",
+        "console_errors": 0,
+        "overflow": false,
+        "result": "PASS"
+      },
+      "viewport_mobile": {
+        "image_loaded": true,
+        "correct_source": true,
+        "ratio": "335x220",
+        "console_errors": 0,
+        "overflow": false,
+        "result": "PASS"
+      }
+    },
+    {
+      "consumer": "service-subdivision",
+      "viewport_desktop": {
+        "image_loaded": true,
+        "correct_source": true,
+        "ratio": "1170x584",
+        "console_errors": 0,
+        "overflow": false,
+        "result": "PASS"
+      },
+      "viewport_mobile": {
+        "image_loaded": true,
+        "correct_source": true,
+        "ratio": "335x220",
+        "console_errors": 0,
+        "overflow": false,
+        "result": "PASS"
+      }
+    },
+    {
+      "consumer": "service-leaf",
+      "viewport_desktop": {
+        "image_loaded": true,
+        "correct_source": true,
+        "ratio": "1170x584",
+        "console_errors": 0,
+        "overflow": false,
+        "result": "PASS"
+      },
+      "viewport_mobile": {
+        "image_loaded": true,
+        "correct_source": true,
+        "ratio": "335x220",
+        "console_errors": 0,
+        "overflow": false,
+        "result": "PASS"
+      }
+    }
+  ],
+  "missing_assets": 0,
+  "asset_hash_changes": 0,
+  "resize_behavior": "PRESERVED"
+}

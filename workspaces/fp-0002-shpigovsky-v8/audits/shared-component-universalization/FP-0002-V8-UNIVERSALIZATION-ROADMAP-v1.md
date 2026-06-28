@@ -32,7 +32,7 @@
 | 5 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | **COMPLETE** |
 | 6 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | **COMPLETE** |
 | 7 | CF-009 final form | P1 | 5 | Low | **COMPLETE** |
-| 10 | CF-010 clinic landscape | P2 | 3 | Low | Remove leaf modifier class — NOT AUTHORIZED |
+| 10 | CF-010 clinic landscape | P2 | 3 | Low | **COMPLETE** |
 | — | CF-013 inner hero | P2 | HOLD | Already shared on 3 templates | No wave unless Home unification requested |
 | — | CF-015 home gallery | HOLD | 1 | Unknown until O-Centre | Defer |
 

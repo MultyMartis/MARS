@@ -32,7 +32,7 @@
 | CF-007 | reviews | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-008 | faq | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-009 | final-form | 5 | UNIVERSALIZED | COMPLETE | NONE |
-| CF-010 | home-clinic-landscape | 3 | SHARED_BUT_PAGE_NAMED | P2 | RENAME_AND_UNIVERSALIZE |
+| CF-010 | clinic-landscape | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-011 | program-cta-band | 3+ | UNIVERSALIZED | COMPLETE | NONE |
 | CF-012 | services-program-v2 | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-013 | services-inner-hero-v2 | 3 | GENUINELY_PAGE_SPECIFIC | P2 | HOLD |
@@ -187,6 +187,6 @@
 
 ## Next recommended wave
 
-**CF-010 — Clinic landscape (`home-clinic-landscape`)** — NOT AUTHORIZED
+**O-Centre page anatomy + reuse charter** — NOT AUTHORIZED for implementation
 
-Reason: shared on 3 templates; page-specific name; operator gate required before wave 10.
+CF-010 clinic landscape — **COMPLETE** (wave 10). Component consolidation CF-003–CF-012 — **COMPLETE**.

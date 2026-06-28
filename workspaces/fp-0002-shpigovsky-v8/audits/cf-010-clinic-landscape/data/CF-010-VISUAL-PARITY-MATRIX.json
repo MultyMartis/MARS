@@ -1,0 +1,103 @@
+{
+  "manifest_id": "CF-010-VISUAL-PARITY-MATRIX",
+  "method": "component_crop_context_with_computed_metrics_authority",
+  "overall": "PASS",
+  "matrix": [
+    {
+      "consumer": "home",
+      "viewport": "desktop",
+      "kind": "landscape-crop",
+      "metrics_match": true,
+      "pixel_exact_match": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "home",
+      "viewport": "desktop",
+      "kind": "context",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "home",
+      "viewport": "mobile",
+      "kind": "landscape-crop",
+      "metrics_match": true,
+      "pixel_exact_match": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "home",
+      "viewport": "mobile",
+      "kind": "context",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "landscape-crop",
+      "metrics_match": true,
+      "pixel_exact_match": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "context",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "landscape-crop",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "context",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-leaf",
+      "viewport": "desktop",
+      "kind": "landscape-crop",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-leaf",
+      "viewport": "desktop",
+      "kind": "context",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-leaf",
+      "viewport": "mobile",
+      "kind": "landscape-crop",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "service-leaf",
+      "viewport": "mobile",
+      "kind": "context",
+      "metrics_match": true,
+      "pixel_exact_match": true,
+      "result": "PASS"
+    }
+  ]
+}
