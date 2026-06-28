@@ -1264,41 +1264,43 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 ---
 
-## 24. Corporate Pages Visual Polish Pass 1.1 — operator rules
+## 24. Corporate Pages Visual Polish Pass 1.1
 
-**Status:** **REGISTERED** (2026-06-28) — **not implemented** in rollback task.
+**Scope:** M9.14–M9.18 — CSS + Twig lead migration; Home token rhythm.
 
-### RULE 01 — `.page-intro__description` forbidden
+| Item | Value |
+|------|--------|
+| **Status** | **SUPERSEDED** by Pass 1.2 (2026-06-28) — retained as prior checkpoint |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.1` |
+| **Live CSS post SHA256** | `e83dae3e08c30969cce68e366fa7f0b7dbf4ca80e3df204644ac87c40de80b5d` |
+| **Report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.1.md) |
 
-- Treat `.page-intro__description` as a **forbidden component** on corporate pages M9.14–M9.18.
-- In Pass 1.1: remove usage; preserve all text, order, and copy; move text into the corresponding page `main` block.
-- **Not executed** during Pass 1 rollback — registration only.
+### Operator rules (still binding)
 
-### RULE 02 — reuse existing card systems
-
-Allowed base components:
-
-- `.zpm-commercial-trust` / `.zpm-commercial-trust__*`
-- `.zpm-catalog-faq` / `.zpm-catalog-faq__*`
-
-Use for cards, advantages, proof blocks, steps, info cards, FAQ-like blocks, card grids, small forms, icon blocks. Do **not** create new card systems without necessity.
-
-### RULE 03 — Home visual authority
-
-Home page is the visual authority for vertical rhythm, air, sizes, density, visual weight, distances, and block separation. **Do not** use Catalog or PDP as reference for Corporate Pages.
-
-### RULE 04 — no global padding-top reset
-
-Forbidden: global rules such as `padding-top: 0` across all corporate sections. Any vertical rhythm change must be **local**, justified, and verified against Home.
-
-### RULE 05 — mandatory backups before polish
-
-Before each Corporate Pages Visual Polish pass:
-
-1. Backup all files to be changed (repo file-level backups).
-2. Operator Beget backup.
-3. Git checkpoint.
+- **RULE 01** — `.page-intro__description` forbidden on M9.14–M9.18; lead in `main` via `.zpm-corp-page-lead`.
+- **RULE 02** — Reuse `.zpm-commercial-trust` and `.zpm-catalog-faq` families.
+- **RULE 03** — Home is visual authority (not Catalog/PDP).
+- **RULE 04** — No global `padding-top: 0` on corporate sections.
+- **RULE 05** — Beget + file backups + git checkpoint before each pass.
 
 ---
 
-*Documentation only — live TEST evidence in rollback manifest. Last updated: 2026-06-28 (§23 Pass 1 REJECTED · §24 Pass 1.1 rules registered).*
+## 25. Corporate Pages Visual Polish Pass 1.2 — active
+
+**Scope:** M9.14–M9.18 — CSS-only fine rhythm pass on TEST.
+
+| Item | Value |
+|------|--------|
+| **Status** | **ACTIVE on TEST** (2026-06-28) |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` |
+| **Current visual authority (corp polish)** | `style.css` SHA256 `243d6d5e2a1ad00c06c450f4b90dc72adb1671b64a681f266675abdbd9330252` |
+| **Report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](../baselines/SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md) |
+| **Pre-deploy backup** | [backups/style.css.pre-site-002-corp-visual-polish-pass1.2.bak](../backups/style.css.pre-site-002-corp-visual-polish-pass1.2.bak) |
+| **Audit (input)** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md) |
+
+Pass 1 (`SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01`) remains **REJECTED** — see §23.
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-28 (§25 Pass 1.2 active).*

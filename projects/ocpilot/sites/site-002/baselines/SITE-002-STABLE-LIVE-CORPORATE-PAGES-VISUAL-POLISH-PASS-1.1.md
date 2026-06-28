@@ -1,6 +1,6 @@
 # SITE-002 — STABLE LIVE — Corporate Pages Visual Polish Pass 1.1
 
-**Status:** **ACTIVE** on TEST  
+**Status:** **SUPERSEDED** by Pass 1.2 on TEST  
 **URL:** https://zpm.new-site.space/  
 **Date:** 2026-06-28  
 **Report:** [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.1.md)

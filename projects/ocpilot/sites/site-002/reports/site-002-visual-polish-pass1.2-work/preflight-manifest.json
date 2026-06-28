@@ -1,0 +1,63 @@
+{
+  "pass": "site-002-corp-visual-polish-pass1.2",
+  "timestamp": "2026-06-28T14:52:38.615426+00:00",
+  "operator_beget_backup": "CONFIRMED",
+  "checkpoint_commit": "a838210f",
+  "files": {
+    "assets/css/style.css": {
+      "remote": "assets/css/style.css",
+      "pre_exists": true,
+      "pre_sha256": "e83dae3e08c30969cce68e366fa7f0b7dbf4ca80e3df204644ac87c40de80b5d",
+      "pre_bytes": 376462,
+      "post_sha256": "243d6d5e2a1ad00c06c450f4b90dc72adb1671b64a681f266675abdbd9330252",
+      "post_bytes": 378470
+    }
+  },
+  "twig_cache_cleared": [],
+  "deploy": {
+    "qa": {
+      "urls": {
+        "https://zpm.new-site.space/": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/delivery": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/payment-methods": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/guarantee": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/dealers": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/custom-equipment": {
+          "http_status": 200,
+          "ok": true
+        }
+      },
+      "css_marker": true,
+      "page_intro_description_removed": {
+        "delivery": true,
+        "payment": true,
+        "guarantee": true,
+        "dealers": true,
+        "custom": true
+      },
+      "has_corp_page_lead_delivery": true,
+      "has_corp_page_lead_payment": true,
+      "has_corp_page_lead_guarantee": true,
+      "has_corp_page_lead_dealers": true,
+      "has_corp_page_lead_custom": true,
+      "pass11_marker_still_present": true,
+      "all_http_ok": true,
+      "all_no_page_intro_description": true
+    }
+  }
+}
