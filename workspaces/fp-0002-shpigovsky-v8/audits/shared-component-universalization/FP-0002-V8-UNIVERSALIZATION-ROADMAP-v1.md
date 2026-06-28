@@ -13,7 +13,8 @@
 | 1 | CF-003 internal-page-nav | COMPLETE — commit `361502bf` |
 | 2 | CF-004 founder-quote | COMPLETE — commit `25f972f9` |
 | 3 | CF-005 specialists | COMPLETE — commit `c6efb089` |
-| 4 | CF-006 comfort | COMPLETE — pending commit |
+| 4 | CF-006 comfort | COMPLETE — commit `4737b020` |
+| 5 | CF-007 reviews | COMPLETE — pending commit |
 
 ---
 
@@ -25,9 +26,9 @@
 | 4 | CF-012 program block modifiers | P1 | 3 | Medium CSS | Collapse redundant modifiers |
 | 3 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
 | 4 | CF-006 comfort gallery | P1 | 5 | Low–medium | **COMPLETE** |
-| 5 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | Verify accordion init |
+| 5 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | **COMPLETE** |
 | 6 | CF-009 final form | P1 | 5 | Low | Form mask hooks |
-| 7 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | NOT AUTHORIZED |
+| 7 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | NOT AUTHORIZED |
 | 10 | CF-010 clinic landscape | P2 | 3 | Low | Remove leaf modifier class |
 | — | CF-013 inner hero | P2 | HOLD | Already shared on 3 templates | No wave unless Home unification requested |
 | — | CF-015 home gallery | HOLD | 1 | Unknown until O-Centre | Defer |
@@ -72,11 +73,24 @@
 
 ---
 
-## Next wave: CF-007 Reviews
+## Completed wave: CF-007 Reviews
+
+**Result:** COMPLETE
+
+- Partial: `src/partials/sections/reviews.html`
+- Root class: `.reviews`
+- Retired: `home-reviews` (partial, classes, init name)
+- Consumers: 3 pages
+- Visual parity: PASS (crop + context 12/12 exact)
+- Slider QA: PASS
+
+---
+
+## Next wave: CF-008 FAQ
 
 **Status:** NOT AUTHORIZED
 
-Operator gate required before any `home-reviews` rename.
+Operator gate required before any `home-faq` rename.
 
 ---
 

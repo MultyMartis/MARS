@@ -126,10 +126,11 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-reviews.html` |
-| Class family | `.home-reviews*` |
-| Pages | `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
-| Consolidation priority | P3 |
+| Shared partial | `partials/sections/reviews.html` |
+| Class family | `.reviews*` |
+| Pages | Home, subdivision, leaf |
+| Consolidation priority | COMPLETE (CF-007) |
+| Retired name | `home-reviews` |
 
 ---
 

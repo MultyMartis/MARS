@@ -1,0 +1,84 @@
+{
+  "validation_id": "CF-007-SLIDER-FUNCTIONAL-QA",
+  "rows": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "instance_count": 1,
+      "swiper_created": true,
+      "slide_count": 10,
+      "next_works": true,
+      "previous_works": true,
+      "pagination_works": true,
+      "restored_initial": true,
+      "duplicate_init": false,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "instance_count": 1,
+      "swiper_created": true,
+      "slide_count": 10,
+      "next_works": true,
+      "previous_works": true,
+      "pagination_works": true,
+      "restored_initial": true,
+      "duplicate_init": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "instance_count": 1,
+      "swiper_created": true,
+      "slide_count": 10,
+      "next_works": true,
+      "previous_works": true,
+      "pagination_works": true,
+      "restored_initial": true,
+      "duplicate_init": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "instance_count": 1,
+      "swiper_created": true,
+      "slide_count": 10,
+      "next_works": true,
+      "previous_works": true,
+      "pagination_works": true,
+      "restored_initial": true,
+      "duplicate_init": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "instance_count": 1,
+      "swiper_created": true,
+      "slide_count": 10,
+      "next_works": true,
+      "previous_works": true,
+      "pagination_works": true,
+      "restored_initial": true,
+      "duplicate_init": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "instance_count": 1,
+      "swiper_created": true,
+      "slide_count": 10,
+      "next_works": true,
+      "previous_works": true,
+      "pagination_works": true,
+      "restored_initial": true,
+      "duplicate_init": false,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

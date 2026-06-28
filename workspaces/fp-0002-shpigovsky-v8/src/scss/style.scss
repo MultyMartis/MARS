@@ -1677,14 +1677,14 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 }
 
 /* ==========================================================================
-   10i. Home reviews
+   10i. Reviews
    ========================================================================== */
 
-.home-reviews {
+.reviews {
 	overflow: hidden;
 }
 
-.home-reviews__heading {
+.reviews__heading {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -1692,7 +1692,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	margin-bottom: var(--pad-gap);
 }
 
-.home-reviews__title {
+.reviews__title {
 	margin: 0;
 	font-size: var(--font-size-h2);
 	line-height: var(--line-height-h2);
@@ -1700,7 +1700,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	color: var(--color-text-primary);
 }
 
-.home-reviews__all-link {
+.reviews__all-link {
 	display: inline-flex;
 	align-items: center;
 	gap: var(--pad-gap-mini);
@@ -1712,26 +1712,26 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	text-transform: uppercase;
 }
 
-.home-reviews__all-link:hover,
-.home-reviews__all-link:focus-visible {
+.reviews__all-link:hover,
+.reviews__all-link:focus-visible {
 	color: var(--color-accent);
 }
 
-.home-reviews__all-icon {
+.reviews__all-icon {
 	color: var(--color-accent);
 	font-size: var(--icon-size-small);
 }
 
-.home-reviews__slider {
+.reviews__slider {
 	overflow: visible;
 }
 
-.home-reviews__slider .swiper-slide {
+.reviews__slider .swiper-slide {
 	height: auto;
 	display: flex;
 }
 
-.home-reviews__card {
+.reviews__card {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -1744,7 +1744,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	background-color: transparent;
 }
 
-.home-reviews__rating {
+.reviews__rating {
 	display: flex;
 	align-items: center;
 	gap: 5px;
@@ -1754,31 +1754,31 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	list-style: none;
 }
 
-.home-reviews__star {
+.reviews__star {
 	color: var(--color-accent);
 	font-size: 14px;
 	line-height: 1;
 }
 
-.home-reviews__quote {
+.reviews__quote {
 	margin: var(--pad-gap-line) 0 0 0;
 	flex: 1 1 auto;
 
 }
 
-.home-reviews__text {
+.reviews__text {
 	margin: 0;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 }
 
-.home-reviews__author {
+.reviews__author {
 	margin: 0;
 	margin-top: auto;
 	padding-top: var(--pad-gap-line);
 }
 
-.home-reviews__author-name {
+.reviews__author-name {
 	font-style: normal;
 	font-size: var(--font-size-base);
 	font-weight: var(--font-weight-heading);
@@ -1787,17 +1787,17 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	margin-top: 7px;
 }
 
-.home-reviews__read-all {
+.reviews__read-all {
 	margin: 0;
 	margin-top: auto;
 	padding-top: var(--pad-gap-line);
 }
 
-.home-reviews__read-all > a {
+.reviews__read-all > a {
 	text-decoration: underline;
 }
 
-.home-reviews__pagination,
+.reviews__pagination,
 .home-gallery__pagination,
 .specialists__pagination {
 	position: static;
@@ -1807,7 +1807,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	margin-top: var(--pad-gap);
 }
 
-.home-reviews__pagination .swiper-pagination-bullet,
+.reviews__pagination .swiper-pagination-bullet,
 .home-gallery__pagination .swiper-pagination-bullet,
 .specialists__pagination .swiper-pagination-bullet {
 	width: 10px;
@@ -1819,7 +1819,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	opacity: 1;
 }
 
-.home-reviews__pagination .swiper-pagination-bullet-active,
+.reviews__pagination .swiper-pagination-bullet-active,
 .home-gallery__pagination .swiper-pagination-bullet-active,
 .specialists__pagination .swiper-pagination-bullet-active {
 	background-color: var(--color-text-primary);

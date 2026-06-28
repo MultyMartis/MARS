@@ -12,8 +12,8 @@
 | Metric | Count |
 |--------|------:|
 | Total candidate families | 13 |
-| Universalized (complete) | 5 (CF-003, CF-004, CF-005, CF-006, CF-014) |
-| Shared but page-named | 5 |
+| Universalized (complete) | 6 (CF-003, CF-004, CF-005, CF-006, CF-007, CF-014) |
+| Shared but page-named | 4 |
 | Duplicated shared family | 2 |
 | Genuinely page-specific | 1 |
 | Hold / unresolved | 1 |
@@ -28,7 +28,7 @@
 | CF-004 | founder-quote | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-005 | specialists | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-006 | comfort | 5 | UNIVERSALIZED | COMPLETE | NONE |
-| CF-007 | home-reviews | 3 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
+| CF-007 | reviews | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-008 | home-faq | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-009 | home-final-form | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-010 | home-clinic-landscape | 3 | SHARED_BUT_PAGE_NAMED | P2 | RENAME_AND_UNIVERSALIZE |
@@ -110,8 +110,25 @@
 
 ---
 
+## Reviews family (CF-007 detail)
+
+| Item | Value |
+|------|-------|
+| Canonical partial | `src/partials/sections/reviews.html` |
+| Canonical root class | `.reviews` |
+| Pages using | `index.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
+| HTML copies | 0 — single include |
+| CSS copies | 1 — `.reviews*` in `style.scss` |
+| JS init | 1 — `[data-reviews-slider]` in `main.js` (`initReviews`) |
+| Old name retired | `home-reviews` |
+| Aliases | 0 |
+| Classification | UNIVERSALIZED |
+| Implementation status | COMPLETE |
+
+---
+
 ## Next recommended wave
 
-**CF-007 — Reviews (`home-reviews`)** — NOT AUTHORIZED
+**CF-008 — FAQ (`home-faq`)** — NOT AUTHORIZED
 
-Reason: multi-page reuse; Swiper config in main.js — verify single init path during wave.
+Reason: multi-page reuse; accordion init in main.js — verify single init path during wave.

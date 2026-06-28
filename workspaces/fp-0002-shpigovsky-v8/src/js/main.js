@@ -257,8 +257,8 @@
 	}
 })();
 
-// FP-0002 v6 — home reviews swiper
-(function initHomeReviews() {
+// FP-0002 v8 — reviews swiper (CF-007 neutral)
+(function initReviews() {
 	'use strict';
 
 	function boot() {

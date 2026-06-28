@@ -53,4 +53,4 @@
 
 ## Next wave
 
-CF-007 `home-reviews` — **NOT AUTHORIZED**
+CF-008 `home-faq` — **NOT AUTHORIZED**
