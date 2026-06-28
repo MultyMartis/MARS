@@ -162,8 +162,8 @@ All future SITE-002 tasks (local fonts, new About, CTA, intro blocks, Home, PDP 
 | Item | Value |
 |------|--------|
 | Pre-work checkpoint | `8ffe77d7` |
-| Final commit | *(see post-commit HEAD below)* |
-| Push | **requested** |
+| Final commit | `989ba31e` — `feat(site-002): register operator manual polish canonical checkpoint 01` |
+| Push | **DONE** — `origin/mars/canonical-post-recovery` |
 | Live TEST changes | **NONE** |
 
 ---
