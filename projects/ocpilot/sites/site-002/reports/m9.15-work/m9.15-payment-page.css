@@ -1,0 +1,325 @@
+/* ==========================================================================
+   M9.15 — Payment page — corporate settlement
+   ========================================================================== */
+
+.zpm-payment-page {
+  padding-bottom: var(--pad-y);
+}
+
+.zpm-payment-section {
+  padding-top: var(--pad-y);
+}
+
+.zpm-payment-section__title {
+  margin: 0 0 var(--pad-gap);
+}
+
+.zpm-payment-section__intro,
+.zpm-payment-documents__body,
+.zpm-payment-legal__body {
+  margin: 0 0 var(--pad-gap);
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+  max-width: 920px;
+}
+
+.zpm-payment-section__note,
+.zpm-payment-section__helper,
+.zpm-payment-legal__helper,
+.zpm-payment-legal__link,
+.zpm-payment-cta__pointers {
+  margin: 0 0 var(--pad-gap);
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+  max-width: 920px;
+}
+
+.zpm-payment-section__note:last-child,
+.zpm-payment-section__helper:last-child,
+.zpm-payment-legal__helper:last-child,
+.zpm-payment-legal__link:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline — SC-04 (6 steps) */
+.zpm-payment-timeline-section {
+  background-color: var(--main-light-color, #f8f8f8);
+  padding-bottom: var(--pad-y);
+}
+
+.zpm-payment-timeline.zpm-corp-timeline {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.zpm-payment-timeline__handoff {
+  margin: var(--pad-gap-mini) 0 0;
+  font-size: var(--base-Font-size);
+}
+
+.zpm-payment-timeline__handoff a {
+  font-weight: var(--large-Font-weight);
+}
+
+/* Methods — BLOCK 02 */
+.zpm-payment-methods__stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap);
+  margin-bottom: var(--pad-gap);
+}
+
+.zpm-payment-method__title {
+  margin: 0 0 var(--pad-gap-mini);
+}
+
+.zpm-payment-method p {
+  margin: 0 0 var(--pad-gap-mini);
+  max-width: 920px;
+}
+
+.zpm-payment-method p:last-child {
+  margin-bottom: 0;
+}
+
+.zpm-payment-method__list {
+  margin: 0 0 var(--pad-gap-mini);
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 920px;
+}
+
+.zpm-payment-methods__table-wrap {
+  overflow-x: auto;
+  margin: var(--pad-gap) 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.zpm-payment-methods__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+.zpm-payment-methods__table th,
+.zpm-payment-methods__table td {
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  vertical-align: top;
+}
+
+.zpm-payment-methods__table thead th {
+  background-color: var(--main-light-color, #f8f8f8);
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-payment-methods__table tbody tr:nth-child(even) td {
+  background-color: rgba(248, 248, 248, 0.5);
+}
+
+/* Documents — proof cards SC-06 */
+.zpm-payment-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  margin-bottom: var(--pad-gap);
+}
+
+.zpm-payment-proof-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-mini);
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  min-width: 0;
+}
+
+.zpm-payment-proof-card__title {
+  margin: 0;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+}
+
+.zpm-payment-proof-card__text {
+  margin: 0;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+}
+
+/* Legal entity strip */
+.zpm-payment-legal__facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  margin: 0 0 var(--pad-gap);
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: var(--main-light-color, #f8f8f8);
+}
+
+.zpm-payment-legal__fact {
+  margin: 0;
+  min-width: 0;
+}
+
+.zpm-payment-legal__label {
+  margin: 0 0 6px;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  font-weight: var(--large-Font-weight);
+  color: var(--accent-color-02, #99303d);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.zpm-payment-legal__value {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* CTA — Commercial Trust reuse */
+.zpm-payment-cta {
+  padding-top: var(--pad-y);
+}
+
+.zpm-payment-cta .zpm-commercial-trust__wrap {
+  align-items: stretch;
+}
+
+.zpm-payment-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap);
+}
+
+.zpm-payment-cta__link {
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+  color: var(--accent-color-01);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.zpm-payment-cta__link:hover,
+.zpm-payment-cta__link:focus-visible {
+  color: var(--main-dark-color);
+}
+
+.zpm-payment-cta__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap-mini);
+  font-size: var(--base-Font-size);
+}
+
+.zpm-payment-cta__phone,
+.zpm-payment-cta__email {
+  color: inherit;
+  text-decoration: none;
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-payment-cta__phone:hover,
+.zpm-payment-cta__phone:focus-visible,
+.zpm-payment-cta__email:hover,
+.zpm-payment-cta__email:focus-visible {
+  color: var(--accent-color-01);
+}
+
+@media (max-width: 1310px) {
+  .zpm-payment-timeline.zpm-corp-timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .zpm-payment-proof__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .zpm-payment-timeline.zpm-corp-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-payment-proof__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-payment-legal__facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-payment-cta .zpm-commercial-trust__wrap {
+    flex-direction: column;
+  }
+
+  .zpm-payment-cta .zpm-commercial-trust__form-wrap {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .zpm-payment-timeline.zpm-corp-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-payment-proof__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-payment-legal__facts {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-payment-methods__table thead {
+    display: none;
+  }
+
+  .zpm-payment-methods__table tr {
+    display: block;
+    margin-bottom: var(--pad-gap-mini);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-main);
+    overflow: hidden;
+  }
+
+  .zpm-payment-methods__table td {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 14px;
+  }
+
+  .zpm-payment-methods__table td:last-child {
+    border-bottom: 0;
+  }
+
+  .zpm-payment-methods__table td::before {
+    content: attr(data-label) ": ";
+    font-weight: var(--large-Font-weight);
+  }
+}
+
+@media (max-width: 390px) {
+  .zpm-payment-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zpm-payment-cta__primary {
+    width: 100%;
+    text-align: center;
+  }
+}

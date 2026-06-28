@@ -192,7 +192,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 |----|------|------------|----------|-----|------|----------------|--------------|
 | M9.13 | About Company | `/about` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED · REJECTED · RESTORED** |
 | M9.14 | Delivery | `/delivery` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED** |
-| M9.15 | Payment | `/payment-methods` | Complete | Mapped | Substantively complete (v1) | Draft complete | Draft complete |
+| M9.15 | Payment | `/payment-methods` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.16 | Dealers | `/dealers` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
 | M9.17 | Warranty | `/guarantee` | Complete | Mapped | Substantively complete (v1) | Draft complete | Draft complete |
 | M9.18 | Custom Manufacturing | `/custom-equipment` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
@@ -205,7 +205,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 **M9.14 Delivery implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.14-DELIVERY-01` · [SITE-002-M9.14-DELIVERY-IMPLEMENTATION.md](reports/SITE-002-M9.14-DELIVERY-IMPLEMENTATION.md)
 
-**M9.15 Payment implementation:** **NOT_IMPLEMENTED / PLANNED_NOT_STARTED** — research + copy + charters preserved. See [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md).
+**M9.15 Payment implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.15-PAYMENT-01` · [SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md](reports/SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md)
 
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
 

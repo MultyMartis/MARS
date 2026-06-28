@@ -1,0 +1,108 @@
+{
+  "pass": "m9.15-payment-implementation",
+  "timestamp": "2026-06-28T10:20:31.750868+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "live_url": "https://zpm.new-site.space/payment-methods",
+  "route": "information/payment",
+  "seo_keyword": "payment-methods",
+  "files": {
+    "catalog/controller/information/payment.php": {
+      "pre_sha256": "518de304839b05bb33f4dbcb0d064002f9439fac98c5fc06df53194cdea581dc",
+      "pre_bytes": 1777,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\payment.php.pre-m9.15-payment.bak",
+      "is_new": true,
+      "post_sha256": "0ad76f6c434d262c74f21e5ca10edc95edf1f4428bfa8760d18b8132e94a6034",
+      "post_bytes": 3444
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "pre_sha256": "c554687a1dced2d077a5221fd97435a41d66401b4dc02e18aec5c9ba554221cd",
+      "pre_bytes": 35701,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\payment.twig.pre-m9.15-payment.bak",
+      "is_new": true,
+      "post_sha256": "47a05b97aca9570a08f63ae1271b740f650fcec42ba21f9a9801b4ba9b38ed21",
+      "post_bytes": 33501
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "56bc3c3b494f1e56300a46ec2e76a9273d022098cef1294b134e52bddc79fce9",
+      "pre_bytes": 331736,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.15-payment.bak",
+      "is_new": false,
+      "post_sha256": "84dd8131868e2823d0155dd35301cbc3c3e5f2fadd69b3a91b2b305c8d014afa",
+      "post_bytes": 328477
+    },
+    "assets/js/main.js": {
+      "pre_sha256": "18d8cbf707db1f3909467f2b57d7b2100a9fc7dc6cc90702ae1503c7f8239160",
+      "pre_bytes": 204062,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.15-payment.bak",
+      "is_new": false,
+      "post_sha256": "1c68cb02e6e3e4d3c568a00540eec408edb5bf542f742e52d6ca92c039e01464",
+      "post_bytes": 204083
+    }
+  },
+  "preflight": {
+    "catalog/controller/information/payment.php": {
+      "exists": true,
+      "pre_sha256": "518de304839b05bb33f4dbcb0d064002f9439fac98c5fc06df53194cdea581dc",
+      "pre_bytes": 1777
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "exists": true,
+      "pre_sha256": "c554687a1dced2d077a5221fd97435a41d66401b4dc02e18aec5c9ba554221cd",
+      "pre_bytes": 35701
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "56bc3c3b494f1e56300a46ec2e76a9273d022098cef1294b134e52bddc79fce9",
+      "pre_bytes": 331736
+    },
+    "assets/js/main.js": {
+      "exists": true,
+      "pre_sha256": "18d8cbf707db1f3909467f2b57d7b2100a9fc7dc6cc90702ae1503c7f8239160",
+      "pre_bytes": 204062
+    }
+  },
+  "seo_url_patch_response": {
+    "ok": true,
+    "before": {
+      "seo_url_id": "1045",
+      "query": "information/payment",
+      "keyword": "payment-methods"
+    },
+    "after": {
+      "seo_url_id": "1045",
+      "query": "information/payment",
+      "keyword": "payment-methods"
+    }
+  },
+  "seo_url_updated": true,
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_ok": true,
+    "has_zpm_payment_page": true,
+    "has_page_intro_lead": true,
+    "has_timeline": true,
+    "timeline_6_steps": true,
+    "step6_preparation": true,
+    "has_methods": true,
+    "has_documents": true,
+    "has_proof_cards": true,
+    "has_legal": true,
+    "has_faq": true,
+    "faq_8_items": true,
+    "has_cta_title": true,
+    "has_form_title": false,
+    "company_required": true,
+    "meta_title": true,
+    "meta_description": true,
+    "delivery_link": true,
+    "no_bank_widgets": true,
+    "no_qr": true,
+    "no_moscow_warehouse": false,
+    "no_logistics_tk": true,
+    "commercial_trust_card": true,
+    "zpm_form": true,
+    "breadcrumb": true,
+    "h1_oplata": true,
+    "all_pass": false
+  }
+}

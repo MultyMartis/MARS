@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining corp pages):** M9.14 **IMPLEMENTED** · M9.15 → M9.17 → M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+**Operator implementation order (remaining corp pages):** M9.14 **IMPLEMENTED** · M9.15 **IMPLEMENTED** · M9.17 → M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
 
 ---
 
@@ -1045,7 +1045,7 @@ Corporate page `/delivery` — route `information/delivery`. **Implemented on li
 | **Controller** | `catalog/controller/information/delivery.php` |
 | **Twig** | `catalog/view/theme/default/template/information/delivery.twig` |
 | **CSS namespace** | `zpm-delivery-page`, `zpm-delivery-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
-| **JS** | Corp FAQ accordion append in `assets/js/main.js` — scoped `[data-delivery-faq]` |
+| **JS** | Corp FAQ accordion in `assets/js/main.js` — scoped `[data-delivery-faq]` |
 | **Copy** | [BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md](../copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md) |
 | **Authority** | `SITE-002-STABLE-LIVE-M9.14-DELIVERY-01` (page domain only) |
 
@@ -1069,6 +1069,43 @@ Pageintro (H1 + Lead) → shipment points → organization (summary row) → met
 
 ---
 
+## 19. Payment Page (M9.15)
+
+Corporate page `/payment-methods` — route `information/payment`. **Implemented on live TEST** (2026-06-28).
+
+| Item | Value |
+|------|--------|
+| **Live URL** | https://zpm.new-site.space/payment-methods |
+| **Route** | `information/payment` |
+| **SEO** | `oc_seo_url` keyword `payment-methods` → `information/payment` |
+| **Controller** | `catalog/controller/information/payment.php` |
+| **Twig** | `catalog/view/theme/default/template/information/payment.twig` |
+| **CSS namespace** | `zpm-payment-page`, `zpm-payment-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS** | Corp FAQ accordion in `assets/js/main.js` — `[data-delivery-faq], [data-payment-faq]` |
+| **Copy** | [BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md](../copy/BZPM-M9.15-PAYMENT-PAGE-COPY-v1.md) |
+| **Authority** | `SITE-002-STABLE-LIVE-M9.15-PAYMENT-01` (page domain only) |
+
+### Structure
+
+Pageintro (H1 + Lead) → 6-step payment timeline (step 6 = Подготовка к отгрузке + Delivery handoff) → payment methods + summary table → document proof cards (5) → legal entity strip → FAQ (8) → Commercial Trust CTA + form (company required).
+
+### Reuse boundaries
+
+- **Commercial Trust:** CTA card + form wrap — **not** full PLP trust block
+- **Contacts:** `zpm-form` + company field — **not** contact card grid or map
+- **Delivery:** one-line / step-6 handoff only — **not** TK tables, shipment points, or logistics timeline
+- **Forbidden on page:** bank widgets · payment logos · QR · Moscow warehouse detail · freight/logistics bodies
+
+### Change rules
+
+1. Read [BZPM-M9.15-PAYMENT-DESIGN-CHARTER-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/charters/BZPM-M9.15-PAYMENT-DESIGN-CHARTER-v1.md) and **§19**
+2. Live-capture remote files before deploy
+3. Do not bleed scope into About, Delivery, Contacts, catalog, or other corp pages
+
+**Evidence:** [SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md](../reports/SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md) · [SITE-002-STABLE-LIVE-M9.15-PAYMENT-01.md](../baselines/SITE-002-STABLE-LIVE-M9.15-PAYMENT-01.md) · `reports/m9.15-work/`
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -1080,4 +1117,4 @@ Pageintro (H1 + Lead) → shipment points → organization (summary row) → met
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§18 M9.14 Delivery implemented on TEST).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§19 M9.15 Payment implemented on TEST).*
