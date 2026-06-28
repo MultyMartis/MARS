@@ -1,0 +1,91 @@
+{
+  "packet_id": "corvonero-phase-6.1-operator-decision-packet-v2",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "resolved_decisions": [
+    {
+      "decision_id": "OD-01",
+      "resolution": "PRIMARY-ONLY launch: Новосибирск + Новосибирская область; no geo campaign duplication"
+    },
+    {
+      "decision_id": "OD-02",
+      "resolution": "Six campaign families CA-01..CA-06; merged price/one-off/troubleshooting/TS ПИОТ/implementation"
+    },
+    {
+      "decision_id": "OD-03",
+      "resolution": "Product-plus-service demand HOLD — excluded from initial allocation"
+    },
+    {
+      "decision_id": "OD-04",
+      "resolution": "Troubleshooting group under CA-02, not standalone campaign"
+    },
+    {
+      "decision_id": "OD-05",
+      "resolution": "TS ПИОТ group under CA-05"
+    },
+    {
+      "decision_id": "OD-06",
+      "resolution": "No LP assignment approved — audit only"
+    },
+    {
+      "decision_id": "OD-07",
+      "resolution": "296 ABSTAIN remain outside launch architecture"
+    },
+    {
+      "decision_id": "OD-08",
+      "resolution": "P1/P2/P3 tiers per operator packet"
+    },
+    {
+      "decision_id": "OD-09",
+      "resolution": "67.5% partial coverage accepted for planning; 769 backlog visible"
+    }
+  ],
+  "remaining_decisions": [
+    {
+      "decision_id": "RD-01",
+      "topic": "Landing-page assignment per CA-01..CA-06",
+      "context": "Audit found LP_PARTIAL_MATCH or LP_GENERIC_FALLBACK on lk.corvonero.ru homepage only; corvonero.ru is IIS placeholder",
+      "options": [
+        "Approve homepage sections as interim LP per campaign",
+        "Build dedicated service URLs before ad design",
+        "Mark REQUIRED_LANDING_PAGE for each P1 family"
+      ],
+      "blocking": true
+    },
+    {
+      "decision_id": "RD-02",
+      "topic": "P1 campaign delay",
+      "context": "All P1 campaigns BLOCKED_BY_LANDING_PAGE until RD-01 resolved",
+      "blocking": true
+    },
+    {
+      "decision_id": "RD-03",
+      "topic": "CA-06 reports/processing in P2",
+      "context": "37 ACCEPT phrases; default P2 — confirm proceed after P1 or parallel",
+      "blocking": false
+    },
+    {
+      "decision_id": "RD-04",
+      "topic": "Product sales/resale in business scope",
+      "context": "OD-03 HOLD — /products catalog exists; confirm whether product PPC is ever in scope",
+      "blocking": false
+    },
+    {
+      "decision_id": "RD-05",
+      "topic": "Future expansion timing",
+      "context": "44 ACCEPT phrases carry non-primary geo metadata — expansion NOT AUTHORIZED FOR INITIAL LAUNCH",
+      "blocking": false
+    }
+  ],
+  "not_authorized": [
+    "Ad copy",
+    "Final minus-word deployment",
+    "Yandex Direct import",
+    "Commander",
+    "Campaign launch",
+    "769 backlog processing"
+  ]
+}

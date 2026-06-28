@@ -1,0 +1,151 @@
+{
+  "architecture_id": "corvonero-phase-6.4-lp01-message-architecture-v1",
+  "landing_page_id": "LP-01",
+  "campaign_id": "CA-01",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "default_first_screen_variant": "A",
+  "layers": [
+    {
+      "layer_id": "first_screen",
+      "order": 1,
+      "purpose": "Immediate message match for specialist-search traffic",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["H1 programmer/specialist 1C", "brand Korvo Nero", "Novosibirsk geo", "primary CTA", "phone above fold"],
+      "prohibited_claims": ["official partner", "SLA", "fixed project prices", "license sales", "unverified cases"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order"],
+      "phrase_families": ["программист 1с", "специалист 1с", "1с программист новосибирск", "удалённо"],
+      "cta_role": {"primary": "Обсудить задачу", "secondary": "Получить оценку"}
+    },
+    {
+      "layer_id": "audience",
+      "order": 2,
+      "h2_direction_ru": "Для кого услуги программиста 1С",
+      "purpose": "B2B qualification",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["business decision-makers", "accounting/IT leads", "not training/employment"],
+      "prohibited_claims": ["job offers", "courses", "salary"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "service_scope",
+      "order": 3,
+      "h2_direction_ru": "Что делает программист 1С",
+      "purpose": "Direct service scope match",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["approved 10-item scope list"],
+      "prohibited_claims": ["training", "licensing", "24/7 support"],
+      "ad_groups": ["ca-01-direct-service-order", "ca-01-specialist-search"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "typical_tasks",
+      "order": 4,
+      "h2_direction_ru": "Типовые задачи",
+      "purpose": "Task/result intent coverage",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["error fix", "reports", "integrations", "marking", "updates"],
+      "prohibited_claims": ["named clients", "metrics", "guaranteed timelines"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "configurations",
+      "order": 5,
+      "h2_direction_ru": "Конфигурации 1С",
+      "purpose": "Configuration-specific match",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["УТ", "УНФ", "Розница", "КА", "БП"],
+      "prohibited_claims": ["all 1C products"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "work_format",
+      "order": 6,
+      "h2_direction_ru": "Формат работы",
+      "purpose": "Remote vs on-site boundary",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["remote Russia", "on-site Novosibirsk only"],
+      "prohibited_claims": ["on-site region-wide", "invented office address"],
+      "ad_groups": ["ca-01-specialist-search"],
+      "cta_role": {"primary": "Заказать звонок"}
+    },
+    {
+      "layer_id": "pricing",
+      "order": 7,
+      "h2_direction_ru": "Стоимость работ",
+      "purpose": "Price intent match",
+      "audience_intent": "PRICE_AND_COST",
+      "required_content": ["from 3000 RUB/hour", "minimum 2 hours", "cost factors"],
+      "prohibited_claims": ["VAT", "packages", "discounts"],
+      "ad_groups": ["ca-01-price-intent"],
+      "cta_role": {"primary": "Получить оценку"}
+    },
+    {
+      "layer_id": "process",
+      "order": 8,
+      "h2_direction_ru": "Как мы работаем",
+      "purpose": "Engagement process clarity",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["request", "clarify", "estimate", "execute", "deliver"],
+      "prohibited_claims": ["guaranteed response time"],
+      "ad_groups": ["ca-01-direct-service-order"],
+      "cta_role": {"primary": "Заказать звонок"}
+    },
+    {
+      "layer_id": "trust",
+      "order": 9,
+      "h2_direction_ru": "Почему обращаются в Корво Неро",
+      "purpose": "Evidence-based trust",
+      "audience_intent": "SPECIALIST_SEARCH",
+      "required_content": ["automation center positioning", "implementation and support experience"],
+      "prohibited_claims": ["partner badges", "cases", "reviews"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    },
+    {
+      "layer_id": "faq",
+      "order": 10,
+      "h2_direction_ru": "Частые вопросы",
+      "purpose": "Objection and long-tail handling",
+      "audience_intent": "PRICE_AND_COST",
+      "required_content": ["8-10 approved Q&A"],
+      "prohibited_claims": ["SLA", "VAT", "partner status"],
+      "ad_groups": ["ca-01-price-intent", "ca-01-specialist-search"],
+      "cta_role": {"primary": "scroll to form"}
+    },
+    {
+      "layer_id": "messengers_phone",
+      "order": 11,
+      "h2_direction_ru": "Связаться с нами",
+      "purpose": "Multi-channel contact",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["phone +7 (383) 390-29-28", "MAX", "Telegram", "WhatsApp"],
+      "prohibited_claims": ["fabricated messenger URLs"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "click-to-call"}
+    },
+    {
+      "layer_id": "lead_form",
+      "order": 12,
+      "h2_direction_ru": "Оставить заявку",
+      "purpose": "Primary conversion",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["name optional", "phone required", "consent", "submit Заказать звонок"],
+      "prohibited_claims": ["extra mandatory fields"],
+      "ad_groups": ["ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"submit": "Заказать звонок"}
+    },
+    {
+      "layer_id": "final_cta",
+      "order": 13,
+      "purpose": "Final conversion",
+      "audience_intent": "DIRECT_SERVICE_ORDER",
+      "required_content": ["recap", "Обсудить задачу", "phone"],
+      "prohibited_claims": ["false urgency"],
+      "ad_groups": ["ca-01-specialist-search", "ca-01-direct-service-order", "ca-01-price-intent"],
+      "cta_role": {"primary": "Обсудить задачу"}
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "result_id": "corvonero-phase-6.1-architecture-closure-v1",
+  "generated_at": "2026-06-28T18:43:53.434Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "operator_decisions_applied": {
+    "OD-01": "PRIMARY-ONLY launch: Новосибирск + Новосибирская область; no geo campaign duplication",
+    "OD-02": "Six campaign families CA-01..CA-06; merged price/one-off/troubleshooting/TS ПИОТ/implementation",
+    "OD-03": "Product-plus-service demand HOLD — excluded from initial allocation",
+    "OD-04": "Troubleshooting group under CA-02, not standalone campaign",
+    "OD-05": "TS ПИОТ group under CA-05",
+    "OD-06": "No LP assignment approved — audit only",
+    "OD-07": "296 ABSTAIN remain outside launch architecture",
+    "OD-08": "P1/P2/P3 tiers per operator packet",
+    "OD-09": "67.5% partial coverage accepted for planning; 769 backlog visible"
+  },
+  "preflight": {
+    "branch": "mars/canonical-post-recovery",
+    "head_checkpoint": "88facdb7",
+    "phase6_v1_artefacts_present": true,
+    "accept_count": 935,
+    "reject_count": 368,
+    "abstain_count": 296,
+    "registry_count": 1599,
+    "signoff_integrity": {
+      "pass": true,
+      "unique_ids": 1599,
+      "duplicates": 0,
+      "missing_assessed_ids": 0,
+      "unprocessed_ids": 769,
+      "overlap": 0,
+      "union": 2368,
+      "final_counts": {
+        "ACCEPT": 935,
+        "REJECT": 368,
+        "ABSTAIN": 296
+      },
+      "phase51_counts": {
+        "ACCEPT": 926,
+        "REJECT": 358,
+        "ABSTAIN": 315
+      }
+    },
+    "provider_calls": "NONE",
+    "reconciled": true
+  },
+  "reconciliation": {
+    "equation": "935 ACCEPT = allocated architecture-v2 IDs + explicit planning holdout IDs",
+    "accept_total": 935,
+    "allocated_count": 935,
+    "planning_holdout_count": 0,
+    "duplicates": 0,
+    "missing_accept_ids": [],
+    "reject_ids_allocated": [],
+    "abstain_ids_allocated": [],
+    "unprocessed_ids_allocated": [],
+    "pass": true
+  },
+  "website_audit": {
+    "pages_inventoried": 5,
+    "sites": [
+      "corvonero.ru",
+      "lk.corvonero.ru"
+    ]
+  },
+  "phase61_verdict": {
+    "phase": "6.1",
+    "verdict": "PASS — OPERATOR LANDING-PAGE AND ARCHITECTURE REVIEW REQUIRED",
+    "campaign_architecture": "CONSOLIDATED V2",
+    "ad_creation": "NOT STARTED"
+  },
+  "summary": {
+    "campaign_families_v2": 6,
+    "ad_groups_v2": 21,
+    "ad_groups_v1": 30,
+    "accept_allocated": 935,
+    "abstain_holdout": 296,
+    "unprocessed_backlog": 0
+  }
+}

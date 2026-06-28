@@ -1,0 +1,82 @@
+{
+  "handoff_id": "corvonero-phase-6.2-website-implementation-handoff-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "scope": "Landing page production on lk.corvonero.ru domain — corvonero.ru prohibited as LP",
+  "required_page_inventory": [
+    {
+      "landing_page_id": "LP-01",
+      "slug": "programmist-1s",
+      "campaign_id": "CA-01",
+      "priority": "P1"
+    },
+    {
+      "landing_page_id": "LP-02",
+      "slug": "soprovozhdenie-1s",
+      "campaign_id": "CA-02",
+      "priority": "P1"
+    },
+    {
+      "landing_page_id": "LP-03",
+      "slug": "dorabotka-razrabotka-1s",
+      "campaign_id": "CA-03",
+      "priority": "P1"
+    },
+    {
+      "landing_page_id": "LP-04",
+      "slug": "integracii-1s",
+      "campaign_id": "CA-04",
+      "priority": "P1"
+    },
+    {
+      "landing_page_id": "LP-05",
+      "slug": "markirovka-chestny-znak",
+      "campaign_id": "CA-05",
+      "priority": "P1"
+    },
+    {
+      "landing_page_id": "LP-06",
+      "slug": "otchety-obrabotki-1s",
+      "campaign_id": "CA-06",
+      "priority": "P2"
+    }
+  ],
+  "content_requirements_source": "CORVONERO-PHASE-6.2-LP-*-REQUIREMENTS-v1",
+  "campaign_group_mapping": "CORVONERO-PHASE-6.2-GROUP-TO-LP-MAP-v1.json",
+  "evidence_gaps": "CORVONERO-PHASE-6.2-CONTENT-EVIDENCE-REQUIREMENTS-v1.json",
+  "technical_constraints": [
+    "Do not use corvonero.ru as LP",
+    "Do not route service campaigns to /products",
+    "Dedicated URL per LP-01..LP-06",
+    "Preserve phone +7 (383) 390-29-28 visibility",
+    "Form privacy compliance required",
+    "No invented prices or SLA",
+    "Tilda or existing stack — CMS not prescribed unless operator decides"
+  ],
+  "dependencies": [
+    "Operator Decision Packet v3 resolutions",
+    "Client evidence for blocking fields",
+    "LP production priority sequence",
+    "Operator approval per LP before ad design"
+  ],
+  "acceptance_criteria": [
+    "Each LP has unique URL and H1 matching campaign family",
+    "All ad groups for campaign map to one LP with message match",
+    "Primary geography stated",
+    "CTA and contact functional",
+    "No unsupported claims (see message evidence classifications)",
+    "Mobile usable",
+    "Operator sign-off before ad design"
+  ],
+  "prohibited_assumptions": [
+    "Homepage copy is factually complete",
+    "Generic homepage suffices for P1 launch",
+    "Product catalog approved for service ads",
+    "Russia-wide service without confirmation",
+    "Partner/certification claims without evidence"
+  ]
+}

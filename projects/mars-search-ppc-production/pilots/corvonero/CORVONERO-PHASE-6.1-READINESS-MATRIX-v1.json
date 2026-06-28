@@ -1,0 +1,83 @@
+{
+  "matrix_id": "corvonero-phase-6.1-readiness-matrix-v1",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "overall_architecture": "CONSOLIDATED_V2",
+  "ad_creation": "NOT STARTED",
+  "rows": [
+    {
+      "campaign": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "priority": "P1",
+      "phrase_count": 404,
+      "ad_groups": 3,
+      "lp_status": "LP_GENERIC_FALLBACK",
+      "architecture_status": "CONSOLIDATED_V2",
+      "ad_design_readiness": "NOT READY",
+      "blocker": "Landing page not approved / LP_PARTIAL or GENERIC"
+    },
+    {
+      "campaign": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "priority": "P1",
+      "phrase_count": 155,
+      "ad_groups": 6,
+      "lp_status": "LP_PARTIAL_MATCH",
+      "architecture_status": "CONSOLIDATED_V2",
+      "ad_design_readiness": "NOT READY",
+      "blocker": "Landing page not approved / LP_PARTIAL or GENERIC"
+    },
+    {
+      "campaign": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "priority": "P1",
+      "phrase_count": 71,
+      "ad_groups": 3,
+      "lp_status": "LP_PARTIAL_MATCH",
+      "architecture_status": "CONSOLIDATED_V2",
+      "ad_design_readiness": "NOT READY",
+      "blocker": "Landing page not approved / LP_PARTIAL or GENERIC"
+    },
+    {
+      "campaign": "CA-04",
+      "campaign_name": "Интеграции 1С",
+      "priority": "P1",
+      "phrase_count": 48,
+      "ad_groups": 1,
+      "lp_status": "LP_PARTIAL_MATCH",
+      "architecture_status": "CONSOLIDATED_V2",
+      "ad_design_readiness": "NOT READY",
+      "blocker": "Landing page not approved / LP_PARTIAL or GENERIC"
+    },
+    {
+      "campaign": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "priority": "P1",
+      "phrase_count": 220,
+      "ad_groups": 5,
+      "lp_status": "LP_PARTIAL_MATCH",
+      "architecture_status": "CONSOLIDATED_V2",
+      "ad_design_readiness": "NOT READY",
+      "blocker": "Landing page not approved / LP_PARTIAL or GENERIC"
+    },
+    {
+      "campaign": "CA-06",
+      "campaign_name": "Отчёты и обработки 1С",
+      "priority": "P2",
+      "phrase_count": 37,
+      "ad_groups": 3,
+      "lp_status": "LP_PARTIAL_MATCH",
+      "architecture_status": "CONSOLIDATED_V2",
+      "ad_design_readiness": "NOT READY",
+      "blocker": "Landing page not approved / LP_PARTIAL or GENERIC"
+    }
+  ],
+  "summary": {
+    "campaigns_total": 6,
+    "blocked_by_lp": 6,
+    "p1_campaigns": 5
+  }
+}

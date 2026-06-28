@@ -1,0 +1,63 @@
+{
+  "result_id": "corvonero-phase-6-partial-campaign-planning-v1",
+  "run_id": "corv-semantic-v2-20260626-004",
+  "generated_at": "2026-06-28T18:36:20.523Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "provider_calls": "FROZEN",
+  "preflight": {
+    "accept_count": 935,
+    "reject_count": 368,
+    "abstain_count": 296,
+    "registry_count": 1599,
+    "signoff_integrity": {
+      "pass": true,
+      "unique_ids": 1599,
+      "duplicates": 0,
+      "missing_assessed_ids": 0,
+      "unprocessed_ids": 769,
+      "overlap": 0,
+      "union": 2368,
+      "final_counts": {
+        "ACCEPT": 935,
+        "REJECT": 368,
+        "ABSTAIN": 296
+      },
+      "phase51_counts": {
+        "ACCEPT": 926,
+        "REJECT": 358,
+        "ABSTAIN": 315
+      }
+    },
+    "reconciled": true
+  },
+  "reconciliation": {
+    "equation": "935 ACCEPT = allocated + planning_holdout (0 by design)",
+    "accept_total": 935,
+    "allocated_count": 935,
+    "planning_holdout_count": 0,
+    "duplicates": 0,
+    "missing_accept_ids": [],
+    "reject_ids_allocated": [],
+    "abstain_ids_allocated": [],
+    "unprocessed_ids_allocated": [],
+    "pass": true
+  },
+  "phase6_verdict": {
+    "phase": 6,
+    "verdict": "PASS — OPERATOR ARCHITECTURE REVIEW REQUIRED",
+    "project": "READY_FOR_PARTIAL_CAMPAIGN-ARCHITECTURE SIGN-OFF",
+    "note": "PASS does not authorize ad creation, import or launch"
+  },
+  "summary": {
+    "campaign_families": 11,
+    "ad_groups_draft": 30,
+    "accept_allocated": 935,
+    "abstain_holdout": 296,
+    "reject_exclusion_only": 368,
+    "unprocessed_excluded": 769
+  }
+}

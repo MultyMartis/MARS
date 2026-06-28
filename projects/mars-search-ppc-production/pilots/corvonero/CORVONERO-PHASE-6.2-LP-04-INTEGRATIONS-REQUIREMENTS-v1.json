@@ -1,0 +1,147 @@
+{
+  "requirements_id": "corvonero-phase-6.2-lp-04-requirements-v1",
+  "landing_page_id": "LP-04",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "A_commercial_purpose": {
+    "target_service": "1C integrations (Bitrix, sites, API, sync)",
+    "primary_audience": "Businesses needing data exchange between 1C and external systems",
+    "primary_conversion": "Integration scoping inquiry",
+    "commercial_objective": "Capture integration-specific queries",
+    "campaign_ids": [
+      "CA-04"
+    ],
+    "ad_group_ids": [
+      "ca-04-integration"
+    ],
+    "allocated_phrase_count": 48,
+    "priority_tier": "P1"
+  },
+  "B_intent_coverage": {
+    "primary_intents": [
+      "INTEGRATION",
+      "MODIFICATION",
+      "DIRECT_SERVICE_ORDER",
+      "PRICE_AND_COST"
+    ],
+    "permitted_secondary_intents": [
+      "MODIFICATION",
+      "DIRECT_SERVICE_ORDER",
+      "IMPLEMENTATION"
+    ],
+    "prohibited_intents": [
+      "CAREER_OR_EDUCATION",
+      "INFORMATIONAL",
+      "PRODUCT_OR_LICENSE"
+    ],
+    "representative_queries": [
+      "программист 1с битрикс",
+      "доработка 1с битрикс",
+      "1с доработка синхронизации"
+    ],
+    "ambiguous_queries_excluded": [
+      "product license purchase",
+      "generic programmer without integration context"
+    ],
+    "ad_groups": [
+      {
+        "group_id": "ca-04-integration",
+        "primary_intent": "INTEGRATION",
+        "phrase_count": 48,
+        "representative_phrases": [
+          "программист 1с битрикс",
+          "доработка 1с битрикс",
+          "1с доработка синхронизации",
+          "доработка сайта на 1с битрикс",
+          "интеграция сайта с 1с"
+        ]
+      }
+    ]
+  },
+  "C_required_content_blocks": [
+    "first_screen_integration_proposition",
+    "value_proposition_single_source_of_truth",
+    "service_scope_bitrix_site_api_edi",
+    "problems_double_entry_sync_failures",
+    "integration_examples_systems_list",
+    "process_audit_design_implement_support",
+    "delivery_remote_onsite",
+    "systems_supported_list",
+    "pricing_approach_project_based",
+    "trust_integration_cases",
+    "faq_compatibility",
+    "cta_request_integration_audit",
+    "contact_block"
+  ],
+  "D_required_message_evidence": {
+    "company_name_korvo_nero": "CONFIRMED",
+    "phone_383_390_29_28": "CONFIRMED",
+    "service_delivery_novosibirsk": "NEEDS_OPERATOR_CONFIRMATION",
+    "remote_service_russia": "NEEDS_CLIENT_CONFIRMATION",
+    "hourly_rates": "PROHIBITED_UNSUPPORTED",
+    "partner_1c_status": "NEEDS_CLIENT_CONFIRMATION",
+    "response_time_sla": "PROHIBITED_UNSUPPORTED",
+    "marking_competency": "NEEDS_CLIENT_CONFIRMATION",
+    "integration_systems_list": "NEEDS_CLIENT_CONFIRMATION",
+    "case_studies": "NEEDS_CLIENT_CONFIRMATION",
+    "nds_vat_included": "NEEDS_OPERATOR_CONFIRMATION"
+  },
+  "E_conversion_requirements": {
+    "primary_cta": "Request service / call specialist — service-specific label required",
+    "secondary_cta": "Phone click +7 (383) 390-29-28",
+    "required_form_fields": [
+      "name",
+      "phone_or_email",
+      "company_optional",
+      "task_description",
+      "configuration_optional"
+    ],
+    "phone_visibility": "Above fold and footer — required",
+    "messenger_requirements": "NEEDS_OPERATOR_CONFIRMATION — not confirmed in audit",
+    "response_time_claim_status": "PROHIBITED_UNSUPPORTED unless client confirms",
+    "form_privacy_legal": "Privacy consent + PD processing notice — required at implementation",
+    "analytics_events_required_later": [
+      "form_submit",
+      "phone_click",
+      "cta_click",
+      "scroll_depth_optional"
+    ]
+  },
+  "F_search_advertising_alignment": {
+    "campaign_message_match": "First screen and H1 must match Интеграции 1С ad groups",
+    "allowed_service_language": [
+      "SF-INTEGRATIONS"
+    ],
+    "risky_wording": [
+      "интеграция с любой системой без списка"
+    ],
+    "exclusions_reference": "CORVONERO-PHASE-6.1-EXCLUSION-BOUNDARIES-v2.json",
+    "snippet_sections_required": [
+      {
+        "intent_group": "ca-04-integration",
+        "page_section": "Section addressing INTEGRATION"
+      }
+    ]
+  },
+  "G_geography": {
+    "primary": "Новосибирск + Новосибирская область",
+    "remote_service": "Mention only where operator/client confirms scope",
+    "expansion_cities": "Do not feature in initial-launch LP copy",
+    "office_locations": "Do not invent — SAFE UNKNOWN"
+  },
+  "H_seo_technical_recommendations": {
+    "recommended_url_slug": "integracii-1s",
+    "recommended_base_path": "https://lk.corvonero.ru/integracii-1s/",
+    "title_direction": "Интеграции 1С — Корво Неро, Новосибирск",
+    "h1_direction": "Интеграция 1С с сайтом, Bitrix и внешними системами",
+    "anchor_structure": "Single H1; H2 per major content block",
+    "canonical": "Self-referencing canonical on dedicated URL",
+    "mobile_requirements": "Responsive; click-to-call; form usable at 320px",
+    "form_call_tracking": "Call tracking and form goal tags — configure at launch prep",
+    "performance": "LCP target planning only — no heavy unoptimized assets"
+  }
+}

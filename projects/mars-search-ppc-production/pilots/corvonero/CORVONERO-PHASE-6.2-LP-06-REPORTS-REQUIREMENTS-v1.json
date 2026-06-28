@@ -1,0 +1,183 @@
+{
+  "requirements_id": "corvonero-phase-6.2-lp-06-requirements-v1",
+  "landing_page_id": "LP-06",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "A_commercial_purpose": {
+    "target_service": "Custom reports, processing, print forms in 1C",
+    "primary_audience": "Users needing report/processing/print-form development",
+    "primary_conversion": "Task specification inquiry",
+    "commercial_objective": "Capture reports/processing demand (P2 wave)",
+    "campaign_ids": [
+      "CA-06"
+    ],
+    "ad_group_ids": [
+      "ca-06-direct-service-order",
+      "ca-06-modification",
+      "ca-06-specialist-search"
+    ],
+    "allocated_phrase_count": 37,
+    "priority_tier": "P2"
+  },
+  "B_intent_coverage": {
+    "primary_intents": [
+      "MODIFICATION",
+      "DIRECT_SERVICE_ORDER",
+      "SPECIALIST_SEARCH",
+      "PRICE_AND_COST"
+    ],
+    "permitted_secondary_intents": [
+      "DIRECT_SERVICE_ORDER",
+      "SPECIALIST_SEARCH"
+    ],
+    "prohibited_intents": [
+      "CAREER_OR_EDUCATION",
+      "INFORMATIONAL",
+      "FREE-DOWNLOADS"
+    ],
+    "representative_queries": [
+      "создание печатной формы 1с",
+      "1с печатная форма договора",
+      "настройка печатных форм в 1с",
+      "1с доработка отчетов",
+      "1с доработка печатной формы",
+      "1с доработка отчета движение денежных средств",
+      "отчет программиста 1с",
+      "программист 1с обработки",
+      "я программист 1с запросики отчетики"
+    ],
+    "ambiguous_queries_excluded": [
+      "free report templates",
+      "DIY query tutorials"
+    ],
+    "ad_groups": [
+      {
+        "group_id": "ca-06-direct-service-order",
+        "primary_intent": "DIRECT_SERVICE_ORDER",
+        "phrase_count": 30,
+        "representative_phrases": [
+          "создание печатной формы 1с",
+          "1с печатная форма договора",
+          "настройка печатных форм в 1с",
+          "1с печатная форма счет на оплату",
+          "1с изменение печатной формы"
+        ]
+      },
+      {
+        "group_id": "ca-06-modification",
+        "primary_intent": "MODIFICATION",
+        "phrase_count": 4,
+        "representative_phrases": [
+          "1с доработка отчетов",
+          "1с доработка печатной формы",
+          "1с доработка отчета движение денежных средств",
+          "разработка печатной формы 1с"
+        ]
+      },
+      {
+        "group_id": "ca-06-specialist-search",
+        "primary_intent": "SPECIALIST_SEARCH",
+        "phrase_count": 3,
+        "representative_phrases": [
+          "отчет программиста 1с",
+          "программист 1с обработки",
+          "я программист 1с запросики отчетики"
+        ]
+      }
+    ]
+  },
+  "C_required_content_blocks": [
+    "first_screen_reports_proposition",
+    "value_proposition_accurate_reporting",
+    "service_scope_reports_processing_print_forms",
+    "problems_standard_reports_insufficient",
+    "examples_report_types",
+    "process_spec_develop_test_deliver",
+    "delivery_remote",
+    "configurations",
+    "pricing_approach_task_based",
+    "trust_examples",
+    "faq_turnaround",
+    "cta_order_report",
+    "contact_block"
+  ],
+  "D_required_message_evidence": {
+    "company_name_korvo_nero": "CONFIRMED",
+    "phone_383_390_29_28": "CONFIRMED",
+    "service_delivery_novosibirsk": "NEEDS_OPERATOR_CONFIRMATION",
+    "remote_service_russia": "NEEDS_CLIENT_CONFIRMATION",
+    "hourly_rates": "PROHIBITED_UNSUPPORTED",
+    "partner_1c_status": "NEEDS_CLIENT_CONFIRMATION",
+    "response_time_sla": "PROHIBITED_UNSUPPORTED",
+    "marking_competency": "NEEDS_CLIENT_CONFIRMATION",
+    "integration_systems_list": "NEEDS_CLIENT_CONFIRMATION",
+    "case_studies": "NEEDS_CLIENT_CONFIRMATION",
+    "nds_vat_included": "NEEDS_OPERATOR_CONFIRMATION"
+  },
+  "E_conversion_requirements": {
+    "primary_cta": "Request service / call specialist — service-specific label required",
+    "secondary_cta": "Phone click +7 (383) 390-29-28",
+    "required_form_fields": [
+      "name",
+      "phone_or_email",
+      "company_optional",
+      "task_description",
+      "configuration_optional"
+    ],
+    "phone_visibility": "Above fold and footer — required",
+    "messenger_requirements": "NEEDS_OPERATOR_CONFIRMATION — not confirmed in audit",
+    "response_time_claim_status": "PROHIBITED_UNSUPPORTED unless client confirms",
+    "form_privacy_legal": "Privacy consent + PD processing notice — required at implementation",
+    "analytics_events_required_later": [
+      "form_submit",
+      "phone_click",
+      "cta_click",
+      "scroll_depth_optional"
+    ]
+  },
+  "F_search_advertising_alignment": {
+    "campaign_message_match": "First screen and H1 must match Отчёты и обработки 1С ad groups",
+    "allowed_service_language": [
+      "SF-REPORTS-PROCESSING"
+    ],
+    "risky_wording": [
+      "любой отчёт за 1 день"
+    ],
+    "exclusions_reference": "CORVONERO-PHASE-6.1-EXCLUSION-BOUNDARIES-v2.json",
+    "snippet_sections_required": [
+      {
+        "intent_group": "ca-06-direct-service-order",
+        "page_section": "Section addressing DIRECT_SERVICE_ORDER"
+      },
+      {
+        "intent_group": "ca-06-modification",
+        "page_section": "Section addressing MODIFICATION"
+      },
+      {
+        "intent_group": "ca-06-specialist-search",
+        "page_section": "Section addressing SPECIALIST_SEARCH"
+      }
+    ]
+  },
+  "G_geography": {
+    "primary": "Новосибирск + Новосибирская область",
+    "remote_service": "Mention only where operator/client confirms scope",
+    "expansion_cities": "Do not feature in initial-launch LP copy",
+    "office_locations": "Do not invent — SAFE UNKNOWN"
+  },
+  "H_seo_technical_recommendations": {
+    "recommended_url_slug": "otchety-obrabotki-1s",
+    "recommended_base_path": "https://lk.corvonero.ru/otchety-obrabotki-1s/",
+    "title_direction": "Отчёты и обработки 1С — Корво Неро, Новосибирск",
+    "h1_direction": "Разработка отчётов и обработок 1С",
+    "anchor_structure": "Single H1; H2 per major content block",
+    "canonical": "Self-referencing canonical on dedicated URL",
+    "mobile_requirements": "Responsive; click-to-call; form usable at 320px",
+    "form_call_tracking": "Call tracking and form goal tags — configure at launch prep",
+    "performance": "LCP target planning only — no heavy unoptimized assets"
+  }
+}

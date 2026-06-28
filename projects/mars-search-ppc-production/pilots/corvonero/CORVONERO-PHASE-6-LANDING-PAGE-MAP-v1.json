@@ -1,0 +1,351 @@
+{
+  "map_id": "corvonero-phase-6-partial-campaign-planning-v1-landing-page-map",
+  "sites_known": [
+    "lk.corvonero.ru",
+    "corvonero.ru"
+  ],
+  "evidence_note": "No in-repo crawl confirms page-level suitability — SAFE UNKNOWN unless operator confirms",
+  "campaigns": [
+    {
+      "campaign_family_id": "CF-PROGRAMMER-SPECIALIST",
+      "required_service_page": "Programmer/specialist service page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP",
+      "ad_groups": [
+        "cf-programmer-specialist-specialist_search-geo-none",
+        "cf-programmer-specialist-specialist_search-geo-remote-ru",
+        "cf-programmer-specialist-specialist_search-geo-irrelevant-flag",
+        "cf-programmer-specialist-direct_service_order-geo-none",
+        "cf-programmer-specialist-specialist_search-geo-expansion",
+        "cf-programmer-specialist-specialist_search-geo-primary"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "required_service_page": "Support / абонентское обслуживание page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases",
+      "ad_groups": [
+        "cf-support-and-subscription-support_and_maintenance-geo-none",
+        "cf-support-and-subscription-direct_service_order-geo-none",
+        "cf-support-and-subscription-support_and_maintenance-geo-expansion",
+        "cf-support-and-subscription-support_and_maintenance-geo-remote-ru",
+        "cf-support-and-subscription-specialist_search-geo-none",
+        "cf-support-and-subscription-modification-geo-none",
+        "cf-support-and-subscription-support_and_maintenance-geo-primary"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-MODIFICATION-DEVELOPMENT",
+      "required_service_page": "Development / доработка page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Low if dedicated dev LP exists",
+      "ad_groups": [
+        "cf-modification-development-modification-geo-none",
+        "cf-modification-development-direct_service_order-geo-none",
+        "cf-modification-development-modification-geo-irrelevant-flag"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-REPORTS-PROCESSING",
+      "required_service_page": "Reports / обработки page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "May land on generic dev page",
+      "ad_groups": [
+        "cf-reports-processing-direct_service_order-geo-none",
+        "cf-reports-processing-modification-geo-none",
+        "cf-reports-processing-specialist_search-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-INTEGRATIONS",
+      "required_service_page": "Integrations / Bitrix page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — platform-specific expectations",
+      "ad_groups": [
+        "cf-integrations-integration-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-MARKING-CHESTNY-ZNAK",
+      "required_service_page": "Marking / Честный знак service page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High if sent to generic 1C page",
+      "ad_groups": [
+        "cf-marking-chestny-znak-direct_service_order-geo-none",
+        "cf-marking-chestny-znak-integration-geo-none",
+        "cf-marking-chestny-znak-implementation-geo-none",
+        "cf-marking-chestny-znak-support_and_maintenance-geo-none",
+        "cf-marking-chestny-znak-specialist_search-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-TS-PIOT",
+      "required_service_page": "TS ПИОТ / marking hardware page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High — niche hardware integration",
+      "ad_groups": [
+        "cf-ts-piot-direct_service_order-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-TROUBLESHOOTING",
+      "required_service_page": "Emergency support / troubleshooting page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High — urgent intent mismatch if generic LP",
+      "ad_groups": [
+        "cf-troubleshooting-problem_resolution-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-PRICE-AND-COST",
+      "required_service_page": "Pricing / calculator or service hub",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — price without service context",
+      "ad_groups": [
+        "cf-price-and-cost-price_and_cost-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-ONE-OFF-WORK",
+      "required_service_page": "Hourly / разовые работы page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Low if merged with specialist LP",
+      "ad_groups": [
+        "cf-one-off-work-specialist_search-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-IMPLEMENTATION",
+      "required_service_page": "Implementation / внедрение page",
+      "confirmed_suitable_page": null,
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "SAFE UNKNOWN",
+      "ad_groups": [
+        "cf-implementation-implementation-geo-none"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "ad_group_id": "cf-programmer-specialist-specialist_search-geo-none",
+      "campaign_family": "CF-PROGRAMMER-SPECIALIST",
+      "landing_page_requirement": "Programmer/specialist service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP"
+    },
+    {
+      "ad_group_id": "cf-marking-chestny-znak-direct_service_order-geo-none",
+      "campaign_family": "CF-MARKING-CHESTNY-ZNAK",
+      "landing_page_requirement": "Marking / Честный знак service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High if sent to generic 1C page"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-support_and_maintenance-geo-none",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-modification-development-modification-geo-none",
+      "campaign_family": "CF-MODIFICATION-DEVELOPMENT",
+      "landing_page_requirement": "Development / доработка page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Low if dedicated dev LP exists"
+    },
+    {
+      "ad_group_id": "cf-integrations-integration-geo-none",
+      "campaign_family": "CF-INTEGRATIONS",
+      "landing_page_requirement": "Integrations / Bitrix page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — platform-specific expectations"
+    },
+    {
+      "ad_group_id": "cf-reports-processing-direct_service_order-geo-none",
+      "campaign_family": "CF-REPORTS-PROCESSING",
+      "landing_page_requirement": "Reports / обработки page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "May land on generic dev page"
+    },
+    {
+      "ad_group_id": "cf-programmer-specialist-specialist_search-geo-remote-ru",
+      "campaign_family": "CF-PROGRAMMER-SPECIALIST",
+      "landing_page_requirement": "Programmer/specialist service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP"
+    },
+    {
+      "ad_group_id": "cf-price-and-cost-price_and_cost-geo-none",
+      "campaign_family": "CF-PRICE-AND-COST",
+      "landing_page_requirement": "Pricing / calculator or service hub",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — price without service context"
+    },
+    {
+      "ad_group_id": "cf-marking-chestny-znak-integration-geo-none",
+      "campaign_family": "CF-MARKING-CHESTNY-ZNAK",
+      "landing_page_requirement": "Marking / Честный знак service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High if sent to generic 1C page"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-direct_service_order-geo-none",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-programmer-specialist-specialist_search-geo-irrelevant-flag",
+      "campaign_family": "CF-PROGRAMMER-SPECIALIST",
+      "landing_page_requirement": "Programmer/specialist service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP"
+    },
+    {
+      "ad_group_id": "cf-one-off-work-specialist_search-geo-none",
+      "campaign_family": "CF-ONE-OFF-WORK",
+      "landing_page_requirement": "Hourly / разовые работы page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Low if merged with specialist LP"
+    },
+    {
+      "ad_group_id": "cf-implementation-implementation-geo-none",
+      "campaign_family": "CF-IMPLEMENTATION",
+      "landing_page_requirement": "Implementation / внедрение page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "SAFE UNKNOWN"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-support_and_maintenance-geo-expansion",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-programmer-specialist-direct_service_order-geo-none",
+      "campaign_family": "CF-PROGRAMMER-SPECIALIST",
+      "landing_page_requirement": "Programmer/specialist service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP"
+    },
+    {
+      "ad_group_id": "cf-reports-processing-modification-geo-none",
+      "campaign_family": "CF-REPORTS-PROCESSING",
+      "landing_page_requirement": "Reports / обработки page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "May land on generic dev page"
+    },
+    {
+      "ad_group_id": "cf-ts-piot-direct_service_order-geo-none",
+      "campaign_family": "CF-TS-PIOT",
+      "landing_page_requirement": "TS ПИОТ / marking hardware page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High — niche hardware integration"
+    },
+    {
+      "ad_group_id": "cf-programmer-specialist-specialist_search-geo-expansion",
+      "campaign_family": "CF-PROGRAMMER-SPECIALIST",
+      "landing_page_requirement": "Programmer/specialist service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP"
+    },
+    {
+      "ad_group_id": "cf-reports-processing-specialist_search-geo-none",
+      "campaign_family": "CF-REPORTS-PROCESSING",
+      "landing_page_requirement": "Reports / обработки page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "May land on generic dev page"
+    },
+    {
+      "ad_group_id": "cf-troubleshooting-problem_resolution-geo-none",
+      "campaign_family": "CF-TROUBLESHOOTING",
+      "landing_page_requirement": "Emergency support / troubleshooting page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High — urgent intent mismatch if generic LP"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-support_and_maintenance-geo-remote-ru",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-modification-development-direct_service_order-geo-none",
+      "campaign_family": "CF-MODIFICATION-DEVELOPMENT",
+      "landing_page_requirement": "Development / доработка page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Low if dedicated dev LP exists"
+    },
+    {
+      "ad_group_id": "cf-marking-chestny-znak-implementation-geo-none",
+      "campaign_family": "CF-MARKING-CHESTNY-ZNAK",
+      "landing_page_requirement": "Marking / Честный знак service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High if sent to generic 1C page"
+    },
+    {
+      "ad_group_id": "cf-marking-chestny-znak-support_and_maintenance-geo-none",
+      "campaign_family": "CF-MARKING-CHESTNY-ZNAK",
+      "landing_page_requirement": "Marking / Честный знак service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High if sent to generic 1C page"
+    },
+    {
+      "ad_group_id": "cf-programmer-specialist-specialist_search-geo-primary",
+      "campaign_family": "CF-PROGRAMMER-SPECIALIST",
+      "landing_page_requirement": "Programmer/specialist service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Generic homepage if no dedicated LP"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-specialist_search-geo-none",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-modification-geo-none",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-support-and-subscription-support_and_maintenance-geo-primary",
+      "campaign_family": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "landing_page_requirement": "Support / абонентское обслуживание page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+    },
+    {
+      "ad_group_id": "cf-modification-development-modification-geo-irrelevant-flag",
+      "campaign_family": "CF-MODIFICATION-DEVELOPMENT",
+      "landing_page_requirement": "Development / доработка page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "Low if dedicated dev LP exists"
+    },
+    {
+      "ad_group_id": "cf-marking-chestny-znak-specialist_search-geo-none",
+      "campaign_family": "CF-MARKING-CHESTNY-ZNAK",
+      "landing_page_requirement": "Marking / Честный знак service page",
+      "suitability_status": "SAFE UNKNOWN",
+      "generic_page_risk": "High if sent to generic 1C page"
+    }
+  ]
+}

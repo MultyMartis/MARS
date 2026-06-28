@@ -1,0 +1,92 @@
+{
+  "policy_id": "corvonero-phase-6.2-interim-homepage-policy-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "authority": "RD-01 — lk.corvonero.ru temporary generic fallback only; not final LP authority",
+  "launch_authorization": "NONE — interim use not authorized for normal ad launch",
+  "campaigns": [
+    {
+      "campaign_id": "CA-01",
+      "landing_page_id": "LP-01",
+      "interim_classification": "INTERIM_FALLBACK_HIGH_RISK",
+      "current_fallback_url": "https://lk.corvonero.ru/",
+      "launch_authorized": false,
+      "minimum_homepage_changes_before_any_fallback_test": [
+        "Dedicated service section or URL per campaign family (RD-02)",
+        "Service-specific H1 and above-the-fold message match",
+        "Explicit Novosibirsk + region service statement",
+        "Service-specific CTA and contact path",
+        "Remove product-catalog confusion for service traffic"
+      ]
+    },
+    {
+      "campaign_id": "CA-02",
+      "landing_page_id": "LP-02",
+      "interim_classification": "INTERIM_FALLBACK_POSSIBLE",
+      "current_fallback_url": "https://lk.corvonero.ru/",
+      "launch_authorized": false,
+      "minimum_homepage_changes_before_any_fallback_test": [
+        "Dedicated service section or URL per campaign family (RD-02)",
+        "Service-specific H1 and above-the-fold message match",
+        "Explicit Novosibirsk + region service statement",
+        "Service-specific CTA and contact path",
+        "Remove product-catalog confusion for service traffic"
+      ]
+    },
+    {
+      "campaign_id": "CA-03",
+      "landing_page_id": "LP-03",
+      "interim_classification": "INTERIM_FALLBACK_HIGH_RISK",
+      "current_fallback_url": "https://lk.corvonero.ru/",
+      "launch_authorized": false,
+      "minimum_homepage_changes_before_any_fallback_test": [
+        "Dedicated service section or URL per campaign family (RD-02)",
+        "Service-specific H1 and above-the-fold message match",
+        "Explicit Novosibirsk + region service statement",
+        "Service-specific CTA and contact path",
+        "Remove product-catalog confusion for service traffic"
+      ]
+    },
+    {
+      "campaign_id": "CA-04",
+      "landing_page_id": "LP-04",
+      "interim_classification": "INTERIM_FALLBACK_HIGH_RISK",
+      "current_fallback_url": "https://lk.corvonero.ru/",
+      "launch_authorized": false,
+      "minimum_homepage_changes_before_any_fallback_test": [
+        "Dedicated service section or URL per campaign family (RD-02)",
+        "Service-specific H1 and above-the-fold message match",
+        "Explicit Novosibirsk + region service statement",
+        "Service-specific CTA and contact path",
+        "Remove product-catalog confusion for service traffic"
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "landing_page_id": "LP-05",
+      "interim_classification": "INTERIM_FALLBACK_HIGH_RISK",
+      "current_fallback_url": "https://lk.corvonero.ru/",
+      "launch_authorized": false,
+      "minimum_homepage_changes_before_any_fallback_test": [
+        "Dedicated service section or URL per campaign family (RD-02)",
+        "Service-specific H1 and above-the-fold message match",
+        "Explicit Novosibirsk + region service statement",
+        "Service-specific CTA and contact path",
+        "Remove product-catalog confusion for service traffic"
+      ]
+    },
+    {
+      "campaign_id": "CA-06",
+      "landing_page_id": "LP-06",
+      "interim_classification": "INTERIM_FALLBACK_PROHIBITED",
+      "current_fallback_url": "https://lk.corvonero.ru/",
+      "launch_authorized": false,
+      "minimum_homepage_changes_before_any_fallback_test": [
+        "Dedicated service section or URL per campaign family (RD-02)",
+        "Service-specific H1 and above-the-fold message match",
+        "Explicit Novosibirsk + region service statement",
+        "Service-specific CTA and contact path",
+        "Remove product-catalog confusion for service traffic"
+      ]
+    }
+  ]
+}

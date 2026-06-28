@@ -1,0 +1,146 @@
+{
+  "inventory_id": "corvonero-phase-6.1-website-page-inventory-v1",
+  "audit_timestamp": "2026-06-28T18:43:52.501Z",
+  "method": "read_only_http_crawl",
+  "sites": [
+    {
+      "site_id": "corvonero.ru",
+      "base_url": "https://corvonero.ru",
+      "pages_crawled": 1,
+      "pages": [
+        {
+          "site_id": "corvonero.ru",
+          "url": "https://corvonero.ru/",
+          "http_status": 200,
+          "access": "OK",
+          "title": "IIS Windows Server",
+          "h1": null,
+          "meta_description": null,
+          "visible_proposition": "IIS Windows Server",
+          "target_audience": "business_general",
+          "commercial_cta": false,
+          "contact_form": false,
+          "phone_visible": false,
+          "email_visible": false,
+          "services_covered": [],
+          "geography_claims": {
+            "novosibirsk": false,
+            "russia_wide": false
+          },
+          "trust_evidence": [],
+          "fetch_error": null,
+          "audited_at": "2026-06-28T18:43:52.501Z"
+        }
+      ]
+    },
+    {
+      "site_id": "lk.corvonero.ru",
+      "base_url": "https://lk.corvonero.ru",
+      "pages_crawled": 4,
+      "pages": [
+        {
+          "site_id": "lk.corvonero.ru",
+          "url": "https://lk.corvonero.ru/",
+          "http_status": 200,
+          "access": "OK",
+          "title": "Корво Неро",
+          "h1": null,
+          "meta_description": "Центр автоматизации 1с",
+          "visible_proposition": "Корво Неро Меню Услуги Цены О нас Контакты Личный Кабинет +7 (383) 390-29-28 &nbsp; «Корво Неро» Внедрение и сопровождение 1С Центр автоматизации Виды деятельности Решаем задачи любой сложности по&nbsp;автоматизации бизнес-процессов и&nbsp;повышению эффективности вашей компании. Предлагаем услуги по&nbsp;внедрению, настройке, обновлению и&nbsp;сопровождению 1С. Оказываем помощь в&nbsp;работе с&nbs",
+          "target_audience": "accounting_and_finance",
+          "commercial_cta": true,
+          "contact_form": false,
+          "phone_visible": true,
+          "email_visible": true,
+          "services_covered": [
+            "support",
+            "modification",
+            "integration",
+            "marking",
+            "reports",
+            "troubleshooting"
+          ],
+          "geography_claims": {
+            "novosibirsk": true,
+            "russia_wide": false
+          },
+          "trust_evidence": [
+            "clients_or_cases"
+          ],
+          "fetch_error": null,
+          "audited_at": "2026-06-28T18:43:52.501Z"
+        },
+        {
+          "site_id": "lk.corvonero.ru",
+          "url": "https://lk.corvonero.ru/products",
+          "http_status": 200,
+          "access": "OK",
+          "title": "Каталог",
+          "h1": null,
+          "meta_description": "Каталог доработок 1с",
+          "visible_proposition": "Каталог Меню Услуги Цены О нас Контакты Личный Кабинет +7 (383) 390-29-28 &nbsp; Заказать демо Load more Подробнее Заказать Имя Способ обратной связи Почта Телефон Почта Телефон Отправить заявку © 2024 Корво Неро &nbsp; Made on Tilda",
+          "target_audience": "business_general",
+          "commercial_cta": true,
+          "contact_form": true,
+          "phone_visible": true,
+          "email_visible": true,
+          "services_covered": [],
+          "geography_claims": {
+            "novosibirsk": false,
+            "russia_wide": false
+          },
+          "trust_evidence": [],
+          "fetch_error": null,
+          "audited_at": "2026-06-28T18:43:52.501Z"
+        },
+        {
+          "site_id": "lk.corvonero.ru",
+          "url": "https://lk.corvonero.ru/products/nothing",
+          "http_status": 200,
+          "access": "OK",
+          "title": "Ничего",
+          "h1": null,
+          "meta_description": "Ничего за 10к",
+          "visible_proposition": "Ничего Меню Услуги Цены О нас Контакты Личный Кабинет +7 (383) 390-29-28 &nbsp; Ничего 10 000 р. Ничего. Подходит для любого программного продукта. Возврату не подлежит Заказать Заказать демо Имя Способ обратной связи Почта Телефон Почта Телефон Отправить заявку © 2024 Корво Неро &nbsp; Made on Tilda",
+          "target_audience": "business_general",
+          "commercial_cta": true,
+          "contact_form": true,
+          "phone_visible": true,
+          "email_visible": true,
+          "services_covered": [],
+          "geography_claims": {
+            "novosibirsk": false,
+            "russia_wide": false
+          },
+          "trust_evidence": [],
+          "fetch_error": null,
+          "audited_at": "2026-06-28T18:43:52.501Z"
+        },
+        {
+          "site_id": "lk.corvonero.ru",
+          "url": "https://lk.corvonero.ru/personal",
+          "http_status": 200,
+          "access": "OK",
+          "title": "&lrm;",
+          "h1": null,
+          "meta_description": null,
+          "visible_proposition": "&lrm;",
+          "target_audience": "business_general",
+          "commercial_cta": false,
+          "contact_form": false,
+          "phone_visible": false,
+          "email_visible": false,
+          "services_covered": [],
+          "geography_claims": {
+            "novosibirsk": false,
+            "russia_wide": false
+          },
+          "trust_evidence": [],
+          "fetch_error": null,
+          "audited_at": "2026-06-28T18:43:52.501Z"
+        }
+      ]
+    }
+  ],
+  "total_pages": 5
+}

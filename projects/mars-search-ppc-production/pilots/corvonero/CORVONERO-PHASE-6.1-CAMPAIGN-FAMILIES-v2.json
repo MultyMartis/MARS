@@ -1,0 +1,209 @@
+{
+  "partial_semantic_authority": "1599 / 2368 assessed",
+  "unprocessed_backlog": "769 / 2368 excluded",
+  "coverage": "67.5%",
+  "campaign_families": [
+    {
+      "campaign_id": "CA-01",
+      "working_name": "Программист / специалист 1С",
+      "allocated_phrase_count": 404,
+      "service_families": [
+        "SF-1C-PROGRAMMER-SPECIALIST",
+        "SF-ONE-OFF-WORK"
+      ],
+      "primary_intents": [
+        "SPECIALIST_SEARCH",
+        "DIRECT_SERVICE_ORDER",
+        "PRICE_AND_COST"
+      ],
+      "merge_from_v1": [
+        "CF-PROGRAMMER-SPECIALIST",
+        "CF-ONE-OFF-WORK"
+      ],
+      "default_priority": "P1",
+      "landing_page": {
+        "required": "Dedicated programmer/specialist service page",
+        "best_available": "https://lk.corvonero.ru/",
+        "suitability": "LP_GENERIC_FALLBACK",
+        "blocks_ad_creation": true,
+        "operator_assignment": "NOT APPROVED"
+      },
+      "ad_group_ids": [
+        "ca-01-specialist-search",
+        "ca-01-price-intent",
+        "ca-01-direct-service-order"
+      ],
+      "launch_geography": "Новосибирск + Новосибирская область (PRIMARY-ONLY)"
+    },
+    {
+      "campaign_id": "CA-02",
+      "working_name": "Сопровождение и обслуживание 1С",
+      "allocated_phrase_count": 155,
+      "service_families": [
+        "SF-SUPPORT-MAINTENANCE",
+        "SF-SUBSCRIPTION-SERVICE",
+        "SF-TROUBLESHOOTING-NOT-WORKING"
+      ],
+      "primary_intents": [
+        "SUPPORT_AND_MAINTENANCE",
+        "DIRECT_SERVICE_ORDER",
+        "PROBLEM_RESOLUTION",
+        "PRICE_AND_COST"
+      ],
+      "merge_from_v1": [
+        "CF-SUPPORT-AND-SUBSCRIPTION",
+        "CF-TROUBLESHOOTING"
+      ],
+      "default_priority": "P1",
+      "landing_page": {
+        "required": "Support / абонентское обслуживание / troubleshooting page",
+        "best_available": "https://lk.corvonero.ru/",
+        "suitability": "LP_PARTIAL_MATCH",
+        "blocks_ad_creation": true,
+        "operator_assignment": "NOT APPROVED"
+      },
+      "ad_group_ids": [
+        "ca-02-support-and-maintenance",
+        "ca-02-direct-service-order",
+        "ca-02-troubleshooting-not-working",
+        "ca-02-specialist-search",
+        "ca-02-price-intent",
+        "ca-02-modification"
+      ],
+      "launch_geography": "Новосибирск + Новосибирская область (PRIMARY-ONLY)"
+    },
+    {
+      "campaign_id": "CA-03",
+      "working_name": "Доработка и разработка 1С",
+      "allocated_phrase_count": 71,
+      "service_families": [
+        "SF-MODIFICATION-DEVELOPMENT",
+        "SF-ONE-OFF-WORK"
+      ],
+      "primary_intents": [
+        "MODIFICATION",
+        "DIRECT_SERVICE_ORDER",
+        "IMPLEMENTATION",
+        "SPECIALIST_SEARCH",
+        "PRICE_AND_COST"
+      ],
+      "merge_from_v1": [
+        "CF-MODIFICATION-DEVELOPMENT",
+        "CF-IMPLEMENTATION",
+        "CF-ONE-OFF-WORK"
+      ],
+      "default_priority": "P1",
+      "landing_page": {
+        "required": "Development / доработка / внедрение page",
+        "best_available": "https://lk.corvonero.ru/",
+        "suitability": "LP_PARTIAL_MATCH",
+        "blocks_ad_creation": true,
+        "operator_assignment": "NOT APPROVED"
+      },
+      "ad_group_ids": [
+        "ca-03-modification",
+        "ca-03-implementation",
+        "ca-03-direct-service-order"
+      ],
+      "launch_geography": "Новосибирск + Новосибирская область (PRIMARY-ONLY)"
+    },
+    {
+      "campaign_id": "CA-04",
+      "working_name": "Интеграции 1С",
+      "allocated_phrase_count": 48,
+      "service_families": [
+        "SF-INTEGRATIONS"
+      ],
+      "primary_intents": [
+        "INTEGRATION",
+        "MODIFICATION",
+        "DIRECT_SERVICE_ORDER",
+        "PRICE_AND_COST"
+      ],
+      "merge_from_v1": [
+        "CF-INTEGRATIONS"
+      ],
+      "default_priority": "P1",
+      "landing_page": {
+        "required": "Integrations / Bitrix / API page",
+        "best_available": "https://lk.corvonero.ru/",
+        "suitability": "LP_PARTIAL_MATCH",
+        "blocks_ad_creation": true,
+        "operator_assignment": "NOT APPROVED"
+      },
+      "ad_group_ids": [
+        "ca-04-integration"
+      ],
+      "launch_geography": "Новосибирск + Новосибирская область (PRIMARY-ONLY)"
+    },
+    {
+      "campaign_id": "CA-05",
+      "working_name": "Маркировка / Честный знак",
+      "allocated_phrase_count": 220,
+      "service_families": [
+        "SF-MARKING-CHESTNY-ZNAK",
+        "SF-OTHER-APPROVED-1C-SERVICE",
+        "SF-TS-PIOT"
+      ],
+      "primary_intents": [
+        "DIRECT_SERVICE_ORDER",
+        "MODIFICATION",
+        "IMPLEMENTATION",
+        "INTEGRATION",
+        "PROBLEM_RESOLUTION",
+        "PRICE_AND_COST"
+      ],
+      "merge_from_v1": [
+        "CF-MARKING-CHESTNY-ZNAK",
+        "CF-TS-PIOT"
+      ],
+      "default_priority": "P1",
+      "landing_page": {
+        "required": "Marking / Честный знак / TS ПИОТ page",
+        "best_available": "https://lk.corvonero.ru/",
+        "suitability": "LP_PARTIAL_MATCH",
+        "blocks_ad_creation": true,
+        "operator_assignment": "NOT APPROVED"
+      },
+      "ad_group_ids": [
+        "ca-05-direct-service-order",
+        "ca-05-integration",
+        "ca-05-ts-piot",
+        "ca-05-support-and-maintenance",
+        "ca-05-specialist-search"
+      ],
+      "launch_geography": "Новосибирск + Новосибирская область (PRIMARY-ONLY)"
+    },
+    {
+      "campaign_id": "CA-06",
+      "working_name": "Отчёты и обработки 1С",
+      "allocated_phrase_count": 37,
+      "service_families": [
+        "SF-REPORTS-PROCESSING"
+      ],
+      "primary_intents": [
+        "MODIFICATION",
+        "DIRECT_SERVICE_ORDER",
+        "SPECIALIST_SEARCH",
+        "PRICE_AND_COST"
+      ],
+      "merge_from_v1": [
+        "CF-REPORTS-PROCESSING"
+      ],
+      "default_priority": "P2",
+      "landing_page": {
+        "required": "Reports / обработки page",
+        "best_available": "https://lk.corvonero.ru/",
+        "suitability": "LP_PARTIAL_MATCH",
+        "blocks_ad_creation": true,
+        "operator_assignment": "NOT APPROVED"
+      },
+      "ad_group_ids": [
+        "ca-06-direct-service-order",
+        "ca-06-modification",
+        "ca-06-specialist-search"
+      ],
+      "launch_geography": "Новосибирск + Новосибирская область (PRIMARY-ONLY)"
+    }
+  ]
+}

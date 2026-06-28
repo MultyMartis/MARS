@@ -1,0 +1,126 @@
+{
+  "receipt_id": "corvonero-phase-6.4-lp01-operator-decisions-v1",
+  "landing_page_id": "LP-01",
+  "campaign_id": "CA-01",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "content_authority_status": "CLOSED",
+  "decisions": [
+    {
+      "decision_id": "ODP-01-configurations",
+      "topic": "supported_1c_configurations",
+      "classification": "OPERATOR_CONFIRMED",
+      "value": ["УТ", "УНФ", "Розница", "КА", "БП"]
+    },
+    {
+      "decision_id": "ODP-02-remote-scope",
+      "topic": "remote_service_scope",
+      "classification": "OPERATOR_CONFIRMED",
+      "service_delivery": "throughout Russia",
+      "campaign_targeting": "Novosibirsk + Novosibirsk Region only"
+    },
+    {
+      "decision_id": "ODP-03-onsite-boundary",
+      "topic": "on_site_boundary",
+      "classification": "OPERATOR_CONFIRMED",
+      "value": "Novosibirsk only"
+    },
+    {
+      "decision_id": "ODP-06-pricing",
+      "topic": "pricing_disclosure",
+      "classification": "OPERATOR_CONFIRMED",
+      "hourly_from_rub": 3000,
+      "minimum_order_hours": 2,
+      "public_wording_ru": "Стоимость работы — от 3 000 ₽ в час. Минимальный заказ — 2 часа."
+    },
+    {
+      "decision_id": "ODP-05-vat",
+      "topic": "nds_vat",
+      "classification": "OPERATOR_PROHIBITED",
+      "rule": "Do not mention VAT/NDS on LP-01"
+    },
+    {
+      "decision_id": "ODP-07-sla",
+      "topic": "response_time",
+      "classification": "OPERATOR_PROHIBITED",
+      "rule": "Do not publish SLA or response-time promises"
+    },
+    {
+      "decision_id": "ODP-08-cases",
+      "topic": "cases_reviews",
+      "classification": "OPERATOR_PROHIBITED",
+      "rule": "No unverified cases, reviews or client names in LP-01 v1"
+    },
+    {
+      "decision_id": "ODP-09-partner",
+      "topic": "certificates_partner",
+      "classification": "OPERATOR_PROHIBITED",
+      "rule": "No official 1C partnership or certification claims"
+    },
+    {
+      "decision_id": "ODP-10-platform",
+      "topic": "page_production_platform",
+      "classification": "OPERATOR_CONFIRMED",
+      "platform": "Tilda",
+      "builder": "Roman"
+    },
+    {
+      "decision_id": "ODP-04-product-license",
+      "topic": "product_license_sales",
+      "classification": "DEFERRED",
+      "status": "HOLD"
+    },
+    {
+      "decision_id": "ODP-11-lp06",
+      "topic": "lp06_first_wave",
+      "classification": "DEFERRED",
+      "rule": "LP-06 not part of Phase 6.4"
+    },
+    {
+      "decision_id": "LP01-service-scope",
+      "topic": "approved_service_scope",
+      "classification": "OPERATOR_CONFIRMED",
+      "scope_items": [
+        "доработка конфигураций 1С",
+        "исправление ошибок и восстановление работы",
+        "настройка учёта и бизнес-процессов",
+        "разработка отчётов, обработок и печатных форм",
+        "интеграции с сайтами, Битрикс и внешними системами",
+        "настройка маркировки и Честного знака",
+        "обновление и сопровождение баз",
+        "разовые и срочные задачи",
+        "удалённая работа",
+        "выезд по Новосибирску"
+      ]
+    },
+    {
+      "decision_id": "LP01-messengers",
+      "topic": "messenger_channels",
+      "classification": "OPERATOR_CONFIRMED",
+      "channels": ["MAX", "Telegram", "WhatsApp"],
+      "links_status": "REQUIRED_FROM_OPERATOR_OR_CLIENT"
+    },
+    {
+      "decision_id": "LP01-form",
+      "topic": "form_fields",
+      "classification": "OPERATOR_CONFIRMED",
+      "fields": [
+        {"id": "name", "label_ru": "Имя", "required": false},
+        {"id": "phone", "label_ru": "Телефон", "required": true}
+      ]
+    },
+    {
+      "decision_id": "LP01-cta",
+      "topic": "cta_labels",
+      "classification": "OPERATOR_CONFIRMED",
+      "labels": ["Обсудить задачу", "Получить оценку", "Заказать звонок"]
+    }
+  ],
+  "implementation_inputs": [
+    {"id": "IMP-01", "item": "messenger_urls", "status": "REQUIRED_FROM_OPERATOR_OR_CLIENT"},
+    {"id": "IMP-02", "item": "privacy_consent_legal_text", "status": "REQUIRED_FROM_OPERATOR_OR_CLIENT"},
+    {"id": "IMP-03", "item": "tilda_access", "status": "REQUIRED_FOR_IMPLEMENTATION"},
+    {"id": "IMP-04", "item": "analytics_call_tracking", "status": "REQUIRED_FOR_IMPLEMENTATION"},
+    {"id": "IMP-05", "item": "privacy_policy_url", "status": "CURRENT_LINK_SAFE_UNKNOWN"}
+  ],
+  "content_blockers_remaining": 0
+}

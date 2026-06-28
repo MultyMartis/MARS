@@ -1,0 +1,473 @@
+{
+  "map_id": "corvonero-phase-6.2-existing-content-evidence-map-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "source_audit": "CORVONERO-PHASE-6.1-LANDING-PAGE-AUDIT-v1",
+  "source_inventory": "CORVONERO-PHASE-6.1-WEBSITE-PAGE-INVENTORY-v1",
+  "sites": {
+    "corvonero.ru": {
+      "status": "PROHIBITED_AS_LANDING_PAGE",
+      "reason": "IIS default page"
+    },
+    "lk.corvonero.ru": {
+      "status": "TEMPORARY_GENERIC_FALLBACK_ONLY",
+      "homepage_url": "https://lk.corvonero.ru/"
+    }
+  },
+  "landing_pages": {
+    "LP-01": {
+      "landing_page_id": "LP-01",
+      "name": "Программист / специалист 1С",
+      "campaign_id": "CA-01",
+      "existing_url_assessed": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_GENERIC_FALLBACK",
+      "reusable_existing_sections": [
+        "Header with phone +7 (383) 390-29-28",
+        "Menu anchors: Услуги, Цены, О нас, Контакты",
+        "Brand block «Корво Неро» — центр автоматизации",
+        "Generic services narrative (внедрение, настройка, обновление, сопровождение 1С)"
+      ],
+      "reusable_claims": [
+        {
+          "claim": "Центр автоматизации 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "May reuse after operator confirms positioning"
+        },
+        {
+          "claim": "Внедрение и сопровождение 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "Generic — must be narrowed per LP"
+        },
+        {
+          "claim": "Решаем задачи любой сложности по автоматизации",
+          "evidence_status": "NEEDS_OPERATOR_CONFIRMATION",
+          "reuse_rule": "Broad marketing claim — verify scope"
+        },
+        {
+          "claim": "Novosibirsk geography implied",
+          "evidence_status": "PARTIALLY_CONFIRMED",
+          "reuse_rule": "Homepage geo flag novosibirsk=true; no explicit region copy audited"
+        }
+      ],
+      "existing_cta": {
+        "phone": "+7 (383) 390-29-28",
+        "commercial_cta_present": true,
+        "contact_form_on_homepage": false,
+        "products_catalog_form": "/products has order form — NOT APPROVED for service LP reuse per RD-04"
+      },
+      "existing_contact_details": {
+        "phone_visible": true,
+        "email_visible": true
+      },
+      "existing_trust_elements": [
+        "clients_or_cases"
+      ],
+      "missing_service_explanation": [
+        "Homepage lacks explicit signals for CA-01"
+      ],
+      "missing_commercial_proof": [
+        "No service-specific pricing framework on dedicated URL",
+        "No isolated case studies per service family",
+        "No explicit SLA or response-time evidence"
+      ],
+      "missing_audience_qualification": [
+        "No B2B qualification (company size, configuration, industry)",
+        "No remote vs on-site boundary statement"
+      ],
+      "missing_geography_clarification": [
+        "Primary geo not stated as campaign requirement on page",
+        "Remote service scope not documented"
+      ],
+      "missing_service_specific_cta": [
+        "No CTA copy aligned to Программист / специалист 1С",
+        "Generic homepage CTA only"
+      ],
+      "claims_must_not_reuse_without_verification": [
+        "Any hourly rate or fixed price from Цены anchor — not independently verified",
+        "Partner/certification badges if present — not audited with evidence",
+        "Product catalog pricing (/products) — prohibited for service campaigns",
+        "Russia-wide service claims — homepage russia_wide=false"
+      ],
+      "published_copy_authority_warning": "Published homepage copy is audit evidence only — not factual authority for claims"
+    },
+    "LP-02": {
+      "landing_page_id": "LP-02",
+      "name": "Сопровождение и обслуживание 1С",
+      "campaign_id": "CA-02",
+      "existing_url_assessed": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "reusable_existing_sections": [
+        "Header with phone +7 (383) 390-29-28",
+        "Menu anchors: Услуги, Цены, О нас, Контакты",
+        "Brand block «Корво Неро» — центр автоматизации",
+        "Generic services narrative (внедрение, настройка, обновление, сопровождение 1С)"
+      ],
+      "reusable_claims": [
+        {
+          "claim": "Центр автоматизации 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "May reuse after operator confirms positioning"
+        },
+        {
+          "claim": "Внедрение и сопровождение 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "Generic — must be narrowed per LP"
+        },
+        {
+          "claim": "Решаем задачи любой сложности по автоматизации",
+          "evidence_status": "NEEDS_OPERATOR_CONFIRMATION",
+          "reuse_rule": "Broad marketing claim — verify scope"
+        },
+        {
+          "claim": "Novosibirsk geography implied",
+          "evidence_status": "PARTIALLY_CONFIRMED",
+          "reuse_rule": "Homepage geo flag novosibirsk=true; no explicit region copy audited"
+        }
+      ],
+      "existing_cta": {
+        "phone": "+7 (383) 390-29-28",
+        "commercial_cta_present": true,
+        "contact_form_on_homepage": false,
+        "products_catalog_form": "/products has order form — NOT APPROVED for service LP reuse per RD-04"
+      },
+      "existing_contact_details": {
+        "phone_visible": true,
+        "email_visible": true
+      },
+      "existing_trust_elements": [
+        "clients_or_cases"
+      ],
+      "missing_service_explanation": [
+        "No dedicated URL for: Support / абонентское обслуживание / troubleshooting page"
+      ],
+      "missing_commercial_proof": [
+        "No service-specific pricing framework on dedicated URL",
+        "No isolated case studies per service family",
+        "No explicit SLA or response-time evidence"
+      ],
+      "missing_audience_qualification": [
+        "No B2B qualification (company size, configuration, industry)",
+        "No remote vs on-site boundary statement"
+      ],
+      "missing_geography_clarification": [
+        "Primary geo not stated as campaign requirement on page",
+        "Remote service scope not documented"
+      ],
+      "missing_service_specific_cta": [
+        "No CTA copy aligned to Сопровождение и обслуживание 1С",
+        "Generic homepage CTA only"
+      ],
+      "claims_must_not_reuse_without_verification": [
+        "Any hourly rate or fixed price from Цены anchor — not independently verified",
+        "Partner/certification badges if present — not audited with evidence",
+        "Product catalog pricing (/products) — prohibited for service campaigns",
+        "Russia-wide service claims — homepage russia_wide=false"
+      ],
+      "published_copy_authority_warning": "Published homepage copy is audit evidence only — not factual authority for claims"
+    },
+    "LP-03": {
+      "landing_page_id": "LP-03",
+      "name": "Доработка и разработка 1С",
+      "campaign_id": "CA-03",
+      "existing_url_assessed": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "reusable_existing_sections": [
+        "Header with phone +7 (383) 390-29-28",
+        "Menu anchors: Услуги, Цены, О нас, Контакты",
+        "Brand block «Корво Неро» — центр автоматизации",
+        "Generic services narrative (внедрение, настройка, обновление, сопровождение 1С)"
+      ],
+      "reusable_claims": [
+        {
+          "claim": "Центр автоматизации 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "May reuse after operator confirms positioning"
+        },
+        {
+          "claim": "Внедрение и сопровождение 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "Generic — must be narrowed per LP"
+        },
+        {
+          "claim": "Решаем задачи любой сложности по автоматизации",
+          "evidence_status": "NEEDS_OPERATOR_CONFIRMATION",
+          "reuse_rule": "Broad marketing claim — verify scope"
+        },
+        {
+          "claim": "Novosibirsk geography implied",
+          "evidence_status": "PARTIALLY_CONFIRMED",
+          "reuse_rule": "Homepage geo flag novosibirsk=true; no explicit region copy audited"
+        }
+      ],
+      "existing_cta": {
+        "phone": "+7 (383) 390-29-28",
+        "commercial_cta_present": true,
+        "contact_form_on_homepage": false,
+        "products_catalog_form": "/products has order form — NOT APPROVED for service LP reuse per RD-04"
+      },
+      "existing_contact_details": {
+        "phone_visible": true,
+        "email_visible": true
+      },
+      "existing_trust_elements": [
+        "clients_or_cases"
+      ],
+      "missing_service_explanation": [
+        "No dedicated URL for: Development / доработка / внедрение page"
+      ],
+      "missing_commercial_proof": [
+        "No service-specific pricing framework on dedicated URL",
+        "No isolated case studies per service family",
+        "No explicit SLA or response-time evidence"
+      ],
+      "missing_audience_qualification": [
+        "No B2B qualification (company size, configuration, industry)",
+        "No remote vs on-site boundary statement"
+      ],
+      "missing_geography_clarification": [
+        "Primary geo not stated as campaign requirement on page",
+        "Remote service scope not documented"
+      ],
+      "missing_service_specific_cta": [
+        "No CTA copy aligned to Доработка и разработка 1С",
+        "Generic homepage CTA only"
+      ],
+      "claims_must_not_reuse_without_verification": [
+        "Any hourly rate or fixed price from Цены anchor — not independently verified",
+        "Partner/certification badges if present — not audited with evidence",
+        "Product catalog pricing (/products) — prohibited for service campaigns",
+        "Russia-wide service claims — homepage russia_wide=false"
+      ],
+      "published_copy_authority_warning": "Published homepage copy is audit evidence only — not factual authority for claims"
+    },
+    "LP-04": {
+      "landing_page_id": "LP-04",
+      "name": "Интеграции 1С",
+      "campaign_id": "CA-04",
+      "existing_url_assessed": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "reusable_existing_sections": [
+        "Header with phone +7 (383) 390-29-28",
+        "Menu anchors: Услуги, Цены, О нас, Контакты",
+        "Brand block «Корво Неро» — центр автоматизации",
+        "Generic services narrative (внедрение, настройка, обновление, сопровождение 1С)"
+      ],
+      "reusable_claims": [
+        {
+          "claim": "Центр автоматизации 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "May reuse after operator confirms positioning"
+        },
+        {
+          "claim": "Внедрение и сопровождение 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "Generic — must be narrowed per LP"
+        },
+        {
+          "claim": "Решаем задачи любой сложности по автоматизации",
+          "evidence_status": "NEEDS_OPERATOR_CONFIRMATION",
+          "reuse_rule": "Broad marketing claim — verify scope"
+        },
+        {
+          "claim": "Novosibirsk geography implied",
+          "evidence_status": "PARTIALLY_CONFIRMED",
+          "reuse_rule": "Homepage geo flag novosibirsk=true; no explicit region copy audited"
+        }
+      ],
+      "existing_cta": {
+        "phone": "+7 (383) 390-29-28",
+        "commercial_cta_present": true,
+        "contact_form_on_homepage": false,
+        "products_catalog_form": "/products has order form — NOT APPROVED for service LP reuse per RD-04"
+      },
+      "existing_contact_details": {
+        "phone_visible": true,
+        "email_visible": true
+      },
+      "existing_trust_elements": [
+        "clients_or_cases"
+      ],
+      "missing_service_explanation": [
+        "No dedicated URL for: Integrations / Bitrix / API page"
+      ],
+      "missing_commercial_proof": [
+        "No service-specific pricing framework on dedicated URL",
+        "No isolated case studies per service family",
+        "No explicit SLA or response-time evidence"
+      ],
+      "missing_audience_qualification": [
+        "No B2B qualification (company size, configuration, industry)",
+        "No remote vs on-site boundary statement"
+      ],
+      "missing_geography_clarification": [
+        "Primary geo not stated as campaign requirement on page",
+        "Remote service scope not documented"
+      ],
+      "missing_service_specific_cta": [
+        "No CTA copy aligned to Интеграции 1С",
+        "Generic homepage CTA only"
+      ],
+      "claims_must_not_reuse_without_verification": [
+        "Any hourly rate or fixed price from Цены anchor — not independently verified",
+        "Partner/certification badges if present — not audited with evidence",
+        "Product catalog pricing (/products) — prohibited for service campaigns",
+        "Russia-wide service claims — homepage russia_wide=false"
+      ],
+      "published_copy_authority_warning": "Published homepage copy is audit evidence only — not factual authority for claims"
+    },
+    "LP-05": {
+      "landing_page_id": "LP-05",
+      "name": "Маркировка / Честный знак",
+      "campaign_id": "CA-05",
+      "existing_url_assessed": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "reusable_existing_sections": [
+        "Header with phone +7 (383) 390-29-28",
+        "Menu anchors: Услуги, Цены, О нас, Контакты",
+        "Brand block «Корво Неро» — центр автоматизации",
+        "Generic services narrative (внедрение, настройка, обновление, сопровождение 1С)"
+      ],
+      "reusable_claims": [
+        {
+          "claim": "Центр автоматизации 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "May reuse after operator confirms positioning"
+        },
+        {
+          "claim": "Внедрение и сопровождение 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "Generic — must be narrowed per LP"
+        },
+        {
+          "claim": "Решаем задачи любой сложности по автоматизации",
+          "evidence_status": "NEEDS_OPERATOR_CONFIRMATION",
+          "reuse_rule": "Broad marketing claim — verify scope"
+        },
+        {
+          "claim": "Novosibirsk geography implied",
+          "evidence_status": "PARTIALLY_CONFIRMED",
+          "reuse_rule": "Homepage geo flag novosibirsk=true; no explicit region copy audited"
+        }
+      ],
+      "existing_cta": {
+        "phone": "+7 (383) 390-29-28",
+        "commercial_cta_present": true,
+        "contact_form_on_homepage": false,
+        "products_catalog_form": "/products has order form — NOT APPROVED for service LP reuse per RD-04"
+      },
+      "existing_contact_details": {
+        "phone_visible": true,
+        "email_visible": true
+      },
+      "existing_trust_elements": [
+        "clients_or_cases"
+      ],
+      "missing_service_explanation": [
+        "No dedicated URL for: Marking / Честный знак / TS ПИОТ page"
+      ],
+      "missing_commercial_proof": [
+        "No service-specific pricing framework on dedicated URL",
+        "No isolated case studies per service family",
+        "No explicit SLA or response-time evidence"
+      ],
+      "missing_audience_qualification": [
+        "No B2B qualification (company size, configuration, industry)",
+        "No remote vs on-site boundary statement"
+      ],
+      "missing_geography_clarification": [
+        "Primary geo not stated as campaign requirement on page",
+        "Remote service scope not documented"
+      ],
+      "missing_service_specific_cta": [
+        "No CTA copy aligned to Маркировка / Честный знак",
+        "Generic homepage CTA only"
+      ],
+      "claims_must_not_reuse_without_verification": [
+        "Any hourly rate or fixed price from Цены anchor — not independently verified",
+        "Partner/certification badges if present — not audited with evidence",
+        "Product catalog pricing (/products) — prohibited for service campaigns",
+        "Russia-wide service claims — homepage russia_wide=false"
+      ],
+      "published_copy_authority_warning": "Published homepage copy is audit evidence only — not factual authority for claims"
+    },
+    "LP-06": {
+      "landing_page_id": "LP-06",
+      "name": "Отчёты и обработки 1С",
+      "campaign_id": "CA-06",
+      "existing_url_assessed": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "reusable_existing_sections": [
+        "Header with phone +7 (383) 390-29-28",
+        "Menu anchors: Услуги, Цены, О нас, Контакты",
+        "Brand block «Корво Неро» — центр автоматизации",
+        "Generic services narrative (внедрение, настройка, обновление, сопровождение 1С)"
+      ],
+      "reusable_claims": [
+        {
+          "claim": "Центр автоматизации 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "May reuse after operator confirms positioning"
+        },
+        {
+          "claim": "Внедрение и сопровождение 1С",
+          "evidence_status": "CONFIRMED_ON_HOMEPAGE",
+          "reuse_rule": "Generic — must be narrowed per LP"
+        },
+        {
+          "claim": "Решаем задачи любой сложности по автоматизации",
+          "evidence_status": "NEEDS_OPERATOR_CONFIRMATION",
+          "reuse_rule": "Broad marketing claim — verify scope"
+        },
+        {
+          "claim": "Novosibirsk geography implied",
+          "evidence_status": "PARTIALLY_CONFIRMED",
+          "reuse_rule": "Homepage geo flag novosibirsk=true; no explicit region copy audited"
+        }
+      ],
+      "existing_cta": {
+        "phone": "+7 (383) 390-29-28",
+        "commercial_cta_present": true,
+        "contact_form_on_homepage": false,
+        "products_catalog_form": "/products has order form — NOT APPROVED for service LP reuse per RD-04"
+      },
+      "existing_contact_details": {
+        "phone_visible": true,
+        "email_visible": true
+      },
+      "existing_trust_elements": [
+        "clients_or_cases"
+      ],
+      "missing_service_explanation": [
+        "No dedicated URL for: Reports / обработки page"
+      ],
+      "missing_commercial_proof": [
+        "No service-specific pricing framework on dedicated URL",
+        "No isolated case studies per service family",
+        "No explicit SLA or response-time evidence"
+      ],
+      "missing_audience_qualification": [
+        "No B2B qualification (company size, configuration, industry)",
+        "No remote vs on-site boundary statement"
+      ],
+      "missing_geography_clarification": [
+        "Primary geo not stated as campaign requirement on page",
+        "Remote service scope not documented"
+      ],
+      "missing_service_specific_cta": [
+        "No CTA copy aligned to Отчёты и обработки 1С",
+        "Generic homepage CTA only"
+      ],
+      "claims_must_not_reuse_without_verification": [
+        "Any hourly rate or fixed price from Цены anchor — not independently verified",
+        "Partner/certification badges if present — not audited with evidence",
+        "Product catalog pricing (/products) — prohibited for service campaigns",
+        "Russia-wide service claims — homepage russia_wide=false"
+      ],
+      "published_copy_authority_warning": "Published homepage copy is audit evidence only — not factual authority for claims"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "priority_id": "corvonero-phase-6.2-lp-production-priority-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "default_sequence": [
+    "LP-01",
+    "LP-02",
+    "LP-05",
+    "LP-03",
+    "LP-04",
+    "LP-06"
+  ],
+  "rationale": "LP-01 highest phrase volume; LP-02 strong support match on homepage; LP-05 high volume + distinct intent; LP-03/04 follow; LP-06 P2 deferred",
+  "pages": [
+    {
+      "sequence": 1,
+      "landing_page_id": "LP-01",
+      "name": "Программист / специалист 1С",
+      "campaign_id": "CA-01",
+      "priority_tier": "P1",
+      "phrase_coverage": 404,
+      "commercial_priority": "HIGH",
+      "content_readiness": "LOW — generic homepage only",
+      "missing_evidence": "Client evidence blocking fields — see CONTENT-EVIDENCE-REQUIREMENTS",
+      "production_dependency": "Operator decisions v3 + evidence for Программист / специалист 1С",
+      "launch_dependency": "Dedicated LP approved before ad design; RD-03 defers LP-06 from initial wave"
+    },
+    {
+      "sequence": 2,
+      "landing_page_id": "LP-02",
+      "name": "Сопровождение и обслуживание 1С",
+      "campaign_id": "CA-02",
+      "priority_tier": "P1",
+      "phrase_coverage": 155,
+      "commercial_priority": "HIGH",
+      "content_readiness": "LOW — generic homepage only",
+      "missing_evidence": "Client evidence blocking fields — see CONTENT-EVIDENCE-REQUIREMENTS",
+      "production_dependency": "Operator decisions v3 + evidence for Сопровождение и обслуживание 1С",
+      "launch_dependency": "Dedicated LP approved before ad design; RD-03 defers LP-06 from initial wave"
+    },
+    {
+      "sequence": 3,
+      "landing_page_id": "LP-05",
+      "name": "Маркировка / Честный знак",
+      "campaign_id": "CA-05",
+      "priority_tier": "P1",
+      "phrase_coverage": 220,
+      "commercial_priority": "HIGH",
+      "content_readiness": "LOW — generic homepage only",
+      "missing_evidence": "Client evidence blocking fields — see CONTENT-EVIDENCE-REQUIREMENTS",
+      "production_dependency": "Operator decisions v3 + evidence for Маркировка / Честный знак",
+      "launch_dependency": "Dedicated LP approved before ad design; RD-03 defers LP-06 from initial wave"
+    },
+    {
+      "sequence": 4,
+      "landing_page_id": "LP-03",
+      "name": "Доработка и разработка 1С",
+      "campaign_id": "CA-03",
+      "priority_tier": "P1",
+      "phrase_coverage": 71,
+      "commercial_priority": "MEDIUM",
+      "content_readiness": "LOW — generic homepage only",
+      "missing_evidence": "Client evidence blocking fields — see CONTENT-EVIDENCE-REQUIREMENTS",
+      "production_dependency": "Operator decisions v3 + evidence for Доработка и разработка 1С",
+      "launch_dependency": "Dedicated LP approved before ad design; RD-03 defers LP-06 from initial wave"
+    },
+    {
+      "sequence": 5,
+      "landing_page_id": "LP-04",
+      "name": "Интеграции 1С",
+      "campaign_id": "CA-04",
+      "priority_tier": "P1",
+      "phrase_coverage": 48,
+      "commercial_priority": "MEDIUM",
+      "content_readiness": "LOW — generic homepage only",
+      "missing_evidence": "Client evidence blocking fields — see CONTENT-EVIDENCE-REQUIREMENTS",
+      "production_dependency": "Operator decisions v3 + evidence for Интеграции 1С",
+      "launch_dependency": "Dedicated LP approved before ad design; RD-03 defers LP-06 from initial wave"
+    },
+    {
+      "sequence": 6,
+      "landing_page_id": "LP-06",
+      "name": "Отчёты и обработки 1С",
+      "campaign_id": "CA-06",
+      "priority_tier": "P2",
+      "phrase_coverage": 37,
+      "commercial_priority": "MEDIUM",
+      "content_readiness": "LOW — generic homepage only",
+      "missing_evidence": "Client evidence blocking fields — see CONTENT-EVIDENCE-REQUIREMENTS",
+      "production_dependency": "Operator decisions v3 + evidence for Отчёты и обработки 1С",
+      "launch_dependency": "Dedicated LP approved before ad design; RD-03 defers LP-06 from initial wave"
+    }
+  ]
+}

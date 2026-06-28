@@ -1,0 +1,135 @@
+{
+  "boundary_id": "corvonero-phase-6.1-exclusion-boundaries-v2",
+  "note": "Design-only aligned to CA-01..CA-06 — not deployable minus-word lists",
+  "campaign_cross_checks": [
+    {
+      "conflict": "programmer vs jobs/careers",
+      "campaigns": [
+        "CA-01"
+      ],
+      "boundary": "EX-CAREER-JOBS, EX-EDUCATION-COURSES at campaign level"
+    },
+    {
+      "conflict": "support vs DIY instructions",
+      "campaigns": [
+        "CA-02"
+      ],
+      "boundary": "EX-SELF-SERVICE-MANUALS, EX-FORUMS-INSTRUCTIONS — refine at group level for troubleshooting"
+    },
+    {
+      "conflict": "modification vs training",
+      "campaigns": [
+        "CA-03"
+      ],
+      "boundary": "EX-EDUCATION-COURSES, EX-CERTIFICATION-EXAMS"
+    },
+    {
+      "conflict": "integrations vs product navigation",
+      "campaigns": [
+        "CA-04",
+        "CA-05"
+      ],
+      "boundary": "EX-PRODUCT-LICENSE-ONLY — watch /products catalog traffic"
+    },
+    {
+      "conflict": "marking vs informational compliance research",
+      "campaigns": [
+        "CA-05"
+      ],
+      "boundary": "EX-INFORMATIONAL-RESEARCH — use cautiously; overblocking risk HIGH"
+    },
+    {
+      "conflict": "reports vs templates/downloads",
+      "campaigns": [
+        "CA-06"
+      ],
+      "boundary": "EX-DOWNLOADS-TEMPLATES, EX-INFORMATIONAL-RESEARCH"
+    }
+  ],
+  "families": [
+    {
+      "exclusion_family_id": "EX-CAREER-JOBS",
+      "family_name": "Career and jobs",
+      "evidence_id_count": 115,
+      "campaign_level_suitability": "RECOMMENDED — all CA campaigns",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-EDUCATION-COURSES",
+      "family_name": "Education and courses",
+      "evidence_id_count": 58,
+      "campaign_level_suitability": "RECOMMENDED — all CA campaigns",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-CERTIFICATION-EXAMS",
+      "family_name": "Certification and exams",
+      "evidence_id_count": 0,
+      "campaign_level_suitability": "RECOMMENDED — all CA campaigns",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-SALARY",
+      "family_name": "Salary",
+      "evidence_id_count": 12,
+      "campaign_level_suitability": "RECOMMENDED — all CA campaigns",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-RESUME-INTERVIEWS",
+      "family_name": "Resume and interviews",
+      "evidence_id_count": 0,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-FORUMS-INSTRUCTIONS",
+      "family_name": "Forums and instructions",
+      "evidence_id_count": 0,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-FREE-DOWNLOADS",
+      "family_name": "Free downloads",
+      "evidence_id_count": 4,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-SELF-SERVICE-MANUALS",
+      "family_name": "Self-service manuals",
+      "evidence_id_count": 64,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "HIGH"
+    },
+    {
+      "exclusion_family_id": "EX-UNRELATED-PLATFORMS",
+      "family_name": "Unrelated platforms",
+      "evidence_id_count": 0,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-PRODUCT-LICENSE-ONLY",
+      "family_name": "Product-only/license-only intent",
+      "evidence_id_count": 1,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "LOW"
+    },
+    {
+      "exclusion_family_id": "EX-INFORMATIONAL-RESEARCH",
+      "family_name": "Informational research",
+      "evidence_id_count": 155,
+      "campaign_level_suitability": "SELECTIVE — per campaign",
+      "overblocking_risk": "HIGH"
+    },
+    {
+      "exclusion_family_id": "EX-IRRELEVANT-GEOGRAPHY",
+      "family_name": "Irrelevant geography",
+      "evidence_id_count": 6,
+      "campaign_level_suitability": "Phrase-level flag — 6 IRRELEVANT ACCEPT phrases",
+      "overblocking_risk": "LOW"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "architecture_id": "corvonero-phase-6.1-geography-architecture-v2",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "primary_launch": {
+    "authorized": true,
+    "markets": [
+      "Новосибирск",
+      "Новосибирская область"
+    ],
+    "architecture": "PRIMARY-ONLY — single campaign set; location targeting at campaign level",
+    "geo_ad_group_duplication": false
+  },
+  "phrase_level_geo_handling": {
+    "note": "Material geographic modifiers remain phrase-level metadata; no duplicate ad groups unless future operator rule",
+    "distribution_in_accept": {
+      "NO_GEOGRAPHY": 891,
+      "OTHER_RU": 27,
+      "EXPANSION": 8,
+      "IRRELEVANT": 6,
+      "PRIMARY": 2,
+      "REMOTE": 1
+    }
+  },
+  "future_expansion": {
+    "status": "NOT AUTHORIZED FOR INITIAL LAUNCH",
+    "candidate_markets": [
+      "Краснодар",
+      "Екатеринбург",
+      "Красноярск",
+      "other million cities",
+      "Russia-wide remote"
+    ],
+    "expansion_accept_phrases_in_assessed_corpus": {
+      "EXPANSION": 8,
+      "OTHER_RU": 27,
+      "REMOTE": 1
+    },
+    "plan": "Separate expansion wave after primary launch proof — do not duplicate current CA-01..CA-06 structure"
+  }
+}

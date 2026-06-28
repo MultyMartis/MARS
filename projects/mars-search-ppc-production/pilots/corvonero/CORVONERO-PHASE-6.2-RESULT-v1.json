@@ -1,0 +1,42 @@
+{
+  "result_id": "corvonero-phase-6.2-landing-page-requirements-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "preflight": {
+    "branch": "mars/canonical-post-recovery",
+    "head_descends_from_88facdb7": true,
+    "phase_6_1_artefacts_present": true,
+    "accept_reconciliation": {
+      "total": 935,
+      "groups_unique": 935,
+      "duplicates": 0,
+      "pass": true
+    },
+    "provider_calls": "NONE",
+    "websites_modified": false
+  },
+  "operator_decisions_applied": [
+    "RD-01",
+    "RD-02",
+    "RD-03",
+    "RD-04",
+    "RD-05"
+  ],
+  "group_to_lp_reconciliation": {
+    "pass": true,
+    "page_mapped": 935,
+    "hold": 0
+  },
+  "phase_6_2_verdict": {
+    "phase": "6.2",
+    "verdict": "PASS — LANDING PAGE REQUIREMENTS READY FOR OPERATOR REVIEW",
+    "campaign_architecture": "APPROVED FOR LP REQUIREMENTS",
+    "landing_pages": "NOT BUILT",
+    "ad_creation": "NOT AUTHORIZED"
+  },
+  "outputs_count": 28
+}

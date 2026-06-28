@@ -1,0 +1,93 @@
+{
+  "register_id": "corvonero-phase-6-partial-campaign-planning-v1-risk-register",
+  "risks": [
+    {
+      "risk_id": "R-01",
+      "title": "Partial semantic coverage (67.5%)",
+      "severity": "HIGH",
+      "affected": "All campaigns",
+      "mitigation": "Label all outputs with partial boundary; defer backlog processing to separate charter",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-02",
+      "title": "769 unprocessed backlog excluded",
+      "severity": "HIGH",
+      "affected": "Market coverage estimates",
+      "mitigation": "Do not infer backlog content; plan Phase 7+ backlog wave separately",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-03",
+      "title": "High ACCEPT count after authority cleanup (935)",
+      "severity": "MEDIUM",
+      "affected": "Budget and LP capacity",
+      "mitigation": "Tiered launch P1 first; operator confirms scope",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-04",
+      "title": "Landing-page mismatch",
+      "severity": "HIGH",
+      "affected": "All campaign families",
+      "mitigation": "Operator confirms LP map before ad copy phase",
+      "blocking": true
+    },
+    {
+      "risk_id": "R-05",
+      "title": "Product vs service ambiguity",
+      "severity": "MEDIUM",
+      "affected": "CF-SUPPORT-AND-SUBSCRIPTION, ABSTAIN holdouts",
+      "mitigation": "Keep PRODUCT_PLUS_SERVICE_REVIEW in holdout; manual review gate",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-06",
+      "title": "Geography expansion risk",
+      "severity": "MEDIUM",
+      "affected": "GEO-EXPANSION, GEO-REMOTE-RU groups",
+      "mitigation": "Operator selects GEO-A/B/C; start PRIMARY-only if uncertain",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-07",
+      "title": "Negative-keyword overblocking",
+      "severity": "MEDIUM",
+      "affected": "Informational exclusion families",
+      "mitigation": "Design boundaries only; test minus lists in isolated experiments",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-08",
+      "title": "TS ПИОТ low assessed volume (4 ACCEPT)",
+      "severity": "MEDIUM",
+      "affected": "CF-TS-PIOT",
+      "mitigation": "Operator decides merge with marking or standalone micro-campaign",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-09",
+      "title": "Incomplete troubleshooting coverage (2 ACCEPT assessed)",
+      "severity": "MEDIUM",
+      "affected": "CF-TROUBLESHOOTING",
+      "mitigation": "Merge with support campaign or await backlog processing",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-10",
+      "title": "NDS status unknown",
+      "severity": "LOW",
+      "affected": "Price messaging, ad disclaimers",
+      "mitigation": "Operator confirms VAT stance before ad copy",
+      "blocking": false
+    },
+    {
+      "risk_id": "R-11",
+      "title": "No live conversion data",
+      "severity": "MEDIUM",
+      "affected": "Prioritization and budget allocation",
+      "mitigation": "Use tiered launch; no conversion forecasts in Phase 6",
+      "blocking": false
+    }
+  ]
+}

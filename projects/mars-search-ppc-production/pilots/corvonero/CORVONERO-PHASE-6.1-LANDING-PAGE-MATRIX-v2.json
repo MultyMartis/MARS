@@ -1,0 +1,270 @@
+{
+  "matrix_id": "corvonero-phase-6.1-landing-page-matrix-v2",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "campaigns": [
+    {
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_GENERIC_FALLBACK",
+      "missing_content": [
+        "Homepage lacks explicit signals for CA-01"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs",
+        "No explicit programmer/specialist proposition on audited homepage text"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Support / абонентское обслуживание / troubleshooting page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    {
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Development / доработка / внедрение page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    {
+      "campaign_id": "CA-04",
+      "campaign_name": "Интеграции 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Integrations / Bitrix / API page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Marking / Честный знак / TS ПИОТ page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs",
+        "Marking content present but not isolated — risk of generic 1C message",
+        "/products catalog is product-navigation — not marking service LP"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    {
+      "campaign_id": "CA-06",
+      "campaign_name": "Отчёты и обработки 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Reports / обработки page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    }
+  ],
+  "groups": [
+    {
+      "ad_group_id": "ca-01-specialist-search",
+      "campaign_id": "CA-01",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_GENERIC_FALLBACK",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-05-direct-service-order",
+      "campaign_id": "CA-05",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-02-support-and-maintenance",
+      "campaign_id": "CA-02",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-03-modification",
+      "campaign_id": "CA-03",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-04-integration",
+      "campaign_id": "CA-04",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-06-direct-service-order",
+      "campaign_id": "CA-06",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-01-price-intent",
+      "campaign_id": "CA-01",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_GENERIC_FALLBACK",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-05-integration",
+      "campaign_id": "CA-05",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-02-direct-service-order",
+      "campaign_id": "CA-02",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-03-implementation",
+      "campaign_id": "CA-03",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-01-direct-service-order",
+      "campaign_id": "CA-01",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_GENERIC_FALLBACK",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-06-modification",
+      "campaign_id": "CA-06",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-05-ts-piot",
+      "campaign_id": "CA-05",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-06-specialist-search",
+      "campaign_id": "CA-06",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-02-troubleshooting-not-working",
+      "campaign_id": "CA-02",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-03-direct-service-order",
+      "campaign_id": "CA-03",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-05-support-and-maintenance",
+      "campaign_id": "CA-05",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-02-specialist-search",
+      "campaign_id": "CA-02",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-02-price-intent",
+      "campaign_id": "CA-02",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-02-modification",
+      "campaign_id": "CA-02",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    },
+    {
+      "ad_group_id": "ca-05-specialist-search",
+      "campaign_id": "CA-05",
+      "proposed_landing_page": "https://lk.corvonero.ru/",
+      "landing_page_readiness": "LP_PARTIAL_MATCH",
+      "readiness_status": "BLOCKED_BY_LANDING_PAGE"
+    }
+  ]
+}

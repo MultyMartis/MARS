@@ -1,0 +1,47 @@
+{
+  "spec_id": "corvonero-phase-6.4-lp01-form-contact-spec-v1",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "form_fields": [
+    {"id": "name", "label_ru": "Имя", "type": "text", "required": false},
+    {"id": "phone", "label_ru": "Телефон", "type": "tel", "required": true}
+  ],
+  "cta_labels": [
+    {"label": "Обсудить задачу", "role": "primary"},
+    {"label": "Получить оценку", "role": "secondary"},
+    {"label": "Заказать звонок", "role": "callback_form"}
+  ],
+  "messengers": [
+    {"channel": "MAX", "link_status": "LINK_REQUIRED", "url": "REQUIRED_FROM_OPERATOR_OR_CLIENT"},
+    {"channel": "Telegram", "link_status": "LINK_REQUIRED", "url": "REQUIRED_FROM_OPERATOR_OR_CLIENT"},
+    {"channel": "WhatsApp", "link_status": "LINK_REQUIRED", "url": "REQUIRED_FROM_OPERATOR_OR_CLIENT"}
+  ],
+  "phone": {
+    "display": "+7 (383) 390-29-28",
+    "tel_href": "tel:+73833902928",
+    "click_to_call_required": true
+  },
+  "consent": {
+    "checkbox_required": true,
+    "legal_text_status": "REQUIRED_FROM_OPERATOR_OR_CLIENT",
+    "privacy_policy_url_status": "CURRENT_LINK_SAFE_UNKNOWN"
+  },
+  "form_states": {
+    "success_message_ru": "Спасибо! Мы получили заявку и перезвоним по указанному телефону.",
+    "error_message_ru": "Не удалось отправить заявку. Проверьте телефон или позвоните нам: +7 (383) 390-29-28."
+  },
+  "mobile": {
+    "full_width_fields": true,
+    "tel_keyboard": true,
+    "min_tap_target_px": 44
+  },
+  "analytics_events_recommended": [
+    "lp01_form_submit",
+    "lp01_form_error",
+    "lp01_phone_click",
+    "lp01_cta_discuss_task",
+    "lp01_cta_get_estimate",
+    "lp01_cta_request_call",
+    "lp01_messenger_click"
+  ]
+}

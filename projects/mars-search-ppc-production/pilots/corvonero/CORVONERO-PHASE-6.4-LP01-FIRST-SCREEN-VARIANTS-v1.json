@@ -1,0 +1,43 @@
+{
+  "variants_id": "corvonero-phase-6.4-lp01-first-screen-variants-v1",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "recommended_default": "A",
+  "variants": [
+    {
+      "variant_id": "A",
+      "intent_profile": "specialist_search",
+      "h1": "Программист 1С в Новосибирске — услуги специалиста",
+      "supporting_text": "Центр автоматизации «Корво Неро» подключает программиста 1С для разовых задач, доработок и сопровождения вашей базы. Работаем удалённо по всей России, выезжаем на объект в Новосибирске.",
+      "primary_cta": "Обсудить задачу",
+      "secondary_cta": "Получить оценку",
+      "phrase_families": ["программист 1с", "специалист 1с", "1с программист новосибирск", "программист 1с удаленно"],
+      "mismatch_risks": ["career/training expectation", "remote vs campaign geo confusion"]
+    },
+    {
+      "variant_id": "B",
+      "intent_profile": "task_result",
+      "h1": "Выполним задачу в 1С — доработка, отчёты, интеграции",
+      "supporting_text": "Опишите, что нужно сделать в вашей базе 1С: исправить ошибку, доработать конфигурацию, настроить обмен или маркировку. Подключим программиста 1С удалённо или с выездом в Новосибирске.",
+      "primary_cta": "Получить оценку",
+      "secondary_cta": "Обсудить задачу",
+      "phrase_families": ["доработка 1с", "отчёт 1с", "интеграция 1с", "услуги программиста 1с"],
+      "mismatch_risks": ["weaker specialist keyword match for 384-phrase group"]
+    },
+    {
+      "variant_id": "C",
+      "intent_profile": "urgent_problem",
+      "h1": "1С не работает или выдаёт ошибку — поможем восстановить",
+      "supporting_text": "Разберёмся с ошибками, сбоями после обновления и проблемами в учёте. Программист 1С подключится удалённо по России или приедет в Новосибирск. Стоимость — от 3 000 ₽ в час, минимальный заказ 2 часа.",
+      "primary_cta": "Заказать звонок",
+      "secondary_cta": "Обсудить задачу",
+      "phrase_families": ["ошибка 1с", "не работает 1с", "срочно 1с", "помощь 1с"],
+      "mismatch_risks": ["urgency implies SLA", "narrow for broad specialist traffic"]
+    }
+  ],
+  "ad_group_mapping": {
+    "ca-01-specialist-search": "A",
+    "ca-01-price-intent": "A",
+    "ca-01-direct-service-order": "A"
+  }
+}

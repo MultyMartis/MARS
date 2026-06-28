@@ -1,0 +1,770 @@
+{
+  "partial_semantic_authority": "1599 / 2368 assessed",
+  "unprocessed_backlog": "769 / 2368 excluded",
+  "coverage": "67.5%",
+  "campaign_families": [
+    {
+      "campaign_family_id": "CF-PROGRAMMER-SPECIALIST",
+      "working_name": "1C programmer / specialist search",
+      "allocated_phrase_count": 383,
+      "service_families": [
+        "SF-1C-PROGRAMMER-SPECIALIST"
+      ],
+      "primary_intents": [
+        "SPECIALIST_SEARCH",
+        "DIRECT_SERVICE_ORDER"
+      ],
+      "merge_rationale": "Shared specialist landing intent; negatives align on career/education exclusion",
+      "separate_rationale": null,
+      "intent_separation": [
+        {
+          "intent": "SPECIALIST_SEARCH",
+          "primary": "SPECIALIST_SEARCH",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE",
+            "AMBIGUOUS"
+          ],
+          "rationale": "User seeks a 1C specialist/provider; not training or product purchase"
+        },
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        }
+      ],
+      "geography_treatment": "PRIMARY + REMOTE_RU + EXPANSION via bid/location",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Programmer/specialist service page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "Generic homepage if no dedicated LP"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P1",
+      "ad_group_ids": [
+        "cf-programmer-specialist-specialist_search-geo-none",
+        "cf-programmer-specialist-specialist_search-geo-remote-ru",
+        "cf-programmer-specialist-specialist_search-geo-irrelevant-flag",
+        "cf-programmer-specialist-direct_service_order-geo-none",
+        "cf-programmer-specialist-specialist_search-geo-expansion",
+        "cf-programmer-specialist-specialist_search-geo-primary"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "working_name": "1C support, maintenance and subscription",
+      "allocated_phrase_count": 152,
+      "service_families": [
+        "SF-SUPPORT-MAINTENANCE",
+        "SF-SUBSCRIPTION-SERVICE"
+      ],
+      "primary_intents": [
+        "SUPPORT_AND_MAINTENANCE",
+        "DIRECT_SERVICE_ORDER"
+      ],
+      "merge_rationale": "Same delivery model (ongoing service); shared support LP; subscription terms overlap support semantics",
+      "separate_rationale": "Split if subscription LP differs or budget isolation required",
+      "intent_separation": [
+        {
+          "intent": "SUPPORT_AND_MAINTENANCE",
+          "primary": "SUPPORT_AND_MAINTENANCE",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE"
+          ],
+          "rationale": "Ongoing support/subscription service demand"
+        },
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        }
+      ],
+      "geography_treatment": "PRIMARY + REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Support / абонентское обслуживание page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "Medium — product+service ambiguity in some phrases"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P1",
+      "ad_group_ids": [
+        "cf-support-and-subscription-support_and_maintenance-geo-none",
+        "cf-support-and-subscription-direct_service_order-geo-none",
+        "cf-support-and-subscription-support_and_maintenance-geo-expansion",
+        "cf-support-and-subscription-support_and_maintenance-geo-remote-ru",
+        "cf-support-and-subscription-specialist_search-geo-none",
+        "cf-support-and-subscription-modification-geo-none",
+        "cf-support-and-subscription-support_and_maintenance-geo-primary"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-MODIFICATION-DEVELOPMENT",
+      "working_name": "1C modification and development",
+      "allocated_phrase_count": 64,
+      "service_families": [
+        "SF-MODIFICATION-DEVELOPMENT"
+      ],
+      "primary_intents": [
+        "MODIFICATION",
+        "DIRECT_SERVICE_ORDER",
+        "SPECIALIST_SEARCH"
+      ],
+      "merge_rationale": "Development/doraботка share modification LP and intent",
+      "separate_rationale": null,
+      "intent_separation": [
+        {
+          "intent": "MODIFICATION",
+          "primary": "MODIFICATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "IMPLEMENTATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Development, doraботка, reports/processing work"
+        },
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        },
+        {
+          "intent": "SPECIALIST_SEARCH",
+          "primary": "SPECIALIST_SEARCH",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE",
+            "AMBIGUOUS"
+          ],
+          "rationale": "User seeks a 1C specialist/provider; not training or product purchase"
+        }
+      ],
+      "geography_treatment": "PRIMARY + REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Development / доработка page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "Low if dedicated dev LP exists"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P1",
+      "ad_group_ids": [
+        "cf-modification-development-modification-geo-none",
+        "cf-modification-development-direct_service_order-geo-none",
+        "cf-modification-development-modification-geo-irrelevant-flag"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-REPORTS-PROCESSING",
+      "working_name": "Reports and processing",
+      "allocated_phrase_count": 37,
+      "service_families": [
+        "SF-REPORTS-PROCESSING"
+      ],
+      "primary_intents": [
+        "MODIFICATION",
+        "DIRECT_SERVICE_ORDER",
+        "SPECIALIST_SEARCH"
+      ],
+      "merge_rationale": "Small cluster; same technical delivery",
+      "separate_rationale": "Separate if reports LP distinct from general modification",
+      "intent_separation": [
+        {
+          "intent": "MODIFICATION",
+          "primary": "MODIFICATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "IMPLEMENTATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Development, doraботка, reports/processing work"
+        },
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        },
+        {
+          "intent": "SPECIALIST_SEARCH",
+          "primary": "SPECIALIST_SEARCH",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE",
+            "AMBIGUOUS"
+          ],
+          "rationale": "User seeks a 1C specialist/provider; not training or product purchase"
+        }
+      ],
+      "geography_treatment": "REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Reports / обработки page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "May land on generic dev page"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P2",
+      "ad_group_ids": [
+        "cf-reports-processing-direct_service_order-geo-none",
+        "cf-reports-processing-modification-geo-none",
+        "cf-reports-processing-specialist_search-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-INTEGRATIONS",
+      "working_name": "Integrations (Bitrix, sites, API)",
+      "allocated_phrase_count": 48,
+      "service_families": [
+        "SF-INTEGRATIONS"
+      ],
+      "primary_intents": [
+        "INTEGRATION",
+        "MODIFICATION",
+        "DIRECT_SERVICE_ORDER"
+      ],
+      "merge_rationale": "Integration tasks share Bitrix/site LP family",
+      "separate_rationale": "Split Bitrix vs generic API if LP differs",
+      "intent_separation": [
+        {
+          "intent": "INTEGRATION",
+          "primary": "INTEGRATION",
+          "permitted_secondary": [
+            "MODIFICATION",
+            "DIRECT_SERVICE_ORDER",
+            "IMPLEMENTATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE"
+          ],
+          "rationale": "Bitrix, site, API integration tasks"
+        },
+        {
+          "intent": "MODIFICATION",
+          "primary": "MODIFICATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "IMPLEMENTATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Development, doraботка, reports/processing work"
+        },
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        }
+      ],
+      "geography_treatment": "REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Integrations / Bitrix page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "Medium — platform-specific expectations"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P1",
+      "ad_group_ids": [
+        "cf-integrations-integration-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-MARKING-CHESTNY-ZNAK",
+      "working_name": "Marking / Честный знак",
+      "allocated_phrase_count": 218,
+      "service_families": [
+        "SF-MARKING-CHESTNY-ZNAK",
+        "SF-OTHER-APPROVED-1C-SERVICE"
+      ],
+      "primary_intents": [
+        "DIRECT_SERVICE_ORDER",
+        "MODIFICATION",
+        "IMPLEMENTATION",
+        "INTEGRATION"
+      ],
+      "merge_rationale": "Marking cluster is large; OTHER approved marking phrases merged here",
+      "separate_rationale": "TS ПИОТ may warrant separate campaign if LP differs",
+      "intent_separation": [
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        },
+        {
+          "intent": "MODIFICATION",
+          "primary": "MODIFICATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "IMPLEMENTATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Development, doraботка, reports/processing work"
+        },
+        {
+          "intent": "IMPLEMENTATION",
+          "primary": "IMPLEMENTATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "MODIFICATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Rollout / vnedrenie / configuration projects"
+        },
+        {
+          "intent": "INTEGRATION",
+          "primary": "INTEGRATION",
+          "permitted_secondary": [
+            "MODIFICATION",
+            "DIRECT_SERVICE_ORDER",
+            "IMPLEMENTATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE"
+          ],
+          "rationale": "Bitrix, site, API integration tasks"
+        }
+      ],
+      "geography_treatment": "REMOTE_RU + PRIMARY",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Marking / Честный знак service page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "High if sent to generic 1C page"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P1",
+      "ad_group_ids": [
+        "cf-marking-chestny-znak-direct_service_order-geo-none",
+        "cf-marking-chestny-znak-integration-geo-none",
+        "cf-marking-chestny-znak-implementation-geo-none",
+        "cf-marking-chestny-znak-support_and_maintenance-geo-none",
+        "cf-marking-chestny-znak-specialist_search-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-TS-PIOT",
+      "working_name": "TS ПИОТ",
+      "allocated_phrase_count": 4,
+      "service_families": [
+        "SF-TS-PIOT"
+      ],
+      "primary_intents": [
+        "DIRECT_SERVICE_ORDER",
+        "PROBLEM_RESOLUTION",
+        "IMPLEMENTATION"
+      ],
+      "merge_rationale": null,
+      "separate_rationale": "Low volume (4 assessed); operator must decide merge with marking or standalone",
+      "intent_separation": [
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        },
+        {
+          "intent": "PROBLEM_RESOLUTION",
+          "primary": "PROBLEM_RESOLUTION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "SPECIALIST_SEARCH"
+          ],
+          "prohibited": [
+            "INFORMATIONAL",
+            "SELF-SERVICE",
+            "CAREER_OR_EDUCATION"
+          ],
+          "rationale": "Urgent fix / not working; not DIY manuals"
+        },
+        {
+          "intent": "IMPLEMENTATION",
+          "primary": "IMPLEMENTATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "MODIFICATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Rollout / vnedrenie / configuration projects"
+        }
+      ],
+      "geography_treatment": "REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "TS ПИОТ / marking hardware page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "High — niche hardware integration"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P3",
+      "ad_group_ids": [
+        "cf-ts-piot-direct_service_order-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-TROUBLESHOOTING",
+      "working_name": "1C troubleshooting / not working",
+      "allocated_phrase_count": 2,
+      "service_families": [
+        "SF-TROUBLESHOOTING-NOT-WORKING"
+      ],
+      "primary_intents": [
+        "PROBLEM_RESOLUTION",
+        "SPECIALIST_SEARCH"
+      ],
+      "merge_rationale": null,
+      "separate_rationale": "Only 2 assessed ACCEPT; may merge with support or emergency LP",
+      "intent_separation": [
+        {
+          "intent": "PROBLEM_RESOLUTION",
+          "primary": "PROBLEM_RESOLUTION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "SPECIALIST_SEARCH"
+          ],
+          "prohibited": [
+            "INFORMATIONAL",
+            "SELF-SERVICE",
+            "CAREER_OR_EDUCATION"
+          ],
+          "rationale": "Urgent fix / not working; not DIY manuals"
+        },
+        {
+          "intent": "SPECIALIST_SEARCH",
+          "primary": "SPECIALIST_SEARCH",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE",
+            "AMBIGUOUS"
+          ],
+          "rationale": "User seeks a 1C specialist/provider; not training or product purchase"
+        }
+      ],
+      "geography_treatment": "PRIMARY (onsite) + REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Emergency support / troubleshooting page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "High — urgent intent mismatch if generic LP"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P2",
+      "ad_group_ids": [
+        "cf-troubleshooting-problem_resolution-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-PRICE-AND-COST",
+      "working_name": "Price and cost queries",
+      "allocated_phrase_count": 17,
+      "service_families": [
+        "SF-ONE-OFF-WORK",
+        "SF-1C-PROGRAMMER-SPECIALIST",
+        "SF-SUPPORT-MAINTENANCE",
+        "SF-SUBSCRIPTION-SERVICE",
+        "SF-MODIFICATION-DEVELOPMENT"
+      ],
+      "primary_intents": [
+        "PRICE_AND_COST"
+      ],
+      "merge_rationale": "Price intent cross-cuts services; shared pricing LP or service hub",
+      "separate_rationale": "Split by service if price LP differs per line",
+      "intent_separation": [
+        {
+          "intent": "PRICE_AND_COST",
+          "primary": "PRICE_AND_COST",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "SPECIALIST_SEARCH"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "SALARY"
+          ],
+          "rationale": "Commercial pricing intent for services, not salary research"
+        }
+      ],
+      "geography_treatment": "PRIMARY + REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Pricing / calculator or service hub",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "Medium — price without service context"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P2",
+      "ad_group_ids": [
+        "cf-price-and-cost-price_and_cost-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-ONE-OFF-WORK",
+      "working_name": "One-off / hourly work",
+      "allocated_phrase_count": 5,
+      "service_families": [
+        "SF-ONE-OFF-WORK"
+      ],
+      "primary_intents": [
+        "DIRECT_SERVICE_ORDER",
+        "PRICE_AND_COST",
+        "SPECIALIST_SEARCH"
+      ],
+      "merge_rationale": "Hourly/razovye terms; may overlap programmer campaign",
+      "separate_rationale": "Merge into CF-PROGRAMMER if same LP",
+      "intent_separation": [
+        {
+          "intent": "DIRECT_SERVICE_ORDER",
+          "primary": "DIRECT_SERVICE_ORDER",
+          "permitted_secondary": [
+            "SPECIALIST_SEARCH",
+            "MODIFICATION",
+            "INTEGRATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "AMBIGUOUS"
+          ],
+          "rationale": "Explicit service order or task delegation"
+        },
+        {
+          "intent": "PRICE_AND_COST",
+          "primary": "PRICE_AND_COST",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "SPECIALIST_SEARCH"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "SALARY"
+          ],
+          "rationale": "Commercial pricing intent for services, not salary research"
+        },
+        {
+          "intent": "SPECIALIST_SEARCH",
+          "primary": "SPECIALIST_SEARCH",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL",
+            "PRODUCT_OR_LICENSE",
+            "AMBIGUOUS"
+          ],
+          "rationale": "User seeks a 1C specialist/provider; not training or product purchase"
+        }
+      ],
+      "geography_treatment": "PRIMARY + REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Hourly / разовые работы page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "Low if merged with specialist LP"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P2",
+      "ad_group_ids": [
+        "cf-one-off-work-specialist_search-geo-none"
+      ]
+    },
+    {
+      "campaign_family_id": "CF-IMPLEMENTATION",
+      "working_name": "Implementation / rollout",
+      "allocated_phrase_count": 5,
+      "service_families": [
+        "SF-MARKING-CHESTNY-ZNAK",
+        "SF-INTEGRATIONS"
+      ],
+      "primary_intents": [
+        "IMPLEMENTATION"
+      ],
+      "merge_rationale": null,
+      "separate_rationale": "Small volume; likely absorbed into parent service campaigns",
+      "intent_separation": [
+        {
+          "intent": "IMPLEMENTATION",
+          "primary": "IMPLEMENTATION",
+          "permitted_secondary": [
+            "DIRECT_SERVICE_ORDER",
+            "MODIFICATION"
+          ],
+          "prohibited": [
+            "CAREER_OR_EDUCATION",
+            "INFORMATIONAL"
+          ],
+          "rationale": "Rollout / vnedrenie / configuration projects"
+        }
+      ],
+      "geography_treatment": "REMOTE_RU",
+      "landing_page": {
+        "sites": [
+          "lk.corvonero.ru",
+          "corvonero.ru"
+        ],
+        "required_service_page": "Implementation / внедрение page",
+        "confirmed_match": null,
+        "suitability": "SAFE UNKNOWN",
+        "generic_page_risk": "SAFE UNKNOWN"
+      },
+      "negative_boundary_design": "Campaign-level blocks: careers, education, informational, product-only; group-level refinement pending",
+      "default_priority_tier": "P3",
+      "ad_group_ids": [
+        "cf-implementation-implementation-geo-none"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "requirements_id": "corvonero-phase-6.2-lp-03-requirements-v1",
+  "landing_page_id": "LP-03",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "A_commercial_purpose": {
+    "target_service": "1C modification, development and implementation projects",
+    "primary_audience": "Businesses needing customizations, new modules, or rollout projects",
+    "primary_conversion": "Project scoping inquiry",
+    "commercial_objective": "Capture modification and implementation demand",
+    "campaign_ids": [
+      "CA-03"
+    ],
+    "ad_group_ids": [
+      "ca-03-modification",
+      "ca-03-implementation",
+      "ca-03-direct-service-order"
+    ],
+    "allocated_phrase_count": 71,
+    "priority_tier": "P1"
+  },
+  "B_intent_coverage": {
+    "primary_intents": [
+      "MODIFICATION",
+      "DIRECT_SERVICE_ORDER",
+      "IMPLEMENTATION",
+      "SPECIALIST_SEARCH",
+      "PRICE_AND_COST"
+    ],
+    "permitted_secondary_intents": [
+      "DIRECT_SERVICE_ORDER",
+      "IMPLEMENTATION"
+    ],
+    "prohibited_intents": [
+      "CAREER_OR_EDUCATION",
+      "INFORMATIONAL"
+    ],
+    "representative_queries": [
+      "программист 1с разработка",
+      "программист 1с доработка",
+      "1с программист разработка и автоматизация",
+      "внедренцы и программисты 1с",
+      "внедрение и сопровождение 1с",
+      "внедрение и сопровождение 1с предприятия",
+      "услуги доработки 1с",
+      "1с заказы доработка"
+    ],
+    "ambiguous_queries_excluded": [
+      "training on development",
+      "free template downloads"
+    ],
+    "ad_groups": [
+      {
+        "group_id": "ca-03-modification",
+        "primary_intent": "MODIFICATION",
+        "phrase_count": 62,
+        "representative_phrases": [
+          "программист 1с разработка",
+          "программист 1с доработка",
+          "1с программист разработка и автоматизация",
+          "программист 1с язык программирования",
+          "1с программист доработки липецк частный исполнитель"
+        ]
+      },
+      {
+        "group_id": "ca-03-implementation",
+        "primary_intent": "IMPLEMENTATION",
+        "phrase_count": 7,
+        "representative_phrases": [
+          "внедренцы и программисты 1с",
+          "внедрение и сопровождение 1с",
+          "внедрение и сопровождение 1с предприятия",
+          "внедрение и сопровождение продуктов 1с",
+          "доработка внедрение 1с"
+        ]
+      },
+      {
+        "group_id": "ca-03-direct-service-order",
+        "primary_intent": "DIRECT_SERVICE_ORDER",
+        "phrase_count": 2,
+        "representative_phrases": [
+          "услуги доработки 1с",
+          "1с заказы доработка"
+        ]
+      }
+    ]
+  },
+  "C_required_content_blocks": [
+    "first_screen_development_proposition",
+    "value_proposition_custom_fit",
+    "service_scope_reports_processing_extensions",
+    "problems_manual_work_legacy",
+    "project_examples_by_configuration",
+    "process_brief_estimate_develop_test",
+    "delivery_phases",
+    "platforms_configurations",
+    "pricing_approach_estimate_based",
+    "guarantees_scope_only",
+    "trust_portfolio",
+    "faq_project_timeline",
+    "cta_discuss_project",
+    "contact_block"
+  ],
+  "D_required_message_evidence": {
+    "company_name_korvo_nero": "CONFIRMED",
+    "phone_383_390_29_28": "CONFIRMED",
+    "service_delivery_novosibirsk": "NEEDS_OPERATOR_CONFIRMATION",
+    "remote_service_russia": "NEEDS_CLIENT_CONFIRMATION",
+    "hourly_rates": "PROHIBITED_UNSUPPORTED",
+    "partner_1c_status": "NEEDS_CLIENT_CONFIRMATION",
+    "response_time_sla": "PROHIBITED_UNSUPPORTED",
+    "marking_competency": "NEEDS_CLIENT_CONFIRMATION",
+    "integration_systems_list": "NEEDS_CLIENT_CONFIRMATION",
+    "case_studies": "NEEDS_CLIENT_CONFIRMATION",
+    "nds_vat_included": "NEEDS_OPERATOR_CONFIRMATION"
+  },
+  "E_conversion_requirements": {
+    "primary_cta": "Request service / call specialist — service-specific label required",
+    "secondary_cta": "Phone click +7 (383) 390-29-28",
+    "required_form_fields": [
+      "name",
+      "phone_or_email",
+      "company_optional",
+      "task_description",
+      "configuration_optional"
+    ],
+    "phone_visibility": "Above fold and footer — required",
+    "messenger_requirements": "NEEDS_OPERATOR_CONFIRMATION — not confirmed in audit",
+    "response_time_claim_status": "PROHIBITED_UNSUPPORTED unless client confirms",
+    "form_privacy_legal": "Privacy consent + PD processing notice — required at implementation",
+    "analytics_events_required_later": [
+      "form_submit",
+      "phone_click",
+      "cta_click",
+      "scroll_depth_optional"
+    ]
+  },
+  "F_search_advertising_alignment": {
+    "campaign_message_match": "First screen and H1 must match Доработка и разработка 1С ad groups",
+    "allowed_service_language": [
+      "SF-MODIFICATION-DEVELOPMENT",
+      "SF-ONE-OFF-WORK"
+    ],
+    "risky_wording": [
+      "любая доработка за N дней без scope"
+    ],
+    "exclusions_reference": "CORVONERO-PHASE-6.1-EXCLUSION-BOUNDARIES-v2.json",
+    "snippet_sections_required": [
+      {
+        "intent_group": "ca-03-modification",
+        "page_section": "Section addressing MODIFICATION"
+      },
+      {
+        "intent_group": "ca-03-implementation",
+        "page_section": "Section addressing IMPLEMENTATION"
+      },
+      {
+        "intent_group": "ca-03-direct-service-order",
+        "page_section": "Section addressing DIRECT_SERVICE_ORDER"
+      }
+    ]
+  },
+  "G_geography": {
+    "primary": "Новосибирск + Новосибирская область",
+    "remote_service": "Mention only where operator/client confirms scope",
+    "expansion_cities": "Do not feature in initial-launch LP copy",
+    "office_locations": "Do not invent — SAFE UNKNOWN"
+  },
+  "H_seo_technical_recommendations": {
+    "recommended_url_slug": "dorabotka-razrabotka-1s",
+    "recommended_base_path": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+    "title_direction": "Доработка и разработка 1С — Корво Неро, Новосибирск",
+    "h1_direction": "Доработка и разработка 1С под задачи бизнеса",
+    "anchor_structure": "Single H1; H2 per major content block",
+    "canonical": "Self-referencing canonical on dedicated URL",
+    "mobile_requirements": "Responsive; click-to-call; form usable at 320px",
+    "form_call_tracking": "Call tracking and form goal tags — configure at launch prep",
+    "performance": "LCP target planning only — no heavy unoptimized assets"
+  }
+}

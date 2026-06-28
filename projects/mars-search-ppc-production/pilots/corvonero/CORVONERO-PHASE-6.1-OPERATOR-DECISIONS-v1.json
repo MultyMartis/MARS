@@ -1,0 +1,16 @@
+{
+  "decisions_id": "corvonero-phase-6.1-operator-decisions-v1",
+  "applied": {
+    "OD-01": "PRIMARY-ONLY launch: Новосибирск + Новосибирская область; no geo campaign duplication",
+    "OD-02": "Six campaign families CA-01..CA-06; merged price/one-off/troubleshooting/TS ПИОТ/implementation",
+    "OD-03": "Product-plus-service demand HOLD — excluded from initial allocation",
+    "OD-04": "Troubleshooting group under CA-02, not standalone campaign",
+    "OD-05": "TS ПИОТ group under CA-05",
+    "OD-06": "No LP assignment approved — audit only",
+    "OD-07": "296 ABSTAIN remain outside launch architecture",
+    "OD-08": "P1/P2/P3 tiers per operator packet",
+    "OD-09": "67.5% partial coverage accepted for planning; 769 backlog visible"
+  },
+  "source": "Operator packet Phase 6.1 task input",
+  "semantic_authority_unchanged": true
+}

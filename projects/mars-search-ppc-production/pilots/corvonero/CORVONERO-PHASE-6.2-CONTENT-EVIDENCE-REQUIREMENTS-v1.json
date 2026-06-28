@@ -1,0 +1,166 @@
+{
+  "inventory_id": "corvonero-phase-6.2-content-evidence-requirements-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "purpose": "Information required from operator/client before landing-page production",
+  "known_from_audit": {
+    "brand_name": "Корво Неро",
+    "phone": "+7 (383) 390-29-28",
+    "homepage_proposition": "Внедрение и сопровождение 1С — центр автоматизации",
+    "homepage_services_tags": [
+      "support",
+      "modification",
+      "integration",
+      "marking",
+      "reports",
+      "troubleshooting"
+    ],
+    "primary_geo_signal": "novosibirsk=true on homepage audit",
+    "trust_signal": "clients_or_cases (generic, not service-specific)"
+  },
+  "fields": [
+    {
+      "field_id": "exact_service_scope",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "supported_1c_configurations",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "industries_served",
+      "classification": "UNKNOWN_NON_BLOCKING",
+      "required_before_production": false,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "typical_tasks",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "project_examples",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "integration_systems",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "marking_chestny_znak_competencies",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "ts_piot_scope",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "response_times",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "pricing_model",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "minimum_order",
+      "classification": "UNKNOWN_NON_BLOCKING",
+      "required_before_production": false,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "subscription_terms",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "geography_and_travel_conditions",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "contract_payment_details",
+      "classification": "UNKNOWN_NON_BLOCKING",
+      "required_before_production": false,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "nds_vat_status",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "guarantees",
+      "classification": "UNKNOWN_NON_BLOCKING",
+      "required_before_production": false,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "staff_expertise",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "certificates_partner_status",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "testimonials_and_case_studies",
+      "classification": "PARTIALLY_KNOWN",
+      "required_before_production": false,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "remote_service_scope",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "on_site_boundary",
+      "classification": "UNKNOWN_BLOCKING",
+      "required_before_production": true,
+      "notes": "Operator/client confirmation required"
+    },
+    {
+      "field_id": "product_license_sales_scope",
+      "classification": "SAFE_UNKNOWN",
+      "required_before_production": true,
+      "notes": "Partial evidence from homepage audit only"
+    },
+    {
+      "field_id": "page_production_platform",
+      "classification": "UNKNOWN_NON_BLOCKING",
+      "required_before_production": false,
+      "notes": "Operator/client confirmation required"
+    }
+  ],
+  "blocking_count": 10
+}

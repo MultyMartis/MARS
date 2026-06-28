@@ -1,0 +1,222 @@
+{
+  "requirements_id": "corvonero-phase-6.2-lp-05-requirements-v1",
+  "landing_page_id": "LP-05",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "A_commercial_purpose": {
+    "target_service": "Marking, Честный знак, TS ПИОТ in 1C",
+    "primary_audience": "Retail/wholesale/manufacturing businesses subject to marking requirements",
+    "primary_conversion": "Marking setup/support inquiry",
+    "commercial_objective": "Capture marking and TS ПИОТ service demand distinct from generic 1C",
+    "campaign_ids": [
+      "CA-05"
+    ],
+    "ad_group_ids": [
+      "ca-05-direct-service-order",
+      "ca-05-integration",
+      "ca-05-ts-piot",
+      "ca-05-support-and-maintenance",
+      "ca-05-specialist-search"
+    ],
+    "allocated_phrase_count": 220,
+    "priority_tier": "P1"
+  },
+  "B_intent_coverage": {
+    "primary_intents": [
+      "DIRECT_SERVICE_ORDER",
+      "MODIFICATION",
+      "IMPLEMENTATION",
+      "INTEGRATION",
+      "PROBLEM_RESOLUTION",
+      "PRICE_AND_COST"
+    ],
+    "permitted_secondary_intents": [
+      "MODIFICATION",
+      "INTEGRATION",
+      "PROBLEM_RESOLUTION"
+    ],
+    "prohibited_intents": [
+      "CAREER_OR_EDUCATION",
+      "INFORMATIONAL",
+      "AMBIGUOUS"
+    ],
+    "representative_queries": [
+      "тестирование доработок 1с",
+      "продажа доработок 1с",
+      "маркировка в 1с",
+      "интеграция честного знака и сайта 1с битрикс",
+      "интеграция маркировки в 1с",
+      "интеграция маркировки товаров в 1с",
+      "тс пиот честный знак 1с",
+      "тс пиот честный знак 1с розница",
+      "настройка тс пиот в 1с ут 11.5",
+      "поддержка 1с честный знак",
+      "техподдержка честный знак 1с",
+      "как заказать коды маркировки в 1с"
+    ],
+    "ambiguous_queries_excluded": [
+      "regulatory research-only queries",
+      "product catalog navigation"
+    ],
+    "ad_groups": [
+      {
+        "group_id": "ca-05-direct-service-order",
+        "primary_intent": "DIRECT_SERVICE_ORDER",
+        "phrase_count": 199,
+        "representative_phrases": [
+          "тестирование доработок 1с",
+          "продажа доработок 1с",
+          "маркировка в 1с",
+          "маркировка товаров в 1с",
+          "маркировка честный знак в 1с"
+        ]
+      },
+      {
+        "group_id": "ca-05-integration",
+        "primary_intent": "INTEGRATION",
+        "phrase_count": 14,
+        "representative_phrases": [
+          "интеграция честного знака и сайта 1с битрикс",
+          "интеграция маркировки в 1с",
+          "интеграция маркировки товаров в 1с",
+          "интеграция 1с и честный знак",
+          "настройка интеграции 1с и честный знак"
+        ]
+      },
+      {
+        "group_id": "ca-05-ts-piot",
+        "primary_intent": "DIRECT_SERVICE_ORDER",
+        "phrase_count": 4,
+        "representative_phrases": [
+          "тс пиот честный знак 1с",
+          "тс пиот честный знак 1с розница",
+          "настройка тс пиот в 1с ут 11.5",
+          "1с не видит тс пиот"
+        ]
+      },
+      {
+        "group_id": "ca-05-support-and-maintenance",
+        "primary_intent": "SUPPORT_AND_MAINTENANCE",
+        "phrase_count": 2,
+        "representative_phrases": [
+          "поддержка 1с честный знак",
+          "техподдержка честный знак 1с"
+        ]
+      },
+      {
+        "group_id": "ca-05-specialist-search",
+        "primary_intent": "SPECIALIST_SEARCH",
+        "phrase_count": 1,
+        "representative_phrases": [
+          "как заказать коды маркировки в 1с"
+        ]
+      }
+    ]
+  },
+  "C_required_content_blocks": [
+    "first_screen_marking_proposition",
+    "value_proposition_compliance_operations",
+    "service_scope_chestny_znak_ts_piot_ut_retail",
+    "problems_codes_exchange_errors",
+    "marking_scenarios_industries",
+    "process_audit_setup_test_support",
+    "integration_with_operators",
+    "configurations_ut_retail_erp",
+    "pricing_approach_project_support",
+    "trust_marking_experience",
+    "faq_marking_deadlines",
+    "cta_marking_consultation",
+    "contact_block",
+    "ts_piot_subsection"
+  ],
+  "D_required_message_evidence": {
+    "company_name_korvo_nero": "CONFIRMED",
+    "phone_383_390_29_28": "CONFIRMED",
+    "service_delivery_novosibirsk": "NEEDS_OPERATOR_CONFIRMATION",
+    "remote_service_russia": "NEEDS_CLIENT_CONFIRMATION",
+    "hourly_rates": "PROHIBITED_UNSUPPORTED",
+    "partner_1c_status": "NEEDS_CLIENT_CONFIRMATION",
+    "response_time_sla": "PROHIBITED_UNSUPPORTED",
+    "marking_competency": "NEEDS_CLIENT_CONFIRMATION",
+    "integration_systems_list": "NEEDS_CLIENT_CONFIRMATION",
+    "case_studies": "NEEDS_CLIENT_CONFIRMATION",
+    "nds_vat_included": "NEEDS_OPERATOR_CONFIRMATION"
+  },
+  "E_conversion_requirements": {
+    "primary_cta": "Request service / call specialist — service-specific label required",
+    "secondary_cta": "Phone click +7 (383) 390-29-28",
+    "required_form_fields": [
+      "name",
+      "phone_or_email",
+      "company_optional",
+      "task_description",
+      "configuration_optional"
+    ],
+    "phone_visibility": "Above fold and footer — required",
+    "messenger_requirements": "NEEDS_OPERATOR_CONFIRMATION — not confirmed in audit",
+    "response_time_claim_status": "PROHIBITED_UNSUPPORTED unless client confirms",
+    "form_privacy_legal": "Privacy consent + PD processing notice — required at implementation",
+    "analytics_events_required_later": [
+      "form_submit",
+      "phone_click",
+      "cta_click",
+      "scroll_depth_optional"
+    ]
+  },
+  "F_search_advertising_alignment": {
+    "campaign_message_match": "First screen and H1 must match Маркировка / Честный знак ad groups",
+    "allowed_service_language": [
+      "SF-MARKING-CHESTNY-ZNAK",
+      "SF-OTHER-APPROVED-1C-SERVICE",
+      "SF-TS-PIOT"
+    ],
+    "risky_wording": [
+      "100% compliance guarantee",
+      "официальный представитель ЧЗ без evidence"
+    ],
+    "exclusions_reference": "CORVONERO-PHASE-6.1-EXCLUSION-BOUNDARIES-v2.json",
+    "snippet_sections_required": [
+      {
+        "intent_group": "ca-05-direct-service-order",
+        "page_section": "Section addressing DIRECT_SERVICE_ORDER"
+      },
+      {
+        "intent_group": "ca-05-integration",
+        "page_section": "Section addressing INTEGRATION"
+      },
+      {
+        "intent_group": "ca-05-ts-piot",
+        "page_section": "Section addressing DIRECT_SERVICE_ORDER"
+      },
+      {
+        "intent_group": "ca-05-support-and-maintenance",
+        "page_section": "Section addressing SUPPORT_AND_MAINTENANCE"
+      },
+      {
+        "intent_group": "ca-05-specialist-search",
+        "page_section": "Section addressing SPECIALIST_SEARCH"
+      }
+    ]
+  },
+  "G_geography": {
+    "primary": "Новосибирск + Новосибирская область",
+    "remote_service": "Mention only where operator/client confirms scope",
+    "expansion_cities": "Do not feature in initial-launch LP copy",
+    "office_locations": "Do not invent — SAFE UNKNOWN"
+  },
+  "H_seo_technical_recommendations": {
+    "recommended_url_slug": "markirovka-chestny-znak",
+    "recommended_base_path": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+    "title_direction": "Маркировка / Честный знак — Корво Неро, Новосибирск",
+    "h1_direction": "Маркировка и Честный знак в 1С — настройка и сопровождение",
+    "anchor_structure": "Single H1; H2 per major content block",
+    "canonical": "Self-referencing canonical on dedicated URL",
+    "mobile_requirements": "Responsive; click-to-call; form usable at 320px",
+    "form_call_tracking": "Call tracking and form goal tags — configure at launch prep",
+    "performance": "LCP target planning only — no heavy unoptimized assets"
+  }
+}

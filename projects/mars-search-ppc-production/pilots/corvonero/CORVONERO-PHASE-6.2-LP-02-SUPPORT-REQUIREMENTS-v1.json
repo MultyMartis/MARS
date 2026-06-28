@@ -1,0 +1,229 @@
+{
+  "requirements_id": "corvonero-phase-6.2-lp-02-requirements-v1",
+  "landing_page_id": "LP-02",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "A_commercial_purpose": {
+    "target_service": "1C support, maintenance, subscription and troubleshooting",
+    "primary_audience": "Companies with existing 1C installations needing ongoing support or recovery",
+    "primary_conversion": "Support contract inquiry or urgent troubleshooting request",
+    "commercial_objective": "Convert support/maintenance and problem-resolution intent",
+    "campaign_ids": [
+      "CA-02"
+    ],
+    "ad_group_ids": [
+      "ca-02-support-and-maintenance",
+      "ca-02-direct-service-order",
+      "ca-02-troubleshooting-not-working",
+      "ca-02-specialist-search",
+      "ca-02-price-intent",
+      "ca-02-modification"
+    ],
+    "allocated_phrase_count": 155,
+    "priority_tier": "P1"
+  },
+  "B_intent_coverage": {
+    "primary_intents": [
+      "SUPPORT_AND_MAINTENANCE",
+      "DIRECT_SERVICE_ORDER",
+      "PROBLEM_RESOLUTION",
+      "PRICE_AND_COST"
+    ],
+    "permitted_secondary_intents": [
+      "DIRECT_SERVICE_ORDER",
+      "SPECIALIST_SEARCH"
+    ],
+    "prohibited_intents": [
+      "CAREER_OR_EDUCATION",
+      "INFORMATIONAL",
+      "PRODUCT_OR_LICENSE",
+      "SELF-SERVICE"
+    ],
+    "representative_queries": [
+      "программист сопровождение 1с",
+      "сопровождение 1с",
+      "сопровождение 1с предприятие",
+      "услуги по сопровождению 1с",
+      "оказание услуг по сопровождению 1с",
+      "услуг по сопровождению программного продукта 1с",
+      "ошибки программиста 1с",
+      "программа 1с не работает",
+      "становится ли программистом 1с",
+      "стоимость часа сопровождения 1с",
+      "закупка доработка и сопровождение 1с трактир"
+    ],
+    "ambiguous_queries_excluded": [
+      "DIY update manuals",
+      "forum self-help"
+    ],
+    "ad_groups": [
+      {
+        "group_id": "ca-02-support-and-maintenance",
+        "primary_intent": "SUPPORT_AND_MAINTENANCE",
+        "phrase_count": 137,
+        "representative_phrases": [
+          "программист сопровождение 1с",
+          "сопровождение 1с",
+          "сопровождение 1с предприятие",
+          "программное сопровождение 1с",
+          "сопровождение продуктов 1с"
+        ]
+      },
+      {
+        "group_id": "ca-02-direct-service-order",
+        "primary_intent": "DIRECT_SERVICE_ORDER",
+        "phrase_count": 13,
+        "representative_phrases": [
+          "услуги по сопровождению 1с",
+          "оказание услуг по сопровождению 1с",
+          "услуг по сопровождению программного продукта 1с",
+          "услуги по сопровождению 1с предприятие",
+          "услуги по сопровождению 1с 8"
+        ]
+      },
+      {
+        "group_id": "ca-02-troubleshooting-not-working",
+        "primary_intent": "PROBLEM_RESOLUTION",
+        "phrase_count": 2,
+        "representative_phrases": [
+          "ошибки программиста 1с",
+          "программа 1с не работает"
+        ]
+      },
+      {
+        "group_id": "ca-02-specialist-search",
+        "primary_intent": "SPECIALIST_SEARCH",
+        "phrase_count": 1,
+        "representative_phrases": [
+          "становится ли программистом 1с"
+        ]
+      },
+      {
+        "group_id": "ca-02-price-intent",
+        "primary_intent": "PRICE_AND_COST",
+        "phrase_count": 1,
+        "representative_phrases": [
+          "стоимость часа сопровождения 1с"
+        ]
+      },
+      {
+        "group_id": "ca-02-modification",
+        "primary_intent": "MODIFICATION",
+        "phrase_count": 1,
+        "representative_phrases": [
+          "закупка доработка и сопровождение 1с трактир"
+        ]
+      }
+    ]
+  },
+  "C_required_content_blocks": [
+    "first_screen_support_proposition",
+    "value_proposition_stability",
+    "service_scope_abonent_updates_backups",
+    "problems_not_working_errors_performance",
+    "support_scenarios_examples",
+    "process_ticket_remote_onsite",
+    "subscription_vs_incident",
+    "configurations_covered",
+    "pricing_approach_subscription_hourly",
+    "sla_response_only_if_confirmed",
+    "trust_clients_cases",
+    "faq_support_terms",
+    "cta_get_support",
+    "contact_block"
+  ],
+  "D_required_message_evidence": {
+    "company_name_korvo_nero": "CONFIRMED",
+    "phone_383_390_29_28": "CONFIRMED",
+    "service_delivery_novosibirsk": "NEEDS_OPERATOR_CONFIRMATION",
+    "remote_service_russia": "NEEDS_CLIENT_CONFIRMATION",
+    "hourly_rates": "PROHIBITED_UNSUPPORTED",
+    "partner_1c_status": "NEEDS_CLIENT_CONFIRMATION",
+    "response_time_sla": "PROHIBITED_UNSUPPORTED",
+    "marking_competency": "NEEDS_CLIENT_CONFIRMATION",
+    "integration_systems_list": "NEEDS_CLIENT_CONFIRMATION",
+    "case_studies": "NEEDS_CLIENT_CONFIRMATION",
+    "nds_vat_included": "NEEDS_OPERATOR_CONFIRMATION"
+  },
+  "E_conversion_requirements": {
+    "primary_cta": "Request service / call specialist — service-specific label required",
+    "secondary_cta": "Phone click +7 (383) 390-29-28",
+    "required_form_fields": [
+      "name",
+      "phone_or_email",
+      "company_optional",
+      "task_description",
+      "configuration_optional"
+    ],
+    "phone_visibility": "Above fold and footer — required",
+    "messenger_requirements": "NEEDS_OPERATOR_CONFIRMATION — not confirmed in audit",
+    "response_time_claim_status": "PROHIBITED_UNSUPPORTED unless client confirms",
+    "form_privacy_legal": "Privacy consent + PD processing notice — required at implementation",
+    "analytics_events_required_later": [
+      "form_submit",
+      "phone_click",
+      "cta_click",
+      "scroll_depth_optional"
+    ]
+  },
+  "F_search_advertising_alignment": {
+    "campaign_message_match": "First screen and H1 must match Сопровождение и обслуживание 1С ad groups",
+    "allowed_service_language": [
+      "SF-SUPPORT-MAINTENANCE",
+      "SF-SUBSCRIPTION-SERVICE",
+      "SF-TROUBLESHOOTING-NOT-WORKING"
+    ],
+    "risky_wording": [
+      "24/7 без подтверждения",
+      "бесплатная поддержка"
+    ],
+    "exclusions_reference": "CORVONERO-PHASE-6.1-EXCLUSION-BOUNDARIES-v2.json",
+    "snippet_sections_required": [
+      {
+        "intent_group": "ca-02-support-and-maintenance",
+        "page_section": "Section addressing SUPPORT_AND_MAINTENANCE"
+      },
+      {
+        "intent_group": "ca-02-direct-service-order",
+        "page_section": "Section addressing DIRECT_SERVICE_ORDER"
+      },
+      {
+        "intent_group": "ca-02-troubleshooting-not-working",
+        "page_section": "Section addressing PROBLEM_RESOLUTION"
+      },
+      {
+        "intent_group": "ca-02-specialist-search",
+        "page_section": "Section addressing SPECIALIST_SEARCH"
+      },
+      {
+        "intent_group": "ca-02-price-intent",
+        "page_section": "Section addressing PRICE_AND_COST"
+      },
+      {
+        "intent_group": "ca-02-modification",
+        "page_section": "Section addressing MODIFICATION"
+      }
+    ]
+  },
+  "G_geography": {
+    "primary": "Новосибирск + Новосибирская область",
+    "remote_service": "Mention only where operator/client confirms scope",
+    "expansion_cities": "Do not feature in initial-launch LP copy",
+    "office_locations": "Do not invent — SAFE UNKNOWN"
+  },
+  "H_seo_technical_recommendations": {
+    "recommended_url_slug": "soprovozhdenie-1s",
+    "recommended_base_path": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+    "title_direction": "Сопровождение и обслуживание 1С — Корво Неро, Новосибирск",
+    "h1_direction": "Сопровождение и обслуживание 1С в Новосибирске",
+    "anchor_structure": "Single H1; H2 per major content block",
+    "canonical": "Self-referencing canonical on dedicated URL",
+    "mobile_requirements": "Responsive; click-to-call; form usable at 320px",
+    "form_call_tracking": "Call tracking and form goal tags — configure at launch prep",
+    "performance": "LCP target planning only — no heavy unoptimized assets"
+  }
+}

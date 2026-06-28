@@ -1,0 +1,46 @@
+{
+  "checkpoint_id": "CORVONERO-POST-PHASE-6.4-CHECKPOINT-v1",
+  "created_at": "2026-06-29T12:00:00.000Z",
+  "repository_path": "C:\\MARS Phenix\\AI MARS",
+  "branch": "mars/canonical-post-recovery",
+  "pre_commit_head": "50b1f0bc464efb4fc87d6f92a2eb0a0e3c546b54",
+  "previous_protected_checkpoint": {
+    "commit": "88facdb7bbdbb09a517dfce53e9dff01551ed63b",
+    "tag": "corvonero-phase5.2-partial-semantic-approved-2026-06"
+  },
+  "metadata_reconciliation_commit": "f696beee",
+  "included_phases": ["6", "6.1", "6.2", "6.4"],
+  "semantic_authority_boundary": {
+    "phase_52": "OPERATOR-APPROVED PARTIAL SEMANTIC AUTHORITY",
+    "phase_6_through_6_4": "CAMPAIGN ARCHITECTURE AND LP-01 CONTENT PACK ONLY",
+    "provider_calls": "FROZEN"
+  },
+  "lp01_state": {
+    "campaign": "CA-01 — Программист / специалист 1С",
+    "accepted_semantic_ids": 404,
+    "mapped_ids": 404,
+    "missing": 0,
+    "duplicates": 0,
+    "production_copy": "CREATED",
+    "content_authority": "CLOSED",
+    "operator_copy_approval": "NOT YET GIVEN",
+    "landing_page": "NOT BUILT",
+    "website": "UNCHANGED"
+  },
+  "phase_7": "NOT STARTED",
+  "ad_creation": "NOT STARTED",
+  "inventory_file_count": 89,
+  "inventory_reference": "projects/mars-search-ppc-production/reports/REPORT-corvonero-post-phase6.4-checkpoint-inventory-v1.md",
+  "checkpoint_tag": "corvonero-phase6.4-lp01-content-pack-2026-06",
+  "excluded_unrelated_wip": [
+    "workspaces/fp-0002-*",
+    "projects/ocpilot/*",
+    "workspaces/website-factory-operations/*",
+    "projects/projects/",
+    ".recovery-temp/",
+    "corvonero/runs/ runtime cache",
+    "unrelated ORCA live-model reports",
+    "Phase 5.2 artefacts already in prior checkpoint"
+  ],
+  "purpose": "Preserve campaign architecture (Phases 6–6.2) and LP-01 production content pack (Phase 6.4) after operator-approved partial semantic authority"
+}

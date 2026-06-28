@@ -1,0 +1,69 @@
+{
+  "seo_id": "corvonero-phase-6.4-lp01-seo-requirements-v1",
+  "landing_page_id": "LP-01",
+  "campaign_id": "CA-01",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "url": {
+    "recommended_slug": "/programmist-1s",
+    "recommended_full_url": "https://lk.corvonero.ru/programmist-1s/",
+    "base_domain": "lk.corvonero.ru"
+  },
+  "title": {
+    "direction": "Программист 1С в Новосибирске — услуги специалиста | Корво Неро",
+    "max_length_guidance": 60
+  },
+  "meta_description": {
+    "direction": "Подключим программиста 1С для доработки, исправления ошибок, интеграций и сопровождения. Удалённо по России, выезд в Новосибирске. Стоимость от 3 000 ₽/час.",
+    "max_length_guidance": 160
+  },
+  "h1": "Программист 1С в Новосибирске — услуги специалиста",
+  "canonical": {
+    "requirement": "Self-referencing canonical on dedicated URL",
+    "example": "https://lk.corvonero.ru/programmist-1s/"
+  },
+  "indexation": {
+    "robots": "index, follow",
+    "note": "Configure in Tilda at publish — not modified in Phase 6.4"
+  },
+  "mobile": {
+    "responsive_required": true,
+    "min_viewport_width_px": 320,
+    "click_to_call_required": true
+  },
+  "performance": {
+    "guidance": "Avoid heavy unoptimized hero assets; target reasonable LCP for ad landing",
+    "implementation": "Tilda builder responsibility"
+  },
+  "heading_hierarchy": {
+    "h1_count": 1,
+    "h2_per_major_block": true,
+    "no_skipped_levels": true
+  },
+  "internal_links": {
+    "recommended": [
+      {"target": "homepage", "url": "https://lk.corvonero.ru/", "anchor": "Корво Неро"},
+      {"target": "other_lps", "note": "Cross-link to LP-02..LP-05 after those pages exist — optional v1"}
+    ],
+    "prohibited": ["/products for service campaign traffic"]
+  },
+  "open_graph": {
+    "og_title": "match page title",
+    "og_description": "match meta description",
+    "og_url": "canonical URL",
+    "og_image": "REQUIRED_FROM_OPERATOR_OR_CLIENT"
+  },
+  "analytics_events_recommended": [
+    "lp01_page_view",
+    "lp01_phone_click",
+    "lp01_form_submit",
+    "lp01_cta_discuss_task",
+    "lp01_cta_get_estimate",
+    "lp01_cta_request_call"
+  ],
+  "call_tracking": {
+    "status": "SAFE_UNKNOWN",
+    "default_number": "+7 (383) 390-29-28",
+    "note": "Swap to tracking DID at launch prep if operator provides"
+  },
+  "implementation_note": "DNS, routing, Tilda SEO settings not modified in Phase 6.4"
+}

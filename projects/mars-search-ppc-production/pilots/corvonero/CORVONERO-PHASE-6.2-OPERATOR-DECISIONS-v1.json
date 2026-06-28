@@ -1,0 +1,34 @@
+{
+  "decisions_id": "corvonero-phase-6.2-operator-decisions-v1",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "source": "Phase 6.2 task operator input",
+  "decisions": {
+    "RD-01": {
+      "corvonero_ru": "PROHIBITED AS LANDING PAGE",
+      "lk_corvonero_ru": "TEMPORARY GENERIC FALLBACK ONLY — NOT FINAL CAMPAIGN LP AUTHORITY",
+      "dedicated_service_landing_pages": "REQUIRED BEFORE NORMAL AD LAUNCH"
+    },
+    "RD-02": {
+      "rule": "P1 campaigns must not all launch to one generic homepage",
+      "required_landing_page_families": [
+        "LP-01 — Программист / специалист 1С",
+        "LP-02 — Сопровождение и обслуживание 1С",
+        "LP-03 — Доработка и разработка 1С",
+        "LP-04 — Интеграции 1С",
+        "LP-05 — Маркировка / Честный знак"
+      ]
+    },
+    "RD-03": {
+      "LP-06": "P2 — required before CA-06 launch — not part of automatic initial launch"
+    },
+    "RD-04": {
+      "product_resale_license_sales": "SAFE UNKNOWN",
+      "products_path": "NOT APPROVED for service campaigns",
+      "product_plus_service_demand": "HOLD"
+    },
+    "RD-05": {
+      "primary_geography": "Новосибирск + Новосибирская область",
+      "expansion": "NOT AUTHORIZED until primary-launch evidence exists"
+    }
+  }
+}

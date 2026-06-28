@@ -1,0 +1,103 @@
+{
+  "priority_id": "corvonero-phase-6-partial-campaign-planning-v1-commercial-priorities",
+  "methodology": "Explicit commercial intent, service fit, LP readiness, semantic clarity, cluster size — not phrase count as demand proxy",
+  "tier_summary": {
+    "P1": 859,
+    "P2": 61,
+    "P3": 9,
+    "HOLD": 6
+  },
+  "tiers": {
+    "P1": {
+      "label": "Launch candidate",
+      "campaign_families": [
+        "CF-PROGRAMMER-SPECIALIST",
+        "CF-SUPPORT-AND-SUBSCRIPTION",
+        "CF-MODIFICATION-DEVELOPMENT",
+        "CF-INTEGRATIONS",
+        "CF-MARKING-CHESTNY-ZNAK"
+      ],
+      "criteria": "Clear commercial intent, core approved services, adequate cluster size"
+    },
+    "P2": {
+      "label": "Launch after LP or operator confirmation",
+      "campaign_families": [
+        "CF-PRICE-AND-COST",
+        "CF-REPORTS-PROCESSING",
+        "CF-TROUBLESHOOTING",
+        "CF-ONE-OFF-WORK"
+      ],
+      "criteria": "Commercial but LP match uncertain or small cluster"
+    },
+    "P3": {
+      "label": "Later expansion",
+      "campaign_families": [
+        "CF-TS-PIOT",
+        "CF-IMPLEMENTATION"
+      ],
+      "criteria": "Niche or very low assessed volume"
+    },
+    "HOLD": {
+      "label": "Not campaign-ready",
+      "criteria": "Irrelevant geography flagged in ACCEPT, or pending ABSTAIN promotion",
+      "count": 6
+    }
+  },
+  "campaign_family_priorities": [
+    {
+      "campaign_family_id": "CF-PROGRAMMER-SPECIALIST",
+      "allocated_count": 383,
+      "default_tier": "P1"
+    },
+    {
+      "campaign_family_id": "CF-SUPPORT-AND-SUBSCRIPTION",
+      "allocated_count": 152,
+      "default_tier": "P1"
+    },
+    {
+      "campaign_family_id": "CF-MODIFICATION-DEVELOPMENT",
+      "allocated_count": 64,
+      "default_tier": "P1"
+    },
+    {
+      "campaign_family_id": "CF-REPORTS-PROCESSING",
+      "allocated_count": 37,
+      "default_tier": "P2"
+    },
+    {
+      "campaign_family_id": "CF-INTEGRATIONS",
+      "allocated_count": 48,
+      "default_tier": "P1"
+    },
+    {
+      "campaign_family_id": "CF-MARKING-CHESTNY-ZNAK",
+      "allocated_count": 218,
+      "default_tier": "P1"
+    },
+    {
+      "campaign_family_id": "CF-TS-PIOT",
+      "allocated_count": 4,
+      "default_tier": "P3"
+    },
+    {
+      "campaign_family_id": "CF-TROUBLESHOOTING",
+      "allocated_count": 2,
+      "default_tier": "P2"
+    },
+    {
+      "campaign_family_id": "CF-PRICE-AND-COST",
+      "allocated_count": 17,
+      "default_tier": "P2"
+    },
+    {
+      "campaign_family_id": "CF-ONE-OFF-WORK",
+      "allocated_count": 5,
+      "default_tier": "P2"
+    },
+    {
+      "campaign_family_id": "CF-IMPLEMENTATION",
+      "allocated_count": 5,
+      "default_tier": "P3"
+    }
+  ]
+}

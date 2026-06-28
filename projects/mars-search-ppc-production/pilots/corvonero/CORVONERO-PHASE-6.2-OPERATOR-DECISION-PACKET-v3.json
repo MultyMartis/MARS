@@ -1,0 +1,114 @@
+{
+  "packet_id": "corvonero-phase-6.2-operator-decision-packet-v3",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "purpose": "Decisions required before landing-page production — no fake answers",
+  "resolved_in_phase_6_2": [
+    "RD-01",
+    "RD-02",
+    "RD-03",
+    "RD-04",
+    "RD-05"
+  ],
+  "open_decisions": [
+    {
+      "decision_id": "ODP-01",
+      "topic": "supported_1c_configurations",
+      "question": "Which 1C configurations/platforms does Corvonero support for each service?",
+      "status": [
+        "UNKNOWN_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-02",
+      "topic": "remote_service_scope",
+      "question": "Does remote service cover all Russia or only Novosibirsk region?",
+      "status": [
+        "UNKNOWN_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-03",
+      "topic": "on_site_boundary",
+      "question": "On-site visit geography and travel conditions?",
+      "status": [
+        "UNKNOWN_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-04",
+      "topic": "product_license_sales",
+      "question": "Exact product/license resale scope — ever in PPC scope?",
+      "status": [
+        "SAFE_UNKNOWN"
+      ]
+    },
+    {
+      "decision_id": "ODP-05",
+      "topic": "nds_vat",
+      "question": "NDS/VAT status for published pricing?",
+      "status": [
+        "UNKNOWN_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-06",
+      "topic": "pricing_disclosure",
+      "question": "What pricing may appear on LPs (hourly, subscription, from-price)?",
+      "status": [
+        "UNKNOWN_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-07",
+      "topic": "response_time",
+      "question": "May response-time promises be published?",
+      "status": [
+        "PROHIBITED_UNTIL_CONFIRMED"
+      ]
+    },
+    {
+      "decision_id": "ODP-08",
+      "topic": "cases_reviews",
+      "question": "Available cases and reviews per service family?",
+      "status": [
+        "UNKNOWN_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-09",
+      "topic": "certificates_partner",
+      "question": "Partner/certification claims allowed?",
+      "status": [
+        "NEEDS_CLIENT_CONFIRMATION"
+      ]
+    },
+    {
+      "decision_id": "ODP-10",
+      "topic": "page_production_platform",
+      "question": "Tilda new pages vs other stack — who builds?",
+      "status": [
+        "UNKNOWN_NON_BLOCKING"
+      ]
+    },
+    {
+      "decision_id": "ODP-11",
+      "topic": "lp06_first_wave",
+      "question": "Produce LP-06 in first wave or defer per RD-03?",
+      "status": [
+        "OPERATOR_CHOICE"
+      ]
+    }
+  ],
+  "not_authorized": [
+    "Ad copy",
+    "Campaign launch",
+    "Commander",
+    "Minus-word deployment",
+    "769 backlog processing"
+  ]
+}

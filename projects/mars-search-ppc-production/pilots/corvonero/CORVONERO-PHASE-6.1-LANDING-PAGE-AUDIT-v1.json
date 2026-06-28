@@ -1,0 +1,136 @@
+{
+  "audit_id": "corvonero-phase-6.1-landing-page-audit-v1",
+  "audit_timestamp": "2026-06-28T18:43:52.501Z",
+  "method": "read_only_http_inspection",
+  "sites_audited": [
+    "https://corvonero.ru",
+    "https://lk.corvonero.ru"
+  ],
+  "corvonero_ru_status": {
+    "http_status": 200,
+    "title": "IIS Windows Server",
+    "suitability": "LP_NOT_SUITABLE"
+  },
+  "lk_corvonero_ru_status": {
+    "http_status": 200,
+    "title": "Корво Неро",
+    "phone": true,
+    "cta": true,
+    "suitability": "LP_GENERIC_FALLBACK"
+  },
+  "page_inventory_ref": "CORVONERO-PHASE-6.1-WEBSITE-PAGE-INVENTORY-v1.json",
+  "campaign_family_matrix": {
+    "CA-01": {
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_GENERIC_FALLBACK",
+      "missing_content": [
+        "Homepage lacks explicit signals for CA-01"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs",
+        "No explicit programmer/specialist proposition on audited homepage text"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    "CA-02": {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Support / абонентское обслуживание / troubleshooting page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    "CA-03": {
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Development / доработка / внедрение page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    "CA-04": {
+      "campaign_id": "CA-04",
+      "campaign_name": "Интеграции 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Integrations / Bitrix / API page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    "CA-05": {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Marking / Честный знак / TS ПИОТ page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs",
+        "Marking content present but not isolated — risk of generic 1C message",
+        "/products catalog is product-navigation — not marking service LP"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    },
+    "CA-06": {
+      "campaign_id": "CA-06",
+      "campaign_name": "Отчёты и обработки 1С",
+      "best_available_url": "https://lk.corvonero.ru/",
+      "suitability_class": "LP_PARTIAL_MATCH",
+      "missing_content": [
+        "No dedicated URL for: Reports / обработки page"
+      ],
+      "cta_adequacy": "PARTIAL",
+      "trust_adequacy": "PARTIAL",
+      "commercial_message_mismatch": [
+        "corvonero.ru serves IIS default page — not a commercial LP",
+        "Single-page Tilda site — menu sections (Услуги, Цены) are anchors, not separate URLs"
+      ],
+      "blocks_ad_creation": true,
+      "required_future_page": "REQUIRED_LANDING_PAGE — NOT CURRENTLY PRESENT",
+      "operator_lp_assignment": "NOT APPROVED — OD-06"
+    }
+  },
+  "evidence_note": "No operator-approved LP assignment; lk.corvonero.ru is working site but mostly single-page with section anchors"
+}

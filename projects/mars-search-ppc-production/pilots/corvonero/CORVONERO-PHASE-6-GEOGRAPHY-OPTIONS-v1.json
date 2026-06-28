@@ -1,0 +1,94 @@
+{
+  "options_id": "corvonero-phase-6-partial-campaign-planning-v1-geography-options",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "accept_geography_distribution": {
+    "NO_GEOGRAPHY": 891,
+    "OTHER_RU": 27,
+    "EXPANSION": 8,
+    "IRRELEVANT": 6,
+    "PRIMARY": 2,
+    "REMOTE": 1
+  },
+  "primary_launch": {
+    "markets": [
+      "Новосибирск",
+      "Новосибирская область"
+    ],
+    "onsite_delivery": true,
+    "remote_delivery": true
+  },
+  "expansion": {
+    "markets": [
+      "Краснодар",
+      "Екатеринбург",
+      "Красноярск"
+    ],
+    "note": "Expansion ACCEPT phrases present in assessed corpus"
+  },
+  "remote_russia_wide": {
+    "eligible_service_families": [
+      "SF-1C-PROGRAMMER-SPECIALIST",
+      "SF-SUPPORT-MAINTENANCE",
+      "SF-SUBSCRIPTION-SERVICE",
+      "SF-MODIFICATION-DEVELOPMENT",
+      "SF-REPORTS-PROCESSING",
+      "SF-INTEGRATIONS",
+      "SF-MARKING-CHESTNY-ZNAK",
+      "SF-TS-PIOT"
+    ],
+    "excluded": [
+      "Onsite-only troubleshooting without remote SLA — operator confirmation"
+    ]
+  },
+  "architecture_options": [
+    {
+      "option_id": "GEO-A",
+      "name": "Primary geo in campaign structure, expansion via bid adjustment",
+      "description": "Single campaign families; location bid modifiers for PRIMARY vs EXPANSION vs REMOTE_RU",
+      "pros": [
+        "Simpler structure",
+        "Faster launch",
+        "Easier budget pooling"
+      ],
+      "cons": [
+        "Less budget isolation per city",
+        "Harder to tune LP per geo"
+      ],
+      "recommendation": "DEFAULT for Phase 6 partial launch planning"
+    },
+    {
+      "option_id": "GEO-B",
+      "name": "Separate campaigns per geography tier",
+      "description": "Duplicate campaign families for PRIMARY, EXPANSION, REMOTE_RU",
+      "pros": [
+        "Budget control per market",
+        "Clear reporting"
+      ],
+      "cons": [
+        "Campaign proliferation",
+        "Small clusters in expansion/remote"
+      ],
+      "recommendation": "Consider for expansion wave after primary proof"
+    },
+    {
+      "option_id": "GEO-C",
+      "name": "Geo at ad-group level only",
+      "description": "Geo-specific ad groups within shared campaigns",
+      "pros": [
+        "Intent/service separation preserved",
+        "Moderate geo control"
+      ],
+      "cons": [
+        "Many small groups",
+        "Operational overhead"
+      ],
+      "recommendation": "Matches current draft ad-group geo buckets"
+    }
+  ],
+  "operator_decision_required": true,
+  "final_launch_geography": "NOT AUTHORIZED — operator must approve"
+}

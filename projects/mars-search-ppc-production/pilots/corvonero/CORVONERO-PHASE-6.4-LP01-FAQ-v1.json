@@ -1,0 +1,68 @@
+{
+  "faq_id": "corvonero-phase-6.4-lp01-faq-v1",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T12:00:00.000Z",
+  "h2": "Частые вопросы",
+  "items": [
+    {
+      "id": "faq-01",
+      "question_ru": "Какие задачи может выполнить программист 1С?",
+      "topic": "service_scope",
+      "evidence": "operator_confirmed_scope"
+    },
+    {
+      "id": "faq-02",
+      "question_ru": "С какими конфигурациями 1С вы работаете?",
+      "topic": "configurations",
+      "answer_configs": ["УТ", "УНФ", "Розница", "КА", "БП"]
+    },
+    {
+      "id": "faq-03",
+      "question_ru": "Можно ли работать удалённо?",
+      "topic": "remote_work",
+      "answer": "Remote throughout Russia"
+    },
+    {
+      "id": "faq-04",
+      "question_ru": "Выезжаете ли вы к клиенту?",
+      "topic": "onsite",
+      "answer": "Novosibirsk only"
+    },
+    {
+      "id": "faq-05",
+      "question_ru": "Какой минимальный заказ?",
+      "topic": "minimum_order",
+      "answer_hours": 2
+    },
+    {
+      "id": "faq-06",
+      "question_ru": "Как рассчитывается стоимость?",
+      "topic": "pricing",
+      "hourly_from_rub": 3000
+    },
+    {
+      "id": "faq-07",
+      "question_ru": "Можно ли оплатить по безналу и оформить договор?",
+      "topic": "contract_payment",
+      "legal_detail_status": "REQUIRED_FROM_OPERATOR_OR_CLIENT"
+    },
+    {
+      "id": "faq-08",
+      "question_ru": "Берёте ли срочные задачи?",
+      "topic": "urgent_tasks",
+      "sla_published": false
+    },
+    {
+      "id": "faq-09",
+      "question_ru": "Что нужно для первичной оценки?",
+      "topic": "estimate_inputs"
+    },
+    {
+      "id": "faq-10",
+      "question_ru": "Вы официальный партнёр 1С?",
+      "topic": "partner_status",
+      "answer": "No partner claim on LP-01"
+    }
+  ],
+  "prohibited_in_faq": ["SLA guarantees", "VAT", "unverified cases", "partner badges"]
+}

@@ -1,0 +1,189 @@
+{
+  "requirements_id": "corvonero-phase-6.2-lp-01-requirements-v1",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-28T18:51:33.272307Z",
+  "partial_coverage_boundary": {
+    "partial_semantic_authority": "1599 / 2368 assessed",
+    "unprocessed_backlog": "769 / 2368 excluded",
+    "coverage": "67.5%"
+  },
+  "A_commercial_purpose": {
+    "target_service": "Hiring / engaging a 1C programmer or specialist",
+    "primary_audience": "Business decision-makers and accounting/IT leads in Novosibirsk region seeking 1C specialist services",
+    "primary_conversion": "Service inquiry — call or form for programmer engagement",
+    "commercial_objective": "Capture specialist-search and direct-service-order demand without career/training traffic",
+    "campaign_ids": [
+      "CA-01"
+    ],
+    "ad_group_ids": [
+      "ca-01-specialist-search",
+      "ca-01-price-intent",
+      "ca-01-direct-service-order"
+    ],
+    "allocated_phrase_count": 404,
+    "priority_tier": "P1"
+  },
+  "B_intent_coverage": {
+    "primary_intents": [
+      "SPECIALIST_SEARCH",
+      "DIRECT_SERVICE_ORDER",
+      "PRICE_AND_COST"
+    ],
+    "permitted_secondary_intents": [
+      "DIRECT_SERVICE_ORDER"
+    ],
+    "prohibited_intents": [
+      "CAREER_OR_EDUCATION",
+      "INFORMATIONAL",
+      "PRODUCT_OR_LICENSE",
+      "SALARY",
+      "AMBIGUOUS"
+    ],
+    "representative_queries": [
+      "программист 1с",
+      "программист 1с с нуля",
+      "программист 1с удаленно",
+      "часа программиста 1с",
+      "стоимость часа 1с программиста",
+      "программисты 1с цена",
+      "услуги программиста 1с",
+      "услуги 1с программиста цены",
+      "авито 1с программист услуги"
+    ],
+    "ambiguous_queries_excluded": [
+      "программист 1с с нуля",
+      "программист 1с зарплата",
+      "программист 1с москва"
+    ],
+    "ad_groups": [
+      {
+        "group_id": "ca-01-specialist-search",
+        "primary_intent": "SPECIALIST_SEARCH",
+        "phrase_count": 384,
+        "representative_phrases": [
+          "программист 1с",
+          "программист 1с с нуля",
+          "программист 1с удаленно",
+          "программист 1с зарплата",
+          "программист 1с москва"
+        ]
+      },
+      {
+        "group_id": "ca-01-price-intent",
+        "primary_intent": "PRICE_AND_COST",
+        "phrase_count": 16,
+        "representative_phrases": [
+          "часа программиста 1с",
+          "стоимость часа 1с программиста",
+          "программисты 1с цена",
+          "1с стоимость работы программиста",
+          "сколько стоит программист 1с"
+        ]
+      },
+      {
+        "group_id": "ca-01-direct-service-order",
+        "primary_intent": "DIRECT_SERVICE_ORDER",
+        "phrase_count": 4,
+        "representative_phrases": [
+          "услуги программиста 1с",
+          "услуги 1с программиста цены",
+          "авито 1с программист услуги",
+          "заказы для 1с программиста"
+        ]
+      }
+    ]
+  },
+  "C_required_content_blocks": [
+    "first_screen_programmer_proposition",
+    "value_proposition_specialist_access",
+    "service_scope_hourly_project_engagement",
+    "problems_solved_configuration_errors_updates",
+    "work_examples_configurations",
+    "process_consult_diagnose_implement",
+    "delivery_remote_onsite",
+    "configurations_platforms_list",
+    "pricing_approach_no_invented_prices",
+    "trust_team_experience",
+    "faq_engagement_model",
+    "cta_request_specialist",
+    "contact_block"
+  ],
+  "D_required_message_evidence": {
+    "company_name_korvo_nero": "CONFIRMED",
+    "phone_383_390_29_28": "CONFIRMED",
+    "service_delivery_novosibirsk": "NEEDS_OPERATOR_CONFIRMATION",
+    "remote_service_russia": "NEEDS_CLIENT_CONFIRMATION",
+    "hourly_rates": "PROHIBITED_UNSUPPORTED",
+    "partner_1c_status": "NEEDS_CLIENT_CONFIRMATION",
+    "response_time_sla": "PROHIBITED_UNSUPPORTED",
+    "marking_competency": "NEEDS_CLIENT_CONFIRMATION",
+    "integration_systems_list": "NEEDS_CLIENT_CONFIRMATION",
+    "case_studies": "NEEDS_CLIENT_CONFIRMATION",
+    "nds_vat_included": "NEEDS_OPERATOR_CONFIRMATION"
+  },
+  "E_conversion_requirements": {
+    "primary_cta": "Request service / call specialist — service-specific label required",
+    "secondary_cta": "Phone click +7 (383) 390-29-28",
+    "required_form_fields": [
+      "name",
+      "phone_or_email",
+      "company_optional",
+      "task_description",
+      "configuration_optional"
+    ],
+    "phone_visibility": "Above fold and footer — required",
+    "messenger_requirements": "NEEDS_OPERATOR_CONFIRMATION — not confirmed in audit",
+    "response_time_claim_status": "PROHIBITED_UNSUPPORTED unless client confirms",
+    "form_privacy_legal": "Privacy consent + PD processing notice — required at implementation",
+    "analytics_events_required_later": [
+      "form_submit",
+      "phone_click",
+      "cta_click",
+      "scroll_depth_optional"
+    ]
+  },
+  "F_search_advertising_alignment": {
+    "campaign_message_match": "First screen and H1 must match Программист / специалист 1С ad groups",
+    "allowed_service_language": [
+      "SF-1C-PROGRAMMER-SPECIALIST",
+      "SF-ONE-OFF-WORK"
+    ],
+    "risky_wording": [
+      "лучший программист",
+      "самый дешёвый",
+      "гарантия результата без scope"
+    ],
+    "exclusions_reference": "CORVONERO-PHASE-6.1-EXCLUSION-BOUNDARIES-v2.json",
+    "snippet_sections_required": [
+      {
+        "intent_group": "ca-01-specialist-search",
+        "page_section": "Section addressing SPECIALIST_SEARCH"
+      },
+      {
+        "intent_group": "ca-01-price-intent",
+        "page_section": "Section addressing PRICE_AND_COST"
+      },
+      {
+        "intent_group": "ca-01-direct-service-order",
+        "page_section": "Section addressing DIRECT_SERVICE_ORDER"
+      }
+    ]
+  },
+  "G_geography": {
+    "primary": "Новосибирск + Новосибирская область",
+    "remote_service": "Mention only where operator/client confirms scope",
+    "expansion_cities": "Do not feature in initial-launch LP copy",
+    "office_locations": "Do not invent — SAFE UNKNOWN"
+  },
+  "H_seo_technical_recommendations": {
+    "recommended_url_slug": "programmist-1s",
+    "recommended_base_path": "https://lk.corvonero.ru/programmist-1s/",
+    "title_direction": "Программист / специалист 1С — Корво Неро, Новосибирск",
+    "h1_direction": "Программист 1С в Новосибирске — услуги специалиста",
+    "anchor_structure": "Single H1; H2 per major content block",
+    "canonical": "Self-referencing canonical on dedicated URL",
+    "mobile_requirements": "Responsive; click-to-call; form usable at 320px",
+    "form_call_tracking": "Call tracking and form goal tags — configure at launch prep",
+    "performance": "LCP target planning only — no heavy unoptimized assets"
+  }
+}
