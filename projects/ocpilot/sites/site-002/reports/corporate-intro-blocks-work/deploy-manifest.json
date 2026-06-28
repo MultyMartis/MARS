@@ -1,0 +1,296 @@
+{
+  "pass": "site-002-corporate-intro-blocks-01",
+  "timestamp": "2026-06-28T22:41:22.598923+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "checkpoint_pre": "c658d560",
+  "files": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__about.twig.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "ee4af4df3358c43464b4561050e33230dcf47941adde408ece2eeda4d9da3477",
+      "post_sha256": "0b82280799eb318243c415d8acd638f9c60c710941cfa118d6eca4ac24fa9aa0",
+      "pre_bytes": 19950,
+      "post_bytes": 20447,
+      "expect_image": "/assets/img/corporate/about-intro.jpg"
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__delivery.twig.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "dd96688409bd7175baccea8122eddaa2d546b1f32352081f43856d209e7b7e58",
+      "post_sha256": "1d3ba241c489e61cbfa781073e4d99c06c75a4324a6b5ad98a3d4387a5e421a4",
+      "pre_bytes": 52896,
+      "post_bytes": 53367,
+      "expect_image": "/assets/img/corporate/delivery-intro.jpg"
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__payment.twig.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "1e507319aeb5fca2c7cb39e9e2cc9ca05837c539b3d8eb94af9bf765f2d8ad52",
+      "post_sha256": "058cfaa4e3732dec6012751d5b8ce8b0fcfcca2771dea00b7796a9a67d164c36",
+      "pre_bytes": 35298,
+      "post_bytes": 35760,
+      "expect_image": "/assets/img/corporate/payment-intro.jpg"
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__guarantee.twig.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "e353f274b0fb881a6e82cbab63ddd566d431885375936a4b2063c20b295505aa",
+      "post_sha256": "f10dedc1ce196eebcf7024c916a581e4599b624fe2aee5c1a115afc817089556",
+      "pre_bytes": 46368,
+      "post_bytes": 46856,
+      "expect_image": "/assets/img/corporate/warranty-intro.jpg"
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__dealers.twig.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "873f6f9e728010f2b210d7d2bca08f0d16e9922324c0f8da3b35e57f444c47e6",
+      "post_sha256": "5b46fed2ca1e4f0f32570f805416e53a58e197596f5179233467dedb82a9eec5",
+      "pre_bytes": 47187,
+      "post_bytes": 47647,
+      "expect_image": "/assets/img/corporate/dealers-intro.jpg"
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__custom_equipment.twig.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "ed0c40751351220538d525d30fbcd564e087a5727b673e880c20173e273951d3",
+      "post_sha256": "2c43e2e83921c62ba8bb81f5281baa664ae6c99b10190352128eb337adb96689",
+      "pre_bytes": 67461,
+      "post_bytes": 67804,
+      "expect_image": "/assets/img/corporate/custom-intro.jpg"
+    },
+    "assets/css/style.css": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\assets__css__style.css.pre-site-002-corp-intro-blocks-01.bak",
+      "pre_sha256": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "post_sha256": "d0da1d23a1a1bd50429bd3f3fefc1b863bdebe9b48d529d70670e7bb2fb4c0ea",
+      "pre_bytes": 427572,
+      "post_bytes": 428550
+    }
+  },
+  "sha256": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "pre": "ee4af4df3358c43464b4561050e33230dcf47941adde408ece2eeda4d9da3477",
+      "post": "0b82280799eb318243c415d8acd638f9c60c710941cfa118d6eca4ac24fa9aa0"
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "pre": "dd96688409bd7175baccea8122eddaa2d546b1f32352081f43856d209e7b7e58",
+      "post": "1d3ba241c489e61cbfa781073e4d99c06c75a4324a6b5ad98a3d4387a5e421a4"
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "pre": "1e507319aeb5fca2c7cb39e9e2cc9ca05837c539b3d8eb94af9bf765f2d8ad52",
+      "post": "058cfaa4e3732dec6012751d5b8ce8b0fcfcca2771dea00b7796a9a67d164c36"
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "pre": "e353f274b0fb881a6e82cbab63ddd566d431885375936a4b2063c20b295505aa",
+      "post": "f10dedc1ce196eebcf7024c916a581e4599b624fe2aee5c1a115afc817089556"
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "pre": "873f6f9e728010f2b210d7d2bca08f0d16e9922324c0f8da3b35e57f444c47e6",
+      "post": "5b46fed2ca1e4f0f32570f805416e53a58e197596f5179233467dedb82a9eec5"
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "pre": "ed0c40751351220538d525d30fbcd564e087a5727b673e880c20173e273951d3",
+      "post": "2c43e2e83921c62ba8bb81f5281baa664ae6c99b10190352128eb337adb96689"
+    },
+    "assets/css/style.css": {
+      "pre": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "post": "d0da1d23a1a1bd50429bd3f3fefc1b863bdebe9b48d529d70670e7bb2fb4c0ea"
+    }
+  },
+  "assets_local": {
+    "assets/img/corporate/about-intro.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\about-intro.jpg",
+      "exists": true,
+      "bytes": 1003429,
+      "sha256": "0729c3a0fd27973825d9681841a859d2c324c613f5084ee20afac01d8d60f85d"
+    },
+    "assets/img/corporate/delivery-intro.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\delivery-intro.jpg",
+      "exists": false,
+      "bytes": 0
+    },
+    "assets/img/corporate/payment-intro.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\payment-intro.jpg",
+      "exists": true,
+      "bytes": 962586,
+      "sha256": "c89bb396cc2b1f6dbfb969a2700cab5bfe84eb2824ff82daec308cf743702afa"
+    },
+    "assets/img/corporate/warranty-intro.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\warranty-intro.jpg",
+      "exists": true,
+      "bytes": 861186,
+      "sha256": "9cba7c87f517011445ea65ccf5f93a2654eeee41eed2ee10f114e1d784df4683"
+    },
+    "assets/img/corporate/dealers-intro.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\dealers-intro.jpg",
+      "exists": true,
+      "bytes": 903056,
+      "sha256": "90d58f0c94036b6b3d6105f06f6cfb544b45b10e612250a716f40693ab669529"
+    },
+    "assets/img/corporate/custom-intro.jpg": {
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\custom-intro.jpg",
+      "exists": true,
+      "bytes": 829576,
+      "sha256": "1c1edc5f3365b9a513bd8b31615dd9b9cf8eb5f729bbeb65742cb303d14f84b0"
+    }
+  },
+  "assets_upload": {
+    "assets/img/corporate/about-intro.jpg": {
+      "uploaded": true,
+      "bytes": 1003429,
+      "sha256": "0729c3a0fd27973825d9681841a859d2c324c613f5084ee20afac01d8d60f85d",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\about-intro.jpg"
+    },
+    "assets/img/corporate/delivery-intro.jpg": {
+      "uploaded": false,
+      "reason": "missing_local"
+    },
+    "assets/img/corporate/payment-intro.jpg": {
+      "uploaded": true,
+      "bytes": 962586,
+      "sha256": "c89bb396cc2b1f6dbfb969a2700cab5bfe84eb2824ff82daec308cf743702afa",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\payment-intro.jpg"
+    },
+    "assets/img/corporate/warranty-intro.jpg": {
+      "uploaded": true,
+      "bytes": 861186,
+      "sha256": "9cba7c87f517011445ea65ccf5f93a2654eeee41eed2ee10f114e1d784df4683",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\warranty-intro.jpg"
+    },
+    "assets/img/corporate/dealers-intro.jpg": {
+      "uploaded": true,
+      "bytes": 903056,
+      "sha256": "90d58f0c94036b6b3d6105f06f6cfb544b45b10e612250a716f40693ab669529",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\dealers-intro.jpg"
+    },
+    "assets/img/corporate/custom-intro.jpg": {
+      "uploaded": true,
+      "bytes": 829576,
+      "sha256": "1c1edc5f3365b9a513bd8b31615dd9b9cf8eb5f729bbeb65742cb303d14f84b0",
+      "source": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\corporate-intro-blocks-work\\assets\\img\\corporate\\custom-intro.jpg"
+    }
+  },
+  "preflight": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "exists": true,
+      "pre_sha256": "ee4af4df3358c43464b4561050e33230dcf47941adde408ece2eeda4d9da3477",
+      "pre_bytes": 19950
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "exists": true,
+      "pre_sha256": "dd96688409bd7175baccea8122eddaa2d546b1f32352081f43856d209e7b7e58",
+      "pre_bytes": 52896
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "exists": true,
+      "pre_sha256": "1e507319aeb5fca2c7cb39e9e2cc9ca05837c539b3d8eb94af9bf765f2d8ad52",
+      "pre_bytes": 35298
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "exists": true,
+      "pre_sha256": "e353f274b0fb881a6e82cbab63ddd566d431885375936a4b2063c20b295505aa",
+      "pre_bytes": 46368
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "exists": true,
+      "pre_sha256": "873f6f9e728010f2b210d7d2bca08f0d16e9922324c0f8da3b35e57f444c47e6",
+      "pre_bytes": 47187
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "exists": true,
+      "pre_sha256": "ed0c40751351220538d525d30fbcd564e087a5727b673e880c20173e273951d3",
+      "pre_bytes": 67461
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "pre_bytes": 427572
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "url": "https://zpm.new-site.space/about",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_intro": true,
+        "has_intro_aria": true,
+        "has_intro_image": true,
+        "hero_not_using_about_intro": true,
+        "oem_not_using_custom_intro": true,
+        "hero_restored": true,
+        "intro_image_in_block": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "url": "https://zpm.new-site.space/delivery",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_intro": true,
+        "has_intro_aria": true,
+        "has_intro_image": true,
+        "hero_not_using_about_intro": true,
+        "oem_not_using_custom_intro": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "url": "https://zpm.new-site.space/payment-methods",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_intro": true,
+        "has_intro_aria": true,
+        "has_intro_image": true,
+        "hero_not_using_about_intro": true,
+        "oem_not_using_custom_intro": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "url": "https://zpm.new-site.space/guarantee",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_intro": true,
+        "has_intro_aria": true,
+        "has_intro_image": true,
+        "hero_not_using_about_intro": true,
+        "oem_not_using_custom_intro": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "url": "https://zpm.new-site.space/dealers",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_intro": true,
+        "has_intro_aria": true,
+        "has_intro_image": true,
+        "hero_not_using_about_intro": true,
+        "oem_not_using_custom_intro": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "url": "https://zpm.new-site.space/custom-equipment",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_intro": true,
+        "has_intro_aria": true,
+        "has_intro_image": true,
+        "hero_not_using_about_intro": true,
+        "oem_not_using_custom_intro": true,
+        "oem_restored": true,
+        "all_pass": true
+      }
+    },
+    "assets_http": {
+      "assets/img/corporate/about-intro.jpg": 200,
+      "assets/img/corporate/delivery-intro.jpg": 404,
+      "assets/img/corporate/payment-intro.jpg": 200,
+      "assets/img/corporate/warranty-intro.jpg": 200,
+      "assets/img/corporate/dealers-intro.jpg": 200,
+      "assets/img/corporate/custom-intro.jpg": 200
+    }
+  },
+  "qa_all_pass": false
+}

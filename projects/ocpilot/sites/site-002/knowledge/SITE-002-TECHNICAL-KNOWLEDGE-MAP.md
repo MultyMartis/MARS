@@ -1420,4 +1420,35 @@ Dual class on Home section: `zpm-commercial-trust zpm-dealers` + `data-dealers` 
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§28 Home Commercial Trust 01 active).*
+## 29. Corporate Intro Image Blocks 01 — partial
+
+**Scope:** Visual intro blocks (image 1/3 + text 2/3) on About + M9.14–M9.18 corporate pages.
+
+| Item | Value |
+|------|--------|
+| **Status** | **PARTIAL on TEST** (2026-06-29) — **`delivery-intro.jpg` missing (404)** |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01` |
+| **Report** | [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](../reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md](../baselines/SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md) |
+| **Deploy** | [corporate-intro-blocks-work/deploy-manifest.json](../reports/corporate-intro-blocks-work/deploy-manifest.json) |
+| **Pre-deploy backups** | `backups/*.pre-site-002-corp-intro-blocks-01.bak` |
+
+### Markup
+
+- Class shell: `.zpm-corp-page-lead.zpm-corp-intro` + `aria-label="Вводная информация"`
+- Grid: `.zpm-corp-intro__grid` — desktop `1fr 2fr`; mobile stacked
+- Assets path: `/assets/img/corporate/{page}-intro.jpg`
+- About hero image remains `/assets/img/about-page-img.jpg` (not intro asset)
+- Custom OEM proof strip remains `/assets/img/about-page-img.jpg`
+
+### CSS
+
+Append marker: `SITE-002 — Corporate intro image blocks (zpm-corp-intro)` in `assets/css/style.css`
+
+### Rollback
+
+`reports/corporate-intro-blocks-work/site-002-corp-intro-blocks-rollback.py`
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§29 Corporate Intro Blocks 01 partial).*

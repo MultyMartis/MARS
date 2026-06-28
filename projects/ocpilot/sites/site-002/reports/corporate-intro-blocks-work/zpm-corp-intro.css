@@ -1,0 +1,40 @@
+/* ==========================================================================
+   SITE-002 — Corporate intro image blocks (zpm-corp-intro)
+   Desktop: image 1/3 · text 2/3 · Mobile: stacked (image above text)
+   ========================================================================== */
+
+.zpm-corp-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--pad-gap);
+  align-items: start;
+}
+
+.zpm-corp-intro__media {
+  min-height: clamp(180px, 28vw, 320px);
+  overflow: hidden;
+  border-radius: var(--radius-main);
+}
+
+.zpm-corp-intro__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  border-radius: var(--radius-main);
+}
+
+.zpm-corp-intro__body.zpm-corp-page-lead__body {
+  max-width: none;
+}
+
+@media (max-width: 1024px) {
+  .zpm-corp-intro__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .zpm-corp-intro__media {
+    min-height: clamp(160px, 45vw, 280px);
+  }
+}
