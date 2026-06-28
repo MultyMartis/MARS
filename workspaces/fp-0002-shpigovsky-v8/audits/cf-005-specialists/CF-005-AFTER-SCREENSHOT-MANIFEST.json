@@ -1,0 +1,502 @@
+{
+  "manifest_id": "CF-005-AFTER-SCREENSHOT-MANIFEST",
+  "phase": "after",
+  "captured_at": "2026-06-28T11:40:37.985424+00:00",
+  "port": 4195,
+  "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after",
+  "pages": [
+    [
+      "home",
+      "index.html"
+    ],
+    [
+      "service-subdivision",
+      "usluga-podrazdel-v1.html"
+    ],
+    [
+      "service-leaf",
+      "usluga-konechnaya-v1.html"
+    ]
+  ],
+  "viewports": [
+    [
+      "desktop",
+      1437,
+      1000
+    ],
+    [
+      "mobile",
+      380,
+      900
+    ]
+  ],
+  "matrix": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "slide_count": 5,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "slide_count": 5,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "slide_count": 5,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "slide_count": 5,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "slide_count": 5,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "slide_count": 5,
+      "result": "PASS"
+    }
+  ],
+  "results": [
+    {
+      "page_id": "home",
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4195/index.html",
+      "http_status": 200,
+      "specialists": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "specialistsCount": 1,
+        "sectionClass": "specialists",
+        "labelId": "specialists-heading",
+        "labelText": "Специалисты центра",
+        "labelResolves": true,
+        "slideCount": 5,
+        "cardCount": 5,
+        "swiperInstance": true,
+        "paginationPresent": true,
+        "headingText": "Специалисты центра",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 13462,
+          "width": 1422,
+          "height": 580
+        },
+        "sliderBox": {
+          "x": 126,
+          "y": 13578,
+          "width": 1170,
+          "height": 414
+        },
+        "computed": {
+          "sectionDisplay": "block",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "home",
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4195/index.html",
+      "http_status": 200,
+      "specialists": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "specialistsCount": 1,
+        "sectionClass": "specialists",
+        "labelId": "specialists-heading",
+        "labelText": "Специалисты центра",
+        "labelResolves": true,
+        "slideCount": 5,
+        "cardCount": 5,
+        "swiperInstance": true,
+        "paginationPresent": true,
+        "headingText": "Специалисты центра",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 22235,
+          "width": 365,
+          "height": 695
+        },
+        "sliderBox": {
+          "x": 15,
+          "y": 22422,
+          "width": 335,
+          "height": 458
+        },
+        "computed": {
+          "sectionDisplay": "block",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4195/usluga-podrazdel-v1.html",
+      "http_status": 200,
+      "specialists": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "specialistsCount": 1,
+        "sectionClass": "specialists",
+        "labelId": "service-subdivision-specialists-heading",
+        "labelText": "Специалисты центра",
+        "labelResolves": true,
+        "slideCount": 5,
+        "cardCount": 5,
+        "swiperInstance": true,
+        "paginationPresent": true,
+        "headingText": "Специалисты центра",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7547,
+          "width": 1422,
+          "height": 580
+        },
+        "sliderBox": {
+          "x": 126,
+          "y": 7663,
+          "width": 1170,
+          "height": 414
+        },
+        "computed": {
+          "sectionDisplay": "block",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4195/usluga-podrazdel-v1.html",
+      "http_status": 200,
+      "specialists": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "specialistsCount": 1,
+        "sectionClass": "specialists",
+        "labelId": "service-subdivision-specialists-heading",
+        "labelText": "Специалисты центра",
+        "labelResolves": true,
+        "slideCount": 5,
+        "cardCount": 5,
+        "swiperInstance": true,
+        "paginationPresent": true,
+        "headingText": "Специалисты центра",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 11862,
+          "width": 365,
+          "height": 695
+        },
+        "sliderBox": {
+          "x": 15,
+          "y": 12049,
+          "width": 335,
+          "height": 458
+        },
+        "computed": {
+          "sectionDisplay": "block",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4195/usluga-konechnaya-v1.html",
+      "http_status": 200,
+      "specialists": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "specialistsCount": 1,
+        "sectionClass": "specialists",
+        "labelId": "service-leaf-specialists-heading",
+        "labelText": "Специалисты центра",
+        "labelResolves": true,
+        "slideCount": 5,
+        "cardCount": 5,
+        "swiperInstance": true,
+        "paginationPresent": true,
+        "headingText": "Специалисты центра",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7752,
+          "width": 1422,
+          "height": 580
+        },
+        "sliderBox": {
+          "x": 126,
+          "y": 7868,
+          "width": 1170,
+          "height": 414
+        },
+        "computed": {
+          "sectionDisplay": "block",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4195/usluga-konechnaya-v1.html",
+      "http_status": 200,
+      "specialists": {
+        "neutralRootCount": 1,
+        "oldRootCount": 0,
+        "specialistsCount": 1,
+        "sectionClass": "specialists",
+        "labelId": "service-leaf-specialists-heading",
+        "labelText": "Специалисты центра",
+        "labelResolves": true,
+        "slideCount": 5,
+        "cardCount": 5,
+        "swiperInstance": true,
+        "paginationPresent": true,
+        "headingText": "Специалисты центра",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 13096,
+          "width": 365,
+          "height": 695
+        },
+        "sliderBox": {
+          "x": 15,
+          "y": 13283,
+          "width": 335,
+          "height": 458
+        },
+        "computed": {
+          "sectionDisplay": "block",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    }
+  ],
+  "screenshots": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\home-desktop-fullpage.png",
+      "sha256": "b9902498d65610303202b8d1bc5aa2328ddaf28a1df9276a1583ab4cd9eec65e"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "specialists_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\home-desktop-specialists-crop.png",
+      "sha256": "a24e72d45dd24ff140f407176f24a7432b2a2acc993b49427cdc4792470fcd47"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "specialists_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\home-desktop-specialists-context.png",
+      "sha256": "9abd73603c94cd61fa3570ea4f9fec02ebb8c015415594f96ec94b4e0a4db366"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\home-mobile-fullpage.png",
+      "sha256": "e5daed32021ec4f479cb59b669b2af749ccfa59640055347de2a9ae61ff18b66"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "specialists_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\home-mobile-specialists-crop.png",
+      "sha256": "e10dd76cf8ab16ba7d13ffa273f01ceb5849403ee68408274b3e4b5441be8136"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "specialists_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\home-mobile-specialists-context.png",
+      "sha256": "bea9ae327f3f0767058f836a73fe591f7022a49d0be974b866238a551d40ff6d"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-subdivision-desktop-fullpage.png",
+      "sha256": "0fcfede9871974059737375f33b096264851a8dfeff9c67af103d517e74f6311"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "specialists_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-subdivision-desktop-specialists-crop.png",
+      "sha256": "a24e72d45dd24ff140f407176f24a7432b2a2acc993b49427cdc4792470fcd47"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "specialists_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-subdivision-desktop-specialists-context.png",
+      "sha256": "004068751bc7dea5b4db515962e470ec9b169094ae048856e46339b45e97e5a3"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-subdivision-mobile-fullpage.png",
+      "sha256": "f987b2a9d80a64218c6318ff87c7d74fe014de73b9b9224a81fd985ac78d8710"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "specialists_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-subdivision-mobile-specialists-crop.png",
+      "sha256": "e10dd76cf8ab16ba7d13ffa273f01ceb5849403ee68408274b3e4b5441be8136"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "specialists_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-subdivision-mobile-specialists-context.png",
+      "sha256": "002ba4c11a32bc3b5533b94c4342c45400e9fe79ef7bbf27c589e23cab1537bd"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-leaf-desktop-fullpage.png",
+      "sha256": "3c723a7fc05cc3a4130606e6ba3fd9e564b7462bdf6ad964805bd1831a1f8393"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "specialists_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-leaf-desktop-specialists-crop.png",
+      "sha256": "a24e72d45dd24ff140f407176f24a7432b2a2acc993b49427cdc4792470fcd47"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "specialists_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-leaf-desktop-specialists-context.png",
+      "sha256": "0843344770edb3db4c3ac4aeab4f137fe8bbbb88ea2b926cc0eaa6949dcee9ca"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-leaf-mobile-fullpage.png",
+      "sha256": "ac88f8e3f08816387bb0eb46d784996b9935bc6138435e84ebf7b5b7207d10d8"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "specialists_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-leaf-mobile-specialists-crop.png",
+      "sha256": "e10dd76cf8ab16ba7d13ffa273f01ceb5849403ee68408274b3e4b5441be8136"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "specialists_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-005-evidence\\after\\service-leaf-mobile-specialists-context.png",
+      "sha256": "671ad29abe00e6b929b2291d7226552e88125b9910dab2c3846b993b55de5385"
+    }
+  ],
+  "overall": "PASS"
+}

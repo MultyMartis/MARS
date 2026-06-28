@@ -12,8 +12,8 @@
 | Metric | Count |
 |--------|------:|
 | Total candidate families | 13 |
-| Universalized (complete) | 3 (CF-003, CF-004, CF-014) |
-| Shared but page-named | 7 |
+| Universalized (complete) | 4 (CF-003, CF-004, CF-005, CF-014) |
+| Shared but page-named | 6 |
 | Duplicated shared family | 2 |
 | Genuinely page-specific | 1 |
 | Hold / unresolved | 1 |
@@ -26,7 +26,7 @@
 |---|---|---:|---|---|---|
 | CF-003 | internal-page-nav | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-004 | founder-quote | 5 | UNIVERSALIZED | COMPLETE | NONE |
-| CF-005 | home-specialists | 3 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
+| CF-005 | specialists | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-006 | home-comfort | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-007 | home-reviews | 3 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-008 | home-faq | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
@@ -75,8 +75,25 @@
 
 ---
 
+## Specialists family (CF-005 detail)
+
+| Item | Value |
+|------|-------|
+| Canonical partial | `src/partials/sections/specialists.html` |
+| Canonical root class | `.specialists` |
+| Pages using | `index.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
+| HTML copies | 0 — single include |
+| CSS copies | 1 — `.specialists*` in `style.scss` |
+| JS init | 1 — `[data-specialists-slider]` in `main.js` |
+| Old name retired | `home-specialists` |
+| Aliases | 0 |
+| Classification | UNIVERSALIZED |
+| Implementation status | COMPLETE |
+
+---
+
 ## Next recommended wave
 
-**CF-005 — Specialists (`home-specialists`)**
+**CF-006 — Comfort gallery (`home-comfort`)** — NOT AUTHORIZED
 
-Reason: multi-page reuse on three internal templates; page-specific naming only; no complex JS beyond existing carousel patterns.
+Reason: multi-page reuse; page-specific naming; retire unused `services-comfort-v2` duplicate when chartered.

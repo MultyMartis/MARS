@@ -1799,7 +1799,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-reviews__pagination,
 .home-gallery__pagination,
-.home-specialists__pagination {
+.specialists__pagination {
 	position: static;
 	display: flex;
 	justify-content: center;
@@ -1809,7 +1809,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-reviews__pagination .swiper-pagination-bullet,
 .home-gallery__pagination .swiper-pagination-bullet,
-.home-specialists__pagination .swiper-pagination-bullet {
+.specialists__pagination .swiper-pagination-bullet {
 	width: 10px;
 	height: 10px;
 	margin: 0;
@@ -1821,7 +1821,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 
 .home-reviews__pagination .swiper-pagination-bullet-active,
 .home-gallery__pagination .swiper-pagination-bullet-active,
-.home-specialists__pagination .swiper-pagination-bullet-active {
+.specialists__pagination .swiper-pagination-bullet-active {
 	background-color: var(--color-text-primary);
 }
 
@@ -2051,7 +2051,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-rehabilitation-program__head,
 .home-genotyping__head,
 .home-comfort__head,
-.home-specialists__head,
+.specialists__head,
 .home-articles__head {
 	display: flex;
 	align-items: center;
@@ -2064,7 +2064,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-genotyping__heading,
 .home-comfort__heading,
 .home-videos__heading,
-.home-specialists__heading,
+.specialists__heading,
 .home-articles__heading,
 .home-faq__heading {
 	margin: 0;
@@ -2079,7 +2079,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-rehabilitation-program__all-link,
 .home-genotyping__all-link,
 .home-comfort__all-link,
-.home-specialists__all-link,
+.specialists__all-link,
 .home-articles__all-link {
 	display: inline-flex;
 	align-items: center;
@@ -2099,8 +2099,8 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-genotyping__all-link:focus-visible,
 .home-comfort__all-link:hover,
 .home-comfort__all-link:focus-visible,
-.home-specialists__all-link:hover,
-.home-specialists__all-link:focus-visible,
+.specialists__all-link:hover,
+.specialists__all-link:focus-visible,
 .home-articles__all-link:hover,
 .home-articles__all-link:focus-visible {
 	color: var(--color-accent);
@@ -2109,7 +2109,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 .home-rehabilitation-program__all-icon,
 .home-genotyping__all-icon,
 .home-comfort__all-icon,
-.home-specialists__all-icon,
+.specialists__all-icon,
 .home-articles__all-icon {
 	display: inline-flex;
 	color: var(--color-accent);
@@ -2350,16 +2350,16 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	font-size: 20px;
 }
 
-.home-specialists__slider {
+.specialists__slider {
 	overflow: visible;
 	max-width: 100%;
 }
 
-.home-specialists__wrapper {
+.specialists__wrapper {
 	display: flex;
 }
 
-.home-specialists__card {
+.specialists__card {
 	display: flex;
 	flex-direction: column;
 	gap: var(--pad-gap-line);
@@ -2367,7 +2367,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	min-width: 0;
 }
 
-.home-specialists__photo {
+.specialists__photo {
 	display: block;
 	width: 100%;
 	height: 260px;
@@ -2376,7 +2376,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	border-radius: var(--radius-main);
 }
 
-.home-specialists__name {
+.specialists__name {
 	margin: 0;
 	text-align: center;
 	font-size: var(--font-size-base);
@@ -2384,7 +2384,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	text-decoration: underline;
 }
 
-.home-specialists__role {
+.specialists__role {
 	margin: 0;
 	font-size: 16px;
 	line-height: 20px;
@@ -3845,7 +3845,7 @@ body[data-offcanvas-state='open'] {
 	.home-rehabilitation-program__head,
 	.home-genotyping__head,
 	.home-comfort__head,
-	.home-specialists__head,
+	.specialists__head,
 	.home-articles__head {
 		flex-direction: column;
 		align-items: flex-start;

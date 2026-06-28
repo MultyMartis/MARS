@@ -25,7 +25,7 @@ Examples:
 | Wrong (page-named) | Right (neutral) |
 |---|---|
 | `home-founder-quote` | **`founder-quote`** (CF-004 COMPLETE) |
-| `home-specialists` | `specialists-section` |
+| `home-specialists` | `specialists` (COMPLETE) |
 | `home-comfort` | `comfort-gallery` / `facility-comfort` (operator to decide) |
 
 ## 3. One component = one partial

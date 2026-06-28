@@ -136,10 +136,11 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-specialists.html` |
-| Class family | `.home-specialists*` |
-| Pages | Subdivision + leaf |
-| Consolidation priority | P3 |
+| Shared partial | `partials/sections/specialists.html` |
+| Class family | `.specialists*` |
+| Pages | Home, subdivision, leaf |
+| Consolidation priority | COMPLETE (CF-005) |
+| Retired name | `home-specialists` |
 
 ---
 

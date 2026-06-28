@@ -312,8 +312,8 @@
 	}
 })();
 
-// FP-0002 v6 — home specialists swiper
-(function initHomeSpecialists() {
+// FP-0002 v8 — specialists swiper (CF-005 neutral)
+(function initSpecialists() {
 	'use strict';
 
 	function boot() {

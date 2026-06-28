@@ -11,7 +11,8 @@
 | Wave | Family | Result |
 |------|--------|--------|
 | 1 | CF-003 internal-page-nav | COMPLETE — commit `361502bf` |
-| 2 | CF-004 founder-quote | COMPLETE — pending commit |
+| 2 | CF-004 founder-quote | COMPLETE — commit `25f972f9` |
+| 3 | CF-005 specialists | COMPLETE — pending commit |
 
 ---
 
@@ -21,8 +22,8 @@
 |------|--------|----------|------:|------|---------------|
 | 3 | CF-011 dark CTA band wrappers | P1 | 3 | Medium CSS (page-scoped duplicates) | Charter wave 3 |
 | 4 | CF-012 program block modifiers | P1 | 3 | Medium CSS | Collapse redundant modifiers |
-| 5 | CF-005 specialists | P1 | 3 | Low | Rename only — **next wave** |
-| 6 | CF-006 comfort gallery | P1 | 5 | Low–medium | Retire unused services-comfort-v2 |
+| 5 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
+| 6 | CF-006 comfort gallery | P1 | 5 | Low–medium | NOT AUTHORIZED |
 | 7 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | Verify accordion init |
 | 8 | CF-009 final form | P1 | 5 | Low | Form mask hooks |
 | 9 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | Slider config audit |
@@ -44,17 +45,24 @@
 
 ---
 
-## Next wave: CF-005 Specialists
+## Completed wave: CF-005 Specialists
 
-**Reason**
+**Result:** COMPLETE
 
-1. Shared on Home + two internal service templates
-2. Page-specific `home-` prefix is architecturally wrong
-3. Lower risk than CF-011/CF-012 CSS collapse waves
+- Partial: `src/partials/sections/specialists.html`
+- Root class: `.specialists`
+- Retired: `home-specialists` (partial, classes)
+- Consumers: 3 pages
+- Visual parity: PASS (before/after crop comparison)
+- Slider QA: PASS
 
-**Operator gate**
+---
 
-Explicit approval to start Wave 3 (CF-005) before any rename.
+## Next wave: CF-006 Comfort gallery
+
+**Status:** NOT AUTHORIZED
+
+Operator gate required before any `home-comfort` rename.
 
 ---
 
