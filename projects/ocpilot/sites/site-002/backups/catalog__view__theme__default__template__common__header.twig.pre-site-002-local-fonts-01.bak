@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- META -->
+    <title>{{ title }}</title>
+    {% if description %}
+    <meta name="description" content="{{ description }}" />
+    {% endif %}
+    <meta name="author" content="WSP" />
+    <meta name="robots" content="index, follow" />
+    {% if keywords %}
+    <meta name="keywords" content="{{ keywords }}" />
+    {% endif %}
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <!-- END META -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:image" content="{{ image }}" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Favicon (минимальный современный набор) -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+
+    <meta name="oc-root" content="/index.php?route=">
+    <script type="text/javascript">
+      // Глобальная переменная для совместимости со старыми скриптами
+      var url = '{{ server }}index.php?route=';
+      var baseurl = '{{ server }}';
+      
+      // Опционально: расширенная конфигурация для JS
+      var OC_CART_CONFIG = {
+        baseUrl: '{{ server }}index.php?route=',
+        token: ''
+      };
+    </script>
+
+     <!-- Preloader.sc (1 раз в день) -->
+    <script>
+      (function () {
+        try {
+          var KEY = 'zpmPreloaderShownDate';
+          var today = new Date().toISOString().slice(0, 10);
+
+          if (localStorage.getItem(KEY) !== today) {
+            document.documentElement.classList.add('is-preloader-active');
+          }
+        } catch (e) {}
+      })();
+
+
+    </script>
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/fancybox/fancybox.css" />
+
+    <script src="/assets/js/vendor/jquery/jquery-3.6.4.min.js"></script>
+
+    {% for style in styles %}
+    <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+    {% endfor %}
+    {% for script in scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+
+    {% for link in links %}
+    <link href="{{ link.href }}" rel="{{ link.rel }}" />
+    {% endfor %}
+
+
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/vendor/fontawesome-pro-5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css?22062026-mca" />
+    <!-- <link rel="stylesheet" href="/assets/css/style.min.css" /> -->
+
+    <link rel="stylesheet" href="/assets/css/sd.css" />
+  </head>
+
+  <body class="{{ bodyclass }}">
+
+    <!-- GLOBAL PAGE PRELOADER -->
+<div class="zpm-preloader" data-preloader aria-hidden="false">
+  <div class="zpm-preloader__inner">
+    <div class="zpm-preloader__bar">
+      <span class="zpm-preloader__line" data-preloader-line></span>
+    </div>
+
+    <div class="zpm-preloader__percent" data-preloader-percent>0%</div>
+  </div>
+</div>
+
+<div class="page_overlay" data-overlay aria-hidden="true"></div>
+
+
+
+<body class="{{ bodyclass }}">
+
+  <!-- GLOBAL PAGE PRELOADER -->
+<div class="zpm-preloader" data-preloader aria-hidden="false">
+  <div class="zpm-preloader__inner">
+    <div class="zpm-preloader__bar">
+      <span class="zpm-preloader__line" data-preloader-line></span>
+    </div>
+
+    <div class="zpm-preloader__percent" data-preloader-percent>0%</div>
+  </div>
+</div>
+
+<div class="page_overlay" data-overlay aria-hidden="true"></div>
+
+{% set is_home_page = bodyclass and 'page--home' in bodyclass %}
+{% set is_product_page = bodyclass and 'page--product' in bodyclass %}
+{% set use_header_wrap = not is_home_page and not is_product_page %}
+
+{% if use_header_wrap %}
+<div class="header_wrap">
+{% endif %}
+
+<header class="zpm-header" data-header>
+  <!-- TOP (desktop) -->
+
+  <!-- Header stickywrap (desktop) -->
+  <div class="zpm-header__sticky-wrap" data-header-sticky-wrap>
+    <div class="zpm-header__sticky" data-header-sticky>
+
+      <div class="zpm-header__top" data-header-top>
+        <div class="container">
+          <div class="zpm-header__top-inner">
+
+            <div class="zpm-header__place">
+              <button type="button" class="zpm-header__place-link" aria-label="Выбрать город" data-city-open>
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__geo"></use></svg>
+                <div class="zpm-header__place-text--wrapper">
+                  <div class="zpm-header__place-label">Склад:</div>
+                  <span class="zpm-header__place-text">Москва</span>
+                </div>
+              </button>
+            </div>
+
+<div class="zpm-header__top-nav-wrap" data-menu-scroll>
+  <button class="zpm-header__top-scroll-btn is-left" type="button" aria-label="Прокрутить меню влево" data-menu-scroll-left hidden>‹</button>
+
+  <nav class="zpm-header__top-nav" aria-label="Верхнее меню" data-menu-scroll-area>
+    <ul class="zpm-header__top-list">
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/custom-equipment">Оборудование на заказ</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/payment-methods">Оплата</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/delivery">Доставка</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/dealers">Дилерам</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/guarantee">Гарантия</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/about">О компании</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/blog/news">Новости</a></li>
+      <li class="zpm-header__top-item"><a class="zpm-header__top-link" href="/contact">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <button class="zpm-header__top-scroll-btn is-right" type="button" aria-label="Прокрутить меню вправо" data-menu-scroll-right hidden>›</button>
+</div>
+
+            <a class="zpm-header__phone" href="tel:+73852721890" data-city-field="phone_link"><span data-city-field="phone_text">8 (3852) 72-18-90</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN (desktop/tablet) -->
+      <div class="zpm-header__main" data-header-main>
+        <div class="container">
+          <div class="zpm-header__main-inner">
+
+            <!-- Brand -->
+
+        <!-- Логотип -->
+        <div class="zpm-header__brand">
+          <a class="zpm-header__logo" href="/" Title="ООО «Завод пищевого машиностроения»" aria-label="ЗПМ — на главную">
+            <span class="zpm-header__logo-box" aria-hidden="true">
+              <img src="/assets/img/zpm_logo.svg" alt="ЗПМ">
+            </span>
+          </a>
+
+          <!-- Бейдж -->
+          <a class="zpm-header__badge" href="/our-certification" Title="Сертифицированный производитель" aria-label="ЗПМ — Сертификация производителя">
+            <span class="zpm-header__badge-box" aria-hidden="true">
+              <img src="/assets/img/made_in_russia.svg" alt="Сделано в России">
+            </span>
+          </a>
+        </div>
+
+
+            <!-- Catalog button -->
+            <div class="zpm-header__catalog-wrap">
+
+              <div class="zpm-header__catalog">
+                <button
+                  class="btn btn_dark btn-whit-burger"
+                  data-catalog-open
+                  aria-controls="zpmCatalog"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  <span class="zpm-btn__ico-burger" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </span>
+
+                  <span class="zpm-header__catalog-text">Каталог</span>
+                </button>
+              </div>
+
+              <!-- Мобильный мобиск для десктопа -->
+              <button
+                class="zpm-header__m-btn zpm-header__Pad-btn"
+                type="button"
+                aria-label="Открыть поиск"
+                aria-controls="zpmMobileSearch"
+                aria-expanded="false"
+                data-mobile-search-open
+              >
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__search"></use></svg>
+              </button>
+
+            </div>
+
+            <!-- Быстрый поиск -->
+            <div class="zpm-header__search-wrapper">
+              {{ quicksearch }}
+            </div>
+
+            <!-- Actions -->
+            <div class="zpm-header__actions">
+
+              <a class="zpm-header__action" href="/wishlist" aria-label="Избранное">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__favorits"></use></svg>
+                
+                <span class="zpm-header__count" id="wishcounter" data-cart-count aria-label="Товаров в избранном" {% if not wishcont %}hidden >{% else %}>{{ wishcont }}{% endif %}</span>
+              </a>
+
+              <a class="zpm-header__action" href="/compare-products" aria-label="Сравнение">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__compare"></use></svg>
+                <span class="zpm-header__count" id="comparecounter" data-cart-count aria-label="Товаров в сравнении" {% if not comparecount %}hidden >{% else %}>{{ comparecount }}{% endif %}</span>
+              </a>
+
+              <!-- Cart trigger (button, not link) -->
+              <button
+                class="zpm-header__action zpm-header__action--cart"
+                type="button"
+                aria-label="Корзина"
+                data-minicart-open
+                aria-controls="zpmMiniCart"
+                aria-expanded="false"
+              >
+                <svg class="zpm-icon" aria-{% if not wishcont %}hidden{% endif %}="true" focusable="false"><use href="#zpm_ico__cart"></use></svg>
+                <span class="zpm-header__count" id="cartcounter" data-cart-count aria-label="Товаров в корзине" {% if not totalcart %}hidden >{% else %}>{{ totalcart }}{% endif %}</span>
+              </button>
+
+            </div>
+
+            <!-- Account -->
+            <div class="zpm-header__account">
+              <a class="btn" href="/my-account">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__account"></use></svg>
+                <span class="zpm-header__account-text">Личный кабинет</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END. Header stickywrap (desktop) -->
+
+
+
+<!-- Мега меню -->
+{{ megamenu }}
+
+
+<!-- MOBILE BAR (mobile) -->
+<div class="zpm-header__mobilebar" data-header-mobilebar>
+  <div class="container">
+    <div class="zpm-header__mobilebar-inner">
+
+      <div class="zpm-header__mobilebar-brand">
+        <!-- Мобайл лого -->
+        <a class="zpm-header__m-logo" href="/" aria-label="ЗПМ — на главную">
+          <span class="zpm-header__logo-box" aria-hidden="true">
+            <img src="/assets/img/zpm_logo.svg" alt="ЗПМ" />
+          </span>
+        </a>
+        <!-- Бейдж -->
+        <a class="zpm-header__badge" href="/our-certification" Title="Сертифицированный производитель" aria-label="ЗПМ — Сертификация производителя">
+          <span class="zpm-header__badge-box" aria-hidden="true">
+            <img src="/assets/img/made_in_russia.svg" alt="Сделано в России">
+          </span>
+        </a>
+      </div>
+
+      <div class="zpm-header__m-actions">
+
+        <a class="zpm-mmenu__phone" href="tel:+73852721890">8 (3852) 72-18-90</a>
+
+        <button
+          class="zpm-header__m-btn"
+          type="button"
+          aria-label="Открыть поиск"
+          aria-controls="zpmMobileSearch"
+          aria-expanded="false"
+          data-mobile-search-open
+        >
+          <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__search"></use></svg>
+        </button>
+
+        <!-- Cart trigger mobile (button, not link) -->
+        <button
+          class="zpm-header__m-cart btn_dark zpm-header__action zpm-header__action--cart"
+          type="button"
+          aria-label="Корзина"
+          data-minicart-open
+          aria-controls="zpmMiniCart"
+          aria-expanded="false"
+          >
+          <svg class="zpm-icon" aria-{% if not wishcont %}hidden{% endif %}="true" focusable="false"><use href="#zpm_ico__cart"></use></svg>
+          <span class="zpm-header__m-cart__count" id="cartcountermobile" data-cart-count aria-label="Товаров в корзине" {% if not totalcart %}hidden >{% else %}>{{ totalcart }}{% endif %}</span>
+        </button>
+
+
+        <button
+          class="zpm-header__m-btn"
+          type="button"
+          data-menu-open
+          aria-controls="zpmMobileMenu"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="zpm-btn__mobile-ico-burger" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile search panel -->
+  
+</div>
+{{ qsearchmobilepanel }}
+</header>
+
+<!-- HEADER END -->
+
+{% if use_header_wrap %}
+<div class="wrapper_header_wrap">
+  <div class="container">
+    <div class="inner_header_wrap">
+{% endif %}
+
+{% if breadcrumbs %}{{ breadcrumbs }}{% endif %}
+{% if pageintro %}{{ pageintro }}{% endif %}
+
+{% if use_header_wrap %}
+    </div>
+  </div>
+
+</div>
+</div>
+{% endif %}

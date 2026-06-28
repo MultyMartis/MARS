@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE LIVE CHECKPOINT — OPERATOR MANUAL POLISH 01**  
-**Run:** Operator manual polish canonical checkpoint (2026-06-29)
+**Status:** **STABLE LIVE CHECKPOINT — LOCAL FONTS 01**  
+**Run:** Local Inter webfonts migration (2026-06-29)
 
 ---
 
@@ -14,18 +14,18 @@
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
 | **Version** | SAFE UNKNOWN |
-| **Baseline Match** | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
+| **Baseline Match** | `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
 | **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
-| **Current Status** | **STABLE LIVE CHECKPOINT — OPERATOR MANUAL POLISH 01** |
-| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md) |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--active) |
+| **Current Status** | **STABLE LIVE CHECKPOINT — LOCAL FONTS 01** |
+| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
-| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. **Operator Manual Polish 01 ACTIVE** (2026-06-29) — checkpoint `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` · [Knowledge Map §26](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--active). Pass 1.2 **SUPERSEDED** — do not use as reference. EC-01 mitigated by subcategories hide (07). M10 not authorized. |
+| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. **Local Fonts 01 ACTIVE** (2026-06-29) — checkpoint `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` · [Knowledge Map §27](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active). Operator Manual Polish 01 visual baseline **preserved**. EC-01 mitigated by subcategories hide (07). M10 not authorized. |
 
 ---
 
@@ -33,7 +33,7 @@
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` |
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |

@@ -2,7 +2,7 @@
 
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`  
+**Authority:** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01`  
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
@@ -38,11 +38,11 @@
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
 | 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](../baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md) |
+| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](../baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 
 ### Current stable state
 
-- **Authority:** `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`
+- **Authority:** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (font delivery + TEST checkpoint; visual baseline from Operator Manual Polish 01 preserved)
 - **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
 - **Catalog UX cluster:** filter recovery (06D–06M) → filter UX (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator polish) → catalog state persistence (09A–09C) → hub cleanup (10)
 - **About page:** M9.13 redesign **rejected by operator** — live `/about` **restored** to pre-redesign version (operator-approved restoration, not rollback failure)
@@ -1301,17 +1301,17 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 Pass 1 (`SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01`) remains **REJECTED** — see §23.
 
-**Active authority:** §26 Operator Manual Polish 01.
+**Active authority:** §27 Local Fonts 01.
 
 ---
 
-## 26. Operator Manual Polish 01 — active
+## 26. Operator Manual Polish 01 — superseded (visual baseline retained)
 
 **Scope:** Full TEST storefront after operator manual polish following Visual Polish Pass 1.2.
 
 | Item | Value |
 |------|--------|
-| **Status** | **ACTIVE on TEST** (2026-06-29) — **sole SITE-002 visual/behavioural authority** |
+| **Status** | **SUPERSEDED for checkpoint authority** (2026-06-29) by Local Fonts 01 — **visual/behavioural baseline preserved** |
 | **Checkpoint** | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
 | **Live CSS SHA256** | `1d190d97953cfaab17bb1f9948e0eecafb777710d7c1ba613a35181b28e88a86` |
 | **Live JS SHA256** | `17cb1fffe8831d4ac633d5bd41e047c31b4fd478a0e1cfa67c8667c42ab539e8` |
@@ -1335,4 +1335,43 @@ Pass 1 (`SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01`) remains **
 
 ---
 
-*Documentation only — live TEST evidence in capture manifest. Last updated: 2026-06-29 (§26 Operator Manual Polish 01 active).*
+## 27. Local Fonts 01 — active
+
+**Scope:** Eliminate FOUT/FOIT — 100% local Inter webfonts on TEST; no Google Fonts / CDN font CSS.
+
+| Item | Value |
+|------|--------|
+| **Status** | **ACTIVE on TEST** (2026-06-29) — **SITE-002 checkpoint authority** |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` |
+| **Visual baseline** | Preserved from Operator Manual Polish 01 — typography tokens unchanged |
+| **Live CSS SHA256** | `78c6e13b17632e8f8638515af5141c8a79c432ff45e215e75d56c5b3430635d7` |
+| **Report** | [SITE-002-LOCAL-FONTS-MIGRATION.md](../reports/SITE-002-LOCAL-FONTS-MIGRATION.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](../baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
+| **Deploy manifest** | [deploy-manifest.json](../reports/local-fonts-work/deploy-manifest.json) |
+| **Pre-deploy backups** | `backups/*.pre-site-002-local-fonts-01.bak` |
+
+### Font inventory (local)
+
+| Weight | File | Preload |
+|--------|------|---------|
+| 400 | `Inter-Regular.woff2` (+ `.woff`) | **yes** |
+| 500 | `Inter-Medium.woff2` (+ `.woff`) | **yes** |
+| 600 | `Inter-SemiBold.woff2` (+ `.woff`) | no |
+| 700 | `Inter-Bold.woff2` | no |
+| 800 | `Inter-ExtraBold.woff2` | no |
+
+### `@font-face` location
+
+- Primary: top of `assets/css/style.css`
+- Mirror: `assets/css/style.min.css` (file commented out in `header.twig`)
+
+### Preload (header.twig)
+
+```html
+<link rel="preload" href="/assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin />
+```
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§27 Local Fonts 01 active).*

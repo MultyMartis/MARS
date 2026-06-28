@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-06-28T18:54:10Z",
+  "checkpoint": "SITE-002-STABLE-LIVE-LOCAL-FONTS-01",
+  "backups": [
+    {
+      "remote": "assets/css/style.css",
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-site-002-local-fonts-01.bak",
+      "sha256": "1d190d97953cfaab17bb1f9948e0eecafb777710d7c1ba613a35181b28e88a86"
+    },
+    {
+      "remote": "assets/css/style.min.css",
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.min.css.pre-site-002-local-fonts-01.bak",
+      "sha256": "98a3a1382daec7dc4269f21d87a1b01bdfb07bf2e72fcbc33e1eafbb536d7f56"
+    },
+    {
+      "remote": "catalog/view/theme/default/template/common/header.twig",
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__common__header.twig.pre-site-002-local-fonts-01.bak",
+      "sha256": "a89f0082fadde99c4857cd25f373ae45c1b0974ccbec7eb62a2626892415a838"
+    },
+    {
+      "remote": "assets/fonts/Inter-Bold.woff2",
+      "backup": null,
+      "note": "new file — no prior remote"
+    },
+    {
+      "remote": "assets/fonts/Inter-ExtraBold.woff2",
+      "backup": null,
+      "note": "new file — no prior remote"
+    }
+  ],
+  "deploy": [
+    {
+      "remote": "assets/css/style.css",
+      "sha256": "78c6e13b17632e8f8638515af5141c8a79c432ff45e215e75d56c5b3430635d7",
+      "bytes": 414913
+    },
+    {
+      "remote": "assets/css/style.min.css",
+      "sha256": "559283779628ccff246d4a913ff5feab21540485a7da4a8d274417614fb43df9",
+      "bytes": 76956
+    },
+    {
+      "remote": "catalog/view/theme/default/template/common/header.twig",
+      "sha256": "25e77e036aec73d58bda40b493da3502c73db04e6753d222cac6eeb8db9a71da",
+      "bytes": 15158
+    },
+    {
+      "remote": "assets/fonts/Inter-Bold.woff2",
+      "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491",
+      "bytes": 24356
+    },
+    {
+      "remote": "assets/fonts/Inter-ExtraBold.woff2",
+      "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d",
+      "bytes": 24400
+    }
+  ],
+  "qa": [
+    {
+      "url": "https://zpm.new-site.space/",
+      "status": 200,
+      "googleapis": false,
+      "gstatic": false,
+      "preload_regular": true,
+      "style_min_active": true
+    },
+    {
+      "url": "https://zpm.new-site.space/about",
+      "status": 200,
+      "googleapis": false,
+      "gstatic": false,
+      "preload_regular": true,
+      "style_min_active": true
+    },
+    {
+      "url": "https://zpm.new-site.space/katalog/",
+      "status": 200,
+      "googleapis": false,
+      "gstatic": false,
+      "preload_regular": true,
+      "style_min_active": true
+    }
+  ],
+  "twig_cache_cleared": [],
+  "font_http": [
+    {
+      "file": "Inter-Regular.woff2",
+      "status": 200
+    },
+    {
+      "file": "Inter-Medium.woff2",
+      "status": 200
+    },
+    {
+      "file": "Inter-SemiBold.woff2",
+      "status": 200
+    },
+    {
+      "file": "Inter-Bold.woff2",
+      "status": 200
+    },
+    {
+      "file": "Inter-ExtraBold.woff2",
+      "status": 200
+    }
+  ]
+}
