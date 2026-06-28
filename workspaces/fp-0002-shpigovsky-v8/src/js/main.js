@@ -367,8 +367,8 @@
 	}
 })();
 
-// FP-0002 v6 — home comfort fancybox
-(function initHomeComfortFancybox() {
+// FP-0002 v8 CF-006 — comfort gallery fancybox
+(function initComfortFancybox() {
 	'use strict';
 
 	function boot() {
@@ -378,7 +378,7 @@
 			return;
 		}
 
-		fancybox.bind('[data-fancybox="home-comfort"]', {
+		fancybox.bind('[data-fancybox="comfort"]', {
 			groupAll: false,
 			Carousel: {
 				infinite: false,

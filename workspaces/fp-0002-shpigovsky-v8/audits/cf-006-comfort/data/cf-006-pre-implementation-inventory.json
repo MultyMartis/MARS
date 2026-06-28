@@ -1,0 +1,68 @@
+{
+  "inventory_id": "CF-006-PRE-IMPLEMENTATION-INVENTORY",
+  "audited_at": "2026-06-28",
+  "old_name": "home-comfort",
+  "target_name": "comfort",
+  "classification": "SHARED_BUT_PAGE_NAMED",
+  "consumers": [
+    {
+      "page": "index.html",
+      "include_path": "partials/sections/home-comfort.html",
+      "root_class": "home-comfort",
+      "item_count": 7,
+      "gallery_hook": "data-fancybox",
+      "group_value": "home-comfort",
+      "heading_id": "home-comfort-heading",
+      "section_id": ""
+    },
+    {
+      "page": "uslugi.html",
+      "include_path": "partials/sections/home-comfort.html",
+      "root_class": "home-comfort",
+      "item_count": 7,
+      "gallery_hook": "data-fancybox",
+      "group_value": "home-comfort",
+      "heading_id": "home-comfort-heading",
+      "section_id": ""
+    },
+    {
+      "page": "uslugi-v2.html",
+      "include_path": "partials/sections/home-comfort.html",
+      "root_class": "home-comfort",
+      "item_count": 7,
+      "gallery_hook": "data-fancybox",
+      "group_value": "home-comfort",
+      "heading_id": "home-comfort-heading",
+      "section_id": ""
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "include_path": "partials/sections/home-comfort.html",
+      "root_class": "home-comfort",
+      "item_count": 7,
+      "gallery_hook": "data-fancybox",
+      "group_value": "home-comfort",
+      "heading_id": "service-subdivision-comfort-heading",
+      "section_id": "service-subdivision-comfort"
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "include_path": "partials/sections/home-comfort.html",
+      "root_class": "home-comfort",
+      "item_count": 7,
+      "gallery_hook": "data-fancybox",
+      "group_value": "home-comfort",
+      "heading_id": "service-leaf-comfort-heading",
+      "section_id": "service-leaf-comfort"
+    }
+  ],
+  "total_consumers": 5,
+  "inline_copies": 0,
+  "duplicate_partials": 0,
+  "duplicate_css_blocks": 0,
+  "duplicate_js_initializations": 0,
+  "visual_variants": 0,
+  "content_variants": 0,
+  "gallery_group_variants": 0,
+  "boundary_excluded": ["home-clinic-landscape", "home-gallery", "services-comfort-v2"]
+}

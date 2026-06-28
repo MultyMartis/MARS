@@ -12,7 +12,8 @@
 |------|--------|--------|
 | 1 | CF-003 internal-page-nav | COMPLETE — commit `361502bf` |
 | 2 | CF-004 founder-quote | COMPLETE — commit `25f972f9` |
-| 3 | CF-005 specialists | COMPLETE — pending commit |
+| 3 | CF-005 specialists | COMPLETE — commit `c6efb089` |
+| 4 | CF-006 comfort | COMPLETE — pending commit |
 
 ---
 
@@ -22,11 +23,11 @@
 |------|--------|----------|------:|------|---------------|
 | 3 | CF-011 dark CTA band wrappers | P1 | 3 | Medium CSS (page-scoped duplicates) | Charter wave 3 |
 | 4 | CF-012 program block modifiers | P1 | 3 | Medium CSS | Collapse redundant modifiers |
-| 5 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
-| 6 | CF-006 comfort gallery | P1 | 5 | Low–medium | NOT AUTHORIZED |
-| 7 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | Verify accordion init |
-| 8 | CF-009 final form | P1 | 5 | Low | Form mask hooks |
-| 9 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | Slider config audit |
+| 3 | CF-005 specialists | P1 | 3 | Low | **COMPLETE** |
+| 4 | CF-006 comfort gallery | P1 | 5 | Low–medium | **COMPLETE** |
+| 5 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | Verify accordion init |
+| 6 | CF-009 final form | P1 | 5 | Low | Form mask hooks |
+| 7 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | NOT AUTHORIZED |
 | 10 | CF-010 clinic landscape | P2 | 3 | Low | Remove leaf modifier class |
 | — | CF-013 inner hero | P2 | HOLD | Already shared on 3 templates | No wave unless Home unification requested |
 | — | CF-015 home gallery | HOLD | 1 | Unknown until O-Centre | Defer |
@@ -58,11 +59,24 @@
 
 ---
 
-## Next wave: CF-006 Comfort gallery
+## Completed wave: CF-006 Comfort gallery
+
+**Result:** COMPLETE
+
+- Partial: `src/partials/sections/comfort.html`
+- Root class: `.comfort`
+- Retired: `home-comfort` (partial, classes, fancybox group)
+- Consumers: 5 pages
+- Visual parity: PASS (context crops 10/10 exact)
+- Gallery QA: PASS
+
+---
+
+## Next wave: CF-007 Reviews
 
 **Status:** NOT AUTHORIZED
 
-Operator gate required before any `home-comfort` rename.
+Operator gate required before any `home-reviews` rename.
 
 ---
 

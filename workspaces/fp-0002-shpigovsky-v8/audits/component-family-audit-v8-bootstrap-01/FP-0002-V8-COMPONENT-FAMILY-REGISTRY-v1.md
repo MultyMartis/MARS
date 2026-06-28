@@ -92,10 +92,11 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-comfort.html` |
-| Class family | `.home-comfort*` |
-| Pages | All three internal service templates |
-| Consolidation priority | P2 |
+| Shared partial | `partials/sections/comfort.html` |
+| Class family | `.comfort*` |
+| Pages | All five canonical templates |
+| Consolidation priority | COMPLETE — universalized CF-006 wave 4 |
+| Historical asset path | `assets/img/content/home-comfort/` — preserved |
 
 ---
 

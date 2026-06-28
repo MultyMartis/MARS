@@ -1,6 +1,6 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-28 (CF-005 specialists universalization)
+**Updated:** 2026-06-28 (CF-006 comfort universalization)
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
@@ -12,9 +12,10 @@ fp0002_v8_cf003_upper_navigation: COMPLETE
 fp0002_v8_cf003_commit: 361502bf
 fp0002_v8_cf004_founder_quote: COMPLETE
 fp0002_v8_cf005_specialists: COMPLETE
+fp0002_v8_cf006_comfort: COMPLETE
 fp0002_v8_shared_component_audit: COMPLETE
 fp0002_v8_shared_component_audit_commit: 98ea1ae6
-fp0002_v8_next_wave: CF-006_HOME_COMFORT (NOT AUTHORIZED)
+fp0002_v8_next_wave: CF-007_HOME_REVIEWS (NOT AUTHORIZED)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -42,12 +43,13 @@ shared_component_audit: COMPLETE
 consolidation_wave_1_cf003: COMPLETE
 consolidation_wave_2_cf004: COMPLETE
 consolidation_wave_3_cf005: COMPLETE
-build_cf005: PASS
-browser_qa_cf005: PASS
-dom_validation_cf005: PASS
-selector_validation_cf005: PASS
-visual_parity_cf005: PASS
-slider_qa_cf005: PASS
+consolidation_wave_4_cf006: COMPLETE
+build_cf006: PASS
+browser_qa_cf006: PASS
+dom_validation_cf006: PASS
+selector_validation_cf006: PASS
+visual_parity_cf006: PASS
+gallery_qa_cf006: PASS
 
 excluded_from_bootstrap:
   - o-centre-v1.html (rejected WIP)
@@ -94,7 +96,17 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 - Consumers: `index.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html`
 - Receipt: `audits/cf-005-specialists/CF-005-IMPLEMENTATION-RECEIPT.md`
 
+## CF-006
+
+- Canonical partial: `partials/sections/comfort.html`
+- Canonical class: `.comfort`
+- Retired name: `home-comfort`
+- Gallery hook: `data-fancybox="comfort"`
+- Consumers: `index.html`, `uslugi.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html`
+- Historical asset path: `assets/img/content/home-comfort/` — preserved
+- Receipt: `audits/cf-006-comfort/CF-006-IMPLEMENTATION-RECEIPT.md`
+
 ## Next wave (documentation only)
 
-- Recommended family: Comfort gallery (`home-comfort`) — **NOT AUTHORIZED**
+- Recommended family: Reviews (`home-reviews`) — **NOT AUTHORIZED**
 - Registry: `audits/shared-component-universalization/FP-0002-V8-SHARED-INCLUDE-REGISTRY-v1.md`

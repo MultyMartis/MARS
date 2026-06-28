@@ -26,7 +26,7 @@ Examples:
 |---|---|
 | `home-founder-quote` | **`founder-quote`** (CF-004 COMPLETE) |
 | `home-specialists` | `specialists` (COMPLETE) |
-| `home-comfort` | `comfort-gallery` / `facility-comfort` (operator to decide) |
+| `home-comfort` | `comfort` — **COMPLETE** (CF-006) |
 
 ## 3. One component = one partial
 

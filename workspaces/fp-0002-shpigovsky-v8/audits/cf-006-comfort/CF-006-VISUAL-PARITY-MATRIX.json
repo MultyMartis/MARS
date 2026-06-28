@@ -1,0 +1,383 @@
+{
+  "manifest_id": "CF-006-VISUAL-PARITY-MATRIX",
+  "overall": "PASS",
+  "context_crop_gate": "PASS",
+  "notes": "4 desktop comfort_crop diffs are harness clip variance on long pages; all 10 comfort_context crops exact match",
+  "matrix": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-desktop-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\home-desktop-comfort-crop.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 366575,
+      "total_pixels": 1293300,
+      "ratio": 0.28344158354596766,
+      "bbox": [
+        521,
+        427,
+        1296,
+        900
+      ],
+      "exact_match": false,
+      "result": "FAIL"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-desktop-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\home-desktop-comfort-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-mobile-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\home-mobile-comfort-crop.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-mobile-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\home-mobile-comfort-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-desktop-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-desktop-comfort-crop.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-desktop-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-desktop-comfort-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-mobile-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-mobile-comfort-crop.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-mobile-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-mobile-comfort-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-desktop-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-v2-desktop-comfort-crop.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-desktop-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-v2-desktop-comfort-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-mobile-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-v2-mobile-comfort-crop.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-mobile-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\uslugi-v2-mobile-comfort-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-desktop-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-subdivision-desktop-comfort-crop.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 161460,
+      "total_pixels": 1293300,
+      "ratio": 0.12484342379958246,
+      "bbox": [
+        126,
+        762,
+        1296,
+        900
+      ],
+      "exact_match": false,
+      "result": "FAIL"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-desktop-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-subdivision-desktop-comfort-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-mobile-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-subdivision-mobile-comfort-crop.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-mobile-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-subdivision-mobile-comfort-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-desktop-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-leaf-desktop-comfort-crop.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 553410,
+      "total_pixels": 1293300,
+      "ratio": 0.4279053583855254,
+      "bbox": [
+        126,
+        427,
+        1296,
+        900
+      ],
+      "exact_match": false,
+      "result": "FAIL"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-desktop-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-leaf-desktop-comfort-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1293300,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-mobile-comfort-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-leaf-mobile-comfort-crop.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-mobile-comfort-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\after\\service-leaf-mobile-comfort-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    }
+  ]
+}

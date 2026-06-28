@@ -12,8 +12,8 @@
 | Metric | Count |
 |--------|------:|
 | Total candidate families | 13 |
-| Universalized (complete) | 4 (CF-003, CF-004, CF-005, CF-014) |
-| Shared but page-named | 6 |
+| Universalized (complete) | 5 (CF-003, CF-004, CF-005, CF-006, CF-014) |
+| Shared but page-named | 5 |
 | Duplicated shared family | 2 |
 | Genuinely page-specific | 1 |
 | Hold / unresolved | 1 |
@@ -27,7 +27,7 @@
 | CF-003 | internal-page-nav | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-004 | founder-quote | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-005 | specialists | 3 | UNIVERSALIZED | COMPLETE | NONE |
-| CF-006 | home-comfort | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
+| CF-006 | comfort | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-007 | home-reviews | 3 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-008 | home-faq | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-009 | home-final-form | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
@@ -92,8 +92,26 @@
 
 ---
 
+## Comfort gallery family (CF-006 detail)
+
+| Item | Value |
+|------|-------|
+| Canonical partial | `src/partials/sections/comfort.html` |
+| Canonical root class | `.comfort` |
+| Pages using | `index.html`, `uslugi.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
+| HTML copies | 0 — single include |
+| CSS copies | 1 — `.comfort*` in `style.scss` |
+| JS init | 1 — `[data-fancybox="comfort"]` in `main.js` |
+| Old name retired | `home-comfort` |
+| Aliases | 0 |
+| Historical asset path | `assets/img/content/home-comfort/` — preserved |
+| Classification | UNIVERSALIZED |
+| Implementation status | COMPLETE |
+
+---
+
 ## Next recommended wave
 
-**CF-006 — Comfort gallery (`home-comfort`)** — NOT AUTHORIZED
+**CF-007 — Reviews (`home-reviews`)** — NOT AUTHORIZED
 
-Reason: multi-page reuse; page-specific naming; retire unused `services-comfort-v2` duplicate when chartered.
+Reason: multi-page reuse; Swiper config in main.js — verify single init path during wave.
