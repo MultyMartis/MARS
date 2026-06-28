@@ -641,7 +641,7 @@ body.is-scroll-locked {
 .home-recovery-life__intro-text > span,
 .home-why-us__body > span,
 .home-recovery-intro__lead > span,
-.home-founder-quote__text > span {
+.founder-quote__text > span {
 	display: inline;
 	padding-left: var(--pad-gap);
 }
@@ -1092,18 +1092,18 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
    10b. Home founder quote (Section 02)
    ========================================================================== */
 
-.home-founder-quote__layout {
+.founder-quote__layout {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	gap: var(--pad-gap); // EXACT_GEOMETRY — mockup column split gap 720-696 at 1398 canvas
 	align-items: center;
 }
 
-.home-founder-quote__quote {
+.founder-quote__quote {
 	margin: 0;
 }
 
-.home-founder-quote__mark {
+.founder-quote__mark {
 	display: block;
 	width: 70px; // EXACT_GEOMETRY — FIG node 1:1217 width 70px
 	height: 55px; // EXACT_GEOMETRY — FIG node 1:1217 height 55px
@@ -1111,35 +1111,35 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	color: var(--color-accent);
 }
 
-.home-founder-quote__text {
+.founder-quote__text {
 	margin: 0 0 var(--pad-gap);
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	max-width: 560px;
 }
 
-.home-founder-quote__text > span {
+.founder-quote__text > span {
 	display: inline;
 	padding-left: var(--pad-gap);
 }
 
-.home-founder-quote__text:last-child {
+.founder-quote__text:last-child {
 	margin-bottom: 0;
 }
 
-.home-founder-quote__figure {
+.founder-quote__figure {
 	position: relative;
 	margin: 0;
 }
 
-.home-founder-quote__photo {
+.founder-quote__photo {
 	display: block;
 	width: 100%;
 	height: auto;
 	border-radius: var(--radius-main);
 }
 
-.home-founder-quote__author {
+.founder-quote__author {
 	position: absolute;
 	right: 0px;
 	bottom: var(--pad-gap);
@@ -1153,7 +1153,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	-webkit-backdrop-filter: blur(var(--surface-frosted-blur));
 }
 
-.home-founder-quote__name {
+.founder-quote__name {
 	margin: 0 0 var(--pad-gap-line);
 	font-size: 20px;
 	font-weight: var(--font-weight-heading);
@@ -1161,14 +1161,14 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	text-decoration: underline;
 }
 
-.home-founder-quote__role {
+.founder-quote__role {
 	margin: 0 0 var(--pad-gap-line);
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	color: var(--color-text-secondary);
 }
 
-.home-founder-quote__cta {
+.founder-quote__cta {
 	border-color: var(--color-accent);
 	/* color: var(--color-text-primary); */
 	background-color: transparent;
@@ -1178,19 +1178,19 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	align-items: center;
 }
 
-.home-founder-quote__cta:hover {
+.founder-quote__cta:hover {
 	border-color: var(--color-accent);
 	background-color: var(--color-accent);
 	color: var(--color-text-inverse);
 }
 
-.home-founder-quote--variant-b .home-founder-quote__figure {
+.founder-quote--variant-b .founder-quote__figure {
 	overflow: hidden;
 	border-radius: var(--radius-main);
 	padding-right: 15%;
 }
 
-.home-founder-quote--variant-b .home-founder-quote__photo {
+.founder-quote--variant-b .founder-quote__photo {
 	width: 100%;
 	max-height: 640px;
 	object-fit: cover;
@@ -1200,7 +1200,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	mask-image: linear-gradient(90deg, transparent 5%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.95) 30%, #000 90%);
 }
 
-.home-founder-quote--variant-b .home-founder-quote__figure::before {
+.founder-quote--variant-b .founder-quote__figure::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -1209,7 +1209,7 @@ $hero-panel-border: rgba(255, 255, 255, 0.35); // EXACT_GEOMETRY_EXCEPTION — f
 	pointer-events: none;
 }
 
-.home-founder-quote--variant-b .home-founder-quote__author {
+.founder-quote--variant-b .founder-quote__author {
 	z-index: 2;
 }
 
@@ -3744,29 +3744,29 @@ body[data-offcanvas-state='open'] {
 		grid-template-columns: minmax(0, 1fr);
 	}
 
-	.home-founder-quote__layout {
+	.founder-quote__layout {
 		grid-template-columns: minmax(0, 1fr);
 	}
 
-	.home-founder-quote__author {
+	.founder-quote__author {
 		position: static;
 		margin-top: var(--pad-gap-line);
 	}
 
-	.home-founder-quote--variant-b .home-founder-quote__photo {
+	.founder-quote--variant-b .founder-quote__photo {
 		max-height: 420px;
 		object-position: 58% 10%;
 		-webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 14%, rgba(0, 0, 0, 0.95) 36%, #000 62%);
 		mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 14%, rgba(0, 0, 0, 0.95) 36%, #000 62%);
 	}
 
-	.home-founder-quote--variant-b .home-founder-quote__figure::before {
+	.founder-quote--variant-b .founder-quote__figure::before {
 		background:
 			linear-gradient(180deg, var(--color-page-background) 0%, rgba(218, 229, 240, 0.5) 18%, rgba(218, 229, 240, 0) 42%),
 			linear-gradient(180deg, rgba(218, 229, 240, 0) 55%, rgba(218, 229, 240, 0.5) 100%);
 	}
 
-	.home-founder-quote--variant-b .home-founder-quote__figure {
+	.founder-quote--variant-b .founder-quote__figure {
 		padding-right: 5%;
 	}
 

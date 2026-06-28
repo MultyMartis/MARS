@@ -27,24 +27,26 @@
     },
     {
       "family_id": "CF-004",
-      "current_name": "home-founder-quote",
-      "current_partial": "src/partials/sections/home-founder-quote.html",
+      "current_name": "founder-quote",
+      "current_partial": "src/partials/sections/founder-quote.html",
       "pages_using": ["index.html", "uslugi-v2.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html", "uslugi.html"],
       "visual_identity": "SAME",
-      "html_identity": "SAME",
-      "css_identity": "SAME",
-      "page_specific_name": true,
+      "html_identity": "UNIFIED",
+      "css_identity": "UNIFIED",
+      "page_specific_name": false,
       "duplicate_partials": [],
       "duplicate_classes": [],
-      "classification": "SHARED_BUT_PAGE_NAMED",
-      "recommended_action": "RENAME_AND_UNIVERSALIZE",
-      "future_neutral_name": "UNDECIDED",
-      "priority": "P1",
-      "implementation_status": "NOT_STARTED",
+      "classification": "UNIVERSALIZED",
+      "recommended_action": "NONE",
+      "future_neutral_name": "founder-quote",
+      "priority": "COMPLETE",
+      "implementation_status": "COMPLETE",
+      "old_name_retired": "home-founder-quote",
+      "aliases": 0,
       "content_parameters": ["modalSource", "founderQuoteModifierClass"],
-      "accessibility_drift": "LOW — shared aria-labelledby id uses home-founder-quote-label on all pages",
+      "accessibility_label_id": "founder-quote-label",
       "cta_drift": "NONE — single CTA structure",
-      "notes": "Preferred next wave; high reuse on O-Centre path"
+      "notes": "Wave 2 complete — neutral partial and class family; variant-b preserved"
     },
     {
       "family_id": "CF-005",
@@ -254,15 +256,15 @@
     }
   ],
   "page_specific_naming_audit": {
-    "home_prefix_shared_but_page_named": 8,
+    "home_prefix_shared_but_page_named": 7,
     "genuinely_page_specific": 12,
     "duplicated_shared_family": 2,
-    "universalized": 2,
+    "universalized": 3,
     "unresolved": 1
   },
   "next_recommended_wave": {
-    "family_id": "CF-004",
-    "current_name": "home-founder-quote",
-    "reason": "Used on 5 pages including all four canonical templates; page-specific name; no JS complexity; high value for O-Centre"
+    "family_id": "CF-005",
+    "current_name": "home-specialists",
+    "reason": "Shared on 3 templates; page-specific name only; rename-only wave after CF-004"
   }
 }

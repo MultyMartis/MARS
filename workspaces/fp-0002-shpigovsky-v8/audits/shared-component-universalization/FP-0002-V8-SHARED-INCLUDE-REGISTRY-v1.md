@@ -12,8 +12,8 @@
 | Metric | Count |
 |--------|------:|
 | Total candidate families | 13 |
-| Universalized (complete) | 2 (CF-003, CF-014) |
-| Shared but page-named | 8 |
+| Universalized (complete) | 3 (CF-003, CF-004, CF-014) |
+| Shared but page-named | 7 |
 | Duplicated shared family | 2 |
 | Genuinely page-specific | 1 |
 | Hold / unresolved | 1 |
@@ -25,7 +25,7 @@
 | ID | Current name | Pages | Classification | Priority | Recommended action |
 |---|---|---:|---|---|---|
 | CF-003 | internal-page-nav | 3 | UNIVERSALIZED | COMPLETE | NONE |
-| CF-004 | home-founder-quote | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
+| CF-004 | founder-quote | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-005 | home-specialists | 3 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-006 | home-comfort | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
 | CF-007 | home-reviews | 3 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
@@ -44,15 +44,17 @@
 
 | Item | Value |
 |------|-------|
-| Current partial | `src/partials/sections/home-founder-quote.html` |
-| Current root class | `.home-founder-quote` |
+| Canonical partial | `src/partials/sections/founder-quote.html` |
+| Canonical root class | `.founder-quote` |
 | Pages using | `index.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html`, `uslugi.html` |
 | HTML copies | 0 — single include |
-| CSS copies | 1 — `.home-founder-quote*` block in `style.scss` |
-| Accessibility drift | Low — `aria-labelledby="home-founder-quote-label"` is page-neutral but name is not |
+| CSS copies | 1 — `.founder-quote*` block in `style.scss` |
+| Accessibility label | `founder-quote-label` |
 | CTA drift | None |
-| Classification | SHARED_BUT_PAGE_NAMED |
-| Implementation status | NOT_STARTED |
+| Old name retired | `home-founder-quote` |
+| Aliases | 0 |
+| Classification | UNIVERSALIZED |
+| Implementation status | COMPLETE |
 
 ---
 
@@ -75,6 +77,6 @@
 
 ## Next recommended wave
 
-**CF-004 — Founder/Expert quote (`home-founder-quote`)**
+**CF-005 — Specialists (`home-specialists`)**
 
-Reason: multi-page reuse, page-specific naming only, no complex JS, direct benefit for future O-Centre page.
+Reason: multi-page reuse on three internal templates; page-specific naming only; no complex JS beyond existing carousel patterns.

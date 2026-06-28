@@ -24,7 +24,7 @@ Examples:
 
 | Wrong (page-named) | Right (neutral) |
 |---|---|
-| `home-founder-quote` | `founder-quote` / `expert-quote-block` (operator to decide) |
+| `home-founder-quote` | **`founder-quote`** (CF-004 COMPLETE) |
 | `home-specialists` | `specialists-section` |
 | `home-comfort` | `comfort-gallery` / `facility-comfort` (operator to decide) |
 

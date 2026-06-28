@@ -81,10 +81,10 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-founder-quote.html` |
-| Class family | `.home-founder-quote*` (+ `--variant-b`) |
-| Pages | `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
-| Consolidation priority | P2 — rename to neutral family deferred |
+| Shared partial | `partials/sections/founder-quote.html` |
+| Class family | `.founder-quote*` (+ `--variant-b`) |
+| Pages | `index.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html`, `uslugi.html` |
+| Consolidation priority | COMPLETE — universalized CF-004 wave 2 |
 
 ---
 

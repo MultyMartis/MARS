@@ -112,7 +112,8 @@ Starter template demo pages may exist from gulp-starter copy — **not** FP-0002
 | Browser parity | PASS (V7 reference dist vs V8 dist) |
 | Component audit | COMPLETE |
 | CF-003 Upper Navigation | COMPLETE (2026-06-28) |
-| Shared component audit | COMPLETE — next wave CF-004 founder quote (not started) |
+| CF-004 Founder Quote | COMPLETE (2026-06-28) |
+| Shared component audit | COMPLETE — next wave CF-005 specialists (not started) |
 | About (`o-centre`) | DEFERRED in V8 |
 
 ---

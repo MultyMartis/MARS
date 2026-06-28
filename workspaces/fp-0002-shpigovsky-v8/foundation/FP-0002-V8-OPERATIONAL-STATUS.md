@@ -1,6 +1,6 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-28 (CF-003 completion + shared component audit)
+**Updated:** 2026-06-28 (CF-004 founder-quote universalization)
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
@@ -10,9 +10,10 @@ fp0002_v8_component_audit: COMPLETE
 fp0002_v8_component_consolidation: IN_PROGRESS
 fp0002_v8_cf003_upper_navigation: COMPLETE
 fp0002_v8_cf003_commit: 361502bf
+fp0002_v8_cf004_founder_quote: COMPLETE
 fp0002_v8_shared_component_audit: COMPLETE
-fp0002_v8_shared_component_audit_commit: PENDING
-fp0002_v8_next_wave: CF-004_FOUNDER_QUOTE (audit recommended, not started)
+fp0002_v8_shared_component_audit_commit: 98ea1ae6
+fp0002_v8_next_wave: CF-005_HOME_SPECIALISTS (not started)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -31,8 +32,14 @@ browser_qa_cf003: PASS
 dom_validation_cf003: PASS
 selector_validation_cf003: PASS
 cf003_commit: PUSHED (361502bf)
+build_cf004: PASS
+browser_qa_cf004: PASS
+dom_validation_cf004: PASS
+selector_validation_cf004: PASS
+visual_parity_cf004: PASS
 shared_component_audit: COMPLETE
 consolidation_wave_1_cf003: COMPLETE
+consolidation_wave_2_cf004: COMPLETE
 
 excluded_from_bootstrap:
   - o-centre-v1.html (rejected WIP)
@@ -62,7 +69,15 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 - Canonical class: `.internal-page-nav`
 - Receipt: `audits/cf-003-upper-navigation/CF-003-COMPLETION-RECEIPT.md`
 
+## CF-004
+
+- Canonical partial: `partials/sections/founder-quote.html`
+- Canonical class: `.founder-quote`
+- Retired name: `home-founder-quote`
+- Consumers: `index.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html`, `uslugi.html`
+- Receipt: `audits/cf-004-founder-quote/CF-004-IMPLEMENTATION-RECEIPT.md`
+
 ## Next wave (documentation only)
 
-- Recommended family: Founder/Expert quote (`home-founder-quote`)
+- Recommended family: Specialists (`home-specialists`)
 - Registry: `audits/shared-component-universalization/FP-0002-V8-SHARED-INCLUDE-REGISTRY-v1.md`
