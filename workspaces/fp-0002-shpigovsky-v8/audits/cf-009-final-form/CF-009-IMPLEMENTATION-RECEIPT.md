@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-28
 **Wave:** CF-009
-**Verdict:** COMPLETE — operator visual approval recorded; closeout commit pending
+**Verdict:** COMPLETE — commit `ec5ff2c0`
 
 ## Naming decision
 

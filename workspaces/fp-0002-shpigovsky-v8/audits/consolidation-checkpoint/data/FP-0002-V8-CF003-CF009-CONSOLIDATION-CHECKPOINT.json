@@ -1,0 +1,216 @@
+{
+  "checkpoint_id": "FP-0002-V8-CF003-CF009-CONSOLIDATION-CHECKPOINT",
+  "captured_utc": "2026-06-28T13:28:57.077759+00:00",
+  "head": "2107d2b93c95efdfbfa9d9231a51e1df47286da4",
+  "retired_names": {
+    "audit_id": "FP-0002-V8-RETIRED-NAMES-AUDIT",
+    "captured_utc": "2026-06-28T13:28:57.004452+00:00",
+    "scope": "src/**/*.html,scss,js",
+    "rows": [
+      {
+        "retired_family": "page-uslugi-v2__upper-nav",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 0,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "page-service-subdivision-v1__upper-nav",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 0,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "page-service-leaf-v1__upper-nav",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 0,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "home-founder-quote",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 0,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "home-specialists",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 1,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "home-comfort",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 1,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "home-reviews",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 0,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "home-faq",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 0,
+        "files": [],
+        "result": "PASS"
+      },
+      {
+        "retired_family": "home-final-form",
+        "active_references": 0,
+        "historical_docs": 0,
+        "asset_path_exceptions": 1,
+        "files": [],
+        "result": "PASS"
+      }
+    ],
+    "overall": "PASS"
+  },
+  "canonical_families": [
+    {
+      "cf": "CF-003",
+      "canonical_partial": "internal-page-nav.html",
+      "partial_count": 1,
+      "root_class": "internal-page-nav",
+      "consumers": 3,
+      "css_sources": 0,
+      "js_init_sources": 0,
+      "result": "PASS"
+    },
+    {
+      "cf": "CF-004",
+      "canonical_partial": "founder-quote.html",
+      "partial_count": 1,
+      "root_class": "founder-quote",
+      "consumers": 5,
+      "css_sources": 23,
+      "js_init_sources": 0,
+      "result": "PASS"
+    },
+    {
+      "cf": "CF-005",
+      "canonical_partial": "specialists.html",
+      "partial_count": 1,
+      "root_class": "specialists",
+      "consumers": 3,
+      "css_sources": 16,
+      "js_init_sources": 3,
+      "result": "PASS"
+    },
+    {
+      "cf": "CF-006",
+      "canonical_partial": "comfort.html",
+      "partial_count": 1,
+      "root_class": "comfort",
+      "consumers": 5,
+      "css_sources": 19,
+      "js_init_sources": 2,
+      "result": "PASS"
+    },
+    {
+      "cf": "CF-007",
+      "canonical_partial": "reviews.html",
+      "partial_count": 1,
+      "root_class": "reviews",
+      "consumers": 3,
+      "css_sources": 20,
+      "js_init_sources": 3,
+      "result": "PASS"
+    },
+    {
+      "cf": "CF-008",
+      "canonical_partial": "faq.html",
+      "partial_count": 1,
+      "root_class": "faq",
+      "consumers": 5,
+      "css_sources": 14,
+      "js_init_sources": 0,
+      "result": "PASS"
+    },
+    {
+      "cf": "CF-009",
+      "canonical_partial": "final-form.html",
+      "partial_count": 1,
+      "root_class": "final-form",
+      "consumers": 5,
+      "css_sources": 41,
+      "js_init_sources": 10,
+      "result": "PASS"
+    }
+  ],
+  "page_dom": [
+    {
+      "page": "index.html",
+      "duplicate_ids": 0,
+      "duplicate_id_map": {},
+      "broken_aria_controls": 0,
+      "broken_aria_labelledby": 0,
+      "unresolved_includes": 0,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi.html",
+      "duplicate_ids": 0,
+      "duplicate_id_map": {},
+      "broken_aria_controls": 0,
+      "broken_aria_labelledby": 0,
+      "unresolved_includes": 0,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2.html",
+      "duplicate_ids": 0,
+      "duplicate_id_map": {},
+      "broken_aria_controls": 0,
+      "broken_aria_labelledby": 0,
+      "unresolved_includes": 0,
+      "result": "PASS"
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "duplicate_ids": 0,
+      "duplicate_id_map": {},
+      "broken_aria_controls": 0,
+      "broken_aria_labelledby": 1,
+      "unresolved_includes": 0,
+      "result": "FAIL"
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "duplicate_ids": 0,
+      "duplicate_id_map": {},
+      "broken_aria_controls": 0,
+      "broken_aria_labelledby": 0,
+      "unresolved_includes": 0,
+      "result": "PASS"
+    }
+  ],
+  "cf003_cf009_scope": "PASS",
+  "page_wide_dom_gate": "FAIL",
+  "pre_existing_blockers": [
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "issue": "broken aria-labelledby",
+      "missing_id": "service-subdivision-start-heading",
+      "source": "service-subdivision-first-cta-v1.html",
+      "scope": "PRE_EXISTING_CF011_TERRITORY"
+    }
+  ],
+  "overall": "FAIL"
+}

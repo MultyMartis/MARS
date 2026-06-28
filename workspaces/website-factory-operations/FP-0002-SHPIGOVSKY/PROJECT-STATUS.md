@@ -9,8 +9,11 @@
 |-------|-------|
 | Workspace | `workspaces/fp-0002-shpigovsky-v8/` |
 | Branch | `mars/canonical-post-recovery` |
-| CF-003–CF-009 shared families | COMPLETE (CF-009 `final-form` — operator approved) |
-| Next wave | CF-010 clinic landscape — **NOT AUTHORIZED** |
+| CF-009 final form | COMPLETE — commit `ec5ff2c0` |
+| Duplicate-ID repair (Home) | COMPLETE — commit `2107d2b9` |
+| CF-003–CF-009 consolidation checkpoint | DOCUMENTED |
+| Next wave | CF-011 dark CTA wrappers — **NOT AUTHORIZED** |
+| Page-wide DOM gate | BLOCKED — pre-existing subdivision `aria-labelledby` |
 | O-Centre | DEFERRED |
 
 ## Workspace versions (2026-06-24)

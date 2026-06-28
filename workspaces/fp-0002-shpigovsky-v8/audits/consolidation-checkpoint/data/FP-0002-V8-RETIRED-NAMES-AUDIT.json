@@ -1,0 +1,80 @@
+{
+  "audit_id": "FP-0002-V8-RETIRED-NAMES-AUDIT",
+  "captured_utc": "2026-06-28T13:28:57.004452+00:00",
+  "scope": "src/**/*.html,scss,js",
+  "rows": [
+    {
+      "retired_family": "page-uslugi-v2__upper-nav",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 0,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "page-service-subdivision-v1__upper-nav",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 0,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "page-service-leaf-v1__upper-nav",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 0,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "home-founder-quote",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 0,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "home-specialists",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 1,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "home-comfort",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 1,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "home-reviews",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 0,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "home-faq",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 0,
+      "files": [],
+      "result": "PASS"
+    },
+    {
+      "retired_family": "home-final-form",
+      "active_references": 0,
+      "historical_docs": 0,
+      "asset_path_exceptions": 1,
+      "files": [],
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

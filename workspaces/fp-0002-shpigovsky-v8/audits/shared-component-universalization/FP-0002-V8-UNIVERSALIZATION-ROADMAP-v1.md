@@ -16,7 +16,8 @@
 | 4 | CF-006 comfort | COMPLETE — commit `4737b020` |
 | 5 | CF-007 reviews | COMPLETE — commit `4fe928f2` |
 | 6 | CF-008 FAQ | COMPLETE — pending commit |
-| 7 | CF-009 final form | COMPLETE — pending commit |
+| CF-009 final form | COMPLETE — commit `ec5ff2c0` |
+| Consolidation checkpoint CF-003–CF-009 | DOCUMENTED — page-wide DOM gate blocked (pre-existing subdivision ARIA) |
 
 ---
 
@@ -111,6 +112,14 @@
 - Consumers: 5 pages
 - Visual parity: PASS (crop + context 20/20 exact)
 - Form QA: PASS
+
+---
+
+## Next wave: CF-011 Dark CTA wrappers
+
+**Status:** NOT AUTHORIZED
+
+Operator gate required before CF-011 wrapper consolidation. Include subdivision ARIA remediation in charter scope.
 
 ---
 

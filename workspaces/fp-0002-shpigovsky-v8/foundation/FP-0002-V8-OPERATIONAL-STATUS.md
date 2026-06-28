@@ -1,13 +1,13 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-28 (CF-008 FAQ universalization)
+**Updated:** 2026-06-28 (CF-003–CF-009 consolidation checkpoint)
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
 fp0002_v8_git_protection: ENABLED
 fp0002_v8_baseline: FOUR_TEMPLATE_AUTHORITY_6eb493e9
 fp0002_v8_component_audit: COMPLETE
-fp0002_v8_component_consolidation: IN_PROGRESS
+fp0002_v8_component_consolidation: CF003_CF009_SCOPE_COMPLETE
 fp0002_v8_cf003_upper_navigation: COMPLETE
 fp0002_v8_cf003_commit: 361502bf
 fp0002_v8_cf004_founder_quote: COMPLETE
@@ -15,9 +15,15 @@ fp0002_v8_cf005_specialists: COMPLETE
 fp0002_v8_cf006_comfort: COMPLETE
 fp0002_v8_cf007_reviews: COMPLETE
 fp0002_v8_cf008_faq: COMPLETE
+fp0002_v8_cf009_final_form: COMPLETE
+fp0002_v8_cf009_commit: ec5ff2c0
+fp0002_v8_duplicate_id_repair: COMPLETE
+fp0002_v8_duplicate_id_repair_commit: 2107d2b9
+fp0002_v8_consolidation_checkpoint: DOCUMENTED
+fp0002_v8_page_wide_dom_gate: BLOCKED_PRE_EXISTING_SUBDIVISION_ARIA
 fp0002_v8_shared_component_audit: COMPLETE
 fp0002_v8_shared_component_audit_commit: 98ea1ae6
-fp0002_v8_next_wave: CF-010_HOME_CLINIC_LANDSCAPE (NOT AUTHORIZED)
+fp0002_v8_next_wave: CF-011_DARK_CTA_WRAPPERS (NOT AUTHORIZED)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -48,6 +54,10 @@ consolidation_wave_3_cf005: COMPLETE
 consolidation_wave_4_cf006: COMPLETE
 consolidation_wave_5_cf007: COMPLETE
 consolidation_wave_6_cf008: COMPLETE
+consolidation_wave_7_cf009: COMPLETE
+duplicate_id_repair_treatment_prevention: COMPLETE
+consolidation_checkpoint_cf003_cf009: DOCUMENTED
+page_wide_dom_gate: BLOCKED_PRE_EXISTING_SUBDIVISION_ARIA
 build_cf007: PASS
 browser_qa_cf007: PASS
 dom_validation_cf007: PASS
@@ -135,7 +145,27 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 - Consumers: `index.html`, `uslugi.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html`
 - Receipt: `audits/cf-008-faq/CF-008-IMPLEMENTATION-RECEIPT.md`
 
+## CF-009
+
+- Canonical partial: `partials/sections/final-form.html`
+- Canonical class: `.final-form`
+- Retired name: `home-final-form`
+- Form hooks: `data-lead-form`, `data-phone-input` (unchanged)
+- Consumers: all five template pages with final form
+- Commit: `ec5ff2c0`
+- Receipt: `audits/cf-009-final-form/CF-009-IMPLEMENTATION-RECEIPT.md`
+
+## Duplicate-ID repair
+
+- Defect: `home-treatment-prevention-panel-1` duplicate on Home
+- Fix commit: `2107d2b9`
+- Receipt: `audits/dom-defect-repair/FP-0002-V8-DUPLICATE-ID-REPAIR-RECEIPT.md`
+
+## Consolidation checkpoint
+
+- Receipt: `audits/consolidation-checkpoint/FP-0002-V8-CF003-CF009-CONSOLIDATION-CHECKPOINT-v1.md`
+
 ## Next wave (documentation only)
 
-- Recommended family: Clinic landscape (`home-clinic-landscape`) — **NOT AUTHORIZED**
-- CF-009 Final form (`final-form`) — **COMPLETE**
+- Recommended family: Dark CTA wrappers (CF-011) — **NOT AUTHORIZED**
+- CF-010 Clinic landscape — **NOT AUTHORIZED** (after CF-011/CF-012)
