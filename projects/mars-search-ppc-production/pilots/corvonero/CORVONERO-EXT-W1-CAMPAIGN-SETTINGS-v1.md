@@ -1,0 +1,44 @@
+# CORVONERO-EXT-W1 — Campaign Settings v1
+
+Geography: **Новосибирск + Новосибирская область**
+
+## CA-01
+
+- Search: PLANNED
+- Network: NOT AUTHORIZED
+- Auto-targeting: NOT AUTHORIZED UNTIL SEPARATE REVIEW
+- Launch: NOT AUTHORIZED
+- Budget/Bid/Schedule: OPERATOR_DECISION_REQUIRED
+
+## CA-02
+
+- Search: PLANNED
+- Network: NOT AUTHORIZED
+- Auto-targeting: NOT AUTHORIZED UNTIL SEPARATE REVIEW
+- Launch: NOT AUTHORIZED
+- Budget/Bid/Schedule: OPERATOR_DECISION_REQUIRED
+
+## CA-03
+
+- Search: PLANNED
+- Network: NOT AUTHORIZED
+- Auto-targeting: NOT AUTHORIZED UNTIL SEPARATE REVIEW
+- Launch: NOT AUTHORIZED
+- Budget/Bid/Schedule: OPERATOR_DECISION_REQUIRED
+
+## CA-04
+
+- Search: PLANNED
+- Network: NOT AUTHORIZED
+- Auto-targeting: NOT AUTHORIZED UNTIL SEPARATE REVIEW
+- Launch: NOT AUTHORIZED
+- Budget/Bid/Schedule: OPERATOR_DECISION_REQUIRED
+
+## CA-05
+
+- Search: PLANNED
+- Network: NOT AUTHORIZED
+- Auto-targeting: NOT AUTHORIZED UNTIL SEPARATE REVIEW
+- Launch: NOT AUTHORIZED
+- Budget/Bid/Schedule: OPERATOR_DECISION_REQUIRED
+

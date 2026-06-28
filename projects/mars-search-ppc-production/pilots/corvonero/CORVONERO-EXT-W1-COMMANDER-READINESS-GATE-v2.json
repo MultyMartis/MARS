@@ -1,0 +1,101 @@
+{
+  "gate_id": "corvonero-ext-w1-commander-readiness-gate-v2",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "commander_xlsx": "BLOCKED",
+  "mandatory_fields_classified": "100%",
+  "blockers": [
+    {
+      "id": "B1",
+      "blocker": "LP URLs not published/HTTP verified",
+      "status": "OPEN",
+      "owner": "Roman"
+    },
+    {
+      "id": "B2",
+      "blocker": "Final anchor IDs from Roman unavailable",
+      "status": "OPEN",
+      "owner": "Roman"
+    },
+    {
+      "id": "B3",
+      "blocker": "Privacy/form publication not completed",
+      "status": "OPEN",
+      "owner": "Roman / operator"
+    },
+    {
+      "id": "B4",
+      "blocker": "Campaign budget not set",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B5",
+      "blocker": "Bid strategy not set",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B6",
+      "blocker": "Schedule not set",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B7",
+      "blocker": "Commander import template not instantiated for Corvonero",
+      "status": "OPEN",
+      "owner": "MARS"
+    },
+    {
+      "id": "B8",
+      "blocker": "Final negative list not operator-approved",
+      "status": "CLOSED",
+      "owner": "Operator",
+      "closed_at": "2026-06-28T23:31:33.742Z",
+      "evidence": "CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json"
+    },
+    {
+      "id": "B9",
+      "blocker": "UTM dynamic keyword macro requires Commander template confirmation",
+      "status": "OPEN",
+      "owner": "MARS"
+    },
+    {
+      "id": "B10",
+      "blocker": "Yandex Metrica counter not provided",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B11",
+      "blocker": "Conversion goals not provided",
+      "status": "OPEN",
+      "owner": "Operator"
+    }
+  ],
+  "remaining_blockers_by_owner": {
+    "ROMAN": [
+      "publish and verify five LP URLs",
+      "supply final anchor IDs",
+      "complete and verify forms/privacy publication"
+    ],
+    "OPERATOR": [
+      "set budgets",
+      "set bid strategy",
+      "set schedule",
+      "provide Metrica counter",
+      "provide conversion goals"
+    ],
+    "MARS": [
+      "instantiate and verify Corvonero Commander template",
+      "confirm dynamic keyword macro support"
+    ]
+  },
+  "ready_when": [
+    "All OPEN blockers closed",
+    "URL readiness READY_FOR_AD_TRAFFIC for all 5 LPs",
+    "Corvonero commander template fork verified",
+    "Commander template confirms utm_term={keyword} macro if used"
+  ]
+}

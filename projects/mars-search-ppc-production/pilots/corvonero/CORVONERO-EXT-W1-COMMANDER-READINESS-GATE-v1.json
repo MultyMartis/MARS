@@ -1,0 +1,68 @@
+{
+  "gate_id": "corvonero-ext-w1-commander-readiness-gate-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "commander_xlsx": "BLOCKED",
+  "mandatory_fields_classified": "100%",
+  "blockers": [
+    {
+      "id": "B1",
+      "blocker": "LP URLs not published/HTTP verified",
+      "status": "OPEN",
+      "owner": "Roman / operator"
+    },
+    {
+      "id": "B2",
+      "blocker": "Final anchor IDs from Roman unavailable",
+      "status": "OPEN",
+      "owner": "Roman"
+    },
+    {
+      "id": "B3",
+      "blocker": "Privacy/form publication not completed",
+      "status": "OPEN",
+      "owner": "Roman / operator"
+    },
+    {
+      "id": "B4",
+      "blocker": "Campaign budget not set",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B5",
+      "blocker": "Bid strategy not set",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B6",
+      "blocker": "Schedule not set",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B7",
+      "blocker": "Commander import template not instantiated for Corvonero",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B8",
+      "blocker": "Final negative list not operator-approved",
+      "status": "OPEN",
+      "owner": "Operator"
+    },
+    {
+      "id": "B9",
+      "blocker": "UTM dynamic macro requires import profile confirmation",
+      "status": "OPEN",
+      "owner": "Operator"
+    }
+  ],
+  "ready_when": [
+    "All blockers closed",
+    "URL readiness READY_FOR_AD_TRAFFIC for all 5 LPs",
+    "Operator approves negative deploy list",
+    "Corvonero commander template fork verified"
+  ]
+}

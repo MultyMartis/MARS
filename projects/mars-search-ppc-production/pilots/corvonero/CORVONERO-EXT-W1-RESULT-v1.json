@@ -1,0 +1,41 @@
+{
+  "result_id": "corvonero-ext-w1-result-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "verdict": "CORVONERO PRODUCTION EXTENSIONS WAVE 1: PASS — EXTENSIONS AND IMPORT PROFILE READY FOR OPERATOR REVIEW",
+  "components": {
+    "sitelink_copy": "CREATED",
+    "sitelink_urls": "PROVISIONAL UNTIL FINAL ANCHORS",
+    "callouts": "CREATED",
+    "negative_candidates": "CREATED — NOT DEPLOYED",
+    "utm_policy": "CREATED",
+    "campaign_settings": "PARTIAL — OPERATOR DECISIONS REQUIRED",
+    "commander_import_profile": "CREATED",
+    "commander_xlsx": "BLOCKED UNTIL REQUIRED INPUTS ARE RESOLVED",
+    "advertising": "NOT STARTED"
+  },
+  "validation": {
+    "campaigns": 5,
+    "deployable_groups": 15,
+    "deployable_phrases": 895,
+    "lps": 5,
+    "groups_without_display_path": 0,
+    "campaigns_without_sitelink_copy": 0,
+    "campaigns_without_callout_pool": 0,
+    "negative_candidates_without_source": 0,
+    "utm_campaign_slugs_unique": 5,
+    "commander_mandatory_fields_classified_pct": 100,
+    "preflight": {
+      "branch": "mars/canonical-post-recovery",
+      "head_at_authority": true,
+      "phrase_allocation": "CORVONERO-AD-WAVE-1-FINAL-PHRASE-ALLOCATION-v1.json",
+      "group_register": "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+      "primary_ads": "CORVONERO-AD-WAVE-1-P1-FINAL-PRIMARY-ADS-v1.json",
+      "lp_copy": "LP-01..LP-05 final copy artifacts present"
+    }
+  },
+  "authority": {
+    "commit": "508837a02658e357ce18dca777a46231d2575b25",
+    "tag": "corvonero-final-p1-search-ads-2026-06",
+    "branch": "mars/canonical-post-recovery"
+  }
+}

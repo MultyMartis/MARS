@@ -1,0 +1,28 @@
+{
+  "audit_id": "corvonero-ext-w1-negative-risk-audit-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "critical_guards": [
+    {
+      "rule": "программист not globally excluded",
+      "status": "ENFORCED"
+    },
+    {
+      "rule": "коды маркировки not broadly excluded",
+      "status": "ENFORCED"
+    },
+    {
+      "rule": "Трактир not global negative",
+      "status": "ENFORCED — DO_NOT_DEPLOY until client scope"
+    },
+    {
+      "rule": "No auto-convert all REJECT to broad minus",
+      "status": "ENFORCED"
+    }
+  ],
+  "counts": {
+    "approved_candidate": 8,
+    "review_required": 10,
+    "do_not_deploy": 8
+  },
+  "deployable_list_exists": false
+}

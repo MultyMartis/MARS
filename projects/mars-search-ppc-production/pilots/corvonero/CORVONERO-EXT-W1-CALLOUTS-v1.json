@@ -1,0 +1,215 @@
+{
+  "callout_id": "corvonero-ext-w1-callouts-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "max_chars": 25,
+  "import_column": "Уточнения (col 67)",
+  "shared_pool": [
+    {
+      "text": "Удалённо по России",
+      "campaigns": "ALL",
+      "evidence": "LP copy work_format.remote",
+      "char_count": 18
+    },
+    {
+      "text": "Выезд в Новосибирске",
+      "campaigns": "ALL",
+      "evidence": "LP copy work_format.onsite",
+      "char_count": 20
+    },
+    {
+      "text": "Работа по договору",
+      "campaigns": "ALL",
+      "evidence": "LP trust facts / operator_decisions",
+      "char_count": 18
+    },
+    {
+      "text": "Безналичная оплата",
+      "campaigns": "ALL",
+      "evidence": "LP trust facts",
+      "char_count": 18
+    },
+    {
+      "text": "Разовые задачи",
+      "campaigns": [
+        "CA-01",
+        "CA-02",
+        "CA-03",
+        "CA-04"
+      ],
+      "evidence": "LP service scope",
+      "char_count": 14
+    },
+    {
+      "text": "Поддержка рабочей базы",
+      "campaigns": [
+        "CA-02",
+        "CA-05"
+      ],
+      "evidence": "LP-02/LP-05 copy",
+      "char_count": 22
+    },
+    {
+      "text": "УТ, УНФ, Розница, КА, БП",
+      "campaigns": "ALL",
+      "evidence": "LP configurations section",
+      "char_count": 24
+    }
+  ],
+  "campaign_pools": {
+    "CA-01": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.remote"
+      },
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.onsite"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP trust facts / operator_decisions"
+      },
+      {
+        "text": "Минимальный заказ 2 часа",
+        "char_count": 24,
+        "valid": true,
+        "scope": "CA-01_only",
+        "evidence": "LP-01 pricing.minimum_hours"
+      }
+    ],
+    "CA-02": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.remote"
+      },
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.onsite"
+      },
+      {
+        "text": "Поддержка рабочей базы",
+        "char_count": 22,
+        "valid": true,
+        "scope": "campaign_filtered",
+        "evidence": "LP-02/LP-05 copy"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP configurations section"
+      }
+    ],
+    "CA-03": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.remote"
+      },
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.onsite"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP trust facts / operator_decisions"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP configurations section"
+      }
+    ],
+    "CA-04": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.remote"
+      },
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.onsite"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP trust facts / operator_decisions"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP configurations section"
+      }
+    ],
+    "CA-05": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.remote"
+      },
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP copy work_format.onsite"
+      },
+      {
+        "text": "Поддержка рабочей базы",
+        "char_count": 22,
+        "valid": true,
+        "scope": "campaign_filtered",
+        "evidence": "LP-02/LP-05 copy"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "shared",
+        "evidence": "LP configurations section"
+      }
+    ]
+  },
+  "rules": [
+    "No duplicated meaning inside one campaign set",
+    "No unsupported guarantees, SLA, VAT, partner claims",
+    "No price outside CA-01"
+  ]
+}

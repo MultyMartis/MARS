@@ -1,0 +1,142 @@
+{
+  "register_id": "corvonero-ext-w1-final-campaign-register-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "authority": {
+    "commit": "508837a02658e357ce18dca777a46231d2575b25",
+    "tag": "corvonero-final-p1-search-ads-2026-06",
+    "branch": "mars/canonical-post-recovery"
+  },
+  "campaigns": [
+    {
+      "campaign_id": "CA-01",
+      "campaign_name_ru": "Программист / специалист 1С",
+      "phrase_count": 404,
+      "group_count": 3,
+      "lp_id": "LP-01",
+      "proposed_url": "https://lk.corvonero.ru/programmist-1s/",
+      "publication_status": "PROPOSED — NOT VERIFIED",
+      "launch_geography": "Новосибирск + Новосибирская область",
+      "priority": "P1",
+      "excluded_intent_families": [
+        "CAREER_OR_EDUCATION",
+        "INFORMATIONAL",
+        "PRODUCT_OR_LICENSE"
+      ],
+      "production_readiness": "EXTENSIONS_READY — URL_AND_OPERATOR_SETTINGS_BLOCKED",
+      "remaining_blockers": [
+        "LP URL not published/HTTP verified",
+        "Roman final anchor IDs unavailable",
+        "Campaign budget/bid/schedule: OPERATOR_DECISION_REQUIRED",
+        "Negative list operator approval pending"
+      ],
+      "copy_authority": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+      "utm_campaign_slug": "corv_programmist_1s"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name_ru": "Сопровождение и обслуживание 1С",
+      "phrase_count": 153,
+      "group_count": 4,
+      "lp_id": "LP-02",
+      "proposed_url": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "publication_status": "PROPOSED — NOT VERIFIED",
+      "launch_geography": "Новосибирск + Новосибирская область",
+      "priority": "P1",
+      "excluded_intent_families": [
+        "CAREER_OR_EDUCATION",
+        "INFORMATIONAL",
+        "PRODUCT_OR_LICENSE"
+      ],
+      "production_readiness": "EXTENSIONS_READY — URL_AND_OPERATOR_SETTINGS_BLOCKED",
+      "remaining_blockers": [
+        "LP URL not published/HTTP verified",
+        "Roman final anchor IDs unavailable",
+        "Campaign budget/bid/schedule: OPERATOR_DECISION_REQUIRED",
+        "Negative list operator approval pending"
+      ],
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "utm_campaign_slug": "corv_soprovozhdenie_1s"
+    },
+    {
+      "campaign_id": "CA-03",
+      "campaign_name_ru": "Доработка и разработка 1С",
+      "phrase_count": 69,
+      "group_count": 3,
+      "lp_id": "LP-03",
+      "proposed_url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "publication_status": "PROPOSED — NOT VERIFIED",
+      "launch_geography": "Новосибирск + Новосибирская область",
+      "priority": "P1",
+      "excluded_intent_families": [
+        "CAREER_OR_EDUCATION",
+        "INFORMATIONAL",
+        "EX-EDUCATION-COURSES"
+      ],
+      "production_readiness": "EXTENSIONS_READY — URL_AND_OPERATOR_SETTINGS_BLOCKED",
+      "remaining_blockers": [
+        "LP URL not published/HTTP verified",
+        "Roman final anchor IDs unavailable",
+        "Campaign budget/bid/schedule: OPERATOR_DECISION_REQUIRED",
+        "Negative list operator approval pending"
+      ],
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+      "utm_campaign_slug": "corv_dorabotka_1s"
+    },
+    {
+      "campaign_id": "CA-04",
+      "campaign_name_ru": "Интеграции 1С",
+      "phrase_count": 48,
+      "group_count": 1,
+      "lp_id": "LP-04",
+      "proposed_url": "https://lk.corvonero.ru/integracii-1s/",
+      "publication_status": "PROPOSED — NOT VERIFIED",
+      "launch_geography": "Новосибирск + Новосибирская область",
+      "priority": "P1",
+      "excluded_intent_families": [
+        "CAREER_OR_EDUCATION",
+        "INFORMATIONAL",
+        "EX-PRODUCT-LICENSE-ONLY"
+      ],
+      "production_readiness": "EXTENSIONS_READY — URL_AND_OPERATOR_SETTINGS_BLOCKED",
+      "remaining_blockers": [
+        "LP URL not published/HTTP verified",
+        "Roman final anchor IDs unavailable",
+        "Campaign budget/bid/schedule: OPERATOR_DECISION_REQUIRED",
+        "Negative list operator approval pending"
+      ],
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-FINAL-v2.json",
+      "utm_campaign_slug": "corv_integracii_1s"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name_ru": "Маркировка / Честный знак",
+      "phrase_count": 221,
+      "group_count": 4,
+      "lp_id": "LP-05",
+      "proposed_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "publication_status": "PROPOSED — NOT VERIFIED",
+      "launch_geography": "Новосибирск + Новосибирская область",
+      "priority": "P1",
+      "excluded_intent_families": [
+        "CAREER_OR_EDUCATION",
+        "EX-INFORMATIONAL-RESEARCH",
+        "PURCHASE_MARKING_CODES"
+      ],
+      "production_readiness": "EXTENSIONS_READY — URL_AND_OPERATOR_SETTINGS_BLOCKED",
+      "remaining_blockers": [
+        "LP URL not published/HTTP verified",
+        "Roman final anchor IDs unavailable",
+        "Campaign budget/bid/schedule: OPERATOR_DECISION_REQUIRED",
+        "Negative list operator approval pending"
+      ],
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "utm_campaign_slug": "corv_markirovka_1s"
+    }
+  ],
+  "totals": {
+    "campaigns": 5,
+    "groups": 15,
+    "phrases": 895,
+    "lps": 5
+  }
+}

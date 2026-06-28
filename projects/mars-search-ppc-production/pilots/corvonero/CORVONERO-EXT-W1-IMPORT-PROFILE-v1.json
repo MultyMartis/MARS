@@ -1,0 +1,208 @@
+{
+  "profile_id": "corvonero-ext-w1-import-profile-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "template_reference": "direct-commander-format-contract-v1.md / triumph-manipulator-commander-template-v1.xlsx",
+  "sheet": "Тексты",
+  "xlsx_generated": false,
+  "fields": [
+    {
+      "field": "campaign_type",
+      "column": "Тип кампании:",
+      "classification": "READY",
+      "entity": "campaign"
+    },
+    {
+      "field": "placement",
+      "column": "Места показа:",
+      "classification": "READY",
+      "entity": "campaign"
+    },
+    {
+      "field": "campaign_negatives",
+      "column": "Минус-фразы на кампанию:",
+      "classification": "PROVISIONAL",
+      "entity": "campaign"
+    },
+    {
+      "field": "promotion_url",
+      "column": "Объект продвижения:",
+      "classification": "PROVISIONAL",
+      "entity": "campaign"
+    },
+    {
+      "field": "group_id",
+      "column": "ID группы",
+      "classification": "READY",
+      "entity": "group"
+    },
+    {
+      "field": "group_name",
+      "column": "Название группы",
+      "classification": "READY",
+      "entity": "group"
+    },
+    {
+      "field": "group_number",
+      "column": "Номер группы",
+      "classification": "READY",
+      "entity": "group"
+    },
+    {
+      "field": "phrase_id",
+      "column": "ID фразы",
+      "classification": "READY",
+      "entity": "phrase"
+    },
+    {
+      "field": "phrase",
+      "column": "Фраза (с минус-словами)",
+      "classification": "READY",
+      "entity": "phrase"
+    },
+    {
+      "field": "group_negatives",
+      "column": "Минус-фразы на группу",
+      "classification": "PROVISIONAL",
+      "entity": "minus-phrase"
+    },
+    {
+      "field": "ad_id",
+      "column": "ID объявления",
+      "classification": "READY",
+      "entity": "ad"
+    },
+    {
+      "field": "headline_1",
+      "column": "Заголовок 1",
+      "classification": "READY",
+      "entity": "ad"
+    },
+    {
+      "field": "headline_2",
+      "column": "Заголовок 2",
+      "classification": "READY",
+      "entity": "ad"
+    },
+    {
+      "field": "text",
+      "column": "Текст",
+      "classification": "READY",
+      "entity": "ad"
+    },
+    {
+      "field": "combinatorial_headlines",
+      "column": "N/A — primary ads finalized",
+      "classification": "READY",
+      "entity": "combinatorial"
+    },
+    {
+      "field": "landing_url",
+      "column": "Ссылка",
+      "classification": "PROVISIONAL",
+      "entity": "url"
+    },
+    {
+      "field": "display_path",
+      "column": "Отображаемая ссылка",
+      "classification": "READY",
+      "entity": "display path"
+    },
+    {
+      "field": "sitelink_titles",
+      "column": "Заголовки быстрых ссылок",
+      "classification": "READY",
+      "entity": "sitelinks"
+    },
+    {
+      "field": "sitelink_descriptions",
+      "column": "Описания быстрых ссылок",
+      "classification": "READY",
+      "entity": "sitelinks"
+    },
+    {
+      "field": "sitelink_urls",
+      "column": "Адреса быстрых ссылок",
+      "classification": "ROMAN_REQUIRED",
+      "entity": "sitelinks"
+    },
+    {
+      "field": "callouts",
+      "column": "Уточнения",
+      "classification": "READY",
+      "entity": "callouts"
+    },
+    {
+      "field": "utm",
+      "column": "Append to Ссылка",
+      "classification": "PROPOSED_TEMPLATE",
+      "entity": "utm"
+    },
+    {
+      "field": "region",
+      "column": "Регион",
+      "classification": "READY",
+      "entity": "region"
+    },
+    {
+      "field": "keyword_status",
+      "column": "Статус фразы",
+      "classification": "READY",
+      "entity": "status"
+    },
+    {
+      "field": "ad_status",
+      "column": "Статус объявления",
+      "classification": "READY",
+      "entity": "status"
+    },
+    {
+      "field": "bid",
+      "column": "Ставка",
+      "classification": "OPERATOR_REQUIRED",
+      "entity": "bid"
+    },
+    {
+      "field": "daily_budget",
+      "column": "N/A in template data table",
+      "classification": "OPERATOR_REQUIRED",
+      "entity": "budget"
+    },
+    {
+      "field": "schedule",
+      "column": "N/A in template",
+      "classification": "OPERATOR_REQUIRED",
+      "entity": "campaign settings"
+    },
+    {
+      "field": "yandex_business_org",
+      "column": "Организация из Яндекс Бизнеса",
+      "classification": "OPERATOR_REQUIRED",
+      "entity": "campaign settings"
+    },
+    {
+      "field": "phone",
+      "column": "Номер телефона",
+      "classification": "OPERATOR_REQUIRED",
+      "entity": "campaign settings"
+    },
+    {
+      "field": "match_type_column",
+      "column": "N/A",
+      "classification": "NOT_USED",
+      "entity": "phrase"
+    },
+    {
+      "field": "image",
+      "column": "Изображение",
+      "classification": "NOT_USED",
+      "entity": "ad"
+    }
+  ],
+  "classification_summary": {
+    "READY": 19,
+    "PROVISIONAL": 5,
+    "OPERATOR_REQUIRED": 5,
+    "ROMAN_REQUIRED": 1,
+    "NOT_USED": 2
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "design_id": "corvonero-ext-w1-cross-negatives-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "policy": "Conservative boundaries — CA-01 is broad; do not force strict isolation where overlap is intentional",
+  "proposals": [
+    {
+      "source_campaign": "CA-02",
+      "excluded_term": "программист",
+      "destination_protected": "CA-01",
+      "examples_affected": [
+        "программист 1с",
+        "услуги программиста"
+      ],
+      "overblocking_risk": "CRITICAL",
+      "recommendation": "DO NOT ADD — программист cannot be broadly excluded"
+    },
+    {
+      "source_campaign": "CA-03",
+      "excluded_term": "сопровождение",
+      "destination_protected": "CA-02",
+      "examples_affected": [
+        "внедрение и сопровождение 1с (deployable in CA-03)"
+      ],
+      "overblocking_risk": "HIGH",
+      "recommendation": "DO NOT ADD at campaign level — mixed-intent phrases remain in CA-03"
+    },
+    {
+      "source_campaign": "CA-01",
+      "excluded_term": "маркировка",
+      "destination_protected": "CA-05",
+      "examples_affected": [
+        "программист 1с маркировка"
+      ],
+      "overblocking_risk": "HIGH",
+      "recommendation": "REVIEW_REQUIRED — phrase-level only if evidenced"
+    },
+    {
+      "source_campaign": "CA-05",
+      "excluded_term": "коды маркировки",
+      "destination_protected": "CA-05",
+      "examples_affected": [
+        "настройка кодов маркировки в 1с"
+      ],
+      "overblocking_risk": "CRITICAL",
+      "recommendation": "DO NOT ADD broadly — use phrase-level REJECT only"
+    },
+    {
+      "source_campaign": "CA-04",
+      "excluded_term": "доработка",
+      "destination_protected": "CA-03",
+      "examples_affected": [
+        "доработка интеграции 1с"
+      ],
+      "overblocking_risk": "MEDIUM",
+      "recommendation": "REVIEW_REQUIRED — optional group-level refinement"
+    },
+    {
+      "source_campaign": "CA-01",
+      "excluded_term": "интеграция",
+      "destination_protected": "CA-04",
+      "examples_affected": [
+        "программист 1с интеграция"
+      ],
+      "overblocking_risk": "HIGH",
+      "recommendation": "DO NOT ADD at CA-01 campaign level"
+    }
+  ]
+}

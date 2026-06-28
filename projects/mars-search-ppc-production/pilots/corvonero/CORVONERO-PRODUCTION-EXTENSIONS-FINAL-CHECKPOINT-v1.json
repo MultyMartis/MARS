@@ -1,0 +1,83 @@
+{
+  "checkpoint_id": "corvonero-production-extensions-final-checkpoint-v1",
+  "generated_at": "2026-06-28T23:39:21.044119+00:00",
+  "purpose": "Preserve operator-approved Corvonero Production Extensions Wave 1 (v1 research + v2 decisions) without Commander import or advertising launch",
+  "git": {
+    "branch": "mars/canonical-post-recovery",
+    "pre_commit_head": "b2c0f84ce84c5d01485f52ace06dec25754d7284",
+    "prior_final_ad_checkpoint_commit": "508837a02658e357ce18dca777a46231d2575b25",
+    "prior_final_ad_checkpoint_tag": "corvonero-final-p1-search-ads-2026-06",
+    "planned_tag": "corvonero-final-production-extensions-2026-06",
+    "git_commit_sha": "f535b8a06ac80528668b6540dbb2c23886722dc9"
+  },
+  "validation": {
+    "campaigns": 5,
+    "deployable_groups": 15,
+    "deployable_phrases": 895,
+    "sitelinks": "20 / 20 APPROVED — URLS PROVISIONAL",
+    "callout_sets": "5 / 5 APPROVED",
+    "approved_shared_negatives": 9,
+    "approved_license_phrase_negatives_per_campaign": 2,
+    "additional_ca05_phrase_negative": 1,
+    "cross_campaign_negatives_deployed": 0,
+    "utm_campaign_slugs_unique": 5
+  },
+  "campaign_settings": {
+    "search": "APPROVED",
+    "yandex_advertising_network": "DISABLED",
+    "auto_targeting": "DISABLED",
+    "geography": "Новосибирск + Новосибирская область",
+    "device_adjustments": "NONE",
+    "demographic_adjustments": "NONE",
+    "launch": "NOT AUTHORIZED"
+  },
+  "unresolved_settings": {
+    "budget": "OPERATOR_DECISION_REQUIRED",
+    "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+    "schedule": "OPERATOR_DECISION_REQUIRED",
+    "yandex_metrica_counter": "NOT PROVIDED",
+    "conversion_goals": "NOT PROVIDED"
+  },
+  "integrity_checks": {
+    "no_mixed_script_kassa_in_approved_v2": true,
+    "no_unsupported_kassa_claim": true,
+    "no_keyword_macro_in_approved_production_utm_suffix": true,
+    "no_provisional_url_labelled_published": true,
+    "no_provisional_anchor_labelled_final": true,
+    "no_cross_negative_deployed": true,
+    "final_ads_unchanged_since_prior_checkpoint": true,
+    "landing_page_copy_unchanged_since_prior_checkpoint": true
+  },
+  "components": {
+    "sitelinks": "APPROVED — URLS PROVISIONAL",
+    "callouts": "APPROVED",
+    "negative_deployment": "APPROVED CONTROLLED SET",
+    "cross_negatives": "0 DEPLOYED",
+    "utm_base_policy": "APPROVED",
+    "commander_xlsx": "NOT CREATED",
+    "advertising": "NOT STARTED"
+  },
+  "remaining_owners_and_blockers": [
+    "Operator: budget, bid strategy, schedule per campaign",
+    "Operator: Yandex Metrica counter and conversion goals",
+    "Roman: publish and verify LP URLs; final Tilda anchor IDs",
+    "Commander template owner: confirm utm_term={keyword} macro support before production suffix extension"
+  ],
+  "included_git_scope": {
+    "extensions_v1_patterns": "CORVONERO-EXT-W1-*-v1.*",
+    "extensions_v2_patterns": "CORVONERO-EXT-W1-*-v2.*, CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.*, CORVONERO-EXT-W1-OPERATOR-DECISION-RECEIPT-v1.*",
+    "reports": [
+      "REPORT-corvonero-production-extensions-wave-1-v1.md",
+      "REPORT-corvonero-production-extensions-wave-1-operator-decisions-v2.md"
+    ],
+    "generators": [
+      "tools/execute-ext-wave-1-v1.mjs",
+      "tools/execute-ext-wave-1-v2-operator-decisions.mjs"
+    ],
+    "checkpoint_receipts": [
+      "CORVONERO-PRODUCTION-EXTENSIONS-FINAL-CHECKPOINT-v1.md",
+      "CORVONERO-PRODUCTION-EXTENSIONS-FINAL-CHECKPOINT-v1.json"
+    ]
+  },
+  "external_backup_target": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-PRODUCTION-EXTENSIONS-2026-06-29"
+}

@@ -1,0 +1,53 @@
+{
+  "policy_id": "corvonero-ext-w1-utm-policy-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "status": "PROPOSED_TEMPLATE — REQUIRES_IMPORT_PROFILE_CONFIRMATION",
+  "template": {
+    "utm_source": "yandex",
+    "utm_medium": "cpc",
+    "utm_campaign": "<campaign_slug>",
+    "utm_content": "<group_slug>",
+    "utm_term": "<keyword>"
+  },
+  "campaign_slugs": {
+    "CA-01": "corv_programmist_1s",
+    "CA-02": "corv_soprovozhdenie_1s",
+    "CA-03": "corv_dorabotka_1s",
+    "CA-04": "corv_integracii_1s",
+    "CA-05": "corv_markirovka_1s"
+  },
+  "group_slugs": {
+    "ca-01-specialist-search": "ca-01-specialist-search",
+    "ca-05-direct-service-order": "ca-05-direct-service-order",
+    "ca-02-support-and-maintenance": "ca-02-support-and-maintenance",
+    "ca-03-modification": "ca-03-modification",
+    "ca-04-integration": "ca-04-integration",
+    "ca-01-price-intent": "ca-01-price-intent",
+    "ca-05-integration": "ca-05-integration",
+    "ca-02-direct-service-order": "ca-02-direct-service-order",
+    "ca-03-implementation": "ca-03-implementation",
+    "ca-01-direct-service-order": "ca-01-direct-service-order",
+    "ca-05-ts-piot": "ca-05-ts-piot",
+    "ca-02-troubleshooting-not-working": "ca-02-troubleshooting-not-working",
+    "ca-03-direct-service-order": "ca-03-direct-service-order",
+    "ca-05-support-and-maintenance": "ca-05-support-and-maintenance",
+    "ca-02-price-intent": "ca-02-price-intent"
+  },
+  "dynamic_keyword": {
+    "proposed_macro": "{keyword}",
+    "status": "REQUIRES_IMPORT_PROFILE_CONFIRMATION",
+    "evidence": "orca direct-commander-production-dataset-v7.1.json uses {keyword}; triumph template macro support SAFE UNKNOWN"
+  },
+  "encoding_policy": {
+    "lowercase": true,
+    "cyrillic_in_slugs": "AVOID — use Latin transliteration for utm_campaign and utm_content",
+    "url_encoding": "encodeURIComponent for utm_term when static; macro substitution when supported"
+  },
+  "join_rules": {
+    "base_url_has_query": "use & for subsequent params",
+    "base_url_no_query": "use ? before first param",
+    "fragment_anchor": "UTM query before fragment — https://host/path/?utm_source=...#anchor",
+    "duplicate_question_mark": "FORBIDDEN — normalize before export"
+  },
+  "example": "https://lk.corvonero.ru/programmist-1s/?utm_source=yandex&utm_medium=cpc&utm_campaign=corv_programmist_1s&utm_content=ca-01-specialist-search&utm_term={keyword}"
+}

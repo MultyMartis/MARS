@@ -1,0 +1,47 @@
+{
+  "result_id": "corvonero-ext-w1-result-v2",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "verdict": "CORVONERO PRODUCTION EXTENSIONS WAVE 1 V2: PASS — OPERATOR CONTENT DECISIONS APPLIED",
+  "components": {
+    "sitelinks": "APPROVED — URLS PROVISIONAL",
+    "callouts": "APPROVED",
+    "shared_negatives": "APPROVED CONTROLLED SET",
+    "campaign_negatives": "APPROVED CONTROLLED SET",
+    "cross_negatives": "NOT DEPLOYED",
+    "utm_base_policy": "APPROVED",
+    "keyword_macro": "PENDING COMMANDER TEMPLATE CONFIRMATION",
+    "campaign_settings": "PARTIAL — OPERATOR COMMERCIAL INPUTS STILL REQUIRED",
+    "commander_xlsx": "BLOCKED BY REMAINING OPERATOR, ROMAN AND TEMPLATE INPUTS",
+    "advertising": "NOT STARTED"
+  },
+  "validation": {
+    "campaigns": 5,
+    "deployable_groups": 15,
+    "deployable_phrases": 895,
+    "sitelink_sets": 5,
+    "sitelinks_total": 20,
+    "callout_sets": 5,
+    "approved_shared_negatives": 9,
+    "approved_license_phrase_negatives_per_campaign": 2,
+    "additional_ca05_phrase_negative": 1,
+    "cross_campaign_negatives_deployed": 0,
+    "utm_campaign_slugs_unique": 5,
+    "checks": {
+      "no_mixed_script_kassa": true,
+      "no_unsupported_kassa_claim": true,
+      "no_url_represented_as_published": true,
+      "no_provisional_anchor_as_final": true,
+      "no_unsafe_cross_negative_deployed": true,
+      "no_keyword_macro_in_approved_suffix": true,
+      "all_sitelinks_technically_valid": true,
+      "all_callouts_valid": true
+    }
+  },
+  "authority": {
+    "commit": "508837a02658e357ce18dca777a46231d2575b25",
+    "tag": "corvonero-final-p1-search-ads-2026-06",
+    "branch": "mars/canonical-post-recovery",
+    "v1_baseline": "CORVONERO-EXT-W1-*-v1"
+  }
+}

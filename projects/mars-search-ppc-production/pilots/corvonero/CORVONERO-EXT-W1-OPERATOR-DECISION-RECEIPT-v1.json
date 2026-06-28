@@ -1,0 +1,94 @@
+{
+  "receipt_id": "corvonero-ext-w1-operator-decision-receipt-v1",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "v1_baseline_preserved": true,
+  "decisions": {
+    "campaign_settings": {
+      "search": "APPROVED",
+      "advertising_network": "DISABLED",
+      "auto_targeting": "DISABLED",
+      "geography": "Новосибирск + Новосибирская область",
+      "device_adjustments": "NONE",
+      "demographic_adjustments": "NONE",
+      "launch": "NOT AUTHORIZED",
+      "unresolved": [
+        "budget",
+        "bid_strategy",
+        "schedule",
+        "yandex_metrica_counter",
+        "conversion_goals"
+      ]
+    },
+    "sitelinks": {
+      "CA-01": "APPROVED_UNCHANGED",
+      "CA-02": "APPROVED_UNCHANGED",
+      "CA-03": "REVISED_SITELINK_2",
+      "CA-04": "REVISED_SITELINK_1_AND_3",
+      "CA-05": "APPROVED_UNCHANGED",
+      "url_status": "PROVISIONAL — FINAL ANCHOR REQUIRED"
+    },
+    "callouts": "APPROVED_PER_CAMPAIGN_FINAL_SETS",
+    "shared_negatives": {
+      "approved": [
+        "вакансия",
+        "работа программистом",
+        "резюме",
+        "сертификация",
+        "кряк",
+        "зарплата",
+        "стань программистом",
+        "становится программистом",
+        "скачать"
+      ],
+      "rejected": [
+        "обучение",
+        "курс",
+        "курсы"
+      ]
+    },
+    "campaign_negatives": {
+      "approved_all_campaigns": [
+        "купить 1с",
+        "лицензия 1с"
+      ],
+      "approved_ca05_additional": [
+        "заказать коды маркировки"
+      ],
+      "not_deployed": [
+        {
+          "term": "как сделать самому",
+          "status": "REVIEW_REQUIRED — NOT DEPLOYABLE"
+        },
+        {
+          "term": "инструкция",
+          "status": "DO_NOT_DEPLOY"
+        },
+        {
+          "term": "трактир",
+          "status": "DO_NOT_DEPLOY"
+        },
+        {
+          "term": "erp",
+          "status": "REVIEW_REQUIRED — NOT DEPLOYABLE"
+        }
+      ]
+    },
+    "cross_negatives": "NOT_DEPLOYED — all proposals",
+    "utm": {
+      "base_policy": "APPROVED",
+      "keyword_macro": "REQUIRES_COMMANDER_TEMPLATE_CONFIRMATION"
+    }
+  },
+  "artefacts_generated": [
+    "CORVONERO-EXT-W1-SITELINKS-v2",
+    "CORVONERO-EXT-W1-CALLOUTS-v2",
+    "CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1",
+    "CORVONERO-EXT-W1-CROSS-NEGATIVES-v2",
+    "CORVONERO-EXT-W1-UTM-POLICY-v2",
+    "CORVONERO-EXT-W1-CAMPAIGN-SETTINGS-v2",
+    "CORVONERO-EXT-W1-COMMANDER-READINESS-GATE-v2",
+    "CORVONERO-EXT-W1-OPERATOR-DECISION-RECEIPT-v1",
+    "CORVONERO-EXT-W1-RESULT-v2"
+  ]
+}

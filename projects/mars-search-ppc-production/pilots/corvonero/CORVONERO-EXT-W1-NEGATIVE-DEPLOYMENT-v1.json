@@ -1,0 +1,279 @@
+{
+  "deployment_id": "corvonero-ext-w1-negative-deployment-v1",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "deployment_status": "APPROVED_CONTROLLED_SET — NOT IMPORTED",
+  "import_authorized": false,
+  "layers": {
+    "account_shared_deployable": [
+      {
+        "term": "вакансия",
+        "match": "word",
+        "source": "EX-CAREER-JOBS",
+        "reason": "Job seeker intent",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "работа программистом",
+        "match": "phrase",
+        "source": "EX-CAREER-JOBS",
+        "reason": "Employment intent",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "резюме",
+        "match": "word",
+        "source": "EX-RESUME-INTERVIEWS",
+        "reason": "Job application",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "сертификация",
+        "match": "word",
+        "source": "EX-CERTIFICATION-EXAMS",
+        "reason": "Certification exams",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "кряк",
+        "match": "word",
+        "source": "EX-FREE-DOWNLOADS",
+        "reason": "Piracy",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "зарплата",
+        "match": "word",
+        "source": "EX-SALARY",
+        "reason": "Salary research",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "стань программистом",
+        "match": "phrase",
+        "source": "CORVONERO-AD-WAVE-1-SEMANTIC-RECONCILIATION-v1.json S1",
+        "reason": "Career path REJECT evidence",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "становится программистом",
+        "match": "phrase",
+        "source": "CORVONERO-AD-WAVE-1-EXCLUDED-GROUPS-v1.json",
+        "reason": "REJECTED_FOR_ADVERTISING",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      },
+      {
+        "term": "скачать",
+        "match": "word",
+        "source": "EX-FREE-DOWNLOADS",
+        "reason": "Download/piracy — operator approved controlled deployment",
+        "level": "ACCOUNT / SHARED",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "operator_decision": "APPROVED"
+      }
+    ],
+    "account_shared_rejected": [
+      {
+        "term": "обучение",
+        "match": "word",
+        "status": "REVIEW_REQUIRED — NOT DEPLOYABLE",
+        "reason": "possible overlap with employee training or other ambiguous service-related intent",
+        "level": "ACCOUNT / SHARED",
+        "operator_decision": "REJECTED"
+      },
+      {
+        "term": "курс",
+        "match": "word",
+        "status": "REVIEW_REQUIRED — NOT DEPLOYABLE",
+        "reason": "possible overlap with employee training or other ambiguous service-related intent",
+        "level": "ACCOUNT / SHARED",
+        "operator_decision": "REJECTED"
+      },
+      {
+        "term": "курсы",
+        "match": "word",
+        "status": "REVIEW_REQUIRED — NOT DEPLOYABLE",
+        "reason": "possible overlap with employee training or other ambiguous service-related intent",
+        "level": "ACCOUNT / SHARED",
+        "operator_decision": "REJECTED"
+      }
+    ],
+    "campaign_deployable": [
+      {
+        "term": "купить 1с",
+        "match": "phrase",
+        "campaign_id": "CA-01",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "купить 1с",
+        "match": "phrase",
+        "campaign_id": "CA-02",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "купить 1с",
+        "match": "phrase",
+        "campaign_id": "CA-03",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "купить 1с",
+        "match": "phrase",
+        "campaign_id": "CA-04",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "купить 1с",
+        "match": "phrase",
+        "campaign_id": "CA-05",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "лицензия 1с",
+        "match": "phrase",
+        "campaign_id": "CA-01",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "лицензия 1с",
+        "match": "phrase",
+        "campaign_id": "CA-02",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "лицензия 1с",
+        "match": "phrase",
+        "campaign_id": "CA-03",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "лицензия 1с",
+        "match": "phrase",
+        "campaign_id": "CA-04",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "лицензия 1с",
+        "match": "phrase",
+        "campaign_id": "CA-05",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "product or license purchase intent; Corvonero service scope does not include license sales",
+        "source": "EX-PRODUCT-LICENSE-ONLY"
+      },
+      {
+        "term": "заказать коды маркировки",
+        "match": "phrase",
+        "campaign_id": "CA-05",
+        "level": "CAMPAIGN",
+        "deploy_status": "APPROVED_FOR_DEPLOYMENT",
+        "reason": "confirmed acquisition/purchase intent, not technical 1C setup",
+        "source": "CORVONERO-AD-WAVE-1-EXCLUDED-GROUPS-v1.json ca-05-specialist-search"
+      }
+    ],
+    "campaign_not_deployed": [
+      {
+        "term": "как сделать самому",
+        "match": "phrase",
+        "campaigns": [
+          "CA-01",
+          "CA-02",
+          "CA-03",
+          "CA-04",
+          "CA-05"
+        ],
+        "status": "REVIEW_REQUIRED — NOT DEPLOYABLE",
+        "reason": "Self-service — high overblocking risk",
+        "level": "CAMPAIGN",
+        "operator_decision": "NOT_DEPLOYED"
+      },
+      {
+        "term": "инструкция",
+        "match": "word",
+        "campaigns": [
+          "CA-02"
+        ],
+        "status": "DO_NOT_DEPLOY",
+        "reason": "DIY manual — high overblock on troubleshooting group",
+        "level": "CAMPAIGN",
+        "operator_decision": "NOT_DEPLOYED"
+      },
+      {
+        "term": "трактир",
+        "match": "word",
+        "campaigns": [
+          "CA-02"
+        ],
+        "status": "DO_NOT_DEPLOY",
+        "reason": "Unsupported scope — client confirmation required",
+        "level": "CAMPAIGN",
+        "operator_decision": "NOT_DEPLOYED"
+      },
+      {
+        "term": "erp",
+        "match": "word",
+        "campaigns": [
+          "CA-05"
+        ],
+        "status": "REVIEW_REQUIRED — NOT DEPLOYABLE",
+        "reason": "Unsupported ERP scope",
+        "level": "CAMPAIGN",
+        "operator_decision": "NOT_DEPLOYED"
+      }
+    ],
+    "cross_campaign_deployed": []
+  },
+  "counts": {
+    "approved_shared": 9,
+    "approved_campaign_phrase_per_campaign": 2,
+    "additional_ca05_phrase": 1,
+    "cross_campaign_deployed": 0,
+    "total_deployable_entries": 20
+  },
+  "v1_audit_preserved": "CORVONERO-EXT-W1-NEGATIVE-CANDIDATES-v1.json",
+  "v1_risk_audit_preserved": "CORVONERO-EXT-W1-NEGATIVE-RISK-AUDIT-v1.json"
+}

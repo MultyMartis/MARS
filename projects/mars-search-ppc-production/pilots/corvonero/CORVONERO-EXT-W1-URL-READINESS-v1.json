@@ -1,0 +1,93 @@
+{
+  "readiness_id": "corvonero-ext-w1-url-readiness-v1",
+  "generated_at": "2026-06-28T23:03:41.632Z",
+  "http_verification_authorized": false,
+  "note": "External HTTP verification not performed in this task. Commander readiness blocked until publish + verify.",
+  "records": [
+    {
+      "lp_id": "LP-01",
+      "campaign_id": "CA-01",
+      "proposed_url": "https://lk.corvonero.ru/programmist-1s/",
+      "status": {
+        "PROPOSED": true,
+        "PUBLISHED": false,
+        "HTTP_VERIFIED": false,
+        "READY_FOR_AD_TRAFFIC": false
+      },
+      "aggregate_status": "PROPOSED — NOT VERIFIED",
+      "evidence": [
+        "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+        "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+        "CORVONERO-EXPORT-READINESS-MATRIX-v2.json (LP staging direction only)"
+      ]
+    },
+    {
+      "lp_id": "LP-02",
+      "campaign_id": "CA-02",
+      "proposed_url": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "status": {
+        "PROPOSED": true,
+        "PUBLISHED": false,
+        "HTTP_VERIFIED": false,
+        "READY_FOR_AD_TRAFFIC": false
+      },
+      "aggregate_status": "PROPOSED — NOT VERIFIED",
+      "evidence": [
+        "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+        "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+        "CORVONERO-EXPORT-READINESS-MATRIX-v2.json (LP staging direction only)"
+      ]
+    },
+    {
+      "lp_id": "LP-03",
+      "campaign_id": "CA-03",
+      "proposed_url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "status": {
+        "PROPOSED": true,
+        "PUBLISHED": false,
+        "HTTP_VERIFIED": false,
+        "READY_FOR_AD_TRAFFIC": false
+      },
+      "aggregate_status": "PROPOSED — NOT VERIFIED",
+      "evidence": [
+        "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+        "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+        "CORVONERO-EXPORT-READINESS-MATRIX-v2.json (LP staging direction only)"
+      ]
+    },
+    {
+      "lp_id": "LP-04",
+      "campaign_id": "CA-04",
+      "proposed_url": "https://lk.corvonero.ru/integracii-1s/",
+      "status": {
+        "PROPOSED": true,
+        "PUBLISHED": false,
+        "HTTP_VERIFIED": false,
+        "READY_FOR_AD_TRAFFIC": false
+      },
+      "aggregate_status": "PROPOSED — NOT VERIFIED",
+      "evidence": [
+        "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+        "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-FINAL-v2.json",
+        "CORVONERO-EXPORT-READINESS-MATRIX-v2.json (LP staging direction only)"
+      ]
+    },
+    {
+      "lp_id": "LP-05",
+      "campaign_id": "CA-05",
+      "proposed_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "status": {
+        "PROPOSED": true,
+        "PUBLISHED": false,
+        "HTTP_VERIFIED": false,
+        "READY_FOR_AD_TRAFFIC": false
+      },
+      "aggregate_status": "PROPOSED — NOT VERIFIED",
+      "evidence": [
+        "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+        "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+        "CORVONERO-EXPORT-READINESS-MATRIX-v2.json (LP staging direction only)"
+      ]
+    }
+  ]
+}

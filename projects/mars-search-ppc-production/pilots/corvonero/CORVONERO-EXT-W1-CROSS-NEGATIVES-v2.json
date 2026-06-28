@@ -1,0 +1,171 @@
+{
+  "design_id": "corvonero-ext-w1-cross-negatives-v2",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "deployment_policy": "Deploy no cross-campaign negatives in the initial production package",
+  "cross_campaign_negatives_deployed": 0,
+  "operator_decision": "NOT_DEPLOYED",
+  "explicit_non_deploy_terms": [
+    "программист",
+    "сопровождение",
+    "доработка",
+    "интеграция",
+    "маркировка",
+    "честный знак",
+    "коды маркировки"
+  ],
+  "non_deploy_reason": "valid service overlap exists among campaigns; strict isolation creates excessive overblocking risk",
+  "proposals": [
+    {
+      "source_campaign": "CA-02",
+      "excluded_term": "программист",
+      "destination_protected": "CA-01",
+      "examples_affected": [
+        "программист 1с",
+        "услуги программиста"
+      ],
+      "overblocking_risk": "CRITICAL",
+      "recommendation": "DO NOT ADD — программист cannot be broadly excluded",
+      "deploy_status": "NOT_DEPLOYED",
+      "operator_decision": "NOT_DEPLOYED",
+      "audit_evidence_preserved": true
+    },
+    {
+      "source_campaign": "CA-03",
+      "excluded_term": "сопровождение",
+      "destination_protected": "CA-02",
+      "examples_affected": [
+        "внедрение и сопровождение 1с (deployable in CA-03)"
+      ],
+      "overblocking_risk": "HIGH",
+      "recommendation": "DO NOT ADD at campaign level — mixed-intent phrases remain in CA-03",
+      "deploy_status": "NOT_DEPLOYED",
+      "operator_decision": "NOT_DEPLOYED",
+      "audit_evidence_preserved": true
+    },
+    {
+      "source_campaign": "CA-01",
+      "excluded_term": "маркировка",
+      "destination_protected": "CA-05",
+      "examples_affected": [
+        "программист 1с маркировка"
+      ],
+      "overblocking_risk": "HIGH",
+      "recommendation": "REVIEW_REQUIRED — phrase-level only if evidenced",
+      "deploy_status": "NOT_DEPLOYED",
+      "operator_decision": "NOT_DEPLOYED",
+      "audit_evidence_preserved": true
+    },
+    {
+      "source_campaign": "CA-05",
+      "excluded_term": "коды маркировки",
+      "destination_protected": "CA-05",
+      "examples_affected": [
+        "настройка кодов маркировки в 1с"
+      ],
+      "overblocking_risk": "CRITICAL",
+      "recommendation": "DO NOT ADD broadly — use phrase-level REJECT only",
+      "deploy_status": "NOT_DEPLOYED",
+      "operator_decision": "NOT_DEPLOYED",
+      "audit_evidence_preserved": true
+    },
+    {
+      "source_campaign": "CA-04",
+      "excluded_term": "доработка",
+      "destination_protected": "CA-03",
+      "examples_affected": [
+        "доработка интеграции 1с"
+      ],
+      "overblocking_risk": "MEDIUM",
+      "recommendation": "REVIEW_REQUIRED — optional group-level refinement",
+      "deploy_status": "NOT_DEPLOYED",
+      "operator_decision": "NOT_DEPLOYED",
+      "audit_evidence_preserved": true
+    },
+    {
+      "source_campaign": "CA-01",
+      "excluded_term": "интеграция",
+      "destination_protected": "CA-04",
+      "examples_affected": [
+        "программист 1с интеграция"
+      ],
+      "overblocking_risk": "HIGH",
+      "recommendation": "DO NOT ADD at CA-01 campaign level",
+      "deploy_status": "NOT_DEPLOYED",
+      "operator_decision": "NOT_DEPLOYED",
+      "audit_evidence_preserved": true
+    }
+  ],
+  "v1_group_cross_layer": [
+    {
+      "term": "маркировка",
+      "source": "CA-01",
+      "protect": "CA-05",
+      "v1_status": "DO_NOT_DEPLOY",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "Route marking intent to CA-05",
+      "overblocking": "HIGH",
+      "audit_evidence_preserved": true
+    },
+    {
+      "term": "честный знак",
+      "source": "CA-01",
+      "protect": "CA-05",
+      "v1_status": "REVIEW_REQUIRED",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "Marking campaign owns marking",
+      "overblocking": "MEDIUM",
+      "audit_evidence_preserved": true
+    },
+    {
+      "term": "интеграция",
+      "source": "CA-01",
+      "protect": "CA-04",
+      "v1_status": "DO_NOT_DEPLOY",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "Integration campaign boundary",
+      "overblocking": "HIGH",
+      "audit_evidence_preserved": true
+    },
+    {
+      "term": "сопровождение",
+      "source": "CA-01",
+      "protect": "CA-02",
+      "v1_status": "DO_NOT_DEPLOY",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "Support campaign owns ongoing support",
+      "overblocking": "HIGH",
+      "audit_evidence_preserved": true
+    },
+    {
+      "term": "доработка",
+      "source": "CA-01",
+      "protect": "CA-03",
+      "v1_status": "DO_NOT_DEPLOY",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "Development campaign boundary",
+      "overblocking": "HIGH",
+      "audit_evidence_preserved": true
+    },
+    {
+      "term": "программист",
+      "source": "CA-02",
+      "protect": "CA-01",
+      "v1_status": "DO_NOT_DEPLOY",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "CA-01 broad programmer — must NOT broadly exclude программист",
+      "overblocking": "CRITICAL",
+      "audit_evidence_preserved": true
+    },
+    {
+      "term": "коды маркировки",
+      "source": "CA-05",
+      "protect": "CA-05",
+      "v1_status": "DO_NOT_DEPLOY",
+      "v2_deploy_status": "NOT_DEPLOYED",
+      "reason": "Cannot broadly exclude — setup queries remain",
+      "overblocking": "CRITICAL",
+      "audit_evidence_preserved": true
+    }
+  ]
+}
