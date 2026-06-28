@@ -40,13 +40,13 @@ Registry of visually recurring families across the four canonical templates. Eac
 | Field | Value |
 | ----- | ----- |
 | Visual role | Breadcrumbs + pill subnav inside `.container` below hero |
-| Shared partials | `partials/components/breadcrumbs.html`, `services-page-subnav.html` |
-| **Page-specific wrappers (DRIFT)** | `.page-uslugi-v2__upper-nav`, `.page-service-subdivision-v1__upper-nav`, `.page-service-leaf-v1__upper-nav` |
-| Wrapper CSS drift | uslugi-v2 + subdivision: `gap:15px; padding:0` — leaf: `gap:12px; padding-top:16px; padding-bottom:8px` |
-| Nested CSS duplication | Subdivision + leaf re-declare `.breadcrumbs__*` and `.services-page-subnav__*` under page roots; leaf uses 12px breadcrumb type vs 14px on subdivision |
-| Pages | All three internal service templates |
-| Consolidation priority | **P1 — primary drift example** |
-| Target (future) | One partial e.g. `partials/components/page-upper-nav.html` + one class family e.g. `.page-upper-nav*` |
+| Shared partial | `partials/components/internal-page-nav.html` |
+| Child partials | `breadcrumbs.html`, `services-page-subnav.html` (markup inlined for subnav list slot) |
+| Class family | `.internal-page-nav` (scoped breadcrumbs/subnav under wrapper) |
+| Authority | Hub geometry + typography (`gap: 15px`, padding 0 desktop; Hub mobile scroll) |
+| Pages | `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
+| Consolidation status | **Wave 1 complete (2026-06-28)** — page-specific `*__upper-nav` wrappers removed |
+| Parity | Operator visual sign-off pending; browser baseline capture selector updated to `.internal-page-nav` |
 
 ---
 

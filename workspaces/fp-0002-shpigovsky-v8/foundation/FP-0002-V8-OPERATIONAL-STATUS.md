@@ -1,14 +1,16 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-28 (bootstrap reconciliation + git protection + browser parity)
+**Updated:** 2026-06-28 (CF-003 completion + shared component audit)
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
 fp0002_v8_git_protection: ENABLED
 fp0002_v8_baseline: FOUR_TEMPLATE_AUTHORITY_6eb493e9
 fp0002_v8_component_audit: COMPLETE
-fp0002_v8_component_consolidation: NOT_STARTED
-fp0002_v8_cf003_upper_navigation: READY_PENDING_OPERATOR_APPROVAL
+fp0002_v8_component_consolidation: IN_PROGRESS
+fp0002_v8_cf003_upper_navigation: COMPLETE
+fp0002_v8_shared_component_audit: COMPLETE
+fp0002_v8_next_wave: CF-004_FOUNDER_QUOTE (audit recommended, not started)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -22,11 +24,13 @@ v7_static_demo_reference_commit: e33e59af0d0b233a9fd3d455d445f217fd5b6288
 
 bootstrap_reconciliation: COMPLETE
 git_whitelist: ENABLED
-build_before_consolidation: PASS
-browser_parity: PASS (V7 authority reference dist vs V8 dist)
-four_template_source_parity: PASS (git blob match vs authority tag)
-component_family_audit: COMPLETE
-consolidation_implementation: NOT_STARTED
+build_cf003: PASS
+browser_qa_cf003: PASS
+dom_validation_cf003: PASS
+selector_validation_cf003: PASS
+cf003_commit: PENDING_OPERATOR_REPORT
+shared_component_audit: COMPLETE
+consolidation_wave_1_cf003: COMPLETE
 
 excluded_from_bootstrap:
   - o-centre-v1.html (rejected WIP)
@@ -37,6 +41,7 @@ excluded_from_bootstrap:
 design_authority: Spig_v1.2.fig
 design_authority_status: ACTIVE
 ```
+
 ## Authority split
 
 | Layer | Authority | Use |
@@ -48,3 +53,14 @@ design_authority_status: ACTIVE
 ## V7 immutability
 
 V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator must not be modified for consolidation. V7 remains evidence and fallback.
+
+## CF-003
+
+- Canonical partial: `partials/components/internal-page-nav.html`
+- Canonical class: `.internal-page-nav`
+- Receipt: `audits/cf-003-upper-navigation/CF-003-COMPLETION-RECEIPT.md`
+
+## Next wave (documentation only)
+
+- Recommended family: Founder/Expert quote (`home-founder-quote`)
+- Registry: `audits/shared-component-universalization/FP-0002-V8-SHARED-INCLUDE-REGISTRY-v1.md`

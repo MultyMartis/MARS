@@ -27,21 +27,20 @@
 
 ---
 
-## Phase 1 — Upper nav band (CF-003) — P1
+## Phase 1 — Upper nav band (CF-003) — P1 ✓ (2026-06-28)
 
 **Problem:** Three page wrappers + duplicated breadcrumbs/subnav CSS under `.page-service-subdivision-v1` and `.page-service-leaf-v1`.
 
-**Steps:**
+**Completed:**
 
-1. Capture pixel baseline screenshots (desktop 1440, mobile 390) for three templates — upper nav region only.
-2. Design target partial: `partials/components/page-upper-nav.html` accepting breadcrumb + subnav include params.
-3. Introduce neutral class family `.page-upper-nav*` (name TBD at implementation — single family).
-4. Migrate `uslugi-v2.html` first (simplest breadcrumb depth); verify build + visual diff.
-5. Migrate subdivision; remove page-scoped breadcrumb/subnav CSS duplication.
-6. Migrate leaf; reconcile intentional 12px vs 14px breadcrumb — **decide against Figma**, not by averaging.
-7. Delete obsolete `.page-*__upper-nav` wrappers only after parity sign-off.
+1. Pre-consolidation inventory + backup ZIP + SHA-256 guard.
+2. Shared partial: `partials/components/internal-page-nav.html`.
+3. Neutral class family `.internal-page-nav` (Hub authority).
+4. Migrated all three internal service templates.
+5. Removed page-scoped breadcrumb/subnav CSS duplication and legacy wrappers.
+6. Build verified.
 
-**Exit criteria:** One partial, one CSS family, three pages visually match baseline captures.
+**Exit criteria:** One partial, one CSS family — **met**. Browser QA + DOM + selector validation — **PASS** (2026-06-28).
 
 ---
 

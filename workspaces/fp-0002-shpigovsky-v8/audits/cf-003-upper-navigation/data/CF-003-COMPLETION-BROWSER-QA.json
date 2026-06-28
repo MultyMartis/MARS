@@ -1,0 +1,490 @@
+{
+  "manifest_id": "FP-0002-V8-CF-003-COMPLETION-BROWSER-QA",
+  "manifest_line": "CF-003 completion browser QA evidence (screenshots external to Git)",
+  "captured_at": "2026-06-28T10:55:50.584535+00:00",
+  "port": 4188,
+  "overall": "PASS",
+  "screenshots_storage": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion",
+  "metrics_in_repo": [
+    "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\cf-003-upper-navigation\\data\\cf-003-browser-metrics-services-hub-desktop.json",
+    "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\cf-003-upper-navigation\\data\\cf-003-browser-metrics-services-hub-mobile.json",
+    "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\cf-003-upper-navigation\\data\\cf-003-browser-metrics-service-subdivision-desktop.json",
+    "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\cf-003-upper-navigation\\data\\cf-003-browser-metrics-service-subdivision-mobile.json",
+    "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\cf-003-upper-navigation\\data\\cf-003-browser-metrics-service-leaf-desktop.json",
+    "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\cf-003-upper-navigation\\data\\cf-003-browser-metrics-service-leaf-mobile.json"
+  ],
+  "screenshots": [
+    {
+      "page_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\services-hub-desktop-fullpage.png",
+      "sha256": "6d283ea5d06e806d11bb1f21652735be094d08a8564fc5fd422158a21c6081e7"
+    },
+    {
+      "page_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "hero_cf003_next",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\services-hub-desktop-hero-cf003-next.png",
+      "sha256": "f3eea27f9b6d059db42da8e03729de0656525883cbaba0e96c0e7ae9db2fec9a"
+    },
+    {
+      "page_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "cf003_crop",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\services-hub-desktop-cf003-crop.png",
+      "sha256": "3af71289e19f4c80a0348885c2edb23d0c1feda42e131069484d5bf05b22c380"
+    },
+    {
+      "page_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\services-hub-mobile-fullpage.png",
+      "sha256": "29d0a06028cffba4cf1e3a103b86430f755d1c930a84068f6552e19866bd5a64"
+    },
+    {
+      "page_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "hero_cf003_next",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\services-hub-mobile-hero-cf003-next.png",
+      "sha256": "8b68275f8baf2f3aa14e452143aeb266ba2284a7eda46677839c20788f55369c"
+    },
+    {
+      "page_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "cf003_crop",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\services-hub-mobile-cf003-crop.png",
+      "sha256": "4640f4d92c03a84d39d01865d10cb2365a7c75186fe372d9951944808cb11b92"
+    },
+    {
+      "page_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-subdivision-desktop-fullpage.png",
+      "sha256": "0fcfede9871974059737375f33b096264851a8dfeff9c67af103d517e74f6311"
+    },
+    {
+      "page_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "hero_cf003_next",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-subdivision-desktop-hero-cf003-next.png",
+      "sha256": "b77676197df7f48df8ccf6ad4dec5e54d8aa9db18ee4d9ed08eddc8b168f619f"
+    },
+    {
+      "page_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "cf003_crop",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-subdivision-desktop-cf003-crop.png",
+      "sha256": "d7668c066fa51529d1a601eeb7a490840740a911ca5c74c2bb16db5e609b1adf"
+    },
+    {
+      "page_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-subdivision-mobile-fullpage.png",
+      "sha256": "f987b2a9d80a64218c6318ff87c7d74fe014de73b9b9224a81fd985ac78d8710"
+    },
+    {
+      "page_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "hero_cf003_next",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-subdivision-mobile-hero-cf003-next.png",
+      "sha256": "cf5aa6e6e21464ad9779d6ce4fc2d178054b3024e1fff882367fcdf9cad6cf42"
+    },
+    {
+      "page_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "cf003_crop",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-subdivision-mobile-cf003-crop.png",
+      "sha256": "f539ce46a88d94e7b5037926f96f77912b1c59f10133fb1943ee03bebda6f555"
+    },
+    {
+      "page_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-leaf-desktop-fullpage.png",
+      "sha256": "48940448e688c9e5eaf68adbc7a3cf9dc3a2431d825d963c18818ff0ac519379"
+    },
+    {
+      "page_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "hero_cf003_next",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-leaf-desktop-hero-cf003-next.png",
+      "sha256": "014571447c0349f5ab3ddfb3c8424037126d81ac02dcbdb152fd1f58cf46b7c5"
+    },
+    {
+      "page_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "cf003_crop",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-leaf-desktop-cf003-crop.png",
+      "sha256": "171403fb8d14c91595c71ccf45730cd66d762329b72ec821a9fe0ae8f1d44513"
+    },
+    {
+      "page_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-leaf-mobile-fullpage.png",
+      "sha256": "ac88f8e3f08816387bb0eb46d784996b9935bc6138435e84ebf7b5b7207d10d8"
+    },
+    {
+      "page_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "hero_cf003_next",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-leaf-mobile-hero-cf003-next.png",
+      "sha256": "4285f49e5136e4be551d61ae81865fecb8d1f55886187b1b89910d2a516d4c57"
+    },
+    {
+      "page_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "cf003_crop",
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-003-evidence\\completion\\service-leaf-mobile-cf003-crop.png",
+      "sha256": "dd191a05d5b6c0ed760345ce8b15458dc18a7e18f89e527f32a849295c8e5bf2"
+    }
+  ],
+  "matrix": [
+    {
+      "page": "services-hub",
+      "viewport": "desktop",
+      "wrapper": 1,
+      "gap": "15px",
+      "padding": "0px/0px",
+      "breadcrumbs": "14px/18px",
+      "subnav": "34px/14px",
+      "overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "services-hub",
+      "viewport": "mobile",
+      "wrapper": 1,
+      "gap": "8px",
+      "padding": "8px/0px",
+      "breadcrumbs": "11px/11px",
+      "subnav": "29px/12px",
+      "overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "wrapper": 1,
+      "gap": "15px",
+      "padding": "0px/0px",
+      "breadcrumbs": "14px/18px",
+      "subnav": "34px/14px",
+      "overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "wrapper": 1,
+      "gap": "8px",
+      "padding": "8px/0px",
+      "breadcrumbs": "11px/11px",
+      "subnav": "29px/12px",
+      "overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "wrapper": 1,
+      "gap": "15px",
+      "padding": "0px/0px",
+      "breadcrumbs": "14px/18px",
+      "subnav": "34px/14px",
+      "overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "wrapper": 1,
+      "gap": "8px",
+      "padding": "8px/0px",
+      "breadcrumbs": "11px/11px",
+      "subnav": "29px/12px",
+      "overflow": false,
+      "result": "PASS"
+    }
+  ],
+  "entries": [
+    {
+      "page_id": "services-hub",
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "viewport_size": {
+        "width": 1437,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4188/uslugi-v2.html",
+      "captured_at": "2026-06-28T10:55:50.584535+00:00",
+      "http_status": 200,
+      "metrics": {
+        "title": "Услуги V2 — Шпиговский дом",
+        "h1": "Лечение и профилактика",
+        "documentHeight": 11445
+      },
+      "cf003": {
+        "internalPageNavCount": 1,
+        "breadcrumbsCount": 1,
+        "subnavCount": 1,
+        "breadcrumbsAria": "Хлебные крошки",
+        "subnavAria": "Разделы страницы услуг",
+        "currentCrumb": true,
+        "subnavLinkCount": 6,
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "gapHeroNav": 0,
+        "gapBcSn": 15,
+        "gapNavNext": 0,
+        "containerGap": "15px",
+        "containerPaddingTop": "0px",
+        "containerPaddingBottom": "0px",
+        "breadcrumbFontSize": "14px",
+        "breadcrumbLineHeight": "18px",
+        "subnavLinkMinHeight": "34px",
+        "subnavLinkFontSize": "14px",
+        "subnavOverflowX": "visible",
+        "heroClass": "services-inner-hero-v2",
+        "nextClass": "services-category-section-v2 services-category-section-v2--addictions"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "services-hub",
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "viewport_size": {
+        "width": 380,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4188/uslugi-v2.html",
+      "captured_at": "2026-06-28T10:55:50.584535+00:00",
+      "http_status": 200,
+      "metrics": {
+        "title": "Услуги V2 — Шпиговский дом",
+        "h1": "Лечение и профилактика",
+        "documentHeight": 20229
+      },
+      "cf003": {
+        "internalPageNavCount": 1,
+        "breadcrumbsCount": 1,
+        "subnavCount": 1,
+        "breadcrumbsAria": "Хлебные крошки",
+        "subnavAria": "Разделы страницы услуг",
+        "currentCrumb": true,
+        "subnavLinkCount": 6,
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "gapHeroNav": 0,
+        "gapBcSn": 8,
+        "gapNavNext": 0,
+        "containerGap": "8px",
+        "containerPaddingTop": "8px",
+        "containerPaddingBottom": "0px",
+        "breadcrumbFontSize": "11px",
+        "breadcrumbLineHeight": "11px",
+        "subnavLinkMinHeight": "29px",
+        "subnavLinkFontSize": "12px",
+        "subnavOverflowX": "auto",
+        "heroClass": "services-inner-hero-v2",
+        "nextClass": "services-category-section-v2 services-category-section-v2--addictions"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "viewport_size": {
+        "width": 1437,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4188/usluga-podrazdel-v1.html",
+      "captured_at": "2026-06-28T10:55:50.584535+00:00",
+      "http_status": 200,
+      "metrics": {
+        "title": "Лечение алкогольной зависимости — Шпиговский дом",
+        "h1": "Зависимости и пристрастия",
+        "documentHeight": 12790
+      },
+      "cf003": {
+        "internalPageNavCount": 1,
+        "breadcrumbsCount": 1,
+        "subnavCount": 1,
+        "breadcrumbsAria": "Хлебные крошки",
+        "subnavAria": "Разделы страницы услуг",
+        "currentCrumb": true,
+        "subnavLinkCount": 7,
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "gapHeroNav": 0,
+        "gapBcSn": 15,
+        "gapNavNext": 0,
+        "containerGap": "15px",
+        "containerPaddingTop": "0px",
+        "containerPaddingBottom": "0px",
+        "breadcrumbFontSize": "14px",
+        "breadcrumbLineHeight": "18px",
+        "subnavLinkMinHeight": "34px",
+        "subnavLinkFontSize": "14px",
+        "subnavOverflowX": "visible",
+        "heroClass": "services-inner-hero-v2",
+        "nextClass": "services-category-section-v2 services-category-section-v2--subdivision-dependencies service-subdivision-dependencies-v1"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "viewport_size": {
+        "width": 380,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4188/usluga-podrazdel-v1.html",
+      "captured_at": "2026-06-28T10:55:50.584535+00:00",
+      "http_status": 200,
+      "metrics": {
+        "title": "Лечение алкогольной зависимости — Шпиговский дом",
+        "h1": "Зависимости и пристрастия",
+        "documentHeight": 21036
+      },
+      "cf003": {
+        "internalPageNavCount": 1,
+        "breadcrumbsCount": 1,
+        "subnavCount": 1,
+        "breadcrumbsAria": "Хлебные крошки",
+        "subnavAria": "Разделы страницы услуг",
+        "currentCrumb": true,
+        "subnavLinkCount": 7,
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "gapHeroNav": 0,
+        "gapBcSn": 8,
+        "gapNavNext": 0,
+        "containerGap": "8px",
+        "containerPaddingTop": "8px",
+        "containerPaddingBottom": "0px",
+        "breadcrumbFontSize": "11px",
+        "breadcrumbLineHeight": "11px",
+        "subnavLinkMinHeight": "29px",
+        "subnavLinkFontSize": "12px",
+        "subnavOverflowX": "auto",
+        "heroClass": "services-inner-hero-v2",
+        "nextClass": "services-category-section-v2 services-category-section-v2--subdivision-dependencies service-subdivision-dependencies-v1"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "viewport_size": {
+        "width": 1437,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4188/usluga-konechnaya-v1.html",
+      "captured_at": "2026-06-28T10:55:50.584535+00:00",
+      "http_status": 200,
+      "metrics": {
+        "title": "Лечение алкогольной зависимости — Шпиговский дом",
+        "h1": "Центр лечения алкогольной зависимости",
+        "documentHeight": 12995
+      },
+      "cf003": {
+        "internalPageNavCount": 1,
+        "breadcrumbsCount": 1,
+        "subnavCount": 1,
+        "breadcrumbsAria": "Хлебные крошки",
+        "subnavAria": "Разделы страницы услуг",
+        "currentCrumb": true,
+        "subnavLinkCount": 6,
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "gapHeroNav": 0,
+        "gapBcSn": 15,
+        "gapNavNext": 0,
+        "containerGap": "15px",
+        "containerPaddingTop": "0px",
+        "containerPaddingBottom": "0px",
+        "breadcrumbFontSize": "14px",
+        "breadcrumbLineHeight": "18px",
+        "subnavLinkMinHeight": "34px",
+        "subnavLinkFontSize": "14px",
+        "subnavOverflowX": "visible",
+        "heroClass": "services-inner-hero-v2",
+        "nextClass": "service-leaf-intro-v1"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "viewport_size": {
+        "width": 380,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:4188/usluga-konechnaya-v1.html",
+      "captured_at": "2026-06-28T10:55:50.584535+00:00",
+      "http_status": 200,
+      "metrics": {
+        "title": "Лечение алкогольной зависимости — Шпиговский дом",
+        "h1": "Центр лечения алкогольной зависимости",
+        "documentHeight": 22270
+      },
+      "cf003": {
+        "internalPageNavCount": 1,
+        "breadcrumbsCount": 1,
+        "subnavCount": 1,
+        "breadcrumbsAria": "Хлебные крошки",
+        "subnavAria": "Разделы страницы услуг",
+        "currentCrumb": true,
+        "subnavLinkCount": 6,
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "gapHeroNav": 0,
+        "gapBcSn": 8,
+        "gapNavNext": 0,
+        "containerGap": "8px",
+        "containerPaddingTop": "8px",
+        "containerPaddingBottom": "0px",
+        "breadcrumbFontSize": "11px",
+        "breadcrumbLineHeight": "11px",
+        "subnavLinkMinHeight": "29px",
+        "subnavLinkFontSize": "12px",
+        "subnavOverflowX": "auto",
+        "heroClass": "services-inner-hero-v2",
+        "nextClass": "service-leaf-intro-v1"
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ CANONICAL_PAGES = [
 
 INCLUDE_RE = re.compile(r"@@include\('([^']+)'")
 CLASS_RE = re.compile(r'class="([^"]+)"')
-UPPER_NAV_RE = re.compile(r"page-[a-z0-9-]+__upper-nav")
+UPPER_NAV_RE = re.compile(r"internal-page-nav")
 
 
 @dataclass
@@ -55,7 +55,7 @@ def extract_upper_nav_blocks() -> dict[str, str]:
     for page in CANONICAL_PAGES:
         text = (PAGES / page).read_text(encoding="utf-8")
         m = re.search(
-            r'(<div class="page-[^"]+__upper-nav container">.*?</div>)',
+            r"(@@include\('partials/components/internal-page-nav\.html'[^)]+\))",
             text,
             re.S,
         )
@@ -133,14 +133,11 @@ def build_families(uses: list[IncludeUse]) -> list[dict]:
             "family_id": "CF-003",
             "name": "Upper page nav band (breadcrumbs + local subnav + container)",
             "partials": [
+                "partials/components/internal-page-nav.html",
                 "partials/components/breadcrumbs.html",
                 "partials/components/services-page-subnav.html",
             ],
-            "page_wrappers": [
-                ".page-uslugi-v2__upper-nav",
-                ".page-service-subdivision-v1__upper-nav",
-                ".page-service-leaf-v1__upper-nav",
-            ],
+            "css_roots": [".internal-page-nav"],
         },
         {
             "family_id": "CF-004",
@@ -205,17 +202,10 @@ def build_families(uses: list[IncludeUse]) -> list[dict]:
 
 
 def upper_nav_css_drift(css: str) -> list[dict]:
-    selectors = [
-        ".page-uslugi-v2__upper-nav",
-        ".page-service-subdivision-v1__upper-nav",
-        ".page-service-leaf-v1__upper-nav",
-    ]
-    rows = []
-    for sel in selectors:
-        m = re.search(rf"{re.escape(sel)}\s*\{{([^}}]*)\}}", css, re.S)
-        body = " ".join(m.group(1).split()) if m else ""
-        rows.append({"selector": sel, "declarations": body})
-    return rows
+    sel = ".internal-page-nav .container"
+    m = re.search(rf"{re.escape(sel)}\s*\{{([^}}]*)\}}", css, re.S)
+    body = " ".join(m.group(1).split()) if m else ""
+    return [{"selector": sel, "declarations": body}]
 
 
 def main() -> None:

@@ -110,8 +110,9 @@ Starter template demo pages may exist from gulp-starter copy — **not** FP-0002
 | V8 workspace | Bootstrap reconciliation complete; Git whitelist enabled |
 | V8 baseline | Four-template authority `6eb493e9` |
 | Browser parity | PASS (V7 reference dist vs V8 dist) |
-| Component audit | COMPLETE — consolidation not started |
-| CF-003 Upper Navigation | Next gate — ready pending operator approval |
+| Component audit | COMPLETE |
+| CF-003 Upper Navigation | COMPLETE (2026-06-28) |
+| Shared component audit | COMPLETE — next wave CF-004 founder quote (not started) |
 | About (`o-centre`) | DEFERRED in V8 |
 
 ---

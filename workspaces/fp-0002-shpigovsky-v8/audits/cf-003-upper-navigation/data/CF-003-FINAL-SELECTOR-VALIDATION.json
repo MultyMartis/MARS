@@ -1,0 +1,31 @@
+{
+  "overall": "PASS",
+  "old_wrapper_counts": {
+    "page-uslugi-v2__upper-nav": {},
+    "page-service-subdivision-v1__upper-nav": {},
+    "page-service-leaf-v1__upper-nav": {}
+  },
+  "old_wrapper_total": 0,
+  "canonical_partial": "src/partials/components/internal-page-nav.html",
+  "canonical_class": "internal-page-nav",
+  "target_pages": [
+    {
+      "file": "src/pages/uslugi-v2.html",
+      "uses_internal_page_nav": true
+    },
+    {
+      "file": "src/pages/usluga-podrazdel-v1.html",
+      "uses_internal_page_nav": true
+    },
+    {
+      "file": "src/pages/usluga-konechnaya-v1.html",
+      "uses_internal_page_nav": true
+    }
+  ],
+  "canonical_css_selector_occurrences": 24,
+  "page_scoped_breadcrumbs_overrides": [],
+  "page_scoped_subnav_overrides": [],
+  "dual_body_page_activation": 0,
+  "compatibility_aliases": {},
+  "issues": []
+}

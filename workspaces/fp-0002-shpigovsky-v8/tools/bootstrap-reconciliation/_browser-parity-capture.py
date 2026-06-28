@@ -35,7 +35,7 @@ VIEWPORTS = [
 KEY_SELECTORS = [
     "header",
     ".hero, .services-inner-hero-v2, .service-subdivision-hero-v1, .service-leaf-hero-v1",
-    ".page-uslugi-v2__upper-nav, .page-service-subdivision-v1__upper-nav, .page-service-leaf-v1__upper-nav",
+    ".internal-page-nav",
     "main",
     "footer",
     "[data-modal='consultation']",
