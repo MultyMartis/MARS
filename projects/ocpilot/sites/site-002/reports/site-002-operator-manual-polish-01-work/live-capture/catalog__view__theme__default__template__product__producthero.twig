@@ -1,0 +1,316 @@
+<section class="product-hero">
+  <div class="container">
+    <div class="product-hero__grid">
+
+      <div class="product-hero__col product-hero__col--media">
+      <div class="product-hero__media">
+        <div class="product-gallery">
+
+          <div class="product-gallery__main swiper js-product-gallery">
+            <div class="swiper-wrapper">
+              {% if popup %}
+                <div class="swiper-slide">
+                  <a
+                    class="product-gallery__fancybox"
+                    href="{{ popup }}"
+                    data-fancybox="product"
+                    data-caption="{{ heading_title|e }}"
+                  >
+                    <img
+                      class="product-gallery__img"
+                      src="{{ popup }}"
+                      alt="{{ heading_title|e }}"
+                    >
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if images %}
+                {% for i in images %}
+                  {% if i.popup %}
+                    <div class="swiper-slide">
+                      <a
+                        class="product-gallery__fancybox"
+                        href="{{ i.popup }}"
+                        data-fancybox="product"
+                        data-caption="{{ heading_title|e }}"
+                      >
+                        <img
+                          class="product-gallery__img"
+                          src="{{ i.popup }}"
+                          alt="{{ heading_title|e }}"
+                        >
+                      </a>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+
+            {% if images %}
+            <div class="product-gallery__nav">
+              <button class="product-gallery__btn product-gallery__btn--prev" type="button" aria-label="Предыдущий">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false">
+                  <use href="#zpm_ico__btn_back"></use>
+                </svg>
+              </button>
+              <button class="product-gallery__btn product-gallery__btn--next" type="button" aria-label="Следующий">
+                <svg class="zpm-icon" aria-hidden="true" focusable="false">
+                  <use href="#zpm_ico__btn_next"></use>
+                </svg>
+              </button>
+            </div>
+            {% endif %}
+          </div>
+
+          {% if images %}
+          <div class="product-gallery__thumbs swiper js-product-thumbs" aria-label="Миниатюры">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <button class="product-gallery__thumb" type="button">
+                  <img src="{{ thumb }}" alt="{{ heading_title|e }}">
+                </button>
+              </div>
+              {% for i in images %}
+                {% if i.thumb %}
+                  <div class="swiper-slide">
+                    <button class="product-gallery__thumb" type="button">
+                      <img src="{{ i.thumb }}" alt="{{ heading_title|e }}">
+                    </button>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      </div>
+
+      <div class="product-hero__col product-hero__col--info">
+      <div class="product-hero__identity">
+
+
+        <div class="product-hero__identity--inner">
+
+        <h1 class="product-hero__title">{{ heading_title }}</h1>
+        <!-- <p class="product-hero__subtitle">{{ heading_subtitle }}</p> -->
+
+        <div class="product-hero__brand-meta">
+          <div class="product-hero__meta">
+            <b>Артикул:</b>
+            <button class="zpm-copy zpm-tip" type="button" aria-label="Скопировать артикул" data-copy="">
+              <span class="zpm-copy__value">{{ model }}</span>
+
+              <span class="zpm-tip__popup" aria-hidden="true">
+                <span class="zpm-tip__body">Артикул скопирован!</span>
+                <span class="zpm-tip__arrow"></span>
+              </span>
+            </button>
+          </div>
+          <div class="product-hero__brand">
+            <span>
+              <img src="/assets/img/demo/assum_logo.png" alt="Производитель: AssuM">
+            </span>
+          </div>
+        </div>
+
+        </div>
+
+      <div class="product-hero__other">
+        <button
+          class="btn-no-text zpm-tip {% if wishlisted %}active{% endif %}"
+          type="button"
+          aria-label="В избранное"
+          data-fav-toggle
+          data-productid="{{ product_id }}"
+        >
+          <svg class="zpm-icon" aria-hidden="true" focusable="false">
+            <use href="#zpm_ico__favorits"></use>
+          </svg>
+          <span class="zpm-tip__popup" aria-hidden="true">
+            <span class="zpm-tip__body">Добавлено</span>
+            <span class="zpm-tip__arrow"></span>
+          </span>
+        </button>
+        <button
+          class="btn-no-text zpm-tip {% if compared %}active{% endif %}"
+          type="button"
+          aria-label="Сравнить"
+          data-compare-toggle
+          data-productid="{{ product_id }}"
+        >
+          <svg class="zpm-icon" aria-hidden="true" focusable="false">
+            <use href="#zpm_ico__compare"></use>
+          </svg>
+          <span class="zpm-tip__popup" aria-hidden="true">
+            <span class="zpm-tip__body">Добавлено</span>
+            <span class="zpm-tip__arrow"></span>
+          </span>
+        </button>
+      </div>
+
+      </div>
+
+      {% if super_atts %}
+      <div class="product-hero__specs{% if super_atts|length > 4 %} product-hero__specs--split{% endif %}">
+        <dl class="product-hero__props product-hero__props--primary">
+          {% for a in super_atts|slice(0, 4) %}
+          {% set prop_name = a.name|lower %}
+          <div class="product-hero__prop--primary">
+            <div class="product-hero__prop--primary--icons">
+              {% if 'длина' in prop_name %}
+              <i class="fad fa-arrows-h"></i>
+              {% elseif 'ширина' in prop_name %}
+              <i class="fad fa-expand-alt"></i>
+              {% elseif 'высота' in prop_name %}
+              <i class="fad fa-arrow-to-top"></i>
+              {% elseif 'масса' in prop_name %}
+              <i class="far fa-weight-hanging" aria-hidden="true" aria-hidden="true"></i>
+              {% else %}
+              <i class="fal fa-info-circle" aria-hidden="true"></i>
+              {% endif %}
+            </div>
+            <div>
+              <dt>{{ a.name }}</dt>
+              <dd>{{ a.text }}</dd>
+            </div>
+          </div>
+          {% endfor %}
+        </dl>
+        {% if super_atts|length > 4 %}
+        <dl class="product-hero__props product-hero__props--additional">
+          {% for a in super_atts|slice(4) %}
+          <div class="product-hero__prop">
+            <dt>{{ a.name }}</dt>
+            <dd>{{ a.text }}</dd>
+          </div>
+          {% endfor %}
+        </dl>
+        {% endif %}
+      </div>
+      {% endif %}
+      </div>
+
+      <div class="product-hero__col product-hero__col--commerce">
+
+      <div class="product-hero__commerce">
+
+        <div class="product-hero__commerce-card">
+          <div class="product-hero__commerce-head">Стоимость / Заказать</div>
+          <div class="product-hero__commerce-body">
+
+            <div class="product-hero__commerce-body--top_wrap">
+
+              <div class="product-hero__price">
+                <div class="product-hero__price-value">{{ price }}</div>
+                {%if priceold %}<div class="product-hero__old-price-value">{{ priceold }}</div>
+                <div class="product-hero__discount">{{ priceproc }}</div>{% endif %}
+              </div>
+
+              <div class="product-hero__status">
+                {% if cancart %}
+                    <div class="unit p-card__status-Yes">
+                    {{ statusText }}
+                    </div>
+                {% else %}
+                <div class="unit p-card__status-None">
+                  {{ statusText }}
+                </div>
+                {% endif %}
+                {% if deliveryText %}<div class="unit p-card__delivery">{{ deliveryText }}</div>{% endif %}
+              </div>
+
+            </div>
+
+            <div class="product-hero__actions-wrap">
+              {% if not showrequest %}
+              <div class="product-hero__actions" data-product-id="{{ product_id}}" data-cart-pdp >
+                <button class="btn btn_dark btn--primary btn-qty--toogle" type="button" data-cart-add>
+                    <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__cart"></use></svg>
+                  <span class="btn__text" data-cart-text>В корзину</span>
+                </button>
+                <div class="zpm-qty zpm-qty--pdp btn-qty--toogle" data-cart-qty  data-product-id="{{ product_id}}">
+                  <button type="button" class="zpm-qty__btn" data-qty-minus aria-label="Уменьшить" disabled>−</button>
+                  <span class="zpm-qty__val" data-qty-value aria-live="polite">{{ incart }}</span>
+                  <button type="button" class="zpm-qty__btn" data-qty-plus aria-label="Увеличить">+</button>
+                </div>
+              </div>
+              {% else %}
+              <div class="product-hero__get-price" >
+                <button type="button" class="btn btn_dark btn--primary" data-fancybox data-src="#zpmFbGetpriceProduct" data-zpm-fb-mode="2">
+                    <span>Запросить цену</span>
+                  </button>
+              </div>{% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="product-hero__service-card">
+          <!-- <div class="section-title__like-h3">Сервис. Гарантии. Доставка.</div> -->
+<ul class="product-hero__service-list">
+    <!-- <li class="product-hero__service-item">
+        <i class="fal fa-badge-check" aria-hidden="true"></i>
+        <div>
+            <strong>Гарантия качества</strong>
+            <span>12 месяцев</span>
+        </div>
+    </li>
+
+    <li class="product-hero__service-item">
+        <i class="fal fa-shipping-fast" aria-hidden="true"></i>
+        <div>
+            <strong>Доставка по РФ</strong>
+            <span>Любой транспортной компанией</span>
+        </div>
+    </li> -->
+
+
+    <li class="product-hero__service-item">
+      <a href="#" data-fancybox data-src="#zpmFbQuestion" data-zpm-fb-mode="2">
+        <i class="fad fa-user-headset" aria-hidden="true"></i>
+        <div>
+            <strong>Нужна помощь?</strong>
+            <span>Нажмите тут и&nbsp;оставьте заявку по&nbsp;любому вопросу.</span>
+        </div>
+      </a>
+    </li>
+</ul>
+          <!-- <div class="product-hero__service-actions btn-Question">
+            <button
+              type="button"
+              class="btn"
+              data-fancybox
+              data-src="#zpmFbQuestion"
+              data-zpm-fb-mode="2"
+            >
+              <span>Задать вопрос</span>
+            </button>
+          </div> -->
+
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+
+    let n = '{{ heading_title | escape('js') }}';
+
+
+    window.addEventListener('load', function() {
+        const inputName = document.getElementById("ask_tovar_name");
+        if (inputName) {
+            inputName.value = n;
+        }
+        const inputPrice = document.getElementById("ask_tovar_price");
+        if (inputPrice) {
+            inputPrice.value = n;
+        }
+    });
+</script>

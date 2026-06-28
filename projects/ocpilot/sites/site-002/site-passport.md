@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT COMPANY RESTORED 01**  
-**Run:** Stable live checkpoint after operator-approved About page restoration (2026-06-23)
+**Status:** **STABLE LIVE CHECKPOINT — OPERATOR MANUAL POLISH 01**  
+**Run:** Operator manual polish canonical checkpoint (2026-06-29)
 
 ---
 
@@ -14,18 +14,18 @@
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
 | **Version** | SAFE UNKNOWN |
-| **Baseline Match** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+| **Baseline Match** | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
 | **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
-| **Current Status** | **STABLE LIVE CHECKPOINT — M9.13 ABOUT COMPANY RESTORED 01** |
-| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
+| **Current Status** | **STABLE LIVE CHECKPOINT — OPERATOR MANUAL POLISH 01** |
+| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
-| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. Catalog UX cluster complete. **About page restored** to pre-M9.13 state. **Corporate Pages Visual Polish Pass 1** — **REJECTED**; **Pass 1.2 ACTIVE on TEST** (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · [Knowledge Map §25](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#25-corporate-pages-visual-polish-pass-12--active). EC-01 mitigated by subcategories hide (07). M10 not authorized. |
+| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. **Operator Manual Polish 01 ACTIVE** (2026-06-29) — checkpoint `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` · [Knowledge Map §26](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--active). Pass 1.2 **SUPERSEDED** — do not use as reference. EC-01 mitigated by subcategories hide (07). M10 not authorized. |
 
 ---
 
@@ -33,12 +33,12 @@
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
 | **Conflict resolution** | If any documentation contradicts current TEST state, **source of truth** = live TEST on https://zpm.new-site.space/ as registered in this checkpoint |
-| **Do NOT use as visual baseline** | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`, `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`, `SITE-002-STABLE-LIVE-M9.8-UX-POLISH-01`, pre-M9.8.9 work copies, M9.13 About redesign work copies |
+| **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 
 ---
 
@@ -46,23 +46,32 @@
 
 | Field | Value |
 |-------|--------|
-| Name | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
-| Registered | 2026-06-23 |
-| Type | Stable live checkpoint (metadata registration) |
-| Supersedes (live truth) | `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` |
-| About page | M9.13 redesign **rejected** — **restored** pre-redesign version on live `/about` |
-| Catalog UX scope | Carried forward — filter recovery, filter UX, Commercial Trust, state persistence (09A–09C), hub cleanup (10) |
-| M9.13 lifecycle | IMPLEMENTED · QA PASSED · REJECTED BY OPERATOR · RESTORED |
-| Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §17 About Page History |
-| Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
-| Next planned | Remaining M9.8.9 tasks per roadmap · **Corporate Pages Program** — M9.14+ per charter · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** — not authorized |
-| Registration | [reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
+| Name | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
+| Registered | 2026-06-29 |
+| Type | Stable live checkpoint — FTP read-only capture + metadata registration |
+| Supersedes (live truth) | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` |
+| Operator manual delta | `style.css` · `dealers.twig` changed vs Pass 1.2 / Pass 1.1 deploy snapshots |
+| Capture | [capture-manifest.json](reports/site-002-operator-manual-polish-01-work/capture-manifest.json) |
+| Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §26 |
+| Registration | [reports/SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md](reports/SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md) |
 
-**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md)
+**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md)
 
 ---
 
 ## Prior checkpoints (historical)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` |
+| Doc | [baselines/SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](baselines/SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md) |
+| Scope | Corp visual polish Pass 1.2 — **superseded**; do not use as reference |
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
+| Doc | [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
+| Scope | About restoration — superseded for live visual truth |
 
 | Field | Value |
 |-------|--------|

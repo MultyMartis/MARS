@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-06-28  
-**Evidence cutoff:** 2026-06-28 (SITE-002 M9.14–M9.18 Corporate Pages **IMPLEMENTED** on TEST; **Corporate Pages Visual Polish Pass 1** **REJECTED BY OPERATOR** — rolled back to Pre-Pass-1; **Pass 1.1 rules** registered; **M9.18 Custom Manufacturing** checkpoint `SITE-002-STABLE-LIVE-M9.18-CUSTOM-01`; BZPM recovery **CLOSED**; site authority M9.13 About Restored + M9.14–M9.18 corp page checkpoints)  
+**Last updated:** 2026-06-29  
+**Evidence cutoff:** 2026-06-29 (SITE-002 **Operator Manual Polish 01** checkpoint `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` — FTP capture; supersedes Pass 1.2; operator manual CSS/Twig/JS = authority)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,9 +14,9 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.13 ABOUT COMPANY RESTORED 01** (2026-06-23) |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT OPERATOR MANUAL POLISH 01** (2026-06-29) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` + **M9.14–M9.18** corp page checkpoints — **Corporate Pages Visual Polish Pass 1.2 ACTIVE on TEST** (`SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2`); Pass 1 **REJECTED**; Pass 1.1 superseded; [Knowledge Map §25](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#25-corporate-pages-visual-polish-pass-12--active); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; catalog UX **complete**; About **restored**; **Corporate Pages Program implementation COMPLETE on TEST**; operator gates B6/B8/B1; **B3 OPEN** (governance-only; PLP unchanged) |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` — operator manual CSS/Twig/JS on TEST; Pass 1.2 **SUPERSEDED** (do not use as reference); [Knowledge Map §26](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--active); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program COMPLETE on TEST** |
 
 ---
 
@@ -41,7 +41,7 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`** — **STABLE LIVE CHECKPOINT** (metadata registration; About page operator-approved restoration) |
+| Baseline | **`SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`** — **STABLE LIVE CHECKPOINT** (FTP capture; operator manual polish after Pass 1.2) |
 | Knowledge map | [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Authority policy | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
 | Registry | Active project site — M7.1 through M9.8.5 + catalog UX cluster **complete** on TEST |
@@ -56,7 +56,7 @@
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 | External secrets | External storage only — not in repo |
 
-**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
+**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
 
 **M9.13 About restoration:** [sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md](sites/site-002/reports/SITE-002-M9.13-ABOUT-COMPANY-RESTORE-TO-PRE-REDESIGN.md) · [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-COMPANY-RESTORED-01.md)
 
@@ -554,6 +554,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-28 | **CLOSED** — BZPM UX Redesign recovery phase; production transition; Run **4.148**; [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](sites/site-002/reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 | 2026-06-28 | **REGISTERED** — M9.18 Custom Manufacturing Implementation Charter **READY**; Run **4.155**; terminal corp page charter; [SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md](sites/site-002/reports/SITE-002-M9.18-CUSTOM-MANUFACTURING-IMPLEMENTATION-CHARTER-v1.md); Knowledge Map §22 |
 | 2026-06-28 | **DONE** — Corporate Pages Visual Polish Pass 1.2 on TEST; Run **4.160**; checkpoint `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2`; [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](sites/site-002/reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md); Knowledge Map §25 |
+| 2026-06-29 | **DONE** — Operator Manual Polish Canonical Checkpoint 01; Run **4.161**; checkpoint `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`; FTP read-only capture; supersedes Pass 1.2; [SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md); Knowledge Map §26 |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |

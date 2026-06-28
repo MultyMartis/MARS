@@ -1,0 +1,251 @@
+{
+  "checkpoint": "SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01",
+  "pass": "site-002-operator-manual-polish-01",
+  "mode": "read-only-capture",
+  "environment": "https://zpm.new-site.space/",
+  "captured_at": "2026-06-28T18:40:54.796410+00:00",
+  "operator_beget_backup": "CONFIRMED",
+  "prior_checkpoint": "SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2",
+  "files": [
+    {
+      "remote": "assets/css/style.css",
+      "status": "ok",
+      "sha256": "1d190d97953cfaab17bb1f9948e0eecafb777710d7c1ba613a35181b28e88a86",
+      "bytes": 379934,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\assets__css__style.css",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\assets__css__style.css.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": "243d6d5e2a1ad00c06c450f4b90dc72adb1671b64a681f266675abdbd9330252",
+      "changed_vs_pass12": true
+    },
+    {
+      "remote": "assets/js/main.js",
+      "status": "ok",
+      "sha256": "17cb1fffe8831d4ac633d5bd41e047c31b4fd478a0e1cfa67c8667c42ab539e8",
+      "bytes": 204187,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\assets__js__main.js",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\assets__js__main.js.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/information/about.php",
+      "status": "ok",
+      "sha256": "77ac5ea35be5863f5c729c996743a8f8cd18af3e9afca328d4dcde7585b5fa8a",
+      "bytes": 1687,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__information__about.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__about.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/information/about.twig",
+      "status": "ok",
+      "sha256": "998321d3b3ea0a119b0aa688d9c6ebbcdc31431ced75110450026d24458202f8",
+      "bytes": 3443,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__information__about.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__about.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/information/delivery.php",
+      "status": "ok",
+      "sha256": "df48a823bdea367b4deb7042e5b46cc6349a1c295caf637cf84fbb7038b383c1",
+      "bytes": 3237,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__information__delivery.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__delivery.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/information/delivery.twig",
+      "status": "ok",
+      "sha256": "6db8da22c7e449a2fe8fdd5aa121f403808bd5a3099dc164f9b1962fe80ed234",
+      "bytes": 51331,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__information__delivery.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__delivery.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/information/payment.php",
+      "status": "ok",
+      "sha256": "44516f1ebd21778b7ba14d8d517f4e8b24451c8b6997e484291b7b5d1633ff8a",
+      "bytes": 3441,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__information__payment.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__payment.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/information/payment.twig",
+      "status": "ok",
+      "sha256": "d878062c675f9e76a65d3ab0db25483bee4af959d117b37f318061df600cb1c7",
+      "bytes": 33699,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__information__payment.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__payment.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/information/guarantee.php",
+      "status": "ok",
+      "sha256": "4e525e71c666d2f87595019c3e72572135806eb548b814e4edea20ea76f3cb3e",
+      "bytes": 3794,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__information__guarantee.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__guarantee.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/information/guarantee.twig",
+      "status": "ok",
+      "sha256": "cc9dd9863aadf7e6ea386eda0b2837a13a9462a9176281d264131936b79e8365",
+      "bytes": 44953,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__information__guarantee.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__guarantee.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/information/dealers.php",
+      "status": "ok",
+      "sha256": "b8988dd740859f2dc56ae53b44ea32c83d9851b5dcb2c22364cf1b8829ed96f7",
+      "bytes": 3164,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__information__dealers.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__dealers.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/information/dealers.twig",
+      "status": "ok",
+      "sha256": "ecc6dc8b06faa8f9691edb02b6c10cee6eec22982d7d34275e163c3cd7370b5c",
+      "bytes": 45886,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__information__dealers.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__dealers.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/information/custom_equipment.php",
+      "status": "ok",
+      "sha256": "e4fdffc8e3f5caf6a023d7eb2920b0fd5b736179353a5db2e566b237ffff41e5",
+      "bytes": 3431,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__information__custom_equipment.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__information__custom_equipment.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/information/custom_equipment.twig",
+      "status": "ok",
+      "sha256": "59fcaca9f319dfe9301ce9190e898883f0854cd47a8c00e3ebc2cf92e26616a5",
+      "bytes": 66791,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__information__custom_equipment.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__custom_equipment.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/product/producthero.twig",
+      "status": "ok",
+      "sha256": "2ac446502f53d758556c727ae505f2154c20d70b816de544b3087fcfe821e7d5",
+      "bytes": 12178,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__product__producthero.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__product__producthero.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/blockcommercialtrust.twig",
+      "status": "ok",
+      "sha256": "6bd6475e924ccc84a3591a91213b59cb4605de274f7bdf8fb18b3bec4ff855b9",
+      "bytes": 13276,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__sections__blockcommercialtrust.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__blockcommercialtrust.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/filterssidebar.twig",
+      "status": "ok",
+      "sha256": "05550c752dfabd616ce4d02be8188dac34caf39c60c3e97c7c5aed1f696a040a",
+      "bytes": 19158,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__view__theme__default__template__sections__filterssidebar.twig",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__filterssidebar.twig.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/controller/product/category.php",
+      "status": "ok",
+      "sha256": "05bf86805989471c411a27d07fdc7bd5216a090b0592c5e4407d8aedd0040db2",
+      "bytes": 23067,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__controller__product__category.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__product__category.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    },
+    {
+      "remote": "catalog/model/catalog/product.php",
+      "status": "ok",
+      "sha256": "66ad19e4e0211973214d72dcb8aef6af3cd4a9be2e343b5e5e9ecd27e7168d00",
+      "bytes": 59651,
+      "capture_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\site-002-operator-manual-polish-01-work\\live-capture\\catalog__model__catalog__product.php",
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__model__catalog__product.php.pre-site-002-operator-manual-polish-01.bak",
+      "pass12_sha256": null,
+      "changed_vs_pass12": null
+    }
+  ],
+  "qa_urls": {
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "http_status": 200,
+      "ok": true
+    },
+    "about": {
+      "url": "https://zpm.new-site.space/about",
+      "http_status": 200,
+      "ok": true
+    },
+    "delivery": {
+      "url": "https://zpm.new-site.space/delivery",
+      "http_status": 200,
+      "ok": true
+    },
+    "payment": {
+      "url": "https://zpm.new-site.space/payment-methods",
+      "http_status": 200,
+      "ok": true
+    },
+    "guarantee": {
+      "url": "https://zpm.new-site.space/guarantee",
+      "http_status": 200,
+      "ok": true
+    },
+    "dealers": {
+      "url": "https://zpm.new-site.space/dealers",
+      "http_status": 200,
+      "ok": true
+    },
+    "custom_equipment": {
+      "url": "https://zpm.new-site.space/custom-equipment",
+      "http_status": 200,
+      "ok": true
+    },
+    "catalog": {
+      "url": "https://zpm.new-site.space/katalog/",
+      "http_status": 200,
+      "ok": true
+    },
+    "pdp": {
+      "url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly/stoly-serii-standart/stoly-standart-600-s-polkoy-reshetkoy/stol-proizvodstvennyy-spb-s-17-6-1700h600h850",
+      "http_status": 200,
+      "ok": true
+    }
+  },
+  "changed_vs_pass12": [
+    "assets/css/style.css"
+  ]
+}

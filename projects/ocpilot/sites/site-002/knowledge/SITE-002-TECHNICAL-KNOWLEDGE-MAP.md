@@ -2,7 +2,7 @@
 
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`  
+**Authority:** `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`  
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
@@ -38,11 +38,11 @@
 | 2 | **Beget full backup** | Operator-controlled disaster recovery |
 | 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
 | 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md](../baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01.md) |
+| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](../baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md) |
 
 ### Current stable state
 
-- **Authority:** `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`
+- **Authority:** `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`
 - **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
 - **Catalog UX cluster:** filter recovery (06D–06M) → filter UX (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator polish) → catalog state persistence (09A–09C) → hub cleanup (10)
 - **About page:** M9.13 redesign **rejected by operator** — live `/about` **restored** to pre-redesign version (operator-approved restoration, not rollback failure)
@@ -1285,15 +1285,15 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 ---
 
-## 25. Corporate Pages Visual Polish Pass 1.2 — active
+## 25. Corporate Pages Visual Polish Pass 1.2 — superseded
 
 **Scope:** M9.14–M9.18 — CSS-only fine rhythm pass on TEST.
 
 | Item | Value |
 |------|--------|
-| **Status** | **ACTIVE on TEST** (2026-06-28) |
-| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` |
-| **Current visual authority (corp polish)** | `style.css` SHA256 `243d6d5e2a1ad00c06c450f4b90dc72adb1671b64a681f266675abdbd9330252` |
+| **Status** | **SUPERSEDED** by Operator Manual Polish 01 (2026-06-29) — **do not use as visual reference** |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` — historical |
+| **Pass 1.2 CSS post SHA256** | `243d6d5e2a1ad00c06c450f4b90dc72adb1671b64a681f266675abdbd9330252` |
 | **Report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md) |
 | **Baseline** | [SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md](../baselines/SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2.md) |
 | **Pre-deploy backup** | [backups/style.css.pre-site-002-corp-visual-polish-pass1.2.bak](../backups/style.css.pre-site-002-corp-visual-polish-pass1.2.bak) |
@@ -1301,6 +1301,38 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 Pass 1 (`SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01`) remains **REJECTED** — see §23.
 
+**Active authority:** §26 Operator Manual Polish 01.
+
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-28 (§25 Pass 1.2 active).*
+## 26. Operator Manual Polish 01 — active
+
+**Scope:** Full TEST storefront after operator manual polish following Visual Polish Pass 1.2.
+
+| Item | Value |
+|------|--------|
+| **Status** | **ACTIVE on TEST** (2026-06-29) — **sole SITE-002 visual/behavioural authority** |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` |
+| **Live CSS SHA256** | `1d190d97953cfaab17bb1f9948e0eecafb777710d7c1ba613a35181b28e88a86` |
+| **Live JS SHA256** | `17cb1fffe8831d4ac633d5bd41e047c31b4fd478a0e1cfa67c8667c42ab539e8` |
+| **Report** | [SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md](../reports/SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md](../baselines/SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01.md) |
+| **Capture manifest** | [capture-manifest.json](../reports/site-002-operator-manual-polish-01-work/capture-manifest.json) |
+| **Backups** | `backups/*.pre-site-002-operator-manual-polish-01.bak` |
+
+### Operator manual delta vs Pass 1.2
+
+| File | Changed vs Pass 1.2 |
+|------|---------------------|
+| `assets/css/style.css` | **YES** |
+| `catalog/view/theme/default/template/information/dealers.twig` | **YES** (vs Pass 1.1 deploy snapshot) |
+| Other captured corp twig/php | **NO** at capture time |
+
+### Forbidden for future tasks
+
+- Pass 1.2 CSS/HTML/JS as reference baseline
+- Pre-checkpoint repo work copies unless refreshed from this capture
+
+---
+
+*Documentation only — live TEST evidence in capture manifest. Last updated: 2026-06-29 (§26 Operator Manual Polish 01 active).*

@@ -1,0 +1,36 @@
+{
+  "changed": {
+    "assets/css/style.css": [
+      {
+        "label": "pass1.2-work",
+        "live_sha256": "1d190d97953cfaab17bb1f9948e0eecafb777710d7c1ba613a35181b28e88a86",
+        "ref_sha256": "243d6d5e2a1ad00c06c450f4b90dc72adb1671b64a681f266675abdbd9330252"
+      },
+      {
+        "label": "pass1.1-work",
+        "live_sha256": "1d190d97953cfaab17bb1f9948e0eecafb777710d7c1ba613a35181b28e88a86",
+        "ref_sha256": "e83dae3e08c30969cce68e366fa7f0b7dbf4ca80e3df204644ac87c40de80b5d"
+      }
+    ],
+    "assets/js/main.js": [
+      {
+        "label": "04a-capture",
+        "live_sha256": "17cb1fffe8831d4ac633d5bd41e047c31b4fd478a0e1cfa67c8667c42ab539e8",
+        "ref_sha256": "c74c9c1dc993a0e7acb5189bd71d1885b93bd46c3e5ee155aa80411c15d5f5d2"
+      },
+      {
+        "label": "pre-m9.18",
+        "live_sha256": "17cb1fffe8831d4ac633d5bd41e047c31b4fd478a0e1cfa67c8667c42ab539e8",
+        "ref_sha256": "48fe8e6d32fcff41a968f07c71290a6c90ff0d734aab0f62f2a1e072bbd7c03d"
+      }
+    ],
+    "catalog/view/theme/default/template/information/dealers.twig": [
+      {
+        "label": "pass1.1-work",
+        "live_sha256": "ecc6dc8b06faa8f9691edb02b6c10cee6eec22982d7d34275e163c3cd7370b5c",
+        "ref_sha256": "e2a7edb494479e34ad6b53fda25de7d02266f187a0861a0819a5606f411951c5"
+      }
+    ]
+  },
+  "same_count": 9
+}
