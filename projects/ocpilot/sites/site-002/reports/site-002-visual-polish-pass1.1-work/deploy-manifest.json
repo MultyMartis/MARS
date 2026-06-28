@@ -1,0 +1,142 @@
+{
+  "pass": "site-002-corp-visual-polish-pass1.1",
+  "timestamp": "2026-06-28T13:49:43.230788+00:00",
+  "operator_beget_backup": "CONFIRMED",
+  "head_note": "checkpoint before pass 1.1 deploy",
+  "files": {
+    "assets/css/style.css": {
+      "remote": "assets/css/style.css",
+      "pre_exists": true,
+      "pre_sha256": "8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c",
+      "pre_bytes": 358072,
+      "post_sha256": "e83dae3e08c30969cce68e366fa7f0b7dbf4ca80e3df204644ac87c40de80b5d",
+      "post_bytes": 376462
+    },
+    "catalog/controller/information/delivery.php": {
+      "remote": "catalog/controller/information/delivery.php",
+      "pre_exists": true,
+      "pre_sha256": "056beadfea6ae9e23fca7b5d75b58c789cf5633a2914b44c00e25cc954bb9649",
+      "pre_bytes": 3240,
+      "post_sha256": "df48a823bdea367b4deb7042e5b46cc6349a1c295caf637cf84fbb7038b383c1",
+      "post_bytes": 3237
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "remote": "catalog/view/theme/default/template/information/delivery.twig",
+      "pre_exists": true,
+      "pre_sha256": "78e832813217a0bcdbeb79c800ff2f6b57a864e68084cb73a93b10855635407c",
+      "pre_bytes": 51133,
+      "post_sha256": "6db8da22c7e449a2fe8fdd5aa121f403808bd5a3099dc164f9b1962fe80ed234",
+      "post_bytes": 51331
+    },
+    "catalog/controller/information/payment.php": {
+      "remote": "catalog/controller/information/payment.php",
+      "pre_exists": true,
+      "pre_sha256": "0ad76f6c434d262c74f21e5ca10edc95edf1f4428bfa8760d18b8132e94a6034",
+      "pre_bytes": 3444,
+      "post_sha256": "44516f1ebd21778b7ba14d8d517f4e8b24451c8b6997e484291b7b5d1633ff8a",
+      "post_bytes": 3441
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "remote": "catalog/view/theme/default/template/information/payment.twig",
+      "pre_exists": true,
+      "pre_sha256": "47a05b97aca9570a08f63ae1271b740f650fcec42ba21f9a9801b4ba9b38ed21",
+      "pre_bytes": 33501,
+      "post_sha256": "d878062c675f9e76a65d3ab0db25483bee4af959d117b37f318061df600cb1c7",
+      "post_bytes": 33699
+    },
+    "catalog/controller/information/guarantee.php": {
+      "remote": "catalog/controller/information/guarantee.php",
+      "pre_exists": true,
+      "pre_sha256": "d9a6216d4a6d4bfff4b21ab2b010f81457a2b930ac852b5c69ca4884b2e27eed",
+      "pre_bytes": 3797,
+      "post_sha256": "4e525e71c666d2f87595019c3e72572135806eb548b814e4edea20ea76f3cb3e",
+      "post_bytes": 3794
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "remote": "catalog/view/theme/default/template/information/guarantee.twig",
+      "pre_exists": true,
+      "pre_sha256": "132f54911576fe5afa096959633eee55c5959874dddf494fd18cf157552cca5e",
+      "pre_bytes": 44755,
+      "post_sha256": "cc9dd9863aadf7e6ea386eda0b2837a13a9462a9176281d264131936b79e8365",
+      "post_bytes": 44953
+    },
+    "catalog/controller/information/dealers.php": {
+      "remote": "catalog/controller/information/dealers.php",
+      "pre_exists": true,
+      "pre_sha256": "f1dea5ac2751670d81e6bf14137d6351199f603ffcf2221c65af26ebd2ae840f",
+      "pre_bytes": 3167,
+      "post_sha256": "b8988dd740859f2dc56ae53b44ea32c83d9851b5dcb2c22364cf1b8829ed96f7",
+      "post_bytes": 3164
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "remote": "catalog/view/theme/default/template/information/dealers.twig",
+      "pre_exists": true,
+      "pre_sha256": "75399c184da24e316e23ec30d8cb466a4d9b34fa1dc79785f1d6aaf51e27fe97",
+      "pre_bytes": 45666,
+      "post_sha256": "e2a7edb494479e34ad6b53fda25de7d02266f187a0861a0819a5606f411951c5",
+      "post_bytes": 45864
+    },
+    "catalog/controller/information/custom_equipment.php": {
+      "remote": "catalog/controller/information/custom_equipment.php",
+      "pre_exists": true,
+      "pre_sha256": "9916a7b9f1ea1c34488b8b88b3a82d019ac914bd2e56ad1e8c74530bb8cc8f70",
+      "pre_bytes": 3434,
+      "post_sha256": "e4fdffc8e3f5caf6a023d7eb2920b0fd5b736179353a5db2e566b237ffff41e5",
+      "post_bytes": 3431
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "remote": "catalog/view/theme/default/template/information/custom_equipment.twig",
+      "pre_exists": true,
+      "pre_sha256": "6f6ab92fbfc50e5073e9ce5eb7f312ed5a0492826c035533901d091da4bd1c64",
+      "pre_bytes": 66593,
+      "post_sha256": "59fcaca9f319dfe9301ce9190e898883f0854cd47a8c00e3ebc2cf92e26616a5",
+      "post_bytes": 66791
+    }
+  },
+  "twig_cache_cleared": [],
+  "deploy": {
+    "qa": {
+      "urls": {
+        "https://zpm.new-site.space/": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/delivery": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/payment-methods": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/guarantee": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/dealers": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/custom-equipment": {
+          "http_status": 200,
+          "ok": true
+        }
+      },
+      "css_marker": true,
+      "page_intro_description_removed": {
+        "delivery": true,
+        "payment": true,
+        "guarantee": true,
+        "dealers": true,
+        "custom": true
+      },
+      "has_corp_page_lead_delivery": true,
+      "has_corp_page_lead_payment": true,
+      "has_corp_page_lead_guarantee": true,
+      "has_corp_page_lead_dealers": true,
+      "has_corp_page_lead_custom": true,
+      "all_http_ok": true,
+      "all_no_page_intro_description": true
+    }
+  }
+}

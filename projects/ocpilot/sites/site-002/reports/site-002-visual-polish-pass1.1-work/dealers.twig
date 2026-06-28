@@ -1,0 +1,423 @@
+{{ header }}
+
+<main class="main zpm-dealers-page">
+  <section class="zpm-corp-page-lead" aria-label="Вводная информация">
+    <div class="container zpm-corp-page-lead__body">
+      {{ page_lead|raw }}
+    </div>
+  </section>
+
+
+  {# BLOCK 01 — Partner matrix (SC-13) #}
+  <section class="zpm-dealers-section zpm-dealers-matrix" id="zpm-dealers-matrix" aria-labelledby="zpm-dealers-matrix-title">
+    <div class="container">
+      <h2 class="zpm-dealers-section__title section-title__like-h2" id="zpm-dealers-matrix-title">Кому подойдёт сотрудничество с&nbsp;ЗПМ</h2>
+      <p class="zpm-dealers-section__intro">Партнёрская программа ЗПМ рассчитана на&nbsp;компании, которые поставляют или комплектуют объекты оборудованием для профессиональных кухонь, торговли и&nbsp;пищевых производств. Ниже — типовые профили партнёров.</p>
+
+      <div class="zpm-dealers-matrix__table-wrap">
+        <table class="zpm-dealers-matrix__table">
+          <thead>
+            <tr>
+              <th scope="col">Тип партнёра</th>
+              <th scope="col">Кому подходит</th>
+              <th scope="col">Что обычно нужно от&nbsp;завода</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Тип партнёра"><span class="zpm-dealers-matrix__tag"><i class="fad fa-handshake" aria-hidden="true"></i> Дилеры</span><strong>Дилеры и&nbsp;дистрибьюторы</strong></td>
+              <td data-label="Кому подходит">Компании, регулярно закупающие оборудование для перепродажи или сопровождения клиентов в&nbsp;регионе</td>
+              <td data-label="Что обычно нужно от завода">Прямой контакт с&nbsp;производителем, стабильный ассортимент, материалы для передачи конечному заказчику</td>
+            </tr>
+            <tr>
+              <td data-label="Тип партнёра"><span class="zpm-dealers-matrix__tag"><i class="fad fa-boxes" aria-hidden="true"></i> Опт</span><strong>Оптовые компании</strong></td>
+              <td data-label="Кому подходит">Торговые организации с&nbsp;партийными закупками для склада или крупных поставок</td>
+              <td data-label="Что обычно нужно от завода">Порядок заказов, информация о&nbsp;наличии и&nbsp;сроках, документы для B2B-продаж</td>
+            </tr>
+            <tr>
+              <td data-label="Тип партнёра"><span class="zpm-dealers-matrix__tag"><i class="fad fa-drafting-compass" aria-hidden="true"></i> Проекты</span><strong>Проектные организации</strong></td>
+              <td data-label="Кому подходит">Компании, оснащающие рестораны, кафе, столовые и&nbsp;пищевые цеха по&nbsp;спецификации</td>
+              <td data-label="Что обычно нужно от завода">Подбор по&nbsp;спецификации, консультации по&nbsp;моделям, нестандартные позиции по&nbsp;ТЗ</td>
+            </tr>
+            <tr>
+              <td data-label="Тип партнёра"><span class="zpm-dealers-matrix__tag"><i class="fad fa-project-diagram" aria-hidden="true"></i> Интеграторы</span><strong>Интеграторы</strong></td>
+              <td data-label="Кому подходит">Подрядчики, комплектующие оборудование для объекта клиента</td>
+              <td data-label="Что обычно нужно от завода">Единый источник по&nbsp;серийным позициям, помощь в&nbsp;комплектации, связка серии и&nbsp;изделий на&nbsp;заказ</td>
+            </tr>
+            <tr>
+              <td data-label="Тип партнёра"><span class="zpm-dealers-matrix__tag"><i class="fad fa-store" aria-hidden="true"></i> Торговые дома</span><strong>Торговые дома и&nbsp;региональные поставщики</strong></td>
+              <td data-label="Кому подходит">Региональные компании с&nbsp;клиентской базой в&nbsp;HoReCa и&nbsp;пищевой промышленности</td>
+              <td data-label="Что обычно нужно от завода">Работа с&nbsp;заводом напрямую, понятный процесс заявки и&nbsp;согласования</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-dealers-section__body">Один партнёр может совмещать несколько ролей — например, оптовые закупки и&nbsp;проектные поставки. При заявке менеджер уточнит, как вы&nbsp;работаете с&nbsp;клиентами и&nbsp;какой формат взаимодействия с&nbsp;заводом вам нужен. Коммерческие условия обсуждаются индивидуально.</p>
+      <p class="zpm-dealers-section__helper">Если вы&nbsp;закупаете оборудование только для собственного предприятия без перепродажи — вам может подойти прямой формат работы с&nbsp;заводом. Порядок оплаты и&nbsp;документов — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+    </div>
+  </section>
+
+  {# BLOCK 02 — Dealer advantages / OEM proof #}
+  <section class="zpm-dealers-section zpm-dealers-proof" id="zpm-dealers-proof" aria-labelledby="zpm-dealers-proof-title">
+    <div class="container">
+      <h2 class="zpm-dealers-section__title section-title__like-h2" id="zpm-dealers-proof-title">Почему партнёры работают напрямую с&nbsp;производителем</h2>
+      <p class="zpm-dealers-section__intro">Дилер или оптовый партнёр оценивает не&nbsp;рекламные обещания, а&nbsp;то, с&nbsp;кем он&nbsp;связывает свою репутацию перед клиентом: есть&nbsp;ли у&nbsp;поставщика своё производство, можно&nbsp;ли получить достоверную информацию, предсказуем&nbsp;ли процесс заказа. ЗПМ — завод-производитель, а&nbsp;не&nbsp;торговый посредник.</p>
+
+      <div class="zpm-dealers-proof__stack">
+        <article class="zpm-dealers-proof__item">
+          <h3 class="zpm-dealers-proof__title section-title__like-h3">Собственное производство</h3>
+          <p class="zpm-dealers-proof__text">Нейтральное оборудование из&nbsp;нержавеющей стали изготавливается на&nbsp;площадке в&nbsp;Барнауле. Серийные модели и&nbsp;изделия на&nbsp;заказ проходят производственный цикл на&nbsp;одном адресе — металлообработка, сборка, контроль перед отгрузкой. Партнёр работает с&nbsp;юридическим лицом-производителем ООО «ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ».</p>
+        </article>
+        <article class="zpm-dealers-proof__item">
+          <h3 class="zpm-dealers-proof__title section-title__like-h3">Единый источник информации</h3>
+          <p class="zpm-dealers-proof__text">По&nbsp;ассортименту, наличию, срокам и&nbsp;документам партнёр получает информацию от&nbsp;менеджеров завода — без цепочки посредников с&nbsp;разными версиями условий. Нестандартные задачи согласуются через менеджера.</p>
+        </article>
+        <article class="zpm-dealers-proof__item">
+          <h3 class="zpm-dealers-proof__title section-title__like-h3">Документы для работы с&nbsp;вашими клиентами</h3>
+          <p class="zpm-dealers-proof__text">ЗПМ выставляет счёт, направляет коммерческое предложение и&nbsp;передаёт закрывающие документы по&nbsp;факту отгрузки. На&nbsp;продукцию предусмотрен комплект документов в&nbsp;соответствии с&nbsp;категорией оборудования — декларация или сертификат соответствия, паспорт изделия. Реквизиты и&nbsp;юридический статус завода опубликованы на&nbsp;странице <a href="/contact/">Контакты</a>.</p>
+        </article>
+        <article class="zpm-dealers-proof__item">
+          <h3 class="zpm-dealers-proof__title section-title__like-h3">Стабильность ассортимента</h3>
+          <p class="zpm-dealers-proof__text">Завод поддерживает серийную линейку нейтрального оборудования для общепита и&nbsp;пищевых производств — столы, моечные ванны, стеллажи, подтоварники, тележки, вытяжные зонты и&nbsp;смежные позиции. Партнёр опирается на&nbsp;постоянную линейку, а&nbsp;не&nbsp;на&nbsp;разовые предложения.</p>
+        </article>
+        <article class="zpm-dealers-proof__item">
+          <h3 class="zpm-dealers-proof__title section-title__like-h3">Изготовление под заказ</h3>
+          <p class="zpm-dealers-proof__text">Если в&nbsp;проекте клиента нужна конфигурация, которой нет в&nbsp;серии, завод принимает заказ на&nbsp;изготовление по&nbsp;согласованному техническому заданию. Параметры и&nbsp;порядок согласования уточняет менеджер.</p>
+        </article>
+      </div>
+
+      <p class="zpm-dealers-section__pointer">Производственная площадка, история завода и&nbsp;документы соответствия — на&nbsp;странице <a href="/about">О&nbsp;компании</a>.</p>
+      <p class="zpm-dealers-section__note">ЗПМ работает с&nbsp;заказчиками напрямую с&nbsp;завода и&nbsp;через партнёрскую сеть. Распределение сделок между заводом и&nbsp;партнёром, а&nbsp;также формат взаимодействия с&nbsp;конечными клиентами в&nbsp;вашем регионе обсуждаются индивидуально при согласовании условий сотрудничества.</p>
+    </div>
+  </section>
+
+  {# OEM trust row (SC-03) #}
+  <section class="zpm-dealers-section zpm-dealers-oem-row" id="zpm-dealers-oem-row" aria-label="Данные производителя ЗПМ">
+    <div class="container">
+      <dl class="zpm-dealers-oem-row__grid">
+        <div class="zpm-dealers-oem-row__item">
+          <dt class="zpm-dealers-oem-row__label">Производитель</dt>
+          <dd class="zpm-dealers-oem-row__value">ООО «ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ» (ЗПМ)</dd>
+        </div>
+        <div class="zpm-dealers-oem-row__item">
+          <dt class="zpm-dealers-oem-row__label">ИНН</dt>
+          <dd class="zpm-dealers-oem-row__value">2221237587</dd>
+        </div>
+        <div class="zpm-dealers-oem-row__item">
+          <dt class="zpm-dealers-oem-row__label">Площадка</dt>
+          <dd class="zpm-dealers-oem-row__value">Барнаул, проспект Калинина, 15в</dd>
+        </div>
+        <div class="zpm-dealers-oem-row__item">
+          <dt class="zpm-dealers-oem-row__label">Подробнее</dt>
+          <dd class="zpm-dealers-oem-row__value"><a href="/about">О&nbsp;компании</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  {# BLOCK 03 — Partner outcomes #}
+  <section class="zpm-dealers-section zpm-dealers-outcomes" id="zpm-dealers-outcomes" aria-labelledby="zpm-dealers-outcomes-title">
+    <div class="container">
+      <h2 class="zpm-dealers-section__title section-title__like-h2" id="zpm-dealers-outcomes-title">Что получает партнёр</h2>
+      <p class="zpm-dealers-section__intro">Партнёр получает прямой доступ к&nbsp;производителю, предсказуемый порядок взаимодействия и&nbsp;инструменты для работы с&nbsp;клиентами — от&nbsp;коммерческих материалов до&nbsp;документов и&nbsp;логистической поддержки. Конкретные коммерческие параметры фиксируются после заявки.</p>
+
+      <div class="zpm-dealers-outcomes__table-wrap">
+        <table class="zpm-dealers-outcomes__table">
+          <thead>
+            <tr>
+              <th scope="col">Результат</th>
+              <th scope="col">Что это даёт партнёру</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Результат"><strong>Прямое взаимодействие с&nbsp;заводом</strong></td>
+              <td data-label="Что это даёт партнёру">Заявки, уточнения по&nbsp;ассортименту и&nbsp;статус заказов — через менеджеров ЗПМ, без лишних звеньев</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Консультации по&nbsp;оборудованию</strong></td>
+              <td data-label="Что это даёт партнёру">Помощь в&nbsp;подборе серийных моделей и&nbsp;комплектации под задачу клиента или проекта — без необходимости разбираться в&nbsp;производстве самостоятельно</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Коммерческие предложения и&nbsp;счета</strong></td>
+              <td data-label="Что это даёт партнёру">Готовые КП и&nbsp;счёт на&nbsp;оплату после согласования состава заказа — в&nbsp;формате, привычном для B2B-закупки</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Документы для передачи клиенту</strong></td>
+              <td data-label="Что это даёт партнёру">Комплект документов на&nbsp;продукцию и&nbsp;закрывающие по&nbsp;факту отгрузки — партнёр передаёт конечному заказчику без дополнительных согласований с&nbsp;заводом</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Доступ к&nbsp;изготовлению на&nbsp;заказ</strong></td>
+              <td data-label="Что это даёт партнёру">Возможность включить в&nbsp;поставку нестандартную позицию — менеджер согласует параметры и&nbsp;сроки по&nbsp;ТЗ клиента</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Поддержка по&nbsp;логистике</strong></td>
+              <td data-label="Что это даёт партнёру">Согласование точки отгрузки и&nbsp;способа получения — партнёр понимает, откуда и&nbsp;как получит оборудование для своего клиента</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-dealers-section__body">После согласования формата работы партнёр знает, к&nbsp;кому обращаться по&nbsp;заказу, как получить КП и&nbsp;какие документы будут переданы вместе с&nbsp;оборудованием. Условия оплаты для партнёрского канала определяются при согласовании — общий порядок для организаций описан на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+      <p class="zpm-dealers-section__helper">Публичный прайс-лист и&nbsp;коммерческие параметры партнёрской программы предоставляются после заявки и&nbsp;уточнения профиля компании — условия обсуждаются индивидуально.</p>
+    </div>
+  </section>
+
+  {# BLOCK 04 — Cooperation process (SC-04, 5 steps) #}
+  <section class="zpm-dealers-section zpm-dealers-process" id="zpm-dealers-process" aria-labelledby="zpm-dealers-process-title">
+    <div class="container">
+      <h2 class="zpm-dealers-section__title section-title__like-h2" id="zpm-dealers-process-title">Как начинается сотрудничество</h2>
+      <p class="zpm-dealers-section__intro">Порядок начала работы с&nbsp;заводом выстроен так, чтобы вы&nbsp;понимали следующий шаг — от&nbsp;первой заявки до&nbsp;регулярного взаимодействия. Отдельные этапы могут уточняться в&nbsp;зависимости от&nbsp;типа партнёра и&nbsp;направления работы.</p>
+
+      <ol class="zpm-corp-timeline zpm-dealers-timeline" aria-label="Порядок начала сотрудничества с заводом ЗПМ для дилеров и оптовых партнёров">
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">1</span>
+          <span class="zpm-corp-timeline__badge-label">Заявка</span>
+          <h3 class="zpm-corp-timeline__title">Заявка</h3>
+          <p class="zpm-corp-timeline__text">Вы&nbsp;оставляете заявку через <a href="#zpm-dealers-form">форму на&nbsp;этой странице</a> или связываетесь с&nbsp;заводом по&nbsp;телефону / e-mail. Укажите компанию, город, контакты и&nbsp;кратко опишите направление работы</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">2</span>
+          <span class="zpm-corp-timeline__badge-label">Знакомство</span>
+          <h3 class="zpm-corp-timeline__title">Знакомство</h3>
+          <p class="zpm-corp-timeline__text">Менеджер связывается с&nbsp;вами, уточняет профиль компании, регион и&nbsp;тип партнёрства — дилер, опт, проект, интегратор</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">3</span>
+          <span class="zpm-corp-timeline__badge-label">Направление</span>
+          <h3 class="zpm-corp-timeline__title">Уточнение направления</h3>
+          <p class="zpm-corp-timeline__text">Обсуждаются задачи: ассортимент, типовые заказы, проектные поставки, потребность в&nbsp;изделиях на&nbsp;заказ. При необходимости — ориентир по&nbsp;каталогу и&nbsp;документам</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">4</span>
+          <span class="zpm-corp-timeline__badge-label">Формат</span>
+          <h3 class="zpm-corp-timeline__title">Согласование формата работы</h3>
+          <p class="zpm-corp-timeline__text">Фиксируется порядок взаимодействия: как подавать заказы, как получать КП и&nbsp;документы, какие коммерческие условия применимы к&nbsp;вашему профилю. Условия обсуждаются индивидуально</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">5</span>
+          <span class="zpm-corp-timeline__badge-label">Работа</span>
+          <h3 class="zpm-corp-timeline__title">Начало взаимодействия</h3>
+          <p class="zpm-corp-timeline__text">После согласования вы&nbsp;переходите к&nbsp;рабочим заказам: запрос → КП → счёт → оплата → отгрузка. Порядок оплаты — на&nbsp;странице <a href="/payment-methods">Оплата</a>; отгрузки — на&nbsp;странице <a href="/delivery">Доставка</a></p>
+        </li>
+      </ol>
+
+      <p class="zpm-dealers-section__note">После заявки менеджер сообщит, какие материалы и&nbsp;документы будут подготовлены на&nbsp;следующем этапе — в&nbsp;том числе коммерческое предложение и&nbsp;прайс-лист, если это предусмотрено для вашего формата работы.</p>
+      <p class="zpm-dealers-section__helper">Срок ответа на&nbsp;заявку зависит от&nbsp;загрузки менеджеров и&nbsp;полноты информации в&nbsp;форме. Уточните актуальные ориентиры при первом контакте.</p>
+    </div>
+  </section>
+
+  {# BLOCK 05 — Supply chain + cross-links #}
+  <section class="zpm-dealers-section zpm-dealers-chain" id="zpm-dealers-chain" aria-labelledby="zpm-dealers-chain-title">
+    <div class="container">
+      <h2 class="zpm-dealers-section__title section-title__like-h2" id="zpm-dealers-chain-title">Как связаны дилеры, производство и&nbsp;логистика</h2>
+      <p class="zpm-dealers-section__intro">Партнёр работает с&nbsp;заводом-производителем; оборудование изготавливается на&nbsp;площадке ЗПМ и&nbsp;передаётся партнёру — далее партнёр сопровождает поставку своему клиенту.</p>
+
+      <figure class="zpm-dealers-chain__diagram" aria-labelledby="zpm-dealers-chain-caption">
+        <ol class="zpm-dealers-chain__nodes">
+          <li class="zpm-dealers-chain__node"><i class="fad fa-industry" aria-hidden="true"></i> ЗПМ (производитель)</li>
+          <li class="zpm-dealers-chain__node"><i class="fad fa-cogs" aria-hidden="true"></i> Производство и&nbsp;комплектация (Барнаул)</li>
+          <li class="zpm-dealers-chain__node"><i class="fad fa-handshake" aria-hidden="true"></i> Партнёр (дилер / опт / проект)</li>
+          <li class="zpm-dealers-chain__node"><i class="fad fa-user-tie" aria-hidden="true"></i> Конечный заказчик</li>
+        </ol>
+        <figcaption class="zpm-dealers-chain__caption" id="zpm-dealers-chain-caption">Цепочка поставки: от&nbsp;производства ЗПМ до&nbsp;конечного заказчика через партнёра</figcaption>
+      </figure>
+
+      <p class="zpm-dealers-section__body">Серийные позиции изготавливаются или комплектуются на&nbsp;производственной площадке в&nbsp;Барнауле. Часть отгрузок для центрального региона может выполняться со&nbsp;склада партнёра в&nbsp;Московской области — если это согласовано для конкретного заказа. Отгрузка — самовывоз или доставка транспортной компанией.</p>
+
+      <div class="zpm-dealers-crosslinks__table-wrap">
+        <table class="zpm-dealers-crosslinks__table">
+          <thead>
+            <tr>
+              <th scope="col">Тема</th>
+              <th scope="col">Кратко на&nbsp;этой странице</th>
+              <th scope="col">Подробнее</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Тема"><strong>Доставка и&nbsp;точки отгрузки</strong></td>
+              <td data-label="Кратко">Отгрузка из&nbsp;Барнаула и&nbsp;со&nbsp;склада партнёра в&nbsp;Московской области; доставка по&nbsp;России через ТК или самовывоз</td>
+              <td data-label="Подробнее"><a href="/delivery">Доставка</a></td>
+            </tr>
+            <tr>
+              <td data-label="Тема"><strong>Оборудование на&nbsp;заказ</strong></td>
+              <td data-label="Кратко">Нестандартные изделия изготавливаются на&nbsp;производстве ЗПМ по&nbsp;согласованному ТЗ</td>
+              <td data-label="Подробнее"><a href="/custom-equipment">Оборудование на&nbsp;заказ</a></td>
+            </tr>
+            <tr>
+              <td data-label="Тема"><strong>Оплата и&nbsp;документы</strong></td>
+              <td data-label="Кратко">Счёт, КП, закрывающие по&nbsp;факту отгрузки; условия партнёрского канала — при согласовании</td>
+              <td data-label="Подробнее"><a href="/payment-methods">Оплата</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-dealers-section__pointer">Гарантия производителя на&nbsp;оборудование — на&nbsp;странице <a href="/guarantee">Гарантия</a>.</p>
+      <p class="zpm-dealers-section__note">Схемы отгрузки на&nbsp;склад партнёра или напрямую клиенту партнёра — если они применимы к&nbsp;вашему формату работы — обсуждаются индивидуально при согласовании условий сотрудничества.</p>
+    </div>
+  </section>
+
+  {# BLOCK 06 — FAQ (SC-08) #}
+  <section class="zpm-dealers-section zpm-dealers-faq" id="zpm-dealers-faq" aria-labelledby="zpm-dealers-faq-title">
+    <div class="container">
+      <h2 class="zpm-dealers-section__title section-title__like-h2" id="zpm-dealers-faq-title">Ответы на&nbsp;частые вопросы</h2>
+      <p class="zpm-dealers-section__intro">Вопросы, которые чаще всего задают дилеры, оптовые компании и&nbsp;проектные партнёры перед первой заявкой.</p>
+
+      <div class="zpm-corp-faq zpm-dealers-faq__accordion" data-dealers-faq data-accordion>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-1" aria-expanded="false" aria-controls="dealers-faq-panel-1" data-accordion-button>Кто может стать дилером или партнёром ЗПМ?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-1" role="region" aria-labelledby="dealers-faq-btn-1" hidden data-accordion-panel>
+            <p>Заявку могут подать торговые компании, дилеры и&nbsp;дистрибьюторы, оптовые организации, проектные компании, интеграторы и&nbsp;региональные поставщики оборудования для общепита и&nbsp;пищевых производств. Менеджер уточнит, подходит&nbsp;ли ваш профиль под партнёрскую программу, и&nbsp;предложит формат работы. Типовые профили — в&nbsp;блоке <a href="#zpm-dealers-matrix">«Кому подойдёт сотрудничество с&nbsp;ЗПМ»</a> выше.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-2" aria-expanded="false" aria-controls="dealers-faq-panel-2" data-accordion-button>Есть&nbsp;ли минимальные объёмы закупки для партнёров?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-2" role="region" aria-labelledby="dealers-faq-btn-2" hidden data-accordion-panel>
+            <p>Публичных минимальных порогов на&nbsp;сайте нет. Требования к&nbsp;объёму и&nbsp;регулярности заказов — если они применимы — обсуждаются индивидуально после заявки и&nbsp;знакомства с&nbsp;вашей компанией.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-3" aria-expanded="false" aria-controls="dealers-faq-panel-3" data-accordion-button>Работаете&nbsp;ли вы&nbsp;с&nbsp;партнёрами по&nbsp;всей России?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-3" role="region" aria-labelledby="dealers-faq-btn-3" hidden data-accordion-panel>
+            <p>Да. ЗПМ поставляет оборудование по&nbsp;всей территории России. Отгрузка выполняется с&nbsp;площадки в&nbsp;Барнауле или со&nbsp;склада партнёра в&nbsp;Московской области; доставка в&nbsp;регион — через транспортную компанию или самовывоз. Условия работы в&nbsp;конкретном регионе обсуждаются индивидуально при согласовании сотрудничества. Подробности — на&nbsp;странице <a href="/delivery">Доставка</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-4" aria-expanded="false" aria-controls="dealers-faq-panel-4" data-accordion-button>Можно&nbsp;ли продавать оборудование ЗПМ под проект клиента?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-4" role="region" aria-labelledby="dealers-faq-btn-4" hidden data-accordion-panel>
+            <p>Да, это один из&nbsp;типовых сценариев для проектных организаций и&nbsp;интеграторов. Вы&nbsp;передаёте спецификацию или задачу менеджеру; завод помогает подобрать серийные позиции и&nbsp;при необходимости согласовать изделия на&nbsp;заказ.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-5" aria-expanded="false" aria-controls="dealers-faq-panel-5" data-accordion-button>Есть&nbsp;ли у&nbsp;завода изготовление оборудования на&nbsp;заказ?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-5" role="region" aria-labelledby="dealers-faq-btn-5" hidden data-accordion-panel>
+            <p>Да. ЗПМ изготавливает нейтральное оборудование из&nbsp;нержавеющей стали по&nbsp;согласованному техническому заданию — если нужной конфигурации нет в&nbsp;серийной линейке. Параметры и&nbsp;сроки уточняет менеджер.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-6" aria-expanded="false" aria-controls="dealers-faq-panel-6" data-accordion-button>Какие документы предоставляет производитель?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-6" role="region" aria-labelledby="dealers-faq-btn-6" hidden data-accordion-panel>
+            <p>Для партнёра и&nbsp;конечного заказчика завод готовит коммерческое предложение, счёт на&nbsp;оплату, закрывающие документы по&nbsp;факту отгрузки и&nbsp;комплект документов на&nbsp;продукцию — декларация или сертификат соответствия, паспорт изделия — в&nbsp;соответствии с&nbsp;категорией оборудования. Юридические реквизиты завода — на&nbsp;странице <a href="/contact/">Контакты</a>; порядок оплаты — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-7" aria-expanded="false" aria-controls="dealers-faq-panel-7" data-accordion-button>Как узнать наличие и&nbsp;сроки поставки?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-7" role="region" aria-labelledby="dealers-faq-btn-7" hidden data-accordion-panel>
+            <p>Актуальное наличие серийных позиций и&nbsp;срок изготовления уточняет менеджер по&nbsp;запросу или при подготовке коммерческого предложения. Для изделий на&nbsp;заказ срок фиксируется в&nbsp;КП. Общий порядок отгрузки после оплаты — на&nbsp;странице <a href="/delivery">Доставка</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="dealers-faq-btn-8" aria-expanded="false" aria-controls="dealers-faq-panel-8" data-accordion-button>Как начать сотрудничество с&nbsp;заводом?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="dealers-faq-panel-8" role="region" aria-labelledby="dealers-faq-btn-8" hidden data-accordion-panel>
+            <p>Оставьте заявку через <a href="#zpm-dealers-form">форму на&nbsp;этой странице</a> или позвоните по&nbsp;телефону 8&nbsp;(3852)&nbsp;72-18-90. Менеджер свяжется с&nbsp;вами, уточнит профиль компании и&nbsp;направление работы, согласует формат взаимодействия и&nbsp;сообщит следующие шаги — в&nbsp;том числе по&nbsp;коммерческим материалам после квалификационного знакомства.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# BLOCK 07 + FORM — Commercial Trust CTA #}
+  <section class="zpm-dealers-section zpm-dealers-cta zpm-commercial-trust" id="zpm-dealers-cta" aria-labelledby="zpm-dealers-cta-title" data-dealers-cta>
+    <div class="container">
+      <div class="zpm-commercial-trust__card">
+        <div class="zpm-commercial-trust__wrap">
+          <div class="zpm-commercial-trust__info">
+            <div class="zpm-commercial-trust__header">
+              <p class="zpm-commercial-trust__label">Партнёрская программа</p>
+              <h2 class="zpm-commercial-trust__title" id="zpm-dealers-cta-title">Получить условия сотрудничества</h2>
+              <p class="zpm-commercial-trust__lead">Расскажите о&nbsp;компании, регионе и&nbsp;направлении работы — менеджер завода свяжется с&nbsp;вами, уточнит профиль партнёра и&nbsp;предложит формат взаимодействия. После знакомства вы&nbsp;получите понимание следующих шагов: коммерческие материалы, порядок заказов и&nbsp;документов.</p>
+            </div>
+            <div class="zpm-dealers-cta__actions">
+              <a class="btn btn_dark zpm-dealers-cta__primary" href="#zpm-dealers-form">Обсудить сотрудничество</a>
+              <a class="zpm-dealers-cta__link" href="/about">О&nbsp;компании и&nbsp;производстве</a>
+              <a class="zpm-dealers-cta__link" href="/contact/">Контакты</a>
+            </div>
+            <div class="zpm-dealers-cta__contacts">
+              <a class="zpm-dealers-cta__phone" href="tel:+73852721890">Позвонить: 8&nbsp;(3852)&nbsp;72-18-90</a>
+              <a class="zpm-dealers-cta__email" href="mailto:info@bzpm.ru">info@bzpm.ru</a>
+            </div>
+            <p class="zpm-dealers-cta__pointers">Ознакомиться с&nbsp;ассортиментом серийного оборудования — в&nbsp;<a href="/">каталоге на&nbsp;сайте</a>.</p>
+            <p class="zpm-dealers-cta__pointers">Порядок оплаты для организаций — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+          </div>
+          <div class="zpm-commercial-trust__form-wrap">
+            <div class="zpm-decoration-with-logo">
+              <img src="/assets/img/decor-logo.svg" alt="" width="120" height="120" loading="lazy" />
+            </div>
+            <div class="zpm-commercial-trust__form-col">
+              <div class="zpm-commercial-trust__form-card" id="zpm-dealers-form">
+                <h3 class="zpm-commercial-trust__form-title">Заявка на&nbsp;сотрудничество</h3>
+                <p class="zpm-commercial-trust__form-note">Заполните форму — менеджер свяжется с&nbsp;вами, уточнит профиль компании и&nbsp;направление работы и&nbsp;предложит формат взаимодействия с&nbsp;заводом.</p>
+                <form class="zpm-form zpm-dealers-form" action="#" method="post" novalidate>
+                  <input type="hidden" name="dialog" value="7">
+                  <div class="zpm-form__grid">
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="dealersName">Имя<em>*</em></label>
+                      <input class="zpm-form__input" id="dealersName" name="name" type="text" placeholder="Ваше имя" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="dealersCompany">Компания<em>*</em></label>
+                      <input class="zpm-form__input" id="dealersCompany" name="company" type="text" placeholder="Название организации" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="dealersCity">Город<em>*</em></label>
+                      <input class="zpm-form__input" id="dealersCity" name="city" type="text" placeholder="Город, где работает компания" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="dealersPhone">Номер телефона<em>*</em></label>
+                      <div class="zpm-form__phone">
+                        <input class="zpm-form__input" id="dealersPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+                      </div>
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="dealersEmail">E-mail<em>*</em></label>
+                      <input class="zpm-form__input" id="dealersEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+                    </div>
+                    <div class="zpm-form__field zpm-form__field--full">
+                      <label class="zpm-form__label" for="dealersComment">Комментарий</label>
+                      <textarea class="zpm-form__textarea" id="dealersComment" name="comment" rows="4" placeholder="Направление работы: дилер, опт, проект; регион; типовые задачи клиентов"></textarea>
+                    </div>
+                    <div class="zpm-form__field zpm-form__field--full">
+                      <p class="zpm-dealers-form__helper">Укажите актуальные контакты и&nbsp;кратко опишите, как работает ваша компания — это ускорит первичное знакомство. Коммерческие условия обсуждаются после заявки индивидуально.</p>
+                    </div>
+                    <div class="zpm-form__field">
+                      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+                    </div>
+                    <div class="zpm-form__actions">
+                      <button class="btn btn_dark zpm-form__submit" type="submit">Отправить заявку</button>
+                      <label class="zpm-form__agree">
+                        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+                        <span class="zpm-form__agree-text">Я&nbsp;даю согласие на&nbsp;обработку своих персональных данных, обратный звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a>.</span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{ footer }}

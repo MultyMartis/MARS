@@ -1,0 +1,349 @@
+{{ header }}
+
+<main class="main zpm-payment-page">
+  <section class="zpm-corp-page-lead" aria-label="Вводная информация">
+    <div class="container zpm-corp-page-lead__body">
+      {{ page_lead|raw }}
+    </div>
+  </section>
+
+
+  {# BLOCK 01 — Payment timeline (6 steps) #}
+  <section class="zpm-payment-section zpm-payment-timeline-section" id="zpm-payment-timeline" aria-labelledby="zpm-payment-timeline-title">
+    <div class="container">
+      <h2 class="zpm-payment-section__title section-title__like-h2" id="zpm-payment-timeline-title">Как проходит оплата заказа</h2>
+      <p class="zpm-payment-section__intro">Оплата оборудования ЗПМ — часть согласованного коммерческого процесса, а&nbsp;не&nbsp;отдельная «кнопка на&nbsp;сайте». Для типовой B2B-закупки порядок выглядит так:</p>
+
+      <ol class="zpm-corp-timeline zpm-payment-timeline" aria-label="Этапы оплаты заказа оборудования ЗПМ для юридических лиц">
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">1</span>
+          <span class="zpm-corp-timeline__badge-label">Заявка</span>
+          <h3 class="zpm-corp-timeline__title">Заявка</h3>
+          <p class="zpm-corp-timeline__text">Вы&nbsp;отправляете запрос через форму на&nbsp;сайте, по&nbsp;телефону или e-mail — с&nbsp;указанием моделей, количества и&nbsp;региона. Менеджер уточняет состав заказа, наличие и&nbsp;сроки</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">2</span>
+          <span class="zpm-corp-timeline__badge-label">Согласование</span>
+          <h3 class="zpm-corp-timeline__title">Согласование</h3>
+          <p class="zpm-corp-timeline__text">Менеджер готовит коммерческое предложение: состав, цена, срок изготовления или отгрузки, способ получения. Для нестандартных изделий параметры согласуются отдельно — на&nbsp;странице <a href="/custom-equipment">Оборудование на&nbsp;заказ</a></p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">3</span>
+          <span class="zpm-corp-timeline__badge-label">Счёт</span>
+          <h3 class="zpm-corp-timeline__title">Счёт на&nbsp;оплату</h3>
+          <p class="zpm-corp-timeline__text">После подтверждения заказа выставляется счёт на&nbsp;оплату с&nbsp;реквизитами для безналичного перевода. Счёт направляется на&nbsp;e-mail, указанный при оформлении</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">4</span>
+          <span class="zpm-corp-timeline__badge-label">Оплата</span>
+          <h3 class="zpm-corp-timeline__title">Оплата</h3>
+          <p class="zpm-corp-timeline__text">Ваша организация перечисляет сумму по&nbsp;реквизитам из&nbsp;счёта через банк или интернет-банк. Платёж идентифицируется по&nbsp;назначению платежа и&nbsp;номеру счёта</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">5</span>
+          <span class="zpm-corp-timeline__badge-label">Подтверждение</span>
+          <h3 class="zpm-corp-timeline__title">Подтверждение и&nbsp;запуск заказа</h3>
+          <p class="zpm-corp-timeline__text">После поступления оплаты менеджер подтверждает зачисление средств. Серийные позиции в&nbsp;наличии передаются на&nbsp;комплектацию; позиции под заказ или изделия на&nbsp;заказ — в&nbsp;производство</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">6</span>
+          <span class="zpm-corp-timeline__badge-label">Подготовка</span>
+          <h3 class="zpm-corp-timeline__title">Подготовка к&nbsp;отгрузке</h3>
+          <p class="zpm-corp-timeline__text">После подтверждения оплаты заказ готовится к&nbsp;передаче: комплектация или изготовление, подготовка документов. Способ получения, точки отгрузки и&nbsp;порядок передачи груза — на&nbsp;странице <a href="/delivery">Доставка</a></p>
+        </li>
+      </ol>
+
+      <p class="zpm-payment-section__note">Сроки на&nbsp;каждом этапе зависят от&nbsp;состава заказа, наличия на&nbsp;складе и&nbsp;— для изделий на&nbsp;заказ — от&nbsp;срока изготовления. Конкретные ориентиры фиксируются в&nbsp;коммерческом предложении и&nbsp;счёте.</p>
+      <p class="zpm-payment-section__helper">Каталог на&nbsp;сайте работает в&nbsp;режиме запроса цены и&nbsp;коммерческого предложения — основной путь для юридических лиц: счёт от&nbsp;менеджера, а&nbsp;не&nbsp;онлайн-оплата в&nbsp;корзине.</p>
+      <p class="zpm-payment-timeline__handoff"><a href="/delivery">Как организована отгрузка после оплаты</a></p>
+    </div>
+  </section>
+
+  {# BLOCK 02 — Payment methods #}
+  <section class="zpm-payment-section zpm-payment-methods" id="zpm-payment-methods" aria-labelledby="zpm-payment-methods-title">
+    <div class="container">
+      <h2 class="zpm-payment-section__title section-title__like-h2" id="zpm-payment-methods-title">Какие способы оплаты доступны</h2>
+      <p class="zpm-payment-section__intro">Для корпоративных закупок основной и&nbsp;рекомендуемый способ — <strong>безналичный расчёт по&nbsp;выставленному счёту</strong>. Дополнительные варианты согласуются с&nbsp;менеджером в&nbsp;зависимости от&nbsp;типа заказчика и&nbsp;состава заказа.</p>
+
+      <div class="zpm-payment-methods__stack">
+        <article class="zpm-payment-method">
+          <h3 class="zpm-payment-method__title section-title__like-h3">Безналичный расчёт для юридических лиц и&nbsp;ИП</h3>
+          <p>Оплата по&nbsp;счёту — стандартный формат работы ЗПМ с&nbsp;предприятиями, закупщиками и&nbsp;торговыми компаниями. Счёт содержит:</p>
+          <ul class="zpm-payment-method__list">
+            <li>наименование и&nbsp;состав оборудования;</li>
+            <li>сумму к&nbsp;оплате;</li>
+            <li>реквизиты получателя для перечисления через банк.</li>
+          </ul>
+          <p>Перевод выполняется с&nbsp;расчётного счёта вашей организации. После оплаты сохраните платёжное поручение — оно может понадобиться для сверки с&nbsp;бухгалтерией.</p>
+        </article>
+
+        <article class="zpm-payment-method">
+          <h3 class="zpm-payment-method__title section-title__like-h3">Физические лица и&nbsp;альтернативные способы</h3>
+          <p>Для физических лиц и&nbsp;отдельных ситуаций условия оплаты согласуются с&nbsp;менеджером индивидуально. Конкретный способ — наличный, безналичный или иной — определяется при оформлении заказа.</p>
+        </article>
+
+        <article class="zpm-payment-method">
+          <h3 class="zpm-payment-method__title section-title__like-h3">Дилеры и&nbsp;оптовые партнёры</h3>
+          <p>Условия оплаты для дилеров и&nbsp;оптовых партнёров определяются в&nbsp;рамках партнёрского соглашения. Общий порядок для прямых закупок — на&nbsp;этой странице; канальные условия — на&nbsp;странице <a href="/dealers">Дилерам</a>.</p>
+        </article>
+      </div>
+
+      <p class="zpm-payment-section__note">На&nbsp;сайте нет полноценной онлайн-оплаты банковской картой при оформлении заказа через каталог. Если вам нужен конкретный способ расчёта — уточните его у&nbsp;менеджера до&nbsp;подтверждения заказа.</p>
+
+      <div class="zpm-payment-methods__table-wrap">
+        <table class="zpm-payment-methods__table">
+          <thead>
+            <tr>
+              <th scope="col">Способ</th>
+              <th scope="col">Для кого</th>
+              <th scope="col">Примечание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Способ">Безналичный расчёт по&nbsp;счёту</td>
+              <td data-label="Для кого">Юридические лица, ИП</td>
+              <td data-label="Примечание">Основной формат B2B</td>
+            </tr>
+            <tr>
+              <td data-label="Способ">Индивидуальные условия</td>
+              <td data-label="Для кого">Физические лица, особые случаи</td>
+              <td data-label="Примечание">По&nbsp;согласованию с&nbsp;менеджером</td>
+            </tr>
+            <tr>
+              <td data-label="Способ">Партнёрские условия</td>
+              <td data-label="Для кого">Дилеры, опт</td>
+              <td data-label="Примечание">По&nbsp;соглашению — см.&nbsp;<a href="/dealers">Дилерам</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-payment-section__helper">Конкретный способ оплаты, сумма и&nbsp;сроки фиксируются в&nbsp;коммерческом предложении и&nbsp;счёте — не&nbsp;на&nbsp;этой странице.</p>
+    </div>
+  </section>
+
+  {# BLOCK 04 — Documents received #}
+  <section class="zpm-payment-section zpm-payment-documents" id="zpm-payment-documents" aria-labelledby="zpm-payment-documents-title">
+    <div class="container">
+      <h2 class="zpm-payment-section__title section-title__like-h2" id="zpm-payment-documents-title">Какие документы получает заказчик</h2>
+      <p class="zpm-payment-section__intro">Закупщик и&nbsp;бухгалтерия оценивают не&nbsp;только способ оплаты, но&nbsp;и&nbsp;комплект документов — до&nbsp;и&nbsp;после сделки. ЗПМ выстраивает документооборот под типовую B2B-закупку оборудования.</p>
+
+      <div class="zpm-payment-proof__grid">
+        <article class="zpm-payment-proof-card">
+          <h3 class="zpm-payment-proof-card__title">Коммерческое предложение</h3>
+          <p class="zpm-payment-proof-card__text">До&nbsp;оплаты — для согласования состава, цены и&nbsp;условий внутри вашей организации</p>
+        </article>
+        <article class="zpm-payment-proof-card">
+          <h3 class="zpm-payment-proof-card__title">Счёт на&nbsp;оплату</h3>
+          <p class="zpm-payment-proof-card__text">Для перечисления средств; содержит реквизиты получателя, состав и&nbsp;сумму</p>
+        </article>
+        <article class="zpm-payment-proof-card">
+          <h3 class="zpm-payment-proof-card__title">Закрывающие документы</h3>
+          <p class="zpm-payment-proof-card__text">После отгрузки — для бухгалтерии и&nbsp;учёта. Конкретный набор согласуется с&nbsp;вашей учётной политикой; перечень уточняет менеджер при оформлении заказа</p>
+        </article>
+        <article class="zpm-payment-proof-card">
+          <h3 class="zpm-payment-proof-card__title">Отгрузочные документы</h3>
+          <p class="zpm-payment-proof-card__text">При передаче груза — для приёмки и&nbsp;логистики</p>
+        </article>
+        <article class="zpm-payment-proof-card">
+          <h3 class="zpm-payment-proof-card__title">Документы на&nbsp;оборудование</h3>
+          <p class="zpm-payment-proof-card__text">Паспорт изделия, декларация или сертификат соответствия — если предусмотрены для категории оборудования. Перечень по&nbsp;модели — в&nbsp;карточке товара или коммерческом предложении</p>
+        </article>
+      </div>
+
+      <p class="zpm-payment-documents__body">Для крупных или нестандартных заказов может потребоваться договор поставки и&nbsp;спецификация — условия согласуются при оформлении. Если для тендера или внутреннего согласования нужен конкретный перечень документов — запросите его у&nbsp;менеджера до&nbsp;выставления счёта.</p>
+    </div>
+  </section>
+
+  {# Legal company information — entity trust row + requisites #}
+  <section class="zpm-payment-section zpm-payment-legal" id="zpm-payment-legal" aria-labelledby="zpm-payment-legal-title">
+    <div class="container">
+      <h2 class="zpm-payment-section__title section-title__like-h3" id="zpm-payment-legal-title">Реквизиты для проверки контрагента</h2>
+      <p class="zpm-payment-section__intro">Для внесения ЗПМ в&nbsp;базу поставщиков вашей организации используйте юридические данные на&nbsp;странице <a href="/contact/">Контакты</a>:</p>
+
+      <dl class="zpm-payment-legal__facts">
+        <div class="zpm-payment-legal__fact">
+          <dt class="zpm-payment-legal__label">Поставщик</dt>
+          <dd class="zpm-payment-legal__value">ООО «ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ» (ЗПМ)</dd>
+        </div>
+        <div class="zpm-payment-legal__fact">
+          <dt class="zpm-payment-legal__label">ИНН</dt>
+          <dd class="zpm-payment-legal__value">2221237587</dd>
+        </div>
+        <div class="zpm-payment-legal__fact">
+          <dt class="zpm-payment-legal__label">КПП</dt>
+          <dd class="zpm-payment-legal__value">222101001</dd>
+        </div>
+        <div class="zpm-payment-legal__fact">
+          <dt class="zpm-payment-legal__label">ОГРН</dt>
+          <dd class="zpm-payment-legal__value">1172225049787</dd>
+        </div>
+        <div class="zpm-payment-legal__fact">
+          <dt class="zpm-payment-legal__label">Формат</dt>
+          <dd class="zpm-payment-legal__value">Безналичный расчёт по&nbsp;счёту</dd>
+        </div>
+        <div class="zpm-payment-legal__fact">
+          <dt class="zpm-payment-legal__label">Реквизиты</dt>
+          <dd class="zpm-payment-legal__value">На&nbsp;странице <a href="/contact/">Контакты</a> · в&nbsp;счёте на&nbsp;оплату</dd>
+        </div>
+      </dl>
+
+      <p class="zpm-payment-legal__body">Полное наименование: ООО «ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ»; юридический и&nbsp;фактический адрес в&nbsp;Барнауле. Реквизиты для перечисления оплаты указаны в&nbsp;счёте, выставленном на&nbsp;вашу организацию. Если нужна сверка до&nbsp;получения счёта — запросите данные у&nbsp;менеджера или через форму на&nbsp;этой странице.</p>
+      <p class="zpm-payment-legal__helper">Использование электронного документооборота (ЭДО) — по&nbsp;согласованию с&nbsp;менеджером, если это требуется вашей организации.</p>
+      <p class="zpm-payment-legal__link"><a href="/contact/">Контакты и&nbsp;юридические реквизиты</a></p>
+    </div>
+  </section>
+
+  {# BLOCK 06 — FAQ #}
+  <section class="zpm-payment-section zpm-payment-faq zpm-corp-faq" id="zpm-payment-faq" aria-labelledby="zpm-payment-faq-title" data-payment-faq data-accordion>
+    <div class="container">
+      <h2 class="zpm-payment-section__title section-title__like-h2" id="zpm-payment-faq-title">Ответы на&nbsp;частые вопросы</h2>
+      <p class="zpm-payment-section__intro">Вопросы, которые чаще всего задают снабженцы, закупщики, руководители и&nbsp;бухгалтерия перед первой оплатой.</p>
+
+      <div class="zpm-corp-faq__list">
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-1" aria-expanded="false" aria-controls="payment-faq-panel-1" data-accordion-button>Работаете ли вы&nbsp;с&nbsp;юридическими лицами по&nbsp;безналичному расчёту?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-1" role="region" aria-labelledby="payment-faq-btn-1" hidden data-accordion-panel>
+            <p>Да. Основной формат работы ЗПМ с&nbsp;организациями — безналичный расчёт по&nbsp;выставленному счёту. Счёт направляется после согласования состава заказа и&nbsp;коммерческих условий с&nbsp;менеджером.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-2" aria-expanded="false" aria-controls="payment-faq-panel-2" data-accordion-button>Как указан НДС в&nbsp;счёте?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-2" role="region" aria-labelledby="payment-faq-btn-2" hidden data-accordion-panel>
+            <p>Налоговая позиция и&nbsp;начисление НДС отражаются в&nbsp;счёте и&nbsp;закрывающих документах, выставленных вашей организации. Актуальные параметры для конкретного заказа уточняет менеджер при подготовке коммерческого предложения и&nbsp;счёта.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-3" aria-expanded="false" aria-controls="payment-faq-panel-3" data-accordion-button>Какой срок действия счёта на&nbsp;оплату?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-3" role="region" aria-labelledby="payment-faq-btn-3" hidden data-accordion-panel>
+            <p>Срок оплаты счёта согласуется при выставлении и&nbsp;указывается в&nbsp;коммерческом предложении или счёте. Если срок истёк до&nbsp;поступления оплаты — свяжитесь с&nbsp;менеджером для перевыставления с&nbsp;актуальной суммой и&nbsp;составом.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-4" aria-expanded="false" aria-controls="payment-faq-panel-4" data-accordion-button>Когда начинается производство или комплектация после оплаты?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-4" role="region" aria-labelledby="payment-faq-btn-4" hidden data-accordion-panel>
+            <p>После подтверждения поступления оплаты заказ передаётся на&nbsp;комплектацию (серийные позиции в&nbsp;наличии) или в&nbsp;производство (позиции под заказ, изделия на&nbsp;заказ). Срок готовности для изделий на&nbsp;заказ указан в&nbsp;коммерческом предложении. Порядок отгрузки — на&nbsp;странице <a href="/delivery">Доставка</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-5" aria-expanded="false" aria-controls="payment-faq-panel-5" data-accordion-button>Предоставляете ли отсрочку платежа?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-5" role="region" aria-labelledby="payment-faq-btn-5" hidden data-accordion-panel>
+            <p>Условия отсрочки — если они применимы к&nbsp;вашему заказу — согласуются в&nbsp;коммерческом предложении. Для дилеров и&nbsp;партнёров отдельные условия могут быть зафиксированы в&nbsp;партнёрском соглашении — см.&nbsp;страницу <a href="/dealers">Дилерам</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-6" aria-expanded="false" aria-controls="payment-faq-panel-6" data-accordion-button>Можно ли оплатить заказ частями или несколькими счетами?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-6" role="region" aria-labelledby="payment-faq-btn-6" hidden data-accordion-panel>
+            <p>Этапная или частичная оплата, а&nbsp;также несколько счетов на&nbsp;один заказ возможны, если это согласовано в&nbsp;коммерческом предложении или договоре — например, при поэтапной поставке, разных получателях внутри холдинга или для оборудования на&nbsp;заказ. Стандартный порядок для серийных позиций со&nbsp;склада уточняет менеджер при оформлении.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-7" aria-expanded="false" aria-controls="payment-faq-panel-7" data-accordion-button>Какие закрывающие документы мы&nbsp;получим?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-7" role="region" aria-labelledby="payment-faq-btn-7" hidden data-accordion-panel>
+            <p>После отгрузки передаются документы для бухгалтерии и&nbsp;учёта — конкретный набор зависит от&nbsp;типа вашей организации и&nbsp;учётной политики. Перечень согласуйте с&nbsp;менеджером при оформлении заказа. Отгрузочные документы и&nbsp;документы на&nbsp;продукцию передаются вместе с&nbsp;оборудованием.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="payment-faq-btn-8" aria-expanded="false" aria-controls="payment-faq-panel-8" data-accordion-button>Можно ли оплатить как физическое лицо?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="payment-faq-panel-8" role="region" aria-labelledby="payment-faq-btn-8" hidden data-accordion-panel>
+            <p>Да, в&nbsp;отдельных случаях — условия согласуются с&nbsp;менеджером индивидуально. Для организаций рекомендуемый путь — безналичный расчёт по&nbsp;счёту на&nbsp;юридическое лицо или ИП.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# BLOCK 07 + FORM — Commercial Trust CTA #}
+  <section class="zpm-payment-section zpm-payment-cta zpm-commercial-trust" id="zpm-payment-cta" aria-labelledby="zpm-payment-cta-title" data-payment-cta>
+    <div class="container">
+      <div class="zpm-commercial-trust__card">
+        <div class="zpm-commercial-trust__wrap">
+          <div class="zpm-commercial-trust__info">
+            <div class="zpm-commercial-trust__header">
+              <p class="zpm-commercial-trust__label">Оплата оборудования</p>
+              <h2 class="zpm-commercial-trust__title" id="zpm-payment-cta-title">Получить счёт или уточнить условия оплаты</h2>
+              <p class="zpm-commercial-trust__lead">Опишите состав заказа, организацию-плательщика и&nbsp;сроки — менеджер подготовит коммерческое предложение, выставит счёт или ответит на&nbsp;вопросы по&nbsp;документам и&nbsp;порядку оплаты.</p>
+            </div>
+            <div class="zpm-payment-cta__actions">
+              <a class="btn btn_dark zpm-payment-cta__primary" href="#zpm-payment-form">Запросить счёт или КП</a>
+              <a class="zpm-payment-cta__link" href="/">Перейти в&nbsp;каталог</a>
+              <a class="zpm-payment-cta__link" href="/contact/">Контакты и&nbsp;реквизиты</a>
+            </div>
+            <div class="zpm-payment-cta__contacts">
+              <a class="zpm-payment-cta__phone" href="tel:+73852721890">Позвонить: 8&nbsp;(3852)&nbsp;72-18-90</a>
+              <a class="zpm-payment-cta__email" href="mailto:info@bzpm.ru">info@bzpm.ru</a>
+            </div>
+            <p class="zpm-payment-cta__pointers">После оплаты — порядок отгрузки и&nbsp;получения оборудования на&nbsp;странице <a href="/delivery">Доставка</a>.</p>
+          </div>
+          <div class="zpm-commercial-trust__form-wrap">
+            <div class="zpm-decoration-with-logo">
+              <img src="/assets/img/decor-logo.svg" alt="" width="120" height="120" loading="lazy" />
+            </div>
+            <div class="zpm-commercial-trust__form-col">
+              <div class="zpm-commercial-trust__form-card" id="zpm-payment-form">
+                <h3 class="zpm-commercial-trust__form-title">Запрос счёта или консультации по&nbsp;оплате</h3>
+                <p class="zpm-commercial-trust__form-note">Укажите контакты и&nbsp;организацию — менеджер выставит счёт, подготовит коммерческое предложение или ответит на&nbsp;вопросы по&nbsp;документам и&nbsp;порядку оплаты.</p>
+                <form class="zpm-form zpm-payment-form" action="#" method="post" novalidate>
+                  <div class="zpm-form__grid">
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="paymentName">Имя<em>*</em></label>
+                      <input class="zpm-form__input" id="paymentName" name="name" type="text" placeholder="Ваше имя" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="paymentPhone">Номер телефона<em>*</em></label>
+                      <div class="zpm-form__phone">
+                        <input class="zpm-form__input" id="paymentPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+                      </div>
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="paymentEmail">E-mail<em>*</em></label>
+                      <input class="zpm-form__input" id="paymentEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="paymentCompany">Организация<em>*</em></label>
+                      <input class="zpm-form__input" id="paymentCompany" name="company" type="text" placeholder="Название юрлица или ИП" required />
+                    </div>
+                    <div class="zpm-form__field zpm-form__field--full">
+                      <label class="zpm-form__label" for="paymentComment">Комментарий</label>
+                      <textarea class="zpm-form__textarea" id="paymentComment" name="comment" rows="3" placeholder="Состав заказа, вопрос по НДС, документам или срокам оплаты"></textarea>
+                    </div>
+                    <div class="zpm-form__field">
+                      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+                    </div>
+                    <div class="zpm-form__actions">
+                      <button class="btn btn_dark zpm-form__submit" type="submit">Отправить запрос</button>
+                      <label class="zpm-form__agree">
+                        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+                        <span class="zpm-form__agree-text">Я&nbsp;даю согласие на&nbsp;обработку своих персональных данных, обратный звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a>.</span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{ footer }}

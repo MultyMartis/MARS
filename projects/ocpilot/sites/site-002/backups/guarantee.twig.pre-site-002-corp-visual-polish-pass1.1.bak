@@ -1,0 +1,388 @@
+{{ header }}
+
+<main class="main zpm-warranty-page">
+
+  {# BLOCK 01 — Warranty principles + coverage #}
+  <section class="zpm-warranty-section zpm-warranty-principles" id="zpm-warranty-principles" aria-labelledby="zpm-warranty-principles-title">
+    <div class="container">
+      <h2 class="zpm-warranty-section__title section-title__like-h2" id="zpm-warranty-principles-title">Что входит в&nbsp;гарантийную поддержку</h2>
+      <p class="zpm-warranty-section__intro">Гарантийная поддержка ЗПМ — это ответственность производителя за&nbsp;заводской дефект и&nbsp;понятный порядок действий, если оборудование перестало работать как должно. Цель — не&nbsp;оставить вас один на&nbsp;один с&nbsp;неисправностью, а&nbsp;провести от&nbsp;обращения до&nbsp;решения с&nbsp;участием специалистов завода.</p>
+
+      <p class="zpm-warranty-principles__body">ЗПМ предоставляет гарантию на&nbsp;выпускаемое оборудование. Продукция изготавливается с&nbsp;контролем качества на&nbsp;производстве в&nbsp;Барнауле. При подтверждённом заводском дефекте рассматривается гарантийное устранение неисправности — в&nbsp;формате, который соответствует условиям вашей поставки и&nbsp;применимым документам.</p>
+      <p class="zpm-warranty-principles__body">В&nbsp;рамках гарантийной поддержки вы&nbsp;получаете:</p>
+
+      <div class="zpm-warranty-coverage__table-wrap">
+        <table class="zpm-warranty-coverage__table">
+          <thead>
+            <tr>
+              <th scope="col">Результат</th>
+              <th scope="col">Что это значит для вас</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Результат"><strong>Принятие обращения</strong></td>
+              <td data-label="Что это значит для вас">Менеджер или специалист завода фиксирует суть проблемы и&nbsp;контактные данные</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Сбор информации</strong></td>
+              <td data-label="Что это значит для вас">Уточняются модель, обстоятельства появления неисправности, документы на&nbsp;покупку</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Диагностика</strong></td>
+              <td data-label="Что это значит для вас">Специалисты завода разбираются в&nbsp;причине — по&nbsp;предоставленным данным и&nbsp;при необходимости после осмотра оборудования</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Связь по&nbsp;ходу рассмотрения</strong></td>
+              <td data-label="Что это значит для вас">Вы&nbsp;понимаете, на&nbsp;каком этапе находится обращение и&nbsp;что потребуется от&nbsp;вас дальше</td>
+            </tr>
+            <tr>
+              <td data-label="Результат"><strong>Решение по&nbsp;результату</strong></td>
+              <td data-label="Что это значит для вас">После проверки сообщается, относится ли&nbsp;случай к&nbsp;гарантийному, и&nbsp;какой следующий шаг предусмотрен</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <dl class="zpm-warranty-summary">
+        <div class="zpm-warranty-summary__item">
+          <dt class="zpm-warranty-summary__label">Ответственный</dt>
+          <dd class="zpm-warranty-summary__value">Производитель — ООО «ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ»</dd>
+        </div>
+        <div class="zpm-warranty-summary__item">
+          <dt class="zpm-warranty-summary__label">Производство</dt>
+          <dd class="zpm-warranty-summary__value">Барнаул, проспект Калинина, 15в</dd>
+        </div>
+        <div class="zpm-warranty-summary__item">
+          <dt class="zpm-warranty-summary__label">Основание</dt>
+          <dd class="zpm-warranty-summary__value">Заводской дефект при соблюдении правил эксплуатации</dd>
+        </div>
+        <div class="zpm-warranty-summary__item">
+          <dt class="zpm-warranty-summary__label">Сопровождение</dt>
+          <dd class="zpm-warranty-summary__value">Менеджер и&nbsp;специалисты завода</dd>
+        </div>
+      </dl>
+
+      <p class="zpm-warranty-section__helper">Срок гарантии, момент её&nbsp;начала и&nbsp;перечень исключений для конкретной модели не&nbsp;дублируются на&nbsp;этой странице в&nbsp;виде единой цифры — их&nbsp;уточняет менеджер по&nbsp;документам на&nbsp;вашу поставку.</p>
+      <p class="zpm-warranty-section__pointer">Как устроено производство и&nbsp;контроль качества — на&nbsp;странице <a href="/about">О&nbsp;компании</a>.</p>
+      <p class="zpm-warranty-section__note">Декларация или сертификат соответствия, паспорт изделия и&nbsp;знак «Сделано в&nbsp;России» подтверждают происхождение и&nbsp;соответствие продукции — но&nbsp;<strong>не&nbsp;заменяют</strong> условия гарантийного обслуживания. Типы документов — в&nbsp;карточках каталога и&nbsp;на&nbsp;странице <a href="/our-certification">Сертификация</a>.</p>
+    </div>
+  </section>
+
+  {# BLOCK 02 — Documents checklist #}
+  <section class="zpm-warranty-section zpm-warranty-docs" id="zpm-warranty-docs" aria-labelledby="zpm-warranty-docs-title">
+    <div class="container">
+      <h2 class="zpm-warranty-section__title section-title__like-h2" id="zpm-warranty-docs-title">Какие документы понадобятся</h2>
+      <p class="zpm-warranty-section__intro">Чтобы рассмотреть обращение, заводу нужно подтвердить, что оборудование приобретено у&nbsp;ЗПМ или через согласованный канал поставки, и&nbsp;понять контекст эксплуатации. Подготовьте документы заранее — это ускорит первичный разбор.</p>
+
+      <div class="zpm-warranty-docs__table-wrap">
+        <table class="zpm-warranty-docs__table">
+          <thead>
+            <tr>
+              <th scope="col">Что подготовить</th>
+              <th scope="col">Зачем это нужно</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Что подготовить"><strong>Документ на&nbsp;отгрузку / поставку</strong></td>
+              <td data-label="Зачем это нужно">Подтверждает факт приобретения и&nbsp;состав поставки — например, товарная накладная</td>
+            </tr>
+            <tr>
+              <td data-label="Что подготовить"><strong>Закрывающие или сопроводительные документы по&nbsp;сделке</strong></td>
+              <td data-label="Зачем это нужно">Фиксируют дату и&nbsp;условия передачи оборудования — например, акт выполненных работ или поставки</td>
+            </tr>
+            <tr>
+              <td data-label="Что подготовить"><strong>Гарантийный талон</strong></td>
+              <td data-label="Зачем это нужно">Если он&nbsp;предусмотрен для вашей модели и&nbsp;был выдан при отгрузке</td>
+            </tr>
+            <tr>
+              <td data-label="Что подготовить"><strong>Паспорт изделия и&nbsp;инструкция по&nbsp;эксплуатации</strong></td>
+              <td data-label="Зачем это нужно">Помогают идентифицировать модель и&nbsp;проверить соблюдение правил использования</td>
+            </tr>
+            <tr>
+              <td data-label="Что подготовить"><strong>Описание неисправности</strong></td>
+              <td data-label="Зачем это нужно">Кратко: что произошло, когда заметили, при каких условиях работает оборудование</td>
+            </tr>
+            <tr>
+              <td data-label="Что подготовить"><strong>Фото или видео дефекта</strong></td>
+              <td data-label="Зачем это нужно">Если это возможно и&nbsp;безопасно — ускоряет первичную оценку до&nbsp;осмотра</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-warranty-docs__body">Основанием для предоставления гарантийного обслуживания являются документы, подтверждающие приобретение оборудования. Точный перечень для вашего случая менеджер сообщит при обращении — в&nbsp;зависимости от&nbsp;того, покупали&nbsp;ли вы&nbsp;напрямую у&nbsp;завода, через партнёра или получали изделие на&nbsp;заказ.</p>
+      <p class="zpm-warranty-docs__body">Если часть документов утеряна, всё равно свяжитесь с&nbsp;заводом: менеджер подскажет, какие сведения можно восстановить и&nbsp;какие альтернативные подтверждения допустимы.</p>
+      <p class="zpm-warranty-section__pointer">Если оборудование приобретено у&nbsp;дилера или оптового партнёра — порядок передачи документов и&nbsp;первичного контакта может отличаться. Кратко о&nbsp;партнёрском канале — на&nbsp;странице <a href="/dealers">Дилерам</a>; по&nbsp;вашей поставке уточнит менеджер.</p>
+      <p class="zpm-warranty-section__pointer">Для изделий, изготовленных по&nbsp;индивидуальному заказу, комплект документов и&nbsp;условия сопровождения согласуются при поставке — подробнее на&nbsp;странице <a href="/custom-equipment">Оборудование на&nbsp;заказ</a>.</p>
+      <p class="zpm-warranty-section__helper">Паспорт и&nbsp;декларация соответствия на&nbsp;конкретную модель также доступны в&nbsp;карточке товара в&nbsp;каталоге — в&nbsp;разделе документов.</p>
+    </div>
+  </section>
+
+  {# BLOCK 03 — Claim procedure (5-step timeline) #}
+  <section class="zpm-warranty-section zpm-warranty-process" id="zpm-warranty-process" aria-labelledby="zpm-warranty-process-title">
+    <div class="container">
+      <h2 class="zpm-warranty-section__title section-title__like-h2" id="zpm-warranty-process-title">Как происходит обращение по&nbsp;гарантии</h2>
+      <p class="zpm-warranty-section__intro">Порядок выстроен так, чтобы вы&nbsp;понимали следующий шаг — от&nbsp;первого сообщения о&nbsp;неисправности до&nbsp;итога рассмотрения. Отдельные детали зависят от&nbsp;модели, региона и&nbsp;комплекта документов; менеджер проговаривает их&nbsp;при обращении.</p>
+
+      <ol class="zpm-corp-timeline zpm-warranty-timeline" aria-label="Порядок рассмотрения гарантийного обращения к заводу ЗПМ">
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">1</span>
+          <span class="zpm-corp-timeline__badge-label">Обращение</span>
+          <h3 class="zpm-corp-timeline__title">Обращение</h3>
+          <p class="zpm-corp-timeline__text">Сообщите о&nbsp;неисправности по&nbsp;телефону 8&nbsp;(3852)&nbsp;72-18-90, через <a href="#zpm-warranty-form">форму на&nbsp;этой странице</a> или по&nbsp;e-mail <a href="mailto:info@bzpm.ru">info@bzpm.ru</a>. Укажите контакты, модель оборудования и&nbsp;суть проблемы</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">2</span>
+          <span class="zpm-corp-timeline__badge-label">Информация</span>
+          <h3 class="zpm-corp-timeline__title">Сбор информации</h3>
+          <p class="zpm-corp-timeline__text">Менеджер уточняет обстоятельства, запрашивает документы на&nbsp;покупку, паспорт изделия при наличии, описание и&nbsp;— при необходимости — фото или видео дефекта</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">3</span>
+          <span class="zpm-corp-timeline__badge-label">Диагностика</span>
+          <h3 class="zpm-corp-timeline__title">Уточнение и&nbsp;диагностика</h3>
+          <p class="zpm-corp-timeline__text">Специалисты завода анализируют предоставленные данные. При необходимости согласуется осмотр оборудования — формат и&nbsp;место осмотра обсуждаются с&nbsp;вами</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">4</span>
+          <span class="zpm-corp-timeline__badge-label">Решение</span>
+          <h3 class="zpm-corp-timeline__title">Решение по&nbsp;обращению</h3>
+          <p class="zpm-corp-timeline__text">По&nbsp;результатам проверки сообщается, относится&nbsp;ли неисправность к&nbsp;гарантийному случаю, и&nbsp;какой вариант урегулирования применим в&nbsp;вашей ситуации</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">5</span>
+          <span class="zpm-corp-timeline__badge-label">Исполнение</span>
+          <h3 class="zpm-corp-timeline__title">Исполнение</h3>
+          <p class="zpm-corp-timeline__text">При подтверждённом заводском дефекте выполняется согласованное гарантийное устранение. Конкретный формат — ремонт, иные действия по&nbsp;регламенту для вашей поставки — менеджер фиксирует после диагностики</p>
+        </li>
+      </ol>
+
+      <p class="zpm-warranty-section__note">На&nbsp;каждом этапе вы&nbsp;получаете понятную обратную связь: что уже принято, что требуется от&nbsp;вас и&nbsp;какой шаг следует дальше.</p>
+      <p class="zpm-warranty-section__helper">Сроки рассмотрения и&nbsp;устранения зависят от&nbsp;характера неисправности, модели и&nbsp;полноты переданных данных. Конкретные ориентиры по&nbsp;вашему обращению сообщит менеджер — без заранее зафиксированных на&nbsp;сайте гарантий сроков реакции.</p>
+      <p class="zpm-warranty-process__pointer">Вопросы по&nbsp;доставке оборудования при отгрузке от&nbsp;завода — на&nbsp;странице <a href="/delivery">Доставка</a>. Логистика при гарантийном обращении, если потребуется перемещение оборудования, согласуется отдельно с&nbsp;менеджером.</p>
+    </div>
+  </section>
+
+  {# BLOCK 04 — Verification cases #}
+  <section class="zpm-warranty-section zpm-warranty-verification" id="zpm-warranty-verification" aria-labelledby="zpm-warranty-verification-title">
+    <div class="container">
+      <h2 class="zpm-warranty-section__title section-title__like-h3" id="zpm-warranty-verification-title">Когда может потребоваться дополнительная проверка</h2>
+      <p class="zpm-warranty-section__intro">Не&nbsp;каждая неисправность относится к&nbsp;гарантии производителя. Часть ситуаций требует дополнительного осмотра или уточнения обстоятельств — это обычная практика, а&nbsp;не&nbsp;отказ «в&nbsp;лоб». Задача проверки — корректно определить причину и&nbsp;подобрать справедливое решение.</p>
+
+      <p class="zpm-warranty-verification__lead">Дополнительная проверка может понадобиться, если:</p>
+      <ul class="zpm-warranty-verification__list">
+        <li><strong>есть признаки механического повреждения</strong> — удары, деформация, следы неосторожного обращения при транспортировке или на&nbsp;объекте;</li>
+        <li><strong>нарушены правила эксплуатации</strong> — оборудование использовалось не&nbsp;по&nbsp;инструкции производителя или вне заявленного назначения;</li>
+        <li><strong>есть следы самостоятельного вмешательства</strong> — разборка, ремонт или замена узлов без согласования с&nbsp;заводом;</li>
+        <li><strong>повреждены заводские пломбы или маркировка</strong> — если они предусмотрены на&nbsp;изделии;</li>
+        <li><strong>зафиксировано воздействие влаги, загрязнений или посторонних предметов</strong> — вне условий, описанных в&nbsp;документации;</li>
+        <li><strong>неполный комплект документов</strong> — требуется уточнить происхождение поставки, дату передачи или конфигурацию изделия;</li>
+        <li><strong>оборудование модифицировано</strong> — в&nbsp;том числе нестандартные доработки после поставки; для изделий на&nbsp;заказ условия могут отличаться — см.&nbsp;<a href="/custom-equipment">Оборудование на&nbsp;заказ</a>.</li>
+      </ul>
+
+      <p class="zpm-warranty-section__note">Если по&nbsp;итогам проверки случай не&nbsp;относится к&nbsp;гарантийному, менеджер объяснит причину и&nbsp;подскажет возможные варианты дальнейших действий — в&nbsp;том числе платного ремонта или поставки комплектующих, <strong>если</strong> такие услуги доступны для вашей модели. Наличие и&nbsp;условия постгарантийного обслуживания уточняются отдельно.</p>
+      <p class="zpm-warranty-section__helper">Цель проверки — установить фактическую причину неисправности. Мы&nbsp;описываем процесс спокойно и&nbsp;по&nbsp;существу, без обвинительных формулировок: важно разобраться в&nbsp;ситуации и&nbsp;дать вам понятный ответ.</p>
+    </div>
+  </section>
+
+  {# BLOCK 05 — Service outcomes #}
+  <section class="zpm-warranty-section zpm-warranty-outcomes" id="zpm-warranty-outcomes" aria-labelledby="zpm-warranty-outcomes-title">
+    <div class="container">
+      <h2 class="zpm-warranty-section__title section-title__like-h2" id="zpm-warranty-outcomes-title">Что получает заказчик после обращения</h2>
+      <p class="zpm-warranty-section__intro">После обращения важно не&nbsp;только техническое решение, но&nbsp;и&nbsp;предсказуемость: вы&nbsp;понимаете, что происходит, кто с&nbsp;вами на&nbsp;связи и&nbsp;какой итог зафиксирован.</p>
+
+      <div class="zpm-warranty-outcomes__list">
+        <article class="zpm-warranty-outcome">
+          <h3 class="zpm-warranty-outcome__title">Подтверждение приёма обращения</h3>
+          <p class="zpm-warranty-outcome__text">Вы&nbsp;знаете, что заявка зарегистрирована и&nbsp;передана ответственному специалисту</p>
+        </article>
+        <article class="zpm-warranty-outcome">
+          <h3 class="zpm-warranty-outcome__title">Список того, что нужно от&nbsp;вас</h3>
+          <p class="zpm-warranty-outcome__text">Чёткий перечень документов, фото, доступа к&nbsp;оборудованию — без лишних кругов</p>
+        </article>
+        <article class="zpm-warranty-outcome">
+          <h3 class="zpm-warranty-outcome__title">Промежуточные статусы</h3>
+          <p class="zpm-warranty-outcome__text">Сообщения о&nbsp;ходе диагностики и&nbsp;рассмотрения — по&nbsp;согласованному каналу связи</p>
+        </article>
+        <article class="zpm-warranty-outcome">
+          <h3 class="zpm-warranty-outcome__title">Объяснение решения</h3>
+          <p class="zpm-warranty-outcome__text">По&nbsp;итогам проверки — понятная формулировка: гарантийный случай или нет, и&nbsp;почему</p>
+        </article>
+        <article class="zpm-warranty-outcome">
+          <h3 class="zpm-warranty-outcome__title">Согласованный следующий шаг</h3>
+          <p class="zpm-warranty-outcome__text">Если случай гарантийный — что будет сделано и&nbsp;что потребуется от&nbsp;вас; если нет — какие альтернативы возможны</p>
+        </article>
+        <article class="zpm-warranty-outcome">
+          <h3 class="zpm-warranty-outcome__title">Фиксация итога</h3>
+          <p class="zpm-warranty-outcome__text">Результат рассмотрения и&nbsp;выполненные действия оформляются так, чтобы вы&nbsp;могли опереться на&nbsp;них в&nbsp;дальнейшей эксплуатации и&nbsp;отчётности</p>
+        </article>
+      </div>
+
+      <p class="zpm-warranty-outcomes__body">ЗПМ выступает производителем и&nbsp;несёт ответственность за&nbsp;выпускаемое оборудование в&nbsp;рамках применимых гарантийных условий. Вы&nbsp;остаётесь на&nbsp;связи с&nbsp;менеджером завода — без необходимости самостоятельно искать, «куда писать» и&nbsp;какой отдел виноват.</p>
+      <p class="zpm-warranty-section__pointer">Вопросы оплаты поставки, счёта и&nbsp;закрывающих документов по&nbsp;сделке — на&nbsp;странице <a href="/payment-methods">Оплата</a>; они отделены от&nbsp;порядка гарантийного рассмотрения.</p>
+      <p class="zpm-warranty-section__pointer">Адреса, реквизиты и&nbsp;общие формы обратной связи — на&nbsp;странице <a href="/contact/">Контакты</a>.</p>
+    </div>
+  </section>
+
+  {# BLOCK 06 — FAQ #}
+  <section class="zpm-warranty-section zpm-warranty-faq zpm-corp-faq" id="zpm-warranty-faq" aria-labelledby="zpm-warranty-faq-title" data-warranty-faq data-accordion>
+    <div class="container">
+      <h2 class="zpm-warranty-section__title section-title__like-h2" id="zpm-warranty-faq-title">Ответы на&nbsp;частые вопросы</h2>
+      <p class="zpm-warranty-section__intro">Вопросы, которые чаще всего задают закупщики, владельцы предприятий и&nbsp;сервисные специалисты перед обращением по&nbsp;гарантии.</p>
+
+      <div class="zpm-corp-faq__list">
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-1" aria-expanded="false" aria-controls="warranty-faq-panel-1" data-accordion-button>Какой срок гарантии на&nbsp;оборудование ЗПМ?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-1" role="region" aria-labelledby="warranty-faq-btn-1" hidden data-accordion-panel>
+            <p>Единый срок для всех моделей на&nbsp;сайте не&nbsp;опубликован. Срок гарантии зависит от&nbsp;модели, типа поставки и&nbsp;документов на&nbsp;вашу сделку. Менеджер уточнит применимые условия по&nbsp;вашему оборудованию и&nbsp;комплекту документов при обращении.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-2" aria-expanded="false" aria-controls="warranty-faq-panel-2" data-accordion-button>Какие документы нужны для гарантийного обращения?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-2" role="region" aria-labelledby="warranty-faq-btn-2" hidden data-accordion-panel>
+            <p>Как правило — документ, подтверждающий покупку и&nbsp;отгрузку (например, товарная накладная), закрывающие или сопроводительные документы по&nbsp;сделке (акт поставки или выполненных работ), паспорт изделия и&nbsp;гарантийный талон — если он&nbsp;предусмотрен для вашей модели. Точный перечень для вашего случая менеджер сообщит при первичном контакте.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-3" aria-expanded="false" aria-controls="warranty-faq-panel-3" data-accordion-button>Нужно&nbsp;ли везти оборудование на&nbsp;завод?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-3" role="region" aria-labelledby="warranty-faq-btn-3" hidden data-accordion-panel>
+            <p>Не&nbsp;всегда. Сначала менеджер собирает информацию о&nbsp;неисправности и&nbsp;может запросить фото или видео. Необходимость осмотра, перемещения оборудования и&nbsp;способ организации логистики согласуются индивидуально после первичного разбора. Общий порядок исходящей доставки от&nbsp;завода описан на&nbsp;странице <a href="/delivery">Доставка</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-4" aria-expanded="false" aria-controls="warranty-faq-panel-4" data-accordion-button>Купил у&nbsp;дилера — куда обращаться по&nbsp;гарантии?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-4" role="region" aria-labelledby="warranty-faq-btn-4" hidden data-accordion-panel>
+            <p>Зависит от&nbsp;условий вашей покупки и&nbsp;договорённостей в&nbsp;канале поставки. Обратитесь к&nbsp;продавцу, у&nbsp;которого приобретали оборудование, или свяжитесь с&nbsp;заводом — менеджер подскажет маршрут обращения для вашего случая. Кратко о&nbsp;работе с&nbsp;партнёрами — на&nbsp;странице <a href="/dealers">Дилерам</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-5" aria-expanded="false" aria-controls="warranty-faq-panel-5" data-accordion-button>Какая гарантия на&nbsp;оборудование, изготовленное на&nbsp;заказ?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-5" role="region" aria-labelledby="warranty-faq-btn-5" hidden data-accordion-panel>
+            <p>Условия для нестандартных и&nbsp;индивидуальных изделий могут отличаться от&nbsp;серийного каталога и&nbsp;фиксируются при согласовании заказа и&nbsp;в&nbsp;документах на&nbsp;поставку. Подробнее о&nbsp;порядке изготовления — на&nbsp;странице <a href="/custom-equipment">Оборудование на&nbsp;заказ</a>; применимые гарантийные условия по&nbsp;вашему изделию уточнит менеджер.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-6" aria-expanded="false" aria-controls="warranty-faq-panel-6" data-accordion-button>Кто отвечает за&nbsp;ремонт — завод, дилер или сторонний сервис?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-6" role="region" aria-labelledby="warranty-faq-btn-6" hidden data-accordion-panel>
+            <p>Модель обслуживания зависит от&nbsp;того, как вы&nbsp;приобрели оборудование и&nbsp;какие условия действуют для вашей поставки. Производитель рассматривает обращения по&nbsp;выпускаемому оборудованию и&nbsp;координирует диагностику. Конкретный исполнитель и&nbsp;порядок взаимодействия менеджер объяснит после уточнения документов и&nbsp;канала покупки.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-7" aria-expanded="false" aria-controls="warranty-faq-panel-7" data-accordion-button>Заменят оборудование или отремонтируют?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-7" role="region" aria-labelledby="warranty-faq-btn-7" hidden data-accordion-panel>
+            <p>Формат урегулирования определяется после диагностики и&nbsp;подтверждения характера неисправности. При подтверждённом заводском дефекте рассматривается гарантийное устранение — в&nbsp;том виде, который соответствует условиям вашей поставки. Детали по&nbsp;ремонту или иным вариантам решения менеджер сообщит по&nbsp;итогам проверки; заранее зафиксированной на&nbsp;сайте политики замены нет.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="warranty-faq-btn-8" aria-expanded="false" aria-controls="warranty-faq-panel-8" data-accordion-button>С&nbsp;какого момента начинается гарантия?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="warranty-faq-panel-8" role="region" aria-labelledby="warranty-faq-btn-8" hidden data-accordion-panel>
+            <p>Стартовое событие — отгрузка, передача покупателю, ввод в&nbsp;эксплуатацию или иное — зависит от&nbsp;модели и&nbsp;документов на&nbsp;вашу сделку. На&nbsp;сайте не&nbsp;опубликовано единое правило для всех позиций каталога. Менеджер уточнит дату и&nbsp;основание начала гарантии по&nbsp;вашим закрывающим и&nbsp;сопроводительным документам.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# BLOCK 07 + FORM — Commercial Trust CTA #}
+  <section class="zpm-warranty-section zpm-warranty-cta zpm-commercial-trust" id="zpm-warranty-cta" aria-labelledby="zpm-warranty-cta-title" data-warranty-cta>
+    <div class="container">
+      <div class="zpm-commercial-trust__card">
+        <div class="zpm-commercial-trust__wrap">
+          <div class="zpm-commercial-trust__info">
+            <div class="zpm-commercial-trust__header">
+              <p class="zpm-commercial-trust__label">Гарантийная поддержка</p>
+              <h2 class="zpm-commercial-trust__title" id="zpm-warranty-cta-title">Связаться по&nbsp;вопросу гарантии</h2>
+              <p class="zpm-commercial-trust__lead">Опишите неисправность и&nbsp;оставьте контакты — менеджер завода примет обращение, уточнит модель и&nbsp;документы на&nbsp;покупку и&nbsp;подскажет следующий шаг. Не&nbsp;обязательно заранее знать все формальности: мы&nbsp;поможем собрать информацию для рассмотрения.</p>
+            </div>
+            <div class="zpm-warranty-cta__actions">
+              <a class="btn btn_dark zpm-warranty-cta__primary" href="#zpm-warranty-form">Отправить обращение</a>
+              <a class="zpm-warranty-cta__link" href="/contact/">Контакты</a>
+              <a class="zpm-warranty-cta__link" href="/about">О&nbsp;компании и&nbsp;производстве</a>
+            </div>
+            <div class="zpm-warranty-cta__contacts">
+              <a class="zpm-warranty-cta__phone" href="tel:+73852721890">Позвонить: 8&nbsp;(3852)&nbsp;72-18-90</a>
+              <a class="zpm-warranty-cta__email" href="mailto:info@bzpm.ru">info@bzpm.ru</a>
+            </div>
+            <p class="zpm-warranty-cta__schedule">Пн–Пт, с&nbsp;9:00 до&nbsp;18:00 (время Барнаула, UTC+7)</p>
+            <p class="zpm-warranty-cta__pointers">Если вы&nbsp;партнёр и&nbsp;передаёте обращение от&nbsp;клиента — кратко о&nbsp;канале: <a href="/dealers">Дилерам</a>.</p>
+          </div>
+          <div class="zpm-commercial-trust__form-wrap">
+            <div class="zpm-decoration-with-logo">
+              <img src="/assets/img/decor-logo.svg" alt="" width="120" height="120" loading="lazy" />
+            </div>
+            <div class="zpm-commercial-trust__form-col">
+              <div class="zpm-commercial-trust__form-card" id="zpm-warranty-form">
+                <h3 class="zpm-commercial-trust__form-title">Обращение по&nbsp;гарантии</h3>
+                <p class="zpm-commercial-trust__form-note">Заполните форму — менеджер свяжется с&nbsp;вами, уточнит обстоятельства неисправности и&nbsp;подскажет, какие документы подготовить для рассмотрения обращения.</p>
+                <form class="zpm-form zpm-warranty-form" action="#" method="post" novalidate>
+                  <div class="zpm-form__grid">
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="warrantyName">Имя<em>*</em></label>
+                      <input class="zpm-form__input" id="warrantyName" name="name" type="text" placeholder="Ваше имя" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="warrantyPhone">Номер телефона<em>*</em></label>
+                      <div class="zpm-form__phone">
+                        <input class="zpm-form__input" id="warrantyPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+                      </div>
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="warrantyEmail">E-mail<em>*</em></label>
+                      <input class="zpm-form__input" id="warrantyEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="warrantyEquipmentModel">Модель оборудования<em>*</em></label>
+                      <input class="zpm-form__input" id="warrantyEquipmentModel" name="equipment_model" type="text" placeholder="Например: Стол производственный СП-1200/600" required />
+                    </div>
+                    <div class="zpm-form__field">
+                      <label class="zpm-form__label" for="warrantyPurchaseDate">Дата покупки</label>
+                      <input class="zpm-form__input" id="warrantyPurchaseDate" name="purchase_date" type="text" placeholder="ДД.ММ.ГГГГ" />
+                    </div>
+                    <div class="zpm-form__field zpm-form__field--full">
+                      <label class="zpm-form__label" for="warrantyComment">Описание неисправности<em>*</em></label>
+                      <textarea class="zpm-form__textarea" id="warrantyComment" name="comment" rows="4" placeholder="Что произошло, когда заметили, при каких условиях работает оборудование" required></textarea>
+                    </div>
+                    <div class="zpm-form__field zpm-form__field--full">
+                      <p class="zpm-warranty-form__helper">Укажите рабочие контакты и&nbsp;максимально точное описание неисправности. Если есть документы на&nbsp;покупку и&nbsp;фото дефекта — менеджер попросит направить их&nbsp;удобным способом после первичного звонка или письма.</p>
+                    </div>
+                    <div class="zpm-form__field">
+                      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+                    </div>
+                    <div class="zpm-form__actions">
+                      <button class="btn btn_dark zpm-form__submit" type="submit">Отправить обращение</button>
+                      <label class="zpm-form__agree">
+                        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+                        <span class="zpm-form__agree-text">Я&nbsp;даю согласие на&nbsp;обработку своих персональных данных, обратный звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a>.</span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{ footer }}
