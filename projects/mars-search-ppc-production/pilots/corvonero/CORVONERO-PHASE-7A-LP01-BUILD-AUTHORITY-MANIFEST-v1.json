@@ -1,0 +1,132 @@
+{
+  "manifest_id": "corvonero-phase-7a-lp01-build-authority-manifest-v1",
+  "landing_page_id": "LP-01",
+  "phase": "7A",
+  "generated_at": "2026-06-29T20:00:00.000Z",
+  "builder": "Roman",
+  "platform": "Tilda",
+  "base_domain": "lk.corvonero.ru",
+  "copy_change_policy": "PROHIBITED_WITHOUT_OPERATOR_APPROVAL",
+  "authority": {
+    "production_copy": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3",
+    "message_architecture": "CORVONERO-PHASE-6.6-LP01-FINAL-MESSAGE-ARCHITECTURE-v3",
+    "faq": "CORVONERO-PHASE-6.6-LP01-FINAL-FAQ-v3",
+    "tilda_handoff": "CORVONERO-PHASE-6.6-LP01-FINAL-TILDA-HANDOFF-v3",
+    "copy_approval": "CORVONERO-PHASE-6.6-LP01-FINAL-COPY-APPROVAL-v1",
+    "checkpoint_commit": "4472be53ee6475665fa5c37ebd46f430f919e8bf",
+    "checkpoint_tag": "corvonero-lp01-final-copy-v3-2026-06"
+  },
+  "staging_model": {
+    "mode": "DRAFT_STAGING_NOT_PUBLICLY_RELEASED",
+    "url_direction": "/programmist-1s/",
+    "full_url_direction": "https://lk.corvonero.ru/programmist-1s/",
+    "tilda_draft_page_id": "RECORD_AFTER_BUILD",
+    "indexation_staging": "disabled",
+    "publication_authorized": false
+  },
+  "seo": {
+    "url": "/programmist-1s/",
+    "title": "Программист 1С в Новосибирске — услуги специалиста | Корво Неро",
+    "description": "Подключим программиста 1С для доработки, исправления ошибок, интеграций и сопровождения. Удалённо по России, выезд в Новосибирске. Стоимость от 3 000 ₽/час. Корво Неро.",
+    "h1": "Программист 1С для доработки, настройки и исправления ошибок",
+    "canonical": "self_at_publish",
+    "og_image": "implementation_input"
+  },
+  "blocks": [
+    {"order": 1, "id": "header", "heading": null},
+    {"order": 2, "id": "first_screen", "h1": "Программист 1С для доработки, настройки и исправления ошибок"},
+    {"order": 3, "id": "audience", "h2": "Услуги программиста 1С для компаний и ИП"},
+    {"order": 4, "id": "services", "h2": "Что делает программист 1С"},
+    {"order": 5, "id": "typical_tasks", "h2": "Типовые задачи"},
+    {"order": 6, "id": "configurations", "h2": "Конфигурации 1С"},
+    {"order": 7, "id": "work_format", "h2": "Формат работы"},
+    {"order": 8, "id": "pricing", "h2": "Стоимость работы программиста 1С"},
+    {"order": 9, "id": "process", "h2": "Как мы работаем"},
+    {"order": 10, "id": "trust", "h2": "Почему обращаются в Корво Неро"},
+    {"order": 11, "id": "faq", "h2": "Частые вопросы"},
+    {"order": 12, "id": "contacts_messengers", "h2": "Связаться с нами"},
+    {"order": 13, "id": "form", "h2": "Оставить заявку на услуги программиста 1С"},
+    {"order": 14, "id": "final_cta", "h2": "Обсудим вашу задачу в 1С"},
+    {"order": 15, "id": "footer", "heading": null}
+  ],
+  "cta_labels": ["Обсудить задачу", "Получить оценку", "Заказать звонок"],
+  "pricing": {
+    "rate": "от 3 000 ₽ в час",
+    "minimum": "Минимальный заказ — 2 часа",
+    "hourly_from_rub": 3000,
+    "minimum_hours": 2
+  },
+  "configurations": ["УТ", "УНФ", "Розница", "КА", "БП"],
+  "geography": {
+    "remote": "по всей России",
+    "onsite": "в пределах Новосибирска",
+    "other_cities": "удалённо"
+  },
+  "form": {
+    "fields": [
+      {"id": "name", "label": "Имя", "required": false},
+      {"id": "phone", "label": "Телефон", "required": true}
+    ],
+    "heading": "Оставить заявку на услуги программиста 1С",
+    "supporting_text": "Оставьте телефон — уточним задачу и сориентируем по стоимости.",
+    "submit_label": "Заказать звонок",
+    "live_submission_staging": false
+  },
+  "phone": {
+    "display": "+7 (383) 390-29-28",
+    "tel": "tel:+73833902928"
+  },
+  "messengers": {
+    "channels": ["MAX", "Telegram", "WhatsApp"],
+    "urls_status": "SAFE_UNKNOWN",
+    "staging_rule": "labels_icons_only_links_disabled_or_awaiting_input"
+  },
+  "footer": {
+    "brand": "Центр автоматизации «Корво Неро»",
+    "phone": "+7 (383) 390-29-28",
+    "legal_entity_visible": "ИП Никифоров Роман Вадимович"
+  },
+  "prohibited": [
+    "testimonials",
+    "fake_cases",
+    "client_logos",
+    "partner_badges",
+    "certificates",
+    "invented_counters",
+    "invented_guarantees",
+    "countdowns",
+    "popups",
+    "license_catalog",
+    "unrelated_services",
+    "vat_mention",
+    "official_1c_partner_claims",
+    "fabricated_messenger_urls",
+    "extra_form_fields",
+    "visible_placeholder_tokens",
+    "corvonero_ru_as_landing_url"
+  ],
+  "analytics_proposed_events": [
+    "lp01_phone_click",
+    "lp01_cta_discuss_click",
+    "lp01_cta_estimate_click",
+    "lp01_callback_submit",
+    "lp01_max_click",
+    "lp01_telegram_click",
+    "lp01_whatsapp_click"
+  ],
+  "campaign": {
+    "id": "CA-01",
+    "semantic_mapping": "404_ACCEPT",
+    "missing_phrases": 0,
+    "duplicate_phrases": 0
+  },
+  "authorization": {
+    "staging_build": true,
+    "publication": false,
+    "advertising": false,
+    "dns_changes": false,
+    "homepage_replacement": false,
+    "live_form_submissions": false
+  },
+  "implementation_inputs_ref": "CORVONERO-PHASE-7A-LP01-IMPLEMENTATION-INPUTS-v1"
+}

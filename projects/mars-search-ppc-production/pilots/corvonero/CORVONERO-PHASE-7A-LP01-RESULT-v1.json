@@ -1,0 +1,52 @@
+{
+  "result_id": "corvonero-phase-7a-lp01-result-v1",
+  "phase": "7A",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T20:00:00.000Z",
+  "branch": "mars/canonical-post-recovery",
+  "head_at_task": "1de97860853d6c1ef60be7cd29bd46483ef56697",
+  "checkpoint_commit": "4472be53ee6475665fa5c37ebd46f430f919e8bf",
+  "checkpoint_tag": "corvonero-lp01-final-copy-v3-2026-06",
+  "verdict": {
+    "phase_7a_preparation": "PASS_LP01_TILDA_STAGING_BUILD_PACKAGE_READY",
+    "lp01_copy": "FINAL",
+    "tilda_build": "AUTHORIZED_UNPUBLISHED_STAGING_ONLY",
+    "publication": "NOT_AUTHORIZED",
+    "advertising": "NOT_AUTHORIZED"
+  },
+  "preflight": {
+    "branch_ok": true,
+    "ancestor_ok": true,
+    "tag_present": true,
+    "v3_artefacts_exist": true,
+    "phase_66_authority_unmodified": true,
+    "website_changes": 0,
+    "corvonero_conflicts": false,
+    "tilda_access_in_session": false
+  },
+  "deliverables": [
+    "CORVONERO-PHASE-7A-LP01-BUILD-AUTHORITY-MANIFEST-v1",
+    "CORVONERO-PHASE-7A-LP01-ROMAN-BUILD-CHECKLIST-v1",
+    "CORVONERO-PHASE-7A-LP01-STAGING-QA-CHECKLIST-v1",
+    "CORVONERO-PHASE-7A-LP01-IMPLEMENTATION-INPUTS-v1",
+    "CORVONERO-PHASE-7A-LP01-OPERATOR-REVIEW-PACKET-v1",
+    "REPORT-corvonero-phase-7a-lp01-tilda-staging-preparation-v1"
+  ],
+  "authority_preserved": {
+    "production_copy_v3": "FINAL_UNCHANGED",
+    "message_architecture_v3": "FINAL_UNCHANGED",
+    "faq_v3": "FINAL_UNCHANGED",
+    "tilda_handoff_v3": "FINAL_UNCHANGED",
+    "copy_approval_v1": "APPROVED_UNCHANGED"
+  },
+  "staging_build_status": {
+    "tilda_draft_created": false,
+    "operator_review_packet_completed": false,
+    "screenshots_captured": false,
+    "build_complete_claim_valid": false
+  },
+  "git": {
+    "commit": false,
+    "push": false
+  }
+}

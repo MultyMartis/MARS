@@ -1,0 +1,80 @@
+{
+  "qa_checklist_id": "corvonero-phase-7a-lp01-staging-qa-checklist-v1",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T20:00:00.000Z",
+  "authority_ref": "CORVONERO-PHASE-7A-LP01-BUILD-AUTHORITY-MANIFEST-v1",
+  "sections": {
+    "content": [
+      {"id": "C-01", "check": "H1 exact match", "expected": "Программист 1С для доработки, настройки и исправления ошибок"},
+      {"id": "C-02", "check": "8 service scope bullets"},
+      {"id": "C-03", "check": "6 typical task scenarios"},
+      {"id": "C-04", "check": "5 configurations UT UNF Roznitsa KA BP"},
+      {"id": "C-05", "check": "Price ot 3000 rub hour"},
+      {"id": "C-06", "check": "Minimum order 2 hours"},
+      {"id": "C-07", "check": "Remote po vsey Rossii"},
+      {"id": "C-08", "check": "Onsite v predelakh Novosibirska"},
+      {"id": "C-09", "check": "9 FAQ items from FAQ-v3"},
+      {"id": "C-10", "check": "3 CTA labels exact"},
+      {"id": "C-11", "check": "No extra CTA wording"},
+      {"id": "C-12", "check": "Footer legal IP Nikiforov"},
+      {"id": "C-13", "check": "Footer brand Korvo Nero"},
+      {"id": "C-14", "check": "No VAT mention"},
+      {"id": "C-15", "check": "No fake cases testimonials badges"},
+      {"id": "C-16", "check": "15 block order"},
+      {"id": "C-17", "check": "Final CTA H2 Obsudim vashu zadachu"},
+      {"id": "C-18", "check": "Pricing H2 Stoimost raboty programmista 1S"}
+    ],
+    "functional": [
+      {"id": "F-01", "check": "Phone tel link"},
+      {"id": "F-02", "check": "Phone above fold"},
+      {"id": "F-03", "check": "Anchor navigation"},
+      {"id": "F-04", "check": "Form fields name optional phone required"},
+      {"id": "F-05", "check": "Submit label Zakazat zvonok"},
+      {"id": "F-06", "check": "No extra form fields"},
+      {"id": "F-07", "check": "Messenger links safe disabled"},
+      {"id": "F-08", "check": "Three messenger labels visible"},
+      {"id": "F-09", "check": "No live form submission"},
+      {"id": "F-10", "check": "Page unpublished"},
+      {"id": "F-11", "check": "FAQ accordion works"}
+    ],
+    "visual": [
+      {"id": "V-01", "check": "Desktop layout"},
+      {"id": "V-02", "check": "Tablet layout"},
+      {"id": "V-03", "check": "Mobile 320px"},
+      {"id": "V-04", "check": "H1 wrapping"},
+      {"id": "V-05", "check": "Configuration grid mobile"},
+      {"id": "V-06", "check": "Pricing emphasis"},
+      {"id": "V-07", "check": "Remote onsite separation"},
+      {"id": "V-08", "check": "FAQ open state"},
+      {"id": "V-09", "check": "Form mobile usability"},
+      {"id": "V-10", "check": "Footer mobile"},
+      {"id": "V-11", "check": "Consistent spacing"}
+    ],
+    "safety": [
+      {"id": "S-01", "check": "Unpublished"},
+      {"id": "S-02", "check": "Indexing disabled"},
+      {"id": "S-03", "check": "No ad traffic"},
+      {"id": "S-04", "check": "Homepage unchanged"},
+      {"id": "S-05", "check": "corvonero.ru unchanged"},
+      {"id": "S-06", "check": "No global style drift"},
+      {"id": "S-07", "check": "No unknown scripts"},
+      {"id": "S-08", "check": "No production analytics changes"}
+    ],
+    "seo_staging": [
+      {"id": "SEO-01", "check": "URL direction programmist-1s"},
+      {"id": "SEO-02", "check": "Title prepared"},
+      {"id": "SEO-03", "check": "Description prepared"},
+      {"id": "SEO-04", "check": "Indexation off"},
+      {"id": "SEO-05", "check": "OG title description prepared"},
+      {"id": "SEO-06", "check": "OG image awaiting input"},
+      {"id": "SEO-07", "check": "Favicon confirmed"},
+      {"id": "SEO-08", "check": "Heading hierarchy"}
+    ]
+  },
+  "result_template": {
+    "reviewer": null,
+    "date": null,
+    "overall": null,
+    "blockers": []
+  }
+}

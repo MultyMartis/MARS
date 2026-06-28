@@ -1,0 +1,57 @@
+{
+  "checkpoint_id": "corvonero-pre-export-production-checkpoint-v1",
+  "generated_at": "2026-06-28T21:20:31.947403+00:00",
+  "git": {
+    "branch": "mars/canonical-post-recovery",
+    "pre_commit_head": "c5a5e096268ce506fdb5a102970c620c6eb46ae9",
+    "prior_checkpoint_commit": "4472be53ee6475665fa5c37ebd46f430f919e8bf",
+    "prior_checkpoint_tag": "corvonero-lp01-final-copy-v3-2026-06",
+    "planned_tag": "corvonero-pre-export-production-2026-06"
+  },
+  "phase_7a_included": [
+    "CORVONERO-PHASE-7A-LP01-BUILD-AUTHORITY-MANIFEST-v1",
+    "CORVONERO-PHASE-7A-LP01-ROMAN-BUILD-CHECKLIST-v1",
+    "CORVONERO-PHASE-7A-LP01-STAGING-QA-CHECKLIST-v1",
+    "CORVONERO-PHASE-7A-LP01-IMPLEMENTATION-INPUTS-v1",
+    "CORVONERO-PHASE-7A-LP01-OPERATOR-REVIEW-PACKET-v1",
+    "CORVONERO-PHASE-7A-LP01-RESULT-v1",
+    "REPORT-corvonero-phase-7a-lp01-tilda-staging-preparation-v1"
+  ],
+  "export_readiness_matrix": "CORVONERO-EXPORT-READINESS-MATRIX-v1",
+  "semantic_boundary": {
+    "canonical_total": 2368,
+    "assessed": 1599,
+    "unprocessed_backlog": 769,
+    "partial_semantic_authority": true,
+    "serp_queries_captured": 5,
+    "serp_queries_planned": 10
+  },
+  "lp01_final_copy": {
+    "state": "FINAL v3 — operator approved",
+    "authority_commit": "4472be53ee6475665fa5c37ebd46f430f919e8bf",
+    "authority_tag": "corvonero-lp01-final-copy-v3-2026-06",
+    "docx_export": "READY_FOR_DOCX_EXPORT"
+  },
+  "lp02_to_lp06": {
+    "LP-02": "REQUIRE_FINAL_COPY",
+    "LP-03": "REQUIRE_FINAL_COPY",
+    "LP-04": "REQUIRE_FINAL_COPY",
+    "LP-05": "REQUIRE_FINAL_COPY",
+    "LP-06": "DEFERRED / REQUIRE_FINAL_COPY"
+  },
+  "ads_state": "NOT_CREATED",
+  "commander_state": "NOT_CREATED",
+  "research_workbook_state": "READY_FOR_PARTIAL-COVERAGE XLSX EXPORT",
+  "website_unchanged": true,
+  "advertising_not_started": true,
+  "inventory_reference": "projects/mars-search-ppc-production/reports/REPORT-corvonero-current-state-pre-export-inventory-v1.md",
+  "canonical_inventory_file_count": 554,
+  "excluded_unrelated_wip": [
+    "workspaces/fp-0002-*",
+    "projects/ocpilot/*",
+    "workspaces/website-factory-operations/*",
+    "unreferenced ORCA live-model reports",
+    "projects/projects/",
+    ".recovery-temp/"
+  ]
+}

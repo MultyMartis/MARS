@@ -1,0 +1,70 @@
+{
+  "inputs_id": "corvonero-phase-7a-lp01-implementation-inputs-v1",
+  "landing_page_id": "LP-01",
+  "generated_at": "2026-06-29T20:00:00.000Z",
+  "messengers": [
+    {"channel": "MAX", "url": "SAFE_UNKNOWN", "staging": "label_icon_link_disabled", "verified": false, "publication_required": true},
+    {"channel": "Telegram", "url": "SAFE_UNKNOWN", "staging": "label_icon_link_disabled", "verified": false, "publication_required": true},
+    {"channel": "WhatsApp", "url": "SAFE_UNKNOWN", "staging": "label_icon_link_disabled", "verified": false, "publication_required": true}
+  ],
+  "form_legal": {
+    "privacy_policy_url": {"value": "SAFE_UNKNOWN", "verified": false, "required_at_publish": true},
+    "consent_checkbox_text": {"value": "SAFE_UNKNOWN", "verified": false, "required_at_publish": true},
+    "form_recipient": {"value": "SAFE_UNKNOWN", "verified": false, "staging_live_submission": false},
+    "success_message": {
+      "authority": "implementation_text_only",
+      "draft": "Спасибо! Мы получили заявку и перезвоним по указанному телефону."
+    },
+    "error_message": {
+      "authority": "implementation_text_only",
+      "draft": "Не удалось отправить заявку. Проверьте телефон или позвоните нам: +7 (383) 390-29-28."
+    },
+    "spam_protection": {"value": "SAFE_UNKNOWN", "required_at_publish": true},
+    "test_submission_authorized_phase_7a": false
+  },
+  "legal_entity": {
+    "atlas_ref": "LE-0006",
+    "evidence_level": "E0_partial",
+    "evidence_source": "projects/atlas/population/ATLAS-CORVONERO-ORGANIZATION-REGISTER-v1.md",
+    "fields": {
+      "legal_name": {"canonical": "ИП Никифоров Роман Вадимович", "visible_on_lp01": true},
+      "inn": {"canonical": "540200831636", "visible_on_lp01_staging": false},
+      "ogrnip": {"canonical": "324547600100482", "visible_on_lp01_staging": false},
+      "registration_date": {"canonical": "2024-06-14", "visible_on_page": false},
+      "phone": {"canonical": "+7 (383) 390-29-28", "visible_on_lp01": true},
+      "brand": {"canonical": "Центр автоматизации «Корво Неро»", "visible_on_lp01": true}
+    },
+    "vat_mention": "prohibited"
+  },
+  "seo_assets": {
+    "og_image": {"value": "SAFE_UNKNOWN", "verified": false},
+    "favicon": {"value": "site_default", "verified": false},
+    "canonical_url": "/programmist-1s/",
+    "indexation_staging": "disabled",
+    "sitemap_staging": "excluded"
+  },
+  "tilda": {
+    "draft_page_name": "RECORD_AFTER_BUILD",
+    "page_id": "RECORD_AFTER_BUILD",
+    "preview_method": "editor_preview_or_private_url",
+    "builder_access": "operator_provided"
+  },
+  "analytics": {
+    "install_in_phase_7a": false,
+    "proposed_events": [
+      "lp01_phone_click",
+      "lp01_cta_discuss_click",
+      "lp01_cta_estimate_click",
+      "lp01_callback_submit",
+      "lp01_max_click",
+      "lp01_telegram_click",
+      "lp01_whatsapp_click"
+    ],
+    "call_tracking_number": "SAFE_UNKNOWN"
+  },
+  "protected_surfaces": [
+    "https://lk.corvonero.ru/",
+    "https://corvonero.ru/",
+    "tilda_global_styles_other_pages"
+  ]
+}

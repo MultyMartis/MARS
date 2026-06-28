@@ -1,0 +1,125 @@
+{
+  "matrix_id": "corvonero-export-readiness-matrix-v1",
+  "generated_at": "2026-06-28T21:20:31.941037+00:00",
+  "prior_checkpoint": {
+    "commit": "4472be53ee6475665fa5c37ebd46f430f919e8bf",
+    "tag": "corvonero-lp01-final-copy-v3-2026-06"
+  },
+  "semantic_boundary": {
+    "canonical_total": 2368,
+    "assessed": 1599,
+    "unprocessed_backlog": 769,
+    "partial_semantic_authority": true,
+    "serp_queries_captured": 5,
+    "serp_queries_planned": 10
+  },
+  "deliverables": {
+    "D1_advertisements_word": {
+      "id": "D1",
+      "name": "Advertisements Word document",
+      "readiness": "NOT_READY — ADS_NOT_CREATED",
+      "required_columns": [
+        "start phrase",
+        "campaign",
+        "ad group",
+        "headline",
+        "description",
+        "landing-page URL"
+      ],
+      "available_sources": [
+        "CORVONERO-PHASE-6.2-GROUP-TO-LP-MAP-v1.json",
+        "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json",
+        "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3 (LP-01 only)"
+      ],
+      "missing_components": [
+        "ad headlines and descriptions not authored",
+        "final published landing-page URLs (staging only for LP-01)",
+        "negative keyword import set for Commander",
+        "ad extensions profile",
+        "multi-LP URL mapping for LP-02..LP-06"
+      ]
+    },
+    "D2_landing_page_word_roman": {
+      "id": "D2",
+      "name": "Landing-page Word files for Roman",
+      "pages": {
+        "LP-01": {
+          "readiness": "READY_FOR_DOCX_EXPORT",
+          "authority": [
+            "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3",
+            "CORVONERO-PHASE-7A-LP01-BUILD-AUTHORITY-MANIFEST-v1"
+          ]
+        },
+        "LP-02": {
+          "readiness": "REQUIRE_FINAL_COPY"
+        },
+        "LP-03": {
+          "readiness": "REQUIRE_FINAL_COPY"
+        },
+        "LP-04": {
+          "readiness": "REQUIRE_FINAL_COPY"
+        },
+        "LP-05": {
+          "readiness": "REQUIRE_FINAL_COPY"
+        },
+        "LP-06": {
+          "readiness": "DEFERRED / REQUIRE_FINAL_COPY"
+        }
+      }
+    },
+    "D3_yandex_direct_commander_excel": {
+      "id": "D3",
+      "name": "Yandex Direct Commander Excel",
+      "readiness": "NOT_READY — REQUIRES ADS, FINAL URLS, NEGATIVES, EXTENSIONS AND IMPORT PROFILE",
+      "required_components": [
+        "campaign structure",
+        "ad groups",
+        "keywords / start phrases",
+        "ads (headlines + descriptions)",
+        "final landing URLs",
+        "negative keywords",
+        "extensions",
+        "Commander import profile"
+      ],
+      "available": [
+        "partial semantic accept registry (1599 phrases)",
+        "campaign architecture CA-01..CA-06 outlines",
+        "LP-01 staging URL direction only (unpublished)"
+      ],
+      "missing": [
+        "authored ads",
+        "published URLs",
+        "Commander workbook",
+        "extensions pack"
+      ]
+    },
+    "D4_consolidated_research_excel": {
+      "id": "D4",
+      "name": "Consolidated Research Excel",
+      "readiness": "READY_FOR_PARTIAL-COVERAGE XLSX EXPORT",
+      "limitations": {
+        "serp": "5 / 10 queries",
+        "assessed_semantics": "1599 / 2368",
+        "unprocessed_backlog": 769
+      },
+      "available_data": [
+        "Wordstat (MIG source ledger)",
+        "normalized corpus",
+        "canonical corpus / phrase registry",
+        "semantic verdicts (accept/reject/abstain)",
+        "campaign allocation / group-to-LP map",
+        "SERP evidence (partial)",
+        "competitor/search observations",
+        "LP research requirements",
+        "risk and coverage notes"
+      ]
+    }
+  },
+  "website": {
+    "changed": false,
+    "tilda_build": "NOT_STARTED"
+  },
+  "advertising": {
+    "started": false
+  }
+}
