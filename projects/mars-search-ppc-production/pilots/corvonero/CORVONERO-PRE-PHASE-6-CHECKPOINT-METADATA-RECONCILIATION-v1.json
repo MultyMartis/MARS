@@ -1,0 +1,35 @@
+{
+    "reconciliation_id": "CORVONERO-PRE-PHASE-6-CHECKPOINT-METADATA-RECONCILIATION-v1",
+    "created_at": "2026-06-29T00:00:00.000Z",
+    "branch": "mars/canonical-post-recovery",
+    "authoritative_git_commit_sha": "88facdb7bbdbb09a517dfce53e9dff01551ed63b",
+    "superseded_pre_amend_sha": "b4d3fc719a6567be3dc72a2e9c5492252d060cae",
+    "checkpoint_tag": "corvonero-phase5.2-partial-semantic-approved-2026-06",
+    "zip_sha256": "f4efa98f07ae1809fe0b11c95950c1d92c97a83773ed7285242f5955507a4be5",
+    "external_archive_target": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-PRE-PHASE-6-CHECKPOINT-2026-06-28",
+    "corrected_file": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-PRE-PHASE-6-CHECKPOINT-v1.json",
+    "backup_report": "projects/mars-search-ppc-production/reports/REPORT-corvonero-pre-phase6-backup-and-checkpoint-v1.md",
+    "explanation": {
+        "superseded_pre_amend_sha": "b4d3fc7 was recorded in the checkpoint receipt before the final amend; it is not the authoritative checkpoint commit.",
+        "authoritative_git_commit_sha": "88facdb7 is the immutable checkpoint commit; tag corvonero-phase5.2-partial-semantic-approved-2026-06 peels to this commit.",
+        "tag_status": "Existing tag was not moved, recreated, or retagged.",
+        "zip_status": "Existing external ZIP was not recreated or overwritten; SHA-256 verified against recorded hash.",
+        "phase_6": "NOT STARTED"
+    },
+    "verification": {
+        "tag_peeled_commit_local": "88facdb7bbdbb09a517dfce53e9dff01551ed63b",
+        "tag_peeled_commit_remote": "88facdb7bbdbb09a517dfce53e9dff01551ed63b",
+        "zip_exists": true,
+        "zip_sha256_match": true
+    },
+    "non_actions": [
+        "no_amend_of_88facdb7",
+        "no_force_push",
+        "no_tag_move",
+        "no_zip_recreate",
+        "no_semantic_registry_changes",
+        "no_orca_changes",
+        "no_backlog_changes",
+        "phase_6_not_started"
+    ]
+}
