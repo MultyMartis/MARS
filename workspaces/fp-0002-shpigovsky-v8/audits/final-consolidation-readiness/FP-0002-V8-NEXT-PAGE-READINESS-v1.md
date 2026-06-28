@@ -76,4 +76,4 @@
 
 **NO** — consolidation complete; next page implementation requires explicit operator charter.
 
-**O-Centre readiness:** `READY_FOR_CHARTER`
+**O-Centre readiness:** `CHARTER_COMPLETE` — see `audits/o-centre-page-charter/`; implementation **NOT AUTHORIZED**

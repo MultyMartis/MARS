@@ -187,6 +187,6 @@
 
 ## Next recommended wave
 
-**O-Centre page anatomy + reuse charter** — NOT AUTHORIZED for implementation
+**O-Centre page anatomy + reuse charter** — COMPLETE (implementation NOT AUTHORIZED) — `audits/o-centre-page-charter/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER-v1.md`
 
 CF-010 clinic landscape — **COMPLETE** (wave 10). Component consolidation CF-003–CF-012 — **COMPLETE**.

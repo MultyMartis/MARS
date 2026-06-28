@@ -34,7 +34,7 @@
 | 7 | CF-009 final form | P1 | 5 | Low | **COMPLETE** |
 | 10 | CF-010 clinic landscape | P2 | 3 | Low | **COMPLETE** |
 | — | CF-013 inner hero | P2 | HOLD | Already shared on 3 templates | No wave unless Home unification requested |
-| — | CF-015 home gallery | HOLD | 1 | Unknown until O-Centre | Defer |
+| — | CF-015 home gallery | HOLD | 1 | O-Centre charter: not used on About | Defer neutralization |
 
 ---
 
@@ -178,9 +178,9 @@ Operator gate required before any `home-final-form` rename.
 
 ## O-Centre position
 
-O-Centre (`o-centre-v1.html`) is **DEFERRED**. Universalization waves 2–10 prepare shared neutral families that O-Centre should consume via includes — not re-copy.
+O-Centre charter **complete** (`audits/o-centre-page-charter/`). Implementation **not authorized**. O-Centre consumes CF-003–CF-012 families via includes — not `home-gallery` / `home-staff-photo`.
 
-Do not start O-Centre implementation until operator charters it separately.
+Do not start O-Centre HTML until operator authorizes implementation prompt.
 
 ---
 

@@ -118,7 +118,7 @@ Starter template demo pages may exist from gulp-starter copy — **not** FP-0002
 | CF-007 Reviews | COMPLETE (2026-06-28) |
 | CF-008 FAQ | COMPLETE (2026-06-28) |
 | Shared component audit | COMPLETE — next wave CF-009 final form (NOT AUTHORIZED) |
-| About (`o-centre`) | DEFERRED in V8 |
+| About (`o-centre`) | CHARTER COMPLETE in V8 — implementation NOT STARTED (`audits/o-centre-page-charter/`) |
 
 ---
 

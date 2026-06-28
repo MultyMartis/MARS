@@ -28,8 +28,9 @@ fp0002_v8_cf012_program_modifiers: COMPLETE_OPERATOR_APPROVED
 fp0002_v8_cf012_commit: 9e8fa083
 fp0002_v8_manual_polish_checkpoint: DOCUMENTED
 fp0002_v8_cf010_clinic_landscape: COMPLETE
-fp0002_v8_next_wave: O_CENTRE_CHARTER_NOT_AUTHORIZED
-fp0002_v8_o_centre: DEFERRED
+fp0002_v8_next_wave: O_CENTRE_IMPLEMENTATION_NOT_AUTHORIZED
+fp0002_v8_o_centre_charter: COMPLETE_WITH_KNOWN_GAPS
+fp0002_v8_o_centre: CHARTER_COMPLETE_IMPLEMENTATION_NOT_STARTED
 fp0002_v8_deployment: NOT_STARTED
 
 workspace: V8
@@ -184,7 +185,13 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 - Receipt: `audits/operator-manual-polish/FP-0002-V8-OPERATOR-MANUAL-POLISH-CANONICAL-CHECKPOINT-v1.md`
 - Status: OPERATOR_MANUAL_POLISH_CANONICAL
 
+## O-Centre charter (2026-06-29)
+
+- Charter: `audits/o-centre-page-charter/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER-v1.md`
+- Status: **CHARTER COMPLETE WITH KNOWN GAPS** — implementation **NOT AUTHORIZED**
+- Blockers: BLK-037/038 copy and assets; About hero asset confirmation; FAQ inventory vs Figma conflict
+- Next recommended task: **FP-0002 V8 O-Centre implementation prompt** (after optional asset prep)
+
 ## Next wave (documentation only)
 
-- CF-010 Clinic landscape — **NOT STARTED** (requires explicit charter)
-- O-Centre — **DEFERRED UNTIL FINAL READINESS**
+- O-Centre page HTML/CSS — **NOT STARTED** (await operator implementation authorization)
