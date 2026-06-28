@@ -1,0 +1,38 @@
+{
+  "pass": "site-002-corp-visual-polish-pass1",
+  "timestamp": "2026-06-28T12:41:20.608067+00:00",
+  "remote": "assets/css/style.css",
+  "post_sha256": "d4303c40d972135c092f5b8803b148b37e80881ac6f6db9e76a220995115ca42",
+  "post_bytes": 379408,
+  "qa": {
+    "urls": {
+      "https://zpm.new-site.space/": {
+        "http_status": 200,
+        "ok": true
+      },
+      "https://zpm.new-site.space/delivery": {
+        "http_status": 200,
+        "ok": true
+      },
+      "https://zpm.new-site.space/payment-methods": {
+        "http_status": 200,
+        "ok": true
+      },
+      "https://zpm.new-site.space/guarantee": {
+        "http_status": 200,
+        "ok": true
+      },
+      "https://zpm.new-site.space/dealers": {
+        "http_status": 200,
+        "ok": true
+      },
+      "https://zpm.new-site.space/custom-equipment": {
+        "http_status": 200,
+        "ok": true
+      }
+    },
+    "css_marker": true,
+    "live_css_has_polish": true,
+    "all_http_ok": true
+  }
+}

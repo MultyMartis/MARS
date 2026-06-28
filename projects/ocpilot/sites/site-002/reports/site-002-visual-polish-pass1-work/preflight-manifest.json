@@ -1,0 +1,59 @@
+{
+  "pass": "site-002-corp-visual-polish-pass1",
+  "timestamp": "2026-06-28T12:41:20.608067+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "head": "68f11fdc",
+  "operator_beget_backup": "CONFIRMED",
+  "scope": "Corporate Pages only — M9.14 Delivery, M9.15 Payment, M9.16 Dealers, M9.17 Warranty, M9.18 Custom Manufacturing",
+  "files": {
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c",
+      "pre_bytes": 358072,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-site-002-corp-visual-polish-pass1.bak",
+      "post_sha256": "d4303c40d972135c092f5b8803b148b37e80881ac6f6db9e76a220995115ca42",
+      "post_bytes": 379408
+    },
+    "assets/js/main.js": {
+      "exists": true,
+      "pre_sha256": "64ea2da8d6e50a39ed0ee178fa756ececdda49df55d2f8f3a095b65f766f171d",
+      "pre_bytes": 204187,
+      "backup": null,
+      "note": "Not modified in pass 1"
+    }
+  },
+  "deploy": {
+    "remote": "assets/css/style.css",
+    "qa": {
+      "urls": {
+        "https://zpm.new-site.space/": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/delivery": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/payment-methods": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/guarantee": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/dealers": {
+          "http_status": 200,
+          "ok": true
+        },
+        "https://zpm.new-site.space/custom-equipment": {
+          "http_status": 200,
+          "ok": true
+        }
+      },
+      "css_marker": true,
+      "live_css_has_polish": true,
+      "all_http_ok": true
+    }
+  }
+}

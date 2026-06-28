@@ -1241,4 +1241,24 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-28 (§22 M9.18 Custom Manufacturing IMPLEMENTED — terminal corp page).*
+## 23. Corporate Pages Visual Polish (Pass 1)
+
+**Scope:** M9.14–M9.18 corporate routes on TEST — CSS-only spacing alignment to Home tokens.
+
+| Item | Value |
+|------|--------|
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01` |
+| **Audit** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md) |
+| **Report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md) |
+| **CSS block** | `assets/css/style.css` — `SITE-002 — Corporate Pages Visual Polish Pass 1` |
+| **Patch source** | [site-002-visual-polish-pass1-work/site-002-corp-visual-polish-pass1.css](../reports/site-002-visual-polish-pass1-work/site-002-corp-visual-polish-pass1.css) |
+| **Backup** | [backups/style.css.pre-site-002-corp-visual-polish-pass1.bak](../backups/style.css.pre-site-002-corp-visual-polish-pass1.bak) |
+| **post_sha256** | `d4303c40d972135c092f5b8803b148b37e80881ac6f6db9e76a220995115ca42` |
+
+**Implemented:** Audit Priority 1 + Priority 2 (VP-01–VP-11). Priority 3 deferred to Pass 2.
+
+**Not in scope:** Home · catalog · PLP · PDP · Contacts · Twig · PHP · JS.
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-28 (§23 Corporate Pages Visual Polish Pass 1).*

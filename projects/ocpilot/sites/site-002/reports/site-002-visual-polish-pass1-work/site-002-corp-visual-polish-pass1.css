@@ -1,0 +1,157 @@
+/* ==========================================================================
+   SITE-002 — Corporate Pages Visual Polish Pass 1 (VP-01–VP-10)
+   Authority: Home page tokens only — no new spacing system
+   ========================================================================== */
+
+/* VP-01 — remove double vertical section padding (global main > section already applies --pad-y) */
+.zpm-delivery-section,
+.zpm-payment-section,
+.zpm-warranty-section,
+.zpm-dealers-section,
+.zpm-custom-section,
+.zpm-delivery-cta,
+.zpm-payment-cta,
+.zpm-warranty-cta,
+.zpm-dealers-cta,
+.zpm-custom-cta,
+.zpm-custom-process,
+.zpm-custom-outcomes {
+  padding-top: 0;
+}
+
+/* VP-02 — corp page-intro / lead stack spacing (Home hero title → description uses --pad-gap) */
+.zpm-delivery-page .page-intro > .container,
+.zpm-payment-page .page-intro > .container,
+.zpm-warranty-page .page-intro > .container,
+.zpm-dealers-page .page-intro > .container,
+.zpm-custom-page .page-intro > .container {
+  gap: var(--pad-gap);
+}
+
+/* VP-07 — Payment intro breathing before first tinted timeline section */
+.zpm-payment-page .page-intro {
+  margin-bottom: var(--pad-gap);
+}
+
+/* VP-03 / VP-08 — CTA spacing tokens + margin direction parity (Delivery/Payment/Warranty) */
+.zpm-dealers-cta__actions,
+.zpm-custom-cta__actions {
+  gap: var(--pad-gap-line) var(--pad-gap);
+  margin-top: var(--pad-gap);
+  margin-bottom: 0;
+}
+
+.zpm-dealers-cta__contacts,
+.zpm-custom-cta__contacts {
+  gap: var(--pad-gap-line) var(--pad-gap);
+  margin-top: var(--pad-gap-mini);
+  margin-bottom: 0;
+}
+
+/* Shared corp timeline rhythm — Home card grid uses --pad-gap */
+.zpm-corp-timeline {
+  gap: var(--pad-gap);
+}
+
+.zpm-corp-timeline__step {
+  gap: var(--pad-gap-mini);
+}
+
+/* VP-05 — Custom timeline desktop density cap (Home adv-cards max 4-col) */
+.zpm-custom-timeline.zpm-corp-timeline {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* VP-04 — Payment proof cards: Home zpm-adv-cards density */
+.zpm-payment-proof__grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--pad-gap);
+}
+
+@media (max-width: 1310px) {
+  .zpm-payment-proof__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* VP-04 / VP-06 — Delivery point-card icon scale (--img-mini-width = 80px on Home) */
+.zpm-delivery-point-card__icon {
+  width: var(--img-mini-width);
+  height: var(--img-mini-width);
+  font-size: 28px;
+}
+
+/* VP-04 — outcome card grids */
+.zpm-delivery-outcomes__list,
+.zpm-warranty-outcomes__list {
+  gap: var(--pad-gap);
+}
+
+/* VP-06 — H2-adjacent card title rhythm (Home card text stacks use --pad-gap-mini minimum) */
+.zpm-warranty-outcome__title {
+  margin: 0 0 var(--pad-gap-mini);
+}
+
+/* VP-08 — Warranty verification section rhythm */
+.zpm-warranty-verification {
+  padding-top: 0;
+}
+
+/* VP-09 — Dealers OEM row + proof stack */
+.zpm-dealers-oem-row {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.zpm-dealers-proof__stack {
+  gap: var(--pad-gap);
+}
+
+/* VP-11 — summary / facts strips desktop breathing (Priority 2) */
+@media (min-width: 1025px) {
+  .zpm-delivery-summary,
+  .zpm-warranty-summary,
+  .zpm-payment-legal__facts {
+    gap: var(--pad-gap);
+  }
+}
+
+/* VP-09 — FAQ accordion list gap on corp routes */
+.zpm-delivery-page .zpm-corp-faq__list,
+.zpm-warranty-page .zpm-corp-faq__list,
+.zpm-dealers-page .zpm-corp-faq__list,
+.zpm-custom-page .zpm-corp-faq__list {
+  gap: var(--pad-gap);
+}
+
+/* VP-07 — paragraph / list rhythm on corp pages */
+.zpm-delivery-org__list,
+.zpm-delivery-coverage__factors,
+.zpm-warranty-verification__list,
+.zpm-custom-scope__group ul {
+  gap: var(--pad-gap-mini);
+}
+
+/* VP-10 — Custom Manufacturing: soften accent weight (spacing-only; no new effects) */
+.zpm-custom-triggers__list {
+  gap: var(--pad-gap-mini);
+}
+
+.zpm-custom-process {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0;
+}
+
+.zpm-custom-process .zpm-corp-timeline__step {
+  border-width: 1px;
+  box-shadow: none;
+}
+
+.zpm-custom-outcomes {
+  border-top: 1px solid var(--border-color);
+}
+
+.zpm-custom-oem__stack {
+  gap: var(--pad-gap);
+}
