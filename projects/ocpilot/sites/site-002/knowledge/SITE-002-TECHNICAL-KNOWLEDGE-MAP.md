@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers → M9.18 Custom Manufacturing — **NOT STARTED**.
+**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **CHARTER READY** · M9.18 Custom Manufacturing — **NOT STARTED**.
 
 ---
 
@@ -1144,6 +1144,48 @@ Pageintro (H1 + Lead) → warranty principles + coverage (BLOCK 01) → document
 
 ---
 
+## 21. Dealers Page (M9.16)
+
+Corporate page `/dealers` — route `information/dealers` (planned). **Not implemented on live TEST** — charter **READY** (2026-06-28).
+
+| Item | Value |
+|------|--------|
+| **Live URL (today)** | https://zpm.new-site.space/dealers — generic `zpm-seo` CMS scaffold |
+| **Target route** | `information/dealers` |
+| **Target SEO** | `oc_seo_url` keyword `dealers` → `information/dealers` |
+| **Target controller** | `catalog/controller/information/dealers.php` |
+| **Target twig** | `catalog/view/theme/default/template/information/dealers.twig` |
+| **CSS namespace (planned)** | `zpm-dealers-page`, `zpm-dealers-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS (planned)** | Corp FAQ accordion — scoped `[data-dealers-faq]` |
+| **Copy** | [BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md](../copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md) |
+| **Charter** | [SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md) |
+| **Checkpoint (post-implementation)** | `SITE-002-STABLE-LIVE-M9.16-DEALERS-01` |
+
+### Structure (target)
+
+Pageintro (H1 + Lead) → optional trust strip → partner matrix (SC-13) → OEM proof (BLOCK 02) → partner outcomes → 5-step timeline → supply chain + cross-links → FAQ (8) → Commercial Trust CTA + qualification form (company + city required).
+
+### Reuse boundaries
+
+- **Commercial Trust:** CTA card + form wrap on corp page — **not** full PLP trust block; **do not** edit PLP `blockdealersform.twig` in M9.16 scope
+- **Delivery / Payment / Warranty:** one-line summaries + links only — **not** embedded sibling bodies
+- **Contacts:** `zpm-form` discipline — **not** contact card grid or map
+- **Forbidden on page:** form-as-hero · discount map · franchise aesthetics · territory map · partner logo wall · СНГ geography
+
+### Governance (B3)
+
+Standalone `/dealers` corp page = **primary qualification surface** per charter. PLP dealer form reconciliation = **separate future task** — operator blocker **B3** is governance-only for M9.16 implementation start.
+
+### Change rules
+
+1. Read [SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md) and **§21**
+2. Live-capture remote files before deploy
+3. Do not bleed scope into PLP dealer form unless operator opens dedicated B3 task
+
+**Evidence:** [BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [m9.15-work/dealers-live-snippet.html](../reports/m9.15-work/dealers-live-snippet.html)
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -1155,4 +1197,4 @@ Pageintro (H1 + Lead) → warranty principles + coverage (BLOCK 01) → document
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§20 M9.17 Warranty IMPLEMENTED on TEST).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§21 M9.16 Dealers Implementation Charter READY).*

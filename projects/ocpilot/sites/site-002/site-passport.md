@@ -209,6 +209,8 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 **M9.17 Warranty implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.17-WARRANTY-01` · [SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md](reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md)
 
+**M9.16 Dealers implementation charter:** **READY** (2026-06-28) — standalone `/dealers` scope; B3 PLP reconciliation **out of scope** · [SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md](reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md)
+
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
 
 **Recovery closeout:** [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) — recovery **CLOSED**; production preparation active.
