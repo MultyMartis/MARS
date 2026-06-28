@@ -1,0 +1,58 @@
+{
+  "task": "SITE-002-HOME-COMMERCIAL-TRUST-01",
+  "timestamp_utc": "20260628-193640",
+  "git": {
+    "branch": "mars/canonical-post-recovery",
+    "head": "e3146922d40847cd9ea3d8f3747456255e4100f7"
+  },
+  "backup_suffix": "pre-home-commercial-trust-01.bak",
+  "files": [
+    {
+      "remote": "catalog/view/theme/default/template/sections/blockdealersform.twig",
+      "action": "replaced",
+      "sha256_before": "5abad9f2d27e3f575f6d79b4d50bd877c0fb6844645aff6af4f2f8b2bb9bbe99",
+      "bytes_before": 4375,
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__blockdealersform.twig.pre-home-commercial-trust-01.bak",
+      "sha256_after": "69b4daad5621dbe0fe7140159466e4c70a56f226f0faa0f14b83fb5b23f06386",
+      "bytes_after": 9160
+    },
+    {
+      "remote": "catalog/controller/common/home.php",
+      "action": "backup",
+      "sha256_before": "3f2719160e06263545361fc30b3aad2c918d00b990bf4355e86af7e1b397a46c",
+      "bytes_before": 3843,
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__common__home.php.pre-home-commercial-trust-01.bak"
+    },
+    {
+      "remote": "catalog/controller/product/katalog.php",
+      "action": "backup",
+      "sha256_before": "b9c9f32221e81c3c1aa56324e032dfe82b7f0d42b05c44b841e13811c748dfb2",
+      "bytes_before": 6345,
+      "backup_local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__product__katalog.php.pre-home-commercial-trust-01.bak"
+    }
+  ],
+  "katalog_uses_blockdealersform": true,
+  "qa": {
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "status": 200,
+      "ok": true,
+      "has_commercial_trust": true,
+      "has_old_dealers_layout": false,
+      "has_dealers_grid": false,
+      "has_form_dialog7": true,
+      "has_data_dealers": true
+    },
+    "katalog": {
+      "url": "https://zpm.new-site.space/katalog",
+      "status": 200,
+      "ok": true,
+      "has_commercial_trust": true,
+      "has_old_dealers_layout": false,
+      "has_dealers_grid": false,
+      "has_form_dialog7": true,
+      "has_data_dealers": true
+    }
+  },
+  "twig_cache_cleared": 0
+}

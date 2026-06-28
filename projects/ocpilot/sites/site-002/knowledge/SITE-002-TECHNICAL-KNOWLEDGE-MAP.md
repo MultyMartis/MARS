@@ -698,7 +698,7 @@ Category PLP decision-stage block — after product grid, before footer. **Live 
 
 Convert post-catalog evaluation into trust + lead capture: manufacturer proof (OEM, certs, «Сделано в России»), procurement reassurance, and price-list request form (`dialog=7`).
 
-**Scope:** category PLP only. Homepage `certificates.twig`, `/katalog`, PDP, filters — **out of scope**.
+**Scope:** category PLP (`blockcommercialtrust.twig` + FAQ grid). Homepage uses **`blockcommercialtrust_home.twig`** (same trust card, home copy, **no** FAQ grid) since checkpoint `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01`. `/katalog` retains legacy `blockdealersform.twig` (`zpm-dealers`). PDP, filters — **out of scope**.
 
 ### Structure (live canonical — 2026-06-21 capture)
 
@@ -1388,4 +1388,36 @@ Pass 1 (`SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01`) remains **
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§27 Local Fonts 01 active).*
+## 28. Home Commercial Trust 01 — active
+
+**Scope:** Home CTA band only — replaces legacy `zpm-dealers` dealers teaser with catalog `zpm-commercial-trust` card (first section only).
+
+| Item | Value |
+|------|--------|
+| **Status** | **ACTIVE on TEST** (2026-06-29) |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` |
+| **Report** | [SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md](../reports/SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](../baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) |
+| **Deploy manifest** | [fix-manifest-20260628-193747.json](../reports/home-commercial-trust-work/fix-manifest-20260628-193747.json) |
+| **Pre-deploy backups** | `backups/*.pre-home-commercial-trust-01.bak` |
+
+### Files
+
+| File | Role |
+|------|------|
+| `catalog/view/theme/default/template/sections/blockcommercialtrust_home.twig` | Home trust card markup |
+| `catalog/controller/common/home.php` | `$data['blockdealersform'] = load('sections/blockcommercialtrust_home')` |
+| `catalog/view/theme/default/template/sections/blockdealersform.twig` | **Legacy** — still used on `/katalog` only |
+| `assets/css/style.css` | Existing `.zpm-commercial-trust*` — **no Home-specific CSS patch** |
+
+### JS hook
+
+Dual class on Home section: `zpm-commercial-trust zpm-dealers` + `data-dealers` — preserves `.zpm-dealers[data-dealers] .zpm-form` handler without `main.js` edits.
+
+### Rollback
+
+`reports/home-commercial-trust-work/site-002-home-commercial-trust-rollback.py`
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§28 Home Commercial Trust 01 active).*

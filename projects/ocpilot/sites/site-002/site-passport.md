@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT REDESIGN 02**  
-**Run:** M9.13 About Company redesign re-activation (2026-06-29)
+**Status:** **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01**  
+**Run:** Home CTA `zpm-commercial-trust` replacement (2026-06-29)
 
 ---
 
@@ -14,18 +14,18 @@
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
 | **Version** | SAFE UNKNOWN |
-| **Baseline Match** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (site-wide fonts) |
+| **Baseline Match** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (site-wide fonts) |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
 | **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
-| **Current Status** | **STABLE LIVE CHECKPOINT — M9.13 ABOUT REDESIGN 02** |
-| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
+| **Current Status** | **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01** |
+| **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
-| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. **M9.13 About redesign RE-ACTIVATED** (2026-06-29) — checkpoint `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` · [Knowledge Map §17](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history). Local Fonts 01 **retained**. Operator Manual Polish 01 visual baseline **preserved** (CSS merge). EC-01 mitigated by subcategories hide (07). M10 not authorized. |
+| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. **Home CTA** — `zpm-commercial-trust` active (2026-06-29) · [Knowledge Map §28](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#28-home-commercial-trust-01--active). **M9.13 About redesign RE-ACTIVATED** (2026-06-29). Local Fonts 01 **retained**. Operator Manual Polish 01 visual baseline **preserved**. EC-01 mitigated by subcategories hide (07). M10 not authorized. |
 
 ---
 
@@ -43,6 +43,21 @@
 ---
 
 ## Stable checkpoint (active)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` |
+| Registered | 2026-06-29 |
+| Type | Stable live checkpoint — Home CTA band FTP deploy |
+| Scope | Home only — `/katalog` legacy `blockdealersform` preserved |
+| Report | [SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md](reports/SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md) |
+| Knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — §28 |
+
+**Baseline doc:** [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md)
+
+---
+
+## Prior stable checkpoint
 
 | Field | Value |
 |-------|--------|

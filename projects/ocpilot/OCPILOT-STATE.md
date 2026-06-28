@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-29  
-**Evidence cutoff:** 2026-06-29 (SITE-002 **M9.13 About Redesign 02** checkpoint `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` — M9.13 About re-activated on TEST; Local Fonts 01 + Operator Manual Polish baseline preserved)  
+**Evidence cutoff:** 2026-06-29 (SITE-002 **Home Commercial Trust 01** checkpoint `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` — Home CTA uses `zpm-commercial-trust`; M9.13 About + Local Fonts + Operator Manual Polish baselines preserved)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,9 +14,9 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT M9.13 ABOUT REDESIGN 02** (2026-06-29) |
+| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT HOME COMMERCIAL TRUST 01** (2026-06-29) |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · Local Fonts 01 retained · Operator Manual Polish 01 visual baseline **preserved**; [Knowledge Map §17](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program COMPLETE on TEST** |
+| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home CTA) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · Local Fonts 01 retained · Operator Manual Polish 01 visual baseline **preserved**; [Knowledge Map §28](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#28-home-commercial-trust-01--active); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program COMPLETE on TEST** |
 
 ---
 
@@ -41,11 +41,11 @@
 | Environment | **TEST** — `https://zpm.new-site.space/` |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`** — About active · **`SITE-002-STABLE-LIVE-LOCAL-FONTS-01`** — fonts retained |
+| Baseline | **`SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01`** (Home CTA) · **`SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`** (About) · **`SITE-002-STABLE-LIVE-LOCAL-FONTS-01`** — fonts retained |
 | Knowledge map | [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Authority policy | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
 | Registry | Active project site — M7.1 through M9.8.5 + catalog UX cluster **complete** on TEST |
-| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (re-activated 2026-06-29)** |
+| Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (re-activated 2026-06-29)** · **Home Commercial Trust CTA (2026-06-29)** |
 | Active stage | **PRODUCTION PREPARATION** — BZPM recovery **CLOSED**; remaining M9.8.9 tasks per roadmap (non-blocking) |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | **Production parity / rollout** for corp pages · operator gates B6/B8/B1 · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
@@ -56,7 +56,9 @@
 | Rollback source | Beget full backup + current live TEST + file-level pass backups |
 | External secrets | External storage only — not in repo |
 
-**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · [sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
+**Authority evidence:** [sites/site-002/baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · [sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · [sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](sites/site-002/baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) · [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) · [sites/site-002/site-passport.md](sites/site-002/site-passport.md)
+
+**Home Commercial Trust:** [sites/site-002/reports/SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md](sites/site-002/reports/SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md)
 
 **M9.13 About re-activation:** [sites/site-002/reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md](sites/site-002/reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md) · [sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-M9.13-ABOUT-REDESIGN-02.md)
 

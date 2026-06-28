@@ -2,9 +2,9 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
-**Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT REDESIGN 02**  
-**Run:** M9.13 About Company redesign re-activation (2026-06-29)  
-**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** implementation phase **COMPLETE on TEST** — M9.14–M9.18 **IMPLEMENTED** · **M9.13 About RE-ACTIVATED on TEST** (2026-06-29) · Local Fonts 01 **retained** · Operator Manual Polish 01 visual baseline **preserved**
+**Status:** **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01**  
+**Run:** Home CTA `zpm-commercial-trust` replacement (2026-06-29)  
+**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** implementation phase **COMPLETE on TEST** — M9.14–M9.18 **IMPLEMENTED** · **M9.13 About RE-ACTIVATED on TEST** (2026-06-29) · **Home Commercial Trust 01 ACTIVE** (2026-06-29) · Local Fonts 01 **retained** · Operator Manual Polish 01 visual baseline **preserved**
 
 ### BZPM UX REDESIGN — project banner
 
@@ -31,9 +31,9 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (fonts) |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home CTA) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (fonts) |
 | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual and behavioural authority |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§28 Home Commercial Trust 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#28-home-commercial-trust-01--active), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
 | **Operator manual JS (04B)** | [knowledge §12](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#12-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Conflict resolution** | If docs contradict current TEST → source of truth = live TEST on https://zpm.new-site.space/ |
 
@@ -65,6 +65,16 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 ---
 
 ## Active stable checkpoint
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` |
+| Status | **STABLE LIVE CHECKPOINT** — Home CTA uses `zpm-commercial-trust` on TEST |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) |
+| Report | [reports/SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md](reports/SITE-002-HOME-COMMERCIAL-TRUST-REPLACEMENT.md) |
+| Rollback | [home-commercial-trust-work/site-002-home-commercial-trust-rollback.py](reports/home-commercial-trust-work/site-002-home-commercial-trust-rollback.py) |
+
+### Prior checkpoint (About)
 
 | Field | Value |
 |-------|--------|

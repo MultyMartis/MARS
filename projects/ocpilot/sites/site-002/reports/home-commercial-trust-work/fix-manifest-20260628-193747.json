@@ -1,0 +1,42 @@
+{
+  "fix": "katalog-isolation",
+  "timestamp_utc": "20260628-193747",
+  "files": [
+    {
+      "remote": "catalog/view/theme/default/template/sections/blockdealersform.twig",
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__blockdealersform.twig.pre-home-commercial-trust-01.bak",
+      "sha256": "5abad9f2d27e3f575f6d79b4d50bd877c0fb6844645aff6af4f2f8b2bb9bbe99",
+      "bytes": 4375
+    },
+    {
+      "remote": "catalog/view/theme/default/template/sections/blockcommercialtrust_home.twig",
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\home-commercial-trust-work\\blockcommercialtrust_home.twig",
+      "sha256": "69b4daad5621dbe0fe7140159466e4c70a56f226f0faa0f14b83fb5b23f06386",
+      "bytes": 9160
+    },
+    {
+      "remote": "catalog/controller/common/home.php",
+      "local": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\reports\\home-commercial-trust-work\\home.php",
+      "sha256": "8e68ab0866f7822c6530b37dd0c4544c22b86b4895f32035def7fe338e098fb9",
+      "bytes": 3852
+    }
+  ],
+  "qa": {
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "status": 200,
+      "ok": true,
+      "has_commercial_trust": true,
+      "has_old_dealers_grid": false,
+      "has_legacy_dealers_section": false
+    },
+    "katalog": {
+      "url": "https://zpm.new-site.space/katalog",
+      "status": 200,
+      "ok": true,
+      "has_commercial_trust": false,
+      "has_old_dealers_grid": false,
+      "has_legacy_dealers_section": true
+    }
+  }
+}
