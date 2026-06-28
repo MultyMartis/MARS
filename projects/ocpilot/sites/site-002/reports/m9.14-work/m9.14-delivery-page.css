@@ -1,0 +1,584 @@
+/* ==========================================================================
+   M9.14 — Delivery page — corporate logistics
+   ========================================================================== */
+
+.zpm-delivery-page {
+  padding-bottom: var(--pad-y);
+}
+
+.zpm-delivery-section {
+  padding-top: var(--pad-y);
+}
+
+.zpm-delivery-section__title {
+  margin: 0 0 var(--pad-gap);
+}
+
+.zpm-delivery-section__intro,
+.zpm-delivery-section__body,
+.zpm-delivery-section__note,
+.zpm-delivery-section__helper,
+.zpm-delivery-section__disclaimer {
+  margin: 0 0 var(--pad-gap);
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+  max-width: 920px;
+}
+
+.zpm-delivery-section__note,
+.zpm-delivery-section__helper,
+.zpm-delivery-section__disclaimer {
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+}
+
+.zpm-delivery-section__intro:last-child,
+.zpm-delivery-section__note:last-child,
+.zpm-delivery-section__helper:last-child,
+.zpm-delivery-section__disclaimer:last-child {
+  margin-bottom: 0;
+}
+
+/* Shipment points — SC-05 */
+.zpm-delivery-points__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pad-gap);
+  margin: var(--pad-gap) 0;
+}
+
+.zpm-delivery-point-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-mini);
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  min-width: 0;
+}
+
+.zpm-delivery-point-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--accent-color-01);
+}
+
+.zpm-delivery-point-card__caption {
+  margin: 0;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  font-weight: var(--large-Font-weight);
+  color: var(--accent-color-02, #99303d);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.zpm-delivery-point-card__title {
+  margin: 0;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+}
+
+.zpm-delivery-point-card__role,
+.zpm-delivery-point-card__address {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+.zpm-delivery-point-card__address {
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-delivery-points__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-mini);
+  margin-bottom: var(--pad-gap);
+  max-width: 920px;
+}
+
+.zpm-delivery-points__body p {
+  margin: 0;
+}
+
+/* Organization — BLOCK 01 */
+.zpm-delivery-org__body {
+  max-width: 920px;
+  margin-bottom: var(--pad-gap);
+}
+
+.zpm-delivery-org__body p {
+  margin: 0 0 var(--pad-gap-mini);
+}
+
+.zpm-delivery-org__list {
+  margin: 0 0 var(--pad-gap-mini);
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zpm-delivery-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  margin: 0 0 var(--pad-gap);
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: var(--main-light-color, #f8f8f8);
+}
+
+.zpm-delivery-summary__item {
+  margin: 0;
+  min-width: 0;
+}
+
+.zpm-delivery-summary__label {
+  margin: 0 0 6px;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  font-weight: var(--large-Font-weight);
+  color: var(--accent-color-02, #99303d);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.zpm-delivery-summary__value {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* Methods */
+.zpm-delivery-methods__stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap);
+}
+
+.zpm-delivery-method__title {
+  margin: 0 0 var(--pad-gap-mini);
+}
+
+.zpm-delivery-method p {
+  margin: 0 0 var(--pad-gap-mini);
+  max-width: 920px;
+}
+
+.zpm-delivery-method p:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline — SC-04 */
+.zpm-delivery-timeline-section {
+  background-color: var(--main-light-color, #f8f8f8);
+  padding-bottom: var(--pad-y);
+}
+
+.zpm-corp-timeline {
+  list-style: none;
+  margin: var(--pad-gap) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  counter-reset: delivery-step;
+}
+
+.zpm-corp-timeline__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  min-width: 0;
+}
+
+.zpm-corp-timeline__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--accent-color-01);
+  color: #fff;
+  font-size: var(--Heading-Font-size);
+  line-height: 1;
+  font-weight: var(--large-Font-weight);
+  flex-shrink: 0;
+}
+
+.zpm-corp-timeline__badge-label {
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  font-weight: var(--large-Font-weight);
+  color: var(--accent-color-02, #99303d);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.zpm-corp-timeline__title {
+  margin: 0;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+}
+
+.zpm-corp-timeline__text {
+  margin: 0;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+}
+
+.zpm-delivery-timeline__handoff {
+  margin: var(--pad-gap-mini) 0 0;
+  font-size: var(--base-Font-size);
+}
+
+.zpm-delivery-timeline__handoff a {
+  font-weight: var(--large-Font-weight);
+}
+
+/* Packaging */
+.zpm-delivery-packaging__stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pad-gap);
+}
+
+.zpm-delivery-packaging__title {
+  margin: 0 0 var(--pad-gap-mini);
+}
+
+.zpm-delivery-packaging__item p {
+  margin: 0 0 var(--pad-gap-mini);
+  max-width: 920px;
+}
+
+.zpm-delivery-packaging__list {
+  margin: 0 0 var(--pad-gap-mini);
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Coverage */
+.zpm-delivery-coverage__body {
+  max-width: 920px;
+  margin-bottom: var(--pad-gap);
+}
+
+.zpm-delivery-coverage__body p {
+  margin: 0 0 var(--pad-gap-mini);
+}
+
+.zpm-delivery-coverage__factors {
+  margin: 0 0 var(--pad-gap-mini);
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zpm-delivery-coverage__crosslink {
+  margin: var(--pad-gap-mini) 0 0;
+}
+
+/* Outcomes */
+.zpm-delivery-outcomes__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  margin-bottom: var(--pad-gap);
+}
+
+.zpm-delivery-outcome {
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  min-width: 0;
+}
+
+.zpm-delivery-outcome__title {
+  margin: 0 0 8px;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+}
+
+.zpm-delivery-outcome__text {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* Carriers table — supporting tier */
+.zpm-delivery-carriers__caption {
+  margin: 0 0 var(--pad-gap-mini);
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+}
+
+.zpm-delivery-carriers__table-wrap {
+  overflow-x: auto;
+  margin-bottom: var(--pad-gap);
+  -webkit-overflow-scrolling: touch;
+}
+
+.zpm-delivery-carriers__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+.zpm-delivery-carriers__table th,
+.zpm-delivery-carriers__table td {
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  vertical-align: top;
+}
+
+.zpm-delivery-carriers__table thead th {
+  background-color: var(--main-light-color, #f8f8f8);
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-delivery-carriers__table tbody tr:nth-child(even) td {
+  background-color: rgba(248, 248, 248, 0.5);
+}
+
+/* FAQ — SC-08 */
+.zpm-corp-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-mini);
+  max-width: 920px;
+}
+
+.zpm-corp-faq__item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.zpm-corp-faq__heading {
+  margin: 0;
+}
+
+.zpm-corp-faq__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pad-gap-mini);
+  width: 100%;
+  padding: var(--pad-inner);
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+  font-weight: var(--large-Font-weight);
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.zpm-corp-faq__button::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--accent-color-01);
+  transition: transform 0.2s ease;
+}
+
+.zpm-corp-faq__item.is-open .zpm-corp-faq__button::after {
+  content: "−";
+}
+
+.zpm-corp-faq__button:hover,
+.zpm-corp-faq__button:focus-visible {
+  color: var(--accent-color-01);
+  outline: none;
+}
+
+.zpm-corp-faq__panel {
+  padding: 0 var(--pad-inner) var(--pad-inner);
+}
+
+.zpm-corp-faq__panel[hidden] {
+  display: none;
+}
+
+.zpm-corp-faq__panel p {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* CTA — Commercial Trust reuse */
+.zpm-delivery-cta {
+  padding-top: var(--pad-y);
+}
+
+.zpm-delivery-cta .zpm-commercial-trust__wrap {
+  align-items: stretch;
+}
+
+.zpm-delivery-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap);
+}
+
+.zpm-delivery-cta__link {
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+  color: var(--accent-color-01);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.zpm-delivery-cta__link:hover,
+.zpm-delivery-cta__link:focus-visible {
+  color: var(--main-dark-color);
+}
+
+.zpm-delivery-cta__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap-mini);
+  font-size: var(--base-Font-size);
+}
+
+.zpm-delivery-cta__phone,
+.zpm-delivery-cta__email {
+  color: inherit;
+  text-decoration: none;
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-delivery-cta__phone:hover,
+.zpm-delivery-cta__phone:focus-visible,
+.zpm-delivery-cta__email:hover,
+.zpm-delivery-cta__email:focus-visible {
+  color: var(--accent-color-01);
+}
+
+.zpm-delivery-cta__payment-note {
+  margin: var(--pad-gap-mini) 0 0;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zpm-corp-faq__button::after {
+    transition: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1310px) {
+  .zpm-corp-timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .zpm-delivery-points__grid,
+  .zpm-delivery-summary,
+  .zpm-delivery-packaging__stack,
+  .zpm-delivery-outcomes__list {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-delivery-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-corp-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-delivery-cta .zpm-commercial-trust__wrap {
+    flex-direction: column;
+  }
+
+  .zpm-delivery-cta .zpm-commercial-trust__form-wrap {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .zpm-delivery-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-corp-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-delivery-carriers__table thead {
+    display: none;
+  }
+
+  .zpm-delivery-carriers__table tr {
+    display: block;
+    margin-bottom: var(--pad-gap-mini);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-main);
+    overflow: hidden;
+  }
+
+  .zpm-delivery-carriers__table td {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 14px;
+  }
+
+  .zpm-delivery-carriers__table td:last-child {
+    border-bottom: 0;
+  }
+
+  .zpm-delivery-carriers__table td::before {
+    content: attr(data-label) ": ";
+    font-weight: var(--large-Font-weight);
+  }
+}
+
+@media (max-width: 390px) {
+  .zpm-delivery-cta__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .zpm-delivery-cta__primary {
+    width: 100%;
+    text-align: center;
+  }
+}

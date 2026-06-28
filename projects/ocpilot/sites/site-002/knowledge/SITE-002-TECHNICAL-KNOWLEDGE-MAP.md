@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining corp pages):** M9.14 → M9.15 → M9.17 → M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+**Operator implementation order (remaining corp pages):** M9.14 **IMPLEMENTED** · M9.15 → M9.17 → M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
 
 ---
 
@@ -1033,6 +1033,42 @@ Before **any** edit to About page or new About redesign:
 
 ---
 
+## 18. Delivery Page (M9.14)
+
+Corporate page `/delivery` — route `information/delivery`. **Implemented on live TEST** (2026-06-28).
+
+| Item | Value |
+|------|--------|
+| **Live URL** | https://zpm.new-site.space/delivery |
+| **Route** | `information/delivery` |
+| **SEO** | `oc_seo_url` keyword `delivery` → `information/delivery` |
+| **Controller** | `catalog/controller/information/delivery.php` |
+| **Twig** | `catalog/view/theme/default/template/information/delivery.twig` |
+| **CSS namespace** | `zpm-delivery-page`, `zpm-delivery-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS** | Corp FAQ accordion append in `assets/js/main.js` — scoped `[data-delivery-faq]` |
+| **Copy** | [BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md](../copy/BZPM-M9.14-DELIVERY-PAGE-COPY-v1.1.md) |
+| **Authority** | `SITE-002-STABLE-LIVE-M9.14-DELIVERY-01` (page domain only) |
+
+### Structure
+
+Pageintro (H1 + Lead) → shipment points → organization (summary row) → methods → 7-step timeline → packaging → Russia coverage → outcomes → TK table → FAQ (8) → Commercial Trust CTA + form (region required).
+
+### Reuse boundaries
+
+- **Commercial Trust:** CTA card + form wrap — **not** full PLP trust block
+- **Contacts:** `zpm-form` discipline — **not** contact card grid or map
+- **Forbidden on page:** map · calculator · TK logos · Басовская · mid-page primary submit
+
+### Change rules
+
+1. Read [SITE-002-M9.14-DELIVERY-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.14-DELIVERY-IMPLEMENTATION-CHARTER-v1.md) and **§18**
+2. Live-capture remote files before deploy
+3. Do not bleed scope into About, Contacts, catalog, or other corp pages
+
+**Evidence:** [SITE-002-M9.14-DELIVERY-IMPLEMENTATION.md](../reports/SITE-002-M9.14-DELIVERY-IMPLEMENTATION.md) · [SITE-002-STABLE-LIVE-M9.14-DELIVERY-01.md](../baselines/SITE-002-STABLE-LIVE-M9.14-DELIVERY-01.md) · `reports/m9.14-work/`
+
+---
+
 ## Document maintenance
 
 | When | Action |
@@ -1044,4 +1080,4 @@ Before **any** edit to About page or new About redesign:
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§0 BZPM recovery closeout; authority → M9.13-ABOUT-COMPANY-RESTORED-01).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§18 M9.14 Delivery implemented on TEST).*

@@ -1,0 +1,39 @@
+{
+  "shots": [
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.14-delivery-screenshots\\m9.14-delivery-desktop-1440-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.14-delivery-screenshots\\m9.14-delivery-desktop-1440-timeline.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.14-delivery-screenshots\\m9.14-delivery-tablet-1024-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.14-delivery-screenshots\\m9.14-delivery-tablet-1024-timeline.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.14-delivery-screenshots\\m9.14-delivery-mobile-390-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.14-delivery-screenshots\\m9.14-delivery-mobile-390-timeline.png"
+  ],
+  "console_errors": [],
+  "checks": {
+    "delivery_page": true,
+    "timeline_steps": 7,
+    "faq_items": 8,
+    "cta_form": true,
+    "no_basovskaya": true,
+    "region_field": true,
+    "pass": true
+  },
+  "overflow": {
+    "desktop-1440": {
+      "sw": 1425,
+      "cw": 1440
+    },
+    "tablet-1024": {
+      "sw": 1009,
+      "cw": 1024
+    },
+    "mobile-390": {
+      "sw": 375,
+      "cw": 390
+    }
+  },
+  "http": {
+    "desktop-1440": 200,
+    "tablet-1024": 200,
+    "mobile-390": 200
+  }
+}

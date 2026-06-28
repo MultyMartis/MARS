@@ -1,0 +1,102 @@
+{
+  "pass": "m9.14-delivery-implementation",
+  "timestamp": "2026-06-28T09:41:59.202548+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "live_url": "https://zpm.new-site.space/delivery",
+  "route": "information/delivery",
+  "files": {
+    "catalog/controller/information/delivery.php": {
+      "pre_sha256": "2562f0e2bbecbafd464e5cc978cd3d2645e6e1ad55032144ba9efcd9360e4d7b",
+      "pre_bytes": 1750,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\delivery.php.pre-m9.14-delivery.bak",
+      "is_new": true,
+      "post_sha256": "056beadfea6ae9e23fca7b5d75b58c789cf5633a2914b44c00e25cc954bb9649",
+      "post_bytes": 3240
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "pre_sha256": "a5aca4d9aee32596d2f3aabe0aad7495901eb8e988993540914f3ba6557ecc71",
+      "pre_bytes": 32261,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\delivery.twig.pre-m9.14-delivery.bak",
+      "is_new": true,
+      "post_sha256": "78e832813217a0bcdbeb79c800ff2f6b57a864e68084cb73a93b10855635407c",
+      "post_bytes": 51133
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "aad16dfa73c5782cbc7abdeb62441f4d56218eca06e7000c471e18017da944d1",
+      "pre_bytes": 319264,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.14-delivery.bak",
+      "is_new": false,
+      "post_sha256": "56bc3c3b494f1e56300a46ec2e76a9273d022098cef1294b134e52bddc79fce9",
+      "post_bytes": 331736
+    },
+    "assets/js/main.js": {
+      "pre_sha256": "d2d9cd307eb59ea7ec4284d7d8604e5dc6107ac155bdd432610306009f3225f5",
+      "pre_bytes": 203655,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.14-delivery.bak",
+      "is_new": false,
+      "post_sha256": "18d8cbf707db1f3909467f2b57d7b2100a9fc7dc6cc90702ae1503c7f8239160",
+      "post_bytes": 204062
+    }
+  },
+  "preflight": {
+    "catalog/controller/information/delivery.php": {
+      "exists": true,
+      "pre_sha256": "2562f0e2bbecbafd464e5cc978cd3d2645e6e1ad55032144ba9efcd9360e4d7b",
+      "pre_bytes": 1750
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "exists": true,
+      "pre_sha256": "a5aca4d9aee32596d2f3aabe0aad7495901eb8e988993540914f3ba6557ecc71",
+      "pre_bytes": 32261
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "aad16dfa73c5782cbc7abdeb62441f4d56218eca06e7000c471e18017da944d1",
+      "pre_bytes": 319264
+    },
+    "assets/js/main.js": {
+      "exists": true,
+      "pre_sha256": "d2d9cd307eb59ea7ec4284d7d8604e5dc6107ac155bdd432610306009f3225f5",
+      "pre_bytes": 203655
+    }
+  },
+  "seo_url_patch_response": {
+    "ok": true,
+    "before": {
+      "seo_url_id": "1047",
+      "query": "information/delivery",
+      "keyword": "delivery"
+    },
+    "after": {
+      "seo_url_id": "1047",
+      "query": "information/delivery",
+      "keyword": "delivery"
+    }
+  },
+  "seo_url_updated": true,
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_ok": true,
+    "has_zpm_delivery_page": true,
+    "has_page_intro_lead": true,
+    "has_shipment_points": true,
+    "has_timeline": true,
+    "timeline_7_steps": true,
+    "has_faq": true,
+    "faq_8_items": true,
+    "has_cta_title": true,
+    "has_form_title": false,
+    "region_required": true,
+    "meta_title": true,
+    "meta_description": true,
+    "payment_link": true,
+    "no_basovskaya": true,
+    "no_map": true,
+    "no_calculator": true,
+    "nikolskoye_address": true,
+    "commercial_trust_card": true,
+    "zpm_form": true,
+    "breadcrumb": true,
+    "all_pass": false
+  }
+}

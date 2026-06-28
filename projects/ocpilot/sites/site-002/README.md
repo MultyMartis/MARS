@@ -4,7 +4,7 @@
 **Slug:** site-002  
 **Status:** **STABLE LIVE CHECKPOINT — M9.13 ABOUT COMPANY RESTORED 01** (2026-06-23)  
 **Run:** Stable checkpoint after operator-approved About page restoration  
-**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** **OPEN** — Research **COMPLETE** · implementation **NOT STARTED** (M9.14+)
+**Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** **OPEN** — M9.14 Delivery **IMPLEMENTED** on TEST · next **M9.15 Payment**
 
 ### BZPM UX REDESIGN — project banner
 
