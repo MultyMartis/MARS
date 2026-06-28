@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **CHARTER READY** · M9.18 Custom Manufacturing — **NOT STARTED**.
+**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **IMPLEMENTED** · M9.18 Custom Manufacturing — **NOT STARTED**.
 
 ---
 
@@ -1146,20 +1146,19 @@ Pageintro (H1 + Lead) → warranty principles + coverage (BLOCK 01) → document
 
 ## 21. Dealers Page (M9.16)
 
-Corporate page `/dealers` — route `information/dealers` (planned). **Not implemented on live TEST** — charter **READY** (2026-06-28).
+Corporate page `/dealers` — route `information/dealers`. **Implemented on live TEST** (2026-06-28).
 
 | Item | Value |
 |------|--------|
-| **Live URL (today)** | https://zpm.new-site.space/dealers — generic `zpm-seo` CMS scaffold |
-| **Target route** | `information/dealers` |
-| **Target SEO** | `oc_seo_url` keyword `dealers` → `information/dealers` |
-| **Target controller** | `catalog/controller/information/dealers.php` |
-| **Target twig** | `catalog/view/theme/default/template/information/dealers.twig` |
-| **CSS namespace (planned)** | `zpm-dealers-page`, `zpm-dealers-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
-| **JS (planned)** | Corp FAQ accordion — scoped `[data-dealers-faq]` |
+| **Live URL** | https://zpm.new-site.space/dealers |
+| **Route** | `information/dealers` |
+| **SEO** | `oc_seo_url` keyword `dealers` → `information/dealers` (id 1049; prior `information_id=10`) |
+| **Controller** | `catalog/controller/information/dealers.php` |
+| **Twig** | `catalog/view/theme/default/template/information/dealers.twig` |
+| **CSS namespace** | `zpm-dealers-page`, `zpm-dealers-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
+| **JS** | Corp FAQ accordion in `assets/js/main.js` — `[data-delivery-faq], [data-payment-faq], [data-warranty-faq], [data-dealers-faq]` |
 | **Copy** | [BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md](../copy/BZPM-M9.16-DEALERS-PAGE-COPY-v1.1.md) |
-| **Charter** | [SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md) |
-| **Checkpoint (post-implementation)** | `SITE-002-STABLE-LIVE-M9.16-DEALERS-01` |
+| **Authority** | `SITE-002-STABLE-LIVE-M9.16-DEALERS-01` (page domain only) |
 
 ### Structure (target)
 
@@ -1182,7 +1181,7 @@ Standalone `/dealers` corp page = **primary qualification surface** per charter.
 2. Live-capture remote files before deploy
 3. Do not bleed scope into PLP dealer form unless operator opens dedicated B3 task
 
-**Evidence:** [BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [m9.15-work/dealers-live-snippet.html](../reports/m9.15-work/dealers-live-snippet.html)
+**Evidence:** [SITE-002-M9.16-DEALERS-IMPLEMENTATION.md](../reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION.md) · [SITE-002-STABLE-LIVE-M9.16-DEALERS-01.md](../baselines/SITE-002-STABLE-LIVE-M9.16-DEALERS-01.md) · `reports/m9.16-work/`
 
 ---
 
@@ -1197,4 +1196,4 @@ Standalone `/dealers` corp page = **primary qualification surface** per charter.
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§21 M9.16 Dealers Implementation Charter READY).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§21 M9.16 Dealers IMPLEMENTED on TEST).*

@@ -1,0 +1,130 @@
+{
+  "pass": "m9.16-dealers-implementation",
+  "timestamp": "2026-06-28T11:27:41.375881+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "expected_head_note": "374fa6df or descendant — verify at git checkpoint",
+  "live_url": "https://zpm.new-site.space/dealers",
+  "route": "information/dealers",
+  "seo_keyword": "dealers",
+  "files": {
+    "catalog/controller/information/dealers.php": {
+      "pre_sha256": null,
+      "pre_bytes": 0,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\dealers.php.pre-m9.16-dealers.bak",
+      "is_new": true,
+      "post_sha256": "f1dea5ac2751670d81e6bf14137d6351199f603ffcf2221c65af26ebd2ae840f",
+      "post_bytes": 3167
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "pre_sha256": null,
+      "pre_bytes": 0,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\dealers.twig.pre-m9.16-dealers.bak",
+      "is_new": true,
+      "post_sha256": "75399c184da24e316e23ec30d8cb466a4d9b34fa1dc79785f1d6aaf51e27fe97",
+      "post_bytes": 45666
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "13690e4b74965693e11ea492ef26c4711122e0f701a44a74048f0b899fe7c461",
+      "pre_bytes": 336209,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.16-dealers.bak",
+      "is_new": false,
+      "post_sha256": "0adc3dd31840985a7893150df2817fdba2992f6c20709470dfab3f802b8307b8",
+      "post_bytes": 344669
+    },
+    "assets/js/main.js": {
+      "pre_sha256": "a28ad32886be1caee78b0ee18ff5da82331645aae9e734e0fc493a4823f7017e",
+      "pre_bytes": 204129,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.16-dealers.bak",
+      "is_new": false,
+      "post_sha256": "48fe8e6d32fcff41a968f07c71290a6c90ff0d734aab0f62f2a1e072bbd7c03d",
+      "post_bytes": 204159
+    }
+  },
+  "preflight": {
+    "catalog/controller/information/dealers.php": {
+      "exists": false,
+      "pre_sha256": null,
+      "pre_bytes": 0
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "exists": false,
+      "pre_sha256": null,
+      "pre_bytes": 0
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "13690e4b74965693e11ea492ef26c4711122e0f701a44a74048f0b899fe7c461",
+      "pre_bytes": 336209
+    },
+    "assets/js/main.js": {
+      "exists": true,
+      "pre_sha256": "a28ad32886be1caee78b0ee18ff5da82331645aae9e734e0fc493a4823f7017e",
+      "pre_bytes": 204129
+    }
+  },
+  "seo_url_patch_response": {
+    "ok": true,
+    "before": {
+      "seo_url_id": "1049",
+      "query": "information_id=10",
+      "keyword": "dealers"
+    },
+    "after": {
+      "seo_url_id": "1049",
+      "query": "information/dealers",
+      "keyword": "dealers"
+    }
+  },
+  "seo_url_updated": true,
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_ok": true,
+    "has_zpm_dealers_page": true,
+    "has_page_intro_lead": true,
+    "has_matrix": true,
+    "matrix_5_rows": true,
+    "has_proof": true,
+    "proof_5_h3": true,
+    "has_oem_row": true,
+    "oem_inn": true,
+    "has_outcomes": true,
+    "outcomes_6_rows": true,
+    "has_timeline": true,
+    "timeline_5_steps": true,
+    "has_chain": true,
+    "chain_4_nodes": true,
+    "has_crosslinks": true,
+    "has_faq": true,
+    "faq_8_items": true,
+    "data_dealers_faq": true,
+    "has_cta_title": true,
+    "has_form_title": true,
+    "company_required": true,
+    "city_required": true,
+    "comment_optional": true,
+    "no_website_field": true,
+    "no_inn_field": true,
+    "dialog_7": true,
+    "meta_title": true,
+    "no_sng": true,
+    "about_link": true,
+    "delivery_link": true,
+    "payment_link": true,
+    "guarantee_link": true,
+    "custom_link": true,
+    "privacy_link": true,
+    "commercial_trust_card": true,
+    "zpm_form": true,
+    "breadcrumb": true,
+    "h1_dealers": true,
+    "phone_cta": true,
+    "email_cta": true,
+    "no_discount_badge": true,
+    "all_pass": true
+  },
+  "opencart_cache_clear": {
+    "ok": true,
+    "cache_files_cleared": 7,
+    "note": "post-deploy manual clear required for seo_url routing"
+  }
+}

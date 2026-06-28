@@ -131,7 +131,7 @@
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
 | **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
-| **Implementation (remaining corp pages)** | M9.16 Dealers → M9.18 Custom Manufacturing **NOT STARTED** |
+| **Implementation (remaining corp pages)** | M9.18 Custom Manufacturing **NOT STARTED** |
 | **Live About authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
 | **M9.13 redesign** | **ARCHIVED** · **NOT ACTIVE** — never implementation authority |
 
@@ -150,7 +150,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 | **B1** | OPEN | МО warehouse address — M9.14 · M9.16 |
 | **B3** | OPEN | PLP dealer form vs `/dealers` — M9.16 |
 
-**Operator implementation order (remaining pages):** M9.14 Delivery → M9.15 Payment → M9.17 Warranty → M9.16 Dealers → M9.18 Custom Manufacturing. **Design order** (historical, unchanged): M9.13 → M9.15 → M9.14 → M9.17 → M9.16 → M9.18 — see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+**Operator implementation order (remaining pages):** M9.14 Delivery → M9.15 Payment → M9.17 Warranty → M9.16 Dealers → M9.18 Custom Manufacturing. **M9.16 Dealers IMPLEMENTED** (2026-06-28). **Design order** (historical, unchanged): M9.13 → M9.15 → M9.14 → M9.17 → M9.16 → M9.18 — see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
 
 ### Завершено
 
@@ -193,7 +193,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 | M9.13 | About Company | `/about` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED · REJECTED · RESTORED** |
 | M9.14 | Delivery | `/delivery` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.15 | Payment | `/payment-methods` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
-| M9.16 | Dealers | `/dealers` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
+| M9.16 | Dealers | `/dealers` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.17 | Warranty | `/guarantee` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.18 | Custom Manufacturing | `/custom-equipment` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
 
@@ -209,7 +209,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 **M9.17 Warranty implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.17-WARRANTY-01` · [SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md](reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md)
 
-**M9.16 Dealers implementation charter:** **READY** (2026-06-28) — standalone `/dealers` scope; B3 PLP reconciliation **out of scope** · [SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md](reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION-CHARTER-v1.md)
+**M9.16 Dealers implementation:** **IMPLEMENTED** (2026-06-28) · checkpoint `SITE-002-STABLE-LIVE-M9.16-DEALERS-01` · B3 PLP reconciliation **OPEN / out of scope** · [SITE-002-M9.16-DEALERS-IMPLEMENTATION.md](reports/SITE-002-M9.16-DEALERS-IMPLEMENTATION.md)
 
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
 

@@ -1,0 +1,39 @@
+{
+  "shots": [
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.16-dealers-screenshots\\m9.16-dealers-desktop-1440-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.16-dealers-screenshots\\m9.16-dealers-desktop-1440-timeline.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.16-dealers-screenshots\\m9.16-dealers-tablet-1024-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.16-dealers-screenshots\\m9.16-dealers-mobile-390-full.png"
+  ],
+  "console_errors": [],
+  "checks": {
+    "dealers_page": true,
+    "timeline_steps": 5,
+    "faq_items": 8,
+    "cta_form": true,
+    "company_field": true,
+    "city_field": true,
+    "data_dealers_faq": true,
+    "matrix_tags": 5,
+    "pass": true
+  },
+  "overflow": {
+    "desktop-1440": {
+      "sw": 1425,
+      "cw": 1440
+    },
+    "tablet-1024": {
+      "sw": 1009,
+      "cw": 1024
+    },
+    "mobile-390": {
+      "sw": 375,
+      "cw": 390
+    }
+  },
+  "http": {
+    "desktop-1440": 200,
+    "tablet-1024": 200,
+    "mobile-390": 200
+  }
+}
