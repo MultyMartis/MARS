@@ -1,0 +1,459 @@
+{
+  "pass": "site-002-universal-corporate-cta-v2",
+  "timestamp": "2026-06-28T20:01:16.121340+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "checkpoint": "CHECKPOINT-PRE-CORP-CTA-V2.md",
+  "files": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__about.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+      "post_sha256": "427772de2dc0f1f1a5522635753d639f735776e6967d1e78458315b338417125",
+      "pre_bytes": 19585,
+      "post_bytes": 19795
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__delivery.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "6db8da22c7e449a2fe8fdd5aa121f403808bd5a3099dc164f9b1962fe80ed234",
+      "post_sha256": "dd96688409bd7175baccea8122eddaa2d546b1f32352081f43856d209e7b7e58",
+      "pre_bytes": 51331,
+      "post_bytes": 52896
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__payment.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "d878062c675f9e76a65d3ab0db25483bee4af959d117b37f318061df600cb1c7",
+      "post_sha256": "1e507319aeb5fca2c7cb39e9e2cc9ca05837c539b3d8eb94af9bf765f2d8ad52",
+      "pre_bytes": 33699,
+      "post_bytes": 35298
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__guarantee.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "cc9dd9863aadf7e6ea386eda0b2837a13a9462a9176281d264131936b79e8365",
+      "post_sha256": "e353f274b0fb881a6e82cbab63ddd566d431885375936a4b2063c20b295505aa",
+      "pre_bytes": 44953,
+      "post_bytes": 46368
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__dealers.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "ecc6dc8b06faa8f9691edb02b6c10cee6eec22982d7d34275e163c3cd7370b5c",
+      "post_sha256": "873f6f9e728010f2b210d7d2bca08f0d16e9922324c0f8da3b35e57f444c47e6",
+      "pre_bytes": 45886,
+      "post_bytes": 47187
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__custom_equipment.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "59fcaca9f319dfe9301ce9190e898883f0854cd47a8c00e3ebc2cf92e26616a5",
+      "post_sha256": "19848c874b4b4e1f97ab4bd984f190a5e0467a8b869b84e573869932ec3ae942",
+      "pre_bytes": 66791,
+      "post_bytes": 67323
+    },
+    "catalog/view/theme/default/template/sections/blockcorporatecta.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__blockcorporatecta.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "a82ef58e81a3e358c256244861c590c370b78a745a9b91a3127c3c54c27bdc96",
+      "post_sha256": "a82ef58e81a3e358c256244861c590c370b78a745a9b91a3127c3c54c27bdc96",
+      "pre_bytes": 4551,
+      "post_bytes": 4551,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-about.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-about.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "f7b60dbc33205d10ad6d9cca9fe04f628e176613b056ce195108fe6bd632a3c5",
+      "post_sha256": "a18c75c04304e0f5809f785087d5938b9a2251b997b7c7e94c42ad2d5279fc63",
+      "pre_bytes": 2055,
+      "post_bytes": 7784,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-delivery.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-delivery.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "c0c821eeb18da9358c75e35f7cd12adeb086ffb2ff1f116f7e70db97e30845a2",
+      "post_sha256": "df66d0689cb554e0f6c129b7239384ea382c707a9cbfc6eb99abd73678a69cb1",
+      "pre_bytes": 2084,
+      "post_bytes": 8182,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-payment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-payment.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "3e2a728a710bd38a96f604a08b8bf5a3aa64e9827a85e5fed1c12693ce039384",
+      "post_sha256": "82c3b6b01972a0eb5667fa252d076b8df50218680e6fd487c20cef1fe5f2180a",
+      "pre_bytes": 2152,
+      "post_bytes": 7829,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-guarantee.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-guarantee.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "aee3b021af4d14d77cb693c673cc850002978b64d82cf2b07d2ccf6aff02436d",
+      "post_sha256": "7e893533c2caad10bf4a1afcdb449f5c2dd5a3e1cccdcaf9c9b81e42c8e53e9b",
+      "pre_bytes": 2317,
+      "post_bytes": 8934,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-dealers.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-dealers.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "368d9fbd903544ebc40492eb74eb8607ca146e83abe703c208d2b1f82613d328",
+      "post_sha256": "1efd4dd501bcefc0289376eed045579ae0ce165459fd371fed6414711038600f",
+      "pre_bytes": 2274,
+      "post_bytes": 8743,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-custom_equipment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-custom_equipment.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "c49c94a8be91a36f6878ca09f39741777ed46058a3177556767e361a673a2e0a",
+      "post_sha256": "c8e86e47907786c0a9e0cc9cc11bb8407263fadf24752ec4ae846c220581d1af",
+      "pre_bytes": 1998,
+      "post_bytes": 9289,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-about.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-form-about.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "8c8b028ed0486f3a409a6aad3ef5d3ddd68f54c10efd4437b4b47c7ff5c3d826",
+      "post_sha256": "8c8b028ed0486f3a409a6aad3ef5d3ddd68f54c10efd4437b4b47c7ff5c3d826",
+      "pre_bytes": 2513,
+      "post_bytes": 2513,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-delivery.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-form-delivery.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "2a084994c84508c43f2a44705ead736454ce148259c215ed4bcb3e36a133323e",
+      "post_sha256": "2a084994c84508c43f2a44705ead736454ce148259c215ed4bcb3e36a133323e",
+      "pre_bytes": 2882,
+      "post_bytes": 2882,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-payment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-form-payment.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "b35e7e3cf7bae314a6eae114f05f05c21670e25648b6cdd7ce9bfa9ca87dd496",
+      "post_sha256": "b35e7e3cf7bae314a6eae114f05f05c21670e25648b6cdd7ce9bfa9ca87dd496",
+      "pre_bytes": 2461,
+      "post_bytes": 2461,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-guarantee.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-form-guarantee.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "47d23e0ef3f1f0866929325459d54f59aae5c4e973e15b7e261b6c29508f7da4",
+      "post_sha256": "47d23e0ef3f1f0866929325459d54f59aae5c4e973e15b7e261b6c29508f7da4",
+      "pre_bytes": 3402,
+      "post_bytes": 3402,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-dealers.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-form-dealers.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "b25836442263cdd20b20d5e5062f27bd00ea30e1c8a73c63f3d4656c0dfb00e2",
+      "post_sha256": "b25836442263cdd20b20d5e5062f27bd00ea30e1c8a73c63f3d4656c0dfb00e2",
+      "pre_bytes": 3253,
+      "post_bytes": 3253,
+      "is_new": false
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-custom_equipment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__sections__corpcta-form-custom_equipment.twig.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "f48bdead5d21863941660cb0188d9fa3953a90d1ee22677b3a3c579e5c998a9a",
+      "post_sha256": "f48bdead5d21863941660cb0188d9fa3953a90d1ee22677b3a3c579e5c998a9a",
+      "pre_bytes": 4085,
+      "post_bytes": 4085,
+      "is_new": false
+    },
+    "assets/css/style.css": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-site-002-corp-cta-v2.bak",
+      "pre_sha256": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "post_sha256": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "pre_bytes": 427572,
+      "post_bytes": 427572
+    }
+  },
+  "sha256": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "pre": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+      "post": "427772de2dc0f1f1a5522635753d639f735776e6967d1e78458315b338417125"
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "pre": "6db8da22c7e449a2fe8fdd5aa121f403808bd5a3099dc164f9b1962fe80ed234",
+      "post": "dd96688409bd7175baccea8122eddaa2d546b1f32352081f43856d209e7b7e58"
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "pre": "d878062c675f9e76a65d3ab0db25483bee4af959d117b37f318061df600cb1c7",
+      "post": "1e507319aeb5fca2c7cb39e9e2cc9ca05837c539b3d8eb94af9bf765f2d8ad52"
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "pre": "cc9dd9863aadf7e6ea386eda0b2837a13a9462a9176281d264131936b79e8365",
+      "post": "e353f274b0fb881a6e82cbab63ddd566d431885375936a4b2063c20b295505aa"
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "pre": "ecc6dc8b06faa8f9691edb02b6c10cee6eec22982d7d34275e163c3cd7370b5c",
+      "post": "873f6f9e728010f2b210d7d2bca08f0d16e9922324c0f8da3b35e57f444c47e6"
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "pre": "59fcaca9f319dfe9301ce9190e898883f0854cd47a8c00e3ebc2cf92e26616a5",
+      "post": "19848c874b4b4e1f97ab4bd984f190a5e0467a8b869b84e573869932ec3ae942"
+    },
+    "catalog/view/theme/default/template/sections/blockcorporatecta.twig": {
+      "pre": "a82ef58e81a3e358c256244861c590c370b78a745a9b91a3127c3c54c27bdc96",
+      "post": "a82ef58e81a3e358c256244861c590c370b78a745a9b91a3127c3c54c27bdc96"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-about.twig": {
+      "pre": "f7b60dbc33205d10ad6d9cca9fe04f628e176613b056ce195108fe6bd632a3c5",
+      "post": "a18c75c04304e0f5809f785087d5938b9a2251b997b7c7e94c42ad2d5279fc63"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-delivery.twig": {
+      "pre": "c0c821eeb18da9358c75e35f7cd12adeb086ffb2ff1f116f7e70db97e30845a2",
+      "post": "df66d0689cb554e0f6c129b7239384ea382c707a9cbfc6eb99abd73678a69cb1"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-payment.twig": {
+      "pre": "3e2a728a710bd38a96f604a08b8bf5a3aa64e9827a85e5fed1c12693ce039384",
+      "post": "82c3b6b01972a0eb5667fa252d076b8df50218680e6fd487c20cef1fe5f2180a"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-guarantee.twig": {
+      "pre": "aee3b021af4d14d77cb693c673cc850002978b64d82cf2b07d2ccf6aff02436d",
+      "post": "7e893533c2caad10bf4a1afcdb449f5c2dd5a3e1cccdcaf9c9b81e42c8e53e9b"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-dealers.twig": {
+      "pre": "368d9fbd903544ebc40492eb74eb8607ca146e83abe703c208d2b1f82613d328",
+      "post": "1efd4dd501bcefc0289376eed045579ae0ce165459fd371fed6414711038600f"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-custom_equipment.twig": {
+      "pre": "c49c94a8be91a36f6878ca09f39741777ed46058a3177556767e361a673a2e0a",
+      "post": "c8e86e47907786c0a9e0cc9cc11bb8407263fadf24752ec4ae846c220581d1af"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-about.twig": {
+      "pre": "8c8b028ed0486f3a409a6aad3ef5d3ddd68f54c10efd4437b4b47c7ff5c3d826",
+      "post": "8c8b028ed0486f3a409a6aad3ef5d3ddd68f54c10efd4437b4b47c7ff5c3d826"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-delivery.twig": {
+      "pre": "2a084994c84508c43f2a44705ead736454ce148259c215ed4bcb3e36a133323e",
+      "post": "2a084994c84508c43f2a44705ead736454ce148259c215ed4bcb3e36a133323e"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-payment.twig": {
+      "pre": "b35e7e3cf7bae314a6eae114f05f05c21670e25648b6cdd7ce9bfa9ca87dd496",
+      "post": "b35e7e3cf7bae314a6eae114f05f05c21670e25648b6cdd7ce9bfa9ca87dd496"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-guarantee.twig": {
+      "pre": "47d23e0ef3f1f0866929325459d54f59aae5c4e973e15b7e261b6c29508f7da4",
+      "post": "47d23e0ef3f1f0866929325459d54f59aae5c4e973e15b7e261b6c29508f7da4"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-dealers.twig": {
+      "pre": "b25836442263cdd20b20d5e5062f27bd00ea30e1c8a73c63f3d4656c0dfb00e2",
+      "post": "b25836442263cdd20b20d5e5062f27bd00ea30e1c8a73c63f3d4656c0dfb00e2"
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-custom_equipment.twig": {
+      "pre": "f48bdead5d21863941660cb0188d9fa3953a90d1ee22677b3a3c579e5c998a9a",
+      "post": "f48bdead5d21863941660cb0188d9fa3953a90d1ee22677b3a3c579e5c998a9a"
+    },
+    "assets/css/style.css": {
+      "pre": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "post": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096"
+    }
+  },
+  "preflight": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "exists": true,
+      "pre_sha256": "2e1fdf5d3fda58f7eb0a4c42a40de6d4f26d904cc0a7b7829a758ada2a1b8dfc",
+      "pre_bytes": 19585
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "exists": true,
+      "pre_sha256": "6db8da22c7e449a2fe8fdd5aa121f403808bd5a3099dc164f9b1962fe80ed234",
+      "pre_bytes": 51331
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "exists": true,
+      "pre_sha256": "d878062c675f9e76a65d3ab0db25483bee4af959d117b37f318061df600cb1c7",
+      "pre_bytes": 33699
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "exists": true,
+      "pre_sha256": "cc9dd9863aadf7e6ea386eda0b2837a13a9462a9176281d264131936b79e8365",
+      "pre_bytes": 44953
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "exists": true,
+      "pre_sha256": "ecc6dc8b06faa8f9691edb02b6c10cee6eec22982d7d34275e163c3cd7370b5c",
+      "pre_bytes": 45886
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "exists": true,
+      "pre_sha256": "59fcaca9f319dfe9301ce9190e898883f0854cd47a8c00e3ebc2cf92e26616a5",
+      "pre_bytes": 66791
+    },
+    "catalog/view/theme/default/template/sections/blockcorporatecta.twig": {
+      "exists": true,
+      "pre_sha256": "a82ef58e81a3e358c256244861c590c370b78a745a9b91a3127c3c54c27bdc96",
+      "pre_bytes": 4551
+    },
+    "catalog/view/theme/default/template/sections/corpcta-about.twig": {
+      "exists": true,
+      "pre_sha256": "f7b60dbc33205d10ad6d9cca9fe04f628e176613b056ce195108fe6bd632a3c5",
+      "pre_bytes": 2055
+    },
+    "catalog/view/theme/default/template/sections/corpcta-delivery.twig": {
+      "exists": true,
+      "pre_sha256": "c0c821eeb18da9358c75e35f7cd12adeb086ffb2ff1f116f7e70db97e30845a2",
+      "pre_bytes": 2084
+    },
+    "catalog/view/theme/default/template/sections/corpcta-payment.twig": {
+      "exists": true,
+      "pre_sha256": "3e2a728a710bd38a96f604a08b8bf5a3aa64e9827a85e5fed1c12693ce039384",
+      "pre_bytes": 2152
+    },
+    "catalog/view/theme/default/template/sections/corpcta-guarantee.twig": {
+      "exists": true,
+      "pre_sha256": "aee3b021af4d14d77cb693c673cc850002978b64d82cf2b07d2ccf6aff02436d",
+      "pre_bytes": 2317
+    },
+    "catalog/view/theme/default/template/sections/corpcta-dealers.twig": {
+      "exists": true,
+      "pre_sha256": "368d9fbd903544ebc40492eb74eb8607ca146e83abe703c208d2b1f82613d328",
+      "pre_bytes": 2274
+    },
+    "catalog/view/theme/default/template/sections/corpcta-custom_equipment.twig": {
+      "exists": true,
+      "pre_sha256": "c49c94a8be91a36f6878ca09f39741777ed46058a3177556767e361a673a2e0a",
+      "pre_bytes": 1998
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-about.twig": {
+      "exists": true,
+      "pre_sha256": "8c8b028ed0486f3a409a6aad3ef5d3ddd68f54c10efd4437b4b47c7ff5c3d826",
+      "pre_bytes": 2513
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-delivery.twig": {
+      "exists": true,
+      "pre_sha256": "2a084994c84508c43f2a44705ead736454ce148259c215ed4bcb3e36a133323e",
+      "pre_bytes": 2882
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-payment.twig": {
+      "exists": true,
+      "pre_sha256": "b35e7e3cf7bae314a6eae114f05f05c21670e25648b6cdd7ce9bfa9ca87dd496",
+      "pre_bytes": 2461
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-guarantee.twig": {
+      "exists": true,
+      "pre_sha256": "47d23e0ef3f1f0866929325459d54f59aae5c4e973e15b7e261b6c29508f7da4",
+      "pre_bytes": 3402
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-dealers.twig": {
+      "exists": true,
+      "pre_sha256": "b25836442263cdd20b20d5e5062f27bd00ea30e1c8a73c63f3d4656c0dfb00e2",
+      "pre_bytes": 3253
+    },
+    "catalog/view/theme/default/template/sections/corpcta-form-custom_equipment.twig": {
+      "exists": true,
+      "pre_sha256": "f48bdead5d21863941660cb0188d9fa3953a90d1ee22677b3a3c579e5c998a9a",
+      "pre_bytes": 4085
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "5069589fe5dcad4618dbc397a7db2a7539779eea79e277920723c467897b3096",
+      "pre_bytes": 427572
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "catalog/view/theme/default/template/information/about.twig": {
+      "url": "https://zpm.new-site.space/about",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_cta": true,
+        "no_old_commercial_trust_cta": true,
+        "has_cert_col": true,
+        "has_benefits": true,
+        "has_form": true,
+        "has_decor_logo": true,
+        "title_present": true,
+        "catalog_commercial_trust_untouched": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "url": "https://zpm.new-site.space/delivery",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_cta": true,
+        "no_old_commercial_trust_cta": true,
+        "has_cert_col": true,
+        "has_benefits": true,
+        "has_form": true,
+        "has_decor_logo": true,
+        "title_present": true,
+        "catalog_commercial_trust_untouched": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/payment.twig": {
+      "url": "https://zpm.new-site.space/payment-methods",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_cta": true,
+        "no_old_commercial_trust_cta": true,
+        "has_cert_col": true,
+        "has_benefits": true,
+        "has_form": true,
+        "has_decor_logo": true,
+        "title_present": true,
+        "catalog_commercial_trust_untouched": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "url": "https://zpm.new-site.space/guarantee",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_cta": true,
+        "no_old_commercial_trust_cta": true,
+        "has_cert_col": true,
+        "has_benefits": true,
+        "has_form": true,
+        "has_decor_logo": true,
+        "title_present": true,
+        "catalog_commercial_trust_untouched": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/dealers.twig": {
+      "url": "https://zpm.new-site.space/dealers",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_cta": true,
+        "no_old_commercial_trust_cta": true,
+        "has_cert_col": true,
+        "has_benefits": true,
+        "has_form": true,
+        "has_decor_logo": true,
+        "title_present": true,
+        "catalog_commercial_trust_untouched": true,
+        "all_pass": true
+      }
+    },
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "url": "https://zpm.new-site.space/custom-equipment",
+      "status": 200,
+      "checks": {
+        "http_ok": true,
+        "has_zpm_corp_cta": true,
+        "no_old_commercial_trust_cta": true,
+        "has_cert_col": true,
+        "has_benefits": true,
+        "has_form": true,
+        "has_decor_logo": true,
+        "title_present": true,
+        "catalog_commercial_trust_untouched": true,
+        "all_pass": true
+      }
+    },
+    "catalog/home": {
+      "url": "https://zpm.new-site.space/",
+      "checks": {
+        "commercial_trust_present": true,
+        "no_corp_cta_in_catalog": true,
+        "all_pass": true
+      }
+    },
+    "home": {
+      "url": "https://zpm.new-site.space/",
+      "checks": {
+        "no_corp_cta_on_home": true
+      }
+    }
+  },
+  "qa_all_pass": true
+}

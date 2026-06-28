@@ -1,0 +1,48 @@
+<form class="zpm-form zpm-custom-form" action="#" method="post" novalidate>
+  <input type="hidden" name="dialog" value="7">
+  <div class="zpm-form__grid">
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customCompany">Организация<em>*</em></label>
+      <input class="zpm-form__input" id="customCompany" name="company" type="text" placeholder="Полное или сокращённое наименование" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customContact">Контактное лицо<em>*</em></label>
+      <input class="zpm-form__input" id="customContact" name="contact" type="text" placeholder="ФИО" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customPhone">Номер телефона<em>*</em></label>
+      <div class="zpm-form__phone">
+        <input class="zpm-form__input" id="customPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+      </div>
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="customEmail">E-mail<em>*</em></label>
+      <input class="zpm-form__input" id="customEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="customProjectDescription">Описание задачи<em>*</em></label>
+      <textarea class="zpm-form__textarea" id="customProjectDescription" name="project_description" rows="4" placeholder="Назначение, размеры, комплектация, особенности монтажа" required></textarea>
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="customDrawings">Чертёж, эскиз или описание файлов</label>
+      <textarea class="zpm-form__textarea" id="customDrawings" name="drawings" rows="3" placeholder="Опишите приложенные материалы или укажите, что отправите отдельно"></textarea>
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="customNotes">Дополнительные примечания</label>
+      <textarea class="zpm-form__textarea" id="customNotes" name="notes" rows="3" placeholder="Срок, регион поставки, ссылка на&nbsp;модель каталога и&nbsp;другое"></textarea>
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <p class="zpm-custom-form__helper">Файлы чертежей, эскизов или фото можно направить на&nbsp;<a href="mailto:info@bzpm.ru">info@bzpm.ru</a> — укажите в&nbsp;письме номер заявки или название организации после отправки формы.</p>
+    </div>
+    <div class="zpm-form__field">
+      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+    </div>
+    <div class="zpm-form__actions">
+      <button class="btn btn_dark zpm-form__submit" type="submit" aria-label="Отправить заявку на расчёт оборудования на заказ">Отправить заявку на&nbsp;расчёт</button>
+      <label class="zpm-form__agree">
+        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+        <span class="zpm-form__agree-text">Я&nbsp;согласен на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;связь по&nbsp;указанным контактам для ответа на&nbsp;заявку.</span>
+      </label>
+    </div>
+  </div>
+</form>

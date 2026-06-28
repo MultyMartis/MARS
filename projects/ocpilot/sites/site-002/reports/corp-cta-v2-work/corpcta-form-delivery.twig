@@ -1,0 +1,40 @@
+<form class="zpm-form zpm-delivery-form" action="#" method="post" novalidate>
+  <div class="zpm-form__grid">
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryName">Имя<em>*</em></label>
+      <input class="zpm-form__input" id="deliveryName" name="name" type="text" placeholder="Ваше имя" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryPhone">Номер телефона<em>*</em></label>
+      <div class="zpm-form__phone">
+        <input class="zpm-form__input" id="deliveryPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+      </div>
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryEmail">E-mail<em>*</em></label>
+      <input class="zpm-form__input" id="deliveryEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryRegion">Регион доставки<em>*</em></label>
+      <input class="zpm-form__input" id="deliveryRegion" name="region" type="text" placeholder="Город или область получения" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryMethod">Предпочтительный способ получения</label>
+      <input class="zpm-form__input" id="deliveryMethod" name="delivery_method" type="text" placeholder="Самовывоз / транспортная компания / пока не определились" />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryOrderDetails">Состав заказа или комментарий</label>
+      <textarea class="zpm-form__textarea" id="deliveryOrderDetails" name="order_details" rows="3" placeholder="Модели, количество, габариты — если известны"></textarea>
+    </div>
+    <div class="zpm-form__field">
+      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+    </div>
+    <div class="zpm-form__actions">
+      <button class="btn btn_dark zpm-form__submit" type="submit">Отправить запрос</button>
+      <label class="zpm-form__agree">
+        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+        <span class="zpm-form__agree-text">Я&nbsp;даю согласие на&nbsp;обработку своих персональных данных, обратный звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a>.</span>
+      </label>
+    </div>
+  </div>
+</form>

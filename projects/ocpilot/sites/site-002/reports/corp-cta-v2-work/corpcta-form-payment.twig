@@ -1,0 +1,36 @@
+<form class="zpm-form zpm-payment-form" action="#" method="post" novalidate>
+  <div class="zpm-form__grid">
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="paymentName">Имя<em>*</em></label>
+      <input class="zpm-form__input" id="paymentName" name="name" type="text" placeholder="Ваше имя" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="paymentPhone">Номер телефона<em>*</em></label>
+      <div class="zpm-form__phone">
+        <input class="zpm-form__input" id="paymentPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+      </div>
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="paymentEmail">E-mail<em>*</em></label>
+      <input class="zpm-form__input" id="paymentEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="paymentCompany">Организация<em>*</em></label>
+      <input class="zpm-form__input" id="paymentCompany" name="company" type="text" placeholder="Название юрлица или ИП" required />
+    </div>
+    <div class="zpm-form__field zpm-form__field--full">
+      <label class="zpm-form__label" for="paymentComment">Комментарий</label>
+      <textarea class="zpm-form__textarea" id="paymentComment" name="comment" rows="3" placeholder="Состав заказа, вопрос по НДС, документам или срокам оплаты"></textarea>
+    </div>
+    <div class="zpm-form__field">
+      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+    </div>
+    <div class="zpm-form__actions">
+      <button class="btn btn_dark zpm-form__submit" type="submit">Отправить запрос</button>
+      <label class="zpm-form__agree">
+        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+        <span class="zpm-form__agree-text">Я&nbsp;даю согласие на&nbsp;обработку своих персональных данных, обратный звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a>.</span>
+      </label>
+    </div>
+  </div>
+</form>

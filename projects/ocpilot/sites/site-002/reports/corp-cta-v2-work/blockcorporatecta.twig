@@ -1,0 +1,82 @@
+<section class="zpm-corp-cta {{ corp_cta_modifier|default('') }}" id="{{ corp_cta_id|default('zpm-corp-cta') }}" aria-labelledby="{{ corp_cta_title_id|default('zpm-corp-cta-title') }}" data-corp-cta="{{ corp_cta_data|default('corp') }}">
+  <div class="container">
+    <div class="zpm-corp-cta__card">
+      <div class="zpm-corp-cta__wrap">
+        <div class="zpm-corp-cta__info">
+          <div class="zpm-corp-cta__header">
+            <p class="zpm-corp-cta__label">{{ corp_cta_label }}</p>
+            <h2 class="zpm-corp-cta__title" id="{{ corp_cta_title_id|default('zpm-corp-cta-title') }}">{{ corp_cta_title }}</h2>
+            <p class="zpm-corp-cta__lead">{{ corp_cta_lead }}</p>
+          </div>
+          <div class="zpm-corp-cta__main">
+            <div class="zpm-corp-cta__cert-col" aria-label="Сертификаты">
+              <div class="zpm-corp-cta__cert-card">
+                <div class="swiper js-commercial-trust-certs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a
+                        class="zpm-corp-cta__cert-link"
+                        href="/assets/img/certificates/certificat_00.jpg"
+                        data-fancybox="{{ corp_cta_cert_fancybox|default('certificates-corp') }}"
+                        data-caption="Сертификат «Сделано в России»"
+                      >
+                        <img
+                          class="zpm-corp-cta__cert-img"
+                          src="/assets/img/certificates/thumb_00.png"
+                          alt="Сертификат «Сделано в России»"
+                          width="200"
+                          height="280"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="zpm-corp-cta__cert-card--base">
+                <img src="/assets/img/sert-base.jpg" alt="" width="250" height="40" loading="lazy" />
+              </div>
+            </div>
+            <div class="zpm-corp-cta__benefits">
+              <ul class="zpm-corp-cta__benefits-grid">
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad {{ corp_cta_benefit_1_icon }}"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">{{ corp_cta_benefit_1_title }}</strong>
+                    <span class="zpm-corp-cta__benefit-text">{{ corp_cta_benefit_1_text }}</span>
+                  </span>
+                </li>
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad {{ corp_cta_benefit_2_icon }}"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">{{ corp_cta_benefit_2_title }}</strong>
+                    <span class="zpm-corp-cta__benefit-text">{{ corp_cta_benefit_2_text }}</span>
+                  </span>
+                </li>
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad {{ corp_cta_benefit_3_icon }}"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">{{ corp_cta_benefit_3_title }}</strong>
+                    <span class="zpm-corp-cta__benefit-text">{{ corp_cta_benefit_3_text }}</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="zpm-corp-cta__form-wrap">
+          <div class="zpm-decoration-with-logo">
+            <img src="/assets/img/decor-logo.svg" alt="" width="120" height="120" loading="lazy" />
+          </div>
+          <div class="zpm-corp-cta__form-col">
+            <div class="zpm-corp-cta__form-card" id="{{ corp_cta_form_id|default('zpm-corp-cta-form') }}">
+              <h3 class="zpm-corp-cta__form-title">{{ corp_cta_form_title|raw }}</h3>
+              <p class="zpm-corp-cta__form-note">{{ corp_cta_form_note|raw }}</p>
+              {% include corp_cta_form_partial %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
