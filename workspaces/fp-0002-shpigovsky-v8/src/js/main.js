@@ -778,7 +778,7 @@
 
 		var errorEl = getFieldErrorElement(field);
 		if (wrapper) {
-			wrapper.classList.toggle('home-final-form__field--invalid', !isValid && !!wrapper.closest('.home-final-form'));
+			wrapper.classList.toggle('final-form__field--invalid', !isValid && !!wrapper.closest('.final-form'));
 			wrapper.classList.toggle('modal-consultation__field--invalid', !isValid && !!wrapper.closest('.modal-consultation'));
 		}
 
@@ -829,13 +829,13 @@
 	function showLeadFormStatus(form, type, message) {
 		var status = ensureStatusElement(form);
 		status.hidden = !message;
-		status.className = form.classList.contains('home-final-form__form')
-			? 'home-final-form__status'
+		status.className = form.classList.contains('final-form__form')
+			? 'final-form__status'
 			: 'modal-consultation__status';
 
 		if (type) {
-			status.classList.add(form.classList.contains('home-final-form__form')
-				? 'home-final-form__status--' + type
+			status.classList.add(form.classList.contains('final-form__form')
+				? 'final-form__status--' + type
 				: 'modal-consultation__status--' + type);
 		}
 
@@ -855,8 +855,8 @@
 		setLeadFormState(form, '');
 		showLeadFormStatus(form, '', '');
 
-		form.querySelectorAll('.home-final-form__field--invalid, .modal-consultation__field--invalid').forEach(function (wrapper) {
-			wrapper.classList.remove('home-final-form__field--invalid', 'modal-consultation__field--invalid');
+		form.querySelectorAll('.final-form__field--invalid, .modal-consultation__field--invalid').forEach(function (wrapper) {
+			wrapper.classList.remove('final-form__field--invalid', 'modal-consultation__field--invalid');
 		});
 
 		form.querySelectorAll('[aria-invalid="true"]').forEach(function (field) {
@@ -1122,7 +1122,7 @@
 				var wrapper = getFieldWrapper(field);
 				if (
 					wrapper &&
-					(wrapper.classList.contains('home-final-form__field--invalid') ||
+					(wrapper.classList.contains('final-form__field--invalid') ||
 						wrapper.classList.contains('modal-consultation__field--invalid'))
 				) {
 					validateLeadField(field);
@@ -1148,7 +1148,7 @@
 			}
 		});
 
-		form.querySelectorAll('.home-final-form__consent-link, .modal-consultation__consent-link').forEach(function (link) {
+		form.querySelectorAll('.final-form__consent-link, .modal-consultation__consent-link').forEach(function (link) {
 			link.addEventListener('click', function (event) {
 				event.stopPropagation();
 			});

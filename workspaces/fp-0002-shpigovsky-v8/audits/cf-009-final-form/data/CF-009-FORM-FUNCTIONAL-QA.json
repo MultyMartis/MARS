@@ -1,0 +1,108 @@
+{
+  "validation_id": "CF-009-FORM-FUNCTIONAL-QA",
+  "captured_utc": "2026-06-28T13:25:03.409265+00:00",
+  "port": 4198,
+  "rows": [
+    {
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "uslugi.html",
+      "viewport": "desktop",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "uslugi.html",
+      "viewport": "mobile",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    },
+    {
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "neutral_root_count": 1,
+      "old_root_count": 0,
+      "empty_submit_validation": true,
+      "phone_mask_works": true,
+      "console_errors": [],
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

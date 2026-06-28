@@ -115,10 +115,11 @@ Registry of visually recurring families across the four canonical templates. Eac
 
 | Field | Value |
 | ----- | ----- |
-| Shared partial | `partials/sections/home-final-form.html` |
-| Class family | `.home-final-form*` |
-| Pages | All four templates |
-| Consolidation priority | P2 |
+| Shared partial | `partials/sections/final-form.html` |
+| Class family | `.final-form*` |
+| Pages | All five canonical templates |
+| Consolidation priority | COMPLETE — universalized CF-009 wave 7 |
+| Retired name | `home-final-form` |
 
 ---
 

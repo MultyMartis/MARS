@@ -17,7 +17,7 @@ fp0002_v8_cf007_reviews: COMPLETE
 fp0002_v8_cf008_faq: COMPLETE
 fp0002_v8_shared_component_audit: COMPLETE
 fp0002_v8_shared_component_audit_commit: 98ea1ae6
-fp0002_v8_next_wave: CF-009_HOME_FINAL_FORM (NOT AUTHORIZED)
+fp0002_v8_next_wave: CF-010_HOME_CLINIC_LANDSCAPE (NOT AUTHORIZED)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -137,4 +137,5 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 
 ## Next wave (documentation only)
 
-- Recommended family: Final form (`home-final-form`) — **NOT AUTHORIZED**
+- Recommended family: Clinic landscape (`home-clinic-landscape`) — **NOT AUTHORIZED**
+- CF-009 Final form (`final-form`) — **COMPLETE**

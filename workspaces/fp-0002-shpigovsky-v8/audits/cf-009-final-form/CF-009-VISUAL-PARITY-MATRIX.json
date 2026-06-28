@@ -1,0 +1,366 @@
+{
+  "manifest_id": "CF-009-VISUAL-PARITY-MATRIX",
+  "overall": "PASS",
+  "matrix": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\home-desktop-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\home-desktop-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        1422,
+        554
+      ],
+      "different_pixels": 0,
+      "total_pixels": 787788,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\home-desktop-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\home-desktop-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        714
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1026018,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\home-mobile-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\home-mobile-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        365,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 328500,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\home-mobile-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\home-mobile-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services",
+      "viewport": "desktop",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-desktop-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-desktop-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        1422,
+        554
+      ],
+      "different_pixels": 0,
+      "total_pixels": 787788,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services",
+      "viewport": "desktop",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-desktop-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-desktop-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        714
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1026018,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services",
+      "viewport": "mobile",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-mobile-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-mobile-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        365,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 328500,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services",
+      "viewport": "mobile",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-mobile-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-mobile-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services-v2",
+      "viewport": "desktop",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-v2-desktop-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-v2-desktop-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        1422,
+        554
+      ],
+      "different_pixels": 0,
+      "total_pixels": 787788,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services-v2",
+      "viewport": "desktop",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-v2-desktop-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-v2-desktop-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        714
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1026018,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services-v2",
+      "viewport": "mobile",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-v2-mobile-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-v2-mobile-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        365,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 328500,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "services-v2",
+      "viewport": "mobile",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\services-v2-mobile-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\services-v2-mobile-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-subdivision-desktop-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-subdivision-desktop-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        1422,
+        554
+      ],
+      "different_pixels": 0,
+      "total_pixels": 787788,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-subdivision-desktop-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-subdivision-desktop-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        714
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1026018,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-subdivision-mobile-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-subdivision-mobile-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        365,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 328500,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-subdivision-mobile-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-subdivision-mobile-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-leaf-desktop-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-leaf-desktop-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        1422,
+        554
+      ],
+      "different_pixels": 0,
+      "total_pixels": 787788,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-leaf-desktop-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-leaf-desktop-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        1437,
+        714
+      ],
+      "different_pixels": 0,
+      "total_pixels": 1026018,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "final_form_crop",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-leaf-mobile-initial-final-form-crop.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-leaf-mobile-initial-final-form-crop.png",
+      "exists": true,
+      "size": [
+        365,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 328500,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "final_form_context",
+      "before": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\before\\service-leaf-mobile-initial-final-form-context.png",
+      "after": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-009-evidence\\after\\service-leaf-mobile-initial-final-form-context.png",
+      "exists": true,
+      "size": [
+        380,
+        900
+      ],
+      "different_pixels": 0,
+      "total_pixels": 342000,
+      "ratio": 0.0,
+      "bbox": null,
+      "exact_match": true,
+      "result": "PASS"
+    }
+  ]
+}

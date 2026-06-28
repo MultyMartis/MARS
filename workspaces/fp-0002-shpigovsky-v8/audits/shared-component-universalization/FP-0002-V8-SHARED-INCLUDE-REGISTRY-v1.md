@@ -12,8 +12,8 @@
 | Metric | Count |
 |--------|------:|
 | Total candidate families | 13 |
-| Universalized (complete) | 7 (CF-003, CF-004, CF-005, CF-006, CF-007, CF-008, CF-014) |
-| Shared but page-named | 4 |
+| Universalized (complete) | 8 (CF-003, CF-004, CF-005, CF-006, CF-007, CF-008, CF-009, CF-014) |
+| Shared but page-named | 3 |
 | Duplicated shared family | 2 |
 | Genuinely page-specific | 1 |
 | Hold / unresolved | 1 |
@@ -30,8 +30,7 @@
 | CF-006 | comfort | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-007 | reviews | 3 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-008 | faq | 5 | UNIVERSALIZED | COMPLETE | NONE |
-| CF-008 | home-faq | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
-| CF-009 | home-final-form | 5 | SHARED_BUT_PAGE_NAMED | P1 | RENAME_AND_UNIVERSALIZE |
+| CF-009 | final-form | 5 | UNIVERSALIZED | COMPLETE | NONE |
 | CF-010 | home-clinic-landscape | 3 | SHARED_BUT_PAGE_NAMED | P2 | RENAME_AND_UNIVERSALIZE |
 | CF-011 | services-program-cta-band-v2 | 3+ | DUPLICATED_SHARED_FAMILY | P1 | COLLAPSE_WRAPPERS_KEEP_BAND |
 | CF-012 | services-program-v2 | 3 | DUPLICATED_SHARED_FAMILY | P1 | COLLAPSE_REDUNDANT_MODIFIERS |
@@ -145,8 +144,25 @@
 
 ---
 
+## Final form family (CF-009 detail)
+
+| Item | Value |
+|------|-------|
+| Canonical partial | `src/partials/sections/final-form.html` |
+| Canonical root class | `.final-form` |
+| Pages using | `index.html`, `uslugi.html`, `uslugi-v2.html`, `usluga-podrazdel-v1.html`, `usluga-konechnaya-v1.html` |
+| HTML copies | 0 — single include |
+| CSS copies | 1 — `.final-form*` in `style.scss` |
+| JS init | 1 — global `[data-lead-form]` in `main.js` |
+| Old name retired | `home-final-form` |
+| Aliases | 0 |
+| Classification | UNIVERSALIZED |
+| Implementation status | COMPLETE |
+
+---
+
 ## Next recommended wave
 
-**CF-009 — Final form (`home-final-form`)** — NOT AUTHORIZED
+**CF-010 — Clinic landscape (`home-clinic-landscape`)** — NOT AUTHORIZED
 
-Reason: shared on 5 templates; page-specific name; operator gate required before wave 7.
+Reason: shared on 3 templates; page-specific name; operator gate required before wave 10.

@@ -16,6 +16,7 @@
 | 4 | CF-006 comfort | COMPLETE — commit `4737b020` |
 | 5 | CF-007 reviews | COMPLETE — commit `4fe928f2` |
 | 6 | CF-008 FAQ | COMPLETE — pending commit |
+| 7 | CF-009 final form | COMPLETE — pending commit |
 
 ---
 
@@ -29,8 +30,8 @@
 | 4 | CF-006 comfort gallery | P1 | 5 | Low–medium | **COMPLETE** |
 | 5 | CF-007 reviews | P1 | 3 | Medium JS (Swiper) | **COMPLETE** |
 | 6 | CF-008 FAQ | P1 | 5 | Low JS (accordion) | **COMPLETE** |
-| 7 | CF-009 final form | P1 | 5 | Low | Form mask hooks — NOT AUTHORIZED |
-| 10 | CF-010 clinic landscape | P2 | 3 | Low | Remove leaf modifier class |
+| 7 | CF-009 final form | P1 | 5 | Low | **COMPLETE** |
+| 10 | CF-010 clinic landscape | P2 | 3 | Low | Remove leaf modifier class — NOT AUTHORIZED |
 | — | CF-013 inner hero | P2 | HOLD | Already shared on 3 templates | No wave unless Home unification requested |
 | — | CF-015 home gallery | HOLD | 1 | Unknown until O-Centre | Defer |
 
@@ -100,11 +101,37 @@
 
 ---
 
-## Next wave: CF-009 Final form
+## Completed wave: CF-009 Final form
+
+**Result:** COMPLETE
+
+- Partial: `src/partials/sections/final-form.html`
+- Root class: `.final-form`
+- Retired: `home-final-form` (partial, classes, component IDs)
+- Consumers: 5 pages
+- Visual parity: PASS (crop + context 20/20 exact)
+- Form QA: PASS
+
+---
+
+## Next wave: CF-010 Clinic landscape
+
+**Status:** NOT AUTHORIZED
+
+Operator gate required before any `home-clinic-landscape` rename.
+
+---
+
+## Next wave: CF-009 Final form (archive)
+
+<details>
+<summary>Original CF-009 plan (superseded)</summary>
 
 **Status:** NOT AUTHORIZED
 
 Operator gate required before any `home-final-form` rename.
+
+</details>
 
 ---
 

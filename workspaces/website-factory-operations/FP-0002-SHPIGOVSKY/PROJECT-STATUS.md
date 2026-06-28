@@ -1,7 +1,17 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-26 (Services V2 Block 1 — upper page complete pending operator review)
+**Last updated:** 2026-06-28 (V8 CF-009 final form universalization closeout)
+
+## V8 workspace (2026-06-28)
+
+| Field | Value |
+|-------|-------|
+| Workspace | `workspaces/fp-0002-shpigovsky-v8/` |
+| Branch | `mars/canonical-post-recovery` |
+| CF-003–CF-009 shared families | COMPLETE (CF-009 `final-form` — operator approved) |
+| Next wave | CF-010 clinic landscape — **NOT AUTHORIZED** |
+| O-Centre | DEFERRED |
 
 ## Workspace versions (2026-06-24)
 
