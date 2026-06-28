@@ -195,3 +195,10 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 ## Next wave (documentation only)
 
 - O-Centre page HTML/CSS — **NOT STARTED** (await operator implementation authorization)
+
+
+## O-Centre infrastructure assets (2026-06-29)
+
+- Status: **APPROVED_EXPORTED** — 20 WebP under `src/img/content/o-centre/o-centre-infrastructure-*.webp`
+- Evidence: `audits/o-centre-targeted-asset-export/`
+- Implementation authorized: **false** (content blockers remain)

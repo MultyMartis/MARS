@@ -16,5 +16,309 @@
     "block": "OC-B08",
     "count_pending": 22,
     "status": "PENDING_EXPORT"
-  }
+  },
+  "infrastructure_assets": [
+    {
+      "asset_id": "OC-INF-01",
+      "src": "img/content/o-centre/o-centre-infrastructure-01.webp",
+      "intrinsic_dimensions": {
+        "w": 600,
+        "h": 451
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 1,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-02",
+      "src": "img/content/o-centre/o-centre-infrastructure-02.webp",
+      "intrinsic_dimensions": {
+        "w": 1209,
+        "h": 911
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 2,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-03",
+      "src": "img/content/o-centre/o-centre-infrastructure-03.webp",
+      "intrinsic_dimensions": {
+        "w": 596,
+        "h": 448
+      },
+      "desktop_use": true,
+      "mobile_use": false,
+      "ordering": 3,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-04",
+      "src": "img/content/o-centre/o-centre-infrastructure-04.webp",
+      "intrinsic_dimensions": {
+        "w": 895,
+        "h": 671
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 4,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-05",
+      "src": "img/content/o-centre/o-centre-infrastructure-05.webp",
+      "intrinsic_dimensions": {
+        "w": 904,
+        "h": 676
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 5,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-06",
+      "src": "img/content/o-centre/o-centre-infrastructure-06.webp",
+      "intrinsic_dimensions": {
+        "w": 903,
+        "h": 678
+      },
+      "desktop_use": true,
+      "mobile_use": false,
+      "ordering": 6,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-07",
+      "src": "img/content/o-centre/o-centre-infrastructure-07.webp",
+      "intrinsic_dimensions": {
+        "w": 1812,
+        "h": 1312
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 7,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-08",
+      "src": "img/content/o-centre/o-centre-infrastructure-08.webp",
+      "intrinsic_dimensions": {
+        "w": 1623,
+        "h": 1155
+      },
+      "desktop_use": true,
+      "mobile_use": false,
+      "ordering": 8,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-09",
+      "src": "img/content/o-centre/o-centre-infrastructure-09.webp",
+      "intrinsic_dimensions": {
+        "w": 1610,
+        "h": 1146
+      },
+      "desktop_use": true,
+      "mobile_use": false,
+      "ordering": 9,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-10",
+      "src": "img/content/o-centre/o-centre-infrastructure-10.webp",
+      "intrinsic_dimensions": {
+        "w": 1212,
+        "h": 892
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 10,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-11",
+      "src": "img/content/o-centre/o-centre-infrastructure-11.webp",
+      "intrinsic_dimensions": {
+        "w": 957,
+        "h": 892
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 11,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-12",
+      "src": "img/content/o-centre/o-centre-infrastructure-12.webp",
+      "intrinsic_dimensions": {
+        "w": 1189,
+        "h": 888
+      },
+      "desktop_use": true,
+      "mobile_use": false,
+      "ordering": 12,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-13",
+      "src": "img/content/o-centre/o-centre-infrastructure-13.webp",
+      "intrinsic_dimensions": {
+        "w": 2477,
+        "h": 1394
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 13,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-14",
+      "src": "img/content/o-centre/o-centre-infrastructure-14.webp",
+      "intrinsic_dimensions": {
+        "w": 1881,
+        "h": 1246
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 14,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-15",
+      "src": "img/content/o-centre/o-centre-infrastructure-15.webp",
+      "intrinsic_dimensions": {
+        "w": 891,
+        "h": 1086
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 15,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-16",
+      "src": "img/content/o-centre/o-centre-infrastructure-16.webp",
+      "intrinsic_dimensions": {
+        "w": 902,
+        "h": 681
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 16,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-17",
+      "src": "img/content/o-centre/o-centre-infrastructure-17.webp",
+      "intrinsic_dimensions": {
+        "w": 1992,
+        "h": 1237
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 17,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-18",
+      "src": "img/content/o-centre/o-centre-infrastructure-18.webp",
+      "intrinsic_dimensions": {
+        "w": 2201,
+        "h": 1227
+      },
+      "desktop_use": true,
+      "mobile_use": true,
+      "ordering": 18,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-19",
+      "src": "img/content/o-centre/o-centre-infrastructure-19.webp",
+      "intrinsic_dimensions": {
+        "w": 907,
+        "h": 825
+      },
+      "desktop_use": false,
+      "mobile_use": true,
+      "ordering": 19,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    },
+    {
+      "asset_id": "OC-INF-20",
+      "src": "img/content/o-centre/o-centre-infrastructure-20.webp",
+      "intrinsic_dimensions": {
+        "w": 904,
+        "h": 1063
+      },
+      "desktop_use": false,
+      "mobile_use": true,
+      "ordering": 20,
+      "crop_object_position": "center",
+      "loading_policy": "lazy",
+      "alt_policy": "descriptive_required_at_implementation",
+      "status": "APPROVED_EXPORTED"
+    }
+  ],
+  "infrastructure_status": "APPROVED_EXPORTED",
+  "updated_at": "2026-06-28T23:32:59.975067+00:00"
 }
