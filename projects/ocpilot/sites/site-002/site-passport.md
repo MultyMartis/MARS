@@ -131,7 +131,7 @@
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
 | **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
-| **Implementation (remaining corp pages)** | **NOT STARTED** (M9.14+) |
+| **Implementation (remaining corp pages)** | M9.16 Dealers → M9.18 Custom Manufacturing **NOT STARTED** |
 | **Live About authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
 | **M9.13 redesign** | **ARCHIVED** · **NOT ACTIVE** — never implementation authority |
 
@@ -194,7 +194,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 | M9.14 | Delivery | `/delivery` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.15 | Payment | `/payment-methods` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.16 | Dealers | `/dealers` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
-| M9.17 | Warranty | `/guarantee` | Complete | Mapped | Substantively complete (v1) | Draft complete | Draft complete |
+| M9.17 | Warranty | `/guarantee` | Complete | Mapped | Substantively complete (v1) | Draft complete | **IMPLEMENTED · QA PASSED** |
 | M9.18 | Custom Manufacturing | `/custom-equipment` | Complete | Mapped | Substantively complete (v1.1) | Draft complete | Draft complete |
 
 **Research artifacts:** [M9.13](reports/BZPM-M9.13-ABOUT-COMPANY-FORENSIC-RESEARCH.md) · [M9.14](reports/BZPM-M9.14-DELIVERY-FORENSIC-RESEARCH.md) · [M9.15](reports/BZPM-M9.15-PAYMENT-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.16](reports/BZPM-M9.16-DEALERS-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.17](reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · [M9.18](reports/BZPM-M9.18-CUSTOM-MANUFACTURING-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md)
@@ -207,7 +207,7 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 **M9.15 Payment implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.15-PAYMENT-01` · [SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md](reports/SITE-002-M9.15-PAYMENT-IMPLEMENTATION.md)
 
-**M9.17 Warranty implementation charter:** **READY** (2026-06-28) — [SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md](reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md) · implementation **NOT STARTED**
+**M9.17 Warranty implementation:** **IMPLEMENTED** on TEST (2026-06-28) — checkpoint `SITE-002-STABLE-LIVE-M9.17-WARRANTY-01` · [SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md](reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md)
 
 **Post-recovery completeness:** [SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md](reports/SITE-002-BZPM-POST-RECOVERY-COMPLETENESS-RECONCILIATION.md) — audit semantics reconciled 2026-06-28.
 

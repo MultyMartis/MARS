@@ -1,0 +1,103 @@
+{
+  "pass": "m9.17-warranty-implementation",
+  "timestamp": "2026-06-28T10:53:37.394339+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "live_url": "https://zpm.new-site.space/guarantee",
+  "route": "information/guarantee",
+  "seo_keyword": "guarantee",
+  "files": {
+    "catalog/controller/information/guarantee.php": {
+      "pre_sha256": null,
+      "pre_bytes": 0,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\guarantee.php.pre-m9.17-warranty.bak",
+      "is_new": true,
+      "post_sha256": "d9a6216d4a6d4bfff4b21ab2b010f81457a2b930ac852b5c69ca4884b2e27eed",
+      "post_bytes": 3797
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "pre_sha256": null,
+      "pre_bytes": 0,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\guarantee.twig.pre-m9.17-warranty.bak",
+      "is_new": true,
+      "post_sha256": "132f54911576fe5afa096959633eee55c5959874dddf494fd18cf157552cca5e",
+      "post_bytes": 44755
+    },
+    "assets/css/style.css": {
+      "pre_sha256": "84dd8131868e2823d0155dd35301cbc3c3e5f2fadd69b3a91b2b305c8d014afa",
+      "pre_bytes": 328477,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\style.css.pre-m9.17-warranty.bak",
+      "is_new": false,
+      "post_sha256": "13690e4b74965693e11ea492ef26c4711122e0f701a44a74048f0b899fe7c461",
+      "post_bytes": 336209
+    },
+    "assets/js/main.js": {
+      "pre_sha256": "1c68cb02e6e3e4d3c568a00540eec408edb5bf542f742e52d6ca92c039e01464",
+      "pre_bytes": 204083,
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\main.js.pre-m9.17-warranty.bak",
+      "is_new": false,
+      "post_sha256": "a28ad32886be1caee78b0ee18ff5da82331645aae9e734e0fc493a4823f7017e",
+      "post_bytes": 204129
+    }
+  },
+  "preflight": {
+    "catalog/controller/information/guarantee.php": {
+      "exists": false,
+      "pre_sha256": null,
+      "pre_bytes": 0
+    },
+    "catalog/view/theme/default/template/information/guarantee.twig": {
+      "exists": false,
+      "pre_sha256": null,
+      "pre_bytes": 0
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "84dd8131868e2823d0155dd35301cbc3c3e5f2fadd69b3a91b2b305c8d014afa",
+      "pre_bytes": 328477
+    },
+    "assets/js/main.js": {
+      "exists": true,
+      "pre_sha256": "1c68cb02e6e3e4d3c568a00540eec408edb5bf542f742e52d6ca92c039e01464",
+      "pre_bytes": 204083
+    }
+  },
+  "seo_url_patch_response": {
+    "ok": true,
+    "before": {
+      "seo_url_id": "1048",
+      "query": "information_id=11",
+      "keyword": "guarantee"
+    },
+    "after": {
+      "seo_url_id": "1048",
+      "query": "information/guarantee",
+      "keyword": "guarantee"
+    }
+  },
+  "seo_url_updated": true,
+  "twig_cache_cleared": [],
+  "qa": {
+    "http_ok": true,
+    "has_zpm_warranty_page": true,
+    "has_page_intro_lead": true,
+    "has_principles": true,
+    "coverage_5_rows": true,
+    "summary_4_labels": true,
+    "has_docs": true,
+    "has_timeline": true,
+    "timeline_5_steps": true,
+    "has_verification": true,
+    "verification_7_bullets": true,
+    "has_outcomes": true,
+    "outcomes_6": true,
+    "has_faq": true,
+    "faq_8_items": true,
+    "data_warranty_faq": true,
+    "has_cta_title": true,
+    "has_form_title": true,
+    "equipment_model_required": true,
+    "comment_required": true,
+    "purchase_date_optional": true,
+    "all_pass": true
+  }
+}

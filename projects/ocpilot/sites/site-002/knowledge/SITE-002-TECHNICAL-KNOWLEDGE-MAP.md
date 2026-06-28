@@ -24,7 +24,7 @@
 
 **M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
 
-**Operator implementation order (remaining corp pages):** M9.14 **IMPLEMENTED** · M9.15 **IMPLEMENTED** · M9.17 **CHARTER READY** · M9.16 → M9.18 — **NOT STARTED**. Design order (historical): see [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md).
+**Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers → M9.18 Custom Manufacturing — **NOT STARTED**.
 
 ---
 
@@ -1108,19 +1108,19 @@ Pageintro (H1 + Lead) → 6-step payment timeline (step 6 = Подготовка
 
 ## 20. Warranty Page (M9.17)
 
-Corporate page `/guarantee` — route `information/guarantee`. **Implementation charter READY** (2026-06-28); **not yet implemented** on live TEST.
+Corporate page `/guarantee` — route `information/guarantee`. **Implemented on live TEST** (2026-06-28).
 
 | Item | Value |
 |------|--------|
 | **Live URL** | https://zpm.new-site.space/guarantee |
-| **Target route** | `information/guarantee` |
-| **SEO** | `oc_seo_url` keyword `guarantee` → `information/guarantee` (at implementation) |
-| **Controller** | `catalog/controller/information/guarantee.php` (**NEW**) |
-| **Twig** | `catalog/view/theme/default/template/information/guarantee.twig` (**NEW**) |
+| **Route** | `information/guarantee` |
+| **SEO** | `oc_seo_url` keyword `guarantee` → `information/guarantee` (id 1048; prior `information_id=11`) |
+| **Controller** | `catalog/controller/information/guarantee.php` |
+| **Twig** | `catalog/view/theme/default/template/information/guarantee.twig` |
 | **CSS namespace** | `zpm-warranty-page`, `zpm-warranty-*`, shared `zpm-corp-timeline`, `zpm-corp-faq` |
-| **JS** | Corp FAQ accordion in `assets/js/main.js` — scoped `[data-warranty-faq]` |
+| **JS** | Corp FAQ accordion in `assets/js/main.js` — `[data-delivery-faq], [data-payment-faq], [data-warranty-faq]` |
 | **Copy** | [BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md](../copy/BZPM-M9.17-WARRANTY-PAGE-COPY-v1.md) |
-| **Charter** | [SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md](../reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION-CHARTER-v1.md) |
+| **Authority** | `SITE-002-STABLE-LIVE-M9.17-WARRANTY-01` (page domain only) |
 
 ### Structure
 
@@ -1140,7 +1140,7 @@ Pageintro (H1 + Lead) → warranty principles + coverage (BLOCK 01) → document
 2. Live-capture remote files before deploy
 3. Do not bleed scope into About, Delivery, Payment, Contacts, catalog, or other corp pages
 
-**Evidence:** [BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md](../reports/BZPM-M9.17-WARRANTY-PAGE-FORENSIC-AND-COMMERCIAL-RESEARCH.md) · `reports/m9.17-work/guarantee-live.html`
+**Evidence:** [SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md](../reports/SITE-002-M9.17-WARRANTY-IMPLEMENTATION.md) · [SITE-002-STABLE-LIVE-M9.17-WARRANTY-01.md](../baselines/SITE-002-STABLE-LIVE-M9.17-WARRANTY-01.md) · `reports/m9.17-work/`
 
 ---
 
@@ -1155,4 +1155,4 @@ Pageintro (H1 + Lead) → warranty principles + coverage (BLOCK 01) → document
 
 ---
 
-*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§20 M9.17 Warranty Implementation Charter v1).*
+*Documentation only — no runtime claimed. Last updated: 2026-06-28 (§20 M9.17 Warranty IMPLEMENTED on TEST).*

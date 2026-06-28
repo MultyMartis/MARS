@@ -1,0 +1,37 @@
+{
+  "shots": [
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.17-warranty-screenshots\\m9.17-warranty-desktop-1440-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.17-warranty-screenshots\\m9.17-warranty-desktop-1440-timeline.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.17-warranty-screenshots\\m9.17-warranty-tablet-1024-full.png",
+    "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\qa\\m9.17-warranty-screenshots\\m9.17-warranty-mobile-390-full.png"
+  ],
+  "console_errors": [],
+  "checks": {
+    "warranty_page": true,
+    "timeline_steps": 5,
+    "faq_items": 8,
+    "cta_form": true,
+    "equipment_model_field": true,
+    "data_warranty_faq": true,
+    "pass": true
+  },
+  "overflow": {
+    "desktop-1440": {
+      "sw": 1425,
+      "cw": 1440
+    },
+    "tablet-1024": {
+      "sw": 1009,
+      "cw": 1024
+    },
+    "mobile-390": {
+      "sw": 375,
+      "cw": 390
+    }
+  },
+  "http": {
+    "desktop-1440": 200,
+    "tablet-1024": 200,
+    "mobile-390": 200
+  }
+}

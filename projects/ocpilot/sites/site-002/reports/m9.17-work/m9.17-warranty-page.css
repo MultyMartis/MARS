@@ -1,0 +1,335 @@
+/* ==========================================================================
+   M9.17 — Warranty page — manufacturer service reassurance
+   ========================================================================== */
+
+.zpm-warranty-page {
+  padding-bottom: var(--pad-y);
+}
+
+.zpm-warranty-section {
+  padding-top: var(--pad-y);
+}
+
+.zpm-warranty-section__title {
+  margin: 0 0 var(--pad-gap);
+}
+
+.zpm-warranty-section__intro,
+.zpm-warranty-principles__body,
+.zpm-warranty-docs__body,
+.zpm-warranty-outcomes__body {
+  margin: 0 0 var(--pad-gap);
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+  max-width: 920px;
+}
+
+.zpm-warranty-section__note,
+.zpm-warranty-section__helper,
+.zpm-warranty-section__pointer,
+.zpm-warranty-process__pointer,
+.zpm-warranty-cta__pointers,
+.zpm-warranty-cta__schedule {
+  margin: 0 0 var(--pad-gap-mini);
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+  max-width: 920px;
+}
+
+.zpm-warranty-section__note:last-child,
+.zpm-warranty-section__helper:last-child,
+.zpm-warranty-section__pointer:last-child {
+  margin-bottom: 0;
+}
+
+/* BLOCK 01 — coverage table + summary row */
+.zpm-warranty-coverage__table-wrap,
+.zpm-warranty-docs__table-wrap {
+  overflow-x: auto;
+  margin: var(--pad-gap) 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.zpm-warranty-coverage__table,
+.zpm-warranty-docs__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+.zpm-warranty-coverage__table th,
+.zpm-warranty-coverage__table td,
+.zpm-warranty-docs__table th,
+.zpm-warranty-docs__table td {
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  vertical-align: top;
+}
+
+.zpm-warranty-coverage__table thead th,
+.zpm-warranty-docs__table thead th {
+  background-color: var(--main-light-color, #f8f8f8);
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-warranty-coverage__table tbody tr:nth-child(even) td,
+.zpm-warranty-docs__table tbody tr:nth-child(even) td {
+  background-color: rgba(248, 248, 248, 0.5);
+}
+
+.zpm-warranty-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  margin: var(--pad-gap) 0;
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: var(--main-light-color, #f8f8f8);
+}
+
+.zpm-warranty-summary__item {
+  margin: 0;
+  min-width: 0;
+}
+
+.zpm-warranty-summary__label {
+  margin: 0 0 6px;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  font-weight: var(--large-Font-weight);
+  color: var(--accent-color-02, #99303d);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.zpm-warranty-summary__value {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* BLOCK 03 — claim procedure timeline (page spine) */
+.zpm-warranty-process {
+  background-color: var(--main-light-color, #f8f8f8);
+  padding-bottom: var(--pad-y);
+}
+
+.zpm-warranty-timeline.zpm-corp-timeline {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.zpm-warranty-process__pointer {
+  margin: var(--pad-gap-mini) 0 0;
+  font-size: var(--base-Font-size);
+}
+
+.zpm-warranty-process__pointer a {
+  font-weight: var(--large-Font-weight);
+}
+
+/* BLOCK 04 — verification (subordinate weight) */
+.zpm-warranty-verification {
+  padding-top: calc(var(--pad-y) * 0.75);
+}
+
+.zpm-warranty-verification .zpm-warranty-section__title {
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+}
+
+.zpm-warranty-verification__lead {
+  margin: 0 0 var(--pad-gap-mini);
+  max-width: 920px;
+}
+
+.zpm-warranty-verification__list {
+  margin: 0 0 var(--pad-gap);
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 920px;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* BLOCK 05 — service outcomes */
+.zpm-warranty-outcomes__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pad-gap-line);
+  margin-bottom: var(--pad-gap);
+}
+
+.zpm-warranty-outcome {
+  padding: var(--pad-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  min-width: 0;
+}
+
+.zpm-warranty-outcome__title {
+  margin: 0 0 8px;
+  font-size: var(--Title-h3-Font-size);
+  line-height: var(--Title-h3-Line-height);
+}
+
+.zpm-warranty-outcome__text {
+  margin: 0;
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+}
+
+/* CTA — Commercial Trust reuse */
+.zpm-warranty-cta {
+  padding-top: var(--pad-y);
+}
+
+.zpm-warranty-cta .zpm-commercial-trust__wrap {
+  align-items: stretch;
+}
+
+.zpm-warranty-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap);
+}
+
+.zpm-warranty-cta__link {
+  font-size: var(--base-Font-size);
+  line-height: var(--base-Line-height);
+  color: var(--accent-color-01);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.zpm-warranty-cta__link:hover,
+.zpm-warranty-cta__link:focus-visible {
+  color: var(--main-dark-color);
+}
+
+.zpm-warranty-cta__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap-mini);
+  font-size: var(--base-Font-size);
+}
+
+.zpm-warranty-cta__phone,
+.zpm-warranty-cta__email {
+  color: inherit;
+  text-decoration: none;
+  font-weight: var(--large-Font-weight);
+}
+
+.zpm-warranty-cta__phone:hover,
+.zpm-warranty-cta__phone:focus-visible,
+.zpm-warranty-cta__email:hover,
+.zpm-warranty-cta__email:focus-visible {
+  color: var(--accent-color-01);
+}
+
+.zpm-warranty-form__helper {
+  margin: 0;
+  font-size: var(--mini-Font-size);
+  line-height: var(--mini-Line-height);
+  color: var(--font-grey-color, #6b7a8c);
+}
+
+@media (max-width: 1310px) {
+  .zpm-warranty-timeline.zpm-corp-timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .zpm-warranty-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-warranty-timeline.zpm-corp-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zpm-warranty-outcomes__list {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-warranty-cta .zpm-commercial-trust__wrap {
+    flex-direction: column;
+  }
+
+  .zpm-warranty-cta .zpm-commercial-trust__form-wrap {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .zpm-warranty-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-warranty-timeline.zpm-corp-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .zpm-warranty-coverage__table thead,
+  .zpm-warranty-docs__table thead {
+    display: none;
+  }
+
+  .zpm-warranty-coverage__table tr,
+  .zpm-warranty-docs__table tr {
+    display: block;
+    margin-bottom: var(--pad-gap-mini);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-main);
+    overflow: hidden;
+  }
+
+  .zpm-warranty-coverage__table td,
+  .zpm-warranty-docs__table td {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 14px;
+  }
+
+  .zpm-warranty-coverage__table td:last-child,
+  .zpm-warranty-docs__table td:last-child {
+    border-bottom: 0;
+  }
+
+  .zpm-warranty-coverage__table td::before,
+  .zpm-warranty-docs__table td::before {
+    content: attr(data-label) ": ";
+    font-weight: var(--large-Font-weight);
+  }
+}
+
+@media (max-width: 390px) {
+  .zpm-warranty-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zpm-warranty-cta__primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zpm-corp-faq__panel {
+    transition: none;
+  }
+}
