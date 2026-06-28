@@ -1,0 +1,125 @@
+{
+  "reconciliation_id": "corvonero-ad-wave-1-semantic-reconciliation-v1",
+  "generated_at": "2026-06-28T22:44:54.324Z",
+  "checkpoint": "fdd1899c5eb13268021636e40629cfa237a454cf",
+  "historical_accept_authority": 935,
+  "p1_allocated_before": 898,
+  "cases": [
+    {
+      "case_id": "S1",
+      "canonical_id": "CR2-PHR-00229",
+      "phrase": "становится ли программистом 1с",
+      "previous_verdict": "ACCEPT (phase52) / REJECT (phase4-5, original model)",
+      "previous_campaign": "CA-02",
+      "previous_group": "ca-02-specialist-search",
+      "evidence": [
+        "CORVONERO-RUN-004-PHASE-5-PARTIAL-REJECT-v1.json: primary_family ambiguous_mixed_intent; phase5 CONFIRMED_REJECT",
+        "corvonero-commercial-eligibility-v1.json: NEEDS OPERATOR DECISION; mapped_services: []",
+        "corvonero-direct-semantic-core-candidate-v1.json: not mapped to service scope — career/education form",
+        "CORVONERO-RUN-004-PHASE-5.2-FINAL-CORRECTION-LEDGER-v1.json: phase51 override ACCEPT with preserved REJECT history"
+      ],
+      "intent_analysis": "Non-commercial profession/education intent («становится ли» = career path, not hiring)",
+      "final_recommendation": "REJECT",
+      "new_campaign": null,
+      "new_group": null,
+      "canonical_authority_modified": false,
+      "deployable_after": false,
+      "group_action": "Remove group ca-02-specialist-search from deployable scope (0 phrases remain)"
+    },
+    {
+      "case_id": "S2",
+      "canonical_id": "CR2-PHR-00759",
+      "phrase": "закупка доработка и сопровождение 1с трактир",
+      "previous_verdict": "ACCEPT (phase52)",
+      "previous_campaign": "CA-02",
+      "previous_group": "ca-02-modification",
+      "evidence": [
+        "corvonero-phrase-to-service-map-v1.json: CR2-SVC-003 (generic support) — pattern match only",
+        "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json: service_family SF-SUBSCRIPTION-SERVICE, intent MODIFICATION",
+        "No Corvonero service-scope or LP evidence naming «Трактир» as supported configuration",
+        "«Трактир» = industry 1C solution (HoReCa); query bundles procurement + modification + support for that product"
+      ],
+      "intent_analysis": "Product-specific bundle (Трактир configuration). Commercial form possible, but operator scope for Трактир not evidenced. «Закупка» may imply license procurement.",
+      "final_recommendation": "ABSTAIN",
+      "new_campaign": null,
+      "new_group": null,
+      "canonical_authority_modified": false,
+      "deployable_after": false,
+      "group_action": "HOLD ca-02-modification — no public ad mentioning «Трактир»"
+    },
+    {
+      "case_id": "S3",
+      "canonical_id": "CR2-PHR-01181",
+      "phrase": "внедрение честного знака в 1с",
+      "previous_verdict": "ACCEPT (phase52)",
+      "previous_campaign": "CA-03",
+      "previous_group": "ca-03-implementation",
+      "evidence": [
+        "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json: service_family SF-MARKING-CHESTNY-ZNAK",
+        "corvonero-direct-v2-service-scope-v1.json: CR2-SVC-023 Честный знак / маркировка",
+        "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.md: marking implementation on LP-05, not LP-03"
+      ],
+      "intent_analysis": "Marking / Честный знак implementation — belongs to CA-05 not CA-03 development",
+      "final_recommendation": "MOVE",
+      "new_campaign": "CA-05",
+      "new_group": "ca-05-direct-service-order",
+      "canonical_authority_modified": false,
+      "deployable_after": true,
+      "group_action": "Reallocate phrase to ca-05-direct-service-order"
+    },
+    {
+      "case_id": "S4",
+      "canonical_id": "ca-03-implementation (group review)",
+      "phrase": "(remaining phrases after S3 move)",
+      "previous_verdict": "N/A — group integrity review",
+      "previous_campaign": "CA-03",
+      "previous_group": "ca-03-implementation",
+      "evidence": [
+        "Remaining: внедренцы и программисты 1с; внедрение и сопровождение 1с; внедрение и сопровождение 1с предприятия; внедрение и сопровождение продуктов 1с; доработка внедрение 1с; внедрение маркировки в 1с (CR2-PHR-01049, SF-MARKING outlier)",
+        "5/6 phrases share IMPLEMENTATION / rollout intent aligned with LP-03",
+        "CR2-PHR-01049 flagged for future CA-05 move (same SF-MARKING as S3) — not moved in this wave"
+      ],
+      "intent_analysis": "Group remains commercially coherent for partial implementation after removing S3 phrase",
+      "final_recommendation": "DEPLOY",
+      "new_campaign": "CA-03",
+      "new_group": "ca-03-implementation",
+      "new_starter_phrase": "внедрение и сопровождение 1с",
+      "new_starter_phrase_id": "CR2-PHR-00623",
+      "canonical_authority_modified": false,
+      "deployable_after": true,
+      "group_action": "Deploy with new representative phrase CR2-PHR-00623",
+      "phrase_count_after": 6
+    },
+    {
+      "case_id": "S5",
+      "canonical_id": "CR2-PHR-00982",
+      "phrase": "как заказать коды маркировки в 1с",
+      "previous_verdict": "ACCEPT (phase52)",
+      "previous_campaign": "CA-05",
+      "previous_group": "ca-05-specialist-search",
+      "evidence": [
+        "corvonero-phrase-to-service-map-v1.json: ambiguity true, mapping_confidence medium",
+        "Literal query: «заказать коды» = obtaining marking codes (CRPT/product), not hiring integrator",
+        "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.md: LP promises exchange/setup in 1С, not sale of codes",
+        "No conclusive evidence for intent B (technical setup of ordering workflow in 1C)"
+      ],
+      "intent_analysis": "Intent A — purchase/order of marking codes outside Corvonero paid service scope",
+      "final_recommendation": "REJECT",
+      "new_campaign": null,
+      "new_group": null,
+      "canonical_authority_modified": false,
+      "deployable_after": false,
+      "group_action": "HOLD ca-05-specialist-search — no deployable ad"
+    }
+  ],
+  "summary": {
+    "reject_phrases": 2,
+    "hold_phrases": 1,
+    "moved_phrases": 1,
+    "deployable_phrases_after": 895,
+    "hold_groups": 3,
+    "deployable_groups": 15,
+    "deferred_ca06": 37
+  },
+  "note": "Canonical ACCEPT registry not modified — reconciliation is deploy-scope overlay only."
+}

@@ -1,0 +1,25 @@
+{
+  "receipt_id": "corvonero-ad-wave-1-final-semantic-receipt-v1",
+  "generated_at": "2026-06-28T22:53:59.554Z",
+  "checkpoint": "fdd1899c5eb13268021636e40629cfa237a454cf",
+  "verdict": "PASS",
+  "deployable_p1_phrases": 895,
+  "deployable_groups": 15,
+  "rejected": 2,
+  "abstain": 1,
+  "moved": 2,
+  "deferred_ca06": 37,
+  "campaign_counts": {
+    "CA-01": 404,
+    "CA-02": 153,
+    "CA-03": 69,
+    "CA-04": 48,
+    "CA-05": 221
+  },
+  "excluded_groups": [
+    "ca-02-specialist-search",
+    "ca-02-modification",
+    "ca-05-specialist-search"
+  ],
+  "note": "Historical ACCEPT not rewritten — production deployability overlay only."
+}

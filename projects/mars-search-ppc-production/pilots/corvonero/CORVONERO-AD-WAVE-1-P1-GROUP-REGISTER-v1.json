@@ -1,0 +1,640 @@
+{
+  "register_id": "corvonero-ad-wave-1-p1-group-register-v1",
+  "generated_at": "2026-06-28T22:07:37.568Z",
+  "checkpoint": "fdd1899c5eb13268021636e40629cfa237a454cf",
+  "p1_campaigns": 5,
+  "p1_groups": 18,
+  "p1_phrases": 898,
+  "groups": [
+    {
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "group_id": "ca-01-specialist-search",
+      "group_name": "Программист / специалист 1С — specialist search",
+      "phrase_count": 384,
+      "primary_intent": "SPECIALIST_SEARCH",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-01",
+      "lp_name": "Программист 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/programmist-1s/",
+      "copy_authority": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00001",
+        "phrase": "программист 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00001",
+          "phrase": "программист 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00006",
+          "phrase": "программист 1с с нуля"
+        },
+        {
+          "phrase_id": "CR2-PHR-00007",
+          "phrase": "программист 1с удаленно"
+        },
+        {
+          "phrase_id": "CR2-PHR-00009",
+          "phrase": "программист 1с зарплата"
+        },
+        {
+          "phrase_id": "CR2-PHR-00010",
+          "phrase": "программист 1с москва"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_id": "ca-05-direct-service-order",
+      "group_name": "Маркировка / Честный знак — direct service order",
+      "phrase_count": 199,
+      "primary_intent": "DIRECT_SERVICE_ORDER",
+      "secondary_intent": "SPECIALIST_SEARCH",
+      "assigned_lp": "LP-05",
+      "lp_name": "Маркировка и Честный знак в 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00879",
+        "phrase": "маркировка в 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00791",
+          "phrase": "тестирование доработок 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00816",
+          "phrase": "продажа доработок 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00879",
+          "phrase": "маркировка в 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00881",
+          "phrase": "маркировка товаров в 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00882",
+          "phrase": "маркировка честный знак в 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_id": "ca-02-support-and-maintenance",
+      "group_name": "Сопровождение и обслуживание 1С — support and maintenance",
+      "phrase_count": 137,
+      "primary_intent": "SUPPORT_AND_MAINTENANCE",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-02",
+      "lp_name": "Сопровождение и обслуживание 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00590",
+        "phrase": "сопровождение 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00333",
+          "phrase": "программист сопровождение 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00590",
+          "phrase": "сопровождение 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00592",
+          "phrase": "сопровождение 1с предприятие"
+        },
+        {
+          "phrase_id": "CR2-PHR-00593",
+          "phrase": "программное сопровождение 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00594",
+          "phrase": "сопровождение продуктов 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "group_id": "ca-03-modification",
+      "group_name": "Доработка и разработка 1С — modification",
+      "phrase_count": 62,
+      "primary_intent": "MODIFICATION",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-03",
+      "lp_name": "Доработка и разработка 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00764",
+        "phrase": "доработка 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00096",
+          "phrase": "программист 1с разработка"
+        },
+        {
+          "phrase_id": "CR2-PHR-00156",
+          "phrase": "программист 1с доработка"
+        },
+        {
+          "phrase_id": "CR2-PHR-00221",
+          "phrase": "1с программист разработка и автоматизация"
+        },
+        {
+          "phrase_id": "CR2-PHR-00267",
+          "phrase": "программист 1с язык программирования"
+        },
+        {
+          "phrase_id": "CR2-PHR-00529",
+          "phrase": "1с программист доработки липецк частный исполнитель"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-04",
+      "campaign_name": "Интеграции 1С",
+      "group_id": "ca-04-integration",
+      "group_name": "Интеграции 1С — integration",
+      "phrase_count": 48,
+      "primary_intent": "INTEGRATION",
+      "secondary_intent": "MODIFICATION",
+      "assigned_lp": "LP-04",
+      "lp_name": "Интеграции 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/integracii-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP04-INTEGRATIONS-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00842",
+        "phrase": "интеграция сайта с 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00236",
+          "phrase": "программист 1с битрикс"
+        },
+        {
+          "phrase_id": "CR2-PHR-00806",
+          "phrase": "доработка 1с битрикс"
+        },
+        {
+          "phrase_id": "CR2-PHR-00819",
+          "phrase": "1с доработка синхронизации"
+        },
+        {
+          "phrase_id": "CR2-PHR-00824",
+          "phrase": "доработка сайта на 1с битрикс"
+        },
+        {
+          "phrase_id": "CR2-PHR-00842",
+          "phrase": "интеграция сайта с 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "group_id": "ca-01-price-intent",
+      "group_name": "Программист / специалист 1С — Price / cost intent",
+      "phrase_count": 16,
+      "primary_intent": "PRICE_AND_COST",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-01",
+      "lp_name": "Программист 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/programmist-1s/",
+      "copy_authority": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00550",
+        "phrase": "рекомендованная стоимость часа 1с программиста",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00015",
+          "phrase": "часа программиста 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00040",
+          "phrase": "стоимость часа 1с программиста"
+        },
+        {
+          "phrase_id": "CR2-PHR-00062",
+          "phrase": "программисты 1с цена"
+        },
+        {
+          "phrase_id": "CR2-PHR-00088",
+          "phrase": "1с стоимость работы программиста"
+        },
+        {
+          "phrase_id": "CR2-PHR-00146",
+          "phrase": "сколько стоит программист 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_id": "ca-05-integration",
+      "group_name": "Маркировка / Честный знак — integration",
+      "phrase_count": 14,
+      "primary_intent": "INTEGRATION",
+      "secondary_intent": "MODIFICATION",
+      "assigned_lp": "LP-05",
+      "lp_name": "Маркировка и Честный знак в 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00877",
+        "phrase": "интеграция честного знака и сайта 1с битрикс",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00877",
+          "phrase": "интеграция честного знака и сайта 1с битрикс"
+        },
+        {
+          "phrase_id": "CR2-PHR-00931",
+          "phrase": "интеграция маркировки в 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00966",
+          "phrase": "интеграция маркировки товаров в 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-01080",
+          "phrase": "интеграция 1с и честный знак"
+        },
+        {
+          "phrase_id": "CR2-PHR-01147",
+          "phrase": "настройка интеграции 1с и честный знак"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_id": "ca-02-direct-service-order",
+      "group_name": "Сопровождение и обслуживание 1С — direct service order",
+      "phrase_count": 13,
+      "primary_intent": "DIRECT_SERVICE_ORDER",
+      "secondary_intent": "SPECIALIST_SEARCH",
+      "assigned_lp": "LP-02",
+      "lp_name": "Сопровождение и обслуживание 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00591",
+        "phrase": "услуги по сопровождению 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00591",
+          "phrase": "услуги по сопровождению 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00607",
+          "phrase": "оказание услуг по сопровождению 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00614",
+          "phrase": "услуг по сопровождению программного продукта 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00630",
+          "phrase": "услуги по сопровождению 1с предприятие"
+        },
+        {
+          "phrase_id": "CR2-PHR-00650",
+          "phrase": "услуги по сопровождению 1с 8"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "group_id": "ca-03-implementation",
+      "group_name": "Доработка и разработка 1С — implementation",
+      "phrase_count": 7,
+      "primary_intent": "IMPLEMENTATION",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-03",
+      "lp_name": "Доработка и разработка 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-01181",
+        "phrase": "внедрение честного знака в 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00490",
+          "phrase": "внедренцы и программисты 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00623",
+          "phrase": "внедрение и сопровождение 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00726",
+          "phrase": "внедрение и сопровождение 1с предприятия"
+        },
+        {
+          "phrase_id": "CR2-PHR-00731",
+          "phrase": "внедрение и сопровождение продуктов 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00802",
+          "phrase": "доработка внедрение 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "group_id": "ca-01-direct-service-order",
+      "group_name": "Программист / специалист 1С — direct service order",
+      "phrase_count": 4,
+      "primary_intent": "DIRECT_SERVICE_ORDER",
+      "secondary_intent": "SPECIALIST_SEARCH",
+      "assigned_lp": "LP-01",
+      "lp_name": "Программист 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/programmist-1s/",
+      "copy_authority": "CORVONERO-PHASE-6.6-LP01-FINAL-PRODUCTION-COPY-v3.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00413",
+        "phrase": "заказы для 1с программиста",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00020",
+          "phrase": "услуги программиста 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00329",
+          "phrase": "услуги 1с программиста цены"
+        },
+        {
+          "phrase_id": "CR2-PHR-00395",
+          "phrase": "авито 1с программист услуги"
+        },
+        {
+          "phrase_id": "CR2-PHR-00413",
+          "phrase": "заказы для 1с программиста"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_id": "ca-05-ts-piot",
+      "group_name": "Маркировка / Честный знак — TS ПИОТ",
+      "phrase_count": 4,
+      "primary_intent": "DIRECT_SERVICE_ORDER",
+      "secondary_intent": "SPECIALIST_SEARCH",
+      "assigned_lp": "LP-05",
+      "lp_name": "Маркировка и Честный знак в 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-01145",
+        "phrase": "тс пиот честный знак 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-01145",
+          "phrase": "тс пиот честный знак 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-01239",
+          "phrase": "тс пиот честный знак 1с розница"
+        },
+        {
+          "phrase_id": "CR2-PHR-02315",
+          "phrase": "настройка тс пиот в 1с ут 11.5"
+        },
+        {
+          "phrase_id": "CR2-PHR-02354",
+          "phrase": "1с не видит тс пиот"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_id": "ca-02-troubleshooting-not-working",
+      "group_name": "Сопровождение и обслуживание 1С — 1С не работает / ошибки / восстановление работы",
+      "phrase_count": 2,
+      "primary_intent": "PROBLEM_RESOLUTION",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-02",
+      "lp_name": "Сопровождение и обслуживание 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-02239",
+        "phrase": "программа 1с не работает",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00273",
+          "phrase": "ошибки программиста 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-02239",
+          "phrase": "программа 1с не работает"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "group_id": "ca-03-direct-service-order",
+      "group_name": "Доработка и разработка 1С — direct service order",
+      "phrase_count": 2,
+      "primary_intent": "DIRECT_SERVICE_ORDER",
+      "secondary_intent": "SPECIALIST_SEARCH",
+      "assigned_lp": "LP-03",
+      "lp_name": "Доработка и разработка 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP03-DEVELOPMENT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00769",
+        "phrase": "услуги доработки 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00769",
+          "phrase": "услуги доработки 1с"
+        },
+        {
+          "phrase_id": "CR2-PHR-00809",
+          "phrase": "1с заказы доработка"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_id": "ca-05-support-and-maintenance",
+      "group_name": "Маркировка / Честный знак — support and maintenance",
+      "phrase_count": 2,
+      "primary_intent": "SUPPORT_AND_MAINTENANCE",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-05",
+      "lp_name": "Маркировка и Честный знак в 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-01179",
+        "phrase": "поддержка 1с честный знак",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-01179",
+          "phrase": "поддержка 1с честный знак"
+        },
+        {
+          "phrase_id": "CR2-PHR-01267",
+          "phrase": "техподдержка честный знак 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_id": "ca-02-specialist-search",
+      "group_name": "Сопровождение и обслуживание 1С — specialist search",
+      "phrase_count": 1,
+      "primary_intent": "SPECIALIST_SEARCH",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-02",
+      "lp_name": "Сопровождение и обслуживание 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00229",
+        "phrase": "становится ли программистом 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00229",
+          "phrase": "становится ли программистом 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_id": "ca-02-price-intent",
+      "group_name": "Сопровождение и обслуживание 1С — Price / cost intent",
+      "phrase_count": 1,
+      "primary_intent": "PRICE_AND_COST",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-02",
+      "lp_name": "Сопровождение и обслуживание 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00711",
+        "phrase": "стоимость часа сопровождения 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00711",
+          "phrase": "стоимость часа сопровождения 1с"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_id": "ca-02-modification",
+      "group_name": "Сопровождение и обслуживание 1С — modification",
+      "phrase_count": 1,
+      "primary_intent": "MODIFICATION",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-02",
+      "lp_name": "Сопровождение и обслуживание 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP02-SUPPORT-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00759",
+        "phrase": "закупка доработка и сопровождение 1с трактир",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00759",
+          "phrase": "закупка доработка и сопровождение 1с трактир"
+        }
+      ],
+      "priority": "P1"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_id": "ca-05-specialist-search",
+      "group_name": "Маркировка / Честный знак — specialist search",
+      "phrase_count": 1,
+      "primary_intent": "SPECIALIST_SEARCH",
+      "secondary_intent": "DIRECT_SERVICE_ORDER",
+      "assigned_lp": "LP-05",
+      "lp_name": "Маркировка и Честный знак в 1С",
+      "final_lp_url_direction": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "copy_authority": "CORVONERO-COPY-WAVE-2-LP05-MARKING-FINAL-v2.json",
+      "starter_phrase": {
+        "phrase_id": "CR2-PHR-00982",
+        "phrase": "как заказать коды маркировки в 1с",
+        "source": "CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json"
+      },
+      "supporting_phrases": [
+        {
+          "phrase_id": "CR2-PHR-00982",
+          "phrase": "как заказать коды маркировки в 1с"
+        }
+      ],
+      "priority": "P1"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "pack_id": "corvonero-ad-wave-1-p1-lp-consistency-v1",
+  "generated_at": "2026-06-28T22:07:37.572Z",
+  "checks": [
+    {
+      "group_id": "ca-01-specialist-search",
+      "landing_page_id": "LP-01",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-05-direct-service-order",
+      "landing_page_id": "LP-05",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-02-support-and-maintenance",
+      "landing_page_id": "LP-02",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-03-modification",
+      "landing_page_id": "LP-03",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-04-integration",
+      "landing_page_id": "LP-04",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "NO",
+        "cta_expectation_matched": "YES",
+        "overall": "REQUIRES_REVISION"
+      }
+    },
+    {
+      "group_id": "ca-01-price-intent",
+      "landing_page_id": "LP-01",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "YES",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-05-integration",
+      "landing_page_id": "LP-05",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "NO",
+        "cta_expectation_matched": "YES",
+        "overall": "REQUIRES_REVISION"
+      }
+    },
+    {
+      "group_id": "ca-02-direct-service-order",
+      "landing_page_id": "LP-02",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-03-implementation",
+      "landing_page_id": "LP-03",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-01-direct-service-order",
+      "landing_page_id": "LP-01",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-05-ts-piot",
+      "landing_page_id": "LP-05",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-02-troubleshooting-not-working",
+      "landing_page_id": "LP-02",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-03-direct-service-order",
+      "landing_page_id": "LP-03",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-05-support-and-maintenance",
+      "landing_page_id": "LP-05",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-02-specialist-search",
+      "landing_page_id": "LP-02",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-02-price-intent",
+      "landing_page_id": "LP-02",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-02-modification",
+      "landing_page_id": "LP-02",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    },
+    {
+      "group_id": "ca-05-specialist-search",
+      "landing_page_id": "LP-05",
+      "checks": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      }
+    }
+  ]
+}

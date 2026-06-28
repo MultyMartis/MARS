@@ -1,0 +1,3476 @@
+{
+  "pack_id": "corvonero-ad-wave-1-p1-technical-validation-v1",
+  "generated_at": "2026-06-28T22:07:37.611Z",
+  "policy": {
+    "headline_max": 56,
+    "additional_max": 30,
+    "text_max": 81,
+    "headline_word_max": 22,
+    "text_word_max": 23
+  },
+  "validations": [
+    {
+      "group_id": "ca-01-specialist-search",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 42,
+            "punctuation": 3,
+            "max_word_length": 11,
+            "words": [
+              "Программист",
+              "1С",
+              "—",
+              "доработка,",
+              "ошибки,",
+              "отчёты"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 18,
+            "punctuation": 0,
+            "max_word_length": 8,
+            "words": [
+              "Удалённо",
+              "по",
+              "России"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 62,
+            "punctuation": 3,
+            "max_word_length": 12,
+            "words": [
+              "Разовые",
+              "задачи",
+              "в",
+              "1С.",
+              "Выезд",
+              "в",
+              "Новосибирске.",
+              "Работа",
+              "по",
+              "договору."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Программист 1С — доработка, ошибки, отчёты",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 3,
+              "max_word_length": 11,
+              "words": [
+                "Программист",
+                "1С",
+                "—",
+                "доработка,",
+                "ошибки,",
+                "отчёты"
+              ]
+            }
+          },
+          {
+            "text": "Подключим программиста 1С под вашу задачу",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 41,
+              "punctuation": 0,
+              "max_word_length": 12,
+              "words": [
+                "Подключим",
+                "программиста",
+                "1С",
+                "под",
+                "вашу",
+                "задачу"
+              ]
+            }
+          },
+          {
+            "text": "Специалист 1С — настройка и исправление ошибок",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 46,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Специалист",
+                "1С",
+                "—",
+                "настройка",
+                "и",
+                "исправление",
+                "ошибок"
+              ]
+            }
+          },
+          {
+            "text": "Программист 1С в Новосибирске — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 1,
+              "max_word_length": 12,
+              "words": [
+                "Программист",
+                "1С",
+                "в",
+                "Новосибирске",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Внешний программист 1С — разовые задачи",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Внешний",
+                "программист",
+                "1С",
+                "—",
+                "разовые",
+                "задачи"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Разовые задачи в 1С. Выезд в Новосибирске. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 62,
+              "punctuation": 3,
+              "max_word_length": 12,
+              "words": [
+                "Разовые",
+                "задачи",
+                "в",
+                "1С.",
+                "Выезд",
+                "в",
+                "Новосибирске.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Доработка, интеграции, маркировка. Оценка после обсуждения задачи.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 66,
+              "punctuation": 4,
+              "max_word_length": 10,
+              "words": [
+                "Доработка,",
+                "интеграции,",
+                "маркировка.",
+                "Оценка",
+                "после",
+                "обсуждения",
+                "задачи."
+              ]
+            }
+          },
+          {
+            "text": "УТ, УНФ, Розница, КА, БП. Безналичная оплата.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 45,
+              "punctuation": 6,
+              "max_word_length": 11,
+              "words": [
+                "УТ,",
+                "УНФ,",
+                "Розница,",
+                "КА,",
+                "БП.",
+                "Безналичная",
+                "оплата."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-05-direct-service-order",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 30,
+            "punctuation": 0,
+            "max_word_length": 10,
+            "words": [
+              "Маркировка",
+              "и",
+              "Честный",
+              "знак",
+              "в",
+              "1С"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 16,
+            "punctuation": 0,
+            "max_word_length": 9,
+            "words": [
+              "Настройка",
+              "обмена"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 57,
+            "punctuation": 2,
+            "max_word_length": 11,
+            "words": [
+              "Подключим",
+              "обмен",
+              "кодами",
+              "и",
+              "документами.",
+              "Удалённо",
+              "по",
+              "России."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Маркировка и Честный знак в 1С",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 30,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Маркировка",
+                "и",
+                "Честный",
+                "знак",
+                "в",
+                "1С"
+              ]
+            }
+          },
+          {
+            "text": "Настройка маркировки товаров в 1С",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Настройка",
+                "маркировки",
+                "товаров",
+                "в",
+                "1С"
+              ]
+            }
+          },
+          {
+            "text": "Честный знак в 1С — подключим обмен",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 35,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Честный",
+                "знак",
+                "в",
+                "1С",
+                "—",
+                "подключим",
+                "обмен"
+              ]
+            }
+          },
+          {
+            "text": "Маркировка в 1С — настройка и сопровождение",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Маркировка",
+                "в",
+                "1С",
+                "—",
+                "настройка",
+                "и",
+                "сопровождение"
+              ]
+            }
+          },
+          {
+            "text": "Коды маркировки в 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Коды",
+                "маркировки",
+                "в",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Маркировка 1С — обмен с Честным знаком",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Маркировка",
+                "1С",
+                "—",
+                "обмен",
+                "с",
+                "Честным",
+                "знаком"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Подключим обмен кодами и документами. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 57,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Подключим",
+                "обмен",
+                "кодами",
+                "и",
+                "документами.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Настройка, ошибки обмена, документооборот. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 64,
+              "punctuation": 4,
+              "max_word_length": 15,
+              "words": [
+                "Настройка,",
+                "ошибки",
+                "обмена,",
+                "документооборот.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Техническая помощь в 1С. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 44,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Техническая",
+                "помощь",
+                "в",
+                "1С.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-02-support-and-maintenance",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 41,
+            "punctuation": 1,
+            "max_word_length": 13,
+            "words": [
+              "Сопровождение",
+              "1С",
+              "—",
+              "поддержка",
+              "и",
+              "обновления"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 18,
+            "punctuation": 0,
+            "max_word_length": 8,
+            "words": [
+              "Удалённо",
+              "по",
+              "России"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 64,
+            "punctuation": 3,
+            "max_word_length": 13,
+            "words": [
+              "Помощь",
+              "пользователям,",
+              "обновления",
+              "и",
+              "ошибки.",
+              "Выезд",
+              "в",
+              "Новосибирске."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Сопровождение 1С — поддержка и обновления",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 41,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "1С",
+                "—",
+                "поддержка",
+                "и",
+                "обновления"
+              ]
+            }
+          },
+          {
+            "text": "Обслуживание 1С для компаний и ИП",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 0,
+              "max_word_length": 12,
+              "words": [
+                "Обслуживание",
+                "1С",
+                "для",
+                "компаний",
+                "и",
+                "ИП"
+              ]
+            }
+          },
+          {
+            "text": "Абонентское и разовое сопровождение 1С",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 0,
+              "max_word_length": 13,
+              "words": [
+                "Абонентское",
+                "и",
+                "разовое",
+                "сопровождение",
+                "1С"
+              ]
+            }
+          },
+          {
+            "text": "Поддержка базы 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 30,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Поддержка",
+                "базы",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Сопровождение 1С — удалённо и с выездом",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "1С",
+                "—",
+                "удалённо",
+                "и",
+                "с",
+                "выездом"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Помощь пользователям, обновления и ошибки. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 64,
+              "punctuation": 3,
+              "max_word_length": 13,
+              "words": [
+                "Помощь",
+                "пользователям,",
+                "обновления",
+                "и",
+                "ошибки.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Абонентский формат и разовые обращения. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 59,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Абонентский",
+                "формат",
+                "и",
+                "разовые",
+                "обращения.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "УТ, УНФ, Розница, КА, БП. Безналичная оплата.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 45,
+              "punctuation": 6,
+              "max_word_length": 11,
+              "words": [
+                "УТ,",
+                "УНФ,",
+                "Розница,",
+                "КА,",
+                "БП.",
+                "Безналичная",
+                "оплата."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-03-modification",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 39,
+            "punctuation": 3,
+            "max_word_length": 9,
+            "words": [
+              "Доработка",
+              "1С",
+              "—",
+              "отчёты,",
+              "обработки,",
+              "формы"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 18,
+            "punctuation": 0,
+            "max_word_length": 7,
+            "words": [
+              "Под",
+              "задачи",
+              "бизнеса"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 60,
+            "punctuation": 2,
+            "max_word_length": 12,
+            "words": [
+              "Доработаем",
+              "конфигурацию",
+              "под",
+              "ваш",
+              "процесс.",
+              "Удалённо",
+              "по",
+              "России."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Доработка 1С — отчёты, обработки, формы",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 3,
+              "max_word_length": 9,
+              "words": [
+                "Доработка",
+                "1С",
+                "—",
+                "отчёты,",
+                "обработки,",
+                "формы"
+              ]
+            }
+          },
+          {
+            "text": "Доработка конфигурации 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 1,
+              "max_word_length": 12,
+              "words": [
+                "Доработка",
+                "конфигурации",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Разработка 1С — автоматизация процессов",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Разработка",
+                "1С",
+                "—",
+                "автоматизация",
+                "процессов"
+              ]
+            }
+          },
+          {
+            "text": "Программист 1С — доработка под ваш учёт",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Программист",
+                "1С",
+                "—",
+                "доработка",
+                "под",
+                "ваш",
+                "учёт"
+              ]
+            }
+          },
+          {
+            "text": "Доработка 1С — печатные формы и отчёты",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Доработка",
+                "1С",
+                "—",
+                "печатные",
+                "формы",
+                "и",
+                "отчёты"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Доработаем конфигурацию под ваш процесс. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 60,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Доработаем",
+                "конфигурацию",
+                "под",
+                "ваш",
+                "процесс.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Отчёты, обработки, печатные формы. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 56,
+              "punctuation": 4,
+              "max_word_length": 12,
+              "words": [
+                "Отчёты,",
+                "обработки,",
+                "печатные",
+                "формы.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Оценим объём после обсуждения задачи. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 57,
+              "punctuation": 2,
+              "max_word_length": 10,
+              "words": [
+                "Оценим",
+                "объём",
+                "после",
+                "обсуждения",
+                "задачи.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-04-integration",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 32,
+            "punctuation": 0,
+            "max_word_length": 10,
+            "words": [
+              "Интеграция",
+              "1С",
+              "с",
+              "сайтом",
+              "и",
+              "Битрикс"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 13,
+            "punctuation": 0,
+            "max_word_length": 7,
+            "words": [
+              "Обмен",
+              "данными"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 69,
+            "punctuation": 3,
+            "max_word_length": 13,
+            "words": [
+              "Синхронизация,",
+              "импорт",
+              "и",
+              "экспорт.",
+              "Совместимость",
+              "уточним",
+              "после",
+              "анализа."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Интеграция 1С с сайтом и Битрикс",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 32,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Интеграция",
+                "1С",
+                "с",
+                "сайтом",
+                "и",
+                "Битрикс"
+              ]
+            }
+          },
+          {
+            "text": "Обмен данными 1С и внешних систем",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 0,
+              "max_word_length": 7,
+              "words": [
+                "Обмен",
+                "данными",
+                "1С",
+                "и",
+                "внешних",
+                "систем"
+              ]
+            }
+          },
+          {
+            "text": "Интеграция 1С — синхронизация каталога",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Интеграция",
+                "1С",
+                "—",
+                "синхронизация",
+                "каталога"
+              ]
+            }
+          },
+          {
+            "text": "Связь 1С с интернет-магазином — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 2,
+              "max_word_length": 17,
+              "words": [
+                "Связь",
+                "1С",
+                "с",
+                "интернет-магазином",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Интеграция 1С — импорт и экспорт данных",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Интеграция",
+                "1С",
+                "—",
+                "импорт",
+                "и",
+                "экспорт",
+                "данных"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Синхронизация, импорт и экспорт. Совместимость уточним после анализа.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 69,
+              "punctuation": 3,
+              "max_word_length": 13,
+              "words": [
+                "Синхронизация,",
+                "импорт",
+                "и",
+                "экспорт.",
+                "Совместимость",
+                "уточним",
+                "после",
+                "анализа."
+              ]
+            }
+          },
+          {
+            "text": "Сайт, Битрикс, внешние системы. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 51,
+              "punctuation": 4,
+              "max_word_length": 8,
+              "words": [
+                "Сайт,",
+                "Битрикс,",
+                "внешние",
+                "системы.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим задачу и схему обмена. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 52,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Обсудим",
+                "задачу",
+                "и",
+                "схему",
+                "обмена.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-01-price-intent",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 33,
+            "punctuation": 2,
+            "max_word_length": 11,
+            "words": [
+              "Программист",
+              "1С",
+              "—",
+              "от",
+              "3",
+              "000",
+              "₽",
+              "в",
+              "час"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 14,
+            "punctuation": 0,
+            "max_word_length": 7,
+            "words": [
+              "Минимум",
+              "2",
+              "часа"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 64,
+            "punctuation": 3,
+            "max_word_length": 12,
+            "words": [
+              "Почасовая",
+              "работа",
+              "специалиста.",
+              "Выезд",
+              "в",
+              "Новосибирске.",
+              "По",
+              "договору."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Программист 1С — от 3 000 ₽ в час",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Программист",
+                "1С",
+                "—",
+                "от",
+                "3",
+                "000",
+                "₽",
+                "в",
+                "час"
+              ]
+            }
+          },
+          {
+            "text": "Стоимость программиста 1С — от 3 000 ₽/ч",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 40,
+              "punctuation": 3,
+              "max_word_length": 12,
+              "words": [
+                "Стоимость",
+                "программиста",
+                "1С",
+                "—",
+                "от",
+                "3",
+                "000",
+                "₽/ч"
+              ]
+            }
+          },
+          {
+            "text": "Цена часа программиста 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 1,
+              "max_word_length": 12,
+              "words": [
+                "Цена",
+                "часа",
+                "программиста",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Программист 1С — почасовая оплата",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Программист",
+                "1С",
+                "—",
+                "почасовая",
+                "оплата"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Почасовая работа специалиста. Выезд в Новосибирске. По договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 64,
+              "punctuation": 3,
+              "max_word_length": 12,
+              "words": [
+                "Почасовая",
+                "работа",
+                "специалиста.",
+                "Выезд",
+                "в",
+                "Новосибирске.",
+                "По",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Минимальный заказ — 2 часа. Оценка объёма после обсуждения.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 59,
+              "punctuation": 3,
+              "max_word_length": 11,
+              "words": [
+                "Минимальный",
+                "заказ",
+                "—",
+                "2",
+                "часа.",
+                "Оценка",
+                "объёма",
+                "после",
+                "обсуждения."
+              ]
+            }
+          },
+          {
+            "text": "Удалённо по России. Безналичная оплата.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Удалённо",
+                "по",
+                "России.",
+                "Безналичная",
+                "оплата."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-05-integration",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 43,
+            "punctuation": 0,
+            "max_word_length": 10,
+            "words": [
+              "Интеграция",
+              "маркировки",
+              "1С",
+              "с",
+              "сайтом",
+              "и",
+              "Битрикс"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 12,
+            "punctuation": 0,
+            "max_word_length": 7,
+            "words": [
+              "Честный",
+              "знак"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 67,
+            "punctuation": 2,
+            "max_word_length": 10,
+            "words": [
+              "Связь",
+              "маркировки",
+              "с",
+              "внешними",
+              "системами.",
+              "Схему",
+              "уточним",
+              "после",
+              "анализа."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Интеграция маркировки 1С с сайтом и Битрикс",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Интеграция",
+                "маркировки",
+                "1С",
+                "с",
+                "сайтом",
+                "и",
+                "Битрикс"
+              ]
+            }
+          },
+          {
+            "text": "Маркировка 1С — интеграция с интернет-магазином",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 47,
+              "punctuation": 2,
+              "max_word_length": 17,
+              "words": [
+                "Маркировка",
+                "1С",
+                "—",
+                "интеграция",
+                "с",
+                "интернет-магазином"
+              ]
+            }
+          },
+          {
+            "text": "Обмен маркировки 1С и внешних систем",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 36,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Обмен",
+                "маркировки",
+                "1С",
+                "и",
+                "внешних",
+                "систем"
+              ]
+            }
+          },
+          {
+            "text": "Интеграция Честного знака и 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Интеграция",
+                "Честного",
+                "знака",
+                "и",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Связь маркировки с внешними системами. Схему уточним после анализа.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 67,
+              "punctuation": 2,
+              "max_word_length": 10,
+              "words": [
+                "Связь",
+                "маркировки",
+                "с",
+                "внешними",
+                "системами.",
+                "Схему",
+                "уточним",
+                "после",
+                "анализа."
+              ]
+            }
+          },
+          {
+            "text": "Сайт, Битрикс, обмен кодами. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 48,
+              "punctuation": 4,
+              "max_word_length": 8,
+              "words": [
+                "Сайт,",
+                "Битрикс,",
+                "обмен",
+                "кодами.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Техническая настройка в 1С. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 49,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Техническая",
+                "настройка",
+                "в",
+                "1С.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-02-direct-service-order",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 43,
+            "punctuation": 1,
+            "max_word_length": 13,
+            "words": [
+              "Услуги",
+              "сопровождения",
+              "1С",
+              "—",
+              "подключим",
+              "команду"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 10,
+            "punctuation": 0,
+            "max_word_length": 5,
+            "words": [
+              "Корво",
+              "Неро"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 67,
+            "punctuation": 3,
+            "max_word_length": 12,
+            "words": [
+              "Окажем",
+              "поддержку",
+              "базы",
+              "1С.",
+              "Удалённо",
+              "по",
+              "России,",
+              "выезд",
+              "в",
+              "Новосибирске."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Услуги сопровождения 1С — подключим команду",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Услуги",
+                "сопровождения",
+                "1С",
+                "—",
+                "подключим",
+                "команду"
+              ]
+            }
+          },
+          {
+            "text": "Сопровождение 1С — разово или постоянно",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "1С",
+                "—",
+                "разово",
+                "или",
+                "постоянно"
+              ]
+            }
+          },
+          {
+            "text": "Услуги по сопровождению 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Услуги",
+                "по",
+                "сопровождению",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Окажем поддержку базы 1С. Удалённо по России, выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 67,
+              "punctuation": 3,
+              "max_word_length": 12,
+              "words": [
+                "Окажем",
+                "поддержку",
+                "базы",
+                "1С.",
+                "Удалённо",
+                "по",
+                "России,",
+                "выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Обновления, помощь пользователям, устранение ошибок. По договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 65,
+              "punctuation": 4,
+              "max_word_length": 13,
+              "words": [
+                "Обновления,",
+                "помощь",
+                "пользователям,",
+                "устранение",
+                "ошибок.",
+                "По",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим формат работы и оценим объём после уточнения задачи.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 60,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Обсудим",
+                "формат",
+                "работы",
+                "и",
+                "оценим",
+                "объём",
+                "после",
+                "уточнения",
+                "задачи."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-03-implementation",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 43,
+            "punctuation": 1,
+            "max_word_length": 9,
+            "words": [
+              "Внедрение",
+              "учётных",
+              "сценариев",
+              "в",
+              "1С",
+              "—",
+              "частично"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 22,
+            "punctuation": 0,
+            "max_word_length": 10,
+            "words": [
+              "Доработка",
+              "и",
+              "разработка"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 65,
+            "punctuation": 2,
+            "max_word_length": 11,
+            "words": [
+              "Поможем",
+              "внедрить",
+              "отдельные",
+              "процессы",
+              "в",
+              "действующей",
+              "базе.",
+              "Удалённо."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Внедрение учётных сценариев в 1С — частично",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Внедрение",
+                "учётных",
+                "сценариев",
+                "в",
+                "1С",
+                "—",
+                "частично"
+              ]
+            }
+          },
+          {
+            "text": "Внедрение и доработка 1С — под вашу базу",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 40,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Внедрение",
+                "и",
+                "доработка",
+                "1С",
+                "—",
+                "под",
+                "вашу",
+                "базу"
+              ]
+            }
+          },
+          {
+            "text": "Настройка учёта в 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Настройка",
+                "учёта",
+                "в",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Внедрение 1С — отдельные блоки учёта",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 36,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Внедрение",
+                "1С",
+                "—",
+                "отдельные",
+                "блоки",
+                "учёта"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Поможем внедрить отдельные процессы в действующей базе. Удалённо.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 65,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Поможем",
+                "внедрить",
+                "отдельные",
+                "процессы",
+                "в",
+                "действующей",
+                "базе.",
+                "Удалённо."
+              ]
+            }
+          },
+          {
+            "text": "Не полный ERP-проект — точечные сценарии. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 63,
+              "punctuation": 4,
+              "max_word_length": 12,
+              "words": [
+                "Не",
+                "полный",
+                "ERP-проект",
+                "—",
+                "точечные",
+                "сценарии.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим конфигурацию и объём. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 49,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Обсудим",
+                "конфигурацию",
+                "и",
+                "объём.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-01-direct-service-order",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 40,
+            "punctuation": 1,
+            "max_word_length": 12,
+            "words": [
+              "Услуги",
+              "программиста",
+              "1С",
+              "—",
+              "под",
+              "вашу",
+              "задачу"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 10,
+            "punctuation": 0,
+            "max_word_length": 5,
+            "words": [
+              "Корво",
+              "Неро"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 66,
+            "punctuation": 3,
+            "max_word_length": 8,
+            "words": [
+              "Обсудим",
+              "задачу",
+              "и",
+              "оценим",
+              "объём.",
+              "Удалённо",
+              "по",
+              "России,",
+              "выезд",
+              "в",
+              "городе."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Услуги программиста 1С — под вашу задачу",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 40,
+              "punctuation": 1,
+              "max_word_length": 12,
+              "words": [
+                "Услуги",
+                "программиста",
+                "1С",
+                "—",
+                "под",
+                "вашу",
+                "задачу"
+              ]
+            }
+          },
+          {
+            "text": "Заказать программиста 1С — разовая работа",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 41,
+              "punctuation": 1,
+              "max_word_length": 12,
+              "words": [
+                "Заказать",
+                "программиста",
+                "1С",
+                "—",
+                "разовая",
+                "работа"
+              ]
+            }
+          },
+          {
+            "text": "Услуги 1С-программиста — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 35,
+              "punctuation": 2,
+              "max_word_length": 14,
+              "words": [
+                "Услуги",
+                "1С-программиста",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Программист 1С на аутсорсе — обсудим задачу",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Программист",
+                "1С",
+                "на",
+                "аутсорсе",
+                "—",
+                "обсудим",
+                "задачу"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Обсудим задачу и оценим объём. Удалённо по России, выезд в городе.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 66,
+              "punctuation": 3,
+              "max_word_length": 8,
+              "words": [
+                "Обсудим",
+                "задачу",
+                "и",
+                "оценим",
+                "объём.",
+                "Удалённо",
+                "по",
+                "России,",
+                "выезд",
+                "в",
+                "городе."
+              ]
+            }
+          },
+          {
+            "text": "Доработка, ошибки, отчёты. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 46,
+              "punctuation": 4,
+              "max_word_length": 9,
+              "words": [
+                "Доработка,",
+                "ошибки,",
+                "отчёты.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Получите оценку после уточнения конфигурации и объёма.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 54,
+              "punctuation": 1,
+              "max_word_length": 12,
+              "words": [
+                "Получите",
+                "оценку",
+                "после",
+                "уточнения",
+                "конфигурации",
+                "и",
+                "объёма."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-05-ts-piot",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 39,
+            "punctuation": 1,
+            "max_word_length": 9,
+            "words": [
+              "ТС",
+              "ПИОТ",
+              "и",
+              "Честный",
+              "знак",
+              "в",
+              "1С",
+              "—",
+              "настройка"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 13,
+            "punctuation": 0,
+            "max_word_length": 10,
+            "words": [
+              "Маркировка",
+              "1С"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 57,
+            "punctuation": 2,
+            "max_word_length": 12,
+            "words": [
+              "Настроим",
+              "обмен",
+              "по",
+              "ТС",
+              "ПИОТ",
+              "в",
+              "вашей",
+              "конфигурации.",
+              "Удалённо."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "ТС ПИОТ и Честный знак в 1С — настройка",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "ТС",
+                "ПИОТ",
+                "и",
+                "Честный",
+                "знак",
+                "в",
+                "1С",
+                "—",
+                "настройка"
+              ]
+            }
+          },
+          {
+            "text": "Настройка ТС ПИОТ в 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 35,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Настройка",
+                "ТС",
+                "ПИОТ",
+                "в",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "ТС ПИОТ в 1С — подключение обмена",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "ТС",
+                "ПИОТ",
+                "в",
+                "1С",
+                "—",
+                "подключение",
+                "обмена"
+              ]
+            }
+          },
+          {
+            "text": "Маркировка ТС ПИОТ в 1С — техническая помощь",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 44,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Маркировка",
+                "ТС",
+                "ПИОТ",
+                "в",
+                "1С",
+                "—",
+                "техническая",
+                "помощь"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Настроим обмен по ТС ПИОТ в вашей конфигурации. Удалённо.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 57,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Настроим",
+                "обмен",
+                "по",
+                "ТС",
+                "ПИОТ",
+                "в",
+                "вашей",
+                "конфигурации.",
+                "Удалённо."
+              ]
+            }
+          },
+          {
+            "text": "Ошибки обмена, документы, коды. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 53,
+              "punctuation": 4,
+              "max_word_length": 12,
+              "words": [
+                "Ошибки",
+                "обмена,",
+                "документы,",
+                "коды.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим конфигурацию и объём. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 49,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Обсудим",
+                "конфигурацию",
+                "и",
+                "объём.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-02-troubleshooting-not-working",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 41,
+            "punctuation": 1,
+            "max_word_length": 8,
+            "words": [
+              "1С",
+              "не",
+              "работает",
+              "—",
+              "найдём",
+              "и",
+              "устраним",
+              "ошибку"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 16,
+            "punctuation": 0,
+            "max_word_length": 13,
+            "words": [
+              "Сопровождение",
+              "1С"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 68,
+            "punctuation": 3,
+            "max_word_length": 11,
+            "words": [
+              "Восстановим",
+              "работу",
+              "базы",
+              "и",
+              "учёта.",
+              "Удалённо",
+              "по",
+              "России,",
+              "выезд",
+              "в",
+              "городе."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "1С не работает — найдём и устраним ошибку",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 41,
+              "punctuation": 1,
+              "max_word_length": 8,
+              "words": [
+                "1С",
+                "не",
+                "работает",
+                "—",
+                "найдём",
+                "и",
+                "устраним",
+                "ошибку"
+              ]
+            }
+          },
+          {
+            "text": "Ошибки в 1С — оперативная помощь специалиста",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 44,
+              "punctuation": 1,
+              "max_word_length": 11,
+              "words": [
+                "Ошибки",
+                "в",
+                "1С",
+                "—",
+                "оперативная",
+                "помощь",
+                "специалиста"
+              ]
+            }
+          },
+          {
+            "text": "1С перестала работать — подключим поддержку",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "1С",
+                "перестала",
+                "работать",
+                "—",
+                "подключим",
+                "поддержку"
+              ]
+            }
+          },
+          {
+            "text": "Устранение ошибок 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Устранение",
+                "ошибок",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Восстановим работу базы и учёта. Удалённо по России, выезд в городе.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 68,
+              "punctuation": 3,
+              "max_word_length": 11,
+              "words": [
+                "Восстановим",
+                "работу",
+                "базы",
+                "и",
+                "учёта.",
+                "Удалённо",
+                "по",
+                "России,",
+                "выезд",
+                "в",
+                "городе."
+              ]
+            }
+          },
+          {
+            "text": "Разовое обращение или сопровождение. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 56,
+              "punctuation": 2,
+              "max_word_length": 13,
+              "words": [
+                "Разовое",
+                "обращение",
+                "или",
+                "сопровождение.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Поможем пользователям и исправим сбои в конфигурации.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 53,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Поможем",
+                "пользователям",
+                "и",
+                "исправим",
+                "сбои",
+                "в",
+                "конфигурации."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-03-direct-service-order",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 36,
+            "punctuation": 1,
+            "max_word_length": 9,
+            "words": [
+              "Услуги",
+              "доработки",
+              "1С",
+              "—",
+              "обсудим",
+              "задачу"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 10,
+            "punctuation": 0,
+            "max_word_length": 5,
+            "words": [
+              "Корво",
+              "Неро"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 68,
+            "punctuation": 3,
+            "max_word_length": 12,
+            "words": [
+              "Закажите",
+              "доработку",
+              "конфигурации.",
+              "Удалённо",
+              "по",
+              "России,",
+              "выезд",
+              "в",
+              "городе."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Услуги доработки 1С — обсудим задачу",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 36,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Услуги",
+                "доработки",
+                "1С",
+                "—",
+                "обсудим",
+                "задачу"
+              ]
+            }
+          },
+          {
+            "text": "Заказать доработку 1С — разовая работа",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 38,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Заказать",
+                "доработку",
+                "1С",
+                "—",
+                "разовая",
+                "работа"
+              ]
+            }
+          },
+          {
+            "text": "Услуги разработки 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 33,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Услуги",
+                "разработки",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Закажите доработку конфигурации. Удалённо по России, выезд в городе.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 68,
+              "punctuation": 3,
+              "max_word_length": 12,
+              "words": [
+                "Закажите",
+                "доработку",
+                "конфигурации.",
+                "Удалённо",
+                "по",
+                "России,",
+                "выезд",
+                "в",
+                "городе."
+              ]
+            }
+          },
+          {
+            "text": "Отчёты, обработки, автоматизация. Оценка после уточнения объёма.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 64,
+              "punctuation": 4,
+              "max_word_length": 13,
+              "words": [
+                "Отчёты,",
+                "обработки,",
+                "автоматизация.",
+                "Оценка",
+                "после",
+                "уточнения",
+                "объёма."
+              ]
+            }
+          },
+          {
+            "text": "Работа по договору. Безналичная оплата.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 39,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Работа",
+                "по",
+                "договору.",
+                "Безналичная",
+                "оплата."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-05-support-and-maintenance",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 42,
+            "punctuation": 0,
+            "max_word_length": 10,
+            "words": [
+              "Поддержка",
+              "маркировки",
+              "и",
+              "Честного",
+              "знака",
+              "в",
+              "1С"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 20,
+            "punctuation": 0,
+            "max_word_length": 13,
+            "words": [
+              "Сопровождение",
+              "обмена"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 64,
+            "punctuation": 2,
+            "max_word_length": 11,
+            "words": [
+              "Поможем",
+              "с",
+              "ошибками",
+              "и",
+              "документами",
+              "маркировки.",
+              "Удалённо",
+              "по",
+              "России."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Поддержка маркировки и Честного знака в 1С",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Поддержка",
+                "маркировки",
+                "и",
+                "Честного",
+                "знака",
+                "в",
+                "1С"
+              ]
+            }
+          },
+          {
+            "text": "Сопровождение маркировки в 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "маркировки",
+                "в",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          },
+          {
+            "text": "Техподдержка Честного знака в 1С",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 32,
+              "punctuation": 0,
+              "max_word_length": 12,
+              "words": [
+                "Техподдержка",
+                "Честного",
+                "знака",
+                "в",
+                "1С"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Поможем с ошибками и документами маркировки. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 64,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Поможем",
+                "с",
+                "ошибками",
+                "и",
+                "документами",
+                "маркировки.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Сопровождение настроенного обмена. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 56,
+              "punctuation": 2,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "настроенного",
+                "обмена.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Разовые обращения и сопровождение. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 54,
+              "punctuation": 2,
+              "max_word_length": 13,
+              "words": [
+                "Разовые",
+                "обращения",
+                "и",
+                "сопровождение.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-02-specialist-search",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 42,
+            "punctuation": 1,
+            "max_word_length": 13,
+            "words": [
+              "Специалист",
+              "по",
+              "сопровождению",
+              "1С",
+              "—",
+              "подключим"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 10,
+            "punctuation": 0,
+            "max_word_length": 5,
+            "words": [
+              "Корво",
+              "Неро"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 58,
+            "punctuation": 2,
+            "max_word_length": 10,
+            "words": [
+              "Внешний",
+              "специалист",
+              "для",
+              "поддержки",
+              "базы.",
+              "Удалённо",
+              "по",
+              "России."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Специалист по сопровождению 1С — подключим",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Специалист",
+                "по",
+                "сопровождению",
+                "1С",
+                "—",
+                "подключим"
+              ]
+            }
+          },
+          {
+            "text": "Специалист 1С для поддержки базы",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 32,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Специалист",
+                "1С",
+                "для",
+                "поддержки",
+                "базы"
+              ]
+            }
+          },
+          {
+            "text": "Сопровождение 1С — внешний специалист",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 37,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "1С",
+                "—",
+                "внешний",
+                "специалист"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Внешний специалист для поддержки базы. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 58,
+              "punctuation": 2,
+              "max_word_length": 10,
+              "words": [
+                "Внешний",
+                "специалист",
+                "для",
+                "поддержки",
+                "базы.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Обновления, помощь пользователям, ошибки. Выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 63,
+              "punctuation": 4,
+              "max_word_length": 13,
+              "words": [
+                "Обновления,",
+                "помощь",
+                "пользователям,",
+                "ошибки.",
+                "Выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим задачу и формат работы. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 51,
+              "punctuation": 2,
+              "max_word_length": 8,
+              "words": [
+                "Обсудим",
+                "задачу",
+                "и",
+                "формат",
+                "работы.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-02-price-intent",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 42,
+            "punctuation": 1,
+            "max_word_length": 13,
+            "words": [
+              "Сопровождение",
+              "1С",
+              "—",
+              "обсудим",
+              "стоимость",
+              "работ"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 21,
+            "punctuation": 0,
+            "max_word_length": 9,
+            "words": [
+              "Без",
+              "публичных",
+              "тарифов"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 55,
+            "punctuation": 2,
+            "max_word_length": 8,
+            "words": [
+              "Оценим",
+              "формат",
+              "и",
+              "объём",
+              "после",
+              "задачи.",
+              "Удалённо",
+              "по",
+              "России."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Сопровождение 1С — обсудим стоимость работ",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "1С",
+                "—",
+                "обсудим",
+                "стоимость",
+                "работ"
+              ]
+            }
+          },
+          {
+            "text": "Стоимость сопровождения 1С — после оценки задачи",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 48,
+              "punctuation": 1,
+              "max_word_length": 13,
+              "words": [
+                "Стоимость",
+                "сопровождения",
+                "1С",
+                "—",
+                "после",
+                "оценки",
+                "задачи"
+              ]
+            }
+          },
+          {
+            "text": "Цена поддержки 1С — уточним по объёму",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 37,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Цена",
+                "поддержки",
+                "1С",
+                "—",
+                "уточним",
+                "по",
+                "объёму"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Оценим формат и объём после задачи. Удалённо по России.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 55,
+              "punctuation": 2,
+              "max_word_length": 8,
+              "words": [
+                "Оценим",
+                "формат",
+                "и",
+                "объём",
+                "после",
+                "задачи.",
+                "Удалённо",
+                "по",
+                "России."
+              ]
+            }
+          },
+          {
+            "text": "Абонентский формат и разовые обращения. Работа по договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 59,
+              "punctuation": 2,
+              "max_word_length": 11,
+              "words": [
+                "Абонентский",
+                "формат",
+                "и",
+                "разовые",
+                "обращения.",
+                "Работа",
+                "по",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Безналичная оплата. Выезд специалиста в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 53,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Безналичная",
+                "оплата.",
+                "Выезд",
+                "специалиста",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-02-modification",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 40,
+            "punctuation": 0,
+            "max_word_length": 13,
+            "words": [
+              "Доработка",
+              "1С",
+              "в",
+              "рамках",
+              "сопровождения",
+              "базы"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 16,
+            "punctuation": 0,
+            "max_word_length": 13,
+            "words": [
+              "Сопровождение",
+              "1С"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 68,
+            "punctuation": 3,
+            "max_word_length": 12,
+            "words": [
+              "Мелкие",
+              "доработки",
+              "при",
+              "поддержке",
+              "базы.",
+              "Удалённо,",
+              "выезд",
+              "в",
+              "Новосибирске."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Доработка 1С в рамках сопровождения базы",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 40,
+              "punctuation": 0,
+              "max_word_length": 13,
+              "words": [
+                "Доработка",
+                "1С",
+                "в",
+                "рамках",
+                "сопровождения",
+                "базы"
+              ]
+            }
+          },
+          {
+            "text": "Сопровождение 1С с доработками конфигурации",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 43,
+              "punctuation": 0,
+              "max_word_length": 13,
+              "words": [
+                "Сопровождение",
+                "1С",
+                "с",
+                "доработками",
+                "конфигурации"
+              ]
+            }
+          },
+          {
+            "text": "Поддержка и доработка 1С — Корво Неро",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 37,
+              "punctuation": 1,
+              "max_word_length": 9,
+              "words": [
+                "Поддержка",
+                "и",
+                "доработка",
+                "1С",
+                "—",
+                "Корво",
+                "Неро"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Мелкие доработки при поддержке базы. Удалённо, выезд в Новосибирске.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 68,
+              "punctuation": 3,
+              "max_word_length": 12,
+              "words": [
+                "Мелкие",
+                "доработки",
+                "при",
+                "поддержке",
+                "базы.",
+                "Удалённо,",
+                "выезд",
+                "в",
+                "Новосибирске."
+              ]
+            }
+          },
+          {
+            "text": "Обновления, помощь пользователям, точечные изменения. По договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 66,
+              "punctuation": 4,
+              "max_word_length": 13,
+              "words": [
+                "Обновления,",
+                "помощь",
+                "пользователям,",
+                "точечные",
+                "изменения.",
+                "По",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим задачу и оценим объём работ.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 36,
+              "punctuation": 1,
+              "max_word_length": 7,
+              "words": [
+                "Обсудим",
+                "задачу",
+                "и",
+                "оценим",
+                "объём",
+                "работ."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "ca-05-specialist-search",
+      "validation": {
+        "headline": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 41,
+            "punctuation": 1,
+            "max_word_length": 10,
+            "words": [
+              "Специалист",
+              "по",
+              "маркировке",
+              "в",
+              "1С",
+              "—",
+              "подключим"
+            ]
+          }
+        },
+        "additional": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 12,
+            "punctuation": 0,
+            "max_word_length": 7,
+            "words": [
+              "Честный",
+              "знак"
+            ]
+          }
+        },
+        "text": {
+          "valid": true,
+          "issues": [],
+          "metrics": {
+            "characters": 63,
+            "punctuation": 3,
+            "max_word_length": 8,
+            "words": [
+              "Настроим",
+              "коды",
+              "и",
+              "обмен",
+              "в",
+              "1С.",
+              "Удалённо",
+              "по",
+              "России,",
+              "выезд",
+              "в",
+              "городе."
+            ]
+          }
+        },
+        "all_headlines": [
+          {
+            "text": "Специалист по маркировке в 1С — подключим",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 41,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Специалист",
+                "по",
+                "маркировке",
+                "в",
+                "1С",
+                "—",
+                "подключим"
+              ]
+            }
+          },
+          {
+            "text": "Специалист 1С по Честному знаку",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 31,
+              "punctuation": 0,
+              "max_word_length": 10,
+              "words": [
+                "Специалист",
+                "1С",
+                "по",
+                "Честному",
+                "знаку"
+              ]
+            }
+          },
+          {
+            "text": "Маркировка в 1С — внешний специалист",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 36,
+              "punctuation": 1,
+              "max_word_length": 10,
+              "words": [
+                "Маркировка",
+                "в",
+                "1С",
+                "—",
+                "внешний",
+                "специалист"
+              ]
+            }
+          }
+        ],
+        "all_texts": [
+          {
+            "text": "Настроим коды и обмен в 1С. Удалённо по России, выезд в городе.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 63,
+              "punctuation": 3,
+              "max_word_length": 8,
+              "words": [
+                "Настроим",
+                "коды",
+                "и",
+                "обмен",
+                "в",
+                "1С.",
+                "Удалённо",
+                "по",
+                "России,",
+                "выезд",
+                "в",
+                "городе."
+              ]
+            }
+          },
+          {
+            "text": "Обмен с Честным знаком, ошибки, документы. По договору.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 55,
+              "punctuation": 4,
+              "max_word_length": 9,
+              "words": [
+                "Обмен",
+                "с",
+                "Честным",
+                "знаком,",
+                "ошибки,",
+                "документы.",
+                "По",
+                "договору."
+              ]
+            }
+          },
+          {
+            "text": "Обсудим задачу и конфигурацию. Корво Неро.",
+            "valid": true,
+            "issues": [],
+            "metrics": {
+              "characters": 42,
+              "punctuation": 2,
+              "max_word_length": 12,
+              "words": [
+                "Обсудим",
+                "задачу",
+                "и",
+                "конфигурацию.",
+                "Корво",
+                "Неро."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "moderation_status": "NOT_SUBMITTED_TO_MODERATION",
+  "result": "TECHNICALLY_VALIDATED"
+}

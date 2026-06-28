@@ -1,0 +1,38 @@
+{
+  "matrix_id": "corvonero-export-readiness-matrix-v2",
+  "generated_at": "2026-06-28T22:53:59.620Z",
+  "prior_checkpoint": {
+    "commit": "fdd1899c5eb13268021636e40629cfa237a454cf",
+    "tag": "corvonero-final-landing-page-copy-program-2026-06"
+  },
+  "deliverables": {
+    "D1_ads_docx": {
+      "id": "D1",
+      "name": "Ads DOCX",
+      "readiness": "READY — 15 deployable groups / 895 phrases",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-ADS-FINAL-2026-06-29\\CORVONERO-ОБЪЯВЛЕНИЯ-ФИНАЛ-v1.docx",
+      "sha256": "7558a598563c983a60980863c376f73f419a537f7122c4a7e35a88e16ff5c1ba"
+    },
+    "D2_landing_page_docx": {
+      "id": "D2",
+      "name": "Landing-page DOCX",
+      "readiness": "READY — LP-01 through LP-05"
+    },
+    "D3_commander_xlsx": {
+      "id": "D3",
+      "name": "Commander XLSX",
+      "readiness": "NOT READY — requires extensions, negatives, UTM, final URL/publication and import profile"
+    },
+    "D4_research_xlsx": {
+      "id": "D4",
+      "name": "Research XLSX",
+      "readiness": "READY — partial coverage explicitly labelled"
+    }
+  },
+  "advertising": {
+    "started": false
+  },
+  "commander": {
+    "created": false
+  }
+}
