@@ -1,0 +1,18 @@
+{
+  "manifest_line": "FP-0002 V8 O-CENTRE PRE-ASSET-CONTENT-RESOLUTION STATE PRESERVED",
+  "generated_at": "2026-06-29T00:00:00Z",
+  "evidence_root": "C:/MARS Phenix/AI MARS STORAGE/website-factory/fp-0002-shpigovsky-v8/o-centre-asset-content-resolution/evidence",
+  "items": [
+    {
+      "asset_id": "OC-A001",
+      "figma_node": "1:2226",
+      "fig_hash_hex": "c96ae5052d14489981804509c79bb86e1bb6eae1",
+      "evidence_file": "o-centre-hero-fig-c96ae505.jpg",
+      "evidence_sha256": "446930d62914c036de9027d421cb28c1bee39fef2672d9e63f239da108e7a527",
+      "output_file": "workspaces/fp-0002-shpigovsky-v8/src/img/content/o-centre/o-centre-hero.webp",
+      "output_sha256": "3e9d45fee8d59c8ab3550d20d2310b4d834e87eecb8b9506ea92e972bea407c7",
+      "output_dimensions": { "w": 1890, "h": 1260 },
+      "compare_note": "Not byte match to services-hero.webp"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # FP-0002 V8 O-Centre Page Anatomy + Reuse Charter v1
 
-**Date:** 2026-06-29
+**Date:** 2026-06-29 (resolution update 2026-06-29)
 **Status:** Charter complete — **implementation NOT authorized**
-**HEAD:** `7f5d7f23` (`mars/canonical-post-recovery`)
+**HEAD at charter:** `7f5d7f23` · **HEAD at resolution:** `508837a0` (`mars/canonical-post-recovery`)
 
 ---
 
@@ -238,6 +238,28 @@ See risk register. Top: missing BLK-036–038 assets/copy; false reuse; SCSS reg
 
 ---
 
+## 23. Asset + content resolution (2026-06-29)
+
+**Task:** FP-0002 V8 O-Centre Asset + Content Resolution  
+**Pack:** `../o-centre-asset-content-resolution/`
+
+| Item | Result |
+|---|---|
+| Canonical Figma | `Spig_v1.2.fig` via fresh parse (`data/FP-0002-V8-OCENTRE-SPIG-V1-FIG-EXTRACT.json`) |
+| Hero asset | `EXPORT_CANONICAL` → `src/img/content/o-centre/o-centre-hero.webp` |
+| BLK-037/038 copy | **Resolved** — single `преимущества` frame `1:2440` |
+| BLK-037/038 assets | **22 photos pending export** |
+| BLK-018 steps | **Absent** from O-Centre Spig_v1.2 — scope blocked |
+| FAQ | **No accordion** — reuse CF-009 final form, not CF-008 |
+| Subnav | **7 labels confirmed** (`1:2241`–`1:2247`) |
+| Founder quote | **Blocked** — Lorem ipsum in node `1:2301` |
+
+**Revised verdict:** `FP0002_V8_OCENTRE_ASSET_CONTENT_RESOLUTION_COMPLETE_WITH_KNOWN_GAPS`  
+**Gate:** `READY_FOR_FP0002_V8_OCENTRE_TARGETED_ASSET_EXPORT`  
+**implementation_authorized:** **false**
+
+---
+
 ## Child documents
 
 | Document | Path |
@@ -254,3 +276,4 @@ See risk register. Top: missing BLK-036–038 assets/copy; false reuse; SCSS reg
 | Accessibility | `FP-0002-V8-OCENTRE-ACCESSIBILITY-CHARTER-v1.md` |
 | Risks | `FP-0002-V8-OCENTRE-RISK-REGISTER-v1.md` |
 | Machine-readable | `data/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER.json` |
+| Resolution pack | `../o-centre-asset-content-resolution/` |

@@ -9,22 +9,23 @@
     "name": "О центре",
     "width": 1437,
     "height": 12830,
-    "forensic_id": "PG-04"
+    "forensic_id": "1:2185"
   },
   "mobile_frame": {
     "name": "О центре - моб",
     "width": 390,
     "height": 16586,
-    "forensic_id": "PG-15",
+    "forensic_id": "1:5519",
     "content_width_note": "380px in child frames"
   },
   "git_anchors": {
-    "head": "7f5d7f23e49a5b1c16bbde8a97d969747d23a7a3",
+    "head": "508837a02658e357ce18dca777a46231d2575b25",
     "branch": "mars/canonical-post-recovery",
     "manual_polish": "472be1abffb666a836eb83d5644e1fd3a233cc2d",
     "cf010": "7f5d7f23e49a5b1c16bbde8a97d969747d23a7a3",
     "cf011": "4d98d6fbc273bd1bd4cf4555d973f2b978bef0fa",
-    "cf012": "9e8fa083cf957e0b05a212db88165709bd488e8b"
+    "cf012": "9e8fa083cf957e0b05a212db88165709bd488e8b",
+    "o_centre_charter": "62d24fa7252f13a2e8ecf96d0932a01a7f59a766"
   },
   "blocks": [
     {"order": 1, "block_id": "OC-B01", "design_name": "1 - Главный экран", "inventory_blk": "BLK-007s"},
@@ -54,21 +55,28 @@
     "OC-B10": "DIRECT_REUSE",
     "OC-B11": "DIRECT_REUSE",
     "OC-B12": "DIRECT_REUSE",
-    "OC-B13": "DIRECT_REUSE"
+    "OC-B13": "REUSE_FINAL_FORM_NOT_FAQ"
   },
   "gallery_classification": "SIMILAR_BUT_DIFFERENT",
   "staff_photo_classification": "HOME_SPECIFIC",
   "hero_classification": "REUSE_WITH_CONTENT_PARAMETERS",
   "unique_blocks": ["OC-B03", "OC-B08"],
-  "content_status": "PASS_WITH_KNOWN_GAPS",
-  "asset_status": "PASS_WITH_KNOWN_GAPS",
+  "content_status": "RESOLVED_WITH_KNOWN_GAPS",
+  "asset_status": "RESOLVED_WITH_KNOWN_GAPS",
   "missing_inputs": [
-    "BLK-037_038_PDF_copy",
-    "BLK-018_steps_copy",
-    "About_hero_image_confirmation",
-    "Figma_node_ids_refresh",
-    "FAQ_inventory_vs_figma_conflict_resolution"
+    "BLK-018_steps_absent_from_Spig_v1.2_O-Centre",
+    "founder_quote_body_Lorem_in_Figma_1:2301",
+    "infrastructure_photo_export_22_pending",
+    "program_approach_Lorem_placeholders"
   ],
+  "resolution_task": {
+    "id": "FP-0002-V8-OCENTRE-ASSET-CONTENT-RESOLUTION",
+    "date": "2026-06-29",
+    "pack_path": "workspaces/fp-0002-shpigovsky-v8/audits/o-centre-asset-content-resolution/",
+    "content_json": "data/FP-0002-V8-OCENTRE-IMPLEMENTATION-CONTENT.json",
+    "assets_json": "data/FP-0002-V8-OCENTRE-IMPLEMENTATION-ASSETS.json",
+    "hero_asset": "src/img/content/o-centre/o-centre-hero.webp"
+  },
   "responsive_status": "PASS",
   "accessibility_status": "PASS_WITH_KNOWN_GAPS",
   "protected_components": [
@@ -87,17 +95,17 @@
   ],
   "implementation_phases": ["0_safety", "1_shell", "2_direct_reuse", "3_parameterized", "4_unique", "5_integration", "6_qa", "7_operator_review"],
   "readiness_gates": {
-    "design": "PASS_WITH_KNOWN_GAPS",
+    "design": "PASS",
     "content": "PASS_WITH_KNOWN_GAPS",
     "assets": "PASS_WITH_KNOWN_GAPS",
     "reuse": "PASS",
     "responsive": "PASS",
     "accessibility": "PASS_WITH_KNOWN_GAPS",
-    "implementation": "PASS"
+    "implementation": "NOT_AUTHORIZED"
   },
   "implementation_authorized": false,
-  "final_verdict": "FP0002_V8_OCENTRE_PAGE_ANATOMY_REUSE_CHARTER_COMPLETE_WITH_KNOWN_GAPS",
-  "gate_recommendation": "READY_FOR_FP0002_V8_OCENTRE_IMPLEMENTATION_PROMPT",
+  "final_verdict": "FP0002_V8_OCENTRE_ASSET_CONTENT_RESOLUTION_COMPLETE_WITH_KNOWN_GAPS",
+  "gate_recommendation": "READY_FOR_FP0002_V8_OCENTRE_TARGETED_ASSET_EXPORT",
   "production_href": "/o-centre/",
   "breadcrumb_label": "О центре",
   "page_title": "О центре — Шпиговский Дом",
