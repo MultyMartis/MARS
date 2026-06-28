@@ -1,13 +1,15 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-28 (CF-012 program modifier consolidation)
+**Updated:** 2026-06-29 (operator manual polish canonical checkpoint)
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
 fp0002_v8_git_protection: ENABLED
 fp0002_v8_baseline: FOUR_TEMPLATE_AUTHORITY_6eb493e9
 fp0002_v8_component_audit: COMPLETE
-fp0002_v8_component_consolidation: CF003_CF012_SCOPE_IN_PROGRESS
+fp0002_v8_component_consolidation: CF003_CF012_COMPLETE
+fp0002_v8_operator_manual_polish: OPERATOR_MANUAL_POLISH_CANONICAL
+fp0002_v8_visual_authority: V8_WORKING_SOURCE_POST_MANUAL_POLISH
 fp0002_v8_cf003_upper_navigation: COMPLETE
 fp0002_v8_cf003_commit: 361502bf
 fp0002_v8_cf004_founder_quote: COMPLETE
@@ -22,8 +24,10 @@ fp0002_v8_duplicate_id_repair_commit: 2107d2b9
 fp0002_v8_consolidation_checkpoint: DOCUMENTED
 fp0002_v8_page_wide_dom_gate: PASS
 fp0002_v8_cf011_dark_cta: COMPLETE
-fp0002_v8_cf012_program_modifiers: COMPLETE_PENDING_OPERATOR_REVIEW
-fp0002_v8_next_wave: CF-010_CLINIC_LANDSCAPE (NOT AUTHORIZED)
+fp0002_v8_cf012_program_modifiers: COMPLETE_OPERATOR_APPROVED
+fp0002_v8_cf012_commit: 9e8fa083
+fp0002_v8_manual_polish_checkpoint: DOCUMENTED
+fp0002_v8_next_wave: CF-010_CLINIC_LANDSCAPE (NOT STARTED)
 fp0002_v8_o_centre: DEFERRED
 fp0002_v8_deployment: NOT_STARTED
 
@@ -58,7 +62,8 @@ consolidation_wave_7_cf009: COMPLETE
 duplicate_id_repair_treatment_prevention: COMPLETE
 consolidation_checkpoint_cf003_cf009: DOCUMENTED
 page_wide_dom_gate: PASS
-consolidation_wave_9_cf012: COMPLETE_PENDING_OPERATOR_REVIEW
+consolidation_wave_9_cf012: COMPLETE_OPERATOR_APPROVED
+operator_manual_polish_canonical: DOCUMENTED
 build_cf012: PASS
 browser_qa_cf012: PASS
 dom_validation_cf012: PASS
@@ -173,7 +178,12 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 
 - Receipt: `audits/consolidation-checkpoint/FP-0002-V8-CF003-CF009-CONSOLIDATION-CHECKPOINT-v1.md`
 
+## Operator manual polish checkpoint
+
+- Receipt: `audits/operator-manual-polish/FP-0002-V8-OPERATOR-MANUAL-POLISH-CANONICAL-CHECKPOINT-v1.md`
+- Status: OPERATOR_MANUAL_POLISH_CANONICAL
+
 ## Next wave (documentation only)
 
-- Recommended family: Dark CTA wrappers (CF-011) — **NOT AUTHORIZED**
-- CF-010 Clinic landscape — **NOT AUTHORIZED** (after CF-011/CF-012)
+- CF-010 Clinic landscape — **NOT STARTED** (requires explicit charter)
+- O-Centre — **DEFERRED UNTIL FINAL READINESS**

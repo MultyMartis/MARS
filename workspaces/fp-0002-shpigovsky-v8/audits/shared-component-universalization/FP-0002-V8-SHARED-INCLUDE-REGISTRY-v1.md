@@ -1,7 +1,8 @@
 # FP-0002 V8 — Shared Include Registry v1
 
-**Date:** 2026-06-28  
-**Scope:** Read-only audit after CF-003 completion  
+**Date:** 2026-06-29  
+**Scope:** Read-only audit after CF-003 completion; updated post operator manual polish  
+**Visual authority:** V8 working source post manual polish (`style.scss`, HTML/partials at HEAD)  
 **Pages checked:** Home, Services Hub, Service Subdivision, Service Leaf  
 **JSON:** `data/shared-include-registry-v1.json`
 

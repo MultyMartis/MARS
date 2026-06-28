@@ -1,20 +1,22 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-28 (V8 CF-009 final form universalization closeout)
+**Last updated:** 2026-06-29 (V8 operator manual polish canonical checkpoint)
 
-## V8 workspace (2026-06-28)
+## V8 workspace (2026-06-29)
 
 | Field | Value |
 |-------|-------|
 | Workspace | `workspaces/fp-0002-shpigovsky-v8/` |
 | Branch | `mars/canonical-post-recovery` |
-| CF-009 final form | COMPLETE — commit `ec5ff2c0` |
-| Duplicate-ID repair (Home) | COMPLETE — commit `2107d2b9` |
-| CF-003–CF-009 consolidation checkpoint | DOCUMENTED |
-| Next wave | CF-011 dark CTA wrappers — **NOT AUTHORIZED** |
-| Page-wide DOM gate | BLOCKED — pre-existing subdivision `aria-labelledby` |
-| O-Centre | DEFERRED |
+| CF-011 dark CTA | COMPLETE — commit `4d98d6fb` |
+| CF-012 program modifiers | COMPLETE — commit `9e8fa083` |
+| Operator manual polish | OPERATOR_MANUAL_POLISH_CANONICAL |
+| Visual authority | V8 working source post manual polish |
+| CF-003–CF-012 | APPROVED |
+| Next wave | CF-010 clinic landscape — **NOT STARTED** |
+| Page-wide DOM gate | PASS |
+| O-Centre | DEFERRED UNTIL FINAL READINESS |
 
 ## Workspace versions (2026-06-24)
 

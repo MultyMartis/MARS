@@ -117,29 +117,34 @@
 
 ## CF-011 Dark CTA wrappers
 
-**Status:** COMPLETE (pending operator visual review)
-
-Subdivision `aria-labelledby` blocker repaired. CF-012 program modifier consolidation **COMPLETE** (pending operator visual review). Next authorized family: **CF-010 — NOT AUTHORIZED**.
+**Status:** COMPLETE — operator approved
 
 ---
 
 ## CF-012 Program modifier consolidation
 
-**Status:** COMPLETE (pending operator visual review)
+**Status:** COMPLETE — operator approved through manual polish
 
 - Canonical partial: `services-program-v2.html`
-- Page-named modifiers removed; functional modifiers only
-- Page-scoped duplicate CSS removed from `style.scss`
-- CF-011 `program-cta-band` unchanged
-- Page-wide DOM gate: PASS
+- Commit: `9e8fa083`
+- Manual polish checkpoint: `audits/operator-manual-polish/`
+
+---
+
+## Operator manual polish (post-CF-012)
+
+**Status:** OPERATOR_MANUAL_POLISH_CANONICAL
+
+- Primary source delta: `src/scss/style.scss`, `src/favicon/favicon.svg`
+- HTML/partials authority: committed HEAD (CF-011/CF-012) — no unstaged markup diff
+- Visual authority: current V8 working source; CF-012 before/after screenshots historical only
+- Receipt: `audits/operator-manual-polish/FP-0002-V8-OPERATOR-MANUAL-POLISH-CANONICAL-CHECKPOINT-v1.md`
 
 ---
 
 ## Next wave: CF-010 Clinic landscape
 
-**Status:** NOT AUTHORIZED
-
-Operator gate required before any `home-clinic-landscape` rename.
+**Status:** NOT STARTED — requires explicit charter
 
 ---
 

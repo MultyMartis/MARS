@@ -1,0 +1,84 @@
+{
+  "manifest_id": "FP-0002-V8-OPERATOR-MANUAL-POLISH-SCREENSHOT-MANIFEST",
+  "version": "v1",
+  "captured_utc": "2026-06-28T21:56:51+00:00",
+  "evidence_root": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence",
+  "viewports": {
+    "desktop": { "width": 1437, "height": 1000 },
+    "mobile": { "width": 380, "height": 900 }
+  },
+  "baseline_statement": "Current post-manual-polish rendering is the new candidate canonical visual baseline. CF-012 before/after screenshots are historical only.",
+  "shots": [
+    {
+      "page_id": "index",
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "filename": "index__desktop__full.png",
+      "sha256": "04880F0D70AD6A1D87102B6BD66E518C66EB0B5F0D5A7092BD0E99DA3E4D4FC7"
+    },
+    {
+      "page_id": "index",
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "filename": "index__mobile__full.png",
+      "sha256": "502ABD1C11CF9F42E9B0C6AEBE093E36ADDBC3ED7E0DF32B9791D78E0A240775"
+    },
+    {
+      "page_id": "uslugi",
+      "page_file": "uslugi.html",
+      "viewport": "desktop",
+      "filename": "uslugi__desktop__full.png",
+      "sha256": "E92E6633194B82861E89DB84F36A49D70BB26FA0FFEC72197E012ED8B7D0A5BC"
+    },
+    {
+      "page_id": "uslugi",
+      "page_file": "uslugi.html",
+      "viewport": "mobile",
+      "filename": "uslugi__mobile__full.png",
+      "sha256": "E6DAB99F4E0056D0E8814450FF0173BFCC6F5F03297A26A265CC7FA205619DD3"
+    },
+    {
+      "page_id": "uslugi-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "filename": "uslugi-v2__desktop__full.png",
+      "sha256": "D12A6E0C41F73CD88444379877B449C3658FA25FEE7B25D99B320426E52D8A31"
+    },
+    {
+      "page_id": "uslugi-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "filename": "uslugi-v2__mobile__full.png",
+      "sha256": "29F11FFF526954134DEFA77A4CCE1EE6CF72A5C2B4568EB5EC9FF4B25717B75A"
+    },
+    {
+      "page_id": "usluga-podrazdel-v1",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "filename": "usluga-podrazdel-v1__desktop__full.png",
+      "sha256": "5CF091A75E1446FF5869203ADD48F3B122C97D64831E10E6C09DAB075A3CCA04"
+    },
+    {
+      "page_id": "usluga-podrazdel-v1",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "filename": "usluga-podrazdel-v1__mobile__full.png",
+      "sha256": "DA48E1998EF2F17BEEF0451626685AC4CB4B65FA3621C0BC596C019A8C643BC6"
+    },
+    {
+      "page_id": "usluga-konechnaya-v1",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "filename": "usluga-konechnaya-v1__desktop__full.png",
+      "sha256": "302F600796E41B9B629697293081C1800FEC4BC75F5CF76E63708B19A587DB4A"
+    },
+    {
+      "page_id": "usluga-konechnaya-v1",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "filename": "usluga-konechnaya-v1__mobile__full.png",
+      "sha256": "CA742E09EB557C6891EF2E6AA162D40DD9F8B64470E5E0B86435C3FEC8AEB105"
+    }
+  ],
+  "smoke_overall": "PASS"
+}
