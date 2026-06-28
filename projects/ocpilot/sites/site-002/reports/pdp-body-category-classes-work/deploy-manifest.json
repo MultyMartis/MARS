@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-06-28T23:39:16Z",
+  "checkpoint": "SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01",
+  "remote": "catalog/controller/product/product.php",
+  "backups": [
+    {
+      "remote": "catalog/controller/product/product.php",
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__controller__product__product.php.pre-pdp-body-category-classes.bak",
+      "sha256": "e3eccfc0d0361d3f46ab3a122b4de599af4e0d1dbb22db9de8fc6d874435320a"
+    }
+  ],
+  "deploy": {
+    "remote": "catalog/controller/product/product.php",
+    "sha256": "df015d3ed96af041ae570a2156508df2f8ba533f9bfbe27b3053f03a8586812e",
+    "bytes": 31409
+  },
+  "qa": [],
+  "product_samples": [
+    {
+      "label": "podtovarniki",
+      "plp_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+      "plp_status": 200,
+      "product_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+      "product_status": 200,
+      "body_class": "page page--category",
+      "has_page_product": false,
+      "has_category_root": false,
+      "has_category_parent": false,
+      "category_root": null,
+      "category_parent": null,
+      "php_warning": false
+    },
+    {
+      "label": "stoly",
+      "plp_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "plp_status": 200,
+      "product_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/stoly",
+      "product_status": 200,
+      "body_class": "page page--category",
+      "has_page_product": false,
+      "has_category_root": false,
+      "has_category_parent": false,
+      "category_root": null,
+      "category_parent": null,
+      "php_warning": false
+    },
+    {
+      "label": "teplovoe",
+      "plp_url": "https://zpm.new-site.space/katalog/teplovoe-oborudovanie",
+      "plp_status": 200,
+      "product_url": "https://zpm.new-site.space/katalog/nejtralnoe-oborudovanie/podtovarniki-i-podstavki",
+      "product_status": 200,
+      "body_class": "page page--category",
+      "has_page_product": false,
+      "has_category_root": false,
+      "has_category_parent": false,
+      "category_root": null,
+      "category_parent": null,
+      "php_warning": false
+    }
+  ],
+  "twig_cache_cleared": []
+}

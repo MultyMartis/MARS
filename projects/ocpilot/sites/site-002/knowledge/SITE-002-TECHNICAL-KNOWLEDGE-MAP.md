@@ -536,6 +536,14 @@ Sidebar is `aria-hidden="true"` until opened; uses popup close button pattern (`
 
 Uses `getProduct()` — **not** `oc_product_price_index`. Zero price → «По запросу» display.
 
+### PDP body category classes (2026-06-29)
+
+- Checkpoint: `SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01`
+- Controller: `catalog/controller/product/product.php` → `setProductCategoryBodyClasses()`
+- Classes: `category-root-{id}` · `category-parent-{id}` from OpenCart `path` param
+- **No CSS yet** — foundation for future category-specific PDP styling
+- Report: [SITE-002-PDP-BODY-CATEGORY-CLASSES.md](../reports/SITE-002-PDP-BODY-CATEGORY-CLASSES.md) · §30
+
 ---
 
 ## 11. Catalog Architecture
@@ -1451,4 +1459,40 @@ Append marker: `SITE-002 — Corporate intro image blocks (zpm-corp-intro)` in `
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§29 Corporate Intro Blocks 01 PASS closeout).*
+## 30. PDP Body Category Classes 01 — active
+
+**Scope:** Additive `<body>` classes on product pages for future category-specific CSS. **No visual change.**
+
+| Item | Value |
+|------|--------|
+| **Status** | **ACTIVE / PASS on TEST** (2026-06-29) |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01` |
+| **Report** | [SITE-002-PDP-BODY-CATEGORY-CLASSES.md](../reports/SITE-002-PDP-BODY-CATEGORY-CLASSES.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01.md](../baselines/SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01.md) |
+| **Deploy** | [pdp-body-category-classes-work/deploy-manifest.json](../reports/pdp-body-category-classes-work/deploy-manifest.json) |
+| **Pre-deploy backup** | `backups/catalog__controller__product__product.php.pre-pdp-body-category-classes.bak` |
+
+### Body class format
+
+```
+page page--product category-root-{root_id} category-parent-{parent_id}
+```
+
+- **Source:** OpenCart `path` query parameter (same chain as PDP breadcrumbs)
+- **Root:** first segment of `path`
+- **Parent:** second segment of `path` (second-level category)
+- **Missing path:** only `page page--product` — no category classes (SAFE UNKNOWN for DB-only resolution)
+
+### Controller
+
+| File | Method |
+|------|--------|
+| `catalog/controller/product/product.php` | `setProductCategoryBodyClasses()` (private) |
+
+### Rollback
+
+`reports/pdp-body-category-classes-work/site-002-pdp-body-category-classes-rollback.py`
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§30 PDP Body Category Classes 01).*

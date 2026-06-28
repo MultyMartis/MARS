@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-29  
-**Evidence cutoff:** 2026-06-29 (SITE-002 **Corporate Intro Blocks 01** **PASS** — `.zpm-corp-intro` on 6 corp pages; all intro assets HTTP 200; Home Commercial Trust + M9.13 About + Local Fonts baselines preserved)  
+**Evidence cutoff:** 2026-06-29 (SITE-002 **PDP Body Category Classes 01** **PASS** — `category-root-*` / `category-parent-*` on TEST PDP; prior Home Commercial Trust + M9.13 About + Local Fonts + Corporate Intro baselines preserved)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
