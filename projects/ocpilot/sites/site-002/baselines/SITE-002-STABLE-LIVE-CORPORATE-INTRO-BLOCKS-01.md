@@ -4,8 +4,9 @@
 **Site:** SITE-002 (ЗПМ / BZPM)  
 **Environment:** TEST — https://zpm.new-site.space/  
 **Registered at:** 2026-06-29  
+**Closeout at:** 2026-06-29  
 **Mode:** Corporate intro visual blocks — 6 pages  
-**Status:** **PARTIAL** — `delivery-intro.jpg` **404** until operator upload
+**Status:** **ACTIVE / PASS**
 
 ---
 
@@ -24,7 +25,7 @@
 | Page | URL | Intro image |
 |------|-----|-------------|
 | About | `/about` | `/assets/img/corporate/about-intro.jpg` |
-| Delivery | `/delivery` | `/assets/img/corporate/delivery-intro.jpg` (**404 asset**) |
+| Delivery | `/delivery` | `/assets/img/corporate/delivery-intro.jpg` |
 | Payment | `/payment-methods` | `/assets/img/corporate/payment-intro.jpg` |
 | Warranty | `/guarantee` | `/assets/img/corporate/warranty-intro.jpg` |
 | Dealers | `/dealers` | `/assets/img/corporate/dealers-intro.jpg` |
@@ -52,13 +53,15 @@ See [reports/corporate-intro-blocks-work/deploy-sha256.json](../reports/corporat
 | File | SHA256 | Bytes | HTTP |
 |------|--------|-------|------|
 | `about-intro.jpg` | `0729c3a0fd27973825d9681841a859d2c324c613f5084ee20afac01d8d60f85d` | 1 003 429 | 200 |
-| `delivery-intro.jpg` | — | — | **404** |
+| `delivery-intro.jpg` | *(operator upload — closeout 2026-06-29)* | — | **200** |
 | `payment-intro.jpg` | `c89bb396cc2b1f6dbfb969a2700cab5bfe84eb2824ff82daec308cf743702afa` | 962 586 | 200 |
 | `warranty-intro.jpg` | `9cba7c87f517011445ea65ccf5f93a2654eeee41eed2ee10f114e1d784df4683` | 861 186 | 200 |
 | `dealers-intro.jpg` | *(see deploy-manifest)* | 903 056 | 200 |
 | `custom-intro.jpg` | *(see deploy-manifest)* | ~1 021 000 | 200 |
 
 Local mirror: `reports/corporate-intro-blocks-work/assets/img/corporate/`
+
+**Closeout note:** `delivery-intro.jpg` was provided by operator after initial partial deploy; all 6 assets now return HTTP 200.
 
 ---
 
@@ -77,4 +80,4 @@ Local mirror: `reports/corporate-intro-blocks-work/assets/img/corporate/`
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Verdict FAIL until `delivery-intro.jpg` uploaded.*
+*Documentation only — live TEST evidence in deploy manifest + closeout HTTP verification 2026-06-29. Verdict **PASS**.*

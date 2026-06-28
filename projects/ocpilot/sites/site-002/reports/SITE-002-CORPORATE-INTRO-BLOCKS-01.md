@@ -6,7 +6,8 @@
 **Live TEST:** https://zpm.new-site.space/  
 **Deploy pass:** `site-002-corporate-intro-blocks-01`  
 **Timestamp (UTC):** 2026-06-28T22:41:22Z  
-**Verdict:** **FAIL** — markup/CSS/deploy **PASS** on 6 pages; **`delivery-intro.jpg` asset missing** (HTTP 404)
+**Closeout (UTC):** 2026-06-29  
+**Verdict:** **PASS** — all 6 intro blocks + assets verified on TEST (closeout after operator upload of `delivery-intro.jpg`)
 
 ---
 
@@ -47,7 +48,7 @@ SHA256: [corporate-intro-blocks-work/deploy-sha256.json](corporate-intro-blocks-
 | Asset | Local before deploy | FTP upload | HTTP QA |
 |-------|---------------------|------------|---------|
 | `about-intro.jpg` | Synced from TEST (1 003 429 B) | Re-uploaded | **200** |
-| `delivery-intro.jpg` | **MISSING locally and on FTP** | **Skipped** | **404** |
+| `delivery-intro.jpg` | Operator-provided after initial deploy | Operator upload (post-deploy) | **200** (closeout) |
 | `payment-intro.jpg` | Synced (962 586 B) | Re-uploaded | **200** |
 | `warranty-intro.jpg` | Synced (861 186 B) | Re-uploaded | **200** |
 | `dealers-intro.jpg` | Synced (903 056 B) | Re-uploaded | **200** |
@@ -119,7 +120,7 @@ Source: [corporate-intro-blocks-work/zpm-corp-intro.css](corporate-intro-blocks-
 | Page | HTTP | `.zpm-corp-intro` | aria-label | Image path in HTML | Image HTTP |
 |------|------|-------------------|------------|-------------------|------------|
 | `/about` | 200 | ✓ | ✓ | `about-intro.jpg` | 200 |
-| `/delivery` | 200 | ✓ | ✓ | `delivery-intro.jpg` | **404** |
+| `/delivery` | 200 | ✓ | ✓ | `delivery-intro.jpg` | 200 |
 | `/payment-methods` | 200 | ✓ | ✓ | `payment-intro.jpg` | 200 |
 | `/guarantee` | 200 | ✓ | ✓ | `warranty-intro.jpg` | 200 |
 | `/dealers` | 200 | ✓ | ✓ | `dealers-intro.jpg` | 200 |
@@ -143,7 +144,7 @@ Restores all 6 Twig files + `style.css` from `.pre-site-002-corp-intro-blocks-01
 
 **Name:** `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`  
 **Baseline:** [baselines/SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md](../baselines/SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md)  
-**Status:** **PARTIAL** — pending operator upload of `delivery-intro.jpg`
+**Status:** **ACTIVE / PASS** (closeout 2026-06-29)
 
 ---
 
@@ -152,19 +153,43 @@ Restores all 6 Twig files + `style.css` from `.pre-site-002-corp-intro-blocks-01
 | Step | Commit |
 |------|--------|
 | Pre | `c658d560` checkpoint |
-| Post | *(this commit)* implementation + docs |
+| Implementation | `001c82aa` (operator reference) |
+| Closeout | *(this commit)* docs only — PASS |
 
 Push: `origin/mars/canonical-post-recovery`
 
 ---
 
-## 12. Remaining HITL
+## 12. Closeout (2026-06-29)
 
-1. **Operator:** place `delivery-intro.jpg` at `assets/img/corporate/` on TEST (local source was **not found** in repo or operator paths searched).
-2. Re-run asset upload only or full deploy script after file is available.
-3. Visual sign-off on 6 intro blocks (desktop 1440 / mobile 390).
-4. Confirm About intro text placement (company paragraph moved from §02 head) — acceptable or adjust copy location only via explicit charter.
+**Trigger:** Operator confirmed all intro images present and visually OK; Beget backup **DONE**.
+
+**Asset re-verification (HTTP HEAD, TEST):**
+
+| Asset | Status |
+|-------|--------|
+| `about-intro.jpg` | 200 |
+| `delivery-intro.jpg` | 200 |
+| `payment-intro.jpg` | 200 |
+| `warranty-intro.jpg` | 200 |
+| `dealers-intro.jpg` | 200 |
+| `custom-intro.jpg` | 200 |
+
+**Page re-verification:** All 6 corporate pages — HTTP 200, `.zpm-corp-intro`, `aria-label="Вводная информация"`, correct image path, image HTTP 200.
+
+**Regression:** About hero `/assets/img/about-page-img.jpg` — PASS; Custom OEM media `/assets/img/about-page-img.jpg` — PASS.
+
+**Browser QA (1440 / 1024 / 390, overflow, console):** SAFE UNKNOWN — not run in this closeout; not a blocker.
+
+**Note:** `delivery-intro.jpg` was provided by operator after initial partial deploy; all 6 assets now return HTTP 200.
 
 ---
 
-**Final verdict: FAIL** (single blocking asset: `delivery-intro.jpg`)
+## 13. Remaining HITL (optional, non-blocking)
+
+1. Visual sign-off on 6 intro blocks (desktop 1440 / mobile 390) — operator confirmed OK at closeout.
+2. Confirm About intro text placement (company paragraph moved from §02 head) — acceptable or adjust copy location only via explicit charter.
+
+---
+
+**Final verdict: PASS**

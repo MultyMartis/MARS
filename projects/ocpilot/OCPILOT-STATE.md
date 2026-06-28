@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-06-29  
-**Evidence cutoff:** 2026-06-29 (SITE-002 **Corporate Intro Blocks 01** partial — `.zpm-corp-intro` on 6 corp pages; **`delivery-intro.jpg` 404**; Home Commercial Trust + M9.13 About + Local Fonts baselines preserved)  
+**Evidence cutoff:** 2026-06-29 (SITE-002 **Corporate Intro Blocks 01** **PASS** — `.zpm-corp-intro` on 6 corp pages; all intro assets HTTP 200; Home Commercial Trust + M9.13 About + Local Fonts baselines preserved)  
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -559,7 +559,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-29 | **DONE** — M9.13 About Company redesign re-activated on TEST; Run **4.163**; checkpoint `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`; [SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md](sites/site-002/reports/SITE-002-ABOUT-COMPANY-REDESIGN-RESTORE-V2.md); Knowledge Map §17 |
 | 2026-06-29 | **DONE** — Local Fonts Migration on TEST; Run **4.162**; checkpoint `SITE-002-STABLE-LIVE-LOCAL-FONTS-01`; [SITE-002-LOCAL-FONTS-MIGRATION.md](sites/site-002/reports/SITE-002-LOCAL-FONTS-MIGRATION.md); Knowledge Map §27 |
 | 2026-06-29 | **DONE** — Operator Manual Polish Canonical Checkpoint 01; Run **4.161**; checkpoint `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01`; FTP read-only capture; superseded by Local Fonts 01 for checkpoint authority; [SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md](sites/site-002/reports/SITE-002-STABLE-CHECKPOINT-OPERATOR-MANUAL-POLISH-01.md); Knowledge Map §26 |
-| 2026-06-29 | **PARTIAL** — Corporate Intro Image Blocks 01 on TEST; Run **4.165**; checkpoint `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`; verdict **FAIL** — `delivery-intro.jpg` missing; [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](sites/site-002/reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md); Knowledge Map §29 |
+| 2026-06-29 | **DONE** — Corporate Intro Image Blocks 01 on TEST; Run **4.165**; checkpoint `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`; verdict **PASS** (closeout — operator upload of `delivery-intro.jpg`; all 6 assets HTTP 200); [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](sites/site-002/reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md); Knowledge Map §29 |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |

@@ -1420,13 +1420,13 @@ Dual class on Home section: `zpm-commercial-trust zpm-dealers` + `data-dealers` 
 
 ---
 
-## 29. Corporate Intro Image Blocks 01 — partial
+## 29. Corporate Intro Image Blocks 01 — active
 
 **Scope:** Visual intro blocks (image 1/3 + text 2/3) on About + M9.14–M9.18 corporate pages.
 
 | Item | Value |
 |------|--------|
-| **Status** | **PARTIAL on TEST** (2026-06-29) — **`delivery-intro.jpg` missing (404)** |
+| **Status** | **ACTIVE / PASS on TEST** (2026-06-29 closeout) — all 6 intro assets HTTP 200 |
 | **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01` |
 | **Report** | [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](../reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md) |
 | **Baseline** | [SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md](../baselines/SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md) |
@@ -1451,4 +1451,4 @@ Append marker: `SITE-002 — Corporate intro image blocks (zpm-corp-intro)` in `
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§29 Corporate Intro Blocks 01 partial).*
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§29 Corporate Intro Blocks 01 PASS closeout).*
