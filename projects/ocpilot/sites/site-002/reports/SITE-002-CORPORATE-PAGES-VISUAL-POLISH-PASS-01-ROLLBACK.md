@@ -161,7 +161,7 @@ Registered in state documents (Knowledge Map §24, site-passport, README, OCPILO
 |------|--------|
 | **Commit** | `revert(site-002): rollback rejected corporate pages visual polish pass 1` |
 | **Push** | `origin/mars/canonical-post-recovery` |
-| **HEAD** | *(recorded at commit time in task closeout)* |
+| **HEAD** | `9b073754` — `revert(site-002): rollback rejected corporate pages visual polish pass 1` |
 
 ---
 
