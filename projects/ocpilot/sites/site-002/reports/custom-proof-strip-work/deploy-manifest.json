@@ -1,0 +1,65 @@
+{
+  "pass": "site-002-custom-proof-strip-01",
+  "timestamp": "2026-06-28T23:51:54.023862+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "checkpoint_pre": "ba196a379fd6aa7dc755a774cc10994597e34849",
+  "files": {
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__custom_equipment.twig.pre-site-002-custom-proof-strip-01.bak",
+      "pre_sha256": "2c43e2e83921c62ba8bb81f5281baa664ae6c99b10190352128eb337adb96689",
+      "post_sha256": "24c93172ea3938e2f17190ce77dc690cff61780af59ad3e79d939bf69c05dd16",
+      "pre_bytes": 67804,
+      "post_bytes": 68318
+    },
+    "assets/css/style.css": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\assets__css__style.css.pre-site-002-custom-proof-strip-01.bak",
+      "pre_sha256": "d0da1d23a1a1bd50429bd3f3fefc1b863bdebe9b48d529d70670e7bb2fb4c0ea",
+      "post_sha256": "461703ed91749e5fcbb60d5d587adfd58c4f4e608032e24b7e16d3872ba21f62",
+      "pre_bytes": 428550,
+      "post_bytes": 429501
+    }
+  },
+  "sha256": {
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "pre": "2c43e2e83921c62ba8bb81f5281baa664ae6c99b10190352128eb337adb96689",
+      "post": "24c93172ea3938e2f17190ce77dc690cff61780af59ad3e79d939bf69c05dd16"
+    },
+    "assets/css/style.css": {
+      "pre": "d0da1d23a1a1bd50429bd3f3fefc1b863bdebe9b48d529d70670e7bb2fb4c0ea",
+      "post": "461703ed91749e5fcbb60d5d587adfd58c4f4e608032e24b7e16d3872ba21f62"
+    }
+  },
+  "preflight": {
+    "catalog/view/theme/default/template/information/custom_equipment.twig": {
+      "exists": true,
+      "pre_sha256": "2c43e2e83921c62ba8bb81f5281baa664ae6c99b10190352128eb337adb96689",
+      "pre_bytes": 67804
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "d0da1d23a1a1bd50429bd3f3fefc1b863bdebe9b48d529d70670e7bb2fb4c0ea",
+      "pre_bytes": 428550
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "url": "https://zpm.new-site.space/custom-equipment",
+    "status": 200,
+    "checks": {
+      "http_ok": true,
+      "has_proof_strip_wrapper": true,
+      "has_commercial_trust_services": true,
+      "has_service_cards": true,
+      "has_service_icons": true,
+      "no_legacy_proof_item": true,
+      "has_production_icon": true,
+      "has_cert_icon": true,
+      "has_catalog_icon": true,
+      "content_production": true,
+      "content_cert": true,
+      "content_catalog": true,
+      "all_pass": true
+    }
+  },
+  "qa_all_pass": true
+}

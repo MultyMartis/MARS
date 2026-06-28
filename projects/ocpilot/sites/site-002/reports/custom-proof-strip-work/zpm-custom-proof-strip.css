@@ -1,0 +1,30 @@
+/* ==========================================================================
+   SITE-002 — Custom OEM proof strip → commercial trust services reuse
+   Authority: .zpm-commercial-trust__services card pattern (Home / catalog FAQ)
+   Scope: wrapper + 3-column grid override only — no new card system
+   ========================================================================== */
+
+.zpm-custom-oem__proof-strip {
+  display: block;
+  margin: var(--pad-gap) 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.zpm-custom-oem__proof-strip .zpm-commercial-trust__services {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 1024px) {
+  .zpm-custom-oem__proof-strip .zpm-commercial-trust__services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 660px) {
+  .zpm-custom-oem__proof-strip .zpm-commercial-trust__services {
+    grid-template-columns: 1fr;
+  }
+}

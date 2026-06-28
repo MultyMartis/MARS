@@ -1230,6 +1230,8 @@ Corporate page `/custom-equipment` — route `information/custom_equipment`. **I
 
 Pageintro (H1 + Lead) → when custom needed (BLOCK 01 + BLOCK 02) → scope + OEM proof (BLOCK 03 + BLOCK 04) → **8-step process timeline** (BLOCK 05 — dominant) → requirements + materials (BLOCK 06 + BLOCK 07) → project outcomes (BLOCK 08 — second emphasis) → FAQ (8) → Commercial Trust CTA + custom form (company, contact, phone, email, project_description required; **no upload MVP**).
 
+**Proof strip (BLOCK 04):** `.zpm-custom-oem__proof-strip` uses **Commercial Trust service cards** (checkpoint `SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01`) — see **§31**.
+
 ### Reuse boundaries
 
 - **Commercial Trust:** CTA card + form wrap — **not** full PLP trust block
@@ -1495,4 +1497,25 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§30 PDP Body Category Classes 01).*
+## 31. Custom OEM Proof Strip — Commercial Trust Reuse (ACTIVE)
+
+**Checkpoint:** `SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01`  
+**Scope:** `/custom-equipment` — `.zpm-custom-oem__proof-strip` only  
+**Status:** **ACTIVE / PASS** (2026-06-29)
+
+| Item | Value |
+|------|--------|
+| **Pattern authority** | `.zpm-commercial-trust__services` card grid (Home / catalog FAQ) |
+| **Wrapper** | `.zpm-custom-oem__proof-strip` — margin + 3-col grid override only |
+| **Twig** | `catalog/view/theme/default/template/information/custom_equipment.twig` |
+| **CSS** | Append block in `assets/css/style.css` — `SITE-002 — Custom OEM proof strip → commercial trust services reuse` |
+| **Icons** | `fad fa-industry` · `fad fa-file-certificate` · `fad fa-th-large` |
+| **Report** | [SITE-002-CUSTOM-PROOF-STRIP-RESTYLE.md](../reports/SITE-002-CUSTOM-PROOF-STRIP-RESTYLE.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01.md](../baselines/SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01.md) |
+| **Rollback** | `reports/custom-proof-strip-work/site-002-custom-proof-strip-rollback.py` |
+
+**Change rules:** Reuse Commercial Trust service classes; do not invent new card markup. Sibling corp pages **out of scope**.
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§31 Custom OEM Proof Strip 01).*
