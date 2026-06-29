@@ -1,0 +1,13 @@
+{
+  "backup": {
+    "zip": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-checkpoints\\FP-0002-V8-BEFORE-OCENTRE-VISUAL-DISCREPANCY-AUDIT.zip",
+    "sha256": "51ef5caf11ec85ecedf2bf7762739b9100c10167989a71848c2ce47944435349",
+    "manifest_line": "FP-0002 V8 O-CENTRE PRE-VISUAL-DISCREPANCY-AUDIT STATE PRESERVED",
+    "result": "VALID"
+  },
+  "capture": "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\audits\\o-centre-visual-discrepancy\\data\\FP-0002-V8-OCENTRE-IMPLEMENTATION-LAYOUT-CAPTURE.json",
+  "critical": 3,
+  "high": 4,
+  "gate": "READY_FOR_FP0002_V8_OCENTRE_VISUAL_CORRECTION_IMPLEMENTATION",
+  "verdict": "FP0002_V8_OCENTRE_VISUAL_DISCREPANCY_AUDIT_COMPLETE"
+}
