@@ -1,0 +1,21 @@
+{
+  "task": "FP-0002-V8-OCENTRE-VISUAL-CORRECTION",
+  "version": "v1",
+  "head_at_manifest": "df7fe7d8f8155bdfa16e4f8dc8a9cd4aee38901b",
+  "backup_zip": "C:/MARS Phenix/AI MARS STORAGE/website-factory/fp-0002-shpigovsky-v8/operator-checkpoints/FP-0002-V8-BEFORE-OCENTRE-VISUAL-CORRECTION.zip",
+  "backup_sha256": "C3F4B995C0A3D88DFAF061DD16BA13225D1C43FD259328F8AD8AD67B60F47E32",
+  "regions": [
+    {"region": "include_order", "action": "reorder", "files": ["src/pages/o-centre.html"], "shared_risk": "LOW"},
+    {"region": "institutional", "action": "restructure_g0", "files": ["src/partials/sections/institutional-narrative.html", "src/scss/style.scss"], "shared_risk": "LOW"},
+    {"region": "founder_quote", "action": "move_after_institutional", "files": ["src/pages/o-centre.html", "src/scss/style.scss"], "shared_risk": "MEDIUM"},
+    {"region": "who_we_treat", "action": "add_gallery_visuals", "files": ["src/pages/o-centre.html", "src/scss/style.scss"], "shared_risk": "LOW"},
+    {"region": "cta_1", "action": "insert_before_approach", "files": ["src/pages/o-centre.html"], "shared_risk": "LOW"},
+    {"region": "approach", "action": "text_only_band", "files": ["src/pages/o-centre.html", "src/scss/style.scss"], "shared_risk": "LOW"},
+    {"region": "clinic_landscape", "action": "reuse_include", "files": ["src/pages/o-centre.html", "src/scss/style.scss"], "shared_risk": "MEDIUM"},
+    {"region": "program", "action": "move_after_landscape", "files": ["src/pages/o-centre.html"], "shared_risk": "LOW"},
+    {"region": "infrastructure", "action": "seven_subgroup_rebuild", "files": ["src/partials/sections/infrastructure-narrative.html", "src/scss/style.scss"], "shared_risk": "LOW"},
+    {"region": "dec_01", "action": "pseudo_element", "files": ["src/scss/style.scss"], "shared_risk": "LOW"},
+    {"region": "cta_2", "action": "after_infrastructure", "files": ["src/pages/o-centre.html"], "shared_risk": "LOW"},
+    {"region": "shared_tail", "action": "preserve", "files": [], "shared_risk": "LOW"}
+  ]
+}

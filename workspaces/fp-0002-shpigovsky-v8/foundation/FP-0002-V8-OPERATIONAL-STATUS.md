@@ -194,15 +194,16 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 
 - Charter: `audits/o-centre-page-charter/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER-v1.md`
 - Content blocker resolution: `audits/o-centre-content-blocker-resolution/` (2026-06-29)
-- Status: **IMPLEMENTED_PENDING_OPERATOR_REVIEW** (2026-06-29)
-- Composition: 12 sections (OC-B05/BLK-018 retired — inventory label error)
-- Gates: Design PASS · Assets PASS · Content PASS · Reuse PASS · Build PASS · DOM PASS
+- Status: **CORRECTED_PENDING_OPERATOR_REVIEW** (2026-06-29)
+- Visual correction: `audits/o-centre-visual-correction/` (2026-06-29)
+- Composition: canonical order restored; infrastructure 7 groups; DEC-01 wired
+- Gates: Design PASS · Assets PASS · Content PASS · Reuse PASS · Build PASS · DOM PASS · Structural visual PASS
 - Implementation: `src/pages/o-centre.html` → `dist/o-centre.html`
 - Evidence: `audits/o-centre-implementation/`
 
 ## Next wave (documentation only)
 
-- O-Centre operator visual review — **PENDING**
+- O-Centre operator visual review — **PENDING** (structural correction complete)
 
 
 ## O-Centre infrastructure assets (2026-06-29)

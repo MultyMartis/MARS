@@ -112,6 +112,8 @@ Inline page section vs component: prefer **one new section partial** for BLK-036
 
 ## 11. Content status
 
+**Correction note (2026-06-29):** Visual structural correction applied — page status `CORRECTED_PENDING_OPERATOR_REVIEW`. Evidence: `audits/o-centre-visual-correction/`.
+
 See content inventory. **Confirmed:** hero pattern, comfort, shared tails, much WIP copy for who-we-are/treat. **Missing:** BLK-037/038 PDF text, steps copy, About hero asset confirmation.
 
 ---

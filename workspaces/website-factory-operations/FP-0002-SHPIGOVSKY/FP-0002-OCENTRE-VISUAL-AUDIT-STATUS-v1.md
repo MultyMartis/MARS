@@ -3,18 +3,20 @@
 **Updated:** 2026-06-29
 **Workspace:** `workspaces/fp-0002-shpigovsky-v8`
 **Implementation commit:** dbc057cb
+**Correction commit:** pending push
 
 | Gate | Status |
 |---|---|
 | Technical implementation | PASS |
-| Visual reconciliation | **REQUIRED** |
-| Operator visual approval | **NOT APPROVED** |
+| Visual structural correction | **PASS** (2026-06-29) |
+| Operator visual approval | **PENDING** |
 | Deployment | **BLOCKED** |
 | Stable tag | **BLOCKED** |
 | WordPress | **BLOCKED** |
 
 **Audit pack:** `workspaces/fp-0002-shpigovsky-v8/audits/o-centre-visual-discrepancy/`
+**Correction pack:** `workspaces/fp-0002-shpigovsky-v8/audits/o-centre-visual-correction/`
 
-**Next task:** Visual correction implementation (Phase 0–1 composition order) or decorative asset extraction if operator prefers export-first.
+**Page status:** `CORRECTED_PENDING_OPERATOR_REVIEW`
 
-**Gate recommendation:** `READY_FOR_FP0002_V8_OCENTRE_VISUAL_CORRECTION_IMPLEMENTATION`
+**Gate recommendation:** `READY_FOR_FP0002_V8_OCENTRE_OPERATOR_REVIEW`

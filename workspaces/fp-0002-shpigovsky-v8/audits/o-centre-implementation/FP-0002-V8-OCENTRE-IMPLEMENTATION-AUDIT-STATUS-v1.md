@@ -1,8 +1,8 @@
 # FP-0002 V8 O-Centre Implementation Audit Status
 
 **Updated:** 2026-06-29
-**Visual status:** `IMPLEMENTED_VISUAL_RECONCILIATION_REQUIRED`
+**Visual status:** `CORRECTED_PENDING_OPERATOR_REVIEW`
 **Technical gates:** PASS (build, DOM, content, infrastructure assets)
-**Operator visual approval:** FAIL / NOT APPROVED
+**Operator visual approval:** PENDING — structural correction complete 2026-06-29
 **Deployment:** BLOCKED
-**Next task:** Visual correction implementation per `audits/o-centre-visual-discrepancy/`
+**Evidence:** `audits/o-centre-visual-correction/`
