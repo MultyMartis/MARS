@@ -184,8 +184,14 @@ The MARS write boundary applies to **MARS-controlled** artefacts, not to claimin
 |------|-------|
 | **X0** — canonical X-drive authority cutover | **COMPLETE** (this document) |
 | **X1** — Cursor, agent, survivability filesystem boundary | **COMPLETE** (AGENTS, `.cursorrules`, Survivability updates) |
-| **X2–X3** — Core infrastructure reality, Brain layers, README, registry, topology alignment | **NOT STARTED** |
-| **X4–X9** | **NOT STARTED** |
+| **X2** — Core infrastructure reality and brain layers | **COMPLETE** ([mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md)) |
+| **X3** — Central registry, topology, README, build-map alignment | **COMPLETE** ([reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md](../reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md)) |
+| **X4** — Website Factory, FOUNDRY, FP-0002 path reconciliation | **NOT STARTED** |
+| **X5** — MARS Localhost Infrastructure runtime configuration | **NOT STARTED** |
+| **X6** — Forge WordPress, AG-WP-001, WPilot, OCPilot | **NOT STARTED** |
+| **X7** — MIG, ORCA, ATLAS, OPS, EAR, NOVA programmes | **NOT STARTED** |
+| **X8** — Web-GPT sync and current source-pack publication | **PARTIAL** (current-path addendum only; legacy packs unchanged) |
+| **X9** — Historical review and final active-path validation | **NOT STARTED** |
 
 ---
 
@@ -208,7 +214,8 @@ The MARS write boundary applies to **MARS-controlled** artefacts, not to claimin
 | Filesystem | `NTFS` |
 | Repository root | `X:\AI MARS` |
 | Branch | `mars/canonical-post-recovery` |
-| Baseline HEAD (task start) | `7ad7d7e69f19f196da59e248278cfcb767496cc7` |
+| Baseline HEAD (X0 task start) | `7ad7d7e69f19f196da59e248278cfcb767496cc7` |
+| X2–X3 task HEAD (start) | `497ee8c4f045ba1575c80f09138f309cfbb8338d` |
 
 ---
 

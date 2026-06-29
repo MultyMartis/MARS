@@ -106,7 +106,7 @@ def build_master() -> tuple[list, list]:
         ),
         text_node(
             "n-layer-infrastructure",
-            "## Infrastructure Layer\n\n`C:\\AI MARS` (repo root)\n`C:\\AI MARS STORAGE` (bulk)\n\nSee `infrastructure.canvas`.",
+            "## Infrastructure Layer\n\n`X:\\AI MARS` (repo root)\n`X:\\AI MARS STORAGE` (bulk)\n\nSee `infrastructure.canvas`.",
             170,
             500,
             300,
@@ -325,7 +325,7 @@ def build_infrastructure() -> tuple[list, list]:
     nodes = [
         text_node(
             "n-inf-brain",
-            "# Active Brain\n\n`C:\\AI MARS`\n\nGit workspace root — governance, projects, workspaces, docs.\nIncludes **Active Incoming** (`incoming/`).",
+            "# Active Brain\n\n`X:\\AI MARS`\n\nGit workspace root — governance, projects, workspaces, docs.\nIncludes **Active Incoming** (`incoming/`).",
             40,
             80,
             320,
@@ -334,7 +334,7 @@ def build_infrastructure() -> tuple[list, list]:
         ),
         text_node(
             "n-inf-storage-root",
-            "# Storage Layer\n\n`C:\\AI MARS STORAGE`\n\nBulk out-of-git — **not** a second repo.\n**Historical Bulk** after operator triage.",
+            "# Storage Layer\n\n`X:\\AI MARS STORAGE`\n\nBulk out-of-git — **not** a second repo.\n**Historical Bulk** after operator triage.",
             480,
             80,
             320,
@@ -377,7 +377,7 @@ def build_infrastructure() -> tuple[list, list]:
         ),
         text_node(
             "n-inf-doc-storage",
-            "## In-repo `storage/` docs\n\nArchitecture contracts only — **not** `C:\\AI MARS STORAGE`",
+            "## In-repo `storage/` docs\n\nArchitecture contracts only — **not** `X:\\AI MARS STORAGE`",
             260,
             1100,
             360,

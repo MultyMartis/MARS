@@ -8,14 +8,17 @@ This directory is the **main local working copy** of the MARS project: design no
 
 ## Operator infrastructure (physical)
 
+**Volume:** `X:` — label **AI WS**. All MARS-controlled operational roots are on this volume.
+
 | Layer | Path | Role |
 |-------|------|------|
-| **Workspace root** | `C:\MARS Phenix\AI MARS` | This git repository — governance, projects, workspaces, docs. |
-| **Bulk storage** | `C:\MARS Phenix\AI MARS STORAGE` | Out-of-git bulk (baselines, archives, snapshots). **Not** a second repo or MARS instance. |
+| **Active Brain (this repository)** | `X:\AI MARS\` | Git working copy — governance, projects, workspaces, docs. |
+| **Storage layer** | `X:\AI MARS STORAGE\` | Out-of-git bulk (baselines, archives, Knowledge Center, snapshots). **Not** a second repo or MARS instance. |
+| **Local runtime** | `X:\MARS-Localhost\` | Laragon, CMS instances, databases, local services — **outside Git**, execution only. |
 
-Canonical reference: [`governance/mars-infrastructure-reality-v1.md`](governance/mars-infrastructure-reality-v1.md). In-repo [`storage/`](storage/) is **documentation** for the architecture Storage Layer — not the physical `C:\MARS Phenix\AI MARS STORAGE` path.
+Canonical references: [`governance/mars-x-drive-root-authority-v1.md`](governance/mars-x-drive-root-authority-v1.md), [`governance/mars-infrastructure-reality-v1.md`](governance/mars-infrastructure-reality-v1.md). In-repo [`storage/`](storage/) is **documentation** for the architecture Storage Layer — **not** the physical `X:\AI MARS STORAGE\` path.
 
-**Post–disaster recovery (2026-06-24 incident):** program **closed** 2026-06-25 — work only from this root on branch `mars/canonical-post-recovery`. Closure record: [`governance/mars-disaster-recovery-2026-06-24-closure-v1.md`](governance/mars-disaster-recovery-2026-06-24-closure-v1.md). Resumption checklist: [`governance/mars-normal-operations-resumption-checklist-v1.md`](governance/mars-normal-operations-resumption-checklist-v1.md). Do **not** use `C:\AI MARS` as active workspace.
+**Branch authority** (`mars/canonical-post-recovery`) is separate from filesystem authority. **Post–disaster recovery (2026-06-24 incident):** program **closed** 2026-06-25. Closure record: [`governance/mars-disaster-recovery-2026-06-24-closure-v1.md`](governance/mars-disaster-recovery-2026-06-24-closure-v1.md). **X-drive migration:** waves **X0–X3** central alignment **complete** (2026-06-29); programme path reconciliation **X4–X9** not started. Historical paths (`C:\AI MARS`, `C:\MARS Phenix\…`, `D:\` / `E:\MARS-Localhost`) may appear in incident evidence — **not** current operational targets.
 
 ## What this repository contains (by status)
 

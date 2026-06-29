@@ -9,6 +9,8 @@
 
 **Post–Cycle 8 (2026-05-19):** stabilization baseline **achieved**; governance **maintenance mode**; default work is **operational-first** — [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md).
 
+**Physical authority (2026-06-29):** volume **AI WS** (`X:`); Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` — [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md), [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). X-drive migration **X0–X3** **COMPLETE**; **X4–X9** not started.
+
 **Tier 1 (ecosystem routing only)** — use when the question is *where entities live*; **not** parallel to [mars-reality-index-v0.md](mars-reality-index-v0.md) (pick **one** Tier 1 router per session). **After:** [AGENTS.md](../AGENTS.md). **Deep audit:** [mars-v2-structural-coherence-audit-v0.md](mars-v2-structural-coherence-audit-v0.md). **Tier model:** [survivability-canonical-entrypoint-model-v0.md](survivability-canonical-entrypoint-model-v0.md).
 
 ---
@@ -98,11 +100,11 @@ AGENTS.md (honesty)
 
 | | |
 |--|--|
-| **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `E:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
+| **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `X:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
 | **What it is NOT** | MARS brain, Git authority, governance root, production hosting, second MARS repo, registered agent, or proof that Laragon is installed. |
-| **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. |
-| **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `E:\MARS-Localhost` (out-of-git). |
-| **Relationship role** | **`C:\MARS Phenix\AI MARS` governs; `E:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
+| **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. Programme runtime config reconciliation: wave **X5** (not started). |
+| **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `X:\MARS-Localhost` (out-of-git). |
+| **Relationship role** | **`X:\AI MARS` governs; `X:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
 
 ---
 
@@ -111,7 +113,7 @@ AGENTS.md (honesty)
 | | |
 |--|--|
 | **What it is** | **Website Factory subsystem** — documentation-first WordPress **implementation** methodology (frontend package → WordPress implementation package → WPilot handoff). Operator alias: WP Forge. |
-| **What it is NOT** | MARS Forge (frontend overlay), WPilot (operations), registered agent, `project_id`, owner of `E:\MARS-Localhost`, or autonomous runtime. |
+| **What it is NOT** | MARS Forge (frontend overlay), WPilot (operations), registered agent, `project_id`, owner of `X:\MARS-Localhost`, or autonomous runtime. |
 | **Operational status** | **FOUNDATION / PRE-OPERATIONAL** — FW-05 synthetic **COMPLETE**; MLI-03 WordPress runtime **PROVEN WITH LIMITATIONS**; **FW-05R AUTHORIZED**. |
 | **Canonical path** | [../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md](../projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md); localhost consumer: [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). |
 | **Relationship role** | **Consumes** MLI WordPress runtime profile; produces implementation packages; upstream of WPilot operations. Does **not** own shared localhost infrastructure. |
@@ -186,7 +188,7 @@ AGENTS.md (honesty)
 | **What it is NOT** | Autonomous WP admin, MARS runtime, deploy bot, production bridge, active MVP development target, or Sprint 3 authorization from RC5 freeze alone. |
 | **Operational status** | **Reference Implementation** — `proven_content_writes` + `proven_connection_runtime` on DEV (`https://dev.gktriumph.ru`); human-supervised only. Authority: `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19`; commit `648632acbdd42703427fd76a0cb1fd8d88641dcc`. RC5 development focus **closed**. Sprint 3 **HOLD**. |
 | **Canonical path** | [../projects/wpilot/WPILOT-FINAL-STATE-RC5.md](../projects/wpilot/WPILOT-FINAL-STATE-RC5.md); [../projects/wpilot/OPERATIONAL-INDEX.md](../projects/wpilot/OPERATIONAL-INDEX.md); [../projects/wpilot/README.md](../projects/wpilot/README.md); registry `wpilot`; RC5 [../projects/wpilot/WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](../projects/wpilot/WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md). |
-| **Relationship role** | **Reference runtime** and **validation source** for CMS Pilot family; **future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. Token storage: `C:\MARS Phenix\AI MARS\local\tokens\wpilot-dev-gktriumph.token` (local-only; no value in repo). |
+| **Relationship role** | **Reference runtime** and **validation source** for CMS Pilot family; **future** Factory-native WordPress handoff target; **Mode B** legacy compatibility; uses Beget/WordPress **outside** MARS ownership. Token storage: `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` (local-only; no value in repo). Programme doc reconciliation: wave **X6**. |
 
 ---
 

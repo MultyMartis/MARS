@@ -61,4 +61,4 @@ Visualization-only export of the MARS ecosystem as native [JSON Canvas](https://
 
 **Refresh:** MARS Visual Brain Refresh 2026-06 — evidence under `logs/visualization/`.
 
-*Export pack v1 — refreshed 2026-06-03 (post–Cleanup Program).*
+*Export pack v1 — refreshed 2026-06-29 (X-drive path alignment, waves X2–X3).*

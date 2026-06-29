@@ -122,6 +122,10 @@ Always re-verify per task — do not inherit from this file alone:
 | [mars-operational-evolution-transition-index-v0.md](mars-operational-evolution-transition-index-v0.md) | Task-scoped transition routing |
 | [operational-survivability.md](operational-survivability.md) | Phase S3 spine + §8 post–Cycle 8 |
 | [onboarding-survivability.md](onboarding-survivability.md) | Minimum read set (operational-first) |
+| [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md) | Current physical roots on **AI WS** (`X:`) |
+| [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md) | X-drive migration state (X0–X3 **COMPLETE**) |
+
+**Physical authority (2026-06-29):** Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\`. Programme doc reconciliation **X4–X9** not started.
 
 *Canonical ecosystem-state reference after Cycles 1–8 — maintenance + operational-first.*
 

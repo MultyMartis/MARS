@@ -9,6 +9,8 @@
 
 **Post–Cycle 8:** governance baseline **frozen** (maintenance mode); **operational systems primary** — [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md).
 
+**Physical authority (2026-06-29):** Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` on volume **AI WS** (`X:`) — [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). X-drive migration **X0–X3** **COMPLETE**.
+
 **Is:** instant ecosystem reality orientation (what runs in human workflows **today** vs what is only written).  
 **Is not:** roadmap, vision deck, registry engine, or proof of deployed product.
 
@@ -32,7 +34,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **WPilot** | ✓ reference DEV runtime (RC5) | — | production bridge; Sprint 3 (charter-gated) | ✓ WP/host | — | ✓ reference docs + maintenance policy |
 | **MIG** | ✓ acquisition discipline | ✓ v0.1 spine | ✓ R1 boundary | ✓ n8n/self-host runtime lane | — | ✓ contracts + pack |
 | **OCPilot** | ✓ OpenCart bridge discipline | — | ✓ sibling/family model | ✓ hosting/FTP/PMA | — | ✓ Phase 0+ |
-| **MARS Localhost (MLI)** | — | — | ✓ shared localhost foundation | ✓ D: runtime zone | — | ✓ MLI-03 WordPress profile |
+| **MARS Localhost (MLI)** | — | — | ✓ shared localhost foundation | ✓ X: runtime zone | — | ✓ MLI-03 WordPress profile |
 | **EAR Runtime** | — | ✓ R1 foundation code | ✓ acquisition helpers architecture alignment | ✓ connector targets (future) | — | ✓ engineering program docs |
 | **MARS Survivability** | ✓ safety discipline | human-invoked helpers | ✓ contracts/protocols | — | — | ✓ hardening pack |
 | **NOVA** | — | — | ✓ mobile methodology foundation | — | — | ✓ foundation v1 docs |
@@ -218,7 +220,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **SoT:** [../projects/ocpilot/README.md](../projects/ocpilot/README.md) · [../projects/ocpilot/OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md)
 
-**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `E:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). No runtime migration in MLI-00.
+**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `X:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). Programme MLI docs may still show pre-X paths until wave **X5**. No runtime migration in MLI-00.
 
 ---
 
@@ -226,8 +228,8 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **conceptual** | Shared localhost foundation — brain on `C:\MARS Phenix\AI MARS`, execution on `E:\MARS-Localhost`. |
-| **external** | D: runtime tree is out-of-git; Laragon install is operator machine state. |
+| **conceptual** | Shared localhost foundation — brain on `X:\AI MARS`, execution on `X:\MARS-Localhost`. |
+| **external** | Runtime tree is out-of-git on `X:\MARS-Localhost`; Laragon install is operator machine state. |
 | **documentation-only** | MLI-03 **COMPLETE** — WordPress synthetic MLI-WP-SYN-001; OpenCart profile **NEXT** (MLI-04). |
 
 **Not:** MARS brain, Git authority, production hosting, or proof that WordPress/OpenCart local profiles are validated.

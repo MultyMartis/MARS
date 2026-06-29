@@ -394,6 +394,21 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | 2026-05-12 | **Website Factory Reference Execution Case #1 (documentation):** `projects/mars-website-factory/reference-cases/triumph-manipulator-landing/` — Triumph Manipulator Landing **documentation-first** simulated run (intake → delivery readiness + canonical REPORT); **not** a shipped website, **not** runtime orchestration; **capability-map** C16 changelog; pack **README** / **roadmap** / **implementation-phase-1** / **workflow-map** updated. |
 | 2026-05-13 | **Website Factory Operational Templates Layer v0 (documentation):** [operational-template-overview-v0.md](../projects/mars-website-factory/operational-template-overview-v0.md) + linked `*-template-v0.md` under `projects/mars-website-factory/` — reusable operational patterns; **not** automation, **not** executable workflows; **capability-map** C16 + Stage 16 “What exists now” aligned; pack **README** / **roadmap** / **implementation-phase-1** / **workflow-map** updated. |
 | 2026-05-14 | **Phase S0 — governance truth repair:** **Executive anchor** after **Authority** — lifecycle **Stages 9–15** **documentation milestones** vs **implementation**; root **README** alignment; [runtime-registry-boundaries.md](runtime-registry-boundaries.md); **mars-runtime** **architecture-map** / **README** boundary wording; Website Factory **OPERATIONAL-INDEX**; lifecycle **evt-2026-0015**. **No** runtime shipped. |
+| 2026-06-29 | **MARS X-Drive Migration (X2–X3)** — central infrastructure alignment to volume **AI WS** (`X:`): [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md), root **README**, reality/topology indexes, [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md) migration state; [web-gpt-sources/MARS-X-DRIVE-CURRENT-PATH-ADDENDUM.md](../web-gpt-sources/MARS-X-DRIVE-CURRENT-PATH-ADDENDUM.md); lifecycle **evt-2026-0025**. **Not** a MARS version bump; programme path reconciliation **X4–X9** not started. |
+
+---
+
+## Infrastructure migration (X-drive) — documentation anchor
+
+| Wave | State | Scope |
+|------|-------|-------|
+| X0 | **COMPLETE** | Root authority — [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md) |
+| X1 | **COMPLETE** | Filesystem boundary — AGENTS, `.cursorrules`, Survivability |
+| X2 | **COMPLETE** | Core infrastructure reality and brain layers |
+| X3 | **COMPLETE** | Central README, registry/topology indexes, build-map note |
+| X4–X9 | **NOT STARTED** | Programme/runtime/storage doc reconciliation |
+
+**Report:** [reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md](../reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md)
 
 ---
 
