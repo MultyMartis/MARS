@@ -189,10 +189,13 @@ The MARS write boundary applies to **MARS-controlled** artefacts, not to claimin
 | **X4** — Website Factory, FOUNDRY, FP-0002 path reconciliation | **COMPLETE** ([reports/mars-x-drive-migration-x4-website-factory-foundry-fp0002-v1.md](../reports/mars-x-drive-migration-x4-website-factory-foundry-fp0002-v1.md); active operational paths only — not full historical rewrite) |
 | **X5** — MARS Localhost Infrastructure runtime configuration | **COMPLETE** ([reports/mars-x-drive-migration-x5-localhost-infrastructure-v1.md](../reports/mars-x-drive-migration-x5-localhost-infrastructure-v1.md)) |
 | **X6A** — Forge WordPress, AG-WP-001, WPilot | **COMPLETE** ([reports/mars-x-drive-migration-x6a-forge-agwp-wpilot-v1.md](../reports/mars-x-drive-migration-x6a-forge-agwp-wpilot-v1.md)) |
-| **X6B** — OCPilot active path reconciliation | **NOT STARTED** |
+| **X6B** — OCPilot active path reconciliation | **COMPLETE** ([reports/mars-x-drive-migration-x6b-ocpilot-site002-protected-v1.md](../reports/mars-x-drive-migration-x6b-ocpilot-site002-protected-v1.md)) |
+| **X6** — CMS pilot programmes (aggregate) | **COMPLETE** (X6A + X6B) |
 | **X7** — MIG, ORCA, ATLAS, OPS, EAR, NOVA programmes | **NOT STARTED** |
 | **X8** — Web-GPT sync and current source-pack publication | **PARTIAL** (current-path addendum only; legacy packs unchanged) |
 | **X9** — Historical review and final active-path validation | **NOT STARTED** |
+
+**X6B scope (2026-06-29):** X6B covers active OCPilot repository paths only. SITE-002 business/design/runtime behavior was not modified. Storage and remote systems were not modified.
 
 ---
 

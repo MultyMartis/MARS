@@ -30,7 +30,7 @@
 | **Formal plugin REST runtime** | Proven on DEV (`wpilot/v1`) | Not in-repo |
 | **Canonical safety loop** (`inspect → backup → apply → validate → rollback`) | Proven via plugin REST on DEV | Documented discipline; site writes via FTP/PMA/browser — not same formal loop |
 | **Connection tracking** (token → REST → metadata → operator visibility) | Proven on DEV (RC5) | Not proven as formal connection runtime |
-| **Local token standard** | Proven — `C:\AI MARS\local\tokens\` | Documented access patterns; site credentials external |
+| **Local token standard** | Proven — `X:\AI MARS\local\tokens\` | Documented access patterns; site credentials external |
 | **Human-supervised site writes** | Proven (DEV + helper paths + plugin REST) | Proven (site-level ops e.g. SITE-001 W1A — OpenCart-specific) |
 | **Evidence register** | [WPILOT-PROVEN-CAPABILITIES-v1.md](../wpilot/WPILOT-PROVEN-CAPABILITIES-v1.md) | Site reports under `sites/` — no family-equivalent proven-capabilities register |
 | **Authority state document** | [WPILOT-AUTHORITY-STATE-RC5.md](../wpilot/WPILOT-AUTHORITY-STATE-RC5.md) | None — Phase 0+ operational index |
@@ -66,7 +66,7 @@ WPilot RC5 on DEV is the **Reference Implementation** for the CMS Pilots family 
 - backup before mutation
 - rollback proof before expansion
 - connection tracking (local token → authenticated REST → admin visibility)
-- local token file standard (`C:\AI MARS\local\tokens\` — no value in repo)
+- local token file standard (`X:\AI MARS\local\tokens\` — no value in repo)
 
 Write safety loop: `inspect → backup → apply → validate → rollback`.
 

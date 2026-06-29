@@ -6,7 +6,7 @@ Per-site workspaces for OpenCart dealership / client projects.
 
 1. Copy `_template-site/` → `<site-slug>/`.
 2. Register in [project-site-registry.md](../project-site-registry.md).
-3. Create external bulk root: `C:\MARS Phenix\AI MARS STORAGE\ocpilot\project-sites\<site-slug>\`.
+3. Create external bulk root: `X:\AI MARS STORAGE\ocpilot\project-sites\<site-slug>\`.
 4. Follow [project-sites-workflow.md](../project-sites-workflow.md).
 5. Fill [site-passport.md](site-001/site-passport.md) per [site-passport-standard.md](../site-passport-standard.md).
 

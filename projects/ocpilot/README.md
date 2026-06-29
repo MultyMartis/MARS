@@ -9,6 +9,16 @@
 
 OCPilot — **самостоятельная** human-supervised система MARS для AI-assisted работы с **OpenCart / ocStore**: инспекция, разделение core/custom, подготовка контролируемых изменений каталога, темы и backend. Не дочерний проект WPilot.
 
+## Filesystem authority (X-drive, 2026-06-29)
+
+| Role | Path |
+|------|------|
+| OCPilot programme locus | `X:\AI MARS\projects\ocpilot\` |
+| External bulk storage | `X:\AI MARS STORAGE\ocpilot\` |
+| Local CMS runtime (pointer) | `X:\MARS-Localhost\` |
+
+Authority: [governance/mars-x-drive-root-authority-v1.md](../../governance/mars-x-drive-root-authority-v1.md). Storage is **not** a second Git repository. Localhost is **not** part of the Git tree.
+
 ## Что такое OCPilot
 
 - Документационно-операционный пакет под `projects/ocpilot/`.

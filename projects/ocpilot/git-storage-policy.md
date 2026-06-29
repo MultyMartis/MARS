@@ -5,7 +5,7 @@
 
 **Canonical model:** [recommended-storage-model.md](recommended-storage-model.md) — Option D (external baseline storage + metadata in repo).
 
-**Approved external root (Run 3.7):** `C:\AI MARS STORAGE` — OCPilot bulk under `C:\AI MARS STORAGE\ocpilot\`. See [external-storage-registry.md](external-storage-registry.md).
+**Approved external root (Run 3.7):** `X:\AI MARS STORAGE` — OCPilot bulk under `X:\AI MARS STORAGE\ocpilot\`. See [external-storage-registry.md](external-storage-registry.md).
 
 ---
 
@@ -78,7 +78,7 @@ Run 3.6 establishes policy **before** baseline bulk enters git history.
 | **Disk** | Keep locally for active READY baselines |
 | **Canonical reset** | Re-promote from external ZIP |
 | **Current Run 3.5 trees** | Remain on disk under repo path (grandfathered local cache); do not commit |
-| **Future promoted trees** | Prefer `C:\AI MARS STORAGE\ocpilot\baselines\<id>\files\` — gitignored via repo path or absent from repo |
+| **Future promoted trees** | Prefer `X:\AI MARS STORAGE\ocpilot\baselines\<id>\files\` — gitignored via repo path or absent from repo |
 
 **Why exclude:** 98% of OCPilot file count; poor git object model; duplicates ZIP content in another form.
 

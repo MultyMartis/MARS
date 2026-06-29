@@ -17,7 +17,7 @@
 | **Baseline Match** | `ocstore-3038-rs2` (**approved**, Run 4.99) |
 | **Hosting** | SAFE UNKNOWN |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
-| **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\` |
+| **Storage Location** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-001\` |
 | **Environment** | TEST |
 | **Test URL** | https://sibcar.new-site.space/ (from access brief) |
 | **Current Status** | **READY FOR RUN 5** |

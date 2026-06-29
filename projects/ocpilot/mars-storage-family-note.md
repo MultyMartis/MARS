@@ -8,10 +8,12 @@
 ## Approved MARS bulk root
 
 ```
-C:\MARS Phenix\AI MARS STORAGE
+X:\AI MARS STORAGE
 ```
 
-This is the **general MARS bulk-data root** for artifacts that should not live permanently in the git repository at `C:\MARS Phenix\AI MARS`.
+This is the **general MARS bulk-data root** for artifacts that should not live permanently in the git repository at `X:\AI MARS`.
+
+**Migration evidence (pre-X-drive):** `C:\MARS Phenix\AI MARS STORAGE` · repo `C:\MARS Phenix\AI MARS` / `C:\AI MARS`.
 
 The MARS repo holds documentation, governance references, operational metadata, and small durable artifacts. The storage root holds large binaries, vendor trees, site archives, snapshots, and temporary extracts.
 
@@ -26,7 +28,7 @@ The MARS repo holds documentation, governance references, operational metadata, 
 | **One root, many systems** | Single approved bulk root; each MARS entity gets its own top-level subfolder |
 | **No mixed storage** | Do not place OCPilot ZIPs in `wpilot/` or dump unrelated files at storage root |
 | **No dumping at root** | Files go only under the correct system folder |
-| **Metadata in repo** | Passports, manifests, policies, and reports stay in `C:\MARS Phenix\AI MARS` |
+| **Metadata in repo** | Passports, manifests, policies, and reports stay in `X:\AI MARS` |
 | **Bulk outside repo** | Canonical ZIPs, promoted trees, site archives, DB snapshots, temp extracts |
 | **Human-operated** | No automated storage engine, sync product, or enforcement layer claimed |
 
@@ -35,7 +37,7 @@ The MARS repo holds documentation, governance references, operational metadata, 
 ## Current top-level layout (Run 3.7)
 
 ```
-C:\MARS Phenix\AI MARS STORAGE\
+X:\AI MARS STORAGE\
   README.md
   ocpilot\          ← created Run 3.7
 ```
@@ -74,7 +76,7 @@ Creating these folders requires a **separate human charter** per system — not 
 1. **System-specific registry** — e.g. OCPilot [external-storage-registry.md](external-storage-registry.md).
 2. **Passports / manifests** — record external path + checksum, not bulk file lists in git.
 3. **Family note (this doc)** — cross-system orientation only; not a substitute for per-system policy.
-4. **Root README** — `C:\MARS Phenix\AI MARS STORAGE\README.md` for operator onboarding.
+4. **Root README** — `X:\AI MARS STORAGE\README.md` for operator onboarding.
 
 ---
 
@@ -86,6 +88,6 @@ This note is **operational documentation** under `projects/ocpilot/` as the init
 
 ## SAFE UNKNOWN
 
-- Whether `C:\MARS Phenix\AI MARS STORAGE` will use cloud sync, NAS, or second-machine mirror — operator infrastructure.
+- Whether `X:\AI MARS STORAGE` will use cloud sync, NAS, or second-machine mirror — operator infrastructure.
 - Whether a dedicated git repo or LFS will ever apply to storage root — **not recommended** as default.
 - Exact folder names for WPilot/ORCA when chartered — may differ from illustrative table above.

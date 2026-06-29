@@ -16,8 +16,11 @@
 | **Version** | SAFE UNKNOWN |
 | **Baseline Match** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (site-wide fonts) |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
+| **Repository metadata** | `X:\AI MARS\projects\ocpilot\sites\site-002\` |
 | **Access Methods** | Documented in [project-access-brief.md](project-access-brief.md); credential locations outside repo |
-| **Storage Location** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
+| **Storage Location** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
+| **Local runtime root** | `X:\MARS-Localhost\` |
+| **SITE-002 runtime subpath** | SAFE UNKNOWN — verify before execution (MLI pattern: `sites\opencart\projects\{slug}\`; `site-002` tree not verified on `X:` at 2026-06-29) |
 | **Environment** | TEST |
 | **Test URL** | https://zpm.new-site.space/ |
 | **Current Status** | **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01** |

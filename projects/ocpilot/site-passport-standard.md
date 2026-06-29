@@ -12,7 +12,7 @@
 |----------|------|
 | Canonical passport | `projects/ocpilot/sites/<site-slug>/site-passport.md` |
 | Registry link | [project-site-registry.md](project-site-registry.md) |
-| Bulk storage | `C:\AI MARS STORAGE\ocpilot\project-sites\<site-slug>\` |
+| Bulk storage | `X:\AI MARS STORAGE\ocpilot\project-sites\<site-slug>\` |
 
 One passport per site. Do not store secrets in the passport.
 

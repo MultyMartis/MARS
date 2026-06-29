@@ -6,7 +6,7 @@
 
 **Do not record:** passwords, tokens, credentials, secret URLs, or live `config.php` values.
 
-External credentials (if operator places them): `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\`
+External credentials (if operator places them): `X:\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\`
 
 ---
 
@@ -48,7 +48,7 @@ External credentials (if operator places them): `C:\AI MARS STORAGE\ocpilot\proj
 
 Credentials may be stored only outside the repo, for example:
 
-- `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\`
+- `X:\AI MARS STORAGE\ocpilot\project-sites\site-001\secrets\`
 - Operator password manager
 
 This file may only contain references such as:

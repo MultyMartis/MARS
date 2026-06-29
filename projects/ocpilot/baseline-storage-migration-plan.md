@@ -10,19 +10,19 @@
 Eventually move or recreate promoted baseline trees from repo-local paths:
 
 ```
-C:\AI MARS\projects\ocpilot\baselines\<baseline-id>\files\
+X:\AI MARS\projects\ocpilot\baselines\<baseline-id>\files\
 ```
 
 to external canonical storage:
 
 ```
-C:\AI MARS STORAGE\ocpilot\baselines\<baseline-id>\files\
+X:\AI MARS STORAGE\ocpilot\baselines\<baseline-id>\files\
 ```
 
 Canonical ZIP archives should likewise reside under:
 
 ```
-C:\AI MARS STORAGE\ocpilot\baselines\
+X:\AI MARS STORAGE\ocpilot\baselines\
 ```
 
 (or `incoming\` during quarantine, then `baselines\` after verification).
@@ -35,8 +35,8 @@ C:\AI MARS STORAGE\ocpilot\baselines\
 
 | Baseline | Repo-local today | External target |
 |----------|------------------|-----------------|
-| `ocstore-3038-rs2` | `files/` (4055 files), ZIP in `incoming/baselines/` | `C:\AI MARS STORAGE\ocpilot\baselines\ocstore-3038-rs2\` |
-| `ocstore-3039-rs1` | `files/` (3553 files), ZIP in `incoming/baselines/` | `C:\AI MARS STORAGE\ocpilot\baselines\ocstore-3039-rs1\` |
+| `ocstore-3038-rs2` | `files/` (4055 files), ZIP in `incoming/baselines/` | `X:\AI MARS STORAGE\ocpilot\baselines\ocstore-3038-rs2\` |
+| `ocstore-3039-rs1` | `files/` (3553 files), ZIP in `incoming/baselines/` | `X:\AI MARS STORAGE\ocpilot\baselines\ocstore-3039-rs1\` |
 
 ---
 
@@ -51,8 +51,8 @@ Human-operated gates only. No automation claimed.
 
 ### Step 2 — Recreate promoted baseline tree in external storage from ZIP
 
-- Extract canonical ZIP to `C:\AI MARS STORAGE\ocpilot\temp\` (scratch).
-- Promote sanitized tree to `C:\AI MARS STORAGE\ocpilot\baselines\<baseline-id>\files\` using same rules as Run 3.5 ([baseline-promotion-strategy.md](baseline-promotion-strategy.md)).
+- Extract canonical ZIP to `X:\AI MARS STORAGE\ocpilot\temp\` (scratch).
+- Promote sanitized tree to `X:\AI MARS STORAGE\ocpilot\baselines\<baseline-id>\files\` using same rules as Run 3.5 ([baseline-promotion-strategy.md](baseline-promotion-strategy.md)).
 - **Do not move** repo-local tree by rename alone — recreate from ZIP so external copy is provably canonical.
 
 ### Step 3 — Compare file counts and key manifests
@@ -102,7 +102,7 @@ Human-operated gates only. No automation claimed.
 - [ ] External folder structure exists — **done** (Run 3.7)
 - [ ] [external-storage-registry.md](external-storage-registry.md) approved
 - [ ] Operator charter for migration run (separate from Run 3.7)
-- [ ] Backup copy in `C:\AI MARS STORAGE\ocpilot\backups\` if operator requires
+- [ ] Backup copy in `X:\AI MARS STORAGE\ocpilot\backups\` if operator requires
 
 ---
 

@@ -13,7 +13,7 @@
 | One row per site | Site ID is stable; slug may be refined after intake |
 | No secrets | URLs and hosting recorded only when operator supplies sanitized facts |
 | Metadata in repo | Passports, audits, reports under `projects/ocpilot/sites/<slug>/` |
-| Bulk external | Archives and snapshots under `C:\AI MARS STORAGE\ocpilot\project-sites\<slug>\` |
+| Bulk external | Archives and snapshots under `X:\AI MARS STORAGE\ocpilot\project-sites\<slug>\` |
 | SAFE UNKNOWN | Use when evidence is missing — do not invent |
 
 ---
@@ -22,8 +22,8 @@
 
 | Site ID | Slug | Platform | Version | Baseline | Status | Storage Location | Last Intake | Notes |
 |---------|------|----------|---------|----------|--------|------------------|-------------|-------|
-| SITE-001 | site-001 | ocStore | 3.0.3.8 (rs.2) | `ocstore-3038-rs2` (approved) | **READY FOR AUDIT** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-001\` | 2026-06-01 (Run 4.99 — intake closed) | Intake complete; baseline approved; read-only audit chartered. Passport: [sites/site-001/site-passport.md](sites/site-001/site-passport.md). Charter: [sites/site-001/AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md). |
-| SITE-002 | site-002 | ocStore / OpenCart | SAFE UNKNOWN | SAFE UNKNOWN | **AWAITING INTAKE** | `C:\AI MARS STORAGE\ocpilot\project-sites\site-002\` | 2026-06-09 (Run 4.113 — registration) | ЗПМ TEST `zpm.new-site.space`; PDP/Catalog UX pilot. Passport: [sites/site-002/site-passport.md](sites/site-002/site-passport.md). Credentials pending in external `secrets/`. |
+| SITE-001 | site-001 | ocStore | 3.0.3.8 (rs.2) | `ocstore-3038-rs2` (approved) | **READY FOR AUDIT** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-001\` | 2026-06-01 (Run 4.99 — intake closed) | Intake complete; baseline approved; read-only audit chartered. Passport: [sites/site-001/site-passport.md](sites/site-001/site-passport.md). Charter: [sites/site-001/AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md). |
+| SITE-002 | site-002 | ocStore / OpenCart | SAFE UNKNOWN | SAFE UNKNOWN | **AWAITING INTAKE** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\` | 2026-06-09 (Run 4.113 — registration) | ЗПМ TEST `zpm.new-site.space`; PDP/Catalog UX pilot. Passport: [sites/site-002/site-passport.md](sites/site-002/site-passport.md). Credentials pending in external `secrets/`. |
 
 ---
 
@@ -44,7 +44,7 @@
 
 1. Assign next Site ID (`SITE-002`, …).
 2. Copy [sites/_template-site/](sites/_template-site/) → `sites/<site-slug>/`.
-3. Create external root: `C:\AI MARS STORAGE\ocpilot\project-sites\<site-slug>\`.
+3. Create external root: `X:\AI MARS STORAGE\ocpilot\project-sites\<site-slug>\`.
 4. Fill [site-passport-standard.md](site-passport-standard.md) fields in `site-passport.md`.
 5. Append row to this registry.
 6. Record intake date in **Last Intake** when operator materials are accepted.

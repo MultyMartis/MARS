@@ -1,7 +1,7 @@
 # OCPilot — Recommended Baseline Storage Model
 
 **Run:** 3.6 — Baseline Storage Review (updated Run 3.7 — external root approved)  
-**Status:** canonical policy — external root `C:\AI MARS STORAGE` formalized in Run 3.7.
+**Status:** canonical policy — external root `X:\AI MARS STORAGE` formalized in Run 3.7 (X-drive authority 2026-06-29).
 
 ---
 
@@ -66,8 +66,8 @@ Clear classes reduce drift and duplicate retention.
 
 | Root | Path |
 |------|------|
-| **MARS bulk root** | `C:\AI MARS STORAGE` |
-| **OCPilot bulk root** | `C:\AI MARS STORAGE\ocpilot\` |
+| **MARS bulk root** | `X:\AI MARS STORAGE` |
+| **OCPilot bulk root** | `X:\AI MARS STORAGE\ocpilot\` |
 
 Registry: [external-storage-registry.md](external-storage-registry.md). Family note: [mars-storage-family-note.md](mars-storage-family-note.md).
 
@@ -81,7 +81,7 @@ Registry: [external-storage-registry.md](external-storage-registry.md). Family n
 
 **Simple rules for operators:**
 
-1. **ZIP goes external** (`C:\AI MARS STORAGE\ocpilot\`) — record path and SHA256 in passport.
+1. **ZIP goes external** (`X:\AI MARS STORAGE\ocpilot\`) — record path and SHA256 in passport.
 2. **Metadata goes in repo** — passport, manifest, database metadata, comparison notes.
 3. **Promote once per baseline** to local `files/` when READY; keep while baseline is active.
 4. **Never commit** `files/` or incoming ZIP to git.
@@ -102,7 +102,7 @@ Fewer rules than maintaining full git history of vendor trees across 25+ baselin
 
 **Policy going forward:**
 
-- New baseline ZIPs and promoted trees should land under `C:\AI MARS STORAGE\ocpilot\` per [external-storage-registry.md](external-storage-registry.md).
+- New baseline ZIPs and promoted trees should land under `X:\AI MARS STORAGE\ocpilot\` per [external-storage-registry.md](external-storage-registry.md).
 - Record external paths and SHA256 in passports.
 - When first OCPilot git commit occurs, commit **metadata only** — not current bulk.
 - Migration of existing repo-local bulk: [baseline-storage-migration-plan.md](baseline-storage-migration-plan.md) — **not executed** in Run 3.7.
@@ -115,7 +115,7 @@ Grandfathering is intentional — external root is formalized; retroactive move 
 
 ```
                     ┌─────────────────────────────┐
-                    │ C:\AI MARS STORAGE\ocpilot\  │
+                    │ X:\AI MARS STORAGE\ocpilot\  │
                     │  baselines\ · incoming\ · …  │
                     │  (canonical ZIP per baseline)│
                     └──────────────┬──────────────┘
@@ -182,4 +182,4 @@ Extension and comparison bulk follow the same **external canonical + repo metada
 
 - Timeline for passport updates with external paths for grandfathered baselines — separate migration run.
 - Whether incoming ZIP working copies remain under repo `incoming/baselines/` or move entirely external — operator choice during transition; both gitignored under this model.
-- Multi-machine sync of `C:\AI MARS STORAGE` — operator infrastructure not defined.
+- Multi-machine sync of `X:\AI MARS STORAGE` — operator infrastructure not defined.
