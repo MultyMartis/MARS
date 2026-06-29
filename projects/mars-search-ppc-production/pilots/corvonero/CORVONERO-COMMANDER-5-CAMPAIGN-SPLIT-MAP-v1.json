@@ -1,0 +1,111 @@
+{
+  "map_id": "corvonero-commander-5-campaign-split-map-v1",
+  "generated_at": "2026-06-29T01:05:49Z",
+  "source_evidence": {
+    "review_workbook": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-REVIEW-2026-06-29\\CORVONERO-YANDEX-DIRECT-COMMANDER-REVIEW-v1.xlsx",
+    "combined_import_candidate": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-IMPORT-CANDIDATE-2026-06-29\\CORVONERO-YANDEX-DIRECT-COMMANDER-IMPORT-CANDIDATE-v1.xlsx",
+    "note": "Combined candidate used as transformation evidence only; per-campaign metadata not copied from CA-01 block"
+  },
+  "template": {
+    "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v1.xlsx",
+    "sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+    "verified": true,
+    "sheet": "Тексты",
+    "header_row": 14,
+    "columns": 78
+  },
+  "campaigns": [
+    {
+      "campaign_id": "CA-01",
+      "title": "CA-01 — Программист / специалист 1С",
+      "campaign_name": "Программист / специалист 1С",
+      "bid": 500,
+      "landing_base": "https://lk.corvonero.ru/programmist-1s/",
+      "utm_slug": "corv_programmist_1s",
+      "groups": 3,
+      "keywords": 404,
+      "ads": 3,
+      "output_filename": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v1.xlsx",
+      "output_sha256": "36af4dbcb44ae862f88d34b8efca4ba07a677ec6b33765cdee2714e0234a09eb"
+    },
+    {
+      "campaign_id": "CA-02",
+      "title": "CA-02 — Сопровождение и обслуживание 1С",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "bid": 400,
+      "landing_base": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "utm_slug": "corv_soprovozhdenie_1s",
+      "groups": 4,
+      "keywords": 153,
+      "ads": 4,
+      "output_filename": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v1.xlsx",
+      "output_sha256": "867ede3370ce99c8a404c6e76a2ef9b94a44d69c25ff5386cd74df57e71df205"
+    },
+    {
+      "campaign_id": "CA-03",
+      "title": "CA-03 — Доработка и разработка 1С",
+      "campaign_name": "Доработка и разработка 1С",
+      "bid": 400,
+      "landing_base": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "utm_slug": "corv_dorabotka_1s",
+      "groups": 3,
+      "keywords": 69,
+      "ads": 3,
+      "output_filename": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v1.xlsx",
+      "output_sha256": "1535c602c03ab47ec5b79b336cd45b94712540cd5cda5026e08594799d03602b"
+    },
+    {
+      "campaign_id": "CA-04",
+      "title": "CA-04 — Интеграции 1С",
+      "campaign_name": "Интеграции 1С",
+      "bid": 400,
+      "landing_base": "https://lk.corvonero.ru/integracii-1s/",
+      "utm_slug": "corv_integracii_1s",
+      "groups": 1,
+      "keywords": 48,
+      "ads": 1,
+      "output_filename": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v1.xlsx",
+      "output_sha256": "2223638e998776047f55a953a3cde92d88c22873ea9dfb737398399cf3a8607c"
+    },
+    {
+      "campaign_id": "CA-05",
+      "title": "CA-05 — Маркировка / Честный знак",
+      "campaign_name": "Маркировка / Честный знак",
+      "bid": 400,
+      "landing_base": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "utm_slug": "corv_markirovka_1s",
+      "groups": 4,
+      "keywords": 221,
+      "ads": 4,
+      "output_filename": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v1.xlsx",
+      "output_sha256": "ba66cb72dd0c3d6cfc171a2bab61be9283e0c0b0c1433fe28629e1222d239368"
+    }
+  ],
+  "import_sequence": [
+    {
+      "order": 1,
+      "campaign_id": "CA-01",
+      "label": "Программист 1С"
+    },
+    {
+      "order": 2,
+      "campaign_id": "CA-02",
+      "label": "Сопровождение 1С"
+    },
+    {
+      "order": 3,
+      "campaign_id": "CA-03",
+      "label": "Доработка 1С"
+    },
+    {
+      "order": 4,
+      "campaign_id": "CA-04",
+      "label": "Интеграции 1С"
+    },
+    {
+      "order": 5,
+      "campaign_id": "CA-05",
+      "label": "Маркировка 1С"
+    }
+  ]
+}

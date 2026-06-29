@@ -1,0 +1,18 @@
+{
+  "readiness_id": "corvonero-commander-5-campaign-readiness-v1",
+  "generated_at": "2026-06-29T01:05:49Z",
+  "five_workbooks_created": true,
+  "ready_for_commander_import": false,
+  "ready_for_launch": false,
+  "verdict": "PASS — FIVE IMPORT-CANDIDATE XLSX FILES CREATED",
+  "blockers": [
+    "Base URLs NOT HTTP VERIFIED",
+    "Sitelink anchors PENDING — 20 sitelinks omitted from import workbooks",
+    "Daily budget and schedule require post-import Commander UI",
+    "Metrica and conversion goals OMITTED",
+    "Live Commander import not performed in this pass",
+    "Campaign activation forbidden until operator approval"
+  ],
+  "commander_import_performed": false,
+  "advertising_started": false
+}
