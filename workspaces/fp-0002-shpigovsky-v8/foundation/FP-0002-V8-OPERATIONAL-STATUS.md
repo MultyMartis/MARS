@@ -1,6 +1,17 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-29 (operator manual polish canonical checkpoint)
+**Updated:** 2026-06-29 (priority visual implementation protocol activation)
+
+## ACTIVE TEMPORARY PRIORITY RULE
+
+Before any FP-0002 frontend implementation, read:
+
+[`FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md`](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md)
+
+- **Visual PASS:** OPERATOR ONLY
+- **Commit before operator visual approval:** PROHIBITED
+- **Mandatory report header:** REQUIRED
+- **Web-GPT recovery source:** THIS PROTOCOL
 
 ```text
 fp0002_v8: BOOTSTRAP_RECONCILIATION_COMPLETE
@@ -30,12 +41,13 @@ fp0002_v8_manual_polish_checkpoint: DOCUMENTED
 fp0002_v8_cf010_clinic_landscape: COMPLETE
 fp0002_v8_next_wave: O_CENTRE_IMPLEMENTATION_NOT_AUTHORIZED
 fp0002_v8_o_centre_charter: COMPLETE_WITH_KNOWN_GAPS
-fp0002_v8_o_centre: IMPLEMENTED_TECHNICAL_VISUAL_RECONCILIATION_REQUIRED
+fp0002_v8_o_centre: STRUCTURAL_REGRESSION_REQUIRES_FIX
 fp0002_v8_o_centre_implementation: COMPLETE_TECHNICAL
-fp0002_v8_o_centre_visual: READY_FOR_IMPLEMENTATION
-fp0002_v8_o_centre_dec01: READY
-fp0002_v8_o_centre_operator_visual: NOT_APPROVED
+fp0002_v8_o_centre_visual: STRUCTURAL_REGRESSION_REQUIRES_FIX
+fp0002_v8_o_centre_dec01: EXTRACTED_RENDERING_NOT_APPROVED
+fp0002_v8_o_centre_operator_visual: REJECTED
 fp0002_v8_o_centre_deployment: BLOCKED
+fp0002_v8_priority_visual_protocol: ACTIVE
 fp0002_v8_deployment: NOT_STARTED
 
 workspace: V8
@@ -194,16 +206,18 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 
 - Charter: `audits/o-centre-page-charter/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER-v1.md`
 - Content blocker resolution: `audits/o-centre-content-blocker-resolution/` (2026-06-29)
-- Status: **CORRECTED_PENDING_OPERATOR_REVIEW** (2026-06-29)
-- Visual correction: `audits/o-centre-visual-correction/` (2026-06-29)
-- Composition: canonical order restored; infrastructure 7 groups; DEC-01 wired
-- Gates: Design PASS · Assets PASS · Content PASS · Reuse PASS · Build PASS · DOM PASS · Structural visual PASS
+- Technical baseline: `06096d51d41c0fee3639d94bb3b30855e08f79ad`
+- Visual status: **STRUCTURAL_REGRESSION_REQUIRES_FIX**
+- Operator approval: **REJECTED**
+- Visual correction pack: `audits/o-centre-visual-correction/` (historical — superseded by protocol O-Centre status)
 - Implementation: `src/pages/o-centre.html` → `dist/o-centre.html`
 - Evidence: `audits/o-centre-implementation/`
+- Ops status: [FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md)
 
 ## Next wave (documentation only)
 
-- O-Centre operator visual review — **PENDING** (structural correction complete)
+- O-Centre — **desktop micro-pass** · one narrow problem · no commit · preview + runtime crop · operator review required
+- Governed by: [FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md)
 
 
 ## O-Centre infrastructure assets (2026-06-29)
@@ -217,6 +231,7 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 - Status: **APPROVED_EXPORTED** — `src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp`
 - Asset ID: OC-DEC-01 · ref `d3ac7d00af36` · 953×988 WebP · SHA-256 `e64e5d29440036dca7e944f1ce46e75ada9255857a7074c9694362f1864ce769`
 - Evidence: `audits/o-centre-decorative-asset-extraction/`
-- Visual correction: **READY_FOR_IMPLEMENTATION** (asset export no longer blocking; CSS integration Phase 6)
-- Operator visual approval: **NOT GRANTED**
-- Page source HTML/SCSS: **unchanged**
+- Rendering/use: **NOT APPROVED** — lifebuoy decoration **prohibited**
+- Next visual task: remove/disable from rendering
+- Figma resource existence does not override PNG/operator authority
+- Operator visual approval: **REJECTED**

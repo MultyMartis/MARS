@@ -1,5 +1,16 @@
 # FP-0002 Shpigovsky — Workspace V8
 
+## ACTIVE TEMPORARY PRIORITY RULE
+
+Before any FP-0002 frontend implementation, read:
+
+[`FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md`](../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md)
+
+- **Visual PASS:** OPERATOR ONLY
+- **Commit before operator visual approval:** PROHIBITED
+- **Mandatory report header:** REQUIRED
+- **Web-GPT recovery source:** THIS PROTOCOL
+
 | Field | Value |
 |-------|-------|
 | **Project** | FP-0002 Shpigovsky |
@@ -43,6 +54,7 @@ npm run build
 
 ## Key docs
 
+- `../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md` — **read before any frontend task**
 - `foundation/FP-0002-V8-OPERATIONAL-STATUS.md`
 - `foundation/FP-0002-V8-COMPONENT-GATE-RULES-v1.md`
 - `audits/component-family-audit-v8-bootstrap-01/`

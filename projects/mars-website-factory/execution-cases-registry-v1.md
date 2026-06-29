@@ -28,6 +28,17 @@
 | `isbd-care-landing` | **Client delivery execution case #2** | `workspaces/isbd-care-landing/` | [reference-cases/isbd-care-landing/reference-case-overview-v1.md](reference-cases/isbd-care-landing/reference-case-overview-v1.md) | WordPress / The7 / WPBakery (planned) |
 | `bzpm-catalog-redesign` | **Client delivery execution case #3** — research phase complete (audit consolidation) | **SAFE UNKNOWN** — no Factory workspace registered | [../website-factory/execution-cases/bzpm-catalog-redesign/README.md](../website-factory/execution-cases/bzpm-catalog-redesign/README.md) | Staging `zpm.new-site.space`; production `bzpm.ru` (WEB-ZPM-01); W3 blueprint pending |
 
+### Factory project lane — FP-0002 (not an execution-case row)
+
+| Field | Value |
+|-------|-------|
+| Factory Project ID | **FP-0002** — Shpigovsky.ru |
+| Active workspace | `workspaces/fp-0002-shpigovsky-v8/` |
+| Ops status | [PROJECT-STATUS.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md) |
+| **Priority visual protocol (ACTIVE)** | [FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md) — **read before any FP-0002 frontend task** |
+| Visual PASS | OPERATOR ONLY |
+| Commit before operator visual approval | PROHIBITED |
+
 ---
 
 ## Registration rules

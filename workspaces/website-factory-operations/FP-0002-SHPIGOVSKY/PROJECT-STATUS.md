@@ -1,7 +1,18 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-29 (V8 operator manual polish canonical checkpoint)
+**Last updated:** 2026-06-29 (priority visual implementation protocol activation)
+
+## ACTIVE TEMPORARY PRIORITY RULE
+
+Before any FP-0002 frontend implementation, read:
+
+[`FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md`](FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md)
+
+- **Visual PASS:** OPERATOR ONLY
+- **Commit before operator visual approval:** PROHIBITED
+- **Mandatory report header:** REQUIRED
+- **Web-GPT recovery source:** THIS PROTOCOL
 
 ## V8 workspace (2026-06-29)
 
@@ -16,7 +27,8 @@
 | CF-003–CF-012 | APPROVED |
 | Next wave | CF-010 clinic landscape — **NOT STARTED** |
 | Page-wide DOM gate | PASS |
-| O-Centre | DEFERRED UNTIL FINAL READINESS |
+| O-Centre | STRUCTURAL_REGRESSION_REQUIRES_FIX — operator **REJECTED**; see [FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md](FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md) |
+| Priority visual protocol | **ACTIVE** — [FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md](FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md) |
 
 ## Workspace versions (2026-06-24)
 

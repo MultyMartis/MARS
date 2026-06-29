@@ -1,0 +1,170 @@
+{
+  "protocol_id": "FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL",
+  "title": "FP-0002 Priority Visual Implementation Protocol",
+  "status": "ACTIVE_TEMPORARY_PRIORITY_RULE",
+  "scope": "FP-0002_SHPIGOVSKY_FRONTEND_IMPLEMENTATION",
+  "priority": 3,
+  "activation_authority": "OPERATOR_APPROVED",
+  "deactivation_authority": "EXPLICIT_OPERATOR_DECISION_ONLY",
+  "visual_ssot": {
+    "role": "fresh_approved_design_png",
+    "defines": [
+      "visible_block_order",
+      "block_presence_and_absence",
+      "element_grouping",
+      "card_and_image_counts",
+      "proportions",
+      "composition",
+      "rhythm",
+      "final_visual_picture",
+      "desktop_mobile_presentation"
+    ],
+    "prohibited_uses": [
+      "frontend_asset",
+      "section_background",
+      "screenshot_replacement_html",
+      "flattened_implementation"
+    ]
+  },
+  "technical_design_source": {
+    "file": "Spig_v1.2.fig",
+    "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig",
+    "role": "technical_design_source",
+    "uses": [
+      "exact_text",
+      "original_assets",
+      "node_frame_identity",
+      "dimensions",
+      "component_boundaries",
+      "crop_transform",
+      "visible_hidden_state",
+      "desktop_mobile_node_correspondence",
+      "asset_extraction"
+    ],
+    "hidden_content_policy": "do_not_implement_if_absent_from_png",
+    "figma_parse_policy": "must_not_add_runtime_elements_absent_from_png"
+  },
+  "implementation_authority": "current_operator_canonical_source",
+  "historical_figma_authority": {
+    "file": "Шпиговский.fig",
+    "authority": false
+  },
+  "authority_hierarchy": [
+    "operator_decision",
+    "safety_and_destructive_operation_rules",
+    "FP-0002_PRIORITY_VISUAL_IMPLEMENTATION_PROTOCOL",
+    "current_operator_canonical_source",
+    "fresh_approved_design_png",
+    "canonical_Spig_v1.2.fig",
+    "approved_shared_components",
+    "page_audits_charters_inventories_node_maps",
+    "historical_source"
+  ],
+  "workflow": [
+    "FRESH_APPROVED_PNG",
+    "EXACT_MATCHING_FIGMA_FRAME",
+    "ONE_DESIGN_CROP",
+    "LOCAL_BLOCK_ANATOMY",
+    "COMPONENT_BOUNDARY",
+    "REUSE_DECISION",
+    "ONE_BLOCK_ONE_VIEWPORT_IMPLEMENTATION",
+    "BUILD_DOM_ASSET_TECHNICAL_CHECK",
+    "ONE_RUNTIME_CROP",
+    "PNG_TO_RUNTIME_CROP_COMPARISON",
+    "HARD_STOP_WITHOUT_COMMIT",
+    "OPERATOR_VISUAL_REVIEW",
+    "CORRECTION",
+    "OPERATOR_APPROVAL",
+    "SELECTIVE_CHECKPOINT",
+    "NEXT_VIEWPORT_OR_NEXT_BLOCK"
+  ],
+  "unit_of_work": {
+    "one_visual_block": true,
+    "one_viewport": true,
+    "one_design_crop": true,
+    "one_runtime_crop": true,
+    "one_limited_task": true
+  },
+  "desktop_before_mobile": true,
+  "visual_pass_authority": "OPERATOR_ONLY",
+  "technical_pass_authority": "MARS_CURSOR",
+  "cursor_visual_self_approval": false,
+  "pending_status_before_operator": "IMPLEMENTED_PENDING_OPERATOR_VISUAL_REVIEW",
+  "commit_before_visual_approval": "PROHIBITED",
+  "manual_edits_authority": {
+    "operator_manual_edits_become_canonical": true,
+    "overwrite_prohibited": true,
+    "revert_prohibited": true,
+    "normalization_prohibited": true,
+    "auto_replace_from_audit_figma_prohibited": true
+  },
+  "reuse_policy": {
+    "reuse_is_proof_of_quality": false,
+    "visual_similarity_equals_component_equivalence": false,
+    "verify_after_reuse": [
+      "placement",
+      "surrounding_composition",
+      "dimensions",
+      "content_count",
+      "image_order",
+      "gaps",
+      "desktop_mobile_behavior"
+    ]
+  },
+  "mandatory_report_header": {
+    "required": true,
+    "template": "ACTIVE STRATEGY: FP-0002 PRIORITY VISUAL IMPLEMENTATION PROTOCOL\n\nVisual authority:\n- Approved PNG:\n- Design crop:\n- PNG status/hash:\n\nTechnical design source:\n- Figma:\n- Frame:\n- Node/block:\n\nCurrent unit of work:\n- Page:\n- Block:\n- Viewport:\n\nCurrent source authority:\n- Operator-canonical source:\n- Manual edits protected:\n\nCommit policy:\n- NO COMMIT BEFORE OPERATOR VISUAL APPROVAL\n\nOperator visual approval:\n- PENDING / APPROVED / REJECTED",
+    "missing_header_consequence": "protocol_noncompliant_report_visual_result_not_auto_acceptable"
+  },
+  "web_gpt_recovery_note": {
+    "present": true,
+    "recovery_source": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md",
+    "stop_conditions": [
+      "large_multi_phase_implementation_prompt",
+      "multiple_visual_blocks_combined",
+      "desktop_and_mobile_simultaneously",
+      "mars_self_declares_visual_pass",
+      "commit_before_operator_review",
+      "starts_from_partial_reuse_instead_of_png",
+      "forgets_crop_by_crop_comparison"
+    ],
+    "required_recovery_action": [
+      "stop",
+      "request_main_protocol_file_from_mars",
+      "include_protocol_in_active_context",
+      "form_next_short_micro_pass_prompt"
+    ]
+  },
+  "protected_rules": [
+    "no_huge_multi_phase_page_prompt",
+    "no_checklist_closure_without_visual_result",
+    "no_cursor_visual_self_approval",
+    "no_commit_before_operator_visual_review",
+    "no_figma_parse_instead_of_png",
+    "no_hidden_figma_content_not_on_png",
+    "no_reuse_as_visual_match_proof",
+    "no_dom_only_without_crop_comparison",
+    "no_overwrite_operator_manual_edits",
+    "no_mobile_before_desktop_approval",
+    "no_next_block_before_current_approval"
+  ],
+  "o_centre_status": {
+    "page": "O-Centre",
+    "technical_baseline": "06096d51d41c0fee3639d94bb3b30855e08f79ad",
+    "visual_status": "STRUCTURAL_REGRESSION_REQUIRES_FIX",
+    "operator_approval": "REJECTED",
+    "deployment": "BLOCKED",
+    "stable_tag": "BLOCKED",
+    "wordpress": "BLOCKED",
+    "next_work_mode": "desktop_micro_pass_no_commit",
+    "dec_01": {
+      "asset_in_repo_allowed": true,
+      "rendering_approved": false,
+      "lifebuoy_decoration": "prohibited",
+      "next_visual_task": "remove_or_disable_from_rendering"
+    }
+  },
+  "main_protocol_md": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md",
+  "activated_at": "2026-06-29",
+  "source_commit": "06096d51d41c0fee3639d94bb3b30855e08f79ad"
+}
