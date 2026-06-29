@@ -1,0 +1,68 @@
+{
+  "pass": "site-002-delivery-summary-01",
+  "timestamp": "2026-06-29T00:03:09.285437+00:00",
+  "branch": "mars/canonical-post-recovery",
+  "checkpoint_pre": "f7d984c89c80a81d8e11a3c38e03055a9e02b586",
+  "files": {
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\catalog__view__theme__default__template__information__delivery.twig.pre-site-002-delivery-summary-01.bak",
+      "pre_sha256": "1d3ba241c489e61cbfa781073e4d99c06c75a4324a6b5ad98a3d4387a5e421a4",
+      "post_sha256": "19af3aa1a94c4253ce7bc889796ccf73c48f940f8d858aa630b21f7d76d35bbe",
+      "pre_bytes": 53367,
+      "post_bytes": 53684
+    },
+    "assets/css/style.css": {
+      "backup": "C:\\MARS Phenix\\AI MARS\\projects\\ocpilot\\sites\\site-002\\backups\\assets__css__style.css.pre-site-002-delivery-summary-01.bak",
+      "pre_sha256": "461703ed91749e5fcbb60d5d587adfd58c4f4e608032e24b7e16d3872ba21f62",
+      "post_sha256": "7470384cf7d585a3d853580716175d45a65ad09079e254caf1f1510030393b2d",
+      "pre_bytes": 429501,
+      "post_bytes": 430424
+    }
+  },
+  "sha256": {
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "pre": "1d3ba241c489e61cbfa781073e4d99c06c75a4324a6b5ad98a3d4387a5e421a4",
+      "post": "19af3aa1a94c4253ce7bc889796ccf73c48f940f8d858aa630b21f7d76d35bbe"
+    },
+    "assets/css/style.css": {
+      "pre": "461703ed91749e5fcbb60d5d587adfd58c4f4e608032e24b7e16d3872ba21f62",
+      "post": "7470384cf7d585a3d853580716175d45a65ad09079e254caf1f1510030393b2d"
+    }
+  },
+  "preflight": {
+    "catalog/view/theme/default/template/information/delivery.twig": {
+      "exists": true,
+      "pre_sha256": "1d3ba241c489e61cbfa781073e4d99c06c75a4324a6b5ad98a3d4387a5e421a4",
+      "pre_bytes": 53367
+    },
+    "assets/css/style.css": {
+      "exists": true,
+      "pre_sha256": "461703ed91749e5fcbb60d5d587adfd58c4f4e608032e24b7e16d3872ba21f62",
+      "pre_bytes": 429501
+    }
+  },
+  "twig_cache_cleared": [],
+  "qa": {
+    "url": "https://zpm.new-site.space/delivery",
+    "status": 200,
+    "checks": {
+      "http_ok": true,
+      "has_delivery_summary_wrapper": true,
+      "has_commercial_trust_services": true,
+      "has_service_cards": true,
+      "has_service_icons": true,
+      "no_legacy_summary_item": true,
+      "no_legacy_summary_label": true,
+      "has_geography_icon": true,
+      "has_warehouse_icon": true,
+      "has_shipping_icon": true,
+      "has_headset_icon": true,
+      "content_geography": true,
+      "content_shipment_points": true,
+      "content_methods": true,
+      "content_support": true,
+      "all_pass": true
+    }
+  },
+  "qa_all_pass": true
+}

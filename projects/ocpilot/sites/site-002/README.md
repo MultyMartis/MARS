@@ -33,7 +33,7 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 |------|-------|
 | **Authority checkpoint** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home CTA) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (fonts) |
 | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** | Operator manual edits on live TEST are the visual and behavioural authority |
-| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§28 Home Commercial Trust 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#28-home-commercial-trust-01--active), [§29 Corporate Intro Blocks 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#29-corporate-intro-image-blocks-01--active), [§30 PDP Body Category Classes 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#30-pdp-body-category-classes-01--active), [§31 Custom OEM Proof Strip 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#31-custom-oem-proof-strip--commercial-trust-reuse-active), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
+| **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§28 Home Commercial Trust 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#28-home-commercial-trust-01--active), [§29 Corporate Intro Blocks 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#29-corporate-intro-image-blocks-01--active), [§30 PDP Body Category Classes 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#30-pdp-body-category-classes-01--active), [§31 Custom OEM Proof Strip 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#31-custom-oem-proof-strip--commercial-trust-reuse-active), [§32 Delivery Summary 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#32-delivery-summary--commercial-trust-reuse-active), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history) |
 | **Operator manual JS (04B)** | [knowledge §12](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#12-operator-manual-js-refinements) · [registration report](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Conflict resolution** | If docs contradict current TEST → source of truth = live TEST on https://zpm.new-site.space/ |
 
@@ -93,6 +93,16 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 | Baseline doc | [baselines/SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01.md](baselines/SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01.md) |
 | Report | [reports/SITE-002-CUSTOM-PROOF-STRIP-RESTYLE.md](reports/SITE-002-CUSTOM-PROOF-STRIP-RESTYLE.md) |
 | Rollback | [custom-proof-strip-work/site-002-custom-proof-strip-rollback.py](reports/custom-proof-strip-work/site-002-custom-proof-strip-rollback.py) |
+
+### Delivery summary strip (2026-06-29)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01` |
+| Status | **ACTIVE** — Commercial Trust service cards on `/delivery` summary strip |
+| Baseline doc | [baselines/SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01.md](baselines/SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01.md) |
+| Report | [reports/SITE-002-DELIVERY-SUMMARY-RESTYLE.md](reports/SITE-002-DELIVERY-SUMMARY-RESTYLE.md) |
+| Rollback | [delivery-summary-work/site-002-delivery-summary-rollback.py](reports/delivery-summary-work/site-002-delivery-summary-rollback.py) |
 
 ### Prior checkpoint (About)
 

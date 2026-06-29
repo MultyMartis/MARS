@@ -1518,4 +1518,25 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§31 Custom OEM Proof Strip 01).*
+## 32. Delivery Summary — Commercial Trust Reuse (ACTIVE)
+
+**Checkpoint:** `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01`  
+**Scope:** `/delivery` — `.zpm-delivery-summary` only  
+**Status:** **ACTIVE / PASS** (2026-06-29)
+
+| Item | Value |
+|------|--------|
+| **Pattern authority** | `.zpm-commercial-trust__services` card grid (Home / catalog FAQ) |
+| **Wrapper** | `.zpm-delivery-summary` — margin reset + 4-col grid override only |
+| **Twig** | `catalog/view/theme/default/template/information/delivery.twig` |
+| **CSS** | Append block in `assets/css/style.css` — `SITE-002 — Delivery summary → commercial trust services reuse` |
+| **Icons** | `fad fa-map-marked-alt` · `fad fa-warehouse` · `fad fa-shipping-fast` · `fad fa-user-headset` |
+| **Report** | [SITE-002-DELIVERY-SUMMARY-RESTYLE.md](../reports/SITE-002-DELIVERY-SUMMARY-RESTYLE.md) |
+| **Baseline** | [SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01.md](../baselines/SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01.md) |
+| **Rollback** | `reports/delivery-summary-work/site-002-delivery-summary-rollback.py` |
+
+**Change rules:** Reuse Commercial Trust service classes; content meaning unchanged; sibling corp pages **out of scope**.
+
+---
+
+*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§32 Delivery Summary 01).*
