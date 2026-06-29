@@ -36,7 +36,7 @@
 
 | Rule | Value |
 |------|-------|
-| **Authority checkpoint** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (fonts) |
+| **Authority checkpoint** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (fonts) · `SITE-002-STABLE-LIVE-OPERATOR-MANUAL-POLISH-01` (visual baseline) · `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01` (corp intro) |
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
@@ -157,10 +157,10 @@
 | **Recovery status** | **CLOSED** (2026-06-28) — [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
-| **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
+| **Next phase** | **Production Development** — production promotion after operator gates (B6/B8/B1/B3) |
 | **Implementation (corp pages)** | M9.14–M9.18 **IMPLEMENTED** on TEST — program implementation phase **COMPLETE** (pending operator B6/B8) |
-| **Live About authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` |
-| **M9.13 redesign** | **ARCHIVED** · **NOT ACTIVE** — never implementation authority |
+| **Live About authority** | `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` |
+| **M9.13 redesign** | **RE-ACTIVATED** on TEST (2026-06-29) — see Knowledge Map **§17** |
 
 **Lifecycle:** Research → Corporate Pages Program → Recovery (**CLOSED**) → Production Development
 
@@ -255,7 +255,7 @@ M9.8.3 Homepage Hero · M9.8.4 PLP Density · M9.8.6 UltraWide · M9.8.7 EC-01 �
 Before next SITE-002 change:
 
 1. Read [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md)
-2. Use `SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01` as authority
+2. Use `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` as site-wide checkpoint authority; `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` for About
 3. For About page — read Knowledge Map **§17** + M9.13 restore/redesign/polish reports
 4. For filters / sort / pagination / limit / only_with_price — read Knowledge Map **§16** + passes 09A/09B/09C
 5. For filter / catalog / 1C / price / PLP — follow Knowledge Map §13 domain-specific PRE-TASK rule

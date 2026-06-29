@@ -12,7 +12,7 @@
 
 | Check | Result |
 |-------|--------|
-| Repository | `C:\MARS Phenix\AI MARS` |
+| Repository | `X:\AI MARS` |
 | Branch | `mars/canonical-post-recovery` |
 | HEAD (pre-task) | `6f90eb308019004eb1b037577903856052fd63b7` |
 | Working tree | Unrelated untracked files outside site-002 M9.17 scope — **not touched** |
@@ -185,9 +185,9 @@ Registered: **`SITE-002-STABLE-LIVE-M9.17-WARRANTY-01`** — see [baselines/SITE
 
 | Item | Value |
 |------|--------|
-| Commit | *(pending this report commit)* |
-| Push | `mars/canonical-post-recovery` *(pending)* |
-| HEAD | *(post-commit)* |
+| Commit | `6c357a69` — `feat(site-002): implement M9.17 Warranty corporate page on TEST` |
+| Push | **DONE** → `origin/mars/canonical-post-recovery` |
+| HEAD | `6c357a69cf8442a5aede923b28eb2c3a439d37f4` |
 
 ---
 

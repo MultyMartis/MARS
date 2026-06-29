@@ -17,12 +17,12 @@
 | **Recovery status** | **CLOSED** (2026-06-28) |
 | **Production status** | **READY AFTER OPERATOR GATES** |
 | **Current phase** | **PRODUCTION PREPARATION** |
-| **Next phase** | **Production Development** — Corporate Pages implementation after operator gates |
+| **Next phase** | **Production Development** — production promotion after operator gates (B6/B8/B1/B3) |
 | **Closeout** | [SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](../reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md) |
 
 **Lifecycle:** Research → Corporate Pages Program → Recovery (**CLOSED**) → Production Development
 
-**M9.13 About redesign:** **ARCHIVED** · **NOT ACTIVE** — live authority = restored pre-redesign only (`SITE-002-STABLE-LIVE-M9.13-ABOUT-COMPANY-RESTORED-01`). See **§17**.
+**M9.13 About redesign:** **RE-ACTIVATED** on TEST (2026-06-29) — live authority = `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`. Pre-redesign restore checkpoint retained as historical — see **§17**.
 
 **Operator implementation order (remaining pages):** M9.14 Delivery **IMPLEMENTED** · M9.15 Payment **IMPLEMENTED** · M9.17 Warranty **IMPLEMENTED** · M9.16 Dealers **IMPLEMENTED** · M9.18 Custom Manufacturing **IMPLEMENTED** — Corporate Pages Program implementation phase **COMPLETE on TEST** (pending operator B6/B8).
 
@@ -45,7 +45,7 @@
 - **Authority:** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (font delivery + TEST checkpoint; visual baseline from Operator Manual Polish 01 preserved)
 - **Supersedes:** `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`
 - **Catalog UX cluster:** filter recovery (06D–06M) → filter UX (04–08A) → tooltips (01) → Commercial Trust (03B/03C + operator polish) → catalog state persistence (09A–09C) → hub cleanup (10)
-- **About page:** M9.13 redesign **rejected by operator** — live `/about` **restored** to pre-redesign version (operator-approved restoration, not rollback failure)
+- **About page:** M9.13 redesign + polish v1 **re-activated** on TEST (2026-06-29) — authority `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`; prior rejection/restoration history in **§17**
 
 ### Manual UI refinements are canonical
 
@@ -1274,7 +1274,7 @@ M9.18 is the **terminal** Corporate Pages Program implementation milestone. Afte
 | **Status** | **REJECTED BY OPERATOR** (2026-06-28) — rolled back on TEST |
 | **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-01` — **historical / not active visual authority** |
 | **Current visual authority** | **Pre-Pass-1** — `style.css` SHA256 `8ad9397e52b44fb784c6e911031c1a68f2dbc6f83fe7597b53b3ec922dd1886c` |
-| **Audit** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md) |
+| **Audit** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-AUDIT-v1.md) — **TRACKED** (Scope A closeout 2026-06-30) |
 | **Implementation report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01.md) |
 | **Rollback report** | [SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01-ROLLBACK.md](../reports/SITE-002-CORPORATE-PAGES-VISUAL-POLISH-PASS-01-ROLLBACK.md) |
 | **Rejected patch** | [site-002-corp-visual-polish-pass1.css](../reports/site-002-visual-polish-pass1-work/site-002-corp-visual-polish-pass1.css) |
