@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "CORVONERO-COMMANDER-CT5-ORCHESTRATOR-REVIEW-v1",
+  "reviewed_at": "2026-06-30T00:00:00.000Z",
+  "orchestrator_path": "projects/mars-search-ppc-production/pilots/corvonero/tools/execute-ct5-commander-generation-v1.mjs",
+  "git_state": "untracked_new_file_at_review",
+  "repository_commit_at_review": "8943e07e5f6b45d8e6cfd209a30cac55e2f0bb86",
+  "purpose": "Generate five local Commander XLSX import candidates from committed CT-4 authority using commander-transport and Triumph patcher adapter; forensic-verify without Commander import or Direct API.",
+  "inputs": [
+    "pilots/corvonero/CORVONERO-CT4-AUTHORITY-MANIFEST-v1.json",
+    "CT-4 authority JSON roles via commander-transport authority-loader",
+    "projects/orca/ppc/triumph-manipulator/assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx"
+  ],
+  "outputs": [
+    "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5-FINAL-2026-06-30/*.xlsx",
+    "Storage manifest/validation/sha256/readme receipts",
+    "Pilot generation/manifest/forensic/result receipts",
+    "projects/mars-search-ppc-production/reports/REPORT-corvonero-commander-ct5-final-xlsx-generation-v1.md"
+  ],
+  "authority_dependencies": {
+    "ct4_authority_commit": "8943e07e5f6b45d8e6cfd209a30cac55e2f0bb86",
+    "safe_tooling_commit": "c81aadda412b473e99660605b38209e74cd683e9",
+    "manifest_path": "pilots/corvonero/CORVONERO-CT4-AUTHORITY-MANIFEST-v1.json"
+  },
+  "template_dependency": {
+    "path": "projects/orca/ppc/triumph-manipulator/assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx",
+    "sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+    "sheet_texts": "Тексты",
+    "header_row": 14,
+    "columns": 78
+  },
+  "filesystem_reads": [
+    "CT-4 authority manifest and referenced JSON",
+    "Commander template XLSX",
+    "Triumph exporter-cli modules via createRequire",
+    "commander-transport src modules",
+    "Existing output directory existence check"
+  ],
+  "filesystem_writes": [
+    "X:/AI MARS STORAGE/exports/corvonero/<RUN_ID>/ (XLSX + storage receipts only)",
+    "pilots/corvonero/CORVONERO-COMMANDER-CT5-* receipts",
+    "reports/REPORT-corvonero-commander-ct5-final-xlsx-generation-v1.md"
+  ],
+  "overwrite_policy": "FAIL_IF_OUTPUT_EXISTS unless prior validation JSON reports overall_status FAIL",
+  "delete_capability": "Conditional rmSync of entire output directory only when prior validation failed",
+  "network_capability": 0,
+  "credential_access": 0,
+  "git_capability": "read-only git rev-parse HEAD",
+  "semantic_cache_dependency": 0,
+  "commander_automation_capability": 0,
+  "yandex_direct_capability": 0,
+  "subprocess_usage": [
+    "powershell Get-Volume for AI WS label",
+    "git rev-parse HEAD"
+  ],
+  "determinism": "Payload build deterministic from frozen authority; XLSX binary SHA-256 non-deterministic across runs due to ZIP package metadata timestamps; populated workbook cells semantically reproducible",
+  "path_guards": [
+    "assertVolume AI WS",
+    "assertTemplateValid",
+    "assertApprovedOutputPath via commander-transport filesystem-guard",
+    "STORAGE_EXPORT_ROOT under X:/AI MARS STORAGE/exports/corvonero"
+  ],
+  "volume_label_guard": true,
+  "output_root_guard": true,
+  "security_zero_counts": {
+    "deprecated_cde_operational_paths": 0,
+    "network_access": 0,
+    "openrouter": 0,
+    "semantic_cache": 0,
+    "git_mutation": 0,
+    "commander_automation": 0,
+    "yandex_direct_access": 0,
+    "broad_delete": 0
+  },
+  "ct5_only_transport_fixes": {
+    "sheet_row_extension": {
+      "why_prior_limit": "Triumph patchSheet1DataRows patches existing row XML only; template prototype rows stop near row 84 while CA-01 requires 346 transport rows from row 16",
+      "mechanism": "Clone prototype row 16 XML for rows maxExisting+1..lastNeeded; update dimension ref only in sheet1.xml",
+      "preservation": "Styles/formulas/sharedStrings/relationships preserved via patchSheet1InWorkbook byte-preserving clone; sharedStrings introduction forbidden",
+      "scope": "sheet1.xml only before patchSheet1DataRows",
+      "max_tested_row_count": 346,
+      "failure_behaviour": "throws if prototype row 16 missing or sheetData close tag missing"
+    },
+    "metadata_key_translation": {
+      "mapping": [
+        {
+          "authority_key": "Тип кампании:",
+          "payload_key": "metadata_patches['Тип кампании:']",
+          "commander_destination": "campaigns.campaign_type metadata cell row 7 col 5",
+          "value_source": "payload-builder constant 'Текстово-графическая кампания'"
+        },
+        {
+          "authority_key": "Минус-фразы на кампанию:",
+          "payload_key": "metadata_patches['Минус-фразы на кампанию:']",
+          "commander_destination": "campaigns.campaign_negatives metadata cell row 9 col 5",
+          "value_source": "CT-4 campaign negatives authority"
+        },
+        {
+          "authority_key": "Оптимизировать текст объявлений под запрос:",
+          "payload_key": "metadata_patches['Оптимизировать текст объявлений под запрос:']",
+          "commander_destination": "campaigns.optimize_text metadata cell row 10 col 5",
+          "value_source": "payload-builder constant '0'"
+        },
+        {
+          "authority_key": "Объект продвижения:",
+          "payload_key": "metadata_patches['Объект продвижения:']",
+          "commander_destination": "campaigns.promotion_url metadata cell row 11 col 5",
+          "value_source": "first campaign group ad landing URL base without query/fragment"
+        },
+        {
+          "authority_key": "№ заказа:",
+          "payload_key": "metadata_patches['№ заказа:']",
+          "commander_destination": "campaigns.currency metadata cell row 8 col 8",
+          "value_source": "payload-builder constant 'RUB'"
+        }
+      ],
+      "strategic_values_invented": false
+    },
+    "fastlink_clearing": {
+      "fields_cleared": [
+        "extensions.fastlink_titles col 58",
+        "extensions.fastlink_descriptions col 59",
+        "extensions.fastlink_urls col 60"
+      ],
+      "policy": "OMITTED per CT-4 transport_config sitelinks_policy",
+      "unrelated_metadata_risk": "none — data-table columns only via buildFillRows empty strings",
+      "all_five_outputs_empty": true
+    },
+    "organization_blanking": {
+      "data_column": 50,
+      "semantic_field": "Организация из Яндекс Бизнеса:",
+      "metadata_cell": "row 12 col 5",
+      "input_before_blanking": "template prototype row 16 may carry sample org residue; payload organization already ''",
+      "output_values": "blank",
+      "forbidden_id_occurrences": 0,
+      "classification": "final_safety_guard_compensating_upstream_defect",
+      "upstream_defect": "base commander-transport patcher adapter does not clear organization metadata cell or column 50 after row clone; TEMPLATE_METADATA_CELL_MAP lacks organization entry"
+    }
+  },
+  "classification": "SAFE FOR THIS FROZEN CT-5 OUTPUT BUT REQUIRES BASE TOOLING PATCH BEFORE REUSE",
+  "base_tooling_patch_recommendation": [
+    "extendSheetForExport",
+    "translateMetadataPatches or emit logical metadataPatches in payload-builder",
+    "organization blanking post-patch",
+    "fastlink empty defaults already partially duplicated in commander-patcher-adapter"
+  ],
+  "original_output_hash_verification": {
+    "task_binding_match": false,
+    "on_disk_manifest_match": true,
+    "note": "Task binding SHA-256 values not attested in storage or repository; recalculated on-disk hashes match manifest and generation receipts"
+  },
+  "on_disk_xlsx_hashes": {
+    "CA-01": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2",
+    "CA-02": "5938c31485f91ec7816c32af8fa58eebee154a6dc54953368c5d22d3ff29e30c",
+    "CA-03": "3757acacc35f9262ac8b14ea52e6c2fcfc5910fc35053f1e7ccac086a6a88726",
+    "CA-04": "c2689e23736d91c65eb76bd72beb8984a0d8b82d352a8e42ac6755d5e9af37c1",
+    "CA-05": "8a39b1a280e7ef16b7420ddaa850e1dae1c14bf2fc58e7b6b9d7860beacfa129"
+  },
+  "storage_receipt_hashes": {
+    "CORVONERO-COMMANDER-CT5-MANIFEST-v1.json": "bf4faeb864416bc78898261767cd326624c93166929df107171be6aed03f9e89",
+    "CORVONERO-COMMANDER-CT5-VALIDATION-v1.json": "b5ce875a7c773bf92a375467e2cd412158a57221813373aec673db8a94094dbb",
+    "CORVONERO-COMMANDER-CT5-SHA256-v1.txt": "39ee4bd967aa3f786c1c20cab0445d63775a168dadaa4d6c6a1638f95ba34a4d"
+  }
+}

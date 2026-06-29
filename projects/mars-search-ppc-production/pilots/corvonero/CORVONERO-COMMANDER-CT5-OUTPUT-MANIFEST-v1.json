@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "CORVONERO-COMMANDER-CT5-FINAL-2026-06-30",
+  "generated_at": "2026-06-29T19:36:44.120Z",
+  "repository_commit": "8943e07e5f6b45d8e6cfd209a30cac55e2f0bb86",
+  "safe_tooling_commit": "c81aadda412b473e99660605b38209e74cd683e9",
+  "ct4_authority_commit": "8943e07e5f6b45d8e6cfd209a30cac55e2f0bb86",
+  "authority_file_hashes": {
+    "CORVONERO-CT4-PHRASE-MOVEMENT-REGISTER-v1.json": "b74a2a48334c9baadb97321f93d86d9abf5dff0481cab0876e0e6fe68356cee8",
+    "CORVONERO-CT4-GROUP-ARCHITECTURE-v1.json": "380f35ee50c2b8816e3b39612d0d2351d32cd4871a696482eb2248a7a9de85e4",
+    "CORVONERO-CT4-PRIMARY-ADS-v1.json": "ff5fe5d6ba02213f52c43bc54ba28fbde8b36e4420c3e1e3599c63efe228d10c",
+    "CORVONERO-EXT-W1-CALLOUTS-v2.json": "c3a957f7db7de183625e2e991f1f0156b68762c73f9df3343dc8977aced8846a",
+    "CORVONERO-CT4-CAMPAIGN-NEGATIVES-v1.json": "9f12f7f4db9449519da4068ed301c8e8d624aaaf47bc497f25b4caa341f63b5e",
+    "CORVONERO-CT4-GROUP-NEGATIVES-v1.json": "4a47a86f2c9dacc870f81a8a360c6410bd11a990c7e646816fba1e0093102a97",
+    "CORVONERO-CT4-INTER-CAMPAIGN-ROUTING-v1.json": "247919a7bee21daf967139d940c97837756a029a5dc7e513a382d7fd59896ef9",
+    "CORVONERO-CT4-UTM-MAP-v1.json": "173c2432375959e0e6bf6078fe0ad5d86a0c1d8a86921b434b24c1de961bb19b",
+    "CORVONERO-CT4-CAMPAIGN-SETTINGS-v1.json": "ef355f9a5a021306ed77af400b918f3831aeb607dd501d88ef9c94ff58f60cdc",
+    "CORVONERO-CT4-TRANSPORT-CONFIG-v1.json": "c2db6677774a171d8c5a4850e4ab28a4b36d40ba2ad54ab064727ff4ae9bd1e0"
+  },
+  "template_path": "X:\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v1.xlsx",
+  "template_sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+  "output_directory": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30",
+  "output_files": [
+    {
+      "campaign_id": "CA-01",
+      "filename": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2",
+      "rows_written": 346,
+      "keyword_rows": 339,
+      "ad_rows": 7,
+      "bid": 500
+    },
+    {
+      "campaign_id": "CA-02",
+      "filename": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "5938c31485f91ec7816c32af8fa58eebee154a6dc54953368c5d22d3ff29e30c",
+      "rows_written": 157,
+      "keyword_rows": 153,
+      "ad_rows": 4,
+      "bid": 400
+    },
+    {
+      "campaign_id": "CA-03",
+      "filename": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "3757acacc35f9262ac8b14ea52e6c2fcfc5910fc35053f1e7ccac086a6a88726",
+      "rows_written": 79,
+      "keyword_rows": 76,
+      "ad_rows": 3,
+      "bid": 400
+    },
+    {
+      "campaign_id": "CA-04",
+      "filename": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "c2689e23736d91c65eb76bd72beb8984a0d8b82d352a8e42ac6755d5e9af37c1",
+      "rows_written": 49,
+      "keyword_rows": 48,
+      "ad_rows": 1,
+      "bid": 400
+    },
+    {
+      "campaign_id": "CA-05",
+      "filename": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "8a39b1a280e7ef16b7420ddaa850e1dae1c14bf2fc58e7b6b9d7860beacfa129",
+      "rows_written": 223,
+      "keyword_rows": 217,
+      "ad_rows": 6,
+      "bid": 400
+    }
+  ],
+  "per_campaign_counts": {
+    "CA-01": {
+      "groups": 7,
+      "keywords": 339,
+      "bid": 500
+    },
+    "CA-02": {
+      "groups": 4,
+      "keywords": 153,
+      "bid": 400
+    },
+    "CA-03": {
+      "groups": 3,
+      "keywords": 76,
+      "bid": 400
+    },
+    "CA-04": {
+      "groups": 1,
+      "keywords": 48,
+      "bid": 400
+    },
+    "CA-05": {
+      "groups": 6,
+      "keywords": 217,
+      "bid": 400
+    }
+  },
+  "totals": {
+    "campaigns": 5,
+    "groups": 21,
+    "keyword_rows": 833,
+    "primary_ad_rows": 21,
+    "groups_over_200": 0
+  },
+  "validation_result": {
+    "pre_generation": "PASS",
+    "forensic": "PASS",
+    "violations": 0,
+    "warnings": [
+      "CROSS_CAMPAIGN_NOT_APPLIED"
+    ]
+  },
+  "generation_authorized": true,
+  "import_authorized": false,
+  "server_upload_authorized": false,
+  "launch_authorized": false
+}

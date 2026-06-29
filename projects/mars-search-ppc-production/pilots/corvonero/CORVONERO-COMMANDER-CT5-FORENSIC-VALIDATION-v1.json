@@ -1,0 +1,743 @@
+{
+  "run_id": "CORVONERO-COMMANDER-CT5-FINAL-2026-06-30",
+  "verified_at": "2026-06-29T19:36:44.120Z",
+  "results": [
+    {
+      "campaign_id": "CA-01",
+      "filename": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "header_row_14",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "339"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "144"
+        },
+        {
+          "check": "one_primary_ad_per_group",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_blank",
+          "status": "PASS",
+          "message": "metadata + data rows checked"
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "group_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_term_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 7,
+        "keyword_rows": 339,
+        "ad_rows": 7,
+        "total_populated_transport_rows": 346,
+        "max_group_keyword_count": 144,
+        "phrase_distribution": {
+          "Программист / специалист 1С — direct service order": 4,
+          "Программист / специалист 1С — find / hire specialist": 14,
+          "Программист / специалист 1С — Price / cost intent": 23,
+          "Программист / специалист 1С — remote / freelance / local": 12,
+          "Программист / специалист 1С — product / role variants": 10,
+          "Программист / специалист 1С — extended specialist queries": 132,
+          "Программист / специалист 1С — core specialist search": 144
+        }
+      }
+    },
+    {
+      "campaign_id": "CA-02",
+      "filename": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "5938c31485f91ec7816c32af8fa58eebee154a6dc54953368c5d22d3ff29e30c",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "header_row_14",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "153"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "137"
+        },
+        {
+          "check": "one_primary_ad_per_group",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_blank",
+          "status": "PASS",
+          "message": "metadata + data rows checked"
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "group_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_term_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 4,
+        "keyword_rows": 153,
+        "ad_rows": 4,
+        "total_populated_transport_rows": 157,
+        "max_group_keyword_count": 137,
+        "phrase_distribution": {
+          "Сопровождение и обслуживание 1С — direct service order": 13,
+          "Сопровождение и обслуживание 1С — Price / cost intent": 1,
+          "Сопровождение и обслуживание 1С — support and maintenance": 137,
+          "Сопровождение и обслуживание 1С — 1С не работает / ошибки / восстановление работы": 2
+        }
+      }
+    },
+    {
+      "campaign_id": "CA-03",
+      "filename": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "3757acacc35f9262ac8b14ea52e6c2fcfc5910fc35053f1e7ccac086a6a88726",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "header_row_14",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "76"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "69"
+        },
+        {
+          "check": "one_primary_ad_per_group",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_blank",
+          "status": "PASS",
+          "message": "metadata + data rows checked"
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "group_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_term_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 3,
+        "keyword_rows": 76,
+        "ad_rows": 3,
+        "total_populated_transport_rows": 79,
+        "max_group_keyword_count": 69,
+        "phrase_distribution": {
+          "Доработка и разработка 1С — direct service order": 2,
+          "Доработка и разработка 1С — implementation": 5,
+          "Доработка и разработка 1С — modification": 69
+        }
+      }
+    },
+    {
+      "campaign_id": "CA-04",
+      "filename": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "c2689e23736d91c65eb76bd72beb8984a0d8b82d352a8e42ac6755d5e9af37c1",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "header_row_14",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "one_primary_ad_per_group",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_blank",
+          "status": "PASS",
+          "message": "metadata + data rows checked"
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "group_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_term_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 1,
+        "keyword_rows": 48,
+        "ad_rows": 1,
+        "total_populated_transport_rows": 49,
+        "max_group_keyword_count": 48,
+        "phrase_distribution": {
+          "Интеграции 1С — integration": 48
+        }
+      }
+    },
+    {
+      "campaign_id": "CA-05",
+      "filename": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5-FINAL-2026-06-30\\CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "sha256": "8a39b1a280e7ef16b7420ddaa850e1dae1c14bf2fc58e7b6b9d7860beacfa129",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "header_row_14",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "217"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "104"
+        },
+        {
+          "check": "one_primary_ad_per_group",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_blank",
+          "status": "PASS",
+          "message": "metadata + data rows checked"
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "group_negatives",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_term_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 6,
+        "keyword_rows": 217,
+        "ad_rows": 6,
+        "total_populated_transport_rows": 223,
+        "max_group_keyword_count": 104,
+        "phrase_distribution": {
+          "Маркировка / Честный знак — Chestny Znak service": 104,
+          "Маркировка / Честный знак — integration": 14,
+          "Маркировка / Честный знак — marking codes setup": 5,
+          "Маркировка / Честный знак — general marking setup": 88,
+          "Маркировка / Честный знак — support and maintenance": 2,
+          "Маркировка / Честный знак — TS ПИОТ": 4
+        }
+      }
+    }
+  ],
+  "overall": "PASS"
+}

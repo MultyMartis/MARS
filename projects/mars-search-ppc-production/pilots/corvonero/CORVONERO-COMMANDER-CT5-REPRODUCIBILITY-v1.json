@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "repro_id": "CORVONERO-COMMANDER-CT5-REPRODUCIBILITY-v1",
+  "verified_at": "2026-06-30T00:00:00.000Z",
+  "original_directory": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5-FINAL-2026-06-30",
+  "repro_directory": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5-REPRO-CHECK-2026-06-30",
+  "authority_commit": "8943e07e5f6b45d8e6cfd209a30cac55e2f0bb86",
+  "template_sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+  "binary_sha256_match": false,
+  "normalized_workbook_content": "IDENTICAL",
+  "forensic_totals_original": {
+    "campaigns": 5,
+    "groups": 21,
+    "keyword_rows": 833,
+    "primary_ads": 21,
+    "groups_over_200": 0
+  },
+  "forensic_totals_repro": {
+    "campaigns": 5,
+    "groups": 21,
+    "keyword_rows": 833,
+    "primary_ads": 21,
+    "groups_over_200": 0
+  },
+  "per_file": [
+    {
+      "file": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.xlsx",
+      "orig_hash": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2",
+      "repro_hash": "fa3cb06fb35e56888029ceb0faf0d2ed325c9e64c6dbe64c3bbf867575d411fc",
+      "binary_match": false,
+      "semantic_match": true,
+      "groups": 7,
+      "keyword_rows": 339,
+      "primary_ads": 7
+    },
+    {
+      "file": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.xlsx",
+      "orig_hash": "5938c31485f91ec7816c32af8fa58eebee154a6dc54953368c5d22d3ff29e30c",
+      "repro_hash": "dcaabd4da3d2db1d0e4e7e54d33b96d703bd202b744e78d4fd7b6b0b24c7ec73",
+      "binary_match": false,
+      "semantic_match": true,
+      "groups": 4,
+      "keyword_rows": 153,
+      "primary_ads": 4
+    },
+    {
+      "file": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "orig_hash": "3757acacc35f9262ac8b14ea52e6c2fcfc5910fc35053f1e7ccac086a6a88726",
+      "repro_hash": "bec42df7d1e8c6a3418fc77d55d542d998298ca395ecf49c4df0451110142004",
+      "binary_match": false,
+      "semantic_match": true,
+      "groups": 3,
+      "keyword_rows": 76,
+      "primary_ads": 3
+    },
+    {
+      "file": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v2.xlsx",
+      "orig_hash": "c2689e23736d91c65eb76bd72beb8984a0d8b82d352a8e42ac6755d5e9af37c1",
+      "repro_hash": "7b6e47f9bcebb3210ca3e72771c8e8881c280dfef7ff079fc2ca7520b0ac1814",
+      "binary_match": false,
+      "semantic_match": true,
+      "groups": 1,
+      "keyword_rows": 48,
+      "primary_ads": 1
+    },
+    {
+      "file": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v2.xlsx",
+      "orig_hash": "8a39b1a280e7ef16b7420ddaa850e1dae1c14bf2fc58e7b6b9d7860beacfa129",
+      "repro_hash": "b6ac949a9d524314c8f118248f28ddb206c5ffeff4ecf820a034f43f8912a032",
+      "binary_match": false,
+      "semantic_match": true,
+      "groups": 6,
+      "keyword_rows": 217,
+      "primary_ads": 6
+    }
+  ],
+  "zip_entry_diff_classification": [
+    {
+      "entry": "docProps/core.xml",
+      "harmless_metadata": true,
+      "note": "dc:created / dc:modified timestamps differ per generation run"
+    },
+    {
+      "entry": "docProps/app.xml",
+      "harmless_metadata": true,
+      "note": "Application metadata refresh on ZIP rebuild"
+    },
+    {
+      "entry": "[Content_Types].xml",
+      "harmless_metadata": true,
+      "note": "Package rebuild artifact; sheet1 semantic content identical"
+    }
+  ],
+  "semantic_checks_all_ten_files": {
+    "region": "Новосибирская область",
+    "organization_blank": true,
+    "forbidden_organization_id": 0,
+    "sitelinks_omitted": true,
+    "utm_term_absent": true,
+    "keyword_macro_absent": true,
+    "header_row_14": true,
+    "columns_78": true,
+    "verdict": "PASS"
+  },
+  "verdict": "PASS — semantic reproducibility confirmed; binary hashes differ only by ZIP package metadata"
+}
