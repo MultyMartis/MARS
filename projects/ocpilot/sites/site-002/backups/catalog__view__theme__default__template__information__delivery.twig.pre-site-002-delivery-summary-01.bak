@@ -1,0 +1,523 @@
+{{ header }}
+
+<main class="main zpm-delivery-page">
+  <section class="zpm-corp-page-lead zpm-corp-intro" aria-label="Вводная информация">
+    <div class="container">
+      <div class="zpm-corp-intro__grid">
+        <div class="zpm-corp-intro__media">
+          <img src="/assets/img/corporate/delivery-intro.jpg" alt="Подготовка оборудования к отправке" loading="lazy" />
+        </div>
+        <div class="zpm-corp-intro__body zpm-corp-page-lead__body">
+          {{ page_lead|raw }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {# BLOCK 02 — Shipment points #}
+  <section class="zpm-delivery-section zpm-delivery-points" id="zpm-delivery-points" aria-labelledby="zpm-delivery-points-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-points-title">Откуда осуществляется отгрузка</h2>
+      <p class="zpm-delivery-section__intro">ЗПМ работает с&nbsp;<strong>двумя точками отгрузки</strong> — без расширенной сети складов. Выбор точки зависит от&nbsp;наличия позиций, региона заказчика и&nbsp;согласованного способа получения.</p>
+
+      <div class="zpm-delivery-points__grid">
+        <article class="zpm-delivery-point-card">
+          <span class="zpm-delivery-point-card__icon" aria-hidden="true"><i class="fad fa-industry"></i></span>
+          <p class="zpm-delivery-point-card__caption">Производство и&nbsp;основной склад</p>
+          <h3 class="zpm-delivery-point-card__title">Барнаул</h3>
+          <p class="zpm-delivery-point-card__role">Изготовление, комплектация и&nbsp;отгрузка серийной продукции; самовывоз и&nbsp;передача транспортной компании</p>
+          <p class="zpm-delivery-point-card__address">656011, Россия, Алтайский край, г.&nbsp;Барнаул, проспект Калинина,&nbsp;15в</p>
+        </article>
+
+        <article class="zpm-delivery-point-card">
+          <span class="zpm-delivery-point-card__icon" aria-hidden="true"><i class="fad fa-warehouse"></i></span>
+          <p class="zpm-delivery-point-card__caption">Склад партнёра для центрального региона</p>
+          <h3 class="zpm-delivery-point-card__title">Московская область</h3>
+          <p class="zpm-delivery-point-card__role">Отгрузка для заказчиков в&nbsp;центральном регионе; самовывоз и&nbsp;передача транспортной компании</p>
+          <p class="zpm-delivery-point-card__address">141870, Россия, Московская область, м.о. Дмитровский, пос. Никольское,&nbsp;204</p>
+        </article>
+      </div>
+
+      <div class="zpm-delivery-points__body">
+        <p>Основная производственная площадка и&nbsp;склад серийной продукции расположены в&nbsp;Барнауле — здесь изготавливается оборудование и&nbsp;отсюда выполняется большинство отгрузок.</p>
+        <p>Склад партнёра в&nbsp;Московской области используется для удобства логистики заказчиков центрального региона: часть позиций может быть передана на&nbsp;отгрузку оттуда — если это согласовано при оформлении заказа.</p>
+      </div>
+
+      <p class="zpm-delivery-section__note">Юридический адрес и&nbsp;реквизиты компании, график работы офиса и&nbsp;схема проезда к&nbsp;площадке в&nbsp;Барнауле — на&nbsp;странице <a href="/contact/">Контакты</a>. Адрес точки отгрузки для конкретного заказа уточняет менеджер.</p>
+    </div>
+  </section>
+
+  {# BLOCK 01 — Organization #}
+  <section class="zpm-delivery-section zpm-delivery-org" id="zpm-delivery-org" aria-labelledby="zpm-delivery-org-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-org-title">Как организована доставка оборудования</h2>
+
+      <div class="zpm-delivery-org__body">
+        <p>Доставка зависит от&nbsp;типа позиций в&nbsp;заказе:</p>
+        <ul class="zpm-delivery-org__list">
+          <li><strong>Серийное оборудование в&nbsp;наличии</strong> — после выполнения условий оплаты заказ передаётся на&nbsp;отгрузку с&nbsp;ближайшей доступной точки.</li>
+          <li><strong>Позиции под заказ или изготовление на&nbsp;заказ</strong> — отгрузка после готовности на&nbsp;производстве; срок фиксируется в&nbsp;коммерческом предложении. Подробности — на&nbsp;странице <a href="/custom-equipment">Оборудование на&nbsp;заказ</a>.</li>
+          <li><strong>Региональные поставки</strong> — отправка транспортной компанией или самовывоз с&nbsp;одной из&nbsp;двух точек отгрузки.</li>
+        </ul>
+        <p>Менеджер сопровождения заказа проводит согласование до&nbsp;отправки: точка отгрузки, способ получения, данные для перевозки и&nbsp;— при доставке ТК — информация для отслеживания.</p>
+      </div>
+
+      <dl class="zpm-delivery-summary">
+        <div class="zpm-delivery-summary__item">
+          <dt class="zpm-delivery-summary__label">География</dt>
+          <dd class="zpm-delivery-summary__value">Поставки по&nbsp;России</dd>
+        </div>
+        <div class="zpm-delivery-summary__item">
+          <dt class="zpm-delivery-summary__label">Точки отгрузки</dt>
+          <dd class="zpm-delivery-summary__value">Барнаул · склад партнёра в&nbsp;Московской области</dd>
+        </div>
+        <div class="zpm-delivery-summary__item">
+          <dt class="zpm-delivery-summary__label">Способы получения</dt>
+          <dd class="zpm-delivery-summary__value">Самовывоз · транспортная компания</dd>
+        </div>
+        <div class="zpm-delivery-summary__item">
+          <dt class="zpm-delivery-summary__label">Сопровождение</dt>
+          <dd class="zpm-delivery-summary__value">Менеджер заказа на&nbsp;этапе отгрузки</dd>
+        </div>
+      </dl>
+
+      <p class="zpm-delivery-section__helper">Конкретный способ получения, точка отгрузки и&nbsp;ориентиры по&nbsp;срокам фиксируются в&nbsp;коммерческом предложении или при подтверждении заказа.</p>
+    </div>
+  </section>
+
+  {# BLOCK 03 — Methods (H3 stack) #}
+  <section class="zpm-delivery-section zpm-delivery-methods" id="zpm-delivery-methods" aria-labelledby="zpm-delivery-methods-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-methods-title">Способы получения оборудования</h2>
+      <p class="zpm-delivery-section__intro">Заказчик выбирает один из&nbsp;согласованных способов получения. Менеджер поможет подобрать вариант с&nbsp;учётом региона, габаритов груза и&nbsp;сроков ввода оборудования в&nbsp;эксплуатацию.</p>
+
+      <div class="zpm-delivery-methods__stack">
+        <article class="zpm-delivery-method">
+          <h3 class="zpm-delivery-method__title section-title__like-h3">Доставка транспортной компанией</h3>
+          <p>Оборудование передаётся в&nbsp;транспортную компанию и&nbsp;доставляется до&nbsp;терминала или адреса получателя — в&nbsp;зависимости от&nbsp;выбранного тарифа и&nbsp;условий перевозчика. Отправка возможна в&nbsp;любой регион России.</p>
+          <p>Менеджер помогает согласовать перевозчика и&nbsp;подготовить данные для оформления отправки. После передачи груза вы&nbsp;получаете информацию для отслеживания доставки.</p>
+        </article>
+
+        <article class="zpm-delivery-method">
+          <h3 class="zpm-delivery-method__title section-title__like-h3">Самовывоз с&nbsp;производственной площадки в&nbsp;Барнауле</h3>
+          <p>Вы&nbsp;забираете оборудование по&nbsp;адресу: г.&nbsp;Барнаул, проспект Калинина,&nbsp;15в. Перед приездом <strong>согласуйте дату и&nbsp;время</strong> получения с&nbsp;менеджером — чтобы заказ был скомплектован и&nbsp;подготовлен к&nbsp;выдаче.</p>
+        </article>
+
+        <article class="zpm-delivery-method">
+          <h3 class="zpm-delivery-method__title section-title__like-h3">Самовывоз со&nbsp;склада партнёра в&nbsp;Московской области</h3>
+          <p>Вы&nbsp;забираете оборудование по&nbsp;адресу склада партнёра: Московская область, м.о. Дмитровский, пос. Никольское,&nbsp;204. Возможность и&nbsp;срок самовывоза с&nbsp;этой точки согласуются при оформлении заказа.</p>
+        </article>
+
+        <article class="zpm-delivery-method">
+          <h3 class="zpm-delivery-method__title section-title__like-h3">Крупногабарит и&nbsp;комплексные поставки</h3>
+          <p>Габаритное или нестандартное оборудование, а&nbsp;также поставки на&nbsp;весь объект могут потребовать отдельного согласования логистики. Параметры изделия и&nbsp;особенности перевозки обсуждаются с&nbsp;менеджером; для изделий на&nbsp;заказ — на&nbsp;странице <a href="/custom-equipment">Оборудование на&nbsp;заказ</a>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {# BLOCK 04 — Timeline #}
+  <section class="zpm-delivery-section zpm-delivery-timeline-section" id="zpm-delivery-timeline" aria-labelledby="zpm-delivery-timeline-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-timeline-title">Как проходит отгрузка</h2>
+      <p class="zpm-delivery-section__intro">После согласования заказа и&nbsp;выполнения условий оплаты процесс отгрузки проходит по&nbsp;понятным этапам. Менеджер информирует вас о&nbsp;готовности и&nbsp;следующем шаге.</p>
+
+      <ol class="zpm-corp-timeline zpm-delivery-timeline" aria-label="Этапы отгрузки оборудования">
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">1</span>
+          <span class="zpm-corp-timeline__badge-label">Оплата</span>
+          <h3 class="zpm-corp-timeline__title">Согласование заказа и&nbsp;оплата</h3>
+          <p class="zpm-corp-timeline__text">Вы&nbsp;подтверждаете состав заказа; для юридических лиц выставляется счёт. После выполнения условий оплаты заказ передаётся на&nbsp;комплектацию или в&nbsp;производство — в&nbsp;зависимости от&nbsp;типа позиций. Подробности по&nbsp;оплате — на&nbsp;странице <a href="/payment-methods">Оплата</a></p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">2</span>
+          <span class="zpm-corp-timeline__badge-label">Комплектация</span>
+          <h3 class="zpm-corp-timeline__title">Комплектация или изготовление</h3>
+          <p class="zpm-corp-timeline__text">Серийные позиции в&nbsp;наличии готовятся к&nbsp;отгрузке на&nbsp;складе. Позиции под заказ или изделия на&nbsp;заказ изготавливаются на&nbsp;производстве в&nbsp;Барнауле — отгрузка после готовности</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">3</span>
+          <span class="zpm-corp-timeline__badge-label">Подготовка</span>
+          <h3 class="zpm-corp-timeline__title">Подготовка к&nbsp;отправке</h3>
+          <p class="zpm-corp-timeline__text">Оборудование проверяется, комплектуется и&nbsp;подготавливается к&nbsp;передаче: самовывоз или передача перевозчику</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">4</span>
+          <span class="zpm-corp-timeline__badge-label">Упаковка</span>
+          <h3 class="zpm-corp-timeline__title">Упаковка</h3>
+          <p class="zpm-corp-timeline__text">Перед отправкой выполняется упаковка и&nbsp;подготовка к&nbsp;транспортировке — чтобы оборудование доехало до&nbsp;получателя в&nbsp;надлежащем виде</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">5</span>
+          <span class="zpm-corp-timeline__badge-label">Передача</span>
+          <h3 class="zpm-corp-timeline__title">Передача груза</h3>
+          <p class="zpm-corp-timeline__text">При самовывозе — выдача по&nbsp;согласованному адресу после подтверждения личности и&nbsp;полномочий получателя. При доставке ТК — передача груза выбранной транспортной компании</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">6</span>
+          <span class="zpm-corp-timeline__badge-label">Документы</span>
+          <h3 class="zpm-corp-timeline__title">Документы и&nbsp;информация для получения</h3>
+          <p class="zpm-corp-timeline__text">Вы&nbsp;получаете комплект отгрузочных и&nbsp;закрывающих документов по&nbsp;правилам для юридических лиц, а&nbsp;также данные для отслеживания отправки — если выбрана доставка через транспортную компанию</p>
+        </li>
+        <li class="zpm-corp-timeline__step">
+          <span class="zpm-corp-timeline__badge" aria-hidden="true">7</span>
+          <span class="zpm-corp-timeline__badge-label">Получение</span>
+          <h3 class="zpm-corp-timeline__title">Получение на&nbsp;объекте</h3>
+          <p class="zpm-corp-timeline__text">Оборудование принимается на&nbsp;терминале перевозчика или по&nbsp;адресу — согласно условиям выбранного тарифа. При приёмке проверьте комплектность и&nbsp;целостность; при расхождениях — свяжитесь с&nbsp;менеджером</p>
+        </li>
+      </ol>
+
+      <p class="zpm-delivery-section__note">Срок готовности к&nbsp;отгрузке зависит от&nbsp;наличия позиций, объёма заказа и&nbsp;— для изделий на&nbsp;заказ — от&nbsp;срока изготовления, указанного в&nbsp;коммерческом предложении. Конкретные ориентиры сообщает менеджер при подтверждении заказа.</p>
+      <p class="zpm-delivery-timeline__handoff"><a href="/payment-methods">Когда начинается отгрузка после оплаты</a></p>
+    </div>
+  </section>
+
+  {# BLOCK 05 — Packaging #}
+  <section class="zpm-delivery-section zpm-delivery-packaging" id="zpm-delivery-packaging" aria-labelledby="zpm-delivery-packaging-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-packaging-title">Как подготовлено оборудование к&nbsp;отправке</h2>
+      <p class="zpm-delivery-section__intro">Перед передачей заказчику или перевозчику оборудование проходит подготовку на&nbsp;стороне завода. Это снижает риск повреждений при транспортировке и&nbsp;упрощает приёмку на&nbsp;объекте.</p>
+
+      <div class="zpm-delivery-packaging__stack">
+        <article class="zpm-delivery-packaging__item">
+          <h3 class="zpm-delivery-packaging__title section-title__like-h3">Комплектация и&nbsp;проверка</h3>
+          <p>Заказ собирается по&nbsp;согласованной спецификации. Перед отгрузкой выполняется проверка готового оборудования и&nbsp;комлектность позиций — чтобы вы&nbsp;получили то, что было согласовано в&nbsp;заказе.</p>
+        </article>
+        <article class="zpm-delivery-packaging__item">
+          <h3 class="zpm-delivery-packaging__title section-title__like-h3">Упаковка для транспортировки</h3>
+          <p>Оборудование упаковывается и&nbsp;подготавливается к&nbsp;перевозке с&nbsp;учётом габаритов и&nbsp;конструктивных особенностей изделия. Цель — защитить изделие при погрузке, транспортировке и&nbsp;выгрузке.</p>
+        </article>
+        <article class="zpm-delivery-packaging__item">
+          <h3 class="zpm-delivery-packaging__title section-title__like-h3">Документы на&nbsp;отгрузку</h3>
+          <p>К&nbsp;отправке готовится комплект документов:</p>
+          <ul class="zpm-delivery-packaging__list">
+            <li>отгрузочные документы для передачи груза;</li>
+            <li>закрывающие документы для юридических лиц — по&nbsp;факту отгрузки;</li>
+            <li>документы на&nbsp;продукцию (паспорт изделия, декларация или сертификат соответствия — если предусмотрены для данной категории оборудования).</li>
+          </ul>
+          <p>Перечень документов по&nbsp;конкретной позиции указывается в&nbsp;коммерческом предложении или по&nbsp;запросу менеджера. Порядок оплаты и&nbsp;типы закрывающих документов — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+        </article>
+        <article class="zpm-delivery-packaging__item">
+          <h3 class="zpm-delivery-packaging__title section-title__like-h3">Передача перевозчику</h3>
+          <p>При отправке транспортной компанией груз передаётся перевозчику с&nbsp;оформлением, необходимым для перевозки. После передачи менеджер направляет вам информацию для отслеживания отправки.</p>
+        </article>
+      </div>
+
+      <p class="zpm-delivery-section__disclaimer">ЗПМ не&nbsp;публикует на&nbsp;этой странице внутренние регламенты упаковки или пооперационные инструкции склада: конкретная подготовка зависит от&nbsp;типа изделия и&nbsp;способа отправки. Если для вашей закупки важны особые требования к&nbsp;упаковке или маркировке — сообщите об&nbsp;этом менеджеру до&nbsp;отгрузки.</p>
+    </div>
+  </section>
+
+  {# BLOCK 06 — Coverage #}
+  <section class="zpm-delivery-section zpm-delivery-coverage" id="zpm-delivery-coverage" aria-labelledby="zpm-delivery-coverage-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-coverage-title">Доставка по&nbsp;России</h2>
+      <p class="zpm-delivery-section__intro">ЗПМ поставляет оборудование предприятиям общепита и&nbsp;пищевых производств <strong>по&nbsp;всей территории России</strong>. Регион заказчика не&nbsp;задаёт «особый режим» — удалённая поставка оборудования является типовой практикой B2B-закупки.</p>
+
+      <div class="zpm-delivery-coverage__body">
+        <p>Предсказуемость поставки формируется до&nbsp;отгрузки — на&nbsp;этапе согласования заказа. Менеджер фиксирует условия, от&nbsp;которых зависит планирование:</p>
+        <ol class="zpm-delivery-coverage__factors">
+          <li><strong>Готовность заказа</strong> — наличие на&nbsp;складе или срок изготовления для позиций под заказ.</li>
+          <li><strong>Способ получения и&nbsp;точка отгрузки</strong> — самовывоз или конкретная транспортная компания; отправка из&nbsp;Барнаула или со&nbsp;склада партнёра в&nbsp;Московской области.</li>
+          <li><strong>Подготовка к&nbsp;отправке</strong> — комплектация, упаковка и&nbsp;документы до&nbsp;передачи груза перевозчику или получателю.</li>
+        </ol>
+        <p>После согласования этих условий отгрузка проходит по&nbsp;стандартной схеме: подготовка на&nbsp;стороне завода, передача груза, документы и&nbsp;— при доставке ТК — информация для отслеживания. Срок в&nbsp;пути до&nbsp;вашего города определяет выбранная транспортная компания; ориентиры по&nbsp;готовности к&nbsp;отгрузке сообщает менеджер при подтверждении заказа.</p>
+      </div>
+
+      <p class="zpm-delivery-section__note">Поставки в&nbsp;страны СНГ возможны — условия и&nbsp;маршрут согласуются индивидуально с&nbsp;менеджером. Для таких заказов может применяться отправка через перевозчиков, работающих в&nbsp;направлении СНГ — например, ПЭК.</p>
+      <p class="zpm-delivery-section__note">Если вы&nbsp;работаете как региональный партнёр и&nbsp;поставляете оборудование ЗПМ своим клиентам — логистические условия для канала описаны на&nbsp;странице <a href="/dealers">Дилерам</a>. Общие правила отгрузки — на&nbsp;этой странице.</p>
+      <p class="zpm-delivery-coverage__crosslink"><a href="/about">Производство и&nbsp;география завода</a></p>
+    </div>
+  </section>
+
+  {# BLOCK 07 — Outcomes #}
+  <section class="zpm-delivery-section zpm-delivery-outcomes" id="zpm-delivery-outcomes" aria-labelledby="zpm-delivery-outcomes-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-outcomes-title">Что получает заказчик вместе с&nbsp;оборудованием</h2>
+      <p class="zpm-delivery-section__intro">Результат отгрузки — не&nbsp;только накладная. Вы&nbsp;получаете оборудование, готовое к&nbsp;установке на&nbsp;объекте, и&nbsp;понятный комплект для приёмки, учёта и&nbsp;дальнейшей эксплуатации.</p>
+
+      <div class="zpm-delivery-outcomes__list">
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Оборудование по&nbsp;согласованному заказу</h3>
+          <p class="zpm-delivery-outcome__text">Изделия из&nbsp;нержавеющей стали в&nbsp;согласованной комплектации — серийные модели или изделия на&nbsp;заказ после подтверждения параметров</p>
+        </article>
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Готовность к&nbsp;установке</h3>
+          <p class="zpm-delivery-outcome__text">Оборудование передано в&nbsp;упаковке, подготовленной для транспортировки; после вскрытия на&nbsp;объекте вы&nbsp;проверяете комплектность и&nbsp;целостность</p>
+        </article>
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Понятная точка ответственности</h3>
+          <p class="zpm-delivery-outcome__text">До&nbsp;передачи груза перевозчику или до&nbsp;выдачи при самовывозе ответственность за&nbsp;комплектность и&nbsp;сохранность несёт завод в&nbsp;рамках согласованного заказа; дальнейшая перевозка — по&nbsp;правилам выбранного перевозчика</p>
+        </article>
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Документы для бухгалтерии и&nbsp;учёта</h3>
+          <p class="zpm-delivery-outcome__text">Закрывающие документы по&nbsp;факту отгрузки — для юридических лиц. Порядок оплаты и&nbsp;перечень типов документов — на&nbsp;странице <a href="/payment-methods">Оплата</a></p>
+        </article>
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Документы на&nbsp;продукцию</h3>
+          <p class="zpm-delivery-outcome__text">Паспорт изделия и&nbsp;документы соответствия — если предусмотрены для категории оборудования. Перечень по&nbsp;модели — в&nbsp;карточке товара или в&nbsp;коммерческом предложении</p>
+        </article>
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Информация для отслеживания отправки</h3>
+          <p class="zpm-delivery-outcome__text">При доставке транспортной компанией — данные для отслеживания груза после передачи перевозчику</p>
+        </article>
+        <article class="zpm-delivery-outcome">
+          <h3 class="zpm-delivery-outcome__title">Основание для гарантийного обращения</h3>
+          <p class="zpm-delivery-outcome__text">Отгрузочные документы и&nbsp;документы на&nbsp;продукцию нужны для подтверждения покупки при обращении по&nbsp;гарантии. Условия — на&nbsp;странице <a href="/guarantee">Гарантия</a></p>
+        </article>
+      </div>
+
+      <p class="zpm-delivery-section__helper">Если для внутренней приёмки на&nbsp;объекте или для тендера нужен конкретный перечень документов — запросите его у&nbsp;менеджера при оформлении заказа.</p>
+    </div>
+  </section>
+
+  {# BLOCK 03 — Transport companies (supporting) #}
+  <section class="zpm-delivery-section zpm-delivery-carriers" id="zpm-delivery-carriers" aria-labelledby="zpm-delivery-carriers-title">
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h3" id="zpm-delivery-carriers-title">Транспортные компании</h2>
+      <p class="zpm-delivery-carriers__caption">Транспортные компании, с&nbsp;которыми ЗПМ регулярно организует отправку оборудования</p>
+
+      <div class="zpm-delivery-carriers__table-wrap">
+        <table class="zpm-delivery-carriers__table">
+          <thead>
+            <tr>
+              <th scope="col">Компания</th>
+              <th scope="col">Регион</th>
+              <th scope="col">Примечание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Компания">Деловые Линии</td>
+              <td data-label="Регион">Россия</td>
+              <td data-label="Примечание">Одна из&nbsp;наиболее часто используемых перевозчиков</td>
+            </tr>
+            <tr>
+              <td data-label="Компания">ПЭК</td>
+              <td data-label="Регион">Россия и&nbsp;СНГ</td>
+              <td data-label="Примечание">Подходит для большинства регионов</td>
+            </tr>
+            <tr>
+              <td data-label="Компания">Байкал-Сервис</td>
+              <td data-label="Регион">Россия</td>
+              <td data-label="Примечание">Удобен для региональных поставок</td>
+            </tr>
+            <tr>
+              <td data-label="Компания">Фастранс</td>
+              <td data-label="Регион">Россия</td>
+              <td data-label="Примечание">Используется для межрегиональных перевозок</td>
+            </tr>
+            <tr>
+              <td data-label="Компания">Легкотранс</td>
+              <td data-label="Регион">Россия</td>
+              <td data-label="Примечание">Подходит для отправки оборудования среднего объёма</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="zpm-delivery-section__note">Перечень не&nbsp;является исчерпывающим: по&nbsp;согласованию с&nbsp;менеджером возможна отправка через другую транспортную компанию, если это удобнее для вашего региона или условий приёмки на&nbsp;объекте.</p>
+      <p class="zpm-delivery-section__note">Стоимость перевозки рассчитывает транспортная компания — исходя из&nbsp;веса, габаритов груза и&nbsp;региона доставки. Точную сумму можно уточнить после согласования состава отправки и&nbsp;выбора перевозчика.</p>
+    </div>
+  </section>
+
+  {# BLOCK 08 — FAQ #}
+  <section class="zpm-delivery-section zpm-delivery-faq zpm-corp-faq" id="zpm-delivery-faq" aria-labelledby="zpm-delivery-faq-title" data-delivery-faq data-accordion>
+    <div class="container">
+      <h2 class="zpm-delivery-section__title section-title__like-h2" id="zpm-delivery-faq-title">Ответы на&nbsp;частые вопросы</h2>
+      <p class="zpm-delivery-section__intro">Вопросы, которые чаще всего возникают у&nbsp;снабженца, закупщика и&nbsp;руководителя перед первой поставкой.</p>
+
+      <div class="zpm-corp-faq__list">
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-1" aria-expanded="false" aria-controls="delivery-faq-panel-1" data-accordion-button>Доставляете ли вы&nbsp;в&nbsp;мой регион?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-1" role="region" aria-labelledby="delivery-faq-btn-1" hidden data-accordion-panel>
+            <p>Да. ЗПМ отправляет оборудование по&nbsp;всей территории России через транспортные компании. Регион доставки указывается при оформлении заказа — менеджер подберёт перевозчика и&nbsp;способ отправки. Самовывоз возможен в&nbsp;Барнауле или на&nbsp;складе партнёра в&nbsp;Московской области, если это удобнее для вашей логистики.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-2" aria-expanded="false" aria-controls="delivery-faq-panel-2" data-accordion-button>Когда начнётся отгрузка после оплаты?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-2" role="region" aria-labelledby="delivery-faq-btn-2" hidden data-accordion-panel>
+            <p>Для серийных позиций в&nbsp;наличии — после выполнения условий оплаты заказ передаётся на&nbsp;комплектацию и&nbsp;подготовку к&nbsp;отгрузке. Для позиций под заказ или изделий на&nbsp;заказ — после оплаты и&nbsp;готовности изделия на&nbsp;производстве. Конкретные ориентиры по&nbsp;готовности сообщает менеджер в&nbsp;коммерческом предложении. Порядок оплаты и&nbsp;этапы — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-3" aria-expanded="false" aria-controls="delivery-faq-panel-3" data-accordion-button>Кто оплачивает доставку до&nbsp;нашего города?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-3" role="region" aria-labelledby="delivery-faq-btn-3" hidden data-accordion-panel>
+            <p>Стоимость перевозки рассчитывает транспортная компания — по&nbsp;весу, габаритам и&nbsp;маршруту. Условия оплаты услуг перевозчика согласуются при выборе тарифа и&nbsp;оформлении отправки. Менеджер поможет подобрать перевозчика и&nbsp;проконсультировать по&nbsp;типовым вариантам расчёта.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-4" aria-expanded="false" aria-controls="delivery-faq-panel-4" data-accordion-button>Можно ли забрать оборудование самовывозом?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-4" role="region" aria-labelledby="delivery-faq-btn-4" hidden data-accordion-panel>
+            <p>Да. Самовывоз доступен с&nbsp;производственной площадки в&nbsp;Барнауле (проспект Калинина,&nbsp;15в) или со&nbsp;склада партнёра в&nbsp;Московской области (м.о. Дмитровский, пос. Никольское,&nbsp;204) — если это согласовано для вашего заказа. Перед приездом обязательно согласуйте дату и&nbsp;время с&nbsp;менеджером.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-5" aria-expanded="false" aria-controls="delivery-faq-panel-5" data-accordion-button>Можно ли выбрать конкретную транспортную компанию?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-5" role="region" aria-labelledby="delivery-faq-btn-5" hidden data-accordion-panel>
+            <p>Да. На&nbsp;практике часто используются Деловые Линии, ПЭК, Байкал-Сервис, Фастранс и&nbsp;Легкотранс — но&nbsp;по&nbsp;согласованию возможна отправка через другого перевозчика, если он&nbsp;удобнее для вашего региона или условий приёмки.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-6" aria-expanded="false" aria-controls="delivery-faq-panel-6" data-accordion-button>Как доставляется крупногабаритное или нестандартное оборудование?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-6" role="region" aria-labelledby="delivery-faq-btn-6" hidden data-accordion-panel>
+            <p>Габариты и&nbsp;конструктивные особенности влияют на&nbsp;выбор перевозчика, упаковку и&nbsp;способ погрузки. Для нестандартных изделий параметры согласуются при расчёте заказа — на&nbsp;странице <a href="/custom-equipment">Оборудование на&nbsp;заказ</a>. Менеджер обсудит с&nbsp;вами маршрут и&nbsp;условия перевозки до&nbsp;запуска в&nbsp;производство или отгрузки.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-7" aria-expanded="false" aria-controls="delivery-faq-panel-7" data-accordion-button>Какие документы мы&nbsp;получим вместе с&nbsp;оборудованием?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-7" role="region" aria-labelledby="delivery-faq-btn-7" hidden data-accordion-panel>
+            <p>По&nbsp;факту отгрузки — отгрузочные и&nbsp;закрывающие документы для юридического лица. На&nbsp;продукцию — паспорт изделия и&nbsp;документы соответствия, если они предусмотрены для данной категории. Точный перечень по&nbsp;позиции — в&nbsp;коммерческом предложении или по&nbsp;запросу менеджера. Подробности по&nbsp;оплате и&nbsp;закрывающим документам — на&nbsp;странице <a href="/payment-methods">Оплата</a>.</p>
+          </div>
+        </div>
+        <div class="zpm-corp-faq__item" data-accordion-item>
+          <h3 class="zpm-corp-faq__heading">
+            <button class="zpm-corp-faq__button" type="button" id="delivery-faq-btn-8" aria-expanded="false" aria-controls="delivery-faq-panel-8" data-accordion-button>Что делать, если при получении обнаружены повреждения?</button>
+          </h3>
+          <div class="zpm-corp-faq__panel" id="delivery-faq-panel-8" role="region" aria-labelledby="delivery-faq-btn-8" hidden data-accordion-panel>
+            <p>При приёмке груза от&nbsp;транспортной компании проверьте целостность упаковки и&nbsp;комплектность. Если повреждение возникло при перевозке — оформите претензию по&nbsp;правилам выбранного перевозчика в&nbsp;момент или в&nbsp;сроки, установленные перевозчиком. Если вопрос относится к&nbsp;комплектности заказа или качеству изделия — свяжитесь с&nbsp;менеджером ЗПМ; при гарантийном случае — по&nbsp;порядку на&nbsp;странице <a href="/guarantee">Гарантия</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="zpm-corp-cta zpm-corp-cta--delivery" id="zpm-delivery-cta" aria-labelledby="zpm-delivery-cta-title" data-corp-cta="delivery">
+    <div class="container">
+      <div class="zpm-corp-cta__card">
+        <div class="zpm-corp-cta__wrap">
+          <div class="zpm-corp-cta__info">
+            <div class="zpm-corp-cta__header">
+              <p class="zpm-corp-cta__label">Доставка оборудования</p>
+              <h2 class="zpm-corp-cta__title" id="zpm-delivery-cta-title">Уточнить условия поставки для вашего региона</h2>
+              <p class="zpm-corp-cta__lead">Опишите регион, состав заказа и&nbsp;предпочтительный способ получения — менеджер подскажет точку отгрузки, варианты перевозки и&nbsp;что учесть при планировании поставки на&nbsp;объект.</p>
+            </div>
+            <div class="zpm-corp-cta__main">
+              <div class="zpm-corp-cta__cert-col" aria-label="Сертификаты">
+                <div class="zpm-corp-cta__cert-card">
+                  <div class="swiper js-commercial-trust-certs">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a
+                          class="zpm-corp-cta__cert-link"
+                          href="/assets/img/certificates/certificat_00.jpg"
+                          data-fancybox="certificates-delivery"
+                          data-caption="Сертификат «Сделано в России»"
+                        >
+                          <img
+                            class="zpm-corp-cta__cert-img"
+                            src="/assets/img/certificates/thumb_00.png"
+                            alt="Сертификат «Сделано в России»"
+                            width="200"
+                            height="280"
+                            loading="lazy"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="zpm-corp-cta__cert-card--base">
+                  <img src="/assets/img/sert-base.jpg" alt="" width="250" height="40" loading="lazy" />
+                </div>
+              </div>
+              <div class="zpm-corp-cta__benefits">
+                <ul class="zpm-corp-cta__benefits-grid">
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad fa-truck-moving"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">Доставка по&nbsp;России</strong>
+                    <span class="zpm-corp-cta__benefit-text">Отгружаем оборудование транспортными компаниями в&nbsp;регионы России.</span>
+                  </span>
+                </li>
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad fa-warehouse"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">Две точки отгрузки</strong>
+                    <span class="zpm-corp-cta__benefit-text">Барнаул — производство; Московская область — склад партнёра для центрального региона.</span>
+                  </span>
+                </li>
+                <li class="zpm-corp-cta__benefit">
+                  <span class="zpm-corp-cta__benefit-icon" aria-hidden="true"><i class="fad fa-clock"></i></span>
+                  <span class="zpm-corp-cta__benefit-body">
+                    <strong class="zpm-corp-cta__benefit-title">Сроки и&nbsp;маршрут</strong>
+                    <span class="zpm-corp-cta__benefit-text">Подскажем сроки комплектации, передачу перевозчику и&nbsp;самовывоз.</span>
+                  </span>
+                </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="zpm-corp-cta__form-wrap">
+            <div class="zpm-decoration-with-logo">
+              <img src="/assets/img/decor-logo.svg" alt="" width="120" height="120" loading="lazy" />
+            </div>
+            <div class="zpm-corp-cta__form-col">
+              <div class="zpm-corp-cta__form-card" id="zpm-delivery-form">
+                <h3 class="zpm-corp-cta__form-title">Запрос по&nbsp;доставке</h3>
+                <p class="zpm-corp-cta__form-note">Укажите регион и&nbsp;состав заказа — мы&nbsp;перезвоним или ответим на&nbsp;e-mail с&nbsp;вариантами отгрузки и&nbsp;перевозки.</p>
+<form class="zpm-form zpm-delivery-form" action="#" method="post" novalidate>
+  <div class="zpm-form__grid">
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryName">Имя<em>*</em></label>
+      <input class="zpm-form__input" id="deliveryName" name="name" type="text" placeholder="Ваше имя" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryPhone">Номер телефона<em>*</em></label>
+      <div class="zpm-form__phone">
+        <input class="zpm-form__input" id="deliveryPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" data-mask="phone" required />
+      </div>
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryEmail">E-mail<em>*</em></label>
+      <input class="zpm-form__input" id="deliveryEmail" name="email" type="email" placeholder="example@company.ru" data-validate="email" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryRegion">Регион доставки<em>*</em></label>
+      <input class="zpm-form__input" id="deliveryRegion" name="region" type="text" placeholder="Город или область получения" required />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryMethod">Предпочтительный способ получения</label>
+      <input class="zpm-form__input" id="deliveryMethod" name="delivery_method" type="text" placeholder="Самовывоз / транспортная компания / пока не определились" />
+    </div>
+    <div class="zpm-form__field">
+      <label class="zpm-form__label" for="deliveryOrderDetails">Состав заказа или комментарий</label>
+      <textarea class="zpm-form__textarea" id="deliveryOrderDetails" name="order_details" rows="3" placeholder="Модели, количество, габариты — если известны"></textarea>
+    </div>
+    <div class="zpm-form__field">
+      <span class="zpm-form__check-text"><em>*</em>&nbsp;— обязательно для заполнения</span>
+    </div>
+    <div class="zpm-form__actions">
+      <button class="btn btn_dark zpm-form__submit" type="submit">Отправить запрос</button>
+      <label class="zpm-form__agree">
+        <input class="zpm-form__checkbox" type="checkbox" name="agree" required />
+        <span class="zpm-form__agree-text">Я&nbsp;даю согласие на&nbsp;обработку своих персональных данных, обратный звонок и&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy">политикой конфиденциальности</a>.</span>
+      </label>
+    </div>
+  </div>
+</form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{ footer }}
