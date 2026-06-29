@@ -155,12 +155,24 @@
 
 | Bucket | What exists |
 |--------|-------------|
-| **operational** | **Lane A:** `workspaces/*` implementation work (e.g. Triumph landing). **Lane B:** `projects/mars-website-factory/`, `governance/`, `agents/`, `registry/`. **Runtime lane:** `mars-runtime/*` only when chartered. |
+| **operational** | **Lane A:** `workspaces/*` implementation work (e.g. Triumph landing). **Lane B:** `projects/mars-website-factory/`, `governance/`, `agents/`, `registry/`. **Runtime lane:** `mars-runtime/*` only when chartered. **Search PPC:** `projects/mars-search-ppc-production/` — cross-system lifecycle authority (`mars-search-ppc-production` registry row). |
 | **conceptual** | `registry/project-registry.md` rows — human-maintained classification. |
 | **excluded** | `workspaces/**/dist/**` as source of truth; vendor trees (e.g. Font Awesome Pro under `shared/`) committed without license policy; `projects/seo-content-agent/` canonical work. |
 | **historical** | Early SEO agent tree; old Web-GPT numbered topics. |
 
 **What it is not:** registry row = deployed site or running factory stage.
+
+---
+
+## Infrastructure programmes (not all `project_id` rows)
+
+| System | Bucket | Canonical entry |
+|--------|--------|-----------------|
+| **MARS Localhost Infrastructure (MLI)** | operational (enablement) | `projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md` — runtime `X:\MARS-Localhost\` |
+| **Forge WordPress / AG-WP-001** | operational (foundation) | `projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md` — Factory subsystem |
+| **FOUNDRY** | operational (reference workspace) | `workspaces/website-factory-reference-v1/` — **not** separate `project_id` |
+| **EAR Architecture** | conceptual (frozen) | `shared/external-access-runtime/OPERATIONAL-INDEX.md` — runtime engineering in `ear-runtime` |
+| **GitGuard** | operational (advisory) | `projects/mars-survivability/registries/gitguard-system-entry-v1.md` — cross-cutting Survivability |
 
 ---
 

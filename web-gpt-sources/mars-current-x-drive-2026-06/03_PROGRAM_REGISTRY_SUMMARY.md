@@ -24,6 +24,7 @@
 | `homegateway-v4-ai` | planned | Personal cockpit docs + UI prototype | `projects/homegateway-v4-ai/OPERATIONAL-INDEX.md` | **Not** control plane |
 | `metabot-seo-content-agent` | active | Canonical MetaBOT docs | `projects/metabot-seo-content-agent/README.md` | **External n8n** runtime |
 | `seo-content-agent` | planned | **Legacy** — do not extend | `projects/seo-content-agent/` | Superseded by metabot pack |
+| `mars-search-ppc-production` | active | Cross-system Search PPC lifecycle — gate in-repo | `projects/mars-search-ppc-production/README.md` | **NOT** autonomous campaign engine |
 
 ---
 
@@ -31,10 +32,11 @@
 
 | System | Entry | Role |
 |--------|-------|------|
-| MARS Localhost Infrastructure | `projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md` | `X:\MARS-Localhost\` governance |
+| MARS Localhost Infrastructure | `projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md` | `X:\MARS-Localhost\` governance — **not** `project_id` |
 | Forge WordPress / AG-WP-001 | `projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md` | Factory subsystem — **not** WPilot ownership |
+| FOUNDRY | `workspaces/website-factory-reference-v1/` | Website Factory reference workspace — **not** `project_id` |
 | EAR Architecture | `shared/external-access-runtime/OPERATIONAL-INDEX.md` | Normative design — runtime in `ear-runtime` |
-| Search PPC Production | `projects/mars-search-ppc-production/README.md` | Operational PPC production lane |
+| Search PPC Production | `projects/mars-search-ppc-production/README.md` | Lifecycle authority — registry row `mars-search-ppc-production` |
 
 ---
 
@@ -60,8 +62,9 @@
 | WPilot | Local token path `X:\AI MARS\local\tokens\` (local-only) |
 | MIG | Session exports may reference Storage incoming paths |
 | MLI / Forge | Local Laragon at `X:\MARS-Localhost\` |
+| Search PPC | Lifecycle authority in-repo; platform execution external |
 
-**SAFE UNKNOWN:** On-disk folder existence under Storage — verify in session.
+**Physical Storage folders:** Top-level folders under `X:\AI MARS STORAGE\` verified present 2026-06-29 (shallow list) — see out-of-repo Storage README. **Not** a completeness or Knowledge Center freshness claim.
 
 ---
 

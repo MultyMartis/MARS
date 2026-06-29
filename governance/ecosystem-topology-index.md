@@ -101,10 +101,22 @@ AGENTS.md (honesty)
 | | |
 |--|--|
 | **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `X:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
-| **What it is NOT** | MARS brain, Git authority, governance root, production hosting, second MARS repo, registered agent, or proof that Laragon is installed. |
+| **What it is NOT** | MARS brain, Git authority, governance root, production hosting, second MARS repo, registered `project_id`, or proof that Laragon is installed. |
 | **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. Programme path reconciliation wave **X5** **COMPLETE** (migration closure — not runtime proof). |
-| **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `X:\MARS-Localhost` (out-of-git). |
+| **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `X:\MARS-Localhost` (out-of-git). **Registry:** infrastructure entry only — **not** a `project_id` row. |
 | **Relationship role** | **`X:\AI MARS` governs; `X:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
+
+---
+
+### MARS Search PPC Production
+
+| | |
+|--|--|
+| **What it is** | Cross-system **Yandex Direct search** campaign production lifecycle (SPPC-01–23): contracts, stages, validators, lifecycle gate, operator decision records. |
+| **What it is NOT** | Autonomous campaign engine, Commander automation product, ORCA replacement, or platform-scheduled bidding runtime. |
+| **Operational status** | **OPERATIONAL** (lifecycle authority) — `APPROVED — IMPLEMENTATION AUTHORIZED`; Wave 1 **OPERATIONAL WITH DOCUMENTED PLATFORM BOUNDARY**; lifecycle gate in-repo; **NOT** fully autonomous production. |
+| **Canonical path** | [../projects/mars-search-ppc-production/README.md](../projects/mars-search-ppc-production/README.md); lifecycle [MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md); registry `mars-search-ppc-production`. |
+| **Relationship role** | **Consumes** ATLAS, MIG, ORCA lanes per stage ownership; **does not** subsume subsystem packs. Pilot projects (e.g. Corvonero) remain scoped under this programme — **not** separate `project_id` rows. |
 
 ---
 
@@ -228,14 +240,26 @@ AGENTS.md (honesty)
 
 ---
 
+### FOUNDRY (Website Factory reference workspace)
+
+| | |
+|--|--|
+| **What it is** | **Website Factory reference workspace programme** — registry expansion authority under `workspaces/website-factory-reference-v1/` (WF-R01 FOUNDRY Registry Expansion). Terminology alias within Website Factory ecosystem. |
+| **What it is NOT** | Separate `project_id`, autonomous factory runtime, second methodology SoT, or replacement for `projects/mars-website-factory/`. |
+| **Operational status** | **Operational** (reference workspace) — human-maintained; path reconciliation **X4** **COMPLETE**. |
+| **Canonical path** | [../workspaces/website-factory-reference-v1/](../workspaces/website-factory-reference-v1/); programme parent `mars-website-factory`. |
+| **Relationship role** | **Reference authority** for Factory registry expansion; complements LOC-ZONE and methodology pack — **not** an independent project. |
+
+---
+
 ### EAR Runtime
 
 | | |
 |--|--|
 | **What it is** | **Engineering project** for Mode 2 acquisition helpers (connectors, evidence, snapshots) — separate from frozen EAR Architecture in `shared/external-access-runtime/`. |
 | **What it is NOT** | EAR Architecture normative layer, `mars-runtime/` control plane, live SFTP/production acquisition, or OCPilot site analysis. |
-| **Operational status** | **Engineering started** — R1 skeleton + config loader only; connector **not started**; human R1 approval **pending**. |
-| **Canonical path** | [../projects/ear-runtime/README.md](../projects/ear-runtime/README.md), [OPERATIONAL-INDEX.md](../projects/ear-runtime/OPERATIONAL-INDEX.md), [EAR-RUNTIME-STATE.md](../projects/ear-runtime/EAR-RUNTIME-STATE.md); registry `ear-runtime`. |
+| **Operational status** | **Engineering started** — R1.1–R1.9 + R2–R5 contract phases **DONE** (mock/skeleton); mock E2E baseline frozen; SITE-001 dry-run executed (mock); **no** live production connector; PILOT-001 execution **NOT AUTHORIZED**. |
+| **Canonical path** | [../projects/ear-runtime/README.md](../projects/ear-runtime/README.md), [OPERATIONAL-INDEX.md](../projects/ear-runtime/OPERATIONAL-INDEX.md), [EAR-RUNTIME-STATE.md](../projects/ear-runtime/EAR-RUNTIME-STATE.md); registry `ear-runtime`. Architecture index: [../shared/external-access-runtime/OPERATIONAL-INDEX.md](../shared/external-access-runtime/OPERATIONAL-INDEX.md) (**COMPLETE** — defers runtime stage to this project). |
 | **Relationship role** | Implements chartered helpers **conforming** to EAR Architecture; publishes snapshots for OCPilot / future WPilot — **consumers do not own acquisition mechanics**. |
 
 ---

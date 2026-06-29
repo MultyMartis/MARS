@@ -25,7 +25,7 @@
 | Program | Status | Next |
 |---------|--------|------|
 | **EAR Architecture Program** | **COMPLETE** (frozen 2026-06-01) | Amendments only via explicit Architecture Amendment Charter |
-| **EAR Runtime Program** | **STARTED** | R1.3 Connection Layer Skeleton — [projects/ear-runtime/](../../projects/ear-runtime/OPERATIONAL-INDEX.md) · state: [EAR-RUNTIME-STATE.md](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) |
+| **EAR Runtime Program** | **STARTED** (mock E2E baseline frozen) | Current stage — [projects/ear-runtime/OPERATIONAL-INDEX.md](../../projects/ear-runtime/OPERATIONAL-INDEX.md) · state: [EAR-RUNTIME-STATE.md](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) — **not** live connector |
 
 
 
@@ -207,7 +207,7 @@
 
 | **—** | **Architecture freeze** | **DONE** | Runtime Program — Engineering Charter |
 
-| **—** | **EAR Runtime Program** | **STARTED** | [projects/ear-runtime/](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) · R1.3 next · [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md) |
+| **—** | **EAR Runtime Program** | **STARTED** | [projects/ear-runtime/OPERATIONAL-INDEX.md](../../projects/ear-runtime/OPERATIONAL-INDEX.md) · [EAR-RUNTIME-STATE.md](../../projects/ear-runtime/EAR-RUNTIME-STATE.md) — R1.1–R1.9 + R2–R5 contracts **DONE** (mock/skeleton); HG-4 / PILOT-001 gates pending |
 
 
 
@@ -237,7 +237,7 @@
 
 **Phase 6 deliverables:** [pilots/PILOT-001-SITE-001-SFTP-READONLY/IMPLEMENTATION-SUBCHARTER-v1.md](pilots/PILOT-001-SITE-001-SFTP-READONLY/IMPLEMENTATION-SUBCHARTER-v1.md), [pilots/PILOT-001-SITE-001-SFTP-READONLY/EXECUTION-PREPARATION-PLAN-v1.md](pilots/PILOT-001-SITE-001-SFTP-READONLY/EXECUTION-PREPARATION-PLAN-v1.md), [pilots/PILOT-001-SITE-001-SFTP-READONLY/PHASE-6-DECISION-v1.md](pilots/PILOT-001-SITE-001-SFTP-READONLY/PHASE-6-DECISION-v1.md). **Outcome:** Implementation Sub-Charter **drafted**; operational paths **SAFE UNKNOWN**; **Execution NOT AUTHORIZED**. **No** code, runtime, connectors, scripts, SFTP logic, or access execution.
 
-**Next (runtime program):** Authorize **EAR Runtime v1 Engineering Charter** — implement [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md) per [EAR-RUNTIME-BOUNDARY-v1.md](EAR-RUNTIME-BOUNDARY-v1.md) under [projects/ear-runtime/](../../projects/ear-runtime/). Handoff: [freeze/EAR-RUNTIME-TRANSITION-v1/EAR-RUNTIME-HANDOFF-v1.md](freeze/EAR-RUNTIME-TRANSITION-v1/EAR-RUNTIME-HANDOFF-v1.md). Placement: [projects/ear-runtime/DECISION-EAR-RUNTIME-PLACEMENT-v1.md](../../projects/ear-runtime/DECISION-EAR-RUNTIME-PLACEMENT-v1.md).
+**Next (runtime program):** Defer to [projects/ear-runtime/OPERATIONAL-INDEX.md](../../projects/ear-runtime/OPERATIONAL-INDEX.md) for current focus — HG-4 Execution Authorization Review input; PILOT-001 live execution **NOT AUTHORIZED**; no live production connector claim. Architecture backlog reference: [EAR-RUNTIME-BACKLOG-v1.md](EAR-RUNTIME-BACKLOG-v1.md). Handoff: [freeze/EAR-RUNTIME-TRANSITION-v1/EAR-RUNTIME-HANDOFF-v1.md](freeze/EAR-RUNTIME-TRANSITION-v1/EAR-RUNTIME-HANDOFF-v1.md).
 
 **Next (operator / PILOT-001):** Phase 7 **Execution Preparation Review** — record **Approval** in STATUS if charter accepted → resolve §4 bindings → human **Implementation Authorization** on sub-charter §10 → separate **Execution Authorization** if live access desired. **Execution remains NOT AUTHORIZED** at architecture freeze.
 

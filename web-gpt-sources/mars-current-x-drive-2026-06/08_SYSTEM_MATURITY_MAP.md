@@ -35,6 +35,7 @@
 | OCPilot | operational | External hosting/FTP |
 | ORCA | operational | PPC toolkit — runtime **excluded** |
 | MIG | operational | R1 narrow spine |
+| Search PPC Production | operational (lifecycle) | Cross-system lifecycle gate — **NOT** autonomous engine |
 | ATLAS / OPS | planned (foundation) | Docs only — not CRM/ERP |
 | NOVA | planned | Methodology — not started |
 | MetaBOT | operational (docs) | **External n8n** execution |
