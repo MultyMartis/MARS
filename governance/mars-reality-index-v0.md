@@ -9,7 +9,7 @@
 
 **Post–Cycle 8:** governance baseline **frozen** (maintenance mode); **operational systems primary** — [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md).
 
-**Physical authority (2026-06-29):** Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` on volume **AI WS** (`X:`) — [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). X-drive migration **X0–X3** **COMPLETE**.
+**Physical authority (2026-06-29):** Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` on volume **AI WS** (`X:`) — [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). X-drive migration **X0–X9** **COMPLETE** — **MARS X-Drive Migration CLOSED**.
 
 **Is:** instant ecosystem reality orientation (what runs in human workflows **today** vs what is only written).  
 **Is not:** roadmap, vision deck, registry engine, or proof of deployed product.
@@ -220,7 +220,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **SoT:** [../projects/ocpilot/README.md](../projects/ocpilot/README.md) · [../projects/ocpilot/OPERATIONAL-INDEX.md](../projects/ocpilot/OPERATIONAL-INDEX.md)
 
-**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `X:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). Programme MLI docs may still show pre-X paths until wave **X5**. No runtime migration in MLI-00.
+**MLI pointer (2026-06-22):** OCPilot may consume OpenCart runtime profile on `X:\MARS-Localhost` — [../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md](../projects/mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md). X-drive path reconciliation **X0–X9** **COMPLETE** (2026-06-29 closure). No runtime migration in MLI-00.
 
 ---
 

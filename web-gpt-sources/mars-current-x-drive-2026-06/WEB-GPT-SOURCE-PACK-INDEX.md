@@ -37,7 +37,7 @@ Upload **one file at a time** in this order. After steps 1–4, declare lane bef
 | **2** | `02_OPERATIONAL_POSTURE.md` | Post–Cycle 8 defaults, session start, foreign WIP |
 | **3** | `04_INFRASTRUCTURE_REALITY.md` | X: roots before any path planning |
 | **4** | `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` | Hard anti-mythology + guard capability truth |
-| **5** | `07_CURRENT_BASELINE_AND_MIGRATION_STATE.md` | Migration waves X0–X8 evidence chain |
+| **5** | `07_CURRENT_BASELINE_AND_MIGRATION_STATE.md` | Migration waves X0–X9 evidence chain (closure) |
 | **6** | `03_PROGRAM_REGISTRY_SUMMARY.md` | Registered programmes and distinctions |
 | **7** | `09_OPERATIONAL_PRIORITIES.md` | Current delivery focus |
 | **8** | `05_ACTIVE_VISUAL_COLD_BRAIN.md` | Brain layers — organizational only |

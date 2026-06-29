@@ -35,21 +35,27 @@
 
 **X8 honesty:** Publishes current Web-GPT sources — does **not** prove every external chat was manually updated.
 
+**Closure:** **MARS X-Drive Migration — CLOSED** (wave **X9**, 2026-06-29).
+
 ---
 
-## Accepted commit anchors (wave reports)
+## Accepted commit anchors (authoritative)
 
-| Wave | Commit (short) | Full hash (when recorded) |
-|------|----------------|---------------------------|
-| X0 | `f2f7c66b` | `f2f7c66bf0686754cb5637e65deda01707d24ed1` |
-| X1 / X2–X3 start | `497ee8c4` | `497ee8c4f045ba1575c80f09138f309cfbb8338d` |
-| X2–X3 completion | `69d83ad0` | *(see x2-x3 report)* |
-| X4 | `527f6d2d` | `527f6d2d23d40f98cdc0e561452b1465aff79126` |
-| X5 | `56cf2b76` | `56cf2b763a9e1b4dce22051d30e66b3f2e3d8b01` |
-| X6A | `09f02fac` | `09f02fac54893090cf55b6a4f3716e17d6f85cd5` |
-| X6B | `152100e1` | `152100e13aef7c0ec8263a8679cf325e80fb0dea` |
-| X7 | `ef30e41f` | `ef30e41f3468dc048932e519085476f0eb50b602` |
-| X8 start | `3b5a1e71` | `3b5a1e7191c1c2329c5d4759fc7d8a68eea2d148` |
+| Wave | Role | Commit (short) | Full hash |
+|------|------|----------------|-----------|
+| X0–X1 | primary completion | `f2f7c66b` | `f2f7c66bf0686754cb5637e65deda01707d24ed1` |
+| X0–X1 | report binding | `497ee8c4` | `497ee8c4f045ba1575c80f09138f309cfbb8338d` |
+| X2–X3 | primary completion | `69d83ad0` | `69d83ad05f9956dfde634af39e0d0209a2163515` |
+| X2–X3 | report binding | `527f6d2d` | `527f6d2d23d40f98cdc0e561452b1465aff79126` |
+| X4 | completion | `56cf2b76` | `56cf2b763a9e1b4dce22051d30e66b3f2e3d8b01` |
+| X5 | completion | `09f02fac` | `09f02fac54893090cf55b6a4f3716e17d6f85cd5` |
+| X6A | completion | `152100e1` | `152100e13aef7c0ec8263a8679cf325e80fb0dea` |
+| X6B | completion | `ef30e41f` | `ef30e41f3468dc048932e519085476f0eb50b602` |
+| X7 | completion | `3b5a1e71` | `3b5a1e7191c1c2329c5d4759fc7d8a68eea2d148` |
+| X8 | completion | `68f3e99e` | `68f3e99e06f1c6d3433a7e25fa1d2bd72978e0c1` |
+| X9 | closure | `a7485600` | `a74856005dc2b580e09dd46a577eb1eb740b309c` |
+
+**Note:** Report-binding commits (X0–X1, X2–X3) are **not** relabelled as wave completion commits.
 
 ---
 

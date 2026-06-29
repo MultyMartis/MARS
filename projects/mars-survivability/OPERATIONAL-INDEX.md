@@ -10,15 +10,16 @@
 
 ---
 
-## X-Drive Root Authority (X0–X1)
+## X-Drive Root Authority (X0–X9)
 
 | Item | Status |
 |------|--------|
 | **X-Drive Root Authority** | **ACTIVE** |
 | **Canonical volume** | **AI WS** / `X:` |
 | **Canonical roots** | `X:\AI MARS\`, `X:\AI MARS STORAGE\`, `X:\MARS-Localhost\` |
-| **Migration state** | **X0–X1 COMPLETE** |
-| **Next waves** | **X2–X9 NOT STARTED** |
+| **Migration state** | **X0–X9 COMPLETE** — **MARS X-Drive Migration CLOSED** |
+
+**Enforcement honesty (unchanged):** validator **human-invoked**; automatic interception **not implemented**; reparse protection **partial**; volume label precheck **manual**.
 
 **Authority document:** [governance/mars-x-drive-root-authority-v1.md](../../governance/mars-x-drive-root-authority-v1.md)
 
@@ -340,7 +341,7 @@ For validation, enforcement, and consistency tasks:
 | 2026-05-24 | G4 observability & drift detection — read-only diagnostics, logs, rollback map schema |
 | 2026-05-24 | D-01/D-02 drills — sandbox validation + human-operated restore evidence |
 | 2026-05-24 | **S1 stabilization** — index hardening, terminology freeze, QUICKSTART, checkpoint reports |
-| 2026-06-29 | **X0–X1** — X-drive root authority, filesystem boundary, validator rules |
+| 2026-06-29 | **X0–X9** — X-drive migration closed; root authority, filesystem boundary, validator rules |
 
 ---
 

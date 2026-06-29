@@ -9,7 +9,7 @@
 
 **Post–Cycle 8 (2026-05-19):** stabilization baseline **achieved**; governance **maintenance mode**; default work is **operational-first** — [mars-operational-evolution-state-after-cycles-1-8-v0.md](mars-operational-evolution-state-after-cycles-1-8-v0.md).
 
-**Physical authority (2026-06-29):** volume **AI WS** (`X:`); Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` — [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md), [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). X-drive migration **X0–X3** **COMPLETE**; **X4–X9** not started.
+**Physical authority (2026-06-29):** volume **AI WS** (`X:`); Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` — [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md), [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). X-drive migration **X0–X9** **COMPLETE** — **MARS X-Drive Migration CLOSED**.
 
 **Tier 1 (ecosystem routing only)** — use when the question is *where entities live*; **not** parallel to [mars-reality-index-v0.md](mars-reality-index-v0.md) (pick **one** Tier 1 router per session). **After:** [AGENTS.md](../AGENTS.md). **Deep audit:** [mars-v2-structural-coherence-audit-v0.md](mars-v2-structural-coherence-audit-v0.md). **Tier model:** [survivability-canonical-entrypoint-model-v0.md](survivability-canonical-entrypoint-model-v0.md).
 
@@ -102,7 +102,7 @@ AGENTS.md (honesty)
 |--|--|
 | **What it is** | Shared **Windows-local** web execution infrastructure: Laragon profile, `X:\MARS-Localhost` directory standard, runtime manifests in brain, consumer model for Forge WordPress, OCPilot, generic PHP. |
 | **What it is NOT** | MARS brain, Git authority, governance root, production hosting, second MARS repo, registered agent, or proof that Laragon is installed. |
-| **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. Programme runtime config reconciliation: wave **X5** (not started). |
+| **Operational status** | **ENABLEMENT** (MLI-03 **COMPLETE**, 2026-06-23) — WordPress synthetic runtime MLI-WP-SYN-001; OpenCart profile pending MLI-04. Programme path reconciliation wave **X5** **COMPLETE** (migration closure — not runtime proof). |
 | **Canonical path** | [../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md); runtime root `X:\MARS-Localhost` (out-of-git). |
 | **Relationship role** | **`X:\AI MARS` governs; `X:\MARS-Localhost` executes.** Consumers use platform profiles; they do not own the shared root. |
 

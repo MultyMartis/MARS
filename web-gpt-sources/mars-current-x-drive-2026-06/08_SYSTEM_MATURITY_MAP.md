@@ -40,7 +40,7 @@
 | MetaBOT | operational (docs) | **External n8n** execution |
 | HomeGateway | planned | Docs + prototype |
 | GitGuard | operational (advisory) | Cross-cutting Survivability |
-| X-drive paths | operational | X0–X8 complete |
+| X-drive paths | operational | X0–X9 complete — migration **CLOSED** (path reconciliation ≠ runtime) |
 
 ---
 

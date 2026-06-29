@@ -123,11 +123,19 @@ Always re-verify per task — do not inherit from this file alone:
 | [operational-survivability.md](operational-survivability.md) | Phase S3 spine + §8 post–Cycle 8 |
 | [onboarding-survivability.md](onboarding-survivability.md) | Minimum read set (operational-first) |
 | [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md) | Current physical roots on **AI WS** (`X:`) |
-| [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md) | X-drive migration state (X0–X3 **COMPLETE**) |
+| [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md) | X-drive migration state (X0–X9 **COMPLETE** — **CLOSED**) |
 
-**Physical authority (2026-06-29):** Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\`. Programme doc reconciliation **X4–X9** not started.
+**Physical authority (2026-06-29):** Active Brain `X:\AI MARS\`; Storage `X:\AI MARS STORAGE\`; Local Runtime `X:\MARS-Localhost\` on volume **AI WS** (`X:`).
 
 *Canonical ecosystem-state reference after Cycles 1–8 — maintenance + operational-first.*
+
+---
+
+## Infrastructure addendum (2026-06-29)
+
+**X-drive migration X0–X9 completed after Cycle 8.** Waves reconciled programme paths to volume **AI WS** (`X:`) canonical roots. **MARS X-Drive Migration — CLOSED.**
+
+**This does not represent Cycle 9 or MARS v3.** Path migration ≠ runtime implementation. Programme maturity, governance freeze, and Cycle 8 conclusions in sections 1–7 above remain valid for their document date.
 
 ---
 

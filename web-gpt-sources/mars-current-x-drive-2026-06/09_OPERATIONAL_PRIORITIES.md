@@ -10,7 +10,7 @@
 2. **One programme OPERATIONAL-INDEX per task** — lane discipline; no cross-programme scope creep.
 3. **Client/project lanes** — Website Factory workspaces, FP-0002, OCPilot SITE-002, ORCA PPC, Search PPC pilots as chartered.
 4. **Survivability on filesystem tasks** — volume preflight, scoped validator, foreign WIP protection.
-5. **No automatic mass migration** — path reconciliation wave-by-wave; X9 pending for final audit.
+5. **X-drive migration closed** — future path cleanup only through deferred-register or programme-specific charters.
 6. **No broad full-repo edits without charter** — selective scope only.
 
 ---
@@ -32,7 +32,7 @@
 
 - New S-phase governance waves
 - Cycle 8-class global validation per feature
-- X9 final audit (not started)
+- Ad-hoc path reconciliation outside deferred-register or programme charters
 - Storage/Localhost mutation without explicit charter
 - Rewriting historical incident evidence paths
 
