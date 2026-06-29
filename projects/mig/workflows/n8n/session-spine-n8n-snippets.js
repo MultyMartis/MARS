@@ -10,7 +10,7 @@
  */
 
 function libRootExpr() {
-  return "'C:/AI MARS/projects/mig/lib/session-spine'";
+  return "'X:/AI MARS/projects/mig/lib/session-spine'";
 }
 
 const snippets = {

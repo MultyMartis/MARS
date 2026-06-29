@@ -10,7 +10,7 @@
 
 ## 1. Purpose
 
-This document points operators to the **external evidence storage** for Counterparty Cards. The actual card files **live outside git** — they are not committed to the MARS repository at `C:\AI MARS`.
+This document points operators to the **external evidence storage** for Counterparty Cards. The actual card files **live outside git** — they are not committed to the MARS repository at `X:\AI MARS`.
 
 Foundation documents define **what** a Counterparty Card is and **how** it flows through ATLAS. This document defines **where** operators manually place card files before population intake.
 
@@ -21,16 +21,16 @@ Foundation documents define **what** a Counterparty Card is and **how** it flows
 **External root (operator-maintained):**
 
 ```text
-C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\
+X:\AI MARS STORAGE\atlas\evidence\counterparty-cards\
 ```
 
 | Path | Role |
 |------|------|
 | `C:\AI MARS STORAGE\atlas\` | ATLAS bulk evidence root |
 | `C:\AI MARS STORAGE\atlas\evidence\` | Evidence artifacts (not registry records) |
-| `C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\` | Counterparty Cards only |
+| `X:\AI MARS STORAGE\atlas\evidence\counterparty-cards\` | Counterparty Cards only |
 
-**In-storage README:** [COUNTERPARTY-CARD-STORAGE-README (external)](file:///C:/AI%20MARS%20STORAGE/atlas/evidence/counterparty-cards/README.md) — full operator rules at the storage location.
+**In-storage README:** [COUNTERPARTY-CARD-STORAGE-README (external)](file:///X:/AI%20MARS%20STORAGE/atlas/evidence/counterparty-cards/README.md) — full operator rules at the storage location.
 
 ---
 
@@ -84,8 +84,8 @@ No automation, API, database, or extraction tooling is defined or required at th
 
 | Location | Role |
 |----------|------|
-| `C:\AI MARS` | Git repository — ATLAS foundation, population plans, registry metadata |
-| `C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\` | External bulk evidence — Counterparty Card files |
+| `X:\AI MARS` | Git repository — ATLAS foundation, population plans, registry metadata |
+| `X:\AI MARS STORAGE\atlas\evidence\counterparty-cards\` | External bulk evidence — Counterparty Card files |
 
 **Rule:** Do not commit counterparty card files into the MARS git repository. Reference external paths in proposals and review notes only.
 
@@ -93,8 +93,8 @@ No automation, API, database, or extraction tooling is defined or required at th
 
 ## 7. Operator next steps
 
-1. Open `C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\`.
-2. Read the in-folder [README.md](file:///C:/AI%20MARS%20STORAGE/atlas/evidence/counterparty-cards/README.md).
+1. Open `X:\AI MARS STORAGE\atlas\evidence\counterparty-cards\`.
+2. Read the in-folder [README.md](file:///X:/AI%20MARS%20STORAGE/atlas/evidence/counterparty-cards/README.md).
 3. Copy each organization's Counterparty Card / requisites file into the matching subfolder.
 4. Use clear filenames (date, source, org name).
 5. Notify the ATLAS steward that evidence is ready for Wave 1 organization proposals.
@@ -109,4 +109,4 @@ No automation, API, database, or extraction tooling is defined or required at th
 | [ATLAS-ORGANIZATION-ACQUISITION-RULES-v1.md](../foundation/ATLAS-ORGANIZATION-ACQUISITION-RULES-v1.md) | Organization acquisition rules |
 | [ATLAS-EVIDENCE-REQUIREMENTS-v1.md](../foundation/ATLAS-EVIDENCE-REQUIREMENTS-v1.md) | Evidence tiers |
 | [ATLAS-WAVE-1-EXECUTION-v1.md](../foundation/ATLAS-WAVE-1-EXECUTION-v1.md) | Wave 1 execution |
-| [C:\AI MARS STORAGE\README.md](file:///C:/AI%20MARS%20STORAGE/README.md) | MARS external bulk storage root |
+| [X:\AI MARS STORAGE\README.md](file:///X:/AI%20MARS%20STORAGE/README.md) | MARS external bulk storage root |

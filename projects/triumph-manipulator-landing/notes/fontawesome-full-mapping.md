@@ -1,7 +1,7 @@
 # Full icon migration map — Triumph Manipulator landing
 
 **Scope:** планирование только. Источник разметки: `workspaces/triumph-manipulator-landing/src/partials/` (страница `src/pages/index.html`).  
-**Проверка имён FA:** по наличию правил `.fa-<slug>:before` в `C:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4\css\all.css` (локальный Pro 5.15.4).
+**Проверка имён FA:** по наличию правил `.fa-<slug>:before` в `X:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4\css\all.css` (локальный Pro 5.15.4).
 
 **Легенда стилей:** `fal` — light, `far` — regular, `fas` — solid, `fab` — brands.
 

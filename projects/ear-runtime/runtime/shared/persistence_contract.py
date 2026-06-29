@@ -28,7 +28,7 @@ DEFAULT_CONSUMER_TARGET = "ocpilot"
 DEFAULT_PACKAGE_QUALITY_LEVEL_MOCK = 0
 
 # Chartered EAR bulk root (R1.8C PC-03)
-EAR_BULK_ROOT = Path(r"C:\AI MARS STORAGE\ear")
+EAR_BULK_ROOT = Path(r"X:\AI MARS STORAGE\ear")
 
 # OpenCart sections not populated by mock pipeline (R1.8B mock persist honesty)
 MOCK_UNPOPULATED_SECTIONS: tuple[str, ...] = (

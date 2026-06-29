@@ -26,7 +26,7 @@ Atlas state is **documentation-only** in Phase 1 — no in-repo runtime or datab
 **Root:**
 
 ```text
-C:\AI MARS\projects\atlas\
+X:\AI MARS\projects\atlas\
 ```
 
 **Required subfolders:**
@@ -48,7 +48,7 @@ C:\AI MARS\projects\atlas\
 **Root:**
 
 ```text
-C:\AI MARS STORAGE\atlas\
+X:\AI MARS STORAGE\atlas\
 ```
 
 **Required folders (normative layout):**
@@ -60,12 +60,12 @@ C:\AI MARS STORAGE\atlas\
 | `evidence\` | Evidence artifacts (CC, future tiers) | **Present** |
 | `evidence\counterparty-cards\` | Organization Counterparty Cards | **Present** |
 
-**Operator action:** Copy entire `C:\AI MARS STORAGE\atlas\` recursively to dated external archive (second disk, NAS, or encrypted cloud — operator choice).
+**Operator action:** Copy entire `X:\AI MARS STORAGE\atlas\` recursively to dated external archive (second disk, NAS, or encrypted cloud — operator choice).
 
 **Critical subpaths at snapshot:**
 
 ```text
-C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\
+X:\AI MARS STORAGE\atlas\evidence\counterparty-cards\
 ├── README.md
 ├── bzpm\
 ├── i-seo\
@@ -86,8 +86,8 @@ C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\
 | Step | Action | Verify |
 |------|--------|--------|
 | **B-01** | Record snapshot metadata — date, steward, reason (e.g. pre-population) | [ATLAS-BACKUP-SNAPSHOT-v1.md](ATLAS-BACKUP-SNAPSHOT-v1.md) or successor |
-| **B-02** | Copy `C:\AI MARS\projects\atlas\` → `{archive}\atlas-repo-{YYYYMMDD}\` | File count matches source |
-| **B-03** | Copy `C:\AI MARS STORAGE\atlas\` → `{archive}\atlas-storage-{YYYYMMDD}\` | CC folders present |
+| **B-02** | Copy `X:\AI MARS\projects\atlas\` → `{archive}\atlas-repo-{YYYYMMDD}\` | File count matches source |
+| **B-03** | Copy `X:\AI MARS STORAGE\atlas\` → `{archive}\atlas-storage-{YYYYMMDD}\` | CC folders present |
 | **B-04** | Optional: create git tag `atlas-backup-YYYYMMDD` on current commit | `git tag -l atlas-backup-*` |
 | **B-05** | Write one-line entry to operator log / lifecycle log | Traceability |
 | **B-06** | Confirm archive readable (spot-open 2–3 CC files + 2 register md files) | Read test |
@@ -114,10 +114,10 @@ Restore **storage first**, then **repository**, then **verify cross-references**
 
 | Order | Path | Action |
 |-------|------|--------|
-| 1.1 | `C:\AI MARS STORAGE\atlas\evidence\counterparty-cards\` | Restore all org subfolders + README |
-| 1.2 | `C:\AI MARS STORAGE\atlas\evidence\` | Restore any additional evidence tiers if present in archive |
-| 1.3 | `C:\AI MARS STORAGE\atlas\population\` | Restore only if archive contains mirrored exports |
-| 1.4 | `C:\AI MARS STORAGE\atlas\foundation\` | Restore only if archive contains mirrored exports |
+| 1.1 | `X:\AI MARS STORAGE\atlas\evidence\counterparty-cards\` | Restore all org subfolders + README |
+| 1.2 | `X:\AI MARS STORAGE\atlas\evidence\` | Restore any additional evidence tiers if present in archive |
+| 1.3 | `X:\AI MARS STORAGE\atlas\population\` | Restore only if archive contains mirrored exports |
+| 1.4 | `X:\AI MARS STORAGE\atlas\foundation\` | Restore only if archive contains mirrored exports |
 
 **Gate:** CC paths cited in attestation acts must resolve on disk ([ATLAS-CARD-PRESENCE-VALIDATION-RULE-v1.md](ATLAS-CARD-PRESENCE-VALIDATION-RULE-v1.md)).
 
@@ -125,9 +125,9 @@ Restore **storage first**, then **repository**, then **verify cross-references**
 
 | Order | Path | Action |
 |-------|------|--------|
-| 2.1 | `C:\AI MARS\projects\atlas\foundation\` | Restore or checkout from git tag / archive |
-| 2.2 | `C:\AI MARS\projects\atlas\population\` | Restore registers + attestation acts + snapshots |
-| 2.3 | `C:\AI MARS\projects\atlas\audit\` | Restore if available |
+| 2.1 | `X:\AI MARS\projects\atlas\foundation\` | Restore or checkout from git tag / archive |
+| 2.2 | `X:\AI MARS\projects\atlas\population\` | Restore registers + attestation acts + snapshots |
+| 2.3 | `X:\AI MARS\projects\atlas\audit\` | Restore if available |
 
 **Gate:** [ATLAS-FOUNDATION-INDEX-v1.md](../foundation/ATLAS-FOUNDATION-INDEX-v1.md) entry paths must resolve.
 

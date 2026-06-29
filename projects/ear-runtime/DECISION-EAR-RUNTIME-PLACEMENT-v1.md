@@ -60,7 +60,7 @@ Architecture and governance remain authoritative in **`shared/external-access-ru
 2. **MARS project convention** — Engineering systems with roadmaps and implementation live under `projects/`, not `shared/`.
 3. **Status honesty** — A dedicated [EAR-RUNTIME-STATE.md](EAR-RUNTIME-STATE.md) avoids implying runtime exists because architecture docs exist nearby.
 4. **Pilot and release evolution** — Runtime execution pilots and versioned helpers need space without amending architecture freeze folders.
-5. **External storage is for artefacts, not source** — `C:\AI MARS STORAGE\` remains appropriate for snapshots and quarantine per [EAR-STORAGE-MODEL-v1.md](../../shared/external-access-runtime/EAR-STORAGE-MODEL-v1.md), not for connector source code.
+5. **External storage is for artefacts, not source** — `X:\AI MARS STORAGE\` remains appropriate for snapshots and quarantine per [EAR-STORAGE-MODEL-v1.md](../../shared/external-access-runtime/EAR-STORAGE-MODEL-v1.md), not for connector source code.
 
 ---
 

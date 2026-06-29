@@ -48,7 +48,7 @@ function main() {
   const args = parseArgs(process.argv);
   const bundleDir = path.resolve(
     args.bundle ||
-      `C:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-assisted/incoming/${args.queryId || 'bundle-pending'}`,
+      `X:/AI MARS STORAGE/incoming/mig/live-validation/w2-2-assisted/incoming/${args.queryId || 'bundle-pending'}`,
   );
 
   fs.mkdirSync(bundleDir, { recursive: true });

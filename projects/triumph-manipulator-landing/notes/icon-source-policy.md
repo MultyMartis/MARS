@@ -6,11 +6,11 @@ This note applies to **Triumph Manipulator** frontend work under `workspaces/tri
 
 **Default icon source:** Font Awesome **Pro 5.15.4**, installed locally at:
 
-`C:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4`
+`X:\AI MARS\shared\assets\icon-libraries\Font Awesome Pro 5.15.4`
 
 Registry and usage details:
 
-`C:\AI MARS\shared\assets\icon-libraries\fontawesome-pro-5.15.4-usage.md`
+`X:\AI MARS\shared\assets\icon-libraries\fontawesome-pro-5.15.4-usage.md`
 
 Governance layer for semantic matching, family/style consistency, optical rhythm, and drift reporting:
 

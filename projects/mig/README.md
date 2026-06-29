@@ -8,6 +8,8 @@
 **Lane:** B (Operational / Research Acquisition)  
 **Registry:** `mig` — [registry/project-registry.md](../../registry/project-registry.md)
 
+**Canonical filesystem (X-drive, 2026-06-29):** repository `X:\AI MARS\projects\mig\` · bulk evidence `X:\AI MARS STORAGE\` (e.g. `incoming\mig\`) · see [governance/mars-x-drive-root-authority-v1.md](../../governance/mars-x-drive-root-authority-v1.md).
+
 **Pre-pilot freeze (2026-06-01):** Checkpoint `pre-pilot-gruzotaxi-krasnodar-v1` created. First planned pilot: **грузотакси Краснодар** (проект **Триумф**). Pilot **not executed** yet.
 
 ---

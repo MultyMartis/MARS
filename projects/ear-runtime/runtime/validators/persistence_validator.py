@@ -29,7 +29,7 @@ def validate_persistence_layout(
         if not output_root_under_ear_bulk(output_root):
             errors.append(
                 "output_root must resolve under chartered EAR bulk root "
-                r"(C:\AI MARS STORAGE\ear\)"
+                r"(X:\AI MARS STORAGE\ear\)"
             )
 
     acquisition_id = layout.get("acquisition_id")

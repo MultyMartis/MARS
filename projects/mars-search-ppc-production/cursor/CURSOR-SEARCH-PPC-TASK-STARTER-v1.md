@@ -10,7 +10,7 @@ Every Cursor task for search PPC must state:
 
 | Field | Required |
 |-------|----------|
-| Target folder | `C:\AI MARS` |
+| Target folder | `X:\AI MARS` |
 | Mode | Agent / Ask |
 | Project ID | e.g. `corvonero-direct-v2-clean-room` |
 | **Manifest path** | e.g. `projects/orca/projects/<id>/state/project-ppc-state-manifest-v1.json` |

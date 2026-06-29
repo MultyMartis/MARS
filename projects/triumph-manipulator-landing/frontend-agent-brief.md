@@ -14,7 +14,7 @@ Ship a **service-oriented commercial landing** with **geo/commercial hybrid** in
 
 ## Frontend target
 
-- Static **Gulp-oriented** frontend under **`C:\AI MARS\workspaces\triumph-manipulator-landing-v6\`** (V6 canonical; V5 frozen reference).
+- Static **Gulp-oriented** frontend under **`X:\AI MARS\workspaces\triumph-manipulator-landing-v6\`** (V6 canonical; V5 frozen reference).
 - **Rules:** [`TRIUMPH-V6-CURRENT-FRONTEND-RULES.md`](TRIUMPH-V6-CURRENT-FRONTEND-RULES.md) · **Rollout:** [`V6-PAGE-ROLLOUT-PLAN.md`](V6-PAGE-ROLLOUT-PLAN.md)
 - Sections implemented incrementally; **source-first** (HTML/SCSS/JS as per starter conventions once introduced).
 

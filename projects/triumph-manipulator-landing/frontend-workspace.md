@@ -2,7 +2,7 @@
 
 ## Recommended local path
 
-**`C:\AI MARS\workspaces\triumph-manipulator-landing-v6\`** (active rollout base, 2026-05-28)
+**`X:\AI MARS\workspaces\triumph-manipulator-landing-v6\`** (active rollout base, 2026-05-28)
 
 Historical: `workspaces/triumph-manipulator-landing-v5/` (mailer MVP freeze), `workspaces/triumph-manipulator-landing/` (V1 legacy).
 

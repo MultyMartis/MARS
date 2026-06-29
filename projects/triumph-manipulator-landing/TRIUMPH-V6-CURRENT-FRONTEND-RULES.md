@@ -14,7 +14,7 @@
 
 | Item | Rule |
 |------|------|
-| **Canonical path** | `C:\AI MARS\workspaces\triumph-manipulator-landing-v6\` |
+| **Canonical path** | `X:\AI MARS\workspaces\triumph-manipulator-landing-v6\` |
 | **Historical V5** | `workspaces/triumph-manipulator-landing-v5/` — frozen reference; do not use for new pages |
 | **Source vs dist** | Edit `src/` only. Run `npm run build`. Never hand-edit `dist/`. |
 | **Build command** | `npm run build` (Gulp: `gulp build`) |

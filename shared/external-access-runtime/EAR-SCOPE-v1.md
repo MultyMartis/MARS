@@ -57,7 +57,7 @@ See [EAR-ROADMAP-v1.md](EAR-ROADMAP-v1.md):
 ## Operational boundaries
 
 - EAR operates on **external** systems; MARS repo holds **metadata and contracts** only by default.
-- Bulk artifacts live outside git per pilot storage policy (e.g. OCPilot `C:\AI MARS STORAGE\`).
+- Bulk artifacts live outside git per pilot storage policy (e.g. OCPilot `X:\AI MARS STORAGE\`).
 - Quarantine and intake rules of each consumer still apply after snapshot delivery.
 
 ---

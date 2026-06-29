@@ -88,7 +88,7 @@ Consumers **never** receive raw credentials in the snapshot contract. They may r
 | Artifact | Typical location |
 |----------|------------------|
 | EAR contracts & docs | `shared/external-access-runtime/` (git) |
-| Snapshot bulk | External storage per consumer registry (e.g. `C:\AI MARS STORAGE\ocpilot\project-sites\<site>\snapshots\`) |
+| Snapshot bulk | External storage per consumer registry (e.g. `X:\AI MARS STORAGE\ocpilot\project-sites\<site>\snapshots\`) |
 | Secrets | External `secrets/` — never git |
 | Consumer analysis | Consumer repo paths + external bulk |
 

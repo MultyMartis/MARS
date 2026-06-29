@@ -23,7 +23,7 @@ export const STORAGE_POLICY = {
     'uncontrolled third-party bulk data',
   ],
   default_external_roots: [
-    'C:\\AI MARS STORAGE',
+    'X:\\AI MARS STORAGE',
     'incoming/mig',
   ],
 };

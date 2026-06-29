@@ -191,11 +191,11 @@ The MARS write boundary applies to **MARS-controlled** artefacts, not to claimin
 | **X6A** — Forge WordPress, AG-WP-001, WPilot | **COMPLETE** ([reports/mars-x-drive-migration-x6a-forge-agwp-wpilot-v1.md](../reports/mars-x-drive-migration-x6a-forge-agwp-wpilot-v1.md)) |
 | **X6B** — OCPilot active path reconciliation | **COMPLETE** ([reports/mars-x-drive-migration-x6b-ocpilot-site002-protected-v1.md](../reports/mars-x-drive-migration-x6b-ocpilot-site002-protected-v1.md)) |
 | **X6** — CMS pilot programmes (aggregate) | **COMPLETE** (X6A + X6B) |
-| **X7** — MIG, ORCA, ATLAS, OPS, EAR, NOVA programmes | **NOT STARTED** |
+| **X7** — MIG, ORCA, ATLAS, OPS, EAR, NOVA programmes | **COMPLETE** ([reports/mars-x-drive-migration-x7-remaining-programmes-v1.md](../reports/mars-x-drive-migration-x7-remaining-programmes-v1.md)) |
 | **X8** — Web-GPT sync and current source-pack publication | **PARTIAL** (current-path addendum only; legacy packs unchanged) |
 | **X9** — Historical review and final active-path validation | **NOT STARTED** |
 
-**X6B scope (2026-06-29):** X6B covers active OCPilot repository paths only. SITE-002 business/design/runtime behavior was not modified. Storage and remote systems were not modified.
+**X7 scope (2026-06-29):** X7 covers clean active operational programme paths for remaining registered programmes. Overlapping dirty WIP, historical evidence, generated artefacts, semantic caches, and programme-specific deferred tooling remain outside this completion claim.
 
 ---
 
