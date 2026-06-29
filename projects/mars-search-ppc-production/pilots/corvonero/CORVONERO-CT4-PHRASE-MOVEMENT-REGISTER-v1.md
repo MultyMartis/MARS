@@ -1,0 +1,9 @@
+# CORVONERO CT-4 Phrase Movement Register v1
+
+{
+  "KEEP": 455,
+  "MOVE_WITHIN_CAMPAIGN": 371,
+  "MOVE_TO_OTHER_CAMPAIGN": 7,
+  "REJECT": 62,
+  "ABSTAIN": 0
+}

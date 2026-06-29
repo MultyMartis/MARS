@@ -1,0 +1,96 @@
+{
+  "routing_id": "corvonero-ct4-intra-campaign-routing-v1",
+  "generated_at": "2026-06-29T19:17:53.625Z",
+  "CA-01": [
+    {
+      "source_group": "ca-01-specialist-search",
+      "destination_group": "ca-01-price-intent",
+      "overlap_terms": [
+        "стоимость"
+      ],
+      "recommended_negative": "стоимость",
+      "routing_effect": "Route price intent to dedicated group",
+      "overblocking_risk": "MEDIUM",
+      "decision": "REVIEW_REQUIRED"
+    },
+    {
+      "source_group": "ca-01-specialist-search",
+      "destination_group": "ca-01-find-hire-specialist",
+      "overlap_terms": [
+        "найти"
+      ],
+      "recommended_negative": "найти",
+      "routing_effect": "Route hire intent",
+      "overblocking_risk": "MEDIUM",
+      "decision": "REVIEW_REQUIRED"
+    },
+    {
+      "source_group": "ca-01-specialist-extended",
+      "destination_group": "ca-01-find-hire-specialist",
+      "overlap_terms": [
+        "нужен"
+      ],
+      "recommended_negative": "нужен",
+      "routing_effect": "Route hire intent from extended pool",
+      "overblocking_risk": "MEDIUM",
+      "decision": "REVIEW_REQUIRED"
+    },
+    {
+      "source_group": "ca-01-find-hire-specialist",
+      "destination_group": "ca-01-specialist-search",
+      "overlap_terms": [
+        "программист 1с"
+      ],
+      "recommended_negative": "программист 1с",
+      "routing_effect": "Protect core identity queries — REVIEW_REQUIRED",
+      "overblocking_risk": "MEDIUM",
+      "decision": "REVIEW_REQUIRED"
+    },
+    {
+      "source_group": "ca-01-remote-freelance-specialist",
+      "destination_group": "ca-01-specialist-search",
+      "overlap_terms": [
+        "программист"
+      ],
+      "recommended_negative": "программист",
+      "routing_effect": "Broad term — DO_NOT_APPLY at group level",
+      "overblocking_risk": "HIGH",
+      "decision": "DO_NOT_APPLY"
+    }
+  ],
+  "CA-05": [
+    {
+      "source_group": "ca-05-marking-setup",
+      "destination_group": "ca-05-chestny-znak-service",
+      "overlap_terms": [
+        "честный знак"
+      ],
+      "recommended_negative": "честный знак",
+      "routing_effect": "Route Chestny Znak intent",
+      "overblocking_risk": "MEDIUM",
+      "decision": "REVIEW_REQUIRED"
+    },
+    {
+      "source_group": "ca-05-chestny-znak-service",
+      "destination_group": "ca-05-marking-setup",
+      "overlap_terms": [
+        "маркировка"
+      ],
+      "recommended_negative": "маркировка",
+      "routing_effect": "DO_NOT_APPLY — too broad",
+      "overblocking_risk": "HIGH",
+      "decision": "DO_NOT_APPLY"
+    },
+    {
+      "source_group": "ca-05-marking-setup",
+      "destination_group": "ca-05-marking-codes",
+      "overlap_terms": [
+        "коды маркировки"
+      ],
+      "recommended_negative": "коды маркировки",
+      "routing_effect": "Route codes setup intent",
+      "overblocking_risk": "MEDIUM",
+      "decision": "REVIEW_REQUIRED"
+    }
+  ]
+}

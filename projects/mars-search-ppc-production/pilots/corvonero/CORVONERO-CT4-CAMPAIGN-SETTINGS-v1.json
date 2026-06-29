@@ -1,0 +1,134 @@
+{
+  "profile_id": "corvonero-ext-w1-campaign-settings-v2",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "operator_decisions_applied": true,
+  "confirmed_boundary": {
+    "geography": "Новосибирская область"
+  },
+  "unresolved": {
+    "budget": "OPERATOR_DECISION_REQUIRED",
+    "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+    "schedule": "OPERATOR_DECISION_REQUIRED",
+    "yandex_metrica_counter": "NOT PROVIDED",
+    "conversion_goals": "NOT PROVIDED"
+  },
+  "campaigns": [
+    {
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "campaign_type": "Текстово-графическая кампания",
+      "placement": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "geography": "Новосибирская область",
+      "auto_targeting": "DISABLED",
+      "device_adjustments": "NONE",
+      "demographic_adjustments": "NONE",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+      "budget": "OPERATOR_DECISION_REQUIRED",
+      "yandex_metrica_counter": "NOT PROVIDED",
+      "conversion_goals": "NOT PROVIDED",
+      "phrase_matching": "OPERATOR_DECISION_REQUIRED — match may encode in phrase text per format contract",
+      "negative_keyword_application": "APPROVED_CONTROLLED_SET — see CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json",
+      "monitoring": "NOT STARTED",
+      "moderation_state": "NOT SUBMITTED",
+      "launch_status": "NOT AUTHORIZED"
+    },
+    {
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "campaign_type": "Текстово-графическая кампания",
+      "placement": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "geography": "Новосибирская область",
+      "auto_targeting": "DISABLED",
+      "device_adjustments": "NONE",
+      "demographic_adjustments": "NONE",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+      "budget": "OPERATOR_DECISION_REQUIRED",
+      "yandex_metrica_counter": "NOT PROVIDED",
+      "conversion_goals": "NOT PROVIDED",
+      "phrase_matching": "OPERATOR_DECISION_REQUIRED — match may encode in phrase text per format contract",
+      "negative_keyword_application": "APPROVED_CONTROLLED_SET — see CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json",
+      "monitoring": "NOT STARTED",
+      "moderation_state": "NOT SUBMITTED",
+      "launch_status": "NOT AUTHORIZED"
+    },
+    {
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "campaign_type": "Текстово-графическая кампания",
+      "placement": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "geography": "Новосибирская область",
+      "auto_targeting": "DISABLED",
+      "device_adjustments": "NONE",
+      "demographic_adjustments": "NONE",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+      "budget": "OPERATOR_DECISION_REQUIRED",
+      "yandex_metrica_counter": "NOT PROVIDED",
+      "conversion_goals": "NOT PROVIDED",
+      "phrase_matching": "OPERATOR_DECISION_REQUIRED — match may encode in phrase text per format contract",
+      "negative_keyword_application": "APPROVED_CONTROLLED_SET — see CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json",
+      "monitoring": "NOT STARTED",
+      "moderation_state": "NOT SUBMITTED",
+      "launch_status": "NOT AUTHORIZED"
+    },
+    {
+      "campaign_id": "CA-04",
+      "campaign_name": "Интеграции 1С",
+      "campaign_type": "Текстово-графическая кампания",
+      "placement": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "geography": "Новосибирская область",
+      "auto_targeting": "DISABLED",
+      "device_adjustments": "NONE",
+      "demographic_adjustments": "NONE",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+      "budget": "OPERATOR_DECISION_REQUIRED",
+      "yandex_metrica_counter": "NOT PROVIDED",
+      "conversion_goals": "NOT PROVIDED",
+      "phrase_matching": "OPERATOR_DECISION_REQUIRED — match may encode in phrase text per format contract",
+      "negative_keyword_application": "APPROVED_CONTROLLED_SET — see CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json",
+      "monitoring": "NOT STARTED",
+      "moderation_state": "NOT SUBMITTED",
+      "launch_status": "NOT AUTHORIZED"
+    },
+    {
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "campaign_type": "Текстово-графическая кампания",
+      "placement": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "geography": "Новосибирская область",
+      "auto_targeting": "DISABLED",
+      "device_adjustments": "NONE",
+      "demographic_adjustments": "NONE",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "bid_strategy": "OPERATOR_DECISION_REQUIRED",
+      "budget": "OPERATOR_DECISION_REQUIRED",
+      "yandex_metrica_counter": "NOT PROVIDED",
+      "conversion_goals": "NOT PROVIDED",
+      "phrase_matching": "OPERATOR_DECISION_REQUIRED — match may encode in phrase text per format contract",
+      "negative_keyword_application": "APPROVED_CONTROLLED_SET — see CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json",
+      "monitoring": "NOT STARTED",
+      "moderation_state": "NOT SUBMITTED",
+      "launch_status": "NOT AUTHORIZED"
+    }
+  ],
+  "ct4_transport_safe": true
+}

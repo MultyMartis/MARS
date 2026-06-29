@@ -1,0 +1,27 @@
+{
+  "result_id": "corvonero-ct4-result-v1",
+  "generated_at": "2026-06-29T19:17:53.625Z",
+  "verdict": "PASS — FINAL AUTHORITY APPROVED",
+  "counts": {
+    "original_total_phrases": 895,
+    "reviewed_oversized_group_phrases": 585,
+    "kept": 455,
+    "moved_within_campaign": 371,
+    "moved_to_other_campaign": 7,
+    "rejected_ct4_before_operator_cleanup": 56,
+    "operator_additional_rejected": 6,
+    "operator_additional_moved_within_campaign": 0,
+    "operator_additional_moved_to_other_campaign": 1,
+    "rejected_total": 62,
+    "abstain": 0,
+    "deployable_before_operator_cleanup": 839,
+    "final_deployable_phrases": 833,
+    "original_groups": 15,
+    "final_groups": 21,
+    "groups_over_200": 0,
+    "operator_approved_derived_ads": 7,
+    "unapproved_derived_ads": 0,
+    "count_reconciled": true
+  },
+  "ct5_generation": "READY FOR SEPARATE AUTHORIZATION"
+}

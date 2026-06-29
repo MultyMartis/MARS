@@ -1,0 +1,1886 @@
+{
+  "pack_id": "corvonero-ct4-primary-ads-v1",
+  "generated_at": "2026-06-29T19:17:53.625Z",
+  "operator_ad_decision_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-OPERATOR-AD-DECISION-v1.json",
+  "deployable_ads": 21,
+  "derived_operator_approved": 7,
+  "derived_requires_review": 0,
+  "ads": [
+    {
+      "group_id": "ca-01-direct-service-order",
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "group_name": "Программист / специалист 1С — direct service order",
+      "starter_phrase": "заказы для 1с программиста",
+      "starter_phrase_id": "CR2-PHR-00413",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Услуги программиста 1С под вашу задачу",
+        "additional_headline": "Корво Неро",
+        "text": "Обсудим задачу и оценим объём работ. Удалённо по России, выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 38,
+          "max_word_length": 12,
+          "words": [
+            "Услуги",
+            "программиста",
+            "1С",
+            "под",
+            "вашу",
+            "задачу"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 10,
+          "max_word_length": 5,
+          "words": [
+            "Корво",
+            "Неро"
+          ]
+        },
+        "text_metrics": {
+          "characters": 78,
+          "max_word_length": 12,
+          "words": [
+            "Обсудим",
+            "задачу",
+            "и",
+            "оценим",
+            "объём",
+            "работ.",
+            "Удалённо",
+            "по",
+            "России,",
+            "выезд",
+            "в",
+            "Новосибирске."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-01 first_screen",
+        "LP-01 process"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-find-hire-specialist",
+      "source_ad_id": "ca-01-specialist-search",
+      "group_name": "Программист / специалист 1С — find / hire specialist",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Нужен программист 1С?",
+        "additional_headline": "Подключимся к вашей задаче",
+        "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Удалённо, по договору.",
+        "headline_metrics": {
+          "characters": 21,
+          "max_word_length": 11,
+          "words": [
+            "Нужен",
+            "программист",
+            "1С?"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 26,
+          "max_word_length": 11,
+          "words": [
+            "Подключимся",
+            "к",
+            "вашей",
+            "задаче"
+          ]
+        },
+        "text_metrics": {
+          "characters": 74,
+          "max_word_length": 10,
+          "words": [
+            "Доработаем",
+            "1С,",
+            "исправим",
+            "ошибки",
+            "и",
+            "подготовим",
+            "отчёты.",
+            "Удалённо,",
+            "по",
+            "договору."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "programmist-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "group_id": "ca-01-price-intent",
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "group_name": "Программист / специалист 1С — Price / cost intent",
+      "starter_phrase": "рекомендованная стоимость часа 1с программиста",
+      "starter_phrase_id": "CR2-PHR-00550",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Программист 1С — от 3 000 ₽ в час",
+        "additional_headline": "Удалённо по России",
+        "text": "Минимальный заказ — 2 часа. Работаем удалённо и с выездом в Новосибирске.",
+        "headline_metrics": {
+          "characters": 33,
+          "max_word_length": 11,
+          "words": [
+            "Программист",
+            "1С",
+            "—",
+            "от",
+            "3",
+            "000",
+            "₽",
+            "в",
+            "час"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": [
+            "Удалённо",
+            "по",
+            "России"
+          ]
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 12,
+          "words": [
+            "Минимальный",
+            "заказ",
+            "—",
+            "2",
+            "часа.",
+            "Работаем",
+            "удалённо",
+            "и",
+            "с",
+            "выездом",
+            "в",
+            "Новосибирске."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-01 pricing"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "YES",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-remote-freelance-specialist",
+      "source_ad_id": "ca-01-specialist-search",
+      "group_name": "Программист / специалист 1С — remote / freelance / local",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Программист 1С удалённо",
+        "additional_headline": "Выезд по Новосибирску",
+        "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Работаем по договору.",
+        "headline_metrics": {
+          "characters": 23,
+          "max_word_length": 11,
+          "words": [
+            "Программист",
+            "1С",
+            "удалённо"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 21,
+          "max_word_length": 12,
+          "words": [
+            "Выезд",
+            "по",
+            "Новосибирску"
+          ]
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 10,
+          "words": [
+            "Доработаем",
+            "1С,",
+            "исправим",
+            "ошибки",
+            "и",
+            "подготовим",
+            "отчёты.",
+            "Работаем",
+            "по",
+            "договору."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "programmist-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-by-product",
+      "source_ad_id": "ca-01-specialist-search",
+      "group_name": "Программист / специалист 1С — product / role variants",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Специалист по конфигурациям 1С",
+        "additional_headline": "ЗУП, УТ и Бухгалтерия",
+        "text": "Доработаем и настроим вашу конфигурацию 1С. Удалённо по России, по договору.",
+        "headline_metrics": {
+          "characters": 30,
+          "max_word_length": 13,
+          "words": [
+            "Специалист",
+            "по",
+            "конфигурациям",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 21,
+          "max_word_length": 11,
+          "words": [
+            "ЗУП,",
+            "УТ",
+            "и",
+            "Бухгалтерия"
+          ]
+        },
+        "text_metrics": {
+          "characters": 76,
+          "max_word_length": 12,
+          "words": [
+            "Доработаем",
+            "и",
+            "настроим",
+            "вашу",
+            "конфигурацию",
+            "1С.",
+            "Удалённо",
+            "по",
+            "России,",
+            "по",
+            "договору."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "programmist-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-extended",
+      "source_ad_id": "ca-01-specialist-search",
+      "group_name": "Программист / специалист 1С — extended specialist queries",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Программист 1С под разные задачи",
+        "additional_headline": "Доработка и исправления",
+        "text": "Настроим и доработаем 1С, исправим ошибки и отчёты. Удалённо по РФ, по договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 11,
+          "words": [
+            "Программист",
+            "1С",
+            "под",
+            "разные",
+            "задачи"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 23,
+          "max_word_length": 11,
+          "words": [
+            "Доработка",
+            "и",
+            "исправления"
+          ]
+        },
+        "text_metrics": {
+          "characters": 80,
+          "max_word_length": 10,
+          "words": [
+            "Настроим",
+            "и",
+            "доработаем",
+            "1С,",
+            "исправим",
+            "ошибки",
+            "и",
+            "отчёты.",
+            "Удалённо",
+            "по",
+            "РФ,",
+            "по",
+            "договору."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "programmist-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "group_id": "ca-01-specialist-search",
+      "campaign_id": "CA-01",
+      "campaign_name": "Программист / специалист 1С",
+      "group_name": "Программист / специалист 1С — specialist search",
+      "starter_phrase": "программист 1с",
+      "starter_phrase_id": "CR2-PHR-00001",
+      "landing_page": {
+        "id": "LP-01",
+        "name": "Программист 1С",
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "primary_ad": {
+        "headline": "Программист 1С для разовых задач",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработка, ошибки и отчёты в 1С. Выезд в Новосибирске. Работа по договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 11,
+          "words": [
+            "Программист",
+            "1С",
+            "для",
+            "разовых",
+            "задач"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": [
+            "Удалённо",
+            "по",
+            "России"
+          ]
+        },
+        "text_metrics": {
+          "characters": 74,
+          "max_word_length": 12,
+          "words": [
+            "Доработка,",
+            "ошибки",
+            "и",
+            "отчёты",
+            "в",
+            "1С.",
+            "Выезд",
+            "в",
+            "Новосибирске.",
+            "Работа",
+            "по",
+            "договору."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-01 first_screen",
+        "LP-01 work_format",
+        "LP-01 trust"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-02-direct-service-order",
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_name": "Сопровождение и обслуживание 1С — direct service order",
+      "starter_phrase": "услуги по сопровождению 1с",
+      "starter_phrase_id": "CR2-PHR-00591",
+      "landing_page": {
+        "id": "LP-02",
+        "name": "Сопровождение и обслуживание 1С",
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "primary_ad": {
+        "headline": "Услуги сопровождения и поддержки 1С",
+        "additional_headline": "Корво Неро",
+        "text": "Помощь пользователям, обновления и устранение ошибок. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 35,
+          "max_word_length": 13,
+          "words": [
+            "Услуги",
+            "сопровождения",
+            "и",
+            "поддержки",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 10,
+          "max_word_length": 5,
+          "words": [
+            "Корво",
+            "Неро"
+          ]
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 13,
+          "words": [
+            "Помощь",
+            "пользователям,",
+            "обновления",
+            "и",
+            "устранение",
+            "ошибок.",
+            "Удалённо",
+            "по",
+            "России."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-02 first_screen"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-02-price-intent",
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_name": "Сопровождение и обслуживание 1С — Price / cost intent",
+      "starter_phrase": "стоимость часа сопровождения 1с",
+      "starter_phrase_id": "CR2-PHR-00711",
+      "landing_page": {
+        "id": "LP-02",
+        "name": "Сопровождение и обслуживание 1С",
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "primary_ad": {
+        "headline": "Стоимость сопровождения 1С",
+        "additional_headline": "Оценка после уточнения задач",
+        "text": "Стоимость зависит от формата и объёма поддержки. Работаем по договору.",
+        "headline_metrics": {
+          "characters": 26,
+          "max_word_length": 13,
+          "words": [
+            "Стоимость",
+            "сопровождения",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 28,
+          "max_word_length": 9,
+          "words": [
+            "Оценка",
+            "после",
+            "уточнения",
+            "задач"
+          ]
+        },
+        "text_metrics": {
+          "characters": 70,
+          "max_word_length": 9,
+          "words": [
+            "Стоимость",
+            "зависит",
+            "от",
+            "формата",
+            "и",
+            "объёма",
+            "поддержки.",
+            "Работаем",
+            "по",
+            "договору."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-02 pricing_policy"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "OPTIONAL_OR_NO",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-02-support-and-maintenance",
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_name": "Сопровождение и обслуживание 1С — support and maintenance",
+      "starter_phrase": "сопровождение 1с",
+      "starter_phrase_id": "CR2-PHR-00590",
+      "landing_page": {
+        "id": "LP-02",
+        "name": "Сопровождение и обслуживание 1С",
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "primary_ad": {
+        "headline": "Сопровождение 1С — поддержка и обновления",
+        "additional_headline": "Удалённо по России",
+        "text": "Помощь пользователям, обновления и ошибки. Выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 41,
+          "max_word_length": 13,
+          "words": [
+            "Сопровождение",
+            "1С",
+            "—",
+            "поддержка",
+            "и",
+            "обновления"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": [
+            "Удалённо",
+            "по",
+            "России"
+          ]
+        },
+        "text_metrics": {
+          "characters": 64,
+          "max_word_length": 13,
+          "words": [
+            "Помощь",
+            "пользователям,",
+            "обновления",
+            "и",
+            "ошибки.",
+            "Выезд",
+            "в",
+            "Новосибирске."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-02 first_screen",
+        "LP-02 meta"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-02-troubleshooting-not-working",
+      "campaign_id": "CA-02",
+      "campaign_name": "Сопровождение и обслуживание 1С",
+      "group_name": "Сопровождение и обслуживание 1С — 1С не работает / ошибки / восстановление работы",
+      "starter_phrase": "программа 1с не работает",
+      "starter_phrase_id": "CR2-PHR-02239",
+      "landing_page": {
+        "id": "LP-02",
+        "name": "Сопровождение и обслуживание 1С",
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "primary_ad": {
+        "headline": "1С не работает — поможем разобраться",
+        "additional_headline": "Сопровождение 1С",
+        "text": "Разберём ошибку и восстановим работу базы. Удалённо, выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 36,
+          "max_word_length": 11,
+          "words": [
+            "1С",
+            "не",
+            "работает",
+            "—",
+            "поможем",
+            "разобраться"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 16,
+          "max_word_length": 13,
+          "words": [
+            "Сопровождение",
+            "1С"
+          ]
+        },
+        "text_metrics": {
+          "characters": 74,
+          "max_word_length": 12,
+          "words": [
+            "Разберём",
+            "ошибку",
+            "и",
+            "восстановим",
+            "работу",
+            "базы.",
+            "Удалённо,",
+            "выезд",
+            "в",
+            "Новосибирске."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-02 first_screen",
+        "LP-02 service scope"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-03-direct-service-order",
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "group_name": "Доработка и разработка 1С — direct service order",
+      "starter_phrase": "услуги доработки 1с",
+      "starter_phrase_id": "CR2-PHR-00769",
+      "landing_page": {
+        "id": "LP-03",
+        "name": "Доработка и разработка 1С",
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "primary_ad": {
+        "headline": "Услуги по доработке 1С",
+        "additional_headline": "Под задачи вашего бизнеса",
+        "text": "Доработаем конфигурацию, отчёт или форму. Удалённо, выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 22,
+          "max_word_length": 9,
+          "words": [
+            "Услуги",
+            "по",
+            "доработке",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 7,
+          "words": [
+            "Под",
+            "задачи",
+            "вашего",
+            "бизнеса"
+          ]
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 12,
+          "words": [
+            "Доработаем",
+            "конфигурацию,",
+            "отчёт",
+            "или",
+            "форму.",
+            "Удалённо,",
+            "выезд",
+            "в",
+            "Новосибирске."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-03 first_screen"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-03-implementation",
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "group_name": "Доработка и разработка 1С — implementation",
+      "starter_phrase": "внедрение и сопровождение 1с",
+      "starter_phrase_id": "CR2-PHR-00623",
+      "landing_page": {
+        "id": "LP-03",
+        "name": "Доработка и разработка 1С",
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "primary_ad": {
+        "headline": "Внедрение отдельных процессов в 1С",
+        "additional_headline": "Доработка под задачи бизнеса",
+        "text": "Настроим учётный сценарий в действующей базе. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 34,
+          "max_word_length": 9,
+          "words": [
+            "Внедрение",
+            "отдельных",
+            "процессов",
+            "в",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 28,
+          "max_word_length": 9,
+          "words": [
+            "Доработка",
+            "под",
+            "задачи",
+            "бизнеса"
+          ]
+        },
+        "text_metrics": {
+          "characters": 65,
+          "max_word_length": 11,
+          "words": [
+            "Настроим",
+            "учётный",
+            "сценарий",
+            "в",
+            "действующей",
+            "базе.",
+            "Удалённо",
+            "по",
+            "России."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-03 first_screen",
+        "LP-03 operator_decisions partial_implementation"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-03-modification",
+      "campaign_id": "CA-03",
+      "campaign_name": "Доработка и разработка 1С",
+      "group_name": "Доработка и разработка 1С — modification",
+      "starter_phrase": "доработка 1с",
+      "starter_phrase_id": "CR2-PHR-00764",
+      "landing_page": {
+        "id": "LP-03",
+        "name": "Доработка и разработка 1С",
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "primary_ad": {
+        "headline": "Доработка 1С — отчёты, обработки, формы",
+        "additional_headline": "Под задачи бизнеса",
+        "text": "Доработаем конфигурацию под ваш процесс. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 39,
+          "max_word_length": 9,
+          "words": [
+            "Доработка",
+            "1С",
+            "—",
+            "отчёты,",
+            "обработки,",
+            "формы"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 7,
+          "words": [
+            "Под",
+            "задачи",
+            "бизнеса"
+          ]
+        },
+        "text_metrics": {
+          "characters": 60,
+          "max_word_length": 12,
+          "words": [
+            "Доработаем",
+            "конфигурацию",
+            "под",
+            "ваш",
+            "процесс.",
+            "Удалённо",
+            "по",
+            "России."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-03 first_screen"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-04-integration",
+      "campaign_id": "CA-04",
+      "campaign_name": "Интеграции 1С",
+      "group_name": "Интеграции 1С — integration",
+      "starter_phrase": "интеграция сайта с 1с",
+      "starter_phrase_id": "CR2-PHR-00842",
+      "landing_page": {
+        "id": "LP-04",
+        "name": "Интеграции 1С",
+        "url": "https://lk.corvonero.ru/integracii-1s/"
+      },
+      "primary_ad": {
+        "headline": "Интеграция 1С с сайтом и Битрикс",
+        "additional_headline": "Обмен данными",
+        "text": "Настроим синхронизацию, импорт и экспорт после анализа обеих систем.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 10,
+          "words": [
+            "Интеграция",
+            "1С",
+            "с",
+            "сайтом",
+            "и",
+            "Битрикс"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 13,
+          "max_word_length": 7,
+          "words": [
+            "Обмен",
+            "данными"
+          ]
+        },
+        "text_metrics": {
+          "characters": 68,
+          "max_word_length": 13,
+          "words": [
+            "Настроим",
+            "синхронизацию,",
+            "импорт",
+            "и",
+            "экспорт",
+            "после",
+            "анализа",
+            "обеих",
+            "систем."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-04 first_screen",
+        "LP-04 systems_mentioned"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-chestny-znak-service",
+      "source_ad_id": "ca-05-direct-service-order",
+      "group_name": "Маркировка / Честный знак — Chestny Znak service",
+      "landing_page": {
+        "id": "LP-05",
+        "name": "Маркировка и Честный знак в 1С",
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "primary_ad": {
+        "headline": "Честный знак в 1С — настройка",
+        "additional_headline": "Обмен кодами и документами",
+        "text": "Настроим Честный знак в 1С и обмен кодами маркировки. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 29,
+          "max_word_length": 9,
+          "words": [
+            "Честный",
+            "знак",
+            "в",
+            "1С",
+            "—",
+            "настройка"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 26,
+          "max_word_length": 11,
+          "words": [
+            "Обмен",
+            "кодами",
+            "и",
+            "документами"
+          ]
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 10,
+          "words": [
+            "Настроим",
+            "Честный",
+            "знак",
+            "в",
+            "1С",
+            "и",
+            "обмен",
+            "кодами",
+            "маркировки.",
+            "Удалённо",
+            "по",
+            "России."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "markirovka-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-05-direct-service-order — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "group_id": "ca-05-integration",
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_name": "Маркировка / Честный знак — integration",
+      "starter_phrase": "интеграция честного знака и сайта 1с битрикс",
+      "starter_phrase_id": "CR2-PHR-00877",
+      "landing_page": {
+        "id": "LP-05",
+        "name": "Маркировка и Честный знак в 1С",
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "primary_ad": {
+        "headline": "Интеграция маркировки 1С с сайтом",
+        "additional_headline": "Честный знак и Битрикс",
+        "text": "Настроим обмен данными маркировки после анализа 1С и внешней системы.",
+        "headline_metrics": {
+          "characters": 33,
+          "max_word_length": 10,
+          "words": [
+            "Интеграция",
+            "маркировки",
+            "1С",
+            "с",
+            "сайтом"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 22,
+          "max_word_length": 7,
+          "words": [
+            "Честный",
+            "знак",
+            "и",
+            "Битрикс"
+          ]
+        },
+        "text_metrics": {
+          "characters": 69,
+          "max_word_length": 10,
+          "words": [
+            "Настроим",
+            "обмен",
+            "данными",
+            "маркировки",
+            "после",
+            "анализа",
+            "1С",
+            "и",
+            "внешней",
+            "системы."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-05 first_screen",
+        "LP-05 operator_decisions website_bitrix_faq"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-marking-codes",
+      "source_ad_id": "ca-05-direct-service-order",
+      "group_name": "Маркировка / Честный знак — marking codes setup",
+      "landing_page": {
+        "id": "LP-05",
+        "name": "Маркировка и Честный знак в 1С",
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "primary_ad": {
+        "headline": "Коды маркировки в 1С",
+        "additional_headline": "Печать, обмен и проверка",
+        "text": "Настроим печать, сканирование и обмен кодами маркировки в 1С.",
+        "headline_metrics": {
+          "characters": 20,
+          "max_word_length": 10,
+          "words": [
+            "Коды",
+            "маркировки",
+            "в",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 24,
+          "max_word_length": 8,
+          "words": [
+            "Печать,",
+            "обмен",
+            "и",
+            "проверка"
+          ]
+        },
+        "text_metrics": {
+          "characters": 61,
+          "max_word_length": 12,
+          "words": [
+            "Настроим",
+            "печать,",
+            "сканирование",
+            "и",
+            "обмен",
+            "кодами",
+            "маркировки",
+            "в",
+            "1С."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "markirovka-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-05-direct-service-order — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-marking-setup",
+      "source_ad_id": "ca-05-direct-service-order",
+      "group_name": "Маркировка / Честный знак — general marking setup",
+      "landing_page": {
+        "id": "LP-05",
+        "name": "Маркировка и Честный знак в 1С",
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "primary_ad": {
+        "headline": "Настройка маркировки в 1С",
+        "additional_headline": "Подключение и обмен",
+        "text": "Настроим маркировку, обмен кодами и документами в 1С. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 25,
+          "max_word_length": 10,
+          "words": [
+            "Настройка",
+            "маркировки",
+            "в",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 19,
+          "max_word_length": 11,
+          "words": [
+            "Подключение",
+            "и",
+            "обмен"
+          ]
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 11,
+          "words": [
+            "Настроим",
+            "маркировку,",
+            "обмен",
+            "кодами",
+            "и",
+            "документами",
+            "в",
+            "1С.",
+            "Удалённо",
+            "по",
+            "России."
+          ]
+        }
+      },
+      "status": "OPERATOR_APPROVED",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_scope": "exact headline_1, headline_2, text and display_path",
+      "approval_date": "2026-06-30",
+      "display_path": "markirovka-1s",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-05-direct-service-order — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS"
+    },
+    {
+      "group_id": "ca-05-support-and-maintenance",
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_name": "Маркировка / Честный знак — support and maintenance",
+      "starter_phrase": "поддержка 1с честный знак",
+      "starter_phrase_id": "CR2-PHR-01179",
+      "landing_page": {
+        "id": "LP-05",
+        "name": "Маркировка и Честный знак в 1С",
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "primary_ad": {
+        "headline": "Поддержка маркировки и Честного знака в 1С",
+        "additional_headline": "Сопровождение обмена",
+        "text": "Поможем с ошибками и документами маркировки. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 42,
+          "max_word_length": 10,
+          "words": [
+            "Поддержка",
+            "маркировки",
+            "и",
+            "Честного",
+            "знака",
+            "в",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 20,
+          "max_word_length": 13,
+          "words": [
+            "Сопровождение",
+            "обмена"
+          ]
+        },
+        "text_metrics": {
+          "characters": 64,
+          "max_word_length": 11,
+          "words": [
+            "Поможем",
+            "с",
+            "ошибками",
+            "и",
+            "документами",
+            "маркировки.",
+            "Удалённо",
+            "по",
+            "России."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-05 first_screen"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    },
+    {
+      "group_id": "ca-05-ts-piot",
+      "campaign_id": "CA-05",
+      "campaign_name": "Маркировка / Честный знак",
+      "group_name": "Маркировка / Честный знак — TS ПИОТ",
+      "starter_phrase": "тс пиот честный знак 1с",
+      "starter_phrase_id": "CR2-PHR-01145",
+      "landing_page": {
+        "id": "LP-05",
+        "name": "Маркировка и Честный знак в 1С",
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "primary_ad": {
+        "headline": "Настройка ТС ПИОТ и Честного знака в 1С",
+        "additional_headline": "Маркировка 1С",
+        "text": "Настроим работу ТС ПИОТ в связке с вашей конфигурацией 1С. Удалённо.",
+        "headline_metrics": {
+          "characters": 39,
+          "max_word_length": 9,
+          "words": [
+            "Настройка",
+            "ТС",
+            "ПИОТ",
+            "и",
+            "Честного",
+            "знака",
+            "в",
+            "1С"
+          ]
+        },
+        "additional_metrics": {
+          "characters": 13,
+          "max_word_length": 10,
+          "words": [
+            "Маркировка",
+            "1С"
+          ]
+        },
+        "text_metrics": {
+          "characters": 68,
+          "max_word_length": 13,
+          "words": [
+            "Настроим",
+            "работу",
+            "ТС",
+            "ПИОТ",
+            "в",
+            "связке",
+            "с",
+            "вашей",
+            "конфигурацией",
+            "1С.",
+            "Удалённо."
+          ]
+        }
+      },
+      "claim_sources": [
+        "LP-05 meta TS ПИОТ",
+        "LP-05 first_screen"
+      ],
+      "lp_consistency": {
+        "ad_promise_on_lp": "YES",
+        "service_intent_matched": "YES",
+        "price_matched": "NOT_USED",
+        "geography_matched": "YES",
+        "cta_expectation_matched": "YES",
+        "overall": "READY_FOR_OPERATOR_REVIEW"
+      },
+      "status": "UNCHANGED_OPERATOR_APPROVED",
+      "technical_validation": "TECHNICALLY_VALIDATED",
+      "editorial_version": "v2-final"
+    }
+  ],
+  "derived_ads": [
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-find-hire-specialist",
+      "source_ad_id": "ca-01-specialist-search",
+      "headline_1": "Нужен программист 1С?",
+      "headline_2": "Подключимся к вашей задаче",
+      "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Удалённо, по договору.",
+      "display_path": "programmist-1s",
+      "landing_url": "https://lk.corvonero.ru/programmist-1s/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 21,
+        "max_word_length": 11,
+        "words": [
+          "Нужен",
+          "программист",
+          "1С?"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 26,
+        "max_word_length": 11,
+        "words": [
+          "Подключимся",
+          "к",
+          "вашей",
+          "задаче"
+        ]
+      },
+      "text_metrics": {
+        "characters": 74,
+        "max_word_length": 10,
+        "words": [
+          "Доработаем",
+          "1С,",
+          "исправим",
+          "ошибки",
+          "и",
+          "подготовим",
+          "отчёты.",
+          "Удалённо,",
+          "по",
+          "договору."
+        ]
+      }
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-remote-freelance-specialist",
+      "source_ad_id": "ca-01-specialist-search",
+      "headline_1": "Программист 1С удалённо",
+      "headline_2": "Выезд по Новосибирску",
+      "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Работаем по договору.",
+      "display_path": "programmist-1s",
+      "landing_url": "https://lk.corvonero.ru/programmist-1s/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 23,
+        "max_word_length": 11,
+        "words": [
+          "Программист",
+          "1С",
+          "удалённо"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 21,
+        "max_word_length": 12,
+        "words": [
+          "Выезд",
+          "по",
+          "Новосибирску"
+        ]
+      },
+      "text_metrics": {
+        "characters": 73,
+        "max_word_length": 10,
+        "words": [
+          "Доработаем",
+          "1С,",
+          "исправим",
+          "ошибки",
+          "и",
+          "подготовим",
+          "отчёты.",
+          "Работаем",
+          "по",
+          "договору."
+        ]
+      }
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-by-product",
+      "source_ad_id": "ca-01-specialist-search",
+      "headline_1": "Специалист по конфигурациям 1С",
+      "headline_2": "ЗУП, УТ и Бухгалтерия",
+      "text": "Доработаем и настроим вашу конфигурацию 1С. Удалённо по России, по договору.",
+      "display_path": "programmist-1s",
+      "landing_url": "https://lk.corvonero.ru/programmist-1s/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 30,
+        "max_word_length": 13,
+        "words": [
+          "Специалист",
+          "по",
+          "конфигурациям",
+          "1С"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 21,
+        "max_word_length": 11,
+        "words": [
+          "ЗУП,",
+          "УТ",
+          "и",
+          "Бухгалтерия"
+        ]
+      },
+      "text_metrics": {
+        "characters": 76,
+        "max_word_length": 12,
+        "words": [
+          "Доработаем",
+          "и",
+          "настроим",
+          "вашу",
+          "конфигурацию",
+          "1С.",
+          "Удалённо",
+          "по",
+          "России,",
+          "по",
+          "договору."
+        ]
+      }
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-extended",
+      "source_ad_id": "ca-01-specialist-search",
+      "headline_1": "Программист 1С под разные задачи",
+      "headline_2": "Доработка и исправления",
+      "text": "Настроим и доработаем 1С, исправим ошибки и отчёты. Удалённо по РФ, по договору.",
+      "display_path": "programmist-1s",
+      "landing_url": "https://lk.corvonero.ru/programmist-1s/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-01-specialist-search — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 32,
+        "max_word_length": 11,
+        "words": [
+          "Программист",
+          "1С",
+          "под",
+          "разные",
+          "задачи"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 23,
+        "max_word_length": 11,
+        "words": [
+          "Доработка",
+          "и",
+          "исправления"
+        ]
+      },
+      "text_metrics": {
+        "characters": 80,
+        "max_word_length": 10,
+        "words": [
+          "Настроим",
+          "и",
+          "доработаем",
+          "1С,",
+          "исправим",
+          "ошибки",
+          "и",
+          "отчёты.",
+          "Удалённо",
+          "по",
+          "РФ,",
+          "по",
+          "договору."
+        ]
+      }
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-chestny-znak-service",
+      "source_ad_id": "ca-05-direct-service-order",
+      "headline_1": "Честный знак в 1С — настройка",
+      "headline_2": "Обмен кодами и документами",
+      "text": "Настроим Честный знак в 1С и обмен кодами маркировки. Удалённо по России.",
+      "display_path": "markirovka-1s",
+      "landing_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-05-direct-service-order — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 29,
+        "max_word_length": 9,
+        "words": [
+          "Честный",
+          "знак",
+          "в",
+          "1С",
+          "—",
+          "настройка"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 26,
+        "max_word_length": 11,
+        "words": [
+          "Обмен",
+          "кодами",
+          "и",
+          "документами"
+        ]
+      },
+      "text_metrics": {
+        "characters": 73,
+        "max_word_length": 10,
+        "words": [
+          "Настроим",
+          "Честный",
+          "знак",
+          "в",
+          "1С",
+          "и",
+          "обмен",
+          "кодами",
+          "маркировки.",
+          "Удалённо",
+          "по",
+          "России."
+        ]
+      }
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-marking-codes",
+      "source_ad_id": "ca-05-direct-service-order",
+      "headline_1": "Коды маркировки в 1С",
+      "headline_2": "Печать, обмен и проверка",
+      "text": "Настроим печать, сканирование и обмен кодами маркировки в 1С.",
+      "display_path": "markirovka-1s",
+      "landing_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-05-direct-service-order — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 20,
+        "max_word_length": 10,
+        "words": [
+          "Коды",
+          "маркировки",
+          "в",
+          "1С"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 24,
+        "max_word_length": 8,
+        "words": [
+          "Печать,",
+          "обмен",
+          "и",
+          "проверка"
+        ]
+      },
+      "text_metrics": {
+        "characters": 61,
+        "max_word_length": 12,
+        "words": [
+          "Настроим",
+          "печать,",
+          "сканирование",
+          "и",
+          "обмен",
+          "кодами",
+          "маркировки",
+          "в",
+          "1С."
+        ]
+      }
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-marking-setup",
+      "source_ad_id": "ca-05-direct-service-order",
+      "headline_1": "Настройка маркировки в 1С",
+      "headline_2": "Подключение и обмен",
+      "text": "Настроим маркировку, обмен кодами и документами в 1С. Удалённо по России.",
+      "display_path": "markirovka-1s",
+      "landing_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "claim_changes": "Operator-approved exact copy — subgroup intent boundary only",
+      "reason": "Split from ca-05-direct-service-order — CT-4 semantic regrouping + operator approval",
+      "technical_limit_validation": "PASS",
+      "approval_state": "OPERATOR_APPROVED",
+      "approval_source": "Web-GPT parent chat operator decision",
+      "approval_date": "2026-06-30",
+      "headline_1_metrics": {
+        "characters": 25,
+        "max_word_length": 10,
+        "words": [
+          "Настройка",
+          "маркировки",
+          "в",
+          "1С"
+        ]
+      },
+      "headline_2_metrics": {
+        "characters": 19,
+        "max_word_length": 11,
+        "words": [
+          "Подключение",
+          "и",
+          "обмен"
+        ]
+      },
+      "text_metrics": {
+        "characters": 73,
+        "max_word_length": 11,
+        "words": [
+          "Настроим",
+          "маркировку,",
+          "обмен",
+          "кодами",
+          "и",
+          "документами",
+          "в",
+          "1С.",
+          "Удалённо",
+          "по",
+          "России."
+        ]
+      }
+    }
+  ],
+  "operator_ad_validation": {
+    "ca-01-find-hire-specialist": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 21,
+        "headline_2": 26,
+        "text": 74,
+        "display_path": 14
+      }
+    },
+    "ca-01-remote-freelance-specialist": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 23,
+        "headline_2": 21,
+        "text": 73,
+        "display_path": 14
+      }
+    },
+    "ca-01-specialist-by-product": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 30,
+        "headline_2": 21,
+        "text": 76,
+        "display_path": 14
+      }
+    },
+    "ca-01-specialist-extended": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 32,
+        "headline_2": 23,
+        "text": 80,
+        "display_path": 14
+      }
+    },
+    "ca-05-chestny-znak-service": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 29,
+        "headline_2": 26,
+        "text": 73,
+        "display_path": 13
+      }
+    },
+    "ca-05-marking-codes": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 20,
+        "headline_2": 24,
+        "text": 61,
+        "display_path": 13
+      }
+    },
+    "ca-05-marking-setup": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 25,
+        "headline_2": 19,
+        "text": 73,
+        "display_path": 13
+      }
+    }
+  }
+}

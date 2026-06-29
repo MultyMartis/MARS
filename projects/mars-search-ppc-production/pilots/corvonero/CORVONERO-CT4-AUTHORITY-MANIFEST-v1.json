@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "mars-search-ppc-production",
+  "pilot_id": "corvonero",
+  "authority_checkpoint": "corvonero-ct4-operator-approval-v1",
+  "campaign_scope": [
+    "CA-01",
+    "CA-02",
+    "CA-03",
+    "CA-04",
+    "CA-05"
+  ],
+  "operator_approval_state": "OPERATOR_APPROVED",
+  "generated_at": "2026-06-29T19:17:53.625Z",
+  "files": [
+    {
+      "role": "phrase_allocation",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-PHRASE-MOVEMENT-REGISTER-v1.json",
+      "sha256": "b74a2a48334c9baadb97321f93d86d9abf5dff0481cab0876e0e6fe68356cee8",
+      "required": true
+    },
+    {
+      "role": "campaign_architecture",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-GROUP-ARCHITECTURE-v1.json",
+      "sha256": "380f35ee50c2b8816e3b39612d0d2351d32cd4871a696482eb2248a7a9de85e4",
+      "required": true
+    },
+    {
+      "role": "primary_ads",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-PRIMARY-ADS-v1.json",
+      "sha256": "ff5fe5d6ba02213f52c43bc54ba28fbde8b36e4420c3e1e3599c63efe228d10c",
+      "required": true
+    },
+    {
+      "role": "callouts",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-EXT-W1-CALLOUTS-v2.json",
+      "sha256": "c3a957f7db7de183625e2e991f1f0156b68762c73f9df3343dc8977aced8846a",
+      "required": true
+    },
+    {
+      "role": "campaign_negatives",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-CAMPAIGN-NEGATIVES-v1.json",
+      "sha256": "9f12f7f4db9449519da4068ed301c8e8d624aaaf47bc497f25b4caa341f63b5e",
+      "required": true
+    },
+    {
+      "role": "group_negatives",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-GROUP-NEGATIVES-v1.json",
+      "sha256": "4a47a86f2c9dacc870f81a8a360c6410bd11a990c7e646816fba1e0093102a97",
+      "required": true
+    },
+    {
+      "role": "cross_campaign_rules",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-INTER-CAMPAIGN-ROUTING-v1.json",
+      "sha256": "247919a7bee21daf967139d940c97837756a029a5dc7e513a382d7fd59896ef9",
+      "required": true
+    },
+    {
+      "role": "utm_map",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-UTM-MAP-v1.json",
+      "sha256": "173c2432375959e0e6bf6078fe0ad5d86a0c1d8a86921b434b24c1de961bb19b",
+      "required": true
+    },
+    {
+      "role": "campaign_settings",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-CAMPAIGN-SETTINGS-v1.json",
+      "sha256": "ef355f9a5a021306ed77af400b918f3831aeb607dd501d88ef9c94ff58f60cdc",
+      "required": true
+    },
+    {
+      "role": "transport_config",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-TRANSPORT-CONFIG-v1.json",
+      "sha256": "c2db6677774a171d8c5a4850e4ab28a4b36d40ba2ad54ab064727ff4ae9bd1e0",
+      "required": true
+    }
+  ]
+}

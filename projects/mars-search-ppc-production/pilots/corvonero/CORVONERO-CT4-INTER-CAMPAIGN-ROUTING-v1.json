@@ -1,0 +1,112 @@
+{
+  "routing_id": "corvonero-ct4-inter-campaign-routing-v1",
+  "generated_at": "2026-06-29T19:17:53.625Z",
+  "deployment_policy": "NOT_APPLIED — conservative plan only",
+  "cross_campaign_negatives_deployed": 0,
+  "operator_decision": "NOT_DEPLOYED",
+  "rules": [
+    {
+      "source_campaign": "CA-03",
+      "negative": "сопровождение",
+      "destination_campaign": "CA-02",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "обслуживание",
+      "destination_campaign": "CA-02",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "доработка",
+      "destination_campaign": "CA-03",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "разработка",
+      "destination_campaign": "CA-03",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "интеграция",
+      "destination_campaign": "CA-04",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "сайт",
+      "destination_campaign": "CA-04",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "битрикс",
+      "destination_campaign": "CA-04",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "маркировка",
+      "destination_campaign": "CA-05",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "честный знак",
+      "destination_campaign": "CA-05",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "тс пиот",
+      "destination_campaign": "CA-05",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "коды маркировки",
+      "destination_campaign": "CA-05",
+      "reason": "Conservative routing assessment — not auto-applied in CT-4",
+      "phrase_examples": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    }
+  ],
+  "source_cross_campaign": {
+    "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-EXT-W1-CROSS-NEGATIVES-v2.json",
+    "sha256": "9cf899a57d79052ff07c9c70e3b4dfc399ff64a13395d49e29c5ce24b34e77c2"
+  }
+}

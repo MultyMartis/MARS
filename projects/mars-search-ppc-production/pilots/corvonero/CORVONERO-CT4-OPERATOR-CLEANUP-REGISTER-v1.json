@@ -1,0 +1,101 @@
+{
+  "register_id": "corvonero-ct4-operator-cleanup-register-v1",
+  "generated_at": "2026-06-30T00:00:00.000Z",
+  "review_scope_groups": [
+    "ca-01-find-hire-specialist",
+    "ca-01-remote-freelance-specialist",
+    "ca-01-specialist-by-product",
+    "ca-01-specialist-extended",
+    "ca-05-marking-setup"
+  ],
+  "corrections": [
+    {
+      "phrase": "найти работу программистом 1с",
+      "phrase_id": "CR2-PHR-00071",
+      "previous_campaign": "CA-01",
+      "previous_group": "ca-01-find-hire-specialist",
+      "final_verdict": "REJECT",
+      "final_campaign": null,
+      "final_group": null,
+      "reason": "employment_job_seeker_intent — seeker looking for work as programmer, not service purchase",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "требуется программист 1с",
+      "phrase_id": "CR2-PHR-00102",
+      "previous_campaign": "CA-01",
+      "previous_group": "ca-01-find-hire-specialist",
+      "final_verdict": "REJECT",
+      "final_campaign": null,
+      "final_group": null,
+      "reason": "hiring_staff_vacancy_intent without service-purchase evidence — vacancy-style employer query",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "ищу программист 1с",
+      "phrase_id": "CR2-PHR-00093",
+      "previous_campaign": "CA-01",
+      "previous_group": "ca-01-find-hire-specialist",
+      "final_verdict": "KEEP",
+      "final_campaign": "CA-01",
+      "final_group": "ca-01-find-hire-specialist",
+      "reason": "commercial_find_hire_intent — employer seeking contracted 1C programmer for task",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "подработка 1с программист удаленно",
+      "phrase_id": "CR2-PHR-00195",
+      "previous_campaign": "CA-01",
+      "previous_group": "ca-01-remote-freelance-specialist",
+      "final_verdict": "REJECT",
+      "final_campaign": null,
+      "final_group": null,
+      "reason": "employment_part_time_job_seeker_intent — side-job / part-time work query",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "программа программист 1с",
+      "phrase_id": "CR2-PHR-00041",
+      "previous_campaign": "CA-01",
+      "previous_group": "ca-01-specialist-extended",
+      "final_verdict": "REJECT",
+      "final_campaign": null,
+      "final_group": null,
+      "reason": "malformed_unclear_informational — software/program query, not service purchase",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "бухгалтерия для программиста 1с",
+      "phrase_id": "CR2-PHR-00167",
+      "previous_campaign": "CA-01",
+      "previous_group": "ca-01-specialist-by-product",
+      "final_verdict": "REJECT",
+      "final_campaign": null,
+      "final_group": null,
+      "reason": "malformed_unclear_informational — misaligned product/education query, not deployable service intent",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "тестирование доработок 1с",
+      "phrase_id": "CR2-PHR-00791",
+      "previous_campaign": "CA-05",
+      "previous_group": "ca-05-marking-setup",
+      "final_verdict": "MOVE_TO_OTHER_CAMPAIGN",
+      "final_campaign": "CA-03",
+      "final_group": "ca-03-modification",
+      "reason": "generic_1c_modification_intent — modification/testing intent belongs in CA-03, not marking",
+      "operator_review_trigger": true
+    },
+    {
+      "phrase": "продажа доработок 1с",
+      "phrase_id": "CR2-PHR-00816",
+      "previous_campaign": "CA-05",
+      "previous_group": "ca-05-marking-setup",
+      "final_verdict": "REJECT",
+      "final_campaign": null,
+      "final_group": null,
+      "reason": "seller_intent_not_service_purchase — selling modifications, not buying setup service",
+      "operator_review_trigger": true
+    }
+  ]
+}

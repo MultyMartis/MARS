@@ -1,0 +1,79 @@
+{
+  "decision_id": "corvonero-ct4-operator-ad-decision-v1",
+  "generated_at": "2026-06-30T00:00:00.000Z",
+  "approval_source": "Web-GPT parent chat operator decision",
+  "approval_scope": "exact headline_1, headline_2, text and display_path",
+  "approval_date": "2026-06-30",
+  "technical_limits": {
+    "headline_1": 56,
+    "headline_2": 30,
+    "text": 81,
+    "display_path": 20
+  },
+  "ads": {
+    "ca-01-specialist-extended": {
+      "group_id": "ca-01-specialist-extended",
+      "campaign_id": "CA-01",
+      "headline_1": "Программист 1С под разные задачи",
+      "headline_2": "Доработка и исправления",
+      "text": "Настроим и доработаем 1С, исправим ошибки и отчёты. Удалённо по РФ, по договору.",
+      "display_path": "programmist-1s",
+      "approval_state": "OPERATOR_APPROVED",
+      "forbidden_headline_1": "Найдём программиста 1С под задачу"
+    },
+    "ca-01-find-hire-specialist": {
+      "group_id": "ca-01-find-hire-specialist",
+      "campaign_id": "CA-01",
+      "headline_1": "Нужен программист 1С?",
+      "headline_2": "Подключимся к вашей задаче",
+      "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Удалённо, по договору.",
+      "display_path": "programmist-1s",
+      "approval_state": "OPERATOR_APPROVED"
+    },
+    "ca-01-remote-freelance-specialist": {
+      "group_id": "ca-01-remote-freelance-specialist",
+      "campaign_id": "CA-01",
+      "headline_1": "Программист 1С удалённо",
+      "headline_2": "Выезд по Новосибирску",
+      "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Работаем по договору.",
+      "display_path": "programmist-1s",
+      "approval_state": "OPERATOR_APPROVED"
+    },
+    "ca-01-specialist-by-product": {
+      "group_id": "ca-01-specialist-by-product",
+      "campaign_id": "CA-01",
+      "headline_1": "Специалист по конфигурациям 1С",
+      "headline_2": "ЗУП, УТ и Бухгалтерия",
+      "text": "Доработаем и настроим вашу конфигурацию 1С. Удалённо по России, по договору.",
+      "display_path": "programmist-1s",
+      "approval_state": "OPERATOR_APPROVED"
+    },
+    "ca-05-marking-setup": {
+      "group_id": "ca-05-marking-setup",
+      "campaign_id": "CA-05",
+      "headline_1": "Настройка маркировки в 1С",
+      "headline_2": "Подключение и обмен",
+      "text": "Настроим маркировку, обмен кодами и документами в 1С. Удалённо по России.",
+      "display_path": "markirovka-1s",
+      "approval_state": "OPERATOR_APPROVED"
+    },
+    "ca-05-chestny-znak-service": {
+      "group_id": "ca-05-chestny-znak-service",
+      "campaign_id": "CA-05",
+      "headline_1": "Честный знак в 1С — настройка",
+      "headline_2": "Обмен кодами и документами",
+      "text": "Настроим Честный знак в 1С и обмен кодами маркировки. Удалённо по России.",
+      "display_path": "markirovka-1s",
+      "approval_state": "OPERATOR_APPROVED"
+    },
+    "ca-05-marking-codes": {
+      "group_id": "ca-05-marking-codes",
+      "campaign_id": "CA-05",
+      "headline_1": "Коды маркировки в 1С",
+      "headline_2": "Печать, обмен и проверка",
+      "text": "Настроим печать, сканирование и обмен кодами маркировки в 1С.",
+      "display_path": "markirovka-1s",
+      "approval_state": "OPERATOR_APPROVED"
+    }
+  }
+}

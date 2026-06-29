@@ -1,0 +1,20 @@
+{
+  "transport_config_id": "corvonero-ct4-transport-config-v1",
+  "geo_region": "Новосибирская область",
+  "organization_policy": {
+    "required_value": "",
+    "forbidden_ids": [
+      "29500847237"
+    ]
+  },
+  "forbidden_organization_ids": [
+    "29500847237"
+  ],
+  "sitelinks_policy": "OMITTED",
+  "cross_campaign_negatives_policy": "NOT_APPLIED_UNLESS_APPROVED",
+  "bids_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-COMMANDER-INITIAL-BIDS-v1.json",
+  "display_paths_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-EXT-W1-DISPLAY-PATHS-v1.json",
+  "group_negatives_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-GROUP-NEGATIVES-v1.json",
+  "fragment_anchor_approved": false,
+  "ct4_authority": true
+}

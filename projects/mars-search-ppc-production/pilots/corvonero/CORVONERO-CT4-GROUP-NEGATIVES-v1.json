@@ -1,0 +1,246 @@
+{
+  "authority_id": "corvonero-ct4-group-negatives-v1",
+  "generated_at": "2026-06-29T19:17:53.625Z",
+  "groups": {
+    "ca-01-direct-service-order": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-find-hire-specialist": {
+      "terms": [
+        "программист 1с"
+      ],
+      "rules": [
+        {
+          "campaign_id": "CA-01",
+          "source_group": "ca-01-find-hire-specialist",
+          "negative": "программист 1с",
+          "destination_or_protected_group": "ca-01-specialist-search",
+          "reason": "Protect core identity queries — REVIEW_REQUIRED",
+          "example_phrases": [],
+          "overblocking_risk": "MEDIUM",
+          "approval_state": "REVIEW_REQUIRED"
+        }
+      ]
+    },
+    "ca-01-price-intent": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-remote-freelance-specialist": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-specialist-by-product": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-specialist-extended": {
+      "terms": [
+        "нужен"
+      ],
+      "rules": [
+        {
+          "campaign_id": "CA-01",
+          "source_group": "ca-01-specialist-extended",
+          "negative": "нужен",
+          "destination_or_protected_group": "ca-01-find-hire-specialist",
+          "reason": "Route hire intent from extended pool",
+          "example_phrases": [],
+          "overblocking_risk": "MEDIUM",
+          "approval_state": "OPERATOR_APPROVAL_RECOMMENDED"
+        }
+      ]
+    },
+    "ca-01-specialist-search": {
+      "terms": [
+        "стоимость",
+        "найти"
+      ],
+      "rules": [
+        {
+          "campaign_id": "CA-01",
+          "source_group": "ca-01-specialist-search",
+          "negative": "стоимость",
+          "destination_or_protected_group": "ca-01-price-intent",
+          "reason": "Route price intent to dedicated group",
+          "example_phrases": [],
+          "overblocking_risk": "MEDIUM",
+          "approval_state": "OPERATOR_APPROVAL_RECOMMENDED"
+        },
+        {
+          "campaign_id": "CA-01",
+          "source_group": "ca-01-specialist-search",
+          "negative": "найти",
+          "destination_or_protected_group": "ca-01-find-hire-specialist",
+          "reason": "Route hire intent",
+          "example_phrases": [],
+          "overblocking_risk": "MEDIUM",
+          "approval_state": "OPERATOR_APPROVAL_RECOMMENDED"
+        }
+      ]
+    },
+    "ca-02-direct-service-order": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-price-intent": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-support-and-maintenance": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-troubleshooting-not-working": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-03-direct-service-order": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-03-implementation": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-03-modification": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-04-integration": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-chestny-znak-service": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-integration": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-marking-codes": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-marking-setup": {
+      "terms": [
+        "честный знак",
+        "коды маркировки"
+      ],
+      "rules": [
+        {
+          "campaign_id": "CA-05",
+          "source_group": "ca-05-marking-setup",
+          "negative": "честный знак",
+          "destination_or_protected_group": "ca-05-chestny-znak-service",
+          "reason": "Route Chestny Znak intent",
+          "example_phrases": [],
+          "overblocking_risk": "MEDIUM",
+          "approval_state": "REVIEW_REQUIRED"
+        },
+        {
+          "campaign_id": "CA-05",
+          "source_group": "ca-05-marking-setup",
+          "negative": "коды маркировки",
+          "destination_or_protected_group": "ca-05-marking-codes",
+          "reason": "Route codes setup intent",
+          "example_phrases": [],
+          "overblocking_risk": "MEDIUM",
+          "approval_state": "REVIEW_REQUIRED"
+        }
+      ]
+    },
+    "ca-05-support-and-maintenance": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-ts-piot": {
+      "terms": [],
+      "rules": []
+    }
+  },
+  "rules": [
+    {
+      "campaign_id": "CA-01",
+      "source_group": "ca-01-specialist-search",
+      "negative": "стоимость",
+      "destination_or_protected_group": "ca-01-price-intent",
+      "reason": "Route price intent to dedicated group",
+      "example_phrases": [],
+      "overblocking_risk": "MEDIUM",
+      "approval_state": "OPERATOR_APPROVAL_RECOMMENDED"
+    },
+    {
+      "campaign_id": "CA-01",
+      "source_group": "ca-01-specialist-search",
+      "negative": "найти",
+      "destination_or_protected_group": "ca-01-find-hire-specialist",
+      "reason": "Route hire intent",
+      "example_phrases": [],
+      "overblocking_risk": "MEDIUM",
+      "approval_state": "OPERATOR_APPROVAL_RECOMMENDED"
+    },
+    {
+      "campaign_id": "CA-01",
+      "source_group": "ca-01-specialist-extended",
+      "negative": "нужен",
+      "destination_or_protected_group": "ca-01-find-hire-specialist",
+      "reason": "Route hire intent from extended pool",
+      "example_phrases": [],
+      "overblocking_risk": "MEDIUM",
+      "approval_state": "OPERATOR_APPROVAL_RECOMMENDED"
+    },
+    {
+      "campaign_id": "CA-01",
+      "source_group": "ca-01-find-hire-specialist",
+      "negative": "программист 1с",
+      "destination_or_protected_group": "ca-01-specialist-search",
+      "reason": "Protect core identity queries — REVIEW_REQUIRED",
+      "example_phrases": [],
+      "overblocking_risk": "MEDIUM",
+      "approval_state": "REVIEW_REQUIRED"
+    },
+    {
+      "campaign_id": "CA-01",
+      "source_group": "ca-01-remote-freelance-specialist",
+      "negative": "программист",
+      "destination_or_protected_group": "ca-01-specialist-search",
+      "reason": "Broad term — DO_NOT_APPLY at group level",
+      "example_phrases": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "campaign_id": "CA-05",
+      "source_group": "ca-05-marking-setup",
+      "negative": "честный знак",
+      "destination_or_protected_group": "ca-05-chestny-znak-service",
+      "reason": "Route Chestny Znak intent",
+      "example_phrases": [],
+      "overblocking_risk": "MEDIUM",
+      "approval_state": "REVIEW_REQUIRED"
+    },
+    {
+      "campaign_id": "CA-05",
+      "source_group": "ca-05-chestny-znak-service",
+      "negative": "маркировка",
+      "destination_or_protected_group": "ca-05-marking-setup",
+      "reason": "DO_NOT_APPLY — too broad",
+      "example_phrases": [],
+      "overblocking_risk": "HIGH",
+      "approval_state": "DO_NOT_APPLY"
+    },
+    {
+      "campaign_id": "CA-05",
+      "source_group": "ca-05-marking-setup",
+      "negative": "коды маркировки",
+      "destination_or_protected_group": "ca-05-marking-codes",
+      "reason": "Route codes setup intent",
+      "example_phrases": [],
+      "overblocking_risk": "MEDIUM",
+      "approval_state": "REVIEW_REQUIRED"
+    }
+  ]
+}

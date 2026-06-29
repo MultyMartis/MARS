@@ -1,0 +1,123 @@
+# CORVONERO CT-4 Validation v1
+
+{
+  "groups_over_200": [],
+  "deployable_phrases": 833,
+  "deployable_before_operator_cleanup": 839,
+  "rejected_ct4_before_operator": 56,
+  "operator_additional_rejected": 6,
+  "operator_additional_moved_within_campaign": 0,
+  "operator_additional_moved_to_other_campaign": 1,
+  "total_rejected": 62,
+  "count_reconciled": true,
+  "derived_ads_operator_approved": 7,
+  "unapproved_derived_ads": 0,
+  "technical_ad_limits": "PASS",
+  "operator_ad_validation": {
+    "ca-01-find-hire-specialist": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 21,
+        "headline_2": 26,
+        "text": 74,
+        "display_path": 14
+      }
+    },
+    "ca-01-remote-freelance-specialist": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 23,
+        "headline_2": 21,
+        "text": 73,
+        "display_path": 14
+      }
+    },
+    "ca-01-specialist-by-product": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 30,
+        "headline_2": 21,
+        "text": 76,
+        "display_path": 14
+      }
+    },
+    "ca-01-specialist-extended": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 32,
+        "headline_2": 23,
+        "text": 80,
+        "display_path": 14
+      }
+    },
+    "ca-05-chestny-znak-service": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 29,
+        "headline_2": 26,
+        "text": 73,
+        "display_path": 13
+      }
+    },
+    "ca-05-marking-codes": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 20,
+        "headline_2": 24,
+        "text": 61,
+        "display_path": 13
+      }
+    },
+    "ca-05-marking-setup": {
+      "pass": true,
+      "checks": {
+        "headline_1": true,
+        "headline_2": true,
+        "text": true,
+        "display_path": true
+      },
+      "lengths": {
+        "headline_1": 25,
+        "headline_2": 19,
+        "text": 73,
+        "display_path": 13
+      }
+    }
+  }
+}
