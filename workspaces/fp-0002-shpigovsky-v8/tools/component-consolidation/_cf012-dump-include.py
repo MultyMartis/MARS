@@ -6,7 +6,7 @@ import sys
 commit = "4d98d6fbc273bd1bd4cf4555d973f2b978bef0fa"
 page = sys.argv[1]
 text = subprocess.check_output(
-    ["git", "-C", r"C:\MARS Phenix\AI MARS", "show", f"{commit}:workspaces/fp-0002-shpigovsky-v8/src/pages/{page}"],
+    ["git", "-C", r"X:\AI MARS", "show", f"{commit}:workspaces/fp-0002-shpigovsky-v8/src/pages/{page}"],
     text=True,
     encoding="utf-8",
 )

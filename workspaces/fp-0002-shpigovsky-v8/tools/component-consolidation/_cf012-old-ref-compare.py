@@ -23,7 +23,7 @@ FILES = [
 ]
 BACKUP = ROOT / "audits" / "cf-012-program-modifiers" / "data" / "_old-state-snapshot"
 OUT = Path(
-    r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-012-evidence\old-ref"
+    r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-012-evidence\old-ref"
 )
 
 
@@ -88,10 +88,10 @@ def main() -> None:
 
         report = {}
         before_dir = Path(
-            r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-012-evidence\before"
+            r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-012-evidence\before"
         )
         after_dir = Path(
-            r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-012-evidence\after"
+            r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-012-evidence\after"
         )
         for stem, before_name, after_name in [
             ("hub-desktop", "hub-services-program__desktop__program-crop.png", "hub-services-program__desktop__program-crop.png"),

@@ -2,6 +2,8 @@
 
 **Class:** LOC-ZONE  
 **Path:** `workspaces/website-factory-operations/`  
+**Physical root:** `X:\AI MARS\workspaces\website-factory-operations\`  
+**Repository root:** `X:\AI MARS\`  
 **Authority:** RT-G04 Physical Artifact Specification v1 (DF-03)  
 **Created:** 2026-06-07  
 **Wave:** 1 complete — Wave 2 complete — Wave 3 complete (C2–C7 proven on FP-0001)  

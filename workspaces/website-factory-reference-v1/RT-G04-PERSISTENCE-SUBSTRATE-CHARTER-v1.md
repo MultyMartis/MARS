@@ -2,7 +2,7 @@
 
 **Версия:** v1  
 **Дата:** 2026-06-05  
-**Область:** `workspaces/website-factory-reference-v1/` (канон) + контекст `C:\AI MARS` (MARS monorepo)  
+**Область:** `workspaces/website-factory-reference-v1/` (канон) + контекст `X:\AI MARS` (MARS monorepo)  
 **Эра:** Implementation Planning — **RT-G04 charter only**  
 **Контекст:** Foundation **COMPLETE**; Engine **COMPLETE**; Doctrine **COMPLETE**; Operational Design **COMPLETE**; MVP Definition **COMPLETE**; Topology Decision **COMPLETE** (TOPOLOGY-B-v1); RT-G04 Planning Review **COMPLETE**  
 **Тип:** charter only — **без** storage design, file design, schema design, folder layout, implementation plan, runtime plan, UI plan  
@@ -13,7 +13,7 @@
 
 | ID | Decision |
 |----|----------|
-| **DF-01** | MARS monorepo (`C:\AI MARS`) |
+| **DF-01** | MARS monorepo (`X:\AI MARS`) |
 | **DF-02** | Filesystem + structured artifacts (TOPOLOGY-B-v1) |
 | **DF-03** | Factory Records Zone = `workspaces/website-factory-operations/` |
 | **DF-06** | No HomeGateway dependency |

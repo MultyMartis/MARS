@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DIST = ROOT / "dist"
 AUDIT = ROOT / "audits" / "dom-defect-repair" / "data"
 STORAGE = Path(
-    r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\duplicate-id-repair-evidence"
+    r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\duplicate-id-repair-evidence"
 )
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 4197
 PHASE = sys.argv[2] if len(sys.argv) > 2 else "after"

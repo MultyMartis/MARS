@@ -37,7 +37,7 @@ PowerShell-compatible execution should follow these rules when the active shell 
 
 - Use PowerShell-safe sequencing instead of assuming bash `&&`.
 - Prefer separate commands or PowerShell control flow when command success must gate the next command.
-- Quote paths containing spaces, especially workspace paths such as `C:\AI MARS`.
+- Quote paths containing spaces, especially workspace paths such as `X:\AI MARS`.
 - Treat parser errors such as `ParserError` / `InvalidEndOfLine` as command compatibility failures.
 - Do not report validation PASS when the validation command failed before execution.
 - Keep output bounded and readable enough to preserve terminal readability continuity.

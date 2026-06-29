@@ -2,7 +2,7 @@
 
 **Версия:** v1  
 **Дата:** 2026-06-06  
-**Область:** `workspaces/website-factory-reference-v1/` (канон) + контекст `C:\AI MARS` (MARS monorepo)  
+**Область:** `workspaces/website-factory-reference-v1/` (канон) + контекст `X:\AI MARS` (MARS monorepo)  
 **Эра:** Implementation Standards — **RT-G04 implementation standard only**  
 **Контекст:** Foundation **COMPLETE**; Engine **COMPLETE**; Doctrine **COMPLETE**; Operational Design **COMPLETE**; MVP Definition **COMPLETE**; Topology Decision **COMPLETE** (TOPOLOGY-B-v1); RT-G04 Persistence Substrate Charter **COMPLETE**; Implementation Planning Consolidation Review **COMPLETE**  
 **Тип:** implementation standard only — **без** runtime, database, automation, queue, workflow engine, UI, application, schemas, folder layout, physical artefact creation, code  
@@ -13,7 +13,7 @@
 
 | ID | Decision |
 |----|----------|
-| **DF-01** | MARS monorepo (`C:\AI MARS`) |
+| **DF-01** | MARS monorepo (`X:\AI MARS`) |
 | **DF-02** | Filesystem + structured artifacts (TOPOLOGY-B-v1) |
 | **DF-03** | Factory Records Zone = `workspaces/website-factory-operations/` |
 | **DF-06** | No HomeGateway dependency |
@@ -247,7 +247,7 @@ Implementation standard формализует четыре reality categories �
 
 ### Factory Records Zone (DF-03 — implementation binding)
 
-**Normative path:** `workspaces/website-factory-operations/` within `C:\AI MARS`.
+**Normative path:** `workspaces/website-factory-operations/` within `X:\AI MARS`.
 
 | Rule ID | Implementation rule |
 |---------|---------------------|

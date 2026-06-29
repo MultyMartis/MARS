@@ -10,7 +10,7 @@ from PIL import Image, ImageChops
 ROOT = Path(__file__).resolve().parents[2]
 AUDIT = ROOT / "audits" / "cf-010-clinic-landscape" / "data"
 STORAGE = Path(
-    r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-010-evidence"
+    r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-010-evidence"
 )
 
 METRIC_KEYS = [

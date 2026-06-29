@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright
 V7_PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 4175
 V8_PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 4176
 
-STORAGE_EVIDENCE = Path(r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\parity-evidence\bootstrap-reconciliation")
+STORAGE_EVIDENCE = Path(r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\parity-evidence\bootstrap-reconciliation")
 WORKSPACE = Path(__file__).resolve().parents[2]
 AUDIT_DIR = WORKSPACE / "audits" / "bootstrap-reconciliation"
 STORAGE_EVIDENCE.mkdir(parents=True, exist_ok=True)

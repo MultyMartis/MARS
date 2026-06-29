@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 BACKUP = Path(
-    r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\operator-checkpoints\FP-0002-V8-BEFORE-CF-007-REVIEWS-UNIVERSALIZATION.zip"
+    r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\operator-checkpoints\FP-0002-V8-BEFORE-CF-007-REVIEWS-UNIVERSALIZATION.zip"
 )
 STAGING = ROOT / ".cf007-recapture-staging"
 FILES = [

@@ -1,7 +1,7 @@
 # REPORT — Website Factory MVP Topology Decision v1
 
 **Дата:** 2026-06-05  
-**Область:** `workspaces/website-factory-reference-v1/` (канон) + контекст `C:\AI MARS` (MARS monorepo)  
+**Область:** `workspaces/website-factory-reference-v1/` (канон) + контекст `X:\AI MARS` (MARS monorepo)  
 **Тип:** owner topology decision record + RT-G04 planning preparation only — **без** storage design, **без** file schema, **без** physical MVP folders, **без** implementation plan  
 **Метод:** фиксация operator decision по результатам [WEBSITE-FACTORY-MVP-DEPLOYMENT-TOPOLOGY-REVIEW-v1.md](WEBSITE-FACTORY-MVP-DEPLOYMENT-TOPOLOGY-REVIEW-v1.md) и синтез принятых артефактов (MVP Definition Review, Implementation Planning Review, Operational Model, charters, Playbooks 01–05)  
 **Принятая реальность (контекст задачи):** Foundation Era **COMPLETE**; Engine Architecture **COMPLETE**; Post-Engine Doctrine **COMPLETE**; Governance Synchronization **COMPLETE**; Operational Design **COMPLETE**; MVP Definition **COMPLETE**; Deployment Topology Review **COMPLETE**; RT-G04/05/10/12 implementation **NOT STARTED**; shipped Factory runtime **отсутствует**
@@ -12,7 +12,7 @@
 
 ## Decision Summary
 
-**Owner decision (зафиксировано):** Website Factory MVP размещается как **B — Filesystem + structured artifacts** внутри **`C:\AI MARS`** (MARS monorepo) в виде **структурированных filesystem-артефактов**.
+**Owner decision (зафиксировано):** Website Factory MVP размещается как **B — Filesystem + structured artifacts** внутри **`X:\AI MARS`** (MARS monorepo) в виде **структурированных filesystem-артефактов**.
 
 **Смысл решения в одной строке:** MVP закрывает пробел **physical binding** (C2) через **единый file-backed persistence substrate** с **structured records** — operator может читать и **вручную** обновлять Factory Project records **без** shipped runtime, **без** database и **без** HomeGateway dependency.
 
@@ -20,7 +20,7 @@
 
 | Factor ID | Status after this decision |
 |-----------|---------------------------|
-| **DF-01** Primary repo locus | **RESOLVED** — MARS monorepo (`C:\AI MARS`), не отдельный repo |
+| **DF-01** Primary repo locus | **RESOLVED** — MARS monorepo (`X:\AI MARS`), не отдельный repo |
 | **DF-02** Artifact class | **RESOLVED** — structured artifacts (class **B**), не markdown-only |
 | **DF-06** HomeGateway integration depth | **RESOLVED by default** — **none**; Factory SoT **не** hosted by HomeGateway |
 | **DF-03** Canon vs operational pack routing | **OPEN** — переносится в RT-G04 planning workshop |
@@ -37,7 +37,7 @@
 | Dimension | Selected value |
 |-----------|----------------|
 | **Topology class** | **B — Filesystem + structured artifacts** |
-| **Host / repo locus** | **`C:\AI MARS`** (MARS monorepo) |
+| **Host / repo locus** | **`X:\AI MARS`** (MARS monorepo) |
 | **Substrate nature** | Локальный **file-backed** слой с **structured records** для Factory Project persistence |
 | **Operator model** | Single operator; human/assisted writes; **не** automated index mutation |
 | **Integration stance** | MARS-embedded persistence; **без** HomeGateway SoT; **без** standalone application |
@@ -85,7 +85,7 @@ MVP Website Factory **физически существует** как **авт�
 
 6. **Playbook path сохраняется.** Полный operator path Playbooks 01→02→03↔04→05 **исполним** с bound planes: enrollment → catalog → supervision → declarations → closure — **без** workflow engine.
 
-7. **MARS — дом, не продукт.** Factory persistence **живёт в** `C:\AI MARS`, но **не** поглощает весь monorepo как Factory surface; client workspaces (`workspaces/triumph-*` и др.) остаются **external pointers**, не Factory SoT (ER-06, RAP-10).
+7. **MARS — дом, не продукт.** Factory persistence **живёт в** `X:\AI MARS`, но **не** поглощает весь monorepo как Factory surface; client workspaces (`workspaces/triumph-*` и др.) остаются **external pointers**, не Factory SoT (ER-06, RAP-10).
 
 ### Что решение **явно включает**
 
@@ -129,7 +129,7 @@ MVP Website Factory **физически существует** как **авт�
 |--------|---------------------|
 | **Суть** | Treating MARS monorepo **целиком** или неограниченно как Factory operational surface |
 | **Почему не выбрано** | Нарушает **bounded Factory zone** principle; смешивает Site Type Registry (`registry/`), Lane A frontend (`src/`), unrelated MARS programs с Factory Project SoT (RAP-11); воспроизводит dual-corpus confusion (v0 operational pack vs v1 canon) без explicit routing |
-| **Уточнение** | **MARS locus выбран** (repo = `C:\AI MARS`), но **не** как «весь repo = Factory». Placement — **ограниченная зона** внутри monorepo; exact zone = RT-G04 planning question (DF-03, OQ-OM01) |
+| **Уточнение** | **MARS locus выбран** (repo = `X:\AI MARS`), но **не** как «весь repo = Factory». Placement — **ограниченная зона** внутри monorepo; exact zone = RT-G04 planning question (DF-03, OQ-OM01) |
 
 ### D — HomeGateway-integrated MVP
 
@@ -205,7 +205,7 @@ Topology **B** carries **medium** implementation pressure vs markdown-only. RT-G
 
 | # | Planning question | Options space (not decided here) |
 |---|-------------------|----------------------------------|
-| Q5 | Где **authorized Factory zone** внутри `C:\AI MARS`? | `workspaces/website-factory-reference-v1/` subtree vs `projects/mars-website-factory/` vs **new** dedicated root |
+| Q5 | Где **authorized Factory zone** внутри `X:\AI MARS`? | `workspaces/website-factory-reference-v1/` subtree vs `projects/mars-website-factory/` vs **new** dedicated root |
 | Q6 | Как routing разделяет **v1 canon** vs **v0 operational pack** (BCP-019)? | Canon docs remain doctrine; SoT records **не** supersede reference v1 without explicit rule |
 | Q7 | Как substrate **ссылается** на client workspaces без colocating SoT (DF-08, ER-06)? | Pointers only vs partial colocation |
 | Q8 | Как избежать путаницы с Site Type Registry (`registry/`) и Lane A `src/`? | Bounded zone naming / separation rules |
@@ -398,7 +398,7 @@ This decision record **does not** claim:
 
 This decision record **does** claim:
 
-- Owner selected **B — Filesystem + structured artifacts** inside **`C:\AI MARS`**.
+- Owner selected **B — Filesystem + structured artifacts** inside **`X:\AI MARS`**.
 - **DF-01**, **DF-02**, **DF-06 (default)** are **resolved**.
 - Rejected for MVP: **A** (markdown-only), **C** (broad MARS surface), **D** (HomeGateway), **E** (standalone app).
 - Topology **does not imply** database, runtime, app, automation, queue, or HomeGateway dependency.

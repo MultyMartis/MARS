@@ -186,7 +186,7 @@ The MARS write boundary applies to **MARS-controlled** artefacts, not to claimin
 | **X1** — Cursor, agent, survivability filesystem boundary | **COMPLETE** (AGENTS, `.cursorrules`, Survivability updates) |
 | **X2** — Core infrastructure reality and brain layers | **COMPLETE** ([mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md)) |
 | **X3** — Central registry, topology, README, build-map alignment | **COMPLETE** ([reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md](../reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md)) |
-| **X4** — Website Factory, FOUNDRY, FP-0002 path reconciliation | **NOT STARTED** |
+| **X4** — Website Factory, FOUNDRY, FP-0002 path reconciliation | **COMPLETE** ([reports/mars-x-drive-migration-x4-website-factory-foundry-fp0002-v1.md](../reports/mars-x-drive-migration-x4-website-factory-foundry-fp0002-v1.md); active operational paths only — not full historical rewrite) |
 | **X5** — MARS Localhost Infrastructure runtime configuration | **NOT STARTED** |
 | **X6** — Forge WordPress, AG-WP-001, WPilot, OCPilot | **NOT STARTED** |
 | **X7** — MIG, ORCA, ATLAS, OPS, EAR, NOVA programmes | **NOT STARTED** |

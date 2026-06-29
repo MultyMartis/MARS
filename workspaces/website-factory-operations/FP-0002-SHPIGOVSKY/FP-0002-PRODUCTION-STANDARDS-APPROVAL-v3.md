@@ -446,7 +446,7 @@ Use when block-specific tuning required: **1440 · 1310 · 1199 · 1024 · 767 �
 
 - `FP-0002-SHPIGOVSKY/INCOMING/02_CONTENT/` — **found**
 - `FP-0002-SHPIGOVSKY/INCOMING/08_CLIENT_MATERIALS/` — empty (README only)
-- `C:\AI MARS STORAGE\` — no duplicate
+- `X:\AI MARS STORAGE\` — no duplicate
 
 ### 10.1 Already Covered (Page Inventory baseline)
 

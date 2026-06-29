@@ -9,9 +9,9 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO = Path(r"C:\MARS Phenix\AI MARS")
+REPO = Path(r"X:\AI MARS")
 V8 = REPO / "workspaces" / "fp-0002-shpigovsky-v8"
-OUT_DIR = Path(r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\operator-checkpoints")
+OUT_DIR = Path(r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\operator-checkpoints")
 ZIP_PATH = OUT_DIR / "FP-0002-V8-BEFORE-OCENTRE-IMPLEMENTATION.zip"
 MANIFEST_LINE = "FP-0002 V8 PRE-OCENTRE-IMPLEMENTATION CANONICAL SOURCE PRESERVED"
 

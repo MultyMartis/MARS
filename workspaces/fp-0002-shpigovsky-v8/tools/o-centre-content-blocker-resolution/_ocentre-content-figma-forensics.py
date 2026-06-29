@@ -61,7 +61,7 @@ def run_fresh_extract() -> dict | None:
     except (subprocess.CalledProcessError, FileNotFoundError):
         return None
     raw = Path(
-        r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\o-centre-asset-content-resolution\temp\FP-0002-V8-OCENTRE-SPIG-V1-RAW-EXTRACT.json"
+        r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\o-centre-asset-content-resolution\temp\FP-0002-V8-OCENTRE-SPIG-V1-RAW-EXTRACT.json"
     )
     if raw.is_file():
         return json.loads(raw.read_text(encoding="utf-8"))

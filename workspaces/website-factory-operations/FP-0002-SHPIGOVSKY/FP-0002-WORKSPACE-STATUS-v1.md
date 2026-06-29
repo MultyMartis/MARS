@@ -24,23 +24,28 @@
 
 ---
 
-## Active Workspace
+## Active Workspace (canonical — V8)
 
 | Field | Value |
 |-------|-------|
-| Path | `workspaces/fp-0002-shpigovsky-frontend/` |
-| Full path | `C:\AI MARS\workspaces\fp-0002-shpigovsky-frontend\` |
-| Lifecycle | **ACTIVE** · **CANONICAL** · **PRODUCTION** |
-| Starter base | `workspaces/triumph-manipulator-landing/` (canonical gulp-starter) |
-| Created | 2026-06-14 (cycle v2 reset) |
+| Path | `workspaces/fp-0002-shpigovsky-v8/` |
+| Full path | `X:\AI MARS\workspaces\fp-0002-shpigovsky-v8\` |
+| Lifecycle | **ACTIVE** · **CANONICAL** · **CONSOLIDATION** |
+| Fallback workspace | `workspaces/fp-0002-shpigovsky-v7/` (`IMMUTABLE_STABLE_FALLBACK`) |
+| Bootstrap baseline | Four-template authority `6eb493e9` · tag `fp-0002-v7-four-template-canonical-demo-baseline-01` |
 
----
+## Superseded workspaces
+
+| Workspace | Role | Full path |
+|-----------|------|-----------|
+| `fp-0002-shpigovsky-v7` | Immutable stable fallback | `X:\AI MARS\workspaces\fp-0002-shpigovsky-v7\` |
+| `fp-0002-shpigovsky-frontend` | Cycle v2 (superseded) | `X:\AI MARS\workspaces\fp-0002-shpigovsky-frontend\` (if present) |
 
 ## Archive Workspace
 
 | Field | Value |
 |-------|-------|
-| Path | `C:\AI MARS STORAGE\website-factory\archive\fp-0002-shpigovsky-frontend-pre-v2\` |
+| Path | `X:\AI MARS STORAGE\website-factory\archive\fp-0002-shpigovsky-frontend-pre-v2\` |
 | Lifecycle | **ARCHIVED** · **READ ONLY** · **REFERENCE ONLY** |
 | Former phase | M2 Foundation Extraction (pre-v2 residue) |
 | Marker | `ARCHIVED.md` in archive root |

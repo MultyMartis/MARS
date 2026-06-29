@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO = ROOT.parents[1]
-STORAGE = Path(r"C:\MARS Phenix\AI MARS STORAGE")
+STORAGE = Path(r"X:\AI MARS STORAGE")
 
 OUT_DIR = STORAGE / "website-factory" / "fp-0002-shpigovsky-v8" / "operator-checkpoints"
 ZIP_NAME = "FP-0002-V8-BEFORE-CF-003-COMPLETION.zip"

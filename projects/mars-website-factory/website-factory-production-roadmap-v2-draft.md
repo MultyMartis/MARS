@@ -234,7 +234,7 @@ Operator confirms:
 | **Label** | `stable-backup-v0-shell` |
 | **Scope** | `src/partials/layout/`, shell page entry, shell SCSS, approved Production Standards ref |
 | **Evidence** | `# REPORT — <project> stable backup v0`; build PASS; screenshot desktop shell |
-| **Storage** | Operator-chosen snapshot path (e.g. `C:\AI MARS STORAGE\website-factory\snapshots\`) — **not** automated |
+| **Storage** | Operator-chosen snapshot path (e.g. `X:\AI MARS STORAGE\website-factory\snapshots\`) — **not** automated |
 | **Freeze** | Recommend L1 on layout partials per [freeze-discipline-v1.md](freeze-discipline-v1.md) |
 
 ---

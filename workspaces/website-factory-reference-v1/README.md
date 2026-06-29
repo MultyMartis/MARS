@@ -4,6 +4,10 @@
 
 **Status:** **implementation reference** — not a client delivery project.  
 
+**Physical root:** `X:\AI MARS\workspaces\website-factory-reference-v1\`  
+
+**Repository root:** `X:\AI MARS\`
+
 **Wave:** 3 (foundations + 3 blocks) · 4 (adoption kit + 4 blocks) · 5 (`faq` real extract + hardening docs).  
 
 **Standards:** [foundation-systems/README.md](../../projects/mars-website-factory/foundation-systems/README.md).

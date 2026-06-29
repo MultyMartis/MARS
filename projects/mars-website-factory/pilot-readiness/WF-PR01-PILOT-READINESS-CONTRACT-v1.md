@@ -405,7 +405,7 @@ operator decisions
 logs
 ```
 
-Bulk assets may live outside repo per approved storage policy (`C:\AI MARS STORAGE` supporting layer).
+Bulk assets may live outside repo per approved storage policy (`X:\AI MARS STORAGE` supporting layer).
 
 ---
 

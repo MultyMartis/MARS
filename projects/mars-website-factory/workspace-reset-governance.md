@@ -106,7 +106,7 @@ When a **frontend production cycle is fully restarted** (not a scoped in-place r
 
 | # | Rule |
 |---|------|
-| **WA-01** | The **current active workspace** is **moved** to bulk storage archive — e.g. `C:\AI MARS STORAGE\website-factory\archive/<project-slug>-pre-<cycle-label>/`. |
+| **WA-01** | The **current active workspace** is **moved** to bulk storage archive — e.g. `X:\AI MARS STORAGE\website-factory\archive/<project-slug>-pre-<cycle-label>/`. |
 | **WA-02** | The archived workspace receives lifecycle status: **ARCHIVED** · **READ ONLY** · **REFERENCE ONLY**. An `ARCHIVED.md` marker **should** record path, date, reason, and active replacement path. |
 | **WA-03** | A **new workspace** is created at the **original canonical project name** (e.g. `workspaces/fp-0002-shpigovsky-frontend/`) from the current gulp-starter or approved Factory template. |
 | **WA-04** | **Forbidden** as **active production** workspace names: `project-v2`, `project-v3`, `project-final-final`, `project-new`, or any parallel `-vN` slug that splits canonical identity. |

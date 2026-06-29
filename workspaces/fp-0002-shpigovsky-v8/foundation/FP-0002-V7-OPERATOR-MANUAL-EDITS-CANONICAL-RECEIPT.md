@@ -34,7 +34,7 @@ Four canonical page sources (`index.html`, `uslugi-v2.html`, `usluga-podrazdel-v
 
 | Check | Result |
 | ----- | ------ |
-| Node | `C:\MARS Phenix\AI MARS\.tools\node-portable\node.exe` |
+| Node | `X:\AI MARS\.tools\node-portable\node.exe` |
 | Command | `gulp build` |
 | Exit code | 0 |
 | Source changed by build | 0 |

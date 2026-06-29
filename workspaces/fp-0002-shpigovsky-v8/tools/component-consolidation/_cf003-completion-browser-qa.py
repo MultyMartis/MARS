@@ -12,7 +12,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[2]
-STORAGE = Path(r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-003-evidence\completion")
+STORAGE = Path(r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-003-evidence\completion")
 AUDIT = ROOT / "audits" / "cf-003-upper-navigation" / "data"
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 4188
 

@@ -8,7 +8,7 @@ from pathlib import Path
 
 from PIL import Image, ImageChops
 
-STORAGE = Path(r"C:\MARS Phenix\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-009-evidence")
+STORAGE = Path(r"X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\cf-009-evidence")
 AUDIT = Path(__file__).resolve().parents[2] / "audits" / "cf-009-final-form"
 
 PAGES = ["home", "services", "services-v2", "service-subdivision", "service-leaf"]
