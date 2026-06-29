@@ -19,7 +19,7 @@ Preserve services-program-v2; fix surrounding order only.
 Replace auto-grid with semantic subgroups; preserve 20 assets; JS=0.
 
 ## Phase 6 — Decorative layers
-Export/implement exact Figma backgrounds (1:2440, mobile 1:5697).
+Implement exact Figma backgrounds (1:2440, mobile 1:5697). **Asset export COMPLETE** — `o-centre-infrastructure-background.webp` (OC-DEC-01) ready; CSS integration only in this phase.
 
 ## Phase 7 — Desktop visual gate
 1437px block-by-block geometry review.

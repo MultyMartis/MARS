@@ -25,9 +25,9 @@
 |---|---|---|
 | `clinic-landscape.html` | Missing bleed after approach; asset `shpigovsky-clinic-landscape.webp` approved CF-010 | **`DIRECT_REUSE_CLINIC_LANDSCAPE`** |
 
-## New assets potentially required
+## New assets — export status
 
-- Decorative background raster `d3ac7d00af36` at 10% opacity (`1:2440`, mobile `1:5697`) — export pass before Phase 6
+- **OC-DEC-01** decorative background `d3ac7d00af36` — **APPROVED_EXPORTED** at `src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp` (953×988 WebP, alpha preserved). Figma node opacity 0.1 — apply in CSS, not baked into bitmap. Phase 6: CSS integration only.
 
 ## Shared modifiers
 

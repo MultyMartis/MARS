@@ -75,7 +75,11 @@
       "canonical": "1:2440 decorative fill opacity 0.1",
       "severity": "HIGH",
       "root_cause": "Decorative layers not parsed in implementation",
-      "correction_class": "DECORATIVE_LAYER_IMPLEMENTATION"
+      "correction_class": "DECORATIVE_LAYER_IMPLEMENTATION",
+      "asset_id": "OC-DEC-01",
+      "asset_path": "src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp",
+      "asset_status": "READY",
+      "asset_extraction": "APPROVED_EXPORTED"
     },
     {
       "id": "VD-008",

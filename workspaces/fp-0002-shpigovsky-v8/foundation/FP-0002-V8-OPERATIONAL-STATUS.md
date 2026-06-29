@@ -32,7 +32,8 @@ fp0002_v8_next_wave: O_CENTRE_IMPLEMENTATION_NOT_AUTHORIZED
 fp0002_v8_o_centre_charter: COMPLETE_WITH_KNOWN_GAPS
 fp0002_v8_o_centre: IMPLEMENTED_TECHNICAL_VISUAL_RECONCILIATION_REQUIRED
 fp0002_v8_o_centre_implementation: COMPLETE_TECHNICAL
-fp0002_v8_o_centre_visual: IMPLEMENTED_VISUAL_RECONCILIATION_REQUIRED
+fp0002_v8_o_centre_visual: READY_FOR_IMPLEMENTATION
+fp0002_v8_o_centre_dec01: READY
 fp0002_v8_o_centre_operator_visual: NOT_APPROVED
 fp0002_v8_o_centre_deployment: BLOCKED
 fp0002_v8_deployment: NOT_STARTED
@@ -209,3 +210,12 @@ V7 source, SCSS, canonical template HTML, runtime JS, registry, and generator mu
 - Status: **APPROVED_EXPORTED** — 20 WebP under `src/img/content/o-centre/o-centre-infrastructure-*.webp`
 - Evidence: `audits/o-centre-targeted-asset-export/`
 - Implementation authorized: **false** (operator must authorize implementation task)
+
+## O-Centre decorative asset DEC-01 (2026-06-29)
+
+- Status: **APPROVED_EXPORTED** — `src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp`
+- Asset ID: OC-DEC-01 · ref `d3ac7d00af36` · 953×988 WebP · SHA-256 `e64e5d29440036dca7e944f1ce46e75ada9255857a7074c9694362f1864ce769`
+- Evidence: `audits/o-centre-decorative-asset-extraction/`
+- Visual correction: **READY_FOR_IMPLEMENTATION** (asset export no longer blocking; CSS integration Phase 6)
+- Operator visual approval: **NOT GRANTED**
+- Page source HTML/SCSS: **unchanged**

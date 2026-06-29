@@ -6,7 +6,7 @@
 | VD-004 | OC-APPROACH | both | WRONG_GROUPING | Inline program-approach-band | Separate Программа центра frame with staff photo + cards + landscape bleed | HIGH | Approach merged into page inline block | EXISTING_PARTIAL_REUSE |
 | VD-005 | OC-CLINIC-LANDSCAPE | both | MISSING_REGION | Not included on page | Large territory/clinic bleed after approach cards | HIGH | Charter optional reuse never wired | EXISTING_PARTIAL_REUSE |
 | VD-006 | OC-INFRA | both | WRONG_GROUPING | Single CSS auto-grid for 20 assets | Text-interleaved photo subgroups in 1:2440 | CRITICAL | Asset manifest interpreted as collage | UNIQUE_PARTIAL_RESTRUCTURE |
-| VD-007 | OC-INFRA | both | DECORATION | No section background raster | 1:2440 decorative fill opacity 0.1 | HIGH | Decorative layers not parsed in implementation | DECORATIVE_LAYER_IMPLEMENTATION |
+| VD-007 | OC-INFRA | both | DECORATION | No section background raster (asset exported, CSS not wired) | 1:2440 decorative fill opacity 0.1 | HIGH | Decorative layers not parsed in implementation | DECORATIVE_LAYER_IMPLEMENTATION | OC-DEC-01 READY |
 | VD-008 | OC-INST | both | CONTENT | Typo Шпиговсикй preserved | Same typo in Figma 1:2282 | LOW | Canonical copy fidelity | NO_CHANGE |
 | VD-009 | OC-PROGRAM | both | ORDER | Program before misplaced mid-CTA | Program after approach + landscape | MEDIUM | CTA/founder order drift | HTML_ORDER_ONLY |
 | VD-010 | OC-SPECIALISTS | both | SPACING | V8 canonical component | Figma tail acceptable via V8 canon | ACCEPTABLE_CANON_DIFFERENCE | Shared component authority | NO_CHANGE |

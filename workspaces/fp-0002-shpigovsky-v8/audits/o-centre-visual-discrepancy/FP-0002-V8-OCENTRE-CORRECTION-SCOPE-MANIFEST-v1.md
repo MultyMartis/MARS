@@ -10,4 +10,5 @@
 | src/partials/sections/founder-quote.html | CF-004 base | REFERENCE ONLY | NO | Placement change only |
 | src/partials/sections/services-program-v2.html | Program | REFERENCE ONLY | NO | V8 canon |
 | src/scss/style.scss (page-o-centre ranges) | Scoped styles | SCOPED additions | YES | Subgroup layouts + decoration |
+| src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp | OC-DEC-01 background | REFERENCE ONLY (exported) | NO | CSS wiring in Phase 6 only |
 | src/js/main.js | Init | NO CHANGE | NO | JS not required |
