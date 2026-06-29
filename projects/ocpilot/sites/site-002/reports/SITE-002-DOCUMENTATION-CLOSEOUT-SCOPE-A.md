@@ -79,9 +79,9 @@
 
 | Item | Value |
 |------|--------|
-| Commit | *(this closeout commit)* |
+| Commit | `0c50c6f6` — `docs(site-002): close out Scope A documentation checkpoint` |
 | Push | **NOT REQUESTED** |
-| HEAD | *(post-commit)* |
+| HEAD | `0c50c6f682d5c994bcb14c0c9cd81e1f387d5702` |
 
 ---
 
