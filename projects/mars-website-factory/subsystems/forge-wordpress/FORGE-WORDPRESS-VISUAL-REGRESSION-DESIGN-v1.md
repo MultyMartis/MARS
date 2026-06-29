@@ -28,7 +28,7 @@ Approved Website Factory reference (dist/ or VL-approved captures)
 | Factory VL-approved reference set | Preferred authority |
 | Re-capture after frontend change | Invalidates WP baselines |
 
-Storage: `C:\AI MARS STORAGE\forge-wordpress\{FP-ID}\visual-baselines\`
+Storage: `X:\AI MARS STORAGE\forge-wordpress\{FP-ID}\visual-baselines\`
 
 ---
 

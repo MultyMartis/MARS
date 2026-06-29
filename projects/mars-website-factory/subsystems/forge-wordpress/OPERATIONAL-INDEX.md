@@ -37,7 +37,7 @@ Skills: PROVEN WITH LIMITATIONS
 Validators: PROVEN (live reports)
 Synthetic validation: COMPLETE (FWS-0001 static + live)
 Local environment: PROVEN WITH LIMITATIONS (MLI Profile A)
-Local Laragon profile: ENABLED (MLI-03) — Laragon at E:\MARS-Localhost\laragon
+Local Laragon profile: ENABLED (MLI-03) — Laragon at X:\MARS-Localhost\laragon
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
 Operator WV6: PENDING
@@ -71,7 +71,7 @@ Client pilot: NOT STARTED — WordPress foundation READY; theme integration LOCK
 | **AG-WP-001 contract validator** | [tools/validate-ag-wp-001-operation-contracts.mjs](tools/validate-ag-wp-001-operation-contracts.mjs) |
 | **Compliance matrix** | [FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md](FORGE-WORDPRESS-FW-02-COMPLIANCE-MATRIX-v1.md) |
 | **Local environment** | [FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md](FORGE-WORDPRESS-LOCAL-ENVIRONMENT-DECISION-v1.md) — **consumes** [MLI WordPress profile](../../../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) |
-| **Shared localhost** | [projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) — Forge does **not** own `E:\MARS-Localhost` |
+| **Shared localhost** | [projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) — Forge does **not** own `X:\MARS-Localhost` |
 | **Gulp integration** | [FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md](FORGE-WORDPRESS-GULP-INTEGRATION-MODEL-v1.md) |
 | **Validation runners** | [FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md](FORGE-WORDPRESS-VALIDATION-RUNNER-ARCHITECTURE-v1.md) |
 | **Pilot tooling** | [FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md](FORGE-WORDPRESS-PILOT-TOOLING-PROFILE-v1.md) |

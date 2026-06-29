@@ -47,8 +47,9 @@ Any missing, unknown, or unverified input → **DENY**. No warnings-only path. A
 Defined in `policies/forge-protected-roots-v1.json`:
 
 - `C:\`, `C:\Users`, `C:\Windows`, `C:\Program Files`, `C:\Program Files (x86)`
-- `C:\MARS Phenix`, `C:\AI MARS`, `C:\AI MARS STORAGE`, `C:\this is backUP AI MARS 23.06.2026`
-- `E:\`, `E:\MARS-Localhost` (protected parent; registered site descendants allowlisted separately)
+- `C:\MARS Phenix`, `C:\AI MARS`, `C:\AI MARS STORAGE`, `C:\this is backUP AI MARS 23.06.2026` (deprecated operational roots — deny)
+- `D:\MARS-Localhost`, `E:\MARS-Localhost` (deprecated runtime roots — deny)
+- `X:\`, `X:\MARS-Localhost` (protected parent; registered site descendants allowlisted separately)
 
 ---
 
@@ -56,7 +57,7 @@ Defined in `policies/forge-protected-roots-v1.json`:
 
 FW-07C-0 **must not**:
 
-- Touch `E:\MARS-Localhost` on disk
+- Touch `X:\MARS-Localhost` on disk
 - Run WordPress, Laragon, Apache/Nginx/MySQL
 - Use WP-CLI, DB connections, FTP/SFTP, remote requests
 - Create runtime lock files or enable tokens on disk

@@ -6,7 +6,7 @@
 
 | Field | Value |
 |-------|-------|
-| Location | `E:\MARS-Localhost\tools\playwright-smoke\` |
+| Location | `X:\MARS-Localhost\tools\playwright-smoke\` |
 | Fixture | `smoke/fp-0002-shpigovsky-foundation.test.js` |
 | Config | `playwright.fp0002.config.js` (no `--host-resolver-rules`) |
 | Target | `http://shpigovsky.test/` |
@@ -28,15 +28,15 @@ Direct-domain foundation smoke only. No frontend integration validation.
 ## Execution
 
 ```powershell
-Set-Location E:\MARS-Localhost\tools\playwright-smoke
+Set-Location X:\MARS-Localhost\tools\playwright-smoke
 npx playwright test --config=playwright.fp0002.config.js
 ```
 
 ## Artifacts (runtime only — not in Git)
 
 ```text
-E:\MARS-Localhost\tools\playwright-smoke\artifacts\fp-0002\
-E:\MARS-Localhost\tools\playwright-smoke\test-results\
+X:\MARS-Localhost\tools\playwright-smoke\artifacts\fp-0002\
+X:\MARS-Localhost\tools\playwright-smoke\test-results\
 ```
 
 ## Closure (FW-06A.1)

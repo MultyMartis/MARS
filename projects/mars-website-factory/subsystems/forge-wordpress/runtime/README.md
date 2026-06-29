@@ -81,7 +81,7 @@ No persistent runtime tokens. In-memory only.
 
 ## Runtime prohibition
 
-- No writes inside `E:\MARS-Localhost`
+- No writes inside `X:\MARS-Localhost`
 - No WP-CLI, PHP execution, DB clients, network
 - No shell execution for bound operations
 - No audit files inside runtime site root

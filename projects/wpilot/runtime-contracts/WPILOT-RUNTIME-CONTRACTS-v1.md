@@ -32,7 +32,7 @@ Runtime Contracts v1 переводит завершённый Core Model v1 в 
 
 ### 1.1 Boundary matrix
 
-| Concern | WPilot Plugin (`metacode-wpilot`) | WordPress (host) | MARS (`C:\AI MARS`) | Cursor workflow |
+| Concern | WPilot Plugin (`metacode-wpilot`) | WordPress (host) | MARS (`X:\AI MARS`) | Cursor workflow |
 |---------|-----------------------------------|------------------|---------------------|-----------------|
 | **Authority over content** | Scoped write via WP APIs only (planned) | **Source of truth** for pages, posts, options, themes, plugins | None — orchestration/docs only | Human-supervised operator |
 | **Auth** | Token hash, bridge flags, DEV confirmation | WP users, capabilities, native REST auth | Plaintext token handoff in `local/tokens/` (operator machine) | Operator holds token; never in git |
@@ -154,7 +154,7 @@ wp_options         — bridge state, token hash
 
 **MARS (minimal):**
 
-- JSON/markdown run record per ChangeSet under `C:\AI MARS\local\runtime\` or `C:\AI MARS STORAGE\wpilot\`
+- JSON/markdown run record per ChangeSet under `X:\AI MARS\local\runtime\` or `X:\AI MARS STORAGE\wpilot\`
 - Template: [change-request-template.md](../templates/change-request-template.md) → formalized ChangeSet fields
 
 ### 2.5 REST exposure
@@ -364,7 +364,7 @@ Runtime MVP implements **one write primitive**: scoped exact replace on `page.po
 | Type | Scope | Store | MVP need |
 |------|-------|-------|----------|
 | **Plugin content backup** | `post_content` one page/post | `{prefix}wpilot_backups` | **Required** for plugin writes |
-| **Operator JSON backup** | Page content, shortcode exports | `C:\AI MARS STORAGE\wpilot\` | **Required** (proven) — parallel trail |
+| **Operator JSON backup** | Page content, shortcode exports | `X:\AI MARS STORAGE\wpilot\` | **Required** (proven) — parallel trail |
 | **HTML/render snapshot** | Rendered page | MARS STORAGE | **Recommended** for validation |
 | **Theme CSS backup** | File fragment | MARS/FTP copy | Proven; not plugin |
 | **Hosting/DB backup** | Full or partial DB | Beget panel | External; operator responsibility |
@@ -596,7 +596,7 @@ Namespace: `wpilot/v1`. Envelope per [rest-api-contracts-v0.md](../plugin-mvp/re
 | ID | Conflict | Severity | Resolution |
 |----|----------|----------|------------|
 | C1 | ChangeSet example uses `apply_footer_change` + `target_type: shortcode`; Bindings primary = `footer` | Medium | MARS resolves zone→content; plugin mutates `post_content`; document both in `description` |
-| C2 | Two backup roots: `C:\AI MARS\backups\` vs `C:\AI MARS STORAGE\wpilot\` | Medium | Runtime: plugin `backup_id` canonical for rollback; STORAGE path = operator evidence mirror; reconcile in operator runbook |
+| C2 | Two backup roots: `X:\AI MARS\backups\` vs `X:\AI MARS STORAGE\wpilot\` | Medium | Runtime: plugin `backup_id` canonical for rollback; STORAGE path = operator evidence mirror; reconcile in operator runbook |
 | C3 | `inspect_rendered_html`, `inspect_page_storage` proven but not in Manifest | Medium | Map to `inspect_page` + MARS evidence export; Manifest amendment optional, not blocking prototype |
 | C4 | plugin-mvp `target_type` backup enum `post\|page` vs Registry full enum | Low | Plugin stores WP post types; Registry `target_type` in audit metadata |
 | C5 | v0.1 plugin has `write_enabled`; v0 contracts use `wpilot_enabled` + DEV only | Low | Align option names in prototype pass |

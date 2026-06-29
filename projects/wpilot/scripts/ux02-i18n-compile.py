@@ -1,9 +1,11 @@
+import os
 import re
 from pathlib import Path
 
 import polib
 
-plugin = Path(r"C:\AI MARS\projects\wpilot\plugin\metacode-wpilot")
+MARS_ROOT = Path(os.environ.get("MARS_ROOT", r"X:\AI MARS"))
+plugin = MARS_ROOT / "projects" / "wpilot" / "plugin" / "metacode-wpilot"
 admin_files = list((plugin / "admin").glob("*.php"))
 
 pattern = re.compile(r"__\(\s*'((?:\\'|[^'])*)'\s*,\s*'metacode-wpilot'\s*\)")

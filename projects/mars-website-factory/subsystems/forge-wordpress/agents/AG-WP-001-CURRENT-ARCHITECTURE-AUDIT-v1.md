@@ -105,7 +105,7 @@
 
 | Item | Classification |
 |------|----------------|
-| MLI principle `C:\AI MARS governs / E:\MARS-Localhost executes` | **PROVEN** (doc + session evidence) |
+| MLI principle `X:\AI MARS governs / X:\MARS-Localhost executes` | **PROVEN** (doc + session evidence) |
 | MLI-03 WordPress profile | **PROVEN WITH LIMITATIONS** |
 | Laragon MySQL datadir persistence | **PROVEN** (commit `266e2a86`) — full reboot retest **SAFE UNKNOWN** |
 | AG-WP-001 MLI integration contract | **DEFINED** — [AG-WP-001-MLI-RUNTIME-INTEGRATION-CONTRACT-v1.md](AG-WP-001-MLI-RUNTIME-INTEGRATION-CONTRACT-v1.md) |
@@ -150,7 +150,7 @@
 | Target | Status |
 |--------|--------|
 | FP-0002 frontend source (`workspaces/fp-0002-shpigovsky-v6/`, v7) | **OUT OF SCOPE** for FW-07A |
-| `E:\MARS-Localhost` runtime mutation | **OUT OF SCOPE** |
+| `X:\MARS-Localhost` runtime mutation | **OUT OF SCOPE** |
 | FWS-0001 synthetic runtime source | **OUT OF SCOPE** |
 | WPilot plugin install on FP-0002 | **NOT AUTHORIZED** |
 

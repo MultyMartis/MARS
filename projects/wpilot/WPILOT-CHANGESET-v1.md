@@ -208,7 +208,7 @@ status:             validated
 
 | Field | Example value |
 |-------|---------------|
-| **backup_path** | `C:\AI MARS\backups\wpilot\site-dev\2026-06-19-footer-contacts-pre-apply.json` |
+| **backup_path** | `X:\AI MARS\backups\wpilot\site-dev\2026-06-19-footer-contacts-pre-apply.json` |
 | **validation_result** | `validate_change: footer contacts visible, no layout regression` |
 | **rollback_source** | тот же `backup_path` |
 
@@ -270,9 +270,9 @@ Evidence **может храниться вне репозитория**.
 Примеры допустимых расположений (operator machine, не commit targets):
 
 ```text
-C:\AI MARS\backups\wpilot\
-C:\AI MARS\local\runtime\
-C:\AI MARS STORAGE\wpilot\evidence\
+X:\AI MARS\backups\wpilot\
+X:\AI MARS\local\runtime\
+X:\AI MARS STORAGE\wpilot\evidence\
 ```
 
 См. также [local-storage-policy.md](local-storage-policy.md): `/backups/` и `/local/` исключены из git.

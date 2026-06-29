@@ -24,7 +24,7 @@
 ## Secrets location
 
 ```text
-C:\AI MARS\local\mli\fp-0002\runtime.env
+X:\AI MARS\local\mli\fp-0002\runtime.env
 ```
 
 Keys: `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, `TABLE_PREFIX`, `WP_ADMIN_*`, WordPress salts.

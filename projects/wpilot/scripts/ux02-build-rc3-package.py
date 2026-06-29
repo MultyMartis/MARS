@@ -1,11 +1,15 @@
 import hashlib
 import json
+import os
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-SOURCE = Path(r"C:\AI MARS\projects\wpilot\plugin\metacode-wpilot")
-OUT_DIR = Path(r"C:\AI MARS STORAGE\wpilot\deploy-packages")
+MARS_ROOT = Path(os.environ.get("MARS_ROOT", r"X:\AI MARS"))
+STORAGE_ROOT = Path(os.environ.get("MARS_STORAGE_ROOT", r"X:\AI MARS STORAGE"))
+
+SOURCE = MARS_ROOT / "projects" / "wpilot" / "plugin" / "metacode-wpilot"
+OUT_DIR = STORAGE_ROOT / "wpilot" / "deploy-packages"
 ZIP_NAME = "metacode-wpilot-v0.3.0-rc3.zip"
 ROOT = "metacode-wpilot/"
 

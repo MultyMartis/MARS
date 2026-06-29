@@ -285,9 +285,9 @@ Validation выполняется через:
 Evidence **может храниться вне репозитория**:
 
 ```text
-C:\AI MARS\backups\wpilot\
-C:\AI MARS\local\runtime\
-C:\AI MARS STORAGE\wpilot\evidence\
+X:\AI MARS\backups\wpilot\
+X:\AI MARS\local\runtime\
+X:\AI MARS STORAGE\wpilot\evidence\
 ```
 
 См. [local-storage-policy.md](local-storage-policy.md): backup и evidence paths — local-only, не commit targets.

@@ -8,8 +8,8 @@
 **Principle:**
 
 ```text
-C:\AI MARS governs.
-E:\MARS-Localhost executes.
+X:\AI MARS governs.
+X:\MARS-Localhost executes.
 ```
 
 ---
@@ -58,8 +58,8 @@ Agent validates URL, PHP version, mail suppression policy before R2+ work.
 
 | Zone | Agent may |
 |------|-----------|
-| `C:\AI MARS` (brain, WORDPRESS source) | Read/write project artifacts per Git |
-| `E:\MARS-Localhost` | **No structural changes** without MLI task; consume runtime only |
+| `X:\AI MARS` (brain, WORDPRESS source) | Read/write project artifacts per Git |
+| `X:\MARS-Localhost` | **No structural changes** without MLI task; consume runtime only |
 
 ---
 

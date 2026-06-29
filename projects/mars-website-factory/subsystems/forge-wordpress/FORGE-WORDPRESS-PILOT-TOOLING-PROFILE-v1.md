@@ -27,10 +27,10 @@
 
 | Item | Specification |
 |------|---------------|
-| Profile | Laragon via MARS Localhost Infrastructure (`E:\MARS-Localhost`) |
+| Profile | Laragon via MARS Localhost Infrastructure (`X:\MARS-Localhost`) |
 | OS | Windows 10+ |
 | Isolation | One site per pilot under `sites\wordpress\projects\` or `synthetic\` |
-| Secrets | `C:\AI MARS\local\` only |
+| Secrets | `X:\AI MARS\local\` only |
 | MLI manifest | Required per [runtime manifest contract](../../../mars-localhost-infrastructure/MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md) |
 
 ---

@@ -146,9 +146,9 @@ See [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](reports/FORGE
 | Topic | New policy |
 |-------|------------|
 | **Shared runtime provider** | MARS Localhost Infrastructure |
-| **Shared runtime root** | `E:\MARS-Localhost` — [MLI OPERATIONAL-INDEX](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) |
-| **Laragon root** | `E:\MARS-Localhost\laragon` |
-| **WordPress site root** | `E:\MARS-Localhost\sites\wordpress\...` |
+| **Shared runtime root** | `X:\MARS-Localhost` — [MLI OPERATIONAL-INDEX](../../../mars-localhost-infrastructure/OPERATIONAL-INDEX.md) |
+| **Laragon root** | `X:\MARS-Localhost\laragon` |
+| **WordPress site root** | `X:\MARS-Localhost\sites\wordpress\...` |
 | **Primary local stack** | **Laragon** via MLI — **ENABLED** (MLI-01) |
 | **Forge relationship** | **Consumer** — does **not** own infrastructure |
 | **FW-05 historical** | Profile B (Playground) proof remains valid |
@@ -156,6 +156,6 @@ See [reports/FORGE-WORDPRESS-LOCAL-TOOLING-CAPABILITY-AUDIT-v1.md](reports/FORGE
 
 Local by Flywheel remains an **optional alternative** per-operator if chartered.
 
-**Forge WordPress does not own `E:\MARS-Localhost`. It consumes the WordPress runtime profile provided by MARS Localhost Infrastructure.**
+**Forge WordPress does not own `X:\MARS-Localhost`. It consumes the WordPress runtime profile provided by MARS Localhost Infrastructure.**
 
 See: [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](../../../mars-localhost-infrastructure/MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md)

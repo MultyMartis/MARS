@@ -9,13 +9,13 @@ Before any write-like action, confirm:
 - File backup exists.
 - Database backup exists.
 - Backup timestamp or recency is acceptable to the operator.
-- Backup storage location is either outside this repo or under the local-only ignored operational root `C:\AI MARS\backups\`.
+- Backup storage location is either outside this repo or under the local-only ignored operational root `X:\AI MARS\backups\`.
 - Restore owner is known.
 - Restore method is understood at a high level.
 
 Record only sanitized facts. Do not store backup archives, database dumps, or secret-bearing screenshots in the repo.
 
-For unified WPilot local backup storage, see [local-storage-policy.md](local-storage-policy.md). `C:\AI MARS\backups\wpilot\` is operational support storage only; it is not source-pack content, a commit target, or runtime evidence.
+For unified WPilot local backup storage, see [local-storage-policy.md](local-storage-policy.md). `X:\AI MARS\backups\wpilot\` is operational support storage only; it is not source-pack content, a commit target, or runtime evidence.
 
 ## Rollback Plan Requirements
 
@@ -40,7 +40,7 @@ Preferred MVP rollback targets:
 - Restore a copied test page to its before state.
 - Remove a clearly labeled test file created only for the run.
 
-Local rollback snapshots may be staged under `C:\AI MARS\backups\wpilot\<site-alias>\rollback-snapshots\` when the operator chooses filesystem storage. These snapshots remain git-ignored local operational materials.
+Local rollback snapshots may be staged under `X:\AI MARS\backups\wpilot\<site-alias>\rollback-snapshots\` when the operator chooses filesystem storage. These snapshots remain git-ignored local operational materials.
 
 ## Disallowed MVP Rollback Dependencies
 

@@ -13,11 +13,15 @@
     "C:\\AI MARS",
     "C:\\AI MARS STORAGE",
     "C:\\this is backUP AI MARS 23.06.2026",
+    "D:\\MARS-Localhost",
     "E:\\",
-    "E:\\MARS-Localhost"
+    "E:\\MARS-Localhost",
+    "X:\\",
+    "X:\\MARS-Localhost"
   ],
   "notes": {
-    "E_MARS_Localhost": "Protected parent; exact site sandbox descendants require registered allowlist in FW-07C-1+",
-    "canonical_repo": "C:\\MARS Phenix\\AI MARS is a descendant of C:\\MARS Phenix — repo paths are not bulk write targets"
+    "X_MARS_Localhost": "Protected parent; exact site sandbox descendants require registered allowlist in FW-07C-1+",
+    "deprecated_roots": "C:\\, D:\\, E:\\ MARS roots remain deny patterns for historical path escape detection",
+    "canonical_repo": "X:\\AI MARS is the active brain root — repo paths are not bulk write targets"
   }
 }

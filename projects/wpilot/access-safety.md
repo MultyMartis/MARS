@@ -23,7 +23,7 @@ The operator may provide access only through a secure external channel. WPilot d
 
 Never record the actual credential value.
 
-For local-only WPilot token handling, use [local-storage-policy.md](local-storage-policy.md). Real token values may be stored only in approved local operator storage such as `C:\AI MARS\local\tokens\`, which is excluded from git and source-pack/export workflows.
+For local-only WPilot token handling, use [local-storage-policy.md](local-storage-policy.md). Real token values may be stored only in approved local operator storage such as `X:\AI MARS\local\tokens\`, which is excluded from git and source-pack/export workflows.
 
 ## Minimum Access Principle
 
@@ -41,7 +41,7 @@ Use the least access needed for the current test:
 - Database exports.
 - Logs containing IP addresses, emails, cookies, auth headers, or tokens.
 - Full copies of client production files unless explicitly sanitized and approved outside MVP.
-- Any contents from `C:\AI MARS\local\` or `C:\AI MARS\backups\`, except sanitized tracked examples under `projects/wpilot/runtime-local.example/`.
+- Any contents from `X:\AI MARS\local\` or `X:\AI MARS\backups\`, except sanitized tracked examples under `projects/wpilot/runtime-local.example/`.
 
 ## Access Revocation Check
 

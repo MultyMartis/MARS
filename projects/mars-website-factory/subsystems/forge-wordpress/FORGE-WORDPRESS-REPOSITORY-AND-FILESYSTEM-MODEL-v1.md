@@ -30,7 +30,7 @@ Define where Forge WordPress source, assets, validation evidence, and runtime bo
 ## 3. Canonical layout (Factory-native project)
 
 ```text
-C:\AI MARS\
+X:\AI MARS\
   workspaces\website-factory-operations\{FP-ID}\
     INCOMING\                    # design, branding (existing)
     FRONTEND\                    # Gulp client copy — src/, dist/, package.json
@@ -42,7 +42,7 @@ C:\AI MARS\
       .env.example               # no secrets
     REPORTS\                     # cross-cutting QA
 
-C:\AI MARS STORAGE\
+X:\AI MARS STORAGE\
   forge-wordpress\{FP-ID}\
     visual-baselines\            # reference + diff PNGs (bulk)
     db-dumps\                    # local export snapshots (optional)
@@ -72,7 +72,7 @@ C:\Users\<user>\Local Sites\{project-slug}\   # Legacy optional — NOT canonica
 | Screenshots / visual diffs | Thumbnails optional | **Primary** bulk path | — | |
 | Release packages | Manifest + checksum in Git | ZIP binaries | — | |
 | Database dumps | **No** default | **Yes** if retained | Ephemeral | |
-| Local secrets / tokens | **No** | **No** | `C:\AI MARS\local\` | WPilot policy |
+| Local secrets / tokens | **No** | **No** | `X:\AI MARS\local\` | WPilot policy |
 | Temporary files | **No** | Optional scratch | OS temp | |
 | WordPress core | **No** | **No** | Local install | |
 | `vendor/` (Composer) | Lock yes; vendor optional | — | `composer install` | |
@@ -87,7 +87,7 @@ C:\Users\<user>\Local Sites\{project-slug}\   # Legacy optional — NOT canonica
 | **R-FS-01** | `dist` is **never** source of truth — `src` + build command is |
 | **R-FS-02** | Compiled assets live in theme `assets/` (or agreed path); separated from PHP source tree |
 | **R-FS-03** | WordPress core, uploads, DB dumps **not** committed without explicit charter |
-| **R-FS-04** | Secrets outside Git — `C:\AI MARS\local\` or operator secret store |
+| **R-FS-04** | Secrets outside Git — `X:\AI MARS\local\` or operator secret store |
 | **R-FS-05** | Core **not** duplicated per project repo |
 | **R-FS-06** | MARS docs govern methodology; production delivery locus may be host panel (WPilot) |
 
@@ -96,15 +96,15 @@ C:\Users\<user>\Local Sites\{project-slug}\   # Legacy optional — NOT canonica
 ## 6. Boundary map
 
 ```text
-C:\AI MARS              → methodology, source, manifests, reports (Git)
-C:\AI MARS STORAGE      → bulk baselines, packages, dumps (out-of-git)
-E:\MARS-Localhost       → shared local runtime (MLI) — sites, DB, Laragon
+X:\AI MARS              → methodology, source, manifests, reports (Git)
+X:\AI MARS STORAGE      → bulk baselines, packages, dumps (out-of-git)
+X:\MARS-Localhost       → shared local runtime (MLI) — sites, DB, Laragon
 client workspace        → workspaces/website-factory-operations/{FP-ID}/
-local WordPress site    → E:\MARS-Localhost\sites\wordpress\{class}\{slug}\
+local WordPress site    → X:\MARS-Localhost\sites\wordpress\{class}\{slug}\
 external hosting        → Beget DEV/staging/prod (WPilot operations)
 ```
 
-**Supersedes (2026-06-22):** `C:\Users\<user>\Local Sites\{project-slug}\` as canonical shared path — historical per-operator layout only; MLI canonical path is under `E:\MARS-Localhost\sites\wordpress\`.
+**Supersedes (2026-06-22):** `C:\Users\<user>\Local Sites\{project-slug}\` as canonical shared path — historical per-operator layout only; MLI canonical path is under `X:\MARS-Localhost\sites\wordpress\`.
 
 ---
 

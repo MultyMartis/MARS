@@ -24,7 +24,7 @@
 - [ ] Подтвердить: есть recovery-доступ (FTP/DB/hosting panel) на случай fatal при активации.
 - [ ] Подтвердить: токены **не** будут вноситься в git, скриншоты публично, или логи CI.
 - [ ] Выбрать **package source** и зафиксировать в evidence:
-  - **A:** `C:\AI MARS STORAGE\wpilot\deploy-packages\metacode-wpilot-v0.3.0.zip` (22 files, checkpoint `8c67478`, pre-UX-01), или
+  - **A:** `X:\AI MARS STORAGE\wpilot\deploy-packages\metacode-wpilot-v0.3.0.zip` (22 files, checkpoint `8c67478`, pre-UX-01), или
   - **B:** свежий ZIP из `projects/wpilot/plugin/metacode-wpilot/` (25 files, включает UX-01 + `languages/`, **требует** `metacode-wpilot-ru_RU.mo` для ru_RU).
 
 ---
@@ -169,7 +169,7 @@ Clean install считается **proven** только если **все** с�
 Рекомендуемое хранение (не в git):
 
 ```
-C:\AI MARS STORAGE\wpilot\clean-install\<site>\<timestamp>\
+X:\AI MARS STORAGE\wpilot\clean-install\<site>\<timestamp>\
   package-source.txt
   zip-sha256.txt
   activation-notes.txt

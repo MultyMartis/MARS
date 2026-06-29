@@ -11,7 +11,7 @@
 
 ## Zones
 
-### Brain authority — `C:\MARS Phenix\AI MARS`
+### Brain authority — `X:\AI MARS`
 
 | Allowed class | Examples |
 |---------------|----------|
@@ -20,7 +20,7 @@
 | Tests / reports / manifests | `operations/`, `bindings/`, `fixtures/`, agent reports |
 | Approved project workspace | FP-0002 foundation docs — **not** frontend implementation |
 
-### Runtime authority — `E:\MARS-Localhost`
+### Runtime authority — `X:\MARS-Localhost`
 
 | Allowed class | Examples |
 |---------------|----------|
@@ -46,7 +46,7 @@
 
 | Operation class | Read | Write |
 |-----------------|------|-------|
-| `wp.inspect.*` (brain) | `C:\MARS Phenix\AI MARS` project paths | none |
+| `wp.inspect.*` (brain) | `X:\AI MARS` project paths | none |
 | `wp.inspect.*` (runtime) | MLI manifest paths, theme/plugin in runtime | none |
 | `wp.plan.*` | brain docs | brain draft artifacts only |
 | `wp.validate.*` (source) | project PHP/theme paths | report artifacts only |

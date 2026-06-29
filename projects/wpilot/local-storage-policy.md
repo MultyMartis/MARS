@@ -9,14 +9,14 @@
 
 WPilot local operational storage is unified under the MARS repository working root:
 
-`C:\AI MARS`
+`X:\AI MARS`
 
 This replaces the older separate local-root concept for WPilot operator workflows.
 
 The target local-only structure is:
 
 ```text
-C:\AI MARS
+X:\AI MARS
 ├─ backups/
 │  ├─ wpilot/
 │  ├─ github/
@@ -48,14 +48,14 @@ Only sanitized examples may live in tracked documentation paths, such as:
 
 Per-site WPilot tokens may be stored only in local operator storage:
 
-- `C:\AI MARS\local\tokens\`
+- `X:\AI MARS\local\tokens\`
 
 ### MARS Token Standard (canonical)
 
 | Field | Value |
 |-------|-------|
-| **Canonical storage root** | `C:\AI MARS\local\tokens\` |
-| **Canonical DEV token file** | `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
+| **Canonical storage root** | `X:\AI MARS\local\tokens\` |
+| **Canonical DEV token file** | `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
 | **Site alias** | `dev-gktriumph` |
 | **REST auth header** | `X-WPilot-Token` |
 | **Current DEV site** | `https://dev.gktriumph.ru` |
@@ -78,7 +78,7 @@ Rules:
 
 Local site connection metadata may be stored under:
 
-- `C:\AI MARS\local\sites\`
+- `X:\AI MARS\local\sites\`
 
 Allowed local fields:
 
@@ -107,12 +107,12 @@ Disallowed local fields for tracked docs:
 
 Operator-managed WPilot backups may be staged under:
 
-- `C:\AI MARS\backups\wpilot\`
+- `X:\AI MARS\backups\wpilot\`
 
 Recommended local layout:
 
 ```text
-C:\AI MARS\backups\wpilot\
+X:\AI MARS\backups\wpilot\
 ├─ site-alias\
 │  ├─ yyyy-mm-dd-hhmm-pre-change\
 │  ├─ yyyy-mm-dd-hhmm-post-change\
@@ -130,7 +130,7 @@ Rules:
 
 Rollback snapshots may be stored under:
 
-- `C:\AI MARS\backups\wpilot\<site-alias>\rollback-snapshots\`
+- `X:\AI MARS\backups\wpilot\<site-alias>\rollback-snapshots\`
 
 Rollback snapshots should be scoped to the approved target where possible:
 
@@ -156,7 +156,7 @@ Example safe handoff:
 
 ```text
 site_alias: dev-gktriumph
-token_file: C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token
+token_file: X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token
 auth_header: X-WPilot-Token
 site_url: https://dev.gktriumph.ru
 operation: read-only site inspection
@@ -187,8 +187,8 @@ If a required token is missing:
 
 Never commit:
 
-- `C:\AI MARS\local\`
-- `C:\AI MARS\backups\`
+- `X:\AI MARS\local\`
+- `X:\AI MARS\backups\`
 - real token files;
 - `.env` files;
 - WordPress credentials;

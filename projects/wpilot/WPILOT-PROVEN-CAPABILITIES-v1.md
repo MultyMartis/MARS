@@ -18,7 +18,7 @@
 | Completed DEV work | Footer, contacts, cargo-scroll tasks on `dev.gktriumph.ru` |
 | In-repo reports | [wpilot-v0.1-dev-operational-release.md](reports/wpilot-v0.1-dev-operational-release.md), [wpilot-operational-milestone-v0.1.md](reports/wpilot-operational-milestone-v0.1.md), [page-read-debug-analysis-v0.md](reports/page-read-debug-analysis-v0.md), [wpilot-runtime-proof-sprint-report.md](reports/wpilot-runtime-proof-sprint-report.md), [wpilot-runtime-prototype-sprint-1-report.md](reports/wpilot-runtime-prototype-sprint-1-report.md), [wpilot-runtime-prototype-sprint-2-report.md](reports/wpilot-runtime-prototype-sprint-2-report.md), [wpilot-ux-01-report.md](reports/wpilot-ux-01-report.md), [wpilot-ux-02-report.md](reports/wpilot-ux-02-report.md), [wpilot-rc3-connection-proof.md](reports/wpilot-rc3-connection-proof.md), [wpilot-rc4-connection-verification.md](reports/wpilot-rc4-connection-verification.md), [wpilot-bugfix-01-report.md](reports/wpilot-bugfix-01-report.md), [wpilot-bugfix-02-rc5-report.md](reports/wpilot-bugfix-02-rc5-report.md), [wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
 | Cross-project lesson | [css-multicol-masonry-browser-compatibility-lesson-v1.md](../mars-website-factory/css-multicol-masonry-browser-compatibility-lesson-v1.md) |
-| Operator evidence (local-only) | `C:\AI MARS STORAGE\wpilot\backups\dev.gktriumph.ru\` — apply/backup/validation JSON, HTML snapshots (not in git; see [local-storage-policy.md](local-storage-policy.md)) |
+| Operator evidence (local-only) | `X:\AI MARS STORAGE\wpilot\backups\dev.gktriumph.ru\` — apply/backup/validation JSON, HTML snapshots (not in git; see [local-storage-policy.md](local-storage-policy.md)) |
 
 Документ **не описывает** roadmap.  
 Документ **не описывает** planned features.  
@@ -48,7 +48,7 @@ Capability считается **proven** только если одноврем�
 | Capability | Evidence |
 |------------|----------|
 | ✓ `inspect_site` — REST read: site info, active theme, active plugins | [wpilot-v0.1-dev-operational-release.md](reports/wpilot-v0.1-dev-operational-release.md) §2 |
-| ✓ `inspect_page` — REST page detail + metadata | v0.1 reports; [page-read-debug-analysis-v0.md](reports/page-read-debug-analysis-v0.md); `page-38.pre.json`, `contacts-page69.pre.json` in `C:\AI MARS STORAGE\wpilot\backups\` |
+| ✓ `inspect_page` — REST page detail + metadata | v0.1 reports; [page-read-debug-analysis-v0.md](reports/page-read-debug-analysis-v0.md); `page-38.pre.json`, `contacts-page69.pre.json` in `X:\AI MARS STORAGE\wpilot\backups\` |
 | ✓ `inspect_page` structure / WPBakery signals — `pages/{id}/structure` | v0.1 reports §2, §4 |
 | ✓ `inspect_environment` — bridge ping, DEV flags, indexing hints | `wpilot-ping.json` (recovery artifact); v0.1 ping probe |
 | ✓ `inspect_footer` — read footer zone markup and layout markers | Footer menu remap validation (`20260617-171904/validation-result.json`); rendered HTML audits |
@@ -105,7 +105,7 @@ Capability считается **proven** только если одноврем�
 | Capability | Evidence |
 |------------|----------|
 | ✓ Authenticated REST bridge (`X-WPilot-Token`) | [wpilot-rc3-connection-proof.md](reports/wpilot-rc3-connection-proof.md); RC5 freeze |
-| ✓ MARS ↔ WPilot token handoff from `C:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` | [local-storage-policy.md](local-storage-policy.md); RC5 freeze |
+| ✓ MARS ↔ WPilot token handoff from `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` | [local-storage-policy.md](local-storage-policy.md); RC5 freeze |
 | ✓ Connection tracker — independent success/failure metadata | [wpilot-bugfix-01-report.md](reports/wpilot-bugfix-01-report.md) |
 | ✓ `last_authorized_connection_at` persists after authenticated requests | RC4 verification; RC5 operator-confirmed |
 | ✓ `last_authorized_endpoint` persists (compact route label) | RC4 verification; RC5 operator-confirmed |
@@ -148,7 +148,7 @@ Capability считается **proven** только если одноврем�
 | Capability | Evidence |
 |------------|----------|
 | ✓ Create backup before apply | `wpilot-backup-result.json`; `contacts-requisites-*/backup-result.json`; `cargo-scroll-*/backup-result.json` |
-| ✓ Create rollback source (pre-apply backup path) | Server paths under `wp-content/uploads/wsp/wpilot-backups/` referenced in apply JSON; local mirrors in `C:\AI MARS STORAGE\wpilot\backups\dev.gktriumph.ru\` |
+| ✓ Create rollback source (pre-apply backup path) | Server paths under `wp-content/uploads/wsp/wpilot-backups/` referenced in apply JSON; local mirrors in `X:\AI MARS STORAGE\wpilot\backups\dev.gktriumph.ru\` |
 | ✓ Validate after apply | `contacts-requisites-*/validation.json` (`all_ok: true`); `cargo-scroll-*/validation-final.json`; footer `validation-result.json` |
 | ✓ Preserve recovery artifacts | Local STORAGE backup bundles per task timestamp |
 | ✓ Maintain change evidence trail | Paired pre/post HTML, apply/backup/validation JSON per run |
@@ -163,7 +163,7 @@ Capability считается **proven** только если одноврем�
 |------------|----------|
 | ✓ DEV-only execution | All cited runs target `dev.gktriumph.ru`; cargo-scroll operator reports state production untouched |
 | ✓ Temporary helper cleanup after task | `wpilot-cleanup-result.json`, `wpilot-layout-cleanup-result.json`; `cleanup-result.json` in STORAGE runs; helper URLs → 404 post-cleanup |
-| ✓ Secret / helper exposure cleanup | Recovery pass moved secret-bearing helpers from `.recovery-temp` to `C:\AI MARS STORAGE\wpilot\secure-recovery\` (operator report) |
+| ✓ Secret / helper exposure cleanup | Recovery pass moved secret-bearing helpers from `.recovery-temp` to `X:\AI MARS STORAGE\wpilot\secure-recovery\` (operator report) |
 | ✓ `robots.txt` verification | `validation-result.json` (`robots_txt_ok: true`); `wpilot-footer-masonry-validate.json` |
 | ✓ `noindex` meta verification | `wpilot-footer-masonry-validate.json` (`meta_robots` noindex/nofollow on DEV) |
 | ✓ Scoped modification discipline | Post-apply checks: `phone_unchanged`, `gruzotaxi_section_intact`, `form_intact`, `header_intact`, `footer_intact` |

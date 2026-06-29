@@ -12,7 +12,7 @@
 | `WP_DEBUG_DISPLAY` | `false` |
 | `SCRIPT_DEBUG` | `true` |
 | `DISALLOW_FILE_EDIT` | `true` |
-| `WP_DEBUG_LOG_FILE` | `E:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/debug.log` |
+| `WP_DEBUG_LOG_FILE` | `X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/debug.log` |
 
 ## Site options
 

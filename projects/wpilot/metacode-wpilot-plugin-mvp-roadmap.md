@@ -51,7 +51,7 @@ This roadmap should be read with:
 - `metacode-wpilot-plugin-concept.md` - PLANNED plugin architecture, REST surface, auth, audit, rollback, scoped replacement, WPBakery strategy.
 - `access-safety.md` - CORE secret and access handling.
 - `backup-rollback-rules.md` - CORE rollback discipline.
-- `local-storage-policy.md` - CORE local-only operator storage policy for ignored `C:\AI MARS\local\` and `C:\AI MARS\backups\` folders.
+- `local-storage-policy.md` - CORE local-only operator storage policy for ignored `X:\AI MARS\local\` and `X:\AI MARS\backups\` folders.
 - `boundaries.md` - CORE ownership and forbidden-claim boundaries.
 - `milestones.md` - PARTIALLY OPERATIONAL DEV/testing evidence, not plugin implementation proof.
 

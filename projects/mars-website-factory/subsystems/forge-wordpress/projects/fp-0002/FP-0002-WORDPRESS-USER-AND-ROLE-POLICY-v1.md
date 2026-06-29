@@ -14,7 +14,7 @@
 
 ## Credentials
 
-Stored in `C:\AI MARS\local\mli\fp-0002\runtime.env` — not in reports.
+Stored in `X:\AI MARS\local\mli\fp-0002\runtime.env` — not in reports.
 
 ## Future roles (planned, not applied)
 
