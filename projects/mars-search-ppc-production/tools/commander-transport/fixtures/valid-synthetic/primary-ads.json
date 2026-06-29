@@ -1,0 +1,20 @@
+{
+  "ads": [
+    {
+      "group_id": "grp-a",
+      "campaign_id": "CA-01",
+      "group_name": "Group A",
+      "status": "OPERATOR_APPROVED",
+      "landing_page": { "url": "https://example.test/lp-a/" },
+      "primary_ad": { "headline": "H1 A", "additional_headline": "H2 A", "text": "Text A" }
+    },
+    {
+      "group_id": "grp-b",
+      "campaign_id": "CA-01",
+      "group_name": "Group B",
+      "status": "OPERATOR_APPROVED",
+      "landing_page": { "url": "https://example.test/lp-b/" },
+      "primary_ad": { "headline": "H1 B", "additional_headline": "H2 B", "text": "Text B" }
+    }
+  ]
+}

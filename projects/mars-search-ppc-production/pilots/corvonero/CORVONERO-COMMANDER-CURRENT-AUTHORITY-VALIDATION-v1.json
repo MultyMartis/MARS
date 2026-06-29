@@ -1,0 +1,44 @@
+{
+  "validation_id": "corvonero-commander-current-authority-validation-v1",
+  "validated_at": "2026-06-29T18:25:30.372Z",
+  "status": "FAIL",
+  "stop_code": "STOP — CAMPAIGN ARCHITECTURE EXCEEDS COMMANDER GROUP LIMIT",
+  "manifest": "projects/mars-search-ppc-production/tools/commander-transport/fixtures/corvonero-frozen/authority-manifest-v1.json",
+  "template_sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+  "violations": [
+    {
+      "code": "GROUP_PHRASE_LIMIT",
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-search",
+      "actual_phrase_count": 384,
+      "maximum_phrase_count": 200
+    },
+    {
+      "code": "GROUP_PHRASE_LIMIT",
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-direct-service-order",
+      "actual_phrase_count": 201,
+      "maximum_phrase_count": 200
+    },
+    {
+      "code": "INVALID_REGION_CAMPAIGN_SETTINGS",
+      "message": "Campaign settings geography not transport-safe: Новосибирск + Новосибирская область"
+    },
+    {
+      "code": "MISSING_GROUP_NEGATIVES",
+      "message": "Group negatives authority file missing or not loaded"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "CROSS_CAMPAIGN_NOT_APPLIED",
+      "message": "Cross-campaign negatives: NOT APPLIED"
+    }
+  ],
+  "group_phrase_counts_over_limit": {
+    "ca-01-specialist-search": 384,
+    "ca-05-direct-service-order": 201
+  },
+  "generation_authorized": false,
+  "build_payload_authorized": false
+}

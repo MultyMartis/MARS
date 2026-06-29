@@ -1,0 +1,20 @@
+{
+  "transport_config_id": "synthetic-invalid-region",
+  "geo_region": "Новосибирск и Новосибирская область",
+  "organization_policy": { "required_value": "", "forbidden_ids": ["29500847237"] },
+  "forbidden_organization_ids": ["29500847237"],
+  "sitelinks_policy": "OMITTED",
+  "bids": { "CA-01": 500 },
+  "display_paths": {
+    "records": [
+      { "campaign_id": "CA-01", "group_id": "grp-a", "display_path": "programmist-1s" },
+      { "campaign_id": "CA-01", "group_id": "grp-b", "display_path": "stoimost-1s" }
+    ]
+  },
+  "group_negatives": {
+    "groups": {
+      "grp-a": { "terms": ["вакансия"] },
+      "grp-b": { "terms": ["резюме"] }
+    }
+  }
+}

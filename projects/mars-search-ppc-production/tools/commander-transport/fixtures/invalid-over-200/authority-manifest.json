@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "synthetic-test",
+  "pilot_id": "invalid-over-200",
+  "authority_checkpoint": "synthetic-invalid-over-200",
+  "campaign_scope": [
+    "CA-01"
+  ],
+  "operator_approval_state": "OPERATOR_APPROVED",
+  "generated_at": "2026-06-30T12:00:00.000Z",
+  "files": [
+    {
+      "role": "phrase_allocation",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/phrase-allocation.json",
+      "sha256": "dc95a11c12d5143f7a4fef0066f87b5392347aa8bcb69d244fbba31880387a88",
+      "required": true
+    },
+    {
+      "role": "campaign_architecture",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/campaign-architecture.json",
+      "sha256": "684e2afc9c4457571609b542a14bef5b7337bcdd9e731df3db023490e589980f",
+      "required": true
+    },
+    {
+      "role": "primary_ads",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/primary-ads.json",
+      "sha256": "96cfe4cc4ce9440efabe59bc993a66a8da3535283cdd1514d11ec2115175e2d1",
+      "required": true
+    },
+    {
+      "role": "callouts",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/callouts.json",
+      "sha256": "defe2cde7d0aab099d67831a7615ee630b3b0dc9457c8ec05f52e841a29328e2",
+      "required": true
+    },
+    {
+      "role": "campaign_negatives",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/campaign-negatives.json",
+      "sha256": "63eaed40ab75b102ebefb5c4d3598af231f66dd39f4218e9062d6fd0f79fa632",
+      "required": true
+    },
+    {
+      "role": "group_negatives",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/group-negatives.json",
+      "sha256": "2e2813fbdbc117b9ffbc27892ec3fe2ba95d71777a42b2c32203e699c9283970",
+      "required": true
+    },
+    {
+      "role": "cross_campaign_rules",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/cross-campaign-rules.json",
+      "sha256": "3c6ad1682a88456adefe7a7d8406ba46d3d7d063aae9d905439f422c1a072cd9",
+      "required": true
+    },
+    {
+      "role": "utm_map",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/utm-map.json",
+      "sha256": "8a1736e848f227d846d800f5142e1573d13463618cc5833a683b9142930fa51f",
+      "required": true
+    },
+    {
+      "role": "campaign_settings",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/campaign-settings.json",
+      "sha256": "b04259654a21016d34109c9a239382c4586e2849bb1498cf171a4636684add9d",
+      "required": true
+    },
+    {
+      "role": "transport_config",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/invalid-over-200/transport-config.json",
+      "sha256": "5ef802739be6dde55d6721f4590e927eb7eb0367308ba98dce51d3508f2aa1df",
+      "required": true
+    }
+  ]
+}

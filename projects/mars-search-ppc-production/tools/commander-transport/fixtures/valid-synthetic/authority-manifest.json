@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "synthetic-test",
+  "pilot_id": "valid-synthetic",
+  "authority_checkpoint": "synthetic-valid-synthetic",
+  "campaign_scope": [
+    "CA-01"
+  ],
+  "operator_approval_state": "OPERATOR_APPROVED",
+  "generated_at": "2026-06-30T12:00:00.000Z",
+  "files": [
+    {
+      "role": "phrase_allocation",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/phrase-allocation.json",
+      "sha256": "cdf86cd382e18344be4d90a1f6e3ef437b53bb1b5283d8e02272220dd06c80e9",
+      "required": true
+    },
+    {
+      "role": "campaign_architecture",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/campaign-architecture.json",
+      "sha256": "4c15f209b5d398035735e8c979c283b4d605b14d2e61f83bb7943b9218af0054",
+      "required": true
+    },
+    {
+      "role": "primary_ads",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/primary-ads.json",
+      "sha256": "11199d351db659554ea2646193a0c292380e6a3ba8deb95fd1c169286fb21ee1",
+      "required": true
+    },
+    {
+      "role": "callouts",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/callouts.json",
+      "sha256": "defe2cde7d0aab099d67831a7615ee630b3b0dc9457c8ec05f52e841a29328e2",
+      "required": true
+    },
+    {
+      "role": "campaign_negatives",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/campaign-negatives.json",
+      "sha256": "63eaed40ab75b102ebefb5c4d3598af231f66dd39f4218e9062d6fd0f79fa632",
+      "required": true
+    },
+    {
+      "role": "group_negatives",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/group-negatives.json",
+      "sha256": "2e2813fbdbc117b9ffbc27892ec3fe2ba95d71777a42b2c32203e699c9283970",
+      "required": true
+    },
+    {
+      "role": "cross_campaign_rules",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/cross-campaign-rules.json",
+      "sha256": "3c6ad1682a88456adefe7a7d8406ba46d3d7d063aae9d905439f422c1a072cd9",
+      "required": true
+    },
+    {
+      "role": "utm_map",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/utm-map.json",
+      "sha256": "8a1736e848f227d846d800f5142e1573d13463618cc5833a683b9142930fa51f",
+      "required": true
+    },
+    {
+      "role": "campaign_settings",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/campaign-settings.json",
+      "sha256": "b04259654a21016d34109c9a239382c4586e2849bb1498cf171a4636684add9d",
+      "required": true
+    },
+    {
+      "role": "transport_config",
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/tools/commander-transport/fixtures/valid-synthetic/transport-config.json",
+      "sha256": "810e88f1e3c7038a060bf6fa0b21f7b7c2c21daeba14fbcd35dc030d2a460bea",
+      "required": true
+    }
+  ]
+}

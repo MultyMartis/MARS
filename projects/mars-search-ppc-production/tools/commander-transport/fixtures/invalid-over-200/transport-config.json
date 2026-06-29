@@ -1,0 +1,37 @@
+{
+  "transport_config_id": "synthetic-valid-transport-config",
+  "geo_region": "Новосибирская область",
+  "organization_policy": {
+    "required_value": "",
+    "forbidden_ids": [
+      "29500847237"
+    ]
+  },
+  "forbidden_organization_ids": [
+    "29500847237"
+  ],
+  "sitelinks_policy": "OMITTED",
+  "bids_ref": null,
+  "bids": {
+    "CA-01": 500
+  },
+  "display_paths": {
+    "records": [
+      {
+        "campaign_id": "CA-01",
+        "group_id": "grp-big",
+        "display_path": "big"
+      }
+    ]
+  },
+  "group_negatives": {
+    "groups": {
+      "grp-big": {
+        "terms": [
+          "x"
+        ]
+      }
+    }
+  },
+  "fragment_anchor_approved": false
+}

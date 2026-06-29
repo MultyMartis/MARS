@@ -1,0 +1,20 @@
+{
+  "validation_id": "corvonero-commander-transport-ct1-ct2-synthetic-validation-v1",
+  "validated_at": "2026-06-29T18:30:00Z",
+  "status": "PASS",
+  "test_runner": "node --test tests/*.test.mjs",
+  "tests_total": 21,
+  "tests_passed": 21,
+  "tests_failed": 0,
+  "fixture_dirs": [
+    "valid-synthetic",
+    "invalid-over-200",
+    "invalid-region",
+    "invalid-organization",
+    "invalid-negatives",
+    "invalid-unapproved-ad"
+  ],
+  "synthetic_xlsx_generated": true,
+  "synthetic_xlsx_location": "projects/mars-search-ppc-production/.tools-test-output/adapter-test/",
+  "real_corvonero_xlsx": false
+}

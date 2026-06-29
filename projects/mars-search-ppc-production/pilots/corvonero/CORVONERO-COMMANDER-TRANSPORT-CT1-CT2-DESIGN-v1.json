@@ -1,0 +1,37 @@
+{
+  "design_id": "corvonero-commander-transport-ct1-ct2-design-v1",
+  "generated_at": "2026-06-29T18:30:00Z",
+  "components": {
+    "CT-1": {
+      "name": "commander-patcher-adapter",
+      "path": "tools/commander-transport/src/commander-patcher-adapter.mjs",
+      "status": "IMPLEMENTED"
+    },
+    "CT-2": {
+      "name": "authority-loader + payload-builder",
+      "paths": [
+        "tools/commander-transport/src/authority-loader.mjs",
+        "tools/commander-transport/src/payload-builder.mjs"
+      ],
+      "status": "IMPLEMENTED"
+    },
+    "CT-3": {
+      "name": "transport-validator technical policy",
+      "path": "tools/commander-transport/src/transport-validator.mjs",
+      "status": "IMPLEMENTED"
+    }
+  },
+  "filesystem_guard": {
+    "approved_write_root": "X:/AI MARS/projects/mars-search-ppc-production",
+    "output_policy": "FAIL_IF_OUTPUT_EXISTS"
+  },
+  "template": {
+    "path": "projects/orca/ppc/triumph-manipulator/assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx",
+    "sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+  },
+  "modes_implemented": ["validate", "build-payload", "generate", "verify-output"],
+  "modes_executed_this_task": ["validate"],
+  "semantic_dependency": false,
+  "external_api": false,
+  "generation_authorized": false
+}

@@ -1,0 +1,22 @@
+{
+  "result_id": "corvonero-commander-transport-ct1-ct2-result-v1",
+  "generated_at": "2026-06-29T18:30:00Z",
+  "verdict": "CORVONERO COMMANDER CT-1/CT-2: PASS — SAFE TRANSPORT TOOLING IMPLEMENTED",
+  "ct1_status": "IMPLEMENTED",
+  "ct2_status": "IMPLEMENTED",
+  "ct3_status": "IMPLEMENTED",
+  "synthetic_validation": "PASS",
+  "synthetic_tests": { "total": 21, "passed": 21, "failed": 0 },
+  "current_authority_validation": "FAIL",
+  "groups_over_limit": {
+    "ca-01-specialist-search": 384,
+    "ca-05-direct-service-order": 201
+  },
+  "generation_performed": false,
+  "commander_import": false,
+  "yandex_direct": false,
+  "semantic_run_touched": false,
+  "ca01_v2": "ON_HOLD_PENDING_CT4_REGROUPING",
+  "git_commit": false,
+  "git_push": false
+}

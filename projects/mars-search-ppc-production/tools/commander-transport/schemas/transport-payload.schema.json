@@ -1,0 +1,32 @@
+{
+  "$id": "mars-search-ppc/commander-transport/transport-payload.schema.json",
+  "title": "Commander Transport Payload",
+  "type": "object",
+  "required": [
+    "campaign_id",
+    "geo_region",
+    "metadata_patches",
+    "rows",
+    "validation_receipt",
+    "authority_hashes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "campaign_id": { "type": "string", "pattern": "^CA-[0-9]{2}$" },
+    "geo_region": { "type": "string", "minLength": 1 },
+    "metadata_patches": { "type": "object" },
+    "validation_receipt": { "type": "object" },
+    "authority_hashes": { "type": "object" },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["row_type"],
+        "additionalProperties": true,
+        "properties": {
+          "row_type": { "type": "string", "enum": ["AD", "KEYWORD"] }
+        }
+      }
+    }
+  }
+}
