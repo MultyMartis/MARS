@@ -290,7 +290,8 @@ Excluded: `projects/**` (except `registry/project-registry.md`), `workspaces/**`
 |------|-------|
 | Commit message | `docs: align MARS core infrastructure to X-drive authority` |
 | Push | `origin mars/canonical-post-recovery` |
-| Commit SHA | *(filled after commit)* |
+| Commit SHA | `69d83ad0` |
+| Push | `origin mars/canonical-post-recovery` — **SUCCESS** |
 
 ---
 
@@ -351,7 +352,7 @@ Localhost modified: NO
 Historical evidence rewritten: NO
 Foreign WIP staged: NO
 Destructive operations: NONE
-Commit/push: PENDING (see §22 update after git)
+Commit/push: SUCCESS — commit `69d83ad0`, pushed to `origin mars/canonical-post-recovery`
 X4–X9 started: NO
 ```
 
