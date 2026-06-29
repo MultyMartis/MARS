@@ -239,11 +239,10 @@ Staged **only** task-approved files (13 paths). Foreign WIP excluded.
 | Item | Value |
 |------|-------|
 | Commit message | `safety: establish X-drive root authority and filesystem boundary` |
+| Commit SHA | `f2f7c66bf0686754cb5637e65deda01707d24ed1` |
 | Branch | `mars/canonical-post-recovery` |
-| Push | `git push origin mars/canonical-post-recovery` |
+| Push | `git push origin mars/canonical-post-recovery` — **SUCCESS** (`7ad7d7e6..f2f7c66b`) |
 | Force push | **Not used** |
-
-*(Final commit SHA recorded at task close — see `git log -1` after commit.)*
 
 ---
 
