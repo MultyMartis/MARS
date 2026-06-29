@@ -87,13 +87,19 @@ Mandatory pause **before**:
 
 ## 5. Filesystem boundary contracts
 
+**Authority:** [mars-x-drive-root-authority-v1.md](../../../governance/mars-x-drive-root-authority-v1.md)
+
 | Contract | Rule |
 |----------|------|
-| **Repo root** | `C:\AI MARS` — all MARS work; agent must not mutate paths outside without explicit task |
-| **Workspace boundary** | Lane A: `workspaces/<project>/` only unless task lists more |
+| **Active Brain** | `X:\AI MARS` — primary Git repo; agent must not mutate paths outside approved `X:` roots without explicit task |
+| **Storage boundary** | `X:\AI MARS STORAGE` — out-of-Git bulk; task-scoped writes only |
+| **Runtime boundary** | `X:\MARS-Localhost` — local runtime; task-scoped writes only |
+| **Volume boundary** | Drive `X:` / label `AI WS`; no MARS-controlled writes outside `X:\` |
+| **Workspace boundary** | Lane A: `workspaces/<project>/` under Active Brain unless task lists more |
 | **Factory boundary** | Implementation under workspace; governance under `projects/mars-website-factory/` |
 | **Generated boundary** | No hand-edit of `dist/`, `build/`, `node_modules/` — regen ([.cursorrules](../../../.cursorrules)) |
-| **External boundary** | [external-system-boundaries.md](../../../governance/external-system-boundaries.md) |
+| **External boundary** | [external-system-boundaries.md](../../../governance/external-system-boundaries.md); external reads require operator authorization |
+| **Deprecated roots** | `C:\AI MARS`, `C:\MARS Phenix`, `C:\AI MARS STORAGE`, `D:\MARS-Localhost`, `E:\MARS-Localhost` — write denied |
 
 ---
 
@@ -103,10 +109,10 @@ Mandatory pause **before**:
 
 ```text
 SCOPE LOCK v1
-- Root: C:\AI MARS\workspaces\<name>\
+- Root: X:\AI MARS\workspaces\<name>\
 - Allowed ops: read, write files under Root only
-- Forbidden: delete directory, git clean/reset, paths outside Root
-- Protected: governance/, registry/, other workspaces/
+- Forbidden: delete directory, git clean/reset, paths outside Root, writes outside X:\
+- Protected: governance/, registry/, other workspaces/, canonical root directories
 - Snapshot: required before any delete class
 ```
 

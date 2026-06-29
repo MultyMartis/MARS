@@ -85,6 +85,41 @@
       "flags": "i",
       "decision": "NEED_HUMAN",
       "reason": "Mass git restore at cwd — confirm path list"
+    },
+    {
+      "id": "FC-11",
+      "pattern": "robocopy\\s+.*/MIR",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "robocopy mirror — destructive sync"
+    },
+    {
+      "id": "FC-12",
+      "pattern": "robocopy\\s+.*/PURGE",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "robocopy purge — destructive"
+    },
+    {
+      "id": "FC-13",
+      "pattern": "rimraf\\b",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "rimraf recursive delete"
+    },
+    {
+      "id": "FC-14",
+      "pattern": "fs\\.rm\\b.*recursive",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Node fs.rm recursive delete"
+    },
+    {
+      "id": "FC-15",
+      "pattern": "rmdir\\s+/s",
+      "flags": "i",
+      "decision": "DENY",
+      "reason": "Windows recursive rmdir"
     }
   ],
   "dangerous_patterns": [
@@ -476,7 +511,7 @@
     }
   ],
   "scope_rules": {
-    "repo_root_markers": ["C:\\AI MARS", "C:/AI MARS", "."],
+    "repo_root_markers": ["X:\\AI MARS", "X:/AI MARS", "C:\\AI MARS", "C:/AI MARS", "."],
     "missing_scope_on_write": "NEED_HUMAN",
     "workspace_wide_without_path": "NEED_HUMAN",
     "write_verbs": [
@@ -495,5 +530,100 @@
       "gulp",
       "npx"
     ]
+  },
+  "filesystem_boundary": {
+    "required_drive": "X:",
+    "required_volume_label": "AI WS",
+    "volume_label_enforcement": "PRECHECK_REQUIRED",
+    "canonical_roots": [
+      {
+        "id": "CR-01",
+        "path": "X:\\AI MARS",
+        "role": "Active Brain",
+        "write_decision": "NEED_HUMAN",
+        "delete_decision": "DENY"
+      },
+      {
+        "id": "CR-02",
+        "path": "X:\\AI MARS STORAGE",
+        "role": "Storage",
+        "write_decision": "NEED_HUMAN",
+        "delete_decision": "DENY"
+      },
+      {
+        "id": "CR-03",
+        "path": "X:\\MARS-Localhost",
+        "role": "Local Runtime",
+        "write_decision": "NEED_HUMAN",
+        "delete_decision": "DENY"
+      }
+    ],
+    "denied_roots": [
+      {
+        "id": "DR-01",
+        "path": "C:\\AI MARS",
+        "status": "DEPRECATED OPERATIONAL ROOT",
+        "decision": "DENY"
+      },
+      {
+        "id": "DR-02",
+        "path": "C:\\MARS Phenix",
+        "status": "DEPRECATED OPERATIONAL ROOT",
+        "decision": "DENY"
+      },
+      {
+        "id": "DR-03",
+        "path": "C:\\AI MARS STORAGE",
+        "status": "DEPRECATED OPERATIONAL ROOT",
+        "decision": "DENY"
+      },
+      {
+        "id": "DR-04",
+        "path": "D:\\MARS-Localhost",
+        "status": "DEPRECATED OPERATIONAL ROOT",
+        "decision": "DENY"
+      },
+      {
+        "id": "DR-05",
+        "path": "E:\\MARS-Localhost",
+        "status": "DEPRECATED OPERATIONAL ROOT",
+        "decision": "DENY"
+      }
+    ],
+    "root_self_protection": [
+      {
+        "id": "RS-01",
+        "path": "X:\\",
+        "decision": "DENY",
+        "reason": "Volume root operation denied"
+      },
+      {
+        "id": "RS-02",
+        "path": "X:\\AI MARS",
+        "decision": "DENY",
+        "reason": "Canonical root self-deletion/replacement denied"
+      },
+      {
+        "id": "RS-03",
+        "path": "X:\\AI MARS STORAGE",
+        "decision": "DENY",
+        "reason": "Canonical root self-deletion/replacement denied"
+      },
+      {
+        "id": "RS-04",
+        "path": "X:\\MARS-Localhost",
+        "decision": "DENY",
+        "reason": "Canonical root self-deletion/replacement denied"
+      }
+    ],
+    "path_normalization": {
+      "normalize_separators": true,
+      "case_insensitive": true,
+      "reject_parent_escape": true,
+      "reject_unc": true,
+      "reparse_escape_detection": "PARTIAL"
+    },
+    "outside_drive_decision": "DENY",
+    "outside_canonical_root_decision": "DENY"
   }
 }

@@ -84,7 +84,14 @@ function loadRegistry() {
 function normalizeScope(scope) {
   if (!scope || !scope.trim()) return "";
   let s = scope.trim().replace(/\\/g, "/");
-  const repoMarkers = ["C:/AI MARS/", "c:/ai mars/"];
+  const repoMarkers = [
+    "X:/AI MARS/",
+    "x:/ai mars/",
+    "C:/AI MARS/",
+    "c:/ai mars/",
+    "C:/MARS Phenix/AI MARS/",
+    "c:/mars phenix/ai mars/",
+  ];
   for (const m of repoMarkers) {
     if (s.toLowerCase().startsWith(m)) {
       s = s.slice(m.length);
@@ -93,6 +100,202 @@ function normalizeScope(scope) {
   }
   if (s.startsWith("./")) s = s.slice(2);
   return normalize(s).replace(/\\/g, "/");
+}
+
+function normalizeAbsolutePath(input) {
+  if (!input || !input.trim()) return "";
+  let s = input.trim().replace(/\//g, "\\");
+  // Reject UNC
+  if (s.startsWith("\\\\")) return "\\\\UNC_REJECTED";
+  // Collapse duplicate separators
+  s = s.replace(/\\+/g, "\\");
+  // Resolve .. segments (string-level)
+  const parts = [];
+  for (const part of s.split("\\")) {
+    if (!part || part === ".") continue;
+    if (part === "..") {
+      if (parts.length > 0) parts.pop();
+      continue;
+    }
+    parts.push(part);
+  }
+  return parts.join("\\");
+}
+
+function normalizeForCompare(p) {
+  return normalizeAbsolutePath(p).toLowerCase();
+}
+
+function isUncPath(p) {
+  return /^\\\\/i.test(p.trim());
+}
+
+function stripTrailingSep(p) {
+  return p.replace(/[\\/]+$/, "");
+}
+
+function isExactOrChild(childNorm, parentNorm) {
+  const c = stripTrailingSep(childNorm);
+  const p = stripTrailingSep(parentNorm);
+  if (!c || !p) return false;
+  return c === p || c.startsWith(p + "\\");
+}
+
+function extractPathsFromText(text) {
+  const found = new Set();
+  const patterns = [
+    /[A-Za-z]:\\[^\s"'`|;&<>]+/g,
+    /[A-Za-z]:\/[^\s"'`|;&<>]+/g,
+    /\\\\[^\s"'`|;&<>]+/g,
+  ];
+  for (const re of patterns) {
+    for (const m of text.matchAll(re)) {
+      found.add(m[0].replace(/['"`;,.)]+$/, ""));
+    }
+  }
+  return [...found];
+}
+
+function checkFilesystemBoundary(paths, command, registry, matches) {
+  let decision = "ALLOW";
+  const fb = registry.filesystem_boundary;
+  if (!fb) return decision;
+
+  const isDelete = looksLikeDelete(command);
+  const isWrite = looksLikeWrite(command, registry);
+  const isMutation = isDelete || isWrite;
+
+  const allPaths = [...new Set([...paths, ...extractPathsFromText(command)])].filter(Boolean);
+
+  for (const raw of allPaths) {
+    if (isUncPath(raw)) {
+      decision = maxDecision(decision, "DENY");
+      matches.push({
+        bucket: "filesystem_boundary",
+        id: "FB-UNC",
+        decision: "DENY",
+        reason: `UNC path rejected: ${raw}`,
+      });
+      continue;
+    }
+
+    const norm = normalizeForCompare(raw);
+    if (norm === "\\\\unc_rejected") {
+      decision = maxDecision(decision, "DENY");
+      matches.push({
+        bucket: "filesystem_boundary",
+        id: "FB-UNC",
+        decision: "DENY",
+        reason: "UNC path rejected",
+      });
+      continue;
+    }
+
+    // Parent escape check (raw contains .. after normalization differs)
+    if (/\.\./.test(raw) && normalizeAbsolutePath(raw).toLowerCase() !== raw.replace(/\//g, "\\").toLowerCase()) {
+      const resolved = normalizeForCompare(raw);
+      const unresolved = raw.replace(/\//g, "\\").toLowerCase();
+      if (resolved !== unresolved && /\.\./.test(raw)) {
+        decision = maxDecision(decision, "DENY");
+        matches.push({
+          bucket: "filesystem_boundary",
+          id: "FB-PARENT",
+          decision: "DENY",
+          reason: `Parent traversal rejected: ${raw}`,
+        });
+      }
+    }
+
+    const drive = norm.match(/^([a-z]):/);
+    const driveLetter = drive ? `${drive[1].toUpperCase()}:` : null;
+
+    if (driveLetter && fb.required_drive && driveLetter !== fb.required_drive.toUpperCase()) {
+      decision = maxDecision(decision, "DENY");
+      matches.push({
+        bucket: "filesystem_boundary",
+        id: "FB-DRIVE",
+        decision: "DENY",
+        reason: `Drive ${driveLetter} outside required ${fb.required_drive}`,
+      });
+    }
+
+    for (const denied of fb.denied_roots || []) {
+      const deniedNorm = normalizeForCompare(denied.path);
+      if (isExactOrChild(norm, deniedNorm)) {
+        decision = maxDecision(decision, denied.decision || "DENY");
+        matches.push({
+          bucket: "filesystem_boundary",
+          id: denied.id,
+          decision: denied.decision || "DENY",
+          reason: `${denied.status}: ${denied.path}`,
+        });
+      }
+    }
+
+    if (isMutation) {
+      for (const protectedRoot of fb.root_self_protection || []) {
+        const protNorm = normalizeForCompare(protectedRoot.path);
+        if (norm === protNorm || norm === protNorm + "\\") {
+          decision = maxDecision(decision, protectedRoot.decision || "DENY");
+          matches.push({
+            bucket: "filesystem_boundary",
+            id: protectedRoot.id,
+            decision: protectedRoot.decision || "DENY",
+            reason: protectedRoot.reason,
+          });
+        }
+      }
+    }
+
+    if (driveLetter === "X:") {
+      let inCanonical = false;
+      for (const root of fb.canonical_roots || []) {
+        const rootNorm = normalizeForCompare(root.path);
+        if (isExactOrChild(norm, rootNorm)) {
+          inCanonical = true;
+          if (isMutation && norm === rootNorm) {
+            decision = maxDecision(decision, root.delete_decision || "DENY");
+            matches.push({
+              bucket: "filesystem_boundary",
+              id: root.id,
+              decision: root.delete_decision || "DENY",
+              reason: `Mutation targeting canonical root: ${root.path}`,
+            });
+          } else if (isMutation) {
+            decision = maxDecision(decision, root.write_decision || "NEED_HUMAN");
+            matches.push({
+              bucket: "filesystem_boundary",
+              id: root.id,
+              decision: root.write_decision || "NEED_HUMAN",
+              reason: `Path under ${root.role} (${root.path}) — task-scoped`,
+            });
+          }
+          break;
+        }
+      }
+      if (!inCanonical && isMutation) {
+        const d = fb.outside_canonical_root_decision || "DENY";
+        decision = maxDecision(decision, d);
+        matches.push({
+          bucket: "filesystem_boundary",
+          id: "FB-OUTSIDE-ROOT",
+          decision: d,
+          reason: `Path on X: but outside canonical roots: ${raw}`,
+        });
+      }
+    } else if (driveLetter && isMutation) {
+      const d = fb.outside_drive_decision || "DENY";
+      decision = maxDecision(decision, d);
+      matches.push({
+        bucket: "filesystem_boundary",
+        id: "FB-OUTSIDE-DRIVE",
+        decision: d,
+        reason: `Mutation outside required drive ${fb.required_drive}: ${raw}`,
+      });
+    }
+  }
+
+  return decision;
 }
 
 function maxDecision(current, next) {
@@ -324,6 +527,12 @@ function validate({ command, scope, riskClass }) {
 
   decision = maxDecision(decision, checkScopeRules(command, scope, registry, matches));
   decision = maxDecision(decision, checkProtectedPaths(scope, command, registry, matches));
+
+  const boundaryPaths = scope ? [scope] : [];
+  decision = maxDecision(
+    decision,
+    checkFilesystemBoundary(boundaryPaths, command, registry, matches)
+  );
 
   const safeMatches = matchPatternRules(
     command,

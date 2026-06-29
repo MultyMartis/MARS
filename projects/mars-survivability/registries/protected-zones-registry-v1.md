@@ -3,7 +3,36 @@
 **Status:** **documented** — human-maintained registry for safe-execution layer and future GitGuard.  
 **Not:** enforced ACL.
 
-**Policy:** [../contracts/destructive-operations-policy-v1.md](../contracts/destructive-operations-policy-v1.md)
+**Policy:** [../contracts/destructive-operations-policy-v1.md](../contracts/destructive-operations-policy-v1.md)  
+**Filesystem authority:** [../../../governance/mars-x-drive-root-authority-v1.md](../../../governance/mars-x-drive-root-authority-v1.md)
+
+---
+
+## 0. Canonical filesystem roots (X-drive — active)
+
+**Volume:** `AI WS` / drive `X:`  
+**Status:** active operational roots (X0–X1 cutover complete).
+
+| Root | Role | Write authority | Destructive authority |
+|------|------|-----------------|----------------------|
+| `X:\AI MARS\` | Active Brain (Git, governance, projects, agents) | task-scoped | operator-approved only |
+| `X:\AI MARS STORAGE\` | Storage (out-of-Git, backups, archives, bulk data) | task-scoped | operator-approved only |
+| `X:\MARS-Localhost\` | Local runtime (Laragon, CMS, DB, logs) | task-scoped | operator-approved only |
+| `X:\` | Volume root | **denied** | **denied** |
+
+### Deprecated operational roots (write denied)
+
+| Path | Status |
+|------|--------|
+| `C:\AI MARS\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+| `C:\MARS Phenix\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+| `C:\MARS Phenix\AI MARS\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+| `C:\AI MARS STORAGE\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+| `C:\MARS Phenix\AI MARS STORAGE\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+| `D:\MARS-Localhost\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+| `E:\MARS-Localhost\` | DEPRECATED OPERATIONAL ROOT — WRITE DENIED — HISTORICAL READ ONLY WHEN AUTHORIZED |
+
+**Rule:** Do not register arbitrary whole-system paths. MARS boundary applies to MARS-controlled project, storage, and runtime data — not OS/AppData caches unless separately migrated.
 
 ---
 
@@ -181,6 +210,7 @@ Human-operated classification for scope-lock and agent prompts. **Does not repla
 |------|--------|
 | 2026-05-23 | v1 initial registry from audit |
 | 2026-05-24 | G0 — Q zones created; CRITICAL/HIGH/MEDIUM tiers + permission semantics |
+| 2026-06-29 | X0–X1 — canonical X-drive filesystem roots; deprecated C/D/E operational roots |
 
 ---
 

@@ -16,7 +16,7 @@ Canonical FORBIDDEN list for AGENT. Source of truth: [destructive-operations-pol
 | ID | Operation | Agent | Human |
 |----|-----------|-------|-------|
 | F-01 | Recursive directory delete | **Deny** | Snapshot + explicit approval |
-| F-02 | Delete at repo/drive root | **Deny** | Discouraged |
+| F-02 | Delete at volume/canonical root (`X:\`, `X:\AI MARS\`, `X:\AI MARS STORAGE\`, `X:\MARS-Localhost\`) | **Deny** | Discouraged |
 | F-03 | Wildcard mass delete | **Deny** | Path list + approval |
 | F-04 | Move/rename top-level ecosystem folders | **Deny** | Charter required |
 | F-05 | `git clean` (any flags) | **Deny** | At keyboard only |

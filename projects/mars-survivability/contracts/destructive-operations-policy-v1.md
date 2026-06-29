@@ -36,7 +36,7 @@ Unless **all** of: (a) explicit human instruction naming paths, (b) scope lock i
 | ID | Operation |
 |----|-----------|
 | F-01 | Recursive directory delete via agent (Shell `Remove-Item -Recurse`, `rm -rf`, `rd /s`, etc.) |
-| F-02 | Delete at **repository root** or **drive root** (`C:\`, `C:\AI MARS` wholesale) |
+| F-02 | Delete at **volume root** (`X:\`) or **canonical root directories** (`X:\AI MARS\`, `X:\AI MARS STORAGE\`, `X:\MARS-Localhost\`) wholesale |
 | F-03 | Wildcard mass delete (`del *.*`, `Remove-Item * -Recurse`, `git clean -fdx` without human at keyboard) |
 | F-04 | **Move/rename** top-level folders: `governance/`, `registry/`, `projects/`, `agents/`, `workspaces/`, `web-gpt-sources/` |
 | F-05 | `git clean` (any flags) initiated by **AGENT** |

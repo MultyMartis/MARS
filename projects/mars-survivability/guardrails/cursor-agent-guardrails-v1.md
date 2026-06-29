@@ -11,13 +11,15 @@
 === MARS AGENT GUARDRAILS v1 ===
 Lane: [A|B]
 Phase: [audit|implement|recovery]
-Repo root: C:\AI MARS
+Repo root: X:\AI MARS
+Volume: AI WS (X:)
 
 SCOPE LOCK:
-- Allowed root: <absolute path>
+- Allowed root: <absolute path under X:\AI MARS | X:\AI MARS STORAGE | X:\MARS-Localhost>
 - Allowed ops: read, edit files under Allowed root
-- Forbidden: recursive delete, git clean, git reset --hard, move top-level dirs
-- Protected: governance/, registry/, agents/, web-gpt-sources/, other workspaces/
+- Forbidden: recursive delete, git clean, git reset --hard, move top-level dirs, writes outside X:\
+- Protected: governance/, registry/, agents/, web-gpt-sources/, other workspaces/, canonical root dirs
+- Denied writes: C:\AI MARS\, C:\MARS Phenix\, C:\AI MARS STORAGE\, D:\MARS-Localhost\, E:\MARS-Localhost\
 
 SNAPSHOT: [required|waived by human] — ID: ______
 

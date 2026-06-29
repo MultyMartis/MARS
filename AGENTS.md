@@ -28,11 +28,41 @@
 **Reality audit framework (documentation):** Cross-cutting **human-operated** review semantics under `governance/` — start [reality-audit-framework.md](governance/reality-audit-framework.md); [reality-audit-questions.md](governance/reality-audit-questions.md), [operational-friction-semantics.md](governance/operational-friction-semantics.md), [deprecation-and-pruning-semantics.md](governance/deprecation-and-pruning-semantics.md), [governance-usefulness-review.md](governance/governance-usefulness-review.md), [reality-vs-mythology-warnings.md](governance/reality-vs-mythology-warnings.md). Supports **operational reality**, usefulness, friction, and drift reflection — **not** governance certification, **not** runtime validation, **not** telemetry or monitoring products.
 
 ## File operations
-- Constrain filesystem work to **`C:\MARS Phenix\AI MARS`** for MARS work (canonical workspace root).
-- **Canonical development branch:** `mars/canonical-post-recovery` — see [governance/mars-canonical-branch-cutover-v1.md](governance/mars-canonical-branch-cutover-v1.md). Immutable recovery anchor: `recovery/mars-phenix-2026-06-25` @ `fe9d9c8e`. Disaster recovery **closed** 2026-06-25 — [mars-disaster-recovery-2026-06-24-closure-v1.md](governance/mars-disaster-recovery-2026-06-24-closure-v1.md); resumption checklist [mars-normal-operations-resumption-checklist-v1.md](governance/mars-normal-operations-resumption-checklist-v1.md). Do **not** use `C:\AI MARS` as active workspace.
-- **Bulk storage** for large out-of-git artefacts: **`C:\MARS Phenix\AI MARS STORAGE`** — supporting layer only; **not** a second repository or parallel workspace root. See [governance/mars-infrastructure-reality-v1.md](governance/mars-infrastructure-reality-v1.md).
+
+**X-drive root authority (active):** [governance/mars-x-drive-root-authority-v1.md](governance/mars-x-drive-root-authority-v1.md)
+
+| Role | Canonical path |
+|------|----------------|
+| **Canonical repository root** | `X:\AI MARS` |
+| **Canonical storage root** | `X:\AI MARS STORAGE` |
+| **Canonical local runtime root** | `X:\MARS-Localhost` |
+| **Required volume label** | `AI WS` (drive `X:`) |
+
+- Constrain MARS filesystem work to **`X:\AI MARS`** (Active Brain) unless a task explicitly authorizes **`X:\AI MARS STORAGE`** or **`X:\MARS-Localhost`** within scoped paths.
+- **Canonical development branch:** `mars/canonical-post-recovery` — see [governance/mars-canonical-branch-cutover-v1.md](governance/mars-canonical-branch-cutover-v1.md). Immutable recovery anchor: `recovery/mars-phenix-2026-06-25` @ `fe9d9c8e`. Disaster recovery **closed** 2026-06-25 — [mars-disaster-recovery-2026-06-24-closure-v1.md](governance/mars-disaster-recovery-2026-06-24-closure-v1.md); resumption checklist [mars-normal-operations-resumption-checklist-v1.md](governance/mars-normal-operations-resumption-checklist-v1.md).
+- **Bulk storage** for large out-of-git artefacts: **`X:\AI MARS STORAGE`** — supporting layer only; **not** a second repository or parallel workspace root. See [governance/mars-infrastructure-reality-v1.md](governance/mars-infrastructure-reality-v1.md).
 - **No** delete or move without explicit user instruction.
 - **No** manual edits to generated or build artifacts; ignore or regenerate via the proper pipeline.
+
+### Filesystem boundary (mandatory before any mutation)
+
+1. Resolve the **full absolute target path**.
+2. Confirm drive is **`X:`**.
+3. Confirm target is inside one explicitly approved canonical root (`X:\AI MARS`, `X:\AI MARS STORAGE`, or `X:\MARS-Localhost`).
+4. Confirm volume label is **`AI WS`** when volume identity can be checked.
+5. **Reject** paths using `..` that escape approved scope.
+6. **Reject** UNC paths unless separately approved.
+7. **Reject** symlink/junction/reparse escape outside `X:`.
+8. **Reject** root-level operations on `X:\`.
+9. **Reject** operations targeting the three canonical roots themselves (delete/replace/cleanup of root directories).
+10. **Reject** parent-directory cleanup.
+11. **Reject writes** to deprecated MARS roots: `C:\AI MARS\`, `C:\MARS Phenix\`, `C:\AI MARS STORAGE\`, `D:\MARS-Localhost\`, `E:\MARS-Localhost\`.
+12. **External reads** require exact operator authorization for that task and path; prefer operator copy to `X:\AI MARS STORAGE\incoming\`.
+13. **No destructive operation** without: exact path list; dry-run; checkpoint/backup; explicit operator approval; rollback method; audit evidence.
+14. **`git clean`**, destructive reset, broad restore, and broad staging remain **prohibited** for agents.
+15. **Foreign WIP** must be excluded from commits and agent scope.
+
+**Historical note:** Phoenix-era paths (`C:\MARS Phenix\AI MARS`, `C:\AI MARS`, etc.) may appear in incident/recovery evidence — they are **not** current operational targets.
 
 ## Commits
 - **Default:** no commit and no push. **Do not** create commits unless the user explicitly requests.

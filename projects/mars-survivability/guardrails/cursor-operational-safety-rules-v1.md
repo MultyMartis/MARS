@@ -19,7 +19,7 @@ Agent **must refuse** these regardless of casual user phrasing:
 | **No rebuild-from-memory** | Never reconstruct implementation from chat context without snapshot/git/template source |
 | **No broad cleanup** | No repo-wide or workspace-wide "cleanup", "hygiene", "fresh start" |
 | **No recursive delete** | No `Remove-Item -Recurse`, `rm -rf`, `rd /s`, etc. |
-| **No top-level rm** | No delete at `C:\AI MARS\` root or drive root |
+| **No top-level rm** | No delete at `X:\` volume root or canonical root directories (`X:\AI MARS\`, `X:\AI MARS STORAGE\`, `X:\MARS-Localhost\`) |
 | **No mass move** | No bulk move/rename across workspaces or top-level folders |
 | **No agent recovery loops** | Stop after first failed fix — no delete→retry→delete cycles |
 | **No workspace-wide replace without lock** | Mass search-replace requires path glob lock + dry-run review |
