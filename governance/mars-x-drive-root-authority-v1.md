@@ -193,9 +193,9 @@ The MARS write boundary applies to **MARS-controlled** artefacts, not to claimin
 | **X6** — CMS pilot programmes (aggregate) | **COMPLETE** (X6A + X6B) |
 | **X7** — MIG, ORCA, ATLAS, OPS, EAR, NOVA programmes | **COMPLETE** ([reports/mars-x-drive-migration-x7-remaining-programmes-v1.md](../reports/mars-x-drive-migration-x7-remaining-programmes-v1.md)) |
 | **X8** — Web-GPT sync and current source-pack publication | **COMPLETE** ([reports/mars-x-drive-migration-x8-web-gpt-current-sync-pack-v1.md](../reports/mars-x-drive-migration-x8-web-gpt-current-sync-pack-v1.md); pack `web-gpt-sources/mars-current-x-drive-2026-06/`; legacy packs unchanged) |
-| **X9** — Historical review and final active-path validation | **NOT STARTED** |
+| **X9** — Final active-path audit, deferred classification, migration closure | **COMPLETE** ([mars-x-drive-migration-closure-v1.md](mars-x-drive-migration-closure-v1.md); [reports/mars-x-drive-migration-x9-final-audit-and-closure-v1.md](../reports/mars-x-drive-migration-x9-final-audit-and-closure-v1.md); deferred register [mars-x-drive-deferred-path-register-v1.md](mars-x-drive-deferred-path-register-v1.md)) |
 
-**X8 scope honesty:** X8 publishes current Web-GPT synchronization sources. It does **not** prove every existing external chat has already been manually updated.
+**X9 scope honesty:** X9 closes canonical authority and clean active operational documentation. It does **not** mean all historical old paths were removed, all external chats updated, all deferred tooling migrated, all runtime components tested, or all database locations verified.
 
 **X7 scope (2026-06-29):** X7 covers clean active operational programme paths for remaining registered programmes. Overlapping dirty WIP, historical evidence, generated artefacts, semantic caches, and programme-specific deferred tooling remain outside this completion claim.
 

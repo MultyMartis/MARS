@@ -31,7 +31,7 @@
 | **X6** | CMS pilot programmes (aggregate) | **COMPLETE** |
 | **X7** | MIG, ORCA, ATLAS, OPS, EAR, NOVA, MetaBOT, HomeGateway | **COMPLETE** |
 | **X8** | Web-GPT current sync pack publication | **COMPLETE** |
-| **X9** | Final active-path audit and closure | **NOT STARTED** |
+| **X9** | Final active-path audit and closure | **COMPLETE** |
 
 **X8 honesty:** Publishes current Web-GPT sources — does **not** prove every external chat was manually updated.
 
@@ -65,6 +65,7 @@
 | X6B | `reports/mars-x-drive-migration-x6b-ocpilot-site002-protected-v1.md` |
 | X7 | `reports/mars-x-drive-migration-x7-remaining-programmes-v1.md` |
 | X8 | `reports/mars-x-drive-migration-x8-web-gpt-current-sync-pack-v1.md` |
+| X9 | `reports/mars-x-drive-migration-x9-final-audit-and-closure-v1.md` |
 
 ---
 

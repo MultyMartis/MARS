@@ -80,7 +80,7 @@ May remain in incident narratives, recovery reports, and immutable receipts — 
 | X6 — CMS pilot programmes | **COMPLETE** |
 | X7 — Remaining programmes | **COMPLETE** |
 | X8 — Web-GPT full sync pack publication | **COMPLETE** |
-| X9 — Final validation | **NOT STARTED** |
+| X9 — Final validation and closure | **COMPLETE** |
 
 ---
 

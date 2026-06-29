@@ -10,7 +10,7 @@
 | Layer | Location | Contents |
 |-------|----------|----------|
 | **Active Incoming** | **Active Brain** — repo-root `incoming/` | Operational drops (`incoming/mig/`), active stubs, small pending triage |
-| **Historical Bulk** | **Storage Layer** — `C:\MARS Phenix\AI MARS STORAGE\…`, Cold Brain | Retired raw packs, superseded exports, large archives **after** operator triage sign-off |
+| **Historical Bulk** | **Storage Layer** — `X:\AI MARS STORAGE\…`, Cold Brain | Retired raw packs, superseded exports, large archives **after** operator triage sign-off |
 
 **No folder moves in Wave 2B** — hybrid model is **documentation only**. See [logs/cleanup/actions/incoming-hybrid-alignment-v1.md](../logs/cleanup/actions/incoming-hybrid-alignment-v1.md).
 

@@ -8,7 +8,8 @@
 
 ## Before opening Cursor
 
-- [ ] Open workspace root: `C:\MARS Phenix\AI MARS`
+- [ ] Open workspace root: `X:\AI MARS`
+- [ ] Confirm volume label when checkable: `Get-Volume -DriveLetter X` → **AI WS**
 - [ ] Confirm branch: `git branch --show-current` → `mars/canonical-post-recovery`
 - [ ] Confirm clean tracked index or known local-only untracked only: `git status --short`
 - [ ] Confirm HEAD matches expected canonical checkpoint when starting a major task: `git rev-parse HEAD`
@@ -22,13 +23,13 @@
 - [ ] Check [registry/project-registry.md](../registry/project-registry.md) for `project_id` and boundaries
 - [ ] Check active roadmap/state (pack OPERATIONAL-INDEX, OCPILOT-STATE, or project STATE doc)
 - [ ] Create task-specific Git checkpoint before large or risky work (scoped commit)
-- [ ] Verify runtime boundary: brain at `C:\MARS Phenix\AI MARS`; execution at `E:\MARS-Localhost` when applicable
+- [ ] Verify runtime boundary: brain at `X:\AI MARS`; execution at `X:\MARS-Localhost` when applicable
 
 ---
 
 ## Before filesystem commands
 
-- [ ] Validate exact path — allowed roots: `C:\MARS Phenix\AI MARS` (tracked work), `C:\MARS Phenix\` (control artefacts when chartered)
+- [ ] Validate exact path — allowed roots: `X:\AI MARS` (tracked work), `X:\AI MARS STORAGE\`, `X:\MARS-Localhost\` (when chartered)
 - [ ] Confirm operation is not delete, move, mirror, purge, or unrestricted copy without charter
 - [ ] Run dry-run or list-only preview when tooling supports it
 - [ ] No `insecure_none` or unrestricted sandbox bypass without explicit operator approval
@@ -49,7 +50,7 @@
 
 ## Before runtime
 
-- [ ] Confirm correct runtime root (`E:\MARS-Localhost` for MLI consumers)
+- [ ] Confirm correct runtime root (`X:\MARS-Localhost` for MLI consumers)
 - [ ] No production target unless explicitly chartered
 - [ ] Do not auto-start services in closure or routine doc tasks
 - [ ] Backup/checkpoint for destructive or large runtime changes
@@ -87,7 +88,9 @@ git rev-parse HEAD
 ```
 
 Expected branch: `mars/canonical-post-recovery`  
-Expected workspace: `C:\MARS Phenix\AI MARS`
+Expected workspace: `X:\AI MARS`
+
+**X-drive authority:** [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md). Post–X9 closure (2026-06-29): canonical roots on volume **AI WS** (`X:`).
 
 ---
 

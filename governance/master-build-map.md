@@ -406,9 +406,14 @@ Stages are **sequential by dependency**. Later stages may **start** documentatio
 | X1 | **COMPLETE** | Filesystem boundary — AGENTS, `.cursorrules`, Survivability |
 | X2 | **COMPLETE** | Core infrastructure reality and brain layers |
 | X3 | **COMPLETE** | Central README, registry/topology indexes, build-map note |
-| X4–X9 | **NOT STARTED** | Programme/runtime/storage doc reconciliation |
+| X4 | **COMPLETE** | Website Factory, FOUNDRY, FP-0002 — [x4 report](../reports/mars-x-drive-migration-x4-website-factory-foundry-fp0002-v1.md) |
+| X5 | **COMPLETE** | MARS Localhost Infrastructure — [x5 report](../reports/mars-x-drive-migration-x5-localhost-infrastructure-v1.md) |
+| X6 | **COMPLETE** | CMS pilot programmes (X6A + X6B) |
+| X7 | **COMPLETE** | Remaining programmes — [x7 report](../reports/mars-x-drive-migration-x7-remaining-programmes-v1.md) |
+| X8 | **COMPLETE** | Web-GPT current sync pack — [x8 report](../reports/mars-x-drive-migration-x8-web-gpt-current-sync-pack-v1.md) |
+| X9 | **COMPLETE** | Final audit and closure — [x9 report](../reports/mars-x-drive-migration-x9-final-audit-and-closure-v1.md); [closure](mars-x-drive-migration-closure-v1.md) |
 
-**Report:** [reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md](../reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md)
+**Report (X0–X3):** [reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md](../reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md)
 
 ---
 

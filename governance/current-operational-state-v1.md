@@ -35,7 +35,7 @@
 | **Storage layer** | `X:\AI MARS STORAGE\` | Out-of-git bulk — **not** a second repo or governance root. |
 | **Local runtime** | `X:\MARS-Localhost\` | Laragon, CMS, databases — **external** to Git; execution only. |
 
-**Volume:** `X:` — label **AI WS**. **Authority:** [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md), [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). **X-drive migration:** X0–X3 **COMPLETE**; programme reconciliation X4–X9 **not started**. Historical C/D/E paths in incident evidence are **not** current targets.
+**Volume:** `X:` — label **AI WS**. **Authority:** [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md), [mars-infrastructure-reality-v1.md](mars-infrastructure-reality-v1.md). **X-drive migration:** X0–X9 **COMPLETE** — [mars-x-drive-migration-closure-v1.md](mars-x-drive-migration-closure-v1.md). Remaining old-path families deferred per [mars-x-drive-deferred-path-register-v1.md](mars-x-drive-deferred-path-register-v1.md). Historical C/D/E paths in incident evidence are **not** current targets.
 
 **Brain layers (organizational):** Visual Brain source `X:\AI MARS\docs\visualization\obsidian-canvas\`; Knowledge Center `X:\AI MARS STORAGE\MARS KNOWLEDGE CENTER\`; Cold Brain `X:\AI MARS STORAGE\ARCHIVE\` — operator layers, not autonomous memory services.
 

@@ -16,7 +16,7 @@ This is the **current Web-GPT synchronization pack** for MARS after canonical re
 - Active Brain, Storage, and Local Runtime roots;
 - filesystem boundary and deprecated-root policy;
 - programme registry summary and chat sync blocks;
-- migration status X0–X8;
+- migration status X0–X9;
 - distinction between historical paths and active paths.
 
 **This pack is not:** MARS v3, a new runtime release, an autonomous system release, or proof of automated policy enforcement.
@@ -81,7 +81,7 @@ Compact migration notice: [MARS-X-DRIVE-CURRENT-PATH-ADDENDUM.md](../MARS-X-DRIV
 |------|-------|
 | X0–X7 | **COMPLETE** |
 | **X8** — this pack | **COMPLETE** |
-| X9 — final active-path audit | **NOT STARTED** |
+| X9 — final active-path audit and closure | **COMPLETE** |
 
 X8 publishes current Web-GPT synchronization sources. It does **not** prove every existing external chat has already been manually updated.
 

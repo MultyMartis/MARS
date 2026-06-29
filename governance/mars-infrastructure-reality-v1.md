@@ -46,7 +46,7 @@ These are **operator organizational layers**, not autonomous AI memory services 
 | **Knowledge Center** | `X:\AI MARS STORAGE\MARS KNOWLEDGE CENTER\` | Operator Obsidian vault and knowledge bulk — **out-of-Git** |
 | **Cold Brain** | `X:\AI MARS STORAGE\ARCHIVE\` | Retired bulk, archives after operator triage — **out-of-Git** |
 
-Knowledge Center and Cold Brain remain **out-of-Git**. Programme docs may still reference pre-migration paths until later waves (X4–X9).
+Knowledge Center and Cold Brain remain **out-of-Git**. Programme-specific deferred path families are recorded in [mars-x-drive-deferred-path-register-v1.md](mars-x-drive-deferred-path-register-v1.md).
 
 ---
 
@@ -99,7 +99,7 @@ The following paths are **DEPRECATED AS CURRENT OPERATIONAL PATH — HISTORICAL 
 | `D:\MARS-Localhost` | **historical** (runtime) | Pre-reinstall / MLI-03R.* incident evidence |
 | `C:\AI MARS`, `C:\AI MARS STORAGE` | **legacy (source)** | Pre-Phoenix paths — retained in place; **not** active operational authority |
 | `C:\MARS Phenix\_legacy-hold\` | **archive evidence** | Verified 2026-06-25 file copies; same-disk; not canonical |
-| Programme docs with old paths | **historical / drift pending** | Reconciliation deferred to waves X4–X9 |
+| Programme docs with old paths | **historical / deferred** | Classified in [mars-x-drive-deferred-path-register-v1.md](mars-x-drive-deferred-path-register-v1.md) — not active authority |
 
 ---
 
@@ -126,7 +126,7 @@ The following paths are **DEPRECATED AS CURRENT OPERATIONAL PATH — HISTORICAL 
 4. **Volume discipline** — MARS-controlled writes are limited to approved roots on volume **AI WS** (`X:`) per [mars-x-drive-root-authority-v1.md](mars-x-drive-root-authority-v1.md).
 5. **Legacy hold** — Deprecated C/D/E roots may remain on disk for historical evidence; do not delete by automation. Do not use as active Cursor workspace or write targets.
 6. **Preserve history** — Migration plans, drill logs, incident reports, and archived reports may show Phoenix or C/D/E paths; mark **historical** in new docs, do not rewrite evidence.
-7. **SAFE UNKNOWN** — Existence of on-disk folders under storage roots, sync/NAS layout, per-machine mirrors, and programme path reconciliation (X4–X9) are operator infrastructure unless verified in session.
+7. **SAFE UNKNOWN** — Existence of on-disk folders under storage roots, sync/NAS layout, per-machine mirrors, and live MySQL datadir location are operator infrastructure unless verified in session.
 
 ---
 
@@ -138,7 +138,12 @@ The following paths are **DEPRECATED AS CURRENT OPERATIONAL PATH — HISTORICAL 
 | **X1** — Filesystem boundary | **COMPLETE** |
 | **X2** — Core infrastructure reality and brain layers | **COMPLETE** (this doc alignment) |
 | **X3** — Central registry/topology/README alignment | **COMPLETE** |
-| **X4–X9** | **NOT STARTED** (programme/runtime reconciliation) |
+| **X4** — Website Factory, FOUNDRY, FP-0002 | **COMPLETE** |
+| **X5** — MARS Localhost Infrastructure | **COMPLETE** |
+| **X6** — CMS pilot programmes | **COMPLETE** |
+| **X7** — Remaining programmes | **COMPLETE** |
+| **X8** — Web-GPT sync pack | **COMPLETE** |
+| **X9** — Final active-path audit and closure | **COMPLETE** ([mars-x-drive-migration-closure-v1.md](mars-x-drive-migration-closure-v1.md)) |
 
 This is **infrastructure alignment**, not a new MARS version or architecture redesign.
 

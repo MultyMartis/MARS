@@ -41,7 +41,7 @@ Whether a hit is a real drift claim depends on **human** judgment and evidence p
 
 ## Example
 
-From repository root (`C:\MARS Phenix\AI MARS`):
+From repository root (`X:\AI MARS`):
 
 ```bash
 node tools/governance-scanner/governance-scanner.js --root governance
