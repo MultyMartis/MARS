@@ -1,75 +1,37 @@
 # WEB-GPT Source Pack Index — Upload Order
 
-**Purpose:** Human upload sequence for external Web-GPT project sources after **MARS v2 Stable Baseline 2026-06**.  
-**Pack folder:** `web-gpt-sources/mars-v2-stable-baseline-2026-06/`  
-**Companion:** `WEB-GPT-CHAT-SYNC-PACK.md` (per-program chat synchronization)
-
-**Do not upload:** legacy numbered topics, `mars-v2/`, `mars-v2-final/`, `chat-migration/`, vendor trees, `mars-runtime/**/*.js`.
+**Purpose:** Top-level index for all Web-GPT source packs in this repository.
 
 ---
 
-## Recommended source upload sequence
+## Pack classification
 
-Upload **one file at a time** in this order. After steps 1–3, declare lane and open the relevant in-repo `OPERATIONAL-INDEX.md` before uploading the rest (optional depth).
-
-| Step | File | Why this order |
-|------|------|----------------|
-| **1** | `mars-v2-stable-baseline-2026-06/01_MARS_IDENTITY.md` | Truth baseline — what MARS is and is not |
-| **2** | `mars-v2-stable-baseline-2026-06/02_OPERATIONAL_POSTURE.md` | Post–Cycle 8 defaults and maintenance mode |
-| **3** | `mars-v2-stable-baseline-2026-06/10_RUNTIME_BOUNDARY_RULES.md` | Hard anti-mythology line before planning |
-| **4** | `mars-v2-stable-baseline-2026-06/07_STABLE_BASELINE_PUBLICATION.md` | Official checkpoint scope and exclusions |
-| **5** | `mars-v2-stable-baseline-2026-06/03_PROGRAM_REGISTRY_SUMMARY.md` | Registered programs and relationships |
-| **6** | `mars-v2-stable-baseline-2026-06/09_OPERATIONAL_PRIORITIES.md` | Ranked delivery focus |
-| **7** | `mars-v2-stable-baseline-2026-06/04_INFRASTRUCTURE_REALITY.md` | `C:\AI MARS` vs `C:\AI MARS STORAGE` |
-| **8** | `mars-v2-stable-baseline-2026-06/05_ACTIVE_VISUAL_COLD_BRAIN.md` | Active / Visual / Cold Brain layers |
-| **9** | `mars-v2-stable-baseline-2026-06/06_KNOWLEDGE_CENTER.md` | Operator KC (out-of-git) |
-| **10** | `mars-v2-stable-baseline-2026-06/08_SYSTEM_MATURITY_MAP.md` | Maturity buckets and routers |
-| **11** | `mars-v2-stable-baseline-2026-06/README.md` | Pack meta, migration notes, load-order reference |
-
-**Optional step 12:** `WEB-GPT-CHAT-SYNC-PACK.md` — when opening or refreshing program-specific chats.
+| Pack | Folder | Status |
+|------|--------|--------|
+| **Current X-drive pack** | `web-gpt-sources/mars-current-x-drive-2026-06/` | **CURRENT** — use for all new Web-GPT bootstrap |
+| Stable baseline sync pack | `web-gpt-sources/mars-v2-stable-baseline-2026-06-sync/` | **HISTORICAL** — pre-X physical authority |
+| Stable baseline pack | `web-gpt-sources/mars-v2-stable-baseline-2026-06/` | **HISTORICAL** — pre-X physical authority |
+| MARS v2 distillates | `web-gpt-sources/mars-v2/`, `mars-v2-final/` | **LEGACY** |
+| Numbered topics | `web-gpt-sources/01_system.md` … `14_roadmap.md` | **LEGACY** — imported design input |
+| Chat migration | `web-gpt-sources/chat-migration/` | **LEGACY** — one-time paste, not SoT |
+| Compact path addendum | `web-gpt-sources/MARS-X-DRIVE-CURRENT-PATH-ADDENDUM.md` | **ACTIVE** — compact notice; full pack preferred |
 
 ---
 
-## Minimum viable upload (fast bootstrap)
+## Current pack upload order
 
-If time-constrained, upload only:
+See **[mars-current-x-drive-2026-06/WEB-GPT-SOURCE-PACK-INDEX.md](mars-current-x-drive-2026-06/WEB-GPT-SOURCE-PACK-INDEX.md)** for the authoritative upload sequence.
 
-1. `01_MARS_IDENTITY.md`  
-2. `02_OPERATIONAL_POSTURE.md`  
-3. `10_RUNTIME_BOUNDARY_RULES.md`  
-4. `README.md`  
+**Minimum viable:** `01_MARS_IDENTITY.md` → `02_OPERATIONAL_POSTURE.md` → `04_INFRASTRUCTURE_REALITY.md` → `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` → `README.md`
 
-Then paste lane declaration + path to one `OPERATIONAL-INDEX.md` Core Run row in the chat instructions.
+**Do not upload old stable/pre-X packs together with the current pack.**
 
 ---
 
-## Lane-specific add-ons (repo — not this pack)
+## Historical pack note
 
-After minimum bundle, pull **from repository** into chat context when needed (paste excerpts or instruct Cursor — do not duplicate whole trees into Web-GPT):
-
-| Lane / work | Repo surface |
-|-------------|--------------|
-| ORCA | `projects/orca/OPERATIONAL-INDEX.md` |
-| Website Factory | `projects/mars-website-factory/OPERATIONAL-INDEX.md` |
-| OCPilot | `projects/ocpilot/OPERATIONAL-INDEX.md` |
-| WPilot | `projects/wpilot/README.md` |
-| MIG | `projects/mig/OPERATIONAL-INDEX.md` |
-| Search PPC | `projects/mars-search-ppc-production/README.md` |
-| MetaBOT | `projects/metabot-seo-content-agent/README.md` |
-| HomeGateway | `projects/homegateway-v4-ai/OPERATIONAL-INDEX.md` |
-| Governance maintenance | Targeted `governance/*.md` only with charter |
+Packs under `mars-v2-stable-baseline-2026-06*` record `C:\AI MARS` as working copy — **HISTORICAL SOURCE PACK · PRE-X PHYSICAL AUTHORITY · PRESERVED FOR ARCHAEOLOGY · NOT CURRENT CHAT BOOTSTRAP**. Do not rewrite in place.
 
 ---
 
-## Replacing prior Web-GPT project sources
-
-| Remove from Web-GPT project | Replace with |
-|---------------------------|--------------|
-| `mars-v2-final/*` (all) | Steps 1–11 above |
-| `mars-v2/*` | *(duplicate — remove)* |
-| `01_system.md` … `14_roadmap.md` | *(legacy — remove unless archival)* |
-| `chat-migration/*` as SoT | One-time paste only — not standing sources |
-
----
-
-*Index v1 — MARS Web-GPT Source Pack Update — Stable Baseline 2026-06.*
+*Top-level index — updated X8 2026-06-29.*

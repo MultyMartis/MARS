@@ -75,17 +75,28 @@ May remain in incident narratives, recovery reports, and immutable receipts — 
 | X1 — Filesystem boundary | **COMPLETE** |
 | X2 — Core infrastructure alignment | **COMPLETE** |
 | X3 — Central registry/topology alignment | **COMPLETE** |
-| X4–X7 | **NOT STARTED** (programme reconciliation) |
-| X8 — Web-GPT full sync pack publication | **PARTIAL** (this addendum only) |
+| X4 — Website Factory, FOUNDRY, FP-0002 | **COMPLETE** |
+| X5 — MARS Localhost Infrastructure | **COMPLETE** |
+| X6 — CMS pilot programmes | **COMPLETE** |
+| X7 — Remaining programmes | **COMPLETE** |
+| X8 — Web-GPT full sync pack publication | **COMPLETE** |
 | X9 — Final validation | **NOT STARTED** |
+
+---
+
+## Preferred current bootstrap
+
+**Full current pack (preferred):** [mars-current-x-drive-2026-06/](mars-current-x-drive-2026-06/README.md)
+
+The addendum remains a **compact migration notice**. The **full current pack supersedes it** for complete chat synchronization.
 
 ---
 
 ## Bootstrap usage
 
-Load this addendum **after** honesty anchors (`AGENTS.md`, root `README.md`) and **before** planning filesystem or Cursor work when starting from a legacy Web-GPT pack.
+Load this addendum **after** honesty anchors (`AGENTS.md`, root `README.md`) when only a compact path notice is needed. For full Web-GPT synchronization, use **`mars-current-x-drive-2026-06/`** instead.
 
-**Canonical in-repo surfaces:** [README.md](../README.md), [governance/mars-infrastructure-reality-v1.md](../governance/mars-infrastructure-reality-v1.md), [reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md](../reports/mars-x-drive-migration-x2-x3-core-alignment-v1.md).
+**Canonical in-repo surfaces:** [README.md](../README.md), [governance/mars-infrastructure-reality-v1.md](../governance/mars-infrastructure-reality-v1.md), [mars-current-x-drive-2026-06/README.md](mars-current-x-drive-2026-06/README.md).
 
 ---
 
