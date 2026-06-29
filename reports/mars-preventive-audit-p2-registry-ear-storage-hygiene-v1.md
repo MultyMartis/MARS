@@ -159,7 +159,7 @@
 | 9 | Root README freshness metadata current | **PASS** |
 | 10 | README-only programme decision documented | **PASS** |
 | 11 | Foreign WIP untouched | **PASS** |
-| 12 | No unrelated files staged | **VERIFY AT COMMIT** |
+| 12 | No unrelated files staged | **PASS** |
 
 ---
 
@@ -197,13 +197,18 @@ reports/mars-preventive-audit-p2-registry-ear-storage-hygiene-v1.md
 
 ## 15. Git Result
 
-*(Filled after commit/push.)*
+| Item | Value |
+|------|-------|
+| Commit | `74f05d8f` — `docs: reconcile preventive registry EAR and Storage hygiene` |
+| Files in commit | 9 (8 modified + 1 created report) |
+| Push | `mars/canonical-post-recovery` → `origin` — **SUCCESS** (`0230fefe..74f05d8f`) |
+| Foreign WIP in commit | **NONE** — staged scope verified clean |
 
 ---
 
 ## 16. Final Status
 
-*(Filled after commit/push.)*
+**TASK COMPLETE.** All P2 acceptance criteria met. Operator may review out-of-repo `X:\AI MARS STORAGE\README.md` separately (not in Git).
 
 ---
 
