@@ -209,13 +209,27 @@ reports/mars-preventive-audit-p1-authority-webgpt-sync-v1.md
 
 ## 14. Git Result
 
-*(Filled after commit/push — see §15.)*
+| Item | Value |
+|------|-------|
+| Commit | `38efaa32` — `docs: reconcile preventive audit authority and Web-GPT drift` |
+| Parent | `a74856005dc2b580e09dd46a577eb1eb740b309c` |
+| Files in commit | 9 (8 modified + 1 created) |
+| Push | `mars/canonical-post-recovery` → `origin/mars/canonical-post-recovery` (`a7485600..38efaa32`) |
+| Force push | **NO** |
 
 ---
 
 ## 15. Final Status
 
-*(Filled after commit/push.)*
+**ACCEPTANCE CRITERIA MET.**
+
+- Tier-1 routers reflect X0–X9 closure
+- Survivability index reflects X0–X9 closure
+- Web-GPT pack internally consistent
+- Commit anchors corrected
+- Programme status / maturity unchanged
+- Foreign WIP untouched
+- Selective commit and push **succeeded**
 
 ---
 
@@ -250,7 +264,7 @@ Storage modified: NO
 Localhost modified: NO
 Runtime executed: NO
 Destructive operations: NONE
-Commit/push: <ACTUAL RESULT>
+Commit/push: SUCCESS — `38efaa32` pushed to `origin/mars/canonical-post-recovery`
 ```
 
 ---
