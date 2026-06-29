@@ -1,4 +1,4 @@
-﻿# MARS Localhost — WordPress Local Guard Standard v1
+# MARS Localhost — WordPress Local Guard Standard v1
 
 **Document type:** WordPress local-only guard standard  
 **Version:** v1  
@@ -21,7 +21,7 @@ Guards complement [MARS-LOCALHOST-DATA-AND-SECRETS-POLICY-v1.md](MARS-LOCALHOST-
 |----|-----------|
 | **WP-G-01** | Local runtime talks to **local** MySQL on `127.0.0.1` / `localhost` only |
 | **WP-G-02** | Canonical site URL uses `.test` (or manifest-declared local TLD) — never production domain |
-| **WP-G-03** | Secrets live outside Git in `C:\AI MARS\local\mli\{slug}\` |
+| **WP-G-03** | Secrets live outside Git in `X:\AI MARS\local\mli\{slug}\` |
 | **WP-G-04** | WP-CLI must not define production `@alias` targets |
 | **WP-G-05** | Production target in manifest is `NONE` unless explicit read-only mirror charter |
 | **WP-G-06** | MySQL server binds to loopback for MLI WordPress profile |
@@ -59,7 +59,7 @@ Verified MLI-03: bind-address hardened from Laragon default `*` exposure.
 Before import or sync operations:
 
 ```bat
-findstr /i /s "DB_HOST" E:\MARS-Localhost\sites\wordpress\*\*\wp-config.php
+findstr /i /s "DB_HOST" X:\MARS-Localhost\sites\wordpress\*\*\wp-config.php
 ```
 
 Reject any non-loopback host unless manifest exception documented.
@@ -91,7 +91,7 @@ Reject any non-loopback host unless manifest exception documented.
 Activation path:
 
 ```bat
-E:\MARS-Localhost\tools\activate-mli.cmd
+X:\MARS-Localhost\tools\activate-mli.cmd
 ```
 
 See [MARS-LOCALHOST-WPCLI-STANDARD-v1.md](MARS-LOCALHOST-WPCLI-STANDARD-v1.md).
@@ -105,12 +105,12 @@ See [MARS-LOCALHOST-WPCLI-STANDARD-v1.md](MARS-LOCALHOST-WPCLI-STANDARD-v1.md).
 | DB password | `runtime.env` | Git, markdown, manifest body |
 | WordPress auth keys | `runtime.env` | Committed wp-config templates |
 | Production API keys | — | Any local config unless sandbox charter |
-| TLS private keys | `E:\MARS-Localhost\laragon\etc\ssl\` | Git |
+| TLS private keys | `X:\MARS-Localhost\laragon\etc\ssl\` | Git |
 
 **Reference secrets path (values not documented):**
 
 ```text
-C:\AI MARS\local\mli\fws-0001\runtime.env
+X:\AI MARS\local\mli\fws-0001\runtime.env
 ```
 
 ---
@@ -168,7 +168,7 @@ Hosts entries managed only inside MLI block:
 | `mli-smoke-001.test` | **PASS** |
 | `fws-0001.test` | **PENDING ELEVATION** — script supports multi-domain; operator must run elevated add |
 
-Scripts: `E:\MARS-Localhost\tools\hosts\add-mli-host.ps1`
+Scripts: `X:\MARS-Localhost\tools\hosts\add-mli-host.ps1`
 
 ---
 

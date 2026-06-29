@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Toolchain Version and Upgrade Policy v1
+# MARS Localhost — Toolchain Version and Upgrade Policy v1
 
 **Document type:** Version and upgrade policy  
 **Version:** v1  
@@ -11,7 +11,7 @@
 
 1. **No automatic major upgrades** for PHP, MySQL, Apache, or Laragon.
 2. **Verify versions** before starting consumer work (`registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md`).
-3. **Backup** runtime configs to `E:\MARS-Localhost\backups\runtime\` before component changes.
+3. **Backup** runtime configs to `X:\MARS-Localhost\backups\runtime\` before component changes.
 4. **Rollback** via backup restore + prior binary if upgrade fails.
 5. **Notify** consumers (Forge, OCPilot) when shared toolchain versions change.
 

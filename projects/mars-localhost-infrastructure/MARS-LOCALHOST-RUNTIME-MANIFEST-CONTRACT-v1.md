@@ -9,7 +9,7 @@
 
 ## Purpose
 
-Every sustained local runtime must have a **canonical pointer in the MARS brain** while runtime files remain on `E:\MARS-Localhost`.
+Every sustained local runtime must have a **canonical pointer in the MARS brain** while runtime files remain on `X:\MARS-Localhost`.
 
 ---
 
@@ -17,8 +17,8 @@ Every sustained local runtime must have a **canonical pointer in the MARS brain*
 
 | Item | Location |
 |------|----------|
-| **Manifest SoT** | `C:\MARS Phenix\AI MARS\projects\mars-localhost-infrastructure\manifests\` |
-| **Runtime files** | `E:\MARS-Localhost\` per directory standard |
+| **Manifest SoT** | `X:\AI MARS\projects\mars-localhost-infrastructure\manifests\` |
+| **Runtime files** | `X:\MARS-Localhost\` per directory standard |
 | **Format** | JSON preferred; Markdown table manifest allowed for human-only sandboxes |
 
 **Filename pattern:** `{runtime-id}.json` or `{platform}-{class}-{slug}.json`
@@ -33,8 +33,8 @@ Every sustained local runtime must have a **canonical pointer in the MARS brain*
 | **Project / synthetic ID** | Consumer id (e.g. `FWS-0001`, `FP-0002`, `SITE-002`) |
 | **Runtime class** | `synthetic` \| `projects` \| `sandboxes` |
 | **Platform** | `wordpress` \| `opencart` \| `php` \| `other` |
-| **MARS authority path** | Brain doc/passport path in `C:\MARS Phenix\AI MARS` |
-| **Local runtime path** | Absolute path under `E:\MARS-Localhost\sites\...` |
+| **MARS authority path** | Brain doc/passport path in `X:\AI MARS` |
+| **Local runtime path** | Absolute path under `X:\MARS-Localhost\sites\...` |
 | **Local URL** | Canonical URL (e.g. `https://fws-0001.test`) |
 | **Database ID** | Database name per naming standard |
 | **PHP version** | e.g. `8.2` — target for site |
@@ -46,7 +46,7 @@ Every sustained local runtime must have a **canonical pointer in the MARS brain*
 | **Production target** | `NONE` for local-only; or external host ref if mirror (read-only) |
 | **Backup state** | `none` \| `baseline` \| `current` + path ref |
 | **Rollback state** | Last known good backup id |
-| **Secrets location** | e.g. `C:\MARS Phenix\AI MARS\local\mli\{slug}\` — **no secret values** |
+| **Secrets location** | e.g. `X:\AI MARS\local\mli\{slug}\` — **no secret values** |
 | **Current status** | `planned` \| `provisioning` \| `active` \| `hold` \| `archived` |
 | **Last validation** | ISO date + report link in brain |
 

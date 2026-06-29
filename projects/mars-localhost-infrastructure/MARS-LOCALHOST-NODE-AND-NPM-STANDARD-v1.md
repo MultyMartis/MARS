@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Node and npm Standard v1
+# MARS Localhost — Node and npm Standard v1
 
 **Document type:** Node/npm policy  
 **Version:** v1  
@@ -23,7 +23,7 @@ MLI activation **does not** prepend Laragon Node.
 
 | Rule | Value |
 |------|-------|
-| Duplicate Node in `E:\MARS-Localhost\tools` | **Avoid** unless justified |
+| Duplicate Node in `X:\MARS-Localhost\tools` | **Avoid** unless justified |
 | Dependencies | **Project-local** `node_modules` |
 | Lockfiles | **Mandatory** for validation fixtures |
 | Global packages | Only approved CLIs; no shared global Playwright |

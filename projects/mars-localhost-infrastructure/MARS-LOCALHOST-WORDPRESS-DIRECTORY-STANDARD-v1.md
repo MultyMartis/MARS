@@ -1,23 +1,23 @@
-﻿# MARS Localhost — WordPress Directory Standard v1
+# MARS Localhost — WordPress Directory Standard v1
 
 **Document type:** WordPress directory layout standard  
 **Version:** v1  
 **Date:** 2026-06-23  
 **Stage:** MLI-03  
-**Runtime root:** `E:\MARS-Localhost\sites\wordpress\`
+**Runtime root:** `X:\MARS-Localhost\sites\wordpress\`
 
 ---
 
 ## Purpose
 
-Define the **WordPress-specific** directory layout on `E:\MARS-Localhost`, extending the universal [MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md) without coupling other platforms to WordPress conventions.
+Define the **WordPress-specific** directory layout on `X:\MARS-Localhost`, extending the universal [MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-DIRECTORY-STANDARD-v1.md) without coupling other platforms to WordPress conventions.
 
 ---
 
 ## Canonical path pattern
 
 ```text
-E:\MARS-Localhost\sites\wordpress\{class}\{slug}\
+X:\MARS-Localhost\sites\wordpress\{class}\{slug}\
 ```
 
 | Segment | Values | Example |
@@ -29,7 +29,7 @@ E:\MARS-Localhost\sites\wordpress\{class}\{slug}\
 **Reference runtime (MLI-WP-SYN-001):**
 
 ```text
-E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\
+X:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\
 ```
 
 ---
@@ -105,7 +105,7 @@ After WP-CLI core install:
 
 | Item | Location | Notes |
 |------|----------|-------|
-| **Runtime secrets** | `C:\AI MARS\local\mli\{slug}\runtime.env` | DB password, auth keys — **not** in site folder |
+| **Runtime secrets** | `X:\AI MARS\local\mli\{slug}\runtime.env` | DB password, auth keys — **not** in site folder |
 | **Optional site `.env`** | Discouraged; prefer brain-side `runtime.env` | If used, must be gitignored on D: |
 | **wp-config.php** | Site root on D: | Loads secrets via guarded include only |
 
@@ -118,10 +118,10 @@ After WP-CLI core install:
 
 | Item | Path |
 |------|------|
-| Junction | `E:\MARS-Localhost\laragon\www\{slug}` |
-| Apache vhost | `E:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test.conf` |
-| Apache SSL vhost | `E:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test-ssl.conf` |
-| TLS cert/key | `E:\MARS-Localhost\laragon\etc\ssl\{slug}.test.crt` / `.key` |
+| Junction | `X:\MARS-Localhost\laragon\www\{slug}` |
+| Apache vhost | `X:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test.conf` |
+| Apache SSL vhost | `X:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test-ssl.conf` |
+| TLS cert/key | `X:\MARS-Localhost\laragon\etc\ssl\{slug}.test.crt` / `.key` |
 
 Domain must match [MARS-LOCALHOST-DOMAIN-STANDARD-v1.md](MARS-LOCALHOST-DOMAIN-STANDARD-v1.md): `{slug}.test`.
 
@@ -132,7 +132,7 @@ Domain must match [MARS-LOCALHOST-DOMAIN-STANDARD-v1.md](MARS-LOCALHOST-DOMAIN-S
 WordPress runtimes share MLI platform-agnostic paths:
 
 ```text
-E:\MARS-Localhost\
+X:\MARS-Localhost\
 ├── databases\
 │   ├── dumps\                    # mars_wp_{id}_*.sql
 │   └── baselines\
@@ -195,7 +195,7 @@ Slug in folder path **must** match canonical domain slug (`fws-0001.test` → fo
 
 | Forbidden | Correct location |
 |-----------|------------------|
-| WordPress core in `C:\AI MARS` | `E:\MARS-Localhost\sites\wordpress\...` |
+| WordPress core in `X:\AI MARS` | `X:\MARS-Localhost\sites\wordpress\...` |
 | Uploads in Git | D: site `wp-content\uploads\` |
 | MySQL data files in site folder | Laragon MySQL datadir |
 | Duplicate core trees under `laragon\www\` without junction | Physical root in `sites\` only |
@@ -212,7 +212,7 @@ Slug in folder path **must** match canonical domain slug (`fws-0001.test` → fo
 - [ ] Create brain [manifest](manifests/) before DB population
 - [ ] Configure junction + Apache vhost
 - [ ] Add hosts entry via `tools\hosts\add-mli-host`
-- [ ] Create `C:\AI MARS\local\mli\{slug}\runtime.env` (outside Git)
+- [ ] Create `X:\AI MARS\local\mli\{slug}\runtime.env` (outside Git)
 - [ ] WP-CLI core install into physical root
 
 ---

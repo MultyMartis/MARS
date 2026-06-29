@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Database Naming Standard v1
+# MARS Localhost — Database Naming Standard v1
 
 **Document type:** Database naming standard  
 **Version:** v1  
@@ -82,8 +82,8 @@ Default local profile omits suffix unless manifest declares it.
 | `mars_wp_fws0001_20260622_1430_baseline.sql` | Baseline before validation |
 | `mars_oc_bzpm_20260622_1600_predump.sql` | Pre-migration dump |
 
-**Location:** `E:\MARS-Localhost\databases\dumps\`  
-**Optional archive:** `C:\AI MARS STORAGE\{consumer}\` for large retained dumps
+**Location:** `X:\MARS-Localhost\databases\dumps\`  
+**Optional archive:** `X:\AI MARS STORAGE\{consumer}\` for large retained dumps
 
 ---
 
@@ -93,7 +93,7 @@ Default local profile omits suffix unless manifest declares it.
 {baseline_id}__{database_name}.sql
 ```
 
-Stored under `E:\MARS-Localhost\databases\baselines\` with manifest reference.
+Stored under `X:\MARS-Localhost\databases\baselines\` with manifest reference.
 
 ---
 
@@ -103,7 +103,7 @@ Stored under `E:\MARS-Localhost\databases\baselines\` with manifest reference.
 |------|--------|
 | **Production credentials** | **Prohibited** in local `.env` by default |
 | **Shared local user** | Operator-defined per MLI-01 (e.g. `mars_local`) — not in Git |
-| **Password storage** | `C:\AI MARS\local\` or OS secret store — **never** in manifests or docs |
+| **Password storage** | `X:\AI MARS\local\` or OS secret store — **never** in manifests or docs |
 | **Manifest** | Records database **name** and **host/port** only |
 
 ---

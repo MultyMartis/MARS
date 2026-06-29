@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Composer Standard v1
+# MARS Localhost — Composer Standard v1
 
 **Document type:** Composer usage standard  
 **Version:** v1  
@@ -11,8 +11,8 @@
 
 | Item | Path |
 |------|------|
-| Composer phar | `E:\MARS-Localhost\tools\composer\composer.phar` |
-| Wrapper | `E:\MARS-Localhost\tools\composer\composer.cmd` |
+| Composer phar | `X:\MARS-Localhost\tools\composer\composer.phar` |
+| Wrapper | `X:\MARS-Localhost\tools\composer\composer.cmd` |
 | PHP binding | Laragon PHP 8.3.30 via `activate-mli.cmd` |
 
 ---

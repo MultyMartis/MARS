@@ -4,7 +4,7 @@
 **Version:** v1  
 **Date:** 2026-06-22  
 **Stage:** MLI-00  
-**Operator decision:** Approved — dual-zone model (C: brain / D: runtime)
+**Operator decision:** Approved — X-drive model (`X:\AI MARS` brain / `X:\MARS-Localhost` runtime / `X:\AI MARS STORAGE` bulk support). Historical C:/D:/E: roots deprecated per [governance/mars-x-drive-root-authority-v1.md](../../governance/mars-x-drive-root-authority-v1.md).
 
 ---
 
@@ -18,8 +18,8 @@
 | **Lifecycle** | FOUNDATION |
 | **Runtime class** | Local operator-controlled web runtime |
 | **Host OS** | Windows |
-| **Canonical brain root** | `C:\MARS Phenix\AI MARS` |
-| **Canonical runtime root** | `E:\MARS-Localhost` |
+| **Canonical brain root** | `X:\AI MARS` |
+| **Canonical runtime root** | `X:\MARS-Localhost` |
 | **Production authority** | NONE |
 | **Client production access** | NONE |
 
@@ -44,15 +44,15 @@ Provide a **shared**, **operator-controlled**, **Windows-local** web execution s
 
 | Zone | Path | Authority |
 |------|------|-----------|
-| **Brain** | `C:\MARS Phenix\AI MARS` | Governance, architecture, manifests, pointers, reports, Git SoT |
-| **Runtime** | `E:\MARS-Localhost` | Live servers, CMS cores, DB data, uploads, caches, logs, runtime backups |
-| **Bulk support** | `C:\MARS Phenix\AI MARS STORAGE` | Optional large artefacts (dumps archives, release ZIPs, visual baselines) — **not** canonical runtime root |
+| **Brain** | `X:\AI MARS` | Governance, architecture, manifests, pointers, reports, Git SoT |
+| **Runtime** | `X:\MARS-Localhost` | Live servers, CMS cores, DB data, uploads, caches, logs, runtime backups |
+| **Bulk support** | `X:\AI MARS STORAGE` | Optional large artefacts (dumps archives, release ZIPs, visual baselines) — **not** canonical runtime root |
 
 **Canonical principle:**
 
 ```text
-C:\MARS Phenix\AI MARS governs.
-E:\MARS-Localhost executes.
+X:\AI MARS governs.
+X:\MARS-Localhost executes.
 ```
 
 ---
@@ -67,7 +67,7 @@ E:\MARS-Localhost executes.
 | **WPilot** | May accept verified WordPress packages or work with registered DEV; does **not** own localhost infra |
 | **Future consumers** | Generic PHP agents, migration simulators, API/webhook tests |
 
-Consumers **use** MLI; they **do not own** `E:\MARS-Localhost`.
+Consumers **use** MLI; they **do not own** `X:\MARS-Localhost`.
 
 ---
 
@@ -77,8 +77,8 @@ MLI is **not**:
 
 | Exclusion | Notes |
 |-----------|-------|
-| MARS brain / governance root | Stays on `C:\MARS Phenix\AI MARS` |
-| Second MARS git repository | `E:\MARS-Localhost` is outside Git |
+| MARS brain / governance root | Stays on `X:\AI MARS` |
+| Second MARS git repository | `X:\MARS-Localhost` is outside Git |
 | **MARS STORAGE** | Bulk layer only; see [governance/mars-infrastructure-reality-v1.md](../../governance/mars-infrastructure-reality-v1.md) |
 | **Website Factory** program pack | Factory methodology lives under `projects/mars-website-factory/` |
 | **Forge WordPress** subsystem | Implementation methodology; consumes MLI WordPress profile |
@@ -113,17 +113,17 @@ MLI is **not**:
 
 ## Relations
 
-### MARS brain (`C:\MARS Phenix\AI MARS`)
+### MARS brain (`X:\AI MARS`)
 
 - Stores identity, standards, runtime manifest **pointers**, enablement inputs, validation reports
 - Remains Git source of truth
 - Must **not** host permanent WordPress/OpenCart cores, live DB data, or large runtime logs
 
-### MARS STORAGE (`C:\MARS Phenix\AI MARS STORAGE`)
+### MARS STORAGE (`X:\AI MARS STORAGE`)
 
 - Optional consumer for **archived** dumps, release packages, visual baselines
-- Example: `C:\MARS Phenix\AI MARS STORAGE\forge-wordpress\{FP-ID}\` for bulk artefacts
-- **Not** a substitute for `E:\MARS-Localhost` live runtime
+- Example: `X:\AI MARS STORAGE\forge-wordpress\{FP-ID}\` for bulk artefacts
+- **Not** a substitute for `X:\MARS-Localhost` live runtime
 
 ### Hosting (external)
 
@@ -132,8 +132,8 @@ MLI is **not**:
 
 ### Cursor
 
-- Cursor tasks run from `C:\MARS Phenix\AI MARS` workspace
-- May reference `E:\MARS-Localhost` paths in manifests and operator tasks
+- Cursor tasks run from `X:\AI MARS` workspace
+- May reference `X:\MARS-Localhost` paths in manifests and operator tasks
 - Service start/stop only via approved operator commands (see service control policy)
 - Cursor does **not** gain production access through MLI
 
@@ -144,7 +144,7 @@ MLI is **not**:
 | Item | Path |
 |------|------|
 | Program root | [projects/mars-localhost-infrastructure/](.) |
-| Runtime root | `E:\MARS-Localhost\` |
+| Runtime root | `X:\MARS-Localhost\` |
 | Runtime manifests (brain) | [manifests/](manifests/) |
 
 ---

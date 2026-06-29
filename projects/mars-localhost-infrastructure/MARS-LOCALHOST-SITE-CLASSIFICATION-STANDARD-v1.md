@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Site Classification Standard v1
+# MARS Localhost — Site Classification Standard v1
 
 **Document type:** Site class standard  
 **Version:** v1  
@@ -9,7 +9,7 @@
 
 ## Purpose
 
-Classify every site under `E:\MARS-Localhost\sites\` so consumers, backups, retention, and manifests behave consistently.
+Classify every site under `X:\MARS-Localhost\sites\` so consumers, backups, retention, and manifests behave consistently.
 
 ---
 
@@ -36,7 +36,7 @@ Classify every site under `E:\MARS-Localhost\sites\` so consumers, backups, rete
 | **Purpose** | Pilot implementation, local preview, import simulation |
 | **Data** | Client data **only when explicitly approved** |
 | **Examples** | `sites\wordpress\projects\shpigovsky`, `sites\opencart\projects\bzpm`, `sites\opencart\projects\sibcar` |
-| **Authority** | Project passport in brain (`C:\AI MARS`) + MLI manifest |
+| **Authority** | Project passport in brain (`X:\AI MARS`) + MLI manifest |
 | **Registration** | **Required** — link to FP-ID / site passport |
 
 ### Sandboxes

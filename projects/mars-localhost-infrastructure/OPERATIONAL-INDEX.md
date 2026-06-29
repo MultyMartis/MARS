@@ -14,15 +14,17 @@
 | **Canonical name** | MARS Localhost Infrastructure (MLI) |
 | **Class** | Shared **universal** local development infrastructure — WordPress, OpenCart, PHP smoke sites, synthetic validation; **not** WordPress-only |
 | **Production authority** | **NONE** — local operator-controlled execution only |
-| **Brain root (governance)** | `C:\MARS Phenix\AI MARS` |
-| **Runtime root (execution)** | `E:\MARS-Localhost` |
-| **Bulk support** | `C:\MARS Phenix\AI MARS STORAGE` — optional archives; **not** live runtime root |
+| **Brain root (governance)** | `X:\AI MARS` |
+| **Runtime root (execution)** | `X:\MARS-Localhost` |
+| **Bulk support** | `X:\AI MARS STORAGE` — optional archives; **not** live runtime root |
+| **Volume** | AI WS / `X:` |
+| **X5 migration** | **COMPLETE** (2026-06-29) — [reports/mars-x-drive-migration-x5-localhost-infrastructure-v1.md](../../reports/mars-x-drive-migration-x5-localhost-infrastructure-v1.md) |
 
 **Mandatory formulation** ([MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md](MARS-LOCALHOST-INFRASTRUCTURE-IDENTITY-v1.md)):
 
 ```text
-C:\MARS Phenix\AI MARS governs.
-E:\MARS-Localhost executes.
+X:\AI MARS governs.
+X:\MARS-Localhost executes.
 ```
 
 MLI is an **execution environment**. It is **not** the MARS brain, governance source, project registry, or Git authority.
@@ -47,13 +49,13 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 
 | Zone | Path | Role |
 |------|------|------|
-| **Brain** | `C:\MARS Phenix\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
-| **Runtime** | `E:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
-| **Laragon** | `E:\MARS-Localhost\laragon` (v8.6.1) | Service control — Laragon-generated `my.ini` is **active config authority** |
+| **Brain** | `X:\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
+| **Runtime** | `X:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
+| **Laragon** | `X:\MARS-Localhost\laragon` (v8.6.1) | Service control — Laragon-generated `my.ini` is **active config authority** |
 | **Canonical historical datadir** | `mysql-8.4.3` under Laragon data | Wrong-datadir incident remediated — see MLI-03R.1 |
-| **Recovery script** | `E:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Datadir recovery — active path on E:; historical D: references preserved in MLI-03R.* reports |
+| **Recovery script** | `X:\MARS-Localhost\tools\recover-mli-mysql-datadir.ps1` | Datadir recovery — active path on `X:`; historical `D:`/`E:` references preserved in MLI-03R.* reports |
 
-**Drive-letter note:** Historical `D:\MARS-Localhost` paths remain in MLI-03R.* incident evidence. Active operator runtime root confirmed on **`E:\MARS-Localhost`** (2026-06-25 post-cutover reconciliation).
+**Volume:** **AI WS** (`X:`). **X5 migration (2026-06-29):** active operational pointers reconciled to `X:\MARS-Localhost\`. Historical `D:\MARS-Localhost` and `E:\MARS-Localhost` paths remain in MLI-03R.* incident evidence only.
 
 ---
 
@@ -130,7 +132,7 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 - **No production authority** — MLI is local-only; no client production access claimed.
 - **No secrets in Git** — credentials in `local/mli/` env files or external storage only.
 - **No automatic datadir deletion** — preserve `mysql-8.4` historical directory.
-- **No conflation of governance and runtime** — manifests in Git point to runtime; runtime state stays on D:.
+- **No conflation of governance and runtime** — manifests in Git point to runtime; runtime state stays on `X:\MARS-Localhost\` (outside Git).
 - **No AG-WP-001 runtime claim** without separate promotion evidence.
 
 ---
@@ -140,7 +142,7 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 | Item | Status |
 |------|--------|
 | MLI-04 OpenCart runtime profile | Planned — parallel to Forge FW-06 |
-| Physical drive-letter reconciliation (D: vs E:) | **Deferred** — historical paths unchanged in documentation |
+| Physical drive-letter reconciliation (D:/E: → X:) | **COMPLETE** (X5, 2026-06-29) — historical paths unchanged in MLI-03R.* reports |
 | Full Windows reboot operator retest | **Pending** |
 | MLI-04 blocking Forge | **No** — FW-05R complete; MLI-04 parallel |
 
@@ -205,4 +207,4 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 
 ---
 
-*Operational index — MLI-03 complete; MLI-03R remediation reconciled (Wave 4).*
+*Operational index — MLI-03 complete; MLI-03R remediation reconciled; X5 Localhost path reconciliation complete (2026-06-29).*

@@ -1,4 +1,4 @@
-﻿# MARS Localhost — WP-CLI Standard v1
+# MARS Localhost — WP-CLI Standard v1
 
 **Document type:** WP-CLI usage standard  
 **Version:** v1  
@@ -11,8 +11,8 @@
 
 | Item | Path |
 |------|------|
-| WP-CLI phar | `E:\MARS-Localhost\tools\wp-cli\wp-cli.phar` |
-| Wrapper | `E:\MARS-Localhost\tools\wp-cli\wp.cmd` |
+| WP-CLI phar | `X:\MARS-Localhost\tools\wp-cli\wp-cli.phar` |
+| Wrapper | `X:\MARS-Localhost\tools\wp-cli\wp.cmd` |
 | Version (MLI-02) | 2.12.0 |
 
 ---
@@ -20,7 +20,7 @@
 ## Verification commands
 
 ```bat
-E:\MARS-Localhost\tools\activate-mli.cmd
+X:\MARS-Localhost\tools\activate-mli.cmd
 wp --info
 wp cli version
 ```

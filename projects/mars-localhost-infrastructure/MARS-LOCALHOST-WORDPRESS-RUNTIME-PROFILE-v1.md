@@ -1,4 +1,4 @@
-﻿# MARS Localhost — WordPress Runtime Profile v1
+# MARS Localhost — WordPress Runtime Profile v1
 
 **Document type:** Platform runtime profile  
 **Version:** v1  
@@ -11,7 +11,7 @@
 
 ## Purpose
 
-Define the **WordPress runtime profile** for MARS Localhost Infrastructure (MLI): how WordPress sites are classified, laid out on `E:\MARS-Localhost`, registered in the brain (`C:\AI MARS`), configured, validated, and consumed by Forge WordPress and related programs.
+Define the **WordPress runtime profile** for MARS Localhost Infrastructure (MLI): how WordPress sites are classified, laid out on `X:\MARS-Localhost`, registered in the brain (`X:\AI MARS`), configured, validated, and consumed by Forge WordPress and related programs.
 
 This profile **does not** ship Forge theme/plugin implementation. It establishes the **local execution substrate** only.
 
@@ -34,12 +34,12 @@ This profile **does not** ship Forge theme/plugin implementation. It establishes
 
 | Zone | Role | WordPress content |
 |------|------|-------------------|
-| **`C:\AI MARS` (brain)** | Source of truth for manifests, standards, registries, validation reports | Pointers only — paths, URLs, database **names**, secrets **location** |
-| **`E:\MARS-Localhost` (runtime)** | Executing files — core, uploads, caches, Laragon stack | WordPress tree, DB data, TLS material, dumps, logs |
-| **`C:\AI MARS\local\mli\{slug}\`** | Runtime secrets outside Git | `runtime.env` — credentials; **never** in docs or manifests |
+| **`X:\AI MARS` (brain)** | Source of truth for manifests, standards, registries, validation reports | Pointers only — paths, URLs, database **names**, secrets **location** |
+| **`X:\MARS-Localhost` (runtime)** | Executing files — core, uploads, caches, Laragon stack | WordPress tree, DB data, TLS material, dumps, logs |
+| **`X:\AI MARS\local\mli\{slug}\`** | Runtime secrets outside Git | `runtime.env` — credentials; **never** in docs or manifests |
 
 **Rule WP-RT-01:** Governance and manifest SoT live in brain; WordPress core and media live on D:.  
-**Rule WP-RT-02:** `E:\MARS-Localhost` is **not** a Git repository for MARS.  
+**Rule WP-RT-02:** `X:\MARS-Localhost` is **not** a Git repository for MARS.  
 **Rule WP-RT-03:** Secrets never committed to Git or embedded in markdown.
 
 See [MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md](MARS-LOCALHOST-PHYSICAL-BOUNDARY-CONTRACT-v1.md).
@@ -67,13 +67,13 @@ See [MARS-LOCALHOST-SITE-CLASSIFICATION-STANDARD-v1.md](MARS-LOCALHOST-SITE-CLAS
 WordPress physical root:
 
 ```text
-E:\MARS-Localhost\sites\wordpress\{class}\{slug}\
+X:\MARS-Localhost\sites\wordpress\{class}\{slug}\
 ```
 
 **Reference (MLI-WP-SYN-001):**
 
 ```text
-E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\
+X:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\
 ├── index.php
 ├── wp-config.php              # loads secrets from brain-side runtime.env
 ├── wp-load.php
@@ -90,7 +90,7 @@ E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\
 Laragon junction (when used):
 
 ```text
-E:\MARS-Localhost\laragon\www\fws-0001  →  sites\wordpress\synthetic\fws-0001
+X:\MARS-Localhost\laragon\www\fws-0001  →  sites\wordpress\synthetic\fws-0001
 ```
 
 Full WordPress-specific rules: [MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.md](MARS-LOCALHOST-WORDPRESS-DIRECTORY-STANDARD-v1.md).
@@ -136,7 +136,7 @@ Credentials policy: [MARS-LOCALHOST-MYSQL-LOCAL-CREDENTIALS-POLICY-v1.md](MARS-L
 **No passwords** in documentation, manifests, or Git. Connection values live in:
 
 ```text
-C:\AI MARS\local\mli\fws-0001\runtime.env
+X:\AI MARS\local\mli\fws-0001\runtime.env
 ```
 
 ---
@@ -150,7 +150,7 @@ C:\AI MARS\local\mli\fws-0001\runtime.env
 | **PHP** | 8.3.30 (Laragon) |
 | **Web server** | Apache 2.4.66 |
 | **Database** | MySQL 8.4.3 |
-| **WP-CLI** | 2.12.0 (`E:\MARS-Localhost\tools\wp-cli\`) |
+| **WP-CLI** | 2.12.0 (`X:\MARS-Localhost\tools\wp-cli\`) |
 
 Shared service profile: [MARS-LOCALHOST-SERVICE-PROFILE-v1.md](MARS-LOCALHOST-SERVICE-PROFILE-v1.md).
 
@@ -161,8 +161,8 @@ Shared service profile: [MARS-LOCALHOST-SERVICE-PROFILE-v1.md](MARS-LOCALHOST-SE
 Activation before any WP-CLI command:
 
 ```bat
-E:\MARS-Localhost\tools\activate-mli.cmd
-cd /d E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001
+X:\MARS-Localhost\tools\activate-mli.cmd
+cd /d X:\MARS-Localhost\sites\wordpress\synthetic\fws-0001
 wp --info
 wp core version
 wp option get siteurl
@@ -217,7 +217,7 @@ WordPress configuration follows [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION
 | `DISALLOW_FILE_EDIT` | `true` | Reduce accidental admin edits in shared local |
 | `AUTOMATIC_UPDATER_DISABLED` | `true` | Operator-controlled updates only |
 
-Logs stay on D: under site or `E:\MARS-Localhost\logs\applications\`. Do not commit debug logs to brain.
+Logs stay on D: under site or `X:\MARS-Localhost\logs\applications\`. Do not commit debug logs to brain.
 
 ---
 
@@ -231,7 +231,7 @@ Logs stay on D: under site or `E:\MARS-Localhost\logs\applications\`. Do not com
 | **Third-party plugins** | Synthetic OSS only when validation requires; document in manifest |
 | **Production packages** | **Prohibited** without explicit charter |
 
-Consumer installs theme/plugin from `C:\AI MARS\workspaces\` after MLI handoff.
+Consumer installs theme/plugin from `X:\AI MARS\workspaces\` after MLI handoff.
 
 ---
 
@@ -246,8 +246,8 @@ Consumer installs theme/plugin from `C:\AI MARS\workspaces\` after MLI handoff.
 Locations:
 
 ```text
-E:\MARS-Localhost\databases\dumps\
-E:\MARS-Localhost\backups\wordpress\
+X:\MARS-Localhost\databases\dumps\
+X:\MARS-Localhost\backups\wordpress\
 ```
 
 Policy: [MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md](MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md).
@@ -292,7 +292,7 @@ Update manifest `backup_state` and `rollback_state` after baseline operations.
 | Playwright | `ignoreHTTPSErrors: true` |
 | Result | **PASS WITH UNTRUSTED LOCAL CA** when hosts entry present |
 
-Fixture path: `E:\MARS-Localhost\tools\playwright-smoke\`.
+Fixture path: `X:\MARS-Localhost\tools\playwright-smoke\`.
 
 ### WP-CLI validation
 
@@ -305,7 +305,7 @@ wp option get blogname
 ### PHPCS (when theme/plugin present)
 
 ```bat
-phpcs --standard=E:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml {path}
+phpcs --standard=X:\MARS-Localhost\tools\phpcs\rulesets\mars-wordpress.xml {path}
 ```
 
 ---
@@ -352,8 +352,8 @@ planned → provisioning → active → (hold | archived)
 | Aspect | Detail |
 |--------|--------|
 | **Relationship** | **Consumer** of MLI WordPress runtime profile |
-| **Owns** | Theme/plugin source, methodology, FWS/FP passports in `C:\AI MARS\workspaces\` |
-| **Does not own** | `E:\MARS-Localhost` root, Laragon, shared toolchain |
+| **Owns** | Theme/plugin source, methodology, FWS/FP passports in `X:\AI MARS\workspaces\` |
+| **Does not own** | `X:\MARS-Localhost` root, Laragon, shared toolchain |
 | **MLI-03 delivers** | Synthetic runtime MLI-WP-SYN-001 — core only, no Forge packages |
 | **Next consumer step** | Install Forge theme/plugin; run FW-05R validation |
 | **FW-05R** | **HOLD** until MLI-03 evidence accepted; then consumer re-validation |
@@ -366,7 +366,7 @@ Pointer: [projects/mars-website-factory/subsystems/forge-wordpress/](../mars-web
 |--------|--------|
 | **Relationship** | Remote DEV/production operator — **not** MLI local owner |
 | **Uses** | May accept verified packages from Forge; operates `dev.gktriumph.ru` class hosts |
-| **Boundary** | WPilot does **not** provision or govern `E:\MARS-Localhost` |
+| **Boundary** | WPilot does **not** provision or govern `X:\MARS-Localhost` |
 | **Production** | **NONE** for MLI-WP-SYN-001 |
 
 See [MARS-LOCALHOST-CONSUMER-MODEL-v1.md](MARS-LOCALHOST-CONSUMER-MODEL-v1.md).

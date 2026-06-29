@@ -4,17 +4,17 @@
 **Version:** v1  
 **Date:** 2026-06-22  
 **Stage:** MLI-00
-**Post-cutover note (2026-06-25):** Active brain root `C:\MARS Phenix\AI MARS`; active runtime root `E:\MARS-Localhost`. MLI-00 audit table below preserves historical `D:\` observations.
+**Post-cutover note (2026-06-25):** Active brain root `X:\AI MARS`; active runtime root `X:\MARS-Localhost`. MLI-00 audit table below preserves historical `D:\` observations.
 
 ---
 
 ## Scope
 
-This contract defines **what may live where** between the MARS brain zone (`C:\MARS Phenix\AI MARS`) and the shared local runtime zone (`E:\MARS-Localhost`). It is operator-authoritative for localhost infrastructure and complements [governance/mars-infrastructure-reality-v1.md](../../governance/mars-infrastructure-reality-v1.md).
+This contract defines **what may live where** between the MARS brain zone (`X:\AI MARS`) and the shared local runtime zone (`X:\MARS-Localhost`). It is operator-authoritative for localhost infrastructure and complements [governance/mars-infrastructure-reality-v1.md](../../governance/mars-infrastructure-reality-v1.md).
 
 ---
 
-## Brain zone — `C:\MARS Phenix\AI MARS`
+## Brain zone — `X:\AI MARS`
 
 ### Allowed (permanent)
 
@@ -33,23 +33,23 @@ This contract defines **what may live where** between the MARS brain zone (`C:\M
 
 | Category | Correct location |
 |----------|------------------|
-| WordPress core | `E:\MARS-Localhost\sites\wordpress\` |
-| OpenCart / ocStore core | `E:\MARS-Localhost\sites\opencart\` |
-| Live databases / MySQL data files | `E:\MARS-Localhost\databases\` |
-| Uploads / media runtime | `E:\MARS-Localhost\storage\uploads\` or site `wp-content/uploads` |
-| Caches (runtime) | `E:\MARS-Localhost\` site or `temp\` |
-| Apache / Nginx binaries and live config | `E:\MARS-Localhost\runtime\laragon\` |
-| MySQL/MariaDB data directory | `E:\MARS-Localhost\runtime\laragon\` (post MLI-01) |
-| Large runtime logs | `E:\MARS-Localhost\logs\` |
-| Generated local backups (primary) | `E:\MARS-Localhost\backups\` |
+| WordPress core | `X:\MARS-Localhost\sites\wordpress\` |
+| OpenCart / ocStore core | `X:\MARS-Localhost\sites\opencart\` |
+| Live databases / MySQL data files | `X:\MARS-Localhost\databases\` |
+| Uploads / media runtime | `X:\MARS-Localhost\storage\uploads\` or site `wp-content/uploads` |
+| Caches (runtime) | `X:\MARS-Localhost\` site or `temp\` |
+| Apache / Nginx binaries and live config | `X:\MARS-Localhost\runtime\laragon\` |
+| MySQL/MariaDB data directory | `X:\MARS-Localhost\runtime\laragon\` (post MLI-01) |
+| Large runtime logs | `X:\MARS-Localhost\logs\` |
+| Generated local backups (primary) | `X:\MARS-Localhost\backups\` |
 
 ### Brain may reference runtime
 
-Manifests, passports, and reports in `C:\MARS Phenix\AI MARS` **must** record canonical pointers to `E:\MARS-Localhost` paths without copying runtime artefacts into Git.
+Manifests, passports, and reports in `X:\AI MARS` **must** record canonical pointers to `X:\MARS-Localhost` paths without copying runtime artefacts into Git.
 
 ---
 
-## Runtime zone — `E:\MARS-Localhost`
+## Runtime zone — `X:\MARS-Localhost`
 
 ### Allowed
 
@@ -72,13 +72,13 @@ Manifests, passports, and reports in `C:\MARS Phenix\AI MARS` **must** record ca
 
 | Category | Correct location |
 |----------|------------------|
-| Governance | `C:\MARS Phenix\AI MARS\governance\` |
-| Agent definitions | `C:\MARS Phenix\AI MARS\agents\` |
-| Standards (SoT) | Consumer packs under `C:\MARS Phenix\AI MARS\projects\` |
+| Governance | `X:\AI MARS\governance\` |
+| Agent definitions | `X:\AI MARS\agents\` |
+| Standards (SoT) | Consumer packs under `X:\AI MARS\projects\` |
 | Roadmaps (SoT) | Program roadmaps in brain |
-| Registries (SoT) | `C:\MARS Phenix\AI MARS\registry\`, project registries |
-| Project truth / passports (SoT) | `C:\MARS Phenix\AI MARS\projects\`, `workspaces\` |
-| Git history | `C:\MARS Phenix\AI MARS` only |
+| Registries (SoT) | `X:\AI MARS\registry\`, project registries |
+| Project truth / passports (SoT) | `X:\AI MARS\projects\`, `workspaces\` |
+| Git history | `X:\AI MARS` only |
 
 Runtime zone files are **execution artefacts**. Authoritative project truth remains in the brain unless explicitly chartered otherwise (e.g. OCPilot bulk under MARS STORAGE).
 
@@ -88,11 +88,11 @@ Runtime zone files are **execution artefacts**. Authoritative project truth rema
 
 | ID | Rule |
 |----|------|
-| **PB-01** | Every registered local runtime has a manifest pointer in `C:\MARS Phenix\AI MARS` |
+| **PB-01** | Every registered local runtime has a manifest pointer in `X:\AI MARS` |
 | **PB-02** | Secrets never committed to Git; live credentials live outside docs |
-| **PB-03** | `E:\MARS-Localhost` is **never** a git repository for MARS |
+| **PB-03** | `X:\MARS-Localhost` is **never** a git repository for MARS |
 | **PB-04** | MARS brain is **never** relocated to E: for governance or Git |
-| **PB-05** | Bulk archives may mirror to `C:\MARS Phenix\AI MARS STORAGE` but live runtime stays on E: |
+| **PB-05** | Bulk archives may mirror to `X:\AI MARS STORAGE` but live runtime stays on E: |
 | **PB-06** | Historical reports preserve point-in-time paths; supersede via addendum, not silent rewrite |
 
 ---
@@ -101,8 +101,8 @@ Runtime zone files are **execution artefacts**. Authoritative project truth rema
 
 | Observation | Classification |
 |-------------|----------------|
-| `D:\MARS-Localhost\` root exists (operator-created) | **Confirmed** (MLI-00; pre Windows reinstall) |
-| `D:\MARS-Localhost\laragon\` at root (pre-standard) | **Pre-existing** — canonical target is `runtime\laragon\`; reconcile during **MLI-01**, do not delete in MLI-00 |
+| `X:\MARS-Localhost\` root exists (operator-created) | **Confirmed** (MLI-00; pre Windows reinstall) |
+| `X:\MARS-Localhost\laragon\` at root (pre-standard) | **Pre-existing** — canonical target is `runtime\laragon\`; reconcile during **MLI-01**, do not delete in MLI-00 |
 | Contents of pre-existing `laragon\` | **SAFE UNKNOWN** — empty or placeholder at audit time |
 
 ---
@@ -111,8 +111,8 @@ Runtime zone files are **execution artefacts**. Authoritative project truth rema
 
 | Observation | Classification |
 |-------------|----------------|
-| `E:\MARS-Localhost\` root exists | **Confirmed** — active operator runtime after drive-letter reconciliation |
-| Historical `D:\MARS-Localhost` in MLI-03R.* reports | **Preserved** — incident evidence; no global rewrite |
+| `X:\MARS-Localhost\` root exists | **Confirmed** — active operator runtime after drive-letter reconciliation |
+| Historical `X:\MARS-Localhost` in MLI-03R.* reports | **Preserved** — incident evidence; no global rewrite |
 
 ---
 

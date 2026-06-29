@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Laragon Path Reconciliation v1
+# MARS Localhost — Laragon Path Reconciliation v1
 
 **Document type:** Path reconciliation decision  
 **Version:** v1  
@@ -12,16 +12,16 @@
 
 | Field | Value |
 |-------|-------|
-| **Actual install path** | `E:\MARS-Localhost\laragon` |
-| **Previous preferred path (MLI-00)** | `E:\MARS-Localhost\runtime\laragon` |
-| **Final canonical Laragon root** | `E:\MARS-Localhost\laragon` |
+| **Actual install path** | `X:\MARS-Localhost\laragon` |
+| **Previous preferred path (MLI-00)** | `X:\MARS-Localhost\runtime\laragon` |
+| **Final canonical Laragon root** | `X:\MARS-Localhost\laragon` |
 | **Migration** | **NONE** — existing install retained |
 
 ---
 
 ## Rationale
 
-1. Operator installed Laragon at `E:\MARS-Localhost\laragon` before MLI-01 enablement.
+1. Operator installed Laragon at `X:\MARS-Localhost\laragon` before MLI-01 enablement.
 2. Installation is **complete**: executable, `bin`, `etc`, `usr`, `www`, PHP, Apache, MySQL, Composer, Git.
 3. Services **start and serve** PHP after MLI-01 configuration.
 4. No conflicting data at `runtime\laragon`.
@@ -33,7 +33,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Path** | `E:\MARS-Localhost\runtime\laragon` |
+| **Path** | `X:\MARS-Localhost\runtime\laragon` |
 | **State** | Empty directory |
 | **Classification** | `DEPRECATED EMPTY PLACEHOLDER` |
 | **Cleanup** | **Deferred** — operator-approved removal only |
@@ -48,7 +48,7 @@
 | **MLI-00 placement decision** | Superseded path table; install status → **COMPLETE** |
 | **MLI-01 enablement input** | Historical — referenced `runtime\laragon` as target |
 | **D: README** | Updated to actual paths |
-| **Forge WordPress / OCPilot** | Consumer pointers use `E:\MARS-Localhost\laragon` |
+| **Forge WordPress / OCPilot** | Consumer pointers use `X:\MARS-Localhost\laragon` |
 
 ---
 

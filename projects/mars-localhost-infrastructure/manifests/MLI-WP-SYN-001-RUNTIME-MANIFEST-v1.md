@@ -1,4 +1,4 @@
-﻿# MLI-WP-SYN-001 — Runtime Manifest v1
+# MLI-WP-SYN-001 — Runtime Manifest v1
 
 **Document type:** Runtime manifest (brain SoT)  
 **Version:** v1  
@@ -25,13 +25,13 @@
 
 | Field | Value |
 |-------|-------|
-| **MARS authority path** | `C:\AI MARS\projects\mars-localhost-infrastructure\manifests\MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md` |
+| **MARS authority path** | `X:\AI MARS\projects\mars-localhost-infrastructure\manifests\MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md` |
 | **Consumer authority pointer** | `workspaces/forge-wordpress-synthetic/FWS-0001/` (Forge handoff — not MLI SoT) |
-| **Local runtime path** | `E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` |
+| **Local runtime path** | `X:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` |
 | **Local URL (HTTP)** | `http://fws-0001.test/` |
 | **Local URL (HTTPS)** | `https://fws-0001.test/` |
 | **Canonical URL** | `http://fws-0001.test/` |
-| **Junction** | `E:\MARS-Localhost\laragon\www\fws-0001` |
+| **Junction** | `X:\MARS-Localhost\laragon\www\fws-0001` |
 | **Vhost registry** | [MARS-LOCALHOST-VHOST-REGISTRY-v1.md](../registries/MARS-LOCALHOST-VHOST-REGISTRY-v1.md) |
 | **WordPress runtime registry** | [MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md](../registries/MARS-LOCALHOST-WORDPRESS-RUNTIME-REGISTRY-v1.md) |
 
@@ -53,7 +53,7 @@
 | **mod_rewrite** | enabled |
 | **MySQL bind-address** | 127.0.0.1 (hardened) |
 | **MySQL X Protocol** | disabled (`mysqlx=0`) |
-| **WP-CLI** | 2.12.0 — `E:\MARS-Localhost\tools\wp-cli\` |
+| **WP-CLI** | 2.12.0 — `X:\MARS-Localhost\tools\wp-cli\` |
 
 ---
 
@@ -72,9 +72,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Secrets location** | `C:\AI MARS\local\mli\fws-0001\runtime.env` |
+| **Secrets location** | `X:\AI MARS\local\mli\fws-0001\runtime.env` |
 | **Secrets in manifest** | **Prohibited** — location only |
-| **wp-config** | `E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\wp-config.php` |
+| **wp-config** | `X:\MARS-Localhost\sites\wordpress\synthetic\fws-0001\wp-config.php` |
 | **Debug** | WP_DEBUG on; log on; display off (synthetic default) |
 
 Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDARD-v1.md](../MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDARD-v1.md)
@@ -110,7 +110,7 @@ Configuration standard: [MARS-LOCALHOST-WORDPRESS-BASELINE-CONFIGURATION-STANDAR
 
 | Field | Value |
 |-------|-------|
-| **Backup state** | `pre-forge-fw05r` — `E:\MARS-Localhost\backups\wordpress\synthetic\fws-0001\pre-forge-fw05r` |
+| **Backup state** | `pre-forge-fw05r` — `X:\MARS-Localhost\backups\wordpress\synthetic\fws-0001\pre-forge-fw05r` |
 | **Rollback state** | pre-forge-fw05r available |
 | **Last validation** | 2026-06-23 — FW-05R Forge live synthetic validation |
 | **MLI-03R.1 post-reboot** | 2026-06-24 — `wp db check` PASS; HTTP 200; MySQL loopback restored — [report](../../reports/MARS-LOCALHOST-MLI-03R1-MYSQL-8.4-AUTHENTICATION-REMEDIATION-v1.md) |

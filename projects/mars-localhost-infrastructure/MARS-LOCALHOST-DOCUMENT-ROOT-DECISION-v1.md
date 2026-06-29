@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Document Root Decision v1
+# MARS Localhost — Document Root Decision v1
 
 **Document type:** Architecture decision record  
 **Version:** v1  
@@ -10,7 +10,7 @@
 
 ## Target
 
-**Physical site storage (canonical):** `E:\MARS-Localhost\sites`
+**Physical site storage (canonical):** `X:\MARS-Localhost\sites`
 
 **Laragon must not become the long-term store of client/CMS source trees.**
 
@@ -20,7 +20,7 @@
 
 | Option | Description | Verdict |
 |--------|-------------|---------|
-| **A — Direct document root** | Set Laragon `DocumentRoot` = `E:\MARS-Localhost\sites` | **REJECTED** — Auto Virtual Hosts would expose category folders (`wordpress.test`, `php.test`) |
+| **A — Direct document root** | Set Laragon `DocumentRoot` = `X:\MARS-Localhost\sites` | **REJECTED** — Auto Virtual Hosts would expose category folders (`wordpress.test`, `php.test`) |
 | **B — Full junction www → sites** | `laragon\www` → `sites` | **REJECTED** — same nested-domain problem as A |
 | **C — Slug junction registry + explicit vhosts** | Physical paths under `sites\`; `www\{slug}` junctions OR explicit Apache vhost per registry entry | **ADOPTED** |
 
@@ -30,13 +30,13 @@
 
 ```text
 Physical storage:
-  E:\MARS-Localhost\sites\{platform}\{class}\{slug}\
+  X:\MARS-Localhost\sites\{platform}\{class}\{slug}\
 
 Laragon www (registry layer):
-  E:\MARS-Localhost\laragon\www\{slug}  → junction to physical path
+  X:\MARS-Localhost\laragon\www\{slug}  → junction to physical path
 
 Explicit vhosts (when junction insufficient):
-  E:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test.conf
+  X:\MARS-Localhost\laragon\etc\apache2\sites-enabled\{slug}.test.conf
 ```
 
 | Requirement | How met |
@@ -52,7 +52,7 @@ Explicit vhosts (when junction insufficient):
 
 ## Laragon `DocumentRoot`
 
-**Remains:** `E:\MARS-Localhost\laragon\www`
+**Remains:** `X:\MARS-Localhost\laragon\www`
 
 **Rationale:** Compatible with Laragon Auto Virtual Hosts and minimal change to operator install. Physical content stays in `sites\`.
 
@@ -62,7 +62,7 @@ Explicit vhosts (when junction insufficient):
 
 | Item | Value |
 |------|-------|
-| Physical path | `E:\MARS-Localhost\sites\php\synthetic\mli-smoke-001` |
+| Physical path | `X:\MARS-Localhost\sites\php\synthetic\mli-smoke-001` |
 | Junction | `laragon\www\mli-smoke-001` → physical path |
 | Vhost | `etc\apache2\sites-enabled\mli-smoke-001.test.conf` |
 | Domain | `mli-smoke-001.test` |

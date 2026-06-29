@@ -1,10 +1,10 @@
-﻿# MARS Localhost — Directory Standard v1
+# MARS Localhost — Directory Standard v1
 
 **Document type:** Directory layout standard  
 **Version:** v1.1  
 **Date:** 2026-06-22  
 **Stage:** MLI-01 (updated from MLI-00)  
-**Runtime root:** `E:\MARS-Localhost`
+**Runtime root:** `X:\MARS-Localhost`
 
 ---
 
@@ -17,7 +17,7 @@ Define a **universal** localhost directory layout supporting WordPress, OpenCart
 ## Canonical structure
 
 ```text
-E:\MARS-Localhost\
+X:\MARS-Localhost\
 ├── README.md
 ├── laragon\                     # Laragon install root (canonical — MLI-01)
 ├── runtime\
@@ -93,7 +93,7 @@ E:\MARS-Localhost\
 | Element | Rule |
 |---------|------|
 | **Slugs** | lowercase, latin, kebab-case or compact id (`fws-0001`, `shpigovsky`) |
-| **Site root** | `E:\MARS-Localhost\sites\{platform}\{class}\{slug}\` |
+| **Site root** | `X:\MARS-Localhost\sites\{platform}\{class}\{slug}\` |
 | **No spaces** | In paths and folder names |
 | **Manifest link** | Brain manifest records full local path + URL |
 
@@ -101,13 +101,13 @@ E:\MARS-Localhost\
 
 ## Laragon document root
 
-**Model:** Physical sites in `E:\MARS-Localhost\sites`; Laragon `www\` holds slug junctions; explicit vhosts in registry. See [MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md](MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md).
+**Model:** Physical sites in `X:\MARS-Localhost\sites`; Laragon `www\` holds slug junctions; explicit vhosts in registry. See [MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md](MARS-LOCALHOST-DOCUMENT-ROOT-DECISION-v1.md).
 
 ---
 
 ## MLI-00 → MLI-01 path note
 
-MLI-00 proposed `runtime\laragon\`. Operator installed at `E:\MARS-Localhost\laragon\` before enablement. **Canonical path reconciled in MLI-01** — see [MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md](MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md). `runtime\laragon\` is an empty deprecated placeholder.
+MLI-00 proposed `runtime\laragon\`. Operator installed at `X:\MARS-Localhost\laragon\` before enablement. **Canonical path reconciled in MLI-01** — see [MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md](MARS-LOCALHOST-LARAGON-PATH-RECONCILIATION-v1.md). `runtime\laragon\` is an empty deprecated placeholder.
 
 ---
 
@@ -115,10 +115,10 @@ MLI-00 proposed `runtime\laragon\`. Operator installed at `E:\MARS-Localhost\lar
 
 | Item | Location |
 |------|----------|
-| Governance docs | `C:\AI MARS\projects\mars-localhost-infrastructure\` |
-| Runtime manifests (SoT) | `C:\AI MARS\projects\mars-localhost-infrastructure\manifests\` |
-| Large archived ZIPs (optional) | `C:\AI MARS STORAGE\{consumer}\` |
-| MARS Git | `C:\AI MARS` only |
+| Governance docs | `X:\AI MARS\projects\mars-localhost-infrastructure\` |
+| Runtime manifests (SoT) | `X:\AI MARS\projects\mars-localhost-infrastructure\manifests\` |
+| Large archived ZIPs (optional) | `X:\AI MARS STORAGE\{consumer}\` |
+| MARS Git | `X:\AI MARS` only |
 
 ---
 

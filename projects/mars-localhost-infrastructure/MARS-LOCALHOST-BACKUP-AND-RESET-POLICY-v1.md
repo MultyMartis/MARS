@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Backup and Reset Policy v1
+# MARS Localhost — Backup and Reset Policy v1
 
 **Document type:** Backup and reset policy  
 **Version:** v1  
@@ -22,7 +22,7 @@ Predictable backup, reset, and rollback discipline for local runtimes without un
 | Import of client dump | Baseline **before** import |
 | Synthetic proof cycle | Optional lightweight baseline |
 
-**Baseline location:** `E:\MARS-Localhost\databases\baselines\` and `backups\{platform}\`
+**Baseline location:** `X:\MARS-Localhost\databases\baselines\` and `backups\{platform}\`
 
 ---
 
@@ -37,7 +37,7 @@ Predictable backup, reset, and rollback discipline for local runtimes without un
 ## Site files backup
 
 ```text
-E:\MARS-Localhost\backups\{platform}\{slug}_{yyyyMMdd}_{reason}.zip
+X:\MARS-Localhost\backups\{platform}\{slug}_{yyyyMMdd}_{reason}.zip
 ```
 
 Exclude `node_modules`, cache dirs, and logs unless debugging charter.

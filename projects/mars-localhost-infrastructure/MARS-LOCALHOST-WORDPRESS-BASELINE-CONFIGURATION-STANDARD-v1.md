@@ -19,13 +19,13 @@ Define the **baseline WordPress configuration** for all MLI WordPress runtimes: 
 Credentials and authentication keys live **outside** the site tree:
 
 ```text
-C:\AI MARS\local\mli\{slug}\runtime.env
+X:\AI MARS\local\mli\{slug}\runtime.env
 ```
 
 **Reference path (MLI-WP-SYN-001):**
 
 ```text
-C:\AI MARS\local\mli\fws-0001\runtime.env
+X:\AI MARS\local\mli\fws-0001\runtime.env
 ```
 
 ### wp-config.php contract

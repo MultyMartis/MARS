@@ -11,8 +11,8 @@
 ## Principle
 
 ```text
-C:\MARS Phenix\AI MARS governs.
-E:\MARS-Localhost executes.
+X:\AI MARS governs.
+X:\MARS-Localhost executes.
 ```
 
 MARS Localhost Infrastructure is an **execution environment**. It is **not** the MARS brain, governance source, project registry, or Git authority.
@@ -23,9 +23,9 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 
 | Zone | Path | Role |
 |------|------|------|
-| **Brain** | `C:\MARS Phenix\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
-| **Runtime** | `E:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
-| **Bulk (optional)** | `C:\MARS Phenix\AI MARS STORAGE` | Large archives — **not** live runtime root |
+| **Brain** | `X:\AI MARS` | Governance, manifests, pointers, validation reports (Git) |
+| **Runtime** | `X:\MARS-Localhost` | Laragon, CMS sites, databases, uploads, logs (**outside Git**) |
+| **Bulk (optional)** | `X:\AI MARS STORAGE` | Large archives — **not** live runtime root |
 
 ---
 
@@ -33,10 +33,10 @@ MARS Localhost Infrastructure is an **execution environment**. It is **not** the
 
 | Item | Path |
 |------|------|
-| **Laragon root** | `E:\MARS-Localhost\laragon` |
-| **Sites** | `E:\MARS-Localhost\sites` |
-| **CLI activation** | `E:\MARS-Localhost\tools\activate-mli.cmd` |
-| **Hosts scripts** | `E:\MARS-Localhost\tools\hosts\` (multi-domain registry-driven) |
+| **Laragon root** | `X:\MARS-Localhost\laragon` |
+| **Sites** | `X:\MARS-Localhost\sites` |
+| **CLI activation** | `X:\MARS-Localhost\tools\activate-mli.cmd` |
+| **Hosts scripts** | `X:\MARS-Localhost\tools\hosts\` (multi-domain registry-driven) |
 | **Smoke URL** | `http://mli-smoke-001.test/` |
 | **WordPress synthetic** | `http://fws-0001.test/` — MLI-WP-SYN-001 |
 

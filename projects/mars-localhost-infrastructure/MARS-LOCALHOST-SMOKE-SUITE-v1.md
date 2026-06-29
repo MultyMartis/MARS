@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Smoke Suite v1
+# MARS Localhost — Smoke Suite v1
 
 **Document type:** Reusable smoke suite specification  
 **Version:** v1  
@@ -27,7 +27,7 @@
 ## Activation prerequisite
 
 ```bat
-E:\MARS-Localhost\tools\activate-mli.cmd
+X:\MARS-Localhost\tools\activate-mli.cmd
 ```
 
 ---

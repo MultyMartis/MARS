@@ -1,13 +1,13 @@
-﻿# MLI Runtime Manifests
+# MLI Runtime Manifests
 
-**Location:** `C:\MARS Phenix\AI MARS\projects\mars-localhost-infrastructure\manifests\`
+**Location:** `X:\AI MARS\projects\mars-localhost-infrastructure\manifests\`
 **Contract:** [MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md](../MARS-LOCALHOST-RUNTIME-MANIFEST-CONTRACT-v1.md)
 
 ---
 
 ## Purpose
 
-Brain-side canonical pointers to runtimes on `E:\MARS-Localhost`. Runtime files stay on D:; manifests stay in Git (values only — no secrets).
+Brain-side canonical pointers to runtimes on `X:\MARS-Localhost`. Runtime files stay on D:; manifests stay in Git (values only — no secrets).
 
 ---
 

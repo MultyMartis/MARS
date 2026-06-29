@@ -1,4 +1,4 @@
-﻿# MARS Localhost — Data and Secrets Policy v1
+# MARS Localhost — Data and Secrets Policy v1
 
 **Document type:** Data and secrets policy  
 **Version:** v1  
@@ -35,8 +35,8 @@ Control data classification, secrets handling, and leakage risk across brain and
 
 | Rule | Policy |
 |------|--------|
-| Storage | `E:\MARS-Localhost\databases\dumps\` |
-| Large retention | Optional `C:\AI MARS STORAGE\{consumer}\` |
+| Storage | `X:\MARS-Localhost\databases\dumps\` |
+| Large retention | Optional `X:\AI MARS STORAGE\{consumer}\` |
 | Git | **Never** commit dumps |
 | Production imports | Operator approval + sanitization review |
 | Naming | Per [database naming standard](MARS-LOCALHOST-DATABASE-NAMING-STANDARD-v1.md) |
@@ -60,7 +60,7 @@ Control data classification, secrets handling, and leakage risk across brain and
 | **Git** | Secrets **outside** Git |
 | **MARS docs** | **No** credentials in markdown |
 | **Manifests** | Secrets **location** only — never values |
-| **`.env`** | Local only under D: site or `C:\AI MARS\local\mli\{slug}\` |
+| **`.env`** | Local only under D: site or `X:\AI MARS\local\mli\{slug}\` |
 | **Production credentials** | **Prohibited by default** in local configs |
 
 ---

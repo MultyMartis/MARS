@@ -1,10 +1,10 @@
-﻿# MARS Localhost — WordPress Runtime Registry v1
+# MARS Localhost — WordPress Runtime Registry v1
 
 **Document type:** WordPress runtime registry (human-maintained)  
 **Version:** v1  
 **Date:** 2026-06-23  
 **Stage:** MLI-03  
-**Authority:** Brain (`C:\AI MARS`) — not D: alone
+**Authority:** Brain (`X:\AI MARS`) — not D: alone
 
 ---
 
@@ -12,7 +12,7 @@
 
 1. One row per sustained WordPress runtime (`synthetic`, `projects`, `sandboxes`).
 2. **Runtime ID** follows pattern `MLI-WP-{CLASS}-{nnn}` (class code: SYN, PRJ, SBX).
-3. Physical path must be under `E:\MARS-Localhost\sites\wordpress\`.
+3. Physical path must be under `X:\MARS-Localhost\sites\wordpress\`.
 4. Each row links to a brain runtime manifest — manifest is SoT for detailed fields.
 5. Database name and user recorded; **no passwords**.
 6. `production_target` must be `NONE` unless explicit mirror charter.
@@ -23,8 +23,8 @@
 
 | Runtime ID | Synthetic / Project ID | Class | Slug | Domain | Physical root | Database | DB user | Table prefix | WP version | Locale | Manifest | Secrets path | Production | Status | Last verified |
 |------------|------------------------|-------|------|--------|---------------|----------|---------|--------------|------------|--------|----------|--------------|------------|--------|---------------|
-| MLI-WP-SYN-001 | FWS-0001 | synthetic | fws-0001 | fws-0001.test | `E:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` | `mars_wp_fws0001` | `mli_fws0001_app` | `mli_` | 7.0 | ru_RU | [MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) | `C:\AI MARS\local\mli\fws-0001\runtime.env` | **NONE** | active — post-reboot validated | 2026-06-24 (MLI-03R.1) |
-| MLI-WP-FP0002-LOCAL | FP-0002 | projects | shpigovsky | shpigovsky.test | `E:\MARS-Localhost\sites\wordpress\projects\shpigovsky` | `mars_wp_fp0002` | `mli_shpigovsky_app` | `fp02_` | 7.0 | ru_RU | [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md) | `C:\AI MARS\local\mli\fp-0002\runtime.env` | **NONE** | active / foundation ready — post-reboot validated | 2026-06-24 (MLI-03R.1) |
+| MLI-WP-SYN-001 | FWS-0001 | synthetic | fws-0001 | fws-0001.test | `X:\MARS-Localhost\sites\wordpress\synthetic\fws-0001` | `mars_wp_fws0001` | `mli_fws0001_app` | `mli_` | 7.0 | ru_RU | [MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) | `X:\AI MARS\local\mli\fws-0001\runtime.env` | **NONE** | active — post-reboot validated | 2026-06-24 (MLI-03R.1) |
+| MLI-WP-FP0002-LOCAL | FP-0002 | projects | shpigovsky | shpigovsky.test | `X:\MARS-Localhost\sites\wordpress\projects\shpigovsky` | `mars_wp_fp0002` | `mli_shpigovsky_app` | `fp02_` | 7.0 | ru_RU | [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../manifests/MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md) | `X:\AI MARS\local\mli\fp-0002\runtime.env` | **NONE** | active / foundation ready — post-reboot validated | 2026-06-24 (MLI-03R.1) |
 
 ---
 
